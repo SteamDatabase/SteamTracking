@@ -555,7 +555,7 @@
 		box-sizing: border-box;
 		margin: 0 2%;
 	}
-	html.responsive #game_area_purchase h1 {
+	html.responsive .game_area_purchase h1 {
 		font-size: 16px;
 		color: white !important;
 	}
@@ -1180,4 +1180,6 @@
 	html.responsive #purchaseOptionsBanner_hidden {
 		border-top: 2px solid #111111;
 	}
+
+
 }

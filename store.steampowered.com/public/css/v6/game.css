@@ -1,6 +1,6 @@
 
 
-body.v6 #game_area_purchase h2.package_group {
+body.v6 .game_area_purchase h2.package_group {
 	margin-bottom: 0px;
 }
 
@@ -4991,14 +4991,35 @@ div.agegate_text_container > h2 {
 }
 
 
+#app_agegate .agegate_selector {
+	display: inline-block;
+}
+
+#app_agegate .agegate_selector > a {
+	border-radius: 2px;
+	border: none;
+	vertical-align: top;
+	font-size: 14px;
+	padding: 5px 30px 5px 15px;
+}
+
 #app_agegate select {
 	padding: 2px 3px;
 	height: 22px;
 	color: #67c1f5;
-	background-color: rgba( 103, 193, 245, 0.2 );
+	background-color: rgba(103, 193, 245, 0.2);
 	border-radius: 2px;
 	border: none;
 	vertical-align: top;
+}
+
+#ageYear_droplist a, #ageDay_droplist a, #ageMonth_droplist a {
+	font-size: 14px;
+}
+
+#ageYear_droplist, #ageDay_droplist, #ageMonth_droplist {
+	overflow-y: auto;
+	max-height: 30vh;
 }
 
 #app_agegate select option {

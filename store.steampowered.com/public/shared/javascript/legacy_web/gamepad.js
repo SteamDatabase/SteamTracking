@@ -7,7 +7,7 @@
       "use strict";
       n.r(t),
         n.d(t, "InitializeGamepadNavigation", function () {
-          return Ne;
+          return Se;
         });
       var i,
         o,
@@ -1967,17 +1967,20 @@
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
       })(ne || (ne = {}));
-      var ie;
+      var ie, oe;
       !(function (e) {
-        (e[(e.Input = 0)] = "Input"),
-          (e[(e.AllOutput = 1)] = "AllOutput"),
-          (e[(e.Left = 2)] = "Left"),
-          (e[(e.Right = 3)] = "Right"),
-          (e[(e.Sub = 4)] = "Sub"),
-          (e[(e.BackLeft = 5)] = "BackLeft"),
-          (e[(e.BackRight = 6)] = "BackRight");
-      })(ie || (ie = {}));
-      var oe;
+        (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
+      })(ie || (ie = {})),
+        (function (e) {
+          (e[(e.Input = 0)] = "Input"),
+            (e[(e.AllOutput = 1)] = "AllOutput"),
+            (e[(e.Left = 2)] = "Left"),
+            (e[(e.Right = 3)] = "Right"),
+            (e[(e.Sub = 4)] = "Sub"),
+            (e[(e.BackLeft = 5)] = "BackLeft"),
+            (e[(e.BackRight = 6)] = "BackRight");
+        })(oe || (oe = {}));
+      var re;
       !(function (e) {
         (e[(e.Error = -2)] = "Error"),
           (e[(e.Invalid = -1)] = "Invalid"),
@@ -1990,8 +1993,8 @@
           (e[(e.Applied = 6)] = "Applied"),
           (e[(e.ClientRestartPending = 7)] = "ClientRestartPending"),
           (e[(e.SystemRestartPending = 8)] = "SystemRestartPending");
-      })(oe || (oe = {}));
-      var re;
+      })(re || (re = {}));
+      var ae;
       !(function (e) {
         (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
           (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -2016,8 +2019,8 @@
           (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
             "EBrowserType_Offscreen_FriendsUI"),
           (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-      })(re || (re = {}));
-      var ae, se;
+      })(ae || (ae = {}));
+      var se, ue;
       !(function (e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
@@ -2025,7 +2028,7 @@
             "k_EClientUINotificationFriendChatMessage"),
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
-      })(ae || (ae = {})),
+      })(se || (se = {})),
         (function (e) {
           (e[(e.k_EComputerActiveStateInvalid = 0)] =
             "k_EComputerActiveStateInvalid"),
@@ -2033,14 +2036,14 @@
               "k_EComputerActiveStateActive"),
             (e[(e.k_EComputerActiveStateIdle = 2)] =
               "k_EComputerActiveStateIdle");
-        })(se || (se = {}));
-      var ue;
+        })(ue || (ue = {}));
+      var ce;
       !(function (e) {
         (e[(e.k_EPending = 0)] = "k_EPending"),
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
-      })(ue || (ue = {}));
-      var ce, le;
+      })(ce || (ce = {}));
+      var le, he;
       !(function (e) {
         (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
           "k_EClientUsedInputTypeKeyboard"),
@@ -2049,7 +2052,7 @@
           (e[(e.k_EClientUsedInputTypeController = 2)] =
             "k_EClientUsedInputTypeController"),
           (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-      })(ce || (ce = {})),
+      })(le || (le = {})),
         (function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -2106,14 +2109,14 @@
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(le || (le = {}));
-      var he;
+        })(he || (he = {}));
+      var pe;
       !(function (e) {
         (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
           (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
           (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-      })(he || (he = {}));
-      var pe;
+      })(pe || (pe = {}));
+      var de;
       !(function (e) {
         (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
           "k_BluetoothDeviceType_Invalid"),
@@ -2139,14 +2142,14 @@
             "k_BluetoothDeviceType_Gamepad"),
           (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
             "k_BluetoothDeviceType_Keyboard");
-      })(pe || (pe = {}));
-      var de, me, _e, ve, ge;
+      })(de || (de = {}));
+      var me, _e, ve, ge, fe;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
           (e[(e.Wireless = 2)] = "Wireless"),
           (e[(e.Virtual = 3)] = "Virtual");
-      })(de || (de = {})),
+      })(me || (me = {})),
         (function (e) {
           (e[(e.NotPresent = 0)] = "NotPresent"),
             (e[(e.Failed = 1)] = "Failed"),
@@ -2155,14 +2158,14 @@
             (e[(e.Connecting = 4)] = "Connecting"),
             (e[(e.Connected = 5)] = "Connected"),
             (e[(e.Retrying = 6)] = "Retrying");
-        })(me || (me = {})),
+        })(_e || (_e = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Weak = 1)] = "Weak"),
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(_e || (_e = {})),
+        })(ve || (ve = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -2172,27 +2175,27 @@
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(ve || (ve = {})),
+        })(ge || (ge = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(ge || (ge = {}));
-      var fe, Ce, ye;
+        })(fe || (fe = {}));
+      var Ce, ye, Ee;
       !(function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(fe || (fe = {})),
+      })(Ce || (Ce = {})),
         (function (e) {
           (e[(e.Hidden = 0)] = "Hidden"),
             (e[(e.Notification = 1)] = "Notification"),
             (e[(e.Overlay = 2)] = "Overlay"),
             (e[(e.Opaque = 3)] = "Opaque"),
             (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-        })(Ce || (Ce = {}));
-      var Ee = {
+        })(ye || (ye = {}));
+      var Re = {
           A: u.a.OK,
           B: u.a.CANCEL,
           X: u.a.SECONDARY,
@@ -2220,14 +2223,14 @@
           RearRightUpper: u.a.REAR_RIGHT_UPPER,
           RearRightLower: u.a.REAR_RIGHT_LOWER,
         },
-        Re =
-          (((ye = {})[fe.SystemKey0] = u.a.STEAM_GUIDE),
-          (ye[fe.SystemKey1] = u.a.STEAM_QUICK_MENU),
-          ye),
-        be = (u.c, new Z()),
-        Te = !1;
-      function Ne(e) {
-        if (!Te) {
+        be =
+          (((Ee = {})[Ce.SystemKey0] = u.a.STEAM_GUIDE),
+          (Ee[Ce.SystemKey1] = u.a.STEAM_QUICK_MENU),
+          Ee),
+        Te = (u.c, new Z()),
+        Ne = !1;
+      function Se(e) {
+        if (!Ne) {
           var t = new j();
           t.RegisterInputSource(e),
             (function (e) {
@@ -2281,9 +2284,9 @@
                 })(t);
               (n.Root.m_FocusRing = i),
                 n.Root.SetProperties({}),
-                Oe.set(document.body, n.Root),
-                Ie(document.body, n.Root),
-                Le(),
+                ke.set(document.body, n.Root),
+                De(document.body, n.Root),
+                Fe(),
                 e.RegisterGamepadNavigationTree(n, !1),
                 s()(document.body).on("vgp_onbuttondown", function (e) {
                   !(function (e) {
@@ -2300,16 +2303,16 @@
                         p(e.target, "vgp_ondirection", e.detail);
                   })(e.originalEvent);
                 }),
-                new MutationObserver(Se).observe(document.body, {
+                new MutationObserver(Oe).observe(document.body, {
                   childList: !0,
                   subtree: !0,
                 });
             })(t),
             new _(t);
         }
-        Te = !0;
+        Ne = !0;
       }
-      function Se(e) {
+      function Oe(e) {
         for (var t = [], n = [], i = 0, o = e; i < o.length; i++) {
           var r = o[i];
           if ("childList" === r.type) {
@@ -2323,30 +2326,30 @@
             }
           }
         }
-        t.length && Le(s()(t)),
+        t.length && Fe(s()(t)),
           n.length &&
             s()(n)
               .find("*")
               .addBack()
               .each(function () {
-                var e = ke.get(this);
-                e && e(), Oe.delete(this), ke.delete(this);
+                var e = Ae.get(this);
+                e && e(), ke.delete(this), Ae.delete(this);
               });
       }
-      var Oe = new WeakMap(),
-        ke = new WeakMap(),
-        Ae = [];
-      function Ie(e, t) {
+      var ke = new WeakMap(),
+        Ae = new WeakMap(),
+        Ie = [];
+      function De(e, t) {
         if (t) {
           var n = t.GetDepth();
-          Ae[n] || (Ae[n] = []), Ae[n].push([e, t]);
+          Ie[n] || (Ie[n] = []), Ie[n].push([e, t]);
         }
-        Oe.set(e, t);
-      }
-      function De(e) {
-        return "jquery" in e ? Oe.get(e[0]) : Oe.get(e);
+        ke.set(e, t);
       }
       function Le(e) {
+        return "jquery" in e ? ke.get(e[0]) : ke.get(e);
+      }
+      function Fe(e) {
         performance.now();
         var t = "a,button,input:not(input[type=hidden]),label,[data-panel]";
         s()(t, e)
@@ -2355,22 +2358,22 @@
             !(function (e) {
               var t = s()(e).data("navNode");
               if (!1 === t) return;
-              t || we(e);
+              t || Ge(e);
             })(this);
           }),
           (function () {
-            for (var e = Ae.length - 1; e >= 0; e--)
-              if (Ae[e])
-                for (var t = 0, n = Ae[e]; t < n.length; t++) {
+            for (var e = Ie.length - 1; e >= 0; e--)
+              if (Ie[e])
+                for (var t = 0, n = Ie[e]; t < n.length; t++) {
                   var i = n[t],
                     o = i[0],
                     r = i[1];
-                  ke.set(o, r.Tree.RegisterNavigationItem(r, o));
+                  Ae.set(o, r.Tree.RegisterNavigationItem(r, o));
                 }
-            Ae = [];
+            Ie = [];
           })();
       }
-      function Fe(e) {
+      function Be(e) {
         var t = s()(e.Element);
         return (
           t.is(":visible") &&
@@ -2378,15 +2381,15 @@
             "hidden" !== t.css("overflow"))
         );
       }
-      function Be(e) {
+      function Pe(e) {
         this.click(), e.stopPropagation();
       }
-      function Pe(e) {
+      function we(e) {
         s()(this).find("a").first().trigger("click");
       }
-      function we(e) {
+      function Ge(e) {
         var t = s()(e),
-          n = Ge(e),
+          n = Me(e),
           i = n.Tree.CreateNode(n, n.m_FocusRing),
           o = t.data("panel") || {};
         if ("A" == e.tagName || "BUTTON" == e.tagName || "LABEL" == e.tagName)
@@ -2436,16 +2439,16 @@
             : l && (p.navEntryPreferPosition = B.MAINTAIN_Y),
           u &&
             (!1 !== p.focusable && (p.focusable = !0),
-            t.on("vgp_onok", "firstChild" === u ? Pe : Be)),
+            t.on("vgp_onok", "firstChild" === u ? we : Pe)),
           h &&
             (t.on("vgp_onok.vkbindings", function () {
-              return be.ShowVirtualKeyboard();
+              return Te.ShowVirtualKeyboard();
             }),
             t.on("click.vkbindings", function () {
-              return be.ShowVirtualKeyboard();
+              return Te.ShowVirtualKeyboard();
             }),
             t.on("blur.vkbindings", function () {
-              return be.HideVirtualKeyboard();
+              return Te.HideVirtualKeyboard();
             })),
           p.focusable && void 0 === t.attr("tabIndex") && t.attr("tabIndex", 0),
           p.focusable &&
@@ -2454,13 +2457,13 @@
                 t ? s()(e).addClass("gpfocus") : s()(e).removeClass("gpfocus");
               })(e, t);
             });
-        var m = Object(r.a)({ fnCanTakeFocus: Fe }, p);
-        return i.SetProperties(m), Ie(e, i), i;
+        var m = Object(r.a)({ fnCanTakeFocus: Be }, p);
+        return i.SetProperties(m), De(e, i), i;
       }
-      function Ge(e) {
+      function Me(e) {
         var t = e.parentElement;
         if (!t) return console.error("no parent"), null;
-        var n = De(t);
+        var n = Le(t);
         return (
           n ||
             !1 === n ||
@@ -2479,15 +2482,15 @@
                   }
               }
               var i = !1;
-              return t ? (i = we(e)) : Ie(e, !1), i;
+              return t ? (i = Ge(e)) : De(e, !1), i;
             })(t)),
-          n || Ge(t)
+          n || Me(t)
         );
       }
-      (window.InstrumentFocusElements = Le),
+      (window.InstrumentFocusElements = Fe),
         (window.GPNavFocusChild = function (e) {
-          var t = De(e[0]);
-          return t || (t = Ge(e[0])), !!t && t.BTakeFocus(o.APPLICATION);
+          var t = Le(e[0]);
+          return t || (t = Me(e[0])), !!t && t.BTakeFocus(o.APPLICATION);
         });
     },
   },

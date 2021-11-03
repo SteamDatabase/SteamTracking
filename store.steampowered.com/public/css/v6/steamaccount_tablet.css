@@ -11,17 +11,39 @@
 		margin-bottom: 16px;
 	}
 
-	/* Remove breadcrumbs */
-	html.responsive .breadcrumbs {
-		/* display: none; */
-	}
-
-
     /* Hide page header */
     html.responsive .pageheader {
-        display: none;
+        /* display: none; */
     }
 
+    html.responsive body.v6 {
+        background: var(--gpStoreDarkerGrey) !important;
+    }
+
+    /* html.responsive .rightcol {
+        float: right;
+        width: var(--gpPaymentsNavWidth);
+    }
+
+    html.responsive .leftcol {
+        float: left;
+        width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+    } */
+
+    html.responsive .block {
+        background: unset;
+    }
+
+    html.responsive .page_content_ctn {
+        padding-bottom: 24px;
+    }
+
+
+
+
+    /* ADD FUNDS TO WALLET */
+
+    /* Heading */
     html.responsive body.v6 h2.addfunds_pageheader {
 		font: var(--gpText-HeadingLarge);
 		font-weight: 700;
@@ -31,6 +53,12 @@
 		padding: unset;
         letter-spacing: 0px;
 	}
+
+
+    /* Hide duplicate text */
+    html.responsive .addfunds_pageheader {
+        display: none;
+    }
 
 
     /* Text */
@@ -87,9 +115,9 @@
 
     html.responsive .linkbar {
 		margin: 4px 0px;
-		background: var(--gpBackground-LightSofter);
+		background: var(--gpBackground-LightSoft);
 		padding: 8px 16px;
-		display: block;
+		display: inline-block;
 		transition: all 0.1s ease;
         border-radius: unset;
         color: var(--gpColor-Blue);
@@ -128,6 +156,161 @@
     html.responsive .addfunds_area_purchase_game {
         margin-bottom: 4px;
     }
-	
+
+
+
+
+    /* PUCHASE HISTORY */
+
+    /* Page setup */
+    html.responsive .account_management {
+        
+    }
+
+    /* Click hint */
+	html.responsive .wallet_history_click_hint {
+        color: var(--gpStoreLightestGrey);
+    }
+
+    /* Load more button */
+    html.responsive #load_more_button {
+        width: unset;
+        text-transform: unset;
+        padding: 10px 20px;
+    }
+
+    /* Wallet history table */
+    html.responsive .wallet_history_table {
+        border: unset;
+    }
+
+    /* Table header */
+    html.responsive .wallet_history_table th {
+        background-color: var(--gpColor-Blue);
+        font: var(--gpText-BodyMedium);
+        font-weight: 700;
+        color: white;
+        text-align: left;
+        padding-left: 12px;
+    }
+
+    /* Table rows */
+    html.responsive .wallet_history_table tr {
+        background: var(--gpBackground-LightSofter);
+        transition: all 0.1s ease;
+    }
+
+    html.responsive .wallet_history_table tr:hover {
+        background: var(--gpBackground-LightMedium);
+        color: white;
+    }
+
+    html.responsive .wallet_history_table tr.gpfocus {
+        background: white;
+        color: black;
+    }
+
+    html.responsive .wallet_history_table td {
+        padding: 4px 12px;
+    }
+
+    html.responsive td.wht_date {
+        text-align: unset;
+        width: 24%;
+        color: unset;
+        font-size: unset;
+    }
+
+    html.responsive td.wht_wallet_change {
+        color: unset;
+        border-left: unset;
+    }
+
+    html.responsive td.wht_wallet_balance {
+        color: unset;
+    }
+
+    html.responsive .wth_payment {
+        color: var(--gpStoreLighterGrey);
+    }
+
+    html.responsive .wallet_history_table tr.gpfocus .wth_payment {
+        color: var(--gpStoreDarkGrey);
+    }
+
+
+
+
+    /* GIFT CARD OR WALLET CODE */
+    
+    html.responsive .redeem_wallet_code_login {
+        padding: unset;
+    }
+
+    html.responsive #wallet_code_form {
+        padding: unset;
+    }
+
+    html.responsive .wallet_code_label {
+        font: var(--gpText-HeadingSmall);
+        color: white;
+        font-weight: 500;
+    }
+
+    html.responsive body.v6 .redeem_wallet_code_login h2 {
+        font: var(--gpText-HeadingSmall);
+        color: white;
+        font-weight: 500;
+        text-transform: unset;
+    }
+
+    html.responsive .wallet_code_input_ctn {
+        display: flex;
+        gap: var(--gpSpace-Gap);
+        margin: 12px 0px 16px;
+    }
+
+    html.responsive #wallet_code_form h2 {
+        display: none;
+    }
+
+    html.responsive #wallet_code {
+        width: 50%;
+        margin: unset;
+    }
+
+    /* Login buttons */
+    html.responsive .button_row {
+        display: flex;
+        gap: 12px;
+    }
+
+    html.responsive .button_row .btn_medium {
+        margin-left: unset;
+    }
+
+    /* Upsell */
+    html.responsive .redeem_wallet_code_upsell {
+        line-height: unset;
+        padding: var(--gpSpace-Gutter);
+        background: var(--gpBackground-DarkSoft);
+        margin: 24px 0px;
+    }
+
+    html.responsive .redeem_wallet_code_upsell div {
+        font: var(--gpText-BodyMedium);
+        width: 60%;
+        padding-top: unset;
+        padding-bottom: 16px;
+        color: var(--gpStoreLighterGrey);
+    }
+
+    /* Image */
+    html.responsive .redeemwalletcode #main_content {
+        background-size: 34%;
+        background-position-x: 94%;
+        background-position-y: 60%;
+    }
+    
 
 }

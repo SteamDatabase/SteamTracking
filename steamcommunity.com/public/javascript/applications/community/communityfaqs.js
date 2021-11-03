@@ -6,7 +6,7 @@
     "+w6J": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return R;
+        return z;
       });
       var o = a("mrSG"),
         i = a("fcuX"),
@@ -40,17 +40,16 @@
         M = a("TLQK"),
         P = a("opsS"),
         j = a("as1E"),
-        F = a("k3PP"),
+        F = a("DisI"),
         q = a("JiI5"),
-        L = a("165M"),
-        z = -1,
-        R = (function (e) {
+        L = -1,
+        z = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.state = {
-                nImportCapsuleVisibiltyIndex: z,
-                nShowVisibilityIndexOnly: z,
+                nImportCapsuleVisibiltyIndex: L,
+                nShowVisibilityIndexOnly: L,
               }),
               t
             );
@@ -77,7 +76,7 @@
                 id: e,
                 type: t,
                 visibility_index:
-                  this.state.nImportCapsuleVisibiltyIndex == z
+                  this.state.nImportCapsuleVisibiltyIndex == L
                     ? void 0
                     : this.state.nImportCapsuleVisibiltyIndex,
               };
@@ -133,7 +132,7 @@
             }),
             (t.prototype.OnEditRaw = function (e) {
               Object(x.d)(
-                h.createElement(N, {
+                h.createElement(R, {
                   editModel: this.props.editModel,
                   capsuleContainer: this.props.capsuleContainer,
                 }),
@@ -240,9 +239,9 @@
                       "div",
                       { className: v.EventEditorTextTitle },
                       o,
-                      h.createElement(F.d, { tooltip: n })
+                      h.createElement(F.b, { tooltip: n })
                     ),
-                    h.createElement(L.a, {
+                    h.createElement(F.a, {
                       bIsMinimized: p,
                       fnToggleMinimize: function () {
                         return Object(s.d)(r, !0);
@@ -280,7 +279,7 @@
                 h.createElement(r.a, {
                   onDiscountEventSelected: function (e, a) {
                     var o =
-                        t.state.nImportCapsuleVisibiltyIndex == z
+                        t.state.nImportCapsuleVisibiltyIndex == L
                           ? void 0
                           : t.state.nImportCapsuleVisibiltyIndex,
                       n = t.props.capsuleContainer;
@@ -322,7 +321,7 @@
                 n = [
                   {
                     label: Object(M.f)("#Sale_VisibilityIndex_Default"),
-                    data: z,
+                    data: L,
                   },
                 ],
                 r = a.GetNumberOfDays(),
@@ -359,17 +358,17 @@
                   h.createElement(
                     "div",
                     {
-                      key: "CountFilter_sale" + this.props.uniqueKey + "_" + z,
+                      key: "CountFilter_sale" + this.props.uniqueKey + "_" + L,
                       className: Object(O.a)(v.FlexRowContainer, v.RadioOption),
                     },
                     h.createElement("input", {
                       type: "radio",
                       name: S,
                       id: k,
-                      value: z,
-                      checked: z == this.state.nShowVisibilityIndexOnly,
+                      value: L,
+                      checked: L == this.state.nShowVisibilityIndexOnly,
                       onChange: function () {
-                        return e.OnVisibilityIndexFilterChange(z);
+                        return e.OnVisibilityIndexFilterChange(L);
                       },
                     }),
                     h.createElement(
@@ -444,9 +443,9 @@
                     "div",
                     { className: v.EventEditorTextTitle },
                     x,
-                    h.createElement(F.d, { tooltip: C })
+                    h.createElement(F.b, { tooltip: C })
                   ),
-                  h.createElement(L.a, {
+                  h.createElement(F.a, {
                     bIsMinimized: d,
                     fnToggleMinimize: function () {
                       return Object(s.d)(p, !1);
@@ -549,9 +548,9 @@
                       )
                     ),
                     h.createElement(I.a, {
-                      bDisabled: this.state.nShowVisibilityIndexOnly != z,
+                      bDisabled: this.state.nShowVisibilityIndexOnly != L,
                       items:
-                        this.state.nShowVisibilityIndexOnly === z
+                        this.state.nShowVisibilityIndexOnly === L
                           ? o.capsules
                           : o.capsules.filter(function (t) {
                               return (
@@ -641,7 +640,7 @@
             (t = Object(o.c)([d.a], t))
           );
         })(h.Component),
-        N = (function (e) {
+        R = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -842,105 +841,6 @@
           );
         })(h.Component);
     },
-    "165M": function (e, t, a) {
-      "use strict";
-      a.d(t, "a", function () {
-        return f;
-      }),
-        a.d(t, "b", function () {
-          return g;
-        }),
-        a.d(t, "c", function () {
-          return y;
-        });
-      var o = a("mrSG"),
-        i = a("mHFc"),
-        n = a("aoTL"),
-        s = a("Mgs7"),
-        r = a("TLQK"),
-        l = a("6Y59"),
-        p = a("q1tI"),
-        c = a("JiI5"),
-        d = a("2vnA"),
-        h = a("IjL/"),
-        u = a("d+Me"),
-        m = a("k3PP");
-      function f(e) {
-        var t = e.bIsMinimized,
-          a = e.fnToggleMinimize,
-          o = t
-            ? "#Sale_Section_Maximize_Tooltip"
-            : "#Sale_Section_Minimize_Tooltip";
-        return p.createElement(
-          s.d,
-          { "data-tooltip-text": Object(r.f)(o), onClick: a },
-          e.bIsMinimized
-            ? p.createElement(l.H, null)
-            : p.createElement(l.K, null)
-        );
-      }
-      function g(e) {
-        var t = e.strToggleName,
-          a = e.strTitle,
-          o = e.children,
-          s = e.strToolTip,
-          r = Object(n.d)(function () {
-            return Object(i.a)(t);
-          });
-        return p.createElement(
-          "div",
-          { id: t, className: c.SettingCtn },
-          p.createElement(
-            "div",
-            {
-              className: c.Title,
-              onDoubleClick: function () {
-                return Object(i.d)(t);
-              },
-            },
-            a,
-            s && p.createElement(m.d, { tooltip: s }),
-            p.createElement(f, {
-              bIsMinimized: r,
-              fnToggleMinimize: function () {
-                return Object(i.d)(t);
-              },
-            })
-          ),
-          !r && o
-        );
-      }
-      var y = new ((function () {
-        function e() {
-          this.m_mapVisibleSections = new Map();
-        }
-        return (
-          (e.prototype.WrapWithNavWaypoint = function (e, t) {
-            return p.createElement(
-              h.a,
-              { key: "eb_sale_sect_" + e },
-              p.createElement(
-                u.a,
-                {
-                  key: "waypoint_sale_sect_" + e,
-                  onEnter: function () {
-                    return y.m_mapVisibleSections.set(e, e);
-                  },
-                  onLeave: function () {
-                    return y.m_mapVisibleSections.delete(e);
-                  },
-                  topOffset: "100px",
-                  bottomOffset: "100px",
-                },
-                p.createElement("div", null, t)
-              )
-            );
-          }),
-          Object(o.c)([d.C], e.prototype, "m_mapVisibleSections", void 0),
-          e
-        );
-      })())();
-    },
     "1fPh": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
@@ -1125,6 +1025,12 @@
           );
         })();
     },
+    "3USw": function (e, t, a) {
+      e.exports = {
+        SectionTitleHeader: "collapseablesection_SectionTitleHeader_2g5oN",
+        required_title: "collapseablesection_required_title_3yDPZ",
+      };
+    },
     "45aE": function (e, t, a) {
       e.exports = {
         ImportToolCtn: "bbcodeimporter_ImportToolCtn_TQZns",
@@ -1177,7 +1083,7 @@
         C = a("lkRc"),
         T = a("NrWE"),
         A = a("as1E"),
-        E = a("k3PP"),
+        E = a("DisI"),
         O = a("K3tN"),
         D = Object(r.a)(function (e) {
           var t = e.saleSection,
@@ -1358,7 +1264,7 @@
                   "div",
                   { className: m.EventEditorTextTitle },
                   Object(k.f)("#Sale_Tabs_Colors"),
-                  l.createElement(E.d, {
+                  l.createElement(E.b, {
                     tooltip: Object(k.f)("#Sale_Tabs_Colors_ttip"),
                   })
                 ),
@@ -1373,7 +1279,7 @@
                     "div",
                     { className: m.EventEditorTextTitle },
                     Object(k.f)("#Sale_Tabs_Current"),
-                    l.createElement(E.d, {
+                    l.createElement(E.b, {
                       tooltip: Object(k.f)("#Sale_Tabs_Current_ttip"),
                     })
                   ),
@@ -1462,7 +1368,7 @@
                   "div",
                   { className: m.EventEditorTextTitle },
                   Object(k.f)("#Sale_Tabs_Title"),
-                  l.createElement(E.d, {
+                  l.createElement(E.b, {
                     tooltip: Object(k.f)("#Sale_Tabs_Title_ttip"),
                   })
                 ),
@@ -1744,10 +1650,10 @@
     "4lry": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return L;
+        return q;
       }),
         a.d(t, "b", function () {
-          return H;
+          return W;
         });
       var o = a("mrSG"),
         i = a("fcuX"),
@@ -1769,7 +1675,7 @@
         v = a("h5LU"),
         S = a("Vitc"),
         _ = a("as1E"),
-        k = a("k3PP"),
+        k = a("DisI"),
         x = a("oqmg"),
         I = a("IMce"),
         C = a("UvY0"),
@@ -1778,8 +1684,7 @@
         E = a("gyoR"),
         O = a("5eAM"),
         D = a("dpTt"),
-        M = a("165M"),
-        P = Object(r.a)(function (e) {
+        M = Object(r.a)(function (e) {
           var t = e.language,
             a = e.facetValue,
             o = e.editModel,
@@ -2026,7 +1931,7 @@
               )
           );
         }),
-        j = Object(r.a)(function (e) {
+        P = Object(r.a)(function (e) {
           var t = e.language,
             a = e.facet,
             o = e.facetValueArray,
@@ -2051,7 +1956,7 @@
                   o.length.toString()
                 )
               ),
-              l.createElement(M.a, {
+              l.createElement(k.a, {
                 bIsMinimized: !c,
                 fnToggleMinimize: function () {
                   r(!c), d(!c);
@@ -2071,7 +1976,7 @@
                     s();
                   },
                   render: function (e) {
-                    return l.createElement(P, {
+                    return l.createElement(M, {
                       language: t,
                       facetValue: e,
                       editModel: i,
@@ -2100,7 +2005,7 @@
               )
           );
         }),
-        F = Object(r.a)(function (e) {
+        j = Object(r.a)(function (e) {
           var t = e.language,
             a = e.facet,
             o = e.editModel,
@@ -2129,7 +2034,7 @@
                 n();
               },
             }),
-            l.createElement(j, {
+            l.createElement(P, {
               language: t,
               facet: a,
               facetValueArray: a.facetValues,
@@ -2140,7 +2045,7 @@
             })
           );
         }),
-        q = Object(r.a)(function (e) {
+        F = Object(r.a)(function (e) {
           var t = e.language,
             a = e.section,
             o = e.facetArray,
@@ -2170,7 +2075,7 @@
                   o.length.toString()
                 )
               ),
-              l.createElement(M.a, {
+              l.createElement(k.a, {
                 bIsMinimized: !p,
                 fnToggleMinimize: function () {
                   c(!p);
@@ -2190,7 +2095,7 @@
                     s();
                   },
                   render: function (e) {
-                    return l.createElement(F, {
+                    return l.createElement(j, {
                       language: t,
                       facet: e,
                       editModel: i,
@@ -2218,7 +2123,7 @@
               )
           );
         }),
-        L = Object(r.a)(function (e) {
+        q = Object(r.a)(function (e) {
           var t = e.section,
             a = e.capsuleContainer,
             s = e.editModel,
@@ -2266,7 +2171,7 @@
                       return 0 ===
                         (e = s.GetEventModel().GetTaggedItems()).length
                         ? [2]
-                        : [4, z(a.facets, e)];
+                        : [4, L(a.facets, e)];
                     case 1:
                       for (o.sent(), t = 0, r = a.facets; t < r.length; t++)
                         (l = r[t]).facetValues = l.facetValues.filter(function (
@@ -2395,7 +2300,7 @@
                         "span",
                         null,
                         Object(w.f)("#FacetedBrowseEditor_AutoGenerate"),
-                        l.createElement(k.d, {
+                        l.createElement(k.b, {
                           tooltip: Object(w.f)(
                             "#FacetedBrowseEditor_Tooltip_AutoGenerate"
                           ),
@@ -2408,7 +2313,7 @@
                             var e,
                               t = function () {
                                 Object(f.c)(
-                                  l.createElement(B, {
+                                  l.createElement(N, {
                                     onOK: function (e) {
                                       return (function (e) {
                                         return Object(o.b)(
@@ -2427,7 +2332,7 @@
                                                     return (
                                                       o.trys.push([1, , 5, 6]),
                                                       (t = a),
-                                                      [4, R(e)]
+                                                      [4, z(e)]
                                                     );
                                                   case 2:
                                                     return (
@@ -2487,7 +2392,7 @@
                           "span",
                           null,
                           Object(w.f)("#FacetedBrowseEditor_PruneUnused"),
-                          l.createElement(k.d, {
+                          l.createElement(k.b, {
                             tooltip: Object(w.f)(
                               "#FacetedBrowseEditor_Tooltip_PruneUnused"
                             ),
@@ -2506,7 +2411,7 @@
                         "span",
                         null,
                         Object(w.f)("#FacetedBrowseEditor_MinMatchesText"),
-                        l.createElement(k.d, {
+                        l.createElement(k.b, {
                           tooltip: Object(w.f)(
                             "#FacetedBrowseEditor_Tooltip_MinMatches"
                           ),
@@ -2535,7 +2440,7 @@
                         "span",
                         null,
                         Object(w.f)("#FacetedBrowseEditor_MaxFacetValuesText"),
-                        l.createElement(k.d, {
+                        l.createElement(k.b, {
                           tooltip: Object(w.f)(
                             "#FacetedBrowseEditor_Tooltip_MaxFacetValues"
                           ),
@@ -2564,7 +2469,7 @@
                         "span",
                         null,
                         Object(w.f)("#FacetedBrowseEditor_SortFacetValuesText"),
-                        l.createElement(k.d, {
+                        l.createElement(k.b, {
                           tooltip: Object(w.f)(
                             "#FacetedBrowseEditor_Tooltip_SortFacetValues"
                           ),
@@ -2585,7 +2490,7 @@
                     l.createElement(
                       C.b,
                       { clanSteamID: s.GetClanSteamID(), requireAdmin: !0 },
-                      G(t) &&
+                      B(t) &&
                         l.createElement(
                           "div",
                           { className: I.FilterActionsCtn },
@@ -2611,7 +2516,7 @@
                   ),
                   b
                     ? l.createElement(y.a, null)
-                    : l.createElement(q, {
+                    : l.createElement(F, {
                         language: s.GetCurEditLanguage(),
                         section: t,
                         facetArray: a.facets,
@@ -2623,7 +2528,7 @@
             )
           );
         });
-      function z(e, t) {
+      function L(e, t) {
         return Object(o.b)(this, void 0, void 0, function () {
           var a, i;
           return Object(o.e)(this, function (o) {
@@ -2657,7 +2562,7 @@
           });
         });
       }
-      function R(e) {
+      function z(e) {
         return Object(o.b)(this, void 0, void 0, function () {
           var t;
           return Object(o.e)(this, function (a) {
@@ -2684,7 +2589,7 @@
                               })
                             : [a.get(p)];
                         (c = c.map(function (e) {
-                          return N(e);
+                          return R(e);
                         })),
                           (l.type = d.l.k_ESaleTagFilter),
                           (l.filter = {
@@ -2865,10 +2770,10 @@
           });
         });
       }
-      function N(e) {
+      function R(e) {
         return Object(n.f)(e, n.j.Store);
       }
-      var B = Object(r.a)(function (e) {
+      var N = Object(r.a)(function (e) {
         var t = e.closeModal,
           a = e.onOK,
           o = Object(l.useState)(!1),
@@ -2911,20 +2816,20 @@
           )
         );
       });
-      function G(e) {
+      function B(e) {
         return (
           !("items" !== e.section_type || !e.smart_section) ||
           "sale_item_browser" === e.section_type
         );
       }
-      function W(e, t, a) {
+      function G(e, t, a) {
         var i;
         return Object(o.b)(this, void 0, void 0, function () {
           var s, r, l, p, c, h, u, m, f, g, y, b, w, v, S, _, k, x, I, C;
           return Object(o.e)(this, function (o) {
             switch (o.label) {
               case 0:
-                return [4, z(a, t)];
+                return [4, L(a, t)];
               case 1:
                 for (
                   o.sent(),
@@ -2967,7 +2872,7 @@
                   for (u = h[c], m = 0, f = u.facetValues; m < f.length; m++)
                     if (
                       (((g = f[m]).matchingCapsules = []),
-                      G(e) && !1 === e.facets_generate_debug_info)
+                      B(e) && !1 === e.facets_generate_debug_info)
                     )
                       g.matchingCapsules = void 0;
                     else if (g.type === d.l.k_ELanguage)
@@ -3001,7 +2906,7 @@
           });
         });
       }
-      function H(e) {
+      function W(e) {
         return Object(o.b)(this, void 0, void 0, function () {
           var t, a, i, n, r, l, c, h, u;
           return Object(o.e)(this, function (o) {
@@ -3058,14 +2963,14 @@
               case 4:
                 return c < h.length
                   ? ((u = h[c]).sale_tag_filter &&
-                      (u.store_filter = V(u.sale_tag_filter, r, l)),
+                      (u.store_filter = H(u.sale_tag_filter, r, l)),
                     "tabs" === u.section_type &&
                       u.tabs &&
                       u.tabs.forEach(function (e) {
                         e.sale_tag_filter &&
-                          (e.store_filter = V(e.sale_tag_filter, r, l));
+                          (e.store_filter = H(e.sale_tag_filter, r, l));
                       }),
-                    u.enable_faceted_browsing ? [4, W(u, t, u.facets)] : [3, 6])
+                    u.enable_faceted_browsing ? [4, G(u, t, u.facets)] : [3, 6])
                   : [3, 7];
               case 5:
                 o.sent(),
@@ -3081,9 +2986,9 @@
                             n++
                           ) {
                             (p = s[n]).type === d.l.k_ELanguage
-                              ? o.set(p, Y(p.language))
+                              ? o.set(p, U(p.language))
                               : p.type === d.l.k_EContentDescriptor
-                              ? o.set(p, Q(p.contentDescriptor))
+                              ? o.set(p, Y(p.contentDescriptor))
                               : p.type === d.l.k_EUserPreference
                               ? o.set(p, null)
                               : p.type === d.l.k_EPrice
@@ -3091,9 +2996,9 @@
                                   type: d.o.k_EStoreFilterClauseTypePrice,
                                 })
                               : p.type === d.l.k_EAppType
-                              ? o.set(p, X(p.appType))
-                              : (o.set(p, V(p.filter, t, a)),
-                                i.set(p, U(p.filter, t)));
+                              ? o.set(p, Q(p.appType))
+                              : (o.set(p, H(p.filter, t, a)),
+                                i.set(p, V(p.filter, t)));
                           }
                           if (
                             e.facetValues.every(function (e) {
@@ -3169,7 +3074,7 @@
           });
         });
       }
-      function V(e, t, a) {
+      function H(e, t, a) {
         for (
           var o = {
               type: d.o.k_EStoreFilterClauseTypeAnd,
@@ -3218,7 +3123,7 @@
                 continue;
               }
               var g = a.get(m);
-              l.rgSubexpressions.push(V(g, t, a));
+              l.rgSubexpressions.push(H(g, t, a));
             } else console.warn("Sale tag not implemented for faceting: " + h);
           }
           if (0 === l.rgSubexpressions.length) return null;
@@ -3226,7 +3131,7 @@
         }
         return 0 === o.rgSubexpressions.length ? null : Object(D.f)(o);
       }
-      function U(e, t) {
+      function V(e, t) {
         for (var a = 0, o = e.clauses; a < o.length; a++)
           for (var i = 0, r = o[a].or_tags; i < r.length; i++) {
             var l = r[i],
@@ -3245,19 +3150,19 @@
           }
         return 0;
       }
-      function Y(e) {
+      function U(e) {
         return {
           type: d.o.k_EStoreFilterClauseTypeLanguage,
           value: Object(p.a)(e),
         };
       }
-      function Q(e) {
+      function Y(e) {
         return {
           type: d.o.k_EStoreFilterClauseTypeContentDescriptor,
           value: e,
         };
       }
-      function X(e) {
+      function Q(e) {
         return { type: d.o.k_EStoreFilterClauseTypeAppType, value: e };
       }
     },
@@ -3894,7 +3799,7 @@
         r = a("xnZ7"),
         l = a.n(r),
         p = a("TLQK"),
-        c = a("k3PP"),
+        c = a("DisI"),
         d = a("JiI5"),
         h = a("oqmg"),
         u = (function (e) {
@@ -3963,7 +3868,7 @@
                     "div",
                     { className: d.SaleCapsuleConflict },
                     Object(p.f)("#Sale_NotFoundCapsule"),
-                    n.createElement(c.d, {
+                    n.createElement(c.b, {
                       tooltip: Object(p.f)(
                         "#Sale_NotFoundCapsule_Tooltip",
                         u,
@@ -3976,7 +3881,7 @@
                     "div",
                     { className: d.SaleCapsuleConflict },
                     Object(p.f)("#Sale_DuplicateCapsule"),
-                    n.createElement(c.d, {
+                    n.createElement(c.b, {
                       tooltip: Object(p.f)("#Sale_DuplicateCapsule_Tooltip"),
                     })
                   ),
@@ -3997,6 +3902,77 @@
     },
     CtwA: function (e, t, a) {
       e.exports = { itemimg: "saleitemdefwidgeteditor_itemimg_2by5O" };
+    },
+    DisI: function (e, t, a) {
+      "use strict";
+      a.d(t, "c", function () {
+        return h;
+      }),
+        a.d(t, "a", function () {
+          return u;
+        }),
+        a.d(t, "b", function () {
+          return m;
+        });
+      a("mrSG");
+      var o = a("Mgs7"),
+        i = a("TLQK"),
+        n = a("6Y59"),
+        s = a("q1tI"),
+        r = a("exH9"),
+        l = a("fpVW"),
+        p = a("IjL/"),
+        c = a("TyAF"),
+        d = a("3USw"),
+        h = Object(c.a)(function (e) {
+          return s.createElement(
+            s.Fragment,
+            null,
+            s.createElement(
+              "div",
+              {
+                className: Object(r.a)(
+                  e.className ? e.className : d.SectionTitleHeader,
+                  d.required_title
+                ),
+              },
+              s.createElement(
+                "div",
+                { className: l.EventEditorTextTitle },
+                e.title,
+                s.createElement(m, { tooltip: e.tooltip })
+              ),
+              s.createElement(u, {
+                bIsMinimized: e.getMinimized(),
+                fnToggleMinimize: e.toggleMinimized,
+              })
+            ),
+            !e.getMinimized() && s.createElement(p.a, null, e.children)
+          );
+        });
+      function u(e) {
+        var t = e.bIsMinimized,
+          a = e.fnToggleMinimize,
+          r = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return s.createElement(
+          o.d,
+          { "data-tooltip-text": Object(i.f)(r), onClick: a },
+          e.bIsMinimized
+            ? s.createElement(n.H, null)
+            : s.createElement(n.K, null)
+        );
+      }
+      function m(e) {
+        return s.createElement(
+          "span",
+          {
+            "data-tooltip-text": e.tooltip,
+            className: Object(r.a)(l.HelperTooltip, "HelperTooltip"),
+          },
+          " ",
+          s.createElement(n.A, null)
+        );
+      }
     },
     EA3E: function (e, t, a) {
       "use strict";
@@ -4033,7 +4009,7 @@
         b = a("exH9"),
         w = a("TLQK"),
         v = a("lkRc"),
-        S = a("k3PP"),
+        S = a("DisI"),
         _ = a("K1T0"),
         k = a.n(_);
       function x(e) {
@@ -4126,7 +4102,7 @@
                       Object(w.f)("#EventEditor_Status_Public")
                     ),
                     a &&
-                      l.createElement(S.d, {
+                      l.createElement(S.b, {
                         tooltip: Object(w.f)("#EventEditor_Status_Public_ttip"),
                       }),
                     o &&
@@ -4143,7 +4119,7 @@
                       ),
                     a &&
                       o &&
-                      l.createElement(S.d, {
+                      l.createElement(S.b, {
                         tooltip: Object(w.f)(
                           "#EventDashBoard_ModerationQueueWarning"
                         ),
@@ -4165,7 +4141,7 @@
                       "span",
                       { className: g.a.FlexRowContainer },
                       l.createElement(y.a, { bSingleLine: !0, dateAndTime: i }),
-                      l.createElement(S.d, {
+                      l.createElement(S.b, {
                         tooltip: Object(w.f)("#EventEditor_Status_Staged_ttip"),
                       })
                     )
@@ -4181,7 +4157,7 @@
                   Object(w.f)("#EventEditor_Status") +
                     ": " +
                     Object(w.f)("#EventEditor_Status_Draft"),
-                  l.createElement(S.d, {
+                  l.createElement(S.b, {
                     tooltip: Object(w.f)("#EventEditor_Status_Draft_ttip"),
                   })
                 )
@@ -21939,31 +21915,6 @@
           },
         };
     },
-    X2UP: function (e, t, a) {
-      "use strict";
-      a.d(t, "a", function () {
-        return r;
-      });
-      var o = a("vDqi"),
-        i = a.n(o),
-        n = a("q1tI"),
-        s = a.n(n);
-      function r(e) {
-        var t = s.a.useRef(i.a.CancelToken.source());
-        return (
-          s.a.useEffect(
-            function () {
-              var a = t.current;
-              return function () {
-                return a.cancel(e ? e + ": unmounting" : "unmounting");
-              };
-            },
-            [e]
-          ),
-          t.current
-        );
-      }
-    },
     Yamg: function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
@@ -22366,35 +22317,6 @@
         EventEditorVisibilityCtn:
           "partnereventshareddates_EventEditorVisibilityCtn_4gWwy",
       };
-    },
-    "d+Me": function (e, t, a) {
-      "use strict";
-      a.d(t, "a", function () {
-        return s;
-      });
-      var o = a("mrSG"),
-        i = a("q1tI"),
-        n = a("uuth"),
-        s = function (e) {
-          var t = e.onPositionChange,
-            a = e.onLeave,
-            s = i.useCallback(
-              function (e) {
-                return (
-                  void 0 === e.previousPosition &&
-                    e.currentPosition === n.a.above &&
-                    a &&
-                    a(e),
-                  t && t(e)
-                );
-              },
-              [t, a]
-            );
-          return i.createElement(
-            n.a,
-            Object(o.a)({}, e, { onPositionChange: s })
-          );
-        };
     },
     dZOt: function (e, t, a) {
       "use strict";
@@ -25258,7 +25180,7 @@
         w = a("Jqb/"),
         v = a("0OaU"),
         S = a("TLQK"),
-        _ = a("k3PP"),
+        _ = a("DisI"),
         k = Object(c.a)(function (e) {
           var t = function () {
               return e.closeModal && e.closeModal();
@@ -25387,7 +25309,7 @@
               "div",
               null,
               Object(S.f)("#Sale_DiscountEvent_Choose"),
-              h.a.createElement(_.d, {
+              h.a.createElement(_.b, {
                 tooltip: Object(S.f)("#Sale_DiscountEvent_Choose_ttip"),
               })
             ),
@@ -25745,26 +25667,20 @@
     jZUi: function (e, t, a) {},
     k3PP: function (e, t, a) {
       "use strict";
-      a.d(t, "d", function () {
+      a.d(t, "a", function () {
         return it;
       }),
-        a.d(t, "a", function () {
-          return nt;
-        }),
-        a.d(t, "g", function () {
-          return lt;
-        }),
         a.d(t, "b", function () {
-          return dt;
+          return pt;
+        }),
+        a.d(t, "d", function () {
+          return ct;
         }),
         a.d(t, "e", function () {
-          return ht;
-        }),
-        a.d(t, "f", function () {
-          return St;
+          return wt;
         }),
         a.d(t, "c", function () {
-          return xt;
+          return _t;
         });
       var o = a("mrSG"),
         i = a("vDqi"),
@@ -26047,7 +25963,8 @@
         Q = a("bS9Q"),
         X = a("JiI5"),
         K = a("aoTL"),
-        $ = (function (e) {
+        $ = a("DisI"),
+        J = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -26370,7 +26287,7 @@
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(J, Object(o.a)({}, this.props)),
+                d.createElement(Z, Object(o.a)({}, this.props)),
                 d.createElement(u.l, {
                   onBlur: function () {
                     setTimeout(function () {
@@ -26400,7 +26317,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component);
-      function J(e) {
+      function Z(e) {
         var t = e.editModel,
           a = e.saleSection,
           o = e.fnIsValidEvent,
@@ -26454,7 +26371,7 @@
           },
         });
       }
-      var Z = Object(c.a)(function (e) {
+      var ee = Object(c.a)(function (e) {
           var t,
             a = e.saleSection,
             i = e.editModel;
@@ -26491,12 +26408,12 @@
               "div",
               { className: T.EventEditorTextTitle },
               Object(g.f)("#Sale_EventDateRange"),
-              d.createElement(it, {
+              d.createElement($.b, {
                 tooltip: Object(g.f)("#Sale_EventDateRange_ttip"),
               })
             ),
             d.createElement(
-              le,
+              pe,
               Object(o.a)({}, e, { bSetDefaultIfMissing: !1 })
             ),
             d.createElement(
@@ -26532,7 +26449,7 @@
             )
           );
         }),
-        ee = (function (e) {
+        te = (function (e) {
           function t(t) {
             var a = e.call(this, t) || this;
             a.state = {};
@@ -26597,7 +26514,7 @@
                 var r = p.b[n];
                 Object(L.a)(r.type) &&
                   i.push(
-                    d.createElement(te, {
+                    d.createElement(ae, {
                       key: "gs-" + n,
                       category: r,
                       fnCategoryToggle: this.OnCategoryCheck,
@@ -26610,7 +26527,7 @@
                 for (var n in p.c) {
                   r = p.c[n];
                   l.push(
-                    d.createElement(te, {
+                    d.createElement(ae, {
                       key: "gs-" + n,
                       category: r,
                       fnCategoryToggle: this.OnCategoryCheck,
@@ -26642,7 +26559,7 @@
                     )
                   )
                 ),
-                d.createElement(St, {
+                d.createElement(wt, {
                   varName: "show_as_demos",
                   editModel: a,
                   section: o,
@@ -26654,7 +26571,7 @@
                   null,
                   Object(g.f)("#EventEditor_SaleEventSchedule_Range")
                 ),
-                d.createElement(le, {
+                d.createElement(pe, {
                   saleSection: o,
                   editModel: a,
                   bSetDefaultIfMissing: !0,
@@ -26681,7 +26598,7 @@
                     Object(g.f)("#EventEditor_SaleEventSchedule_SetToEnd")
                   ),
                 }),
-                d.createElement(ae, {
+                d.createElement(oe, {
                   editModel: a,
                   saleSection: o,
                   selectedTrack: this.state.selectedTrack,
@@ -26692,7 +26609,7 @@
                   },
                 }),
                 Boolean(this.state.selectedTrack) &&
-                  d.createElement(ne, {
+                  d.createElement(se, {
                     editModel: a,
                     track: this.state.selectedTrack,
                     saleSection: o,
@@ -26729,7 +26646,7 @@
                       a.GetEventModel().jsondata.sale_opt_in_page_name,
                       " Event Typpe (please ensure the custom event type Live Stream exists and is published)"
                     ),
-                    d.createElement(te, {
+                    d.createElement(ae, {
                       key: "gs-" + c,
                       category: {
                         name: "OptIn Custom Name Not Imported yet",
@@ -26751,7 +26668,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        te = function (e) {
+        ae = function (e) {
           var t = e.category,
             a = e.fnCategoryToggle,
             o = e.fnContainCategory;
@@ -26771,7 +26688,7 @@
             })
           );
         },
-        ae = Object(c.a)(function (e) {
+        oe = Object(c.a)(function (e) {
           var t = e.editModel,
             a = e.saleSection,
             o = e.fnSelectTrack;
@@ -26782,7 +26699,7 @@
               "div",
               { className: T.EventEditorTextTitle },
               Object(g.f)("#EventSchedule_Track_Current"),
-              d.createElement(it, {
+              d.createElement($.b, {
                 tooltip: Object(g.f)("#EventSchedule_Track_Current_ttip"),
               })
             ),
@@ -26811,7 +26728,7 @@
                     return t.SetDirty(s.c.jsondata_sales);
                   },
                   render: function (t) {
-                    return d.createElement(oe, {
+                    return d.createElement(ie, {
                       track: t,
                       selected: t === e.selectedTrack,
                       fnOnSelect: e.fnSelectTrack,
@@ -26848,7 +26765,7 @@
             )
           );
         }),
-        oe = function (e) {
+        ie = function (e) {
           return d.createElement(
             "div",
             {
@@ -26866,7 +26783,7 @@
             )
           );
         };
-      function ie(e, t, a, o) {
+      function ne(e, t, a, o) {
         Object(k.a)(
           d.createElement(C.a, {
             onChange: function (e) {
@@ -26878,7 +26795,7 @@
           { bDisablePopTop: !0 }
         );
       }
-      var ne = Object(c.a)(function (e) {
+      var se = Object(c.a)(function (e) {
         var t = e.saleSection,
           a = e.track,
           o = e.editModel,
@@ -26962,7 +26879,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(e, a, o, "label_color");
+                    return ne(e, a, o, "label_color");
                   },
                   className: T.EventEditorTextTitle,
                   style: { color: a.label_color },
@@ -26973,7 +26890,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(e, a, o, "background_gradient_left");
+                    return ne(e, a, o, "background_gradient_left");
                   },
                   className: T.EventEditorTextTitle,
                   style: { color: a.label_color, background: n },
@@ -26984,7 +26901,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(e, a, o, "background_gradient_right");
+                    return ne(e, a, o, "background_gradient_right");
                   },
                   className: T.EventEditorTextTitle,
                   style: { color: a.label_color, background: n },
@@ -26995,7 +26912,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(e, a, o, "selected_background_gradient_left");
+                    return ne(e, a, o, "selected_background_gradient_left");
                   },
                   className: T.EventEditorTextTitle,
                   style: { color: a.label_color, background: s },
@@ -27006,7 +26923,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(e, a, o, "selected_background_gradient_right");
+                    return ne(e, a, o, "selected_background_gradient_right");
                   },
                   className: T.EventEditorTextTitle,
                   style: { color: a.label_color, background: s },
@@ -27021,7 +26938,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(e, a, o, "encore_label_color");
+                    return ne(e, a, o, "encore_label_color");
                   },
                   className: T.EventEditorTextTitle,
                   style: { color: a.encore_label_color },
@@ -27032,7 +26949,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(e, a, o, "encore_background_gradient_left");
+                    return ne(e, a, o, "encore_background_gradient_left");
                   },
                   className: T.EventEditorTextTitle,
                   style: { color: a.encore_label_color, background: r },
@@ -27043,7 +26960,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(e, a, o, "encore_background_gradient_right");
+                    return ne(e, a, o, "encore_background_gradient_right");
                   },
                   className: T.EventEditorTextTitle,
                   style: { color: a.encore_label_color, background: r },
@@ -27054,7 +26971,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(
+                    return ne(
                       e,
                       a,
                       o,
@@ -27070,7 +26987,7 @@
                 u.d,
                 {
                   onClick: function (e) {
-                    return ie(
+                    return ne(
                       e,
                       a,
                       o,
@@ -27105,7 +27022,7 @@
                 {
                   onClick: function (e) {
                     return Object(E.d)(
-                      d.createElement(se, { editModel: o, rgEvents: a.events }),
+                      d.createElement(re, { editModel: o, rgEvents: a.events }),
                       Object(q.m)(e)
                     );
                   },
@@ -27118,7 +27035,7 @@
             null,
             Object(g.f)("#EventSchedule_EventValidDesc")
           ),
-          d.createElement($, {
+          d.createElement(J, {
             editModel: o,
             saleSection: a,
             fnIsValidEvent: function (e) {
@@ -27145,7 +27062,7 @@
           })
         );
       });
-      function se(e) {
+      function re(e) {
         var t = this,
           a = e.editModel,
           i = e.rgEvents,
@@ -27281,11 +27198,11 @@
             )
         );
       }
-      var re = function (e) {
+      var le = function (e) {
           var t = new Date(1e3 * e);
           return t.setSeconds(0), Math.floor(t.getTime() / 1e3);
         },
-        le = Object(c.a)(function (e) {
+        pe = Object(c.a)(function (e) {
           var t = e.saleSection,
             a = e.editModel,
             o = e.bSetDefaultIfMissing;
@@ -27322,7 +27239,7 @@
                   return t.event_schedule_rtime_start;
                 },
                 fnSetTimeToUpdate: function (e) {
-                  (e = re(e)),
+                  (e = le(e)),
                     t.event_schedule_rtime_start != e &&
                       ((t.event_schedule_rtime_start = e),
                       t.event_schedule_rtime_end < e &&
@@ -27348,7 +27265,7 @@
                   return t.event_schedule_rtime_end;
                 },
                 fnSetTimeToUpdate: function (e) {
-                  (e = re(e)),
+                  (e = le(e)),
                     t.event_schedule_rtime_end != e &&
                       ((t.event_schedule_rtime_end = e),
                       t.event_schedule_rtime_end <
@@ -27372,11 +27289,11 @@
             )
           );
         }),
-        pe = a("CoyA"),
-        ce = a("wUcC"),
-        de = a("Zan1"),
-        he = a("+w6J"),
-        ue = Object(c.a)(function (e) {
+        ce = a("CoyA"),
+        de = a("wUcC"),
+        he = a("Zan1"),
+        ue = a("+w6J"),
+        me = Object(c.a)(function (e) {
           var t = e.editModel,
             a = e.saleSection,
             i = d.useState(new h.b(t.GetClanSteamID()))[0],
@@ -27422,7 +27339,7 @@
               " 100%)",
             y = "tabs" !== a.section_type;
           return d.createElement(
-            lt,
+            $.c,
             {
               title: Object(g.f)("#Sale_Section_Background_Title"),
               tooltip: Object(g.f)("#Sale_Section_Background_Title_ttip"),
@@ -27512,7 +27429,7 @@
                       Object(g.f)("#Sale_Section_Background_Bottom")
                     )
                   ),
-                d.createElement(St, {
+                d.createElement(wt, {
                   varName: "disable_background",
                   editModel: t,
                   section: a,
@@ -27529,7 +27446,7 @@
                     { className: T.EventEditorTextTitle },
                     Object(g.f)("#Sale_Section_BackgroundImage_Title"),
                     " ",
-                    d.createElement(it, {
+                    d.createElement($.b, {
                       tooltip: Object(g.f)(
                         "#Sale_Section_BackgroundImage_ttip"
                       ),
@@ -27660,27 +27577,27 @@
             )
           );
         }),
-        me = a("48GZ"),
-        fe = a("4lry"),
-        ge = a("Cs6D"),
-        ye = a("ZeAL"),
-        be = a("Yamg"),
-        we = a("3+zv"),
-        ve = a("qD+2"),
-        Se = a("R+8l"),
-        _e = a("oVVc"),
-        ke = a("UWWC"),
-        xe = a("4P4B"),
-        Ie = a("IjL/"),
-        Ce = a("6AJf"),
-        Te = a("nxSy"),
-        Ae = a("zoRj"),
-        Ee = a("gyoR"),
-        Oe = a("MnIK"),
-        De = a("6Y59"),
-        Me = a("YyVH"),
-        Pe = a("IzPI"),
-        je = (function () {
+        fe = a("48GZ"),
+        ge = a("4lry"),
+        ye = a("Cs6D"),
+        be = a("ZeAL"),
+        we = a("Yamg"),
+        ve = a("3+zv"),
+        Se = a("qD+2"),
+        _e = a("R+8l"),
+        ke = a("oVVc"),
+        xe = a("UWWC"),
+        Ie = a("4P4B"),
+        Ce = a("IjL/"),
+        Te = a("6AJf"),
+        Ae = a("nxSy"),
+        Ee = a("zoRj"),
+        Oe = a("gyoR"),
+        De = a("MnIK"),
+        Me = a("6Y59"),
+        Pe = a("YyVH"),
+        je = a("IzPI"),
+        Fe = (function () {
           function e() {
             "dev" === z.c.WEB_UNIVERSE &&
               (window.g_ContentHubNamesStore = this);
@@ -27753,11 +27670,11 @@
             e
           );
         })();
-      var Fe = a("UCyf"),
-        qe = a("5izx"),
-        Le = a("BRUS"),
-        ze = a("66At"),
-        Re = (function (e) {
+      var qe = a("UCyf"),
+        Le = a("5izx"),
+        ze = a("BRUS"),
+        Re = a("66At"),
+        Ne = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -27829,7 +27746,7 @@
                       "div",
                       { className: X.CrossTabWarning },
                       Object(g.f)("#Sale_Broadcast_Disabled"),
-                      d.createElement(it, {
+                      d.createElement($.b, {
                         tooltip: Object(g.f)("#Sale_Broadcast_Disabled_hint"),
                       })
                     )
@@ -27844,7 +27761,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        Ne = (function (e) {
+        Be = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -27976,7 +27893,7 @@
                   })
                 ),
                 Boolean(t.curator_clan_id) &&
-                  d.createElement(Le.a, {
+                  d.createElement(ze.a, {
                     creatorID: {
                       name: null,
                       clan_account_id: t.curator_clan_id,
@@ -27992,7 +27909,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        Be = Object(c.a)(function (e) {
+        Ge = Object(c.a)(function (e) {
           for (
             var t = e.editModel, a = e.index, o = t.GetEventModel(), i = 0;
             i < a;
@@ -28014,7 +27931,7 @@
             Object(g.f)("#Sale_EventDescriptionTabLink")
           );
         }),
-        Ge = Object(c.a)(function (e) {
+        We = Object(c.a)(function (e) {
           var t,
             a = e.editModel,
             i = e.index,
@@ -28034,7 +27951,7 @@
                     var t = new Array();
                     l.featured_curator_list.forEach(function (a) {
                       var o = x.a.InitFromClanID(a.clanAccountID);
-                      t.push(Fe.a.Get().LoadListDetails(o, a.listID, e));
+                      t.push(qe.a.Get().LoadListDetails(o, a.listID, e));
                     }),
                       Promise.all(t).then(function () {
                         return h(!1);
@@ -28085,7 +28002,7 @@
                 );
               },
               fnSetTimeToUpdate: function (e) {
-                (e = re(e)),
+                (e = le(e)),
                   l.featured_curator_list_rtime_start != e &&
                     ((l.featured_curator_list_rtime_start = e),
                     a.SetDirty(s.c.jsondata_sales));
@@ -28099,7 +28016,7 @@
               "div",
               { className: T.EventEditorTextTitle },
               Object(g.f)("#Sale_CuratorRecommendation_FeaturedList"),
-              d.createElement(it, {
+              d.createElement($.b, {
                 tooltip: Object(g.f)(
                   "#Sale_CuratorRecommendation_FeaturedList_ttip"
                 ),
@@ -28115,7 +28032,7 @@
                 return a.SetDirty(s.c.jsondata_sales);
               },
               render: function (e) {
-                return d.createElement(We, { tuple: e });
+                return d.createElement(He, { tuple: e });
               },
             }),
             d.createElement(
@@ -28123,7 +28040,7 @@
               {
                 onClick: function (t) {
                   Object(E.d)(
-                    d.createElement(He, Object(o.a)({}, e, { saleSection: l })),
+                    d.createElement(Ve, Object(o.a)({}, e, { saleSection: l })),
                     Object(q.m)(t)
                   );
                 },
@@ -28135,7 +28052,7 @@
                 ? void 0
                 : t.length) >= 2
             ) &&
-              d.createElement(St, {
+              d.createElement(wt, {
                 varName: "use_random_order",
                 editModel: a,
                 section: l,
@@ -28150,14 +28067,14 @@
               )
           );
         });
-      var We = Object(c.a)(function (e) {
+      var He = Object(c.a)(function (e) {
           if (
             ((a = e.tuple),
             "object" == typeof (o = a) &&
               "number" == typeof o.clanAccountID &&
               "string" == typeof o.listID)
           ) {
-            var t = Fe.a.Get().GetListDetails(e.tuple.listID);
+            var t = qe.a.Get().GetListDetails(e.tuple.listID);
             return t
               ? d.createElement("div", null, t.title)
               : d.createElement(D.a, {
@@ -28168,7 +28085,7 @@
           var a, o;
           return d.createElement("div", null, Object(g.f)("#Error"));
         }),
-        He = Object(c.a)(function (e) {
+        Ve = Object(c.a)(function (e) {
           var t = e.saleSection,
             a = e.editModel,
             i = a.GetClanSteamID(),
@@ -28184,21 +28101,21 @@
             },
             w =
               a.GetEventModel().BIsVisibleEvent() &&
-              a.GetEventStartTime() < qe.a.GetTimeNowWithOverride();
+              a.GetEventStartTime() < Le.a.GetTimeNowWithOverride();
           d.useEffect(
             function () {
               var e = null;
               return (
                 w
                   ? ((e = n.a.CancelToken.source()),
-                    Fe.a
+                    qe.a
                       .Get()
                       .LoadAllSaleCurationLists(i, r, e)
                       .then(function (e) {
                         if ((null == e ? void 0 : e.length) > 0) {
                           var t = new Array();
                           e.forEach(function (e) {
-                            var a = Fe.a
+                            var a = qe.a
                                 .Get()
                                 .GetClanAccountFromListID(e.listid),
                               o = x.a.InitFromClanID(a);
@@ -28225,7 +28142,7 @@
               },
             },
             S = new Array();
-          Fe.a
+          qe.a
             .Get()
             .GetAllSaleCurationLists(a.GetGID())
             .forEach(function (e) {
@@ -28235,7 +28152,7 @@
                   return t.listID == e.listid;
                 })
               ) {
-                var a = Fe.a.Get().GetClanAccountFromListID(e.listid);
+                var a = qe.a.Get().GetClanAccountFromListID(e.listid);
                 S.push({ clanAccountID: a, list: e });
               }
             });
@@ -28245,7 +28162,7 @@
             return { label: (a += ": " + e.list.title), value: e.list.listid };
           });
           return d.createElement(
-            Ie.a,
+            Ce.a,
             null,
             d.createElement(
               f.h,
@@ -28272,15 +28189,15 @@
                     w
                       ? d.createElement(
                           "div",
-                          { className: ze.SelectArea },
+                          { className: Re.SelectArea },
                           p
                             ? d.createElement(D.a, {
                                 size: "medium",
                                 string: Object(g.f)("#Loading"),
                               })
-                            : d.createElement(ge.a, {
+                            : d.createElement(ye.a, {
                                 styles: v,
-                                className: ze.dropDown,
+                                className: Re.dropDown,
                                 isSearchable: !0,
                                 isMulti: !1,
                                 options: _,
@@ -28293,7 +28210,7 @@
                         )
                       : d.createElement(
                           "div",
-                          { className: ze.DisplayWarning },
+                          { className: Re.DisplayWarning },
                           Object(g.f)(
                             "#Sale_CuratorRecommendation_ChooseInvalid"
                           )
@@ -28309,7 +28226,7 @@
                     onOK: function () {
                       var e = m.value;
                       t.featured_curator_list.push({
-                        clanAccountID: Fe.a.Get().GetClanAccountFromListID(e),
+                        clanAccountID: qe.a.Get().GetClanAccountFromListID(e),
                         listID: e,
                       }),
                         a.SetDirty(s.c.jsondata_sales),
@@ -28321,13 +28238,12 @@
             )
           );
         }),
-        Ve = a("165M"),
         Ue = function (e) {
           return d.createElement(
-            Ie.a,
+            Ce.a,
             null,
             d.createElement(
-              St,
+              wt,
               Object(o.a)(
                 {
                   textToken: "#Sale_Section_CarouselAutoAdvance",
@@ -28452,10 +28368,10 @@
             return { label: e, value: e };
           });
           return d.createElement(
-            Ie.a,
+            Ce.a,
             null,
             d.createElement(
-              St,
+              wt,
               Object(o.a)(
                 {
                   textToken: "Show a specific carousel",
@@ -28475,7 +28391,7 @@
                   "div",
                   { className: Qe.ContentHubSectionInnerCtn },
                   d.createElement(u.m, null, "ID"),
-                  d.createElement(ge.a, {
+                  d.createElement(ye.a, {
                     options: p,
                     value: p.find(function (e) {
                       return e.value === a.contenthub_section_id;
@@ -28713,24 +28629,13 @@
           )
         );
       }
-      var ot = a("oqmg"),
-        it = function (e) {
-          return d.createElement(
-            "span",
-            {
-              "data-tooltip-text": e.tooltip,
-              className: Object(F.a)(T.HelperTooltip, "HelperTooltip"),
-            },
-            " ",
-            d.createElement(De.A, null)
-          );
-        };
-      function nt(e, t) {
+      var ot = a("oqmg");
+      function it(e, t) {
         return e.disable_background
           ? { background: "transparent" }
-          : Object(Ce.f)(e, t);
+          : Object(Te.f)(e, t);
       }
-      function st(e, t) {
+      function nt(e, t) {
         for (var a = 0, o = e.GetSaleSections(); a < o.length; a++) {
           var i = o[a];
           if (i === t) break;
@@ -28738,8 +28643,8 @@
         }
         return null;
       }
-      function rt(e, t) {
-        var a = st(e, t);
+      function st(e, t) {
+        var a = nt(e, t);
         if (a) {
           var i = new Set(Object(o.g)(t.show_on_tabs || [])),
             n = a.tabs.map(function (a) {
@@ -28767,7 +28672,7 @@
                 onChange: function (e) {
                   e ? i.add(a.unique_id) : i.delete(a.unique_id);
                 },
-                label: Object(Ce.g)(a, e.GetCurEditLanguage()) + s,
+                label: Object(Te.g)(a, e.GetCurEditLanguage()) + s,
                 checked: i.has(a.unique_id),
               });
             });
@@ -28790,28 +28695,7 @@
           );
         }
       }
-      var lt = Object(c.a)(function (e) {
-          return d.createElement(
-            d.Fragment,
-            null,
-            d.createElement(
-              "div",
-              { className: S.SaleSectionTitleHeader },
-              d.createElement(
-                "div",
-                { className: T.EventEditorTextTitle },
-                e.title,
-                d.createElement(it, { tooltip: e.tooltip })
-              ),
-              d.createElement(Ve.a, {
-                bIsMinimized: e.getMinimized(),
-                fnToggleMinimize: e.toggleMinimized,
-              })
-            ),
-            !e.getMinimized() && d.createElement(Ie.a, null, e.children)
-          );
-        }),
-        pt = (function (e) {
+      var rt = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -28831,7 +28715,7 @@
                           return e.unique_id === t;
                         })
                       : null;
-                    a && i.push(Object(Ce.g)(a, o));
+                    a && i.push(Object(Te.g)(a, o));
                   },
                   s = 0,
                   r = a.show_on_tabs;
@@ -28847,13 +28731,13 @@
             (t.prototype.OnEditTabSections = function () {
               var e = this.props,
                 t = e.saleSection;
-              rt(e.editModel, t);
+              st(e.editModel, t);
             }),
             (t.prototype.render = function () {
-              var e = st(this.props.editModel, this.props.saleSection);
+              var e = nt(this.props.editModel, this.props.saleSection);
               return e && e.tabs && 0 !== e.tabs.length
                 ? d.createElement(
-                    lt,
+                    $.c,
                     {
                       title: Object(g.f)("#Sale_Section_TabSettings_Title"),
                       tooltip: Object(g.f)(
@@ -28862,7 +28746,7 @@
                       getMinimized: this.props.getMinimized,
                       toggleMinimized: this.props.toggleMinimized,
                     },
-                    d.createElement(St, {
+                    d.createElement(wt, {
                       varName: "diable_tab_id_filtering",
                       editModel: this.props.editModel,
                       section: this.props.saleSection,
@@ -28901,7 +28785,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        ct = Object(c.a)(function (e) {
+        lt = Object(c.a)(function (e) {
           var t = e.saleSection,
             a = e.editModel;
           if (!t.label_link) return null;
@@ -28919,15 +28803,15 @@
             })
           );
         });
-      function dt(e, t, a, o, i) {
-        var n = Object(Ce.e)(e, t, a.GetClanSteamID().GetAccountID(), i);
+      function pt(e, t, a, o, i) {
+        var n = Object(Te.e)(e, t, a.GetClanSteamID().GetAccountID(), i);
         if (n) return n;
         var s = Object(g.f)("#Sale_Section_Header", o + 1),
           r = "#Sale_Section_Type_" + e.section_type,
           l = Object(g.f)(r);
         return l !== r && (s = s + " (" + l + ")"), s;
       }
-      var ht = (function (e) {
+      var ct = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = { bIsExiting: !1 }), t;
@@ -28949,9 +28833,9 @@
                     ? o.push(e.id)
                     : t.add(e.id));
               }),
-              ve.a.EnsureAppInfoForAppIDs(new Set(t)),
-              Se.a.LoadBundleInfo(a),
-              _e.b.LoadPackageInfo(o),
+              Se.a.EnsureAppInfoForAppIDs(new Set(t)),
+              _e.a.LoadBundleInfo(a),
+              ke.b.LoadPackageInfo(o),
               I.d.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 null,
                 this.props.saleSection.events
@@ -29038,7 +28922,7 @@
             Object(j.d)(
               this.props.editModel.GetEventModel().jsondata.sale_sections,
               this.props.index,
-              Object(Me.a)(
+              Object(Pe.a)(
                 this.props.index + t,
                 0,
                 this.props.editModel.GetEventModel().jsondata.sale_sections
@@ -29164,12 +29048,12 @@
               l = r.sale_font,
               p = r.sale_section_font_size,
               c = r.sale_section_disable_capitalize,
-              h = Object(Ce.d)(i),
+              h = Object(Te.d)(i),
               m = this.props.saleSection.section_type || s[0].data,
               f = Boolean(g.a.GetWithFallback(i.localized_label, n)),
               y =
                 f ||
-                ce.a.IsValidTitleOption(this.props.saleSection.default_label),
+                de.a.IsValidTitleOption(this.props.saleSection.default_label),
               b = 0;
             i.localized_label_image &&
               i.localized_label_image.forEach(function (e) {
@@ -29185,7 +29069,7 @@
               {
                 id: "SaleSection_" + i.unique_id,
                 className: Object(F.a)(X.SaleSection, X.InEditor),
-                style: Object(o.a)(Object(o.a)({}, nt(i, a.GetEventModel())), {
+                style: Object(o.a)(Object(o.a)({}, it(i, a.GetEventModel())), {
                   opacity: this.state.bIsExiting ? 0 : 1,
                   transition: "opacity 500ms",
                 }),
@@ -29204,7 +29088,7 @@
                     color: this.props.saleSection.label_color,
                   },
                 },
-                dt(i, this.props.editLanguage, a, this.props.index, !1),
+                pt(i, this.props.editLanguage, a, this.props.index, !1),
                 d.createElement(
                   "div",
                   { className: Object(F.a)(T.CloseSectionTools) },
@@ -29222,7 +29106,7 @@
                           return e.MoveSection(!1);
                         },
                       },
-                      d.createElement(De.c, { angle: 0 })
+                      d.createElement(Me.c, { angle: 0 })
                     ),
                     d.createElement(
                       u.d,
@@ -29236,9 +29120,9 @@
                           return e.MoveSection(!0);
                         },
                       },
-                      d.createElement(De.c, { angle: 180 })
+                      d.createElement(Me.c, { angle: 180 })
                     ),
-                    d.createElement(Ve.a, {
+                    d.createElement($.a, {
                       bIsMinimized: v,
                       fnToggleMinimize: function () {
                         return e.ToggleMinimized("", !1);
@@ -29252,13 +29136,13 @@
                           return e.RemoveSection(e.props.index);
                         },
                       },
-                      d.createElement(De.pb, null)
+                      d.createElement(Me.pb, null)
                     )
                   )
                 )
               ),
               v
-                ? d.createElement(ut, {
+                ? d.createElement(dt, {
                     editModel: a,
                     section: i,
                     tabSection: a.GetTabSaleSection(),
@@ -29267,7 +29151,7 @@
                     d.Fragment,
                     null,
                     d.createElement(
-                      Oe.a,
+                      De.a,
                       { placeholderHeight: "300px", className: X.EditorCtn },
                       d.createElement(
                         "div",
@@ -29286,7 +29170,7 @@
                           onChange: this.OnSaleSectionTypeChange,
                           contextMenuPositionOptions: { bDisablePopTop: !0 },
                         }),
-                        d.createElement(it, {
+                        d.createElement($.b, {
                           tooltip: Object(g.f)("#Sale_SectionTypeTTip_" + m),
                         })
                       )
@@ -29296,7 +29180,7 @@
                         d.Fragment,
                         null,
                         d.createElement(
-                          Oe.a,
+                          De.a,
                           {
                             placeholderHeight: "300px",
                             className: X.EditorCtn,
@@ -29314,13 +29198,13 @@
                                   Object(g.f)(
                                     "#Sale_Section_SectionTitle_Title"
                                   ),
-                                  d.createElement(it, {
+                                  d.createElement($.b, {
                                     tooltip: Object(g.f)(
                                       "#Sale_Section_SectionTitle_Title_ttip"
                                     ),
                                   })
                                 ),
-                                d.createElement(Ve.a, {
+                                d.createElement($.a, {
                                   bIsMinimized: this.GetMinimized("title", !1),
                                   fnToggleMinimize: function () {
                                     return e.ToggleMinimized("title", !1);
@@ -29336,7 +29220,7 @@
                                       T.EventDefaultRowContainer
                                     ),
                                   },
-                                  d.createElement(ce.a, {
+                                  d.createElement(de.a, {
                                     default_label: i.default_label,
                                     localized_label: i.localized_label,
                                     editLanguage: this.props.editLanguage,
@@ -29396,15 +29280,15 @@
                                         value: this.props.saleSection
                                           .label_link,
                                       }),
-                                      d.createElement(ct, {
+                                      d.createElement(lt, {
                                         saleSection: i,
                                         editModel: a,
                                       })
                                     )
                                 )
                             ),
-                          _ && d.createElement(ue, Object(o.a)({}, this.props)),
-                          d.createElement(pt, {
+                          _ && d.createElement(me, Object(o.a)({}, this.props)),
+                          d.createElement(rt, {
                             saleSection: i,
                             editModel: a,
                             editLanguage: n,
@@ -29435,13 +29319,13 @@
                           (w = this.props.saleSection.section_type) &&
                           "tab_buttons" != w &&
                           d.createElement(
-                            Oe.a,
+                            De.a,
                             {
                               placeholderHeight: "300px",
                               className: X.EditorCtn,
                               id: "salesection_item_" + this.props.index,
                             },
-                            d.createElement(Tt, Object(o.a)({}, this.props))
+                            d.createElement(It, Object(o.a)({}, this.props))
                           )
                       )
                   )
@@ -29467,7 +29351,7 @@
           (t = Object(o.c)([c.a], t))
         );
       })(d.Component);
-      var ut = function (e) {
+      var dt = function (e) {
           var t = e.editModel,
             a = e.section,
             o = e.tabSection,
@@ -29477,7 +29361,7 @@
                   {
                     className: S.ShowInTabsList,
                     onClick: function () {
-                      return rt(t, a);
+                      return st(t, a);
                     },
                   },
                   Object(g.f)(
@@ -29492,7 +29376,7 @@
                                 return t.unique_id == e;
                               });
                               a += o
-                                ? Object(Ce.g)(o, Object(N.h)(z.c.LANGUAGE))
+                                ? Object(Te.g)(o, Object(N.h)(z.c.LANGUAGE))
                                 : Object(g.f)("#EventCalendar_MuteApp_Unknown");
                             })
                           : (a = Object(g.f)("#Sale_Section_ShowOnTabs_All")),
@@ -29536,7 +29420,7 @@
               )
             : i;
         },
-        mt = (function (e) {
+        ht = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -29560,7 +29444,7 @@
                   checked: this.props.saleSection.smart_section,
                 }),
                 this.props.saleSection.smart_section &&
-                  d.createElement(At, {
+                  d.createElement(Ct, {
                     saleSection: this.props.saleSection,
                     editModel: this.props.editModel,
                   }),
@@ -29568,12 +29452,12 @@
                   d.createElement(
                     d.Fragment,
                     null,
-                    d.createElement(he.a, {
+                    d.createElement(ue.a, {
                       capsuleContainer: this.props.saleSection,
                       editModel: this.props.editModel,
                       uniqueKey: "Section" + this.props.saleSection.unique_id,
                     }),
-                    d.createElement(fe.a, {
+                    d.createElement(ge.a, {
                       section: this.props.saleSection,
                       capsuleContainer: this.props.saleSection,
                       editModel: this.props.editModel,
@@ -29586,7 +29470,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        ft = Object(c.a)(function (e) {
+        ut = Object(c.a)(function (e) {
           var t = e.saleSection,
             a = e.editModel;
           return d.createElement(
@@ -29612,11 +29496,11 @@
               checked: t.smart_section,
             }),
             t.smart_section
-              ? d.createElement(Z, Object(o.a)({}, e))
-              : d.createElement($, Object(o.a)({}, e))
+              ? d.createElement(ee, Object(o.a)({}, e))
+              : d.createElement(J, Object(o.a)({}, e))
           );
         }),
-        gt = (function (e) {
+        mt = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { linkToAddURL: "" }), t;
@@ -29676,9 +29560,9 @@
                       t.localized_link_capsule.forEach(function (e) {
                         a += e ? 1 : 0;
                       });
-                    var o = Object(Pe.c)(t.url, z.c.STORE_BASE_URL);
+                    var o = Object(je.c)(t.url, z.c.STORE_BASE_URL);
                     return d.createElement(
-                      Ce.k,
+                      Te.k,
                       {
                         className: Object(F.a)(Y.a.FlexCenter, X.UploadLinkRow),
                         url: t.url,
@@ -29727,13 +29611,13 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        yt = (function (e) {
+        ft = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.state = {
-                maxRowsString: Object(we.r)(t.props.saleSection).toString(),
-                capItemCountString: Object(we.t)(
+                maxRowsString: Object(ve.r)(t.props.saleSection).toString(),
+                capItemCountString: Object(ve.t)(
                   t.props.saleSection
                 ).toString(),
               }),
@@ -29745,14 +29629,14 @@
             (t.prototype.OnRandomChange = function (e, t) {
               t || (e.cap_item_count = 0),
                 this.setState({
-                  maxRowsString: Object(we.t)(
+                  maxRowsString: Object(ve.t)(
                     this.props.saleSection
                   ).toString(),
                 });
             }),
             (t.prototype.OnCapSectionChange = function (e, t) {
               this.setState({
-                maxRowsString: Object(we.r)(this.props.saleSection).toString(),
+                maxRowsString: Object(ve.r)(this.props.saleSection).toString(),
               });
             }),
             (t.prototype.OnCapItemCountChange = function (e, t) {
@@ -29844,7 +29728,7 @@
                       data: this.ConvertRowConfigToString([3], ["tall"]),
                     }
                   );
-              var n = Object(Te.c)(a),
+              var n = Object(Ae.c)(a),
                 s = this.ConvertRowConfigToString(
                   n,
                   a.capsule_style_per_row_array
@@ -29918,7 +29802,7 @@
                         showValue: !0,
                         min: 1,
                         max: 3,
-                        value: Object(we.s)(n),
+                        value: Object(ve.s)(n),
                         onChange: function (e) {
                           return o.OnCarouselRowsChange(n, e);
                         },
@@ -29931,7 +29815,7 @@
                   d.createElement(
                     "div",
                     { className: T.HalfColumn },
-                    d.createElement(St, {
+                    d.createElement(wt, {
                       varName: "use_random_order",
                       onChange: this.OnRandomChange,
                       editModel: r,
@@ -29946,7 +29830,7 @@
                         : "Sale_Section_UseRandomOrder_SortingTiers_hint",
                     }),
                     l &&
-                      d.createElement(St, {
+                      d.createElement(wt, {
                         varName: "random_from_entire_set",
                         editModel: r,
                         section: n,
@@ -29972,7 +29856,7 @@
                           value: this.state.capItemCountString,
                         })
                       ),
-                    d.createElement(St, {
+                    d.createElement(wt, {
                       varName: "show_as_carousel",
                       editModel: r,
                       section: n,
@@ -29983,7 +29867,7 @@
                       d.createElement(
                         d.Fragment,
                         null,
-                        d.createElement(St, {
+                        d.createElement(wt, {
                           varName: "cap_section_content",
                           onChange: this.OnCapSectionChange,
                           editModel: r,
@@ -30011,7 +29895,7 @@
                           })
                       ),
                     n.show_as_carousel &&
-                      d.createElement(St, {
+                      d.createElement(wt, {
                         varName: "carousel_auto_advance",
                         valveOnly: !0,
                         editModel: r,
@@ -30019,14 +29903,14 @@
                         textToken: "#Sale_Section_CarouselAutoAdvance",
                         ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
                       }),
-                    p && d.createElement(wt, { editModel: r, section: n }),
-                    d.createElement(vt, {
+                    p && d.createElement(yt, { editModel: r, section: n }),
+                    d.createElement(bt, {
                       editModel: r,
                       section: n,
                       bDisabled: !m,
                     }),
                     h &&
-                      d.createElement(St, {
+                      d.createElement(wt, {
                         varName: "show_purchase_options",
                         editModel: r,
                         section: n,
@@ -30034,7 +29918,7 @@
                         ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
                       }),
                     c &&
-                      d.createElement(St, {
+                      d.createElement(wt, {
                         valveOnly: !0,
                         varName: "hide_prices",
                         editModel: r,
@@ -30042,7 +29926,7 @@
                         textToken: "#Sale_Section_HidePrices",
                         ttipToken: "#Sale_Section_HidePrices_ttip",
                       }),
-                    d.createElement(bt, { editModel: r, saleSection: n })
+                    d.createElement(gt, { editModel: r, saleSection: n })
                   )
                 )
               );
@@ -30061,7 +29945,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        bt = Object(c.a)(function (e) {
+        gt = Object(c.a)(function (e) {
           var t,
             a = e.saleSection,
             o = e.editModel;
@@ -30091,7 +29975,7 @@
               Boolean(a.smart_section_type) &&
               "recent_tagged_events" !== a.smart_section_type &&
               ((i = !1), (n = "#Sale_Section_RevealSetting_limit_smart")),
-            d.createElement(St, {
+            d.createElement(wt, {
               valveOnly: !0,
               varName: "dynamic_reveal",
               editModel: o,
@@ -30102,8 +29986,8 @@
             })
           );
         }),
-        wt = function (e) {
-          return d.createElement(St, {
+        yt = function (e) {
+          return d.createElement(wt, {
             varName: "show_as_demos",
             editModel: e.editModel,
             section: e.section,
@@ -30111,7 +29995,7 @@
             ttipToken: "#Sale_Section_UseDemoLayout_tooltip",
           });
         },
-        vt = Object(c.a)(function (e) {
+        bt = Object(c.a)(function (e) {
           var t = e.editModel,
             a = e.section,
             o = e.bDisabled;
@@ -30158,7 +30042,7 @@
                 : "#Sale_Section_SingleItemDisplay_ttip"
             ),
             strDropDownClassName: T.DropDownScroll,
-            selectedOption: a.single_item_style || we.y,
+            selectedOption: a.single_item_style || ve.y,
             onChange: function (e) {
               a.single_item_style !== e.data &&
                 ((a.single_item_style = e.data),
@@ -30166,7 +30050,7 @@
             },
           });
         }),
-        St = Object(c.a)(function (e) {
+        wt = Object(c.a)(function (e) {
           var t = e.editModel,
             a = e.section,
             o = e.varName,
@@ -30198,7 +30082,7 @@
                 disabled: l,
               });
         }),
-        _t = (function (e) {
+        vt = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_descBBCodeEditor = d.createRef()), t;
@@ -30229,7 +30113,7 @@
             }),
             (t.prototype.OnImageInsert = function (e, t) {
               this.m_descBBCodeEditor.current &&
-                Object(be.b)(this.m_descBBCodeEditor.current, e, t);
+                Object(we.b)(this.m_descBBCodeEditor.current, e, t);
             }),
             (t.prototype.OnRelatedToBroadcast = function (e) {
               this.props.saleSection.hide_section_if_broadcast_is_hidden !==
@@ -30248,7 +30132,7 @@
                 d.createElement(
                   "div",
                   { className: X.TextSectionBBCode },
-                  d.createElement(xe.a, {
+                  d.createElement(Ie.a, {
                     fnGetCurText: this.GetCurText,
                     fnOnTextChange: this.OnTextChange,
                     fnSetText: this.SetText,
@@ -30256,11 +30140,11 @@
                     strPlaceholder: Object(g.f)(
                       "#EventEditor_SaleTextSection_PlaceHolder"
                     ),
-                    emoticonStore: ke.b,
+                    emoticonStore: xe.b,
                     bSupportHTMLImport: !0,
                     showFormatHelp: "PartnerEvents",
                     classNameForTextArea: S.EventEditorDescription,
-                    limitBBCode: z.b.CAN_UPLOAD_IMAGES ? void 0 : ye.f,
+                    limitBBCode: z.b.CAN_UPLOAD_IMAGES ? void 0 : be.f,
                     clanSteamID: a.GetClanSteamID(),
                   }),
                   d.createElement(
@@ -30314,7 +30198,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        kt = (function (e) {
+        St = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = {}), t;
@@ -30361,7 +30245,7 @@
                 this.props.editModel.SetDirty(s.c.jsondata_sales);
             }),
             (t.prototype.RenderTabName = function (e) {
-              var t = we.F.find(function (t) {
+              var t = ve.F.find(function (t) {
                   return t.flavor === e;
                 }),
                 a = e;
@@ -30378,7 +30262,7 @@
                   null,
                   a,
                   Boolean(null == t ? void 0 : t.tooltip) &&
-                    d.createElement(it, { tooltip: Object(g.f)(t.tooltip) })
+                    d.createElement($.b, { tooltip: Object(g.f)(t.tooltip) })
                 )
               );
             }),
@@ -30387,7 +30271,7 @@
                 t = this.props.saleSection.item_browse_section_data || {},
                 a = t.master_subscription,
                 o = t.tabs || [],
-                i = we.G.filter(function (e) {
+                i = ve.G.filter(function (e) {
                   return (
                     void 0 ===
                     o.find(function (t) {
@@ -30406,7 +30290,7 @@
                           return e.OnAddTab(t);
                         },
                       },
-                      d.createElement(De.s, null)
+                      d.createElement(Me.s, null)
                     ),
                     e.RenderTabName(t)
                   );
@@ -30439,7 +30323,7 @@
                   "div",
                   { className: T.EventEditorTextTitle },
                   Object(g.f)("#Sale_BrowseSection_TabList"),
-                  d.createElement(it, {
+                  d.createElement($.b, {
                     tooltip: Object(g.f)("#Sale_BrowseSection_TabList_ttip"),
                   })
                 ),
@@ -30461,14 +30345,14 @@
                   "div",
                   { className: T.EventEditorTextTitle },
                   Object(g.f)("#Sale_BrowseSection_AdditionalTabList"),
-                  d.createElement(it, {
+                  d.createElement($.b, {
                     tooltip: Object(g.f)(
                       "#Sale_BrowseSection_AdditionalTabList_ttip"
                     ),
                   })
                 ),
                 d.createElement("div", null, i),
-                d.createElement(fe.a, {
+                d.createElement(ge.a, {
                   section: this.props.saleSection,
                   capsuleContainer: this.props.saleSection,
                   editModel: this.props.editModel,
@@ -30484,7 +30368,7 @@
             (t = Object(o.c)([c.a], t))
           );
         })(d.Component),
-        xt = Object(c.a)(function (e) {
+        _t = Object(c.a)(function (e) {
           var t,
             a,
             o,
@@ -30497,15 +30381,15 @@
             h = [
               {
                 label: Object(g.f)("#SaleItemSource_TaggedItems"),
-                data: we.n.k_ETaggedItems,
+                data: ve.n.k_ETaggedItems,
               },
               {
                 label: Object(g.f)("#SaleItemSource_ContentHub"),
-                data: we.n.k_EContentHub,
+                data: ve.n.k_EContentHub,
               },
             ],
             m = (function () {
-              var e = je.Get(),
+              var e = Fe.Get(),
                 t = Object(d.useState)(!e.BHasContentHubNames()),
                 a = t[0],
                 o = t[1],
@@ -30554,7 +30438,7 @@
             })));
           var y = r.GetEventModel().jsondata;
           return d.createElement(
-            lt,
+            $.c,
             {
               title: Object(g.f)("#Sale_BrowseSection_ContentHubTitle"),
               tooltip: Object(g.f)("#Sale_BrowseSection_ContentHubTooltip"),
@@ -30576,11 +30460,11 @@
                   ),
                   d.createElement(u.h, {
                     rgOptions: h,
-                    selectedOption: y.item_source_type || we.n.k_ETaggedItems,
+                    selectedOption: y.item_source_type || ve.n.k_ETaggedItems,
                     onChange: function (e) {
                       if (
                         ((r.GetEventModel().jsondata.item_source_type = e.data),
-                        e.data === we.n.k_EContentHub)
+                        e.data === ve.n.k_EContentHub)
                       ) {
                         var t = {
                           type: r.GetEventModel().GetContentHubType(),
@@ -30589,12 +30473,12 @@
                         };
                         (r.GetEventModel().jsondata.source_content_hub = t),
                           r.GetEventModel().jsondata
-                            .bAutoUpdateVanityURLForContentHub && It(t, r);
+                            .bAutoUpdateVanityURLForContentHub && kt(t, r);
                       }
                       r.SetDirty(s.c.jsondata_sales);
                     },
                   }),
-                  y.item_source_type === we.n.k_EContentHub &&
+                  y.item_source_type === ve.n.k_EContentHub &&
                     d.createElement(
                       d.Fragment,
                       null,
@@ -30603,7 +30487,7 @@
                         null,
                         Object(g.f)("#Sale_BrowseSection_ContentHubType")
                       ),
-                      d.createElement(ge.a, {
+                      d.createElement(ye.a, {
                         options: o,
                         value: o.find(function (e) {
                           return (
@@ -30618,7 +30502,7 @@
                           };
                           (r.GetEventModel().jsondata.source_content_hub = t),
                             r.GetEventModel().jsondata
-                              .bAutoUpdateVanityURLForContentHub && It(t, r),
+                              .bAutoUpdateVanityURLForContentHub && kt(t, r),
                             r.SetDirty(s.c.jsondata_sales);
                         },
                         isSearchable: !0,
@@ -30634,7 +30518,7 @@
                               "#Sale_BrowseSection_ContentHubCategory"
                             )
                           ),
-                          d.createElement(ge.a, {
+                          d.createElement(ye.a, {
                             options: i,
                             value: i.find(function (e) {
                               var t;
@@ -30655,7 +30539,7 @@
                               (r.GetEventModel().jsondata.source_content_hub = t),
                                 r.GetEventModel().jsondata
                                   .bAutoUpdateVanityURLForContentHub &&
-                                  It(t, r),
+                                  kt(t, r),
                                 r.SetDirty(s.c.jsondata_sales);
                             },
                             isSearchable: !0,
@@ -30670,7 +30554,7 @@
                             null,
                             Object(g.f)("#Sale_BrowseSection_ContentHubTag")
                           ),
-                          d.createElement(ge.a, {
+                          d.createElement(ye.a, {
                             options: n,
                             value: n.find(function (e) {
                               var t;
@@ -30694,7 +30578,7 @@
                               (r.GetEventModel().jsondata.source_content_hub = t),
                                 r.GetEventModel().jsondata
                                   .bAutoUpdateVanityURLForContentHub &&
-                                  It(t, r),
+                                  kt(t, r),
                                 r.SetDirty(s.c.jsondata_sales);
                             },
                             isSearchable: !0,
@@ -30717,7 +30601,7 @@
                         onChange: function (e) {
                           ((r.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub = e),
                           e) &&
-                            It(
+                            kt(
                               {
                                 type: r.GetEventModel().GetContentHubType(),
                                 category: r
@@ -30735,7 +30619,7 @@
               : d.createElement(D.a, { size: "medium", position: "center" })
           );
         });
-      function It(e, t) {
+      function kt(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {
@@ -30757,7 +30641,7 @@
             "SetVanityURLForContentHub: Undefined hub type, skipping vanity URL update."
           );
       }
-      var Ct = Object(c.a)(function (e) {
+      var xt = Object(c.a)(function (e) {
           var t = e.editModel,
             a = e.saleSection,
             o = (e.index, a.internal_section_data),
@@ -30808,7 +30692,7 @@
               contextMenuPositionOptions: { bDisablePopTop: !0 },
             }),
             Boolean("cyoa_story" !== n && "reservation_widget" !== n) &&
-              d.createElement(he.a, {
+              d.createElement(ue.a, {
                 capsuleContainer: a,
                 editModel: t,
                 uniqueKey: "Section" + a.unique_id,
@@ -30836,7 +30720,7 @@
                 },
               }),
             Boolean("reservation_widget" === n) &&
-              d.createElement(Ae.a, {
+              d.createElement(Ee.a, {
                 event: t.GetEventModel(),
                 saleSection: a,
                 fnOnDirty: function () {
@@ -30845,15 +30729,15 @@
               })
           );
         }),
-        Tt = Object(c.a)(function (e) {
+        It = Object(c.a)(function (e) {
           switch (e.saleSection.section_type) {
             case "items":
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(mt, Object(o.a)({}, e)),
+                d.createElement(ht, Object(o.a)({}, e)),
                 d.createElement(
-                  yt,
+                  ft,
                   Object(o.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -30863,9 +30747,9 @@
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(ft, Object(o.a)({}, e)),
+                d.createElement(ut, Object(o.a)({}, e)),
                 d.createElement(
-                  yt,
+                  ft,
                   Object(o.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -30875,36 +30759,36 @@
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(gt, Object(o.a)({}, e)),
+                d.createElement(mt, Object(o.a)({}, e)),
                 d.createElement(
-                  yt,
+                  ft,
                   Object(o.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
                 )
               );
             case "broadcast":
-              return d.createElement(Re, Object(o.a)({}, e));
-            case "event_description":
-              return d.createElement(Be, Object(o.a)({}, e));
-            case "text_section":
-              return d.createElement(_t, Object(o.a)({}, e));
-            case "curator":
               return d.createElement(Ne, Object(o.a)({}, e));
+            case "event_description":
+              return d.createElement(Ge, Object(o.a)({}, e));
+            case "text_section":
+              return d.createElement(vt, Object(o.a)({}, e));
+            case "curator":
+              return d.createElement(Be, Object(o.a)({}, e));
             case "vo_internal":
-              return d.createElement(Ct, Object(o.a)({}, e));
+              return d.createElement(xt, Object(o.a)({}, e));
             case "tabs":
-              return d.createElement(me.b, Object(o.a)({}, e));
+              return d.createElement(fe.b, Object(o.a)({}, e));
             case "tab_buttons":
               return null;
             case "doors":
               return d.createElement("div", null, "No settings for now.");
             case "sale_item_browser":
-              return d.createElement(kt, Object(o.a)({}, e));
+              return d.createElement(St, Object(o.a)({}, e));
             case "event_schedule":
-              return d.createElement(ee, Object(o.a)({}, e));
+              return d.createElement(te, Object(o.a)({}, e));
             case "curator_recommendation":
-              return d.createElement(Ge, Object(o.a)({}, e));
+              return d.createElement(We, Object(o.a)({}, e));
             case "contenthubmaincarousel":
               return d.createElement(
                 Ue,
@@ -30921,7 +30805,7 @@
                 null,
                 d.createElement(Ze, Object(o.a)({}, e)),
                 d.createElement(
-                  yt,
+                  ft,
                   Object(o.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -30932,7 +30816,7 @@
               return null;
           }
         });
-      var At = (function (e) {
+      var Ct = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -31055,13 +30939,13 @@
               (this.m_refInput.element.value = ""),
               Object(_.G)(function () {
                 (a.props.saleSection.capsules = [{ id: e, type: t }]),
-                  Object(Ee.i)(a.props.saleSection.capsules),
+                  Object(Oe.i)(a.props.saleSection.capsules),
                   a.props.editModel.SetDirty(s.c.jsondata_sales);
               });
           }),
           (t.prototype.OnChooseMasterSubscriptionID = function (e) {
             Object(E.d)(
-              d.createElement(de.a, { fnAddCapsule: this.SetMasterAppID }),
+              d.createElement(he.a, { fnAddCapsule: this.SetMasterAppID }),
               Object(q.m)(e)
             );
           }),
@@ -31264,7 +31148,7 @@
             var n = this.props.saleSection,
               s = this.props.saleSection.smart_section_type;
             return d.createElement(
-              Ie.a,
+              Ce.a,
               null,
               d.createElement(
                 "div",
@@ -31349,7 +31233,7 @@
                   "div",
                   null,
                   Boolean(n.capsules && n.capsules.length > 0) &&
-                    d.createElement(pe.a, { capsule: n.capsules[0] }),
+                    d.createElement(ce.a, { capsule: n.capsules[0] }),
                   d.createElement(
                     "div",
                     { className: X.SaleImportBarButtonGroup },
@@ -31374,7 +31258,7 @@
                 capsuleContainer: this.props.saleSection,
                 editModel: this.props.editModel,
               }),
-              d.createElement(fe.a, {
+              d.createElement(ge.a, {
                 section: this.props.saleSection,
                 capsuleContainer: this.props.saleSection,
                 editModel: this.props.editModel,
@@ -31681,10 +31565,10 @@
         B = a("lkRc"),
         G = a("as1E"),
         W = a("k3PP"),
-        H = a("JiI5"),
-        V = a("IMce"),
-        U = a("mHFc"),
-        Y = a("165M"),
+        H = a("DisI"),
+        V = a("JiI5"),
+        U = a("IMce"),
+        Y = a("mHFc"),
         Q = a("putg");
       function X(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
@@ -31733,10 +31617,10 @@
               " '" +
               a.or_tags.join("' " + Object(L.f)("#Sale_TagFilter_Or") + " '") +
               "'",
-            i = "Must have" === a.type ? V.MustHaveClause : V.MustNotHaveClause;
+            i = "Must have" === a.type ? U.MustHaveClause : U.MustNotHaveClause;
           return u.createElement(
             "div",
-            { className: Object(q.a)(i, V.ClauseRowCtn) },
+            { className: Object(q.a)(i, U.ClauseRowCtn) },
             o
           );
         },
@@ -31745,15 +31629,15 @@
           return Object(r.q)(t)
             ? u.createElement(
                 "div",
-                { className: V.FilterDisplayNoFilter },
+                { className: U.FilterDisplayNoFilter },
                 Object(L.f)("#Sale_TagFilter_NoFilter"),
-                u.createElement(W.d, {
+                u.createElement(H.b, {
                   tooltip: Object(L.f)("#Sale_TagFilter_NoFilter_ttip"),
                 })
               )
             : u.createElement(
                 "div",
-                { className: V.FilterDisplayList },
+                { className: U.FilterDisplayList },
                 t.clauses.map(function (e, t) {
                   return u.createElement(J, { clause: e, key: "clause" + t });
                 })
@@ -31810,7 +31694,7 @@
             " ",
             u.createElement("span", null, "(", t, ")"),
             " ",
-            u.createElement("span", { className: H.SmallText }, "(", a, ")")
+            u.createElement("span", { className: V.SmallText }, "(", a, ")")
           );
         }),
         ae = (function (e) {
@@ -31912,7 +31796,7 @@
                                     (this.m_searchResultsMenu = Object(b.a)(
                                       u.createElement(
                                         k.c,
-                                        { className: H.SearchResults },
+                                        { className: V.SearchResults },
                                         e.map(function (e) {
                                           return u.createElement(
                                             k.d,
@@ -31956,7 +31840,7 @@
               var e = this;
               return u.createElement(
                 "div",
-                { className: H.SaleImportURL },
+                { className: V.SaleImportURL },
                 u.createElement(x.l, {
                   type: "text",
                   label: Object(L.f)("#Sale_SelectApps"),
@@ -32010,18 +31894,18 @@
               var e = this.props.capsuleContainer;
               return u.createElement(
                 "div",
-                { className: V.FilterDisplayCtn },
+                { className: U.FilterDisplayCtn },
                 u.createElement(
                   "div",
-                  { className: V.FilterTitle },
+                  { className: U.FilterTitle },
                   Object(L.f)("#Sale_TagFilter_CurrentFilter"),
-                  u.createElement(W.d, {
+                  u.createElement(H.b, {
                     tooltip: Object(L.f)("#Sale_TagFilter_EditFilter_ttip"),
                   })
                 ),
                 u.createElement(
                   "div",
-                  { className: V.FilterActionsCtn },
+                  { className: U.FilterActionsCtn },
                   u.createElement(Z, { filter: e.sale_tag_filter }),
                   u.createElement(
                     x.d,
@@ -32205,10 +32089,10 @@
             (t.prototype.RenderEditPrompt = function () {
               return u.createElement(
                 "div",
-                { className: V.TagItemEditorCtn },
+                { className: U.TagItemEditorCtn },
                 u.createElement(
                   "div",
-                  { className: V.ItemEditDescription },
+                  { className: U.ItemEditDescription },
                   Object(L.f)("#Sale_EditTags_EnableItemEditingDesc")
                 ),
                 u.createElement(
@@ -32252,13 +32136,13 @@
                 }),
                 h =
                   (i.GetEventModel().jsondata.sale_opt_in_page_name,
-                  Object(U.a)("TaggedItemList", !1));
+                  Object(Y.a)("TaggedItemList", !1));
               return u.createElement(
                 "div",
-                { className: Object(q.a)(V.ItemListCtn, V.TagItemEditorCtn) },
+                { className: Object(q.a)(U.ItemListCtn, U.TagItemEditorCtn) },
                 u.createElement(
                   "div",
-                  { className: V.ItemListTitle },
+                  { className: U.ItemListTitle },
                   u.createElement(
                     "div",
                     { className: G.SaleSectionTitleHeader },
@@ -32268,28 +32152,28 @@
                       l > 0
                         ? Object(L.f)("#Sale_TaggedItemsCountFiltered", s, l)
                         : Object(L.f)("#Sale_TaggedItemsCount", s),
-                      u.createElement(W.d, {
+                      u.createElement(H.b, {
                         tooltip: Object(L.f)("#Sale_TaggedItemsCount_ttip"),
                       })
                     ),
-                    u.createElement(Y.a, {
+                    u.createElement(H.a, {
                       bIsMinimized: h,
                       fnToggleMinimize: function () {
-                        return Object(U.d)("TaggedItemList", !1);
+                        return Object(Y.d)("TaggedItemList", !1);
                       },
                     })
                   ),
                   u.createElement(
                     "div",
-                    { className: V.ItemListControls },
+                    { className: U.ItemListControls },
                     u.createElement(
                       "div",
-                      { className: V.ButtonRow },
+                      { className: U.ButtonRow },
                       u.createElement(
                         x.d,
                         { onClick: this.OnExploreTags },
                         Object(L.f)("#Sale_Explore"),
-                        u.createElement(W.d, {
+                        u.createElement(H.b, {
                           tooltip: Object(L.f)("#Sale_ExploreTaggedItems_ttip"),
                         })
                       ),
@@ -32297,7 +32181,7 @@
                         x.d,
                         { onClick: this.OnEditRaw },
                         Object(L.f)("#Sale_EditRaw"),
-                        u.createElement(W.d, {
+                        u.createElement(H.b, {
                           tooltip: Object(L.f)("#Sale_EditRawTaggedItems_ttip"),
                         })
                       ),
@@ -32305,7 +32189,7 @@
                         x.d,
                         { onClick: this.OnSync },
                         Object(L.f)("#Sale_SyncTaggedItems"),
-                        u.createElement(W.d, {
+                        u.createElement(H.b, {
                           tooltip: Object(L.f)("#Sale_SyncTaggedItems_ttip"),
                         })
                       )
@@ -32315,12 +32199,12 @@
                       { clanSteamID: i.GetClanSteamID() },
                       u.createElement(
                         "div",
-                        { className: V.ButtonRow },
+                        { className: U.ButtonRow },
                         u.createElement(
                           x.d,
                           { onClick: this.OnEditFilter },
                           Object(L.f)("#Sale_EditTaggedItemFilter"),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)(
                               "#Sale_EditTaggedItemFilter_ttip"
                             ),
@@ -32330,7 +32214,7 @@
                           x.d,
                           { onClick: this.OnImportDiscountEvent },
                           Object(L.f)("#Sale_DiscountEvent_Add"),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)("#Sale_DiscountEvent_ttip"),
                           })
                         ),
@@ -32338,7 +32222,7 @@
                           x.d,
                           { onClick: this.OnEditRawCustom },
                           Object(L.f)("#Sale_EditRawCustom"),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)(
                               "#Sale_EditRawCustomTaggedItems_ttip"
                             ),
@@ -32348,7 +32232,7 @@
                           x.d,
                           { onClick: this.OnBatchEditTags },
                           Object(L.f)("#Sale_BatchEditTaggedItems"),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)(
                               "#Sale_BatchEditTaggedItems_ttip"
                             ),
@@ -32358,7 +32242,7 @@
                           x.d,
                           { onClick: this.OnEditAutoTags },
                           Object(L.f)("#Sale_EditAutoTags"),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)("#Sale_EditAutoTags_ttip"),
                           })
                         ),
@@ -32367,7 +32251,7 @@
                             x.d,
                             { onClick: this.OnDeleteFiltered },
                             Object(L.f)("#Sale_DeleteFilteredItems"),
-                            u.createElement(W.d, {
+                            u.createElement(H.b, {
                               tooltip: Object(L.f)(
                                 "#Sale_DeleteFilteredItems_ttip"
                               ),
@@ -32380,7 +32264,7 @@
                 !h &&
                   u.createElement(
                     "div",
-                    { className: V.ItemList },
+                    { className: U.ItemList },
                     l > 0 &&
                       u.createElement(x.e, {
                         label: Object(L.f)("#Sale_ShowFilteredTaggedItems"),
@@ -32410,7 +32294,7 @@
                 null,
                 u.createElement(
                   "div",
-                  { className: V.TagItemEditorCtn },
+                  { className: U.TagItemEditorCtn },
                   u.createElement(
                     c.b,
                     { clanSteamID: t.GetClanSteamID(), requireAdmin: !0 },
@@ -32438,12 +32322,12 @@
                     { clanSteamID: t.GetClanSteamID() },
                     u.createElement(
                       "div",
-                      { className: V.ButtonRow },
+                      { className: U.ButtonRow },
                       u.createElement(
                         x.d,
                         { onClick: this.OnEditAutoTags },
                         Object(L.f)("#Sale_EditAutoTags"),
-                        u.createElement(W.d, {
+                        u.createElement(H.b, {
                           tooltip: Object(L.f)("#Sale_EditAutoTags_ttip"),
                         })
                       )
@@ -32514,35 +32398,35 @@
               var g = n ? n.toLocaleLowerCase() : void 0;
               return u.createElement(
                 A.a,
-                { className: V.TagItemCtn },
+                { className: U.TagItemCtn },
                 u.createElement(
                   j.b,
                   {
-                    className: V.TagItemImageCtn,
+                    className: U.TagItemImageCtn,
                     bDisableContextMenu: !0,
                     href: c,
                   },
                   p
                     ? u.createElement("img", {
                         loading: "lazy",
-                        className: H.SaleCapsuleImg,
+                        className: V.SaleCapsuleImg,
                         src: p.header_image_url,
                       })
                     : null
                 ),
                 u.createElement(
                   "div",
-                  { className: V.NameAndTagCtn },
+                  { className: U.NameAndTagCtn },
                   u.createElement(
                     "div",
-                    { className: V.NameCtn },
+                    { className: U.NameCtn },
                     f,
                     " (",
                     m,
                     ") ",
                     u.createElement(
                       "span",
-                      { className: H.SmallText },
+                      { className: V.SmallText },
                       "(",
                       h,
                       ")"
@@ -32550,9 +32434,9 @@
                     d &&
                       u.createElement(
                         "div",
-                        { className: H.SaleCapsuleConflict },
+                        { className: V.SaleCapsuleConflict },
                         Object(L.f)("#Sale_NotFoundCapsule"),
-                        u.createElement(W.d, {
+                        u.createElement(H.b, {
                           tooltip: Object(L.f)(
                             "#Sale_NotFoundCapsule_Tooltip",
                             h,
@@ -32563,10 +32447,10 @@
                   ),
                   u.createElement(
                     "div",
-                    { className: V.TagSummaryCtn },
+                    { className: U.TagSummaryCtn },
                     u.createElement(
                       "span",
-                      { className: V.TagSummary, onClick: this.OnEditTags },
+                      { className: U.TagSummary, onClick: this.OnEditTags },
                       Object(L.f)(
                         "#Sale_EditTags_TagCount",
                         (null === (e = a.tags) || void 0 === e
@@ -32577,7 +32461,7 @@
                     u.createElement(
                       "span",
                       {
-                        className: V.TagShowToggle,
+                        className: U.TagShowToggle,
                         onClick: this.OnToggleTags,
                       },
                       Object(L.f)(
@@ -32609,7 +32493,7 @@
       function se(e, t, a) {
         var o,
           i = e.toLocaleLowerCase();
-        if (t && i === t) return V.TagHighlight;
+        if (t && i === t) return U.TagHighlight;
         if (null == a ? void 0 : a.clauses)
           for (var n = 0, s = a.clauses; n < s.length; n++) {
             var r = s[n];
@@ -32620,7 +32504,7 @@
                     return i === e.toLocaleLowerCase();
                   })
             )
-              return "Must have" === r.type ? V.TagMustHave : V.TagMustNotHave;
+              return "Must have" === r.type ? U.TagMustHave : U.TagMustNotHave;
           }
         return null;
       }
@@ -32672,7 +32556,7 @@
               }),
               u.createElement(
                 "div",
-                { className: V.TagListCtn },
+                { className: U.TagListCtn },
                 a.map(function (t) {
                   return u.createElement(le, {
                     key: t,
@@ -32685,13 +32569,13 @@
                     return u.createElement(le, {
                       key: e,
                       tag: e,
-                      className: V.TagMissingMustHave,
+                      className: U.TagMissingMustHave,
                     });
                   })
               ))
             : u.createElement(
                 "div",
-                { className: V.TagListCtn },
+                { className: U.TagListCtn },
                 Object(L.f)("#Sale_TagFilter_AddTags")
               );
         }),
@@ -32701,7 +32585,7 @@
             "div",
             {
               className: Object(q.a)(
-                V.ItemTag,
+                U.ItemTag,
                 e.className,
                 t && "TagCollection_" + t
               ),
@@ -32847,7 +32731,7 @@
                   "div",
                   {
                     key: a,
-                    className: o ? V.SectionAdded : V.SectionUnchanged,
+                    className: o ? U.SectionAdded : U.SectionUnchanged,
                   },
                   e
                 );
@@ -32873,7 +32757,7 @@
               });
               var d = c.map(function (t) {
                   var a = r.has(t),
-                    o = Object(q.a)(V.EditTag, V.AppliedTag, a && V.DefaultTag);
+                    o = Object(q.a)(U.EditTag, U.AppliedTag, a && U.DefaultTag);
                   return u.createElement(
                     "div",
                     {
@@ -32896,7 +32780,7 @@
               var m = [];
               h.forEach(function (t) {
                 if (r.has(t)) {
-                  var a = Object(q.a)(V.EditTag, V.OtherTag, V.DefaultTag);
+                  var a = Object(q.a)(U.EditTag, U.OtherTag, U.DefaultTag);
                   m.push(
                     u.createElement(
                       "div",
@@ -32918,7 +32802,7 @@
                 .forEach(function (t) {
                   if (!p.has(t.toLocaleLowerCase())) {
                     var a = r.has(t),
-                      o = Object(q.a)(V.EditTag, V.OtherTag, a && V.DefaultTag);
+                      o = Object(q.a)(U.EditTag, U.OtherTag, a && U.DefaultTag);
                     g.push(
                       u.createElement(
                         "div",
@@ -32958,16 +32842,16 @@
                 },
                 u.createElement(
                   x.k,
-                  { className: V.EditTagsTitle },
+                  { className: U.EditTagsTitle },
                   b
                     ? u.createElement("img", {
-                        className: H.SaleCapsuleImg,
+                        className: V.SaleCapsuleImg,
                         src: b.header_image_url,
                       })
                     : null,
                   u.createElement(
                     "div",
-                    { className: V.EditTagsTitleText },
+                    { className: U.EditTagsTitleText },
                     b ? b.name : null,
                     " (",
                     w,
@@ -32979,39 +32863,39 @@
                   null,
                   u.createElement(
                     "div",
-                    { className: V.EditTagsBody },
+                    { className: U.EditTagsBody },
                     u.createElement(
                       "div",
-                      { className: V.ColumnList },
+                      { className: U.ColumnList },
                       u.createElement(
                         "div",
-                        { className: V.TagColumn },
+                        { className: U.TagColumn },
                         u.createElement(
                           "div",
-                          { className: V.TagColumnTitle },
+                          { className: U.TagColumnTitle },
                           Object(L.f)("#Sale_EditTags_Applied", s.length),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)("#Sale_EditTags_Applied_ttip"),
                           })
                         ),
                         u.createElement(
                           "div",
-                          { className: V.TagColumnList },
+                          { className: U.TagColumnList },
                           d
                         )
                       ),
                       u.createElement(
                         "div",
-                        { className: V.TagColumn },
+                        { className: U.TagColumn },
                         m.length > 0 &&
                           u.createElement(
                             "div",
-                            { className: V.SmallColumn },
+                            { className: U.SmallColumn },
                             u.createElement(
                               "div",
-                              { className: V.TagColumnTitle },
+                              { className: U.TagColumnTitle },
                               Object(L.f)("#Sale_EditTags_Store", m.length),
-                              u.createElement(W.d, {
+                              u.createElement(H.b, {
                                 tooltip: Object(L.f)(
                                   "#Sale_EditTags_Store_ttip"
                                 ),
@@ -33019,18 +32903,18 @@
                             ),
                             u.createElement(
                               "div",
-                              { className: V.TagColumnList },
+                              { className: U.TagColumnList },
                               m
                             )
                           ),
                         u.createElement(
                           "div",
-                          { className: V.FillColumn },
+                          { className: U.FillColumn },
                           u.createElement(
                             "div",
-                            { className: V.TagColumnTitle },
+                            { className: U.TagColumnTitle },
                             Object(L.f)("#Sale_EditTags_RecentTags"),
-                            u.createElement(W.d, {
+                            u.createElement(H.b, {
                               tooltip: Object(L.f)(
                                 "#Sale_EditTags_RecentTags_ttip"
                               ),
@@ -33038,19 +32922,19 @@
                           ),
                           u.createElement(
                             "div",
-                            { className: V.TagColumnList },
+                            { className: U.TagColumnList },
                             g
                           )
                         )
                       ),
                       u.createElement(
                         "div",
-                        { className: V.TagColumn },
+                        { className: U.TagColumn },
                         u.createElement(
                           "div",
-                          { className: V.TagColumnTitle },
+                          { className: U.TagColumnTitle },
                           Object(L.f)("#Sale_EditTags_Sections", y.length),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)(
                               "#Sale_EditTags_Sections_ttip"
                             ),
@@ -33058,19 +32942,19 @@
                         ),
                         u.createElement(
                           "div",
-                          { className: V.TagColumnList },
+                          { className: U.TagColumnList },
                           y
                         )
                       )
                     ),
                     u.createElement(
                       "div",
-                      { className: V.AddTagCtn },
+                      { className: U.AddTagCtn },
                       u.createElement(
                         "div",
-                        { className: V.TagColumnTitle },
+                        { className: U.TagColumnTitle },
                         Object(L.f)("#Sale_EditTags_NewTagName"),
-                        u.createElement(W.d, {
+                        u.createElement(H.b, {
                           tooltip: Object(L.f)(
                             "#Sale_EditTags_NewTagName_ttip"
                           ),
@@ -33091,7 +32975,7 @@
                     ),
                     u.createElement(
                       "div",
-                      { className: V.OKButton },
+                      { className: U.OKButton },
                       u.createElement(
                         x.q,
                         { onClick: this.OnOK },
@@ -33277,7 +33161,7 @@
                   return e.tag.localeCompare(t.tag);
                 });
               var l = r.map(function (t) {
-                  var a = Object(q.a)(V.EditTag, V.AppliedTag);
+                  var a = Object(q.a)(U.EditTag, U.AppliedTag);
                   return u.createElement(
                     "div",
                     {
@@ -33301,7 +33185,7 @@
               ee.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
-                  var a = Object(q.a)(V.EditTag, V.OtherTag);
+                  var a = Object(q.a)(U.EditTag, U.OtherTag);
                   c.push(
                     u.createElement(
                       "div",
@@ -33323,7 +33207,7 @@
                     { key: e.capsule.id },
                     t
                       ? u.createElement("img", {
-                          className: H.SaleCapsuleImg,
+                          className: V.SaleCapsuleImg,
                           src: t.header_image_url,
                         })
                       : null,
@@ -33360,18 +33244,18 @@
                   null,
                   u.createElement(
                     "div",
-                    { className: V.EditTagsBody },
+                    { className: U.EditTagsBody },
                     u.createElement(
                       "div",
-                      { className: V.ColumnList },
+                      { className: U.ColumnList },
                       u.createElement(
                         "div",
-                        { className: V.TagColumn },
+                        { className: U.TagColumn },
                         u.createElement(
                           "div",
-                          { className: V.TagColumnTitle },
+                          { className: U.TagColumnTitle },
                           Object(L.f)("#Sale_EditTags_BatchItemText", d.length),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)(
                               "#Sale_EditTags_BatchItemText_ttip"
                             ),
@@ -33387,11 +33271,11 @@
                         u.createElement(
                           "div",
                           {
-                            className: V.PopulateByFilter,
+                            className: U.PopulateByFilter,
                             onClick: this.OnPopulateFromFilter,
                           },
                           Object(L.f)("#Sale_EditTags_BatchFilter"),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)(
                               "#Sale_EditTags_BatchFilter_ttip"
                             ),
@@ -33400,12 +33284,12 @@
                       ),
                       u.createElement(
                         "div",
-                        { className: V.TagColumn },
+                        { className: U.TagColumn },
                         u.createElement(
                           "div",
-                          { className: V.TagColumnTitle },
+                          { className: U.TagColumnTitle },
                           Object(L.f)("#Sale_EditTags_BatchItems", d.length),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)(
                               "#Sale_EditTags_BatchItems_ttip"
                             ),
@@ -33413,38 +33297,38 @@
                         ),
                         u.createElement(
                           "div",
-                          { className: V.TagColumnList },
+                          { className: U.TagColumnList },
                           d
                         )
                       ),
                       u.createElement(
                         "div",
-                        { className: V.TagColumn },
+                        { className: U.TagColumn },
                         u.createElement(
                           "div",
-                          { className: V.TagColumnTitle },
+                          { className: U.TagColumnTitle },
                           Object(L.f)("#Sale_EditTags_Applied", n.size),
-                          u.createElement(W.d, {
+                          u.createElement(H.b, {
                             tooltip: Object(L.f)("#Sale_EditTags_Applied_ttip"),
                           })
                         ),
                         u.createElement(
                           "div",
-                          { className: V.TagColumnList },
+                          { className: U.TagColumnList },
                           l
                         )
                       ),
                       u.createElement(
                         "div",
-                        { className: V.TagColumn },
+                        { className: U.TagColumn },
                         u.createElement(
                           "div",
-                          { className: V.FillColumn },
+                          { className: U.FillColumn },
                           u.createElement(
                             "div",
-                            { className: V.TagColumnTitle },
+                            { className: U.TagColumnTitle },
                             Object(L.f)("#Sale_EditTags_RecentTags"),
-                            u.createElement(W.d, {
+                            u.createElement(H.b, {
                               tooltip: Object(L.f)(
                                 "#Sale_EditTags_RecentTags_ttip"
                               ),
@@ -33452,7 +33336,7 @@
                           ),
                           u.createElement(
                             "div",
-                            { className: V.TagColumnList },
+                            { className: U.TagColumnList },
                             c
                           )
                         )
@@ -33460,12 +33344,12 @@
                     ),
                     u.createElement(
                       "div",
-                      { className: V.AddTagCtn },
+                      { className: U.AddTagCtn },
                       u.createElement(
                         "div",
-                        { className: V.TagColumnTitle },
+                        { className: U.TagColumnTitle },
                         Object(L.f)("#Sale_EditTags_NewTagName"),
-                        u.createElement(W.d, {
+                        u.createElement(H.b, {
                           tooltip: Object(L.f)(
                             "#Sale_EditTags_NewTagName_ttip"
                           ),
@@ -33485,9 +33369,9 @@
                       }),
                       u.createElement(
                         "div",
-                        { className: V.TagColumnTitle },
+                        { className: U.TagColumnTitle },
                         Object(L.f)("#Sale_EditTags_RemoveTagName"),
-                        u.createElement(W.d, {
+                        u.createElement(H.b, {
                           tooltip: Object(L.f)(
                             "#Sale_EditTags_RemoveTagName_ttip"
                           ),
@@ -33509,7 +33393,7 @@
                     ),
                     u.createElement(
                       "div",
-                      { className: V.OKButton },
+                      { className: U.OKButton },
                       u.createElement(
                         x.q,
                         { onClick: this.OnOK },
@@ -33790,16 +33674,16 @@
             var s = e.or_tags.map(function (e, i) {
                 return u.createElement(
                   "div",
-                  { className: V.ClauseTagList, key: "Clause" + t + "_" + i },
+                  { className: U.ClauseTagList, key: "Clause" + t + "_" + i },
                   i > 0 &&
                     u.createElement(
                       "div",
-                      { className: V.OrLabel },
+                      { className: U.OrLabel },
                       Object(L.f)("#Sale_TagFilter_Or")
                     ),
                   u.createElement(
                     "div",
-                    { className: V.TagDropDown },
+                    { className: U.TagDropDown },
                     u.createElement(de, {
                       taggedItems: n,
                       value: e,
@@ -33821,15 +33705,15 @@
                 );
               }),
               r =
-                "Must have" === e.type ? V.MustHaveClause : V.MustNotHaveClause;
+                "Must have" === e.type ? U.MustHaveClause : U.MustNotHaveClause;
             return u.createElement(
               "div",
               {
                 key: "Clause" + t,
                 className: Object(q.a)(
-                  V.ClauseRowCtn,
+                  U.ClauseRowCtn,
                   r,
-                  0 === t && V.FirstClause
+                  0 === t && U.FirstClause
                 ),
               },
               t > 0 &&
@@ -33843,13 +33727,13 @@
                   }),
                   u.createElement(
                     "div",
-                    { className: V.AndLabel },
+                    { className: U.AndLabel },
                     Object(L.f)("#Sale_TagFilter_And")
                   )
                 ),
               u.createElement(
                 "div",
-                { className: V.ClauseTypeDropDown },
+                { className: U.ClauseTypeDropDown },
                 u.createElement(x.h, {
                   rgOptions: i,
                   selectedOption: e.type,
@@ -33869,7 +33753,7 @@
                   },
                   "+",
                   Object(L.f)("#Sale_TagFilter_Or"),
-                  u.createElement(W.d, {
+                  u.createElement(H.b, {
                     tooltip: Object(L.f)("#Sale_TagFilter_Or_ttip"),
                   })
                 )
@@ -33883,18 +33767,18 @@
               });
             return u.createElement(
               "div",
-              { className: V.FilterControlsCtn },
+              { className: U.FilterControlsCtn },
               u.createElement(
                 "div",
-                { className: V.SectionTitle },
+                { className: U.SectionTitle },
                 Object(L.f)("#Sale_TagFilter_Filter"),
-                u.createElement(W.d, {
+                u.createElement(H.b, {
                   tooltip: Object(L.f)("#Sale_TagFilter_Filter_ttip"),
                 })
               ),
               u.createElement(
                 "div",
-                { className: V.FilterControlBox },
+                { className: U.FilterControlBox },
                 a,
                 t.clauses.length < 5 &&
                   u.createElement(
@@ -33902,7 +33786,7 @@
                     { onClick: this.OnAddClause },
                     "+",
                     Object(L.f)("#Sale_TagFilter_And"),
-                    u.createElement(W.d, {
+                    u.createElement(H.b, {
                       tooltip: Object(L.f)("#Sale_TagFilter_And_ttip"),
                     })
                   )
@@ -33927,8 +33811,8 @@
                 {
                   key: t.tag,
                   className: Object(q.a)(
-                    V.TagBreakdownEntry,
-                    o === t.tag && V.Selected
+                    U.TagBreakdownEntry,
+                    o === t.tag && U.Selected
                   ),
                   onClick: function () {
                     return a.OnHighlightTag(t.tag);
@@ -33936,15 +33820,15 @@
                 },
                 u.createElement(
                   "div",
-                  { className: V.TextStats },
-                  u.createElement("div", { className: V.TagName }, t.tag),
-                  u.createElement("div", { className: V.TagUses }, t.count)
+                  { className: U.TextStats },
+                  u.createElement("div", { className: U.TagName }, t.tag),
+                  u.createElement("div", { className: U.TagUses }, t.count)
                 ),
                 u.createElement(
                   "div",
-                  { className: V.PercentageBar },
+                  { className: U.PercentageBar },
                   u.createElement("div", {
-                    className: V.PercentageBarFill,
+                    className: U.PercentageBarFill,
                     style: { width: (100 * t.count) / e + "%" },
                   })
                 )
@@ -33955,8 +33839,8 @@
               null,
               u.createElement(
                 "div",
-                { className: V.TagBreakdownCtn },
-                u.createElement("div", { className: V.TagBreakdownList }, n)
+                { className: U.TagBreakdownCtn },
+                u.createElement("div", { className: U.TagBreakdownList }, n)
               )
             );
           }),
@@ -34090,7 +33974,7 @@
                     u.Fragment,
                     null,
                     Object(L.f)("#Sale_TagFilter_MatchingItems", h.length),
-                    u.createElement(W.d, {
+                    u.createElement(H.b, {
                       tooltip: Object(L.f)(
                         "#Sale_TagFilter_MatchingItems_ttip"
                       ),
@@ -34103,7 +33987,7 @@
                     u.Fragment,
                     null,
                     Object(L.f)("#Sale_TagFilter_FilteredItems", f.length),
-                    u.createElement(W.d, {
+                    u.createElement(H.b, {
                       tooltip: Object(L.f)(
                         "#Sale_TagFilter_FilteredItems_ttip"
                       ),
@@ -34116,7 +34000,7 @@
                     u.Fragment,
                     null,
                     Object(L.f)("#Sale_TagFilter_UnusedItems", y.length),
-                    u.createElement(W.d, {
+                    u.createElement(H.b, {
                       tooltip: Object(L.f)("#Sale_TagFilter_UnusedItems_ttip"),
                     })
                   ),
@@ -34135,7 +34019,7 @@
                   filter: "filtered" === s && r,
                 });
               }),
-              C = p ? V.ShowTagBreakdown : V.HideTagBreakdown;
+              C = p ? U.ShowTagBreakdown : U.HideTagBreakdown;
             return u.createElement(
               E.e,
               {
@@ -34150,14 +34034,14 @@
                 null,
                 u.createElement(
                   "div",
-                  { className: Object(q.a)(V.EditFitlerCtn, C) },
+                  { className: Object(q.a)(U.EditFitlerCtn, C) },
                   this.RenderFilterControls(),
                   u.createElement(
                     "div",
-                    { className: V.TopTabs },
+                    { className: U.TopTabs },
                     u.createElement(
                       "div",
-                      { className: V.TagSelector },
+                      { className: U.TagSelector },
                       u.createElement(x.h, {
                         rgOptions: _,
                         selectedOption: s,
@@ -34170,9 +34054,9 @@
                       x.d,
                       {
                         className: Object(q.a)(
-                          V.ShowTagBreakdown,
-                          V.SectionTab,
-                          p && V.TabActive
+                          U.ShowTagBreakdown,
+                          U.SectionTab,
+                          p && U.TabActive
                         ),
                         onClick: this.OnToggleTagBreakdown,
                       },
@@ -34181,7 +34065,7 @@
                           ? "#Sale_TagFilter_HideTagBreakdown"
                           : "#Sale_TagFilter_ShowTagBreakdown"
                       ),
-                      u.createElement(W.d, {
+                      u.createElement(H.b, {
                         tooltip: Object(L.f)(
                           "#Sale_TagFilter_TagBreakdown_ttip"
                         ),
@@ -34190,11 +34074,11 @@
                   ),
                   u.createElement(
                     "div",
-                    { className: V.TopSection },
+                    { className: U.TopSection },
                     u.createElement(
                       "div",
-                      { className: V.MatchingItemsCtn },
-                      u.createElement("div", { className: V.ItemList }, k)
+                      { className: U.MatchingItemsCtn },
+                      u.createElement("div", { className: U.ItemList }, k)
                     ),
                     this.RenderTagBreakdown(k.length, v)
                   ),
@@ -34207,7 +34091,7 @@
                   }),
                   u.createElement(
                     "div",
-                    { className: V.OKButton },
+                    { className: U.OKButton },
                     u.createElement(
                       x.q,
                       { onClick: this.OnOK },
@@ -34509,7 +34393,7 @@
                     u.createElement("textarea", {
                       className: Object(q.a)(
                         G.EditRawTextArea,
-                        V.EditRawTextArea
+                        U.EditRawTextArea
                       ),
                       value: this.state.editValue,
                       cols: 80,
@@ -34907,10 +34791,10 @@
               null,
               u.createElement(
                 "div",
-                { className: V.EditAutoTagsBody },
+                { className: U.EditAutoTagsBody },
                 u.createElement(
                   "div",
-                  { className: V.AutoTagList },
+                  { className: U.AutoTagList },
                   w,
                   u.createElement(
                     x.d,
@@ -34971,10 +34855,10 @@
             };
           return u.createElement(
             "div",
-            { className: V.AutoTag },
+            { className: U.AutoTag },
             u.createElement(
               "div",
-              { className: V.AutoTagRow },
+              { className: U.AutoTagRow },
               u.createElement(x.l, {
                 type: "text",
                 onChange: function (t) {
@@ -34994,7 +34878,7 @@
             ),
             u.createElement(
               "div",
-              { className: V.AutoTagRow },
+              { className: U.AutoTagRow },
               u.createElement(Z, { filter: n }),
               u.createElement(
                 x.d,

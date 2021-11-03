@@ -445,7 +445,7 @@ select.hourselect,  select.minuteselect {
 
 .shaded {
 	background-color: #1E1E1E;
-	padding: 4px;
+	padding: 4px 0px;
 }
 
 .results {

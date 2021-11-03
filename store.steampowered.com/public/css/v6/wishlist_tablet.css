@@ -53,6 +53,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 32vw;
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -211,29 +212,43 @@
 
 
 	/* Wishlist item styling */
-	html.responsive .compact .wishlist_row {
+	html.responsive .wishlist_row {
 		padding: 8px;
 		width: calc(100% - 16px);
 		margin-bottom: 8px;
-		box-shadow: var(--gpShadow-Medium);
+		box-shadow: none;
+		background: var(--gpBackground-DarkSoft);
 	}
 
-	html.responsive .compact .wishlist_row .title {
+	html.responsive .wishlist_row:hover,
+	html.responsive .wishlist_row.gpfocus {
+		background: var(--gpBackground-DarkSoft);
+	}
+
+	html.responsive .wishlist_row .title {
 		font: var(--gpText-BodyLarge);
 		font-weight: 500;
 	}
 
-	html.responsive .compact .wishlist_row .addedon {
+	html.responsive .wishlist_row .addedon {
 		font: var(--gpText-BodyMedium);
 		font-weight: 400;
 		margin-top: unset;
 	}
 
-	html.responsive .compact .wishlist_row .game_review_summary {
+	html.responsive .wishlist_row .game_review_summary {
 		font: var(--gpText-BodySmall);
 		font-weight: 400;
 		margin-top: unset;
 		text-transform: unset;
+	}
+
+	html.responsive .wishlist_row .lower_container {
+		margin-top: 0px;
+	}
+
+	html.responsive .wishlist_row .platform_icons {
+		margin-bottom: 8px;
 	}
 
 	html.responsive .wishlist_row .purchase_area form,

@@ -1384,6 +1384,18 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .partnereventeditor_ShowInTabsList_1slxi:hover {
   color: #fff;
 }
+.collapseablesection_SectionTitleHeader_2g5oN {
+  display: flex;
+}
+.collapseablesection_SectionTitleHeader_2g5oN .DialogButton {
+  width: 36px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: auto;
+}
+.collapseablesection_required_title_3yDPZ {
+  display: flex;
+}
 .clanimagepicker_PickerContainer_1qhUO {
   display: flex;
   flex-direction: column;
@@ -2737,6 +2749,86 @@ p a:hover {
 .partnereventsale_SetupCtn_yrYBA {
   min-height: 600px;
 }
+.partnereventshared_ErrorPage_1HZBl {
+  padding: 24px;
+  text-align: center;
+}
+.partnereventshared_ErrorPage_1HZBl .partnereventshared_ErrorMsg__guJ8,
+.partnereventshared_ErrorPage_1HZBl .partnereventshared_ErrorCode_2ZZXk {
+  font-family: monospace;
+  padding: 6px;
+}
+.partnereventshared_PendingVisibilityText_1G3Ia {
+  margin-left: 12px;
+  color: orange;
+}
+.saletabeditor_CurrentTabsCtn_24eKi {
+  border-top: 1px solid #464b58;
+  padding-top: 0px;
+  margin-top: 16px;
+}
+.saletabeditor_AddButton_2fqBD {
+  width: 25%;
+}
+.saletabeditor_ImgPreview_3jXQP {
+  width: 100px;
+  height: 20px;
+  overflow: hidden;
+  padding-right: 10px;
+}
+.saleeditorlocationcontrolwidget_DisplayWarning_162UW {
+  padding: 5px;
+  font-weight: bolder;
+}
+.saleeditorlocationcontrolwidget_SelectArea_3hAkB {
+  min-height: 100px;
+}
+.saleeditorlocationcontrolwidget_SelectArea_3hAkB
+  .saleeditorlocationcontrolwidget_dropDown_a8hfO {
+  margin-top: 12px;
+  position: absolute;
+  width: 90%;
+}
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g {
+  flex-grow: 1;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+}
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
+  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL {
+  flex-grow: 1;
+  padding: 8px;
+}
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
+  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL:first-child {
+  flex-grow: 4;
+}
+.partnereventdescriptiontab_ToolContainer_1YUip {
+  padding: 10px 0px;
+}
+.partnereventdescriptiontab_LanguageControlsCtn_14o5K {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 5px 10px;
+  background: rgba(61, 84, 107, 0.2);
+  margin-top: -16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.SaleContainer .partnereventdescriptiontab_LanguageControlsCtn_14o5K {
+  margin-top: 10px;
+}
+.partnereventdescriptiontab_DescEditorPadding_3mLVV {
+  padding-top: 15px;
+}
+.partnereventdescriptiontab_DescEditorPadding_3mLVV.partnereventdescriptiontab_ImagePickerCtn_Mc28x {
+  width: 395px;
+}
+.saleitemdefwidgeteditor_itemimg_2by5O {
+  width: auto;
+  height: 100px;
+}
 .partnereventsaletagitems_FilterDisplayCtn_3y3Xg
   .partnereventsaletagitems_FilterTitle_24W_L {
   color: #fff;
@@ -3359,86 +3451,6 @@ p a:hover {
   flex: 1;
   margin-right: 10px;
 }
-.partnereventshared_ErrorPage_1HZBl {
-  padding: 24px;
-  text-align: center;
-}
-.partnereventshared_ErrorPage_1HZBl .partnereventshared_ErrorMsg__guJ8,
-.partnereventshared_ErrorPage_1HZBl .partnereventshared_ErrorCode_2ZZXk {
-  font-family: monospace;
-  padding: 6px;
-}
-.partnereventshared_PendingVisibilityText_1G3Ia {
-  margin-left: 12px;
-  color: orange;
-}
-.saletabeditor_CurrentTabsCtn_24eKi {
-  border-top: 1px solid #464b58;
-  padding-top: 0px;
-  margin-top: 16px;
-}
-.saletabeditor_AddButton_2fqBD {
-  width: 25%;
-}
-.saletabeditor_ImgPreview_3jXQP {
-  width: 100px;
-  height: 20px;
-  overflow: hidden;
-  padding-right: 10px;
-}
-.saleeditorlocationcontrolwidget_DisplayWarning_162UW {
-  padding: 5px;
-  font-weight: bolder;
-}
-.saleeditorlocationcontrolwidget_SelectArea_3hAkB {
-  min-height: 100px;
-}
-.saleeditorlocationcontrolwidget_SelectArea_3hAkB
-  .saleeditorlocationcontrolwidget_dropDown_a8hfO {
-  margin-top: 12px;
-  position: absolute;
-  width: 90%;
-}
-.contenthubsectionseditor_ContentHubSectionCtn_G2T4g {
-  flex-grow: 1;
-  margin-right: 16px;
-  display: flex;
-  flex-direction: row;
-}
-.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
-  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL {
-  flex-grow: 1;
-  padding: 8px;
-}
-.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
-  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL:first-child {
-  flex-grow: 4;
-}
-.partnereventdescriptiontab_ToolContainer_1YUip {
-  padding: 10px 0px;
-}
-.partnereventdescriptiontab_LanguageControlsCtn_14o5K {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 10px 5px 10px;
-  background: rgba(61, 84, 107, 0.2);
-  margin-top: -16px;
-  margin-bottom: 20px;
-  font-size: 13px;
-}
-.SaleContainer .partnereventdescriptiontab_LanguageControlsCtn_14o5K {
-  margin-top: 10px;
-}
-.partnereventdescriptiontab_DescEditorPadding_3mLVV {
-  padding-top: 15px;
-}
-.partnereventdescriptiontab_DescEditorPadding_3mLVV.partnereventdescriptiontab_ImagePickerCtn_Mc28x {
-  width: 395px;
-}
-.saleitemdefwidgeteditor_itemimg_2by5O {
-  width: auto;
-  height: 100px;
-}
 .partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
   background-image: linear-gradient(
     to right,
@@ -3898,6 +3910,14 @@ p a:hover {
   letter-spacing: 1px;
   color: #fff;
   text-transform: uppercase;
+}
+html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
+  font-size: 12px;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .tabbar_GraphicalAssetsTab_3lJb_ {
+    font-size: 12px;
+  }
 }
 .tabbar_GraphicalAssetsTab_3lJb_:first-child {
   margin-left: 0;

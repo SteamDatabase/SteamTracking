@@ -32,10 +32,7 @@ function OnLoadCheckoutForm()
 	try 
 	{
 		var curTab = g_initialTab;
-		if ( rgFocusOnTabSelect && rgFocusOnTabSelect[curTab] )
-		{
-			$( rgFocusOnTabSelect[curTab] ).focus();
-		}
+		SetTabEnabled( g_initialTab );
 	} 
 	catch( e ) 
 	{
@@ -4960,6 +4957,8 @@ function SetTabEnabled( tab_name, bResetTab )
 		
 				if ( !bTabNameOK )
 			return;
+
+		$( 'checkout_page_content' ).className = 'page_content ' + tab_name + '_active';
 			
 		for( var i=0; i < rgValidTabs.length; ++i )
 		{
@@ -6135,5 +6134,18 @@ function ConfirmRescheduleCancel()
 	).done( function () {
 		UnsendGift();
 	});
+}
+function ShowMatchingFriends( parentId, childClass, attr, val ) {
+	var term = (!val || 0 === val.length || !val.trim()) ? '' : val.trim().replace(/"/g, '').toLowerCase();
+
+	$J('#' + parentId + '>.' + childClass + (term ? '[' + attr + '*="' + term + '"]' : '') + ':hidden').show();
+	if (term) {
+		$J('#' + parentId + '>.' + childClass + ':not([' + attr + '*="' + term + '"])').hide();
+	}
+}
+
+function ClearFriendsSearch () {
+	document.getElementById("seach_friends").value = "";
+	ShowMatchingFriends( 'friends_chooser', 'friend_block', 'data-search', $J('#seach_friends').val() );
 }
 

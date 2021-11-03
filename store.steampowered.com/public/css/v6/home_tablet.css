@@ -53,6 +53,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 32vw;
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -237,6 +238,10 @@
 		box-shadow: var(--gpShadow-Medium);
 	}
 
+	html.responsive .spotlight_weeklong_ctn {
+		height: unset;
+		
+	}
 
 
 	/* Browse Steam */
@@ -284,6 +289,10 @@
 	html.responsive #module_special_offers {
 		padding-top: 4px;
 		overflow: unset;
+	}
+
+	html.responsive #spotlight_carousel .home_special_offers_group {
+		margin-right: 0px;
 	}
 
 
@@ -594,10 +603,10 @@
 		margin-bottom: 0px !important; /* overriding inline style */
 	}
 
-	html.responsive body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
+	html.responsive body.v6 .header_inline_reason {
 		display: inline;
 		float: unset;
-		text-transform: unset;
+		text-transform: none;
 		font: var(--gpText-BodyMedium);
 		color: var(--gpStoreLighterGrey);
 		letter-spacing: 0px;
@@ -662,7 +671,6 @@
 
 
 
-
 	/* Keep scrolling for more content */
 	html.responsive .home_page_content .more_content_title {
 		font: var(--gpText-HeadingSmall);
@@ -687,5 +695,100 @@
 	html.responsive #content_callout .home_page_content {
 		padding: 0px 20%;
 	}
+
+
+
+
+	/* NEW RELEASES */
+
+	/* Hide breadcrumbs */
+	html.responsive .breadcrumbs {
+		display: none;
+	}
+
+
+	/* Page header */
+	html.responsive body.v6.newonsteam .page_header_ctn {
+		margin-bottom: -56px;
+	}
+
+
+	/* Remove background */
+	html.responsive .game_page_background {
+		background-image: unset !important;
+	}
+
+
+	/* Hide discovery queue */
+	html.responsive .discovery_queue_ctn {
+		display: none !important;
+	}
+
+
+	/* Header caps */
+	html.responsive body.v6.newonsteam .top_capsules.page_ctn {
+		margin-bottom: 0px;
+	}
+
+	html.responsive body.v6.newonsteam .newonsteam_headercaps > a {
+		background: var(--gpStoreDarkestGrey);
+		padding-bottom: 12px;
+		min-height: unset;
+	}
+
+	html.responsive .newonsteam_capsules > a > div.info {
+		padding: 4px 12px;
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+		color: white;
+	}
+
+
+	/* Bucket containers */
+	html.responsive .newonsteam_buckets {
+		display: flex;
+		flex-direction: column;
+	}
+
+	html.responsive .bucket {
+		margin: 8px 0px;
+	}
+
+	html.responsive body.v6 h2 {
+		padding: 0px;
+	}
+
+	html.responsive body.v6 h2 span.header_inline {
+		margin-left: 4px;
+	}
+
+	html.responsive body.v6 h2 .header_inline {
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyLarge);
+	}
+
+
+	/* Bucket carousels */
+	html.responsive .store_autoslider {
+		display: none !important; /*overriding inline style*/
+	}
+
+	html.responsive .bucket .store_capsule {
+		height: unset;
+	}
+
+	html.responsive .store_horizontal_autoslider_ctn {
+		overflow: unset;
+		margin-bottom: unset;
+		height: unset !important; /*overriding inline style*/
+	}
+
+
+	/* Tab containers */
+	html.responsive .home_tab_bg {
+		display: none;
+	}
+
+	
 
 }

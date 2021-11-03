@@ -2490,7 +2490,7 @@
           case "itemdef":
             return { nMaxItemsPerRow: 5, nItemMinimumWidth: 200 };
           default:
-            return { nMaxItemsPerRow: 4, nItemMinimumWidth: 300 };
+            return { nMaxItemsPerRow: 4, nItemMinimumWidth: 280 };
         }
       }
       var F,
@@ -2499,7 +2499,7 @@
         U,
         V = "bordered";
       function H(e) {
-        return e.carousel_rows || 1;
+        return S.c.IN_GAMEPADUI ? 1 : e.carousel_rows || 1;
       }
       function W(e) {
         return e.cap_item_count || 0;
@@ -2575,6 +2575,7 @@
           (e.sale_use_subscription_layout = void 0),
           (e.app_right_requirement_info = void 0),
           (e.bSaleEnabled = !1),
+          (e.sale_discount_event_id = void 0),
           (e.valve_access_log = []),
           (e.bInvisibleGameOptIn = void 0),
           (e.rt_migrated_time = void 0);
@@ -6354,7 +6355,7 @@
                       "div",
                       { className: c.StoreSaleItemRelease },
                       Object(m.n)(
-                        "#Sale_ReleaseDate",
+                        "#Sale_Released_Shorter",
                         a.a.createElement("span", null, g.release)
                       )
                     ),
@@ -7593,8 +7594,8 @@
           if ("bundle" == e.type || "sub" == e.type)
             return c.a.createElement(_e, Object(r.a)({}, e));
           switch (
-            (!Object(Y.a)() ||
-              ("library" != t && "animated" != t) ||
+            ((Object(Y.a)() ||
+              (G.c.IN_GAMEPADUI && ("library" == t || "animated" == t))) &&
               (t = "bordered"),
             t)
           ) {
@@ -8708,7 +8709,7 @@
             c.a.createElement(
               "span",
               { className: se.a.CreatorName },
-              !i && o.group_name
+              !i && o && o.group_name
             )
           );
         };
@@ -11866,17 +11867,18 @@
       function De(e) {
         if (e.recommendation.reason === ge.k_EStatusString)
           return { strReason: e.recommendation.statusString };
-        if (e.recommendation.reason === ge.k_ECurator) {
-          var t = Be.a.GetClanInfoByClanAccountID(e.recommendation.curator);
-          return {
-            strReason: Object(ne.f)(
-              "#ContentHub_Recommendation_Curator",
-              t.group_name
-            ),
-            strImageURL: t.avatar_full_url,
-          };
-        }
+        if (e.recommendation.reason === ge.k_ECurator)
+          return (t = Be.a.GetClanInfoByClanAccountID(e.recommendation.curator))
+            ? {
+                strReason: Object(ne.f)(
+                  "#ContentHub_Recommendation_Curator",
+                  t.group_name
+                ),
+                strImageURL: t.avatar_full_url,
+              }
+            : { strReason: "" };
         if (e.recommendation.reason === ge.k_ECreator) {
+          var t;
           if (
             !(t = Be.a.GetClanInfoByClanAccountID(
               e.recommendation.creator.creator
@@ -14302,7 +14304,7 @@
             (Object(o.useEffect)(
               function () {
                 if (!u)
-                  if (c) {
+                  if (c && c.GetTab()) {
                     for (
                       var e = new Map(),
                         t = function (t) {
@@ -24474,6 +24476,8 @@
           "animated_featured_capsule_StoreSaleItemRelease_1B3Dl",
         StoreSaleItemReview:
           "animated_featured_capsule_StoreSaleItemReview_2NnxX",
+        animated_featured_capsule_Title:
+          "animated_featured_capsule_animated_featured_capsule_Title_3r390",
         Title: "animated_featured_capsule_Title_26-IC",
         Reason: "animated_featured_capsule_Reason_2iLfP",
         InfoSlideRight: "animated_featured_capsule_InfoSlideRight_2fdUm",
@@ -39286,6 +39290,7 @@
         PreviewSalesPageContainer:
           "partnersaledisplay_PreviewSalesPageContainer_16oMm",
         SaleSectionTabs: "partnersaledisplay_SaleSectionTabs_1FPIV",
+        DesktopTabs: "partnersaledisplay_DesktopTabs_2utXv",
         SaleSectionTabsTab: "partnersaledisplay_SaleSectionTabsTab_3BgHm",
         SaleSectionTabContainer:
           "partnersaledisplay_SaleSectionTabContainer_1Svj0",
@@ -39300,7 +39305,6 @@
           "partnersaledisplay_MobileTabSelectorButton_1t4-3",
         MobileTabSelectorShortcut:
           "partnersaledisplay_MobileTabSelectorShortcut_1P5tc",
-        DesktopTabs: "partnersaledisplay_DesktopTabs_2utXv",
         MobileTabSelectorDropDown:
           "partnersaledisplay_MobileTabSelectorDropDown_3KO7Y",
         MobileTabSelectorOption:
@@ -39318,7 +39322,6 @@
         SectionLabelRight: "partnersaledisplay_SectionLabelRight_19YHY",
         SectionLabelLinkButton:
           "partnersaledisplay_SectionLabelLinkButton_1tTSn",
-        DefaultCreatorCtn: "partnersaledisplay_DefaultCreatorCtn_3KzJ1",
       };
     },
     a5LV: function (e, t, n) {
@@ -48625,7 +48628,12 @@
       }
       function vt(e, t) {
         var n = new Array();
-        return n.push(_t(C.a.Featured, e)), n.push(_t(C.a.Steam, e)), n;
+        return (
+          n.push(_t(C.a.Featured, e)),
+          n.push(_t(C.a.Steam, e)),
+          n.push(_t(C.a.Halloween, e)),
+          n
+        );
       }
       function bt(e, t) {
         Object(S.b)().BIsCollectionCalendar(), Object(Ce.g)();

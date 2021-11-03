@@ -53,6 +53,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 32vw;
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -110,6 +111,8 @@
 	html.responsive h2 span.header_inline {
 		font-weight: 400;
 		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+		margin-left: 4px;
 	}
 
 
@@ -201,7 +204,7 @@
 	}
 
 	html.responsive .quadscreenshot_carousel .appTitle {
-		bottom: calc( 2% + 56px );
+		bottom: 64px;
 	}
 
 	html.responsive .quadscreenshot_carousel .appTitle {
@@ -325,7 +328,6 @@
 
 
 
-
 	/* TABS CONTAINER */
 	html.responsive .tabbar_ctn {
 		display: none;
@@ -341,11 +343,37 @@
 	}
 
 	html.responsive .tab_content_ctn {
-		margin-top: 0px;
+		margin-top: 12px;
 	}
 
 	html.responsive .contenthub_page div.leftcol.sub {
 		margin-bottom: 16px;
+	}
+
+	html.responsive .tab_item_cap {
+		width: 100%;
+		margin-right: unset;
+	}
+
+
+
+
+	/* RIGHT RAIL */
+	html.responsive .right_rail_space {
+		display: none;
+	}
+
+
+
+
+	/* DAILY DEALS */
+
+
+
+
+	/* SPOTLIGHT */
+	html.responsive #contenthub_spotlight_ctn {
+		display: none;
 	}
 
 
@@ -360,8 +388,29 @@
 
 
 	/* GAMES STREAMING NOW */
+	html.responsive .live_streaming_space {
+		display: none;
+	}
+
 	html.responsive .live_streams_ctn .home_right_btn {
 		margin-top: -12px;
+	}
+
+	.live_stream_play_icon {
+		top: 34px !important;
+		left: 90px !important;
+	}
+
+	#live_streams_carousel .title {
+		margin-top: 4px;
+	}
+
+	.live_streams_ctn .home_right_btn {
+		margin-top: -10px;
+	}
+
+	html.responsive .live_streams_ctn {
+		overflow: visible;
 	}
 
 

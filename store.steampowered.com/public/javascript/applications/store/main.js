@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6868639";
+var CLSTAMP = "6871399";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -2491,7 +2491,7 @@ var CLSTAMP = "6868639";
           case "itemdef":
             return { nMaxItemsPerRow: 5, nItemMinimumWidth: 200 };
           default:
-            return { nMaxItemsPerRow: 4, nItemMinimumWidth: 300 };
+            return { nMaxItemsPerRow: 4, nItemMinimumWidth: 280 };
         }
       }
       var z,
@@ -2500,7 +2500,7 @@ var CLSTAMP = "6868639";
         P,
         F = "bordered";
       function x(e) {
-        return e.carousel_rows || 1;
+        return v.d.IN_GAMEPADUI ? 1 : e.carousel_rows || 1;
       }
       function W(e) {
         return e.cap_item_count || 0;
@@ -8613,8 +8613,8 @@ var CLSTAMP = "6868639";
           if ("bundle" == e.type || "sub" == e.type)
             return c.a.createElement(pe, Object(r.a)({}, e));
           switch (
-            (!Object(x.a)() ||
-              ("library" != t && "animated" != t) ||
+            ((Object(x.a)() ||
+              (V.d.IN_GAMEPADUI && ("library" == t || "animated" == t))) &&
               (t = "bordered"),
             t)
           ) {
@@ -10447,12 +10447,13 @@ var CLSTAMP = "6868639";
       });
       var r = n("mrSG"),
         a = n("2vnA"),
-        i = (n("aoTL"), n("wd/R")),
+        i = n("wd/R"),
         o = n.n(i),
         s = n("s4NR"),
         c = n.n(s),
-        l = (n("q1tI"), n("kyHq")),
-        u = n("lkRc"),
+        l = (n("q1tI"), n("kyHq"));
+      n("vDqi");
+      var u = n("lkRc"),
         p = new ((function () {
           function e() {
             (this.bOpenEventLandingPage = !1),
@@ -30219,6 +30220,7 @@ var CLSTAMP = "6868639";
     IGe8: function (e, t, n) {
       e.exports = {
         CuratorCtn: "salecuratorrecommendations_CuratorCtn_3dOtc",
+        Focusable: "salecuratorrecommendations_Focusable_3W8fl",
         CuratorBackgroundCtn:
           "salecuratorrecommendations_CuratorBackgroundCtn_3tptJ",
         BackgroundGamesCtn:
@@ -37039,6 +37041,7 @@ var CLSTAMP = "6868639";
         CapsuleImage: "salepreviewwidgets_CapsuleImage_2eQ4m",
         LinkCapsuleImage: "salepreviewwidgets_LinkCapsuleImage_2xO8H",
         CapsuleParentInfo: "salepreviewwidgets_CapsuleParentInfo_2erfW",
+        Focusable: "salepreviewwidgets_Focusable_2_ckK",
         Banner: "salepreviewwidgets_Banner_2gxv9",
         Blue: "salepreviewwidgets_Blue_2o-5t",
         LinesImg: "salepreviewwidgets_LinesImg_3LecB",
@@ -41182,6 +41185,7 @@ var CLSTAMP = "6868639";
         strMaxMobileWidth: "600px",
         MediaContainer: "salehilightplayerembed_MediaContainer_-ap7m",
         MainMediaCtn: "salehilightplayerembed_MainMediaCtn_FATLc",
+        Focusable: "salehilightplayerembed_Focusable_2BzEB",
         VideoThumbnail: "salehilightplayerembed_VideoThumbnail_h0pph",
         Screenshot: "salehilightplayerembed_Screenshot_1xxBa",
         PresenterEventScreenshot:
@@ -52080,6 +52084,7 @@ var CLSTAMP = "6868639";
     },
     ZlHF: function (e, t, n) {
       e.exports = {
+        Focusable: "partnersaledisplay_Focusable_2J5FS",
         SaleHeaderContainer: "partnersaledisplay_SaleHeaderContainer_W4mvn",
         SaleSection: "partnersaledisplay_SaleSection_1cOoC",
         CarouselDisplay: "partnersaledisplay_CarouselDisplay_mntHD",
@@ -52113,6 +52118,7 @@ var CLSTAMP = "6868639";
         PreviewSalesPageContainer:
           "partnersaledisplay_PreviewSalesPageContainer_16oMm",
         SaleSectionTabs: "partnersaledisplay_SaleSectionTabs_1FPIV",
+        DesktopTabs: "partnersaledisplay_DesktopTabs_2utXv",
         SaleSectionTabsTab: "partnersaledisplay_SaleSectionTabsTab_3BgHm",
         SaleSectionTabContainer:
           "partnersaledisplay_SaleSectionTabContainer_1Svj0",
@@ -52127,7 +52133,6 @@ var CLSTAMP = "6868639";
           "partnersaledisplay_MobileTabSelectorButton_1t4-3",
         MobileTabSelectorShortcut:
           "partnersaledisplay_MobileTabSelectorShortcut_1P5tc",
-        DesktopTabs: "partnersaledisplay_DesktopTabs_2utXv",
         MobileTabSelectorDropDown:
           "partnersaledisplay_MobileTabSelectorDropDown_3KO7Y",
         MobileTabSelectorOption:
@@ -69953,19 +69958,19 @@ var CLSTAMP = "6868639";
     kyHq: function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
-        return s;
+        return c;
       }),
         n.d(t, "j", function () {
-          return p;
-        }),
-        n.d(t, "b", function () {
           return d;
         }),
+        n.d(t, "b", function () {
+          return m;
+        }),
         n.d(t, "g", function () {
-          return f;
+          return b;
         }),
         n.d(t, "a", function () {
-          return b;
+          return _;
         });
       var r = n("mgoM");
       n.d(t, "d", function () {
@@ -70002,17 +70007,20 @@ var CLSTAMP = "6868639";
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
       })(a || (a = {}));
-      var i;
+      var i, o;
       !(function (e) {
-        (e[(e.Input = 0)] = "Input"),
-          (e[(e.AllOutput = 1)] = "AllOutput"),
-          (e[(e.Left = 2)] = "Left"),
-          (e[(e.Right = 3)] = "Right"),
-          (e[(e.Sub = 4)] = "Sub"),
-          (e[(e.BackLeft = 5)] = "BackLeft"),
-          (e[(e.BackRight = 6)] = "BackRight");
-      })(i || (i = {}));
-      var o;
+        (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
+      })(i || (i = {})),
+        (function (e) {
+          (e[(e.Input = 0)] = "Input"),
+            (e[(e.AllOutput = 1)] = "AllOutput"),
+            (e[(e.Left = 2)] = "Left"),
+            (e[(e.Right = 3)] = "Right"),
+            (e[(e.Sub = 4)] = "Sub"),
+            (e[(e.BackLeft = 5)] = "BackLeft"),
+            (e[(e.BackRight = 6)] = "BackRight");
+        })(o || (o = {}));
+      var s;
       !(function (e) {
         (e[(e.Error = -2)] = "Error"),
           (e[(e.Invalid = -1)] = "Invalid"),
@@ -70025,8 +70033,8 @@ var CLSTAMP = "6868639";
           (e[(e.Applied = 6)] = "Applied"),
           (e[(e.ClientRestartPending = 7)] = "ClientRestartPending"),
           (e[(e.SystemRestartPending = 8)] = "SystemRestartPending");
-      })(o || (o = {}));
-      var s;
+      })(s || (s = {}));
+      var c;
       !(function (e) {
         (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
           (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -70051,8 +70059,8 @@ var CLSTAMP = "6868639";
           (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
             "EBrowserType_Offscreen_FriendsUI"),
           (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-      })(s || (s = {}));
-      var c, l;
+      })(c || (c = {}));
+      var l, u;
       !(function (e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
@@ -70060,7 +70068,7 @@ var CLSTAMP = "6868639";
             "k_EClientUINotificationFriendChatMessage"),
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
-      })(c || (c = {})),
+      })(l || (l = {})),
         (function (e) {
           (e[(e.k_EComputerActiveStateInvalid = 0)] =
             "k_EComputerActiveStateInvalid"),
@@ -70068,17 +70076,17 @@ var CLSTAMP = "6868639";
               "k_EComputerActiveStateActive"),
             (e[(e.k_EComputerActiveStateIdle = 2)] =
               "k_EComputerActiveStateIdle");
-        })(l || (l = {}));
-      var u,
-        p = (function () {
+        })(u || (u = {}));
+      var p,
+        d = (function () {
           return function () {};
         })();
       !(function (e) {
         (e[(e.k_EPending = 0)] = "k_EPending"),
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
-      })(u || (u = {}));
-      function d(e) {
+      })(p || (p = {}));
+      function m(e) {
         return (
           "game" === e ||
           "dlc" === e ||
@@ -70089,7 +70097,7 @@ var CLSTAMP = "6868639";
           "hardware" === e
         );
       }
-      var m, h;
+      var h, f;
       !(function (e) {
         (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
           "k_EClientUsedInputTypeKeyboard"),
@@ -70098,7 +70106,7 @@ var CLSTAMP = "6868639";
           (e[(e.k_EClientUsedInputTypeController = 2)] =
             "k_EClientUsedInputTypeController"),
           (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-      })(m || (m = {})),
+      })(h || (h = {})),
         (function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -70155,17 +70163,17 @@ var CLSTAMP = "6868639";
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(h || (h = {}));
-      var f;
-      function b(e) {
-        return e === f.k_ESteamRealmChina;
+        })(f || (f = {}));
+      var b;
+      function _(e) {
+        return e === b.k_ESteamRealmChina;
       }
       !(function (e) {
         (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
           (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
           (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-      })(f || (f = {}));
-      var _;
+      })(b || (b = {}));
+      var v;
       !(function (e) {
         (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
           "k_BluetoothDeviceType_Invalid"),
@@ -70191,14 +70199,14 @@ var CLSTAMP = "6868639";
             "k_BluetoothDeviceType_Gamepad"),
           (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
             "k_BluetoothDeviceType_Keyboard");
-      })(_ || (_ = {}));
-      var v, g, y, S, M;
+      })(v || (v = {}));
+      var g, y, S, M, O;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
           (e[(e.Wireless = 2)] = "Wireless"),
           (e[(e.Virtual = 3)] = "Virtual");
-      })(v || (v = {})),
+      })(g || (g = {})),
         (function (e) {
           (e[(e.NotPresent = 0)] = "NotPresent"),
             (e[(e.Failed = 1)] = "Failed"),
@@ -70207,14 +70215,14 @@ var CLSTAMP = "6868639";
             (e[(e.Connecting = 4)] = "Connecting"),
             (e[(e.Connected = 5)] = "Connected"),
             (e[(e.Retrying = 6)] = "Retrying");
-        })(g || (g = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Weak = 1)] = "Weak"),
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(y || (y = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -70224,26 +70232,26 @@ var CLSTAMP = "6868639";
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(S || (S = {})),
+        })(M || (M = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(M || (M = {}));
-      var O, E;
+        })(O || (O = {}));
+      var E, C;
       !(function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(O || (O = {})),
+      })(E || (E = {})),
         (function (e) {
           (e[(e.Hidden = 0)] = "Hidden"),
             (e[(e.Notification = 1)] = "Notification"),
             (e[(e.Overlay = 2)] = "Overlay"),
             (e[(e.Opaque = 3)] = "Opaque"),
             (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-        })(E || (E = {}));
+        })(C || (C = {}));
     },
     l2mU: function (e, t, n) {
       "use strict";
@@ -81930,7 +81938,11 @@ var CLSTAMP = "6868639";
             (e.prototype.Dispatch = function () {
               for (var e = [], t = 0; t < arguments.length; t++)
                 e[t] = arguments[t];
-              for (var n = 0, r = this.m_vecCallbacks; n < r.length; n++) {
+              for (
+                var n = 0, r = Array.from(this.m_vecCallbacks);
+                n < r.length;
+                n++
+              ) {
                 var a = r[n];
                 a.apply(void 0, e);
               }

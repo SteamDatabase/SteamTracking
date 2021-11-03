@@ -12496,14 +12496,17 @@
               return o.createElement(
                 "div",
                 {
-                  className: sr.a.ChatPanel,
+                  className: Object(ir.a)(sr.a.ChatPanel, "ChatPanel"),
                   style: this.props.hidden ? { display: "none" } : void 0,
                 },
                 o.createElement(tr, null),
                 o.createElement(
                   "div",
                   {
-                    className: sr.a.ChatMessages + " " + Yt.a.minHeightZero,
+                    className: Object(ir.a)(
+                      sr.a.ChatMessages + " " + Yt.a.minHeightZero,
+                      "ChatMessages"
+                    ),
                     onScroll: this.HandleScroll,
                     ref: this.messagesContainer,
                   },

@@ -53,6 +53,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 32vw;
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -294,6 +295,13 @@
 
 @media screen and ( min-width: 501px ) and ( max-width: 910px ) {
 
+	/* TEMP Temporarily hide performance links while styling */
+	html.responsive .perf_timing_area {
+		display: none;
+	}
+
+
+	
 
 	/* PAGE SETUP */
 
@@ -332,8 +340,6 @@
 
 	/* Hide outline */
 	html.responsive * :focus {
-		/* outline-color: unset; */
-		/* box-shadow: unset; */
 		outline: none;
 	}
 
@@ -342,11 +348,6 @@
 	html.responsive body.v6:not( .sale_page_background ) {
 		background: var(--gpGradient-StoreBackground);
 		background-attachment: fixed;
-
-		/* For screen grabbing */
-		/* background-attachment: unset;
-		background-color: var(--gpStoreDarkerGrey);
-		background-repeat: no-repeat; */
 	}
 
 	html.responsive body.login {
@@ -462,6 +463,35 @@
 
 
 
+	/* INPUT FIELDS */
+	
+    html.responsive input.text,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 8px 10px;
+		box-shadow: unset;
+		border: unset;
+        margin: unset;
+	}
+    
+    html.responsive input.text:hover,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text:hover {
+		background-color: var(--gpBackground-LightHard);
+	}
+
+    html.responsive input.text:focus,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text:focus {
+		background-color: white;
+        color: black;
+        border-radius: 0px;
+	}
+
+
+
 
 	/* DROPDOWNS */
 
@@ -530,7 +560,7 @@
 
 
 
-	/* CAROUSELS */
+	/* GAMES AND CAROUSELS */
 	html.responsive .featured_items .carousel_items {
 		height: unset;
 	}
@@ -545,13 +575,17 @@
 	html.responsive .carousel_container.spotlight .carousel_items > * .store_capsule,
 	html.responsive .spotlight_img img,
 	html.responsive #live_streams_carousel .carousel_items .store_capsule,
-	html.responsive .recommended_creators_ctn .store_capsule {
+	html.responsive .recommended_creators_ctn .store_capsule,
+	html.responsive .carousel_container.spotlight .carousel_items > * > div,
+	html.responsive .spotlight_weeklong_ctn {
 		width: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+		min-width: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
 	}
 
-
 	/* 2 col game tiles */
-	html.responsive .quadscreenshot_carousel.carousel_container .carousel_items:not(.no_paging) > * {
+	html.responsive .quadscreenshot_carousel.carousel_container .carousel_items:not(.no_paging) > *,
+	html.responsive body.v6 .newonsteam_capsules > a,
+	html.responsive .dailydeal_ctn {
         width: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
     }
 
@@ -564,17 +598,21 @@
 	html.responsive .carousel_container.spotlight .carousel_items > * .store_capsule,
 	html.responsive .home_page_takeover_link,
 	html.responsive .community_recommendation_app,
-	html.responsive .recommended_creators_ctn .store_capsule {
+	html.responsive .recommended_creators_ctn .store_capsule,
+	html.responsive body.v6 .newonsteam_capsules > a,
+	html.responsive .dailydeal_ctn {
 		box-shadow: var( --gpShadow-Medium );
 		scroll-snap-align: start;
 	}
 
 	/* Set consistent gap between tiles */
 	html.responsive .carousel_container .carousel_items > *,
-	.carousel_container.spotlight .carousel_items > * > div,
+	html.responsive .carousel_container.spotlight .carousel_items > * > div,
 	html.responsive #live_streams_carousel .carousel_items .store_capsule,
 	html.responsive .carousel_container.paging_capsules .carousel_items > * > *:not(:last-child),
-	html.responsive .contenthub_specials_grid_cell {
+	html.responsive .contenthub_specials_grid_cell,
+	html.responsive body.v6.newonsteam .newonsteam_headercaps a:first-child,
+	html.responsive .store_capsule:not(:last-child) {
 		margin-right: var(--gpSpace-Gap);
 	}
 
@@ -599,7 +637,8 @@
 	/* Turn container into a carousel */
 	html.responsive .peeking_carousel,
 	html.responsive .contenthub_popular_tags_grid,
-	html.responsive .contenthub_specials_grid {
+	html.responsive .contenthub_specials_grid,
+	html.responsive .newonsteam_headercaps {
 		display: inline-flex;
 		overflow-x: scroll;
 		overflow-y: hidden;
@@ -608,10 +647,7 @@
 		padding-bottom: var(--gpSpace-Gap);
 	}
 
-	/* TEMP Temporarily hide performance links while styling */
-	html.responsive .perf_timing_area {
-		display: none;
-	}
+	
 
 
 
@@ -625,7 +661,7 @@
 	}
 
 	html.responsive .tab_content {
-		display: flex !important; /* TODO (Jays) do not !important this, fix the JS to not assign display: none as a style */
+		display: flex !important;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: flex-start;
@@ -663,10 +699,6 @@
 
 	html.responsive .tab_item.focus .tab_item_name {
 		color: #c7d5e0;
-	}
-
-	html.responsive .tab_item_cap_img {
-		height: 10.8vw; /* Remove this heigh after images in each carousel are loading */
 	}
 
 	html.responsive .tab_item .tab_item_name {
@@ -815,6 +847,11 @@
         left: 0;
     }
 
+    html.responsive .dselect_scroll_disable {
+        height: 100%;
+        overflow: hidden;
+    }
+
 
 
 
@@ -837,6 +874,7 @@
 		font: var(--gpText-BodyMedium);
 		margin-bottom: 16px;
 		color: var(--gpStoreLightGrey);
+		padding-top: var(--gpSpace-Gutter);
 	}
 
 	html.responsive .breadcrumbs a {
@@ -865,6 +903,11 @@
 
 	html.responsive .breadcrumb_separator {
 		display: none;
+	}
+
+	html.responsive .breadcrumb_current_page {
+		margin-left: 8px;
+		color: var(--gpStoreLighterGrey);
 	}
 
 

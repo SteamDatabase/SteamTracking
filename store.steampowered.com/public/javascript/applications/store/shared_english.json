@@ -1706,6 +1706,8 @@
     "Browse_sale_Violence_Feature": "Violence",
     "Browse_Sale_Sexual_Feature": "Nudity or Sexual Content",
     "Browse_Sale_Adult_Feature": "Adult Only",
+    "Section_Minimize_Tooltip": "Minimize this section",
+    "Section_Maximize_Tooltip": "Maximize this section",
     "bytes": "%1$s B",
     "bytes_PerSecond": "%1$s B\/s",
     "bits": "%1$s b",

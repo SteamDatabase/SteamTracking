@@ -147,7 +147,7 @@
 	/* Right coloumn layout */
 	html.responsive #main_content .two_column.right,
 	html.responsive .page_header_ctn .page_content {
-		background-color: var(--gpBackground-DarkMedium);
+		background-color: var(--gpStoreDarkerGrey);
 	}
 
 	html.responsive #main_content .two_column.right {

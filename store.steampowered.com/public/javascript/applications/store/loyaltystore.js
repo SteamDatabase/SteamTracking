@@ -4524,6 +4524,9 @@
         BurntOrangeTheme: "profilethemecolors_BurntOrangeTheme_37pNJ",
         FlatGreyTheme: "profilethemecolors_FlatGreyTheme_2AFCa",
         PurpleTheme: "profilethemecolors_PurpleTheme_KM8jQ",
+        GreenSlimeTheme: "profilethemecolors_GreenSlimeTheme_FdC8c",
+        GhostTheme: "profilethemecolors_GhostTheme_1JZpe",
+        ColorNightmareTheme: "profilethemecolors_ColorNightmareTheme_2LNsd",
       };
     },
     "8j16": function (e, t, n) {

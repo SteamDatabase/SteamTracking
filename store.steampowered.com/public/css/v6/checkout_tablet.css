@@ -53,6 +53,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 32vw;
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -85,7 +86,8 @@
 	html.responsive h3#payment_header,
     html.responsive #payment_row_method_name,
     html.responsive h3.review_purchase_title,
-    html.responsive .checkout_tab.checkout_content h2.purchase_confirmation_title {
+    html.responsive .checkout_tab.checkout_content h2.purchase_confirmation_title,
+    html.responsive .checkout_purchase_title {
 		font: var(--gpText-HeadingLarge);
 		letter-spacing: unset;
 		text-transform: unset;
@@ -102,10 +104,6 @@
 		margin-top: 16px;
 	}
 
-    /* Page */
-    html.responsive body.v6 .page_content {
-        padding-bottom: 2px;
-    }
 
 
     /* TEXT */
@@ -150,12 +148,18 @@
         /* position: fixed; */
     }
 
+    /* Page */
+    html.responsive body.v6 .page_content {
+        padding-bottom: 2px;
+        width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+    }
+
 
     /* Columns */
     html.responsive body.checkout .leftcol,
     html.responsive body.checkout .rightcol {
         max-width: unset;
-        width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+        /* width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter))); */
         margin-left: unset;
         margin-right: unset;
 	}
@@ -196,8 +200,8 @@
 
 	/* Right column */
     html.responsive body.checkout .rightcol {
-        margin-top: 32px;
-        margin-bottom: 32px;
+        margin-top: 24px;
+        margin-bottom: 24px;
     }
 
     html.responsive body.checkout .rightcol .block {
@@ -247,7 +251,6 @@
     html.responsive .checkout_content.confirm {
         background: unset;
         padding: unset;
-        /* margin-top: 16px; */
     }
 
     html.responsive #checkout_content_review {
@@ -380,7 +383,7 @@
         width: var(--gpPaymentsNavWidth);
         right: 0px;
         top: 0px;
-        background-color: var(--gpBackground-DarkSoft);
+        background-color: var(--gpBackground-DarkMedium);
         height: 100vh;
         padding: 24px;
         box-sizing: border-box;
@@ -467,10 +470,6 @@
     html.responsive .checkout_review_item_platform {
         display: none;
     }
-
-
-
-
 
 
     /* Points total */
@@ -573,30 +572,6 @@
 
     /* INPUTS */
 
-    /* Input fields */
-    html.responsive input.text {
-		background-color: var(--gpBackground-LightMedium);
-		border-radius: var(--gpCorner-Medium);
-		font: var(--gpText-BodyLarge);
-		color: white;
-		transition: all 0.1s ease;
-		padding: 8px 10px;
-		box-shadow: unset;
-		border: unset;
-        margin: unset;
-	}
-    
-    html.responsive input.text:hover {
-		background-color: var(--gpBackground-LightHard);
-	}
-
-    html.responsive input.text:focus {
-		background-color: white;
-        color: black;
-        border-radius: 0px;
-	}
-
-
     /* Input widths */
     html.responsive .dselect_container a.trigger,
 	html.responsive .dselect_container a.activetrigger,
@@ -625,6 +600,7 @@
         width: 32%;
     }
 
+    
 
     /* PAYMENT AND FOOTER NOTES */
     html.responsive #payment_method_notes {
@@ -668,6 +644,172 @@
     html.responsive #verify_country_notes {
         font-size: unset;
     }
+
+    
+
+
+    /* GIFTING */
+
+    html.responsive #friends_list_wrapper {
+        position: fixed;
+        left: var(--gpSpace-Gutter);
+        top: 0px;
+        width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+        height: 100vh;
+        overflow: scroll;
+        margin-top: unset;
+        padding: 0px;
+    }
+
+    html.responsive #friends_chooser {
+        max-width: unset;
+        min-height: unset;
+        max-height: unset;
+        border: unset;
+        overflow: unset;
+        margin-top: 8px;
+        padding-bottom: 24px;
+    }
+
+    html.responsive body.v6 .gift_recipient_active {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        width: calc(var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+        height: 100vh;
+        overflow: scroll;
+        margin: 0px;
+        padding: 8px 24px;
+        background-color: var(--gpBackground-DarkMedium);
+    }
+    
+    html.responsive #send_via_friends_box {
+        margin-top: 16px;
+    }
+
+    html.responsive #send_via_friends_box p {
+        font: var(--gpText-BodySmall);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: white;
+        margin-top: 12px;
+    }
+
+
+    /* Friend search */
+    html.responsive .search_friends_ctn {
+        display: flex;
+        gap: 8px;
+    }
+
+    html.responsive #seach_friends {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 10px 10px;
+
+		box-shadow: unset;
+		border: unset;
+        width: 50%;
+        margin: unset;
+	}
+
+	html.responsive #seach_friends:focus {
+		background-color: white;
+		color: black;
+	}
+
+	html.responsive #seach_friends::placeholder {
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyLarge);
+	}
+
+
+    /* Friends list */
+    html.responsive p.cart_send_selected_only {
+        margin-top: 8px;
+    }
+
+    html.responsive .checkout_content.cart_send_choice p em {
+        font: var(--gpText-BodyMedium);
+        color: var(--gpStoreLighterGrey);
+    }
+
+    html.responsive .friends_chooser_description {
+        display: none;
+    }
+
+    html.responsive #friends_chooser {
+        margin-top: 16px;
+    }
+
+    html.responsive #friends_chooser .friend_block {
+        border: unset;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        padding: 4px 12px;
+        min-height: unset;
+        font: var(--gpText-BodyLarge);
+        font-weight: 400;
+        background: var(--gpBackground-LightSofter);
+        transition: all 0.2s ease;
+    }
+
+    html.responsive #friends_chooser .friend_block:hover,
+    html.responsive #friends_chooser .friend_block:focus-within {
+        background: var(--gpBackground-LightMedium);
+    }
+
+    html.responsive #friends_chooser .friend_block.active {
+        background: white;
+        box-shadow: var(--gpShadow-Small);
+    }
+    html.responsive #friends_chooser .friend_block.active .friend_name {
+        color: black;
+    }
+
+    /* Reset positions */
+    html.responsive #friends_chooser .friend_block .friend_block_radio,
+    html.responsive #friends_chooser .friend_block .friend_block_avatar,
+    html.responsive #friends_chooser .friend_block .friend_name {
+        position: unset;
+    }
+
+    /* Reset text formatting */
+    html.responsive #friends_chooser .friend_block .friend_name {
+        font-size: unset;
+    }
+
+    html.responsive #friends_chooser .friend_block .friend_block_avatar {
+        margin-right: 12px;
+    }
+    
+    html.responsive #friends_chooser .friend_block .friend_block_radio {
+        margin-right: 12px;
+    }
+
+
+    /* Continue column */
+    html.responsive .send_choice_inner {
+        padding-left: unset;
+    }
+
+    html.responsive .checkout_content.cart_send_choice {
+        background-color: unset;
+        padding: unset;
+    }
+
+    html.responsive .cart_send_schedule_button div {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+
 
 
 

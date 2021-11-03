@@ -1936,11 +1936,7 @@ function ReparentAppLandingPageForSmallScreens()
 
 	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
 
-	// tablet mode has its own purchase options container (shown on side of screen)
-	if ( bSupportTabletMode )
-	{
-		Responsive_ReparentItemsInTabletMode( '#purchaseOptionsContent', $J('#purchaseOptionsContentTablet') );
-	}
+	ReparentPurchaseOptionsForTablet( '#purchaseOptionsContent' );
 
 		var fn_reparent = bSupportTabletMode ? Responsive_ReparentItemsInResponsiveMode : Responsive_ReparentItemsInMobileMode;
 
@@ -2024,10 +2020,15 @@ function ReparentAppLandingPageForSmallScreens()
 		$J('#languageTable').css('display', bUseNewUX ? 'none' : defaultLanguageTableDisplay );
 	});
 	$J(window).trigger( msgWatch );
+}
 
-	// if we're specifically in tablet screen mode resize the tablet's purchase options content
-	if ( bSupportTabletMode && window.UseTabletScreenMode && window.UseTabletScreenMode() )
+function ReparentPurchaseOptionsForTablet( idPurchaseOptions )
+{
+	// tablet mode has its own purchase options container (shown on right side of screen)
+	if ( window.SupportTabletScreenMode && window.SupportTabletScreenMode() )
 	{
+		Responsive_ReparentItemsInTabletMode( idPurchaseOptions, $J('#purchaseOptionsContentTablet') );
+
 		var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
 		$J('#purchaseOptionsContentTablet').css('height', $purchaseContentHeight + 'px');
 		$J('#purchaseOptionsContentTablet').css('top', parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) + 'px' );

@@ -46,6 +46,7 @@
         AgendaToggle: "conferencepages_AgendaToggle_1rjE0",
         CollapseBtn: "conferencepages_CollapseBtn_2RCNd",
         CalendarBtn: "conferencepages_CalendarBtn_22bby",
+        CalendarText: "conferencepages_CalendarText_kxtN0",
         MainCol: "conferencepages_MainCol_1qlkn",
         InteractionCtn: "conferencepages_InteractionCtn_39uHL",
         BroadcastCtn: "conferencepages_BroadcastCtn_240cu",
@@ -59,6 +60,8 @@
         ChatTab: "conferencepages_ChatTab_3WoUg",
         QATab: "conferencepages_QATab_1An5O",
         InnerChatTab: "conferencepages_InnerChatTab_1g3oa",
+        TabTitle: "conferencepages_TabTitle_24i11",
+        Popout: "conferencepages_Popout_QHxXW",
         Active: "conferencepages_Active_3PSCm",
         ChatStack: "conferencepages_ChatStack_1ogmv",
       };
@@ -87,27 +90,94 @@
     JCps: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return O;
-      });
+        return Q;
+      }),
+        r.d(t, "b", function () {
+          return P;
+        });
       var n = r("mrSG"),
         i = r("q1tI"),
         a = r.n(i),
         o = r("kLLr"),
-        s = r("Qcoi"),
-        u = r("vDqi"),
-        c = r.n(u),
-        l = r("X2UP"),
-        d = r("OS6B"),
-        m = r("qiKp"),
-        f = r("opsS"),
-        p = r("lkRc"),
-        b = (function () {
+        s = r("5izx"),
+        u = r("XxJJ"),
+        c = r("qiKp"),
+        l = r("opsS"),
+        d = r("lkRc"),
+        m = [
+          "mousemove",
+          "keypress",
+          "scroll",
+          "wheel",
+          "focusin",
+          "touchstart",
+          "touchmove",
+        ],
+        f = (function () {
+          function e() {
+            (this.m_callbackList = new c.a()),
+              (this.m_timer = null),
+              (this.m_bAreEventListenersRegistered = !1),
+              "dev" == d.c.WEB_UNIVERSE && (window.g_FidgetStore = this);
+          }
+          return (
+            (e.Get = function () {
+              return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
+            }),
+            (e.prototype.ResetFidgetTimer = function (e) {
+              var t = this;
+              this.m_timer && window.clearTimeout(this.m_timer);
+              this.m_timer = window.setTimeout(function () {
+                (t.m_timer = null), t.m_callbackList.Dispatch();
+              }, 2e3);
+            }),
+            (e.prototype.BIsUserFidgeting = function () {
+              return !!this.m_timer;
+            }),
+            (e.prototype.GetCallbackList = function () {
+              return this.m_callbackList;
+            }),
+            (e.prototype.BRegisterEventListeners = function () {
+              if (this.m_bAreEventListenersRegistered) return !1;
+              for (var e = window, t = 0, r = m; t < r.length; t++) {
+                var n = r[t];
+                e.addEventListener(n, this.ResetFidgetTimer);
+              }
+              return (this.m_bAreEventListenersRegistered = !0), !0;
+            }),
+            (e.prototype.BUnregisterEventListeners = function () {
+              if (!this.m_bAreEventListenersRegistered) return !1;
+              for (var e = window, t = 0, r = m; t < r.length; t++) {
+                var n = r[t];
+                e.removeEventListener(n, this.ResetFidgetTimer);
+              }
+              return (this.m_bAreEventListenersRegistered = !1), !1;
+            }),
+            Object(n.c)([u.a], e.prototype, "ResetFidgetTimer", null),
+            e
+          );
+        })();
+      function p() {
+        a.a.useEffect(function () {
+          var e = f.Get().BRegisterEventListeners();
+          return function () {
+            e && f.Get().BUnregisterEventListeners();
+          };
+        }, []);
+      }
+      var b = r("Qcoi"),
+        B = r("vDqi"),
+        h = r.n(B),
+        _ = r("X2UP"),
+        y = r("OS6B"),
+        g = (function () {
           function e() {
             (this.m_mapQAndASessions = new Map()),
               (this.m_mapQAndAChangeCallbackList = new Map()),
               (this.m_mapQuestions = new Map()),
               (this.m_mapQuestionCallbackList = new Map()),
-              "dev" == p.c.WEB_UNIVERSE && (window.g_FAQStore = this);
+              (this.m_rgPendingQuestionGIDs = []),
+              "dev" == d.c.WEB_UNIVERSE && (window.g_QAndAStore = this);
           }
           return (
             (e.Get = function () {
@@ -116,14 +186,14 @@
             (e.prototype.GetQAndACallbackList = function (e) {
               return (
                 this.m_mapQAndAChangeCallbackList.has(e) ||
-                  this.m_mapQAndAChangeCallbackList.set(e, new m.a()),
+                  this.m_mapQAndAChangeCallbackList.set(e, new c.a()),
                 this.m_mapQAndAChangeCallbackList.get(e)
               );
             }),
             (e.prototype.GetQuestionCallbackList = function (e) {
               return (
                 this.m_mapQuestionCallbackList.has(e) ||
-                  this.m_mapQuestionCallbackList.set(e, new m.a()),
+                  this.m_mapQuestionCallbackList.set(e, new c.a()),
                 this.m_mapQuestionCallbackList.get(e)
               );
             }),
@@ -142,143 +212,137 @@
                     .ConvertTo64BitString()
                 );
               }
-              for (var u = Array.from(r); u.length > 0; ) {
-                var c = u.splice(0, 500);
-                s.a.LoadProfiles(c, t);
+              for (var s = Array.from(r); s.length > 0; ) {
+                var u = s.splice(0, 500);
+                b.a.LoadProfiles(u, t);
               }
             }),
             (e.prototype.LoadSession = function (e, t, r) {
-              var i, a, o, s, u, l, m, f, b, B, h, y;
+              var i, a, o, s, u, c, l, m, f, p;
               return Object(n.b)(this, void 0, void 0, function () {
-                var _, g, v, S, w, M, z, C, R, F, O, j, T, W, I, U, A, E;
-                return Object(n.e)(this, function (N) {
-                  switch (N.label) {
+                var b, B, _, g, v, w, S, M, C, z, R, O, j, F, T, W, I;
+                return Object(n.e)(this, function (A) {
+                  switch (A.label) {
                     case 0:
-                      (_ =
-                        p.i.logged_in &&
-                        (t ||
-                          !this.m_mapQAndASessions.has(e) ||
-                          this.m_mapQAndASessions.get(e).bUserCanModerate)),
-                        (g = _
+                      (b =
+                        d.i.logged_in &&
+                        (!this.m_mapQAndASessions.has(e) ||
+                          this.m_mapQAndASessions.get(e).bUserCanModerate ||
+                          this.m_rgPendingQuestionGIDs.length > 0 ||
+                          t)),
+                        (B = b
                           ? "/ajaxgetqandasessionforuser/"
                           : "/ajaxgetqandasession/"),
-                        (v =
-                          p.c.COMMUNITY_BASE_URL +
+                        (_ =
+                          d.c.COMMUNITY_BASE_URL +
                           "questions/" +
-                          p.b.VANITY_ID +
-                          g +
+                          d.b.VANITY_ID +
+                          B +
                           e),
-                        (S = {}),
-                        (w = null),
-                        (N.label = 1);
+                        (g = {}),
+                        (v = null),
+                        (A.label = 1);
                     case 1:
                       return (
-                        N.trys.push([1, 3, , 4]),
+                        A.trys.push([1, 3, , 4]),
                         [
                           4,
-                          c.a.get(v, {
-                            params: S,
+                          h.a.get(_, {
+                            params: g,
                             cancelToken: null == r ? void 0 : r.token,
                           }),
                         ]
                       );
                     case 2:
                       if (
-                        200 == (null == (M = N.sent()) ? void 0 : M.status) &&
+                        200 == (null == (w = A.sent()) ? void 0 : w.status) &&
                         1 ==
-                          (null === (i = M.data) || void 0 === i
+                          (null === (i = w.data) || void 0 === i
                             ? void 0
                             : i.success) &&
-                        M.data.qanda &&
-                        M.data.questions
+                        w.data.qanda &&
+                        w.data.questions
                       ) {
                         for (
-                          this.PreloadPosterProfiles(M.data.questions, r),
-                            z = 0,
-                            C = M.data.questions;
-                          z < C.length;
-                          z++
+                          this.PreloadPosterProfiles(w.data.questions, r),
+                            S = 0,
+                            M = w.data.questions;
+                          S < M.length;
+                          S++
                         )
-                          (R = C[z]),
-                            (F = R.gidQuestion),
-                            (O =
+                          (C = M[S]),
+                            (z = C.gidQuestion),
+                            (R =
                               null !==
                                 (o =
-                                  null === (a = this.m_mapQuestions.get(F)) ||
+                                  null === (a = this.m_mapQuestions.get(z)) ||
                                   void 0 === a
                                     ? void 0
                                     : a.bUserUpVoted) && void 0 !== o
                                 ? o
-                                : R.bUserUpVoted),
-                            (j =
-                              null !==
-                                (u =
-                                  null === (s = this.m_mapQuestions.get(F)) ||
-                                  void 0 === s
-                                    ? void 0
-                                    : s.bHidden) && void 0 !== u
-                                ? u
-                                : R.bHidden),
-                            (T = Object(n.a)(Object(n.a)({}, R), {
-                              bUserUpVoted: O,
-                              bHidden: j,
+                                : C.bUserUpVoted),
+                            (O = Object(n.a)(Object(n.a)({}, C), {
+                              bUserUpVoted: R,
                             })),
-                            this.m_mapQuestions.set(F, T),
-                            this.GetQuestionCallbackList(F).Dispatch(T);
+                            this.m_mapQuestions.set(z, O),
+                            this.GetQuestionCallbackList(z).Dispatch(O);
                         return (
-                          (W =
+                          (j =
                             null !==
-                              (m =
-                                null === (l = this.m_mapQAndASessions.get(e)) ||
-                                void 0 === l
+                              (u =
+                                null === (s = this.m_mapQAndASessions.get(e)) ||
+                                void 0 === s
                                   ? void 0
-                                  : l.bUserCanModerate) && void 0 !== m
-                              ? m
-                              : M.data.qanda.bUserCanModerate),
-                          (I =
+                                  : s.bUserCanModerate) && void 0 !== u
+                              ? u
+                              : w.data.qanda.bUserCanModerate),
+                          (F =
                             null !==
-                              (b =
-                                null === (f = this.m_mapQAndASessions.get(e)) ||
-                                void 0 === f
+                              (l =
+                                null === (c = this.m_mapQAndASessions.get(e)) ||
+                                void 0 === c
                                   ? void 0
-                                  : f.bUserCanAskQuestions) && void 0 !== b
-                              ? b
-                              : M.data.qanda.bUserCanAskQuestions),
-                          (U = Object(n.a)(Object(n.a)({}, M.data.qanda), {
-                            bUserCanModerate: W,
-                            bUserCanAskQuestions: I,
+                                  : c.bUserCanAskQuestions) && void 0 !== l
+                              ? l
+                              : w.data.qanda.bUserCanAskQuestions),
+                          (T = Object(n.a)(Object(n.a)({}, w.data.qanda), {
+                            bUserCanModerate: j,
+                            bUserCanAskQuestions: F,
                           })),
-                          this.m_mapQAndASessions.set(e, U),
-                          this.GetQAndACallbackList(e).Dispatch(U),
+                          this.m_mapQAndASessions.set(e, T),
+                          this.GetQAndACallbackList(e).Dispatch(T),
+                          this.UpdatePendingQuestionList(
+                            w.data.qanda.rgQuestionGIDs
+                          ),
                           [2, 1]
                         );
                       }
-                      return (w = { response: M }), [3, 4];
+                      return (v = { response: w }), [3, 4];
                     case 3:
-                      return (A = N.sent()), (w = A), [3, 4];
+                      return (W = A.sent()), (v = W), [3, 4];
                     case 4:
                       return (
-                        (E = Object(d.a)(w)),
+                        (I = Object(y.a)(v)),
                         console.error(
                           "Could not load Q&A",
                           e,
-                          E.strErrorMsg,
-                          E
+                          I.strErrorMsg,
+                          I
                         ),
                         [
                           2,
                           null !==
-                            (y =
+                            (p =
                               null ===
-                                (h =
+                                (f =
                                   null ===
-                                    (B = null == w ? void 0 : w.response) ||
-                                  void 0 === B
+                                    (m = null == v ? void 0 : v.response) ||
+                                  void 0 === m
                                     ? void 0
-                                    : B.data) || void 0 === h
+                                    : m.data) || void 0 === f
                                 ? void 0
-                                : h.success) && void 0 !== y
-                            ? y
+                                : f.success) && void 0 !== p
+                            ? p
                             : 2,
                         ]
                       );
@@ -286,38 +350,62 @@
                 });
               });
             }),
+            (e.prototype.UpdatePendingQuestionList = function (e) {
+              for (var t, r = new Set(), n = 0, i = e; n < i.length; n++) {
+                var a = i[n],
+                  o = this.m_mapQuestions.get(a);
+                o.posterAccountID == d.i.accountid &&
+                  1 == o.eState &&
+                  r.add(o.gidQuestion);
+              }
+              if (this.m_rgPendingQuestionGIDs.length > 0)
+                for (
+                  var s = new Set(e), u = 0, c = this.m_rgPendingQuestionGIDs;
+                  u < c.length;
+                  u++
+                ) {
+                  a = c[u];
+                  s.has(a) &&
+                    1 ==
+                      (null === (t = this.m_mapQuestions.get(a)) || void 0 === t
+                        ? void 0
+                        : t.eState) &&
+                    r.add(a);
+                }
+              this.m_rgPendingQuestionGIDs = Array.from(r);
+            }),
             (e.prototype.AskNewQuestion = function (e, t, r) {
               var i, a, o, s, u;
               return Object(n.b)(this, void 0, void 0, function () {
-                var l, m, f, b, B, h;
+                var c, l, m, f, p, b;
                 return Object(n.e)(this, function (n) {
                   switch (n.label) {
                     case 0:
                       if (
-                        !p.i.logged_in ||
-                        !p.c.SESSIONID ||
+                        !d.i.logged_in ||
+                        !d.c.SESSIONID ||
                         !(null === (i = this.m_mapQAndASessions.get(e)) ||
                         void 0 === i
                           ? void 0
                           : i.bUserCanAskQuestions)
                       )
                         return [2, 15];
-                      (l =
-                        p.c.COMMUNITY_BASE_URL +
+                      (c =
+                        d.c.COMMUNITY_BASE_URL +
                         "questions/" +
-                        p.b.VANITY_ID +
+                        d.b.VANITY_ID +
                         "/ajaxaskquestion/" +
                         e),
-                        (m = new FormData()).append("sessionid", p.c.SESSIONID),
-                        m.append("question", t),
-                        (f = null),
+                        (l = new FormData()).append("sessionid", d.c.SESSIONID),
+                        l.append("question", t),
+                        (m = null),
                         (n.label = 1);
                     case 1:
                       return (
                         n.trys.push([1, 3, , 4]),
                         [
                           4,
-                          c.a.post(l, m, {
+                          h.a.post(c, l, {
                             withCredentials: !0,
                             cancelToken: null == r ? void 0 : r.token,
                           }),
@@ -325,24 +413,29 @@
                       );
                     case 2:
                       return 200 ==
-                        (null == (b = n.sent()) ? void 0 : b.status) &&
+                        (null == (f = n.sent()) ? void 0 : f.status) &&
                         1 ==
-                          (null === (a = b.data) || void 0 === a
+                          (null === (a = f.data) || void 0 === a
                             ? void 0
                             : a.success)
-                        ? (!0, this.LoadSession(e, true, r), [2, 1])
-                        : ((f = { response: b }), [3, 4]);
+                        ? (this.m_rgPendingQuestionGIDs.push(
+                            f.data.gidQuestion
+                          ),
+                          !0,
+                          this.LoadSession(e, true, r),
+                          [2, 1])
+                        : ((m = { response: f }), [3, 4]);
                     case 3:
-                      return (B = n.sent()), (f = B), [3, 4];
+                      return (p = n.sent()), (m = p), [3, 4];
                     case 4:
                       return (
-                        (h = Object(d.a)(f)),
+                        (b = Object(y.a)(m)),
                         console.error(
                           "Could not upload question",
                           e,
                           t,
-                          h.strErrorMsg,
-                          h
+                          b.strErrorMsg,
+                          b
                         ),
                         [
                           2,
@@ -351,7 +444,7 @@
                               null ===
                                 (s =
                                   null ===
-                                    (o = null == f ? void 0 : f.response) ||
+                                    (o = null == m ? void 0 : m.response) ||
                                   void 0 === o
                                     ? void 0
                                     : o.data) || void 0 === s
@@ -366,15 +459,15 @@
               });
             }),
             (e.prototype.ModerateQuestion = function (e, t, r, i) {
-              var a, o, s, u, l;
+              var a, o, s, u, c;
               return Object(n.b)(this, void 0, void 0, function () {
-                var m, f, b, B, h, y, _, g;
-                return Object(n.e)(this, function (v) {
-                  switch (v.label) {
+                var l, m, f, p, b, B;
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
                     case 0:
                       if (
-                        !p.i.logged_in ||
-                        !p.c.SESSIONID ||
+                        !d.i.logged_in ||
+                        !d.c.SESSIONID ||
                         !(null === (a = this.m_mapQAndASessions.get(e)) ||
                         void 0 === a
                           ? void 0
@@ -382,31 +475,24 @@
                       )
                         return [2, 15];
                       if (1 != r && 3 != r) return [2, 8];
-                      if (
-                        ((m = this.m_mapQuestions.get(t)),
-                        (f = 3 == r) === m.bHidden)
-                      )
-                        return [2, 1];
-                      (m = Object(n.a)(Object(n.a)({}, m), { bHidden: f })),
-                        this.m_mapQuestions.set(t, m),
-                        this.GetQuestionCallbackList(t).Dispatch(m),
-                        (b =
-                          p.c.COMMUNITY_BASE_URL +
-                          "questions/" +
-                          p.b.VANITY_ID +
-                          "/ajaxmoderatequestion/" +
-                          e),
-                        (B = new FormData()).append("sessionid", p.c.SESSIONID),
-                        B.append("gidquestion", t),
-                        B.append("action", f ? "hide" : "show"),
-                        (h = null),
-                        (v.label = 1);
+                      if (this.m_mapQuestions.get(t).eState == r) return [2, 1];
+                      (l =
+                        d.c.COMMUNITY_BASE_URL +
+                        "questions/" +
+                        d.b.VANITY_ID +
+                        "/ajaxmoderatequestion/" +
+                        e),
+                        (m = new FormData()).append("sessionid", d.c.SESSIONID),
+                        m.append("gidquestion", t),
+                        m.append("action", 1 == r ? "show" : "hide"),
+                        (f = null),
+                        (n.label = 1);
                     case 1:
                       return (
-                        v.trys.push([1, 3, , 4]),
+                        n.trys.push([1, 3, , 4]),
                         [
                           4,
-                          c.a.post(b, B, {
+                          h.a.post(l, m, {
                             withCredentials: !0,
                             cancelToken: null == i ? void 0 : i.token,
                           }),
@@ -414,40 +500,40 @@
                       );
                     case 2:
                       return 200 ==
-                        (null == (y = v.sent()) ? void 0 : y.status) &&
+                        (null == (p = n.sent()) ? void 0 : p.status) &&
                         1 ==
-                          (null === (o = y.data) || void 0 === o
+                          (null === (o = p.data) || void 0 === o
                             ? void 0
                             : o.success)
                         ? (!0, this.LoadSession(e, true, i), [2, 1])
-                        : ((h = { response: y }), [3, 4]);
+                        : ((f = { response: p }), [3, 4]);
                     case 3:
-                      return (_ = v.sent()), (h = _), [3, 4];
+                      return (b = n.sent()), (f = b), [3, 4];
                     case 4:
                       return (
-                        (g = Object(d.a)(h)),
+                        (B = Object(y.a)(f)),
                         console.error(
                           "Could not moderate question",
                           e,
                           t,
                           r,
-                          g.strErrorMsg,
-                          g
+                          B.strErrorMsg,
+                          B
                         ),
                         [
                           2,
                           null !==
-                            (l =
+                            (c =
                               null ===
                                 (u =
                                   null ===
-                                    (s = null == h ? void 0 : h.response) ||
+                                    (s = null == f ? void 0 : f.response) ||
                                   void 0 === s
                                     ? void 0
                                     : s.data) || void 0 === u
                                 ? void 0
-                                : u.success) && void 0 !== l
-                            ? l
+                                : u.success) && void 0 !== c
+                            ? c
                             : 2,
                         ]
                       );
@@ -456,38 +542,38 @@
               });
             }),
             (e.prototype.AnswerQuestion = function (e, t, r, i) {
-              var a, o, s, u, l;
+              var a, o, s, u, c;
               return Object(n.b)(this, void 0, void 0, function () {
-                var m, f, b, B, h, y;
+                var l, m, f, p, b, B;
                 return Object(n.e)(this, function (n) {
                   switch (n.label) {
                     case 0:
                       if (
-                        !p.i.logged_in ||
-                        !p.c.SESSIONID ||
+                        !d.i.logged_in ||
+                        !d.c.SESSIONID ||
                         !(null === (a = this.m_mapQAndASessions.get(e)) ||
                         void 0 === a
                           ? void 0
-                          : a.bUserCanModerate)
+                          : a.bUserCanAskQuestions)
                       )
                         return [2, 15];
-                      (m =
-                        p.c.COMMUNITY_BASE_URL +
+                      (l =
+                        d.c.COMMUNITY_BASE_URL +
                         "questions/" +
-                        p.b.VANITY_ID +
+                        d.b.VANITY_ID +
                         "/ajaxanswerquestion/" +
                         e),
-                        (f = new FormData()).append("sessionid", p.c.SESSIONID),
-                        f.append("gidquestion", t),
-                        f.append("answer", r),
-                        (b = null),
+                        (m = new FormData()).append("sessionid", d.c.SESSIONID),
+                        m.append("gidquestion", t),
+                        m.append("answer", r),
+                        (f = null),
                         (n.label = 1);
                     case 1:
                       return (
                         n.trys.push([1, 3, , 4]),
                         [
                           4,
-                          c.a.post(m, f, {
+                          h.a.post(l, m, {
                             withCredentials: !0,
                             cancelToken: null == i ? void 0 : i.token,
                           }),
@@ -495,40 +581,40 @@
                       );
                     case 2:
                       return 200 ==
-                        (null == (B = n.sent()) ? void 0 : B.status) &&
+                        (null == (p = n.sent()) ? void 0 : p.status) &&
                         1 ==
-                          (null === (o = B.data) || void 0 === o
+                          (null === (o = p.data) || void 0 === o
                             ? void 0
                             : o.success)
                         ? (!0, this.LoadSession(e, true, i), [2, 1])
-                        : ((b = { response: B }), [3, 4]);
+                        : ((f = { response: p }), [3, 4]);
                     case 3:
-                      return (h = n.sent()), (b = h), [3, 4];
+                      return (b = n.sent()), (f = b), [3, 4];
                     case 4:
                       return (
-                        (y = Object(d.a)(b)),
+                        (B = Object(y.a)(f)),
                         console.error(
                           "Could not upload answer",
                           e,
                           t,
                           r,
-                          y.strErrorMsg,
-                          y
+                          B.strErrorMsg,
+                          B
                         ),
                         [
                           2,
                           null !==
-                            (l =
+                            (c =
                               null ===
                                 (u =
                                   null ===
-                                    (s = null == b ? void 0 : b.response) ||
+                                    (s = null == f ? void 0 : f.response) ||
                                   void 0 === s
                                     ? void 0
                                     : s.data) || void 0 === u
                                 ? void 0
-                                : u.success) && void 0 !== l
-                            ? l
+                                : u.success) && void 0 !== c
+                            ? c
                             : 2,
                         ]
                       );
@@ -537,15 +623,15 @@
               });
             }),
             (e.prototype.VoteOnQuestion = function (e, t, r, i) {
-              var a, o, s, u, l;
+              var a, o, s, u, c;
               return Object(n.b)(this, void 0, void 0, function () {
-                var m, f, b, B, h, y, _, g;
-                return Object(n.e)(this, function (v) {
-                  switch (v.label) {
+                var l, m, f, p, b, B, _, g, v;
+                return Object(n.e)(this, function (w) {
+                  switch (w.label) {
                     case 0:
                       if (
-                        !p.i.logged_in ||
-                        !p.c.SESSIONID ||
+                        !d.i.logged_in ||
+                        !d.c.SESSIONID ||
                         !(null === (a = this.m_mapQAndASessions.get(e)) ||
                         void 0 === a
                           ? void 0
@@ -554,31 +640,32 @@
                         return [2, 15];
                       if (r === this.m_mapQuestions.get(t).bUserUpVoted)
                         return [2, 1];
-                      (m = this.m_mapQuestions.get(t)),
-                        (f = m.nVoteCount + (r ? 1 : -1)),
-                        (m = Object(n.a)(Object(n.a)({}, m), {
+                      (l = this.m_mapQuestions.get(t)),
+                        (m = l.nVoteCount),
+                        (f = m + (r ? 1 : -1)),
+                        (l = Object(n.a)(Object(n.a)({}, l), {
                           nVoteCount: f,
                           bUserUpVoted: r,
                         })),
-                        this.m_mapQuestions.set(t, m),
-                        this.GetQuestionCallbackList(t).Dispatch(m),
-                        (b =
-                          p.c.COMMUNITY_BASE_URL +
+                        this.m_mapQuestions.set(t, l),
+                        this.GetQuestionCallbackList(t).Dispatch(l),
+                        (p =
+                          d.c.COMMUNITY_BASE_URL +
                           "questions/" +
-                          p.b.VANITY_ID +
+                          d.b.VANITY_ID +
                           "/ajaxvoteforquestion/" +
                           e),
-                        (B = new FormData()).append("sessionid", p.c.SESSIONID),
-                        B.append("gidquestion", t),
-                        B.append("up", r ? "1" : "0"),
-                        (h = null),
-                        (v.label = 1);
+                        (b = new FormData()).append("sessionid", d.c.SESSIONID),
+                        b.append("gidquestion", t),
+                        b.append("up", r ? "1" : "0"),
+                        (B = null),
+                        (w.label = 1);
                     case 1:
                       return (
-                        v.trys.push([1, 3, , 4]),
+                        w.trys.push([1, 3, , 4]),
                         [
                           4,
-                          c.a.post(b, B, {
+                          h.a.post(p, b, {
                             withCredentials: !0,
                             cancelToken: null == i ? void 0 : i.token,
                           }),
@@ -586,40 +673,46 @@
                       );
                     case 2:
                       return 200 ==
-                        (null == (y = v.sent()) ? void 0 : y.status) &&
+                        (null == (_ = w.sent()) ? void 0 : _.status) &&
                         1 ==
-                          (null === (o = y.data) || void 0 === o
+                          (null === (o = _.data) || void 0 === o
                             ? void 0
                             : o.success)
-                        ? (!0, this.LoadSession(e, true, i), [2, 1])
-                        : ((h = { response: y }), [3, 4]);
+                        ? [2, 1]
+                        : ((B = { response: _ }), [3, 4]);
                     case 3:
-                      return (_ = v.sent()), (h = _), [3, 4];
+                      return (g = w.sent()), (B = g), [3, 4];
                     case 4:
                       return (
-                        (g = Object(d.a)(h)),
+                        (l = Object(n.a)(Object(n.a)({}, l), {
+                          nVoteCount: m,
+                          bUserUpVoted: !r,
+                        })),
+                        this.m_mapQuestions.set(t, l),
+                        this.GetQuestionCallbackList(t).Dispatch(l),
+                        (v = Object(y.a)(B)),
                         console.error(
                           "Could not upload vote",
                           e,
                           t,
                           r,
-                          g.strErrorMsg,
-                          g
+                          v.strErrorMsg,
+                          v
                         ),
                         [
                           2,
                           null !==
-                            (l =
+                            (c =
                               null ===
                                 (u =
                                   null ===
-                                    (s = null == h ? void 0 : h.response) ||
+                                    (s = null == B ? void 0 : B.response) ||
                                   void 0 === s
                                     ? void 0
                                     : s.data) || void 0 === u
                                 ? void 0
-                                : u.success) && void 0 !== l
-                            ? l
+                                : u.success) && void 0 !== c
+                            ? c
                             : 2,
                         ]
                       );
@@ -630,159 +723,416 @@
             e
           );
         })();
-      var B = r("Mgs7"),
-        h = r("BFsE"),
-        y = r("YLyR"),
-        _ = r("6Y59"),
-        g = r("0OaU"),
-        v = r("5E+2"),
-        S = r("exH9"),
-        w = r("TLQK"),
-        M = r("hII0"),
-        z = r.n(M);
-      function C(e) {
+      function v(e) {
+        var t = this,
+          r = Object(_.a)("useQAndASession"),
+          i = a.a.useCallback(
+            function (i) {
+              return Object(n.b)(t, void 0, void 0, function () {
+                var t, a;
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
+                    case 0:
+                      return (t =
+                        null === (a = g.Get().GetSession(e)) || void 0 === a
+                          ? void 0
+                          : a.bUserCanAskQuestions)
+                        ? [4, g.Get().AskNewQuestion(e, i, r)]
+                        : [3, 2];
+                    case 1:
+                      (t = n.sent()), (n.label = 2);
+                    case 2:
+                      return [2, t];
+                  }
+                });
+              });
+            },
+            [e, r]
+          ),
+          o = a.a.useCallback(
+            function (t, n) {
+              var i;
+              return (
+                (null === (i = g.Get().GetSession(e)) || void 0 === i
+                  ? void 0
+                  : i.bUserCanAskQuestions) &&
+                g.Get().VoteOnQuestion(e, t, n, r)
+              );
+            },
+            [e, r]
+          ),
+          s = a.a.useCallback(
+            function (e) {
+              for (
+                var t,
+                  r = !!e,
+                  n = null == e ? void 0 : e.bUserCanModerate,
+                  a = null == e ? void 0 : e.bUserCanAskQuestions,
+                  s = [],
+                  u = [],
+                  c = [],
+                  l = [],
+                  d = 0,
+                  m =
+                    null !== (t = null == e ? void 0 : e.rgQuestionGIDs) &&
+                    void 0 !== t
+                      ? t
+                      : [];
+                d < m.length;
+                d++
+              ) {
+                var f = m[d],
+                  p = g.Get().GetQuestion(f);
+                switch (null == p ? void 0 : p.eState) {
+                  case 1:
+                    s.push(f);
+                    break;
+                  case 2:
+                    u.push(f);
+                    break;
+                  case 0:
+                    c.push(f);
+                    break;
+                  case 3:
+                    l.push(f);
+                }
+              }
+              return (
+                s.sort(function (e, t) {
+                  return (
+                    g.Get().GetQuestion(t).nVoteCount -
+                    g.Get().GetQuestion(e).nVoteCount
+                  );
+                }),
+                u.sort(function (e, t) {
+                  return (
+                    g.Get().GetQuestion(t).rtAnswerTime -
+                    g.Get().GetQuestion(e).rtAnswerTime
+                  );
+                }),
+                c.sort(function (e, t) {
+                  return (
+                    g.Get().GetQuestion(t).rtPostTime -
+                    g.Get().GetQuestion(e).rtPostTime
+                  );
+                }),
+                l.sort(function (e, t) {
+                  return (
+                    g.Get().GetQuestion(t).rtPostTime -
+                    g.Get().GetQuestion(e).rtPostTime
+                  );
+                }),
+                {
+                  bIsLoaded: r,
+                  bUserCanModerate: n,
+                  bUserCanAskQuestions: a,
+                  fnAskQuestion: i,
+                  fnVoteOnQuestion: o,
+                  rgModeratedQuestionGIDs: s,
+                  rgAnsweredQuestionGIDs: u,
+                  rgNewQuestionGIDs: c,
+                  rgHiddenQuestionGIDs: l,
+                }
+              );
+            },
+            [i, o]
+          ),
+          u = a.a.useState(function () {
+            return s(g.Get().GetSession(e));
+          }),
+          c = u[0],
+          d = u[1],
+          m = a.a.useCallback(
+            function (e) {
+              return d(s(e));
+            },
+            [s]
+          );
+        return (
+          Object(l.d)(g.Get().GetQAndACallbackList(e), m),
+          a.a.useEffect(
+            function () {
+              c.bIsLoaded || g.Get().LoadSession(e);
+            },
+            [c.bIsLoaded, e]
+          ),
+          c
+        );
+      }
+      var w = null;
+      function S(e) {
+        var t,
+          r,
+          n,
+          i = Object(_.a)("useReloadFunction"),
+          o = a.a.useState(!1),
+          s = o[0],
+          u = o[1],
+          c = a.a.useCallback(
+            function () {
+              u(!0);
+              var t = g.Get().LoadSession(e, !1, i);
+              return (
+                t.then(function () {
+                  return u(!1);
+                }),
+                t
+              );
+            },
+            [e, i]
+          ),
+          d =
+            ((t = c),
+            (r = a.a.useRef(null)),
+            (n = a.a.useCallback(function () {
+              r.current && (r.current(), (r.current = null));
+            }, [])),
+            Object(l.d)(f.Get().GetCallbackList(), n),
+            a.a.useEffect(function () {
+              return function () {
+                r.current = null;
+              };
+            }),
+            a.a.useCallback(
+              function () {
+                for (var e = [], n = 0; n < arguments.length; n++)
+                  e[n] = arguments[n];
+                f.Get().BIsUserFidgeting()
+                  ? (r.current = function () {
+                      return t.apply(void 0, e);
+                    })
+                  : ((r.current = null), t.apply(void 0, e));
+              },
+              [t]
+            ));
+        return (
+          a.a.useEffect(
+            function () {
+              if (w) return function () {};
+              return (
+                (w = window.setInterval(d, 1e4)),
+                function () {
+                  return window.clearInterval(w);
+                }
+              );
+            },
+            [d]
+          ),
+          a.a.useMemo(
+            function () {
+              return { fnReload: c, bIsReloading: s };
+            },
+            [c, s]
+          )
+        );
+      }
+      function M(e) {
+        var t = Object(_.a)("useQuestionModeratorActions"),
+          r = a.a.useCallback(
+            function (r, n) {
+              var i;
+              return (
+                (null === (i = g.Get().GetSession(e)) || void 0 === i
+                  ? void 0
+                  : i.bUserCanModerate) && g.Get().AnswerQuestion(e, r, n, t)
+              );
+            },
+            [e, t]
+          ),
+          n = a.a.useCallback(
+            function (r, n) {
+              var i;
+              return (
+                (null === (i = g.Get().GetSession(e)) || void 0 === i
+                  ? void 0
+                  : i.bUserCanModerate) && g.Get().ModerateQuestion(e, r, n, t)
+              );
+            },
+            [e, t]
+          );
+        return a.a.useMemo(
+          function () {
+            return { fnAnswerQuestion: r, fnModerateQuestion: n };
+          },
+          [r, n]
+        );
+      }
+      var C = r("Mgs7"),
+        z = r("BFsE"),
+        R = r("YLyR"),
+        O = r("6Y59"),
+        j = r("0OaU"),
+        F = r("5E+2"),
+        T = r("exH9"),
+        W = r("TLQK"),
+        I = r("CdLH"),
+        A = r("hII0"),
+        U = r.n(A);
+      function E(e) {
         var t = e.gidSession,
           r = e.gidQuestion,
           n = e.bUserCanModerate,
           i = e.bUserCanVote,
-          o = (function (e) {
-            var t = a.a.useState(b.Get().GetQuestion(e)),
+          o = e.fnVoteOnQuestion,
+          s = e.rtNow,
+          u = (function (e) {
+            var t = a.a.useState(g.Get().GetQuestion(e)),
               r = t[0],
               n = t[1];
-            Object(f.d)(b.Get().GetQuestionCallbackList(e), n);
+            Object(l.d)(g.Get().GetQuestionCallbackList(e), n);
             var i = a.a.useState(!!r),
               o = i[0];
             return i[1], [r, !!r || o];
           })(r),
-          s = o[0],
-          u =
-            (o[1],
-            (function (e, t) {
-              var r,
-                n = a.a.useCallback(
-                  function (r) {
-                    return b.Get().VoteOnQuestion(e, t, r);
-                  },
-                  [e, t]
-                );
-              return (
-                (null === (r = b.Get().GetSession(e)) || void 0 === r
-                  ? void 0
-                  : r.bUserCanAskQuestions) && n
-              );
-            })(t, r)),
-          c = i
+          c = u[0];
+        u[1];
+        if (!c) return null;
+        var d = s - c.rtPostTime,
+          m = d < I.f.PerDay ? Object(W.q)(d) : Object(W.p)(c.rtPostTime),
+          f = i
             ? function () {
-                return u(!s.bUserUpVoted);
+                return o(r, !c.bUserUpVoted);
               }
             : null,
-          l = i
-            ? s.bUserUpVoted
-              ? z.a.Vote_Positive
-              : z.a.Vote_Ready
-            : z.a.Vote_CannotVote,
-          d = Date.now() / 1e3 - s.rtPostTime,
-          m = d < 86400 ? Object(w.q)(d, !1, !0) : Object(w.p)(s.rtPostTime);
-        return !s || ((null == s ? void 0 : s.bHidden) && !n)
-          ? null
-          : a.a.createElement(
+          p = i
+            ? c.bUserUpVoted
+              ? U.a.Vote_Positive
+              : U.a.Vote_Ready
+            : U.a.Vote_CannotVote,
+          b = Object(T.a)(
+            U.a.Question,
+            3 == c.eState && U.a.Hidden,
+            1 == c.eState && U.a.Moderated,
+            0 == c.eState && U.a.Unmoderated,
+            2 == c.eState && U.a.Answered
+          );
+        return a.a.createElement(
+          "div",
+          { className: b },
+          a.a.createElement(
+            "div",
+            { className: U.a.QuestionCtn },
+            a.a.createElement(D, { accountID: c.posterAccountID }),
+            a.a.createElement(
               "div",
-              { className: Object(S.a)(z.a.Question, s.bHidden && z.a.Hidden) },
+              { className: U.a.QuestionText },
               a.a.createElement(
                 "div",
-                { className: z.a.QuestionCtn },
-                a.a.createElement(R, { accountID: s.posterAccountID }),
+                { className: U.a.QuestionAndVotes },
                 a.a.createElement(
                   "div",
-                  { className: z.a.QuestionText },
+                  { className: U.a.QuestionTitle },
+                  c.strQuestionText
+                ),
+                a.a.createElement(
+                  F.a,
+                  {
+                    toolTipContent:
+                      i &&
+                      (c.bUserUpVoted
+                        ? Object(W.f)("#QAndA_VoteRemoveTooltip")
+                        : Object(W.f)("#QAndA_VoteTooltip")),
+                  },
                   a.a.createElement(
                     "div",
-                    { className: z.a.QuestionTitle },
-                    s.strQuestionText
-                  ),
-                  a.a.createElement(
-                    "div",
-                    { className: z.a.QuestionStats },
+                    { className: Object(T.a)(p, U.a.Votes), onClick: f },
+                    a.a.createElement(O.eb, { className: U.a.RateIcon }),
                     a.a.createElement(
                       "div",
-                      { className: z.a.PostTime },
-                      a.a.createElement(
-                        y.g,
-                        {
-                          rtFullDate: s.rtPostTime,
-                          className: z.a.PostTime,
-                          stylesmodule: z.a,
-                        },
-                        m
-                      )
-                    ),
-                    a.a.createElement(
-                      v.a,
-                      {
-                        toolTipContent: s.bUserUpVoted
-                          ? Object(w.f)("#QAndA_VoteRemoveTooltip")
-                          : Object(w.f)("#QAndA_VoteTooltip"),
-                      },
-                      a.a.createElement(
-                        "div",
-                        { className: Object(S.a)(l, z.a.Votes), onClick: c },
-                        a.a.createElement(_.eb, { className: z.a.RateIcon }),
-                        a.a.createElement(
-                          "div",
-                          { className: z.a.VoteCount },
-                          Number(s.nVoteCount).toLocaleString()
-                        )
-                      )
+                      { className: U.a.VoteCount },
+                      Number(c.nVoteCount).toLocaleString()
                     )
                   )
                 )
               ),
-              2 == s.eState &&
-                !!s.rtAnswerTime &&
+              a.a.createElement(
+                "div",
+                { className: U.a.QuestionStats },
                 a.a.createElement(
                   "div",
-                  { className: z.a.Answer },
+                  { className: U.a.PostTime },
                   a.a.createElement(
-                    "div",
-                    { className: z.a.AnswerTitle },
-                    Object(w.f)("#QAndA_ModeratorAnswerTitle")
-                  ),
-                  a.a.createElement(
-                    "div",
-                    { className: z.a.AnswerText },
-                    " ",
-                    s.strAnswerText,
-                    " "
-                  ),
-                  a.a.createElement(
-                    "div",
-                    { className: z.a.QuestionStats },
-                    a.a.createElement(
-                      y.g,
-                      {
-                        rtFullDate: s.rtAnswerTime,
-                        className: z.a.PostTime,
-                        stylesmodule: z.a,
-                      },
-                      m
-                    )
+                    R.g,
+                    {
+                      rtFullDate: c.rtPostTime,
+                      className: U.a.PostTime,
+                      stylesmodule: U.a,
+                    },
+                    m
                   )
+                )
+              )
+            )
+          ),
+          c.rtAnswerTime && a.a.createElement(N, { question: c, rtNow: s }),
+          n &&
+            a.a.createElement(G, {
+              gidSession: t,
+              gidQuestion: r,
+              eState: null == c ? void 0 : c.eState,
+            })
+        );
+      }
+      function N(e) {
+        var t = e.question,
+          r = e.rtNow,
+          n = t.rtAnswerTime && r - t.rtAnswerTime,
+          i =
+            t.rtAnswerTime &&
+            (n < I.f.PerDay ? Object(W.q)(n) : Object(W.p)(t.rtAnswerTime));
+        return t.strAnswerText
+          ? a.a.createElement(
+              "div",
+              { className: U.a.Answer },
+              a.a.createElement(
+                "div",
+                { className: U.a.AnswerTitle },
+                a.a.createElement(
+                  "div",
+                  { className: U.a.AnswerCheck },
+                  a.a.createElement(O.p, { color: "#67c1f5" })
                 ),
-              n &&
-                a.a.createElement(F, {
-                  gidSession: t,
-                  gidQuestion: r,
-                  bHidden: s.bHidden,
-                })
+                Object(W.f)("#QAndA_ModeratorAnswerTitle")
+              ),
+              a.a.createElement(
+                "div",
+                { className: U.a.AnswerText },
+                " ",
+                t.strAnswerText,
+                " "
+              ),
+              a.a.createElement(
+                "div",
+                { className: U.a.QuestionStats },
+                a.a.createElement(
+                  R.g,
+                  {
+                    rtFullDate: t.rtAnswerTime,
+                    className: U.a.PostTime,
+                    stylesmodule: U.a,
+                  },
+                  i
+                )
+              )
+            )
+          : a.a.createElement(
+              "div",
+              { className: U.a.AnswerTitle },
+              a.a.createElement(
+                "div",
+                { className: U.a.AnswerCheck },
+                a.a.createElement(O.p, { color: "#67c1f5" })
+              ),
+              Object(W.f)("#QAndA_AlreadyAnsweredTitle")
             );
       }
-      function R(e) {
+      function D(e) {
         var t = o.a.InitFromAccountID(e.accountID),
-          r = Object(s.b)(t),
+          r = Object(b.b)(t),
           n = (r[0], r[1]);
         return a.a.createElement(
           "div",
-          { className: z.a.UserAvatar },
+          { className: U.a.UserAvatar },
           !!n &&
             a.a.createElement("img", {
               src: n.avatar_url,
@@ -790,199 +1140,312 @@
             })
         );
       }
-      function F(e) {
+      function G(e) {
         var t = e.gidSession,
           r = e.gidQuestion,
-          i = e.bHidden,
-          o = (function (e, t) {
-            var r,
-              i = this,
-              o = Object(l.a)("useQAndASession"),
-              s = a.a.useCallback(
-                function (r) {
-                  return Object(n.b)(i, void 0, void 0, function () {
-                    return Object(n.e)(this, function (n) {
-                      switch (n.label) {
-                        case 0:
-                          return [4, b.Get().AnswerQuestion(e, t, r, o)];
-                        case 1:
-                          return [2, n.sent()];
-                      }
-                    });
-                  });
-                },
-                [e, t, o]
-              ),
-              u = a.a.useCallback(
-                function (r) {
-                  return Object(n.b)(i, void 0, void 0, function () {
-                    return Object(n.e)(this, function (n) {
-                      switch (n.label) {
-                        case 0:
-                          return [4, b.Get().ModerateQuestion(e, t, r, o)];
-                        case 1:
-                          return [2, n.sent()];
-                      }
-                    });
-                  });
-                },
-                [e, t, o]
-              );
-            return (
-              null === (r = b.Get().GetSession(e)) || void 0 === r
-                ? void 0
-                : r.bUserCanModerate
-            )
-              ? [s, u]
-              : [null, null];
-          })(t, r),
-          s = o[0],
-          u = o[1];
+          n = e.eState,
+          i = M(t),
+          o = i.fnAnswerQuestion,
+          s = i.fnModerateQuestion,
+          u = 0 == n || 3 == n,
+          c = 3 != n,
+          l = 1 == n;
         return a.a.createElement(
           "div",
-          { className: z.a.ModeratorSection },
+          { className: U.a.ModeratorSection },
+          Object(W.f)("#QAndA_ModeratorLabel"),
           a.a.createElement(
             "div",
-            { className: z.a.ToolRow },
-            a.a.createElement(T, {
-              strPrompt: Object(w.f)("#QAndA_AnswerPrompt"),
-              fnSubmit: s,
+            { className: U.a.ToolRow },
+            a.a.createElement(q, {
+              strPrompt: Object(W.f)("#QAndA_AnswerPrompt"),
+              fnSubmit: function (e) {
+                return o(r, e);
+              },
             })
           ),
           a.a.createElement(
             "div",
-            { className: z.a.ToolRow },
+            { className: U.a.ToolRow },
+            Object(W.f)("#QAndA_ModeratorOtherOptionsLabel"),
             a.a.createElement(
-              B.d,
+              F.a,
               {
-                onClick: function () {
-                  return u(i ? 1 : 3);
-                },
-                className: z.a.InputButton,
+                toolTipContent: Object(W.f)(
+                  "#QAndA_ModerateApproveButton_ttip"
+                ),
               },
-              Object(w.f)(
-                i ? "#QAndA_ModerateApproveButton" : "#QAndA_ModerateHideButton"
+              a.a.createElement(
+                C.d,
+                {
+                  onClick: function () {
+                    return s(r, 1);
+                  },
+                  className: U.a.InputButton,
+                  disabled: !u,
+                },
+                Object(W.f)("#QAndA_ModerateApproveButton")
+              )
+            ),
+            a.a.createElement(
+              F.a,
+              { toolTipContent: Object(W.f)("#QAndA_ModerateHideButton_ttip") },
+              a.a.createElement(
+                C.d,
+                {
+                  onClick: function () {
+                    return s(r, 3);
+                  },
+                  className: U.a.InputButton,
+                  disabled: !c,
+                },
+                Object(W.f)("#QAndA_ModerateHideButton")
+              )
+            ),
+            a.a.createElement(
+              F.a,
+              { toolTipContent: Object(W.f)("#QAndA_QuickAnswerButton_ttip") },
+              a.a.createElement(
+                C.d,
+                {
+                  onClick: function () {
+                    return o(r, "");
+                  },
+                  className: U.a.InputButton,
+                  disabled: !l,
+                },
+                Object(W.f)("#QAndA_QuickAnswerButton")
               )
             )
           )
         );
       }
-      function O(e) {
-        var t = e.gidSession,
-          r = (function (e) {
-            var t = this,
-              r = a.a.useState(b.Get().GetSession(e)),
-              i = r[0],
-              o = r[1];
-            Object(f.d)(b.Get().GetQAndACallbackList(e), o);
-            var s = a.a.useState(!!i),
-              u = s[0],
-              c = s[1],
-              d = Object(l.a)("useQAndASession"),
-              m = a.a.useCallback(
-                function () {
-                  c(!1),
-                    b
-                      .Get()
-                      .LoadSession(e, !1, d)
-                      .finally(function () {
-                        return c(!0);
-                      });
-                },
-                [e, d]
-              ),
-              p = a.a.useCallback(
-                function (r) {
-                  return Object(n.b)(t, void 0, void 0, function () {
-                    return Object(n.e)(this, function (t) {
-                      switch (t.label) {
-                        case 0:
-                          return [4, b.Get().AskNewQuestion(e, r, d)];
-                        case 1:
-                          return [2, t.sent()];
-                      }
-                    });
-                  });
-                },
-                [e, d]
-              );
-            return (
-              a.a.useEffect(
-                function () {
-                  m();
-                },
-                [m]
-              ),
-              [i, m, p, u]
-            );
-          })(t),
-          i = r[0],
-          o = r[1],
-          s = r[2],
-          u = r[3];
+      function Q(e) {
+        var t = e.gidSession;
+        p();
+        var r = v(t).bUserCanModerate;
         return a.a.createElement(
           "div",
-          { className: z.a.QAMainCtn },
+          { className: U.a.QAFullPageView },
+          a.a.createElement(P, { gidSession: t, bHalfOfFullPage: r }),
+          r && a.a.createElement(x, { gidSession: t })
+        );
+      }
+      function x(e) {
+        var t = e.gidSession,
+          r = v(t),
+          n = r.bUserCanModerate,
+          i = r.rgNewQuestionGIDs,
+          o = r.rgHiddenQuestionGIDs,
+          u = Object(s.b)(10);
+        return n
+          ? a.a.createElement(
+              "div",
+              {
+                className: Object(T.a)(
+                  U.a.QAModeratorColumn,
+                  U.a.QASplitColumns
+                ),
+              },
+              a.a.createElement(
+                "div",
+                { className: U.a.ModeratorInstructions },
+                Object(W.f)("#QAndA_ModeratorViewHeader")
+              ),
+              a.a.createElement(
+                "div",
+                { className: U.a.QuestionList },
+                i.map(function (e) {
+                  return a.a.createElement(E, {
+                    key: e,
+                    gidSession: t,
+                    gidQuestion: e,
+                    bUserCanModerate: n,
+                    bUserCanVote: !1,
+                    rtNow: u,
+                  });
+                })
+              ),
+              a.a.createElement(
+                "div",
+                { className: U.a.AnsweredSectionHeader },
+                Object(W.f)("#QAndA_HiddenQuestionsHeader")
+              ),
+              a.a.createElement(
+                "div",
+                { className: U.a.QuestionList },
+                o.map(function (e) {
+                  return a.a.createElement(E, {
+                    key: e,
+                    gidSession: t,
+                    gidQuestion: e,
+                    bUserCanModerate: n,
+                    bUserCanVote: !1,
+                    rtNow: u,
+                  });
+                })
+              )
+            )
+          : null;
+      }
+      function P(e) {
+        var t = this,
+          r = e.gidSession,
+          i = e.bHalfOfFullPage;
+        p();
+        var o = v(r),
+          u = o.bIsLoaded,
+          c = o.bUserCanAskQuestions,
+          l = o.bUserCanModerate,
+          d = o.fnAskQuestion,
+          m = o.fnVoteOnQuestion,
+          f = o.rgModeratedQuestionGIDs,
+          b = o.rgAnsweredQuestionGIDs,
+          B = o.rgNewQuestionGIDs,
+          h = S(r),
+          _ = h.fnReload,
+          y = h.bIsReloading,
+          g = Object(s.b)(10),
+          w = l && i,
+          z = M(r).fnModerateQuestion;
+        return a.a.createElement(
+          "div",
+          { className: Object(T.a)(U.a.QAMainCtn, i && U.a.QASplitColumns) },
           a.a.createElement(
             "div",
-            { className: z.a.QAHeader },
+            { className: Object(T.a)(U.a.QAHeader, w && U.a.ModerationHeader) },
             a.a.createElement(
-              B.d,
+              C.d,
               {
-                onClick: o,
+                onClick: _,
                 disabled: !u,
-                className: Object(S.a)(z.a.InputButton, z.a.Reload),
+                className: Object(T.a)(
+                  U.a.InputButton,
+                  U.a.Reload,
+                  y && U.a.Reloading
+                ),
               },
-              a.a.createElement(_.S, null)
+              a.a.createElement(
+                "div",
+                { className: U.a.ReloadIcon },
+                a.a.createElement(O.S, null)
+              )
             ),
-            (null == i ? void 0 : i.bUserCanAskQuestions)
-              ? a.a.createElement(j, { fnAskQuestion: s })
-              : u && a.a.createElement(W, null)
+            w
+              ? a.a.createElement(
+                  a.a.Fragment,
+                  null,
+                  Object(W.f)("#QAndA_ModeratorLabelHeader"),
+                  a.a.createElement(
+                    F.a,
+                    {
+                      toolTipContent: Object(W.f)(
+                        "#QAndA_ModerateHideAllButton_ttip"
+                      ),
+                    },
+                    a.a.createElement(
+                      C.d,
+                      {
+                        onClick: function () {
+                          return Object(n.b)(t, void 0, void 0, function () {
+                            var e, t, r, i, a, o;
+                            return Object(n.e)(this, function (n) {
+                              switch (n.label) {
+                                case 0:
+                                  (e = 0), (t = [B, f, b]), (n.label = 1);
+                                case 1:
+                                  if (!(e < t.length)) return [3, 6];
+                                  (r = t[e]), (i = 0), (a = r), (n.label = 2);
+                                case 2:
+                                  return i < a.length
+                                    ? ((o = a[i]), [4, z(o, 3)])
+                                    : [3, 5];
+                                case 3:
+                                  n.sent(), (n.label = 4);
+                                case 4:
+                                  return i++, [3, 2];
+                                case 5:
+                                  return e++, [3, 1];
+                                case 6:
+                                  return [2];
+                              }
+                            });
+                          });
+                        },
+                        className: U.a.InputButton,
+                      },
+                      Object(W.f)("#QAndA_ModerateHideAllButton")
+                    )
+                  )
+                )
+              : c
+              ? a.a.createElement(L, { fnAskQuestion: d })
+              : u && a.a.createElement(k, null)
           ),
           a.a.createElement(
             "div",
-            { className: z.a.QuestionsCtn },
+            { className: U.a.QuestionsCtn },
             a.a.createElement(
               "div",
-              { className: z.a.InsetShadowTopCtn },
-              a.a.createElement("div", { className: z.a.InsetShadowTop })
+              { className: U.a.InsetShadowTopCtn },
+              a.a.createElement("div", { className: U.a.InsetShadowTop })
             ),
             a.a.createElement(
               "div",
-              { className: z.a.QuestionList },
+              { className: U.a.QuestionList },
               u
-                ? null == i
-                  ? void 0
-                  : i.rgQuestionGIDs.map(function (e) {
-                      return a.a.createElement(C, {
-                        key: e,
-                        gidSession: t,
-                        gidQuestion: e,
-                        bUserCanModerate: i.bUserCanModerate,
-                        bUserCanVote: i.bUserCanAskQuestions,
-                      });
-                    })
-                : a.a.createElement(g.a, { position: "center" })
+                ? f.map(function (e) {
+                    return a.a.createElement(E, {
+                      key: e,
+                      gidSession: r,
+                      gidQuestion: e,
+                      bUserCanModerate: w,
+                      bUserCanVote: c,
+                      fnVoteOnQuestion: m,
+                      rtNow: g,
+                    });
+                  })
+                : a.a.createElement(j.a, { position: "center" })
+            ),
+            a.a.createElement(
+              "div",
+              { className: U.a.AnsweredSectionHeader },
+              Object(W.f)("#QAndA_AnsweredQuestionsHeader")
+            ),
+            a.a.createElement(
+              "div",
+              { className: U.a.QuestionList },
+              b.map(function (e) {
+                return a.a.createElement(E, {
+                  key: e,
+                  gidSession: r,
+                  gidQuestion: e,
+                  bUserCanModerate: w,
+                  bUserCanVote: c,
+                  fnVoteOnQuestion: m,
+                  rtNow: g,
+                });
+              })
             )
           )
         );
       }
-      function j(e) {
+      function L(e) {
         return a.a.createElement(
           a.a.Fragment,
           null,
           a.a.createElement(
             "div",
-            { className: z.a.Description },
-            Object(w.f)("#QAndA_HeaderDescription")
+            { className: U.a.Description },
+            Object(W.f)("#QAndA_HeaderDescription")
           ),
-          a.a.createElement(T, {
-            strPrompt: Object(w.f)("#QAndA_QuestionPrompt"),
+          a.a.createElement(q, {
+            strPrompt: Object(W.f)("#QAndA_QuestionPrompt"),
             fnSubmit: e.fnAskQuestion,
           })
         );
       }
-      function T(e) {
+      function q(e) {
         var t = this,
           r = e.strPrompt,
           i = e.fnSubmit,
@@ -997,8 +1460,8 @@
           null,
           a.a.createElement(
             "div",
-            { className: z.a.InputCtn },
-            a.a.createElement(B.l, {
+            { className: U.a.InputCtn },
+            a.a.createElement(C.l, {
               type: "text",
               placeholder: r,
               maxLength: 512,
@@ -1009,15 +1472,15 @@
             }),
             a.a.createElement(
               "div",
-              { className: z.a.ButtonCtn },
+              { className: U.a.ButtonCtn },
               l &&
                 a.a.createElement(
                   "div",
-                  { className: z.a.SaveSpinner },
-                  a.a.createElement(g.a, { size: "small", position: "center" })
+                  { className: U.a.SaveSpinner },
+                  a.a.createElement(j.a, { size: "small", position: "center" })
                 ),
               a.a.createElement(
-                B.d,
+                C.d,
                 {
                   onClick: function () {
                     return Object(n.b)(t, void 0, void 0, function () {
@@ -1032,31 +1495,31 @@
                     });
                   },
                   disabled: l || !s,
-                  className: z.a.InputButton,
+                  className: U.a.InputButton,
                 },
-                Object(w.f)("#QAndA_SubmitCommentButton")
+                Object(W.f)("#QAndA_SubmitCommentButton")
               )
             )
           )
         );
       }
-      function W(e) {
+      function k(e) {
         return a.a.createElement(
           "div",
-          { className: z.a.Description },
+          { className: U.a.Description },
           a.a.createElement(
             "div",
-            { className: z.a.LogInPrompt },
-            Object(w.f)("#QAndA_LogInPrompt")
+            { className: U.a.LogInPrompt },
+            Object(W.f)("#QAndA_LogInPrompt")
           ),
-          !p.i.logged_in &&
+          !d.i.logged_in &&
             a.a.createElement(
-              B.d,
+              C.d,
               {
-                onClick: h.a,
-                className: Object(S.a)(z.a.SignInButton, z.a.InputButton),
+                onClick: z.a,
+                className: Object(T.a)(U.a.SignInButton, U.a.InputButton),
               },
-              Object(w.f)("#Login_SignIn")
+              Object(W.f)("#Login_SignIn")
             )
         );
       }
@@ -1125,7 +1588,7 @@
         b = r("XxJJ"),
         B = r("OS6B"),
         h = r("lkRc"),
-        y = (function () {
+        _ = (function () {
           function e(e, t) {
             (this.m_summary = e),
               (this.m_mapStoredDrafts = t),
@@ -1418,17 +1881,17 @@
             e
           );
         })(),
-        _ = r("WBba"),
+        y = r("WBba"),
         g = r("hRO2"),
         v = r("OS8t"),
-        S = g.Message,
-        w = (function (e) {
+        w = g.Message,
+        S = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq_id || v.a(t.M()),
-              S.initialize(n, r, 0, -1, [6], null),
+              w.initialize(n, r, 0, -1, [6], null),
               n
             );
           }
@@ -1514,14 +1977,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         M = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.language || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -1591,14 +2054,14 @@
             }),
             t
           );
-        })(S),
-        z = (function (e) {
+        })(w),
+        C = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq_id || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -1684,14 +2147,14 @@
             }),
             t
           );
-        })(S),
-        C = (function (e) {
+        })(w),
+        z = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -1761,14 +2224,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         R = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq_id || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -1828,14 +2291,14 @@
             }),
             t
           );
-        })(S),
-        F = (function (e) {
+        })(w),
+        O = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -1900,12 +2363,12 @@
             }),
             t
           );
-        })(S),
-        O = (function (e) {
+        })(w),
+        j = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return S.initialize(r, t, 0, -1, void 0, null), r;
+            return w.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -1942,14 +2405,14 @@
             }),
             t
           );
-        })(S),
-        j = (function (e) {
+        })(w),
+        F = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2019,12 +2482,12 @@
             }),
             t
           );
-        })(S),
+        })(w),
         T = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return S.initialize(r, t, 0, -1, void 0, null), r;
+            return w.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -2061,14 +2524,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         W = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2138,12 +2601,12 @@
             }),
             t
           );
-        })(S),
+        })(w),
         I = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return S.initialize(r, t, 0, -1, void 0, null), r;
+            return w.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -2180,14 +2643,14 @@
             }),
             t
           );
-        })(S),
-        U = (function (e) {
+        })(w),
+        A = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2262,12 +2725,12 @@
             }),
             t
           );
-        })(S),
-        A = (function (e) {
+        })(w),
+        U = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return S.initialize(r, t, 0, -1, void 0, null), r;
+            return w.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -2304,14 +2767,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         E = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2387,14 +2850,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         N = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.last_update_timestamp || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2454,14 +2917,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         D = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, [3], null),
+              w.initialize(n, r, 0, -1, [3], null),
               n
             );
           }
@@ -2533,14 +2996,14 @@
             }),
             t
           );
-        })(S),
-        x = (function (e) {
+        })(w),
+        G = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.last_publish_timestamp || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2600,14 +3063,14 @@
             }),
             t
           );
-        })(S),
-        G = (function (e) {
+        })(w),
+        Q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2616,7 +3079,7 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: z } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: C } } }),
                 t.sm_m
               );
             }),
@@ -2658,14 +3121,14 @@
             }),
             t
           );
-        })(S),
-        P = (function (e) {
+        })(w),
+        x = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2674,7 +3137,7 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: z } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: C } } }),
                 t.sm_m
               );
             }),
@@ -2716,14 +3179,14 @@
             }),
             t
           );
-        })(S),
-        q = (function (e) {
+        })(w),
+        P = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2798,14 +3261,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         L = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2814,7 +3277,7 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: z } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: C } } }),
                 t.sm_m
               );
             }),
@@ -2856,14 +3319,14 @@
             }),
             t
           );
-        })(S),
-        Q = (function (e) {
+        })(w),
+        q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2928,14 +3391,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         k = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.summary || v.a(t.M()),
-              S.initialize(n, r, 0, -1, [2], null),
+              w.initialize(n, r, 0, -1, [2], null),
               n
             );
           }
@@ -2947,8 +3410,8 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      summary: { n: 1, c: w },
-                      draft: { n: 2, c: z, r: !0, q: !0 },
+                      summary: { n: 1, c: S },
+                      draft: { n: 2, c: C, r: !0, q: !0 },
                     },
                   }),
                 t.sm_m
@@ -2992,14 +3455,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         V = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq || v.a(t.M()),
-              S.initialize(n, r, 0, -1, [1], null),
+              w.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -3010,7 +3473,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { faq: { n: 1, c: w, r: !0, q: !0 } },
+                    fields: { faq: { n: 1, c: S, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -3053,14 +3516,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         H = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faqs || v.a(t.M()),
-              S.initialize(n, r, 0, -1, [1], null),
+              w.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -3071,7 +3534,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { faqs: { n: 1, c: z, r: !0, q: !0 } },
+                    fields: { faqs: { n: 1, c: C, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -3114,12 +3577,12 @@
             }),
             t
           );
-        })(S),
+        })(w),
         K = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return S.initialize(r, t, 0, -1, void 0, null), r;
+            return w.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -3156,14 +3619,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         J = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faqs || v.a(t.M()),
-              S.initialize(n, r, 0, -1, [1], null),
+              w.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -3229,14 +3692,14 @@
             }),
             t
           );
-        })(S),
+        })(w),
         Y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.articleid || v.a(t.M()),
-              S.initialize(n, r, 0, -1, void 0, null),
+              w.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3312,13 +3775,13 @@
             }),
             t
           );
-        })(S);
+        })(w);
       !(function (e) {
         (e.Create = function (e, t) {
           return e.SendMsg("ClanFAQS.Create#1", t, R, { ePrivilege: 1 });
         }),
           (e.Delete = function (e, t) {
-            return e.SendMsg("ClanFAQS.Delete#1", t, O, { ePrivilege: 1 });
+            return e.SendMsg("ClanFAQS.Delete#1", t, j, { ePrivilege: 1 });
           }),
           (e.UpdateInternalName = function (e, t) {
             return e.SendMsg("ClanFAQS.UpdateInternalName#1", t, T, {
@@ -3331,7 +3794,7 @@
             });
           }),
           (e.SetVisibility = function (e, t) {
-            return e.SendMsg("ClanFAQS.SetVisibility#1", t, A, {
+            return e.SendMsg("ClanFAQS.SetVisibility#1", t, U, {
               ePrivilege: 1,
             });
           }),
@@ -3339,17 +3802,17 @@
             return e.SendMsg("ClanFAQS.UpdateDraft#1", t, N, { ePrivilege: 1 });
           }),
           (e.PublishDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.PublishDraft#1", t, x, {
+            return e.SendMsg("ClanFAQS.PublishDraft#1", t, G, {
               ePrivilege: 1,
             });
           }),
           (e.PreviewDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.PreviewDraft#1", t, G, {
+            return e.SendMsg("ClanFAQS.PreviewDraft#1", t, Q, {
               ePrivilege: 1,
             });
           }),
           (e.GetFAQ = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetFAQ#1", t, P, {
+            return e.SendMsg("ClanFAQS.GetFAQ#1", t, x, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
@@ -3412,7 +3875,7 @@
             (e.prototype.SetUpWebAPIInterface = function () {
               var e = Object(h.g)("faqstore", "application_config"),
                 t = null == e ? void 0 : e.webapi_token;
-              this.m_steamInterface = new _.a(h.c.WEBAPI_BASE_URL, t);
+              this.m_steamInterface = new y.a(h.c.WEBAPI_BASE_URL, t);
             }),
             (e.prototype.ReadInitialPayload = function () {
               var e = Object(h.g)("faqstore", "application_config");
@@ -3445,7 +3908,7 @@
                       }
                       this.m_mapFAQDrafts.set(
                         t,
-                        new y(this.m_mapFAQSummaries.get(t), i)
+                        new _(this.m_mapFAQSummaries.get(t), i)
                       );
                     }
                   }
@@ -3474,7 +3937,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (t = f.b.Init(C)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (t = f.b.Init(z)).Body().set_steamid(h.b.CLANSTEAMID),
                         t.Body().set_internal_name(e),
                         (r = 2),
                         (a = void 0),
@@ -3628,7 +4091,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (a = f.b.Init(q)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (a = f.b.Init(P)).Body().set_steamid(h.b.CLANSTEAMID),
                         a.Body().set_faq_id(e),
                         a.Body().set_version(t),
                         a.Body().set_language(r),
@@ -3678,7 +4141,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (t = f.b.Init(F)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (t = f.b.Init(O)).Body().set_steamid(h.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (r = 2),
                         (i.label = 1);
@@ -3751,7 +4214,7 @@
                     case 0:
                       if (this.m_mapFAQDrafts.has(e))
                         return [2, this.m_mapFAQDrafts.get(e)];
-                      (t = f.b.Init(Q)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (t = f.b.Init(q)).Body().set_steamid(h.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (r = 2),
                         (i.label = 1);
@@ -3784,7 +4247,7 @@
                               .forEach(function (e) {
                                 return s.set(e.language(), e.toObject());
                               }),
-                            (u = new y(this.m_mapFAQSummaries.get(e), s)),
+                            (u = new _(this.m_mapFAQSummaries.get(e), s)),
                             this.m_mapFAQDrafts.set(e, u),
                             [2, u])
                       );
@@ -3811,7 +4274,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (a = f.b.Init(U)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (a = f.b.Init(A)).Body().set_steamid(h.b.CLANSTEAMID),
                         a.Body().set_faq_id(e),
                         a.Body().set_visible_in_global_realm(t),
                         a.Body().set_visible_in_china_realm(r),
@@ -3947,7 +4410,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (r = f.b.Init(j)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (r = f.b.Init(F)).Body().set_steamid(h.b.CLANSTEAMID),
                         r.Body().set_faq_id(e),
                         r.Body().set_internal_name(t),
                         (a = 2),
@@ -4211,6 +4674,7 @@
         ConferenceContentsCtn: "landing_ConferenceContentsCtn_1HPPR",
         ConferenceHeaderCtn: "landing_ConferenceHeaderCtn_1AbLq",
         LogoImage: "landing_LogoImage_3i2i5",
+        LogoImageMobile: "landing_LogoImageMobile_3iVf9",
         ConferenceDateRange: "landing_ConferenceDateRange_2FSEt",
       };
     },
@@ -4223,31 +4687,6 @@
         Warning: "faqbbcode_Warning_3Hvtr",
         FAQImage: "faqbbcode_FAQImage_3Eebt",
       };
-    },
-    X2UP: function (e, t, r) {
-      "use strict";
-      r.d(t, "a", function () {
-        return s;
-      });
-      var n = r("vDqi"),
-        i = r.n(n),
-        a = r("q1tI"),
-        o = r.n(a);
-      function s(e) {
-        var t = o.a.useRef(i.a.CancelToken.source());
-        return (
-          o.a.useEffect(
-            function () {
-              var r = t.current;
-              return function () {
-                return r.cancel(e ? e + ": unmounting" : "unmounting");
-              };
-            },
-            [e]
-          ),
-          t.current
-        );
-      }
     },
     eN6m: function (e, t, r) {
       "use strict";
@@ -4269,14 +4708,14 @@
         b = r("kLLr"),
         B = r("hRO2"),
         h = r("OS8t"),
-        y = B.Message;
-      var _ = (function (e) {
+        _ = B.Message;
+      var y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4356,12 +4795,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         g = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -4398,14 +4837,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         v = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.upload_token || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4485,14 +4924,14 @@
             }),
             t
           );
-        })(y),
-        S = (function (e) {
+        })(_),
+        w = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4578,14 +5017,14 @@
             }),
             t
           );
-        })(y),
-        w = (function (e) {
+        })(_),
+        S = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.gameid || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4698,14 +5137,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         M = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.thumbnail_url || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4776,14 +5215,14 @@
             }),
             t
           );
-        })(y),
-        z = (function (e) {
+        })(_),
+        C = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.response || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4918,14 +5357,14 @@
             }),
             t
           );
-        })(y);
-      var C = (function (e) {
+        })(_);
+      var z = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.success || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4981,12 +5420,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         R = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -5023,14 +5462,14 @@
             }),
             t
           );
-        })(y),
-        F = (function (e) {
+        })(_),
+        O = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5091,16 +5530,16 @@
             }),
             t
           );
-        })(y);
-      var O,
-        j,
+        })(_);
+      var j,
+        F,
         T = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5160,14 +5599,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         W = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5242,14 +5681,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         I = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5309,14 +5748,14 @@
             }),
             t
           );
-        })(y),
-        U = (function (e) {
+        })(_),
+        A = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5381,14 +5820,14 @@
             }),
             t
           );
-        })(y),
-        A = (function (e) {
+        })(_),
+        U = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5458,14 +5897,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         E = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.thumbnail_upload_token || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5545,14 +5984,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         N = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcaster_steamid || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5612,14 +6051,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         D = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, [4], null),
+              _.initialize(n, r, 0, -1, [4], null),
               n
             );
           }
@@ -5691,14 +6130,14 @@
             }),
             t
           );
-        })(y),
-        x = (function (e) {
+        })(_),
+        G = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5779,14 +6218,14 @@
             }),
             t
           );
-        })(y),
-        G = (function (e) {
+        })(_),
+        Q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.persona_name || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5853,14 +6292,14 @@
             }),
             t
           );
-        })(y),
-        P = (function (e) {
+        })(_),
+        x = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5921,14 +6360,14 @@
             }),
             t
           );
-        })(y),
-        q = (function (e) {
+        })(_),
+        P = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.result || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5990,14 +6429,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         L = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6063,12 +6502,12 @@
             }),
             t
           );
-        })(y),
-        Q = (function (e) {
+        })(_),
+        q = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6105,14 +6544,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         k = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6177,12 +6616,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         V = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6219,14 +6658,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         H = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.persona_names || h.a(t.M()),
-              y.initialize(n, r, 0, -1, [1], null),
+              _.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -6280,14 +6719,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         K = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steam_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6352,14 +6791,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         J = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_clip_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6419,12 +6858,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         Y = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6461,12 +6900,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         $ = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6503,14 +6942,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         X = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_clip_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6611,12 +7050,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         Z = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6653,14 +7092,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         ee = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_permission || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6766,14 +7205,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         te = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.upload_stats || h.a(t.M()),
-              y.initialize(n, r, 0, -1, [1], null),
+              _.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -6827,14 +7266,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         re = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.upload_result || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6981,14 +7420,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         ne = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.viewer_stats || h.a(t.M()),
-              y.initialize(n, r, 0, -1, [1, 2], null),
+              _.initialize(n, r, 0, -1, [1, 2], null),
               n
             );
           }
@@ -7045,14 +7484,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         ie = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.time || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7113,14 +7552,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         ae = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.country_code || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7185,12 +7624,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         oe = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7227,12 +7666,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         se = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7269,12 +7708,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         ue = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7311,14 +7750,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         ce = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.sdp_mid || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7388,12 +7827,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         le = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7430,12 +7869,12 @@
             }),
             t
           );
-        })(y),
+        })(_),
         de = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return y.initialize(r, t, 0, -1, void 0, null), r;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7472,14 +7911,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         me = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.candidate_generation || h.a(t.M()),
-              y.initialize(n, r, 0, -1, [2], null),
+              _.initialize(n, r, 0, -1, [2], null),
               n
             );
           }
@@ -7540,14 +7979,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         fe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_session_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7607,14 +8046,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         pe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.turn_server || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7674,14 +8113,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         be = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_session_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7756,14 +8195,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         Be = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_session_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7829,14 +8268,14 @@
             }),
             t
           );
-        })(y),
+        })(_),
         he = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_session_id || h.a(t.M()),
-              y.initialize(n, r, 0, -1, void 0, null),
+              _.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7902,10 +8341,10 @@
             }),
             t
           );
-        })(y);
+        })(_);
       !(function (e) {
         (e.BeginBroadcastSession = function (e, t) {
-          return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, _, {
+          return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, y, {
             ePrivilege: 1,
           });
         }),
@@ -7927,7 +8366,7 @@
             );
           }),
           (e.WatchBroadcast = function (e, t) {
-            return e.SendMsg("Broadcast.WatchBroadcast#1", t, z, {
+            return e.SendMsg("Broadcast.WatchBroadcast#1", t, C, {
               ePrivilege: 2,
             });
           }),
@@ -7942,7 +8381,7 @@
             });
           }),
           (e.GetBroadcastStatus = function (e, t) {
-            return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, w, {
+            return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, S, {
               ePrivilege: 2,
             });
           }),
@@ -7952,7 +8391,7 @@
             });
           }),
           (e.InviteToBroadcast = function (e, t) {
-            return e.SendMsg("Broadcast.InviteToBroadcast#1", t, C, {
+            return e.SendMsg("Broadcast.InviteToBroadcast#1", t, z, {
               ePrivilege: 1,
             });
           }),
@@ -7974,17 +8413,17 @@
             });
           }),
           (e.PostChatMessage = function (e, t) {
-            return e.SendMsg("Broadcast.PostChatMessage#1", t, G, {
+            return e.SendMsg("Broadcast.PostChatMessage#1", t, Q, {
               ePrivilege: 3,
             });
           }),
           (e.UpdateChatMessageFlair = function (e, t) {
-            return e.SendMsg("Broadcast.UpdateChatMessageFlair#1", t, q, {
+            return e.SendMsg("Broadcast.UpdateChatMessageFlair#1", t, P, {
               ePrivilege: 1,
             });
           }),
           (e.MuteBroadcastChatUser = function (e, t) {
-            return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, Q, {
+            return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, q, {
               ePrivilege: 3,
             });
           }),
@@ -8091,11 +8530,11 @@
               eWebAPIKeyRequirement: 2,
             });
           });
-      })(O || (O = {})),
+      })(j || (j = {})),
         (function (e) {
           (e.NotifyBroadcastViewerStateHandler = {
             name: "BroadcastClient.NotifyBroadcastViewerState#1",
-            request: F,
+            request: O,
           }),
             (e.NotifyWaitingBroadcastViewerHandler = {
               name: "BroadcastClient.NotifyWaitingBroadcastViewer#1",
@@ -8103,7 +8542,7 @@
             }),
             (e.NotifyBroadcastUploadStartedHandler = {
               name: "BroadcastClient.NotifyBroadcastUploadStarted#1",
-              request: S,
+              request: w,
             }),
             (e.NotifyStopBroadcastUploadHandler = {
               name: "BroadcastClient.NotifyStopBroadcastUpload#1",
@@ -8119,11 +8558,11 @@
             }),
             (e.NotifyBroadcastStatusHandler = {
               name: "BroadcastClient.NotifyBroadcastStatus#1",
-              request: U,
+              request: A,
             }),
             (e.NotifyBroadcastChannelLiveHandler = {
               name: "BroadcastClient.NotifyBroadcastChannelLive#1",
-              request: A,
+              request: U,
             }),
             (e.SendThumbnailToRelayHandler = {
               name: "BroadcastClient.SendThumbnailToRelay#1",
@@ -8145,16 +8584,16 @@
               name: "BroadcastClient.NotifyWebRTCAddViewerCandidate#1",
               request: he,
             });
-        })(j || (j = {}));
-      var ye = B.Message;
-      var _e,
+        })(F || (F = {}));
+      var _e = B.Message;
+      var ye,
         ge = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8214,14 +8653,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         ve = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8291,12 +8730,12 @@
             }),
             t
           );
-        })(ye),
-        Se = (function (e) {
+        })(_e),
+        we = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return ye.initialize(r, t, 0, -1, void 0, null), r;
+            return _e.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -8333,14 +8772,14 @@
             }),
             t
           );
-        })(ye),
-        we = (function (e) {
+        })(_e),
+        Se = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.unique_name || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8433,14 +8872,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Me = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.replace_image_hash || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8500,14 +8939,14 @@
             }),
             t
           );
-        })(ye),
-        ze = (function (e) {
+        })(_e),
+        Ce = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.images || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8518,7 +8957,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { images: { n: 1, c: Ce, r: !0, q: !0 } },
+                    fields: { images: { n: 1, c: ze, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -8561,14 +9000,14 @@
             }),
             t
           );
-        })(ye),
-        Ce = (function (e) {
+        })(_e),
+        ze = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.image_type || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8634,14 +9073,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Re = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.links || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8652,7 +9091,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { links: { n: 1, c: Fe, r: !0, q: !0 } },
+                    fields: { links: { n: 1, c: Oe, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -8695,14 +9134,14 @@
             }),
             t
           );
-        })(ye),
-        Fe = (function (e) {
+        })(_e),
+        Oe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.link_index || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8772,12 +9211,12 @@
             }),
             t
           );
-        })(ye),
-        Oe = (function (e) {
+        })(_e),
+        je = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return ye.initialize(r, t, 0, -1, void 0, null), r;
+            return _e.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -8814,14 +9253,14 @@
             }),
             t
           );
-        })(ye),
-        je = (function (e) {
+        })(_e),
+        Fe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.is_live || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8923,14 +9362,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Te = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9068,14 +9507,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         We = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9129,14 +9568,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Ie = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9190,14 +9629,14 @@
             }),
             t
           );
-        })(ye),
-        Ue = (function (e) {
+        })(_e),
+        Ae = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.is_followed || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9257,14 +9696,14 @@
             }),
             t
           );
-        })(ye),
-        Ae = (function (e) {
+        })(_e),
+        Ue = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.is_subscribed || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9324,12 +9763,12 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Ee = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return ye.initialize(r, t, 0, -1, void 0, null), r;
+            return _e.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -9366,14 +9805,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Ne = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.is_followed || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9438,14 +9877,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         De = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.appid || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [5], null),
+              _e.initialize(n, r, 0, -1, [5], null),
               n
             );
           }
@@ -9524,14 +9963,14 @@
             }),
             t
           );
-        })(ye),
-        xe = (function (e) {
+        })(_e),
+        Ge = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9585,14 +10024,14 @@
             }),
             t
           );
-        })(ye),
-        Ge = (function (e) {
+        })(_e),
+        Qe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9646,14 +10085,14 @@
             }),
             t
           );
-        })(ye),
-        Pe = (function (e) {
+        })(_e),
+        xe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasters || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9664,7 +10103,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { broadcasters: { n: 1, c: qe, r: !0, q: !0 } },
+                    fields: { broadcasters: { n: 1, c: Pe, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -9707,14 +10146,14 @@
             }),
             t
           );
-        })(ye),
-        qe = (function (e) {
+        })(_e),
+        Pe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9780,14 +10219,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Le = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.issuer_steamid || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9859,14 +10298,14 @@
             }),
             t
           );
-        })(ye),
-        Qe = (function (e) {
+        })(_e),
+        qe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9938,12 +10377,12 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         ke = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return ye.initialize(r, t, 0, -1, void 0, null), r;
+            return _e.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -9980,14 +10419,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Ve = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10041,14 +10480,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         He = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10114,12 +10553,12 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Ke = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return ye.initialize(r, t, 0, -1, void 0, null), r;
+            return _e.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -10156,14 +10595,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Je = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10223,14 +10662,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Ye = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10291,14 +10730,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         $e = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10352,12 +10791,12 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Xe = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return ye.initialize(r, t, 0, -1, void 0, null), r;
+            return _e.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -10394,14 +10833,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Ze = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10463,14 +10902,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         et = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10530,14 +10969,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         tt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [3], null),
+              _e.initialize(n, r, 0, -1, [3], null),
               n
             );
           }
@@ -10609,14 +11048,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         rt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10670,14 +11109,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         nt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.stream_live_email || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10742,12 +11181,12 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         it = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return ye.initialize(r, t, 0, -1, void 0, null), r;
+            return _e.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -10784,14 +11223,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         at = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10845,14 +11284,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         ot = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasts || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10906,14 +11345,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         st = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasts || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10971,14 +11410,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         ut = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.appid || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11040,14 +11479,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         ct = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.entries || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11104,14 +11543,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         lt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasts || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11168,14 +11607,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         dt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasts || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11232,14 +11671,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         mt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11301,14 +11740,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         ft = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11365,14 +11804,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         pt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.title || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11428,14 +11867,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         bt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.template_type || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11503,14 +11942,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         Bt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.rows || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11564,14 +12003,14 @@
             }),
             t
           );
-        })(ye),
+        })(_e),
         ht = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_clip_id || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, void 0, null),
+              _e.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11667,14 +12106,14 @@
             }),
             t
           );
-        })(ye),
-        yt = (function (e) {
+        })(_e),
+        _t = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.clips || h.a(t.M()),
-              ye.initialize(n, r, 0, -1, [1], null),
+              _e.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11735,12 +12174,12 @@
             }),
             t
           );
-        })(ye),
-        _t = (function (e) {
+        })(_e),
+        yt = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return ye.initialize(r, t, 0, -1, void 0, null), r;
+            return _e.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -11777,7 +12216,7 @@
             }),
             t
           );
-        })(ye);
+        })(_e);
       !(function (e) {
         (e.CreateBroadcastChannel = function (e, t) {
           return e.SendMsg("SteamTV.CreateBroadcastChannel#1", t, ge, {
@@ -11792,13 +12231,13 @@
             });
           }),
           (e.SetBroadcastChannelProfile = function (e, t) {
-            return e.SendMsg("SteamTV.SetBroadcastChannelProfile#1", t, Se, {
+            return e.SendMsg("SteamTV.SetBroadcastChannelProfile#1", t, we, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetBroadcastChannelProfile = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelProfile#1", t, we, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelProfile#1", t, Se, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
@@ -11810,7 +12249,7 @@
             });
           }),
           (e.GetBroadcastChannelImages = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, ze, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, Ce, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
@@ -11819,7 +12258,7 @@
             return e.SendMsg(
               "SteamTV.SetBroadcastChannelLinkRegions#1",
               t,
-              Oe,
+              je,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 }
             );
           }),
@@ -11833,7 +12272,7 @@
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelBroadcasters#1",
               t,
-              Pe,
+              xe,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
             );
           }),
@@ -11852,25 +12291,25 @@
             });
           }),
           (e.GetBroadcastChannelStatus = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelStatus#1", t, je, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelStatus#1", t, Fe, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           }),
           (e.FollowBroadcastChannel = function (e, t) {
-            return e.SendMsg("SteamTV.FollowBroadcastChannel#1", t, Ue, {
+            return e.SendMsg("SteamTV.FollowBroadcastChannel#1", t, Ae, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.SubscribeBroadcastChannel = function (e, t) {
-            return e.SendMsg("SteamTV.SubscribeBroadcastChannel#1", t, Ae, {
+            return e.SendMsg("SteamTV.SubscribeBroadcastChannel#1", t, Ue, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetBroadcastChannelClips = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelClips#1", t, yt, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelClips#1", t, _t, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
@@ -11890,14 +12329,14 @@
             );
           }),
           (e.GetGames = function (e, t) {
-            return e.SendMsg("SteamTV.GetGames#1", t, xe, {
+            return e.SendMsg("SteamTV.GetGames#1", t, Ge, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetChannels = function (e, t) {
-            return e.SendMsg("SteamTV.GetChannels#1", t, Ge, {
+            return e.SendMsg("SteamTV.GetChannels#1", t, Qe, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -11981,26 +12420,26 @@
             });
           }),
           (e.AppCheer = function (e, t) {
-            return e.SendMsg("SteamTV.AppCheer#1", t, _t, {
+            return e.SendMsg("SteamTV.AppCheer#1", t, yt, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(_e || (_e = {}));
+      })(ye || (ye = {}));
       var gt,
         vt,
-        St = r("qiKp"),
-        wt = r("TLQK"),
+        wt = r("qiKp"),
+        St = r("TLQK"),
         Mt = r("XxJJ"),
-        zt = r("lkRc"),
-        Ct = B.Message,
+        Ct = r("lkRc"),
+        zt = B.Message,
         Rt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.bincremental || h.a(t.M()),
-              Ct.initialize(n, r, 0, -1, [2], null),
+              zt.initialize(n, r, 0, -1, [2], null),
               n
             );
           }
@@ -12017,7 +12456,7 @@
                         br: h.d.readBool,
                         bw: h.h.writeBool,
                       },
-                      friends: { n: 2, c: Ft, r: !0, q: !0 },
+                      friends: { n: 2, c: Ot, r: !0, q: !0 },
                       max_friend_count: {
                         n: 3,
                         br: h.d.readUint32,
@@ -12076,14 +12515,14 @@
             }),
             t
           );
-        })(Ct),
-        Ft = (function (e) {
+        })(zt),
+        Ot = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.ulfriendid || h.a(t.M()),
-              Ct.initialize(n, r, 0, -1, void 0, null),
+              zt.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -12148,15 +12587,15 @@
             }),
             t
           );
-        })(Ct),
-        Ot = B.Message,
-        jt = (function (e) {
+        })(zt),
+        jt = B.Message,
+        Ft = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.groupid || h.a(t.M()),
-              Ot.initialize(n, r, 0, -1, [3], null),
+              jt.initialize(n, r, 0, -1, [3], null),
               n
             );
           }
@@ -12224,14 +12663,14 @@
             }),
             t
           );
-        })(Ot),
+        })(jt),
         Tt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.categories || h.a(t.M()),
-              Ot.initialize(n, r, 0, -1, [1], null),
+              jt.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -12242,7 +12681,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { categories: { n: 1, c: jt, r: !0, q: !0 } },
+                    fields: { categories: { n: 1, c: Ft, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -12285,14 +12724,14 @@
             }),
             t
           );
-        })(Ot),
+        })(jt),
         Wt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.accountid || h.a(t.M()),
-              Ot.initialize(n, r, 0, -1, void 0, null),
+              jt.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -12358,14 +12797,14 @@
             }),
             t
           );
-        })(Ot),
+        })(jt),
         It = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.favorites || h.a(t.M()),
-              Ot.initialize(n, r, 0, -1, [1], null),
+              jt.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -12419,12 +12858,12 @@
             }),
             t
           );
-        })(Ot),
-        Ut = (function (e) {
+        })(jt),
+        At = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return Ot.initialize(r, t, 0, -1, void 0, null), r;
+            return jt.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -12461,14 +12900,14 @@
             }),
             t
           );
-        })(Ot),
-        At = (function (e) {
+        })(jt),
+        Ut = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.favorites || h.a(t.M()),
-              Ot.initialize(n, r, 0, -1, [1], null),
+              jt.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -12522,12 +12961,12 @@
             }),
             t
           );
-        })(Ot),
+        })(jt),
         Et = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return Ot.initialize(r, t, 0, -1, void 0, null), r;
+            return jt.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -12564,14 +13003,14 @@
             }),
             t
           );
-        })(Ot),
+        })(jt),
         Nt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.friendslist || h.a(t.M()),
-              Ot.initialize(n, r, 0, -1, void 0, null),
+              jt.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -12625,7 +13064,7 @@
             }),
             t
           );
-        })(Ot);
+        })(jt);
       !(function (e) {
         (e.GetCategories = function (e, t) {
           return e.SendMsg("FriendsList.GetCategories#1", t, Tt, {
@@ -12646,7 +13085,7 @@
             });
           }),
           (e.SetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.SetFavorites#1", t, Ut, {
+            return e.SendMsg("FriendsList.SetFavorites#1", t, At, {
               ePrivilege: 1,
             });
           });
@@ -12654,13 +13093,13 @@
         (function (e) {
           e.FavoritesChangedHandler = {
             name: "FriendsListClient.FavoritesChanged#1",
-            request: At,
+            request: Ut,
           };
         })(vt || (vt = {}));
       var Dt = r("oFam"),
-        xt = r("kyHq"),
-        Gt = r("uobO"),
-        Pt = (function () {
+        Gt = r("kyHq"),
+        Qt = r("uobO"),
+        xt = (function () {
           function e() {
             (this.m_mapPlayerCache = new Map()),
               (this.m_strBannedWords = ""),
@@ -12671,7 +13110,7 @@
               (this.m_regexBannedWords = null),
               (this.m_regexCleanWords = null),
               (this.m_bShownFilterTip = !1),
-              (this.m_TextFilterPreferences = new xt.i());
+              (this.m_TextFilterPreferences = new Gt.i());
             var e = new Dt.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
@@ -12705,11 +13144,11 @@
                       case 4:
                         return n.sent(), [4, this.RequestFriendsList()];
                       case 5:
-                        return n.sent(), [4, this.LoadLanguage(zt.c.LANGUAGE)];
+                        return n.sent(), [4, this.LoadLanguage(Ct.c.LANGUAGE)];
                       case 6:
                         return (
                           n.sent(),
-                          "english" === zt.c.LANGUAGE
+                          "english" === Ct.c.LANGUAGE
                             ? [3, 8]
                             : [4, this.LoadLanguage("english")]
                         );
@@ -12855,13 +13294,13 @@
                     case 3:
                       return (
                         (s = {
-                          sessionid: zt.c.SESSIONID,
-                          origin: Object(zt.e)(),
+                          sessionid: Ct.c.SESSIONID,
+                          origin: Object(Ct.e)(),
                         }),
                         [
                           4,
                           l.a.get(
-                            zt.c.COMMUNITY_BASE_URL +
+                            Ct.c.COMMUNITY_BASE_URL +
                               "textfilter/ajaxgetcommunitypreferences",
                             { params: s, withCredentials: !0 }
                           ),
@@ -12900,13 +13339,13 @@
                     case 10:
                       return (
                         (s = {
-                          sessionid: zt.c.SESSIONID,
-                          origin: Object(zt.e)(),
+                          sessionid: Ct.c.SESSIONID,
+                          origin: Object(Ct.e)(),
                         }),
                         [
                           4,
                           l.a.get(
-                            zt.c.COMMUNITY_BASE_URL +
+                            Ct.c.COMMUNITY_BASE_URL +
                               "textfilter/ajaxgettextfiltercustomwords",
                             { params: s, withCredentials: !0 }
                           ),
@@ -12974,13 +13413,13 @@
                     case 3:
                       return (
                         (i = {
-                          sessionid: zt.c.SESSIONID,
-                          origin: Object(zt.e)(),
+                          sessionid: Ct.c.SESSIONID,
+                          origin: Object(Ct.e)(),
                         }),
                         [
                           4,
                           l.a.get(
-                            zt.c.COMMUNITY_BASE_URL +
+                            Ct.c.COMMUNITY_BASE_URL +
                               "textfilter/ajaxgetfriendslist",
                             { params: i, withCredentials: !0 }
                           ),
@@ -13025,13 +13464,13 @@
                     case 0:
                       (t = "1"),
                         (r =
-                          zt.c.COMMUNITY_CDN_URL +
+                          Ct.c.COMMUNITY_CDN_URL +
                           "textfilter/gettextfilterdictionary?type=banned&language=" +
                           e +
                           "&v=" +
                           t +
                           "&origin=" +
-                          Object(zt.e)()),
+                          Object(Ct.e)()),
                         (n.label = 1);
                     case 1:
                       return n.trys.push([1, 3, , 4]), [4, l.a.get(r)];
@@ -13052,13 +13491,13 @@
                       );
                     case 4:
                       (r =
-                        zt.c.COMMUNITY_CDN_URL +
+                        Ct.c.COMMUNITY_CDN_URL +
                         "textfilter/gettextfilterdictionary?type=profanity&language=" +
                         e +
                         "&v=" +
                         t +
                         "&origin=" +
-                        Object(zt.e)()),
+                        Object(Ct.e)()),
                         (n.label = 5);
                     case 5:
                       return n.trys.push([5, 7, , 8]), [4, l.a.get(r)];
@@ -13079,13 +13518,13 @@
                       );
                     case 8:
                       (r =
-                        zt.c.COMMUNITY_CDN_URL +
+                        Ct.c.COMMUNITY_CDN_URL +
                         "textfilter/gettextfilterdictionary?type=clean_public&language=" +
                         e +
                         "&v=" +
                         t +
                         "&origin=" +
-                        Object(zt.e)()),
+                        Object(Ct.e)()),
                         (n.label = 9);
                     case 9:
                       return n.trys.push([9, 11, , 12]), [4, l.a.get(r)];
@@ -13155,7 +13594,7 @@
                   this.m_regexBannedWords = new RegExp(e, "ugi");
                 } catch (e) {
                   console.warn("Couldn't compile textfilter bannedwords regex"),
-                    Object(Gt.a)().ReportError(
+                    Object(Qt.a)().ReportError(
                       new Error(
                         "Couldn't compile textfilter bannedwords regex: " + e
                       )
@@ -13166,7 +13605,7 @@
                   this.m_regexCleanWords = new RegExp(t, "ugi");
                 } catch (e) {
                   console.warn("Couldn't compile textfilter cleanwords regex"),
-                    Object(Gt.a)().ReportError(
+                    Object(Qt.a)().ReportError(
                       new Error(
                         "Couldn't compile textfilter cleanwords regex: " + e
                       )
@@ -13217,7 +13656,7 @@
             e
           );
         })(),
-        qt = (function () {
+        Pt = (function () {
           function e() {
             this.m_mapChats = new Map();
           }
@@ -13262,15 +13701,15 @@
               (this.m_bRateLimited = !1),
               (this.m_rgChatMessages = []),
               (this.m_webAPIInterface = new p.a(
-                zt.c.WEBAPI_BASE_URL,
-                zt.i.webapi_token
+                Ct.c.WEBAPI_BASE_URL,
+                Ct.i.webapi_token
               ));
           }
           return (
             (e.prototype.InitTextFilter = function () {
-              this.m_textFilterStore = new Pt();
+              this.m_textFilterStore = new xt();
               var e = 0;
-              "" !== zt.i.steamid && (e = new b.a(zt.i.steamid).GetAccountID());
+              "" !== Ct.i.steamid && (e = new b.a(Ct.i.steamid).GetAccountID());
               this.m_textFilterStore.Init(e, null, new f.a());
             }),
             Object.defineProperty(e.prototype, "TextFilterStore", {
@@ -13288,8 +13727,8 @@
             }),
             (e.prototype.StartForSteamID = function (e, t) {
               (this.m_webAPIInterface = new p.a(
-                zt.c.WEBAPI_BASE_URL,
-                zt.i.webapi_token
+                Ct.c.WEBAPI_BASE_URL,
+                Ct.i.webapi_token
               )),
                 (this.m_ulBroadcastSteamID = e),
                 (this.m_ulBroadcastID = t),
@@ -13298,11 +13737,11 @@
             }),
             (e.prototype.StartForChannel = function (e) {
               (this.m_webAPIInterface = new p.a(
-                zt.c.WEBAPI_BASE_URL,
-                zt.i.webapi_token
+                Ct.c.WEBAPI_BASE_URL,
+                Ct.i.webapi_token
               )),
                 (this.m_ulBroadcastChannelID = e),
-                (this.m_strUserSteamID = zt.i.steamid),
+                (this.m_strUserSteamID = Ct.i.steamid),
                 this.InitTextFilter(),
                 this.JoinChannelChat();
             }),
@@ -13343,7 +13782,7 @@
                             [
                               4,
                               l.a.post(
-                                zt.c.WEBAPI_BASE_URL +
+                                Ct.c.WEBAPI_BASE_URL +
                                   "IBroadcastService/PostChatMessage/v0001?access_token=" +
                                   this.m_webApiToken,
                                 o
@@ -13357,14 +13796,14 @@
                       );
                     case 3:
                       return (
-                        (s = m.b.Init(x)).SetBodyFields({
+                        (s = m.b.Init(G)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           message: t,
                           instance_id: this.m_unInstanceID.toString(),
                         }),
                         [
                           4,
-                          O.PostChatMessage(
+                          j.PostChatMessage(
                             this.m_webAPIInterface.GetServiceTransport(),
                             s
                           ),
@@ -13386,13 +13825,13 @@
                         ? ((u = ""),
                           (u =
                             17 == a.result
-                              ? Object(wt.f)("#BroadcastChat_YouMuted")
+                              ? Object(St.f)("#BroadcastChat_YouMuted")
                               : 84 == a.result
-                              ? Object(wt.f)(
+                              ? Object(St.f)(
                                   "#BroadcastChat_Cooldown",
                                   a.cooldown_time_seconds
                                 )
-                              : Object(wt.f)(
+                              : Object(St.f)(
                                   "#BroadcastChat_FailedToSendMsg",
                                   t
                                 )),
@@ -13420,7 +13859,7 @@
                         n.sent(),
                         this.m_rgChatMessages.push({
                           type: d.a.Error,
-                          msg: Object(wt.f)(
+                          msg: Object(St.f)(
                             "#BroadcastChat_FailedToSendMsg",
                             t
                           ),
@@ -13456,12 +13895,12 @@
                         (t = {
                           steamid: this.m_ulBroadcastSteamID,
                           broadcastid: this.m_ulBroadcastID,
-                          sessionid: zt.c.SESSIONID,
+                          sessionid: Ct.c.SESSIONID,
                         }),
                         [
                           4,
                           l.a.get(
-                            zt.c.CHAT_BASE_URL + "broadcast/getchatinfo",
+                            Ct.c.CHAT_BASE_URL + "broadcast/getchatinfo",
                             {
                               params: t,
                               withCredentials: !0,
@@ -13488,7 +13927,7 @@
                               o.m_bHasAddedWelcomeChat ||
                                 (o.m_rgChatMessages.push({
                                   type: d.a.Notification,
-                                  msg: Object(wt.f)(
+                                  msg: Object(St.f)(
                                     "#BroadcastChat_DefaultMessage"
                                   ),
                                   client_ts: Number(new Date()),
@@ -13506,7 +13945,7 @@
                                     !0
                                   );
                                 }),
-                              (o.m_chatScheduledFunc = new St.b()),
+                              (o.m_chatScheduledFunc = new wt.b()),
                               o.m_chatScheduledFunc.Schedule(0, o.RequestLoop);
                           }),
                         [3, 4]
@@ -13537,7 +13976,7 @@
                         }),
                         [
                           4,
-                          _e.JoinChat(
+                          ye.JoinChat(
                             this.m_webAPIInterface.GetServiceTransport(),
                             e
                           ),
@@ -13555,7 +13994,7 @@
                           (this.m_rgChatMessages = []),
                           this.m_rgChatMessages.push({
                             type: d.a.Notification,
-                            msg: Object(wt.f)("#BroadcastChat_DefaultMessage"),
+                            msg: Object(St.f)("#BroadcastChat_DefaultMessage"),
                             client_ts: Number(new Date()),
                             instance_id: this.m_unInstanceID,
                             in_game: !1,
@@ -13563,7 +14002,7 @@
                             steamid: "",
                           }),
                           (this.m_bHasAddedWelcomeChat = !0),
-                          (this.m_chatScheduledFunc = new St.b()),
+                          (this.m_chatScheduledFunc = new wt.b()),
                           this.m_chatScheduledFunc.Schedule(
                             0,
                             this.RequestLoop
@@ -13595,7 +14034,7 @@
                         }),
                         [
                           4,
-                          _e.GetChatModerators(
+                          ye.GetChatModerators(
                             this.m_webAPIInterface.GetServiceTransport(),
                             e
                           ),
@@ -13633,9 +14072,9 @@
                   b,
                   B,
                   h,
-                  y = this;
-                return Object(n.e)(this, function (_) {
-                  switch (_.label) {
+                  _ = this;
+                return Object(n.e)(this, function (y) {
+                  switch (y.label) {
                     case 0:
                       (e = {}),
                         (t = this.m_strChatURL.replace(
@@ -13644,14 +14083,14 @@
                         )) == this.m_strChatURL &&
                           this.m_nNextChatTS > 0 &&
                           (e.t = this.m_nNextChatTS),
-                        (_.label = 1);
+                        (y.label = 1);
                     case 1:
                       return (
-                        _.trys.push([1, 3, , 4]), [4, l.a.get(t, { params: e })]
+                        y.trys.push([1, 3, , 4]), [4, l.a.get(t, { params: e })]
                       );
                     case 2:
                       if (
-                        ((r = _.sent()),
+                        ((r = y.sent()),
                         (i = r.data),
                         (this.m_cConsecutiveErrors = 0),
                         (a = i.messages
@@ -13662,7 +14101,7 @@
                             });
                           })
                           .filter(function (e) {
-                            return !y.IsUserMutedLocally(e.steamid);
+                            return !_.IsUserMutedLocally(e.steamid);
                           })),
                         (h = this.m_rgChatMessages).push.apply(h, a),
                         (o = this.m_bAutoScroll ? 150 : 300),
@@ -13677,11 +14116,11 @@
                           (c = u[s]),
                             (m =
                               c.muted == this.m_strUserSteamID
-                                ? Object(wt.f)(
+                                ? Object(St.f)(
                                     "#BroadcastChat_YouMuted",
                                     c.persona_name
                                   )
-                                : Object(wt.f)(
+                                : Object(St.f)(
                                     "#BroadcastChat_UserMuted",
                                     c.persona_name
                                   )),
@@ -13736,7 +14175,7 @@
                       );
                     case 3:
                       if (
-                        (_.sent(),
+                        (y.sent(),
                         console.log(
                           "Failed to get chat messages. Previous sleep set to: " +
                             this.m_nLastSleepMS +
@@ -13755,7 +14194,7 @@
                           return (
                             this.m_rgChatMessages.push({
                               type: d.a.Error,
-                              msg: Object(wt.f)(
+                              msg: Object(St.f)(
                                 "#BroadcastChat_UnableToJoinChat"
                               ),
                               client_ts: Number(new Date()),
@@ -13813,7 +14252,7 @@
                         }),
                         [
                           4,
-                          _e.AddChatModerator(
+                          ye.AddChatModerator(
                             this.m_webAPIInterface.GetServiceTransport(),
                             i
                           ),
@@ -13822,7 +14261,7 @@
                     case 2:
                       return (
                         n.sent(),
-                        (o = Object(wt.f)(
+                        (o = Object(St.f)(
                           t
                             ? "#BroadcastChat_AddedModerator"
                             : "#BroadcastChat_RemovedModerator",
@@ -13839,7 +14278,7 @@
                     case 4:
                       return (
                         n.sent(),
-                        (o = Object(wt.f)(
+                        (o = Object(St.f)(
                           t
                             ? "#BroadcastChat_AddModeratorFailed"
                             : "#BroadcastChat_RemoveModeratorFailed",
@@ -13857,7 +14296,7 @@
                       ),
                         a.append("moderatorsteamid", e),
                         a.append("bAdd", t ? "1" : "0"),
-                        a.append("sessionid", zt.c.SESSIONID),
+                        a.append("sessionid", Ct.c.SESSIONID),
                         (n.label = 7);
                     case 7:
                       return (
@@ -13865,7 +14304,7 @@
                         [
                           4,
                           l.a.post(
-                            zt.c.CHAT_BASE_URL +
+                            Ct.c.CHAT_BASE_URL +
                               "broadcast/ajaxupdatechannelmod",
                             a
                           ),
@@ -13875,7 +14314,7 @@
                       return (
                         n.sent(),
                         this.m_mapBroadcastModeratorUsers.set(e, t),
-                        (o = Object(wt.f)(
+                        (o = Object(St.f)(
                           t
                             ? "#BroadcastChat_AddedModerator"
                             : "#BroadcastChat_RemovedModerator",
@@ -13890,7 +14329,7 @@
                     case 9:
                       return (
                         n.sent(),
-                        (o = Object(wt.f)(
+                        (o = Object(St.f)(
                           t
                             ? "#BroadcastChat_AddModeratorFailed"
                             : "#BroadcastChat_RemoveModeratorFailed",
@@ -13915,7 +14354,7 @@
                         (s = this.m_ulBroadcastSteamID),
                         (u = this.m_strUserSteamID),
                         this.m_ulBroadcastChannelID
-                          ? ((c = m.b.Init(Qe)).SetBodyFields({
+                          ? ((c = m.b.Init(qe)).SetBodyFields({
                               broadcast_channel_id: this.m_ulBroadcastChannelID,
                               chatter_steamid: e,
                               duration: 3600 * r,
@@ -13924,7 +14363,7 @@
                             }),
                             [
                               4,
-                              _e.AddChatBan(
+                              ye.AddChatBan(
                                 this.m_webAPIInterface.GetServiceTransport(),
                                 c
                               ),
@@ -13940,7 +14379,7 @@
                         d.append("bantype", t),
                         d.append("duration", r.toString()),
                         d.append("perm", i ? "1" : "0"),
-                        d.append("sessionid", zt.c.SESSIONID),
+                        d.append("sessionid", Ct.c.SESSIONID),
                         (n.label = 3);
                     case 3:
                       return (
@@ -13948,7 +14387,7 @@
                         [
                           4,
                           l.a.post(
-                            zt.c.CHAT_BASE_URL + "broadcast/ajaxupdateusermute",
+                            Ct.c.CHAT_BASE_URL + "broadcast/ajaxupdateusermute",
                             d
                           ),
                         ]
@@ -14001,7 +14440,7 @@
                             [
                               4,
                               l.a.post(
-                                zt.c.WEBAPI_BASE_URL +
+                                Ct.c.WEBAPI_BASE_URL +
                                   "IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=" +
                                   this.m_webApiToken,
                                 i
@@ -14020,7 +14459,7 @@
                         }),
                         [
                           4,
-                          O.MuteBroadcastChatUser(
+                          j.MuteBroadcastChatUser(
                             this.m_webAPIInterface.GetServiceTransport(),
                             a
                           ),
@@ -14036,7 +14475,7 @@
                         r &&
                           (this.m_rgChatMessages.push({
                             type: d.a.Error,
-                            msg: Object(wt.f)(
+                            msg: Object(St.f)(
                               "#BroadcastChat_UserMuteFailed",
                               t
                             ),
@@ -14054,7 +14493,7 @@
                         r ||
                           this.m_rgChatMessages.push({
                             type: d.a.Notification,
-                            msg: Object(wt.f)(
+                            msg: Object(St.f)(
                               "#BroadcastChat_UserMutedLocal",
                               t
                             ),
@@ -14097,7 +14536,7 @@
                             [
                               4,
                               l.a.post(
-                                zt.c.WEBAPI_BASE_URL +
+                                Ct.c.WEBAPI_BASE_URL +
                                   "IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=" +
                                   this.m_webApiToken,
                                 r
@@ -14116,7 +14555,7 @@
                         }),
                         [
                           4,
-                          O.MuteBroadcastChatUser(
+                          j.MuteBroadcastChatUser(
                             this.m_webAPIInterface.GetServiceTransport(),
                             i
                           ),
@@ -14128,7 +14567,7 @@
                       return (
                         this.m_rgChatMessages.push({
                           type: d.a.Notification,
-                          msg: Object(wt.f)(
+                          msg: Object(St.f)(
                             "#BroadcastChat_UserUnmutedLocal",
                             t
                           ),
@@ -14145,7 +14584,7 @@
                         n.sent(),
                         this.m_rgChatMessages.push({
                           type: d.a.Error,
-                          msg: Object(wt.f)(
+                          msg: Object(St.f)(
                             "#BroadcastChat_UserUnmuteFailed",
                             t
                           ),
@@ -14162,7 +14601,7 @@
                     case 8:
                       this.m_rgChatMessages.push({
                         type: d.a.Notification,
-                        msg: Object(wt.f)("#BroadcastChat_UserUnmutedLocal", t),
+                        msg: Object(St.f)("#BroadcastChat_UserUnmutedLocal", t),
                         client_ts: Number(new Date()),
                         instance_id: this.m_unInstanceID,
                         in_game: !1,
@@ -14203,7 +14642,7 @@
                             [
                               4,
                               l.a.post(
-                                zt.c.WEBAPI_BASE_URL +
+                                Ct.c.WEBAPI_BASE_URL +
                                   "IBroadcastService/RemoveUserChatText/v0001/?access_token=" +
                                   this.m_webApiToken,
                                 r
@@ -14221,7 +14660,7 @@
                         }),
                         [
                           4,
-                          O.RemoveUserChatText(
+                          j.RemoveUserChatText(
                             this.m_webAPIInterface.GetServiceTransport(),
                             i
                           ),
@@ -14236,7 +14675,7 @@
                         n.sent(),
                         this.m_rgChatMessages.push({
                           type: d.a.Error,
-                          msg: Object(wt.f)(
+                          msg: Object(St.f)(
                             "#BroadcastChat_RemoveMessagesFailed",
                             t
                           ),
@@ -14272,7 +14711,7 @@
                           [
                             4,
                             l.a.post(
-                              zt.c.WEBAPI_BASE_URL +
+                              Ct.c.WEBAPI_BASE_URL +
                                 "IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=" +
                                 this.m_webApiToken,
                               t
@@ -14283,13 +14722,13 @@
                       return n.sent(), [3, 4];
                     case 2:
                       return (
-                        (r = m.b.Init(P)).SetBodyFields({
+                        (r = m.b.Init(x)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           flair: "^" + this.m_strFlairGroupID + "^:" + e + ":",
                         }),
                         [
                           4,
-                          O.UpdateChatMessageFlair(
+                          j.UpdateChatMessageFlair(
                             this.m_webAPIInterface.GetServiceTransport(),
                             r
                           ),
@@ -14339,8 +14778,8 @@
             e
           );
         })(),
-        Qt = new qt();
-      window.g_BroadcastChatStore = Qt;
+        qt = new Pt();
+      window.g_BroadcastChatStore = qt;
       var kt = r("1BdX"),
         Vt = r("a5LV"),
         Ht = r("Z9dU"),
@@ -14405,7 +14844,7 @@
                       sr.a.MessageName,
                       sr.a.MessagePresenter
                     ),
-                    href: zt.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    href: Ct.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
@@ -14425,7 +14864,7 @@
                 "a",
                 {
                   className: Object(ir.a)(sr.a.MessageName, i),
-                  href: zt.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                  href: Ct.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                   "data-miniprofile": "s" + r.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
@@ -14442,7 +14881,7 @@
                 "span",
                 {
                   className: sr.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(wt.f)(
+                  "data-tooltip-text": Object(St.f)(
                     "#BroadcastChat_Role_Presenter_ttip"
                   ),
                 },
@@ -14453,7 +14892,7 @@
                 "span",
                 {
                   className: sr.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(wt.f)(
+                  "data-tooltip-text": Object(St.f)(
                     "#BroadcastChat_Role_Moderatorr_ttip"
                   ),
                 },
@@ -14464,7 +14903,7 @@
                 "span",
                 {
                   className: sr.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(wt.f)(
+                  "data-tooltip-text": Object(St.f)(
                     "#BroadcastChat_Role_Broadcaster_ttip"
                   ),
                 },
@@ -14502,7 +14941,7 @@
             }),
             (t.prototype.StartChat = function () {
               this.m_chat && this.m_chat.Stop(),
-                (this.m_chat = Qt.GetOrCreateChat(
+                (this.m_chat = qt.GetOrCreateChat(
                   this.props.broadcastChannelID,
                   this.props.steamID
                 )),
@@ -14568,7 +15007,7 @@
                 a = this.m_chat.BIsUserBroadcastModerator(
                   this.m_chat.GetUserSteamID()
                 );
-              ((zt.i && zt.i.is_support) || i || a
+              ((Ct.i && Ct.i.is_support) || i || a
                 ? n.push(
                     o.createElement(
                       Jt.d,
@@ -14581,7 +15020,7 @@
                           );
                         },
                       },
-                      Object(wt.f)("#BroadcastChat_RemoveMessages")
+                      Object(St.f)("#BroadcastChat_RemoveMessages")
                     ),
                     o.createElement(
                       Jt.d,
@@ -14597,7 +15036,7 @@
                           );
                         },
                       },
-                      Object(wt.f)("#BroadcastChat_half_Mute")
+                      Object(St.f)("#BroadcastChat_half_Mute")
                     ),
                     o.createElement(
                       Jt.d,
@@ -14613,7 +15052,7 @@
                           );
                         },
                       },
-                      Object(wt.f)("#BroadcastChat_day_Mute")
+                      Object(St.f)("#BroadcastChat_day_Mute")
                     ),
                     o.createElement(
                       Jt.d,
@@ -14629,7 +15068,7 @@
                           );
                         },
                       },
-                      Object(wt.f)("#BroadcastChat_week_Mute")
+                      Object(St.f)("#BroadcastChat_week_Mute")
                     ),
                     o.createElement(
                       Jt.d,
@@ -14645,7 +15084,7 @@
                           );
                         },
                       },
-                      Object(wt.f)("#BroadcastChat_perm_Mute")
+                      Object(St.f)("#BroadcastChat_perm_Mute")
                     ),
                     o.createElement(
                       Jt.d,
@@ -14662,7 +15101,7 @@
                           );
                         },
                       },
-                      Object(wt.f)("#BroadcastChat_Unmute")
+                      Object(St.f)("#BroadcastChat_Unmute")
                     )
                   )
                 : this.m_chat.IsUserMutedLocally(t.steamid)
@@ -14678,7 +15117,7 @@
                           );
                         },
                       },
-                      Object(wt.f)("#BroadcastChat_UnmuteLocal")
+                      Object(St.f)("#BroadcastChat_UnmuteLocal")
                     )
                   )
                 : n.push(
@@ -14693,10 +15132,10 @@
                           );
                         },
                       },
-                      Object(wt.f)("#BroadcastChat_MuteLocal")
+                      Object(St.f)("#BroadcastChat_MuteLocal")
                     )
                   ),
-              (zt.i && zt.i.is_support) ||
+              (Ct.i && Ct.i.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
                 t.steamid &&
                 (this.m_chat.BIsUserBroadcastModerator(t.steamid)
@@ -14713,7 +15152,7 @@
                             );
                           },
                         },
-                        Object(wt.f)("#BroadcastChat_Remove_Moderator")
+                        Object(St.f)("#BroadcastChat_Remove_Moderator")
                       )
                     )
                   : n.push(
@@ -14729,7 +15168,7 @@
                             );
                           },
                         },
-                        Object(wt.f)("#BroadcastChat_Add_Moderator")
+                        Object(St.f)("#BroadcastChat_Add_Moderator")
                       )
                     ));
               return n.length
@@ -14740,7 +15179,7 @@
                       o.createElement(
                         "div",
                         { className: sr.a.SelectedUserNameCtn },
-                        Object(wt.f)("#BroadcastChat_User"),
+                        Object(St.f)("#BroadcastChat_User"),
                         o.createElement("br", null),
                         o.createElement(
                           "span",
@@ -14826,7 +15265,7 @@
                       className:
                         sr.a.MessageNotification + " " + sr.a.MessageContents,
                     },
-                    " (" + Object(wt.f)("#BroadcastChat_Broadcaster") + ")"
+                    " (" + Object(St.f)("#BroadcastChat_Broadcaster") + ")"
                   ),
                 e.type === d.a.Chat &&
                   this.m_chat.m_mapChannelModeratorUsers.get(e.steamid) &&
@@ -14836,7 +15275,7 @@
                       className:
                         sr.a.MessageNotification + " " + sr.a.MessageContents,
                     },
-                    " (" + Object(wt.f)("#BroadcastChat_Moderator") + ")"
+                    " (" + Object(St.f)("#BroadcastChat_Moderator") + ")"
                   ),
                 o.createElement(
                   "span",
@@ -14866,14 +15305,17 @@
               return o.createElement(
                 "div",
                 {
-                  className: sr.a.ChatPanel,
+                  className: Object(ir.a)(sr.a.ChatPanel, "ChatPanel"),
                   style: this.props.hidden ? { display: "none" } : void 0,
                 },
                 o.createElement(tr, null),
                 o.createElement(
                   "div",
                   {
-                    className: sr.a.ChatMessages + " " + Kt.a.minHeightZero,
+                    className: Object(ir.a)(
+                      sr.a.ChatMessages + " " + Kt.a.minHeightZero,
+                      "ChatMessages"
+                    ),
                     onScroll: this.HandleScroll,
                     ref: this.messagesContainer,
                   },
@@ -14882,7 +15324,7 @@
                   })
                 ),
                 o.createElement(rr, null),
-                zt.i && zt.i.logged_in && this.m_chat
+                Ct.i && Ct.i.logged_in && this.m_chat
                   ? o.createElement(
                       "div",
                       {
@@ -14901,7 +15343,7 @@
                           { className: "" + Kt.a.chatEntryControls },
                           o.createElement("textarea", {
                             className: Kt.a.chatTextarea,
-                            placeholder: Object(wt.f)(
+                            placeholder: Object(St.f)(
                               "#BroadcastChat_EnterResponse"
                             ),
                             onKeyPress: this.ChatBoxKeypress,
@@ -14921,7 +15363,7 @@
                                 Kt.a.chatSubmitButton +
                                 " " +
                                 (this.state.message ? "" : Kt.a.disabled),
-                              title: Object(wt.f)("#ChatEntryButton_Submit"),
+                              title: Object(St.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
                             o.createElement(nr.cb, null)
@@ -14956,7 +15398,7 @@
                                   emoticonHoverStore: Vt.b,
                                   strFlairGroupID: this.m_chat
                                     .m_strFlairGroupID,
-                                  title: Object(wt.f)("#ChatEntryButton_Flair"),
+                                  title: Object(St.f)("#ChatEntryButton_Flair"),
                                   buttonIcon: o.createElement(nr.i, null),
                                 })
                               : null
@@ -15058,7 +15500,8 @@
                   r = Object(c.c)(e.clan_faq_about_page),
                   n = c.a.Get().GetFAQPublishedContent(r, t),
                   i = Object(o.d)(e.localized_logo, t, n.timestamp),
-                  a = {
+                  a = Object(o.d)(e.localized_mobile_logo, t, n.timestamp),
+                  d = {
                     strConferenceID: e.vanity,
                     rtStartTime: e.start_rtime,
                     rtEndTime: e.end_rtime,
@@ -15067,9 +15510,10 @@
                     bPartnerOnly: e.partner_only,
                     faqAboutPage: n,
                     strLocalizedLogos: "string" == typeof i ? [i] : i,
+                    strLocalizedMobileLogos: "string" == typeof a ? [a] : a,
                     globalQandASessionID: e.global_qanda_session_id,
                   };
-                this.m_mapConferences.set(e.vanity, a);
+                this.m_mapConferences.set(e.vanity, d);
               }
             }),
             (e.prototype.ValidateStoreDefault = function (e) {
@@ -15093,17 +15537,62 @@
         e.conferenceInfo;
         return "dev" != l.c.WEB_UNIVERSE ? null : n.createElement("div", null);
       }
-      var y = r("mrSG"),
-        _ = r("WF3T"),
-        g = r("9w6b"),
-        v = (function () {
+      var _ = r("JCps"),
+        y = r("knQc"),
+        g = r("6Y59"),
+        v = r("5E+2"),
+        w = r("exH9"),
+        S = r("Lfwj"),
+        M = r("eN6m"),
+        C = r("trWU"),
+        z = r("nWbB"),
+        R = r("boaH");
+      function O(e) {
+        var t = e.conferenceInfo.broadcastSteamID.ConvertTo64BitString();
+        return n.createElement(
+          m.a,
+          null,
+          n.createElement(C.a, {
+            steamIDBroadcast: t,
+            watchLocation: 5,
+            bStartMuted: !0,
+          })
+        );
+      }
+      function j(e) {
+        var t = e.conferenceInfo.broadcastSteamID.ConvertTo64BitString(),
+          r = R.a.GetBroadcast(t);
+        return n.createElement(
+          "div",
+          {
+            className: Object(w.a)(
+              S.BroadcastChatCtn,
+              e.className ? "" + e.className : ""
+            ),
+          },
+          n.createElement(
+            m.a,
+            null,
+            n.createElement(M.a, {
+              emoticonStore: z.g,
+              watchLocation: 5,
+              steamID: t,
+              broadcastID: r ? r.m_ulBroadcastID : void 0,
+            })
+          )
+        );
+      }
+      var F = r("mrSG"),
+        T = r("WF3T"),
+        W = r("9w6b"),
+        I = (function () {
           function e() {
             this.m_inFlight = null;
           }
           return (
             (e.prototype.LoadInitialCalendarData = function (e, t) {
-              return Object(y.b)(this, void 0, void 0, function () {
-                return Object(y.e)(this, function (r) {
+              return Object(F.b)(this, void 0, void 0, function () {
+                return Object(F.e)(this, function (r) {
                   return (
                     this.m_inFlight ||
                       (this.m_inFlight = this.InternalLoadInitialCalendarData(
@@ -15116,19 +15605,19 @@
               });
             }),
             (e.prototype.InternalLoadInitialCalendarData = function (e, t) {
-              return Object(y.b)(this, void 0, void 0, function () {
+              return Object(F.b)(this, void 0, void 0, function () {
                 var r, n;
-                return Object(y.e)(this, function (i) {
+                return Object(F.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
                       return (
-                        g.a.IsInitialized() || g.a.InitGlobal(),
-                        Object(_.c)({
+                        W.a.IsInitialized() || W.a.InitGlobal(),
+                        Object(T.c)({
                           collectionid: t,
                           bSectionByDay: !0,
                           rtCalendarEnd: e,
                         }),
-                        (r = Object(_.b)()),
+                        (r = Object(T.b)()),
                         (n = Object(l.g)(
                           "conference_calendar",
                           "application_config"
@@ -15161,35 +15650,35 @@
             e
           );
         })(),
-        S = r("1BdX"),
-        w = r("5izx"),
-        M = r("6oCP"),
-        z = r("fA8f"),
-        C = r("cGQe"),
-        R = r("r3N9"),
-        F = r("GiuM"),
-        O = r("opsS");
-      function j(e) {
+        A = r("1BdX"),
+        U = r("5izx"),
+        E = r("6oCP"),
+        N = r("fA8f"),
+        D = r("cGQe"),
+        G = r("r3N9"),
+        Q = r("GiuM"),
+        x = r("opsS");
+      function P(e) {
         var t = e.displayLocation,
           r = e.fnChangeModalEvent,
           i = n.useState(null),
           a = i[0],
           o = i[1],
-          s = Object(F.d)("emgid", null),
+          s = Object(Q.d)("emgid", null),
           c = s[0],
           l = s[1],
-          d = Object(F.d)("emclan", null),
+          d = Object(Q.d)("emclan", null),
           m = d[0],
           f = d[1];
         return (
-          Object(O.d)(r, function (e, t) {
+          Object(x.d)(r, function (e, t) {
             l(e), f(u.a.InitFromClanID(t).ConvertTo64BitString());
           }),
           n.useEffect(
             function () {
               if (null != c && null != m) {
                 var e = new u.a(m);
-                M.d
+                E.d
                   .LoadPartnerEventFromClanEventGIDAndClanSteamID(e, c, 0)
                   .then(o);
               }
@@ -15197,11 +15686,11 @@
             [c, m]
           ),
           a
-            ? n.createElement(R.a, {
+            ? n.createElement(G.a, {
                 appid: a.appid,
                 trackingLocation: t,
                 announcementGID: a.GetAnnouncementGID(),
-                partnerEventStore: M.d,
+                partnerEventStore: E.d,
                 eventModel: a,
                 showAppHeader: !0,
                 closeModal: function () {
@@ -15211,19 +15700,24 @@
             : null
         );
       }
-      var T = r("gPCo"),
-        W = r("0OaU"),
-        I = r("r64O"),
-        U = r("qiKp"),
-        A = r("exH9"),
-        E = r("Z1oF"),
-        N = r("CdLH"),
-        D = r("JsZI");
-      function x(e) {
-        var t = Object(_.b)(),
-          r = Object(w.b)(),
+      var L = r("gPCo"),
+        q = r("0OaU"),
+        k = r("r64O"),
+        V = r("qiKp"),
+        H = r("Z1oF"),
+        K = r("CdLH"),
+        J = r("JsZI");
+      function Y(e) {
+        var t = Object(T.b)(),
+          r = Object(U.b)(),
           i = t.GetActiveEventsAt(r) || [],
-          a = n.useState(new U.a())[0];
+          a = n.useState(new V.a())[0],
+          o = n.useCallback(
+            function (e, t) {
+              return a.Dispatch(e, t);
+            },
+            [a]
+          );
         return 0 == t.GetNumEventsLoaded()
           ? n.createElement(
               "div",
@@ -15232,28 +15726,26 @@
             )
           : n.createElement(
               "div",
-              { className: D.EventsScheduleCtn },
-              n.createElement(j, { displayLocation: 6, fnChangeModalEvent: a }),
-              n.createElement(L, { rgActiveEvents: i }),
-              n.createElement(P, {
+              { className: J.EventsScheduleCtn },
+              n.createElement(P, { displayLocation: 6, fnChangeModalEvent: a }),
+              n.createElement(ee, {
                 rgActiveEvents: i,
-                fnDisplayModalEvent: function (e, t) {
-                  return a.Dispatch(e, t);
-                },
-              })
+                fnDisplayModalEvent: o,
+              }),
+              n.createElement(X, { rgActiveEvents: i, fnDisplayModalEvent: o })
             );
       }
-      function G(e) {
+      function $(e) {
         return n.createElement(
-          V,
-          Object(y.a)({}, e),
-          n.createElement(x, Object(y.a)({}, e))
+          ne,
+          Object(F.a)({}, e),
+          n.createElement(Y, Object(F.a)({}, e))
         );
       }
-      function P(e) {
+      function X(e) {
         var t = e.rgActiveEvents,
-          r = Object(_.b)(),
-          i = Object(w.b)(),
+          r = Object(T.b)(),
+          i = Object(U.b)(),
           a = r
             .GetCalendarItemsInTimeRange(i + 1)
             .rgCalendarItems.filter(function (e) {
@@ -15272,17 +15764,17 @@
             )
           : n.createElement(
               "div",
-              { className: D.UpcomingEventsCtn },
+              { className: J.UpcomingEventsCtn },
               n.createElement(
                 "div",
-                { className: D.SectionTitle },
+                { className: J.SectionTitle },
                 Object(B.f)("#Conference_ScheduleNext")
               ),
               n.createElement(
                 "div",
-                { className: D.EventSchedCtn },
+                { className: J.EventSchedCtn },
                 a.map(function (r, i) {
-                  return n.createElement(q, {
+                  return n.createElement(Z, {
                     key: r.unique_id,
                     bDisplayAsUpNext: Boolean(0 == i && t.length >= 1),
                     calendarItem: r,
@@ -15292,31 +15784,31 @@
               )
             );
       }
-      function q(e) {
+      function Z(e) {
         var t = e.calendarItem,
           r = e.bDisplayAsUpNext,
           i = e.fnDisplayModalEvent,
-          a = M.d.GetClanEventModel(t.unique_id),
+          a = E.d.GetClanEventModel(t.unique_id),
           o = Object(s.d)(l.c.LANGUAGE),
-          u = Object(w.b)(),
+          u = Object(U.b)(),
           c = a.GetStartTimeAndDateUnixSeconds(),
-          d = Object(N.b)(new Date(1e3 * u), new Date(1e3 * c));
+          d = Object(K.b)(new Date(1e3 * u), new Date(1e3 * c));
         return n.createElement(
           "div",
           {
-            className: D.EventItemCtn,
+            className: J.EventItemCtn,
             onClick: function () {
               return i(a.GID, a.clanSteamID.GetAccountID());
             },
           },
           n.createElement(
             "div",
-            { className: D.Title },
+            { className: J.Title },
             a.GetNameWithFallback(o)
           ),
           n.createElement(
             "div",
-            { className: D.SessionTime },
+            { className: J.SessionTime },
             !d && n.createElement("div", null, Object(B.k)(c, !0)),
             n.createElement(
               "div",
@@ -15326,13 +15818,13 @@
                     "#Conference_StartInMin",
                     Math.max(1, Math.floor((c - u) / 60))
                   )
-                : Object(B.f)("#Conference_StartsAt", Object(E.h)(c))
+                : Object(B.f)("#Conference_StartsAt", Object(H.h)(c))
             )
           ),
           n.createElement(
             "div",
-            { className: Object(A.a)(D.ReminderContainer, D.OnlyIcon) },
-            n.createElement(C.a, {
+            { className: Object(w.a)(J.ReminderContainer, J.OnlyIcon) },
+            n.createElement(D.a, {
               eventModel: a,
               eventGID: a.GID,
               lang: o,
@@ -15343,34 +15835,35 @@
           )
         );
       }
-      function L(e) {
-        var t = e.rgActiveEvents;
+      function ee(e) {
+        var t = e.rgActiveEvents,
+          r = e.fnDisplayModalEvent;
         if (!t || 0 == t.length) return null;
-        Object(I.a)(
+        Object(k.a)(
           1 == t.length,
           "Unexpected number of active events in the conference tool"
         );
-        var r = t[0],
-          i = Object(s.d)(l.c.LANGUAGE),
-          a = S.a.ParseEventModelPresenters(r, i);
+        var i = t[0],
+          a = Object(s.d)(l.c.LANGUAGE),
+          o = A.a.ParseEventModelPresenters(i, a);
         return n.createElement(
           "div",
-          { className: D.ActiveEventCtn },
+          { className: J.ActiveEventCtn },
           n.createElement(
             "div",
-            { className: D.LiveNote },
-            n.createElement("div", { className: D.LiveIcon }),
+            { className: J.LiveNote },
+            n.createElement("div", { className: J.LiveIcon }),
             "Live Now!"
           ),
           n.createElement(
             "div",
-            { className: D.Title },
-            r.GetNameWithFallback(i)
+            { className: J.Title },
+            i.GetNameWithFallback(a)
           ),
-          Boolean(a) &&
-            a.map(function (e) {
+          Boolean(o) &&
+            o.map(function (e) {
               return n.createElement(
-                T.b,
+                L.b,
                 {
                   key: "presenter_" + e.name,
                   name: e.name,
@@ -15384,17 +15877,26 @@
             }),
           n.createElement(
             "div",
-            { className: D.EventDescription },
-            r.GetSummaryWithFallback(i)
+            { className: J.EventDescription },
+            i.GetSummaryWithFallback(a)
+          ),
+          n.createElement(
+            "div",
+            {
+              onClick: function () {
+                return r(i.GID, i.clanSteamID.GetAccountID());
+              },
+            },
+            Object(B.f)("#EventEmail_Button_ClickForMoreDetails")
           )
         );
       }
-      function Q(e) {
+      function te(e) {
         var t = e.conferenceInfo,
-          r = Object(_.b)(),
-          i = Object(w.b)(),
+          r = Object(T.b)(),
+          i = Object(U.b)(),
           a = r.GetActiveEventsAt(i) || [],
-          o = n.useState(new U.a())[0],
+          o = n.useState(new V.a())[0],
           s = r
             .GetCalendarItemsInTimeRange(t.rtStartTime - 1, i)
             .rgCalendarItems.filter(function (e) {
@@ -15413,11 +15915,11 @@
             )
           : n.createElement(
               "div",
-              { className: D.PastEventsCtn },
-              n.createElement(j, { displayLocation: 6, fnChangeModalEvent: o }),
+              { className: J.PastEventsCtn },
+              n.createElement(P, { displayLocation: 6, fnChangeModalEvent: o }),
               s.map(function (e) {
-                var t = M.d.GetClanEventModel(e.unique_id);
-                return n.createElement(z.a, {
+                var t = E.d.GetClanEventModel(e.unique_id);
+                return n.createElement(N.a, {
                   key: "row" + e.unique_id,
                   eventModel: t,
                   calendarEvent: e,
@@ -15430,14 +15932,14 @@
               })
             );
       }
-      function k(e) {
+      function re(e) {
         return n.createElement(
-          V,
-          Object(y.a)({}, e),
-          n.createElement(Q, Object(y.a)({}, e))
+          ne,
+          Object(F.a)({}, e),
+          n.createElement(te, Object(F.a)({}, e))
         );
       }
-      function V(e) {
+      function ne(e) {
         var t = e.conferenceInfo,
           r = Object(n.useState)(!0),
           i = r[0],
@@ -15445,7 +15947,7 @@
         return (
           Object(n.useEffect)(
             function () {
-              v.Get()
+              I.Get()
                 .LoadInitialCalendarData(t.rtEndTime, t.strConferenceID)
                 .finally(function () {
                   return a(!1);
@@ -15454,55 +15956,11 @@
             [t.rtEndTime, t.strConferenceID]
           ),
           i
-            ? n.createElement(W.a, null)
+            ? n.createElement(q.a, null)
             : n.createElement(n.Fragment, null, e.children)
         );
       }
-      var H = r("knQc"),
-        K = r("Lfwj"),
-        J = r("eN6m"),
-        Y = r("trWU"),
-        $ = r("nWbB"),
-        X = r("boaH");
-      function Z(e) {
-        var t = e.conferenceInfo.broadcastSteamID.ConvertTo64BitString();
-        return n.createElement(
-          m.a,
-          null,
-          n.createElement(Y.a, {
-            steamIDBroadcast: t,
-            watchLocation: 5,
-            bStartMuted: !0,
-          })
-        );
-      }
-      function ee(e) {
-        var t = e.conferenceInfo.broadcastSteamID.ConvertTo64BitString(),
-          r = X.a.GetBroadcast(t);
-        return n.createElement(
-          "div",
-          {
-            className: Object(A.a)(
-              K.BroadcastChatCtn,
-              e.className ? "" + e.className : ""
-            ),
-          },
-          n.createElement(
-            m.a,
-            null,
-            n.createElement(J.a, {
-              emoticonStore: $.g,
-              watchLocation: 5,
-              steamID: t,
-              broadcastID: r ? r.m_ulBroadcastID : void 0,
-            })
-          )
-        );
-      }
-      var te = r("6Y59"),
-        re = r("5STL"),
-        ne = r("JCps"),
-        ie = r("5E+2");
+      var ie = r("5STL");
       function ae(e) {
         var t = e.conferenceInfo,
           r = n.useState(!1),
@@ -15510,43 +15968,56 @@
           a = r[1];
         return n.createElement(
           "div",
-          { className: re.ConferenceHome },
+          { className: ie.ConferenceHome },
           n.createElement(
             "div",
-            { className: Object(A.a)(re.LeftCol, i ? "Active" : "Hidden") },
+            { className: Object(w.a)(ie.LeftCol, i ? "Active" : "Hidden") },
             n.createElement(
               "div",
-              { className: re.AgendaCtn },
-              n.createElement(G, { conferenceInfo: t }),
+              { className: ie.AgendaCtn },
+              n.createElement($, { conferenceInfo: t }),
               n.createElement(
                 "div",
                 {
-                  className: re.AgendaToggle,
+                  className: ie.AgendaToggle,
                   onClick: function () {
                     a(!i);
                   },
                 },
                 n.createElement(
-                  "div",
-                  { className: re.CollapseBtn },
-                  n.createElement(te.q, { angle: 0 })
+                  v.a,
+                  { toolTipContent: Object(B.f)("#QAndA_HideSchedule") },
+                  n.createElement(
+                    "div",
+                    { className: ie.CollapseBtn },
+                    n.createElement(g.q, { angle: 0 })
+                  )
                 ),
                 n.createElement(
-                  "div",
-                  { className: re.CalendarBtn },
-                  n.createElement(te.j, null)
+                  v.a,
+                  { toolTipContent: Object(B.f)("#QAndA_ShowSchedule") },
+                  n.createElement(
+                    "div",
+                    { className: ie.CalendarBtn },
+                    n.createElement(g.j, null),
+                    n.createElement(
+                      "div",
+                      { className: ie.CalendarText },
+                      "See Event Schedule"
+                    )
+                  )
                 )
               )
             )
           ),
           n.createElement(
             "div",
-            { className: re.MainCol },
+            { className: ie.MainCol },
             n.createElement(
               "div",
-              { className: re.BroadcastCtn },
-              n.createElement(Z, { conferenceInfo: t }),
-              n.createElement("div", { className: re.videoContainerSizer })
+              { className: ie.BroadcastCtn },
+              n.createElement(O, { conferenceInfo: t }),
+              n.createElement("div", { className: ie.videoContainerSizer })
             ),
             n.createElement(oe, { conferenceInfo: t })
           )
@@ -15554,86 +16025,118 @@
       }
       function oe(e) {
         var t = e.conferenceInfo,
-          r = n.useState(!0),
+          r = n.useState(window.innerWidth > 910),
           i = r[0],
           a = r[1],
           o = n.useState(!0),
           s = o[0],
-          u = o[1];
+          u = o[1],
+          c =
+            l.c.COMMUNITY_BASE_URL +
+            "broadcast/chatonly/" +
+            t.broadcastSteamID.ConvertTo64BitString(),
+          d =
+            l.c.COMMUNITY_BASE_URL +
+            "questions/" +
+            l.b.VANITY_ID +
+            "/view/" +
+            t.globalQandASessionID;
         return n.createElement(
           "div",
-          { className: re.InteractionCtn },
+          { className: ie.InteractionCtn },
           n.createElement(
             "div",
-            { className: re.TabControlsCtn },
+            { className: ie.TabControlsCtn },
             n.createElement(
               "div",
               {
-                className: Object(A.a)(
-                  re.InnerChatTab,
-                  re.ChatTab,
-                  i ? re.Active : ""
+                className: Object(w.a)(
+                  ie.InnerChatTab,
+                  ie.ChatTab,
+                  i ? ie.Active : ""
                 ),
-                onClick: function () {
-                  a(!0), u(!1);
-                },
               },
-              Object(B.f)("#Conference_Tab_Chat")
+              n.createElement(
+                "div",
+                {
+                  className: ie.TabTitle,
+                  onClick: function () {
+                    a(!0), u(!1);
+                  },
+                },
+                Object(B.f)("#Conference_Tab_Chat")
+              ),
+              n.createElement(
+                "a",
+                { className: ie.Popout, href: c, target: "_blank" },
+                n.createElement(g.Q, null)
+              )
             ),
             n.createElement(
               "div",
               {
-                className: Object(A.a)(
-                  re.InnerChatTab,
-                  re.QATab,
-                  s ? re.Active : ""
+                className: Object(w.a)(
+                  ie.InnerChatTab,
+                  ie.QATab,
+                  s ? ie.Active : ""
                 ),
-                onClick: function () {
-                  a(!1), u(!0);
-                },
               },
-              Object(B.f)("#Conference_Tab_QandA")
+              n.createElement(
+                "div",
+                {
+                  className: ie.TabTitle,
+                  onClick: function () {
+                    a(!1), u(!0);
+                  },
+                },
+                Object(B.f)("#Conference_Tab_QandA")
+              ),
+              n.createElement(
+                "a",
+                { className: ie.Popout, href: d, target: "_blank" },
+                n.createElement(g.Q, null)
+              )
             ),
             n.createElement(
-              ie.a,
+              v.a,
               { toolTipContent: Object(B.f)("#QAndA_ChatToggle_ShowBoth") },
               n.createElement(
                 "div",
                 {
-                  className: re.ShowBothTabs,
+                  className: ie.ShowBothTabs,
                   onClick: function () {
                     a(!0), u(!0);
                   },
                 },
-                n.createElement(te.Y, null)
+                n.createElement(g.Y, null)
               )
             )
           ),
           n.createElement(
             "div",
-            { className: re.ChatStack },
+            { className: ie.ChatStack },
             Boolean((i && s) || (!s && !i)) &&
               n.createElement(
                 n.Fragment,
                 null,
                 n.createElement(
                   "div",
-                  { className: re.ChatColumn },
-                  n.createElement(ee, {
+                  { className: ie.ChatColumn },
+                  n.createElement(j, {
                     conferenceInfo: t,
-                    className: re.ChatCtn,
+                    className: ie.ChatCtn,
                   })
                 ),
                 n.createElement(
                   "div",
-                  { className: re.QAColumn },
-                  n.createElement(ne.a, { gidSession: t.globalQandASessionID })
+                  { className: ie.QAColumn },
+                  n.createElement(_.b, { gidSession: t.globalQandASessionID })
                 )
               ),
             Boolean(i && !s) &&
-              n.createElement(ee, { conferenceInfo: t, className: re.ChatCtn }),
+              n.createElement(j, { conferenceInfo: t, className: ie.ChatCtn }),
             Boolean(!i && s) &&
-              n.createElement(ne.a, { gidSession: t.globalQandASessionID })
+              n.createElement(_.b, { gidSession: t.globalQandASessionID })
           )
         );
       }
@@ -15653,7 +16156,7 @@
           "div",
           null,
           n.createElement("div", null, i),
-          n.createElement(H.a, { text: a, bShowErrorInfo: !1 }),
+          n.createElement(y.a, { text: a, bShowErrorInfo: !1 }),
           n.createElement(
             "div",
             null,
@@ -15666,7 +16169,7 @@
       }
       function ue(e) {
         var t = e.conferenceInfo;
-        return n.createElement(k, { conferenceInfo: t });
+        return n.createElement(re, { conferenceInfo: t });
       }
       var ce = r("PpkI");
       function le(e) {
@@ -15730,6 +16233,10 @@
             n.createElement(p.a, {
               className: ce.LogoImage,
               rgSources: t.strLocalizedLogos,
+            }),
+            n.createElement(p.a, {
+              className: ce.LogoImageMobile,
+              rgSources: t.strLocalizedMobileLogos,
             }),
             n.createElement(
               "div",
@@ -15912,10 +16419,14 @@
     },
     hII0: function (e, t, r) {
       e.exports = {
+        QAFullPageView: "questions_QAFullPageView_3tZpF",
         QAMainCtn: "questions_QAMainCtn_hHqRc",
-        InsetShadowTopCtn: "questions_InsetShadowTopCtn_ak9JV",
+        QAModeratorColumn: "questions_QAModeratorColumn_nfftC",
+        QASplitColumns: "questions_QASplitColumns_1CRIg",
+        ModeratorInstructions: "questions_ModeratorInstructions_RqtnW",
         InputButton: "questions_InputButton_1z1rt",
         Reload: "questions_Reload_3LIo4",
+        Reloading: "questions_Reloading_1hooL",
         SignInButton: "questions_SignInButton_GRHnX",
         QAHeader: "questions_QAHeader_3skHm",
         QATitleRow: "questions_QATitleRow_2qdcm",
@@ -15926,27 +16437,32 @@
         ButtonCtn: "questions_ButtonCtn_3kFHr",
         SaveSpinner: "questions_SaveSpinner_20svv",
         QuestionsCtn: "questions_QuestionsCtn_1W6uJ",
+        InsetShadowTopCtn: "questions_InsetShadowTopCtn_ak9JV",
         InsetShadowTop: "questions_InsetShadowTop_1C2e4",
         QuestionsHeader: "questions_QuestionsHeader_jUQG9",
         QuestionsTitle: "questions_QuestionsTitle_2CYLB",
         QuestionList: "questions_QuestionList_28dwO",
+        AnsweredSectionHeader: "questions_AnsweredSectionHeader_3cWpk",
         Question: "questions_Question_3BIOo",
         Hidden: "questions_Hidden_3XPCk",
         QuestionCtn: "questions_QuestionCtn_31sLy",
         UserAvatar: "questions_UserAvatar_2ojKe",
         QuestionText: "questions_QuestionText_2NuCE",
+        QuestionAndVotes: "questions_QuestionAndVotes_ChywO",
         QuestionTitle: "questions_QuestionTitle_2AXcH",
         QuestionStats: "questions_QuestionStats_1DzgV",
         PostTime: "questions_PostTime_2hfBu",
         Votes: "questions_Votes_2IyuQ",
-        RateIcon: "questions_RateIcon_2j0Gw",
-        Vote_CannotVote: "questions_Vote_CannotVote_2Pq4z",
         Vote_Ready: "questions_Vote_Ready_3_8_a",
         Vote_Positive: "questions_Vote_Positive_eWDCy",
+        RateIcon: "questions_RateIcon_2j0Gw",
+        Vote_CannotVote: "questions_Vote_CannotVote_2Pq4z",
         DateAndTime: "questions_DateAndTime_4VjnZ",
         Answer: "questions_Answer_wNABP",
         AnswerTitle: "questions_AnswerTitle_1c4mo",
+        AnswerCheck: "questions_AnswerCheck_u8uV8",
         AnswerText: "questions_AnswerText_3ar8c",
+        ModerationHeader: "questions_ModerationHeader_37OKc",
         ModeratorSection: "questions_ModeratorSection_3tP54",
         ToolRow: "questions_ToolRow_2c2vo",
         ToolLabel: "questions_ToolLabel_3prTN",

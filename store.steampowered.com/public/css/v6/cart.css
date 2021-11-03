@@ -1624,6 +1624,10 @@ div.game_hover {
 	margin-right: 8px;
 }
 
+.checkout_eu_digital_content {
+	margin-top: 30px;
+}
+
 .cart_total_row
 {
 	font-size: 13px;	
@@ -2114,7 +2118,7 @@ label.send_choice_txt {
 	width: 100px;
 }
 
-.checkout_checkbox, #accept_ssa
+.checkout_checkbox
 {
 	display: block;
 	float:left;
@@ -2125,6 +2129,16 @@ label.send_choice_txt {
 	margin-right: 5px;
 	margin-bottom: 0px;
 	margin-top: 5px;
+	font-size: 14px;
+}
+
+#accept_ssa {
+	display: block;
+	float:left;
+	clear:left;
+	height: 14px;
+	padding: 0px;
+	margin: 3px 5px 0px 0px;
 	font-size: 14px;
 }
 
@@ -3011,4 +3025,22 @@ body.checkout .block .block_content {
 	html.responsive .cart_checkout_buttons {
 		padding-left: 16px; /* Trigger wrapping before we butt up against container. This value matches the right margin on the buttons themselves */
 	}
+
+	#wallet_code {
+		width: unset;
+	}
+
+	.redeem_wallet_code_upsell div {
+		width: unset;
+	}
+
+	.redeem_wallet_code_upsell {
+		padding-bottom: 24px;
+		padding-top: 24px;
+	}
+
+	#main_content {
+		background-image: none !important;
+	}
+
 }

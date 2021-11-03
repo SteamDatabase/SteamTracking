@@ -53,6 +53,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 32vw;
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -103,7 +104,6 @@
 		font-weight: 700;
 		text-shadow: unset;
 		text-transform: unset;
-		margin-top: 8px !important; /* Overriding important fromt contenthub css* */
 		padding: unset;
         color: white;
 	}
@@ -239,7 +239,6 @@
         margin-top: unset;
         color: white;
         font: var(--gpText-BodyLarge);
-        font-weight: 500;
     }
 
     html.responsive .search_result_row .col.search_released {

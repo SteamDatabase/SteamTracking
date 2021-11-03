@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6868639";
+var CLSTAMP = "6871399";
 /* Third-party software licenses can be found at licenses.txt */
 !(function (t) {
   function e(e) {
@@ -39,7 +39,7 @@ var CLSTAMP = "6868639";
               "javascript/legacy_web/" +
               ({ 0: "gamepad" }[t] || t) +
               ".js?contenthash=" +
-              { 0: "4f026c60530bf4397eee" }[t]
+              { 0: "efff3f37e153f554859e" }[t]
             );
           })(t));
         var u = new Error();
@@ -542,7 +542,11 @@ PERFORMANCE OF THIS SOFTWARE.
             (t.prototype.Dispatch = function () {
               for (var t = [], e = 0; e < arguments.length; e++)
                 t[e] = arguments[e];
-              for (var n = 0, o = this.m_vecCallbacks; n < o.length; n++) {
+              for (
+                var n = 0, o = Array.from(this.m_vecCallbacks);
+                n < o.length;
+                n++
+              ) {
                 var r = o[n];
                 r.apply(void 0, t);
               }
