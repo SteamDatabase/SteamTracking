@@ -4958,8 +4958,9 @@ function SetTabEnabled( tab_name, bResetTab )
 				if ( !bTabNameOK )
 			return;
 
-		$( 'checkout_page_content' ).className = 'page_content ' + tab_name + '_active';
-			
+		if ( $( 'checkout_page_content' ) )
+			$( 'checkout_page_content' ).className = 'page_content ' + tab_name + '_active';
+
 		for( var i=0; i < rgValidTabs.length; ++i )
 		{
 			var curTab = rgValidTabs[i];
