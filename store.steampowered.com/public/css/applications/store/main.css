@@ -12079,12 +12079,11 @@ html:not(.touch)
   margin-left: 24px;
   margin-top: 24px;
   margin-bottom: 40px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   position: relative;
-  background-color: #130e03;
+  border: solid 1px #000;
   background-size: cover;
-  color: #bb8f0d;
+  color: #fff;
 }
 .nominationandvote_InLibraryView_pqLcz
   .nominationandvote_SteamAwardContainer_3n6v2 {
@@ -12099,9 +12098,7 @@ html:not(.touch)
   box-sizing: border-box;
   position: relative;
   padding: 16px;
-  border-top-left-radius: 4px;
-  background-color: #1a1a06;
-  height: 153px;
+  height: 198px;
   font-size: 12px;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
@@ -12109,7 +12106,7 @@ html:not(.touch)
   .nominationandvote_SteamAwardHeaderImage__lRFQ {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -10px;
   max-width: 100%;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
@@ -12125,20 +12122,20 @@ html:not(.touch)
   .nominationandvote_SteamAwardHeader_2jgrT
   .nominationandvote_SteamAwardMainTitle_161Yb {
   position: relative;
-  color: #bb8f0d;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 36px;
   line-height: 36px;
   padding-right: 90px;
+  padding-bottom: 10px;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardHeader_2jgrT
   .nominationandvote_SteamAwardSubTitle_Sxxel {
   position: relative;
   text-transform: uppercase;
-  font-size: 12px;
-  color: #bb8f0d;
+  color: #fff;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardHeader_2jgrT
@@ -12164,7 +12161,8 @@ html:not(.touch)
   position: relative;
   padding-top: 15px;
   width: 85%;
-  color: #c9d3d9;
+  color: #fff;
+  font-size: 14px;
   font-style: italic;
   display: flex;
 }
@@ -12191,9 +12189,8 @@ html:not(.touch)
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0 {
-  padding: 4px 10px 8px;
-  color: #bb8f0d;
-  font-size: 12px;
+  padding: 0px;
+  color: #fff;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -12203,13 +12200,16 @@ html:not(.touch)
   text-transform: uppercase;
   margin-bottom: 4px;
   letter-spacing: 0.05em;
+  margin-left: 15px;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
   .nominationandvote_SteamAwardCategoryTitle_JVE9O {
   font-weight: 500;
   font-size: 15px;
-  line-height: 31px;
+  text-align: center;
+  margin: auto 0;
+  width: 100%;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
@@ -12220,7 +12220,7 @@ html:not(.touch)
   .nominationandvote_SteamAwardVoteWidget_khWz0
   .nominationandvote_SteamAwardVoteButtonArea_1v9LH {
   border-radius: 4px;
-  padding: 0px 20% 6px 6px;
+  padding: 0px 20% 6px 0px;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
@@ -12244,7 +12244,7 @@ html:not(.touch)
   letter-spacing: 1.8px;
   font-weight: 600;
   padding: 5px 10px;
-  color: #f5db7e;
+  color: #fff;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
@@ -12283,35 +12283,43 @@ html:not(.touch)
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
   .nominationandvote_SteamAwardNominateButton_1uxCj {
-  border: 1px solid #bb8f0d;
+  border: 1px solid #fff;
   border-radius: 4px;
   padding: 4px 6px 0px;
+  margin: 20px 15px 15px 15px;
+  background: #2f2563;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
   .nominationandvote_SteamAwardNominateButton_1uxCj:hover {
-  border: 1px solid #dcb945;
+  border: 1px solid #fff;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
   .nominationandvote_SteamAwardNominateButton_1uxCj
   .DialogCheckbox {
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid #bb8f0d;
-  border-radius: 12px;
-  margin-top: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  margin: auto 0;
+  max-width: 22px;
+  width: 100%;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
   .nominationandvote_SteamAwardNominateButton_1uxCj
   .nominationandvote_SteamAwardCategoryDesc_1V-8W {
-  margin-left: 32px;
+  margin-left: 0px;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
   .nominationandvote_SteamAwardLinkToNominationPage_3p83s {
   margin-top: 4px;
   text-decoration: underline;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.nominationandvote_SteamAwardVoteCheckBox_1G4MU {
+  display: flex;
 }
 .nominationandvote_SteamAwardModalGameTitle_15lc0 {
   color: #fff;
@@ -12338,13 +12346,13 @@ html:not(.touch)
 .steam_awards_vote_section
   .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardHeader_2jgrT {
-  height: 115px;
+  height: 150px;
 }
 .steam_awards_vote_section
   .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardHeader_2jgrT
   .nominationandvote_SteamAwardHeaderImage__lRFQ {
-  height: 143px;
+  height: 180px;
 }
 .steam_awards_vote_section
   .nominationandvote_SteamAwardContainer_3n6v2

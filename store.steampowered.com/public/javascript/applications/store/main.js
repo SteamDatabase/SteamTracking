@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6871399";
+var CLSTAMP = "6879154";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -700,6 +700,8 @@ var CLSTAMP = "6871399";
           "nominationandvote_SteamAwardNominateButton_1uxCj",
         SteamAwardLinkToNominationPage:
           "nominationandvote_SteamAwardLinkToNominationPage_3p83s",
+        SteamAwardVoteCheckBox:
+          "nominationandvote_SteamAwardVoteCheckBox_1G4MU",
         SteamAwardModalGameTitle:
           "nominationandvote_SteamAwardModalGameTitle_15lc0",
         ExpiredEventHeader: "nominationandvote_ExpiredEventHeader_3O3Xs",
@@ -7251,16 +7253,16 @@ var CLSTAMP = "6871399";
       "use strict";
       n.r(t),
         n.d(t, "EventDisplaySteamAwardNomination", function () {
-          return L;
+          return T;
         }),
         n.d(t, "ConfirmOverwriteVoteOrNominationDialog", function () {
-          return D;
+          return I;
         }),
         n.d(t, "EventDisplaySteamAwardVote", function () {
-          return j;
+          return L;
         }),
         n.d(t, "WinterSaleSteamAwardVoteWrapper", function () {
-          return R;
+          return j;
         });
       var r = n("mrSG"),
         a = n("vDqi"),
@@ -7286,10 +7288,8 @@ var CLSTAMP = "6871399";
         E = n("fpVW"),
         C = n.n(E),
         A = n("BFsE"),
-        B = n("wd/R"),
-        w = n.n(B),
-        T = n("5eAM");
-      function I(e) {
+        B = n("5eAM");
+      function w(e) {
         return f.k.logged_in
           ? !f.k.is_limited ||
               (Object(_.d)(
@@ -7314,7 +7314,7 @@ var CLSTAMP = "6871399";
             ),
             !1);
       }
-      var L = (function (e) {
+      var T = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -7322,13 +7322,14 @@ var CLSTAMP = "6871399";
               (t.m_strPreviousNomineeTitle = null),
               (t.m_cancelSignal = i.a.CancelToken.source()),
               (t.m_refCheckbox = c.createRef()),
+              (t.m_nominationEventDetails = null),
               t
             );
           }
           return (
             Object(r.d)(t, e),
             (t.prototype.componentDidMount = function () {
-              this.FetchNominationState();
+              this.FetchNominationState(), this.GetNominationEventDetails();
             }),
             (t.prototype.componentDidUpdate = function () {
               this.props.event.GetSteamAwardCategory() !=
@@ -7340,6 +7341,67 @@ var CLSTAMP = "6871399";
               this.m_cancelSignal.cancel(
                 "EventDisplaySteamAwardNomination is being unmounted"
               );
+            }),
+            (t.prototype.GetNominationEventDetails = function () {
+              var e, t;
+              return Object(r.b)(this, void 0, void 0, function () {
+                var n, a, o, s, c;
+                return Object(r.e)(this, function (r) {
+                  switch (r.label) {
+                    case 0:
+                      (n =
+                        f.d.STORE_BASE_URL +
+                        "steamawards/ajaxgetsteamawardeventdetails"),
+                        (a = {
+                          eSuggestedCategory: this.props.event.GetSteamAwardCategory(),
+                        }),
+                        (r.label = 1);
+                    case 1:
+                      return (
+                        r.trys.push([1, 3, , 4]),
+                        [
+                          4,
+                          i.a.get(n, {
+                            params: a,
+                            withCredentials: !1,
+                            cancelToken: this.m_cancelSignal.token,
+                          }),
+                        ]
+                      );
+                    case 2:
+                      return (
+                        (o = r.sent()),
+                        this.m_cancelSignal.token.reason
+                          ? [2]
+                          : (1 ==
+                              (null === (e = null == o ? void 0 : o.data) ||
+                              void 0 === e
+                                ? void 0
+                                : e.success) &&
+                              (null === (t = null == o ? void 0 : o.data) ||
+                              void 0 === t
+                                ? void 0
+                                : t.event_details) &&
+                              (this.m_nominationEventDetails =
+                                o.data.event_details),
+                            [3, 4])
+                      );
+                    case 3:
+                      return (
+                        (s = r.sent()),
+                        (c = Object(m.a)(s)),
+                        console.error(
+                          "Could not fetch award event details:" +
+                            c.strErrorMsg,
+                          c
+                        ),
+                        [3, 4]
+                      );
+                    case 4:
+                      return [2];
+                  }
+                });
+              });
             }),
             (t.prototype.FetchNominationState = function () {
               var e;
@@ -7451,7 +7513,7 @@ var CLSTAMP = "6871399";
                   return (t = this.props.event.GetSteamAwardCategory()) !=
                     this.state.eCategoryLoaded
                     ? [2]
-                    : I(!1)
+                    : w(!1)
                     ? ((n = this.props.event.appid),
                       this.state.nomineeAppID && this.state.nomineeAppID != n
                         ? e &&
@@ -7467,7 +7529,7 @@ var CLSTAMP = "6871399";
             (t.prototype.HandleConflict = function (e) {
               var t = this;
               Object(_.d)(
-                c.createElement(D, {
+                c.createElement(I, {
                   strLocTokenInfix: "Nomination",
                   strNewGameTitle: this.props.event.GetGameTitle(
                     this.props.lang
@@ -7552,13 +7614,9 @@ var CLSTAMP = "6871399";
               });
             }),
             (t.prototype.render = function () {
-              var e = Math.floor(Date.now() / 1e3),
-                t = w()("2020-11-25T10:00:00-08:00").unix(),
-                n = w()("2020-12-01T10:00:00-08:00").unix();
-              if (
-                this.props.event.GetStartTimeAndDateUnixSeconds() < t ||
-                e > n
-              )
+              if (!this.m_nominationEventDetails) return null;
+              var e = Math.floor(Date.now() / 1e3);
+              if (!this.m_nominationEventDetails.bIsAutumnSaleActive)
                 return c.createElement(
                   "div",
                   { className: S.a.ExpiredEventHeader },
@@ -7566,40 +7624,36 @@ var CLSTAMP = "6871399";
                   Object(d.f)("#SteamAwards_ExpiredEvent"),
                   " "
                 );
-              var r = this.props.event.GetSteamAwardCategory(),
-                a = r >= 50 && r < 60,
-                i =
-                  this.state.eCategoryLoaded == r &&
+              var t = {
+                  background: this.m_nominationEventDetails.strBackgroundCSS,
+                },
+                n = this.props.event.GetSteamAwardCategory(),
+                r =
+                  n >= this.m_nominationEventDetails.eSteamAwardCategoryIDMin &&
+                  n < this.m_nominationEventDetails.eSteamAwardCategoryIDMax,
+                a =
+                  this.state.eCategoryLoaded == n &&
                   this.state.nomineeAppID == this.props.event.appid,
-                o =
+                i =
                   this.props.event.BIsEventActionEnabled() ||
                   e < this.props.event.GetStartTimeAndDateUnixSeconds(),
-                s = a && (o || i),
-                l = new Date().getFullYear();
+                o = r && (i || a),
+                s = new Date().getFullYear();
               return c.createElement(
                 "div",
                 {
+                  style: t,
                   className: Object(p.a)(
                     S.a.SteamAwardContainer,
                     C.a.PartnerEventFont
                   ),
-                  style: a
-                    ? {
-                        backgroundImage:
-                          "url(https://steamcdn-a.akamaihd.net/store/promo/autumn2020/nom_modal_art_" +
-                          r +
-                          ".png?v=2)",
-                      }
-                    : void 0,
                 },
                 c.createElement(
                   "div",
                   { className: S.a.SteamAwardHeader },
                   c.createElement("img", {
                     className: S.a.SteamAwardHeaderImage,
-                    src:
-                      f.d.MEDIA_CDN_URL +
-                      "store/promo/autumn2020/event_nomination_banner_2020.png?v=2",
+                    src: "" + this.m_nominationEventDetails.strTrophyImg,
                   }),
                   c.createElement(
                     "div",
@@ -7614,10 +7668,10 @@ var CLSTAMP = "6871399";
                     c.createElement(
                       "div",
                       { className: S.a.SteamAwardSubTitle },
-                      o
+                      i
                         ? Object(d.f)("#SteamAwards_EventCallToAction")
-                        : Object(d.f)("#SteamAwards_EventVotingDateTeaser", l),
-                      o &&
+                        : Object(d.f)("#SteamAwards_EventVotingDateTeaser", s),
+                      i &&
                         c.createElement(
                           "a",
                           {
@@ -7633,8 +7687,8 @@ var CLSTAMP = "6871399";
                     c.createElement(
                       "div",
                       { className: S.a.SteamAwardHeaderText },
-                      o
-                        ? a
+                      i
+                        ? r
                           ? Object(d.f)(
                               "#SteamAwards_EventNominateGamePrompt_Long",
                               this.props.event.GetGameTitle(this.props.lang)
@@ -7656,30 +7710,20 @@ var CLSTAMP = "6871399";
                     )
                   )
                 ),
-                s &&
+                o &&
                   c.createElement(
                     "div",
                     { className: S.a.SteamAwardVoteWidget },
-                    c.createElement(
-                      "div",
-                      { className: S.a.SteamAwardVotePrompt },
-                      " ",
-                      o &&
-                        Object(d.f)(
-                          "#SteamAwards_EventNominateGamePrompt_CategoryPrefix"
-                        ),
-                      " "
-                    ),
                     c.createElement(
                       "div",
                       { className: S.a.SteamAwardNominateButton },
                       c.createElement(u.e, {
                         ref: this.m_refCheckbox,
                         classname: S.a.SteamAwardVoteCheckBox,
-                        checked: i,
+                        checked: a,
                         onChange: this.OnNominateClick,
-                        disabled: !o,
-                        color: "#bcf3dc",
+                        disabled: !i,
+                        color: "#FFFFFF",
                         highlightColor: "white",
                         label: c.createElement(
                           c.Fragment,
@@ -7687,19 +7731,19 @@ var CLSTAMP = "6871399";
                           c.createElement(
                             "div",
                             { className: S.a.SteamAwardCategoryTitle },
-                            Object(d.f)("#promo_steamawards2020_cat" + r)
+                            this.m_nominationEventDetails
+                              .strSuggestedCategoryTitle
                           ),
                           c.createElement(
                             "span",
                             { className: S.a.SteamAwardCategoryDesc },
-                            Object(d.f)(
-                              "#promo_steamawards2020_cat" + r + "_desc"
-                            )
+                            this.m_nominationEventDetails
+                              .strSuggestedCategoryDesc
                           )
                         ),
                       })
                     ),
-                    o && 52 != r
+                    i && n != this.m_nominationEventDetails.eLaborOfLove
                       ? c.createElement(
                           "div",
                           { className: S.a.SteamAwardLinkToNominationPage },
@@ -7726,12 +7770,13 @@ var CLSTAMP = "6871399";
               "m_strPreviousNomineeTitle",
               void 0
             ),
+            Object(r.c)([o.C], t.prototype, "m_nominationEventDetails", void 0),
             Object(r.c)([h.a], t.prototype, "OnNominateClick", null),
             Object(r.c)([h.a], t.prototype, "SaveNomination", null),
             (t = Object(r.c)([s.a], t))
           );
         })(c.Component),
-        D = (function (e) {
+        I = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -7785,7 +7830,7 @@ var CLSTAMP = "6871399";
             (t = Object(r.c)([s.a], t))
           );
         })(c.Component),
-        j = (function (e) {
+        L = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -7908,7 +7953,7 @@ var CLSTAMP = "6871399";
                   return (e = this.props.eVoteCategory) !=
                     this.state.eCategoryLoaded
                     ? [2]
-                    : I(!0)
+                    : w(!0)
                     ? ((t = this.props.appID),
                       this.state.votedForAppID && this.state.votedForAppID != t
                         ? this.HandleConflict(function () {
@@ -7922,9 +7967,9 @@ var CLSTAMP = "6871399";
             }),
             (t.prototype.HandleConflict = function (e) {
               var t = this,
-                n = T.a.GetAppLinkInfo(this.props.appID);
+                n = B.a.GetAppLinkInfo(this.props.appID);
               Object(_.d)(
-                c.createElement(D, {
+                c.createElement(I, {
                   strLocTokenInfix: "Vote",
                   strNewGameTitle: n.name,
                   fnGetOldGameTitle: function () {
@@ -8062,7 +8107,7 @@ var CLSTAMP = "6871399";
             (t = Object(r.c)([s.a], t))
           );
         })(c.Component),
-        N = (function (e) {
+        D = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this,
               r = Object(f.h)("steamwawards", "application_config");
@@ -8074,7 +8119,7 @@ var CLSTAMP = "6871399";
             Object(r.d)(t, e),
             (t.prototype.render = function () {
               return this.m_voteCategories
-                ? c.createElement(R, {
+                ? c.createElement(j, {
                     appID: this.props.appID,
                     bRenderFromStorePage: !0,
                     bIsEventActionEnabled: !0,
@@ -8089,8 +8134,8 @@ var CLSTAMP = "6871399";
             t
           );
         })(c.Component);
-      t.default = N;
-      var R = (function (e) {
+      t.default = D;
+      var j = (function (e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (n.state = { bAppInfoLoaded: !1 }), n;
@@ -8099,8 +8144,8 @@ var CLSTAMP = "6871399";
           Object(r.d)(t, e),
           (t.prototype.componentDidMount = function () {
             var e = this;
-            T.a.LoadAppLinkInfo([this.props.appID]).then(function () {
-              (e.m_appInfo = T.a.GetAppLinkInfo(e.props.appID)),
+            B.a.LoadAppLinkInfo([this.props.appID]).then(function () {
+              (e.m_appInfo = B.a.GetAppLinkInfo(e.props.appID)),
                 e.m_appInfo && e.setState({ bAppInfoLoaded: !0 });
             });
           }),
@@ -8111,7 +8156,7 @@ var CLSTAMP = "6871399";
               this.props.voteCategories.forEach(function (n) {
                 t.push(
                   c.createElement(
-                    j,
+                    L,
                     Object(r.a)({ key: n, eVoteCategory: n }, e.props)
                   )
                 );
@@ -8136,7 +8181,7 @@ var CLSTAMP = "6871399";
                       className: S.a.SteamAwardHeaderImage,
                       src:
                         f.d.MEDIA_CDN_URL +
-                        "store/promo/autumn2020/event_nomination_banner_2020.png?v=2",
+                        "store/promo/autumn2021/trophy.png?v=3",
                     }),
                     c.createElement(
                       "div",
@@ -8181,13 +8226,13 @@ var CLSTAMP = "6871399";
                               },
                               Object(d.f)("#SteamAwards_Event_VotesClosed")
                             )
+                      ),
+                      c.createElement(
+                        "div",
+                        { className: S.a.AwardCategoriesCtn },
+                        this.GetNominatedAwardCategories()
                       )
                     )
-                  ),
-                  c.createElement(
-                    "div",
-                    { className: S.a.AwardCategoriesCtn },
-                    this.GetNominatedAwardCategories()
                   )
                 )
               : null;
