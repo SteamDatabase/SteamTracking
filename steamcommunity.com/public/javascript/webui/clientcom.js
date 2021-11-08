@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6868215";
+var CLSTAMP = "6881240";
 !(function (t) {
   var e = {};
   function n(r) {
@@ -97,10 +97,10 @@ var CLSTAMP = "6868215";
         return a;
       }),
       n.d(e, "e", function () {
-        return l;
+        return _;
       }),
       n.d(e, "h", function () {
-        return _;
+        return l;
       }),
       n.d(e, "a", function () {
         return f;
@@ -161,9 +161,9 @@ var CLSTAMP = "6868215";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!Object(i.a)()) return r || (r = _()), r;
+            if (!Object(i.a)()) return r || (r = l()), r;
             var t = Object(i.b)("sessionid");
-            t || (t = _());
+            t || (t = l());
             return t;
           })();
         },
@@ -185,6 +185,7 @@ var CLSTAMP = "6868215";
         authwgtoken: "",
         is_support: !1,
         is_limited: !1,
+        is_partner_member: !1,
         short_url: "",
         country_code: "",
       },
@@ -206,8 +207,8 @@ var CLSTAMP = "6868215";
         IS_VALVE_GROUP: !1,
         IS_ALLOWED_SC: !1,
       },
-      l = { ANNOUNCEMENT_GID: "" };
-    function _() {
+      _ = { ANNOUNCEMENT_GID: "" };
+    function l() {
       var t = (function () {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(o.b)(0, 35).toString(36);
@@ -236,8 +237,8 @@ var CLSTAMP = "6868215";
       o && (Object.assign(s, o), (e.broadcastConfig = !0));
       var i = d("community", t);
       i && (Object.assign(a, i), (e.communityConfig = !0));
-      var _ = d("event", t);
-      return _ && (Object.assign(l, _), (e.eventConfig = !0)), e;
+      var l = d("event", t);
+      return l && (Object.assign(_, l), (e.eventConfig = !0)), e;
     }
     function d(t, e) {
       var n;
@@ -609,7 +610,7 @@ var CLSTAMP = "6868215";
         return a;
       }),
       n.d(e, "g", function () {
-        return l;
+        return _;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -807,7 +808,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
       }
     }
-    function l() {
+    function _() {
       for (var t = 0, e = 0, n = arguments.length; e < n; e++)
         t += arguments[e].length;
       var r = Array(t),

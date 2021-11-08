@@ -1,8 +1,14 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [9],
+  [9, 5],
   {
+    "3USw": function (e, t, r) {
+      e.exports = {
+        SectionTitleHeader: "collapseablesection_SectionTitleHeader_2g5oN",
+        required_title: "collapseablesection_required_title_3yDPZ",
+      };
+    },
     "3sYe": function (e, t, r) {
       e.exports = {
         BroadcastChat: "broadcastchat_BroadcastChat_3URK7",
@@ -37,6 +43,9 @@
         SelectedUserName: "broadcastchat_SelectedUserName_c907V",
         FlairContainer: "broadcastchat_FlairContainer_166wp",
         RoleFlairContainer: "broadcastchat_RoleFlairContainer_1QRJ2",
+        Description: "broadcastchat_Description_105HH",
+        LogInPrompt: "broadcastchat_LogInPrompt_CsA8v",
+        SignInButton: "broadcastchat_SignInButton_1dMwW",
       };
     },
     "5STL": function (e, t, r) {
@@ -87,13 +96,104 @@
         StatusCaution: "tabbar_StatusCaution_E9t9j",
       };
     },
+    DisI: function (e, t, r) {
+      "use strict";
+      r.d(t, "c", function () {
+        return f;
+      }),
+        r.d(t, "d", function () {
+          return p;
+        }),
+        r.d(t, "a", function () {
+          return b;
+        }),
+        r.d(t, "b", function () {
+          return _;
+        });
+      var n = r("mrSG"),
+        i = r("Mgs7"),
+        a = r("TLQK"),
+        o = r("6Y59"),
+        s = r("q1tI"),
+        u = r("exH9"),
+        c = r("fpVW"),
+        l = r("IjL/"),
+        d = r("TyAF"),
+        m = r("3USw"),
+        f = Object(d.a)(function (e) {
+          return s.createElement(
+            s.Fragment,
+            null,
+            s.createElement(
+              "div",
+              {
+                className: Object(u.a)(
+                  e.className ? e.className : m.SectionTitleHeader,
+                  m.required_title
+                ),
+              },
+              s.createElement(
+                "div",
+                { className: c.EventEditorTextTitle },
+                e.title,
+                Boolean(e.tooltip) && s.createElement(_, { tooltip: e.tooltip })
+              ),
+              s.createElement(b, {
+                bIsMinimized: e.getMinimized(),
+                fnToggleMinimize: e.toggleMinimized,
+              })
+            ),
+            !e.getMinimized() && s.createElement(l.a, null, e.children)
+          );
+        });
+      function p(e) {
+        var t = s.useState(Boolean(e.bStartMinimized)),
+          r = t[0],
+          i = t[1];
+        return s.createElement(
+          f,
+          Object(n.a)({}, e, {
+            getMinimized: function () {
+              return r;
+            },
+            toggleMinimized: function () {
+              return i(!r);
+            },
+          }),
+          e.children
+        );
+      }
+      function b(e) {
+        var t = e.bIsMinimized,
+          r = e.fnToggleMinimize,
+          n = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return s.createElement(
+          i.d,
+          { "data-tooltip-text": Object(a.f)(n), onClick: r },
+          e.bIsMinimized
+            ? s.createElement(o.H, null)
+            : s.createElement(o.K, null)
+        );
+      }
+      function _(e) {
+        return s.createElement(
+          "span",
+          {
+            "data-tooltip-text": e.tooltip,
+            className: Object(u.a)(c.HelperTooltip, "HelperTooltip"),
+          },
+          " ",
+          s.createElement(o.A, null)
+        );
+      }
+    },
     JCps: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return Q;
+        return L;
       }),
         r.d(t, "b", function () {
-          return P;
+          return Q;
         });
       var n = r("mrSG"),
         i = r("q1tI"),
@@ -166,9 +266,9 @@
         }, []);
       }
       var b = r("Qcoi"),
-        B = r("vDqi"),
-        h = r.n(B),
-        _ = r("X2UP"),
+        _ = r("vDqi"),
+        h = r.n(_),
+        B = r("X2UP"),
         y = r("OS6B"),
         g = (function () {
           function e() {
@@ -220,9 +320,9 @@
             (e.prototype.LoadSession = function (e, t, r) {
               var i, a, o, s, u, c, l, m, f, p;
               return Object(n.b)(this, void 0, void 0, function () {
-                var b, B, _, g, v, w, S, M, C, z, R, O, j, F, T, W, I;
-                return Object(n.e)(this, function (A) {
-                  switch (A.label) {
+                var b, _, B, g, v, S, w, C, M, z, O, j, R, F, T, W, E;
+                return Object(n.e)(this, function (I) {
+                  switch (I.label) {
                     case 0:
                       (b =
                         d.i.logged_in &&
@@ -230,24 +330,24 @@
                           this.m_mapQAndASessions.get(e).bUserCanModerate ||
                           this.m_rgPendingQuestionGIDs.length > 0 ||
                           t)),
-                        (B = b
+                        (_ = b
                           ? "/ajaxgetqandasessionforuser/"
                           : "/ajaxgetqandasession/"),
-                        (_ =
+                        (B =
                           d.c.COMMUNITY_BASE_URL +
                           "questions/" +
                           d.b.VANITY_ID +
-                          B +
+                          _ +
                           e),
                         (g = {}),
                         (v = null),
-                        (A.label = 1);
+                        (I.label = 1);
                     case 1:
                       return (
-                        A.trys.push([1, 3, , 4]),
+                        I.trys.push([1, 3, , 4]),
                         [
                           4,
-                          h.a.get(_, {
+                          h.a.get(B, {
                             params: g,
                             cancelToken: null == r ? void 0 : r.token,
                           }),
@@ -255,24 +355,24 @@
                       );
                     case 2:
                       if (
-                        200 == (null == (w = A.sent()) ? void 0 : w.status) &&
+                        200 == (null == (S = I.sent()) ? void 0 : S.status) &&
                         1 ==
-                          (null === (i = w.data) || void 0 === i
+                          (null === (i = S.data) || void 0 === i
                             ? void 0
                             : i.success) &&
-                        w.data.qanda &&
-                        w.data.questions
+                        S.data.qanda &&
+                        S.data.questions
                       ) {
                         for (
-                          this.PreloadPosterProfiles(w.data.questions, r),
-                            S = 0,
-                            M = w.data.questions;
-                          S < M.length;
-                          S++
+                          this.PreloadPosterProfiles(S.data.questions, r),
+                            w = 0,
+                            C = S.data.questions;
+                          w < C.length;
+                          w++
                         )
-                          (C = M[S]),
-                            (z = C.gidQuestion),
-                            (R =
+                          (M = C[w]),
+                            (z = M.gidQuestion),
+                            (O =
                               null !==
                                 (o =
                                   null === (a = this.m_mapQuestions.get(z)) ||
@@ -280,14 +380,14 @@
                                     ? void 0
                                     : a.bUserUpVoted) && void 0 !== o
                                 ? o
-                                : C.bUserUpVoted),
-                            (O = Object(n.a)(Object(n.a)({}, C), {
-                              bUserUpVoted: R,
+                                : M.bUserUpVoted),
+                            (j = Object(n.a)(Object(n.a)({}, M), {
+                              bUserUpVoted: O,
                             })),
-                            this.m_mapQuestions.set(z, O),
-                            this.GetQuestionCallbackList(z).Dispatch(O);
+                            this.m_mapQuestions.set(z, j),
+                            this.GetQuestionCallbackList(z).Dispatch(j);
                         return (
-                          (j =
+                          (R =
                             null !==
                               (u =
                                 null === (s = this.m_mapQAndASessions.get(e)) ||
@@ -295,7 +395,7 @@
                                   ? void 0
                                   : s.bUserCanModerate) && void 0 !== u
                               ? u
-                              : w.data.qanda.bUserCanModerate),
+                              : S.data.qanda.bUserCanModerate),
                           (F =
                             null !==
                               (l =
@@ -304,30 +404,30 @@
                                   ? void 0
                                   : c.bUserCanAskQuestions) && void 0 !== l
                               ? l
-                              : w.data.qanda.bUserCanAskQuestions),
-                          (T = Object(n.a)(Object(n.a)({}, w.data.qanda), {
-                            bUserCanModerate: j,
+                              : S.data.qanda.bUserCanAskQuestions),
+                          (T = Object(n.a)(Object(n.a)({}, S.data.qanda), {
+                            bUserCanModerate: R,
                             bUserCanAskQuestions: F,
                           })),
                           this.m_mapQAndASessions.set(e, T),
                           this.GetQAndACallbackList(e).Dispatch(T),
                           this.UpdatePendingQuestionList(
-                            w.data.qanda.rgQuestionGIDs
+                            S.data.qanda.rgQuestionGIDs
                           ),
                           [2, 1]
                         );
                       }
-                      return (v = { response: w }), [3, 4];
+                      return (v = { response: S }), [3, 4];
                     case 3:
-                      return (W = A.sent()), (v = W), [3, 4];
+                      return (W = I.sent()), (v = W), [3, 4];
                     case 4:
                       return (
-                        (I = Object(y.a)(v)),
+                        (E = Object(y.a)(v)),
                         console.error(
                           "Could not load Q&A",
                           e,
-                          I.strErrorMsg,
-                          I
+                          E.strErrorMsg,
+                          E
                         ),
                         [
                           2,
@@ -461,7 +561,7 @@
             (e.prototype.ModerateQuestion = function (e, t, r, i) {
               var a, o, s, u, c;
               return Object(n.b)(this, void 0, void 0, function () {
-                var l, m, f, p, b, B;
+                var l, m, f, p, b, _;
                 return Object(n.e)(this, function (n) {
                   switch (n.label) {
                     case 0:
@@ -511,14 +611,14 @@
                       return (b = n.sent()), (f = b), [3, 4];
                     case 4:
                       return (
-                        (B = Object(y.a)(f)),
+                        (_ = Object(y.a)(f)),
                         console.error(
                           "Could not moderate question",
                           e,
                           t,
                           r,
-                          B.strErrorMsg,
-                          B
+                          _.strErrorMsg,
+                          _
                         ),
                         [
                           2,
@@ -544,7 +644,7 @@
             (e.prototype.AnswerQuestion = function (e, t, r, i) {
               var a, o, s, u, c;
               return Object(n.b)(this, void 0, void 0, function () {
-                var l, m, f, p, b, B;
+                var l, m, f, p, b, _;
                 return Object(n.e)(this, function (n) {
                   switch (n.label) {
                     case 0:
@@ -592,14 +692,14 @@
                       return (b = n.sent()), (f = b), [3, 4];
                     case 4:
                       return (
-                        (B = Object(y.a)(f)),
+                        (_ = Object(y.a)(f)),
                         console.error(
                           "Could not upload answer",
                           e,
                           t,
                           r,
-                          B.strErrorMsg,
-                          B
+                          _.strErrorMsg,
+                          _
                         ),
                         [
                           2,
@@ -625,9 +725,9 @@
             (e.prototype.VoteOnQuestion = function (e, t, r, i) {
               var a, o, s, u, c;
               return Object(n.b)(this, void 0, void 0, function () {
-                var l, m, f, p, b, B, _, g, v;
-                return Object(n.e)(this, function (w) {
-                  switch (w.label) {
+                var l, m, f, p, b, _, B, g, v;
+                return Object(n.e)(this, function (S) {
+                  switch (S.label) {
                     case 0:
                       if (
                         !d.i.logged_in ||
@@ -658,11 +758,11 @@
                         (b = new FormData()).append("sessionid", d.c.SESSIONID),
                         b.append("gidquestion", t),
                         b.append("up", r ? "1" : "0"),
-                        (B = null),
-                        (w.label = 1);
+                        (_ = null),
+                        (S.label = 1);
                     case 1:
                       return (
-                        w.trys.push([1, 3, , 4]),
+                        S.trys.push([1, 3, , 4]),
                         [
                           4,
                           h.a.post(p, b, {
@@ -673,15 +773,15 @@
                       );
                     case 2:
                       return 200 ==
-                        (null == (_ = w.sent()) ? void 0 : _.status) &&
+                        (null == (B = S.sent()) ? void 0 : B.status) &&
                         1 ==
-                          (null === (o = _.data) || void 0 === o
+                          (null === (o = B.data) || void 0 === o
                             ? void 0
                             : o.success)
                         ? [2, 1]
-                        : ((B = { response: _ }), [3, 4]);
+                        : ((_ = { response: B }), [3, 4]);
                     case 3:
-                      return (g = w.sent()), (B = g), [3, 4];
+                      return (g = S.sent()), (_ = g), [3, 4];
                     case 4:
                       return (
                         (l = Object(n.a)(Object(n.a)({}, l), {
@@ -690,7 +790,7 @@
                         })),
                         this.m_mapQuestions.set(t, l),
                         this.GetQuestionCallbackList(t).Dispatch(l),
-                        (v = Object(y.a)(B)),
+                        (v = Object(y.a)(_)),
                         console.error(
                           "Could not upload vote",
                           e,
@@ -706,7 +806,7 @@
                               null ===
                                 (u =
                                   null ===
-                                    (s = null == B ? void 0 : B.response) ||
+                                    (s = null == _ ? void 0 : _.response) ||
                                   void 0 === s
                                     ? void 0
                                     : s.data) || void 0 === u
@@ -725,7 +825,7 @@
         })();
       function v(e) {
         var t = this,
-          r = Object(_.a)("useQAndASession"),
+          r = Object(B.a)("useQAndASession"),
           i = a.a.useCallback(
             function (i) {
               return Object(n.b)(t, void 0, void 0, function () {
@@ -859,12 +959,12 @@
           c
         );
       }
-      var w = null;
-      function S(e) {
+      var S = null;
+      function w(e) {
         var t,
           r,
           n,
-          i = Object(_.a)("useReloadFunction"),
+          i = Object(B.a)("useReloadFunction"),
           o = a.a.useState(!1),
           s = o[0],
           u = o[1],
@@ -908,11 +1008,11 @@
         return (
           a.a.useEffect(
             function () {
-              if (w) return function () {};
+              if (S) return function () {};
               return (
-                (w = window.setInterval(d, 1e4)),
+                (S = window.setInterval(d, 1e4)),
                 function () {
-                  return window.clearInterval(w);
+                  return window.clearInterval(S);
                 }
               );
             },
@@ -926,8 +1026,8 @@
           )
         );
       }
-      function M(e) {
-        var t = Object(_.a)("useQuestionModeratorActions"),
+      function C(e) {
+        var t = Object(B.a)("useQuestionModeratorActions"),
           r = a.a.useCallback(
             function (r, n) {
               var i;
@@ -957,18 +1057,19 @@
           [r, n]
         );
       }
-      var C = r("Mgs7"),
+      var M = r("Mgs7"),
         z = r("BFsE"),
-        R = r("YLyR"),
-        O = r("6Y59"),
-        j = r("0OaU"),
+        O = r("YLyR"),
+        j = r("6Y59"),
+        R = r("0OaU"),
         F = r("5E+2"),
-        T = r("exH9"),
-        W = r("TLQK"),
+        T = r("DisI"),
+        W = r("exH9"),
+        E = r("TLQK"),
         I = r("CdLH"),
         A = r("hII0"),
-        U = r.n(A);
-      function E(e) {
+        N = r.n(A);
+      function U(e) {
         var t = e.gidSession,
           r = e.gidQuestion,
           n = e.bUserCanModerate,
@@ -988,7 +1089,7 @@
         u[1];
         if (!c) return null;
         var d = s - c.rtPostTime,
-          m = d < I.f.PerDay ? Object(W.q)(d) : Object(W.p)(c.rtPostTime),
+          m = d < I.f.PerDay ? Object(E.q)(d) : Object(E.p)(c.rtPostTime),
           f = i
             ? function () {
                 return o(r, !c.bUserUpVoted);
@@ -996,32 +1097,32 @@
             : null,
           p = i
             ? c.bUserUpVoted
-              ? U.a.Vote_Positive
-              : U.a.Vote_Ready
-            : U.a.Vote_CannotVote,
-          b = Object(T.a)(
-            U.a.Question,
-            3 == c.eState && U.a.Hidden,
-            1 == c.eState && U.a.Moderated,
-            0 == c.eState && U.a.Unmoderated,
-            2 == c.eState && U.a.Answered
+              ? N.a.Vote_Positive
+              : N.a.Vote_Ready
+            : N.a.Vote_CannotVote,
+          b = Object(W.a)(
+            N.a.Question,
+            3 == c.eState && N.a.Hidden,
+            1 == c.eState && N.a.Moderated,
+            0 == c.eState && N.a.Unmoderated,
+            2 == c.eState && N.a.Answered
           );
         return a.a.createElement(
           "div",
           { className: b },
           a.a.createElement(
             "div",
-            { className: U.a.QuestionCtn },
-            a.a.createElement(D, { accountID: c.posterAccountID }),
+            { className: N.a.QuestionCtn },
+            a.a.createElement(P, { accountID: c.posterAccountID }),
             a.a.createElement(
               "div",
-              { className: U.a.QuestionText },
+              { className: N.a.QuestionText },
               a.a.createElement(
                 "div",
-                { className: U.a.QuestionAndVotes },
+                { className: N.a.QuestionAndVotes },
                 a.a.createElement(
                   "div",
-                  { className: U.a.QuestionTitle },
+                  { className: N.a.QuestionTitle },
                   c.strQuestionText
                 ),
                 a.a.createElement(
@@ -1030,16 +1131,16 @@
                     toolTipContent:
                       i &&
                       (c.bUserUpVoted
-                        ? Object(W.f)("#QAndA_VoteRemoveTooltip")
-                        : Object(W.f)("#QAndA_VoteTooltip")),
+                        ? Object(E.f)("#QAndA_VoteRemoveTooltip")
+                        : Object(E.f)("#QAndA_VoteTooltip")),
                   },
                   a.a.createElement(
                     "div",
-                    { className: Object(T.a)(p, U.a.Votes), onClick: f },
-                    a.a.createElement(O.eb, { className: U.a.RateIcon }),
+                    { className: Object(W.a)(p, N.a.Votes), onClick: f },
+                    a.a.createElement(j.eb, { className: N.a.RateIcon }),
                     a.a.createElement(
                       "div",
-                      { className: U.a.VoteCount },
+                      { className: N.a.VoteCount },
                       Number(c.nVoteCount).toLocaleString()
                     )
                   )
@@ -1047,16 +1148,16 @@
               ),
               a.a.createElement(
                 "div",
-                { className: U.a.QuestionStats },
+                { className: N.a.QuestionStats },
                 a.a.createElement(
                   "div",
-                  { className: U.a.PostTime },
+                  { className: N.a.PostTime },
                   a.a.createElement(
-                    R.g,
+                    O.g,
                     {
                       rtFullDate: c.rtPostTime,
-                      className: U.a.PostTime,
-                      stylesmodule: U.a,
+                      className: N.a.PostTime,
+                      stylesmodule: N.a,
                     },
                     m
                   )
@@ -1064,7 +1165,7 @@
               )
             )
           ),
-          c.rtAnswerTime && a.a.createElement(N, { question: c, rtNow: s }),
+          c.rtAnswerTime && a.a.createElement(D, { question: c, rtNow: s }),
           n &&
             a.a.createElement(G, {
               gidSession: t,
@@ -1073,43 +1174,43 @@
             })
         );
       }
-      function N(e) {
+      function D(e) {
         var t = e.question,
           r = e.rtNow,
           n = t.rtAnswerTime && r - t.rtAnswerTime,
           i =
             t.rtAnswerTime &&
-            (n < I.f.PerDay ? Object(W.q)(n) : Object(W.p)(t.rtAnswerTime));
+            (n < I.f.PerDay ? Object(E.q)(n) : Object(E.p)(t.rtAnswerTime));
         return t.strAnswerText
           ? a.a.createElement(
               "div",
-              { className: U.a.Answer },
+              { className: N.a.Answer },
               a.a.createElement(
                 "div",
-                { className: U.a.AnswerTitle },
+                { className: N.a.AnswerTitle },
                 a.a.createElement(
                   "div",
-                  { className: U.a.AnswerCheck },
-                  a.a.createElement(O.p, { color: "#67c1f5" })
+                  { className: N.a.AnswerCheck },
+                  a.a.createElement(j.p, { color: "#67c1f5" })
                 ),
-                Object(W.f)("#QAndA_ModeratorAnswerTitle")
+                Object(E.f)("#QAndA_ModeratorAnswerTitle")
               ),
               a.a.createElement(
                 "div",
-                { className: U.a.AnswerText },
+                { className: N.a.AnswerText },
                 " ",
                 t.strAnswerText,
                 " "
               ),
               a.a.createElement(
                 "div",
-                { className: U.a.QuestionStats },
+                { className: N.a.QuestionStats },
                 a.a.createElement(
-                  R.g,
+                  O.g,
                   {
                     rtFullDate: t.rtAnswerTime,
-                    className: U.a.PostTime,
-                    stylesmodule: U.a,
+                    className: N.a.PostTime,
+                    stylesmodule: N.a,
                   },
                   i
                 )
@@ -1117,34 +1218,41 @@
             )
           : a.a.createElement(
               "div",
-              { className: U.a.AnswerTitle },
+              { className: N.a.AnswerTitle },
               a.a.createElement(
                 "div",
-                { className: U.a.AnswerCheck },
-                a.a.createElement(O.p, { color: "#67c1f5" })
+                { className: N.a.AnswerCheck },
+                a.a.createElement(j.p, { color: "#67c1f5" })
               ),
-              Object(W.f)("#QAndA_AlreadyAnsweredTitle")
+              Object(E.f)("#QAndA_AlreadyAnsweredTitle")
             );
       }
-      function D(e) {
-        var t = o.a.InitFromAccountID(e.accountID),
-          r = Object(b.b)(t),
-          n = (r[0], r[1]);
-        return a.a.createElement(
-          "div",
-          { className: U.a.UserAvatar },
-          !!n &&
-            a.a.createElement("img", {
-              src: n.avatar_url,
-              "data-miniprofile": "s" + t.ConvertTo64BitString(),
-            })
-        );
+      function P(e) {
+        var t,
+          r = o.a.InitFromAccountID(e.accountID),
+          n = r.ConvertTo64BitString(),
+          i = Object(b.b)(r),
+          s = i[0],
+          u = i[1];
+        return s
+          ? null
+          : a.a.createElement(
+              "a",
+              {
+                href: d.c.COMMUNITY_BASE_URL + "profiles/" + n,
+                className: N.a.PersonaName,
+                "data-miniprofile": "s" + n,
+              },
+              null !== (t = null == u ? void 0 : u.persona_name) && void 0 !== t
+                ? t
+                : n
+            );
       }
       function G(e) {
         var t = e.gidSession,
           r = e.gidQuestion,
           n = e.eState,
-          i = M(t),
+          i = C(t),
           o = i.fnAnswerQuestion,
           s = i.fnModerateQuestion,
           u = 0 == n || 3 == n,
@@ -1152,13 +1260,13 @@
           l = 1 == n;
         return a.a.createElement(
           "div",
-          { className: U.a.ModeratorSection },
-          Object(W.f)("#QAndA_ModeratorLabel"),
+          { className: N.a.ModeratorSection },
+          Object(E.f)("#QAndA_ModeratorLabel"),
           a.a.createElement(
             "div",
-            { className: U.a.ToolRow },
+            { className: N.a.ToolRow },
             a.a.createElement(q, {
-              strPrompt: Object(W.f)("#QAndA_AnswerPrompt"),
+              strPrompt: Object(E.f)("#QAndA_AnswerPrompt"),
               fnSubmit: function (e) {
                 return o(r, e);
               },
@@ -1166,68 +1274,68 @@
           ),
           a.a.createElement(
             "div",
-            { className: U.a.ToolRow },
-            Object(W.f)("#QAndA_ModeratorOtherOptionsLabel"),
+            { className: N.a.ToolRow },
+            Object(E.f)("#QAndA_ModeratorOtherOptionsLabel"),
             a.a.createElement(
               F.a,
               {
-                toolTipContent: Object(W.f)(
+                toolTipContent: Object(E.f)(
                   "#QAndA_ModerateApproveButton_ttip"
                 ),
               },
               a.a.createElement(
-                C.d,
+                M.d,
                 {
                   onClick: function () {
                     return s(r, 1);
                   },
-                  className: U.a.InputButton,
+                  className: N.a.InputButton,
                   disabled: !u,
                 },
-                Object(W.f)("#QAndA_ModerateApproveButton")
+                Object(E.f)("#QAndA_ModerateApproveButton")
               )
             ),
             a.a.createElement(
               F.a,
-              { toolTipContent: Object(W.f)("#QAndA_ModerateHideButton_ttip") },
+              { toolTipContent: Object(E.f)("#QAndA_ModerateHideButton_ttip") },
               a.a.createElement(
-                C.d,
+                M.d,
                 {
                   onClick: function () {
                     return s(r, 3);
                   },
-                  className: U.a.InputButton,
+                  className: N.a.InputButton,
                   disabled: !c,
                 },
-                Object(W.f)("#QAndA_ModerateHideButton")
+                Object(E.f)("#QAndA_ModerateHideButton")
               )
             ),
             a.a.createElement(
               F.a,
-              { toolTipContent: Object(W.f)("#QAndA_QuickAnswerButton_ttip") },
+              { toolTipContent: Object(E.f)("#QAndA_QuickAnswerButton_ttip") },
               a.a.createElement(
-                C.d,
+                M.d,
                 {
                   onClick: function () {
                     return o(r, "");
                   },
-                  className: U.a.InputButton,
+                  className: N.a.InputButton,
                   disabled: !l,
                 },
-                Object(W.f)("#QAndA_QuickAnswerButton")
+                Object(E.f)("#QAndA_QuickAnswerButton")
               )
             )
           )
         );
       }
-      function Q(e) {
+      function L(e) {
         var t = e.gidSession;
         p();
         var r = v(t).bUserCanModerate;
         return a.a.createElement(
           "div",
-          { className: U.a.QAFullPageView },
-          a.a.createElement(P, { gidSession: t, bHalfOfFullPage: r }),
+          { className: N.a.QAFullPageView },
+          a.a.createElement(Q, { gidSession: t, bHalfOfFullPage: r }),
           r && a.a.createElement(x, { gidSession: t })
         );
       }
@@ -1237,58 +1345,63 @@
           n = r.bUserCanModerate,
           i = r.rgNewQuestionGIDs,
           o = r.rgHiddenQuestionGIDs,
-          u = Object(s.b)(10);
+          u = Object(s.c)(10);
         return n
           ? a.a.createElement(
               "div",
               {
-                className: Object(T.a)(
-                  U.a.QAModeratorColumn,
-                  U.a.QASplitColumns
+                className: Object(W.a)(
+                  N.a.QAModeratorColumn,
+                  N.a.QASplitColumns
                 ),
               },
               a.a.createElement(
-                "div",
-                { className: U.a.ModeratorInstructions },
-                Object(W.f)("#QAndA_ModeratorViewHeader")
+                T.d,
+                {
+                  title: Object(E.f)("#QAndA_ModeratorViewHeader"),
+                  className: N.a.ModeratorInstructions,
+                },
+                a.a.createElement(
+                  "div",
+                  { className: N.a.QuestionList },
+                  i.map(function (e) {
+                    return a.a.createElement(U, {
+                      key: e,
+                      gidSession: t,
+                      gidQuestion: e,
+                      bUserCanModerate: n,
+                      bUserCanVote: !1,
+                      rtNow: u,
+                    });
+                  })
+                )
               ),
               a.a.createElement(
-                "div",
-                { className: U.a.QuestionList },
-                i.map(function (e) {
-                  return a.a.createElement(E, {
-                    key: e,
-                    gidSession: t,
-                    gidQuestion: e,
-                    bUserCanModerate: n,
-                    bUserCanVote: !1,
-                    rtNow: u,
-                  });
-                })
-              ),
-              a.a.createElement(
-                "div",
-                { className: U.a.AnsweredSectionHeader },
-                Object(W.f)("#QAndA_HiddenQuestionsHeader")
-              ),
-              a.a.createElement(
-                "div",
-                { className: U.a.QuestionList },
-                o.map(function (e) {
-                  return a.a.createElement(E, {
-                    key: e,
-                    gidSession: t,
-                    gidQuestion: e,
-                    bUserCanModerate: n,
-                    bUserCanVote: !1,
-                    rtNow: u,
-                  });
-                })
+                T.d,
+                {
+                  title: Object(E.f)("#QAndA_HiddenQuestionsHeader"),
+                  className: N.a.AnsweredSectionHeader,
+                  bStartMinimized: !0,
+                },
+                a.a.createElement(
+                  "div",
+                  { className: N.a.QuestionList },
+                  o.map(function (e) {
+                    return a.a.createElement(U, {
+                      key: e,
+                      gidSession: t,
+                      gidQuestion: e,
+                      bUserCanModerate: n,
+                      bUserCanVote: !1,
+                      rtNow: u,
+                    });
+                  })
+                )
               )
             )
           : null;
       }
-      function P(e) {
+      function Q(e) {
         var t = this,
           r = e.gidSession,
           i = e.bHalfOfFullPage;
@@ -1301,50 +1414,50 @@
           m = o.fnVoteOnQuestion,
           f = o.rgModeratedQuestionGIDs,
           b = o.rgAnsweredQuestionGIDs,
-          B = o.rgNewQuestionGIDs,
-          h = S(r),
-          _ = h.fnReload,
+          _ = o.rgNewQuestionGIDs,
+          h = w(r),
+          B = h.fnReload,
           y = h.bIsReloading,
-          g = Object(s.b)(10),
-          w = l && i,
-          z = M(r).fnModerateQuestion;
+          g = Object(s.c)(10),
+          S = l && i,
+          z = C(r).fnModerateQuestion;
         return a.a.createElement(
           "div",
-          { className: Object(T.a)(U.a.QAMainCtn, i && U.a.QASplitColumns) },
+          { className: Object(W.a)(N.a.QAMainCtn, i && N.a.QASplitColumns) },
           a.a.createElement(
             "div",
-            { className: Object(T.a)(U.a.QAHeader, w && U.a.ModerationHeader) },
+            { className: Object(W.a)(N.a.QAHeader, S && N.a.ModerationHeader) },
             a.a.createElement(
-              C.d,
+              M.d,
               {
-                onClick: _,
+                onClick: B,
                 disabled: !u,
-                className: Object(T.a)(
-                  U.a.InputButton,
-                  U.a.Reload,
-                  y && U.a.Reloading
+                className: Object(W.a)(
+                  N.a.InputButton,
+                  N.a.Reload,
+                  y && N.a.Reloading
                 ),
               },
               a.a.createElement(
                 "div",
-                { className: U.a.ReloadIcon },
-                a.a.createElement(O.S, null)
+                { className: N.a.ReloadIcon },
+                a.a.createElement(j.S, null)
               )
             ),
-            w
+            S
               ? a.a.createElement(
                   a.a.Fragment,
                   null,
-                  Object(W.f)("#QAndA_ModeratorLabelHeader"),
+                  Object(E.f)("#QAndA_ModeratorLabelHeader"),
                   a.a.createElement(
                     F.a,
                     {
-                      toolTipContent: Object(W.f)(
+                      toolTipContent: Object(E.f)(
                         "#QAndA_ModerateHideAllButton_ttip"
                       ),
                     },
                     a.a.createElement(
-                      C.d,
+                      M.d,
                       {
                         onClick: function () {
                           return Object(n.b)(t, void 0, void 0, function () {
@@ -1352,7 +1465,7 @@
                             return Object(n.e)(this, function (n) {
                               switch (n.label) {
                                 case 0:
-                                  (e = 0), (t = [B, f, b]), (n.label = 1);
+                                  (e = 0), (t = [_, f, b]), (n.label = 1);
                                 case 1:
                                   if (!(e < t.length)) return [3, 6];
                                   (r = t[e]), (i = 0), (a = r), (n.label = 2);
@@ -1372,77 +1485,118 @@
                             });
                           });
                         },
-                        className: U.a.InputButton,
+                        className: N.a.InputButton,
                       },
-                      Object(W.f)("#QAndA_ModerateHideAllButton")
+                      Object(E.f)("#QAndA_ModerateHideAllButton")
                     )
                   )
                 )
               : c
-              ? a.a.createElement(L, { fnAskQuestion: d })
-              : u && a.a.createElement(k, null)
+              ? a.a.createElement(k, { fnAskQuestion: d })
+              : u && a.a.createElement(V, null)
           ),
-          a.a.createElement(
-            "div",
-            { className: U.a.QuestionsCtn },
-            a.a.createElement(
-              "div",
-              { className: U.a.InsetShadowTopCtn },
-              a.a.createElement("div", { className: U.a.InsetShadowTop })
-            ),
-            a.a.createElement(
-              "div",
-              { className: U.a.QuestionList },
-              u
-                ? f.map(function (e) {
-                    return a.a.createElement(E, {
-                      key: e,
-                      gidSession: r,
-                      gidQuestion: e,
-                      bUserCanModerate: w,
-                      bUserCanVote: c,
-                      fnVoteOnQuestion: m,
-                      rtNow: g,
-                    });
-                  })
-                : a.a.createElement(j.a, { position: "center" })
-            ),
-            a.a.createElement(
-              "div",
-              { className: U.a.AnsweredSectionHeader },
-              Object(W.f)("#QAndA_AnsweredQuestionsHeader")
-            ),
-            a.a.createElement(
-              "div",
-              { className: U.a.QuestionList },
-              b.map(function (e) {
-                return a.a.createElement(E, {
-                  key: e,
-                  gidSession: r,
-                  gidQuestion: e,
-                  bUserCanModerate: w,
-                  bUserCanVote: c,
-                  fnVoteOnQuestion: m,
-                  rtNow: g,
-                });
-              })
-            )
-          )
+          f.length + b.length == 0
+            ? a.a.createElement(
+                "div",
+                { className: N.a.NoQuestions },
+                Object(E.f)("#QAndA_NoQuestionsYet")
+              )
+            : a.a.createElement(
+                "div",
+                { className: N.a.QuestionsCtn },
+                a.a.createElement(
+                  "div",
+                  { className: N.a.InsetShadowTopCtn },
+                  a.a.createElement("div", { className: N.a.InsetShadowTop })
+                ),
+                a.a.createElement(
+                  "div",
+                  { className: N.a.QuestionList },
+                  u
+                    ? f.map(function (e) {
+                        return a.a.createElement(U, {
+                          key: e,
+                          gidSession: r,
+                          gidQuestion: e,
+                          bUserCanModerate: S,
+                          bUserCanVote: c,
+                          fnVoteOnQuestion: m,
+                          rtNow: g,
+                        });
+                      })
+                    : a.a.createElement(R.a, { position: "center" })
+                ),
+                b.length > 0 &&
+                  a.a.createElement(
+                    a.a.Fragment,
+                    null,
+                    a.a.createElement(
+                      "div",
+                      { className: N.a.AnsweredSectionHeader },
+                      Object(E.f)("#QAndA_AnsweredQuestionsHeader")
+                    ),
+                    a.a.createElement(
+                      "div",
+                      { className: N.a.QuestionList },
+                      b.map(function (e) {
+                        return a.a.createElement(U, {
+                          key: e,
+                          gidSession: r,
+                          gidQuestion: e,
+                          bUserCanModerate: S,
+                          bUserCanVote: c,
+                          fnVoteOnQuestion: m,
+                          rtNow: g,
+                        });
+                      })
+                    )
+                  )
+              )
         );
       }
-      function L(e) {
+      function k(e) {
+        var t = this,
+          r = a.a.useState(!1),
+          i = r[0],
+          o = r[1],
+          s = Object(B.a)("QuestionBox");
         return a.a.createElement(
           a.a.Fragment,
           null,
           a.a.createElement(
             "div",
-            { className: U.a.Description },
-            Object(W.f)("#QAndA_HeaderDescription")
+            { className: N.a.Description },
+            Object(E.f)("#QAndA_HeaderDescription")
           ),
           a.a.createElement(q, {
-            strPrompt: Object(W.f)("#QAndA_QuestionPrompt"),
-            fnSubmit: e.fnAskQuestion,
-          })
+            strPrompt: Object(E.f)("#QAndA_QuestionPrompt"),
+            fnSubmit: function (r) {
+              return Object(n.b)(t, void 0, void 0, function () {
+                var t;
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
+                    case 0:
+                      return [4, e.fnAskQuestion(r)];
+                    case 1:
+                      return (
+                        1 != (t = n.sent()) ||
+                          s.token.reason ||
+                          (o(!0),
+                          window.setTimeout(function () {
+                            s.token.reason || o(!1);
+                          }, 1e3)),
+                        [2, t]
+                      );
+                  }
+                });
+              });
+            },
+          }),
+          a.a.createElement(
+            "div",
+            { className: Object(W.a)(N.a.QuestionACK, i && N.a.Visible) },
+            Object(E.f)("#QAndA_QuestionWasPosted")
+          )
         );
       }
       function q(e) {
@@ -1460,8 +1614,8 @@
           null,
           a.a.createElement(
             "div",
-            { className: U.a.InputCtn },
-            a.a.createElement(C.l, {
+            { className: N.a.InputCtn },
+            a.a.createElement(M.l, {
               type: "text",
               placeholder: r,
               maxLength: 512,
@@ -1472,15 +1626,15 @@
             }),
             a.a.createElement(
               "div",
-              { className: U.a.ButtonCtn },
+              { className: N.a.ButtonCtn },
               l &&
                 a.a.createElement(
                   "div",
-                  { className: U.a.SaveSpinner },
-                  a.a.createElement(j.a, { size: "small", position: "center" })
+                  { className: N.a.SaveSpinner },
+                  a.a.createElement(R.a, { size: "small", position: "center" })
                 ),
               a.a.createElement(
-                C.d,
+                M.d,
                 {
                   onClick: function () {
                     return Object(n.b)(t, void 0, void 0, function () {
@@ -1495,31 +1649,31 @@
                     });
                   },
                   disabled: l || !s,
-                  className: U.a.InputButton,
+                  className: N.a.InputButton,
                 },
-                Object(W.f)("#QAndA_SubmitCommentButton")
+                Object(E.f)("#QAndA_SubmitCommentButton")
               )
             )
           )
         );
       }
-      function k(e) {
+      function V(e) {
         return a.a.createElement(
           "div",
-          { className: U.a.Description },
+          { className: N.a.Description },
           a.a.createElement(
             "div",
-            { className: U.a.LogInPrompt },
-            Object(W.f)("#QAndA_LogInPrompt")
+            { className: N.a.LogInPrompt },
+            Object(E.f)("#QAndA_LogInPrompt")
           ),
           !d.i.logged_in &&
             a.a.createElement(
-              C.d,
+              M.d,
               {
                 onClick: z.a,
-                className: Object(T.a)(U.a.SignInButton, U.a.InputButton),
+                className: Object(W.a)(N.a.SignInButton, N.a.InputButton),
               },
-              Object(W.f)("#Login_SignIn")
+              Object(E.f)("#Login_SignIn")
             )
         );
       }
@@ -1536,6 +1690,7 @@
         LiveNote: "conferenceevents_LiveNote_3zSJm",
         LiveIcon: "conferenceevents_LiveIcon_38GJh",
         EventDescription: "conferenceevents_EventDescription_3hKDo",
+        ReadMoreBtn: "conferenceevents_ReadMoreBtn_2z4ba",
         EventsScheduleCtn: "conferenceevents_EventsScheduleCtn_33-47",
         ReminderContainer: "conferenceevents_ReminderContainer_2vLZT",
         OnlyIcon: "conferenceevents_OnlyIcon_3fZIS",
@@ -1586,9 +1741,9 @@
         f = r("bxBv"),
         p = r("r64O"),
         b = r("XxJJ"),
-        B = r("OS6B"),
+        _ = r("OS6B"),
         h = r("lkRc"),
-        _ = (function () {
+        B = (function () {
           function e(e, t) {
             (this.m_summary = e),
               (this.m_mapStoredDrafts = t),
@@ -1708,7 +1863,7 @@
                                 .catch(function (e) {
                                   console.error(
                                     "FAQModel.SaveDrafts: Hit error " +
-                                      Object(B.a)(e).strErrorMsg
+                                      Object(_.a)(e).strErrorMsg
                                   ),
                                     1 == a && (a = 2);
                                 }),
@@ -1884,14 +2039,14 @@
         y = r("WBba"),
         g = r("hRO2"),
         v = r("OS8t"),
-        w = g.Message,
-        S = (function (e) {
+        S = g.Message,
+        w = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq_id || v.a(t.M()),
-              w.initialize(n, r, 0, -1, [6], null),
+              S.initialize(n, r, 0, -1, [6], null),
               n
             );
           }
@@ -1928,7 +2083,7 @@
                         br: v.d.readString,
                         bw: v.h.writeString,
                       },
-                      per_language_info: { n: 6, c: M, r: !0, q: !0 },
+                      per_language_info: { n: 6, c: C, r: !0, q: !0 },
                       url_code: {
                         n: 7,
                         br: v.d.readString,
@@ -1977,14 +2132,14 @@
             }),
             t
           );
-        })(w),
-        M = (function (e) {
+        })(S),
+        C = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.language || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2054,14 +2209,14 @@
             }),
             t
           );
-        })(w),
-        C = (function (e) {
+        })(S),
+        M = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq_id || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2147,14 +2302,14 @@
             }),
             t
           );
-        })(w),
+        })(S),
         z = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2224,14 +2379,14 @@
             }),
             t
           );
-        })(w),
-        R = (function (e) {
+        })(S),
+        O = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq_id || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2291,14 +2446,14 @@
             }),
             t
           );
-        })(w),
-        O = (function (e) {
+        })(S),
+        j = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2363,12 +2518,12 @@
             }),
             t
           );
-        })(w),
-        j = (function (e) {
+        })(S),
+        R = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return w.initialize(r, t, 0, -1, void 0, null), r;
+            return S.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -2405,14 +2560,14 @@
             }),
             t
           );
-        })(w),
+        })(S),
         F = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2482,12 +2637,12 @@
             }),
             t
           );
-        })(w),
+        })(S),
         T = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return w.initialize(r, t, 0, -1, void 0, null), r;
+            return S.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -2524,14 +2679,14 @@
             }),
             t
           );
-        })(w),
+        })(S),
         W = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2601,12 +2756,12 @@
             }),
             t
           );
-        })(w),
-        I = (function (e) {
+        })(S),
+        E = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return w.initialize(r, t, 0, -1, void 0, null), r;
+            return S.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -2643,14 +2798,14 @@
             }),
             t
           );
-        })(w),
-        A = (function (e) {
+        })(S),
+        I = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2725,12 +2880,12 @@
             }),
             t
           );
-        })(w),
-        U = (function (e) {
+        })(S),
+        A = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return w.initialize(r, t, 0, -1, void 0, null), r;
+            return S.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -2767,14 +2922,14 @@
             }),
             t
           );
-        })(w),
-        E = (function (e) {
+        })(S),
+        N = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2850,14 +3005,14 @@
             }),
             t
           );
-        })(w),
-        N = (function (e) {
+        })(S),
+        U = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.last_update_timestamp || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2917,14 +3072,14 @@
             }),
             t
           );
-        })(w),
+        })(S),
         D = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, [3], null),
+              S.initialize(n, r, 0, -1, [3], null),
               n
             );
           }
@@ -2996,14 +3151,14 @@
             }),
             t
           );
-        })(w),
-        G = (function (e) {
+        })(S),
+        P = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.last_publish_timestamp || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3063,14 +3218,14 @@
             }),
             t
           );
-        })(w),
-        Q = (function (e) {
+        })(S),
+        G = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3079,7 +3234,7 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: C } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: M } } }),
                 t.sm_m
               );
             }),
@@ -3121,14 +3276,14 @@
             }),
             t
           );
-        })(w),
-        x = (function (e) {
+        })(S),
+        L = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3137,7 +3292,7 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: C } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: M } } }),
                 t.sm_m
               );
             }),
@@ -3179,14 +3334,14 @@
             }),
             t
           );
-        })(w),
-        P = (function (e) {
+        })(S),
+        x = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3261,14 +3416,14 @@
             }),
             t
           );
-        })(w),
-        L = (function (e) {
+        })(S),
+        Q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3277,7 +3432,7 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: C } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: M } } }),
                 t.sm_m
               );
             }),
@@ -3319,14 +3474,14 @@
             }),
             t
           );
-        })(w),
-        q = (function (e) {
+        })(S),
+        k = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3391,14 +3546,14 @@
             }),
             t
           );
-        })(w),
-        k = (function (e) {
+        })(S),
+        q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.summary || v.a(t.M()),
-              w.initialize(n, r, 0, -1, [2], null),
+              S.initialize(n, r, 0, -1, [2], null),
               n
             );
           }
@@ -3410,8 +3565,8 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      summary: { n: 1, c: S },
-                      draft: { n: 2, c: C, r: !0, q: !0 },
+                      summary: { n: 1, c: w },
+                      draft: { n: 2, c: M, r: !0, q: !0 },
                     },
                   }),
                 t.sm_m
@@ -3455,14 +3610,14 @@
             }),
             t
           );
-        })(w),
+        })(S),
         V = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faq || v.a(t.M()),
-              w.initialize(n, r, 0, -1, [1], null),
+              S.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -3473,7 +3628,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { faq: { n: 1, c: S, r: !0, q: !0 } },
+                    fields: { faq: { n: 1, c: w, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -3516,14 +3671,14 @@
             }),
             t
           );
-        })(w),
+        })(S),
         H = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faqs || v.a(t.M()),
-              w.initialize(n, r, 0, -1, [1], null),
+              S.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -3534,7 +3689,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { faqs: { n: 1, c: C, r: !0, q: !0 } },
+                    fields: { faqs: { n: 1, c: M, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -3577,12 +3732,12 @@
             }),
             t
           );
-        })(w),
+        })(S),
         K = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return w.initialize(r, t, 0, -1, void 0, null), r;
+            return S.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(i.d)(t, e),
@@ -3619,14 +3774,14 @@
             }),
             t
           );
-        })(w),
-        J = (function (e) {
+        })(S),
+        Y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.faqs || v.a(t.M()),
-              w.initialize(n, r, 0, -1, [1], null),
+              S.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -3638,7 +3793,7 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      faqs: { n: 1, c: Y, r: !0, q: !0 },
+                      faqs: { n: 1, c: J, r: !0, q: !0 },
                       num_total_results: {
                         n: 2,
                         br: v.d.readInt32,
@@ -3692,14 +3847,14 @@
             }),
             t
           );
-        })(w),
-        Y = (function (e) {
+        })(S),
+        J = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.articleid || v.a(t.M()),
-              w.initialize(n, r, 0, -1, void 0, null),
+              S.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3775,13 +3930,13 @@
             }),
             t
           );
-        })(w);
+        })(S);
       !(function (e) {
         (e.Create = function (e, t) {
-          return e.SendMsg("ClanFAQS.Create#1", t, R, { ePrivilege: 1 });
+          return e.SendMsg("ClanFAQS.Create#1", t, O, { ePrivilege: 1 });
         }),
           (e.Delete = function (e, t) {
-            return e.SendMsg("ClanFAQS.Delete#1", t, j, { ePrivilege: 1 });
+            return e.SendMsg("ClanFAQS.Delete#1", t, R, { ePrivilege: 1 });
           }),
           (e.UpdateInternalName = function (e, t) {
             return e.SendMsg("ClanFAQS.UpdateInternalName#1", t, T, {
@@ -3789,42 +3944,42 @@
             });
           }),
           (e.UpdateJsonData = function (e, t) {
-            return e.SendMsg("ClanFAQS.UpdateJsonData#1", t, I, {
+            return e.SendMsg("ClanFAQS.UpdateJsonData#1", t, E, {
               ePrivilege: 1,
             });
           }),
           (e.SetVisibility = function (e, t) {
-            return e.SendMsg("ClanFAQS.SetVisibility#1", t, U, {
+            return e.SendMsg("ClanFAQS.SetVisibility#1", t, A, {
               ePrivilege: 1,
             });
           }),
           (e.UpdateDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.UpdateDraft#1", t, N, { ePrivilege: 1 });
+            return e.SendMsg("ClanFAQS.UpdateDraft#1", t, U, { ePrivilege: 1 });
           }),
           (e.PublishDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.PublishDraft#1", t, G, {
+            return e.SendMsg("ClanFAQS.PublishDraft#1", t, P, {
               ePrivilege: 1,
             });
           }),
           (e.PreviewDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.PreviewDraft#1", t, Q, {
+            return e.SendMsg("ClanFAQS.PreviewDraft#1", t, G, {
               ePrivilege: 1,
             });
           }),
           (e.GetFAQ = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetFAQ#1", t, x, {
+            return e.SendMsg("ClanFAQS.GetFAQ#1", t, L, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetFAQVersion = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetFAQVersion#1", t, L, {
+            return e.SendMsg("ClanFAQS.GetFAQVersion#1", t, Q, {
               ePrivilege: 1,
             });
           }),
           (e.GetAllDrafts = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetAllDrafts#1", t, k, {
+            return e.SendMsg("ClanFAQS.GetAllDrafts#1", t, q, {
               ePrivilege: 1,
             });
           }),
@@ -3847,7 +4002,7 @@
             });
           }),
           (e.SearchFAQs = function (e, t) {
-            return e.SendMsg("ClanFAQS.SearchFAQs#1", t, J, {
+            return e.SendMsg("ClanFAQS.SearchFAQs#1", t, Y, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
@@ -3908,7 +4063,7 @@
                       }
                       this.m_mapFAQDrafts.set(
                         t,
-                        new _(this.m_mapFAQSummaries.get(t), i)
+                        new B(this.m_mapFAQSummaries.get(t), i)
                       );
                     }
                   }
@@ -3969,7 +4124,7 @@
                     case 3:
                       return (
                         (u = i.sent()),
-                        (c = Object(B.a)(u)),
+                        (c = Object(_.a)(u)),
                         console.error(
                           "FAQStore.CreateFAQ: caught error " + c.strErrorMsg,
                           c
@@ -3988,7 +4143,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (o = f.b.Init(E)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (o = f.b.Init(N)).Body().set_steamid(h.b.CLANSTEAMID),
                         o.Body().set_faq_id(e),
                         o.Body().set_language(t),
                         o.Body().set_content(a),
@@ -4021,7 +4176,7 @@
                     case 3:
                       return (
                         (l = i.sent()),
-                        (d = Object(B.a)(l)),
+                        (d = Object(_.a)(l)),
                         console.error(
                           "FAQStore.UpdateDraft: caught error " + d.strErrorMsg,
                           d
@@ -4071,7 +4226,7 @@
                     case 3:
                       return (
                         (u = i.sent()),
-                        (c = Object(B.a)(u)),
+                        (c = Object(_.a)(u)),
                         console.error(
                           "FAQStore.UpdateJsonData: caught error " +
                             c.strErrorMsg,
@@ -4091,7 +4246,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (a = f.b.Init(P)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (a = f.b.Init(x)).Body().set_steamid(h.b.CLANSTEAMID),
                         a.Body().set_faq_id(e),
                         a.Body().set_version(t),
                         a.Body().set_language(r),
@@ -4121,7 +4276,7 @@
                     case 3:
                       return (
                         (u = i.sent()),
-                        (c = Object(B.a)(u)),
+                        (c = Object(_.a)(u)),
                         console.error(
                           "FAQStore.GetFAQVersion: caught error " +
                             c.strErrorMsg,
@@ -4141,7 +4296,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (t = f.b.Init(O)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (t = f.b.Init(j)).Body().set_steamid(h.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (r = 2),
                         (i.label = 1);
@@ -4172,7 +4327,7 @@
                     case 3:
                       return (
                         (o = i.sent()),
-                        (s = Object(B.a)(o)),
+                        (s = Object(_.a)(o)),
                         console.error(
                           "FAQStore.DeleteFAQ: caught error " + s.strErrorMsg,
                           s
@@ -4214,7 +4369,7 @@
                     case 0:
                       if (this.m_mapFAQDrafts.has(e))
                         return [2, this.m_mapFAQDrafts.get(e)];
-                      (t = f.b.Init(q)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (t = f.b.Init(k)).Body().set_steamid(h.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (r = 2),
                         (i.label = 1);
@@ -4247,14 +4402,14 @@
                               .forEach(function (e) {
                                 return s.set(e.language(), e.toObject());
                               }),
-                            (u = new _(this.m_mapFAQSummaries.get(e), s)),
+                            (u = new B(this.m_mapFAQSummaries.get(e), s)),
                             this.m_mapFAQDrafts.set(e, u),
                             [2, u])
                       );
                     case 3:
                       return (
                         (c = i.sent()),
-                        (l = Object(B.a)(c)),
+                        (l = Object(_.a)(c)),
                         console.error(
                           "FaqStore.LoadFAQDraftContent: exception " +
                             l.strErrorMsg,
@@ -4274,7 +4429,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (a = f.b.Init(A)).Body().set_steamid(h.b.CLANSTEAMID),
+                      (a = f.b.Init(I)).Body().set_steamid(h.b.CLANSTEAMID),
                         a.Body().set_faq_id(e),
                         a.Body().set_visible_in_global_realm(t),
                         a.Body().set_visible_in_china_realm(r),
@@ -4307,7 +4462,7 @@
                     case 3:
                       return (
                         (c = i.sent()),
-                        (l = Object(B.a)(c)),
+                        (l = Object(_.a)(c)),
                         console.error(
                           "FaqStore.UpdateVisibility: exception " +
                             l.strErrorMsg,
@@ -4385,7 +4540,7 @@
                     case 3:
                       return (
                         (u = i.sent()),
-                        (l = Object(B.a)(u)),
+                        (l = Object(_.a)(u)),
                         console.error(
                           "FaqStore.PublishDraftByLanguage: exception " +
                             l.strErrorMsg,
@@ -4457,7 +4612,7 @@
                     case 3:
                       return (
                         (s = i.sent()),
-                        (u = Object(B.a)(s)),
+                        (u = Object(_.a)(s)),
                         console.error(
                           "FaqStore.UpdateInternalName: exception " +
                             u.strErrorMsg,
@@ -4564,7 +4719,7 @@
                       return (l = i.sent()), (u = l), [3, 4];
                     case 4:
                       return (
-                        (d = Object(B.a)(u)),
+                        (d = Object(_.a)(u)),
                         console.error(
                           "Could not import from crowdin",
                           e,
@@ -4668,6 +4823,1184 @@
         );
       }
     },
+    NIbt: function (e, t, r) {
+      "use strict";
+      r.r(t),
+        r.d(t, "BroadcastEmbeddablePopoutHeader", function () {
+          return k;
+        });
+      var n = r("mrSG"),
+        i = r("vDqi"),
+        a = r.n(i),
+        o = r("TyAF"),
+        s = r("q1tI"),
+        u = r.n(s),
+        c = r("eN6m"),
+        l = r("trWU"),
+        d = r("5eAM"),
+        m = r("VQ2A"),
+        f = r("b3LC"),
+        p = r("5L1o"),
+        b = r("NKJh"),
+        _ = r("RQmk"),
+        h = r("dfs5"),
+        B = r("0OaU"),
+        y = r("exH9"),
+        g = r("lkRc"),
+        v = r("dLk7"),
+        S = r.n(v),
+        w = Object(o.a)(function (e) {
+          var t = e.appid,
+            r = Object(f.d)(t, 0, !0),
+            i = (r[0], r[1]),
+            a = Object(h.c)();
+          Object(s.useEffect)(
+            function () {
+              if (!d.a.BHasAppLinkLoaded(t)) {
+                Object(n.b)(void 0, void 0, void 0, function () {
+                  return Object(n.e)(this, function (e) {
+                    switch (e.label) {
+                      case 0:
+                        return [4, d.a.LoadAppLinkInfo([t])];
+                      case 1:
+                        return [2, e.sent()];
+                    }
+                  });
+                });
+              }
+            },
+            [t]
+          );
+          var o = S.a.StoreSaleWidgetContainer_mini,
+            c = S.a.StoreSaleWidgetImage_mini,
+            l = S.a.StoreSaleImage_mini,
+            v = (S.a.StoreSaleWidgetShortDesc_mini, d.a.GetAppLinkInfo(t));
+          if (!i || !v)
+            return u.a.createElement(
+              "div",
+              { className: o },
+              u.a.createElement(B.a, { size: "medium" }),
+              ";"
+            );
+          var w = "series" != v.type,
+            C = Object(m.b)(v.capsule_link, a);
+          return v && v.title
+            ? u.a.createElement(
+                "div",
+                { className: o },
+                u.a.createElement(
+                  "div",
+                  { className: b.Actions },
+                  u.a.createElement(
+                    "a",
+                    { href: C, target: g.c.IN_CLIENT ? void 0 : "_blank" },
+                    u.a.createElement(
+                      _.b,
+                      { type: "app", id: v.appid },
+                      u.a.createElement(
+                        "div",
+                        { className: c },
+                        u.a.createElement("img", {
+                          className: l,
+                          src: v.capsule,
+                        })
+                      )
+                    )
+                  )
+                ),
+                u.a.createElement(
+                  "div",
+                  { className: b.StoreSaleBroadcastWidgetRight },
+                  u.a.createElement(
+                    "div",
+                    { className: b.Actions },
+                    u.a.createElement(
+                      "a",
+                      { href: C, target: g.c.IN_CLIENT ? void 0 : "_blank" },
+                      u.a.createElement(
+                        _.b,
+                        { type: "app", id: v.appid },
+                        u.a.createElement(
+                          "div",
+                          {
+                            className: Object(y.a)(
+                              b.StoreSaleWidgetTitle,
+                              "StoreSaleWidgetTitle"
+                            ),
+                          },
+                          v.title
+                        )
+                      )
+                    )
+                  ),
+                  u.a.createElement(
+                    "div",
+                    { className: b.StoreSaleWidgetRelease },
+                    v.release
+                  ),
+                  w &&
+                    u.a.createElement(p.o, {
+                      info: v,
+                      bShowDemoButton: !0,
+                      bStackedButtons: !0,
+                    })
+                )
+              )
+            : u.a.createElement("div", {
+                className: b.StoreSaleWidgetEmptyContainer,
+              });
+        }),
+        C = r("kyHq"),
+        M = r("1BdX"),
+        z = r("boaH"),
+        O = r("nWbB"),
+        j = r("02Wr"),
+        R = r("MnIK"),
+        F = r("6Y59"),
+        T = r("d+Me"),
+        W = r("TLQK"),
+        E = r("opsS"),
+        I = r("kLLr"),
+        A = r("uIWk"),
+        N = r("rKv1"),
+        U = r.n(N),
+        D = Object(o.a)(function (e) {
+          var t = e.event,
+            r = t.clanSteamID.GetAccountID(),
+            i = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
+            o = Object(s.useRef)(null),
+            c = Object(s.useState)(
+              t ? A.a.GetCreatorHome(t.clanSteamID) : null
+            ),
+            l = c[0],
+            d = c[1];
+          if (
+            (Object(s.useEffect)(
+              function () {
+                var e = a.a.CancelToken.source();
+                o.current = e.cancel;
+                return (
+                  Object(n.b)(void 0, void 0, void 0, function () {
+                    var t, i;
+                    return Object(n.e)(this, function (n) {
+                      switch (n.label) {
+                        case 0:
+                          return (
+                            (t = I.a.InitFromClanID(r)),
+                            [4, A.a.LoadCreatorHome(t, e)]
+                          );
+                        case 1:
+                          return (i = n.sent()), e.token.reason || d(i), [2];
+                      }
+                    });
+                  }),
+                  function () {
+                    o.current && o.current("BroadcastDropsDisplay: unmounting");
+                  }
+                );
+              },
+              [r]
+            ),
+            i || !l || !l.BIsLoaded())
+          )
+            return null;
+          var m =
+            g.c.COMMUNITY_BASE_URL +
+            "gid/" +
+            t.jsondata.broadcast_item_drops_details_clan_accountid +
+            "/partnerevents/view/" +
+            t.jsondata.broadcast_item_drops_details_event_gid;
+          return u.a.createElement(
+            "div",
+            { className: U.a.item_drop_ctn },
+            u.a.createElement(
+              "div",
+              null,
+              Object(W.f)(
+                l.GetName().length > 0
+                  ? t.jsondata.broadcast_item_drops_min_watch_time_minutes %
+                      60 ==
+                    0
+                    ? "#SalePage_WatchForDrop_Hours_CreatorNamed"
+                    : "#SalePage_WatchForDrop_Minutes_CreatorNamed"
+                  : t.jsondata.broadcast_item_drops_min_watch_time_minutes %
+                      60 ==
+                    0
+                  ? "#SalePage_WatchForDrop_Hours_Developer"
+                  : "#SalePage_WatchForDrop_Minutes_Developer",
+                t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
+                  ? t.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
+                  : t.jsondata.broadcast_item_drops_min_watch_time_minutes,
+                l.GetName()
+              ),
+              Boolean(t.jsondata.broadcast_item_drops_details_clan_accountid) &&
+                u.a.createElement(
+                  "a",
+                  { href: m, target: g.c.IN_CLIENT ? "" : "_blank" },
+                  Object(W.f)("#SalePage_WatchForDrop_LearnMore")
+                )
+            )
+          );
+        }),
+        P = {
+          list: [
+            { appid: 444090, url: "https://steam.tv/paladins" },
+            { appid: 386360, url: "https://steam.tv/smite" },
+            { appid: 813820, url: "https://steam.tv/realmroyale" },
+            {
+              appid: 583950,
+              url: "https://steam.tv/artifact",
+              broadcasterAccountID: 912972716,
+            },
+            {
+              appid: 570,
+              url: "https://steam.tv/dota",
+              broadcasterAccountID: 238221269,
+            },
+            {
+              appid: 1025790,
+              url: "https://steam.tv/steamawards",
+              broadcasterAccountID: 934427243,
+            },
+            {
+              appid: 730,
+              url: "https://steam.tv/csgo",
+              broadcasterAccountID: 927819071,
+            },
+          ],
+        },
+        G = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (
+              (t.m_cancelSignal = a.a.CancelToken.source()),
+              (t.state = {
+                bShowPopoutHeader: !1,
+                bExpanded: !1,
+                bLoadingPreference: !0,
+                style: {
+                  maxHeight: "0vh",
+                  overflow: "hidden",
+                  transition: "max-height 1s ease-in-out",
+                },
+                innerStyle: {
+                  maxHeight: "0vh",
+                  overflow: "hidden",
+                  transition: "max-height 1s ease-in-out",
+                },
+                bStartMuted: !0,
+              }),
+              t
+            );
+          }
+          var r;
+          return (
+            Object(n.d)(t, e),
+            (r = t),
+            (t.IsBroadcastAllowed = function () {
+              return g.c.EREALM != C.f.k_ESteamRealmChina;
+            }),
+            (t.prototype.componentDidMount = function () {
+              return Object(n.b)(this, void 0, void 0, function () {
+                var e = this;
+                return Object(n.e)(this, function (t) {
+                  switch (t.label) {
+                    case 0:
+                      return r.IsBroadcastAllowed()
+                        ? [
+                            4,
+                            O.a
+                              .Get()
+                              .LoadBIsEmbeddedBroadcastHidden(
+                                this.m_cancelSignal
+                              ),
+                          ]
+                        : [2];
+                    case 1:
+                      return (
+                        t.sent(),
+                        this.m_cancelSignal.token.reason ||
+                          this.setState({
+                            bLoadingPreference: !1,
+                            bExpanded: !O.a
+                              .Get()
+                              .BIsEmbeddedBroadcastHiddenByDefaultUserSettings(),
+                            innerStyle: Object(n.a)(
+                              Object(n.a)({}, this.state.innerStyle),
+                              {
+                                maxHeight: O.a
+                                  .Get()
+                                  .BIsEmbeddedBroadcastHiddenByDefaultUserSettings()
+                                  ? "0vh"
+                                  : "100vh",
+                              }
+                            ),
+                          }),
+                        [
+                          4,
+                          this.props.bIsPreview && this.props.accountIDs
+                            ? O.a
+                                .Get()
+                                .HintLoadEmbeddablePreviewStreams(this.props)
+                            : O.a.Get().HintLoadEmbeddableStreams(this.props),
+                        ]
+                      );
+                    case 2:
+                      return (
+                        t.sent(),
+                        this.props.nAppIDVOD &&
+                          (O.a
+                            .Get()
+                            .SetupEmbeddableVOD(
+                              this.props,
+                              !this.props.bSkipPreRoll
+                            ),
+                          this.props.bSkipPreRoll && this.PlayTopNonVOD()),
+                        window.setTimeout(function () {
+                          e.m_cancelSignal.token.reason ||
+                            e.setState({
+                              style: Object(n.a)(
+                                Object(n.a)({}, e.state.style),
+                                { maxHeight: "100vh" }
+                              ),
+                            });
+                        }, 10),
+                        [2]
+                      );
+                  }
+                });
+              });
+            }),
+            (t.prototype.componentWillUnmount = function () {
+              this.m_cancelSignal.cancel(
+                "BroadcastEmbeddable component unmounted"
+              );
+            }),
+            (t.prototype.ToggleBroadcastExpandShrink = function () {
+              var e = this,
+                t = O.a.Get().GetPlayReadyStream(this.props),
+                r = z.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID;
+              Object(O.e)(r, this.state.bExpanded ? 2 : 3, t.snr);
+              var i = this.state.bExpanded;
+              window.setTimeout(function () {
+                return e.setState({
+                  innerStyle: Object(n.a)(Object(n.a)({}, e.state.innerStyle), {
+                    maxHeight: i ? "0vh" : "100vh",
+                  }),
+                });
+              }, 10),
+                i ||
+                  this.setState(
+                    { bExpanded: !this.state.bExpanded },
+                    function () {
+                      return O.a
+                        .Get()
+                        .SetEmbeddedStreamCollapsed(!e.state.bExpanded);
+                    }
+                  );
+            }),
+            (t.prototype.OnShrinkTransitionEnd = function () {
+              "0vh" === this.state.innerStyle.maxHeight &&
+                this.setState({ bExpanded: !1 }, function () {
+                  return O.a.Get().SetEmbeddedStreamCollapsed(!0);
+                });
+            }),
+            (t.prototype.onStreamSelect = function (e) {
+              return Object(n.b)(this, void 0, void 0, function () {
+                return Object(n.e)(this, function (t) {
+                  switch (t.label) {
+                    case 0:
+                      return (
+                        this.setState({ bStartMuted: !1 }),
+                        O.a.Get().GetPlayReadyStream(this.props).accountid ==
+                        e.accountid
+                          ? [3, 2]
+                          : [4, O.a.Get().AttemptToPlayStream(this.props, e)]
+                      );
+                    case 1:
+                      t.sent(), (t.label = 2);
+                    case 2:
+                      return [2];
+                  }
+                });
+              });
+            }),
+            (t.prototype.PlayTopNonVOD = function () {
+              return Object(n.b)(this, void 0, void 0, function () {
+                var e,
+                  t,
+                  r,
+                  i,
+                  a = this;
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
+                    case 0:
+                      this.setState({ bStartMuted: !1 }),
+                        (e = O.a
+                          .Get()
+                          .GetStreams(this.props)
+                          .filter(function (e) {
+                            return (
+                              !a.props.fnFilterStreams ||
+                              a.props.fnFilterStreams(e)
+                            );
+                          })),
+                        Object(O.f)(e),
+                        (t = 0),
+                        (r = e),
+                        (n.label = 1);
+                    case 1:
+                      return t < r.length
+                        ? (i = r[t]).nAppIDVOD
+                          ? [3, 3]
+                          : [4, O.a.Get().AttemptToPlayStream(this.props, i)]
+                        : [3, 4];
+                    case 2:
+                      return n.sent(), [2];
+                    case 3:
+                      return t++, [3, 1];
+                    case 4:
+                      return [2];
+                  }
+                });
+              });
+            }),
+            (t.prototype.ConstructSidePanels = function (e, t) {
+              var r = {
+                leftPanel: null,
+                rightPanel: null,
+                bRightPanelArtworkOrEmpty: !0,
+              };
+              if (this.props.bWidePlayer) return r;
+              var n = O.a.Get().GetConcurrentStreams(this.props) > 1,
+                i = z.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
+                a = s.createElement(
+                  "div",
+                  { className: U.a.rightPanel },
+                  s.createElement(Q, {
+                    key: "right" + i,
+                    ImgUrl: e.right_panel,
+                  })
+                ),
+                o = s.createElement(Q, {
+                  key: "left" + i,
+                  ImgUrl: e.left_panel,
+                });
+              if (i < 11) {
+                var u = M.b.GetAppIDListForBroadcasterSteamID(e.steamid);
+                u && 1 === u.length && (i = u[0]);
+              }
+              return (
+                !(
+                  (this.props.promotionName ||
+                    this.props.bIsPreview ||
+                    this.props.subid ||
+                    this.props.bundleid) &&
+                  i >= 11
+                ) ||
+                  (this.props.event &&
+                    this.props.event.jsondata.broadcast_force_banner) ||
+                  ((a = s.createElement(w, {
+                    key: "mini" + e.accountid,
+                    appid: i,
+                  })),
+                  (r.bRightPanelArtworkOrEmpty = !1)),
+                n && !t
+                  ? ((r.leftPanel = s.createElement(q, {
+                      broadcastEmbedContext: this.props,
+                      key: "selector" + i,
+                      curStream: e,
+                      onStreamSelect: this.onStreamSelect,
+                      fnFilterStreams: this.props.fnFilterStreams,
+                      bShowCapsuleArt: this.props.bShowCapsuleArt,
+                    })),
+                    (r.rightPanel = a))
+                  : t
+                  ? ((r.leftPanel = s.createElement("div", null)),
+                    (r.rightPanel = s.createElement(H, {
+                      stream: e,
+                      orientation: "rightside",
+                    })),
+                    (r.bRightPanelArtworkOrEmpty = !1))
+                  : ((r.leftPanel = o), (r.rightPanel = a)),
+                r
+              );
+            }),
+            (t.prototype.render = function () {
+              var e,
+                t,
+                i = this;
+              if (!r.IsBroadcastAllowed() || this.state.bLoadingPreference)
+                return null;
+              var a = O.a.Get().GetPlayReadyStream(this.props);
+              if (a) {
+                var o = "show" === O.a.Get().GetChatVisibility(),
+                  u = this.props,
+                  c = u.event,
+                  l = u.language,
+                  d = u.fnRenderBroadcastContext;
+                c &&
+                  (a = Object(n.a)(Object(n.a)({}, a), {
+                    left_panel: c.GetImageURL(
+                      "broadcast_left",
+                      l || Object(C.h)(g.c.LANGUAGE)
+                    ),
+                    right_panel: c.GetImageURL(
+                      "broadcast_right",
+                      l || Object(C.h)(g.c.LANGUAGE)
+                    ),
+                    store_title: c.GetBroadcastTitle(
+                      l || Object(C.h)(g.c.LANGUAGE)
+                    ),
+                    broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
+                  }));
+                var m = this.ConstructSidePanels(a, o),
+                  f = a.store_title ? a.store_title : a.title,
+                  b = O.a.Get().GetConcurrentStreams(this.props) > 1;
+                c && c.jsondata && c.jsondata.broadcast_gradient_inner_color,
+                  c && c.jsondata && c.jsondata.broadcast_gradient_outer_color;
+                return s.createElement(
+                  s.Fragment,
+                  null,
+                  s.createElement(
+                    "div",
+                    {
+                      className: "broadcast_embed_top_ctn_trgt",
+                      style: this.state.style,
+                    },
+                    s.createElement(
+                      "div",
+                      {
+                        className: Object(y.a)(
+                          ((e = {}),
+                          (e[U.a.bordered_container] = !0),
+                          (e[U.a.Event] = Boolean(c)),
+                          (e.broadcast_brd_ctn_trgt = !0),
+                          e)
+                        ),
+                      },
+                      s.createElement(
+                        "div",
+                        {
+                          className: Object(y.a)(
+                            U.a.bordered_title,
+                            "bordered_title_trgt"
+                          ),
+                        },
+                        s.createElement(p.i, null),
+                        f,
+                        s.createElement(
+                          "div",
+                          { className: U.a.bordered_corner_container },
+                          !this.state.bExpanded &&
+                            s.createElement("div", {
+                              className: U.a.broadcast_settings_icon,
+                              "data-tooltip-text": Object(W.f)(
+                                "#StoreBroadcast_Change_store_Broadcast_settings"
+                              ),
+                              onClick: function () {
+                                return window.open(
+                                  g.c.STORE_BASE_URL +
+                                    "account/preferences/#store_broadcast_settings"
+                                );
+                              },
+                            }),
+                          s.createElement("div", {
+                            className: this.state.bExpanded
+                              ? U.a.bordered_corner_expanded
+                              : U.a.bordered_corner_shrinked,
+                            "data-tooltip-text": Object(W.f)(
+                              "#StoreBroadcast_Hide_Tooltip"
+                            ),
+                            onClick: this.ToggleBroadcastExpandShrink,
+                          })
+                        ),
+                        Boolean(a.gamedata_subtitle) &&
+                          s.createElement(
+                            "div",
+                            { className: U.a.bordered_subtitle },
+                            a.gamedata_subtitle
+                          )
+                      ),
+                      this.state.bExpanded &&
+                        s.createElement(
+                          "div",
+                          {
+                            className: Object(y.a)(
+                              ((t = {}),
+                              (t[U.a.container] = !0),
+                              (t.embeddable_ctn_trgt = !0),
+                              (t.multistream = b),
+                              (t.broadcast_right_panel_simple =
+                                m.bRightPanelArtworkOrEmpty),
+                              (t.broadcast_chat_expanded = o),
+                              t)
+                            ),
+                            style: Object(n.a)({}, this.state.innerStyle),
+                            onTransitionEnd: this.OnShrinkTransitionEnd,
+                          },
+                          m.leftPanel,
+                          s.createElement(L, {
+                            stream: a,
+                            bStartMuted: this.state.bStartMuted,
+                            fnRenderBroadcastContext: d,
+                            fnOnVideoEnd: function () {
+                              var e, t;
+                              a.nAppIDVOD && i.PlayTopNonVOD(),
+                                null === (t = (e = i.props).fnOnVideoEnd) ||
+                                  void 0 === t ||
+                                  t.call(e);
+                            },
+                            bWidePlayer: this.props.bWidePlayer,
+                          }),
+                          m.rightPanel,
+                          this.state.bExpanded &&
+                            s.createElement(x, { stream: a, bMultistream: b })
+                        )
+                    ),
+                    Boolean(
+                      c && c.jsondata && c.jsondata.broadcast_item_drops_enabled
+                    ) && s.createElement(D, { event: c }),
+                    this.state.bExpanded &&
+                      s.createElement(
+                        "div",
+                        { className: "" + (c ? U.a.Event : "") },
+                        s.createElement(x, { stream: a, bMultistream: b })
+                      ),
+                    s.createElement("div", { className: U.a.clear_div })
+                  )
+                );
+              }
+              return s.createElement("div", {
+                className: "NoBroadcastAvailable",
+              });
+            }),
+            Object(n.c)(
+              [E.a],
+              t.prototype,
+              "ToggleBroadcastExpandShrink",
+              null
+            ),
+            Object(n.c)([E.a], t.prototype, "OnShrinkTransitionEnd", null),
+            Object(n.c)([E.a], t.prototype, "onStreamSelect", null),
+            Object(n.c)([E.a], t.prototype, "PlayTopNonVOD", null),
+            (t = r = Object(n.c)([o.a], t))
+          );
+        })(s.Component),
+        L =
+          ((t.default = G),
+          (function (e) {
+            function t(t) {
+              var r = e.call(this, t) || this;
+              return (
+                (r.m_iVideoContainerRef = s.createRef()),
+                (r.state = {
+                  bPopout: !1,
+                  bPreventPopup: window.screen.width <= 768,
+                }),
+                r
+              );
+            }
+            return (
+              Object(n.d)(t, e),
+              (t.prototype.CloseBroadcastPopup = function () {
+                var e = z.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
+                  .m_nAppID;
+                Object(O.e)(e, 7, this.props.stream.snr),
+                  this.setState({ bPopout: !1, bPreventPopup: !0 });
+              }),
+              (t.prototype.OnEnter = function () {
+                !this.state.bPreventPopup &&
+                  this.state.bPopout &&
+                  this.setState({ bPopout: !1 });
+              }),
+              (t.prototype.OnLeave = function () {
+                this.state.bPreventPopup ||
+                  this.state.bPopout ||
+                  this.setState({ bPopout: !0 });
+              }),
+              (t.prototype.render = function () {
+                var e;
+                return s.createElement(
+                  "div",
+                  { className: U.a.wrapper },
+                  s.createElement(
+                    T.a,
+                    { onEnter: this.OnEnter, onLeave: this.OnLeave },
+                    s.createElement(
+                      "div",
+                      {
+                        className: Object(y.a)(
+                          ((e = {}),
+                          (e[U.a.video_placeholder] = !0),
+                          (e.video_placeholder_trgt = !0),
+                          (e[U.a.WidePlayer] = this.props.bWidePlayer),
+                          e)
+                        ),
+                        ref: this.m_iVideoContainerRef,
+                      },
+                      s.createElement(
+                        "div",
+                        {
+                          className: this.state.bPopout
+                            ? U.a.broadcast_floating
+                            : U.a.video_container,
+                        },
+                        this.state.bPopout &&
+                          s.createElement(k, {
+                            steamIDBroadcast: this.props.stream.steamid,
+                            OnPreventPopup: this.CloseBroadcastPopup,
+                          }),
+                        s.createElement(
+                          "div",
+                          { className: U.a.BroadcastPlayerContainer },
+                          s.createElement(l.a, {
+                            steamIDBroadcast: this.props.stream.steamid,
+                            watchLocation: 6,
+                            bStartMuted: this.props.bStartMuted,
+                            fnRenderBroadcastContext: this.props
+                              .fnRenderBroadcastContext,
+                            fnOnVideoEnd: this.props.fnOnVideoEnd,
+                            nAppIDVOD: this.props.stream.nAppIDVOD,
+                          })
+                        )
+                      )
+                    )
+                  )
+                );
+              }),
+              Object(n.c)([E.a], t.prototype, "CloseBroadcastPopup", null),
+              Object(n.c)([E.a], t.prototype, "OnEnter", null),
+              Object(n.c)([E.a], t.prototype, "OnLeave", null),
+              t
+            );
+          })(s.Component)),
+        x = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(n.d)(t, e),
+            (t.prototype.ConstructBroadcastLink = function () {
+              var e = this.props.stream,
+                t = z.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
+                  .m_nAppID,
+                r = P.list.find(function (r) {
+                  return (
+                    r.appid == t &&
+                    (!r.broadcasterAccountID ||
+                      r.broadcasterAccountID == e.accountid)
+                  );
+                });
+              if (r) {
+                var n = r.url;
+                return (
+                  (g.c.IN_CLIENT ||
+                    navigator.userAgent.indexOf("Valve Steam Client") >= 0 ||
+                    navigator.userAgent.indexOf("Valve Steam GameOverlay") >=
+                      0 ||
+                    navigator.userAgent.indexOf("Valve Steam Tenfoot") >= 0) &&
+                    (n = "steam://openurl/" + n),
+                  s.createElement(
+                    "a",
+                    { href: n },
+                    Object(W.f)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
+                  )
+                );
+              }
+              var i = this.props.stream.steamid,
+                a = g.c.COMMUNITY_BASE_URL + "broadcast/watch/" + i;
+              return s.createElement(
+                "a",
+                {
+                  href: a,
+                  className: U.a.external_link,
+                  "data-tooltip-text": Object(W.f)(
+                    "#BroadcastWatch_View_Broadcast_Page"
+                  ),
+                },
+                s.createElement(F.w, null)
+              );
+            }),
+            (t.prototype.OnToggleChat = function (e) {
+              e.preventDefault();
+              var t = z.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
+                .m_nAppID;
+              Object(O.e)(
+                t,
+                "show" === O.a.Get().GetChatVisibility() ? 5 : 4,
+                this.props.stream.snr
+              ),
+                O.a.Get().ToggleChatVisibility();
+            }),
+            (t.prototype.onWatchBroadcastPage = function () {
+              var e = z.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
+                .m_nAppID;
+              Object(O.e)(e, 9, this.props.stream.snr);
+            }),
+            (t.prototype.render = function () {
+              var e = this.ConstructBroadcastLink(),
+                t = "remove" != O.a.Get().GetChatVisibility(),
+                r = "hide" === O.a.Get().GetChatVisibility(),
+                n = Number.parseInt(
+                  "" +
+                    z.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
+                      .m_nViewerCount
+                );
+              return s.createElement(
+                "div",
+                { className: Object(y.a)(U.a.viewer_bar, "viewer_bar") },
+                s.createElement(
+                  "div",
+                  { className: Object(y.a)(U.a.viewer_count, "viewer_count") },
+                  s.createElement(F.kb, null),
+                  n.toLocaleString(W.e.GetPreferredLocales())
+                ),
+                s.createElement(
+                  "div",
+                  { className: Object(y.a)(U.a.viewer_links, "viewer_links") },
+                  Boolean(t && !r && this.props.bMultistream) &&
+                    s.createElement(
+                      "div",
+                      { className: U.a.chat_link },
+                      s.createElement(
+                        "a",
+                        {
+                          href: "#",
+                          className: U.a.ChatToggle,
+                          onClick: this.OnToggleChat,
+                        },
+                        Object(W.f)("#sale_three_section_show_streams")
+                      )
+                    ),
+                  t &&
+                    s.createElement(
+                      "div",
+                      { className: U.a.chat_link },
+                      s.createElement(F.k, null),
+                      s.createElement(
+                        "a",
+                        {
+                          href: "#",
+                          className: U.a.ChatToggle,
+                          onClick: this.OnToggleChat,
+                        },
+                        Object(W.f)(
+                          r
+                            ? "#sale_three_section_show_chat"
+                            : "#sale_three_section_hide_chat"
+                        )
+                      )
+                    ),
+                  t && s.createElement("span", { className: U.a.ChatToggle }),
+                  s.createElement(
+                    "a",
+                    {
+                      href:
+                        g.c.STORE_BASE_URL +
+                        "account/preferences/#store_broadcast_settings",
+                      target: g.c.IN_CLIENT ? void 0 : "_blank",
+                      className: U.a.settings_link,
+                      "data-tooltip-text": Object(W.f)(
+                        "#StoreBroadcast_Change_store_Broadcast_settings"
+                      ),
+                    },
+                    s.createElement(F.W, null)
+                  ),
+                  e
+                )
+              );
+            }),
+            Object(n.c)([E.a], t.prototype, "OnToggleChat", null),
+            Object(n.c)([E.a], t.prototype, "onWatchBroadcastPage", null),
+            (t = Object(n.c)([o.a], t))
+          );
+        })(s.Component),
+        Q = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(n.d)(t, e),
+            (t.prototype.render = function () {
+              var e = this.props.ImgUrl;
+              return s.createElement(
+                s.Fragment,
+                null,
+                e &&
+                  s.createElement("img", {
+                    className: U.a.side_panels,
+                    src: this.props.ImgUrl,
+                  }),
+                !e && s.createElement("div", { className: U.a.side_panels })
+              );
+            }),
+            t
+          );
+        })(s.Component),
+        k = Object(o.a)(function (e) {
+          var t = e.steamIDBroadcast,
+            r = Object(h.c)(),
+            n = z.a.GetOrCreateBroadcastInfo(t).m_nAppID,
+            i = d.a.GetAppLinkInfo(n),
+            a = i
+              ? s.createElement(
+                  _.a,
+                  {
+                    type: "app",
+                    id: n,
+                    strURL: Object(m.b)(i.capsule_link, r),
+                    className: U.a.PopOutVideoTitleText,
+                  },
+                  Object(W.f)("#StoreBroadcast_Detault_popout_Title")
+                )
+              : s.createElement(
+                  "div",
+                  { className: U.a.PopOutVideoTitleText },
+                  Object(W.f)("#StoreBroadcast_Detault_popout_Title")
+                );
+          return s.createElement(
+            "div",
+            { className: [U.a.PopOutVideoTitleBar, U.a.NoSeslect].join(" ") },
+            a,
+            s.createElement(
+              "button",
+              {
+                className: U.a.PopOutVideoCloseButton,
+                "data-tooltip-text": Object(W.f)(
+                  "#StoreBroadcast_close_broadcast_popup"
+                ),
+                onClick: e.OnPreventPopup,
+              },
+              s.createElement(F.ob, null)
+            )
+          );
+        }),
+        q = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (t.itemRef = s.createRef()), t;
+          }
+          return (
+            Object(n.d)(t, e),
+            (t.prototype.GetFilteredStreamList = function () {
+              var e = this,
+                t = O.a
+                  .Get()
+                  .GetStreams(this.props.broadcastEmbedContext)
+                  .filter(function (t) {
+                    return (
+                      !e.props.fnFilterStreams || e.props.fnFilterStreams(t)
+                    );
+                  });
+              return Object(O.f)(t), t;
+            }),
+            (t.prototype.CalculateStreamHeight = function (e) {
+              var t = z.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
+                r = d.a.GetAppLinkInfo(t);
+              return this.props.bShowCapsuleArt &&
+                (null == r ? void 0 : r.header_image_url)
+                ? parseInt(U.a.strStreamIconCapsuleArtHeight)
+                : parseInt(U.a.strStreamIconScreenshotArtHeight);
+            }),
+            (t.prototype.componentDidMount = function () {
+              if (this.itemRef && this.itemRef.current) {
+                for (
+                  var e = 0, t = 0, r = this.GetFilteredStreamList();
+                  t < r.length;
+                  t++
+                ) {
+                  var n = r[t];
+                  if (this.props.curStream.accountid == n.accountid) break;
+                  e += this.CalculateStreamHeight(n);
+                }
+                this.itemRef.current.scrollTop = e;
+              }
+            }),
+            (t.prototype.render = function () {
+              var e = this,
+                t = this.GetFilteredStreamList(),
+                r = t.map(function (t) {
+                  var r;
+                  return s.createElement(V, {
+                    key:
+                      null !== (r = t.accountid) && void 0 !== r
+                        ? r
+                        : t.steamid,
+                    stream: t,
+                    bSelected: e.props.curStream.accountid == t.accountid,
+                    onStreamSelect: e.props.onStreamSelect,
+                    bShowCapsuleArt: e.props.bShowCapsuleArt,
+                  });
+                });
+              return s.createElement(
+                "div",
+                {
+                  ref: this.itemRef,
+                  className: Object(y.a)(
+                    U.a.side_panels,
+                    "side_panels",
+                    U.a.multistream,
+                    t.length > 3 ? U.a.scrollingstreams : ""
+                  ),
+                },
+                r
+              );
+            }),
+            t
+          );
+        })(s.Component),
+        V = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          var r;
+          return (
+            Object(n.d)(t, e),
+            (r = t),
+            (t.prototype.onClick = function () {
+              this.props.onStreamSelect &&
+                this.props.onStreamSelect(this.props.stream);
+            }),
+            (t.prototype.generateThumbnail = function (e) {
+              var t,
+                r = this.props.stream,
+                n = this.props.bSelected
+                  ? U.a.stream_icon_selected
+                  : U.a.stream_icon;
+              if (e) {
+                var i = z.a.GetOrCreateBroadcastInfo(r.steamid).m_nAppID,
+                  a = d.a.GetAppLinkInfo(
+                    null !== (t = r.nAppIDVOD) && void 0 !== t ? t : i
+                  ),
+                  o = [r.thumbnail_http_address];
+                return s.createElement(
+                  s.Fragment,
+                  null,
+                  a &&
+                    s.createElement("img", {
+                      className: Object(y.a)(n, U.a.stream_icon_hide_on_hover),
+                      src: a.header_image_url,
+                    }),
+                  s.createElement(j.b, {
+                    className: Object(y.a)(n, U.a.stream_icon_show_on_hover),
+                    srcs: o,
+                  })
+                );
+              }
+              return s.createElement("img", {
+                className: n,
+                src: r.thumbnail_http_address,
+              });
+            }),
+            (t.GetClassForStreamPriority = function (e) {
+              switch (e) {
+                case O.b.k_eFeatured:
+                  return U.a.stream_featured;
+              }
+              return null;
+            }),
+            (t.prototype.render = function () {
+              var e,
+                t = this.props,
+                n = t.stream,
+                i = t.bShowCapsuleArt;
+              if (!Object(O.d)(n)) return null;
+              var a = z.a.GetOrCreateBroadcastInfo(n.steamid).m_nAppID,
+                o = d.a.GetAppLinkInfo(
+                  null !== (e = n.nAppIDVOD) && void 0 !== e ? e : a
+                ),
+                u = Boolean(i && (null == o ? void 0 : o.header_image_url)),
+                c = Number.parseInt("" + n.viewer_count),
+                l = !Number.isNaN(c),
+                m = !!n.nAppIDVOD && (null == o ? void 0 : o.title);
+              return s.createElement(
+                "div",
+                {
+                  className: Object(y.a)(
+                    U.a.stream_icon_and_viewer_container,
+                    r.GetClassForStreamPriority(n.current_selection_priority),
+                    u && U.a.display_capsule_art
+                  ),
+                },
+                s.createElement(
+                  _.b,
+                  { type: "app", id: a },
+                  s.createElement(
+                    R.a,
+                    {
+                      className: U.a.stream_icon_container,
+                      onClick: this.onClick,
+                      rootMargin: "100px 0px 100px 0px",
+                    },
+                    this.generateThumbnail(u),
+                    this.props.bSelected &&
+                      s.createElement("div", {
+                        className: U.a.stream_icon_arrow,
+                      })
+                  )
+                ),
+                s.createElement(
+                  "div",
+                  {
+                    className: Object(y.a)(
+                      U.a.viewer_count,
+                      !l && U.a.vod_title
+                    ),
+                  },
+                  l
+                    ? s.createElement(
+                        s.Fragment,
+                        null,
+                        s.createElement(F.kb, null),
+                        " ",
+                        c.toLocaleString(W.e.GetPreferredLocales())
+                      )
+                    : m
+                )
+              );
+            }),
+            Object(n.c)([E.a], t.prototype, "onClick", null),
+            (t = r = Object(n.c)([o.a], t))
+          );
+        })(s.Component),
+        H = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(n.d)(t, e),
+            (t.prototype.render = function () {
+              var e = "below" == this.props.orientation,
+                t = z.a.GetBroadcast(this.props.stream.steamid);
+              return t
+                ? s.createElement(
+                    "div",
+                    {
+                      className: Object(y.a)(
+                        e
+                          ? U.a.chat_below_container
+                          : U.a.chat_rightside_container,
+                        U.a.store_chat_ctn
+                      ),
+                    },
+                    s.createElement(
+                      "div",
+                      { className: U.a.ChatContainer },
+                      s.createElement(c.a, {
+                        emoticonStore: O.g,
+                        watchLocation: 6,
+                        steamID: this.props.stream.steamid,
+                        broadcastID: t.m_ulBroadcastID,
+                      })
+                    )
+                  )
+                : null;
+            }),
+            (t = Object(n.c)([o.a], t))
+          );
+        })(s.Component);
+    },
     PpkI: function (e, t, r) {
       e.exports = {
         ConferencePageCtn: "landing_ConferencePageCtn_oP_SP",
@@ -4688,10 +6021,52 @@
         FAQImage: "faqbbcode_FAQImage_3Eebt",
       };
     },
+    "d+Me": function (e, t, r) {
+      "use strict";
+      r.d(t, "a", function () {
+        return o;
+      });
+      var n = r("mrSG"),
+        i = r("q1tI"),
+        a = r("uuth"),
+        o = function (e) {
+          var t = e.onPositionChange,
+            r = e.onLeave,
+            o = i.useCallback(
+              function (e) {
+                return (
+                  void 0 === e.previousPosition &&
+                    e.currentPosition === a.a.above &&
+                    r &&
+                    r(e),
+                  t && t(e)
+                );
+              },
+              [t, r]
+            );
+          return i.createElement(
+            a.a,
+            Object(n.a)({}, e, { onPositionChange: o })
+          );
+        };
+    },
+    dLk7: function (e, t, r) {
+      e.exports = {
+        StoreSaleWidgetContainer_mini:
+          "broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp",
+        Action: "broadcastwidgets_Action_2Xpw9",
+        WishList: "broadcastwidgets_WishList_3mTSE",
+        StoreSaleWidgetImage_mini:
+          "broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h",
+        StoreSaleImage_mini: "broadcastwidgets_StoreSaleImage_mini_1zSsm",
+        StoreSaleWidgetShortDesc_mini:
+          "broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU",
+      };
+    },
     eN6m: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return mr;
+        return pr;
       });
       var n = r("mrSG"),
         i = r("2vnA"),
@@ -4706,16 +6081,16 @@
         f = r("u2yL"),
         p = r("WBba"),
         b = r("kLLr"),
-        B = r("hRO2"),
+        _ = r("hRO2"),
         h = r("OS8t"),
-        _ = B.Message;
+        B = _.Message;
       var y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4770,7 +6145,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -4778,14 +6153,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -4795,12 +6170,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         g = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -4814,7 +6189,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -4822,12 +6197,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -4837,14 +6212,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         v = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.upload_token || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4899,7 +6274,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -4907,14 +6282,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -4924,14 +6299,14 @@
             }),
             t
           );
-        })(_),
-        w = (function (e) {
+        })(B),
+        S = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4992,7 +6367,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5000,14 +6375,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5017,14 +6392,14 @@
             }),
             t
           );
-        })(_),
-        S = (function (e) {
+        })(B),
+        w = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.gameid || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5112,7 +6487,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5120,14 +6495,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5137,14 +6512,14 @@
             }),
             t
           );
-        })(_),
-        M = (function (e) {
+        })(B),
+        C = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.thumbnail_url || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5190,7 +6565,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5198,14 +6573,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5215,14 +6590,14 @@
             }),
             t
           );
-        })(_),
-        C = (function (e) {
+        })(B),
+        M = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.response || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5332,7 +6707,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5340,14 +6715,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5357,14 +6732,14 @@
             }),
             t
           );
-        })(_);
+        })(B);
       var z = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.success || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5395,7 +6770,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5403,14 +6778,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5420,12 +6795,12 @@
             }),
             t
           );
-        })(_),
-        R = (function (e) {
+        })(B),
+        O = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -5439,7 +6814,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5447,12 +6822,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5462,14 +6837,14 @@
             }),
             t
           );
-        })(_),
-        O = (function (e) {
+        })(B),
+        j = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5505,7 +6880,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5513,14 +6888,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5530,8 +6905,8 @@
             }),
             t
           );
-        })(_);
-      var j,
+        })(B);
+      var R,
         F,
         T = (function (e) {
           function t(r) {
@@ -5539,7 +6914,7 @@
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5574,7 +6949,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5582,14 +6957,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5599,14 +6974,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         W = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5656,7 +7031,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5664,14 +7039,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5681,14 +7056,14 @@
             }),
             t
           );
-        })(_),
-        I = (function (e) {
+        })(B),
+        E = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5723,7 +7098,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5731,14 +7106,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5748,14 +7123,14 @@
             }),
             t
           );
-        })(_),
-        A = (function (e) {
+        })(B),
+        I = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5795,7 +7170,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5803,14 +7178,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5820,14 +7195,14 @@
             }),
             t
           );
-        })(_),
-        U = (function (e) {
+        })(B),
+        A = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5872,7 +7247,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5880,14 +7255,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5897,14 +7272,14 @@
             }),
             t
           );
-        })(_),
-        E = (function (e) {
+        })(B),
+        N = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.thumbnail_upload_token || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5959,7 +7334,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -5967,14 +7342,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -5984,14 +7359,14 @@
             }),
             t
           );
-        })(_),
-        N = (function (e) {
+        })(B),
+        U = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcaster_steamid || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6026,7 +7401,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6034,14 +7409,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6051,14 +7426,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         D = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, [4], null),
+              B.initialize(n, r, 0, -1, [4], null),
               n
             );
           }
@@ -6105,7 +7480,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6113,14 +7488,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6130,14 +7505,14 @@
             }),
             t
           );
-        })(_),
-        G = (function (e) {
+        })(B),
+        P = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6193,7 +7568,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6201,14 +7576,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6218,14 +7593,14 @@
             }),
             t
           );
-        })(_),
-        Q = (function (e) {
+        })(B),
+        G = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.persona_name || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6267,7 +7642,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6275,14 +7650,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6292,14 +7667,14 @@
             }),
             t
           );
-        })(_),
-        x = (function (e) {
+        })(B),
+        L = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6335,7 +7710,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6343,14 +7718,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6360,14 +7735,14 @@
             }),
             t
           );
-        })(_),
-        P = (function (e) {
+        })(B),
+        x = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.result || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6404,7 +7779,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6412,14 +7787,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6429,14 +7804,14 @@
             }),
             t
           );
-        })(_),
-        L = (function (e) {
+        })(B),
+        Q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6477,7 +7852,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6485,14 +7860,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6502,12 +7877,12 @@
             }),
             t
           );
-        })(_),
-        q = (function (e) {
+        })(B),
+        k = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6521,7 +7896,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6529,12 +7904,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6544,14 +7919,14 @@
             }),
             t
           );
-        })(_),
-        k = (function (e) {
+        })(B),
+        q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6591,7 +7966,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6599,14 +7974,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6616,12 +7991,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         V = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6635,7 +8010,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6643,12 +8018,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6658,14 +8033,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         H = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.persona_names || h.a(t.M()),
-              _.initialize(n, r, 0, -1, [1], null),
+              B.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -6694,7 +8069,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6702,14 +8077,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6719,14 +8094,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         K = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steam_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6766,7 +8141,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6774,14 +8149,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6791,14 +8166,14 @@
             }),
             t
           );
-        })(_),
-        J = (function (e) {
+        })(B),
+        Y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_clip_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6833,7 +8208,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6841,14 +8216,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6858,12 +8233,12 @@
             }),
             t
           );
-        })(_),
-        Y = (function (e) {
+        })(B),
+        J = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6877,7 +8252,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6885,12 +8260,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6900,12 +8275,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         $ = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6919,7 +8294,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -6927,12 +8302,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -6942,14 +8317,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         X = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_clip_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7025,7 +8400,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7033,14 +8408,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7050,12 +8425,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         Z = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7069,7 +8444,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7077,12 +8452,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7092,14 +8467,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         ee = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_permission || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7180,7 +8555,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7188,14 +8563,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7205,14 +8580,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         te = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.upload_stats || h.a(t.M()),
-              _.initialize(n, r, 0, -1, [1], null),
+              B.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -7241,7 +8616,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7249,14 +8624,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7266,14 +8641,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         re = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.upload_result || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7395,7 +8770,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7403,14 +8778,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7420,14 +8795,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         ne = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.viewer_stats || h.a(t.M()),
-              _.initialize(n, r, 0, -1, [1, 2], null),
+              B.initialize(n, r, 0, -1, [1, 2], null),
               n
             );
           }
@@ -7459,7 +8834,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7467,14 +8842,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7484,14 +8859,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         ie = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.time || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7527,7 +8902,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7535,14 +8910,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7552,14 +8927,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         ae = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.country_code || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7599,7 +8974,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7607,14 +8982,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7624,12 +8999,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         oe = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7643,7 +9018,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7651,12 +9026,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7666,12 +9041,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         se = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7685,7 +9060,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7693,12 +9068,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7708,12 +9083,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         ue = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7727,7 +9102,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7735,12 +9110,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7750,14 +9125,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         ce = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.sdp_mid || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7802,7 +9177,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7810,14 +9185,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7827,12 +9202,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         le = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7846,7 +9221,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7854,12 +9229,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7869,12 +9244,12 @@
             }),
             t
           );
-        })(_),
+        })(B),
         de = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7888,7 +9263,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7896,12 +9271,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7911,14 +9286,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         me = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.candidate_generation || h.a(t.M()),
-              _.initialize(n, r, 0, -1, [2], null),
+              B.initialize(n, r, 0, -1, [2], null),
               n
             );
           }
@@ -7954,7 +9329,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -7962,14 +9337,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -7979,14 +9354,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         fe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_session_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8021,7 +9396,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8029,14 +9404,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8046,14 +9421,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         pe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.turn_server || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8088,7 +9463,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8096,14 +9471,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8113,14 +9488,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         be = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_session_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8170,7 +9545,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8178,14 +9553,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8195,14 +9570,14 @@
             }),
             t
           );
-        })(_),
-        Be = (function (e) {
+        })(B),
+        _e = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_session_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8243,7 +9618,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8251,14 +9626,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8268,14 +9643,14 @@
             }),
             t
           );
-        })(_),
+        })(B),
         he = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_session_id || h.a(t.M()),
-              _.initialize(n, r, 0, -1, void 0, null),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8316,7 +9691,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8324,14 +9699,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8341,7 +9716,7 @@
             }),
             t
           );
-        })(_);
+        })(B);
       !(function (e) {
         (e.BeginBroadcastSession = function (e, t) {
           return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, y, {
@@ -8366,7 +9741,7 @@
             );
           }),
           (e.WatchBroadcast = function (e, t) {
-            return e.SendMsg("Broadcast.WatchBroadcast#1", t, C, {
+            return e.SendMsg("Broadcast.WatchBroadcast#1", t, M, {
               ePrivilege: 2,
             });
           }),
@@ -8381,12 +9756,12 @@
             });
           }),
           (e.GetBroadcastStatus = function (e, t) {
-            return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, S, {
+            return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, w, {
               ePrivilege: 2,
             });
           }),
           (e.GetBroadcastThumbnail = function (e, t) {
-            return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, M, {
+            return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, C, {
               ePrivilege: 2,
             });
           }),
@@ -8396,7 +9771,7 @@
             });
           }),
           (e.SendBroadcastStateToServer = function (e, t) {
-            return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, R, {
+            return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, O, {
               ePrivilege: 1,
             });
           }),
@@ -8413,17 +9788,17 @@
             });
           }),
           (e.PostChatMessage = function (e, t) {
-            return e.SendMsg("Broadcast.PostChatMessage#1", t, Q, {
+            return e.SendMsg("Broadcast.PostChatMessage#1", t, G, {
               ePrivilege: 3,
             });
           }),
           (e.UpdateChatMessageFlair = function (e, t) {
-            return e.SendMsg("Broadcast.UpdateChatMessageFlair#1", t, P, {
+            return e.SendMsg("Broadcast.UpdateChatMessageFlair#1", t, x, {
               ePrivilege: 1,
             });
           }),
           (e.MuteBroadcastChatUser = function (e, t) {
-            return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, q, {
+            return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, k, {
               ePrivilege: 3,
             });
           }),
@@ -8438,13 +9813,13 @@
             });
           }),
           (e.StartBuildClip = function (e, t) {
-            return e.SendMsg("Broadcast.StartBuildClip#1", t, J, {
+            return e.SendMsg("Broadcast.StartBuildClip#1", t, Y, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetBuildClipStatus = function (e, t) {
-            return e.SendMsg("Broadcast.GetBuildClipStatus#1", t, Y, {
+            return e.SendMsg("Broadcast.GetBuildClipStatus#1", t, J, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
@@ -8530,11 +9905,11 @@
               eWebAPIKeyRequirement: 2,
             });
           });
-      })(j || (j = {})),
+      })(R || (R = {})),
         (function (e) {
           (e.NotifyBroadcastViewerStateHandler = {
             name: "BroadcastClient.NotifyBroadcastViewerState#1",
-            request: O,
+            request: j,
           }),
             (e.NotifyWaitingBroadcastViewerHandler = {
               name: "BroadcastClient.NotifyWaitingBroadcastViewer#1",
@@ -8542,7 +9917,7 @@
             }),
             (e.NotifyBroadcastUploadStartedHandler = {
               name: "BroadcastClient.NotifyBroadcastUploadStarted#1",
-              request: w,
+              request: S,
             }),
             (e.NotifyStopBroadcastUploadHandler = {
               name: "BroadcastClient.NotifyStopBroadcastUpload#1",
@@ -8550,23 +9925,23 @@
             }),
             (e.NotifySessionClosedHandler = {
               name: "BroadcastClient.NotifySessionClosed#1",
-              request: I,
+              request: E,
             }),
             (e.NotifyViewerBroadcastInviteHandler = {
               name: "BroadcastClient.NotifyViewerBroadcastInvite#1",
-              request: N,
+              request: U,
             }),
             (e.NotifyBroadcastStatusHandler = {
               name: "BroadcastClient.NotifyBroadcastStatus#1",
-              request: A,
+              request: I,
             }),
             (e.NotifyBroadcastChannelLiveHandler = {
               name: "BroadcastClient.NotifyBroadcastChannelLive#1",
-              request: U,
+              request: A,
             }),
             (e.SendThumbnailToRelayHandler = {
               name: "BroadcastClient.SendThumbnailToRelay#1",
-              request: E,
+              request: N,
             }),
             (e.NotifyWebRTCNeedTURNServerHandler = {
               name: "BroadcastClient.NotifyWebRTCNeedTURNServer#1",
@@ -8578,14 +9953,14 @@
             }),
             (e.NotifyWebRTCSetAnswerHandler = {
               name: "BroadcastClient.NotifyWebRTCSetAnswer#1",
-              request: Be,
+              request: _e,
             }),
             (e.NotifyWebRTCAddViewerCandidateHandler = {
               name: "BroadcastClient.NotifyWebRTCAddViewerCandidate#1",
               request: he,
             });
         })(F || (F = {}));
-      var _e = B.Message;
+      var Be = _.Message;
       var ye,
         ge = (function (e) {
           function t(r) {
@@ -8593,7 +9968,7 @@
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8628,7 +10003,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8636,14 +10011,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8653,14 +10028,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         ve = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8705,7 +10080,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8713,14 +10088,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8730,12 +10105,12 @@
             }),
             t
           );
-        })(_e),
-        we = (function (e) {
+        })(Be),
+        Se = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _e.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -8749,7 +10124,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8757,12 +10132,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8772,14 +10147,14 @@
             }),
             t
           );
-        })(_e),
-        Se = (function (e) {
+        })(Be),
+        we = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.unique_name || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8847,7 +10222,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8855,14 +10230,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8872,14 +10247,14 @@
             }),
             t
           );
-        })(_e),
-        Me = (function (e) {
+        })(Be),
+        Ce = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.replace_image_hash || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8914,7 +10289,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8922,14 +10297,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -8939,14 +10314,14 @@
             }),
             t
           );
-        })(_e),
-        Ce = (function (e) {
+        })(Be),
+        Me = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.images || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8975,7 +10350,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -8983,14 +10358,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9000,14 +10375,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         ze = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.image_type || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9048,7 +10423,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9056,14 +10431,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9073,14 +10448,14 @@
             }),
             t
           );
-        })(_e),
-        Re = (function (e) {
+        })(Be),
+        Oe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.links || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9091,7 +10466,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { links: { n: 1, c: Oe, r: !0, q: !0 } },
+                    fields: { links: { n: 1, c: je, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -9109,7 +10484,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9117,14 +10492,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9134,14 +10509,14 @@
             }),
             t
           );
-        })(_e),
-        Oe = (function (e) {
+        })(Be),
+        je = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.link_index || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9186,7 +10561,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9194,14 +10569,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9211,12 +10586,12 @@
             }),
             t
           );
-        })(_e),
-        je = (function (e) {
+        })(Be),
+        Re = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _e.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -9230,7 +10605,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9238,12 +10613,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9253,14 +10628,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         Fe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.is_live || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9337,7 +10712,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9345,14 +10720,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9362,14 +10737,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         Te = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9482,7 +10857,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9490,14 +10865,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9507,14 +10882,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         We = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9543,7 +10918,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9551,14 +10926,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9568,14 +10943,14 @@
             }),
             t
           );
-        })(_e),
-        Ie = (function (e) {
+        })(Be),
+        Ee = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9604,7 +10979,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9612,14 +10987,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9629,14 +11004,14 @@
             }),
             t
           );
-        })(_e),
-        Ae = (function (e) {
+        })(Be),
+        Ie = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.is_followed || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9671,7 +11046,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9679,14 +11054,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9696,14 +11071,14 @@
             }),
             t
           );
-        })(_e),
-        Ue = (function (e) {
+        })(Be),
+        Ae = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.is_subscribed || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9738,7 +11113,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9746,14 +11121,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9763,12 +11138,12 @@
             }),
             t
           );
-        })(_e),
-        Ee = (function (e) {
+        })(Be),
+        Ne = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _e.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -9782,7 +11157,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9790,12 +11165,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9805,14 +11180,14 @@
             }),
             t
           );
-        })(_e),
-        Ne = (function (e) {
+        })(Be),
+        Ue = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.is_followed || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9852,7 +11227,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9860,14 +11235,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9877,14 +11252,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         De = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.appid || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [5], null),
+              Be.initialize(n, r, 0, -1, [5], null),
               n
             );
           }
@@ -9938,7 +11313,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -9946,14 +11321,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -9963,14 +11338,14 @@
             }),
             t
           );
-        })(_e),
-        Ge = (function (e) {
+        })(Be),
+        Pe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9999,7 +11374,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10007,14 +11382,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10024,14 +11399,14 @@
             }),
             t
           );
-        })(_e),
-        Qe = (function (e) {
+        })(Be),
+        Ge = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10060,7 +11435,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10068,14 +11443,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10085,14 +11460,14 @@
             }),
             t
           );
-        })(_e),
-        xe = (function (e) {
+        })(Be),
+        Le = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasters || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10103,7 +11478,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { broadcasters: { n: 1, c: Pe, r: !0, q: !0 } },
+                    fields: { broadcasters: { n: 1, c: xe, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -10121,7 +11496,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10129,14 +11504,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10146,14 +11521,14 @@
             }),
             t
           );
-        })(_e),
-        Pe = (function (e) {
+        })(Be),
+        xe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10194,7 +11569,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10202,14 +11577,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10219,14 +11594,14 @@
             }),
             t
           );
-        })(_e),
-        Le = (function (e) {
+        })(Be),
+        Qe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.issuer_steamid || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10273,7 +11648,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10281,14 +11656,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10298,14 +11673,14 @@
             }),
             t
           );
-        })(_e),
-        qe = (function (e) {
+        })(Be),
+        ke = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10352,7 +11727,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10360,14 +11735,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10377,12 +11752,12 @@
             }),
             t
           );
-        })(_e),
-        ke = (function (e) {
+        })(Be),
+        qe = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _e.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -10396,7 +11771,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10404,12 +11779,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10419,14 +11794,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         Ve = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10437,7 +11812,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: Le, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: Qe, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -10455,7 +11830,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10463,14 +11838,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10480,14 +11855,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         He = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10528,7 +11903,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10536,14 +11911,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10553,12 +11928,12 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         Ke = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _e.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -10572,7 +11947,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10580,12 +11955,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10595,14 +11970,14 @@
             }),
             t
           );
-        })(_e),
-        Je = (function (e) {
+        })(Be),
+        Ye = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10637,7 +12012,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10645,14 +12020,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10662,14 +12037,14 @@
             }),
             t
           );
-        })(_e),
-        Ye = (function (e) {
+        })(Be),
+        Je = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.steamid || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10705,7 +12080,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10713,14 +12088,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10730,14 +12105,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         $e = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10748,7 +12123,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: Ye, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: Je, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -10766,7 +12141,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10774,14 +12149,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10791,12 +12166,12 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         Xe = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _e.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -10810,7 +12185,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10818,12 +12193,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10833,14 +12208,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         Ze = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -10877,7 +12252,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10885,14 +12260,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10902,14 +12277,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         et = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_channel_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -10944,7 +12319,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -10952,14 +12327,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -10969,14 +12344,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         tt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.chat_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [3], null),
+              Be.initialize(n, r, 0, -1, [3], null),
               n
             );
           }
@@ -11023,7 +12398,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11031,14 +12406,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11048,14 +12423,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         rt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11084,7 +12459,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11092,14 +12467,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11109,14 +12484,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         nt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.stream_live_email || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11156,7 +12531,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11164,14 +12539,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11181,12 +12556,12 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         it = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _e.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -11200,7 +12575,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11208,12 +12583,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11223,14 +12598,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         at = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.results || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11259,7 +12634,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11267,14 +12642,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11284,14 +12659,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         ot = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasts || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11320,7 +12695,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11328,14 +12703,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11345,14 +12720,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         st = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasts || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11385,7 +12760,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11393,14 +12768,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11410,14 +12785,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         ut = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.appid || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11454,7 +12829,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11462,14 +12837,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11479,14 +12854,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         ct = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.entries || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11518,7 +12893,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11526,14 +12901,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11543,14 +12918,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         lt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasts || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11582,7 +12957,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11590,14 +12965,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11607,14 +12982,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         dt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcasts || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11646,7 +13021,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11654,14 +13029,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11671,14 +13046,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         mt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11715,7 +13090,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11723,14 +13098,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11740,14 +13115,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         ft = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11779,7 +13154,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11787,14 +13162,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11804,14 +13179,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         pt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.title || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11842,7 +13217,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11850,14 +13225,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11867,14 +13242,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         bt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.template_type || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -11917,7 +13292,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11925,14 +13300,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -11942,14 +13317,14 @@
             }),
             t
           );
-        })(_e),
-        Bt = (function (e) {
+        })(Be),
+        _t = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.rows || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -11978,7 +13353,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -11986,14 +13361,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12003,14 +13378,14 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         ht = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.broadcast_clip_id || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, void 0, null),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -12081,7 +13456,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12089,14 +13464,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12106,14 +13481,14 @@
             }),
             t
           );
-        })(_e),
-        _t = (function (e) {
+        })(Be),
+        Bt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.clips || h.a(t.M()),
-              _e.initialize(n, r, 0, -1, [1], null),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -12149,7 +13524,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12157,14 +13532,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12174,12 +13549,12 @@
             }),
             t
           );
-        })(_e),
+        })(Be),
         yt = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return _e.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -12193,7 +13568,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12201,12 +13576,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12216,7 +13591,7 @@
             }),
             t
           );
-        })(_e);
+        })(Be);
       !(function (e) {
         (e.CreateBroadcastChannel = function (e, t) {
           return e.SendMsg("SteamTV.CreateBroadcastChannel#1", t, ge, {
@@ -12231,25 +13606,25 @@
             });
           }),
           (e.SetBroadcastChannelProfile = function (e, t) {
-            return e.SendMsg("SteamTV.SetBroadcastChannelProfile#1", t, we, {
+            return e.SendMsg("SteamTV.SetBroadcastChannelProfile#1", t, Se, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetBroadcastChannelProfile = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelProfile#1", t, Se, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelProfile#1", t, we, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           }),
           (e.SetBroadcastChannelImage = function (e, t) {
-            return e.SendMsg("SteamTV.SetBroadcastChannelImage#1", t, Me, {
+            return e.SendMsg("SteamTV.SetBroadcastChannelImage#1", t, Ce, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetBroadcastChannelImages = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, Ce, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, Me, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
@@ -12258,12 +13633,12 @@
             return e.SendMsg(
               "SteamTV.SetBroadcastChannelLinkRegions#1",
               t,
-              je,
+              Re,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 }
             );
           }),
           (e.GetBroadcastChannelLinks = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelLinks#1", t, Re, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelLinks#1", t, Oe, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
@@ -12272,7 +13647,7 @@
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelBroadcasters#1",
               t,
-              xe,
+              Le,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
             );
           }),
@@ -12284,7 +13659,7 @@
             });
           }),
           (e.GetSubscribedChannels = function (e, t) {
-            return e.SendMsg("SteamTV.GetSubscribedChannels#1", t, Ie, {
+            return e.SendMsg("SteamTV.GetSubscribedChannels#1", t, Ee, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
@@ -12297,25 +13672,25 @@
             });
           }),
           (e.FollowBroadcastChannel = function (e, t) {
-            return e.SendMsg("SteamTV.FollowBroadcastChannel#1", t, Ae, {
+            return e.SendMsg("SteamTV.FollowBroadcastChannel#1", t, Ie, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.SubscribeBroadcastChannel = function (e, t) {
-            return e.SendMsg("SteamTV.SubscribeBroadcastChannel#1", t, Ue, {
+            return e.SendMsg("SteamTV.SubscribeBroadcastChannel#1", t, Ae, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetBroadcastChannelClips = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelClips#1", t, _t, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelClips#1", t, Bt, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           }),
           (e.ReportBroadcastChannel = function (e, t) {
-            return e.SendMsg("SteamTV.ReportBroadcastChannel#1", t, Ee, {
+            return e.SendMsg("SteamTV.ReportBroadcastChannel#1", t, Ne, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
@@ -12324,26 +13699,26 @@
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelInteraction#1",
               t,
-              Ne,
+              Ue,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
             );
           }),
           (e.GetGames = function (e, t) {
-            return e.SendMsg("SteamTV.GetGames#1", t, Ge, {
+            return e.SendMsg("SteamTV.GetGames#1", t, Pe, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetChannels = function (e, t) {
-            return e.SendMsg("SteamTV.GetChannels#1", t, Qe, {
+            return e.SendMsg("SteamTV.GetChannels#1", t, Ge, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.AddChatBan = function (e, t) {
-            return e.SendMsg("SteamTV.AddChatBan#1", t, ke, {
+            return e.SendMsg("SteamTV.AddChatBan#1", t, qe, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
@@ -12413,7 +13788,7 @@
             });
           }),
           (e.GetHomePageContents = function (e, t) {
-            return e.SendMsg("SteamTV.GetHomePageContents#1", t, Bt, {
+            return e.SendMsg("SteamTV.GetHomePageContents#1", t, _t, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -12428,12 +13803,12 @@
       })(ye || (ye = {}));
       var gt,
         vt,
-        wt = r("qiKp"),
-        St = r("TLQK"),
-        Mt = r("XxJJ"),
-        Ct = r("lkRc"),
-        zt = B.Message,
-        Rt = (function (e) {
+        St = r("qiKp"),
+        wt = r("TLQK"),
+        Ct = r("XxJJ"),
+        Mt = r("lkRc"),
+        zt = _.Message,
+        Ot = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -12456,7 +13831,7 @@
                         br: h.d.readBool,
                         bw: h.h.writeBool,
                       },
-                      friends: { n: 2, c: Ot, r: !0, q: !0 },
+                      friends: { n: 2, c: jt, r: !0, q: !0 },
                       max_friend_count: {
                         n: 3,
                         br: h.d.readUint32,
@@ -12490,7 +13865,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12498,14 +13873,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12516,7 +13891,7 @@
             t
           );
         })(zt),
-        Ot = (function (e) {
+        jt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -12562,7 +13937,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12570,14 +13945,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12588,14 +13963,14 @@
             t
           );
         })(zt),
-        jt = B.Message,
+        Rt = _.Message,
         Ft = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.groupid || h.a(t.M()),
-              jt.initialize(n, r, 0, -1, [3], null),
+              Rt.initialize(n, r, 0, -1, [3], null),
               n
             );
           }
@@ -12638,7 +14013,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12646,14 +14021,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12663,14 +14038,14 @@
             }),
             t
           );
-        })(jt),
+        })(Rt),
         Tt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.categories || h.a(t.M()),
-              jt.initialize(n, r, 0, -1, [1], null),
+              Rt.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -12699,7 +14074,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12707,14 +14082,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12724,14 +14099,14 @@
             }),
             t
           );
-        })(jt),
+        })(Rt),
         Wt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.accountid || h.a(t.M()),
-              jt.initialize(n, r, 0, -1, void 0, null),
+              Rt.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -12772,7 +14147,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12780,14 +14155,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12797,14 +14172,14 @@
             }),
             t
           );
-        })(jt),
-        It = (function (e) {
+        })(Rt),
+        Et = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.favorites || h.a(t.M()),
-              jt.initialize(n, r, 0, -1, [1], null),
+              Rt.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -12833,7 +14208,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12841,14 +14216,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12858,12 +14233,12 @@
             }),
             t
           );
-        })(jt),
-        At = (function (e) {
+        })(Rt),
+        It = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return jt.initialize(r, t, 0, -1, void 0, null), r;
+            return Rt.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -12877,7 +14252,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12885,12 +14260,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12900,14 +14275,14 @@
             }),
             t
           );
-        })(jt),
-        Ut = (function (e) {
+        })(Rt),
+        At = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.favorites || h.a(t.M()),
-              jt.initialize(n, r, 0, -1, [1], null),
+              Rt.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -12936,7 +14311,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12944,14 +14319,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -12961,12 +14336,12 @@
             }),
             t
           );
-        })(jt),
-        Et = (function (e) {
+        })(Rt),
+        Nt = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return jt.initialize(r, t, 0, -1, void 0, null), r;
+            return Rt.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -12980,7 +14355,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -12988,12 +14363,12 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -13003,14 +14378,14 @@
             }),
             t
           );
-        })(jt),
-        Nt = (function (e) {
+        })(Rt),
+        Ut = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
               t.prototype.friendslist || h.a(t.M()),
-              jt.initialize(n, r, 0, -1, void 0, null),
+              Rt.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -13021,7 +14396,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { friendslist: { n: 1, c: Rt } },
+                    fields: { friendslist: { n: 1, c: Ot } },
                   }),
                 t.sm_m
               );
@@ -13039,7 +14414,7 @@
               return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new B.BinaryReader(e),
+              var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
@@ -13047,14 +14422,14 @@
               return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new B.BinaryWriter();
+              var e = new _.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -13064,7 +14439,7 @@
             }),
             t
           );
-        })(jt);
+        })(Rt);
       !(function (e) {
         (e.GetCategories = function (e, t) {
           return e.SendMsg("FriendsList.GetCategories#1", t, Tt, {
@@ -13073,19 +14448,19 @@
           });
         }),
           (e.GetFriendsList = function (e, t) {
-            return e.SendMsg("FriendsList.GetFriendsList#1", t, Nt, {
+            return e.SendMsg("FriendsList.GetFriendsList#1", t, Ut, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
           (e.GetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.GetFavorites#1", t, It, {
+            return e.SendMsg("FriendsList.GetFavorites#1", t, Et, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
           (e.SetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.SetFavorites#1", t, At, {
+            return e.SendMsg("FriendsList.SetFavorites#1", t, It, {
               ePrivilege: 1,
             });
           });
@@ -13093,13 +14468,13 @@
         (function (e) {
           e.FavoritesChangedHandler = {
             name: "FriendsListClient.FavoritesChanged#1",
-            request: Ut,
+            request: At,
           };
         })(vt || (vt = {}));
       var Dt = r("oFam"),
-        Gt = r("kyHq"),
-        Qt = r("uobO"),
-        xt = (function () {
+        Pt = r("kyHq"),
+        Gt = r("uobO"),
+        Lt = (function () {
           function e() {
             (this.m_mapPlayerCache = new Map()),
               (this.m_strBannedWords = ""),
@@ -13110,7 +14485,7 @@
               (this.m_regexBannedWords = null),
               (this.m_regexCleanWords = null),
               (this.m_bShownFilterTip = !1),
-              (this.m_TextFilterPreferences = new Gt.i());
+              (this.m_TextFilterPreferences = new Pt.i());
             var e = new Dt.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
@@ -13144,11 +14519,11 @@
                       case 4:
                         return n.sent(), [4, this.RequestFriendsList()];
                       case 5:
-                        return n.sent(), [4, this.LoadLanguage(Ct.c.LANGUAGE)];
+                        return n.sent(), [4, this.LoadLanguage(Mt.c.LANGUAGE)];
                       case 6:
                         return (
                           n.sent(),
-                          "english" === Ct.c.LANGUAGE
+                          "english" === Mt.c.LANGUAGE
                             ? [3, 8]
                             : [4, this.LoadLanguage("english")]
                         );
@@ -13294,13 +14669,13 @@
                     case 3:
                       return (
                         (s = {
-                          sessionid: Ct.c.SESSIONID,
-                          origin: Object(Ct.e)(),
+                          sessionid: Mt.c.SESSIONID,
+                          origin: Object(Mt.e)(),
                         }),
                         [
                           4,
                           l.a.get(
-                            Ct.c.COMMUNITY_BASE_URL +
+                            Mt.c.COMMUNITY_BASE_URL +
                               "textfilter/ajaxgetcommunitypreferences",
                             { params: s, withCredentials: !0 }
                           ),
@@ -13339,13 +14714,13 @@
                     case 10:
                       return (
                         (s = {
-                          sessionid: Ct.c.SESSIONID,
-                          origin: Object(Ct.e)(),
+                          sessionid: Mt.c.SESSIONID,
+                          origin: Object(Mt.e)(),
                         }),
                         [
                           4,
                           l.a.get(
-                            Ct.c.COMMUNITY_BASE_URL +
+                            Mt.c.COMMUNITY_BASE_URL +
                               "textfilter/ajaxgettextfiltercustomwords",
                             { params: s, withCredentials: !0 }
                           ),
@@ -13395,14 +14770,14 @@
                 return Object(n.e)(this, function (n) {
                   switch (n.label) {
                     case 0:
-                      if (((e = new Rt()), 0 === this.m_unAccountID))
+                      if (((e = new Ot()), 0 === this.m_unAccountID))
                         return [3, 7];
                       n.label = 1;
                     case 1:
                       return (
                         n.trys.push([1, 6, , 7]),
                         this.m_Transport
-                          ? ((t = m.b.Init(Et)),
+                          ? ((t = m.b.Init(Nt)),
                             [4, gt.GetFriendsList(this.m_Transport, t)])
                           : [3, 3]
                       );
@@ -13413,13 +14788,13 @@
                     case 3:
                       return (
                         (i = {
-                          sessionid: Ct.c.SESSIONID,
-                          origin: Object(Ct.e)(),
+                          sessionid: Mt.c.SESSIONID,
+                          origin: Object(Mt.e)(),
                         }),
                         [
                           4,
                           l.a.get(
-                            Ct.c.COMMUNITY_BASE_URL +
+                            Mt.c.COMMUNITY_BASE_URL +
                               "textfilter/ajaxgetfriendslist",
                             { params: i, withCredentials: !0 }
                           ),
@@ -13427,7 +14802,7 @@
                       );
                     case 4:
                       (a = n.sent()),
-                        (e = Rt.fromObject(a.data.friendslist)),
+                        (e = Ot.fromObject(a.data.friendslist)),
                         (n.label = 5);
                     case 5:
                       return [3, 7];
@@ -13464,13 +14839,13 @@
                     case 0:
                       (t = "1"),
                         (r =
-                          Ct.c.COMMUNITY_CDN_URL +
+                          Mt.c.COMMUNITY_CDN_URL +
                           "textfilter/gettextfilterdictionary?type=banned&language=" +
                           e +
                           "&v=" +
                           t +
                           "&origin=" +
-                          Object(Ct.e)()),
+                          Object(Mt.e)()),
                         (n.label = 1);
                     case 1:
                       return n.trys.push([1, 3, , 4]), [4, l.a.get(r)];
@@ -13491,13 +14866,13 @@
                       );
                     case 4:
                       (r =
-                        Ct.c.COMMUNITY_CDN_URL +
+                        Mt.c.COMMUNITY_CDN_URL +
                         "textfilter/gettextfilterdictionary?type=profanity&language=" +
                         e +
                         "&v=" +
                         t +
                         "&origin=" +
-                        Object(Ct.e)()),
+                        Object(Mt.e)()),
                         (n.label = 5);
                     case 5:
                       return n.trys.push([5, 7, , 8]), [4, l.a.get(r)];
@@ -13518,13 +14893,13 @@
                       );
                     case 8:
                       (r =
-                        Ct.c.COMMUNITY_CDN_URL +
+                        Mt.c.COMMUNITY_CDN_URL +
                         "textfilter/gettextfilterdictionary?type=clean_public&language=" +
                         e +
                         "&v=" +
                         t +
                         "&origin=" +
-                        Object(Ct.e)()),
+                        Object(Mt.e)()),
                         (n.label = 9);
                     case 9:
                       return n.trys.push([9, 11, , 12]), [4, l.a.get(r)];
@@ -13594,7 +14969,7 @@
                   this.m_regexBannedWords = new RegExp(e, "ugi");
                 } catch (e) {
                   console.warn("Couldn't compile textfilter bannedwords regex"),
-                    Object(Qt.a)().ReportError(
+                    Object(Gt.a)().ReportError(
                       new Error(
                         "Couldn't compile textfilter bannedwords regex: " + e
                       )
@@ -13605,7 +14980,7 @@
                   this.m_regexCleanWords = new RegExp(t, "ugi");
                 } catch (e) {
                   console.warn("Couldn't compile textfilter cleanwords regex"),
-                    Object(Qt.a)().ReportError(
+                    Object(Gt.a)().ReportError(
                       new Error(
                         "Couldn't compile textfilter cleanwords regex: " + e
                       )
@@ -13656,7 +15031,7 @@
             e
           );
         })(),
-        Pt = (function () {
+        xt = (function () {
           function e() {
             this.m_mapChats = new Map();
           }
@@ -13666,13 +15041,13 @@
             }),
             (e.prototype.GetOrCreateChat = function (e, t) {
               var r = this.GetChat(e, t);
-              return r || ((r = new Lt()), this.m_mapChats.set(e || t, r)), r;
+              return r || ((r = new Qt()), this.m_mapChats.set(e || t, r)), r;
             }),
             Object(n.c)([i.C], e.prototype, "m_mapChats", void 0),
             e
           );
         })(),
-        Lt = (function () {
+        Qt = (function () {
           function e() {
             (this.m_ulBroadcastChannelID = ""),
               (this.m_ulChatID = ""),
@@ -13701,15 +15076,15 @@
               (this.m_bRateLimited = !1),
               (this.m_rgChatMessages = []),
               (this.m_webAPIInterface = new p.a(
-                Ct.c.WEBAPI_BASE_URL,
-                Ct.i.webapi_token
+                Mt.c.WEBAPI_BASE_URL,
+                Mt.i.webapi_token
               ));
           }
           return (
             (e.prototype.InitTextFilter = function () {
-              this.m_textFilterStore = new xt();
+              this.m_textFilterStore = new Lt();
               var e = 0;
-              "" !== Ct.i.steamid && (e = new b.a(Ct.i.steamid).GetAccountID());
+              "" !== Mt.i.steamid && (e = new b.a(Mt.i.steamid).GetAccountID());
               this.m_textFilterStore.Init(e, null, new f.a());
             }),
             Object.defineProperty(e.prototype, "TextFilterStore", {
@@ -13727,8 +15102,8 @@
             }),
             (e.prototype.StartForSteamID = function (e, t) {
               (this.m_webAPIInterface = new p.a(
-                Ct.c.WEBAPI_BASE_URL,
-                Ct.i.webapi_token
+                Mt.c.WEBAPI_BASE_URL,
+                Mt.i.webapi_token
               )),
                 (this.m_ulBroadcastSteamID = e),
                 (this.m_ulBroadcastID = t),
@@ -13737,11 +15112,11 @@
             }),
             (e.prototype.StartForChannel = function (e) {
               (this.m_webAPIInterface = new p.a(
-                Ct.c.WEBAPI_BASE_URL,
-                Ct.i.webapi_token
+                Mt.c.WEBAPI_BASE_URL,
+                Mt.i.webapi_token
               )),
                 (this.m_ulBroadcastChannelID = e),
-                (this.m_strUserSteamID = Ct.i.steamid),
+                (this.m_strUserSteamID = Mt.i.steamid),
                 this.InitTextFilter(),
                 this.JoinChannelChat();
             }),
@@ -13782,7 +15157,7 @@
                             [
                               4,
                               l.a.post(
-                                Ct.c.WEBAPI_BASE_URL +
+                                Mt.c.WEBAPI_BASE_URL +
                                   "IBroadcastService/PostChatMessage/v0001?access_token=" +
                                   this.m_webApiToken,
                                 o
@@ -13796,14 +15171,14 @@
                       );
                     case 3:
                       return (
-                        (s = m.b.Init(G)).SetBodyFields({
+                        (s = m.b.Init(P)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           message: t,
                           instance_id: this.m_unInstanceID.toString(),
                         }),
                         [
                           4,
-                          j.PostChatMessage(
+                          R.PostChatMessage(
                             this.m_webAPIInterface.GetServiceTransport(),
                             s
                           ),
@@ -13825,13 +15200,13 @@
                         ? ((u = ""),
                           (u =
                             17 == a.result
-                              ? Object(St.f)("#BroadcastChat_YouMuted")
+                              ? Object(wt.f)("#BroadcastChat_YouMuted")
                               : 84 == a.result
-                              ? Object(St.f)(
+                              ? Object(wt.f)(
                                   "#BroadcastChat_Cooldown",
                                   a.cooldown_time_seconds
                                 )
-                              : Object(St.f)(
+                              : Object(wt.f)(
                                   "#BroadcastChat_FailedToSendMsg",
                                   t
                                 )),
@@ -13859,7 +15234,7 @@
                         n.sent(),
                         this.m_rgChatMessages.push({
                           type: d.a.Error,
-                          msg: Object(St.f)(
+                          msg: Object(wt.f)(
                             "#BroadcastChat_FailedToSendMsg",
                             t
                           ),
@@ -13895,12 +15270,12 @@
                         (t = {
                           steamid: this.m_ulBroadcastSteamID,
                           broadcastid: this.m_ulBroadcastID,
-                          sessionid: Ct.c.SESSIONID,
+                          sessionid: Mt.c.SESSIONID,
                         }),
                         [
                           4,
                           l.a.get(
-                            Ct.c.CHAT_BASE_URL + "broadcast/getchatinfo",
+                            Mt.c.CHAT_BASE_URL + "broadcast/getchatinfo",
                             {
                               params: t,
                               withCredentials: !0,
@@ -13927,7 +15302,7 @@
                               o.m_bHasAddedWelcomeChat ||
                                 (o.m_rgChatMessages.push({
                                   type: d.a.Notification,
-                                  msg: Object(St.f)(
+                                  msg: Object(wt.f)(
                                     "#BroadcastChat_DefaultMessage"
                                   ),
                                   client_ts: Number(new Date()),
@@ -13945,7 +15320,7 @@
                                     !0
                                   );
                                 }),
-                              (o.m_chatScheduledFunc = new wt.b()),
+                              (o.m_chatScheduledFunc = new St.b()),
                               o.m_chatScheduledFunc.Schedule(0, o.RequestLoop);
                           }),
                         [3, 4]
@@ -13994,7 +15369,7 @@
                           (this.m_rgChatMessages = []),
                           this.m_rgChatMessages.push({
                             type: d.a.Notification,
-                            msg: Object(St.f)("#BroadcastChat_DefaultMessage"),
+                            msg: Object(wt.f)("#BroadcastChat_DefaultMessage"),
                             client_ts: Number(new Date()),
                             instance_id: this.m_unInstanceID,
                             in_game: !1,
@@ -14002,7 +15377,7 @@
                             steamid: "",
                           }),
                           (this.m_bHasAddedWelcomeChat = !0),
-                          (this.m_chatScheduledFunc = new wt.b()),
+                          (this.m_chatScheduledFunc = new St.b()),
                           this.m_chatScheduledFunc.Schedule(
                             0,
                             this.RequestLoop
@@ -14029,7 +15404,7 @@
                   switch (n.label) {
                     case 0:
                       return (
-                        (e = m.b.Init(Je)).SetBodyFields({
+                        (e = m.b.Init(Ye)).SetBodyFields({
                           broadcast_channel_id: this.m_ulBroadcastChannelID,
                         }),
                         [
@@ -14070,9 +15445,9 @@
                   f,
                   p,
                   b,
-                  B,
+                  _,
                   h,
-                  _ = this;
+                  B = this;
                 return Object(n.e)(this, function (y) {
                   switch (y.label) {
                     case 0:
@@ -14101,7 +15476,7 @@
                             });
                           })
                           .filter(function (e) {
-                            return !_.IsUserMutedLocally(e.steamid);
+                            return !B.IsUserMutedLocally(e.steamid);
                           })),
                         (h = this.m_rgChatMessages).push.apply(h, a),
                         (o = this.m_bAutoScroll ? 150 : 300),
@@ -14116,11 +15491,11 @@
                           (c = u[s]),
                             (m =
                               c.muted == this.m_strUserSteamID
-                                ? Object(St.f)(
+                                ? Object(wt.f)(
                                     "#BroadcastChat_YouMuted",
                                     c.persona_name
                                   )
-                                : Object(St.f)(
+                                : Object(wt.f)(
                                     "#BroadcastChat_UserMuted",
                                     c.persona_name
                                   )),
@@ -14137,7 +15512,7 @@
                         for (f = 0, p = i.remove_msgs; f < p.length; f++)
                           (b = p[f]), this.RemoveUserMessagesLocal(b.steamid);
                       if (
-                        ((B = 0),
+                        ((_ = 0),
                         null == this.m_tsFirstRequest ||
                           0 == this.m_nNextChatTS ||
                           i.initial_delay)
@@ -14153,14 +15528,14 @@
                           performance.now() + i.initial_delay),
                           (this.m_nFromFirstRequestMS = 0),
                           (this.m_nNextChatTS = i.next_request),
-                          (B = i.initial_delay);
+                          (_ = i.initial_delay);
                       } else {
                         if (i.next_request < this.m_nNextChatTS)
                           return console.log("Next request in past"), [2];
                         (this.m_nFromFirstRequestMS +=
                           i.next_request - this.m_nNextChatTS),
                           (this.m_nNextChatTS = i.next_request),
-                          (B =
+                          (_ =
                             this.m_tsFirstRequest +
                             this.m_nFromFirstRequestMS -
                             performance.now() +
@@ -14168,9 +15543,9 @@
                       }
                       return (
                         this.m_bReconnecting && (this.m_bReconnecting = !1),
-                        (this.m_nLastSleepMS = B),
-                        B < 0 && (B = 0),
-                        this.m_chatScheduledFunc.Schedule(B, this.RequestLoop),
+                        (this.m_nLastSleepMS = _),
+                        _ < 0 && (_ = 0),
+                        this.m_chatScheduledFunc.Schedule(_, this.RequestLoop),
                         [3, 4]
                       );
                     case 3:
@@ -14194,7 +15569,7 @@
                           return (
                             this.m_rgChatMessages.push({
                               type: d.a.Error,
-                              msg: Object(St.f)(
+                              msg: Object(wt.f)(
                                 "#BroadcastChat_UnableToJoinChat"
                               ),
                               client_ts: Number(new Date()),
@@ -14261,7 +15636,7 @@
                     case 2:
                       return (
                         n.sent(),
-                        (o = Object(St.f)(
+                        (o = Object(wt.f)(
                           t
                             ? "#BroadcastChat_AddedModerator"
                             : "#BroadcastChat_RemovedModerator",
@@ -14278,7 +15653,7 @@
                     case 4:
                       return (
                         n.sent(),
-                        (o = Object(St.f)(
+                        (o = Object(wt.f)(
                           t
                             ? "#BroadcastChat_AddModeratorFailed"
                             : "#BroadcastChat_RemoveModeratorFailed",
@@ -14296,7 +15671,7 @@
                       ),
                         a.append("moderatorsteamid", e),
                         a.append("bAdd", t ? "1" : "0"),
-                        a.append("sessionid", Ct.c.SESSIONID),
+                        a.append("sessionid", Mt.c.SESSIONID),
                         (n.label = 7);
                     case 7:
                       return (
@@ -14304,7 +15679,7 @@
                         [
                           4,
                           l.a.post(
-                            Ct.c.CHAT_BASE_URL +
+                            Mt.c.CHAT_BASE_URL +
                               "broadcast/ajaxupdatechannelmod",
                             a
                           ),
@@ -14314,7 +15689,7 @@
                       return (
                         n.sent(),
                         this.m_mapBroadcastModeratorUsers.set(e, t),
-                        (o = Object(St.f)(
+                        (o = Object(wt.f)(
                           t
                             ? "#BroadcastChat_AddedModerator"
                             : "#BroadcastChat_RemovedModerator",
@@ -14329,7 +15704,7 @@
                     case 9:
                       return (
                         n.sent(),
-                        (o = Object(St.f)(
+                        (o = Object(wt.f)(
                           t
                             ? "#BroadcastChat_AddModeratorFailed"
                             : "#BroadcastChat_RemoveModeratorFailed",
@@ -14354,7 +15729,7 @@
                         (s = this.m_ulBroadcastSteamID),
                         (u = this.m_strUserSteamID),
                         this.m_ulBroadcastChannelID
-                          ? ((c = m.b.Init(qe)).SetBodyFields({
+                          ? ((c = m.b.Init(ke)).SetBodyFields({
                               broadcast_channel_id: this.m_ulBroadcastChannelID,
                               chatter_steamid: e,
                               duration: 3600 * r,
@@ -14379,7 +15754,7 @@
                         d.append("bantype", t),
                         d.append("duration", r.toString()),
                         d.append("perm", i ? "1" : "0"),
-                        d.append("sessionid", Ct.c.SESSIONID),
+                        d.append("sessionid", Mt.c.SESSIONID),
                         (n.label = 3);
                     case 3:
                       return (
@@ -14387,7 +15762,7 @@
                         [
                           4,
                           l.a.post(
-                            Ct.c.CHAT_BASE_URL + "broadcast/ajaxupdateusermute",
+                            Mt.c.CHAT_BASE_URL + "broadcast/ajaxupdateusermute",
                             d
                           ),
                         ]
@@ -14440,7 +15815,7 @@
                             [
                               4,
                               l.a.post(
-                                Ct.c.WEBAPI_BASE_URL +
+                                Mt.c.WEBAPI_BASE_URL +
                                   "IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=" +
                                   this.m_webApiToken,
                                 i
@@ -14452,14 +15827,14 @@
                       return n.sent(), [3, 5];
                     case 3:
                       return (
-                        (a = m.b.Init(L)).SetBodyFields({
+                        (a = m.b.Init(Q)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           user_steamid: e,
                           muted: !0,
                         }),
                         [
                           4,
-                          j.MuteBroadcastChatUser(
+                          R.MuteBroadcastChatUser(
                             this.m_webAPIInterface.GetServiceTransport(),
                             a
                           ),
@@ -14475,7 +15850,7 @@
                         r &&
                           (this.m_rgChatMessages.push({
                             type: d.a.Error,
-                            msg: Object(St.f)(
+                            msg: Object(wt.f)(
                               "#BroadcastChat_UserMuteFailed",
                               t
                             ),
@@ -14493,7 +15868,7 @@
                         r ||
                           this.m_rgChatMessages.push({
                             type: d.a.Notification,
-                            msg: Object(St.f)(
+                            msg: Object(wt.f)(
                               "#BroadcastChat_UserMutedLocal",
                               t
                             ),
@@ -14536,7 +15911,7 @@
                             [
                               4,
                               l.a.post(
-                                Ct.c.WEBAPI_BASE_URL +
+                                Mt.c.WEBAPI_BASE_URL +
                                   "IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=" +
                                   this.m_webApiToken,
                                 r
@@ -14548,14 +15923,14 @@
                       return n.sent(), [3, 5];
                     case 3:
                       return (
-                        (i = m.b.Init(L)).SetBodyFields({
+                        (i = m.b.Init(Q)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           user_steamid: e,
                           muted: !1,
                         }),
                         [
                           4,
-                          j.MuteBroadcastChatUser(
+                          R.MuteBroadcastChatUser(
                             this.m_webAPIInterface.GetServiceTransport(),
                             i
                           ),
@@ -14567,7 +15942,7 @@
                       return (
                         this.m_rgChatMessages.push({
                           type: d.a.Notification,
-                          msg: Object(St.f)(
+                          msg: Object(wt.f)(
                             "#BroadcastChat_UserUnmutedLocal",
                             t
                           ),
@@ -14584,7 +15959,7 @@
                         n.sent(),
                         this.m_rgChatMessages.push({
                           type: d.a.Error,
-                          msg: Object(St.f)(
+                          msg: Object(wt.f)(
                             "#BroadcastChat_UserUnmuteFailed",
                             t
                           ),
@@ -14601,7 +15976,7 @@
                     case 8:
                       this.m_rgChatMessages.push({
                         type: d.a.Notification,
-                        msg: Object(St.f)("#BroadcastChat_UserUnmutedLocal", t),
+                        msg: Object(wt.f)("#BroadcastChat_UserUnmutedLocal", t),
                         client_ts: Number(new Date()),
                         instance_id: this.m_unInstanceID,
                         in_game: !1,
@@ -14642,7 +16017,7 @@
                             [
                               4,
                               l.a.post(
-                                Ct.c.WEBAPI_BASE_URL +
+                                Mt.c.WEBAPI_BASE_URL +
                                   "IBroadcastService/RemoveUserChatText/v0001/?access_token=" +
                                   this.m_webApiToken,
                                 r
@@ -14654,13 +16029,13 @@
                       return n.sent(), [3, 5];
                     case 3:
                       return (
-                        (i = m.b.Init(k)).SetBodyFields({
+                        (i = m.b.Init(q)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           user_steamid: e,
                         }),
                         [
                           4,
-                          j.RemoveUserChatText(
+                          R.RemoveUserChatText(
                             this.m_webAPIInterface.GetServiceTransport(),
                             i
                           ),
@@ -14675,7 +16050,7 @@
                         n.sent(),
                         this.m_rgChatMessages.push({
                           type: d.a.Error,
-                          msg: Object(St.f)(
+                          msg: Object(wt.f)(
                             "#BroadcastChat_RemoveMessagesFailed",
                             t
                           ),
@@ -14711,7 +16086,7 @@
                           [
                             4,
                             l.a.post(
-                              Ct.c.WEBAPI_BASE_URL +
+                              Mt.c.WEBAPI_BASE_URL +
                                 "IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=" +
                                 this.m_webApiToken,
                               t
@@ -14722,13 +16097,13 @@
                       return n.sent(), [3, 4];
                     case 2:
                       return (
-                        (r = m.b.Init(x)).SetBodyFields({
+                        (r = m.b.Init(L)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           flair: "^" + this.m_strFlairGroupID + "^:" + e + ":",
                         }),
                         [
                           4,
-                          j.UpdateChatMessageFlair(
+                          R.UpdateChatMessageFlair(
                             this.m_webAPIInterface.GetServiceTransport(),
                             r
                           ),
@@ -14772,55 +16147,57 @@
             Object(n.c)([i.C], e.prototype, "m_nRateLimitSeconds", void 0),
             Object(n.c)([i.C], e.prototype, "m_bRateLimited", void 0),
             Object(n.c)([i.C], e.prototype, "m_rgChatMessages", void 0),
-            Object(n.c)([Mt.a], e.prototype, "FetchChatModerators", null),
-            Object(n.c)([Mt.a], e.prototype, "RequestLoop", null),
-            Object(n.c)([Mt.a], e.prototype, "MuteUserForSession", null),
+            Object(n.c)([Ct.a], e.prototype, "FetchChatModerators", null),
+            Object(n.c)([Ct.a], e.prototype, "RequestLoop", null),
+            Object(n.c)([Ct.a], e.prototype, "MuteUserForSession", null),
             e
           );
         })(),
-        qt = new Pt();
-      window.g_BroadcastChatStore = qt;
-      var kt = r("1BdX"),
+        kt = new xt();
+      window.g_BroadcastChatStore = kt;
+      var qt = r("1BdX"),
         Vt = r("a5LV"),
         Ht = r("Z9dU"),
         Kt = r.n(Ht),
-        Jt = r("y+6m"),
-        Yt = r("Gorr"),
-        $t = r("0QoN"),
-        Xt = r("gPCo"),
-        Zt = r("5znp"),
-        er = r.n(Zt),
-        tr = function () {
+        Yt = r("y+6m"),
+        Jt = r("Mgs7"),
+        $t = r("Gorr"),
+        Xt = r("0QoN"),
+        Zt = r("BFsE"),
+        er = r("gPCo"),
+        tr = r("5znp"),
+        rr = r.n(tr),
+        nr = function () {
           return s.a.createElement(
             "div",
-            { className: er.a.FriendsListInsetShadowCtn },
+            { className: rr.a.FriendsListInsetShadowCtn },
             s.a.createElement("div", {
-              className: er.a.FriendListInsetShadowTop,
+              className: rr.a.FriendListInsetShadowTop,
             })
           );
         },
-        rr = function () {
+        ir = function () {
           return s.a.createElement(
             "div",
-            { className: er.a.FriendsListInsetShadowCtn },
+            { className: rr.a.FriendsListInsetShadowCtn },
             s.a.createElement("div", {
-              className: er.a.FriendListInsetShadowBottom,
+              className: rr.a.FriendListInsetShadowBottom,
             })
           );
         },
-        nr = r("6Y59"),
-        ir = r("exH9"),
-        ar = r("opsS"),
-        or = r("3sYe"),
-        sr = r.n(or),
-        ur = new RegExp("ː([^ː]*)ː", "g"),
-        cr =
+        ar = r("6Y59"),
+        or = r("exH9"),
+        sr = r("opsS"),
+        ur = r("3sYe"),
+        cr = r.n(ur),
+        lr = new RegExp("ː([^ː]*)ː", "g"),
+        dr =
           (new RegExp("(https?://[^ '\"<>]*)", "gi"),
           new RegExp(
             "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
             "i"
           ));
-      var lr = function (e) {
+      var mr = function (e) {
           var t = e.userType,
             r = e.msg,
             n = e.presenterInfo;
@@ -14829,7 +16206,7 @@
               "span",
               null,
               o.createElement(
-                Xt.b,
+                er.b,
                 {
                   name: n.name,
                   title: n.title,
@@ -14840,11 +16217,11 @@
                 o.createElement(
                   "a",
                   {
-                    className: Object(ir.a)(
-                      sr.a.MessageName,
-                      sr.a.MessagePresenter
+                    className: Object(or.a)(
+                      cr.a.MessageName,
+                      cr.a.MessagePresenter
                     ),
-                    href: Ct.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    href: Mt.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
@@ -14855,16 +16232,16 @@
           var i = null;
           return (
             "broadcaster" === t
-              ? (i = sr.a.MessageBroadcaster)
-              : "moderator" === t && (i = sr.a.MessageModerator),
+              ? (i = cr.a.MessageBroadcaster)
+              : "moderator" === t && (i = cr.a.MessageModerator),
             o.createElement(
               "span",
               null,
               o.createElement(
                 "a",
                 {
-                  className: Object(ir.a)(sr.a.MessageName, i),
-                  href: Ct.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                  className: Object(or.a)(cr.a.MessageName, i),
+                  href: Mt.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                   "data-miniprofile": "s" + r.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
@@ -14874,55 +16251,49 @@
             )
           );
         },
-        dr = function (e) {
+        fr = function (e) {
           switch (e.userType) {
             case "presenter":
               return o.createElement(
                 "span",
                 {
-                  className: sr.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(St.f)(
+                  className: cr.a.RoleFlairContainer,
+                  "data-tooltip-text": Object(wt.f)(
                     "#BroadcastChat_Role_Presenter_ttip"
                   ),
                 },
-                o.createElement(nr.g, null)
+                o.createElement(ar.g, null)
               );
             case "moderator":
               return o.createElement(
                 "span",
                 {
-                  className: sr.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(St.f)(
+                  className: cr.a.RoleFlairContainer,
+                  "data-tooltip-text": Object(wt.f)(
                     "#BroadcastChat_Role_Moderatorr_ttip"
                   ),
                 },
-                o.createElement(nr.h, null)
+                o.createElement(ar.h, null)
               );
             case "broadcaster":
               return o.createElement(
                 "span",
                 {
-                  className: sr.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(St.f)(
+                  className: cr.a.RoleFlairContainer,
+                  "data-tooltip-text": Object(wt.f)(
                     "#BroadcastChat_Role_Broadcaster_ttip"
                   ),
                 },
-                o.createElement(nr.f, null)
+                o.createElement(ar.f, null)
               );
             default:
               return null;
           }
         },
-        mr = (function (e) {
-          function t(t) {
-            var r = e.call(this, t) || this;
-            return (
-              (r.m_chat = null),
-              (r.messagesContainer = o.createRef()),
-              (r.textInput = o.createRef()),
-              (r.state = { message: "" }),
-              r
-            );
+        pr = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (t.m_chat = null), (t.messagesContainer = o.createRef()), t;
           }
           return (
             Object(n.d)(t, e),
@@ -14930,7 +16301,9 @@
               this.StartChat();
             }),
             (t.prototype.componentDidUpdate = function (e) {
-              this.m_chat && this.m_chat.m_bAutoScroll && this.ScrollToBottom(),
+              this.m_chat &&
+                this.m_chat.m_bAutoScroll &&
+                this.ScrollToNewestMessages(),
                 (this.props.steamID === e.steamID &&
                   this.props.broadcastID === e.broadcastID &&
                   this.props.broadcastChannelID === e.broadcastChannelID) ||
@@ -14941,7 +16314,7 @@
             }),
             (t.prototype.StartChat = function () {
               this.m_chat && this.m_chat.Stop(),
-                (this.m_chat = qt.GetOrCreateChat(
+                (this.m_chat = kt.GetOrCreateChat(
                   this.props.broadcastChannelID,
                   this.props.steamID
                 )),
@@ -14954,31 +16327,17 @@
                       this.props.steamID,
                       this.props.broadcastID
                     ),
-                    this.ScrollToBottom());
-            }),
-            (t.prototype.ChatBoxChange = function (e) {
-              this.setState({ message: e.target.value });
-            }),
-            (t.prototype.ChatBoxKeypress = function (e) {
-              !!e.shiftKey ||
-                13 !== e.charCode ||
-                (this.SendMessage(), e.preventDefault());
-            }),
-            (t.prototype.SendMessage = function (e) {
-              this.m_chat.m_bRateLimited ||
-                (this.m_chat.SendMessage(this.state.message),
-                this.setState({ message: "" }),
-                e && e.preventDefault());
+                    this.ScrollToNewestMessages());
             }),
             (t.prototype.IsTrustedDomain = function (e) {
-              return !!e.match(cr);
+              return !!e.match(dr);
             }),
             (t.prototype.AddLinksEmoticons = function (e, t) {
               t && this.m_chat.GetUserEmoticons();
-              for (var r = e.split(ur), n = [], i = 0; i < r.length; i += 1)
+              for (var r = e.split(lr), n = [], i = 0; i < r.length; i += 1)
                 i % 2 == 1
                   ? n.push(
-                      o.createElement(Yt.b, {
+                      o.createElement($t.b, {
                         emoticonHoverStore: Vt.b,
                         key: i,
                         emoticon: r[i],
@@ -14989,15 +16348,19 @@
               return n;
             }),
             (t.prototype.HandleScroll = function (e) {
-              var t =
-                e.currentTarget.scrollTop + e.currentTarget.clientHeight >=
-                e.currentTarget.scrollHeight - 6;
+              var t = this.props.bInvertLayout
+                ? e.currentTarget.scrollTop < 6
+                : e.currentTarget.scrollTop + e.currentTarget.clientHeight >=
+                  e.currentTarget.scrollHeight - 6;
               this.m_chat && (this.m_chat.m_bAutoScroll = t);
             }),
-            (t.prototype.ScrollToBottom = function () {
+            (t.prototype.ScrollToNewestMessages = function () {
               this.messagesContainer &&
                 this.messagesContainer.current &&
-                (this.messagesContainer.current.scrollTop = this.messagesContainer.current.scrollHeight);
+                (this.messagesContainer.current.scrollTop = this.props
+                  .bInvertLayout
+                  ? 0
+                  : this.messagesContainer.current.scrollHeight);
             }),
             (t.prototype.OnContextMenu = function (e, t) {
               var r = this;
@@ -15007,10 +16370,10 @@
                 a = this.m_chat.BIsUserBroadcastModerator(
                   this.m_chat.GetUserSteamID()
                 );
-              ((Ct.i && Ct.i.is_support) || i || a
+              ((Mt.i && Mt.i.is_support) || i || a
                 ? n.push(
                     o.createElement(
-                      Jt.d,
+                      Yt.d,
                       {
                         key: "remove",
                         onSelected: function () {
@@ -15020,10 +16383,10 @@
                           );
                         },
                       },
-                      Object(St.f)("#BroadcastChat_RemoveMessages")
+                      Object(wt.f)("#BroadcastChat_RemoveMessages")
                     ),
                     o.createElement(
-                      Jt.d,
+                      Yt.d,
                       {
                         key: "updatebanh",
                         onSelected: function () {
@@ -15036,10 +16399,10 @@
                           );
                         },
                       },
-                      Object(St.f)("#BroadcastChat_half_Mute")
+                      Object(wt.f)("#BroadcastChat_half_Mute")
                     ),
                     o.createElement(
-                      Jt.d,
+                      Yt.d,
                       {
                         key: "updateband",
                         onSelected: function () {
@@ -15052,10 +16415,10 @@
                           );
                         },
                       },
-                      Object(St.f)("#BroadcastChat_day_Mute")
+                      Object(wt.f)("#BroadcastChat_day_Mute")
                     ),
                     o.createElement(
-                      Jt.d,
+                      Yt.d,
                       {
                         key: "updatebanw",
                         onSelected: function () {
@@ -15068,10 +16431,10 @@
                           );
                         },
                       },
-                      Object(St.f)("#BroadcastChat_week_Mute")
+                      Object(wt.f)("#BroadcastChat_week_Mute")
                     ),
                     o.createElement(
-                      Jt.d,
+                      Yt.d,
                       {
                         key: "updatebanp",
                         onSelected: function () {
@@ -15084,10 +16447,10 @@
                           );
                         },
                       },
-                      Object(St.f)("#BroadcastChat_perm_Mute")
+                      Object(wt.f)("#BroadcastChat_perm_Mute")
                     ),
                     o.createElement(
-                      Jt.d,
+                      Yt.d,
                       {
                         key: "removeban",
                         onSelected: function () {
@@ -15101,13 +16464,13 @@
                           );
                         },
                       },
-                      Object(St.f)("#BroadcastChat_Unmute")
+                      Object(wt.f)("#BroadcastChat_Unmute")
                     )
                   )
                 : this.m_chat.IsUserMutedLocally(t.steamid)
                 ? n.push(
                     o.createElement(
-                      Jt.d,
+                      Yt.d,
                       {
                         key: "unmuteuser",
                         onSelected: function () {
@@ -15117,12 +16480,12 @@
                           );
                         },
                       },
-                      Object(St.f)("#BroadcastChat_UnmuteLocal")
+                      Object(wt.f)("#BroadcastChat_UnmuteLocal")
                     )
                   )
                 : n.push(
                     o.createElement(
-                      Jt.d,
+                      Yt.d,
                       {
                         key: "muteuser",
                         onSelected: function () {
@@ -15132,16 +16495,16 @@
                           );
                         },
                       },
-                      Object(St.f)("#BroadcastChat_MuteLocal")
+                      Object(wt.f)("#BroadcastChat_MuteLocal")
                     )
                   ),
-              (Ct.i && Ct.i.is_support) ||
+              (Mt.i && Mt.i.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
                 t.steamid &&
                 (this.m_chat.BIsUserBroadcastModerator(t.steamid)
                   ? n.push(
                       o.createElement(
-                        Jt.d,
+                        Yt.d,
                         {
                           key: "removemod",
                           onSelected: function () {
@@ -15152,12 +16515,12 @@
                             );
                           },
                         },
-                        Object(St.f)("#BroadcastChat_Remove_Moderator")
+                        Object(wt.f)("#BroadcastChat_Remove_Moderator")
                       )
                     )
                   : n.push(
                       o.createElement(
-                        Jt.d,
+                        Yt.d,
                         {
                           key: "addmod",
                           onSelected: function () {
@@ -15168,22 +16531,22 @@
                             );
                           },
                         },
-                        Object(St.f)("#BroadcastChat_Add_Moderator")
+                        Object(wt.f)("#BroadcastChat_Add_Moderator")
                       )
                     ));
               return n.length
                 ? Object(u.a)(
                     o.createElement(
-                      Jt.c,
+                      Yt.c,
                       null,
                       o.createElement(
                         "div",
-                        { className: sr.a.SelectedUserNameCtn },
-                        Object(St.f)("#BroadcastChat_User"),
+                        { className: cr.a.SelectedUserNameCtn },
+                        Object(wt.f)("#BroadcastChat_User"),
                         o.createElement("br", null),
                         o.createElement(
                           "span",
-                          { className: sr.a.SelectedUserName },
+                          { className: cr.a.SelectedUserName },
                           t.persona_name
                         )
                       ),
@@ -15193,25 +16556,12 @@
                   )
                 : null;
             }),
-            (t.prototype.OnEmoticonSelected = function (e, t) {
-              void 0 === t && (t = !1),
-                this.setState({ message: this.state.message + "ː" + e + "ː" }),
-                this.textInput &&
-                  this.textInput.current &&
-                  this.textInput.current.focus();
-            }),
-            (t.prototype.OnFlairSelected = function (e) {
-              this.m_chat.UpdateChatMessageFlair(e),
-                this.textInput &&
-                  this.textInput.current &&
-                  this.textInput.current.focus();
-            }),
             (t.prototype.GetTypeClassName = function (e) {
               return e.type === d.a.Notification
-                ? sr.a.MessageNotification
+                ? cr.a.MessageNotification
                 : e.type === d.a.Error
-                ? sr.a.MessageError
-                : sr.a.MessageChat;
+                ? cr.a.MessageError
+                : cr.a.MessageChat;
             }),
             (t.prototype.FormatMessage = function (e, t) {
               if (e.type === d.a.Chat) {
@@ -15244,15 +16594,15 @@
                     return n.OnContextMenu(t, e);
                   },
                 },
-                e.type === d.a.Chat && o.createElement(dr, { userType: a }),
+                e.type === d.a.Chat && o.createElement(fr, { userType: a }),
                 e.flair &&
                   o.createElement(
                     "span",
-                    { className: sr.a.FlairContainer },
+                    { className: cr.a.FlairContainer },
                     this.AddLinksEmoticons(e.flair, !1)
                   ),
                 e.type === d.a.Chat &&
-                  o.createElement(lr, {
+                  o.createElement(mr, {
                     userType: a,
                     msg: e,
                     presenterInfo: i,
@@ -15263,9 +16613,9 @@
                     "span",
                     {
                       className:
-                        sr.a.MessageNotification + " " + sr.a.MessageContents,
+                        cr.a.MessageNotification + " " + cr.a.MessageContents,
                     },
-                    " (" + Object(St.f)("#BroadcastChat_Broadcaster") + ")"
+                    " (" + Object(wt.f)("#BroadcastChat_Broadcaster") + ")"
                   ),
                 e.type === d.a.Chat &&
                   this.m_chat.m_mapChannelModeratorUsers.get(e.steamid) &&
@@ -15273,21 +16623,21 @@
                     "span",
                     {
                       className:
-                        sr.a.MessageNotification + " " + sr.a.MessageContents,
+                        cr.a.MessageNotification + " " + cr.a.MessageContents,
                     },
-                    " (" + Object(St.f)("#BroadcastChat_Moderator") + ")"
+                    " (" + Object(wt.f)("#BroadcastChat_Moderator") + ")"
                   ),
                 o.createElement(
                   "span",
                   {
                     className:
-                      sr.a.MessageContents +
+                      cr.a.MessageContents +
                       " " +
                       (this.AddLinksEmoticons(e.msg, !1).filter(function (e) {
                         return e && "string" == typeof e;
                       }).length
                         ? ""
-                        : sr.a.EmoticonsOnly),
+                        : cr.a.EmoticonsOnly),
                   },
                   e.type === d.a.Chat ? " : " : "",
                   this.FormatMessage(e, this.m_chat.TextFilterStore)
@@ -15296,175 +16646,246 @@
             }),
             (t.prototype.render = function () {
               var e = this,
-                t = this.m_chat ? this.m_chat.m_rgChatMessages : [],
-                r = this.m_chat
-                  ? kt.b.GetPresenterMapForBroadcasterSteamID(
+                t = this.props,
+                r = t.hidden,
+                n = t.bPartnerMemberOnlyChat,
+                i = t.bInvertLayout,
+                a = this.m_chat ? this.m_chat.m_rgChatMessages : [],
+                s = i ? a.reverse() : a,
+                u = this.m_chat
+                  ? qt.b.GetPresenterMapForBroadcasterSteamID(
                       this.m_chat.GetBroadcastSteamID()
                     )
                   : void 0;
               return o.createElement(
                 "div",
                 {
-                  className: Object(ir.a)(sr.a.ChatPanel, "ChatPanel"),
-                  style: this.props.hidden ? { display: "none" } : void 0,
+                  className: Object(or.a)(cr.a.ChatPanel, "ChatPanel"),
+                  style: r ? { display: "none" } : void 0,
                 },
-                o.createElement(tr, null),
+                i &&
+                  !!this.m_chat &&
+                  o.createElement(br, {
+                    oChat: this.m_chat,
+                    emoticonStore: this.props.emoticonStore,
+                    bPartnerMemberOnlyChat: n,
+                  }),
+                o.createElement(nr, null),
                 o.createElement(
                   "div",
                   {
-                    className: Object(ir.a)(
-                      sr.a.ChatMessages + " " + Kt.a.minHeightZero,
+                    className: Object(or.a)(
+                      cr.a.ChatMessages + " " + Kt.a.minHeightZero,
                       "ChatMessages"
                     ),
                     onScroll: this.HandleScroll,
                     ref: this.messagesContainer,
                   },
-                  t.map(function (t, n) {
-                    return e.RenderUserChatLine(t, n, r);
+                  s.map(function (t, r) {
+                    return e.RenderUserChatLine(t, r, u);
                   })
                 ),
-                o.createElement(rr, null),
-                Ct.i && Ct.i.logged_in && this.m_chat
-                  ? o.createElement(
-                      "div",
-                      {
-                        className: Object(ir.a)(
-                          sr.a.ChatEntryCtn,
-                          "ChatEntryCtn"
-                        ),
-                      },
-                      o.createElement(
-                        "div",
-                        {
-                          className: Object(ir.a)(sr.a.ChatEntry, "ChatEntry"),
-                        },
-                        o.createElement(
-                          "form",
-                          { className: "" + Kt.a.chatEntryControls },
-                          o.createElement("textarea", {
-                            className: Kt.a.chatTextarea,
-                            placeholder: Object(St.f)(
-                              "#BroadcastChat_EnterResponse"
-                            ),
-                            onKeyPress: this.ChatBoxKeypress,
-                            onChange: this.ChatBoxChange,
-                            value: this.state.message,
-                            ref: this.textInput,
-                          }),
-                          this.m_chat.m_bRateLimited &&
-                            o.createElement(fr, {
-                              nSeconds: this.m_chat.m_nRateLimitSeconds,
-                              bRateLimited: this.m_chat.m_bRateLimited,
-                            }),
-                          o.createElement(
-                            "button",
-                            {
-                              className:
-                                Kt.a.chatSubmitButton +
-                                " " +
-                                (this.state.message ? "" : Kt.a.disabled),
-                              title: Object(St.f)("#ChatEntryButton_Submit"),
-                              onClick: this.SendMessage,
-                            },
-                            o.createElement(nr.cb, null)
-                          )
-                        ),
-                        o.createElement(
-                          "div",
-                          {
-                            style: { height: "50px" },
-                            className: "" + Kt.a.chatEntryActionsContainer,
-                          },
-                          o.createElement(
-                            "div",
-                            { className: Kt.a.chatEntryActionsGroup },
-                            o.createElement($t.a, {
-                              disabled: !1,
-                              OnEmoticonSelected: this.OnEmoticonSelected,
-                              rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                              emoticonStore: this.props.emoticonStore,
-                              emoticonHoverStore: Vt.b,
-                            }),
-                            this.m_chat.m_strFlairGroupID &&
-                              this.props.emoticonStore.flair_list &&
-                              this.props.emoticonStore.GetFlairListByGroupID(
-                                this.m_chat.m_strFlairGroupID
-                              ).length
-                              ? o.createElement($t.a, {
-                                  disabled: !1,
-                                  OnEmoticonSelected: this.OnFlairSelected,
-                                  rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                                  emoticonStore: this.props.emoticonStore,
-                                  emoticonHoverStore: Vt.b,
-                                  strFlairGroupID: this.m_chat
-                                    .m_strFlairGroupID,
-                                  title: Object(St.f)("#ChatEntryButton_Flair"),
-                                  buttonIcon: o.createElement(nr.i, null),
-                                })
-                              : null
-                          )
-                        )
-                      )
-                    )
-                  : null
+                o.createElement(ir, null),
+                !i &&
+                  !!this.m_chat &&
+                  o.createElement(br, {
+                    oChat: this.m_chat,
+                    emoticonStore: this.props.emoticonStore,
+                    bPartnerMemberOnlyChat: n,
+                  })
               );
             }),
             Object(n.c)([i.C], t.prototype, "m_chat", void 0),
-            Object(n.c)([ar.a], t.prototype, "StartChat", null),
-            Object(n.c)([ar.a], t.prototype, "ChatBoxChange", null),
-            Object(n.c)([ar.a], t.prototype, "ChatBoxKeypress", null),
-            Object(n.c)([ar.a], t.prototype, "SendMessage", null),
-            Object(n.c)([ar.a], t.prototype, "HandleScroll", null),
-            Object(n.c)([ar.a], t.prototype, "OnContextMenu", null),
-            Object(n.c)([ar.a], t.prototype, "OnEmoticonSelected", null),
-            Object(n.c)([ar.a], t.prototype, "OnFlairSelected", null),
-            Object(n.c)([ar.a], t.prototype, "RenderUserChatLine", null),
+            Object(n.c)([sr.a], t.prototype, "StartChat", null),
+            Object(n.c)([sr.a], t.prototype, "HandleScroll", null),
+            Object(n.c)([sr.a], t.prototype, "OnContextMenu", null),
+            Object(n.c)([sr.a], t.prototype, "RenderUserChatLine", null),
             (t = Object(n.c)([a.a], t))
           );
-        })(o.Component),
-        fr = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(t, e),
-            (t.prototype.render = function () {
-              return o.createElement(
-                "div",
-                { className: sr.a.TimedProgressBarContainer },
-                o.createElement(
-                  "div",
-                  { className: sr.a.wrapper },
-                  o.createElement("div", {
-                    className: sr.a.spinner + " " + sr.a.pie,
-                    style: {
-                      animationDuration: (this.props.nSeconds || 0) + "s",
-                    },
-                  }),
-                  o.createElement("div", {
-                    className: sr.a.filler + " " + sr.a.pie,
-                    style: {
-                      animationDuration: (this.props.nSeconds || 0) + "s",
-                    },
-                  }),
-                  o.createElement("div", {
-                    className: sr.a.mask,
-                    style: {
-                      animationDuration: (this.props.nSeconds || 0) + "s",
-                    },
-                  })
-                )
-              );
-            }),
-            t
-          );
         })(o.Component);
+      function br(e) {
+        var t = e.oChat,
+          r = e.emoticonStore;
+        return !e.bPartnerMemberOnlyChat ||
+          ((null === Mt.i || void 0 === Mt.i ? void 0 : Mt.i.logged_in) &&
+            (null === Mt.i || void 0 === Mt.i
+              ? void 0
+              : Mt.i.is_partner_member))
+          ? (null === Mt.i || void 0 === Mt.i ? void 0 : Mt.i.logged_in)
+            ? o.createElement(_r, { oChat: t, emoticonStore: r })
+            : null
+          : o.createElement(yr, null);
+      }
+      function _r(e) {
+        var t = e.oChat,
+          r = e.emoticonStore,
+          i = o.useState(""),
+          a = i[0],
+          s = i[1],
+          u = o.useRef(),
+          c = o.useCallback(
+            function (e) {
+              !!e.shiftKey ||
+                13 !== e.charCode ||
+                (t.m_bRateLimited || (t.SendMessage(a), s("")),
+                e.preventDefault());
+            },
+            [t, a]
+          ),
+          l = o.useCallback(
+            function (e, t) {
+              void 0 === t && (t = !1),
+                s(a + "ː" + e + "ː"),
+                (null == u ? void 0 : u.current) && u.current.focus();
+            },
+            [a, u]
+          );
+        return o.createElement(
+          "div",
+          { className: Object(or.a)(cr.a.ChatEntryCtn, "ChatEntryCtn") },
+          o.createElement(
+            "div",
+            { className: Object(or.a)(cr.a.ChatEntry, "ChatEntry") },
+            o.createElement(
+              "form",
+              { className: "" + Kt.a.chatEntryControls },
+              o.createElement("textarea", {
+                className: Kt.a.chatTextarea,
+                placeholder: Object(wt.f)("#BroadcastChat_EnterResponse"),
+                onKeyPress: c,
+                onChange: function (e) {
+                  return s(e.target.value);
+                },
+                value: a,
+                ref: u,
+              }),
+              Boolean(t.m_bRateLimited) &&
+                o.createElement(Br, {
+                  nSeconds: t.m_nRateLimitSeconds,
+                  bRateLimited: t.m_bRateLimited,
+                }),
+              o.createElement(
+                "button",
+                {
+                  className:
+                    Kt.a.chatSubmitButton + " " + (a ? "" : Kt.a.disabled),
+                  title: Object(wt.f)("#ChatEntryButton_Submit"),
+                  disabled: t.m_bRateLimited || 0 == a.trim().length,
+                  onClick: function () {
+                    t.SendMessage(a), s("");
+                  },
+                },
+                o.createElement(ar.cb, null)
+              )
+            ),
+            o.createElement(
+              "div",
+              {
+                style: { height: "50px" },
+                className: "" + Kt.a.chatEntryActionsContainer,
+              },
+              o.createElement(
+                "div",
+                { className: Kt.a.chatEntryActionsGroup },
+                o.createElement(Xt.a, {
+                  disabled: !1,
+                  OnEmoticonSelected: l,
+                  rtLastAckedNewEmoticons: Number.MAX_VALUE,
+                  emoticonStore: r,
+                  emoticonHoverStore: Vt.b,
+                }),
+                o.createElement(hr, Object(n.a)({}, e, { textInputRef: u }))
+              )
+            )
+          )
+        );
+      }
+      function hr(e) {
+        var t,
+          r = e.oChat,
+          n = e.emoticonStore,
+          i = e.textInputRef;
+        return r.m_strFlairGroupID &&
+          n.flair_list &&
+          (null === (t = n.GetFlairListByGroupID(r.m_strFlairGroupID)) ||
+          void 0 === t
+            ? void 0
+            : t.length)
+          ? o.createElement(Xt.a, {
+              disabled: !1,
+              OnEmoticonSelected: function (e) {
+                r.UpdateChatMessageFlair(e),
+                  (null == i ? void 0 : i.current) && i.current.focus();
+              },
+              rtLastAckedNewEmoticons: Number.MAX_VALUE,
+              emoticonStore: n,
+              emoticonHoverStore: Vt.b,
+              strFlairGroupID: r.m_strFlairGroupID,
+              title: Object(wt.f)("#ChatEntryButton_Flair"),
+              buttonIcon: o.createElement(ar.i, null),
+            })
+          : null;
+      }
+      var Br = (function (e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          Object(n.d)(t, e),
+          (t.prototype.render = function () {
+            return o.createElement(
+              "div",
+              { className: cr.a.TimedProgressBarContainer },
+              o.createElement(
+                "div",
+                { className: cr.a.wrapper },
+                o.createElement("div", {
+                  className: cr.a.spinner + " " + cr.a.pie,
+                  style: {
+                    animationDuration: (this.props.nSeconds || 0) + "s",
+                  },
+                }),
+                o.createElement("div", {
+                  className: cr.a.filler + " " + cr.a.pie,
+                  style: {
+                    animationDuration: (this.props.nSeconds || 0) + "s",
+                  },
+                }),
+                o.createElement("div", {
+                  className: cr.a.mask,
+                  style: {
+                    animationDuration: (this.props.nSeconds || 0) + "s",
+                  },
+                })
+              )
+            );
+          }),
+          t
+        );
+      })(o.Component);
+      function yr(e) {
+        return o.createElement(
+          "div",
+          { className: cr.a.Description },
+          o.createElement(
+            "div",
+            { className: cr.a.LogInPrompt },
+            Object(wt.f)("#Broadcast_PartnerChat_Login")
+          ),
+          !Mt.i.logged_in &&
+            o.createElement(
+              Jt.d,
+              { onClick: Zt.a, className: Object(or.a)(cr.a.SignInButton) },
+              Object(wt.f)("#Login_SignIn")
+            )
+        );
+      }
     },
     erIC: function (e, t, r) {
       "use strict";
       r.r(t),
         r.d(t, "ConferenceRoutes", function () {
-          return me;
+          return Se;
         });
       var n = r("q1tI"),
         i = r("EC67"),
@@ -15499,8 +16920,16 @@
                 var t = Object(s.d)(l.c.LANGUAGE),
                   r = Object(c.c)(e.clan_faq_about_page),
                   n = c.a.Get().GetFAQPublishedContent(r, t),
-                  i = Object(o.d)(e.localized_logo, t, n.timestamp),
-                  a = Object(o.d)(e.localized_mobile_logo, t, n.timestamp),
+                  i = Object(o.d)(
+                    e.localized_logo,
+                    t,
+                    null == n ? void 0 : n.timestamp
+                  ),
+                  a = Object(o.d)(
+                    e.localized_mobile_logo,
+                    t,
+                    null == n ? void 0 : n.timestamp
+                  ),
                   d = {
                     strConferenceID: e.vanity,
                     rtStartTime: e.start_rtime,
@@ -15528,31 +16957,27 @@
             e
           );
         })(),
-        m = r("IjL/"),
-        f = r("YLyR"),
-        p = r("UxvL"),
-        b = r("fbnN"),
-        B = r("TLQK");
-      function h(e) {
-        e.conferenceInfo;
-        return "dev" != l.c.WEB_UNIVERSE ? null : n.createElement("div", null);
-      }
-      var _ = r("JCps"),
-        y = r("knQc"),
-        g = r("6Y59"),
-        v = r("5E+2"),
+        m = r("5izx"),
+        f = r("IjL/"),
+        p = r("YLyR"),
+        b = r("UxvL"),
+        _ = r("fbnN"),
+        h = r("TLQK"),
+        B = r("aoTL"),
+        y = r("eN6m"),
+        g = r("trWU"),
+        v = r("boaH"),
+        S = r("nWbB"),
         w = r("exH9"),
-        S = r("Lfwj"),
-        M = r("eN6m"),
-        C = r("trWU"),
-        z = r("nWbB"),
-        R = r("boaH");
+        C = r("Lfwj"),
+        M = r("rKv1"),
+        z = r("NIbt");
       function O(e) {
         var t = e.conferenceInfo.broadcastSteamID.ConvertTo64BitString();
         return n.createElement(
-          m.a,
+          f.a,
           null,
-          n.createElement(C.a, {
+          n.createElement(g.a, {
             steamIDBroadcast: t,
             watchLocation: 5,
             bStartMuted: !0,
@@ -15560,39 +16985,87 @@
         );
       }
       function j(e) {
-        var t = e.conferenceInfo.broadcastSteamID.ConvertTo64BitString(),
-          r = R.a.GetBroadcast(t);
+        var t = e.conferenceInfo,
+          r = Object(B.d)(function () {
+            return t.broadcastSteamID.ConvertTo64BitString();
+          }),
+          i = Object(B.d)(function () {
+            var e;
+            return null === (e = v.a.GetBroadcast(r)) || void 0 === e
+              ? void 0
+              : e.m_ulBroadcastID;
+          });
         return n.createElement(
           "div",
           {
             className: Object(w.a)(
-              S.BroadcastChatCtn,
+              C.BroadcastChatCtn,
               e.className ? "" + e.className : ""
             ),
           },
           n.createElement(
-            m.a,
+            f.a,
             null,
-            n.createElement(M.a, {
-              emoticonStore: z.g,
+            n.createElement(y.a, {
+              emoticonStore: S.g,
               watchLocation: 5,
-              steamID: t,
-              broadcastID: r ? r.m_ulBroadcastID : void 0,
+              steamID: r,
+              broadcastID: i,
+              bPartnerMemberOnlyChat: t.bPartnerOnly,
+              bInvertLayout: !0,
             })
           )
         );
       }
-      var F = r("mrSG"),
-        T = r("WF3T"),
-        W = r("9w6b"),
-        I = (function () {
+      function R(e) {
+        var t = e.conferenceInfo,
+          r = n.useState(!1),
+          i = r[0],
+          a = r[1];
+        return i
+          ? null
+          : n.createElement(
+              "div",
+              { className: M.broadcast_floating },
+              n.createElement(z.BroadcastEmbeddablePopoutHeader, {
+                steamIDBroadcast: t.broadcastSteamID.ConvertTo64BitString(),
+                OnPreventPopup: function () {
+                  return a(!0);
+                },
+              }),
+              n.createElement(O, { conferenceInfo: t })
+            );
+      }
+      var F = r("eDP5");
+      function T(e) {
+        var t = e.conferenceInfo;
+        return "dev" != l.c.WEB_UNIVERSE
+          ? null
+          : n.createElement(
+              "div",
+              null,
+              n.createElement("h1", null, "Conference Data"),
+              n.createElement(F.b, { data: t }),
+              n.createElement("h1", null, "Config Data"),
+              n.createElement(F.a, { strConfigID: "application_config" })
+            );
+      }
+      var W = r("JCps"),
+        E = r("knQc"),
+        I = r("6Y59"),
+        A = r("5E+2"),
+        N = r("CdLH"),
+        U = r("mrSG"),
+        D = r("WF3T"),
+        P = r("9w6b"),
+        G = (function () {
           function e() {
             this.m_inFlight = null;
           }
           return (
             (e.prototype.LoadInitialCalendarData = function (e, t) {
-              return Object(F.b)(this, void 0, void 0, function () {
-                return Object(F.e)(this, function (r) {
+              return Object(U.b)(this, void 0, void 0, function () {
+                return Object(U.e)(this, function (r) {
                   return (
                     this.m_inFlight ||
                       (this.m_inFlight = this.InternalLoadInitialCalendarData(
@@ -15605,19 +17078,19 @@
               });
             }),
             (e.prototype.InternalLoadInitialCalendarData = function (e, t) {
-              return Object(F.b)(this, void 0, void 0, function () {
+              return Object(U.b)(this, void 0, void 0, function () {
                 var r, n;
-                return Object(F.e)(this, function (i) {
+                return Object(U.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
                       return (
-                        W.a.IsInitialized() || W.a.InitGlobal(),
-                        Object(T.c)({
+                        P.a.IsInitialized() || P.a.InitGlobal(),
+                        Object(D.c)({
                           collectionid: t,
                           bSectionByDay: !0,
                           rtCalendarEnd: e,
                         }),
-                        (r = Object(T.b)()),
+                        (r = Object(D.b)()),
                         (n = Object(l.g)(
                           "conference_calendar",
                           "application_config"
@@ -15650,35 +17123,34 @@
             e
           );
         })(),
-        A = r("1BdX"),
-        U = r("5izx"),
-        E = r("6oCP"),
-        N = r("fA8f"),
-        D = r("cGQe"),
-        G = r("r3N9"),
-        Q = r("GiuM"),
-        x = r("opsS");
-      function P(e) {
+        L = r("1BdX"),
+        x = r("6oCP"),
+        Q = r("fA8f"),
+        k = r("cGQe"),
+        q = r("r3N9"),
+        V = r("GiuM"),
+        H = r("opsS");
+      function K(e) {
         var t = e.displayLocation,
           r = e.fnChangeModalEvent,
           i = n.useState(null),
           a = i[0],
           o = i[1],
-          s = Object(Q.d)("emgid", null),
+          s = Object(V.d)("emgid", null),
           c = s[0],
           l = s[1],
-          d = Object(Q.d)("emclan", null),
+          d = Object(V.d)("emclan", null),
           m = d[0],
           f = d[1];
         return (
-          Object(x.d)(r, function (e, t) {
+          Object(H.d)(r, function (e, t) {
             l(e), f(u.a.InitFromClanID(t).ConvertTo64BitString());
           }),
           n.useEffect(
             function () {
               if (null != c && null != m) {
                 var e = new u.a(m);
-                E.d
+                x.d
                   .LoadPartnerEventFromClanEventGIDAndClanSteamID(e, c, 0)
                   .then(o);
               }
@@ -15686,11 +17158,11 @@
             [c, m]
           ),
           a
-            ? n.createElement(G.a, {
+            ? n.createElement(q.a, {
                 appid: a.appid,
                 trackingLocation: t,
                 announcementGID: a.GetAnnouncementGID(),
-                partnerEventStore: E.d,
+                partnerEventStore: x.d,
                 eventModel: a,
                 showAppHeader: !0,
                 closeModal: function () {
@@ -15700,18 +17172,21 @@
             : null
         );
       }
-      var L = r("gPCo"),
-        q = r("0OaU"),
-        k = r("r64O"),
-        V = r("qiKp"),
-        H = r("Z1oF"),
-        K = r("CdLH"),
-        J = r("JsZI");
-      function Y(e) {
-        var t = Object(T.b)(),
-          r = Object(U.b)(),
+      var Y = r("gPCo"),
+        J = r("0OaU"),
+        $ = r("X2UP"),
+        X = r("qiKp"),
+        Z = r("Z1oF"),
+        ee = r("JsZI"),
+        te = r("Mgs7"),
+        re = r("ka0M"),
+        ne = r("X3Ds"),
+        ie = r("Jqb/");
+      function ae(e) {
+        var t = Object(D.b)(),
+          r = Object(m.c)(10),
           i = t.GetActiveEventsAt(r) || [],
-          a = n.useState(new V.a())[0],
+          a = n.useState(new X.a())[0],
           o = n.useCallback(
             function (e, t) {
               return a.Dispatch(e, t);
@@ -15722,32 +17197,49 @@
           ? n.createElement(
               "div",
               null,
-              Object(B.f)("#Conference_No_Schedule_Yet")
+              Object(h.f)("#Conference_No_Schedule_Yet")
             )
           : n.createElement(
               "div",
-              { className: J.EventsScheduleCtn },
-              n.createElement(P, { displayLocation: 6, fnChangeModalEvent: a }),
-              n.createElement(ee, {
+              { className: ee.EventsScheduleCtn },
+              n.createElement(K, { displayLocation: 6, fnChangeModalEvent: a }),
+              n.createElement(ce, {
                 rgActiveEvents: i,
                 fnDisplayModalEvent: o,
               }),
-              n.createElement(X, { rgActiveEvents: i, fnDisplayModalEvent: o })
+              n.createElement(se, {
+                rgActiveEvents: i,
+                fnDisplayModalEvent: o,
+                rtNow: r,
+              }),
+              n.createElement("br", null),
+              n.createElement("br", null),
+              n.createElement(
+                te.d,
+                {
+                  onClick: function (e) {
+                    return Object(re.d)(
+                      n.createElement(fe, null),
+                      Object(ne.m)(e)
+                    );
+                  },
+                },
+                Object(h.f)("#Conference_NeedHelp")
+              )
             );
       }
-      function $(e) {
+      function oe(e) {
         return n.createElement(
-          ne,
-          Object(F.a)({}, e),
-          n.createElement(Y, Object(F.a)({}, e))
+          me,
+          Object(U.a)({}, e),
+          n.createElement(ae, Object(U.a)({}, e))
         );
       }
-      function X(e) {
+      function se(e) {
         var t = e.rgActiveEvents,
-          r = Object(T.b)(),
-          i = Object(U.b)(),
-          a = r
-            .GetCalendarItemsInTimeRange(i + 1)
+          r = e.rtNow,
+          i = Object(D.b)()
+            .GetCalendarItemsInTimeRange(r + 1)
             .rgCalendarItems.filter(function (e) {
               return !t.some(function (t) {
                 return t.GID == e.unique_id;
@@ -15756,78 +17248,79 @@
             .sort(function (e, t) {
               return e.start_time - t.start_time;
             });
-        return 0 == a.length
+        return 0 == i.length
           ? n.createElement(
               "div",
               null,
-              Object(B.f)("#Conference_No_More_Schedule")
+              Object(h.f)("#Conference_No_More_Schedule")
             )
           : n.createElement(
               "div",
-              { className: J.UpcomingEventsCtn },
+              { className: ee.UpcomingEventsCtn },
               n.createElement(
                 "div",
-                { className: J.SectionTitle },
-                Object(B.f)("#Conference_ScheduleNext")
+                { className: ee.SectionTitle },
+                Object(h.f)("#Conference_ScheduleNext")
               ),
               n.createElement(
                 "div",
-                { className: J.EventSchedCtn },
-                a.map(function (r, i) {
-                  return n.createElement(Z, {
-                    key: r.unique_id,
-                    bDisplayAsUpNext: Boolean(0 == i && t.length >= 1),
-                    calendarItem: r,
+                { className: ee.EventSchedCtn },
+                i.map(function (i, a) {
+                  return n.createElement(ue, {
+                    key: i.unique_id,
+                    bDisplayAsUpNext: Boolean(0 == a && t.length >= 1),
+                    calendarItem: i,
                     fnDisplayModalEvent: e.fnDisplayModalEvent,
+                    rtNow: r,
                   });
                 })
               )
             );
       }
-      function Z(e) {
+      function ue(e) {
         var t = e.calendarItem,
           r = e.bDisplayAsUpNext,
           i = e.fnDisplayModalEvent,
-          a = E.d.GetClanEventModel(t.unique_id),
-          o = Object(s.d)(l.c.LANGUAGE),
-          u = Object(U.b)(),
-          c = a.GetStartTimeAndDateUnixSeconds(),
-          d = Object(K.b)(new Date(1e3 * u), new Date(1e3 * c));
+          a = e.rtNow,
+          o = x.d.GetClanEventModel(t.unique_id),
+          u = Object(s.d)(l.c.LANGUAGE),
+          c = o.GetStartTimeAndDateUnixSeconds(),
+          d = Object(N.b)(new Date(1e3 * a), new Date(1e3 * c));
         return n.createElement(
           "div",
           {
-            className: J.EventItemCtn,
+            className: ee.EventItemCtn,
             onClick: function () {
-              return i(a.GID, a.clanSteamID.GetAccountID());
+              return i(o.GID, o.clanSteamID.GetAccountID());
             },
           },
           n.createElement(
             "div",
-            { className: J.Title },
-            a.GetNameWithFallback(o)
+            { className: ee.Title },
+            o.GetNameWithFallback(u)
           ),
           n.createElement(
             "div",
-            { className: J.SessionTime },
-            !d && n.createElement("div", null, Object(B.k)(c, !0)),
+            { className: ee.SessionTime },
+            !d && n.createElement("div", null, Object(h.k)(c, !0)),
             n.createElement(
               "div",
               null,
               Boolean(r && d)
-                ? Object(B.f)(
+                ? Object(h.f)(
                     "#Conference_StartInMin",
-                    Math.max(1, Math.floor((c - u) / 60))
+                    Math.max(1, Math.floor((c - a) / 60))
                   )
-                : Object(B.f)("#Conference_StartsAt", Object(H.h)(c))
+                : Object(h.f)("#Conference_StartsAt", Object(Z.g)(c))
             )
           ),
           n.createElement(
             "div",
-            { className: Object(w.a)(J.ReminderContainer, J.OnlyIcon) },
-            n.createElement(D.a, {
-              eventModel: a,
-              eventGID: a.GID,
-              lang: o,
+            { className: Object(w.a)(ee.ReminderContainer, ee.OnlyIcon) },
+            n.createElement(k.a, {
+              eventModel: o,
+              eventGID: o.GID,
+              lang: u,
               bOnlyShowIcon: !0,
               bExpandLeft: !0,
               bShowStartTime: !1,
@@ -15835,35 +17328,31 @@
           )
         );
       }
-      function ee(e) {
+      function ce(e) {
         var t = e.rgActiveEvents,
           r = e.fnDisplayModalEvent;
         if (!t || 0 == t.length) return null;
-        Object(k.a)(
-          1 == t.length,
-          "Unexpected number of active events in the conference tool"
-        );
         var i = t[0],
           a = Object(s.d)(l.c.LANGUAGE),
-          o = A.a.ParseEventModelPresenters(i, a);
+          o = L.a.ParseEventModelPresenters(i, a);
         return n.createElement(
           "div",
-          { className: J.ActiveEventCtn },
+          { className: ee.ActiveEventCtn },
           n.createElement(
             "div",
-            { className: J.LiveNote },
-            n.createElement("div", { className: J.LiveIcon }),
+            { className: ee.LiveNote },
+            n.createElement("div", { className: ee.LiveIcon }),
             "Live Now!"
           ),
           n.createElement(
             "div",
-            { className: J.Title },
+            { className: ee.Title },
             i.GetNameWithFallback(a)
           ),
           Boolean(o) &&
             o.map(function (e) {
               return n.createElement(
-                L.b,
+                Y.b,
                 {
                   key: "presenter_" + e.name,
                   name: e.name,
@@ -15877,32 +17366,31 @@
             }),
           n.createElement(
             "div",
-            { className: J.EventDescription },
+            { className: ee.EventDescription },
             i.GetSummaryWithFallback(a)
           ),
           n.createElement(
             "div",
             {
+              className: ee.ReadMoreBtn,
               onClick: function () {
                 return r(i.GID, i.clanSteamID.GetAccountID());
               },
             },
-            Object(B.f)("#EventEmail_Button_ClickForMoreDetails")
+            Object(h.f)("#EventEmail_Button_ClickForMoreDetails")
           )
         );
       }
-      function te(e) {
+      function le(e) {
         var t = e.conferenceInfo,
-          r = Object(T.b)(),
-          i = Object(U.b)(),
+          r = Object(D.b)(),
+          i = Object(m.c)(10),
           a = r.GetActiveEventsAt(i) || [],
-          o = n.useState(new V.a())[0],
+          o = n.useState(new X.a())[0],
           s = r
             .GetCalendarItemsInTimeRange(t.rtStartTime - 1, i)
             .rgCalendarItems.filter(function (e) {
-              return !a.some(function (t) {
-                return t.GID == e.unique_id;
-              });
+              return 0 == a.length || a[0].GID != e.unique_id;
             })
             .sort(function (e, t) {
               return e.start_time - t.start_time;
@@ -15911,15 +17399,15 @@
           ? n.createElement(
               "div",
               null,
-              Object(B.f)("#Conference_NoPastEvents")
+              Object(h.f)("#Conference_NoPastEvents")
             )
           : n.createElement(
               "div",
-              { className: J.PastEventsCtn },
-              n.createElement(P, { displayLocation: 6, fnChangeModalEvent: o }),
+              { className: ee.PastEventsCtn },
+              n.createElement(K, { displayLocation: 6, fnChangeModalEvent: o }),
               s.map(function (e) {
-                var t = E.d.GetClanEventModel(e.unique_id);
-                return n.createElement(N.a, {
+                var t = x.d.GetClanEventModel(e.unique_id);
+                return n.createElement(Q.a, {
                   key: "row" + e.unique_id,
                   eventModel: t,
                   calendarEvent: e,
@@ -15932,77 +17420,163 @@
               })
             );
       }
-      function re(e) {
+      function de(e) {
         return n.createElement(
-          ne,
-          Object(F.a)({}, e),
-          n.createElement(te, Object(F.a)({}, e))
+          me,
+          Object(U.a)({}, e),
+          n.createElement(le, Object(U.a)({}, e))
         );
       }
-      function ne(e) {
+      function me(e) {
         var t = e.conferenceInfo,
-          r = Object(n.useState)(!0),
-          i = r[0],
-          a = r[1];
+          r = Object($.a)("WithCalendarStore"),
+          i = Object(n.useState)(!0),
+          a = i[0],
+          o = i[1];
         return (
           Object(n.useEffect)(
             function () {
-              I.Get()
-                .LoadInitialCalendarData(t.rtEndTime, t.strConferenceID)
-                .finally(function () {
-                  return a(!1);
-                });
+              r.token.reason ||
+                G.Get()
+                  .LoadInitialCalendarData(t.rtEndTime, t.strConferenceID)
+                  .finally(function () {
+                    r.token.reason || o(!1);
+                  });
             },
-            [t.rtEndTime, t.strConferenceID]
+            [t.rtEndTime, t.strConferenceID, r]
           ),
-          i
-            ? n.createElement(q.a, null)
+          a
+            ? n.createElement(J.a, null)
             : n.createElement(n.Fragment, null, e.children)
         );
       }
-      var ie = r("5STL");
-      function ae(e) {
+      function fe(e) {
+        return n.createElement(
+          ie.d,
+          { strTitle: Object(h.f)("#Conference_NeedHelp"), bAlertDialog: !0 },
+          n.createElement(
+            "div",
+            null,
+            Object(h.f)("#Conference_NeedHelp_Desc1")
+          ),
+          n.createElement(
+            "div",
+            null,
+            n.createElement(
+              "div",
+              null,
+              n.createElement(
+                "div",
+                null,
+                Object(h.f)("#Conference_NeedHelp_BroadcastChatQ")
+              ),
+              n.createElement(
+                "ul",
+                null,
+                n.createElement(
+                  "li",
+                  null,
+                  Object(h.f)("#Conference_NeedHelp_ChatA1")
+                ),
+                n.createElement(
+                  "li",
+                  null,
+                  Object(h.n)(
+                    "#Conference_NeedHelp_BroadcastChatA1",
+                    n.createElement(
+                      "a",
+                      {
+                        href:
+                          "https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A",
+                      },
+                      Object(h.f)("#Conferenec_NeedHelp_LimitedAccounts")
+                    )
+                  )
+                )
+              )
+            ),
+            n.createElement(
+              "div",
+              null,
+              n.createElement(
+                "div",
+                null,
+                Object(h.f)("#Conference_NeedHelp_QandAQ")
+              ),
+              n.createElement(
+                "ul",
+                null,
+                n.createElement(
+                  "li",
+                  null,
+                  Object(h.f)("#Conference_NeedHelp_ChatA1")
+                )
+              )
+            )
+          ),
+          n.createElement(
+            "div",
+            null,
+            n.createElement(
+              "span",
+              null,
+              Object(h.f)("#Conference_NeedHelp_StillHaveQuestions")
+            ),
+            n.createElement(
+              "a",
+              {
+                href:
+                  "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
+              },
+              Object(h.f)("#Conference_NeedHelp_CreateTicket")
+            )
+          )
+        );
+      }
+      var pe = r("5STL");
+      function be(e) {
         var t = e.conferenceInfo,
           r = n.useState(!1),
           i = r[0],
-          a = r[1];
+          a = r[1],
+          o = Object(m.c)(N.f.PerMinute) < t.rtStartTime - 30 * N.f.PerMinute;
         return n.createElement(
           "div",
-          { className: ie.ConferenceHome },
+          { className: pe.ConferenceHome },
           n.createElement(
             "div",
-            { className: Object(w.a)(ie.LeftCol, i ? "Active" : "Hidden") },
+            { className: Object(w.a)(pe.LeftCol, i ? "Active" : "Hidden") },
             n.createElement(
               "div",
-              { className: ie.AgendaCtn },
-              n.createElement($, { conferenceInfo: t }),
+              { className: pe.AgendaCtn },
+              n.createElement(oe, { conferenceInfo: t }),
               n.createElement(
                 "div",
                 {
-                  className: ie.AgendaToggle,
+                  className: pe.AgendaToggle,
                   onClick: function () {
                     a(!i);
                   },
                 },
                 n.createElement(
-                  v.a,
-                  { toolTipContent: Object(B.f)("#QAndA_HideSchedule") },
+                  A.a,
+                  { toolTipContent: Object(h.f)("#QAndA_HideSchedule") },
                   n.createElement(
                     "div",
-                    { className: ie.CollapseBtn },
-                    n.createElement(g.q, { angle: 0 })
+                    { className: pe.CollapseBtn },
+                    n.createElement(I.q, { angle: 0 })
                   )
                 ),
                 n.createElement(
-                  v.a,
-                  { toolTipContent: Object(B.f)("#QAndA_ShowSchedule") },
+                  A.a,
+                  { toolTipContent: Object(h.f)("#QAndA_ShowSchedule") },
                   n.createElement(
                     "div",
-                    { className: ie.CalendarBtn },
-                    n.createElement(g.j, null),
+                    { className: pe.CalendarBtn },
+                    n.createElement(I.j, null),
                     n.createElement(
                       "div",
-                      { className: ie.CalendarText },
+                      { className: pe.CalendarText },
                       "See Event Schedule"
                     )
                   )
@@ -16012,18 +17586,28 @@
           ),
           n.createElement(
             "div",
-            { className: ie.MainCol },
+            { className: pe.MainCol },
             n.createElement(
               "div",
-              { className: ie.BroadcastCtn },
+              { className: pe.BroadcastCtn },
               n.createElement(O, { conferenceInfo: t }),
-              n.createElement("div", { className: ie.videoContainerSizer })
+              n.createElement("div", { className: pe.videoContainerSizer })
             ),
-            n.createElement(oe, { conferenceInfo: t })
+            Boolean(o)
+              ? n.createElement(
+                  "div",
+                  { className: pe.InteractionCtn },
+                  n.createElement(
+                    "div",
+                    null,
+                    Object(h.f)("#Conference_ChatHidden", 30)
+                  )
+                )
+              : n.createElement(_e, { conferenceInfo: t })
           )
         );
       }
-      function oe(e) {
+      function _e(e) {
         var t = e.conferenceInfo,
           r = n.useState(window.innerWidth > 910),
           i = r[0],
@@ -16043,110 +17627,118 @@
             t.globalQandASessionID;
         return n.createElement(
           "div",
-          { className: ie.InteractionCtn },
+          { className: pe.InteractionCtn },
           n.createElement(
             "div",
-            { className: ie.TabControlsCtn },
+            { className: pe.TabControlsCtn },
             n.createElement(
               "div",
               {
                 className: Object(w.a)(
-                  ie.InnerChatTab,
-                  ie.ChatTab,
-                  i ? ie.Active : ""
+                  pe.InnerChatTab,
+                  pe.ChatTab,
+                  i ? pe.Active : ""
                 ),
               },
               n.createElement(
                 "div",
                 {
-                  className: ie.TabTitle,
+                  className: pe.TabTitle,
                   onClick: function () {
                     a(!0), u(!1);
                   },
                 },
-                Object(B.f)("#Conference_Tab_Chat")
+                Object(h.f)("#Conference_Tab_Chat")
               ),
               n.createElement(
-                "a",
-                { className: ie.Popout, href: c, target: "_blank" },
-                n.createElement(g.Q, null)
+                A.a,
+                { toolTipContent: Object(h.f)("#QAndA_PopOutChat_ttip") },
+                n.createElement(
+                  "a",
+                  { className: pe.Popout, href: c, target: "_blank" },
+                  n.createElement(I.Q, null)
+                )
               )
             ),
             n.createElement(
               "div",
               {
                 className: Object(w.a)(
-                  ie.InnerChatTab,
-                  ie.QATab,
-                  s ? ie.Active : ""
+                  pe.InnerChatTab,
+                  pe.QATab,
+                  s ? pe.Active : ""
                 ),
               },
               n.createElement(
                 "div",
                 {
-                  className: ie.TabTitle,
+                  className: pe.TabTitle,
                   onClick: function () {
                     a(!1), u(!0);
                   },
                 },
-                Object(B.f)("#Conference_Tab_QandA")
+                Object(h.f)("#Conference_Tab_QandA")
               ),
               n.createElement(
-                "a",
-                { className: ie.Popout, href: d, target: "_blank" },
-                n.createElement(g.Q, null)
+                A.a,
+                { toolTipContent: Object(h.f)("#QAndA_PopOutQAndA_ttip") },
+                n.createElement(
+                  "a",
+                  { className: pe.Popout, href: d, target: "_blank" },
+                  n.createElement(I.Q, null)
+                )
               )
             ),
             n.createElement(
-              v.a,
-              { toolTipContent: Object(B.f)("#QAndA_ChatToggle_ShowBoth") },
+              A.a,
+              { toolTipContent: Object(h.f)("#QAndA_ChatToggle_ShowBoth") },
               n.createElement(
                 "div",
                 {
-                  className: ie.ShowBothTabs,
+                  className: pe.ShowBothTabs,
                   onClick: function () {
                     a(!0), u(!0);
                   },
                 },
-                n.createElement(g.Y, null)
+                n.createElement(I.Y, null)
               )
             )
           ),
           n.createElement(
             "div",
-            { className: ie.ChatStack },
+            { className: pe.ChatStack },
             Boolean((i && s) || (!s && !i)) &&
               n.createElement(
                 n.Fragment,
                 null,
                 n.createElement(
                   "div",
-                  { className: ie.ChatColumn },
+                  { className: pe.ChatColumn },
                   n.createElement(j, {
                     conferenceInfo: t,
-                    className: ie.ChatCtn,
+                    className: pe.ChatCtn,
                   })
                 ),
                 n.createElement(
                   "div",
-                  { className: ie.QAColumn },
-                  n.createElement(_.b, { gidSession: t.globalQandASessionID })
+                  { className: pe.QAColumn },
+                  n.createElement(W.b, { gidSession: t.globalQandASessionID })
                 )
               ),
             Boolean(i && !s) &&
-              n.createElement(j, { conferenceInfo: t, className: ie.ChatCtn }),
+              n.createElement(j, { conferenceInfo: t, className: pe.ChatCtn }),
             Boolean(!i && s) &&
-              n.createElement(_.b, { gidSession: t.globalQandASessionID })
+              n.createElement(W.b, { gidSession: t.globalQandASessionID })
           )
         );
       }
-      function se(e) {
+      function he(e) {
         var t = e.conferenceInfo;
         if (!t.faqAboutPage)
           return n.createElement(
             "div",
             null,
-            Object(B.f)("#Conference_NoAbout")
+            Object(h.f)("#Conference_NoAbout")
           );
         var r = t.faqAboutPage,
           i = r.title,
@@ -16156,35 +17748,38 @@
           "div",
           null,
           n.createElement("div", null, i),
-          n.createElement(y.a, { text: a, bShowErrorInfo: !1 }),
+          n.createElement(E.a, { text: a, bShowErrorInfo: !1 }),
           n.createElement(
             "div",
             null,
-            Object(B.n)(
+            Object(h.n)(
               "#Confernece_About_LastUpdated",
-              n.createElement(f.a, { dateAndTime: o, bSingleLine: !0 })
+              n.createElement(p.a, { dateAndTime: o, bSingleLine: !0 })
             )
           )
         );
       }
-      function ue(e) {
+      function Be(e) {
         var t = e.conferenceInfo;
-        return n.createElement(re, { conferenceInfo: t });
+        return n.createElement(de, { conferenceInfo: t });
       }
-      var ce = r("PpkI");
-      function le(e) {
+      var ye = r("PpkI");
+      function ge(e) {
         var t = e.strVanity,
           r = d.Get().GetConferenceInfo(t);
         return r
           ? n.createElement(
-              "div",
-              { className: ce.ConferencePageCtn },
-              n.createElement(de, { conferenceInfo: r }),
-              n.createElement(h, { conferenceInfo: r })
+              f.a,
+              null,
+              n.createElement(
+                "div",
+                { className: ye.ConferencePageCtn },
+                n.createElement(ve, { conferenceInfo: r })
+              )
             )
-          : n.createElement("div", null, Object(B.f)("#Conference_Invalid"));
+          : n.createElement("div", null, Object(h.f)("#Conference_Invalid"));
       }
-      function de(e) {
+      function ve(e) {
         var t = e.conferenceInfo,
           r = function (e) {
             return window.sessionStorage.setItem(
@@ -16192,67 +17787,85 @@
               "?tab=" + e.key
             );
           },
-          i = [
-            {
-              name: Object(B.f)("#Conference_tab_Home"),
+          i = [],
+          a = Object(m.b)();
+        return (
+          a < t.rtEndTime &&
+            i.push({
+              name: Object(h.f)("#Conference_tab_Home"),
               key: "live",
               contents: n.createElement(
-                m.a,
+                f.a,
                 null,
-                n.createElement(ae, { conferenceInfo: t })
+                n.createElement(be, { conferenceInfo: t })
               ),
               onClick: r,
-            },
-            {
-              name: Object(B.f)("#Conference_tab_Past"),
-              key: "past",
-              contents: n.createElement(
-                m.a,
-                null,
-                n.createElement(ue, { conferenceInfo: t })
-              ),
-              onClick: r,
-            },
-            {
-              name: Object(B.f)("#Conference_tab_Info"),
-              key: "about",
-              contents: n.createElement(
-                m.a,
-                null,
-                n.createElement(se, { conferenceInfo: t })
-              ),
-              onClick: r,
-            },
-          ];
-        return n.createElement(
-          "div",
-          { className: ce.ConferenceContentsCtn },
+            }),
+          i.push({
+            name: Object(h.f)("#Conference_tab_Past"),
+            key: "past",
+            contents: n.createElement(
+              f.a,
+              null,
+              n.createElement(Be, { conferenceInfo: t }),
+              Boolean(a < t.rtEndTime) &&
+                n.createElement(R, { conferenceInfo: t })
+            ),
+            onClick: r,
+          }),
+          i.push({
+            name: Object(h.f)("#Conference_tab_Info"),
+            key: "about",
+            contents: n.createElement(
+              f.a,
+              null,
+              n.createElement(he, { conferenceInfo: t }),
+              Boolean(a < t.rtEndTime) &&
+                n.createElement(R, { conferenceInfo: t })
+            ),
+            onClick: r,
+          }),
+          i.push({
+            name: "(VO/WebUniveser=Dev) Debug",
+            key: "debug",
+            hidden: "dev" != l.c.WEB_UNIVERSE,
+            contents: n.createElement(
+              f.a,
+              null,
+              n.createElement(T, { conferenceInfo: t })
+            ),
+            onClick: r,
+          }),
           n.createElement(
             "div",
-            { className: ce.ConferenceHeaderCtn },
-            n.createElement(p.a, {
-              className: ce.LogoImage,
-              rgSources: t.strLocalizedLogos,
-            }),
-            n.createElement(p.a, {
-              className: ce.LogoImageMobile,
-              rgSources: t.strLocalizedMobileLogos,
-            }),
+            { className: ye.ConferenceContentsCtn },
             n.createElement(
               "div",
-              { className: ce.ConferenceDateRange },
-              n.createElement(f.c, {
-                rtStartDate: t.rtStartTime,
-                rtEndDate: t.rtEndTime,
-              })
-            )
-          ),
-          n.createElement(b.a, { tabs: i })
+              { className: ye.ConferenceHeaderCtn },
+              n.createElement(b.a, {
+                className: ye.LogoImage,
+                rgSources: t.strLocalizedLogos,
+              }),
+              n.createElement(b.a, {
+                className: ye.LogoImageMobile,
+                rgSources: t.strLocalizedMobileLogos,
+              }),
+              n.createElement(
+                "div",
+                { className: ye.ConferenceDateRange },
+                n.createElement(p.c, {
+                  rtStartDate: t.rtStartTime,
+                  rtEndDate: t.rtEndTime,
+                })
+              )
+            ),
+            n.createElement(_.a, { tabs: i })
+          )
         );
       }
-      var me = {
+      var Se = {
         LandingPage: function (e) {
-          return "/conference/" + e;
+          return "/(conference|steamworksvirtualconference)/" + e;
         },
       };
       t.default = function (e) {
@@ -16260,13 +17873,13 @@
           i.e,
           null,
           n.createElement(i.c, {
-            path: me.LandingPage(":vanity_str"),
+            path: Se.LandingPage(":vanity_str"),
             render: function (e) {
               return n.createElement(a.a, {
                 config: {
                   "conference-root": function () {
                     var t = e.match.params.vanity_str;
-                    return n.createElement(le, {
+                    return n.createElement(ge, {
                       strVanity: t.toLocaleLowerCase(),
                     });
                   },
@@ -16274,10 +17887,10 @@
               });
             },
           }),
-          n.createElement(i.c, { component: fe })
+          n.createElement(i.c, { component: we })
         );
       };
-      function fe(e) {
+      function we(e) {
         return "dev" !== l.c.WEB_UNIVERSE
           ? n.createElement(i.b, { to: "/" })
           : n.createElement(
@@ -16424,11 +18037,14 @@
         QAModeratorColumn: "questions_QAModeratorColumn_nfftC",
         QASplitColumns: "questions_QASplitColumns_1CRIg",
         ModeratorInstructions: "questions_ModeratorInstructions_RqtnW",
+        AnsweredSectionHeader: "questions_AnsweredSectionHeader_3cWpk",
         InputButton: "questions_InputButton_1z1rt",
         Reload: "questions_Reload_3LIo4",
         Reloading: "questions_Reloading_1hooL",
         SignInButton: "questions_SignInButton_GRHnX",
         QAHeader: "questions_QAHeader_3skHm",
+        QuestionACK: "questions_QuestionACK_16zhk",
+        Visible: "questions_Visible_2jHMe",
         QATitleRow: "questions_QATitleRow_2qdcm",
         QATitle: "questions_QATitle_1c7nC",
         Description: "questions_Description_3eGNN",
@@ -16442,11 +18058,12 @@
         QuestionsHeader: "questions_QuestionsHeader_jUQG9",
         QuestionsTitle: "questions_QuestionsTitle_2CYLB",
         QuestionList: "questions_QuestionList_28dwO",
-        AnsweredSectionHeader: "questions_AnsweredSectionHeader_3cWpk",
+        NoQuestions: "questions_NoQuestions_1R9HB",
         Question: "questions_Question_3BIOo",
         Hidden: "questions_Hidden_3XPCk",
         QuestionCtn: "questions_QuestionCtn_31sLy",
         UserAvatar: "questions_UserAvatar_2ojKe",
+        PersonaName: "questions_PersonaName_3CaA5",
         QuestionText: "questions_QuestionText_2NuCE",
         QuestionAndVotes: "questions_QuestionAndVotes_ChywO",
         QuestionTitle: "questions_QuestionTitle_2AXcH",
@@ -16486,7 +18103,7 @@
         f = r("zvcZ"),
         p = r("WcT4"),
         b = r.n(p),
-        B = new Map(
+        _ = new Map(
           Object(n.g)(Array.from(m.c.entries()), Array.from(m.e.entries()), [
             [
               "section",
@@ -16591,13 +18208,78 @@
                 e
               );
             }, []),
-            a = i.useRef(new l.a(B, n));
+            a = i.useRef(new l.a(_, n));
           return i.createElement(
             "div",
             { className: b.a.FAQContainer },
             a.current.ParseBBCode(t, { showErrorInfo: r })
           );
         };
+    },
+    rKv1: function (e, t, r) {
+      e.exports = {
+        strStreamIconCapsuleArtHeight: "90px",
+        strStreamIconScreenshotArtHeight: "90px",
+        bordered_container: "broadcast_embeddable_bordered_container_3zXpF",
+        video_placeholder: "broadcast_embeddable_video_placeholder_1KU95",
+        embedded_player: "broadcast_embeddable_embedded_player_12fBJ",
+        WidePlayer: "broadcast_embeddable_WidePlayer_3zjvr",
+        store_chat_ctn: "broadcast_embeddable_store_chat_ctn_21N-V",
+        item_drop_ctn: "broadcast_embeddable_item_drop_ctn_ifxDf",
+        BorderedContainerPromotion:
+          "broadcast_embeddable_BorderedContainerPromotion_-b_1H",
+        bordered_title: "broadcast_embeddable_bordered_title_Wsfbq",
+        bordered_subtitle: "broadcast_embeddable_bordered_subtitle_3tYei",
+        bordered_corner_container:
+          "broadcast_embeddable_bordered_corner_container_3IBcN",
+        bordered_corner_expanded:
+          "broadcast_embeddable_bordered_corner_expanded_ahz31",
+        bordered_corner_shrinked:
+          "broadcast_embeddable_bordered_corner_shrinked_L8sFY",
+        broadcast_settings_icon:
+          "broadcast_embeddable_broadcast_settings_icon_37ugZ",
+        container: "broadcast_embeddable_container_2yiy6",
+        viewer_bar: "broadcast_embeddable_viewer_bar_2Ygph",
+        side_panels: "broadcast_embeddable_side_panels_T_zpR",
+        multistream: "broadcast_embeddable_multistream_1DS-W",
+        wrapper: "broadcast_embeddable_wrapper_1mH-v",
+        NoChat: "broadcast_embeddable_NoChat_2QQm1",
+        video_container: "broadcast_embeddable_video_container_1gbNx",
+        viewer_links: "broadcast_embeddable_viewer_links_2EQpO",
+        chat_link: "broadcast_embeddable_chat_link_3a0zX",
+        settings_link: "broadcast_embeddable_settings_link_1Thke",
+        external_link: "broadcast_embeddable_external_link_1n1BM",
+        viewer_count: "broadcast_embeddable_viewer_count_1MrTW",
+        vod_title: "broadcast_embeddable_vod_title_2xKaM",
+        stream_icon_and_viewer_container:
+          "broadcast_embeddable_stream_icon_and_viewer_container_2sbrG",
+        display_capsule_art: "broadcast_embeddable_display_capsule_art_SsORV",
+        stream_icon_container:
+          "broadcast_embeddable_stream_icon_container_2zBOi",
+        stream_icon_hide_on_hover:
+          "broadcast_embeddable_stream_icon_hide_on_hover_qYFsG",
+        stream_icon_show_on_hover:
+          "broadcast_embeddable_stream_icon_show_on_hover_29z3N",
+        stream_icon: "broadcast_embeddable_stream_icon_1LBYs",
+        stream_icon_selected: "broadcast_embeddable_stream_icon_selected_mSpze",
+        scrollingstreams: "broadcast_embeddable_scrollingstreams_3aYWl",
+        stream_icon_arrow: "broadcast_embeddable_stream_icon_arrow_2Qpu-",
+        clear_div: "broadcast_embeddable_clear_div_1oCVb",
+        NoSelect: "broadcast_embeddable_NoSelect_3Zm9d",
+        broadcast_floating: "broadcast_embeddable_broadcast_floating_2WNxa",
+        PopOutVideoTitleBar: "broadcast_embeddable_PopOutVideoTitleBar_184SI",
+        PopOutVideoTitleText: "broadcast_embeddable_PopOutVideoTitleText_28O6d",
+        PopOutVideoCloseButton:
+          "broadcast_embeddable_PopOutVideoCloseButton_3bIsS",
+        BroadcastPlayerContainer:
+          "broadcast_embeddable_BroadcastPlayerContainer_3VvcX",
+        ChatContainer: "broadcast_embeddable_ChatContainer_3kqwu",
+        BroadcastAndChat: "broadcast_embeddable_BroadcastAndChat_1aJ9y",
+        detail_chat_ctn: "broadcast_embeddable_detail_chat_ctn_IaFns",
+        ChatEntry: "broadcast_embeddable_ChatEntry_Rs7El",
+        Event: "broadcast_embeddable_Event_1A0NY",
+        rightPanel: "broadcast_embeddable_rightPanel_16MsC",
+      };
     },
   },
 ]);

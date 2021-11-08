@@ -3906,71 +3906,91 @@
     DisI: function (e, t, a) {
       "use strict";
       a.d(t, "c", function () {
-        return h;
+        return u;
       }),
+        a.d(t, "d", function () {
+          return m;
+        }),
         a.d(t, "a", function () {
-          return u;
+          return f;
         }),
         a.d(t, "b", function () {
-          return m;
+          return g;
         });
-      a("mrSG");
-      var o = a("Mgs7"),
-        i = a("TLQK"),
-        n = a("6Y59"),
-        s = a("q1tI"),
-        r = a("exH9"),
-        l = a("fpVW"),
-        p = a("IjL/"),
-        c = a("TyAF"),
-        d = a("3USw"),
-        h = Object(c.a)(function (e) {
-          return s.createElement(
-            s.Fragment,
+      var o = a("mrSG"),
+        i = a("Mgs7"),
+        n = a("TLQK"),
+        s = a("6Y59"),
+        r = a("q1tI"),
+        l = a("exH9"),
+        p = a("fpVW"),
+        c = a("IjL/"),
+        d = a("TyAF"),
+        h = a("3USw"),
+        u = Object(d.a)(function (e) {
+          return r.createElement(
+            r.Fragment,
             null,
-            s.createElement(
+            r.createElement(
               "div",
               {
-                className: Object(r.a)(
-                  e.className ? e.className : d.SectionTitleHeader,
-                  d.required_title
+                className: Object(l.a)(
+                  e.className ? e.className : h.SectionTitleHeader,
+                  h.required_title
                 ),
               },
-              s.createElement(
+              r.createElement(
                 "div",
-                { className: l.EventEditorTextTitle },
+                { className: p.EventEditorTextTitle },
                 e.title,
-                s.createElement(m, { tooltip: e.tooltip })
+                Boolean(e.tooltip) && r.createElement(g, { tooltip: e.tooltip })
               ),
-              s.createElement(u, {
+              r.createElement(f, {
                 bIsMinimized: e.getMinimized(),
                 fnToggleMinimize: e.toggleMinimized,
               })
             ),
-            !e.getMinimized() && s.createElement(p.a, null, e.children)
+            !e.getMinimized() && r.createElement(c.a, null, e.children)
           );
         });
-      function u(e) {
-        var t = e.bIsMinimized,
-          a = e.fnToggleMinimize,
-          r = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return s.createElement(
-          o.d,
-          { "data-tooltip-text": Object(i.f)(r), onClick: a },
-          e.bIsMinimized
-            ? s.createElement(n.H, null)
-            : s.createElement(n.K, null)
+      function m(e) {
+        var t = r.useState(Boolean(e.bStartMinimized)),
+          a = t[0],
+          i = t[1];
+        return r.createElement(
+          u,
+          Object(o.a)({}, e, {
+            getMinimized: function () {
+              return a;
+            },
+            toggleMinimized: function () {
+              return i(!a);
+            },
+          }),
+          e.children
         );
       }
-      function m(e) {
-        return s.createElement(
+      function f(e) {
+        var t = e.bIsMinimized,
+          a = e.fnToggleMinimize,
+          o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return r.createElement(
+          i.d,
+          { "data-tooltip-text": Object(n.f)(o), onClick: a },
+          e.bIsMinimized
+            ? r.createElement(s.H, null)
+            : r.createElement(s.K, null)
+        );
+      }
+      function g(e) {
+        return r.createElement(
           "span",
           {
             "data-tooltip-text": e.tooltip,
-            className: Object(r.a)(l.HelperTooltip, "HelperTooltip"),
+            className: Object(l.a)(p.HelperTooltip, "HelperTooltip"),
           },
           " ",
-          s.createElement(n.A, null)
+          r.createElement(s.A, null)
         );
       }
     },

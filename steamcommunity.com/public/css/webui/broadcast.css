@@ -495,7 +495,7 @@ div.broadcast_embeddable_viewer_count_3B4t7.broadcast_embeddable_vod_title_2BfIr
   z-index: 100;
   border-width: 2px;
   border-style: solid;
-  border-color: #92a0ac;
+  border-color: #747b86;
   box-shadow: 0 0 10px #000;
   display: flex;
   flex-direction: column;
@@ -508,19 +508,19 @@ div.broadcast_embeddable_viewer_count_3B4t7.broadcast_embeddable_vod_title_2BfIr
   flex-direction: row;
   flex-wrap: nowrap;
   height: 30px;
-  background: #92a0ac;
+  background: #747b86;
 }
 .broadcast_embeddable_broadcast_floating_39rrm
   .broadcast_embeddable_PopOutVideoTitleBar_9UmMH
   .broadcast_embeddable_PopOutVideoTitleText_1NhAJ {
+  height: 20px;
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 8px;
   display: flex;
   align-items: center;
-  margin: 6px 0px 6px 8px;
+  margin: 4px 0px 6px 8px;
   font-size: 14px;
 }
 #game_highlights
@@ -532,15 +532,19 @@ div.broadcast_embeddable_viewer_count_3B4t7.broadcast_embeddable_vod_title_2BfIr
 .broadcast_embeddable_broadcast_floating_39rrm
   .broadcast_embeddable_PopOutVideoTitleBar_9UmMH
   .broadcast_embeddable_PopOutVideoCloseButton_3YKUp {
-  margin: 8px;
+  margin: 6px;
   background: none;
   border: none;
-  width: 20px;
+  width: 25px;
 }
 .broadcast_embeddable_broadcast_floating_39rrm
   .broadcast_embeddable_PopOutVideoTitleBar_9UmMH
   .broadcast_embeddable_PopOutVideoCloseButton_3YKUp:hover {
   cursor: pointer;
+}
+.broadcast_embeddable_broadcast_floating_39rrm .videoContainer {
+  position: relative;
+  flex-grow: 1;
 }
 .broadcast_embeddable_BroadcastPlayerContainer_26MAm {
   position: relative;

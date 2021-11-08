@@ -1,5 +1,5 @@
 {
-  "revision": 347,
+  "revision": 349,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -27,6 +27,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": false,
       "partners": 1,
       "relay_addresses": [
         "155.133.248.50:27015-27068",
@@ -60,6 +61,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "162.254.199.170:27015-27060",
@@ -97,6 +99,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "155.133.233.98:27015-27052",
@@ -123,6 +126,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "service_address_ranges": [
         "125.88.174.0/24"
@@ -133,6 +137,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "183.232.229.200:27015-27068",
@@ -174,6 +179,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "125.88.174.11:27015-27068",
@@ -215,6 +221,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "157.255.37.14:27015-27068",
@@ -258,6 +265,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": false,
       "partners": 1,
       "relay_addresses": [
         "155.133.253.38:27015-27060",
@@ -286,6 +294,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "185.25.183.178:27015-27052",
@@ -318,6 +327,7 @@
         "valve",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "service_address_ranges": [
         "100.67.128.0/19",
@@ -333,6 +343,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "155.133.255.98:27015-27060",
@@ -369,6 +380,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "162.254.197.36:27015-27060",
@@ -433,6 +445,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "205.185.194.34:27015-27055",
@@ -493,6 +506,7 @@
         "valve",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "153.254.86.164:27015-27060",
@@ -571,6 +585,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "162.254.192.66:27015-27052",
@@ -619,6 +634,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "155.133.238.162:27015-27068",
@@ -646,6 +662,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "162.254.195.70:27015-27060",
@@ -683,6 +700,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": false,
       "partners": 1,
       "relay_addresses": [
         "162.254.196.66:27015-27060",
@@ -716,6 +734,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "190.217.33.34:27015-27052",
@@ -750,6 +769,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "155.133.232.98:27015-27060"
@@ -772,6 +792,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "155.133.246.66:27015-27068",
@@ -800,6 +821,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "162.254.193.71:27015-27052",
@@ -852,6 +874,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": false,
       "partners": 1,
       "relay_addresses": [
         "185.25.182.66:27015-27068",
@@ -884,6 +907,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "125.88.173.11:27015-27068",
@@ -920,6 +944,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "220.194.68.11:27015-27068",
@@ -946,7 +971,6 @@
         }
       ],
       "service_address_ranges": [
-        "61.182.135.0/24",
         "220.194.68.0/24"
       ]
     },
@@ -956,6 +980,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "61.182.135.15:27015-27068",
@@ -996,6 +1021,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "116.211.132.11:27015-27068",
@@ -1031,6 +1057,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "183.136.230.11:27015-27068",
@@ -1067,6 +1094,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "155.133.249.162:27015-27052",
@@ -1099,6 +1127,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": false,
       "partners": 1,
       "relay_addresses": [
         "205.196.6.210:27015-27060",
@@ -1132,6 +1161,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "146.66.152.36:27015-27060",
@@ -1170,6 +1200,7 @@
         "valve",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "103.10.124.40:27015-27052",
@@ -1229,6 +1260,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "service_address_ranges": [
         "121.46.225.0/24",
@@ -1241,6 +1273,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "117.184.42.132:27015-27068",
@@ -1283,6 +1316,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "121.46.225.11:27015-27068",
@@ -1325,6 +1359,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "211.95.37.141:27015-27068",
@@ -1371,6 +1406,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "180.153.252.11:27015-27068",
@@ -1407,6 +1443,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "162.254.198.43:27015-27052",
@@ -1457,6 +1494,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": false,
       "partners": 1,
       "relay_addresses": [
         "155.133.252.36:27015-27060",
@@ -1512,6 +1550,7 @@
         "valve",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "103.10.125.146:27015-27060",
@@ -1549,6 +1588,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "service_address_ranges": [
         "125.39.181.0-125.39.181.127",
@@ -1560,6 +1600,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "111.32.164.141:27015-27068",
@@ -1601,6 +1642,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "42.81.120.140:27015-27068",
@@ -1642,6 +1684,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "125.39.181.11:27015-27068",
@@ -1690,6 +1733,7 @@
         "valve",
         "perfectworld"
       ],
+      "has_gameservers": true,
       "partners": 2,
       "relay_addresses": [
         "155.133.239.19:27015-27060",
@@ -1740,6 +1784,7 @@
         "valve",
         "perfectworld"
       ],
+      "has_gameservers": false,
       "partners": 2,
       "relay_addresses": [
         "155.133.245.34:27015-27068",
@@ -1763,6 +1808,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "146.66.155.98:27015-27068",
@@ -1801,6 +1847,7 @@
         "steam-global",
         "valve"
       ],
+      "has_gameservers": true,
       "partners": 1,
       "relay_addresses": [
         "155.133.230.66:27015-27068",
