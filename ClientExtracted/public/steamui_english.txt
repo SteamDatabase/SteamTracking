@@ -492,7 +492,7 @@ This should take less than a minute."
 
 "Steam_ConversionNotEnoughDiskSpace_Title"	"Steam - Not enough disk space"
 "Steam_ConversionNotEnoughDiskSpace_Info"	"You do not have enough disk space to install the selected games.\nPlease free up some disk space, or press 'Back' and de-select some items."
-"Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"There is not enough disk space available to convert the selected games to Steam.\nPlease free up %s1 Mb of disk space and try again."
+"Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"There is not enough disk space available to convert the selected games to Steam.\nPlease free up %s1 MB of disk space and try again."
 "Steam_Interface"				"Interface"
 "Steam_EnableGPUWebViews_Option"		"Enable GPU accelerated rendering in web views (requires restart)"
 "Steam_SmoothScrollWebViews_Option"		"Enable smooth scrolling in web views (requires restart)"
@@ -880,7 +880,7 @@ This should take less than a minute."
 "SteamUI_ValveSurvey_Summary_CPUVendor"						"CPU Vendor:  %s1"
 "SteamUI_ValveSurvey_Summary_CPUBrand"						"CPU Brand:  %s1"
 "SteamUI_ValveSurvey_Summary_CPUSpeed"						"Speed:  %s1 Mhz"
-"SteamUI_ValveSurvey_Summary_RAM"							"RAM:  %s1 Mb"
+"SteamUI_ValveSurvey_Summary_RAM"							"RAM:  %s1 MB"
 
 "SteamUI_ValveSurvey_Summary_CPUStepping"					"CPU Stepping:  %s1"
 "SteamUI_ValveSurvey_Summary_CPUModel"						"CPU Model:  %s1"
@@ -1090,8 +1090,8 @@ This should take less than a minute."
 "SteamUI_ValveSurvey_Summary_CDROM"	"CD-Rom"
 "SteamUI_ValveSurvey_Summary_UnknownMedia"	"Undetermined"
 
-"SteamUI_ValveSurvey_Summary_HDAvail"	"Total Hard Disk Space Available:  %s1 Mb"
-"SteamUI_ValveSurvey_Summary_FreeHDBlock"	"Largest Free Hard Disk Block:  %s1 Mb"
+"SteamUI_ValveSurvey_Summary_HDAvail"	"Total Hard Disk Space Available:  %s1 MB"
+"SteamUI_ValveSurvey_Summary_FreeHDBlock"	"Largest Free Hard Disk Block:  %s1 MB"
 
 "SteamUI_ValveSurvey_Summary_InstallDate"	"OS Install Date: %s1"
 
@@ -3446,7 +3446,7 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 
 "SteamUI_SiteLicense_LockedDetail"	"There are currently no licenses available for this product. Check back later\nfor availability or notify the local administrator."
 
-"SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Steam Hard Disk Usage:  %s1 Mb"
+"SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Steam Hard Disk Usage:  %s1 MB"
 "SteamUI_ValveSurvey_GatheringSystemInformation"	"Gathering system information..."
 
 "SteamUI_ValidateEmailDescriptionAlt" "Your email address is not verified.\nClick ‘Next’ to verify your email address with Steam.\nA verified address will be used to confirm any changes to your Steam account credentials, so you and only you can change your secret question or password."

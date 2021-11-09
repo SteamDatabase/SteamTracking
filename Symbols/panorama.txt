@@ -3,15 +3,19 @@
  CFArrayCreate
  CFDataGetBytePtr
  CFDataGetLength
+ CFDataGetTypeID
  CFDateCreate
  CFDateFormatterCreate
  CFDateFormatterCreateStringWithDate
  CFDateFormatterSetFormat
  CFDictionaryCreateMutable
  CFDictionarySetValue
+ CFGetTypeID
  CFLocaleCopyCurrent
  CFLocaleCreate
  CFNumberCreate
+ CFNumberGetTypeID
+ CFNumberGetValue
  CFRelease
  CFRunLoopGetCurrent
  CFStringCreateWithBytesNoCopy
@@ -21,18 +25,13 @@
  CFStringGetCString
  CFStringGetLength
  CFStringGetSystemEncoding
+ CFStringGetTypeID
  CFUserNotificationDisplayAlert
- CGDisplayIOServicePort
- CGDisplayIsActive
- CGLDescribeRenderer
- CGLDestroyRendererInfo
  CGLDisable
  CGLEnable
  CGLGetCurrentContext
- CGLQueryRendererInfo
  CGLSetParameter
  CGLTexImageIOSurface2D
- CGOpenGLDisplayMaskToDisplayID
  CVProfile_ExitScope
  CatchAndWriteMiniDumpForVoidPtrFn
  CreateVideoPlayer
@@ -59,9 +58,14 @@
  FT_New_Memory_Face
  FcConfigAppFontAddFile
  GetCPUInformation()
+ GetInstalledRAM
  GetLocalHostname
  GetOSType
+ IOIteratorNext
+ IOObjectRelease
  IORegistryEntrySearchCFProperty
+ IOServiceGetMatchingServices
+ IOServiceMatching
  IOSurfaceCreate
  IOSurfaceGetID
  KeyValuesSystemSteam
@@ -488,6 +492,7 @@
  kCFRunLoopDefaultMode
  kCFTypeDictionaryKeyCallBacks
  kCFTypeDictionaryValueCallBacks
+ kIOMasterPortDefault
  kIOSurfaceBytesPerElement
  kIOSurfaceHeight
  kIOSurfaceIsGlobal

@@ -1,4 +1,16 @@
 
+ CFBundleGetVersionNumber
+ CFDataCreate
+ CFDictionaryAddValue
+ CFDictionaryCreateMutable
+ CFDictionaryGetCount
+ CFDictionaryGetKeysAndValues
+ CFDictionaryGetValue
+ CFDictionaryRemoveValue
+ CFDictionarySetValue
+ CFNumberCreate
+ CFRelease
+ CFStringCreateWithCString
  CFStringGetCStringPtr
  D OBJC_METACLASS_$___ARCLite__
  D _OBJC_LABEL_PROTOCOL_$___ARCLiteIndexedSubscripting__
@@ -7,7 +19,18 @@
  D _OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
  D _OBJC_PROTOCOL_REFERENCE_$___ARCLiteIndexedSubscripting__
  D _OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+ D __block_descriptor_32_e18_i32?0i8I12*16^q24l
+ D __block_descriptor_32_e18_i32?0i8I12r*16q24l
+ D __block_descriptor_40_e5_v8?0l
  IOConnectCallScalarMethod
+ IOHIDUserDeviceActivate
+ IOHIDUserDeviceCancel
+ IOHIDUserDeviceCreateWithProperties
+ IOHIDUserDeviceHandleReportWithTimeStamp
+ IOHIDUserDeviceRegisterGetReportBlock
+ IOHIDUserDeviceRegisterSetReportBlock
+ IOHIDUserDeviceSetCancelHandler
+ IOHIDUserDeviceSetDispatchQueue
  IOIteratorNext
  IOObjectRelease
  IOServiceClose
@@ -21,18 +44,32 @@
  T SteamInput_Destroy
  T SteamInput_IsVersionNewerThanKextVersion
  T SteamInput_Send
+ T __clang_at_available_requires_core_foundation_framework
+ T __isOSVersionAtLeast
+ T __isPlatformOrVariantPlatformVersionAtLeast
+ T __isPlatformVersionAtLeast
  _Block_copy
  _DefaultRuneLocale
+ _NSConcreteGlobalBlock
+ _NSConcreteStackBlock
  __CFConstantStringClassReference
+ __assert_rtn
  __cxa_atexit
  __stack_chk_fail
  __stack_chk_guard
+ _dispatch_main_q
  _dyld_register_func_for_add_image
  _objc_empty_cache
  _objc_empty_vtable
  abort
  asprintf
+ b AvailabilityVersionCheck
+ b CompatibilityDispatchOnceCounter
  b Demangled
+ b DispatchOnceCounter
+ b GlobalMajor
+ b GlobalMinor
+ b GlobalSubminor
  b NSAutoreleasePool_class
  b NSConstantString_class
  b NSMutableDictionary_class
@@ -42,6 +79,7 @@
  b add_image_hook_autoreleasepool(mach_header const*, long)::patches
  b add_image_hook_swiftV1(mach_header const*, long)::patches
  b com_valve_steaminput
+ b devices
  b guard variable for add_image_hook_ARC(mach_header const*, long)::patches
  b guard variable for add_image_hook_autoreleasepool(mach_header const*, long)::patches
  b guard variable for add_image_hook_swiftV1(mach_header const*, long)::patches
@@ -87,15 +125,29 @@
  d _OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteKeyedSubscripting__
  d _OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteIndexedSubscripting__
  d _OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteKeyedSubscripting__
+ d __block_literal_global
+ d __block_literal_global.36
  d demangleLock
+ dispatch_block_create
+ dispatch_once_f
+ dlsym
  dyld_stub_binder
+ fclose
+ fopen
+ fread
  free
+ fseek
+ ftell
  hash_create
  hash_search
  ivar_getName
  ivar_getOffset
+ kCFAllocatorDefault
  kCFCoreFoundationVersionNumber
+ kCFTypeDictionaryKeyCallBacks
+ kCFTypeDictionaryValueCallBacks
  kIOMasterPortDefault
+ mach_absolute_time
  mach_task_self_
  malloc
  memcpy
@@ -124,12 +176,17 @@
  protocol_getName
  pthread_mutex_lock
  pthread_mutex_unlock
+ rewind
  sel_getUid
+ sscanf
  strcmp
  strlen
  strncmp
  t __ARCLite__load()
  t __GLOBAL_init_65535
+ t __SteamInput_CreateHID_block_invoke
+ t __SteamInput_CreateHID_block_invoke_2
+ t __SteamInput_CreateHID_block_invoke_3
  t __arclite_NSArray_objectAtIndexedSubscript(NSArray*, objc_selector*, unsigned long)
  t __arclite_NSDictionary_objectForKeyedSubscript(NSDictionary*, objc_selector*, objc_object*)
  t __arclite_NSKKMS_fastIndexForKnownKey(objc_object*, objc_selector*, objc_object*)
@@ -172,7 +229,9 @@
  t __arclite_object_setInstanceVariable(objc_object*, char const*, void*)
  t __arclite_object_setIvar(objc_object*, objc_ivar*, objc_object*)
  t __arclite_protocol_getName(Protocol*)
+ t __isPlatformOrVariantPlatformVersionAtLeast.cold.1
  t _class_name
+ t _initializeAvailabilityCheck
  t _load_method_name
  t _load_method_type
  t add_image_hook_ARC(mach_header const*, long)
@@ -180,11 +239,13 @@
  t add_image_hook_swiftV1(mach_header const*, long)
  t allocateMaybeSwift(glue_swift_class_t*, unsigned long)
  t arclite_uninitialized_function()
+ t compatibilityInitializeAvailabilityCheck
  t copySwiftV1MangledName(char const*, bool)
  t cxxConstruct(objc_object*)
  t demangledName(char const*, bool)
  t finalizer
  t fixStringForCoreData(objc_object*)
+ t initializeAvailabilityCheck
  t initialize_imp(objc_object*, objc_selector*)
  t initializer
  t patch_lazy_pointers(mach_header const*, patch_t*, unsigned long)

@@ -2282,8 +2282,6 @@ sc_schinese
 
 @
 @
-<
--
 
 
 
@@ -2292,15 +2290,9 @@ sc_schinese
 
 @
 Z
-w
-l
 
-g
-T
-O
-j
-4
-Q
+S
+8
 
 
 

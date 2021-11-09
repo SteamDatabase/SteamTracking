@@ -37,6 +37,7 @@
  CFDataCreateWithBytesNoCopy
  CFDataGetBytePtr
  CFDataGetBytes
+ CFDataGetLength
  CFDataGetTypeID
  CFDictionaryCreateMutable
  CFDictionaryGetValue
@@ -70,12 +71,11 @@
  CFStringGetCString
  CFStringGetCharacterAtIndex
  CFStringGetLength
+ CFStringGetTypeID
  CFURLCreateWithBytes
  CFUUIDCreateString
  CGDisplayBitsPerPixel
  CGDisplayCopyDisplayMode
- CGDisplayIDToOpenGLDisplayMask
- CGDisplayIOServicePort
  CGDisplayModeGetRefreshRate
  CGDisplayModeRelease
  CGDisplayPixelsHigh
@@ -91,10 +91,6 @@
  CGEventSourceKeyState
  CGEventSourceSecondsSinceLastEventType
  CGGetActiveDisplayList
- CGLDescribeRenderer
- CGLDestroyRendererInfo
- CGLGetVersion
- CGLQueryRendererInfo
  CGMainDisplayID
  CUniformRandomStream::CUniformRandomStream()
  CVProfile_ExitScope

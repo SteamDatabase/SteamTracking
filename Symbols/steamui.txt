@@ -58,6 +58,7 @@
  CFNotificationCenterGetLocalCenter
  CFNotificationCenterPostNotification
  CFNumberCreate
+ CFNumberGetTypeID
  CFNumberGetValue
  CFPreferencesCopyValue
  CFReadStreamCreateWithBytesNoCopy
@@ -109,7 +110,6 @@
  CGDisplayCopyDisplayMode
  CGDisplayCreateImageForRect
  CGDisplayIDToOpenGLDisplayMask
- CGDisplayIOServicePort
  CGDisplayIsInMirrorSet
  CGDisplayMirrorsDisplay
  CGDisplayModeCopyPixelEncoding
@@ -139,13 +139,9 @@
  CGLChoosePixelFormat
  CGLClearDrawable
  CGLCreateContext
- CGLDescribeRenderer
  CGLDestroyContext
  CGLDestroyPixelFormat
- CGLDestroyRendererInfo
- CGLGetVersion
  CGLLockContext
- CGLQueryRendererInfo
  CGLReleaseContext
  CGLReleasePixelFormat
  CGLSetCurrentContext
