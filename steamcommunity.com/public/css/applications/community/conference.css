@@ -1791,6 +1791,12 @@ body.qanda {
 .conferenceevents_PastEventsCtn_3pfjF > div {
   margin-bottom: 20px;
 }
+.conferenceevents_HelpDialogDetailsCtn_1IQeQ {
+  margin-top: 20px;
+}
+ul.conferenceevents_HelpRequirements_3yMlx {
+  list-style-position: outside;
+}
 div#footer {
   display: none;
 }
@@ -1987,7 +1993,7 @@ html.responsive.touch
   width: 100%;
   max-width: 100%;
   height: 40vh;
-  max-height: 726px;
+  max-height: 709px;
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -2082,6 +2088,14 @@ html.responsive.touch
     margin-left: 0px;
     margin-top: 30px;
   }
+}
+.conferencepages_ConferenceHome_3tSqD
+  .conferencepages_MainCol_1qlkn
+  .conferencepages_PreEventNote___Fhr {
+  background: #151619;
+  padding: 10vh 5vw;
+  text-align: center;
+  margin-top: 30px;
 }
 .conferencepages_TabControlsCtn_1HJDD {
   display: grid;
@@ -2199,6 +2213,11 @@ html.responsive.touch
   height: 100%;
   min-height: 500px;
   overflow: hidden;
+}
+.conferencepages_AboutTitle_3yWGo {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
 }
 body.v6 {
   background: #111113;

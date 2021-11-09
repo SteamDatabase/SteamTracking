@@ -52485,12 +52485,13 @@
                   )
               )
             ),
-            o.a.createElement(
-              "div",
-              { className: f.a.SpeakerBio },
-              e.bio,
-              e.bioString && o.a.createElement(m.a, { text: e.bioString })
-            )
+            e.bio &&
+              o.a.createElement(
+                "div",
+                { className: f.a.SpeakerBio },
+                e.bio,
+                e.bioString && o.a.createElement(m.a, { text: e.bioString })
+              )
           );
         }),
         v = (function (e) {

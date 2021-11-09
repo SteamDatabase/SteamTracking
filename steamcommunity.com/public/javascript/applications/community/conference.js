@@ -63,6 +63,7 @@
         ChatColumn: "conferencepages_ChatColumn_2ldId",
         ChatTitle: "conferencepages_ChatTitle_3CjWm",
         QAColumn: "conferencepages_QAColumn_1RCLw",
+        PreEventNote: "conferencepages_PreEventNote___Fhr",
         TabControlsCtn: "conferencepages_TabControlsCtn_1HJDD",
         Close: "conferencepages_Close_3cKbt",
         ShowBothTabs: "conferencepages_ShowBothTabs_fZBE8",
@@ -73,6 +74,7 @@
         Popout: "conferencepages_Popout_QHxXW",
         Active: "conferencepages_Active_3PSCm",
         ChatStack: "conferencepages_ChatStack_1ogmv",
+        AboutTitle: "conferencepages_AboutTitle_3yWGo",
       };
     },
     "5znp": function (e, t, r) {
@@ -1695,6 +1697,8 @@
         ReminderContainer: "conferenceevents_ReminderContainer_2vLZT",
         OnlyIcon: "conferenceevents_OnlyIcon_3fZIS",
         PastEventsCtn: "conferenceevents_PastEventsCtn_3pfjF",
+        HelpDialogDetailsCtn: "conferenceevents_HelpDialogDetailsCtn_1IQeQ",
+        HelpRequirements: "conferenceevents_HelpRequirements_3yMlx",
       };
     },
     Lfwj: function (e, t, r) {
@@ -17451,9 +17455,15 @@
         );
       }
       function fe(e) {
+        var t = e.closeModal;
         return n.createElement(
           ie.d,
-          { strTitle: Object(h.f)("#Conference_NeedHelp"), bAlertDialog: !0 },
+          {
+            strTitle: Object(h.f)("#Conference_NeedHelp"),
+            bAlertDialog: !0,
+            onCancel: t,
+            onOK: t,
+          },
           n.createElement(
             "div",
             null,
@@ -17464,7 +17474,7 @@
             null,
             n.createElement(
               "div",
-              null,
+              { className: ee.HelpDialogDetailsCtn },
               n.createElement(
                 "div",
                 null,
@@ -17472,7 +17482,7 @@
               ),
               n.createElement(
                 "ul",
-                null,
+                { className: ee.HelpRequirements },
                 n.createElement(
                   "li",
                   null,
@@ -17497,7 +17507,7 @@
             ),
             n.createElement(
               "div",
-              null,
+              { className: ee.HelpDialogDetailsCtn },
               n.createElement(
                 "div",
                 null,
@@ -17512,23 +17522,23 @@
                   Object(h.f)("#Conference_NeedHelp_ChatA1")
                 )
               )
-            )
-          ),
-          n.createElement(
-            "div",
-            null,
-            n.createElement(
-              "span",
-              null,
-              Object(h.f)("#Conference_NeedHelp_StillHaveQuestions")
             ),
             n.createElement(
-              "a",
-              {
-                href:
-                  "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
-              },
-              Object(h.f)("#Conference_NeedHelp_CreateTicket")
+              "div",
+              { className: ee.HelpDialogDetailsCtn },
+              n.createElement(
+                "span",
+                null,
+                Object(h.f)("#Conference_NeedHelp_StillHaveQuestions")
+              ),
+              n.createElement(
+                "a",
+                {
+                  href:
+                    "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
+                },
+                Object(h.f)("#Conference_NeedHelp_CreateTicket")
+              )
             )
           )
         );
@@ -17599,7 +17609,7 @@
                   { className: pe.InteractionCtn },
                   n.createElement(
                     "div",
-                    null,
+                    { className: pe.PreEventNote },
                     Object(h.f)("#Conference_ChatHidden", 30)
                   )
                 )
@@ -17742,21 +17752,13 @@
           );
         var r = t.faqAboutPage,
           i = r.title,
-          a = r.content,
-          o = r.timestamp;
+          a = r.content;
+        r.timestamp;
         return n.createElement(
           "div",
           null,
-          n.createElement("div", null, i),
-          n.createElement(E.a, { text: a, bShowErrorInfo: !1 }),
-          n.createElement(
-            "div",
-            null,
-            Object(h.n)(
-              "#Confernece_About_LastUpdated",
-              n.createElement(p.a, { dateAndTime: o, bSingleLine: !0 })
-            )
-          )
+          n.createElement("div", { className: pe.AboutTitle }, i),
+          n.createElement(E.a, { text: a, bShowErrorInfo: !1 })
         );
       }
       function Be(e) {
