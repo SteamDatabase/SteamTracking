@@ -7533,10 +7533,6 @@
                 Object(f.f)("#EventEditor_Options_Title"),
                 e.GetOptionsCompletion(),
               ],
-              [
-                Object(f.f)("#EventEditor_Artwork"),
-                12 === e.GetEventType() ? void 0 : e.GetArtworkCompletion(),
-              ],
               [Object(f.f)("#Sale_TabTitle"), e.GetSaleTabCompletion()],
             ];
           C < j.length;

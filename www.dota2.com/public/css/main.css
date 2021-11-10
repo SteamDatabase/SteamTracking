@@ -13115,7 +13115,7 @@ a {
   top: 140px;
   z-index: 999;
 }
-.dpcmenubar_DPCMenuBar_1SBIP.dpcmenubar_IsEventCompleted_ZH68t {
+.dpcmenubar_DPCMenuBar_1SBIP.dpcmenubar_IsEventInactive_2Ixc4 {
   top: 80px;
 }
 .dpcmenubar_DPCMenuBar_1SBIP .dpcmenubar_DPCHeaderContents_XzLjB {
@@ -14215,10 +14215,10 @@ a {
   top: 0px;
   box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.7);
 }
-.matchesheader_DPCMatchesHeader_14-kx.matchesheader_IsEventCompleted_1mQBE {
+.matchesheader_DPCMatchesHeader_14-kx.matchesheader_IsEventInactive_2QJHI {
   height: 80px;
 }
-.matchesheader_DPCMatchesHeader_14-kx .matchesheader_CompletedEvent_2Jsjy {
+.matchesheader_DPCMatchesHeader_14-kx .matchesheader_InactiveEvent_1KG0T {
   width: 100%;
   height: 100%;
   background-color: #222223;
@@ -14234,7 +14234,7 @@ a {
   box-shadow: inset 7px 0 9px -7px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1300px) {
-  .matchesheader_DPCMatchesHeader_14-kx .matchesheader_CompletedEvent_2Jsjy {
+  .matchesheader_DPCMatchesHeader_14-kx .matchesheader_InactiveEvent_1KG0T {
     padding-right: 0px;
   }
 }
@@ -16130,6 +16130,7 @@ a {
 .aboutpage_DPCAboutPage_3mKWe .aboutpage_FAQ_2zp01 {
   width: 100%;
   padding: 80px 25%;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16145,6 +16146,7 @@ a {
   font-weight: 600;
   font-family: "Reaver", serif;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 .aboutpage_DPCAboutPage_3mKWe
   .aboutpage_FAQ_2zp01
@@ -16438,6 +16440,75 @@ a {
   height: 901px;
   background-color: #1a1b1f;
   margin-top: 40px;
+}
+.aboutpage_WeeklyGrid_3xND1 {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #111;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.aboutpage_WeeklyGrid_3xND1 .aboutpage_TimestampLabel_1GUY8 {
+  width: 20%;
+  height: 11.11%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.aboutpage_WeeklyGrid_3xND1 .aboutpage_WeeklyGridEntry_2YfAp {
+  width: 11.43%;
+  height: 11.11%;
+  display: flex;
+  flex-direction: column;
+}
+.aboutpage_WeeklyGrid_3xND1
+  .aboutpage_WeeklyGridEntry_2YfAp.aboutpage_DoubleHigh_17ZeM {
+  height: 22.22%;
+}
+.aboutpage_WeeklyGrid_3xND1
+  .aboutpage_WeeklyGridEntry_2YfAp.aboutpage_DoubleHigh_17ZeM.aboutpage_EmptyBottom_3atlj {
+  padding-bottom: 9%;
+}
+.aboutpage_WeeklyGrid_3xND1
+  .aboutpage_WeeklyGridEntry_2YfAp
+  .aboutpage_DayOfWeek_1v21E {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.aboutpage_WeeklyGrid_3xND1
+  .aboutpage_WeeklyGridEntry_2YfAp
+  .aboutpage_Region_6Dn3c {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1d1d1d;
+  border: 1px solid #111;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 * {
   box-sizing: border-box;
@@ -16985,7 +17056,6 @@ a {
 }
 .dpcroot_DPCHeaderImage_2adxj {
   width: 100%;
-  height: 400px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -21534,6 +21604,19 @@ a {
   position: relative;
   gap: 6px;
   padding: 60px 60px;
+}
+.internationalstandingspage_DPCTIStandingsPage_3-HyZ
+  .internationalstandingspage_NoResults_mx7Ws {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .internationalstandingspage_DPCTIStandingsPage_3-HyZ
   .internationalstandingspage_TeamEntry_2QSCy {
