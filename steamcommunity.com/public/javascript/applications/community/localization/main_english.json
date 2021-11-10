@@ -407,7 +407,7 @@
     "EventEditor_Category_DLC_Halloween_Desc": "Permanent Halloween theme extensions to your game",
     "EventEditor_Category_InGame_Halloween_Desc": "Announce a Halloween themed limited-time event in your game. It could give players extra items, bonuses, perks, rewards, XP etc. These have a start and end time.",
     "EventEditor_Options_SteamAwardNominations_Title": "Steam Awards Nomination Category",
-    "EventEditor_Options_SteamAwardNominations_Description": "You can suggest a particular category for your fans to nominate your game for, or you can let them choose. If you choose a specific category here, your fans will be able to nominate this game for that category right in the event.",
+    "EventEditor_Options_SteamAwardNominations_Description": "Please select a particular category for your fans to nominate your game for. They will be able to nominate your game for that category right in the event! Note that fans can only nominate your game in a single category.",
     "EventEditor_Options_SteamAwardNominations_OldGame_Description": "Most Steam Awards categories this year are for games released in %1$s (since the last Steam Awards nominations on %2$s). Since your game released prior to that date, it will only be elegible for the 'Labor of Love' category.",
     "EventEditor_Options_VisibilityOptIn_Title": "Invisible store page acknowledgement",
     "EventEditor_Options_VisibilityOptIn_Description": "The store page for %1$s is not currently visible. Publishing this event will allow users to learn that the game exists. If you choose to publish this event anyway, you must explicitly acknowledge that here.",

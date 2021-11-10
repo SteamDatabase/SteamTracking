@@ -44875,6 +44875,7 @@
                     (e[R.a.ReminderCtn] = !0),
                     (e[M.IconMode] = t),
                     (e[M.TextMode] = !t),
+                    (e.ReminderSet = n),
                     (e.RemindMeWidget = !0),
                     e)
                   ),

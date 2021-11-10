@@ -1772,18 +1772,28 @@ body.qanda {
   padding-top: 12px;
   margin-top: auto;
   margin-right: auto;
-  opacity: 0.3;
-}
-.conferenceevents_ReminderContainer_2vLZT:hover {
-  opacity: 1;
 }
 .conferenceevents_ReminderContainer_2vLZT.conferenceevents_OnlyIcon_3fZIS {
   position: absolute;
   top: 8px;
   right: 10px;
 }
-.conferenceevents_ReminderContainer_2vLZT svg.SVGIcon_Button {
+.conferenceevents_ReminderContainer_2vLZT svg.SVGIcon_Bell {
   fill: #fff;
+}
+.conferenceevents_ReminderContainer_2vLZT .RemindMeWidget {
+  opacity: 0.3;
+}
+.conferenceevents_ReminderContainer_2vLZT .RemindMeWidget:hover {
+  opacity: 1;
+}
+.conferenceevents_ReminderContainer_2vLZT .RemindMeWidget.ReminderSet {
+  opacity: 1;
+}
+.conferenceevents_ReminderContainer_2vLZT
+  .RemindMeWidget.ReminderSet
+  svg.SVGIcon_Bell {
+  fill: #199fff;
 }
 .conferenceevents_PastEventsCtn_3pfjF {
   width: 100%;
@@ -1827,6 +1837,20 @@ div#footer {
   width: 16px;
   height: 16px;
   display: none;
+}
+html.responsive.touch
+  .conferencepages_ConferenceHome_3tSqD
+  .conferencepages_LeftCol_19xFd
+  .conferencepages_AgendaToggle_1rjE0 {
+  top: 9px;
+}
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop)
+    .conferencepages_ConferenceHome_3tSqD
+    .conferencepages_LeftCol_19xFd
+    .conferencepages_AgendaToggle_1rjE0 {
+    top: 9px;
+  }
 }
 @media screen and (max-width: 1080px) {
   .conferencepages_ConferenceHome_3tSqD .conferencepages_LeftCol_19xFd {

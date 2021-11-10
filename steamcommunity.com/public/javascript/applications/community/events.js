@@ -5486,7 +5486,7 @@
                 c.createElement(Y, {
                   name: "#EventCategory_SteamAwardsNomination",
                   description: "#EventCategory_SteamAwardsNomination_Desc",
-                  icon: "promo_01",
+                  icon: "trophy",
                   onCategoryChosen: e.fnOnCategoryChosen,
                   type: 28,
                   tags: [
@@ -5518,6 +5518,7 @@
                       {
                         key: a,
                         className: Object(N.a)(
+                          te.RadioBtnCtn,
                           L.a.FlexRowContainer,
                           L.a.RadioOption
                         ),
@@ -5581,29 +5582,35 @@
                     "div",
                     { className: te.event_nomination_banner_ctn },
                     c.createElement("img", {
-                      className: te.event_nomination_banner,
+                      className: te.event_nomination_trophy,
                       src:
                         m.c.MEDIA_CDN_URL +
                         "store/promo/autumn2021/trophy.png?v=2",
                     }),
                     c.createElement(
                       "div",
-                      { className: te.event_nomination_banner_text },
-                      n
-                        ? Object(f.f)(
-                            "#EventEditor_Options_SteamAwardNominations_Description"
-                          )
-                        : Object(f.f)(
-                            "#EventEditor_Options_SteamAwardNominations_OldGame_Description",
-                            "2021",
-                            Object(f.k)(a)
-                          )
+                      { className: te.CategoryTextCtn },
+                      c.createElement(
+                        "div",
+                        { className: te.SteamAwardTitle },
+                        Object(f.f)("#SteamAwards_EventMainTitle")
+                      ),
+                      c.createElement(
+                        "div",
+                        { className: te.event_nomination_banner_text },
+                        n
+                          ? Object(f.f)(
+                              "#EventEditor_Options_SteamAwardNominations_Description"
+                            )
+                          : Object(f.f)(
+                              "#EventEditor_Options_SteamAwardNominations_OldGame_Description",
+                              "2021",
+                              Object(f.k)(a)
+                            )
+                      )
                     )
                   ),
-                  c.createElement("div", {
-                    className: L.a.EventEditorTextSubTitle,
-                  }),
-                  i
+                  c.createElement("div", { className: te.AwardSelectionCtn }, i)
                 )
               );
             }),
@@ -5629,7 +5636,7 @@
               c.createElement(Y, {
                 name: "#EventCategory_SteamAwardsVoteRequest",
                 description: "#EventCategory_SteamAwardsVoteRequest_Desc",
-                icon: "promo_01",
+                icon: "trophy",
                 onCategoryChosen: e.fnOnCategoryChosen,
                 steam_award_category_voteids: o,
                 type: 28,
@@ -27329,6 +27336,14 @@
           "partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB",
         SteamAwardCategoryOptions:
           "partnereventspecialcategories_SteamAwardCategoryOptions_1wsxj",
+        event_nomination_banner_ctn:
+          "partnereventspecialcategories_event_nomination_banner_ctn_-WzN3",
+        CategoryTextCtn: "partnereventspecialcategories_CategoryTextCtn_3vRv1",
+        SteamAwardTitle: "partnereventspecialcategories_SteamAwardTitle_3Sq0j",
+        event_nomination_trophy:
+          "partnereventspecialcategories_event_nomination_trophy_3kVDt",
+        RadioBtnCtn: "partnereventspecialcategories_RadioBtnCtn_1Y6BP",
+        CategoryTitle: "partnereventspecialcategories_CategoryTitle_25wr6",
         Halloween: "partnereventspecialcategories_Halloween_1etNG",
         EventTitle: "partnereventspecialcategories_EventTitle_6NPnW",
         EventDesc: "partnereventspecialcategories_EventDesc_2aLMq",
