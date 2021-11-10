@@ -346,6 +346,12 @@ CWishlistController.prototype.BuildElements = function()
 			if ( g_bIsTabletAgent )
                 strPurchaseArea = "";
 
+			var strSteamDeckCompatCategory = '';
+			if ( rgAppInfo.steam_deck_compat !== undefined )
+			{
+				strSteamDeckCompatCategory = rgAppInfo.steam_deck_compat;
+			}
+
 			var $el = $J(
 				g_strRowTemplate.replace(/%1\$s/g, wishlist.appid)
 					.replace(/%2\$s/g, rgAppInfo['capsule'])
@@ -363,7 +369,7 @@ CWishlistController.prototype.BuildElements = function()
 					.replace(/%14\$s/g, rgAppInfo['reviews_total'] )
 					.replace(/%15\$s/g, strAdded )
 					.replace(/%16\$s/g, rgAppInfo.priority )
-
+					.replace(/%17\$s/g, strSteamDeckCompatCategory )
 			);
 
 			$J('.hover_handle',$el)[0].addEventListener('mousedown', fnDragStart);

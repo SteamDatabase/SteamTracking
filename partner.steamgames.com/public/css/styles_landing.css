@@ -3290,47 +3290,65 @@ div .cdkey_request_details_row
 /* deck review section at top of app landing page */
 .app_landing_deck {
 	width: 400px;
-	margin: 10px;
-	border-radius: 3px;
-	font-size: 18px;
+	margin: 20px 10px 30px 10px;
+	font-size: 16px;
 	color: white;
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
 }
-.app_landing_deck .title,
-.app_landing_deck .body {
-	padding: 10px;
+
+.app_landing_deck .published {
+	color: #B5B5B5;
+	padding-bottom: 5px;
+	text-transform: uppercase;
 }
-.app_landing_deck .title {
+
+.app_landing_deck .body {
+	border-radius: 3px;
+	width: 100%;
+}
+
+.app_landing_deck .deck_image {
+	height: 36px;
+	padding-right: 20px;
+}
+
+.app_landing_deck .body .title{
 	padding: 10px 20px;
 	display: flex;
 	flex-direction: row;
-	line-height: 32px;
-}
-.app_landing_deck .body {
-	padding: 10px 20px;
-	padding-top: 5px;
-	font-size: 14px;
+	line-height: 24px;
+	align-items: center;
+	font-size: 18px;
 }
 .app_landing_deck .footer {
-	line-height: 32px;
+	line-height: 24px;
 	font-size: 14px;
 	width: 100%;
-	background-color: #8F8F8F;
-	border-radius: 3px;
+	background-color: #42494C;
+	padding: 5px 0px;
+}
+.app_landing_deck .footer .test_results,
+.app_landing_deck .footer .details {
+	padding-left: 20px;
+}
+.app_landing_deck .footer .test_results {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 18px;
 }
 
 .deck_header.left.deck_pending,
-.app_landing_deck.deck_pending {
+.app_landing_deck .deck_pending {
 	background: linear-gradient(269.68deg, #2460D0 0.2%, #3A9BED 99.92%);
 }
 .deck_header.left.deck_unsupported,
-.app_landing_deck.deck_unsupported {
+.app_landing_deck .deck_unsupported {
 	background: linear-gradient(269.68deg, #674B04 0.2%, #A86B0F 99.92%);
 }
 .deck_header.left.deck_verified,
-.app_landing_deck.deck_verified {
+.app_landing_deck .deck_verified {
 	background: linear-gradient(269.68deg, #5E810F 0.2%, #7FAA1F 99.92%);
 }
 
@@ -3384,11 +3402,60 @@ div .cdkey_request_details_row
 	padding: 10px;
 	min-height: 30px;
 }
-#DeckChecklistRequestForm fieldset {
+.deck_review_results fieldset {
 	border: 0;
 }
-#DeckChecklistRequestForm .please_confirm_title {
+.deck_review_results .please_confirm_title {
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
+}
+.deck_review_results .section .section_header {
+	text-transform: uppercase;
+}
+.deck_review_results .deck_status_description {
+	padding-bottom: 20px;
+}
+.deck_review_results .landingLeftCol > .section {
+	margin: 10px auto;
+}
+.deck_review_results .result_desc {
+	padding-top: 5px;
+}
+.deck_review_results .test_result {
+	padding-bottom: 5px;
+	display: inline-flex;
+}
+.deck_review_results .deck_result_details {
+	padding: 20px;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: row;
+	background-color: #43484E;
+	justify-content: space-evenly;
+}
+.deck_review_results .deck_result_details .detail_cell {
+	width: 50%;
+	text-align: left;
+}
+
+.deck_results_raw {
+	padding: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	display: grid;
+	grid-template-columns: 100px 1fr 1fr;
+	row-gap: 5px;
+	background-color: #43484E;
+}
+
+.deck_results_raw .table_header {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.deck_results_raw .raw_test_result {
+	text-transform: uppercase;
+}
+.deck_test_history_section {
+	padding-top: 10px;
 }

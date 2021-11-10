@@ -30,6 +30,7 @@
 	--gpColor-RedHi: #EE563B;
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -238,12 +239,23 @@
 
 
 
-
 	/* Messages */
+	html.responsive .cart_status_message_ctn {
+		height: unset;
+		float: unset;
+		margin-bottom: 0px;
+		position: fixed;
+		bottom: var(--gpSpace-Gutter);
+		left: 50%;
+		transform: translateX(-50%);
+		box-shadow: var(--gpShadow-Large);
+		opacity: 0.94;
+	}
+
 	html.responsive .cart_status_message_ctn .cart_status_message,
 	html.responsive .checkout_error {
 		margin: unset;
-		padding: 10px;
+		padding: 10px 16px;
 		line-height: unset;
 		font: var(--gpText-BodyMedium);
 		border-radius: var(--gpCorner-Medium);
@@ -255,12 +267,24 @@
 		margin-bottom: 12px;
 	}
 
-	html.responsive .cart_status_message_ctn {
-		height: unset;
-		float: unset;
+	/* hide arrow */
+	html.responsive .cart_status_message_arrow_holder {
+		display: none;
 	}
 
+
+
+	/* Warnings and errors */
 	html.responsive .checkout_error {
+		background: var(--gpColor-Orange);
+	}
+	html.responsive .checkout_error.steam_deck_compat_unsupported {
+		background: var(--gpColor-Red);
+	}
+	html.responsive .checkout_error.steam_deck_compat_unknown {
+		background: var(--gpColor-Orange);
+	}
+	html.responsive .checkout_error.steam_deck_compat_playable {
 		background: var(--gpColor-Orange);
 	}
 
@@ -445,12 +469,12 @@
 
 	html.responsive .cart_digital_notice_content h4 {
 		color: var(--gpStoreLightestGrey);
-	} 
+	}
 
 	html.responsive .cart_digital_notice_content p {
 		font:var(--gpText-BodyMedium);
 		color: var(--gpStoreLighterGrey);
-	} 
+	}
 
 
 

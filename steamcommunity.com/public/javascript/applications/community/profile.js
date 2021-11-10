@@ -452,7 +452,7 @@
                       "miniprofile/" +
                       this.m_accountid +
                       "/json/?origin=" +
-                      Object(h.e)()
+                      Object(h.d)()
                   )
                   .then(function (t) {
                     var r = t.data;
@@ -2150,7 +2150,7 @@
             }),
             (e.prototype.ReloadEquippedItems = function () {
               var e = U.b.Init(x.c);
-              e.Body().set_steamid(h.i.steamid),
+              e.Body().set_steamid(h.h.steamid),
                 e.Body().set_language(h.c.LANGUAGE),
                 (this.m_promiseEquipped = x.o.GetProfileItemsEquipped(
                   this.m_SteamInterface.GetServiceTransport(),
@@ -2276,7 +2276,7 @@
                       this.m_SteamInterface.GetServiceTransport(),
                       e
                     )),
-                    (t = U.b.Init(x.c)).Body().set_steamid(h.i.steamid),
+                    (t = U.b.Init(x.c)).Body().set_steamid(h.h.steamid),
                     t.Body().set_language(h.c.LANGUAGE),
                     (this.m_promiseEquipped = x.o.GetProfileItemsEquipped(
                       this.m_SteamInterface.GetServiceTransport(),
@@ -3290,7 +3290,7 @@
                     case 0:
                       return (
                         (e = U.b.Init(be.c)).SetBodyFields({
-                          steamid: h.i.steamid,
+                          steamid: h.h.steamid,
                           filter_user_uploaded_only: !0,
                         }),
                         [
@@ -3657,7 +3657,7 @@
               c = r.locCityCode;
             (this.m_Location = new ce(i, n, a, o, s, c)),
               (this.m_GroupList = new _e(e.PrimaryGroup));
-            var l = new k.a(h.i.steamid);
+            var l = new k.a(h.h.steamid);
             (this.m_MiniProfileData = new R(l.GetAccountID())),
               (this.m_persona = new v.b(l)),
               Object(m.l)(function () {
@@ -3706,7 +3706,7 @@
             (e.prototype.GetConstructedURL = function () {
               return this.m_strCustomURL
                 ? h.c.COMMUNITY_BASE_URL + "id/" + this.m_strCustomURL + "/"
-                : h.c.COMMUNITY_BASE_URL + "profiles/" + h.i.steamid + "/";
+                : h.c.COMMUNITY_BASE_URL + "profiles/" + h.h.steamid + "/";
             }),
             (e.prototype.GetAvatarHash = function () {
               return this.m_strAvatarHash;
@@ -3776,7 +3776,7 @@
                     case 0:
                       (t = new FormData()).append("avatar", e),
                         t.append("type", "player_avatar_image"),
-                        t.append("sId", h.i.steamid),
+                        t.append("sId", h.h.steamid),
                         t.append("sessionid", h.c.SESSIONID),
                         t.append("doSub", "1"),
                         t.append("json", "1"),
@@ -8521,11 +8521,11 @@
                     var e;
                     return Object(i.e)(this, function (t) {
                       return (
-                        (e = Object(h.g)("config", "profile_config")) &&
+                        (e = Object(h.f)("config", "profile_config")) &&
                           Object.assign(s, e),
                         (mr = new Ce(
-                          Object(h.g)("profile-edit", "profile_edit_config"),
-                          Object(h.g)("profile-badges", "profile_edit_config")
+                          Object(h.f)("profile-edit", "profile_edit_config"),
+                          Object(h.f)("profile-badges", "profile_edit_config")
                         )),
                         Object(Be.a)(h.c.EREALM) ||
                           mr.Profile.GroupList.GetUserGroups(),
@@ -11533,7 +11533,7 @@
           }
           return (
             (e.prototype.BIsLoggedIn = function () {
-              return p.i.logged_in;
+              return p.h.logged_in;
             }),
             (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
@@ -11587,7 +11587,7 @@
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
                           (e = y.b.Init(C)).SetBodyFields({
-                            steamid: p.i.steamid,
+                            steamid: p.h.steamid,
                           }),
                           [4, O.GetSummary(this.m_transport, e)])
                         : [2, Promise.resolve(null)];
@@ -12306,7 +12306,7 @@
                   [
                     4,
                     c.a.get(
-                      Object(p.e)() + "pointssummary/ajaxgetasyncconfig",
+                      Object(p.d)() + "pointssummary/ajaxgetasyncconfig",
                       { withCredentials: !0 }
                     ),
                   ]
@@ -12366,7 +12366,7 @@
                         ? [2]
                         : e
                         ? ((r.s_LoyaltyAwardModalStore = new $(e)), [2])
-                        : ((t = Object(p.g)(
+                        : ((t = Object(p.f)(
                             "loyaltystore",
                             "application_config"
                           )),

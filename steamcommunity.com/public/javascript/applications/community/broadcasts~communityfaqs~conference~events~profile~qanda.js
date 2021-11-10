@@ -851,18 +851,18 @@
             (e.prototype.OnLoginComplete = function (t) {
               window.location.href =
                 this.props.redirectURL &&
-                this.props.redirectURL !== Object(L.e)() + "login"
+                this.props.redirectURL !== Object(L.d)() + "login"
                   ? this.props.redirectURL
                   : L.c.COMMUNITY_BASE_URL;
             }),
             (e.prototype.render = function () {
-              return L.i && L.i.logged_in
+              return L.h && L.h.logged_in
                 ? (this.OnLoginComplete(), null)
                 : o.a.createElement(
                     "div",
                     null,
                     o.a.createElement(N, {
-                      baseURL: Object(L.e)(),
+                      baseURL: Object(L.d)(),
                       onLoginComplete: this.OnLoginComplete,
                     })
                   );

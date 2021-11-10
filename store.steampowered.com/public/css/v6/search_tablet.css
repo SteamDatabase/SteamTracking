@@ -30,6 +30,7 @@
 	--gpColor-RedHi: #EE563B;
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -114,7 +115,7 @@
 
 
 
-    
+
     /* SEARCH AND SORT */
 
     /* Search bar */
@@ -173,7 +174,7 @@
     html.responsive .sortbox {
         display: flex;
         align-items: center;
-    }    
+    }
 
     html.responsive .sortbox .dselect_container {
         width: 200px;
@@ -239,11 +240,16 @@
         margin-top: unset;
         color: white;
         font: var(--gpText-BodyLarge);
+		max-width: 30ch;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
     }
 
     html.responsive .search_result_row .col.search_released {
         color: var(--gpStoreLightGrey);
         font: var(--gpText-BodyMedium);
+		width: 100px;
     }
 
     html.responsive .search_result_row .search_capsule {
@@ -251,7 +257,7 @@
     }
 
     html.responsive .search_result_row .search_capsule img {
-        width: 140px;
+        width: 160px;
         display: block;
     }
 
@@ -266,11 +272,19 @@
         margin-left: unset;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+		flex-direction: column;
     }
 
+	/* Steam Deck Verified */
+	html.responsive .search_result_row .ds_steam_deck_compat {
+		bottom: 2px;
+        left: 2px;
+        background-color: var(--gpStoreDarkestGrey);
+        border-radius: 10px;
+	}
 
-    /* Pricing */
+		/* Pricing */
     html.responsive .search_price_discount_combined {
         display: flex;
         align-items: center;
@@ -297,7 +311,7 @@
 
 
     /* Horizontally align platform icons and labels */
-    html.responsive .search_result_row .col.search_name p {
+    html.responsive .search_result_row .col.search_name > div {
         display: flex;
         align-items: center;
     }
@@ -390,9 +404,9 @@
         color: var(--gpStoreLightestGrey);
         line-height: unset;
     }
-    
 
-    
+
+
 
 
 }

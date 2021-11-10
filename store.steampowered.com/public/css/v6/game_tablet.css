@@ -30,6 +30,7 @@
 	--gpColor-RedHi: #EE563B;
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -242,12 +243,7 @@
 	/* More from developer */
 	html.responsive #franchise_block,
 	html.responsive #recommended_block {
-		margin: 16px 0px;
-	}
-
-	html.responsive #franchise_block {
-		padding-top: var(--gpSpace-Gutter);
-		border-top: 1px solid var(--gpBackground-LightSoft);
+		margin-top: 32px;
 	}
 
 
@@ -692,7 +688,7 @@
 	html.responsive #view_wishlist_btn.btnv6_blue_hoverfade {
 		background: var(--gpBackground-LightSoft);
 	}
-	
+
 
 
 
@@ -813,6 +809,11 @@
 	html.responsive .game_description_column .block .block_content a {
 		/* background: unset !important; */
 		padding: 10px;
+	}
+	html.responsive .game_description_column .block .block_content a .ds_steam_deck_compat {
+		bottom: unset;
+		top: 55px;
+		left: 13px;
 	}
 
 	/* Curators section uses the banner format on mobile and needs extra margin on top and bottom because it's by itself */
@@ -1407,6 +1408,8 @@
 
 	html.responsive .game_area_purchase_game a {
 		color: unset;
+		width: 100%;
+		box-sizing: border-box;
 	}
 
 	html.responsive .game_area_purchase_not_refundable a {
@@ -1668,7 +1671,7 @@
 		color: var(--gpColor-Blue);
 	}
 
-	
+
 
 
 	/* Links */
@@ -1690,26 +1693,48 @@
 		transition: all 0.1s ease;
 	}
 
-	html.responsive .game_area_details_specs {
-		background: none;
-		border-radius: 2px;
-	}
-
 
 
 
 	/* Features */
-	html.responsive .game_area_details_specs .icon {
-		padding: 0px;
+	html.responsive #category_block {
+		margin-top: 4px;
 	}
 
-	html.responsive .game_area_details_specs {
+	html.responsive .game_area_details_specs_ctn {
+		background: none;
+		border-radius: var(--gpCorner-Medium);
 		margin-bottom: 0px;
+		transition: all 0.1s ease;
 	}
 
-	html.responsive .game_area_details_specs a.name {
-		padding: 0px;
+	html.responsive .game_area_details_specs_ctn .label {
+		color: var(--gpColor-Blue);
+		background: unset;
+		font: var(--gpText-BodyMedium);
+		padding: 4px 8px;
+		transition: all 0.1s ease;
 	}
+
+	html.responsive .game_area_details_specs_ctn:hover {
+		background: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .game_area_details_specs_ctn.gpfocus {
+		background: var(--gpBackground-LightSoft);
+		border-radius: 0px;
+	}
+
+	html.responsive .game_area_details_specs_ctn:hover .label {
+		color: white;
+	}
+
+	html.responsive .game_area_details_specs_ctn.gpfocus .label {
+		color: white;
+	}
+
+
+
 
 	html.responsive #bannerLanguages.responsive_banner_link {
 		background: var(--gpBackground-LightSoft);
@@ -1752,9 +1777,14 @@
 		margin-top: 0px;
 	}
 
-	html.responsive #category_block {
-		margin-top: 8px;
+
+
+	/* Reviews */
+	html.responsive .glance_ctn .user_reviews {
+		font: var(--gpText-BodyMedium);
 	}
+
+
 
 
 
@@ -1764,9 +1794,14 @@
 		border-radius: var(--gpCorner-Medium);
 		padding: 8px 12px;
 		color: #e1c48a;
-		margin-top: 4px;
+		margin-top: 8px;
 		line-height: unset;
 	}
+
+	html.responsive .DRM_notice a {
+		color: white !important;
+	}
+
 
 
 
@@ -1816,10 +1851,6 @@
 	html.responsive .details_block a {
 		font-weight: unset;
 	}
-
-	/* html.responsive .game_description_column img {
-		margin: 12px 0px;
-	} */
 
 
 
@@ -1948,7 +1979,21 @@
 
 
 
+
+
 	/* Sliders */
+	html.responsive #recommended_block .block_header {
+		margin-bottom: 8px;
+	}
+
+	html.responsive #franchise_block .block_header {
+		margin-bottom: 8px;
+	}
+
+	html.responsive #recommended_block .block_header .right {
+		margin-right: unset;
+	}
+
 	html.responsive .slider_ctn {
 		display: none !important; /* overriding inline style */
 	}
@@ -1977,18 +2022,23 @@
 
 	html.responsive .game_description_column .block .block_header .right a {
 		background-color: unset;
-		border-radius: var(--gpCorner-Medium);
+		border-radius: var(--gpCorner-Large);
 		border: 1px solid #FFFFFF52;
 		transition: all 0.2s ease;
 		font: var(--gpText-BodyMedium);
 		color: white;
 		padding: 4px 8px;
-		margin-top: -2px;
+		margin-top: -8px;
 	}
 
 	html.responsive .game_description_column .block .block_header .right a:hover {
 		background: unset;
 		border: 1px solid white;
+	}
+
+	html.responsive .game_description_column .block .block_header .right a.gpfocus {
+		background: var(--gpBackground-LightMedium);
+		border-radius: 0px;
 	}
 
 	html.responsive .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover img {
@@ -2265,7 +2315,7 @@
 		box-shadow: unset;
 		background: unset;
 		border-radius: unset;
-		padding: unset;		
+		padding: unset;
 	}
 
 	html.responsive .game_area_purchase_game_dropdown_menu_items_container_background {
@@ -2321,7 +2371,7 @@
 	}
 
 	html.responsive .package_header_container {
-		display: flex;		
+		display: flex;
 	}
 
 	html.responsive .package_header_container .package_header {
@@ -2332,60 +2382,68 @@
 
 
 	/* Bundle items */
-	html.responsive #bundle_package_items_ctn {
-		display: flex;
-		flex-direction: column;
-		gap: 4px;
-	}
-
-	html.responsive #bundle_package_items_ctn .bundle_package_item .tab_item {
+	html.responsive .tablet_list_item {
 		display: block;
 		margin-right: unset;
 		background: var(--gpBackground-LightSofter);
 		height: 52px;
 		box-shadow: none;
 		transition: all 0.1s ease;
+		margin-bottom: 4px;
 	}
 
-	html.responsive #bundle_package_items_ctn .tab_item_overlay img {
+	html.responsive .tablet_list_item .tab_item_discount {
+		position: absolute;
+		right: 8px;
+	}
+
+	html.responsive .tablet_list_item .tab_item_overlay img {
 		display: none;
 	}
 
-	html.responsive #bundle_package_items_ctn .bundle_package_item .tab_item:hover {
+	html.responsive  .tablet_list_item:hover {
 		background: var(--gpBackground-LightMedium);
 	}
 
-	html.responsive #bundle_package_items_ctn .bundle_package_item .tab_item:hover .tab_item_name {
+	html.responsive .tablet_list_item:hover .tab_item_name {
 		color: white;
 	}
 
-	html.responsive #bundle_package_items_ctn .tab_item_cap {
+	html.responsive .tablet_list_item .tab_item_cap {
 		margin: 0px 12px 0px 0px;
 		float: left;
 		width: unset;
 	}
 
-	html.responsive #bundle_package_items_ctn .tab_item_cap_img {
+	html.responsive  .tablet_list_item .tab_item_cap_img {
 		height: unset;
 		width: 140px;
 	}
 
-	html.responsive #bundle_package_items_ctn .tab_item .tab_item_discount,
-	html.responsive #bundle_package_items_ctn .tab_item .tab_item_discount.no_discount {
+	html.responsive  .tablet_list_item .tab_item_discount,
+	html.responsive  .tablet_list_item .tab_item_discount.no_discount {
 		width: unset;
 	}
 
-	html.responsive #bundle_package_items_ctn .tab_item_content {
+	html.responsive .tablet_list_item .tab_item_content {
 		font-size: unset;
-		padding-top: 4px;
+		padding-top: 2px;
 	}
 
-	html.responsive #bundle_package_items_ctn .tab_item_name {
+	html.responsive .tablet_list_item .tab_item_name {
 		font: var(--gpText-BodyLarge);
+		max-width: 23ch;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
-	html.responsive #bundle_package_items_ctn .tab_item_details {
+	html.responsive .tablet_list_item .tab_item_details {
 		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .tablet_list_item .tab_item_discount .discount_final_price {
 		color: var(--gpStoreLighterGrey);
 	}
 
@@ -2409,6 +2467,7 @@
 
 	html.responsive .package_totals_area .price {
 		font: var(--gpText-BodyLarge);
+		color: var(--gpStoreLighterGrey);
 	}
 
 	html.responsive .bundle_final_package_price {
@@ -2517,11 +2576,13 @@
 
 
 	/* AGE GATE */
-	
+
 	html.responsive .age_gate {
 		width: 100%;
 		box-sizing: border-box;
 	}
+
+
 
 	html.responsive .agegate_birthday_selector {
 		background-color: var(--gpBackground-LightSofter);
@@ -2534,7 +2595,7 @@
 	html.responsive .agegate_birthday_desc {
 		font: var(--gpText-BodyLarge);
 	}
-	
+
 	html.responsive #app_agegate {
 		background: none;
 		font-weight: unset;

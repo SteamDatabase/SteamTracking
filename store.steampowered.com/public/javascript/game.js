@@ -330,6 +330,10 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 			'data-ds-appid': unAppID,
 			'href': GStoreItemData.GetAppURL( unAppID, strAppURL )
 		};
+		if ( rgItemData['steam_deck_compat_category'] !== undefined )
+		{
+			params['data-ds-steam-deck-compat-category'] = rgItemData['steam_deck_compat_category'];
+		}
 
 		var $CapCtn = $J('<a/>', params );
 		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, null );

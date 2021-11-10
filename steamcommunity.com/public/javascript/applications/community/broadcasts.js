@@ -395,7 +395,7 @@
               );
             }),
             (e.prototype.Init = function () {
-              var e = Object(b.g)("broadcastsinfo", "application_config");
+              var e = Object(b.f)("broadcastsinfo", "application_config");
               this.ValidateStoreDefault(e) &&
                 ((this.m_steamid = new d.a(e.steamid)),
                 (this.m_bShowOnlyChat = Boolean(e.show_only_chat)),
@@ -411,8 +411,8 @@
           );
         })(),
         _ = r("TyAF"),
-        B = r("eN6m"),
-        h = r("trWU"),
+        h = r("eN6m"),
+        B = r("trWU"),
         y = r("rKv1"),
         g = r.n(y),
         v = r("nWbB"),
@@ -934,7 +934,7 @@
             "div",
             { className: Z.BroadcastUserActionsCtn },
             Boolean(
-              b.i.steamid != e.broadcasterSteamID.ConvertTo64BitString()
+              b.h.steamid != e.broadcasterSteamID.ConvertTo64BitString()
             ) &&
               i.a.createElement(
                 M.d,
@@ -943,7 +943,7 @@
                     "#Broadcast_User_Report_ttip"
                   ),
                   onClick: function (e) {
-                    b.i.logged_in
+                    b.h.logged_in
                       ? Object(W.d)(
                           i.a.createElement(ne, { broadcasterSteamID: t }),
                           Object(U.m)(e)
@@ -1019,7 +1019,7 @@
         ie = r("Pa9b"),
         ae = r("0OaU"),
         oe = function (e) {
-          if (!b.i.is_support) return null;
+          if (!b.h.is_support) return null;
           var t = function (t, r) {
               Object(W.d)(
                 i.a.createElement(se, {
@@ -1092,8 +1092,8 @@
             f = m[0],
             b = m[1],
             _ = Object(n.useState)(!1),
-            B = _[0],
-            h = _[1],
+            h = _[0],
+            B = _[1],
             y = Object(n.useRef)(null);
           Object(n.useEffect)(function () {
             return function () {
@@ -1151,7 +1151,7 @@
                         i.a.createElement(
                           "div",
                           null,
-                          B
+                          h
                             ? "Successfully Completed Request"
                             : "Failed to complete request, check browser console and/or try again later"
                         )
@@ -1211,7 +1211,7 @@
                                           n.sent(), r.token.reason || !0, [3, 4]
                                         );
                                       case 3:
-                                        return d(!1), b(!0), h(e), [7];
+                                        return d(!1), b(!0), B(e), [7];
                                       case 4:
                                         return [2];
                                     }
@@ -1383,7 +1383,7 @@
                           i.a.createElement(
                             z.a,
                             null,
-                            i.a.createElement(h.a, {
+                            i.a.createElement(B.a, {
                               steamIDBroadcast: n,
                               watchLocation: 5,
                               bStartMuted: o,
@@ -1403,7 +1403,7 @@
                       i.a.createElement(
                         z.a,
                         null,
-                        i.a.createElement(B.a, {
+                        i.a.createElement(h.a, {
                           emoticonStore: v.g,
                           watchLocation: 6,
                           steamID: n,
@@ -1454,7 +1454,7 @@
               null,
               i.a.createElement(ee, { broadcasterSteamID: t }),
               i.a.createElement(de, { steamid: t }),
-              Boolean(b.i.is_support) &&
+              Boolean(b.h.is_support) &&
                 i.a.createElement(
                   "div",
                   null,
@@ -1523,8 +1523,8 @@
             d = l[0],
             f = l[1],
             _ = Object(n.useState)(null),
-            B = _[0],
-            h = _[1];
+            h = _[0],
+            B = _[1];
           if (
             (Object(n.useEffect)(
               function () {
@@ -1537,7 +1537,7 @@
               },
               [r.m_strTitle]
             ),
-            b.i.accountid != e.steamid.GetAccountID())
+            b.h.accountid != e.steamid.GetAccountID())
           )
             return null;
           return i.a.createElement(
@@ -1590,7 +1590,7 @@
                               return (
                                 (r = n.sent()),
                                 e.token.reason ||
-                                  h(
+                                  B(
                                     Object(E.f)(
                                       r
                                         ? "#Broadcast_Control_Success"
@@ -1645,7 +1645,7 @@
                                       return (
                                         (r = n.sent()),
                                         e.token.reason ||
-                                          h(
+                                          B(
                                             Object(E.f)(
                                               r
                                                 ? "#Broadcast_Control_StopSuccess"
@@ -1666,7 +1666,7 @@
                   },
                   Object(E.f)("#Broadcast_Control_StopBroadcast")
                 ),
-                Boolean(B) && i.a.createElement("div", null, B)
+                Boolean(h) && i.a.createElement("div", null, h)
               )
             )
           );
@@ -1901,15 +1901,15 @@
         b = r("WBba"),
         p = r("kLLr"),
         _ = r("hRO2"),
-        B = r("OS8t"),
-        h = _.Message;
+        h = r("OS8t"),
+        B = _.Message;
       var y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -1923,28 +1923,28 @@
                     fields: {
                       broadcast_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       thumbnail_upload_address: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       thumbnail_upload_token: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       thumbnail_interval_seconds: {
                         n: 4,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       heartbeat_interval_seconds: {
                         n: 5,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
@@ -1952,16 +1952,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -1969,14 +1969,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -1989,12 +1989,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         g = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -2031,14 +2031,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         v = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.upload_token || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.upload_token || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2052,28 +2052,28 @@
                     fields: {
                       upload_token: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       upload_address: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       broadcast_upload_id: {
                         n: 3,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       enable_replay: {
                         n: 6,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                       http_address: {
                         n: 7,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -2081,16 +2081,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2098,14 +2098,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2118,14 +2118,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         S = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2139,51 +2139,51 @@
                     fields: {
                       broadcast_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       upload_token: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       upload_address: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       http_address: {
                         n: 4,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       broadcast_upload_id: {
                         n: 5,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       heartbeat_interval_seconds: {
                         n: 6,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
-                      is_rtmp: { n: 7, br: B.d.readBool, bw: B.h.writeBool },
+                      is_rtmp: { n: 7, br: h.d.readBool, bw: h.h.writeBool },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2191,14 +2191,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2211,14 +2211,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         w = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.gameid || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.gameid || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2232,61 +2232,61 @@
                     fields: {
                       gameid: {
                         n: 1,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
-                      title: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      title: { n: 2, br: h.d.readString, bw: h.h.writeString },
                       num_viewers: {
                         n: 3,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       permission: {
                         n: 4,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
-                      is_rtmp: { n: 5, br: B.d.readBool, bw: B.h.writeBool },
+                      is_rtmp: { n: 5, br: h.d.readBool, bw: h.h.writeBool },
                       seconds_delay: {
                         n: 6,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       is_publisher: {
                         n: 7,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                       thumbnail_url: {
                         n: 8,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       update_interval: {
                         n: 9,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       is_uploading: {
                         n: 10,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                       duration: {
                         n: 11,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
-                      is_replay: { n: 12, br: B.d.readBool, bw: B.h.writeBool },
+                      is_replay: { n: 12, br: h.d.readBool, bw: h.h.writeBool },
                       is_capturing_vod: {
                         n: 13,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                       is_store_whitelisted: {
                         n: 14,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -2294,16 +2294,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2311,14 +2311,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2331,14 +2331,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         M = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.thumbnail_url || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.thumbnail_url || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2352,36 +2352,36 @@
                     fields: {
                       thumbnail_url: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       update_interval: {
                         n: 2,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       num_viewers: {
                         n: 3,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
-                      duration: { n: 4, br: B.d.readInt32, bw: B.h.writeInt32 },
+                      duration: { n: 4, br: h.d.readInt32, bw: h.h.writeInt32 },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2389,14 +2389,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2409,14 +2409,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         z = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.response || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.response || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2428,85 +2428,85 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      response: { n: 1, br: B.d.readEnum, bw: B.h.writeEnum },
+                      response: { n: 1, br: h.d.readEnum, bw: h.h.writeEnum },
                       mpd_url: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       broadcast_id: {
                         n: 3,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       gameid: {
                         n: 4,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
-                      title: { n: 5, br: B.d.readString, bw: B.h.writeString },
+                      title: { n: 5, br: h.d.readString, bw: h.h.writeString },
                       num_viewers: {
                         n: 6,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       permission: {
                         n: 7,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
-                      is_rtmp: { n: 8, br: B.d.readBool, bw: B.h.writeBool },
+                      is_rtmp: { n: 8, br: h.d.readBool, bw: h.h.writeBool },
                       seconds_delay: {
                         n: 9,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       viewer_token: {
                         n: 10,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       hls_m3u8_master_url: {
                         n: 11,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       heartbeat_interval: {
                         n: 12,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       thumbnail_url: {
                         n: 13,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      is_webrtc: { n: 14, br: B.d.readBool, bw: B.h.writeBool },
+                      is_webrtc: { n: 14, br: h.d.readBool, bw: h.h.writeBool },
                       webrtc_session_id: {
                         n: 15,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       webrtc_offer_sdp: {
                         n: 16,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       webrtc_turn_server: {
                         n: 17,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      is_replay: { n: 18, br: B.d.readBool, bw: B.h.writeBool },
+                      is_replay: { n: 18, br: h.d.readBool, bw: h.h.writeBool },
                       duration: {
                         n: 19,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       cdn_auth_url_parameters: {
                         n: 20,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -2514,16 +2514,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2531,14 +2531,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2551,14 +2551,14 @@
             }),
             t
           );
-        })(h);
+        })(B);
       var C = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.success || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.success || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2570,23 +2570,23 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      success: { n: 1, br: B.d.readBool, bw: B.h.writeBool },
+                      success: { n: 1, br: h.d.readBool, bw: h.h.writeBool },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2594,14 +2594,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2614,12 +2614,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         O = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -2656,14 +2656,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         R = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.steamid || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.steamid || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2677,26 +2677,26 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      state: { n: 2, br: B.d.readEnum, bw: B.h.writeEnum },
+                      state: { n: 2, br: h.d.readEnum, bw: h.h.writeEnum },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2704,14 +2704,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2724,7 +2724,7 @@
             }),
             t
           );
-        })(h);
+        })(B);
       var j,
         F,
         T = (function (e) {
@@ -2732,8 +2732,8 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2747,8 +2747,8 @@
                     fields: {
                       broadcast_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -2756,16 +2756,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2773,14 +2773,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2793,14 +2793,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         W = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2814,23 +2814,23 @@
                     fields: {
                       broadcast_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       broadcast_relay_id: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       upload_result: {
                         n: 3,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       too_many_poor_uploads: {
                         n: 4,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -2838,16 +2838,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2855,14 +2855,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2875,14 +2875,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         I = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2896,8 +2896,8 @@
                     fields: {
                       broadcast_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -2905,16 +2905,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2922,14 +2922,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -2942,14 +2942,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         U = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -2963,13 +2963,13 @@
                     fields: {
                       broadcast_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       num_viewers: {
                         n: 2,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                     },
                   }),
@@ -2977,16 +2977,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -2994,14 +2994,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3014,14 +3014,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         E = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_channel_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_channel_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3035,18 +3035,18 @@
                     fields: {
                       broadcast_channel_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       broadcast_channel_name: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       broadcast_channel_avatar: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -3054,16 +3054,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3071,14 +3071,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3091,14 +3091,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         N = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.thumbnail_upload_token || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.thumbnail_upload_token || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3112,28 +3112,28 @@
                     fields: {
                       thumbnail_upload_token: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       thumbnail_broadcast_session_id: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       thumbnail_data: {
                         n: 3,
-                        br: B.d.readBytes,
-                        bw: B.h.writeBytes,
+                        br: h.d.readBytes,
+                        bw: h.h.writeBytes,
                       },
                       thumbnail_width: {
                         n: 4,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       thumbnail_height: {
                         n: 5,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
@@ -3141,16 +3141,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3158,14 +3158,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3178,14 +3178,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         P = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcaster_steamid || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcaster_steamid || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3199,8 +3199,8 @@
                     fields: {
                       broadcaster_steamid: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -3208,16 +3208,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3225,14 +3225,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3245,14 +3245,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         x = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.chat_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, [4], null),
+              t.prototype.chat_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, [4], null),
               n
             );
           }
@@ -3266,20 +3266,20 @@
                     fields: {
                       chat_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       view_url_template: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       flair_group_ids: {
                         n: 4,
                         r: !0,
                         q: !0,
-                        br: B.d.readUint32,
-                        bw: B.h.writeRepeatedUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeRepeatedUint32,
                       },
                     },
                   }),
@@ -3287,16 +3287,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3304,14 +3304,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3324,14 +3324,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         G = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.chat_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.chat_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3345,29 +3345,29 @@
                     fields: {
                       chat_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       message: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       instance_id: {
                         n: 3,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       language: {
                         n: 4,
                         d: 0,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       country_code: {
                         n: 5,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -3375,16 +3375,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3392,14 +3392,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3412,14 +3412,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         A = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.persona_name || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.persona_name || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3433,15 +3433,15 @@
                     fields: {
                       persona_name: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      in_game: { n: 2, br: B.d.readBool, bw: B.h.writeBool },
-                      result: { n: 3, br: B.d.readInt32, bw: B.h.writeInt32 },
+                      in_game: { n: 2, br: h.d.readBool, bw: h.h.writeBool },
+                      result: { n: 3, br: h.d.readInt32, bw: h.h.writeInt32 },
                       cooldown_time_seconds: {
                         n: 4,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                     },
                   }),
@@ -3449,16 +3449,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3466,14 +3466,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3486,14 +3486,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         D = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.chat_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.chat_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3507,26 +3507,26 @@
                     fields: {
                       chat_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      flair: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      flair: { n: 2, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3534,14 +3534,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3554,14 +3554,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         L = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.result || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.result || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3573,29 +3573,29 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      result: { n: 1, br: B.d.readInt32, bw: B.h.writeInt32 },
+                      result: { n: 1, br: h.d.readInt32, bw: h.h.writeInt32 },
                       chat_id: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      flair: { n: 3, br: B.d.readString, bw: B.h.writeString },
+                      flair: { n: 3, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3603,14 +3603,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3623,14 +3623,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         k = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.chat_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.chat_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3644,31 +3644,31 @@
                     fields: {
                       chat_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       user_steamid: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      muted: { n: 3, br: B.d.readBool, bw: B.h.writeBool },
+                      muted: { n: 3, br: h.d.readBool, bw: h.h.writeBool },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3676,14 +3676,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3696,12 +3696,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         V = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -3738,14 +3738,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.chat_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.chat_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3759,13 +3759,13 @@
                     fields: {
                       chat_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       user_steamid: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -3773,16 +3773,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3790,14 +3790,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3810,12 +3810,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         H = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -3852,14 +3852,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         K = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.persona_names || B.a(t.M()),
-              h.initialize(n, r, 0, -1, [1], null),
+              t.prototype.persona_names || h.a(t.M()),
+              B.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -3876,16 +3876,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3893,14 +3893,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3913,14 +3913,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         Y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.steam_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.steam_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -3934,13 +3934,13 @@
                     fields: {
                       steam_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       persona: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -3948,16 +3948,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -3965,14 +3965,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -3985,14 +3985,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         J = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_clip_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_clip_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4006,8 +4006,8 @@
                     fields: {
                       broadcast_clip_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -4015,16 +4015,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -4032,14 +4032,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -4052,12 +4052,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         X = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -4094,12 +4094,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         $ = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -4136,14 +4136,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         Q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_clip_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_clip_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4157,49 +4157,49 @@
                     fields: {
                       broadcast_clip_id: {
                         n: 1,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       video_id: {
                         n: 2,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       channel_id: {
                         n: 3,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
-                      app_id: { n: 4, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      app_id: { n: 4, br: h.d.readUint32, bw: h.h.writeUint32 },
                       accountid_broadcaster: {
                         n: 5,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       accountid_clipmaker: {
                         n: 6,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       video_description: {
                         n: 7,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       start_time: {
                         n: 8,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       length_milliseconds: {
                         n: 9,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       thumbnail_path: {
                         n: 10,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -4207,16 +4207,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -4224,14 +4224,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -4244,12 +4244,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         Z = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -4286,14 +4286,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         ee = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_permission || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_permission || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4307,54 +4307,59 @@
                     fields: {
                       broadcast_permission: {
                         n: 1,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       rtmp_host: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       rtmp_token: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       broadcast_delay: {
                         n: 4,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
-                      app_id: { n: 5, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      app_id: { n: 5, br: h.d.readUint32, bw: h.h.writeUint32 },
                       required_app_id: {
                         n: 6,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       broadcast_chat_permission: {
                         n: 7,
-                        br: B.d.readEnum,
-                        bw: B.h.writeEnum,
+                        br: h.d.readEnum,
+                        bw: h.h.writeEnum,
                       },
                       broadcast_buffer: {
                         n: 8,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       steamid: {
                         n: 9,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       chat_rate_limit: {
                         n: 10,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       enable_replay: {
                         n: 11,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
+                      },
+                      is_partner_chat_only: {
+                        n: 12,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -4362,16 +4367,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -4379,14 +4384,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -4399,14 +4404,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         te = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.upload_stats || B.a(t.M()),
-              h.initialize(n, r, 0, -1, [1], null),
+              t.prototype.upload_stats || h.a(t.M()),
+              B.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -4423,16 +4428,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -4440,14 +4445,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -4460,14 +4465,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         re = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.upload_result || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.upload_result || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4481,95 +4486,95 @@
                     fields: {
                       upload_result: {
                         n: 1,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       time_stopped: {
                         n: 2,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       seconds_uploaded: {
                         n: 3,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       max_viewers: {
                         n: 4,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       resolution_x: {
                         n: 5,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       resolution_y: {
                         n: 6,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       avg_bandwidth: {
                         n: 7,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       total_bytes: {
                         n: 8,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
-                      app_id: { n: 9, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      app_id: { n: 9, br: h.d.readUint32, bw: h.h.writeUint32 },
                       total_unique_viewers: {
                         n: 10,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       total_seconds_watched: {
                         n: 11,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       time_started: {
                         n: 12,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       upload_id: {
                         n: 13,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       local_address: {
                         n: 14,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       remote_address: {
                         n: 15,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       frames_per_second: {
                         n: 16,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       num_representations: {
                         n: 17,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       app_name: {
                         n: 18,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      is_replay: { n: 19, br: B.d.readBool, bw: B.h.writeBool },
+                      is_replay: { n: 19, br: h.d.readBool, bw: h.h.writeBool },
                       session_id: {
                         n: 20,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                     },
                   }),
@@ -4577,16 +4582,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -4594,14 +4599,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -4614,14 +4619,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         ne = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.viewer_stats || B.a(t.M()),
-              h.initialize(n, r, 0, -1, [1, 2], null),
+              t.prototype.viewer_stats || h.a(t.M()),
+              B.initialize(n, r, 0, -1, [1, 2], null),
               n
             );
           }
@@ -4641,16 +4646,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -4658,14 +4663,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -4678,14 +4683,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         ie = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.time || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.time || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4697,11 +4702,11 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      time: { n: 1, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      time: { n: 1, br: h.d.readUint32, bw: h.h.writeUint32 },
                       num_viewers: {
                         n: 2,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
@@ -4709,16 +4714,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -4726,14 +4731,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -4746,14 +4751,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         ae = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.country_code || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.country_code || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4767,13 +4772,13 @@
                     fields: {
                       country_code: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       num_viewers: {
                         n: 2,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
@@ -4781,16 +4786,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -4798,14 +4803,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -4818,12 +4823,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         oe = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -4860,12 +4865,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         se = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -4902,12 +4907,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         ce = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -4944,14 +4949,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         ue = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.sdp_mid || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.sdp_mid || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -4965,18 +4970,18 @@
                     fields: {
                       sdp_mid: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       sdp_mline_index: {
                         n: 2,
-                        br: B.d.readInt32,
-                        bw: B.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       candidate: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -4984,16 +4989,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5001,14 +5006,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5021,12 +5026,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         le = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -5063,12 +5068,12 @@
             }),
             t
           );
-        })(h),
+        })(B),
         de = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return h.initialize(r, t, 0, -1, void 0, null), r;
+            return B.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -5105,14 +5110,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         me = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.candidate_generation || B.a(t.M()),
-              h.initialize(n, r, 0, -1, [2], null),
+              t.prototype.candidate_generation || h.a(t.M()),
+              B.initialize(n, r, 0, -1, [2], null),
               n
             );
           }
@@ -5126,8 +5131,8 @@
                     fields: {
                       candidate_generation: {
                         n: 1,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       candidates: { n: 2, c: ue, r: !0, q: !0 },
                     },
@@ -5136,16 +5141,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5153,14 +5158,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5173,14 +5178,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         fe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_session_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_session_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5194,8 +5199,8 @@
                     fields: {
                       broadcast_session_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -5203,16 +5208,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5220,14 +5225,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5240,14 +5245,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         be = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.turn_server || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.turn_server || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5261,8 +5266,8 @@
                     fields: {
                       turn_server: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -5270,16 +5275,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5287,14 +5292,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5307,14 +5312,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         pe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_session_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_session_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5328,23 +5333,23 @@
                     fields: {
                       broadcast_session_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       webrtc_session_id: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       viewer_steamid: {
                         n: 3,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       viewer_token: {
                         n: 4,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -5352,16 +5357,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5369,14 +5374,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5389,14 +5394,14 @@
             }),
             t
           );
-        })(h),
+        })(B),
         _e = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_session_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_session_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5410,31 +5415,31 @@
                     fields: {
                       broadcast_session_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       webrtc_session_id: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      answer: { n: 3, br: B.d.readString, bw: B.h.writeString },
+                      answer: { n: 3, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5442,14 +5447,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5462,14 +5467,14 @@
             }),
             t
           );
-        })(h),
-        Be = (function (e) {
+        })(B),
+        he = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_session_id || B.a(t.M()),
-              h.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_session_id || h.a(t.M()),
+              B.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5483,13 +5488,13 @@
                     fields: {
                       broadcast_session_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       webrtc_session_id: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       candidate: { n: 3, c: ue },
                     },
@@ -5498,16 +5503,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5515,14 +5520,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5535,7 +5540,7 @@
             }),
             t
           );
-        })(h);
+        })(B);
       !(function (e) {
         (e.BeginBroadcastSession = function (e, t) {
           return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, y, {
@@ -5776,18 +5781,18 @@
             }),
             (e.NotifyWebRTCAddViewerCandidateHandler = {
               name: "BroadcastClient.NotifyWebRTCAddViewerCandidate#1",
-              request: Be,
+              request: he,
             });
         })(F || (F = {}));
-      var he = _.Message;
+      var Be = _.Message;
       var ye,
         ge = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_channel_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_channel_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5801,8 +5806,8 @@
                     fields: {
                       broadcast_channel_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -5810,16 +5815,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5827,14 +5832,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5847,14 +5852,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         ve = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_channel_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_channel_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5868,18 +5873,18 @@
                     fields: {
                       broadcast_channel_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       unique_name: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       steamid: {
                         n: 3,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -5887,16 +5892,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -5904,14 +5909,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -5924,12 +5929,12 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Se = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return he.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -5966,14 +5971,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         we = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.unique_name || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.unique_name || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -5987,41 +5992,41 @@
                     fields: {
                       unique_name: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       owner_steamid: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      name: { n: 3, br: B.d.readString, bw: B.h.writeString },
+                      name: { n: 3, br: h.d.readString, bw: h.h.writeString },
                       language: {
                         n: 4,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       headline: {
                         n: 5,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       summary: {
                         n: 6,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       schedule: {
                         n: 7,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      rules: { n: 8, br: B.d.readString, bw: B.h.writeString },
-                      panels: { n: 9, br: B.d.readString, bw: B.h.writeString },
+                      rules: { n: 8, br: h.d.readString, bw: h.h.writeString },
+                      panels: { n: 9, br: h.d.readString, bw: h.h.writeString },
                       is_partnered: {
                         n: 10,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -6029,16 +6034,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6046,14 +6051,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6066,14 +6071,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Me = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.replace_image_hash || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.replace_image_hash || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6087,8 +6092,8 @@
                     fields: {
                       replace_image_hash: {
                         n: 1,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -6096,16 +6101,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6113,14 +6118,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6133,14 +6138,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         ze = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.images || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.images || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -6157,16 +6162,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6174,14 +6179,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6194,14 +6199,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ce = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.image_type || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.image_type || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6213,16 +6218,16 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      image_type: { n: 1, br: B.d.readEnum, bw: B.h.writeEnum },
+                      image_type: { n: 1, br: h.d.readEnum, bw: h.h.writeEnum },
                       image_path: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       image_index: {
                         n: 3,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
@@ -6230,16 +6235,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6247,14 +6252,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6267,14 +6272,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Oe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.links || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.links || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -6291,16 +6296,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6308,14 +6313,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6328,14 +6333,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Re = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.link_index || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.link_index || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6349,35 +6354,35 @@
                     fields: {
                       link_index: {
                         n: 1,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
-                      url: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      url: { n: 2, br: h.d.readString, bw: h.h.writeString },
                       link_description: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      left: { n: 4, br: B.d.readUint32, bw: B.h.writeUint32 },
-                      top: { n: 5, br: B.d.readUint32, bw: B.h.writeUint32 },
-                      width: { n: 6, br: B.d.readUint32, bw: B.h.writeUint32 },
-                      height: { n: 7, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      left: { n: 4, br: h.d.readUint32, bw: h.h.writeUint32 },
+                      top: { n: 5, br: h.d.readUint32, bw: h.h.writeUint32 },
+                      width: { n: 6, br: h.d.readUint32, bw: h.h.writeUint32 },
+                      height: { n: 7, br: h.d.readUint32, bw: h.h.writeUint32 },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6385,14 +6390,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6405,12 +6410,12 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         je = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return he.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6447,14 +6452,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Fe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.is_live || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.is_live || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6466,52 +6471,52 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      is_live: { n: 1, br: B.d.readBool, bw: B.h.writeBool },
+                      is_live: { n: 1, br: h.d.readBool, bw: h.h.writeBool },
                       is_disabled: {
                         n: 2,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
-                      appid: { n: 3, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      appid: { n: 3, br: h.d.readUint32, bw: h.h.writeUint32 },
                       viewers: {
                         n: 4,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       views: {
                         n: 5,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       broadcaster_steamid: {
                         n: 6,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       thumbnail_url: {
                         n: 7,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       followers: {
                         n: 8,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       subscribers: {
                         n: 9,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       unique_name: {
                         n: 10,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       broadcast_session_id: {
                         n: 11,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                     },
                   }),
@@ -6519,16 +6524,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6536,14 +6541,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6556,14 +6561,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Te = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_channel_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_channel_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6577,86 +6582,86 @@
                     fields: {
                       broadcast_channel_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       unique_name: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      name: { n: 3, br: B.d.readString, bw: B.h.writeString },
-                      appid: { n: 4, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      name: { n: 3, br: h.d.readString, bw: h.h.writeString },
+                      appid: { n: 4, br: h.d.readUint32, bw: h.h.writeUint32 },
                       viewers: {
                         n: 5,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       views: {
                         n: 6,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       thumbnail_url: {
                         n: 7,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       followers: {
                         n: 8,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       headline: {
                         n: 9,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       avatar_url: {
                         n: 10,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       broadcaster_steamid: {
                         n: 11,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       subscribers: {
                         n: 12,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       background_url: {
                         n: 13,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       is_featured: {
                         n: 14,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                       is_disabled: {
                         n: 15,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
-                      is_live: { n: 16, br: B.d.readBool, bw: B.h.writeBool },
+                      is_live: { n: 16, br: h.d.readBool, bw: h.h.writeBool },
                       language: {
                         n: 17,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       reports: {
                         n: 18,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       is_partnered: {
                         n: 19,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -6664,16 +6669,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6681,14 +6686,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6701,14 +6706,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         We = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -6725,16 +6730,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6742,14 +6747,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6762,14 +6767,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ie = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -6786,16 +6791,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6803,14 +6808,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6823,14 +6828,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ue = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.is_followed || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.is_followed || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6844,8 +6849,8 @@
                     fields: {
                       is_followed: {
                         n: 1,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -6853,16 +6858,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6870,14 +6875,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6890,14 +6895,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ee = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.is_subscribed || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.is_subscribed || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -6911,8 +6916,8 @@
                     fields: {
                       is_subscribed: {
                         n: 1,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -6920,16 +6925,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -6937,14 +6942,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -6957,12 +6962,12 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ne = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return he.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -6999,14 +7004,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Pe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.is_followed || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.is_followed || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7020,13 +7025,13 @@
                     fields: {
                       is_followed: {
                         n: 1,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                       is_subscribed: {
                         n: 2,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -7034,16 +7039,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7051,14 +7056,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7071,14 +7076,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         xe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.appid || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [5], null),
+              t.prototype.appid || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [5], null),
               n
             );
           }
@@ -7090,29 +7095,29 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      appid: { n: 1, br: B.d.readUint32, bw: B.h.writeUint32 },
-                      name: { n: 2, br: B.d.readString, bw: B.h.writeString },
-                      image: { n: 3, br: B.d.readString, bw: B.h.writeString },
+                      appid: { n: 1, br: h.d.readUint32, bw: h.h.writeUint32 },
+                      name: { n: 2, br: h.d.readString, bw: h.h.writeString },
+                      image: { n: 3, br: h.d.readString, bw: h.h.writeString },
                       viewers: {
                         n: 4,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       channels: { n: 5, c: Te, r: !0, q: !0 },
                       release_date: {
                         n: 6,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       developer: {
                         n: 7,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       publisher: {
                         n: 8,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -7120,16 +7125,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7137,14 +7142,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7157,14 +7162,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ge = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -7181,16 +7186,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7198,14 +7203,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7218,14 +7223,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ae = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -7242,16 +7247,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7259,14 +7264,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7279,14 +7284,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         De = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcasters || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.broadcasters || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -7303,16 +7308,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7320,14 +7325,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7340,14 +7345,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Le = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.steamid || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.steamid || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7361,14 +7366,14 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      name: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      name: { n: 2, br: h.d.readString, bw: h.h.writeString },
                       rtmp_token: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -7376,16 +7381,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7393,14 +7398,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7413,14 +7418,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         ke = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.issuer_steamid || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.issuer_steamid || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7434,37 +7439,37 @@
                     fields: {
                       issuer_steamid: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       chatter_steamid: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       time_expires: {
                         n: 3,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      permanent: { n: 4, br: B.d.readBool, bw: B.h.writeBool },
-                      name: { n: 5, br: B.d.readString, bw: B.h.writeString },
+                      permanent: { n: 4, br: h.d.readBool, bw: h.h.writeBool },
+                      name: { n: 5, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7472,14 +7477,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7492,14 +7497,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ve = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_channel_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_channel_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7513,37 +7518,37 @@
                     fields: {
                       broadcast_channel_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       chatter_steamid: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       duration: {
                         n: 3,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
-                      permanent: { n: 4, br: B.d.readBool, bw: B.h.writeBool },
-                      undo: { n: 5, br: B.d.readBool, bw: B.h.writeBool },
+                      permanent: { n: 4, br: h.d.readBool, bw: h.h.writeBool },
+                      undo: { n: 5, br: h.d.readBool, bw: h.h.writeBool },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7551,14 +7556,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7571,12 +7576,12 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         qe = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return he.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7613,14 +7618,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         He = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -7637,16 +7642,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7654,14 +7659,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7674,14 +7679,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ke = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_channel_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_channel_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7695,31 +7700,31 @@
                     fields: {
                       broadcast_channel_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       moderator_steamid: {
                         n: 2,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      undo: { n: 3, br: B.d.readBool, bw: B.h.writeBool },
+                      undo: { n: 3, br: h.d.readBool, bw: h.h.writeBool },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7727,14 +7732,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7747,12 +7752,12 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ye = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return he.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -7789,14 +7794,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Je = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_channel_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_channel_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7810,8 +7815,8 @@
                     fields: {
                       broadcast_channel_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -7819,16 +7824,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7836,14 +7841,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7856,14 +7861,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Xe = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.steamid || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.steamid || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -7877,26 +7882,26 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
-                      name: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      name: { n: 2, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7904,14 +7909,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7924,14 +7929,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         $e = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -7948,16 +7953,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -7965,14 +7970,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -7985,12 +7990,12 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Qe = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return he.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -8027,14 +8032,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         Ze = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8050,8 +8055,8 @@
                         n: 1,
                         r: !0,
                         q: !0,
-                        br: B.d.readString,
-                        bw: B.h.writeRepeatedString,
+                        br: h.d.readString,
+                        bw: h.h.writeRepeatedString,
                       },
                     },
                   }),
@@ -8059,16 +8064,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8076,14 +8081,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8096,14 +8101,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         et = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_channel_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_channel_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8117,8 +8122,8 @@
                     fields: {
                       broadcast_channel_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
@@ -8126,16 +8131,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8143,14 +8148,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8163,14 +8168,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         tt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.chat_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [3], null),
+              t.prototype.chat_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [3], null),
               n
             );
           }
@@ -8184,20 +8189,20 @@
                     fields: {
                       chat_id: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       view_url_template: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       flair_group_ids: {
                         n: 3,
                         r: !0,
                         q: !0,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeRepeatedUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeRepeatedUint64String,
                       },
                     },
                   }),
@@ -8205,16 +8210,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8222,14 +8227,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8242,14 +8247,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         rt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8266,16 +8271,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8283,14 +8288,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8303,14 +8308,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         nt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.stream_live_email || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.stream_live_email || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8324,13 +8329,13 @@
                     fields: {
                       stream_live_email: {
                         n: 1,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                       stream_live_notification: {
                         n: 2,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -8338,16 +8343,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8355,14 +8360,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8375,12 +8380,12 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         it = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
-            return he.initialize(r, t, 0, -1, void 0, null), r;
+            return Be.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
             Object(n.d)(t, e),
@@ -8417,14 +8422,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         at = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.results || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.results || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8441,16 +8446,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8458,14 +8463,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8478,14 +8483,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         ot = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcasts || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.broadcasts || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8502,16 +8507,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8519,14 +8524,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8539,14 +8544,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         st = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcasts || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.broadcasts || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8559,24 +8564,24 @@
                     proto: t,
                     fields: {
                       broadcasts: { n: 1, c: Te, r: !0, q: !0 },
-                      appid: { n: 2, br: B.d.readUint32, bw: B.h.writeUint32 },
-                      title: { n: 3, br: B.d.readString, bw: B.h.writeString },
+                      appid: { n: 2, br: h.d.readUint32, bw: h.h.writeUint32 },
+                      title: { n: 3, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8584,14 +8589,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8604,14 +8609,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         ct = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.appid || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.appid || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8623,11 +8628,11 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      appid: { n: 1, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      appid: { n: 1, br: h.d.readUint32, bw: h.h.writeUint32 },
                       game_name: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       broadcast: { n: 3, c: Te },
                     },
@@ -8636,16 +8641,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8653,14 +8658,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8673,14 +8678,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         ut = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.entries || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.entries || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8693,23 +8698,23 @@
                     proto: t,
                     fields: {
                       entries: { n: 1, c: ct, r: !0, q: !0 },
-                      title: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      title: { n: 2, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8717,14 +8722,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8737,14 +8742,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         lt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcasts || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.broadcasts || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8757,23 +8762,23 @@
                     proto: t,
                     fields: {
                       broadcasts: { n: 1, c: Te, r: !0, q: !0 },
-                      title: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      title: { n: 2, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8781,14 +8786,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8801,14 +8806,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         dt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcasts || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.broadcasts || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -8821,23 +8826,23 @@
                     proto: t,
                     fields: {
                       broadcasts: { n: 1, c: Te, r: !0, q: !0 },
-                      title: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      title: { n: 2, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8845,14 +8850,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8865,14 +8870,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         mt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8885,11 +8890,11 @@
                     proto: t,
                     fields: {
                       broadcast: { n: 1, c: Te },
-                      title: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      title: { n: 2, br: h.d.readString, bw: h.h.writeString },
                       chat_group_id: {
                         n: 3,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                     },
                   }),
@@ -8897,16 +8902,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8914,14 +8919,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8934,14 +8939,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         ft = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -8954,23 +8959,23 @@
                     proto: t,
                     fields: {
                       broadcast: { n: 1, c: Te },
-                      title: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      title: { n: 2, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -8978,14 +8983,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -8998,14 +9003,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         bt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.title || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.title || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9017,23 +9022,23 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      title: { n: 1, br: B.d.readString, bw: B.h.writeString },
+                      title: { n: 1, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9041,14 +9046,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9061,14 +9066,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         pt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.template_type || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.template_type || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9082,8 +9087,8 @@
                     fields: {
                       template_type: {
                         n: 1,
-                        br: B.d.readEnum,
-                        bw: B.h.writeEnum,
+                        br: h.d.readEnum,
+                        bw: h.h.writeEnum,
                       },
                       takeover: { n: 2, c: ot },
                       single_game: { n: 3, c: st },
@@ -9099,16 +9104,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9116,14 +9121,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9136,14 +9141,14 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         _t = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.rows || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.rows || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9160,16 +9165,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9177,14 +9182,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9197,14 +9202,14 @@
             }),
             t
           );
-        })(he),
-        Bt = (function (e) {
+        })(Be),
+        ht = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.broadcast_clip_id || B.a(t.M()),
-              he.initialize(n, r, 0, -1, void 0, null),
+              t.prototype.broadcast_clip_id || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
               n
             );
           }
@@ -9218,44 +9223,44 @@
                     fields: {
                       broadcast_clip_id: {
                         n: 1,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       channel_id: {
                         n: 2,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
-                      app_id: { n: 3, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      app_id: { n: 3, br: h.d.readUint32, bw: h.h.writeUint32 },
                       broadcaster_steamid: {
                         n: 4,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       creator_steamid: {
                         n: 5,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       video_description: {
                         n: 6,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       live_time: {
                         n: 7,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       length_ms: {
                         n: 8,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       thumbnail_path: {
                         n: 9,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -9263,16 +9268,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9280,14 +9285,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9300,14 +9305,14 @@
             }),
             t
           );
-        })(he),
-        ht = (function (e) {
+        })(Be),
+        Bt = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.clips || B.a(t.M()),
-              he.initialize(n, r, 0, -1, [1], null),
+              t.prototype.clips || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, [1], null),
               n
             );
           }
@@ -9319,11 +9324,11 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      clips: { n: 1, c: Bt, r: !0, q: !0 },
+                      clips: { n: 1, c: ht, r: !0, q: !0 },
                       thumbnail_host: {
                         n: 2,
-                        br: B.d.readString,
-                        bw: B.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
@@ -9331,16 +9336,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9348,14 +9353,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9368,37 +9373,62 @@
             }),
             t
           );
-        })(he),
+        })(Be),
         yt = (function (e) {
-          function t(t) {
-            void 0 === t && (t = null);
-            var r = e.call(this) || this;
-            return he.initialize(r, t, 0, -1, void 0, null), r;
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
+            return (
+              t.prototype.aggregation_delay_ms || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
+              n
+            );
           }
           return (
             Object(n.d)(t, e),
+            (t.M = function () {
+              return (
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
+                    fields: {
+                      aggregation_delay_ms: {
+                        n: 1,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
+                      },
+                    },
+                  }),
+                t.sm_m
+              );
+            }),
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
+            }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, t) {
-              return e ? { $jspbMessageInstance: t } : {};
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return new t();
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
-            (t.deserializeBinaryFromReader = function (e, t) {
-              return e;
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
+            }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
               return (
@@ -9410,7 +9440,7 @@
             }),
             t
           );
-        })(he);
+        })(Be);
       !(function (e) {
         (e.CreateBroadcastChannel = function (e, t) {
           return e.SendMsg("SteamTV.CreateBroadcastChannel#1", t, ge, {
@@ -9503,7 +9533,7 @@
             });
           }),
           (e.GetBroadcastChannelClips = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelClips#1", t, ht, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelClips#1", t, Bt, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
@@ -9632,7 +9662,7 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.bincremental || B.a(t.M()),
+              t.prototype.bincremental || h.a(t.M()),
               Ct.initialize(n, r, 0, -1, [2], null),
               n
             );
@@ -9647,24 +9677,24 @@
                     fields: {
                       bincremental: {
                         n: 1,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                       friends: { n: 2, c: Rt, r: !0, q: !0 },
                       max_friend_count: {
                         n: 3,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       active_friend_count: {
                         n: 4,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       friends_limit_hit: {
                         n: 5,
-                        br: B.d.readBool,
-                        bw: B.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
                     },
                   }),
@@ -9672,16 +9702,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9689,14 +9719,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9715,7 +9745,7 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.ulfriendid || B.a(t.M()),
+              t.prototype.ulfriendid || h.a(t.M()),
               Ct.initialize(n, r, 0, -1, void 0, null),
               n
             );
@@ -9730,13 +9760,13 @@
                     fields: {
                       ulfriendid: {
                         n: 1,
-                        br: B.d.readFixed64String,
-                        bw: B.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                       efriendrelationship: {
                         n: 2,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
@@ -9744,16 +9774,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9761,14 +9791,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9788,7 +9818,7 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.groupid || B.a(t.M()),
+              t.prototype.groupid || h.a(t.M()),
               jt.initialize(n, r, 0, -1, [3], null),
               n
             );
@@ -9803,16 +9833,16 @@
                     fields: {
                       groupid: {
                         n: 1,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
-                      name: { n: 2, br: B.d.readString, bw: B.h.writeString },
+                      name: { n: 2, br: h.d.readString, bw: h.h.writeString },
                       accountid_members: {
                         n: 3,
                         r: !0,
                         q: !0,
-                        br: B.d.readUint32,
-                        bw: B.h.writeRepeatedUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeRepeatedUint32,
                       },
                     },
                   }),
@@ -9820,16 +9850,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9837,14 +9867,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9863,7 +9893,7 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.categories || B.a(t.M()),
+              t.prototype.categories || h.a(t.M()),
               jt.initialize(n, r, 0, -1, [1], null),
               n
             );
@@ -9881,16 +9911,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9898,14 +9928,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9924,7 +9954,7 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.accountid || B.a(t.M()),
+              t.prototype.accountid || h.a(t.M()),
               jt.initialize(n, r, 0, -1, void 0, null),
               n
             );
@@ -9939,14 +9969,14 @@
                     fields: {
                       accountid: {
                         n: 1,
-                        br: B.d.readUint32,
-                        bw: B.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
-                      clanid: { n: 2, br: B.d.readUint32, bw: B.h.writeUint32 },
+                      clanid: { n: 2, br: h.d.readUint32, bw: h.h.writeUint32 },
                       chat_group_id: {
                         n: 3,
-                        br: B.d.readUint64String,
-                        bw: B.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                     },
                   }),
@@ -9954,16 +9984,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -9971,14 +10001,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -9997,7 +10027,7 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.favorites || B.a(t.M()),
+              t.prototype.favorites || h.a(t.M()),
               jt.initialize(n, r, 0, -1, [1], null),
               n
             );
@@ -10015,16 +10045,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -10032,14 +10062,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -10100,7 +10130,7 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.favorites || B.a(t.M()),
+              t.prototype.favorites || h.a(t.M()),
               jt.initialize(n, r, 0, -1, [1], null),
               n
             );
@@ -10118,16 +10148,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -10135,14 +10165,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -10203,7 +10233,7 @@
             void 0 === r && (r = null);
             var n = e.call(this) || this;
             return (
-              t.prototype.friendslist || B.a(t.M()),
+              t.prototype.friendslist || h.a(t.M()),
               jt.initialize(n, r, 0, -1, void 0, null),
               n
             );
@@ -10221,16 +10251,16 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = B.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return B.g(t.M(), e, r);
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return B.c(t.M(), e);
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
@@ -10238,14 +10268,14 @@
               return t.deserializeBinaryFromReader(n, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return B.b(t.MBF(), e, r);
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              B.f(t.M(), e, r);
+              h.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
@@ -10489,7 +10519,7 @@
                       return (
                         (s = {
                           sessionid: zt.c.SESSIONID,
-                          origin: Object(zt.e)(),
+                          origin: Object(zt.d)(),
                         }),
                         [
                           4,
@@ -10534,7 +10564,7 @@
                       return (
                         (s = {
                           sessionid: zt.c.SESSIONID,
-                          origin: Object(zt.e)(),
+                          origin: Object(zt.d)(),
                         }),
                         [
                           4,
@@ -10608,7 +10638,7 @@
                       return (
                         (i = {
                           sessionid: zt.c.SESSIONID,
-                          origin: Object(zt.e)(),
+                          origin: Object(zt.d)(),
                         }),
                         [
                           4,
@@ -10664,7 +10694,7 @@
                           "&v=" +
                           t +
                           "&origin=" +
-                          Object(zt.e)()),
+                          Object(zt.d)()),
                         (n.label = 1);
                     case 1:
                       return n.trys.push([1, 3, , 4]), [4, l.a.get(r)];
@@ -10691,7 +10721,7 @@
                         "&v=" +
                         t +
                         "&origin=" +
-                        Object(zt.e)()),
+                        Object(zt.d)()),
                         (n.label = 5);
                     case 5:
                       return n.trys.push([5, 7, , 8]), [4, l.a.get(r)];
@@ -10718,7 +10748,7 @@
                         "&v=" +
                         t +
                         "&origin=" +
-                        Object(zt.e)()),
+                        Object(zt.d)()),
                         (n.label = 9);
                     case 9:
                       return n.trys.push([9, 11, , 12]), [4, l.a.get(r)];
@@ -10896,14 +10926,14 @@
               (this.m_rgChatMessages = []),
               (this.m_webAPIInterface = new b.a(
                 zt.c.WEBAPI_BASE_URL,
-                zt.i.webapi_token
+                zt.h.webapi_token
               ));
           }
           return (
             (e.prototype.InitTextFilter = function () {
               this.m_textFilterStore = new Dt();
               var e = 0;
-              "" !== zt.i.steamid && (e = new p.a(zt.i.steamid).GetAccountID());
+              "" !== zt.h.steamid && (e = new p.a(zt.h.steamid).GetAccountID());
               this.m_textFilterStore.Init(e, null, new f.a());
             }),
             Object.defineProperty(e.prototype, "TextFilterStore", {
@@ -10922,7 +10952,7 @@
             (e.prototype.StartForSteamID = function (e, t) {
               (this.m_webAPIInterface = new b.a(
                 zt.c.WEBAPI_BASE_URL,
-                zt.i.webapi_token
+                zt.h.webapi_token
               )),
                 (this.m_ulBroadcastSteamID = e),
                 (this.m_ulBroadcastID = t),
@@ -10932,10 +10962,10 @@
             (e.prototype.StartForChannel = function (e) {
               (this.m_webAPIInterface = new b.a(
                 zt.c.WEBAPI_BASE_URL,
-                zt.i.webapi_token
+                zt.h.webapi_token
               )),
                 (this.m_ulBroadcastChannelID = e),
-                (this.m_strUserSteamID = zt.i.steamid),
+                (this.m_strUserSteamID = zt.h.steamid),
                 this.InitTextFilter(),
                 this.JoinChannelChat();
             }),
@@ -11265,8 +11295,8 @@
                   b,
                   p,
                   _,
-                  B,
-                  h = this;
+                  h,
+                  B = this;
                 return Object(n.e)(this, function (y) {
                   switch (y.label) {
                     case 0:
@@ -11295,9 +11325,9 @@
                             });
                           })
                           .filter(function (e) {
-                            return !h.IsUserMutedLocally(e.steamid);
+                            return !B.IsUserMutedLocally(e.steamid);
                           })),
-                        (B = this.m_rgChatMessages).push.apply(B, a),
+                        (h = this.m_rgChatMessages).push.apply(h, a),
                         (o = this.m_bAutoScroll ? 150 : 300),
                         this.m_rgChatMessages.length > o &&
                           this.m_rgChatMessages.splice(
@@ -12189,7 +12219,7 @@
                 a = this.m_chat.BIsUserBroadcastModerator(
                   this.m_chat.GetUserSteamID()
                 );
-              ((zt.i && zt.i.is_support) || i || a
+              ((zt.h && zt.h.is_support) || i || a
                 ? n.push(
                     o.createElement(
                       Jt.d,
@@ -12317,7 +12347,7 @@
                       Object(wt.f)("#BroadcastChat_MuteLocal")
                     )
                   ),
-              (zt.i && zt.i.is_support) ||
+              (zt.h && zt.h.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
                 t.steamid &&
                 (this.m_chat.BIsUserBroadcastModerator(t.steamid)
@@ -12526,11 +12556,11 @@
         var t = e.oChat,
           r = e.emoticonStore;
         return !e.bPartnerMemberOnlyChat ||
-          ((null === zt.i || void 0 === zt.i ? void 0 : zt.i.logged_in) &&
-            (null === zt.i || void 0 === zt.i
+          ((null === zt.h || void 0 === zt.h ? void 0 : zt.h.logged_in) &&
+            (null === zt.h || void 0 === zt.h
               ? void 0
-              : zt.i.is_partner_member))
-          ? (null === zt.i || void 0 === zt.i ? void 0 : zt.i.logged_in)
+              : zt.h.is_partner_member))
+          ? (null === zt.h || void 0 === zt.h ? void 0 : zt.h.logged_in)
             ? o.createElement(_r, { oChat: t, emoticonStore: r })
             : null
           : o.createElement(yr, null);
@@ -12579,7 +12609,7 @@
                 ref: c,
               }),
               Boolean(t.m_bRateLimited) &&
-                o.createElement(hr, {
+                o.createElement(Br, {
                   nSeconds: t.m_nRateLimitSeconds,
                   bRateLimited: t.m_bRateLimited,
                 }),
@@ -12613,13 +12643,13 @@
                   emoticonStore: r,
                   emoticonHoverStore: Ht.b,
                 }),
-                o.createElement(Br, Object(n.a)({}, e, { textInputRef: c }))
+                o.createElement(hr, Object(n.a)({}, e, { textInputRef: c }))
               )
             )
           )
         );
       }
-      function Br(e) {
+      function hr(e) {
         var t,
           r = e.oChat,
           n = e.emoticonStore,
@@ -12645,7 +12675,7 @@
             })
           : null;
       }
-      var hr = (function (e) {
+      var Br = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -12691,7 +12721,7 @@
             { className: ur.a.LogInPrompt },
             Object(wt.f)("#Broadcast_PartnerChat_Login")
           ),
-          !zt.i.logged_in &&
+          !zt.h.logged_in &&
             o.createElement(
               Xt.d,
               { onClick: Zt.a, className: Object(or.a)(ur.a.SignInButton) },

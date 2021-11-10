@@ -170,7 +170,7 @@
                     case 0:
                       return (
                         (e = new FormData()).append("sessionid", m.c.SESSIONID),
-                        e.append("steamid_user", m.i.steamid),
+                        e.append("steamid_user", m.h.steamid),
                         e.append("duration", (2592e3).toString()),
                         [
                           4,
@@ -258,7 +258,7 @@
             }),
             (t.prototype.render = function () {
               var e = this,
-                t = m.i.short_url + "/" + this.state.invite_token;
+                t = m.h.short_url + "/" + this.state.invite_token;
               return s.a.createElement(
                 "div",
                 null,
@@ -281,14 +281,14 @@
                     s.a.createElement(
                       "h1",
                       { className: f.a.Text },
-                      m.i.accountid
+                      m.h.accountid
                     ),
                     s.a.createElement(
                       u.d,
                       {
                         className: f.a.Button,
                         onClick: function () {
-                          return e.OnCopy("friend_code", String(m.i.accountid));
+                          return e.OnCopy("friend_code", String(m.h.accountid));
                         },
                       },
                       this.state.friend_code_copied
@@ -467,9 +467,9 @@
                           ? this.setState({
                               searchResult: n,
                               disable_send_invite:
-                                m.i.is_limited ||
+                                m.h.is_limited ||
                                 (this.props.bDisableForSelfAndFriends &&
-                                  (n.is_friend || n.steamid === m.i.steamid)),
+                                  (n.is_friend || n.steamid === m.h.steamid)),
                             })
                           : this.setState({ searchResult: null }),
                         [3, 3]

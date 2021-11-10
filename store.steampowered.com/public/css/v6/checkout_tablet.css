@@ -30,6 +30,7 @@
 	--gpColor-RedHi: #EE563B;
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -79,7 +80,7 @@
 
 	/* Page header */
 	html.responsive .page_header_ctn {
-		display: none;
+		/* display: none; */
 	}
 
     /* Page title */
@@ -87,11 +88,12 @@
     html.responsive #payment_row_method_name,
     html.responsive h3.review_purchase_title,
     html.responsive .checkout_tab.checkout_content h2.purchase_confirmation_title,
-    html.responsive .checkout_purchase_title {
+    html.responsive .checkout_purchase_title,
+    html.responsive body.checkout_microtxn h2.approvetxn_header {
 		font: var(--gpText-HeadingLarge);
 		letter-spacing: unset;
 		text-transform: unset;
-		margin-top: 16px;
+		margin-top: 24px;
         color: white;
 	}
 
@@ -101,20 +103,24 @@
         font-weight: 500;
 		letter-spacing: unset;
 		text-transform: unset;
-		margin-top: 16px;
+		margin-top: 12px;
 	}
 
 
 
     /* TEXT */
-    html.responsive .block .block_header {
+    html.responsive .block .block_header,
+    html.responsive #col_right_review .block_header {
         font: var(--gpText-BodySmall);
 		font-weight: 700;
 		letter-spacing: 0.5px;
 		margin-bottom: 8px;
+        text-transform: uppercase;
+        color: white;
+        background: none;
     }
 
-    /* Font sizes for labels, checks etc */    
+    /* Font sizes for labels, checks etc */
     html.responsive .checkout_tab .form_right label,
     html.responsive .checkout_tab .form_left label,
     html.responsive .checkout_tab .form_row_sizable label,
@@ -141,12 +147,96 @@
 
 
 
+	/* PIPELINE */
+
+	/* Hide logo */
+	html.responsive #checkout_steam_logo {
+		display: none;
+	}
+
+	/* Hide spacers */
+	html.responsive .cart_tab_spacer {
+		display: none;
+	}
+
+	/* Hide final thankyou tab */
+	html.responsive #receipt_pipeline {
+		display: none;
+	}
+
+	/* Hide left and right of tabs */
+	html.responsive .cart_tab_left_on,
+	html.responsive .cart_tab_right_on,
+	html.responsive .cart_tab_left_off,
+	html.responsive .cart_tab_right_off {
+		display: none;
+	}
+
+	/* Remove background */
+	html.responsive .page_header_ctn {
+		background: unset;
+	}
+
+	/* Layout */
+	html.responsive body.v6.checkout .page_header_ctn {
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+
+	html.responsive #checkout_header .content {
+		padding: 0px var(--gpSpace-Gutter);
+		min-height: unset;
+	}
+
+	html.responsive #checkout_pipeline {
+		padding: 20px 0px 0px;
+	}
+
+	/* Tab styles */
+	html.responsive .cart_tab_on,
+	html.responsive .cart_tab_inactive,
+	html.responsive .cart_tab_off {
+		text-shadow: unset;
+		padding: 4px 10px 4px 10px;
+		clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%, 4px 50%);
+		margin-right: -4px;
+		transition: all 0.1s ease;
+	}
+
+	html.responsive #checkout_pipeline .cart_tab:first-child .cart_tab_on,
+	html.responsive #checkout_pipeline .cart_tab:first-child .cart_tab_inactive,
+	html.responsive #checkout_pipeline .cart_tab:first-child .cart_tab_off {
+		clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%);
+	}
+
+	html.responsive .cart_tab_on {
+		background-color: var(--gpColor-Blue);
+		color: white;
+	}
+
+	html.responsive .cart_tab_inactive {
+		color: var(--gpStoreLightestGrey);
+		background-color: var(--gpBackground-LightMedium);
+	}
+
+	html.responsive .cart_tab_inactive:hover {
+		background-color: var(--gpBackground-LightHard);
+		color: white;
+	}
+
+	html.responsive .cart_tab_off {
+		color: var(--gpStoreLightGrey);
+	}
+
+
+
     /* LAYOUT */
 
     /* Working */
     html.responsive #stored_card_processing {
         /* position: fixed; */
     }
+
 
     /* Page */
     html.responsive body.v6 .page_content {
@@ -159,12 +249,11 @@
     html.responsive body.checkout .leftcol,
     html.responsive body.checkout .rightcol {
         max-width: unset;
-        /* width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter))); */
         margin-left: unset;
         margin-right: unset;
 	}
 
-    
+
     /* Main container */
     html.responsive h3#payment_header {
         margin-bottom: 16px;
@@ -244,7 +333,7 @@
         padding: unset;
         display: grid;
 		row-gap: 8px;
-    }    
+    }
 
 
     /* Review and purchase */
@@ -258,7 +347,7 @@
         flex-direction: column;
         margin-bottom: 0px;
     }
-    
+
 
     /* Rule */
     html.responsive .checkout_content.confirm .rule {
@@ -267,6 +356,11 @@
 
 
     /* Review rows */
+	html.responsive #checkout_review_payment_info_area {
+		display: flex;
+		flex-direction: column;
+	}
+
     html.responsive .review_row {
         margin-bottom: 0px;
     }
@@ -418,7 +512,7 @@
     html.responsive #cart_price_total_text {
         font: var(--gpText-HeadingMedium);
         color: white;
-    } 
+    }
 
 
     /* Cart items */
@@ -484,7 +578,7 @@
     html.responsive .checkout_steam_rewards_banner div.left {
         font: var(--gpText-BodyMedium);
         color: var(--gpColor-LightBlue);
-        margin-right: 12px;        
+        margin-right: 12px;
     }
 
     html.responsive .checkout_steam_rewards_banner div.right {
@@ -566,7 +660,7 @@
     html.responsive .payment_method_list_content {
         margin-left: 16px;
     }
-    
+
 
 
 
@@ -600,7 +694,7 @@
         width: 32%;
     }
 
-    
+
 
     /* PAYMENT AND FOOTER NOTES */
     html.responsive #payment_method_notes {
@@ -624,6 +718,10 @@
         color: var(--gpStoreLightGrey);
     }
 
+    html.responsive #footer_note_review {
+        font: var(--gpText-BodyMedium);
+    }
+
 
 
 
@@ -645,7 +743,7 @@
         font-size: unset;
     }
 
-    
+
 
 
     /* GIFTING */
@@ -658,7 +756,10 @@
         height: 100vh;
         overflow: scroll;
         margin-top: unset;
-        padding: 0px;
+        padding: 40px 0px 0px 0px;
+		box-sizing: border-box;
+
+		/* display: none; */
     }
 
     html.responsive #friends_chooser {
@@ -682,7 +783,7 @@
         padding: 8px 24px;
         background-color: var(--gpBackground-DarkMedium);
     }
-    
+
     html.responsive #send_via_friends_box {
         margin-top: 16px;
     }
@@ -787,7 +888,7 @@
     html.responsive #friends_chooser .friend_block .friend_block_avatar {
         margin-right: 12px;
     }
-    
+
     html.responsive #friends_chooser .friend_block .friend_block_radio {
         margin-right: 12px;
     }
@@ -813,7 +914,6 @@
 
 
 
-
     /* PURCHASE CONFIRMATION */
 
     html.responsive .checkout_tab.checkout_content {
@@ -824,6 +924,7 @@
     html.responsive .checkout_tab.checkout_content .rule {
         display: none;
     }
+
 
     /* Confirmation title */
     html.responsive h2.purchase_confirmation_title {
@@ -836,6 +937,7 @@
 
     html.responsive .checkout_tab.checkout_content h2.purchase_confirmation_title {
         margin-bottom: 12px;
+		margin-top: 0px;
     }
 
 
@@ -859,6 +961,8 @@
     /* Install button */
     html.responsive #library_button a {
         width: 100%;
+		box-sizing: border-box;
+		text-shadow: unset;
     }
 
     html.responsive #library_button {
@@ -880,6 +984,12 @@
         padding: unset;
     }
 
+	html.responsive .receipt_confirmation_row {
+		border-top: 1px solid var(--gpBackground-LightSoft);
+		padding: 8px 0px;
+		margin: unset;
+	}
+
 
     /* Receipt confirmation labels */
     html.responsive .receipt_confirmation_label {
@@ -890,6 +1000,7 @@
     html.responsive .receipt_confirmation_data {
         color: var(--gpStoreLightestGrey);
         font: var(--gpText-BodyLarge);
+		padding-left: 160px;
     }
 
 
@@ -906,7 +1017,153 @@
 
 
 
-    
+
+    /* MICRO TRANSACTIONS */
+
+    html.responsive body.checkout_microtxn #main {
+        padding: unset;
+        margin-top: var(--gpSpace-Gutter);
+    }
+
+	html.responsive body.checkout_microtxn .page_header_ctn {
+		display: none;
+	}
+
+    html.responsive body.checkout_microtxn .checkout_content_box.method {
+        margin-top: 0px;
+        margin-bottom: 12px;
+    }
+
+    html.responsive .method_and_payment_area_ctn {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        width: var(--gpPaymentsNavWidth);
+        height: 100vh;
+        overflow-y: scroll;
+        padding: var(--gpSpace-Gutter);
+        box-sizing: border-box;
+        background: var(--gpBackground-DarkMedium);
+    }
+
+    html.responsive body.checkout_microtxn .checkout_content_box {
+        padding: unset;
+        background: none;
+    }
+
+
+    /* Hide rules */
+    html.responsive body.checkout_microtxn .txn_totals .rule {
+        display: none;
+    }
+
+
+    /* Line items */
+    html.responsive .approvetxn_lineitem_container_header {
+        background-color: unset;
+        font: var(--gpText-BodySmall);
+        color: var(--gpStoreLighterGrey);
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--gpBackground-LightMedium);
+    }
+
+    html.responsive .approvetxn_lineitem_row {
+        background-color: unset;
+        border-bottom: 1px solid var(--gpBackground-LightMedium);
+        font: var(--gpText-BodyLarge);
+        padding: 4px 0px;
+    }
+
+    html.responsive .approvetxn_lineitem_description {
+        font-size: unset;
+    }
+
+    html.responsive .approvetxn_lineitem_qty {
+        padding-left: unset;
+    }
+
+    html.responsive .approvetxn_lineitem_price {
+        padding-right: unset;
+    }
+
+
+    /* Totals */
+    html.responsive body.checkout_microtxn .txn_totals {
+        padding: unset;
+    }
+
+    html.responsive body.checkout_microtxn .cart_totals_area {
+        margin: 8px 0px;
+    }
+
+    html.responsive body.checkout_microtxn #purchase_bottom {
+        margin-top: 8px;
+    }
+
+    html.responsive body.checkout_microtxn .txn_totals br {
+        display: none;
+    }
+
+
+    /* Warnings */
+    html.responsive body.checkout_microtxn .checkout_no_refund_warning {
+        color: var(--gpColor-Yellow);
+    }
+
+
+    /* Account and payment method review */
+    html.responsive body.checkout_microtxn #checkout_review_payment_info_area {
+        flex-direction: column;
+    }
+
+    html.responsive body.checkout_microtxn .review_usercontainer {
+        width: 100%;
+    }
+
+    html.responsive body.checkout_microtxn .review_info_ctn {
+        flex-direction: column;
+    }
+
+    html.responsive body.checkout_microtxn .review_usercontainer {
+        padding: 0px;
+    }
+
+    html.responsive body.checkout_microtxn .payment_method_ctn {
+        margin-top: 12px;
+    }
+
+
+    /* Cancel transaction */
+    html.responsive .cancel_txn_ctn .cancel_txn_btn {
+        margin-right: 0px;
+    }
+
+    html.responsive .cancel_txn_ctn {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    /* Right column content */
+    html.responsive #col_right_review {
+        margin-top: 32px;
+        background: none;
+    }
+
+    html.responsive #col_right_review .block_header {
+        padding: 0px;
+    }
+
+    html.responsive #col_right_review .block_content_inner {
+        padding: 0px;
+    }
+
+
+
+
+
+
 
 
 }

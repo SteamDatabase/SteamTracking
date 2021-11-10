@@ -116,13 +116,13 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 }
 
 .sysreq_contents .sysreq_content,
-.music_album_track_list_contents .music_album_track_listing_ctn 
+.music_album_track_list_contents .music_album_track_listing_ctn
 {
 	display: none;
 }
 
 .sysreq_contents .sysreq_content.active,
-.music_album_track_list_contents .music_album_track_listing_ctn.active 
+.music_album_track_list_contents .music_album_track_listing_ctn.active
 {
 	display: block;
 }
@@ -176,6 +176,41 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 
 .game_page_autocollapse_ctn.collapsed .game_page_autocollapse_fade {
 	display: block;
+}
+
+
+
+/* For game_area_details_specs wrapped in a single <a> tag  */
+
+.game_area_details_specs_ctn {
+	margin-bottom: 2px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	display: flex;
+	align-items: center;
+}
+.game_area_details_specs_ctn .icon {
+	padding: 0px 6px;
+	display: flex;
+}
+.game_area_details_specs_ctn .icon img {
+	vertical-align: unset;
+}
+.game_area_details_specs_ctn .label {
+	padding: 6px 8px;
+	height: 100%;
+	background: rgba( 103, 193, 245, 0.1 );
+	width: 100%;
+	border-radius: 1px;
+	color: #acb2b8;
+}
+a.game_area_details_specs_ctn .label {
+	color: #66c0f4;
+}
+a.game_area_details_specs_ctn:hover .label {
+	text-decoration: none;
+	color: #ffffff;
+	background: #67c1f5;
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
 }
 
 

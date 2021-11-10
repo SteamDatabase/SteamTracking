@@ -30,6 +30,7 @@
 	--gpColor-RedHi: #EE563B;
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -93,8 +94,9 @@
 
 	
 
-	/* Name and avatar */
-	html.responsive .wishlist_header img {
+	/* Name and avatar & frame */
+	html.responsive .wishlist_header img,
+	html.responsive .wishlist_header .profile_avatar_frame {
 		width: 36px;
 		height: 36px;
 	}

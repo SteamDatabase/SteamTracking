@@ -30,6 +30,7 @@
 	--gpColor-RedHi: #EE563B;
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -122,6 +123,11 @@
 	/* Trending among friends */
 	html.responsive .friends_recently_purchased {
 		margin: unset;
+	}
+
+	html.responsive .friends_recently_purchased .ds_steam_deck_compat {
+		bottom: unset;
+		top: 95px;
 	}
 
 	html.responsive .store_capsule .friends_container {
@@ -219,6 +225,9 @@
 		padding-bottom: 0px;
 	}
 
+	html.responsive .store_main_capsule .ds_steam_deck_compat {
+		bottom: 70px;
+	}
 
 
 	/* Takeunder */
@@ -239,10 +248,15 @@
 	}
 
 	html.responsive .spotlight_weeklong_ctn {
-		height: unset;
-		
+		height: 300px;
 	}
-
+	html.responsive .spotlight_weeklong_ctn .spotlight_text_overlay {
+		background-size: contain;
+		width: 100%;
+	}
+	html.responsive .spotlight_weeklong_ctn .spotlight_count {
+		margin-top: 187px;
+	}
 
 	/* Browse Steam */
 	html.responsive .big_buttons .button_container {
@@ -311,6 +325,18 @@
 	html.responsive .spotlight_col {
 		display: grid;
 		grid-gap: var(--gpSpace-Gap);
+	}
+
+	html.responsive .home_area_spotlight .ds_steam_deck_compat {
+		bottom: unset;
+		top: 5px;
+	}
+	html.responsive .home_area_spotlight.ds_flagged .ds_steam_deck_compat {
+		top: 35px;
+	}
+
+	html.responsive .spotlight_col .ds_steam_deck_compat {
+		bottom: 50px;
 	}
 
 	.home_area_spotlight {
@@ -481,6 +507,10 @@
 		margin-bottom: unset;
 	}
 
+	html.responsive .tab_item .ds_steam_deck_compat {
+		bottom: unset;
+		top: 102px;
+	}
 
 
 
@@ -565,7 +595,10 @@
 		padding: unset;
 	}
 
-
+	.more_apps_by_curators_capsule .apps_recommended_by_curators_v2 .curated_app_curators {
+		top: 110px;
+		left: 50px;
+	}
 
 	 /* Developers and publishers */
 	 html.responsive .recommended_creators_ctn .store_capsule {
@@ -667,6 +700,15 @@
 
 	html.responsive .home_content.single .review {
 		display: none;
+	}
+
+	html.responsive .home_content.single .ds_steam_deck_compat  {
+		bottom: 35px;
+	}
+	html.responsive .home_content.twowide .ds_steam_deck_compat,
+	html.responsive .home_content.fourwide .ds_steam_deck_compat{
+		bottom: unset;
+		top: 160px;
 	}
 
 
@@ -789,6 +831,13 @@
 		display: none;
 	}
 
-	
+	/* broadcast carousel */
+	.live_streams_ctn .broadcast_capsule .ds_steam_deck_compat {
+		bottom: 40px;
+	}
+
+	.home_marketing_message .ds_steam_deck_compat {
+		bottom: 2px;
+	}
 
 }

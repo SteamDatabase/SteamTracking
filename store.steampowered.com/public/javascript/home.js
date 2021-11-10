@@ -2523,9 +2523,6 @@ GSteamCurators = {
 		// app image
 		// app image anchor
 
-		var $CapCtn = $J('<a/>', params );
-		GStoreItemData.BindHoverEventsForItem( $CapCtn, oItem );
-
 		var $ImgCtn = $J('<div class="capsule headerv5"/>');
 
 		$ImgCtn.append( $J('<img/>', { src: rgItemData.headerv5 } ) );
@@ -2537,9 +2534,7 @@ GSteamCurators = {
 			);
 		}
 
-		$CapCtn.append( $ImgCtn );
-
-		$Item.append( $CapCtn );
+		$Item.append( $ImgCtn );
 
 		// show up to 3 curators per app
 		var curatorsCache = GSteamCurators.rgAppsRecommendedByCurators.curators;

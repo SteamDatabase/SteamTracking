@@ -327,7 +327,7 @@
                   switch (I.label) {
                     case 0:
                       (b =
-                        d.i.logged_in &&
+                        d.h.logged_in &&
                         (!this.m_mapQAndASessions.has(e) ||
                           this.m_mapQAndASessions.get(e).bUserCanModerate ||
                           this.m_rgPendingQuestionGIDs.length > 0 ||
@@ -456,7 +456,7 @@
               for (var t, r = new Set(), n = 0, i = e; n < i.length; n++) {
                 var a = i[n],
                   o = this.m_mapQuestions.get(a);
-                o.posterAccountID == d.i.accountid &&
+                o.posterAccountID == d.h.accountid &&
                   1 == o.eState &&
                   r.add(o.gidQuestion);
               }
@@ -484,7 +484,7 @@
                   switch (n.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
+                        !d.h.logged_in ||
                         !d.c.SESSIONID ||
                         !(null === (i = this.m_mapQAndASessions.get(e)) ||
                         void 0 === i
@@ -568,7 +568,7 @@
                   switch (n.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
+                        !d.h.logged_in ||
                         !d.c.SESSIONID ||
                         !(null === (a = this.m_mapQAndASessions.get(e)) ||
                         void 0 === a
@@ -651,7 +651,7 @@
                   switch (n.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
+                        !d.h.logged_in ||
                         !d.c.SESSIONID ||
                         !(null === (a = this.m_mapQAndASessions.get(e)) ||
                         void 0 === a
@@ -732,7 +732,7 @@
                   switch (S.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
+                        !d.h.logged_in ||
                         !d.c.SESSIONID ||
                         !(null === (a = this.m_mapQAndASessions.get(e)) ||
                         void 0 === a
@@ -1668,7 +1668,7 @@
             { className: N.a.LogInPrompt },
             Object(E.f)("#QAndA_LogInPrompt")
           ),
-          !d.i.logged_in &&
+          !d.h.logged_in &&
             a.a.createElement(
               M.d,
               {
@@ -1831,7 +1831,7 @@
                                           ).timestamp = t.rtUpdateTime),
                                           (d.m_mapStoredDrafts.get(
                                             e
-                                          ).author_account_id = h.i.accountid.toString()),
+                                          ).author_account_id = h.h.accountid.toString()),
                                           (d.m_mapLocalUpdates.get(
                                             e
                                           ).strTitle = null),
@@ -4032,12 +4032,12 @@
               e.Get().m_steamInterface = t;
             }),
             (e.prototype.SetUpWebAPIInterface = function () {
-              var e = Object(h.g)("faqstore", "application_config"),
+              var e = Object(h.f)("faqstore", "application_config"),
                 t = null == e ? void 0 : e.webapi_token;
               this.m_steamInterface = new y.a(h.c.WEBAPI_BASE_URL, t);
             }),
             (e.prototype.ReadInitialPayload = function () {
-              var e = Object(h.g)("faqstore", "application_config");
+              var e = Object(h.f)("faqstore", "application_config");
               if (
                 (("dev" != h.c.WEB_UNIVERSE && "beta" != h.c.WEB_UNIVERSE) ||
                   console.log("DEV_DEBUG: CFAQStore loading payload: ", e),
@@ -5102,7 +5102,7 @@
             Object(n.d)(t, e),
             (r = t),
             (t.IsBroadcastAllowed = function () {
-              return g.c.EREALM != C.f.k_ESteamRealmChina;
+              return g.c.EREALM != C.f.k_ESteamRealmChina && !g.c.IN_GAMEPADUI;
             }),
             (t.prototype.componentDidMount = function () {
               return Object(n.b)(this, void 0, void 0, function () {
@@ -8538,6 +8538,11 @@
                       },
                       enable_replay: {
                         n: 11,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
+                      },
+                      is_partner_chat_only: {
+                        n: 12,
                         br: h.d.readBool,
                         bw: h.h.writeBool,
                       },
@@ -13555,35 +13560,60 @@
           );
         })(Be),
         yt = (function (e) {
-          function t(t) {
-            void 0 === t && (t = null);
-            var r = e.call(this) || this;
-            return Be.initialize(r, t, 0, -1, void 0, null), r;
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
+            return (
+              t.prototype.aggregation_delay_ms || h.a(t.M()),
+              Be.initialize(n, r, 0, -1, void 0, null),
+              n
+            );
           }
           return (
             Object(n.d)(t, e),
+            (t.M = function () {
+              return (
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
+                    fields: {
+                      aggregation_delay_ms: {
+                        n: 1,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
+                      },
+                    },
+                  }),
+                t.sm_m
+              );
+            }),
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
+            }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, t) {
-              return e ? { $jspbMessageInstance: t } : {};
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return new t();
+              return h.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
               var r = new _.BinaryReader(e),
                 n = new t();
               return t.deserializeBinaryFromReader(n, r);
             }),
-            (t.deserializeBinaryFromReader = function (e, t) {
-              return e;
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new _.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
+            }),
             (t.prototype.serializeBase64String = function () {
               var e = new _.BinaryWriter();
               return (
@@ -14674,7 +14704,7 @@
                       return (
                         (s = {
                           sessionid: Mt.c.SESSIONID,
-                          origin: Object(Mt.e)(),
+                          origin: Object(Mt.d)(),
                         }),
                         [
                           4,
@@ -14719,7 +14749,7 @@
                       return (
                         (s = {
                           sessionid: Mt.c.SESSIONID,
-                          origin: Object(Mt.e)(),
+                          origin: Object(Mt.d)(),
                         }),
                         [
                           4,
@@ -14793,7 +14823,7 @@
                       return (
                         (i = {
                           sessionid: Mt.c.SESSIONID,
-                          origin: Object(Mt.e)(),
+                          origin: Object(Mt.d)(),
                         }),
                         [
                           4,
@@ -14849,7 +14879,7 @@
                           "&v=" +
                           t +
                           "&origin=" +
-                          Object(Mt.e)()),
+                          Object(Mt.d)()),
                         (n.label = 1);
                     case 1:
                       return n.trys.push([1, 3, , 4]), [4, l.a.get(r)];
@@ -14876,7 +14906,7 @@
                         "&v=" +
                         t +
                         "&origin=" +
-                        Object(Mt.e)()),
+                        Object(Mt.d)()),
                         (n.label = 5);
                     case 5:
                       return n.trys.push([5, 7, , 8]), [4, l.a.get(r)];
@@ -14903,7 +14933,7 @@
                         "&v=" +
                         t +
                         "&origin=" +
-                        Object(Mt.e)()),
+                        Object(Mt.d)()),
                         (n.label = 9);
                     case 9:
                       return n.trys.push([9, 11, , 12]), [4, l.a.get(r)];
@@ -15081,14 +15111,14 @@
               (this.m_rgChatMessages = []),
               (this.m_webAPIInterface = new p.a(
                 Mt.c.WEBAPI_BASE_URL,
-                Mt.i.webapi_token
+                Mt.h.webapi_token
               ));
           }
           return (
             (e.prototype.InitTextFilter = function () {
               this.m_textFilterStore = new Lt();
               var e = 0;
-              "" !== Mt.i.steamid && (e = new b.a(Mt.i.steamid).GetAccountID());
+              "" !== Mt.h.steamid && (e = new b.a(Mt.h.steamid).GetAccountID());
               this.m_textFilterStore.Init(e, null, new f.a());
             }),
             Object.defineProperty(e.prototype, "TextFilterStore", {
@@ -15107,7 +15137,7 @@
             (e.prototype.StartForSteamID = function (e, t) {
               (this.m_webAPIInterface = new p.a(
                 Mt.c.WEBAPI_BASE_URL,
-                Mt.i.webapi_token
+                Mt.h.webapi_token
               )),
                 (this.m_ulBroadcastSteamID = e),
                 (this.m_ulBroadcastID = t),
@@ -15117,10 +15147,10 @@
             (e.prototype.StartForChannel = function (e) {
               (this.m_webAPIInterface = new p.a(
                 Mt.c.WEBAPI_BASE_URL,
-                Mt.i.webapi_token
+                Mt.h.webapi_token
               )),
                 (this.m_ulBroadcastChannelID = e),
-                (this.m_strUserSteamID = Mt.i.steamid),
+                (this.m_strUserSteamID = Mt.h.steamid),
                 this.InitTextFilter(),
                 this.JoinChannelChat();
             }),
@@ -16374,7 +16404,7 @@
                 a = this.m_chat.BIsUserBroadcastModerator(
                   this.m_chat.GetUserSteamID()
                 );
-              ((Mt.i && Mt.i.is_support) || i || a
+              ((Mt.h && Mt.h.is_support) || i || a
                 ? n.push(
                     o.createElement(
                       Yt.d,
@@ -16502,7 +16532,7 @@
                       Object(wt.f)("#BroadcastChat_MuteLocal")
                     )
                   ),
-              (Mt.i && Mt.i.is_support) ||
+              (Mt.h && Mt.h.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
                 t.steamid &&
                 (this.m_chat.BIsUserBroadcastModerator(t.steamid)
@@ -16711,11 +16741,11 @@
         var t = e.oChat,
           r = e.emoticonStore;
         return !e.bPartnerMemberOnlyChat ||
-          ((null === Mt.i || void 0 === Mt.i ? void 0 : Mt.i.logged_in) &&
-            (null === Mt.i || void 0 === Mt.i
+          ((null === Mt.h || void 0 === Mt.h ? void 0 : Mt.h.logged_in) &&
+            (null === Mt.h || void 0 === Mt.h
               ? void 0
-              : Mt.i.is_partner_member))
-          ? (null === Mt.i || void 0 === Mt.i ? void 0 : Mt.i.logged_in)
+              : Mt.h.is_partner_member))
+          ? (null === Mt.h || void 0 === Mt.h ? void 0 : Mt.h.logged_in)
             ? o.createElement(_r, { oChat: t, emoticonStore: r })
             : null
           : o.createElement(yr, null);
@@ -16876,7 +16906,7 @@
             { className: cr.a.LogInPrompt },
             Object(wt.f)("#Broadcast_PartnerChat_Login")
           ),
-          !Mt.i.logged_in &&
+          !Mt.h.logged_in &&
             o.createElement(
               Jt.d,
               { onClick: Zt.a, className: Object(or.a)(cr.a.SignInButton) },
@@ -16919,7 +16949,7 @@
               );
             }),
             (e.prototype.Init = function () {
-              var e = Object(l.g)("conferenceinfo", "application_config");
+              var e = Object(l.f)("conferenceinfo", "application_config");
               if (this.ValidateStoreDefault(e)) {
                 var t = Object(s.d)(l.c.LANGUAGE),
                   r = Object(c.c)(e.clan_faq_about_page),
@@ -17095,7 +17125,7 @@
                           rtCalendarEnd: e,
                         }),
                         (r = Object(D.b)()),
-                        (n = Object(l.g)(
+                        (n = Object(l.f)(
                           "conference_calendar",
                           "application_config"
                         ))
@@ -17321,9 +17351,8 @@
           n.createElement(
             "div",
             { className: Object(w.a)(ee.ReminderContainer, ee.OnlyIcon) },
-            n.createElement(k.a, {
+            n.createElement(k.b, {
               eventModel: o,
-              eventGID: o.GID,
               lang: u,
               bOnlyShowIcon: !0,
               bExpandLeft: !0,

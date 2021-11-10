@@ -705,7 +705,7 @@ a#store_search_link img {
 	color: #fff;
 }
 
-.store_nav .tab.active > span, 
+.store_nav .tab.active > span,
 .store_nav .tab.active:hover > span {
 	color: #fff;
 }
@@ -1139,15 +1139,15 @@ a#store_search_link img {
 
 	background-image: url( '/public/images/v6/events/lunarsale_2020/redenvelope_blank.png?v=1' );
 	background-size: 100% 100%;
-	
+
 	color: rgb(255, 212, 26);
 	background-color: rgb(168, 28, 28);
 	padding: 4px 8px;
 
 	box-shadow: 1px 4px 16px 0 #000000;
 	transform: rotateZ( 20deg );
-	
-	
+
+
 	z-index: 300;
 
 	animation-duration: 1s;
@@ -1190,6 +1190,22 @@ a#store_search_link img {
 .small_cap:hover .additional_cart_discount,
 .home_content_item:hover .discount_block.discount_block_inline.additional_cart_discount_container .additional_cart_discount {
 	animation-name: animatePrice8deg;
+}
+
+.small_cap .discount_block {
+	margin: 0;
+	text-align: right;
+	padding: 5px;
+	line-height: 17px;
+	min-height: 17px;
+	font-size: 12px;
+}
+
+.small_cap .discount_block > .discount_prices {
+	display: inline-block;
+	padding: 0 3px;
+	background-color: rgba(20,31,44,0.4);
+	border-radius: 1px;
 }
 
 .game_area_purchase_game_wrapper:hover .additional_cart_discount {
@@ -1443,7 +1459,7 @@ a#store_search_link img {
 }
 
 .game_purchase_discount.additional_cart_discount_container .basePriceStrikeout {
-	transform: rotateZ(12deg);	
+	transform: rotateZ(12deg);
 }
 
 .game_purchase_discount.additional_cart_discount_container {
@@ -1510,15 +1526,15 @@ a#store_search_link img {
 
 .winterSale2019_savings
 {
-	font-size: 11px;	
+	font-size: 11px;
 	text-align: right;
 	font-weight: 600;
 	padding-top: 4px;
 	color: rgb(256, 256, 256);
-	text-shadow: 2px 2px 5px #000000;	
+	text-shadow: 2px 2px 5px #000000;
 	width: 250px;
 	pointer-events: none;
-	user-select: none;	
+	user-select: none;
 }
 
 .winterSale2019_icon01
@@ -1540,9 +1556,9 @@ a#store_search_link img {
 	height: 5px;
 	position: absolute;
 	border-radius: 50%;
-	
+
 	background: -moz-radial-gradient(rgb(255,255,255) 20%,rgba(255,255,255,0) 70%); /* FF3.6-15 */
-	background: -webkit-radial-gradient(rgb(255,255,255) 20%,rgba(255,255,255,0) 70%); /* Chrome10-25,Safari5.1-6 */	
+	background: -webkit-radial-gradient(rgb(255,255,255) 20%,rgba(255,255,255,0) 70%); /* Chrome10-25,Safari5.1-6 */
 	background: radial-gradient(rgb(255,255,255) 20%,rgba(255,255,255,0) 70%)
 	pointer-events: none;
 	user-select: none;
@@ -1632,7 +1648,7 @@ a#store_search_link img {
 
 .summerSale2019_savings
 {
-	font-size: 10px;	
+	font-size: 10px;
 	text-align: right;
 	padding-right: 25px;
 	font-family: politica-expanded, sans-serif;
@@ -1643,7 +1659,7 @@ a#store_search_link img {
 	color: rgb(24, 28, 36);
 	width: 250px;
 	pointer-events: none;
-	user-select: none;	
+	user-select: none;
 }
 
 .summerSale2019_icon01
@@ -1665,9 +1681,9 @@ a#store_search_link img {
 	height: 5px;
 	position: absolute;
 	border-radius: 50%;
-	
+
 	background: -moz-radial-gradient(rgb(255,80,0) 20%,rgba(255,80,0,0) 70%); /* FF3.6-15 */
-	background: -webkit-radial-gradient(rgb(255,80,0) 20%,rgba(255,80,0,0) 70%); /* Chrome10-25,Safari5.1-6 */	
+	background: -webkit-radial-gradient(rgb(255,80,0) 20%,rgba(255,80,0,0) 70%); /* Chrome10-25,Safari5.1-6 */
 	background: radial-gradient(rgb(255,80,0) 20%,rgba(255,80,0,0) 70%)
 	pointer-events: none;
 	user-select: none;
@@ -1716,7 +1732,7 @@ a#store_search_link img {
 	position: sticky;
 	top: 0;
 
-	
+
 
 	background: rgb(148,24,24); /* Old browsers */
 	background: -moz-linear-gradient(left, rgb(100, 13, 12) 0%, rgb(208,5,1) 45%, rgb(208,5,1) 55%, rgb(100, 13, 12) 100%); /* FF3.6-15 */
@@ -1858,7 +1874,7 @@ a#store_search_link img {
 	}
 
 	100%
-	{   
+	{
 		color: #DC9B1D);
 		text-shadow: 0px 0px 4px #FFD33B00, 0px 0px 8px rgba(255, 200, 0, .5);
 	}
@@ -1883,7 +1899,7 @@ a#store_search_link img {
 	width: 64px;
 	height: 64px;
 	position: absolute;
-	
+
 	background-image: url( '/public/images/v6/events/lunarsale_2020/poink_sparkle_01.png?v=1' );
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -2079,7 +2095,7 @@ a#store_search_link img {
 }
 
 .cart_promo_banner_content .header {
-	font-family: "Yellowtail", sans-serif;	
+	font-family: "Yellowtail", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 34px;
@@ -2139,7 +2155,7 @@ a#store_search_link img {
 
 .cart_item_cart_discount_header
 {
-	font-family: "Yellowtail", sans-serif;	
+	font-family: "Yellowtail", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 24px;
@@ -4156,6 +4172,65 @@ a.cluster_capsule:hover {
 	}
 }
 
+/* global inline */
+.steam_deck_compat {
+	display: none;
+	pointer-events: none;
+	width: 40px;
+	height: 20px;
+	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat;
+	background-size: 20px 20px;
+}
+.steam_deck_compat.verified {
+	display: inline-block;
+	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat, url('/public/images/ico/ico-deck-verified.svg') right no-repeat;
+}
+.steam_deck_compat.playable {
+	display: inline-block;
+	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat, url('/public/images/ico/ico-deck-playable.svg') right no-repeat;
+}
+.steam_deck_compat.unsupported {
+	display: inline-block;
+	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat, url('/public/images/ico/ico-deck-unsupported.svg') right no-repeat;
+}
+.steam_deck_compat.unknown {
+	display: inline-block;
+	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat, url('/public/images/ico/ico-deck-unknown.svg') right no-repeat;
+}
+
+/* for dynamic store items */
+.ds_steam_deck_compat {
+	display: block;
+	position: absolute;
+	pointer-events: none;
+	bottom: 5px;
+	left: 5px;
+	z-index: 15;
+	width: 44px;
+	height: 24px;
+	/* background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat; */
+	/* background-size: 20px 20px; */
+	backdrop-filter: blur(24px);
+	border-radius: 24px;
+}
+.ds_steam_deck_compat.verified {
+	background: url('/public/images//ico/ico-deck-logo.svg') 3px no-repeat, url('/public/images/ico/ico-deck-verified.svg') 22px no-repeat;
+	background-color: var(--gpBackground-DarkMedium);
+}
+.ds_steam_deck_compat.playable {
+	background: url('/public/images//ico/ico-deck-logo.svg') 3px no-repeat, url('/public/images/ico/ico-deck-playable.svg') 22px no-repeat;
+	background-color: var(--gpBackground-DarkMedium);
+}
+.ds_steam_deck_compat.unsupported {
+	background: url('/public/images//ico/ico-deck-logo.svg') 3px no-repeat, url('/public/images/ico/ico-deck-unsupported.svg') 22px no-repeat;
+	background-color: var(--gpBackground-DarkMedium);
+}
+.ds_steam_deck_compat.unknown {
+	background: url('/public/images//ico/ico-deck-logo.svg') 3px no-repeat, url('/public/images/ico/ico-deck-unknown.svg') 22px no-repeat;
+	background-color: var(--gpBackground-DarkMedium);
+}
+
+
 /* ds_options defines the per-app preferences dropdown */
 .ds_options {
 	display: block;
@@ -4442,7 +4517,7 @@ div.store_header_btn {
 store_nav .tab:hover a.pulldown_desktop,
 .store_nav .tab.focus a.pulldown_desktop {
 	color: #fff;
-	transition-property: color; 
+	transition-property: color;
 	transition-duration: 0.15s;
 	transition-timing-function: ease-in-out;
 }
@@ -4738,7 +4813,7 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader .popup_menu_item {
 	transition-timing-function: ease-in-out;
 }
 
-body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader { 
+body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader {
     margin-top: 8px;
     margin-left: 3px;
 	margin-bottom: 8px;
@@ -4776,7 +4851,7 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader.players {
 .popup_menu_twocol_new {
 	display: flex;
 	flex-direction: row;
-} 
+}
 
 
 #noteworthy_tab.tab.flyout_tab a.pulldown_desktop,
@@ -4802,7 +4877,7 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader.players {
 	margin-left: 5px;
 	border-left: 1px solid #333333;
 	padding-left: 5px;
-}	
+}
 
 .popup_menu_twocol > .popup_menu_browse
 {
@@ -4832,7 +4907,7 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader.players {
 	color: #d9d9d9;
 }
 
-.store_nav #genre_flyout .popup_menu .popup_menu_item.beta_feedback:hover span, 
+.store_nav #genre_flyout .popup_menu .popup_menu_item.beta_feedback:hover span,
 .store_nav #genre_flyout .popup_menu .popup_menu_item.beta_feedback:hover  {
 
 	color: #ffffff;
@@ -4883,7 +4958,7 @@ body.v6 .store_nav #genre_flyout .popup_menu_item.popup_genre_expand_header:hove
 	{
 		margin-bottom: 0;
 	}
-	
+
 	.popup_genre_expand_header,
 	.popup_genre_expand_content
 	{

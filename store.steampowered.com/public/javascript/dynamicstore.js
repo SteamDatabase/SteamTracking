@@ -599,6 +599,32 @@ GDynamicStore = {
 			var unBundleID = $El.data('dsBundleid');
 			var unPackageID = $El.data('dsPackageid');
 			var strAppIDs = $El.data('dsAppid');
+			var eSteamDeckCompatCategory = $El.data('dsSteamDeckCompatCategory');
+
+			if ( eSteamDeckCompatCategory !== undefined && !$El.data( 'dsSteamDeckCompatHandled' ) )
+			{
+				$El.data('dsSteamDeckCompatHandled', true);
+
+				var strClasses = 'ds_steam_deck_compat ';
+				switch( eSteamDeckCompatCategory )
+				{
+					case 3:
+						strClasses += 'verified';
+						break;
+					case 2:
+						strClasses += 'playable';
+						break;
+					case 1:
+						strClasses += 'unsupported';
+						break;
+					case 0:
+					default:
+						strClasses += 'unknown';
+						break;
+				}
+				var elSteamDeckCompatCategory = $J( '<div/>', { class: strClasses } );
+				$El.append( elSteamDeckCompatCategory );
+			}
 
 			if ( unBundleID )
 			{
@@ -1710,11 +1736,15 @@ GStoreItemData = {
 			unAppID = rgItemData['appids'][0];
 		}
 
+		if ( rgItemData['steam_deck_compat_category'] !== undefined )
+		{
+			params['data-ds-steam-deck-compat-category'] = rgItemData['steam_deck_compat_category'];
+		}
+
 		if ( unAppID )
 		{
 			params['data-ds-appid'] = unAppID;
 			params[ 'href' ] = GStoreItemData.GetAppURL( unAppID, strFeatureContext, nDepth, params['curator_clanid'] );
-
 		}
 		else if ( unPackageID )
 		{

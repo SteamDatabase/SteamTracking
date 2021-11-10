@@ -30,6 +30,7 @@
 	--gpColor-RedHi: #EE563B;
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -82,6 +83,7 @@
 		font-weight: 400;
 		color: var(--gpStoreLightestGrey);
 		margin-top: -6px;
+		margin-bottom: 12px;
 	}
 
 	/* Remove all text shadows */
@@ -227,10 +229,16 @@
 		box-shadow: var(--gpShadow-Medium);
 	}
 
-	
+	html.responsive .quadscreenshot_carousel .ds_steam_deck_compat {
+		bottom: unset;
+		top: 202px;
+		background-color: var(--gpStoreDarkestGrey);
+		border-radius: 10px;
+	}
 
 
-	/* RECOMMENDED NEW RELEASES */
+
+		/* RECOMMENDED NEW RELEASES */
 
 	/* Space between carousels */
 	html.responsive .recommended_creators_ctn {
@@ -355,6 +363,10 @@
 		margin-right: unset;
 	}
 
+	html.responsive .tab_item .ds_steam_deck_compat {
+		bottom: unset;
+		top: 102px;
+	}
 
 
 
@@ -413,6 +425,9 @@
 		overflow: visible;
 	}
 
+	html.responsive .live_streams_ctn .broadcast_capsule .ds_steam_deck_compat {
+		bottom: 40px;
+	}
 
 
 

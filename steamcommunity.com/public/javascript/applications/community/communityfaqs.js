@@ -1124,7 +1124,7 @@
               );
         });
       function M(e, t) {
-        var a = Object(f.g)(e, t);
+        var a = Object(f.f)(e, t);
         return a || (a = Object(k.f)("#Sale_Tabs_UnnamedTab", e.unique_id)), a;
       }
       var P = Object(r.a)(function (e) {
@@ -3843,7 +3843,7 @@
                 r = a.bInvalidID,
                 u = Object(p.f)("#AppType_" + e.type);
               return n.createElement(
-                s.k,
+                s.j,
                 { className: l.a.FlexCenter, url: i },
                 o
                   ? n.createElement("img", {
@@ -15453,7 +15453,7 @@
                                           ).timestamp = t.rtUpdateTime),
                                           (d.m_mapStoredDrafts.get(
                                             e
-                                          ).author_account_id = y.i.accountid.toString()),
+                                          ).author_account_id = y.h.accountid.toString()),
                                           (d.m_mapLocalUpdates.get(
                                             e
                                           ).strTitle = null),
@@ -17654,12 +17654,12 @@
               e.Get().m_steamInterface = t;
             }),
             (e.prototype.SetUpWebAPIInterface = function () {
-              var e = Object(y.g)("faqstore", "application_config"),
+              var e = Object(y.f)("faqstore", "application_config"),
                 t = null == e ? void 0 : e.webapi_token;
               this.m_steamInterface = new w.a(y.c.WEBAPI_BASE_URL, t);
             }),
             (e.prototype.ReadInitialPayload = function () {
-              var e = Object(y.g)("faqstore", "application_config");
+              var e = Object(y.f)("faqstore", "application_config");
               if (
                 (("dev" != y.c.WEB_UNIVERSE && "beta" != y.c.WEB_UNIVERSE) ||
                   console.log("DEV_DEBUG: CFAQStore loading payload: ", e),
@@ -24817,7 +24817,7 @@
                           ? void 0
                           : i.success)
                           ? ((p = {
-                              nAccountLastUpdate: h.i.accountid,
+                              nAccountLastUpdate: h.h.accountid,
                               rtLastUpdateTime: Math.floor(Date.now() / 1e3),
                               jsonData: a,
                             }),
@@ -24864,7 +24864,7 @@
             }),
             (e.prototype.Init = function () {
               var e = this,
-                t = Object(h.g)("privatedata", "application_config");
+                t = Object(h.f)("privatedata", "application_config");
               this.ValidateStoreDefault(t) &&
                 t.forEach(function (t) {
                   var a = {
@@ -26543,7 +26543,7 @@
                   );
               }
               var l = new Array();
-              if (z.i.is_support)
+              if (z.h.is_support)
                 for (var n in p.c) {
                   r = p.c[n];
                   l.push(
@@ -26639,7 +26639,7 @@
                   null,
                   Object(g.f)("#EventEditor_SaleEventSchedule_Desc")
                 ),
-                Boolean(z.i.is_support) &&
+                Boolean(z.h.is_support) &&
                   d.createElement(
                     "div",
                     {
@@ -26650,7 +26650,7 @@
                     },
                     l
                   ),
-                Boolean(z.i.is_support && c) &&
+                Boolean(z.h.is_support && c) &&
                   d.createElement(
                     "div",
                     {
@@ -28653,7 +28653,7 @@
       function it(e, t) {
         return e.disable_background
           ? { background: "transparent" }
-          : Object(Te.f)(e, t);
+          : Object(Te.e)(e, t);
       }
       function nt(e, t) {
         for (var a = 0, o = e.GetSaleSections(); a < o.length; a++) {
@@ -28692,7 +28692,7 @@
                 onChange: function (e) {
                   e ? i.add(a.unique_id) : i.delete(a.unique_id);
                 },
-                label: Object(Te.g)(a, e.GetCurEditLanguage()) + s,
+                label: Object(Te.f)(a, e.GetCurEditLanguage()) + s,
                 checked: i.has(a.unique_id),
               });
             });
@@ -28735,7 +28735,7 @@
                           return e.unique_id === t;
                         })
                       : null;
-                    a && i.push(Object(Te.g)(a, o));
+                    a && i.push(Object(Te.f)(a, o));
                   },
                   s = 0,
                   r = a.show_on_tabs;
@@ -28824,7 +28824,7 @@
           );
         });
       function pt(e, t, a, o, i) {
-        var n = Object(Te.e)(e, t, a.GetClanSteamID().GetAccountID(), i);
+        var n = Object(Te.d)(e, t, a.GetClanSteamID().GetAccountID(), i);
         if (n) return n;
         var s = Object(g.f)("#Sale_Section_Header", o + 1),
           r = "#Sale_Section_Type_" + e.section_type,
@@ -29068,7 +29068,7 @@
               l = r.sale_font,
               p = r.sale_section_font_size,
               c = r.sale_section_disable_capitalize,
-              h = Object(Te.d)(i),
+              h = Object(Te.c)(i),
               m = this.props.saleSection.section_type || s[0].data,
               f = Boolean(g.a.GetWithFallback(i.localized_label, n)),
               y =
@@ -29396,7 +29396,7 @@
                                 return t.unique_id == e;
                               });
                               a += o
-                                ? Object(Te.g)(o, Object(N.h)(z.c.LANGUAGE))
+                                ? Object(Te.f)(o, Object(N.h)(z.c.LANGUAGE))
                                 : Object(g.f)("#EventCalendar_MuteApp_Unknown");
                             })
                           : (a = Object(g.f)("#Sale_Section_ShowOnTabs_All")),
@@ -29582,7 +29582,7 @@
                       });
                     var o = Object(je.c)(t.url, z.c.STORE_BASE_URL);
                     return d.createElement(
-                      Te.k,
+                      Te.j,
                       {
                         className: Object(F.a)(Y.a.FlexCenter, X.UploadLinkRow),
                         url: t.url,
@@ -35364,7 +35364,7 @@
         x = a("TLQK"),
         I = a("lkRc");
       function C(e) {
-        return "U" + (I.i.accountid || "anon") + "-" + e;
+        return "U" + (I.h.accountid || "anon") + "-" + e;
       }
       function T(e, t) {
         window.sessionStorage.setItem(C(e), JSON.stringify(t));
@@ -35766,7 +35766,7 @@
                         "sessionid",
                         I.c.SESSIONID
                       ),
-                      d.append("authwgtoken", I.i.authwgtoken),
+                      d.append("authwgtoken", I.h.authwgtoken),
                       a && d.append("fake_error", "" + a),
                       this.m_editModel
                         .GetEventModel()
@@ -35966,7 +35966,7 @@
                         : this.m_editModel.MarkUpdateSuccessful(
                             Math.floor(Date.now() / 1e3),
                             f.a
-                              .InitFromAccountID(I.i.accountid)
+                              .InitFromAccountID(I.h.accountid)
                               .ConvertTo64BitString()
                           ),
                       [2, T.data]
@@ -36208,7 +36208,7 @@
                         I.c.STORE_BASE_URL + "events/ajaxrequestlocalization"),
                       (s = new URLSearchParams()).append(
                         "authwgtoken",
-                        I.i.authwgtoken
+                        I.h.authwgtoken
                       ),
                       s.append("clanid", "" + e.GetAccountID()),
                       s.append("gidevent", t),
@@ -36282,7 +36282,7 @@
                         "events_admin/ajaxupdatepartneremailtarget"),
                       (r = new URLSearchParams()).append(
                         "authwgtoken",
-                        I.i.authwgtoken
+                        I.h.authwgtoken
                       ),
                       r.append("sessionid", I.c.SESSIONID),
                       r.append("clan_accountid", "" + t.GetAccountID()),
@@ -36324,7 +36324,7 @@
                         "events_admin/ajaxgetcapabilities"),
                       (a = new URLSearchParams()).append(
                         "authwgtoken",
-                        I.i.authwgtoken
+                        I.h.authwgtoken
                       ),
                       a.append("sessionid", I.c.SESSIONID),
                       [
@@ -36347,7 +36347,7 @@
               this.m_bLoadedOrInflightSteamAwardVoteDefinitions = !0;
               var a = I.c.STORE_BASE_URL + "steamawards/ajaxgetpartnervotedefs",
                 o = new URLSearchParams();
-              o.append("authwgtoken", I.i.authwgtoken),
+              o.append("authwgtoken", I.h.authwgtoken),
                 o.append("sessionid", I.c.SESSIONID),
                 o.append("appid", e.toString()),
                 n.a.post(a, o, { withCredentials: !0 }).then(

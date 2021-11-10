@@ -44,6 +44,21 @@
 			color: white;
 }
 
+div.hws_flex {
+	display: flex;
+	align-items: center;
+}
+
+div.hws_flex span {
+	margin-left: 5px;
+}
+
+img.hws_vendor {
+	border:0;
+	width:16px;
+	height:16px;
+}
+
 p.blurb {
 	width:585px;
 	font-size:14px;
@@ -187,6 +202,7 @@ p.blurb2 {
 }
 
 .stats_row,.stats_row_on {
+	height:18px;
 	clear:left;
 	padding:4px 0px 4px 0px;
 	color:#9099a1;
@@ -434,6 +450,7 @@ a.backLink:hover {
     clear: both; 
     visibility: hidden;
 }
+
 
 /* Hide from IE-mac \*/
 * html .clearfix {height: 1%;}

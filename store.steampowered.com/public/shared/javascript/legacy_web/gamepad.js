@@ -7,7 +7,7 @@
       "use strict";
       n.r(t),
         n.d(t, "InitializeGamepadNavigation", function () {
-          return Se;
+          return Oe;
         });
       var i,
         o,
@@ -39,9 +39,9 @@
         );
       }
       function h(e, t) {
-        return l(e, "vgp_ondirection", d(t));
+        return l(e, "vgp_ondirection", p(t));
       }
-      function p(e, t, n) {
+      function d(e, t, n) {
         if (null !== e) {
           var i = new e.ownerDocument.defaultView.CustomEvent(t, {
             bubbles: !0,
@@ -51,7 +51,7 @@
           e.dispatchEvent(i);
         }
       }
-      function d(e) {
+      function p(e) {
         return function (t) {
           !1 !== e(t) && t.stopPropagation();
         };
@@ -69,7 +69,7 @@
               l(
                 window,
                 "vgp_oncancel",
-                d(function () {
+                p(function () {
                   return t.PostButtonPressToSteam(u.a.CANCEL);
                 })
               ),
@@ -118,8 +118,8 @@
             e
           );
         })(),
-        v = n("Kw0F"),
-        g = n("r64O");
+        g = n("Kw0F"),
+        v = n("r64O");
       function f(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -180,7 +180,7 @@
                 i = t.iActiveChild,
                 o = t.rgChildren;
               if (
-                (n && Object(g.a)(n == e.NavKey, "navkey mismatch"),
+                (n && Object(v.a)(n == e.NavKey, "navkey mismatch"),
                 e.SetActiveChild(i),
                 o && o.length)
               ) {
@@ -200,11 +200,11 @@
                   var h = a.get(o[i].sNavKey);
                   h && e.SetActiveChild(r.indexOf(h));
                 }
-                for (var p = 0, d = 0; p < r.length && d < o.length; ) {
-                  for (; p < r.length && r[p].NavKey; ) p++;
-                  for (; d < o.length && o[d].sNavKey; ) d++;
-                  if (p >= r.length || d >= o.length) break;
-                  this.RestoreSerializedNavNode(r[p], o[d]), p++, d++;
+                for (var d = 0, p = 0; d < r.length && p < o.length; ) {
+                  for (; d < r.length && r[d].NavKey; ) d++;
+                  for (; p < o.length && o[p].sNavKey; ) p++;
+                  if (d >= r.length || p >= o.length) break;
+                  this.RestoreSerializedNavNode(r[d], o[p]), d++, p++;
                 }
               }
             }),
@@ -561,12 +561,12 @@
             e
           );
         })();
-      function A(e) {
+      function I(e) {
         for (var t = 0, n = 0; n < e.length; n++)
           t = e.charCodeAt(n) + ((t << 5) - t);
         return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
       }
-      function I(e) {
+      function A(e) {
         return (299 * e[0] + 587 * e[1] + 114 * e[2]) / 1e3 >= 128;
       }
       function D(e) {
@@ -584,14 +584,14 @@
       function L(e, t, n, i) {
         for (var o = [], a = 4; a < arguments.length; a++)
           o[a - 4] = arguments[a];
-        var s = A(i),
+        var s = I(i),
           u = s.map(function (e, t) {
             return Math.max(
               0,
               Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15))
             );
           }),
-          c = I(u),
+          c = A(u),
           l = n;
         t && (l = D(e) + " " + l);
         var h = Object(r.g)(
@@ -627,7 +627,7 @@
         B,
         P,
         w,
-        G = new O("FocusNavigationMovement").Debug;
+        M = new O("FocusNavigationMovement").Debug;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -656,7 +656,7 @@
             (e[(e.FORWARD = 1)] = "FORWARD"),
             (e[(e.BACKWARD = 2)] = "BACKWARD");
         })(w || (w = {}));
-      var M = (function () {
+      var G = (function () {
         function e(e, t, n) {
           (this.m_rgChildren = []),
             (this.m_iActiveChild = -1),
@@ -802,7 +802,7 @@
               ((this.m_element = e),
               this.m_Parent
                 ? this.m_Parent.AddChild(this)
-                : Object(g.a)(
+                : Object(v.a)(
                     this == this.m_Tree.Root,
                     "Only root should have no parent"
                   ),
@@ -827,7 +827,7 @@
               this.UnregisterDOMEvents(),
               this.m_Parent
                 ? this.m_Parent.RemoveChild(this)
-                : Object(g.a)(
+                : Object(v.a)(
                     this == this.m_Tree.Root,
                     "Only root should have no parent"
                   );
@@ -859,7 +859,7 @@
           }),
           (e.prototype.RemoveChild = function (e) {
             var t = this.m_rgChildren.indexOf(e);
-            Object(g.a)(-1 !== t, "Child was not found to remove"),
+            Object(v.a)(-1 !== t, "Child was not found to remove"),
               -1 !== t &&
                 (t <= this.m_iActiveChild && this.m_iActiveChild--,
                 this.m_rgChildren.splice(t, 1));
@@ -976,34 +976,34 @@
                 (h != F.ROW_REVERSE && h != F.COLUMN_REVERSE) ||
                   (l = this.m_rgChildren.length - 1);
               }
-              var p = this.m_Properties.navEntryPreferPosition;
+              var d = this.m_Properties.navEntryPreferPosition;
               if (
-                (p == B.MAINTAIN_X && "y" == n) ||
-                (p == B.MAINTAIN_Y && "x" == n)
+                (d == B.MAINTAIN_X && "y" == n) ||
+                (d == B.MAINTAIN_Y && "x" == n)
               ) {
-                var d = b[n],
-                  m = this.m_Tree.GetLastFocusedMovementNode(d);
-                G(
-                  "Taking focus while preserving " + B[p] + ", node:",
+                var p = b[n],
+                  m = this.m_Tree.GetLastFocusedMovementNode(p);
+                M(
+                  "Taking focus while preserving " + B[d] + ", node:",
                   null == m ? void 0 : m.m_element
                 );
                 var _ = this.ComputeRelativeDirection(t, F.GRID);
                 if (m) {
-                  var v = X(m.GetBoundingRect()),
-                    g = _ == w.BACKWARD ? this.m_rgChildren.length - 1 : 0;
+                  var g = X(m.GetBoundingRect()),
+                    v = _ == w.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                   if (
                     this.BFocusClosestChildInNextAxiallyAlignedSet(
-                      d,
+                      p,
                       _,
                       t,
-                      v,
                       g,
-                      this.m_rgChildren[g].GetBoundingRect()
+                      v,
+                      this.m_rgChildren[v].GetBoundingRect()
                     )
                   )
                     return !0;
                 }
-              } else if (p == B.PREFERRED_CHILD)
+              } else if (d == B.PREFERRED_CHILD)
                 for (var f = 0, C = this.m_rgChildren; f < C.length; f++) {
                   var y = C[f];
                   if (y.BWantsPreferredFocus() && y.BTakeFocus(o.GAMEPAD, t))
@@ -1052,7 +1052,7 @@
             var t = this.GetLayout(),
               n = this.ComputeRelativeDirection(e, t);
             if (
-              (G(
+              (M(
                 "Handling navigation event " +
                   u.a[e] +
                   " - " +
@@ -1065,7 +1065,7 @@
             )
               return !1;
             if (this.m_Properties.focusable && this.m_bFocused)
-              return G("Skipping navigation within focused element"), !1;
+              return M("Skipping navigation within focused element"), !1;
             if ((this.EnsureChildrenSorted(!0), t == F.GRID))
               return this.BPerformGridNavigation(this.m_iActiveChild, n, e);
             var i = this.m_iActiveChild;
@@ -1176,15 +1176,15 @@
               return !V("y", a, e.GetBoundingRect());
             });
             if (-1 == h) return !1;
-            var p = this.m_rgChildren[h].GetBoundingRect(),
-              d = X(a);
+            var d = this.m_rgChildren[h].GetBoundingRect(),
+              p = X(a);
             return !!this.BFocusClosestChildInNextAxiallyAlignedSet(
               "x",
               t,
               n,
-              d,
+              p,
               h,
-              p
+              d
             );
           }),
           (e.prototype.BFocusClosestChildInNextAxiallyAlignedSet = function (
@@ -1280,15 +1280,15 @@
             h = h.parentElement
           )
             if (y(h, e)) {
-              var p = C(h),
-                d = h.getBoundingClientRect(),
+              var d = C(h),
+                p = h.getBoundingClientRect(),
                 m =
                   "x" === e
-                    ? { min: d.left * p, max: d.right * p }
-                    : { min: d.top * p, max: d.bottom * p };
+                    ? { min: p.left * d, max: p.right * d }
+                    : { min: p.top * d, max: p.bottom * d };
               if (!(i === P.LAZY && m.min <= c && m.max >= l)) {
                 var _ = { min: c - m.min, max: l - m.max },
-                  v =
+                  g =
                     i === P.START
                       ? 0
                       : i === P.CENTER
@@ -1298,8 +1298,8 @@
                       : Math.abs(_.min) <= Math.abs(_.max)
                       ? 0
                       : 1,
-                  g = ((1 - v) * _.min + v * _.max) / p;
-                "x" === e ? (h.scrollLeft += g) : (h.scrollTop += g);
+                  v = ((1 - g) * _.min + g * _.max) / d;
+                "x" === e ? (h.scrollLeft += v) : (h.scrollTop += v);
               }
             }
       }
@@ -1413,7 +1413,7 @@
                     " at ",
                   r
                 ),
-                  p(r, "vgp_onbuttondown", {
+                  d(r, "vgp_onbuttondown", {
                     button: e,
                     source: t,
                     is_repeat: i,
@@ -1423,7 +1423,7 @@
             (e.prototype.OnButtonUp = function (e, t, n) {
               this.m_bSuppressGamepadInput ||
                 (this.ChangeNavigationSource(t, n),
-                p(this.GetEventTarget(), "vgp_onbuttonup", {
+                d(this.GetEventTarget(), "vgp_onbuttonup", {
                   button: e,
                   source: t,
                   is_repeat: !1,
@@ -1495,7 +1495,7 @@
               );
             }),
             (e.prototype.UnregisterGamepadNavigationTree = function (e) {
-              v.a(this.m_rgGamepadNavigationTrees, e),
+              g.a(this.m_rgGamepadNavigationTrees, e),
                 this.m_LastActiveNavTree == e &&
                   ((this.m_LastActiveNavTree = null),
                   this.SetActiveNavTree(null, !0));
@@ -1513,7 +1513,7 @@
             }),
             (e.prototype.BlurNavTree = function (e) {
               this.m_LastActiveNavTree == e && this.SetActiveNavTree(null, !0),
-                v.a(this.m_rgGamepadNavigationTrees, e),
+                g.a(this.m_rgGamepadNavigationTrees, e),
                 this.m_rgGamepadNavigationTrees.unshift(e);
             }),
             (e.prototype.IsActiveFocusNavTree = function (e) {
@@ -1525,14 +1525,14 @@
               ) {
                 var n = this.m_LastActiveNavTree;
                 n &&
-                  (n.OnDeactivate(), v.a(this.m_rgGamepadNavigationTrees, n)),
+                  (n.OnDeactivate(), g.a(this.m_rgGamepadNavigationTrees, n)),
                   e ||
                     (this.m_rgGamepadNavigationTrees.length &&
                       (e = this.m_rgGamepadNavigationTrees[
                         this.m_rgGamepadNavigationTrees.length - 1
                       ]));
                 var i = this.m_LastActiveFocusNavTree == e;
-                e && v.a(this.m_rgGamepadNavigationTrees, e),
+                e && g.a(this.m_rgGamepadNavigationTrees, e),
                   (this.m_LastActiveNavTree = e),
                   (e && e.BUseVirtualFocus()) ||
                     (this.m_LastActiveFocusNavTree = e),
@@ -1573,7 +1573,7 @@
             (e.prototype.OnFocusChangeComplete = function (e) {
               if (
                 (this.m_iFocusChangeStack--,
-                Object(g.a)(
+                Object(v.a)(
                   e == this.m_iFocusChangeStack,
                   "out of order focus pop"
                 ),
@@ -1652,7 +1652,7 @@
           ? t.x + t.width > n.x && t.x < n.x + n.width
           : "y" == e
           ? t.y + t.height > n.y && t.y < n.y + n.height
-          : (Object(g.a)(!1, "Invalid axis " + e), !1);
+          : (Object(v.a)(!1, "Invalid axis " + e), !1);
       }
       function Y(e, t, n) {
         var i = t[e],
@@ -1661,7 +1661,7 @@
               ? { min: t.x, max: t.x + t.width }
               : "y" == e
               ? { min: t.y, max: t.y + t.height }
-              : void Object(g.a)(!1, "Invalid axis " + e);
+              : void Object(v.a)(!1, "Invalid axis " + e);
           })(e, n);
         return i < o.min ? o.min - i : i > o.max ? i - o.max : 0;
       }
@@ -1674,7 +1674,7 @@
             (this.m_onDeactivateCallbacks = new E.a()),
             (this.m_Controller = e),
             (this.m_ID = t),
-            (this.m_Root = new M(this, null, null)),
+            (this.m_Root = new G(this, null, null)),
             this.m_Root.SetProperties({ layout: F.COLUMN }),
             (window.GamepadNavTree = this);
         }
@@ -1707,7 +1707,7 @@
             return this.m_bVirtualFocus;
           }),
           (e.prototype.CreateNode = function (e, t) {
-            return new M(this, e, t);
+            return new G(this, e, t);
           }),
           (e.prototype.RegisterNavigationItem = function (e, t) {
             return (
@@ -1812,13 +1812,13 @@
                       }
                     })(t, i)),
                 i &&
-                  (p(i.Element, "vgp_onblur", r),
+                  (d(i.Element, "vgp_onblur", r),
                   !i.m_FocusRing ||
                     (t && i.m_FocusRing == t.m_FocusRing) ||
                     i.m_FocusRing.OnBlur(e, i, t)),
                 t &&
                   (this.OnChildActivated(e),
-                  p(t.Element, "vgp_onfocus", r),
+                  d(t.Element, "vgp_onfocus", r),
                   t.m_FocusRing &&
                     (i && t.m_FocusRing == i.m_FocusRing
                       ? t.m_FocusRing.OnFocusChange(e, i, t)
@@ -1892,7 +1892,7 @@
             Q(e) && e.message;
           }),
           (e.prototype.SendMessage = function (e) {
-            Object(g.a)(
+            Object(v.a)(
               window.parent && window.parent != window,
               "No parent window to post to"
             );
@@ -1911,7 +1911,7 @@
           e
         );
       })();
-      var $, ee, te;
+      var $, ee, te, ne;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -1947,8 +1947,18 @@
               "k_ESuspendResumeProgressState_LoggingIn"),
             (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
               "k_ESuspendResumeProgressState_WaitingForApp");
-        })(te || (te = {}));
-      var ne;
+        })(te || (te = {})),
+        (function (e) {
+          (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
+            "k_EFloatingGamepadTextInputModeModeSingleLine"),
+            (e[(e.k_EFloatingGamepadTextInputModeModeMultipleLines = 1)] =
+              "k_EFloatingGamepadTextInputModeModeMultipleLines"),
+            (e[(e.k_EFloatingGamepadTextInputModeModeEmail = 2)] =
+              "k_EFloatingGamepadTextInputModeModeEmail"),
+            (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
+              "k_EFloatingGamepadTextInputModeModeNumeric");
+        })(ne || (ne = {}));
+      var ie;
       !(function (e) {
         (e[(e.k_EControllerBindingType_None = 0)] =
           "k_EControllerBindingType_None"),
@@ -1966,11 +1976,11 @@
             "k_EControllerBindingType_GameAction"),
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
-      })(ne || (ne = {}));
-      var ie, oe;
+      })(ie || (ie = {}));
+      var oe, re;
       !(function (e) {
         (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-      })(ie || (ie = {})),
+      })(oe || (oe = {})),
         (function (e) {
           (e[(e.Input = 0)] = "Input"),
             (e[(e.AllOutput = 1)] = "AllOutput"),
@@ -1979,8 +1989,8 @@
             (e[(e.Sub = 4)] = "Sub"),
             (e[(e.BackLeft = 5)] = "BackLeft"),
             (e[(e.BackRight = 6)] = "BackRight");
-        })(oe || (oe = {}));
-      var re;
+        })(re || (re = {}));
+      var ae;
       !(function (e) {
         (e[(e.Error = -2)] = "Error"),
           (e[(e.Invalid = -1)] = "Invalid"),
@@ -1993,8 +2003,8 @@
           (e[(e.Applied = 6)] = "Applied"),
           (e[(e.ClientRestartPending = 7)] = "ClientRestartPending"),
           (e[(e.SystemRestartPending = 8)] = "SystemRestartPending");
-      })(re || (re = {}));
-      var ae;
+      })(ae || (ae = {}));
+      var se;
       !(function (e) {
         (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
           (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -2019,8 +2029,8 @@
           (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
             "EBrowserType_Offscreen_FriendsUI"),
           (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-      })(ae || (ae = {}));
-      var se, ue;
+      })(se || (se = {}));
+      var ue, ce;
       !(function (e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
@@ -2028,7 +2038,7 @@
             "k_EClientUINotificationFriendChatMessage"),
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
-      })(se || (se = {})),
+      })(ue || (ue = {})),
         (function (e) {
           (e[(e.k_EComputerActiveStateInvalid = 0)] =
             "k_EComputerActiveStateInvalid"),
@@ -2036,14 +2046,14 @@
               "k_EComputerActiveStateActive"),
             (e[(e.k_EComputerActiveStateIdle = 2)] =
               "k_EComputerActiveStateIdle");
-        })(ue || (ue = {}));
-      var ce;
+        })(ce || (ce = {}));
+      var le;
       !(function (e) {
         (e[(e.k_EPending = 0)] = "k_EPending"),
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
-      })(ce || (ce = {}));
-      var le, he;
+      })(le || (le = {}));
+      var he, de;
       !(function (e) {
         (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
           "k_EClientUsedInputTypeKeyboard"),
@@ -2052,7 +2062,7 @@
           (e[(e.k_EClientUsedInputTypeController = 2)] =
             "k_EClientUsedInputTypeController"),
           (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-      })(le || (le = {})),
+      })(he || (he = {})),
         (function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -2109,14 +2119,14 @@
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(he || (he = {}));
+        })(de || (de = {}));
       var pe;
       !(function (e) {
         (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
           (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
           (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
       })(pe || (pe = {}));
-      var de;
+      var me;
       !(function (e) {
         (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
           "k_BluetoothDeviceType_Invalid"),
@@ -2142,14 +2152,14 @@
             "k_BluetoothDeviceType_Gamepad"),
           (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
             "k_BluetoothDeviceType_Keyboard");
-      })(de || (de = {}));
-      var me, _e, ve, ge, fe;
+      })(me || (me = {}));
+      var _e, ge, ve, fe, Ce;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
           (e[(e.Wireless = 2)] = "Wireless"),
           (e[(e.Virtual = 3)] = "Virtual");
-      })(me || (me = {})),
+      })(_e || (_e = {})),
         (function (e) {
           (e[(e.NotPresent = 0)] = "NotPresent"),
             (e[(e.Failed = 1)] = "Failed"),
@@ -2158,7 +2168,7 @@
             (e[(e.Connecting = 4)] = "Connecting"),
             (e[(e.Connected = 5)] = "Connected"),
             (e[(e.Retrying = 6)] = "Retrying");
-        })(_e || (_e = {})),
+        })(ge || (ge = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Weak = 1)] = "Weak"),
@@ -2175,27 +2185,27 @@
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(ge || (ge = {})),
+        })(fe || (fe = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(fe || (fe = {}));
-      var Ce, ye, Ee;
+        })(Ce || (Ce = {}));
+      var ye, Ee, Re;
       !(function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(Ce || (Ce = {})),
+      })(ye || (ye = {})),
         (function (e) {
           (e[(e.Hidden = 0)] = "Hidden"),
             (e[(e.Notification = 1)] = "Notification"),
             (e[(e.Overlay = 2)] = "Overlay"),
             (e[(e.Opaque = 3)] = "Opaque"),
             (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-        })(ye || (ye = {}));
-      var Re = {
+        })(Ee || (Ee = {}));
+      var be = {
           A: u.a.OK,
           B: u.a.CANCEL,
           X: u.a.SECONDARY,
@@ -2223,14 +2233,14 @@
           RearRightUpper: u.a.REAR_RIGHT_UPPER,
           RearRightLower: u.a.REAR_RIGHT_LOWER,
         },
-        be =
-          (((Ee = {})[Ce.SystemKey0] = u.a.STEAM_GUIDE),
-          (Ee[Ce.SystemKey1] = u.a.STEAM_QUICK_MENU),
-          Ee),
-        Te = (u.c, new Z()),
-        Ne = !1;
-      function Se(e) {
-        if (!Ne) {
+        Te =
+          (((Re = {})[ye.SystemKey0] = u.a.STEAM_GUIDE),
+          (Re[ye.SystemKey1] = u.a.STEAM_QUICK_MENU),
+          Re),
+        Ne = (u.c, new Z()),
+        Se = !1;
+      function Oe(e) {
+        if (!Se) {
           var t = new j();
           t.RegisterInputSource(e),
             (function (e) {
@@ -2284,9 +2294,9 @@
                 })(t);
               (n.Root.m_FocusRing = i),
                 n.Root.SetProperties({}),
-                ke.set(document.body, n.Root),
-                De(document.body, n.Root),
-                Fe(),
+                Ie.set(document.body, n.Root),
+                Le(document.body, n.Root),
+                Be(),
                 e.RegisterGamepadNavigationTree(n, !1),
                 s()(document.body).on("vgp_onbuttondown", function (e) {
                   !(function (e) {
@@ -2298,21 +2308,21 @@
                       ],
                       n = c[e.detail.button];
                     n
-                      ? p(e.target, n, e.detail)
+                      ? d(e.target, n, e.detail)
                       : -1 !== t.indexOf(e.detail.button) &&
-                        p(e.target, "vgp_ondirection", e.detail);
+                        d(e.target, "vgp_ondirection", e.detail);
                   })(e.originalEvent);
                 }),
-                new MutationObserver(Oe).observe(document.body, {
+                new MutationObserver(ke).observe(document.body, {
                   childList: !0,
                   subtree: !0,
                 });
             })(t),
             new _(t);
         }
-        Ne = !0;
+        Se = !0;
       }
-      function Oe(e) {
+      function ke(e) {
         for (var t = [], n = [], i = 0, o = e; i < o.length; i++) {
           var r = o[i];
           if ("childList" === r.type) {
@@ -2326,30 +2336,30 @@
             }
           }
         }
-        t.length && Fe(s()(t)),
+        t.length && Be(s()(t)),
           n.length &&
             s()(n)
               .find("*")
               .addBack()
               .each(function () {
                 var e = Ae.get(this);
-                e && e(), ke.delete(this), Ae.delete(this);
+                e && e(), Ie.delete(this), Ae.delete(this);
               });
       }
-      var ke = new WeakMap(),
+      var Ie = new WeakMap(),
         Ae = new WeakMap(),
-        Ie = [];
-      function De(e, t) {
+        De = [];
+      function Le(e, t) {
         if (t) {
           var n = t.GetDepth();
-          Ie[n] || (Ie[n] = []), Ie[n].push([e, t]);
+          De[n] || (De[n] = []), De[n].push([e, t]);
         }
-        ke.set(e, t);
-      }
-      function Le(e) {
-        return "jquery" in e ? ke.get(e[0]) : ke.get(e);
+        Ie.set(e, t);
       }
       function Fe(e) {
+        return "jquery" in e ? Ie.get(e[0]) : Ie.get(e);
+      }
+      function Be(e) {
         performance.now();
         var t = "a,button,input:not(input[type=hidden]),label,[data-panel]";
         s()(t, e)
@@ -2362,18 +2372,18 @@
             })(this);
           }),
           (function () {
-            for (var e = Ie.length - 1; e >= 0; e--)
-              if (Ie[e])
-                for (var t = 0, n = Ie[e]; t < n.length; t++) {
+            for (var e = De.length - 1; e >= 0; e--)
+              if (De[e])
+                for (var t = 0, n = De[e]; t < n.length; t++) {
                   var i = n[t],
                     o = i[0],
                     r = i[1];
                   Ae.set(o, r.Tree.RegisterNavigationItem(r, o));
                 }
-            Ie = [];
+            De = [];
           })();
       }
-      function Be(e) {
+      function Pe(e) {
         var t = s()(e.Element);
         return (
           t.is(":visible") &&
@@ -2381,15 +2391,15 @@
             "hidden" !== t.css("overflow"))
         );
       }
-      function Pe(e) {
+      function we(e) {
         this.click(), e.stopPropagation();
       }
-      function we(e) {
+      function Me(e) {
         s()(this).find("a").first().trigger("click");
       }
       function Ge(e) {
         var t = s()(e),
-          n = Me(e),
+          n = Ue(e),
           i = n.Tree.CreateNode(n, n.m_FocusRing),
           o = t.data("panel") || {};
         if ("A" == e.tagName || "BUTTON" == e.tagName || "LABEL" == e.tagName)
@@ -2409,13 +2419,13 @@
           c = o.maintainX,
           l = o.maintainY,
           h = o.enableVirtualKeyboard,
-          p = Object(r.f)(o, [
+          d = Object(r.f)(o, [
             "clickOnActivate",
             "maintainX",
             "maintainY",
             "enableVirtualKeyboard",
           ]),
-          d = a
+          p = a
             ? (function (e) {
                 switch (e) {
                   case "column":
@@ -2433,37 +2443,37 @@
                 }
               })(a)
             : F.NONE;
-        d != F.NONE && (p.layout = d),
+        p != F.NONE && (d.layout = p),
           c
-            ? (p.navEntryPreferPosition = B.MAINTAIN_X)
-            : l && (p.navEntryPreferPosition = B.MAINTAIN_Y),
+            ? (d.navEntryPreferPosition = B.MAINTAIN_X)
+            : l && (d.navEntryPreferPosition = B.MAINTAIN_Y),
           u &&
-            (!1 !== p.focusable && (p.focusable = !0),
-            t.on("vgp_onok", "firstChild" === u ? we : Pe)),
+            (!1 !== d.focusable && (d.focusable = !0),
+            t.on("vgp_onok", "firstChild" === u ? Me : we)),
           h &&
             (t.on("vgp_onok.vkbindings", function () {
-              return Te.ShowVirtualKeyboard();
+              return Ne.ShowVirtualKeyboard();
             }),
             t.on("click.vkbindings", function () {
-              return Te.ShowVirtualKeyboard();
+              return Ne.ShowVirtualKeyboard();
             }),
             t.on("blur.vkbindings", function () {
-              return Te.HideVirtualKeyboard();
+              return Ne.HideVirtualKeyboard();
             })),
-          p.focusable && void 0 === t.attr("tabIndex") && t.attr("tabIndex", 0),
-          p.focusable &&
+          d.focusable && void 0 === t.attr("tabIndex") && t.attr("tabIndex", 0),
+          d.focusable &&
             i.FocusCallbackList.Register(function (t) {
               return (function (e, t) {
                 t ? s()(e).addClass("gpfocus") : s()(e).removeClass("gpfocus");
               })(e, t);
             });
-        var m = Object(r.a)({ fnCanTakeFocus: Be }, p);
-        return i.SetProperties(m), De(e, i), i;
+        var m = Object(r.a)({ fnCanTakeFocus: Pe }, d);
+        return i.SetProperties(m), Le(e, i), i;
       }
-      function Me(e) {
+      function Ue(e) {
         var t = e.parentElement;
         if (!t) return console.error("no parent"), null;
-        var n = Le(t);
+        var n = Fe(t);
         return (
           n ||
             !1 === n ||
@@ -2482,15 +2492,15 @@
                   }
               }
               var i = !1;
-              return t ? (i = Ge(e)) : De(e, !1), i;
+              return t ? (i = Ge(e)) : Le(e, !1), i;
             })(t)),
-          n || Me(t)
+          n || Ue(t)
         );
       }
-      (window.InstrumentFocusElements = Fe),
+      (window.InstrumentFocusElements = Be),
         (window.GPNavFocusChild = function (e) {
-          var t = Le(e[0]);
-          return t || (t = Me(e[0])), !!t && t.BTakeFocus(o.APPLICATION);
+          var t = Fe(e[0]);
+          return t || (t = Ue(e[0])), !!t && t.BTakeFocus(o.APPLICATION);
         });
     },
   },

@@ -238,7 +238,7 @@
                   switch (U.label) {
                     case 0:
                       (_ =
-                        d.i.logged_in &&
+                        d.h.logged_in &&
                         (!this.m_mapQAndASessions.has(e) ||
                           this.m_mapQAndASessions.get(e).bUserCanModerate ||
                           this.m_rgPendingQuestionGIDs.length > 0 ||
@@ -367,7 +367,7 @@
               for (var t, n = new Set(), s = 0, a = e; s < a.length; s++) {
                 var o = a[s],
                   i = this.m_mapQuestions.get(o);
-                i.posterAccountID == d.i.accountid &&
+                i.posterAccountID == d.h.accountid &&
                   1 == i.eState &&
                   n.add(i.gidQuestion);
               }
@@ -395,7 +395,7 @@
                   switch (s.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
+                        !d.h.logged_in ||
                         !d.c.SESSIONID ||
                         !(null === (a = this.m_mapQAndASessions.get(e)) ||
                         void 0 === a
@@ -479,7 +479,7 @@
                   switch (s.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
+                        !d.h.logged_in ||
                         !d.c.SESSIONID ||
                         !(null === (o = this.m_mapQAndASessions.get(e)) ||
                         void 0 === o
@@ -562,7 +562,7 @@
                   switch (s.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
+                        !d.h.logged_in ||
                         !d.c.SESSIONID ||
                         !(null === (o = this.m_mapQAndASessions.get(e)) ||
                         void 0 === o
@@ -643,7 +643,7 @@
                   switch (C.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
+                        !d.h.logged_in ||
                         !d.c.SESSIONID ||
                         !(null === (o = this.m_mapQAndASessions.get(e)) ||
                         void 0 === o
@@ -1579,7 +1579,7 @@
             { className: L.a.LogInPrompt },
             Object(M.f)("#QAndA_LogInPrompt")
           ),
-          !d.i.logged_in &&
+          !d.h.logged_in &&
             o.a.createElement(
               w.d,
               {

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6883524";
+var CLSTAMP = "6884920";
 !(function (t) {
   var e = {};
   function n(r) {
@@ -87,7 +87,7 @@ var CLSTAMP = "6883524";
     n.d(e, "d", function () {
       return c;
     }),
-      n.d(e, "k", function () {
+      n.d(e, "j", function () {
         return u;
       }),
       n.d(e, "b", function () {
@@ -96,25 +96,22 @@ var CLSTAMP = "6883524";
       n.d(e, "c", function () {
         return a;
       }),
-      n.d(e, "e", function () {
-        return _;
-      }),
-      n.d(e, "h", function () {
+      n.d(e, "g", function () {
         return l;
       }),
       n.d(e, "a", function () {
         return f;
       }),
-      n.d(e, "j", function () {
+      n.d(e, "i", function () {
         return p;
       }),
-      n.d(e, "i", function () {
+      n.d(e, "h", function () {
         return d;
       }),
-      n.d(e, "f", function () {
+      n.d(e, "e", function () {
         return m;
       }),
-      n.d(e, "g", function () {
+      n.d(e, "f", function () {
         return h;
       });
     n("mrSG");
@@ -388,8 +385,8 @@ var CLSTAMP = "6883524";
           }),
           (t.prototype.BClientAccountMatches = function () {
             return (
-              !r.k.logged_in ||
-              r.k.accountid == this.m_connection.ClientInfo.unAccountID
+              !r.j.logged_in ||
+              r.j.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }),
           (t.prototype.GenericEResultCall = function (t) {
@@ -475,7 +472,7 @@ var CLSTAMP = "6883524";
               return !1;
             var n = Object.assign({}, t, {
               universe: r.d.EUNIVERSE,
-              accountid: r.k.accountid,
+              accountid: r.j.accountid,
             });
             void 0 !== e && (n.sequenceid = e);
             try {
@@ -826,13 +823,13 @@ PERFORMANCE OF THIS SOFTWARE.
       return r.d;
     }),
       n.d(e, "d", function () {
-        return r.k;
-      }),
-      n.d(e, "c", function () {
         return r.j;
       }),
+      n.d(e, "c", function () {
+        return r.i;
+      }),
       n.d(e, "b", function () {
-        return r.f;
+        return r.e;
       });
   },
   x0hG: function (t, e, n) {
