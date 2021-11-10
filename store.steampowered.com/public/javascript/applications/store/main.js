@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6885261";
+var CLSTAMP = "6887622";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -7334,7 +7334,7 @@ var CLSTAMP = "6885261";
                     4,
                     i.a.get(o, {
                       params: s,
-                      withCredentials: !0,
+                      withCredentials: !1,
                       cancelToken: t.token,
                     }),
                   ]
@@ -7637,10 +7637,15 @@ var CLSTAMP = "6885261";
                   Object(d.f)("#SteamAwards_ExpiredEvent"),
                   " "
                 );
-              var n = {
-                  background: this.m_nominationEventDetails.strBackgroundCSS,
-                },
-                r = this.props.event.GetSteamAwardCategory(),
+              var n = {};
+              this.m_nominationEventDetails.strBackgroundCSS.length &&
+                (n.backgroundColor = this.m_nominationEventDetails.strBackgroundCSS),
+                this.m_nominationEventDetails.strBackgroundImage.length &&
+                  (n.backgroundImage =
+                    "url( " +
+                    this.m_nominationEventDetails.strBackgroundImage +
+                    " )");
+              var r = this.props.event.GetSteamAwardCategory(),
                 a =
                   r >= this.m_nominationEventDetails.eSteamAwardCategoryIDMin &&
                   r < this.m_nominationEventDetails.eSteamAwardCategoryIDMax,
@@ -8209,80 +8214,85 @@ var CLSTAMP = "6885261";
             );
           }),
           (t.prototype.render = function () {
-            return this.state.bAppInfoLoaded &&
-              this.props.voteCategories &&
-              this.m_awardEventDetails
-              ? c.createElement(
+            if (!this.state.bAppInfoLoaded || !this.props.voteCategories)
+              return null;
+            if (!this.m_awardEventDetails) return null;
+            var e = {};
+            return (
+              this.m_awardEventDetails.strBackgroundCSS.length &&
+                (e.backgroundColor = this.m_awardEventDetails.strBackgroundCSS),
+              this.m_awardEventDetails.strBackgroundImage.length &&
+                (e.backgroundImage =
+                  "url( " + this.m_awardEventDetails.strBackgroundImage + " )"),
+              c.createElement(
+                "div",
+                {
+                  style: e,
+                  className: Object(p.a)(
+                    S.a.SteamAwardContainer,
+                    C.a.PartnerEventFont
+                  ),
+                },
+                c.createElement(
                   "div",
-                  {
-                    style: {
-                      background: this.m_awardEventDetails.strBackgroundCSS,
-                    },
-                    className: Object(p.a)(
-                      S.a.SteamAwardContainer,
-                      C.a.PartnerEventFont
-                    ),
-                  },
+                  { className: S.a.SteamAwardHeader },
+                  c.createElement("img", {
+                    className: S.a.SteamAwardHeaderImage,
+                    src: this.m_awardEventDetails.strTrophyImg,
+                  }),
                   c.createElement(
                     "div",
-                    { className: S.a.SteamAwardHeader },
-                    c.createElement("img", {
-                      className: S.a.SteamAwardHeaderImage,
-                      src: this.m_awardEventDetails.strTrophyImg,
-                    }),
+                    { className: S.a.SteamAwardMainCtn },
                     c.createElement(
                       "div",
-                      { className: S.a.SteamAwardMainCtn },
-                      c.createElement(
-                        "div",
-                        { className: S.a.SteamAwardMainTitle },
-                        " ",
-                        Object(d.f)("#SteamAwards_EventMainTitleCombined"),
-                        " "
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: S.a.SteamAwardHeaderText },
-                        this.props.bIsEventActionEnabled
-                          ? c.createElement(
-                              c.Fragment,
-                              null,
-                              Object(d.f)(
-                                "#SteamAwards_EventVoteForGamePrompt",
-                                this.m_appInfo.name
-                              ),
-                              c.createElement(
-                                "a",
-                                {
-                                  href: f.d.STORE_BASE_URL + "steamawards/",
-                                  className: Object(p.a)(
-                                    S.a.SteamAwardLearnMore,
-                                    S.a.BottomRight
-                                  ),
-                                },
-                                Object(d.f)(
-                                  "#EventDisplay_CallToAction_LearnMore"
-                                )
-                              )
-                            )
-                          : c.createElement(
+                      { className: S.a.SteamAwardMainTitle },
+                      " ",
+                      Object(d.f)("#SteamAwards_EventMainTitleCombined"),
+                      " "
+                    ),
+                    c.createElement(
+                      "div",
+                      { className: S.a.SteamAwardHeaderText },
+                      this.props.bIsEventActionEnabled
+                        ? c.createElement(
+                            c.Fragment,
+                            null,
+                            Object(d.f)(
+                              "#SteamAwards_EventVoteForGamePrompt",
+                              this.m_appInfo.name
+                            ),
+                            c.createElement(
                               "a",
                               {
                                 href: f.d.STORE_BASE_URL + "steamawards/",
-                                className: S.a.LinkText,
+                                className: Object(p.a)(
+                                  S.a.SteamAwardLearnMore,
+                                  S.a.BottomRight
+                                ),
                               },
-                              Object(d.f)("#SteamAwards_Event_VotesClosed")
+                              Object(d.f)(
+                                "#EventDisplay_CallToAction_LearnMore"
+                              )
                             )
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: S.a.AwardCategoriesCtn },
-                        this.GetNominatedAwardCategories()
-                      )
+                          )
+                        : c.createElement(
+                            "a",
+                            {
+                              href: f.d.STORE_BASE_URL + "steamawards/",
+                              className: S.a.LinkText,
+                            },
+                            Object(d.f)("#SteamAwards_Event_VotesClosed")
+                          )
+                    ),
+                    c.createElement(
+                      "div",
+                      { className: S.a.AwardCategoriesCtn },
+                      this.GetNominatedAwardCategories()
                     )
                   )
                 )
-              : null;
+              )
+            );
           }),
           Object(r.c)([o.C], t.prototype, "m_awardEventDetails", void 0),
           (t = Object(r.c)([s.a], t))
