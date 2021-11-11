@@ -11823,6 +11823,7 @@ Body.v6.tag_page.contenthub_page {
   border: solid 1px #000;
   background-size: cover;
   color: #fff;
+  background-repeat: no-repeat;
 }
 .nominationandvote_InLibraryView_pqLcz
   .nominationandvote_SteamAwardContainer_3n6v2 {
@@ -11984,7 +11985,7 @@ Body.v6.tag_page.contenthub_page {
   .nominationandvote_SteamAwardVoteButtonArea_1v9LH
   .nominationandvote_SteamAwardVoteButton_cTcgI
   .nominationandvote_SteamAwardVoteButtonText_247y3 {
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 2px;
   text-transform: uppercase;
   letter-spacing: 1.8px;
@@ -11997,7 +11998,7 @@ Body.v6.tag_page.contenthub_page {
   .nominationandvote_SteamAwardVoteButtonArea_1v9LH
   .nominationandvote_SteamAwardVoteButton_cTcgI:hover
   .nominationandvote_SteamAwardVoteButtonText_247y3 {
-  border: 1px solid #fff;
+  border: 2px solid #fff;
 }
 .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardVoteWidget_khWz0
