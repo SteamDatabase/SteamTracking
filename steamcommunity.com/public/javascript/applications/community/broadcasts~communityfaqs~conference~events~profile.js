@@ -6798,7 +6798,10 @@
               )
                 return null;
               var t = Math.floor(Date.now() / 1e3);
-              if (!this.m_nominationEventDetails.bIsAutumnSaleActive)
+              if (
+                !this.props.previewMode &&
+                !this.m_nominationEventDetails.bIsAutumnSaleActive
+              )
                 return c.createElement(
                   "div",
                   { className: S.a.ExpiredEventHeader },
