@@ -450,7 +450,7 @@
                 !1,
                 1,
                 T.k.k_ESortFacetsByMatchCount,
-                Object(f.i)(g.d.LANGUAGE)
+                Object(f.j)(g.d.LANGUAGE)
               )),
               (this.m_prevTabFacetKey = this.GetPageKey(
                 this.m_SelectedTab,
@@ -1224,7 +1224,7 @@
               { className: x.FacetMenuCtn },
               o.a.createElement(O.d, {
                 facetFilterState: a,
-                language: Object(f.i)(g.d.LANGUAGE),
+                language: Object(f.j)(g.d.LANGUAGE),
                 nMaxFacetValues: 5,
                 fnOnUpdateFilter: function () {
                   return (
