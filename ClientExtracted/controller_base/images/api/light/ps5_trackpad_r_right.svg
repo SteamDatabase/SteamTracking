@@ -1,12 +1,12 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1967:16368)">
-<path d="M0 6.96771H36.5211C41.0487 6.96771 44.5468 10.9444 43.9694 15.435L39.7444 48.2962C39.1022 53.2915 34.8496 57.0323 29.8133 57.0323H0V6.96771Z" fill="white"/>
-<path d="M50.0646 23.6559L59.7994 32L50.0646 40.3441L50.0646 23.6559Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M47.2832 17.6086L64.0732 32L47.2832 46.3914L47.2832 17.6086ZM50.0646 23.6559L50.0646 40.3441L59.7993 32L50.0646 23.6559Z" fill="white"/>
+<path d="M0 3.48386H18.2605C20.5244 3.48386 22.2734 5.47218 21.9847 7.71752L19.8722 24.1481C19.5511 26.6457 17.4248 28.5161 14.9066 28.5161H0V3.48386Z" fill="white"/>
+<path d="M25.0322 11.828L29.8996 16L25.0322 20.1721L25.0322 11.828Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.6416 8.8043L32.0366 16L23.6416 23.1957L23.6416 8.8043ZM25.0323 11.8279L25.0323 20.172L29.8997 16L25.0323 11.8279Z" fill="white"/>
 </g>
 <defs>
 <clipPath id="clip0_1967:16368">
-<rect width="64" height="64" fill="white"/>
+<rect width="32" height="32" fill="white"/>
 </clipPath>
 </defs>
 </svg>

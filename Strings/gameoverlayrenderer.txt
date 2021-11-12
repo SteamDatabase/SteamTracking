@@ -1170,6 +1170,8 @@ GameOverlay_GameExitingEvent_%d
 Failed creating exit event
 Modules at GameOverlayRenderer.dll attach
 ----------------------------
+SteamNoOverlayUIDrawing
+SteamNoOverlayUIDrawing was set
 SteamOverlayRunning_%llu
 One-time initialization: pid %d for game %llu
 pid %d != %d, skipping destruction (fork without exec?)
@@ -1593,7 +1595,7 @@ L d\8
 xFRh
 '35(I&R5&.%%
 "*."
-d<0	<
+d40	<
 T0W[8 
 _BOverlayNeedsPresent
 _IsOverlayEnabled
@@ -1837,38 +1839,32 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-4:"Q
-vl`2_
-fiiF
-Xy6n
-$p<Y
-R{a>8
-	?xz
-6~=jL
-P_hD
+AXC`Z
+%m7_
+ wQT
+l<V3
+5qA6&^
+LZ249
+WbEQ
+.g(PZY
+/\q\
+.jV=Em
+)+0P
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-|]!i
-=d;=
-t6zV
-6%sJx
-^Q1D
-aCH8)p
-0$lL
-^O!vd
-BS&4g
-3s2=
-%s9F
-?7o2
-l7_)
-;>//
-A$bcRm`
-P['3	~
-`9Tm0
-\#`BSd
-VbV5
+7L">&
+\WKj
+SMm@U
+>x-3
+e+!q
+f)bbc6
+Q$bP
+ml@g
+uOp,
+\Vl$
+RZ%T
 #Tur
 * %WP
 =[)\
@@ -1927,7 +1923,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212352Z0/
+211111224717Z0/
+!;Evq
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1935,38 +1932,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		DvlU4Y9xaYMHx6EADsza/VyNy64=
+		C3kKftoLmGjLiUMKqygjOfCsNss=
 		</data>
 		<data>
-		5FBgieUG01eGjE6BVLHPVCN3i8E=
+		JxKETEeVg4yzBy2wwJAIM/06jeY=
 		</data>
 	</array>
 </dict>
 </plist>
-aqu9
-_Mx8
-20211109212426Z0
+n/1o
+k^Ft
+F>.u
+F++h
+20211111224804Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211026174001Z
-211207174000Z0B1
-Timestamp Signer NWK11
+211026173001Z
+211207173000Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
- Fky??	
-3#KH*
-&7?Ot
-O3^d
+p:w{
+<}NZz
+Vqeb
+%0a"a
++tv9
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-c=jX
-CH@	
-;`\_
->-$lY@
-OKBP
+eP~q
+ZR}BE
+a ;|#
+~o@'0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2005,14 +2004,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212426Z0#
-wI<<2
-lUZM
-;:.9
-B]<E
-T&I@
-92\H
-uX&&E
+211111224804Z0#
+(u;n
+wC)/
+*sG+
 __TEXT
 __text
 __TEXT
@@ -2074,7 +2069,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-_GM8
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -2319,12 +2313,13 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
+Y-5z
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
 D9c ~
 |$$I
-Y%`v
+(%Zv
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2369,6 +2364,7 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
+Y%U]
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2485,6 +2481,7 @@ AWAVATSI
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
+H9=1
 [A^]
 H9GHt.H
 AWAVATSH
@@ -2533,6 +2530,8 @@ h[A\A]A^A_]
 h[A\A]A^A_]
 AWAVAUATSH
 t9L9
+D8=J
+D8=)
 |$$I
 E;u,s*H
 P0E;u4s
@@ -2572,12 +2571,12 @@ AVS1
 AWAVSH
 H92u
 ([A^A_]
+H9=ra
 AWAVSPI
 [A^A_]
 AWAVSP
 [A^A_]
 AWAVAUATSH
-D8-mh
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -3380,6 +3379,8 @@ GameOverlay_GameExitingEvent_%d
 Failed creating exit event
 Modules at GameOverlayRenderer.dll attach
 ----------------------------
+SteamNoOverlayUIDrawing
+SteamNoOverlayUIDrawing was set
 SteamOverlayRunning_%llu
 One-time initialization: pid %d for game %llu
 pid %d != %d, skipping destruction (fork without exec?)
@@ -4331,42 +4332,35 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-;"U<cw
-+}/x
-@AyJ
-0A*h-
-1i]+J
-v-|M|&	9v
-A8	s
-#&BdEC4s
-_BEN
-6	)hY
+\&v/o
+Bon+
+'7yo@
+H)qm
+2k~m#h
+ci][
+L~7)'_
+[aOP
+3\uu
 0yVf
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
 g~9M
-M>JzZ
-hc;,
-d&`*
-#?LA!
-'Wi@
-]I<?
- hVP
-{#@H
-t(tw
- <s7
-DbQ.
-!*<S~
-Ic%dg=
-}9SS
-fH[^
-&u|f
-=@A~P
-LYV]$
--E1	uq
-`'	|
+Z/rh
+c;:|
+@F6Z
+'`t>@
+@$Ko
+!)ei
+M*"g
+n)QMz
+	BFs
+~g]-
+wk<I
+o{ay
+ny%v
+M)V+3_Yx
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4422,9 +4416,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212352Z0/
-`IJFD
-^F8u4
+211111224717Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4432,37 +4424,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		rrUqjTXoa2wr0x4Jyz86R+UZExo=
+		yW7d4FZvmVGdPsgbLdO5sy8fF2k=
 		</data>
 		<data>
-		bnn/5/xq8MLYy+VhcuMdVOONNhw=
+		ex6ymqaQ7CtmhRjCEDesGy+JL+c=
 		</data>
 	</array>
 </dict>
 </plist>
-ZSCS
-20211109212426Z0
+}}oq9
+;!(?
+20211111224804Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211026173001Z
-211207173000Z0B1
-Timestamp Signer NWK21
+211026174001Z
+211207174000Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-p:w{
-<}NZz
-Vqeb
-%0a"a
-+tv9
+ Fky??	
+3#KH*
+&7?Ot
+O3^d
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-eP~q
-ZR}BE
-a ;|#
-~o@'0
+c=jX
+CH@	
+;`\_
+>-$lY@
+OKBP
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4501,10 +4494,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212426Z0#
-/oFG
-KZ|V
-Xer3
+211111224804Z0#
+wI<<2
+mE=O
+(kz9
+a7:L
+{oFk
 __TEXT
 __text
 __TEXT
@@ -4594,7 +4589,6 @@ ia@9i
 ia@9i
 	a@9Ia
 h&B)
-19`I
 56L@
 ;wA9
 @9h*
@@ -4609,29 +4603,30 @@ h2E9
 $E9H
 &E9h
 h&A)
+45+	0
 jh8)	
 19:#	
-@9{A
 Th*@
 Th.@
 9h"@9h
 h&D)
 h&@9
+J~	0
 hVB9
 hRB9
-C91A
-Z)XA
+C9DA
+Z)kA
 a"A9
 h&D)
 i"@9
-<Ix	p
-Jw	P
+<*{	
 9h2@
 	)h"@
 yh6@
 <h"@9
-4 ]	p
-`\	P
+T`x	P
+`p	0
+4`_	P
 bD9h
 Th#@
 hbN9
@@ -4732,6 +4727,7 @@ hjA9(
 4t:@
 #A)	|	
 i"V)
+`}	X
 Ci8}
 hfA9
 &D9?
@@ -4743,9 +4739,7 @@ hfA9
 Th&@
 Th&@
 Rh:@
-Tv(	
-@%	X
-a#	XA
+'	XA
 T`*@
 4a*@
 4hrA9
@@ -5243,6 +5237,8 @@ GameOverlay_GameExitingEvent_%d
 Failed creating exit event
 Modules at GameOverlayRenderer.dll attach
 ----------------------------
+SteamNoOverlayUIDrawing
+SteamNoOverlayUIDrawing was set
 SteamOverlayRunning_%llu
 One-time initialization: pid %d for game %llu
 pid %d != %d, skipping destruction (fork without exec?)
@@ -6086,27 +6082,33 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-meZP
-o_|OA
-bGo6
+^S|q
+q+m(
+sezdW
+oX3-f
+n@w+
+pl(+
+K	iI
+cY/G
 {e~p,X
-I}m!
+P*<D
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-61(*
-+<qP
-nW9&
-xO(rfvG
-X:|/w
-[^(oDi-
-*M=n
-(EYa
-3-O!}O]
-zQ\G]
+fQD#
+!Y]n
+&I]8
+c%~T/
+]8dI
+fasE
+j\S&
+/oqd
+N*+`
+$Ot6
+1T 9
+farQ3
 g4%s
-,8#r
 Frm}=sF
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6163,8 +6165,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212352Z0/
-R}&>
+211111224718Z0/
+ Xvb
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6172,18 +6174,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		kvEMzV9YrqfEavUk+WTXRFv7QIw=
+		nt3Nat/bp4rMGmh/1HW5Q2fpsgw=
 		</data>
 		<data>
-		2/tmlb0ykIL1Un0mPhCUEQPp1+s=
+		WHZi1w2Tnrfomdo7APg3GxPjs78=
 		</data>
 	</array>
 </dict>
 </plist>
-GfM+c
-Bp:E
- ZX.
-20211109212426Z0
+s1	y
+h>z(
+EpSw
+20211111224804Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -6243,5 +6245,4 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212426Z0#
-E^;9
+211111224804Z0#

@@ -526,8 +526,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov  9 2021
-13:23:43
+Nov 11 2021
+14:47:10
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -930,13 +930,11 @@ MXGJJ98X76
 <zR#
 h*G{
 ]@L]
-4^WU
-G]3l
+WrAqfX
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-np.~
 rDND
 SpwF
 H_9pf
@@ -995,10 +993,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212405Z0/
-"*5x
-Q"MM
-FIV?
+211111224734Z0/
+JH]8%
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1006,17 +1002,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		uiIqNXiK3ohMNlG68AGjCtN+n1A=
+		vVzthw+A8e9akJeWvEpIXTglAeA=
 		</data>
 		<data>
-		64aS0oKd8JeZUSJNTdT2DzfXyh8=
+		DVPaH6KiEdRpIvlOWZANhSLiYjQ=
 		</data>
 	</array>
 </dict>
 </plist>
-<O-2
-#oiM9 
-20211109212439Z0
+I~%1S*
+L*X]
+otMx
+20211111224820Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1076,12 +1073,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212439Z0#
-Gv2{
+211111224820Z0#
+%Ys9
+i<Uc
 wI<<2
-c8?l
-Ks83
-hWx<I
+LhwA
+=l4~
 __TEXT
 __text
 __TEXT
@@ -1805,8 +1802,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov  9 2021
-13:23:46
+Nov 11 2021
+14:47:13
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2250,7 +2247,6 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-XhM<
 Wm1(
 WrxG4
 gI$8
@@ -2313,8 +2309,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212405Z0/
-K0`NO
+211111224734Z0/
+O	0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2322,20 +2318,16 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		uPtsE6tSnHTZVQ1/uKWeosyI4hM=
+		nLX8LPoa03z7xaA/uzOc3iWQTwk=
 		</data>
 		<data>
-		EzZ9Osy5sE03/gQi1xtLMGBOT/U=
+		Yn4Wm1CH/6S1BOSw44itGeWVIQY=
 		</data>
 	</array>
 </dict>
 </plist>
-}SBjc
-gNT-
-G%=E!
-|x$c
--7a#LZ
-20211109212439Z0
+prm8T
+20211111224820Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2395,10 +2387,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212439Z0#
-V9U4mAUS
-[QP7l@
-hr/+
+211111224820Z0#
+@j8D
 __TEXT
 __text
 __TEXT
@@ -2699,8 +2689,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov  9 2021
-13:23:49
+Nov 11 2021
+14:47:16
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3128,6 +3118,8 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+pH926*
+kiGJ
 G]q-1!i
 h=du
 S KU9`
@@ -3138,6 +3130,8 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+mlNL5
+_jWmZr
 5}R<@
 9w{Q
 "](l
@@ -3147,7 +3141,6 @@ sUG"
 =dLN
 Sq?V
 \k96
-4vATe
 K"Lf
 D/`m
 7uUij
@@ -3206,7 +3199,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212405Z0/
+211111224734Z0/
+mB<u
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3214,20 +3208,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		t/libY3oCec4JrsGU2JWr0cVleg=
+		NozR73guD9KtyaI76ZhtQjx1m1A=
 		</data>
 		<data>
-		AIucoA71EElJsWVw5eKJpiV1xPg=
+		UtX7yMqESze0jUeZVR8IP0yVY7g=
 		</data>
 	</array>
 </dict>
 </plist>
-S[bjA
-@[,4
-T,z'
-\zO|D:XV
-5Exr/
-20211109212439Z0
+=xD3V
+Rt8}"
+NJX:
+,alR
+TW+E
+20211111224820Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3287,5 +3281,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211109212439Z0#
+211111224820Z0#
+]>lmE
 wI<<2
+*^<x|'':
+mFNWlE

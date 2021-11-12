@@ -1,13 +1,6 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1967:16934)">
-<path d="M0.790161 32C0.790161 24.4258 7.15767 18.2857 15.0124 18.2857H48.9877C56.8424 18.2857 63.2099 24.4258 63.2099 32C63.2099 39.5742 56.8424 45.7143 48.9877 45.7143H15.0124C7.15767 45.7143 0.790161 39.5742 0.790161 32Z" fill="white"/>
-</g>
-<ellipse cx="18.1306" cy="32" rx="3.55556" ry="3.42857" fill="#0E141B"/>
-<ellipse cx="32.3527" cy="32" rx="3.55556" ry="3.42857" fill="#0E141B"/>
-<ellipse cx="46.575" cy="32" rx="3.55556" ry="3.42857" fill="#0E141B"/>
-<defs>
-<clipPath id="clip0_1967:16934">
-<rect width="64" height="27.4286" fill="white" transform="translate(0 18.2857)"/>
-</clipPath>
-</defs>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.39502 16C0.39502 12.134 3.57877 9 7.50613 9H24.4938C28.4211 9 31.6049 12.134 31.6049 16C31.6049 19.866 28.4211 23 24.4938 23H7.50613C3.57877 23 0.39502 19.866 0.39502 16Z" fill="white"/>
+<ellipse cx="8.88886" cy="16" rx="1.77778" ry="1.75" fill="#0E141B"/>
+<ellipse cx="15.9999" cy="16" rx="1.77778" ry="1.75" fill="#0E141B"/>
+<ellipse cx="23.111" cy="16" rx="1.77778" ry="1.75" fill="#0E141B"/>
 </svg>
