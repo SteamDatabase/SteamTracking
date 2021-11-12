@@ -7745,7 +7745,7 @@
               f.a,
               null,
               n.createElement(Se, { conferenceInfo: t }),
-              !!t.youtubeVideoID &&
+              !t.youtubeVideoID &&
                 Boolean(a < t.rtEndTime) &&
                 n.createElement(F, { conferenceInfo: t })
             ),
@@ -7758,7 +7758,7 @@
               f.a,
               null,
               n.createElement(ve, { conferenceInfo: t }),
-              !!t.youtubeVideoID &&
+              !t.youtubeVideoID &&
                 Boolean(a < t.rtEndTime) &&
                 n.createElement(F, { conferenceInfo: t })
             ),
