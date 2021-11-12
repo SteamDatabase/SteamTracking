@@ -5341,19 +5341,26 @@
             if (!r.startTime || r.startTime - 1209600 - 3600 < s)
               l = Me.a.Get().GetPartnerEventPermissions(r.clanSteamID).can_edit;
           }
-          return o.a.createElement(
-            St.b,
-            {
-              navID: "StoreSalePageRoot",
-              NavigationManager: Rt.Get().GetNavigationManager(),
-            },
-            o.a.createElement(gt.h, {
-              promotionName: t,
-              language: n,
-              eventModel: r,
-              bIsPreview: l,
-            })
-          );
+          return "dev" == M.d.WEB_UNIVERSE || "beta" == M.d.WEB_UNIVERSE
+            ? o.a.createElement(
+                St.b,
+                {
+                  navID: "StoreSalePageRoot",
+                  NavigationManager: Rt.Get().GetNavigationManager(),
+                },
+                o.a.createElement(gt.h, {
+                  promotionName: t,
+                  language: n,
+                  eventModel: r,
+                  bIsPreview: l,
+                })
+              )
+            : o.a.createElement(gt.h, {
+                promotionName: t,
+                language: n,
+                eventModel: r,
+                bIsPreview: l,
+              });
         });
     },
     vNkc: function (e, t, n) {
