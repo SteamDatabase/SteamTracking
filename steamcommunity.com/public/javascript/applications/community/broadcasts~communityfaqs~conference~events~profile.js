@@ -53293,18 +53293,14 @@
                   "https://www.youtube.com/embed/" +
                   e +
                   n.m_strYouTubeOptions +
+                  (this.props.bAutoPlay ? "&autoplay=1" : "") +
                   (this.props.nStartSeconds
                     ? "&t=" + this.props.nStartSeconds
                     : "");
               return c.createElement(
                 "div",
                 {
-                  className: Object(d.a)(
-                    v.a.PreviewYouTubeVideo,
-                    i,
-                    o,
-                    v.a.YouTubeCtn
-                  ),
+                  className: Object(d.a)(v.a.PreviewYouTubeVideo, i, o),
                   id: e,
                 },
                 c.createElement("img", {

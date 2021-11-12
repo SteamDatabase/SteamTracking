@@ -2063,6 +2063,12 @@ html.responsive.touch
 }
 .conferencepages_ConferenceHome_3tSqD
   .conferencepages_MainCol_1qlkn
+  .conferencepages_BroadcastCtn_240cu.conferencepages_Hidden_aE3VL {
+  display: none;
+  z-index: -4000;
+}
+.conferencepages_ConferenceHome_3tSqD
+  .conferencepages_MainCol_1qlkn
   .conferencepages_ChatColumn_2ldId {
   width: 50%;
 }
