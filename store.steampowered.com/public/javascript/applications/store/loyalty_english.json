@@ -149,6 +149,7 @@
     "RewardCluster_AnimatedMiniProfileBackgrounds_Title": "Animated Mini-Profile Backgrounds",
     "RewardCluster_StillProfileBackgrounds_Title": "Still Profile Backgrounds",
     "RewardCluster_StillMiniProfileBackgrounds_Title": "Still Mini-Profile Backgrounds",
+    "RewardCluster_TabletopFest2021Profiles_Title": "Tabletop Fest 2021 Profiles",
     "SeasonalBadge_Title": "Seasonal Badge",
     "SeasonalBadge_Description": "Upgrade this badge by using your points. Badges are shown on your profile page and can be displayed on the mini-profile.",
     "BadgeLevel": "Level %1$s",
@@ -359,5 +360,12 @@
     "FeaturedBanner_SummerSale2021_CallToAction": "Learn more",
     "ProfileModifier_PreviewLinkText": "Open Preview in a New Tab",
     "HiddenItems_Explanation": "%1$s item has been hidden based on your account preferences.",
-    "HiddenItems_Explanation_Plural": "%1$s items have been hidden based on your account preferences."
+    "HiddenItems_Explanation_Plural": "%1$s items have been hidden based on your account preferences.",
+    "RewardItemType_ArtistProfile_plural": "Artist Profiles",
+    "ShopPageTitle_ArtistProfile": "Artist Profile",
+    "ShopPageTitle_ArtistProfiles_Subtitle": "Show off your profile with unique art featured in Steam sales and events.",
+    "ShopPageTitle_ArtistProfiles": "Artist Profiles",
+    "FeaturedBanner_ArtistProfiles_Headline": "Introducing Artist Profiles",
+    "FeaturedBanner_ArtistProfiles_Subhead": "Equip all new Artist Profiles featuring unique art featured in Steam sales and events.",
+    "FeaturedBanner_ArtistProfiles_CallToAction": "View all"
 }

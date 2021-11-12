@@ -16919,7 +16919,7 @@
       "use strict";
       r.r(t),
         r.d(t, "ConferenceRoutes", function () {
-          return we;
+          return Me;
         });
       var n = r("q1tI"),
         i = r("EC67"),
@@ -16975,6 +16975,7 @@
                     strLocalizedLogos: "string" == typeof i ? [i] : i,
                     strLocalizedMobileLogos: "string" == typeof a ? [a] : a,
                     globalQandASessionID: e.global_qanda_session_id,
+                    youtubeVideoID: e.youtubeVideoID,
                   };
                 this.m_mapConferences.set(e.vanity, d);
               }
@@ -17570,19 +17571,22 @@
           )
         );
       }
-      var be = r("5STL");
-      function _e(e) {
+      var be = r("5STL"),
+        _e = r("iwen"),
+        he = r("6tCl");
+      function Be(e) {
         var t = e.conferenceInfo,
-          r = n.useState(!1),
-          i = r[0],
-          a = r[1],
-          o = Object(m.c)(N.f.PerMinute) < t.rtStartTime - 30 * N.f.PerMinute;
+          r = e.bShowYouTube,
+          i = n.useState(!1),
+          a = i[0],
+          o = i[1],
+          s = Object(m.c)(N.f.PerMinute) < t.rtStartTime - 30 * N.f.PerMinute;
         return n.createElement(
           "div",
           { className: be.ConferenceHome },
           n.createElement(
             "div",
-            { className: Object(w.a)(be.LeftCol, i ? "Active" : "Hidden") },
+            { className: Object(w.a)(be.LeftCol, a ? "Active" : "Hidden") },
             n.createElement(
               "div",
               { className: be.AgendaCtn },
@@ -17592,7 +17596,7 @@
                 {
                   className: be.AgendaToggle,
                   onClick: function () {
-                    a(!i);
+                    o(!a);
                   },
                 },
                 n.createElement(
@@ -17624,13 +17628,20 @@
           n.createElement(
             "div",
             { className: be.MainCol },
-            n.createElement(
-              "div",
-              { className: be.BroadcastCtn },
-              n.createElement(O, { conferenceInfo: t }),
-              n.createElement("div", { className: be.videoContainerSizer })
-            ),
-            Boolean(o)
+            r
+              ? n.createElement(_e.a, {
+                  videoID: t.youtubeVideoID,
+                  classNameAlign: "",
+                  classNameSize: he.sizeFull,
+                  bShowVideoImmediately: !0,
+                })
+              : n.createElement(
+                  "div",
+                  { className: be.BroadcastCtn },
+                  n.createElement(O, { conferenceInfo: t }),
+                  n.createElement("div", { className: be.videoContainerSizer })
+                ),
+            Boolean(s)
               ? n.createElement(
                   "div",
                   { className: be.InteractionCtn },
@@ -17640,11 +17651,11 @@
                     Object(h.f)("#Conference_ChatHidden", 30)
                   )
                 )
-              : n.createElement(he, { conferenceInfo: t })
+              : n.createElement(ye, { conferenceInfo: t })
           )
         );
       }
-      function he(e) {
+      function ye(e) {
         var t = e.conferenceInfo,
           r = n.useState(window.innerWidth > 910),
           i = r[0],
@@ -17769,7 +17780,7 @@
           )
         );
       }
-      function Be(e) {
+      function ge(e) {
         var t = e.conferenceInfo;
         if (!t.faqAboutPage)
           return n.createElement(
@@ -17788,12 +17799,12 @@
           n.createElement(E.a, { text: a, bShowErrorInfo: !1 })
         );
       }
-      function ye(e) {
+      function ve(e) {
         var t = e.conferenceInfo;
         return n.createElement(me, { conferenceInfo: t });
       }
-      var ge = r("PpkI");
-      function ve(e) {
+      var Se = r("PpkI");
+      function we(e) {
         var t = e.strVanity,
           r = d.Get().GetConferenceInfo(t);
         return r
@@ -17802,13 +17813,13 @@
               null,
               n.createElement(
                 "div",
-                { className: ge.ConferencePageCtn },
-                n.createElement(Se, { conferenceInfo: r })
+                { className: Se.ConferencePageCtn },
+                n.createElement(Ce, { conferenceInfo: r })
               )
             )
           : n.createElement("div", null, Object(h.f)("#Conference_Invalid"));
       }
-      function Se(e) {
+      function Ce(e) {
         var t = e.conferenceInfo,
           r = function (e) {
             return window.sessionStorage.setItem(
@@ -17820,23 +17831,34 @@
           a = Object(m.b)();
         return (
           a < t.rtEndTime &&
+            (t.youtubeVideoID &&
+              i.push({
+                name: Object(h.f)("#Conference_tab_BackupStreamView"),
+                key: "backup",
+                contents: n.createElement(
+                  f.a,
+                  null,
+                  n.createElement(Be, { bShowYouTube: !0, conferenceInfo: t })
+                ),
+                onClick: r,
+              }),
             i.push({
               name: Object(h.f)("#Conference_tab_Home"),
               key: "live",
               contents: n.createElement(
                 f.a,
                 null,
-                n.createElement(_e, { conferenceInfo: t })
+                n.createElement(Be, { conferenceInfo: t })
               ),
               onClick: r,
-            }),
+            })),
           i.push({
             name: Object(h.f)("#Conference_tab_Past"),
             key: "past",
             contents: n.createElement(
               f.a,
               null,
-              n.createElement(ye, { conferenceInfo: t }),
+              n.createElement(ve, { conferenceInfo: t }),
               Boolean(a < t.rtEndTime) &&
                 n.createElement(R, { conferenceInfo: t })
             ),
@@ -17848,7 +17870,7 @@
             contents: n.createElement(
               f.a,
               null,
-              n.createElement(Be, { conferenceInfo: t }),
+              n.createElement(ge, { conferenceInfo: t }),
               Boolean(a < t.rtEndTime) &&
                 n.createElement(R, { conferenceInfo: t })
             ),
@@ -17867,21 +17889,21 @@
           }),
           n.createElement(
             "div",
-            { className: ge.ConferenceContentsCtn },
+            { className: Se.ConferenceContentsCtn },
             n.createElement(
               "div",
-              { className: ge.ConferenceHeaderCtn },
+              { className: Se.ConferenceHeaderCtn },
               n.createElement(b.a, {
-                className: ge.LogoImage,
+                className: Se.LogoImage,
                 rgSources: t.strLocalizedLogos,
               }),
               n.createElement(b.a, {
-                className: ge.LogoImageMobile,
+                className: Se.LogoImageMobile,
                 rgSources: t.strLocalizedMobileLogos,
               }),
               n.createElement(
                 "div",
-                { className: ge.ConferenceDateRange },
+                { className: Se.ConferenceDateRange },
                 n.createElement(p.c, {
                   rtStartDate: t.rtStartTime,
                   rtEndDate: t.rtEndTime,
@@ -17892,7 +17914,7 @@
           )
         );
       }
-      var we = {
+      var Me = {
         LandingPage: function (e) {
           return "/(conference|steamworksvirtualconference)/" + e;
         },
@@ -17902,13 +17924,13 @@
           i.e,
           null,
           n.createElement(i.c, {
-            path: we.LandingPage(":vanity_str"),
+            path: Me.LandingPage(":vanity_str"),
             render: function (e) {
               return n.createElement(a.a, {
                 config: {
                   "conference-root": function () {
                     var t = e.match.params.vanity_str;
-                    return n.createElement(ve, {
+                    return n.createElement(we, {
                       strVanity: t.toLocaleLowerCase(),
                     });
                   },
@@ -17916,10 +17938,10 @@
               });
             },
           }),
-          n.createElement(i.c, { component: Ce })
+          n.createElement(i.c, { component: ze })
         );
       };
-      function Ce(e) {
+      function ze(e) {
         return "dev" !== l.c.WEB_UNIVERSE
           ? n.createElement(i.b, { to: "/" })
           : n.createElement(

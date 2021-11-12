@@ -53299,7 +53299,12 @@
               return c.createElement(
                 "div",
                 {
-                  className: Object(d.a)(v.a.PreviewYouTubeVideo, i, o),
+                  className: Object(d.a)(
+                    v.a.PreviewYouTubeVideo,
+                    i,
+                    o,
+                    v.a.YouTubeCtn
+                  ),
                   id: e,
                 },
                 c.createElement("img", {

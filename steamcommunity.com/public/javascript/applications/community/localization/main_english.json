@@ -1840,6 +1840,7 @@
     "Confernece_About_LastUpdated": "Last Updated: %1$s",
     "Conference_tab_Live": "Live Now",
     "Conference_tab_Home": "Home",
+    "Conference_tab_BackupStreamView": "Backup Stream",
     "Conference_tab_Past": "Past Sessions",
     "Conference_tab_Info": "More Info",
     "Conference_No_Schedule_Yet": "No events scheduled yet",
