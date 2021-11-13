@@ -33597,8 +33597,10 @@
             ) {
               var r = s[n];
               if (
-                !this.props.ignoreStartingReferences ||
-                r.capsules !== this.props.ignoreStartingReferences.capsules
+                (!this.props.ignoreStartingReferences ||
+                  r.capsules !==
+                    this.props.ignoreStartingReferences.capsules) &&
+                null != r.capsules
               )
                 for (var l = 0, p = r.capsules; l < p.length; l++) {
                   var c = p[l];

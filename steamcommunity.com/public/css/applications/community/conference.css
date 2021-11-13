@@ -1816,7 +1816,7 @@ div#footer {
 }
 .conferencepages_ConferenceHome_3tSqD {
   width: 100%;
-  height: 100%;
+  height: calc(100vh + 630px);
   display: flex;
   flex: 1;
   flex-direction: row;
@@ -2260,7 +2260,7 @@ body.v6 {
   margin: 0px auto;
   padding: 0px 40px;
   box-sizing: border-box;
-  height: calc(100vh + 630px);
+  height: 100%;
 }
 html.responsive.touch .landing_ConferencePageCtn_oP_SP {
   padding: 0px 10px;

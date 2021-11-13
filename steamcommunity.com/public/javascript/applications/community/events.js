@@ -41100,8 +41100,10 @@
             ) {
               var l = o[r];
               if (
-                !this.props.ignoreStartingReferences ||
-                l.capsules !== this.props.ignoreStartingReferences.capsules
+                (!this.props.ignoreStartingReferences ||
+                  l.capsules !==
+                    this.props.ignoreStartingReferences.capsules) &&
+                null != l.capsules
               )
                 for (var s = 0, c = l.capsules; s < c.length; s++) {
                   var d = c[s];
