@@ -617,6 +617,7 @@
  sws_getCachedContext
  sws_scale
  sysctl
+ sysctlbyname
  sysctlnametomib
  tcgetattr
  tcsetattr

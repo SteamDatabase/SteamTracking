@@ -40,7 +40,7 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/libvstdlib_s.dylib
- o>Q
+xuY6f
 @loader_path/libtier0_s.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -217,7 +217,7 @@ QVWR
 ^_[]
 ^_[]
 ^_[]
-L^_[]
+\^_[]
 ^_[]
 AQaq
 ^_[]
@@ -671,6 +671,9 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+Unsupported macOS version %d.%d.%d
+Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
 Windows 3.11
@@ -712,9 +715,11 @@ MacOS 10.14
 MacOS 10.15
 MacOS 11 (as 10.16)
 MacOS 12 (as 10.17)
+MacOS 13 (as 10.18)
 MacOS 11
 MacOS 11.1
 MacOS 12
+MacOS 13
 Linux
 Linux 2.2
 Linux 2.4
@@ -777,7 +782,6 @@ macos
 linux
 android
 /System/Library/Frameworks/OpenGL.framework/OpenGL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Failed to load opengl framework!!!
 CGLSetCurrentContext
 CGLGetCurrentContext
@@ -2198,43 +2202,45 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-"~2!~
-Y l	
-(73.l
-Ad<r>a
-z8d%
-`zq.
+CE$m
+g$3)KZ/
+J]h,
+&/"^
+Mb_W
+Sj4C&O
+gO48k
 9Y|[_yB
 :YI<T
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Jg\k
-l{aQK}
-*np:
-d@X(
-PL+8
-|#140O
-aO!'
-J0dE
-AE(th<;
-p3xu
-n>2bX
-EZujv
-yI~L
->W}.
-dQJK
-@&I5
-iDDPm
-%*aDP4	
-BB3Y	C*
-~!?|
+4`[h
+ !CM?Qy
+p]}XW4X)
++fb`
+9S&J
+$inFj3
+i<*!
+pU|[0G
+*u2W
+hgv~
+`ML=v
+L@`	
+/5&\
+oK9l9
+T{LI
+t2aw
+fqaQQ
+ie>#
+l#Ugg
 hj>n
 =`-Z
-{rk"O8*
-.?~QMrc@Bf :
-sba"
+Y:$F
+Nj`f
+>3s9
+{U/W*
+Xsdb
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2290,7 +2296,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224759Z0/
+211116115048Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2298,18 +2304,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		QkPXRlWbQznnWlOdMRomP9hGkHg=
+		+sk/zOfKv9D+BN/Tf6ubn8A1c5E=
 		</data>
 		<data>
-		vHud7XxFul4Rn/pmKWf+OcZjJ3U=
+		l4OaLO9kNWaOYIpd4vBYbrHB3Pg=
 		</data>
 	</array>
 </dict>
 </plist>
-X&x#
-1+d*
-_1I\P
-20211111224846Z0
+}MWl
+`Och
+iP,^
+_^v2u
+20211116115201Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2369,9 +2376,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224846Z0#
-'Wue\
-mKG[9
+211116115201Z0#
+7voky
+'@iEZ
+VvxX,C
+\/eg[6
++=d(D
 __TEXT
 __text
 __TEXT
@@ -2677,6 +2687,7 @@ AVSH
 [A^]
 AVSH
 w-Hc
+Lc5Fl
 [A^]
 AWAVAUATSH
 ~vLi
@@ -2931,6 +2942,7 @@ AWAVAUATSPI
 AVSI
 [A^]
 AWAVSH
+Lc5R
 x(Hc
 VUUUH
 X[A^A_]
@@ -3491,6 +3503,9 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+Unsupported macOS version %d.%d.%d
+Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
 Windows 3.11
@@ -3532,9 +3547,11 @@ MacOS 10.14
 MacOS 10.15
 MacOS 11 (as 10.16)
 MacOS 12 (as 10.17)
+MacOS 13 (as 10.18)
 MacOS 11
 MacOS 11.1
 MacOS 12
+MacOS 13
 Linux
 Linux 2.2
 Linux 2.4
@@ -3597,7 +3614,6 @@ macos
 linux
 android
 /System/Library/Frameworks/OpenGL.framework/OpenGL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Failed to load opengl framework!!!
 CGLSetCurrentContext
 CGLGetCurrentContext
@@ -5040,41 +5056,41 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Bkpj
-H%iX
-2.V: 
->!&W
-"5p,
-T[g^w
-?.QQqf
-vS]\w=
-/6bDe
+*&1:
+D#*DS*
+ I<s;3=k$
+2k!!U
 52B)3
 oDg(
 c$$6
+nItI
+L:)#W
+}b"I
+U<G,J
+YgtAK%<
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-	19#
-f]lU#D
-SH}C
-b?+61
-t*(6
-AprF
-/*|;
-4=xW
-EcRA
-QZa/Ls
-#~*K
-9+|P
+@Uy9]v
+U)lDK
+8jHm
+4Sd I
+Ut\BC
+sQ?]
+Nu>J
+2f8b
+P_4&
+[z|F
+I^{ sO|
+i_]?
+mYnG
+sZ	1
 C24zZ
 3:gz,	
 mH3Y
-q ^SS
-z3PI
-O9|P
-I GC
+_1~<
+~c3NO
 wP,)
 HGFv{J
 Apple Inc.1&0$
@@ -5132,7 +5148,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224759Z0/
+211116115048Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5140,21 +5156,21 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		KY6h+IbdsD+/DgIZQRgsgR5We78=
+		ctlCmjykxNBlqRPFc5WjEugFf/k=
 		</data>
 		<data>
-		7dOG7J1NvsisL53xy/UjULfAPCg=
+		y9DriT9QiHCpTzVSzjtof95LL7c=
 		</data>
 	</array>
 </dict>
 </plist>
-LY$O%y
-'H\U
-~vl%
-V+CY
-t)-r
-;7Is
-20211111224846Z0
+Ct"/
+r7sMe
+qa_`
+yA0W.T{
+ F`zX
++C2P
+20211116115201Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5214,10 +5230,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224846Z0#
-'J !RL}a
+211116115201Z0#
 wI<<2
-_Gg>.
+%OY5
+3s%PZe
+g&8k
 __TEXT
 __text
 __TEXT
@@ -5350,22 +5367,23 @@ T9|@
 R(#	
 Rh!	
 Rl}@
-CZ	P
+C`	P
 +ih8J	
 Lii8k	
+49(,
 T	]	
 ii8J	
 ii8J	
 yixJ	
 +yhxJ	
 ii8J	
-T@I	0
 @9,!
 @9,!
-Bc	0
-bb	P
+`b	p
+be	0
 Th! 
 T6|@
+""	0
 K"}@
 @9t;
 jv8(
@@ -5425,16 +5443,12 @@ R	kzx*
 ji8?
 7HK6
 @9[3
-(j	X
-hi	X
-hd	X
-H@	X
->	X)
-(<	X
+IB	X)
 hj8*i(8
 ?i(8
-)0	X)
+3	X)
 .@8h
+		X)
 @9 z
 4kj 8
 lj 8
@@ -5685,6 +5699,9 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+Unsupported macOS version %d.%d.%d
+Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
 Windows 3.11
@@ -5726,9 +5743,11 @@ MacOS 10.14
 MacOS 10.15
 MacOS 11 (as 10.16)
 MacOS 12 (as 10.17)
+MacOS 13 (as 10.18)
 MacOS 11
 MacOS 11.1
 MacOS 12
+MacOS 13
 Linux
 Linux 2.2
 Linux 2.4
@@ -5791,7 +5810,6 @@ macos
 linux
 android
 /System/Library/Frameworks/OpenGL.framework/OpenGL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Failed to load opengl framework!!!
 CGLSetCurrentContext
 CGLGetCurrentContext
@@ -7225,45 +7243,39 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-pQU%1
-Y<j.
-YZ}UqY
-Yt*Q	
-RS=4
-\=_M=
-0jiT
-iug_)
-}~Eu
-"{v 
+Ru,a$
+Hrrt
+	FO$m
+~uEW
+66[gb|
+Mbv*
 y!i$?VU
-[kv61
-x O+
+e4[vE
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-dpqs
-Na v
-.IS2
-m%Ld
-ybS|
-X=?L&0
-rq=nJ<
-sDF&
-@%:v
-+=bO
-BCW`
-!'n?
-!<{'0
-X]!u
+It]]
+ifJ2@
+D\T{
+TK! y|
+1]]'>
+{ey`|(
+H.G^
+qYYF
+;1obi
+GZ{,=
+	PSOb
+Bvbo
+w85f
+,D%]M
+awnJV
 Cs	y
 *i_q
 8DJ8
-#WM}y
-6zx:
-KVE!
-o|h`
-n2;]
+`	W	
++%$v\
+B@mp
 g(_u
 _"R0
 Apple Inc.1&0$
@@ -7321,8 +7333,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224759Z0/
- &:l`=
+211116115048Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -7330,18 +7341,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		RgIlAcLPDQvzEDEwc+RLpkjSpFg=
+		4Nrmu60D/J0qqbWMfxq5QlbapZo=
 		</data>
 		<data>
-		oTFXm5HokqZVwVVjPJ47DwAl6FM=
+		bQzVf96kIszDF3i7n6JR6Z1Jws4=
 		</data>
 	</array>
 </dict>
 </plist>
-`2gs`
-t>l7|
-_)?zx
-20211111224846Z0
+\_b+9Ms$
+983P
+20211116115201Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -7401,9 +7411,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224846Z0#
-yJ$XE=7|
-i1dF
-7p$*n
-{V)ZP}O
-rWVcS
+211116115201Z0#
+=Ai5yqN
+=[_7kaH
+<v{iY
+pvJ&

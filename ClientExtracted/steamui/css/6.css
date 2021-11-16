@@ -17835,12 +17835,13 @@ div.ShortWindow
   will-change: transform;
 }
 .appportrait_Draggable_1pwP4.appportrait_Soundtrack_3Lu_5
+  :not(.appportrait_InDownloads_3J3TT)
   .appportrait_PortraitImage_2IYf7 {
   padding-top: 100%;
   bottom: initial;
 }
 .appportrait_Draggable_1pwP4.appportrait_Soundtrack_3Lu_5
-  .appportrait_LibraryItemBox_WYgDg {
+  :not(.appportrait_InDownloads_3J3TT).appportrait_LibraryItemBox_WYgDg {
   height: 66.666666%;
   margin-top: 25%;
 }

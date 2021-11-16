@@ -535,6 +535,7 @@
  strrchr
  strstr
  sysctl
+ sysctlbyname
  sysctlnametomib
  system
  system$UNIX2003

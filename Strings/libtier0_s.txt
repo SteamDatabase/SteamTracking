@@ -33,7 +33,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-+i:Y
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -41,7 +40,12 @@ __LINKEDIT
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 ,^_[]
 ,^_[]
-^_[]
+Appl3
+pple
+ualA
+Virt
+QQPRW
+Appl3
 Unkn
 ^_[]
 ^_[]
@@ -355,6 +359,7 @@ WQPV
 -nocrashdialog
 -debugbreak
 AuthenticAMD
+machdep.cpu.brand_string
 hw.physicalcpu
 hw.logicalcpu
 Unable to determine CPU Frequency. Try defining CPU_MHZ.
@@ -413,8 +418,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Nov 11 2021
-14:47:35
+Nov 16 2021
+03:50:22
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -778,6 +783,7 @@ A`?Ap
 @_strrchr
 @_strstr
 @_sysctl
+@_sysctlbyname
 @_sysctlnametomib
 @_system$UNIX2003
 @_time
@@ -1747,6 +1753,7 @@ _strncpy
 _strrchr
 _strstr
 _sysctl
+_sysctlbyname
 _sysctlnametomib
 _system$UNIX2003
 _time
@@ -1760,37 +1767,38 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-z8$(
-0Alk*i
-!ZQpR
-,~Hli
-"sX_
- qP;
-&%.G
-wPk%
-+!=+
-	Ji6
+h:5Y
+B5-w
+r	$zp
+CUpQ
+L)>+
+B|<2A
+,I0*>
+W:DN
+mT*g^6
+F	o+
+3KV^r
+*|r=
+OOLY
+uMzB\
+mJ`KGN
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-QAMM
-HU@{u
-FF+[
-sBN~
-Bo_#
-c_&e
-~S(X
-svmF
-/Ya=
-K)Q!
-1"KI
-aEk@
-tj-G
-h?Py
-4j}1TF
-]{+l
-XrkKV
+cHFt
+B+0.
+>pEr
+&T*&=
+^kE]
+i@{^
+6+Fj
+]sJ\
+VO?@
+vh'U
+[y7c
+dS1xH
+|M-s
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1846,8 +1854,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224739Z0/
-+^>f
+211116115025Z0/
+XQG0
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1855,38 +1863,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		lt2L/mETKVxbjh+65h8U6m/foxk=
+		L/s5R/6ZmfNbTRlP6aftYg9WTJ8=
 		</data>
 		<data>
-		FnAz1WSAh/FRvkHWK2t/De0W+OU=
+		wKLDeQfiDoTy/jq53B7621eccfQ=
 		</data>
 	</array>
 </dict>
 </plist>
-7Utz
-	w<(5
-20211111224825Z0
+y?h'k
+m.nt
+20211116115138Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211026174001Z
-211207174000Z0B1
-Timestamp Signer NWK11
+211026173001Z
+211207173000Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
- Fky??	
-3#KH*
-&7?Ot
-O3^d
+p:w{
+<}NZz
+Vqeb
+%0a"a
++tv9
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-c=jX
-CH@	
-;`\_
->-$lY@
-OKBP
+eP~q
+ZR}BE
+a ;|#
+~o@'0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1925,11 +1933,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224825Z0#
-Ms0+
-wI<<2
-JI+rr
-d4eG
+211116115138Z0#
+69qs
+gH`x
+7C`r<
 __TEXT
 __text
 __TEXT
@@ -1965,6 +1972,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+'&p96
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -1973,6 +1981,10 @@ __LINKEDIT
 AWAVAUATSH
 [A\A]A^A_]
 [A\A]A^A_]
+Appl3
+alApple
+VirtualAH
+Appl3
 Unknown
 AWAVAUATSH
 [A\A]A^A_]
@@ -2004,7 +2016,7 @@ AWAVAUATSPE
 [A\A]A^A_]
 AVSH
 [A^]
-9=!F
+9=AF
 AVSH
 [A^]
 AVSH
@@ -2593,6 +2605,7 @@ AWAVATSE1
 -nocrashdialog
 -debugbreak
 AuthenticAMD
+machdep.cpu.brand_string
 hw.physicalcpu
 hw.logicalcpu
 Unable to determine CPU Frequency. Try defining CPU_MHZ.
@@ -2650,8 +2663,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Nov 11 2021
-14:47:35
+Nov 16 2021
+03:50:22
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -2849,7 +2862,7 @@ N(knN
 N10SteamVProf13CVProfManagerE
 Mb@?
 !(pH`
-A`?Ap
+B`?Ap
 RA\ATASAp
 @__ZNSt12length_errorD1Ev
 @__ZTISt12length_error
@@ -3012,6 +3025,7 @@ RA\ATASAp
 @_strrchr
 @_strstr
 @_sysctl
+@_sysctlbyname
 @_sysctlnametomib
 @_system
 @_time
@@ -3972,6 +3986,7 @@ _strncpy
 _strrchr
 _strstr
 _sysctl
+_sysctlbyname
 _sysctlnametomib
 _system
 _time
@@ -3985,28 +4000,36 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-:9aw
-EI.`
-:6&[h
-U)m>
-U}`%
+F#xE
+eh8	
++9mk
+LBn[
+SJoT
+:5r#
+xFM_o
+S5A>oC
+W_h{
+b?BI
+(yQdS
+e,%l
+Qj8O
+E;vq
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-YF=Eo<M7
-Ud	:
-a(Id_Sh
-'wJ^
-I%m(
--Q[:O
-.zyx
-7| 3
-Wt^#c
-W7P9
-,<*t$[
-	6<>J
-9CT;
+7!a'I
+W+pP
+Y)8?B7
+NH{Q:
+&a5d
++e,N
+EU ln
+Uidr<<@
+eo]_
+c:os
+>~jpn
+/LHU
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4062,8 +4085,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224739Z0/
- /:E`*9P
+211116115025Z0/
+DoA0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4071,19 +4094,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		2ykXlZ39u/Qaf0ou+q2sG38J+Do=
+		zVAYFasNJvcB4+vxShMObL5Eb0E=
 		</data>
 		<data>
-		Hdsqi1Z82OOM725+2mulgO2Nbgs=
+		n46BoqfrS0PSSlEtGrQz3k8S6rg=
 		</data>
 	</array>
 </dict>
 </plist>
-giw"
-4h`2[
-hRgeR^
-G{EGf\o~
-20211111224825Z0
+mq]q
+-0o<d
+20211116115138Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4143,12 +4164,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224825Z0#
-lp\za
-etC]G
-\#ge
-eg]UV
-w(Io
+211116115138Z0#
+>)[~x
 __TEXT
 __text
 __TEXT
@@ -4185,7 +4202,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-aP	Th5
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -4370,8 +4386,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Nov 11 2021
-14:47:35
+Nov 16 2021
+03:50:22
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5720,8 +5736,6 @@ rc1)
 r*Uhs
 ~j{+
 <}Bq
-/8G;
-{5H\
 "9+g]
 s>01
 2d?!
@@ -5782,9 +5796,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224739Z0/
-#@0[
-b%:ZVYv
+211116115025Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5792,40 +5804,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		ppykNVq5cVLbr4FmXwUFWzWR/8k=
+		We52NleqZAincnz7wqEduJmrqB4=
 		</data>
 		<data>
-		UpG0noHg5YShUpR22Mvp8KlXlGI=
+		4lB97y2QYPd+BD/4Q1wdpnXCamI=
 		</data>
 	</array>
 </dict>
 </plist>
-;W~N
-koZ8
-/gxiJt~
-2P#~R&
-20211111224825Z0
+geCi
+HxWP
+20211116115138Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211026173001Z
-211207173000Z0B1
-Timestamp Signer NWK21
+211026174001Z
+211207174000Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-p:w{
-<}NZz
-Vqeb
-%0a"a
-+tv9
+ Fky??	
+3#KH*
+&7?Ot
+O3^d
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-eP~q
-ZR}BE
-a ;|#
-~o@'0
+c=jX
+CH@	
+;`\_
+>-$lY@
+OKBP
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5864,6 +5874,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211111224825Z0#
-;3P*0
-aN (
+211116115138Z0#
+wI<<2
+Q'Q0;1
+M6$7K
+.$Mc
