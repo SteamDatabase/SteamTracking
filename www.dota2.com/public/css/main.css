@@ -11635,6 +11635,13 @@ a {
   margin-bottom: 10px;
   line-height: 26px;
 }
+.updatecapsule_UpdateCapsule_-Eouv a {
+  text-decoration: underline;
+  transition-duration: 0.2s;
+}
+.updatecapsule_UpdateCapsule_-Eouv a:hover {
+  filter: brightness(1.2);
+}
 .updatecapsule_UpdateCapsule_-Eouv h2 {
   font-weight: 600;
   color: #fff;
