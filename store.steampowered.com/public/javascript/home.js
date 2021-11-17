@@ -58,8 +58,6 @@ GHomepage = {
 	MainCapCluster: null,
 	usabilityTracker: null,
 
-	rgMapGenreChoices: [],
-
 	InitLayout: function()
 	{
 		var $Ctn = $J('.home_page_body_ctn');
@@ -215,7 +213,6 @@ GHomepage = {
 			GHomepage.rgShuffleModules = rgParams.rgShuffleModules || [];
 			GHomepage.nModuleShuffleCohort = rgParams.nModuleShuffleCohort || 0;
 			GHomepage.bDisplayShuffleCohort = rgParams.bDisplayShuffleCohort || false;
-			GHomepage.rgMapGenreChoices = rgParams.rgMapGenreChoices || false;
 	} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
@@ -744,7 +741,7 @@ GHomepage = {
 		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
 
 		var rgScreenshots = rgItemData.screenshots;
-		if( rgScreenshots && rgScreenshots.length )
+		if( rgScreenshots && rgScreenshots.length && !window.UseTabletScreenMode() )
 		{
 			for ( var i = 0; i < 4 && i < rgScreenshots.length; i++ )
 			{
@@ -1662,7 +1659,7 @@ GHomepage = {
 				$CapCtn.append ( $J ( '<div/>', { 'class': 'recently_updated_desc' } ).text ( oItem.description ) );
 				if ( oItem.announcementid.length != 0 )
 				{
-					var strAnnouncementLink = 'https://steamcommunity.com/ogg/' + oItem.appid + '/announcements/detail/' + oItem.announcementid + '/';
+					var strAnnouncementLink = 'https://store.steampowered.com/news/app/' + oItem.appid + '/view/' + oItem.announcementid + '/';
 					var $AnnouncementLink = $J ( '<div/>', {
 						'class': 'recently_updated_announcement_link',
 						'text': 'View Update Details',
@@ -1977,7 +1974,14 @@ GHomepage = {
 		if ( !rgItemData || !rgReviews || rgReviews.length == 0 )
 			return null;
 
-		let $Item = $J( '<div>', { 'class' : 'community_recommendation_app responsive_scroll_snap_start' } );
+		var itemParams = { 'class' : 'community_recommendation_app responsive_scroll_snap_start' };
+		let $Item = $J( '<div>', itemParams );
+		if ( window.UseTabletScreenMode() )
+		{
+			GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, itemParams );
+			$Item = $J( '<a/>', itemParams );
+		}
+
 		GStoreItemData.BindHoverEventsForItem( $Item, oItem );
 
 		var $ItemLink = $J('<a/>', params );

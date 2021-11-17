@@ -84,8 +84,8 @@
           a.d,
           { "data-tooltip-text": Object(o.f)(s), onClick: n },
           e.bIsMinimized
-            ? r.createElement(i.H, null)
-            : r.createElement(i.K, null)
+            ? r.createElement(i.M, null)
+            : r.createElement(i.P, null)
         );
       }
       function b(e) {
@@ -96,7 +96,7 @@
             className: Object(u.a)(l.HelperTooltip, "HelperTooltip"),
           },
           " ",
-          r.createElement(i.A, null)
+          r.createElement(i.E, null)
         );
       }
     },
@@ -233,7 +233,7 @@
             (e.prototype.LoadSession = function (e, t, n) {
               var a, o, i, r, u, l, c, m, v, p;
               return Object(s.b)(this, void 0, void 0, function () {
-                var _, b, A, g, h, C, S, E, w, I, O, N, T, j, k, q, M;
+                var _, b, A, g, h, C, S, E, w, I, O, N, T, k, j, q, M;
                 return Object(s.e)(this, function (U) {
                   switch (U.label) {
                     case 0:
@@ -309,7 +309,7 @@
                                   : r.bUserCanModerate) && void 0 !== u
                               ? u
                               : C.data.qanda.bUserCanModerate),
-                          (j =
+                          (k =
                             null !==
                               (c =
                                 null === (l = this.m_mapQAndASessions.get(e)) ||
@@ -318,12 +318,12 @@
                                   : l.bUserCanAskQuestions) && void 0 !== c
                               ? c
                               : C.data.qanda.bUserCanAskQuestions),
-                          (k = Object(s.a)(Object(s.a)({}, C.data.qanda), {
+                          (j = Object(s.a)(Object(s.a)({}, C.data.qanda), {
                             bUserCanModerate: T,
-                            bUserCanAskQuestions: j,
+                            bUserCanAskQuestions: k,
                           })),
-                          this.m_mapQAndASessions.set(e, k),
-                          this.GetQAndACallbackList(e).Dispatch(k),
+                          this.m_mapQAndASessions.set(e, j),
+                          this.GetQAndACallbackList(e).Dispatch(j),
                           this.UpdatePendingQuestionList(
                             C.data.qanda.rgQuestionGIDs
                           ),
@@ -975,8 +975,8 @@
         O = n("YLyR"),
         N = n("6Y59"),
         T = n("0OaU"),
-        j = n("5E+2"),
-        k = n("DisI"),
+        k = n("5E+2"),
+        j = n("DisI"),
         q = n("exH9"),
         M = n("TLQK"),
         U = n("CdLH"),
@@ -1039,7 +1039,7 @@
                   l.strQuestionText
                 ),
                 o.a.createElement(
-                  j.a,
+                  k.a,
                   {
                     toolTipContent:
                       a &&
@@ -1050,7 +1050,7 @@
                   o.a.createElement(
                     "div",
                     { className: Object(q.a)(p, L.a.Votes), onClick: v },
-                    o.a.createElement(N.eb, { className: L.a.RateIcon }),
+                    o.a.createElement(N.kb, { className: L.a.RateIcon }),
                     o.a.createElement(
                       "div",
                       { className: L.a.VoteCount },
@@ -1104,7 +1104,7 @@
                 o.a.createElement(
                   "div",
                   { className: L.a.AnswerCheck },
-                  o.a.createElement(N.p, { color: "#67c1f5" })
+                  o.a.createElement(N.q, { color: "#67c1f5" })
                 ),
                 Object(M.f)("#QAndA_ModeratorAnswerTitle")
               ),
@@ -1135,7 +1135,7 @@
               o.a.createElement(
                 "div",
                 { className: L.a.AnswerCheck },
-                o.a.createElement(N.p, { color: "#67c1f5" })
+                o.a.createElement(N.q, { color: "#67c1f5" })
               ),
               Object(M.f)("#QAndA_AlreadyAnsweredTitle")
             );
@@ -1190,7 +1190,7 @@
             { className: L.a.ToolRow },
             Object(M.f)("#QAndA_ModeratorOtherOptionsLabel"),
             o.a.createElement(
-              j.a,
+              k.a,
               {
                 toolTipContent: Object(M.f)(
                   "#QAndA_ModerateApproveButton_ttip"
@@ -1209,7 +1209,7 @@
               )
             ),
             o.a.createElement(
-              j.a,
+              k.a,
               { toolTipContent: Object(M.f)("#QAndA_ModerateHideButton_ttip") },
               o.a.createElement(
                 w.d,
@@ -1224,7 +1224,7 @@
               )
             ),
             o.a.createElement(
-              j.a,
+              k.a,
               { toolTipContent: Object(M.f)("#QAndA_QuickAnswerButton_ttip") },
               o.a.createElement(
                 w.d,
@@ -1269,7 +1269,7 @@
                 ),
               },
               o.a.createElement(
-                k.d,
+                j.d,
                 {
                   title: Object(M.f)("#QAndA_ModeratorViewHeader"),
                   className: L.a.ModeratorInstructions,
@@ -1290,7 +1290,7 @@
                 )
               ),
               o.a.createElement(
-                k.d,
+                j.d,
                 {
                   title: Object(M.f)("#QAndA_HiddenQuestionsHeader"),
                   className: L.a.AnsweredSectionHeader,
@@ -1354,7 +1354,7 @@
               o.a.createElement(
                 "div",
                 { className: L.a.ReloadIcon },
-                o.a.createElement(N.S, null)
+                o.a.createElement(N.X, null)
               )
             ),
             C
@@ -1363,7 +1363,7 @@
                   null,
                   Object(M.f)("#QAndA_ModeratorLabelHeader"),
                   o.a.createElement(
-                    j.a,
+                    k.a,
                     {
                       toolTipContent: Object(M.f)(
                         "#QAndA_ModerateHideAllButton_ttip"

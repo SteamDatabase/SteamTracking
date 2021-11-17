@@ -6,6 +6,11 @@ body{
 	 height: 100%;
 }
 
+h1 {
+    color: white;
+    font-weight: 200;
+}
+
 span.motd {
 	font-size: 32px;
 	display:table;
@@ -331,6 +336,27 @@ span.motd {
 		font-style: italic;
 	}
 
+.two_column_page {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+    .two_column_page .left {
+        max-width: 800px;
+        padding-top: 15px;
+        margin: 0px;
+    }
+    .two_column_page .right {
+        width: 100%;
+    }
+    .two_column_page .right .panel {
+        padding: 16px 0 16px 28px;
+        box-sizing: border-box;
+        color: #CACACA;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
 .landingLeftCol {
 	margin-right: 320px;
 	padding: 15px 0;
@@ -344,6 +370,11 @@ span.motd {
 	.landingLeftCol>.section {
 		margin-bottom: 36px;
 	}
+
+    .landingLeftCol.withbackground {
+        background: #323539;
+        padding: 24px;
+    }
 
 .landingRightCol {
 	float: right;
@@ -3287,6 +3318,33 @@ div .cdkey_request_details_row
     text-decoration: underline;
 }
 
+/* deck review button in the release progress section */
+.releaseStep .deck_optional {
+	padding-top: 20px;
+	height: 18px;
+	text-transform: uppercase;
+}
+.releaseStep .deck_image {
+	height: 24px;
+	padding: 5px;
+}
+.releaseStep .deck_description {
+	padding: 5px;
+	margin-top: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	display: grid;
+	grid-template-columns: 30px 1fr;
+	column-gap: 5px;
+	align-items: center;
+	background-color: #94B7CA;
+	border-radius: 3px;
+	color: #2F2F2F;
+}
+.releaseStep .deck_description .details a {
+	color: grey;
+}
+
 /* deck review section at top of app landing page */
 .app_landing_deck {
 	width: 400px;
@@ -3310,33 +3368,43 @@ div .cdkey_request_details_row
 }
 
 .app_landing_deck .deck_image {
-	height: 36px;
+	height: 32px;
 	padding-right: 20px;
+	padding-left: 8px;
 }
 
-.app_landing_deck .body .title{
-	padding: 10px 20px;
-	display: flex;
-	flex-direction: row;
-	line-height: 24px;
+.app_landing_deck .body .description,
+.app_landing_deck .body .title {
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	row-gap: 0px;
+	line-height: 18px;
 	align-items: center;
 	font-size: 18px;
+}
+.app_landing_deck .body .title {
+	padding: 12px 10px 10px 10px;
+}
+.app_landing_deck .body .description {
+	padding: 0px 10px 10px 10px;
+	line-height: 18px;
+	font-size: 12px;
 }
 .app_landing_deck .footer {
 	line-height: 24px;
 	font-size: 14px;
 	width: 100%;
 	background-color: #42494C;
-	padding: 5px 0px;
-}
-.app_landing_deck .footer .test_results,
-.app_landing_deck .footer .details {
-	padding-left: 20px;
+	padding: 5px 0px 10px 0px;
 }
 .app_landing_deck .footer .test_results {
 	padding-top: 10px;
 	padding-bottom: 5px;
 	font-size: 18px;
+}
+.app_landing_deck .footer .test_results,
+.app_landing_deck .footer .details {
+	padding-left: 20px;
 }
 
 .deck_header.left.deck_pending,
@@ -3400,7 +3468,6 @@ div .cdkey_request_details_row
 }
 .deck_review_nav {
 	padding: 10px;
-	min-height: 30px;
 }
 .deck_review_results fieldset {
 	border: 0;
@@ -3409,9 +3476,6 @@ div .cdkey_request_details_row
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
-}
-.deck_review_results .section .section_header {
-	text-transform: uppercase;
 }
 .deck_review_results .deck_status_description {
 	padding-bottom: 20px;
@@ -3426,25 +3490,66 @@ div .cdkey_request_details_row
 	padding-bottom: 5px;
 	display: inline-flex;
 }
+    .deck_review_results .test_result .steam_deck_compat {
+        flex-shrink: 0;
+        margin-right: 6px;
+    }
+.deck_review_results .category_row {
+	display: inline-flex;
+}
+.deck_review_results .category_icon {
+	height: 16px;
+	padding: 1px 2px 0px 2px;
+	vertical-align: middle;
+}
 .deck_review_results .deck_result_details {
 	padding: 20px;
-	margin-left: 20px;
-	display: flex;
-	flex-direction: row;
+	display: grid;
 	background-color: #43484E;
-	justify-content: space-evenly;
-}
-.deck_review_results .deck_result_details .detail_cell {
-	width: 50%;
-	text-align: left;
+	grid-template-columns: 4fr 6fr;
 }
 
+.deck_review_results .select_build_row {
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+.deck_review_results .select_build_row .build_selection {
+	width: 200px;
+	max-height: 30px;
+	margin-left: 20px;
+}
+
+.deck_review_results .button_row {
+	margin: 10px 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+}
+.deck_review_results .deck_review_btn {
+	color: white;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	vertical-align: middle;
+	padding: 0px 20px !important;
+	border-radius: 2px;
+	background: linear-gradient(90deg, #3A9BED 0%, #235ECF 100%) !important;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.deck_review_results .deck_review_btn.grey {
+	color: white;
+	background: grey !important;
+}
+
+/* The deck test details section below the summary */
 .deck_results_raw {
 	padding: 20px;
-	margin-left: 20px;
 	margin-bottom: 20px;
 	display: grid;
-	grid-template-columns: 100px 1fr 1fr;
+	grid-template-columns: 1fr 3fr 6fr;
 	row-gap: 5px;
 	background-color: #43484E;
 }
@@ -3456,6 +3561,36 @@ div .cdkey_request_details_row
 .deck_results_raw .raw_test_result {
 	text-transform: uppercase;
 }
-.deck_test_history_section {
-	padding-top: 10px;
+
+/* history section on right side of deck review details page */
+.deck_history_section {
+	padding: 0px;
+}
+.deck_history_section .history_header {
+	padding: 7px 0px 5px 0px;
+	text-transform: uppercase;
+}
+.deck_history_section_header {
+	margin-top: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+}
+.deck_history_section_header.help_request {
+	margin-bottom: 5px;
+}
+
+.deck_history_section .test_result {
+	display: block;
+	background-color: #43484E;
+	padding: 10px;
+    margin-bottom: 1px;
+}
+.deck_history_section .test_result .category_row {
+	padding-top: 3px;
+}
+
+.history_pending .test_result {
+    border: 2px dashed;
 }

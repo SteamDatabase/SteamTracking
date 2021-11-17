@@ -31,6 +31,7 @@
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
 	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -73,6 +74,13 @@
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
+	/* Animation */
+	--gpTransition-Short: all 0.2s ease;
+
+	/* Focus */
+	--gpFocus: 4px solid white;
+	--gpUnfocus: 0px solid #FFFFFF00;
+
 }
 
 @media screen and ( min-width: 501px ) and ( max-width: 910px ) {
@@ -108,10 +116,6 @@
 		width: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
 	}
 
-	html.responsive .spotlight_content {
-		width: calc(((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3) - 32px);
-	}
-
 	html.responsive .home_ctn {
 		padding: 8px var(--gpSpace-Gutter);
 		overflow: visible;
@@ -125,16 +129,29 @@
 		margin: unset;
 	}
 
-	html.responsive .friends_recently_purchased .ds_steam_deck_compat {
-		bottom: unset;
-		top: 95px;
+	html.responsive .friends_recently_purchased .carousel_items {
+		height: unset;
 	}
 
-	html.responsive .store_capsule .friends_container {
+	html.responsive .friends_recently_purchased .ds_steam_deck_compat {
+		bottom: unset;
+		top: 87px;
+	}
+
+	html.responsive .friends_recently_purchased .store_capsule {
+		height: 148px;
+	}
+
+	html.responsive .friends_recently_purchased .friends_container {
 		border-top: unset;
 		background: unset;
 		padding: 0px 0px 0px 8px;
-		margin-top: -6px;
+		top: -37px;
+	}
+
+	html.responsive .friends_recently_purchased .friends_container .avatars a img {
+		border-radius: var(--gpCorner-Medium);
+		overflow: hidden;
 	}
 
 	html.responsive img.nonresponsive_hidden {
@@ -145,6 +162,7 @@
 		opacity: unset;
 		font: var(--gpText-BodyMedium);
 	}
+
 
 
 
@@ -219,6 +237,7 @@
 
 	html.responsive .carousel_container.maincap .discount_block {
 		padding-top: 0px;
+		text-align: right;
 	}
 
 	html.responsive .store_main_capsule .app_name > div {
@@ -228,6 +247,11 @@
 	html.responsive .store_main_capsule .ds_steam_deck_compat {
 		bottom: 70px;
 	}
+
+	html.responsive .carousel_container.maincap .reason {
+		/* display: block; */
+	}
+
 
 
 	/* Takeunder */
@@ -258,13 +282,20 @@
 		margin-top: 187px;
 	}
 
+
+
+
 	/* Browse Steam */
 	html.responsive .big_buttons .button_container {
 		grid-template-columns: repeat( 4, 1fr );
 	}
 
-	html.responsive .button_container {
+	html.responsive .big_buttons .button_container {
 		gap: var(--gpSpace-Gap);
+	}
+
+	html.responsive .big_buttons h2.home_page_content_title {
+		margin-bottom: 12px;
 	}
 
 	html.responsive .big_button {
@@ -327,16 +358,8 @@
 		grid-gap: var(--gpSpace-Gap);
 	}
 
-	html.responsive .home_area_spotlight .ds_steam_deck_compat {
-		bottom: unset;
-		top: 5px;
-	}
-	html.responsive .home_area_spotlight.ds_flagged .ds_steam_deck_compat {
-		top: 35px;
-	}
-
-	html.responsive .spotlight_col .ds_steam_deck_compat {
-		bottom: 50px;
+	html.responsive .spotlight_col .daily_deal .ds_steam_deck_compat {
+		bottom: 52px;
 	}
 
 	.home_area_spotlight {
@@ -349,6 +372,20 @@
 
 	.carousel_container .carousel_items:not(.no_paging) > * {
 		width: unset;
+	}
+
+	html.responsive .spotlight_content {
+		padding: 8px;
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	html.responsive .home_area_spotlight.ds_flagged .ds_steam_deck_compat {
+		top: 35px;
+	}
+
+	html.responsive .home_area_spotlight .discount_block {
+		text-align: right;
 	}
 
 
@@ -374,6 +411,11 @@
 
 
 
+	/* Community recommends */
+
+
+
+
 
 	/* Recommendations */
 	html.responsive body.v6 .page_content_ctn.dark {
@@ -381,7 +423,6 @@
 	}
 
 	html.responsive .home_ctn.home_content_ctn {
-		/* padding: calc(var(--gpSpace-Gutter) * 1.5) var(--gpSpace-Gutter); */
 		padding: var(--gpSpace-Gutter);
 	}
 
@@ -427,7 +468,10 @@
 		margin-top: var( --gpStoreMenuHeight );
 	}
 
-	/* Community */
+
+
+
+	/* Community recommends */
 	.community_recommendation_app > .community_recommendation_capsule {
 		box-shadow: unset;
 		background: unset;
@@ -435,9 +479,9 @@
 
 	html.responsive .community_recommendation_app > .right_col {
 		background: unset;
-		height: 200px;
+		height: 188px;
 		border-radius: 0px;
-		padding-right: 8px;
+		padding-right: 0px;
 	}
 
 	.community_recommendations_block > .review_box .view_more,
@@ -449,12 +493,26 @@
 		height: 100%;
 	}
 
-	.community_recommendations_block > .review_box {
-		padding: var(--gpSpace-Gap);
+	html.responsive .community_recommendations_block > .review_box {
+		padding: 40px var(--gpSpace-Gap) var(--gpSpace-Gap);
 	}
 
 	html.responsive .community_recommendation_app .review_box .content {
 		height: unset;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		padding-right: 8px;
+	}
+
+	html.responsive .community_recommendation_app .ds_steam_deck_compat {
+		bottom: -34px;
+	}
+
+	html.responsive .community_recommendation_app .discount_block {
+		bottom: -30px;
 	}
 
 	.community_recommendation_app > .community_recommendation_capsule > .capsule {
@@ -486,6 +544,17 @@
 
 
 
+	/* Updates and offers marketing messages */
+	html.responsive .home_marketing_message .discount_block {
+		padding: 6px;
+	}
+
+	html.responsive .home_marketing_message .ds_steam_deck_compat {
+		bottom: 2px;
+	}
+
+
+
 
 	/* Deep dive */
 	#module_deep_dive {
@@ -509,7 +578,7 @@
 
 	html.responsive .tab_item .ds_steam_deck_compat {
 		bottom: unset;
-		top: 102px;
+		top: 73px;
 	}
 
 
@@ -565,7 +634,7 @@
 
 
 
-	/* Curator Recommnends */
+	/* Giant Curator Recommnends */
 	.responsive_giant_curator_capsule .curator_giant_capsule {
 		flex-direction: row;
 		box-shadow: var(--gpShadow-Medium);
@@ -582,6 +651,13 @@
 		width: 50%;
 	}
 
+
+
+	/* More Curator Recommnends */
+	html.responsive body.v6 h2.giant_curator_title {
+		margin-bottom: 14px;
+	}
+
 	div#apps_recommended_by_curators_v2 {
 		height: auto;
 	}
@@ -595,23 +671,58 @@
 		padding: unset;
 	}
 
-	.more_apps_by_curators_capsule .apps_recommended_by_curators_v2 .curated_app_curators {
-		top: 110px;
-		left: 50px;
+	html.responsive .more_apps_by_curators_capsule .apps_recommended_by_curators_v2 .curated_app_curators {
+		top: 113px;
+		left: 6px;
 	}
 
-	 /* Developers and publishers */
-	 html.responsive .recommended_creators_ctn .store_capsule {
-		 padding-bottom: unset;
-	 }
+	html.responsive .more_apps_by_curators_capsule .ds_steam_deck_compat {
+		bottom: unset;
+		top: 122px;
+		left: 38px;
+	}
 
-	 .recommended_creators_ctn {
-		 margin: unset;
-	 }
 
-	 .recommended_creators_ctn .recommended_creators_container .avatars > .actions {
-		 display: none;
-	 }
+
+
+
+	/* Developers and publishers */
+	html.responsive .recommended_creators_ctn .store_capsule {
+		padding-bottom: unset;
+		height: 148px;
+	}
+
+	html.responsive .recommended_creators_ctn {
+		margin: unset;
+	}
+
+	html.responsive .recommended_creators_ctn .recommended_creators_container {
+		background: none;
+		border: none;
+		bottom: 45px;
+	}
+
+	html.responsive .recommended_creators_ctn .recommended_creators_container .avatars {
+		top: 0px;
+	}
+
+	html.responsive .recommended_creators_ctn .recommended_creators_container .avatars > .actions {
+		display: none;
+	}
+
+	html.responsive .recommended_creators_ctn .ds_steam_deck_compat {
+		bottom: unset;
+		top: 122px;
+		left: 38px;
+	}
+
+	html.responsive .recommended_creators_ctn .recommended_creators_container .avatars > a img {
+		width: 32px;
+		height: 32px;
+		box-shadow: unset;
+		border-radius: var(--gpCorner-Medium);
+	}
+
 
 
 
@@ -675,9 +786,9 @@
     overflow-y: hidden;
     box-sizing: content-box;
     padding-bottom: 20px;
-    display: -webkit-box;
+    /* display: -webkit-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
+    display: -webkit-flex; */
     display: flex;
     flex-wrap: nowrap;
 	}
@@ -742,6 +853,10 @@
 
 
 	/* NEW RELEASES */
+
+	html.responsive .newonsteam_headercaps {
+		overflow: visible;
+	}
 
 	/* Hide breadcrumbs */
 	html.responsive .breadcrumbs {
@@ -831,13 +946,32 @@
 		display: none;
 	}
 
+
 	/* broadcast carousel */
-	.live_streams_ctn .broadcast_capsule .ds_steam_deck_compat {
+	html.responsive .live_streams_ctn .broadcast_capsule .ds_steam_deck_compat {
 		bottom: 40px;
 	}
 
-	.home_marketing_message .ds_steam_deck_compat {
-		bottom: 2px;
-	}
 
+
+
+
+
+
+	html.responsive .store_main_capsule .ds_steam_deck_compat,
+	html.responsive .responsive_giant_curator_capsule .ds_steam_deck_compat,
+	html.responsive .tab_item .ds_steam_deck_compat,
+	html.responsive .friends_recently_purchased .ds_steam_deck_compat,
+		/* html.responsive .home_area_spotlight .ds_steam_deck_compat, */
+	/* html.responsive .community_recommendations_by_steam_labs_ctn .community_recommendation_app .ds_steam_deck_compat, */
+	html.responsive .home_content .ds_steam_deck_compat,
+	html.responsive .live_streams_ctn .broadcast_capsule .ds_steam_deck_compat,
+	html.responsive .spotlight_col .daily_deal .ds_steam_deck_compat {
+		background-color: var(--gpBackground-DarkMedium);
+		backdrop-filter: blur(24px);
+		left: 6px;
+	}
+	html.responsive .tab_item .ds_steam_deck_compat {
+		left: 10px;
+	}
 }

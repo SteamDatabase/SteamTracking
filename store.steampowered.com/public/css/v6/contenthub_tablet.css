@@ -31,6 +31,7 @@
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
 	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -72,6 +73,13 @@
 	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+	/* Animation */
+	--gpTransition-Short: all 0.2s ease;
+
+	/* Focus */
+	--gpFocus: 4px solid white;
+	--gpUnfocus: 0px solid #FFFFFF00;
 
 }
 

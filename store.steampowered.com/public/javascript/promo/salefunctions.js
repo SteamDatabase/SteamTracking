@@ -274,7 +274,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		SaleFranchiseBlock( $FranchiseBlock, rgFranchiseData );
 	});
 
-	
+
 	var $Tier2 = $J('#tier2_target' );
 	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );
 
@@ -446,10 +446,10 @@ function SaleRow( rgItems, $Parent, nItems, strFeatureContext, fnRenderFunc )
 function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 {
 	var params = { 'class': 'sale_capsule' };
-	
+
 	if( item && item.feature && item.feature.length > 0 )
 	{
-		strFeatureContext = item.feature;		
+		strFeatureContext = item.feature;
 	}
 	var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, item, params );
 
@@ -478,10 +478,10 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 	var rgAppInfo = GStoreItemData.rgAppData[ item.appid ];
 	if ( rgAppInfo && rgAppInfo.has_live_broadcast )
 	{
-		$CapCtn.append( 
+		$CapCtn.append(
 					$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
 		);
-		
+
 	}
 
 	AddMicrotrailer( $CapCtn, rgItemData.microtrailer );
@@ -542,7 +542,7 @@ function TagBoxTopDecoration()
 
 function SaleTagTexture( suffix )
 {
-	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/' + suffix + '_page.jpg"); background-repeat: repeat;';
+	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/' + suffix + '_page.jpg"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )
@@ -565,19 +565,6 @@ function SaleTagGradient( colorsIn )
 function PrioritizeTagGenreList( rgTagGenres )
 {
 	rgPriorityTagGenreList = [];
-
-	// put completed genres to the end of the list until there are none left
-	rgCompletedGenres = [];
-	if ( GHomepage && GHomepage.rgMapGenreChoices && Object.keys(GHomepage.rgMapGenreChoices).length && Object.keys(GHomepage.rgMapGenreChoices).length != 14 )
-	{
-		rgTagGenres.forEach( function ( TagGenre, index ) {
-			if ( GHomepage.rgMapGenreChoices[ TagGenre.egenre ] )
-			{
-				rgCompletedGenres.push( rgTagGenres[ index ] );
-				rgTagGenres.splice( index, 1 );
-			}
-		} );
-	}
 
 	// Walk through the user's preference if any, and append to the rgPriorityTagGenreList list. Since multiple tagid
 	// can refer to the same entity, we null out the value, so we don't add the same item more than once.
@@ -612,13 +599,6 @@ function PrioritizeTagGenreList( rgTagGenres )
 		}
 	} );
 
-	// add any completed sale genres last
-	rgCompletedGenres.forEach( function( TagGenre ) {
-		if (TagGenre) {
-			rgPriorityTagGenreList.push(TagGenre)
-		}
-	} );
-
 	return rgPriorityTagGenreList;
 }
 
@@ -633,11 +613,6 @@ function RenderTagGenreBlock( rgTagGenres )
 		var nScrollRowIndex = Math.floor( index / 5 );
 		var $elScrollRow = $J( $elCtn.children()[ nScrollRowIndex] );
 		var $Link = $J('<a/>', { 'class': 'tag_square', 'href': TagGenre.url  } );
-
-		if ( GHomepage && GHomepage.rgMapGenreChoices && GHomepage.rgMapGenreChoices[ TagGenre.egenre ] )
-		{
-			$Link.append( $J('<img/>', { 'class': 'tag_square_ribbon', 'src': 'https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/genre_tiles/genre_tile_ribbon.png'  } ) );
-		}
 
 		$Link.append( $J('<img/>', { 'class': 'tag_square_img', 'src': TagGenre.square } ) );
 		$Link.append( $J('<div/>', { 'class': 'tag_genre_title' } ).html( TagGenre.name ) );
@@ -688,17 +663,17 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 
 	var $TitleCtn = $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( title ) );
 	var $FocusCtn = $J('<div/>', { 'class': 'home_category_focus_ctn'} );
-	
+
 	var $TopDecoration = TagBoxTopDecoration();
 	$Ctn.append( $TopDecoration );
-	
+
 	var focusCap = SaleCap( {"appid":focusedAppId}, 'sale_tag_bucket', 'discount_block_inline' );
 	$FocusCtn.append(focusCap);
-	
+
 	var $TagsCtn = $J('<div/>', {'class': 'home_category_tags_ctn'} );
-	
+
 	$TitleCtn.append( $FocusCtn );
-	
+
 	if(!noTags){
 		var keyTagsLine = "";
 		var top3 = [];
@@ -725,9 +700,9 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 				append( $J('<div/>', { 'class': 'home_tag_category_title'}).html( rgTagData.name ) ) );
 		}
 	}
-	
+
 	BindSaleCapAutoSizeEvents( $FocusCtn );
-	
+
 	var $Games = $J('<div/>', {'class': 'home_category_games_ctn', style: SaleTagBackground( colors ) } );
 	var $Row = $J('<div/>', {'class': 'salerow salerow3 multiline' } );
 

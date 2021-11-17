@@ -196,19 +196,115 @@
   margin-top: -1px;
   margin-left: 2px;
 }
+.personastatusicons_PersonaStatusIcon_KxAI_.GamepadMode,
+.GamepadMode .personastatusicons_PersonaStatusIcon_KxAI_ {
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
   margin-top: -2px;
   margin-left: -1px;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path,
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_MobilePhone path,
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_BigPicture path {
   fill: #80aa4d;
 }
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_VR
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_MobilePhone
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_MobilePhone
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_BigPicture
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_BigPicture
+  path {
+  fill: #59bf40;
+}
 .personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path,
 .personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_MobilePhone path,
 .personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_BigPicture path {
   fill: #4c91ac;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_VR
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_MobilePhone
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_MobilePhone
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_BigPicture
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_BigPicture
+  path {
+  fill: #1a9fff;
+}
+@keyframes shared_icons_SpinnerSpokeFade_lkeEV {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.shared_icons_Spinner_3q5qO > path {
+  animation: shared_icons_SpinnerSpokeFade_lkeEV 0.6s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.shared_icons_Spinner_3q5qO > path:nth-child(1) {
+  animation-delay: -0.925s;
+}
+.shared_icons_Spinner_3q5qO > path:nth-child(2) {
+  animation-delay: -0.85s;
+}
+.shared_icons_Spinner_3q5qO > path:nth-child(3) {
+  animation-delay: -0.775s;
+}
+.shared_icons_Spinner_3q5qO > path:nth-child(4) {
+  animation-delay: -0.7s;
+}
+.shared_icons_Spinner_3q5qO > path:nth-child(5) {
+  animation-delay: -0.625s;
+}
+.shared_icons_Spinner_3q5qO > path:nth-child(6) {
+  animation-delay: -0.55s;
+}
+.shared_icons_Spinner_3q5qO > path:nth-child(7) {
+  animation-delay: -0.475s;
+}
+.shared_icons_Spinner_3q5qO > path:nth-child(8) {
+  animation-delay: -0.4s;
 }
 .miniprofile_miniProfile_2QPdq {
   width: fit-content;

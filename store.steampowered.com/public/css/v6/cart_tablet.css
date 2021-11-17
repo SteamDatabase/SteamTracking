@@ -31,6 +31,7 @@
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
 	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -72,6 +73,13 @@
 	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+	/* Animation */
+	--gpTransition-Short: all 0.2s ease;
+
+	/* Focus */
+	--gpFocus: 4px solid white;
+	--gpUnfocus: 0px solid #FFFFFF00;
 
 }
 
@@ -154,6 +162,8 @@
 
 	html.responsive .cart_item .cart_item_desc a {
 		color: white;
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
 	}
 
 	html.responsive .cart_item_price {
@@ -255,7 +265,7 @@
 	html.responsive .cart_status_message_ctn .cart_status_message,
 	html.responsive .checkout_error {
 		margin: unset;
-		padding: 10px 16px;
+		padding: 8px;
 		line-height: unset;
 		font: var(--gpText-BodyMedium);
 		border-radius: var(--gpCorner-Medium);
@@ -277,6 +287,10 @@
 	/* Warnings and errors */
 	html.responsive .checkout_error {
 		background: var(--gpColor-Orange);
+
+		/* background: none; */
+		/* border: 2px solid var(--gpBackground-LightSoft); */
+
 	}
 	html.responsive .checkout_error.steam_deck_compat_unsupported {
 		background: var(--gpColor-Red);
@@ -343,7 +357,7 @@
 
 	/* Checkout buttons */
 	html.responsive .cart_checkout_buttons {
-		padding: 12px 0px 0px 0px;
+		padding: 12px 0px;
 	}
 
 	.button_row .continue, .button_row .working, .cart_checkout_buttons .continue {
@@ -356,9 +370,19 @@
 	}
 
 	html.responsive .cart_checkout_buttons {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		/* grid-template-columns: 1fr 1fr; */
 		gap: var(--gpSpace-Gap);
+	}
+
+	html.responsive .cart_checkout_buttons_clearer {
+		display: none;
+	}
+
+	html.responsive .cart_checkout_buttons a,
+	html.responsive .cart_checkout_buttons div,
+	html.responsive .cart_checkout_buttons span {
+		width: 100%;
 	}
 
 
@@ -368,6 +392,10 @@
 	html.responsive .leftcol br {
 		display: none;
 	}
+
+	/* html.responsive .remove_ctn {
+		display: none;
+	} */
 
 
 

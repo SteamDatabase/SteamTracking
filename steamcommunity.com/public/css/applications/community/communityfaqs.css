@@ -1420,6 +1420,7 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 3px;
+  position: relative;
 }
 .partnereventshareddates_EventVisibilityItem_1she- {
   line-height: 24px;
@@ -1475,6 +1476,20 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 }
 .partnereventshareddates_EventEditorVisibilityCtn_4gWwy {
   margin-top: 12px;
+}
+.partnereventshareddates_DateErrorCtn_1Ao_g {
+  position: absolute;
+  top: -13px;
+  left: 30px;
+  background: #744f4f;
+  padding: 2px 8px 2px 2px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  box-shadow: 1px 1px 8px #000;
+}
+.partnereventshareddates_DateErrorCtn_1Ao_g img {
+  margin-right: 4px;
 }
 .partnereventsalewidgeteditor_EventCategoryCtn_46KWq {
   display: flex;

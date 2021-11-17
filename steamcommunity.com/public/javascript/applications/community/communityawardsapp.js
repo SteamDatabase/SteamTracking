@@ -55,8 +55,8 @@
                 a.a.createElement(
                   "div",
                   { className: c.a.Throbber },
-                  a.a.createElement(o.db, { className: c.a.base }),
-                  a.a.createElement(o.db, { className: c.a.blur })
+                  a.a.createElement(o.jb, { className: c.a.base }),
+                  a.a.createElement(o.jb, { className: c.a.blur })
                 )
               );
               return a.a.createElement(
@@ -1855,7 +1855,7 @@
             t
           );
         })(_),
-        Q = (function (e) {
+        K = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1916,7 +1916,7 @@
             t
           );
         })(_),
-        Y = (function (e) {
+        Q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1990,7 +1990,7 @@
             t
           );
         })(_),
-        V = (function (e) {
+        Y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -2007,7 +2007,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { responses: { n: 1, c: K, r: !0, q: !0 } },
+                    fields: { responses: { n: 1, c: V, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -2051,7 +2051,7 @@
             t
           );
         })(_),
-        K = (function (e) {
+        V = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -2070,7 +2070,7 @@
                     proto: t,
                     fields: {
                       eresult: { n: 1, br: B.d.readInt32, bw: B.h.writeInt32 },
-                      response: { n: 2, c: Y },
+                      response: { n: 2, c: Q },
                     },
                   }),
                 t.sm_m
@@ -2353,19 +2353,19 @@
             return e.SendMsg(
               "LoyaltyRewards.GetActivePurchaseBonuses#1",
               t,
-              Q,
+              K,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
             );
           }),
           (e.QueryRewardItems = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, Y, {
+            return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, Q, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.BatchedQueryRewardItems = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, V, {
+            return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, Y, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -3696,7 +3696,7 @@
             i.createElement(
               "div",
               { className: u.Left },
-              i.createElement(ie.F, { className: u.BalanceIcon }),
+              i.createElement(ie.K, { className: u.BalanceIcon }),
               i.createElement(
                 "div",
                 { className: u.BalanceDetails },
@@ -3805,7 +3805,7 @@
           return i.createElement(
             "span",
             Object(n.a)({}, a, { className: Object(ee.a)(r, u.PointsAmount) }),
-            i.createElement(ie.F, { className: u.PointsAmountIcon }),
+            i.createElement(ie.K, { className: u.PointsAmountIcon }),
             t
           );
         };

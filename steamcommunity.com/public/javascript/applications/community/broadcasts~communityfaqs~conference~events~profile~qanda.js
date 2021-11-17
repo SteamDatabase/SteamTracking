@@ -43,8 +43,8 @@
                 o.a.createElement(
                   "div",
                   { className: l.a.Throbber },
-                  o.a.createElement(i.db, { className: l.a.base }),
-                  o.a.createElement(i.db, { className: l.a.blur })
+                  o.a.createElement(i.jb, { className: l.a.base }),
+                  o.a.createElement(i.jb, { className: l.a.blur })
                 )
               );
               return o.a.createElement(
@@ -506,7 +506,7 @@
                 o.a.createElement(
                   "div",
                   { className: p.a.LoginPanelBackground },
-                  o.a.createElement(s.ab, null)
+                  o.a.createElement(s.gb, null)
                 ),
                 o.a.createElement(
                   "div",
@@ -769,7 +769,7 @@
                 case y.TwoFactorCode:
                   (r = e.GetTwoFactorCode()),
                     (n = Object(D.f)("#Login_Enter2FA")),
-                    (t = o.a.createElement(s.E, null)),
+                    (t = o.a.createElement(s.I, null)),
                     (a = Object(D.f)("#Login_Enter2FAHelp"));
                   break;
                 case y.EmailCode:
@@ -784,7 +784,7 @@
                       )
                     )),
                     (a = Object(D.f)("#Login_EnterSteamguard")),
-                    (t = o.a.createElement(s.u, null));
+                    (t = o.a.createElement(s.x, null));
               }
               return o.a.createElement(
                 "div",
@@ -1536,39 +1536,41 @@
         })(a.Component);
       function E(t) {
         var e = t.rtStartDate,
-          r = t.rtEndDate;
+          r = t.rtEndDate,
+          n = t.strMonthFormat,
+          o = t.className;
         return a.createElement(
           "div",
-          null,
-          (function (t, e) {
-            var r = p.a.GetTimeNowWithOverrideAsDate(),
-              n = Object(c.c)(new Date(1e3 * t), r),
-              a = r.getFullYear() == new Date(1e3 * e).getFullYear(),
-              o = new Date(1e3 * t),
-              s = new Date(1e3 * e),
-              l = o.getMonth() == s.getMonth(),
-              h =
-                o.getDate() == s.getDate() &&
-                o.getMonth() == s.getMonth() &&
-                o.getFullYear() == s.getFullYear(),
-              u = {
+          { className: o },
+          (function (t, e, r) {
+            var n = p.a.GetTimeNowWithOverrideAsDate(),
+              a = Object(c.c)(new Date(1e3 * t), n),
+              o = n.getFullYear() == new Date(1e3 * e).getFullYear(),
+              s = new Date(1e3 * t),
+              l = new Date(1e3 * e),
+              h = s.getMonth() == l.getMonth(),
+              u =
+                s.getDate() == l.getDate() &&
+                s.getMonth() == l.getMonth() &&
+                s.getFullYear() == l.getFullYear(),
+              m = {
                 weekday: void 0,
-                month: "long",
+                month: null != r ? r : "long",
                 day: "numeric",
-                year: n && !h ? void 0 : "numeric",
+                year: a && !u ? void 0 : "numeric",
               },
-              m = o.toLocaleDateString(i.e.GetPreferredLocales(), u);
-            if (h) return m;
-            var d = {
+              d = s.toLocaleDateString(i.e.GetPreferredLocales(), m);
+            if (u) return d;
+            var f = {
               weekday: void 0,
-              month: l || !n ? void 0 : "long",
+              month: h || !a ? void 0 : null != r ? r : "long",
               day: "numeric",
-              year: a ? void 0 : "numeric",
+              year: o ? void 0 : "numeric",
             };
             return (
-              m + " - " + s.toLocaleDateString(i.e.GetPreferredLocales(), d)
+              d + " - " + l.toLocaleDateString(i.e.GetPreferredLocales(), f)
             );
-          })(e, r),
+          })(e, r, n),
           " "
         );
       }

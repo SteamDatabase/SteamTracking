@@ -4172,65 +4172,6 @@ a.cluster_capsule:hover {
 	}
 }
 
-/* global inline */
-.steam_deck_compat {
-	display: none;
-	pointer-events: none;
-	width: 40px;
-	height: 20px;
-	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat;
-	background-size: 20px 20px;
-}
-.steam_deck_compat.verified {
-	display: inline-block;
-	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat, url('/public/images/ico/ico-deck-verified.svg') right no-repeat;
-}
-.steam_deck_compat.playable {
-	display: inline-block;
-	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat, url('/public/images/ico/ico-deck-playable.svg') right no-repeat;
-}
-.steam_deck_compat.unsupported {
-	display: inline-block;
-	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat, url('/public/images/ico/ico-deck-unsupported.svg') right no-repeat;
-}
-.steam_deck_compat.unknown {
-	display: inline-block;
-	background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat, url('/public/images/ico/ico-deck-unknown.svg') right no-repeat;
-}
-
-/* for dynamic store items */
-.ds_steam_deck_compat {
-	display: block;
-	position: absolute;
-	pointer-events: none;
-	bottom: 5px;
-	left: 5px;
-	z-index: 15;
-	width: 44px;
-	height: 24px;
-	/* background: url('/public/images//ico/ico-deck-logo.svg') left no-repeat; */
-	/* background-size: 20px 20px; */
-	backdrop-filter: blur(24px);
-	border-radius: 24px;
-}
-.ds_steam_deck_compat.verified {
-	background: url('/public/images//ico/ico-deck-logo.svg') 3px no-repeat, url('/public/images/ico/ico-deck-verified.svg') 22px no-repeat;
-	background-color: var(--gpBackground-DarkMedium);
-}
-.ds_steam_deck_compat.playable {
-	background: url('/public/images//ico/ico-deck-logo.svg') 3px no-repeat, url('/public/images/ico/ico-deck-playable.svg') 22px no-repeat;
-	background-color: var(--gpBackground-DarkMedium);
-}
-.ds_steam_deck_compat.unsupported {
-	background: url('/public/images//ico/ico-deck-logo.svg') 3px no-repeat, url('/public/images/ico/ico-deck-unsupported.svg') 22px no-repeat;
-	background-color: var(--gpBackground-DarkMedium);
-}
-.ds_steam_deck_compat.unknown {
-	background: url('/public/images//ico/ico-deck-logo.svg') 3px no-repeat, url('/public/images/ico/ico-deck-unknown.svg') 22px no-repeat;
-	background-color: var(--gpBackground-DarkMedium);
-}
-
-
 /* ds_options defines the per-app preferences dropdown */
 .ds_options {
 	display: block;

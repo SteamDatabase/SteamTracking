@@ -411,6 +411,20 @@
 .shared_svg_library_EmoticonBow_st1_luj0t {
   fill: #e41e25;
 }
+.shared_svg_library_SteamDeckCompatInfo_3VPnv {
+  display: flex;
+  background-color: #0e141b;
+  padding: 2px;
+  border-radius: 20px;
+}
+.shared_svg_library_SteamDeckCompatLogo_1dzQL {
+  width: 20px;
+  height: 20px;
+}
+.shared_svg_library_SteamDeckCompatIcon_3hAj0 {
+  width: 20px;
+  height: 20px;
+}
 .focusring_FocusRingRoot_3m2Fo {
   position: absolute;
   pointer-events: none;

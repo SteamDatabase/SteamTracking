@@ -445,12 +445,13 @@
               e.AddLanguageFacet(this.m_facets),
               e.AddContentDescriptorFacet(this.m_facets),
               e.AddUserPreferencesFacet(this.m_facets),
-              (this.m_facetFilterState = new O.c(
+              (this.m_facetFilterState = new O.d(
                 this.m_facets,
-                !1,
                 1,
                 T.k.k_ESortFacetsByMatchCount,
-                Object(f.j)(g.d.LANGUAGE)
+                Object(f.j)(g.d.LANGUAGE),
+                !1,
+                !0
               )),
               (this.m_prevTabFacetKey = this.GetPageKey(
                 this.m_SelectedTab,
@@ -1027,7 +1028,8 @@
         R = a("qiKp"),
         z = a("exH9"),
         x = a("lhLD"),
-        Q = Object(k.i)(
+        Q = a("4pOC"),
+        K = Object(k.i)(
           Object(A.a)(function (e) {
             var t = E.Get(),
               a = t.GetVisibleTabs(),
@@ -1056,15 +1058,15 @@
                 ? o.a.createElement(
                     "div",
                     { className: Object(z.a)(x.TabCtn) },
-                    o.a.createElement(q, null),
+                    o.a.createElement(X, null),
                     o.a.createElement(
                       "div",
                       { className: x.FacetAndPageCtn },
-                      o.a.createElement(J, null),
+                      o.a.createElement(q, null),
                       o.a.createElement(
                         "div",
                         { className: x.PagedItemsCtn },
-                        o.a.createElement(K, null)
+                        o.a.createElement(W, null)
                       )
                     )
                   )
@@ -1072,20 +1074,20 @@
             );
           })
         ),
-        K = Object(A.a)(function (e) {
+        W = Object(A.a)(function (e) {
           var t = E.Get().GetSelectedTab();
           return o.a.createElement(
             H.b,
             { feature: "tab-" + t.name },
-            o.a.createElement(W, null)
+            o.a.createElement(J, null)
           );
         }),
-        W = Object(A.a)(function (e) {
+        J = Object(A.a)(function (e) {
           var t,
             a,
             s = E.Get(),
             i = s.GetSelectedTab(),
-            c = s.GetFacetFilter().strQuery,
+            c = s.GetFacetFilter().GetQuery(),
             m = s.GetNumItemsToShow(),
             p = s.GetSearch(),
             b = s.BHasTabPageLoaded(i, c, m, p),
@@ -1173,13 +1175,13 @@
                     "div",
                     { key: "" + e.item_type + e.id, className: P },
                     s.GetViewType() === r.k_EList
-                      ? o.a.createElement(N.n, {
+                      ? o.a.createElement(N.m, {
                           id: e.id,
                           type: a,
                           bShowDemoButton: !1,
                           bLoadShortDescription: !1,
                         })
-                      : o.a.createElement(N.l, {
+                      : o.a.createElement(Q.a, {
                           capsule: { id: e.id, type: a },
                           imageType: "header",
                         })
@@ -1215,14 +1217,14 @@
               )
           );
         }),
-        J = Object(k.i)(
+        q = Object(k.i)(
           Object(A.a)(function (e) {
             var t = E.Get(),
               a = t.GetFacetFilter();
             return o.a.createElement(
               "div",
               { className: x.FacetMenuCtn },
-              o.a.createElement(O.d, {
+              o.a.createElement(O.e, {
                 facetFilterState: a,
                 language: Object(f.j)(g.d.LANGUAGE),
                 nMaxFacetValues: 5,
@@ -1249,7 +1251,7 @@
             );
           })
         ),
-        q = Object(k.i)(
+        X = Object(k.i)(
           Object(A.a)(function (e) {
             var t = E.Get(),
               a = t.GetVisibleTabs(),
@@ -1338,7 +1340,7 @@
             );
           })
         ),
-        X = a("94lP");
+        Y = a("94lP");
       t.default = function (e) {
         var t = o.a.useState(!0),
           a = t[0],
@@ -1361,9 +1363,9 @@
             : o.a.createElement(
                 "div",
                 null,
-                o.a.createElement(c.a, null, o.a.createElement(X.a, null)),
+                o.a.createElement(c.a, null, o.a.createElement(Y.a, null)),
                 o.a.createElement(c.a, null, o.a.createElement(m.a, null)),
-                o.a.createElement(c.a, null, o.a.createElement(Q, null)),
+                o.a.createElement(c.a, null, o.a.createElement(K, null)),
                 o.a.createElement(
                   "a",
                   {

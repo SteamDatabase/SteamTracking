@@ -1591,6 +1591,7 @@
     "Sale_Subscription_OfferEnds": "Offer ends %1$s",
     "Sale_Subscription_NewSubsOfferEnds": "Offer only for new subscribers. Ends %1$s",
     "Sale_Subscription_Asterisk": "*",
+    "Sale_Gamepad_Action_Select": "Select",
     "GotSteam_Title": "Got Steam?",
     "GotSteam_PromptWithDownloadLink": "You need to have the %1$s installed before you can install and launch %2$s. Do you have Steam installed on this computer?",
     "GotSteam_DownloadLinkText": "Steam desktop application",

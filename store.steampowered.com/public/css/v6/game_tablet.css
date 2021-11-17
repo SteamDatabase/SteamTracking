@@ -31,6 +31,7 @@
 	--gpColor-DustyBlue: #417a9b;
 	--gpColor-LightBlue: #B3DFFF;
 	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
 
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
@@ -72,6 +73,13 @@
 	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+	/* Animation */
+	--gpTransition-Short: all 0.2s ease;
+
+	/* Focus */
+	--gpFocus: 4px solid white;
+	--gpUnfocus: 0px solid #FFFFFF00;
 
 }
 @media screen and ( min-width: 501px ) and ( max-width: 910px ) {
@@ -163,11 +171,6 @@
 		background-image: unset !important; /* Needed to override inline style */
 	}
 
-	/* app reviews needs additional top margin */
-	html.responsive .app_reviews_area {
-		margin-top: 10px;
-	}
-
 	/* move the 'read more' links to the center, use larger font, and hide the down arrow */
 	html.responsive .game_page_autocollapse_readmore {
 		display: flex;
@@ -252,6 +255,7 @@
 	html.responsive #responsive_apppage_reviewblock_ctn .responsive_apppage_reviewblock {
 		padding: unset;
 		margin: unset;
+		margin-bottom: 16px;
 	}
 
 	html.responsive #game_area_metascore {
@@ -410,8 +414,8 @@
 
 	/*  The list of available DLC */
 	html.responsive .game_area_dlc_section {
-		margin-top: 30px;
-		margin-bottom: 20px;
+		margin-top: 24px;
+		margin-bottom: 24px;
 	}
 	html.responsive #gameAreaDLCSection h2 {
 		display: flex;
@@ -1021,7 +1025,7 @@
 	   existing content is moved here: achievements, game details, community link, ...
 	*/
 	html.responsive #appLinksAndInfoCtn {
-		padding-top: 20px;
+		padding-top: 16px;
 		display: block !important;
 	}
 
@@ -1668,8 +1672,221 @@
 
 	/* Review summary */
 	.game_review_summary.positive {
+		color: var(--gpColor-ChalkyBlue);
+	}
+
+
+
+	/* Game is in your library */
+	body.v6 .game_area_already_owned.page_content {
+		background: none;
+		align-items: center;
+	}
+
+	html.responsive .game_area_already_owned .already_in_library {
+		font: var(--gpText-BodyLarge);
+	}
+
+
+
+	/* Write a review */
+	html.responsive .game_area_play_stats {
+		margin: 0px;
+		padding: 0px var(--gpSpace-Gutter);
+		background: var(--gpBackground-DarkHard);
+	}
+
+	html.responsive .already_owned_actions {
+		padding-top: 16px;
+	}
+
+	html.responsive #review_create,
+	html.responsive #recommendation_success {
+		border: 1px solid var(--gpBackground-LightSoft);
+		padding: 16px;
+		margin-top: 16px;
+	}
+
+	html.responsive #review_create h1,
+	html.responsive #recommendation_success .reviewDate {
+		border-top: unset;
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+		color: white;
+		padding-top: unset;
+		margin-bottom: 8px;
+	}
+
+	html.responsive #review_create p#review_describe br {
+		display: none;
+	}
+
+	html.responsive #review_create p {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive #review_create .avatar {
+		width: 48px;
+		height: 48px;
+		padding: 2px;
+	}
+
+	html.responsive #review_create .avatar > img {
+		width: 100%;
+		height: 100%;
+		padding: 4px;
+		box-sizing: border-box;
+	}
+
+	html.responsive #my_activity .details_block {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+
+	}
+
+	html.responsive #my_activity .details_block a {
+		font: var(--gpText-BodyMedium);
 		color: var(--gpColor-Blue);
 	}
+
+	html.responsive #my_activity .hours_played {
+		margin-top: 0px;
+	}
+
+	html.responsive #review_create .input_box {
+		resize: none;
+	}
+
+	html.responsive .review_controls_right {
+		padding-right: 0px;
+	}
+
+	html.responsive #review_create .review_controls_left {
+		margin-top: 12px;
+	}
+
+	html.responsive .review_control_didyouenjoy {
+		margin-bottom: 8px;
+	}
+
+
+
+	/* Write a review settings */
+	html.responsive #writeReviewTable .review_controls .controlblock.formattinghelp {
+		display: none;
+	}
+
+	html.responsive #writeReviewTable .controlblock,
+	html.responsive #writeReviewTable label {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive #writeReviewTable {
+		margin-top: 12px;
+		padding-bottom: 4px;
+		border-bottom: 1px solid var(--gpBackground-LightSofter);
+	}
+
+	html.responsive #writeReviewTable .review_controls {
+		padding: unset;
+		background-color: unset;
+		display: flex;
+		flex-direction: column;
+	}
+
+	html.responsive #writeReviewTable .controlblock {
+		padding: 4px 0px;
+		margin-right: unset;
+		display: flex;
+		align-items: center;
+	}
+
+	html.responsive #writeReviewTable .review_received_comp {
+		margin-top: unset;
+	}
+
+	html.responsive #writeReviewTable .review_received_comp label a {
+		display: none;
+	}
+
+	html.responsive #review_create .content .controls .dselect_container {
+		margin-top: unset;
+	}
+
+	#review_create .content .controls .dselect_container a.trigger {
+		padding: 10px 12px;
+	}
+
+	html.responsive #writeReviewTable .has_dselect {
+		justify-content: space-between;
+	}
+
+	html.responsive #writeReviewTable .dselect_container {
+		width: 50%;
+	}
+
+	html.responsive .review_submit_ctn {
+		width: 100%;
+		margin-top: 8px;
+		clear: unset;
+		float: unset;
+	}
+
+	html.responsive .review_submit_ctn a {
+		width: 100%;
+		float: unset;
+		box-sizing: border-box;
+	}
+
+	html.responsive body.v6 .game_area_already_owned {
+		padding-bottom: 0px;
+	}
+
+	html.responsive .game_area_already_owned_ctn {
+		display: flex;
+		gap: 6px;
+		align-items: center;
+		padding-bottom: 12px;
+		border-bottom: 1px solid var(--gpBackground-LightSoft);
+		width: 100%;
+		flex-direction: row-reverse;
+	}
+
+	html.responsive .game_area_already_owned_ctn .already_in_library {
+		padding: 0px;
+	}
+
+
+
+	/* Write a review success */
+	html.responsive #recommendation_success .review_box {
+		background-color: var(--gpBackground-LightSofter);
+	}
+
+	html.responsive .recommendation_area .reviewPostedDescription {
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive #recommendation_success .review_posted_ctn {
+		display: flex;
+		margin-top: 16px;
+		gap: 12px;
+	}
+
+	html.responsive #recommendation_success .review_box .thumb {
+		margin: unset;
+	}
+
+	html.responsive #recommendation_success .review_box .reviewPostedDescription {
+		margin: unset;
+	}
+
+
+
+
+
+
+
 
 
 
@@ -1677,6 +1894,18 @@
 	/* Links */
 	#game_highlights a {
 		color: var(--gpColor-Blue);
+	}
+
+
+
+	/* Media carousel */
+	html.responsive .highlight_carousel_item {
+		outline: var(--gpUnfocus);
+		transition: var(--gpTransition-Short);;
+	}
+
+	html.responsive .highlight_carousel_item.gpfocus {
+		outline: var(--gpFocus);
 	}
 
 
@@ -1900,6 +2129,10 @@
 
 
 	/* Recent events and announcements */
+	html.responsive body.v6 .early_access_announcements h2 {
+		margin-bottom: 16px;
+	}
+
 	html.responsive .game_description_column {
 		margin-top: 16px;
 	}
@@ -1912,7 +2145,17 @@
 	html.responsive .partnereventwebrowembed_LatestUpdateButton_1TRFt {
 		padding: 8px 12px;
 		border-radius: var(--gpCorner-Large);
+		font: var(--gpText-BodyLarge);
 		transition: all 0.1s ease;
+	}
+
+	html.responsive .partnereventwebrowembed_LatestUpdateIcon_mq3RO {
+		display: none;
+	}
+
+	html.responsive .eventrow_OtherEvents_EventCtn_1MwNf {
+		border-radius: 0px;
+		box-shadow: var(--gpShadow-Medium);
 	}
 
 	html.responsive .eventrow_OtherEvents_EventCtn_1MwNf.eventrow_HorizontalEvent_1ruRS {
@@ -1982,11 +2225,7 @@
 
 
 	/* Sliders */
-	html.responsive #recommended_block .block_header {
-		margin-bottom: 8px;
-	}
-
-	html.responsive #franchise_block .block_header {
+	html.responsive .block_header {
 		margin-bottom: 8px;
 	}
 

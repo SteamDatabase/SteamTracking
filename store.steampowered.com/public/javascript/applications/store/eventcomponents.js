@@ -62,31 +62,31 @@
       "use strict";
       n.r(t),
         n.d(t, "EventModerationLanding", function () {
-          return kt;
-        }),
-        n.d(t, "EventBackfillLanding", function () {
           return Bt;
         }),
-        n.d(t, "EventSaleDisplay", function () {
+        n.d(t, "EventBackfillLanding", function () {
           return Pt;
         }),
-        n.d(t, "EventCalendar", function () {
+        n.d(t, "EventSaleDisplay", function () {
           return Nt;
         }),
-        n.d(t, "EventDetailView", function () {
+        n.d(t, "EventCalendar", function () {
           return Ft;
         }),
-        n.d(t, "Events", function () {
+        n.d(t, "EventDetailView", function () {
           return Ut;
         }),
-        n.d(t, "EventSteamGameFestivalDebug", function () {
+        n.d(t, "Events", function () {
           return Ht;
         }),
-        n.d(t, "RssEnabledAccountDashboard", function () {
+        n.d(t, "EventSteamGameFestivalDebug", function () {
           return xt;
         }),
-        n.d(t, "StoreSaleDisplay", function () {
+        n.d(t, "RssEnabledAccountDashboard", function () {
           return zt;
+        }),
+        n.d(t, "StoreSaleDisplay", function () {
+          return Wt;
         });
       var a,
         r = n("q1tI"),
@@ -4941,34 +4941,35 @@
         },
         gt = n("4spj"),
         St = n("av+R"),
-        yt = n("rHSA"),
-        Ot = n("XxJJ"),
-        At = [
-          { index: 0, type: yt.a.OK, category: "action" },
-          { index: 1, type: yt.a.CANCEL, category: "action" },
-          { index: 2, type: yt.a.SECONDARY, category: "action" },
-          { index: 3, type: yt.a.OPTIONS, category: "action" },
-          { index: 4, type: yt.a.BUMPER_LEFT, category: "action" },
-          { index: 5, type: yt.a.BUMPER_RIGHT, category: "action" },
-          { index: 6, type: yt.a.TRIGGER_LEFT, category: "action" },
-          { index: 7, type: yt.a.TRIGGER_RIGHT, category: "action" },
-          { index: 8, type: yt.a.SELECT, category: "action" },
-          { index: 9, type: yt.a.START, category: "action" },
-          { index: 10, type: yt.a.LSTICK_CLICK, category: "action" },
-          { index: 11, type: yt.a.RSTICK_CLICK, category: "action" },
-          { index: 12, type: yt.a.DIR_UP, category: "navigation" },
-          { index: 13, type: yt.a.DIR_DOWN, category: "navigation" },
-          { index: 14, type: yt.a.DIR_LEFT, category: "navigation" },
-          { index: 15, type: yt.a.DIR_RIGHT, category: "navigation" },
-          { index: 16, type: yt.a.STEAM_GUIDE, category: "action" },
-          { index: 17, type: yt.a.SELECT, category: "action" },
+        yt = n("yLGM"),
+        Ot = n("rHSA"),
+        At = n("XxJJ"),
+        Tt = [
+          { index: 0, type: Ot.a.OK, category: "action" },
+          { index: 1, type: Ot.a.CANCEL, category: "action" },
+          { index: 2, type: Ot.a.SECONDARY, category: "action" },
+          { index: 3, type: Ot.a.OPTIONS, category: "action" },
+          { index: 4, type: Ot.a.BUMPER_LEFT, category: "action" },
+          { index: 5, type: Ot.a.BUMPER_RIGHT, category: "action" },
+          { index: 6, type: Ot.a.TRIGGER_LEFT, category: "action" },
+          { index: 7, type: Ot.a.TRIGGER_RIGHT, category: "action" },
+          { index: 8, type: Ot.a.SELECT, category: "action" },
+          { index: 9, type: Ot.a.START, category: "action" },
+          { index: 10, type: Ot.a.LSTICK_CLICK, category: "action" },
+          { index: 11, type: Ot.a.RSTICK_CLICK, category: "action" },
+          { index: 12, type: Ot.a.DIR_UP, category: "navigation" },
+          { index: 13, type: Ot.a.DIR_DOWN, category: "navigation" },
+          { index: 14, type: Ot.a.DIR_LEFT, category: "navigation" },
+          { index: 15, type: Ot.a.DIR_RIGHT, category: "navigation" },
+          { index: 16, type: Ot.a.STEAM_GUIDE, category: "action" },
+          { index: 17, type: Ot.a.SELECT, category: "action" },
         ],
-        Tt = (function (e) {
+        Ct = (function (e) {
           function t() {
             var t = e.call(this) || this;
             return (
               (t.m_rgGamepadStatus = []),
-              t.SetSourceType(yt.b.GAMEPAD),
+              t.SetSourceType(Ot.b.GAMEPAD),
               window.addEventListener("gamepadconnected", function (e) {
                 t.m_bGamepadDetected ||
                   (t.OnGamepadDetected(), t.PollGamepads());
@@ -4990,10 +4991,10 @@
                     (this.m_rgGamepadStatus[n] = { buttons: [] });
                   for (
                     var r = this.m_rgGamepadStatus[n], o = 0;
-                    o < At.length;
+                    o < Tt.length;
                     o++
                   ) {
-                    var i = At[o],
+                    var i = Tt[o],
                       l = i.index;
                     a.buttons[l] &&
                       (a.buttons[l].pressed
@@ -5017,44 +5018,44 @@
               window.removeEventListener("focusin", this.OnWindowRegainedFocus),
                 this.PollGamepads();
             }),
-            Object(l.c)([Ot.a], t.prototype, "PollGamepads", null),
-            Object(l.c)([Ot.a], t.prototype, "OnWindowRegainedFocus", null),
+            Object(l.c)([At.a], t.prototype, "PollGamepads", null),
+            Object(l.c)([At.a], t.prototype, "OnWindowRegainedFocus", null),
             t
           );
-        })(yt.c),
-        Ct = {
-          A: yt.a.OK,
-          B: yt.a.CANCEL,
-          X: yt.a.SECONDARY,
-          Y: yt.a.OPTIONS,
-          SELECT: yt.a.SELECT,
-          START: yt.a.START,
-          LSHOULDER: yt.a.BUMPER_LEFT,
-          RSHOULDER: yt.a.BUMPER_RIGHT,
-          LTRIGGER: yt.a.TRIGGER_LEFT,
-          RTRIGGER: yt.a.TRIGGER_RIGHT,
-          LEFTSTICK_UP: yt.a.DIR_UP,
-          LEFTSTICK_RIGHT: yt.a.DIR_RIGHT,
-          LEFTSTICK_DOWN: yt.a.DIR_DOWN,
-          LEFTSTICK_LEFT: yt.a.DIR_LEFT,
-          LEFTSTICK_CLICK: yt.a.LSTICK_CLICK,
-          RIGHTSTICK_CLICK: yt.a.RSTICK_CLICK,
-          LeftStick: yt.a.LSTICK_TOUCH,
-          RightStick: yt.a.RSTICK_TOUCH,
-          LeftTrackpad: yt.a.LPAD_TOUCH,
-          LeftTrackpadClick: yt.a.LPAD_CLICK,
-          RightTrackpad: yt.a.RPAD_TOUCH,
-          RightTrackpadClick: yt.a.RPAD_CLICK,
-          RearLeftUpper: yt.a.REAR_LEFT_UPPER,
-          RearLeftLower: yt.a.REAR_LEFT_LOWER,
-          RearRightUpper: yt.a.REAR_RIGHT_UPPER,
-          RearRightLower: yt.a.REAR_RIGHT_LOWER,
+        })(Ot.c),
+        It = {
+          A: Ot.a.OK,
+          B: Ot.a.CANCEL,
+          X: Ot.a.SECONDARY,
+          Y: Ot.a.OPTIONS,
+          SELECT: Ot.a.SELECT,
+          START: Ot.a.START,
+          LSHOULDER: Ot.a.BUMPER_LEFT,
+          RSHOULDER: Ot.a.BUMPER_RIGHT,
+          LTRIGGER: Ot.a.TRIGGER_LEFT,
+          RTRIGGER: Ot.a.TRIGGER_RIGHT,
+          LEFTSTICK_UP: Ot.a.DIR_UP,
+          LEFTSTICK_RIGHT: Ot.a.DIR_RIGHT,
+          LEFTSTICK_DOWN: Ot.a.DIR_DOWN,
+          LEFTSTICK_LEFT: Ot.a.DIR_LEFT,
+          LEFTSTICK_CLICK: Ot.a.LSTICK_CLICK,
+          RIGHTSTICK_CLICK: Ot.a.RSTICK_CLICK,
+          LeftStick: Ot.a.LSTICK_TOUCH,
+          RightStick: Ot.a.RSTICK_TOUCH,
+          LeftTrackpad: Ot.a.LPAD_TOUCH,
+          LeftTrackpadClick: Ot.a.LPAD_CLICK,
+          RightTrackpad: Ot.a.RPAD_TOUCH,
+          RightTrackpadClick: Ot.a.RPAD_CLICK,
+          RearLeftUpper: Ot.a.REAR_LEFT_UPPER,
+          RearLeftLower: Ot.a.REAR_LEFT_LOWER,
+          RearRightUpper: Ot.a.REAR_RIGHT_UPPER,
+          RearRightLower: Ot.a.REAR_RIGHT_LOWER,
         },
-        It =
-          (((We = {})[b.h.SystemKey0] = yt.a.STEAM_GUIDE),
-          (We[b.h.SystemKey1] = yt.a.STEAM_QUICK_MENU),
+        Mt =
+          (((We = {})[b.h.SystemKey0] = Ot.a.STEAM_GUIDE),
+          (We[b.h.SystemKey1] = Ot.a.STEAM_QUICK_MENU),
           We),
-        Mt = (function (e) {
+        Dt = (function (e) {
           function t() {
             var t = e.call(this) || this;
             if (
@@ -5066,12 +5067,12 @@
               );
               !1;
             }
-            return t.SetSourceType(yt.b.GAMEPAD), t;
+            return t.SetSourceType(Ot.b.GAMEPAD), t;
           }
           return (
             Object(l.d)(t, e),
             (t.prototype.HandleSystemKeyEvents = function (e) {
-              var t = It[e.eKey];
+              var t = Mt[e.eKey];
               t && this.OnSystemButtonPress(t, e.nControllerIndex);
             }),
             (t.prototype.OnSystemButtonPress = function (e, t) {
@@ -5088,7 +5089,7 @@
             (t.prototype.HandleControllerInputMessages = function (e) {
               for (var t = 0, n = e; t < n.length; t++) {
                 var a = n[t],
-                  r = Ct[a.strActionName];
+                  r = It[a.strActionName];
                 if (null != r) {
                   var o = this.GetController(a.nController);
                   a.bState && !o.activeButtons[r]
@@ -5101,22 +5102,22 @@
                 }
               }
             }),
-            Object(l.c)([Ot.a], t.prototype, "HandleSystemKeyEvents", null),
+            Object(l.c)([At.a], t.prototype, "HandleSystemKeyEvents", null),
             Object(l.c)(
-              [Ot.a],
+              [At.a],
               t.prototype,
               "HandleControllerInputMessages",
               null
             ),
             t
           );
-        })(yt.c),
-        Dt = (function (e) {
+        })(Ot.c),
+        jt = (function (e) {
           function t(t) {
             var n = e.call(this) || this;
             return (
-              (n.m_lastButtonDown = yt.a.INVALID),
-              n.SetSourceType(yt.b.KEYBOARD),
+              (n.m_lastButtonDown = Ot.a.INVALID),
+              n.SetSourceType(Ot.b.KEYBOARD),
               t.addEventListener("keydown", n.OnKeyDown),
               t.addEventListener("keyup", n.OnKeyUp),
               t.addEventListener("blur", n.Reset),
@@ -5127,7 +5128,7 @@
             Object(l.d)(t, e),
             (t.prototype.OnKeyDown = function (e) {
               var t = this.TranslateKey(e);
-              t != yt.a.INVALID &&
+              t != Ot.a.INVALID &&
                 t != this.m_lastButtonDown &&
                 (this.Reset(),
                 this.OnButtonDown(t),
@@ -5136,15 +5137,15 @@
             }),
             (t.prototype.OnKeyUp = function (e) {
               var t = this.TranslateKey(e);
-              t != yt.a.INVALID &&
+              t != Ot.a.INVALID &&
                 (this.OnButtonUp(t),
-                (this.m_lastButtonDown = yt.a.INVALID),
+                (this.m_lastButtonDown = Ot.a.INVALID),
                 e.preventDefault());
             }),
             (t.prototype.Reset = function () {
-              this.m_lastButtonDown != yt.a.INVALID &&
+              this.m_lastButtonDown != Ot.a.INVALID &&
                 (this.OnButtonUp(this.m_lastButtonDown),
-                (this.m_lastButtonDown = yt.a.INVALID));
+                (this.m_lastButtonDown = Ot.a.INVALID));
             }),
             (t.prototype.TranslateKey = function (e) {
               var t = e.code,
@@ -5156,57 +5157,57 @@
               if (n)
                 switch (t) {
                   case "Digit1":
-                    return yt.a.STEAM_GUIDE;
+                    return Ot.a.STEAM_GUIDE;
                   case "Digit2":
-                    return yt.a.STEAM_QUICK_MENU;
+                    return Ot.a.STEAM_QUICK_MENU;
                   case "Digit3":
-                    return yt.a.SELECT;
+                    return Ot.a.SELECT;
                   case "Digit4":
-                    return yt.a.BUMPER_LEFT;
+                    return Ot.a.BUMPER_LEFT;
                   case "Digit5":
-                    return yt.a.BUMPER_RIGHT;
+                    return Ot.a.BUMPER_RIGHT;
                   case "Digit6":
-                    return yt.a.LSTICK_CLICK;
+                    return Ot.a.LSTICK_CLICK;
                   case "Digit7":
-                    return yt.a.RSTICK_CLICK;
+                    return Ot.a.RSTICK_CLICK;
                   case "Digit8":
-                    return yt.a.OPTIONS;
+                    return Ot.a.OPTIONS;
                   case "Digit9":
-                    return yt.a.SELECT;
+                    return Ot.a.SELECT;
                   case "Digit0":
-                    return yt.a.START;
+                    return Ot.a.START;
                 }
               switch (t) {
                 case "Escape":
-                  return yt.a.CANCEL;
+                  return Ot.a.CANCEL;
                 case "Enter":
-                  return a ? yt.a.INVALID : yt.a.OK;
+                  return a ? Ot.a.INVALID : Ot.a.OK;
                 case "Backspace":
-                  return a ? yt.a.INVALID : yt.a.SECONDARY;
+                  return a ? Ot.a.INVALID : Ot.a.SECONDARY;
                 case "ArrowUp":
-                  return yt.a.DIR_UP;
+                  return Ot.a.DIR_UP;
                 case "ArrowDown":
-                  return yt.a.DIR_DOWN;
+                  return Ot.a.DIR_DOWN;
                 case "ArrowLeft":
-                  return yt.a.DIR_LEFT;
+                  return Ot.a.DIR_LEFT;
                 case "ArrowRight":
-                  return yt.a.DIR_RIGHT;
+                  return Ot.a.DIR_RIGHT;
               }
-              return yt.a.INVALID;
+              return Ot.a.INVALID;
             }),
-            Object(l.c)([Ot.a], t.prototype, "OnKeyDown", null),
-            Object(l.c)([Ot.a], t.prototype, "OnKeyUp", null),
-            Object(l.c)([Ot.a], t.prototype, "Reset", null),
+            Object(l.c)([At.a], t.prototype, "OnKeyDown", null),
+            Object(l.c)([At.a], t.prototype, "OnKeyUp", null),
+            Object(l.c)([At.a], t.prototype, "Reset", null),
             t
           );
-        })(yt.c),
-        jt = (function (e) {
+        })(Ot.c),
+        wt = (function (e) {
           function t(t) {
             var n = e.call(this) || this;
             return (
               (n.m_nAccumulatedMouseMovement = 0),
               (n.m_bFirstMouseUpdate = !0),
-              n.SetSourceType(yt.b.MOUSE),
+              n.SetSourceType(Ot.b.MOUSE),
               t.addEventListener("mousedown", n.OnMouseDown),
               t.addEventListener("mousemove", n.OnMouseMove),
               t.addEventListener("blur", n.Reset),
@@ -5216,7 +5217,7 @@
           return (
             Object(l.d)(t, e),
             (t.prototype.OnMouseDown = function (e) {
-              e.defaultPrevented || this.OnNavigationTypeChanged(yt.b.MOUSE);
+              e.defaultPrevented || this.OnNavigationTypeChanged(Ot.b.MOUSE);
             }),
             (t.prototype.OnMouseMove = function (e) {
               if (!e.defaultPrevented) {
@@ -5230,31 +5231,33 @@
                   Math.abs(e.screenX - this.m_nLastScreenX) +
                   Math.abs(e.screenY - this.m_nLastScreenY)),
                   this.m_nAccumulatedMouseMovement > 500 &&
-                    (this.Reset(), this.OnNavigationTypeChanged(yt.b.MOUSE));
+                    (this.Reset(), this.OnNavigationTypeChanged(Ot.b.MOUSE));
               }
             }),
             (t.prototype.Reset = function () {
               (this.m_nAccumulatedMouseMovement = 0),
                 (this.m_bFirstMouseUpdate = !0);
             }),
-            Object(l.c)([Ot.a], t.prototype, "OnMouseDown", null),
-            Object(l.c)([Ot.a], t.prototype, "OnMouseMove", null),
-            Object(l.c)([Ot.a], t.prototype, "Reset", null),
+            Object(l.c)([At.a], t.prototype, "OnMouseDown", null),
+            Object(l.c)([At.a], t.prototype, "OnMouseMove", null),
+            Object(l.c)([At.a], t.prototype, "Reset", null),
             t
           );
-        })(yt.c),
-        wt = n("NxAk"),
-        Rt = (function () {
+        })(Ot.c),
+        Rt = n("NxAk"),
+        Gt = (function () {
           function e() {
-            (this.m_GamepadNavigationManager = new wt.c()),
-              this.m_GamepadNavigationManager.RegisterInputSource(new Tt()),
-              this.m_GamepadNavigationManager.RegisterInputSource(new Mt()),
-              this.m_GamepadNavigationManager.RegisterInputSource(
-                new Dt(window)
-              ),
-              this.m_GamepadNavigationManager.RegisterInputSource(
-                new jt(window)
-              );
+            (this.m_GamepadNavigationManager = new Rt.c()),
+              M.d.IN_GAMEPADUI &&
+                (this.m_GamepadNavigationManager.RegisterInputSource(new Dt()),
+                this.m_GamepadNavigationManager.RegisterInputSource(new Ct())),
+              "dev" == M.d.WEB_UNIVERSE &&
+                (this.m_GamepadNavigationManager.RegisterInputSource(
+                  new jt(window)
+                ),
+                this.m_GamepadNavigationManager.RegisterInputSource(
+                  new wt(window)
+                ));
           }
           return (
             (e.prototype.GetNavigationManager = function () {
@@ -5273,7 +5276,7 @@
           );
         })();
       Qe.a.Init(new qe.a(M.d.WEBAPI_BASE_URL)), G.c.Init();
-      var Gt = function (e) {
+      var Lt = function (e) {
         var t = e.children,
           n = Object(r.useState)(Me.a.IsInitialized()),
           a = n[0],
@@ -5285,20 +5288,20 @@
             }),
             null);
       };
-      function Lt(e) {
+      function kt(e) {
         return function (t) {
-          return o.a.createElement(Gt, null, o.a.createElement(e, t));
+          return o.a.createElement(Lt, null, o.a.createElement(e, t));
         };
       }
-      var kt = Lt(se),
-        Bt = Lt(Ce),
-        Pt = Lt(Ie.b),
-        Nt = Lt(i.c),
-        Ft = Lt(Ke),
-        Ut = Lt(rt),
-        Ht = Lt(Se),
-        xt = Lt(pt),
-        zt = Lt(function (e) {
+      var Bt = kt(se),
+        Pt = kt(Ce),
+        Nt = kt(Ie.b),
+        Ft = kt(i.c),
+        Ut = kt(Ke),
+        Ht = kt(rt),
+        xt = kt(Se),
+        zt = kt(pt),
+        Wt = kt(function (e) {
           var t = e.promotionName,
             n = e.language,
             a = o.a.useState(
@@ -5346,14 +5349,18 @@
                 St.b,
                 {
                   navID: "StoreSalePageRoot",
-                  NavigationManager: Rt.Get().GetNavigationManager(),
+                  NavigationManager: Gt.Get().GetNavigationManager(),
                 },
-                o.a.createElement(gt.h, {
-                  promotionName: t,
-                  language: n,
-                  eventModel: r,
-                  bIsPreview: l,
-                })
+                o.a.createElement(
+                  yt.a,
+                  null,
+                  o.a.createElement(gt.h, {
+                    promotionName: t,
+                    language: n,
+                    eventModel: r,
+                    bIsPreview: l,
+                  })
+                )
               )
             : o.a.createElement(gt.h, {
                 promotionName: t,
