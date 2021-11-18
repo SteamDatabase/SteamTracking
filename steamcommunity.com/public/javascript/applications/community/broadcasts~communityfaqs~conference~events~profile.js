@@ -8424,7 +8424,7 @@
               T.d,
               Object(r.a)(
                 { key: "preview-" + o + "-" + c },
-                Object(I.a)(t.id, t.type, n)
+                Object(I.a)(c, o, n)
               ),
               s.a.createElement(
                 H.a,
