@@ -69,7 +69,7 @@
               ),
                 e >= 0 &&
                   e < a.capsules.length &&
-                  (a.capsules.splice(e, 1), o.SetDirty(i.c.jsondata_sales));
+                  (a.capsules.splice(e, 1), o.SetDirty(i.d.jsondata_sales));
             }),
             (t.prototype.AddCapsule = function (e, t) {
               var a = {
@@ -82,7 +82,7 @@
               };
               this.props.capsuleContainer.capsules.push(a),
                 Object(S.i)([a]),
-                this.props.editModel.SetDirty(i.c.jsondata_sales);
+                this.props.editModel.SetDirty(i.d.jsondata_sales);
             }),
             (t.prototype.CountCapsPerVisibilityIndex = function () {
               var e = this.props,
@@ -128,7 +128,7 @@
             }),
             (t.prototype.OnRemoveAllConfirmed = function () {
               (this.props.capsuleContainer.capsules = []),
-                this.props.editModel.SetDirty(i.c.jsondata_sales);
+                this.props.editModel.SetDirty(i.d.jsondata_sales);
             }),
             (t.prototype.OnEditRaw = function (e) {
               Object(x.d)(
@@ -158,7 +158,7 @@
                   ? void 0
                   : a.length) || (s.capsules = []),
                   (s.sale_tag_filter = null);
-              r.SetDirty(i.c.jsondata_sales);
+              r.SetDirty(i.d.jsondata_sales);
             }),
             (t.prototype.OnUseTagFilterChange = function (e) {
               var t,
@@ -260,7 +260,7 @@
                       h.createElement(I.a, {
                         items: a.capsules,
                         onReorder: function () {
-                          return t.SetDirty(i.c.jsondata_sales);
+                          return t.SetDirty(i.d.jsondata_sales);
                         },
                         render: function (e) {
                           return h.createElement(l.a, {
@@ -307,7 +307,7 @@
                             visibility_index: o,
                           });
                       }),
-                      t.props.editModel.SetDirty(i.c.jsondata_sales);
+                      t.props.editModel.SetDirty(i.d.jsondata_sales);
                   },
                 }),
                 Object(D.m)(e)
@@ -561,7 +561,7 @@
                             }),
                       onDelete: this.RemoveCapsule,
                       onReorder: function () {
-                        return e.props.editModel.SetDirty(i.c.jsondata_sales);
+                        return e.props.editModel.SetDirty(i.d.jsondata_sales);
                       },
                       render: function (e) {
                         return h.createElement(l.a, {
@@ -740,7 +740,7 @@
                         this.setState({ bImporting: !1, errMsg: d }),
                         d ||
                           (JSON.stringify(a.capsules) !== JSON.stringify(n) &&
-                            ((a.capsules = n), t.SetDirty(i.c.jsondata_sales)),
+                            ((a.capsules = n), t.SetDirty(i.d.jsondata_sales)),
                           this.props.closeModal()),
                         [2]
                       );
@@ -1198,7 +1198,7 @@
                 capsules: [],
               };
               this.props.saleSection.tabs.push(e),
-                this.props.editModel.SetDirty(i.c.jsondata_sales);
+                this.props.editModel.SetDirty(i.d.jsondata_sales);
             }),
             (t.prototype.OnDeleteTabPrompt = function (e) {
               var t = this,
@@ -1226,7 +1226,7 @@
                   return t != e;
                 }
               )),
-                this.props.editModel.SetDirty(i.c.jsondata_sales),
+                this.props.editModel.SetDirty(i.d.jsondata_sales),
                 this.props.selectedTab === e && this.OnSelectTab(null);
             }),
             (t.prototype.RenderTab = function (e) {
@@ -1249,7 +1249,7 @@
                     items: this.props.saleSection.tabs,
                     onDelete: this.OnDeleteTabPrompt,
                     onReorder: function () {
-                      return e.props.editModel.SetDirty(i.c.jsondata_sales);
+                      return e.props.editModel.SetDirty(i.d.jsondata_sales);
                     },
                     render: this.RenderTab,
                   })
@@ -1324,7 +1324,7 @@
             }),
             (t.prototype.OnTitleChange = function (e) {
               (this.props.tab.default_label = e),
-                this.props.editModel.SetDirty(i.c.jsondata_sales);
+                this.props.editModel.SetDirty(i.d.jsondata_sales);
             }),
             (t.prototype.OnSetCustomTitle = function (e) {
               var t = this.props,
@@ -1406,7 +1406,7 @@
         Object(p.a)(
           l.createElement(u.a, {
             onChange: function (e) {
-              (t[o] = e), a.SetDirty(i.c.jsondata_sales);
+              (t[o] = e), a.SetDirty(i.d.jsondata_sales);
             },
             color: t[o],
           }),
@@ -1582,7 +1582,7 @@
                           (h = c ? d.a.GetExtensionString(c) : null),
                           (u = c ? c.image_hash + h : null),
                           (t.tab_bar_bg_image = u),
-                          a.SetDirty(i.c.jsondata_sales),
+                          a.SetDirty(i.d.jsondata_sales),
                           (o.label = 5);
                       case 5:
                         return [3, 8];
@@ -1621,7 +1621,7 @@
                       (n = e ? d.a.GetExtensionString(e) : null),
                       (s = e ? e.image_hash + n : null),
                       (t.tab_bar_bg_image = s),
-                      a.SetDirty(i.c.jsondata_sales),
+                      a.SetDirty(i.d.jsondata_sales),
                       [2]
                     );
                   });
@@ -2133,7 +2133,7 @@
             b = g[0],
             S = g[1],
             x = function () {
-              s.SetDirty(i.c.jsondata_sales);
+              s.SetDirty(i.d.jsondata_sales);
             },
             T = [
               {
@@ -2207,7 +2207,7 @@
                                 return Object(n.h)(e.tags, t.filter);
                               });
                         });
-                      return s.SetDirty(i.c.jsondata_sales), [2];
+                      return s.SetDirty(i.d.jsondata_sales), [2];
                   }
                 });
               });
@@ -2227,7 +2227,7 @@
                 onChange: function (e) {
                   (a.enable_faceted_browsing = e),
                     e && !a.facets && (a.facets = []),
-                    s.SetDirty(i.c.jsondata_sales);
+                    s.SetDirty(i.d.jsondata_sales);
                 },
               }),
               a.enable_faceted_browsing &&
@@ -2347,7 +2347,7 @@
                                                   case 4:
                                                     return (
                                                       s.SetDirty(
-                                                        i.c.jsondata_sales
+                                                        i.d.jsondata_sales
                                                       ),
                                                       [3, 6]
                                                     );
@@ -4070,7 +4070,7 @@
                 null != a &&
                 null != a &&
                 (a.BIsDirty() || t(a.GetGID())) &&
-                (a.BHasGid() || a.GetChangeTypes() != n.c.type)
+                (a.BHasGid() || a.GetChangeTypes() != n.d.type)
               ) {
                 var o = a.GetStrVanityOrAppID();
                 return (
@@ -15003,7 +15003,7 @@
                 );
               case 1:
                 return (
-                  i.sent(), o.push(n), j(e), e.SetDirty(m.c.jsondata_sales), [2]
+                  i.sent(), o.push(n), j(e), e.SetDirty(m.d.jsondata_sales), [2]
                 );
             }
           });
@@ -19975,12 +19975,12 @@
             (t.prototype.LockEmail = function () {
               this.m_setting.locked ||
                 ((this.m_setting.locked = !0),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetSubjectTextLoc = function (e) {
               this.m_setting.subject_loc_token != e &&
                 ((this.m_setting.subject_loc_token = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.EnsureTargetingExists = function () {
               if (!this.m_setting.targeting) {
@@ -19996,13 +19996,13 @@
               this.EnsureFilteringExists(),
                 this.m_setting.filtering.ir_topn !== e &&
                   ((this.m_setting.filtering.ir_topn = e),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetFilterWishlist = function (e) {
               this.EnsureFilteringExists(),
                 this.m_setting.filtering.wishlist !== e &&
                   ((this.m_setting.filtering.wishlist = e),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetControlGroupPercent = function (e) {
               Object(r.a)(
@@ -20014,7 +20014,7 @@
                 this.EnsureFilteringExists(),
                 this.m_setting.filtering.control_group_percent !== e &&
                   ((this.m_setting.filtering.control_group_percent = e),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetTargetingExistingPlayer = function (e) {
               this.EnsureTargetingExists(),
@@ -20022,13 +20022,13 @@
                   ((this.m_setting.targeting.game_players = e),
                   e &&
                     (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetTargetingGameWishlist = function (e) {
               this.EnsureTargetingExists(),
                 this.m_setting.targeting.game_wishlister !== e &&
                   ((this.m_setting.targeting.game_wishlister = e),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetExcludeGameOwners = function (e) {
               this.EnsureTargetingExists(),
@@ -20036,7 +20036,7 @@
                   ((this.m_setting.targeting.game_exclude_owners = e),
                   e &&
                     (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetOwnersWithNoPlaytime = function (e) {
               this.EnsureTargetingExists(),
@@ -20046,13 +20046,13 @@
                     ((this.m_setting.targeting.game_exclude_owners = !1),
                     (this.m_setting.targeting.game_players = !1),
                     (this.m_setting.targeting.creator_home_player = void 0)),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetTargetingGameFollower = function (e) {
               this.EnsureTargetingExists(),
                 this.m_setting.targeting.game_followers !== e &&
                   ((this.m_setting.targeting.game_followers = e),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetTargetingCreator = function (e, t) {
               this.EnsureTargetingExists(),
@@ -20060,7 +20060,7 @@
                 this.m_setting.targeting.creator_home_player &&
                   this.m_setting.targeting.creator_home_player[0] != t &&
                   (this.m_setting.targeting.creator_home_player = void 0),
-                this.m_editModel.SetDirty(p.c.jsondata_email);
+                this.m_editModel.SetDirty(p.d.jsondata_email);
             }),
             (t.prototype.SetTargetingCreatorPlayer = function (e, t) {
               this.EnsureTargetingExists(),
@@ -20072,12 +20072,12 @@
                   (this.m_setting.targeting.creator_home = void 0),
                 e &&
                   (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-                this.m_editModel.SetDirty(p.c.jsondata_email);
+                this.m_editModel.SetDirty(p.d.jsondata_email);
             }),
             (t.prototype.SetForceFeatureID = function (e) {
               this.m_setting.force_feature_id != e &&
                 ((this.m_setting.force_feature_id = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetLocalizedSubject = function (e, t) {
               return (
@@ -20090,7 +20090,7 @@
                   )),
                 this.m_setting.localized_subject[e] != t &&
                   ((this.m_setting.localized_subject[e] = t),
-                  this.m_editModel.SetDirty(p.c.jsondata_email),
+                  this.m_editModel.SetDirty(p.d.jsondata_email),
                   !0)
               );
             }),
@@ -20099,7 +20099,7 @@
                 e < this.m_sections.length &&
                 (this.m_setting.sections.splice(e, 1),
                 this.m_sections.splice(e, 1),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.AddSection = function (e) {
               this.m_setting.sections.push(Object(o.a)({}, e)),
@@ -20109,17 +20109,17 @@
                     this.m_editModel
                   )
                 ),
-                this.m_editModel.SetDirty(p.c.jsondata_email);
+                this.m_editModel.SetDirty(p.d.jsondata_email);
             }),
             (t.prototype.SetInternalTargetPriority = function (e) {
               this.m_setting.internal_targeting.priority !== e &&
                 ((this.m_setting.internal_targeting.priority = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetInternalTargetPartnerCapability = function (e) {
               this.m_setting.internal_targeting.capability !== e &&
                 ((this.m_setting.internal_targeting.capability = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.UpdateInternalTargetPublisherRights = function (e, t) {
               ((this.m_setting.internal_targeting.pub_rights & e) === e) !==
@@ -20127,7 +20127,7 @@
                 (t
                   ? (this.m_setting.internal_targeting.pub_rights |= e)
                   : (this.m_setting.internal_targeting.pub_rights &= ~e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.UpdateInternalTargetAppRights = function (e, t) {
               ((this.m_setting.internal_targeting.app_rights & e) === e) !==
@@ -20135,15 +20135,15 @@
                 (t
                   ? (this.m_setting.internal_targeting.app_rights |= e)
                   : (this.m_setting.internal_targeting.app_rights &= ~e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetInternalAppIDs = function (e) {
               (this.m_setting.internal_targeting.appids = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email);
+                this.m_editModel.SetDirty(p.d.jsondata_email);
             }),
             (t.prototype.SetInternalPublisherIDs = function (e) {
               (this.m_setting.internal_targeting.partnerids = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email);
+                this.m_editModel.SetDirty(p.d.jsondata_email);
             }),
             Object(o.c)([i.C], t.prototype, "m_sections", void 0),
             Object(o.c)([i.k], t.prototype, "SetFilterIRTopN", null),
@@ -20196,7 +20196,7 @@
                 (this.m_section.localized_headline.length < t ||
                   this.m_section.localized_headline[t] !== e) &&
                 ((this.m_section.localized_headline[t] = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email),
+                this.m_editModel.SetDirty(p.d.jsondata_email),
                 !0)
               );
             }),
@@ -20205,7 +20205,7 @@
                 (this.m_section.localized_body.length < t ||
                   this.m_section.localized_body[t] !== e) &&
                 ((this.m_section.localized_body[t] = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email),
+                this.m_editModel.SetDirty(p.d.jsondata_email),
                 !0)
               );
             }),
@@ -20213,28 +20213,28 @@
               this.m_section.video_link !== e &&
                 ((this.m_section.video_link = e),
                 (this.m_section.video_image = void 0),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetVideoHashAndExt = function (e) {
               this.m_section.video_image !== e &&
                 ((this.m_section.video_image = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetImage = function (e, t) {
               (this.m_section.localized_image.length < t ||
                 this.m_section.localized_image[t] !== e) &&
                 ((this.m_section.localized_image[t] = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetButtonTextLock = function (e) {
               this.m_section.button_loc_token !== e &&
                 ((this.m_section.button_loc_token = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.SetButtonDestination = function (e) {
               this.m_section.button_destination !== e &&
                 ((this.m_section.button_destination = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.IsValidStoreURL = function (e) {
               return e && e.startsWith("https://store.steampowered.com/");
@@ -20244,43 +20244,43 @@
                 var a = e.substr("https://store.steampowered.com/".length);
                 a != this.m_section.button_store_path &&
                   ((this.m_section.button_store_path = a),
-                  this.m_editModel.SetDirty(p.c.jsondata_email));
+                  this.m_editModel.SetDirty(p.d.jsondata_email));
               }
             }),
             (t.prototype.SetButtonAppOverride = function (e) {
               this.m_section.button_appid_override !== e &&
                 ((this.m_section.button_appid_override = e),
-                this.m_editModel.SetDirty(p.c.jsondata_email));
+                this.m_editModel.SetDirty(p.d.jsondata_email));
             }),
             (t.prototype.RemoveSubSection = function (e) {
               switch (e) {
                 case "headline":
                   this.BHasHeadline() &&
                     ((this.m_section.localized_headline = void 0),
-                    this.m_editModel.SetDirty(p.c.jsondata_email));
+                    this.m_editModel.SetDirty(p.d.jsondata_email));
                   break;
                 case "body":
                   this.BHasBody() &&
                     ((this.m_section.localized_body = void 0),
-                    this.m_editModel.SetDirty(p.c.jsondata_email));
+                    this.m_editModel.SetDirty(p.d.jsondata_email));
                   break;
                 case "img":
                   this.BHasImage() &&
                     ((this.m_section.localized_image = void 0),
-                    this.m_editModel.SetDirty(p.c.jsondata_email));
+                    this.m_editModel.SetDirty(p.d.jsondata_email));
                   break;
                 case "action":
                   this.BHasCallToAction() &&
                     ((this.m_section.button_loc_token = void 0),
                     (this.m_section.button_appid_override = void 0),
                     (this.m_section.button_destination = void 0),
-                    this.m_editModel.SetDirty(p.c.jsondata_email));
+                    this.m_editModel.SetDirty(p.d.jsondata_email));
                   break;
                 case "youtube":
                   this.BHasVideo() &&
                     ((this.m_section.video_link = void 0),
                     (this.m_section.video_image = void 0),
-                    this.m_editModel.SetDirty(p.c.jsondata_email));
+                    this.m_editModel.SetDirty(p.d.jsondata_email));
                   break;
                 default:
                   console.error(
@@ -22979,23 +22979,26 @@
     },
     fcuX: function (e, t, a) {
       "use strict";
-      a.d(t, "d", function () {
+      a.d(t, "e", function () {
         return o;
       }),
-        a.d(t, "b", function () {
+        a.d(t, "c", function () {
           return i;
         }),
-        a.d(t, "c", function () {
+        a.d(t, "d", function () {
           return n;
         }),
-        a.d(t, "a", function () {
+        a.d(t, "b", function () {
           return s;
         }),
-        a.d(t, "f", function () {
+        a.d(t, "g", function () {
           return A;
         }),
-        a.d(t, "e", function () {
+        a.d(t, "a", function () {
           return E;
+        }),
+        a.d(t, "f", function () {
+          return O;
         });
       var o,
         i,
@@ -23046,12 +23049,23 @@
           (e.k_EHour = "hour"), (e.k_EDay = "day"), (e.k_EWeek = "week");
         })(s || (s = {}));
       var A;
+      function E(e) {
+        switch (e) {
+          case A.immediate:
+            return "immediate";
+          case A.event_start:
+            return "event_start";
+          case A.specified_time:
+            return "specific time";
+        }
+        return "unknown";
+      }
       !(function (e) {
         (e[(e.immediate = 0)] = "immediate"),
           (e[(e.event_start = 1)] = "event_start"),
           (e[(e.specified_time = 2)] = "specified_time");
       })(A || (A = {}));
-      var E = (function () {
+      var O = (function () {
         function e(e) {
           (this.m_bChanged = !1),
             (this.m_changes = n.None),
@@ -23768,14 +23782,18 @@
             this.SetStartTimeEditChoice(a), this.SetEndTimeEditChoice(n);
           }),
           (e.prototype.DeriveVisibilitySetting = function () {
-            if (this.BHidden()) {
-              var e = this.m_curModel.startTime,
-                t = this.m_curModel.visibilityStartTime;
-              (this.visibilitySetting = A.specified_time),
-                !t || t <= 1
-                  ? (this.visibilitySetting = A.immediate)
-                  : t == e && (this.visibilitySetting = A.event_start);
-            }
+            this.BHidden() &&
+              (this.visibilitySetting = e.ComputeVisibilitySetting(
+                this.m_curModel.startTime,
+                this.m_curModel.visibilityStartTime
+              ));
+          }),
+          (e.ComputeVisibilitySetting = function (e, t) {
+            var a = A.specified_time;
+            return (
+              !t || t <= 1 ? (a = A.immediate) : t == e && (a = A.event_start),
+              a
+            );
           }),
           (e.CalculateEndTimeFromStartAndDuration = function (e, t, a) {
             return t == s.k_EWeek
@@ -25762,7 +25780,7 @@
                   a(t, e.substring(o + 1));
                 }
               }),
-                t.SetDirty(s.c.jsondata_sales),
+                t.SetDirty(s.d.jsondata_sales),
                 this.props.closeModal(),
                 h.d.ClearImageGroup();
             }),
@@ -26069,7 +26087,7 @@
                           clan_steamid: e.clan_steamid,
                           event_gid: null == t ? void 0 : t.GID,
                         }),
-                        this.props.editModel.SetDirty(s.c.jsondata_sales),
+                        this.props.editModel.SetDirty(s.d.jsondata_sales),
                         [2]
                       );
                   }
@@ -26368,14 +26386,14 @@
             Object(_.G)(function () {
               (a.events = i),
                 a.events.splice(e, 1),
-                t.SetDirty(s.c.jsondata_sales);
+                t.SetDirty(s.d.jsondata_sales);
             });
           },
           onMove: function (e, o) {
             Object(_.G)(function () {
               (a.events = i),
                 Object(j.d)(a.events, e, o),
-                t.SetDirty(s.c.jsondata_sales);
+                t.SetDirty(s.d.jsondata_sales);
             });
           },
           render: function (e) {
@@ -26434,7 +26452,7 @@
                   Number.isInteger(t) &&
                   a.smart_section_max_apps != t &&
                   ((a.smart_section_max_apps = t),
-                  i.SetDirty(s.c.jsondata_sales));
+                  i.SetDirty(s.d.jsondata_sales));
               },
             }),
             d.createElement(
@@ -26471,10 +26489,10 @@
                         a.smart_section_event_tags &&
                         ((a.smart_section_type = "recent_events"),
                         (a.smart_section_event_tags = void 0),
-                        i.SetDirty(s.c.jsondata_sales))
+                        i.SetDirty(s.d.jsondata_sales))
                       : ((a.smart_section_type = "recent_tagged_events"),
                         (a.smart_section_event_tags = [t]),
-                        i.SetDirty(s.c.jsondata_sales));
+                        i.SetDirty(s.d.jsondata_sales));
                   });
                 },
                 value:
@@ -26524,11 +26542,11 @@
                     type: t.type,
                     tags: t.tags || [],
                   }),
-                  this.props.editModel.SetDirty(s.c.jsondata_sales))
+                  this.props.editModel.SetDirty(s.d.jsondata_sales))
                 : e ||
                   -1 == o ||
                   (a.event_schedule_categories.splice(o, 1),
-                  this.props.editModel.SetDirty(s.c.jsondata_sales));
+                  this.props.editModel.SetDirty(s.d.jsondata_sales));
             }),
             (t.prototype.GetCategoryIndex = function (e) {
               var t = this.props.saleSection;
@@ -26621,7 +26639,7 @@
                       disabled: 0 == a.GetEventStartTime(),
                       onClick: function () {
                         (o.event_schedule_rtime_start = a.GetEventStartTime()),
-                          a.SetDirty(s.c.jsondata_sales);
+                          a.SetDirty(s.d.jsondata_sales);
                       },
                     },
                     Object(g.f)("#EventEditor_SaleEventSchedule_SetToStart")
@@ -26632,7 +26650,7 @@
                       disabled: 0 == a.GetEventEndTime(),
                       onClick: function () {
                         (o.event_schedule_rtime_end = a.GetEventEndTime()),
-                          a.SetDirty(s.c.jsondata_sales);
+                          a.SetDirty(s.d.jsondata_sales);
                       },
                     },
                     Object(g.f)("#EventEditor_SaleEventSchedule_SetToEnd")
@@ -26757,7 +26775,7 @@
                         ),
                         onOK: function () {
                           a.event_schedule_tracks.splice(e, 1),
-                            t.SetDirty(s.c.jsondata_sales),
+                            t.SetDirty(s.d.jsondata_sales),
                             o(null);
                         },
                       }),
@@ -26765,7 +26783,7 @@
                     );
                   },
                   onReorder: function () {
-                    return t.SetDirty(s.c.jsondata_sales);
+                    return t.SetDirty(s.d.jsondata_sales);
                   },
                   render: function (t) {
                     return d.createElement(ie, {
@@ -26797,7 +26815,7 @@
                       localized_track_image: [],
                       events: [],
                     }),
-                      t.SetDirty(s.c.jsondata_sales);
+                      t.SetDirty(s.d.jsondata_sales);
                   },
                 },
                 Object(g.f)("#EventSchedule_AddTrack")
@@ -26827,7 +26845,7 @@
         Object(k.a)(
           d.createElement(C.a, {
             onChange: function (e) {
-              (t[o] = e), a.SetDirty(s.c.jsondata_sales);
+              (t[o] = e), a.SetDirty(s.d.jsondata_sales);
             },
             color: t[o],
           }),
@@ -27259,12 +27277,12 @@
                         (t.event_schedule_rtime_start = Math.floor(
                           e.getTime() / 1e3
                         )),
-                        a.SetDirty(s.c.jsondata_sales);
+                        a.SetDirty(s.d.jsondata_sales);
                     }
                     t.event_schedule_rtime_end ||
                       ((t.event_schedule_rtime_end =
                         t.event_schedule_rtime_start + 3600),
-                      a.SetDirty(s.c.jsondata_sales));
+                      a.SetDirty(s.d.jsondata_sales));
                   });
               },
               [t, a, o]
@@ -27284,7 +27302,7 @@
                       ((t.event_schedule_rtime_start = e),
                       t.event_schedule_rtime_end < e &&
                         (t.event_schedule_rtime_end = e + 3600),
-                      a.SetDirty(s.c.jsondata_sales));
+                      a.SetDirty(s.d.jsondata_sales));
                 },
                 fnIsValidDateTime: function () {
                   return !0;
@@ -27312,7 +27330,7 @@
                         t.event_schedule_rtime_start &&
                         (t.event_schedule_rtime_end =
                           t.event_schedule_rtime_start + 3600),
-                      a.SetDirty(s.c.jsondata_sales));
+                      a.SetDirty(s.d.jsondata_sales));
                 },
                 fnIsValidDateTime: function () {
                   return !0;
@@ -27338,7 +27356,7 @@
             a = e.saleSection,
             i = d.useState(new h.b(t.GetClanSteamID()))[0],
             n = function (e, a, o) {
-              (e[o] = a), t.SetDirty(s.c.jsondata_sales);
+              (e[o] = a), t.SetDirty(s.d.jsondata_sales);
             },
             p = function (e) {
               Object(E.d)(
@@ -27529,7 +27547,7 @@
                                 (p = l ? h.a.GetExtensionString(l) : null),
                                 (c = l ? l.image_hash + p : null),
                                 (a.background_image = c),
-                                t.SetDirty(s.c.jsondata_sales),
+                                t.SetDirty(s.d.jsondata_sales),
                                 (o.label = 4);
                             case 4:
                               return [2];
@@ -27545,7 +27563,7 @@
                             (i = e ? h.a.GetExtensionString(e) : null),
                             (n = e ? e.image_hash + i : null),
                             (a.background_image = n),
-                            t.SetDirty(s.c.jsondata_sales),
+                            t.SetDirty(s.d.jsondata_sales),
                             [2]
                           );
                         });
@@ -27595,7 +27613,7 @@
                           onClick: function () {
                             (a.localized_sale_product_banner_override = void 0),
                               (a.localized_sale_product_mobile_banner_override = void 0),
-                              t.SetDirty(s.c.jsondata_sales);
+                              t.SetDirty(s.d.jsondata_sales);
                           },
                           className: T.EventEditorTextTitle,
                         },
@@ -27607,7 +27625,7 @@
                     {
                       onClick: function () {
                         (a.background_image = null),
-                          t.SetDirty(s.c.jsondata_sales);
+                          t.SetDirty(s.d.jsondata_sales);
                       },
                       className: T.EventEditorTextTitle,
                     },
@@ -27724,7 +27742,7 @@
               this.props.editModel.GetEventModel().jsondata
                 .sale_only_whitelisted_broadcasts !== e &&
                 ((this.props.editModel.GetEventModel().jsondata.sale_only_whitelisted_broadcasts = e),
-                this.props.editModel.SetDirty(s.c.jsondata_sales));
+                this.props.editModel.SetDirty(s.d.jsondata_sales));
             }),
             (t.prototype.BIsFirstBroadcastSaleSection = function () {
               for (var e = 0; e < this.props.index; e++) {
@@ -27821,7 +27839,7 @@
             (t.prototype.SetCurator = function (e) {
               this.props.saleSection.curator_clan_id != e.GetClanAccountID() &&
                 ((this.props.saleSection.curator_clan_id = e.GetClanAccountID()),
-                this.props.editModel.SetDirty(s.c.jsondata_sales));
+                this.props.editModel.SetDirty(s.d.jsondata_sales));
             }),
             (t.prototype.UpdateCuratorSuggestions = function (e) {
               return Object(o.b)(this, void 0, void 0, function () {
@@ -28045,7 +28063,7 @@
                 (e = le(e)),
                   l.featured_curator_list_rtime_start != e &&
                     ((l.featured_curator_list_rtime_start = e),
-                    a.SetDirty(s.c.jsondata_sales));
+                    a.SetDirty(s.d.jsondata_sales));
               },
               fnIsValidDateTime: function () {
                 return !0;
@@ -28066,10 +28084,10 @@
               items: l.featured_curator_list,
               onDelete: function (e) {
                 l.featured_curator_list.splice(e, 1),
-                  a.SetDirty(s.c.jsondata_sales);
+                  a.SetDirty(s.d.jsondata_sales);
               },
               onReorder: function () {
-                return a.SetDirty(s.c.jsondata_sales);
+                return a.SetDirty(s.d.jsondata_sales);
               },
               render: function (e) {
                 return d.createElement(He, { tuple: e });
@@ -28269,7 +28287,7 @@
                         clanAccountID: qe.a.Get().GetClanAccountFromListID(e),
                         listID: e,
                       }),
-                        a.SetDirty(s.c.jsondata_sales),
+                        a.SetDirty(s.d.jsondata_sales),
                         b();
                     },
                   })
@@ -28438,7 +28456,7 @@
                     }),
                     onChange: function (e) {
                       (a.contenthub_section_id = e.value),
-                        t.SetDirty(s.c.jsondata_sales);
+                        t.SetDirty(s.d.jsondata_sales);
                     },
                     isSearchable: !0,
                   })
@@ -28456,7 +28474,7 @@
                     (a.contenthub_section_capsules_per_page = Number(
                       e.target.value
                     )),
-                      t.SetDirty(s.c.jsondata_sales);
+                      t.SetDirty(s.d.jsondata_sales);
                   },
                 })
               )
@@ -28483,10 +28501,10 @@
           items: t || [],
           onDelete: function (t) {
             e.saleSection.itemdefs.splice(t, 1),
-              e.editModel.SetDirty(s.c.jsondata_sales);
+              e.editModel.SetDirty(s.d.jsondata_sales);
           },
           onReorder: function () {
-            return e.editModel.SetDirty(s.c.jsondata_sales);
+            return e.editModel.SetDirty(s.d.jsondata_sales);
           },
           render: function (t) {
             return d.createElement(tt, {
@@ -28546,7 +28564,7 @@
                         : t.value) || "0"
                     );
                   i != a.max_quantity &&
-                    ((a.max_quantity = i), o.SetDirty(s.c.jsondata_sales));
+                    ((a.max_quantity = i), o.SetDirty(s.d.jsondata_sales));
                 },
               }),
               d.createElement(
@@ -28662,7 +28680,7 @@
               onClick: function () {
                 e.saleSection.itemdefs || (e.saleSection.itemdefs = []),
                   e.saleSection.itemdefs.push({ nAppID: a, nItemDefID: n }),
-                  e.editModel.SetDirty(s.c.jsondata_sales);
+                  e.editModel.SetDirty(s.d.jsondata_sales);
               },
             },
             Object(g.f)("#Sale_ItemDef_Add")
@@ -28726,7 +28744,7 @@
                 ),
                 onOK: function () {
                   (t.show_on_tabs = Array.from(i.keys())),
-                    e.SetDirty(s.c.jsondata_sales);
+                    e.SetDirty(s.d.jsondata_sales);
                 },
               },
               d.createElement("div", { className: S.ShowOnTabCheckBoxCtn }, n)
@@ -28835,7 +28853,7 @@
             d.createElement(u.p, {
               onChange: function (e) {
                 (t.label_link_style = e ? "browseall" : void 0),
-                  a.SetDirty(s.c.jsondata_sales);
+                  a.SetDirty(s.d.jsondata_sales);
               },
               label: "(VO) " + Object(g.f)("#Sale_Section_TitleLink_BrowseAll"),
               tooltip: Object(g.f)("#Sale_Section_TitleLink_BrowseAll_ttip"),
@@ -28907,16 +28925,16 @@
                 t.props.editModel
                   .GetEventModel()
                   .jsondata.sale_sections.splice(e, 1),
-                  t.props.editModel.SetDirty(s.c.jsondata_sales);
+                  t.props.editModel.SetDirty(s.d.jsondata_sales);
               }, 500);
           }),
           (t.prototype.OnTitleChange = function (e) {
             (this.props.saleSection.default_label = e),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.OnTitleLinkChange = function (e) {
             (this.props.saleSection.label_link = e.target.value),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.OnSetCustomTitle = function (e) {
             var t = this.props,
@@ -28924,7 +28942,7 @@
               o = t.editLanguage,
               i = t.editModel;
             (a.localized_label = g.a.Set(a.localized_label || [], o, e)),
-              i.SetDirty(s.c.jsondata_sales);
+              i.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.OnClearCustomTitle = function () {
             var e = this.props,
@@ -28932,7 +28950,7 @@
               a = e.editLanguage,
               o = e.editModel;
             (t.localized_label = g.a.Set(t.localized_label || [], a, null)),
-              o.SetDirty(s.c.jsondata_sales);
+              o.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.OnShowTitleImageUpload = function (e, t) {
             e.preventDefault(),
@@ -28954,8 +28972,8 @@
               );
           }),
           (t.prototype.OnSaleSectionTypeChange = function (e) {
-            s.e.SetSaleSectionType(this.props.saleSection, e.data),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+            s.f.SetSaleSectionType(this.props.saleSection, e.data),
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.MoveSection = function (e) {
             var t = e ? 1 : -1;
@@ -28969,7 +28987,7 @@
                   .length - 1
               )
             ),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.GetMinimizedTag = function (e) {
             var t = "SaleSection_" + this.props.saleSection.unique_id;
@@ -28983,7 +29001,7 @@
           }),
           (t.prototype.OnChangeContentHubOverrideKey = function (e) {
             (this.props.saleSection.contenthub_override_section = e.target.value.trim()),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.render = function () {
             var e = this,
@@ -29471,7 +29489,7 @@
                 (this.props.saleSection.smart_section_type = e
                   ? "wishlist"
                   : void 0),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.render = function () {
               return d.createElement(
@@ -29528,7 +29546,7 @@
                       ? "recent_tagged_events"
                       : "recent_events"
                     : void 0),
-                    a.SetDirty(s.c.jsondata_sales);
+                    a.SetDirty(s.d.jsondata_sales);
                 });
               },
               label: Object(g.f)("#Sale_SmartSection"),
@@ -29553,11 +29571,11 @@
                   url: this.state.linkToAddURL,
                 }),
                 this.setState({ linkToAddURL: "" }),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.RemoveLink = function (e) {
               this.props.saleSection.links.splice(e, 1),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.OnLinkChange = function (e) {
               var t = e.target.value;
@@ -29592,7 +29610,7 @@
                   items: this.props.saleSection.links,
                   onDelete: this.RemoveLink,
                   onReorder: function () {
-                    return e.props.editModel.SetDirty(s.c.jsondata_sales);
+                    return e.props.editModel.SetDirty(s.d.jsondata_sales);
                   },
                   render: function (t) {
                     var a = 0;
@@ -29683,18 +29701,18 @@
               var a = Number(t);
               a >= 0 &&
                 ((e.cap_item_count = a),
-                this.props.editModel.SetDirty(s.c.jsondata_sales)),
+                this.props.editModel.SetDirty(s.d.jsondata_sales)),
                 this.setState({ capItemCountString: t });
             }),
             (t.prototype.OnCarouselRowsChange = function (e, t) {
               (e.carousel_rows = t),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.OnCapSectionRowCountChange = function (e, t) {
               var a = Number(t);
               a > 0 &&
                 ((e.cap_section_row_count = a),
-                this.props.editModel.SetDirty(s.c.jsondata_sales)),
+                this.props.editModel.SetDirty(s.d.jsondata_sales)),
                 this.setState({ maxRowsString: t });
             }),
             (t.prototype.ConvertStringToRowConfig = function (e) {
@@ -29709,7 +29727,7 @@
                 i = a.styles;
               (e.capsules_per_row_array = o),
                 (e.capsule_style_per_row_array = i && i.length ? i : null),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.GetCapsulesPerRowDropDown = function () {
               var e = this,
@@ -30097,7 +30115,7 @@
             onChange: function (e) {
               a.single_item_style !== e.data &&
                 ((a.single_item_style = e.data),
-                t.SetDirty(s.c.jsondata_sales));
+                t.SetDirty(s.d.jsondata_sales));
             },
           });
         }),
@@ -30111,7 +30129,7 @@
             l = e.disabled,
             p = e.onChange,
             c = function (e) {
-              (a[o] = e), t.SetDirty(s.c.jsondata_sales), p && p(a, e);
+              (a[o] = e), t.SetDirty(s.d.jsondata_sales), p && p(a, e);
             };
           return i
             ? d.createElement(
@@ -30170,7 +30188,7 @@
               this.props.saleSection.hide_section_if_broadcast_is_hidden !==
                 e &&
                 ((this.props.saleSection.hide_section_if_broadcast_is_hidden = e),
-                this.props.editModel.SetDirty(s.c.jsondata_sales));
+                this.props.editModel.SetDirty(s.d.jsondata_sales));
             }),
             (t.prototype.render = function () {
               var e = this,
@@ -30262,13 +30280,13 @@
                 a = e.editModel;
               t.item_browse_section_data ||
                 ((t.item_browse_section_data = {}),
-                a.SetDirty(s.c.jsondata_sales));
+                a.SetDirty(s.d.jsondata_sales));
             }),
             (t.prototype.OnSubscriptionIDChange = function (e) {
               this.EnsureBrowseData(),
                 (this.props.saleSection.item_browse_section_data.master_subscription =
                   Number.parseInt(e.target.value) || 0),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.OnRemoveTab = function (e) {
               this.EnsureBrowseData();
@@ -30276,24 +30294,24 @@
                 a = this.props.saleSection.item_browse_section_data;
               e >= 0 &&
                 e < a.tabs.length &&
-                (a.tabs.splice(e, 1), t.SetDirty(s.c.jsondata_sales));
+                (a.tabs.splice(e, 1), t.SetDirty(s.d.jsondata_sales));
             }),
             (t.prototype.OnAddTab = function (e) {
               this.EnsureBrowseData(),
                 this.props.saleSection.item_browse_section_data.tabs ||
                   (this.props.saleSection.item_browse_section_data.tabs = []),
                 this.props.saleSection.item_browse_section_data.tabs.push(e),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.OnShowAsDemos = function (e) {
               this.EnsureBrowseData(),
                 (this.props.saleSection.item_browse_section_data.show_as_demos = e),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.OnEnableSearch = function (e) {
               this.EnsureBrowseData(),
                 (this.props.saleSection.item_browse_section_data.enable_search = e),
-                this.props.editModel.SetDirty(s.c.jsondata_sales);
+                this.props.editModel.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.RenderTabName = function (e) {
               var t = ve.F.find(function (t) {
@@ -30382,7 +30400,7 @@
                   items: o,
                   onDelete: this.OnRemoveTab,
                   onReorder: function () {
-                    return e.props.editModel.SetDirty(s.c.jsondata_sales);
+                    return e.props.editModel.SetDirty(s.d.jsondata_sales);
                   },
                   render: function (t) {
                     return d.createElement(
@@ -30526,7 +30544,7 @@
                           r.GetEventModel().jsondata
                             .bAutoUpdateVanityURLForContentHub && xt(t, r);
                       }
-                      r.SetDirty(s.c.jsondata_sales);
+                      r.SetDirty(s.d.jsondata_sales);
                     },
                   }),
                   y.item_source_type === ve.n.k_EContentHub &&
@@ -30554,7 +30572,7 @@
                           (r.GetEventModel().jsondata.source_content_hub = t),
                             r.GetEventModel().jsondata
                               .bAutoUpdateVanityURLForContentHub && xt(t, r),
-                            r.SetDirty(s.c.jsondata_sales);
+                            r.SetDirty(s.d.jsondata_sales);
                         },
                         isSearchable: !0,
                       }),
@@ -30591,7 +30609,7 @@
                                 r.GetEventModel().jsondata
                                   .bAutoUpdateVanityURLForContentHub &&
                                   xt(t, r),
-                                r.SetDirty(s.c.jsondata_sales);
+                                r.SetDirty(s.d.jsondata_sales);
                             },
                             isSearchable: !0,
                           })
@@ -30630,7 +30648,7 @@
                                 r.GetEventModel().jsondata
                                   .bAutoUpdateVanityURLForContentHub &&
                                   xt(t, r),
-                                r.SetDirty(s.c.jsondata_sales);
+                                r.SetDirty(s.d.jsondata_sales);
                             },
                             isSearchable: !0,
                           })
@@ -30642,7 +30660,7 @@
                         checked: y.content_hub_discounted_only,
                         onChange: function (e) {
                           (r.GetEventModel().jsondata.content_hub_discounted_only = e),
-                            r.SetDirty(s.c.jsondata_sales);
+                            r.SetDirty(s.d.jsondata_sales);
                         },
                       }),
                       d.createElement(u.e, {
@@ -30662,7 +30680,7 @@
                               },
                               r
                             );
-                          r.SetDirty(s.c.jsondata_sales);
+                          r.SetDirty(s.d.jsondata_sales);
                         },
                       })
                     )
@@ -30738,7 +30756,7 @@
               strDropDownClassName: T.DropDownScroll,
               selectedOption: n || "subscription_pricing",
               onChange: function (e) {
-                (o.internal_type = e.data), t.SetDirty(s.c.jsondata_sales);
+                (o.internal_type = e.data), t.SetDirty(s.d.jsondata_sales);
               },
               contextMenuPositionOptions: { bDisablePopTop: !0 },
             }),
@@ -30756,7 +30774,7 @@
                 tooltip: Object(g.f)("#Sale_SubscriptionLogo_ttip"),
                 onChange: function (e) {
                   (o.subscription_logo_image = e.target.value),
-                    t.SetDirty(s.c.jsondata_sales);
+                    t.SetDirty(s.d.jsondata_sales);
                 },
                 value: (null == o ? void 0 : o.subscription_logo_image) || "",
               }),
@@ -30767,7 +30785,7 @@
                 strDropDownClassName: T.DropDownScroll,
                 selectedOption: o.cyoa_story_genre,
                 onChange: function (e) {
-                  (o.cyoa_story_genre = e.data), t.SetDirty(s.c.jsondata_sales);
+                  (o.cyoa_story_genre = e.data), t.SetDirty(s.d.jsondata_sales);
                 },
               }),
             Boolean("reservation_widget" === n) &&
@@ -30775,7 +30793,7 @@
                 event: t.GetEventModel(),
                 saleSection: a,
                 fnOnDirty: function () {
-                  return t.SetDirty(s.c.jsondata_sales);
+                  return t.SetDirty(s.d.jsondata_sales);
                 },
               })
           );
@@ -30898,22 +30916,22 @@
           }),
           (t.prototype.OnSmartSectionTypeChange = function (e) {
             (this.props.saleSection.smart_section_type = e.data),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.OnSmartSectionMaxAppChange = function (e) {
             (this.props.saleSection.smart_section_max_apps = Number.parseInt(
               e.target.value
             )),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.SetSmartSectionCategory = function (e) {
             (this.props.saleSection.smart_section_category = Number(e.data)),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.SetSmartSectionTag = function (e) {
             (this.m_refInput.element.value = ""),
               (this.props.saleSection.smart_section_tag = Number(e.id)),
-              this.props.editModel.SetDirty(s.c.jsondata_sales);
+              this.props.editModel.SetDirty(s.d.jsondata_sales);
           }),
           (t.prototype.UpdateTagSuggestions = function (e) {
             return Object(o.b)(this, void 0, void 0, function () {
@@ -30991,7 +31009,7 @@
               Object(_.G)(function () {
                 (a.props.saleSection.capsules = [{ id: e, type: t }]),
                   Object(Oe.i)(a.props.saleSection.capsules),
-                  a.props.editModel.SetDirty(s.c.jsondata_sales);
+                  a.props.editModel.SetDirty(s.d.jsondata_sales);
               });
           }),
           (t.prototype.OnChooseMasterSubscriptionID = function (e) {
@@ -31990,7 +32008,7 @@
                 a = t.GetEventModel().GetTaggedItems();
               e >= 0 &&
                 e < a.length &&
-                (a.splice(e, 1), t.SetDirty(s.c.jsondata_sales));
+                (a.splice(e, 1), t.SetDirty(s.d.jsondata_sales));
             }),
             (t.prototype.AddTagItem = function (e, t) {
               Object(r.b)(this.props.editModel, t, e);
@@ -32025,7 +32043,7 @@
               var t = this.props.editModel;
               (t.GetEventModel().jsondata.tagged_item_filter = e),
                 Object(r.u)(t),
-                t.SetDirty(s.c.jsondata_sales);
+                t.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.OnEditFilter = function () {
               var e = this.props.editModel;
@@ -32067,7 +32085,7 @@
             }),
             (t.prototype.OnDeleteFiltered = function () {
               var e = this.props.editModel;
-              Object(r.g)(e) && e.SetDirty(s.c.jsondata_sales);
+              Object(r.g)(e) && e.SetDirty(s.d.jsondata_sales);
             }),
             (t.prototype.OnSync = function (e) {
               Object(O.d)(
@@ -32126,7 +32144,7 @@
                             return (
                               o.sent(),
                               i.push.apply(i, n),
-                              t.SetDirty(s.c.jsondata_sales),
+                              t.SetDirty(s.d.jsondata_sales),
                               [2]
                             );
                         }
@@ -32768,7 +32786,7 @@
                 ),
                 Object(r.u)(this.props.editModel),
                 this.props.onTagsModified && this.props.onTagsModified(),
-                this.props.editModel.SetDirty(s.c.jsondata_sales)),
+                this.props.editModel.SetDirty(s.d.jsondata_sales)),
                 this.props.closeModal();
             }),
             (t.prototype.RenderSectionList = function () {
@@ -33152,7 +33170,7 @@
               }),
                 t &&
                   (Object(r.u)(this.props.editModel),
-                  this.props.editModel.SetDirty(s.c.jsondata_sales)),
+                  this.props.editModel.SetDirty(s.d.jsondata_sales)),
                 this.props.closeModal();
             }),
             (t.prototype.UpdateCurrentTagToItemMap = function () {
@@ -33971,7 +33989,7 @@
               var e = Object(r.e)(this.state.currentFilter);
               this.SanitizeFilter(e), this.props.onApplyFilter(e);
             }
-            this.props.editModel.SetDirty(s.c.jsondata_sales),
+            this.props.editModel.SetDirty(s.d.jsondata_sales),
               this.props.closeModal();
           }),
           (t.prototype.render = function () {
@@ -34374,7 +34392,7 @@
                     case 2:
                       return (
                         this.setState({ bImporting: !1, errMsg: "" }),
-                        e.SetDirty(s.c.jsondata_sales),
+                        e.SetDirty(s.d.jsondata_sales),
                         Object(r.u)(e),
                         this.props.closeModal(),
                         [2]
@@ -34636,7 +34654,7 @@
                       return (
                         l &&
                           (Object(r.u)(this.props.editModel),
-                          this.props.editModel.SetDirty(s.c.jsondata_sales)),
+                          this.props.editModel.SetDirty(s.d.jsondata_sales)),
                         this.setState({ bImporting: !1, errMsg: "" }),
                         this.props.closeModal(),
                         [2]
@@ -34885,7 +34903,7 @@
                           var o = t[e];
                           Object(r.v)(i.auto_item_tags, o);
                         }
-                        a.SetDirty(s.c.jsondata_sales);
+                        a.SetDirty(s.d.jsondata_sales);
                       }),
                       e.closeModal();
                   },
@@ -35466,7 +35484,7 @@
                 (a.vecTags.push("hide_library_overview"),
                 a.vecTags.push("steam_blog"),
                 a.vecTags.push("mod_reviewed")),
-              (this.m_editModel = new r.e(a)),
+              (this.m_editModel = new r.f(a)),
               g.a.EnsureStoreCapsuleInfoLoaded(I.b.APPID);
           }),
           (t.prototype.LoadClanEventsForPartnerDashboard = function (e, t) {
@@ -35592,22 +35610,19 @@
             var e = this.GetEditModel().GetEventModel().clone();
             return this.m_editModel.PrepareAsClone(e), this.m_editModel;
           }),
-          (t.prototype.PublishModel = function (e, t) {
-            return (
-              void 0 === t && (t = !1),
-              Object(o.b)(this, void 0, void 0, function () {
-                var a;
-                return Object(o.e)(this, function (o) {
-                  switch (o.label) {
-                    case 0:
-                      return [4, this.InternalSaveAction(e, !0, t)];
-                    case 1:
-                      if (1 != (a = o.sent()).success) throw a;
-                      return [2, a];
-                  }
-                });
-              })
-            );
+          (t.prototype.PublishModel = function (e) {
+            return Object(o.b)(this, void 0, void 0, function () {
+              var t;
+              return Object(o.e)(this, function (a) {
+                switch (a.label) {
+                  case 0:
+                    return !0, !1, [4, this.InternalSaveAction(e, true, false)];
+                  case 1:
+                    if (1 != (t = a.sent()).success) throw t;
+                    return [2, t];
+                }
+              });
+            });
           }),
           (t.prototype.PreSaveActions = function (e) {
             return Object(o.b)(this, void 0, void 0, function () {
@@ -35683,30 +35698,28 @@
               });
             });
           }),
-          (t.prototype.SaveModel = function (e, t, a) {
-            return (
-              void 0 === t && (t = !1),
-              Object(o.b)(this, void 0, void 0, function () {
-                var i;
-                return Object(o.e)(this, function (o) {
-                  switch (o.label) {
-                    case 0:
-                      return [4, this.PreSaveActions(e)];
-                    case 1:
-                      return (
-                        o.sent(), [4, this.InternalSaveAction(e, !1, t, a)]
-                      );
-                    case 2:
-                      if (1 != (i = o.sent()).success) throw i;
-                      return [2, i];
-                  }
-                });
-              })
-            );
-          }),
-          (t.prototype.InternalSaveAction = function (e, t, a, i) {
+          (t.prototype.SaveModel = function (e, t) {
             return Object(o.b)(this, void 0, void 0, function () {
-              var s,
+              var a;
+              return Object(o.e)(this, function (o) {
+                switch (o.label) {
+                  case 0:
+                    return [4, this.PreSaveActions(e)];
+                  case 1:
+                    return (
+                      o.sent(), !1, [4, this.InternalSaveAction(e, false, t)]
+                    );
+                  case 2:
+                    if (1 != (a = o.sent()).success) throw a;
+                    return [2, a];
+                }
+              });
+            });
+          }),
+          (t.prototype.InternalSaveAction = function (e, t, a) {
+            return Object(o.b)(this, void 0, void 0, function () {
+              var i,
+                s,
                 l,
                 p,
                 d,
@@ -35721,16 +35734,15 @@
                 T,
                 A,
                 E,
-                O,
-                D = this;
+                O = this;
               return Object(o.e)(this, function (o) {
                 switch (o.label) {
                   case 0:
                     return (
-                      (s =
+                      (i =
                         !!this.m_editModel.GetGID() &&
                         !this.m_editModel.GetGID().startsWith(m.H)),
-                      t && !s
+                      t && !i
                         ? [
                             2,
                             {
@@ -35741,7 +35753,7 @@
                             },
                           ]
                         : this.m_editModel.GetEventModel().loadedAllLanguages
-                        ? i || (!s && !t)
+                        ? a || (!i && !t)
                           ? [3, 2]
                           : [
                               4,
@@ -35764,19 +35776,19 @@
                     );
                   case 1:
                     if (
-                      (l = o.sent()) &&
-                      l.last_update_rtime > 0 &&
-                      l.last_update_rtime !=
+                      (s = o.sent()) &&
+                      s.last_update_rtime > 0 &&
+                      s.last_update_rtime !=
                         this.m_editModel.GetLastUpdateTime()
                     )
                       return (
                         console.log(
                           "Clobber Warning Appears: Original Seconds: " +
-                            l.last_update_rtime +
+                            s.last_update_rtime +
                             " update time: " +
                             this.m_editModel.GetLastUpdateTime() +
                             " previous user: " +
-                            l.persona_name
+                            s.persona_name
                         ),
                         [
                           2,
@@ -35784,8 +35796,8 @@
                             success: 27,
                             msg: Object(x.f)(
                               "#EventEditor_SaveOrPublish_ClobberWarning",
-                              Object(x.m)(l.last_update_rtime),
-                              l.persona_name,
+                              Object(x.m)(s.last_update_rtime),
+                              s.persona_name,
                               Object(x.m)(this.m_editModel.GetLastUpdateTime())
                             ),
                           },
@@ -35794,13 +35806,12 @@
                     o.label = 2;
                   case 2:
                     if (
-                      ((p = this.m_editModel.GetGID()),
-                      (d = new URLSearchParams()).append(
+                      ((l = this.m_editModel.GetGID()),
+                      (p = new URLSearchParams()).append(
                         "sessionid",
                         I.c.SESSIONID
                       ),
-                      d.append("authwgtoken", I.h.authwgtoken),
-                      a && d.append("fake_error", "" + a),
+                      p.append("authwgtoken", I.h.authwgtoken),
                       this.m_editModel
                         .GetEventModel()
                         .BHasTag("mod_reviewed") &&
@@ -35808,175 +35819,175 @@
                       this.m_editModel.BHasTag("auto_migrated") &&
                         !this.m_editModel.GetEventModel().bOldAnnouncement &&
                         this.m_editModel.ClearTags(["auto_migrated"]),
-                      s || t
-                        ? (d.append(t ? "bPublish" : "bUpdate", "1"),
-                          d.append("gid", this.m_editModel.GetGID()),
-                          d.append(
+                      i || t
+                        ? (p.append(t ? "bPublish" : "bUpdate", "1"),
+                          p.append("gid", this.m_editModel.GetGID()),
+                          p.append(
                             "announcement_gid",
                             this.m_editModel.GetAnnouncementGID()
                           ))
                         : (this.m_editModel.GetEventModel().bOldAnnouncement &&
-                            d.append(
+                            p.append(
                               "announcement_gid",
                               this.m_editModel.GetAnnouncementGID()
                             ),
-                          d.append("bCreate", "1")),
-                      d.append(
+                          p.append("bCreate", "1")),
+                      p.append(
                         "rtime32_visibility_start",
                         "" + this.m_editModel.GetEventVisibilityStartTime()
                       ),
-                      d.append(
+                      p.append(
                         "rtime32_visibility_end",
                         "" + this.m_editModel.GetEventVisibilityEndTime()
                       ),
-                      d.append(
+                      p.append(
                         "start_time_is_now",
                         this.m_editModel.GetStartTimeEditChoice() ==
-                          r.d.k_ENow ||
+                          r.e.k_ENow ||
                           this.m_editModel.GetVisibilitySetting() ==
-                            r.f.immediate
+                            r.g.immediate
                           ? "1"
                           : "0"
                       ),
                       !t)
                     ) {
                       if (
-                        ((h = "Untitled"),
-                        !(g = (this.m_editModel.GetName(0) || "").trim()) ||
-                          g === h)
+                        ((d = "Untitled"),
+                        !(h = (this.m_editModel.GetName(0) || "").trim()) ||
+                          h === d)
                       ) {
-                        for (y = "", b = 0; b < 30; ++b)
+                        for (g = "", y = 0; y < 30; ++y)
                           if (
-                            ((w = (this.m_editModel.GetName(b) || "").trim()),
-                            this.m_editModel.BIsLanguageValidForRealms(b) && w)
+                            ((b = (this.m_editModel.GetName(y) || "").trim()),
+                            this.m_editModel.BIsLanguageValidForRealms(y) && b)
                           ) {
-                            y = w;
+                            g = b;
                             break;
                           }
-                        this.m_editModel.SetName(0, y || h);
+                        this.m_editModel.SetName(0, g || d);
                       }
                       for (
-                        d.append("hidden", "" + this.m_editModel.BHidden()),
-                          d.append(
+                        p.append("hidden", "" + this.m_editModel.BHidden()),
+                          p.append(
                             "published",
                             "" + this.m_editModel.BPublished()
                           ),
-                          d.append("appid", "" + this.m_editModel.GetAppID()),
-                          d.append("event_name", this.m_editModel.GetName(0)),
-                          d.append(
+                          p.append("appid", "" + this.m_editModel.GetAppID()),
+                          p.append("event_name", this.m_editModel.GetName(0)),
+                          p.append(
                             "event_type",
                             "" + this.m_editModel.GetEventType()
                           ),
-                          d.append(
+                          p.append(
                             "body",
                             this.m_editModel.GetDescription(0)
                               ? this.m_editModel.GetDescription(0)
                               : ""
                           ),
-                          d.append(
+                          p.append(
                             "rtime32_start_time",
                             "" + this.m_editModel.GetEventStartTime()
                           ),
-                          d.append(
+                          p.append(
                             "rtime32_end_time",
                             "" + this.m_editModel.GetEventEndTime()
                           ),
-                          d.append(
+                          p.append(
                             "jsondata",
                             "" + this.m_editModel.ConstructJSONData()
                           ),
-                          d.append(
+                          p.append(
                             "tags",
                             JSON.stringify(
                               this.m_editModel.GetEventModel().vecTags
                             )
                           ),
-                          d.append(
+                          p.append(
                             "build_id",
                             "" + this.m_editModel.GetEventModel().m_nBuildID
                           ),
-                          d.append(
+                          p.append(
                             "build_branch",
                             this.m_editModel.GetEventModel().m_strBuildBranch
                           ),
                           this.m_editModel.BHasBroadcaster() &&
-                            d.append(
+                            p.append(
                               "broadcaster_accountid",
                               "" +
                                 this.m_editModel.GetBroadcaster().GetAccountID()
                             ),
-                          v = 0;
-                        v < 30;
-                        ++v
+                          w = 0;
+                        w < 30;
+                        ++w
                       )
-                        this.m_editModel.BHasLanguage(v) &&
-                          (d.append(
-                            Object(u.c)(Object(u.a)(v)) + "_headline",
-                            this.m_editModel.GetName(v)
-                              ? this.m_editModel.GetName(v)
+                        this.m_editModel.BHasLanguage(w) &&
+                          (p.append(
+                            Object(u.c)(Object(u.a)(w)) + "_headline",
+                            this.m_editModel.GetName(w)
+                              ? this.m_editModel.GetName(w)
                               : ""
                           ),
-                          d.append(
-                            Object(u.c)(Object(u.a)(v)) + "_body",
-                            this.m_editModel.GetDescription(v)
-                              ? this.m_editModel.GetDescription(v)
+                          p.append(
+                            Object(u.c)(Object(u.a)(w)) + "_body",
+                            this.m_editModel.GetDescription(w)
+                              ? this.m_editModel.GetDescription(w)
                               : ""
                           ));
                     }
-                    (S = this.m_editModel.GetAppID()),
-                      (C =
+                    (v = this.m_editModel.GetAppID()),
+                      (S =
                         I.c.COMMUNITY_BASE_URL +
                         "gid/" +
                         e.ConvertTo64BitString() +
                         "/ajaxcreateupdatedeletepartnerevents/"),
                       (o.label = 3);
                   case 3:
-                    return o.trys.push([3, 6, , 7]), [4, n.a.post(C, d)];
+                    return o.trys.push([3, 6, , 7]), [4, n.a.post(S, p)];
                   case 4:
                     return (
-                      (T = o.sent()),
+                      (C = o.sent()),
                       Object(c.G)(function () {
                         if (
                           (Object(_.a)(
-                            200 == T.status && 1 == T.data.success,
+                            200 == C.status && 1 == C.data.success,
                             "We should only get 200 if we succeed in this method."
                           ),
-                          D.m_editModel.GetGID() == p)
+                          O.m_editModel.GetGID() == l)
                         ) {
-                          D.m_editModel.ClearDirty(),
+                          O.m_editModel.ClearDirty(),
                             t
-                              ? (D.m_editModel.UpdateVisibilityState(
-                                  T.data.published,
-                                  T.data.hidden
+                              ? (O.m_editModel.UpdateVisibilityState(
+                                  C.data.published,
+                                  C.data.hidden
                                 ),
-                                T.data.forum_topic_id &&
-                                  (D.m_editModel.GetEventModel().forumTopicGID =
-                                    T.data.forum_topic_id))
-                              : (s ||
-                                  (D.m_editModel.SetGIDs(
+                                C.data.forum_topic_id &&
+                                  (O.m_editModel.GetEventModel().forumTopicGID =
+                                    C.data.forum_topic_id))
+                              : (i ||
+                                  (O.m_editModel.SetGIDs(
                                     e,
-                                    T.data.gid,
-                                    T.data.announcement_gid
+                                    C.data.gid,
+                                    C.data.announcement_gid
                                   ),
-                                  D.InsertUniqueEventGID(
+                                  O.InsertUniqueEventGID(
                                     e.GetAccountID(),
-                                    S,
-                                    T.data.gid
+                                    v,
+                                    C.data.gid
                                   )),
-                                T.data.localization_updates &&
-                                  T.data.localization_updates.forEach(function (
+                                C.data.localization_updates &&
+                                  C.data.localization_updates.forEach(function (
                                     e
                                   ) {
-                                    D.m_editModel
+                                    O.m_editModel
                                       .GetEventModel()
                                       .timestamp_loc_updated.set(
                                         e.lang,
                                         e.timestamp_updated
                                       );
                                   }));
-                          var a = D.m_editModel.GetEventModel();
-                          D.m_mapExistingEvents.set(a.GID, a),
-                            D.m_editModel.Refresh(a);
+                          var a = O.m_editModel.GetEventModel();
+                          O.m_mapExistingEvents.set(a.GID, a),
+                            O.m_editModel.Refresh(a);
                         }
                       }),
                       [
@@ -35991,10 +36002,10 @@
                     );
                   case 5:
                     return (
-                      (A = o.sent())
+                      (T = o.sent())
                         ? this.m_editModel.MarkUpdateSuccessful(
-                            A.last_update_rtime,
-                            A.last_updater_steamid
+                            T.last_update_rtime,
+                            T.last_updater_steamid
                           )
                         : this.m_editModel.MarkUpdateSuccessful(
                             Math.floor(Date.now() / 1e3),
@@ -36002,17 +36013,17 @@
                               .InitFromAccountID(I.h.accountid)
                               .ConvertTo64BitString()
                           ),
-                      [2, T.data]
+                      [2, C.data]
                     );
                   case 6:
                     return (
-                      (E = o.sent()),
-                      (O = Object(k.a)(E)),
+                      (A = o.sent()),
+                      (E = Object(k.a)(A)),
                       console.error(
-                        "InternalSaveAction failed: " + O.strErrorMsg,
-                        O
+                        "InternalSaveAction failed: " + E.strErrorMsg,
+                        E
                       ),
-                      [2, { success: 2, msg: O.strErrorMsg }]
+                      [2, { success: 2, msg: E.strErrorMsg }]
                     );
                   case 7:
                     return [2];
