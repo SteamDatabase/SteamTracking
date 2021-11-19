@@ -87,6 +87,7 @@ __LINKEDIT
 8I>
 pZ
 P
+$
 
 *
 8
@@ -5339,8 +5340,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Nov 16 2021
-03:53:16
+Nov 19 2021
+13:04:54
 X-SteamClientVersion
 hostName
 pchRemoteHost
