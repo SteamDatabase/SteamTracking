@@ -26303,6 +26303,46 @@ a {
   .standingsdivision_TeamLists_3RxwI.standingsdivision_NoData_-3vz9 {
   opacity: 0;
 }
+.standingsdivision_LegendContainer_1eZ_Z {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.standingsdivision_LegendContainer_1eZ_Z .standingsdivision_LegendCenter_3TJiF {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 20px;
+  gap: 20px;
+}
+.standingsdivision_LegendContainer_1eZ_Z
+  .standingsdivision_LegendCenter_3TJiF
+  .standingsdivision_LegendItem_z6qSZ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.standingsdivision_LegendContainer_1eZ_Z
+  .standingsdivision_LegendCenter_3TJiF
+  .standingsdivision_LegendItem_z6qSZ
+  .standingsdivision_ColorSquare_2CCYO {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+}
+.standingsdivision_LegendContainer_1eZ_Z
+  .standingsdivision_LegendCenter_3TJiF
+  .standingsdivision_LegendItem_z6qSZ
+  .standingsdivision_Description_2eckE {
+  color: #a3a3a3;
+  max-width: 300px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .leaguestandingssummary_DPCLeagueStandingsSummary_77L-f {
   width: 100%;
   background-size: 100% auto;

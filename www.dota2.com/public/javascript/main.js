@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6901560";
+var CLSTAMP = "6905869";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -8173,6 +8173,11 @@ var CLSTAMP = "6901560";
         DPCStandingsDivision: "standingsdivision_DPCStandingsDivision_33H6m",
         TeamLists: "standingsdivision_TeamLists_3RxwI",
         NoData: "standingsdivision_NoData_-3vz9",
+        LegendContainer: "standingsdivision_LegendContainer_1eZ_Z",
+        LegendCenter: "standingsdivision_LegendCenter_3TJiF",
+        LegendItem: "standingsdivision_LegendItem_z6qSZ",
+        ColorSquare: "standingsdivision_ColorSquare_2CCYO",
+        Description: "standingsdivision_Description_2eckE",
       };
     },
     JTWI: function (e, t, a) {
