@@ -4,33 +4,33 @@ __text
 __TEXT
 __stubs
 __TEXT
+jT&
+jT&
 __stub_helper
 __TEXT
+P^&
+P^&
 __cstring
 __TEXT
-n&
-n&
 __gcc_except_tab__TEXT
 __const
 __TEXT
 __objc_methname
 __TEXT
 __objc_classname__TEXT
-)},
-)},
+Y},
+Y},
 __objc_methtype
 __TEXT
-4},
+d},
 (
-4},
+d},
 __unwind_info
 __TEXT
-\},
-\},
 __eh_frame
 __TEXT
-p-
-p-
+Hp-
+Hp-
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -74,7 +74,6 @@ __DATA
 7B
 __common
 __DATA
-hB
 H
 __LINKEDIT
 @B
@@ -9823,8 +9822,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Nov 19 2021
-13:04:00
+Nov 22 2021
+14:06:21
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13749,8 +13748,6 @@ CLogInstance::EmitEventNow
 Last Message Repeated %d times.%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
-m_cReentrancyCount >= 0
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
@@ -13794,19 +13791,18 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
+-
 0
 Ic
-~%
 p
 0
+n%
 0
 p
 0
-_%
 t$
-k%
--
--
+%
+%
 $
 $
 j
@@ -13830,13 +13826,9 @@ j
 j
 j
 j
-!$
 j
 j
-1$
-j
-$
-j
++
 j
 $
 j
@@ -13885,15 +13877,17 @@ j
 j
 j
 j
+j
+j
 $
-l#
+q$
 j
 j
 j
 j
 "
 "
-r*
+@#
 _
 j
 j
@@ -13916,25 +13910,16 @@ j
 j
 *
 *
-*
-*
 0
 d
 #
 #
-#
 j
 >
 >
 j
->
->
 j
->
->
 j
->
->
 j
 j
 j
@@ -13944,6 +13929,10 @@ j
 j
 j
 !
+d-
+>
+>
+>
 >
 
 
@@ -13957,6 +13946,8 @@ j
 "
 "
 "
+"
+"
 p
 0
 p
@@ -13965,8 +13956,9 @@ p
 0
 p
 0
-p
-0
+)
+)
+)
 )
 p
 0
@@ -13977,25 +13969,29 @@ p
 p
 0
 p
+0
 p
 p
+p
+|0
 @
 =
+)"
+"
 
-d=
+;!
+T(
 .
 0
 0
 \
-v,
+"
 !
 !
 !
 !
 !
 !
-!
-!
 j
 j
 j
@@ -14025,20 +14021,22 @@ j
 j
 j
 j
-!
-X<
-U<
+R<
+.
+.
 Hi
-\<
-P
-u<
+e
+<
+<
+<
+<
+W
 j
 j
 j
 j
 j
 j
-Z
 j
 j
 j
@@ -14055,8 +14053,8 @@ j
 0
 p
 0
-(0
-~;
+C
+*
 j
 j
 j
@@ -14083,7 +14081,19 @@ j
 j
 ;
 ;
-3;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 0
 0
 AT=
@@ -14096,6 +14106,9 @@ D
 @
 #
 #
+#
+#
+#
 @
 Hc
 Hc
@@ -14127,12 +14140,14 @@ IcE
 IcE
 @
 @
-$%
+:
+:
 V
 =
 =
-,
 @
+C3
+')
 @
 M9e
 @
@@ -14328,9 +14343,10 @@ P
 |
 @
 @
-!
+g
 
 d
+3
 
 
 
@@ -14340,8 +14356,6 @@ d
 
 A+M
 1
-t7f97/'
-e&
 j
 j
 j
@@ -14350,6 +14364,7 @@ j
 j
 =
 0
+p
 j
 j
 j
@@ -14442,7 +14457,14 @@ j
 j
 j
 j
-e"
+v"
+m"
+"
+"
+"
+"
+"
+"
 E
 j
 j
@@ -14457,6 +14479,7 @@ j
 j
 j
 j
+!
 j
 j
 j
@@ -14614,6 +14637,4 @@ E
 0
 0
 0
-3
-.
 p

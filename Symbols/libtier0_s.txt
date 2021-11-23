@@ -97,6 +97,7 @@
  T InitializeStackTrackingFilters
  T Is64BitOS
  T IsInAssert
+ T IsInFatalAssert
  T IsLogActive
  T IsSpewActive
  T IsStackTrackingFiltered
@@ -156,6 +157,7 @@
  T SetFlushLogFunc
  T SetFullMemoryDumpOnCrash
  T SetInAssert
+ T SetInFatalAssert
  T SetMiniDumpAppID
  T SetMiniDumpBuildID
  T SetMiniDumpCustomInfo
@@ -202,6 +204,7 @@
  T SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
  T SteamThreadTools::CThreadFullMutex::IsCreator() const
  T SteamThreadTools::CThreadFullMutex::Release()
+ T SteamThreadTools::CThreadLocalBase::BIsValid() const
  T SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
  T SteamThreadTools::CThreadLocalBase::Get() const
  T SteamThreadTools::CThreadLocalBase::Set(void*)

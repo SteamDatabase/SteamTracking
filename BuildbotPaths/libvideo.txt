@@ -54,7 +54,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h

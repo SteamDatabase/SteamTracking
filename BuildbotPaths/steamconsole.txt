@@ -3,7 +3,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/rtime.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h

@@ -179,6 +179,8 @@ QPRRj
 ^_[]
 VRQP
 ^_[]
+PRQj
+PWVQ
 SWVP
 ^_[]
 ^_[]
@@ -497,7 +499,6 @@ DONT_BREAK_ON_ASSERT
 Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
-m_cReentrancyCount >= 0
 Failed to generate callstack
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
@@ -528,15 +529,13 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov 19 2021
-13:01:35
+Nov 22 2021
+14:03:57
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
 Out of thread local storage!
-Bad thread local
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
@@ -760,11 +759,12 @@ CreateInterface
 TJ",\
 c5u8
 $z$WnJ
-">pl
+*>pl
 Dzll
 ){c$V
 `m(w
 !	'J+
+uL."&
 Qg	~
 |`n>>
 _Breakpad_SetSteamID
@@ -929,23 +929,19 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-h6qi
-*95.
-_]1S
-{Tp5
-e$/MWI
-#xc6>
-hbpr
+FE^n
+E){G|C
+:"v[
+.e#-Ji
+/`~d
+@AYt
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-y&xus
-t"rq
-b	UE
-;+VYH
->S|j
-e5&EN
+FR(]L
+&rl"
+r.C}
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1001,8 +997,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210201Z0/
-jd^YC
+211122220423Z0/
+ lTD)
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1010,16 +1006,23 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		1pO+ZyzjRpfHmMtRXrRFKVfS/ms=
+		8orrbJxpxUci+7GBML+JlbcGfyU=
 		</data>
 		<data>
-		y6yu9JO2m04bF1U+NYm6+LLZvl4=
+		LPFevj6v5FUGLWTsvxHWdfLkpck=
 		</data>
 	</array>
 </dict>
 </plist>
-Q*)9-
-20211119210217Z0
+h#\4
+IMP|
+`4q 
+}%5^
+`p3	A
+t%\^
+/AYD
+;J'[
+20211122220434Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1079,9 +1082,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210217Z0#
-^};n
-<`X.
+211122220434Z0#
+=']	
+.]QDd
+bYNfJ
+JOf\V
+J.TCU
 __TEXT
 __text
 __TEXT
@@ -1127,6 +1133,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
+~h6}3K
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1346,6 +1353,7 @@ AWAVAUATSH
 AWAVAUATSH
 	H;M
 [A\A]A^A_]
+AWAVSPI
 t-UH
 AVSH
 [A^]
@@ -1595,7 +1603,6 @@ H;7u
 [A^]
 HcS,L
 AWAVSH
-Lc5cc
 x(Hc
 VUUUH
 X[A^A_]
@@ -1776,8 +1783,6 @@ DONT_BREAK_ON_ASSERT
 Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
-m_cReentrancyCount >= 0
 Failed to generate callstack
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
@@ -1808,14 +1813,13 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov 19 2021
-13:01:35
+Nov 22 2021
+14:03:57
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
 Out of thread local storage!
-Bad thread local
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
@@ -2075,7 +2079,6 @@ CreateInterface
 -Breakpad_SetSteamID
 6@@D
 }Z>x;
-"4jx
 @jtt
 Fvvh
 N~{ 
@@ -2244,24 +2247,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-EJl*
-l#S5
-n`' 
-VuVq?
+g1cn
+_n.3
+`&U8
+dVWQ
+8fT	
+zp3(
+DJEkM.
+O+9	
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-n:8k
-BuaR
-M}6%DS
->$3Dg
-hcnbX
-<MOZ
-?%*{% 3$
-E:/`u
-p_?3C'
-hsNl
+ffr6
+)\7SP
+C;. 
+sL"]o/O
+HI,i
+Sk\{s\
+s}6e@
+P@{E
+~S&<
+}@P;xY
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2317,8 +2324,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210201Z0/
-^<hnF`
+211122220423Z0/
+ VEA
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2326,18 +2333,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		E4tTjVqOsE6pGApLohrG0LVdPAo=
+		Sf4CB3Zxh5V7yJfNhxEO/j1CMPo=
 		</data>
 		<data>
-		64TvEqitn8lePGhuRmC1mhFWyGA=
+		xzsC7qMm9ybT2ghK2tYeQgGWZ38=
 		</data>
 	</array>
 </dict>
 </plist>
-T]6CB
-F'ZF#
-jT>I
-20211119210217Z0
+_H{W
+N\|S
+9vA.
+vq'fW2
+`o6b
+20211122220434Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2397,13 +2406,13 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210217Z0#
+211122220434Z0#
+sI0+
 wI<<2
-U 8R
-TtyF
-EEq$|7
-N.04?
-[3icF*
+6V)Op
+uM,z
+nIJ3<
+$)``
 __TEXT
 __text
 __TEXT
@@ -2464,6 +2473,8 @@ Tv*@
  @9H5
 cS9 
 Q)Ij8?
+	Xw2
+	Xt2
  @9H
 5h"@9
 h&B)
@@ -2471,6 +2482,8 @@ h&B)
 Lii8k	
 		n9
 R		.9
+WV	X
+ G	X
 jv8(
 h(8*
 ij`8
@@ -2488,9 +2501,9 @@ h^@9
 j98w
 Rh^@9
 j48u
+R	e'9
 T		@9?
 5'qHs
-At9(
 (a@9
 5(	@
 Th^@
@@ -2510,17 +2523,18 @@ TK	@
 ii8J	
 <l9@
 +ih8J	
-R	a'9
 T+	@
-A}9h
-	I}9
-R	I=9
-E=9h
-(A=9
-	M}9
-R	M=9
+a}9h
+	i}9
+R	i=9`R
+e=9h
+(a=9
+	m}9
+R	m=9
 @9_q
 jt8 
+ @9h
+ @9h
 (hh8!
 i"D)
 5`JH
@@ -2671,8 +2685,6 @@ DONT_BREAK_ON_ASSERT
 Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
-m_cReentrancyCount >= 0
 Failed to generate callstack
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
@@ -2703,14 +2715,13 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov 19 2021
-13:01:36
+Nov 22 2021
+14:03:59
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
 Out of thread local storage!
-Bad thread local
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
@@ -3132,27 +3143,25 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-wHX+GUP
-c0+m
-3<rM
-"%:_	|	Wg
-~eT-
-[:_n
-sT_b
-<l1W
+	}v@.W
+="?%e
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-b3]C
-QPc({
-alBF
-oI~Iq
-s~P^
-eIHd
-d=<2F
-K3Y+
-1_?9
+!P(W
+Rx1$
+L-4}
+7	kj
+z?oJ
+03a/
+B\D(`
+-5b0A
+cU/;].
+0W)&
+wa\0
+:Hvh~5%
+eF1]
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -3208,8 +3217,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210201Z0/
-ba)0
+211122220423Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3217,18 +3225,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		TMDcjP/aykeTbrPh/HwsbAvV9fA=
+		zUm7kAEc3TfK5R9uLwHel6IMT4M=
 		</data>
 		<data>
-		YfsSRTWH0nHGkNN4UH8si/7/WRM=
+		/tLGmU4H/ldX67kvPYd08vOXlgg=
 		</data>
 	</array>
 </dict>
 </plist>
-Lm/I
-c82Y
-m/ *
-20211119210217Z0
+ro{~#ls
+1<9GN
+gJun
+	!3Oj
+20211122220434Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3288,11 +3297,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210217Z0#
-Ee06
-%lV8G
-JT{ce
-ZE P(e
-~{~@y^
-pZOX
-P`|jYE
+211122220434Z0#
+3Y)*
+eap`e
++$`	Ru
+33?!
+yzNz%
+G{dZ
+C&)<

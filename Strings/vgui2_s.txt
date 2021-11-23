@@ -51,7 +51,7 @@ __data
 __DATA
 __bss
 __DATA
-h9
+`9
 __common
 __DATA
 H

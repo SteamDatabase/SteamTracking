@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-`I
-`I
 __stubs
 __TEXT
 __stub_helper
@@ -43,7 +41,7 @@ __bss
 __DATA
 __common
 __DATA
-@C
+xC
 H
 __LINKEDIT
 
@@ -1215,8 +1213,6 @@ CIPAndPort::GetIPv4 called on IPv6 address
 nBytes
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
-m_cReentrancyCount >= 0
 @nSpewThrottlePeriodMs
 @nSpewThrottleTriggerThreshold
 10
@@ -1272,10 +1268,5 @@ B
 0
 0
 0
-Hc5<
-k
-g
-Q
-M
 0
 0

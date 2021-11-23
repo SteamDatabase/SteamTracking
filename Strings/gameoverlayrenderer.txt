@@ -1839,35 +1839,32 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-AXC`Z
-%m7_
- wQT
-l<V3
-5qA6&^
-LZ249
-WbEQ
-.g(PZY
+}{G~
+-IW`
+a]|y
+;~7s9z
+JXr 
+dB{*
+z/GF
 /\q\
-.jV=Em
-)+0P
+b<Rg
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-7L">&
-\WKj
-SMm@U
->x-3
-e+!q
+$odD
+ul7c
+W}1t
+}>:Y	.>
+SBMU
+AGxr
+MGj>
+4DBX$1
 f)bbc6
-Q$bP
-ml@g
-uOp,
-\Vl$
-RZ%T
-#Tur
-* %WP
-=[)\
+	Bl5
+b~>D
+i*ett
+CaEX
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1923,8 +1920,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210146Z0/
-!;Evq
+211122220408Z0/
+[OuP
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1932,40 +1929,42 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		C3kKftoLmGjLiUMKqygjOfCsNss=
+		dKRmD+W3dgmeV4VD9ltPdVD093A=
 		</data>
 		<data>
-		JxKETEeVg4yzBy2wwJAIM/06jeY=
+		7M3ErNmDc+SJRAM1DevEeBLrERA=
 		</data>
 	</array>
 </dict>
 </plist>
-p)]D
-o{LP
-$&cS
-P;]>b*
-20211119210202Z0
+-d5;C
+}::-^(
+qr[+nM{
+}c6M
+CviY]E
+4b-m\
+20211122220419Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211026174001Z
-211207174000Z0B1
-Timestamp Signer NWK11
+211026173001Z
+211207173000Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
- Fky??	
-3#KH*
-&7?Ot
-O3^d
+p:w{
+<}NZz
+Vqeb
+%0a"a
++tv9
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-c=jX
-CH@	
-;`\_
->-$lY@
-OKBP
+eP~q
+ZR}BE
+a ;|#
+~o@'0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2004,9 +2003,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210202Z0#
-gb0+
-wI<<2
+211122220419Z0#
+QK-[
+Ac>;
 __TEXT
 __text
 __TEXT
@@ -2084,7 +2083,8 @@ __LINKEDIT
 /usr/lib/libobjc.A.dylib
 AVSI
 [A^]
-[A^]
+AWAVATS
+[A\A^A_]
 AWAVSPH
 [A^A_]
 AWAVAUATSPH
@@ -2480,7 +2480,7 @@ AWAVATSI
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
-H9=1
+H9=A
 [A^]
 H9GHt.H
 AWAVATSH
@@ -4331,35 +4331,48 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-\&v/o
-Bon+
-'7yo@
-H)qm
-2k~m#h
+\><\
+xad2p
+U!{k
+^a%9
+l~,2
+Fza~
+N5g`
 ci][
 L~7)'_
 [aOP
-3\uu
+xV5c
+9kJ+
 0yVf
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+gnzdD
+@e	R
 g~9M
-Z/rh
-c;:|
-@F6Z
-'`t>@
-@$Ko
-!)ei
-M*"g
-n)QMz
+r|HT
+I6UD	z
+ArkC 
+? ~5
+o	=a
+a!rl~
+.vL\:
+oJ3[
+pzK=
+$e+T
 	BFs
+Qyvl
+C4l3
 ~g]-
 wk<I
 o{ay
-ny%v
+Z<ZTL
+,}Q:
+:[[Q3
+v5S9
 M)V+3_Yx
+(z?$Qx
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4415,7 +4428,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210146Z0/
+211122220408Z0/
+::G0
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4423,38 +4437,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		yW7d4FZvmVGdPsgbLdO5sy8fF2k=
+		hU6VMZ2QixnLt5ctrmwBOTg0qbw=
 		</data>
 		<data>
-		ex6ymqaQ7CtmhRjCEDesGy+JL+c=
+		+njeV5Uf9gZtN1wRz3fmaiGHOjs=
 		</data>
 	</array>
 </dict>
 </plist>
-Y3CO
-d^Xr
-20211119210202Z0
+Yf}~
+`;!SG
+20211122220419Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211026173001Z
-211207173000Z0B1
-Timestamp Signer NWK21
+211026174001Z
+211207174000Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-p:w{
-<}NZz
-Vqeb
-%0a"a
-+tv9
+ Fky??	
+3#KH*
+&7?Ot
+O3^d
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-eP~q
-ZR}BE
-a ;|#
-~o@'0
+c=jX
+CH@	
+;`\_
+>-$lY@
+OKBP
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4493,9 +4507,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210202Z0#
-`^n5
-QuI_
+211122220419Z0#
+wI<<2
+%t*r
+_>)f
+C)eM
+/'v*Q
 __TEXT
 __text
 __TEXT
@@ -4556,6 +4573,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
+a(+2
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -4723,7 +4741,6 @@ hjA9(
 4t:@
 #A)	|	
 i"V)
-`}	X
 Ci8}
 hfA9
 &D9?
@@ -4735,6 +4752,7 @@ hfA9
 Th&@
 Th&@
 Rh:@
+`)	X
 '	XA
 T`*@
 4a*@
@@ -4749,6 +4767,7 @@ hrD9h
 hrD9
 hBD9
 hBD9h
+	J9(
 !IzH
 +ih8J	
 12CIMENullImpl
@@ -6078,32 +6097,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-^S|q
-q+m(
-sezdW
-oX3-f
-n@w+
-pl(+
-K	iI
+7z1w.j
+S]M%
+#.wD
+h<8WETL
+4:%^
 cY/G
 {e~p,X
-P*<D
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-fQD#
-!Y]n
-&I]8
-c%~T/
-]8dI
-fasE
-j\S&
-/oqd
-N*+`
+,6d)
+Cj}1
+88<'
+}\2	
+"N8(K>
+?:1@
 $Ot6
 1T 9
-farQ3
+s)M2
 g4%s
 Frm}=sF
 Apple Inc.1&0$
@@ -6161,8 +6174,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210146Z0/
- Xvb
+211122220408Z0/
+?'30[
+K(iM
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6170,40 +6184,42 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		nt3Nat/bp4rMGmh/1HW5Q2fpsgw=
+		99tk+BrQE9HbakmgSyhpTdK14Rg=
 		</data>
 		<data>
-		WHZi1w2Tnrfomdo7APg3GxPjs78=
+		7dta5nn/CLKfxO00eN4x/s3ttK0=
 		</data>
 	</array>
 </dict>
 </plist>
-%tC2nf7`
-~jY;V
-RY*@
-KsHX
-20211119210202Z0
+b}9P
+,yJR1
+L |Rx/Q6
+[P-v
+/ZQ1
+7QI?
+20211122220419Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211026174001Z
-211207174000Z0B1
-Timestamp Signer NWK11
+211026173001Z
+211207173000Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
- Fky??	
-3#KH*
-&7?Ot
-O3^d
+p:w{
+<}NZz
+Vqeb
+%0a"a
++tv9
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-c=jX
-CH@	
-;`\_
->-$lY@
-OKBP
+eP~q
+ZR}BE
+a ;|#
+~o@'0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6242,9 +6258,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211119210202Z0#
-[BA30+
-wI<<2
-YL0`q
-~ViU
-OY]e
+211122220419Z0#
+<5J'
+^On`
+sw?\
+cYS[~
+by4D
