@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6914991";
+var CLSTAMP = "6915372";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -3384,20 +3384,36 @@ var CLSTAMP = "6914991";
                 });
             }),
             (e.prototype.GetSaleItemOfType = function (t) {
+              var n;
               if (!this.jsondata.sale_sections) return new Set();
-              var n = new Set(t),
-                r = new Set();
+              var r = new Set(t),
+                a = new Set();
+              if (
+                (Object(h.a)(
+                  !this.jsondata.bOptimizedForSize,
+                  "Cannot find all items in optimized json"
+                ),
+                this.jsondata.bOptimizedForSize && "dev" == v.d.WEB_UNIVERSE)
+              )
+                throw new Error(
+                  "GetSaleOfItemType called on a truncated jsondata."
+                );
               return (
+                null === (n = this.jsondata.tagged_items) ||
+                  void 0 === n ||
+                  n.forEach(function (t) {
+                    e.AccumulateCapsuleListIDs([t.capsule], r, a);
+                  }),
                 this.jsondata.sale_sections.forEach(function (t) {
                   if ("items" === t.section_type)
-                    e.AccumulateCapsuleListIDs(t.capsules, n, r);
+                    e.AccumulateCapsuleListIDs(t.capsules, r, a);
                   else if ("tabs" === t.section_type && t.tabs)
-                    for (var a = 0, i = t.tabs; a < i.length; a++) {
-                      var o = i[a];
-                      e.AccumulateCapsuleListIDs(o.capsules, n, r);
+                    for (var n = 0, i = t.tabs; n < i.length; n++) {
+                      var o = i[n];
+                      e.AccumulateCapsuleListIDs(o.capsules, r, a);
                     }
                 }),
-                r
+                a
               );
             }),
             (e.prototype.GetSaleItemCountOfType = function (e) {
@@ -13807,14 +13823,14 @@ var CLSTAMP = "6914991";
               return c.a.createElement(St, Object(r.a)({}, e));
           }
         },
-        Ot = n("3Gzo"),
-        Et = n("7G5R"),
-        Ct = n("U9Ih"),
-        At = n.n(Ct),
-        wt = n("5L1o"),
-        Bt = n("NKJh"),
-        Tt = n.n(Bt),
-        It = n("4pOC"),
+        Ot = n("4pOC"),
+        Et = n("3Gzo"),
+        Ct = n("7G5R"),
+        At = n("U9Ih"),
+        wt = n.n(At),
+        Bt = n("5L1o"),
+        Tt = n("NKJh"),
+        It = n.n(Tt),
         Lt = 12,
         Dt = (function (e) {
           function t(t) {
@@ -13831,7 +13847,7 @@ var CLSTAMP = "6914991";
                 nHiddenCapsules: 0,
                 strSearchQuery: "",
                 strRawSearch: "",
-                bIsNarrowScreen: Object(Ot.a)(),
+                bIsNarrowScreen: Object(Et.a)(),
               }),
               (n.m_timerForChange = new w.b()),
               (n.m_cancelSignal = v.a.CancelToken.source()),
@@ -13960,10 +13976,6 @@ var CLSTAMP = "6914991";
                         (_ = Math.max(p, e + 1)),
                         (null == i ? void 0 : i.BIsTabFilteringEnabled()) &&
                           (_ = Math.max(_, 100)),
-                        De.a.GetTimeNowWithOverride(),
-                        3600,
-                        86400,
-                        n.GetSaleFeaturedAppsAndDemos(),
                         (r.label = 2);
                     case 2:
                       if (!(l.length <= e && f)) return [3, 11];
@@ -14118,8 +14130,8 @@ var CLSTAMP = "6914991";
                         return e.OnFlavorLabelClick(t.flavor);
                       },
                       className: Object(ie.a)(
-                        At.a.FlavorLabel,
-                        i == t.flavor && At.a.SelectedFlavor
+                        wt.a.FlavorLabel,
+                        i == t.flavor && wt.a.SelectedFlavor
                       ),
                     },
                     Object(F.f)(t.label)
@@ -14183,7 +14195,7 @@ var CLSTAMP = "6914991";
                 );
             }),
             (t.prototype.OnResize = function () {
-              this.setState({ bIsNarrowScreen: Object(Ot.a)() });
+              this.setState({ bIsNarrowScreen: Object(Et.a)() });
             }),
             (t.prototype.DebugMatches = function (e) {
               var t = this.props,
@@ -14239,14 +14251,14 @@ var CLSTAMP = "6914991";
                       l.slice(0, u).map(function (t) {
                         return c.a.createElement(
                           "div",
-                          { key: t.id, className: Tt.a.SaleItemBrowserRow },
+                          { key: t.id, className: It.a.SaleItemBrowserRow },
                           e.state.bIsNarrowScreen
-                            ? c.a.createElement(It.a, {
+                            ? c.a.createElement(Ot.a, {
                                 capsule: t,
                                 imageType: "header",
                                 bShowDemoButton: Boolean(n.show_as_demos),
                               })
-                            : c.a.createElement(wt.m, {
+                            : c.a.createElement(Bt.m, {
                                 id: t.id,
                                 type: t.type || "game",
                                 bShowDemoButton: Boolean(n.show_as_demos),
@@ -14259,7 +14271,7 @@ var CLSTAMP = "6914991";
                     0 == l.length &&
                     c.a.createElement(
                       "div",
-                      { className: At.a.EmptyResults },
+                      { className: wt.a.EmptyResults },
                       Object(F.f)("#Sale_EmptySearchResultsOrLoadFailure")
                     ),
                   (!s || p) &&
@@ -14267,8 +14279,8 @@ var CLSTAMP = "6914991";
                       "div",
                       {
                         className: Object(ie.a)(
-                          At.a.ShowContentsContainer,
-                          !s && At.a.Loading
+                          wt.a.ShowContentsContainer,
+                          !s && wt.a.Loading
                         ),
                       },
                       !s || d
@@ -14277,7 +14289,7 @@ var CLSTAMP = "6914991";
                             "button",
                             {
                               onClick: this.ShowMoreRows,
-                              className: At.a.ShowContentsButton,
+                              className: wt.a.ShowContentsButton,
                             },
                             Object(F.f)("#Sale_ShowMore")
                           )
@@ -14300,18 +14312,18 @@ var CLSTAMP = "6914991";
               }
               return c.a.createElement(
                 "div",
-                { className: At.a.SaleItemBrowserContainer },
+                { className: wt.a.SaleItemBrowserContainer },
                 c.a.createElement(
-                  Et.a,
-                  { className: At.a.SaleItemBrowserHeaderContainer },
+                  Ct.a,
+                  { className: wt.a.SaleItemBrowserHeaderContainer },
                   c.a.createElement(
                     "div",
-                    { className: At.a.SaleItemBrowserHeader },
+                    { className: wt.a.SaleItemBrowserHeader },
                     f,
                     n.enable_search &&
                       c.a.createElement(
                         "div",
-                        { className: At.a.SuggestContainer },
+                        { className: wt.a.SuggestContainer },
                         c.a.createElement(x.F, null),
                         c.a.createElement(k.k, {
                           type: "text",
@@ -14325,7 +14337,7 @@ var CLSTAMP = "6914991";
                       r.enable_faceted_browsing &&
                       c.a.createElement(
                         "div",
-                        { className: At.a.Debug },
+                        { className: wt.a.Debug },
                         c.a.createElement(
                           "a",
                           {
@@ -14807,7 +14819,7 @@ var CLSTAMP = "6914991";
                     style: p,
                   },
                   s.createElement(
-                    Et.a,
+                    Ct.a,
                     { className: Me.a.SaleSectionTabContainer },
                     s.createElement(
                       "div",

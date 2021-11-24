@@ -16719,6 +16719,15 @@
               label: "(VO) Tag as Content Hub",
               description:
                 "Add the 'contenthub' tag to this event. Removes certain publishing restrictions for this event.",
+            }),
+            c.createElement(Me.p, {
+              onChange: function () {
+                return t.ToggleTag("vo_prevent_delete");
+              },
+              label: "(VO) Prevent this event from being deleted.",
+              checked: t.GetEventModel().BHasTag("vo_prevent_delete"),
+              description:
+                "Add the 'vo_prevent_delete' tag to this post. To prevent a partner or Valve from deleting this event because something is featuring it or depends on it.",
             })
           );
         }),

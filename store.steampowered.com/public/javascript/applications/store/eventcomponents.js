@@ -110,8 +110,8 @@
         y = n("TQGK"),
         O = n("N0Ye"),
         A = n("f0Wu"),
-        C = ["mod_reviewed", "auto_migrated"],
-        T = (function () {
+        T = ["mod_reviewed", "auto_migrated"],
+        C = (function () {
           function e() {
             (this.selectedTags = void 0),
               (this.excludedTags = void 0),
@@ -138,7 +138,7 @@
                     return a.push({ label: e, value: e });
                   }));
               var r = !1,
-                o = C.map(function (e) {
+                o = T.map(function (e) {
                   return { label: e, value: e };
                 });
               "string" == typeof n.excludedTags
@@ -212,8 +212,8 @@
           (e[(e.k_ModRemoveAdultOnlyContent = 7)] =
             "k_ModRemoveAdultOnlyContent");
       })(a || (a = {}));
-      var D = "ModAct",
-        j = (function () {
+      var j = "ModAct",
+        D = (function () {
           function e() {}
           return (
             (e.prototype.ToModString = function () {
@@ -235,7 +235,7 @@
             }),
             (e.prototype.FromString = function (e) {
               var t = e.split("_");
-              if (!t || t[0] !== D) return !1;
+              if (!t || t[0] !== j) return !1;
               switch (
                 ((this.m_moderator = Number(t[1])),
                 (this.m_rtWhen = Number(t[2])),
@@ -286,7 +286,7 @@
               );
             }),
             (e.IsAuditAction = function (e) {
-              return e.startsWith(D);
+              return e.startsWith(j);
             }),
             (e.prototype.SetUpdateSeasonalTags = function (e) {
               return (
@@ -804,7 +804,7 @@
             o = e.eventModel
               .GetAllTags()
               .filter(function (e) {
-                return j.IsAuditAction(e);
+                return D.IsAuditAction(e);
               })
               .reverse(),
             i = o.length,
@@ -823,7 +823,7 @@
                 (function (t) {
                   var n = e.eventModel;
                   return t.map(function (e) {
-                    var t = new j();
+                    var t = new D();
                     return (
                       t.FromString(e),
                       r.createElement(x, { key: n.GID + e, modAction: t })
@@ -899,7 +899,7 @@
                 this.LoadMoreModerationEvents
               ),
                 window.addEventListener("scroll", this.OnScroll, !0),
-                T.Get().Init(this.props.history.location.search);
+                C.Get().Init(this.props.history.location.search);
             }),
             (t.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
@@ -909,7 +909,7 @@
                 this.ClearTimer();
             }),
             (t.prototype.HandleUpdateQueryParameter = function () {
-              var e = T.Get();
+              var e = C.Get();
               if (e.bUseCustomQuery && this.props.history) {
                 var t = e.selectedTags,
                   n = e.excludedTags,
@@ -979,7 +979,7 @@
               var e = this;
               if ((this.ClearTimer(), this.state.bInfiniteScrollLoading)) {
                 var t = void 0,
-                  n = T.Get();
+                  n = C.Get();
                 if (n.bUseCustomQuery) {
                   var a = n.filterEventTypes
                       ? n.filterEventTypes.map(function (e) {
@@ -1033,7 +1033,7 @@
             (t.prototype.RenderTiles = function () {
               var e = new Array();
               return (
-                (T.Get().bUseCustomQuery
+                (C.Get().bUseCustomQuery
                   ? R.Get().GetAllSolrEvents()
                   : w.Get().GetAllSolrEvents()
                 ).forEach(function (t) {
@@ -1074,7 +1074,7 @@
             }),
             (t.prototype.render = function () {
               var e = this.RenderTiles(),
-                t = T.Get();
+                t = C.Get();
               return o.a.createElement(
                 "div",
                 { className: re.ModerationContainer, ref: this.m_refScroll },
@@ -1132,7 +1132,7 @@
         })(o.a.Component),
         se = Object(h.i)(le),
         ce = Object(u.a)(function (e) {
-          var t = T.Get(),
+          var t = C.Get(),
             n = e.fnRequireRefetchEvents;
           return o.a.createElement(
             o.a.Fragment,
@@ -1186,7 +1186,7 @@
           );
         }),
         de = Object(u.a)(function (e) {
-          var t = T.Get(),
+          var t = C.Get(),
             n = e.fnRequireRefetchEvents,
             a = b.d
               .map(function (e) {
@@ -1440,7 +1440,7 @@
                   if (e !== n.BHasTag("adult_only_content")) {
                     var a = new Array(),
                       r = new Array(),
-                      o = new j().SetAdultOnlyContentAction(e);
+                      o = new D().SetAdultOnlyContentAction(e);
                     e
                       ? a.push("adult_only_content")
                       : r.push("adult_only_content"),
@@ -1456,7 +1456,7 @@
                   if (e !== Object(f.g)(n)) {
                     var a = new Array(),
                       r = new Array(),
-                      o = new j().SetReviewAction(e);
+                      o = new D().SetReviewAction(e);
                     e
                       ? (a.push("mod_reviewed"),
                         r.push("mod_require_rereview"),
@@ -2040,7 +2040,7 @@
                         a.value.tags &&
                           a.value.tags.forEach(function (e) {
                             i.push(e);
-                            var t = new j()
+                            var t = new D()
                               .SetUpdateSeasonalTags(e)
                               .ToModString();
                             i.push(t);
@@ -2055,7 +2055,7 @@
                               t.GetAnnouncementGID(),
                               i,
                               o,
-                              new j().SetActionChangeEvent(r)
+                              new D().SetActionChangeEvent(r)
                             ),
                         ]
                       );
@@ -2119,9 +2119,29 @@
                   label: Object(F.f)("#PartnerEvent_Curator_Public"),
                   value: { eventType: 28, tags: ["curator", "curator_public"] },
                 }),
+                r.push({
+                  label: Object(F.f)("#PartnerEvent_SteamAwardNominations"),
+                  value: {
+                    eventType: 28,
+                    tags: [
+                      "steam_award_nomination_request",
+                      "mod_hide_library_overview",
+                    ],
+                  },
+                }),
+                r.push({
+                  label: Object(F.f)("#PartnerEvent_SteamAwardVoteRequest"),
+                  value: {
+                    eventType: 28,
+                    tags: [
+                      "steam_award_vote_request",
+                      "mod_hide_library_overview",
+                    ],
+                  },
+                }),
                 r.unshift({
                   value: { eventType: 15, tags: ["halloween"] },
-                  label: Object(F.f)("#EventEditor_Category_DLC_Halloween"),
+                  label: Object(F.f)("#PartnerEvent_15"),
                 }),
                 r.unshift({
                   value: { eventType: 22, tags: ["halloween"] },
@@ -2250,7 +2270,7 @@
                               n.AnnouncementGID,
                               e,
                               t,
-                              new j().SetUpdateSeasonalTags(
+                              new D().SetUpdateSeasonalTags(
                                 this.state.bAccept
                                   ? "halloween2019"
                                   : "halloween2019reviewed"
@@ -2852,8 +2872,8 @@
         })())(),
         Oe = n("vNkc"),
         Ae = n("Nsq5"),
-        Ce = n("mB/g"),
-        Te = (function (e) {
+        Te = n("mB/g"),
+        Ce = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -3309,8 +3329,8 @@
                             "div",
                             { key: t },
                             r.createElement(
-                              Ce.c,
-                              { eventModel: a, route: Ce.a.k_eView },
+                              Te.c,
+                              { eventModel: a, route: Te.a.k_eView },
                               a.GetNameWithFallback(0)
                             ),
                             r.createElement(
@@ -3445,8 +3465,8 @@
         })(r.Component),
         Ie = n("6AJf"),
         Me = n("9w6b"),
-        De = n("mgoM"),
-        je = n("BVKn"),
+        je = n("mgoM"),
+        De = n("BVKn"),
         we = n("YWVM"),
         Re = n("r3N9"),
         Ge = n("SdTr"),
@@ -3760,7 +3780,7 @@
             Object(F.f)("#EventAdmin_Moderation_HideEventInSC")
           );
         },
-        xe = je.a.Get();
+        xe = De.a.Get();
       function ze() {
         document.body.classList.contains("events_hub") &&
           document.body.classList.remove("events_hub");
@@ -3792,7 +3812,7 @@
                     t = a && a.group_name;
                   }
                   var r =
-                    e && e.GetNameWithFallback(Object(De.e)(M.d.LANGUAGE));
+                    e && e.GetNameWithFallback(Object(je.e)(M.d.LANGUAGE));
                   if (e && t && r) {
                     var o = Object(F.f)(
                       "#EventCalendar_TabTitle_GroupNameAndEventDetail",
@@ -3847,7 +3867,7 @@
             ),
             m || !d)
           ) {
-            var _ = "lang_" + Object(De.c)(Object(De.e)(M.d.LANGUAGE));
+            var _ = "lang_" + Object(je.c)(Object(je.e)(M.d.LANGUAGE));
             return o.a.createElement(
               "div",
               {
@@ -3902,7 +3922,7 @@
                   showAppHeader: !0,
                   closeModal: function () {
                     return e.history.push(
-                      Object(Ce.e)(d, Ce.a.k_eStoreNewsHub, "allowRelative")
+                      Object(Te.e)(d, Te.a.k_eStoreNewsHub, "allowRelative")
                     );
                   },
                 })
@@ -3911,7 +3931,7 @@
                 B.a,
                 null,
                 o.a.createElement(Le.c, {
-                  lang: Object(De.e)(M.d.LANGUAGE),
+                  lang: Object(je.e)(M.d.LANGUAGE),
                   partnerEventStore: xe,
                   event: d,
                   adminPanel:
@@ -4159,10 +4179,10 @@
                             Object(F.f)("#EventBrowse_MoreEventsBtn")
                           )
                         : o.a.createElement(
-                            Ce.c,
+                            Te.c,
                             {
                               eventModel: n[0],
-                              route: Ce.a.k_eViewWebSiteHub,
+                              route: Te.a.k_eViewWebSiteHub,
                               className: tt.SectionButton,
                             },
                             Object(F.f)("#EventBrowse_MoreEventsBtn")
@@ -4922,8 +4942,8 @@
         yt = n("av+R"),
         Ot = n("yLGM"),
         At = n("rHSA"),
-        Ct = n("XxJJ"),
-        Tt = [
+        Tt = n("XxJJ"),
+        Ct = [
           { index: 0, type: At.a.OK, category: "action" },
           { index: 1, type: At.a.CANCEL, category: "action" },
           { index: 2, type: At.a.SECONDARY, category: "action" },
@@ -4970,10 +4990,10 @@
                     (this.m_rgGamepadStatus[n] = { buttons: [] });
                   for (
                     var r = this.m_rgGamepadStatus[n], o = 0;
-                    o < Tt.length;
+                    o < Ct.length;
                     o++
                   ) {
-                    var i = Tt[o],
+                    var i = Ct[o],
                       l = i.index;
                     a.buttons[l] &&
                       (a.buttons[l].pressed
@@ -4997,8 +5017,8 @@
               window.removeEventListener("focusin", this.OnWindowRegainedFocus),
                 this.PollGamepads();
             }),
-            Object(l.c)([Ct.a], t.prototype, "PollGamepads", null),
-            Object(l.c)([Ct.a], t.prototype, "OnWindowRegainedFocus", null),
+            Object(l.c)([Tt.a], t.prototype, "PollGamepads", null),
+            Object(l.c)([Tt.a], t.prototype, "OnWindowRegainedFocus", null),
             t
           );
         })(At.c),
@@ -5030,11 +5050,11 @@
           RearRightUpper: At.a.REAR_RIGHT_UPPER,
           RearRightLower: At.a.REAR_RIGHT_LOWER,
         },
-        Dt =
+        jt =
           (((ot = {})[b.h.SystemKey0] = At.a.STEAM_GUIDE),
           (ot[b.h.SystemKey1] = At.a.STEAM_QUICK_MENU),
           ot),
-        jt = (function (e) {
+        Dt = (function (e) {
           function t() {
             var t = e.call(this) || this;
             if (
@@ -5051,7 +5071,7 @@
           return (
             Object(l.d)(t, e),
             (t.prototype.HandleSystemKeyEvents = function (e) {
-              var t = Dt[e.eKey];
+              var t = jt[e.eKey];
               t && this.OnSystemButtonPress(t, e.nControllerIndex);
             }),
             (t.prototype.OnSystemButtonPress = function (e, t) {
@@ -5081,9 +5101,9 @@
                 }
               }
             }),
-            Object(l.c)([Ct.a], t.prototype, "HandleSystemKeyEvents", null),
+            Object(l.c)([Tt.a], t.prototype, "HandleSystemKeyEvents", null),
             Object(l.c)(
-              [Ct.a],
+              [Tt.a],
               t.prototype,
               "HandleControllerInputMessages",
               null
@@ -5174,9 +5194,9 @@
               }
               return At.a.INVALID;
             }),
-            Object(l.c)([Ct.a], t.prototype, "OnKeyDown", null),
-            Object(l.c)([Ct.a], t.prototype, "OnKeyUp", null),
-            Object(l.c)([Ct.a], t.prototype, "Reset", null),
+            Object(l.c)([Tt.a], t.prototype, "OnKeyDown", null),
+            Object(l.c)([Tt.a], t.prototype, "OnKeyUp", null),
+            Object(l.c)([Tt.a], t.prototype, "Reset", null),
             t
           );
         })(At.c),
@@ -5217,9 +5237,9 @@
               (this.m_nAccumulatedMouseMovement = 0),
                 (this.m_bFirstMouseUpdate = !0);
             }),
-            Object(l.c)([Ct.a], t.prototype, "OnMouseDown", null),
-            Object(l.c)([Ct.a], t.prototype, "OnMouseMove", null),
-            Object(l.c)([Ct.a], t.prototype, "Reset", null),
+            Object(l.c)([Tt.a], t.prototype, "OnMouseDown", null),
+            Object(l.c)([Tt.a], t.prototype, "OnMouseMove", null),
+            Object(l.c)([Tt.a], t.prototype, "Reset", null),
             t
           );
         })(At.c),
@@ -5228,7 +5248,7 @@
           function e() {
             (this.m_GamepadNavigationManager = new Gt.c()),
               M.d.IN_GAMEPADUI &&
-                (this.m_GamepadNavigationManager.RegisterInputSource(new jt()),
+                (this.m_GamepadNavigationManager.RegisterInputSource(new Dt()),
                 this.m_GamepadNavigationManager.RegisterInputSource(new It())),
               "dev" == M.d.WEB_UNIVERSE &&
                 (this.m_GamepadNavigationManager.RegisterInputSource(
@@ -5273,7 +5293,7 @@
         };
       }
       var Pt = Bt(se),
-        Nt = Bt(Te),
+        Nt = Bt(Ce),
         Ft = Bt(Ie.b),
         Ut = Bt(i.c),
         Ht = Bt(Ve),
@@ -5284,7 +5304,7 @@
             r = e.appid;
           return o.a.createElement(nt, {
             appid: r,
-            partnerEventStore: je.a.Get(),
+            partnerEventStore: De.a.Get(),
             event_customization: {
               rtime_oldestevent: a,
               exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
