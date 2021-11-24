@@ -223,17 +223,18 @@
         font: var(--gpText-BodyMedium);
         font-weight: 400;
         display: flex;
-        transition: all 0.2s ease;
+        transition: all 0.1s ease;
     }
 
     html.responsive .search_result_row:hover,
     html.responsive .search_result_row.gpfocus {
-        background: var(--gpBackground-DarkHard);
+        background: var(--gpBackground-LightSoft);
     }
 
     html.responsive .search_result_row .col {
         height: unset;
     }
+
 
     /* Flex all search item info */
     html.responsive .responsive_search_name_combined {
@@ -284,15 +285,21 @@
 		flex-direction: column;
     }
 
+
 	/* Steam Deck Verified */
 	html.responsive .search_result_row .ds_steam_deck_compat {
 		bottom: 2px;
         left: 2px;
-        background-color: var(--gpStoreDarkestGrey);
-        border-radius: 10px;
 	}
 
-		/* Pricing */
+
+	/* Hide other platform icons */
+	html.responsive .search_result_row span.platform_img {
+		display: none;
+	}
+
+
+	/* Pricing */
     html.responsive .search_price_discount_combined {
         display: flex;
         align-items: center;

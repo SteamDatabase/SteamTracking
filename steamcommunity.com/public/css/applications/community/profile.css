@@ -269,7 +269,7 @@
   path {
   fill: #1a9fff;
 }
-@keyframes shared_icons_SpinnerSpokeFade_lkeEV {
+@keyframes gamepadui_svg_library_SpinnerSpokeFade_2Wg5d {
   0% {
     opacity: 1;
   }
@@ -277,33 +277,33 @@
     opacity: 0.1;
   }
 }
-.shared_icons_Spinner_3q5qO > path {
-  animation: shared_icons_SpinnerSpokeFade_lkeEV 0.6s;
+.gamepadui_svg_library_Spinner_3m_2l > path {
+  animation: gamepadui_svg_library_SpinnerSpokeFade_2Wg5d 0.6s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
-.shared_icons_Spinner_3q5qO > path:nth-child(1) {
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(1) {
   animation-delay: -0.925s;
 }
-.shared_icons_Spinner_3q5qO > path:nth-child(2) {
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(2) {
   animation-delay: -0.85s;
 }
-.shared_icons_Spinner_3q5qO > path:nth-child(3) {
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(3) {
   animation-delay: -0.775s;
 }
-.shared_icons_Spinner_3q5qO > path:nth-child(4) {
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(4) {
   animation-delay: -0.7s;
 }
-.shared_icons_Spinner_3q5qO > path:nth-child(5) {
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(5) {
   animation-delay: -0.625s;
 }
-.shared_icons_Spinner_3q5qO > path:nth-child(6) {
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(6) {
   animation-delay: -0.55s;
 }
-.shared_icons_Spinner_3q5qO > path:nth-child(7) {
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(7) {
   animation-delay: -0.475s;
 }
-.shared_icons_Spinner_3q5qO > path:nth-child(8) {
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(8) {
   animation-delay: -0.4s;
 }
 .miniprofile_miniProfile_2QPdq {
@@ -2232,6 +2232,18 @@ body.profilethemecolors_ColorNightmareTheme_2LNsd {
   --btn-background: rgb(45 114 123);
   --btn-background-hover: rgb(196 96 50);
   --btn-outline: rgb(196 96 50);
+}
+body.profilethemecolors_MurugiahTheme_22BXC {
+  --gradient-right: rgb(84 75 158);
+  --gradient-left: rgb(84 75 158);
+  --gradient-background: rgb(84 75 158);
+  --gradient-background-right: rgb(84 75 158);
+  --gradient-background-left: rgb(84 75 158);
+  --color-showcase-header: rgb(11 160 232);
+  --gradient-showcase-header-left: rgb(11 160 232);
+  --btn-background: rgb(225 69 40);
+  --btn-background-hover: rgb(145 181 69);
+  --btn-outline: rgb(225 69 40);
 }
 .profileeditshell_Shell_2kqKZ {
   display: flex;

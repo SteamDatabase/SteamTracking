@@ -184,6 +184,10 @@
 		color: unset;
 	}
 
+	html.responsive .cart_item .platform_img {
+		display: none;
+	}
+
 	html.responsive .remove_link {
 		color: var(--gpStoreLighterGrey);
 	}

@@ -306,6 +306,11 @@
     "DiscountDashboard_AppEligible": "Apps Eligible: %1$s",
     "DiscountDashboard_AppOptedOut": "Apps Opted Out: %1$s",
     "DiscountDashboard_AppInEligible": "Apps Ineligible: %1$s",
+    "DiscountDashboard_PackagesDiscounted": "Packages Discounted",
+    "DiscountDashboard_SetDiscountsCount": "Packages Discounted: %1$s",
+    "DiscountDashboard_AvailableDiscountsCount": "Available for Discount: %1$s",
+    "DiscountDashboard_BlockedDiscountsCount": "Require App Registration: %1$s",
+    "DiscountDashboard_IneligibleDiscountsCount": "Ineligible for Discount: %1$s",
     "DiscountDashboard_DiscountFilterByEventButton": "filter by event",
     "DiscountDashboard_DiscountFilterAll": "All Sales Events",
     "DiscountDashboard_ExpandDLCCheckBoxLabel": "Expand all DLC",
@@ -339,6 +344,10 @@
     "DiscountDashboard_OptIn_Grid_Ineligible_Restricted": "Ineligible",
     "DiscountDashboard_OptIn_Grid_Ineligible_NoBaseGame": "No game to register",
     "DiscountDashboard_OptIn_Grid_OptedOut": "Opted Out",
-    "DiscountDashboard_OptIn_Grid_OptInLink": "Registration Link",
+    "DiscountDashboard_OptIn_Grid_OptInLink": "Edit Registration",
+    "DiscountDashboard_ConflictWarning": "Conflict",
+    "DiscountDashboard_Conflict_JustReleased": "A game in this package has released within %1$s days of this discount",
+    "DiscountDashboard_Conflict_PriceIncreased": "A game in this package has increased in price in at least one currency within %1$s days of this discount",
+    "DiscountDashboard_Conflict_PreviousDiscount": "This package already has a discount scheduled within %1$s days of this discount",
     "dummy": "dummy"
 }

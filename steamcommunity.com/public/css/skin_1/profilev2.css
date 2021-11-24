@@ -91,7 +91,7 @@ body.PinkTealTheme {
     --btn-background-hover: rgb(57 166 173);
     --btn-outline: rgb(55 162 169);
 }
-/* -- MutedRedTheme -- (Hades) */  
+/* -- MutedRedTheme -- (Hades) */
 body.MutedRedTheme {
 	--gradient-right: rgb(142 40 40 / 23%);
     --gradient-left: rgb(163 53 53 / 37%);
@@ -132,7 +132,7 @@ body.BlueRedTheme {
     --btn-outline: rgb(86 105 108);
 }
 
-/* -- GoldBurgundyTheme -- (Resident Evil Village - Castle) */  
+/* -- GoldBurgundyTheme -- (Resident Evil Village - Castle) */
 body.GoldBurgundyTheme {
 	--gradient-right: rgb(253 219 51 / 23%);
     --gradient-left: rgb(97 75 37);
@@ -146,7 +146,7 @@ body.GoldBurgundyTheme {
     --btn-outline: rgb(108, 90, 86);
 }
 
-/* -- VibrantBlueTheme -- (Civilization VI) */  
+/* -- VibrantBlueTheme -- (Civilization VI) */
 body.VibrantBlueTheme {
 	--gradient-right: #008ada8a;
     --gradient-left: rgb(47 137 188);
@@ -159,7 +159,7 @@ body.VibrantBlueTheme {
     --btn-background-hover: rgb(35 87 130);
     --btn-outline: rgb(34 88 133);
 }
-   
+
 body.GoldenProfileDebutTheme {
     --gradient-right: rgba(156, 66, 17, 0.18);
     --gradient-left: rgba(213, 172, 81, 0.62);
@@ -214,7 +214,7 @@ body.Summer2021Theme {
 
 /* -- NEW THEMES 6.23.21 -- */
 
-/* (Resident Evil Village - Village) */  
+/* (Resident Evil Village - Village) */
 body.MutedBlueTheme {
 	--gradient-right: #737d96;
     --gradient-left: rgb(115 124 147);
@@ -228,7 +228,7 @@ body.MutedBlueTheme {
     --btn-outline: rgb(86 91 108);
 }
 
-/* (Evil Genius 2) */  
+/* (Evil Genius 2) */
 body.GoldTheme {
     --gradient-right: rgb(197 164 79 / 73%);
     --gradient-left: rgb(128 94 36);
@@ -242,7 +242,7 @@ body.GoldTheme {
 	--btn-outline: rgb(108, 90, 86);
 }
 
-/* (Dying Light) */  
+/* (Dying Light) */
 body.BurntOrangeTheme {
     --gradient-right: rgb(136 66 8 / 66%);
     --gradient-left: rgb(251 250 251 / 48%);
@@ -256,7 +256,7 @@ body.BurntOrangeTheme {
     --btn-outline: rgb(86 30 17);
 }
 
-/* (Loop Hero) */  
+/* (Loop Hero) */
 body.FlatGreyTheme {
 	--gradient-right: #3b3e4100;
     --gradient-left: rgb(59 62 65 / 0%);
@@ -270,7 +270,7 @@ body.FlatGreyTheme {
     --btn-outline: rgb(105 110 113);
 }
 
-/* (Outriders - Main) */  
+/* (Outriders - Main) */
 body.PurpleTheme {
 	--gradient-right: #3c2c4c;
     --gradient-left: #52298094;
@@ -322,6 +322,19 @@ body.ColorNightmareTheme {
     --btn-background: rgb(45 114 123);
     --btn-background-hover: rgb(196 96 50);
     --btn-outline: rgb(196 96 50);
+}
+
+body.MurugiahTheme {
+	--gradient-right: rgb(84 75 158);
+    --gradient-left: rgb(84 75 158);
+    --gradient-background: rgb(84 75 158);
+    --gradient-background-right: rgb(84 75 158);
+    --gradient-background-left: rgb(84 75 158);
+    --color-showcase-header: rgb(11 160 232);
+    --gradient-showcase-header-left: rgb(11 160 232);
+    --btn-background: rgb(225 69 40);
+    --btn-background-hover: rgb(145 181 69);
+    --btn-outline: rgb(225 69 40);
 }
 
 
@@ -429,18 +442,18 @@ body.profile_page.flat_page #footer_spacer {
 	margin: 0 auto;
 	background: radial-gradient(
 		farthest-side at bottom right,
-		var(--gradient-right), 
+		var(--gradient-right),
 		transparent 500px
 	  ),
 	  radial-gradient(
 		farthest-corner at bottom left,
-		var(--gradient-left), 
+		var(--gradient-left),
 		transparent 600px
 	  );
 	  background-color: var(--gradient-background);
 	background-repeat: no-repeat;
 	background-position: center;
-	
+
 }
 
 .private_profile .profile_header_bg_texture {
@@ -464,7 +477,7 @@ body.profile_page.flat_page #footer_spacer {
 .profile_header_content {
 	position: relative;
 	padding-top: 8px;
-	padding-right: 8px; 
+	padding-right: 8px;
 	color: #898989;
 	font-size: 13px;
 }
@@ -831,25 +844,25 @@ body.profile_page.flat_page #footer_spacer {
 
 .profile_content {
 	position: relative;
-	background: 
+	background:
     radial-gradient(
       farthest-side at top right,
-	  var(--gradient-right), 
+	  var(--gradient-right),
       transparent 500px
     ),
     radial-gradient(
       farthest-corner at top left,
-      var(--gradient-left), 
+      var(--gradient-left),
       transparent 600px
 	),
 	radial-gradient(
       farthest-corner at bottom right,
-      var(--gradient-background-right), 
+      var(--gradient-background-right),
       transparent 500px
 	),
 	radial-gradient(
 	  farthest-corner at bottom left,
-	  var(--gradient-background-left), 
+	  var(--gradient-background-left),
 	  transparent 600px
 	);
 	background-color: var(--gradient-background);
@@ -878,25 +891,25 @@ background-color: transparent;
 
 .profile_content.has_profile_background
 {
-	background: 
+	background:
     radial-gradient(
       farthest-side at top right,
-	  var(--gradient-right), 
+	  var(--gradient-right),
       transparent 500px
     ),
     radial-gradient(
       farthest-corner at top left,
-      var(--gradient-left), 
+      var(--gradient-left),
       transparent 600px
 	),
 	radial-gradient(
       farthest-corner at bottom right,
-      var(--gradient-background-right), 
+      var(--gradient-background-right),
       transparent 500px
 	),
 	radial-gradient(
       farthest-corner at bottom left,
-      var(--gradient-background-left), 
+      var(--gradient-background-left),
       transparent 600px
 	);
 	background-color: var(--gradient-background);
@@ -975,7 +988,7 @@ background-color: transparent;
     position: absolute;
     right: 5px;
     top: 0;
-	
+
 }
 
 .profile_customization:hover .profile_customization_editlink {
@@ -2821,7 +2834,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	cursor: pointer;
 }
 .profile_customization_area .profile_customization.customization_edit.none_selected:hover {
-	
+
 	border-color: var(--btn-outline);
 }
 
@@ -3482,7 +3495,7 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 		width: 32px;
 		height: 32px;
 	}
-	
+
 	html.responsive .profile_group_avatar {
 		position: static;
 	}

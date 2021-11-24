@@ -245,11 +245,12 @@
 	}
 
 	html.responsive .store_main_capsule .ds_steam_deck_compat {
-		bottom: 70px;
+		top: 200px;
+		left: 6px;
 	}
 
-	html.responsive .carousel_container.maincap .reason {
-		/* display: block; */
+	html.responsive .carousel_container.maincap .discount_block {
+		display: flex;
 	}
 
 
@@ -308,13 +309,13 @@
 		transition: all 0.1s ease;
 	}
 
-	html.responsive .big_button:hover,
-	html.responsive .big_button.gpfocus {
+	html.responsive .big_button:hover {
 		background: var(--gpColor-BlueHi);
 	}
 
 	html.responsive .big_button.gpfocus {
-		border-radius: 0px;
+		background: white;
+		color: black;
 	}
 
 
@@ -359,7 +360,7 @@
 	}
 
 	html.responsive .spotlight_col .daily_deal .ds_steam_deck_compat {
-		bottom: 52px;
+		top: 92px;
 	}
 
 	.home_area_spotlight {
@@ -386,6 +387,18 @@
 
 	html.responsive .home_area_spotlight .discount_block {
 		text-align: right;
+	}
+
+	html.responsive .spotlight_content .bundle_base_discount {
+		display: none;
+	}
+
+	html.responsive body.v6 .spotlight_content h2 {
+		margin-bottom: 2px;
+	}
+
+	html.responsive .spotlight_content .spotlight_price {
+		margin-top: 8px;
 	}
 
 
@@ -513,6 +526,7 @@
 
 	html.responsive .community_recommendation_app .discount_block {
 		bottom: -30px;
+		right: 8px;
 	}
 
 	.community_recommendation_app > .community_recommendation_capsule > .capsule {
@@ -545,12 +559,27 @@
 
 
 	/* Updates and offers marketing messages */
+	html.responsive .marketingmessage_container {
+		display: inline-flex;
+	}
+
 	html.responsive .home_marketing_message .discount_block {
 		padding: 6px;
+		height: unset;
 	}
 
 	html.responsive .home_marketing_message .ds_steam_deck_compat {
-		bottom: 2px;
+		/* bottom: 2px; */
+	}
+
+
+
+	/* Inline more buttons */
+	html.responsive h2.home_page_content_title span.right,
+	html.responsive h2.home_page_content_title a,
+	html.responsive h2.giant_curator_title span.right,
+	html.responsive .home_right_btn {
+		display: none;
 	}
 
 
@@ -560,6 +589,7 @@
 	#module_deep_dive {
 		display: none;
 	}
+
 
 
 
@@ -576,10 +606,7 @@
 		margin-bottom: unset;
 	}
 
-	html.responsive .tab_item .ds_steam_deck_compat {
-		bottom: unset;
-		top: 73px;
-	}
+
 
 
 
@@ -651,6 +678,10 @@
 		width: 50%;
 	}
 
+	.responsive_giant_curator_capsule .curator_details_row {
+		justify-content: flex-end;
+	}
+
 
 
 	/* More Curator Recommnends */
@@ -689,7 +720,7 @@
 	/* Developers and publishers */
 	html.responsive .recommended_creators_ctn .store_capsule {
 		padding-bottom: unset;
-		height: 148px;
+		height: 150px;
 	}
 
 	html.responsive .recommended_creators_ctn {
@@ -721,6 +752,7 @@
 		height: 32px;
 		box-shadow: unset;
 		border-radius: var(--gpCorner-Medium);
+		overflow: hidden;
 	}
 
 
@@ -769,8 +801,29 @@
 
 
 	/* Discovery queue */
-	#module_discovery_queue {
-		display: none !important /* To override inline HTML style */
+	html.responsive #module_discovery_queue {
+		/* display: none !important; */
+		margin-bottom: 12px;
+	}
+
+	html.responsive .discovery_queue_ctn {
+		/* display: none !important; */
+	}
+
+	html.responsive .discovery_queue_static {
+		margin-top: 12px;
+	}
+
+	html.responsive #discovery_queue .dq_item {
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive #module_discovery_queue .right {
+		display: none;
+	}
+
+	html.responsive #module_discovery_queue .begin_exploring {
+		font-weight: 400;
 	}
 
 
@@ -782,15 +835,12 @@
 	}
 
 	html.responsive .gp_contiguous_singles {
-	overflow-x: scroll;
-    overflow-y: hidden;
-    box-sizing: content-box;
-    padding-bottom: 20px;
-    /* display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex; */
-    display: flex;
-    flex-wrap: nowrap;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing: content-box;
+		padding-bottom: 20px;
+		display: flex;
+		flex-wrap: nowrap;
 	}
 
 	html.responsive .responsive_app_menu {
@@ -851,9 +901,19 @@
 
 
 
+	/* RECENTLY UPDATED */
+	html.responsive .recently_updated_announcement_link {
+		display: none;
+	}
+
+	html.responsive .recently_updated .store_capsule .ds_steam_deck_compat {
+		top: 124px;
+	}
+
+
+
 
 	/* NEW RELEASES */
-
 	html.responsive .newonsteam_headercaps {
 		overflow: visible;
 	}
@@ -873,12 +933,6 @@
 	/* Remove background */
 	html.responsive .game_page_background {
 		background-image: unset !important;
-	}
-
-
-	/* Hide discovery queue */
-	html.responsive .discovery_queue_ctn {
-		display: none !important;
 	}
 
 
@@ -953,6 +1007,16 @@
 	}
 
 
+	/* New on Steam */
+	html.responsive .newonsteam_headercap .ds_steam_deck_compat {
+		top: 156px;
+	}
+
+
+
+
+
+
 
 
 
@@ -962,16 +1026,13 @@
 	html.responsive .responsive_giant_curator_capsule .ds_steam_deck_compat,
 	html.responsive .tab_item .ds_steam_deck_compat,
 	html.responsive .friends_recently_purchased .ds_steam_deck_compat,
-		/* html.responsive .home_area_spotlight .ds_steam_deck_compat, */
-	/* html.responsive .community_recommendations_by_steam_labs_ctn .community_recommendation_app .ds_steam_deck_compat, */
 	html.responsive .home_content .ds_steam_deck_compat,
 	html.responsive .live_streams_ctn .broadcast_capsule .ds_steam_deck_compat,
-	html.responsive .spotlight_col .daily_deal .ds_steam_deck_compat {
+	html.responsive .spotlight_col .daily_deal .ds_steam_deck_compat,
+	html.responsive .newonsteam_headercap .ds_steam_deck_compat {
 		background-color: var(--gpBackground-DarkMedium);
 		backdrop-filter: blur(24px);
-		left: 6px;
+		/* left: 6px; */
 	}
-	html.responsive .tab_item .ds_steam_deck_compat {
-		left: 10px;
-	}
+
 }

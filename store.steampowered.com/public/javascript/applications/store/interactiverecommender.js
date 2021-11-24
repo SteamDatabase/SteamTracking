@@ -86,6 +86,9 @@
             (e.prototype.rerequestDataIfPending = function () {
               this.eState == i.Pending && (this.eState = i.Rerequest);
             }),
+            (e.prototype.getCachedData = function () {
+              return this.data;
+            }),
             Object(n.c)([s.C], e.prototype, "data", void 0),
             Object(n.c)([s.C], e.prototype, "nExpirationTime", void 0),
             e
@@ -795,7 +798,7 @@
             )
           );
         },
-        I = (function (e) {
+        C = (function (e) {
           function t(t) {
             var a = e.call(this, t) || this;
             return (a.state = {}), a;
@@ -850,7 +853,7 @@
             (t = Object(n.c)([o.a], t))
           );
         })(l.a.Component),
-        C = function (e) {
+        I = function (e) {
           var t = e.titleLabel,
             a = e.minLabel,
             i = e.maxLabel,
@@ -1070,7 +1073,7 @@
             l.a.createElement(
               "div",
               { className: Object(u.a)(h.Row, h.FirstRow) },
-              l.a.createElement(C, {
+              l.a.createElement(I, {
                 minLabel: Object(p.f)("#Popularity_Popular"),
                 titleLabel: Object(p.f)("#Popularity_Title"),
                 maxLabel: Object(p.f)("#Popularity_Niche"),
@@ -1079,7 +1082,7 @@
                 value: T.m_fQueuedPopularityValue,
                 onChange: T.onPopularityChanged,
               }),
-              l.a.createElement(C, {
+              l.a.createElement(I, {
                 minLabel: Object(p.f)("#Recency_Older"),
                 titleLabel: Object(p.f)("#Recency_Title"),
                 maxLabel: Object(p.f)("#Recency_Newer"),
@@ -1239,8 +1242,8 @@
                 N = !0;
               r < S ? ((R = 66), (N = !1)) : r < O && ((R = 87), (N = !1));
               var L = N && this.state.hovered,
-                I = Math.min(Number(i) / 10, 1e3),
-                C = (Math.max(1, i), !1),
+                C = Math.min(Number(i) / 10, 1e3),
+                I = (Math.max(1, i), !1),
                 A = !1,
                 j = !0,
                 D = "",
@@ -1253,7 +1256,7 @@
               if (L) {
                 var k = T.getDetails(this.props.appID);
                 k &&
-                  ((C = !0),
+                  ((I = !0),
                   (A = k.discount_pct > 0),
                   (j = "0" == k.discount_price),
                   "probably" ==
@@ -1370,7 +1373,7 @@
                             { className: h.BarContainer },
                             l.a.createElement("div", {
                               className: h.Bar,
-                              style: { width: I + "%" },
+                              style: { width: C + "%" },
                             })
                           ),
                           l.a.createElement("div", { className: h.Tags }, g)
@@ -1387,7 +1390,7 @@
                           w
                         )
                       ),
-                      C &&
+                      I &&
                         l.a.createElement(
                           "div",
                           { className: h.BottomEntrySection },
@@ -1580,21 +1583,21 @@
                           (E[L].w && T.m_bExcludeWishlisted)
                         )
                       ) {
-                        var I =
+                        var C =
                           (_.get(L) || 0) +
                           R.scores[N] * O.weight * R.score_scale;
-                        _.set(L, I);
+                        _.set(L, C);
                       }
                     }
                 }
                 _.forEach(function (e, t) {
                   return _.set(t, e / g);
                 });
-                var C = [];
+                var I = [];
                 _.forEach(function (e, t) {
-                  return C.push({ appid: t, score: e });
+                  return I.push({ appid: t, score: e });
                 });
-                var A = (C = (C = (C = C.filter(function (e) {
+                var A = (I = (I = (I = I.filter(function (e) {
                   return E[e.appid].t && T.doTagsPassFilter(E[e.appid].t);
                 })).filter(function (e) {
                   return E[e.appid].t && !T.doTagsFailExclusion(E[e.appid].t);
@@ -1709,7 +1712,7 @@
                       l.a.createElement(
                         "div",
                         { className: h.BottomSection },
-                        l.a.createElement(I, { accountID: r.k.accountid }),
+                        l.a.createElement(C, { accountID: r.k.accountid }),
                         l.a.createElement("div", { className: h.VerticalBar }),
                         l.a.createElement(U, { width: this.state.width })
                       )

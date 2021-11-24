@@ -100,7 +100,7 @@
 		background-attachment: fixed;
 	}
 
-	
+
 
 	/* Name and avatar & frame */
 	html.responsive .wishlist_header img,
@@ -158,14 +158,11 @@
 		color: black;
 	}
 
-	html.responsive #wishlist_search.gpfocus {
-		/* border-radius: 0px; */
-	}
-
 	html.responsive #wishlist_search::placeholder {
 		color: var(--gpStoreLighterGrey);
 		font: var(--gpText-BodyLarge);
-	}	
+	}
+
 
 
 	/* Filters and control row */
@@ -195,6 +192,7 @@
 	}
 
 
+
 	/* No search results */
 	html.responsive #nothing_to_see_here {
 		padding: 24px 0px;
@@ -215,10 +213,12 @@
 	}
 
 
+
 	/* Wishlist container */
 	html.responsive #wishlist_ctn {
 		margin-top: 16px;
 	}
+
 
 
 	/* Wishlist item styling */
@@ -263,6 +263,25 @@
 
 	html.responsive .wishlist_row .purchase_area form,
 	html.responsive .wishlist_row .purchase_area .btn_blue_steamui {
+		display: none;
+	}
+
+	html.responsive .wishlist_row span.platform_img {
+		display: none;
+	}
+
+	html.responsive .wishlist_row .tags {
+		font: var(--gpText-BodySmall);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .wishlist_row .tags .tag {
+		border: none;
+		height: unset;
+		background-color: var(--gpBackground-DarkSoft);
+	}
+
+	html.responsive .release_date {
 		display: none;
 	}
 

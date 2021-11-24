@@ -2524,6 +2524,41 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   flex: 1;
   margin-right: 10px;
 }
+.partnereventsaletagitems_ForceUpdateFeaturedAppTagsDialogBody_2Dix4
+  .partnereventsaletagitems_AddSummary_2-m9_ {
+  font-weight: bold;
+  color: green;
+}
+.partnereventsaletagitems_ForceUpdateFeaturedAppTagsDialogBody_2Dix4
+  .partnereventsaletagitems_RemoveSummary_18_G7 {
+  font-weight: bold;
+  color: red;
+}
+.partnereventsaletagitems_ForceUpdateFeaturedAppTagsDialogBody_2Dix4
+  .partnereventsaletagitems_AppTable_3Wtit {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 8px;
+}
+.partnereventsaletagitems_ForceUpdateFeaturedAppTagsDialogBody_2Dix4
+  .partnereventsaletagitems_AppTable_3Wtit
+  .partnereventsaletagitems_AppTableRow_X8HXp {
+  display: flex;
+  flex-direction: row;
+}
+.partnereventsaletagitems_ForceUpdateFeaturedAppTagsDialogBody_2Dix4
+  .partnereventsaletagitems_AppTable_3Wtit
+  .partnereventsaletagitems_AppTableRow_X8HXp
+  .partnereventsaletagitems_AppID_n753z {
+  width: 25%;
+}
+.partnereventsaletagitems_ForceUpdateFeaturedAppTagsDialogBody_2Dix4
+  .partnereventsaletagitems_AppTable_3Wtit
+  .partnereventsaletagitems_AppTableRow_X8HXp
+  .partnereventsaletagitems_AppName_1AjeX {
+  flex-grow: 1;
+}
 .spotlight_ReadMoreLink_2mvgc {
   color: #fff;
   font-size: 14px;

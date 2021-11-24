@@ -91,7 +91,7 @@
 		font-weight: 400;
 		color: var(--gpStoreLightestGrey);
 		margin-top: -6px;
-		margin-bottom: 12px;
+		margin-bottom: 8px;
 	}
 
 	/* Remove all text shadows */
@@ -206,7 +206,7 @@
 		text-shadow: unset;
 		font: var(--gpText-HeadingSmall);
 		font-weight: 700;
-		max-width: calc(100% - 132px);
+		max-width: calc(100% - 142px);
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -239,14 +239,16 @@
 
 	html.responsive .quadscreenshot_carousel .ds_steam_deck_compat {
 		bottom: unset;
-		top: 202px;
-		background-color: var(--gpStoreDarkestGrey);
-		border-radius: 10px;
+		top: 200px;
+		background-color: var(--gpBackground-DarkMedium);
+		backdrop-filter: blur(24px);
+		left: 6px;
 	}
 
 
 
-		/* RECOMMENDED NEW RELEASES */
+
+	/* RECOMMENDED NEW RELEASES */
 
 	/* Space between carousels */
 	html.responsive .recommended_creators_ctn {
@@ -255,14 +257,6 @@
 
 	html.responsive .recommended_creators_ctn .store_capsule {
 		padding-bottom: unset;
-	}
-
-
-
-
-	/* SPOTLIGHT CAROUSEL */
-	html.responsive .slider_ctn.spotlight {
-		/* display: none; */
 	}
 
 
@@ -371,10 +365,10 @@
 		margin-right: unset;
 	}
 
-	html.responsive .tab_item .ds_steam_deck_compat {
+	/* html.responsive .tab_item .ds_steam_deck_compat {
 		bottom: unset;
 		top: 102px;
-	}
+	} */
 
 
 

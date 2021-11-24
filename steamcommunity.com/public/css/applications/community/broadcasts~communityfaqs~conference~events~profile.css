@@ -10055,6 +10055,7 @@ html:not(.touch)
   }
 }
 .eventrow_OtherEvents_EventCtn_1MwNf {
+  display: block;
   height: auto;
   margin-bottom: 8px;
   flex-grow: 1;
@@ -10127,6 +10128,10 @@ html:not(.touch)
   margin-bottom: 4px;
   overflow: hidden;
 }
+.items_in_row_4 .eventrow_OtherEvents_TextTitle_2jc1D {
+  line-height: 16px;
+  max-height: 32px;
+}
 .eventrow_UpcomingCtn_2CXrG {
   color: #07bfff;
 }
@@ -10134,6 +10139,9 @@ html:not(.touch)
   font-size: 13px;
   max-height: 30px;
   overflow: hidden;
+}
+.items_in_row_4 .eventrow_OtherEvents_SubTitle_1Swox {
+  display: none;
 }
 @media screen and (max-width: 900px) {
   .eventrow_OtherEvents_SubTitle_1Swox {
@@ -10190,6 +10198,9 @@ html:not(.touch)
   backface-visibility: hidden;
   transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
+}
+.items_in_row_4 .eventrow_EventSummaryText_ENbI1 {
+  line-height: 16px;
 }
 .eventrow_EventSummaryType_11JXz {
   margin: 20px 20px 0 20px;

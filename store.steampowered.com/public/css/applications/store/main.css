@@ -1629,7 +1629,7 @@ html:not(.touch)
   text-transform: uppercase;
   text-align: center;
 }
-.partnereventshared_LangaugeWithContent_16xEW {
+.partnereventshared_LanguageWithContent_2Cd1u {
   color: #a3cf06;
 }
 input::placeholder {
@@ -7518,6 +7518,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   }
 }
 .eventrow_OtherEvents_EventCtn_1MwNf {
+  display: block;
   height: auto;
   margin-bottom: 8px;
   flex-grow: 1;
@@ -7590,6 +7591,10 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   margin-bottom: 4px;
   overflow: hidden;
 }
+.items_in_row_4 .eventrow_OtherEvents_TextTitle_2jc1D {
+  line-height: 16px;
+  max-height: 32px;
+}
 .eventrow_UpcomingCtn_2CXrG {
   color: #07bfff;
 }
@@ -7597,6 +7602,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   font-size: 13px;
   max-height: 30px;
   overflow: hidden;
+}
+.items_in_row_4 .eventrow_OtherEvents_SubTitle_1Swox {
+  display: none;
 }
 @media screen and (max-width: 900px) {
   .eventrow_OtherEvents_SubTitle_1Swox {
@@ -7653,6 +7661,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   backface-visibility: hidden;
   transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
+}
+.items_in_row_4 .eventrow_EventSummaryText_ENbI1 {
+  line-height: 16px;
 }
 .eventrow_EventSummaryType_11JXz {
   margin: 20px 20px 0 20px;
@@ -7751,6 +7762,29 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .basicpartnereventrender_Main_1Zn_5 {
   height: 100vh;
   overflow-y: scroll;
+}
+.demobutton_DemoButton_3euSF {
+  position: relative;
+  background-color: #3d4450;
+  flex-grow: 1;
+  flex-basis: 50%;
+  line-height: 32px;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 0 3px;
+  padding: 0 10px;
+}
+.demobutton_DemoButton_3euSF.demobutton_DisabledButton_3Fsf5,
+.demobutton_DemoButton_3euSF.demobutton_DisabledButton_3Fsf5:hover {
+  color: #a6b4bf;
+}
+.demobutton_DemoButton_3euSF:not(.demobutton_DisabledButton_3Fsf5):hover {
+  background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 :root {
   --basicui-header-height: 0px;
@@ -8263,125 +8297,6 @@ html.responsive.touch
   .partnersaledisplay_DefaultCreatorCtn_3KzJ1
   :not(.partnersaledisplay_Focusable_2J5FS):focus {
   outline: none;
-}
-@font-face {
-  font-family: "Jolly Lodger";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
-    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Jolly Lodger";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
-    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "New Rocker";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
-    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "New Rocker";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
-    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Chonburi";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
-    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
-      format("woff2");
-  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
-}
-@font-face {
-  font-family: "Chonburi";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
-    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
-      format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
-      format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-.demobutton_DemoButton_3euSF {
-  position: relative;
-  background-color: #3d4450;
-  flex-grow: 1;
-  flex-basis: 50%;
-  line-height: 32px;
-  color: #dfe3e6;
-  text-align: center;
-  border-radius: 2px;
-  cursor: pointer;
-  white-space: nowrap;
-  margin: 0 3px;
-  padding: 0 10px;
-}
-.demobutton_DemoButton_3euSF.demobutton_DisabledButton_3Fsf5,
-.demobutton_DemoButton_3euSF.demobutton_DisabledButton_3Fsf5:hover {
-  color: #a6b4bf;
-}
-.demobutton_DemoButton_3euSF:not(.demobutton_DisabledButton_3Fsf5):hover {
-  background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .salesectioneventschedule_SaleSchedCtn_2g7il {
   height: 480px;
@@ -9067,6 +8982,102 @@ html.responsive.touch
 .salehilightplayerembed_PopupScreenshot_2XVyT {
   width: 100%;
   height: 100%;
+}
+@font-face {
+  font-family: "Jolly Lodger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Jolly Lodger"), local("JollyLodger"),
+    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Jolly Lodger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Jolly Lodger"), local("JollyLodger"),
+    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "New Rocker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"),
+    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "New Rocker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"),
+    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Chonburi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Chonburi"), local("Chonburi-Regular"),
+    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
+      format("woff2");
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "Chonburi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Chonburi"), local("Chonburi-Regular"),
+    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 .saleitemdefdisplay_QuanityAndPrice_2qN9u {
   display: flex;

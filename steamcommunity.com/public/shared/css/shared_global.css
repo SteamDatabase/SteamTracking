@@ -2846,31 +2846,24 @@ body.v6 #footer_spacer.china_spacer {
 	display: block;
 	position: absolute;
 	pointer-events: none;
-	bottom: 2px;
+	bottom: 3px;
 	left: 2px;
 	z-index: 15;
 	width: 44px;
 	height: 24px;
-	/* background: url('https://community.cloudflare.steamstatic.com/public/shared/images//ico/ico-deck-logo.svg') left no-repeat; */
-	/* background-size: 20px 20px; */
-	/* backdrop-filter: blur(24px); */
 	border-radius: 24px;
 }
 .ds_steam_deck_compat.verified {
 	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') 3px no-repeat, url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-verified.svg') 22px no-repeat;
-	/* background-color: var(--gpBackground-DarkMedium); */
 }
 .ds_steam_deck_compat.playable {
 	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') 3px no-repeat, url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-playable.svg') 22px no-repeat;
-	/* background-color: var(--gpBackground-DarkMedium); */
 }
 .ds_steam_deck_compat.unsupported {
 	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') 3px no-repeat, url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unsupported.svg') 22px no-repeat;
-	/* background-color: var(--gpBackground-DarkMedium); */
 }
 .ds_steam_deck_compat.unknown {
 	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') 3px no-repeat, url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') 22px no-repeat;
-	/* background-color: var(--gpBackground-DarkMedium); */
 }
 
 /* global inline */

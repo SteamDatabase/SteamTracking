@@ -15,6 +15,12 @@
         App: "profilemodifier_App_2SYZ_",
       };
     },
+    "05hv": function (e, t, r) {
+      e.exports = {
+        Spinner: "gamepadui_svg_library_Spinner_3m_2l",
+        SpinnerSpokeFade: "gamepadui_svg_library_SpinnerSpokeFade_2Wg5d",
+      };
+    },
     "5y7u": function (e, t, r) {
       e.exports = {
         AvatarCollectionHeader: "avatarcollection_AvatarCollectionHeader_27Q-8",
@@ -74,6 +80,7 @@
         GreenSlimeTheme: "profilethemecolors_GreenSlimeTheme_FdC8c",
         GhostTheme: "profilethemecolors_GhostTheme_1JZpe",
         ColorNightmareTheme: "profilethemecolors_ColorNightmareTheme_2LNsd",
+        MurugiahTheme: "profilethemecolors_MurugiahTheme_22BXC",
       };
     },
     "9g5v": function (e, t, r) {
@@ -316,7 +323,7 @@
         C = r("Xfd2"),
         S = r.n(C),
         B = r("kyHq");
-      r("pbpZ"), r("YyVH");
+      r("05hv");
       function w() {
         return n.createElement(E.Q, null);
       }
@@ -9264,12 +9271,6 @@
         Title: "miniprofilepreview_Title_2l5zy",
         App: "miniprofilepreview_App_xmRMR",
         WithVideo: "miniprofilepreview_WithVideo_1BBIS",
-      };
-    },
-    pbpZ: function (e, t, r) {
-      e.exports = {
-        Spinner: "shared_icons_Spinner_3q5qO",
-        SpinnerSpokeFade: "shared_icons_SpinnerSpokeFade_lkeEV",
       };
     },
     tPo2: function (e, t, r) {

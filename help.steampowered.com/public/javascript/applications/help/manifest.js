@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6899320";
+var CLSTAMP = "6913417";
 !(function (d) {
   function a(a) {
     for (
@@ -9,8 +9,8 @@ var CLSTAMP = "6899320";
       l++
     )
       (n = o[l]),
-        Object.prototype.hasOwnProperty.call(h, n) && h[n] && s.push(h[n][0]),
-        (h[n] = 0);
+        Object.prototype.hasOwnProperty.call(b, n) && b[n] && s.push(b[n][0]),
+        (b[n] = 0);
     for (e in i) Object.prototype.hasOwnProperty.call(i, e) && (d[e] = i[e]);
     for (j && j(a); s.length; ) s.shift()();
     return r.push.apply(r, c || []), t();
@@ -19,22 +19,22 @@ var CLSTAMP = "6899320";
     for (var a, e = 0; e < r.length; e++) {
       for (var n = r[e], o = !0, i = 1; i < n.length; i++) {
         var c = n[i];
-        0 !== h[c] && (o = !1);
+        0 !== b[c] && (o = !1);
       }
-      o && (r.splice(e--, 1), (a = b((b.s = n[0]))));
+      o && (r.splice(e--, 1), (a = h((h.s = n[0]))));
     }
     return a;
   }
   var n = {},
     f = { 62: 0 },
-    h = { 62: 0 },
+    b = { 62: 0 },
     r = [];
-  function b(a) {
+  function h(a) {
     if (n[a]) return n[a].exports;
     var e = (n[a] = { i: a, l: !1, exports: {} });
-    return d[a].call(e.exports, e, e.exports, b), (e.l = !0), e.exports;
+    return d[a].call(e.exports, e, e.exports, h), (e.l = !0), e.exports;
   }
-  (b.e = function (r) {
+  (h.e = function (r) {
     var a = [];
     f[r]
       ? a.push(f[r])
@@ -170,7 +170,7 @@ var CLSTAMP = "6899320";
                     59: "31d6cfe0d16ae931b73c",
                     60: "31d6cfe0d16ae931b73c",
                   }[r],
-                o = b.p + e,
+                o = h.p + e,
                 i = document.getElementsByTagName("link"),
                 c = 0;
               c < i.length;
@@ -213,20 +213,20 @@ var CLSTAMP = "6899320";
       e,
       c,
       n,
-      l = h[r];
+      l = b[r];
     return (
       0 !== l &&
         (l
           ? a.push(l[2])
           : ((n = new Promise(function (a, e) {
-              l = h[r] = [a, e];
+              l = b[r] = [a, e];
             })),
             a.push((l[2] = n)),
             ((o = document.createElement("script")).charset = "utf-8"),
             (o.timeout = 120),
-            b.nc && o.setAttribute("nonce", b.nc),
+            h.nc && o.setAttribute("nonce", h.nc),
             (o.src =
-              b.p +
+              h.p +
               "javascript/applications/help/" +
               ({
                 0: "broadcast",
@@ -323,9 +323,9 @@ var CLSTAMP = "6899320";
                 29: "d2ae063bffbdfebab696",
                 30: "b291ebad9e72104e4b66",
                 31: "5ecdae187ad2372276ba",
-                32: "e8a9b1cd4e33782809e9",
+                32: "714fc6ebed96414fba74",
                 33: "8e6925ea592edd4274fa",
-                34: "08eed38c2d89c35da7fd",
+                34: "60910eff8be30bf5bd24",
                 35: "015ac2dda9e5728b4dae",
                 36: "429fcf5c79956c3b8078",
                 37: "3e7b82134e759acd9a4d",
@@ -336,7 +336,7 @@ var CLSTAMP = "6899320";
                 42: "2542697b47c19229c740",
                 43: "d22ac16aa3aa044fbedd",
                 44: "58b84fe36ff087b9c550",
-                45: "6c546a156e27e1ebd6a1",
+                45: "852bee9b19f14acd0bf8",
                 46: "c14ccf9513da26facde8",
                 47: "0a76f31c1815c55e06f5",
                 48: "60f0a111cac9564abdac",
@@ -357,7 +357,7 @@ var CLSTAMP = "6899320";
             (e = function (a) {
               (o.onerror = o.onload = null), clearTimeout(c);
               var e,
-                n = h[r];
+                n = b[r];
               0 !== n &&
                 (n &&
                   ((e = a && ("load" === a.type ? "missing" : a.type)),
@@ -368,7 +368,7 @@ var CLSTAMP = "6899320";
                   (i.type = e),
                   (i.request = a),
                   n[1](i)),
-                (h[r] = void 0));
+                (b[r] = void 0));
             }),
             (c = setTimeout(function () {
               e({ type: "timeout", target: o });
@@ -378,28 +378,28 @@ var CLSTAMP = "6899320";
       Promise.all(a)
     );
   }),
-    (b.m = d),
-    (b.c = n),
-    (b.d = function (a, e, n) {
-      b.o(a, e) || Object.defineProperty(a, e, { enumerable: !0, get: n });
+    (h.m = d),
+    (h.c = n),
+    (h.d = function (a, e, n) {
+      h.o(a, e) || Object.defineProperty(a, e, { enumerable: !0, get: n });
     }),
-    (b.r = function (a) {
+    (h.r = function (a) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(a, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(a, "__esModule", { value: !0 });
     }),
-    (b.t = function (e, a) {
-      if ((1 & a && (e = b(e)), 8 & a)) return e;
+    (h.t = function (e, a) {
+      if ((1 & a && (e = h(e)), 8 & a)) return e;
       if (4 & a && "object" == typeof e && e && e.__esModule) return e;
       var n = Object.create(null);
       if (
-        (b.r(n),
+        (h.r(n),
         Object.defineProperty(n, "default", { enumerable: !0, value: e }),
         2 & a && "string" != typeof e)
       )
         for (var o in e)
-          b.d(
+          h.d(
             n,
             o,
             function (a) {
@@ -408,7 +408,7 @@ var CLSTAMP = "6899320";
           );
       return n;
     }),
-    (b.n = function (a) {
+    (h.n = function (a) {
       var e =
         a && a.__esModule
           ? function () {
@@ -417,13 +417,13 @@ var CLSTAMP = "6899320";
           : function () {
               return a;
             };
-      return b.d(e, "a", e), e;
+      return h.d(e, "a", e), e;
     }),
-    (b.o = function (a, e) {
+    (h.o = function (a, e) {
       return Object.prototype.hasOwnProperty.call(a, e);
     }),
-    (b.p = ""),
-    (b.oe = function (a) {
+    (h.p = ""),
+    (h.oe = function (a) {
       throw (console.error(a), a);
     });
   var e = (o = window.webpackJsonp = window.webpackJsonp || []).push.bind(o);

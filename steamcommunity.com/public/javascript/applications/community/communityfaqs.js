@@ -4378,6 +4378,14 @@
         AutoTagList: "partnereventsaletagitems_AutoTagList_1EmxH",
         AutoTag: "partnereventsaletagitems_AutoTag_2gCmA",
         AutoTagRow: "partnereventsaletagitems_AutoTagRow_2o3nc",
+        ForceUpdateFeaturedAppTagsDialogBody:
+          "partnereventsaletagitems_ForceUpdateFeaturedAppTagsDialogBody_2Dix4",
+        AddSummary: "partnereventsaletagitems_AddSummary_2-m9_",
+        RemoveSummary: "partnereventsaletagitems_RemoveSummary_18_G7",
+        AppTable: "partnereventsaletagitems_AppTable_3Wtit",
+        AppTableRow: "partnereventsaletagitems_AppTableRow_X8HXp",
+        AppID: "partnereventsaletagitems_AppID_n753z",
+        AppName: "partnereventsaletagitems_AppName_1AjeX",
       };
     },
     JZ7q: function (e, t, a) {
@@ -31579,19 +31587,19 @@
     oqmg: function (e, t, a) {
       "use strict";
       a.d(t, "b", function () {
-        return K;
+        return $;
       }),
         a.d(t, "c", function () {
-          return ae;
-        }),
-        a.d(t, "d", function () {
           return oe;
         }),
-        a.d(t, "e", function () {
+        a.d(t, "d", function () {
           return ie;
         }),
+        a.d(t, "e", function () {
+          return ne;
+        }),
         a.d(t, "a", function () {
-          return he;
+          return ue;
         });
       var o = a("mrSG"),
         i = a("vDqi"),
@@ -31638,14 +31646,15 @@
         V = a("JiI5"),
         U = a("IMce"),
         Y = a("mHFc"),
-        Q = a("putg");
-      function X(e) {
+        Q = a("putg"),
+        X = a("X3Ds");
+      function K(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
           ">",
           " "
         )).trim();
       }
-      function K(e) {
+      function $(e) {
         var t = null,
           a = "",
           o = !1,
@@ -31667,14 +31676,14 @@
         }
         return { appData: t, linkURL: a, bInvalidID: o };
       }
-      var $ = function (e) {
+      var J = function (e) {
           return u.createElement("img", {
             className: M.a.RemoveIcon,
             src: y.a,
             onClick: e.onClick,
           });
         },
-        J = function (e) {
+        Z = function (e) {
           var t,
             a = e.clause;
           if (!(null === (t = a.or_tags) || void 0 === t ? void 0 : t.length))
@@ -31693,7 +31702,7 @@
             o
           );
         },
-        Z = function (e) {
+        ee = function (e) {
           var t = e.filter;
           return Object(r.q)(t)
             ? u.createElement(
@@ -31708,11 +31717,11 @@
                 "div",
                 { className: U.FilterDisplayList },
                 t.clauses.map(function (e, t) {
-                  return u.createElement(J, { clause: e, key: "clause" + t });
+                  return u.createElement(Z, { clause: e, key: "clause" + t });
                 })
               );
         },
-        ee = (function () {
+        te = (function () {
           function e(e) {
             this.m_storageKey = "RecentTags_" + e;
             var t = window.localStorage.getItem(this.m_storageKey);
@@ -31744,7 +31753,7 @@
             e
           );
         })(),
-        te = Object(h.a)(function (e) {
+        ae = Object(h.a)(function (e) {
           var t = e.id,
             a = e.type,
             o = e.name;
@@ -31766,7 +31775,7 @@
             u.createElement("span", { className: V.SmallText }, "(", a, ")")
           );
         }),
-        ae = (function (e) {
+        oe = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_currentRequest = 0), (t.m_refInput = u.createRef()), t;
@@ -31878,7 +31887,7 @@
                                                 );
                                               },
                                             },
-                                            u.createElement(te, {
+                                            u.createElement(ae, {
                                               name: e.name,
                                               id: Number(e.id),
                                               type: e.type,
@@ -31932,7 +31941,7 @@
             t
           );
         })(u.Component),
-        oe = (function (e) {
+        ie = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -31949,7 +31958,7 @@
             (t.prototype.OnEditFilter = function () {
               var e = this.props.capsuleContainer;
               Object(O.d)(
-                u.createElement(he, {
+                u.createElement(ue, {
                   editModel: this.props.editModel,
                   filter: e.sale_tag_filter || { clauses: [] },
                   title: Object(L.f)("#Sale_TagFilter_EditFilter"),
@@ -31975,7 +31984,7 @@
                 u.createElement(
                   "div",
                   { className: U.FilterActionsCtn },
-                  u.createElement(Z, { filter: e.sale_tag_filter }),
+                  u.createElement(ee, { filter: e.sale_tag_filter }),
                   u.createElement(
                     x.d,
                     { onClick: this.OnEditFilter },
@@ -31989,7 +31998,7 @@
             (t = Object(o.c)([h.a], t))
           );
         })(u.Component),
-        ie = (function (e) {
+        ne = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -32019,7 +32028,7 @@
             (t.prototype.OnExploreTags = function () {
               var e = { clauses: new Array() };
               Object(O.d)(
-                u.createElement(he, {
+                u.createElement(ue, {
                   editModel: this.props.editModel,
                   filter: e,
                   title: Object(L.f)("#Sale_TagFilter_Explore"),
@@ -32029,13 +32038,13 @@
             }),
             (t.prototype.OnBatchEditTags = function () {
               Object(O.d)(
-                u.createElement(ce, { editModel: this.props.editModel }),
+                u.createElement(de, { editModel: this.props.editModel }),
                 window
               );
             }),
             (t.prototype.OnEditAutoTags = function () {
               Object(O.d)(
-                u.createElement(ye, { editModel: this.props.editModel }),
+                u.createElement(be, { editModel: this.props.editModel }),
                 window
               );
             }),
@@ -32048,7 +32057,7 @@
             (t.prototype.OnEditFilter = function () {
               var e = this.props.editModel;
               Object(O.d)(
-                u.createElement(he, {
+                u.createElement(ue, {
                   editModel: e,
                   filter: Object(r.p)(e),
                   title: Object(L.f)("#Sale_TagFilter_EditFilter"),
@@ -32066,7 +32075,7 @@
             }),
             (t.prototype.OnEditRaw = function (e) {
               Object(O.d)(
-                u.createElement(me, {
+                u.createElement(fe, {
                   editModel: this.props.editModel,
                   bRemoveMissingEntries: !0,
                 }),
@@ -32075,7 +32084,7 @@
             }),
             (t.prototype.OnEditRawCustom = function (e) {
               Object(O.d)(
-                u.createElement(me, {
+                u.createElement(fe, {
                   editModel: this.props.editModel,
                   collection: r.j.Custom,
                   bRemoveMissingEntries: !1,
@@ -32089,7 +32098,7 @@
             }),
             (t.prototype.OnSync = function (e) {
               Object(O.d)(
-                u.createElement(fe, { editModel: this.props.editModel }),
+                u.createElement(ge, { editModel: this.props.editModel }),
                 window
               );
             }),
@@ -32155,6 +32164,12 @@
                 window
               );
             }),
+            (t.prototype.OnForceUpdateFeaturedAppTags = function (e) {
+              Object(O.d)(
+                u.createElement(ve, { editModel: this.props.editModel }),
+                Object(X.m)(e)
+              );
+            }),
             (t.prototype.RenderEditPrompt = function () {
               return u.createElement(
                 "div",
@@ -32191,7 +32206,7 @@
                   return (
                     c ? s++ : l++,
                     c || o
-                      ? u.createElement(ne, {
+                      ? u.createElement(se, {
                           key: t.capsule.type + t.capsule.id,
                           item: t,
                           strSearchFilter: a,
@@ -32351,7 +32366,16 @@
                       tooltip: Object(L.f)("#Sale_TaggedItemsFilter_ttip"),
                     }),
                     d
+                  ),
+                u.createElement(
+                  c.b,
+                  { clanSteamID: i.GetClanSteamID(), requireAdmin: !0 },
+                  u.createElement(
+                    x.d,
+                    { onClick: this.OnForceUpdateFeaturedAppTags },
+                    "Force Update Featured App Tags"
                   )
+                )
               );
             }),
             (t.prototype.render = function () {
@@ -32379,7 +32403,7 @@
                       ? u.createElement(
                           u.Fragment,
                           null,
-                          u.createElement(ae, { onAddItem: this.AddTagItem }),
+                          u.createElement(oe, { onAddItem: this.AddTagItem }),
                           this.RenderItemList()
                         )
                       : this.RenderEditPrompt()
@@ -32419,10 +32443,16 @@
             Object(o.c)([z.a], t.prototype, "OnDeleteFiltered", null),
             Object(o.c)([z.a], t.prototype, "OnSync", null),
             Object(o.c)([z.a], t.prototype, "OnImportDiscountEvent", null),
+            Object(o.c)(
+              [z.a],
+              t.prototype,
+              "OnForceUpdateFeaturedAppTags",
+              null
+            ),
             (t = Object(o.c)([h.a], t))
           );
         })(u.Component),
-        ne = (function (e) {
+        se = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { expanded: !1 }), t;
@@ -32431,7 +32461,7 @@
             Object(o.d)(t, e),
             (t.prototype.OnEditTags = function () {
               Object(O.d)(
-                u.createElement(pe, {
+                u.createElement(ce, {
                   editModel: this.props.editModel,
                   item: this.props.item,
                   onTagsModified: this.props.onTagsModified,
@@ -32451,7 +32481,7 @@
                 n = t.tagHighlight,
                 s = t.filter,
                 r = a.capsule,
-                l = K(r),
+                l = $(r),
                 p = l.appData,
                 c = l.linkURL,
                 d = l.bInvalidID,
@@ -32544,14 +32574,14 @@
                     u.createElement(
                       "div",
                       { onClick: this.OnEditTags },
-                      u.createElement(re, {
+                      u.createElement(le, {
                         item: a,
                         lowerTagHighlight: g,
                         filter: s,
                       })
                     )
                 ),
-                o && u.createElement($, { onClick: o })
+                o && u.createElement(J, { onClick: o })
               );
             }),
             Object(o.c)([z.a], t.prototype, "OnEditTags", null),
@@ -32559,7 +32589,7 @@
             (t = Object(o.c)([h.a], t))
           );
         })(u.Component);
-      function se(e, t, a) {
+      function re(e, t, a) {
         var o,
           i = e.toLocaleLowerCase();
         if (t && i === t) return U.TagHighlight;
@@ -32577,7 +32607,7 @@
           }
         return null;
       }
-      var re = Object(h.a)(function (e) {
+      var le = Object(h.a)(function (e) {
           var t = e.item,
             a = Array.from(t.tags),
             o = (function (e, t) {
@@ -32627,15 +32657,15 @@
                 "div",
                 { className: U.TagListCtn },
                 a.map(function (t) {
-                  return u.createElement(le, {
+                  return u.createElement(pe, {
                     key: t,
                     tag: t,
-                    className: se(t, e.lowerTagHighlight, e.filter),
+                    className: re(t, e.lowerTagHighlight, e.filter),
                   });
                 }),
                 o &&
                   o.map(function (e) {
-                    return u.createElement(le, {
+                    return u.createElement(pe, {
                       key: e,
                       tag: e,
                       className: U.TagMissingMustHave,
@@ -32648,7 +32678,7 @@
                 Object(L.f)("#Sale_TagFilter_AddTags")
               );
         }),
-        le = function (e) {
+        pe = function (e) {
           var t = Object(r.k)(e.tag);
           return u.createElement(
             "div",
@@ -32662,7 +32692,7 @@
             e.tag
           );
         },
-        pe = (function (e) {
+        ce = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -32767,9 +32797,9 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this.state.currentTags,
-                a = (e = X(e)).toLocaleLowerCase();
+                a = (e = K(e)).toLocaleLowerCase();
               if (
-                (ee.Get(this.props.editModel).AddRecentTag(e),
+                (te.Get(this.props.editModel).AddRecentTag(e),
                 !t.find(function (e) {
                   return e.toLocaleLowerCase() === a;
                 }))
@@ -32866,7 +32896,7 @@
                 }
               });
               var g = [];
-              ee.Get(this.props.editModel)
+              te.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
                   if (!p.has(t.toLocaleLowerCase())) {
@@ -32888,7 +32918,7 @@
                   }
                 });
               var y = this.RenderSectionList(),
-                b = K(a.capsule).appData,
+                b = $(a.capsule).appData,
                 w = b ? b.appid || b.bundleid || b.packageid : a.capsule.id,
                 v = {
                   option: function (e) {
@@ -33061,7 +33091,7 @@
             (t = Object(o.c)([h.a], t))
           );
         })(u.Component),
-        ce = (function (e) {
+        de = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -33110,7 +33140,7 @@
             (t.prototype.OnPopulateFromFilter = function () {
               new Array();
               Object(O.d)(
-                u.createElement(he, {
+                u.createElement(ue, {
                   editModel: this.props.editModel,
                   filter: this.state.filter,
                   onApplyFilter: this.OnApplyFilter,
@@ -33141,11 +33171,11 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this,
-                a = (e = X(e)).toLocaleLowerCase(),
+                a = (e = K(e)).toLocaleLowerCase(),
                 i = this.state.otherTags.get(a);
               i && (e = i.properCaseString);
               var n = this.CloneModifiedTags();
-              ee.Get(this.props.editModel).AddRecentTag(e);
+              te.Get(this.props.editModel).AddRecentTag(e);
               for (var s = 0, r = this.state.editItems; s < r.length; s++) {
                 var l = r[s],
                   p = n.get(l) || l.tags || [];
@@ -33251,7 +33281,7 @@
                   return e.localeCompare(t);
                 });
               var c = [];
-              ee.Get(this.props.editModel)
+              te.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
                   var a = Object(q.a)(U.EditTag, U.OtherTag);
@@ -33270,7 +33300,7 @@
                   );
                 });
               var d = i.map(function (e) {
-                  var t = K(e.capsule).appData;
+                  var t = $(e.capsule).appData;
                   return u.createElement(
                     "div",
                     { key: e.capsule.id },
@@ -33483,7 +33513,7 @@
             (t = Object(o.c)([h.a], t))
           );
         })(u.Component);
-      function de(e) {
+      function he(e) {
         var t = e.onClauseChanged,
           a = e.value,
           i = e.taggedItems,
@@ -33560,7 +33590,7 @@
           menuPlacement: "bottom",
         });
       }
-      var he = (function (e) {
+      var ue = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = t.GenerateInitialState()), t;
@@ -33584,7 +33614,7 @@
               return Object(o.e)(this, function (a) {
                 switch (a.label) {
                   case 0:
-                    return [4, ue()];
+                    return [4, me()];
                   case 1:
                     return (
                       (e = a.sent()),
@@ -33755,7 +33785,7 @@
                   u.createElement(
                     "div",
                     { className: U.TagDropDown },
-                    u.createElement(de, {
+                    u.createElement(he, {
                       taggedItems: n,
                       value: e,
                       onClauseChanged: function (e) {
@@ -33768,7 +33798,7 @@
                     })
                   ),
                   i > 0 &&
-                    u.createElement($, {
+                    u.createElement(J, {
                       onClick: function () {
                         return o.OnRemoveClauseTagSlot(t, i);
                       },
@@ -33791,7 +33821,7 @@
                 u.createElement(
                   u.Fragment,
                   null,
-                  u.createElement($, {
+                  u.createElement(J, {
                     onClick: function () {
                       return o.OnRemoveClause(t);
                     },
@@ -34021,7 +34051,7 @@
               S = ("active" === s ? h : "filtered" === s ? f : y).map(function (
                 e
               ) {
-                var t = K(e.capsule).appData;
+                var t = $(e.capsule).appData;
                 return {
                   item: e,
                   name: t && t.name,
@@ -34080,7 +34110,7 @@
               ],
               k = S.map(function (t) {
                 var o = t.item;
-                return u.createElement(ne, {
+                return u.createElement(se, {
                   key: o.capsule.type + o.capsule.id,
                   editModel: a,
                   item: o,
@@ -34188,7 +34218,7 @@
           t
         );
       })(u.Component);
-      function ue() {
+      function me() {
         return Object(o.b)(this, void 0, void 0, function () {
           var e, t, a;
           return Object(o.e)(this, function (o) {
@@ -34225,7 +34255,7 @@
           });
         });
       }
-      var me = (function (e) {
+      var fe = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -34251,7 +34281,7 @@
                 var n = i[o],
                   s = n.capsule,
                   l = n.tags,
-                  p = K(s).appData,
+                  p = $(s).appData,
                   c = s.id + "\t" + s.type;
                 c +=
                   '\t"' +
@@ -34297,7 +34327,7 @@
                   d = new Array();
                 if (p)
                   for (var h = 0, u = p[1].split(";"); h < u.length; h++) {
-                    var m = X(u[h]);
+                    var m = K(u[h]);
                     if (m) {
                       var f = m.toLocaleLowerCase();
                       c.has(f) || (c.add(f), d.push(m));
@@ -34496,7 +34526,7 @@
             (t = Object(o.c)([h.a], t))
           );
         })(u.Component),
-        fe = (function (e) {
+        ge = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -34801,7 +34831,7 @@
             (t = Object(o.c)([h.a], t))
           );
         })(u.Component);
-      function ge(e) {
+      function ye(e) {
         for (var t = new Set(), a = 0, o = e; a < o.length; a++) {
           var i = o[a],
             n = i.tag_name.trim().toLocaleLowerCase();
@@ -34812,7 +34842,7 @@
         }
         return !0;
       }
-      var ye = function (e) {
+      var be = function (e) {
           var t = e.closeModal,
             a = e.editModel,
             i = a.GetEventModel().jsondata,
@@ -34826,10 +34856,10 @@
             g = f[0],
             y = f[1],
             b = function () {
-              p(ge(g)), m(!0);
+              p(ye(g)), m(!0);
             },
             w = g.map(function (e, t) {
-              return u.createElement(be, {
+              return u.createElement(we, {
                 key: "AutoTag" + t,
                 editModel: a,
                 fnOnEdited: b,
@@ -34841,7 +34871,7 @@
                         return a != e;
                       })
                     ),
-                    void p(ge(g))
+                    void p(ye(g))
                   );
                   var e;
                 },
@@ -34914,7 +34944,7 @@
             )
           );
         },
-        be = function (e) {
+        we = function (e) {
           var t = u.useState(e.autoTag.tag_name),
             a = t[0],
             o = t[1],
@@ -34941,7 +34971,7 @@
                 tooltip: Object(L.f)("#Sale_EditAutoTags_Tooltip"),
                 value: a,
               }),
-              u.createElement($, {
+              u.createElement(J, {
                 onClick: function () {
                   return e.fnOnDeleted();
                 },
@@ -34950,13 +34980,13 @@
             u.createElement(
               "div",
               { className: U.AutoTagRow },
-              u.createElement(Z, { filter: n }),
+              u.createElement(ee, { filter: n }),
               u.createElement(
                 x.d,
                 {
                   onClick: function () {
                     Object(O.d)(
-                      u.createElement(he, {
+                      u.createElement(ue, {
                         editModel: e.editModel,
                         filter: n,
                         title: Object(L.f)("#Sale_TagFilter_EditFilter"),
@@ -34967,6 +34997,185 @@
                   },
                 },
                 Object(L.f)("#Sale_TagFilter_EditFilter")
+              )
+            )
+          );
+        },
+        ve = function (e) {
+          var t = e.editModel,
+            a = e.closeModal,
+            i = Object(u.useState)(!0),
+            s = i[0],
+            r = i[1],
+            l = Object(u.useState)(),
+            p = l[0],
+            c = l[1];
+          return (
+            Object(u.useEffect)(
+              function () {
+                (function (e) {
+                  return Object(o.b)(this, void 0, void 0, function () {
+                    var t, a, i, s;
+                    return Object(o.e)(this, function (o) {
+                      switch (o.label) {
+                        case 0:
+                          (t =
+                            B.c.STORE_BASE_URL +
+                            "saleaction/ajaxforceupdatefeaturedapptags"),
+                            (a = {
+                              clanAccountID: e.clanSteamID.GetAccountID(),
+                              clanAnnouncementGID: e.GetAnnouncementGID(),
+                            }),
+                            (o.label = 1);
+                        case 1:
+                          return (
+                            o.trys.push([1, 3, , 4]),
+                            [4, n.a.get(t, { params: a, withCredentials: !0 })]
+                          );
+                        case 2:
+                          return 200 !== (i = o.sent()).status ||
+                            1 !== i.data.success
+                            ? (console.error(
+                                "ForceUpdateFeaturedAppTags: AJAX query failed: status = " +
+                                  i.status +
+                                  " success = " +
+                                  i.data.success
+                              ),
+                              [2, null])
+                            : [
+                                2,
+                                {
+                                  rgAppIDsAdded: i.data.appids_added,
+                                  rgAppIDsRemoved: i.data.appids_removed,
+                                },
+                              ];
+                        case 3:
+                          return (
+                            (s = o.sent()),
+                            console.error(
+                              "ForceUpdateFeaturedAppTags: Exception in AJAX request: ",
+                              s
+                            ),
+                            [2, null]
+                          );
+                        case 4:
+                          return [2];
+                      }
+                    });
+                  });
+                })(t.GetEventModel()).then(function (e) {
+                  Boolean(e)
+                    ? v.a
+                        .LoadAppLinkInfo(
+                          e.rgAppIDsAdded.concat(e.rgAppIDsRemoved)
+                        )
+                        .then(function () {
+                          c(e), r(!1);
+                        })
+                    : r(!1);
+                });
+              },
+              [t]
+            ),
+            u.createElement(
+              E.e,
+              {
+                onOK: a,
+                onCancel: a,
+                closeModal: a,
+                bDisableBackgroundDismiss: !0,
+              },
+              u.createElement(x.k, null, "Update Solr Tagging"),
+              u.createElement(
+                x.b,
+                null,
+                s
+                  ? u.createElement(P.a, {
+                      position: "center",
+                      string: "Please wait",
+                    })
+                  : u.createElement(
+                      u.Fragment,
+                      null,
+                      Boolean(p)
+                        ? u.createElement(
+                            "div",
+                            {
+                              className: U.ForceUpdateFeaturedAppTagsDialogBody,
+                            },
+                            u.createElement(
+                              "div",
+                              { className: U.AddSummary },
+                              p.rgAppIDsAdded.length + " app(s) added:"
+                            ),
+                            u.createElement(
+                              "div",
+                              { className: U.AppTable },
+                              p.rgAppIDsAdded.map(function (e) {
+                                var t;
+                                return u.createElement(
+                                  "div",
+                                  { className: U.AppTableRow, key: "add" + e },
+                                  u.createElement(
+                                    "div",
+                                    { className: U.AppID },
+                                    e
+                                  ),
+                                  u.createElement(
+                                    "div",
+                                    { className: U.AppName },
+                                    null === (t = v.a.GetAppLinkInfo(e)) ||
+                                      void 0 === t
+                                      ? void 0
+                                      : t.name
+                                  )
+                                );
+                              })
+                            ),
+                            u.createElement(
+                              "div",
+                              { className: U.RemoveSummary },
+                              p.rgAppIDsRemoved.length + " app(s) removed:"
+                            ),
+                            u.createElement(
+                              "div",
+                              { className: U.AppTable },
+                              p.rgAppIDsRemoved.map(function (e) {
+                                var t;
+                                return u.createElement(
+                                  "div",
+                                  {
+                                    className: U.AppTableRow,
+                                    key: "remove" + e,
+                                  },
+                                  u.createElement(
+                                    "div",
+                                    { className: U.AppID },
+                                    e
+                                  ),
+                                  u.createElement(
+                                    "div",
+                                    { className: U.AppName },
+                                    null === (t = v.a.GetAppLinkInfo(e)) ||
+                                      void 0 === t
+                                      ? void 0
+                                      : t.name
+                                  )
+                                );
+                              })
+                            )
+                          )
+                        : u.createElement(
+                            "div",
+                            null,
+                            "An error occurred when synchronizing the linked app list with Solr, check the console for details."
+                          )
+                    )
+              ),
+              u.createElement(
+                x.j,
+                null,
+                !s && u.createElement(x.q, { onClick: a }, "OK")
               )
             )
           );
@@ -36566,7 +36775,7 @@
                         key: "langpicker" + y.eLang + (x ? "_hasdata" : ""),
                         value: y.eLang,
                         className: Object(c.a)(
-                          ((e = {}), (e[p.a.LangaugeWithContent] = x), e),
+                          ((e = {}), (e[p.a.LanguageWithContent] = x), e),
                           y.bSupported
                             ? p.a.SupportedLanguage
                             : p.a.UnsupportedLanguage

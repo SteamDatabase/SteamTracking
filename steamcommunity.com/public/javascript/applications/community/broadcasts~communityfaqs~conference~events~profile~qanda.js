@@ -1596,7 +1596,7 @@
           "partnereventshared_FlexRowWrapFlexStartContainer_tyP_c",
         SaveBackground: "partnereventshared_SaveBackground_V0mbI",
         SupportedGroupLabel: "partnereventshared_SupportedGroupLabel_APmJN",
-        LangaugeWithContent: "partnereventshared_LangaugeWithContent_16xEW",
+        LanguageWithContent: "partnereventshared_LanguageWithContent_2Cd1u",
         InputBorder: "partnereventshared_InputBorder_Obyys",
         RadioOption: "partnereventshared_RadioOption_3iJX1",
         EventEditorTextTitleCtn:

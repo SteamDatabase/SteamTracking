@@ -646,6 +646,7 @@
 	html.responsive .game_purchase_discount .discount_pct,
 	html.responsive .game_purchase_discount .bundle_base_discount {
 		font-size: unset;
+		color: var(--gpColor-GreenHi);
 	}
 	html.responsive #purchaseOptionsBanner_hidden {
 		display: flex;
@@ -749,6 +750,8 @@
 		text-align: center;
 	}
 
+
+
 	/* discovery queue */
 	html.responsive .queue_ctn {
 		display: flex;
@@ -767,14 +770,7 @@
 		max-width: unset;
 		top: unset;
 	}
-	html.responsive .btn_next_in_queue {
-		margin-top: -22px;
-		margin-bottom: -10px;
-		margin-right: unset;
-	}
-	html.responsive .next_in_queue_content {
-		padding-top: 20px;
-	}
+
 
 	/* Hide the "view all" button for recent events and announcements */
 	html.responsive div[class*='partnereventwebrowembed_SectionButtonCtn_'] {
@@ -810,14 +806,14 @@
 	}
 
 	/* clickable images in the MORE LIKE THIS and AWARDS sections */
-	html.responsive .game_description_column .block .block_content a {
-		/* background: unset !important; */
-		padding: 10px;
-	}
+
+
 	html.responsive .game_description_column .block .block_content a .ds_steam_deck_compat {
 		bottom: unset;
 		top: 55px;
 		left: 13px;
+		background-color: var(--gpBackground-DarkMedium);
+		backdrop-filter: blur(24px);
 	}
 
 	/* Curators section uses the banner format on mobile and needs extra margin on top and bottom because it's by itself */
@@ -1103,13 +1099,15 @@
 		padding-top: 10px;
 		padding-bottom: 30px;
 	}
+
+
 	/* purchase options banner button styling */
 	html.responsive .purchase_options_banners .purchase_banner_link_discount {
 		align-items: center;
 		font-size: 16px;
 	}
 	html.responsive .purchase_options_banners .purchase_banner_link_starting_at {
-		color: #8A97A0 !important;
+		/* color: #8A97A0 !important; */
 		flex: 1;
 		font-size: 14px;
 		padding-bottom: 5px;
@@ -1136,7 +1134,6 @@
 
 
 
-
 	/* Framework */
 	html.responsive #game_highlights,
 	html.responsive body.v6 .page_content {
@@ -1150,11 +1147,95 @@
 	}
 
 
-	/* Hide discovery queue on tablet */
-	html.responsive .queue_controls_description,
+
+	/* Discovery queue */
+	html.responsive .queue_ctn .queue_reason_description {
+		font: var(--gpText-BodyMedium);
+		color: unset;
+		margin-bottom: 12px;
+	}
+
+	html.responsive .queue_ctn .queue_reason_description a {
+		color: var(--gpColor-Blue);
+	}
+
+	html.responsive .queue_controls_description {
+		margin: 0px var(--gpSpace-Gutter);
+		padding: 12px;
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyMedium);
+		background: none;
+		background-color: rgba( 196, 158, 82, 0.2 );
+	}
+
 	html.responsive #nextInDiscoveryQueue {
+		margin: 0px var(--gpSpace-Gutter);
+		border-bottom: 1px solid var(--gpBackground-LightMedium);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px 0px 16px;
+	}
+
+	html.responsive .queue_ctn .queue_settings_link_ctn.queue_reason_description {
+		margin-right: unset;
+		text-align: left;
+	}
+
+	html.responsive #nextInDiscoveryQueue .queue_reason_description {
+		margin-bottom: 0px;
+	}
+
+	html.responsive .btn_next_in_queue {
+		margin-right: unset;
+		background: none;
+		width: unset;
+		height: unset;
+		background-color: rgba( 196, 158, 82, 0.4 );
+		margin: unset;
+		padding: 10px 24px 10px 20px;
+		border-radius: var(--gpCorner-Medium);
+		clip-path: polygon(0px 0px, calc(100% - 12px) 0px, 100% 50%, calc(100% - 12px) 100%, 0px 100%, 0px 100%);
+		transition: var(--gpTransition-Short);
+	}
+
+	html.responsive .btn_next_in_queue.gpfocus {
+		color: white;
+		background: #d89b29;
+	}
+
+	html.responsive .btn_next_in_queue.gpfocus span {
+		color: white;
+	}
+
+	html.responsive .btn_next_in_queue .next_in_queue_content {
+		padding: 0px;
+	}
+
+	html.responsive .btn_next_in_queue .next_in_queue_content br {
 		display: none;
 	}
+
+	html.responsive .btn_next_in_queue span {
+		font: var(--gpText-BodyLarge);
+		font-weight: 400;
+	}
+
+	html.responsive .btn_next_in_queue span .queue_sub_text {
+		text-transform: unset;
+		font: var(--gpText-BodyMedium);
+		font-weight: 400;
+	}
+
+
+
+
+	/* Carousel items */
+	html.responsive .highlight_carousel_item {
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+
 
 
 	/* Purchase options */
@@ -1231,6 +1312,10 @@
 		box-shadow: unset;
 	}
 
+	html.responsive .game_area_purchase_game {
+		margin-bottom: 4px;
+	}
+
 	html.responsive .game_area_purchase_game .game_purchase_action,
 	html.responsive .game_area_comingsoon .game_purchase_action,
 	html.responsive .game_area_offsite_purchase .game_purchase_action {
@@ -1281,6 +1366,8 @@
 		height: unset;
 		line-height: unset;
 		padding-left: 0px;
+		margin-left: 0px;
+		font-weight: 700;
 	}
 
 	html.responsive .game_purchase_discount .discount_prices {
@@ -1308,8 +1395,8 @@
 		right: unset;
 		top: unset;
 		font-size: unset;
-		margin-right: 4px;
-		color: var(--gpStoreLightGrey);
+		/* margin-right: 4px; */
+		/* color: var(--gpStoreLightGrey); */
 	}
 
 	html.responsive .game_area_purchase_game .discount_final_price {
@@ -1351,7 +1438,7 @@
 	}
 
 	html.responsive .discount_block .bundle_base_discount {
-		color: #a4d007;
+		color: var(--gpColor-Green);
 		opacity: 0.6;
 	}
 
@@ -1412,7 +1499,7 @@
 
 	html.responsive .game_area_purchase_game a {
 		color: unset;
-		width: 100%;
+		/* width: 100%; */
 		box-sizing: border-box;
 	}
 
@@ -1527,16 +1614,17 @@
 		color: white;
 	}
 
-	html.responsive .game_area_dlc_row .discount_block_inline .discount_original_price {
-		color: var(--gpStoreLightGrey);
-	}
-
 	html.responsive .game_area_dlc_row .discount_block_inline {
 		font: var(--gpText-BodyMedium);
 	}
 
 	html.responsive .game_area_dlc_row .discount_block_inline .discount_pct {
 		background: unset;
+	}
+
+	html.responsive .game_area_dlc_row .discount_block_inline .discount_pct {
+		color: var(--gpColor-GreenHi);
+		padding: unset;
 	}
 
 	html.responsive #dlc_purchase_action {
@@ -1558,6 +1646,10 @@
 
 
 	/* Bundle info */
+	html.responsive .bundle_base_discount {
+		display: none;
+	}
+
 	html.responsive .discount_block.no_discount .bundle_base_discount {
 		color: unset;
 		color: var(--gpColor-GreenHi);
@@ -2091,6 +2183,7 @@
 	html.responsive .queue_ctn {
 		background: var(--gpBackground-DarkHard);
 		margin-bottom: 0px;
+		gap: 8px;
 	}
 
 
@@ -2124,6 +2217,19 @@
 	html.responsive .referringSteamCurator .curator_review_date,
 	html.responsive .referringSteamCurator a {
 		color: var(--gpStoreLighterGrey);
+	}
+
+
+
+	/* Notice box */
+	html.responsive .notice_box_content_blue_box {
+		background: var(--gpBackground-LightSoft);
+		color: unset;
+	}
+
+	html.responsive .notice_box_content_blue_box b {
+		font-size: unset;
+		font-weight: 500;
 	}
 
 
@@ -2249,9 +2355,13 @@
 		border:unset;
 		background: var(--gpStoreDarkestGrey);
 		margin-right: 8px;
-		padding: 12px;
+		padding: 8px;
 		height: auto;
 		scroll-snap-align: start;
+	}
+
+	html.responsive .game_description_column .block .block_content a h4 {
+		color: white;
 	}
 
 	html.responsive .store_horizontal_autoslider_ctn {
@@ -2282,10 +2392,6 @@
 
 	html.responsive .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover img {
 		filter: saturate(0) contrast(2) brightness(2) hue-rotate(32deg) !important;
-	}
-
-	html.responsive .discount_block_inline .discount_final_price {
-		font-size: unset;
 	}
 
 
@@ -2479,7 +2585,6 @@
 
 	html.responsive .early_access_header .heading {
 		padding: 12px 12px;
-		border-radius: var(--gpCorner-Medium);
 		background: var(--gpColor-DustyBlue);
 	}
 
@@ -2686,6 +2791,14 @@
 		color: var(--gpStoreLighterGrey);
 	}
 
+	html.responsive a.bundle_contents_preview_item .ds_steam_deck_compat {
+		display: none;
+	}
+
+	html.responsive .dynamic_bundle_description .ds_steam_deck_compat {
+		display: none;
+	}
+
 
 	/* Price totals */
 	html.responsive .package_info_block_content {
@@ -2807,6 +2920,12 @@
 	/* Game specs */
 	html.responsive .details_specs_ctn {
 		margin-top: 24px;
+	}
+
+
+	/* More like this carousel */
+	html.responsive .game_description_column .block .block_content a img {
+		width: 196px;
 	}
 
 

@@ -12,23 +12,9 @@
 	}
 
     /* Hide page header */
-    html.responsive .pageheader {
-        /* display: none; */
-    }
-
     html.responsive body.v6 {
         background: var(--gpStoreDarkerGrey) !important;
     }
-
-    /* html.responsive .rightcol {
-        float: right;
-        width: var(--gpPaymentsNavWidth);
-    }
-
-    html.responsive .leftcol {
-        float: left;
-        width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
-    } */
 
     html.responsive .block {
         background: unset;
@@ -87,13 +73,12 @@
     html.responsive .addfunds_accountBalance {
         padding-bottom: 12px;
         margin-bottom: 0px;
-        /* border-bottom: 1px solid var(--gpBackground-LightSoft); */
     }
 
     html.responsive .addfunds_about {
         margin-bottom: 16px;
     }
-    
+
     html.responsive .accountInfoBlock .block_content {
         background: unset;
         color: unset;
@@ -135,7 +120,7 @@
 		color: black;
 	}
 
-	
+
     /* Add funds purchase area */
     html.responsive .game_area_purchase_game {
         padding: 10px 16px;
@@ -164,7 +149,7 @@
 
     /* Page setup */
     html.responsive .account_management {
-        
+
     }
 
     /* Click hint */
@@ -185,19 +170,23 @@
     }
 
     /* Table header */
-    html.responsive .wallet_history_table th {
+    html.responsive .wallet_history_table th,
+	html.responsive .account_table th {
         background-color: var(--gpColor-Blue);
         font: var(--gpText-BodyMedium);
         font-weight: 700;
         color: white;
         text-align: left;
         padding-left: 12px;
+		text-transform: unset;
     }
 
     /* Table rows */
-    html.responsive .wallet_history_table tr {
+    html.responsive .wallet_history_table tr,
+	html.responsive .account_table tr {
         background: var(--gpBackground-LightSofter);
         transition: all 0.1s ease;
+		border: none;
     }
 
     html.responsive .wallet_history_table tr:hover {
@@ -239,10 +228,40 @@
     }
 
 
+	/* Licenses */
+	html.responsive th.license_date_col,
+	html.responsive th.license_acquisition_col {
+		width: 20%;
+	}
+
+	html.responsive .account_table th.license_date_col,
+	html.responsive .account_table td.license_date_col {
+		text-align: left;
+	}
+
+	html.responsive table.account_table td {
+		word-wrap: unset;
+	}
+
+	html.responsive .account_table tr,
+	html.responsive .wallet_history_table tr {
+		line-height: unset;
+	}
+
+	html.responsive th.license_acquisition_col {
+		text-align: right;
+	}
+
+	html.responsive th {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+
 
 
     /* GIFT CARD OR WALLET CODE */
-    
+
     html.responsive .redeem_wallet_code_login {
         padding: unset;
     }
@@ -311,6 +330,6 @@
         background-position-x: 94%;
         background-position-y: 60%;
     }
-    
+
 
 }
