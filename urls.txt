@@ -173,6 +173,12 @@ https://store.steampowered.com/public/css/promo/autumn2017.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2018.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2019_nominations.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2019_sale.css?__TIME__
+https://store.steampowered.com/public/css/promo/autumn2020_nominations.css?__TIME__
+https://store.steampowered.com/public/css/promo/autumn2020_sale.css?__TIME__
+https://store.steampowered.com/public/css/promo/autumn2021_nominations.css?__TIME__
+https://store.steampowered.com/public/css/promo/autumn2021_sale.css?__TIME__
+https://store.steampowered.com/public/css/promo/autumn2022_nominations.css?__TIME__
+https://store.steampowered.com/public/css/promo/autumn2022_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/curator_announce.css?__TIME__
 https://store.steampowered.com/public/css/promo/lunar2019.css?__TIME__
 https://store.steampowered.com/public/css/promo/lunar2020.css?__TIME__
@@ -187,6 +193,7 @@ https://store.steampowered.com/public/css/promo/summer2018.css?__TIME__
 https://store.steampowered.com/public/css/promo/summer2019_grandprix.css?__TIME__
 https://store.steampowered.com/public/css/promo/summer2020_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/summer2021_sale.css?__TIME__
+https://store.steampowered.com/public/css/promo/summer2022_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2018.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2018_best.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2018_cottage.css?__TIME__
@@ -197,6 +204,7 @@ https://store.steampowered.com/public/css/promo/winter2019_steamawards.css?__TIM
 https://store.steampowered.com/public/css/promo/winter2019_steamtown.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2020_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2021_sale.css?__TIME__
+https://store.steampowered.com/public/css/promo/winter2022_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter_2015_main.css?__TIME__
 https://store.steampowered.com/public/css/styles_about.css?__TIME__
 https://store.steampowered.com/public/css/styles_aboutv5.css?__TIME__
