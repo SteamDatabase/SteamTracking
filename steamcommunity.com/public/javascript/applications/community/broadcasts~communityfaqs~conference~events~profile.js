@@ -12332,8 +12332,7 @@
                   S,
                   O,
                   B,
-                  I,
-                  j;
+                  I;
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
@@ -12361,17 +12360,17 @@
                         tt.a.GetTimeNowWithOverride(),
                         3600,
                         86400,
-                        (v = n.GetSaleFeaturedAppsAndDemos()),
+                        n.GetSaleFeaturedAppsAndDemos(),
                         (a.label = 2);
                     case 2:
                       if (!(l.length <= e && f)) return [3, 11];
-                      (b = this.m_nHighestSentRequestID),
-                        (g = void 0),
+                      (v = this.m_nHighestSentRequestID),
+                        (b = void 0),
                         (a.label = 3);
                     case 3:
                       return (
                         a.trys.push([3, 5, , 6]),
-                        (y = {
+                        (g = {
                           strSectionFilter: Object(d.u)(o),
                           nTabUniqueID:
                             null == i ? void 0 : i.GetActiveTabUniqueID(),
@@ -12387,7 +12386,7 @@
                             r,
                             n,
                             c,
-                            y,
+                            g,
                             _,
                             0,
                             this.m_cancelSignal
@@ -12396,20 +12395,20 @@
                       );
                     case 4:
                       return (
-                        (S = a.sent()),
-                        (g = S.appids),
-                        (f = S.bHasPossibleMoreResults),
+                        (y = a.sent()),
+                        (b = y.appids),
+                        (f = y.bHasPossibleMoreResults),
                         o.enable_faceted_browsing &&
-                          (h.SetFacetCounts(S.facetCounts),
-                          h.SetSolrMatchCount(S.nMatchCount)),
+                          (h.SetFacetCounts(y.facetCounts),
+                          h.SetSolrMatchCount(y.nMatchCount)),
                         [3, 6]
                       );
                     case 5:
                       return (
-                        (O = a.sent()),
+                        (S = a.sent()),
                         this.m_cancelSignal.token.reason ||
                           (console.error(
-                            "Failed to load games for browser;" + O.message
+                            "Failed to load games for browser;" + S.message
                           ),
                           this.setState({
                             bInitialLoadComplete: !0,
@@ -12418,16 +12417,12 @@
                         [2]
                       );
                     case 6:
-                      return this.m_nHighestReceivedRequestID > b
+                      return this.m_nHighestReceivedRequestID > v
                         ? [2]
-                        : ((this.m_nHighestReceivedRequestID = b),
-                          (l = g.map(function (e) {
+                        : ((this.m_nHighestReceivedRequestID = v),
+                          (l = b.map(function (e) {
                             return { id: e, type: "game" };
                           })),
-                          n.BUsesContentHubForItemSource() ||
-                            (l = l.filter(function (e) {
-                              return v.has(e.id);
-                            })),
                           this.state.strSearchQuery ||
                             n.BUsesContentHubForItemSource() ||
                             (l = l.filter(function (e) {
@@ -12445,28 +12440,28 @@
                       );
                     case 8:
                       (l = a.sent()),
-                        (B = f),
-                        h.UpdateMatchCount(B, l.length),
+                        (O = f),
+                        h.UpdateMatchCount(O, l.length),
                         (a.label = 9);
                     case 9:
-                      return (I = new Array()), [4, Object(w.a)(l, !1, I)];
+                      return (B = new Array()), [4, Object(w.a)(l, !1, B)];
                     case 10:
                       return (
                         (l = a.sent()),
-                        (p = I.length),
+                        (p = B.length),
                         l.length <= e && (_ += 8),
                         [3, 2]
                       );
                     case 11:
                       return (
                         this.m_cancelSignal.token.reason ||
-                          ((j = l.length > e || f),
+                          ((I = l.length > e || f),
                           this.setState({
                             bInitialLoadComplete: !0,
                             rgCapsules: l,
                             nVisibleRows: e,
                             nNumRequestedLastTime: _,
-                            bIsMoreAvailable: j,
+                            bIsMoreAvailable: I,
                             bAwaitingMoreRowsLoading: !1,
                             nHiddenCapsules: p,
                           })),

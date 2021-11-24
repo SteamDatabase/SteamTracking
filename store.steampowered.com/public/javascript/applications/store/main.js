@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6914796";
+var CLSTAMP = "6914991";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -13935,8 +13935,7 @@ var CLSTAMP = "6914796";
                   O,
                   C,
                   A,
-                  w,
-                  B;
+                  w;
                 return Object(r.e)(this, function (r) {
                   switch (r.label) {
                     case 0:
@@ -13964,17 +13963,17 @@ var CLSTAMP = "6914796";
                         De.a.GetTimeNowWithOverride(),
                         3600,
                         86400,
-                        (b = n.GetSaleFeaturedAppsAndDemos()),
+                        n.GetSaleFeaturedAppsAndDemos(),
                         (r.label = 2);
                     case 2:
                       if (!(l.length <= e && f)) return [3, 11];
-                      (v = this.m_nHighestSentRequestID),
-                        (g = void 0),
+                      (b = this.m_nHighestSentRequestID),
+                        (v = void 0),
                         (r.label = 3);
                     case 3:
                       return (
                         r.trys.push([3, 5, , 6]),
-                        (y = {
+                        (g = {
                           strSectionFilter: Object(u.u)(o),
                           nTabUniqueID:
                             null == i ? void 0 : i.GetActiveTabUniqueID(),
@@ -13990,7 +13989,7 @@ var CLSTAMP = "6914796";
                             a,
                             n,
                             c,
-                            y,
+                            g,
                             _,
                             0,
                             this.m_cancelSignal
@@ -13999,20 +13998,20 @@ var CLSTAMP = "6914796";
                       );
                     case 4:
                       return (
-                        (O = r.sent()),
-                        (g = O.appids),
-                        (f = O.bHasPossibleMoreResults),
+                        (y = r.sent()),
+                        (v = y.appids),
+                        (f = y.bHasPossibleMoreResults),
                         o.enable_faceted_browsing &&
-                          (h.SetFacetCounts(O.facetCounts),
-                          h.SetSolrMatchCount(O.nMatchCount)),
+                          (h.SetFacetCounts(y.facetCounts),
+                          h.SetSolrMatchCount(y.nMatchCount)),
                         [3, 6]
                       );
                     case 5:
                       return (
-                        (C = r.sent()),
+                        (O = r.sent()),
                         this.m_cancelSignal.token.reason ||
                           (console.error(
-                            "Failed to load games for browser;" + C.message
+                            "Failed to load games for browser;" + O.message
                           ),
                           this.setState({
                             bInitialLoadComplete: !0,
@@ -14021,16 +14020,12 @@ var CLSTAMP = "6914796";
                         [2]
                       );
                     case 6:
-                      return this.m_nHighestReceivedRequestID > v
+                      return this.m_nHighestReceivedRequestID > b
                         ? [2]
-                        : ((this.m_nHighestReceivedRequestID = v),
-                          (l = g.map(function (e) {
+                        : ((this.m_nHighestReceivedRequestID = b),
+                          (l = v.map(function (e) {
                             return { id: e, type: "game" };
                           })),
-                          n.BUsesContentHubForItemSource() ||
-                            (l = l.filter(function (e) {
-                              return b.has(e.id);
-                            })),
                           this.state.strSearchQuery ||
                             n.BUsesContentHubForItemSource() ||
                             (l = l.filter(function (e) {
@@ -14048,28 +14043,28 @@ var CLSTAMP = "6914796";
                       );
                     case 8:
                       (l = r.sent()),
-                        (A = f),
-                        h.UpdateMatchCount(A, l.length),
+                        (C = f),
+                        h.UpdateMatchCount(C, l.length),
                         (r.label = 9);
                     case 9:
-                      return (w = new Array()), [4, Object(E.a)(l, !1, w)];
+                      return (A = new Array()), [4, Object(E.a)(l, !1, A)];
                     case 10:
                       return (
                         (l = r.sent()),
-                        (d = w.length),
+                        (d = A.length),
                         l.length <= e && (_ += 8),
                         [3, 2]
                       );
                     case 11:
                       return (
                         this.m_cancelSignal.token.reason ||
-                          ((B = l.length > e || f),
+                          ((w = l.length > e || f),
                           this.setState({
                             bInitialLoadComplete: !0,
                             rgCapsules: l,
                             nVisibleRows: e,
                             nNumRequestedLastTime: _,
-                            bIsMoreAvailable: B,
+                            bIsMoreAvailable: w,
                             bAwaitingMoreRowsLoading: !1,
                             nHiddenCapsules: d,
                           })),
