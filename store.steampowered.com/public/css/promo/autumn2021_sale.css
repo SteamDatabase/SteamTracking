@@ -870,7 +870,11 @@ a:hover {
     letter-spacing: 0.03em;
     line-height: 42px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+}
 
+html:lang( ru ) .home_tag_category_title,
+html:lang( ru ) .home_tag_category_title b{
+    font-size: 32px;
 }
 
 .home_category_subtitle_tags {
