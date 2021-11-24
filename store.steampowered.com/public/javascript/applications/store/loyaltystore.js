@@ -16522,7 +16522,9 @@
               I.unshift({ cluster: M, type: 1 });
               var j,
                 S = [];
-              Object(u.a)(m.d.EREALM) ? S.push(i(1526200)) : S.push(i(1768020)),
+              Object(u.a)(m.d.EREALM)
+                ? S.push(i(1526200))
+                : S.push(i(1792490), i(1768020)),
                 (j = {
                   type: "banner",
                   title: Object(s.f)("#FeaturedBanner_ArtistProfiles_Headline"),
