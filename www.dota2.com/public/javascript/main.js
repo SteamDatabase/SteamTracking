@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6905869";
+var CLSTAMP = "6913339";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -581,10 +581,10 @@ var CLSTAMP = "6905869";
     "1NFT": function (e, t, a) {
       "use strict";
       a.d(t, "f", function () {
-        return qe;
+        return Ye;
       }),
         a.d(t, "d", function () {
-          return Ye;
+          return qe;
         }),
         a.d(t, "g", function () {
           return Ke;
@@ -673,8 +673,8 @@ var CLSTAMP = "6905869";
         D =
           (Object(g.b)("DialogLabel _DialogLayout"),
           Object(g.b)("DialogBodyText")),
-        T = Object(g.b)("DialogBody"),
-        S =
+        S = Object(g.b)("DialogBody"),
+        T =
           (N("DialogBody"),
           Object(g.b)("DialogInnerBody"),
           Object(g.b)("DialogControlsSection"),
@@ -840,7 +840,7 @@ var CLSTAMP = "6905869";
         });
       function k(e) {
         return r.createElement(
-          S,
+          T,
           null,
           r.createElement(
             A,
@@ -1147,9 +1147,9 @@ var CLSTAMP = "6905869";
         V = (r.PureComponent, r.Component, a("LlcT")),
         W = a("8nKW"),
         z = a.n(W),
-        q = a("2hyl"),
-        Y = a("Co9h"),
-        K = a.n(Y);
+        Y = a("2hyl"),
+        q = a("Co9h"),
+        K = a.n(q);
       function Q(e) {
         return "object" == typeof e && "data" in e;
       }
@@ -1471,7 +1471,7 @@ var CLSTAMP = "6905869";
                       },
                       Boolean(t.tooltip)
                         ? r.createElement(
-                            q.a,
+                            Y.a,
                             {
                               toolTipContent: t.tooltip,
                               strTooltipClassname: K.a.HoverAboveModal,
@@ -2244,12 +2244,12 @@ var CLSTAMP = "6905869";
       function De(e) {
         return r.createElement("div", Object(n.a)({}, e));
       }
-      function Te(e) {
+      function Se(e) {
         var t = e.title,
           a = (e.icon, e.active, Object(n.f)(e, ["title", "icon", "active"]));
         return r.createElement("div", Object(n.a)({}, a), t);
       }
-      function Se(e) {
+      function Te(e) {
         var t,
           a,
           n =
@@ -2309,7 +2309,7 @@ var CLSTAMP = "6905869";
               i = t == p;
             return r.createElement(g.d, {
               component: e.renderPageListItem,
-              fallback: Te,
+              fallback: Se,
               className: Object(_.a)(
                 o.PagedSettingsDialog_PageListItem,
                 ((n = {}), (n[o.Active] = i), n)
@@ -2355,7 +2355,7 @@ var CLSTAMP = "6905869";
             E.a,
             { className: "DialogContentTransition", onCancelButton: b },
             p &&
-              r.createElement(Se, {
+              r.createElement(Te, {
                 stylesheet: o,
                 hideTitle: f,
                 activePage: p,
@@ -2458,7 +2458,7 @@ var CLSTAMP = "6905869";
                 Object(n.a)({}, c),
                 r.createElement(I, null, " ", t, " "),
                 r.createElement(
-                  T,
+                  S,
                   null,
                   r.createElement(D, null, a, l),
                   r.createElement(
@@ -2737,10 +2737,10 @@ var CLSTAMP = "6905869";
       function ze(e) {
         return e < 0 ? "backward" : e > 0 ? "forward" : "none";
       }
-      var qe = Object(i.a)("GamepadNavigationContext", function () {
+      var Ye = Object(i.a)("GamepadNavigationContext", function () {
           return o.a.createContext(null);
         }),
-        Ye = Object(i.a)("FocusRingNavigationContext", function () {
+        qe = Object(i.a)("FocusRingNavigationContext", function () {
           return o.a.createContext(Pe.g);
         });
       o.a.forwardRef(function (e, t) {
@@ -2750,8 +2750,8 @@ var CLSTAMP = "6905869";
         var t = e.navRef,
           a = Object(n.f)(e, ["navRef"]),
           i = o.a.useRef(),
-          s = Object(r.useContext)(qe),
-          l = Object(r.useContext)(Ye),
+          s = Object(r.useContext)(Ye),
+          l = Object(r.useContext)(qe),
           c = (function (e, t) {
             var a = o.a.useRef(null);
             return (
@@ -2968,7 +2968,7 @@ var CLSTAMP = "6905869";
             return (
               delete l.focusClassName,
               o.a.createElement(
-                qe.Provider,
+                Ye.Provider,
                 { value: g },
                 o.a.createElement(
                   e,
@@ -6927,7 +6927,7 @@ var CLSTAMP = "6905869";
           return I;
         }),
         a.d(t, "c", function () {
-          return T;
+          return S;
         });
       var n = a("mrSG"),
         r = a("vDqi"),
@@ -7126,7 +7126,7 @@ var CLSTAMP = "6905869";
               return t || new Array();
             }),
             (e.prototype.GetFilteredClanImages = function (e, t) {
-              var a = T.GetClanImages(e);
+              var a = S.GetClanImages(e);
               if (t && t.trim().length > 0) {
                 t = t.trim().toLowerCase();
                 for (var n = new Array(), r = 0, o = a; r < o.length; r++) {
@@ -7759,7 +7759,7 @@ var CLSTAMP = "6905869";
                   var o;
                   return Object(n.e)(this, function (n) {
                     return (
-                      (o = T.DetectLanguageFromFilename(e.name) || t),
+                      (o = S.DetectLanguageFromFilename(e.name) || t),
                       [2, this.AddImageForLanguage(e, o, a, r)]
                     );
                   });
@@ -7930,7 +7930,7 @@ var CLSTAMP = "6905869";
                 return Object(n.e)(this, function (t) {
                   switch (t.label) {
                     case 0:
-                      return [4, T.LoadClanImages(this.m_clanSteamID, !0, e)];
+                      return [4, S.LoadClanImages(this.m_clanSteamID, !0, e)];
                     case 1:
                       return t.sent(), [2];
                   }
@@ -8045,7 +8045,7 @@ var CLSTAMP = "6905869";
             e
           );
         })(),
-        T = new I();
+        S = new I();
     },
     IDaJ: function (e, t, a) {
       "use strict";
@@ -8838,7 +8838,7 @@ var CLSTAMP = "6905869";
           return O;
         }),
         a.d(t, "d", function () {
-          return T;
+          return S;
         });
       var n = a("tkkQ"),
         r = a("q1tI"),
@@ -9232,7 +9232,7 @@ var CLSTAMP = "6905869";
               )
           );
         }),
-        T = Object(u.a)(function (e) {
+        S = Object(u.a)(function (e) {
           var t = m.g_App.getPatchNotesList(n.a.LANGUAGE),
             a = Object(s.h)().pathname.split(p.b.patchnotes())[1].slice(1),
             i = Object(r.useState)(a),
@@ -10294,6 +10294,88 @@ var CLSTAMP = "6905869";
                   3108,
                   3109,
                 ],
+              },
+              {
+                eEvent: u.e.WINTER_2021_LEAGUE,
+                eEventType: u.g.LEAGUE,
+                arrEventLeagues: [
+                  {
+                    eRegion: u.k.NA,
+                    eDivision: u.d.DIVISION_I,
+                    nLeagueID: 13741,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.NA,
+                    eDivision: u.d.DIVISION_II,
+                    nLeagueID: 13742,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.SA,
+                    eDivision: u.d.DIVISION_I,
+                    nLeagueID: 13712,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.SA,
+                    eDivision: u.d.DIVISION_II,
+                    nLeagueID: 13713,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.WEU,
+                    eDivision: u.d.DIVISION_I,
+                    nLeagueID: 13738,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.WEU,
+                    eDivision: u.d.DIVISION_II,
+                    nLeagueID: 13740,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.EEU,
+                    eDivision: u.d.DIVISION_I,
+                    nLeagueID: 13709,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.EEU,
+                    eDivision: u.d.DIVISION_II,
+                    nLeagueID: 13710,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.CN,
+                    eDivision: u.d.DIVISION_I,
+                    nLeagueID: 13716,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.CN,
+                    eDivision: u.d.DIVISION_II,
+                    nLeagueID: 13717,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.SEA,
+                    eDivision: u.d.DIVISION_I,
+                    nLeagueID: 13747,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                  {
+                    eRegion: u.k.SEA,
+                    eDivision: u.d.DIVISION_II,
+                    nLeagueID: 13748,
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                  },
+                ],
+                nRegistrationPeriod: 7,
+                bEventUpcoming: !1,
+                bEventCompleted: !1,
+                strEventName: "#dpc_event_winter21",
               },
               {
                 eEvent: u.e.INTERNATIONAL_2022,
@@ -12609,7 +12691,7 @@ var CLSTAMP = "6905869";
     dkia: function (e, t, a) {
       "use strict";
       a.d(t, "c", function () {
-        return S;
+        return T;
       }),
         a.d(t, "a", function () {
           return L;
@@ -12890,7 +12972,7 @@ var CLSTAMP = "6905869";
             t
           );
         })(o.Tag),
-        T = (function (e) {
+        S = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -12906,7 +12988,7 @@ var CLSTAMP = "6905869";
             t
           );
         })(o.Tag);
-      function S() {
+      function T() {
         i.a.registerTag("color", O),
           i.a.registerTag("block", b),
           i.a.registerTag("spoiler", v),
@@ -12917,7 +12999,7 @@ var CLSTAMP = "6905869";
           i.a.registerTag("superscript", N),
           i.a.registerTag("previewyoutube", I),
           i.a.registerTag("img", D),
-          i.a.registerTag("div", T);
+          i.a.registerTag("div", S);
       }
       function L(e) {
         for (var t = [], a = 1; a < arguments.length; a++)
@@ -13742,8 +13824,8 @@ var CLSTAMP = "6905869";
         I = a("7DIv"),
         O = a("CYEq"),
         D = a("l1Mn"),
-        T = a("3wCP"),
-        S = a("KT6v"),
+        S = a("3wCP"),
+        T = a("KT6v"),
         L = a("6f0C"),
         C = a.n(L),
         j = Object(O.a)("ContextMenuInstanceContext", function () {
@@ -13817,7 +13899,7 @@ var CLSTAMP = "6905869";
                 return o.createElement(
                   N.a,
                   Object(n.a)({}, u, {
-                    className: Object(T.a)(
+                    className: Object(S.a)(
                       _.contextMenuContents,
                       ((e = {}),
                       (e[_.hasSubMenu] = this.context.BIsSubMenuVisible()),
@@ -13863,7 +13945,7 @@ var CLSTAMP = "6905869";
               return o.createElement(
                 "div",
                 Object(n.a)({}, u, {
-                  className: Object(T.a)(
+                  className: Object(S.a)(
                     ((t = { popup_menu: b, popup_body: b }),
                     (t[_.contextMenuContents] = !b),
                     (t[_.hasSubMenu] =
@@ -13876,8 +13958,8 @@ var CLSTAMP = "6905869";
               );
             }),
             (t.contextType = j),
-            Object(n.c)([S.a], t.prototype, "HideIfSubmenu", null),
-            Object(n.c)([S.a], t.prototype, "HideMenu", null),
+            Object(n.c)([T.a], t.prototype, "HideIfSubmenu", null),
+            Object(n.c)([T.a], t.prototype, "HideMenu", null),
             (t = Object(n.c)([r.a], t))
           );
         })(o.Component),
@@ -13947,7 +14029,7 @@ var CLSTAMP = "6905869";
                     },
                     s,
                     {
-                      className: Object(T.a)(
+                      className: Object(S.a)(
                         this.props.className,
                         l.contextMenuItem,
                         "contextMenuItem",
@@ -13978,7 +14060,7 @@ var CLSTAMP = "6905869";
                   {
                     onClick: this.OnClick,
                     unselectable: this.props.unselectable,
-                    className: Object(T.a)(
+                    className: Object(S.a)(
                       this.props.className,
                       ((e = { popup_menu_item: c }),
                       (e[l.contextMenuItem] = !c),
@@ -13992,10 +14074,10 @@ var CLSTAMP = "6905869";
               );
             }),
             (t.contextType = j),
-            Object(n.c)([S.a], t.prototype, "OnClick", null),
-            Object(n.c)([S.a], t.prototype, "OnOKButton", null),
-            Object(n.c)([S.a], t.prototype, "OnMouseEnter", null),
-            Object(n.c)([S.a], t.prototype, "Focus", null),
+            Object(n.c)([T.a], t.prototype, "OnClick", null),
+            Object(n.c)([T.a], t.prototype, "OnOKButton", null),
+            Object(n.c)([T.a], t.prototype, "OnMouseEnter", null),
+            Object(n.c)([T.a], t.prototype, "Focus", null),
             t
           );
         })(o.PureComponent);
@@ -14157,11 +14239,11 @@ var CLSTAMP = "6905869";
                       : (s.menuRight = m - (i.bOverlapHorizontal ? b : h));
                   var O = d || n.top,
                     D = d || n.bottom,
-                    T = e.scrollHeight;
-                  i.bMatchHeight && ((T = D - O), (s.menuHeight = T));
-                  var S = (i.bOverlapVertical ? D : O) - T,
-                    L = S > 0,
-                    C = u - (i.bOverlapVertical ? O : D) - T,
+                    S = e.scrollHeight;
+                  i.bMatchHeight && ((S = D - O), (s.menuHeight = S));
+                  var T = (i.bOverlapVertical ? D : O) - S,
+                    L = T > 0,
+                    C = u - (i.bOverlapVertical ? O : D) - S,
                     j = C > 0,
                     w = (i.bPreferPopTop || !j) && L && !i.bDisablePopTop;
                   if (!L && !j) {
@@ -14169,11 +14251,11 @@ var CLSTAMP = "6905869";
                       void 0 !== i.bShiftToFitWindow
                         ? i.bShiftToFitWindow
                         : i.bFitToWindow && !i.bOverlapHorizontal;
-                    (w = S > C && !i.bDisablePopTop),
+                    (w = T > C && !i.bDisablePopTop),
                       G && (w ? (s.menuTop = 4) : (s.menuBottom = 4)),
                       i.bFitToWindow &&
-                        (G ? (T = Math.min(T, u - 8)) : (T += w ? S : C),
-                        (s.menuHeight = T - 8));
+                        (G ? (S = Math.min(S, u - 8)) : (S += w ? T : C),
+                        (s.menuHeight = S - 8));
                   }
                   void 0 === s.menuBottom &&
                     void 0 === s.menuTop &&
@@ -14279,11 +14361,11 @@ var CLSTAMP = "6905869";
                 )
               );
             }),
-            Object(n.c)([S.a], t.prototype, "BindMenuElement", null),
-            Object(n.c)([S.a, c(100)], t.prototype, "OnMenuMutation", null),
-            Object(n.c)([S.a], t.prototype, "OnWindowResize", null),
-            Object(n.c)([S.a], t.prototype, "OnBlur", null),
-            Object(n.c)([S.a], t.prototype, "OnKeyDown", null),
+            Object(n.c)([T.a], t.prototype, "BindMenuElement", null),
+            Object(n.c)([T.a, c(100)], t.prototype, "OnMenuMutation", null),
+            Object(n.c)([T.a], t.prototype, "OnWindowResize", null),
+            Object(n.c)([T.a], t.prototype, "OnBlur", null),
+            Object(n.c)([T.a], t.prototype, "OnKeyDown", null),
             (t = Object(n.c)([r.a], t))
           );
         })(o.Component),
@@ -14357,7 +14439,7 @@ var CLSTAMP = "6905869";
       "use strict";
       a.r(t),
         a.d(t, "g_App", function () {
-          return so;
+          return lo;
         });
       var n,
         r = a("mrSG"),
@@ -14618,8 +14700,8 @@ var CLSTAMP = "6905869";
             )
           );
         },
-        T = a("xV+v"),
-        S = a("7RJi"),
+        S = a("xV+v"),
+        T = a("7RJi"),
         L = a("HMs9"),
         C = a.n(L),
         j = a("mZMQ"),
@@ -15133,7 +15215,7 @@ var CLSTAMP = "6905869";
             )
           );
         },
-        q = function () {
+        Y = function () {
           var e = Object(i.useContext)(j.c),
             t = Object(i.useState)(e.state.currentSlide),
             a = t[0],
@@ -15181,7 +15263,7 @@ var CLSTAMP = "6905869";
             )
           );
         },
-        Y = function (e) {
+        q = function (e) {
           var t = e.video,
             a = e.index,
             n = Object(i.useContext)(j.c),
@@ -15627,7 +15709,7 @@ var CLSTAMP = "6905869";
             }),
             (t.prototype.render = function () {
               var e = this,
-                t = so.getPrizePool();
+                t = lo.getPrizePool();
               return s.a.createElement(
                 "div",
                 { className: v.a.BattlepassPage },
@@ -15675,7 +15757,7 @@ var CLSTAMP = "6905869";
                           "international2020/bp_aegis_header.mp4",
                       })
                     ),
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       bottom: !0,
                       color: "#000000",
                       startPct: 50,
@@ -15978,7 +16060,7 @@ var CLSTAMP = "6905869";
                           "international2020/summer_event_bg.png )",
                       },
                     },
-                    s.a.createElement(S.a, { bottom: !0, color: "#000000" }),
+                    s.a.createElement(T.a, { bottom: !0, color: "#000000" }),
                     s.a.createElement(
                       "div",
                       { className: v.a.BottomSection },
@@ -16015,7 +16097,7 @@ var CLSTAMP = "6905869";
                           "international2020/divine_path_bg.png )",
                       },
                     },
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       top: !0,
                       color: "#000000",
                       startPct: 60,
@@ -16220,14 +16302,14 @@ var CLSTAMP = "6905869";
                       })
                     )
                   ),
-                  s.a.createElement(S.a, {
+                  s.a.createElement(T.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
                     midPct: 80,
                     endPct: 100,
                   }),
-                  s.a.createElement(S.a, {
+                  s.a.createElement(T.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
@@ -16433,7 +16515,7 @@ var CLSTAMP = "6905869";
                           s.a.createElement("div", null)
                         )
                       ),
-                      s.a.createElement(q, null)
+                      s.a.createElement(Y, null)
                     )
                   )
                 ),
@@ -17705,7 +17787,7 @@ var CLSTAMP = "6905869";
                       })
                     )
                   ),
-                  s.a.createElement(S.a, {
+                  s.a.createElement(T.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
@@ -17732,7 +17814,7 @@ var CLSTAMP = "6905869";
                         "international2020/pudge_arcana_bg.png )",
                     },
                   }),
-                  s.a.createElement(S.a, {
+                  s.a.createElement(T.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
@@ -17759,7 +17841,7 @@ var CLSTAMP = "6905869";
                         "international2020/antimage_arcana_bg.png )",
                     },
                   }),
-                  s.a.createElement(S.a, {
+                  s.a.createElement(T.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
@@ -17777,7 +17859,7 @@ var CLSTAMP = "6905869";
                   s.a.createElement(
                     "div",
                     { className: v.a.WraithKing },
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       bottom: !0,
                       color: "#000000",
                       startPct: 50,
@@ -17851,7 +17933,7 @@ var CLSTAMP = "6905869";
                           "international2020/qop_arcana_bg.png )",
                       },
                     },
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       bottom: !0,
                       color: "#000000",
                       startPct: 50,
@@ -17930,7 +18012,7 @@ var CLSTAMP = "6905869";
                         "international2020/windranger_arcana_bg.png )",
                     },
                   }),
-                  s.a.createElement(S.a, {
+                  s.a.createElement(T.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
@@ -18113,22 +18195,22 @@ var CLSTAMP = "6905869";
                         s.a.createElement(
                           j.f,
                           { index: 0 },
-                          s.a.createElement(Y, { index: 0, video: "portal" })
+                          s.a.createElement(q, { index: 0, video: "portal" })
                         ),
                         s.a.createElement(
                           j.f,
                           { index: 1 },
-                          s.a.createElement(Y, { index: 1, video: "ball" })
+                          s.a.createElement(q, { index: 1, video: "ball" })
                         ),
                         s.a.createElement(
                           j.f,
                           { index: 2 },
-                          s.a.createElement(Y, { index: 2, video: "disco" })
+                          s.a.createElement(q, { index: 2, video: "disco" })
                         ),
                         s.a.createElement(
                           j.f,
                           { index: 3 },
-                          s.a.createElement(Y, { index: 3, video: "pepper" })
+                          s.a.createElement(q, { index: 3, video: "pepper" })
                         )
                       ),
                       s.a.createElement(
@@ -18529,7 +18611,7 @@ var CLSTAMP = "6905869";
                           "international2020/backgrounds/background_13.jpg )",
                       },
                     },
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       bottom: !0,
                       color: "#000000",
                       startPct: 30,
@@ -19301,7 +19383,7 @@ var CLSTAMP = "6905869";
                       className: v.a.EmblemEffectOverlay,
                       src: h.a.IMG_URL + "international2020/emblem_bg.png",
                     }),
-                    s.a.createElement(S.a, { top: !0, color: "#000000" })
+                    s.a.createElement(T.a, { top: !0, color: "#000000" })
                   )
                 ),
                 s.a.createElement(
@@ -19887,14 +19969,14 @@ var CLSTAMP = "6905869";
                           "international2020/backgrounds/background_9.jpg )",
                       },
                     },
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       top: !0,
                       color: "#000000",
                       startPct: 0,
                       midPct: 90,
                       endPct: 100,
                     }),
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       bottom: !0,
                       color: "#000000",
                       startPct: 0,
@@ -19951,7 +20033,7 @@ var CLSTAMP = "6905869";
                           "international2020/backgrounds/background_1.jpg )",
                       },
                     },
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       top: !0,
                       color: "#000000",
                       startPct: 0,
@@ -20027,7 +20109,7 @@ var CLSTAMP = "6905869";
                     )
                   )
                 ),
-                s.a.createElement(T.a, null),
+                s.a.createElement(S.a, null),
                 s.a.createElement(
                   te,
                   {
@@ -20396,7 +20478,7 @@ var CLSTAMP = "6905869";
                 className: de.a.Entry,
                 style: { backgroundImage: o ? "url( " + o + " )" : null },
               },
-              s.a.createElement(S.a, {
+              s.a.createElement(T.a, {
                 bottom: !0,
                 color: "#13171C",
                 midPct: 70,
@@ -20486,15 +20568,15 @@ var CLSTAMP = "6905869";
         },
         Oe = a("hc+a"),
         De = a("D6PB");
-      var Te = (function () {
+      var Se = (function () {
         function e() {}
         return (
           (e.prototype.InitFrom = function (e) {
             (this.title = e.title),
-              (this.capsule = Se(e.capsule)),
-              (this.tiny_capsule = Se(e.tiny_capsule)),
-              (this.main_capsule = Se(e.main_capsule)),
-              (this.library_asset = Se(e.library_asset)),
+              (this.capsule = Te(e.capsule)),
+              (this.tiny_capsule = Te(e.tiny_capsule)),
+              (this.main_capsule = Te(e.main_capsule)),
+              (this.library_asset = Te(e.library_asset)),
               (this.type = e.type),
               (this.price_in_cents = e.price_in_cents),
               (this.price = e.price),
@@ -20503,7 +20585,7 @@ var CLSTAMP = "6905869";
               (this.discount_percent = e.discount_percent),
               (this.rt_release_date = e.rt_release_date),
               (this.release = e.release),
-              (this.screenshot_list = e.screenshot_list.map(Se)),
+              (this.screenshot_list = e.screenshot_list.map(Te)),
               (this.subid = e.subid),
               (this.button_action = e.button_action),
               (this.app_to_run = e.app_to_run),
@@ -20522,8 +20604,8 @@ var CLSTAMP = "6905869";
               (this.available_windows = e.available_windows),
               (this.available_mac = e.available_mac),
               (this.available_linux = e.available_linux),
-              (this.microtrailer = Se(e.microtrailer)),
-              (this.microtrailer_mp4 = Se(e.microtrailer_mp4)),
+              (this.microtrailer = Te(e.microtrailer)),
+              (this.microtrailer_mp4 = Te(e.microtrailer_mp4)),
               (this.support_vrhmd = e.support_vrhmd),
               (this.support_vrhmd_only = e.support_vrhmd_only),
               (this.creator_clan_ids = e.creator_clan_ids),
@@ -20637,7 +20719,7 @@ var CLSTAMP = "6905869";
           e
         );
       })();
-      function Se(e) {
+      function Te(e) {
         return e && !e.startsWith("http") ? be.b.STORE_ICON_BASE_URL + e : e;
       }
       var Le = (function (e) {
@@ -20753,7 +20835,7 @@ var CLSTAMP = "6905869";
             Object(r.c)([ge.k], t.prototype, "InitializeFrom", null),
             t
           );
-        })(Te),
+        })(Se),
         Ce = (function () {
           function e(e, t) {
             (this.m_bLoaded = !1),
@@ -21931,7 +22013,7 @@ var CLSTAMP = "6905869";
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
       })(We || (We = {}));
-      var ze, qe, Ye, Ke;
+      var ze, Ye, qe, Ke;
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
           (e[(e.k_EStoreFilterClauseTypeAnd = 1)] =
@@ -21956,12 +22038,12 @@ var CLSTAMP = "6905869";
             (e[(e.k_EUserPreference = 3)] = "k_EUserPreference"),
             (e[(e.k_EPrice = 4)] = "k_EPrice"),
             (e[(e.k_EAppType = 5)] = "k_EAppType");
-        })(qe || (qe = {})),
+        })(Ye || (Ye = {})),
         (function (e) {
           (e[(e.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
             (e[(e.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
             (e[(e.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
-        })(Ye || (Ye = {})),
+        })(qe || (qe = {})),
         (function (e) {
           (e[(e.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
             (e[(e.k_ESortFacetsByMatchCount = 1)] =
@@ -24554,7 +24636,7 @@ var CLSTAMP = "6905869";
                       "url( " + y.GetImageURL("background") + " )",
                   },
                 }),
-                s.a.createElement(S.a, {
+                s.a.createElement(T.a, {
                   bottom: !0,
                   startPct: 75,
                   midPct: 85,
@@ -24719,7 +24801,7 @@ var CLSTAMP = "6905869";
                   m &&
                     s.a.createElement("div", { className: ct.a.SubUpdates }, O),
                   !m && s.a.createElement("div", { className: ct.a.Pages }, D),
-                  s.a.createElement(T.a, null)
+                  s.a.createElement(S.a, null)
                 )
               )
             )
@@ -24822,7 +24904,7 @@ var CLSTAMP = "6905869";
                 _
               )
             ),
-            s.a.createElement(T.a, null)
+            s.a.createElement(S.a, null)
           );
         }),
         gt = a("Viej"),
@@ -25042,13 +25124,13 @@ var CLSTAMP = "6905869";
         },
         Ot = a("WPyR"),
         Dt = a("sjx6"),
-        Tt = a("knzx"),
-        St = a("2hyl"),
+        St = a("knzx"),
+        Tt = a("2hyl"),
         Lt = Object(m.a)(function () {
           var e = $n(),
             t = Ot.a.Get().GetEventInfo(e),
             a = t && t.bEventCompleted,
-            n = Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.BLOCKED;
+            n = Ot.a.Get().GetSpoilerBlockState(e) == St.l.BLOCKED;
           return s.a.createElement(
             "div",
             {
@@ -25080,7 +25162,7 @@ var CLSTAMP = "6905869";
               )
             ),
             s.a.createElement(
-              St.a,
+              Tt.a,
               {
                 toolTipContent: s.a.createElement(
                   "div",
@@ -25116,29 +25198,34 @@ var CLSTAMP = "6905869";
             o = Object(Dt.j)(e),
             i = Object(d.a)(e, r),
             l = [
-              { value: Tt.e.INVALID, strLabel: "2020 - 2021", bSeparator: !0 },
+              { value: St.e.INVALID, strLabel: "2020 - 2021", bSeparator: !0 },
               {
-                value: Tt.e.SPRING_2021_LEAGUE,
+                value: St.e.SPRING_2021_LEAGUE,
                 strLabel: "#dpc_event_spring21",
                 strLabelSub: "#dpc_event_spring21_dates",
               },
               {
-                value: Tt.e.SPRING_2021_MAJOR,
+                value: St.e.SPRING_2021_MAJOR,
                 strLabel: "#dpc_event_springmajor21",
                 strLabelSub: "#dpc_event_springmajor21_dates",
               },
               {
-                value: Tt.e.INTERNATIONAL_2021_QUALIFIERS,
+                value: St.e.INTERNATIONAL_2021_QUALIFIERS,
                 strLabel: "#dpc_event_ti10qual",
                 strLabelSub: "#dpc_event_ti10qual_dates",
               },
               {
-                value: Tt.e.INTERNATIONAL_2021,
+                value: St.e.INTERNATIONAL_2021,
                 strLabel: "#dpc_event_ti10",
                 strLabelSub: "#dpc_event_ti10_dates",
               },
-              { value: Tt.e.INVALID, strLabel: "2021 - 2022", bSeparator: !0 },
-              { value: Tt.e.INTERNATIONAL_2022, strLabel: "#dpc_event_ti11" },
+              { value: St.e.INVALID, strLabel: "2021 - 2022", bSeparator: !0 },
+              {
+                value: St.e.WINTER_2021_LEAGUE,
+                strLabel: "#dpc_event_winter21",
+                strLabelSub: "#dpc_event_winter21_dates",
+              },
+              { value: St.e.INTERNATIONAL_2022, strLabel: "#dpc_event_ti11" },
             ];
           return s.a.createElement(
             "div",
@@ -25160,19 +25247,19 @@ var CLSTAMP = "6905869";
                   selectedOption: e,
                   setOption: function (t) {
                     switch (Object(d.a)(e, r)) {
-                      case Tt.a.WATCH:
+                      case St.a.WATCH:
                         n.push(d.b.dpc_watch(Object(Dt.j)(t)));
                         break;
-                      case Tt.a.SCHEDULE:
+                      case St.a.SCHEDULE:
                         n.push(d.b.dpc_schedule(Object(Dt.j)(t)));
                         break;
-                      case Tt.a.STANDINGS:
+                      case St.a.STANDINGS:
                         n.push(d.b.dpc_standings(Object(Dt.j)(t)));
                         break;
-                      case Tt.a.ABOUT:
+                      case St.a.ABOUT:
                         n.push(d.b.dpc_about(Object(Dt.j)(t)));
                         break;
-                      case Tt.a.TISTANDINGS:
+                      case St.a.TISTANDINGS:
                         n.push(d.b.dpc_ti_standings(Object(Dt.j)(t)));
                     }
                   },
@@ -25200,7 +25287,7 @@ var CLSTAMP = "6905869";
                       },
                       className: Object(f.a)(
                         bt.a.DPCLink,
-                        i == Tt.a.WATCH && bt.a.Active
+                        i == St.a.WATCH && bt.a.Active
                       ),
                     },
                     s.a.createElement(
@@ -25219,7 +25306,7 @@ var CLSTAMP = "6905869";
                       },
                       className: Object(f.a)(
                         bt.a.DPCLink,
-                        i == Tt.a.SCHEDULE && bt.a.Active
+                        i == St.a.SCHEDULE && bt.a.Active
                       ),
                     },
                     s.a.createElement(
@@ -25238,7 +25325,7 @@ var CLSTAMP = "6905869";
                       },
                       className: Object(f.a)(
                         bt.a.DPCLink,
-                        i == Tt.a.STANDINGS && bt.a.Active
+                        i == St.a.STANDINGS && bt.a.Active
                       ),
                     },
                     s.a.createElement(
@@ -25247,7 +25334,7 @@ var CLSTAMP = "6905869";
                       Object(E.a)("#dpc_header_standings")
                     )
                   ),
-                a.eEventType == Tt.g.INTERNATIONAL &&
+                a.eEventType == St.g.INTERNATIONAL &&
                   a.bEventUpcoming &&
                   s.a.createElement(
                     u.b,
@@ -25258,7 +25345,7 @@ var CLSTAMP = "6905869";
                       },
                       className: Object(f.a)(
                         bt.a.DPCLink,
-                        i == Tt.a.TISTANDINGS && bt.a.Active
+                        i == St.a.TISTANDINGS && bt.a.Active
                       ),
                     },
                     s.a.createElement(
@@ -25276,7 +25363,7 @@ var CLSTAMP = "6905869";
                     },
                     className: Object(f.a)(
                       bt.a.DPCLink,
-                      i == Tt.a.ABOUT && bt.a.Active
+                      i == St.a.ABOUT && bt.a.Active
                     ),
                   },
                   s.a.createElement(
@@ -25340,7 +25427,7 @@ var CLSTAMP = "6905869";
         Ft = Object(m.a)(function (e) {
           var t = e.nTeamID,
             a = Ot.a.Get().GetTeamInfo(t),
-            n = [Tt.b.CORE, Tt.b.CORE, Tt.b.MID, Tt.b.SUPPORT, Tt.b.SUPPORT],
+            n = [St.b.CORE, St.b.CORE, St.b.MID, St.b.SUPPORT, St.b.SUPPORT],
             r = [];
           return s.a.createElement(
             "div",
@@ -25361,16 +25448,16 @@ var CLSTAMP = "6905869";
               n.map(function (e, t) {
                 var n = "";
                 switch (e) {
-                  case Tt.b.CORE:
+                  case St.b.CORE:
                     n = "#dpc_role_core";
                     break;
-                  case Tt.b.SUPPORT:
+                  case St.b.SUPPORT:
                     n = "#dpc_role_support";
                     break;
-                  case Tt.b.OFFLANE:
+                  case St.b.OFFLANE:
                     n = "#dpc_role_offlane";
                     break;
-                  case Tt.b.MID:
+                  case St.b.MID:
                     n = "#dpc_role_mid";
                 }
                 var o = void 0;
@@ -25428,7 +25515,7 @@ var CLSTAMP = "6905869";
         Ht = Object(m.a)(function (e) {
           return e.bEnabled
             ? s.a.createElement(
-                St.a,
+                Tt.a,
                 {
                   toolTipContent: s.a.createElement(Ft, { nTeamID: e.nTeamID }),
                   direction: "top",
@@ -25540,16 +25627,16 @@ var CLSTAMP = "6905869";
             )
           );
         },
-        qt = Object(m.a)(function (e) {
+        Yt = Object(m.a)(function (e) {
           var t = e.eDivision,
             a = e.setDivision,
             n = $n(),
             r = Ot.a.Get().GetEventInfo(n),
             o = Ot.a.Get().GetWatchPageContext(),
             i = [
-              { value: Tt.d.UNSET, strLabel: "#dpc_division_all" },
-              { value: Tt.d.DIVISION_I, strLabel: "#dpc_division_i" },
-              { value: Tt.d.DIVISION_II, strLabel: "#dpc_division_ii" },
+              { value: St.d.UNSET, strLabel: "#dpc_division_all" },
+              { value: St.d.DIVISION_I, strLabel: "#dpc_division_i" },
+              { value: St.d.DIVISION_II, strLabel: "#dpc_division_ii" },
             ],
             l = Ot.a.Get().EventHasDivisions(n) && !r.bEventCompleted,
             c = d.b.dpc_watch(
@@ -25581,7 +25668,7 @@ var CLSTAMP = "6905869";
               })
           );
         }),
-        Yt = Object(m.a)(function (e) {
+        qt = Object(m.a)(function (e) {
           var t = e.nTeamID,
             a = e.strTeamInfo,
             n = e.strTeamName,
@@ -25644,13 +25731,13 @@ var CLSTAMP = "6905869";
               !(null == m ? void 0 : m.is_completed),
             O = null == m ? void 0 : m.is_completed,
             D = Ot.a.Get().GetFirstUnwatchedGame(a, n),
-            T =
+            S =
               (null === (t = Ot.a.Get().GetLeagueNodeVODs(a, n, D)) ||
               void 0 === t
                 ? void 0
                 : t.length) > 0,
-            S = (null == _ ? void 0 : _.eNodeGroupType) == Tt.h.ROUND_ROBIN,
-            L = Ot.a.Get().GetNodeLabelStrings(o, a, n, Tt.n.SHORT),
+            T = (null == _ ? void 0 : _.eNodeGroupType) == St.h.ROUND_ROBIN,
+            L = Ot.a.Get().GetNodeLabelStrings(o, a, n, St.n.SHORT),
             C =
               c && r
                 ? r
@@ -25668,19 +25755,19 @@ var CLSTAMP = "6905869";
               .findIndex(function (e) {
                 return (r || C) >= e && (r || C) < e + 86400;
               }),
-            w = Ot.a.Get().GetSpoilerBlockState(o) == Tt.l.BLOCKED,
+            w = Ot.a.Get().GetSpoilerBlockState(o) == St.l.BLOCKED,
             G =
               !w ||
               !Ot.a.Get().IsLeagueNodeBracket(a, n) ||
               Ot.a.Get().IsAnyGameWatched(a, n),
             A =
-              v && S
+              v && T
                 ? (null == v ? void 0 : v.wins) +
                   " - " +
                   (null == v ? void 0 : v.losses)
                 : "",
             R =
-              y && S
+              y && T
                 ? (null == y ? void 0 : y.wins) +
                   " - " +
                   (null == y ? void 0 : y.losses)
@@ -25703,7 +25790,7 @@ var CLSTAMP = "6905869";
           var F =
               ((null == l ? void 0 : l.nLeagueID) == a &&
                 l.nNodeID == n &&
-                Object(d.a)(o, i) == Tt.a.WATCH) ||
+                Object(d.a)(o, i) == St.a.WATCH) ||
               (c &&
                 1 == (null == l ? void 0 : l.nLeagueID) &&
                 1 == (null == l ? void 0 : l.nNodeID)),
@@ -25764,7 +25851,7 @@ var CLSTAMP = "6905869";
               s.a.createElement(
                 "div",
                 { className: wt.a.TeamsContainer },
-                s.a.createElement(Yt, {
+                s.a.createElement(qt, {
                   nTeamID: h,
                   strTeamInfo: k,
                   bWinner:
@@ -25775,7 +25862,7 @@ var CLSTAMP = "6905869";
                   strTeamName: x,
                   bShowTeams: G,
                 }),
-                s.a.createElement(Yt, {
+                s.a.createElement(qt, {
                   nTeamID: b,
                   strTeamInfo: B,
                   bWinner:
@@ -25803,7 +25890,7 @@ var CLSTAMP = "6905869";
                 { className: wt.a.Overlay },
                 !N &&
                   O &&
-                  !T &&
+                  !S &&
                   s.a.createElement(
                     u.b,
                     {
@@ -25821,7 +25908,7 @@ var CLSTAMP = "6905869";
                   ),
                 !N &&
                   O &&
-                  T &&
+                  S &&
                   s.a.createElement(
                     u.b,
                     {
@@ -25878,7 +25965,7 @@ var CLSTAMP = "6905869";
           var e = $n(),
             t = Ot.a.Get().GetEventInfo(e),
             a = Ot.a.Get().GetWatchPageContext(),
-            n = Object(i.useState)(Tt.d.UNSET),
+            n = Object(i.useState)(St.d.UNSET),
             r = n[0],
             o = n[1],
             l = Object(i.useState)(!1),
@@ -25894,10 +25981,10 @@ var CLSTAMP = "6905869";
               var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
               if (0 == (null == t ? void 0 : t.scheduled_time)) return !1;
               var a = Ot.a.Get().GetLeagueNodeInfo(e.nLeagueID, e.nNodeID);
-              return r == Tt.d.UNSET || a.eDivision == r;
+              return r == St.d.UNSET || a.eDivision == r;
             }),
             N = 0;
-          t.eEventType == Tt.g.INTERNATIONAL &&
+          t.eEventType == St.g.INTERNATIONAL &&
             y.forEach(function (e) {
               var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
               if (t && !t.is_completed) {
@@ -25911,7 +25998,7 @@ var CLSTAMP = "6905869";
                       null == a ? void 0 : a.parent_node_group_id
                     );
                 (null == n ? void 0 : n.phase) ==
-                  Tt.j.LEAGUE_PHASE_GROUP_STAGE &&
+                  St.j.LEAGUE_PHASE_GROUP_STAGE &&
                   (N =
                     0 == N ? t.scheduled_time : Math.min(N, t.scheduled_time));
               }
@@ -26008,7 +26095,7 @@ var CLSTAMP = "6905869";
               s.a.createElement(
                 "div",
                 { className: wt.a.Contents },
-                s.a.createElement(qt, { eDivision: r, setDivision: o }),
+                s.a.createElement(Yt, { eDivision: r, setDivision: o }),
                 t.bEventCompleted &&
                   s.a.createElement(
                     "div",
@@ -26222,68 +26309,68 @@ var CLSTAMP = "6905869";
         $t = a("gqzu"),
         ea = a.n($t),
         ta = [
-          { nTimestamp: 1636444800, eRegion: Tt.k.CN },
-          { nTimestamp: 1636455600, eRegion: Tt.k.CN },
-          { nTimestamp: 1636466400, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636477200, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636488e3, eRegion: Tt.k.NA },
-          { nTimestamp: 1636531200, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636542e3, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636552800, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636574400, eRegion: Tt.k.NA },
-          { nTimestamp: 1636585200, eRegion: Tt.k.NA },
-          { nTimestamp: 1636628400, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636639200, eRegion: Tt.k.EEU },
-          { nTimestamp: 163665e4, eRegion: Tt.k.EEU },
-          { nTimestamp: 1636671600, eRegion: Tt.k.SA },
-          { nTimestamp: 1636704e3, eRegion: Tt.k.CN },
-          { nTimestamp: 1636714800, eRegion: Tt.k.EEU },
-          { nTimestamp: 1636747200, eRegion: Tt.k.SA },
-          { nTimestamp: 1636758e3, eRegion: Tt.k.SA },
-          { nTimestamp: 1636790400, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636801200, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636812e3, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636822800, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636833600, eRegion: Tt.k.NA },
-          { nTimestamp: 1636844400, eRegion: Tt.k.NA },
-          { nTimestamp: 1636876800, eRegion: Tt.k.CN },
-          { nTimestamp: 1636887600, eRegion: Tt.k.CN },
-          { nTimestamp: 1636898400, eRegion: Tt.k.EEU },
-          { nTimestamp: 1636909200, eRegion: Tt.k.EEU },
-          { nTimestamp: 163692e4, eRegion: Tt.k.SA },
-          { nTimestamp: 1636930800, eRegion: Tt.k.SA },
+          { nTimestamp: 1636444800, eRegion: St.k.CN },
+          { nTimestamp: 1636455600, eRegion: St.k.CN },
+          { nTimestamp: 1636466400, eRegion: St.k.WEU },
+          { nTimestamp: 1636477200, eRegion: St.k.WEU },
+          { nTimestamp: 1636488e3, eRegion: St.k.NA },
+          { nTimestamp: 1636531200, eRegion: St.k.SEA },
+          { nTimestamp: 1636542e3, eRegion: St.k.SEA },
+          { nTimestamp: 1636552800, eRegion: St.k.WEU },
+          { nTimestamp: 1636574400, eRegion: St.k.NA },
+          { nTimestamp: 1636585200, eRegion: St.k.NA },
+          { nTimestamp: 1636628400, eRegion: St.k.SEA },
+          { nTimestamp: 1636639200, eRegion: St.k.EEU },
+          { nTimestamp: 163665e4, eRegion: St.k.EEU },
+          { nTimestamp: 1636671600, eRegion: St.k.SA },
+          { nTimestamp: 1636704e3, eRegion: St.k.CN },
+          { nTimestamp: 1636714800, eRegion: St.k.EEU },
+          { nTimestamp: 1636747200, eRegion: St.k.SA },
+          { nTimestamp: 1636758e3, eRegion: St.k.SA },
+          { nTimestamp: 1636790400, eRegion: St.k.SEA },
+          { nTimestamp: 1636801200, eRegion: St.k.SEA },
+          { nTimestamp: 1636812e3, eRegion: St.k.WEU },
+          { nTimestamp: 1636822800, eRegion: St.k.WEU },
+          { nTimestamp: 1636833600, eRegion: St.k.NA },
+          { nTimestamp: 1636844400, eRegion: St.k.NA },
+          { nTimestamp: 1636876800, eRegion: St.k.CN },
+          { nTimestamp: 1636887600, eRegion: St.k.CN },
+          { nTimestamp: 1636898400, eRegion: St.k.EEU },
+          { nTimestamp: 1636909200, eRegion: St.k.EEU },
+          { nTimestamp: 163692e4, eRegion: St.k.SA },
+          { nTimestamp: 1636930800, eRegion: St.k.SA },
         ],
         aa = [
-          { nTimestamp: 1636358400, eRegion: Tt.k.CN },
-          { nTimestamp: 1636369200, eRegion: Tt.k.SEA },
-          { nTimestamp: 163638e4, eRegion: Tt.k.EEU },
-          { nTimestamp: 1636390800, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636401600, eRegion: Tt.k.NA },
-          { nTimestamp: 1636412400, eRegion: Tt.k.SA },
-          { nTimestamp: 1636434e3, eRegion: Tt.k.CN },
-          { nTimestamp: 1636455600, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636498800, eRegion: Tt.k.NA },
-          { nTimestamp: 1636520400, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636563600, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636574400, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636606800, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636617600, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636628400, eRegion: Tt.k.EEU },
-          { nTimestamp: 163665e4, eRegion: Tt.k.SA },
-          { nTimestamp: 1636660800, eRegion: Tt.k.SA },
-          { nTimestamp: 1636693200, eRegion: Tt.k.CN },
-          { nTimestamp: 1636725600, eRegion: Tt.k.EEU },
-          { nTimestamp: 1636736400, eRegion: Tt.k.EEU },
-          { nTimestamp: 1636747200, eRegion: Tt.k.NA },
-          { nTimestamp: 1636779600, eRegion: Tt.k.SEA },
-          { nTimestamp: 1636801200, eRegion: Tt.k.WEU },
-          { nTimestamp: 1636822800, eRegion: Tt.k.SA },
-          { nTimestamp: 1636866e3, eRegion: Tt.k.CN },
-          { nTimestamp: 1636887600, eRegion: Tt.k.EEU },
-          { nTimestamp: 1636909200, eRegion: Tt.k.SA },
-          { nTimestamp: 163692e4, eRegion: Tt.k.NA },
-          { nTimestamp: 1636930800, eRegion: Tt.k.NA },
-          { nTimestamp: 1636952400, eRegion: Tt.k.CN },
+          { nTimestamp: 1636358400, eRegion: St.k.CN },
+          { nTimestamp: 1636369200, eRegion: St.k.SEA },
+          { nTimestamp: 163638e4, eRegion: St.k.EEU },
+          { nTimestamp: 1636390800, eRegion: St.k.WEU },
+          { nTimestamp: 1636401600, eRegion: St.k.NA },
+          { nTimestamp: 1636412400, eRegion: St.k.SA },
+          { nTimestamp: 1636434e3, eRegion: St.k.CN },
+          { nTimestamp: 1636455600, eRegion: St.k.WEU },
+          { nTimestamp: 1636498800, eRegion: St.k.NA },
+          { nTimestamp: 1636520400, eRegion: St.k.SEA },
+          { nTimestamp: 1636563600, eRegion: St.k.WEU },
+          { nTimestamp: 1636574400, eRegion: St.k.WEU },
+          { nTimestamp: 1636606800, eRegion: St.k.SEA },
+          { nTimestamp: 1636617600, eRegion: St.k.SEA },
+          { nTimestamp: 1636628400, eRegion: St.k.EEU },
+          { nTimestamp: 163665e4, eRegion: St.k.SA },
+          { nTimestamp: 1636660800, eRegion: St.k.SA },
+          { nTimestamp: 1636693200, eRegion: St.k.CN },
+          { nTimestamp: 1636725600, eRegion: St.k.EEU },
+          { nTimestamp: 1636736400, eRegion: St.k.EEU },
+          { nTimestamp: 1636747200, eRegion: St.k.NA },
+          { nTimestamp: 1636779600, eRegion: St.k.SEA },
+          { nTimestamp: 1636801200, eRegion: St.k.WEU },
+          { nTimestamp: 1636822800, eRegion: St.k.SA },
+          { nTimestamp: 1636866e3, eRegion: St.k.CN },
+          { nTimestamp: 1636887600, eRegion: St.k.EEU },
+          { nTimestamp: 1636909200, eRegion: St.k.SA },
+          { nTimestamp: 163692e4, eRegion: St.k.NA },
+          { nTimestamp: 1636930800, eRegion: St.k.NA },
+          { nTimestamp: 1636952400, eRegion: St.k.CN },
         ];
       var na = function (e) {
           for (
@@ -27308,29 +27395,29 @@ var CLSTAMP = "6905869";
             r = !1,
             o = !1;
           switch (Ot.a.Get().GetEventType(t)) {
-            case Tt.g.LEAGUE:
+            case St.g.LEAGUE:
               (r = !0), (o = !0);
               break;
-            case Tt.g.INTERNATIONAL_QUALIFIERS:
+            case St.g.INTERNATIONAL_QUALIFIERS:
               o = !0;
           }
           var i = [
-              { value: Tt.d.UNSET, strLabel: "#dpc_division_filter_all" },
-              { value: Tt.d.DIVISION_I, strLabel: "#dpc_division_i" },
-              { value: Tt.d.DIVISION_II, strLabel: "#dpc_division_ii" },
+              { value: St.d.UNSET, strLabel: "#dpc_division_filter_all" },
+              { value: St.d.DIVISION_I, strLabel: "#dpc_division_i" },
+              { value: St.d.DIVISION_II, strLabel: "#dpc_division_ii" },
             ],
             l = [
-              { value: Tt.k.UNSET, strLabel: "#dpc_region_all" },
-              { value: Tt.k.NA, strLabel: "#dpc_region_na" },
-              { value: Tt.k.SA, strLabel: "#dpc_region_sa" },
-              { value: Tt.k.WEU, strLabel: "#dpc_region_weu" },
-              { value: Tt.k.EEU, strLabel: "#dpc_region_eeu" },
-              { value: Tt.k.CN, strLabel: "#dpc_region_cn" },
-              { value: Tt.k.SEA, strLabel: "#dpc_region_sea" },
+              { value: St.k.UNSET, strLabel: "#dpc_region_all" },
+              { value: St.k.NA, strLabel: "#dpc_region_na" },
+              { value: St.k.SA, strLabel: "#dpc_region_sa" },
+              { value: St.k.WEU, strLabel: "#dpc_region_weu" },
+              { value: St.k.EEU, strLabel: "#dpc_region_eeu" },
+              { value: St.k.CN, strLabel: "#dpc_region_cn" },
+              { value: St.k.SEA, strLabel: "#dpc_region_sea" },
             ],
             c = [],
             d = [];
-          if ((null == a ? void 0 : a.eEventType) == Tt.g.INTERNATIONAL)
+          if ((null == a ? void 0 : a.eEventType) == St.g.INTERNATIONAL)
             for (var m = 0, u = n; m < u.length; m++) {
               for (
                 var p = u[m],
@@ -27356,7 +27443,7 @@ var CLSTAMP = "6905869";
                     );
                 if (
                   (null == N ? void 0 : N.phase) ==
-                  Tt.j.LEAGUE_PHASE_GROUP_STAGE
+                  St.j.LEAGUE_PHASE_GROUP_STAGE
                 ) {
                   _ = !0;
                   break;
@@ -27372,7 +27459,7 @@ var CLSTAMP = "6905869";
                 a.bEventCompleted && la.a.IsEventCompleted
               ),
             },
-            (null == a ? void 0 : a.eEventType) == Tt.g.INTERNATIONAL &&
+            (null == a ? void 0 : a.eEventType) == St.g.INTERNATIONAL &&
               s.a.createElement(
                 "div",
                 { className: la.a.InternationalDaySelector },
@@ -27511,9 +27598,9 @@ var CLSTAMP = "6905869";
                 var a = Ot.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
                 if (0 == (null == a ? void 0 : a.scheduled_time)) return !1;
                 var n = Ot.a.Get().GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
-                if (e.eDivision != Tt.d.UNSET && n.eDivision != e.eDivision)
+                if (e.eDivision != St.d.UNSET && n.eDivision != e.eDivision)
                   return !1;
-                if (e.eRegion != Tt.k.UNSET && n.eRegion != e.eRegion)
+                if (e.eRegion != St.k.UNSET && n.eRegion != e.eRegion)
                   return !1;
                 if (!e.strTeamSearch) return !0;
                 var r = Ot.a.Get().FindTeamIDsFromSubstr(e.strTeamSearch);
@@ -27692,10 +27779,10 @@ var CLSTAMP = "6905869";
                 ? void 0
                 : a.actual_time
               : a.scheduled_time,
-            o = (null == n ? void 0 : n.eNodeGroupType) == Tt.h.ROUND_ROBIN,
+            o = (null == n ? void 0 : n.eNodeGroupType) == St.h.ROUND_ROBIN,
             i = Ot.a
               .Get()
-              .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, Tt.n.VERYLONG),
+              .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, St.n.VERYLONG),
             l = Ot.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
             c = Ot.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_2),
             m = Ot.a
@@ -27729,14 +27816,14 @@ var CLSTAMP = "6905869";
               v &&
               (null == a ? void 0 : a.team_2_wins) >
                 (null == a ? void 0 : a.team_1_wins),
-            I = Ot.a.Get().GetSpoilerBlockState(t) == Tt.l.BLOCKED,
+            I = Ot.a.Get().GetSpoilerBlockState(t) == St.l.BLOCKED,
             O =
               !I ||
               !Ot.a.Get().IsLeagueNodeBracket(e.nLeagueID, e.nNodeID) ||
               Ot.a.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
             D = !I || Ot.a.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
-            T = a ? a.team_1_wins + " - " + a.team_2_wins : "",
-            S =
+            S = a ? a.team_1_wins + " - " + a.team_2_wins : "",
+            T =
               0 == (null == a ? void 0 : a.team_id_1)
                 ? "#dpc_tbd"
                 : O
@@ -27752,7 +27839,7 @@ var CLSTAMP = "6905869";
                   ? void 0
                   : c.name
                 : "#dpc_hidden";
-          (D && v) || (T = "#dpc_vs");
+          (D && v) || (S = "#dpc_vs");
           var C = D
             ? null == a
               ? void 0
@@ -27816,7 +27903,7 @@ var CLSTAMP = "6905869";
                   s.a.createElement(
                     "div",
                     { className: la.a.TeamName },
-                    Object(E.a)(S)
+                    Object(E.a)(T)
                   ),
                   o &&
                     !I &&
@@ -27849,7 +27936,7 @@ var CLSTAMP = "6905869";
                   s.a.createElement(
                     "div",
                     { className: la.a.Score },
-                    Object(E.a)(T)
+                    Object(E.a)(S)
                   )
                 ),
                 s.a.createElement(Vt, {
@@ -27955,7 +28042,7 @@ var CLSTAMP = "6905869";
             v = ca.a.Get().getHeroList();
           c && !p && _(!0);
           var y = Ot.a.Get().IsGameWatched(a, n, o),
-            N = Ot.a.Get().GetSpoilerBlockState(t) == Tt.l.BLOCKED && !y,
+            N = Ot.a.Get().GetSpoilerBlockState(t) == St.l.BLOCKED && !y,
             I = b.vods.length > 0,
             O =
               -1 !=
@@ -27963,15 +28050,15 @@ var CLSTAMP = "6905869";
                 return e.series_game == o;
               }),
             D = N ? I : O,
-            T = 0;
+            S = 0;
           switch (null == g ? void 0 : g.match_outcome) {
-            case Tt.m.RADIANT_VICTORY:
-              T = null == g ? void 0 : g.tourney.radiant_team_id;
+            case St.m.RADIANT_VICTORY:
+              S = null == g ? void 0 : g.tourney.radiant_team_id;
               break;
-            case Tt.m.DIRE_VICTORY:
-              T = null == g ? void 0 : g.tourney.dire_team_id;
+            case St.m.DIRE_VICTORY:
+              S = null == g ? void 0 : g.tourney.dire_team_id;
           }
-          var S = Ot.a.Get().GetTeamNames(T),
+          var T = Ot.a.Get().GetTeamNames(S),
             L = g ? Be()(1e3 * g.start_time).format("LT") : "";
           return s.a.createElement(
             "div",
@@ -28079,7 +28166,7 @@ var CLSTAMP = "6905869";
                   },
                   className: la.a.FirstLine,
                 },
-                !N && s.a.createElement(Vt, { nTeamID: T, nSize: 32 }),
+                !N && s.a.createElement(Vt, { nTeamID: S, nSize: 32 }),
                 s.a.createElement(
                   "div",
                   { className: la.a.GameNumber },
@@ -28090,7 +28177,7 @@ var CLSTAMP = "6905869";
                 s.a.createElement(
                   "div",
                   { className: la.a.WinningTeam },
-                  S && Object(E.a)("#dpc_team_win", S.name)
+                  T && Object(E.a)("#dpc_team_win", T.name)
                 ),
               !N &&
                 s.a.createElement(
@@ -28192,10 +28279,10 @@ var CLSTAMP = "6905869";
             t = Object(i.useState)(""),
             a = t[0],
             n = t[1],
-            r = Object(i.useState)(Tt.d.UNSET),
+            r = Object(i.useState)(St.d.UNSET),
             o = r[0],
             l = r[1],
-            c = Object(i.useState)(Tt.k.UNSET),
+            c = Object(i.useState)(St.k.UNSET),
             d = c[0],
             m = c[1],
             u = Object(i.useState)(0),
@@ -28275,7 +28362,7 @@ var CLSTAMP = "6905869";
         Oa = Object(m.a)(function (e) {
           var t = $n(),
             a = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-            n = Ot.a.Get().GetSpoilerBlockState(t) == Tt.l.BLOCKED,
+            n = Ot.a.Get().GetSpoilerBlockState(t) == St.l.BLOCKED,
             r = !n || Ot.a.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
             o = !n || Ot.a.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
             i = Ot.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
@@ -28333,8 +28420,8 @@ var CLSTAMP = "6905869";
                 ? "" + (null == a ? void 0 : a.team_2_wins)
                 : ""
               : "?",
-            T = e.nNodeID == e.nExpandedNodeID,
-            S = e.nNodeID != e.nExpandedNodeID && 0 != e.nExpandedNodeID,
+            S = e.nNodeID == e.nExpandedNodeID,
+            T = e.nNodeID != e.nExpandedNodeID && 0 != e.nExpandedNodeID,
             L = Ot.a.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
             C = L
               ? 1
@@ -28344,10 +28431,10 @@ var CLSTAMP = "6905869";
                   .Get()
                   .GetNodeTypeGameCount(null == a ? void 0 : a.node_type),
             j = 115 + 30 * C,
-            w = T ? 1.5 * ya.f : ya.f,
-            G = T ? j : ya.d,
-            A = T ? -ya.f / 3 : 0,
-            R = T ? -ya.d / 2 : 0,
+            w = S ? 1.5 * ya.f : ya.f,
+            G = S ? j : ya.d,
+            A = S ? -ya.f / 3 : 0,
+            R = S ? -ya.d / 2 : 0,
             k = Ot.a.Get().GetNodeTypeString(null == a ? void 0 : a.node_type);
           return e.bAlwaysRender ||
             0 != (null == a ? void 0 : a.team_id_1) ||
@@ -28359,8 +28446,8 @@ var CLSTAMP = "6905869";
                 {
                   className: Object(f.a)(
                     Ia.a.BracketNode,
-                    T && Ia.a.Expanded,
-                    S && Ia.a.OtherExpanded,
+                    S && Ia.a.Expanded,
+                    T && Ia.a.OtherExpanded,
                     e.strBackgroundColor && Ia.a.ShowingColor,
                     L && Ia.a.IsLive
                   ),
@@ -28423,7 +28510,7 @@ var CLSTAMP = "6905869";
                   { className: Ia.a.ContentsContainer },
                   s.a.createElement(
                     "div",
-                    { className: Object(f.a)(Ia.a.Teams, T && Ia.a.Hidden) },
+                    { className: Object(f.a)(Ia.a.Teams, S && Ia.a.Hidden) },
                     s.a.createElement(
                       "div",
                       {
@@ -28467,7 +28554,7 @@ var CLSTAMP = "6905869";
                   ),
                   s.a.createElement(
                     "div",
-                    { className: Object(f.a)(Ia.a.Details, !T && Ia.a.Hidden) },
+                    { className: Object(f.a)(Ia.a.Details, !S && Ia.a.Hidden) },
                     s.a.createElement(Rt.a, {
                       className: Ia.a.Timestamp,
                       date: 1e3 * v,
@@ -28596,8 +28683,8 @@ var CLSTAMP = "6905869";
             : null;
         }),
         Da = a("6mrx"),
-        Ta = a.n(Da),
-        Sa = Object(m.a)(function (e) {
+        Sa = a.n(Da),
+        Ta = Object(m.a)(function (e) {
           var t = Ot.a.Get().GetLeagueNodeGroup(e.nLeagueID, e.nNodeGroupID);
           if (
             16 !=
@@ -28608,7 +28695,7 @@ var CLSTAMP = "6905869";
                 )
               ) ||
             (null == t ? void 0 : t.node_group_type) !=
-              Tt.h.BRACKET_DOUBLE_SEED_LOSER
+              St.h.BRACKET_DOUBLE_SEED_LOSER
           )
             return null;
           var a = 12 == (null == t ? void 0 : t.team_count),
@@ -28638,8 +28725,8 @@ var CLSTAMP = "6905869";
             "div",
             {
               className: Object(f.a)(
-                Ta.a.DPCStandingsBracketDoubleSeeded16,
-                a && Ta.a.Teams12
+                Sa.a.DPCStandingsBracketDoubleSeeded16,
+                a && Sa.a.Teams12
               ),
               onClick: function () {
                 0 != e.nExpandedNodeID && e.setExpandedNodeID(0);
@@ -28665,7 +28752,7 @@ var CLSTAMP = "6905869";
                     "div",
                     {
                       key: e.nLeagueID + "_" + t.node_id,
-                      className: Ta.a.BracketNodeContainer,
+                      className: Sa.a.BracketNodeContainer,
                       style: {
                         left: ya.b[n].nPosX - (a ? ya.f + ya.e : 0),
                         top: ya.b[n].nPosY,
@@ -28705,7 +28792,7 @@ var CLSTAMP = "6905869";
                     "div",
                     {
                       key: "connector_" + n,
-                      className: Ta.a.BracketConnectorContainer,
+                      className: Sa.a.BracketConnectorContainer,
                       style: {
                         left: e.nPosX - (a ? ya.f + ya.e : 0),
                         top: e.nPosY,
@@ -28841,7 +28928,7 @@ var CLSTAMP = "6905869";
               s.a.createElement(
                 kt.a,
                 { className: Ea.a.BracketScroller, hideScrollbars: !1 },
-                s.a.createElement(Sa, {
+                s.a.createElement(Ta, {
                   nLeagueID: m,
                   nNodeGroupID: u,
                   bShowingDays: n,
@@ -28952,8 +29039,8 @@ var CLSTAMP = "6905869";
                     ? void 0
                     : n.arrEventLeagues.find(function (t) {
                         return (
-                          t.eDivision == (e.eDivision || Tt.d.UNSET) &&
-                          t.eRegion == (e.eRegion || Tt.k.UNSET)
+                          t.eDivision == (e.eDivision || St.d.UNSET) &&
+                          t.eRegion == (e.eRegion || St.k.UNSET)
                         );
                       })) || void 0 === t
                 ? void 0
@@ -29009,7 +29096,7 @@ var CLSTAMP = "6905869";
             a,
             n,
             r = $n(),
-            o = Ot.a.Get().GetSpoilerBlockState(r) == Tt.l.BLOCKED,
+            o = Ot.a.Get().GetSpoilerBlockState(r) == St.l.BLOCKED,
             l = Object(i.useState)({
               nRow: -1,
               nColumn: -1,
@@ -29088,8 +29175,8 @@ var CLSTAMP = "6905869";
               ),
             O = !o || I,
             D = "#117C30",
-            T = "#922820",
-            S = "#929820",
+            S = "#922820",
+            T = "#929820",
             L =
               (null == N ? void 0 : N.team_id_1) == c.nRowTeam
                 ? null == N
@@ -29112,10 +29199,10 @@ var CLSTAMP = "6905869";
             A = void 0,
             R = void 0;
           j
-            ? ((A = D), (R = T))
+            ? ((A = D), (R = S))
             : w
-            ? ((A = T), (R = D))
-            : G && ((A = S), (R = S));
+            ? ((A = S), (R = D))
+            : G && ((A = T), (R = T));
           var k = !1,
             B = 50 + 55 * (v.length + 1),
             P = v.length > 0;
@@ -29431,7 +29518,7 @@ var CLSTAMP = "6905869";
             a,
             n,
             r = $n(),
-            o = Ot.a.Get().GetSpoilerBlockState(r) == Tt.l.BLOCKED,
+            o = Ot.a.Get().GetSpoilerBlockState(r) == St.l.BLOCKED,
             i = e.nTiebreak >= 0,
             l = Ot.a
               .Get()
@@ -29615,7 +29702,7 @@ var CLSTAMP = "6905869";
         }),
         za = Object(m.a)(function (e) {
           var t = $n(),
-            a = Ot.a.Get().GetSpoilerBlockState(t) == Tt.l.BLOCKED,
+            a = Ot.a.Get().GetSpoilerBlockState(t) == St.l.BLOCKED,
             n = Ot.a
               .Get()
               .GetTeamStanding(e.nLeagueID, e.nNodeGroupID, e.nTeamID),
@@ -29696,7 +29783,7 @@ var CLSTAMP = "6905869";
                   )
               );
         }),
-        qa = Object(m.a)(function (e) {
+        Ya = Object(m.a)(function (e) {
           var t,
             a = $n(),
             n = Ot.a
@@ -29706,12 +29793,12 @@ var CLSTAMP = "6905869";
             o = n.nNodeGroupID,
             i = "";
           switch (Ot.a.Get().GetEventType(a)) {
-            case Tt.g.LEAGUE:
+            case St.g.LEAGUE:
               i = Ot.a.Get().GetRegionString(e.eRegion, !1);
               break;
-            case Tt.g.MAJOR:
-            case Tt.g.INTERNATIONAL:
-            case Tt.g.INTERNATIONAL_QUALIFIERS:
+            case St.g.MAJOR:
+            case St.g.INTERNATIONAL:
+            case St.g.INTERNATIONAL_QUALIFIERS:
               i = Ot.a.Get().GetEventPhaseString(e.ePhase);
           }
           var l = Ot.a
@@ -29797,34 +29884,34 @@ var CLSTAMP = "6905869";
               })
           );
         }),
-        Ya = Object(m.a)(function () {
+        qa = Object(m.a)(function () {
           var e = $n(),
             t = Object(p.g)(),
             a = Object(p.i)(),
             n = Object(Dt.h)(a.strPhase);
-          if (Ot.a.Get().GetEventType(e) != Tt.g.LEAGUE) return null;
+          if (Ot.a.Get().GetEventType(e) != St.g.LEAGUE) return null;
           var r = [
-              { value: Tt.k.NA, strLabel: "#dpc_region_na" },
-              { value: Tt.k.SA, strLabel: "#dpc_region_sa" },
-              { value: Tt.k.WEU, strLabel: "#dpc_region_weu" },
-              { value: Tt.k.EEU, strLabel: "#dpc_region_eeu" },
-              { value: Tt.k.CN, strLabel: "#dpc_region_cn" },
-              { value: Tt.k.SEA, strLabel: "#dpc_region_sea" },
+              { value: St.k.NA, strLabel: "#dpc_region_na" },
+              { value: St.k.SA, strLabel: "#dpc_region_sa" },
+              { value: St.k.WEU, strLabel: "#dpc_region_weu" },
+              { value: St.k.EEU, strLabel: "#dpc_region_eeu" },
+              { value: St.k.CN, strLabel: "#dpc_region_cn" },
+              { value: St.k.SEA, strLabel: "#dpc_region_sea" },
             ],
             o = [
-              { value: Tt.d.DIVISION_I, strLabel: "#dpc_division_i" },
-              { value: Tt.d.DIVISION_II, strLabel: "#dpc_division_ii" },
+              { value: St.d.DIVISION_I, strLabel: "#dpc_division_i" },
+              { value: St.d.DIVISION_II, strLabel: "#dpc_division_ii" },
             ],
             i = [
-              { value: Tt.f.OVERALL, strLabel: "#dpc_header_standings" },
-              { value: Tt.f.RESULTS, strLabel: "#dpc_results" },
+              { value: St.f.OVERALL, strLabel: "#dpc_header_standings" },
+              { value: St.f.RESULTS, strLabel: "#dpc_results" },
             ];
           if (!a.strSelection)
             return s.a.createElement(p.a, {
               to: d.b.dpc_standings(
                 Object(Dt.j)(e),
                 a.strPhase,
-                Ot.a.Get().GetDefaultRegion() + "_" + Tt.d.DIVISION_I
+                Ot.a.Get().GetDefaultRegion() + "_" + St.d.DIVISION_I
               ),
             });
           var l = a.strSelection.split("_").map(function (e) {
@@ -29832,12 +29919,12 @@ var CLSTAMP = "6905869";
             }),
             c = l[0],
             m = l[1];
-          if (!c || !m || n == Tt.f.INVALID)
+          if (!c || !m || n == St.f.INVALID)
             return s.a.createElement(p.a, {
               to: d.b.dpc_standings(
                 Object(Dt.j)(e),
-                Object(Dt.i)(n == Tt.f.INVALID ? Tt.f.OVERALL : n),
-                Ot.a.Get().GetDefaultRegion() + "_" + Tt.d.DIVISION_I
+                Object(Dt.i)(n == St.f.INVALID ? St.f.OVERALL : n),
+                Ot.a.Get().GetDefaultRegion() + "_" + St.d.DIVISION_I
               ),
             });
           return s.a.createElement(
@@ -29881,8 +29968,8 @@ var CLSTAMP = "6905869";
                 eStyle: mt.NORMAL,
               })
             ),
-            n == Tt.f.OVERALL &&
-              s.a.createElement(qa, {
+            n == St.f.OVERALL &&
+              s.a.createElement(Ya, {
                 ePhase: n,
                 eDivision: m,
                 eRegion: c,
@@ -29893,7 +29980,7 @@ var CLSTAMP = "6905869";
                 bNarrowList: !1,
                 bShowTiebreakers: !0,
               }),
-            n == Tt.f.RESULTS &&
+            n == St.f.RESULTS &&
               s.a.createElement(Ra, {
                 eDivision: m,
                 eRegion: c,
@@ -29906,15 +29993,15 @@ var CLSTAMP = "6905869";
             t = Object(p.g)(),
             a = Object(p.i)(),
             n = [
-              { value: Tt.f.WILD_CARD, strLabel: "#dpc_wild_card" },
-              { value: Tt.f.GROUP_STAGE, strLabel: "#dpc_group_stage" },
-              { value: Tt.f.PLAYOFF, strLabel: "#dpc_playoff" },
-              { value: Tt.f.RESULTS, strLabel: "#dpc_results" },
+              { value: St.f.WILD_CARD, strLabel: "#dpc_wild_card" },
+              { value: St.f.GROUP_STAGE, strLabel: "#dpc_group_stage" },
+              { value: St.f.PLAYOFF, strLabel: "#dpc_playoff" },
+              { value: St.f.RESULTS, strLabel: "#dpc_results" },
             ],
             r = Object(Dt.h)(a.strPhase);
-          return Ot.a.Get().GetEventType(e) != Tt.g.MAJOR
+          return Ot.a.Get().GetEventType(e) != St.g.MAJOR
             ? null
-            : Tt.f[r] && r != Tt.f.INVALID
+            : St.f[r] && r != St.f.INVALID
             ? s.a.createElement(
                 "div",
                 { className: Ba.a.DPCStandingsPageMajor },
@@ -29932,11 +30019,11 @@ var CLSTAMP = "6905869";
                     },
                   })
                 ),
-                r == Tt.f.WILD_CARD &&
-                  s.a.createElement(qa, {
-                    ePhase: Tt.f.WILD_CARD,
-                    eRegion: Tt.k.UNSET,
-                    eDivision: Tt.d.UNSET,
+                r == St.f.WILD_CARD &&
+                  s.a.createElement(Ya, {
+                    ePhase: St.f.WILD_CARD,
+                    eRegion: St.k.UNSET,
+                    eDivision: St.d.UNSET,
                     arrHighlights: [
                       {
                         nMin: 1,
@@ -29958,11 +30045,11 @@ var CLSTAMP = "6905869";
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                r == Tt.f.GROUP_STAGE &&
-                  s.a.createElement(qa, {
-                    ePhase: Tt.f.GROUP_STAGE,
-                    eRegion: Tt.k.UNSET,
-                    eDivision: Tt.d.UNSET,
+                r == St.f.GROUP_STAGE &&
+                  s.a.createElement(Ya, {
+                    ePhase: St.f.GROUP_STAGE,
+                    eRegion: St.k.UNSET,
+                    eDivision: St.d.UNSET,
                     arrHighlights: [
                       {
                         nMin: 1,
@@ -29990,23 +30077,23 @@ var CLSTAMP = "6905869";
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                r == Tt.f.PLAYOFF &&
+                r == St.f.PLAYOFF &&
                   s.a.createElement(ja, {
-                    ePhase: Tt.f.PLAYOFF,
-                    eRegion: Tt.k.UNSET,
-                    eDivision: Tt.d.UNSET,
+                    ePhase: St.f.PLAYOFF,
+                    eRegion: St.k.UNSET,
+                    eDivision: St.d.UNSET,
                   }),
-                r == Tt.f.RESULTS &&
+                r == St.f.RESULTS &&
                   s.a.createElement(Ra, {
-                    eRegion: Tt.k.UNSET,
-                    eDivision: Tt.d.UNSET,
+                    eRegion: St.k.UNSET,
+                    eDivision: St.d.UNSET,
                     bStyleTopThree: !0,
                   })
               )
             : s.a.createElement(p.a, {
                 to: d.b.dpc_standings(
                   Object(Dt.j)(e),
-                  Object(Dt.i)(Tt.f.WILD_CARD)
+                  Object(Dt.i)(St.f.WILD_CARD)
                 ),
               });
         }),
@@ -30015,22 +30102,22 @@ var CLSTAMP = "6905869";
             t = Object(p.g)(),
             a = Object(p.i)(),
             n = [
-              { value: Tt.k.NA, strLabel: "#dpc_region_na" },
-              { value: Tt.k.SA, strLabel: "#dpc_region_sa" },
-              { value: Tt.k.WEU, strLabel: "#dpc_region_weu" },
-              { value: Tt.k.EEU, strLabel: "#dpc_region_eeu" },
-              { value: Tt.k.CN, strLabel: "#dpc_region_cn" },
-              { value: Tt.k.SEA, strLabel: "#dpc_region_sea" },
+              { value: St.k.NA, strLabel: "#dpc_region_na" },
+              { value: St.k.SA, strLabel: "#dpc_region_sa" },
+              { value: St.k.WEU, strLabel: "#dpc_region_weu" },
+              { value: St.k.EEU, strLabel: "#dpc_region_eeu" },
+              { value: St.k.CN, strLabel: "#dpc_region_cn" },
+              { value: St.k.SEA, strLabel: "#dpc_region_sea" },
             ],
             r = parseInt(a.strSelection);
-          return Ot.a.Get().GetEventType(e) != Tt.g.INTERNATIONAL_QUALIFIERS
+          return Ot.a.Get().GetEventType(e) != St.g.INTERNATIONAL_QUALIFIERS
             ? null
-            : Tt.k[r] && r != Tt.k.UNSET
-            ? Object(Dt.h)(a.strPhase) == Tt.f.INVALID
+            : St.k[r] && r != St.k.UNSET
+            ? Object(Dt.h)(a.strPhase) == St.f.INVALID
               ? s.a.createElement(p.a, {
                   to: d.b.dpc_standings(
                     Object(Dt.j)(e),
-                    Object(Dt.i)(Tt.f.PLAYOFF),
+                    Object(Dt.i)(St.f.PLAYOFF),
                     "" + Ot.a.Get().GetDefaultRegion()
                   ),
                 })
@@ -30052,9 +30139,9 @@ var CLSTAMP = "6905869";
                     })
                   ),
                   s.a.createElement(ja, {
-                    ePhase: Tt.f.PLAYOFF,
+                    ePhase: St.f.PLAYOFF,
                     eRegion: r,
-                    eDivision: Tt.d.UNSET,
+                    eDivision: St.d.UNSET,
                   })
                 )
             : s.a.createElement(p.a, {
@@ -30079,15 +30166,15 @@ var CLSTAMP = "6905869";
               },
             ],
             r = [
-              { value: Tt.f.GROUP_A, strLabel: "#dpc_group_a" },
-              { value: Tt.f.GROUP_B, strLabel: "#dpc_group_b" },
-              { value: Tt.f.PLAYOFF, strLabel: "#dpc_playoff" },
-              { value: Tt.f.RESULTS, strLabel: "#dpc_results" },
+              { value: St.f.GROUP_A, strLabel: "#dpc_group_a" },
+              { value: St.f.GROUP_B, strLabel: "#dpc_group_b" },
+              { value: St.f.PLAYOFF, strLabel: "#dpc_playoff" },
+              { value: St.f.RESULTS, strLabel: "#dpc_results" },
             ],
             o = Object(Dt.h)(a.strPhase);
-          return Ot.a.Get().GetEventType(e) != Tt.g.INTERNATIONAL
+          return Ot.a.Get().GetEventType(e) != St.g.INTERNATIONAL
             ? null
-            : Tt.f[o] && o != Tt.f.INVALID
+            : St.f[o] && o != St.f.INVALID
             ? s.a.createElement(
                 "div",
                 { className: Ba.a.DPCStandingsPageMajor },
@@ -30105,11 +30192,11 @@ var CLSTAMP = "6905869";
                     },
                   })
                 ),
-                o == Tt.f.GROUP_A &&
-                  s.a.createElement(qa, {
-                    ePhase: Tt.f.GROUP_A,
-                    eRegion: Tt.k.UNSET,
-                    eDivision: Tt.d.UNSET,
+                o == St.f.GROUP_A &&
+                  s.a.createElement(Ya, {
+                    ePhase: St.f.GROUP_A,
+                    eRegion: St.k.UNSET,
+                    eDivision: St.d.UNSET,
                     arrHighlights: n,
                     bShowLegend: !0,
                     bShowHeader: !1,
@@ -30118,11 +30205,11 @@ var CLSTAMP = "6905869";
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                o == Tt.f.GROUP_B &&
-                  s.a.createElement(qa, {
-                    ePhase: Tt.f.GROUP_B,
-                    eRegion: Tt.k.UNSET,
-                    eDivision: Tt.d.UNSET,
+                o == St.f.GROUP_B &&
+                  s.a.createElement(Ya, {
+                    ePhase: St.f.GROUP_B,
+                    eRegion: St.k.UNSET,
+                    eDivision: St.d.UNSET,
                     arrHighlights: n,
                     bShowLegend: !0,
                     bShowHeader: !1,
@@ -30131,23 +30218,23 @@ var CLSTAMP = "6905869";
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                o == Tt.f.PLAYOFF &&
+                o == St.f.PLAYOFF &&
                   s.a.createElement(ja, {
-                    ePhase: Tt.f.PLAYOFF,
-                    eRegion: Tt.k.UNSET,
-                    eDivision: Tt.d.UNSET,
+                    ePhase: St.f.PLAYOFF,
+                    eRegion: St.k.UNSET,
+                    eDivision: St.d.UNSET,
                   }),
-                o == Tt.f.RESULTS &&
+                o == St.f.RESULTS &&
                   s.a.createElement(Ra, {
-                    eRegion: Tt.k.UNSET,
-                    eDivision: Tt.d.UNSET,
+                    eRegion: St.k.UNSET,
+                    eDivision: St.d.UNSET,
                     bStyleTopThree: !0,
                   })
               )
             : s.a.createElement(p.a, {
                 to: d.b.dpc_standings(
                   Object(Dt.j)(e),
-                  Object(Dt.i)(Tt.f.PLAYOFF)
+                  Object(Dt.i)(St.f.PLAYOFF)
                 ),
               });
         }),
@@ -30163,7 +30250,7 @@ var CLSTAMP = "6905869";
                   "backgrounds/bg_granite_texture_sched.jpg )",
               },
             },
-            s.a.createElement(Ya, null),
+            s.a.createElement(qa, null),
             s.a.createElement(Ka, null),
             s.a.createElement(Qa, null),
             s.a.createElement(Xa, null),
@@ -30337,7 +30424,7 @@ var CLSTAMP = "6905869";
           (Object(m.a)(function () {
             var e = $n(),
               t = Ot.a.Get().GetEventInfo(e);
-            if (t.eEvent != Tt.e.INTERNATIONAL_2021) return null;
+            if (t.eEvent != St.e.INTERNATIONAL_2021) return null;
             var a = Ot.a.Get().GetLeagueData(e, t.arrEventLeagues[0].nLeagueID);
             return s.a.createElement(
               "div",
@@ -30361,7 +30448,7 @@ var CLSTAMP = "6905869";
           Object(m.a)(function () {
             var e = $n(),
               t = Ot.a.Get().GetEventInfo(e);
-            if (t.eEvent != Tt.e.INTERNATIONAL_2021) return null;
+            if (t.eEvent != St.e.INTERNATIONAL_2021) return null;
             var a = Ot.a.Get().GetLeagueData(e, t.arrEventLeagues[0].nLeagueID),
               n = [];
             return (
@@ -30704,7 +30791,7 @@ var CLSTAMP = "6905869";
           })),
         rn = Object(m.a)(function () {
           var e = $n();
-          return Ot.a.Get().GetEventInfo(e).eEvent != Tt.e.INTERNATIONAL_2021
+          return Ot.a.Get().GetEventInfo(e).eEvent != St.e.INTERNATIONAL_2021
             ? null
             : s.a.createElement(
                 "div",
@@ -30738,7 +30825,7 @@ var CLSTAMP = "6905869";
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: d.b.dpc_schedule(
-                          Object(Dt.j)(Tt.e.INTERNATIONAL_2021)
+                          Object(Dt.j)(St.e.INTERNATIONAL_2021)
                         ),
                       },
                       className: an.a.LearnMoreButton,
@@ -30874,7 +30961,7 @@ var CLSTAMP = "6905869";
         }),
         sn = Object(m.a)(function () {
           var e = $n();
-          if (Ot.a.Get().GetEventInfo(e).eEvent != Tt.e.INTERNATIONAL_2021)
+          if (Ot.a.Get().GetEventInfo(e).eEvent != St.e.INTERNATIONAL_2021)
             return null;
           var t = [
             {
@@ -31013,7 +31100,7 @@ var CLSTAMP = "6905869";
             n = t.nNodeID,
             r = Ot.a.Get().GetLeagueNode(a, n);
           if (!r) return null;
-          if (Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.BLOCKED) return null;
+          if (Ot.a.Get().GetSpoilerBlockState(e) == St.l.BLOCKED) return null;
           var o = Ot.a.Get().GetTeamNames(r.team_id_1),
             i = Ot.a.Get().GetTeamNames(r.team_id_2);
           if (!o || !i) return null;
@@ -31032,7 +31119,7 @@ var CLSTAMP = "6905869";
               .toString();
           return s.a.createElement(
             "div",
-            { className: cn.a.DPCNextBanner },
+            { className: cn.a.DPCNextMatchBanner },
             s.a.createElement(
               "div",
               { className: cn.a.BannerContents },
@@ -31271,7 +31358,7 @@ var CLSTAMP = "6905869";
                           },
                           s.a.createElement(In, null),
                           s.a.createElement(On, null),
-                          s.a.createElement(Tn, null)
+                          s.a.createElement(Sn, null)
                         ),
                         s.a.createElement(Nn, {
                           bLarge: o,
@@ -31284,7 +31371,7 @@ var CLSTAMP = "6905869";
                         })
                       )
                     ),
-                    s.a.createElement(S.a, {
+                    s.a.createElement(T.a, {
                       bottom: !0,
                       color: "#161618",
                       startPct: 50,
@@ -31318,10 +31405,10 @@ var CLSTAMP = "6905869";
                       (11 == e.language && (e.language = 22),
                       e.broadcast_provider)
                     ) {
-                      case Tt.c.LEAGUE_BROADCAST_STEAM:
+                      case St.c.LEAGUE_BROADCAST_STEAM:
                         a = "#dpc_steam";
                         break;
-                      case Tt.c.LEAGUE_BROADCAST_TWITCH:
+                      case St.c.LEAGUE_BROADCAST_TWITCH:
                         a = "#dpc_twitch";
                     }
                     c.push({
@@ -31336,13 +31423,13 @@ var CLSTAMP = "6905869";
                 (null == i ? void 0 : i.length) > e.nSelectedVideo)
               )
                 switch (i[e.nSelectedVideo].broadcast_provider) {
-                  case Tt.c.LEAGUE_BROADCAST_STEAM:
+                  case St.c.LEAGUE_BROADCAST_STEAM:
                     p = "#dpc_steam";
                     break;
-                  case Tt.c.LEAGUE_BROADCAST_TWITCH:
+                  case St.c.LEAGUE_BROADCAST_TWITCH:
                     p = "#dpc_twitch";
                     break;
-                  case Tt.c.LEAGUE_BROADCAST_YOUTUBE:
+                  case St.c.LEAGUE_BROADCAST_YOUTUBE:
                     p = "#dpc_youtube";
                 }
               _ =
@@ -31366,10 +31453,10 @@ var CLSTAMP = "6905869";
                       (11 == a.language && (a.language = 22),
                       a.broadcast_provider)
                     ) {
-                      case Tt.c.LEAGUE_BROADCAST_STEAM:
+                      case St.c.LEAGUE_BROADCAST_STEAM:
                         n = "#dpc_steam";
                         break;
-                      case Tt.c.LEAGUE_BROADCAST_TWITCH:
+                      case St.c.LEAGUE_BROADCAST_TWITCH:
                         n = "#dpc_twitch";
                     }
                     c.push({
@@ -31409,7 +31496,7 @@ var CLSTAMP = "6905869";
               (null == i ? void 0 : i.length) > 0 &&
               (null === (t = i[e.nSelectedVideo]) || void 0 === t
                 ? void 0
-                : t.broadcast_provider) == Tt.c.LEAGUE_BROADCAST_TWITCH;
+                : t.broadcast_provider) == St.c.LEAGUE_BROADCAST_TWITCH;
           return s.a.createElement(
             "div",
             { className: gn.a.DPCSeriesFooter },
@@ -31534,7 +31621,7 @@ var CLSTAMP = "6905869";
             a = Ot.a.Get().GetWatchPageContext(),
             n = Ot.a.Get().GetLeagueNode(a.nLeagueID, a.nNodeID),
             r = Ot.a.Get().GetLeagueNodeInfo(a.nLeagueID, a.nNodeID),
-            o = (null == r ? void 0 : r.eNodeGroupType) == Tt.h.ROUND_ROBIN,
+            o = (null == r ? void 0 : r.eNodeGroupType) == St.h.ROUND_ROBIN,
             i =
               (null == n ? void 0 : n.is_completed) &&
               (null == n ? void 0 : n.team_1_wins) >
@@ -31546,19 +31633,19 @@ var CLSTAMP = "6905869";
             c = 0 == (null == a ? void 0 : a.nNodeID),
             m = 0;
           switch (null == n ? void 0 : n.node_type) {
-            case Tt.i.BEST_OF_ONE:
+            case St.i.BEST_OF_ONE:
               m = 1;
               break;
-            case Tt.i.BEST_OF_TWO:
-            case Tt.i.BEST_OF_THREE:
+            case St.i.BEST_OF_TWO:
+            case St.i.BEST_OF_THREE:
               m = 2;
               break;
-            case Tt.i.BEST_OF_FIVE:
+            case St.i.BEST_OF_FIVE:
               m = 3;
           }
           var p = Ot.a
               .Get()
-              .GetNodeLabelStrings(e, a.nLeagueID, a.nNodeID, Tt.n.LONG),
+              .GetNodeLabelStrings(e, a.nLeagueID, a.nNodeID, St.n.LONG),
             _ = !(null == n ? void 0 : n.has_started),
             g = Ot.a.Get().IsLeagueNodeLive(e, a.nLeagueID, a.nNodeID),
             h = null == n ? void 0 : n.is_completed;
@@ -31642,7 +31729,7 @@ var CLSTAMP = "6905869";
             n = null == a ? void 0 : a.is_completed,
             r = a ? a.matches.length : 0;
           return (
-            Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.BLOCKED &&
+            Ot.a.Get().GetSpoilerBlockState(e) == St.l.BLOCKED &&
               (r = Ot.a
                 .Get()
                 .GetNodeTypeGameCount(null == a ? void 0 : a.node_type)),
@@ -31717,7 +31804,7 @@ var CLSTAMP = "6905869";
                 t
               ),
             h = g ? g.wins + " - " + g.losses : "",
-            b = Ot.a.Get().GetSpoilerBlockState(c) == Tt.l.BLOCKED;
+            b = Ot.a.Get().GetSpoilerBlockState(c) == St.l.BLOCKED;
           return s.a.createElement(
             "div",
             {
@@ -31774,12 +31861,12 @@ var CLSTAMP = "6905869";
             )
           );
         }),
-        Tn = Object(m.a)(function () {
+        Sn = Object(m.a)(function () {
           var e = $n(),
             t = vn(),
             a = Ot.a.Get().GetWatchPageContext();
           return (
-            Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.UNBLOCKED &&
+            Ot.a.Get().GetSpoilerBlockState(e) == St.l.UNBLOCKED &&
               Ot.a.Get().SetGameWatched(a.nLeagueID, a.nNodeID, a.nSeriesGame),
             s.a.createElement(
               "div",
@@ -31789,7 +31876,7 @@ var CLSTAMP = "6905869";
                   t.bLarge && gn.a.Large
                 ),
               },
-              s.a.createElement(Sn, null),
+              s.a.createElement(Tn, null),
               s.a.createElement(Ln, null),
               s.a.createElement(Cn, null),
               s.a.createElement(An, null),
@@ -31797,7 +31884,7 @@ var CLSTAMP = "6905869";
             )
           );
         }),
-        Sn = Object(m.a)(function () {
+        Tn = Object(m.a)(function () {
           var e = $n(),
             t = Ot.a.Get().GetWatchPageContext(),
             a = Ot.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
@@ -31826,10 +31913,10 @@ var CLSTAMP = "6905869";
             ),
             d = Ot.a.Get().GetTeamNames(i),
             m = r ? "" : null == d ? void 0 : d.name,
-            u = Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.BLOCKED;
+            u = Ot.a.Get().GetSpoilerBlockState(e) == St.l.BLOCKED;
           return n
-            ? Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.UNKNOWN ||
-              Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.PENDING
+            ? Ot.a.Get().GetSpoilerBlockState(e) == St.l.UNKNOWN ||
+              Ot.a.Get().GetSpoilerBlockState(e) == St.l.PENDING
               ? null
               : s.a.createElement(
                   "div",
@@ -31926,7 +32013,7 @@ var CLSTAMP = "6905869";
                 : void 0,
             i = o ? Ot.a.Get().GetMatchData(t.nLeagueID, o.match_id) : void 0,
             l =
-              (null == i ? void 0 : i.match_outcome) == Tt.m.RADIANT_VICTORY
+              (null == i ? void 0 : i.match_outcome) == St.m.RADIANT_VICTORY
                 ? null == i
                   ? void 0
                   : i.tourney.radiant_team_id
@@ -31937,12 +32024,12 @@ var CLSTAMP = "6905869";
             m = (null == a ? void 0 : a.vods.length) > 0;
           if (!n) return null;
           if (
-            Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.UNKNOWN ||
-            Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.PENDING
+            Ot.a.Get().GetSpoilerBlockState(e) == St.l.UNKNOWN ||
+            Ot.a.Get().GetSpoilerBlockState(e) == St.l.PENDING
           )
             return null;
           var p =
-            !(Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.BLOCKED) ||
+            !(Ot.a.Get().GetSpoilerBlockState(e) == St.l.BLOCKED) ||
             Ot.a.Get().AreAllGamesWatched(t.nLeagueID, t.nNodeID);
           return s.a.createElement(
             "div",
@@ -32014,8 +32101,8 @@ var CLSTAMP = "6905869";
             l = r[1],
             c = t.nSeriesGame > (null == a ? void 0 : a.matches.length);
           return n
-            ? Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.UNKNOWN ||
-              Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.PENDING
+            ? Ot.a.Get().GetSpoilerBlockState(e) == St.l.UNKNOWN ||
+              Ot.a.Get().GetSpoilerBlockState(e) == St.l.PENDING
               ? null
               : s.a.createElement(
                   "div",
@@ -32237,12 +32324,12 @@ var CLSTAMP = "6905869";
             p =
               (u &&
                 (null == d ? void 0 : d.match_outcome) ==
-                  Tt.m.RADIANT_VICTORY) ||
+                  St.m.RADIANT_VICTORY) ||
               (!u &&
-                (null == d ? void 0 : d.match_outcome) == Tt.m.DIRE_VICTORY),
+                (null == d ? void 0 : d.match_outcome) == St.m.DIRE_VICTORY),
             _ = d ? (u ? "#radiant" : "#dire") : "",
             g =
-              Ot.a.Get().GetSpoilerBlockState(i) == Tt.l.BLOCKED &&
+              Ot.a.Get().GetSpoilerBlockState(i) == St.l.BLOCKED &&
               !Ot.a.Get().IsGameWatched(l.nLeagueID, l.nNodeID, l.nSeriesGame);
           if (l.nSeriesGame > (null == c ? void 0 : c.matches.length))
             return null;
@@ -32366,8 +32453,8 @@ var CLSTAMP = "6905869";
             I = d ? u + " / " + p + " / " + _ : "",
             O = d ? Object(E.a)("#dpc_hero_level", m) : void 0,
             D = o == c || (0 == o && n == c),
-            T =
-              Ot.a.Get().GetSpoilerBlockState(g) == Tt.l.BLOCKED &&
+            S =
+              Ot.a.Get().GetSpoilerBlockState(g) == St.l.BLOCKED &&
               !Ot.a.Get().IsGameWatched(b.nLeagueID, b.nNodeID, b.nSeriesGame);
           return s.a.createElement(
             "div",
@@ -32388,7 +32475,7 @@ var CLSTAMP = "6905869";
                 r && r(0);
               },
             },
-            !T &&
+            !S &&
               s.a.createElement(
                 "div",
                 { className: Object(f.a)(gn.a.HeroAndLevel) },
@@ -32406,7 +32493,7 @@ var CLSTAMP = "6905869";
               "div",
               { className: gn.a.NameAndStats },
               s.a.createElement("div", { className: gn.a.PlayerName }, l),
-              !T && d && s.a.createElement("div", { className: gn.a.Stats }, I)
+              !S && d && s.a.createElement("div", { className: gn.a.Stats }, I)
             )
           );
         }),
@@ -32461,8 +32548,8 @@ var CLSTAMP = "6905869";
               [_, a, r, t, e, o]
             ),
             _
-              ? Ot.a.Get().GetSpoilerBlockState(t) == Tt.l.UNKNOWN ||
-                Ot.a.Get().GetSpoilerBlockState(t) == Tt.l.PENDING
+              ? Ot.a.Get().GetSpoilerBlockState(t) == St.l.UNKNOWN ||
+                Ot.a.Get().GetSpoilerBlockState(t) == St.l.PENDING
                 ? null
                 : s.a.createElement(
                     "div",
@@ -32512,7 +32599,7 @@ var CLSTAMP = "6905869";
             c = "www.dota2.com";
           if (l)
             switch (null == l ? void 0 : l.broadcast_provider) {
-              case Tt.c.LEAGUE_BROADCAST_TWITCH:
+              case St.c.LEAGUE_BROADCAST_TWITCH:
                 (e =
                   "https://player.twitch.tv/?video-with-chat=true&channel=" +
                   (null == l
@@ -32532,7 +32619,7 @@ var CLSTAMP = "6905869";
                     "/chat?darkpopout&parent=" +
                     c);
                 break;
-              case Tt.c.LEAGUE_BROADCAST_STEAM:
+              case St.c.LEAGUE_BROADCAST_STEAM:
                 e =
                   h.a.COMMUNITY_URL +
                   "broadcast/watchnew/" +
@@ -32549,8 +32636,8 @@ var CLSTAMP = "6905869";
             e &&
               Ot.a.Get().SetGameWatched(r.nLeagueID, r.nNodeID, r.nSeriesGame),
             o
-              ? Ot.a.Get().GetSpoilerBlockState(a) == Tt.l.UNKNOWN ||
-                Ot.a.Get().GetSpoilerBlockState(a) == Tt.l.PENDING
+              ? Ot.a.Get().GetSpoilerBlockState(a) == St.l.UNKNOWN ||
+                Ot.a.Get().GetSpoilerBlockState(a) == St.l.PENDING
                 ? null
                 : s.a.createElement(
                     "div",
@@ -32717,8 +32804,8 @@ var CLSTAMP = "6905869";
                 ? void 0
                 : I.team_id_1,
             D = Ot.a.Get().GetTeamNames(O),
-            T = 0 == O ? "#dpc_tbd" : null == D ? void 0 : D.name,
-            S = Be()(1e3 * (null == I ? void 0 : I.scheduled_time))
+            S = 0 == O ? "#dpc_tbd" : null == D ? void 0 : D.name,
+            T = Be()(1e3 * (null == I ? void 0 : I.scheduled_time))
               .format("DD MMM LT")
               .toString(),
             L = Ot.a
@@ -32727,7 +32814,7 @@ var CLSTAMP = "6905869";
                 a,
                 null == y ? void 0 : y.nLeagueID,
                 null == y ? void 0 : y.nNodeID,
-                Tt.n.LONG
+                St.n.LONG
               ),
             C = Ot.a
               .Get()
@@ -32735,7 +32822,7 @@ var CLSTAMP = "6905869";
                 a,
                 null == N ? void 0 : N.nLeagueID,
                 null == N ? void 0 : N.nNodeID,
-                Tt.n.LONG
+                St.n.LONG
               ),
             j = Ot.a
               .Get()
@@ -32781,7 +32868,7 @@ var CLSTAMP = "6905869";
                 : j.team_1_wins,
             M = null == r ? void 0 : r.includes(t),
             x = 0 != h.a.ACCOUNT_ID,
-            U = Ot.a.Get().GetSpoilerBlockState(a) == Tt.l.BLOCKED,
+            U = Ot.a.Get().GetSpoilerBlockState(a) == St.l.BLOCKED,
             F =
               U &&
               Ot.a
@@ -32816,7 +32903,7 @@ var CLSTAMP = "6905869";
                 .IsLeagueNodeBracket(
                   null == N ? void 0 : N.nLeagueID,
                   null == N ? void 0 : N.nNodeID
-                ) || n.eEventType == Tt.g.MAJOR,
+                ) || n.eEventType == St.g.MAJOR,
             W = "";
           return (
             F ||
@@ -32847,7 +32934,7 @@ var CLSTAMP = "6905869";
                     },
                   },
                   s.a.createElement(
-                    St.a,
+                    Tt.a,
                     {
                       toolTipContent: s.a.createElement(
                         "div",
@@ -32953,7 +33040,7 @@ var CLSTAMP = "6905869";
                     R &&
                     Object(E.a)("#dpc_last_match_draw", B, P),
                   !F && !I && j && U && Object(E.a)("#dpc_last_match", B, P),
-                  !H && I && Object(E.a)("#dpc_next_match", S)
+                  !H && I && Object(E.a)("#dpc_next_match", T)
                 ),
                 s.a.createElement(
                   "div",
@@ -33000,7 +33087,7 @@ var CLSTAMP = "6905869";
                         s.a.createElement(
                           "div",
                           { className: Bn.a.TeamName },
-                          T
+                          S
                         ),
                         s.a.createElement(
                           "div",
@@ -33094,10 +33181,10 @@ var CLSTAMP = "6905869";
             n = null == a ? void 0 : a.actual_time,
             r = Ot.a
               .Get()
-              .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, Tt.n.LONG),
+              .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, St.n.LONG),
             o = Ot.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_1),
             i = Ot.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_2),
-            l = Ot.a.Get().GetSpoilerBlockState(t) == Tt.l.BLOCKED,
+            l = Ot.a.Get().GetSpoilerBlockState(t) == St.l.BLOCKED,
             c = Ot.a.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
             m = Ot.a.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
             p =
@@ -33188,14 +33275,14 @@ var CLSTAMP = "6905869";
             a = e.eDivision,
             n = $n(),
             r = [];
-          a == Tt.d.DIVISION_I &&
+          a == St.d.DIVISION_I &&
             r.push({
               nMin: 7,
               nMax: 8,
               strColor: "#922820",
               strDescription: "#dpc_relegated_to_div_ii",
             }),
-            a == Tt.d.DIVISION_II &&
+            a == St.d.DIVISION_II &&
               (r.push({
                 nMin: 1,
                 nMax: 2,
@@ -33216,9 +33303,9 @@ var CLSTAMP = "6905869";
             s.a.createElement(
               "div",
               { className: Object(f.a)(Wn.a.TeamLists, !i && Wn.a.NoData) },
-              s.a.createElement(qa, {
+              s.a.createElement(Ya, {
                 ePhase: t,
-                eRegion: Tt.k.NA,
+                eRegion: St.k.NA,
                 eDivision: a,
                 arrHighlights: r,
                 bShowLegend: !1,
@@ -33228,9 +33315,9 @@ var CLSTAMP = "6905869";
                 bNarrowList: !0,
                 bShowTiebreakers: !1,
               }),
-              s.a.createElement(qa, {
+              s.a.createElement(Ya, {
                 ePhase: t,
-                eRegion: Tt.k.SA,
+                eRegion: St.k.SA,
                 eDivision: a,
                 arrHighlights: r,
                 bShowLegend: !1,
@@ -33240,9 +33327,9 @@ var CLSTAMP = "6905869";
                 bNarrowList: !0,
                 bShowTiebreakers: !1,
               }),
-              s.a.createElement(qa, {
+              s.a.createElement(Ya, {
                 ePhase: t,
-                eRegion: Tt.k.WEU,
+                eRegion: St.k.WEU,
                 eDivision: a,
                 arrHighlights: r,
                 bShowLegend: !1,
@@ -33252,9 +33339,9 @@ var CLSTAMP = "6905869";
                 bNarrowList: !0,
                 bShowTiebreakers: !1,
               }),
-              s.a.createElement(qa, {
+              s.a.createElement(Ya, {
                 ePhase: t,
-                eRegion: Tt.k.EEU,
+                eRegion: St.k.EEU,
                 eDivision: a,
                 arrHighlights: r,
                 bShowLegend: !1,
@@ -33264,9 +33351,9 @@ var CLSTAMP = "6905869";
                 bNarrowList: !0,
                 bShowTiebreakers: !1,
               }),
-              s.a.createElement(qa, {
+              s.a.createElement(Ya, {
                 ePhase: t,
-                eRegion: Tt.k.CN,
+                eRegion: St.k.CN,
                 eDivision: a,
                 arrHighlights: r,
                 bShowLegend: !1,
@@ -33276,9 +33363,9 @@ var CLSTAMP = "6905869";
                 bNarrowList: !0,
                 bShowTiebreakers: !1,
               }),
-              s.a.createElement(qa, {
+              s.a.createElement(Ya, {
                 ePhase: t,
-                eRegion: Tt.k.SEA,
+                eRegion: St.k.SEA,
                 eDivision: a,
                 arrHighlights: r,
                 bShowLegend: !1,
@@ -33323,23 +33410,23 @@ var CLSTAMP = "6905869";
               )
           );
         }),
-        qn = a("uKoF"),
-        Yn = a.n(qn),
+        Yn = a("uKoF"),
+        qn = a.n(Yn),
         Kn = Object(m.a)(function () {
           var e = $n(),
-            t = Object(i.useState)(Tt.d.DIVISION_I),
+            t = Object(i.useState)(St.d.DIVISION_I),
             a = t[0],
             n = t[1];
-          if (Ot.a.Get().GetEventType(e) != Tt.g.LEAGUE) return null;
-          if (Ot.a.Get().GetSpoilerBlockState(e) == Tt.l.BLOCKED) return null;
+          if (Ot.a.Get().GetEventType(e) != St.g.LEAGUE) return null;
+          if (Ot.a.Get().GetSpoilerBlockState(e) == St.l.BLOCKED) return null;
           var r = [
-            { value: Tt.d.DIVISION_I, strLabel: "#dpc_division_i" },
-            { value: Tt.d.DIVISION_II, strLabel: "#dpc_division_ii" },
+            { value: St.d.DIVISION_I, strLabel: "#dpc_division_i" },
+            { value: St.d.DIVISION_II, strLabel: "#dpc_division_ii" },
           ];
           return s.a.createElement(
             "div",
             {
-              className: Yn.a.DPCLeagueStandingsSummary,
+              className: qn.a.DPCLeagueStandingsSummary,
               style: {
                 backgroundImage:
                   "url( " +
@@ -33349,10 +33436,10 @@ var CLSTAMP = "6905869";
             },
             s.a.createElement(
               "div",
-              { className: Yn.a.Header },
+              { className: qn.a.Header },
               s.a.createElement(
                 "div",
-                { className: Yn.a.Label },
+                { className: qn.a.Label },
                 Object(E.a)("#dpc_header_standings")
               ),
               s.a.createElement(yt, {
@@ -33362,8 +33449,8 @@ var CLSTAMP = "6905869";
                 setOption: n,
               })
             ),
-            s.a.createElement(zn, { ePhase: Tt.f.OVERALL, eDivision: a }),
-            s.a.createElement(S.a, {
+            s.a.createElement(zn, { ePhase: St.f.OVERALL, eDivision: a }),
+            s.a.createElement(T.a, {
               bottom: !0,
               color: "#161618",
               startPct: 85,
@@ -33437,7 +33524,7 @@ var CLSTAMP = "6905869";
       }
       var tr = Object(m.a)(function () {
           var e = $n();
-          return e != Tt.e.SPRING_2021_LEAGUE
+          return e != St.e.SPRING_2021_LEAGUE
             ? null
             : s.a.createElement(
                 "div",
@@ -33498,8 +33585,8 @@ var CLSTAMP = "6905869";
                         state: { bAutoScroll: !0 },
                         pathname: d.b.dpc_standings(
                           Object(Dt.j)(e),
-                          Object(Dt.i)(Tt.f.RESULTS),
-                          Ot.a.Get().GetDefaultRegion() + "_" + Tt.d.DIVISION_I
+                          Object(Dt.i)(St.f.RESULTS),
+                          Ot.a.Get().GetDefaultRegion() + "_" + St.d.DIVISION_I
                         ),
                       },
                       className: ia.a.EventResultsButton,
@@ -33511,7 +33598,7 @@ var CLSTAMP = "6905869";
         }),
         ar = Object(m.a)(function () {
           var e = $n();
-          return e != Tt.e.SPRING_2021_MAJOR
+          return e != St.e.SPRING_2021_MAJOR
             ? null
             : s.a.createElement(
                 "div",
@@ -33635,8 +33722,8 @@ var CLSTAMP = "6905869";
                         state: { bAutoScroll: !0 },
                         pathname: d.b.dpc_standings(
                           Object(Dt.j)(e),
-                          Object(Dt.i)(Tt.f.RESULTS),
-                          Ot.a.Get().GetDefaultRegion() + "_" + Tt.d.DIVISION_I
+                          Object(Dt.i)(St.f.RESULTS),
+                          Ot.a.Get().GetDefaultRegion() + "_" + St.d.DIVISION_I
                         ),
                       },
                       className: ia.a.EventResultsButton,
@@ -33648,7 +33735,7 @@ var CLSTAMP = "6905869";
         }),
         nr = Object(m.a)(function () {
           var e = $n();
-          return e != Tt.e.INTERNATIONAL_2021_QUALIFIERS
+          return e != St.e.INTERNATIONAL_2021_QUALIFIERS
             ? null
             : s.a.createElement(
                 "div",
@@ -33721,8 +33808,8 @@ var CLSTAMP = "6905869";
                         state: { bAutoScroll: !0 },
                         pathname: d.b.dpc_standings(
                           Object(Dt.j)(e),
-                          Object(Dt.i)(Tt.f.RESULTS),
-                          Ot.a.Get().GetDefaultRegion() + "_" + Tt.d.DIVISION_I
+                          Object(Dt.i)(St.f.RESULTS),
+                          Ot.a.Get().GetDefaultRegion() + "_" + St.d.DIVISION_I
                         ),
                       },
                       className: ia.a.EventResultsButton,
@@ -33734,7 +33821,7 @@ var CLSTAMP = "6905869";
         }),
         rr = Object(m.a)(function () {
           var e = $n();
-          return e != Tt.e.INTERNATIONAL_2021
+          return e != St.e.INTERNATIONAL_2021
             ? null
             : s.a.createElement(
                 "div",
@@ -33829,23 +33916,79 @@ var CLSTAMP = "6905869";
               );
         }),
         or = Object(m.a)(function () {
+          return $n() != St.e.WINTER_2021_LEAGUE
+            ? null
+            : s.a.createElement(
+                "div",
+                { className: ia.a.DPCHeaderWinter2021League },
+                s.a.createElement(
+                  "div",
+                  { className: ia.a.TextContainer },
+                  s.a.createElement(
+                    "div",
+                    { className: ia.a.EventTitle },
+                    Object(E.a)("#dpc_event_league")
+                  ),
+                  s.a.createElement(
+                    "div",
+                    { className: ia.a.EventSegment },
+                    Object(E.a)("#dpc_event_winter")
+                  ),
+                  s.a.createElement(
+                    "div",
+                    { className: ia.a.EventSubTitle },
+                    Object(E.a)("#dpc_event_2021season")
+                  ),
+                  s.a.createElement(
+                    "div",
+                    { className: ia.a.EventStartTitle },
+                    Object(E.a)("#dpc_event_league_start")
+                  ),
+                  s.a.createElement(
+                    "div",
+                    { className: ia.a.EventStartTime },
+                    s.a.createElement(Rt.a, {
+                      date: 16381728e5,
+                      format: "DD MMMM YYYY",
+                    })
+                  ),
+                  s.a.createElement(
+                    "div",
+                    { className: ia.a.EventEndTitle },
+                    Object(E.a)("#dpc_event_league_end")
+                  ),
+                  s.a.createElement(
+                    "div",
+                    { className: ia.a.EventEndTime },
+                    s.a.createElement(Rt.a, {
+                      date: 16429248e5,
+                      format: "DD MMMM YYYY",
+                    })
+                  )
+                )
+              );
+        }),
+        ir = Object(m.a)(function () {
           var e = $n(),
             t = "#212026",
             a = "#212026",
             n = 400;
           switch (e) {
-            case Tt.e.SPRING_2021_LEAGUE:
+            case St.e.SPRING_2021_LEAGUE:
               (t = "#0E4830"), (a = "#142030");
               break;
-            case Tt.e.SPRING_2021_MAJOR:
+            case St.e.SPRING_2021_MAJOR:
               (t = "#081121"), (a = "#081121");
               break;
-            case Tt.e.INTERNATIONAL_2021_QUALIFIERS:
-            case Tt.e.INTERNATIONAL_2021:
+            case St.e.INTERNATIONAL_2021_QUALIFIERS:
+            case St.e.INTERNATIONAL_2021:
               (t = "#141416"), (a = "#141416");
               break;
-            case Tt.e.INTERNATIONAL_2022:
+            case St.e.INTERNATIONAL_2022:
               n = 0;
+              break;
+            case St.e.WINTER_2021_LEAGUE:
+              (t = "#39445a"), (a = "#39445a");
           }
           return s.a.createElement(
             "div",
@@ -33868,12 +34011,13 @@ var CLSTAMP = "6905869";
             s.a.createElement(tr, null),
             s.a.createElement(ar, null),
             s.a.createElement(nr, null),
-            s.a.createElement(rr, null)
+            s.a.createElement(rr, null),
+            s.a.createElement(or, null)
           );
         }),
-        ir = Object(m.a)(function () {
+        sr = Object(m.a)(function () {
           var e = $n();
-          return Ot.a.Get().GetSpoilerBlockState(e) != Tt.l.UNKNOWN
+          return Ot.a.Get().GetSpoilerBlockState(e) != St.l.UNKNOWN
             ? null
             : s.a.createElement(
                 "div",
@@ -33991,7 +34135,7 @@ var CLSTAMP = "6905869";
                 )
               );
         }),
-        sr = Object(m.a)(function () {
+        lr = Object(m.a)(function () {
           var e = (function () {
               var e = Object(i.useState)(!0),
                 t = e[0],
@@ -34029,7 +34173,7 @@ var CLSTAMP = "6905869";
             r = Object(i.useState)(0),
             o = r[0],
             l = r[1],
-            c = Object(i.useState)(Tt.e.INVALID),
+            c = Object(i.useState)(St.e.INVALID),
             m = c[0],
             u = c[1],
             _ = Object(p.g)(),
@@ -34044,22 +34188,22 @@ var CLSTAMP = "6905869";
           }, []);
           var f = d.b.dpc_schedule(Object(Dt.j)(b));
           if (
-            ((null == v ? void 0 : v.eEventType) == Tt.g.INTERNATIONAL &&
+            ((null == v ? void 0 : v.eEventType) == St.g.INTERNATIONAL &&
             (null == v ? void 0 : v.bEventUpcoming)
               ? (f = d.b.dpc_ti_standings(Object(Dt.j)(b)))
-              : Ot.a.Get().GetSpoilerBlockState(b) == Tt.l.UNBLOCKED
+              : Ot.a.Get().GetSpoilerBlockState(b) == St.l.UNBLOCKED
               ? (f = d.b.dpc_watch(
-                  b == Tt.e.INVALID ? Object(Dt.b)() : Object(Dt.j)(b)
+                  b == St.e.INVALID ? Object(Dt.b)() : Object(Dt.j)(b)
                 ))
               : (null == v ? void 0 : v.bEventCompleted) &&
                 (f = d.b.dpc_standings(
                   Object(Dt.j)(b),
-                  Object(Dt.i)(Tt.f.RESULTS)
+                  Object(Dt.i)(St.f.RESULTS)
                 )),
             Object(i.useEffect)(
               function () {
                 ((e && (0 == a || o - a > 30)) || b != m) &&
-                  (b != m && (m != Tt.e.INVALID && _.push(f), u(b)),
+                  (b != m && (m != St.e.INVALID && _.push(f), u(b)),
                   n(o),
                   Ot.a
                     .Get()
@@ -34084,7 +34228,7 @@ var CLSTAMP = "6905869";
               },
               [g]
             ),
-            b == Tt.e.INVALID)
+            b == St.e.INVALID)
           )
             return s.a.createElement(p.a, { to: f });
           var y = Ot.a.Get().IsGCDown();
@@ -34100,9 +34244,9 @@ var CLSTAMP = "6905869";
               er,
               { eventContext: b },
               s.a.createElement(le.a, { bOverlapping: !1 }),
-              s.a.createElement(ir, null),
+              s.a.createElement(sr, null),
               s.a.createElement(Qt, null),
-              s.a.createElement(or, null),
+              s.a.createElement(ir, null),
               s.a.createElement(Ct, null),
               y &&
                 s.a.createElement(
@@ -34149,20 +34293,20 @@ var CLSTAMP = "6905869";
                   }),
                   s.a.createElement(p.a, { from: d.b.dpc_root(), to: f })
                 ),
-              s.a.createElement(T.a, null)
+              s.a.createElement(S.a, null)
             )
           );
         }),
-        lr = a("FBel"),
-        cr = a.n(lr);
-      function dr() {
+        cr = a("FBel"),
+        dr = a.n(cr);
+      function mr() {
         var e = un(),
           t = (e.height, e.width),
           a = 5;
         return t < 1300 && (a = 4), t < 1e3 && (a = 3), t < 600 && (a = 2), a;
       }
-      var mr,
-        ur = function (e) {
+      var ur,
+        pr = function (e) {
           var t = e.hero,
             a = e.hidden,
             n = e.pos,
@@ -34177,14 +34321,14 @@ var CLSTAMP = "6905869";
             case 2:
               r = "intelligence";
           }
-          var o = dr(),
+          var o = mr(),
             i = Math.max(0, n % o),
             l = Math.max(0, Math.floor(n / o));
           return s.a.createElement(
             u.b,
             {
               to: d.b.hero(t.name_english_loc.replace(/ /g, "").toLowerCase()),
-              className: Object(f.a)(cr.a.HeroIcon, a && cr.a.Hidden),
+              className: Object(f.a)(dr.a.HeroIcon, a && dr.a.Hidden),
               style: {
                 backgroundImage:
                   "url( " +
@@ -34198,28 +34342,28 @@ var CLSTAMP = "6905869";
                   " ) * 122px + " +
                   i +
                   " * ( 100% - " +
-                  cr.a.heroIconWidth +
+                  dr.a.heroIconWidth +
                   "px ) / 4 )",
-                top: "calc( " + l + " * " + cr.a.heroIconPaddedHeight + "px )",
+                top: "calc( " + l + " * " + dr.a.heroIconPaddedHeight + "px )",
               },
             },
             s.a.createElement(
               "div",
-              { className: cr.a.HeroNameContainer },
+              { className: dr.a.HeroNameContainer },
               s.a.createElement("img", {
                 src: h.a.IMG_URL + "icons/hero_" + r + ".png",
-                className: cr.a.PrimaryStatIcon,
+                className: dr.a.PrimaryStatIcon,
               }),
               s.a.createElement(
                 "div",
-                { className: cr.a.HeroName },
+                { className: dr.a.HeroName },
                 Object(E.a)(t.name_loc)
               )
             ),
             s.a.createElement(
               "div",
-              { className: cr.a.FadeContainer },
-              s.a.createElement(S.a, {
+              { className: dr.a.FadeContainer },
+              s.a.createElement(T.a, {
                 bottom: !0,
                 color: "#000000",
                 startPct: 50,
@@ -34229,7 +34373,7 @@ var CLSTAMP = "6905869";
             )
           );
         },
-        pr = function (e) {
+        _r = function (e) {
           var t = e.heroList,
             a = Object(i.useState)(0),
             n = a[0],
@@ -34256,13 +34400,13 @@ var CLSTAMP = "6905869";
             t.heroes.forEach(function (e) {
               return (_ += p(e) ? 1 : 0);
             });
-          var g = dr(),
-            b = parseInt(cr.a.heroIconPaddedHeight),
+          var g = mr(),
+            b = parseInt(dr.a.heroIconPaddedHeight),
             v = 0;
           return s.a.createElement(
             "div",
             {
-              className: cr.a.HeroGrid,
+              className: dr.a.HeroGrid,
               style: {
                 backgroundImage:
                   "url( " + h.a.IMG_URL + "backgrounds/greyfade.jpg )",
@@ -34271,42 +34415,42 @@ var CLSTAMP = "6905869";
             s.a.createElement(
               "div",
               {
-                className: cr.a.Header,
+                className: dr.a.Header,
                 "data-aos": "fade-in",
                 "data-aos-duration": "1000",
               },
-              s.a.createElement("div", { className: cr.a.Trapezoid }),
+              s.a.createElement("div", { className: dr.a.Trapezoid }),
               s.a.createElement(
                 "div",
-                { className: cr.a.TitleText },
+                { className: dr.a.TitleText },
                 Object(E.a)("#herogrid_choose")
               ),
               s.a.createElement(
                 "div",
-                { className: cr.a.SubtitleText },
+                { className: dr.a.SubtitleText },
                 Object(E.a)("#home_choose_body")
               )
             ),
             s.a.createElement(
               "div",
-              { className: cr.a.FilterContainer },
+              { className: dr.a.FilterContainer },
               s.a.createElement(
                 "div",
-                { className: cr.a.FilterLabel },
+                { className: dr.a.FilterLabel },
                 Object(E.a)("#herogrid_filter")
               ),
               s.a.createElement(
                 "div",
-                { className: cr.a.SpecificFilterContainer },
+                { className: dr.a.SpecificFilterContainer },
                 s.a.createElement(
                   "div",
-                  { className: cr.a.SelectorLabel },
+                  { className: dr.a.SelectorLabel },
                   Object(E.a)("#herogrid_attribute")
                 ),
                 s.a.createElement("div", {
                   className: Object(f.a)(
-                    cr.a.Filter,
-                    1 == n && 0 == m.length && cr.a.Selected
+                    dr.a.Filter,
+                    1 == n && 0 == m.length && dr.a.Selected
                   ),
                   style: {
                     backgroundImage:
@@ -34320,8 +34464,8 @@ var CLSTAMP = "6905869";
                 }),
                 s.a.createElement("div", {
                   className: Object(f.a)(
-                    cr.a.Filter,
-                    2 == n && 0 == m.length && cr.a.Selected
+                    dr.a.Filter,
+                    2 == n && 0 == m.length && dr.a.Selected
                   ),
                   style: {
                     backgroundImage:
@@ -34335,8 +34479,8 @@ var CLSTAMP = "6905869";
                 }),
                 s.a.createElement("div", {
                   className: Object(f.a)(
-                    cr.a.Filter,
-                    3 == n && 0 == m.length && cr.a.Selected
+                    dr.a.Filter,
+                    3 == n && 0 == m.length && dr.a.Selected
                   ),
                   style: {
                     backgroundImage:
@@ -34351,16 +34495,16 @@ var CLSTAMP = "6905869";
               ),
               s.a.createElement(
                 "div",
-                { className: cr.a.SpecificFilterContainer },
+                { className: dr.a.SpecificFilterContainer },
                 s.a.createElement(
                   "div",
-                  { className: cr.a.SelectorLabel },
+                  { className: dr.a.SelectorLabel },
                   Object(E.a)("#herogrid_complexity")
                 ),
                 s.a.createElement("div", {
                   className: Object(f.a)(
-                    cr.a.Filter,
-                    l >= 1 && 0 == m.length && cr.a.Selected
+                    dr.a.Filter,
+                    l >= 1 && 0 == m.length && dr.a.Selected
                   ),
                   style: {
                     backgroundImage:
@@ -34372,8 +34516,8 @@ var CLSTAMP = "6905869";
                 }),
                 s.a.createElement("div", {
                   className: Object(f.a)(
-                    cr.a.Filter,
-                    l >= 2 && 0 == m.length && cr.a.Selected
+                    dr.a.Filter,
+                    l >= 2 && 0 == m.length && dr.a.Selected
                   ),
                   style: {
                     backgroundImage:
@@ -34385,8 +34529,8 @@ var CLSTAMP = "6905869";
                 }),
                 s.a.createElement("div", {
                   className: Object(f.a)(
-                    cr.a.Filter,
-                    l >= 3 && 0 == m.length && cr.a.Selected
+                    dr.a.Filter,
+                    l >= 3 && 0 == m.length && dr.a.Selected
                   ),
                   style: {
                     backgroundImage:
@@ -34399,12 +34543,12 @@ var CLSTAMP = "6905869";
               ),
               s.a.createElement(
                 "div",
-                { className: cr.a.SearchBarContainer },
+                { className: dr.a.SearchBarContainer },
                 s.a.createElement(
                   "div",
-                  { className: cr.a.SearchBar },
+                  { className: dr.a.SearchBar },
                   s.a.createElement("div", {
-                    className: cr.a.MagnifyingGlass,
+                    className: dr.a.MagnifyingGlass,
                     style: {
                       backgroundImage:
                         "url( " + h.a.IMG_URL + "icons/search.svg )",
@@ -34426,20 +34570,20 @@ var CLSTAMP = "6905869";
             ),
             s.a.createElement(
               "div",
-              { className: Object(f.a)(cr.a.StateLoading, !t && cr.a.Show) },
+              { className: Object(f.a)(dr.a.StateLoading, !t && dr.a.Show) },
               Object(E.a)("#loading")
             ),
             s.a.createElement(
               "div",
               {
-                className: Object(f.a)(cr.a.NoHeroes, t && 0 == _ && cr.a.Show),
+                className: Object(f.a)(dr.a.NoHeroes, t && 0 == _ && dr.a.Show),
               },
               Object(E.a)("#herogrid_noheroes")
             ),
             s.a.createElement(
               "div",
               {
-                className: cr.a.GridList,
+                className: dr.a.GridList,
                 style: { height: Math.ceil(_ / g) * b + 40 },
               },
               t &&
@@ -34452,7 +34596,7 @@ var CLSTAMP = "6905869";
                     var t = p(e);
                     return (
                       (v += t ? 1 : 0),
-                      s.a.createElement(ur, {
+                      s.a.createElement(pr, {
                         key: e.id,
                         hero: e,
                         hidden: !t,
@@ -34463,11 +34607,11 @@ var CLSTAMP = "6905869";
             )
           );
         },
-        _r = Object(m.a)(function (e) {
+        gr = Object(m.a)(function (e) {
           var t = ca.a.Get().getHeroList();
           return s.a.createElement(
             "div",
-            { className: cr.a.HeroGridPage },
+            { className: dr.a.HeroGridPage },
             s.a.createElement(le.a, { bOverlapping: !0 }),
             s.a.createElement(pt.a, null),
             s.a.createElement(
@@ -34475,13 +34619,13 @@ var CLSTAMP = "6905869";
               null,
               s.a.createElement("title", null, Object(E.a)("#herogrid_title"))
             ),
-            s.a.createElement(pr, { heroList: t }),
-            s.a.createElement(T.a, null)
+            s.a.createElement(_r, { heroList: t }),
+            s.a.createElement(S.a, null)
           );
         }),
-        gr = a("Kk3P"),
-        hr = a.n(gr),
-        br = [
+        hr = a("Kk3P"),
+        br = a.n(hr),
+        vr = [
           "#hero_carry",
           "#hero_support",
           "#hero_nuker",
@@ -34492,16 +34636,16 @@ var CLSTAMP = "6905869";
           "#hero_pusher",
           "#hero_initiator",
         ],
-        vr = function (e) {
+        fr = function (e) {
           var t = e.heroname.split("npc_dota_hero_").pop();
           return t
             ? s.a.createElement(
                 "div",
-                { className: Object(f.a)(hr.a.HeroPortraitContainer, t) },
+                { className: Object(f.a)(br.a.HeroPortraitContainer, t) },
                 s.a.createElement(
                   "video",
                   {
-                    className: hr.a.HeroPortrait,
+                    className: br.a.HeroPortrait,
                     poster: h.a.VIDEO_URL + "heroes/renders/" + t + ".png",
                     autoPlay: !0,
                     preload: "auto",
@@ -34520,7 +34664,7 @@ var CLSTAMP = "6905869";
               )
             : null;
         },
-        fr = function (e) {
+        Er = function (e) {
           var t = e.heroData,
             a = Object(i.useState)(!1),
             n = a[0],
@@ -34547,39 +34691,39 @@ var CLSTAMP = "6905869";
           }
           return s.a.createElement(
             "div",
-            { className: hr.a.HeroSummary },
+            { className: br.a.HeroSummary },
             s.a.createElement(
               "div",
-              { className: hr.a.HeroTypeTitle },
+              { className: br.a.HeroTypeTitle },
               s.a.createElement("img", {
                 src: h.a.IMG_URL + "icons/hero_" + o + ".png",
-                className: hr.a.PrimaryStatIcon,
+                className: br.a.PrimaryStatIcon,
               }),
               s.a.createElement(
                 "div",
-                { className: hr.a.PrimaryStat },
+                { className: br.a.PrimaryStat },
                 Object(E.a)("#hero_" + o)
               )
             ),
-            s.a.createElement("div", { className: hr.a.HeroName }, t.name_loc),
+            s.a.createElement("div", { className: br.a.HeroName }, t.name_loc),
             s.a.createElement(
               "div",
-              { className: hr.a.HeroOneLiner },
+              { className: br.a.HeroOneLiner },
               t.npe_desc_loc
             ),
             s.a.createElement(
               "div",
-              { className: hr.a.BioOrSummaryContainer },
+              { className: br.a.BioOrSummaryContainer },
               s.a.createElement(
                 "div",
                 {
-                  className: Object(f.a)(hr.a.BioContainer, !n && hr.a.Hidden),
+                  className: Object(f.a)(br.a.BioContainer, !n && br.a.Hidden),
                 },
                 Object(E.a)(t.bio_loc),
                 s.a.createElement(
                   "div",
                   {
-                    className: hr.a.ShowBio,
+                    className: br.a.ShowBio,
                     onClick: function () {
                       return r(!1);
                     },
@@ -34591,18 +34735,18 @@ var CLSTAMP = "6905869";
                 "div",
                 {
                   className: Object(f.a)(
-                    hr.a.SummaryContainer,
-                    n && hr.a.Hidden
+                    br.a.SummaryContainer,
+                    n && br.a.Hidden
                   ),
                 },
                 s.a.createElement(
                   "div",
-                  { className: hr.a.Lore },
+                  { className: br.a.Lore },
                   Object(E.a)(t.hype_loc),
                   s.a.createElement(
                     "div",
                     {
-                      className: hr.a.ShowBio,
+                      className: br.a.ShowBio,
                       onClick: function () {
                         return r(!0);
                       },
@@ -34612,63 +34756,63 @@ var CLSTAMP = "6905869";
                 ),
                 s.a.createElement(
                   "div",
-                  { className: hr.a.AttackTypeContainer },
+                  { className: br.a.AttackTypeContainer },
                   s.a.createElement(
                     "div",
-                    { className: hr.a.Title },
+                    { className: br.a.Title },
                     Object(E.a)("#hero_attack_type")
                   ),
                   s.a.createElement(
                     "div",
-                    { className: hr.a.AttackTypeDetail },
+                    { className: br.a.AttackTypeDetail },
                     s.a.createElement("img", {
-                      className: hr.a.AttackTypeIcon,
+                      className: br.a.AttackTypeIcon,
                       src: h.a.IMG_URL + "icons/" + l + ".svg",
                     }),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.Value },
+                      { className: br.a.Value },
                       Object(E.a)("#hero_attack_type_" + l)
                     )
                   )
                 ),
                 s.a.createElement(
                   "div",
-                  { className: hr.a.ComplexityContainer },
+                  { className: br.a.ComplexityContainer },
                   s.a.createElement(
                     "div",
-                    { className: hr.a.Title },
+                    { className: br.a.Title },
                     Object(E.a)("#hero_complexity")
                   ),
                   s.a.createElement(
                     "div",
-                    { className: hr.a.PipContainer },
+                    { className: br.a.PipContainer },
                     s.a.createElement("div", {
                       className: Object(f.a)(
-                        hr.a.DiamondPip,
-                        t.complexity >= 1 && hr.a.Filled
+                        br.a.DiamondPip,
+                        t.complexity >= 1 && br.a.Filled
                       ),
                     }),
                     s.a.createElement("div", {
                       className: Object(f.a)(
-                        hr.a.DiamondPip,
-                        t.complexity >= 2 && hr.a.Filled
+                        br.a.DiamondPip,
+                        t.complexity >= 2 && br.a.Filled
                       ),
                     }),
                     s.a.createElement("div", {
                       className: Object(f.a)(
-                        hr.a.DiamondPip,
-                        t.complexity >= 3 && hr.a.Filled
+                        br.a.DiamondPip,
+                        t.complexity >= 3 && br.a.Filled
                       ),
                     })
                   )
                 ),
-                s.a.createElement(yr, { heroData: t })
+                s.a.createElement(Nr, { heroData: t })
               )
             )
           );
         },
-        Er = function (e) {
+        yr = function (e) {
           var t = e.heroData;
           if (!t) return null;
           var a = "";
@@ -34684,30 +34828,30 @@ var CLSTAMP = "6905869";
           }
           return s.a.createElement(
             "div",
-            { className: hr.a.HeroVerticalBar },
+            { className: br.a.HeroVerticalBar },
             s.a.createElement("img", {
               src: h.a.IMG_URL + "icons/hero_" + a + ".png",
-              className: hr.a.PrimaryStatIcon,
+              className: br.a.PrimaryStatIcon,
             }),
-            s.a.createElement("div", { className: hr.a.HeroName }, t.name_loc),
-            s.a.createElement("div", { className: hr.a.HeroID }, t.order_id),
-            s.a.createElement("div", { className: hr.a.Line })
+            s.a.createElement("div", { className: br.a.HeroName }, t.name_loc),
+            s.a.createElement("div", { className: br.a.HeroID }, t.order_id),
+            s.a.createElement("div", { className: br.a.Line })
           );
         },
-        yr = function (e) {
+        Nr = function (e) {
           var t = e.heroData;
           return t
             ? s.a.createElement(
                 "div",
-                { className: hr.a.TopAbilitySelector },
+                { className: br.a.TopAbilitySelector },
                 s.a.createElement(
                   "div",
-                  { className: hr.a.Title },
+                  { className: br.a.Title },
                   Object(E.a)("#hero_abilities")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: hr.a.AbilityList },
+                  { className: br.a.AbilityList },
                   t.abilities
                     .filter(function (e) {
                       return (
@@ -34736,33 +34880,33 @@ var CLSTAMP = "6905869";
                         "div",
                         {
                           key: e.name,
-                          className: hr.a.TopAbilityContainer,
+                          className: br.a.TopAbilityContainer,
                           onClick: function () {
                             window.scrollTo({
                               top: document.body.scrollHeight,
                               behavior: "smooth",
                             }),
-                              so.setSelectedAbilityIndex(a);
+                              lo.setSelectedAbilityIndex(a);
                           },
                         },
                         s.a.createElement("img", {
-                          className: hr.a.AbilitySelectable,
+                          className: br.a.AbilitySelectable,
                           src: h.a.IMG_URL + "abilities/" + e.name + ".png",
                         }),
                         s.a.createElement(
                           "div",
-                          { className: hr.a.AbilityTooltip },
+                          { className: br.a.AbilityTooltip },
                           s.a.createElement(
                             "div",
-                            { className: hr.a.TooltipBody },
+                            { className: br.a.TooltipBody },
                             s.a.createElement(
                               "div",
-                              { className: hr.a.Video },
+                              { className: br.a.Video },
                               s.a.createElement(
                                 "video",
                                 {
                                   key: e.name,
-                                  className: hr.a.HeroPortrait,
+                                  className: br.a.HeroPortrait,
                                   autoPlay: !0,
                                   preload: "auto",
                                   muted: !0,
@@ -34800,16 +34944,16 @@ var CLSTAMP = "6905869";
                             ),
                             s.a.createElement(
                               "div",
-                              { className: hr.a.Description },
+                              { className: br.a.Description },
                               s.a.createElement(
                                 "div",
-                                { className: hr.a.TooltipTitle },
+                                { className: br.a.TooltipTitle },
                                 e.name_loc,
                                 " "
                               ),
                               s.a.createElement(
                                 "div",
-                                { className: hr.a.TooltipDescription },
+                                { className: br.a.TooltipDescription },
                                 Object(E.a)(n),
                                 " "
                               )
@@ -34822,21 +34966,21 @@ var CLSTAMP = "6905869";
               )
             : null;
         },
-        Nr = function (e) {
+        Ir = function (e) {
           var t = e.heroData;
           return t
             ? s.a.createElement(
                 "div",
-                { className: hr.a.DetailsAttributes },
+                { className: br.a.DetailsAttributes },
                 s.a.createElement(
                   "div",
-                  { className: hr.a.TopAttributesSection },
+                  { className: br.a.TopAttributesSection },
                   s.a.createElement(
                     "div",
-                    { className: hr.a.PortraitContainer },
+                    { className: br.a.PortraitContainer },
                     s.a.createElement("img", {
                       key: t.id,
-                      className: hr.a.Portrait,
+                      className: br.a.Portrait,
                       src:
                         h.a.IMG_URL +
                         "heroes/" +
@@ -34845,30 +34989,30 @@ var CLSTAMP = "6905869";
                     }),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.HealthBar },
+                      { className: br.a.HealthBar },
                       s.a.createElement(
                         "div",
-                        { className: hr.a.BarNumberMajor },
+                        { className: br.a.BarNumberMajor },
                         t.max_health
                       ),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.BarNumberMinor },
+                        { className: br.a.BarNumberMinor },
                         "+",
                         t.health_regen.toFixed(1)
                       )
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ManaBar },
+                      { className: br.a.ManaBar },
                       s.a.createElement(
                         "div",
-                        { className: hr.a.BarNumberMajor },
+                        { className: br.a.BarNumberMajor },
                         t.max_mana
                       ),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.BarNumberMinor },
+                        { className: br.a.BarNumberMinor },
                         "+",
                         t.mana_regen.toFixed(1)
                       )
@@ -34876,60 +35020,60 @@ var CLSTAMP = "6905869";
                   ),
                   s.a.createElement(
                     "div",
-                    { className: hr.a.AttributesContainer },
+                    { className: br.a.AttributesContainer },
                     s.a.createElement(
                       "div",
-                      { className: hr.a.SingleAttributeContainer },
+                      { className: br.a.SingleAttributeContainer },
                       s.a.createElement("img", {
-                        className: hr.a.AttributeIcon,
+                        className: br.a.AttributeIcon,
                         src: h.a.IMG_URL + "icons/hero_strength.png",
                       }),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AttributeValue },
+                        { className: br.a.AttributeValue },
                         t.str_base
                       ),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AttributeGain },
+                        { className: br.a.AttributeGain },
                         "+",
                         t.str_gain.toFixed(1)
                       )
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.SingleAttributeContainer },
+                      { className: br.a.SingleAttributeContainer },
                       s.a.createElement("img", {
-                        className: hr.a.AttributeIcon,
+                        className: br.a.AttributeIcon,
                         src: h.a.IMG_URL + "icons/hero_agility.png",
                       }),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AttributeValue },
+                        { className: br.a.AttributeValue },
                         t.agi_base
                       ),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AttributeGain },
+                        { className: br.a.AttributeGain },
                         "+",
                         t.agi_gain.toFixed(1)
                       )
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.SingleAttributeContainer },
+                      { className: br.a.SingleAttributeContainer },
                       s.a.createElement("img", {
-                        className: hr.a.AttributeIcon,
+                        className: br.a.AttributeIcon,
                         src: h.a.IMG_URL + "icons/hero_intelligence.png",
                       }),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AttributeValue },
+                        { className: br.a.AttributeValue },
                         t.int_base
                       ),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AttributeGain },
+                        { className: br.a.AttributeGain },
                         "+",
                         t.int_gain.toFixed(1)
                       )
@@ -34938,45 +35082,45 @@ var CLSTAMP = "6905869";
                 ),
                 s.a.createElement(
                   "div",
-                  { className: hr.a.DetailsSectionHeader },
+                  { className: br.a.DetailsSectionHeader },
                   Object(E.a)("#hero_attributes")
                 )
               )
             : null;
         },
-        Ir = function (e) {
+        Or = function (e) {
           var t = e.name,
             a = e.value;
           return s.a.createElement(
             "div",
-            { className: hr.a.Role },
+            { className: br.a.Role },
             s.a.createElement(
               "div",
-              { className: hr.a.RoleName },
+              { className: br.a.RoleName },
               Object(E.a)(t)
             ),
             s.a.createElement(
               "div",
-              { className: hr.a.BarContainer },
-              s.a.createElement("div", { className: hr.a.BarBackground }),
+              { className: br.a.BarContainer },
+              s.a.createElement("div", { className: br.a.BarBackground }),
               s.a.createElement("div", {
-                className: hr.a.BarFilled,
+                className: br.a.BarFilled,
                 style: { width: 33.3 * a + "%" },
               })
             )
           );
         },
-        Or = function (e) {
+        Dr = function (e) {
           var t = e.heroData;
           return t
             ? s.a.createElement(
                 "div",
-                { className: hr.a.DetailsRoles },
+                { className: br.a.DetailsRoles },
                 s.a.createElement(
                   "div",
-                  { className: hr.a.RolesList },
-                  br.map(function (e, a) {
-                    return s.a.createElement(Ir, {
+                  { className: br.a.RolesList },
+                  vr.map(function (e, a) {
+                    return s.a.createElement(Or, {
                       key: e,
                       name: e,
                       value: t.role_levels[a],
@@ -34985,52 +35129,52 @@ var CLSTAMP = "6905869";
                 ),
                 s.a.createElement(
                   "div",
-                  { className: hr.a.DetailsSectionHeader },
+                  { className: br.a.DetailsSectionHeader },
                   Object(E.a)("#hero_roles")
                 )
               )
             : null;
         },
-        Dr = function (e) {
+        Sr = function (e) {
           var t = e.heroData;
           return t
             ? s.a.createElement(
                 "div",
-                { className: hr.a.DetailsStats },
+                { className: br.a.DetailsStats },
                 s.a.createElement(
                   "div",
-                  { className: hr.a.StatsList },
+                  { className: br.a.StatsList },
                   s.a.createElement(
                     "div",
-                    { className: hr.a.HeroValuesSection },
+                    { className: br.a.HeroValuesSection },
                     s.a.createElement(
                       "div",
-                      { className: hr.a.HeroValueTitle },
+                      { className: br.a.HeroValueTitle },
                       Object(E.a)("#hero_attack")
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ValueElement },
+                      { className: br.a.ValueElement },
                       s.a.createElement("img", {
-                        className: hr.a.SwordIcon,
+                        className: br.a.SwordIcon,
                         src: h.a.IMG_URL + "/heroes/stats/icon_damage.png",
                       }),
                       t.damage_min.toFixed(0) + "-" + t.damage_max.toFixed(0)
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ValueElement },
+                      { className: br.a.ValueElement },
                       s.a.createElement("img", {
-                        className: hr.a.SwordIcon,
+                        className: br.a.SwordIcon,
                         src: h.a.IMG_URL + "/heroes/stats/icon_attack_time.png",
                       }),
                       t.attack_rate.toFixed(1)
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ValueElement },
+                      { className: br.a.ValueElement },
                       s.a.createElement("img", {
-                        className: hr.a.SwordIcon,
+                        className: br.a.SwordIcon,
                         src:
                           h.a.IMG_URL + "/heroes/stats/icon_attack_range.png",
                       }),
@@ -35040,9 +35184,9 @@ var CLSTAMP = "6905869";
                       t.projectile_speed > 0 &&
                       s.a.createElement(
                         "div",
-                        { className: hr.a.ValueElement },
+                        { className: br.a.ValueElement },
                         s.a.createElement("img", {
-                          className: hr.a.SwordIcon,
+                          className: br.a.SwordIcon,
                           src:
                             h.a.IMG_URL +
                             "/heroes/stats/icon_projectile_speed.png",
@@ -35055,29 +35199,29 @@ var CLSTAMP = "6905869";
                     "div",
                     {
                       className: Object(f.a)(
-                        hr.a.HeroValuesSection,
-                        hr.a.Lighter
+                        br.a.HeroValuesSection,
+                        br.a.Lighter
                       ),
                     },
                     s.a.createElement(
                       "div",
-                      { className: hr.a.HeroValueTitle },
+                      { className: br.a.HeroValueTitle },
                       Object(E.a)("#hero_defense")
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ValueElement },
+                      { className: br.a.ValueElement },
                       s.a.createElement("img", {
-                        className: hr.a.SwordIcon,
+                        className: br.a.SwordIcon,
                         src: h.a.IMG_URL + "/heroes/stats/icon_armor.png",
                       }),
                       t.armor.toFixed(1)
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ValueElement },
+                      { className: br.a.ValueElement },
                       s.a.createElement("img", {
-                        className: hr.a.SwordIcon,
+                        className: br.a.SwordIcon,
                         src:
                           h.a.IMG_URL + "/heroes/stats/icon_magic_resist.png",
                       }),
@@ -35086,17 +35230,17 @@ var CLSTAMP = "6905869";
                   ),
                   s.a.createElement(
                     "div",
-                    { className: hr.a.HeroValuesSection },
+                    { className: br.a.HeroValuesSection },
                     s.a.createElement(
                       "div",
-                      { className: hr.a.HeroValueTitle },
+                      { className: br.a.HeroValueTitle },
                       Object(E.a)("#hero_mobility")
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ValueElement },
+                      { className: br.a.ValueElement },
                       s.a.createElement("img", {
-                        className: hr.a.SwordIcon,
+                        className: br.a.SwordIcon,
                         src:
                           h.a.IMG_URL + "/heroes/stats/icon_movement_speed.png",
                       }),
@@ -35104,18 +35248,18 @@ var CLSTAMP = "6905869";
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ValueElement },
+                      { className: br.a.ValueElement },
                       s.a.createElement("img", {
-                        className: hr.a.SwordIcon,
+                        className: br.a.SwordIcon,
                         src: h.a.IMG_URL + "/heroes/stats/icon_turn_rate.png",
                       }),
                       t.turn_rate.toFixed(1)
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.ValueElement },
+                      { className: br.a.ValueElement },
                       s.a.createElement("img", {
-                        className: hr.a.SwordIcon,
+                        className: br.a.SwordIcon,
                         src: h.a.IMG_URL + "/heroes/stats/icon_vision.png",
                       }),
                       t.sight_range_day.toFixed(0) +
@@ -35126,7 +35270,7 @@ var CLSTAMP = "6905869";
                 ),
                 s.a.createElement(
                   "div",
-                  { className: hr.a.DetailsSectionHeader },
+                  { className: br.a.DetailsSectionHeader },
                   Object(E.a)("#hero_stats")
                 )
               )
@@ -35136,21 +35280,21 @@ var CLSTAMP = "6905869";
           var t = e.heroData;
           return s.a.createElement(
             "div",
-            { className: hr.a.DetailsBar },
-            s.a.createElement(Nr, { heroData: t }),
-            s.a.createElement("div", { className: hr.a.VerticalSeperator }),
-            s.a.createElement(Or, { heroData: t }),
-            s.a.createElement("div", { className: hr.a.VerticalSeperator }),
-            s.a.createElement(Dr, { heroData: t })
+            { className: br.a.DetailsBar },
+            s.a.createElement(Ir, { heroData: t }),
+            s.a.createElement("div", { className: br.a.VerticalSeperator }),
+            s.a.createElement(Dr, { heroData: t }),
+            s.a.createElement("div", { className: br.a.VerticalSeperator }),
+            s.a.createElement(Sr, { heroData: t })
           );
         },
-        Sr = Object(m.a)(function (e) {
+        Lr = Object(m.a)(function (e) {
           var t = e.heroData,
             a = Object(i.useState)(!1),
             n = a[0],
             r = a[1];
           if (!t) return null;
-          var o = so.getSelectedAbilityIndex(),
+          var o = lo.getSelectedAbilityIndex(),
             l =
               t.abilities.filter(function (e) {
                 return e.ability_is_granted_by_shard;
@@ -35278,11 +35422,11 @@ var CLSTAMP = "6905869";
           var O = t.name.replace("npc_dota_hero_", ""),
             D = d.name;
           m && (D = O + "_aghanims_shard"), u && (D = O + "_aghanims_scepter");
-          var T = y;
-          m && !d.ability_is_granted_by_shard && (T = I),
-            u && !d.ability_is_granted_by_scepter && (T = N);
-          var S = function (e) {
-              so.setSelectedAbilityIndex(e), r(!0);
+          var S = y;
+          m && !d.ability_is_granted_by_shard && (S = I),
+            u && !d.ability_is_granted_by_scepter && (S = N);
+          var T = function (e) {
+              lo.setSelectedAbilityIndex(e), r(!0);
             },
             L = u && d.ability_has_scepter && !d.ability_is_granted_by_scepter,
             C = m && d.ability_has_shard && !d.ability_is_granted_by_shard,
@@ -35290,15 +35434,15 @@ var CLSTAMP = "6905869";
             w = m && d.ability_is_granted_by_shard;
           return s.a.createElement(
             "div",
-            { className: hr.a.HeroAbilities },
+            { className: br.a.HeroAbilities },
             s.a.createElement(
               "div",
-              { className: hr.a.AbilityLeft },
+              { className: br.a.AbilityLeft },
               s.a.createElement(
                 "div",
-                { className: hr.a.VideoContainer },
+                { className: br.a.VideoContainer },
                 s.a.createElement("div", {
-                  className: Object(f.a)(hr.a.FadeUp, n && hr.a.DoFadeAnim),
+                  className: Object(f.a)(br.a.FadeUp, n && br.a.DoFadeAnim),
                   onAnimationEnd: function () {
                     return r(!1);
                   },
@@ -35307,7 +35451,7 @@ var CLSTAMP = "6905869";
                   "video",
                   {
                     key: D,
-                    className: hr.a.HeroPortrait,
+                    className: br.a.HeroPortrait,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -35327,7 +35471,7 @@ var CLSTAMP = "6905869";
               ),
               s.a.createElement(
                 "div",
-                { className: hr.a.AbilitySelector },
+                { className: br.a.AbilitySelector },
                 t.abilities.map(function (e, t) {
                   return e.ability_is_granted_by_scepter ||
                     e.ability_is_granted_by_shard ||
@@ -35338,8 +35482,8 @@ var CLSTAMP = "6905869";
                     : s.a.createElement("div", {
                         key: e.name,
                         className: Object(f.a)(
-                          hr.a.AbilitySelectable,
-                          t != o && hr.a.NotSelected
+                          br.a.AbilitySelectable,
+                          t != o && br.a.NotSelected
                         ),
                         style: {
                           backgroundImage:
@@ -35350,7 +35494,7 @@ var CLSTAMP = "6905869";
                             ".png )",
                         },
                         onClick: function () {
-                          return S(t);
+                          return T(t);
                         },
                       });
                 }),
@@ -35360,9 +35504,9 @@ var CLSTAMP = "6905869";
                     {
                       key: l.name + "_shard",
                       className: Object(f.a)(
-                        hr.a.AbilitySelectable,
-                        hr.a.Shard,
-                        -1 != o && hr.a.NotSelected
+                        br.a.AbilitySelectable,
+                        br.a.Shard,
+                        -1 != o && br.a.NotSelected
                       ),
                       style: {
                         backgroundImage:
@@ -35373,11 +35517,11 @@ var CLSTAMP = "6905869";
                           ".png )",
                       },
                       onClick: function () {
-                        return S(-1);
+                        return T(-1);
                       },
                     },
                     s.a.createElement("div", {
-                      className: hr.a.SubIcon,
+                      className: br.a.SubIcon,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -35392,9 +35536,9 @@ var CLSTAMP = "6905869";
                     {
                       key: c.name + "_scepter",
                       className: Object(f.a)(
-                        hr.a.AbilitySelectable,
-                        hr.a.Scepter,
-                        -2 != o && hr.a.NotSelected
+                        br.a.AbilitySelectable,
+                        br.a.Scepter,
+                        -2 != o && br.a.NotSelected
                       ),
                       style: {
                         backgroundImage:
@@ -35405,11 +35549,11 @@ var CLSTAMP = "6905869";
                           ".png )",
                       },
                       onClick: function () {
-                        return S(-2);
+                        return T(-2);
                       },
                     },
                     s.a.createElement("div", {
-                      className: hr.a.SubIcon,
+                      className: br.a.SubIcon,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -35422,106 +35566,106 @@ var CLSTAMP = "6905869";
             ),
             s.a.createElement(
               "div",
-              { className: hr.a.AbilityRight },
+              { className: br.a.AbilityRight },
               s.a.createElement(
                 "div",
-                { className: hr.a.AbilityInfoContainer },
+                { className: br.a.AbilityInfoContainer },
                 s.a.createElement(
                   "div",
-                  { className: hr.a.AbilityMain },
+                  { className: br.a.AbilityMain },
                   s.a.createElement("img", {
-                    className: hr.a.AbilityImage,
+                    className: br.a.AbilityImage,
                     src: h.a.IMG_URL + "abilities/" + d.name + ".png",
                   }),
                   s.a.createElement(
                     "div",
-                    { className: hr.a.AbilityInfo },
+                    { className: br.a.AbilityInfo },
                     s.a.createElement(
                       "div",
-                      { className: hr.a.AbilityName },
+                      { className: br.a.AbilityName },
                       d.name_loc
                     ),
                     L &&
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AghType },
+                        { className: br.a.AghType },
                         Object(E.a)("#ability_upgrade_scepter")
                       ),
                     C &&
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AghType },
+                        { className: br.a.AghType },
                         Object(E.a)("#ability_upgrade_shard")
                       ),
                     j &&
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AghType },
+                        { className: br.a.AghType },
                         Object(E.a)("#ability_new_scepter")
                       ),
                     w &&
                       s.a.createElement(
                         "div",
-                        { className: hr.a.AghType },
+                        { className: br.a.AghType },
                         Object(E.a)("#ability_new_shard")
                       ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.AbilityDesc },
-                      Object(E.a)(T)
+                      { className: br.a.AbilityDesc },
+                      Object(E.a)(S)
                     )
                   )
                 ),
                 s.a.createElement(
                   "div",
-                  { className: hr.a.AbilityDetails },
+                  { className: br.a.AbilityDetails },
                   s.a.createElement(
                     "div",
                     {
                       className: Object(f.a)(
-                        hr.a.GenericValues,
-                        (L || C) && hr.a.Hidden
+                        br.a.GenericValues,
+                        (L || C) && br.a.Hidden
                       ),
                     },
                     s.a.createElement(
                       "div",
-                      { className: hr.a.Column },
+                      { className: br.a.Column },
                       s.a.createElement(
                         "div",
-                        { className: hr.a.DetailsValues },
+                        { className: br.a.DetailsValues },
                         p &&
                           s.a.createElement(
                             "div",
-                            { className: hr.a.ValueElement },
+                            { className: br.a.ValueElement },
                             Object(E.a)("#hero_ability"),
                             ":",
                             s.a.createElement(
                               "div",
-                              { className: hr.a.ValueValue },
+                              { className: br.a.ValueValue },
                               Object(E.a)(p)
                             )
                           ),
                         g &&
                           s.a.createElement(
                             "div",
-                            { className: hr.a.ValueElement },
+                            { className: br.a.ValueElement },
                             Object(E.a)("#hero_affects"),
                             ":",
                             s.a.createElement(
                               "div",
-                              { className: hr.a.ValueValue },
+                              { className: br.a.ValueValue },
                               Object(E.a)(g)
                             )
                           ),
                         b &&
                           s.a.createElement(
                             "div",
-                            { className: hr.a.ValueElement },
+                            { className: br.a.ValueElement },
                             Object(E.a)("#ability_damage"),
                             ":",
                             s.a.createElement(
                               "div",
-                              { className: hr.a.ValueValue },
+                              { className: br.a.ValueValue },
                               Object(E.a)(b)
                             )
                           )
@@ -35529,31 +35673,31 @@ var CLSTAMP = "6905869";
                     ),
                     s.a.createElement(
                       "div",
-                      { className: hr.a.Column },
+                      { className: br.a.Column },
                       s.a.createElement(
                         "div",
-                        { className: hr.a.DetailsValues },
+                        { className: br.a.DetailsValues },
                         _ &&
                           s.a.createElement(
                             "div",
-                            { className: hr.a.ValueElement },
+                            { className: br.a.ValueElement },
                             Object(E.a)("#hero_spell_immunity"),
                             ":",
                             s.a.createElement(
                               "div",
-                              { className: hr.a.ValueValue },
+                              { className: br.a.ValueValue },
                               Object(E.a)(_)
                             )
                           ),
                         v &&
                           s.a.createElement(
                             "div",
-                            { className: hr.a.ValueElement },
+                            { className: br.a.ValueElement },
                             Object(E.a)("#hero_dispellable"),
                             ":",
                             s.a.createElement(
                               "div",
-                              { className: hr.a.ValueValue },
+                              { className: br.a.ValueValue },
                               Object(E.a)(v)
                             )
                           )
@@ -35564,8 +35708,8 @@ var CLSTAMP = "6905869";
                     "div",
                     {
                       className: Object(f.a)(
-                        hr.a.SpecificValues,
-                        (L || C) && hr.a.Hidden
+                        br.a.SpecificValues,
+                        (L || C) && br.a.Hidden
                       ),
                     },
                     d.damages.reduce(function (e, t) {
@@ -35573,11 +35717,11 @@ var CLSTAMP = "6905869";
                     }) > 0 &&
                       s.a.createElement(
                         "div",
-                        { className: hr.a.SpecialElement },
+                        { className: br.a.SpecialElement },
                         Object(E.a)("#hero_damage"),
                         s.a.createElement(
                           "div",
-                          { className: hr.a.SpecialValue },
+                          { className: br.a.SpecialValue },
                           d.damages.map(function (e, t) {
                             return (t > 0 ? " / " : "") + e.toFixed(0);
                           })
@@ -35588,11 +35732,11 @@ var CLSTAMP = "6905869";
                         ? null
                         : s.a.createElement(
                             "div",
-                            { key: e.name, className: hr.a.SpecialElement },
+                            { key: e.name, className: br.a.SpecialElement },
                             Object(E.a)(e.heading_loc),
                             s.a.createElement(
                               "div",
-                              { className: hr.a.SpecialValue },
+                              { className: br.a.SpecialValue },
                               e.values_float.length > 0
                                 ? e.values_float.map(function (t, a) {
                                     return (
@@ -35622,15 +35766,15 @@ var CLSTAMP = "6905869";
                       "div",
                       {
                         className: Object(f.a)(
-                          hr.a.BottomValues,
-                          (C || C) && hr.a.Hidden
+                          br.a.BottomValues,
+                          (C || C) && br.a.Hidden
                         ),
                       },
                       s.a.createElement(
                         "div",
-                        { className: hr.a.CooldownContainer },
+                        { className: br.a.CooldownContainer },
                         s.a.createElement("div", {
-                          className: hr.a.CooldownIcon,
+                          className: br.a.CooldownIcon,
                           style: {
                             backgroundImage:
                               "url( " + h.a.IMG_URL + "icons/cooldown.png )",
@@ -35638,7 +35782,7 @@ var CLSTAMP = "6905869";
                         }),
                         s.a.createElement(
                           "div",
-                          { className: hr.a.CooldownText },
+                          { className: br.a.CooldownText },
                           d.cooldowns.map(function (e, t) {
                             return (t > 0 ? " / " : "") + e.toFixed(1);
                           })
@@ -35646,11 +35790,11 @@ var CLSTAMP = "6905869";
                       ),
                       s.a.createElement(
                         "div",
-                        { className: hr.a.ManaContainer },
-                        s.a.createElement("div", { className: hr.a.ManaIcon }),
+                        { className: br.a.ManaContainer },
+                        s.a.createElement("div", { className: br.a.ManaIcon }),
                         s.a.createElement(
                           "div",
-                          { className: hr.a.ManaText },
+                          { className: br.a.ManaText },
                           d.mana_costs.map(function (e, t) {
                             return (t > 0 ? " / " : "") + e.toFixed(0);
                           })
@@ -35661,8 +35805,8 @@ var CLSTAMP = "6905869";
                     "div",
                     {
                       className: Object(f.a)(
-                        hr.a.Lore,
-                        (C || C) && hr.a.Hidden
+                        br.a.Lore,
+                        (C || C) && br.a.Hidden
                       ),
                     },
                     d.lore_loc
@@ -35672,29 +35816,29 @@ var CLSTAMP = "6905869";
             )
           );
         }),
-        Lr = function (e) {
+        Cr = function (e) {
           var t = e.heroData;
           return s.a.createElement(
             "div",
-            { className: hr.a.AbilityDetailsSection },
+            { className: br.a.AbilityDetailsSection },
             t &&
               s.a.createElement(
                 "div",
-                { className: hr.a.AbilityDetailsHeader },
+                { className: br.a.AbilityDetailsHeader },
                 Object(E.a)("#hero_ability_details")
               ),
-            s.a.createElement(Sr, { heroData: t })
+            s.a.createElement(Lr, { heroData: t })
           );
         },
-        Cr = function (e) {
+        jr = function (e) {
           var t = e.prevhero,
             a = e.nexthero;
           return s.a.createElement(
             "div",
-            { className: hr.a.HeroNavigator },
+            { className: br.a.HeroNavigator },
             s.a.createElement(u.b, {
               to: d.b.hero(t),
-              className: Object(f.a)(hr.a.NavigatorArrow, hr.a.Left),
+              className: Object(f.a)(br.a.NavigatorArrow, br.a.Left),
               style: {
                 backgroundImage:
                   "url( " + h.a.IMG_URL + "arrow_solid_left.png )",
@@ -35702,17 +35846,17 @@ var CLSTAMP = "6905869";
             }),
             s.a.createElement(
               u.b,
-              { to: d.b.herogrid(), className: hr.a.CenterGrid },
-              s.a.createElement("div", { className: hr.a.GridDot }),
-              s.a.createElement("div", { className: hr.a.GridDot }),
-              s.a.createElement("div", { className: hr.a.GridDot }),
-              s.a.createElement("div", { className: hr.a.GridDot }),
-              s.a.createElement("div", { className: hr.a.GridDot }),
-              s.a.createElement("div", { className: hr.a.GridDot })
+              { to: d.b.herogrid(), className: br.a.CenterGrid },
+              s.a.createElement("div", { className: br.a.GridDot }),
+              s.a.createElement("div", { className: br.a.GridDot }),
+              s.a.createElement("div", { className: br.a.GridDot }),
+              s.a.createElement("div", { className: br.a.GridDot }),
+              s.a.createElement("div", { className: br.a.GridDot }),
+              s.a.createElement("div", { className: br.a.GridDot })
             ),
             s.a.createElement(u.b, {
               to: d.b.hero(a),
-              className: Object(f.a)(hr.a.NavigatorArrow, hr.a.Right),
+              className: Object(f.a)(br.a.NavigatorArrow, br.a.Right),
               style: {
                 backgroundImage:
                   "url( " + h.a.IMG_URL + "arrow_solid_left.png )",
@@ -35720,7 +35864,7 @@ var CLSTAMP = "6905869";
             })
           );
         },
-        jr = function (e) {
+        wr = function (e) {
           var t = e.heroData,
             a = e.left,
             n = "";
@@ -35754,7 +35898,7 @@ var CLSTAMP = "6905869";
               u.b,
               {
                 to: d.b.hero(o),
-                className: Object(f.a)(hr.a.BottomSectionHero, a && hr.a.Left),
+                className: Object(f.a)(br.a.BottomSectionHero, a && br.a.Left),
                 style: {
                   backgroundImage:
                     "url( " +
@@ -35763,7 +35907,7 @@ var CLSTAMP = "6905869";
                 },
               },
               s.a.createElement("img", {
-                className: hr.a.HeroPortrait,
+                className: br.a.HeroPortrait,
                 src:
                   h.a.IMG_URL +
                   "heroes/crops/" +
@@ -35772,23 +35916,23 @@ var CLSTAMP = "6905869";
               }),
               s.a.createElement(
                 "div",
-                { className: hr.a.HeroLabels },
+                { className: br.a.HeroLabels },
                 s.a.createElement(
                   "div",
-                  { className: hr.a.TopHeader },
+                  { className: br.a.TopHeader },
                   Object(E.a)(a ? "#hero_previous" : "#hero_next")
                 ),
-                s.a.createElement("div", { className: hr.a.Name }, t.name_loc),
+                s.a.createElement("div", { className: br.a.Name }, t.name_loc),
                 s.a.createElement(
                   "div",
-                  { className: hr.a.Details },
+                  { className: br.a.Details },
                   s.a.createElement("img", {
                     src: h.a.IMG_URL + "icons/hero_" + n + ".png",
-                    className: hr.a.PrimaryStatIcon,
+                    className: br.a.PrimaryStatIcon,
                   }),
                   s.a.createElement(
                     "div",
-                    { className: hr.a.AttackType },
+                    { className: br.a.AttackType },
                     Object(E.a)("#hero_attack_type_" + r)
                   )
                 )
@@ -35796,7 +35940,7 @@ var CLSTAMP = "6905869";
             )
           );
         },
-        wr = function (e) {
+        Gr = function (e) {
           var t = e.nPrevHeroID,
             a = e.nNextHeroID,
             n = ca.a.Get().getHeroData(t),
@@ -35804,33 +35948,33 @@ var CLSTAMP = "6905869";
           return n && r
             ? s.a.createElement(
                 "div",
-                { className: hr.a.BottomSection },
-                s.a.createElement(jr, { heroData: n, left: !0 }),
+                { className: br.a.BottomSection },
+                s.a.createElement(wr, { heroData: n, left: !0 }),
                 s.a.createElement(
                   u.b,
-                  { to: d.b.herogrid(), className: hr.a.AllHeroesContainer },
+                  { to: d.b.herogrid(), className: br.a.AllHeroesContainer },
                   s.a.createElement(
                     "div",
-                    { className: hr.a.Boxes },
-                    s.a.createElement("div", { className: hr.a.Box }),
-                    s.a.createElement("div", { className: hr.a.Box }),
-                    s.a.createElement("div", { className: hr.a.Box }),
-                    s.a.createElement("div", { className: hr.a.Box }),
-                    s.a.createElement("div", { className: hr.a.Box }),
-                    s.a.createElement("div", { className: hr.a.Box })
+                    { className: br.a.Boxes },
+                    s.a.createElement("div", { className: br.a.Box }),
+                    s.a.createElement("div", { className: br.a.Box }),
+                    s.a.createElement("div", { className: br.a.Box }),
+                    s.a.createElement("div", { className: br.a.Box }),
+                    s.a.createElement("div", { className: br.a.Box }),
+                    s.a.createElement("div", { className: br.a.Box })
                   ),
                   s.a.createElement(
                     "div",
-                    { className: hr.a.AllHeroesLabel },
+                    { className: br.a.AllHeroesLabel },
                     Object(E.a)("#hero_allheroes"),
                     " "
                   )
                 ),
-                s.a.createElement(jr, { heroData: r, left: !1 })
+                s.a.createElement(wr, { heroData: r, left: !1 })
               )
             : null;
         },
-        Gr = Object(m.a)(function (e) {
+        Ar = Object(m.a)(function (e) {
           var t = Object(p.i)().id,
             a = ca.a.Get().getHeroList(),
             n = 0;
@@ -35887,13 +36031,13 @@ var CLSTAMP = "6905869";
           return (
             Object(i.useEffect)(
               function () {
-                return so.setSelectedAbilityIndex(0);
+                return lo.setSelectedAbilityIndex(0);
               },
               [u.pathname]
             ),
             s.a.createElement(
               "div",
-              { className: hr.a.HeroPage },
+              { className: br.a.HeroPage },
               s.a.createElement(
                 G.a,
                 null,
@@ -35907,38 +36051,38 @@ var CLSTAMP = "6905869";
               s.a.createElement(pt.a, null),
               s.a.createElement(
                 "div",
-                { className: hr.a.UpperSection },
+                { className: br.a.UpperSection },
                 s.a.createElement("div", {
-                  className: hr.a.BackgroundGradient,
+                  className: br.a.BackgroundGradient,
                 }),
-                s.a.createElement(Cr, { prevhero: l, nexthero: c }),
-                s.a.createElement(vr, {
+                s.a.createElement(jr, { prevhero: l, nexthero: c }),
+                s.a.createElement(fr, {
                   key: r ? r.name : "",
                   heroname: r ? r.name : "",
                 }),
-                s.a.createElement(S.a, {
+                s.a.createElement(T.a, {
                   bottom: !0,
                   color: "#000000",
                   startPct: 70,
                   midPct: 100,
                   endPct: 100,
                 }),
-                s.a.createElement(fr, {
+                s.a.createElement(Er, {
                   key: null == r ? void 0 : r.id,
                   heroData: r,
                 }),
-                s.a.createElement(Er, { heroData: r }),
-                s.a.createElement(yr, { heroData: r })
+                s.a.createElement(yr, { heroData: r }),
+                s.a.createElement(Nr, { heroData: r })
               ),
               s.a.createElement(
                 "div",
-                { className: hr.a.DetailsBarContainer },
+                { className: br.a.DetailsBarContainer },
                 s.a.createElement(Tr, { heroData: r })
               ),
               s.a.createElement(
                 "div",
                 {
-                  className: hr.a.UnderBarSection,
+                  className: br.a.UnderBarSection,
                   style: {
                     backgroundImage:
                       "url( " +
@@ -35946,78 +36090,78 @@ var CLSTAMP = "6905869";
                       "backgrounds/grey_painterly.png )",
                   },
                 },
-                s.a.createElement(Lr, { heroData: r }),
-                s.a.createElement(wr, { nNextHeroID: m, nPrevHeroID: d })
+                s.a.createElement(Cr, { heroData: r }),
+                s.a.createElement(Gr, { nNextHeroID: m, nPrevHeroID: d })
               ),
-              s.a.createElement(T.a, null)
+              s.a.createElement(S.a, null)
             )
           );
         }),
-        Ar = a("b6sG"),
-        Rr = a.n(Ar),
-        kr = function () {
+        Rr = a("b6sG"),
+        kr = a.n(Rr),
+        Br = function () {
           return s.a.createElement(
             "a",
             { href: "https://store.steampowered.com/app/570/Dota_2/" },
             s.a.createElement(
               "div",
-              { className: Rr.a.PlayButton },
+              { className: kr.a.PlayButton },
               s.a.createElement("div", {
-                className: Rr.a.SteamLogo,
+                className: kr.a.SteamLogo,
                 style: {
                   backgroundImage: "url( " + h.a.IMG_URL + "/icons/steam.svg )",
                 },
               }),
               s.a.createElement(
                 "div",
-                { className: Rr.a.RightSide },
+                { className: kr.a.RightSide },
                 s.a.createElement(
                   "div",
-                  { className: Rr.a.PlayForFree },
+                  { className: kr.a.PlayForFree },
                   Object(E.a)("#play_for_free")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Rr.a.Download },
+                  { className: kr.a.Download },
                   Object(E.a)("#download_on_steam")
                 )
               )
             )
           );
         },
-        Br = function (e) {
+        Pr = function (e) {
           return e.link
             ? s.a.createElement(
                 u.b,
-                { to: e.link, className: Rr.a.StandardButton },
+                { to: e.link, className: kr.a.StandardButton },
                 s.a.createElement(
                   "div",
-                  { className: Rr.a.ButtonText },
+                  { className: kr.a.ButtonText },
                   Object(E.a)(e.text)
                 )
               )
             : s.a.createElement(
                 "div",
-                { className: Rr.a.StandardButton },
+                { className: kr.a.StandardButton },
                 s.a.createElement(
                   "div",
-                  { className: Rr.a.ButtonText },
+                  { className: kr.a.ButtonText },
                   Object(E.a)(e.text)
                 )
               );
         },
-        Pr = function () {
-          return s.a.createElement("div", { className: Rr.a.HorizBar });
-        },
         Mr = function () {
+          return s.a.createElement("div", { className: kr.a.HorizBar });
+        },
+        xr = function () {
           return s.a.createElement("div", {
-            className: Rr.a.RightArrow,
+            className: kr.a.RightArrow,
             style: {
               backgroundImage: "url( " + h.a.IMG_URL + "/arrow_left.png )",
             },
           });
         },
-        xr = Object(m.a)(function () {
+        Ur = Object(m.a)(function () {
           var e = ca.a.Get().getHeroList(),
             t = [];
           return (
@@ -36032,14 +36176,14 @@ var CLSTAMP = "6905869";
             }),
             s.a.createElement(
               "div",
-              { className: Rr.a.HeroGrid },
+              { className: kr.a.HeroGrid },
               e &&
                 t.map(function (e, t) {
                   return s.a.createElement(
                     "div",
                     {
                       key: "Row" + t,
-                      className: Object(f.a)(Rr.a.HeroGridRow, "Row" + t),
+                      className: Object(f.a)(kr.a.HeroGridRow, "Row" + t),
                       style: {
                         width: 255 * (e.length + 2),
                         animationDuration:
@@ -36066,7 +36210,7 @@ var CLSTAMP = "6905869";
                           to: d.b.hero(
                             e.name_english_loc.replace(/ /g, "").toLowerCase()
                           ),
-                          className: Rr.a.HeroIcon,
+                          className: kr.a.HeroIcon,
                           style: {
                             backgroundImage:
                               "url( " +
@@ -36078,21 +36222,21 @@ var CLSTAMP = "6905869";
                         },
                         s.a.createElement(
                           "div",
-                          { className: Rr.a.HeroNameContainer },
+                          { className: kr.a.HeroNameContainer },
                           s.a.createElement("img", {
                             src: h.a.IMG_URL + "icons/hero_" + a + ".png",
-                            className: Rr.a.PrimaryStatIcon,
+                            className: kr.a.PrimaryStatIcon,
                           }),
                           s.a.createElement(
                             "div",
-                            { className: Rr.a.HeroName },
+                            { className: kr.a.HeroName },
                             Object(E.a)(e.name_loc)
                           )
                         ),
                         s.a.createElement(
                           "div",
-                          { className: Rr.a.FadeContainer },
-                          s.a.createElement(S.a, {
+                          { className: kr.a.FadeContainer },
+                          s.a.createElement(T.a, {
                             bottom: !0,
                             color: "#000000",
                             startPct: 50,
@@ -36107,7 +36251,7 @@ var CLSTAMP = "6905869";
             )
           );
         }),
-        Ur = function (e) {
+        Fr = function (e) {
           var t = Object(i.useState)(void 0),
             a = t[0],
             n = t[1];
@@ -36130,7 +36274,7 @@ var CLSTAMP = "6905869";
             }
           return s.a.createElement(
             "div",
-            { className: Rr.a.HomePage },
+            { className: kr.a.HomePage },
             s.a.createElement(le.a, { bOverlapping: !0 }),
             s.a.createElement(
               G.a,
@@ -36139,14 +36283,14 @@ var CLSTAMP = "6905869";
             ),
             s.a.createElement(
               "div",
-              { className: Rr.a.HeaderSection },
+              { className: kr.a.HeaderSection },
               s.a.createElement(
                 "div",
-                { className: Rr.a.BackgroundVideoContainer },
+                { className: kr.a.BackgroundVideoContainer },
                 s.a.createElement(
                   "video",
                   {
-                    className: Rr.a.BackgroundVideo,
+                    className: kr.a.BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -36166,65 +36310,65 @@ var CLSTAMP = "6905869";
               s.a.createElement(
                 "div",
                 {
-                  className: Rr.a.QuoteContainer,
+                  className: kr.a.QuoteContainer,
                   "data-aos": "fade-right",
                   "data-aos-delay": "1000",
                   "data-aos-duration": "2500",
                 },
                 s.a.createElement(
                   "div",
-                  { className: Rr.a.Quote },
+                  { className: kr.a.Quote },
                   s.a.createElement(
                     "div",
-                    { className: Rr.a.QuoteText },
+                    { className: kr.a.QuoteText },
                     Object(E.a)("#quote_destructoid_quote")
                   ),
                   s.a.createElement(
                     "div",
-                    { className: Rr.a.QuoteCredit },
+                    { className: kr.a.QuoteCredit },
                     Object(E.a)("#quote_destructoid_credit")
                   )
                 ),
-                s.a.createElement(Pr, null),
-                s.a.createElement(kr, null)
+                s.a.createElement(Mr, null),
+                s.a.createElement(Br, null)
               ),
-              s.a.createElement("div", { className: Rr.a.BottomFade })
+              s.a.createElement("div", { className: kr.a.BottomFade })
             ),
             s.a.createElement(
               "div",
-              { className: Rr.a.NewsSection },
+              { className: kr.a.NewsSection },
               s.a.createElement(
                 "div",
-                { className: Rr.a.NewsTop },
+                { className: kr.a.NewsTop },
                 s.a.createElement(
                   "div",
-                  { className: Rr.a.Latest },
+                  { className: kr.a.Latest },
                   Object(E.a)("#home_latest_news")
                 ),
                 s.a.createElement(
                   u.b,
-                  { to: d.b.news(), className: Rr.a.ViewAll },
+                  { to: d.b.news(), className: kr.a.ViewAll },
                   Object(E.a)("#home_view_all"),
-                  s.a.createElement(Mr, null)
+                  s.a.createElement(xr, null)
                 )
               ),
-              s.a.createElement("div", { className: Rr.a.NewsCapsules }, r)
+              s.a.createElement("div", { className: kr.a.NewsCapsules }, r)
             ),
             s.a.createElement(
               "div",
-              { className: Rr.a.BattleSection },
+              { className: kr.a.BattleSection },
               s.a.createElement(
                 "div",
-                { className: Rr.a.BattleBG },
+                { className: kr.a.BattleBG },
                 s.a.createElement("img", {
-                  className: Rr.a.BattleImg,
+                  className: kr.a.BattleImg,
                   src: h.a.IMG_URL + "/home/radiant_dire5.jpg",
                 }),
                 s.a.createElement("img", {
-                  className: Object(f.a)(Rr.a.BattleImg, Rr.a.BattleImgMobile),
+                  className: Object(f.a)(kr.a.BattleImg, kr.a.BattleImgMobile),
                   src: h.a.IMG_URL + "/home/battle_mobile.jpg",
                 }),
-                s.a.createElement(S.a, {
+                s.a.createElement(T.a, {
                   top: !0,
                   color: "#000000",
                   startPct: 60,
@@ -36234,30 +36378,30 @@ var CLSTAMP = "6905869";
               ),
               s.a.createElement(
                 "div",
-                { className: Rr.a.LeftHalf },
+                { className: kr.a.LeftHalf },
                 s.a.createElement(
                   "div",
                   {
-                    className: Rr.a.HeaderText,
+                    className: kr.a.HeaderText,
                     "data-aos": "fade-up",
                     "data-aos-duration": "1500",
                   },
                   Object(E.a)("#home_battle_join")
                 ),
-                s.a.createElement(Pr, null),
+                s.a.createElement(Mr, null),
                 s.a.createElement(
                   "div",
-                  { className: Rr.a.BodyText },
+                  { className: kr.a.BodyText },
                   Object(E.a)("#home_battle_body"),
                   s.a.createElement(
                     u.b,
                     { to: d.b.news() },
                     s.a.createElement(
                       "div",
-                      { className: Rr.a.StandardButton },
+                      { className: kr.a.StandardButton },
                       s.a.createElement(
                         "div",
-                        { className: Rr.a.ButtonText },
+                        { className: kr.a.ButtonText },
                         Object(E.a)("#home_battle_button")
                       )
                     )
@@ -36267,15 +36411,15 @@ var CLSTAMP = "6905869";
             ),
             s.a.createElement(
               "div",
-              { className: Rr.a.ChooseSection },
-              s.a.createElement(S.a, {
+              { className: kr.a.ChooseSection },
+              s.a.createElement(T.a, {
                 top: !0,
                 color: "#000000",
                 startPct: 60,
                 midPct: 90,
                 endPct: 100,
               }),
-              s.a.createElement(S.a, {
+              s.a.createElement(T.a, {
                 bottom: !0,
                 color: "#000000",
                 startPct: 60,
@@ -36285,60 +36429,60 @@ var CLSTAMP = "6905869";
               s.a.createElement(
                 "div",
                 {
-                  className: Rr.a.HeaderText,
+                  className: kr.a.HeaderText,
                   "data-aos": "fade-up",
                   "data-aos-duration": "2000",
                 },
                 Object(E.a)("#home_choose_header")
               ),
-              s.a.createElement(Pr, null),
+              s.a.createElement(Mr, null),
               s.a.createElement(
                 "div",
-                { className: Rr.a.BodyText },
+                { className: kr.a.BodyText },
                 Object(E.a)("#home_choose_body"),
                 s.a.createElement(
                   u.b,
                   { to: d.b.herogrid() },
                   s.a.createElement(
                     "div",
-                    { className: Rr.a.StandardButton },
+                    { className: kr.a.StandardButton },
                     s.a.createElement(
                       "div",
-                      { className: Rr.a.ButtonText },
+                      { className: kr.a.ButtonText },
                       Object(E.a)("#home_choose_button")
                     )
                   )
                 )
               ),
-              s.a.createElement(xr, null)
+              s.a.createElement(Ur, null)
             ),
             s.a.createElement(
               "div",
               {
-                className: Rr.a.ProCircuitSection,
+                className: kr.a.ProCircuitSection,
                 style: {
                   backgroundImage: "url( " + h.a.IMG_URL + "/home/dpc.jpg )",
                 },
               },
               s.a.createElement(
                 "div",
-                { className: Rr.a.DPCSmImgs },
+                { className: kr.a.DPCSmImgs },
                 s.a.createElement("img", {
-                  className: Object(f.a)(Rr.a.DPCSmImg, Rr.a.Img1),
+                  className: Object(f.a)(kr.a.DPCSmImg, kr.a.Img1),
                   src: h.a.IMG_URL + "/home/dpc_ti9_1.jpg",
                   "data-aos": "fade-up",
                   "data-aos-delay": "300",
                   "data-aos-duration": "2500",
                 }),
                 s.a.createElement("img", {
-                  className: Object(f.a)(Rr.a.DPCSmImg, Rr.a.Img2),
+                  className: Object(f.a)(kr.a.DPCSmImg, kr.a.Img2),
                   src: h.a.IMG_URL + "/home/dpc_ti9_2.jpg",
                   "data-aos": "fade-up",
                   "data-aos-delay": "600",
                   "data-aos-duration": "2500",
                 }),
                 s.a.createElement("img", {
-                  className: Object(f.a)(Rr.a.DPCSmImg, Rr.a.Img3),
+                  className: Object(f.a)(kr.a.DPCSmImg, kr.a.Img3),
                   src: h.a.IMG_URL + "/home/dpc_ti9_3.jpg",
                   "data-aos": "fade-up",
                   "data-aos-delay": "1000",
@@ -36346,27 +36490,27 @@ var CLSTAMP = "6905869";
                 })
               ),
               s.a.createElement("div", {
-                className: Rr.a.DPCIcon,
+                className: kr.a.DPCIcon,
                 style: {
                   backgroundImage: "url( " + h.a.IMG_URL + "/icons/dpc.svg )",
                 },
               }),
               s.a.createElement(
                 "div",
-                { className: Rr.a.HeaderText },
+                { className: kr.a.HeaderText },
                 Object(E.a)("#home_dpc_header")
               ),
-              s.a.createElement(Pr, null),
+              s.a.createElement(Mr, null),
               s.a.createElement(
                 "div",
-                { className: Rr.a.BodyText },
+                { className: kr.a.BodyText },
                 Object(E.a)("#home_dpc_body")
               )
             ),
             s.a.createElement(
               "div",
               {
-                className: Rr.a.JoinBattleSection,
+                className: kr.a.JoinBattleSection,
                 style: {
                   backgroundImage:
                     "url( " + h.a.IMG_URL + "/home/background4.png )",
@@ -36374,21 +36518,21 @@ var CLSTAMP = "6905869";
               },
               s.a.createElement(
                 "div",
-                { className: Rr.a.HeaderText },
+                { className: kr.a.HeaderText },
                 Object(E.a)("#home_join_header")
               ),
-              s.a.createElement(Pr, null),
+              s.a.createElement(Mr, null),
               s.a.createElement(
                 "a",
                 { href: "https://store.steampowered.com/app/570/Dota_2/" },
-                s.a.createElement(Br, { text: "#home_play_free_now" })
+                s.a.createElement(Pr, { text: "#home_play_free_now" })
               )
             ),
-            s.a.createElement(T.a, null)
+            s.a.createElement(S.a, null)
           );
         },
-        Fr = a("+LVx"),
-        Hr = a.n(Fr);
+        Hr = a("+LVx"),
+        Vr = a.n(Hr);
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.PENDING = 1)] = "PENDING"),
@@ -36398,10 +36542,10 @@ var CLSTAMP = "6905869";
           (e[(e.ALREADY_BOUND = 5)] = "ALREADY_BOUND"),
           (e[(e.ALREADY_SELF_BOUND = 6)] = "ALREADY_SELF_BOUND"),
           (e[(e.ERROR_UNKNOWN = 7)] = "ERROR_UNKNOWN");
-      })(mr || (mr = {}));
-      var Vr,
-        Wr,
+      })(ur || (ur = {}));
+      var Wr,
         zr,
+        Yr,
         qr = function () {
           var e = Object(i.useState)([]),
             t = e[0],
@@ -36409,13 +36553,13 @@ var CLSTAMP = "6905869";
             n = Object(i.useState)(""),
             r = n[0],
             o = n[1],
-            l = Object(i.useState)(mr.NONE),
+            l = Object(i.useState)(ur.NONE),
             c = l[0],
             m = l[1],
             u = 3e3;
           Object(i.useEffect)(
             function () {
-              (c != mr.NONE && c != mr.SUCCESS) ||
+              (c != ur.NONE && c != ur.SUCCESS) ||
                 _e.a
                   .get(
                     h.a.BASE_URL +
@@ -36441,7 +36585,7 @@ var CLSTAMP = "6905869";
           return s.a.createElement(
             "div",
             {
-              className: Hr.a.InternationalBadgeBindingPage,
+              className: Vr.a.InternationalBadgeBindingPage,
               style: {
                 backgroundImage:
                   "url( " + h.a.IMG_URL + "backgrounds/slate_bg_01.jpg )",
@@ -36458,7 +36602,7 @@ var CLSTAMP = "6905869";
               )
             ),
             s.a.createElement("div", {
-              className: Hr.a.HeaderImage,
+              className: Vr.a.HeaderImage,
               style: {
                 backgroundImage:
                   "url( " + h.a.IMG_URL + "backgrounds/ti10_half_aegis.png )",
@@ -36466,14 +36610,14 @@ var CLSTAMP = "6905869";
             }),
             s.a.createElement(
               "div",
-              { className: Hr.a.Body },
+              { className: Vr.a.Body },
               0 == h.a.ACCOUNT_ID &&
                 s.a.createElement(
                   "div",
-                  { className: Hr.a.NeedToLogin },
+                  { className: Vr.a.NeedToLogin },
                   s.a.createElement(
                     "div",
-                    { className: Hr.a.Message },
+                    { className: Vr.a.Message },
                     Object(E.a)("#ti_badgebinding_needtologin")
                   ),
                   s.a.createElement(
@@ -36485,7 +36629,7 @@ var CLSTAMP = "6905869";
                         h.a.CLIENT_ID +
                         "&response_type=token&state=" +
                         location.pathname.substr(1),
-                      className: Hr.a.SignInButton,
+                      className: Vr.a.SignInButton,
                     },
                     Object(E.a)("#sign_in")
                   )
@@ -36493,26 +36637,26 @@ var CLSTAMP = "6905869";
               0 != h.a.ACCOUNT_ID &&
                 s.a.createElement(
                   "div",
-                  { className: Hr.a.SignedIn },
+                  { className: Vr.a.SignedIn },
                   "\\",
                   (null == t ? void 0 : t.length) > 0 &&
                     s.a.createElement(
                       "div",
-                      { className: Hr.a.BoundBadges },
+                      { className: Vr.a.BoundBadges },
                       Object(E.a)("#ti_badgebinding_existing_binds"),
                       null == t
                         ? void 0
                         : t.map(function (e) {
                             return s.a.createElement(
                               "div",
-                              { key: e, className: Hr.a.BadgeID },
+                              { key: e, className: Vr.a.BadgeID },
                               e
                             );
                           })
                     ),
                   s.a.createElement(
                     "div",
-                    { className: Hr.a.BadgeDescription },
+                    { className: Vr.a.BadgeDescription },
                     Object(E.a)(
                       (null == t ? void 0 : t.length) > 0
                         ? "#ti_badgebinding_desc_multi"
@@ -36521,29 +36665,29 @@ var CLSTAMP = "6905869";
                   ),
                   s.a.createElement(
                     "div",
-                    { className: Hr.a.BadgeWarning },
+                    { className: Vr.a.BadgeWarning },
                     Object(E.a)("#ti_badgebinding_warning")
                   ),
                   s.a.createElement("input", {
                     type: "text",
                     autoFocus: !0,
                     placeholder: Object(Fe.e)("#ti_badgebinding_placeholder"),
-                    className: Hr.a.BadgeIDInput,
+                    className: Vr.a.BadgeIDInput,
                     value: r,
                     onChange: function (e) {
                       return o(e.target.value);
                     },
                   }),
-                  c == mr.NONE &&
+                  c == ur.NONE &&
                     s.a.createElement(
                       "div",
                       {
                         className: Object(f.a)(
-                          Hr.a.SubmitButton,
-                          r.length > 0 && Hr.a.ValidBadgeIDLength
+                          Vr.a.SubmitButton,
+                          r.length > 0 && Vr.a.ValidBadgeIDLength
                         ),
                         onClick: function () {
-                          m(mr.PENDING),
+                          m(ur.PENDING),
                             _e.a
                               .post(
                                 h.a.BASE_URL +
@@ -36564,40 +36708,40 @@ var CLSTAMP = "6905869";
                                     : t.result
                                 ) {
                                   case 0:
-                                    m(mr.SUCCESS),
+                                    m(ur.SUCCESS),
                                       setTimeout(function () {
-                                        return m(mr.NONE);
+                                        return m(ur.NONE);
                                       }, 5e3);
                                     break;
                                   case 1:
-                                    m(mr.INVALID_BADGE),
+                                    m(ur.INVALID_BADGE),
                                       setTimeout(function () {
-                                        return m(mr.NONE);
+                                        return m(ur.NONE);
                                       }, u);
                                     break;
                                   case 2:
-                                    m(mr.COOLDOWN),
+                                    m(ur.COOLDOWN),
                                       setTimeout(function () {
-                                        return m(mr.NONE);
+                                        return m(ur.NONE);
                                       }, u);
                                     break;
                                   case 3:
-                                    m(mr.ALREADY_BOUND),
+                                    m(ur.ALREADY_BOUND),
                                       setTimeout(function () {
-                                        return m(mr.NONE);
+                                        return m(ur.NONE);
                                       }, u);
                                     break;
                                   case 4:
-                                    m(mr.ALREADY_SELF_BOUND),
+                                    m(ur.ALREADY_SELF_BOUND),
                                       setTimeout(function () {
-                                        return m(mr.NONE);
+                                        return m(ur.NONE);
                                       }, u);
                                     break;
                                   case 5:
                                   default:
-                                    m(mr.ERROR_UNKNOWN),
+                                    m(ur.ERROR_UNKNOWN),
                                       setTimeout(function () {
-                                        return m(mr.NONE);
+                                        return m(ur.NONE);
                                       }, u);
                                 }
                                 o("");
@@ -36606,15 +36750,15 @@ var CLSTAMP = "6905869";
                       },
                       Object(E.a)("#ti_badgebinding_bind")
                     ),
-                  c != mr.NONE &&
+                  c != ur.NONE &&
                     s.a.createElement(
                       "div",
                       {
                         className: Object(f.a)(
-                          Hr.a.BindState,
-                          c == mr.PENDING && Hr.a.Pending,
-                          c == mr.SUCCESS && Hr.a.Success,
-                          c != mr.SUCCESS && c != mr.PENDING && Hr.a.Failure
+                          Vr.a.BindState,
+                          c == ur.PENDING && Vr.a.Pending,
+                          c == ur.SUCCESS && Vr.a.Success,
+                          c != ur.SUCCESS && c != ur.PENDING && Vr.a.Failure
                         ),
                       },
                       Object(E.a)(
@@ -36632,16 +36776,16 @@ var CLSTAMP = "6905869";
                     )
                 )
             ),
-            s.a.createElement(T.a, null)
+            s.a.createElement(S.a, null)
           );
         },
-        Yr = a("mgxS"),
-        Kr = a.n(Yr),
-        Qr = Object(m.a)(function (e) {
+        Kr = a("mgxS"),
+        Qr = a.n(Kr),
+        Xr = Object(m.a)(function (e) {
           return s.a.createElement(
             "div",
             {
-              className: Kr.a.InternationalFAQPage,
+              className: Qr.a.InternationalFAQPage,
               style: {
                 backgroundImage:
                   "url( " + h.a.IMG_URL + "backgrounds/slate_bg_01.jpg )",
@@ -36658,7 +36802,7 @@ var CLSTAMP = "6905869";
               )
             ),
             s.a.createElement("div", {
-              className: Kr.a.HeaderImage,
+              className: Qr.a.HeaderImage,
               style: {
                 backgroundImage:
                   "url( " + h.a.IMG_URL + "backgrounds/ti10_half_aegis.png )",
@@ -36666,133 +36810,133 @@ var CLSTAMP = "6905869";
             }),
             s.a.createElement(
               "div",
-              { className: Kr.a.Body },
+              { className: Qr.a.Body },
               s.a.createElement(
                 "div",
-                { className: Kr.a.TopHeader },
+                { className: Qr.a.TopHeader },
                 Object(E.a)("#ti_2021_ticket_header")
               ),
               s.a.createElement(
                 "div",
-                { className: Kr.a.TopBody },
+                { className: Qr.a.TopBody },
                 Object(E.a)("#ti_2021_body")
               ),
               s.a.createElement(
                 "div",
-                { className: Kr.a.FAQ },
+                { className: Qr.a.FAQ },
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQLabel },
+                  { className: Qr.a.FAQLabel },
                   Object(E.a)("#dpc_about_faq")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_1")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_1")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_2")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_2")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_3")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_3")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_4")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_4")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_5")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_5")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_6")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_6")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_7")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_7")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_8")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_8")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_9")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_9")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQQuestion },
+                  { className: Qr.a.FAQQuestion },
                   Object(E.a)("#ti_2021_faq_q_10")
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Kr.a.FAQAnswer },
+                  { className: Qr.a.FAQAnswer },
                   Object(E.a)("#ti_2021_faq_a_10")
                 )
               )
             ),
-            s.a.createElement(T.a, null)
+            s.a.createElement(S.a, null)
           );
         }),
-        Xr = a("gn7D"),
-        Jr = a.n(Xr),
-        Zr = (function (e) {
+        Jr = a("gn7D"),
+        Zr = a.n(Jr),
+        $r = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -36802,7 +36946,7 @@ var CLSTAMP = "6905869";
               return s.a.createElement(
                 "div",
                 {
-                  className: Jr.a.PastUpdates,
+                  className: Zr.a.PastUpdates,
                   style: {
                     backgroundImage:
                       "url( " + h.a.IMG_URL + "backgrounds/greyfade.jpg )",
@@ -36820,16 +36964,16 @@ var CLSTAMP = "6905869";
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Jr.a.HeaderSection },
+                  { className: Zr.a.HeaderSection },
                   s.a.createElement(
                     "div",
-                    { className: Jr.a.Headline },
+                    { className: Zr.a.Headline },
                     Object(E.a)("#header_previous_updates")
                   )
                 ),
                 s.a.createElement(
                   "div",
-                  { className: Jr.a.UpdatesContainer },
+                  { className: Zr.a.UpdatesContainer },
                   s.a.createElement(
                     "a",
                     {
@@ -36839,7 +36983,7 @@ var CLSTAMP = "6905869";
                     s.a.createElement(
                       "div",
                       {
-                        className: Jr.a.UpdateBlock,
+                        className: Zr.a.UpdateBlock,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -36851,7 +36995,7 @@ var CLSTAMP = "6905869";
                       },
                       s.a.createElement(
                         "div",
-                        { className: Jr.a.Date },
+                        { className: Zr.a.Date },
                         Object(E.a)("2020")
                       )
                     )
@@ -36863,7 +37007,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -36881,7 +37025,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -36899,7 +37043,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -36917,7 +37061,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -36932,7 +37076,7 @@ var CLSTAMP = "6905869";
                     "a",
                     { href: "https://www.dota2.com/aghanim", target: "_blank" },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -36950,7 +37094,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -36968,7 +37112,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -36986,7 +37130,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37004,7 +37148,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37022,7 +37166,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37040,7 +37184,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37058,7 +37202,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37076,7 +37220,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37095,7 +37239,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37110,7 +37254,7 @@ var CLSTAMP = "6905869";
                     "a",
                     { href: "https://www.dota2.com/mars", target: "_blank" },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37128,7 +37272,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37143,7 +37287,7 @@ var CLSTAMP = "6905869";
                     "a",
                     { href: "https://www.dota2.com/720", target: "_blank" },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37161,7 +37305,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37179,7 +37323,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37197,7 +37341,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37212,7 +37356,7 @@ var CLSTAMP = "6905869";
                     "a",
                     { href: "http://www.dota2.com/plus", target: "_blank" },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37230,7 +37374,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37248,7 +37392,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37266,7 +37410,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37281,7 +37425,7 @@ var CLSTAMP = "6905869";
                     "a",
                     { href: "http://www.dota2.com/700", target: "_blank" },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37296,7 +37440,7 @@ var CLSTAMP = "6905869";
                     "a",
                     { href: "http://www.dota2.com/darkrift", target: "_blank" },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37314,7 +37458,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37333,7 +37477,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37351,7 +37495,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37369,7 +37513,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37384,7 +37528,7 @@ var CLSTAMP = "6905869";
                     "a",
                     { href: "http://www.dota2.com/reborn", target: "_blank" },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37402,7 +37546,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37421,7 +37565,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37439,7 +37583,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37457,7 +37601,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37475,7 +37619,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37493,7 +37637,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37508,7 +37652,7 @@ var CLSTAMP = "6905869";
                     "a",
                     { href: "http://www.dota2.com/techies/", target: "_blank" },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37526,7 +37670,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37544,7 +37688,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37562,7 +37706,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37580,7 +37724,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37598,7 +37742,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37616,7 +37760,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37634,7 +37778,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37653,7 +37797,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37671,7 +37815,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37689,7 +37833,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37707,7 +37851,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37725,7 +37869,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37743,7 +37887,7 @@ var CLSTAMP = "6905869";
                       target: "_blank",
                     },
                     s.a.createElement("div", {
-                      className: Jr.a.UpdateBlock,
+                      className: Zr.a.UpdateBlock,
                       style: {
                         backgroundImage:
                           "url( " +
@@ -37755,24 +37899,24 @@ var CLSTAMP = "6905869";
                     })
                   )
                 ),
-                s.a.createElement(T.a, null)
+                s.a.createElement(S.a, null)
               );
             }),
             t
           );
         })(s.a.Component),
-        $r = a("ODJw"),
-        eo = a("Y/gT"),
-        to = a.n(eo),
-        ao = function () {
+        eo = a("ODJw"),
+        to = a("Y/gT"),
+        ao = a.n(to),
+        no = function () {
           return s.a.createElement("div", {
-            className: to.a.RightArrow,
+            className: ao.a.RightArrow,
             style: {
               backgroundImage: "url( " + h.a.IMG_URL + "/arrow_left.png )",
             },
           });
         },
-        no = function (e) {
+        ro = function (e) {
           var t = e.shouldShow,
             a = e.showFunc,
             n = e.className,
@@ -37782,8 +37926,8 @@ var CLSTAMP = "6905869";
             "div",
             {
               className: Object(f.a)(
-                to.a.PopupPanelContainer,
-                t && to.a.ShowPopupPanel
+                ao.a.PopupPanelContainer,
+                t && ao.a.ShowPopupPanel
               ),
               onClick: function () {
                 return a(!1);
@@ -37792,7 +37936,7 @@ var CLSTAMP = "6905869";
             s.a.createElement(
               "div",
               {
-                className: Object(f.a)(to.a.PopupPanel, n),
+                className: Object(f.a)(ao.a.PopupPanel, n),
                 onClick: function (e) {
                   return e.stopPropagation();
                 },
@@ -37801,7 +37945,7 @@ var CLSTAMP = "6905869";
                 s.a.createElement(
                   "div",
                   {
-                    className: to.a.CloseButton,
+                    className: ao.a.CloseButton,
                     onClick: function () {
                       return a(!1);
                     },
@@ -37812,12 +37956,12 @@ var CLSTAMP = "6905869";
             )
           );
         },
-        ro = (function (e) {
+        oo = (function (e) {
           function t(t) {
             var a = e.call(this, t) || this;
             return (
               (a.handleClick = function (e) {
-                if (so.getShortFilmOwnership()) {
+                if (lo.getShortFilmOwnership()) {
                   var t =
                     h.a.BASE_URL +
                     d.b.shortfilm() +
@@ -37826,7 +37970,7 @@ var CLSTAMP = "6905869";
                 } else a.setState({ bPopupVisible: e });
               }),
               (a.handleAccepted = function () {
-                so.grantShortFilmAppIDOwnership();
+                lo.grantShortFilmAppIDOwnership();
                 var e =
                   h.a.BASE_URL +
                   d.b.shortfilm() +
@@ -37834,7 +37978,7 @@ var CLSTAMP = "6905869";
                 history.pushState("", "", e), history.go();
               }),
               (a.BGetOwnsApp = function () {
-                return so.getShortFilmOwnership();
+                return lo.getShortFilmOwnership();
               }),
               (a.state = { bPopupVisible: !1 }),
               a
@@ -37848,7 +37992,7 @@ var CLSTAMP = "6905869";
                 this.BGetOwnsApp(),
                 s.a.createElement(
                   "div",
-                  { className: to.a.HomePage },
+                  { className: ao.a.HomePage },
                   s.a.createElement(le.a, { bOverlapping: !0 }),
                   s.a.createElement(
                     G.a,
@@ -37861,14 +38005,14 @@ var CLSTAMP = "6905869";
                   ),
                   s.a.createElement(
                     "div",
-                    { className: to.a.HeaderSection },
+                    { className: ao.a.HeaderSection },
                     s.a.createElement(
                       "div",
-                      { className: to.a.BackgroundVideoContainer },
+                      { className: ao.a.BackgroundVideoContainer },
                       s.a.createElement(
                         "video",
                         {
-                          className: to.a.BackgroundVideo,
+                          className: ao.a.BackgroundVideo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
@@ -37894,14 +38038,14 @@ var CLSTAMP = "6905869";
                     ),
                     s.a.createElement(
                       "div",
-                      { className: to.a.TitleContainer },
+                      { className: ao.a.TitleContainer },
                       s.a.createElement(
                         "div",
-                        { className: to.a.TopRow },
+                        { className: ao.a.TopRow },
                         s.a.createElement(
                           "video",
                           {
-                            className: to.a.HeroLogo,
+                            className: ao.a.HeroLogo,
                             autoPlay: !0,
                             preload: "auto",
                             muted: !0,
@@ -37920,10 +38064,10 @@ var CLSTAMP = "6905869";
                         ),
                         s.a.createElement(
                           "div",
-                          { className: to.a.ButtonRow },
+                          { className: ao.a.ButtonRow },
                           s.a.createElement(
                             "div",
-                            { className: to.a.CommunityDesc },
+                            { className: ao.a.CommunityDesc },
                             Object(E.a)("#filmcontest_submit_label")
                           ),
                           0 == h.a.ACCOUNT_ID &&
@@ -37940,17 +38084,17 @@ var CLSTAMP = "6905869";
                                 "div",
                                 {
                                   className: Object(f.a)(
-                                    to.a.FilmButton,
-                                    to.a.SteamButton
+                                    ao.a.FilmButton,
+                                    ao.a.SteamButton
                                   ),
                                 },
                                 s.a.createElement(
                                   "div",
-                                  { className: to.a.ButtonText },
+                                  { className: ao.a.ButtonText },
                                   Object(E.a)("#filmcontest_login_steam")
                                 ),
                                 s.a.createElement("div", {
-                                  className: to.a.SteamLogo,
+                                  className: ao.a.SteamLogo,
                                 })
                               )
                             ),
@@ -37962,20 +38106,20 @@ var CLSTAMP = "6905869";
                                   return e.handleClick(!0);
                                 },
                                 className: Object(f.a)(
-                                  to.a.FilmButton,
-                                  to.a.SteamButton
+                                  ao.a.FilmButton,
+                                  ao.a.SteamButton
                                 ),
                               },
                               s.a.createElement(
                                 "div",
-                                { className: to.a.ButtonText },
+                                { className: ao.a.ButtonText },
                                 Object(E.a)("#filmcontest_button_submit")
                               ),
-                              s.a.createElement(ao, null)
+                              s.a.createElement(no, null)
                             ),
                           s.a.createElement(
                             "div",
-                            { className: to.a.CommunityDesc },
+                            { className: ao.a.CommunityDesc },
                             Object(E.a)("#filmcontest_community")
                           ),
                           s.a.createElement(
@@ -37986,102 +38130,102 @@ var CLSTAMP = "6905869";
                             },
                             s.a.createElement(
                               "div",
-                              { className: to.a.FilmButton },
+                              { className: ao.a.FilmButton },
                               s.a.createElement(
                                 "div",
-                                { className: to.a.ButtonText },
+                                { className: ao.a.ButtonText },
                                 Object(E.a)("#filmcontest_submissions")
                               ),
-                              s.a.createElement(ao, null)
+                              s.a.createElement(no, null)
                             )
                           )
                         )
                       ),
                       s.a.createElement(
                         "div",
-                        { className: to.a.Introduction },
+                        { className: ao.a.Introduction },
                         Object(E.a)("#filmcontest_introduction")
                       ),
                       s.a.createElement(
                         "div",
-                        { className: to.a.Prizes },
+                        { className: ao.a.Prizes },
                         s.a.createElement(
                           "div",
-                          { className: Object(f.a)(to.a.Prize, to.a.Prize1) },
+                          { className: Object(f.a)(ao.a.Prize, ao.a.Prize1) },
                           s.a.createElement(
                             "div",
-                            { className: to.a.PrizeAmount },
+                            { className: ao.a.PrizeAmount },
                             Object(E.a)("#filmcontest_prize1_amount")
                           ),
                           s.a.createElement(
                             "div",
-                            { className: to.a.PrizeLabel },
+                            { className: ao.a.PrizeLabel },
                             Object(E.a)("#filmcontest_prize1_label")
                           )
                         ),
                         s.a.createElement(
                           "div",
-                          { className: Object(f.a)(to.a.Prize, to.a.Prize2) },
+                          { className: Object(f.a)(ao.a.Prize, ao.a.Prize2) },
                           s.a.createElement(
                             "div",
-                            { className: to.a.PrizeAmount },
+                            { className: ao.a.PrizeAmount },
                             Object(E.a)("#filmcontest_prize2_amount")
                           ),
                           s.a.createElement(
                             "div",
-                            { className: to.a.PrizeLabel },
+                            { className: ao.a.PrizeLabel },
                             Object(E.a)("#filmcontest_prize2_label")
                           )
                         ),
                         s.a.createElement(
                           "div",
-                          { className: Object(f.a)(to.a.Prize, to.a.Prize3) },
+                          { className: Object(f.a)(ao.a.Prize, ao.a.Prize3) },
                           s.a.createElement(
                             "div",
-                            { className: to.a.PrizeAmount },
+                            { className: ao.a.PrizeAmount },
                             Object(E.a)("#filmcontest_prize3_amount")
                           ),
                           s.a.createElement(
                             "div",
-                            { className: to.a.PrizeLabel },
+                            { className: ao.a.PrizeLabel },
                             Object(E.a)("#filmcontest_prize3_label")
                           )
                         ),
                         s.a.createElement(
                           "div",
-                          { className: Object(f.a)(to.a.Prize, to.a.Prize4) },
+                          { className: Object(f.a)(ao.a.Prize, ao.a.Prize4) },
                           s.a.createElement(
                             "div",
-                            { className: to.a.PrizeAmount },
+                            { className: ao.a.PrizeAmount },
                             Object(E.a)("#filmcontest_prize4_amount")
                           ),
                           s.a.createElement(
                             "div",
-                            { className: to.a.PrizeLabel },
+                            { className: ao.a.PrizeLabel },
                             Object(E.a)("#filmcontest_prize4_label")
                           )
                         )
                       ),
                       s.a.createElement(
                         "div",
-                        { className: to.a.PrizeDesc },
+                        { className: ao.a.PrizeDesc },
                         Object(E.a)("#filmcontest_prize_desc")
                       )
                     )
                   ),
                   s.a.createElement(
                     "div",
-                    { className: to.a.WallpaperSection },
+                    { className: ao.a.WallpaperSection },
                     s.a.createElement(
                       "div",
-                      { className: to.a.WallpaperTitle },
+                      { className: ao.a.WallpaperTitle },
                       Object(E.a)("#filmcontest_previous_winners")
                     ),
                     s.a.createElement(
                       "div",
-                      { className: to.a.Wallpapers },
+                      { className: ao.a.Wallpapers },
                       s.a.createElement("iframe", {
-                        className: to.a.PreviousWinnerVideo,
+                        className: ao.a.PreviousWinnerVideo,
                         width: "30%",
                         height: "300px",
                         src: "https://www.youtube.com/embed/xtHskqp8QMc",
@@ -38092,7 +38236,7 @@ var CLSTAMP = "6905869";
                         allowFullScreen: !0,
                       }),
                       s.a.createElement("iframe", {
-                        className: to.a.PreviousWinnerVideo,
+                        className: ao.a.PreviousWinnerVideo,
                         width: "30%",
                         height: "300px",
                         src: "https://www.youtube.com/embed/4a04C51ZKi4",
@@ -38103,7 +38247,7 @@ var CLSTAMP = "6905869";
                         allowFullScreen: !0,
                       }),
                       s.a.createElement("iframe", {
-                        className: to.a.PreviousWinnerVideo,
+                        className: ao.a.PreviousWinnerVideo,
                         width: "30%",
                         height: "300px",
                         src: "https://www.youtube.com/embed/qKWcG86wgUc",
@@ -38117,20 +38261,20 @@ var CLSTAMP = "6905869";
                   ),
                   s.a.createElement(
                     "div",
-                    { className: to.a.GuidelinesSection },
-                    s.a.createElement("div", { className: to.a.Divider }),
-                    s.a.createElement("div", { className: to.a.DividerBottom }),
+                    { className: ao.a.GuidelinesSection },
+                    s.a.createElement("div", { className: ao.a.Divider }),
+                    s.a.createElement("div", { className: ao.a.DividerBottom }),
                     s.a.createElement(
                       "div",
-                      { className: to.a.Quote },
+                      { className: ao.a.Quote },
                       s.a.createElement(
                         "div",
-                        { className: to.a.GuidelinesTitle },
+                        { className: ao.a.GuidelinesTitle },
                         Object(E.a)("#filmcontest_guidelines")
                       ),
                       s.a.createElement(
                         "div",
-                        { className: to.a.GuidelinesList },
+                        { className: ao.a.GuidelinesList },
                         s.a.createElement(
                           "ul",
                           null,
@@ -38200,10 +38344,10 @@ var CLSTAMP = "6905869";
                   ),
                   s.a.createElement(
                     "div",
-                    { className: to.a.EndRow },
+                    { className: ao.a.EndRow },
                     s.a.createElement(
                       "div",
-                      { className: to.a.EndRowText },
+                      { className: ao.a.EndRowText },
                       Object(E.a)("#filmcontest_introduction"),
                       0 == h.a.ACCOUNT_ID &&
                         s.a.createElement(
@@ -38219,17 +38363,17 @@ var CLSTAMP = "6905869";
                             "div",
                             {
                               className: Object(f.a)(
-                                to.a.FilmButton,
-                                to.a.SteamButton
+                                ao.a.FilmButton,
+                                ao.a.SteamButton
                               ),
                             },
                             s.a.createElement(
                               "div",
-                              { className: to.a.ButtonText },
+                              { className: ao.a.ButtonText },
                               Object(E.a)("#filmcontest_login_steam")
                             ),
                             s.a.createElement("div", {
-                              className: to.a.SteamLogo,
+                              className: ao.a.SteamLogo,
                             })
                           )
                         ),
@@ -38241,30 +38385,30 @@ var CLSTAMP = "6905869";
                               return e.handleClick(!0);
                             },
                             className: Object(f.a)(
-                              to.a.FilmButton,
-                              to.a.SteamButton
+                              ao.a.FilmButton,
+                              ao.a.SteamButton
                             ),
                           },
                           s.a.createElement(
                             "div",
-                            { className: to.a.ButtonText },
+                            { className: ao.a.ButtonText },
                             Object(E.a)("#filmcontest_button_submit")
                           ),
-                          s.a.createElement(ao, null)
+                          s.a.createElement(no, null)
                         )
                     ),
                     s.a.createElement("img", {
-                      className: to.a.EndRowImage,
+                      className: ao.a.EndRowImage,
                       src:
                         h.a.IMG_URL +
                         "/international2020/shortfilm/clap_board_new.png",
                     })
                   ),
-                  s.a.createElement(T.a, null),
+                  s.a.createElement(S.a, null),
                   s.a.createElement(
-                    no,
+                    ro,
                     {
-                      className: to.a.ShortFilmPopup,
+                      className: ao.a.ShortFilmPopup,
                       hasCloseButton: !0,
                       shouldShow: this.state.bPopupVisible,
                       showFunc: function (t) {
@@ -38279,8 +38423,8 @@ var CLSTAMP = "6905869";
                           return e.handleAccepted();
                         },
                         className: Object(f.a)(
-                          to.a.FilmButton,
-                          to.a.SteamButton
+                          ao.a.FilmButton,
+                          ao.a.SteamButton
                         ),
                       },
                       Object(E.a)("#filmcontest_i_agree")
@@ -38293,16 +38437,16 @@ var CLSTAMP = "6905869";
             t
           );
         })(s.a.Component);
-      (Vr = s.a.lazy(function () {
+      (Wr = s.a.lazy(function () {
         return Promise.all([a.e(0), a.e(62)]).then(a.bind(null, "Bqrr"));
       })),
-        (Wr = s.a.lazy(function () {
+        (zr = s.a.lazy(function () {
           return a.e(64).then(a.bind(null, "QoBx"));
         })),
-        (zr = s.a.lazy(function () {
+        (Yr = s.a.lazy(function () {
           return a.e(63).then(a.bind(null, "e+xL"));
         }));
-      var oo = (function (e) {
+      var io = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -38342,7 +38486,7 @@ var CLSTAMP = "6905869";
                       null,
                       s.a.createElement(Zt, {
                         path: d.b.home(),
-                        component: Ur,
+                        component: Fr,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.newsentry(":id"),
@@ -38358,7 +38502,7 @@ var CLSTAMP = "6905869";
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.international_ticketfaq(),
-                        component: Qr,
+                        component: Xr,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.international_badgebinding(),
@@ -38366,39 +38510,39 @@ var CLSTAMP = "6905869";
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.hero(":id"),
-                        component: Gr,
+                        component: Ar,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.herogrid(),
-                        component: _r,
+                        component: gr,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.pastupdates(),
-                        component: Zr,
+                        component: $r,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.dpc_event_root(":strEvent?"),
-                        component: sr,
+                        component: lr,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.patchnotes(":version?"),
-                        component: $r.d,
+                        component: eo.d,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.dawnbreaker(),
-                        component: Vr,
+                        component: Wr,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.marci(),
-                        component: zr,
+                        component: Yr,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.shortfilm(),
-                        component: ro,
+                        component: oo,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.nemestice(),
-                        component: Wr,
+                        component: zr,
                       }),
                       s.a.createElement(Zt, {
                         path: d.b.other(":page"),
@@ -38414,21 +38558,21 @@ var CLSTAMP = "6905869";
             (t = Object(r.c)([m.a], t))
           );
         })(s.a.Component),
-        io = a("6rKP"),
-        so = new ((function () {
+        so = a("6rKP"),
+        lo = new ((function () {
           function e() {
-            (this.m_asyncPrizePool = new io.a()),
-              (this.m_asyncPatchNotesListData = new io.a()),
-              (this.m_asyncPatchNotesData = new io.b()),
-              (this.m_asyncBPPrice = new io.b()),
+            (this.m_asyncPrizePool = new so.a()),
+              (this.m_asyncPatchNotesListData = new so.a()),
+              (this.m_asyncPatchNotesData = new so.b()),
+              (this.m_asyncBPPrice = new so.b()),
               (this.m_nSelectedAbilityIndex = 0),
-              (this.m_asyncShortFilmOwnership = new io.a()),
+              (this.m_asyncShortFilmOwnership = new so.a()),
               Object(E.c)();
           }
           return (
             (e.prototype.Init = function () {
               o.render(
-                i.createElement(oo, { app: this }),
+                i.createElement(io, { app: this }),
                 document.getElementById("dota_react_root")
               );
             }),
@@ -38630,7 +38774,7 @@ var CLSTAMP = "6905869";
             e
           );
         })())();
-      function lo(e) {
+      function co(e) {
         return Object(r.b)(this, void 0, void 0, function () {
           var t, n, o, i, s, l, c, d, m;
           return Object(r.e)(this, function (u) {
@@ -38685,10 +38829,10 @@ var CLSTAMP = "6905869";
                 return (
                   Object(be.e)("application_config"),
                   Object(h.b)(),
-                  [4, lo(h.a.LANGUAGE)]
+                  [4, co(h.a.LANGUAGE)]
                 );
               case 1:
-                return e.sent(), so.Init(), [2];
+                return e.sent(), lo.Init(), [2];
             }
           });
         });
@@ -39422,7 +39566,13 @@ var CLSTAMP = "6905869";
             (e[(e.INTERNATIONAL_2021_QUALIFIERS = 3)] =
               "INTERNATIONAL_2021_QUALIFIERS"),
             (e[(e.INTERNATIONAL_2021 = 4)] = "INTERNATIONAL_2021"),
-            (e[(e.INTERNATIONAL_2022 = 5)] = "INTERNATIONAL_2022");
+            (e[(e.WINTER_2021_LEAGUE = 5)] = "WINTER_2021_LEAGUE"),
+            (e[(e.WINTER_2021_MAJOR = 6)] = "WINTER_2021_MAJOR"),
+            (e[(e.SPRING_2022_LEAGUE = 7)] = "SPRING_2022_LEAGUE"),
+            (e[(e.SPRING_2022_MAJOR = 8)] = "SPRING_2022_MAJOR"),
+            (e[(e.SUMMER_2022_LEAGUE = 9)] = "SUMMER_2022_LEAGUE"),
+            (e[(e.SUMMER_2022_MAJOR = 10)] = "SUMMER_2022_MAJOR"),
+            (e[(e.INTERNATIONAL_2022 = 11)] = "INTERNATIONAL_2022");
         })(p || (p = {})),
         (function (e) {
           (e[(e.INVALID = 0)] = "INVALID"),
@@ -40835,6 +40985,8 @@ var CLSTAMP = "6905869";
             return i.e.INTERNATIONAL_2021_QUALIFIERS;
           case "ti10":
             return i.e.INTERNATIONAL_2021;
+          case "winter21":
+            return i.e.WINTER_2021_LEAGUE;
           case "ti11":
             return i.e.INTERNATIONAL_2022;
         }
@@ -40850,13 +41002,15 @@ var CLSTAMP = "6905869";
             return "ti10qual";
           case i.e.INTERNATIONAL_2021:
             return "ti10";
+          case i.e.WINTER_2021_LEAGUE:
+            return "winter21";
           case i.e.INTERNATIONAL_2022:
             return "ti11";
         }
         return "";
       }
       function _() {
-        return "ti10";
+        return "winter21";
       }
       function g(e) {
         var t = s.a.Get().GetBestCurrentLeagueNode(e).nLeagueID;
@@ -41263,6 +41417,7 @@ var CLSTAMP = "6905869";
         TILogo: "dpcroot_TILogo_3qlYs",
         Underline: "dpcroot_Underline_2OGbF",
         DPCHeaderTI2021: "dpcroot_DPCHeaderTI2021_botBF",
+        DPCHeaderWinter2021League: "dpcroot_DPCHeaderWinter2021League_uPgFq",
       };
     },
     yUY1: function (e, t, a) {
