@@ -54,8 +54,8 @@ body.v6.steamaward_nominations_faq .searchbox input {
 .nominations_header_ctn {
 	position: relative;
     background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/SA_2021_header_still.png?v=2' ) no-repeat;
-	background-size: cover;
 	background-position: center;
+	background-color: #f13215;
 }
 
 .nominations_video_ctn {
@@ -1248,7 +1248,7 @@ img.faq_section_title {
 }
 
 .nomination_row_right {
-	width: 330px;
+	max-width: 330px;
 	margin-right: 15px;
 	text-align: end;
 }
@@ -2484,7 +2484,19 @@ body.resultsday .steamaward_header_background {
 		font-size: 36px;
 	}
 
-	html.responsive .vote_result_ctn .awardtitle {
+    html.responsive .faq_saletitle {
+        font-size: 62px;
+    }
+
+    html.responsive .badge_preview {
+        width: 100%;
+    }
+
+    .btn_nominate.btn_medium span {
+        font-size: 12px;
+    }
+
+    html.responsive .vote_result_ctn .awardtitle {
 		font-size: 16px;
 	}
 
@@ -2898,6 +2910,7 @@ html body.v6.steamaward_nominations_categorypage .page_content {
 	padding: 3px;
 	font-size: 16px;
 	font-weight: bold;
+    overflow: hidden;
 }
 
 .input_section .btn_medium {
