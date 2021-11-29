@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6913339";
+var CLSTAMP = "6918857";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10645,17 +10645,16 @@ var CLSTAMP = "6913339";
                 return e[1].node_id;
               });
           }),
-          (e.prototype.GetEventDates = function (e, t) {
-            var a,
-              n = new Date().setHours(0, 0, 0, 0) / 1e3,
-              r = Array.from(
-                (null === (a = this.m_mapEventDates.get(e)) || void 0 === a
-                  ? void 0
-                  : a.values()) || []
-              ).sort(function (e, t) {
-                return Math.abs(e - n) - Math.abs(t - n);
-              });
-            return t > 0 && r.splice(t), r;
+          (e.prototype.GetEventDates = function (e) {
+            var t,
+              a = new Date().setHours(0, 0, 0, 0) / 1e3;
+            return Array.from(
+              (null === (t = this.m_mapEventDates.get(e)) || void 0 === t
+                ? void 0
+                : t.values()) || []
+            ).sort(function (e, t) {
+              return Math.abs(e - a) - Math.abs(t - a);
+            });
           }),
           (e.prototype.GetEventPhaseDates = function (e, t) {
             var a;
@@ -10711,30 +10710,30 @@ var CLSTAMP = "6913339";
                 : a.values()) || []
             );
           }),
-          (e.prototype.GetEventNodes = function (e, t) {
-            var a,
-              n = this,
-              r = this.GetEventDates(e, t);
+          (e.prototype.GetEventNodes = function (e) {
+            var t,
+              a = this,
+              n = this.GetEventDates(e);
             return Array.from(
-              (null === (a = this.m_mapEventLeagueNodes.get(e)) || void 0 === a
+              (null === (t = this.m_mapEventLeagueNodes.get(e)) || void 0 === t
                 ? void 0
-                : a.values()) || []
+                : t.values()) || []
             )
               .map(function (e) {
                 return { nLeagueID: e >> 10, nNodeID: 1023 & e };
               })
               .filter(function (e) {
-                var t = n.GetLeagueNode(e.nLeagueID, e.nNodeID),
-                  a = (null == t ? void 0 : t.actual_time)
+                var t = a.GetLeagueNode(e.nLeagueID, e.nNodeID),
+                  r = (null == t ? void 0 : t.actual_time)
                     ? null == t
                       ? void 0
                       : t.actual_time
                     : null == t
                     ? void 0
                     : t.scheduled_time;
-                if (!a || 0 == a) return !1;
-                for (var o = 0, i = r; o < i.length; o++) {
-                  var s = a - i[o];
+                if (!r || 0 == r) return !1;
+                for (var o = 0, i = n; o < i.length; o++) {
+                  var s = r - i[o];
                   if (s >= 0 && s < 86400) return !0;
                 }
                 return !1;
@@ -11270,7 +11269,7 @@ var CLSTAMP = "6913339";
           }),
           (e.prototype.GetNextLeagueNode = function (t, a, n) {
             var r = this,
-              o = this.GetEventNodes(t, 0)
+              o = this.GetEventNodes(t)
                 .filter(function (t) {
                   var o = r.GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
                   if (a && (null == o ? void 0 : o.ePhase) != a) return !1;
@@ -11301,7 +11300,7 @@ var CLSTAMP = "6913339";
               a = void 0,
               n = void 0;
             return (
-              this.GetEventNodes(e, 0).forEach(function (r) {
+              this.GetEventNodes(e).forEach(function (r) {
                 t.IsLeagueNodeLive(e, r.nLeagueID, r.nNodeID) &&
                   ((a = r.nLeagueID), (n = r.nNodeID));
               }),
@@ -11313,7 +11312,7 @@ var CLSTAMP = "6913339";
               o = void 0,
               i = void 0;
             return (
-              this.GetEventNodes(t, 0).forEach(function (t) {
+              this.GetEventNodes(t).forEach(function (t) {
                 var s = r.GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
                 if (!a || (null == s ? void 0 : s.ePhase) == a) {
                   var l = e.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
@@ -11386,7 +11385,7 @@ var CLSTAMP = "6913339";
             ) {
               this.m_nLastLiveUpdateTimestamp = a;
               var n = new Set(),
-                r = this.GetEventNodes(e, 0);
+                r = this.GetEventNodes(e);
               r.forEach(function (e) {
                 var a = t.GetLeagueNode(e.nLeagueID, e.nNodeID);
                 a &&
@@ -25694,120 +25693,117 @@ var CLSTAMP = "6913339";
           var t,
             a = e.nLeagueID,
             n = e.nNodeID,
-            r = e.nOverrideTimestamp,
-            o = $n(),
-            i = Object(p.h)(),
-            l = Ot.a.Get().GetWatchPageContext(),
-            c = 0 == n,
-            m = Ot.a.Get().GetLeagueNode(a, n),
-            _ = Ot.a.Get().GetLeagueNodeInfo(a, n),
-            g = Ot.a
+            r = e.arrTimestamps,
+            o = e.nOverrideTimestamp,
+            i = $n(),
+            l = Object(p.h)(),
+            c = Ot.a.Get().GetWatchPageContext(),
+            m = 0 == n,
+            _ = Ot.a.Get().GetLeagueNode(a, n),
+            g = Ot.a.Get().GetLeagueNodeInfo(a, n),
+            h = Ot.a
               .Get()
               .GetEventPhaseNodeGroupID(
-                o,
-                null == _ ? void 0 : _.ePhase,
-                null == _ ? void 0 : _.eDivision,
-                null == _ ? void 0 : _.eRegion
+                i,
+                null == g ? void 0 : g.ePhase,
+                null == g ? void 0 : g.eDivision,
+                null == g ? void 0 : g.eRegion
               ),
-            h = null == m ? void 0 : m.team_id_1,
-            b = null == m ? void 0 : m.team_id_2,
-            v = Ot.a
-              .Get()
-              .GetTeamStanding(
-                null == g ? void 0 : g.nLeagueID,
-                null == g ? void 0 : g.nNodeGroupID,
-                h
-              ),
+            b = null == _ ? void 0 : _.team_id_1,
+            v = null == _ ? void 0 : _.team_id_2,
             y = Ot.a
               .Get()
               .GetTeamStanding(
-                null == g ? void 0 : g.nLeagueID,
-                null == g ? void 0 : g.nNodeGroupID,
+                null == h ? void 0 : h.nLeagueID,
+                null == h ? void 0 : h.nNodeGroupID,
                 b
               ),
-            N = Ot.a.Get().IsLeagueNodeLive(o, a, n),
-            I =
-              (null == m ? void 0 : m.has_started) &&
-              !(null == m ? void 0 : m.is_completed),
-            O = null == m ? void 0 : m.is_completed,
-            D = Ot.a.Get().GetFirstUnwatchedGame(a, n),
-            S =
-              (null === (t = Ot.a.Get().GetLeagueNodeVODs(a, n, D)) ||
+            N = Ot.a
+              .Get()
+              .GetTeamStanding(
+                null == h ? void 0 : h.nLeagueID,
+                null == h ? void 0 : h.nNodeGroupID,
+                v
+              ),
+            I = Ot.a.Get().IsLeagueNodeLive(i, a, n),
+            O =
+              (null == _ ? void 0 : _.has_started) &&
+              !(null == _ ? void 0 : _.is_completed),
+            D = null == _ ? void 0 : _.is_completed,
+            S = Ot.a.Get().GetFirstUnwatchedGame(a, n),
+            T =
+              (null === (t = Ot.a.Get().GetLeagueNodeVODs(a, n, S)) ||
               void 0 === t
                 ? void 0
                 : t.length) > 0,
-            T = (null == _ ? void 0 : _.eNodeGroupType) == St.h.ROUND_ROBIN,
-            L = Ot.a.Get().GetNodeLabelStrings(o, a, n, St.n.SHORT),
-            C =
-              c && r
-                ? r
-                : 0 != (null == m ? void 0 : m.actual_time)
-                ? null == m
+            L = (null == g ? void 0 : g.eNodeGroupType) == St.h.ROUND_ROBIN,
+            C = Ot.a.Get().GetNodeLabelStrings(i, a, n, St.n.SHORT),
+            j =
+              m && o
+                ? o
+                : 0 != (null == _ ? void 0 : _.actual_time)
+                ? null == _
                   ? void 0
-                  : m.actual_time
-                : null == m
+                  : _.actual_time
+                : null == _
                 ? void 0
-                : m.scheduled_time,
-            j = Ot.a
-              .Get()
-              .GetEventDates(o, 3)
-              .sort()
-              .findIndex(function (e) {
-                return (r || C) >= e && (r || C) < e + 86400;
-              }),
-            w = Ot.a.Get().GetSpoilerBlockState(o) == St.l.BLOCKED,
-            G =
-              !w ||
+                : _.scheduled_time,
+            w = r.findIndex(function (e) {
+              return (o || j) >= e && (o || j) < e + 86400;
+            }),
+            G = Ot.a.Get().GetSpoilerBlockState(i) == St.l.BLOCKED,
+            A =
+              !G ||
               !Ot.a.Get().IsLeagueNodeBracket(a, n) ||
               Ot.a.Get().IsAnyGameWatched(a, n),
-            A =
-              v && T
-                ? (null == v ? void 0 : v.wins) +
-                  " - " +
-                  (null == v ? void 0 : v.losses)
-                : "",
             R =
-              y && T
+              y && L
                 ? (null == y ? void 0 : y.wins) +
                   " - " +
                   (null == y ? void 0 : y.losses)
                 : "",
-            k = w
+            k =
+              N && L
+                ? (null == N ? void 0 : N.wins) +
+                  " - " +
+                  (null == N ? void 0 : N.losses)
+                : "",
+            B = G
               ? "?"
-              : I || O
-              ? "" + (null == m ? void 0 : m.team_1_wins)
-              : A,
-            B = w
-              ? "?"
-              : I || O
-              ? "" + (null == m ? void 0 : m.team_2_wins)
+              : O || D
+              ? "" + (null == _ ? void 0 : _.team_1_wins)
               : R,
-            P = Ot.a.Get().GetTeamNames(h),
+            P = G
+              ? "?"
+              : O || D
+              ? "" + (null == _ ? void 0 : _.team_2_wins)
+              : k,
             M = Ot.a.Get().GetTeamNames(b),
-            x = P ? P.name : "#dpc_tbd",
-            U = M ? M.name : "#dpc_tbd";
-          w && !G && ((x = "#dpc_hidden"), (U = "#dpc_hidden"));
-          var F =
-              ((null == l ? void 0 : l.nLeagueID) == a &&
-                l.nNodeID == n &&
-                Object(d.a)(o, i) == St.a.WATCH) ||
-              (c &&
-                1 == (null == l ? void 0 : l.nLeagueID) &&
-                1 == (null == l ? void 0 : l.nNodeID)),
-            H = F ? 0 : a,
-            V = F ? 0 : n,
-            W = !c || N;
+            x = Ot.a.Get().GetTeamNames(v),
+            U = M ? M.name : "#dpc_tbd",
+            F = x ? x.name : "#dpc_tbd";
+          G && !A && ((U = "#dpc_hidden"), (F = "#dpc_hidden"));
+          var H =
+              ((null == c ? void 0 : c.nLeagueID) == a &&
+                c.nNodeID == n &&
+                Object(d.a)(i, l) == St.a.WATCH) ||
+              (m &&
+                1 == (null == c ? void 0 : c.nLeagueID) &&
+                1 == (null == c ? void 0 : c.nNodeID)),
+            V = H ? 0 : a,
+            W = H ? 0 : n,
+            z = !m || I;
           return s.a.createElement(
             "div",
             {
               className: Object(f.a)(
                 wt.a.DPCMatchBannerNode,
-                F && wt.a.IsSelected,
-                N && wt.a.IsLive,
-                O && wt.a.IsCompleted,
-                0 == j && wt.a.First,
-                1 == j && wt.a.Second,
-                2 == j && wt.a.Third
+                H && wt.a.IsSelected,
+                I && wt.a.IsLive,
+                D && wt.a.IsCompleted,
+                0 == w && wt.a.First,
+                1 == w && wt.a.Second,
+                2 == w && wt.a.Third
               ),
             },
             s.a.createElement(
@@ -25817,21 +25813,21 @@ var CLSTAMP = "6913339";
                 "div",
                 { className: wt.a.Time },
                 s.a.createElement(Rt.a, {
-                  date: r ? 1e3 * r : 1e3 * C,
+                  date: o ? 1e3 * o : 1e3 * j,
                   format: "LT",
                 })
               ),
               s.a.createElement(
                 "div",
                 { className: wt.a.Description },
-                L.map(function (e, t) {
+                C.map(function (e, t) {
                   return s.a.createElement(
                     "div",
                     {
                       key:
-                        (null == l ? void 0 : l.nLeagueID) +
+                        (null == c ? void 0 : c.nLeagueID) +
                         "_" +
-                        (null == l ? void 0 : l.nNodeID) +
+                        (null == c ? void 0 : c.nNodeID) +
                         "_" +
                         t,
                       className: wt.a.Detail,
@@ -25847,34 +25843,34 @@ var CLSTAMP = "6913339";
                 s.a.createElement("div", { className: wt.a.Dot })
               )
             ),
-            !c &&
+            !m &&
               s.a.createElement(
                 "div",
                 { className: wt.a.TeamsContainer },
                 s.a.createElement(qt, {
-                  nTeamID: h,
-                  strTeamInfo: k,
-                  bWinner:
-                    O &&
-                    !w &&
-                    (null == m ? void 0 : m.team_1_wins) >
-                      (null == m ? void 0 : m.team_2_wins),
-                  strTeamName: x,
-                  bShowTeams: G,
-                }),
-                s.a.createElement(qt, {
                   nTeamID: b,
                   strTeamInfo: B,
                   bWinner:
-                    O &&
-                    !w &&
-                    (null == m ? void 0 : m.team_2_wins) >
-                      (null == m ? void 0 : m.team_1_wins),
+                    D &&
+                    !G &&
+                    (null == _ ? void 0 : _.team_1_wins) >
+                      (null == _ ? void 0 : _.team_2_wins),
                   strTeamName: U,
-                  bShowTeams: G,
+                  bShowTeams: A,
+                }),
+                s.a.createElement(qt, {
+                  nTeamID: v,
+                  strTeamInfo: P,
+                  bWinner:
+                    D &&
+                    !G &&
+                    (null == _ ? void 0 : _.team_2_wins) >
+                      (null == _ ? void 0 : _.team_1_wins),
+                  strTeamName: F,
+                  bShowTeams: A,
                 })
               ),
-            c &&
+            m &&
               s.a.createElement(
                 "div",
                 { className: wt.a.Multicast },
@@ -25884,72 +25880,72 @@ var CLSTAMP = "6913339";
                 }),
                 Object(E.a)("#dpc_multicast")
               ),
-            W &&
+            z &&
               s.a.createElement(
                 "div",
                 { className: wt.a.Overlay },
-                !N &&
-                  O &&
-                  !S &&
+                !I &&
+                  D &&
+                  !T &&
                   s.a.createElement(
                     u.b,
                     {
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: d.b.dpc_watch(
-                          Object(Dt.j)(o),
-                          "" + H,
-                          "" + V
+                          Object(Dt.j)(i),
+                          "" + V,
+                          "" + W
                         ),
                       },
                       className: wt.a.HoverOption,
                     },
                     Object(E.a)("#dpc_series_details")
                   ),
-                !N &&
-                  O &&
-                  S &&
+                !I &&
+                  D &&
+                  T &&
                   s.a.createElement(
                     u.b,
                     {
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: d.b.dpc_watch(
-                          Object(Dt.j)(o),
-                          "" + H,
+                          Object(Dt.j)(i),
                           "" + V,
-                          Object(Dt.l)(D, Dt.f.VOD)
+                          "" + W,
+                          Object(Dt.l)(S, Dt.f.VOD)
                         ),
                       },
                       className: wt.a.HoverOption,
                     },
                     Object(E.a)("#dpc_watch_vod")
                   ),
-                N &&
+                I &&
                   s.a.createElement(
                     u.b,
                     {
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: d.b.dpc_watch(
-                          Object(Dt.j)(o),
-                          "" + H,
-                          "" + V
+                          Object(Dt.j)(i),
+                          "" + V,
+                          "" + W
                         ),
                       },
                       className: wt.a.HoverOption,
                     },
                     Object(E.a)("#dpc_watch_live")
                   ),
-                !N &&
-                  !O &&
+                !I &&
+                  !D &&
                   s.a.createElement(
                     u.b,
                     {
                       to: {
                         state: { bAutoScroll: !1 },
                         pathname: d.b.dpc_schedule(
-                          Object(Dt.j)(o),
+                          Object(Dt.j)(i),
                           "" + a,
                           "" + n
                         ),
@@ -25974,8 +25970,8 @@ var CLSTAMP = "6913339";
             p = Object(i.useRef)(null),
             _ = Object(i.useRef)(null),
             g = Object(i.useRef)(null),
-            h = Ot.a.Get().GetEventNodes(e, 3),
-            b = Ot.a.Get().GetEventDates(e, 3).sort(),
+            h = Ot.a.Get().GetEventNodes(e),
+            b = Ot.a.Get().GetEventDates(e).sort(),
             v = Date.now() / 1e3,
             y = h.filter(function (e) {
               var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
@@ -25983,9 +25979,53 @@ var CLSTAMP = "6913339";
               var a = Ot.a.Get().GetLeagueNodeInfo(e.nLeagueID, e.nNodeID);
               return r == St.d.UNSET || a.eDivision == r;
             }),
-            N = 0;
+            N = b
+              .filter(function (e) {
+                for (var t = !1, a = 0, n = y; a < n.length; a++) {
+                  var r = n[a],
+                    o = Ot.a.Get().GetLeagueNode(r.nLeagueID, r.nNodeID),
+                    i = (null == o ? void 0 : o.actual_time)
+                      ? null == o
+                        ? void 0
+                        : o.actual_time
+                      : null == o
+                      ? void 0
+                      : o.scheduled_time;
+                  if (i > e && i < e + 86400) {
+                    t = !0;
+                    break;
+                  }
+                }
+                return t;
+              })
+              .slice(0, 3),
+            I = h.filter(function (e) {
+              for (
+                var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+                  a = (null == t ? void 0 : t.actual_time)
+                    ? null == t
+                      ? void 0
+                      : t.actual_time
+                    : null == t
+                    ? void 0
+                    : t.scheduled_time,
+                  n = !1,
+                  r = 0,
+                  o = N;
+                r < o.length;
+                r++
+              ) {
+                var i = o[r];
+                if (a > i && a < i + 86400) {
+                  n = !0;
+                  break;
+                }
+              }
+              return n;
+            }),
+            O = 0;
           t.eEventType == St.g.INTERNATIONAL &&
-            y.forEach(function (e) {
+            I.forEach(function (e) {
               var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
               if (t && !t.is_completed) {
                 var a = Ot.a
@@ -25999,20 +26039,20 @@ var CLSTAMP = "6913339";
                     );
                 (null == n ? void 0 : n.phase) ==
                   St.j.LEAGUE_PHASE_GROUP_STAGE &&
-                  (N =
-                    0 == N ? t.scheduled_time : Math.min(N, t.scheduled_time));
+                  (O =
+                    0 == O ? t.scheduled_time : Math.min(O, t.scheduled_time));
               }
             }),
-            0 != N &&
-              y.push({
+            0 != O &&
+              I.push({
                 nLeagueID: null == t ? void 0 : t.nMulticastLeagueID,
                 nNodeID: 0,
               });
-          var I = y.sort(function (e, t) {
+          var D = I.sort(function (e, t) {
               var a = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
                 n = Ot.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
                 r = Gt(e)
-                  ? N
+                  ? O
                   : (null == a ? void 0 : a.actual_time)
                   ? null == a
                     ? void 0
@@ -26021,7 +26061,7 @@ var CLSTAMP = "6913339";
                   ? void 0
                   : a.scheduled_time,
                 o = Gt(t)
-                  ? N
+                  ? O
                   : (null == n ? void 0 : n.actual_time)
                   ? null == n
                     ? void 0
@@ -26031,7 +26071,7 @@ var CLSTAMP = "6913339";
                   : n.scheduled_time;
               return r == o && Gt(e) ? -1 : r == o && Gt(t) ? 1 : r - o;
             }),
-            O =
+            S =
               h.filter(function (e) {
                 var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
                 return null == t ? void 0 : t.is_completed;
@@ -26039,7 +26079,7 @@ var CLSTAMP = "6913339";
           Object(i.useEffect)(
             function () {
               if (a && 0 != a.nLeagueID) {
-                var e = I.findIndex(function (e) {
+                var e = D.findIndex(function (e) {
                   return e.nLeagueID == a.nLeagueID && e.nNodeID == a.nNodeID;
                 });
                 if (0 != e && p.current && _.current) {
@@ -26053,18 +26093,18 @@ var CLSTAMP = "6913339";
             [
               null == a ? void 0 : a.nLeagueID,
               null == a ? void 0 : a.nNodeID,
-              I.length,
+              D.length,
             ]
           ),
             Object(i.useEffect)(
               function () {
-                (!a || (0 == a.nLeagueID && v > Math.max.apply(Math, b))) &&
+                (!a || (0 == a.nLeagueID && v > Math.max.apply(Math, N))) &&
                   p.current &&
                   (p.current.scrollLeft = p.current.scrollWidth);
               },
-              [I.length]
+              [D.length]
             );
-          var D = function (e) {
+          var T = function (e) {
             p.current && (p.current.scrollLeft += e * Wt * 2);
           };
           return (
@@ -26118,7 +26158,7 @@ var CLSTAMP = "6913339";
                   s.a.createElement(
                     "div",
                     { className: wt.a.MatchesContainer, ref: g },
-                    s.a.createElement(zt, { bLeft: !0, adjustDate: D }),
+                    s.a.createElement(zt, { bLeft: !0, adjustDate: T }),
                     s.a.createElement(
                       kt.a,
                       {
@@ -26136,8 +26176,8 @@ var CLSTAMP = "6913339";
                       s.a.createElement(
                         "div",
                         { className: wt.a.NodeList },
-                        I.length > 0 &&
-                          !O &&
+                        D.length > 0 &&
+                          !S &&
                           s.a.createElement(
                             "div",
                             { className: wt.a.ScheduleBumper },
@@ -26150,17 +26190,18 @@ var CLSTAMP = "6913339";
                               Object(E.a)("#dpc_go_to_schedule")
                             )
                           ),
-                        I.map(function (e) {
-                          var t = Gt(e) ? N : void 0;
+                        D.map(function (e) {
+                          var t = Gt(e) ? O : void 0;
                           return s.a.createElement(Kt, {
                             key: e.nLeagueID + "_" + e.nNodeID,
                             nLeagueID: e.nLeagueID,
+                            arrTimestamps: N,
                             nNodeID: e.nNodeID,
                             nOverrideTimestamp: t,
                           });
                         }),
-                        I.length > 0 &&
-                          !O &&
+                        D.length > 0 &&
+                          !S &&
                           s.a.createElement(
                             "div",
                             { className: wt.a.ScheduleBumper },
@@ -26178,16 +26219,16 @@ var CLSTAMP = "6913339";
                       s.a.createElement(
                         "div",
                         { className: wt.a.DayContainer },
-                        !O &&
+                        !S &&
                           s.a.createElement("div", {
                             className: wt.a.DayBumper,
                           }),
-                        b.map(function (e, t) {
+                        N.map(function (e, t) {
                           var a = e < v - 172800 || e > v + 86400,
                             n = !a && e < v && e < v - 86400,
                             r = !a && e < v && e > v - 86400,
                             o = !a && e > v,
-                            i = I.filter(function (t) {
+                            i = D.filter(function (t) {
                               var a = Ot.a
                                   .Get()
                                   .GetLeagueNode(t.nLeagueID, t.nNodeID),
@@ -26201,7 +26242,7 @@ var CLSTAMP = "6913339";
                               return n >= e && n < e + 86400;
                             }).length;
                           return (
-                            N >= e && N < e + 86400 && (i += 1),
+                            O >= e && O < e + 86400 && (i += 1),
                             s.a.createElement(
                               "div",
                               {
@@ -26246,7 +26287,7 @@ var CLSTAMP = "6913339";
                         })
                       )
                     ),
-                    s.a.createElement(zt, { bLeft: !1, adjustDate: D })
+                    s.a.createElement(zt, { bLeft: !1, adjustDate: T })
                   )
               )
             )
@@ -27391,7 +27432,7 @@ var CLSTAMP = "6913339";
         _a = Object(m.a)(function (e) {
           var t = $n(),
             a = Ot.a.Get().GetEventInfo(t),
-            n = Ot.a.Get().GetEventDates(t, 0).sort(),
+            n = Ot.a.Get().GetEventDates(t).sort(),
             r = !1,
             o = !1;
           switch (Ot.a.Get().GetEventType(t)) {
@@ -27586,14 +27627,14 @@ var CLSTAMP = "6913339";
             l = r[1],
             c = Ot.a
               .Get()
-              .GetEventDates(t, 0)
+              .GetEventDates(t)
               .filter(function (t) {
                 return 0 == e.nDayFilter || t == e.nDayFilter;
               })
               .sort(),
             m = Ot.a
               .Get()
-              .GetEventNodes(t, 0)
+              .GetEventNodes(t)
               .filter(function (t) {
                 var a = Ot.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
                 if (0 == (null == a ? void 0 : a.scheduled_time)) return !1;
@@ -28297,7 +28338,7 @@ var CLSTAMP = "6913339";
             if (y && N)
               b = Ot.a
                 .Get()
-                .GetEventDates(e, 0)
+                .GetEventDates(e)
                 .find(function (e) {
                   var t = new Date(1e3 * e);
                   return t.getMonth() + 1 == y && t.getDate() == N;
@@ -29128,7 +29169,7 @@ var CLSTAMP = "6913339";
             }
           else n = Ot.a.Get().GetLeagueNodeGroup(u.nLeagueID, u.nNodeGroupID);
           var b =
-              null === (t = Ot.a.Get().GetEventNodes(r, 0)) || void 0 === t
+              null === (t = Ot.a.Get().GetEventNodes(r)) || void 0 === t
                 ? void 0
                 : t.filter(function (e) {
                     var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
@@ -31257,7 +31298,7 @@ var CLSTAMP = "6913339";
             v = un(),
             E = v.width,
             y = (v.height, E > 1500),
-            N = Ot.a.Get().GetEventNodes(e, 0);
+            N = Ot.a.Get().GetEventNodes(e);
           return (
             Object(i.useEffect)(
               function () {
@@ -33108,7 +33149,7 @@ var CLSTAMP = "6913339";
             t = Ot.a.Get().GetFavoriteTeams(),
             a = Ot.a
               .Get()
-              .GetEventNodes(e, 0)
+              .GetEventNodes(e)
               .filter(function (e) {
                 var a = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
                 return (
