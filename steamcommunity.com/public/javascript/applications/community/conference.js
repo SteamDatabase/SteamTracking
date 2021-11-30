@@ -4684,58 +4684,98 @@
               t,
               r
             ) {
-              var n;
+              var n, a;
               return Object(i.b)(this, void 0, void 0, function () {
-                var a, s, u, c, l, d;
+                var s, u, c, l, d, m, f, p;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (a =
+                      (s =
                         h.c.COMMUNITY_BASE_URL +
                         "faqs/" +
                         h.b.VANITY_ID +
                         "/ajaxpullfromcrowdin/" +
                         ee(e)),
-                        (s = new FormData()).append("sessionid", h.c.SESSIONID),
-                        s.append("languages", t.join(",")),
-                        (u = null),
+                        (u = new FormData()).append("sessionid", h.c.SESSIONID),
+                        u.append("languages", t.join(",")),
+                        (c = null),
                         (i.label = 1);
                     case 1:
                       return (
-                        i.trys.push([1, 3, , 4]),
+                        i.trys.push([1, 6, , 7]),
                         [
                           4,
-                          o.a.post(a, s, {
+                          o.a.post(s, u, {
                             withCredentials: !0,
                             cancelToken: null == r ? void 0 : r.token,
                           }),
                         ]
                       );
                     case 2:
-                      return 200 ==
-                        (null == (c = i.sent()) ? void 0 : c.status) &&
-                        1 ==
-                          (null === (n = c.data) || void 0 === n
+                      return 200 !=
+                        (null == (l = i.sent()) ? void 0 : l.status) ||
+                        1 !=
+                          (null === (n = l.data) || void 0 === n
                             ? void 0
                             : n.success)
-                        ? [2, c.data.updated[e]]
-                        : ((u = { response: c }), [3, 4]);
+                        ? [3, 5]
+                        : ((d = l.data.updated),
+                          (m =
+                            null !== (a = null == d ? void 0 : d[e]) &&
+                            void 0 !== a
+                              ? a
+                              : []).length > 0 &&
+                          (this.m_mapFAQSummaries.has(e) ||
+                            this.m_mapFAQDrafts.has(e))
+                            ? (this.m_mapFAQDrafts.delete(e),
+                              [4, this.LoadFAQDraftContent(e)])
+                            : [3, 4]);
                     case 3:
-                      return (l = i.sent()), (u = l), [3, 4];
+                      i.sent(), (i.label = 4);
                     case 4:
+                      return [2, m];
+                    case 5:
+                      return (c = { response: l }), [3, 7];
+                    case 6:
+                      return (f = i.sent()), (c = f), [3, 7];
+                    case 7:
                       return (
-                        (d = Object(_.a)(u)),
+                        (p = Object(_.a)(c)),
                         console.error(
                           "Could not import from crowdin",
                           e,
-                          d.strErrorMsg,
-                          d
+                          p.strErrorMsg,
+                          p
                         ),
                         [2, []]
                       );
                   }
                 });
               });
+            }),
+            (e.prototype.BHasLiveEnglishVersion = function (e) {
+              return this.m_mapFAQSummaries
+                .get(e)
+                .per_language_info.some(function (e) {
+                  return 0 == e.language && e.last_publish_timestamp > 0;
+                });
+            }),
+            (e.prototype.GetNonEnglishDraftsToPublish = function (e) {
+              return this.m_mapFAQSummaries
+                .get(e)
+                .per_language_info.filter(function (e) {
+                  var t;
+                  return (
+                    0 != e.language &&
+                    e.last_update_timestamp >
+                      (null !== (t = e.last_publish_timestamp) && void 0 !== t
+                        ? t
+                        : 0)
+                  );
+                })
+                .map(function (e) {
+                  return e.language;
+                });
             }),
             (e.sm_mapFallbackLanguages = new Map([
               [5, 27],

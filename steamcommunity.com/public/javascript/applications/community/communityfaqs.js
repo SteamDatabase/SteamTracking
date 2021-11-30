@@ -12303,130 +12303,36 @@
           p = s.useState(!1),
           c = p[0],
           u = p[1],
-          m = s.useState(null),
+          m = s.useState(!1),
           f = m[0],
           g = m[1],
-          y = s.useState(!1),
+          y = s.useState(null),
           b = y[0],
           w = y[1],
-          v = s.useState(!1),
-          S = v[0],
-          _ = v[1],
-          k = s.useState(null),
-          x = k[0],
-          I = k[1],
-          C = Object(V.a)("useQAndASession"),
-          E = s.useRef([]);
-        if (x)
+          v = Object(V.a)("CrowdinImportDialog"),
+          S = s.useRef([]);
+        if (b)
           return s.createElement(A.d, {
             strTitle: Object(P.f)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: x,
+            strDescription: b,
             bAlertDialog: !0,
             bDestructiveWarning: !0,
             closeModal: e.closeModal,
           });
-        if (S)
+        if (f)
           return s.createElement(A.d, {
             strTitle: Object(P.f)("#FAQDashboard_CrowdinToolTitle"),
             strDescription: Object(P.f)("#FAQDashboard_PublishComplete"),
             bAlertDialog: !0,
             closeModal: e.closeModal,
           });
-        var O = E.current.length > 0,
-          D = Object(P.f)(
-            O
-              ? "#FAQDashboard_PublishUpdatedFAQsButton"
-              : "#FAQDashboard_ImportAllButton"
-          ),
-          M = O
-            ? function () {
-                return Object(i.b)(t, void 0, void 0, function () {
-                  var e, t, a, n, s;
-                  return Object(i.e)(this, function (i) {
-                    switch (i.label) {
-                      case 0:
-                        w(!0), (e = 0), (t = 0), (i.label = 1);
-                      case 1:
-                        return t < E.current.length
-                          ? ((a = o[t]),
-                            (n = E.current[t]).length > 0
-                              ? (l(e),
-                                [
-                                  4,
-                                  h.a.Get().PublishDraftByLanguage(a.faq_id, n),
-                                ])
-                              : [3, 3])
-                          : [3, 4];
-                      case 2:
-                        if (((s = i.sent()), C.token.reason)) return [2];
-                        if (1 != s)
-                          return (
-                            I(Object(P.f)("#FAQDashboard_PublishFailed")), [2]
-                          );
-                        i.label = 3;
-                      case 3:
-                        return t++, [3, 1];
-                      case 4:
-                        return w(!1), _(!0), [2];
-                    }
-                  });
-                });
-              }
-            : function () {
-                return Object(i.b)(t, void 0, void 0, function () {
-                  var e, t, a, n, s, r, p;
-                  return Object(i.e)(this, function (i) {
-                    switch (i.label) {
-                      case 0:
-                        u(!0), (e = 0), (i.label = 1);
-                      case 1:
-                        if (!(e < o.length)) return [3, 7];
-                        l(e),
-                          (t = o[e]),
-                          (a = []),
-                          (n = 0),
-                          (s = ae),
-                          (i.label = 2);
-                      case 2:
-                        return n < s.length
-                          ? ((r = s[n]),
-                            g(r),
-                            [
-                              4,
-                              h.a
-                                .Get()
-                                .ImportNonEnglishDraftsFromCrowdin(
-                                  t.faq_id,
-                                  [r],
-                                  C
-                                ),
-                            ])
-                          : [3, 5];
-                      case 3:
-                        if (((p = i.sent()), C.token.reason)) return [2];
-                        p.length && a.push(p[0]), (i.label = 4);
-                      case 4:
-                        return n++, [3, 2];
-                      case 5:
-                        (E.current[e] = a), (i.label = 6);
-                      case 6:
-                        return e++, [3, 1];
-                      case 7:
-                        return u(!1), [2];
-                    }
-                  });
-                });
-              },
-          j = E.current.filter(function (e) {
-            return e.length > 0;
-          }).length,
-          F = (100 * (r + 0.5)) / (c ? o.length : j),
-          q = (c ? Object(d.a)(f) + " for " : "") + o[r].internal_name;
+        var _ = (100 * (r + 0.5)) / o.length,
+          k = o[r].internal_name;
         return s.createElement(
           A.e,
           Object(i.a)({}, e, {
             onCancel: function () {
-              return C.cancel("CrowdinImportDialog cancelled");
+              return v.cancel("CrowdinImportDialog cancelled");
             },
           }),
           s.createElement(
@@ -12453,11 +12359,96 @@
             s.createElement(
               T.c,
               null,
-              s.createElement(T.d, { onClick: M, disabled: c || b }, D),
-              (c || b) &&
-                s.createElement(se, { nProgressPct: F, strCurrentLabel: q }),
-              E.current.length > 0 &&
-                s.createElement(re, { rgUpdatedLanguagesForAllFAQs: E.current })
+              s.createElement(
+                T.d,
+                {
+                  onClick: function () {
+                    return Object(i.b)(t, void 0, void 0, function () {
+                      var e, t, a, n, s, r, p;
+                      return Object(i.e)(this, function (i) {
+                        switch (i.label) {
+                          case 0:
+                            u(!0), (n = 0), (i.label = 1);
+                          case 1:
+                            if (!(n < o.length)) return [3, 4];
+                            for (
+                              l(n), s = o[n], e = [], 5, t = 0;
+                              t < ae.length;
+                              t += 5
+                            )
+                              (a = ae.slice(t, t + 5)),
+                                e.push(
+                                  h.a
+                                    .Get()
+                                    .ImportNonEnglishDraftsFromCrowdin(
+                                      s.faq_id,
+                                      a,
+                                      v
+                                    )
+                                );
+                            return [4, Promise.all(e)];
+                          case 2:
+                            i.sent(),
+                              h.a.Get().BHasLiveEnglishVersion(s.faq_id)
+                                ? ((S.current[
+                                    n
+                                  ] = h.a
+                                    .Get()
+                                    .GetNonEnglishDraftsToPublish(s.faq_id)),
+                                  console.log(
+                                    "Going to publish FAQ",
+                                    s.faq_id,
+                                    S.current[n].map(function (e) {
+                                      return Object(d.a)(e);
+                                    })
+                                  ))
+                                : console.log(
+                                    "No live english version for:",
+                                    s.faq_id
+                                  ),
+                              (i.label = 3);
+                          case 3:
+                            return n++, [3, 1];
+                          case 4:
+                            (n = 0), (i.label = 5);
+                          case 5:
+                            return n < S.current.length
+                              ? ((s = o[n]),
+                                (null == (r = S.current[n])
+                                  ? void 0
+                                  : r.length) > 0
+                                  ? (l(n),
+                                    [
+                                      4,
+                                      h.a
+                                        .Get()
+                                        .PublishDraftByLanguage(s.faq_id, r),
+                                    ])
+                                  : [3, 7])
+                              : [3, 8];
+                          case 6:
+                            if (((p = i.sent()), v.token.reason)) return [2];
+                            if (1 != p)
+                              return (
+                                w(Object(P.f)("#FAQDashboard_PublishFailed")),
+                                [2]
+                              );
+                            i.label = 7;
+                          case 7:
+                            return n++, [3, 5];
+                          case 8:
+                            return g(!0), u(!1), [2];
+                        }
+                      });
+                    });
+                  },
+                  disabled: c,
+                },
+                Object(P.f)("#FAQDashboard_UpdateAllFAQsButton")
+              ),
+              c && s.createElement(se, { nProgressPct: _, strCurrentLabel: k }),
+              S.current.length > 0 &&
+                s.createElement(re, { rgUpdatedLanguagesForAllFAQs: S.current })
             )
           )
         );
@@ -12497,15 +12488,13 @@
             Object(P.f)("#FAQDashboard_CrowdinToolResultsLabel")
           ),
           t.map(function (e, t) {
-            var a = o[t],
-              i =
-                0 == e.length
-                  ? Object(P.f)("#FAQDashboard_NoLanguagesUpdated")
-                  : e
-                      .map(function (e) {
-                        return Object(d.b)(e);
-                      })
-                      .join(",");
+            var a = o[t];
+            if (0 == e.length) return null;
+            var i = e
+              .map(function (e) {
+                return Object(d.b)(e);
+              })
+              .join(",");
             return s.createElement(
               "div",
               { key: a.faq_id },
@@ -18325,58 +18314,98 @@
               t,
               a
             ) {
-              var o;
+              var o, n;
               return Object(i.b)(this, void 0, void 0, function () {
-                var n, r, l, p, c, d;
+                var r, l, p, c, d, h, u, m;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (n =
+                      (r =
                         y.c.COMMUNITY_BASE_URL +
                         "faqs/" +
                         y.b.VANITY_ID +
                         "/ajaxpullfromcrowdin/" +
                         ee(e)),
-                        (r = new FormData()).append("sessionid", y.c.SESSIONID),
-                        r.append("languages", t.join(",")),
-                        (l = null),
+                        (l = new FormData()).append("sessionid", y.c.SESSIONID),
+                        l.append("languages", t.join(",")),
+                        (p = null),
                         (i.label = 1);
                     case 1:
                       return (
-                        i.trys.push([1, 3, , 4]),
+                        i.trys.push([1, 6, , 7]),
                         [
                           4,
-                          s.a.post(n, r, {
+                          s.a.post(r, l, {
                             withCredentials: !0,
                             cancelToken: null == a ? void 0 : a.token,
                           }),
                         ]
                       );
                     case 2:
-                      return 200 ==
-                        (null == (p = i.sent()) ? void 0 : p.status) &&
-                        1 ==
-                          (null === (o = p.data) || void 0 === o
+                      return 200 !=
+                        (null == (c = i.sent()) ? void 0 : c.status) ||
+                        1 !=
+                          (null === (o = c.data) || void 0 === o
                             ? void 0
                             : o.success)
-                        ? [2, p.data.updated[e]]
-                        : ((l = { response: p }), [3, 4]);
+                        ? [3, 5]
+                        : ((d = c.data.updated),
+                          (h =
+                            null !== (n = null == d ? void 0 : d[e]) &&
+                            void 0 !== n
+                              ? n
+                              : []).length > 0 &&
+                          (this.m_mapFAQSummaries.has(e) ||
+                            this.m_mapFAQDrafts.has(e))
+                            ? (this.m_mapFAQDrafts.delete(e),
+                              [4, this.LoadFAQDraftContent(e)])
+                            : [3, 4]);
                     case 3:
-                      return (c = i.sent()), (l = c), [3, 4];
+                      i.sent(), (i.label = 4);
                     case 4:
+                      return [2, h];
+                    case 5:
+                      return (p = { response: c }), [3, 7];
+                    case 6:
+                      return (u = i.sent()), (p = u), [3, 7];
+                    case 7:
                       return (
-                        (d = Object(g.a)(l)),
+                        (m = Object(g.a)(p)),
                         console.error(
                           "Could not import from crowdin",
                           e,
-                          d.strErrorMsg,
-                          d
+                          m.strErrorMsg,
+                          m
                         ),
                         [2, []]
                       );
                   }
                 });
               });
+            }),
+            (e.prototype.BHasLiveEnglishVersion = function (e) {
+              return this.m_mapFAQSummaries
+                .get(e)
+                .per_language_info.some(function (e) {
+                  return 0 == e.language && e.last_publish_timestamp > 0;
+                });
+            }),
+            (e.prototype.GetNonEnglishDraftsToPublish = function (e) {
+              return this.m_mapFAQSummaries
+                .get(e)
+                .per_language_info.filter(function (e) {
+                  var t;
+                  return (
+                    0 != e.language &&
+                    e.last_update_timestamp >
+                      (null !== (t = e.last_publish_timestamp) && void 0 !== t
+                        ? t
+                        : 0)
+                  );
+                })
+                .map(function (e) {
+                  return e.language;
+                });
             }),
             (e.sm_mapFallbackLanguages = new Map([
               [5, 27],
