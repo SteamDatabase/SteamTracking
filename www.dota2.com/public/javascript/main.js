@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6920490";
+var CLSTAMP = "6924311";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -25971,7 +25971,7 @@ var CLSTAMP = "6920490";
             _ = Object(i.useRef)(null),
             g = Object(i.useRef)(null),
             h = Ot.a.Get().GetEventNodes(e),
-            b = Ot.a.Get().GetEventDates(e).sort(),
+            b = Ot.a.Get().GetEventDates(e),
             v = Date.now() / 1e3,
             y = h.filter(function (e) {
               var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
@@ -25998,7 +25998,8 @@ var CLSTAMP = "6920490";
                 }
                 return t;
               })
-              .slice(0, 3),
+              .slice(0, 3)
+              .sort(),
             I = y.filter(function (e) {
               for (
                 var t = Ot.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
