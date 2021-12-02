@@ -33643,7 +33643,13 @@
               return Object(o.e)(this, function (a) {
                 switch (a.label) {
                   case 0:
-                    return [4, me()];
+                    return [
+                      4,
+                      me(
+                        this.props.editModel.GetEventModel().jsondata
+                          .auto_item_tags
+                      ),
+                    ];
                   case 1:
                     return (
                       (e = a.sent()),
@@ -34247,9 +34253,9 @@
           t
         );
       })(u.Component);
-      function me() {
+      function me(e) {
         return Object(o.b)(this, void 0, void 0, function () {
-          var e, t, a;
+          var t, a, i, n;
           return Object(o.e)(this, function (o) {
             switch (o.label) {
               case 0:
@@ -34257,14 +34263,14 @@
               case 1:
                 return (
                   o.sent(),
-                  (e = []),
-                  Q.a.GetTagNameForTagID().forEach(function (t, a) {
-                    e.push({ tagid: a, name: t });
+                  (t = []),
+                  Q.a.GetTagNameForTagID().forEach(function (e, a) {
+                    t.push({ tagid: a, name: e });
                   }),
-                  (t = e.map(function (e) {
+                  (a = t.map(function (e) {
                     return Object(r.f)(e.name, "Store");
                   })),
-                  (a = [
+                  (i = [
                     "Linux",
                     "Mac",
                     "VR",
@@ -34278,7 +34284,12 @@
                   ].map(function (e) {
                     return Object(r.f)(e, "Feature");
                   })),
-                  [2, t.concat(a)]
+                  (n = a.concat(i)),
+                  null == e ||
+                    e.forEach(function (e) {
+                      n.unshift(Object(r.f)(e.tag_name, "Auto"));
+                    }),
+                  [2, n]
                 );
             }
           });

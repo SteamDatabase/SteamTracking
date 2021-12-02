@@ -1207,6 +1207,8 @@
     "Sale_HiddenItem_Single": "%1$s item is hidden due to %2$s",
     "Sale_HiddenItem_Single_Short": "%1$s hidden",
     "Sale_HiddenItem_Tooltip": "Items have been hidden due to your store preferences. Click to visit and edit your store preferences.",
+    "Sale_ContentPreview": "Includes one item",
+    "Sale_ContentPreview_Plural": "Includes %1$s items",
     "Sale_StorePreferences": "your store preferences",
     "Sale_SeeAllSpecials": "See All Specials",
     "Sale_SeeUpcomingEvents": "See upcoming events",

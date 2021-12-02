@@ -76,6 +76,7 @@
 
 	/* Animation */
 	--gpTransition-Short: all 0.2s ease;
+	--gpTransition-Shorter: all 0.1s ease;
 
 	/* Focus */
 	--gpFocus: 4px solid white;

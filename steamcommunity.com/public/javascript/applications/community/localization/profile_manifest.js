@@ -142,7 +142,7 @@ LocalizationManifestReady("profile", "manifest", {
   ProfileTheme_GreenSlime: "Green Slime",
   ProfileTheme_Ghost: "Ghost",
   ProfileTheme_ColorNightmare: "Color Nightmare",
-  ProfileTheme_MurugiahTheme: "Murugiah",
+  ProfileTheme_Murugiah: "Murugiah",
   Profile_PersonaNameCooldown:
     "This account has been banned from changing its profile name for:",
   Profile_PersonaNameCooldown_Desc:

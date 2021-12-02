@@ -4797,12 +4797,13 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   .StatusVisibleText {
   color: #a4d007;
 }
-.partnereventpublishingtab_SummaryItems_12a_L {
-  line-height: 30px;
-}
 .partnereventpublishingtab_SummaryItems_12a_L
   .partnereventpublishingtab_LinkRow_1WnQ1 {
   margin-top: 10px;
+}
+.partnereventpublishingtab_VisibilityNote_2UnJc {
+  line-height: 17px;
+  max-width: 900px;
 }
 .partnereventpublishingtab_ReachSubject_3EQb8 {
   background: rgba(60, 65, 73, 0.5);

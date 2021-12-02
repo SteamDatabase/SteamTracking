@@ -33,6 +33,8 @@
     font-size: 14px;
     line-height: 18px;
     color: #67c1f5;
+	margin: 16px 0px;
+	display: inline-block;
 }
 
 .giftcard_amount {

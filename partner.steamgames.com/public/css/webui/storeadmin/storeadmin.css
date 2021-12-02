@@ -5429,6 +5429,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   .gamehover_ReviewsAndRelease_2Q5ow {
   display: flex;
   justify-content: left;
+  align-items: center;
   font-size: 1.4em;
   margin-left: -4px;
 }
@@ -7376,6 +7377,7 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetImage_3o5Xg
     .salepreviewwidgets_HeaderCapsuleImageContainer_38USo {
     height: 152px;
+    box-sizing: border-box;
   }
   .salepreviewwidgets_SaleItemBrowserRow_11Ka5
     .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -21420,7 +21422,11 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
   .discountgrid_DataCell_3V8Jb
-  .discountgrid_ConflictWarning_3ypGB {
+  .discountgrid_ConflictWarning_3ypGB,
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb
+  .discountgrid_TextCell_30Pxi {
   padding: 4px;
 }
 .discountgrid_DiscountGridCtn_3THze
@@ -21452,6 +21458,11 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   height: 14px;
   fill: #fff;
   margin-left: 8px;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km {
+  background-color: rgba(243, 175, 211, 0.3);
 }
 .discountgrid_ConflictToolTip_1nSci {
   padding: 12px;
@@ -21502,14 +21513,21 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   color: #4c6b22;
 }
 .discountgridheaders_EventDetails_3LMXj .discountgridheaders_EventDates_2kY09 {
-  font-size: 13px;
+  font-size: 12px;
   color: #c1c5cd;
   display: flex;
+  flex-wrap: wrap;
+}
+.discountgridheaders_EventDetails_3LMXj
+  .discountgridheaders_EventDates_2kY09
+  .discountgridheaders_EventDateRange_312ig {
+  white-space: nowrap;
 }
 .discountgridheaders_EventDetails_3LMXj
   .discountgridheaders_EventDates_2kY09
   .discountgridheaders_EventNumDays_OAAVW {
   margin-left: 5px;
+  white-space: nowrap;
 }
 .discountgridheaders_EventDetails_3LMXj .discountgridheaders_EventLink_VZ3pV {
   font-size: 13px;

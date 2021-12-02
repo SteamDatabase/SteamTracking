@@ -22,11 +22,6 @@ body.v6.steamaward_nominations_modal {
     border: 3px solid black;
 }
 
-.newmodal {
-	background:rgba( 0, 0, 0, 1);
-	border: 3px solid black;
-}
-
 body.v6.steamaward_nominations_modal .fade {
 	border-color: #000000;
 }
@@ -697,7 +692,7 @@ html.responsive.touch .steamaward_nomination_row {
 	padding: 12px 8px;
 }
 
-.btn_nominate span, body.v6 .newmodal_buttons .btn_grey_steamui > span {
+.btn_nominate span, body.v6.steamaward_nominations_faq .newmodal_buttons .btn_grey_steamui > span {
 	color: #000000;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -708,7 +703,7 @@ html.responsive.touch .steamaward_nomination_row {
 	color: #1A2C34;
 }
 
-.btn_nominate:hover, .newmodal_buttons .btn_grey_steamui:hover, body.v6 .newmodal_buttons .btn_grey_steamui:hover > span {
+.btn_nominate:hover, body.v6.steamaward_nominations_faq .newmodal_buttons .btn_grey_steamui:hover > span {
 	background: #ffffff !important;
 
 }

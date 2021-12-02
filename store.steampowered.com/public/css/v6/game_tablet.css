@@ -76,6 +76,7 @@
 
 	/* Animation */
 	--gpTransition-Short: all 0.2s ease;
+	--gpTransition-Shorter: all 0.1s ease;
 
 	/* Focus */
 	--gpFocus: 4px solid white;
@@ -1150,7 +1151,7 @@
 
 	/* Discovery queue */
 	html.responsive .queue_ctn .queue_reason_description {
-		font: var(--gpText-BodyMedium);
+		font: var(--gpText-BodyLarge);
 		color: unset;
 		margin-bottom: 12px;
 	}

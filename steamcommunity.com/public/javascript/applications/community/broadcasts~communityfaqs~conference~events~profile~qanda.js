@@ -1544,31 +1544,27 @@
           { className: o },
           (function (t, e, r) {
             var n = p.a.GetTimeNowWithOverrideAsDate(),
-              a = Object(c.c)(new Date(1e3 * t), n),
-              o = n.getFullYear() == new Date(1e3 * e).getFullYear(),
-              s = new Date(1e3 * t),
-              l = new Date(1e3 * e),
-              h = s.getMonth() == l.getMonth(),
-              u =
-                s.getDate() == l.getDate() &&
-                s.getMonth() == l.getMonth() &&
-                s.getFullYear() == l.getFullYear(),
+              a = new Date(1e3 * t),
+              o = new Date(1e3 * e),
+              s = n.getFullYear() == a.getFullYear(),
+              l = n.getFullYear() == o.getFullYear(),
+              c = a.getFullYear() == o.getFullYear(),
+              h = c && a.getMonth() == o.getMonth(),
+              u = h && a.getDate() == o.getDate(),
               m = {
-                weekday: void 0,
-                month: null != r ? r : "long",
                 day: "numeric",
-                year: a && !u ? void 0 : "numeric",
+                month: null != r ? r : "long",
+                year: s ? void 0 : "numeric",
               },
-              d = s.toLocaleDateString(i.e.GetPreferredLocales(), m);
+              d = a.toLocaleDateString(i.e.GetPreferredLocales(), m);
             if (u) return d;
             var f = {
-              weekday: void 0,
-              month: h || !a ? void 0 : null != r ? r : "long",
               day: "numeric",
-              year: o ? void 0 : "numeric",
+              month: h && l ? void 0 : null != r ? r : "long",
+              year: c ? void 0 : "numeric",
             };
             return (
-              d + " - " + l.toLocaleDateString(i.e.GetPreferredLocales(), f)
+              d + " - " + o.toLocaleDateString(i.e.GetPreferredLocales(), f)
             );
           })(e, r, n),
           " "

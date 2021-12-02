@@ -292,8 +292,8 @@
           );
         })(E),
         I = { x: "y", y: "x" };
-      var D,
-        F = (function (t) {
+      var F,
+        D = (function (t) {
           function e() {
             return (null !== t && t.apply(this, arguments)) || this;
           }
@@ -365,7 +365,7 @@
           (t[(t.Info = 1)] = "Info"),
           (t[(t.Warning = 2)] = "Warning"),
           (t[(t.Error = 3)] = "Error");
-      })(D || (D = {}));
+      })(F || (F = {}));
       var w = (function () {
           function t(t, e) {
             (this.m_fnIdGenerator = null),
@@ -377,22 +377,22 @@
             (t.prototype.Debug = function () {
               for (var t = [], e = 0; e < arguments.length; e++)
                 t[e] = arguments[e];
-              this.Log.apply(this, Object(r.g)([D.Debug], t));
+              this.Log.apply(this, Object(r.g)([F.Debug], t));
             }),
             (t.prototype.Info = function () {
               for (var t = [], e = 0; e < arguments.length; e++)
                 t[e] = arguments[e];
-              this.Log.apply(this, Object(r.g)([D.Info], t));
+              this.Log.apply(this, Object(r.g)([F.Info], t));
             }),
             (t.prototype.Warning = function () {
               for (var t = [], e = 0; e < arguments.length; e++)
                 t[e] = arguments[e];
-              this.Log.apply(this, Object(r.g)([D.Warning], t));
+              this.Log.apply(this, Object(r.g)([F.Warning], t));
             }),
             (t.prototype.Error = function () {
               for (var t = [], e = 0; e < arguments.length; e++)
                 t[e] = arguments[e];
-              this.Log.apply(this, Object(r.g)([D.Error], t));
+              this.Log.apply(this, Object(r.g)([F.Error], t));
             }),
             (t.prototype.Assert = function (t) {
               for (var e = [], n = 1; n < arguments.length; n++)
@@ -400,13 +400,13 @@
               t ||
                 this.Log.apply(
                   this,
-                  Object(r.g)([D.Error, "Assertion failed:"], e)
+                  Object(r.g)([F.Error, "Assertion failed:"], e)
                 );
             }),
             (t.prototype.Log = function (t) {
               for (var e, n, i = [], o = 1; o < arguments.length; o++)
                 i[o - 1] = arguments[o];
-              if (t != D.Debug || L.Get().IsDebugLogEnabled(this.m_sName)) {
+              if (t != F.Debug || L.Get().IsDebugLogEnabled(this.m_sName)) {
                 var a = this.m_sName,
                   s =
                     null !==
@@ -437,7 +437,7 @@
               (this.m_bIncludeBacktraceInLog = !1),
               (this.m_SettingsChangedCallback = new v.a()),
               (this.m_bLoading = !1),
-              (this.m_Storage = new F()),
+              (this.m_Storage = new D()),
               (this.m_rgLogNames = T.slice()),
               this.LoadSettings();
           }
@@ -449,7 +449,7 @@
                 void 0,
                 Object(r.g)(
                   [
-                    D.Info,
+                    F.Info,
                     this.IncludeBacktraceInLog,
                     "LogManager",
                     "LogManager",
@@ -651,13 +651,13 @@
       }
       function G(t) {
         switch (t) {
-          case D.Debug:
+          case F.Debug:
             return String.fromCodePoint(128027);
-          case D.Info:
+          case F.Info:
             return String.fromCodePoint(8505);
-          case D.Warning:
+          case F.Warning:
             return String.fromCodePoint(9888);
-          case D.Error:
+          case F.Error:
             return String.fromCodePoint(128165);
         }
       }
@@ -692,14 +692,14 @@
             console.groupEnd();
         else
           switch (t) {
-            case D.Debug:
-            case D.Info:
+            case F.Debug:
+            case F.Info:
               console.log.apply(console, h);
               break;
-            case D.Warning:
+            case F.Warning:
               console.warn.apply(console, h);
               break;
-            case D.Error:
+            case F.Error:
               console.error.apply(console, h);
           }
       }
@@ -921,22 +921,26 @@
                 this.m_Properties.onMoveRight ||
                 this.m_Properties.onMoveDown ||
                 this.m_Properties.onMoveLeft) &&
-              (this.m_rgNavigationHandlers.push(
+              this.m_rgNavigationHandlers.push(
                 h(this.m_element, this.OnNavigationEvent)
               ),
-              this.m_element.addEventListener("focusin", this.OnFocusIn),
-              this.m_rgNavigationHandlers.push(function () {
-                return t.m_element.removeEventListener("focusin", t.OnFocusIn);
-              })),
-              this.m_rgFocusHandlers.length ||
-                (!this.m_Properties.focusable &&
-                  0 != this.m_rgChildren.length) ||
-                (this.m_element.addEventListener("focus", this.OnDOMFocus),
-                this.m_element.addEventListener("blur", this.OnDOMBlur),
-                this.m_rgFocusHandlers.push(function () {
-                  t.m_element.removeEventListener("focus", t.OnDOMFocus),
-                    t.m_element.removeEventListener("blur", t.OnDOMBlur);
-                }));
+              this.m_rgChildren.length > 0 &&
+                (this.m_fnUnregisterFocusIn ||
+                  (this.m_element.addEventListener("focusin", this.OnFocusIn),
+                  (this.m_fnUnregisterFocusIn = function () {
+                    return t.m_element.removeEventListener(
+                      "focusin",
+                      t.OnFocusIn
+                    );
+                  }))),
+              (this.m_Properties.focusable || 0 == this.m_rgChildren.length) &&
+                (this.m_rgFocusHandlers.length ||
+                  (this.m_element.addEventListener("focus", this.OnDOMFocus),
+                  this.m_element.addEventListener("blur", this.OnDOMBlur),
+                  this.m_rgFocusHandlers.push(function () {
+                    t.m_element.removeEventListener("focus", t.OnDOMFocus),
+                      t.m_element.removeEventListener("blur", t.OnDOMBlur);
+                  })));
           }),
           (t.prototype.RemoveChild = function (t) {
             var e = this.m_rgChildren.indexOf(t);
@@ -950,6 +954,8 @@
               return t();
             }),
               (this.m_rgNavigationHandlers = []),
+              this.m_fnUnregisterFocusIn && this.m_fnUnregisterFocusIn(),
+              (this.m_fnUnregisterFocusIn = void 0),
               this.m_rgFocusHandlers.forEach(function (t) {
                 return t();
               }),
@@ -1451,25 +1457,26 @@
                 t === c.a.CANCEL
               );
             }),
-            (t.prototype.GetEventTarget = function (t) {
-              var e = document.activeElement;
+            (t.prototype.GetEventTarget = function (t, e) {
+              void 0 === e && (e = !1);
+              var n = document.activeElement;
               if (this.m_LastActiveNavTree) {
-                var n = this.m_navigationSource.Value.eActivationSourceType;
+                var i = this.m_navigationSource.Value.eActivationSourceType;
                 if (
                   !(
-                    (n != c.b.GAMEPAD && n != c.b.KEYBOARD) ||
+                    (i != c.b.GAMEPAD && i != c.b.KEYBOARD) ||
                     this.m_LastActiveNavTree.GetLastFocusedNode() ||
-                    (this.m_LastActiveNavTree.TakeFocus(o.GAMEPAD),
+                    (e && this.m_LastActiveNavTree.TakeFocus(o.GAMEPAD),
                     this.BGlobalGamepadButton(t))
                   )
                 )
                   return null;
                 this.m_LastActiveNavTree.GetLastFocusedNode() &&
-                  (e = this.m_LastActiveNavTree
+                  (n = this.m_LastActiveNavTree
                     .GetLastFocusedNode()
                     .GetLastFocusElement());
               }
-              return e;
+              return n;
             }),
             (t.prototype.ChangeNavigationSource = function (t, e) {
               var n = this.m_navigationSource.Value,
@@ -1489,7 +1496,7 @@
                 );
               else {
                 this.ChangeNavigationSource(e, n);
-                var r = this.GetEventTarget(t);
+                var r = this.GetEventTarget(t, !0);
                 z(
                   "Firing " +
                     c.a[t] +

@@ -3329,6 +3329,7 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   .gamehover_ReviewsAndRelease_1HFUC {
   display: flex;
   justify-content: left;
+  align-items: center;
   font-size: 1.4em;
   margin-left: -4px;
 }
@@ -5291,6 +5292,7 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetImage_yvqq8
     .salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y {
     height: 152px;
+    box-sizing: border-box;
   }
   .salepreviewwidgets_SaleItemBrowserRow_gASJ2
     .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15

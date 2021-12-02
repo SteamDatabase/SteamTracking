@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6921673";
+var CLSTAMP = "6925385";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -3873,7 +3873,7 @@ var CLSTAMP = "6921673";
           ),
           i.a.useLayoutEffect(
             function () {
-              if (u)
+              if (u && t)
                 return (
                   Object(c.c)(t, u.CreateHandle()),
                   function () {
@@ -4577,9 +4577,9 @@ var CLSTAMP = "6921673";
         o = n("q1tI"),
         i = n("opsS"),
         a = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.state = {}), t;
+          function t(t) {
+            var n = e.call(this, t) || this;
+            return (n.state = {}), (n.state.lastErrorKey = t.errorKey), n;
           }
           return (
             Object(r.d)(t, e),
@@ -4598,7 +4598,10 @@ var CLSTAMP = "6921673";
                 : console.warn(
                     "No ErrorReportingStore - use ErrorReportingStore().Init() to configure error reporting to server"
                   ),
-                this.setState({ error: { error: e, info: n } });
+                this.setState({
+                  error: { error: e, info: n },
+                  lastErrorKey: this.props.errorKey,
+                });
             }),
             (t.prototype.Reset = function () {
               this.setState({ error: null });
@@ -4607,23 +4610,25 @@ var CLSTAMP = "6921673";
               var e = this.props,
                 n = e.children,
                 r = e.fallback,
-                i = this.state,
-                a = i.error,
-                l = i.identifierHash;
-              return a
+                i = e.errorKey,
+                a = this.state,
+                l = a.error,
+                u = a.identifierHash,
+                p = a.lastErrorKey;
+              return l && i == p
                 ? void 0 !== r
                   ? "function" == typeof r
-                    ? r(a.error)
+                    ? r(l.error)
                     : r
                   : t.sm_ErrorReportingStore &&
                     t.sm_ErrorReportingStore.reporting_enabled
                   ? o.createElement(c, {
-                      error: a,
-                      identifierHash: l,
+                      error: l,
+                      identifierHash: u,
                       store: t.sm_ErrorReportingStore,
                       onRefresh: this.Reset,
                     })
-                  : o.createElement(s, { error: a, onDismiss: this.Reset })
+                  : o.createElement(s, { error: l, onDismiss: this.Reset })
                 : n;
             }),
             Object(r.c)([i.a], t.prototype, "Reset", null),
@@ -5536,7 +5541,13 @@ var CLSTAMP = "6921673";
               return o.createElement(
                 D,
                 Object(r.a)({}, p),
-                o.createElement(c.k, null, " ", t, " "),
+                o.createElement(
+                  c.k,
+                  null,
+                  " ",
+                  t || o.createElement(o.Fragment, null, " "),
+                  " "
+                ),
                 o.createElement(
                   c.b,
                   null,
@@ -8060,7 +8071,7 @@ var CLSTAMP = "6921673";
           !e.hideTitle && o.createElement(_, null, e.activePage.title),
           o.createElement(
             Me.a,
-            { key: e.activePage.title },
+            { errorKey: e.activePage.title },
             null != e.activePage.content && o.cloneElement(e.activePage.content)
           )
         );
@@ -13030,22 +13041,26 @@ var CLSTAMP = "6921673";
                 this.m_Properties.onMoveRight ||
                 this.m_Properties.onMoveDown ||
                 this.m_Properties.onMoveLeft) &&
-              (this.m_rgNavigationHandlers.push(
+              this.m_rgNavigationHandlers.push(
                 Object(m.h)(this.m_element, this.OnNavigationEvent)
               ),
-              this.m_element.addEventListener("focusin", this.OnFocusIn),
-              this.m_rgNavigationHandlers.push(function () {
-                return e.m_element.removeEventListener("focusin", e.OnFocusIn);
-              })),
-              this.m_rgFocusHandlers.length ||
-                (!this.m_Properties.focusable &&
-                  0 != this.m_rgChildren.length) ||
-                (this.m_element.addEventListener("focus", this.OnDOMFocus),
-                this.m_element.addEventListener("blur", this.OnDOMBlur),
-                this.m_rgFocusHandlers.push(function () {
-                  e.m_element.removeEventListener("focus", e.OnDOMFocus),
-                    e.m_element.removeEventListener("blur", e.OnDOMBlur);
-                }));
+              this.m_rgChildren.length > 0 &&
+                (this.m_fnUnregisterFocusIn ||
+                  (this.m_element.addEventListener("focusin", this.OnFocusIn),
+                  (this.m_fnUnregisterFocusIn = function () {
+                    return e.m_element.removeEventListener(
+                      "focusin",
+                      e.OnFocusIn
+                    );
+                  }))),
+              (this.m_Properties.focusable || 0 == this.m_rgChildren.length) &&
+                (this.m_rgFocusHandlers.length ||
+                  (this.m_element.addEventListener("focus", this.OnDOMFocus),
+                  this.m_element.addEventListener("blur", this.OnDOMBlur),
+                  this.m_rgFocusHandlers.push(function () {
+                    e.m_element.removeEventListener("focus", e.OnDOMFocus),
+                      e.m_element.removeEventListener("blur", e.OnDOMBlur);
+                  })));
           }),
           (e.prototype.RemoveChild = function (e) {
             var t = this.m_rgChildren.indexOf(e);
@@ -13059,6 +13074,8 @@ var CLSTAMP = "6921673";
               return e();
             }),
               (this.m_rgNavigationHandlers = []),
+              this.m_fnUnregisterFocusIn && this.m_fnUnregisterFocusIn(),
+              (this.m_fnUnregisterFocusIn = void 0),
               this.m_rgFocusHandlers.forEach(function (e) {
                 return e();
               }),
@@ -14073,7 +14090,9 @@ var CLSTAMP = "6921673";
           "application" === e ||
           "demo" === e ||
           "hardware" === e ||
-          "mod" === e
+          "mod" === e ||
+          "video" == e ||
+          "beta" === e
         );
       }
       var m, f;

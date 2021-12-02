@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6913417";
+var CLSTAMP = "6925407";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [61],
   {
@@ -2823,16 +2823,16 @@ var CLSTAMP = "6913417";
                 o.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
               );
             }),
-            (o.prototype.GetSummaryWithFallback = function (e) {
-              var t;
+            (o.prototype.GetSummaryWithFallback = function (e, t) {
+              var n;
               return (
                 f.a.GetWithFallback(
-                  null === (t = this.jsondata) || void 0 === t
+                  null === (n = this.jsondata) || void 0 === n
                     ? void 0
-                    : t.localized_summary,
+                    : n.localized_summary,
                   e
                 ) ||
-                o.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+                o.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
               );
             }),
             (o.prototype.GetSummary = function (e) {
@@ -2847,7 +2847,7 @@ var CLSTAMP = "6913417";
             (o.prototype.BHasSummary = function (e) {
               return Boolean(this.GetSummary(e));
             }),
-            (o.GenerateSummaryFromText = function (e) {
+            (o.GenerateSummaryFromText = function (e, t) {
               return e && 0 != e.trim().length
                 ? ((e = Object(i.b)(e, [
                     "img",
@@ -2863,7 +2863,7 @@ var CLSTAMP = "6913417";
                   ])),
                   (e = Object(i.c)(e)),
                   (e = Object(v.c)(e)),
-                  Object(v.d)(e, 180))
+                  Object(v.d)(e, t || 180))
                 : "";
             }),
             (o.prototype.BHasTag = function (e) {
@@ -2999,7 +2999,22 @@ var CLSTAMP = "6913417";
               if (!this.jsondata.sale_sections) return new Set();
               var a = new Set(e),
                 i = new Set();
+              if (
+                (Object(h.a)(
+                  !this.jsondata.bOptimizedForSize,
+                  "Cannot find all items in optimized json"
+                ),
+                this.jsondata.bOptimizedForSize && "dev" == g.c.WEB_UNIVERSE)
+              )
+                throw new Error(
+                  "GetSaleOfItemType called on a truncated jsondata."
+                );
               return (
+                null !== (e = this.jsondata.tagged_items) &&
+                  void 0 !== e &&
+                  e.forEach(function (e) {
+                    o.AccumulateCapsuleListIDs([e.capsule], a, i);
+                  }),
                 this.jsondata.sale_sections.forEach(function (e) {
                   if ("items" === e.section_type)
                     o.AccumulateCapsuleListIDs(e.capsules, a, i);
@@ -7846,14 +7861,14 @@ var CLSTAMP = "6913417";
           return le;
         });
       var b = n("mrSG"),
-        g = n("j+5p"),
         r = n("TyAF"),
-        v = n("q1tI"),
-        y = n.n(v),
+        g = n("q1tI"),
+        v = n.n(g),
         a = n("pQ8y"),
         i = n("mgoM"),
         o = n("kyHq"),
         s = n("TtDX"),
+        y = n("j+5p"),
         c = n("5eAM"),
         l = n("SG7E"),
         u = n("8H1D"),
@@ -7890,8 +7905,8 @@ var CLSTAMP = "6913417";
         U = function (e) {
           var t = e.displayStyle;
           if ("bundle" == e.type || "sub" == e.type)
-            return y.a.createElement(q, Object(b.a)({}, e));
-          if (R.c.IN_GAMEPADUI) return y.a.createElement(K, Object(b.a)({}, e));
+            return v.a.createElement(q, Object(b.a)({}, e));
+          if (R.c.IN_GAMEPADUI) return v.a.createElement(K, Object(b.a)({}, e));
           switch (
             (t =
               Object(L.a)() && ("library" == t || "animated" == t)
@@ -7899,13 +7914,13 @@ var CLSTAMP = "6913417";
                 : t)
           ) {
             case "library":
-              return y.a.createElement(Q, Object(b.a)({}, e));
+              return v.a.createElement(Q, Object(b.a)({}, e));
             case "full":
-              return y.a.createElement(K, Object(b.a)({}, e));
+              return v.a.createElement(K, Object(b.a)({}, e));
             case "animated":
-              return y.a.createElement(k.a, Object(b.a)({}, e));
+              return v.a.createElement(k.a, Object(b.a)({}, e));
             default:
-              return y.a.createElement(q, Object(b.a)({}, e));
+              return v.a.createElement(q, Object(b.a)({}, e));
           }
         },
         q = Object(r.a)(function (e) {
@@ -7932,10 +7947,10 @@ var CLSTAMP = "6913417";
               ? Object(j.f)("#Sale_BundleSave_WithDiscount", e, l.length)
               : Object(j.f)("#Sale_BundleSave", l.length));
           (c = "" + R.c.STORE_BASE_URL + s + "/" + c), (f = Boolean(!f && l));
-          return y.a.createElement(
+          return v.a.createElement(
             B.a,
             { appid: null == o ? void 0 : o.id },
-            y.a.createElement(
+            v.a.createElement(
               T.a,
               {
                 className: W.a.StoreSaleWidgetOuterContainer,
@@ -7946,74 +7961,74 @@ var CLSTAMP = "6913417";
                   return a(!1);
                 },
                 "flow-children": "grid",
-                navEntryPreferPosition: g.c.PREFERRED_CHILD,
+                navEntryPreferPosition: y.c.PREFERRED_CHILD,
               },
-              y.a.createElement(
+              v.a.createElement(
                 "div",
                 { className: W.a.StoreSaleWidgetContainer },
-                y.a.createElement(
+                v.a.createElement(
                   T.d,
                   Object(b.a)(
                     { className: Object(D.a)(W.a.StoreSaleWidgetLeft) },
                     Object(A.a)(i.id, i.type, _),
                     { preferredFocus: f }
                   ),
-                  y.a.createElement(
+                  v.a.createElement(
                     "a",
                     {
                       href: Object(S.b)(c, _),
                       target: R.c.IN_CLIENT ? void 0 : "_blank",
                     },
-                    y.a.createElement(
+                    v.a.createElement(
                       "div",
                       { className: W.a.StoreSaleWidgetImage },
                       X(
                         null == o ? void 0 : o.appid,
                         null == o ? void 0 : o.full_game_appid
                       ) &&
-                        y.a.createElement(
+                        v.a.createElement(
                           "div",
                           { className: W.a.CapsuleDecorators },
-                          y.a.createElement(le, null)
+                          v.a.createElement(le, null)
                         ),
-                      y.a.createElement(te, {
+                      v.a.createElement(te, {
                         info: i,
                         appInfo: o,
                         imageType: "header",
                       }),
-                      Boolean(o && r) && y.a.createElement(ce, { appInfo: o })
+                      Boolean(o && r) && v.a.createElement(ce, { appInfo: o })
                     )
                   )
                 ),
-                y.a.createElement(
+                v.a.createElement(
                   "div",
                   { className: W.a.StoreSaleWidgetRight },
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     { className: W.a.TitleCtn },
-                    y.a.createElement(
+                    v.a.createElement(
                       "a",
                       {
                         href: Object(S.b)(c, _),
                         target: R.c.IN_CLIENT ? void 0 : "_blank",
                       },
-                      y.a.createElement(
+                      v.a.createElement(
                         "div",
                         { className: W.a.StoreSaleWidgetTitle },
                         t
                       )
                     )
                   ),
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     { className: W.a.StoreSaleWidgetReleaseAndTags },
                     o &&
                       o.tags &&
-                      y.a.createElement(
+                      v.a.createElement(
                         "div",
                         { className: W.a.StoreSaleWidgetTags },
                         o.tags.map(function (e) {
-                          return y.a.createElement(V, {
+                          return v.a.createElement(V, {
                             tag: e,
                             key: "tag_" + n + "_" + e.tagid,
                             className: W.a.AppTag,
@@ -8021,16 +8036,16 @@ var CLSTAMP = "6913417";
                         })
                       ),
                     o &&
-                      y.a.createElement(
+                      v.a.createElement(
                         "div",
                         { className: W.a.StoreSaleWidgetRelease },
                         o.release
                       ),
-                    !h && y.a.createElement(oe, { item: i })
+                    !h && v.a.createElement(oe, { item: i })
                   ),
                   o &&
                     u &&
-                    y.a.createElement(
+                    v.a.createElement(
                       "div",
                       {
                         className: Object(D.a)(
@@ -8040,10 +8055,10 @@ var CLSTAMP = "6913417";
                       },
                       u
                     ),
-                  f && y.a.createElement(J, { rgInfo: l }),
+                  f && v.a.createElement(J, { rgInfo: l }),
                   Boolean(m && o)
-                    ? y.a.createElement(ae, { appid: o.appid, bIsMuted: r })
-                    : y.a.createElement(C.d, {
+                    ? v.a.createElement(ae, { appid: o.appid, bIsMuted: r })
+                    : v.a.createElement(C.d, {
                         info: i,
                         bShowDemoButton: p,
                         bHidePrice: d,
@@ -8052,7 +8067,7 @@ var CLSTAMP = "6913417";
               )
             ),
             Boolean(null == o ? void 0 : o.free_weekend_label) &&
-              y.a.createElement(C.a, { info: o })
+              v.a.createElement(C.a, { info: o })
           );
         }),
         H = function (e) {
@@ -8062,7 +8077,7 @@ var CLSTAMP = "6913417";
           return t &&
             (0 < (null === (e = t.tags) || void 0 === e ? void 0 : e.length) ||
               r)
-            ? y.a.createElement(
+            ? v.a.createElement(
                 "div",
                 {
                   className: Object(D.a)(
@@ -8070,7 +8085,7 @@ var CLSTAMP = "6913417";
                     "SaleTagBlockCtn"
                   ),
                 },
-                y.a.createElement(
+                v.a.createElement(
                   "div",
                   { className: Object(D.a)(W.a.TagTitle, "WidgetTagTitle") },
                   Object(j.f)("#GameHover_Tags")
@@ -8082,17 +8097,17 @@ var CLSTAMP = "6913417";
                         ? void 0
                         : r.length)
                 )
-                  ? y.a.createElement(
+                  ? v.a.createElement(
                       "div",
                       { className: Object(D.a)(W.a.TagBox, "TagBox") },
                       t.tags.map(function (e) {
-                        return y.a.createElement(V, {
+                        return v.a.createElement(V, {
                           key: "tag_" + n + "_" + e.tagid,
                           tag: e,
                         });
                       })
                     )
-                  : y.a.createElement(
+                  : v.a.createElement(
                       "div",
                       null,
                       Object(j.f)("#Broadcast_None")
@@ -8105,7 +8120,7 @@ var CLSTAMP = "6913417";
             n = e.className,
             e = Object(i.b)(Object(i.d)(R.c.LANGUAGE)),
             e = R.c.STORE_BASE_URL + "tags/" + e + "/" + t.name;
-          return y.a.createElement(
+          return v.a.createElement(
             P.h,
             { url: e, className: Object(D.a)(W.a.Tag, "WidgetTag", n) },
             t.name
@@ -8134,10 +8149,10 @@ var CLSTAMP = "6913417";
             p = e.bHidePrice,
             d = e.bShowDemoButton,
             m = e.bShowPurchaseOptionsButton,
-            h = y.a.useState(!1),
+            h = v.a.useState(!1),
             f = h[0],
             _ = h[1],
-            b = Object(v.useRef)({ include_basic_info: !0 });
+            b = Object(g.useRef)({ include_basic_info: !0 });
           m && (b.current.include_all_purchase_options = !0);
           (n = Object(M.b)(e.id, b.current)[0]), (h = Object(z.c)());
           if (!i || (!o && !l)) return null;
@@ -8145,10 +8160,10 @@ var CLSTAMP = "6913417";
             i.discount_percent,
             (b = Object(S.c)(h)),
             (l = "" + R.c.STORE_BASE_URL + s + "/" + c);
-          return y.a.createElement(
+          return v.a.createElement(
             B.a,
             { appid: o.id },
-            y.a.createElement(
+            v.a.createElement(
               "div",
               {
                 className: Object(D.a)(
@@ -8157,25 +8172,25 @@ var CLSTAMP = "6913417";
                   "LibraryAssetExpandedDisplay"
                 ),
               },
-              y.a.createElement(
+              v.a.createElement(
                 "div",
                 { className: W.a.StoreSaleWidgetLibraryAssetExtendedTop },
-                y.a.createElement(
+                v.a.createElement(
                   "div",
                   { className: Object(D.a)(W.a.StoreSaleWidgetLeft) },
-                  y.a.createElement(
+                  v.a.createElement(
                     x.a,
                     { type: s, id: c, fnHoverState: a },
-                    y.a.createElement(
+                    v.a.createElement(
                       "div",
                       { className: W.a.StoreSaleWidgetImage },
                       X(o.appid, o.full_game_appid) &&
-                        y.a.createElement(
+                        v.a.createElement(
                           "div",
                           { className: W.a.CapsuleDecorators },
-                          y.a.createElement(le, null)
+                          v.a.createElement(le, null)
                         ),
-                      y.a.createElement(te, {
+                      v.a.createElement(te, {
                         info: i,
                         appInfo: o,
                         imageType: "library",
@@ -8183,10 +8198,10 @@ var CLSTAMP = "6913417";
                     )
                   )
                 ),
-                y.a.createElement(
+                v.a.createElement(
                   "div",
                   { className: W.a.StoreSaleWidgetCrossCenterRight },
-                  y.a.createElement(G.c, {
+                  v.a.createElement(G.c, {
                     appID: null == o ? void 0 : o.appid,
                     classOverride: Object(D.a)(
                       O.a.WishlistButtonNotTop,
@@ -8194,30 +8209,30 @@ var CLSTAMP = "6913417";
                     ),
                     snr: b,
                   }),
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     { className: W.a.TitleCtn },
-                    y.a.createElement(
+                    v.a.createElement(
                       "a",
                       {
                         href: Object(S.b)(l, h),
                         target: R.c.IN_CLIENT ? void 0 : "_blank",
                       },
-                      y.a.createElement(
+                      v.a.createElement(
                         "div",
                         { className: W.a.StoreSaleWidgetTitle },
                         e
                       )
                     )
                   ),
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     { className: W.a.StoreSaleWidgetContents },
-                    y.a.createElement(
+                    v.a.createElement(
                       "div",
                       { className: W.a.StoreSaleWidgetCenter },
                       u &&
-                        y.a.createElement(
+                        v.a.createElement(
                           "div",
                           {
                             className: Object(D.a)(
@@ -8227,35 +8242,35 @@ var CLSTAMP = "6913417";
                           },
                           u
                         ),
-                      y.a.createElement(H, { appInfo: o, instanceNum: r }),
-                      y.a.createElement(
+                      v.a.createElement(H, { appInfo: o, instanceNum: r }),
+                      v.a.createElement(
                         "div",
                         { className: W.a.StoreMetaDataCtn },
-                        y.a.createElement(
+                        v.a.createElement(
                           "div",
                           { className: W.a.StoreSaleItemRelease },
                           Object(j.n)(
                             "#Sale_ReleaseDate",
-                            y.a.createElement("span", null, o.release)
+                            v.a.createElement("span", null, o.release)
                           )
                         ),
                         n &&
-                          y.a.createElement(
+                          v.a.createElement(
                             "div",
                             { className: W.a.StoreSaleItemDev },
                             Object(j.f)("#CreatorHome_DevelopedBy"),
-                            y.a.createElement(
+                            v.a.createElement(
                               "span",
                               null,
                               n.GetDeveloperNames()[0]
                             )
                           ),
                         n &&
-                          y.a.createElement(
+                          v.a.createElement(
                             "div",
                             { className: W.a.StoreSaleItemDev },
                             Object(j.f)("#CreatorHome_PublishedBy"),
-                            y.a.createElement(
+                            v.a.createElement(
                               "span",
                               null,
                               n.GetPublisherNames()[0]
@@ -8263,25 +8278,25 @@ var CLSTAMP = "6913417";
                           )
                       )
                     ),
-                    y.a.createElement(
+                    v.a.createElement(
                       "div",
                       { className: W.a.StoreSaleWidgetRight },
-                      y.a.createElement(F.a, {
+                      v.a.createElement(F.a, {
                         appCapsule: o,
                         bPopOutTrailerPlayback: !0,
                       })
                     )
                   ),
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     { className: W.a.StoreSaleItemReview },
-                    y.a.createElement(G.b, { appInfo: o })
+                    v.a.createElement(G.b, { appInfo: o })
                   ),
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     { className: W.a.CapsuleBottomBar },
-                    y.a.createElement(oe, { item: i }),
-                    y.a.createElement(C.d, {
+                    v.a.createElement(oe, { item: i }),
+                    v.a.createElement(C.d, {
                       info: i,
                       bShowDemoButton: d,
                       bHidePrice: p,
@@ -8290,14 +8305,14 @@ var CLSTAMP = "6913417";
                       bHideWishlistButton: !0,
                     })
                   ),
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     { className: W.a.StoreSaleWidgetBgTint },
-                    y.a.createElement(ne, { info: i, appInfo: o })
+                    v.a.createElement(ne, { info: i, appInfo: o })
                   )
                 )
               ),
-              y.a.createElement(C.c, {
+              v.a.createElement(C.c, {
                 storeItem: n,
                 bPurchaseOptionsExpanded: f,
                 fnCollapseOptions: t,
@@ -8323,10 +8338,10 @@ var CLSTAMP = "6913417";
           (t = i.name),
             (e = Object(S.c)(m)),
             (l = "" + R.c.STORE_BASE_URL + s + "/" + c);
-          return y.a.createElement(
+          return v.a.createElement(
             B.a,
             { appid: o.id },
-            y.a.createElement(
+            v.a.createElement(
               T.d,
               Object(b.a)(
                 {
@@ -8337,39 +8352,39 @@ var CLSTAMP = "6913417";
                 },
                 Object(A.a)(i.id, i.type, m)
               ),
-              y.a.createElement(
+              v.a.createElement(
                 "div",
                 { className: Object(D.a)(W.a.StoreSaleWidgetHalfLeft) },
-                y.a.createElement(
+                v.a.createElement(
                   x.a,
                   { type: s, id: c, fnHoverState: a },
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     { className: W.a.StoreSaleWidgetImage },
                     X(o.appid, o.full_game_appid) &&
-                      y.a.createElement(
+                      v.a.createElement(
                         "div",
                         { className: W.a.CapsuleDecorators },
-                        y.a.createElement(le, null)
+                        v.a.createElement(le, null)
                       ),
-                    y.a.createElement(te, {
+                    v.a.createElement(te, {
                       info: i,
                       appInfo: o,
                       imageType: "header",
                     }),
-                    r && y.a.createElement(ce, { appInfo: o })
+                    r && v.a.createElement(ce, { appInfo: o })
                   )
                 ),
-                y.a.createElement(Z, {
+                v.a.createElement(Z, {
                   info: i,
                   bHidePrice: p,
                   bHidePlatforms: d,
                 })
               ),
-              y.a.createElement(
+              v.a.createElement(
                 "div",
                 { className: W.a.StoreSaleWidgetHalfRight },
-                y.a.createElement(G.c, {
+                v.a.createElement(G.c, {
                   appID: null == o ? void 0 : o.appid,
                   classOverride: Object(D.a)(
                     O.a.WishlistButtonNotTop,
@@ -8377,26 +8392,26 @@ var CLSTAMP = "6913417";
                   ),
                   snr: e,
                 }),
-                y.a.createElement(
+                v.a.createElement(
                   "div",
                   { className: W.a.TitleCtn },
-                  y.a.createElement(
+                  v.a.createElement(
                     "a",
                     {
                       href: Object(S.b)(l, m),
                       target: R.c.IN_CLIENT ? void 0 : "_blank",
                     },
-                    y.a.createElement(
+                    v.a.createElement(
                       "div",
                       { className: W.a.StoreSaleWidgetTitle },
                       t
                     )
                   )
                 ),
-                y.a.createElement(
+                v.a.createElement(
                   "div",
                   { className: W.a.StoreSaleWidgetContents },
-                  y.a.createElement(
+                  v.a.createElement(
                     "div",
                     {
                       className: Object(D.a)(
@@ -8406,20 +8421,20 @@ var CLSTAMP = "6913417";
                     },
                     u
                   ),
-                  y.a.createElement(H, { appInfo: o, instanceNum: n }),
-                  y.a.createElement(
+                  v.a.createElement(H, { appInfo: o, instanceNum: n }),
+                  v.a.createElement(
                     "div",
                     { className: W.a.StoreSaleItemRelease },
                     Object(j.n)(
                       "#Sale_ReleaseDate",
-                      y.a.createElement("span", null, o.release)
+                      v.a.createElement("span", null, o.release)
                     )
                   )
                 ),
-                y.a.createElement(
+                v.a.createElement(
                   "div",
                   { className: W.a.StoreSaleWidgetBgTint },
-                  y.a.createElement(te, {
+                  v.a.createElement(te, {
                     info: i,
                     appInfo: o,
                     imageType: "header",
@@ -8429,11 +8444,10 @@ var CLSTAMP = "6913417";
             )
           );
         }),
-        Y = (y.a.Component, 6);
+        Y = (v.a.Component, 6);
       function J(e) {
-        var e = e.rgInfo,
-          i = Object(z.c)(),
-          e = e.slice(0, Y).map(function (e) {
+        var t = e.rgInfo,
+          e = t.slice(0, Y).map(function (e) {
             var t =
                 ((a = e),
                 Object(o.b)(a.type)
@@ -8446,33 +8460,32 @@ var CLSTAMP = "6913417";
               a = r.type,
               e = r.id,
               r = r.name;
-            return y.a.createElement(
-              T.d,
-              Object(b.a)(
-                { key: "preview-" + a + "-" + e },
-                Object(A.a)(e, a, i)
-              ),
-              y.a.createElement(
-                x.a,
-                {
-                  type: Object(B.b)(a),
-                  id: e,
-                  hoverClassName: W.a.PreviewItem,
-                },
-                R.h.logged_in && y.a.createElement(re, { appInfo: t }),
-                y.a.createElement("img", {
-                  src: n,
-                  className: W.a.PreviewImg,
-                  loading: "lazy",
-                  alt: r,
-                })
-              )
+            return v.a.createElement(
+              x.a,
+              {
+                key: "preview-" + a + "-" + e,
+                type: Object(B.b)(a),
+                id: e,
+                hoverClassName: W.a.PreviewItem,
+              },
+              R.h.logged_in && v.a.createElement(re, { appInfo: t }),
+              v.a.createElement("img", {
+                src: n,
+                className: W.a.PreviewImg,
+                loading: "lazy",
+                alt: r,
+              })
             );
           });
-        return y.a.createElement(
+        return v.a.createElement(
           "div",
           { className: W.a.BundleContentPreview },
-          y.a.createElement("div", { className: W.a.PreviewCtn }, e)
+          v.a.createElement(
+            "div",
+            null,
+            Object(j.l)("#Sale_ContentPreview", t.length)
+          ),
+          v.a.createElement("div", { className: W.a.PreviewCtn }, e)
         );
       }
       var Z = function (e) {
@@ -8483,23 +8496,23 @@ var CLSTAMP = "6913417";
             i = e.bHidePlatforms,
             o = e.strClassName,
             s = e.creatorAccountID;
-          return y.a.createElement(
-            y.a.Fragment,
+          return v.a.createElement(
+            v.a.Fragment,
             null,
-            y.a.createElement(
+            v.a.createElement(
               "div",
               {
                 className: Object(D.a)(W.a.CapsuleBottomBar, n && W.a.Muted, o),
               },
-              !i && y.a.createElement(oe, { item: t }),
+              !i && v.a.createElement(oe, { item: t }),
               !r &&
-                y.a.createElement(
+                v.a.createElement(
                   "span",
                   { className: W.a.BottomBarPriceInfo },
-                  y.a.createElement(C.b, { info: t, bShowInLibrary: a })
+                  v.a.createElement(C.b, { info: t, bShowInLibrary: a })
                 )
             ),
-            s && y.a.createElement($, Object(b.a)({ creatorAccountID: s }, e))
+            s && v.a.createElement($, Object(b.a)({ creatorAccountID: s }, e))
           );
         },
         $ = function (e) {
@@ -8509,13 +8522,13 @@ var CLSTAMP = "6913417";
             e = Object(d.b)(t),
             t = e[0],
             e = e[1];
-          return y.a.createElement(
+          return v.a.createElement(
             "div",
             { className: Object(D.a)(W.a.BottomCreatorRow, n && W.a.Muted, r) },
-            y.a.createElement("img", {
+            v.a.createElement("img", {
               src: t ? Object(u.a)(null, "medium") : e.avatar_medium_url,
             }),
-            y.a.createElement(
+            v.a.createElement(
               "span",
               { className: W.a.CreatorName },
               !t && e && e.group_name
@@ -8538,7 +8551,7 @@ var CLSTAMP = "6913417";
             r = e.imageType,
             e = t.name;
           if ("library" === r)
-            return y.a.createElement(ne, { info: t, appInfo: n });
+            return v.a.createElement(ne, { info: t, appInfo: n });
           ee(t, n, "header" === r, (t = new Array()));
           var a,
             i,
@@ -8554,10 +8567,10 @@ var CLSTAMP = "6913417";
                 : ((a = W.a.headerCapsuleImgWidth),
                   (i = W.a.headerCapsuleImgHeight),
                   W.a.HeaderCapsuleImageContainer);
-          return y.a.createElement(
+          return v.a.createElement(
             "div",
             { className: n },
-            y.a.createElement(w.b, {
+            v.a.createElement(w.b, {
               lazyLoad: !0,
               srcs: t,
               className: Object(D.a)(W.a.CapsuleImage),
@@ -8572,14 +8585,14 @@ var CLSTAMP = "6913417";
             n = e.appInfo,
             r = t.name,
             a = new Array(),
-            i = y.a.useState(null),
+            i = v.a.useState(null),
             e = i[0],
             o = i[1];
           a.push(t.library_asset), n && t != n && a.push(n.library_asset);
           var s = a.length - 1;
           return (
             ee(t, n, !0, a),
-            y.a.createElement(
+            v.a.createElement(
               "div",
               {
                 className: e
@@ -8587,11 +8600,11 @@ var CLSTAMP = "6913417";
                   : W.a.LibraryAssetImageContainer,
               },
               e &&
-                y.a.createElement("div", {
+                v.a.createElement("div", {
                   className: W.a.FallbackBackground,
                   style: { backgroundImage: "url(" + e + ")" },
                 }),
-              y.a.createElement(w.b, {
+              v.a.createElement(w.b, {
                 lazyLoad: !0,
                 srcs: a,
                 className: W.a.CapsuleImage,
@@ -8609,7 +8622,7 @@ var CLSTAMP = "6913417";
         re = Object(r.a)(function (r) {
           var a = Object(z.c)();
           return R.h.logged_in
-            ? y.a.createElement(
+            ? v.a.createElement(
                 "div",
                 {
                   className: W.a.CapsuleMenuButton,
@@ -8617,11 +8630,11 @@ var CLSTAMP = "6913417";
                     var t = r.appInfo,
                       n = t && m.a.Get().BIsGameWishlisted(t.appid);
                     Object(s.a)(
-                      y.a.createElement(
+                      v.a.createElement(
                         _.c,
                         null,
                         t &&
-                          y.a.createElement(
+                          v.a.createElement(
                             _.d,
                             {
                               onSelected: function () {
@@ -8634,7 +8647,7 @@ var CLSTAMP = "6913417";
                                   );
                               },
                             },
-                            y.a.createElement(
+                            v.a.createElement(
                               "div",
                               { style: { color: "white" } },
                               Object(j.f)(
@@ -8644,10 +8657,10 @@ var CLSTAMP = "6913417";
                               )
                             )
                           ),
-                        y.a.createElement(
+                        v.a.createElement(
                           _.d,
                           { onSelected: function () {} },
-                          y.a.createElement(
+                          v.a.createElement(
                             "a",
                             {
                               href: R.c.STORE_BASE_URL + "account/preferences",
@@ -8663,7 +8676,7 @@ var CLSTAMP = "6913417";
                   },
                 },
                 " ",
-                y.a.createElement(I.n, { angle: -90 }),
+                v.a.createElement(I.n, { angle: -90 }),
                 " "
               )
             : null;
@@ -8677,7 +8690,7 @@ var CLSTAMP = "6913417";
               e && W.a.Muted,
               n ? W.a.PlayNowButton : W.a.AddToLibraryButton
             );
-          return y.a.createElement(
+          return v.a.createElement(
             "div",
             {
               onClick: function (e) {
@@ -8694,14 +8707,14 @@ var CLSTAMP = "6913417";
             e.link.localized_link_capsule,
             e.language
           );
-          return y.a.createElement(
+          return v.a.createElement(
             P.h,
             { url: e.link.url, className: e.strClassName || void 0 },
-            y.a.createElement(
+            v.a.createElement(
               "div",
               { className: W.a.CapsuleContainer },
               Boolean(e.link.localized_link_capsule) &&
-                y.a.createElement("img", {
+                v.a.createElement("img", {
                   className: W.a.LinkCapsuleImage,
                   src:
                     R.c.MEDIA_CDN_COMMUNITY_URL +
@@ -8710,7 +8723,7 @@ var CLSTAMP = "6913417";
                     t,
                 }),
               Boolean(e.link.materialized_link_capsule) &&
-                y.a.createElement("img", {
+                v.a.createElement("img", {
                   className: W.a.LinkCapsuleImage,
                   src: e.link.materialized_link_capsule,
                 })
@@ -8721,36 +8734,36 @@ var CLSTAMP = "6913417";
           var t = e.item,
             n = e.strClassName;
           return t && h.a.bMigrateToStoreBrowseAPI
-            ? y.a.createElement(se, Object(b.a)({}, e))
-            : y.a.createElement(
+            ? v.a.createElement(se, Object(b.a)({}, e))
+            : v.a.createElement(
                 "span",
                 { className: Object(D.a)(W.a.CapsulePlatform, n) },
-                t.available_windows && y.a.createElement(I.bb, null),
-                t.available_mac && y.a.createElement(I.b, null),
-                t.available_linux && y.a.createElement(I.Q, null),
-                t.support_vrhmd && y.a.createElement(I.X, null)
+                t.available_windows && v.a.createElement(I.bb, null),
+                t.available_mac && v.a.createElement(I.b, null),
+                t.available_linux && v.a.createElement(I.Q, null),
+                t.support_vrhmd && v.a.createElement(I.X, null)
               );
         },
         se = function (e) {
           var t = e.item,
             n = e.strClassName,
-            e = Object(v.useRef)({ include_platforms: !0 }),
+            e = Object(g.useRef)({ include_platforms: !0 }),
             e = Object(M.a)(t.id, Object(f.e)(t.type), e.current)[0];
           if (!e) return null;
           e = e.GetPlatforms();
-          return y.a.createElement(
+          return v.a.createElement(
             "span",
             { className: Object(D.a)(W.a.CapsulePlatform, n) },
-            e.windows && y.a.createElement(I.bb, null),
-            e.mac && y.a.createElement(I.b, null),
-            e.linux && y.a.createElement(I.Q, null),
+            e.windows && v.a.createElement(I.bb, null),
+            e.mac && v.a.createElement(I.b, null),
+            e.linux && v.a.createElement(I.Q, null),
             (null === (e = e.vr_support) || void 0 === e ? void 0 : e.vrhmd) &&
-              y.a.createElement(I.X, null)
+              v.a.createElement(I.X, null)
           );
         },
         ce = function (e) {
           return e.appInfo && e.appInfo.microtrailer
-            ? y.a.createElement(
+            ? v.a.createElement(
                 "video",
                 {
                   className: W.a.CapsuleMicroTrailer,
@@ -8759,12 +8772,12 @@ var CLSTAMP = "6913417";
                   autoPlay: !0,
                   key: "mtv-" + e.appInfo.microtrailer,
                 },
-                y.a.createElement("source", {
+                v.a.createElement("source", {
                   src: e.appInfo.microtrailer,
                   type: "video/webm",
                 }),
                 !R.c.IN_CLIENT &&
-                  y.a.createElement("source", {
+                  v.a.createElement("source", {
                     src: e.appInfo.microtrailer_mp4,
                     type: "video/mp4",
                   })
@@ -8772,7 +8785,7 @@ var CLSTAMP = "6913417";
             : null;
         },
         le = function () {
-          return y.a.createElement(
+          return v.a.createElement(
             "div",
             { className: W.a.bordered_live_stream_icon },
             Object(j.f)("#home_page_live_broadcast")
@@ -10509,7 +10522,7 @@ var CLSTAMP = "6913417";
               return (
                 e.s_SubscriptStore ||
                   ((e.s_SubscriptStore = new e()).Init(),
-                  (window.g_CuratorAdminStore = e.s_SubscriptStore)),
+                  (window.g_SubscriptionStore = e.s_SubscriptStore)),
                 e.s_SubscriptStore
               );
             }),
@@ -22883,9 +22896,9 @@ var CLSTAMP = "6913417";
                   });
                 });
             }),
-            (e.prototype.LoadCapsules = function (y) {
+            (e.prototype.LoadCapsules = function (v) {
               return Object(N.b)(this, void 0, void 0, function () {
-                var t, n, r, a, i, o, s, c, l, u, p, d, m, h, f, _, b, g, v;
+                var t, n, r, a, i, o, s, c, l, u, p, d, m, h, f, _, b, g;
                 return Object(N.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
@@ -22895,34 +22908,32 @@ var CLSTAMP = "6913417";
                         (n = u.bIsPreview),
                         (r = u.activeTab),
                         (a = u.section),
-                        (_ = this.state),
-                        (i = _.currentFlavor),
-                        (o = _.rgCapsules),
-                        (s = _.nNumRequestedLastTime),
-                        (c = _.nHiddenCapsules),
-                        (l = _.strSearchQuery),
-                        (u = _.facetFilterState),
+                        (f = this.state),
+                        (i = f.currentFlavor),
+                        (o = f.rgCapsules),
+                        (s = f.nNumRequestedLastTime),
+                        (c = f.nHiddenCapsules),
+                        (l = f.strSearchQuery),
+                        (u = f.facetFilterState),
                         [4, k.a.Get().HintLoad()]
                       );
                     case 1:
                       e.sent(),
                         (p = !0),
-                        (d = Math.max(s, y + 1)),
+                        (d = Math.max(s, v + 1)),
                         null != r &&
                           r.BIsTabFilteringEnabled() &&
                           (d = Math.max(d, 100)),
-                        H.a.GetTimeNowWithOverride(),
-                        (m = t.GetSaleFeaturedAppsAndDemos()),
                         (e.label = 2);
                     case 2:
-                      if (!(o.length <= y && p)) return [3, 11];
-                      (h = this.m_nHighestSentRequestID),
-                        (f = void 0),
+                      if (!(o.length <= v && p)) return [3, 11];
+                      (m = this.m_nHighestSentRequestID),
+                        (h = void 0),
                         (e.label = 3);
                     case 3:
                       return (
                         e.trys.push([3, 5, , 6]),
-                        (_ = {
+                        (f = {
                           strSectionFilter: Object(R.o)(a),
                           nTabUniqueID:
                             null == r ? void 0 : r.GetActiveTabUniqueID(),
@@ -22938,7 +22949,7 @@ var CLSTAMP = "6913417";
                             n,
                             t,
                             i,
-                            _,
+                            f,
                             d,
                             0,
                             this.m_cancelSignal
@@ -22947,20 +22958,20 @@ var CLSTAMP = "6913417";
                       );
                     case 4:
                       return (
-                        (b = e.sent()),
-                        (f = b.appids),
-                        (p = b.bHasPossibleMoreResults),
+                        (_ = e.sent()),
+                        (h = _.appids),
+                        (p = _.bHasPossibleMoreResults),
                         a.enable_faceted_browsing &&
-                          (u.SetFacetCounts(b.facetCounts),
-                          u.SetSolrMatchCount(b.nMatchCount)),
+                          (u.SetFacetCounts(_.facetCounts),
+                          u.SetSolrMatchCount(_.nMatchCount)),
                         [3, 6]
                       );
                     case 5:
                       return (
-                        (b = e.sent()),
+                        (_ = e.sent()),
                         this.m_cancelSignal.token.reason ||
                           (console.error(
-                            "Failed to load games for browser;" + b.message
+                            "Failed to load games for browser;" + _.message
                           ),
                           this.setState({
                             bInitialLoadComplete: !0,
@@ -22969,16 +22980,12 @@ var CLSTAMP = "6913417";
                         [2]
                       );
                     case 6:
-                      return this.m_nHighestReceivedRequestID > h
+                      return this.m_nHighestReceivedRequestID > m
                         ? [2]
-                        : ((this.m_nHighestReceivedRequestID = h),
-                          (o = f.map(function (e) {
+                        : ((this.m_nHighestReceivedRequestID = m),
+                          (o = h.map(function (e) {
                             return { id: e, type: "game" };
                           })),
-                          t.BUsesContentHubForItemSource() ||
-                            (o = o.filter(function (e) {
-                              return m.has(e.id);
-                            })),
                           this.state.strSearchQuery ||
                             t.BUsesContentHubForItemSource() ||
                             (o = o.filter(function (e) {
@@ -22996,28 +23003,28 @@ var CLSTAMP = "6913417";
                       );
                     case 8:
                       (o = e.sent()),
-                        (v = p),
-                        u.UpdateMatchCount(v, o.length),
+                        (g = p),
+                        u.UpdateMatchCount(g, o.length),
                         (e.label = 9);
                     case 9:
-                      return (g = new Array()), [4, Object(P.a)(o, !1, g)];
+                      return (b = new Array()), [4, Object(P.a)(o, !1, b)];
                     case 10:
                       return (
                         (o = e.sent()),
-                        (c = g.length),
-                        o.length <= y && (d += 8),
+                        (c = b.length),
+                        o.length <= v && (d += 8),
                         [3, 2]
                       );
                     case 11:
                       return this.m_cancelSignal.token.reason
                         ? [2]
-                        : ((v = o.length > y || p),
+                        : ((g = o.length > v || p),
                           this.setState({
                             bInitialLoadComplete: !0,
                             rgCapsules: o,
-                            nVisibleRows: y,
+                            nVisibleRows: v,
                             nNumRequestedLastTime: d,
-                            bIsMoreAvailable: v,
+                            bIsMoreAvailable: g,
                             bAwaitingMoreRowsLoading: !1,
                             nHiddenCapsules: c,
                           }),
@@ -25593,29 +25600,42 @@ var CLSTAMP = "6913417";
               var r = this.props,
                 a = r.section,
                 i = r.event,
-                r = r.activeTab;
+                o = r.activeTab;
               if (a.use_random_order && 1 < t.length) {
-                e = this.GetItemListCacheName(
+                r = this.GetItemListCacheName(
                   e,
-                  null == r ? void 0 : r.GetActiveTabUniqueID()
+                  null == o ? void 0 : o.GetActiveTabUniqueID()
                 );
                 if (window.sessionStorage) {
-                  r = window.sessionStorage.getItem(e);
-                  if (r) {
-                    var o = JSON.parse(r);
-                    if (
-                      o.rtime32_last_modified == i.rtime32_last_modified &&
-                      o.randomized.length >= t.length
-                    )
-                      return o.randomized;
-                  }
-                  o = Array.from(t);
-                  n(o);
+                  (a = window.sessionStorage.getItem(r)),
+                    (e = a && JSON.parse(a));
+                  if (
+                    a &&
+                    e.rtime32_last_modified == i.rtime32_last_modified &&
+                    e.randomized.length >= t.length
+                  )
+                    return e.randomized;
+                  var s,
+                    o = void 0;
+                  (null == e ? void 0 : e.rtime32_last_modified) ==
+                  i.rtime32_last_modified
+                    ? ((s = new Set(
+                        e.randomized.map(function (e) {
+                          return e.id;
+                        })
+                      )),
+                      n(
+                        (a = t.filter(function (e) {
+                          return !s.has(e.id);
+                        }))
+                      ),
+                      (o = e.randomized.concat(a)))
+                    : n((o = Array.from(t)));
                   i = {
                     randomized: o,
                     rtime32_last_modified: i.rtime32_last_modified,
                   };
-                  return window.sessionStorage.setItem(e, JSON.stringify(i)), o;
+                  return window.sessionStorage.setItem(r, JSON.stringify(i)), o;
                 }
               }
               return t;
@@ -31955,7 +31975,7 @@ var CLSTAMP = "6913417";
           ),
           m.a.useLayoutEffect(
             function () {
-              if (s)
+              if (s && n)
                 return (
                   Object(h.c)(n, s.CreateHandle()),
                   function () {
@@ -37522,24 +37542,24 @@ var CLSTAMP = "6913417";
     "IjL/": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return a;
+        return i;
       });
       var r = n("mrSG"),
-        i = n("q1tI"),
-        o = n("opsS"),
-        a = (function (t) {
-          function a() {
-            var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.state = {}), e;
+        s = n("q1tI"),
+        a = n("opsS"),
+        i = (function (n) {
+          function o(e) {
+            var t = n.call(this, e) || this;
+            return (t.state = {}), (t.state.lastErrorKey = e.errorKey), t;
           }
           return (
-            Object(r.d)(a, t),
-            (a.InstallErrorReportingStore = function (e) {
+            Object(r.d)(o, n),
+            (o.InstallErrorReportingStore = function (e) {
               this.sm_ErrorReportingStore = e;
             }),
-            (a.prototype.componentDidCatch = function (e, t) {
+            (o.prototype.componentDidCatch = function (e, t) {
               var n = this,
-                r = a.sm_ErrorReportingStore;
+                r = o.sm_ErrorReportingStore;
               r
                 ? r.ReportError(e).then(function (e) {
                     return (
@@ -37549,50 +37569,55 @@ var CLSTAMP = "6913417";
                 : console.warn(
                     "No ErrorReportingStore - use ErrorReportingStore().Init() to configure error reporting to server"
                   ),
-                this.setState({ error: { error: e, info: t } });
+                this.setState({
+                  error: { error: e, info: t },
+                  lastErrorKey: this.props.errorKey,
+                });
             }),
-            (a.prototype.Reset = function () {
+            (o.prototype.Reset = function () {
               this.setState({ error: null });
             }),
-            (a.prototype.render = function () {
+            (o.prototype.render = function () {
               var e = this.props,
                 t = e.children,
                 n = e.fallback,
-                r = this.state,
-                e = r.error,
-                r = r.identifierHash;
-              return e
+                r = e.errorKey,
+                a = this.state,
+                i = a.error,
+                e = a.identifierHash,
+                a = a.lastErrorKey;
+              return i && r == a
                 ? void 0 !== n
                   ? "function" == typeof n
-                    ? n(e.error)
+                    ? n(i.error)
                     : n
-                  : a.sm_ErrorReportingStore &&
-                    a.sm_ErrorReportingStore.reporting_enabled
-                  ? i.createElement(c, {
-                      error: e,
-                      identifierHash: r,
-                      store: a.sm_ErrorReportingStore,
+                  : o.sm_ErrorReportingStore &&
+                    o.sm_ErrorReportingStore.reporting_enabled
+                  ? s.createElement(l, {
+                      error: i,
+                      identifierHash: e,
+                      store: o.sm_ErrorReportingStore,
                       onRefresh: this.Reset,
                     })
-                  : i.createElement(s, { error: e, onDismiss: this.Reset })
+                  : s.createElement(c, { error: i, onDismiss: this.Reset })
                 : t;
             }),
-            Object(r.c)([o.a], a.prototype, "Reset", null),
-            a
+            Object(r.c)([a.a], o.prototype, "Reset", null),
+            o
           );
-        })(i.Component),
-        s = function (e) {
+        })(s.Component),
+        c = function (e) {
           var t = e.error,
             n = e.onDismiss,
             r = t.error ? t.error.stack : "Stack missing",
             e = t.info ? t.info.componentStack : "",
             t = (t.error && t.error.message) || "unknown error";
-          return i.createElement(
-            l,
+          return s.createElement(
+            o,
             null,
-            i.createElement(u, null, 'Error: "', t, '"'),
+            s.createElement(u, null, 'Error: "', t, '"'),
             "   ",
-            i.createElement(
+            s.createElement(
               "span",
               {
                 style: { textDecoration: "underline", cursor: "pointer" },
@@ -37600,26 +37625,26 @@ var CLSTAMP = "6913417";
               },
               "(x) Dismiss"
             ),
-            i.createElement("br", null),
-            i.createElement(p, null, r),
-            i.createElement(p, null, "The error occurred while rendering:", e)
+            s.createElement("br", null),
+            s.createElement(p, null, r),
+            s.createElement(p, null, "The error occurred while rendering:", e)
           );
         },
-        c = function (e) {
+        l = function (e) {
           var t = e.error,
             n = e.onRefresh,
             r = e.identifierHash,
             e = e.store,
             t = (t.error && t.error.message) || "unknown error",
             r = e.product + "_" + e.version + "_" + r;
-          return i.createElement(
-            l,
+          return s.createElement(
+            o,
             null,
-            i.createElement(
+            s.createElement(
               u,
               null,
               "Something went wrong while displaying this content. ",
-              i.createElement(
+              s.createElement(
                 "span",
                 {
                   style: { textDecoration: "underline", cursor: "pointer" },
@@ -37628,13 +37653,13 @@ var CLSTAMP = "6913417";
                 "Refresh"
               )
             ),
-            i.createElement(p, null, "Error Reference: ", r),
-            i.createElement(p, null, t)
+            s.createElement(p, null, "Error Reference: ", r),
+            s.createElement(p, null, t)
           );
         },
-        l = function (e) {
+        o = function (e) {
           e = e.children;
-          return i.createElement(
+          return s.createElement(
             "div",
             {
               style: {
@@ -37649,7 +37674,7 @@ var CLSTAMP = "6913417";
         },
         u = function (e) {
           e = e.children;
-          return i.createElement(
+          return s.createElement(
             "h1",
             {
               style: {
@@ -37663,7 +37688,7 @@ var CLSTAMP = "6913417";
         },
         p = function (e) {
           e = e.children;
-          return i.createElement(
+          return s.createElement(
             "pre",
             { style: { marginTop: "15px", opacity: 0.7 } },
             e
@@ -38543,7 +38568,13 @@ var CLSTAMP = "6913417";
               return l.createElement(
                 M,
                 Object(c.a)({}, s),
-                l.createElement(p.j, null, " ", t, " "),
+                l.createElement(
+                  p.j,
+                  null,
+                  " ",
+                  t || l.createElement(l.Fragment, null, " "),
+                  " "
+                ),
                 l.createElement(
                   p.b,
                   null,
@@ -43570,7 +43601,7 @@ var CLSTAMP = "6913417";
           !e.hideTitle && m.createElement(p, null, e.activePage.title),
           m.createElement(
             ge.a,
-            { key: e.activePage.title },
+            { errorKey: e.activePage.title },
             null != e.activePage.content && m.cloneElement(e.activePage.content)
           )
         );
@@ -46313,7 +46344,7 @@ var CLSTAMP = "6913417";
     RQmk: function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return u;
+        return p;
       }),
         n.d(t, "a", function () {
           return r;
@@ -46322,8 +46353,9 @@ var CLSTAMP = "6913417";
         l = n("q1tI"),
         o = n("VQ2A"),
         s = n("lkRc"),
-        c = n("dfs5");
-      function u(e) {
+        c = n("dfs5"),
+        u = n("UPxs");
+      function p(e) {
         var t = e.type,
           n = e.id,
           r = e.hoverClassName,
@@ -46376,10 +46408,10 @@ var CLSTAMP = "6913417";
                   a
                 );
         return l.createElement(
-          u,
+          p,
           Object(i.a)({}, e),
           l.createElement(
-            "a",
+            u.b,
             {
               className: e.className,
               href: a,
@@ -63755,9 +63787,9 @@ var CLSTAMP = "6913417";
     gfbn: function (e, t, l) {
       "use strict";
       l.r(t);
-      var u = l("mrSG"),
-        p = (l("SQr7"), l("Wr5T"), l("q1tI")),
-        d = l.n(p),
+      var p = l("mrSG"),
+        u = (l("SQr7"), l("Wr5T"), l("q1tI")),
+        d = l.n(u),
         i = l("i8i4"),
         n = l.n(i),
         m = l("lkRc"),
@@ -63801,14 +63833,14 @@ var CLSTAMP = "6913417";
             }),
             (e.prototype.SaveDrafts = function () {
               var a, c, l;
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var i,
                   n,
                   t,
                   o,
                   r,
                   s = this;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       for (
@@ -64071,9 +64103,9 @@ var CLSTAMP = "6913417";
             (e.prototype.GetSummary = function () {
               return this.m_summary;
             }),
-            Object(u.c)([b.C], e.prototype, "m_mapLocalUpdates", void 0),
-            Object(u.c)([S.a], e.prototype, "BHasSomeTextForLanguage", null),
-            Object(u.c)([S.a], e.prototype, "GetLastTimeLanguageUpdated", null),
+            Object(p.c)([b.C], e.prototype, "m_mapLocalUpdates", void 0),
+            Object(p.c)([S.a], e.prototype, "BHasSomeTextForLanguage", null),
+            Object(p.c)([S.a], e.prototype, "GetLastTimeLanguageUpdated", null),
             e
           );
         })(),
@@ -64092,7 +64124,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64183,7 +64215,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64258,7 +64290,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64349,7 +64381,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64424,7 +64456,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64489,7 +64521,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64555,7 +64587,7 @@ var CLSTAMP = "6913417";
             return B.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.prototype.toObject = function (e) {
               return r.toObject((e = void 0 === e ? !1 : e), this);
             }),
@@ -64601,7 +64633,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64672,7 +64704,7 @@ var CLSTAMP = "6913417";
             return B.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.prototype.toObject = function (e) {
               return r.toObject((e = void 0 === e ? !1 : e), this);
             }),
@@ -64718,7 +64750,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64789,7 +64821,7 @@ var CLSTAMP = "6913417";
             return B.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.prototype.toObject = function (e) {
               return r.toObject((e = void 0 === e ? !1 : e), this);
             }),
@@ -64835,7 +64867,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -64911,7 +64943,7 @@ var CLSTAMP = "6913417";
             return B.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.prototype.toObject = function (e) {
               return r.toObject((e = void 0 === e ? !1 : e), this);
             }),
@@ -64957,7 +64989,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -65038,7 +65070,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -65103,7 +65135,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -65180,7 +65212,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -65245,7 +65277,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? { proto: r, fields: { faq: { n: 1, c: I } } }
@@ -65301,7 +65333,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? { proto: r, fields: { faq: { n: 1, c: I } } }
@@ -65357,7 +65389,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -65437,7 +65469,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? { proto: r, fields: { faq: { n: 1, c: I } } }
@@ -65493,7 +65525,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -65563,7 +65595,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -65625,7 +65657,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? { proto: r, fields: { faq: { n: 1, c: w, r: !0, q: !0 } } }
@@ -65681,7 +65713,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? { proto: r, fields: { faqs: { n: 1, c: I, r: !0, q: !0 } } }
@@ -65733,7 +65765,7 @@ var CLSTAMP = "6913417";
             return B.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.prototype.toObject = function (e) {
               return r.toObject((e = void 0 === e ? !1 : e), this);
             }),
@@ -65779,7 +65811,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -65850,7 +65882,7 @@ var CLSTAMP = "6913417";
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(p.d)(r, n),
             (r.M = function () {
               return (r.sm_m = !r.sm_m
                 ? {
@@ -66063,9 +66095,9 @@ var CLSTAMP = "6913417";
               );
             }),
             (r.prototype.CreateFAQ = function (o) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t, n, r, a, i;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = v.b.Init(L)).Body().set_steamid(m.b.CLANSTEAMID),
@@ -66114,9 +66146,9 @@ var CLSTAMP = "6913417";
               });
             }),
             (r.prototype.UpdateDraft = function (i, o, s, c) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t, n, r, a;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = v.b.Init(W)).Body().set_steamid(m.b.CLANSTEAMID),
@@ -66166,9 +66198,9 @@ var CLSTAMP = "6913417";
               });
             }),
             (r.prototype.UpdateJsonData = function (i, o) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t, n, r, a;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = JSON.stringify(o)),
@@ -66217,9 +66249,9 @@ var CLSTAMP = "6913417";
               });
             }),
             (r.prototype.GetFAQVersion = function (a, i, o) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t, n, r;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = v.b.Init(X)).Body().set_steamid(m.b.CLANSTEAMID),
@@ -66264,9 +66296,9 @@ var CLSTAMP = "6913417";
               });
             }),
             (r.prototype.DeleteFAQ = function (a) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t, n, r;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = v.b.Init(j)).Body().set_steamid(m.b.CLANSTEAMID),
@@ -66337,9 +66369,9 @@ var CLSTAMP = "6913417";
               return this.m_mapFAQSummaries.get(e) || {};
             }),
             (r.prototype.LoadFAQDraftContent = function (o) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t, n, r, a, i;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       if (this.m_mapFAQDrafts.has(o))
@@ -66399,9 +66431,9 @@ var CLSTAMP = "6913417";
               });
             }),
             (r.prototype.UpdateVisibility = function (i, o, s) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t, n, r, a;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = v.b.Init(P)).Body().set_steamid(m.b.CLANSTEAMID),
@@ -66452,14 +66484,14 @@ var CLSTAMP = "6913417";
               });
             }),
             (r.prototype.PublishDraftByLanguage = function (s, c) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t,
                   n,
                   r,
                   a,
                   i,
                   o = this;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       if (!c || 0 == c.length) return [2, 1];
@@ -66529,12 +66561,12 @@ var CLSTAMP = "6913417";
               });
             }),
             (r.prototype.UpdateInternalName = function (i, o) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t,
                   n,
                   r,
                   a = this;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = v.b.Init(R)).Body().set_steamid(m.b.CLANSTEAMID),
@@ -66623,9 +66655,9 @@ var CLSTAMP = "6913417";
               return this.m_bHasFAQEdit;
             }),
             (r.prototype.ExportEnglishDraftToCrowdin = function (n) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t;
-                return Object(u.e)(this, function (e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -66644,14 +66676,14 @@ var CLSTAMP = "6913417";
               });
             }),
             (r.prototype.ImportNonEnglishDraftsFromCrowdin = function (
-              o,
               s,
-              c
+              c,
+              l
             ) {
-              var l;
-              return Object(u.b)(this, void 0, void 0, function () {
-                var t, n, r, a, i;
-                return Object(u.e)(this, function (e) {
+              var u;
+              return Object(p.b)(this, void 0, void 0, function () {
+                var t, n, r, a, i, o;
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t =
@@ -66659,41 +66691,58 @@ var CLSTAMP = "6913417";
                         "faqs/" +
                         m.b.VANITY_ID +
                         "/ajaxpullfromcrowdin/" +
-                        ae(o)),
+                        ae(s)),
                         (n = new FormData()).append("sessionid", m.c.SESSIONID),
-                        n.append("languages", s.join(",")),
+                        n.append("languages", c.join(",")),
                         (r = null),
                         (e.label = 1);
                     case 1:
                       return (
-                        e.trys.push([1, 3, , 4]),
+                        e.trys.push([1, 6, , 7]),
                         [
                           4,
                           f.a.post(t, n, {
                             withCredentials: !0,
-                            cancelToken: null == c ? void 0 : c.token,
+                            cancelToken: null == l ? void 0 : l.token,
                           }),
                         ]
                       );
                     case 2:
-                      return 200 ==
-                        (null == (a = e.sent()) ? void 0 : a.status) &&
-                        1 ==
-                          (null === (l = a.data) || void 0 === l
+                      return 200 !=
+                        (null == (a = e.sent()) ? void 0 : a.status) ||
+                        1 !=
+                          (null === (u = a.data) || void 0 === u
                             ? void 0
-                            : l.success)
-                        ? [2, a.data.updated[o]]
-                        : ((r = { response: a }), [3, 4]);
+                            : u.success)
+                        ? [3, 5]
+                        : ((i = a.data.updated),
+                          0 <
+                            (i =
+                              null !== (u = null == i ? void 0 : i[s]) &&
+                              void 0 !== u
+                                ? u
+                                : []).length &&
+                          (this.m_mapFAQSummaries.has(s) ||
+                            this.m_mapFAQDrafts.has(s))
+                            ? (this.m_mapFAQDrafts.delete(s),
+                              [4, this.LoadFAQDraftContent(s)])
+                            : [3, 4]);
                     case 3:
-                      return (i = e.sent()), (r = i), [3, 4];
+                      e.sent(), (e.label = 4);
                     case 4:
+                      return [2, i];
+                    case 5:
+                      return (r = { response: a }), [3, 7];
+                    case 6:
+                      return (o = e.sent()), (r = o), [3, 7];
+                    case 7:
                       return (
-                        (i = Object(M.a)(r)),
+                        (o = Object(M.a)(r)),
                         console.error(
                           "Could not import from crowdin",
-                          o,
-                          i.strErrorMsg,
-                          i
+                          s,
+                          o.strErrorMsg,
+                          o
                         ),
                         [2, []]
                       );
@@ -66701,13 +66750,36 @@ var CLSTAMP = "6913417";
                 });
               });
             }),
+            (r.prototype.BHasLiveEnglishVersion = function (e) {
+              return this.m_mapFAQSummaries
+                .get(e)
+                .per_language_info.some(function (e) {
+                  return 0 == e.language && 0 < e.last_publish_timestamp;
+                });
+            }),
+            (r.prototype.GetNonEnglishDraftsToPublish = function (e) {
+              return this.m_mapFAQSummaries
+                .get(e)
+                .per_language_info.filter(function (e) {
+                  return (
+                    0 != e.language &&
+                    e.last_update_timestamp >
+                      (null !== (e = e.last_publish_timestamp) && void 0 !== e
+                        ? e
+                        : 0)
+                  );
+                })
+                .map(function (e) {
+                  return e.language;
+                });
+            }),
             (r.sm_mapFallbackLanguages = new Map([
               [5, 27],
               [27, 5],
               [29, 6],
             ])),
-            Object(u.c)([b.C], r.prototype, "m_mapFAQSummaries", void 0),
-            Object(u.c)([b.k], r.prototype, "RemoveAllDirtyDrafts", null),
+            Object(p.c)([b.C], r.prototype, "m_mapFAQSummaries", void 0),
+            Object(p.c)([b.k], r.prototype, "RemoveAllDirtyDrafts", null),
             r
           );
         })(),
@@ -66764,7 +66836,7 @@ var CLSTAMP = "6913417";
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            Object(u.d)(t, e),
+            Object(p.d)(t, e),
             (t.prototype.render = function () {
               if ("dev" !== m.c.WEB_UNIVERSE) return null;
               var t = document.getElementById(this.props.strConfigID);
@@ -66773,31 +66845,31 @@ var CLSTAMP = "6913417";
               return (
                 t.getAttributeNames().forEach(function (e) {
                   e.toLocaleLowerCase().startsWith("data-") &&
-                    (n.push(p.createElement("h1", { key: "header-" + e }, e)),
+                    (n.push(u.createElement("h1", { key: "header-" + e }, e)),
                     n.push(
-                      p.createElement(se, {
+                      u.createElement(se, {
                         key: "body-" + e,
                         data: JSON.parse(t.getAttribute(e)),
                       })
                     ));
                 }),
-                p.createElement("div", null, n)
+                u.createElement("div", null, n)
               );
             }),
             t
           );
-        })(p.Component),
+        })(u.Component),
         se = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            Object(u.d)(t, e),
+            Object(p.d)(t, e),
             (t.prototype.render = function () {
-              return p.createElement(
+              return u.createElement(
                 "div",
                 null,
-                p.createElement(
+                u.createElement(
                   "pre",
                   null,
                   JSON.stringify(this.props.data, null, 2)
@@ -66806,13 +66878,13 @@ var CLSTAMP = "6913417";
             }),
             t
           );
-        })(p.Component),
+        })(u.Component),
         ce = l("IjL/"),
         le = l("Jqb/");
       function ue(e) {
         var t = e.text,
           n = e.bShowErrorInfo,
-          e = p.useCallback(function (e) {
+          e = u.useCallback(function (e) {
             return new ge.b(
               new ge.c(
                 new _e.c(new _e.b(), 0),
@@ -66823,8 +66895,8 @@ var CLSTAMP = "6913417";
               e
             );
           }, []),
-          e = p.useRef(new fe.a(ye, e));
-        return p.createElement(
+          e = u.useRef(new fe.a(ye, e));
+        return u.createElement(
           "div",
           { className: ve.a.FAQContainer },
           e.current.ParseBBCode(t, { showErrorInfo: n })
@@ -66842,7 +66914,7 @@ var CLSTAMP = "6913417";
         t = l("WcT4"),
         ve = l.n(t),
         ye = new Map(
-          Object(u.g)(Array.from(be.c.entries()), Array.from(be.e.entries()), [
+          Object(p.g)(Array.from(be.c.entries()), Array.from(be.e.entries()), [
             [
               "section",
               {
@@ -66860,7 +66932,7 @@ var CLSTAMP = "6913417";
                       "important" == n && ve.a.Important,
                       "warning" == n && ve.a.Warning
                     );
-                  return p.createElement(
+                  return u.createElement(
                     "div",
                     { id: t || void 0, className: n },
                     e.children
@@ -66897,16 +66969,16 @@ var CLSTAMP = "6913417";
                   return "string" == typeof e
                     ? ((r = e),
                       n
-                        ? p.createElement(de.a, {
+                        ? u.createElement(de.a, {
                             className: ve.a.FAQImage,
                             src: r,
                           })
                         : ((r = r.replace("http://", "https://")),
-                          p.createElement("img", {
+                          u.createElement("img", {
                             className: ve.a.FAQImage,
                             src: r,
                           })))
-                    : p.createElement(me.a, {
+                    : u.createElement(me.a, {
                         className: ve.a.FAQImage,
                         rgSources: e,
                       });
@@ -66923,7 +66995,7 @@ var CLSTAMP = "6913417";
                     m.c.EREALM == g.f.k_ESteamRealmGlobal) ||
                     ("china" == t && m.c.EREALM == g.f.k_ESteamRealmChina)
                     ? null
-                    : p.createElement(p.Fragment, null, e.children);
+                    : u.createElement(u.Fragment, null, e.children);
                 },
                 autocloses: !1,
               },
@@ -67033,9 +67105,9 @@ var CLSTAMP = "6913417";
           return n;
         })(e.route, e.faqid);
         return e.bForceRedirect
-          ? p.createElement(s.a, { push: !0, to: t })
+          ? u.createElement(s.a, { push: !0, to: t })
           : e.bForceAnchor
-          ? p.createElement(
+          ? u.createElement(
               "a",
               {
                 href: m.c.COMMUNITY_BASE_URL.slice(0, -1) + t,
@@ -67043,7 +67115,7 @@ var CLSTAMP = "6913417";
               },
               e.children
             )
-          : p.createElement(o.b, { to: t, className: e.className }, e.children);
+          : u.createElement(o.b, { to: t, className: e.className }, e.children);
       }
       function Ie(e) {
         var t,
@@ -67057,7 +67129,7 @@ var CLSTAMP = "6913417";
             (e = d.a.useState(!!i)),
             (o = e[0]),
             (r = e[1]),
-            Object(p.useEffect)(
+            Object(u.useEffect)(
               function () {
                 ne.Get()
                   .LoadFAQDraftContent(t)
@@ -67101,7 +67173,7 @@ var CLSTAMP = "6913417";
             [e && ne.Get().GetFAQPublishedContent(e, t), !0]))[0],
           e = e[1];
         return (
-          Object(p.useEffect)(function () {
+          Object(u.useEffect)(function () {
             ne.Get().RemoveAllDirtyDrafts();
           }, []),
           e
@@ -67156,7 +67228,7 @@ var CLSTAMP = "6913417";
                   render: function (e) {
                     return d.a.createElement(
                       oe,
-                      Object(u.a)({}, e, {
+                      Object(p.a)({}, e, {
                         key: "diab_data_" + e.match.params.gid,
                         strConfigID: "application_config",
                       })
@@ -67217,7 +67289,7 @@ var CLSTAMP = "6913417";
               (e = d.a.useState(!1)),
               (o = e[0]),
               (s = e[1]),
-              Object(p.useEffect)(
+              Object(u.useEffect)(
                 function () {
                   ne.Get().BHasFAQEdit() &&
                     ne
@@ -67405,8 +67477,8 @@ var CLSTAMP = "6913417";
         t = l("X3Ds");
       l("xnZ7"), l("idvb");
       Object(t.u)(function () {
-        return Object(u.b)(void 0, void 0, void 0, function () {
-          return Object(u.e)(this, function (e) {
+        return Object(p.b)(void 0, void 0, void 0, function () {
+          return Object(p.e)(this, function (e) {
             switch (e.label) {
               case 0:
                 return (
@@ -67421,9 +67493,9 @@ var CLSTAMP = "6913417";
                   [
                     4,
                     (function (c) {
-                      return Object(u.b)(this, void 0, void 0, function () {
+                      return Object(p.b)(this, void 0, void 0, function () {
                         var t, n, r, a, i, o, s;
-                        return Object(u.e)(this, function (e) {
+                        return Object(p.e)(this, function (e) {
                           switch (e.label) {
                             case 0:
                               return [3, 2];
@@ -68614,16 +68686,20 @@ var CLSTAMP = "6913417";
                 this.m_Properties.onMoveRight ||
                 this.m_Properties.onMoveDown ||
                 this.m_Properties.onMoveLeft) &&
-              (this.m_rgNavigationHandlers.push(
+              this.m_rgNavigationHandlers.push(
                 Object(b.h)(this.m_element, this.OnNavigationEvent)
               ),
-              this.m_element.addEventListener("focusin", this.OnFocusIn),
-              this.m_rgNavigationHandlers.push(function () {
-                return e.m_element.removeEventListener("focusin", e.OnFocusIn);
-              })),
-              this.m_rgFocusHandlers.length ||
-                (!this.m_Properties.focusable &&
-                  0 != this.m_rgChildren.length) ||
+              0 < this.m_rgChildren.length &&
+                (this.m_fnUnregisterFocusIn ||
+                  (this.m_element.addEventListener("focusin", this.OnFocusIn),
+                  (this.m_fnUnregisterFocusIn = function () {
+                    return e.m_element.removeEventListener(
+                      "focusin",
+                      e.OnFocusIn
+                    );
+                  }))),
+              (!this.m_Properties.focusable && 0 != this.m_rgChildren.length) ||
+                this.m_rgFocusHandlers.length ||
                 (this.m_element.addEventListener("focus", this.OnDOMFocus),
                 this.m_element.addEventListener("blur", this.OnDOMBlur),
                 this.m_rgFocusHandlers.push(function () {
@@ -68643,6 +68719,8 @@ var CLSTAMP = "6913417";
               return e();
             }),
               (this.m_rgNavigationHandlers = []),
+              this.m_fnUnregisterFocusIn && this.m_fnUnregisterFocusIn(),
+              (this.m_fnUnregisterFocusIn = void 0),
               this.m_rgFocusHandlers.forEach(function (e) {
                 return e();
               }),
@@ -69823,7 +69901,9 @@ var CLSTAMP = "6913417";
           "application" === e ||
           "demo" === e ||
           "hardware" === e ||
-          "mod" === e
+          "mod" === e ||
+          "video" == e ||
+          "beta" === e
         );
       }
       var h;
@@ -71140,10 +71220,10 @@ var CLSTAMP = "6913417";
         return a;
       }),
         n.d(t, "a", function () {
-          return h;
+          return i;
         }),
         n.d(t, "b", function () {
-          return m;
+          return h;
         }),
         n.d(t, "c", function () {
           return _;
@@ -71161,18 +71241,18 @@ var CLSTAMP = "6913417";
         t = n("vDqi"),
         o = n.n(t),
         c = n("2vnA"),
-        i = n("5eAM"),
-        l = n("kLLr"),
-        u = n("boaH"),
+        l = n("5eAM"),
+        u = n("kLLr"),
+        p = n("boaH"),
         r = n("5izx"),
         t = n("UWWC"),
-        p = n("OS6B"),
-        d = n("lkRc");
+        d = n("OS6B"),
+        m = n("lkRc");
       function a(e) {
         return Boolean(e && e.thumbnail_http_address);
       }
-      var m,
-        h = (function () {
+      var h,
+        i = (function () {
           function e() {
             (this.m_inFlightRequests = new Map()),
               (this.m_lookupKeyToEmbedStreamDef = new Map()),
@@ -71235,10 +71315,10 @@ var CLSTAMP = "6913417";
             (e.prototype.GetBroadcastURL = function (e) {
               var t = null,
                 t = e.steamid
-                  ? new l.a(e.steamid)
-                  : l.a.InitFromAccountID(e.accountid);
+                  ? new u.a(e.steamid)
+                  : u.a.InitFromAccountID(e.accountid);
               return (
-                d.c.COMMUNITY_BASE_URL +
+                m.c.COMMUNITY_BASE_URL +
                 "broadcast/watch/" +
                 t.ConvertTo64BitString()
               );
@@ -71252,7 +71332,7 @@ var CLSTAMP = "6913417";
                     (Boolean(e) &&
                       e.some(function (e) {
                         return (
-                          u.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t
+                          p.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t
                         );
                       }));
                 }),
@@ -71265,7 +71345,7 @@ var CLSTAMP = "6913417";
                 this.m_lookupStreams.forEach(function (e) {
                   null != e &&
                     e.forEach(function (e) {
-                      u.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t &&
+                      p.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t &&
                         n.push(e);
                     });
                 }),
@@ -71292,7 +71372,7 @@ var CLSTAMP = "6913417";
                       )
                         return [3, 5];
                       if (
-                        (t = Object(d.f)("broadcastuser", "application_config"))
+                        (t = Object(m.f)("broadcastuser", "application_config"))
                       )
                         return [3, 4];
                       e.label = 1;
@@ -71300,7 +71380,7 @@ var CLSTAMP = "6913417";
                       return (
                         e.trys.push([1, 3, , 4]),
                         (n =
-                          d.c.STORE_BASE_URL +
+                          m.c.STORE_BASE_URL +
                           "broadcast/ajaxgetuserbroadcastpreferences"),
                         [4, o.a.get(n, { params: {}, cancelToken: i.token })]
                       );
@@ -71311,7 +71391,7 @@ var CLSTAMP = "6913417";
                         (r = e.sent()),
                         console.log(
                           "LoadBIsEmbeddedBroadcastHidden: " +
-                            Object(p.a)(r).strErrorMsg
+                            Object(d.a)(r).strErrorMsg
                         ),
                         (t = { bHideStoreBroadcast: !1 }),
                         [3, 4]
@@ -71338,16 +71418,16 @@ var CLSTAMP = "6913417";
                       return (
                         (this.m_bUseFakeData = !1),
                         (this.m_streamChatStatus = "remove"),
-                        [4, i.a.LoadAppLinkInfo([r.nAppIDVOD])]
+                        [4, l.a.LoadAppLinkInfo([r.nAppIDVOD])]
                       );
                     case 1:
                       return (
                         e.sent(),
-                        (n = i.a.GetAppLinkInfo(r.nAppIDVOD)),
+                        (n = l.a.GetAppLinkInfo(r.nAppIDVOD)),
                         ((t = new f()).accountid = 0),
                         (t.nAppIDVOD = r.nAppIDVOD),
-                        (t.default_selection_priority = m.k_ePrimary),
-                        (t.current_selection_priority = m.k_ePrimary),
+                        (t.default_selection_priority = h.k_ePrimary),
+                        (t.current_selection_priority = h.k_ePrimary),
                         (t.thumbnail_http_address = n.capsule),
                         (t.title = n.title),
                         this.GetStreams(r).unshift(t),
@@ -71380,7 +71460,7 @@ var CLSTAMP = "6913417";
                         [
                           4,
                           o.a.get(
-                            d.c.STORE_BASE_URL +
+                            m.c.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpreview",
                             { params: n }
                           ),
@@ -71394,7 +71474,7 @@ var CLSTAMP = "6913417";
                     case 3:
                       return (
                         (r = e.sent()),
-                        (r = Object(p.a)(r)),
+                        (r = Object(d.a)(r)),
                         console.error(
                           "HintLoadEmbeddablePreviewStreams hit error loading: " +
                             r.strErrorMsg,
@@ -71444,7 +71524,7 @@ var CLSTAMP = "6913417";
                   switch (e.label) {
                     case 0:
                       if (
-                        ((n = Object(d.f)(
+                        ((n = Object(m.f)(
                           "broadcast_available_for_page",
                           "application_config"
                         )),
@@ -71459,7 +71539,7 @@ var CLSTAMP = "6913417";
                         [
                           4,
                           o.a.get(
-                            d.c.STORE_BASE_URL +
+                            m.c.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpage",
                             { params: a }
                           ),
@@ -71473,7 +71553,7 @@ var CLSTAMP = "6913417";
                     case 3:
                       return (
                         (n = e.sent()),
-                        (n = Object(p.a)(n)),
+                        (n = Object(d.a)(n)),
                         console.error(
                           "HintLoadEmbeddableStreams hit error loading: " +
                             n.strErrorMsg,
@@ -71488,6 +71568,7 @@ var CLSTAMP = "6913417";
               });
             }),
             (e.prototype.HandleHintLoadBroadcastResponse = function (n, a) {
+              var i;
               return Object(s.b)(this, void 0, void 0, function () {
                 var r, t;
                 return Object(s.e)(this, function (e) {
@@ -71495,35 +71576,43 @@ var CLSTAMP = "6913417";
                     case 0:
                       return (
                         (this.m_bUseFakeData = !1),
-                        !n.bIsPreview ||
-                          (a && a.filtered && 0 < a.filtered.length) ||
-                          ((a = {
-                            filtered: [{}],
-                            success: 1,
-                            total_count: 1,
-                            err_msg: "",
-                            broadcast_chat_visibility: "hide",
-                          }),
-                          (this.m_bUseFakeData = !0)),
+                        n.bIsPreview &&
+                          (0 <
+                          (null === (i = null == a ? void 0 : a.filtered) ||
+                          void 0 === i
+                            ? void 0
+                            : i.length)
+                            ? this.ExtractBroadcastPrioritiesFromPartnerEventForPreview(
+                                n.event,
+                                a.filtered
+                              )
+                            : ((a = {
+                                filtered: [{}],
+                                success: 1,
+                                total_count: 1,
+                                err_msg: "",
+                                broadcast_chat_visibility: "hide",
+                              }),
+                              (this.m_bUseFakeData = !0))),
                         a.broadcast_chat_visibility &&
                           (this.m_pageChatStatus = a.broadcast_chat_visibility),
                         (r = new Array()),
                         Object(c.G)(function () {
                           a.filtered.forEach(function (e) {
                             e.steamid ||
-                              ((n = l.a.InitFromAccountID(e.accountid)),
+                              ((n = u.a.InitFromAccountID(e.accountid)),
                               (e.steamid = n.ConvertTo64BitString()));
-                            var t = u.a.GetOrCreateBroadcastInfo(e.steamid),
-                              n = e.appid ? Number(e.appid) : u.d;
+                            var t = p.a.GetOrCreateBroadcastInfo(e.steamid),
+                              n = e.appid ? Number(e.appid) : p.d;
                             (t.m_nAppID = n),
                               (t.m_strAppId = "" + n),
                               void 0 === e.current_selection_priority &&
                                 (e.current_selection_priority =
                                   e.default_selection_priority),
-                              n != u.d && r.push(n);
+                              n != p.d && r.push(n);
                           });
                         }),
-                        0 < r.length && i.a.LoadAppLinkInfo(r),
+                        0 < r.length && l.a.LoadAppLinkInfo(r),
                         this.m_lookupStreams.set(
                           this.GetStreamsLookupKeyFromDef(n),
                           a.filtered
@@ -71535,6 +71624,46 @@ var CLSTAMP = "6913417";
                       return e.sent(), [2, t];
                   }
                 });
+              });
+            }),
+            (e.prototype.ExtractBroadcastPrioritiesFromPartnerEventForPreview = function (
+              e,
+              t
+            ) {
+              for (
+                var n,
+                  r = Array.from(
+                    null !== (n = e.jsondata.broadcast_whitelist) &&
+                      void 0 !== n
+                      ? n
+                      : []
+                  ),
+                  a = Array.from(
+                    null !== (e = e.jsondata.broadcast_priority) && void 0 !== e
+                      ? e
+                      : []
+                  ),
+                  i = new Map(),
+                  o = 0;
+                o < r.length && !(o >= a.length);
+                o++
+              )
+                switch (a[o]) {
+                  case "primary":
+                    i.set(r[o], h.k_ePrimary);
+                    break;
+                  case "featured":
+                    i.set(r[o], h.k_eFeatured);
+                    break;
+                  case "default_featured":
+                    i.set(r[o], h.k_eDefaultFeatured);
+                    break;
+                  default:
+                    i.set(r[o], h.k_eGeneral);
+                }
+              t.forEach(function (e) {
+                var t = Number(e.accountid);
+                i.has(t) && (e.current_selection_priority = i.get(t));
               });
             }),
             (e.prototype.AutoStartVideoStream = function (i, o) {
@@ -71554,8 +71683,8 @@ var CLSTAMP = "6913417";
                             ((n = {
                               accountid: 0,
                               thumbnail_http_address: "",
-                              default_selection_priority: m.k_eGeneral,
-                              current_selection_priority: m.k_eGeneral,
+                              default_selection_priority: h.k_eGeneral,
+                              current_selection_priority: h.k_eGeneral,
                             }),
                             this.m_playReadyStream.set(t, n)),
                           [2, this.m_playReadyStream]
@@ -71609,7 +71738,7 @@ var CLSTAMP = "6913417";
                           return e(a);
                         }),
                         g(
-                          u.a.GetOrCreateBroadcastInfo(a.steamid).m_nAppID,
+                          p.a.GetOrCreateBroadcastInfo(a.steamid).m_nAppID,
                           1,
                           a.snr
                         ),
@@ -71631,10 +71760,10 @@ var CLSTAMP = "6913417";
                       return (
                         e.trys.push([1, 3, , 4]),
                         (t =
-                          d.c.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
+                          m.c.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
                         (n = {
                           broadcastaccountid: a.accountid,
-                          viewer_token: u.a.GetViewerToken(),
+                          viewer_token: p.a.GetViewerToken(),
                           origin: self.origin,
                         }),
                         [4, o.a.get(t, { params: n })]
@@ -71644,7 +71773,7 @@ var CLSTAMP = "6913417";
                     case 3:
                       return (
                         (n = e.sent()),
-                        (n = Object(p.a)(n)),
+                        (n = Object(d.a)(n)),
                         console.error(
                           "Broadcast.AttemptToPlayStream: " + n.strErrorMsg,
                           n
@@ -71685,8 +71814,8 @@ var CLSTAMP = "6913417";
                   ? e.accountIDs.slice().sort().join(",")
                   : void 0,
                 test: !1,
-                cc: d.c.COUNTRY,
-                l: d.c.LANGUAGE,
+                cc: m.c.COUNTRY,
+                l: m.c.LANGUAGE,
                 rt_now_override_test: r.a.BHasTimeOverride()
                   ? r.a.GetTimeNowWithOverride()
                   : void 0,
@@ -71704,7 +71833,7 @@ var CLSTAMP = "6913417";
               return (
                 e.s_GlobalStore ||
                   ((e.s_GlobalStore = new e()),
-                  "dev" == d.c.WEB_UNIVERSE &&
+                  "dev" == m.c.WEB_UNIVERSE &&
                     (window.g_BroadcastEmbeddableStore = e.s_GlobalStore),
                   e.s_GlobalStore.Init()),
                 e.s_GlobalStore
@@ -71733,14 +71862,14 @@ var CLSTAMP = "6913417";
             e
           );
         })();
-      ((n = m = m || {})[(n.k_ePrimary = 3)] = "k_ePrimary"),
+      ((n = h = h || {})[(n.k_ePrimary = 3)] = "k_ePrimary"),
         (n[(n.k_eFeatured = 2)] = "k_eFeatured"),
         (n[(n.k_eDefaultFeatured = 1)] = "k_eDefaultFeatured"),
         (n[(n.k_eGeneral = 0)] = "k_eGeneral");
       var f = (function () {
         function e() {
-          (this.default_selection_priority = m.k_eGeneral),
-            (this.current_selection_priority = m.k_eGeneral);
+          (this.default_selection_priority = h.k_eGeneral),
+            (this.current_selection_priority = h.k_eGeneral);
         }
         return (
           Object(s.c)([c.C], e.prototype, "title", void 0),
@@ -71751,7 +71880,7 @@ var CLSTAMP = "6913417";
         );
       })();
       function _(e) {
-        return e.current_selection_priority || m.k_eGeneral;
+        return e.current_selection_priority || h.k_eGeneral;
       }
       function b(e) {
         e.sort(function (e, t) {
@@ -71773,7 +71902,7 @@ var CLSTAMP = "6913417";
                 ((t = new URLSearchParams()).append("page_action", "" + r),
                 t.append("snr", a),
                 o.a.post(
-                  d.c.STORE_BASE_URL + "ajaxreportproductaction/" + n + "/",
+                  m.c.STORE_BASE_URL + "ajaxreportproductaction/" + n + "/",
                   t
                 )),
               [2]

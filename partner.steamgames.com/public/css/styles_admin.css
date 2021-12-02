@@ -234,6 +234,28 @@ div.rightcol {
 	color: #cc7574;
 }
 
+.lang_note {
+    position: relative;
+    background: #343a41;
+    padding: 4px 8px;
+    border-radius: 3px;
+    max-width: 800px;
+}
+.lang_note:after {
+    top: 100%;
+    left: 10%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #343a41;
+    border-width: 15px;
+    margin-left: -30px;
+}
+
 input {
 	text-align: left;
 }

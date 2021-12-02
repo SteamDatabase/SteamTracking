@@ -76,6 +76,7 @@
 
 	/* Animation */
 	--gpTransition-Short: all 0.2s ease;
+	--gpTransition-Shorter: all 0.1s ease;
 
 	/* Focus */
 	--gpFocus: 4px solid white;
@@ -227,6 +228,10 @@
 		font: var(--gpText-BodySmall);
 	}
 
+	html.responsive .discount_block.empty {
+		height: 0;
+	}
+
 	/* Left align info with title */
 	html.responsive .quadscreenshot_carousel .recommendation_reason {
 		left: 12px;
@@ -267,6 +272,18 @@
 	/* NARROW BY TAG */
 	html.responsive .tag_count_button {
 		flex-direction: column;
+	}
+
+	html.responsive .contenthub_popular_tags_grid .btn_small_tall.gpfocus .tag_count_button .tag_name {
+		color: black;
+	}
+
+	html.responsive .contenthub_popular_tags_grid .btn_small_tall.gpfocus .tag_count_button .tab_filter_control_count {
+		color: var(--gpStoreDarkGrey);
+	}
+
+	html.responsive .contenthub_popular_tags_grid .btn_small_tall.gpfocus {
+		border-radius: var(--gpCorner-Medium) !important;
 	}
 
 	html.responsive .contenthub_popular_tags_grid .tag_count_button .tag_name,

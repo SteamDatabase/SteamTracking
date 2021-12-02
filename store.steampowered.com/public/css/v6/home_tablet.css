@@ -76,6 +76,7 @@
 
 	/* Animation */
 	--gpTransition-Short: all 0.2s ease;
+	--gpTransition-Shorter: all 0.1s ease;
 
 	/* Focus */
 	--gpFocus: 4px solid white;
@@ -217,8 +218,9 @@
 	html.responsive .carousel_container.maincap .info {
 		background: var( --gpStoreDarkestGrey );
 		padding: 4px 8px;
-		min-height: 56px;
+		height: 56px;
 		overflow: hidden;
+		min-height: unset;
 	}
 
 	html.responsive .store_main_capsule .app_name > div {
@@ -238,6 +240,8 @@
 	html.responsive .carousel_container.maincap .discount_block {
 		padding-top: 0px;
 		text-align: right;
+		display: flex;
+		max-height: 24px;
 	}
 
 	html.responsive .store_main_capsule .app_name > div {
@@ -249,9 +253,6 @@
 		left: 6px;
 	}
 
-	html.responsive .carousel_container.maincap .discount_block {
-		display: flex;
-	}
 
 
 
@@ -1016,12 +1017,6 @@
 
 
 
-
-
-
-
-
-
 	html.responsive .store_main_capsule .ds_steam_deck_compat,
 	html.responsive .responsive_giant_curator_capsule .ds_steam_deck_compat,
 	html.responsive .tab_item .ds_steam_deck_compat,
@@ -1032,7 +1027,6 @@
 	html.responsive .newonsteam_headercap .ds_steam_deck_compat {
 		background-color: var(--gpBackground-DarkMedium);
 		backdrop-filter: blur(24px);
-		/* left: 6px; */
 	}
 
 }
