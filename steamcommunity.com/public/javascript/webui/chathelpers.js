@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6921673";
+var CLSTAMP = "6925598";
 !(function (e) {
   function t(t) {
     for (
@@ -149,35 +149,35 @@ var CLSTAMP = "6921673";
                 37: "b9ec7c20293707d14a45",
                 38: "cc5e3f5d4a4d3eb8fc0a",
                 39: "01e61b4c2d0faedc8e45",
-                40: "38e69ae3d39244a92022",
+                40: "7024b1154b21af90bf4c",
                 41: "374124f33878d5b9a6a3",
-                42: "f7e6bf4d52ac4a13e8e1",
+                42: "92ace3c2f13a1f53dd19",
                 43: "6c3adbbe29863ef2ba18",
                 44: "b600ddf1f52d447ba072",
-                45: "9ed93d3047a576d94490",
+                45: "7bc6f014f3b88abcf223",
                 46: "0553bfd6f97eb5f193b6",
                 47: "d1fec1e16e20588d0ba9",
                 48: "150f892dd536d1d00984",
                 49: "2ca6d28219bbaff2b3f5",
-                50: "9db2bc4a6f059a475827",
-                51: "b53eb7607c306b050e17",
+                50: "d34f988386795fcbf6cf",
+                51: "8b2cad98d872c4a38b1d",
                 52: "d7a9f806a9413194c213",
                 53: "457cc2c57c561aba96e9",
-                54: "693ef0095c1f7678d6d1",
+                54: "e212e3f87e9901546a42",
                 55: "49034384597baafe29b6",
-                56: "9b2fc32867f8a46a420f",
-                57: "b69bf21184c1115b82e8",
+                56: "9f05cd92095fef2298e2",
+                57: "6c5c0ac0616e0b1be217",
                 58: "9fa1841c00bf0986f005",
-                59: "4b46bbdf92b36bf4354c",
+                59: "58f8bf4efc5715810a94",
                 60: "f38c73d28c350eb2f7c9",
-                61: "5297916ce538989e1908",
-                62: "28902569a6f142c61fe6",
+                61: "8a0266e7f50c0928e923",
+                62: "e50ea6230d328e91b7fb",
                 63: "af3bed2ecef44c98e54f",
-                64: "25f84c524f3f88281357",
-                65: "ccd5d18e2d1c5ff521f8",
+                64: "e7d51a2e8d531cef8ad7",
+                65: "28347a8fc95a8b8e07ab",
                 66: "c4c250037217a1bd83be",
                 67: "6330dae06f3e2eeed55b",
-                68: "cb1984a5969b6cf27d45",
+                68: "976a412125ab842c8c8f",
               }[e]
             );
           })(e));
@@ -2205,7 +2205,9 @@ var CLSTAMP = "6921673";
         "application" === e ||
         "demo" === e ||
         "hardware" === e ||
-        "mod" === e
+        "mod" === e ||
+        "video" == e ||
+        "beta" === e
       );
     }
     var g, v;

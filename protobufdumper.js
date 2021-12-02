@@ -37,7 +37,7 @@ Promise.all([
 	getListOfJSFilesToParse(path.resolve(CONFIG.InputPath))
 ])
 .then(([{knownMessages, knownServices}, files]) => Start(knownMessages, knownServices, files))
-.then(() => console.log('OK'))
+.then(() => { console.log('OK'); process.exit(0); })
 .catch(console.error);
 
 

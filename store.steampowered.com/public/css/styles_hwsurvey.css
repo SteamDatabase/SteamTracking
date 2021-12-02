@@ -185,14 +185,14 @@ p.blurb2 {
 .stats_col_right {
 	float:left;
 	width:69px;
-	padding:2px 16px 2px 0px;
+	padding:2px 16px 4px 0px;
 	text-align:right;
 }
 
 .stats_col_right2 {
 	float:left;
 	width:75px;
-	padding:2px 0px 2px 0px;
+	padding:2px 0px 4px 0px;
 }
 
 .col_header {

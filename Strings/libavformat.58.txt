@@ -24,6 +24,7 @@ __bss
 __DATA
 __LINKEDIT
 @loader_path/libavformat.58.dylib
+gi=z$
 @loader_path/libavcodec.58.dylib
 @loader_path/libavutil.56.dylib
 /usr/lib/libSystem.B.dylib
@@ -4462,7 +4463,7 @@ libavformat/url.c
 invalid:%s
 truncated
 syntax_error
---prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,libvpx_vp8,libvpx_vp9' --enable-encoder=h264_vaapi --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,libvpx_vp8,libvpx_vp9' --enable-encoder=h264_vaapi --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 libavformat license: LGPL version 2.1 or later
 !dst->codec_whitelist && !dst->format_whitelist && !dst->protocol_whitelist && !dst->protocol_blacklist
 libavformat/utils.c
@@ -5482,91 +5483,91 @@ avss
 av1C
 chpl
 co64
-colr 
+colr
 ctts
-dinf@]
+dinf0]
 DpxE
-drefP
-edts@]
+dref@
+edts0]
 elst
 enda
 fiel
 adrm
-ftyp@
+ftyp0
 glbl
 hdlr
 ilst
-jp2hP
+jp2h@
 mdat
 mdhd
-mdia@]
-meta0
-minf@]
+mdia0]
+meta 
+minf0]
 moof
 moov
-mvex@]
-mvhdp
-SMI P
+mvex0]
+mvhd`
+SMI @
 alac
 avcC
 pasp
 sidx
-stbl@]
+stbl0]
 stco
 stps
 strf
 stsc
-stsd@
+stsd0
 stss
 stsz
 stts
 stz2
-sdtp0
+sdtp 
 tkhd
 tfdt
 tfhd
-trak@
-traf@]
-tref@]
-tmcd J
-chap`J
+trak0
+traf0]
+tref0]
+tmcd
+chapPJ
 trex
 trun
-udta@]
-wave`\
+udta0]
+waveP\
 esds
 dac3
-dec3 `
-ddts a
+dec3
+ddts
 wide
 wfex
 cmov
 chan
-dvc1
-sbgp@g
+dvc1pf
+sbgp0g
 hvcC
 uuid
 free
 ----
-sinf@]
+sinf0]
 frma
 senc
-saizpw
+saiz`w
 saio
 pssh
-schmp
-schi@]
-tenc@
-dfLa
+schm`
+schi0]
+tenc0
+dfLap
 st3d
 sv3d
-dOps
-dmlp 
+dOpsp
+dmlp
 SmDm
 CoLL
 vpcC
-mdcvp
-clli0
+mdcv`
+clli 
 dvcC
 dvvC
 ZAZBYA^A`
@@ -7189,7 +7190,6 @@ __bss
 __DATA
 __LINKEDIT
 @loader_path/libavformat.58.dylib
-DUH$
 @loader_path/libavcodec.58.dylib
 @loader_path/libavutil.56.dylib
 /usr/lib/libSystem.B.dylib
@@ -13442,7 +13442,7 @@ libavformat/url.c
 invalid:%s
 truncated
 syntax_error
---prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,libvpx_vp8,libvpx_vp9' --enable-encoder=h264_vaapi --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,libvpx_vp8,libvpx_vp9' --enable-encoder=h264_vaapi --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 libavformat license: LGPL version 2.1 or later
 !dst->codec_whitelist && !dst->format_whitelist && !dst->protocol_whitelist && !dst->protocol_blacklist
 libavformat/utils.c
