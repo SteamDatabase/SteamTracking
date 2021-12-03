@@ -484,7 +484,7 @@ verify_chunk_store <appid> <depotid> <datafile> : run app depot build as specifi
 verify_vpk
 verify_vpk <datafile> : verifies content of given VPK
 download_depot
-download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<depot flags filter>]: download a single depot
+download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<depot flags filter>] [<destination folder>]: download a single depot
 download_item
 download_item <appid> <PublishedFileId> : download a workshop item directly
 download_chunk
@@ -669,6 +669,8 @@ Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags>
 DRM wrap failed to start job
 Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>
 CEG wrap failed to start job
+shader_process
+shader_process <appId> <bucketID> <optionalOverrideBasePath>
 swarm_get_bucket_manifest
 <appid> <bucket_hw_id> <bucket_sw_id> - query Swarm bucket depot manifest, if depot built
 swarm_tc_loop
@@ -709,6 +711,7 @@ ERROR! Build for depot failed : %s
 StartDepotBuild success. manifest: %llu size: %llu
 ReportExternalBuild ERROR %u!
 AppID %u done! Restarting.
+ERROR. Shader processing failed!
 ShaderConversion ERROR!
 ShaderConversion success
 Current downloaded manifest matches, skipping download.
@@ -1248,6 +1251,8 @@ j
 @
 @
 0
+R
+S
 0
 Ic
 
