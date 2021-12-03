@@ -1,5 +1,5 @@
 {
-  "revision": 351,
+  "revision": 352,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -86,10 +86,6 @@
           "ipv4": "162.254.199.180",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "155.133.234.0/24",
-        "100.67.32.0/19"
       ]
     },
     "bom": {
@@ -114,10 +110,6 @@
           "ipv4": "155.133.233.99",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.65.0.0/24",
-        "155.133.233.0/24"
       ]
     },
     "can": {
@@ -127,10 +119,7 @@
         "perfectworld"
       ],
       "has_gameservers": true,
-      "partners": 2,
-      "service_address_ranges": [
-        "125.88.174.0/24"
-      ]
+      "partners": 2
     },
     "canm": {
       "groups": [
@@ -309,10 +298,6 @@
           "ipv4": "185.25.183.162",
           "port_range": [ 27015, 27052 ]
         }
-      ],
-      "service_address_ranges": [
-        "185.25.183.0/24",
-        "100.64.96.0/24"
       ]
     },
     "eat": {
@@ -328,13 +313,7 @@
         "perfectworld"
       ],
       "has_gameservers": true,
-      "partners": 2,
-      "service_address_ranges": [
-        "100.67.128.0/19",
-        "192.69.96.0/23",
-        "205.196.6.0/24",
-        "208.78.166.0/24"
-      ]
+      "partners": 3
     },
     "eze": {
       "desc": "Buenos Aires",
@@ -368,9 +347,6 @@
           "ipv4": "155.133.255.163",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.65.192.0/19"
       ]
     },
     "fra": {
@@ -430,12 +406,6 @@
           "ipv4": "155.133.226.73",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.64.192.0/24",
-        "100.64.193.0/24",
-        "100.64.194.0/24",
-        "100.64.195.0/24"
       ]
     },
     "gru": {
@@ -490,11 +460,6 @@
           "ipv4": "205.185.194.212",
           "port_range": [ 27015, 27075 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.66.160.0/19",
-        "155.133.224.0/23",
-        "205.185.194.0/24"
       ]
     },
     "hkg": {
@@ -507,7 +472,7 @@
         "perfectworld"
       ],
       "has_gameservers": true,
-      "partners": 2,
+      "partners": 3,
       "relay_addresses": [
         "153.254.86.164:27015-27060",
         "153.254.86.180:27015-27060",
@@ -571,11 +536,6 @@
           "ipv4": "153.254.86.168",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.64.224.0/19",
-        "153.254.86.0/24",
-        "155.133.244.0/24"
       ]
     },
     "iad": {
@@ -625,11 +585,6 @@
           "ipv4": "162.254.192.99",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.66.224.0/19",
-        "162.254.192.0/24",
-        "208.78.164.0/23"
       ]
     },
     "jnb": {
@@ -654,10 +609,6 @@
           "ipv4": "155.133.238.163",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "155.133.238.0/24",
-        "100.66.128.0/19"
       ]
     },
     "lax": {
@@ -692,10 +643,6 @@
           "ipv4": "162.254.195.74",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.67.64.0/24",
-        "162.254.194.0/24"
       ]
     },
     "lhr": {
@@ -759,12 +706,6 @@
           "ipv4": "190.217.33.66",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "143.137.146.0/24",
-        "190.216.121.0/24",
-        "190.217.33.0/24",
-        "100.65.128.0/24"
       ]
     },
     "maa": {
@@ -784,10 +725,6 @@
           "ipv4": "155.133.232.98",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.65.32.0/19",
-        "155.133.232.0/24"
       ]
     },
     "mad": {
@@ -812,11 +749,63 @@
           "ipv4": "155.133.246.67",
           "port_range": [ 27015, 27068 ]
         }
+      ]
+    },
+    "mam2": {
+      "desc": "Multiplay Amsterdam 2",
+      "groups": [
+        "multiplay"
       ],
-      "service_address_ranges": [
-        "155.133.246.0/24",
-        "155.133.247.0/24",
-        "100.66.192.0/24"
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "172.255.10.108:27015-27022"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "172.255.10.108",
+          "port_range": [ 27015, 27022 ]
+        }
+      ]
+    },
+    "mam3": {
+      "desc": "Multiplay Amsterdam 3",
+      "groups": [
+        "multiplay"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "107.6.141.102:27015-27022"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "107.6.141.102",
+          "port_range": [ 27015, 27022 ]
+        }
+      ]
+    },
+    "mam4": {
+      "desc": "Multiplay Amsterdam 4",
+      "groups": [
+        "multiplay"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "109.123.102.100:27015-27022"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "109.123.102.100",
+          "port_range": [ 27015, 27022 ]
+        }
       ]
     },
     "ord": {
@@ -866,10 +855,6 @@
           "ipv4": "162.254.193.101",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "208.78.167.0/24",
-        "100.67.2.0/24"
       ]
     },
     "par": {
@@ -937,10 +922,6 @@
           "ipv4": "125.88.173.14",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "125.88.173.0/24",
-        "125.88.174.0/24"
       ]
     },
     "pwj": {
@@ -974,9 +955,6 @@
           "ipv4": "220.194.68.14",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "220.194.68.0/24"
       ]
     },
     "pwu": {
@@ -1010,11 +988,6 @@
           "ipv4": "61.182.135.18",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "60.28.165.0/25",
-        "61.182.135.0/24",
-        "220.194.68.0/24"
       ]
     },
     "pww": {
@@ -1051,9 +1024,6 @@
           "ipv4": "116.211.132.14",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "116.211.132.0/24"
       ]
     },
     "pwz": {
@@ -1087,9 +1057,6 @@
           "ipv4": "183.136.230.14",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "183.136.230.0/24"
       ]
     },
     "scl": {
@@ -1119,10 +1086,6 @@
           "ipv4": "155.133.249.194",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "155.133.249.0/24",
-        "100.64.64.0/24"
       ]
     },
     "sea": {
@@ -1191,9 +1154,6 @@
           "ipv4": "146.66.152.42",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.65.224.0/24"
       ]
     },
     "sgp": {
@@ -1206,7 +1166,7 @@
         "perfectworld"
       ],
       "has_gameservers": true,
-      "partners": 2,
+      "partners": 3,
       "relay_addresses": [
         "103.10.124.40:27015-27052",
         "103.10.124.43:27015-27052",
@@ -1250,12 +1210,6 @@
           "ipv4": "103.10.124.102",
           "port_range": [ 27015, 27052 ]
         }
-      ],
-      "service_address_ranges": [
-        "45.121.184.0/23",
-        "100.64.0.0/19",
-        "103.28.54.0/23",
-        "103.10.124.0/24"
       ]
     },
     "sha": {
@@ -1266,11 +1220,7 @@
         "perfectworld"
       ],
       "has_gameservers": true,
-      "partners": 2,
-      "service_address_ranges": [
-        "121.46.225.0/24",
-        "218.78.184.0/24"
-      ]
+      "partners": 2
     },
     "sham": {
       "desc": "Shanghai (Mobile)",
@@ -1436,9 +1386,6 @@
           "ipv4": "180.153.252.14",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "180.153.252.0/24"
       ]
     },
     "sto": {
@@ -1483,13 +1430,6 @@
           "ipv4": "162.254.198.133",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "100.64.160.0/19",
-        "146.66.156.0/23",
-        "155.133.242.0/23",
-        "155.133.252.0/24",
-        "185.25.180.0/23"
       ]
     },
     "sto2": {
@@ -1556,7 +1496,7 @@
         "perfectworld"
       ],
       "has_gameservers": true,
-      "partners": 2,
+      "partners": 3,
       "relay_addresses": [
         "103.10.125.146:27015-27060",
         "103.10.125.147:27015-27060",
@@ -1580,11 +1520,6 @@
           "ipv4": "103.10.125.155",
           "port_range": [ 27015, 27060 ]
         }
-      ],
-      "service_address_ranges": [
-        "155.133.227.0/24",
-        "100.64.32.0/19",
-        "103.10.125.0/24"
       ]
     },
     "tsn": {
@@ -1594,11 +1529,7 @@
         "perfectworld"
       ],
       "has_gameservers": true,
-      "partners": 2,
-      "service_address_ranges": [
-        "125.39.181.0-125.39.181.127",
-        "60.28.165.128/25"
-      ]
+      "partners": 2
     },
     "tsnm": {
       "groups": [
@@ -1739,7 +1670,7 @@
         "perfectworld"
       ],
       "has_gameservers": true,
-      "partners": 2,
+      "partners": 3,
       "relay_addresses": [
         "155.133.239.19:27015-27060",
         "155.133.239.25:27015-27052",
@@ -1773,11 +1704,6 @@
           "ipv4": "155.133.239.59",
           "port_range": [ 27015, 27052 ]
         }
-      ],
-      "service_address_ranges": [
-        "45.121.186.0/23",
-        "100.65.64.0/19",
-        "155.133.239.0/24"
       ]
     },
     "tyo1": {
@@ -1790,7 +1716,7 @@
         "perfectworld"
       ],
       "has_gameservers": false,
-      "partners": 2,
+      "partners": 3,
       "relay_addresses": [
         "155.133.245.34:27015-27068",
         "155.133.245.35:27015-27068"
@@ -1838,11 +1764,6 @@
           "ipv4": "146.66.155.101",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "146.66.155.0/24",
-        "155.133.228.0/23",
-        "100.64.128.0/19"
       ]
     },
     "waw": {
@@ -1877,10 +1798,6 @@
           "ipv4": "155.133.230.69",
           "port_range": [ 27015, 27068 ]
         }
-      ],
-      "service_address_ranges": [
-        "155.133.231.0/24",
-        "100.65.160.0/19"
       ]
     }
   },
