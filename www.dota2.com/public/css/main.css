@@ -29247,6 +29247,12 @@ a {
 .heropage_TopAbilitySelector_3HNRl
   .heropage_AbilityList_x-wl1
   .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl.heropage_Talents_2abeJ {
+  transform: translateY(-100%) translateY(-84px) translateX(-214px);
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
   .heropage_AbilityTooltip_1ALRl
   .heropage_TooltipBody_3Asci {
   width: 300px;
@@ -29264,6 +29270,13 @@ a {
   display: flex;
   flex-direction: column;
   text-align: left;
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci.heropage_Talents_2abeJ {
+  width: 500px;
 }
 .heropage_TopAbilitySelector_3HNRl
   .heropage_AbilityList_x-wl1
@@ -29320,6 +29333,127 @@ a {
   margin-top: 3px;
   font-size: 17px;
   letter-spacing: 0px;
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci
+  .heropage_TalentContainer_m_wah {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(150deg, #68727c, #14171a);
+  padding: 20px;
+  padding-bottom: 40px;
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci
+  .heropage_TalentContainer_m_wah
+  .heropage_TalentTitle_2j-WC {
+  font-family: Reaver, serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci
+  .heropage_TalentContainer_m_wah
+  .heropage_TalentRow_3BgAv {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 18px;
+  background: linear-gradient(150deg, #3c4247, #0a0c0e);
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci
+  .heropage_TalentContainer_m_wah
+  .heropage_TalentRow_3BgAv
+  .heropage_TalentEntry_1SJ4J {
+  flex-grow: 1;
+  flex-basis: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci
+  .heropage_TalentContainer_m_wah
+  .heropage_TalentRow_3BgAv
+  .heropage_TalentEntry_1SJ4J.heropage_Left_1F43S {
+  justify-content: flex-start;
+  text-align: left;
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci
+  .heropage_TalentContainer_m_wah
+  .heropage_TalentRow_3BgAv
+  .heropage_TalentEntry_1SJ4J.heropage_Right_vNURB {
+  justify-content: flex-end;
+  text-align: right;
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci
+  .heropage_TalentContainer_m_wah
+  .heropage_TalentRow_3BgAv
+  .heropage_TalentLevelContainer_1OBdY {
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(325deg, #3c4247, #0a0c0e);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heropage_TopAbilitySelector_3HNRl
+  .heropage_AbilityList_x-wl1
+  .heropage_TopAbilityContainer_3ty-o
+  .heropage_AbilityTooltip_1ALRl
+  .heropage_TooltipBody_3Asci
+  .heropage_TalentContainer_m_wah
+  .heropage_TalentRow_3BgAv
+  .heropage_TalentLevelContainer_1OBdY
+  .heropage_TalentLevel_1kzau {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background: #222;
+  font-size: 20px;
+  font-family: Reaver, serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #e7d292;
+  text-shadow: 0px 0px 8px #ff531c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .heropage_TopAbilitySelector_3HNRl
   .heropage_AbilityList_x-wl1
