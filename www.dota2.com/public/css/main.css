@@ -29356,7 +29356,8 @@ a {
   .heropage_TalentTitle_2j-WC {
   font-family: Reaver, serif;
   font-size: 20px;
-  font-weight: bold;
+  text-shadow: 0px 0px 5px #000;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
@@ -29388,10 +29389,13 @@ a {
   .heropage_TalentEntry_1SJ4J {
   flex-grow: 1;
   flex-basis: 1px;
+  font-family: "Radiance", sans-serif;
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #ffffffee;
 }
 .heropage_TopAbilitySelector_3HNRl
   .heropage_AbilityList_x-wl1
