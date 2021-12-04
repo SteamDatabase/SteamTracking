@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6930966";
+var CLSTAMP = "6931411";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -25532,22 +25532,22 @@ var CLSTAMP = "6930966";
             : s.a.createElement("div", null, e.children);
         }),
         Vt = s.a.memo(function (e) {
-          var t = Object(i.useState)(0 == e.nTeamID ? 2 : 0),
+          var t = Object(i.useState)(0 == e.nTeamID ? 1 : 0),
             a = t[0],
             n = t[1],
             r = Object(i.useState)(0 == e.nTeamID),
             o = r[0],
             l = r[1],
             c = [
-              h.a.IMG_URL + "teams/" + e.nTeamID + ".png",
               h.a.CDN_URL + "apps/dota2/teamlogos/" + e.nTeamID + ".png",
+              h.a.IMG_URL + "teams/" + e.nTeamID + ".png",
               h.a.IMG_URL + "teams/team_unknown_web.png",
               "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
             ];
           return (
             Object(i.useEffect)(
               function () {
-                n(0 == e.nTeamID ? 2 : 0), l(0 == e.nTeamID);
+                n(0 == e.nTeamID ? 1 : 0), l(0 == e.nTeamID);
               },
               [e.nTeamID]
             ),
