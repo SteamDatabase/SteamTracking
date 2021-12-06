@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6931411";
+var CLSTAMP = "6934368";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -25539,9 +25539,9 @@ var CLSTAMP = "6931411";
             o = r[0],
             l = r[1],
             c = [
+              h.a.IMG_URL + "teams_override/" + e.nTeamID + ".png",
               h.a.CDN_URL + "apps/dota2/teamlogos/" + e.nTeamID + ".png",
-              h.a.IMG_URL + "teams/" + e.nTeamID + ".png",
-              h.a.IMG_URL + "teams/team_unknown_web.png",
+              h.a.IMG_URL + "teams_override/team_unknown_web.png",
               "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
             ];
           return (
@@ -31153,19 +31153,13 @@ var CLSTAMP = "6931411";
           var o = Ot.a.Get().GetTeamNames(r.team_id_1),
             i = Ot.a.Get().GetTeamNames(r.team_id_2);
           if (!o || !i) return null;
-          var l =
-              h.a.IMG_URL +
-              "teams/" +
-              (r.team_id_1 ? r.team_id_1 : "team_unknown_web") +
-              ".png",
-            c =
-              h.a.IMG_URL +
-              "teams/" +
-              (r.team_id_2 ? r.team_id_2 : "team_unknown_web") +
-              ".png",
-            m = Be()(1e3 * (null == r ? void 0 : r.scheduled_time))
-              .format("DD MMM LT")
-              .toString();
+          h.a.IMG_URL,
+            r.team_id_1 && r.team_id_1,
+            h.a.IMG_URL,
+            r.team_id_2 && r.team_id_2;
+          var l = Be()(1e3 * (null == r ? void 0 : r.scheduled_time))
+            .format("DD MMM LT")
+            .toString();
           return s.a.createElement(
             "div",
             { className: cn.a.DPCNextMatchBanner },
@@ -31207,23 +31201,23 @@ var CLSTAMP = "6931411";
                 s.a.createElement(
                   "div",
                   { className: Object(f.a)(cn.a.Timestamp, r && cn.a.Visible) },
-                  m
+                  l
                 )
               ),
               s.a.createElement(
                 "div",
                 { className: Object(f.a)(cn.a.TeamWrapper, cn.a.First) },
-                s.a.createElement("div", {
+                s.a.createElement(Vt, {
                   className: cn.a.TeamDiagonal,
-                  style: { backgroundImage: "url( " + l + " )" },
+                  nTeamID: r.team_id_1,
                 })
               ),
               s.a.createElement(
                 "div",
                 { className: Object(f.a)(cn.a.TeamWrapper, cn.a.Second) },
-                s.a.createElement("div", {
+                s.a.createElement(Vt, {
                   className: cn.a.TeamDiagonal,
-                  style: { backgroundImage: "url( " + c + " )" },
+                  nTeamID: r.team_id_2,
                 })
               ),
               s.a.createElement(
