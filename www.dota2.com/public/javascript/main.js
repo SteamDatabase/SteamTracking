@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6934368";
+var CLSTAMP = "6934502";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10352,7 +10352,7 @@ var CLSTAMP = "6934368";
                     eRegion: u.k.EEU,
                     eDivision: u.d.DIVISION_II,
                     nLeagueID: 13710,
-                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: u.f.OVERALL, nNodeGroupID: 4 }],
                   },
                   {
                     eRegion: u.k.CN,
