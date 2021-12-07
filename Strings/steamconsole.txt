@@ -10,6 +10,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+T
 __objc_methname
 __TEXT
 __unwind_info
@@ -39,6 +40,7 @@ __thread_bss
 __DATA
 __bss
 __DATA
+)6
 __common
 __DATA
 xC
@@ -72,6 +74,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+PX
 public
 local
 anonymous
@@ -475,6 +478,8 @@ run_app_build
 run_app_build [-preview] [-desc <text>] <appbuildfile> : run app depot build as specified in appbuildfile
 run_app_build_http
 run_app_build_http : alias for run_app_build
+set_depot_key
+set_depot_key <depotid> <hexkey> : alias for run_app_build
 build_installer
 <project file> <target folder> [beta key] [beta pwd]
 build_backup
@@ -534,6 +539,7 @@ Building depot %u...
 Successfully finished AppID %u build preview.
 ERROR! Failed to commit build for AppID %u : %s
 Successfully finished AppID %u build (BuildID %d).
+invalid key length
 CAppInstallerBuilder::OnAppBackupStatus
 ERROR! Failed to begin installer build
 ERROR! Installer build failed (%s)
@@ -673,10 +679,37 @@ shader_process
 shader_process <appId> <bucketID> <optionalOverrideBasePath>
 swarm_get_bucket_manifest
 <appid> <bucket_hw_id> <bucket_sw_id> - query Swarm bucket depot manifest, if depot built
+swarm_tc_download
+swarm_tc_download <src_bucket_hw_id> <src_bucketsw_id> <work_dir>
+swarm_tc_upload
+<src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <content_dir> <appid>
 swarm_tc_loop
 <src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <work_dir> <tool_appid> <entrypoint> <src_file> <dst_file>
 ERROR %u!
 SUCCESS: manifest: %llu size: %llu bucketID: %llu
+ERROR! Failed to get bucket to process : %s
+%s/incoming_content/app_%u/bucket_%llu
+%s/incoming_content/app_%u/%llu.tcdepotmanifestcache
+tc_depot_manifest_cache
+current_manifest
+Updating depot from %llu to %llu .
+ERROR! Shader download failed : %s
+bucketid
+path
+gpu
+driver
+%s/swarm_tc_download.vdf
+Error! Failed getting bucket : %s
+GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
+baselinemanifest
+filemapping
+localpath
+*
+depotpath
+recursive
+ERROR! Build for depot failed : %s
+StartDepotBuild success. manifest: %llu size: %llu
+ERROR! Failed to report shader build : %s
 %s/tools_install_dir/%u
 Tool DownloadDepot ERROR %u!
 Tool DownloadDepot success: %s
@@ -685,11 +718,6 @@ Tool entrypoint %s not found!
 Tool entrypoint found at %s
 GetStaleBucket ERROR %u!
 GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu
-%s/incoming_content/app_%u/bucket_%llu
-%s/incoming_content/app_%u/%llu.tcdepotmanifestcache
-tc_depot_manifest_cache
-current_manifest
-Updating depot from %llu to %llu .
 DownloadDepot ERROR %u!
 DownloadDepot success: %s
 %s/outgoing_content/%u/%llu
@@ -700,18 +728,12 @@ ERROR: Source file %s doesn't exist!
 TC command line: %s
 ERROR %u running TC tool!
 GetBucketManifest ERROR %u!
-GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
-baselinemanifest
-filemapping
-localpath
-*
-depotpath
-recursive
-ERROR! Build for depot failed : %s
-StartDepotBuild success. manifest: %llu size: %llu
 ReportExternalBuild ERROR %u!
 AppID %u done! Restarting.
 ERROR. Shader processing failed!
+ERROR! Shader conversion failed!
+ERROR! Failed to write swarm_tc_download.vdf
+ERROR! Invalid bucket manifest!
 ShaderConversion ERROR!
 ShaderConversion success
 Current downloaded manifest matches, skipping download.
@@ -1251,15 +1273,12 @@ j
 @
 @
 0
-R
-S
-0
 Ic
+0
 
 =
 @
 =*.*
-B
 @
 @
 0
