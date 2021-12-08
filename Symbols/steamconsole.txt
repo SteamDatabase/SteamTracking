@@ -94,6 +94,7 @@
  V_MakeAbsolutePath
  V_RemoveDotSlashes
  V_ReplaceBadFilenameCharactersInPlace
+ V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StripFilename
  V_UTF16ToUTF32
  V_UTF32ToUTF8

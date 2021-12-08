@@ -10,7 +10,6 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-T
 __objc_methname
 __TEXT
 __unwind_info
@@ -40,7 +39,6 @@ __thread_bss
 __DATA
 __bss
 __DATA
-)6
 __common
 __DATA
 xC
@@ -682,25 +680,30 @@ swarm_get_bucket_manifest
 swarm_tc_download
 swarm_tc_download <src_bucket_hw_id> <src_bucketsw_id> <work_dir>
 swarm_tc_upload
-<src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <content_dir> <appid>
+<src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <work_dir> <appid> <bucketid>
 swarm_tc_loop
 <src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <work_dir> <tool_appid> <entrypoint> <src_file> <dst_file>
+swarm_shader_loop
+<work_dir>
 ERROR %u!
 SUCCESS: manifest: %llu size: %llu bucketID: %llu
+%s/swarm_tc_download.vdf
 ERROR! Failed to get bucket to process : %s
-%s/incoming_content/app_%u/bucket_%llu
-%s/incoming_content/app_%u/%llu.tcdepotmanifestcache
+%s/incoming/app_%u/bucket_%llu
+%s/incoming/app_%u/bucket_%llu.tcdepotmanifestcache
 tc_depot_manifest_cache
 current_manifest
-Updating depot from %llu to %llu .
+Updating depot %u from %llu to %llu .
 ERROR! Shader download failed : %s
+%s/outgoing/app_%u/bucket_%llu
 bucketid
-path
-gpu
-driver
-%s/swarm_tc_download.vdf
+incoming_path
+outgoing_path
+gpu_desc
+driver_desc
 Error! Failed getting bucket : %s
 GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
+ERROR! Upload folder %s is empty
 baselinemanifest
 filemapping
 localpath
@@ -708,7 +711,7 @@ localpath
 depotpath
 recursive
 ERROR! Build for depot failed : %s
-StartDepotBuild success. manifest: %llu size: %llu
+Uploaded depot success ( manifest: %llu, size: %llu )
 ERROR! Failed to report shader build : %s
 %s/tools_install_dir/%u
 Tool DownloadDepot ERROR %u!
@@ -718,6 +721,9 @@ Tool entrypoint %s not found!
 Tool entrypoint found at %s
 GetStaleBucket ERROR %u!
 GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu
+%s/incoming_content/app_%u/bucket_%llu
+%s/incoming_content/app_%u/%llu.tcdepotmanifestcache
+Updating depot from %llu to %llu .
 DownloadDepot ERROR %u!
 DownloadDepot success: %s
 %s/outgoing_content/%u/%llu
@@ -728,14 +734,32 @@ ERROR: Source file %s doesn't exist!
 TC command line: %s
 ERROR %u running TC tool!
 GetBucketManifest ERROR %u!
+StartDepotBuild success. manifest: %llu size: %llu
 ReportExternalBuild ERROR %u!
 AppID %u done! Restarting.
+SteamSwarm
+G7:VulkanPipelinesV%u%%
+GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu GPUDesc: %s DriverDesc: %s
+%s/incoming_content/app_%u/%llu.shaderdepotmanifestcache
+_
+Using compat tool hash: %s
+shader_depot_manifest_cache
+WritePrecompiledCache returned result %d!
+WritePrecompiledCache success for GPU: '%s' Driver: '%s' CacheType: %d
+%s_
+%s%d:VP%d_%sprecomp_%s
+W
+Building depot for %s / %s
+GetBucketManifest ERROR %u (this is normal if it's the first time built)
 ERROR. Shader processing failed!
 ERROR! Shader conversion failed!
 ERROR! Failed to write swarm_tc_download.vdf
-ERROR! Invalid bucket manifest!
+ERROR! Invalid stale bucket!
 ShaderConversion ERROR!
 ShaderConversion success
+CompileShaders ERROR!
+WritePrecompiledCache ERROR!
+CompileShaders success
 Current downloaded manifest matches, skipping download.
 got empty manifest from GetStaleBucket!
 workshop_build_item
@@ -1272,6 +1296,8 @@ E
 j
 @
 @
+t
+u
 0
 Ic
 0
@@ -1294,3 +1320,4 @@ Ic
 0
 0
 0
+?
