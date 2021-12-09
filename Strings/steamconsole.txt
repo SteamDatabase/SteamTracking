@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+Z
+Z
 __stubs
 __TEXT
 __stub_helper
@@ -10,6 +12,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+0"
 __objc_methname
 __TEXT
 __unwind_info
@@ -701,9 +704,11 @@ incoming_path
 outgoing_path
 gpu_desc
 driver_desc
-Error! Failed getting bucket : %s
-GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
 ERROR! Upload folder %s is empty
+Using baseline bucket manifest %llu size: %llu
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamconsole/shader.cpp
+callback.m_unBucketID == ulBucketID
+ERROR! Failed getting bucket : %s
 baselinemanifest
 filemapping
 localpath
@@ -711,8 +716,9 @@ localpath
 depotpath
 recursive
 ERROR! Build for depot failed : %s
-Uploaded depot success ( manifest: %llu, size: %llu )
+Finished uploading depot ( manifest: %llu, size: %llu )
 ERROR! Failed to report shader build : %s
+Transcode upload complete ( AppID: %u, BucketID: %llu )
 %s/tools_install_dir/%u
 Tool DownloadDepot ERROR %u!
 Tool DownloadDepot success: %s
@@ -734,6 +740,7 @@ ERROR: Source file %s doesn't exist!
 TC command line: %s
 ERROR %u running TC tool!
 GetBucketManifest ERROR %u!
+GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
 StartDepotBuild success. manifest: %llu size: %llu
 ReportExternalBuild ERROR %u!
 AppID %u done! Restarting.
@@ -755,6 +762,8 @@ ERROR. Shader processing failed!
 ERROR! Shader conversion failed!
 ERROR! Failed to write swarm_tc_download.vdf
 ERROR! Invalid stale bucket!
+Done. No more bucket to transcode
+Using no baseline manifest for upload
 ShaderConversion ERROR!
 ShaderConversion success
 CompileShaders ERROR!
@@ -1296,11 +1305,11 @@ E
 j
 @
 @
+0
 t
 u
 0
 Ic
-0
 
 =
 @
