@@ -106,6 +106,11 @@
 		overflow-y: auto;
 		position: sticky;
 		z-index: 100;
+
+		/* Re-defining here prevents the entire page from padding as we scroll */
+		scroll-snap-type: inline;
+		scroll-padding-bottom: 80px;
+		scroll-padding-top: 80px;
 	}
 
 	html.responsive .page_content_ctn {
@@ -2731,10 +2736,15 @@
 		display: block;
 		margin-right: unset;
 		background: var(--gpBackground-LightSofter);
-		height: 52px;
+		height: 68px;
 		box-shadow: none;
 		transition: all 0.1s ease;
 		margin-bottom: 4px;
+		width: 100%;
+	}
+
+	html.responsive .tab_item .ds_steam_deck_compat {
+		top: 34px;
 	}
 
 	html.responsive .tablet_list_item .tab_item_discount {

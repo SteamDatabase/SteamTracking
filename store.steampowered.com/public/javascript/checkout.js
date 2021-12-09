@@ -817,6 +817,7 @@ function InitializeTransaction()
 				'BankIBAN' : $('bank_iban').value,
 				'BankBIC' : $('bank_bic').value,
                 'TPBankID' : $('bank_name').value,
+				'BankAccountID' : $('bank_account_id').value,
 				
 								'bSaveBillingAddress' : bSaveBillingAddress ? 1 : 0,
 				'gidPaymentID' : paymentGID,
@@ -958,7 +959,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
 					|| result.paymentmethod == 47 || result.paymentmethod == 121 
 					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40 
-					|| result.paymentmethod == 127					|| result.paymentmethod == 135					|| result.paymentmethod == 136					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 137					|| result.paymentmethod == 138					|| result.paymentmethod == 139					|| result.paymentmethod == 140					|| result.paymentmethod == 141					|| result.paymentmethod == 142					|| result.paymentmethod == 143					|| result.paymentmethod == 144					|| result.paymentmethod == 145					|| result.paymentmethod == 146					|| result.paymentmethod == 122				)
+					|| result.paymentmethod == 127					|| result.paymentmethod == 135					|| result.paymentmethod == 136					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 137					|| result.paymentmethod == 138					|| result.paymentmethod == 139					|| result.paymentmethod == 140					|| result.paymentmethod == 141					|| result.paymentmethod == 142					|| result.paymentmethod == 143					|| result.paymentmethod == 144					|| result.paymentmethod == 145					|| result.paymentmethod == 146					|| result.paymentmethod == 147					|| result.paymentmethod == 148					|| result.paymentmethod == 149					|| result.paymentmethod == 150					|| result.paymentmethod == 122				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -1493,9 +1494,6 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for QIWI Wallet customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the QIWI Wallet website by signing in and approving the order from Steam that shows up in your QIWI Wallet Inbox.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
-					
-					// change the button to do something else
-					$('purchase_button_bottom').href = "javascript:CreateQiwiInvoiceAndFinalizeTransaction( '"+url.replace( /\'/g, "\\'" )+"' );";
 				}				
 				else if ( method.value == 'beeline' )
 				{
@@ -2607,6 +2605,46 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PayPay customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
+				}
+				else if ( method.value == 'alfaclick' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Alfa-Click transactions are authorized through the ECommPay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to ECommPay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Alfa-Click customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the ECommPay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'sberbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Sberbank transactions are authorized through the ECommPay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to ECommPay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Sberbank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the ECommPay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'yoomoney' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'YooMoney transactions are authorized through the ECommPay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to ECommPay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for YooMoney customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the ECommPay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'tinkoff' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Tinkoff transactions are authorized through the ECommPay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to ECommPay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Tinkoff customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the ECommPay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
 				}				
 			}
 			else
@@ -3261,6 +3299,7 @@ function UpdatePaymentInfoForm()
 		var bShowCountryVerification = false;
 		var bShowBankAccountForm = false;
 		var bShowMobileForm = false;
+		var bShowBankAccountIDForm = false;
 		var bShowPaymentSpecificNote = false;
 		var bShowStoredPayPalDetails = false;
 		var bDisabledPaymentMethod = false;
@@ -3387,9 +3426,15 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'payco' || method.value == 'mobile_wallet_japan' || method.value == 'boletoflash' || method.value == 'pix'
 			|| method.value == 'gcash' || method.value == 'kakaopay' || method.value == 'dana' || method.value == 'truemoney'
 			|| method.value == 'touchngo' || method.value == 'linepay' || method.value == 'merpay' || method.value == 'paypay'
+			|| method.value == 'sberbank' || method.value == 'yoomoney' || method.value == 'tinkoff' || method.value == 'cashincis'
 		)
 		{
 			bShowCountryVerification = true;
+		}
+		else if ( method.value == 'alfaclick' )
+		{
+			bShowCountryVerification = true;
+			bShowBankAccountIDForm = true;
 		}
 		else if ( method.value == 'alipay' && true )
 		{
@@ -3533,6 +3578,9 @@ function UpdatePaymentInfoForm()
 
 		var strMobileVerificationDisplay = bShowMobileForm ? 'block' : 'none';
 		$('mobile_number_row').style.display = strMobileVerificationDisplay;
+
+		var strBankAccountIDDisplay = bShowBankAccountIDForm ? 'block' : 'none';
+		$('bank_account_id_row').style.display = strBankAccountIDDisplay;
 		
 		var strAllowPaymentMethod = !bDisabledPaymentMethod ? 'block' : 'none';
 		$('youll_get_to_review').style.display = strAllowPaymentMethod;
@@ -3888,6 +3936,10 @@ function SubmitPaymentInfoForm()
 				{
 					errorString += 'Please enter your 10 digit mobile account number.<br/>';
 					rgBadFields.mobile_number_label = true;
+				}
+				else
+				{
+					$('billing_phone').value = $( 'mobile_number').value;
 				}
 			}
 		}
@@ -4618,6 +4670,22 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'paypay' && providerPaymentMethod == 146 )
 			{
 				$('payment_method_review_text').innerHTML = 'PayPay';
+			}
+			else if ( method.value == 'alfaclick' && providerPaymentMethod == 147 )
+			{
+				$('payment_method_review_text').innerHTML = 'Alfa-Click';
+			}
+			else if ( method.value == 'sberbank' && providerPaymentMethod == 148 )
+			{
+				$('payment_method_review_text').innerHTML = 'Sberbank';
+			}
+			else if ( method.value == 'yoomoney' && providerPaymentMethod == 149 )
+			{
+				$('payment_method_review_text').innerHTML = 'YooMoney';
+			}
+			else if ( method.value == 'tinkoff' && providerPaymentMethod == 150 )
+			{
+				$('payment_method_review_text').innerHTML = 'Tinkoff';
 			}
 		}
 		

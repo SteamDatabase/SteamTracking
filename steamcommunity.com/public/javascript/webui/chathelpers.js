@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6937908";
+var CLSTAMP = "6941653";
 !(function (e) {
   function t(t) {
     for (
@@ -150,34 +150,34 @@ var CLSTAMP = "6937908";
                 38: "cc5e3f5d4a4d3eb8fc0a",
                 39: "01e61b4c2d0faedc8e45",
                 40: "7024b1154b21af90bf4c",
-                41: "374124f33878d5b9a6a3",
-                42: "92ace3c2f13a1f53dd19",
-                43: "6c3adbbe29863ef2ba18",
-                44: "b600ddf1f52d447ba072",
+                41: "d9c6f7253d236fe01141",
+                42: "bdbbf57f251f4a099bc5",
+                43: "300ce2b4e4314fe64ec0",
+                44: "bee7d5e35a046e3f3c25",
                 45: "7bc6f014f3b88abcf223",
-                46: "0553bfd6f97eb5f193b6",
-                47: "d1fec1e16e20588d0ba9",
-                48: "150f892dd536d1d00984",
-                49: "2ca6d28219bbaff2b3f5",
+                46: "ed324ea449b4261c4741",
+                47: "1d09ebf81e92ebc3d98d",
+                48: "d00fff0d5a3b5fde367c",
+                49: "b56e02fd81361d52dfdc",
                 50: "d34f988386795fcbf6cf",
-                51: "8b2cad98d872c4a38b1d",
-                52: "d7a9f806a9413194c213",
-                53: "457cc2c57c561aba96e9",
-                54: "e212e3f87e9901546a42",
-                55: "49034384597baafe29b6",
-                56: "9f05cd92095fef2298e2",
+                51: "86fb5a60e58716d0fa5a",
+                52: "d32c9a3a39f72f32900a",
+                53: "d31caef8d064a4364100",
+                54: "698e82997b6227f27230",
+                55: "025211bc90aa6259a61a",
+                56: "3efe0dd5ee5df9048d5d",
                 57: "6c5c0ac0616e0b1be217",
-                58: "9fa1841c00bf0986f005",
-                59: "58f8bf4efc5715810a94",
+                58: "94804a5770115415f15a",
+                59: "cb61bac1306f146fffc3",
                 60: "f38c73d28c350eb2f7c9",
                 61: "8a0266e7f50c0928e923",
-                62: "e50ea6230d328e91b7fb",
-                63: "af3bed2ecef44c98e54f",
-                64: "e7d51a2e8d531cef8ad7",
-                65: "28347a8fc95a8b8e07ab",
-                66: "c4c250037217a1bd83be",
-                67: "6330dae06f3e2eeed55b",
-                68: "976a412125ab842c8c8f",
+                62: "3c23f949a887f14a554c",
+                63: "58d7117d3e7ff26973db",
+                64: "199c002846d639f2da64",
+                65: "af0048d02de2c80199bd",
+                66: "0653202504269107b473",
+                67: "e5662d55a3318133d2c4",
+                68: "e3ab4659c1ccafe41d1e",
               }[e]
             );
           })(e));
@@ -562,7 +562,7 @@ var CLSTAMP = "6937908";
           return t;
       }
     }
-    var y, C, k, S;
+    var y, C, k, S, T;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -608,7 +608,17 @@ var CLSTAMP = "6937908";
             "k_EFloatingGamepadTextInputModeModeEmail"),
           (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
             "k_EFloatingGamepadTextInputModeModeNumeric");
-      })(S || (S = {}));
+      })(S || (S = {})),
+      (function (e) {
+        (e[(e.k_EAppUpdateContentType_Content = 0)] =
+          "k_EAppUpdateContentType_Content"),
+          (e[(e.k_EAppUpdateContentType_Workshop = 1)] =
+            "k_EAppUpdateContentType_Workshop"),
+          (e[(e.k_EAppUpdateContentType_Shader = 2)] =
+            "k_EAppUpdateContentType_Shader"),
+          (e[(e.k_EAppUpdateContentType_Max = 3)] =
+            "k_EAppUpdateContentType_Max");
+      })(T || (T = {}));
   },
   "1n9R": function (e, t, n) {
     "use strict";
@@ -1596,14 +1606,14 @@ var CLSTAMP = "6937908";
           : Object(o.f)(c + "XSeconds", e)
         : Object(o.f)(c + "LessThanAMinute");
     }
-    function u(e, t) {
-      var n = {
-        weekday: "short",
+    function u(e, t, n) {
+      var r = {
+        weekday: n ? "long" : "short",
         month: "long",
         day: "numeric",
         year: t ? void 0 : "numeric",
       };
-      return new Date(1e3 * e).toLocaleDateString(o.e.GetPreferredLocales(), n);
+      return new Date(1e3 * e).toLocaleDateString(o.e.GetPreferredLocales(), r);
     }
     function l(e) {
       var t = new Date(1e3 * e),
@@ -1690,7 +1700,9 @@ var CLSTAMP = "6937908";
             bGranularFutureTime: !1,
             bGranularToday: !1,
             bGranularYesterday: !1,
+            bGranularWeek: !1,
             bGranularPast: !1,
+            bAbbreviateDayOfWeek: !1,
           },
           t
         );
@@ -1710,7 +1722,8 @@ var CLSTAMP = "6937908";
             : (l.setDate(l.getDate() + 1),
               n < l
                 ? Object(o.f)("#Time_Tomorrow")
-                : (l.setDate(l.getDate() + 5), n < l ? S(n) : k(n, !0)))
+                : (l.setDate(l.getDate() + 5),
+                  n < l ? S(n) : k(n, !0, c.bAbbreviateDayOfWeek)))
         );
       }
       s.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
@@ -1723,10 +1736,12 @@ var CLSTAMP = "6937908";
         return c.bGranularYesterday
           ? Object(o.f)("#Time_Yesterday_At", d(e))
           : Object(o.f)("#Time_Yesterday");
+      if ((f.setDate(f.getDate() - 7), c.bGranularWeek && n >= f))
+        return k(n, !1, !c.bAbbreviateDayOfWeek);
       if (c.bGranularPast)
         return Object(o.f)(
           "#Time_Past_At",
-          u(e, n.getFullYear() == r.getFullYear()),
+          u(e, n.getFullYear() == r.getFullYear(), !c.bAbbreviateDayOfWeek),
           d(e)
         );
       if ((f.setDate(f.getDate() - 5), n >= f))
@@ -1750,19 +1765,19 @@ var CLSTAMP = "6937908";
       E = new Map(),
       y = new Map(),
       C = new Map();
-    function k(e, t) {
-      void 0 === t && (t = !1);
-      var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
-        r = C.get(n);
+    function k(e, t, n) {
+      void 0 === t && (t = !1), void 0 === n && (n = !0);
+      var r = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
+        i = C.get(r);
       return (
-        r ||
-        ((r = e.toLocaleDateString(o.e.GetPreferredLocales(), {
-          weekday: "long",
+        i ||
+        ((i = e.toLocaleDateString(o.e.GetPreferredLocales(), {
+          weekday: n ? "long" : "short",
           day: "numeric",
           month: t ? "long" : "short",
         })),
-        C.set(n, r),
-        r)
+        C.set(r, i),
+        i)
       );
     }
     function S(e) {
@@ -2207,7 +2222,8 @@ var CLSTAMP = "6937908";
         "hardware" === e ||
         "mod" === e ||
         "video" == e ||
-        "beta" === e
+        "beta" === e ||
+        "advertising" === e
       );
     }
     var g, v;
@@ -2351,18 +2367,18 @@ var CLSTAMP = "6937908";
           (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
             "k_EHTTPProxyMode_Automatic");
       })(R || (R = {}));
-    var L, O;
+    var O, L;
     !(function (e) {
       (e[(e.SystemKey0 = 0)] = "SystemKey0"),
         (e[(e.SystemKey1 = 1)] = "SystemKey1");
-    })(L || (L = {})),
+    })(O || (O = {})),
       (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque"),
           (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-      })(O || (O = {}));
+      })(L || (L = {}));
   },
   mrSG: function (e, t, n) {
     "use strict";

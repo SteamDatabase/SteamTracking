@@ -1085,7 +1085,7 @@
 
 	/* a plus image that changes to minus when section is expanded*/
 	html.responsive .expand_section {
-		background-image: url('/public/images//v6/plus.svg');
+		background-image: url('/public/shared/images//v6/icon_plus.svg');
 		background-repeat: no-repeat;
 		background-position: center;
 		width: 16px;
@@ -1093,7 +1093,7 @@
 		padding-right: 20px;
 	}
 	html.responsive .expand_section.expanded {
-		background-image: url('/public/images//v6/minus.svg');
+		background-image: url('/public/shared/images//v6/icon_minus.svg');
 	}
 
 	/* show summary of supported languages and expand it when clicked */

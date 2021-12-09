@@ -1,31 +1,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;900&display=swap');
 
- body.v6.sale_autumn2021 {
+ body.v6.sale_winter2021 {
 	 background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2020/homepage_bg.jpg?v=4') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2020/leaves.jpg?v=2') repeat-y center top, #1C0107;
 	 background-size: contain;
  }
 
-body.v6.sale_autumn2021 .responsive_page_template_content {
+body.v6.sale_winter2021 .responsive_page_template_content {
 	max-width: 1800px;
 	margin: 0 auto;
 }
-body.v6.sale_autumn2021 .page_background_holder {
+body.v6.sale_winter2021 .page_background_holder {
 	background-size: contain !important;
 	max-height: 730px;
 }
 
-body.v6.sale_autumn2021 .home_page_takeover_sizer {
+body.v6.sale_winter2021 .home_page_takeover_sizer {
 	max-height: 380px;
     min-height: 257px;
     display: inline-block;
 }
 
-body.v6.sale_autumn2021 .home_page_takeover_link {
+body.v6.sale_winter2021 .home_page_takeover_link {
 	z-index: 200;
 }
 
-body.v6.sale_autumn2021 .fullscreen-bg {
+body.v6.sale_winter2021 .fullscreen-bg {
 	position: absolute;
 	z-index: 1;
 	width: 100%;
@@ -37,7 +37,7 @@ body.v6.sale_autumn2021 .fullscreen-bg {
 	align-items: center;
 }
 
-body.v6.sale_autumn2021 .home_header_textimage_ctn {
+body.v6.sale_winter2021 .home_header_textimage_ctn {
 	width: 625px;
 	z-index: 100;
 	position: absolute;
@@ -52,7 +52,7 @@ body.v6.sale_autumn2021 .home_header_textimage_ctn {
 	filter: drop-shadow(8px 8px 7px rgba(0,0,0,0.2));
 }
 
-body.v6.sale_autumn2021 .home_ctn.discovery_queue_ctn, body.v6.sale_autumn2021 .home_ctn.top_new_releases {
+body.v6.sale_winter2021 .home_ctn.discovery_queue_ctn, body.v6.sale_winter2021 .home_ctn.top_new_releases {
 	background: transparent;
 }
 
@@ -349,7 +349,7 @@ a#store_search_link img {
     color: #ffffff;
 }
 
-body.v6.sale_autumn2021 .ds_options {
+body.v6.sale_winter2021 .ds_options {
 	z-index: 100;
 }
 
@@ -779,7 +779,7 @@ body.v6 .page_content_ctn.dark
 
 @media screen and (min-width: 2300px )
 {
-    body.v6.sale_autumn2021 {
+    body.v6.sale_winter2021 {
         background-size: unset;
     }
 }
@@ -900,7 +900,7 @@ body.v6 .page_content_ctn.dark
 @media screen and (max-width: 910px )
 {
 
-    body.responsive_page.v6.sale_autumn2021 {
+    body.responsive_page.v6.sale_winter2021 {
         background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2020/homepage_bg.jpg?v=4') no-repeat center 270px, url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2020/leaves.jpg?v=2') repeat-y center top, #1C0107;
         background-size: contain;
     }
@@ -1081,12 +1081,12 @@ body.v6 .page_content_ctn.dark
 		width: 95vw;
 	}
 
-    body.v6.sale_autumn2021 .home_page_takeover_sizer {
+    body.v6.sale_winter2021 .home_page_takeover_sizer {
         min-height: unset;
         height: 32vw !important;
     }
 
-	html.responsive body.v6.sale_autumn2021 .home_header_textimage_ctn {
+	html.responsive body.v6.sale_winter2021 .home_header_textimage_ctn {
 		width: 90vw;
 		height: 85%;
         top: 10vw;
@@ -1156,7 +1156,7 @@ body.v6 .page_content_ctn.dark
 	html.responsive .home_ctn.top_new_releases {
 		display: none;
 	}
-	html.responsive body.v6.sale_autumn2021 .home_header_textimage_ctn .summer_points_ctn {
+	html.responsive body.v6.sale_winter2021 .home_header_textimage_ctn .summer_points_ctn {
 		display: none;
 	}
 
@@ -1758,7 +1758,7 @@ body.v6 .sale_capsule .discount_block_inline
 		display: none;
 	}
 
-	html.responsive body.v6.sale_autumn2021 .fullscreen-bg {
+	html.responsive body.v6.sale_winter2021 .fullscreen-bg {
 		align-items: flex-start;
 	}
 

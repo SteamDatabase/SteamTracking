@@ -2187,8 +2187,13 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	$elContainer.bind('mouseover', function(e) { instance.fnMouseOver(); } );
 	$elContainer.bind('mouseout', function(e) { instance.fnMouseOut(); }  );
 	// If we get a scroll event, and we're in respondive, hint all remaining images
-	this.$elItems.parent().bind('scroll', function(e) { if( instance.bIsResponsive() ) PreloadImages( $elContainer ); } );
-	this.$elItems.parent().attr( 'data-panel', '{"flow-children":"row"}' );
+	var $Parent = this.$elItems.parent();
+	$Parent.bind('scroll', function(e) { if( instance.bIsResponsive() ) PreloadImages( $elContainer ); } );
+
+	// add panel attributes, and force an update as this element is already on the page so legacyweb doesn't see this change
+	$Parent.attr( 'data-panel', '{"bFocusRingRoot":true,"flow-children":"row"}' );
+	if ( typeof ForceUpdateFocusElements != 'undefined' )
+		ForceUpdateFocusElements( $Parent );
 
 	// Only bind a mouseover thumb event if we have one.
 	if( fnClickThumb ) {
@@ -2357,8 +2362,10 @@ CGenericCarousel.prototype.bIsResponsive = function( )
 
 CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 {
-	if( this.bIsResponsive() )
-		return this.ResponsiveAdvance(nNewIndex);
+		if( this.bIsResponsive() && !window.UseTabletScreenMode() )
+	{
+		return this.ResponsiveAdvance(nNewIndex );
+	}
 
 	if( this.nItems == 0 )
 		return;

@@ -270,10 +270,10 @@
 	html.responsive .cart_status_message_ctn .cart_status_message,
 	html.responsive .checkout_error {
 		margin: unset;
-		padding: 8px;
+		padding: 8px 16px;
 		line-height: unset;
 		font: var(--gpText-BodyMedium);
-		border-radius: var(--gpCorner-Medium);
+		border-radius: var(--gpCorner-Large);
 	}
 
 	html.responsive .cart_status_message_area,

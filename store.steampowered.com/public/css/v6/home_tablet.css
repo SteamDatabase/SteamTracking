@@ -317,6 +317,7 @@
 	html.responsive .big_button.gpfocus {
 		background: white;
 		color: black;
+		outline: none;
 	}
 
 
@@ -600,11 +601,18 @@
 	}
 
 	html.responsive .tab_content#tab_topgrossing_content {
-		display: none !important; /* TODO (Jays) once the flex display stops using !important this should not be necessary here either */
+		/* display: none !important; */
 	}
 
 	html.responsive .home_leftcol.home_tab_col {
 		margin-bottom: unset;
+	}
+
+
+
+	/* Top grossing tab container */
+	html.responsive #tab_topgrossing_content {
+		flex-direction: column;
 	}
 
 
@@ -646,6 +654,7 @@
 		box-shadow: unset;
 		height: unset;
 		padding: var(--gpSpace-Gutter) 0px var(--gpSpace-Gap) 0px;
+		border-radius: 0px;
 	}
 
 	html.responsive .top_new_releases_background {
@@ -803,12 +812,7 @@
 
 	/* Discovery queue */
 	html.responsive #module_discovery_queue {
-		/* display: none !important; */
 		margin-bottom: 12px;
-	}
-
-	html.responsive .discovery_queue_ctn {
-		/* display: none !important; */
 	}
 
 	html.responsive .discovery_queue_static {
@@ -826,6 +830,11 @@
 	html.responsive #module_discovery_queue .begin_exploring {
 		font-weight: 400;
 	}
+
+	html.responsive body.newonsteam .discovery_queue_ctn {
+		display: none !important;
+	}
+
 
 
 

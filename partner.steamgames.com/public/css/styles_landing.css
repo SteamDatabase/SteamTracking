@@ -392,6 +392,10 @@ span.motd {
 		padding: 12px;
 	}
 
+	.landingRightCol .panel.lighter {
+		background-color: #141414;
+	}
+
 		.landingRightCol .panel .attribute {
 			display: block;
 			position: relative;
@@ -3345,4 +3349,43 @@ div .cdkey_request_details_row
 }
 .releaseStep .deck_description .details a {
 	color: grey;
+}
+
+.user_actions_ctn .valve_only {
+    background: #350e08;
+    padding: 1px 0px;
+}
+
+ul.pub_rights {
+    margin-top: 12px;
+    padding-left: 0px;
+    font-size: 14px;
+}
+ul.pub_rights li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 26px;
+    width: 100%;
+    color: #b2b2b2;
+
+    background-repeat: no-repeat;
+    list-style-type: none;
+    padding-left: 25px;
+    background-position: left;
+
+}
+
+.user_name {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+
+.more_apps_txt {
+    display: inline-block;
+    margin-top: 8px;
 }
