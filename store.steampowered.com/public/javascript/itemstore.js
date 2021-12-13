@@ -32,7 +32,7 @@ function AddMtxItemToCart( appid, assetclassid, quantity )
 		function( data ) {
 			if ( !data || !data.success )
 			{
-				ShowAlertDialog( 'Error', 'SORRY, WE COULDN\'T ADD YOUR ITEM!' );
+				ShowAlertDialog( 'Error', 'Sorry, we couldn\'t add your item!' );
 			}
 			else
 			{
