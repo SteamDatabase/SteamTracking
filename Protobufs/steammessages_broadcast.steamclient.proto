@@ -1,3 +1,4 @@
+import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
@@ -256,7 +257,7 @@ message CBroadcast_GetBroadcastChatUserNames_Request {
 
 message CBroadcast_GetBroadcastChatUserNames_Response {
 	message PersonaName {
-		optional fixed64 steam_id = 1;
+		optional fixed64 steam_id = 1 [(allow_field_named_steam_id) = true];
 		optional string persona = 2;
 	}
 

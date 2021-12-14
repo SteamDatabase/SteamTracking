@@ -15,6 +15,7 @@ extend .google.protobuf.FileOptions {
 
 extend .google.protobuf.FieldOptions {
 	optional bool php_output_always_number = 50020 [default = false];
+	optional bool allow_field_named_steam_id = 50024 [default = false];
 }
 
 enum EProtoClanEventType {
