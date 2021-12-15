@@ -1,5 +1,5 @@
 {
-  "revision": 355,
+  "revision": 356,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -804,6 +804,101 @@
       "relays": [
         {
           "ipv4": "109.123.102.100",
+          "port_range": [ 27015, 27022 ]
+        }
+      ]
+    },
+    "mla1": {
+      "desc": "Multiplay Los Angeles",
+      "groups": [
+        "multiplay"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "104.149.128.218:27015-27022"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "104.149.128.218",
+          "port_range": [ 27015, 27022 ]
+        }
+      ]
+    },
+    "msa1": {
+      "desc": "Multiplay Salt Lake City",
+      "groups": [
+        "multiplay"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "107.182.228.233:27015-27022"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "107.182.228.233",
+          "port_range": [ 27015, 27022 ]
+        }
+      ]
+    },
+    "msj1": {
+      "desc": "Multiplay San Jose 1",
+      "groups": [
+        "multiplay"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "169.197.126.10:27015-27022"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "169.197.126.10",
+          "port_range": [ 27015, 27022 ]
+        }
+      ]
+    },
+    "msj2": {
+      "desc": "Multiplay San Jose 2",
+      "groups": [
+        "multiplay"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "173.237.41.100:27015-27022"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "173.237.41.100",
+          "port_range": [ 27015, 27022 ]
+        }
+      ]
+    },
+    "msj3": {
+      "desc": "Multiplay San Jose 3",
+      "groups": [
+        "multiplay"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "192.170.153.164:27015-27022"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "192.170.153.164",
           "port_range": [ 27015, 27022 ]
         }
       ]
