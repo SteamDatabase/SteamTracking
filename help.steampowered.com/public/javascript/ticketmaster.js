@@ -938,7 +938,7 @@ function TicketDetailsSearchBoxKeyUp( event, strLanguage )
 		SearchBoxKeyUp( event, DoFAQSearch, function( data )
 		{
 			var link = $J('<div class="qt_link"> <a onclick="InsertQuickText(this, this.getAttribute(\'data-content\'), -1, false); return false;" href="javascript:void(0);">'+data.title+'</a> </div>');
-			var url = '[url=https://support.steampowered.com/kb_article.php?ref='+data.ref+']'+data.title+'[/url]';
+			var url = '[url=https://help.steampowered.com/faqs/view/'+data.ref+']'+data.title+'[/url]';
 			link.find('a').attr( 'data-content', url );
 			return link;
 		},
@@ -1267,7 +1267,7 @@ CTextAutoComplete.prototype.GetFAQDictionary = function( hits, rgFAQNames, rgFAQ
 	{
 		var faq = hits[i];
 		rgFAQNames.push( faq.title );
-		rgFAQLinks.push( '[url=https://support.steampowered.com/kb_article.php?ref=' + faq.ref +']' + faq.title + '[/url]' );
+		rgFAQLinks.push( '[url=https://help.steampowered.com/faqs/view/' + faq.ref +']' + faq.title + '[/url]' );
 	}
 };
 
@@ -1288,7 +1288,7 @@ CTextAutoComplete.prototype.FAQSearch = function( strWord )
 			url: "https://help.steampowered.com/ticketmaster/AjaxSearchFAQs",
 			data: $J.param( {
 				search: strWord.slice(1),
-				language: _this.m_strDeskproLanguage
+				language: _this.m_strLanguage
 			} )
 		})
 		.done( function( data )
