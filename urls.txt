@@ -266,7 +266,7 @@ https://store.steampowered.com/public/css/v6/updated_apps.css?__TIME__
 https://store.steampowered.com/public/css/v6/wishlist.css?__TIME__
 https://store.steampowered.com/public/css/v6/wishlist_tablet.css?__TIME__
 https://www.dota2.com/public/css/applications/dpc/main.css?_cdn=cloudflare&__TIME__
-https://www.dota2.com/public/css/main.css?_cdn=cloudflare&__TIME__
+https://www.dota2.com/public/css/dota_react/main.css?_cdn=cloudflare&__TIME__
 
 //
 // Javascript
@@ -531,9 +531,9 @@ https://store.steampowered.com/public/javascript/wishlist.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/youraccount.js?__TIME__&l=english
 https://www.dota2.com/public/javascript/applications/dpc/localization/main_english.js?__TIME__&l=english
 https://www.dota2.com/public/javascript/applications/dpc/main.js?__TIME__&l=english&_cdn=cloudflare
-https://www.dota2.com/public/javascript/main.js?__TIME__&l=english&_cdn=cloudflare
-https://www.dota2.com/public/javascript/main_english-json.js?__TIME__&_cdn=cloudflare
-https://www.dota2.com/public/javascript/shared_english-json.js?__TIME__&_cdn=cloudflare
+https://www.dota2.com/public/javascript/dota_react/main.js?__TIME__&l=english&_cdn=cloudflare
+https://www.dota2.com/public/javascript/dota_react/main_english-json.js?__TIME__&_cdn=cloudflare
+https://www.dota2.com/public/javascript/dota_react/shared_english-json.js?__TIME__&_cdn=cloudflare
 https://www.underlords.com/public/javascript/localization/items_english.js?__TIME__&l=english
 https://www.underlords.com/public/javascript/localization/main_english.js?__TIME__&l=english
 https://www.underlords.com/public/javascript/localization/shared_english.js?__TIME__&l=english
