@@ -34,12 +34,6 @@
             ]
         },
         {
-            "name": "GetSchemaURL",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": []
-        },
-        {
             "name": "GetStoreMetaData",
             "version": 1,
             "httpmethod": "GET",

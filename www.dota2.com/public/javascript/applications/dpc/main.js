@@ -679,6 +679,9 @@
       EmoticonBow: "shared_svg_library_EmoticonBow_3vBI6",
       EmoticonBow_st0: "shared_svg_library_EmoticonBow_st0_3EB-7",
       EmoticonBow_st1: "shared_svg_library_EmoticonBow_st1_2NIMu",
+      SteamDeckCompatInfo: "shared_svg_library_SteamDeckCompatInfo_1t9l5",
+      SteamDeckCompatLogo: "shared_svg_library_SteamDeckCompatLogo_1Ly8Y",
+      SteamDeckCompatIcon: "shared_svg_library_SteamDeckCompatIcon_1wEdn",
     };
   },
   BGkC: function (e, a, t) {
@@ -763,10 +766,10 @@
   CqJL: function (e, a, t) {
     "use strict";
     t.d(a, "b", function () {
-      return A;
+      return H;
     }),
       t.d(a, "a", function () {
-        return M;
+        return U;
       });
     var r = t("mrSG");
     t("q1tI");
@@ -837,7 +840,7 @@
           return a;
       }
     }
-    var n, c, i;
+    var n, c, i, l, s, g, m;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -873,8 +876,41 @@
             "k_ESuspendResumeProgressState_LoggingIn"),
           (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
             "k_ESuspendResumeProgressState_WaitingForApp");
-      })(i || (i = {}));
-    var l;
+      })(i || (i = {})),
+      (function (e) {
+        (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
+          "k_EFloatingGamepadTextInputModeModeSingleLine"),
+          (e[(e.k_EFloatingGamepadTextInputModeModeMultipleLines = 1)] =
+            "k_EFloatingGamepadTextInputModeModeMultipleLines"),
+          (e[(e.k_EFloatingGamepadTextInputModeModeEmail = 2)] =
+            "k_EFloatingGamepadTextInputModeModeEmail"),
+          (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
+            "k_EFloatingGamepadTextInputModeModeNumeric");
+      })(l || (l = {})),
+      (function (e) {
+        (e[(e.k_EAppUpdateContentType_Content = 0)] =
+          "k_EAppUpdateContentType_Content"),
+          (e[(e.k_EAppUpdateContentType_Workshop = 1)] =
+            "k_EAppUpdateContentType_Workshop"),
+          (e[(e.k_EAppUpdateContentType_Shader = 2)] =
+            "k_EAppUpdateContentType_Shader"),
+          (e[(e.k_EAppUpdateContentType_Max = 3)] =
+            "k_EAppUpdateContentType_Max");
+      })(s || (s = {})),
+      (function (e) {
+        (e[(e.k_EOverlayToStoreFlag_None = 0)] = "k_EOverlayToStoreFlag_None"),
+          (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
+            "k_EOverlayToStoreFlag_AddToCart"),
+          (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
+            "k_EOverlayToStoreFlag_AddToCartAndShow");
+      })(g || (g = {})),
+      (function (e) {
+        (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
+          "k_EActivateGameOverlayToWebPageMode_Default"),
+          (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
+            "k_EActivateGameOverlayToWebPageMode_Modal");
+      })(m || (m = {}));
+    var _;
     !(function (e) {
       (e[(e.k_EControllerBindingType_None = 0)] =
         "k_EControllerBindingType_None"),
@@ -892,18 +928,21 @@
           "k_EControllerBindingType_GameAction"),
         (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
           "k_EControllerBindingType_ControllerAction");
-    })(l || (l = {}));
-    var s;
+    })(_ || (_ = {}));
+    var d, p;
     !(function (e) {
-      (e[(e.Input = 0)] = "Input"),
-        (e[(e.AllOutput = 1)] = "AllOutput"),
-        (e[(e.Left = 2)] = "Left"),
-        (e[(e.Right = 3)] = "Right"),
-        (e[(e.Sub = 4)] = "Sub"),
-        (e[(e.BackLeft = 5)] = "BackLeft"),
-        (e[(e.BackRight = 6)] = "BackRight");
-    })(s || (s = {}));
-    var g;
+      (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
+    })(d || (d = {})),
+      (function (e) {
+        (e[(e.Input = 0)] = "Input"),
+          (e[(e.AllOutput = 1)] = "AllOutput"),
+          (e[(e.Left = 2)] = "Left"),
+          (e[(e.Right = 3)] = "Right"),
+          (e[(e.Sub = 4)] = "Sub"),
+          (e[(e.BackLeft = 5)] = "BackLeft"),
+          (e[(e.BackRight = 6)] = "BackRight");
+      })(p || (p = {}));
+    var u;
     !(function (e) {
       (e[(e.Error = -2)] = "Error"),
         (e[(e.Invalid = -1)] = "Invalid"),
@@ -916,8 +955,8 @@
         (e[(e.Applied = 6)] = "Applied"),
         (e[(e.ClientRestartPending = 7)] = "ClientRestartPending"),
         (e[(e.SystemRestartPending = 8)] = "SystemRestartPending");
-    })(g || (g = {}));
-    var m;
+    })(u || (u = {}));
+    var h;
     !(function (e) {
       (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
         (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
@@ -941,8 +980,8 @@
         (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
           "EBrowserType_Offscreen_FriendsUI"),
         (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-    })(m || (m = {}));
-    var _, d;
+    })(h || (h = {}));
+    var b, y;
     !(function (e) {
       (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
         "k_EClientUINotificationGroupChatMessage"),
@@ -950,7 +989,7 @@
           "k_EClientUINotificationFriendChatMessage"),
         (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
           "k_EClientUINotificationFriendPersonaState");
-    })(_ || (_ = {})),
+    })(b || (b = {})),
       (function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -958,14 +997,14 @@
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(d || (d = {}));
-    var p;
+      })(y || (y = {}));
+    var k;
     !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
         (e[(e.k_ERejected = 2)] = "k_ERejected");
-    })(p || (p = {}));
-    var u, h;
+    })(k || (k = {}));
+    var v, E;
     !(function (e) {
       (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
         "k_EClientUsedInputTypeKeyboard"),
@@ -974,7 +1013,7 @@
         (e[(e.k_EClientUsedInputTypeController = 2)] =
           "k_EClientUsedInputTypeController"),
         (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-    })(u || (u = {})),
+    })(v || (v = {})),
       (function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -1029,14 +1068,14 @@
             "k_ERemoteClientLaunchInvisible"),
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
-      })(h || (h = {}));
-    var b;
+      })(E || (E = {}));
+    var f;
     !(function (e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    })(b || (b = {}));
-    var y;
+    })(f || (f = {}));
+    var C;
     !(function (e) {
       (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
         "k_BluetoothDeviceType_Invalid"),
@@ -1062,14 +1101,14 @@
           "k_BluetoothDeviceType_Gamepad"),
         (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
           "k_BluetoothDeviceType_Keyboard");
-    })(y || (y = {}));
-    var k, v, E, f, C;
+    })(C || (C = {}));
+    var B, N, S, T, L;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless"),
         (e[(e.Virtual = 3)] = "Virtual");
-    })(k || (k = {})),
+    })(B || (B = {})),
       (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -1078,14 +1117,14 @@
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(v || (v = {})),
+      })(N || (N = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
-      })(E || (E = {})),
+      })(S || (S = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -1095,37 +1134,37 @@
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(f || (f = {})),
+      })(T || (T = {})),
       (function (e) {
         (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
           (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
           (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
           (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
             "k_EHTTPProxyMode_Automatic");
-      })(C || (C = {}));
-    var B, N;
+      })(L || (L = {}));
+    var P, R;
     !(function (e) {
       (e[(e.SystemKey0 = 0)] = "SystemKey0"),
         (e[(e.SystemKey1 = 1)] = "SystemKey1");
-    })(B || (B = {})),
+    })(P || (P = {})),
       (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque"),
           (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-      })(N || (N = {}));
-    var S = t("gM6l");
-    function T(e) {
-      if (!P() || !window.document.cookie) return null;
+      })(R || (R = {}));
+    var I = t("gM6l");
+    function O(e) {
+      if (!D() || !window.document.cookie) return null;
       var a = document.cookie.match("(^|; )" + e + "=([^;]*)");
       return a && a[2] ? decodeURIComponent(a[2]) : null;
     }
-    function P() {
+    function D() {
       return !!window.document;
     }
-    var L,
-      R = {
+    var G,
+      A = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -1165,9 +1204,9 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!P()) return L || (L = I()), L;
-            var e = T("sessionid");
-            e || (e = I());
+            if (!D()) return G || (G = M()), G;
+            var e = O("sessionid");
+            e || (e = M());
             return e;
           })();
         },
@@ -1178,15 +1217,15 @@
         IN_GAMEPADUI: !1,
         IN_LOGIN: !1,
       };
-    function I() {
+    function M() {
       var e = (function () {
         for (var e = "", a = 0; a < 24; a++)
-          e += Object(S.a)(0, 35).toString(36);
+          e += Object(I.a)(0, 35).toString(36);
         return e;
       })();
       return (
         (function (e, a, t, r) {
-          if (P()) {
+          if (D()) {
             r || (r = "/");
             var o = "";
             if (void 0 !== t && t) {
@@ -1207,7 +1246,7 @@
       );
     }
     t("VQwQ");
-    var O = (function () {
+    var w = (function () {
       function e() {
         this.m_vecCallbacks = [];
       }
@@ -1232,7 +1271,11 @@
         (e.prototype.Dispatch = function () {
           for (var e = [], a = 0; a < arguments.length; a++)
             e[a] = arguments[a];
-          for (var t = 0, r = this.m_vecCallbacks; t < r.length; t++) {
+          for (
+            var t = 0, r = Array.from(this.m_vecCallbacks);
+            t < r.length;
+            t++
+          ) {
             var o = r[t];
             o.apply(void 0, e);
           }
@@ -1246,21 +1289,21 @@
         e
       );
     })();
-    var D;
+    var F;
     t("Gp1o");
     !(function (e) {
       (e[(e.None = 0)] = "None"),
         (e[(e.Ago = 1)] = "Ago"),
         (e[(e.Remaining = 2)] = "Remaining");
-    })(D || (D = {}));
+    })(F || (F = {}));
     new Map();
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map(), new Map();
-    var G = (function () {
+    var j = (function () {
       function e() {
         (this.m_mapTokens = new Map()),
           (this.m_mapFallbackTokens = new Map()),
-          (this.m_cbkTokensChanged = new O());
+          (this.m_cbkTokensChanged = new w());
       }
       return (
         (e.InstallErrorReportingStore = function (e) {
@@ -1274,7 +1317,7 @@
         }),
         (e.IsELanguageValidInRealm = function (e, a) {
           return (
-            a === (29 === e ? b.k_ESteamRealmChina : b.k_ESteamRealmGlobal)
+            a === (29 === e ? f.k_ESteamRealmChina : f.k_ESteamRealmGlobal)
           );
         }),
         (e.GetLanguageListForRealms = function (e) {
@@ -1324,9 +1367,9 @@
         (e.prototype.GetELanguageFallbackOrder = function (a) {
           void 0 === a && (a = null);
           var t = new Array();
-          (t.push(o(R.LANGUAGE)),
-          (R.SUPPORTED_LANGUAGES || []).forEach(function (e) {
-            e.value != R.LANGUAGE && t.push(o(e.value));
+          (t.push(o(A.LANGUAGE)),
+          (A.SUPPORTED_LANGUAGES || []).forEach(function (e) {
+            e.value != A.LANGUAGE && t.push(o(e.value));
           }),
           a) &&
             e.GetLanguageListForRealms(a).forEach(function (e) {
@@ -1347,7 +1390,7 @@
                   "Unable to find localization token '" +
                     a +
                     "' for language '" +
-                    R.LANGUAGE +
+                    A.LANGUAGE +
                     "', " +
                     this.m_mapTokens.size +
                     " tokens in map"
@@ -1365,10 +1408,10 @@
         e
       );
     })();
-    function A(e) {
+    function H(e) {
       for (var a = [], t = 1; t < arguments.length; t++)
         a[t - 1] = arguments[t];
-      var r = M.LocalizeString(e);
+      var r = U.LocalizeString(e);
       return void 0 === r
         ? e
         : (a.length > 0 &&
@@ -1381,8 +1424,8 @@
             })),
           r);
     }
-    var M = new G();
-    window.LocalizationManager = M;
+    var U = new j();
+    window.LocalizationManager = U;
   },
   Gb4a: function (e, a, t) {
     e.exports = {
@@ -1538,10 +1581,10 @@
       T = function (e) {
         return "/team/" + e;
       },
-      P = function (e) {
+      L = function (e) {
         return "/player/" + e;
       },
-      L = function (e, a) {
+      P = function (e, a) {
         return "/series/" + e + "/" + a;
       },
       R = function (e, a) {
@@ -3020,7 +3063,7 @@
               m.a.createElement(
                 _e.a,
                 {
-                  to: L(this.props.nLeagueID, this.props.nSeriesID),
+                  to: P(this.props.nLeagueID, this.props.nSeriesID),
                   className: me.a.SeriesCard,
                 },
                 this.getContents()
@@ -3195,7 +3238,7 @@
     function Te(e) {
       return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    function Pe(e) {
+    function Le(e) {
       var a;
       switch (e) {
         case 1:
@@ -3215,7 +3258,7 @@
       }
       return Object(y.b)(a);
     }
-    var Le,
+    var Pe,
       Re = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
@@ -3662,7 +3705,7 @@
       (e[(e.Add = 0)] = "Add"),
         (e[(e.Remove = 1)] = "Remove"),
         (e[(e.Disband = 2)] = "Disband");
-    })(Le || (Le = {}));
+    })(Pe || (Pe = {}));
     var De,
       Ge = (function (e) {
         function a(a) {
@@ -3681,20 +3724,20 @@
               a =
                 this.props.accountID &&
                 l.g_App.getPlayerData(this.props.accountID),
-              t = this.props.action == Le.Add || this.props.action == Le.Remove,
+              t = this.props.action == Pe.Add || this.props.action == Pe.Remove,
               r = [];
             if (!e || (t && !a))
               r.push(m.a.createElement("div", { key: "empty" }));
             else {
               var o = "";
               switch (this.props.action) {
-                case Le.Add:
+                case Pe.Add:
                   o = Object(y.b)("#TeamRoster_Add", a.name, e.name);
                   break;
-                case Le.Remove:
+                case Pe.Remove:
                   o = Object(y.b)("#TeamRoster_Remove", a.name, e.name);
                   break;
-                case Le.Disband:
+                case Pe.Disband:
                   o = Object(y.b)("#TeamRoster_Disband", e.name);
               }
               r.push(
@@ -3833,7 +3876,7 @@
                       "_" +
                       this.props.account_id,
                     teamID: this.props.team_id,
-                    action: Le.Add,
+                    action: Pe.Add,
                     accountID: this.props.account_id,
                   }));
                 break;
@@ -3849,7 +3892,7 @@
                       "_" +
                       this.props.account_id,
                     teamID: this.props.team_id,
-                    action: Le.Remove,
+                    action: Pe.Remove,
                     accountID: this.props.account_id,
                   }));
                 break;
@@ -3865,7 +3908,7 @@
                       "_" +
                       this.props.account_id,
                     teamID: this.props.team_id,
-                    action: Le.Disband,
+                    action: Pe.Disband,
                   }));
                 break;
               case 8:
@@ -5204,7 +5247,7 @@
               ? m.a.createElement(
                   _e.a,
                   {
-                    to: L(r.leagueID, r.seriesID),
+                    to: P(r.leagueID, r.seriesID),
                     className: A(ie.a.FadeIn, aa.a.PredictionCard, o),
                   },
                   g,
@@ -6012,7 +6055,7 @@
                     },
                     m.a.createElement(
                       _e.a,
-                      { to: P(f.account_id) },
+                      { to: L(f.account_id) },
                       m.a.createElement(We, {
                         className: A(la.a.Icon, la.a.Player),
                         src: l.g_App.getPlayerImageURL(f.account_id),
@@ -6412,7 +6455,7 @@
                           m.a.createElement(
                             _e.a,
                             {
-                              to: P("") + S,
+                              to: L("") + S,
                               key: S,
                               className: ua.a.PlayerContainer,
                             },
@@ -6438,7 +6481,7 @@
                               m.a.createElement(
                                 "span",
                                 { className: ua.a.TeamRole },
-                                G.fantasy_role ? Pe(G.fantasy_role) : ""
+                                G.fantasy_role ? Le(G.fantasy_role) : ""
                               )
                             ),
                             m.a.createElement("span", {
@@ -6470,8 +6513,8 @@
               }
             var T = [];
             if (a.audit_entries)
-              for (var L = 0, R = a.audit_entries; L < R.length; L++) {
-                var I = R[L];
+              for (var P = 0, R = a.audit_entries; P < R.length; P++) {
+                var I = R[P];
                 if (2 == I.audit_action) {
                   var O = parseInt(I.account_id);
                   if (-1 == k.indexOf(O)) {
@@ -6481,7 +6524,7 @@
                       m.a.createElement(
                         _e.a,
                         {
-                          to: P("") + O,
+                          to: L("") + O,
                           key: "removed" + O,
                           className: ua.a.PlayerContainer,
                         },
@@ -6506,7 +6549,7 @@
                           m.a.createElement(
                             "span",
                             { className: ua.a.TeamRole },
-                            G.fantasy_role ? Pe(G.fantasy_role) : ""
+                            G.fantasy_role ? Le(G.fantasy_role) : ""
                           )
                         ),
                         m.a.createElement("span", { className: ua.a.Spacer }),
@@ -6918,7 +6961,7 @@
                     m.a.createElement(
                       "span",
                       { className: ka.a.TeamRole },
-                      Pe(a.fantasy_role)
+                      Le(a.fantasy_role)
                     )
                   ),
                 a.total_earnings &&
@@ -7016,7 +7059,7 @@
                             _e.a,
                             {
                               key: "fav_player_" + a.id,
-                              to: P(a.id),
+                              to: L(a.id),
                               className: Ca.a.PlayerFavorite,
                             },
                             m.a.createElement(We, {
@@ -7235,8 +7278,8 @@
       Na = Ba,
       Sa = t("Zeag"),
       Ta = t.n(Sa),
-      Pa = t("4Uh/"),
-      La = (function (e) {
+      La = t("4Uh/"),
+      Pa = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { strTeamColor1: "", strTeamColor2: "" }), t;
@@ -7397,7 +7440,7 @@
               B = String(h[r.team_2.team_id] || 0),
               N = 0,
               S = 0,
-              L = 0,
+              P = 0,
               R = "",
               I = 0,
               O = 0,
@@ -7417,7 +7460,7 @@
                   F.kills > S &&
                     ((S = F.kills),
                     (N = F.account_id),
-                    (L = F.hero_id),
+                    (P = F.hero_id),
                     (R = F.pro_name)),
                   F.assists > O &&
                     ((O = F.assists),
@@ -7436,7 +7479,7 @@
                     m.a.createElement(
                       _e.a,
                       {
-                        to: P(x.account_id),
+                        to: L(x.account_id),
                         key: "player_account_" + x.account_id,
                         className: A(
                           Ta.a.Player,
@@ -7480,13 +7523,13 @@
             return m.a.createElement(
               "div",
               { className: Ta.a.Body },
-              m.a.createElement(Pa.a, {
+              m.a.createElement(La.a, {
                 src: r.team_1.team_logo_url,
                 getColors: function (a) {
                   return e.setTeamColor(1, String(a[0]));
                 },
               }),
-              m.a.createElement(Pa.a, {
+              m.a.createElement(La.a, {
                 src: r.team_2.team_logo_url,
                 getColors: function (a) {
                   return e.setTeamColor(2, String(a[0]));
@@ -7567,7 +7610,7 @@
                     ),
                     m.a.createElement(
                       _e.a,
-                      { to: P(N), className: Ta.a.PlayerLink },
+                      { to: L(N), className: Ta.a.PlayerLink },
                       m.a.createElement(
                         "div",
                         { className: Ta.a.PlayerName },
@@ -7581,7 +7624,7 @@
                     ),
                     m.a.createElement(We, {
                       className: A(Ta.a.Icon, Ta.a.Hero),
-                      src: s.a.IMG_URL_BASE + "heroes/num_wide/" + L + ".png",
+                      src: s.a.IMG_URL_BASE + "heroes/num_wide/" + P + ".png",
                       fallbackSrc: s.a.IMG_URL + "team_unknown.png",
                     }),
                     m.a.createElement("div", { className: Ta.a.Value }, S)
@@ -7596,7 +7639,7 @@
                     ),
                     m.a.createElement(
                       _e.a,
-                      { to: P(I), className: Ta.a.PlayerLink },
+                      { to: L(I), className: Ta.a.PlayerLink },
                       m.a.createElement(
                         "div",
                         { className: Ta.a.PlayerName },
@@ -7714,7 +7757,7 @@
                   m.a.createElement(
                     _e.a,
                     {
-                      to: P(b),
+                      to: L(b),
                       key: "player_account_" + b,
                       className: A(Ia.a.Player, Ia.a.Left),
                     },
@@ -7751,7 +7794,7 @@
                   m.a.createElement(
                     _e.a,
                     {
-                      to: P(b),
+                      to: L(b),
                       key: "player_account_" + b,
                       className: A(Ia.a.Player, Ia.a.Right),
                     },
@@ -7780,13 +7823,13 @@
             return m.a.createElement(
               "div",
               { className: Ia.a.UpcomingSeriesPage },
-              m.a.createElement(Pa.a, {
+              m.a.createElement(La.a, {
                 src: n.url_logo,
                 getColors: function (a) {
                   return e.setTeamColor(1, String(a[0]));
                 },
               }),
-              m.a.createElement(Pa.a, {
+              m.a.createElement(La.a, {
                 src: c.url_logo,
                 getColors: function (a) {
                   return e.setTeamColor(2, String(a[0]));
@@ -8024,12 +8067,12 @@
                 m.a.createElement("div", { className: Ga.a.Bottom }, _)
               );
             }
-            var L = [];
-            L.push([]), L.push([]);
+            var P = [];
+            P.push([]), P.push([]);
             for (var R = 0; R < 10; R++)
               if (!(R >= t.match.players.length)) {
                 var I = t.match.players[R];
-                L[(D = R < 5 ? 0 : 1)].push(
+                P[(D = R < 5 ? 0 : 1)].push(
                   m.a.createElement(
                     "div",
                     {
@@ -8146,7 +8189,7 @@
                   m.a.createElement(
                     _e.a,
                     {
-                      to: P(I.account_id),
+                      to: L(I.account_id),
                       key: "player_account_" + I.account_id,
                       className: A(
                         Ga.a.Player,
@@ -8324,12 +8367,12 @@
                       m.a.createElement(
                         "div",
                         { className: A(Ga.a.TeamHeroStats, Ga.a.Radiant) },
-                        L[0]
+                        P[0]
                       ),
                       m.a.createElement(
                         "div",
                         { className: A(Ga.a.TeamHeroStats, Ga.a.Dire) },
-                        L[1]
+                        P[1]
                       )
                     )
                   ),
@@ -8790,7 +8833,7 @@
           o = e.isLeft;
         return m.a.createElement(
           _e.a,
-          { to: P(r), className: A(Wa.a.Player, !o && Wa.a.Right) },
+          { to: L(r), className: A(Wa.a.Player, !o && Wa.a.Right) },
           m.a.createElement(We, {
             className: Wa.a.Image,
             src: l.g_App.getPlayerImageURL(r),
@@ -9378,7 +9421,7 @@
         return m.a.createElement(
           _e.a,
           {
-            to: L(p, u),
+            to: P(p, u),
             className: A(
               rt.a.BracketNode,
               l && rt.a.InProgress,
@@ -10541,7 +10584,7 @@
                   src: l.g_App.getPlayerImageURL(this.props.id),
                   fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                 })),
-                  (a = P(this.props.id));
+                  (a = L(this.props.id));
                 break;
               case l.EFavoriteType.Team:
                 (e = m.a.createElement(We, {
@@ -11099,7 +11142,7 @@
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
-      Pt = (function (e) {
+      Lt = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -11147,13 +11190,13 @@
                         component: ba,
                       }),
                       m.a.createElement(p.a, {
-                        path: P(":playerID"),
+                        path: L(":playerID"),
                         component: Ea,
                       }),
                       m.a.createElement(p.a, { path: S(), component: Na }),
                       m.a.createElement(p.a, {
-                        path: L(":leagueID", ":seriesID"),
-                        component: La,
+                        path: P(":leagueID", ":seriesID"),
+                        component: Pa,
                       }),
                       m.a.createElement(p.a, {
                         path: R(":leagueID", ":nodeID"),
@@ -11190,7 +11233,7 @@
           a
         );
       })(m.a.Component),
-      Lt = Pt,
+      Pt = Lt,
       Rt = t("2lpH"),
       It = t.n(Rt),
       Ot = t("i8i4");
@@ -12174,7 +12217,7 @@
         }),
         (e.prototype.Init = function () {
           Ot.render(
-            g.createElement(Lt, { app: this }),
+            g.createElement(Pt, { app: this }),
             document.getElementById("dpc_root")
           );
         }),
