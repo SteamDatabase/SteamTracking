@@ -1,5 +1,5 @@
 {
-  "revision": 356,
+  "revision": 358,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -751,155 +751,1044 @@
         }
       ]
     },
-    "mam2": {
-      "desc": "Multiplay Amsterdam 2",
+    "mam1": {
+      "desc": "Multiplay Amsterdam 1",
       "groups": [
-        "multiplay"
+        "multiplay",
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
       "ping_only": true,
       "relay_addresses": [
-        "172.255.10.108:27015-27022"
+        "185.251.117.142:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "185.251.117.142",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mam2": {
+      "desc": "Multiplay Amsterdam 2",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "172.255.10.108:27015-27020"
       ],
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "ipv4": "172.255.10.108",
-          "port_range": [ 27015, 27022 ]
+          "port_range": [ 27015, 27020 ]
         }
       ]
     },
     "mam3": {
       "desc": "Multiplay Amsterdam 3",
       "groups": [
-        "multiplay"
+        "multiplay",
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
       "ping_only": true,
       "relay_addresses": [
-        "107.6.141.102:27015-27022"
+        "107.6.141.102:27015-27020"
       ],
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "ipv4": "107.6.141.102",
-          "port_range": [ 27015, 27022 ]
+          "port_range": [ 27015, 27020 ]
         }
       ]
     },
     "mam4": {
       "desc": "Multiplay Amsterdam 4",
       "groups": [
-        "multiplay"
+        "multiplay",
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
       "ping_only": true,
       "relay_addresses": [
-        "109.123.102.100:27015-27022"
+        "109.123.102.100:27015-27020"
       ],
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "ipv4": "109.123.102.100",
-          "port_range": [ 27015, 27022 ]
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mas1": {
+      "desc": "Multiplay Ashburn",
+      "geo": [ 39.03, -77.471111 ],
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "172.106.10.82:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "172.106.10.82",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mat1": {
+      "desc": "Multiplay Atlanta 1",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "172.96.121.162:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "172.96.121.162",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mat2": {
+      "desc": "Multiplay Atlanta 2",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "66.71.252.67:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "66.71.252.67",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mch1": {
+      "desc": "Multiplay Chicago",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "172.107.199.166:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "172.107.199.166",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mdc1": {
+      "desc": "Multiplay Washington DC 1",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "128.14.201.62:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "128.14.201.62",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mdc2": {
+      "desc": "Multiplay Washington DC 2",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "173.233.152.114:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "173.233.152.114",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mdf1": {
+      "desc": "Multiplay Dallas 1",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "172.106.1.154:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "172.106.1.154",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mdf2": {
+      "desc": "Multiplay Dallas 2",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "142.0.192.44:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "142.0.192.44",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mdf3": {
+      "desc": "Multiplay Dallas 3",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "107.6.103.50:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "107.6.103.50",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mdf4": {
+      "desc": "Multiplay Dallas 4",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "174.127.113.131:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "174.127.113.131",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mfr1": {
+      "desc": "Multiplay Frankfurt 1",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "23.90.147.90:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "23.90.147.90",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mfr2": {
+      "desc": "Multiplay Frankfurt 2",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "185.225.208.183:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "185.225.208.183",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mfr3": {
+      "desc": "Multiplay Frankfurt 3",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "151.106.55.79:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "151.106.55.79",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mhk1": {
+      "desc": "Multiplay Hong Kong 1",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "103.15.105.13:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "103.15.105.13",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mhk2": {
+      "desc": "Multiplay Hong Kong 2",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "119.42.62.100:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "119.42.62.100",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mhk3": {
+      "desc": "Multiplay Hong Kong 3",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "69.88.134.132:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "69.88.134.132",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mhk4": {
+      "desc": "Multiplay Hong Kong 4",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "119.81.135.10:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "119.81.135.10",
+          "port_range": [ 27015, 27020 ]
         }
       ]
     },
     "mla1": {
       "desc": "Multiplay Los Angeles",
       "groups": [
-        "multiplay"
+        "multiplay",
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
       "ping_only": true,
       "relay_addresses": [
-        "104.149.128.218:27015-27022"
+        "104.149.128.218:27015-27020"
       ],
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "ipv4": "104.149.128.218",
-          "port_range": [ 27015, 27022 ]
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mln1": {
+      "desc": "Multiplay London 1",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "23.90.176.30:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "23.90.176.30",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mln2": {
+      "desc": "Multiplay London 2",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "64.46.108.42:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "64.46.108.42",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mln3": {
+      "desc": "Multiplay London 3",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "88.202.180.26:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "88.202.180.26",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mln4": {
+      "desc": "Multiplay London 4",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "88.150.220.99:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "88.150.220.99",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mlx1": {
+      "desc": "Multiplay Luxembourg City",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "188.42.41.30:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "188.42.41.30",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mmi1": {
+      "desc": "Multiplay Miami 1",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "128.14.216.246:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "128.14.216.246",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mmi2": {
+      "desc": "Multiplay Miami 2",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "107.181.164.90:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "107.181.164.90",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mny1": {
+      "desc": "Multiplay New York 1",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "107.152.101.251:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "107.152.101.251",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mny2": {
+      "desc": "Multiplay New York 2",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "107.150.147.12:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "107.150.147.12",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mny3": {
+      "desc": "Multiplay New York 3",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "107.182.226.141:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "107.182.226.141",
+          "port_range": [ 27015, 27020 ]
         }
       ]
     },
     "msa1": {
       "desc": "Multiplay Salt Lake City",
       "groups": [
-        "multiplay"
+        "multiplay",
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
       "ping_only": true,
       "relay_addresses": [
-        "107.182.228.233:27015-27022"
+        "107.182.228.233:27015-27020"
       ],
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "ipv4": "107.182.228.233",
-          "port_range": [ 27015, 27022 ]
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msg1": {
+      "desc": "Multiplay Singapore 1",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "103.126.138.126:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "103.126.138.126",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msg2": {
+      "desc": "Multiplay Singapore 2",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "103.23.210.180:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "103.23.210.180",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msg3": {
+      "desc": "Multiplay Singapore 3",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "107.6.114.205:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "107.6.114.205",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msg4": {
+      "desc": "Multiplay Singapore 4",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "128.1.231.10:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "128.1.231.10",
+          "port_range": [ 27015, 27020 ]
         }
       ]
     },
     "msj1": {
       "desc": "Multiplay San Jose 1",
       "groups": [
-        "multiplay"
+        "multiplay",
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
       "ping_only": true,
       "relay_addresses": [
-        "169.197.126.10:27015-27022"
+        "169.197.126.10:27015-27020"
       ],
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "ipv4": "169.197.126.10",
-          "port_range": [ 27015, 27022 ]
+          "port_range": [ 27015, 27020 ]
         }
       ]
     },
     "msj2": {
       "desc": "Multiplay San Jose 2",
       "groups": [
-        "multiplay"
+        "multiplay",
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
       "ping_only": true,
       "relay_addresses": [
-        "173.237.41.100:27015-27022"
+        "173.237.41.100:27015-27020"
       ],
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "ipv4": "173.237.41.100",
-          "port_range": [ 27015, 27022 ]
+          "port_range": [ 27015, 27020 ]
         }
       ]
     },
     "msj3": {
       "desc": "Multiplay San Jose 3",
       "groups": [
-        "multiplay"
+        "multiplay",
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
       "ping_only": true,
       "relay_addresses": [
-        "192.170.153.164:27015-27022"
+        "192.170.153.164:27015-27020"
       ],
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "ipv4": "192.170.153.164",
-          "port_range": [ 27015, 27022 ]
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msl1": {
+      "desc": "Multiplay St. Louis",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "148.72.132.230:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "148.72.132.230",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msp1": {
+      "desc": "Multiplay Sao Paulo 1",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "172.107.217.94:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "172.107.217.94",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msp2": {
+      "desc": "Multiplay Sao Paulo 2",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "177.54.146.81:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "177.54.146.81",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mst1": {
+      "desc": "Multiplay Strasbourg",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "151.106.28.249:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "151.106.28.249",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msy1": {
+      "desc": "Multiplay Sydney 1",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "172.107.210.230:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "172.107.210.230",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msy2": {
+      "desc": "Multiplay Sydney 2",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "137.59.252.194:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "137.59.252.194",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "msy3": {
+      "desc": "Multiplay Sydney 3",
+      "groups": [
+        "multiplay",
+        "mplay-csgo"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "221.121.158.233:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "221.121.158.233",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mtp1": {
+      "desc": "Multiplay Taipei",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "103.78.122.226:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "103.78.122.226",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mty1": {
+      "desc": "Multiplay Tokyo 1",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "103.102.160.10:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "103.102.160.10",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mty2": {
+      "desc": "Multiplay Tokyo 2",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "122.10.153.106:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "122.10.153.106",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mty3": {
+      "desc": "Multiplay Tokyo 3",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "103.208.220.58:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "103.208.220.58",
+          "port_range": [ 27015, 27020 ]
+        }
+      ]
+    },
+    "mty4": {
+      "desc": "Multiplay Tokyo 4",
+      "groups": [
+        "multiplay",
+        "mplay-dota"
+      ],
+      "has_gameservers": false,
+      "partners": 4,
+      "ping_only": true,
+      "relay_addresses": [
+        "128.168.109.10:27015-27020"
+      ],
+      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "ipv4": "128.168.109.10",
+          "port_range": [ 27015, 27020 ]
         }
       ]
     },
