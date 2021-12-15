@@ -449,7 +449,7 @@
                 this.m_facets,
                 1,
                 T.k.k_ESortFacetsByMatchCount,
-                Object(f.j)(g.d.LANGUAGE),
+                Object(f.k)(g.d.LANGUAGE),
                 !1,
                 !0
               )),
@@ -1175,7 +1175,7 @@
                     "div",
                     { key: "" + e.item_type + e.id, className: P },
                     s.GetViewType() === r.k_EList
-                      ? o.a.createElement(N.m, {
+                      ? o.a.createElement(N.l, {
                           id: e.id,
                           type: a,
                           bShowDemoButton: !1,
@@ -1226,7 +1226,7 @@
               { className: x.FacetMenuCtn },
               o.a.createElement(O.e, {
                 facetFilterState: a,
-                language: Object(f.j)(g.d.LANGUAGE),
+                language: Object(f.k)(g.d.LANGUAGE),
                 nMaxFacetValues: 5,
                 fnOnUpdateFilter: function () {
                   return (
@@ -1327,7 +1327,7 @@
                       });
                     },
                   }),
-                  o.a.createElement(B.F, null)
+                  o.a.createElement(B.M, null)
                 ),
                 o.a.createElement(L.h, {
                   rgOptions: p,

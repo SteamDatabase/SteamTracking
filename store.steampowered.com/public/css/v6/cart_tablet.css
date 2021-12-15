@@ -36,9 +36,11 @@
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
 	--gpBackground-LightSoft: #3b5a7280;
-	--gpBackground-LightMedium: #678BA680;
+	--gpBackground-LightMedium: #678BA670;
 	--gpBackground-LightHard: #93B8D480;
+	--gpBackground-LightHarder: #bad5ea80;
 
+	--gpBackground-DarkSofter: #0e141b33;
 	--gpBackground-DarkSoft: #0e141b66;
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
@@ -113,12 +115,12 @@
 		display: flex;
 		align-items: center;
 		margin-top: 4px;
-		transition: all 0.3s ease;
+		transition: var(--gpTransition-Short);
 	}
 
 	html.responsive .cart_item:focus-within {
 		background-color: var(--gpBackground-LightMedium);
-		transition: all 0.3s ease;
+		transition: var(--gpTransition-Short);
 	}
 
 	html.responsive .cart_item_price_container {
@@ -144,6 +146,7 @@
 
 	html.responsive .cart_item_img a {
 		display: flex;
+		box-shadow: var(--gpShadow-Medium);
 	}
 
 	html.responsive .cart_item_desc {
@@ -183,6 +186,11 @@
 	html.responsive .remove_link {
 		font: var(--gpText-BodyLarge);
 		color: unset;
+		transition: var(--gpTransition-Shorter);
+	}
+
+	html.responsive .cart_item_price .remove_link:hover {
+		background: var(--gpBackground-LightHard);
 	}
 
 	html.responsive .cart_item .platform_img {
@@ -264,14 +272,31 @@
 		left: 50%;
 		transform: translateX(-50%);
 		box-shadow: var(--gpShadow-Large);
-		opacity: 0.94;
+		opacity: 0;
+		bottom: -40px;
 	}
 
-	html.responsive .cart_status_message_ctn .cart_status_message,
-	html.responsive .checkout_error {
+	html.responsive .cart_status_message_ctn {
+		animation: slideOut 2.8s ease 0.4s;
+	}
+
+	@keyframes slideOut {
+		0% { bottom: -40px;  }
+		12% { bottom: 24px; opacity: 0.94; }
+		92% { bottom: 24px; animation-timing-function: ease-in; opacity: 1; }
+		100% { bottom: -40px; }
+	}
+
+	html.responsive .cart_status_message_ctn .cart_status_message {
 		margin: unset;
-		padding: 8px 16px;
-		line-height: unset;
+		padding: 10px 24px;
+		font: var(--gpText-Large);
+		border-radius: var(--gpCorner-Large);
+	}
+
+	html.responsive .checkout_error {
+		padding: 8px 12px;
+		margin: unset;
 		font: var(--gpText-BodyMedium);
 		border-radius: var(--gpCorner-Large);
 	}
@@ -455,6 +480,13 @@
 		padding: 0px;
 		float: unset;
 		background: unset;
+		position: relative;
+	}
+
+	html.responsive .recommended_grid .special .ds_steam_deck_compat {
+		background-color: var(--gpBackground-DarkMedium);
+		backdrop-filter: blur(24px);
+		bottom: 28px;
 	}
 
 	html.responsive .recommended_grid .special:nth-last-child(2) {
@@ -465,6 +497,15 @@
 		width: 100%;
 		height: auto;
 	}
+
+	html.responsive .discount_block_collapsable {
+		width: unset;
+	}
+
+	html.responsive .recommended_grid .special .discount_block_collapsable .discount_collapse_final_price {
+		background: unset;
+	}
+
 
 
 
@@ -518,6 +559,7 @@
 		margin-left: -24px;
 		margin-right: -24px;
 	}
+
 
 
 }

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6941653";
+var CLSTAMP = "6960742";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -550,8 +550,8 @@ var CLSTAMP = "6941653";
       }
       function _() {
         return u.a.useMemo(function () {
-          var e;
           return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : b;
+          var e;
         }, []);
       }
     },
@@ -2905,7 +2905,6 @@ var CLSTAMP = "6941653";
             x: "0px",
             y: "0px",
           },
-          o.createElement("title", null, "help and info"),
           o.createElement("path", {
             d:
               "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
@@ -3648,23 +3647,23 @@ var CLSTAMP = "6941653";
         f = Object(a.a)("VirtualKeyboardRefFactory", function () {
           return new m();
         });
-      function g(e) {
-        var t,
-          n = e.onTextEntered,
-          o = Object(r.f)(e, ["onTextEntered"]),
-          a = i.a.useRef(),
-          s = i.a.useRef({
+      function g(e, t) {
+        var n,
+          o = e.onTextEntered,
+          a = Object(r.f)(e, ["onTextEntered"]),
+          s = i.a.useRef(),
+          u = i.a.useRef({
             onTextEntered: function () {
               return null;
             },
           });
         Object.assign(
-          s.current,
-          Object(r.a)(Object(r.a)({}, o), {
+          u.current,
+          Object(r.a)(Object(r.a)({}, a), {
             onTextEntered:
-              n ||
-              ((t = a),
-              function (e, n) {
+              o ||
+              ((n = s),
+              function (e, t) {
                 if (
                   !(function (e) {
                     if ("Backspace" == e)
@@ -3684,9 +3683,9 @@ var CLSTAMP = "6941653";
                       );
                     return !1;
                   })(e) &&
-                  t.current
+                  n.current
                 ) {
-                  var r = t.current,
+                  var r = n.current,
                     o = r.value;
                   !(function (e, t, n) {
                     var r = e,
@@ -3748,7 +3747,7 @@ var CLSTAMP = "6941653";
                             r.value.length,
                             "none"
                           );
-                  })(r, e, n);
+                  })(r, e, t);
                   var i = r.value;
                   if (o !== i) {
                     var a = new Event("input", { bubbles: !0 });
@@ -3757,54 +3756,78 @@ var CLSTAMP = "6941653";
                 }
               }),
             BIsElementValidForInput: function () {
-              return a.current && document.activeElement == a.current;
+              return s.current && document.activeElement == s.current;
             },
           })
         );
-        var c = (function (e) {
+        var p = (function (e) {
             var t = i.a.useRef();
             t.current || (t.current = f.CreateVirtualKeyboardRef(e));
             return t.current;
-          })(s.current),
-          u = i.a.useCallback(
+          })(u.current),
+          d = i.a.useCallback(
             function (e) {
-              (document.hasFocus() || document.activeElement != a.current) &&
-                (e.currentTarget == a.current
-                  ? c.BIsActive() && c.DelayHideVirtualKeyboard()
+              (document.hasFocus() || document.activeElement != s.current) &&
+                (e.currentTarget == s.current
+                  ? p.BIsActive() && p.DelayHideVirtualKeyboard()
                   : console.warn(
                       "keyboard got blur event, but it's not the active element"
                     ));
             },
-            [c]
+            [p]
           ),
-          p = i.a.useRef();
-        return i.a.useCallback(
-          function (e) {
-            (a.current = e),
-              p.current &&
-                p.current.forEach(function (e) {
-                  return e();
-                }),
-              (p.current = []),
-              e &&
-                (e.addEventListener(
-                  "focus",
-                  c.SetAsCurrentVirtualKeyboardTarget
-                ),
-                p.current.push(function () {
-                  return e.removeEventListener(
+          m = i.a.useRef(),
+          g = i.a.useCallback(
+            function (e) {
+              (s.current = e),
+                m.current &&
+                  m.current.forEach(function (e) {
+                    return e();
+                  }),
+                (m.current = []),
+                e &&
+                  (e.addEventListener(
                     "focus",
-                    c.SetAsCurrentVirtualKeyboardTarget
-                  );
+                    p.SetAsCurrentVirtualKeyboardTarget
+                  ),
+                  m.current.push(function () {
+                    return e.removeEventListener(
+                      "focus",
+                      p.SetAsCurrentVirtualKeyboardTarget
+                    );
+                  }),
+                  e.addEventListener("click", p.ShowVirtualKeyboard),
+                  m.current.push(function () {
+                    return e.removeEventListener(
+                      "click",
+                      p.ShowVirtualKeyboard
+                    );
+                  }),
+                  m.current.push(Object(l.l)(s.current, p.ShowVirtualKeyboard)),
+                  m.current.push(Object(l.e)(s.current, d)));
+            },
+            [d, p]
+          );
+        return (
+          i.a.useLayoutEffect(
+            function () {
+              return (
+                Object(c.c)(t, {
+                  TakeFocusAndShowKeyboard: function () {
+                    var e = s.current;
+                    e &&
+                      (document.activeElement != e && e.focus(),
+                      p.ShowVirtualKeyboard());
+                  },
                 }),
-                e.addEventListener("click", c.ShowVirtualKeyboard),
-                p.current.push(function () {
-                  return e.removeEventListener("click", c.ShowVirtualKeyboard);
-                }),
-                p.current.push(Object(l.l)(a.current, c.ShowVirtualKeyboard)),
-                p.current.push(Object(l.e)(a.current, u)));
-          },
-          [u, c]
+                function () {
+                  return Object(c.c)(t, null);
+                }
+              );
+            },
+            [p, t]
+          ),
+          g
         );
       }
       function b(e, t, n) {
@@ -4089,9 +4112,11 @@ var CLSTAMP = "6941653";
             })(t),
             i = o.virtualKeyboardProps,
             a = o.props,
-            s = g(i),
-            l = Object(c.f)(n, s);
-          return S(e, a, l);
+            s = a.refKeyboardHandle,
+            l = Object(r.f)(a, ["refKeyboardHandle"]),
+            u = g(i, s),
+            p = Object(c.f)(n, u);
+          return S(e, l, p);
         });
       }
     },
@@ -5763,6 +5788,12 @@ var CLSTAMP = "6941653";
               Object(g.a)(this.m_ActiveOverlay == e, "Active overlay mismatch"),
                 this.m_ActiveOverlay == e && (this.m_ActiveOverlay = null);
             }),
+            (e.prototype.RegisterOnModalShownCallback = function (e) {
+              this.m_fnOnModalShown = e;
+            }),
+            (e.prototype.RegisterOnModalHiddenCallback = function (e) {
+              this.m_fnOnModalHidden = e;
+            }),
             Object.defineProperty(e.prototype, "hasOverlay", {
               get: function () {
                 return null != this.m_ActiveOverlay;
@@ -5808,10 +5839,13 @@ var CLSTAMP = "6941653";
               return (
                 this.m_rgModals.push(e),
                 this.ForceUpdate(),
+                this.m_fnOnModalShown && this.m_fnOnModalShown(),
                 {
                   Close: function () {
                     var n = t.m_rgModals.indexOf(e);
-                    -1 != n && t.m_rgModals.splice(n, 1), t.ForceUpdate();
+                    -1 != n && t.m_rgModals.splice(n, 1),
+                      t.ForceUpdate(),
+                      t.m_fnOnModalHidden && t.m_fnOnModalHidden();
                   },
                   Update: function (n) {
                     (e.element = n), t.ForceUpdate();
@@ -14575,7 +14609,7 @@ var CLSTAMP = "6941653";
             return t;
         }
       }
-      var u, p, d, h, m;
+      var u, p, d, h, m, f, g;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -14631,7 +14665,21 @@ var CLSTAMP = "6941653";
               "k_EAppUpdateContentType_Shader"),
             (e[(e.k_EAppUpdateContentType_Max = 3)] =
               "k_EAppUpdateContentType_Max");
-        })(m || (m = {}));
+        })(m || (m = {})),
+        (function (e) {
+          (e[(e.k_EOverlayToStoreFlag_None = 0)] =
+            "k_EOverlayToStoreFlag_None"),
+            (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
+              "k_EOverlayToStoreFlag_AddToCart"),
+            (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
+              "k_EOverlayToStoreFlag_AddToCartAndShow");
+        })(f || (f = {})),
+        (function (e) {
+          (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
+            "k_EActivateGameOverlayToWebPageMode_Default"),
+            (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
+              "k_EActivateGameOverlayToWebPageMode_Modal");
+        })(g || (g = {}));
     },
     nmPn: function (e, t, n) {
       "use strict";

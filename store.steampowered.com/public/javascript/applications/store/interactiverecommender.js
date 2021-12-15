@@ -1332,7 +1332,7 @@
                               return e.onMuteToggle(t);
                             },
                           },
-                          l.a.createElement(m.ib, { muted: T.shouldMute() })
+                          l.a.createElement(m.tb, { muted: T.shouldMute() })
                         ),
                       this.state.wishlisted &&
                         l.a.createElement(

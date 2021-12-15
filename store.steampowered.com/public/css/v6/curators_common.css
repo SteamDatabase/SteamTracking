@@ -326,3 +326,7 @@ background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 1
 .curator_hidden_page_message a {
 	text-decoration: underline;
 }
+
+.steam_curator_for_app_name {
+	display: none;
+}

@@ -152,6 +152,7 @@
 
 	html.responsive #main_content .two_column.right {
 		padding: var(--gpSpace-Gap) var(--gpSpace-Gutter);
+		min-height: 100vh;
 	}
 
 	html.responsive .page_header_ctn .page_content {
@@ -171,7 +172,7 @@
 	}
 
 	html.responsive #main_content {
-		
+
 	}
 
 	html.responsive .account_settings_container {

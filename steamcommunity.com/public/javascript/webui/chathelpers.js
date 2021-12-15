@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6943766";
+var CLSTAMP = "6960742";
 !(function (e) {
   function t(t) {
     for (
@@ -119,42 +119,42 @@ var CLSTAMP = "6943766";
               ".js?contenthash=" +
               {
                 9: "51d9833326b9684fcced",
-                10: "c1758d857fe2ae3bcfa4",
-                11: "5466aa5c7fbb7f76eed8",
-                12: "d9eb9044bca89856494d",
-                13: "7241b754a4298c6e7fbb",
-                14: "28ea2b708fb6a70916f1",
-                15: "6257ccb280c5f6500122",
-                16: "01837aa6d1ee53ba10c7",
-                17: "0e4372f801e893e2b779",
-                18: "d5589681372af5628864",
-                19: "68e81046548b51506ae5",
-                20: "bfe385adc63900ce1a1a",
-                21: "75af601b87b9d76519eb",
-                22: "483c0e474412527b3222",
-                23: "146187e16c42172ca1c3",
-                24: "880d70e1eb850cc5deea",
-                25: "2aeaefd15ba52a03c98e",
-                26: "dc922e8b2effaaa3c6ef",
-                27: "06bcd6c190e12ee13e19",
-                28: "e0d7a837f737cade2354",
-                29: "ba105c9bafc23bc9ed6f",
+                10: "7777388ee68df4414c20",
+                11: "f8bf50695a6e59d8ef18",
+                12: "e6b9005f59d3ae37b121",
+                13: "d55eb76bdbb1f45dd062",
+                14: "29ae7abada74dfddb941",
+                15: "22b27437a3371a7e66c1",
+                16: "e1bcaf051a2b23b2922c",
+                17: "bdf9a19b96cef035765b",
+                18: "9677b3dbdf20f1dc9b79",
+                19: "0707d4241ec9b2397551",
+                20: "cc94468ab389608a1740",
+                21: "8f5e285ebef39670ec85",
+                22: "708bfc921bcee458218b",
+                23: "7a265630cb962ac9adc9",
+                24: "dc8eccf0fc8f486643d2",
+                25: "3d07e52919e7c3588725",
+                26: "80a382f36243f1d1e430",
+                27: "71f3866545416e7d366b",
+                28: "7b9f7e9b38ad5119918d",
+                29: "3ee7c6f4aa7318c9ba16",
                 30: "6d7365c7989476aed423",
-                31: "af0a1252567919011286",
-                32: "17b0a184aa7eef4e1531",
-                33: "756b139648b2b43edcb2",
-                34: "21e9c60cc8edc07edd19",
-                35: "39774ad939ec9789c1c9",
-                36: "fd76b3d3686062d06894",
-                37: "b9ec7c20293707d14a45",
-                38: "cc5e3f5d4a4d3eb8fc0a",
+                31: "ddaae539ba8bd019e1e8",
+                32: "3f5d383d592a3792521e",
+                33: "e482bc7bc443af15506f",
+                34: "54ad9b4edaa58aad1c8e",
+                35: "4d9ef2a0b73b9a85358f",
+                36: "94f8137618b9c3b943fa",
+                37: "8c6c44368fef944a071d",
+                38: "6c18c615062857ce2172",
                 39: "01e61b4c2d0faedc8e45",
-                40: "7024b1154b21af90bf4c",
+                40: "5c91d242565d0f85623f",
                 41: "d9c6f7253d236fe01141",
                 42: "bdbbf57f251f4a099bc5",
                 43: "300ce2b4e4314fe64ec0",
-                44: "bee7d5e35a046e3f3c25",
-                45: "7bc6f014f3b88abcf223",
+                44: "74a25eb7de6bdb4f47f4",
+                45: "73231f7058b71787aa76",
                 46: "ed324ea449b4261c4741",
                 47: "1d09ebf81e92ebc3d98d",
                 48: "d00fff0d5a3b5fde367c",
@@ -162,15 +162,15 @@ var CLSTAMP = "6943766";
                 50: "d34f988386795fcbf6cf",
                 51: "86fb5a60e58716d0fa5a",
                 52: "d32c9a3a39f72f32900a",
-                53: "d31caef8d064a4364100",
+                53: "7dee222e8ae45894a43b",
                 54: "698e82997b6227f27230",
                 55: "025211bc90aa6259a61a",
                 56: "3efe0dd5ee5df9048d5d",
-                57: "6c5c0ac0616e0b1be217",
+                57: "20fd0520e5d0a0d94ea6",
                 58: "94804a5770115415f15a",
                 59: "cb61bac1306f146fffc3",
                 60: "f38c73d28c350eb2f7c9",
-                61: "8a0266e7f50c0928e923",
+                61: "4995fd01027ccecee022",
                 62: "3c23f949a887f14a554c",
                 63: "58d7117d3e7ff26973db",
                 64: "199c002846d639f2da64",
@@ -562,7 +562,7 @@ var CLSTAMP = "6943766";
           return t;
       }
     }
-    var y, C, k, S, T;
+    var y, C, k, S, T, I, R;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -618,7 +618,20 @@ var CLSTAMP = "6943766";
             "k_EAppUpdateContentType_Shader"),
           (e[(e.k_EAppUpdateContentType_Max = 3)] =
             "k_EAppUpdateContentType_Max");
-      })(T || (T = {}));
+      })(T || (T = {})),
+      (function (e) {
+        (e[(e.k_EOverlayToStoreFlag_None = 0)] = "k_EOverlayToStoreFlag_None"),
+          (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
+            "k_EOverlayToStoreFlag_AddToCart"),
+          (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
+            "k_EOverlayToStoreFlag_AddToCartAndShow");
+      })(I || (I = {})),
+      (function (e) {
+        (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
+          "k_EActivateGameOverlayToWebPageMode_Default"),
+          (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
+            "k_EActivateGameOverlayToWebPageMode_Modal");
+      })(R || (R = {}));
   },
   "1n9R": function (e, t, n) {
     "use strict";
@@ -2367,7 +2380,7 @@ var CLSTAMP = "6943766";
           (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
             "k_EHTTPProxyMode_Automatic");
       })(R || (R = {}));
-    var O, L;
+    var O, A;
     !(function (e) {
       (e[(e.SystemKey0 = 0)] = "SystemKey0"),
         (e[(e.SystemKey1 = 1)] = "SystemKey1");
@@ -2378,7 +2391,7 @@ var CLSTAMP = "6943766";
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque"),
           (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-      })(L || (L = {}));
+      })(A || (A = {}));
   },
   mrSG: function (e, t, n) {
     "use strict";

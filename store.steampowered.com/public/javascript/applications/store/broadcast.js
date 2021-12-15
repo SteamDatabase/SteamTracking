@@ -8504,7 +8504,7 @@
               (this.m_regexBannedWords = null),
               (this.m_regexCleanWords = null),
               (this.m_bShownFilterTip = !1),
-              (this.m_TextFilterPreferences = new Gt.k());
+              (this.m_TextFilterPreferences = new Gt.l());
             var e = new Pt.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
@@ -10281,7 +10281,7 @@
                     "#BroadcastChat_Role_Presenter_ttip"
                   ),
                 },
-                s.createElement(ar.g, null)
+                s.createElement(ar.i, null)
               );
             case "moderator":
               return s.createElement(
@@ -10292,7 +10292,7 @@
                     "#BroadcastChat_Role_Moderatorr_ttip"
                   ),
                 },
-                s.createElement(ar.h, null)
+                s.createElement(ar.j, null)
               );
             case "broadcaster":
               return s.createElement(
@@ -10303,7 +10303,7 @@
                     "#BroadcastChat_Role_Broadcaster_ttip"
                   ),
                 },
-                s.createElement(ar.f, null)
+                s.createElement(ar.h, null)
               );
             default:
               return null;
@@ -10797,7 +10797,7 @@
                     t.SendMessage(a), o("");
                   },
                 },
-                s.createElement(ar.Y, null)
+                s.createElement(ar.ib, null)
               )
             ),
             s.createElement(
@@ -10844,7 +10844,7 @@
               emoticonHoverStore: Ht.a,
               strFlairGroupID: r.m_strFlairGroupID,
               title: Object(St.f)("#ChatEntryButton_Flair"),
-              buttonIcon: s.createElement(ar.i, null),
+              buttonIcon: s.createElement(ar.k, null),
             })
           : null;
       }
@@ -11424,14 +11424,14 @@
                   (a = Object(n.a)(Object(n.a)({}, a), {
                     left_panel: c.GetImageURL(
                       "broadcast_left",
-                      d || Object(Gt.j)(zt.d.LANGUAGE)
+                      d || Object(Gt.k)(zt.d.LANGUAGE)
                     ),
                     right_panel: c.GetImageURL(
                       "broadcast_right",
-                      d || Object(Gt.j)(zt.d.LANGUAGE)
+                      d || Object(Gt.k)(zt.d.LANGUAGE)
                     ),
                     store_title: c.GetBroadcastTitle(
-                      d || Object(Gt.j)(zt.d.LANGUAGE)
+                      d || Object(Gt.k)(zt.d.LANGUAGE)
                     ),
                     broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
@@ -11468,7 +11468,7 @@
                             "bordered_title_trgt"
                           ),
                         },
-                        s.createElement(Ur.j, null),
+                        s.createElement(Ur.i, null),
                         f,
                         s.createElement(
                           "div",
@@ -11700,7 +11700,7 @@
                     "#BroadcastWatch_View_Broadcast_Page"
                   ),
                 },
-                s.createElement(ar.y, null)
+                s.createElement(ar.C, null)
               );
             }),
             (t.prototype.OnToggleChat = function (e) {
@@ -11736,7 +11736,7 @@
                   {
                     className: Object(or.a)(Dr.a.viewer_count, "viewer_count"),
                   },
-                  s.createElement(ar.hb, null),
+                  s.createElement(ar.sb, null),
                   n.toLocaleString(St.e.GetPreferredLocales())
                 ),
                 s.createElement(
@@ -11762,7 +11762,7 @@
                     s.createElement(
                       "div",
                       { className: Dr.a.chat_link },
-                      s.createElement(ar.j, null),
+                      s.createElement(ar.l, null),
                       s.createElement(
                         "a",
                         {
@@ -11790,7 +11790,7 @@
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    s.createElement(ar.T, null)
+                    s.createElement(ar.cb, null)
                   ),
                   e
                 )
@@ -11850,7 +11850,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(ar.lb, null)
+              s.createElement(ar.wb, null)
             )
           );
         }),
@@ -12033,7 +12033,7 @@
                     ? s.createElement(
                         s.Fragment,
                         null,
-                        s.createElement(ar.hb, null),
+                        s.createElement(ar.sb, null),
                         " ",
                         c.toLocaleString(St.e.GetPreferredLocales())
                       )

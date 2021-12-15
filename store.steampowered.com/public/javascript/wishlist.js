@@ -152,6 +152,31 @@ CWishlistController.prototype.OnPageLoaded = function( data )
 		this.BuildElements();
 }
 
+CWishlistController.prototype.RemoveFromWishlist = function( nAppId = 0 )
+{
+	if( !g_bCanEdit || nAppId == 0 )
+		return;
+
+	var _this = this;
+	var strName = g_rgAppInfo[nAppId].name;
+
+	ShowConfirmDialog("Remove this item from your wishlist?", "Are you sure you want to remove '%1$s' from your wishlist?<br><br>It can be re-added via the store page at any time.".replace(/%1\$s/,V_EscapeHTML(strName))).done(function(){
+
+		$J.ajax({
+			type: "POST",
+			url: g_strWishlistBaseURL + 'remove/',
+			data: {'appid':nAppId, sessionid: g_sessionID}
+		});
+		GDynamicStore.InvalidateCache();
+
+		$J( '#wishlist_ctn' ).removeClass ( 'sorting' );
+
+		delete g_rgAppInfo[ nAppId ];
+		_this.rgAllApps = Object.keys(g_rgAppInfo);
+		_this.Update ( true );
+	});
+}
+
 CWishlistController.prototype.BuildElements = function()
 {
 	var _this = this;
@@ -179,26 +204,7 @@ CWishlistController.prototype.BuildElements = function()
 		var $el = $J(this).closest('.wishlist_row');
 		var nAppId = $el.data("appId");
 
-		var strName = g_rgAppInfo[nAppId].name
-
-		if( !g_bCanEdit )
-			return;
-
-		ShowConfirmDialog("Remove this item from your wishlist?", "Are you sure you want to remove '%1$s' from your wishlist?<br><br>It can be re-added via the store page at any time.".replace(/%1\$s/,V_EscapeHTML(strName))).done(function(){
-
-			$J.ajax({
-				type: "POST",
-				url: g_strWishlistBaseURL + 'remove/',
-				data: {'appid':nAppId, sessionid: g_sessionID}
-			});
-			GDynamicStore.InvalidateCache();
-
-			$J( '#wishlist_ctn' ).removeClass ( 'sorting' );
-
-			delete g_rgAppInfo[ nAppId ];
-			_this.rgAllApps = Object.keys(g_rgAppInfo);
-			_this.Update ( true );
-		});
+		_this.RemoveFromWishlist( nAppId );
 
 		event.preventDefault();
 		return false;
@@ -342,9 +348,6 @@ CWishlistController.prototype.BuildElements = function()
 
 			if ( g_bIsMobileAgent ) // remove parens around remove text
 				strAdded = strAdded.replace('(', '').replace(')', '');
-
-			if ( g_bIsTabletAgent )
-                strPurchaseArea = "";
 
 			var strSteamDeckCompatCategory = '';
 			if ( rgAppInfo.steam_deck_compat !== undefined )

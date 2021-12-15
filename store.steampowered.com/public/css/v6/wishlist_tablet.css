@@ -36,9 +36,11 @@
 	/* Backgrounds */
 	--gpBackground-LightSofter: #6998bb24;
 	--gpBackground-LightSoft: #3b5a7280;
-	--gpBackground-LightMedium: #678BA680;
+	--gpBackground-LightMedium: #678BA670;
 	--gpBackground-LightHard: #93B8D480;
+	--gpBackground-LightHarder: #bad5ea80;
 
+	--gpBackground-DarkSofter: #0e141b33;
 	--gpBackground-DarkSoft: #0e141b66;
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
@@ -254,17 +256,8 @@
 		text-transform: unset;
 	}
 
-	html.responsive .wishlist_row .lower_container {
-		margin-top: 0px;
-	}
-
 	html.responsive .wishlist_row .platform_icons {
 		margin-bottom: 8px;
-	}
-
-	html.responsive .wishlist_row .purchase_area form,
-	html.responsive .wishlist_row .purchase_area .btn_blue_steamui {
-		display: none;
 	}
 
 	html.responsive .wishlist_row span.platform_img {
@@ -286,5 +279,18 @@
 		display: none;
 	}
 
+	/* pricing and add to cart */
+	html.responsive .wishlist_row .purchase_area .btn_medium {
+		padding: 5px;
+		margin: unset;
+	}
+	html.responsive .wishlist_row .purchase_area .ico_cart {
+		margin-top: 2px;
+	}
 
+	html.responsive .wishlist_row .purchase_area .discount_prices {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }

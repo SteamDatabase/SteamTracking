@@ -1534,7 +1534,7 @@
                 t = this.props.solrData,
                 n = t.unique_id,
                 a = Number(t.appid),
-                r = Object(b.j)(M.d.LANGUAGE),
+                r = Object(b.k)(M.d.LANGUAGE),
                 i = G.c.GetClanEventModel(n),
                 l = null;
               if (i) {
@@ -2642,7 +2642,7 @@
                   r.createElement(
                     "h1",
                     null,
-                    e.GetNameWithFallback(Object(b.j)(M.d.LANGUAGE))
+                    e.GetNameWithFallback(Object(b.k)(M.d.LANGUAGE))
                   ),
                   r.createElement(
                     "div",
@@ -4235,7 +4235,7 @@
           o.a.createElement(
             "div",
             { className: tt.LatestUpdateIcon },
-            o.a.createElement(et.eb, null)
+            o.a.createElement(et.pb, null)
           ),
           o.a.createElement(
             Ye.e,
@@ -4558,8 +4558,8 @@
                     },
                   },
                   i
-                    ? o.a.createElement(et.G, null)
-                    : o.a.createElement(et.J, null)
+                    ? o.a.createElement(et.N, null)
+                    : o.a.createElement(et.Q, null)
                 )
               ),
               i &&

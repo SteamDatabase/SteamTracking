@@ -871,7 +871,8 @@
         Clone: "partnereventtile_Clone_1QJ8I",
         View: "partnereventtile_View_1IvY3",
         Publish: "partnereventtile_Publish_1szIu",
-        CloneLangCtn: "partnereventtile_CloneLangCtn_2EoxS",
+        CloneLangAlert: "partnereventtile_CloneLangAlert_2U-5y",
+        CloneLangListCtn: "partnereventtile_CloneLangListCtn_3Nj5x",
         CloneCheckBox: "partnereventtile_CloneCheckBox_28WRJ",
         MetaDataCtn: "partnereventtile_MetaDataCtn_3EXNJ",
       };
@@ -8454,7 +8455,12 @@
                           },
                           c.createElement(
                             "div",
-                            { className: ht.CloneLangCtn },
+                            { className: ht.CloneLangAlert },
+                            Object(f.f)("#EventEditor_Clone_Alert")
+                          ),
+                          c.createElement(
+                            "div",
+                            { className: ht.CloneLangListCtn },
                             i
                           )
                         ),
@@ -20484,7 +20490,7 @@
             "div",
             null,
             Object(f.f)(
-              o ? "#Sale_Debug_LinkedSection" : "Sale_Debug_Not_LinkedSection"
+              o ? "#Sale_Debug_LinkedSection" : "#Sale_Debug_Not_LinkedSection"
             )
           )
         );
@@ -27805,10 +27811,10 @@
         return n;
       }),
         a.d(t, "b", function () {
-          return q;
+          return Y;
         }),
         a.d(t, "c", function () {
-          return re;
+          return oe;
         });
       var n,
         i = a("mrSG"),
@@ -27841,7 +27847,8 @@
         A = a("opsS"),
         M = a("UxvL"),
         k = a("lkRc"),
-        N = (function (e) {
+        N = a("qDk6"),
+        L = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -27899,13 +27906,14 @@
                     n
                   ),
                   s.createElement(
-                    "div",
+                    N.a,
                     {
                       className: Object(G.a)(
                         w.a.AppDetailsSpotlightContainer,
                         w.a.MajorEventContainer
                       ),
                       onClick: this.OnClick,
+                      focusable: !0,
                     },
                     s.createElement(
                       "div",
@@ -27971,23 +27979,23 @@
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        L = a("Jqb/"),
-        B = a("ka0M"),
-        R = a("6Y59"),
-        F = a("X3Ds"),
-        P = a("TLQK"),
-        x = a("6h0J"),
-        U = a.n(x),
-        H = a("75vw"),
-        V = a("bVxH"),
-        z = a("6Oks"),
-        W = a.n(z);
+        B = a("Jqb/"),
+        R = a("ka0M"),
+        F = a("6Y59"),
+        P = a("X3Ds"),
+        x = a("TLQK"),
+        U = a("6h0J"),
+        H = a.n(U),
+        V = a("75vw"),
+        z = a("bVxH"),
+        W = a("6Oks"),
+        q = a.n(W);
       !(function (e) {
         (e[(e.k_None = 0)] = "k_None"),
           (e[(e.k_Suggested = 1)] = "k_Suggested"),
           (e[(e.k_Required = 2)] = "k_Required");
       })(n || (n = {}));
-      var q = Object(l.a)(function (e) {
+      var Y = Object(l.a)(function (e) {
           var t = r.c.GetEditModel(),
             a = e.artworkType,
             i = e.headerHint,
@@ -27996,13 +28004,13 @@
             ? (o = s.createElement(
                 "span",
                 { style: { color: "#C6512B" } },
-                Object(P.f)("#EventEditor_Required")
+                Object(x.f)("#EventEditor_Required")
               ))
             : i === n.k_Suggested &&
               (o = s.createElement(
                 "span",
                 { style: { color: "#D7BC86" } },
-                Object(P.f)("#EventEditor_Suggested")
+                Object(x.f)("#EventEditor_Suggested")
               ));
           var l = null;
           if ("capsule" === a)
@@ -28015,10 +28023,10 @@
                 s.createElement(
                   "strong",
                   null,
-                  Object(P.f)("#selectimage_tip_design_title")
+                  Object(x.f)("#selectimage_tip_design_title")
                 ),
                 ": ",
-                Object(P.f)("#selectimage_tip_capsule_1")
+                Object(x.f)("#selectimage_tip_capsule_1")
               ),
               s.createElement(
                 "p",
@@ -28026,10 +28034,10 @@
                 s.createElement(
                   "strong",
                   null,
-                  Object(P.f)("#selectimage_tip_usage_title")
+                  Object(x.f)("#selectimage_tip_usage_title")
                 ),
                 ": ",
-                Object(P.f)("#selectimage_tip_capsule_2")
+                Object(x.f)("#selectimage_tip_capsule_2")
               )
             );
           else if ("background" === a)
@@ -28042,10 +28050,10 @@
                 s.createElement(
                   "strong",
                   null,
-                  Object(P.f)("#selectimage_tip_design_title")
+                  Object(x.f)("#selectimage_tip_design_title")
                 ),
                 ": ",
-                Object(P.f)("#selectimage_tip_background_1")
+                Object(x.f)("#selectimage_tip_background_1")
               )
             );
           else if ("spotlight" === a)
@@ -28058,10 +28066,10 @@
                 s.createElement(
                   "strong",
                   null,
-                  Object(P.f)("#selectimage_tip_usage_title")
+                  Object(x.f)("#selectimage_tip_usage_title")
                 ),
                 ": ",
-                Object(P.f)("#selectimage_tip_spotlight_1")
+                Object(x.f)("#selectimage_tip_spotlight_1")
               ),
               s.createElement(
                 "p",
@@ -28069,10 +28077,10 @@
                 s.createElement(
                   "strong",
                   null,
-                  Object(P.f)("#selectimage_tip_design_title")
+                  Object(x.f)("#selectimage_tip_design_title")
                 ),
                 ": ",
-                Object(P.f)("#selectimage_tip_spotlight_2")
+                Object(x.f)("#selectimage_tip_spotlight_2")
               )
             );
           else if ("broadcast_left" === a || "broadcast_right" === a)
@@ -28082,7 +28090,7 @@
               s.createElement(
                 "p",
                 null,
-                Object(P.f)("#selectimage_tip_broadcast_1")
+                Object(x.f)("#selectimage_tip_broadcast_1")
               )
             );
           else if ("sale_header" === a)
@@ -28092,7 +28100,7 @@
               s.createElement(
                 "div",
                 { className: I.a.EventElementRequired },
-                Object(P.f)("#selectimage_tip_required_title")
+                Object(x.f)("#selectimage_tip_required_title")
               ),
               s.createElement(
                 "p",
@@ -28100,10 +28108,10 @@
                 s.createElement(
                   "b",
                   null,
-                  Object(P.f)("#selectimage_tip_usage_title")
+                  Object(x.f)("#selectimage_tip_usage_title")
                 ),
                 ": ",
-                Object(P.f)("#selectimage_tip_sale_header_1")
+                Object(x.f)("#selectimage_tip_sale_header_1")
               ),
               s.createElement(
                 "p",
@@ -28111,10 +28119,10 @@
                 s.createElement(
                   "b",
                   null,
-                  Object(P.f)("#selectimage_tip_design_title")
+                  Object(x.f)("#selectimage_tip_design_title")
                 ),
                 ": ",
-                Object(P.f)("#selectimage_tip_sale_header_2")
+                Object(x.f)("#selectimage_tip_sale_header_2")
               ),
               s.createElement(
                 "p",
@@ -28122,7 +28130,7 @@
                 s.createElement(
                   "b",
                   null,
-                  Object(P.f)("#selectimage_tip_template_title")
+                  Object(x.f)("#selectimage_tip_template_title")
                 ),
                 ": ",
                 s.createElement(
@@ -28131,7 +28139,7 @@
                     href:
                       "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/SalePageTemplates.zip",
                   },
-                  Object(P.f)("#selectimage_tip_sale_header_3")
+                  Object(x.f)("#selectimage_tip_sale_header_3")
                 )
               ),
               s.createElement("br", null)
@@ -28144,13 +28152,13 @@
               s.createElement(
                 "p",
                 null,
-                Object(P.f)("#selectimage_tip_hero_1")
+                Object(x.f)("#selectimage_tip_hero_1")
               ),
               !c.GetAppStoreData().library_asset_setup_complete &&
                 s.createElement(
                   "p",
                   { className: S.ErrorStylesBackground },
-                  Object(P.f)("#EventEdtior_ArtworkType_hero_warning")
+                  Object(x.f)("#EventEdtior_ArtworkType_hero_warning")
                 )
             );
           } else
@@ -28164,12 +28172,12 @@
                   s.createElement(
                     "p",
                     null,
-                    Object(P.f)("#ImagePickerLoc_Desc")
+                    Object(x.f)("#ImagePickerLoc_Desc")
                   ),
                   s.createElement(
                     "p",
                     null,
-                    Object(P.n)(
+                    Object(x.n)(
                       "#ImagePickerLoc_Files",
                       s.createElement(
                         "a",
@@ -28178,7 +28186,7 @@
                             "https://partner.steamgames.com/doc/store/localization#supported_languages",
                           target: k.c.IN_CLIENT ? void 0 : "_blank",
                         },
-                        Object(P.f)("#ImagePickerLoc_URL")
+                        Object(x.f)("#ImagePickerLoc_URL")
                       )
                     )
                   )
@@ -28190,7 +28198,7 @@
                   s.createElement(
                     "div",
                     { className: I.a.EventElementOptional },
-                    Object(P.f)("#selectimage_tip_optional_title")
+                    Object(x.f)("#selectimage_tip_optional_title")
                   ),
                   s.createElement(
                     "p",
@@ -28198,10 +28206,10 @@
                     s.createElement(
                       "b",
                       null,
-                      Object(P.f)("#selectimage_tip_usage_title")
+                      Object(x.f)("#selectimage_tip_usage_title")
                     ),
                     ": ",
-                    Object(P.f)("#selectimage_tip_sale_product_banner")
+                    Object(x.f)("#selectimage_tip_sale_product_banner")
                   )
                 ))
               : "product_mobile_banner" === a ||
@@ -28213,7 +28221,7 @@
                   s.createElement(
                     "div",
                     { className: I.a.EventElementOptional },
-                    Object(P.f)("#selectimage_tip_optional_title")
+                    Object(x.f)("#selectimage_tip_optional_title")
                   ),
                   s.createElement(
                     "p",
@@ -28221,16 +28229,16 @@
                     s.createElement(
                       "b",
                       null,
-                      Object(P.f)("#selectimage_tip_usage_title")
+                      Object(x.f)("#selectimage_tip_usage_title")
                     ),
                     ": ",
-                    Object(P.f)("#selectimage_tip_sale_product_banner"),
+                    Object(x.f)("#selectimage_tip_sale_product_banner"),
                     "product_mobile_banner" === a &&
                       s.createElement(
                         "span",
                         null,
                         "  ",
-                        Object(P.f)(
+                        Object(x.f)(
                           "#selectimage_tip_sale_product_banner_mobile"
                         )
                       )
@@ -28246,10 +28254,10 @@
                     s.createElement(
                       "strong",
                       null,
-                      Object(P.f)("#selectimage_tip_design_title")
+                      Object(x.f)("#selectimage_tip_design_title")
                     ),
                     ":",
-                    Object(P.f)("#Sale_Tabs_Background_Design")
+                    Object(x.f)("#Sale_Tabs_Background_Design")
                   ),
                   s.createElement(
                     "p",
@@ -28257,20 +28265,20 @@
                     s.createElement(
                       "strong",
                       null,
-                      Object(P.f)("#selectimage_tip_usage_title")
+                      Object(x.f)("#selectimage_tip_usage_title")
                     ),
                     ":",
-                    Object(P.f)("#Sale_Tabs_Background_Usage")
+                    Object(x.f)("#Sale_Tabs_Background_Usage")
                   )
                 ));
           var d = m.a[e.artworkType].width,
             u = m.a[e.artworkType].height;
           return s.createElement(
             "div",
-            { id: e.id, className: W.a.ArtworkSelectorContainer },
+            { id: e.id, className: q.a.ArtworkSelectorContainer },
             s.createElement(
               "div",
-              { className: W.a.Title, onDoubleClick: e.fnToggleMinimize },
+              { className: q.a.Title, onDoubleClick: e.fnToggleMinimize },
               e.title,
               s.createElement("span", null, " "),
               o,
@@ -28278,7 +28286,7 @@
                 s.createElement(
                   f.d,
                   {
-                    "data-tooltip-text": Object(P.f)(
+                    "data-tooltip-text": Object(x.f)(
                       e.bIsMinimized
                         ? "#Sale_Section_Maximize_Tooltip"
                         : "#Sale_Section_Minimize_Tooltip"
@@ -28286,14 +28294,14 @@
                     onClick: e.fnToggleMinimize,
                   },
                   e.bIsMinimized
-                    ? s.createElement(R.M, null)
-                    : s.createElement(R.P, null)
+                    ? s.createElement(F.M, null)
+                    : s.createElement(F.P, null)
                 )
             ),
             !e.bIsMinimized &&
               s.createElement(
                 "div",
-                { className: Object(G.a)(W.a.SelectImageBlock, W.a.Tips) },
+                { className: Object(G.a)(q.a.SelectImageBlock, q.a.Tips) },
                 l,
                 Boolean(d && u) &&
                   s.createElement(
@@ -28302,10 +28310,10 @@
                     s.createElement(
                       "b",
                       null,
-                      Object(P.f)("#selectimage_tip_dimensions_title")
+                      Object(x.f)("#selectimage_tip_dimensions_title")
                     ),
                     ": ",
-                    Object(P.n)("#selectimage_tip1", d, u)
+                    Object(x.n)("#selectimage_tip1", d, u)
                   ),
                 Boolean(e.strWarning) &&
                   s.createElement(
@@ -28326,19 +28334,19 @@
                     f.d,
                     {
                       onClick: function (t) {
-                        Object(B.d)(
-                          s.createElement(Y, {
+                        Object(R.d)(
+                          s.createElement(J, {
                             fnRemoveAllArtwork: e.fnRemoveAllArtwork,
                           }),
-                          Object(F.m)(t)
+                          Object(P.m)(t)
                         );
                       },
                     },
-                    Object(P.f)("#Sale_RemoveAll")
+                    Object(x.f)("#Sale_RemoveAll")
                   )
               ),
             !e.bIsMinimized &&
-              s.createElement(J, {
+              s.createElement(Q, {
                 clanSteamID: e.clanSteamID,
                 title: e.title,
                 imageWidth: d,
@@ -28347,19 +28355,19 @@
               })
           );
         }),
-        Y = function (e) {
+        J = function (e) {
           var t = e.fnRemoveAllArtwork,
             a = e.closeModal;
-          return s.createElement(L.d, {
-            strTitle: Object(P.f)("#Sale_RemoveAll"),
-            strDescription: Object(P.f)("#ImageUpload_DeleteAll_Confirm"),
+          return s.createElement(B.d, {
+            strTitle: Object(x.f)("#Sale_RemoveAll"),
+            strDescription: Object(x.f)("#ImageUpload_DeleteAll_Confirm"),
             onOK: function () {
               t(), a();
             },
             onCancel: a,
           });
         },
-        J = (function (e) {
+        Q = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -28412,12 +28420,12 @@
               var t = r.c.GetEditModel();
               e && !t.BHasImage("spotlight", 0)
                 ? (console.error("EventArtworkSelector: OnSpotlightChange"),
-                  Object(B.d)(
-                    s.createElement(L.f, {
-                      strTitle: Object(P.f)("#Error_FailureNotice"),
-                      strDescription: Object(P.f)(
+                  Object(R.d)(
+                    s.createElement(B.f, {
+                      strTitle: Object(x.f)("#Error_FailureNotice"),
+                      strDescription: Object(x.f)(
                         "#EventEditor_Options_Spotlight_Error",
-                        Object(P.f)("#EventEditor_Artwork")
+                        Object(x.f)("#EventEditor_Artwork")
                       ),
                     }),
                     window
@@ -28448,13 +28456,13 @@
                           );
                         },
                       },
-                      Object(P.f)("#ImageUpload_EditHeroImage")
+                      Object(x.f)("#ImageUpload_EditHeroImage")
                     )
                   )
                 : s.createElement(
                     "div",
                     null,
-                    s.createElement(Q, {
+                    s.createElement(Z, {
                       list: this.state.lastSelection,
                       fnOnArtworkLanguageChange: this
                         .OnUpdateAndMoveClanImageLang,
@@ -28465,36 +28473,36 @@
                       "spotlight" === this.props.artworkType &&
                         s.createElement(
                           "div",
-                          { className: W.a.SpotlightOptions },
+                          { className: q.a.SpotlightOptions },
                           s.createElement(f.p, {
                             onChange: this.OnSpotlightChange,
-                            label: Object(P.f)(
+                            label: Object(x.f)(
                               "#EventEditor_Options_Spotlight_Label"
                             ),
                             checked: e.GetEventModel().BShowLibrarySpotlight(),
                             disabled: !t,
-                            description: Object(P.f)(
+                            description: Object(x.f)(
                               "#EventEditor_Options_Spotlight_Desc",
-                              Object(P.f)("#EventEditor_Artwork")
+                              Object(x.f)("#EventEditor_Artwork")
                             ),
                           })
                         ),
                       "spotlight" === this.props.artworkType &&
                         s.createElement(
                           "div",
-                          { className: W.a.SpotlightOptions },
+                          { className: q.a.SpotlightOptions },
                           s.createElement(f.p, {
                             onChange: this.OnSpotlightTextChange,
-                            label: Object(P.f)(
+                            label: Object(x.f)(
                               "#EventEditor_Options_SpotlightText_Label"
                             ),
                             checked: e
                               .GetEventModel()
                               .BShowLibrarySpotlightText(),
                             disabled: !t,
-                            description: Object(P.f)(
+                            description: Object(x.f)(
                               "#EventEditor_Options_SpotlightText_Desc",
-                              Object(P.f)("#EventEditor_Artwork")
+                              Object(x.f)("#EventEditor_Artwork")
                             ),
                           })
                         ),
@@ -28502,11 +28510,11 @@
                         "div",
                         {
                           className: Object(G.a)(
-                            W.a.SelectImageBlock,
-                            W.a.MainPreviewBlock
+                            q.a.SelectImageBlock,
+                            q.a.MainPreviewBlock
                           ),
                         },
-                        s.createElement(ie, {
+                        s.createElement(re, {
                           clanSteamID: this.props.clanSteamID,
                           fnOnLanguagePreviewChange: this.OnLanguageChange,
                           langOverride: this.state.langOverride,
@@ -28539,7 +28547,7 @@
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        Q = (function (e) {
+        Z = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -28547,8 +28555,8 @@
             Object(i.d)(t, e),
             (t.prototype.ShowLangChangeDialog = function (e, t) {
               var a = this.props.fnOnArtworkLanguageChange;
-              Object(B.d)(
-                s.createElement(Z, {
+              Object(R.d)(
+                s.createElement(K, {
                   clanImage: e,
                   lang: t,
                   fnOnArtworkLangChange: a,
@@ -28563,7 +28571,7 @@
                 this.props.list.forEach(function (a) {
                   var n = a.clanImage,
                     i = a.lang,
-                    r = Object(P.f)("#Language_" + Object(u.a)(i));
+                    r = Object(x.f)("#Language_" + Object(u.a)(i));
                   t.push(
                     s.createElement(
                       "div",
@@ -28574,7 +28582,7 @@
                       s.createElement(
                         "span",
                         null,
-                        Object(P.f)(
+                        Object(x.f)(
                           "#ImageUpload_Success_Mapping",
                           n.file_name,
                           r
@@ -28587,7 +28595,7 @@
                             return e.ShowLangChangeDialog(n, i);
                           },
                         },
-                        Object(P.f)("#ImageUpload_Success_Mapping_Change")
+                        Object(x.f)("#ImageUpload_Success_Mapping_Change")
                       )
                     )
                   );
@@ -28599,13 +28607,13 @@
               var e = this.props.list;
               if (!e || 0 == e.length) return s.createElement("div", null);
               var t = this.GenerateImageMappings();
-              return s.createElement("div", { className: H.UploadSuccess }, t);
+              return s.createElement("div", { className: V.UploadSuccess }, t);
             }),
             Object(i.c)([A.a], t.prototype, "ShowLangChangeDialog", null),
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        Z = (function (e) {
+        K = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { selectedLang: t.props.lang }), t;
@@ -28634,12 +28642,12 @@
                 ),
                 o = r.c.GetEditModel();
               return s.createElement(
-                L.d,
+                B.d,
                 {
-                  strTitle: Object(P.f)(
+                  strTitle: Object(x.f)(
                     "#selectimage_change_artwork_lang_title"
                   ),
-                  strDescription: Object(P.f)(
+                  strDescription: Object(x.f)(
                     "#selectimage_change_artworl_lang_desc"
                   ),
                   onOK: this.OnOK,
@@ -28651,14 +28659,14 @@
                   {
                     className: Object(G.a)(
                       I.a.FlexColumnContainer,
-                      W.a.ReassignCtn
+                      q.a.ReassignCtn
                     ),
                   },
                   s.createElement(
                     "div",
-                    { className: W.a.ImagePreviewContainer },
+                    { className: q.a.ImagePreviewContainer },
                     s.createElement("img", {
-                      className: W.a.ArtworkPreview,
+                      className: q.a.ArtworkPreview,
                       src: i,
                     })
                   ),
@@ -28676,7 +28684,7 @@
             t
           );
         })(s.Component),
-        K = Object(l.a)(function (e) {
+        X = Object(l.a)(function (e) {
           var t = e.imgURL,
             a = r.c.GetEditModel(),
             n = v.a.Get().GetCurEditLanguage();
@@ -28690,7 +28698,7 @@
             })
           );
         }),
-        X = function (e) {
+        $ = function (e) {
           var t = e.lang,
             a = r.c.GetEditModel().GetEventModel(),
             n = a.GetNameWithFallback(t),
@@ -28704,48 +28712,48 @@
                   event: a,
                   languageOverride: v.a.Get().GetCurEditLanguage(),
                 })
-              : Object(P.f)("#selectimage_display_event_body");
+              : Object(x.f)("#selectimage_display_event_body");
           return s.createElement(
             "div",
-            { className: W.a.MultipleExampleContainer },
+            { className: q.a.MultipleExampleContainer },
             s.createElement(
               "div",
-              { className: W.a.ExampleSectionTitle },
-              Object(P.f)("#selectimage_preview_title_1")
+              { className: q.a.ExampleSectionTitle },
+              Object(x.f)("#selectimage_preview_title_1")
             ),
             s.createElement(
               "div",
               {
                 className: Object(G.a)(
-                  W.a.DetailPageExample,
+                  q.a.DetailPageExample,
                   "DetailPageExample"
                 ),
               },
               s.createElement(
                 "div",
-                { className: W.a.detailExample },
+                { className: q.a.detailExample },
                 s.createElement(
                   "div",
-                  { className: W.a.MainImageCtn },
+                  { className: q.a.MainImageCtn },
                   s.createElement("img", { src: e.imgURL })
                 ),
                 s.createElement(
                   "div",
-                  { className: W.a.ExampleBodyPosition },
+                  { className: q.a.ExampleBodyPosition },
                   s.createElement(
                     "div",
-                    { className: W.a.ExampleContentCtn },
+                    { className: q.a.ExampleContentCtn },
                     s.createElement(
                       "div",
-                      { className: W.a.TextTitle },
-                      n || Object(P.f)("#selectimage_display_event_title")
+                      { className: q.a.TextTitle },
+                      n || Object(x.f)("#selectimage_display_event_title")
                     ),
                     s.createElement(
                       "div",
-                      { className: W.a.TextSubTitle },
-                      o || Object(P.f)("#selectimage_display_event_subtitle")
+                      { className: q.a.TextSubTitle },
+                      o || Object(x.f)("#selectimage_display_event_subtitle")
                     ),
-                    s.createElement("div", { className: W.a.TextBody }, l)
+                    s.createElement("div", { className: q.a.TextBody }, l)
                   )
                 )
               )
@@ -28754,23 +28762,23 @@
               s.createElement(
                 s.Fragment,
                 null,
-                s.createElement("div", { className: W.a.ExampleSpacer }),
+                s.createElement("div", { className: q.a.ExampleSpacer }),
                 s.createElement(
                   "div",
-                  { className: W.a.ExampleSectionTitle },
-                  Object(P.f)("#selectimage_preview_title_2")
+                  { className: q.a.ExampleSectionTitle },
+                  Object(x.f)("#selectimage_preview_title_2")
                 ),
                 s.createElement(
                   "div",
                   {
                     className: Object(G.a)(
-                      W.a.DetailPageExample,
+                      q.a.DetailPageExample,
                       "DetailPageExample"
                     ),
                   },
                   s.createElement(
                     "div",
-                    { className: W.a.detailExample2 },
+                    { className: q.a.detailExample2 },
                     s.createElement(O.d, {
                       key: a.AnnouncementGID,
                       event: a,
@@ -28786,14 +28794,14 @@
               )
           );
         },
-        $ = function (e) {
+        ee = function (e) {
           var t = E.a.GetStoreCapsuleInfo(e.event.appid).GetAppStoreData(),
             a = t.title,
             n = t.icon_url;
           return s.createElement(
             "div",
-            { className: W.a.SpotlightExample },
-            s.createElement(N, {
+            { className: q.a.SpotlightExample },
+            s.createElement(L, {
               event: e.event,
               strDisplayName: a,
               gameIconUrl: n,
@@ -28802,45 +28810,45 @@
             })
           );
         },
-        ee = function (e) {
+        te = function (e) {
           var t = [
             s.createElement("img", { key: "img", src: e.imgURL }),
             s.createElement("div", {
               key: "video",
-              className: W.a.BroadcastPreview,
+              className: q.a.BroadcastPreview,
             }),
           ];
           return (
             "right" === e.side && t.reverse(),
             s.createElement(
               "div",
-              { className: W.a.BroadcastPreviewContainer },
+              { className: q.a.BroadcastPreviewContainer },
               t
             )
-          );
-        },
-        te = function (e) {
-          return s.createElement(
-            "div",
-            { className: W.a.SaleHeaderPreviewContainer },
-            s.createElement("img", { style: { width: "100%" }, src: e.imgURL })
           );
         },
         ae = function (e) {
           return s.createElement(
             "div",
-            { className: W.a.SaleHeaderPreviewContainer },
+            { className: q.a.SaleHeaderPreviewContainer },
             s.createElement("img", { style: { width: "100%" }, src: e.imgURL })
           );
         },
         ne = function (e) {
           return s.createElement(
             "div",
-            { className: W.a.SaleHeaderPreviewContainer },
+            { className: q.a.SaleHeaderPreviewContainer },
             s.createElement("img", { style: { width: "100%" }, src: e.imgURL })
           );
         },
-        ie = (function (e) {
+        ie = function (e) {
+          return s.createElement(
+            "div",
+            { className: q.a.SaleHeaderPreviewContainer },
+            s.createElement("img", { style: { width: "100%" }, src: e.imgURL })
+          );
+        },
+        re = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -28863,26 +28871,26 @@
               return o.BHasSomeImage(a)
                 ? s.createElement(
                     "div",
-                    { className: W.a.ImagePreviewContainer },
-                    "capsule" === a && s.createElement(K, { imgURL: l }),
+                    { className: q.a.ImagePreviewContainer },
+                    "capsule" === a && s.createElement(X, { imgURL: l }),
                     "background" === a &&
-                      s.createElement(X, {
+                      s.createElement($, {
                         imgURL: l,
                         lang: v.a.Get().GetCurEditLanguage(),
                       }),
                     "spotlight" === a &&
-                      s.createElement($, {
+                      s.createElement(ee, {
                         imgURL: l,
                         event: o.GetEventModel(),
                         lang: o.GetCurEditLanguage(),
                       }),
                     ("broadcast_left" === a || "broadcast_right" === a) &&
-                      s.createElement(ee, {
+                      s.createElement(te, {
                         imgURL: l,
                         side: "broadcast_right" === a ? "right" : "left",
                       }),
-                    "sale_header" === a && s.createElement(te, { imgURL: l }),
-                    "sale_overlay" === a && s.createElement(ae, { imgURL: l }),
+                    "sale_header" === a && s.createElement(ae, { imgURL: l }),
+                    "sale_overlay" === a && s.createElement(ne, { imgURL: l }),
                     Boolean(
                       "localized_image_group" === a ||
                         "link_capsule" === a ||
@@ -28892,14 +28900,14 @@
                         "schedule_track_art" === a
                     ) &&
                       s.createElement("img", {
-                        className: V.previewimg,
+                        className: z.previewimg,
                         src: b.d.GetLocalizedImageGroupForEditAsURL(i, t),
                       }),
                     "product_banner" === a &&
-                      s.createElement(ne, { imgURL: l }),
+                      s.createElement(ie, { imgURL: l }),
                     "product_mobile_banner" === a &&
-                      s.createElement(ne, { imgURL: l }),
-                    s.createElement(re, {
+                      s.createElement(ie, { imgURL: l }),
+                    s.createElement(oe, {
                       langOverride: t,
                       clanSteamID: i,
                       fnOnLanguagePreviewChange: n,
@@ -28912,21 +28920,21 @@
                   )
                 : s.createElement(
                     "div",
-                    { className: W.a.ImagePreviewContainer },
+                    { className: q.a.ImagePreviewContainer },
                     "capsule" === a &&
-                      s.createElement(K, {
+                      s.createElement(X, {
                         imgURL:
                           k.c.IMG_URL + "events/defaults/default_img_cover.jpg",
                       }),
                     "background" === a &&
-                      s.createElement(X, {
+                      s.createElement($, {
                         imgURL:
                           k.c.IMG_URL +
                           "events/defaults/default_img_header.jpg",
                         lang: o.GetCurEditLanguage(),
                       }),
                     "spotlight" === a &&
-                      s.createElement($, {
+                      s.createElement(ee, {
                         lang: v.a.Get().GetCurEditLanguage(),
                         imgURL:
                           k.c.IMG_URL +
@@ -28936,14 +28944,14 @@
                     s.createElement(
                       "div",
                       null,
-                      Object(P.f)("#EventEditor_ArtworkMissing")
+                      Object(x.f)("#EventEditor_ArtworkMissing")
                     )
                   );
             }),
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        re = (function (e) {
+        oe = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -28963,8 +28971,8 @@
               if (r) {
                 var o = b.d.GetClanImageByImageHash(n, r);
                 o &&
-                  Object(B.d)(
-                    s.createElement(Z, {
+                  Object(R.d)(
+                    s.createElement(K, {
                       clanImage: o,
                       lang: i,
                       fnOnArtworkLangChange: this.props.fnOnArtworkLangChange,
@@ -28977,12 +28985,12 @@
               var t = this;
               e.stopPropagation(), e.preventDefault();
               var a = +e.currentTarget.dataset.lang;
-              Object(B.d)(
-                s.createElement(L.d, {
-                  strTitle: Object(P.f)("#selectimage_remove_image"),
-                  strDescription: Object(P.f)(
+              Object(R.d)(
+                s.createElement(B.d, {
+                  strTitle: Object(x.f)("#selectimage_remove_image"),
+                  strDescription: Object(x.f)(
                     "#selectimage_remove_details",
-                    Object(P.f)("#Language_" + Object(u.a)(a))
+                    Object(x.f)("#Language_" + Object(u.a)(a))
                   ),
                   closeModal: this.OnCloseDeleteDialog,
                   onOK: function () {
@@ -28990,7 +28998,7 @@
                   },
                   onCancel: this.OnCloseDeleteDialog,
                 }),
-                Object(F.m)(e)
+                Object(P.m)(e)
               );
             }),
             (t.prototype.ConstructLanguages = function () {
@@ -29003,7 +29011,7 @@
                   r = n.GetAccountID(),
                   o = Array(),
                   l = 0,
-                  c = P.b.GetLanguageListForRealms([
+                  c = x.b.GetLanguageListForRealms([
                     p.f.k_ESteamRealmGlobal,
                     p.f.k_ESteamRealmChina,
                   ]);
@@ -29014,7 +29022,7 @@
                   _ = a(m);
                 if (_) {
                   var g = Object(u.a)(m),
-                    E = Object(P.f)("#Language_" + g);
+                    E = Object(x.f)("#Language_" + g);
                   o.push({ lang: m, strLang: g, locLang: E, imgHash: _ });
                 }
               }
@@ -29042,41 +29050,41 @@
                     : "",
                   y =
                     t == f.lang
-                      ? W.a.LanguageSelectorSelected
+                      ? q.a.LanguageSelectorSelected
                       : f.imgHash
-                      ? W.a.LanguageSelector
-                      : W.a.LanguageSelectorNoData;
+                      ? q.a.LanguageSelector
+                      : q.a.LanguageSelectorNoData;
                 i.push(
                   s.createElement(
                     "div",
                     {
                       key: "lang_select_" + r + " " + f.strLang,
                       id: f.strLang,
-                      className: W.a.LanguageContainer,
+                      className: q.a.LanguageContainer,
                       onClick: this.OnChangeImageLanguage,
                     },
                     s.createElement("div", { className: y }, f.locLang),
                     s.createElement(
                       "span",
-                      { className: W.a.LanguageOptions },
+                      { className: q.a.LanguageOptions },
                       Boolean(O) &&
                         s.createElement(
                           "a",
                           {
                             href: O,
                             target: "_blank",
-                            "data-tooltip-text": Object(P.f)(
+                            "data-tooltip-text": Object(x.f)(
                               "#selectimage_viewimage_ttip"
                             ),
                           },
-                          R.V()
+                          F.V()
                         ),
                       this.props.fnOnArtworkLangChange &&
                         s.createElement("img", {
                           "data-lang": f.lang,
-                          src: U.a,
+                          src: H.a,
                           onClick: this.OnChangeLanguage,
-                          "data-tooltip-text": Object(P.f)(
+                          "data-tooltip-text": Object(x.f)(
                             "#selectimage_reassign_image_ttip"
                           ),
                         }),
@@ -29085,7 +29093,7 @@
                           "data-lang": f.lang,
                           src: d.a,
                           onClick: this.OnDeleteClick,
-                          "data-tooltip-text": Object(P.f)(
+                          "data-tooltip-text": Object(x.f)(
                             "#selectimage_delete_image_ttip"
                           ),
                         })
@@ -29099,15 +29107,15 @@
               var e = this.ConstructLanguages();
               return s.createElement(
                 "div",
-                { className: W.a.SelectImageLanguagesCtn },
+                { className: q.a.SelectImageLanguagesCtn },
                 s.createElement(
                   "div",
-                  { className: W.a.SelectImageTitle },
-                  Object(P.f)("#selectimage_uploaded_languages")
+                  { className: q.a.SelectImageTitle },
+                  Object(x.f)("#selectimage_uploaded_languages")
                 ),
                 s.createElement(
                   "div",
-                  { className: W.a.LanguageListContainer },
+                  { className: q.a.LanguageListContainer },
                   e
                 )
               );
@@ -37674,6 +37682,14 @@
                         textToken: "#Sale_Section_HidePrices",
                         ttipToken: "#Sale_Section_HidePrices_ttip",
                       }),
+                    u.createElement(St, {
+                      editModel: l,
+                      section: r,
+                      textToken: "#Sale_Section_HideIfTooFewItems",
+                      ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
+                      varName: "hide_section_if_too_few_items",
+                      valveOnly: !0,
+                    }),
                     u.createElement(bt, { editModel: l, saleSection: r })
                   )
                 )
@@ -37765,11 +37781,6 @@
                 "#Sale_Section_SingleItemDisplay_bordered_ttip"
               ),
               data: "bordered",
-            },
-            {
-              label: Object(E.f)("#Sale_Section_SingleItemDisplay_full"),
-              tooltip: Object(E.f)("#Sale_Section_SingleItemDisplay_full_ttip"),
-              data: "full",
             },
             {
               label: Object(E.f)("#Sale_Section_SingleItemDisplay_library"),
@@ -39150,19 +39161,19 @@
     oqmg: function (e, t, a) {
       "use strict";
       a.d(t, "b", function () {
-        return K;
+        return Z;
       }),
         a.d(t, "c", function () {
-          return ne;
+          return ae;
         }),
         a.d(t, "d", function () {
-          return ie;
+          return ne;
         }),
         a.d(t, "e", function () {
-          return re;
+          return ie;
         }),
         a.d(t, "a", function () {
-          return me;
+          return pe;
         });
       var n = a("mrSG"),
         i = a("vDqi"),
@@ -39209,15 +39220,14 @@
         W = a("JiI5"),
         q = a("IMce"),
         Y = a("mHFc"),
-        J = a("putg"),
-        Q = a("X3Ds");
-      function Z(e) {
+        J = (a("putg"), a("X3Ds"));
+      function Q(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
           ">",
           " "
         )).trim();
       }
-      function K(e) {
+      function Z(e) {
         var t = null,
           a = "",
           n = !1,
@@ -39239,14 +39249,14 @@
         }
         return { appData: t, linkURL: a, bInvalidID: n };
       }
-      var X = function (e) {
+      var K = function (e) {
           return m.createElement("img", {
             className: M.a.RemoveIcon,
             src: b.a,
             onClick: e.onClick,
           });
         },
-        $ = function (e) {
+        X = function (e) {
           var t,
             a = e.clause;
           if (!(null === (t = a.or_tags) || void 0 === t ? void 0 : t.length))
@@ -39265,7 +39275,7 @@
             n
           );
         },
-        ee = function (e) {
+        $ = function (e) {
           var t = e.filter;
           return Object(l.q)(t)
             ? m.createElement(
@@ -39280,11 +39290,11 @@
                 "div",
                 { className: q.FilterDisplayList },
                 t.clauses.map(function (e, t) {
-                  return m.createElement($, { clause: e, key: "clause" + t });
+                  return m.createElement(X, { clause: e, key: "clause" + t });
                 })
               );
         },
-        te = (function () {
+        ee = (function () {
           function e(e) {
             this.m_storageKey = "RecentTags_" + e;
             var t = window.localStorage.getItem(this.m_storageKey);
@@ -39316,7 +39326,7 @@
             e
           );
         })(),
-        ae = Object(p.a)(function (e) {
+        te = Object(p.a)(function (e) {
           var t = e.id,
             a = e.type,
             n = e.name;
@@ -39338,7 +39348,7 @@
             m.createElement("span", { className: W.SmallText }, "(", a, ")")
           );
         }),
-        ne = (function (e) {
+        ae = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_currentRequest = 0), (t.m_refInput = m.createRef()), t;
@@ -39450,7 +39460,7 @@
                                                 );
                                               },
                                             },
-                                            m.createElement(ae, {
+                                            m.createElement(te, {
                                               name: e.name,
                                               id: Number(e.id),
                                               type: e.type,
@@ -39504,7 +39514,7 @@
             t
           );
         })(m.Component),
-        ie = (function (e) {
+        ne = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -39521,7 +39531,7 @@
             (t.prototype.OnEditFilter = function () {
               var e = this.props.capsuleContainer;
               Object(G.d)(
-                m.createElement(me, {
+                m.createElement(pe, {
                   editModel: this.props.editModel,
                   filter: e.sale_tag_filter || { clauses: [] },
                   title: Object(R.f)("#Sale_TagFilter_EditFilter"),
@@ -39547,7 +39557,7 @@
                 m.createElement(
                   "div",
                   { className: q.FilterActionsCtn },
-                  m.createElement(ee, { filter: e.sale_tag_filter }),
+                  m.createElement($, { filter: e.sale_tag_filter }),
                   m.createElement(
                     C.d,
                     { onClick: this.OnEditFilter },
@@ -39561,7 +39571,7 @@
             (t = Object(n.c)([p.a], t))
           );
         })(m.Component),
-        re = (function (e) {
+        ie = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -39591,7 +39601,7 @@
             (t.prototype.OnExploreTags = function () {
               var e = { clauses: new Array() };
               Object(G.d)(
-                m.createElement(me, {
+                m.createElement(pe, {
                   editModel: this.props.editModel,
                   filter: e,
                   title: Object(R.f)("#Sale_TagFilter_Explore"),
@@ -39601,13 +39611,13 @@
             }),
             (t.prototype.OnBatchEditTags = function () {
               Object(G.d)(
-                m.createElement(ue, { editModel: this.props.editModel }),
+                m.createElement(de, { editModel: this.props.editModel }),
                 window
               );
             }),
             (t.prototype.OnEditAutoTags = function () {
               Object(G.d)(
-                m.createElement(ve, { editModel: this.props.editModel }),
+                m.createElement(Ee, { editModel: this.props.editModel }),
                 window
               );
             }),
@@ -39620,7 +39630,7 @@
             (t.prototype.OnEditFilter = function () {
               var e = this.props.editModel;
               Object(G.d)(
-                m.createElement(me, {
+                m.createElement(pe, {
                   editModel: e,
                   filter: Object(l.p)(e),
                   title: Object(R.f)("#Sale_TagFilter_EditFilter"),
@@ -39638,7 +39648,7 @@
             }),
             (t.prototype.OnEditRaw = function (e) {
               Object(G.d)(
-                m.createElement(ge, {
+                m.createElement(me, {
                   editModel: this.props.editModel,
                   bRemoveMissingEntries: !0,
                 }),
@@ -39647,7 +39657,7 @@
             }),
             (t.prototype.OnEditRawCustom = function (e) {
               Object(G.d)(
-                m.createElement(ge, {
+                m.createElement(me, {
                   editModel: this.props.editModel,
                   collection: l.j.Custom,
                   bRemoveMissingEntries: !1,
@@ -39661,7 +39671,7 @@
             }),
             (t.prototype.OnSync = function (e) {
               Object(G.d)(
-                m.createElement(Ee, { editModel: this.props.editModel }),
+                m.createElement(_e, { editModel: this.props.editModel }),
                 window
               );
             }),
@@ -39729,8 +39739,8 @@
             }),
             (t.prototype.OnForceUpdateFeaturedAppTags = function (e) {
               Object(G.d)(
-                m.createElement(fe, { editModel: this.props.editModel }),
-                Object(Q.m)(e)
+                m.createElement(ve, { editModel: this.props.editModel }),
+                Object(J.m)(e)
               );
             }),
             (t.prototype.RenderEditPrompt = function () {
@@ -39769,7 +39779,7 @@
                   return (
                     d ? o++ : s++,
                     d || n
-                      ? m.createElement(oe, {
+                      ? m.createElement(re, {
                           key: t.capsule.type + t.capsule.id,
                           item: t,
                           strSearchFilter: a,
@@ -39966,7 +39976,7 @@
                       ? m.createElement(
                           m.Fragment,
                           null,
-                          m.createElement(ne, { onAddItem: this.AddTagItem }),
+                          m.createElement(ae, { onAddItem: this.AddTagItem }),
                           this.RenderItemList()
                         )
                       : this.RenderEditPrompt()
@@ -40015,7 +40025,7 @@
             (t = Object(n.c)([p.a], t))
           );
         })(m.Component),
-        oe = (function (e) {
+        re = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { expanded: !1 }), t;
@@ -40024,7 +40034,7 @@
             Object(n.d)(t, e),
             (t.prototype.OnEditTags = function () {
               Object(G.d)(
-                m.createElement(de, {
+                m.createElement(ce, {
                   editModel: this.props.editModel,
                   item: this.props.item,
                   onTagsModified: this.props.onTagsModified,
@@ -40044,7 +40054,7 @@
                 r = t.tagHighlight,
                 o = t.filter,
                 l = a.capsule,
-                s = K(l),
+                s = Z(l),
                 c = s.appData,
                 d = s.linkURL,
                 u = s.bInvalidID,
@@ -40137,14 +40147,14 @@
                     m.createElement(
                       "div",
                       { onClick: this.OnEditTags },
-                      m.createElement(se, {
+                      m.createElement(le, {
                         item: a,
                         lowerTagHighlight: E,
                         filter: o,
                       })
                     )
                 ),
-                n && m.createElement(X, { onClick: n })
+                n && m.createElement(K, { onClick: n })
               );
             }),
             Object(n.c)([F.a], t.prototype, "OnEditTags", null),
@@ -40152,7 +40162,7 @@
             (t = Object(n.c)([p.a], t))
           );
         })(m.Component);
-      function le(e, t, a) {
+      function oe(e, t, a) {
         var n,
           i = e.toLocaleLowerCase();
         if (t && i === t) return q.TagHighlight;
@@ -40170,7 +40180,7 @@
           }
         return null;
       }
-      var se = Object(p.a)(function (e) {
+      var le = Object(p.a)(function (e) {
           var t = e.item,
             a = Array.from(t.tags),
             n = (function (e, t) {
@@ -40220,15 +40230,15 @@
                 "div",
                 { className: q.TagListCtn },
                 a.map(function (t) {
-                  return m.createElement(ce, {
+                  return m.createElement(se, {
                     key: t,
                     tag: t,
-                    className: le(t, e.lowerTagHighlight, e.filter),
+                    className: oe(t, e.lowerTagHighlight, e.filter),
                   });
                 }),
                 n &&
                   n.map(function (e) {
-                    return m.createElement(ce, {
+                    return m.createElement(se, {
                       key: e,
                       tag: e,
                       className: q.TagMissingMustHave,
@@ -40241,7 +40251,7 @@
                 Object(R.f)("#Sale_TagFilter_AddTags")
               );
         }),
-        ce = function (e) {
+        se = function (e) {
           var t = Object(l.k)(e.tag);
           return m.createElement(
             "div",
@@ -40255,7 +40265,7 @@
             e.tag
           );
         },
-        de = (function (e) {
+        ce = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -40360,9 +40370,9 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this.state.currentTags,
-                a = (e = Z(e)).toLocaleLowerCase();
+                a = (e = Q(e)).toLocaleLowerCase();
               if (
-                (te.Get(this.props.editModel).AddRecentTag(e),
+                (ee.Get(this.props.editModel).AddRecentTag(e),
                 !t.find(function (e) {
                   return e.toLocaleLowerCase() === a;
                 }))
@@ -40459,7 +40469,7 @@
                 }
               });
               var E = [];
-              te.Get(this.props.editModel)
+              ee.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
                   if (!c.has(t.toLocaleLowerCase())) {
@@ -40481,7 +40491,7 @@
                   }
                 });
               var b = this.RenderSectionList(),
-                v = K(a.capsule).appData,
+                v = Z(a.capsule).appData,
                 h = v ? v.appid || v.bundleid || v.packageid : a.capsule.id,
                 f = {
                   option: function (e) {
@@ -40654,7 +40664,7 @@
             (t = Object(n.c)([p.a], t))
           );
         })(m.Component),
-        ue = (function (e) {
+        de = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -40703,7 +40713,7 @@
             (t.prototype.OnPopulateFromFilter = function () {
               new Array();
               Object(G.d)(
-                m.createElement(me, {
+                m.createElement(pe, {
                   editModel: this.props.editModel,
                   filter: this.state.filter,
                   onApplyFilter: this.OnApplyFilter,
@@ -40734,11 +40744,11 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this,
-                a = (e = Z(e)).toLocaleLowerCase(),
+                a = (e = Q(e)).toLocaleLowerCase(),
                 i = this.state.otherTags.get(a);
               i && (e = i.properCaseString);
               var r = this.CloneModifiedTags();
-              te.Get(this.props.editModel).AddRecentTag(e);
+              ee.Get(this.props.editModel).AddRecentTag(e);
               for (var o = 0, l = this.state.editItems; o < l.length; o++) {
                 var s = l[o],
                   c = r.get(s) || s.tags || [];
@@ -40844,7 +40854,7 @@
                   return e.localeCompare(t);
                 });
               var d = [];
-              te.Get(this.props.editModel)
+              ee.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
                   var a = Object(B.a)(q.EditTag, q.OtherTag);
@@ -40863,7 +40873,7 @@
                   );
                 });
               var u = i.map(function (e) {
-                  var t = K(e.capsule).appData;
+                  var t = Z(e.capsule).appData;
                   return m.createElement(
                     "div",
                     { key: e.capsule.id },
@@ -41076,7 +41086,7 @@
             (t = Object(n.c)([p.a], t))
           );
         })(m.Component);
-      function pe(e) {
+      function ue(e) {
         var t = e.onClauseChanged,
           a = e.value,
           i = e.taggedItems,
@@ -41153,7 +41163,7 @@
           menuPlacement: "bottom",
         });
       }
-      var me = (function (e) {
+      var pe = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = t.GenerateInitialState()), t;
@@ -41175,30 +41185,27 @@
             return Object(n.b)(this, void 0, void 0, function () {
               var e, t;
               return Object(n.e)(this, function (a) {
-                switch (a.label) {
-                  case 0:
-                    return [
-                      4,
-                      _e(
-                        this.props.editModel.GetEventModel().jsondata
-                          .auto_item_tags
-                      ),
-                    ];
-                  case 1:
-                    return (
-                      (e = a.sent()),
-                      (t = [
-                        {
-                          label: Object(R.f)("#Sale_TagFilter_SelectTag"),
-                          value: "",
-                        },
-                      ]),
-                      e.forEach(function (e) {
-                        return t.push({ label: e, value: e });
-                      }),
-                      [2, t]
-                    );
-                }
+                var n, i;
+                return (
+                  (n = this.props.editModel.GetEventModel().GetTaggedItems()),
+                  (i = new Set()),
+                  n.forEach(function (e) {
+                    return e.tags.forEach(function (e) {
+                      return i.add(e);
+                    });
+                  }),
+                  (e = Array.from(i).sort()),
+                  (t = [
+                    {
+                      label: Object(R.f)("#Sale_TagFilter_SelectTag"),
+                      value: "",
+                    },
+                  ]),
+                  e.forEach(function (e) {
+                    return t.push({ label: e, value: e });
+                  }),
+                  [2, t]
+                );
               });
             });
           }),
@@ -41354,7 +41361,7 @@
                   m.createElement(
                     "div",
                     { className: q.TagDropDown },
-                    m.createElement(pe, {
+                    m.createElement(ue, {
                       taggedItems: r,
                       value: e,
                       onClauseChanged: function (e) {
@@ -41367,7 +41374,7 @@
                     })
                   ),
                   i > 0 &&
-                    m.createElement(X, {
+                    m.createElement(K, {
                       onClick: function () {
                         return n.OnRemoveClauseTagSlot(t, i);
                       },
@@ -41390,7 +41397,7 @@
                 m.createElement(
                   m.Fragment,
                   null,
-                  m.createElement(X, {
+                  m.createElement(K, {
                     onClick: function () {
                       return n.OnRemoveClause(t);
                     },
@@ -41620,7 +41627,7 @@
               S = ("active" === o ? p : "filtered" === o ? g : b).map(function (
                 e
               ) {
-                var t = K(e.capsule).appData;
+                var t = Z(e.capsule).appData;
                 return {
                   item: e,
                   name: t && t.name,
@@ -41679,7 +41686,7 @@
               ],
               y = S.map(function (t) {
                 var n = t.item;
-                return m.createElement(oe, {
+                return m.createElement(re, {
                   key: n.capsule.type + n.capsule.id,
                   editModel: a,
                   item: n,
@@ -41787,49 +41794,7 @@
           t
         );
       })(m.Component);
-      function _e(e) {
-        return Object(n.b)(this, void 0, void 0, function () {
-          var t, a, i, r;
-          return Object(n.e)(this, function (n) {
-            switch (n.label) {
-              case 0:
-                return [4, J.a.EnsureLoaded()];
-              case 1:
-                return (
-                  n.sent(),
-                  (t = []),
-                  J.a.GetTagNameForTagID().forEach(function (e, a) {
-                    t.push({ tagid: a, name: e });
-                  }),
-                  (a = t.map(function (e) {
-                    return Object(l.f)(e.name, "Store");
-                  })),
-                  (i = [
-                    "Linux",
-                    "Mac",
-                    "VR",
-                    "VR Only",
-                    "Full Controller",
-                    "Remote Play",
-                    "Remote Play Together",
-                    "Free",
-                    "Discounted",
-                    "Coop",
-                  ].map(function (e) {
-                    return Object(l.f)(e, "Feature");
-                  })),
-                  (r = a.concat(i)),
-                  null == e ||
-                    e.forEach(function (e) {
-                      r.unshift(Object(l.f)(e.tag_name, "Auto"));
-                    }),
-                  [2, r]
-                );
-            }
-          });
-        });
-      }
-      var ge = (function (e) {
+      var me = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -41855,7 +41820,7 @@
                 var r = i[n],
                   o = r.capsule,
                   s = r.tags,
-                  c = K(o).appData,
+                  c = Z(o).appData,
                   d = o.id + "\t" + o.type;
                 d +=
                   '\t"' +
@@ -41901,7 +41866,7 @@
                   u = new Array();
                 if (c)
                   for (var p = 0, m = c[1].split(";"); p < m.length; p++) {
-                    var _ = Z(m[p]);
+                    var _ = Q(m[p]);
                     if (_) {
                       var g = _.toLocaleLowerCase();
                       d.has(g) || (d.add(g), u.push(_));
@@ -42100,7 +42065,7 @@
             (t = Object(n.c)([p.a], t))
           );
         })(m.Component),
-        Ee = (function (e) {
+        _e = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -42405,7 +42370,7 @@
             (t = Object(n.c)([p.a], t))
           );
         })(m.Component);
-      function be(e) {
+      function ge(e) {
         for (var t = new Set(), a = 0, n = e; a < n.length; a++) {
           var i = n[a],
             r = i.tag_name.trim().toLocaleLowerCase();
@@ -42416,7 +42381,7 @@
         }
         return !0;
       }
-      var ve = function (e) {
+      var Ee = function (e) {
           var t = e.closeModal,
             a = e.editModel,
             i = a.GetEventModel().jsondata,
@@ -42430,10 +42395,10 @@
             E = g[0],
             b = g[1],
             v = function () {
-              c(be(E)), _(!0);
+              c(ge(E)), _(!0);
             },
             h = E.map(function (e, t) {
-              return m.createElement(he, {
+              return m.createElement(be, {
                 key: "AutoTag" + t,
                 editModel: a,
                 fnOnEdited: v,
@@ -42445,7 +42410,7 @@
                         return a != e;
                       })
                     ),
-                    void c(be(E))
+                    void c(ge(E))
                   );
                   var e;
                 },
@@ -42518,7 +42483,7 @@
             )
           );
         },
-        he = function (e) {
+        be = function (e) {
           var t = m.useState(e.autoTag.tag_name),
             a = t[0],
             n = t[1],
@@ -42545,7 +42510,7 @@
                 tooltip: Object(R.f)("#Sale_EditAutoTags_Tooltip"),
                 value: a,
               }),
-              m.createElement(X, {
+              m.createElement(K, {
                 onClick: function () {
                   return e.fnOnDeleted();
                 },
@@ -42554,13 +42519,13 @@
             m.createElement(
               "div",
               { className: q.AutoTagRow },
-              m.createElement(ee, { filter: r }),
+              m.createElement($, { filter: r }),
               m.createElement(
                 C.d,
                 {
                   onClick: function () {
                     Object(G.d)(
-                      m.createElement(me, {
+                      m.createElement(pe, {
                         editModel: e.editModel,
                         filter: r,
                         title: Object(R.f)("#Sale_TagFilter_EditFilter"),
@@ -42575,7 +42540,7 @@
             )
           );
         },
-        fe = function (e) {
+        ve = function (e) {
           var t = e.editModel,
             a = e.closeModal,
             i = Object(m.useState)(!0),

@@ -129,6 +129,10 @@
         border-radius: unset;
     }
 
+	html.responsive .game_area_purchase_game:focus-within {
+		background: var(--gpBackground-LightMedium);
+	}
+
     html.responsive .game_area_purchase_game .game_purchase_action_bg {
         background: unset;
     }
@@ -141,6 +145,16 @@
     html.responsive .addfunds_area_purchase_game {
         margin-bottom: 4px;
     }
+
+	html.responsive .game_area_purchase_game .game_purchase_action_bg {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	html.responsive .game_area_purchase_game .addfunds_purchase_action.game_purchase_action {
+		margin-top: 6px;
+	}
 
 
 

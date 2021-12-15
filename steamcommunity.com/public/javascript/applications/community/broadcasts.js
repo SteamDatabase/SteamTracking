@@ -663,7 +663,7 @@
                 i.a.createElement(
                   "div",
                   { className: x.AppSummaryWidgetCtn },
-                  i.a.createElement(F.m, { id: t.app_id, type: "game" })
+                  i.a.createElement(F.l, { id: t.app_id, type: "game" })
                 )
             ),
             i.a.createElement(
@@ -1493,7 +1493,7 @@
                   i.a.createElement(
                     "div",
                     { className: D.GameInfo },
-                    i.a.createElement(F.m, {
+                    i.a.createElement(F.l, {
                       id: Number.parseInt(r.m_strAppId),
                       type: "game",
                     })

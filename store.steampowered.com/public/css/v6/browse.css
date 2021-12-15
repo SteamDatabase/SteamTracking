@@ -44,7 +44,7 @@
     margin-top: 3px;
     padding: 1px;
 }
-.tabarea .tab .tab_content {
+.tabarea .tab .tab_browse_option_label {
     background: rgba( 0, 0, 0, 0.2 );
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -56,7 +56,7 @@
     vertical-align: top;
     box-shadow: inset 0 -2px 3px 0 rgba( 0, 0, 0, 0.25 );
 }
-.tabarea .tab .tab_content:hover {
+.tabarea .tab .tab_browse_option_label:hover {
     color: #ffffff;
     background: #67c1f5; /* Old browsers */
     background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
@@ -80,7 +80,7 @@
     box-shadow: none;
     padding: 1px;
 }
-.tabarea .tab.active .tab_content {
+.tabarea .tab.active .tab_browse_option_label {
     line-height: 29px;
     font-size: 14px;
     color: #ffffff;

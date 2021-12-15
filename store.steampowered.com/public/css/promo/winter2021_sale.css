@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_winter2021 {
-                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/autumn_sale_2021_main_bg_b3.png?v=2') repeat-y center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/autumn_sale_2021_main_bg_tile_b.png?v=2') repeat center, #f79d0b;
+                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/winter_2021_header_bg.png?v=2') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/winter2021_frontpage_bg_tile.jpg?v=2') repeat center, #00988b;
             }
 
 body.v6.sale_winter2021 .responsive_page_template_content {
@@ -11,13 +11,13 @@ body.v6.sale_winter2021 .responsive_page_template_content {
             }
 body.v6.sale_winter2021 .page_background_holder {
                 background-size: contain !important;
-                max-height: 400px;
+                max-height: 450px;
                 margin-top: 30px;
             }
 
 body.v6.sale_winter2021 .home_page_takeover_sizer {
-                max-height: 350px;
-                min-height: 270px;
+                max-height: 400px;
+                min-height: 400px;
                 display: inline-block;
             }
 
@@ -44,8 +44,9 @@ body.v6.sale_winter2021 .home_header_textimage_ctn {
                 position: absolute;
                 margin: 0;
                 height: 100%;
-                max-height: 300px;
+                max-height: 500px;
                 display: flex;
+				background: right;
                 background-repeat: no-repeat;
                 background-size: contain;
                 justify-content: flex-end;
@@ -528,15 +529,19 @@ body.v6 .sale_capsule {
 body.v6 .discount_block {}
 
 .home_section_title {
-    font-size: 17px;
+    font-size: 36px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #ffffff;
     margin-bottom: 10px;
     font-family: "Motiva Sans", Sans-serif;
-    font-weight: 500;
-	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/tile_brown.png?v=2');
-    border: 3px solid black;
+    font-weight: 900;
+	/* background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/tile_brown.png?v=2');
+    border: 3px solid black;*/
+	background-color: #068979;
+	width: -moz-fit-content;
+	width: fit-content;
+	border-radius: 10px;
     padding: 10px;
 }
 
@@ -767,9 +772,8 @@ body.v6 .page_content_ctn.dark
 }
 
 .home_tabs_row {
-	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/tile_brown.png?v=2');
+	background-color: #116459;
 	padding: 10px;
-	border: 3px solid black;
 }
 
 .home_category_games_ctn {
@@ -1587,7 +1591,7 @@ body.forgeyourfate {
 }
 
 .home_title_ctn {
-    display: flex;
+    /*display: flex;
     font-size: 17px;
     text-transform: uppercase;
     color: #fff;
@@ -1596,6 +1600,19 @@ body.forgeyourfate {
     font-weight: 500;
 	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/tile_red.png?v=2');
     border: 3px solid black;
+    padding: 10px;*/
+	display: flex;
+	font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 900;
+	background-color: #068979;
+	width: -moz-fit-content;
+	width: fit-content;
+	border-radius: 10px;
     padding: 10px;
 }
 .dlc_block .home_title_ctn {
@@ -1929,7 +1946,7 @@ body.forgeyourfate {
 
 
 .home_newupcoming_ctn .home_tab_button {
-    font-size: 17px;
+    font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #ffffff;
@@ -1943,7 +1960,7 @@ body.forgeyourfate {
 		}
 
 .home_newupcoming_ctn .home_tab_button:hover:not( .active ) {
-    color: #3596B5;
+    color: #36d0bd;
 }
 
 .home_newupcoming_ctn .home_tab_button.active {
@@ -2699,20 +2716,25 @@ img.franchise_placeholder {
 
 .carousel_container .arrow.right {
 	right: -54px;
-	background: #796c5f;
-    border: 3px solid black;
+	background: #116459;
 }
 
 .carousel_container .arrow.right:hover {
-	background: #9b8978;
+	background: #18766a;
 }
 
 .carousel_container .arrow.left {
 	left: -54px;
-	background: #796c5f;
-    border: 3px solid black;
+	background: #116459;
 }
 
 .carousel_container .arrow.left:hover {
-	background: #9b8978;
+	background: #18766a;
+}
+
+.header_yeti {
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/header_yeti.png') no-repeat;
+	width: 940px;
+	height: 100%;
+	background-size: contain;
 }

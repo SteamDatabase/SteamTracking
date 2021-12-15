@@ -5433,7 +5433,7 @@
                             "bordered_title_trgt"
                           ),
                         },
-                        s.createElement(j.j, null),
+                        s.createElement(j.i, null),
                         f,
                         s.createElement(
                           "div",
