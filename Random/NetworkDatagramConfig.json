@@ -1,5 +1,5 @@
 {
-  "revision": 359,
+  "revision": 360,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -754,8 +754,7 @@
     "mam1": {
       "desc": "Multiplay Amsterdam 1",
       "groups": [
-        "multiplay",
-        "mplay-csgo"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -774,8 +773,7 @@
     "mam2": {
       "desc": "Multiplay Amsterdam 2",
       "groups": [
-        "multiplay",
-        "mplay-dota"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -794,8 +792,7 @@
     "mam3": {
       "desc": "Multiplay Amsterdam 3",
       "groups": [
-        "multiplay",
-        "mplay-csgo"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -814,8 +811,7 @@
     "mam4": {
       "desc": "Multiplay Amsterdam 4",
       "groups": [
-        "multiplay",
-        "mplay-dota"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -876,7 +872,7 @@
       "desc": "Multiplay Atlanta 2",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -936,7 +932,7 @@
       "desc": "Multiplay Washington DC 2",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -976,7 +972,7 @@
       "desc": "Multiplay Dallas 2",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1016,7 +1012,7 @@
       "desc": "Multiplay Dallas 4",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1035,8 +1031,7 @@
     "mfr1": {
       "desc": "Multiplay Frankfurt 1",
       "groups": [
-        "multiplay",
-        "mplay-csgo"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1055,8 +1050,7 @@
     "mfr2": {
       "desc": "Multiplay Frankfurt 2",
       "groups": [
-        "multiplay",
-        "mplay-dota"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1075,8 +1069,7 @@
     "mfr3": {
       "desc": "Multiplay Frankfurt 3",
       "groups": [
-        "multiplay",
-        "mplay-dota"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1116,7 +1109,7 @@
       "desc": "Multiplay Hong Kong 2",
       "groups": [
         "multiplay",
-        "mplay-csgo"
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1175,8 +1168,7 @@
     "mln1": {
       "desc": "Multiplay London 1",
       "groups": [
-        "multiplay",
-        "mplay-csgo"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1195,8 +1187,7 @@
     "mln2": {
       "desc": "Multiplay London 2",
       "groups": [
-        "multiplay",
-        "mplay-dota"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1215,8 +1206,7 @@
     "mln3": {
       "desc": "Multiplay London 3",
       "groups": [
-        "multiplay",
-        "mplay-csgo"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1235,8 +1225,7 @@
     "mln4": {
       "desc": "Multiplay London 4",
       "groups": [
-        "multiplay",
-        "mplay-dota"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1255,8 +1244,7 @@
     "mlx1": {
       "desc": "Multiplay Luxembourg City",
       "groups": [
-        "multiplay",
-        "mplay-csgo"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1296,7 +1284,7 @@
       "desc": "Multiplay Miami 2",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1336,7 +1324,7 @@
       "desc": "Multiplay New York 2",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1376,7 +1364,7 @@
       "desc": "Multiplay Salt Lake City",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1416,7 +1404,7 @@
       "desc": "Multiplay Singapore 2",
       "groups": [
         "multiplay",
-        "mplay-csgo"
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1456,7 +1444,7 @@
       "desc": "Multiplay Singapore 4",
       "groups": [
         "multiplay",
-        "mplay-csgo"
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1476,7 +1464,7 @@
       "desc": "Multiplay San Jose 1",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1516,7 +1504,7 @@
       "desc": "Multiplay San Jose 3",
       "groups": [
         "multiplay",
-        "mplay-dota"
+        "mplay-csgo"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1576,7 +1564,7 @@
       "desc": "Multiplay Sao Paulo 2",
       "groups": [
         "multiplay",
-        "mplay-csgo"
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1595,8 +1583,7 @@
     "mst1": {
       "desc": "Multiplay Strasbourg",
       "groups": [
-        "multiplay",
-        "mplay-dota"
+        "multiplay"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1636,7 +1623,7 @@
       "desc": "Multiplay Sydney 2",
       "groups": [
         "multiplay",
-        "mplay-csgo"
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1716,7 +1703,7 @@
       "desc": "Multiplay Tokyo 2",
       "groups": [
         "multiplay",
-        "mplay-csgo"
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
@@ -1756,7 +1743,7 @@
       "desc": "Multiplay Tokyo 4",
       "groups": [
         "multiplay",
-        "mplay-csgo"
+        "mplay-dota"
       ],
       "has_gameservers": false,
       "partners": 4,
