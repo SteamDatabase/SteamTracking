@@ -2649,11 +2649,11 @@ function OnGetFinalPriceSuccess( result )
 				}				
 				else if ( method.value == 'cashincis' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Cash (CIS) transactions are authorized through the ECommPay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'CASH transactions are authorized through the ECommPay website.  Click the button below to open a new web browser to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to ECommPay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Cash (CIS) customers';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for CASH customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the ECommPay website by signing in and completing your transaction.<br/><br/>This process can take up to an hour after you\'ve completed your cash deposit.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
@@ -4707,7 +4707,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'cashincis' && providerPaymentMethod == 151 )
 			{
-				$('payment_method_review_text').innerHTML = 'Cash (CIS)';
+				$('payment_method_review_text').innerHTML = 'CASH';
 			}
 		}
 		
