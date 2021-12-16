@@ -3101,7 +3101,23 @@ html.touch
   .salepreviewwidgets_BundleContentPreview_jQ5Ga {
   margin: 0;
   padding: 2px;
+  padding-top: 0;
+  padding-left: 0;
   max-width: 70%;
+  background: none;
+}
+.salepreviewwidgets_SaleItemBrowserRow_gASJ2
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
+  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
+  .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
+  .salepreviewwidgets_BundleContentPreview_jQ5Ga
+  .salepreviewwidgets_ContentsCount_353Lz {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  display: none;
 }
 .salepreviewwidgets_SaleItemBrowserRow_gASJ2
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
@@ -3109,7 +3125,11 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
   .salepreviewwidgets_BundleContentPreview_jQ5Ga
   .salepreviewwidgets_PreviewCtn_1NM53 {
-  height: 32px;
+  background: none;
+  height: 23px;
+  max-width: 70%;
+  justify-content: unset;
+  padding: 0;
 }
 .salepreviewwidgets_SaleItemBrowserRow_gASJ2
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
@@ -3117,9 +3137,20 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
   .salepreviewwidgets_BundleContentPreview_jQ5Ga
   .salepreviewwidgets_PreviewCtn_1NM53
+  .salepreviewwidgets_PreviewItem_2yhQb {
+  width: 60px;
+  box-shadow: 5px 0 4px -2px rgba(0, 0, 0, 0.5);
+}
+.salepreviewwidgets_SaleItemBrowserRow_gASJ2
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
+  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
+  .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
+  .salepreviewwidgets_BundleContentPreview_jQ5Ga
+  .salepreviewwidgets_PreviewCtn_1NM53
+  .salepreviewwidgets_PreviewItem_2yhQb
   img {
-  height: 35px;
-  width: 90px;
+  height: 23px;
+  width: 60px;
 }
 .salepreviewwidgets_SaleItemBrowserRow_gASJ2
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
@@ -3337,6 +3368,34 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3wryh
     .salepreviewwidgets_CapsulePlatform_2bCf9 {
     display: none;
+  }
+  .salepreviewwidgets_SaleItemBrowserRow_gASJ2
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
+    .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
+    .salepreviewwidgets_BundleContentPreview_jQ5Ga
+    .salepreviewwidgets_ContentsCount_353Lz {
+    display: unset;
+  }
+  .salepreviewwidgets_SaleItemBrowserRow_gASJ2
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
+    .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
+    .salepreviewwidgets_BundleContentPreview_jQ5Ga
+    .salepreviewwidgets_PreviewCtn_1NM53 {
+    height: 45px;
+    margin-top: 4px;
+  }
+  .salepreviewwidgets_SaleItemBrowserRow_gASJ2
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
+    .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
+    .salepreviewwidgets_BundleContentPreview_jQ5Ga
+    .salepreviewwidgets_PreviewCtn_1NM53
+    .salepreviewwidgets_PreviewItem_2yhQb
+    img {
+    height: 45px;
+    width: 90px;
   }
   .salepreviewwidgets_SaleItemBrowserRow_gASJ2
     .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
@@ -11651,6 +11710,7 @@ Body.v6.tag_page.contenthub_page {
   margin: 0 auto;
 }
 .contenthubshared_StoreSection_OyJ48 .contenthubshared_SectionTitle_2RnIw {
+  position: relative;
   font-size: 16px;
   color: #fff;
   text-transform: uppercase;
@@ -11692,13 +11752,27 @@ Body.v6.tag_page.contenthub_page {
 }
 .ContentHubSalePage
   .SaleSectionTabListContainer
-  .SaleSectionCtn.expanded:first-child {
+  .SaleSectionCtn.contenthubtitle.expanded:first-child,
+.ContentHubSalePage
+  .SaleSectionTabListContainer
+  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
+.ContentHubSalePage
+  .SaleSectionTabListContainer
+  .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
+  ~ .SaleSectionCtn.contenthubtitle.expanded {
   margin-bottom: 520px;
 }
 @media screen and (max-width: 940px) {
   .ContentHubSalePage
     .SaleSectionTabListContainer
-    .SaleSectionCtn.expanded:first-child {
+    .SaleSectionCtn.contenthubtitle.expanded:first-child,
+  .ContentHubSalePage
+    .SaleSectionTabListContainer
+    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
+  .ContentHubSalePage
+    .SaleSectionTabListContainer
+    .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
+    ~ .SaleSectionCtn.contenthubtitle.expanded {
     margin-bottom: 470px;
   }
 }

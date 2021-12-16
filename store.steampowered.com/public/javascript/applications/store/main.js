@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6966417";
+var CLSTAMP = "6967432";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -8997,7 +8997,6 @@ var CLSTAMP = "6966417";
                       )
                     )
                   ),
-                  z && o.a.createElement(J, { rgInfo: h }),
                   o.a.createElement(
                     "div",
                     { className: F.a.StoreSaleWidgetReleaseAndTags },
@@ -9026,6 +9025,7 @@ var CLSTAMP = "6966417";
                       !y && o.a.createElement(ie, { item: s })
                     )
                   ),
+                  z && o.a.createElement(J, { rgInfo: h }),
                   c &&
                     I &&
                     o.a.createElement(
@@ -13081,7 +13081,8 @@ var CLSTAMP = "6966417";
                   E,
                   C,
                   A,
-                  w;
+                  w,
+                  B;
                 return Object(r.e)(this, function (r) {
                   switch (r.label) {
                     case 0:
@@ -13111,11 +13112,12 @@ var CLSTAMP = "6966417";
                       if (!(l.length <= e && f)) return [3, 11];
                       (g = this.m_nHighestSentRequestID),
                         (y = void 0),
+                        (S = void 0),
                         (r.label = 3);
                     case 3:
                       return (
                         r.trys.push([3, 5, , 6]),
-                        (S = {
+                        (O = {
                           strSectionFilter: Object(u.u)(o),
                           nTabUniqueID:
                             null == i ? void 0 : i.GetActiveTabUniqueID(),
@@ -13131,7 +13133,7 @@ var CLSTAMP = "6966417";
                             a,
                             n,
                             c,
-                            S,
+                            O,
                             _,
                             0,
                             this.m_cancelSignal
@@ -13140,20 +13142,21 @@ var CLSTAMP = "6966417";
                       );
                     case 4:
                       return (
-                        (O = r.sent()),
-                        (y = O.appids),
-                        (f = O.bHasPossibleMoreResults),
+                        (E = r.sent()),
+                        (y = E.appids),
+                        (S = E.rgStoreItemKeys),
+                        (f = E.bHasPossibleMoreResults),
                         (null == o ? void 0 : o.enable_faceted_browsing) &&
-                          (h.SetFacetCounts(O.facetCounts),
-                          h.SetSolrMatchCount(O.nMatchCount)),
+                          (h.SetFacetCounts(E.facetCounts),
+                          h.SetSolrMatchCount(E.nMatchCount)),
                         [3, 6]
                       );
                     case 5:
                       return (
-                        (E = r.sent()),
+                        (C = r.sent()),
                         this.m_cancelSignal.token.reason ||
                           (console.error(
-                            "Failed to load games for browser;" + E.message
+                            "Failed to load games for browser;" + C.message
                           ),
                           this.setState({
                             bInitialLoadComplete: !0,
@@ -13165,9 +13168,15 @@ var CLSTAMP = "6966417";
                       return this.m_nHighestReceivedRequestID > g
                         ? [2]
                         : ((this.m_nHighestReceivedRequestID = g),
-                          (l = y.map(function (e) {
-                            return { id: e, type: "game" };
-                          })),
+                          (l = S
+                            ? S.map(function (e) {
+                                var t = e.split("_"),
+                                  n = "app" === t[0] ? "game" : t[0];
+                                return { id: Number(t[1]), type: n };
+                              })
+                            : y.map(function (e) {
+                                return { id: e, type: "game" };
+                              })),
                           this.state.strSearchQuery ||
                             n.BUsesContentHubForItemSource() ||
                             (l = l.filter(function (e) {
@@ -13185,28 +13194,28 @@ var CLSTAMP = "6966417";
                       );
                     case 8:
                       (l = r.sent()),
-                        (C = f),
-                        h.UpdateMatchCount(C, l.length),
+                        (A = f),
+                        h.UpdateMatchCount(A, l.length),
                         (r.label = 9);
                     case 9:
-                      return (A = new Array()), [4, Object(M.a)(l, !1, A)];
+                      return (w = new Array()), [4, Object(M.a)(l, !1, w)];
                     case 10:
                       return (
                         (l = r.sent()),
-                        (d = A.length),
+                        (d = w.length),
                         l.length <= e && (_ += 8),
                         [3, 2]
                       );
                     case 11:
                       return (
                         this.m_cancelSignal.token.reason ||
-                          ((w = l.length > e || f),
+                          ((B = l.length > e || f),
                           this.setState({
                             bInitialLoadComplete: !0,
                             rgCapsules: l,
                             nVisibleRows: e,
                             nNumRequestedLastTime: _,
-                            bIsMoreAvailable: w,
+                            bIsMoreAvailable: B,
                             bAwaitingMoreRowsLoading: !1,
                             nHiddenCapsules: d,
                           })),
@@ -36861,8 +36870,8 @@ var CLSTAMP = "6966417";
         BundleContentPreview: "salepreviewwidgets_BundleContentPreview_jQ5Ga",
         StoreSaleWidgetOuterContainer:
           "salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15",
-        PreviewCtn: "salepreviewwidgets_PreviewCtn_1NM53",
         ContentsCount: "salepreviewwidgets_ContentsCount_353Lz",
+        PreviewCtn: "salepreviewwidgets_PreviewCtn_1NM53",
         PreviewItem: "salepreviewwidgets_PreviewItem_2yhQb",
         PreviewImg: "salepreviewwidgets_PreviewImg_1jx70",
         bordered_live_stream_icon:
@@ -44102,7 +44111,7 @@ var CLSTAMP = "6966417";
                 void 0 === d && (d = 0),
                 void 0 === m && (m = void 0),
                 Object(r.b)(this, void 0, void 0, function () {
-                  var M, O, E, C, A, w, B, T, I, L, D, j;
+                  var M, O, E, C, A, w, B, T, I, L, D, j, N, R, k;
                   return Object(r.e)(this, function (r) {
                     switch (r.label) {
                       case 0:
@@ -44120,7 +44129,9 @@ var CLSTAMP = "6966417";
                                 this.m_mapSaleGameListsByFlavor.set(e, E))
                               : ((M = {
                                   appids: [],
+                                  rgStoreItemKeys: [],
                                   setAppIDs: new Set(),
+                                  setStoreItemKeys: new Set(),
                                   solr_index: 0,
                                   possible_has_more: !0,
                                 }),
@@ -44195,6 +44206,15 @@ var CLSTAMP = "6966417";
                           (D = L[I]),
                             M.setAppIDs.has(D) ||
                               (M.appids.push(D), M.setAppIDs.add(D));
+                        for (
+                          j = 0, N = B.data.store_item_keys;
+                          j < N.length;
+                          j++
+                        )
+                          (R = N[j]),
+                            M.setStoreItemKeys.has(R) ||
+                              (M.rgStoreItemKeys.push(R),
+                              M.setStoreItemKeys.add(R));
                         (M.facetCounts = B.data.faceting),
                           (M.possible_has_more = B.data.possible_has_more),
                           (M.solr_index = B.data.solr_index),
@@ -44204,14 +44224,15 @@ var CLSTAMP = "6966417";
                       case 2:
                         return (
                           this.m_mapSaleGameListsByFlavor.set(e, M),
-                          (j = M.possible_has_more || d + p < M.appids.length),
+                          (k = M.possible_has_more || d + p < M.appids.length),
                           [
                             2,
                             {
                               appids: M.appids.slice(d, p),
+                              rgStoreItemKeys: M.rgStoreItemKeys,
                               facetCounts: M.facetCounts,
                               nMatchCount: M.match_count,
-                              bHasPossibleMoreResults: j,
+                              bHasPossibleMoreResults: k,
                             },
                           ]
                         );

@@ -7969,7 +7969,6 @@
                       )
                     )
                   ),
-                  N && o.a.createElement(Z, { rgInfo: h }),
                   o.a.createElement(
                     "div",
                     { className: x.a.StoreSaleWidgetReleaseAndTags },
@@ -7998,6 +7997,7 @@
                       !y && o.a.createElement(ie, { item: s })
                     )
                   ),
+                  N && o.a.createElement(Z, { rgInfo: h }),
                   c &&
                     T &&
                     o.a.createElement(
@@ -9527,7 +9527,7 @@
                 void 0 === l && (l = 0),
                 void 0 === u && (u = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var E, C, O, w, B, I, j, D, T, A, R, k;
+                  var E, C, O, w, B, I, j, D, T, A, R, k, M, L, G;
                   return Object(a.e)(this, function (a) {
                     switch (a.label) {
                       case 0:
@@ -9545,7 +9545,9 @@
                                 this.m_mapSaleGameListsByFlavor.set(e, O))
                               : ((E = {
                                   appids: [],
+                                  rgStoreItemKeys: [],
                                   setAppIDs: new Set(),
+                                  setStoreItemKeys: new Set(),
                                   solr_index: 0,
                                   possible_has_more: !0,
                                 }),
@@ -9620,6 +9622,15 @@
                           (R = A[T]),
                             E.setAppIDs.has(R) ||
                               (E.appids.push(R), E.setAppIDs.add(R));
+                        for (
+                          k = 0, M = j.data.store_item_keys;
+                          k < M.length;
+                          k++
+                        )
+                          (L = M[k]),
+                            E.setStoreItemKeys.has(L) ||
+                              (E.rgStoreItemKeys.push(L),
+                              E.setStoreItemKeys.add(L));
                         (E.facetCounts = j.data.faceting),
                           (E.possible_has_more = j.data.possible_has_more),
                           (E.solr_index = j.data.solr_index),
@@ -9629,14 +9640,15 @@
                       case 2:
                         return (
                           this.m_mapSaleGameListsByFlavor.set(e, E),
-                          (k = E.possible_has_more || l + c < E.appids.length),
+                          (G = E.possible_has_more || l + c < E.appids.length),
                           [
                             2,
                             {
                               appids: E.appids.slice(l, c),
+                              rgStoreItemKeys: E.rgStoreItemKeys,
                               facetCounts: E.facetCounts,
                               nMatchCount: E.match_count,
-                              bHasPossibleMoreResults: k,
+                              bHasPossibleMoreResults: G,
                             },
                           ]
                         );
@@ -12216,7 +12228,8 @@
                   S,
                   O,
                   B,
-                  I;
+                  I,
+                  j;
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
@@ -12246,11 +12259,12 @@
                       if (!(l.length <= e && f)) return [3, 11];
                       (v = this.m_nHighestSentRequestID),
                         (b = void 0),
+                        (g = void 0),
                         (a.label = 3);
                     case 3:
                       return (
                         a.trys.push([3, 5, , 6]),
-                        (g = {
+                        (y = {
                           strSectionFilter: Object(d.u)(o),
                           nTabUniqueID:
                             null == i ? void 0 : i.GetActiveTabUniqueID(),
@@ -12266,7 +12280,7 @@
                             r,
                             n,
                             c,
-                            g,
+                            y,
                             _,
                             0,
                             this.m_cancelSignal
@@ -12275,20 +12289,21 @@
                       );
                     case 4:
                       return (
-                        (y = a.sent()),
-                        (b = y.appids),
-                        (f = y.bHasPossibleMoreResults),
+                        (S = a.sent()),
+                        (b = S.appids),
+                        (g = S.rgStoreItemKeys),
+                        (f = S.bHasPossibleMoreResults),
                         (null == o ? void 0 : o.enable_faceted_browsing) &&
-                          (h.SetFacetCounts(y.facetCounts),
-                          h.SetSolrMatchCount(y.nMatchCount)),
+                          (h.SetFacetCounts(S.facetCounts),
+                          h.SetSolrMatchCount(S.nMatchCount)),
                         [3, 6]
                       );
                     case 5:
                       return (
-                        (S = a.sent()),
+                        (O = a.sent()),
                         this.m_cancelSignal.token.reason ||
                           (console.error(
-                            "Failed to load games for browser;" + S.message
+                            "Failed to load games for browser;" + O.message
                           ),
                           this.setState({
                             bInitialLoadComplete: !0,
@@ -12300,9 +12315,15 @@
                       return this.m_nHighestReceivedRequestID > v
                         ? [2]
                         : ((this.m_nHighestReceivedRequestID = v),
-                          (l = b.map(function (e) {
-                            return { id: e, type: "game" };
-                          })),
+                          (l = g
+                            ? g.map(function (e) {
+                                var t = e.split("_"),
+                                  n = "app" === t[0] ? "game" : t[0];
+                                return { id: Number(t[1]), type: n };
+                              })
+                            : b.map(function (e) {
+                                return { id: e, type: "game" };
+                              })),
                           this.state.strSearchQuery ||
                             n.BUsesContentHubForItemSource() ||
                             (l = l.filter(function (e) {
@@ -12320,28 +12341,28 @@
                       );
                     case 8:
                       (l = a.sent()),
-                        (O = f),
-                        h.UpdateMatchCount(O, l.length),
+                        (B = f),
+                        h.UpdateMatchCount(B, l.length),
                         (a.label = 9);
                     case 9:
-                      return (B = new Array()), [4, Object(w.a)(l, !1, B)];
+                      return (I = new Array()), [4, Object(w.a)(l, !1, I)];
                     case 10:
                       return (
                         (l = a.sent()),
-                        (p = B.length),
+                        (p = I.length),
                         l.length <= e && (_ += 8),
                         [3, 2]
                       );
                     case 11:
                       return (
                         this.m_cancelSignal.token.reason ||
-                          ((I = l.length > e || f),
+                          ((j = l.length > e || f),
                           this.setState({
                             bInitialLoadComplete: !0,
                             rgCapsules: l,
                             nVisibleRows: e,
                             nNumRequestedLastTime: _,
-                            bIsMoreAvailable: I,
+                            bIsMoreAvailable: j,
                             bAwaitingMoreRowsLoading: !1,
                             nHiddenCapsules: p,
                           })),
@@ -28528,8 +28549,8 @@
         BundleContentPreview: "salepreviewwidgets_BundleContentPreview_jQ5Ga",
         StoreSaleWidgetOuterContainer:
           "salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15",
-        PreviewCtn: "salepreviewwidgets_PreviewCtn_1NM53",
         ContentsCount: "salepreviewwidgets_ContentsCount_353Lz",
+        PreviewCtn: "salepreviewwidgets_PreviewCtn_1NM53",
         PreviewItem: "salepreviewwidgets_PreviewItem_2yhQb",
         PreviewImg: "salepreviewwidgets_PreviewImg_1jx70",
         bordered_live_stream_icon:

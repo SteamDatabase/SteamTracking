@@ -5142,6 +5142,9 @@ div.creatorhomeembed_SocialContainer_25404 {
 .creatorhomeembed_CuratorHoverCtn_LZpsp .creatorhomeembed_AvatarLink_DUFm7 {
   display: none;
 }
+.creatorhomeembed_MembersListLink_2YoZQ {
+  font-size: 13px;
+}
 .gameactions_GotSteamDialog_2WQOE .gameactions_DownloadSteamUrl_3xLwV {
   color: #fff;
 }
@@ -20227,10 +20230,18 @@ hr.VO {
   max-width: 1380px;
   margin: 40px auto 0 auto;
 }
+.saledashboard_DashboardCtn_3Hft6 h2 {
+  background: #233e4e;
+  padding: 7px 12px 0px 12px;
+  margin-top: 30px;
+}
 .saledashboard_DashboardCtn_3Hft6
   .saledashboard_DashboardSectionActive_3SCtU
   h2 {
   color: #a4d007;
+  background: #465805;
+  padding: 7px 12px 0px 12px;
+  margin-top: 30px;
 }
 .saledashboard_DashboardCtn_3Hft6
   .saledashboard_DashboardSectionActive_3SCtU
@@ -20241,13 +20252,16 @@ hr.VO {
 .saledashboard_DashboardCtn_3Hft6
   .saledashboard_DashboardSectionFeatured_1AHSB
   h2 {
-  color: pink;
+  color: #c0dfff;
+  background: #4d5b6c;
+  padding: 7px 12px 0px 12px;
+  margin-top: 30px;
 }
 .saledashboard_DashboardCtn_3Hft6
   .saledashboard_DashboardSectionFeatured_1AHSB
   hr {
   height: 0px;
-  border-bottom: 2px solid pink;
+  border-bottom: 2px solid #c0dfff;
 }
 .saledashboard_DashboardCtn_3Hft6 .saledashboard_DashboardDesc_UO4nh {
   font-size: 15px;
@@ -22566,6 +22580,11 @@ ul li {
 }
 .salerowsection_SaleSectionResizeButton_J8r3M {
   max-width: 50px;
+}
+.salerowsection_SaleSectionDesc_3LwmL {
+  font-size: 16px;
+  color: #fff;
+  padding: 12px 0;
 }
 .salerowsection_TileContainer_3miRj {
   width: 100%;
