@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6967432";
+var CLSTAMP = "6968730";
 /* Third-party software licenses can be found at licenses.txt */
 !(function (t) {
   function e(e) {
@@ -39,7 +39,7 @@ var CLSTAMP = "6967432";
               "javascript/legacy_web/" +
               ({ 0: "gamepad" }[t] || t) +
               ".js?contenthash=" +
-              { 0: "14123281f87db085811b" }[t]
+              { 0: "0bf0965b9268379e0f85" }[t]
             );
           })(t));
         var u = new Error();
@@ -270,10 +270,11 @@ var CLSTAMP = "6967432";
       i()(function () {
         var t;
         (t = new s()),
-          navigator.userAgent.includes("Valve Steam Gamepad"),
-          t.RegisterForGamepadDetected(function () {
-            return p(t);
-          });
+          navigator.userAgent.includes("Valve Steam Gamepad")
+            ? p(t)
+            : t.RegisterForGamepadDetected(function () {
+                return p(t);
+              });
       });
   },
   mrSG: function (t, e, n) {

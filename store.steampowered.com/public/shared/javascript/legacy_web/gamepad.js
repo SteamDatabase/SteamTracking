@@ -2150,12 +2150,17 @@
           var r = o[i];
           if ("childList" === r.type) {
             for (var a = 0; a < r.addedNodes.length; a++) {
-              (c = r.addedNodes[a]).nodeType === Node.ELEMENT_NODE && e.push(c);
+              if ((u = r.addedNodes[a]).nodeType === Node.ELEMENT_NODE) {
+                var c = n.indexOf(u);
+                -1 != c ? n.splice(c, 1) : e.push(u);
+              }
             }
             for (a = 0; a < r.removedNodes.length; a++) {
-              var c;
-              (c = r.removedNodes[a]).nodeType === Node.ELEMENT_NODE &&
-                n.push(c);
+              var u;
+              if ((u = r.removedNodes[a]).nodeType === Node.ELEMENT_NODE) {
+                var l = e.indexOf(u);
+                -1 != l ? e.splice(l, 1) : n.push(u);
+              }
             }
           }
         }
@@ -2188,11 +2193,8 @@
         s()(e, t)
           .addBack(e)
           .each(function () {
-            !(function (t) {
-              var e = s()(t).data("navNode");
-              if (!1 === e) return;
-              e || Ot(t);
-            })(this);
+            var t;
+            vt((t = this)) || Ot(t);
           }),
           (function () {
             for (var t = mt.length - 1; t >= 0; t--)

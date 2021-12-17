@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [39],
+  [68],
   {
     "++az": function (e, t, n) {
       e.exports =
@@ -4601,35 +4601,35 @@
     },
     Aqke: function (e, t, n) {
       var r = {
-        "./loyalty_brazilian.json": ["jJTi", 105],
-        "./loyalty_bulgarian.json": ["YXmX", 106],
-        "./loyalty_czech.json": ["Yw6T", 107],
-        "./loyalty_danish.json": ["LeJ7", 108],
-        "./loyalty_dutch.json": ["3s9e", 109],
-        "./loyalty_english.json": ["nz6u", 110],
-        "./loyalty_finnish.json": ["cCRj", 111],
-        "./loyalty_french.json": ["WjZg", 112],
-        "./loyalty_german.json": ["2HFY", 113],
-        "./loyalty_greek.json": ["puzw", 114],
-        "./loyalty_hungarian.json": ["h+vV", 115],
-        "./loyalty_italian.json": ["1xjJ", 116],
-        "./loyalty_japanese.json": ["KhFN", 117],
-        "./loyalty_koreana.json": ["0T2E", 118],
-        "./loyalty_latam.json": ["SFVQ", 119],
-        "./loyalty_norwegian.json": ["6qpk", 120],
-        "./loyalty_polish.json": ["c9AW", 121],
-        "./loyalty_portuguese.json": ["H3eu", 122],
-        "./loyalty_romanian.json": ["gt0D", 123],
-        "./loyalty_russian.json": ["4nQk", 124],
-        "./loyalty_sc_schinese.json": ["0Z0/", 125],
-        "./loyalty_schinese.json": ["svug", 126],
-        "./loyalty_spanish.json": ["x/nm", 127],
-        "./loyalty_swedish.json": ["d/hP", 128],
-        "./loyalty_tchinese.json": ["EWje", 129],
-        "./loyalty_thai.json": ["SnkP", 130],
-        "./loyalty_turkish.json": ["cD82", 131],
-        "./loyalty_ukrainian.json": ["jV8j", 132],
-        "./loyalty_vietnamese.json": ["TxFk", 133],
+        "./loyalty_brazilian.json": ["jJTi", 39],
+        "./loyalty_bulgarian.json": ["YXmX", 40],
+        "./loyalty_czech.json": ["Yw6T", 41],
+        "./loyalty_danish.json": ["LeJ7", 42],
+        "./loyalty_dutch.json": ["3s9e", 43],
+        "./loyalty_english.json": ["nz6u", 44],
+        "./loyalty_finnish.json": ["cCRj", 45],
+        "./loyalty_french.json": ["WjZg", 46],
+        "./loyalty_german.json": ["2HFY", 47],
+        "./loyalty_greek.json": ["puzw", 48],
+        "./loyalty_hungarian.json": ["h+vV", 49],
+        "./loyalty_italian.json": ["1xjJ", 50],
+        "./loyalty_japanese.json": ["KhFN", 51],
+        "./loyalty_koreana.json": ["0T2E", 52],
+        "./loyalty_latam.json": ["SFVQ", 53],
+        "./loyalty_norwegian.json": ["6qpk", 54],
+        "./loyalty_polish.json": ["c9AW", 55],
+        "./loyalty_portuguese.json": ["H3eu", 56],
+        "./loyalty_romanian.json": ["gt0D", 57],
+        "./loyalty_russian.json": ["4nQk", 58],
+        "./loyalty_sc_schinese.json": ["0Z0/", 59],
+        "./loyalty_schinese.json": ["svug", 60],
+        "./loyalty_spanish.json": ["x/nm", 61],
+        "./loyalty_swedish.json": ["d/hP", 62],
+        "./loyalty_tchinese.json": ["EWje", 63],
+        "./loyalty_thai.json": ["SnkP", 64],
+        "./loyalty_turkish.json": ["cD82", 65],
+        "./loyalty_ukrainian.json": ["jV8j", 66],
+        "./loyalty_vietnamese.json": ["TxFk", 67],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -5608,10 +5608,10 @@
           return e.toString().padStart(2, "0");
         },
         De = a.a.lazy(function () {
-          return n.e(72).then(n.bind(null, "yDev"));
+          return n.e(101).then(n.bind(null, "yDev"));
         }),
         Pe = a.a.lazy(function () {
-          return n.e(71).then(n.bind(null, "f4w8"));
+          return n.e(100).then(n.bind(null, "f4w8"));
         }),
         xe = (function (e) {
           function t() {
