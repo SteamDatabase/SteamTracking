@@ -5038,6 +5038,7 @@ html.touch
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
   transition: all 0.23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_gASJ2
@@ -5072,7 +5073,6 @@ html.touch
   img {
   height: 102px;
   width: 219px;
-  transition: height 0.23s ease-in-out, width 0.23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_gASJ2
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
@@ -5379,6 +5379,7 @@ html.touch
     .salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y
     img {
     height: 160px;
+    width: 300px;
   }
   .salepreviewwidgets_SaleItemBrowserRow_gASJ2
     .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15

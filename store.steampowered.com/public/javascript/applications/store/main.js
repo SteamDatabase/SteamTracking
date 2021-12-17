@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6968730";
+var CLSTAMP = "6969372";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [69],
+  [40],
   {
     "+VX6": function (e, t, n) {
       "use strict";
@@ -24226,35 +24226,35 @@ var CLSTAMP = "6968730";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 70],
-        "./main_bulgarian.json": ["c2SO", 71],
-        "./main_czech.json": ["peP3", 72],
-        "./main_danish.json": ["0bnV", 73],
-        "./main_dutch.json": ["wcLc", 74],
-        "./main_english.json": ["/rNK", 75],
-        "./main_finnish.json": ["iywU", 76],
-        "./main_french.json": ["Xnpc", 77],
-        "./main_german.json": ["pmKi", 78],
-        "./main_greek.json": ["mTRv", 79],
-        "./main_hungarian.json": ["WkHb", 80],
-        "./main_italian.json": ["Jz5U", 81],
-        "./main_japanese.json": ["3Dk9", 82],
-        "./main_koreana.json": ["neQD", 83],
-        "./main_latam.json": ["6oHD", 84],
-        "./main_norwegian.json": ["2OvS", 85],
-        "./main_polish.json": ["3pwE", 86],
-        "./main_portuguese.json": ["hY40", 87],
-        "./main_romanian.json": ["Q95+", 88],
-        "./main_russian.json": ["bsPT", 89],
-        "./main_sc_schinese.json": ["GOaQ", 90],
-        "./main_schinese.json": ["B/Zz", 91],
-        "./main_spanish.json": ["U6iL", 92],
-        "./main_swedish.json": ["4uPU", 93],
-        "./main_tchinese.json": ["rgC9", 94],
-        "./main_thai.json": ["87dp", 95],
-        "./main_turkish.json": ["yMpO", 96],
-        "./main_ukrainian.json": ["zTWm", 97],
-        "./main_vietnamese.json": ["wqiy", 98],
+        "./main_brazilian.json": ["TFAN", 41],
+        "./main_bulgarian.json": ["c2SO", 42],
+        "./main_czech.json": ["peP3", 43],
+        "./main_danish.json": ["0bnV", 44],
+        "./main_dutch.json": ["wcLc", 45],
+        "./main_english.json": ["/rNK", 46],
+        "./main_finnish.json": ["iywU", 47],
+        "./main_french.json": ["Xnpc", 48],
+        "./main_german.json": ["pmKi", 49],
+        "./main_greek.json": ["mTRv", 50],
+        "./main_hungarian.json": ["WkHb", 51],
+        "./main_italian.json": ["Jz5U", 52],
+        "./main_japanese.json": ["3Dk9", 53],
+        "./main_koreana.json": ["neQD", 54],
+        "./main_latam.json": ["6oHD", 55],
+        "./main_norwegian.json": ["2OvS", 56],
+        "./main_polish.json": ["3pwE", 57],
+        "./main_portuguese.json": ["hY40", 58],
+        "./main_romanian.json": ["Q95+", 59],
+        "./main_russian.json": ["bsPT", 60],
+        "./main_sc_schinese.json": ["GOaQ", 61],
+        "./main_schinese.json": ["B/Zz", 62],
+        "./main_spanish.json": ["U6iL", 63],
+        "./main_swedish.json": ["4uPU", 64],
+        "./main_tchinese.json": ["rgC9", 65],
+        "./main_thai.json": ["87dp", 66],
+        "./main_turkish.json": ["yMpO", 67],
+        "./main_ukrainian.json": ["zTWm", 68],
+        "./main_vietnamese.json": ["wqiy", 69],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -66787,12 +66787,12 @@ var CLSTAMP = "6968730";
           return Promise.all([n.e(0), n.e(8)]).then(n.bind(null, "3WEt"));
         }),
         de = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(68)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(39)]).then(
             n.bind(null, "CGeh")
           );
         }),
         me = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(102)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(73)]).then(
             n.bind(null, "tPo2")
           );
         }),
@@ -66816,7 +66816,7 @@ var CLSTAMP = "6968730";
             return n.e(3).then(n.bind(null, "byIC"));
           })),
         ge = s.a.lazy(function () {
-          return n.e(133).then(n.bind(null, "AFtM"));
+          return n.e(104).then(n.bind(null, "AFtM"));
         }),
         ye = (function (e) {
           function t() {
@@ -85102,36 +85102,36 @@ var CLSTAMP = "6968730";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 103],
-        "./shared_brazilian.json": ["Pg9r", 104],
-        "./shared_bulgarian.json": ["ENge", 105],
-        "./shared_czech.json": ["Ts6V", 106],
-        "./shared_danish.json": ["9oiU", 107],
-        "./shared_dutch.json": ["nxN4", 108],
-        "./shared_english.json": ["TYjx", 109],
-        "./shared_finnish.json": ["NuB8", 110],
-        "./shared_french.json": ["bOPj", 111],
-        "./shared_german.json": ["svuF", 112],
-        "./shared_greek.json": ["eJKB", 113],
-        "./shared_hungarian.json": ["T7i2", 114],
-        "./shared_italian.json": ["w96W", 115],
-        "./shared_japanese.json": ["XQ4S", 116],
-        "./shared_koreana.json": ["4hyI", 117],
-        "./shared_latam.json": ["3qrw", 118],
-        "./shared_norwegian.json": ["XA4Q", 119],
-        "./shared_polish.json": ["TpXn", 120],
-        "./shared_portuguese.json": ["Q8UV", 121],
-        "./shared_romanian.json": ["Eme1", 122],
-        "./shared_russian.json": ["BUiO", 123],
-        "./shared_sc_schinese.json": ["O0N/", 124],
-        "./shared_schinese.json": ["3UpY", 125],
-        "./shared_spanish.json": ["4Fxc", 126],
-        "./shared_swedish.json": ["0JhB", 127],
-        "./shared_tchinese.json": ["OYRc", 128],
-        "./shared_thai.json": ["lhAZ", 129],
-        "./shared_turkish.json": ["RSoU", 130],
-        "./shared_ukrainian.json": ["lNXI", 131],
-        "./shared_vietnamese.json": ["RSmC", 132],
+        "./shared_arabic.json": ["d1TB", 74],
+        "./shared_brazilian.json": ["Pg9r", 75],
+        "./shared_bulgarian.json": ["ENge", 76],
+        "./shared_czech.json": ["Ts6V", 77],
+        "./shared_danish.json": ["9oiU", 78],
+        "./shared_dutch.json": ["nxN4", 79],
+        "./shared_english.json": ["TYjx", 80],
+        "./shared_finnish.json": ["NuB8", 81],
+        "./shared_french.json": ["bOPj", 82],
+        "./shared_german.json": ["svuF", 83],
+        "./shared_greek.json": ["eJKB", 84],
+        "./shared_hungarian.json": ["T7i2", 85],
+        "./shared_italian.json": ["w96W", 86],
+        "./shared_japanese.json": ["XQ4S", 87],
+        "./shared_koreana.json": ["4hyI", 88],
+        "./shared_latam.json": ["3qrw", 89],
+        "./shared_norwegian.json": ["XA4Q", 90],
+        "./shared_polish.json": ["TpXn", 91],
+        "./shared_portuguese.json": ["Q8UV", 92],
+        "./shared_romanian.json": ["Eme1", 93],
+        "./shared_russian.json": ["BUiO", 94],
+        "./shared_sc_schinese.json": ["O0N/", 95],
+        "./shared_schinese.json": ["3UpY", 96],
+        "./shared_spanish.json": ["4Fxc", 97],
+        "./shared_swedish.json": ["0JhB", 98],
+        "./shared_tchinese.json": ["OYRc", 99],
+        "./shared_thai.json": ["lhAZ", 100],
+        "./shared_turkish.json": ["RSoU", 101],
+        "./shared_ukrainian.json": ["lNXI", 102],
+        "./shared_vietnamese.json": ["RSmC", 103],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -97058,5 +97058,5 @@ var CLSTAMP = "6968730";
       };
     },
   },
-  [["gfbn", 99, 0]],
+  [["gfbn", 70, 0]],
 ]);
