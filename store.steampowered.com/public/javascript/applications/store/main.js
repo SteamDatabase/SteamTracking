@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6969832";
+var CLSTAMP = "6970670";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -16286,11 +16286,11 @@ var CLSTAMP = "6969832";
                               this.props.event.GID,
                               this.props.bIsPreview
                             )),
-                          [3, 23]
+                          [3, 24]
                         );
                       case 9:
                         return "events" !== t.section_type
-                          ? [3, 20]
+                          ? [3, 21]
                           : ((G = void 0),
                             !t.smart_section ||
                             ("recent_events" !== t.smart_section_type &&
@@ -16370,10 +16370,15 @@ var CLSTAMP = "6969832";
                           (U = G.map(function (e) {
                             return { type: "game", id: e.appid };
                           })),
+                          [4, v.a.Get().HintLoad()]
+                        );
+                      case 19:
+                        return (
+                          r.sent(),
                           (q = []),
                           [4, Object(M.a)(U, Object(Ve.a)(t), q)]
                         );
-                      case 19:
+                      case 20:
                         return (
                           (U = r.sent()),
                           (H = new Set(
@@ -16398,17 +16403,17 @@ var CLSTAMP = "6969832";
                               this.props.event.GID,
                               this.props.bIsPreview
                             )),
-                          [3, 23]
+                          [3, 24]
                         );
-                      case 20:
+                      case 21:
                         return "links" !== t.section_type &&
                           "sale_tabhub" !== t.smart_section_type
-                          ? [3, 23]
+                          ? [3, 24]
                           : ((V = t.links),
                             "sale_tabhub" !== t.smart_section_type
-                              ? [3, 22]
+                              ? [3, 23]
                               : [4, b.a.GetSaleTags()]);
-                      case 21:
+                      case 22:
                         (X = r.sent()),
                           (V = X.map(function (e) {
                             return {
@@ -16418,11 +16423,11 @@ var CLSTAMP = "6969832";
                             };
                           })),
                           (V = this.GetCachedRandomizedOrder("links", V, ae.f)),
-                          (r.label = 22);
-                      case 22:
-                        this.setState({ links: V, bInitialLoadComplete: !0 }),
                           (r.label = 23);
                       case 23:
+                        this.setState({ links: V, bInitialLoadComplete: !0 }),
+                          (r.label = 24);
+                      case 24:
                         return [2];
                     }
                   });
