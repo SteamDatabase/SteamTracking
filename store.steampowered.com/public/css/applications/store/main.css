@@ -5875,6 +5875,11 @@ html.touch
   color: #fff;
   padding: 0 16px;
 }
+.salepreviewwidgets_RecommendationReason_3Q_ta {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  padding: 8px;
+}
 .buttonBack___1mlaL,
 .buttonFirst___2rhFr,
 .buttonLast___2yuh0,
@@ -17565,6 +17570,7 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubshared_StoreSection_OyJ48 {
   width: 940px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .contenthubshared_StoreSection_OyJ48 .contenthubshared_SectionTitle_2RnIw {
@@ -17581,6 +17587,13 @@ Body.v6.tag_page.contenthub_page {
   font-size: 16px;
   opacity: 50%;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 940px) {
+  .contenthubshared_StoreSection_OyJ48
+    .contenthubshared_SectionDescription_nVpbh {
+    display: block;
+    padding-left: 8px;
+  }
 }
 .contenthubshared_SectionTitleCtn_3Laga {
   margin-top: 30px;
@@ -17645,6 +17658,9 @@ Body.v6.tag_page.contenthub_page {
   flex-direction: column;
   justify-content: space-between;
   margin: 8px 0px;
+}
+.contenthubshared_SpotlightsColumn_2Y2C1 > div {
+  max-width: 306px;
 }
 .contenthubshared_SpotlightsColumn_2Y2C1 .CapsuleBottomBar {
   height: 53px;
@@ -17891,7 +17907,9 @@ Body.v6.tag_page.contenthub_page {
 }
 @media screen and (max-width: 940px) {
   .contenthubmaincarousel_ContentHubLabsWidget_3IwCW {
-    display: none;
+    display: block;
+    position: unset;
+    top: unset;
   }
 }
 .contenthubmaincarousel_SteamLabsBannerCtn_1C-mg {

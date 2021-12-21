@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6970921";
+var CLSTAMP = "6976071";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -2541,6 +2541,8 @@ var CLSTAMP = "6970921";
           case "links":
           case "itemdef":
             return { nMaxItemsPerRow: 5, nItemMinimumWidth: 200 };
+          case "contenthubspecials":
+            return { nMaxItemsPerRow: 3, nItemMinimumWidth: 306 };
           default:
             return { nMaxItemsPerRow: 4, nItemMinimumWidth: 280 };
         }
@@ -9058,7 +9060,14 @@ var CLSTAMP = "6970921";
               )
             ),
             Boolean(null == c ? void 0 : c.free_weekend_label) &&
-              o.a.createElement(A.a, { info: c })
+              o.a.createElement(A.a, { info: c }),
+            Boolean(e.strReason) &&
+              e.strReason.length > 0 &&
+              o.a.createElement(
+                "div",
+                { className: F.a.RecommendationReason },
+                e.strReason
+              )
           );
         }),
         X = function (e) {
@@ -14499,11 +14508,13 @@ var CLSTAMP = "6970921";
             i = e.nTagID,
             o = e.event,
             l = e.section,
-            u = Object(G.b)(n, a, i),
-            p = u.bLoading,
-            d = u.spotlights,
-            m = u.dailyDeals,
-            h = Object(G.c)(
+            u = e.bIsPreview,
+            p = Object(G.b)(n, a, i),
+            d = p.bLoading,
+            m = p.spotlights,
+            h = p.dailyDeals,
+            f = Object(G.c)(
+              u,
               o,
               l.smart_section_type || "discounted",
               l.smart_section_max_apps || 10,
@@ -14511,92 +14522,95 @@ var CLSTAMP = "6970921";
               a,
               i
             ),
-            f = h.bLoading,
-            _ = h.rgMatchingCapsules,
-            b = Object(s.useState)(),
-            v = b[0],
-            g = b[1];
-          return (
-            Object(s.useEffect)(
-              function () {
-                var e = (function (e, t) {
-                  if (null == e || null == t) return t;
-                  for (var n = new Set(), r = 0, a = e; r < a.length; r++) {
-                    var i = a[r];
-                    n.add(bn({ type: "dailydeal", item: i }));
-                  }
-                  return t.filter(function (e) {
-                    return !n.has(bn({ type: "capsule", item: e }));
-                  });
-                })(m, _);
-                g(
-                  (function (e, t, n) {
-                    var r = [],
-                      a = [];
-                    if (e)
-                      for (var i = 0, o = e; i < o.length; i++) {
-                        var s = o[i];
-                        a.push({ type: "spotlight", item: s }),
-                          r.push(a),
-                          (a = []);
-                      }
-                    if (t)
-                      for (var c = 0, l = t; c < l.length; c++) {
-                        var u = l[c];
-                        a.push({ type: "dailydeal", item: u }),
-                          2 === a.length && (r.push(a), (a = []));
-                      }
-                    if (n)
-                      for (var p = 0, d = n; p < d.length; p++) {
-                        var m = d[p];
-                        a.push({ type: "capsule", item: m }),
-                          2 === a.length && (r.push(a), (a = []));
-                      }
-                    1 === a.length && r.push(a);
-                    return r;
-                  })(d, m, e)
-                );
-              },
-              [m, _, d]
-            ),
-            p || f || !Boolean(v)
-              ? null
-              : c.a.createElement(
-                  "div",
-                  {
-                    className: Object(ie.a)(
-                      ((t = {}),
-                      (t[Se.SaleSection] = !0),
-                      (t[Se.CarouselDisplay] = !0),
-                      (t[q.SaleSectionCtn] = !0),
-                      (t.SaleSectionForCustomCSS = !0),
-                      t)
-                    ),
-                    style: Un(l, o),
-                  },
-                  c.a.createElement(
-                    "div",
-                    { className: Se.SaleSectionTitleCtn },
-                    c.a.createElement(Cn, Object(r.a)({}, e))
-                  ),
-                  c.a.createElement(
-                    Ne.a,
-                    {
-                      visibleElements: 3,
-                      className: Object(ie.a)(
-                        sn.StoreSection,
-                        sn.StoreSection,
-                        "SaleSectionCarouselPadding"
-                      ),
-                      useTestScrollbar: !0,
-                      bLazyRenderChildren: !0,
-                    },
-                    v.map(function (e) {
-                      return c.a.createElement(ln, { key: _n(e), column: e });
-                    })
-                  )
-                )
+            _ = f.bLoading,
+            b = f.rgMatchingCapsules,
+            v = Object(s.useState)(),
+            g = v[0],
+            y = v[1];
+          Object(s.useEffect)(
+            function () {
+              var e = (function (e, t) {
+                if (null == e || null == t) return t;
+                for (var n = new Set(), r = 0, a = e; r < a.length; r++) {
+                  var i = a[r];
+                  n.add(bn({ type: "dailydeal", item: i }));
+                }
+                return t.filter(function (e) {
+                  return !n.has(bn({ type: "capsule", item: e }));
+                });
+              })(h, b);
+              y(
+                (function (e, t, n) {
+                  var r = [],
+                    a = [];
+                  if (e)
+                    for (var i = 0, o = e; i < o.length; i++) {
+                      var s = o[i];
+                      a.push({ type: "spotlight", item: s }),
+                        r.push(a),
+                        (a = []);
+                    }
+                  if (t)
+                    for (var c = 0, l = t; c < l.length; c++) {
+                      var u = l[c];
+                      a.push({ type: "dailydeal", item: u }),
+                        2 === a.length && (r.push(a), (a = []));
+                    }
+                  if (n)
+                    for (var p = 0, d = n; p < d.length; p++) {
+                      var m = d[p];
+                      a.push({ type: "capsule", item: m }),
+                        2 === a.length && (r.push(a), (a = []));
+                    }
+                  1 === a.length && r.push(a);
+                  return r;
+                })(m, h, e)
+              );
+            },
+            [h, b, m]
           );
+          var S = Object(G.d)(),
+            M = S.bIsScreenWide,
+            O = S.nSpotlightCapsules,
+            E = Math.min(3, O);
+          return d || _ || !Boolean(g)
+            ? null
+            : c.a.createElement(
+                "div",
+                {
+                  className: Object(ie.a)(
+                    ((t = {}),
+                    (t[Se.SaleSection] = !0),
+                    (t[Se.CarouselDisplay] = !0),
+                    (t[q.SaleSectionCtn] = !0),
+                    (t.SaleSectionForCustomCSS = !0),
+                    t)
+                  ),
+                  style: Un(l, o),
+                },
+                c.a.createElement(
+                  "div",
+                  { className: Se.SaleSectionTitleCtn },
+                  c.a.createElement(Cn, Object(r.a)({}, e))
+                ),
+                c.a.createElement(
+                  Ne.a,
+                  {
+                    hideArrows: !M,
+                    visibleElements: E,
+                    className: Object(ie.a)(
+                      sn.StoreSection,
+                      sn.StoreSection,
+                      "SaleSectionCarouselPadding"
+                    ),
+                    useTestScrollbar: !0,
+                    bLazyRenderChildren: !0,
+                  },
+                  g.map(function (e) {
+                    return c.a.createElement(ln, { key: _n(e), column: e });
+                  })
+                )
+              );
         },
         ln = function (e) {
           var t = e.column;
@@ -15135,6 +15149,7 @@ var CLSTAMP = "6970921";
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
+              (t.state = { bIsScreenWide: Ln() }),
               (t.m_refTabSection = s.createRef()),
               (t.m_refItemBrowserSection = s.createRef()),
               (t.m_AppVisibilityTracker = new re()),
@@ -15147,13 +15162,14 @@ var CLSTAMP = "6970921";
               var e,
                 t = this.props,
                 n = t.event,
-                r = t.history,
-                a =
-                  null === (e = n.jsondata.sale_sections) || void 0 === e
-                    ? void 0
-                    : e.find(function (e) {
-                        return "sale_item_browser" === e.section_type;
-                      });
+                r = t.history;
+              window.addEventListener("resize", this.OnResize);
+              var a =
+                null === (e = n.jsondata.sale_sections) || void 0 === e
+                  ? void 0
+                  : e.find(function (e) {
+                      return "sale_item_browser" === e.section_type;
+                    });
               if (null != a) {
                 var i = a.unique_id;
                 if (null != i) {
@@ -15180,6 +15196,12 @@ var CLSTAMP = "6970921";
                   }
                 }
               }
+            }),
+            (t.prototype.componentWillUnmount = function () {
+              window.removeEventListener("resize", this.OnResize);
+            }),
+            (t.prototype.OnResize = function () {
+              this.setState({ bIsScreenWide: Ln() });
             }),
             (t.prototype.GetTabSelectionsFromURL = function () {
               var e = this,
@@ -15547,6 +15569,7 @@ var CLSTAMP = "6970921";
                                     : f.internal_type) || ""
                                 ] = !0),
                                 (m.expanded =
+                                  e.state.bIsScreenWide &&
                                   !S &&
                                   !Boolean(
                                     n.jsondata.content_hub_restricted_width
@@ -15580,6 +15603,7 @@ var CLSTAMP = "6970921";
                 d
               );
             }),
+            Object(r.c)([oe.a], t.prototype, "OnResize", null),
             Object(r.c)([oe.a], t.prototype, "OnTabSelected", null),
             (t = Object(r.c)([i.a], t))
           );
@@ -22218,7 +22242,7 @@ var CLSTAMP = "6970921";
           return a;
         }),
         n.d(t, "a", function () {
-          return h;
+          return f;
         });
       var r,
         a,
@@ -22230,7 +22254,8 @@ var CLSTAMP = "6970921";
         u = n.n(l),
         p = n("ee7K"),
         d = n("gyoR"),
-        m = n("5eAM");
+        m = n("5eAM"),
+        h = n("dStQ");
       !(function (e) {
         (e[(e.k_EStatusString = 0)] = "k_EStatusString"),
           (e[(e.k_ECreator = 1)] = "k_ECreator"),
@@ -22247,7 +22272,7 @@ var CLSTAMP = "6970921";
             (e[(e.k_ELinuxPortDeveloper = 5)] = "k_ELinuxPortDeveloper"),
             (e[(e.k_EFranchise = 6)] = "k_EFranchise");
         })(a || (a = {}));
-      var h = (function () {
+      var f = (function () {
         function e() {
           (this.m_mapAppLists = new Map()),
             (this.m_rgSections = new Array()),
@@ -22275,6 +22300,10 @@ var CLSTAMP = "6970921";
             )),
             (this.m_partnerTakeoverData = Object(s.h)(
               "ch_partner_takeover_data",
+              "application_config"
+            )),
+            (this.m_searchPreferences = Object(s.h)(
+              "search_preferences",
               "application_config"
             ));
         }
@@ -22363,6 +22392,7 @@ var CLSTAMP = "6970921";
                           l.data.homeViewSettingOverride
                         ),
                       (this.m_partnerTakeoverData = l.data.partnerTakeover),
+                      (this.m_searchPreferences = l.data.searchPreferences),
                       (i.label = 2);
                   case 2:
                     for (
@@ -22379,24 +22409,38 @@ var CLSTAMP = "6970921";
                           p.push(e.SaleCapsuleFromContentHubCapsule(v));
                     return [4, Object(d.h)(p)];
                   case 3:
-                    return (
-                      i.sent(),
-                      this.ApplyUserAndHomeViewFilters(),
-                      [4, this.UpdateRecommendationReasons()]
-                    );
+                    return i.sent(), [4, this.ApplyUserAndHomeViewFilters()];
                   case 4:
+                    return i.sent(), [4, this.UpdateRecommendationReasons()];
+                  case 5:
                     return i.sent(), [2];
                 }
               });
             });
           }),
           (e.prototype.ApplyUserAndHomeViewFilters = function () {
-            var e = new o.a(),
-              t = Object(i.a)(Object(i.a)({}, c.a.Get().GetHomeView()), {
-                enforce_minimum: !0,
+            return Object(i.b)(this, void 0, void 0, function () {
+              var e, t;
+              return Object(i.e)(this, function (n) {
+                switch (n.label) {
+                  case 0:
+                    return (
+                      (e = new o.a()),
+                      (t = Object(i.a)(
+                        Object(i.a)({}, c.a.Get().GetHomeView()),
+                        { enforce_minimum: !0 }
+                      )),
+                      [4, this.BuildFeaturedCarouselContent(e, t)]
+                    );
+                  case 1:
+                    return (
+                      n.sent(), [4, this.BuildAllOtherCarouselContent(e, t)]
+                    );
+                  case 2:
+                    return n.sent(), [2];
+                }
               });
-            this.BuildFeaturedCarouselContent(e, t),
-              this.BuildAllOtherCarouselContent(e, t);
+            });
           }),
           (e.prototype.UpdateRecommendationReasons = function () {
             return Object(i.b)(this, void 0, void 0, function () {
@@ -22418,19 +22462,39 @@ var CLSTAMP = "6970921";
             });
           }),
           (e.prototype.BuildAllOtherCarouselContent = function (e, t) {
-            var n = this;
-            (this.m_mapOtherCarousels = new Map()),
-              this.m_rgSections.forEach(function (r) {
-                var a,
-                  i = n.m_mapAppLists.get(r.id);
-                (null === (a = null == i ? void 0 : i.apps) || void 0 === a
-                  ? void 0
-                  : a.length) > 0 &&
-                  n.m_mapOtherCarousels.set(
-                    r.id,
-                    Object(o.b)(i.apps, t, e, 40, 4)
-                  );
+            var n;
+            return Object(i.b)(this, void 0, void 0, function () {
+              var r, a, s, c, l;
+              return Object(i.e)(this, function (i) {
+                switch (i.label) {
+                  case 0:
+                    (this.m_mapOtherCarousels = new Map()),
+                      (r = 0),
+                      (a = this.m_rgSections),
+                      (i.label = 1);
+                  case 1:
+                    return r < a.length
+                      ? ((s = a[r]),
+                        (c = this.m_mapAppLists.get(s.id)),
+                        (null === (n = null == c ? void 0 : c.apps) ||
+                        void 0 === n
+                          ? void 0
+                          : n.length) > 0
+                          ? ((l = Object(o.b)(c.apps, t, e, 40, 4)),
+                            [4, this.ApplyStoreAndSearchPreferenceFilters(l)])
+                          : [3, 3])
+                      : [3, 4];
+                  case 2:
+                    (l = i.sent()),
+                      this.m_mapOtherCarousels.set(s.id, l),
+                      (i.label = 3);
+                  case 3:
+                    return r++, [3, 1];
+                  case 4:
+                    return [2];
+                }
               });
+            });
           }),
           (e.ZipperMerge = function (e, t) {
             var n = new Array();
@@ -22456,51 +22520,133 @@ var CLSTAMP = "6970921";
             return r;
           }),
           (e.prototype.BuildFeaturedCarouselContent = function (t, n) {
-            var r,
-              a = this,
-              i = Object(o.b)(
-                this.m_mapAppLists.get("featured").apps,
-                n,
-                t,
-                12,
-                4
-              );
-            this.m_rgMainCapsule = e.ZipperMerge([i], t);
-            for (
-              var s = [
-                  "featured_recommended",
-                  "top_sellers",
-                  "specials",
-                  "concurrent",
-                ],
-                c = (s = s.filter(function (e) {
-                  return a.m_mapAppLists.has(e);
-                })).map(function (e) {
-                  return a.m_mapAppLists.get(e);
-                }),
-                l = 0,
-                u = c;
-              l < u.length;
-              l++
-            ) {
-              var p = u[l];
-              p &&
-                ((p.apps =
-                  null === (r = p.apps) || void 0 === r
-                    ? void 0
-                    : r.filter(function (e) {
-                        return "bundle" !== e.item_type;
+            var r;
+            return Object(i.b)(this, void 0, void 0, function () {
+              var a,
+                s,
+                c,
+                l,
+                u,
+                p,
+                d,
+                m = this;
+              return Object(i.e)(this, function (i) {
+                switch (i.label) {
+                  case 0:
+                    return (
+                      (a = Object(o.b)(
+                        this.m_mapAppLists.get("featured").apps,
+                        n,
+                        t,
+                        12,
+                        4
+                      )),
+                      [4, this.ApplyStoreAndSearchPreferenceFilters(a)]
+                    );
+                  case 1:
+                    (a = i.sent()),
+                      (this.m_rgMainCapsule = e.ZipperMerge([a], t)),
+                      (s = (s = [
+                        "featured_recommended",
+                        "top_sellers",
+                        "specials",
+                        "concurrent",
+                      ]).filter(function (e) {
+                        return m.m_mapAppLists.has(e);
                       })),
-                (p.apps = Object(o.b)(p.apps || [], n, t, 12, 4)));
-            }
-            this.m_rgMainCapsule = this.m_rgMainCapsule.concat(
-              e.ZipperMerge(
-                c.map(function (e) {
-                  return e.apps;
-                }),
-                t
-              )
-            );
+                      (c = s.map(function (e) {
+                        return m.m_mapAppLists.get(e);
+                      })),
+                      (l = 0),
+                      (u = c),
+                      (i.label = 2);
+                  case 2:
+                    return l < u.length
+                      ? (p = u[l])
+                        ? ((p.apps =
+                            null === (r = p.apps) || void 0 === r
+                              ? void 0
+                              : r.filter(function (e) {
+                                  return (
+                                    "bundle" !== e.item_type &&
+                                    "sub" !== e.item_type
+                                  );
+                                })),
+                          (p.apps = Object(o.b)(p.apps || [], n, t, 12, 4)),
+                          (d = p),
+                          [
+                            4,
+                            this.ApplyStoreAndSearchPreferenceFilters(p.apps),
+                          ])
+                        : [3, 4]
+                      : [3, 5];
+                  case 3:
+                    (d.apps = i.sent()), (i.label = 4);
+                  case 4:
+                    return l++, [3, 2];
+                  case 5:
+                    return (
+                      (this.m_rgMainCapsule = this.m_rgMainCapsule.concat(
+                        e.ZipperMerge(
+                          c.map(function (e) {
+                            return e.apps;
+                          }),
+                          t
+                        )
+                      )),
+                      [2]
+                    );
+                }
+              });
+            });
+          }),
+          (e.prototype.ApplyStoreAndSearchPreferenceFilters = function (t) {
+            var n, r, a;
+            return Object(i.b)(this, void 0, void 0, function () {
+              var o, s, c, l, u, p;
+              return Object(i.e)(this, function (i) {
+                switch (i.label) {
+                  case 0:
+                    return (
+                      (o =
+                        null === (n = this.m_searchPreferences) || void 0 === n
+                          ? void 0
+                          : n.hide_owned),
+                      (s =
+                        null === (r = this.m_searchPreferences) || void 0 === r
+                          ? void 0
+                          : r.hide_wishlist),
+                      (c =
+                        null === (a = this.m_searchPreferences) || void 0 === a
+                          ? void 0
+                          : a.hide_ignored),
+                      (l = Object(h.a)(t)),
+                      [4, Object(d.b)(l, !1, o, s, !1, c)]
+                    );
+                  case 1:
+                    return (
+                      (u = i.sent()),
+                      (p = new Set(
+                        u.map(function (t) {
+                          return e.GetKeyForCapsule(t);
+                        })
+                      )),
+                      [
+                        2,
+                        t.filter(function (t) {
+                          return p.has(
+                            e.GetKeyForCapsule({ type: t.item_type, id: t.id })
+                          );
+                        }),
+                      ]
+                    );
+                }
+              });
+            });
+          }),
+          (e.GetKeyForCapsule = function (e) {
+            var t = e.type;
+            return "sub" !== t && "bundle" !== t && (t = "app"), t + e.id;
           }),
           (e.PrepareAppListsForFiltering = function (e) {
             e.forEach(function (e) {
@@ -22945,7 +23091,8 @@ var CLSTAMP = "6970921";
             n = e.capsule,
             o = Object(a.useState)(!0),
             s = o[0],
-            l = o[1];
+            l = o[1],
+            p = Object(d.d)().bIsScreenWide;
           return (
             Object(a.useEffect)(
               function () {
@@ -22974,7 +23121,7 @@ var CLSTAMP = "6970921";
             i.a.createElement(m.m, {
               id: n.id,
               type: "app" === n.item_type ? "game" : n.item_type,
-              displayStyle: "animated",
+              displayStyle: p ? "animated" : "bordered",
               strReason: s ? "" : h(n).strReason,
             })
           );
@@ -36898,6 +37045,7 @@ var CLSTAMP = "6970921";
         DemoLayoutPopup: "salepreviewwidgets_DemoLayoutPopup_2tmp2",
         FreeWeekendBar: "salepreviewwidgets_FreeWeekendBar_2SCof",
         FreeWeekendLabel: "salepreviewwidgets_FreeWeekendLabel_21B6L",
+        RecommendationReason: "salepreviewwidgets_RecommendationReason_3Q_ta",
       };
     },
     NqJg: function (e, t, n) {
@@ -53556,19 +53704,30 @@ var CLSTAMP = "6970921";
         v = function (e) {
           var t = e.mapSectionLists,
             n = e.section,
-            r = e.nCapsulesPerPage,
-            i = t.get(n.id);
-          if (!i || 0 == i.length) return null;
-          var o = null;
+            r = Object(f.d)(),
+            i = r.bIsScreenWide,
+            o = r.nCarouselCapsules,
+            s = Math.min(e.nCapsulesPerPage, o),
+            c = t.get(n.id);
+          if (!c || 0 == c.length) return null;
+          var l = null;
           switch (n.type) {
             case "4wide":
-              o = a.a.createElement(y, { capsuleList: i, nCapsulesPerPage: r });
+              l = a.a.createElement(y, {
+                capsuleList: c,
+                nCapsulesPerPage: s,
+                bIsScreenWide: i,
+              });
               break;
             case "creator4wide":
-              o = a.a.createElement(S, { capsuleList: i, nCapsulesPerPage: r });
+              l = a.a.createElement(S, {
+                capsuleList: c,
+                nCapsulesPerPage: s,
+                bIsScreenWide: i,
+              });
               break;
             default:
-              o = a.a.createElement("div", null, "Unknown: ", n.type);
+              l = a.a.createElement("div", null, "Unknown: ", n.type);
           }
           return a.a.createElement(
             p.b,
@@ -53580,7 +53739,7 @@ var CLSTAMP = "6970921";
                 title: n.title,
                 description: n.description,
               }),
-              o
+              l
             )
           );
         },
@@ -53598,10 +53757,12 @@ var CLSTAMP = "6970921";
         y = function (e) {
           var t = e.capsuleList,
             n = e.nCapsulesPerPage,
-            r = Object(f.a)(t, 40);
+            r = e.bIsScreenWide,
+            i = Object(f.a)(t, 40);
           return a.a.createElement(
             s.a,
             {
+              hideArrows: !r,
               visibleElements: n,
               useTestScrollbar: !0,
               bLazyRenderChildren: !0,
@@ -53611,7 +53772,7 @@ var CLSTAMP = "6970921";
                 "SaleSectionCarouselPadding"
               ),
             },
-            r.map(function (e) {
+            i.map(function (e) {
               return a.a.createElement(l.a, {
                 key: e.type + "_" + e.id,
                 capsule: e,
@@ -53623,17 +53784,18 @@ var CLSTAMP = "6970921";
         S = function (e) {
           var t = e.capsuleList,
             n = e.nCapsulesPerPage,
-            r = Object(o.b)(),
-            c = r[0],
-            u = r[1];
-          if (c)
+            r = e.bIsScreenWide,
+            c = Object(o.b)(),
+            u = c[0],
+            p = c[1];
+          if (u)
             return a.a.createElement(d.a, {
               string: Object(h.f)("#Loading"),
               size: "medium",
               position: "center",
             });
-          var p = Object(f.a)(t, 40),
-            b = (function (e, t) {
+          var b = Object(f.a)(t, 40),
+            v = (function (e, t) {
               for (var n = new Map(), r = 0, a = e; r < a.length; r++) {
                 var o = a[r].id,
                   s = i.a.GetAppLinkInfo(o);
@@ -53647,10 +53809,11 @@ var CLSTAMP = "6970921";
                   }
               }
               return n;
-            })(p, u);
+            })(b, p);
           return a.a.createElement(
             s.a,
             {
+              hideArrows: !r,
               visibleElements: n,
               useTestScrollbar: !0,
               bLazyRenderChildren: !0,
@@ -53660,12 +53823,12 @@ var CLSTAMP = "6970921";
                 "SaleSectionCarouselPadding"
               ),
             },
-            p.map(function (e) {
+            b.map(function (e) {
               return a.a.createElement(l.a, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
-                creatorAccountID: b.get(e.id),
+                creatorAccountID: v.get(e.id),
               });
             })
           );
@@ -60108,13 +60271,16 @@ var CLSTAMP = "6970921";
     dStQ: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return u;
+        return p;
       }),
         n.d(t, "b", function () {
-          return p;
+          return d;
         }),
         n.d(t, "c", function () {
-          return d;
+          return m;
+        }),
+        n.d(t, "d", function () {
+          return h;
         });
       var r = n("q1tI"),
         a = n("8KAw"),
@@ -60122,8 +60288,9 @@ var CLSTAMP = "6970921";
         o = n("R+8l"),
         s = n("oVVc"),
         c = n("TTph"),
-        l = n("gyoR");
-      function u(e, t) {
+        l = n("gyoR"),
+        u = n("6AJf");
+      function p(e, t) {
         var n = new Array();
         return (
           e.forEach(function (e) {
@@ -60141,7 +60308,7 @@ var CLSTAMP = "6970921";
           n
         );
       }
-      function p(e, t, n) {
+      function d(e, t, n) {
         var i = a.a.Get(),
           o = Object(r.useState)(!i.BHasContentHubData()),
           s = o[0],
@@ -60195,37 +60362,79 @@ var CLSTAMP = "6970921";
           }
         );
       }
-      function d(e, t, n, a, i, o, s, u) {
-        var p = Object(r.useState)(!0),
-          d = p[0],
-          m = p[1],
-          h = Object(r.useState)(),
-          f = h[0],
-          _ = h[1];
+      function m(e, t, n, a, i, o, s, u, p) {
+        var d = Object(r.useState)(!0),
+          m = d[0],
+          h = d[1],
+          f = Object(r.useState)(),
+          _ = f[0],
+          b = f[1];
         return (
           Object(r.useEffect)(
             function () {
               var r = {
-                contentHub: { type: a, category: i, tagid: o },
-                strSectionFilter: s,
+                contentHub: { type: i, category: o, tagid: s },
+                strSectionFilter: u,
                 nTabUniqueID: 0,
-                strTabFilter: u,
+                strTabFilter: p,
                 facetFilter: null,
               };
-              c.a.GetSaleGamesByFlavor(!0, e, t, r, n).then(function (e) {
+              c.a.GetSaleGamesByFlavor(e, t, n, r, a).then(function (e) {
                 var t = e.appids.map(function (e) {
                   return { id: e, type: "game" };
                 });
                 Object(l.h)(t).then(function () {
                   Object(l.a)(t, !1).then(function (e) {
-                    _(e), m(!1);
+                    b(e), h(!1);
                   });
                 });
               });
             },
-            [e, n, o, i, t, a, s, u]
+            [e, t, a, s, o, n, i, u, p]
           ),
-          { bLoading: d, rgMatchingCapsules: f }
+          { bLoading: m, rgMatchingCapsules: _ }
+        );
+      }
+      function h() {
+        var e = Object(r.useState)(window.innerWidth),
+          t = e[0],
+          n = e[1],
+          a = Object(r.useState)(window.innerHeight),
+          i = a[0],
+          o = a[1],
+          s = Object(r.useState)(Object(u.a)()),
+          c = s[0],
+          l = s[1],
+          p = Object(r.useState)(Object(u.f)("items")),
+          d = p[0],
+          m = p[1],
+          h = Object(r.useState)(Object(u.f)("contenthubspecials")),
+          f = h[0],
+          _ = h[1];
+        return (
+          Object(r.useLayoutEffect)(function () {
+            var e = function () {
+              n(window.innerWidth),
+                o(window.innerHeight),
+                l(Object(u.a)()),
+                m(Object(u.f)("items")),
+                _(Object(u.f)("contenthubspecials"));
+            };
+            return (
+              window.addEventListener("resize", e),
+              e(),
+              function () {
+                return window.removeEventListener("resize", e);
+              }
+            );
+          }, []),
+          {
+            nWindowInnerWidth: t,
+            nWindowInnerHeight: i,
+            bIsScreenWide: c,
+            nCarouselCapsules: d,
+            nSpotlightCapsules: f,
+          }
         );
       }
     },
