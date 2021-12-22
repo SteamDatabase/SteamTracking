@@ -510,6 +510,8 @@ body.v6 .discount_pct  {
     font-weight: bold;
     color: #000000;
     background: #A1CD44;
+    padding: 6px;
+    font-size: 16px;
 }
 
 body.v6 .discount_prices .discount_original_price {
@@ -524,6 +526,10 @@ body.v6 .discount_prices > div {
 {
     body.v6 .discount_prices > div {
         font-size: 11px;
+    }
+    body.v6 .discount_pct {
+        padding: 5px;
+        font-size: 12px;
     }
 }
 
@@ -2055,12 +2061,13 @@ body.v6 .sale_capsule .discount_block_inline
     white-space: nowrap;
     max-width: 100%;
     overflow: hidden;
+    text-align: right;
 }
 
 .sale_capsule .discount_block_inline .discount_prices
 {
     background: rgba(0,0,0,0.6);
-    padding: 0 8px;
+    padding: 5px 8px;
 }
 
 .discovery_queue_ctn .begin_exploring {
@@ -2219,6 +2226,10 @@ body.v6 .sale_capsule .discount_block_inline
 {
     display: flex;
     justify-content: space-between;
+}
+
+.hero_capsule .discount_block_inline .discount_prices {
+    padding: 5px 5px;
 }
 
 .hero_click_overlay
