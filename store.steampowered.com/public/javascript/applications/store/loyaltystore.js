@@ -16495,6 +16495,13 @@
                 ),
                 I = [
                   {
+                    cluster: C,
+                    type: 2,
+                    strImage: K.a,
+                    bFullBleedImage: !0,
+                    linkedPage: { type: "custom", pageid: "artistprofiles" },
+                  },
+                  {
                     cluster: l,
                     type: 1,
                     linkedPage: null,
@@ -16532,7 +16539,7 @@
                 S = [];
               Object(u.a)(m.d.EREALM)
                 ? S.push(i(1526200))
-                : S.push(i(1792490), i(1768020)),
+                : S.push(i(1797760), i(1277400), i(292030)),
                 (j = {
                   type: "banner",
                   title: Object(s.f)("#FeaturedBanner_ArtistProfiles_Headline"),
@@ -16691,7 +16698,7 @@
                             return "continue";
                           var n = i(e);
                           return (
-                            E.splice(3 + 3 * o, 0, {
+                            E.splice(6 + 6 * o, 0, {
                               type: "clusterview",
                               view: n,
                             }),
