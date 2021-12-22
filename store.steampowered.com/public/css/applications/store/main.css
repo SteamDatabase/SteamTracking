@@ -794,6 +794,21 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   color: #fff;
   cursor: default;
 }
+.overlappingtransition_TransitionGroup_2PuNB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  will-change: transform;
+}
+.overlappingtransition_ContentWrapper_MGaAv {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 body.modals_BodyNoScroll_32ZiC {
   overflow-y: hidden;
   height: 100vh;
@@ -2985,6 +3000,9 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_AvatarLink_1N0rY {
   display: none;
 }
+.creatorhomeembed_MembersListLink_3DO0N {
+  font-size: 13px;
+}
 .gameactions_GotSteamDialog_2Qusm .gameactions_DownloadSteamUrl_10lP7 {
   color: #fff;
 }
@@ -4285,6 +4303,8 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX
   .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
+  position: relative;
+  right: unset;
   width: 100%;
   justify-self: end;
   align-items: stretch;
@@ -6088,6 +6108,14 @@ html.touch
 .SaleSectionCarousel .carousel__slider {
   padding: 10px 0px;
   margin: -10px -7px 0px -7px;
+}
+html.responsive.touch .SaleSectionCarousel .carousel__slider {
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+    margin: 0;
+  }
 }
 .carousel_breadcrumbContainer_3HjnE {
   display: flex;
@@ -7926,6 +7954,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .eventrow_AppCapsuleCtn_16au- {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   top: -10px;
   left: 10px;
@@ -7939,11 +7968,22 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .eventrow_AppCapsulePrice_2-l2M {
   background: #000;
   display: flex;
-  margin: 0 10px 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
   flex-shrink: 1;
 }
 .eventrow_AppCapsulePrice_2-l2M span {
   font-size: 12px;
+  line-height: 17px;
+  padding: 0px 8px;
+}
+.eventrow_AppCapsulePrice_2-l2M span:first-child {
+  padding-top: 6px;
+}
+.eventrow_AppCapsulePrice_2-l2M span:last-child {
+  padding-bottom: 6px;
+  color: #fff;
 }
 .basicpartnereventrender_Main_1Zn_5 {
   height: 100vh;
@@ -12094,11 +12134,6 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
 }
 .steam_awards_vote_section
   .nominationandvote_SteamAwardContainer_3n6v2
-  .nominationandvote_SteamAwardHeader_2jgrT {
-  height: 150px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardHeader_2jgrT
   .nominationandvote_SteamAwardHeaderImage__lRFQ {
   height: 180px;
@@ -12114,6 +12149,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 95%;
 }
 .steam_awards_vote_section
   .nominationandvote_AwardCategoriesCtn_2u4z7
@@ -17910,6 +17946,16 @@ Body.v6.tag_page.contenthub_page {
     display: block;
     position: unset;
     top: unset;
+    width: 100%;
+  }
+  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
+    .contenthubmaincarousel_SteamLabsBannerCtn_1C-mg {
+    padding: 5px;
+  }
+  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
+    .contenthubmaincarousel_SteamLabsIdentifiers_Ag4WC
+    .contenthubmaincarousel_SteamLabsName_2BTZE {
+    font-size: 12px !important;
   }
 }
 .contenthubmaincarousel_SteamLabsBannerCtn_1C-mg {
@@ -19227,6 +19273,9 @@ a.storywidget_BadgeFooter_3Yte6:hover {
     opacity: 1;
   }
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .curatorlist_CuratorListCtn_2gWFd {
   display: flex;
   flex-direction: column;
@@ -19243,6 +19292,9 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   font-size: 25px;
   padding-bottom: 40px;
 }
+.BasicUI .curatorlist_TopReviewInfo_3SZBz {
+  padding-bottom: 24px;
+}
 .curatorlist_SaleBanner_1wbf- {
   margin-top: 20px;
   max-width: 100%;
@@ -19258,6 +19310,10 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   font-family: "Motiva Sans", sans-serif;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+.BasicUI .curatorlist_Title_1MhFd,
+.BasicUI .curatorlist_Blurb_rrcHS {
+  text-shadow: unset;
+}
 .curatorlist_Title_1MhFd {
   font-size: 46px;
   line-height: 49px;
@@ -19265,11 +19321,20 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   margin-top: 20px;
   margin-bottom: 14px;
 }
+.BasicUI .curatorlist_Title_1MhFd {
+  font: var(--gpText-HeadingLarge);
+  margin: 16px 0px 4px;
+}
 .curatorlist_Blurb_rrcHS {
   font-size: 20px;
   line-height: 25px;
   font-weight: 200;
   margin-bottom: 30px;
+}
+.BasicUI .curatorlist_Blurb_rrcHS {
+  font: var(--gpText-BodyLarge);
+  color: var(--gpStoreLightestGrey);
+  margin: 0px;
 }
 .curatorlist_VideoReviewCtn_Rojwr {
   max-width: 940px;
@@ -19295,6 +19360,9 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px 16px;
 }
+.BasicUI .curatorlist_CuratorList_1VI6G {
+  grid-gap: 12px;
+}
 .curatorlist_CuratorReview_31hoQ {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
@@ -19313,6 +19381,10 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   .curatorlist_CuratorReview_31hoQ
   .curatorlist_CapsuleCtn_MY9Lk {
   width: 100%;
+}
+.BasicUI .curatorlist_CuratorReview_31hoQ {
+  background: var(--gpStoreDarkestGrey);
+  box-shadow: var(--gpShadow-Medium);
 }
 .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCtn_1uz1W {
   position: relative;
@@ -19374,6 +19446,9 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   flex-shrink: 1;
   margin-left: 8px;
 }
+.BasicUI .curatorlist_ReviewTextSection_1597W {
+  padding: 16px 12px;
+}
 .curatorlist_CuratorListGrid_qJM6j .curatorlist_ReviewTextSection_1597W {
   margin-left: 0;
   margin-bottom: 16px;
@@ -19381,6 +19456,11 @@ a.storywidget_BadgeFooter_3Yte6:hover {
 .curatorlist_ReviewTextSection_1597W .curatorlist_GameTitle_nl2T_ {
   font-size: 22px;
   font-weight: 500;
+}
+.BasicUI .curatorlist_ReviewTextSection_1597W .curatorlist_GameTitle_nl2T_ {
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
+  color: #fff;
 }
 .curatorlist_ReviewTextSection_1597W
   .curatorlist_RecommendationTypeAndDate_2lz6u {

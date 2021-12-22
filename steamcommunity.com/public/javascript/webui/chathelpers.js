@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6968836";
+var CLSTAMP = "6976372";
 !(function (e) {
   function t(t) {
     for (
@@ -119,65 +119,65 @@ var CLSTAMP = "6968836";
               ".js?contenthash=" +
               {
                 9: "51d9833326b9684fcced",
-                10: "7777388ee68df4414c20",
-                11: "f8bf50695a6e59d8ef18",
-                12: "e6b9005f59d3ae37b121",
-                13: "d55eb76bdbb1f45dd062",
-                14: "29ae7abada74dfddb941",
-                15: "22b27437a3371a7e66c1",
-                16: "e1bcaf051a2b23b2922c",
-                17: "bdf9a19b96cef035765b",
-                18: "9677b3dbdf20f1dc9b79",
-                19: "0707d4241ec9b2397551",
-                20: "cc94468ab389608a1740",
-                21: "8f5e285ebef39670ec85",
-                22: "708bfc921bcee458218b",
-                23: "7a265630cb962ac9adc9",
-                24: "dc8eccf0fc8f486643d2",
-                25: "3d07e52919e7c3588725",
-                26: "80a382f36243f1d1e430",
-                27: "71f3866545416e7d366b",
-                28: "7b9f7e9b38ad5119918d",
-                29: "3ee7c6f4aa7318c9ba16",
+                10: "e05b80c244e64be18b09",
+                11: "327c798dceeb26ad8f53",
+                12: "df908acd2f3ba44f96e2",
+                13: "6df4f89a19244b8a8270",
+                14: "0f5f340b5bcbc957656c",
+                15: "fe6e77905e30017e52bd",
+                16: "d80258760f096ff4f67e",
+                17: "607d257fb140639d50ff",
+                18: "8e1f5595f8d414dc313a",
+                19: "d3c9a43a728cc163d00a",
+                20: "cc9e3823dcce57b6ecd3",
+                21: "500e46f4634a1e606994",
+                22: "307733a0784cc1f2cace",
+                23: "2ef88d6a99f1c3a1d310",
+                24: "6f95b413240eb9e95e26",
+                25: "f556a0f3c99805cd64e7",
+                26: "f1dd34fec6367f26620d",
+                27: "ac5bb84bd323d5c80b1b",
+                28: "e26faf8e905098879f36",
+                29: "de9a4c83eb458d2fe3d5",
                 30: "6d7365c7989476aed423",
-                31: "ddaae539ba8bd019e1e8",
-                32: "3f5d383d592a3792521e",
-                33: "e482bc7bc443af15506f",
-                34: "54ad9b4edaa58aad1c8e",
-                35: "4d9ef2a0b73b9a85358f",
-                36: "94f8137618b9c3b943fa",
-                37: "8c6c44368fef944a071d",
-                38: "6c18c615062857ce2172",
+                31: "e486d0c6017e74599a56",
+                32: "c878a781e679142334da",
+                33: "eabcecba79b0c1362392",
+                34: "a28348d41ec200d5a006",
+                35: "816a34c95ed27a0fc552",
+                36: "20bfef33edb3ffd1fbe1",
+                37: "1b37914730de44476351",
+                38: "97851b6ccd73e4d53248",
                 39: "01e61b4c2d0faedc8e45",
                 40: "5c91d242565d0f85623f",
-                41: "d9c6f7253d236fe01141",
-                42: "bdbbf57f251f4a099bc5",
-                43: "300ce2b4e4314fe64ec0",
-                44: "74a25eb7de6bdb4f47f4",
+                41: "50bb60ad60cd6c0368ed",
+                42: "55c7be2587fa3fda18e7",
+                43: "93229b9be2e8dd0c4819",
+                44: "482de85ef5e67c4ed0f4",
                 45: "73231f7058b71787aa76",
-                46: "ed324ea449b4261c4741",
-                47: "1d09ebf81e92ebc3d98d",
-                48: "d00fff0d5a3b5fde367c",
-                49: "b56e02fd81361d52dfdc",
-                50: "d34f988386795fcbf6cf",
-                51: "86fb5a60e58716d0fa5a",
-                52: "d32c9a3a39f72f32900a",
-                53: "7dee222e8ae45894a43b",
-                54: "698e82997b6227f27230",
-                55: "025211bc90aa6259a61a",
-                56: "3efe0dd5ee5df9048d5d",
+                46: "3d8c2f05e6b252f25715",
+                47: "7ce3aab6c3ceb13f01ab",
+                48: "431b03e4b11873fb14fa",
+                49: "0f4b807e0b610e2a6c26",
+                50: "b53e93b8d63fcaf5593d",
+                51: "82ea8741d9a838d91e98",
+                52: "6d75b0c4ead09d0538f5",
+                53: "77cabc53850d8a105b26",
+                54: "f07c5eb8db5a97c21cf3",
+                55: "7333c821e40d187262ff",
+                56: "b121aa3054432a26de33",
                 57: "20fd0520e5d0a0d94ea6",
-                58: "94804a5770115415f15a",
-                59: "cb61bac1306f146fffc3",
+                58: "9feb7b3aaa76aa9984c6",
+                59: "edd1869dc540c23d2761",
                 60: "f38c73d28c350eb2f7c9",
-                61: "4995fd01027ccecee022",
-                62: "3c23f949a887f14a554c",
-                63: "58d7117d3e7ff26973db",
-                64: "199c002846d639f2da64",
-                65: "af0048d02de2c80199bd",
-                66: "0653202504269107b473",
-                67: "e5662d55a3318133d2c4",
-                68: "e3ab4659c1ccafe41d1e",
+                61: "35e00affd4f937008f0a",
+                62: "5b9e1677757ecd09834d",
+                63: "f1382a02eebb9aacd172",
+                64: "76a88332c090ab64ed15",
+                65: "08e1965636432235fcda",
+                66: "ecd73a77aa71b075199b",
+                67: "5c3f67ad4866d0d01c3b",
+                68: "891e4ccd19ba79df30eb",
               }[e]
             );
           })(e));
@@ -340,10 +340,10 @@ var CLSTAMP = "6968836";
         return b;
       }),
       n.d(t, "e", function () {
-        return g;
+        return v;
       }),
       n.d(t, "c", function () {
-        return v;
+        return g;
       }),
       n.d(t, "f", function () {
         return E;
@@ -426,10 +426,10 @@ var CLSTAMP = "6968836";
           return t;
       }
     }
-    var g = function (e) {
+    var v = function (e) {
       return "koreana" === e ? "korean" : e;
     };
-    function v(e, t) {
+    function g(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -562,7 +562,7 @@ var CLSTAMP = "6968836";
           return t;
       }
     }
-    var y, C, k, S, T, I, R;
+    var y, C, k, S, T, I, O;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -631,7 +631,7 @@ var CLSTAMP = "6968836";
           "k_EActivateGameOverlayToWebPageMode_Default"),
           (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
             "k_EActivateGameOverlayToWebPageMode_Modal");
-      })(R || (R = {}));
+      })(O || (O = {}));
   },
   "1n9R": function (e, t, n) {
     "use strict";
@@ -850,36 +850,18 @@ var CLSTAMP = "6968836";
     n.d(t, "a", function () {
       return i;
     }),
-      n.d(t, "b", function () {
+      n.d(t, "c", function () {
         return o;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "b", function () {
         return a;
-      }),
-      n.d(t, "d", function () {
-        return s;
-      }),
-      n.d(t, "c", function () {
-        return c;
       });
     n("mrSG");
     var r = n("cDcd");
     function i(e, t, n) {
       return [e, t, n];
     }
-    function o(e, t) {
-      null != e &&
-        ("function" == typeof e ? e(t) : "current" in e && (e.current = t));
-    }
-    function a() {
-      for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
-      return r.useCallback(function (t) {
-        for (var n = 0, r = e; n < r.length; n++) {
-          o(r[n], t);
-        }
-      }, e);
-    }
-    function s() {
+    function o() {
       var e = r.useState(0)[1];
       return r.useCallback(function () {
         return e(function (e) {
@@ -887,7 +869,7 @@ var CLSTAMP = "6968836";
         });
       }, []);
     }
-    function c(e, t) {
+    function a(e, t) {
       r.useLayoutEffect(
         function () {
           if (t && e) {
@@ -957,24 +939,45 @@ var CLSTAMP = "6968836";
     n.d(t, "b", function () {
       return r.a;
     }),
-      n.d(t, "c", function () {
-        return r.b;
-      }),
-      n.d(t, "f", function () {
-        return r.e;
-      }),
       n.d(t, "e", function () {
-        return r.d;
-      }),
-      n.d(t, "d", function () {
         return r.c;
       }),
+      n.d(t, "d", function () {
+        return r.b;
+      }),
+      n.d(t, "c", function () {
+        return o;
+      }),
+      n.d(t, "f", function () {
+        return a;
+      }),
+      n.d(t, "g", function () {
+        return s;
+      }),
       n.d(t, "a", function () {
-        return i.a;
+        return c.a;
       });
-    var r = n("61mD");
-    n("cDcd");
-    var i = n("y3Ls");
+    var r = n("61mD"),
+      i = n("cDcd");
+    function o(e, t) {
+      null != e &&
+        ("function" == typeof e ? e(t) : "current" in e && (e.current = t));
+    }
+    function a() {
+      for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
+      return i.useCallback(function (t) {
+        for (var n = 0, r = e; n < r.length; n++) {
+          o(r[n], t);
+        }
+      }, e);
+    }
+    function s(e, t) {
+      var n = i.useRef();
+      return i.useCallback(function (t) {
+        n.current && n.current(), (n.current = e(t));
+      }, t);
+    }
+    var c = n("y3Ls");
   },
   "9Lmx": function (e, t, n) {
     var r = {
@@ -1723,7 +1726,7 @@ var CLSTAMP = "6968836";
         if (!c.bGranularFutureTime)
           return (
             s.b(n.getTime() - r.getTime()),
-            n.getFullYear() == r.getFullYear() ? T(n) : R(n)
+            n.getFullYear() == r.getFullYear() ? T(n) : O(n)
           );
         s.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
         var l = new Date();
@@ -1771,10 +1774,10 @@ var CLSTAMP = "6968836";
           ? Object(o.f)("#TimeSince_1Week")
           : Object(o.f)("#TimeSince_XWeeks", _);
       }
-      return n.getFullYear() == r.getFullYear() ? T(n) : R(n);
+      return n.getFullYear() == r.getFullYear() ? T(n) : O(n);
     }
-    var g = new Map(),
-      v = new Map(),
+    var v = new Map(),
+      g = new Map(),
       E = new Map(),
       y = new Map(),
       C = new Map();
@@ -1794,24 +1797,24 @@ var CLSTAMP = "6968836";
       );
     }
     function S(e) {
-      var t = g.get(e.getDay());
+      var t = v.get(e.getDay());
       return (
         t ||
         ((t = e.toLocaleDateString(o.e.GetPreferredLocales(), {
           weekday: "long",
         })),
-        g.set(e.getDay(), t),
+        v.set(e.getDay(), t),
         t)
       );
     }
     function T(e) {
-      var t = v.get(e.getMonth());
+      var t = g.get(e.getMonth());
       return (
         t ||
         ((t = e.toLocaleDateString(o.e.GetPreferredLocales(), {
           month: "long",
         })),
-        v.set(e.getMonth(), t),
+        g.set(e.getMonth(), t),
         t)
       );
     }
@@ -1826,7 +1829,7 @@ var CLSTAMP = "6968836";
         t)
       );
     }
-    function R(e) {
+    function O(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
         n = y.get(t);
       return (
@@ -2025,43 +2028,43 @@ var CLSTAMP = "6968836";
         return a;
       }),
       n.d(t, "h", function () {
-        return l;
+        return u;
       }),
       n.d(t, "c", function () {
-        return d;
+        return l;
       }),
       n.d(t, "i", function () {
-        return f;
+        return d;
       }),
       n.d(t, "k", function () {
-        return h;
+        return f;
       }),
       n.d(t, "e", function () {
-        return p;
-      }),
-      n.d(t, "s", function () {
-        return m;
-      }),
-      n.d(t, "g", function () {
         return _;
       }),
+      n.d(t, "s", function () {
+        return p;
+      }),
+      n.d(t, "g", function () {
+        return h;
+      }),
       n.d(t, "b", function () {
-        return b;
+        return m;
       }),
       n.d(t, "j", function () {
-        return g;
+        return b;
       }),
       n.d(t, "n", function () {
         return v;
       }),
       n.d(t, "o", function () {
-        return E;
+        return g;
       }),
       n.d(t, "a", function () {
-        return y;
+        return E;
       }),
       n.d(t, "p", function () {
-        return T;
+        return S;
       });
     var r = n("0N1H");
     n.d(t, "l", function () {
@@ -2151,24 +2154,10 @@ var CLSTAMP = "6968836";
           (e[(e.BackRight = 6)] = "BackRight");
       })(c || (c = {}));
     var u;
-    !(function (e) {
-      (e[(e.Error = -2)] = "Error"),
-        (e[(e.Invalid = -1)] = "Invalid"),
-        (e[(e.UpToDate = 0)] = "UpToDate"),
-        (e[(e.Checking = 1)] = "Checking"),
-        (e[(e.Available = 2)] = "Available"),
-        (e[(e.Downloading = 3)] = "Downloading"),
-        (e[(e.Downloaded = 4)] = "Downloaded"),
-        (e[(e.Applying = 5)] = "Applying"),
-        (e[(e.Applied = 6)] = "Applied"),
-        (e[(e.ClientRestartPending = 7)] = "ClientRestartPending"),
-        (e[(e.SystemRestartPending = 8)] = "SystemRestartPending");
-    })(u || (u = {}));
-    var l;
-    function d(e) {
+    function l(e) {
       return (
-        e == l.EBrowserType_OpenVROverlay ||
-        e == l.EBrowserType_OpenVROverlay_Dashboard
+        e == u.EBrowserType_OpenVROverlay ||
+        e == u.EBrowserType_OpenVROverlay_Dashboard
       );
     }
     !(function (e) {
@@ -2194,8 +2183,8 @@ var CLSTAMP = "6968836";
         (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
           "EBrowserType_Offscreen_FriendsUI"),
         (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-    })(l || (l = {}));
-    var f, h;
+    })(u || (u = {}));
+    var d, f;
     !(function (e) {
       (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
         "k_EClientUINotificationGroupChatMessage"),
@@ -2203,7 +2192,7 @@ var CLSTAMP = "6968836";
           "k_EClientUINotificationFriendChatMessage"),
         (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
           "k_EClientUINotificationFriendPersonaState");
-    })(f || (f = {})),
+    })(d || (d = {})),
       (function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -2211,20 +2200,20 @@ var CLSTAMP = "6968836";
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(h || (h = {}));
-    var _,
-      p = (function () {
+      })(f || (f = {}));
+    var h,
+      _ = (function () {
         return function () {};
       })(),
-      m = (function () {
+      p = (function () {
         return function () {};
       })();
     !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
         (e[(e.k_ERejected = 2)] = "k_ERejected");
-    })(_ || (_ = {}));
-    function b(e) {
+    })(h || (h = {}));
+    function m(e) {
       return (
         "game" === e ||
         "dlc" === e ||
@@ -2239,7 +2228,7 @@ var CLSTAMP = "6968836";
         "advertising" === e
       );
     }
-    var g, v;
+    var b, v;
     !(function (e) {
       (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
         "k_EClientUsedInputTypeKeyboard"),
@@ -2248,7 +2237,7 @@ var CLSTAMP = "6968836";
         (e[(e.k_EClientUsedInputTypeController = 2)] =
           "k_EClientUsedInputTypeController"),
         (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-    })(g || (g = {})),
+    })(b || (b = {})),
       (function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -2304,16 +2293,16 @@ var CLSTAMP = "6968836";
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(v || (v = {}));
-    var E;
-    function y(e) {
-      return e === E.k_ESteamRealmChina;
+    var g;
+    function E(e) {
+      return e === g.k_ESteamRealmChina;
     }
     !(function (e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    })(E || (E = {}));
-    var C;
+    })(g || (g = {}));
+    var y;
     !(function (e) {
       (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
         "k_BluetoothDeviceType_Invalid"),
@@ -2339,14 +2328,14 @@ var CLSTAMP = "6968836";
           "k_BluetoothDeviceType_Gamepad"),
         (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
           "k_BluetoothDeviceType_Keyboard");
-    })(C || (C = {}));
-    var k, S, T, I, R;
+    })(y || (y = {}));
+    var C, k, S, T, I;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless"),
         (e[(e.Virtual = 3)] = "Virtual");
-    })(k || (k = {})),
+    })(C || (C = {})),
       (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -2355,14 +2344,14 @@ var CLSTAMP = "6968836";
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(S || (S = {})),
+      })(k || (k = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
-      })(T || (T = {})),
+      })(S || (S = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -2372,15 +2361,15 @@ var CLSTAMP = "6968836";
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(I || (I = {})),
+      })(T || (T = {})),
       (function (e) {
         (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
           (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
           (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
           (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
             "k_EHTTPProxyMode_Automatic");
-      })(R || (R = {}));
-    var O, A;
+      })(I || (I = {}));
+    var O, R;
     !(function (e) {
       (e[(e.SystemKey0 = 0)] = "SystemKey0"),
         (e[(e.SystemKey1 = 1)] = "SystemKey1");
@@ -2391,7 +2380,7 @@ var CLSTAMP = "6968836";
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque"),
           (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-      })(A || (A = {}));
+      })(R || (R = {}));
   },
   mrSG: function (e, t, n) {
     "use strict";
@@ -2644,10 +2633,10 @@ PERFORMANCE OF THIS SOFTWARE.
         return b;
       }),
       n.d(t, "c", function () {
-        return g;
+        return v;
       }),
       n.d(t, "e", function () {
-        return v;
+        return g;
       });
     var r = n("mrSG"),
       i = n("cDcd"),
@@ -2796,7 +2785,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function f(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = v.LocalizeString(e);
+      var r = g.LocalizeString(e);
       return void 0 === r
         ? e
         : (t.length > 0 &&
@@ -2812,7 +2801,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function h(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var o = v.LocalizeString(e);
+      var o = g.LocalizeString(e);
       if (void 0 === o) return e;
       for (var a, s = [], c = /(.*?)%(\d+)\$s/g, u = 0; (a = c.exec(o)); ) {
         (u += a[0].length), s.push(a[1]);
@@ -2914,11 +2903,11 @@ PERFORMANCE OF THIS SOFTWARE.
         "es-419": 27,
         "vi-VN": 28,
       };
-    function g() {
+    function v() {
       return m[s.d.LANGUAGE] || null;
     }
-    var v = new d();
-    window.LocalizationManager = v;
+    var g = new d();
+    window.LocalizationManager = g;
   },
   "qM/t": function (e, t, n) {
     "use strict";
@@ -3050,7 +3039,7 @@ PERFORMANCE OF THIS SOFTWARE.
           e
         );
       })(),
-      g = (function (e) {
+      v = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -3061,14 +3050,14 @@ PERFORMANCE OF THIS SOFTWARE.
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? i.createElement(v, { controller: this.props.controller })
+                ? i.createElement(g, { controller: this.props.controller })
                 : i.createElement(E, { controller: this.props.controller })
             );
           }),
           (t = Object(r.c)([d.a], t))
         );
       })(i.Component),
-      v = (function (e) {
+      g = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.m_bTriedToLaunchSteam = !1), t;
@@ -3303,7 +3292,7 @@ PERFORMANCE OF THIS SOFTWARE.
       } catch (e) {}
       b.sm_rtTimeCur = t.rtTimeCur;
       var n = new b(t);
-      o.render(i.createElement(g, { controller: n }), e);
+      o.render(i.createElement(v, { controller: n }), e);
     }
     function S(e) {
       return Object(r.b)(this, void 0, void 0, function () {

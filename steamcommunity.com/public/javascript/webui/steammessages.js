@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6968836";
+var CLSTAMP = "6976372";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -31215,12 +31215,12 @@ var CLSTAMP = "6968836";
                         br: o.d.readInt32,
                         bw: o.h.writeInt32,
                       },
-                      out_of_game_heartbeat_seconds: {
+                      legacy_out_of_game_heartbeat_seconds: {
                         n: 2,
                         br: o.d.readInt32,
                         bw: o.h.writeInt32,
                       },
-                      in_game_heartbeat_seconds: {
+                      heartbeat_seconds: {
                         n: 3,
                         br: o.d.readInt32,
                         bw: o.h.writeInt32,
@@ -34477,6 +34477,16 @@ var CLSTAMP = "6968836";
                         br: o.d.readInt64String,
                         bw: o.h.writeInt64String,
                       },
+                      formatted_final_price: {
+                        n: 8,
+                        br: o.d.readString,
+                        bw: o.h.writeString,
+                      },
+                      formatted_original_price: {
+                        n: 9,
+                        br: o.d.readString,
+                        bw: o.h.writeString,
+                      },
                       discount_pct: {
                         n: 10,
                         br: o.d.readInt32,
@@ -36058,6 +36068,11 @@ var CLSTAMP = "6968836";
                         bw: o.h.writeString,
                       },
                       name: { n: 3, br: o.d.readString, bw: o.h.writeString },
+                      normalized_name: {
+                        n: 4,
+                        br: o.d.readString,
+                        bw: o.h.writeString,
+                      },
                     },
                   }),
                 r.sm_m
@@ -36682,6 +36697,11 @@ var CLSTAMP = "6968836";
                         q: !0,
                         br: o.d.readUint64String,
                         bw: o.h.writeRepeatedUint64String,
+                      },
+                      total_friends: {
+                        n: 3,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32,
                       },
                     },
                   }),

@@ -948,6 +948,9 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_AvatarLink_1N0rY {
   display: none;
 }
+.creatorhomeembed_MembersListLink_3DO0N {
+  font-size: 13px;
+}
 .gameactions_GotSteamDialog_2Qusm .gameactions_DownloadSteamUrl_10lP7 {
   color: #fff;
 }
@@ -2229,6 +2232,8 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX
   .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
+  position: relative;
+  right: unset;
   width: 100%;
   justify-self: end;
   align-items: stretch;
@@ -2978,6 +2983,7 @@ html.touch
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
   transition: all 0.23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_gASJ2
@@ -3012,7 +3018,6 @@ html.touch
   img {
   height: 102px;
   width: 219px;
-  transition: height 0.23s ease-in-out, width 0.23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_gASJ2
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
@@ -3319,6 +3324,7 @@ html.touch
     .salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y
     img {
     height: 160px;
+    width: 300px;
   }
   .salepreviewwidgets_SaleItemBrowserRow_gASJ2
     .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
@@ -3814,6 +3820,11 @@ html.touch
   color: #fff;
   padding: 0 16px;
 }
+.salepreviewwidgets_RecommendationReason_3Q_ta {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  padding: 8px;
+}
 .buttonBack___1mlaL,
 .buttonFirst___2rhFr,
 .buttonLast___2yuh0,
@@ -4019,6 +4030,14 @@ html.touch
 .SaleSectionCarousel .carousel__slider {
   padding: 10px 0px;
   margin: -10px -7px 0px -7px;
+}
+html.responsive.touch .SaleSectionCarousel .carousel__slider {
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+    margin: 0;
+  }
 }
 .carousel_breadcrumbContainer_3HjnE {
   display: flex;
@@ -10460,6 +10479,7 @@ html:not(.touch)
 .eventrow_AppCapsuleCtn_16au- {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   top: -10px;
   left: 10px;
@@ -10473,11 +10493,22 @@ html:not(.touch)
 .eventrow_AppCapsulePrice_2-l2M {
   background: #000;
   display: flex;
-  margin: 0 10px 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
   flex-shrink: 1;
 }
 .eventrow_AppCapsulePrice_2-l2M span {
   font-size: 12px;
+  line-height: 17px;
+  padding: 0px 8px;
+}
+.eventrow_AppCapsulePrice_2-l2M span:first-child {
+  padding-top: 6px;
+}
+.eventrow_AppCapsulePrice_2-l2M span:last-child {
+  padding-bottom: 6px;
+  color: #fff;
 }
 .basicpartnereventrender_Main_1Zn_5 {
   height: 100vh;
@@ -11707,6 +11738,7 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubshared_StoreSection_OyJ48 {
   width: 940px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .contenthubshared_StoreSection_OyJ48 .contenthubshared_SectionTitle_2RnIw {
@@ -11723,6 +11755,13 @@ Body.v6.tag_page.contenthub_page {
   font-size: 16px;
   opacity: 50%;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 940px) {
+  .contenthubshared_StoreSection_OyJ48
+    .contenthubshared_SectionDescription_nVpbh {
+    display: block;
+    padding-left: 8px;
+  }
 }
 .contenthubshared_SectionTitleCtn_3Laga {
   margin-top: 30px;
@@ -11787,6 +11826,9 @@ Body.v6.tag_page.contenthub_page {
   flex-direction: column;
   justify-content: space-between;
   margin: 8px 0px;
+}
+.contenthubshared_SpotlightsColumn_2Y2C1 > div {
+  max-width: 306px;
 }
 .contenthubshared_SpotlightsColumn_2Y2C1 .CapsuleBottomBar {
   height: 53px;
@@ -12033,7 +12075,19 @@ Body.v6.tag_page.contenthub_page {
 }
 @media screen and (max-width: 940px) {
   .contenthubmaincarousel_ContentHubLabsWidget_3IwCW {
-    display: none;
+    display: block;
+    position: unset;
+    top: unset;
+    width: 100%;
+  }
+  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
+    .contenthubmaincarousel_SteamLabsBannerCtn_1C-mg {
+    padding: 5px;
+  }
+  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
+    .contenthubmaincarousel_SteamLabsIdentifiers_Ag4WC
+    .contenthubmaincarousel_SteamLabsName_2BTZE {
+    font-size: 12px !important;
   }
 }
 .contenthubmaincarousel_SteamLabsBannerCtn_1C-mg {
@@ -12549,11 +12603,6 @@ Body.v6.tag_page.contenthub_page {
 }
 .steam_awards_vote_section
   .nominationandvote_SteamAwardContainer_3n6v2
-  .nominationandvote_SteamAwardHeader_2jgrT {
-  height: 150px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_3n6v2
   .nominationandvote_SteamAwardHeader_2jgrT
   .nominationandvote_SteamAwardHeaderImage__lRFQ {
   height: 180px;
@@ -12569,6 +12618,7 @@ Body.v6.tag_page.contenthub_page {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 95%;
 }
 .steam_awards_vote_section
   .nominationandvote_AwardCategoriesCtn_2u4z7

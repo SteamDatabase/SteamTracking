@@ -75,6 +75,7 @@
         GhostTheme: "profilethemecolors_GhostTheme_1JZpe",
         ColorNightmareTheme: "profilethemecolors_ColorNightmareTheme_2LNsd",
         MurugiahTheme: "profilethemecolors_MurugiahTheme_22BXC",
+        Winter2021Theme: "profilethemecolors_Winter2021Theme_X0_g8",
       };
     },
     "9g5v": function (e, t, r) {

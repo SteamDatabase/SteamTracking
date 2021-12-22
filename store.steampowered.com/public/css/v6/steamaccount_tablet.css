@@ -71,8 +71,9 @@
     }
 
     html.responsive .addfunds_accountBalance {
-        padding-bottom: 12px;
+        padding: 12px 0px;
         margin-bottom: 0px;
+		border-top: 1px solid var(--gpBackground-LightSoft);
     }
 
     html.responsive .addfunds_about {
@@ -89,7 +90,7 @@
     html.responsive .accountBalance .price {
         font: var(--gpText-HeadingLarge);
         font-weight: 700;
-        top: -10px;
+        bottom: 2px;
     }
 
     html.responsive .addfunds_accountBalance .accountLabel {

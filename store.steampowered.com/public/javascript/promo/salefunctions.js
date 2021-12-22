@@ -615,7 +615,7 @@ function RenderTagGenreBlock( rgTagGenres )
 		var $Link = $J('<a/>', { 'class': 'tag_square', 'href': TagGenre.url  } );
 
 		$Link.append( $J('<img/>', { 'class': 'tag_square_img', 'src': TagGenre.square } ) );
-		$Link.append( $J('<div/>', { 'class': 'tag_genre_title' } ).html( TagGenre.name ) );
+		$Link.append( $J('<img/>', { 'class': 'tag_square_title_img', 'src': TagGenre.titleimg } ) );
 
 		$elScrollRow.append( $Link );
 	});

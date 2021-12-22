@@ -277,6 +277,11 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   height: auto;
   width: 50%;
   margin: auto;
+  transition: left 1s ease-out, width 1s ease-out;
+}
+.sharedappdetailsheader_BoxSizer_3TbMs.sharedappdetailsheader_Fullscreen_ywsZN.sharedappdetailsheader_FullscreenRight_3Nr-K {
+  left: 50%;
+  width: 40%;
 }
 .sharedappdetailsheader_BoxSizerDragBox_rt-WC {
   position: absolute;
@@ -1987,6 +1992,21 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_Active_bTXaV {
   color: #fff;
   cursor: default;
+}
+.overlappingtransition_TransitionGroup_woWQ7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  will-change: transform;
+}
+.overlappingtransition_ContentWrapper_221Xt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .apps_App_1zK68.apps_App_1zK68.apps_App_1zK68 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -6431,6 +6451,8 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
   .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn {
+  position: relative;
+  right: unset;
   width: 100%;
   justify-self: end;
   align-items: stretch;
@@ -7180,6 +7202,7 @@ html.touch
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
   transition: all 0.23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
@@ -7214,7 +7237,6 @@ html.touch
   img {
   height: 102px;
   width: 219px;
-  transition: height 0.23s ease-in-out, width 0.23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7303,7 +7325,23 @@ html.touch
   .salepreviewwidgets_BundleContentPreview_kR3MM {
   margin: 0;
   padding: 2px;
+  padding-top: 0;
+  padding-left: 0;
   max-width: 70%;
+  background: none;
+}
+.salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_BundleContentPreview_kR3MM
+  .salepreviewwidgets_ContentsCount_1rG6L {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  display: none;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7311,7 +7349,11 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
   .salepreviewwidgets_BundleContentPreview_kR3MM
   .salepreviewwidgets_PreviewCtn_2H1MK {
-  height: 32px;
+  background: none;
+  height: 23px;
+  max-width: 70%;
+  justify-content: unset;
+  padding: 0;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7319,9 +7361,20 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
   .salepreviewwidgets_BundleContentPreview_kR3MM
   .salepreviewwidgets_PreviewCtn_2H1MK
+  .salepreviewwidgets_PreviewItem_1JUHV {
+  width: 60px;
+  box-shadow: 5px 0 4px -2px rgba(0, 0, 0, 0.5);
+}
+.salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_BundleContentPreview_kR3MM
+  .salepreviewwidgets_PreviewCtn_2H1MK
+  .salepreviewwidgets_PreviewItem_1JUHV
   img {
-  height: 35px;
-  width: 90px;
+  height: 23px;
+  width: 60px;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7490,6 +7543,7 @@ html.touch
     .salepreviewwidgets_HeaderCapsuleImageContainer_38USo
     img {
     height: 160px;
+    width: 300px;
   }
   .salepreviewwidgets_SaleItemBrowserRow_11Ka5
     .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7539,6 +7593,34 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN
     .salepreviewwidgets_CapsulePlatform_2WmOV {
     display: none;
+  }
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+    .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+    .salepreviewwidgets_BundleContentPreview_kR3MM
+    .salepreviewwidgets_ContentsCount_1rG6L {
+    display: unset;
+  }
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+    .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+    .salepreviewwidgets_BundleContentPreview_kR3MM
+    .salepreviewwidgets_PreviewCtn_2H1MK {
+    height: 45px;
+    margin-top: 4px;
+  }
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+    .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+    .salepreviewwidgets_BundleContentPreview_kR3MM
+    .salepreviewwidgets_PreviewCtn_2H1MK
+    .salepreviewwidgets_PreviewItem_1JUHV
+    img {
+    height: 45px;
+    width: 90px;
   }
   .salepreviewwidgets_SaleItemBrowserRow_11Ka5
     .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7957,6 +8039,11 @@ html.touch
   color: #fff;
   padding: 0 16px;
 }
+.salepreviewwidgets_RecommendationReason_2ox6m {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  padding: 8px;
+}
 .carousel_carouselNavButton_2aDk- {
   border: none;
   background-color: transparent;
@@ -8012,6 +8099,14 @@ html.touch
 .SaleSectionCarousel .carousel__slider {
   padding: 10px 0px;
   margin: -10px -7px 0px -7px;
+}
+html.responsive.touch .SaleSectionCarousel .carousel__slider {
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+    margin: 0;
+  }
 }
 .carousel_breadcrumbContainer_7T5ex {
   display: flex;
@@ -8861,11 +8956,6 @@ div.curatorfeedbrowse_CuratorHoverToolTip_201Gt {
 }
 .steam_awards_vote_section
   .nominationandvote_SteamAwardContainer_1URX_
-  .nominationandvote_SteamAwardHeader_3y5EI {
-  height: 150px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_1URX_
   .nominationandvote_SteamAwardHeader_3y5EI
   .nominationandvote_SteamAwardHeaderImage_3qbCX {
   height: 180px;
@@ -8881,6 +8971,7 @@ div.curatorfeedbrowse_CuratorHoverToolTip_201Gt {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 95%;
 }
 .steam_awards_vote_section
   .nominationandvote_AwardCategoriesCtn_2UFWM
@@ -14529,6 +14620,7 @@ html:not(.touch)
 .eventrow_AppCapsuleCtn_1eL0b {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   top: -10px;
   left: 10px;
@@ -14542,11 +14634,22 @@ html:not(.touch)
 .eventrow_AppCapsulePrice_1d-9u {
   background: #000;
   display: flex;
-  margin: 0 10px 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
   flex-shrink: 1;
 }
 .eventrow_AppCapsulePrice_1d-9u span {
   font-size: 12px;
+  line-height: 17px;
+  padding: 0px 8px;
+}
+.eventrow_AppCapsulePrice_1d-9u span:first-child {
+  padding-top: 6px;
+}
+.eventrow_AppCapsulePrice_1d-9u span:last-child {
+  padding-bottom: 6px;
+  color: #fff;
 }
 .basicpartnereventrender_Main_LnN39 {
   height: 100vh;
@@ -15776,9 +15879,11 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubshared_StoreSection_11oXN {
   width: 940px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .contenthubshared_StoreSection_11oXN .contenthubshared_SectionTitle_1tHGa {
+  position: relative;
   font-size: 16px;
   color: #fff;
   text-transform: uppercase;
@@ -15791,6 +15896,13 @@ Body.v6.tag_page.contenthub_page {
   font-size: 16px;
   opacity: 50%;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 940px) {
+  .contenthubshared_StoreSection_11oXN
+    .contenthubshared_SectionDescription_2tLKH {
+    display: block;
+    padding-left: 8px;
+  }
 }
 .contenthubshared_SectionTitleCtn_1IGcJ {
   margin-top: 30px;
@@ -15820,13 +15932,27 @@ Body.v6.tag_page.contenthub_page {
 }
 .ContentHubSalePage
   .SaleSectionTabListContainer
-  .SaleSectionCtn.expanded:first-child {
+  .SaleSectionCtn.contenthubtitle.expanded:first-child,
+.ContentHubSalePage
+  .SaleSectionTabListContainer
+  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
+.ContentHubSalePage
+  .SaleSectionTabListContainer
+  .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
+  ~ .SaleSectionCtn.contenthubtitle.expanded {
   margin-bottom: 520px;
 }
 @media screen and (max-width: 940px) {
   .ContentHubSalePage
     .SaleSectionTabListContainer
-    .SaleSectionCtn.expanded:first-child {
+    .SaleSectionCtn.contenthubtitle.expanded:first-child,
+  .ContentHubSalePage
+    .SaleSectionTabListContainer
+    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
+  .ContentHubSalePage
+    .SaleSectionTabListContainer
+    .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
+    ~ .SaleSectionCtn.contenthubtitle.expanded {
     margin-bottom: 470px;
   }
 }
@@ -15841,6 +15967,9 @@ Body.v6.tag_page.contenthub_page {
   flex-direction: column;
   justify-content: space-between;
   margin: 8px 0px;
+}
+.contenthubshared_SpotlightsColumn_26HGQ > div {
+  max-width: 306px;
 }
 .contenthubshared_SpotlightsColumn_26HGQ .CapsuleBottomBar {
   height: 53px;
@@ -16087,7 +16216,19 @@ Body.v6.tag_page.contenthub_page {
 }
 @media screen and (max-width: 940px) {
   .contenthubmaincarousel_ContentHubLabsWidget_3HwW9 {
-    display: none;
+    display: block;
+    position: unset;
+    top: unset;
+    width: 100%;
+  }
+  .contenthubmaincarousel_ContentHubLabsWidget_3HwW9
+    .contenthubmaincarousel_SteamLabsBannerCtn_2x0nt {
+    padding: 5px;
+  }
+  .contenthubmaincarousel_ContentHubLabsWidget_3HwW9
+    .contenthubmaincarousel_SteamLabsIdentifiers_rfw_K
+    .contenthubmaincarousel_SteamLabsName_tVmOk {
+    font-size: 12px !important;
   }
 }
 .contenthubmaincarousel_SteamLabsBannerCtn_2x0nt {
@@ -20229,6 +20370,7 @@ hr.VO {
 .saledashboard_DashboardCtn_3Hft6 {
   max-width: 1380px;
   margin: 40px auto 0 auto;
+  padding: 0 20px;
 }
 .saledashboard_DashboardCtn_3Hft6 h2 {
   background: #233e4e;
@@ -21628,6 +21770,89 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   margin-top: 6px;
   color: #a15212;
 }
+.savetoolbar_ToolbarCtn_Kfoep {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: #9297a5;
+  transform: translateY(80px);
+  transition: transform 0.3s ease-in;
+}
+.savetoolbar_ToolbarCtn_Kfoep.savetoolbar_Visible_3O9re {
+  transform: translateY(0);
+}
+.savetoolbar_ToolbarInfo_5a6kg {
+  padding: 8px 24px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #303238;
+  border: 1px dashed;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.savetoolbar_ChangeCount_zPEyH {
+  color: #cfbf61;
+  padding: 4px 12px;
+}
+.savetoolbar_Buttons_2u2Ug {
+  display: flex;
+  padding: 4px 12px;
+}
+.savetoolbar_Buttons_2u2Ug .savetoolbar_Button_1ko4c {
+  margin-left: 24px;
+  padding: 0 20px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.savetoolbar_Buttons_2u2Ug
+  .savetoolbar_Button_1ko4c.savetoolbar_SaveButton_1HBCA {
+  background-color: #789805;
+}
+.savetoolbar_NavigationWarning_123Gv {
+  margin-bottom: 8px;
+}
+.savetoolbar_SeeDetailsSection_2vKJr {
+  margin-top: 12px;
+  width: 600px;
+}
+.savetoolbar_SeeDetailsButton_1dqW3 {
+  padding: 0 18px;
+}
+.savetoolbar_DiscountSummaryList_2jhyJ {
+  padding: 8px;
+  border-radius: 4px;
+  background: #3f454f;
+}
+.savetoolbar_DiscountSummary_1bNwv {
+  display: flex;
+  font-size: 12px;
+}
+.savetoolbar_DiscountSummary_1bNwv .savetoolbar_PackageName_10l8z,
+.savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountDelta_FrNhS,
+.savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountEventName_2a8my {
+  padding: 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 40%;
+}
+.savetoolbar_DiscountSummary_1bNwv .savetoolbar_PackageName_10l8z:hover {
+  min-width: fit-content;
+  overflow: visible;
+  z-index: 400;
+}
+.savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountDelta_FrNhS {
+  max-width: 20%;
+}
+div.savetoolbar_HoverToolTip_gba9O {
+  z-index: 2000;
+}
 .discountgridheaders_UnknownValue_1wwnO {
   color: #ac5228;
 }
@@ -21709,6 +21934,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 .discountgridheaders_ParticipationToolTip_36hxa {
   background-color: #1b1e22;
   padding: 8px;
+}
+.discountgridheaders_AppLink_3RF-6 {
+  margin-left: 4px;
 }
 .discountcustomdialog_CreateCustomDiscountCtn_2T8Dy {
   position: relative;
@@ -21815,89 +22043,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 }
 .discountdashboard_PageToolsCtn_y6a8w .discountdashboard_ToolsNotes_3_Bu_ {
   flex-grow: 3;
-}
-.savetoolbar_ToolbarCtn_Kfoep {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px;
-  background-color: #9297a5;
-  transform: translateY(80px);
-  transition: transform 0.3s ease-in;
-}
-.savetoolbar_ToolbarCtn_Kfoep.savetoolbar_Visible_3O9re {
-  transform: translateY(0);
-}
-.savetoolbar_ToolbarInfo_5a6kg {
-  padding: 8px 24px;
-  max-width: 800px;
-  margin: auto;
-  background-color: #303238;
-  border: 1px dashed;
-  box-shadow: 0 0 10px #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-}
-.savetoolbar_ChangeCount_zPEyH {
-  color: #cfbf61;
-  padding: 4px 12px;
-}
-.savetoolbar_Buttons_2u2Ug {
-  display: flex;
-  padding: 4px 12px;
-}
-.savetoolbar_Buttons_2u2Ug .savetoolbar_Button_1ko4c {
-  margin-left: 24px;
-  padding: 0 20px;
-  white-space: nowrap;
-  font-size: 12px;
-}
-.savetoolbar_Buttons_2u2Ug
-  .savetoolbar_Button_1ko4c.savetoolbar_SaveButton_1HBCA {
-  background-color: #789805;
-}
-.savetoolbar_NavigationWarning_123Gv {
-  margin-bottom: 8px;
-}
-.savetoolbar_SeeDetailsSection_2vKJr {
-  margin-top: 12px;
-  width: 600px;
-}
-.savetoolbar_SeeDetailsButton_1dqW3 {
-  padding: 0 18px;
-}
-.savetoolbar_DiscountSummaryList_2jhyJ {
-  padding: 8px;
-  border-radius: 4px;
-  background: #3f454f;
-}
-.savetoolbar_DiscountSummary_1bNwv {
-  display: flex;
-  font-size: 12px;
-}
-.savetoolbar_DiscountSummary_1bNwv .savetoolbar_PackageName_10l8z,
-.savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountDelta_FrNhS,
-.savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountEventName_2a8my {
-  padding: 0 4px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 40%;
-}
-.savetoolbar_DiscountSummary_1bNwv .savetoolbar_PackageName_10l8z:hover {
-  min-width: fit-content;
-  overflow: visible;
-  z-index: 400;
-}
-.savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountDelta_FrNhS {
-  max-width: 20%;
-}
-div.savetoolbar_HoverToolTip_gba9O {
-  z-index: 2000;
 }
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;

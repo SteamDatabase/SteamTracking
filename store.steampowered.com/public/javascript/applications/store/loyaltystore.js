@@ -359,7 +359,7 @@
         })(),
         E = new S();
       window.ClientConnectionAPI = E;
-      var O = n("cK+X"),
+      var O = n("W+5S"),
         A = n.n(O),
         B = n("bS9Q"),
         D = n("POwH"),
@@ -2161,10 +2161,10 @@
                 ? i.createElement(
                     "div",
                     null,
-                    Object(d.f)("#LNYSale2020_Redeem_Desc1"),
+                    Object(d.f)("#WinterSale2021_Redeem_Desc1"),
                     i.createElement("br", null),
                     i.createElement("br", null),
-                    Object(d.f)("#LNYSale2020_Redeem_Desc2")
+                    Object(d.f)("#WinterSale2021_Redeem_Desc2")
                   )
                 : Object(d.f)("#Redeem_UsePoints_Sticker");
             }),
@@ -4528,6 +4528,7 @@
         GhostTheme: "profilethemecolors_GhostTheme_1JZpe",
         ColorNightmareTheme: "profilethemecolors_ColorNightmareTheme_2LNsd",
         MurugiahTheme: "profilethemecolors_MurugiahTheme_22BXC",
+        Winter2021Theme: "profilethemecolors_Winter2021Theme_X0_g8",
       };
     },
     "8j16": function (e, t, n) {
@@ -5447,7 +5448,7 @@
         be = n("V+CE"),
         ye = n.n(be),
         ve = n("RImk"),
-        we = n("Qiof"),
+        we = n("FjuV"),
         Ce = n.n(we),
         Ie = n("cOvF"),
         Me = n("Vlb1"),
@@ -5499,7 +5500,6 @@
           return a.a.createElement(
             _.a,
             {
-              padding: "large",
               display: "flex",
               flexDirection: "column",
               className: ve.SaleRewardContainer,
@@ -5509,7 +5509,11 @@
               { className: ve.SaleRewardContainerFlex },
               a.a.createElement(
                 _.a,
-                { display: "flex", flexDirection: "column" },
+                {
+                  display: "flex",
+                  flexDirection: "column",
+                  className: ve.LeftColumn,
+                },
                 a.a.createElement(
                   "div",
                   { className: ve.SaleRewardLogoContainerFlex },
@@ -8608,6 +8612,11 @@
         n.p +
         "images/applications/store/extra_helpful_anim000.png?v=valveisgoodatcaching";
     },
+    FjuV: function (e, t, n) {
+      e.exports =
+        n.p +
+        "images/applications/store/mystery2021.png?v=valveisgoodatcaching";
+    },
     "Fw/J": function (e, t, n) {
       e.exports =
         n.p +
@@ -9033,11 +9042,6 @@
         fireworkLongY: "chatroomeffects_fireworkLongY_3f3gs",
       };
     },
-    Qiof: function (e, t, n) {
-      e.exports =
-        n.p +
-        "images/applications/store/ox_questionmark.png?v=valveisgoodatcaching";
-    },
     Qpv1: function (e, t, n) {
       e.exports = {
         Banner: "banner_Banner_ECzA2",
@@ -9071,6 +9075,8 @@
         ActionButton: "salerewarditemhero_ActionButton_xPimr",
         Icon: "salerewarditemhero_Icon_SkxxZ",
         SaleRewardContainer: "salerewarditemhero_SaleRewardContainer_379X4",
+        LeftColumn: "salerewarditemhero_LeftColumn_3yZ-T",
+        SaleRewardLogo: "salerewarditemhero_SaleRewardLogo_1aazf",
         SaleRewardSubHeader: "salerewarditemhero_SaleRewardSubHeader_3Lw87",
         SaleRewardContainerFlex:
           "salerewarditemhero_SaleRewardContainerFlex_2CxV-",
@@ -9576,6 +9582,11 @@
         n.p +
         "images/applications/store/icon_showcase_13.svg?v=valveisgoodatcaching";
     },
+    "W+5S": function (e, t, n) {
+      e.exports =
+        n.p +
+        "images/applications/store/winter2021_confirm.png?v=valveisgoodatcaching";
+    },
     WeG9: function (e, t, n) {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_nibod",
@@ -9674,11 +9685,6 @@
             Object(r.a)({ className: Object(s.a)(o.Footer, t) }, n)
           );
         };
-    },
-    "cK+X": function (e, t, n) {
-      e.exports =
-        n.p +
-        "images/applications/store/lny2021_confirm.jpg?v=valveisgoodatcaching";
     },
     cMO7: function (e, t, n) {
       e.exports = {
@@ -16860,7 +16866,7 @@
             return !le.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
           }),
           (e.prototype.GetCurrentSaleRewardAppID = function () {
-            return 1526200;
+            return 1846860;
           }),
           (e.prototype.GetClaimedSaleRewardItemDef = function () {
             return this.m_claimedFreeItemDef;

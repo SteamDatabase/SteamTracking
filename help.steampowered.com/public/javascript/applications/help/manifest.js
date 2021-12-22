@@ -1,18 +1,18 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6960726";
+var CLSTAMP = "6976391";
 !(function (s) {
   function a(a) {
     for (
-      var e, n, o = a[0], i = a[1], c = a[2], l = 0, d = [];
-      l < o.length;
-      l++
+      var e, n, o = a[0], i = a[1], c = a[2], d = 0, l = [];
+      d < o.length;
+      d++
     )
-      (n = o[l]),
-        Object.prototype.hasOwnProperty.call(b, n) && b[n] && d.push(b[n][0]),
+      (n = o[d]),
+        Object.prototype.hasOwnProperty.call(b, n) && b[n] && l.push(b[n][0]),
         (b[n] = 0);
     for (e in i) Object.prototype.hasOwnProperty.call(i, e) && (s[e] = i[e]);
-    for (j && j(a); d.length; ) d.shift()();
+    for (j && j(a); l.length; ) l.shift()();
     return r.push.apply(r, c || []), t();
   }
   function t() {
@@ -176,16 +176,16 @@ var CLSTAMP = "6960726";
               c < i.length;
               c++
             ) {
-              var l =
-                (d = i[c]).getAttribute("data-href") || d.getAttribute("href");
-              if ("stylesheet" === d.rel && (l === e || l === o)) return a();
+              var d =
+                (l = i[c]).getAttribute("data-href") || l.getAttribute("href");
+              if ("stylesheet" === l.rel && (d === e || d === o)) return a();
             }
             for (
-              var d, s = document.getElementsByTagName("style"), c = 0;
+              var l, s = document.getElementsByTagName("style"), c = 0;
               c < s.length;
               c++
             )
-              if ((l = (d = s[c]).getAttribute("data-href")) === e || l === o)
+              if ((d = (l = s[c]).getAttribute("data-href")) === e || d === o)
                 return a();
             var t = document.createElement("link");
             (t.rel = "stylesheet"),
@@ -213,15 +213,15 @@ var CLSTAMP = "6960726";
       e,
       c,
       n,
-      l = b[r];
+      d = b[r];
     return (
-      0 !== l &&
-        (l
-          ? a.push(l[2])
+      0 !== d &&
+        (d
+          ? a.push(d[2])
           : ((n = new Promise(function (a, e) {
-              l = b[r] = [a, e];
+              d = b[r] = [a, e];
             })),
-            a.push((l[2] = n)),
+            a.push((d[2] = n)),
             ((o = document.createElement("script")).charset = "utf-8"),
             (o.timeout = 120),
             h.nc && o.setAttribute("nonce", h.nc),
@@ -292,7 +292,7 @@ var CLSTAMP = "6960726";
               }[(n = r)] || n) +
               ".js?contenthash=" +
               {
-                0: "e9aa3aa2e6059c148b61",
+                0: "56032ac75a05f13a4cfa",
                 2: "2231a24a7ddea3fa52ab",
                 3: "3f34c0a89bdab2220f9e",
                 4: "d4c5543356915893672e",
@@ -324,34 +324,34 @@ var CLSTAMP = "6960726";
                 30: "b291ebad9e72104e4b66",
                 31: "5ecdae187ad2372276ba",
                 32: "9e728643d05d14553654",
-                33: "6ce40aaefdf1206c90a0",
-                34: "0d4b335b599fa49e08cf",
-                35: "2b57d06eedc1ef82d932",
-                36: "2a34d97ed52a1f774b22",
+                33: "1572df1dcb3c894e34db",
+                34: "fdde55ae0f4b6515edfb",
+                35: "2a0daeab15d14dfb443d",
+                36: "dde0607df4b6dde97baf",
                 37: "7b82867650b3d0e1db3b",
-                38: "ff1483bea3706adb1da4",
-                39: "39f2ed58311f32880cb5",
-                40: "d5aea398daca65948845",
-                41: "58dfc062afe72c832fd8",
-                42: "f9d8c3899af77397671b",
-                43: "1db89d3d38e72cb972e2",
-                44: "2617b22d4a8153bed0be",
-                45: "48e303d6fcbf1463d532",
-                46: "0b50b644b20171c048e9",
-                47: "391953832cb4f7d48d7a",
-                48: "f9a970000ab1b91d8827",
+                38: "288f70b1a87ab039b8bd",
+                39: "5590dea1fb84fc21ad9b",
+                40: "5774cb7b5a2f239427a1",
+                41: "d3345836e739a1982c4b",
+                42: "85814d378ee741b19cdf",
+                43: "2f521ed050288d721982",
+                44: "c3a5fbf14392ef205bc2",
+                45: "2f655770dff2457ac13a",
+                46: "26cc05a30635910ffd64",
+                47: "87c69a726a8fe48c9113",
+                48: "234c6a216fa06288984b",
                 49: "994b44e9743e35a63f84",
-                50: "3a405527f638b24bdda5",
-                51: "1eb2d80c63fd9b2fa164",
+                50: "49911220ef0db15eabed",
+                51: "60397e0736a1dfd6df89",
                 52: "134651dca88319e39d03",
-                53: "bf78bd2f657b23c95565",
-                54: "7b613db6241d793ceb4d",
-                55: "d5540263bdc4fefa64ec",
-                56: "f7bb1e8f9442662ca083",
-                57: "e112d92d629094cea417",
-                58: "a9eeb6af612fdc176416",
-                59: "b0e5290ee89ad9236736",
-                60: "b15cc887261fbd23102c",
+                53: "e854e8007ca14d67defd",
+                54: "abd77697720be423de23",
+                55: "6b7841253a5047d864ad",
+                56: "f2daf8ac8d8dc41c56a1",
+                57: "a2aebed40b12e1e181fe",
+                58: "5bbfb7ac748b23574550",
+                59: "cc8574d4b36f65bd51f6",
+                60: "83c3adc4f16e859581af",
               }[n]),
             (i = new Error()),
             (e = function (a) {

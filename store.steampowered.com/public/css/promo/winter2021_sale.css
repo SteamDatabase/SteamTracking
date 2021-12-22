@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_winter2021 {
-                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/winter_2021_header_bg.png?v=2') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/winter2021_frontpage_bg_tile.jpg?v=2') repeat center, #00988b;
+                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/winter_2021_header_bg.png?v=3') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/winter2021_bg_tile.png?v=3') repeat center, #00988b;
             }
 
 body.v6.sale_winter2021 .responsive_page_template_content {
@@ -44,7 +44,7 @@ body.v6.sale_winter2021 .home_header_textimage_ctn {
                 position: absolute;
                 margin: 0;
                 height: 100%;
-                max-height: 500px;
+                max-height: 440px;
                 display: flex;
 				background: right;
                 background-repeat: no-repeat;
@@ -307,7 +307,7 @@ body.v6.sale_winter2021 .home_sticker_ctn.mobile {
 }
 
 .home_steamawards_ctn {
-    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/steamawards_nomination_banner.png?v=2') no-repeat center top;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/steamawards_vote_banner.png?v=2') no-repeat center top;
     height: 282px;
     box-sizing: border-box;
     display: flex;
@@ -319,7 +319,7 @@ body.v6.sale_winter2021 .home_sticker_ctn.mobile {
 }
 
 .summer_banner_ctn.home_topgames_ctn {
-    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/best.jpg?v=2') no-repeat center top;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/best.jpg?v=3') no-repeat center top;
     background-size: cover;
     height: 200px;
     box-shadow: 2.86px 6.67px 14.29px rgba( 0, 0, 0, 0.67 );
@@ -344,14 +344,16 @@ body.v6.sale_winter2021 .home_sticker_ctn.mobile {
 
 		    font-size: 40px;
     letter-spacing: -0.7px;
-    color: #06a8b3;
+    color: #ffffff;
     line-height: 42px;
+    margin-bottom: 15px;
 }
 
 .home_steamawards_desc {
     font-size: 20px;
-    color: #06a8b3;
+    color: #b298fb;
     font-weight: 500;
+    line-height: 25px;
 }
 
 .home_steamawards_col {
@@ -366,7 +368,7 @@ body.v6.sale_winter2021 .home_sticker_ctn.mobile {
 		font-weight: bold; /* bold */
 
 		    letter-spacing: 1px;
-    background: #06a8b3;
+    background: #b298fb;
 	border: 3px solid black;
     width: 275px;
     color: #000;
@@ -380,7 +382,7 @@ body.v6.sale_winter2021 .home_sticker_ctn.mobile {
 }
 
 .home_steamawards_ctn:hover .home_steamawards_nominateBox {
-    background: #18cbd8;
+    background: #c8b8f6;
 }
 
 
@@ -423,13 +425,21 @@ body.v6.sale_winter2021 .home_sticker_ctn.mobile {
 }
 
 .home_topgames_desc {
-    color: #ffffff99;
+    color: #cad3df;
     font-family: 'Montserrat', sans-serif;
     text-transform: none;
     font-weight: 500;
     font-size: 20px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 450px )
+{
+    body.v6 .home_topgames_desc {
+        display: none;
+    }
+}
+
 
 
 .home_sticker_title {
@@ -1274,7 +1284,13 @@ body.forgeyourfate {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        padding: 15px;
+    }
+
+    html.responsive .summer_banner_ctn.home_topgames_ctn
+    {
+        align-items: flex-start;
+        background-position-x: 25%;
+        height: 27vw;
     }
 
     html.responsive .summer_banner_ctn.home_sticker_ctn:hover  img {
@@ -1308,6 +1324,11 @@ body.forgeyourfate {
         flex-direction: row;
     }
 
+	htmnl.responsive .header_yeti
+	{
+		display: none;
+	}
+
 }
 
 @media screen and (max-width: 800px )
@@ -1337,13 +1358,13 @@ body.forgeyourfate {
     }
 
     body.v6.sale_winter2021 .home_page_takeover_sizer {
-                    min-height: unset;
-                    height: 42vw !important;
-                }
+        min-height: unset;
+        height: 42vw !important;
+    }
 
     html.responsive body.v6.sale_winter2021 .home_header_textimage_ctn {
-
-                                }
+		max-height: 45vw;
+    }
 
     .home_category_title {
         font-size: 35px;
@@ -1415,8 +1436,8 @@ body.forgeyourfate {
         display: none;
     }
     html.responsive body.v6.sale_winter2021 .home_header_textimage_ctn .summer_points_ctn {
-                                    display: none;
-                                }
+        display: none;
+    }
 
 }
 /* switch to specific mobile header image */
@@ -1424,15 +1445,15 @@ body.forgeyourfate {
 {
 
     body.responsive_page.v6.sale_winter2021 {
-                                   /* background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/winter_sale_2020_header_alpha2b.png?v=2') no-repeat center top 12vw, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/winter_sale_folliage_tile_b.png?v=2') repeat center top, #101928; */
-                                    background-size: auto, contain;
-                                }
+        background-size: auto, contain;
+    }
+
     html.responsive body.v6.sale_winter2021 .home_header_textimage_ctn {
-    display: none;
+        display: none;
     }
 
     html.responsive body.v6.sale_winter2021 .fullscreen-bg {
-    display: none;
+        display: none;
     }
 
     html.responsive body.v6.sale_winter2021 .tag_carousel .carousel_items:not(.no_paging) > * {
@@ -1440,9 +1461,9 @@ body.forgeyourfate {
     }
 
     body.v6.sale_winter2021 .home_page_takeover_sizer {
-                    min-height: unset;
-                    height: 45vw !important;
-                }
+        min-height: unset;
+        height: 55vw !important;
+    }
 
     .page_background_holder_mobile {
         display: block;
@@ -1460,6 +1481,13 @@ body.forgeyourfate {
         background-repeat: no-repeat;
         background-position: top center;
         align-items: flex-end;
+    }
+
+    body.responsive_page .home_newupcoming_ctn .home_tab_button {
+        font-size: 13px;
+    }
+    body.responsive_page .home_newupcoming_ctn {
+        margin-top: 5vw;
     }
 
     .event_nav_element {
@@ -1494,8 +1522,15 @@ body.forgeyourfate {
         margin-left: 0px;
     }
     body.responsive_page .home_title {
-        line-height: 18px;
+        line-height: 26px;
     }
+
+	body.responsive_page .home_title_ctn,
+    body.responsive_page .home_section_title {
+		font-size: 22px;
+        padding: 0;
+	}
+
     body.responsive_page .home_title_ctn .home_line {
         display: none;
     }
@@ -1564,6 +1599,12 @@ body.forgeyourfate {
     max-width: 50%;
     min-width: 40%;
 	}
+
+    body.responsive_page .franchise_overflow {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
 }
 
 .home_franchises_ctn {
@@ -2059,6 +2100,16 @@ body.v6 .sale_capsule .discount_block_inline
         width: 100%;
         flex-shrink: 1;
     }
+
+	html.responsive .header_yeti {
+		display: none;
+	}
+
+	html.responsive body.v6.sale_winter2021 .home_header_textimage_ctn {
+		background: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 }
 
 /* at 500 wide, fix price layout for long currencies within most capsules */
@@ -2151,6 +2202,7 @@ body.v6 .sale_capsule .discount_block_inline
     }
     html.responsive .salerow3 .sale_capsule:nth-child(3) {
         width: 100%;
+        margin-top: 20px;
     }
 }
 
@@ -2393,6 +2445,8 @@ body.v6 .sale_capsule .discount_block_inline
     #sale_tag_genre.home_pagecontent_ctn {
         width: calc(100vw - 100px);
     }
+
+
 }
 
 .franchise_paging
@@ -2643,8 +2697,19 @@ img.franchise_placeholder {
     display: block;
 }
 
+.tag_square_title_img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
 .tag_square_overlay {
-    position: abosolute;
+    position: absolute;
     opacity: 0.5;
     top: 0;
     bottom: 0;
@@ -2698,6 +2763,7 @@ img.franchise_placeholder {
 .tag_square {
     margin: 1% 1%;
     flex: 1;
+	box-shadow: 2.86px 6.67px 16.29px rgb(0 0 0 / 78%);
 }
 
 .carousel_container .carousel_items:not(.no_paging) > .tag_squares_ctn
@@ -2733,7 +2799,7 @@ img.franchise_placeholder {
 }
 
 .header_yeti {
-	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/header_yeti.png') no-repeat;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/header_yeti_animated.png') no-repeat;
 	width: 940px;
 	height: 100%;
 	background-size: contain;

@@ -813,6 +813,21 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   color: #fff;
   cursor: default;
 }
+.overlappingtransition_TransitionGroup_2PuNB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  will-change: transform;
+}
+.overlappingtransition_ContentWrapper_MGaAv {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 body.modals_BodyNoScroll_32ZiC {
   overflow-y: hidden;
   height: 100vh;

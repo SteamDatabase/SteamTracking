@@ -383,10 +383,6 @@
 		margin-right: unset;
 	}
 
-	/* html.responsive .tab_item .ds_steam_deck_compat {
-		bottom: unset;
-		top: 102px;
-	} */
 
 
 
@@ -399,7 +395,9 @@
 
 
 	/* DAILY DEALS */
-
+	html.responsive .dailydeal_cap a {
+		display: flex;
+	}
 
 
 

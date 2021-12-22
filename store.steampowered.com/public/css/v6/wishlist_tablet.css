@@ -104,8 +104,7 @@
 	}
 
 
-
-	/* Name and avatar & frame */
+	/* Name and avatar and frame */
 	html.responsive .wishlist_header img,
 	html.responsive .wishlist_header .profile_avatar_frame {
 		width: 36px;
@@ -142,7 +141,6 @@
 	}
 
 
-
 	/* Seach input */
 	html.responsive #wishlist_search {
 		background-color: var(--gpBackground-LightMedium);
@@ -165,7 +163,6 @@
 		color: var(--gpStoreLighterGrey);
 		font: var(--gpText-BodyLarge);
 	}
-
 
 
 	/* Filters and control row */
@@ -195,7 +192,6 @@
 	}
 
 
-
 	/* No search results */
 	html.responsive #nothing_to_see_here {
 		padding: 24px 0px;
@@ -217,30 +213,56 @@
 
 
 
-	/* Wishlist container */
+
+	/* WISLIST ITEMS CONTAINER */
 	html.responsive #wishlist_ctn {
 		margin-top: 16px;
 	}
 
 
 
-	/* Wishlist item styling */
+
+	/* WISLIST ITEMS */
 	html.responsive .wishlist_row {
-		padding: 8px;
-		width: calc(100% - 16px);
-		margin-bottom: 8px;
+		padding: 8px 16px 8px 8px;
+		width: 100%;
+		margin-bottom: 4px;
 		box-shadow: none;
 		background: var(--gpBackground-DarkSoft);
+		box-sizing: border-box;
 	}
 
 	html.responsive .wishlist_row:hover,
 	html.responsive .wishlist_row.gpfocus {
-		background: var(--gpBackground-DarkSoft);
+		background: var(--gpBackground-LightMedium);
+	}
+
+	html.responsive .wishlist_row:hover .tags .tag,
+	html.responsive .wishlist_row.gpfocus .tags .tag {
+		background-color: var(--gpBackground-LightMedium);
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .wishlist_row .capsule {
+		display: flex;
+		width: 28%;
+		height: 28%;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .wishlist_row .content {
+		justify-content: center;
 	}
 
 	html.responsive .wishlist_row .title {
-		font: var(--gpText-BodyLarge);
+		font: var(--gpText-HeadingSmall);
 		font-weight: 500;
+		margin-bottom: 0px;
+	}
+
+	html.responsive .wishlist_row .stats {
+		text-transform: unset;
+		margin-bottom: unset;
 	}
 
 	html.responsive .wishlist_row .addedon {
@@ -250,14 +272,19 @@
 	}
 
 	html.responsive .wishlist_row .game_review_summary {
-		font: var(--gpText-BodySmall);
+		font: var(--gpText-BodyMedium);
 		font-weight: 400;
 		margin-top: unset;
 		text-transform: unset;
 	}
 
+	html.responsive .game_review_summary.no_reviews {
+		color: var(--gpStoreLighterGrey);
+	}
+
 	html.responsive .wishlist_row .platform_icons {
-		margin-bottom: 8px;
+		margin-bottom: 4px;
+		margin-top: -36px;
 	}
 
 	html.responsive .wishlist_row span.platform_img {
@@ -265,25 +292,38 @@
 	}
 
 	html.responsive .wishlist_row .tags {
-		font: var(--gpText-BodySmall);
-		color: var(--gpStoreLighterGrey);
+		height: unset;
 	}
 
 	html.responsive .wishlist_row .tags .tag {
 		border: none;
 		height: unset;
-		background-color: var(--gpBackground-DarkSoft);
+		background-color: var(--gpBackground-LightSoft);
+		font: var(--gpText-BodySmall);
+		color: var(--gpStoreLighterGrey);
+		border-radius: var(--gpCorner-Medium);
+		transition: var(--gpTransition-Short);
 	}
 
 	html.responsive .release_date {
 		display: none;
 	}
 
-	/* pricing and add to cart */
+	html.responsive .addedon {
+		display: none;
+	}
+
+
+	/* Pricing and add to cart */
+	html.responsive .wishlist_row .purchase_area {
+		background: none;
+	}
+
 	html.responsive .wishlist_row .purchase_area .btn_medium {
 		padding: 5px;
 		margin: unset;
 	}
+
 	html.responsive .wishlist_row .purchase_area .ico_cart {
 		margin-top: 2px;
 	}
@@ -293,4 +333,40 @@
 		flex-direction: column;
 		justify-content: center;
 	}
+
+	html.responsive .discount_block_large .discount_prices {
+		background: none;
+	}
+
+	html.responsive .wishlist_row .purchase_area form {
+		display: none;
+	}
+
+	html.responsive .wishlist_row a.coming_soon_link span {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLightestGrey);
+	}
+
+
+	/* Compact */
+	html.responsive .compact .wishlist_row .capsule {
+		width: 162px;
+		height: 75px;
+	}
+
+	html.responsive .compact .wishlist_row .title {
+		flex-grow: unset;
+		margin-top: unset;
+		display: inline;
+	}
+
+	html.responsive .compact .wishlist_row .mid_container {
+		margin-top: unset;
+	}
+
+	html.responsive .compact .wishlist_row .platform_icons {
+		display: unset;
+	}
+
+
 }
