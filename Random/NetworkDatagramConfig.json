@@ -1,5 +1,5 @@
 {
-  "revision": 364,
+  "revision": 365,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -100,6 +100,7 @@
       "tier": 1
     },
     "can": {
+      "desc": "PW Guangdong 2",
       "geo": [ 113.15, 23.7 ],
       "groups": [
         "steam-china",
@@ -110,6 +111,8 @@
       "tier": 1
     },
     "canm": {
+      "desc": "PW Guangdong 2 (Mobile)",
+      "geo": [ 113.15, 23.7 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -145,6 +148,8 @@
       "tier": 1
     },
     "cant": {
+      "desc": "PW Guangdong 2 (Telecom)",
+      "geo": [ 113.15, 23.7 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -180,6 +185,8 @@
       "tier": 1
     },
     "canu": {
+      "desc": "PW Guangdong 2 (Unicom)",
+      "geo": [ 113.15, 23.7 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -645,954 +652,14 @@
       ],
       "tier": 1
     },
-    "mam1": {
-      "desc": "Multiplay Amsterdam 1",
-      "geo": [ 4.9, 52.37 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "185.251.117.142",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mam2": {
-      "desc": "Multiplay Amsterdam 2",
-      "geo": [ 4.9, 52.37 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "172.255.10.108",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mam3": {
-      "desc": "Multiplay Amsterdam 3",
-      "geo": [ 4.9, 52.37 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "107.6.141.102",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mam4": {
-      "desc": "Multiplay Amsterdam 4",
-      "geo": [ 4.9, 52.37 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "109.123.102.100",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mas1": {
-      "desc": "Multiplay Ashburn",
-      "geo": [ -77.471111, 39.03 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "172.106.10.82",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mat1": {
-      "desc": "Multiplay Atlanta 1",
-      "geo": [ -84.4, 33.7 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "172.96.121.162",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mat2": {
-      "desc": "Multiplay Atlanta 2",
-      "geo": [ -84.4, 33.7 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "66.71.252.67",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mch1": {
-      "desc": "Multiplay Chicago",
-      "geo": [ -87.65, 41.85 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "172.107.199.166",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mdc1": {
-      "desc": "Multiplay Washington DC 1",
-      "geo": [ -77.09, 38.94 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "128.14.201.62",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mdc2": {
-      "desc": "Multiplay Washington DC 2",
-      "geo": [ -77.04, 38.9 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "173.233.152.114",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mdf1": {
-      "desc": "Multiplay Dallas 1",
-      "geo": [ -96.8, 32.78 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "172.106.1.154",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mdf2": {
-      "desc": "Multiplay Dallas 2",
-      "geo": [ -96.8, 32.78 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "142.0.192.44",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mdf3": {
-      "desc": "Multiplay Dallas 3",
-      "geo": [ -96.8, 32.78 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "107.6.103.50",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mdf4": {
-      "desc": "Multiplay Dallas 4",
-      "geo": [ -96.8, 32.78 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "174.127.113.131",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mfr1": {
-      "desc": "Multiplay Frankfurt 1",
-      "geo": [ 8.68, 50.12 ],
-      "groups": [
-        "multiplay",
-        "mplay-csgo",
-        "mplay-dota"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "23.90.147.90",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mfr2": {
-      "desc": "Multiplay Frankfurt 2",
-      "geo": [ 8.68, 50.12 ],
-      "groups": [
-        "multiplay",
-        "mplay-csgo",
-        "mplay-dota"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "185.225.208.183",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mfr3": {
-      "desc": "Multiplay Frankfurt 3",
-      "geo": [ 8.68, 50.12 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "151.106.55.79",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mhk1": {
-      "desc": "Multiplay Hong Kong 1",
-      "geo": [ 114.2, 22.3 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "103.15.105.13",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mhk2": {
-      "desc": "Multiplay Hong Kong 2",
-      "geo": [ 114.2, 22.3 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "119.42.62.100",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mhk4": {
-      "desc": "Multiplay Hong Kong 4",
-      "geo": [ 114.2, 22.3 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "119.81.135.10",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mla1": {
-      "desc": "Multiplay Los Angeles",
-      "geo": [ -118.24, 34.05 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "104.149.128.218",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mln1": {
-      "desc": "Multiplay London 1",
+    "oln1": {
+      "desc": "OVH London 1",
       "geo": [ -0.13, 51.51 ],
       "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
+        "ovh"
       ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "23.90.176.30",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mln2": {
-      "desc": "Multiplay London 2",
-      "geo": [ -0.13, 51.51 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "64.46.108.42",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mln3": {
-      "desc": "Multiplay London 3",
-      "geo": [ -0.13, 51.51 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "88.202.180.26",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mln4": {
-      "desc": "Multiplay London 4",
-      "geo": [ -0.13, 51.51 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "88.150.220.99",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mlx1": {
-      "desc": "Multiplay Luxembourg City",
-      "geo": [ 6.13, 49.61 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "188.42.41.30",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mmi1": {
-      "desc": "Multiplay Miami 1",
-      "geo": [ -80.19, 25.76 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "128.14.216.246",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mmi2": {
-      "desc": "Multiplay Miami 2",
-      "geo": [ -80.19, 25.76 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "107.181.164.90",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mny1": {
-      "desc": "Multiplay New York 1",
-      "geo": [ -74.0, 40.71 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "107.152.101.251",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mny2": {
-      "desc": "Multiplay New York 2",
-      "geo": [ -74.0, 40.71 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "107.150.147.12",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mny3": {
-      "desc": "Multiplay New York 3",
-      "geo": [ -74.0, 40.71 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "107.182.226.141",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msa1": {
-      "desc": "Multiplay Salt Lake City",
-      "geo": [ -111.89, 40.76 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "107.182.228.233",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msg1": {
-      "desc": "Multiplay Singapore 1",
-      "geo": [ 103.8, 1.4 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "103.126.138.126",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msg2": {
-      "desc": "Multiplay Singapore 2",
-      "geo": [ 103.8, 1.4 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "103.23.210.180",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msg3": {
-      "desc": "Multiplay Singapore 3",
-      "geo": [ 103.8, 1.4 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "107.6.114.205",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msg4": {
-      "desc": "Multiplay Singapore 4",
-      "geo": [ 103.8, 1.4 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "128.1.231.10",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msj1": {
-      "desc": "Multiplay San Jose 1",
-      "geo": [ -121.9, 37.3 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "169.197.126.10",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msj2": {
-      "desc": "Multiplay San Jose 2",
-      "geo": [ -121.9, 37.3 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "173.237.41.100",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msj3": {
-      "desc": "Multiplay San Jose 3",
-      "geo": [ -121.9, 37.3 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "192.170.153.164",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msl1": {
-      "desc": "Multiplay St. Louis",
-      "geo": [ -90.2, 38.6 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "148.72.132.230",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msp1": {
-      "desc": "Multiplay Sao Paulo 1",
-      "geo": [ -46.7, -23.6 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "172.107.217.94",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msp2": {
-      "desc": "Multiplay Sao Paulo 2",
-      "geo": [ -46.7, -23.6 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "177.54.146.81",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mst1": {
-      "desc": "Multiplay Strasbourg",
-      "geo": [ 7.75, 48.57 ],
-      "groups": [
-        "multiplay",
-        "mplay-dota",
-        "mplay-csgo"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "151.106.28.249",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msy1": {
-      "desc": "Multiplay Sydney 1",
-      "geo": [ 151.2, -33.9 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "172.107.210.230",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msy2": {
-      "desc": "Multiplay Sydney 2",
-      "geo": [ 151.2, -33.9 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "137.59.252.194",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "msy3": {
-      "desc": "Multiplay Sydney 3",
-      "geo": [ 151.2, -33.9 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "221.121.158.233",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mtp1": {
-      "desc": "Multiplay Taipei",
-      "geo": [ 121.6, 25.0 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "103.78.122.226",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mty1": {
-      "desc": "Multiplay Tokyo 1",
-      "geo": [ 139.7, 35.7 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "103.102.160.10",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mty2": {
-      "desc": "Multiplay Tokyo 2",
-      "geo": [ 139.7, 35.7 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "122.10.153.106",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mty3": {
-      "desc": "Multiplay Tokyo 3",
-      "geo": [ 139.7, 35.7 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "103.208.220.58",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
-      "tier": 2
-    },
-    "mty4": {
-      "desc": "Multiplay Tokyo 4",
-      "geo": [ 139.7, 35.7 ],
-      "groups": [
-        "multiplay"
-      ],
-      "has_gameservers": false,
-      "partners": 4,
-      "ping_only": true,
-      "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
-      "relays": [
-        {
-          "ipv4": "128.168.109.10",
-          "port_range": [ 27015, 27020 ]
-        }
-      ],
+      "has_gameservers": true,
+      "partners": 8,
       "tier": 2
     },
     "ord": {
@@ -1666,6 +733,7 @@
       "tier": 1
     },
     "pwg": {
+      "desc": "PW Guangdong 1",
       "geo": [ 113.3, 23.1 ],
       "groups": [
         "steam-china",
@@ -1722,6 +790,7 @@
       "tier": 1
     },
     "pwu": {
+      "desc": "PW Hebei",
       "geo": [ 116.4, 39.9 ],
       "groups": [
         "steam-china",
@@ -1753,6 +822,7 @@
       "aliases": [
         "wuh"
       ],
+      "desc": "PW Wuhan",
       "geo": [ 114.2, 30.4 ],
       "groups": [
         "steam-china",
@@ -1781,6 +851,7 @@
       "tier": 1
     },
     "pwz": {
+      "desc": "PW Zhejiang",
       "geo": [ 120.5, 29.2 ],
       "groups": [
         "steam-china",
@@ -1939,7 +1010,7 @@
       "tier": 1
     },
     "sha": {
-      "desc": "Shanghai",
+      "desc": "PW Shanghai",
       "geo": [ 121.5, 31.2 ],
       "groups": [
         "steam-china",
@@ -1950,7 +1021,8 @@
       "tier": 1
     },
     "sham": {
-      "desc": "Shanghai (Mobile)",
+      "desc": "PW Shanghai (Mobile)",
+      "geo": [ 121.5, 31.2 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -1986,7 +1058,8 @@
       "tier": 1
     },
     "shat": {
-      "desc": "Shanghai (Telecom)",
+      "desc": "PW Shanghai (Telecom)",
+      "geo": [ 121.5, 31.2 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -2022,7 +1095,8 @@
       "tier": 1
     },
     "shau": {
-      "desc": "Shanghai (Unicom)",
+      "desc": "PW Shanghai (Unicom)",
+      "geo": [ 121.5, 31.2 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -2203,6 +1277,7 @@
       "tier": 1
     },
     "tsn": {
+      "desc": "PW Tianjin",
       "geo": [ 117.1, 39.8 ],
       "groups": [
         "steam-china",
@@ -2213,6 +1288,8 @@
       "tier": 1
     },
     "tsnm": {
+      "desc": "PW Tianjin (Mobile)",
+      "geo": [ 117.1, 39.8 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -2248,6 +1325,8 @@
       "tier": 1
     },
     "tsnt": {
+      "desc": "PW Tianjin (Telecom)",
+      "geo": [ 117.1, 39.8 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -2283,6 +1362,8 @@
       "tier": 1
     },
     "tsnu": {
+      "desc": "PW Tianjin (Unicom)",
+      "geo": [ 117.1, 39.8 ],
       "groups": [
         "steam-china",
         "perfectworld"
@@ -2447,161 +1528,72 @@
   ],
   "typical_pings": [
     [ "ams", "fra", 6 ],
-    [ "ams", "jnb", 171 ],
+    [ "ams", "jnb", 170 ],
     [ "ams", "lhr", 5 ],
     [ "ams", "mad", 30 ],
-    [ "ams", "mam1", 1 ],
-    [ "ams", "mam2", 1 ],
-    [ "ams", "mam3", 1 ],
-    [ "ams", "mam4", 0 ],
-    [ "ams", "mfr1", 7 ],
-    [ "ams", "mfr2", 7 ],
-    [ "ams", "mfr3", 15 ],
-    [ "ams", "mln1", 7 ],
-    [ "ams", "mln2", 12 ],
-    [ "ams", "mln3", 6 ],
-    [ "ams", "mln4", 6 ],
-    [ "ams", "mlx1", 11 ],
-    [ "ams", "mst1", 15 ],
+    [ "ams", "oln1", 7 ],
     [ "ams", "ord", 91 ],
-    [ "ams", "par", 10 ],
+    [ "ams", "par", 11 ],
     [ "ams", "sto", 20 ],
     [ "ams", "sto2", 20 ],
-    [ "ams", "vie", 17 ],
+    [ "ams", "vie", 18 ],
+    [ "ams", "waw", 22 ],
     [ "atl", "dfw", 21 ],
     [ "atl", "fra", 98 ],
     [ "atl", "gru", 131 ],
     [ "atl", "iad", 13 ],
     [ "atl", "lax", 65 ],
-    [ "atl", "mas1", 15 ],
-    [ "atl", "mat1", 0 ],
-    [ "atl", "mat2", 1 ],
-    [ "atl", "mch1", 32 ],
-    [ "atl", "mdc1", 15 ],
-    [ "atl", "mdc2", 15 ],
-    [ "atl", "mdf1", 19 ],
-    [ "atl", "mdf2", 17 ],
-    [ "atl", "mdf3", 21 ],
-    [ "atl", "mdf4", 18 ],
-    [ "atl", "mla1", 49 ],
-    [ "atl", "mmi1", 14 ],
-    [ "atl", "mmi2", 13 ],
-    [ "atl", "mny1", 22 ],
-    [ "atl", "mny2", 18 ],
-    [ "atl", "mny3", 19 ],
-    [ "atl", "msa1", 46 ],
-    [ "atl", "msl1", 26 ],
     [ "atl", "ord", 19 ],
     [ "bom", "dxb", 26 ],
     [ "bom", "hkg", 79 ],
     [ "bom", "maa", 17 ],
-    [ "bom", "msg1", 56 ],
-    [ "bom", "msg4", 56 ],
-    [ "bom", "ord", 320 ],
-    [ "bom", "sgp", 50 ],
+    [ "bom", "ord", 322 ],
+    [ "bom", "sgp", 49 ],
     [ "can", "canm", 0 ],
     [ "can", "cant", 0 ],
     [ "can", "canu", 0 ],
     [ "can", "fra", 179 ],
     [ "can", "hkg", 5 ],
     [ "can", "pwg", 1 ],
-    [ "can", "pww", 15 ],
-    [ "can", "pwz", 19 ],
     [ "canm", "cant", 0 ],
     [ "canm", "canu", 0 ],
+    [ "canm", "fra", 179 ],
     [ "canm", "hkg", 15 ],
     [ "canm", "pwg", 8 ],
     [ "cant", "canu", 0 ],
-    [ "cant", "hkg", 7 ],
-    [ "cant", "pwg", 2 ],
-    [ "canu", "hkg", 60 ],
+    [ "cant", "fra", 179 ],
+    [ "cant", "hkg", 8 ],
+    [ "cant", "pwg", 1 ],
+    [ "canu", "fra", 179 ],
+    [ "canu", "hkg", 109 ],
     [ "canu", "pwg", 4 ],
     [ "dfw", "eat", 49 ],
-    [ "dfw", "fra", 117 ],
+    [ "dfw", "fra", 118 ],
     [ "dfw", "iad", 43 ],
     [ "dfw", "lax", 32 ],
-    [ "dfw", "mas1", 32 ],
-    [ "dfw", "mat1", 18 ],
-    [ "dfw", "mat2", 17 ],
-    [ "dfw", "mch1", 19 ],
-    [ "dfw", "mdc1", 31 ],
-    [ "dfw", "mdc2", 31 ],
-    [ "dfw", "mdf1", 0 ],
-    [ "dfw", "mdf2", 0 ],
-    [ "dfw", "mdf3", 1 ],
-    [ "dfw", "mdf4", 1 ],
-    [ "dfw", "mla1", 30 ],
-    [ "dfw", "mmi1", 28 ],
-    [ "dfw", "mmi2", 28 ],
-    [ "dfw", "mny1", 36 ],
-    [ "dfw", "mny2", 36 ],
-    [ "dfw", "mny3", 36 ],
-    [ "dfw", "msa1", 28 ],
-    [ "dfw", "msj1", 41 ],
-    [ "dfw", "msj2", 39 ],
-    [ "dfw", "msj3", 43 ],
-    [ "dfw", "msl1", 34 ],
     [ "dfw", "ord", 21 ],
-    [ "dfw", "sea", 48 ],
+    [ "dfw", "sea", 47 ],
     [ "dxb", "hkg", 105 ],
     [ "dxb", "maa", 42 ],
-    [ "dxb", "msg3", 81 ],
-    [ "dxb", "ord", 344 ],
+    [ "dxb", "ord", 346 ],
     [ "dxb", "sgp", 76 ],
     [ "eat", "fra", 162 ],
     [ "eat", "lax", 26 ],
     [ "eat", "ord", 51 ],
     [ "eat", "sea", 2 ],
-    [ "eat", "syd", 137 ],
     [ "eze", "gru", 28 ],
     [ "eze", "lax", 151 ],
     [ "eze", "lim", 49 ],
-    [ "eze", "msp1", 28 ],
-    [ "eze", "msp2", 28 ],
     [ "eze", "ord", 177 ],
     [ "eze", "scl", 20 ],
-    [ "fra", "gru", 230 ],
-    [ "fra", "hkg", 330 ],
+    [ "fra", "gru", 229 ],
+    [ "fra", "hkg", 333 ],
     [ "fra", "iad", 85 ],
-    [ "fra", "jnb", 180 ],
-    [ "fra", "lax", 144 ],
+    [ "fra", "jnb", 179 ],
+    [ "fra", "lax", 145 ],
     [ "fra", "lhr", 14 ],
     [ "fra", "mad", 30 ],
-    [ "fra", "mam1", 8 ],
-    [ "fra", "mam2", 7 ],
-    [ "fra", "mam3", 16 ],
-    [ "fra", "mam4", 7 ],
-    [ "fra", "mas1", 86 ],
-    [ "fra", "mat1", 104 ],
-    [ "fra", "mdc1", 107 ],
-    [ "fra", "mdc2", 89 ],
-    [ "fra", "mdf1", 115 ],
-    [ "fra", "mdf2", 118 ],
-    [ "fra", "mdf3", 116 ],
-    [ "fra", "mdf4", 115 ],
-    [ "fra", "mfr1", 0 ],
-    [ "fra", "mfr2", 0 ],
-    [ "fra", "mfr3", 3 ],
-    [ "fra", "mhk2", 185 ],
-    [ "fra", "mhk4", 183 ],
-    [ "fra", "mla1", 142 ],
-    [ "fra", "mln1", 12 ],
-    [ "fra", "mln2", 13 ],
-    [ "fra", "mln3", 15 ],
-    [ "fra", "mln4", 12 ],
-    [ "fra", "mlx1", 7 ],
-    [ "fra", "mny1", 83 ],
-    [ "fra", "mny2", 79 ],
-    [ "fra", "mny3", 81 ],
-    [ "fra", "msa1", 128 ],
-    [ "fra", "msg1", 160 ],
-    [ "fra", "msg2", 163 ],
-    [ "fra", "msg4", 164 ],
-    [ "fra", "msj2", 147 ],
-    [ "fra", "msj3", 150 ],
-    [ "fra", "msl1", 112 ],
-    [ "fra", "mst1", 3 ],
-    [ "fra", "msy1", 252 ],
+    [ "fra", "oln1", 12 ],
     [ "fra", "ord", 97 ],
     [ "fra", "par", 9 ],
     [ "fra", "pwg", 180 ],
@@ -2611,371 +1603,106 @@
     [ "fra", "pwz", 178 ],
     [ "fra", "sea", 142 ],
     [ "fra", "sha", 176 ],
+    [ "fra", "sham", 176 ],
+    [ "fra", "shat", 176 ],
+    [ "fra", "shau", 176 ],
     [ "fra", "shb", 176 ],
-    [ "fra", "sto", 24 ],
+    [ "fra", "sto", 26 ],
     [ "fra", "sto2", 26 ],
     [ "fra", "tsn", 156 ],
+    [ "fra", "tsnm", 156 ],
+    [ "fra", "tsnt", 156 ],
+    [ "fra", "tsnu", 156 ],
     [ "fra", "vie", 12 ],
     [ "fra", "waw", 16 ],
-    [ "gru", "lim", 83 ],
-    [ "gru", "mat2", 125 ],
-    [ "gru", "mch1", 140 ],
-    [ "gru", "mmi1", 111 ],
-    [ "gru", "mmi2", 109 ],
-    [ "gru", "msp1", 1 ],
-    [ "gru", "msp2", 1 ],
-    [ "gru", "ord", 150 ],
+    [ "gru", "lim", 82 ],
+    [ "gru", "ord", 149 ],
     [ "gru", "scl", 53 ],
-    [ "hkg", "maa", 63 ],
-    [ "hkg", "mhk1", 1 ],
-    [ "hkg", "mhk2", 2 ],
-    [ "hkg", "mhk4", 1 ],
-    [ "hkg", "msg1", 33 ],
-    [ "hkg", "msg2", 37 ],
-    [ "hkg", "msg3", 32 ],
-    [ "hkg", "msg4", 37 ],
-    [ "hkg", "msj1", 156 ],
-    [ "hkg", "msy1", 125 ],
-    [ "hkg", "msy2", 122 ],
-    [ "hkg", "msy3", 112 ],
-    [ "hkg", "mtp1", 53 ],
-    [ "hkg", "mty1", 49 ],
-    [ "hkg", "mty2", 48 ],
-    [ "hkg", "mty3", 54 ],
-    [ "hkg", "mty4", 46 ],
-    [ "hkg", "ord", 237 ],
-    [ "hkg", "pwg", 6 ],
-    [ "hkg", "pwj", 69 ],
-    [ "hkg", "pwu", 77 ],
-    [ "hkg", "pww", 41 ],
+    [ "hkg", "maa", 62 ],
+    [ "hkg", "ord", 241 ],
+    [ "hkg", "pwg", 7 ],
+    [ "hkg", "pwj", 119 ],
+    [ "hkg", "pwu", 125 ],
+    [ "hkg", "pww", 40 ],
     [ "hkg", "pwz", 34 ],
     [ "hkg", "seo", 37 ],
     [ "hkg", "sgp", 30 ],
     [ "hkg", "sha", 24 ],
-    [ "hkg", "sham", 40 ],
-    [ "hkg", "shat", 29 ],
-    [ "hkg", "shau", 59 ],
-    [ "hkg", "shb", 28 ],
-    [ "hkg", "syd", 168 ],
+    [ "hkg", "sham", 39 ],
+    [ "hkg", "shat", 28 ],
+    [ "hkg", "shau", 109 ],
+    [ "hkg", "shb", 41 ],
+    [ "hkg", "syd", 118 ],
     [ "hkg", "tsn", 39 ],
-    [ "hkg", "tsnm", 56 ],
-    [ "hkg", "tsnt", 45 ],
-    [ "hkg", "tsnu", 70 ],
-    [ "hkg", "tyo", 52 ],
-    [ "hkg", "tyo1", 51 ],
+    [ "hkg", "tsnm", 55 ],
+    [ "hkg", "tsnt", 47 ],
+    [ "hkg", "tsnu", 119 ],
+    [ "hkg", "tyo", 53 ],
+    [ "hkg", "tyo1", 53 ],
     [ "iad", "lax", 64 ],
-    [ "iad", "mas1", 1 ],
-    [ "iad", "mat1", 14 ],
-    [ "iad", "mat2", 17 ],
-    [ "iad", "mch1", 18 ],
-    [ "iad", "mdc1", 0 ],
-    [ "iad", "mdc2", 1 ],
-    [ "iad", "mdf1", 31 ],
-    [ "iad", "mdf3", 30 ],
-    [ "iad", "mmi1", 26 ],
-    [ "iad", "mmi2", 28 ],
-    [ "iad", "mny1", 6 ],
-    [ "iad", "mny2", 6 ],
-    [ "iad", "mny3", 6 ],
-    [ "iad", "msl1", 30 ],
     [ "iad", "ord", 20 ],
-    [ "jnb", "lhr", 166 ],
-    [ "jnb", "msg3", 117 ],
-    [ "jnb", "ord", 265 ],
-    [ "jnb", "par", 174 ],
+    [ "jnb", "lhr", 165 ],
+    [ "jnb", "ord", 263 ],
+    [ "jnb", "par", 172 ],
     [ "lax", "lim", 102 ],
-    [ "lax", "mdf2", 31 ],
-    [ "lax", "mdf4", 32 ],
-    [ "lax", "mla1", 0 ],
-    [ "lax", "msa1", 46 ],
-    [ "lax", "msj1", 9 ],
-    [ "lax", "msj2", 8 ],
-    [ "lax", "msj3", 10 ],
     [ "lax", "ord", 46 ],
     [ "lax", "scl", 131 ],
     [ "lax", "sea", 24 ],
     [ "lhr", "mad", 27 ],
-    [ "lhr", "mam1", 6 ],
-    [ "lhr", "mam2", 7 ],
-    [ "lhr", "mam3", 12 ],
-    [ "lhr", "mam4", 7 ],
-    [ "lhr", "mfr1", 17 ],
-    [ "lhr", "mfr3", 15 ],
-    [ "lhr", "mln1", 0 ],
-    [ "lhr", "mln2", 2 ],
-    [ "lhr", "mln3", 0 ],
-    [ "lhr", "mln4", 1 ],
-    [ "lhr", "mlx1", 20 ],
-    [ "lhr", "mst1", 16 ],
-    [ "lhr", "ord", 101 ],
+    [ "lhr", "oln1", 0 ],
+    [ "lhr", "ord", 100 ],
     [ "lhr", "par", 8 ],
+    [ "lhr", "sto", 25 ],
     [ "lhr", "sto2", 24 ],
-    [ "lim", "msp1", 77 ],
-    [ "lim", "msp2", 78 ],
     [ "lim", "ord", 147 ],
     [ "lim", "scl", 29 ],
-    [ "maa", "msg1", 32 ],
-    [ "maa", "msg2", 69 ],
-    [ "maa", "msg3", 33 ],
-    [ "maa", "msg4", 33 ],
-    [ "maa", "ord", 304 ],
+    [ "maa", "ord", 305 ],
     [ "maa", "sgp", 33 ],
     [ "maa", "syd", 121 ],
-    [ "mad", "ord", 116 ],
+    [ "mad", "ord", 115 ],
     [ "mad", "par", 20 ],
-    [ "mam1", "mam2", 1 ],
-    [ "mam1", "mam3", 1 ],
-    [ "mam1", "mam4", 0 ],
-    [ "mam1", "mfr1", 6 ],
-    [ "mam1", "mln2", 7 ],
-    [ "mam1", "mln3", 6 ],
-    [ "mam1", "mln4", 8 ],
-    [ "mam1", "ord", 97 ],
-    [ "mam1", "par", 16 ],
-    [ "mam2", "mam3", 1 ],
-    [ "mam2", "mam4", 0 ],
-    [ "mam2", "mfr1", 7 ],
-    [ "mam2", "mfr2", 8 ],
-    [ "mam2", "mln2", 8 ],
-    [ "mam2", "ord", 95 ],
-    [ "mam2", "par", 16 ],
-    [ "mam3", "mam4", 0 ],
-    [ "mam3", "mfr1", 7 ],
-    [ "mam3", "mln2", 7 ],
-    [ "mam3", "mlx1", 10 ],
-    [ "mam3", "ord", 97 ],
-    [ "mam3", "par", 14 ],
-    [ "mam4", "mlx1", 6 ],
-    [ "mam4", "ord", 132 ],
-    [ "mam4", "par", 8 ],
-    [ "mas1", "mat2", 12 ],
-    [ "mas1", "mdc1", 1 ],
-    [ "mas1", "mdc2", 1 ],
-    [ "mas1", "mmi2", 21 ],
-    [ "mas1", "mny1", 6 ],
-    [ "mas1", "mny3", 6 ],
-    [ "mas1", "ord", 20 ],
-    [ "mat1", "mat2", 1 ],
-    [ "mat1", "mdf3", 19 ],
-    [ "mat1", "mmi1", 16 ],
-    [ "mat1", "mmi2", 13 ],
-    [ "mat1", "msl1", 21 ],
-    [ "mat1", "ord", 14 ],
-    [ "mat2", "mch1", 14 ],
-    [ "mat2", "mdf1", 18 ],
-    [ "mat2", "mmi1", 14 ],
-    [ "mat2", "mmi2", 16 ],
-    [ "mat2", "msl1", 21 ],
-    [ "mat2", "ord", 25 ],
-    [ "mch1", "mny3", 18 ],
-    [ "mch1", "msl1", 11 ],
-    [ "mch1", "ord", 0 ],
-    [ "mdc1", "mdc2", 1 ],
-    [ "mdc1", "mny1", 7 ],
-    [ "mdc1", "mny2", 6 ],
-    [ "mdc1", "mny3", 7 ],
-    [ "mdc1", "ord", 18 ],
-    [ "mdc2", "mny1", 8 ],
-    [ "mdc2", "mny2", 7 ],
-    [ "mdc2", "ord", 20 ],
-    [ "mdf1", "mdf2", 0 ],
-    [ "mdf1", "mdf3", 2 ],
-    [ "mdf1", "mdf4", 1 ],
-    [ "mdf1", "ord", 21 ],
-    [ "mdf2", "mdf3", 1 ],
-    [ "mdf2", "mdf4", 2 ],
-    [ "mdf2", "msa1", 30 ],
-    [ "mdf2", "msl1", 21 ],
-    [ "mdf2", "ord", 28 ],
-    [ "mdf3", "mdf4", 2 ],
-    [ "mdf3", "ord", 24 ],
-    [ "mdf4", "ord", 19 ],
-    [ "mfr1", "mfr2", 0 ],
-    [ "mfr1", "mfr3", 3 ],
-    [ "mfr1", "mlx1", 8 ],
-    [ "mfr1", "mst1", 3 ],
-    [ "mfr1", "ord", 103 ],
-    [ "mfr1", "par", 11 ],
-    [ "mfr2", "mlx1", 5 ],
-    [ "mfr2", "ord", 102 ],
-    [ "mfr2", "par", 10 ],
-    [ "mfr2", "vie", 11 ],
-    [ "mfr3", "mln4", 14 ],
-    [ "mfr3", "mst1", 0 ],
-    [ "mfr3", "ord", 100 ],
-    [ "mfr3", "par", 6 ],
-    [ "mhk1", "mhk2", 1 ],
-    [ "mhk1", "mhk4", 2 ],
-    [ "mhk1", "msg3", 34 ],
-    [ "mhk1", "ord", 251 ],
-    [ "mhk1", "pwg", 2 ],
-    [ "mhk1", "sgp", 34 ],
-    [ "mhk1", "tyo", 52 ],
-    [ "mhk2", "mhk4", 3 ],
-    [ "mhk2", "msg1", 30 ],
-    [ "mhk2", "msg2", 34 ],
-    [ "mhk2", "sgp", 37 ],
-    [ "mhk2", "tyo", 48 ],
-    [ "mhk2", "tyo1", 47 ],
-    [ "mhk4", "msg3", 31 ],
-    [ "mhk4", "msg4", 31 ],
-    [ "mhk4", "mtp1", 17 ],
-    [ "mhk4", "sgp", 30 ],
-    [ "mhk4", "tyo", 47 ],
-    [ "mhk4", "tyo1", 46 ],
-    [ "mla1", "msa1", 22 ],
-    [ "mla1", "msj1", 8 ],
-    [ "mla1", "msj2", 9 ],
-    [ "mla1", "msj3", 9 ],
-    [ "mla1", "ord", 50 ],
-    [ "mla1", "sea", 32 ],
-    [ "mln1", "mln2", 0 ],
-    [ "mln1", "mln3", 0 ],
-    [ "mln1", "mln4", 0 ],
-    [ "mln1", "ord", 127 ],
-    [ "mln1", "par", 6 ],
-    [ "mln2", "mln3", 5 ],
-    [ "mln2", "ord", 88 ],
-    [ "mln2", "par", 10 ],
-    [ "mln3", "mln4", 1 ],
-    [ "mln3", "ord", 87 ],
-    [ "mln3", "par", 7 ],
-    [ "mln4", "mst1", 13 ],
-    [ "mln4", "ord", 85 ],
-    [ "mln4", "par", 8 ],
-    [ "mlx1", "ord", 100 ],
-    [ "mlx1", "par", 16 ],
-    [ "mmi1", "mmi2", 1 ],
-    [ "mmi1", "ord", 31 ],
-    [ "mmi2", "ord", 38 ],
-    [ "mny1", "mny2", 2 ],
-    [ "mny1", "mny3", 0 ],
-    [ "mny1", "ord", 18 ],
-    [ "mny2", "mny3", 1 ],
-    [ "mny2", "ord", 17 ],
-    [ "mny3", "ord", 18 ],
-    [ "msa1", "msj2", 18 ],
-    [ "msa1", "msj3", 18 ],
-    [ "msa1", "ord", 37 ],
-    [ "msg1", "msg2", 1 ],
-    [ "msg1", "msg3", 1 ],
-    [ "msg1", "msg4", 1 ],
-    [ "msg1", "msy1", 90 ],
-    [ "msg1", "msy2", 95 ],
-    [ "msg1", "msy3", 92 ],
-    [ "msg1", "sgp", 0 ],
-    [ "msg2", "msg3", 2 ],
-    [ "msg2", "msg4", 1 ],
-    [ "msg2", "sgp", 1 ],
-    [ "msg2", "tyo1", 74 ],
-    [ "msg3", "msg4", 2 ],
-    [ "msg3", "msy2", 95 ],
-    [ "msg3", "sgp", 1 ],
-    [ "msg4", "sgp", 1 ],
-    [ "msj1", "msj2", 1 ],
-    [ "msj1", "msj3", 2 ],
-    [ "msj1", "ord", 49 ],
-    [ "msj1", "sea", 19 ],
-    [ "msj2", "msj3", 1 ],
-    [ "msj2", "ord", 48 ],
-    [ "msj2", "sea", 16 ],
-    [ "msj3", "ord", 52 ],
-    [ "msj3", "sea", 20 ],
-    [ "msl1", "ord", 7 ],
-    [ "msp1", "msp2", 1 ],
-    [ "msp1", "ord", 134 ],
-    [ "msp1", "scl", 47 ],
-    [ "msp2", "ord", 151 ],
-    [ "msp2", "scl", 49 ],
-    [ "mst1", "ord", 100 ],
-    [ "mst1", "par", 6 ],
-    [ "mst1", "vie", 19 ],
-    [ "msy1", "msy2", 0 ],
-    [ "msy1", "msy3", 0 ],
-    [ "msy1", "sgp", 91 ],
-    [ "msy1", "syd", 0 ],
-    [ "msy1", "tyo", 113 ],
-    [ "msy1", "tyo1", 113 ],
-    [ "msy2", "msy3", 0 ],
-    [ "msy2", "ord", 193 ],
-    [ "msy2", "sgp", 99 ],
-    [ "msy2", "syd", 0 ],
-    [ "msy2", "tyo1", 123 ],
-    [ "msy3", "ord", 194 ],
-    [ "msy3", "sgp", 92 ],
-    [ "msy3", "syd", 0 ],
-    [ "msy3", "tyo", 100 ],
-    [ "msy3", "tyo1", 100 ],
-    [ "mtp1", "mty1", 31 ],
-    [ "mtp1", "mty4", 30 ],
-    [ "mtp1", "ord", 172 ],
-    [ "mtp1", "sgp", 56 ],
-    [ "mtp1", "tyo", 31 ],
-    [ "mtp1", "tyo1", 31 ],
-    [ "mty1", "mty2", 0 ],
-    [ "mty1", "mty3", 1 ],
-    [ "mty1", "mty4", 1 ],
-    [ "mty1", "ord", 152 ],
-    [ "mty1", "seo", 31 ],
-    [ "mty1", "tyo", 1 ],
-    [ "mty1", "tyo1", 1 ],
-    [ "mty2", "mty3", 1 ],
-    [ "mty2", "mty4", 1 ],
-    [ "mty2", "ord", 142 ],
-    [ "mty2", "seo", 30 ],
-    [ "mty2", "tyo", 1 ],
-    [ "mty2", "tyo1", 0 ],
-    [ "mty3", "mty4", 1 ],
-    [ "mty3", "ord", 168 ],
-    [ "mty3", "seo", 57 ],
-    [ "mty3", "tyo", 1 ],
-    [ "mty3", "tyo1", 0 ],
-    [ "mty4", "ord", 122 ],
-    [ "mty4", "seo", 35 ],
-    [ "mty4", "tyo", 1 ],
-    [ "mty4", "tyo1", 1 ],
+    [ "oln1", "ord", 127 ],
+    [ "oln1", "par", 6 ],
+    [ "oln1", "vie", 24 ],
     [ "ord", "par", 95 ],
-    [ "ord", "scl", 177 ],
-    [ "ord", "sea", 47 ],
-    [ "ord", "seo", 210 ],
-    [ "ord", "sgp", 267 ],
-    [ "ord", "sto", 111 ],
-    [ "ord", "sto2", 111 ],
-    [ "ord", "syd", 182 ],
-    [ "ord", "tyo", 188 ],
-    [ "ord", "tyo1", 184 ],
-    [ "ord", "vie", 109 ],
+    [ "ord", "scl", 202 ],
+    [ "ord", "sea", 46 ],
+    [ "ord", "seo", 209 ],
+    [ "ord", "sgp", 270 ],
+    [ "ord", "sto", 110 ],
+    [ "ord", "sto2", 110 ],
+    [ "ord", "syd", 183 ],
+    [ "ord", "tyo", 189 ],
+    [ "ord", "tyo1", 188 ],
+    [ "ord", "vie", 108 ],
     [ "ord", "waw", 112 ],
     [ "par", "vie", 21 ],
     [ "pwj", "pwu", 9 ],
-    [ "pwj", "tsn", 2 ],
-    [ "pwj", "tsnt", 17 ],
+    [ "pwj", "tsn", 1 ],
+    [ "pwj", "tsnt", 16 ],
     [ "pwj", "tsnu", 1 ],
-    [ "pwu", "shau", 26 ],
+    [ "pwu", "shau", 25 ],
     [ "pwu", "tsn", 5 ],
     [ "pwu", "tsnu", 9 ],
     [ "pww", "pwz", 17 ],
-    [ "pww", "sha", 15 ],
+    [ "pww", "sha", 16 ],
     [ "pww", "shat", 16 ],
-    [ "pww", "shb", 16 ],
-    [ "pwz", "sha", 7 ],
+    [ "pww", "shb", 15 ],
+    [ "pwz", "sha", 10 ],
     [ "pwz", "sham", 13 ],
     [ "pwz", "shat", 10 ],
     [ "pwz", "shb", 9 ],
     [ "sea", "syd", 136 ],
-    [ "seo", "sgp", 66 ],
-    [ "seo", "sha", 17 ],
-    [ "seo", "tsn", 17 ],
+    [ "seo", "sgp", 67 ],
     [ "seo", "tyo", 30 ],
     [ "seo", "tyo1", 29 ],
     [ "sgp", "syd", 89 ],
-    [ "sgp", "tyo", 82 ],
-    [ "sgp", "tyo1", 82 ],
+    [ "sgp", "tyo", 84 ],
+    [ "sgp", "tyo1", 83 ],
     [ "sha", "sham", 0 ],
     [ "sha", "shat", 0 ],
     [ "sha", "shau", 0 ],
     [ "sha", "shb", 1 ],
-    [ "sha", "tsn", 20 ],
     [ "sham", "shat", 0 ],
     [ "sham", "shau", 0 ],
     [ "sham", "shb", 4 ],
@@ -2985,7 +1712,7 @@
     [ "shau", "shb", 5 ],
     [ "sto", "sto2", 0 ],
     [ "sto", "waw", 21 ],
-    [ "sto2", "waw", 21 ],
+    [ "sto2", "waw", 22 ],
     [ "tsn", "tsnm", 0 ],
     [ "tsn", "tsnt", 0 ],
     [ "tsn", "tsnu", 0 ],
