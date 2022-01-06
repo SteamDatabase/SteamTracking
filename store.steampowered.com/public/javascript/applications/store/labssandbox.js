@@ -1225,8 +1225,8 @@
           b.a.createElement(R, null)
         );
       }
-      var P = r("kLLr"),
-        N = (r("E4Op"), r("qiKp")),
+      var N = r("kLLr"),
+        P = (r("E4Op"), r("qiKp")),
         z = r("bxBv"),
         k = r("hRO2"),
         L = r("OS8t"),
@@ -1792,7 +1792,7 @@
         Z = (function () {
           function e(e, t, r, a, n) {
             var i = this;
-            this.m_callbacksLoaded = new N.a();
+            this.m_callbacksLoaded = new P.a();
             var s = z.b.Init(q);
             Object(Q.a)(s),
               n && Object(Q.b)(s, n),
@@ -1902,7 +1902,7 @@
           s = _.useState("10"),
           l = s[0],
           p = s[1],
-          c = _.useState(3),
+          c = _.useState(1),
           u = c[0],
           d = c[1],
           m = _.useCallback(
@@ -1925,7 +1925,7 @@
           ),
           b = !1,
           y = _.useRef(o.k.steamid),
-          g = n && new P.a(n);
+          g = n && new N.a(n);
         g &&
           g.BIsValid() &&
           g.BIsIndividualAccount() &&
@@ -1934,7 +1934,7 @@
         l && !isNaN(parseInt(l)) && (v = parseInt(l));
         var O = _.useMemo(function () {
             var e = [];
-            for (var t in se) e.push({ data: t, label: se[t] });
+            for (var t in se) e.push({ data: Number(t), label: se[t] });
             return e;
           }, []),
           E = (function (e, t, r, n, i, s) {
@@ -1981,9 +1981,6 @@
             }),
             _.createElement(S.h, {
               label: "Sort clusters by",
-              tooltip: l
-                ? "This only sorts clusters that are loaded - you may need to load all clusters for best results"
-                : "",
               rgOptions: O,
               selectedOption: u,
               onChange: f,
@@ -2080,7 +2077,16 @@
                     _.createElement("b", null, "Popularity Score:"),
                     " ",
                     Math.floor(100 * t.flPopularityScore),
-                    "% "
+                    "%  ",
+                    _.createElement(
+                      "span",
+                      {
+                        title:
+                          "Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%",
+                        style: { cursor: "default" },
+                      },
+                      "(?)"
+                    )
                   )
                 )
               )
