@@ -2044,7 +2044,8 @@ function InitHorizontalAutoSliders()
 			$Wrapper.find('img' ).one('load', fnFixHeight );
 		} );
 		$J(window ).on('resize.AutoSlider', fnFixHeight );
-		$Scroll.attr( 'data-panel', '{"maintainX":true,"flow-children":"row"}' );
+
+		$Scroll.attr( 'data-panel', '{"maintainX":true,"bFocusRingRoot":true,"flow-children":"row"}' );
 
 		window.setTimeout( function() {
 			$Wrapper.trigger('v_contentschanged.AutoSlider');

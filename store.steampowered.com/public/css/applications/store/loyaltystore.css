@@ -3971,9 +3971,9 @@ body.profilethemecolors_MurugiahTheme_22BXC {
   --btn-outline: rgb(225 69 40);
 }
 body.profilethemecolors_Winter2021Theme_X0_g8 {
-  --gradient-right: rgb(157 204 199 / 73%);
-  --gradient-left: rgb(157 204 199 / 79%);
-  --gradient-background: rgb(58 132 127 / 60%);
+  --gradient-right: rgb(87 136 137 / 14%);
+  --gradient-left: rgb(157 204 199 / 35%);
+  --gradient-background: rgb(22 77 81 / 88%);
   --gradient-background-right: rgb(95 165 155 / 15%);
   --gradient-background-left: rgb(9 243 217 / 33%);
   --color-showcase-header: rgb(184 99 69);
@@ -5720,7 +5720,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(152px, 110vh) rotate(-12deg);
+    transform: translate(54px, 110vh) rotate(-56deg);
   }
 }
 .chatroomeffects_Snowflake-1_2b67l {
@@ -5731,7 +5731,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-126px, 110vh) rotate(-312deg);
+    transform: translate(127px, 110vh) rotate(-244deg);
   }
 }
 .chatroomeffects_Snowflake-2_2_NWs {
@@ -5742,7 +5742,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(55px, 110vh) rotate(-18deg);
+    transform: translate(188px, 110vh) rotate(234deg);
   }
 }
 .chatroomeffects_Snowflake-3_cBxtQ {
@@ -5753,7 +5753,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(18px, 110vh) rotate(-427deg);
+    transform: translate(80px, 110vh) rotate(-90deg);
   }
 }
 .chatroomeffects_Snowflake-4_1JQNl {
@@ -5764,7 +5764,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(91px, 110vh) rotate(-122deg);
+    transform: translate(-180px, 110vh) rotate(-403deg);
   }
 }
 .chatroomeffects_Snowflake-5_cUP1f {
@@ -5775,7 +5775,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-20px, 110vh) rotate(377deg);
+    transform: translate(49px, 110vh) rotate(-263deg);
   }
 }
 .chatroomeffects_Snowflake-6_2F8cs {
@@ -5786,7 +5786,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(167px, 110vh) rotate(298deg);
+    transform: translate(70px, 110vh) rotate(-274deg);
   }
 }
 .chatroomeffects_Snowflake-7_zJ9BE {
@@ -5797,7 +5797,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(83px, 110vh) rotate(-186deg);
+    transform: translate(-107px, 110vh) rotate(50deg);
   }
 }
 .chatroomeffects_Snowflake-8_3BAdG {
@@ -5808,7 +5808,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-62px, 110vh) rotate(49deg);
+    transform: translate(111px, 110vh) rotate(370deg);
   }
 }
 .chatroomeffects_Snowflake-9_2DNE8 {
@@ -5819,7 +5819,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(186px, 110vh) rotate(-28deg);
+    transform: translate(165px, 110vh) rotate(155deg);
   }
 }
 .chatroomeffects_Snowflake-10_19m8q {
@@ -5830,7 +5830,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(139px, 110vh) rotate(-336deg);
+    transform: translate(56px, 110vh) rotate(-207deg);
   }
 }
 .chatroomeffects_Snowflake-11_ijWSF {
@@ -5841,7 +5841,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-54px, 110vh) rotate(-373deg);
+    transform: translate(115px, 110vh) rotate(136deg);
   }
 }
 .chatroomeffects_Snowflake-12_Ripsa {
@@ -5852,7 +5852,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(30px, 110vh) rotate(230deg);
+    transform: translate(120px, 110vh) rotate(38deg);
   }
 }
 .chatroomeffects_Snowflake-13__5IUE {
@@ -5863,7 +5863,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(97px, 110vh) rotate(447deg);
+    transform: translate(-73px, 110vh) rotate(-107deg);
   }
 }
 .chatroomeffects_Snowflake-14_pmIdk {
@@ -5874,7 +5874,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(81px, 110vh) rotate(-274deg);
+    transform: translate(-121px, 110vh) rotate(138deg);
   }
 }
 .chatroomeffects_Snowflake-15_2nQdH {
@@ -5885,7 +5885,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-107px, 110vh) rotate(-145deg);
+    transform: translate(-90px, 110vh) rotate(-259deg);
   }
 }
 .chatroomeffects_Snowflake-16_lJyG7 {
@@ -5896,7 +5896,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-84px, 110vh) rotate(145deg);
+    transform: translate(110px, 110vh) rotate(133deg);
   }
 }
 .chatroomeffects_Snowflake-17_1L0AZ {
@@ -5907,7 +5907,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(2px, 110vh) rotate(-91deg);
+    transform: translate(-154px, 110vh) rotate(-322deg);
   }
 }
 .chatroomeffects_Snowflake-18_1ozac {
@@ -5918,7 +5918,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(176px, 110vh) rotate(323deg);
+    transform: translate(-73px, 110vh) rotate(165deg);
   }
 }
 .chatroomeffects_Snowflake-19_FOXzc {
@@ -5929,7 +5929,7 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(13px, 110vh) rotate(-103deg);
+    transform: translate(77px, 110vh) rotate(301deg);
   }
 }
 .chatroomeffects_Snowflake-20_Qt7pR {
@@ -5940,23 +5940,23 @@ body.v6.rewards .ModalPosition_Content {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-199px, 110vh) rotate(-177deg);
+    transform: translate(-184px, 110vh) rotate(-141deg);
   }
 }
 .chatroomeffects_confetti_VelNh {
   position: absolute;
 }
 .chatroomeffects_confetti-0_tlO-i {
-  width: 9px;
-  height: 3.6px;
-  background-color: #263672;
+  width: 18px;
+  height: 7.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 27%;
-  opacity: 1.4024842923;
-  transform: rotate(359.4603784951deg);
+  left: 46%;
+  opacity: 1.3303373036;
+  transform: rotate(178.080649574deg);
   animation: chatroomeffects_drop-0__37zJ;
-  animation-duration: 4.977184867s;
-  animation-delay: 0.9266461654s;
+  animation-duration: 5.8409838213s;
+  animation-delay: 0.7085716799s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-0__37zJ {
@@ -5969,20 +5969,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 31%;
+    left: 49%;
   }
 }
 .chatroomeffects_confetti-1_3OuSs {
-  width: 17px;
-  height: 6.8px;
+  width: 13px;
+  height: 5.2px;
   background-color: #d13447;
   top: -10%;
-  left: 28%;
-  opacity: 1.0367776659;
-  transform: rotate(37.6489958789deg);
+  left: 41%;
+  opacity: 0.629197659;
+  transform: rotate(18.5353999081deg);
   animation: chatroomeffects_drop-1_x-HP7;
-  animation-duration: 4.8490889063s;
-  animation-delay: 0.7371031991s;
+  animation-duration: 4.3719639812s;
+  animation-delay: 0.0100722463s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-1_x-HP7 {
@@ -5995,20 +5995,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 40%;
+    left: 52%;
   }
 }
 .chatroomeffects_confetti-2_1mdZ0 {
-  width: 4px;
-  height: 1.6px;
-  background-color: #ffbf00;
+  width: 15px;
+  height: 6px;
+  background-color: #263672;
   top: -10%;
-  left: 21%;
-  opacity: 1.468528816;
-  transform: rotate(306.851043445deg);
+  left: 71%;
+  opacity: 0.6361049932;
+  transform: rotate(146.9606618787deg);
   animation: chatroomeffects_drop-2_3XfWb;
-  animation-duration: 5.9432224831s;
-  animation-delay: 0.5345493156s;
+  animation-duration: 5.6903222967s;
+  animation-delay: 0.7823632325s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-2_3XfWb {
@@ -6021,20 +6021,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 33%;
+    left: 81%;
   }
 }
 .chatroomeffects_confetti-3_36OCs {
-  width: 12px;
-  height: 4.8px;
-  background-color: #263672;
+  width: 15px;
+  height: 6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 38%;
-  opacity: 1.0546075993;
-  transform: rotate(280.2670122425deg);
+  left: 99%;
+  opacity: 1.3993089547;
+  transform: rotate(17.0479734851deg);
   animation: chatroomeffects_drop-3_OTZKZ;
-  animation-duration: 4.9853609098s;
-  animation-delay: 0.3652900331s;
+  animation-duration: 5.6983595372s;
+  animation-delay: 0.9810401417s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-3_OTZKZ {
@@ -6047,20 +6047,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 42%;
+    left: 111%;
   }
 }
 .chatroomeffects_confetti-4_3NbOc {
-  width: 19px;
-  height: 7.6px;
+  width: 12px;
+  height: 4.8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 71%;
-  opacity: 0.9967807432;
-  transform: rotate(110.9756615417deg);
+  left: 81%;
+  opacity: 1.338986575;
+  transform: rotate(27.7066777183deg);
   animation: chatroomeffects_drop-4_1CAil;
-  animation-duration: 5.4080442246s;
-  animation-delay: 0.1059558251s;
+  animation-duration: 5.9113018977s;
+  animation-delay: 0.6110441068s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-4_1CAil {
@@ -6073,20 +6073,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 86%;
+    left: 88%;
   }
 }
 .chatroomeffects_confetti-5_VnTYG {
-  width: 20px;
-  height: 8px;
-  background-color: #d13447;
+  width: 16px;
+  height: 6.4px;
+  background-color: #263672;
   top: -10%;
-  left: 24%;
-  opacity: 1.3865604706;
-  transform: rotate(112.1399193604deg);
+  left: 31%;
+  opacity: 1.4850499374;
+  transform: rotate(141.6980623702deg);
   animation: chatroomeffects_drop-5_1pPPC;
-  animation-duration: 4.6886544129s;
-  animation-delay: 0.5466231836s;
+  animation-duration: 4.5567345318s;
+  animation-delay: 0.6692391079s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-5_1pPPC {
@@ -6099,20 +6099,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 31%;
+    left: 41%;
   }
 }
 .chatroomeffects_confetti-6_3KEfm {
-  width: 4px;
-  height: 1.6px;
-  background-color: #263672;
+  width: 19px;
+  height: 7.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 76%;
-  opacity: 1.0772414856;
-  transform: rotate(67.6275177585deg);
+  left: 58%;
+  opacity: 0.833898393;
+  transform: rotate(35.6483069607deg);
   animation: chatroomeffects_drop-6_4Wj8s;
-  animation-duration: 5.0369849572s;
-  animation-delay: 0.6310836175s;
+  animation-duration: 5.0285436656s;
+  animation-delay: 0.0697906665s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-6_4Wj8s {
@@ -6125,20 +6125,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 91%;
+    left: 59%;
   }
 }
 .chatroomeffects_confetti-7_1C-Ak {
-  width: 19px;
-  height: 7.6px;
+  width: 14px;
+  height: 5.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 73%;
-  opacity: 1.2547789986;
-  transform: rotate(53.5904749791deg);
+  left: 82%;
+  opacity: 0.9779730329;
+  transform: rotate(165.7104526874deg);
   animation: chatroomeffects_drop-7_oHsjU;
-  animation-duration: 4.0445110524s;
-  animation-delay: 0.1067877081s;
+  animation-duration: 5.6130847353s;
+  animation-delay: 0.0433997739s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-7_oHsjU {
@@ -6151,20 +6151,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 84%;
+    left: 91%;
   }
 }
 .chatroomeffects_confetti-8_4oJYN {
-  width: 12px;
-  height: 4.8px;
-  background-color: #263672;
+  width: 19px;
+  height: 7.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 94%;
-  opacity: 1.1666787534;
-  transform: rotate(213.9150494637deg);
+  left: 56%;
+  opacity: 1.3666072639;
+  transform: rotate(176.9324475889deg);
   animation: chatroomeffects_drop-8_2y189;
-  animation-duration: 4.8823099754s;
-  animation-delay: 0.8767780105s;
+  animation-duration: 4.1944350534s;
+  animation-delay: 0.1977128199s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-8_2y189 {
@@ -6177,20 +6177,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 106%;
+    left: 66%;
   }
 }
 .chatroomeffects_confetti-9_1bEjR {
-  width: 3px;
-  height: 1.2px;
+  width: 4px;
+  height: 1.6px;
   background-color: #263672;
   top: -10%;
-  left: 71%;
-  opacity: 1.1383787137;
-  transform: rotate(107.3347236685deg);
+  left: 67%;
+  opacity: 0.8466653071;
+  transform: rotate(265.8599147412deg);
   animation: chatroomeffects_drop-9_5c9w0;
-  animation-duration: 5.342986171s;
-  animation-delay: 0.1812920318s;
+  animation-duration: 4.1334624185s;
+  animation-delay: 0.0487341436s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-9_5c9w0 {
@@ -6203,20 +6203,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 85%;
+    left: 75%;
   }
 }
 .chatroomeffects_confetti-10_1oRBM {
-  width: 4px;
-  height: 1.6px;
+  width: 16px;
+  height: 6.4px;
   background-color: #263672;
   top: -10%;
-  left: 55%;
-  opacity: 1.1281812959;
-  transform: rotate(287.55729393deg);
+  left: 19%;
+  opacity: 0.9102166761;
+  transform: rotate(269.9095554294deg);
   animation: chatroomeffects_drop-10_1L13_;
-  animation-duration: 4.3058460462s;
-  animation-delay: 0.7604944901s;
+  animation-duration: 4.5344819003s;
+  animation-delay: 0.9677900133s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-10_1L13_ {
@@ -6229,20 +6229,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 70%;
+    left: 28%;
   }
 }
 .chatroomeffects_confetti-11_3W9ZL {
-  width: 6px;
-  height: 2.4px;
+  width: 8px;
+  height: 3.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 9%;
-  opacity: 0.8700915504;
-  transform: rotate(226.9424147976deg);
+  left: 22%;
+  opacity: 1.4345636868;
+  transform: rotate(186.2353095395deg);
   animation: chatroomeffects_drop-11_vYvGB;
-  animation-duration: 4.6654340429s;
-  animation-delay: 0.4225435967s;
+  animation-duration: 4.2322283899s;
+  animation-delay: 0.3137579903s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-11_vYvGB {
@@ -6255,20 +6255,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 16%;
+    left: 29%;
   }
 }
 .chatroomeffects_confetti-12_2TwZ0 {
-  width: 6px;
-  height: 2.4px;
-  background-color: #d13447;
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
   top: -10%;
-  left: 68%;
-  opacity: 1.0648930542;
-  transform: rotate(12.9076749678deg);
+  left: 72%;
+  opacity: 0.621782633;
+  transform: rotate(160.1887570892deg);
   animation: chatroomeffects_drop-12_3b2Dc;
-  animation-duration: 5.6109145503s;
-  animation-delay: 0.4420543565s;
+  animation-duration: 5.6489445547s;
+  animation-delay: 0.5354216303s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-12_3b2Dc {
@@ -6281,20 +6281,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 69%;
+    left: 76%;
   }
 }
 .chatroomeffects_confetti-13_1m8Vr {
-  width: 15px;
-  height: 6px;
+  width: 11px;
+  height: 4.4px;
   background-color: #d13447;
   top: -10%;
-  left: 91%;
-  opacity: 0.5455094887;
-  transform: rotate(188.931864319deg);
+  left: 85%;
+  opacity: 0.580069183;
+  transform: rotate(22.4223221949deg);
   animation: chatroomeffects_drop-13_2n4ZP;
-  animation-duration: 4.7617015657s;
-  animation-delay: 0.5291053505s;
+  animation-duration: 4.3681197656s;
+  animation-delay: 0.9555682933s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-13_2n4ZP {
@@ -6307,20 +6307,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 100%;
+    left: 96%;
   }
 }
 .chatroomeffects_confetti-14_1YV6p {
-  width: 16px;
-  height: 6.4px;
-  background-color: #263672;
+  width: 14px;
+  height: 5.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 28%;
-  opacity: 0.7923063731;
-  transform: rotate(350.4093406815deg);
+  left: 89%;
+  opacity: 0.8046958022;
+  transform: rotate(265.94332069deg);
   animation: chatroomeffects_drop-14_xQzPb;
-  animation-duration: 4.6675758125s;
-  animation-delay: 0.332834956s;
+  animation-duration: 4.1997742453s;
+  animation-delay: 0.8350238136s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-14_xQzPb {
@@ -6333,20 +6333,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 29%;
+    left: 99%;
   }
 }
 .chatroomeffects_confetti-15_2D2LH {
-  width: 5px;
-  height: 2px;
-  background-color: #263672;
+  width: 10px;
+  height: 4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 23%;
-  opacity: 1.0661721826;
-  transform: rotate(98.1628092852deg);
+  left: 14%;
+  opacity: 0.6964567069;
+  transform: rotate(107.5210970145deg);
   animation: chatroomeffects_drop-15_oKVqM;
-  animation-duration: 4.2394184578s;
-  animation-delay: 0.7436094159s;
+  animation-duration: 5.2249903408s;
+  animation-delay: 0.5457703299s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-15_oKVqM {
@@ -6359,20 +6359,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 31%;
+    left: 29%;
   }
 }
 .chatroomeffects_confetti-16_pvt2J {
-  width: 13px;
-  height: 5.2px;
-  background-color: #263672;
+  width: 6px;
+  height: 2.4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 54%;
-  opacity: 0.7764958513;
-  transform: rotate(60.0238256036deg);
+  left: 6%;
+  opacity: 0.8827405234;
+  transform: rotate(236.5694760341deg);
   animation: chatroomeffects_drop-16_T5UBd;
-  animation-duration: 4.9402766416s;
-  animation-delay: 0.5720249119s;
+  animation-duration: 4.619147426s;
+  animation-delay: 0.1170603012s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-16_T5UBd {
@@ -6385,20 +6385,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 55%;
+    left: 21%;
   }
 }
 .chatroomeffects_confetti-17_2NCF0 {
-  width: 6px;
-  height: 2.4px;
-  background-color: #263672;
+  width: 9px;
+  height: 3.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 49%;
-  opacity: 1.3892007934;
-  transform: rotate(166.7091664024deg);
+  left: 26%;
+  opacity: 1.046741551;
+  transform: rotate(198.2158566025deg);
   animation: chatroomeffects_drop-17_1d8Dj;
-  animation-duration: 5.9222818344s;
-  animation-delay: 0.9474912221s;
+  animation-duration: 4.8296657626s;
+  animation-delay: 0.3873167661s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-17_1d8Dj {
@@ -6411,20 +6411,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 59%;
+    left: 36%;
   }
 }
 .chatroomeffects_confetti-18_o_Hf7 {
-  width: 10px;
-  height: 4px;
-  background-color: #263672;
+  width: 4px;
+  height: 1.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 1%;
-  opacity: 1.095782149;
-  transform: rotate(73.2157349641deg);
+  left: 97%;
+  opacity: 1.3371566271;
+  transform: rotate(261.3974061391deg);
   animation: chatroomeffects_drop-18_1zoqm;
-  animation-duration: 4.0409847886s;
-  animation-delay: 0.3882773306s;
+  animation-duration: 4.8537213829s;
+  animation-delay: 0.4919573857s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-18_1zoqm {
@@ -6437,20 +6437,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 16%;
+    left: 112%;
   }
 }
 .chatroomeffects_confetti-19_28L_3 {
-  width: 16px;
-  height: 6.4px;
+  width: 9px;
+  height: 3.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 86%;
-  opacity: 1.3091354309;
-  transform: rotate(36.7152210697deg);
+  left: 69%;
+  opacity: 0.6544338277;
+  transform: rotate(1.8843975662deg);
   animation: chatroomeffects_drop-19_1zkpz;
-  animation-duration: 4.8952621591s;
-  animation-delay: 0.8563179615s;
+  animation-duration: 4.3035881519s;
+  animation-delay: 0.4586825757s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-19_1zkpz {
@@ -6463,20 +6463,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 91%;
+    left: 77%;
   }
 }
 .chatroomeffects_confetti-20_P-SKX {
-  width: 6px;
-  height: 2.4px;
+  width: 8px;
+  height: 3.2px;
   background-color: #263672;
   top: -10%;
-  left: 5%;
-  opacity: 0.6906823079;
-  transform: rotate(49.1903309197deg);
+  left: 6%;
+  opacity: 0.5967450196;
+  transform: rotate(342.2143085148deg);
   animation: chatroomeffects_drop-20_2HmVc;
-  animation-duration: 5.016745222s;
-  animation-delay: 0.5135223379s;
+  animation-duration: 4.8761602898s;
+  animation-delay: 0.9126321575s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-20_2HmVc {
@@ -6489,20 +6489,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 19%;
+    left: 9%;
   }
 }
 .chatroomeffects_confetti-21_27GkO {
-  width: 2px;
-  height: 0.8px;
-  background-color: #263672;
+  width: 4px;
+  height: 1.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 78%;
-  opacity: 1.2653040396;
-  transform: rotate(193.0945693735deg);
+  left: 51%;
+  opacity: 1.4412849021;
+  transform: rotate(332.003083663deg);
   animation: chatroomeffects_drop-21_1T4Mt;
-  animation-duration: 5.1071066326s;
-  animation-delay: 0.0388099016s;
+  animation-duration: 4.5089765468s;
+  animation-delay: 0.6778740886s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-21_1T4Mt {
@@ -6515,20 +6515,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 80%;
+    left: 61%;
   }
 }
 .chatroomeffects_confetti-22_1sCDh {
-  width: 8px;
-  height: 3.2px;
-  background-color: #263672;
+  width: 14px;
+  height: 5.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 15%;
-  opacity: 0.9379574513;
-  transform: rotate(359.1437616853deg);
+  left: 50%;
+  opacity: 0.8360465427;
+  transform: rotate(293.1760019214deg);
   animation: chatroomeffects_drop-22_2svz8;
-  animation-duration: 5.1626646776s;
-  animation-delay: 0.237086575s;
+  animation-duration: 4.1175383418s;
+  animation-delay: 0.1409540155s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-22_2svz8 {
@@ -6541,20 +6541,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 20%;
+    left: 54%;
   }
 }
 .chatroomeffects_confetti-23_9SZ_A {
-  width: 4px;
-  height: 1.6px;
-  background-color: #263672;
+  width: 14px;
+  height: 5.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 86%;
-  opacity: 0.7879008409;
-  transform: rotate(71.7473635723deg);
+  left: 50%;
+  opacity: 1.4735001485;
+  transform: rotate(207.3916305343deg);
   animation: chatroomeffects_drop-23_3vAxI;
-  animation-duration: 4.3555463173s;
-  animation-delay: 0.6538599403s;
+  animation-duration: 4.3816448102s;
+  animation-delay: 0.1026403578s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-23_3vAxI {
@@ -6567,20 +6567,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 93%;
+    left: 55%;
   }
 }
 .chatroomeffects_confetti-24_1Am3e {
-  width: 10px;
-  height: 4px;
-  background-color: #ffbf00;
+  width: 17px;
+  height: 6.8px;
+  background-color: #d13447;
   top: -10%;
-  left: 22%;
-  opacity: 0.9920627856;
-  transform: rotate(148.4232927742deg);
+  left: 13%;
+  opacity: 0.9016953147;
+  transform: rotate(218.734138703deg);
   animation: chatroomeffects_drop-24_RhAjb;
-  animation-duration: 5.6782581235s;
-  animation-delay: 0.7445321091s;
+  animation-duration: 4.8926686189s;
+  animation-delay: 0.1454617739s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-24_RhAjb {
@@ -6593,20 +6593,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 30%;
+    left: 17%;
   }
 }
 .chatroomeffects_confetti-25_1Ja7L {
-  width: 17px;
-  height: 6.8px;
-  background-color: #ffbf00;
+  width: 4px;
+  height: 1.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 87%;
-  opacity: 0.5790545638;
-  transform: rotate(284.6482392092deg);
+  left: 92%;
+  opacity: 1.2400002607;
+  transform: rotate(231.2942720305deg);
   animation: chatroomeffects_drop-25_201NA;
-  animation-duration: 5.5476143586s;
-  animation-delay: 0.1253462044s;
+  animation-duration: 4.88948045s;
+  animation-delay: 0.8141912249s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-25_201NA {
@@ -6619,20 +6619,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 98%;
+    left: 100%;
   }
 }
 .chatroomeffects_confetti-26_2jMUO {
-  width: 17px;
-  height: 6.8px;
-  background-color: #263672;
+  width: 11px;
+  height: 4.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 38%;
-  opacity: 1.4235967756;
-  transform: rotate(293.4919683997deg);
+  left: 5%;
+  opacity: 1.2269996783;
+  transform: rotate(106.478795864deg);
   animation: chatroomeffects_drop-26_29n7q;
-  animation-duration: 4.6319554859s;
-  animation-delay: 0.086495708s;
+  animation-duration: 4.3715350313s;
+  animation-delay: 0.1212289907s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-26_29n7q {
@@ -6645,20 +6645,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 52%;
+    left: 19%;
   }
 }
 .chatroomeffects_confetti-27_2yQQd {
-  width: 16px;
-  height: 6.4px;
-  background-color: #d13447;
+  width: 19px;
+  height: 7.6px;
+  background-color: #263672;
   top: -10%;
-  left: 34%;
-  opacity: 0.9371147795;
-  transform: rotate(325.2474784727deg);
+  left: 98%;
+  opacity: 1.4670720048;
+  transform: rotate(162.4479338204deg);
   animation: chatroomeffects_drop-27_2m3A7;
-  animation-duration: 5.6750629831s;
-  animation-delay: 0.8714188254s;
+  animation-duration: 4.242587234s;
+  animation-delay: 0.5624947415s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-27_2m3A7 {
@@ -6671,20 +6671,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 38%;
+    left: 111%;
   }
 }
 .chatroomeffects_confetti-28_1Qlxx {
-  width: 19px;
-  height: 7.6px;
+  width: 10px;
+  height: 4px;
   background-color: #d13447;
   top: -10%;
-  left: 72%;
-  opacity: 1.4636229082;
-  transform: rotate(170.8068280943deg);
+  left: 74%;
+  opacity: 1.4460418383;
+  transform: rotate(236.9246894725deg);
   animation: chatroomeffects_drop-28_18frj;
-  animation-duration: 5.5555632792s;
-  animation-delay: 0.1222625529s;
+  animation-duration: 5.8903559853s;
+  animation-delay: 0.699474444s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-28_18frj {
@@ -6697,20 +6697,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 76%;
+    left: 77%;
   }
 }
 .chatroomeffects_confetti-29_1b2l6 {
-  width: 14px;
-  height: 5.6px;
+  width: 16px;
+  height: 6.4px;
   background-color: #263672;
   top: -10%;
-  left: 44%;
-  opacity: 0.7842251628;
-  transform: rotate(235.2441973793deg);
+  left: 82%;
+  opacity: 1.2921554465;
+  transform: rotate(270.5336938253deg);
   animation: chatroomeffects_drop-29_2Q2T3;
-  animation-duration: 5.1068330725s;
-  animation-delay: 0.1436911887s;
+  animation-duration: 5.1869420086s;
+  animation-delay: 0.3562439739s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-29_2Q2T3 {
@@ -6723,20 +6723,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 59%;
+    left: 84%;
   }
 }
 .chatroomeffects_confetti-30_1JH00 {
-  width: 18px;
-  height: 7.2px;
-  background-color: #ffbf00;
+  width: 5px;
+  height: 2px;
+  background-color: #263672;
   top: -10%;
-  left: 90%;
-  opacity: 0.9306658081;
-  transform: rotate(249.9070227903deg);
+  left: 100%;
+  opacity: 1.3722700852;
+  transform: rotate(167.7775107851deg);
   animation: chatroomeffects_drop-30_35aPE;
-  animation-duration: 4.7894937349s;
-  animation-delay: 0.3388815534s;
+  animation-duration: 5.9550605586s;
+  animation-delay: 0.7051844867s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-30_35aPE {
@@ -6749,20 +6749,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 97%;
+    left: 107%;
   }
 }
 .chatroomeffects_confetti-31_Osdxn {
-  width: 5px;
-  height: 2px;
+  width: 17px;
+  height: 6.8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 28%;
-  opacity: 1.4836422884;
-  transform: rotate(232.6552726089deg);
+  left: 29%;
+  opacity: 1.4472029215;
+  transform: rotate(275.4901723685deg);
   animation: chatroomeffects_drop-31_3xx2U;
-  animation-duration: 5.00020787s;
-  animation-delay: 0.6594560806s;
+  animation-duration: 5.5974669437s;
+  animation-delay: 0.2059476651s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-31_3xx2U {
@@ -6775,20 +6775,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 39%;
+    left: 36%;
   }
 }
 .chatroomeffects_confetti-32_f1SYA {
-  width: 2px;
-  height: 0.8px;
-  background-color: #d13447;
+  width: 12px;
+  height: 4.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 32%;
-  opacity: 1.0451551077;
-  transform: rotate(23.4216815817deg);
+  left: 13%;
+  opacity: 0.7538848104;
+  transform: rotate(59.980577585deg);
   animation: chatroomeffects_drop-32_215c3;
-  animation-duration: 5.8440090335s;
-  animation-delay: 0.9145416127s;
+  animation-duration: 4.4611137212s;
+  animation-delay: 0.9909858017s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-32_215c3 {
@@ -6801,20 +6801,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 37%;
+    left: 15%;
   }
 }
 .chatroomeffects_confetti-33_g65ei {
-  width: 12px;
-  height: 4.8px;
-  background-color: #ffbf00;
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
   top: -10%;
-  left: 19%;
-  opacity: 0.5567464266;
-  transform: rotate(27.5101317139deg);
+  left: 47%;
+  opacity: 0.6059881863;
+  transform: rotate(307.2458381885deg);
   animation: chatroomeffects_drop-33_2oegr;
-  animation-duration: 4.9341045418s;
-  animation-delay: 0.0856005484s;
+  animation-duration: 4.4679570149s;
+  animation-delay: 0.8378876708s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-33_2oegr {
@@ -6827,20 +6827,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 21%;
+    left: 55%;
   }
 }
 .chatroomeffects_confetti-34_2yCKI {
-  width: 7px;
-  height: 2.8px;
+  width: 15px;
+  height: 6px;
   background-color: #263672;
   top: -10%;
-  left: 33%;
-  opacity: 1.3180841643;
-  transform: rotate(132.9760897019deg);
+  left: 62%;
+  opacity: 0.5873539996;
+  transform: rotate(334.8997178634deg);
   animation: chatroomeffects_drop-34_3K9VA;
-  animation-duration: 5.9249256789s;
-  animation-delay: 0.4425073683s;
+  animation-duration: 5.294952003s;
+  animation-delay: 0.4940597069s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-34_3K9VA {
@@ -6853,20 +6853,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 34%;
+    left: 70%;
   }
 }
 .chatroomeffects_confetti-35_3JsiR {
-  width: 6px;
-  height: 2.4px;
+  width: 14px;
+  height: 5.6px;
   background-color: #d13447;
   top: -10%;
-  left: 49%;
-  opacity: 1.2300927553;
-  transform: rotate(83.8264392465deg);
+  left: 10%;
+  opacity: 1.0677235463;
+  transform: rotate(358.065092515deg);
   animation: chatroomeffects_drop-35_5jMlo;
-  animation-duration: 4.1781324369s;
-  animation-delay: 0.878520823s;
+  animation-duration: 4.5113151509s;
+  animation-delay: 0.3712093685s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-35_5jMlo {
@@ -6879,20 +6879,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 64%;
+    left: 25%;
   }
 }
 .chatroomeffects_confetti-36_R14L0 {
-  width: 15px;
-  height: 6px;
+  width: 14px;
+  height: 5.6px;
   background-color: #263672;
   top: -10%;
-  left: 52%;
-  opacity: 0.6817855881;
-  transform: rotate(316.0953882247deg);
+  left: 93%;
+  opacity: 0.9853794609;
+  transform: rotate(270.9195151215deg);
   animation: chatroomeffects_drop-36_13yR4;
-  animation-duration: 4.7476760317s;
-  animation-delay: 0.2149667183s;
+  animation-duration: 5.1156411638s;
+  animation-delay: 0.5912498055s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-36_13yR4 {
@@ -6905,20 +6905,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 54%;
+    left: 105%;
   }
 }
 .chatroomeffects_confetti-37_24ZmD {
-  width: 10px;
-  height: 4px;
-  background-color: #263672;
+  width: 19px;
+  height: 7.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 9%;
-  opacity: 1.4152018208;
-  transform: rotate(359.1540947141deg);
+  left: 12%;
+  opacity: 1.4501876464;
+  transform: rotate(317.2950771856deg);
   animation: chatroomeffects_drop-37_2uYeL;
-  animation-duration: 5.3479725659s;
-  animation-delay: 0.9207144642s;
+  animation-duration: 5.7721481177s;
+  animation-delay: 0.9772655933s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-37_2uYeL {
@@ -6931,20 +6931,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 16%;
+    left: 14%;
   }
 }
 .chatroomeffects_confetti-38_25jbU {
   width: 9px;
   height: 3.6px;
-  background-color: #d13447;
+  background-color: #263672;
   top: -10%;
-  left: 47%;
-  opacity: 1.0576633848;
-  transform: rotate(158.1356137456deg);
+  left: 27%;
+  opacity: 0.9743849308;
+  transform: rotate(59.3326409092deg);
   animation: chatroomeffects_drop-38_3BJYZ;
-  animation-duration: 5.4254224978s;
-  animation-delay: 0.3842125704s;
+  animation-duration: 4.9509151382s;
+  animation-delay: 0.026685516s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-38_3BJYZ {
@@ -6957,20 +6957,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 62%;
+    left: 38%;
   }
 }
 .chatroomeffects_confetti-39_8zwxi {
-  width: 12px;
-  height: 4.8px;
+  width: 20px;
+  height: 8px;
   background-color: #263672;
   top: -10%;
-  left: 38%;
-  opacity: 1.0700403111;
-  transform: rotate(139.0155941908deg);
+  left: 36%;
+  opacity: 0.6009726601;
+  transform: rotate(137.3855241695deg);
   animation: chatroomeffects_drop-39_2zKzQ;
-  animation-duration: 4.131975863s;
-  animation-delay: 0.5430123775s;
+  animation-duration: 5.8018199492s;
+  animation-delay: 0.3811062456s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-39_2zKzQ {
@@ -6983,20 +6983,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 40%;
+    left: 50%;
   }
 }
 .chatroomeffects_confetti-40_Du-Wg {
-  width: 1px;
-  height: 0.4px;
-  background-color: #d13447;
+  width: 14px;
+  height: 5.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 32%;
-  opacity: 1.3039368986;
-  transform: rotate(222.9989994677deg);
+  left: 92%;
+  opacity: 1.1276644124;
+  transform: rotate(173.9769727722deg);
   animation: chatroomeffects_drop-40_3DiQ2;
-  animation-duration: 5.3792748189s;
-  animation-delay: 0.4359534092s;
+  animation-duration: 5.23454458s;
+  animation-delay: 0.9744742051s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-40_3DiQ2 {
@@ -7009,20 +7009,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 34%;
+    left: 96%;
   }
 }
 .chatroomeffects_confetti-41_3LjK4 {
-  width: 14px;
-  height: 5.6px;
-  background-color: #263672;
+  width: 17px;
+  height: 6.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 12%;
-  opacity: 0.8721226212;
-  transform: rotate(149.9636169296deg);
+  left: 79%;
+  opacity: 0.8729284257;
+  transform: rotate(233.3982164109deg);
   animation: chatroomeffects_drop-41_10ZGR;
-  animation-duration: 4.0384195308s;
-  animation-delay: 0.0733614548s;
+  animation-duration: 5.8507106513s;
+  animation-delay: 0.3860382046s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-41_10ZGR {
@@ -7035,20 +7035,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 23%;
+    left: 94%;
   }
 }
 .chatroomeffects_confetti-42_3u0x8 {
-  width: 20px;
-  height: 8px;
+  width: 11px;
+  height: 4.4px;
   background-color: #d13447;
   top: -10%;
-  left: 77%;
-  opacity: 1.1893444657;
-  transform: rotate(225.2356570494deg);
+  left: 45%;
+  opacity: 0.8898209634;
+  transform: rotate(55.3962438222deg);
   animation: chatroomeffects_drop-42_2GaWP;
-  animation-duration: 4.8815153544s;
-  animation-delay: 0.7641117663s;
+  animation-duration: 4.9074018454s;
+  animation-delay: 0.7633637861s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-42_2GaWP {
@@ -7061,20 +7061,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 84%;
+    left: 59%;
   }
 }
 .chatroomeffects_confetti-43_2Iip- {
-  width: 20px;
-  height: 8px;
+  width: 6px;
+  height: 2.4px;
   background-color: #263672;
   top: -10%;
-  left: 48%;
-  opacity: 1.2524312853;
-  transform: rotate(104.6142814612deg);
+  left: 50%;
+  opacity: 1.433028939;
+  transform: rotate(48.4826301602deg);
   animation: chatroomeffects_drop-43_3zDFZ;
-  animation-duration: 4.4442924728s;
-  animation-delay: 0.6531867783s;
+  animation-duration: 5.710294029s;
+  animation-delay: 0.8643809733s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-43_3zDFZ {
@@ -7087,20 +7087,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 55%;
+    left: 65%;
   }
 }
 .chatroomeffects_confetti-44_2qI_Q {
-  width: 15px;
-  height: 6px;
-  background-color: #ffbf00;
+  width: 12px;
+  height: 4.8px;
+  background-color: #263672;
   top: -10%;
-  left: 61%;
-  opacity: 0.5930370924;
-  transform: rotate(122.360153419deg);
+  left: 68%;
+  opacity: 1.2442275717;
+  transform: rotate(184.2700580921deg);
   animation: chatroomeffects_drop-44_3G_AJ;
-  animation-duration: 5.2284223716s;
-  animation-delay: 0.1884005042s;
+  animation-duration: 5.5470812279s;
+  animation-delay: 0.0619275918s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-44_3G_AJ {
@@ -7113,20 +7113,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 63%;
+    left: 70%;
   }
 }
 .chatroomeffects_confetti-45_3FUIw {
-  width: 14px;
-  height: 5.6px;
-  background-color: #d13447;
+  width: 20px;
+  height: 8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 30%;
-  opacity: 1.4141724172;
-  transform: rotate(49.5684932755deg);
+  left: 60%;
+  opacity: 0.7113533129;
+  transform: rotate(35.8891905457deg);
   animation: chatroomeffects_drop-45_1BAsF;
-  animation-duration: 5.4437709916s;
-  animation-delay: 0.4884101036s;
+  animation-duration: 4.0127997829s;
+  animation-delay: 0.9613132394s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-45_1BAsF {
@@ -7139,20 +7139,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 31%;
+    left: 63%;
   }
 }
 .chatroomeffects_confetti-46_2wAK3 {
-  width: 1px;
-  height: 0.4px;
-  background-color: #ffbf00;
+  width: 14px;
+  height: 5.6px;
+  background-color: #263672;
   top: -10%;
-  left: 8%;
-  opacity: 1.2784750956;
-  transform: rotate(44.5540129954deg);
+  left: 46%;
+  opacity: 1.2149486237;
+  transform: rotate(284.3530162535deg);
   animation: chatroomeffects_drop-46_1LOgZ;
-  animation-duration: 4.5538748782s;
-  animation-delay: 0.0419718418s;
+  animation-duration: 4.0825322789s;
+  animation-delay: 0.915869852s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-46_1LOgZ {
@@ -7165,20 +7165,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 23%;
+    left: 50%;
   }
 }
 .chatroomeffects_confetti-47_2dO3B {
-  width: 4px;
-  height: 1.6px;
-  background-color: #ffbf00;
+  width: 16px;
+  height: 6.4px;
+  background-color: #263672;
   top: -10%;
-  left: 33%;
-  opacity: 0.7161211196;
-  transform: rotate(249.3411135219deg);
+  left: 27%;
+  opacity: 0.577143439;
+  transform: rotate(82.7986279079deg);
   animation: chatroomeffects_drop-47_l_1GZ;
-  animation-duration: 4.0539981136s;
-  animation-delay: 0.538189321s;
+  animation-duration: 4.1471291143s;
+  animation-delay: 0.8803163513s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-47_l_1GZ {
@@ -7191,20 +7191,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 41%;
+    left: 39%;
   }
 }
 .chatroomeffects_confetti-48_2ud75 {
-  width: 1px;
-  height: 0.4px;
-  background-color: #263672;
+  width: 14px;
+  height: 5.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 93%;
-  opacity: 0.5037594219;
-  transform: rotate(351.2893937634deg);
+  left: 2%;
+  opacity: 0.5449071651;
+  transform: rotate(45.628420277deg);
   animation: chatroomeffects_drop-48_cnRU6;
-  animation-duration: 4.2376930484s;
-  animation-delay: 0.8306398629s;
+  animation-duration: 4.4892072879s;
+  animation-delay: 0.739091711s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-48_cnRU6 {
@@ -7217,20 +7217,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 99%;
+    left: 11%;
   }
 }
 .chatroomeffects_confetti-49_EX-pu {
-  width: 15px;
-  height: 6px;
-  background-color: #ffbf00;
+  width: 19px;
+  height: 7.6px;
+  background-color: #263672;
   top: -10%;
-  left: 95%;
-  opacity: 1.0896138135;
-  transform: rotate(148.1467990038deg);
+  left: 54%;
+  opacity: 1.0500829879;
+  transform: rotate(7.5469835193deg);
   animation: chatroomeffects_drop-49_3ElNG;
-  animation-duration: 5.801130795s;
-  animation-delay: 0.9764507367s;
+  animation-duration: 4.574597776s;
+  animation-delay: 0.0209147081s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-49_3ElNG {
@@ -7243,20 +7243,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 97%;
+    left: 68%;
   }
 }
 .chatroomeffects_confetti-50_8qyUx {
-  width: 9px;
-  height: 3.6px;
-  background-color: #263672;
+  width: 11px;
+  height: 4.4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 14%;
-  opacity: 1.4074851732;
-  transform: rotate(357.770579684deg);
+  left: 85%;
+  opacity: 1.1732390034;
+  transform: rotate(4.1760942251deg);
   animation: chatroomeffects_drop-50_IlkNs;
-  animation-duration: 4.396617447s;
-  animation-delay: 0.0913077425s;
+  animation-duration: 5.7845891219s;
+  animation-delay: 0.8352787733s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-50_IlkNs {
@@ -7269,20 +7269,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 20%;
+    left: 87%;
   }
 }
 .chatroomeffects_confetti-51_AtKXb {
-  width: 15px;
-  height: 6px;
-  background-color: #ffbf00;
+  width: 18px;
+  height: 7.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 38%;
-  opacity: 0.7299709203;
-  transform: rotate(338.147178156deg);
+  left: 62%;
+  opacity: 0.5673425107;
+  transform: rotate(249.08528801deg);
   animation: chatroomeffects_drop-51_2msFB;
-  animation-duration: 5.1227198291s;
-  animation-delay: 0.6759904413s;
+  animation-duration: 5.8219168868s;
+  animation-delay: 0.8577815907s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-51_2msFB {
@@ -7295,20 +7295,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 41%;
+    left: 66%;
   }
 }
 .chatroomeffects_confetti-52_1my5Z {
-  width: 18px;
-  height: 7.2px;
-  background-color: #ffbf00;
+  width: 17px;
+  height: 6.8px;
+  background-color: #d13447;
   top: -10%;
-  left: 59%;
-  opacity: 0.6120448809;
-  transform: rotate(225.1530742005deg);
+  left: 7%;
+  opacity: 0.8109405269;
+  transform: rotate(207.1505597208deg);
   animation: chatroomeffects_drop-52_1QnRe;
-  animation-duration: 4.913724911s;
-  animation-delay: 0.1030638985s;
+  animation-duration: 5.8825071269s;
+  animation-delay: 0.2165860332s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-52_1QnRe {
@@ -7321,20 +7321,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 64%;
+    left: 22%;
   }
 }
 .chatroomeffects_confetti-53_2Cb1i {
-  width: 15px;
-  height: 6px;
+  width: 16px;
+  height: 6.4px;
   background-color: #d13447;
   top: -10%;
-  left: 100%;
-  opacity: 1.2966742357;
-  transform: rotate(77.3214277243deg);
+  left: 66%;
+  opacity: 0.661361006;
+  transform: rotate(224.0771910391deg);
   animation: chatroomeffects_drop-53_1CQh7;
-  animation-duration: 4.2438378057s;
-  animation-delay: 0.8188565934s;
+  animation-duration: 4.5029976279s;
+  animation-delay: 0.7214707618s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-53_1CQh7 {
@@ -7347,20 +7347,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 105%;
+    left: 68%;
   }
 }
 .chatroomeffects_confetti-54_2VhA6 {
-  width: 12px;
-  height: 4.8px;
-  background-color: #263672;
+  width: 16px;
+  height: 6.4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 69%;
-  opacity: 1.3263937497;
-  transform: rotate(320.6902102407deg);
+  left: 60%;
+  opacity: 0.9533224014;
+  transform: rotate(318.7049701146deg);
   animation: chatroomeffects_drop-54_3hZKt;
-  animation-duration: 4.2795007418s;
-  animation-delay: 0.8424605208s;
+  animation-duration: 5.8637586759s;
+  animation-delay: 0.0296562965s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-54_3hZKt {
@@ -7373,20 +7373,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 75%;
+    left: 63%;
   }
 }
 .chatroomeffects_confetti-55_yL87g {
-  width: 3px;
-  height: 1.2px;
+  width: 18px;
+  height: 7.2px;
   background-color: #263672;
   top: -10%;
-  left: 44%;
-  opacity: 1.3008121705;
-  transform: rotate(256.7794447068deg);
+  left: 22%;
+  opacity: 1.2767614138;
+  transform: rotate(156.2129691839deg);
   animation: chatroomeffects_drop-55_3dM49;
-  animation-duration: 4.816418904s;
-  animation-delay: 0.5796164621s;
+  animation-duration: 4.897137846s;
+  animation-delay: 0.7338326751s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-55_3dM49 {
@@ -7399,20 +7399,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 57%;
+    left: 24%;
   }
 }
 .chatroomeffects_confetti-56_1xqgg {
-  width: 20px;
-  height: 8px;
-  background-color: #d13447;
+  width: 8px;
+  height: 3.2px;
+  background-color: #263672;
   top: -10%;
-  left: 71%;
-  opacity: 1.0981050148;
-  transform: rotate(65.0386309586deg);
+  left: 40%;
+  opacity: 1.1336313449;
+  transform: rotate(279.7308212665deg);
   animation: chatroomeffects_drop-56_3SnEp;
-  animation-duration: 5.6057859609s;
-  animation-delay: 0.5683810051s;
+  animation-duration: 5.5629071415s;
+  animation-delay: 0.7515924939s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-56_3SnEp {
@@ -7425,20 +7425,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 75%;
+    left: 53%;
   }
 }
 .chatroomeffects_confetti-57_f9kuG {
-  width: 20px;
-  height: 8px;
+  width: 15px;
+  height: 6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 21%;
-  opacity: 0.5892692793;
-  transform: rotate(33.4761820028deg);
+  left: 27%;
+  opacity: 1.2542986516;
+  transform: rotate(197.4522640845deg);
   animation: chatroomeffects_drop-57_3DCDa;
-  animation-duration: 4.8116546636s;
-  animation-delay: 0.1033722658s;
+  animation-duration: 4.0395298679s;
+  animation-delay: 0.2220552795s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-57_3DCDa {
@@ -7451,20 +7451,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 33%;
+    left: 38%;
   }
 }
 .chatroomeffects_confetti-58_1O4Ku {
-  width: 11px;
-  height: 4.4px;
-  background-color: #ffbf00;
+  width: 13px;
+  height: 5.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 8%;
-  opacity: 1.3460539155;
-  transform: rotate(236.3531180923deg);
+  left: 81%;
+  opacity: 1.036810981;
+  transform: rotate(306.2872009274deg);
   animation: chatroomeffects_drop-58_3d1_1;
-  animation-duration: 4.0175043221s;
-  animation-delay: 0.9980246226s;
+  animation-duration: 5.6310225729s;
+  animation-delay: 0.2952553344s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-58_3d1_1 {
@@ -7477,20 +7477,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 13%;
+    left: 82%;
   }
 }
 .chatroomeffects_confetti-59_XOFkR {
-  width: 4px;
-  height: 1.6px;
-  background-color: #d13447;
+  width: 13px;
+  height: 5.2px;
+  background-color: #263672;
   top: -10%;
-  left: 87%;
-  opacity: 0.9108569007;
-  transform: rotate(116.2558838765deg);
+  left: 74%;
+  opacity: 0.6368152538;
+  transform: rotate(297.1138016973deg);
   animation: chatroomeffects_drop-59_1ZKa_;
-  animation-duration: 5.9287716871s;
-  animation-delay: 0.0630305653s;
+  animation-duration: 5.7278557247s;
+  animation-delay: 0.9687182873s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-59_1ZKa_ {
@@ -7503,20 +7503,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 97%;
+    left: 88%;
   }
 }
 .chatroomeffects_confetti-60_2iInd {
-  width: 10px;
-  height: 4px;
+  width: 17px;
+  height: 6.8px;
   background-color: #d13447;
   top: -10%;
-  left: 82%;
-  opacity: 1.0611225787;
-  transform: rotate(268.0637117035deg);
+  left: 2%;
+  opacity: 0.5966721162;
+  transform: rotate(191.4921935437deg);
   animation: chatroomeffects_drop-60_3stXq;
-  animation-duration: 5.8892535576s;
-  animation-delay: 0.9728322878s;
+  animation-duration: 5.6561418208s;
+  animation-delay: 0.1906372808s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-60_3stXq {
@@ -7529,20 +7529,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 87%;
+    left: 16%;
   }
 }
 .chatroomeffects_confetti-61_4hvgI {
-  width: 10px;
-  height: 4px;
+  width: 11px;
+  height: 4.4px;
   background-color: #263672;
   top: -10%;
-  left: 17%;
-  opacity: 0.8184997515;
-  transform: rotate(161.1600593363deg);
+  left: 38%;
+  opacity: 0.8864804385;
+  transform: rotate(236.6044880289deg);
   animation: chatroomeffects_drop-61_ENSW2;
-  animation-duration: 4.6275154233s;
-  animation-delay: 0.0343035655s;
+  animation-duration: 5.8178050836s;
+  animation-delay: 0.0894381208s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-61_ENSW2 {
@@ -7555,20 +7555,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 28%;
+    left: 48%;
   }
 }
 .chatroomeffects_confetti-62_1vcmC {
-  width: 9px;
-  height: 3.6px;
+  width: 3px;
+  height: 1.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 21%;
-  opacity: 1.0409203353;
-  transform: rotate(191.0076859657deg);
+  left: 64%;
+  opacity: 1.3267441076;
+  transform: rotate(324.5768332744deg);
   animation: chatroomeffects_drop-62_3gyQe;
-  animation-duration: 4.6769684209s;
-  animation-delay: 0.1705989814s;
+  animation-duration: 4.0517189987s;
+  animation-delay: 0.9254968226s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-62_3gyQe {
@@ -7581,20 +7581,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 30%;
+    left: 72%;
   }
 }
 .chatroomeffects_confetti-63_3dgPj {
-  width: 4px;
-  height: 1.6px;
-  background-color: #ffbf00;
+  width: 19px;
+  height: 7.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 32%;
-  opacity: 1.4873715781;
-  transform: rotate(60.2431719004deg);
+  left: 87%;
+  opacity: 0.8818262951;
+  transform: rotate(353.8916274599deg);
   animation: chatroomeffects_drop-63_2047M;
-  animation-duration: 5.0533834256s;
-  animation-delay: 0.6655313998s;
+  animation-duration: 5.9554818574s;
+  animation-delay: 0.7084514744s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-63_2047M {
@@ -7607,20 +7607,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 34%;
+    left: 98%;
   }
 }
 .chatroomeffects_confetti-64_Cewk5 {
-  width: 17px;
-  height: 6.8px;
+  width: 10px;
+  height: 4px;
   background-color: #263672;
   top: -10%;
-  left: 58%;
-  opacity: 0.6879336487;
-  transform: rotate(45.1105407738deg);
+  left: 30%;
+  opacity: 0.7206789694;
+  transform: rotate(347.4655087681deg);
   animation: chatroomeffects_drop-64_2YCRK;
-  animation-duration: 5.3203563029s;
-  animation-delay: 0.6037731262s;
+  animation-duration: 4.6653944811s;
+  animation-delay: 0.8181977072s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-64_2YCRK {
@@ -7633,20 +7633,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 73%;
+    left: 31%;
   }
 }
 .chatroomeffects_confetti-65_ciQUm {
-  width: 5px;
-  height: 2px;
-  background-color: #263672;
+  width: 10px;
+  height: 4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 72%;
-  opacity: 0.9721285825;
-  transform: rotate(165.6736447246deg);
+  left: 62%;
+  opacity: 1.4674353611;
+  transform: rotate(299.1832210114deg);
   animation: chatroomeffects_drop-65_3kUQk;
-  animation-duration: 4.9352229784s;
-  animation-delay: 0.3003546366s;
+  animation-duration: 4.5926810286s;
+  animation-delay: 0.1560072568s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-65_3kUQk {
@@ -7659,20 +7659,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 73%;
+    left: 71%;
   }
 }
 .chatroomeffects_confetti-66_3a3mu {
-  width: 2px;
-  height: 0.8px;
-  background-color: #263672;
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 4%;
-  opacity: 1.3707543179;
-  transform: rotate(325.7350564402deg);
+  left: 91%;
+  opacity: 1.4105576925;
+  transform: rotate(71.0426848822deg);
   animation: chatroomeffects_drop-66_3DoHw;
-  animation-duration: 5.528729434s;
-  animation-delay: 0.2750430565s;
+  animation-duration: 5.5153079279s;
+  animation-delay: 0.2136790481s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-66_3DoHw {
@@ -7685,20 +7685,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 7%;
+    left: 93%;
   }
 }
 .chatroomeffects_confetti-67_39YTy {
-  width: 11px;
-  height: 4.4px;
+  width: 9px;
+  height: 3.6px;
   background-color: #263672;
   top: -10%;
-  left: 42%;
-  opacity: 0.541451997;
-  transform: rotate(264.3425773047deg);
+  left: 50%;
+  opacity: 0.9715712965;
+  transform: rotate(304.2139693552deg);
   animation: chatroomeffects_drop-67_Qb0h2;
-  animation-duration: 5.4792778606s;
-  animation-delay: 0.0456614555s;
+  animation-duration: 5.9633057971s;
+  animation-delay: 0.9244004263s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-67_Qb0h2 {
@@ -7711,20 +7711,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 49%;
+    left: 57%;
   }
 }
 .chatroomeffects_confetti-68_2zcwH {
-  width: 3px;
-  height: 1.2px;
+  width: 7px;
+  height: 2.8px;
   background-color: #263672;
   top: -10%;
-  left: 66%;
-  opacity: 0.5260094145;
-  transform: rotate(146.1086647416deg);
+  left: 46%;
+  opacity: 1.4830212101;
+  transform: rotate(92.3351302474deg);
   animation: chatroomeffects_drop-68_zRaTb;
-  animation-duration: 4.2758684773s;
-  animation-delay: 0.6186135835s;
+  animation-duration: 4.8616783212s;
+  animation-delay: 0.1091014389s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-68_zRaTb {
@@ -7737,20 +7737,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 77%;
+    left: 56%;
   }
 }
 .chatroomeffects_confetti-69_1O9Qn {
-  width: 5px;
-  height: 2px;
-  background-color: #d13447;
+  width: 17px;
+  height: 6.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 95%;
-  opacity: 0.7088551693;
-  transform: rotate(316.2556548952deg);
+  left: 42%;
+  opacity: 0.9100164629;
+  transform: rotate(176.7006845385deg);
   animation: chatroomeffects_drop-69_oogaf;
-  animation-duration: 5.5723519594s;
-  animation-delay: 0.1713103068s;
+  animation-duration: 4.4738369379s;
+  animation-delay: 0.4728136324s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-69_oogaf {
@@ -7763,7 +7763,7 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 109%;
+    left: 43%;
   }
 }
 .chatroomeffects_confetti-70_3wL25 {
@@ -7771,12 +7771,12 @@ body.v6.rewards .ModalPosition_Content {
   height: 5.6px;
   background-color: #d13447;
   top: -10%;
-  left: 47%;
-  opacity: 0.9584982448;
-  transform: rotate(204.7924036179deg);
+  left: 86%;
+  opacity: 1.449908988;
+  transform: rotate(150.1711144015deg);
   animation: chatroomeffects_drop-70_ouiMF;
-  animation-duration: 5.8440501772s;
-  animation-delay: 0.9790391359s;
+  animation-duration: 4.9240987149s;
+  animation-delay: 0.9372974576s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-70_ouiMF {
@@ -7789,20 +7789,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 56%;
+    left: 87%;
   }
 }
 .chatroomeffects_confetti-71_2FN6I {
-  width: 17px;
-  height: 6.8px;
+  width: 15px;
+  height: 6px;
   background-color: #d13447;
   top: -10%;
-  left: 33%;
-  opacity: 0.9512807283;
-  transform: rotate(103.9709397775deg);
+  left: 27%;
+  opacity: 0.7491551845;
+  transform: rotate(323.6184263705deg);
   animation: chatroomeffects_drop-71_y2t-j;
-  animation-duration: 4.3856210813s;
-  animation-delay: 0.5575507833s;
+  animation-duration: 4.6440929282s;
+  animation-delay: 0.4973951331s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-71_y2t-j {
@@ -7815,20 +7815,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 48%;
+    left: 39%;
   }
 }
 .chatroomeffects_confetti-72_2tgnG {
-  width: 6px;
-  height: 2.4px;
+  width: 5px;
+  height: 2px;
   background-color: #d13447;
   top: -10%;
-  left: 87%;
-  opacity: 0.5770814091;
-  transform: rotate(61.0802683167deg);
+  left: 12%;
+  opacity: 0.9165990155;
+  transform: rotate(6.6247288637deg);
   animation: chatroomeffects_drop-72_3hLQt;
-  animation-duration: 4.9666953715s;
-  animation-delay: 0.3459657469s;
+  animation-duration: 4.6916590246s;
+  animation-delay: 0.656341428s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-72_3hLQt {
@@ -7841,20 +7841,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 97%;
+    left: 17%;
   }
 }
 .chatroomeffects_confetti-73_-0y9h {
-  width: 18px;
-  height: 7.2px;
-  background-color: #263672;
+  width: 14px;
+  height: 5.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 21%;
-  opacity: 0.6852396118;
-  transform: rotate(149.4806925569deg);
+  left: 83%;
+  opacity: 0.843417271;
+  transform: rotate(49.2177768075deg);
   animation: chatroomeffects_drop-73_-Wx7W;
-  animation-duration: 5.1380316806s;
-  animation-delay: 0.7044282331s;
+  animation-duration: 4.1830764734s;
+  animation-delay: 0.2025733023s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-73_-Wx7W {
@@ -7867,20 +7867,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 26%;
+    left: 95%;
   }
 }
 .chatroomeffects_confetti-74_1_vWA {
-  width: 7px;
-  height: 2.8px;
-  background-color: #d13447;
+  width: 13px;
+  height: 5.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 42%;
-  opacity: 1.1293701381;
-  transform: rotate(91.0995306084deg);
+  left: 34%;
+  opacity: 0.8141426834;
+  transform: rotate(30.4965102982deg);
   animation: chatroomeffects_drop-74_2L0XL;
-  animation-duration: 4.4128374653s;
-  animation-delay: 0.3397319479s;
+  animation-duration: 4.1108673326s;
+  animation-delay: 0.1046679026s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-74_2L0XL {
@@ -7893,20 +7893,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 47%;
+    left: 45%;
   }
 }
 .chatroomeffects_confetti-75_qNiwF {
-  width: 19px;
-  height: 7.6px;
-  background-color: #ffbf00;
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 68%;
-  opacity: 1.449515423;
-  transform: rotate(320.2510483627deg);
+  left: 23%;
+  opacity: 1.2672193405;
+  transform: rotate(117.1248087667deg);
   animation: chatroomeffects_drop-75_2iJw_;
-  animation-duration: 4.0055015237s;
-  animation-delay: 0.159533834s;
+  animation-duration: 4.9830465121s;
+  animation-delay: 0.3424922792s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-75_2iJw_ {
@@ -7919,20 +7919,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 78%;
+    left: 32%;
   }
 }
 .chatroomeffects_confetti-76_2Isn6 {
-  width: 14px;
-  height: 5.6px;
-  background-color: #d13447;
+  width: 9px;
+  height: 3.6px;
+  background-color: #263672;
   top: -10%;
-  left: 87%;
-  opacity: 0.6653028914;
-  transform: rotate(269.3345861808deg);
+  left: 72%;
+  opacity: 0.5472545087;
+  transform: rotate(116.9800442302deg);
   animation: chatroomeffects_drop-76_3MdvI;
-  animation-duration: 5.8078983899s;
-  animation-delay: 0.6719059893s;
+  animation-duration: 4.6854879936s;
+  animation-delay: 0.0097659855s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-76_3MdvI {
@@ -7945,20 +7945,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 97%;
+    left: 77%;
   }
 }
 .chatroomeffects_confetti-77_2bgtx {
-  width: 18px;
-  height: 7.2px;
+  width: 5px;
+  height: 2px;
   background-color: #d13447;
   top: -10%;
-  left: 14%;
-  opacity: 1.1530307458;
-  transform: rotate(357.1054483338deg);
+  left: 74%;
+  opacity: 1.1842947659;
+  transform: rotate(152.6850969443deg);
   animation: chatroomeffects_drop-77_2ItPx;
-  animation-duration: 4.3569914023s;
-  animation-delay: 0.1426435657s;
+  animation-duration: 5.1293764889s;
+  animation-delay: 0.9363932701s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-77_2ItPx {
@@ -7971,20 +7971,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 21%;
+    left: 88%;
   }
 }
 .chatroomeffects_confetti-78_veCdx {
-  width: 3px;
-  height: 1.2px;
+  width: 19px;
+  height: 7.6px;
   background-color: #d13447;
   top: -10%;
-  left: 34%;
-  opacity: 1.4455805189;
-  transform: rotate(244.8786042157deg);
+  left: 59%;
+  opacity: 0.8485945168;
+  transform: rotate(14.4247199081deg);
   animation: chatroomeffects_drop-78_3D9KT;
-  animation-duration: 5.2815453934s;
-  animation-delay: 0.5105857293s;
+  animation-duration: 5.2951347742s;
+  animation-delay: 0.1241969691s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-78_3D9KT {
@@ -7997,20 +7997,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 44%;
+    left: 64%;
   }
 }
 .chatroomeffects_confetti-79_5cczs {
   width: 4px;
   height: 1.6px;
-  background-color: #263672;
+  background-color: #d13447;
   top: -10%;
-  left: 86%;
-  opacity: 1.3731178314;
-  transform: rotate(214.5063650942deg);
+  left: 12%;
+  opacity: 1.2882006731;
+  transform: rotate(179.7191055344deg);
   animation: chatroomeffects_drop-79_1x9H7;
-  animation-duration: 5.8644310624s;
-  animation-delay: 0.1068127665s;
+  animation-duration: 5.3682742353s;
+  animation-delay: 0.8678910801s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-79_1x9H7 {
@@ -8023,20 +8023,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 89%;
+    left: 27%;
   }
 }
 .chatroomeffects_confetti-80_hz59y {
-  width: 9px;
-  height: 3.6px;
+  width: 19px;
+  height: 7.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 12%;
-  opacity: 0.9729029264;
-  transform: rotate(131.4426039223deg);
+  left: 71%;
+  opacity: 0.5435510379;
+  transform: rotate(206.4340891501deg);
   animation: chatroomeffects_drop-80_2ZjKF;
-  animation-duration: 4.8666408756s;
-  animation-delay: 0.3538929713s;
+  animation-duration: 5.6062558484s;
+  animation-delay: 0.8173908657s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-80_2ZjKF {
@@ -8049,20 +8049,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 15%;
+    left: 81%;
   }
 }
 .chatroomeffects_confetti-81_1rhSJ {
-  width: 12px;
-  height: 4.8px;
+  width: 16px;
+  height: 6.4px;
   background-color: #263672;
   top: -10%;
-  left: 6%;
-  opacity: 0.8616672803;
-  transform: rotate(284.4298718044deg);
+  left: 36%;
+  opacity: 0.8062191899;
+  transform: rotate(7.9303146493deg);
   animation: chatroomeffects_drop-81_tGBBf;
-  animation-duration: 4.9450034929s;
-  animation-delay: 0.5156837957s;
+  animation-duration: 4.9276261902s;
+  animation-delay: 0.1014522812s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-81_tGBBf {
@@ -8075,20 +8075,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 21%;
+    left: 37%;
   }
 }
 .chatroomeffects_confetti-82_1jWl7 {
   width: 8px;
   height: 3.2px;
-  background-color: #263672;
+  background-color: #d13447;
   top: -10%;
-  left: 38%;
-  opacity: 0.8154172742;
-  transform: rotate(72.0486244048deg);
+  left: 97%;
+  opacity: 0.9439804556;
+  transform: rotate(193.0026052667deg);
   animation: chatroomeffects_drop-82_26Ftm;
-  animation-duration: 4.7898099484s;
-  animation-delay: 0.4078272871s;
+  animation-duration: 5.206217858s;
+  animation-delay: 0.4882127566s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-82_26Ftm {
@@ -8101,7 +8101,7 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 46%;
+    left: 107%;
   }
 }
 .chatroomeffects_confetti-83_1Veaf {
@@ -8109,12 +8109,12 @@ body.v6.rewards .ModalPosition_Content {
   height: 6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 42%;
-  opacity: 0.7242526066;
-  transform: rotate(244.5686627779deg);
+  left: 36%;
+  opacity: 0.6352297897;
+  transform: rotate(217.9102049138deg);
   animation: chatroomeffects_drop-83_2VByP;
-  animation-duration: 5.8001845953s;
-  animation-delay: 0.0196828016s;
+  animation-duration: 5.9310057901s;
+  animation-delay: 0.0353042357s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-83_2VByP {
@@ -8127,20 +8127,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 45%;
+    left: 40%;
   }
 }
 .chatroomeffects_confetti-84_3_bdr {
-  width: 13px;
-  height: 5.2px;
+  width: 11px;
+  height: 4.4px;
   background-color: #263672;
   top: -10%;
-  left: 78%;
-  opacity: 1.4680734522;
-  transform: rotate(242.4090604489deg);
+  left: 21%;
+  opacity: 1.4336278309;
+  transform: rotate(304.3167808866deg);
   animation: chatroomeffects_drop-84_m6um-;
-  animation-duration: 4.9897354515s;
-  animation-delay: 0.7368681579s;
+  animation-duration: 5.4674767374s;
+  animation-delay: 0.9396973341s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-84_m6um- {
@@ -8153,20 +8153,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 79%;
+    left: 33%;
   }
 }
 .chatroomeffects_confetti-85_9Zttw {
-  width: 3px;
-  height: 1.2px;
+  width: 6px;
+  height: 2.4px;
   background-color: #d13447;
   top: -10%;
-  left: 58%;
-  opacity: 0.8525517054;
-  transform: rotate(27.5476183121deg);
+  left: 33%;
+  opacity: 1.0235529601;
+  transform: rotate(321.7040418226deg);
   animation: chatroomeffects_drop-85_2xtS5;
-  animation-duration: 4.1669600872s;
-  animation-delay: 0.2225452951s;
+  animation-duration: 4.048317288s;
+  animation-delay: 0.3925716312s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-85_2xtS5 {
@@ -8179,20 +8179,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 66%;
+    left: 41%;
   }
 }
 .chatroomeffects_confetti-86_2EJMi {
-  width: 9px;
-  height: 3.6px;
+  width: 10px;
+  height: 4px;
   background-color: #ffbf00;
   top: -10%;
-  left: 11%;
-  opacity: 0.6928983005;
-  transform: rotate(200.130594126deg);
+  left: 14%;
+  opacity: 1.1755366681;
+  transform: rotate(324.3851663511deg);
   animation: chatroomeffects_drop-86_2dudW;
-  animation-duration: 4.8801586177s;
-  animation-delay: 0.8343057835s;
+  animation-duration: 5.0363978883s;
+  animation-delay: 0.3087364645s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-86_2dudW {
@@ -8205,20 +8205,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 15%;
+    left: 22%;
   }
 }
 .chatroomeffects_confetti-87_uys-9 {
-  width: 11px;
-  height: 4.4px;
-  background-color: #263672;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 83%;
-  opacity: 0.696889633;
-  transform: rotate(3.6848350335deg);
+  left: 51%;
+  opacity: 1.2768214021;
+  transform: rotate(6.3615952992deg);
   animation: chatroomeffects_drop-87_1PZvt;
-  animation-duration: 4.3282494796s;
-  animation-delay: 0.8235182736s;
+  animation-duration: 4.0753151886s;
+  animation-delay: 0.5668402446s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-87_1PZvt {
@@ -8231,20 +8231,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 91%;
+    left: 53%;
   }
 }
 .chatroomeffects_confetti-88_24exN {
-  width: 7px;
-  height: 2.8px;
+  width: 19px;
+  height: 7.6px;
   background-color: #263672;
   top: -10%;
-  left: 85%;
-  opacity: 1.4356902219;
-  transform: rotate(144.378346166deg);
+  left: 15%;
+  opacity: 1.2016077645;
+  transform: rotate(244.4439851766deg);
   animation: chatroomeffects_drop-88_5ZbRz;
-  animation-duration: 4.5539977102s;
-  animation-delay: 0.884516568s;
+  animation-duration: 5.0840255213s;
+  animation-delay: 0.8030525346s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-88_5ZbRz {
@@ -8257,20 +8257,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 95%;
+    left: 29%;
   }
 }
 .chatroomeffects_confetti-89_2yKbS {
-  width: 6px;
-  height: 2.4px;
-  background-color: #d13447;
+  width: 12px;
+  height: 4.8px;
+  background-color: #263672;
   top: -10%;
-  left: 33%;
-  opacity: 0.8374364463;
-  transform: rotate(34.7753089181deg);
+  left: 5%;
+  opacity: 0.6228914178;
+  transform: rotate(220.2385962835deg);
   animation: chatroomeffects_drop-89_1s66w;
-  animation-duration: 5.5103947069s;
-  animation-delay: 0.3508465887s;
+  animation-duration: 5.5472109969s;
+  animation-delay: 0.0249110893s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-89_1s66w {
@@ -8283,20 +8283,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 46%;
+    left: 17%;
   }
 }
 .chatroomeffects_confetti-90_2tEzr {
-  width: 19px;
-  height: 7.6px;
-  background-color: #d13447;
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 4%;
-  opacity: 0.6754485937;
-  transform: rotate(55.9166781747deg);
+  left: 26%;
+  opacity: 0.5608558917;
+  transform: rotate(49.0060065152deg);
   animation: chatroomeffects_drop-90_1dLha;
-  animation-duration: 4.822048517s;
-  animation-delay: 0.0617337531s;
+  animation-duration: 4.8431838217s;
+  animation-delay: 0.759857362s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-90_1dLha {
@@ -8309,20 +8309,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 17%;
+    left: 31%;
   }
 }
 .chatroomeffects_confetti-91_3T4UL {
-  width: 9px;
-  height: 3.6px;
+  width: 5px;
+  height: 2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 59%;
-  opacity: 1.0378654997;
-  transform: rotate(144.8589650592deg);
+  left: 47%;
+  opacity: 0.6075520568;
+  transform: rotate(331.9198638633deg);
   animation: chatroomeffects_drop-91_P_MRR;
-  animation-duration: 5.0460563706s;
-  animation-delay: 0.9729186427s;
+  animation-duration: 4.332540718s;
+  animation-delay: 0.5250739162s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-91_P_MRR {
@@ -8335,20 +8335,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 66%;
+    left: 49%;
   }
 }
 .chatroomeffects_confetti-92_7p5vh {
-  width: 2px;
-  height: 0.8px;
+  width: 3px;
+  height: 1.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 100%;
-  opacity: 0.8069653755;
-  transform: rotate(68.2382726671deg);
+  left: 46%;
+  opacity: 0.8553495268;
+  transform: rotate(334.2876912269deg);
   animation: chatroomeffects_drop-92_1Mwkv;
-  animation-duration: 4.6222010122s;
-  animation-delay: 0.9499167856s;
+  animation-duration: 4.9285740271s;
+  animation-delay: 0.8593017164s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-92_1Mwkv {
@@ -8361,20 +8361,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 106%;
+    left: 54%;
   }
 }
 .chatroomeffects_confetti-93_2BaTW {
-  width: 3px;
-  height: 1.2px;
-  background-color: #ffbf00;
+  width: 17px;
+  height: 6.8px;
+  background-color: #d13447;
   top: -10%;
-  left: 85%;
-  opacity: 1.4550180881;
-  transform: rotate(7.3987487561deg);
+  left: 88%;
+  opacity: 0.65374892;
+  transform: rotate(50.0328207149deg);
   animation: chatroomeffects_drop-93_3NCsF;
-  animation-duration: 5.4930251372s;
-  animation-delay: 0.3915343128s;
+  animation-duration: 4.8862916135s;
+  animation-delay: 0.7638257227s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-93_3NCsF {
@@ -8387,20 +8387,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 93%;
+    left: 95%;
   }
 }
 .chatroomeffects_confetti-94_3DVf7 {
-  width: 5px;
-  height: 2px;
-  background-color: #d13447;
+  width: 19px;
+  height: 7.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 94%;
-  opacity: 1.4727666925;
-  transform: rotate(265.6624641714deg);
+  left: 5%;
+  opacity: 1.3595112098;
+  transform: rotate(298.6954046723deg);
   animation: chatroomeffects_drop-94_fZgnW;
-  animation-duration: 4.9248359683s;
-  animation-delay: 0.4546171124s;
+  animation-duration: 4.6087442092s;
+  animation-delay: 0.565560822s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-94_fZgnW {
@@ -8413,20 +8413,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 101%;
+    left: 9%;
   }
 }
 .chatroomeffects_confetti-95_23jtb {
-  width: 16px;
-  height: 6.4px;
+  width: 8px;
+  height: 3.2px;
   background-color: #263672;
   top: -10%;
-  left: 69%;
-  opacity: 0.608781194;
-  transform: rotate(319.7390131349deg);
+  left: 16%;
+  opacity: 1.4307755788;
+  transform: rotate(359.0604972714deg);
   animation: chatroomeffects_drop-95_1tw1t;
-  animation-duration: 5.2792304412s;
-  animation-delay: 0.5346919037s;
+  animation-duration: 4.3692617997s;
+  animation-delay: 0.5508932309s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-95_1tw1t {
@@ -8439,20 +8439,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 73%;
+    left: 27%;
   }
 }
 .chatroomeffects_confetti-96_2CxeZ {
-  width: 4px;
-  height: 1.6px;
-  background-color: #ffbf00;
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
   top: -10%;
-  left: 77%;
-  opacity: 0.5684588981;
-  transform: rotate(319.3234853414deg);
+  left: 26%;
+  opacity: 0.9222877597;
+  transform: rotate(123.3870544135deg);
   animation: chatroomeffects_drop-96_37GFJ;
-  animation-duration: 5.3262947456s;
-  animation-delay: 0.9008468s;
+  animation-duration: 5.5074233783s;
+  animation-delay: 0.5447556081s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-96_37GFJ {
@@ -8465,20 +8465,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 79%;
+    left: 29%;
   }
 }
 .chatroomeffects_confetti-97_qoLlt {
-  width: 8px;
-  height: 3.2px;
+  width: 4px;
+  height: 1.6px;
   background-color: #263672;
   top: -10%;
-  left: 25%;
-  opacity: 0.6244366069;
-  transform: rotate(137.5297209001deg);
+  left: 91%;
+  opacity: 1.0263267468;
+  transform: rotate(111.9437520001deg);
   animation: chatroomeffects_drop-97_v1bhd;
-  animation-duration: 4.8225543717s;
-  animation-delay: 0.4677546617s;
+  animation-duration: 4.4732086563s;
+  animation-delay: 0.2627797352s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-97_v1bhd {
@@ -8491,20 +8491,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 31%;
+    left: 101%;
   }
 }
 .chatroomeffects_confetti-98_3Po3_ {
-  width: 5px;
-  height: 2px;
-  background-color: #d13447;
+  width: 19px;
+  height: 7.6px;
+  background-color: #263672;
   top: -10%;
-  left: 91%;
-  opacity: 1.4753129304;
-  transform: rotate(184.4224825564deg);
+  left: 80%;
+  opacity: 1.100568814;
+  transform: rotate(342.5834337675deg);
   animation: chatroomeffects_drop-98_1TcCu;
-  animation-duration: 5.6266495387s;
-  animation-delay: 0.0200630828s;
+  animation-duration: 4.440764027s;
+  animation-delay: 0.7470532007s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-98_1TcCu {
@@ -8517,20 +8517,20 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 97%;
+    left: 83%;
   }
 }
 .chatroomeffects_confetti-99_2-vdA {
-  width: 18px;
-  height: 7.2px;
-  background-color: #263672;
+  width: 14px;
+  height: 5.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 66%;
-  opacity: 0.9951347752;
-  transform: rotate(218.0110258915deg);
+  left: 26%;
+  opacity: 1.1764041513;
+  transform: rotate(246.1638528544deg);
   animation: chatroomeffects_drop-99_3lQGo;
-  animation-duration: 4.9608468108s;
-  animation-delay: 0.2225062666s;
+  animation-duration: 5.283744967s;
+  animation-delay: 0.2625993827s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-99_3lQGo {
@@ -8543,7 +8543,7 @@ body.v6.rewards .ModalPosition_Content {
   }
   100% {
     top: 110%;
-    left: 74%;
+    left: 41%;
   }
 }
 .chatroomeffects_cracker_k_Aq7 {
@@ -9139,32 +9139,32 @@ body.v6.rewards .ModalPosition_Content {
 }
 @keyframes chatroomeffects_bang_3GL2k {
   to {
-    box-shadow: -79px -105.6666666667px #0df, 2px -414.6666666667px #ff0900,
-      12px -15.6666666667px #8c00ff, -182px -198.6666666667px #ff00d5,
-      190px -73.6666666667px #7b00ff, -230px -404.6666666667px #7bff00,
-      205px -352.6666666667px #5eff00, 210px 56.3333333333px #7300ff,
-      -133px -260.6666666667px #6200ff, -230px -373.6666666667px #00ffae,
-      10px -116.6666666667px #3f0, -75px -262.6666666667px #0084ff,
-      -228px -144.6666666667px #00ff09, -33px -263.6666666667px #d0f,
-      54px 52.3333333333px #005eff, -237px -288.6666666667px #6aff00,
-      188px -391.6666666667px #00ff73, -36px -237.6666666667px #d0ff00,
-      195px -128.6666666667px #ff00a2, -208px -337.6666666667px #5100ff,
-      180px -310.6666666667px #df0, 78px -268.6666666667px #0051ff,
-      193px -363.6666666667px #ff0040, 203px -226.6666666667px #4dff00,
-      -55px -178.6666666667px #00ff8c, 74px -59.6666666667px #d500ff,
-      -27px 50.3333333333px #ffd900, -156px -128.6666666667px #00ff1e,
-      -5px 19.3333333333px #ff0037, -10px -162.6666666667px #00fff2,
-      -171px -155.6666666667px #af0, -98px 28.3333333333px #00ff04,
-      116px -199.6666666667px #fe0, 44px -293.6666666667px #006aff,
-      110px -14.6666666667px #0fd, -48px -279.6666666667px #1eff00,
-      -105px -348.6666666667px #37ff00, -154px -67.6666666667px #51ff00,
-      -116px 26.3333333333px #f60, -217px -155.6666666667px #00ff2b,
-      -50px -134.6666666667px #00ff3c, 169px -217.6666666667px #2600ff,
-      109px -78.6666666667px #ff0051, 186px -162.6666666667px #0fd,
-      -203px -224.6666666667px #0fe, 104px 65.3333333333px #f03,
-      -194px 73.3333333333px #0f2, 190px 78.3333333333px #00a2ff,
-      180px -382.6666666667px #0fc, 1px -7.6666666667px #8400ff,
-      114px -284.6666666667px #0f8;
+    box-shadow: 179px -406.6666666667px #006aff,
+      -246px -287.6666666667px #9500ff, 50px -67.6666666667px #fc0,
+      133px -54.6666666667px #ff1a00, 209px -134.6666666667px #0f8,
+      -210px -346.6666666667px #f2ff00, -226px -400.6666666667px #c8ff00,
+      194px -184.6666666667px #ff0091, -143px -400.6666666667px #0ef,
+      -249px -238.6666666667px #ffbf00, 152px -106.6666666667px #00a2ff,
+      205px -378.6666666667px #00ff95, -84px -7.6666666667px #d0ff00,
+      -142px 42.3333333333px #ff0080, -57px -203.6666666667px #b700ff,
+      119px -214.6666666667px #ff009d, -184px -415.6666666667px #ff00d5,
+      166px -192.6666666667px #b7ff00, 53px -97.6666666667px #d5ff00,
+      -163px -324.6666666667px #0fd, 57px 36.3333333333px #60f,
+      -70px -411.6666666667px #1eff00, 163px 52.3333333333px #ffb700,
+      84px 39.3333333333px #ff0059, -21px -230.6666666667px #0f4,
+      -217px -60.6666666667px #00ff3c, -31px -403.6666666667px #ff007b,
+      95px -303.6666666667px #08f, -180px -153.6666666667px #ff0015,
+      -193px 73.3333333333px #0f5, 241px -58.6666666667px #ff00b7,
+      -115px 51.3333333333px #ff5100, -72px -136.6666666667px #00ff62,
+      164px -348.6666666667px #ff00f7, -129px 59.3333333333px #1eff00,
+      91px 20.3333333333px #20f, -86px -195.6666666667px #00ff95,
+      90px 23.3333333333px #00ff15, -143px -358.6666666667px #0df,
+      13px -28.6666666667px #fd0, -189px -385.6666666667px #f0d,
+      223px -376.6666666667px #00ffb7, -39px -212.6666666667px #f07,
+      -223px -122.6666666667px #30f, -202px -31.6666666667px #f60,
+      -121px -261.6666666667px #3f0, -175px -385.6666666667px #ff00e1,
+      -127px -225.6666666667px #f0b, 143px -271.6666666667px #009dff,
+      -83px 74.3333333333px #0051ff, 162px 0.3333333333px #ffb300;
   }
 }
 @keyframes chatroomeffects_gravity_S4aDc {
@@ -9604,6 +9604,919 @@ body.v6.rewards .ModalPosition_Content {
 }
 .banner_Banner_ECzA2 .banner_Link_185F6:hover {
   color: #fff;
+}
+.goldenprofile_ProfileFrame_2SyjH {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.goldenprofile_ProfileThrobber_DEqbY {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.goldenprofile_ProfileContainer_3XMzf {
+  width: 100%;
+  max-width: 1300px;
+  height: 800px;
+  pointer-events: none;
+  position: relative;
+  border: 5px solid #6ac7ce;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+}
+.goldenprofile_BlueButton_2fUe5,
+.goldenprofile_BlueButtonSmall_14c5j {
+  font-size: 18px;
+  text-align: center;
+  color: #efeaea;
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  border-radius: 2px;
+  background-position: 25%;
+  background-size: 330% 100%;
+  padding: 5px 20px;
+}
+.goldenprofile_BlueButtonSmall_14c5j {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+.goldenprofile_BlueButton_2fUe5:hover {
+  background-position: 0%;
+  color: #fff;
+}
+.goldenprofile_GoldenProfileTitle_NQHuf {
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: 0.075em;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+.goldenprofile_GoldenProfileDesc_3sA5L {
+  font-size: 20px;
+  line-height: 130.2%;
+  color: #c5cbd8;
+  margin-bottom: 20px;
+}
+.goldenprofile_PersonaPreviewContainer_2eBHX {
+  background: url(../../../images/applications/store/goldenpersona_preview.png?v=valveisgoodatcaching)
+    center no-repeat;
+  max-width: 380px;
+  height: 285px;
+  width: 100%;
+  margin-right: 30px;
+  position: relative;
+  flex: 1 1 100%;
+}
+.goldenprofile_GoldenProfileHeaderContainer_2rQ4m {
+  max-width: 1000px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.goldenprofile_AvatarAndPersonaContainer_f6Cly {
+  display: flex;
+  position: absolute;
+  top: 47%;
+  left: 6%;
+}
+.goldenprofile_AvatarHolder_22fux {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+.goldenprofile_CurrentAvatar_2k8zo {
+  border: 2px solid #6ac7ce;
+  box-sizing: border-box;
+}
+.goldenprofile_GoldenProfileCost_2td9S {
+  cursor: pointer;
+}
+.friendsnooze_SnoozeContainer_1Dsum {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 6px;
+  animation-name: friendsnooze_none_T3Fb5;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Medium_1iYPl
+  .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 8px;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Large_3BESV
+  .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000,
+    1px 1px 2px #000;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  filter: brightness(0.75);
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z1_2hnF3 {
+  animation-delay: 0s;
+  margin-top: 0px;
+  z-index: 1;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z2_VmQTO {
+  animation-delay: 0.2s;
+  margin-top: 2px;
+  z-index: 2;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z3_29mta {
+  animation-delay: 0.4s;
+  margin-top: 4px;
+  z-index: 3;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online .friendsnooze_SnoozeZ_2n0Ei {
+  color: #4c91ac;
+}
+.friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #c9bdf7;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game .friendsnooze_SnoozeZ_2n0Ei {
+  color: #91c257;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #6dcff6;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #a1f410;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_animating_2rXc7
+  .friendsnooze_SnoozeZ_2n0Ei,
+.friendsnooze_hoverParent_3-8cB:hover * .friendsnooze_SnoozeZ_2n0Ei {
+  animation-name: friendsnooze_Snoring_38wIV;
+}
+@keyframes friendsnooze_Snoring_38wIV {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.personastatusicons_PersonaStatusIcon_KxAI_ {
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+  margin-left: 2px;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.GamepadMode,
+.GamepadMode .personastatusicons_PersonaStatusIcon_KxAI_ {
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
+  margin-top: -2px;
+  margin-left: -1px;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_MobilePhone path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_BigPicture path {
+  fill: #80aa4d;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_VR
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_MobilePhone
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_MobilePhone
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_BigPicture
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_BigPicture
+  path {
+  fill: #59bf40;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_MobilePhone path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_BigPicture path {
+  fill: #4c91ac;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_VR
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_MobilePhone
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_MobilePhone
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_BigPicture
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_BigPicture
+  path {
+  fill: #1a9fff;
+}
+.personanameandstatus_statusAndName_4ZTzG {
+  display: flex;
+}
+.personanameandstatus_statusAndName_4ZTzG.personanameandstatus_threeLines_1oYSX {
+  margin-top: -2px;
+}
+.personanameandstatus_statusAndName_4ZTzG.GamepadMode,
+.GamepadMode .personanameandstatus_statusAndName_4ZTzG {
+  align-items: center;
+}
+.personanameandstatus_statusAndName_4ZTzG.GamepadMode.personanameandstatus_threeLines_1oYSX,
+.GamepadMode
+  .personanameandstatus_statusAndName_4ZTzG.personanameandstatus_threeLines_1oYSX {
+  margin-top: 0;
+}
+.personanameandstatus_blocked_VTxPk
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  color: rgba(195, 74, 72, 0.75);
+}
+.personanameandstatus_playerName_nOdcT,
+.personanameandstatus_playerNickname_2saJT {
+  flex: 1;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  font-size: 14px;
+  transition: text-overflow 0s linear;
+}
+.personanameandstatus_playerName_nOdcT.GamepadMode,
+.GamepadMode .personanameandstatus_playerName_nOdcT,
+.personanameandstatus_playerNickname_2saJT.GamepadMode,
+.GamepadMode .personanameandstatus_playerNickname_2saJT {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 15px;
+}
+.personanameandstatus_playerNickname_2saJT.GamepadMode,
+.GamepadMode .personanameandstatus_playerNickname_2saJT {
+  color: #67707b;
+}
+.personanameandstatus_playerName_nOdcT {
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  flex: initial;
+  padding-right: 6px;
+  margin-right: -6px;
+}
+.personanameandstatus_playerName_nOdcT.GamepadMode,
+.GamepadMode .personanameandstatus_playerName_nOdcT {
+  -webkit-mask: none;
+  mask: none;
+  padding-right: 2px;
+  margin-right: 0px;
+}
+.personanameandstatus_playerNickname_2saJT {
+  padding-left: 5px;
+  color: #666;
+}
+.personanameandstatus_playerNicknameBracket_3XEmW {
+  color: #999;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 1px;
+  opacity: 0.5;
+  line-height: 16px;
+}
+.personanameandstatus_richPresenceContainer_3sxE7 {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 30px);
+}
+.personanameandstatus_richPresenceLabel_2Ri00 {
+  display: flex;
+  flex-direction: row;
+  line-height: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 10px;
+  margin-top: -1px;
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  margin-right: -24px;
+}
+.personanameandstatus_NoMask_2dAj6
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  line-height: 18px;
+  font-size: 12px;
+}
+.personanameandstatus_DNDContainer_3IswZ {
+  width: 12px;
+  height: 12px;
+  margin-top: -3px;
+  margin-left: 3px;
+}
+.personanameandstatus_partyBeaconJoin_3BnDs {
+  font-weight: 800;
+}
+.ingame .personanameandstatus_playerName_nOdcT {
+  color: #e3ffc2;
+}
+.ingame .personanameandstatus_playerName_nOdcT.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_playerName_nOdcT {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 400;
+}
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00,
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a,
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:hover,
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:active,
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:visited,
+.ingame.personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  color: #91c257;
+}
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00,
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a,
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:hover.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:hover,
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:active.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:active,
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:visited.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:visited,
+.ingame.personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00.GamepadMode,
+.GamepadMode
+  .ingame.personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  color: #59bf40;
+}
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 12px;
+}
+.ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #59bf40;
+}
+.VoiceChannelParticipants .ingame .personanameandstatus_playerName_nOdcT {
+  font-size: 11px;
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_playerName_nOdcT {
+  font-size: 14px;
+  margin-top: 0px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 10px;
+  margin-top: -6px;
+  margin-bottom: 3px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 12px;
+  margin-top: 0px;
+}
+.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_2Ri00,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00 a,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00 a:hover,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00 a:active,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00 a:visited {
+  color: #62813b;
+}
+.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_2Ri00.GamepadMode,
+.GamepadMode .ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_2Ri00,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_2Ri00,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00 a.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_2Ri00 a,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00 a:hover.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_2Ri00 a:hover,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00 a:active.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_2Ri00 a:active,
+.ingame .personanameandstatus_richPresenceLabel_2Ri00 a:visited.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_2Ri00 a:visited {
+  color: #236c39;
+}
+.ingame .SVGIcon_DoNotDisturb circle,
+.ingame .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.watchingbroadcast .personanameandstatus_playerName_nOdcT {
+  color: #c9bdf7;
+}
+.watchingbroadcast .personanameandstatus_richPresenceLabel_2Ri00,
+.watchingbroadcast
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a,
+.watchingbroadcast
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:hover,
+.watchingbroadcast
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:active,
+.watchingbroadcast
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:visited {
+  color: #8277b1;
+}
+.online .personanameandstatus_playerName_nOdcT {
+  color: #ccccd5;
+  color: #6dcff6;
+}
+.online .personanameandstatus_playerName_nOdcT.GamepadMode,
+.GamepadMode .online .personanameandstatus_playerName_nOdcT {
+  color: #fff;
+}
+.online .personanameandstatus_richPresenceLabel_2Ri00,
+.online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a,
+.online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:hover,
+.online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:active,
+.online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:visited {
+  color: #4c91ac;
+}
+.online .personanameandstatus_richPresenceLabel_2Ri00.GamepadMode,
+.GamepadMode .online .personanameandstatus_richPresenceLabel_2Ri00,
+.online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a,
+.online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:hover.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:hover,
+.online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:active.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:active,
+.online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:visited.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:visited {
+  color: #1a9fff;
+}
+.online .SVGIcon_DoNotDisturb circle,
+.online .SVGIcon_DoNotDisturb line {
+  stroke: #a0545a;
+}
+.offline .personanameandstatus_playerName_nOdcT {
+  color: #a0a0a0;
+}
+.offline .personanameandstatus_richPresenceLabel_2Ri00,
+.offline
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a,
+.offline
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:hover,
+.offline
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:active,
+.offline
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00
+  a:visited {
+  color: #6e6e6e;
+}
+.offline .SVGIcon_DoNotDisturb circle,
+.offline .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.offline .personanameandstatus_DNDContainer_3IswZ {
+  display: none;
+}
+.personanameandstatus_hidePersona_3ZJkO
+  .personanameandstatus_statusAndName_4ZTzG {
+  height: 100%;
+  align-items: center;
+  margin-top: 0px;
+}
+.personanameandstatus_compactView_3bbRZ.personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 10px;
+  margin-top: 1px;
+}
+.personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 10px;
+  line-height: 11px;
+}
+.personanameandstatus_compactView_3bbRZ
+  .ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 10px;
+  line-height: 14px;
+}
+.personanameandstatus_compactView_3bbRZ
+  .speaking
+  .personanameandstatus_playerName_nOdcT {
+  filter: brightness(1.5);
+}
+.personanameandstatus_compactView_3bbRZ .personanameandstatus_playerName_nOdcT,
+.personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_playerNickname_2saJT {
+  margin-bottom: -6px;
+  font-size: 12px;
+}
+.personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_noContextMenu_1JE5G
+  .personanameandstatus_playerName_nOdcT,
+.personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_noContextMenu_1JE5G
+  .personanameandstatus_playerNickname_2saJT {
+  margin-bottom: -2px;
+}
+.currentUserContainer .personanameandstatus_playerName_nOdcT {
+  font-size: 15px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  transition: color 0.94s ease-in-out;
+  text-shadow: 1px 1px 4px #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+}
+.currentUserContainer .personanameandstatus_statusAndName_4ZTzG {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -4px;
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 13px;
+}
+.currentUserContainer .personanameandstatus_richPresenceLabel_2Ri00 {
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer .personanameandstatus_richPresenceContainer_3sxE7 {
+  margin-top: 2px;
+  align-self: stretch;
+}
+.currentUserContainer
+  .personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_playerName_nOdcT {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.currentUserContainer
+  .personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  line-height: initial;
+}
+.currentUserContainer
+  .personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 12px;
+}
+.ChatTabs
+  .personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_playerName_nOdcT,
+.ChatTabs
+  .personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_playerNickname_2saJT {
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-overflow: clip;
+}
+.ChatTabs
+  .personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_playerNickname_2saJT {
+  color: #a2a6ac;
+}
+.ChatTabs
+  .personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  line-height: 11px;
+  font-size: 10px;
+  margin-top: -1px;
+}
+.ChatTabs
+  .personanameandstatus_compactView_3bbRZ:not(.personanameandstatus_twoLine_1BbOe)
+  .personanameandstatus_richPresenceLabel_2Ri00:not(.personanameandstatus_gameName_1cB0q) {
+  display: none;
+}
+.ChatTabs
+  .personanameandstatus_compactView_3bbRZ
+  .offline
+  .personanameandstatus_statusAndName_4ZTzG {
+  color: #ccc;
+}
+.ChatTabs
+  .personanameandstatus_compactView_3bbRZ
+  .offline
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  color: #888;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  display: inline-block;
+  transition: color 0.94s ease-in-out;
+  text-shadow: 1px 1px 3px #000;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_compactView_3bbRZ
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  margin-top: -4px;
+  margin-bottom: -2px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  margin-top: 0px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_compactView_3bbRZ.personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  margin-top: -4px;
+  margin-bottom: 0px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_richPresenceLabel_2Ri00:not(.personanameandstatus_gameName_1cB0q) {
+  font-size: 10px;
+  margin-top: -1px;
+  margin-bottom: 1px;
+}
+.titleBarContainer .currentUserContainer .ContextMenuButton {
+  margin-top: -4px;
+  margin-bottom: 4px;
+}
+.singlewindow .currentUserContainer .personanameandstatus_statusAndName_4ZTzG {
+  margin-right: 4px;
+}
+.singlewindow
+  .currentUserContainer
+  .personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_statusAndName_4ZTzG,
+.singlewindow .currentUserContainer .personanameandstatus_twoLine_1BbOe {
+  width: 100%;
+}
+.needsUpdate
+  .currentUserContainer
+  .personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_statusAndName_4ZTzG {
+  margin-right: 48px;
+}
+.friendRequests .bright .moMutualFriends .personanameandstatus_playerName_nOdcT,
+.friendRequests .personanameandstatus_playerName_nOdcT {
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+.friendRequests .noMutualFriends .personanameandstatus_playerName_nOdcT {
+  color: #aaa;
+  transition: color 0.2s ease-in-out;
+}
+.MemberListColumn
+  .personanameandstatus_statusAndName_4ZTzG
+  .personanameandstatus_richPresenceLabel_2Ri00,
+.MemberListColumn
+  .personanameandstatus_statusAndName_4ZTzG
+  .personanameandstatus_playerNickname_2saJT,
+.MemberListColumn
+  .personanameandstatus_statusAndName_4ZTzG
+  .personanameandstatus_playerName_nOdcT {
+  text-overflow: clip;
+  transition-delay: 0.4s;
+}
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_4ZTzG
+  .personanameandstatus_richPresenceLabel_2Ri00,
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_4ZTzG
+  .personanameandstatus_playerNickname_2saJT,
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_4ZTzG
+  .personanameandstatus_playerName_nOdcT {
+  text-overflow: clip;
+  transition-delay: 0s;
+}
+.groupMemberList .personanameandstatus_playerName_nOdcT,
+.groupMemberList .personanameandstatus_playerNickname_2saJT {
+  font-size: 13px;
+}
+.groupMemberList
+  .ingame
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 10px;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+.groupMemberList
+  .ingame.personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 12px;
+  margin-top: -1px;
+}
+.groupMemberList
+  .personanameandstatus_twoLine_1BbOe
+  .personanameandstatus_richPresenceLabel_2Ri00 {
+  font-size: 12px;
+}
+.groupMemberList .personanameandstatus_richPresenceLabel_2Ri00 {
+  line-height: 13px;
+}
+.Dialog_RemotePlay .awayOrSnooze .personanameandstatus_statusAndName_4ZTzG {
+  margin-bottom: -10px;
+}
+.Dialog_RemotePlay .ingame .personanameandstatus_playerName_nOdcT,
+.Dialog_RemotePlay .ingame .personanameandstatus_playerNickname_2saJT {
+  margin-top: 0px;
+  width: 175px;
+}
+.Dialog_RemotePlay .personanameandstatus_twoLine_1BbOe {
+  margin-top: -44px;
+  width: 175px;
+}
+.Dialog_RemotePlay .ingame .personanameandstatus_richPresenceLabel_2Ri00 {
+  margin-top: -15px;
+  width: 175px;
+  visibility: collapse;
+}
+.personanameandstatus_gameIsPrivateIcon_2gBKQ {
+  width: 28px;
+  height: 20px;
+  margin-top: -3px;
+  margin-left: 0px;
+  display: inline-block;
+}
+.personanameandstatus_gameIsPrivateIcon_2gBKQ svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: -8px;
+}
+.personanameandstatus_gameIsPrivateIcon_2gBKQ svg line,
+.personanameandstatus_gameIsPrivateIcon_2gBKQ svg path {
+  stroke: #6e8d50;
+}
+.personanameandstatus_PendingPersona_2sxXn {
+  margin-top: -6px;
+  margin-left: 4px;
+  display: inline-block;
+}
+.personanameandstatus_PendingPersona_2sxXn svg {
+  height: 12px;
+  width: 12px;
 }
 body.v6.rewards {
   background-color: #161a1f;

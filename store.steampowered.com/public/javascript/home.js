@@ -1712,6 +1712,15 @@ GHomepage = {
 	{
 		var $elCapsuleTarget = $J('.carousel_items', $elTarget);
 		var $elThumbTarget = $J('.carousel_thumbs', $elTarget);
+		var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode(); 
+		var strViewAllLink = "";
+
+				if ( bSupportTabletMode ) 
+		{
+			var $elAnchor = $J('a.view_all_link', $elTarget);
+			if ( $elAnchor && $elAnchor.attr('href') !== undefined ) 
+				strViewAllLink = $elAnchor.attr('href');
+		}
 
 		var bPaginated = !$elCapsuleTarget.hasClass('no_paging');
 
@@ -1756,6 +1765,12 @@ GHomepage = {
 			{
 				$elThumbTarget.append($J('<div/>'));
 			}
+		}
+
+				if ( bSupportTabletMode && strViewAllLink !== "" )
+		{
+			var $elPageViewMore = $J('<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="carousel_view_all store_capsule" onclick="window.location=\'' + strViewAllLink + '\'" ><div>View all</div></div>');
+			$elCapsuleTarget.append( $elPageViewMore );
 		}
 
 		if ( $elCapsuleTarget.children().length > 0 )

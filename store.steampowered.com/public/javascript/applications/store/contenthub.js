@@ -23,10 +23,10 @@
         _ = a("2vnA"),
         f = a("kyHq"),
         T = a("3+zv"),
-        y = a("5eAM"),
+        y = (a("Xhj9"), a("5eAM")),
         v = a("R+8l"),
-        F = a("oVVc"),
-        S = a("mgoM"),
+        S = a("oVVc"),
+        F = (a("SvTV"), a("35zc"), a("mgoM")),
         C = a("OS6B"),
         P = (function () {
           function e(e) {
@@ -314,7 +314,7 @@
                     o = new Array(30);
                   o.fill(""),
                     e.m_rgLanguages.forEach(function (e, t) {
-                      var a = Object(S.e)(e, -1);
+                      var a = Object(F.g)(e, -1);
                       -1 === a
                         ? console.warn("Unrecognized language: " + e)
                         : 0 <= a && a < 30 && (o[a] = n[t]);
@@ -400,7 +400,7 @@
           );
         })(),
         O = (new P(), a("dpTt")),
-        w = a("8KAw");
+        w = (a("AiWL"), a("8KAw"));
       !(function (e) {
         (e[(e.k_EList = 0)] = "k_EList"), (e[(e.k_EGrid = 1)] = "k_EGrid");
       })(r || (r = {}));
@@ -645,7 +645,7 @@
                           (l.items = l.items.concat(h)),
                           ++l.nPagesLoaded,
                           y.a.AddAppLinks(p.data.applinkinfo),
-                          F.b.AddPackages(p.data.packages),
+                          S.b.AddPackages(p.data.packages),
                           v.a.AddBundles(p.data.bundles),
                           this.m_mapTabToPagingData.set(i, c),
                           this.m_mapTabToFacetCounts.set(
@@ -947,7 +947,7 @@
               );
             }),
             (e.prototype.BSubPassesFilters = function (e) {
-              var t = F.b.GetPackageInfo(e);
+              var t = S.b.GetPackageInfo(e);
               if (!t) return !1;
               if (!this.BAppSetPassesFilters(t.appids)) return !1;
               var a = i.a.Get();
@@ -974,7 +974,7 @@
                       r = e.id;
                     switch (e.item_type.toLowerCase()) {
                       case "sub":
-                        var n = F.b.GetPackageInfo(r);
+                        var n = S.b.GetPackageInfo(r);
                         if (
                           1 !==
                           (null === (a = null == n ? void 0 : n.appids) ||
@@ -1118,14 +1118,14 @@
                     : t.items) || void 0 === a
                 ? void 0
                 : a.slice(0, m)) || [],
-            F = Object(h.b)(
+            S = Object(h.b)(
               v,
               I.a.Get().GetHomeView(),
               new h.a(),
               v.length,
               v.length
             ),
-            S = v.length - F.length,
+            F = v.length - S.length,
             C = s.GetViewType() === r.k_EList ? x.ContentsList : x.GridView,
             P = s.GetViewType() === r.k_EList && V.a.SaleItemBrowserRow;
           return o.a.createElement(
@@ -1134,7 +1134,7 @@
             o.a.createElement(
               "div",
               { className: x.ContentHubStorePrefsLink },
-              Boolean(S > 0) &&
+              Boolean(F > 0) &&
                 o.a.createElement(
                   "div",
                   { className: x.ContentHubStorePrefsLinkInner },
@@ -1153,7 +1153,7 @@
                           "#ContentHub_TabFiltered_ttip"
                         ),
                       },
-                      Object(u.l)("#ContentHub_TabFitlered", S)
+                      Object(u.l)("#ContentHub_TabFitlered", F)
                     )
                   )
                 )
@@ -1161,7 +1161,7 @@
             o.a.createElement(
               "div",
               { className: C },
-              F.map(function (e) {
+              S.map(function (e) {
                 var t,
                   a = void 0;
                 return (
@@ -1327,7 +1327,7 @@
                       });
                     },
                   }),
-                  o.a.createElement(B.M, null)
+                  o.a.createElement(B.P, null)
                 ),
                 o.a.createElement(L.h, {
                   rgOptions: p,

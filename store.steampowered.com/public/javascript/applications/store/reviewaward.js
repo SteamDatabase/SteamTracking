@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [102],
+  [73],
   {
     ARGL: function (e, t, a) {
       e.exports = {
@@ -52,7 +52,7 @@
           return L;
         }),
         a.d(t, "LibraryLoyaltyAwardModal", function () {
-          return T;
+          return j;
         });
       var n = a("mrSG"),
         r = a("q1tI"),
@@ -61,15 +61,15 @@
         s = a.n(i),
         c = a("Jqb/"),
         l = a("ARGL"),
-        d = a("TLQK"),
-        u = a("opsS"),
-        m = a("lkRc"),
-        p = a("WBba"),
-        b = a("2lpH"),
-        _ = a.n(b),
-        f = a("2vnA"),
-        h = a("bxBv"),
-        E = a("OU48"),
+        d = a("bxBv"),
+        u = (a("TX96"), a("TLQK")),
+        m = a("opsS"),
+        p = a("lkRc"),
+        b = a("WBba"),
+        _ = a("2lpH"),
+        f = a.n(_),
+        h = a("2vnA"),
+        E = (a("kyHq"), a("OU48")),
         g = (function () {
           function e(e) {
             (this.m_lPointsAvailable = null),
@@ -81,7 +81,7 @@
           }
           return (
             (e.prototype.BIsLoggedIn = function () {
-              return m.k.logged_in;
+              return p.k.logged_in;
             }),
             (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
@@ -95,7 +95,7 @@
                   switch (n.label) {
                     case 0:
                       return this.BIsLoggedIn()
-                        ? ((t = h.b.Init(E.a))
+                        ? ((t = d.b.Init(E.a))
                             .Body()
                             .set_target_type(this.m_eTargetType),
                           t.Body().set_targetid(this.m_targetID),
@@ -134,15 +134,15 @@
                     case 0:
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
-                          (e = h.b.Init(E.g)).SetBodyFields({
-                            steamid: m.k.steamid,
+                          (e = d.b.Init(E.g)).SetBodyFields({
+                            steamid: p.k.steamid,
                           }),
                           [4, E.o.GetSummary(this.m_transport, e)])
                         : [2, Promise.resolve(null)];
                     case 1:
                       return (
                         1 == (t = a.sent()).GetEResult()
-                          ? (this.m_lPointsAvailable = _.a.fromString(
+                          ? (this.m_lPointsAvailable = f.a.fromString(
                               t.Body().summary().points()
                             ))
                           : console.error(
@@ -170,7 +170,7 @@
                     case 0:
                       return (
                         (this.m_bReactionConfigurationLoadedOrInFlight = !0),
-                        (e = h.b.Init(E.e)),
+                        (e = d.b.Init(E.e)),
                         [4, E.o.GetReactionConfig(this.m_transport, e)]
                       );
                     case 1:
@@ -208,7 +208,7 @@
                     case 0:
                       return (
                         this.m_mapExistingReactions.clear(),
-                        (e = h.b.Init(E.f))
+                        (e = d.b.Init(E.f))
                           .Body()
                           .set_target_type(this.m_eTargetType),
                         e.Body().set_targetid(this.m_targetID),
@@ -233,15 +233,15 @@
                 });
               });
             }),
-            Object(n.c)([f.C.ref], e.prototype, "m_lPointsAvailable", void 0),
+            Object(n.c)([h.C.ref], e.prototype, "m_lPointsAvailable", void 0),
             Object(n.c)(
-              [f.C.deep],
+              [h.C.deep],
               e.prototype,
               "m_mapReactionConfiguration",
               void 0
             ),
             Object(n.c)(
-              [f.C.deep],
+              [h.C.deep],
               e.prototype,
               "m_mapExistingReactions",
               void 0
@@ -253,8 +253,9 @@
         v = a("qbgq"),
         y = a("0OaU"),
         O = a("6Y59");
+      a("mgoM");
       function A(e) {
-        return Object(d.f)("#RewardsReaction_" + e);
+        return Object(u.f)("#RewardsReaction_" + e);
       }
       var R,
         C = a("oet2"),
@@ -308,7 +309,7 @@
                   (t =
                     !this.props.bDisableAnimation &&
                     (this.state.bHovered || this.props.bForceAnimated)),
-                  m.d.STORE_CDN_URL +
+                  p.d.STORE_CDN_URL +
                     "public/images/loyalty/reactions/" +
                     (t ? "animated" : "still") +
                     "/" +
@@ -321,8 +322,8 @@
                 onMouseLeave: this.handleMouseOut,
               });
             }),
-            Object(n.c)([u.a], t.prototype, "handleMouseOver", null),
-            Object(n.c)([u.a], t.prototype, "handleMouseOut", null),
+            Object(n.c)([m.a], t.prototype, "handleMouseOver", null),
+            Object(n.c)([m.a], t.prototype, "handleMouseOut", null),
             t
           );
         })(r.PureComponent);
@@ -337,7 +338,7 @@
                   [
                     4,
                     s.a.get(
-                      Object(m.f)() + "pointssummary/ajaxgetasyncconfig",
+                      Object(p.f)() + "pointssummary/ajaxgetasyncconfig",
                       { withCredentials: !0 }
                     ),
                   ]
@@ -363,7 +364,7 @@
           });
         });
       }
-      var j = (function (e) {
+      var T = (function (e) {
           function t(t) {
             var a = e.call(this, t) || this;
             return (
@@ -397,7 +398,7 @@
                         ? [2]
                         : e
                         ? ((a.s_LoyaltyAwardModalStore = new g(e)), [2])
-                        : ((t = Object(m.h)(
+                        : ((t = Object(p.h)(
                             "loyaltystore",
                             "application_config"
                           )),
@@ -406,7 +407,7 @@
                       return (
                         (r = s.sent()),
                         (o = Object(n.a)(Object(n.a)({}, t), r)),
-                        (i = new p.a(m.d.WEBAPI_BASE_URL, o.webapi_token)),
+                        (i = new b.a(p.d.WEBAPI_BASE_URL, o.webapi_token)),
                         (a.s_LoyaltyAwardModalStore = new g(
                           i.GetServiceTransport()
                         )),
@@ -439,7 +440,7 @@
                       return e.setState({ bShowModal: !1 });
                     },
                   },
-                  r.createElement(B, null),
+                  r.createElement(M, null),
                   r.createElement(k, null),
                   r.createElement(
                     "div",
@@ -470,8 +471,8 @@
             (t = a = Object(n.c)([o.a], t))
           );
         })(r.Component),
-        T =
-          ((t.default = j),
+        j =
+          ((t.default = T),
           (function (e) {
             function t(t) {
               return e.call(this, t) || this;
@@ -536,10 +537,10 @@
                 o = t.ugcType,
                 i = t.store,
                 s = t.onDismiss,
-                u = this.state,
-                p = u.selectedReaction,
-                b = u.ePhase,
-                _ = u.celebrate;
+                d = this.state,
+                m = d.selectedReaction,
+                b = d.ePhase,
+                _ = d.celebrate;
               if (!a) return null;
               var f,
                 h = i.GetExistingReactions(),
@@ -567,51 +568,51 @@
                     n
                   );
                 })(E, n, o),
-                y = 0 === p ? null : E.get(p),
+                y = 0 === m ? null : E.get(m),
                 O = y ? y.points_cost : 0,
                 L = y ? y.points_transferred : 0,
                 G = "";
               switch (n) {
                 case 1:
-                  G = Object(d.f)("#GrantAwardDescription_Review");
+                  G = Object(u.f)("#GrantAwardDescription_Review");
                   break;
                 case 2:
-                  G = Object(d.f)("#GrantAwardDescription_UGC");
+                  G = Object(u.f)("#GrantAwardDescription_UGC");
                   break;
                 case 3:
-                  G = Object(d.f)("#GrantAwardDescription_Profile");
+                  G = Object(u.f)("#GrantAwardDescription_Profile");
                   break;
                 case 4:
-                  G = Object(d.f)("#GrantAwardDescription_ForumTopic");
+                  G = Object(u.f)("#GrantAwardDescription_ForumTopic");
                   break;
                 case 5:
-                  G = Object(d.f)("#GrantAwardDescription_Comment");
+                  G = Object(u.f)("#GrantAwardDescription_Comment");
               }
               switch (b) {
                 case R.SELECTING:
-                  var j = 0 === p || h.get(p),
-                    T = !g || g.greaterThanOrEqual(O),
+                  var T = 0 === m || h.get(m),
+                    j = !g || g.greaterThanOrEqual(O),
                     I = r.createElement(
                       S.p,
                       {
                         onClick: function () {
                           return e.setState({ ePhase: R.CONFIRM });
                         },
-                        disabled: j,
-                        title: Object(d.f)(
-                          j
+                        disabled: T,
+                        title: Object(u.f)(
+                          T
                             ? "#GrantAward_PromptTooltip"
                             : "#GrantAward_SubmitTooltip"
                         ),
                       },
-                      Object(d.f)(
-                        j ? "#GrantAward_SelectAward" : "#GrantAward_Next"
+                      Object(u.f)(
+                        T ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                       )
                     );
                   f = r.createElement(
                     r.Fragment,
                     null,
-                    r.createElement(B, { description: G }),
+                    r.createElement(M, { description: G }),
                     r.createElement(k, null),
                     0 === v.length &&
                       r.createElement(
@@ -635,27 +636,27 @@
                         return r.createElement(P, {
                           key: t,
                           reaction: t,
-                          selected: t === p && !h.get(t),
+                          selected: t === m && !h.get(t),
                           cost: E.get(t).points_cost,
                           alreadyAwarded: h.get(t),
                           onClick: function () {
                             h.get(t) ||
-                              e.setState({ selectedReaction: t === p ? 0 : t });
+                              e.setState({ selectedReaction: t === m ? 0 : t });
                           },
                         });
                       })
                     ),
                     r.createElement(k, null),
                     r.createElement(
-                      M,
+                      B,
                       { store: i },
-                      j || T
+                      T || j
                         ? I
                         : [
                             r.createElement(
                               "div",
                               { key: "msg", className: l.NotEnoughPoints },
-                              Object(d.f)(
+                              Object(u.f)(
                                 "#GrantAward_CantAfford",
                                 g.negate().add(O).toNumber().toLocaleString()
                               )
@@ -664,12 +665,12 @@
                               "a",
                               {
                                 key: "button",
-                                href: m.d.STORE_BASE_URL + "points/howitworks",
+                                href: p.d.STORE_BASE_URL + "points/howitworks",
                               },
                               r.createElement(
                                 S.d,
                                 { key: "button" },
-                                Object(d.f)("#GrantAward_HowToGetPoints")
+                                Object(u.f)("#GrantAward_HowToGetPoints")
                               )
                             ),
                           ]
@@ -682,7 +683,7 @@
                   f = r.createElement(
                     r.Fragment,
                     null,
-                    r.createElement(B, { description: G }),
+                    r.createElement(M, { description: G }),
                     r.createElement(k, null),
                     r.createElement(
                       "div",
@@ -697,31 +698,31 @@
                         },
                         r.createElement(N, {
                           className: l.ConfirmAwardImage,
-                          reactionType: p,
+                          reactionType: m,
                         }),
                         r.createElement(
                           "div",
                           { className: l.ConfirmText },
-                          Object(d.n)(
+                          Object(u.n)(
                             "#GrantAward_Confirm",
                             r.createElement(F, null, O.toLocaleString()),
                             r.createElement(
                               "span",
                               { className: l.AwardName },
-                              A(p)
+                              A(m)
                             )
                           )
                         ),
                         r.createElement(
                           "div",
                           { className: l.ConfirmText },
-                          Object(d.n)(
+                          Object(u.n)(
                             "#GrantAward_Confirm_Details",
                             r.createElement(F, null, L.toLocaleString()),
                             r.createElement(
                               "span",
                               { className: l.TimePeriod },
-                              Object(d.f)(
+                              Object(u.f)(
                                 "#GrantAward_Confirm_DetailsTimePeriod"
                               )
                             )
@@ -748,18 +749,18 @@
                         },
                         r.createElement(N, {
                           className: l.ConfirmAwardImage,
-                          reactionType: p,
+                          reactionType: m,
                         }),
                         r.createElement(
                           "div",
                           { className: l.SuccessText },
-                          Object(d.f)("#GrantAward_Success")
+                          Object(u.f)("#GrantAward_Success")
                         )
                       )
                     ),
                     r.createElement(k, null),
                     r.createElement(
-                      M,
+                      B,
                       { store: i },
                       r.createElement(
                         S.d,
@@ -769,16 +770,16 @@
                           },
                           disabled: b !== R.CONFIRM,
                         },
-                        Object(d.f)("#GrantAward_Back")
+                        Object(u.f)("#GrantAward_Back")
                       ),
                       r.createElement(
                         S.p,
                         {
                           onClick: this.GrantAward,
-                          title: Object(d.f)("#GrantAward_SubmitTooltip"),
+                          title: Object(u.f)("#GrantAward_SubmitTooltip"),
                           disabled: b !== R.CONFIRM,
                         },
-                        Object(d.f)("#GrantAwardNowButton")
+                        Object(u.f)("#GrantAwardNowButton")
                       )
                     )
                   );
@@ -787,33 +788,33 @@
                   var x = "";
                   switch (this.state.eResult) {
                     case 10:
-                      x = Object(d.f)("#GrantAwardError_Busy");
+                      x = Object(u.f)("#GrantAwardError_Busy");
                       break;
                     case 32:
-                      x = Object(d.f)("#GrantAwardError_PersistFailed");
+                      x = Object(u.f)("#GrantAwardError_PersistFailed");
                       break;
                     case 8:
-                      x = Object(d.f)("#GrantAwardError_InvalidParam");
+                      x = Object(u.f)("#GrantAwardError_InvalidParam");
                       break;
                     case 42:
-                      x = Object(d.f)("#GrantAwardError_NoMatch");
+                      x = Object(u.f)("#GrantAwardError_NoMatch");
                       break;
                     case 107:
-                      x = Object(d.f)("#GrantAwardError_InsufficientFunds");
+                      x = Object(u.f)("#GrantAwardError_InsufficientFunds");
                       break;
                     case 15:
-                      x = Object(d.f)("#GrantAwardError_AccessDenied");
+                      x = Object(u.f)("#GrantAwardError_AccessDenied");
                       break;
                     case 21:
-                      x = Object(d.f)("#GrantAwardError_NotLoggedOn");
+                      x = Object(u.f)("#GrantAwardError_NotLoggedOn");
                       break;
                     default:
-                      x = Object(d.f)("#GrantAwardError_Fail");
+                      x = Object(u.f)("#GrantAwardError_Fail");
                   }
                   f = r.createElement(
                     r.Fragment,
                     null,
-                    r.createElement(B, { description: G }),
+                    r.createElement(M, { description: G }),
                     r.createElement(k, null),
                     r.createElement(
                       "div",
@@ -826,7 +827,7 @@
                     ),
                     r.createElement(k, null),
                     r.createElement(
-                      M,
+                      B,
                       { store: i },
                       r.createElement(
                         S.d,
@@ -835,7 +836,7 @@
                             return e.setState({ ePhase: R.SELECTING });
                           },
                         },
-                        Object(d.f)("#GrantAward_Back")
+                        Object(u.f)("#GrantAward_Back")
                       )
                     )
                   );
@@ -872,11 +873,11 @@
                     : e.setState({ ePhase: R.ERROR, eResult: n });
                 }));
             }),
-            Object(n.c)([u.a], t.prototype, "GrantAward", null),
+            Object(n.c)([m.a], t.prototype, "GrantAward", null),
             (t = Object(n.c)([o.a], t))
           );
         })(r.Component),
-        B = function (e) {
+        M = function (e) {
           var t = e.description;
           return r.createElement(
             "div",
@@ -884,12 +885,12 @@
             r.createElement(
               "div",
               { className: l.Title },
-              Object(d.f)("#GrantAwardTitle")
+              Object(u.f)("#GrantAwardTitle")
             ),
             r.createElement("div", { className: l.Description }, t)
           );
         },
-        M = Object(o.a)(function (e) {
+        B = Object(o.a)(function (e) {
           var t = e.store,
             a = e.children,
             n = t.GetUserPointBalance(),
@@ -900,14 +901,14 @@
             r.createElement(
               "div",
               { className: l.Left },
-              r.createElement(O.L, { className: l.BalanceIcon }),
+              r.createElement(O.O, { className: l.BalanceIcon }),
               r.createElement(
                 "div",
                 { className: l.BalanceDetails },
                 r.createElement(
                   "div",
                   { className: l.BalanceLabel },
-                  Object(d.f)("#YourBalance")
+                  Object(u.f)("#YourBalance")
                 ),
                 r.createElement("div", { className: l.BalanceAmount }, o)
               )
@@ -926,9 +927,9 @@
                 "a",
                 {
                   className: l.FooterLink,
-                  href: m.d.STORE_BASE_URL + "points/howitworks",
+                  href: p.d.STORE_BASE_URL + "points/howitworks",
                 },
-                Object(d.f)("#GrantAward_PointsLink")
+                Object(u.f)("#GrantAward_PointsLink")
               )
             )
           );
@@ -990,8 +991,8 @@
                 o && r.createElement(L, { className: l.IconCheckMark })
               );
             }),
-            Object(n.c)([u.a], t.prototype, "handleMouseOver", null),
-            Object(n.c)([u.a], t.prototype, "handleMouseOut", null),
+            Object(n.c)([m.a], t.prototype, "handleMouseOver", null),
+            Object(n.c)([m.a], t.prototype, "handleMouseOut", null),
             t
           );
         })(r.PureComponent),
@@ -1005,7 +1006,7 @@
           return r.createElement(
             "span",
             Object(n.a)({}, o, { className: Object(w.a)(a, l.PointsAmount) }),
-            r.createElement(O.L, { className: l.PointsAmountIcon }),
+            r.createElement(O.O, { className: l.PointsAmountIcon }),
             t
           );
         };

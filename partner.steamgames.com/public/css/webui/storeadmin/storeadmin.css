@@ -2011,946 +2011,6 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
 .apps_App_1zK68.apps_App_1zK68.apps_App_1zK68 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
-.emoticon_NewEmoticonIndicator_1C57N {
-  background: radial-gradient(
-    ellipse farthest-corner at 50% 50%,
-    rgba(255, 153, 0, 0.8) 0%,
-    rgba(233, 154, 35, 0.2) 45%,
-    rgba(233, 154, 35, 0) 85%
-  );
-  position: absolute;
-  top: -5%;
-  right: -5%;
-  left: 55%;
-  bottom: 55%;
-  display: flex;
-  align-items: center;
-}
-.emoticon_NewEmoticonIndicator_1C57N .emoticon_NewEmoticonCircle_GGVoN {
-  width: 5px;
-  height: 5px;
-  background-color: #ff0;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: auto;
-}
-.emoticon_EmoticonSelector_3edp7 {
-  max-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  max-width: 302px;
-}
-.emoticon_EmoticonSelector_3edp7
-  img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
-  width: 27px;
-  height: 27px;
-}
-.emoticon_EmoticonSelector_Emoticons_14GpU {
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  flex: 1;
-}
-.emoticon_EmoticonSelector_Separator_3dJ4t {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-}
-.emoticon_EmoticonSelector_Separator_3dJ4t
-  .emoticon_EmoticonSelector_SeparatorBackground_1HXez {
-  height: 2px;
-  background: #8492a4;
-}
-.emoticon_EmoticonSelector_Controls_DMSj4 {
-  display: flex;
-  align-content: flex-start;
-  padding: 5px;
-  flex-shrink: 0;
-}
-.emoticon_EmoticonSelector_Item_9Tx9E {
-  margin: 2px;
-  width: 28px;
-  height: 28px;
-  padding: 5px 0;
-  cursor: pointer;
-  text-align: center;
-}
-.emoticon_EmoticonSelector_Item_9Tx9E:hover
-  .emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
-  transform: scale(1.25);
-  filter: brightness(1.25);
-}
-.emoticon_EmoticonSelector_Item_New_3_oPQ {
-  position: relative;
-}
-img.emoticon_emoticon_qjpFK {
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  transition: all 0.1s ease-in-out;
-}
-img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
-  width: 32px;
-  height: 32px;
-  margin-top: -14px;
-  margin-bottom: -14px;
-}
-.emoticon_EffectHeading_rsnGD,
-.emoticon_StickerHeading_nblUf {
-  text-transform: uppercase;
-  color: gray;
-  font-size: 10px;
-  padding: 5px;
-  letter-spacing: 1.5px;
-  width: 100%;
-}
-.emoticon_GetFestive_2DF3r {
-  padding: 5px;
-}
-.emoticon_GetFestive_2DF3r > a {
-  color: #fff;
-  text-decoration: none;
-}
-.emoticon_TopDivider_19a4f {
-  height: 2px;
-  width: 90%;
-  background-color: #2b2c2f;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  margin: 4px;
-}
-.emoticon_BottomDivider_1l3M9 {
-  height: 2px;
-  width: 90%;
-  background-color: #2b2c2f;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  margin: 4px;
-  margin-top: 5px;
-}
-.emoticon_StickerButton_2t-Ul {
-  width: 40px;
-  height: 40px;
-}
-.emoticon_EffectButton_2Te-5 {
-  width: 64px;
-  height: 64px;
-}
-.emoticon_hover_arrow {
-  width: 13px;
-  height: 26px;
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/popups/hover_arrow_both.gif");
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 26px;
-}
-.emoticon_hover_arrow.left {
-  background-position: left top;
-  left: 0.5px;
-}
-.emoticon_hover_arrow.right {
-  background-position: right top;
-  right: 0.5px;
-}
-.hover_arrow {
-  position: absolute;
-  top: 30px;
-}
-.emoticon_hover_content {
-  padding: 6px 10px 6px 6px;
-  background-color: #3b3938;
-  border: 1px solid #797979;
-  margin: 12px;
-  box-shadow: 0 0 12px #000;
-  white-space: nowrap;
-}
-.emoticon_hover_content.client {
-  margin: 0;
-  box-shadow: none;
-  display: inline-block;
-}
-.emoticon_hover_content_inner {
-  position: relative;
-  min-height: 54px;
-  padding-left: 62px;
-  font-size: 13px;
-}
-.emoticon_hover_content_inner img.emoticon_large {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.emoticon_hover_title {
-  padding-top: 8px;
-  color: #898989;
-}
-.emoticon_hover_desc {
-  color: #686868;
-}
-.emoticon_EmoticonHover_3EctP {
-  margin: 0 4px;
-  padding: 8px;
-  min-width: 160px;
-  min-height: 54px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #1c1d22;
-  border-radius: 4px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
-}
-.emoticon_EmoticonHover_3EctP .emoticon_Info_3gaCL {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: flex-start;
-  text-align: left;
-  padding-left: 8px;
-}
-.emoticon_EmoticonHover_3EctP .emoticon_Info_3gaCL .emoticon_Name_gVSxt {
-  font-size: 14px;
-  padding-bottom: 2px;
-}
-.emoticon_EmoticonHover_3EctP .emoticon_Info_3gaCL .emoticon_AppName_94Ble {
-  font-size: 12px;
-}
-.emoticon_StickerHoverSticker_BtXZh,
-.emoticon_EffectHoverEffect_nXwBd {
-  max-width: 80px;
-  max-height: 80px;
-}
-.emoticon_PickerTab_JLpe2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  width: 100%;
-  height: 100%;
-}
-.emoticon_PickerTab_JLpe2 svg {
-  width: 100%;
-  height: 100%;
-}
-.emoticon_PickerTab_JLpe2.emoticon_Clock_242v- {
-  padding: 2px;
-}
-.emoticon_EmoticonItem_3tUBT {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.addonpicker_Picker_3JFhJ {
-  border-radius: 6px;
-  max-width: min(364px, 100vw);
-  max-width: 364px;
-  min-width: min(364px, 100vw);
-  min-width: 364px;
-  max-height: min(364px, 100vh);
-  max-height: 364px;
-  min-height: min(364px, 100vh);
-  min-height: 364px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.addonpicker_Tabs_1KrWp {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  border-bottom: 2px solid #2b2c2f;
-}
-.addonpicker_Tab_EDF4t {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-bottom: 4px solid transparent;
-  padding: 2px 2px;
-  cursor: pointer;
-}
-.addonpicker_Tab_EDF4t.addonpicker_Focus_PNj6F .addonpicker_TabContent_3vjgj {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.addonpicker_Tab_EDF4t.addonpicker_Active_1QhnQ {
-  border-bottom: 4px solid #4297f8;
-  cursor: default;
-}
-.addonpicker_Tab_EDF4t .addonpicker_TabContent_3vjgj {
-  border-radius: 4px;
-  padding: 4px;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0.8;
-}
-.addonpicker_Tab_EDF4t
-  .addonpicker_TabContent_3vjgj:hover:not(.addonpicker_Active_1QhnQ) {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.addonpicker_Tab_EDF4t .addonpicker_TabContent_3vjgj.addonpicker_Active_1QhnQ {
-  padding: 2px;
-  width: 28px;
-  height: 28px;
-  opacity: 1;
-}
-.addonpicker_Content_2Kmzi {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  overflow-y: auto;
-  padding: 0 12px;
-}
-.addonpicker_ItemList_17ttb {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX {
-  padding: 3px;
-  margin: 1px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX:hover,
-.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX.addonpicker_Focus_PNj6F {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.addonpicker_SectionedPageTitle_1KNxZ,
-.addonpicker_SectionTitle_2a1Mv {
-  text-transform: uppercase;
-  color: gray;
-  padding: 8px 0;
-  letter-spacing: 1.5px;
-  width: 100%;
-}
-.addonpicker_SectionTitle_2a1Mv {
-  font-size: 14px;
-}
-.addonpicker_SectionedPageTitle_1KNxZ {
-  font-size: 16px;
-}
-.addonpicker_FilterInputContainer_3yi7o {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 6px;
-}
-.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf {
-  box-sizing: border-box;
-  height: 28px;
-  background-color: #2b2c2f;
-}
-.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:hover,
-.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:focus {
-  background-color: #2b2c2f !important;
-}
-.addonpicker_AddonPickerMessage_gd4kh {
-  font-size: 13px;
-  font-style: italic;
-  padding-bottom: 4px;
-}
-.addonpicker_AddonPickerMessage_gd4kh a {
-  color: #4297f8;
-  text-decoration: none;
-}
-.suggestdialog_mentionDialogPosition_1z636 {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-.suggestdialog_mentionDialog_HApJl {
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  right: 0;
-  background: #2c3036;
-  padding: 12px 0px 12px 12px;
-  box-shadow: 0 0 32px 0px #000000ab;
-  overflow-y: auto;
-  overflow-x: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.suggestdialog_mentionDialog_HApJl:focus {
-  outline: none;
-}
-.suggestdialog_mentionSearchText_1dD3t {
-  color: #818181;
-  margin-bottom: 10px;
-  font-size: 12px;
-}
-.suggestdialog_suggestOption_1QvuK {
-  color: #adaeaf;
-  transition-property: padding-left, color;
-  transition-duration: 0.15s;
-  transition-timing-function: ease-out;
-  line-height: 26px;
-  cursor: pointer;
-  margin-top: 0px;
-  padding-left: 22px;
-  margin-right: 12px;
-  overflow: hidden;
-}
-.suggestdialog_suggestOption_1QvuK .suggestdialog_nickname_oIL9F {
-  color: #6e6e6e;
-}
-.suggestdialog_suggestOption_1QvuK.suggestdialog_selected_G1CRe {
-  color: #dfe3e6;
-  background-color: #434953;
-  padding-left: 30px;
-}
-span.suggestdialog_mentionSearchMatch_1t0Xl {
-  color: #dfe3e6;
-}
-.emoticonsuggestion_Emoticon_Toggle_2ipvk {
-  margin-right: 8px;
-  border-radius: 3px;
-  cursor: pointer;
-  padding: 4px 6px;
-}
-.emoticonsuggestion_Emoticon_Toggle_2ipvk.emoticonsuggestion_Active_1_3I1 {
-  background: #777;
-}
-.emoticonsuggestion_Emoticon_ogyqP {
-  position: relative;
-  display: inline-block;
-  margin-right: 8px;
-  padding: 0 4px;
-}
-.bbcodesuggestions_BBCode_Toggle_3wvfn {
-  margin-right: 8px;
-  border-radius: 3px;
-  cursor: pointer;
-  padding: 4px 6px;
-}
-.bbcodesuggestions_BBCode_Toggle_3wvfn.bbcodesuggestions_Active_xWvhE {
-  background: #777;
-}
-.bbcodesuggestions_BBCode_157dR {
-  position: relative;
-  display: inline-block;
-  margin-right: 8px;
-  padding: 0 4px;
-}
-.chatentry_chatEntryControls_SZTCn {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  background-color: #1b1c20;
-  box-shadow: inset 0px 0px 4px #000;
-  outline-width: 0px;
-  color: #aaa;
-  border: 0px solid transparent;
-  padding-right: 2px;
-}
-.chatentry_chatTextarea_p_BR4 {
-  resize: none;
-  margin-right: 4px;
-  height: 42px;
-  background-color: transparent;
-  box-shadow: inset 0px 0px 4px transparent;
-  outline-width: 0px;
-  color: #aaa;
-  border: 0px solid transparent;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  padding: 4px 4px 4px 8px;
-  flex-shrink: 1;
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-}
-.chatentry_chatEntryActionsGroup_resTe {
-  padding: 2px;
-  box-shadow: #000 0px 0px 4px inset;
-  background-color: #1b1c20;
-  margin-left: 8px;
-}
-.chatentry_chatEntryActionsContainer_39fOa,
-.chatentry_chatEntryActionsGroup_resTe {
-  display: flex;
-  flex-direction: row;
-}
-.chatentry_chatEntryActionsContainer_39fOa {
-  max-height: 50px;
-  align-self: flex-end;
-}
-.chatentry_minHeightZero_2EV39 {
-  min-height: 0;
-}
-.compactView .chatentry_chatTextarea_p_BR4 {
-  height: 24px;
-  line-height: 18px;
-}
-.chatentry_chatSubmitButton_nLfX9 {
-  position: relative;
-  background-color: #3d424b;
-  border: 1px solid #1b1c20;
-  color: #c9c9c9;
-  margin: 0px;
-  margin-top: 2px;
-  max-width: 46px;
-  max-height: 46px;
-  padding: 0;
-  background-image: none;
-  background-size: 22px 22px;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-width: 46px;
-  cursor: pointer;
-}
-.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC,
-.chatentry_chatSubmitButton_nLfX9.chatentry_EmoticonPickerButton_3AOY3 {
-  flex: 0;
-  min-width: 46px;
-  position: relative;
-  color: #898989;
-  background-color: #2c3036;
-  margin: 0px;
-  margin-top: 0px;
-  max-width: 46px;
-  max-height: 50px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC {
-  max-width: 46px;
-  max-height: 46px;
-}
-.chatentry_chatSubmitButton_nLfX9:focus {
-  outline: none;
-}
-.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC:hover,
-.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC:focus {
-  background-color: #3d424b;
-}
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
-  .SVGIcon_Button.SVGIcon_Submit
-  path,
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
-  .SVGIcon_Button.SVGIcon_Submit
-  path {
-  fill: #fff;
-  stroke: #fff;
-}
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
-  .SVGIcon_Button,
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
-  .SVGIcon_Button {
-  fill: #f5ffd7;
-}
-.chatentry_chatSubmitButton_nLfX9.chatentry_Inactive_iKKPK
-  .SVGIcon_Microphone_Off {
-  opacity: 1;
-}
-.chatentry_chatSubmitButton_nLfX9.chatentry_disabled_25WK3 {
-  color: #898989;
-  cursor: default;
-  background-color: #2c3036;
-}
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
-  .SVGIcon_VoiceRoom,
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
-  .SVGIcon_VoiceRoom {
-  fill: rgba(0, 0, 0, 0);
-  stroke: #f5ffd7;
-}
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
-  .SVGIcon_VoiceRoom
-  .chatentry_AudioLines_1_HMB,
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
-  .SVGIcon_VoiceRoom
-  .chatentry_AudioLines_1_HMB {
-  fill: #f5ffd7;
-}
-.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
-  .SVGIcon_VoiceRoom,
-.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
-  .SVGIcon_VoiceRoom {
-  fill: #fff;
-  stroke: #000;
-}
-.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
-  .SVGIcon_VoiceRoom
-  .chatentry_AudioLines_1_HMB,
-.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
-  .SVGIcon_VoiceRoom
-  .chatentry_AudioLines_1_HMB {
-  fill: #000;
-}
-.chatentry_chatSubmitButton_nLfX9 .SVGIcon_Submit {
-  width: 24px;
-  height: 24px;
-  margin-top: 3px;
-}
-.chatentry_chatSubmitButton_nLfX9 .SVGIcon_Submit path {
-  fill: #8592a5;
-  stroke-width: 2px;
-}
-.chatentry_EmbedButton_cyYZC {
-  background-image: none;
-  margin-right: 2px;
-  font-size: 28px;
-  text-align: center;
-  color: #8492a4;
-  padding: 0px;
-}
-.chatentry_EmbedButton_cyYZC .SVGIcon_Paperclip {
-  width: 26px;
-  height: 26px;
-}
-.chatentry_EmbedButton_cyYZC .SVGIcon_Paperclip path {
-  stroke: #8492a4;
-  stroke-width: 12px;
-}
-.chatentry_EmbedButton_cyYZC:focus .SVGIcon_Paperclip path,
-.chatentry_EmbedButton_cyYZC:hover .SVGIcon_Paperclip path,
-.SVGIcon_Paperclip {
-  stroke: #fff;
-}
-.chatentry_EmoticonPickerButton_3AOY3 {
-  margin-right: 1px;
-}
-.chatentry_EmoticonPickerButton_3AOY3:hover,
-.chatentry_EmoticonPickerButton_3AOY3:focus {
-  background-color: #3d424b;
-}
-.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon {
-  width: 26px;
-  height: 26px;
-}
-.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_CSGO {
-  width: 32px;
-  height: 32px;
-  fill: #dfc408;
-  margin-left: 1px;
-  margin-top: 4px;
-}
-.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon line,
-.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon circle,
-.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon path {
-  stroke: #8492a4;
-  stroke-width: 10px;
-}
-.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon line {
-  stroke-width: 16px;
-}
-.chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon line,
-.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon line,
-.chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon circle,
-.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon circle,
-.chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon path,
-.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon path {
-  stroke: #fff;
-}
-.chatentry_chatEntryControls_SZTCn .chatentry_chatSubmitButton_nLfX9 {
-  align-self: flex-end;
-  min-height: 46px;
-  margin-bottom: 2px;
-}
-.compactView
-  .chatentry_chatEntryControls_SZTCn
-  .chatentry_chatSubmitButton_nLfX9 {
-  height: 28px;
-  min-height: 28px;
-  margin-bottom: 2px;
-}
-.compactView .chatentry_chatSubmitButton_nLfX9 {
-  min-width: 32px;
-}
-.chatEntry.compactView .chatentry_chatSubmitButton_nLfX9 svg {
-  width: 20px;
-  height: 20px;
-}
-.ChatMessageEntryVoice {
-  flex: 0;
-  min-width: 46px;
-  position: relative;
-  color: #c9c9c9;
-  margin: 0px;
-  margin-top: 0px;
-  max-width: 46px;
-  max-height: 50px;
-  padding: 2px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 8px;
-  box-shadow: #000 0px 0px 4px inset;
-  transition-property: width, max-width, min-width, border-radius,
-    background-position;
-  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
-  background: radial-gradient(
-    128px 128px at 20% 50%,
-    #1da834 0%,
-    rgba(27, 28, 32, 0) 100%
-  );
-  background-position: -190px 0px;
-  background-color: #1b1c20;
-  background-repeat: no-repeat;
-  background-size: 256px 128px;
-}
-.friendListHeaderContainer .activeVoicePushToTalk,
-.ChatMessageEntryVoice .activeVoicePushToTalk {
-  font-size: 11px;
-  margin-top: 12px;
-  margin-bottom: -18px;
-  opacity: 1;
-  transition: opacity 0.3s ease-out;
-  white-space: nowrap;
-  user-select: none;
-}
-.ChatMessageEntryVoice.Disabled {
-  opacity: 0.2;
-  border: 1px dashed #000;
-  outline: 2px solid #0007;
-}
-.ChatMessageEntryVoice.Active {
-  min-width: 136px;
-  max-width: 136px;
-  width: 136px;
-  background-position: 0px 0px;
-}
-.ChatMessageEntryVoice .buttonsContainer {
-  display: flex;
-}
-.ChatMessageEntryVoice .activeVoicePushToTalk {
-  position: absolute;
-  top: 33px;
-  left: 49px;
-  width: 87px;
-  text-align: center;
-  color: #74c069;
-  background-color: #0005;
-  font-size: 10px;
-  margin-top: 0px;
-}
-.ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons {
-  margin-top: -8px;
-}
-.ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
-  min-height: 14px;
-}
-.ChatMessageEntryVoice.pushToTalkEnabled
-  .activeVoiceButtons
-  .SVGIcon_Button.SVGIcon_Shadow {
-  top: 2px;
-}
-.ChatMessageEntryVoice .activeVoiceButtons {
-  min-width: 0px;
-  width: 84px;
-}
-.ChatMessageEntryVoice .activeVoiceControls {
-  min-width: 0px;
-  width: 84px;
-  border-top: 0px solid transparent;
-  border-bottom: 0px solid transparent;
-  background: none;
-}
-.ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
-  pointer-events: none;
-}
-.ChatMessageEntryVoice.Active
-  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
-.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
-  background-color: rgba(197, 23, 11, 0.5);
-  transition-duration: 0s;
-}
-.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
-  transform: translateX(-64px) scale(0.7);
-  transition-property: transform, opacity;
-  transition-duration: 0.16s;
-  transition-timing-function: ease-in-out;
-  opacity: 0;
-  cursor: pointer;
-}
-.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
-  transform: translateX(-32px) scale(0.5);
-  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  cursor: pointer;
-}
-.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleVoiceOutputButton,
-.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
-  opacity: 1;
-  transform: translateX(0px) scale(1);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
-    background-color 0.1s ease-in-out;
-}
-.ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
-  display: none;
-}
-.ChatMessageEntryVoice.Active .VoiceControlPanelButton:active,
-.VoiceControlPanelButton:active {
-  background-color: rgba(97, 253, 151, 0.5);
-}
-.ChatMessageEntryVoice.pushToTalkEnabled
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone,
-.friendListHeaderContainer
-  .pushToTalkEnabled
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone {
-  fill: rgba(200, 241, 194, 0.2);
-}
-.ChatMessageEntryVoice.pushToTalkEnabled
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone.SVGIcon_Shadow,
-.friendListHeaderContainer
-  .pushToTalkEnabled
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone.SVGIcon_Shadow {
-  fill: rgba(0, 0, 0, 0.2);
-}
-.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone.SVGIcon_Shadow,
-.friendListHeaderContainer
-  .pushToTalkEnabled.pushToTalkKeyDown
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone.SVGIcon_Shadow {
-  fill: #000;
-}
-.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone,
-.friendListHeaderContainer
-  .pushToTalkEnabled.pushToTalkKeyDown
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone {
-  fill: #c8f1c2;
-}
-.chatEntry.compactView .VoiceToggle {
-  height: 28px;
-}
-.chatEntry.compactView .VoiceToggleIconCtn {
-  height: 24px;
-  top: 3px;
-}
-.chatEntry.compactView .activeVoiceFlexBox {
-  height: 28px;
-}
-.chatEntry.compactView .activeVoiceButtons button {
-  max-width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-  max-height: 28px;
-  margin-top: 2px;
-}
-.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow {
-  top: 6px;
-  left: 10px;
-}
-.chatEntry.compactView
-  .VoiceControlPanelButton:active
-  .SVGIcon_Microphone.SVGIcon_Shadow,
-.chatEntry.compactView
-  .VoiceControlPanelButton:active
-  .SVGIcon_Headphones.SVGIcon_Shadow {
-  top: 3px;
-  left: 7px;
-}
-.chatEntry.compactView
-  .VoiceControlPanelButton.ToggleVoiceOutputButton
-  .SVGIcon_Headphones,
-.chatEntry.compactView
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone {
-  padding-top: 2px;
-  width: 20px;
-  height: 20px;
-}
-.VoiceToggle.Inactive:hover {
-  background-color: #3d424b;
-}
-.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons {
-  width: 64px;
-}
-.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls {
-  width: 64px;
-}
-.chatEntry.compactView .ChatMessageEntryVoice.Active {
-  min-width: 114px;
-  max-width: 114px;
-  width: 114px;
-}
-.chatEntry.compactView
-  .ChatMessageEntryVoice.pushToTalkEnabled
-  .activeVoiceButtons {
-  margin-top: -2px;
-}
-.chatEntry.compactView
-  .ChatMessageEntryVoice.pushToTalkEnabled
-  .VoiceControlPanelButton {
-  min-height: 14px;
-}
-.chatEntry.compactView
-  .ChatMessageEntryVoice.pushToTalkEnabled
-  .activeVoiceButtons
-  .SVGIcon_Button.SVGIcon_Shadow {
-  top: 2px;
-}
-.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk {
-  top: 18px;
-  right: 0px;
-  width: 66px;
-  text-align: center;
-  color: #74c069;
-  background-color: #0000;
-}
-@keyframes gamepadui_svg_library_SpinnerSpokeFade_OIpeq {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
-.gamepadui_svg_library_Spinner_qznu9 > path {
-  animation: gamepadui_svg_library_SpinnerSpokeFade_OIpeq 0.6s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(1) {
-  animation-delay: -0.925s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(2) {
-  animation-delay: -0.85s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(3) {
-  animation-delay: -0.775s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(4) {
-  animation-delay: -0.7s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(5) {
-  animation-delay: -0.625s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(6) {
-  animation-delay: -0.55s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(7) {
-  animation-delay: -0.475s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(8) {
-  animation-delay: -0.4s;
-}
 .partnereventshared_PartnerEventFont_jl62C {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -3572,6 +2632,946 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   border: 1px solid #c44848;
   font-size: 14px;
   color: #c44848;
+}
+.suggestdialog_mentionDialogPosition_1z636 {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.suggestdialog_mentionDialog_HApJl {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  background: #2c3036;
+  padding: 12px 0px 12px 12px;
+  box-shadow: 0 0 32px 0px #000000ab;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.suggestdialog_mentionDialog_HApJl:focus {
+  outline: none;
+}
+.suggestdialog_mentionSearchText_1dD3t {
+  color: #818181;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.suggestdialog_suggestOption_1QvuK {
+  color: #adaeaf;
+  transition-property: padding-left, color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  line-height: 26px;
+  cursor: pointer;
+  margin-top: 0px;
+  padding-left: 22px;
+  margin-right: 12px;
+  overflow: hidden;
+}
+.suggestdialog_suggestOption_1QvuK .suggestdialog_nickname_oIL9F {
+  color: #6e6e6e;
+}
+.suggestdialog_suggestOption_1QvuK.suggestdialog_selected_G1CRe {
+  color: #dfe3e6;
+  background-color: #434953;
+  padding-left: 30px;
+}
+span.suggestdialog_mentionSearchMatch_1t0Xl {
+  color: #dfe3e6;
+}
+.emoticon_NewEmoticonIndicator_1C57N {
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 50%,
+    rgba(255, 153, 0, 0.8) 0%,
+    rgba(233, 154, 35, 0.2) 45%,
+    rgba(233, 154, 35, 0) 85%
+  );
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  left: 55%;
+  bottom: 55%;
+  display: flex;
+  align-items: center;
+}
+.emoticon_NewEmoticonIndicator_1C57N .emoticon_NewEmoticonCircle_GGVoN {
+  width: 5px;
+  height: 5px;
+  background-color: #ff0;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+.emoticon_EmoticonSelector_3edp7 {
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 302px;
+}
+.emoticon_EmoticonSelector_3edp7
+  img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
+  width: 27px;
+  height: 27px;
+}
+.emoticon_EmoticonSelector_Emoticons_14GpU {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  flex: 1;
+}
+.emoticon_EmoticonSelector_Separator_3dJ4t {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+.emoticon_EmoticonSelector_Separator_3dJ4t
+  .emoticon_EmoticonSelector_SeparatorBackground_1HXez {
+  height: 2px;
+  background: #8492a4;
+}
+.emoticon_EmoticonSelector_Controls_DMSj4 {
+  display: flex;
+  align-content: flex-start;
+  padding: 5px;
+  flex-shrink: 0;
+}
+.emoticon_EmoticonSelector_Item_9Tx9E {
+  margin: 2px;
+  width: 28px;
+  height: 28px;
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: center;
+}
+.emoticon_EmoticonSelector_Item_9Tx9E:hover
+  .emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
+  transform: scale(1.25);
+  filter: brightness(1.25);
+}
+.emoticon_EmoticonSelector_Item_New_3_oPQ {
+  position: relative;
+}
+img.emoticon_emoticon_qjpFK {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  transition: all 0.1s ease-in-out;
+}
+img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
+  width: 32px;
+  height: 32px;
+  margin-top: -14px;
+  margin-bottom: -14px;
+}
+.emoticon_EffectHeading_rsnGD,
+.emoticon_StickerHeading_nblUf {
+  text-transform: uppercase;
+  color: gray;
+  font-size: 10px;
+  padding: 5px;
+  letter-spacing: 1.5px;
+  width: 100%;
+}
+.emoticon_GetFestive_2DF3r {
+  padding: 5px;
+}
+.emoticon_GetFestive_2DF3r > a {
+  color: #fff;
+  text-decoration: none;
+}
+.emoticon_TopDivider_19a4f {
+  height: 2px;
+  width: 90%;
+  background-color: #2b2c2f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+}
+.emoticon_BottomDivider_1l3M9 {
+  height: 2px;
+  width: 90%;
+  background-color: #2b2c2f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+  margin-top: 5px;
+}
+.emoticon_StickerButton_2t-Ul {
+  width: 40px;
+  height: 40px;
+}
+.emoticon_EffectButton_2Te-5 {
+  width: 64px;
+  height: 64px;
+}
+.emoticon_hover_arrow {
+  width: 13px;
+  height: 26px;
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/popups/hover_arrow_both.gif");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 26px;
+}
+.emoticon_hover_arrow.left {
+  background-position: left top;
+  left: 0.5px;
+}
+.emoticon_hover_arrow.right {
+  background-position: right top;
+  right: 0.5px;
+}
+.hover_arrow {
+  position: absolute;
+  top: 30px;
+}
+.emoticon_hover_content {
+  padding: 6px 10px 6px 6px;
+  background-color: #3b3938;
+  border: 1px solid #797979;
+  margin: 12px;
+  box-shadow: 0 0 12px #000;
+  white-space: nowrap;
+}
+.emoticon_hover_content.client {
+  margin: 0;
+  box-shadow: none;
+  display: inline-block;
+}
+.emoticon_hover_content_inner {
+  position: relative;
+  min-height: 54px;
+  padding-left: 62px;
+  font-size: 13px;
+}
+.emoticon_hover_content_inner img.emoticon_large {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.emoticon_hover_title {
+  padding-top: 8px;
+  color: #898989;
+}
+.emoticon_hover_desc {
+  color: #686868;
+}
+.emoticon_EmoticonHover_3EctP {
+  margin: 0 4px;
+  padding: 8px;
+  min-width: 160px;
+  min-height: 54px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1c1d22;
+  border-radius: 4px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.emoticon_EmoticonHover_3EctP .emoticon_Info_3gaCL {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 8px;
+}
+.emoticon_EmoticonHover_3EctP .emoticon_Info_3gaCL .emoticon_Name_gVSxt {
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+.emoticon_EmoticonHover_3EctP .emoticon_Info_3gaCL .emoticon_AppName_94Ble {
+  font-size: 12px;
+}
+.emoticon_StickerHoverSticker_BtXZh,
+.emoticon_EffectHoverEffect_nXwBd {
+  max-width: 80px;
+  max-height: 80px;
+}
+.emoticon_PickerTab_JLpe2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+.emoticon_PickerTab_JLpe2 svg {
+  width: 100%;
+  height: 100%;
+}
+.emoticon_PickerTab_JLpe2.emoticon_Clock_242v- {
+  padding: 2px;
+}
+.emoticon_EmoticonItem_3tUBT {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.addonpicker_Picker_3JFhJ {
+  border-radius: 6px;
+  max-width: min(364px, 100vw);
+  max-width: 364px;
+  min-width: min(364px, 100vw);
+  min-width: 364px;
+  max-height: min(364px, 100vh);
+  max-height: 364px;
+  min-height: min(364px, 100vh);
+  min-height: 364px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.addonpicker_Tabs_1KrWp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #2b2c2f;
+}
+.addonpicker_Tab_EDF4t {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+  padding: 2px 2px;
+  cursor: pointer;
+}
+.addonpicker_Tab_EDF4t.addonpicker_Focus_PNj6F .addonpicker_TabContent_3vjgj {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.addonpicker_Tab_EDF4t.addonpicker_Active_1QhnQ {
+  border-bottom: 4px solid #4297f8;
+  cursor: default;
+}
+.addonpicker_Tab_EDF4t .addonpicker_TabContent_3vjgj {
+  border-radius: 4px;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.8;
+}
+.addonpicker_Tab_EDF4t
+  .addonpicker_TabContent_3vjgj:hover:not(.addonpicker_Active_1QhnQ) {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.addonpicker_Tab_EDF4t .addonpicker_TabContent_3vjgj.addonpicker_Active_1QhnQ {
+  padding: 2px;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+}
+.addonpicker_Content_2Kmzi {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px;
+}
+.addonpicker_ItemList_17ttb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX {
+  padding: 3px;
+  margin: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX:hover,
+.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX.addonpicker_Focus_PNj6F {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.addonpicker_SectionedPageTitle_1KNxZ,
+.addonpicker_SectionTitle_2a1Mv {
+  text-transform: uppercase;
+  color: gray;
+  padding: 8px 0;
+  letter-spacing: 1.5px;
+  width: 100%;
+}
+.addonpicker_SectionTitle_2a1Mv {
+  font-size: 14px;
+}
+.addonpicker_SectionedPageTitle_1KNxZ {
+  font-size: 16px;
+}
+.addonpicker_FilterInputContainer_3yi7o {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+}
+.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf {
+  box-sizing: border-box;
+  height: 28px;
+  background-color: #2b2c2f;
+}
+.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:hover,
+.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:focus {
+  background-color: #2b2c2f !important;
+}
+.addonpicker_AddonPickerMessage_gd4kh {
+  font-size: 13px;
+  font-style: italic;
+  padding-bottom: 4px;
+}
+.addonpicker_AddonPickerMessage_gd4kh a {
+  color: #4297f8;
+  text-decoration: none;
+}
+.emoticonsuggestion_Emoticon_Toggle_2ipvk {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.emoticonsuggestion_Emoticon_Toggle_2ipvk.emoticonsuggestion_Active_1_3I1 {
+  background: #777;
+}
+.emoticonsuggestion_Emoticon_ogyqP {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px;
+}
+.bbcodesuggestions_BBCode_Toggle_3wvfn {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.bbcodesuggestions_BBCode_Toggle_3wvfn.bbcodesuggestions_Active_xWvhE {
+  background: #777;
+}
+.bbcodesuggestions_BBCode_157dR {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px;
+}
+.chatentry_chatEntryControls_SZTCn {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: #1b1c20;
+  box-shadow: inset 0px 0px 4px #000;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  padding-right: 2px;
+}
+.chatentry_chatTextarea_p_BR4 {
+  resize: none;
+  margin-right: 4px;
+  height: 42px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 4px transparent;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 4px 4px 4px 8px;
+  flex-shrink: 1;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.chatentry_chatEntryActionsGroup_resTe {
+  padding: 2px;
+  box-shadow: #000 0px 0px 4px inset;
+  background-color: #1b1c20;
+  margin-left: 8px;
+}
+.chatentry_chatEntryActionsContainer_39fOa,
+.chatentry_chatEntryActionsGroup_resTe {
+  display: flex;
+  flex-direction: row;
+}
+.chatentry_chatEntryActionsContainer_39fOa {
+  max-height: 50px;
+  align-self: flex-end;
+}
+.chatentry_minHeightZero_2EV39 {
+  min-height: 0;
+}
+.compactView .chatentry_chatTextarea_p_BR4 {
+  height: 24px;
+  line-height: 18px;
+}
+.chatentry_chatSubmitButton_nLfX9 {
+  position: relative;
+  background-color: #3d424b;
+  border: 1px solid #1b1c20;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 2px;
+  max-width: 46px;
+  max-height: 46px;
+  padding: 0;
+  background-image: none;
+  background-size: 22px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 46px;
+  cursor: pointer;
+}
+.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC,
+.chatentry_chatSubmitButton_nLfX9.chatentry_EmoticonPickerButton_3AOY3 {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #898989;
+  background-color: #2c3036;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC {
+  max-width: 46px;
+  max-height: 46px;
+}
+.chatentry_chatSubmitButton_nLfX9:focus {
+  outline: none;
+}
+.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC:hover,
+.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC:focus {
+  background-color: #3d424b;
+}
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #fff;
+  stroke: #fff;
+}
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_Button,
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
+  .SVGIcon_Button {
+  fill: #f5ffd7;
+}
+.chatentry_chatSubmitButton_nLfX9.chatentry_Inactive_iKKPK
+  .SVGIcon_Microphone_Off {
+  opacity: 1;
+}
+.chatentry_chatSubmitButton_nLfX9.chatentry_disabled_25WK3 {
+  color: #898989;
+  cursor: default;
+  background-color: #2c3036;
+}
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_VoiceRoom,
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
+  .SVGIcon_VoiceRoom {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #f5ffd7;
+}
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1_HMB,
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1_HMB {
+  fill: #f5ffd7;
+}
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_VoiceRoom,
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
+  .SVGIcon_VoiceRoom {
+  fill: #fff;
+  stroke: #000;
+}
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1_HMB,
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1_HMB {
+  fill: #000;
+}
+.chatentry_chatSubmitButton_nLfX9 .SVGIcon_Submit {
+  width: 24px;
+  height: 24px;
+  margin-top: 3px;
+}
+.chatentry_chatSubmitButton_nLfX9 .SVGIcon_Submit path {
+  fill: #8592a5;
+  stroke-width: 2px;
+}
+.chatentry_EmbedButton_cyYZC {
+  background-image: none;
+  margin-right: 2px;
+  font-size: 28px;
+  text-align: center;
+  color: #8492a4;
+  padding: 0px;
+}
+.chatentry_EmbedButton_cyYZC .SVGIcon_Paperclip {
+  width: 26px;
+  height: 26px;
+}
+.chatentry_EmbedButton_cyYZC .SVGIcon_Paperclip path {
+  stroke: #8492a4;
+  stroke-width: 12px;
+}
+.chatentry_EmbedButton_cyYZC:focus .SVGIcon_Paperclip path,
+.chatentry_EmbedButton_cyYZC:hover .SVGIcon_Paperclip path,
+.SVGIcon_Paperclip {
+  stroke: #fff;
+}
+.chatentry_EmoticonPickerButton_3AOY3 {
+  margin-right: 1px;
+}
+.chatentry_EmoticonPickerButton_3AOY3:hover,
+.chatentry_EmoticonPickerButton_3AOY3:focus {
+  background-color: #3d424b;
+}
+.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon {
+  width: 26px;
+  height: 26px;
+}
+.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_CSGO {
+  width: 32px;
+  height: 32px;
+  fill: #dfc408;
+  margin-left: 1px;
+  margin-top: 4px;
+}
+.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon path {
+  stroke: #8492a4;
+  stroke-width: 10px;
+}
+.chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon line {
+  stroke-width: 16px;
+}
+.chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon path,
+.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon path {
+  stroke: #fff;
+}
+.chatentry_chatEntryControls_SZTCn .chatentry_chatSubmitButton_nLfX9 {
+  align-self: flex-end;
+  min-height: 46px;
+  margin-bottom: 2px;
+}
+.compactView
+  .chatentry_chatEntryControls_SZTCn
+  .chatentry_chatSubmitButton_nLfX9 {
+  height: 28px;
+  min-height: 28px;
+  margin-bottom: 2px;
+}
+.compactView .chatentry_chatSubmitButton_nLfX9 {
+  min-width: 32px;
+}
+.chatEntry.compactView .chatentry_chatSubmitButton_nLfX9 svg {
+  width: 20px;
+  height: 20px;
+}
+.ChatMessageEntryVoice {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 50px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  box-shadow: #000 0px 0px 4px inset;
+  transition-property: width, max-width, min-width, border-radius,
+    background-position;
+  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
+  background: radial-gradient(
+    128px 128px at 20% 50%,
+    #1da834 0%,
+    rgba(27, 28, 32, 0) 100%
+  );
+  background-position: -190px 0px;
+  background-color: #1b1c20;
+  background-repeat: no-repeat;
+  background-size: 256px 128px;
+}
+.friendListHeaderContainer .activeVoicePushToTalk,
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  font-size: 11px;
+  margin-top: 12px;
+  margin-bottom: -18px;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+  white-space: nowrap;
+  user-select: none;
+}
+.ChatMessageEntryVoice.Disabled {
+  opacity: 0.2;
+  border: 1px dashed #000;
+  outline: 2px solid #0007;
+}
+.ChatMessageEntryVoice.Active {
+  min-width: 136px;
+  max-width: 136px;
+  width: 136px;
+  background-position: 0px 0px;
+}
+.ChatMessageEntryVoice .buttonsContainer {
+  display: flex;
+}
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  position: absolute;
+  top: 33px;
+  left: 49px;
+  width: 87px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0005;
+  font-size: 10px;
+  margin-top: 0px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons {
+  margin-top: -8px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.ChatMessageEntryVoice .activeVoiceButtons {
+  min-width: 0px;
+  width: 84px;
+}
+.ChatMessageEntryVoice .activeVoiceControls {
+  min-width: 0px;
+  width: 84px;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  background: none;
+}
+.ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
+  pointer-events: none;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
+  background-color: rgba(197, 23, 11, 0.5);
+  transition-duration: 0s;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
+  transform: translateX(-64px) scale(0.7);
+  transition-property: transform, opacity;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
+  transform: translateX(-32px) scale(0.5);
+  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleVoiceOutputButton,
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
+  opacity: 1;
+  transform: translateX(0px) scale(1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    background-color 0.1s ease-in-out;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
+  display: none;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton:active,
+.VoiceControlPanelButton:active {
+  background-color: rgba(97, 253, 151, 0.5);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: rgba(200, 241, 194, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: rgba(0, 0, 0, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: #000;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: #c8f1c2;
+}
+.chatEntry.compactView .VoiceToggle {
+  height: 28px;
+}
+.chatEntry.compactView .VoiceToggleIconCtn {
+  height: 24px;
+  top: 3px;
+}
+.chatEntry.compactView .activeVoiceFlexBox {
+  height: 28px;
+}
+.chatEntry.compactView .activeVoiceButtons button {
+  max-width: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-height: 28px;
+  margin-top: 2px;
+}
+.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow {
+  top: 6px;
+  left: 10px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Headphones.SVGIcon_Shadow {
+  top: 3px;
+  left: 7px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleVoiceOutputButton
+  .SVGIcon_Headphones,
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  padding-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+.VoiceToggle.Inactive:hover {
+  background-color: #3d424b;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice.Active {
+  min-width: 114px;
+  max-width: 114px;
+  width: 114px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons {
+  margin-top: -2px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk {
+  top: 18px;
+  right: 0px;
+  width: 66px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0000;
+}
+@keyframes gamepadui_svg_library_SpinnerSpokeFade_OIpeq {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.gamepadui_svg_library_Spinner_qznu9 > path {
+  animation: gamepadui_svg_library_SpinnerSpokeFade_OIpeq 0.6s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(1) {
+  animation-delay: -0.925s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(2) {
+  animation-delay: -0.85s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(3) {
+  animation-delay: -0.775s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(4) {
+  animation-delay: -0.7s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(5) {
+  animation-delay: -0.625s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(6) {
+  animation-delay: -0.55s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(7) {
+  animation-delay: -0.475s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(8) {
+  animation-delay: -0.4s;
 }
 .reorderablelist_WhitelistNumber_2-g5s {
   width: 30px;
@@ -5046,6 +5046,11 @@ a.bbcodes_LinkButton_14_Fn:hover {
   letter-spacing: 1px;
   margin-bottom: 4px;
 }
+@media screen and (max-width: 940px) {
+  .creatorhomeembed_Title_F4d0U {
+    margin-left: 16px;
+  }
+}
 .creatorhomeembed_Followers_C8_ve {
   display: block;
   padding: 0px 6px;
@@ -5969,6 +5974,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 }
 @media screen and (max-width: 560px) {
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO.salepreviewwidgets_SaleItemDefaultCapsuleDisplay_1aVmE {
+    grid-template-columns: auto auto 25% 25%;
     grid-template-rows: auto auto;
     grid-template-areas: "left left left left" "right right right right";
   }
@@ -6261,10 +6267,15 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   flex-direction: row;
   width: fit-content;
 }
+.AppSummaryWidgetCtn .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .salepreviewwidgets_WidgetReleaseDateAndPlatformCtn_1TLXA {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  width: fit-content;
+  align-items: center;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_WidgetReleaseDateAndPlatformCtn_1TLXA {
@@ -6277,7 +6288,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   text-align: left;
   display: flex;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: 0px;
   margin-right: 10px;
   flex-shrink: 0;
 }
@@ -6287,7 +6298,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   }
 }
 .salepreviewwidgets_StoreSaleWidgetTags_1Z-HK {
-  height: 25px;
+  height: 22px;
   overflow: hidden;
   margin-top: 4px;
   text-align: left;
@@ -6336,6 +6347,9 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   .salepreviewwidgets_StoreSaleWidgetShortDesc_1ZwKj {
     display: none;
   }
+}
+.AppSummaryWidgetCtn .salepreviewwidgets_StoreSaleWidgetShortDesc_1ZwKj {
+  display: none;
 }
 .salepreviewwidgets_LibraryAssetExpandedDisplay_2oeoi
   .salepreviewwidgets_StoreSaleWidgetShortDesc_1ZwKj {
@@ -6462,13 +6476,14 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
   .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
-  > div {
-  margin-bottom: 1px;
+  .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8 {
+  width: 100%;
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
   .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
-  .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8 {
-  width: 100%;
+  .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8
+  > div {
+  margin-bottom: 1px;
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
   .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
@@ -6513,7 +6528,13 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8 {
   display: flex;
   justify-content: flex-end;
+  flex-direction: row-reverse;
   padding: 0;
+}
+.salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
+  .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
+  .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8 {
+  flex-direction: column;
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_SaleItemDefaultCapsuleDisplay_1aVmE
@@ -6604,7 +6625,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   color: #a3cf06;
 }
 .salepreviewwidgets_Discounted_2eiid {
-  margin: 0 0 0 4px;
+  margin: 0 6px 0 0;
   display: flex;
   align-items: center;
 }
@@ -7243,7 +7264,6 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
   .salepreviewwidgets_StoreSaleWidgetRight_2e3GD {
   flex-grow: 1;
-  padding-right: 0;
   position: relative;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
@@ -7296,7 +7316,6 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
   .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN
   .salepreviewwidgets_CapsulePlatform_2WmOV {
-  margin-bottom: 8px;
   opacity: 50%;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
@@ -7305,7 +7324,8 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
   .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN
   .salepreviewwidgets_StoreSaleWidgetTags_1Z-HK {
-  margin-top: auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7570,13 +7590,6 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
     .salepreviewwidgets_TitleCtn_OPaZY {
     margin-top: 4px;
-  }
-  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
-    .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
-    .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:hover
-    .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
-    .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
-    margin-top: 8px;
   }
   .salepreviewwidgets_SaleItemBrowserRow_11Ka5
     .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -8043,177 +8056,6 @@ html.touch
   background: rgba(255, 255, 255, 0.1);
   font-size: 14px;
   padding: 8px;
-}
-.carousel_carouselNavButton_2aDk- {
-  border: none;
-  background-color: transparent;
-  outline: none !important;
-  display: flex;
-  cursor: pointer;
-  padding: 0px;
-}
-.carousel_carouselNavButton_2aDk-:hover svg {
-  opacity: 1;
-  filter: drop-shadow(0px 0px 10px black);
-}
-.carousel_carouselNavButton_2aDk-:disabled svg {
-  opacity: 0.1;
-  filter: none;
-}
-.carousel_carouselNavButton_2aDk-.carousel_left_1UJsC {
-  transform: rotateZ(180deg);
-}
-.carousel_carouselNavButton_2aDk- svg {
-  opacity: 0.7;
-  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
-  fill: #fff;
-}
-.carousel_carouselBtnCtn_2pHZR {
-  display: flex;
-  z-index: 1;
-  align-items: center;
-  position: absolute;
-  padding: 0px;
-  width: 50px;
-  top: 0px;
-  bottom: 0px;
-}
-.carousel_carouselBtnCtn_2pHZR.carousel_left_1UJsC {
-  left: -68px;
-}
-.carousel_carouselBtnCtn_2pHZR.carousel_right_3c5Rn {
-  right: -68px;
-}
-.carousel_carouselBtnCtn_2pHZR svg {
-  width: 50px;
-  height: 50px;
-}
-.carousel_carouselBody_Ddtl_ {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.carousel_sliderBody_1pbmb {
-  position: relative;
-}
-.SaleSectionCarousel .carousel__slider {
-  padding: 10px 0px;
-  margin: -10px -7px 0px -7px;
-}
-html.responsive.touch .SaleSectionCarousel .carousel__slider {
-  margin: 0;
-}
-@media screen and (max-width: 910px) {
-  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
-    margin: 0;
-  }
-}
-.carousel_breadcrumbContainer_7T5ex {
-  display: flex;
-  justify-content: center;
-  margin-top: 12px;
-}
-.carousel_pipList_ySooA {
-  display: flex;
-  flex-flow: row;
-}
-.carousel_pipScrollerContainer_lZK0K {
-  display: flex;
-  flex-direction: row;
-  height: 35px;
-  margin: 2px 10px 0px 10px;
-}
-.contenthubmaincarousel .carousel_pipScrollerContainer_lZK0K {
-  max-width: 940px;
-  width: 100%;
-  margin: 0px auto;
-}
-.carousel_pipScrollerContainer_lZK0K .carousel_pipScrollButton_1CBMC {
-  width: 40px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-}
-.carousel_pipScrollerContainer_lZK0K
-  .carousel_pipScrollButton_1CBMC.carousel_left_1UJsC {
-  padding-left: 0px;
-  padding-right: 20px;
-}
-.carousel_pipScrollerContainer_lZK0K .carousel_pipScrollButton_1CBMC svg {
-  height: 30px;
-}
-.carousel_pipScrollerContainer_lZK0K .carousel_scrollNavDiv_1u09A {
-  display: block;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-}
-.carousel_pipScrollerContainer_lZK0K
-  .carousel_scrollNavDiv_1u09A
-  .carousel_scrollNavButton_20w4K {
-  width: 100%;
-  height: 100%;
-}
-.carousel_pipScrollerContainer_lZK0K .carousel_pipScroller_1-1oD {
-  position: relative;
-  flex-grow: 1;
-  height: 100%;
-}
-.carousel_pipScrollerContainer_lZK0K
-  .carousel_pipScroller_1-1oD
-  .carousel_scrollBackground_1XZth {
-  position: absolute;
-  left: 0px;
-  top: 17px;
-  bottom: 17px;
-  right: 0px;
-  background-color: rgba(255, 255, 255, 0.13);
-  margin: auto 0;
-}
-.carousel_pipScrollerContainer_lZK0K
-  .carousel_pipScroller_1-1oD
-  .carousel_scrollForeground_30Mw0 {
-  position: absolute;
-  top: 16px;
-  bottom: 16px;
-  background-color: rgba(255, 255, 255, 0.35);
-  transition: left right;
-  transition-duration: 0.4s;
-}
-.carousel_pipContainer_2-04r {
-  padding-top: 10px;
-}
-.carousel_pipContainer_2-04r .carousel_pip_Y10KP {
-  width: 28px;
-  height: 25px;
-  position: relative;
-}
-.carousel_pipContainer_2-04r .carousel_pip_Y10KP .carousel_pipNumber_270FF {
-  position: absolute;
-  top: 3px;
-  left: 0px;
-  right: 0px;
-  text-align: center;
-}
-.carousel_pip_Y10KP {
-  border: none;
-  background-color: transparent;
-  outline: none !important;
-  cursor: pointer;
-  width: 18px;
-  height: 15px;
-  opacity: 0.3;
-  padding: 1px 2px;
-  margin: 0px;
-  transition: opacity 0.2s;
-}
-.carousel_pip_Y10KP img {
-  width: 100%;
-  height: 100%;
-}
-.carousel_pip_Y10KP.carousel__dot--selected {
-  opacity: 1;
 }
 .storesuggest_SuggestContainer_2cC_r ._DialogLayout {
   margin-bottom: 2px;
@@ -9004,7 +8846,7 @@ body.v6.partner_events {
   position: relative;
   background: #24282e;
 }
-@media screen and (min-width: 910px) {
+@media screen and (min-width: 940px) {
   .partnereventdisplay_EventDetailsPageContainer_20XlT .AppPartnerEventsBanner {
     display: none;
   }
@@ -9054,6 +8896,10 @@ body.v6.partner_events {
   .partnereventdisplay_EventBodyPosition_1_EgC {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .partnereventdisplay_EventBodyPosition_1_EgC .OtherEventsCtn {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .partnereventdisplay_EventBody_2YAxc {
@@ -9139,7 +8985,7 @@ body.v6.partner_events {
   -webkit-mask-image: unset;
   mask-image: unset;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 940px) {
   .partnereventdisplay_InLibraryView_1wfkI
     .partnereventdisplay_EventCoverImage_3Es9h,
   .partnereventdisplay_InLibraryView_1wfkI
@@ -9217,7 +9063,7 @@ body.v6.partner_events {
   padding: 3px 24px 24px 0px;
   align-items: flex-start;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 940px) {
   body .partnereventdisplay_EventColumns_1-31n {
     flex-direction: column;
   }
@@ -9312,6 +9158,7 @@ body.v6.partner_events {
 }
 .partnereventdisplay_EventDetailTitle_3tRR7 {
   font-size: 33px;
+  line-height: 36px;
   font-weight: 200;
   color: #eaeaeb;
 }
@@ -9356,6 +9203,7 @@ body.v6.partner_events {
 }
 .partnereventdisplay_EventDetailsSubTitle_3kWwD {
   font-size: 22px;
+  line-height: 25px;
   color: #adaeb2;
 }
 .partnereventdisplay_EventDetailsBody_1jV9Y {
@@ -9458,7 +9306,7 @@ body.v6.partner_events {
   display: flex;
   flex-direction: column;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 940px) {
   .partnereventdisplay_EventDetailTimeInfo_1LYF7 {
     display: flex;
     flex-direction: row;
@@ -9557,7 +9405,7 @@ body.v6.partner_events {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 940px) {
   .partnereventdisplay_AppSummaryCtn_UC5kX
     .partnereventdisplay_EventBodyPosition_1_EgC {
     display: block;
@@ -9576,6 +9424,12 @@ body.v6.partner_events {
   margin-bottom: 4px;
   font-size: 13px;
 }
+@media screen and (max-width: 500px) {
+  .partnereventdisplay_AppSummaryWidgetTitleCtn_1FDzc
+    .partnereventdisplay_Title_il5ra {
+    margin-left: 16px;
+  }
+}
 .partnereventdisplay_AppSummaryWidgetCtn_1h15t {
   flex-grow: 2;
   flex-basis: 0;
@@ -9585,7 +9439,7 @@ body.v6.partner_events {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 940px) {
   .partnereventdisplay_AppSummaryWidgetCtn_1h15t {
     width: 100%;
     box-sizing: border-box;
@@ -14004,6 +13858,177 @@ html:not(.touch)
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.carousel_carouselNavButton_2aDk- {
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  display: flex;
+  cursor: pointer;
+  padding: 0px;
+}
+.carousel_carouselNavButton_2aDk-:hover svg {
+  opacity: 1;
+  filter: drop-shadow(0px 0px 10px black);
+}
+.carousel_carouselNavButton_2aDk-:disabled svg {
+  opacity: 0.1;
+  filter: none;
+}
+.carousel_carouselNavButton_2aDk-.carousel_left_1UJsC {
+  transform: rotateZ(180deg);
+}
+.carousel_carouselNavButton_2aDk- svg {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+  fill: #fff;
+}
+.carousel_carouselBtnCtn_2pHZR {
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  position: absolute;
+  padding: 0px;
+  width: 50px;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_carouselBtnCtn_2pHZR.carousel_left_1UJsC {
+  left: -68px;
+}
+.carousel_carouselBtnCtn_2pHZR.carousel_right_3c5Rn {
+  right: -68px;
+}
+.carousel_carouselBtnCtn_2pHZR svg {
+  width: 50px;
+  height: 50px;
+}
+.carousel_carouselBody_Ddtl_ {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.carousel_sliderBody_1pbmb {
+  position: relative;
+}
+.SaleSectionCarousel .carousel__slider {
+  padding: 10px 0px;
+  margin: -10px -7px 0px -7px;
+}
+html.responsive.touch .SaleSectionCarousel .carousel__slider {
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+    margin: 0;
+  }
+}
+.carousel_breadcrumbContainer_7T5ex {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.carousel_pipList_ySooA {
+  display: flex;
+  flex-flow: row;
+}
+.carousel_pipScrollerContainer_lZK0K {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  margin: 2px 10px 0px 10px;
+}
+.contenthubmaincarousel .carousel_pipScrollerContainer_lZK0K {
+  max-width: 940px;
+  width: 100%;
+  margin: 0px auto;
+}
+.carousel_pipScrollerContainer_lZK0K .carousel_pipScrollButton_1CBMC {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.carousel_pipScrollerContainer_lZK0K
+  .carousel_pipScrollButton_1CBMC.carousel_left_1UJsC {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.carousel_pipScrollerContainer_lZK0K .carousel_pipScrollButton_1CBMC svg {
+  height: 30px;
+}
+.carousel_pipScrollerContainer_lZK0K .carousel_scrollNavDiv_1u09A {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_pipScrollerContainer_lZK0K
+  .carousel_scrollNavDiv_1u09A
+  .carousel_scrollNavButton_20w4K {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_lZK0K .carousel_pipScroller_1-1oD {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_lZK0K
+  .carousel_pipScroller_1-1oD
+  .carousel_scrollBackground_1XZth {
+  position: absolute;
+  left: 0px;
+  top: 17px;
+  bottom: 17px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.13);
+  margin: auto 0;
+}
+.carousel_pipScrollerContainer_lZK0K
+  .carousel_pipScroller_1-1oD
+  .carousel_scrollForeground_30Mw0 {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: left right;
+  transition-duration: 0.4s;
+}
+.carousel_pipContainer_2-04r {
+  padding-top: 10px;
+}
+.carousel_pipContainer_2-04r .carousel_pip_Y10KP {
+  width: 28px;
+  height: 25px;
+  position: relative;
+}
+.carousel_pipContainer_2-04r .carousel_pip_Y10KP .carousel_pipNumber_270FF {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.carousel_pip_Y10KP {
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  cursor: pointer;
+  width: 18px;
+  height: 15px;
+  opacity: 0.3;
+  padding: 1px 2px;
+  margin: 0px;
+  transition: opacity 0.2s;
+}
+.carousel_pip_Y10KP img {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pip_Y10KP.carousel__dot--selected {
+  opacity: 1;
 }
 .eventtilecarousel_EventTileCarousel_Q2o5R {
   width: 100%;
@@ -21234,8 +21259,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 16px;
-  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  color: #dfe3e6;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountsFilterBar_1Rr15
@@ -21246,7 +21272,15 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountsFilterBar_1Rr15
   .discountgrid_DiscountFilterCheckbox_2K2Ri {
-  margin: 8px 20px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 35px;
+  margin-right: 20px;
+  margin-top: 8px;
+  background: #25272d;
+  padding: 4px 20px 4px 12px;
+  border-radius: 3px;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountsFilterBar_1Rr15
@@ -21274,6 +21308,11 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   flex-shrink: 1;
   min-height: 200px;
   display: flex;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .tabulator {
+  min-width: 100%;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
@@ -21421,6 +21460,12 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
   .tabulator
+  .tabulator-row:hover {
+  cursor: default;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .tabulator
   .tabulator-row.tabulator-group {
   width: 100%;
   min-width: unset;
@@ -21561,12 +21606,21 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   font-size: 11px;
   color: #6e7581;
   line-height: 20px;
+  display: flex;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .tabulator
+  .tabulator-cell.discountgrid_PackageID_3UCAR
+  .formatterCell {
+  display: flex;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
   .tabulator
   .tabulator-cell.discountgrid_PackageName_2FXK3 {
   color: #fff;
+  display: block;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
@@ -21582,6 +21636,24 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   padding-right: 8px;
   box-sizing: border-box;
   border-radius: 2px;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .tabulator
+  .tabulator-cell.discountgrid_PackageName_2FXK3
+  .formatterCell {
+  display: block;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .tabulator
+  .tabulator-cell.discountgrid_PackageName_2FXK3
+  .formatterCell
+  a {
+  display: block;
+  line-height: 33px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
@@ -21642,13 +21714,25 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   .discountgrid_DiscountGrid_39Ize
   .discountgrid_DataCell_3V8Jb
   .discountgrid_DiscountInput_2bWSQ.discountgrid_NonZeroDiscount_2Pn0h {
-  color: #a4d007;
+  color: #1b97ff;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb
+  .discountgrid_DiscountInput_2bWSQ.discountgrid_DiscountTooLow_17g5Z {
+  color: #a15212;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
   .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk
   .discountgrid_DiscountInput_2bWSQ {
   padding: 9px 0;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk
+  .discountgrid_DiscountInput_2bWSQ.discountgrid_NonZeroDiscount_2Pn0h {
+  color: #a4d007;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
@@ -21674,6 +21758,12 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb
+  .discountgrid_TextCell_30Pxi {
+  color: #4c5158;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
@@ -21752,6 +21842,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   background-color: #3e424c;
   display: flex;
   font-size: 14px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
 }
 .discountgrid_ConflictToolTip_1nSci svg {
   height: 30px;
@@ -21816,6 +21907,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 }
 .savetoolbar_NavigationWarning_123Gv {
   margin-bottom: 8px;
+}
+.savetoolbar_DiscountTooLowWarning_3ACuu {
+  margin-top: 8px;
+  color: #a15212;
+}
+.savetoolbar_DiscountTooLow_3bgrT {
+  color: #a15212;
 }
 .savetoolbar_SeeDetailsSection_2vKJr {
   margin-top: 12px;
@@ -22332,6 +22430,97 @@ div.savetoolbar_HoverToolTip_gba9O {
 .collapseablesection_required_title_CKeWA {
   display: flex;
 }
+.invitesdashboard_SelectedAppCtn_1kLuQ {
+  margin: 20px 0px;
+}
+.invitesdashboard_SelectedAppCtn_1kLuQ .invitesdashboard_SelectedApp_3FFre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.invitesdashboard_SelectedAppCtn_1kLuQ
+  .invitesdashboard_SelectedApp_3FFre
+  .invitesdashboard_AppName_1FeTr {
+  color: #fff;
+  font-size: 21px;
+  margin-left: 12px;
+}
+.invitesdashboard_InviteBtnCtn_2iMIj button.DialogButton {
+  padding: 2px 12px;
+}
+.invitesdashboard_InvitedAppsCtn_3Fouw {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  padding: 18px 18px 8px 18px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+.invitesdashboard_InvitedAppsCtn_3Fouw .invitesdashboard_InviteTitleCtn_IO0gU {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 16px 0;
+}
+.invitesdashboard_InvitedAppsCtn_3Fouw
+  .invitesdashboard_InvitedAppsRowScrollCtn_uIqPl {
+  overflow-x: scroll;
+}
+.invitesdashboard_InvitedAppsCtn_3Fouw
+  .invitesdashboard_InvitedAppsRowScrollCtn_uIqPl
+  .invitesdashboard_InvitedAppsRow_2GaU2 {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+.invitesdashboard_InvitedAppCtn_14klK {
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "image info" "button button";
+  margin-right: 24px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 450px;
+}
+.invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_AppName_1FeTr {
+  color: #fff;
+  font-size: 17px;
+}
+.invitesdashboard_InvitedAppCtn_14klK img {
+  width: 150px;
+  height: 70px;
+  grid-area: image;
+}
+.invitesdashboard_InvitedAppCtn_14klK
+  .invitesdashboard_InviteAdminButtons_L4pIQ {
+  grid-area: button;
+  display: flex;
+  flex-direction: row;
+}
+.invitesdashboard_InvitedAppCtn_14klK
+  .invitesdashboard_InviteAdminButtons_L4pIQ
+  button {
+  font-size: 12px;
+  line-height: 24px;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 0 12px;
+}
+.invitesdashboard_InvitedAppCtn_14klK
+  .invitesdashboard_InviteAdminButtons_L4pIQ
+  button:first-child {
+  margin-right: 4px;
+}
+.invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_InvitedAppInfo_2h8se {
+  display: flex;
+  flex-direction: column;
+  grid-area: info;
+  padding-left: 8px;
+}
+.invitesdialog_DialogCtn_3sIyQ {
+  margin-top: 20px;
+}
 .dailydealcalendar_CalendarGridCtn_2smJ3 {
   display: flex;
   flex-direction: column;
@@ -22517,97 +22706,6 @@ ul li {
 }
 .dailydealpartnerinfo_DDVisibilityExample_3OAcn {
   max-width: 400px;
-}
-.invitesdashboard_SelectedAppCtn_1kLuQ {
-  margin: 20px 0px;
-}
-.invitesdashboard_SelectedAppCtn_1kLuQ .invitesdashboard_SelectedApp_3FFre {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.invitesdashboard_SelectedAppCtn_1kLuQ
-  .invitesdashboard_SelectedApp_3FFre
-  .invitesdashboard_AppName_1FeTr {
-  color: #fff;
-  font-size: 21px;
-  margin-left: 12px;
-}
-.invitesdashboard_InviteBtnCtn_2iMIj button.DialogButton {
-  padding: 2px 12px;
-}
-.invitesdashboard_InvitedAppsCtn_3Fouw {
-  display: flex;
-  flex-direction: column;
-  background: #000;
-  padding: 18px 18px 8px 18px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 12px;
-}
-.invitesdashboard_InvitedAppsCtn_3Fouw .invitesdashboard_InviteTitleCtn_IO0gU {
-  display: flex;
-  flex-direction: row;
-  padding: 0 0 16px 0;
-}
-.invitesdashboard_InvitedAppsCtn_3Fouw
-  .invitesdashboard_InvitedAppsRowScrollCtn_uIqPl {
-  overflow-x: scroll;
-}
-.invitesdashboard_InvitedAppsCtn_3Fouw
-  .invitesdashboard_InvitedAppsRowScrollCtn_uIqPl
-  .invitesdashboard_InvitedAppsRow_2GaU2 {
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-}
-.invitesdashboard_InvitedAppCtn_14klK {
-  display: grid;
-  grid-template-columns: 150px auto;
-  grid-template-rows: auto;
-  grid-template-areas: "image info" "button button";
-  margin-right: 24px;
-  box-sizing: border-box;
-  border-radius: 3px;
-  width: 450px;
-}
-.invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_AppName_1FeTr {
-  color: #fff;
-  font-size: 17px;
-}
-.invitesdashboard_InvitedAppCtn_14klK img {
-  width: 150px;
-  height: 70px;
-  grid-area: image;
-}
-.invitesdashboard_InvitedAppCtn_14klK
-  .invitesdashboard_InviteAdminButtons_L4pIQ {
-  grid-area: button;
-  display: flex;
-  flex-direction: row;
-}
-.invitesdashboard_InvitedAppCtn_14klK
-  .invitesdashboard_InviteAdminButtons_L4pIQ
-  button {
-  font-size: 12px;
-  line-height: 24px;
-  width: fit-content;
-  white-space: nowrap;
-  padding: 0 12px;
-}
-.invitesdashboard_InvitedAppCtn_14klK
-  .invitesdashboard_InviteAdminButtons_L4pIQ
-  button:first-child {
-  margin-right: 4px;
-}
-.invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_InvitedAppInfo_2h8se {
-  display: flex;
-  flex-direction: column;
-  grid-area: info;
-  padding-left: 8px;
-}
-.invitesdialog_DialogCtn_3sIyQ {
-  margin-top: 20px;
 }
 .dailydealsdashboard_Row_2fsEu {
   background-color: pink;

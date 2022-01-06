@@ -193,6 +193,8 @@ jQuery( function($) {
 			LocalMenuEvents.fnActivateMenu();
 		});
 
+		g_fnActivateLocalMenu = LocalMenuEvents.fnActivateMenu;
+
 		$(window ).on( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu', function() {
 			var bShouldUseResponsiveMenu = UseSmallScreenMode();
 			if ( bLocalMenuEnabed != bShouldUseResponsiveMenu )
@@ -727,4 +729,15 @@ function Responsive_InitJQPlotHooks( $ )
 			});
 		});
 	}
+}
+
+// Enable toggling the local menu via JS
+// Added so search can support use of a gamepad button to open the filter window
+var g_fnActivateLocalMenu = false; 
+function Responsive_ToggleLocalMenu()
+{
+	if ( g_fnActivateLocalMenu )
+		g_fnActivateLocalMenu();
+	else
+		console.error("attempted to open a local menu which does not exist");
 }

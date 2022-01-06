@@ -1729,7 +1729,9 @@ textarea {
 }
 
 .workshopItemPreviewImage.banned {
-	box-shadow: inset 0px 0px 1px 1px #ff0000;
+	margin: -1px;
+	border: 1px solid;
+	border-color: #ff0000;
 }
 
 .workshopItemPreviewImage.aspectratio_16x9 {
@@ -1775,12 +1777,6 @@ textarea {
 .workshopItem .incompatible
 {
 	border-color: #534436;
-}
-
-.workshopItem .banned
-{
-	border-color: #ff0000;
-	box-shadow: inset 0px 0px 1px 1px #ff0000;
 }
 
 .workshopItem .incompatible:hover

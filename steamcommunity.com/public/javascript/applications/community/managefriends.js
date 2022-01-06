@@ -25,6 +25,10 @@
         );
       }
     },
+    AiWL: function (e, t, n) {
+      "use strict";
+      n("mgoM");
+    },
     Cmuy: function (e, t, n) {
       var a = {
         "./managefriends_brazilian.json": ["QEZI", 101],
@@ -118,302 +122,311 @@
         p = n("kLLr"),
         _ = n("X3Ds"),
         h = n("Qcoi"),
-        g = n("6Y59"),
-        v = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (
-              (t.state = {
-                invite_token: "",
-                input_search: "",
-                friend_code_copied: !1,
-                invite_copied: !1,
-              }),
-              t
-            );
-          }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.componentDidMount = function () {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var e, t;
-                return Object(a.e)(this, function (n) {
-                  switch (n.label) {
-                    case 0:
-                      return [
-                        4,
-                        c.a.get(m.c.COMMUNITY_BASE_URL + "invites/ajaxgetall", {
-                          params: { sessionid: m.c.SESSIONID },
-                        }),
-                      ];
-                    case 1:
-                      return (
-                        (e = n.sent()) &&
-                        e.data &&
-                        e.data.tokens &&
-                        (t = e.data.tokens.filter(function (e) {
-                          return e.valid;
-                        })).length
-                          ? this.setState({ invite_token: t[0].invite_token })
-                          : this.OnCreateInviteLink(),
-                        [2]
-                      );
-                  }
-                });
-              });
-            }),
-            (t.prototype.OnCreateInviteLink = function () {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var e, t;
-                return Object(a.e)(this, function (n) {
-                  switch (n.label) {
-                    case 0:
-                      return (
-                        (e = new FormData()).append("sessionid", m.c.SESSIONID),
-                        e.append("steamid_user", m.h.steamid),
-                        e.append("duration", (2592e3).toString()),
-                        [
-                          4,
-                          c.a.post(
-                            m.c.COMMUNITY_BASE_URL + "invites/ajaxcreate",
-                            e
-                          ),
-                        ]
-                      );
-                    case 1:
-                      return (
-                        (t = n.sent()) &&
-                          t.data &&
-                          t.data.invite &&
-                          this.setState({
-                            invite_token: t.data.invite.invite_token,
-                          }),
-                        [2]
-                      );
-                  }
-                });
-              });
-            }),
-            (t.prototype.OnCopy = function (e, t) {
-              var n = this;
-              "friend_code" === e &&
-                (this.setState({ friend_code_copied: !0 }),
-                setTimeout(function () {
-                  return n.setState({ friend_code_copied: !1 });
-                }, 1e3)),
-                "invite" === e &&
-                  (this.setState({ invite_copied: !0 }),
-                  setTimeout(function () {
-                    return n.setState({ invite_copied: !1 });
-                  }, 1e3)),
-                Object(_.i)(t);
-            }),
-            (t.prototype.OnAddFriend = function (e) {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var t, n;
-                return Object(a.e)(this, function (a) {
-                  switch (a.label) {
-                    case 0:
-                      (t = new FormData()).append("sessionID", m.c.SESSIONID),
-                        t.append("steamid", e),
-                        t.append("accept_invite", "0"),
-                        (a.label = 1);
-                    case 1:
-                      return (
-                        a.trys.push([1, 3, , 4]),
-                        [
-                          4,
-                          c.a.post(
-                            m.c.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
-                            t
-                          ),
-                        ]
-                      );
-                    case 2:
-                      return [
-                        2,
-                        (n = a.sent()) && n.data && 1 == n.data.success,
-                      ];
-                    case 3:
-                      return a.sent(), [2, !1];
-                    case 4:
-                      return [2];
-                  }
-                });
-              });
-            }),
-            (t.prototype.OnSearchChange = function (e) {
-              this.setState({ input_search: e.target.value });
-            }),
-            (t.prototype.OnSearchKeyDown = function (e) {
-              13 === e.keyCode && this.OnSearchSubmit();
-            }),
-            (t.prototype.OnSearchSubmit = function () {
-              window.open(
-                m.c.COMMUNITY_BASE_URL +
-                  "search/users/#text=" +
-                  encodeURIComponent(this.state.input_search),
-                "_self"
+        g = (n("mgoM"), n("6Y59")),
+        v =
+          (n("5h11"),
+          (function (e) {
+            function t() {
+              var t = (null !== e && e.apply(this, arguments)) || this;
+              return (
+                (t.state = {
+                  invite_token: "",
+                  input_search: "",
+                  friend_code_copied: !1,
+                  invite_copied: !1,
+                }),
+                t
               );
-            }),
-            (t.prototype.render = function () {
-              var e = this,
-                t = m.h.short_url + "/" + this.state.invite_token;
-              return s.a.createElement(
-                "div",
-                null,
-                s.a.createElement(
+            }
+            return (
+              Object(a.d)(t, e),
+              (t.prototype.componentDidMount = function () {
+                return Object(a.b)(this, void 0, void 0, function () {
+                  var e, t;
+                  return Object(a.e)(this, function (n) {
+                    switch (n.label) {
+                      case 0:
+                        return [
+                          4,
+                          c.a.get(
+                            m.c.COMMUNITY_BASE_URL + "invites/ajaxgetall",
+                            { params: { sessionid: m.c.SESSIONID } }
+                          ),
+                        ];
+                      case 1:
+                        return (
+                          (e = n.sent()) &&
+                          e.data &&
+                          e.data.tokens &&
+                          (t = e.data.tokens.filter(function (e) {
+                            return e.valid;
+                          })).length
+                            ? this.setState({ invite_token: t[0].invite_token })
+                            : this.OnCreateInviteLink(),
+                          [2]
+                        );
+                    }
+                  });
+                });
+              }),
+              (t.prototype.OnCreateInviteLink = function () {
+                return Object(a.b)(this, void 0, void 0, function () {
+                  var e, t;
+                  return Object(a.e)(this, function (n) {
+                    switch (n.label) {
+                      case 0:
+                        return (
+                          (e = new FormData()).append(
+                            "sessionid",
+                            m.c.SESSIONID
+                          ),
+                          e.append("steamid_user", m.h.steamid),
+                          e.append("duration", (2592e3).toString()),
+                          [
+                            4,
+                            c.a.post(
+                              m.c.COMMUNITY_BASE_URL + "invites/ajaxcreate",
+                              e
+                            ),
+                          ]
+                        );
+                      case 1:
+                        return (
+                          (t = n.sent()) &&
+                            t.data &&
+                            t.data.invite &&
+                            this.setState({
+                              invite_token: t.data.invite.invite_token,
+                            }),
+                          [2]
+                        );
+                    }
+                  });
+                });
+              }),
+              (t.prototype.OnCopy = function (e, t) {
+                var n = this;
+                "friend_code" === e &&
+                  (this.setState({ friend_code_copied: !0 }),
+                  setTimeout(function () {
+                    return n.setState({ friend_code_copied: !1 });
+                  }, 1e3)),
+                  "invite" === e &&
+                    (this.setState({ invite_copied: !0 }),
+                    setTimeout(function () {
+                      return n.setState({ invite_copied: !1 });
+                    }, 1e3)),
+                  Object(_.i)(t);
+              }),
+              (t.prototype.OnAddFriend = function (e) {
+                return Object(a.b)(this, void 0, void 0, function () {
+                  var t, n;
+                  return Object(a.e)(this, function (a) {
+                    switch (a.label) {
+                      case 0:
+                        (t = new FormData()).append("sessionID", m.c.SESSIONID),
+                          t.append("steamid", e),
+                          t.append("accept_invite", "0"),
+                          (a.label = 1);
+                      case 1:
+                        return (
+                          a.trys.push([1, 3, , 4]),
+                          [
+                            4,
+                            c.a.post(
+                              m.c.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
+                              t
+                            ),
+                          ]
+                        );
+                      case 2:
+                        return [
+                          2,
+                          (n = a.sent()) && n.data && 1 == n.data.success,
+                        ];
+                      case 3:
+                        return a.sent(), [2, !1];
+                      case 4:
+                        return [2];
+                    }
+                  });
+                });
+              }),
+              (t.prototype.OnSearchChange = function (e) {
+                this.setState({ input_search: e.target.value });
+              }),
+              (t.prototype.OnSearchKeyDown = function (e) {
+                13 === e.keyCode && this.OnSearchSubmit();
+              }),
+              (t.prototype.OnSearchSubmit = function () {
+                window.open(
+                  m.c.COMMUNITY_BASE_URL +
+                    "search/users/#text=" +
+                    encodeURIComponent(this.state.input_search),
+                  "_self"
+                );
+              }),
+              (t.prototype.render = function () {
+                var e = this,
+                  t = m.h.short_url + "/" + this.state.invite_token;
+                return s.a.createElement(
                   "div",
-                  { className: f.a.HeaderBlock },
-                  Object(d.f)("#ManageFriends_AddAFriend")
-                ),
-                s.a.createElement(
-                  "div",
-                  { className: f.a.Background },
+                  null,
                   s.a.createElement(
-                    "h1",
-                    { className: f.a.Heading },
-                    Object(d.f)("#ManageFriends_YourFriendCode")
+                    "div",
+                    { className: f.a.HeaderBlock },
+                    Object(d.f)("#ManageFriends_AddAFriend")
                   ),
                   s.a.createElement(
                     "div",
-                    { className: f.a.CopyContainer },
+                    { className: f.a.Background },
                     s.a.createElement(
                       "h1",
-                      { className: f.a.Text },
-                      m.h.accountid
-                    ),
-                    s.a.createElement(
-                      u.d,
-                      {
-                        className: f.a.Button,
-                        onClick: function () {
-                          return e.OnCopy("friend_code", String(m.h.accountid));
-                        },
-                      },
-                      this.state.friend_code_copied
-                        ? Object(d.f)("#ManageFriends_Copied")
-                        : Object(d.f)("#ManageFriends_Copy")
-                    )
-                  ),
-                  s.a.createElement(
-                    "p",
-                    { className: f.a.Body },
-                    Object(d.f)("#ManageFriends_EnterFriendCode")
-                  ),
-                  s.a.createElement(b, {
-                    onButtonClick: this.OnAddFriend,
-                    buttonText: Object(d.f)("#ManageFriends_SendInvite"),
-                    bDisableForSelfAndFriends: !0,
-                    bShowStatus: !0,
-                  })
-                ),
-                s.a.createElement(
-                  "div",
-                  { className: f.a.DimBackground },
-                  s.a.createElement(
-                    "h1",
-                    { className: f.a.Heading },
-                    Object(d.f)("#ManageFriends_OrSendQuickInvite")
-                  ),
-                  s.a.createElement(
-                    "p",
-                    { className: f.a.Body },
-                    Object(d.f)("#ManageFriends_QuickInviteDescription")
-                  ),
-                  s.a.createElement(
-                    "p",
-                    { className: f.a.Body },
-                    Object(d.f)("#ManageFriends_QuickInviteNote")
-                  ),
-                  s.a.createElement(
-                    "div",
-                    { className: f.a.CopyContainer },
-                    Boolean(this.state.invite_token) &&
-                      s.a.createElement("div", { className: f.a.Link }, t),
-                    s.a.createElement(
-                      u.d,
-                      {
-                        className: f.a.Button,
-                        onClick: function () {
-                          return e.OnCopy("invite", t);
-                        },
-                      },
-                      this.state.invite_copied
-                        ? Object(d.f)("#ManageFriends_Copied")
-                        : Object(d.f)("#ManageFriends_Copy")
-                    )
-                  ),
-                  s.a.createElement(
-                    u.q,
-                    {
-                      style: {
-                        width: "fit-content",
-                        padding: "0px 20px 0px 20px",
-                      },
-                      onClick: this.OnCreateInviteLink,
-                    },
-                    Object(d.f)("#ManageFriends_CreateInviteLink")
-                  )
-                ),
-                s.a.createElement(
-                  "div",
-                  { className: f.a.Background },
-                  s.a.createElement(
-                    "h1",
-                    { className: f.a.Heading },
-                    Object(d.f)("#ManageFriends_OrSearch")
-                  ),
-                  s.a.createElement("br", null),
-                  s.a.createElement(
-                    "div",
-                    {
-                      style: {
-                        display: "flex",
-                        alignItems: "center",
-                        maxWidth: "598px",
-                        position: "relative",
-                      },
-                    },
-                    s.a.createElement(
-                      "div",
-                      { style: { width: "100%" } },
-                      s.a.createElement(u.l, {
-                        className: f.a.Input,
-                        onKeyDown: this.OnSearchKeyDown,
-                        value: this.state.input_search,
-                        onChange: this.OnSearchChange,
-                        placeholder: Object(d.f)(
-                          "#ManageFriends_EnterProfileName"
-                        ),
-                      })
+                      { className: f.a.Heading },
+                      Object(d.f)("#ManageFriends_YourFriendCode")
                     ),
                     s.a.createElement(
                       "div",
+                      { className: f.a.CopyContainer },
+                      s.a.createElement(
+                        "h1",
+                        { className: f.a.Text },
+                        m.h.accountid
+                      ),
+                      s.a.createElement(
+                        u.d,
+                        {
+                          className: f.a.Button,
+                          onClick: function () {
+                            return e.OnCopy(
+                              "friend_code",
+                              String(m.h.accountid)
+                            );
+                          },
+                        },
+                        this.state.friend_code_copied
+                          ? Object(d.f)("#ManageFriends_Copied")
+                          : Object(d.f)("#ManageFriends_Copy")
+                      )
+                    ),
+                    s.a.createElement(
+                      "p",
+                      { className: f.a.Body },
+                      Object(d.f)("#ManageFriends_EnterFriendCode")
+                    ),
+                    s.a.createElement(b, {
+                      onButtonClick: this.OnAddFriend,
+                      buttonText: Object(d.f)("#ManageFriends_SendInvite"),
+                      bDisableForSelfAndFriends: !0,
+                      bShowStatus: !0,
+                    })
+                  ),
+                  s.a.createElement(
+                    "div",
+                    { className: f.a.DimBackground },
+                    s.a.createElement(
+                      "h1",
+                      { className: f.a.Heading },
+                      Object(d.f)("#ManageFriends_OrSendQuickInvite")
+                    ),
+                    s.a.createElement(
+                      "p",
+                      { className: f.a.Body },
+                      Object(d.f)("#ManageFriends_QuickInviteDescription")
+                    ),
+                    s.a.createElement(
+                      "p",
+                      { className: f.a.Body },
+                      Object(d.f)("#ManageFriends_QuickInviteNote")
+                    ),
+                    s.a.createElement(
+                      "div",
+                      { className: f.a.CopyContainer },
+                      Boolean(this.state.invite_token) &&
+                        s.a.createElement("div", { className: f.a.Link }, t),
+                      s.a.createElement(
+                        u.d,
+                        {
+                          className: f.a.Button,
+                          onClick: function () {
+                            return e.OnCopy("invite", t);
+                          },
+                        },
+                        this.state.invite_copied
+                          ? Object(d.f)("#ManageFriends_Copied")
+                          : Object(d.f)("#ManageFriends_Copy")
+                      )
+                    ),
+                    s.a.createElement(
+                      u.q,
                       {
-                        id: "searchIcon",
                         style: {
-                          position: "absolute",
-                          right: "10px",
-                          cursor: "pointer",
+                          width: "fit-content",
+                          padding: "0px 20px 0px 20px",
                         },
-                        onClick: this.OnSearchSubmit,
+                        onClick: this.OnCreateInviteLink,
                       },
-                      s.a.createElement(g.L, null)
+                      Object(d.f)("#ManageFriends_CreateInviteLink")
+                    )
+                  ),
+                  s.a.createElement(
+                    "div",
+                    { className: f.a.Background },
+                    s.a.createElement(
+                      "h1",
+                      { className: f.a.Heading },
+                      Object(d.f)("#ManageFriends_OrSearch")
+                    ),
+                    s.a.createElement("br", null),
+                    s.a.createElement(
+                      "div",
+                      {
+                        style: {
+                          display: "flex",
+                          alignItems: "center",
+                          maxWidth: "598px",
+                          position: "relative",
+                        },
+                      },
+                      s.a.createElement(
+                        "div",
+                        { style: { width: "100%" } },
+                        s.a.createElement(u.l, {
+                          className: f.a.Input,
+                          onKeyDown: this.OnSearchKeyDown,
+                          value: this.state.input_search,
+                          onChange: this.OnSearchChange,
+                          placeholder: Object(d.f)(
+                            "#ManageFriends_EnterProfileName"
+                          ),
+                        })
+                      ),
+                      s.a.createElement(
+                        "div",
+                        {
+                          id: "searchIcon",
+                          style: {
+                            position: "absolute",
+                            right: "10px",
+                            cursor: "pointer",
+                          },
+                          onClick: this.OnSearchSubmit,
+                        },
+                        s.a.createElement(g.L, null)
+                      )
                     )
                   )
-                )
-              );
-            }),
-            Object(a.c)([i.a], t.prototype, "OnCreateInviteLink", null),
-            Object(a.c)([i.a], t.prototype, "OnCopy", null),
-            Object(a.c)([i.a], t.prototype, "OnAddFriend", null),
-            Object(a.c)([i.a], t.prototype, "OnSearchChange", null),
-            Object(a.c)([i.a], t.prototype, "OnSearchKeyDown", null),
-            Object(a.c)([i.a], t.prototype, "OnSearchSubmit", null),
-            t
-          );
-        })(s.a.Component),
+                );
+              }),
+              Object(a.c)([i.a], t.prototype, "OnCreateInviteLink", null),
+              Object(a.c)([i.a], t.prototype, "OnCopy", null),
+              Object(a.c)([i.a], t.prototype, "OnAddFriend", null),
+              Object(a.c)([i.a], t.prototype, "OnSearchChange", null),
+              Object(a.c)([i.a], t.prototype, "OnSearchKeyDown", null),
+              Object(a.c)([i.a], t.prototype, "OnSearchSubmit", null),
+              t
+            );
+          })(s.a.Component)),
         b = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -670,6 +683,7 @@
       n.d(t, "a", function () {
         return s;
       });
+      n("mgoM");
       var a = n("vDqi"),
         r = n.n(a);
       function s(e) {
@@ -731,9 +745,9 @@
         s = n.n(r),
         i = n("2vnA"),
         o = n("q1tI"),
-        c = n("8H1D"),
+        c = (n("mgoM"), n("kyHq"), n("8H1D")),
         u = n("kLLr"),
-        d = n("r64O"),
+        d = (n("AiWL"), n("r64O")),
         l = n("OS6B"),
         f = n("lkRc"),
         m = new ((function () {

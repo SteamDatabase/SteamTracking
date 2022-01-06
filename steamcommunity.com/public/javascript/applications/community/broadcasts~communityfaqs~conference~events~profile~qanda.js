@@ -1,73 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [1],
+  [2],
   {
-    "0OaU": function (t, e, r) {
-      "use strict";
-      r.d(e, "a", function () {
-        return c;
-      });
-      var n = r("mrSG"),
-        a = r("q1tI"),
-        o = r.n(a),
-        i = r("6Y59"),
-        s = r("2i24"),
-        l = r.n(s),
-        c = (function (t) {
-          function e(e) {
-            return t.call(this, e) || this;
-          }
-          return (
-            Object(n.d)(e, t),
-            (e.prototype.AddSizeClass = function (t) {
-              "small" == this.props.size
-                ? t.push(l.a.throbber_small)
-                : "medium" == this.props.size
-                ? t.push(l.a.throbber_medium)
-                : "xlarge" == this.props.size
-                ? t.push(l.a.throbber_xlarge)
-                : "xxlarge" == this.props.size
-                ? t.push(l.a.throbber_xxlarge)
-                : t.push(l.a.throbber_large);
-            }),
-            (e.prototype.render = function () {
-              var t = [l.a.LoadingWrapper, "SteamLogoThrobber"];
-              this.AddSizeClass(t),
-                void 0 === this.props.string && t.push(l.a.noString),
-                this.props.className && t.push(this.props.className),
-                this.props.static && t.push(l.a.Static);
-              var e = o.a.createElement(
-                "div",
-                { className: t.join(" ") },
-                o.a.createElement(
-                  "div",
-                  { className: l.a.Throbber },
-                  o.a.createElement(i.jb, { className: l.a.base }),
-                  o.a.createElement(i.jb, { className: l.a.blur })
-                )
-              );
-              return o.a.createElement(
-                "div",
-                {
-                  className:
-                    "center" == this.props.position
-                      ? l.a.throbber_center_wrapper
-                      : "",
-                },
-                e,
-                Boolean(this.props.string) &&
-                  o.a.createElement(
-                    "div",
-                    { className: l.a.ThrobberText },
-                    this.props.string
-                  )
-              );
-            }),
-            e
-          );
-        })(o.a.PureComponent);
-    },
     "8H1D": function (t, e, r) {
       "use strict";
       r.d(e, "b", function () {
@@ -90,44 +25,41 @@
         );
       }
     },
+    AiWL: function (t, e, r) {
+      "use strict";
+      r("mgoM");
+    },
     BFsE: function (t, e, r) {
       "use strict";
       r.d(e, "a", function () {
-        return M;
+        return x;
       });
       var n = r("mrSG"),
         a = r("q1tI"),
         o = r.n(a),
-        i = r("Mgs7"),
-        s = r("6Y59"),
-        l = r("TyAF"),
-        c = r("opsS"),
-        h = r("exH9"),
-        u = r("N6Aq"),
-        p = r.n(u),
-        m = r("2vnA"),
-        d = r("vDqi"),
-        f = r.n(d),
-        v = r("r+Z0").default;
-      function g(t, e) {
+        i = r("2vnA"),
+        s = r("vDqi"),
+        l = r.n(s),
+        c = r("r+Z0").default;
+      function h(t, e) {
         return t.endsWith("/") || (t += "/"), t + "login/" + e + "/";
       }
-      function _() {
+      function u() {
         var t = new FormData();
         return t.append("donotcache", new Date().getTime().toString()), t;
       }
-      function b(t) {
+      function p(t) {
         return Object(n.b)(this, void 0, void 0, function () {
           var e, r, a, o;
           return Object(n.e)(this, function (n) {
             switch (n.label) {
               case 0:
-                (e = _()),
-                  (r = g(t, "refreshcaptcha")),
+                (e = u()),
+                  (r = h(t, "refreshcaptcha")),
                   (a = ""),
                   (n.label = 1);
               case 1:
-                return n.trys.push([1, 3, , 4]), [4, f.a.post(r, e)];
+                return n.trys.push([1, 3, , 4]), [4, l.a.post(r, e)];
               case 2:
                 return 200 != (o = n.sent()).status
                   ? [2, !1]
@@ -140,17 +72,17 @@
           });
         });
       }
-      function E(t, e) {
+      function m(t, e) {
         return Object(n.b)(this, void 0, void 0, function () {
           var r, a, o, i, s;
           return Object(n.e)(this, function (n) {
             switch (n.label) {
               case 0:
-                (r = _()).append("username", e),
-                  (a = g(t, "getrsakey")),
+                (r = u()).append("username", e),
+                  (a = h(t, "getrsakey")),
                   (n.label = 1);
               case 1:
-                return n.trys.push([1, 3, , 4]), [4, f.a.post(a, r)];
+                return n.trys.push([1, 3, , 4]), [4, l.a.post(a, r)];
               case 2:
                 return 200 != (i = n.sent()).status
                   ? [2, null]
@@ -169,21 +101,21 @@
           });
         });
       }
-      function T(t, e, r, a) {
+      function d(t, e, r, a) {
         return Object(n.b)(this, void 0, void 0, function () {
-          var o, i, s, l, c, h, u;
+          var o, i, s, p, m, d, f;
           return Object(n.e)(this, function (n) {
             switch (n.label) {
               case 0:
                 if (
                   !(o = (function (t, e) {
-                    var r = v.getPublicKey(e.publickey_mod, e.publickey_exp),
-                      n = v.encrypt(t, r);
+                    var r = c.getPublicKey(e.publickey_mod, e.publickey_exp),
+                      n = c.encrypt(t, r);
                     return !1 === n ? null : n;
                   })(r.strPassword, a))
                 )
                   return [2, null];
-                (i = _()).append("password", o),
+                (i = u()).append("password", o),
                   i.append("username", r.strUserName),
                   i.append("twofactorcode", r.strTwoFactorCode || ""),
                   i.append("emailauth", r.strEmailAuthCode || ""),
@@ -200,27 +132,27 @@
                   e &&
                     (i.append("oauth_client_id", e),
                     i.append("mobile_chat_client", "true")),
-                  (l = g(t, "dologin")),
+                  (p = h(t, "dologin")),
                   (n.label = 1);
               case 1:
-                return n.trys.push([1, 3, , 4]), [4, f.a.post(l, i, s)];
+                return n.trys.push([1, 3, , 4]), [4, l.a.post(p, i, s)];
               case 2:
-                return 200 != (h = n.sent()).status
+                return 200 != (d = n.sent()).status
                   ? [2, null]
-                  : (u = h.data)
-                  ? (u.oauth && (u.oauth = JSON.parse(u.oauth)),
-                    (c = u),
+                  : (f = d.data)
+                  ? (f.oauth && (f.oauth = JSON.parse(f.oauth)),
+                    (m = f),
                     [3, 4])
                   : [2, null];
               case 3:
                 return n.sent(), [2, null];
               case 4:
-                return [2, c];
+                return [2, m];
             }
           });
         });
       }
-      function C(t, e, r) {
+      function f(t, e, r) {
         return Object(n.b)(this, void 0, void 0, function () {
           var a;
           return Object(n.e)(this, function (n) {
@@ -235,12 +167,12 @@
                   !r.strPassword || r.strPassword.match(/[^\x00-\x7F]/)
                     ? [2, null]
                     : r.strUserName
-                    ? [4, E(t, r.strUserName)]
+                    ? [4, m(t, r.strUserName)]
                     : [2, null]
                 );
               case 1:
                 return (a = n.sent())
-                  ? [4, T(t, e, r, a)]
+                  ? [4, d(t, e, r, a)]
                   : (console.log("Failed to get RSA key"), [2, null]);
               case 2:
                 return [2, n.sent()];
@@ -248,31 +180,31 @@
           });
         });
       }
-      var y,
-        S,
-        O = r("XxJJ"),
-        D = r("TLQK");
+      var v,
+        g,
+        _ = r("XxJJ"),
+        E = r("TLQK");
       !(function (t) {
         (t[(t.Invalid = 0)] = "Invalid"),
           (t[(t.AccountName = 1)] = "AccountName"),
           (t[(t.EmailCode = 2)] = "EmailCode"),
           (t[(t.TwoFactorCode = 3)] = "TwoFactorCode"),
           (t[(t.Complete = 4)] = "Complete");
-      })(y || (y = {})),
+      })(v || (v = {})),
         (function (t) {
           (t[(t.None = 0)] = "None"), (t[(t.InvalidCode = 1)] = "InvalidCode");
-        })(S || (S = {}));
-      var w = (function () {
+        })(g || (g = {}));
+      var b = (function () {
           function t(t, e) {
             (this.m_strBaseURL = ""),
               (this.m_strOAuthClientID = ""),
               (this.m_fnLoginComplete = null),
               (this.m_bRequestInFlight = !1),
-              (this.m_eCurrentStep = y.AccountName),
+              (this.m_eCurrentStep = v.AccountName),
               (this.m_strErrorMessage = ""),
               (this.m_strEmailDomain = ""),
               (this.m_strCaptchaURL = ""),
-              (this.m_eSteamGuardCodeError = S.None),
+              (this.m_eSteamGuardCodeError = g.None),
               (this.m_strBaseURL = t),
               (this.m_strOAuthClientID = e),
               (this.m_userFields = {
@@ -359,13 +291,13 @@
                     case 0:
                       return this.m_bRequestInFlight
                         ? [2]
-                        : (Object(m.G)(function () {
+                        : (Object(i.G)(function () {
                             (e.m_bRequestInFlight = !0),
                               (e.m_strErrorMessage = "");
                           }),
                           [
                             4,
-                            C(
+                            f(
                               this.m_strBaseURL,
                               this.m_strOAuthClientID,
                               this.m_userFields
@@ -374,7 +306,7 @@
                     case 1:
                       return (
                         (t = r.sent()),
-                        Object(m.G)(function () {
+                        Object(i.G)(function () {
                           (e.m_bRequestInFlight = !1), e.UpdateLoginResult(t);
                         }),
                         [2]
@@ -387,13 +319,13 @@
               if (!t)
                 return (
                   console.log("Login timeout"),
-                  void (this.m_strErrorMessage = Object(D.f)(
+                  void (this.m_strErrorMessage = Object(E.f)(
                     "#ConnectionTrouble_FailedToConnect"
                   ))
                 );
               if (t.login_complete) {
                 if (
-                  ((this.m_eCurrentStep = y.Complete), this.m_fnLoginComplete)
+                  ((this.m_eCurrentStep = v.Complete), this.m_fnLoginComplete)
                 ) {
                   var e = {
                     steamID: t.oauth ? t.oauth.steamid : "",
@@ -404,32 +336,32 @@
                 }
               } else
                 (this.m_strErrorMessage = t.message || ""),
-                  (this.m_eSteamGuardCodeError = S.None),
+                  (this.m_eSteamGuardCodeError = g.None),
                   t.requires_twofactor
                     ? (this.UpdateCaptchaURL("-1"),
-                      this.m_eCurrentStep != y.TwoFactorCode ||
+                      this.m_eCurrentStep != v.TwoFactorCode ||
                         this.m_strErrorMessage ||
-                        ((this.m_strErrorMessage = Object(D.f)(
+                        ((this.m_strErrorMessage = Object(E.f)(
                           "#MobileLogin_IncorrectSteamGuard"
                         )),
-                        (this.m_eSteamGuardCodeError = S.InvalidCode),
+                        (this.m_eSteamGuardCodeError = g.InvalidCode),
                         (this.m_userFields.strTwoFactorCode = "")),
-                      (this.m_eCurrentStep = y.TwoFactorCode))
+                      (this.m_eCurrentStep = v.TwoFactorCode))
                     : t.captcha_needed && t.captcha_gid
-                    ? ((this.m_eCurrentStep = y.AccountName),
+                    ? ((this.m_eCurrentStep = v.AccountName),
                       this.UpdateCaptchaURL(t.captcha_gid))
                     : t.emailauth_needed
                     ? (t.emaildomain && (this.m_strEmailDomain = t.emaildomain),
                       t.emailsteamid &&
                         (this.m_userFields.emailSteamID = t.emailsteamid),
-                      this.m_eCurrentStep != y.EmailCode ||
+                      this.m_eCurrentStep != v.EmailCode ||
                         this.m_strErrorMessage ||
-                        ((this.m_strErrorMessage = Object(D.f)(
+                        ((this.m_strErrorMessage = Object(E.f)(
                           "#MobileLogin_IncorrectSteamGuard"
                         )),
-                        (this.m_eSteamGuardCodeError = S.InvalidCode),
+                        (this.m_eSteamGuardCodeError = g.InvalidCode),
                         (this.m_userFields.strEmailAuthCode = "")),
-                      (this.m_eCurrentStep = y.EmailCode))
+                      (this.m_eCurrentStep = v.EmailCode))
                     : t.agreement_session_url
                     ? (this.Shutdown(),
                       console.log(window.location.href),
@@ -445,7 +377,7 @@
                 return Object(n.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      return [4, b(this.m_strBaseURL)];
+                      return [4, p(this.m_strBaseURL)];
                     case 1:
                       return (t = e.sent())
                         ? (this.UpdateCaptchaURL(t), [2])
@@ -460,29 +392,36 @@
                 (this.m_strCaptchaURL =
                   "-1" != t
                     ? (function (t, e) {
-                        return g(t, "rendercaptcha") + "?gid=" + e;
+                        return h(t, "rendercaptcha") + "?gid=" + e;
                       })(this.m_strBaseURL, t)
                     : "");
             }),
-            Object(n.c)([m.C], t.prototype, "m_bRequestInFlight", void 0),
-            Object(n.c)([m.C], t.prototype, "m_userFields", void 0),
-            Object(n.c)([m.C], t.prototype, "m_eCurrentStep", void 0),
-            Object(n.c)([m.C], t.prototype, "m_strErrorMessage", void 0),
-            Object(n.c)([m.C], t.prototype, "m_strEmailDomain", void 0),
-            Object(n.c)([m.C], t.prototype, "m_strCaptchaURL", void 0),
-            Object(n.c)([m.C], t.prototype, "m_eSteamGuardCodeError", void 0),
-            Object(n.c)([O.a], t.prototype, "DoLogin", null),
-            Object(n.c)([m.k.bound], t.prototype, "UpdateCaptchaURL", null),
+            Object(n.c)([i.C], t.prototype, "m_bRequestInFlight", void 0),
+            Object(n.c)([i.C], t.prototype, "m_userFields", void 0),
+            Object(n.c)([i.C], t.prototype, "m_eCurrentStep", void 0),
+            Object(n.c)([i.C], t.prototype, "m_strErrorMessage", void 0),
+            Object(n.c)([i.C], t.prototype, "m_strEmailDomain", void 0),
+            Object(n.c)([i.C], t.prototype, "m_strCaptchaURL", void 0),
+            Object(n.c)([i.C], t.prototype, "m_eSteamGuardCodeError", void 0),
+            Object(n.c)([_.a], t.prototype, "DoLogin", null),
+            Object(n.c)([i.k.bound], t.prototype, "UpdateCaptchaURL", null),
             t
           );
         })(),
+        T = r("Mgs7"),
+        C = r("6Y59"),
+        y = r("TyAF"),
+        S = r("opsS"),
+        O = r("exH9"),
+        D = r("N6Aq"),
+        w = r.n(D),
         A = r("0OaU"),
         L = r("lkRc"),
         N = (function (t) {
           function e(e) {
             var r = t.call(this, e) || this;
             return (
-              (r.m_manager = new w(r.props.baseURL)),
+              (r.m_manager = new b(r.props.baseURL)),
               r.props.onLoginComplete &&
                 r.m_manager.SetLoginCompleteCallback(r.props.onLoginComplete),
               r
@@ -497,49 +436,49 @@
               var t = this.props,
                 e = (t.baseURL, t.onLoginComplete, t.className),
                 r = Object(n.f)(t, ["baseURL", "onLoginComplete", "className"]),
-                a = Object(h.a)(p.a.LoginDialog, e),
+                a = Object(O.a)(w.a.LoginDialog, e),
                 i = this.m_manager.GetCurrentStep(),
-                l = this.m_manager.GetErrorMessage();
+                s = this.m_manager.GetErrorMessage();
               return o.a.createElement(
                 "div",
                 Object(n.a)({ className: a }, r),
                 o.a.createElement(
                   "div",
-                  { className: p.a.LoginPanelBackground },
-                  o.a.createElement(s.gb, null)
+                  { className: w.a.LoginPanelBackground },
+                  o.a.createElement(C.gb, null)
                 ),
                 o.a.createElement(
                   "div",
-                  { className: p.a.LoginPanelContent },
-                  l && o.a.createElement(B, { text: l }),
-                  i == y.AccountName &&
+                  { className: w.a.LoginPanelContent },
+                  s && o.a.createElement(B, { text: s }),
+                  i == v.AccountName &&
                     o.a.createElement(R, { manager: this.m_manager }),
-                  i == y.TwoFactorCode &&
+                  i == v.TwoFactorCode &&
                     o.a.createElement(j, {
                       manager: this.m_manager,
-                      authtype: y.TwoFactorCode,
+                      authtype: v.TwoFactorCode,
                     }),
-                  i == y.EmailCode &&
+                  i == v.EmailCode &&
                     o.a.createElement(j, {
                       manager: this.m_manager,
-                      authtype: y.EmailCode,
+                      authtype: v.EmailCode,
                     }),
-                  i == y.Complete &&
+                  i == v.Complete &&
                     o.a.createElement(
                       "div",
-                      { className: p.a.LoginComplete },
+                      { className: w.a.LoginComplete },
                       o.a.createElement(A.a, null)
                     )
                 )
               );
             }),
-            (e = Object(n.c)([l.a], e))
+            (e = Object(n.c)([y.a], e))
           );
         })(o.a.Component);
       function B(t) {
         return o.a.createElement(
           "div",
-          { className: p.a.ErrorMessage },
+          { className: w.a.ErrorMessage },
           t.text
         );
       }
@@ -583,43 +522,43 @@
               return (
                 (e =
                   1 == this.state.nPassSize
-                    ? p.a.MedPass
+                    ? w.a.MedPass
                     : 2 == this.state.nPassSize
-                    ? p.a.LargePass
-                    : p.a.DefaultPass),
+                    ? w.a.LargePass
+                    : w.a.DefaultPass),
                 (t =
                   1 == this.state.nNameSize
-                    ? p.a.MedName
+                    ? w.a.MedName
                     : 2 == this.state.nNameSize
-                    ? p.a.LargeName
-                    : p.a.DefaultNAme),
+                    ? w.a.LargeName
+                    : w.a.DefaultNAme),
                 o.a.createElement(
                   "div",
-                  { className: p.a.AccountPasswordPanel },
+                  { className: w.a.AccountPasswordPanel },
                   o.a.createElement(
                     "div",
-                    { className: p.a.SigninTitle },
-                    Object(D.f)("#Login_SignIn")
+                    { className: w.a.SigninTitle },
+                    Object(E.f)("#Login_SignIn")
                   ),
                   o.a.createElement(
                     "form",
                     {
-                      className: p.a.AccountPasswordForm,
+                      className: w.a.AccountPasswordForm,
                       onSubmit: this.OnSubmit,
                     },
-                    o.a.createElement(i.l, {
-                      className: Object(h.a)(p.a.AccountNameLabel, t),
-                      label: Object(D.f)("#Login_AccountName"),
+                    o.a.createElement(T.l, {
+                      className: Object(O.a)(w.a.AccountNameLabel, t),
+                      label: Object(E.f)("#Login_AccountName"),
                       type: "text",
                       value: n.GetUserName(),
                       focusOnMount: !0,
                       maxLength: 64,
                       onChange: this.OnChangeName,
                     }),
-                    o.a.createElement(i.l, {
+                    o.a.createElement(T.l, {
                       bIsPassword: !0,
-                      className: Object(h.a)(p.a.PasswordDots, e),
-                      label: Object(D.f)("#Login_Password"),
+                      className: Object(O.a)(w.a.PasswordDots, e),
+                      label: Object(E.f)("#Login_Password"),
                       type: "password",
                       autoComplete: "off",
                       maxLength: 64,
@@ -627,9 +566,9 @@
                       value: n.GetPassword(),
                       onChange: this.OnChangePassword,
                     }),
-                    o.a.createElement(i.e, {
-                      classname: p.a.RememberMeCheck,
-                      label: Object(D.f)("#Login_RememberMe"),
+                    o.a.createElement(T.e, {
+                      classname: w.a.RememberMeCheck,
+                      label: Object(E.f)("#Login_RememberMe"),
                       disabled: !1,
                       onChange: function () {
                         return r.OnChangeRememberPass;
@@ -638,45 +577,45 @@
                     }),
                     n.GetCaptchaURL() && o.a.createElement(P, { manager: n }),
                     o.a.createElement(
-                      i.q,
+                      T.q,
                       { disabled: this.props.manager.IsRequestInFlight() },
-                      Object(D.f)("#Login_SignIn").toLocaleUpperCase()
+                      Object(E.f)("#Login_SignIn").toLocaleUpperCase()
                     )
                   ),
                   o.a.createElement(
                     "a",
-                    { className: p.a.NeedHelpLink, href: L.c.HELP_BASE_URL },
-                    Object(D.f)("#Login_ForgotPassword")
+                    { className: w.a.NeedHelpLink, href: L.c.HELP_BASE_URL },
+                    Object(E.f)("#Login_ForgotPassword")
                   ),
                   o.a.createElement("div", {
-                    className: p.a.LoginCreateSeperator,
+                    className: w.a.LoginCreateSeperator,
                   }),
                   o.a.createElement(
                     "div",
-                    { className: p.a.SteamUpsellContainer },
+                    { className: w.a.SteamUpsellContainer },
                     o.a.createElement(
                       "div",
-                      { className: p.a.SteamUpsell },
-                      Object(D.f)("#Login_NoSteamAccount")
+                      { className: w.a.SteamUpsell },
+                      Object(E.f)("#Login_NoSteamAccount")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: p.a.CreateAccountLink },
+                      { className: w.a.CreateAccountLink },
                       o.a.createElement(
                         "a",
                         { href: L.c.STORE_BASE_URL + "join/" },
-                        Object(D.f)("#Login_CreateAccount")
+                        Object(E.f)("#Login_CreateAccount")
                       )
                     )
                   )
                 )
               );
             }),
-            Object(n.c)([c.a], e.prototype, "OnSubmit", null),
-            Object(n.c)([c.a], e.prototype, "OnChangeName", null),
-            Object(n.c)([c.a], e.prototype, "OnChangePassword", null),
-            Object(n.c)([c.a], e.prototype, "OnChangeRememberPass", null),
-            (e = Object(n.c)([l.a], e))
+            Object(n.c)([S.a], e.prototype, "OnSubmit", null),
+            Object(n.c)([S.a], e.prototype, "OnChangeName", null),
+            Object(n.c)([S.a], e.prototype, "OnChangePassword", null),
+            Object(n.c)([S.a], e.prototype, "OnChangeRememberPass", null),
+            (e = Object(n.c)([y.a], e))
           );
         })(o.a.Component),
         P = (function (t) {
@@ -695,23 +634,23 @@
               var t = this.props.manager;
               return o.a.createElement(
                 "div",
-                { className: p.a.CaptchaContainer },
+                { className: w.a.CaptchaContainer },
                 o.a.createElement(
                   "div",
-                  { className: p.a.CaptchaBlock },
+                  { className: w.a.CaptchaBlock },
                   o.a.createElement(
                     "div",
-                    { className: p.a.CaptchaImageAndInput },
+                    { className: w.a.CaptchaImageAndInput },
                     o.a.createElement(
                       "div",
-                      { className: p.a.CaptchaImageBox },
+                      { className: w.a.CaptchaImageBox },
                       o.a.createElement("img", {
-                        className: p.a.CaptchaImage,
+                        className: w.a.CaptchaImage,
                         src: t.GetCaptchaURL(),
                       })
                     ),
-                    o.a.createElement(i.l, {
-                      className: p.a.CaptchaInput,
+                    o.a.createElement(T.l, {
+                      className: w.a.CaptchaInput,
                       type: "text",
                       autoComplete: "off",
                       maxLength: 6,
@@ -721,8 +660,8 @@
                   ),
                   o.a.createElement(
                     "div",
-                    { className: p.a.ErrorMessage },
-                    Object(D.f)("#Login_CaptchaVerification")
+                    { className: w.a.ErrorMessage },
+                    Object(E.f)("#Login_CaptchaVerification")
                   )
                 ),
                 o.a.createElement(
@@ -731,17 +670,17 @@
                   o.a.createElement(
                     "span",
                     {
-                      className: p.a.RefreshCaptchaText,
+                      className: w.a.RefreshCaptchaText,
                       onClick: this.RefreshCaptcha,
                     },
-                    Object(D.f)("#Login_RefreshCaptcha")
+                    Object(E.f)("#Login_RefreshCaptcha")
                   )
                 )
               );
             }),
-            Object(n.c)([c.a], e.prototype, "OnCaptchaText", null),
-            Object(n.c)([c.a], e.prototype, "RefreshCaptcha", null),
-            (e = Object(n.c)([l.a], e))
+            Object(n.c)([S.a], e.prototype, "OnCaptchaText", null),
+            Object(n.c)([S.a], e.prototype, "RefreshCaptcha", null),
+            (e = Object(n.c)([y.a], e))
           );
         })(o.a.Component),
         j = (function (t) {
@@ -754,7 +693,7 @@
               t.preventDefault(), this.props.manager.DoLogin();
             }),
             (e.prototype.OnChangeAuthCode = function (t) {
-              this.props.authtype == y.TwoFactorCode
+              this.props.authtype == v.TwoFactorCode
                 ? this.props.manager.SetTwoFactorCode(t.target.value)
                 : this.props.manager.SetEmailAuthCode(t.target.value);
             }),
@@ -764,50 +703,50 @@
                 r = "",
                 n = null,
                 a = "",
-                l = e.GetSteamGuardCodeError() == S.InvalidCode;
+                i = e.GetSteamGuardCodeError() == g.InvalidCode;
               switch (this.props.authtype) {
-                case y.TwoFactorCode:
+                case v.TwoFactorCode:
                   (r = e.GetTwoFactorCode()),
-                    (n = Object(D.f)("#Login_Enter2FA")),
-                    (t = o.a.createElement(s.I, null)),
-                    (a = Object(D.f)("#Login_Enter2FAHelp"));
+                    (n = Object(E.f)("#Login_Enter2FA")),
+                    (t = o.a.createElement(C.I, null)),
+                    (a = Object(E.f)("#Login_Enter2FAHelp"));
                   break;
-                case y.EmailCode:
+                case v.EmailCode:
                   (r = e.GetEmailAuthCode()),
-                    (n = Object(D.n)(
+                    (n = Object(E.n)(
                       "#Login_SentSteamguard",
                       o.a.createElement(
                         "span",
-                        { className: p.a.Highlight },
+                        { className: w.a.Highlight },
                         "@",
                         e.GetEmailDomain()
                       )
                     )),
-                    (a = Object(D.f)("#Login_EnterSteamguard")),
-                    (t = o.a.createElement(s.x, null));
+                    (a = Object(E.f)("#Login_EnterSteamguard")),
+                    (t = o.a.createElement(C.x, null));
               }
               return o.a.createElement(
                 "div",
-                { className: p.a.AuthenticationPanel },
-                o.a.createElement(i.m, null, Object(D.f)("#Login_SigningIn")),
+                { className: w.a.AuthenticationPanel },
+                o.a.createElement(T.m, null, Object(E.f)("#Login_SigningIn")),
                 o.a.createElement(
                   "div",
-                  { className: p.a.SigningInAccountName },
+                  { className: w.a.SigningInAccountName },
                   e.GetUserName()
                 ),
-                o.a.createElement(i.c, null, n),
+                o.a.createElement(T.c, null, n),
                 o.a.createElement(
                   "div",
-                  { className: p.a.AuthenticatorInputcontainer },
+                  { className: w.a.AuthenticatorInputcontainer },
                   t,
                   o.a.createElement(
                     "form",
                     {
-                      className: p.a.AccountPasswordForm,
+                      className: w.a.AccountPasswordForm,
                       onSubmit: this.OnSubmit,
                     },
-                    o.a.createElement(i.l, {
-                      className: Object(h.a)(p.a.AccountName),
+                    o.a.createElement(T.l, {
+                      className: Object(O.a)(w.a.AccountName),
                       label: "Steam Guard Code",
                       type: "text",
                       autoComplete: "off",
@@ -817,18 +756,18 @@
                       onChange: this.OnChangeAuthCode,
                     }),
                     o.a.createElement(
-                      i.q,
+                      T.q,
                       { disabled: this.props.manager.IsRequestInFlight() },
-                      Object(D.f)("#Login_SteamguardSubmit").toLocaleUpperCase()
+                      Object(E.f)("#Login_SteamguardSubmit").toLocaleUpperCase()
                     )
                   )
                 ),
                 o.a.createElement(
                   "a",
                   {
-                    className: Object(h.a)(
-                      p.a.NeedHelpLink,
-                      l ? p.a.NeedHelpHighlight : null
+                    className: Object(O.a)(
+                      w.a.NeedHelpLink,
+                      i ? w.a.NeedHelpHighlight : null
                     ),
                     href: "http://help.steampowered.com/",
                   },
@@ -836,13 +775,13 @@
                 )
               );
             }),
-            Object(n.c)([c.a], e.prototype, "OnSubmit", null),
-            Object(n.c)([c.a], e.prototype, "OnChangeAuthCode", null),
-            (e = Object(n.c)([l.a], e))
+            Object(n.c)([S.a], e.prototype, "OnSubmit", null),
+            Object(n.c)([S.a], e.prototype, "OnChangeAuthCode", null),
+            (e = Object(n.c)([y.a], e))
           );
         })(o.a.Component),
         I = r("ka0M"),
-        x = (function (t) {
+        F = (function (t) {
           function e() {
             return (null !== t && t.apply(this, arguments)) || this;
           }
@@ -867,11 +806,11 @@
                     })
                   );
             }),
-            Object(n.c)([c.a], e.prototype, "OnLoginComplete", null),
+            Object(n.c)([S.a], e.prototype, "OnLoginComplete", null),
             e
           );
         })(o.a.Component),
-        F = (function (t) {
+        M = (function (t) {
           function e() {
             return (null !== t && t.apply(this, arguments)) || this;
           }
@@ -884,20 +823,20 @@
                   onEscKeypress: this.props.closeModal,
                   bDisableBackgroundDismiss: !0,
                 },
-                o.a.createElement(x, { redirectURL: this.props.redirectURL })
+                o.a.createElement(F, { redirectURL: this.props.redirectURL })
               );
             }),
             e
           );
         })(o.a.Component);
-      function M() {
+      function x() {
         Object(I.d)(
-          o.a.createElement(F, {
+          o.a.createElement(M, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: Object(D.f)("#Login_SignIn") }
+          { strTitle: Object(E.f)("#Login_SignIn") }
         );
       }
     },
@@ -957,6 +896,7 @@
       r.d(e, "a", function () {
         return o;
       });
+      r("mgoM");
       var n = r("vDqi"),
         a = r.n(n);
       function o(t) {
@@ -1018,9 +958,9 @@
         o = r.n(a),
         i = r("2vnA"),
         s = r("q1tI"),
-        l = r("8H1D"),
+        l = (r("mgoM"), r("kyHq"), r("8H1D")),
         c = r("kLLr"),
-        h = r("r64O"),
+        h = (r("AiWL"), r("r64O")),
         u = r("OS6B"),
         p = r("lkRc"),
         m = new ((function () {
@@ -1184,10 +1124,10 @@
           return _;
         }),
         r.d(e, "d", function () {
-          return b;
+          return E;
         }),
         r.d(e, "c", function () {
-          return E;
+          return b;
         });
       var n = r("mrSG"),
         a = r("q1tI"),
@@ -1394,7 +1334,7 @@
             (e = Object(n.c)([s.a], e))
           );
         })(a.Component),
-        b = (function (t) {
+        E = (function (t) {
           function e() {
             return (null !== t && t.apply(this, arguments)) || this;
           }
@@ -1476,15 +1416,15 @@
                     Object(i.f)("#Time_Now")
                   )
                 ));
-              var b = null,
-                E = _ ? r - h : r - e;
-              if (E <= c.f.PerDay) {
+              var E = null,
+                b = _ ? r - h : r - e;
+              if (b <= c.f.PerDay) {
                 var T = a.createElement(
                   "div",
                   { className: s.ShortDateAndTime },
-                  Object(i.q)(E, !0)
+                  Object(i.q)(b, !0)
                 );
-                b =
+                E =
                   r < h
                     ? a.createElement(
                         "div",
@@ -1504,7 +1444,7 @@
                       );
               } else {
                 var C = l.getFullYear() == new Date(1e3 * r).getFullYear();
-                b = a.createElement(
+                E = a.createElement(
                   a.Fragment,
                   null,
                   a.createElement(
@@ -1523,7 +1463,7 @@
                   )
                 );
               }
-              var y = a.createElement(g, { rtFullDate: r, stylesmodule: s }, b);
+              var y = a.createElement(g, { rtFullDate: r, stylesmodule: s }, E);
               return a.createElement(
                 "div",
                 { className: s.ShortDateRange },
@@ -1534,7 +1474,7 @@
             (e = Object(n.c)([s.a], e))
           );
         })(a.Component);
-      function E(t) {
+      function b(t) {
         var e = t.rtStartDate,
           r = t.rtEndDate,
           n = t.strMonthFormat,
@@ -1787,7 +1727,7 @@
       function _(t, e) {
         return t & ~e;
       }
-      function b(t) {
+      function E(t) {
         if (0 == t) return -1;
         var e = 0;
         return (
@@ -1799,7 +1739,7 @@
           e
         );
       }
-      function E(t) {
+      function b(t) {
         for (var e = 0; 0 != t; ) (t &= t - 1), ++e;
         return e;
       }
@@ -2018,25 +1958,25 @@
                 v = (1 << this.F1) / d,
                 g = 1 << this.F2,
                 _ = r.t,
-                b = _ - u,
-                E = null == e ? o() : e;
+                E = _ - u,
+                b = null == e ? o() : e;
               for (
-                s.dlShiftTo(b, E),
-                  r.compareTo(E) >= 0 && ((r[r.t++] = 1), r.subTo(E, r)),
-                  a.ONE.dlShiftTo(u, E),
-                  E.subTo(s, s);
+                s.dlShiftTo(E, b),
+                  r.compareTo(b) >= 0 && ((r[r.t++] = 1), r.subTo(b, r)),
+                  a.ONE.dlShiftTo(u, b),
+                  b.subTo(s, s);
                 s.t < u;
 
               )
                 s[s.t++] = 0;
-              for (; --b >= 0; ) {
+              for (; --E >= 0; ) {
                 var T =
                   r[--_] == m
                     ? this.DM
                     : Math.floor(r[_] * f + (r[_ - 1] + g) * v);
-                if ((r[_] += s.am(0, T, r, b, 0, u)) < T)
-                  for (s.dlShiftTo(b, E), r.subTo(E, r); r[_] < --T; )
-                    r.subTo(E, r);
+                if ((r[_] += s.am(0, T, r, E, 0, u)) < T)
+                  for (s.dlShiftTo(E, b), r.subTo(b, r); r[_] < --T; )
+                    r.subTo(b, r);
               }
               null != e && (r.drShiftTo(u, e), l != c && a.ZERO.subTo(e, e)),
                 (r.t = u),
@@ -2531,12 +2471,12 @@
         }),
         (a.prototype.getLowestSetBit = function () {
           for (var t = 0; t < this.t; ++t)
-            if (0 != this[t]) return t * this.DB + b(this[t]);
+            if (0 != this[t]) return t * this.DB + E(this[t]);
           return this.s < 0 ? this.t * this.DB : -1;
         }),
         (a.prototype.bitCount = function () {
           for (var t = 0, e = this.s & this.DM, r = 0; r < this.t; ++r)
-            t += E(this[r] ^ e);
+            t += b(this[r] ^ e);
           return t;
         }),
         (a.prototype.testBit = function (t) {
@@ -2599,8 +2539,8 @@
           var v,
             g,
             _ = t.t - 1,
-            b = !0,
-            E = o();
+            E = !0,
+            b = o();
           for (a = p(t[_]) - 1; _ >= 0; ) {
             for (
               a >= c
@@ -2612,18 +2552,18 @@
 
             )
               (v >>= 1), --l;
-            if (((a -= l) < 0 && ((a += this.DB), --_), b))
-              s[v].copyTo(i), (b = !1);
+            if (((a -= l) < 0 && ((a += this.DB), --_), E))
+              s[v].copyTo(i), (E = !1);
             else {
-              for (; l > 1; ) n.sqrTo(i, E), n.sqrTo(E, i), (l -= 2);
-              l > 0 ? n.sqrTo(i, E) : ((g = i), (i = E), (E = g)),
-                n.mulTo(E, s[v], i);
+              for (; l > 1; ) n.sqrTo(i, b), n.sqrTo(b, i), (l -= 2);
+              l > 0 ? n.sqrTo(i, b) : ((g = i), (i = b), (b = g)),
+                n.mulTo(b, s[v], i);
             }
             for (; _ >= 0 && 0 == (t[_] & (1 << a)); )
-              n.sqrTo(i, E),
+              n.sqrTo(i, b),
                 (g = i),
-                (i = E),
-                (E = g),
+                (i = b),
+                (b = g),
                 --a < 0 && ((a = this.DB - 1), --_);
           }
           return n.revert(i);

@@ -194,18 +194,7 @@
 	html.responsive .page_content_ctn.dark:last-child {
 		margin-bottom: unset;
 	}
-
-
-
-
-	/* Advertising */
-	.home_hardware_banner {
-		display: none;
-	}
-
-
-
-
+	
 	/* Featured and recommended */
 	html.responsive .carousel_container.maincap {
 		margin: unset;
@@ -377,6 +366,17 @@
 
 	.carousel_container .carousel_items:not(.no_paging) > * {
 		width: unset;
+	}
+
+	.carousel_container .carousel_view_all {
+		background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
+	}
+	.carousel_container .carousel_view_all > div {
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
 	}
 
 	html.responsive .spotlight_content {

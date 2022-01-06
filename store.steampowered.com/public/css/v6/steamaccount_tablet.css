@@ -347,4 +347,36 @@
     }
 
 
+
+	/* EMAIL PREFERENCES */
+	html.responsive .checkout_content.cart_send_choice {
+		background-color: var(--gpBackground-DarkMedium);
+	}
+
+	html.responsive label.send_choice_txt {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+	}
+
+	html.responsive .email_pref_ctn.individual_pref {
+		font: var(--gpText-BodyLarge);
+		margin: 0px;
+		background: none;
+		border-top: 1px solid var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .send_choice_inner.email_pref_ctn label {
+		line-height: unset;
+		padding: 0px;
+	}
+
+	html.responsive .checkout_content_box h3.tab_header {
+		font: var(--gpText-BodyLarge);
+		letter-spacing: unset;
+		text-transform: unset;
+		margin: 0px 0px 24px;
+	}
+
+
+
 }

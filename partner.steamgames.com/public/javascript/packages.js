@@ -707,13 +707,17 @@ function OnClickDeleteDiscount( packageid, id )
 		var discountid = id.slice(10,-1);
 		CreateAjaxRequest(	g_szBaseURL + "/packages/removepackagediscount/" + packageid,
 			{ 'discountid' : discountid, 'sessionid' : g_sessionID },
-			function( results )
+			function( response )
 			{
-				if ( results[ 'success' ] )
+				if( response.success == 1 )
 				{
 					$( id + '_discountDiv' ).remove();
 					g_AllDiscounts[ id ] = undefined;
 					UpdateSummaryDiscounts();
+				}
+				else
+				{
+					ShowAlertDialog( 'Error', response.message );
 				}
 			},
 			'post'

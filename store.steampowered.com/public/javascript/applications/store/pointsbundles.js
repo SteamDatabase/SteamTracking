@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [100],
+  [71],
   {
     "3xXb": function (e, n, t) {
       e.exports = {
@@ -38,7 +38,7 @@
         a = t.n(r),
         l = t("EC67"),
         i = t("1fPh"),
-        d = t("TyAF"),
+        d = (t("OU48"), t("TyAF")),
         c = t("prdU"),
         o = t("nXE5"),
         u = t("+j4l"),
@@ -49,7 +49,7 @@
         f = t("t0PL"),
         p = t("ehaW"),
         O = t("3xXb"),
-        w = t("exH9"),
+        w = (t("StxQ"), t("exH9")),
         C = t("cOvF");
       n.default = Object(d.a)(function (e) {
         var n = e.match.params.bundleid,

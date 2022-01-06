@@ -17,7 +17,7 @@
       "use strict";
       r.r(t),
         r.d(t, "default", function () {
-          return _e;
+          return be;
         });
       var a = r("mrSG"),
         n = r("1fPh"),
@@ -28,170 +28,177 @@
         p = r("opsS"),
         c = r("vDqi"),
         u = r.n(c),
-        d = (function () {
-          function e() {
-            this.rgModelNames = [];
-          }
-          return (
-            (e.prototype.Init = function () {
-              var e = this;
-              i.a.Init(new s.a(o.d.WEBAPI_BASE_URL, o.k.webapi_token));
-              var t = o.d.STORE_BASE_URL + "labs/ajaxgetsimilaritymodelnames";
-              u.a.get(t).then(function (t) {
-                if (t.data) {
-                  for (var r = [], n = 0, i = t.data; n < i.length; n++) {
-                    var s = i[n];
-                    "default" != s && r.push(s);
-                  }
-                  r.sort(),
-                    (r = Object(a.g)(["default"], r)),
-                    (e.rgModelNames = r);
-                }
-              });
-            }),
-            (e.prototype.ComputePathBetweenApps = function (
-              e,
-              t,
-              r,
-              n,
-              i,
-              s,
-              o
-            ) {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var l,
-                  p,
-                  c,
-                  u,
-                  d,
-                  m,
-                  f,
-                  _ = this;
-                return Object(a.e)(this, function (b) {
-                  switch (b.label) {
-                    case 0:
-                      return (
-                        (l = Math.acos(r)),
-                        [
-                          4,
-                          new h(
-                            function (e) {
-                              return Object(a.b)(
-                                _,
-                                void 0,
-                                void 0,
-                                function () {
-                                  var t, r, s, o;
-                                  return Object(a.e)(this, function (a) {
-                                    switch (a.label) {
-                                      case 0:
-                                        return [4, this.GetNeighbors(e)];
-                                      case 1:
-                                        for (
-                                          t = a.sent(), r = [], s = 0;
-                                          s < t.length &&
-                                          ((o = t[s]),
-                                          (n && !(r.length > n)) ||
-                                            !(
-                                              o.cost > l ||
-                                              (i && r.length >= i)
-                                            ));
-                                          s++
-                                        )
-                                          r.push(o);
-                                        return [2, r];
-                                    }
-                                  });
-                                }
-                              );
-                            },
-                            this.EstimateCosts,
-                            function (e, t) {
-                              return e == t;
-                            },
-                            o
-                          ).FindPath(e, t, s || 10),
-                        ]
-                      );
-                    case 1:
-                      if ((p = b.sent()).path) {
-                        for (c = [], u = 0, d = 0; d < p.path.length; d++)
-                          (m = p.path[d]),
-                            (f = m.cost - u),
-                            (u = m.cost),
-                            c.push({ appid: m.node, similarity: Math.cos(f) });
-                        return [2, c];
-                      }
-                      throw new Error("Unable to compute path.");
+        d =
+          (r("erV9"),
+          (function () {
+            function e() {
+              this.rgModelNames = [];
+            }
+            return (
+              (e.prototype.Init = function () {
+                var e = this;
+                i.a.Init(new s.a(o.d.WEBAPI_BASE_URL, o.k.webapi_token));
+                var t = o.d.STORE_BASE_URL + "labs/ajaxgetsimilaritymodelnames";
+                u.a.get(t).then(function (t) {
+                  if (t.data) {
+                    for (var r = [], n = 0, i = t.data; n < i.length; n++) {
+                      var s = i[n];
+                      "default" != s && r.push(s);
+                    }
+                    r.sort(),
+                      (r = Object(a.g)(["default"], r)),
+                      (e.rgModelNames = r);
                   }
                 });
-              });
-            }),
-            (e.prototype.GetNeighbors = function (e) {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var t, r, n, i;
-                return Object(a.e)(this, function (a) {
-                  switch (a.label) {
-                    case 0:
-                      return (
-                        (t =
-                          o.d.STORE_BASE_URL +
-                          "labs/ajaxgetsimilarapps?appid=" +
-                          e),
-                        [4, u.a.get(t)]
-                      );
-                    case 1:
-                      if (
-                        ((r = a.sent()), (n = []), r.data && r.data.appid == e)
-                      )
-                        for (i = 0; i < r.data.similar_appids.length; i++)
-                          n.push({
-                            node: r.data.similar_appids[i],
-                            cost: Math.acos(r.data.similarity_scores[i]),
-                          });
-                      return [2, n];
-                  }
+              }),
+              (e.prototype.ComputePathBetweenApps = function (
+                e,
+                t,
+                r,
+                n,
+                i,
+                s,
+                o
+              ) {
+                return Object(a.b)(this, void 0, void 0, function () {
+                  var l,
+                    p,
+                    c,
+                    u,
+                    d,
+                    m,
+                    f,
+                    _ = this;
+                  return Object(a.e)(this, function (b) {
+                    switch (b.label) {
+                      case 0:
+                        return (
+                          (l = Math.acos(r)),
+                          [
+                            4,
+                            new h(
+                              function (e) {
+                                return Object(a.b)(
+                                  _,
+                                  void 0,
+                                  void 0,
+                                  function () {
+                                    var t, r, s, o;
+                                    return Object(a.e)(this, function (a) {
+                                      switch (a.label) {
+                                        case 0:
+                                          return [4, this.GetNeighbors(e)];
+                                        case 1:
+                                          for (
+                                            t = a.sent(), r = [], s = 0;
+                                            s < t.length &&
+                                            ((o = t[s]),
+                                            (n && !(r.length > n)) ||
+                                              !(
+                                                o.cost > l ||
+                                                (i && r.length >= i)
+                                              ));
+                                            s++
+                                          )
+                                            r.push(o);
+                                          return [2, r];
+                                      }
+                                    });
+                                  }
+                                );
+                              },
+                              this.EstimateCosts,
+                              function (e, t) {
+                                return e == t;
+                              },
+                              o
+                            ).FindPath(e, t, s || 10),
+                          ]
+                        );
+                      case 1:
+                        if ((p = b.sent()).path) {
+                          for (c = [], u = 0, d = 0; d < p.path.length; d++)
+                            (m = p.path[d]),
+                              (f = m.cost - u),
+                              (u = m.cost),
+                              c.push({
+                                appid: m.node,
+                                similarity: Math.cos(f),
+                              });
+                          return [2, c];
+                        }
+                        throw new Error("Unable to compute path.");
+                    }
+                  });
                 });
-              });
-            }),
-            (e.prototype.EstimateCosts = function (e, t) {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var r, n;
-                return Object(a.e)(this, function (a) {
-                  switch (a.label) {
-                    case 0:
-                      return (
-                        (r =
-                          o.d.STORE_BASE_URL +
-                          "labs/ajaxgetappsimilarities?appidtarget=" +
-                          t +
-                          "&" +
-                          e
-                            .map(function (e) {
-                              return "appid[]=" + e.toString();
-                            })
-                            .join("&")),
-                        [4, u.a.get(r)]
-                      );
-                    case 1:
-                      if ((n = a.sent()).data && n.data.similarity_scores)
-                        return [
-                          2,
-                          n.data.similarity_scores.map(function (e) {
-                            return Math.acos(parseFloat(e));
-                          }),
-                        ];
-                      throw new Error("Unable to fetch cost estimates");
-                  }
+              }),
+              (e.prototype.GetNeighbors = function (e) {
+                return Object(a.b)(this, void 0, void 0, function () {
+                  var t, r, n, i;
+                  return Object(a.e)(this, function (a) {
+                    switch (a.label) {
+                      case 0:
+                        return (
+                          (t =
+                            o.d.STORE_BASE_URL +
+                            "labs/ajaxgetsimilarapps?appid=" +
+                            e),
+                          [4, u.a.get(t)]
+                        );
+                      case 1:
+                        if (
+                          ((r = a.sent()),
+                          (n = []),
+                          r.data && r.data.appid == e)
+                        )
+                          for (i = 0; i < r.data.similar_appids.length; i++)
+                            n.push({
+                              node: r.data.similar_appids[i],
+                              cost: Math.acos(r.data.similarity_scores[i]),
+                            });
+                        return [2, n];
+                    }
+                  });
                 });
-              });
-            }),
-            Object(a.c)([l.C], e.prototype, "rgModelNames", void 0),
-            Object(a.c)([p.a], e.prototype, "GetNeighbors", null),
-            Object(a.c)([p.a], e.prototype, "EstimateCosts", null),
-            e
-          );
-        })(),
+              }),
+              (e.prototype.EstimateCosts = function (e, t) {
+                return Object(a.b)(this, void 0, void 0, function () {
+                  var r, n;
+                  return Object(a.e)(this, function (a) {
+                    switch (a.label) {
+                      case 0:
+                        return (
+                          (r =
+                            o.d.STORE_BASE_URL +
+                            "labs/ajaxgetappsimilarities?appidtarget=" +
+                            t +
+                            "&" +
+                            e
+                              .map(function (e) {
+                                return "appid[]=" + e.toString();
+                              })
+                              .join("&")),
+                          [4, u.a.get(r)]
+                        );
+                      case 1:
+                        if ((n = a.sent()).data && n.data.similarity_scores)
+                          return [
+                            2,
+                            n.data.similarity_scores.map(function (e) {
+                              return Math.acos(parseFloat(e));
+                            }),
+                          ];
+                        throw new Error("Unable to fetch cost estimates");
+                    }
+                  });
+                });
+              }),
+              Object(a.c)([l.C], e.prototype, "rgModelNames", void 0),
+              Object(a.c)([p.a], e.prototype, "GetNeighbors", null),
+              Object(a.c)([p.a], e.prototype, "EstimateCosts", null),
+              e
+            );
+          })()),
         m = (function () {
           function e(e) {
             (this.m_Heap = []), (this.m_Length = 0), (this.m_fnCompare = e);
@@ -715,7 +722,7 @@
             t
           );
         })(b.a.Component),
-        I = (function (e) {
+        j = (function (e) {
           function t(t) {
             var r = e.call(this, t) || this;
             return (
@@ -824,7 +831,7 @@
             (t = Object(a.c)([E.a], t))
           );
         })(b.a.Component),
-        j = (function (e) {
+        I = (function (e) {
           function t(t) {
             var r = e.call(this, t) || this;
             return (
@@ -1004,7 +1011,7 @@
               ) {
                 var p = l[o];
                 i.push(
-                  b.a.createElement(j, {
+                  b.a.createElement(I, {
                     app: p.app,
                     operator: p.operator,
                     key: s,
@@ -1206,7 +1213,7 @@
           b.a.Fragment,
           null,
           b.a.createElement("h1", null, "Similar Games"),
-          b.a.createElement(I, { max_similar: 10 }),
+          b.a.createElement(j, { max_similar: 10 }),
           b.a.createElement("div", { className: v.Spacer }),
           b.a.createElement("h1", null, "Similarity"),
           b.a.createElement(A, null),
@@ -1219,7 +1226,7 @@
         );
       }
       var P = r("kLLr"),
-        N = r("qiKp"),
+        N = (r("E4Op"), r("qiKp")),
         z = r("bxBv"),
         k = r("hRO2"),
         L = r("OS8t"),
@@ -1532,18 +1539,19 @@
                         br: L.d.readFixed64String,
                         bw: L.h.writeFixed64String,
                       },
+                      sort: { n: 2, d: 1, br: L.d.readEnum, bw: L.h.writeEnum },
                       clusters_to_return: {
-                        n: 2,
-                        br: L.d.readInt32,
-                        bw: L.h.writeInt32,
-                      },
-                      cluster_index: {
                         n: 3,
                         br: L.d.readInt32,
                         bw: L.h.writeInt32,
                       },
-                      context: { n: 4, c: F.b },
-                      data_request: { n: 5, c: F.c },
+                      cluster_index: {
+                        n: 4,
+                        br: L.d.readInt32,
+                        bw: L.h.writeInt32,
+                      },
+                      context: { n: 10, c: F.b },
+                      data_request: { n: 11, c: F.c },
                     },
                   }),
                 t.sm_m
@@ -1605,7 +1613,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { clusters: { n: 1, c: Q, r: !0, q: !0 } },
+                    fields: { clusters: { n: 1, c: V, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -1649,7 +1657,7 @@
             t
           );
         })(T),
-        Q = (function (e) {
+        V = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var a = e.call(this) || this;
@@ -1702,6 +1710,11 @@
                         bw: L.h.writeRepeatedInt32,
                       },
                       similar_items: { n: 7, c: F.e, r: !0, q: !0 },
+                      similar_item_popularity_score: {
+                        n: 8,
+                        br: L.d.readDouble,
+                        bw: L.h.writeDouble,
+                      },
                     },
                   }),
                 t.sm_m
@@ -1763,37 +1776,38 @@
             );
           });
       })(D || (D = {}));
-      var V = r("AKiZ"),
-        J = r("C4Nl"),
+      var Q = r("AKiZ"),
+        J = (r("g4bM"), r("C4Nl")),
         X = (function () {
           function e(e) {
             this.m_SteamInterface = e;
           }
           return (
-            (e.prototype.LoadPlaytimeClusters = function (e, t, r) {
-              return new Z(this.m_SteamInterface, e, t, r);
+            (e.prototype.LoadPlaytimeClusters = function (e, t, r, a) {
+              return new Z(this.m_SteamInterface, e, t, r, a);
             }),
             e
           );
         })(),
         Z = (function () {
-          function e(e, t, r, a) {
-            var n = this;
+          function e(e, t, r, a, n) {
+            var i = this;
             this.m_callbacksLoaded = new N.a();
-            var i = z.b.Init(q);
-            Object(V.a)(i),
-              a && Object(V.b)(i, a),
-              i.Body().set_steamid(t || o.k.steamid),
-              r && i.Body().set_clusters_to_return(r),
-              D.IdentifyClustersFromPlaytime(e.GetServiceTransport(), i).then(
+            var s = z.b.Init(q);
+            Object(Q.a)(s),
+              n && Object(Q.b)(s, n),
+              s.Body().set_steamid(t || o.k.steamid),
+              a && s.Body().set_clusters_to_return(a),
+              s.Body().set_sort(r),
+              D.IdentifyClustersFromPlaytime(e.GetServiceTransport(), s).then(
                 function (e) {
                   var t = e.Body();
-                  n.m_rgClusters = [];
-                  for (var r = 0, i = t.clusters(); r < i.length; r++) {
-                    var s = i[r];
-                    n.m_rgClusters.push(n.ReadCluster(s, a));
+                  i.m_rgClusters = [];
+                  for (var r = 0, a = t.clusters(); r < a.length; r++) {
+                    var s = a[r];
+                    i.m_rgClusters.push(i.ReadCluster(s, n));
                   }
-                  n.m_callbacksLoaded.Dispatch(n.m_rgClusters);
+                  i.m_callbacksLoaded.Dispatch(i.m_rgClusters);
                 }
               );
           }
@@ -1815,6 +1829,7 @@
                     return !!e;
                   }),
                   rgSimilarAppIDs: e.similar_items_appids(),
+                  flPopularityScore: e.similar_item_popularity_score(),
                 }
               );
             }),
@@ -1832,13 +1847,14 @@
             e
           );
         })();
-      var Y = r("0OaU"),
-        $ = r("TLQK"),
-        ee = r("1wed"),
-        te = r("b3LC"),
-        re = r("uuth"),
-        ae = r("IjL/");
-      function ne(e) {
+      var Y,
+        $ = r("0OaU"),
+        ee = r("TLQK"),
+        te = r("1wed"),
+        re = r("b3LC"),
+        ae = r("uuth"),
+        ne = r("IjL/");
+      function ie(e) {
         var t = e.SteamInterface,
           r = _.useRef();
         return (
@@ -1869,16 +1885,16 @@
                 " (requires Rack VPN)."
               )
             ),
-            _.createElement(se, { SimilarityStore: r.current })
+            _.createElement(oe, { SimilarityStore: r.current })
           )
         );
       }
-      var ie = {
-        total_playtime: "Total Playtime",
-        games_played: "Number of Played Games",
-        recent: "Most Recently Played",
-      };
-      function se(e) {
+      var se =
+        (((Y = {})[3] = "Total Playtime"),
+        (Y[2] = "Number of Played Games"),
+        (Y[1] = "Most Recently Played"),
+        Y);
+      function oe(e) {
         var t = e.SimilarityStore,
           r = _.useState(o.k.steamid),
           n = r[0],
@@ -1886,7 +1902,7 @@
           s = _.useState("10"),
           l = s[0],
           p = s[1],
-          c = _.useState("total_playtime"),
+          c = _.useState(3),
           u = c[0],
           d = c[1],
           m = _.useCallback(
@@ -1918,30 +1934,38 @@
         l && !isNaN(parseInt(l)) && (v = parseInt(l));
         var O = _.useMemo(function () {
             var e = [];
-            for (var t in ie) e.push({ data: t, label: ie[t] });
+            for (var t in se) e.push({ data: t, label: se[t] });
             return e;
           }, []),
-          E = (function (e, t, r, n, i) {
-            void 0 === n && (n = null), void 0 === i && (i = []);
-            var s = _.useState(null),
-              o = s[0],
-              l = s[1];
+          E = (function (e, t, r, n, i, s) {
+            void 0 === n && (n = 1),
+              void 0 === i && (i = null),
+              void 0 === s && (s = []);
+            var o = _.useState(null),
+              l = o[0],
+              p = o[1];
             return (
               _.useEffect(function () {
-                if ((l(null), r))
+                if ((p(null), r))
                   return e
-                    .LoadPlaytimeClusters(r, n, t)
-                    .RegisterOnReadyCallback(l).Unregister;
-              }, Object(a.g)([r, n], i)),
-              o
+                    .LoadPlaytimeClusters(r, n, i, t)
+                    .RegisterOnReadyCallback(p).Unregister;
+              }, Object(a.g)([r, n, i], s)),
+              l
             );
-          })(t, { include_assets: !0, include_basic_info: !0 }, y.current, v);
+          })(
+            t,
+            { include_assets: !0, include_basic_info: !0 },
+            y.current,
+            u,
+            v
+          );
         return _.createElement(
           "div",
           null,
           _.createElement(
             S.b,
-            { className: ee.ClusterConfig },
+            { className: te.ClusterConfig },
             _.createElement(S.k, {
               label: "SteamID",
               type: "text",
@@ -1965,51 +1989,25 @@
               onChange: f,
             })
           ),
-          b && !E && _.createElement(Y.a, null),
-          E && _.createElement(oe, { sort: u, rgPlaytimeClusters: E })
+          b && !E && _.createElement($.a, null),
+          E && _.createElement(le, { rgPlaytimeClusters: E })
         );
       }
-      function oe(e) {
-        var t = e.rgPlaytimeClusters,
-          r = e.sort,
-          a = _.useMemo(
-            function () {
-              return t.slice().sort(
-                (function (e) {
-                  switch (e) {
-                    case "total_playtime":
-                      return function (e, t) {
-                        return t.nPlaytimeMinutes - e.nPlaytimeMinutes;
-                      };
-                    case "games_played":
-                      return function (e, t) {
-                        return (
-                          t.rgAppIDsPlayed.length - e.rgAppIDsPlayed.length
-                        );
-                      };
-                    case "recent":
-                      return function (e, t) {
-                        return t.rtLastPlayed - e.rtLastPlayed;
-                      };
-                  }
-                })(r)
-              );
-            },
-            [t, r]
-          );
+      function le(e) {
+        var t = e.rgPlaytimeClusters;
         return _.createElement(
           "div",
           null,
-          a.map(function (e) {
+          t.map(function (e) {
             return _.createElement(
-              ae.a,
+              ne.a,
               { key: e.nClusterID },
-              _.createElement(le, { cluster: e })
+              _.createElement(pe, { cluster: e })
             );
           })
         );
       }
-      function le(e) {
+      function pe(e) {
         var t = e.cluster,
           r = _.useState(!1),
           a = r[0],
@@ -2030,21 +2028,21 @@
             [l]
           );
         return _.createElement(
-          re.a,
+          ae.a,
           { onEnter: p },
           _.createElement(
             "div",
-            { className: ee.PlaytimeCluster },
+            { className: te.PlaytimeCluster },
             _.createElement(
               "div",
-              { className: ee.ClusterInfo },
+              { className: te.ClusterInfo },
               _.createElement("h1", null, "Cluster ", t.nClusterID),
               _.createElement(
-                ae.a,
+                ne.a,
                 null,
                 _.createElement(
                   "div",
-                  { className: ee.Overview },
+                  { className: te.Overview },
                   _.createElement(
                     "div",
                     null,
@@ -2058,7 +2056,7 @@
                     null,
                     _.createElement("b", null, "Last Played:"),
                     " ",
-                    Object($.o)(t.rtLastPlayed),
+                    Object(ee.o)(t.rtLastPlayed),
                     " "
                   ),
                   _.createElement(
@@ -2071,20 +2069,28 @@
                         return _.createElement(
                           _.Fragment,
                           { key: e },
-                          _.createElement(ce, { appid: e }),
+                          _.createElement(ue, { appid: e }),
                           ", "
                         );
                       })
+                  ),
+                  _.createElement(
+                    "div",
+                    null,
+                    _.createElement("b", null, "Popularity Score:"),
+                    " ",
+                    Math.floor(100 * t.flPopularityScore),
+                    "% "
                   )
                 )
               )
             ),
             _.createElement(
               "div",
-              { className: ee.ClusterMembers },
+              { className: te.ClusterMembers },
               _.createElement("h3", null, "Similar titles:"),
               _.createElement(
-                ae.a,
+                ne.a,
                 null,
                 _.createElement(
                   "ul",
@@ -2094,7 +2100,7 @@
                       ? _.createElement(
                           "li",
                           { key: e.GetUniqueID() },
-                          _.createElement(ue, { item: e })
+                          _.createElement(de, { item: e })
                         )
                       : null;
                   })
@@ -2111,23 +2117,23 @@
           )
         );
       }
-      var pe = {};
-      function ce(e) {
+      var ce = {};
+      function ue(e) {
         var t = e.appid,
-          r = Object(te.b)(t, pe)[0];
+          r = Object(re.b)(t, ce)[0];
         return r
           ? _.createElement(
               "a",
-              { className: ee.PlayedGame, href: r.GetStorePageURL() },
+              { className: te.PlayedGame, href: r.GetStorePageURL() },
               r.GetName()
             )
           : null;
       }
-      function ue(e) {
+      function de(e) {
         var t = e.item;
         return _.createElement(
           "a",
-          { className: ee.SimilarTitle, href: t.GetStorePageURL() },
+          { className: te.SimilarTitle, href: t.GetStorePageURL() },
           _.createElement("img", {
             src: t.assets.GetSmallCapsuleURL(),
             loading: "lazy",
@@ -2135,8 +2141,8 @@
           t.GetName()
         );
       }
-      var de = r("vyDT"),
-        me = [
+      var me = r("vyDT"),
+        he = [
           {
             path: "similarity",
             render: function () {
@@ -2147,7 +2153,7 @@
           {
             path: "clustering",
             render: function (e) {
-              return b.a.createElement(ne, {
+              return b.a.createElement(ie, {
                 SteamInterface: e.SteamInterface,
               });
             },
@@ -2155,13 +2161,13 @@
             requires_login: !0,
           },
         ],
-        he = Object(o.h)("labs", "application_config"),
-        fe = new s.a(o.d.WEBAPI_BASE_URL, he.webapi_token);
-      function _e(e) {
+        fe = Object(o.h)("labs", "application_config"),
+        _e = new s.a(o.d.WEBAPI_BASE_URL, fe.webapi_token);
+      function be(e) {
         var t = b.a.useState(!1),
           r = t[0],
           i = t[1],
-          s = !!he.webapi_token;
+          s = !!fe.webapi_token;
         if (
           (Object(_.useEffect)(function () {
             f.Init(), i(!0);
@@ -2169,7 +2175,7 @@
           !r)
         )
           return b.a.createElement("div", { className: v.App });
-        var o = { SteamInterface: fe };
+        var o = { SteamInterface: _e };
         return b.a.createElement(
           "div",
           { className: v.App },
@@ -2189,7 +2195,7 @@
             b.a.createElement(
               "div",
               { className: v.Tabs },
-              me.map(function (e) {
+              he.map(function (e) {
                 return b.a.createElement(
                   y.c,
                   {
@@ -2206,19 +2212,19 @@
               "div",
               { className: v.SandboxSection },
               b.a.createElement(
-                ae.a,
+                ne.a,
                 null,
                 b.a.createElement(
                   g.d,
                   null,
-                  me.map(function (e, t) {
+                  he.map(function (e, t) {
                     return b.a.createElement(g.b, {
                       key: e.path,
                       path: n.b.LabsSandbox() + "/" + e.path,
                       render: function (t) {
                         return !e.requires_login || s
                           ? e.render(Object(a.a)(Object(a.a)({}, t), o))
-                          : b.a.createElement(be, null);
+                          : b.a.createElement(ye, null);
                       },
                     });
                   })
@@ -2228,12 +2234,12 @@
           )
         );
       }
-      function be() {
+      function ye() {
         return b.a.createElement(
           "div",
           null,
           b.a.createElement("h3", null, "Please login to view this page."),
-          b.a.createElement(de.a, {
+          b.a.createElement(me.a, {
             baseURL: o.d.STORE_BASE_URL,
             onLoginComplete: function () {
               return window.location.reload();
@@ -2279,6 +2285,9 @@
         Tab: "labssandbox_Tab_16ebk",
         Active: "labssandbox_Active_2J9Kx",
       };
+    },
+    erV9: function (e) {
+      e.exports = JSON.parse("{}");
     },
   },
 ]);

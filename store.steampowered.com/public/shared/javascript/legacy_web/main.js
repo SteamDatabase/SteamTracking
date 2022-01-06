@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6977422";
+var CLSTAMP = "6987484";
 /* Third-party software licenses can be found at licenses.txt */
 !(function (t) {
   function e(e) {
@@ -39,7 +39,7 @@ var CLSTAMP = "6977422";
               "javascript/legacy_web/" +
               ({ 0: "gamepad" }[t] || t) +
               ".js?contenthash=" +
-              { 0: "2eff1c7cd5e4c503ea69" }[t]
+              { 0: "ed15d7808bfa9e3ef395" }[t]
             );
           })(t));
         var u = new Error();
@@ -141,6 +141,90 @@ var CLSTAMP = "6977422";
       return n >= 0 && (t.splice(n, 1), !0);
     }
   },
+  SHRt: function (t, e, n) {
+    "use strict";
+    n.d(e, "a", function () {
+      return c;
+    });
+    var o = n("mrSG"),
+      r = n("rHSA"),
+      i = n("XxJJ"),
+      a = [
+        { index: 0, type: r.a.OK, category: "action" },
+        { index: 1, type: r.a.CANCEL, category: "action" },
+        { index: 2, type: r.a.SECONDARY, category: "action" },
+        { index: 3, type: r.a.OPTIONS, category: "action" },
+        { index: 4, type: r.a.BUMPER_LEFT, category: "action" },
+        { index: 5, type: r.a.BUMPER_RIGHT, category: "action" },
+        { index: 6, type: r.a.TRIGGER_LEFT, category: "action" },
+        { index: 7, type: r.a.TRIGGER_RIGHT, category: "action" },
+        { index: 8, type: r.a.SELECT, category: "action" },
+        { index: 9, type: r.a.START, category: "action" },
+        { index: 10, type: r.a.LSTICK_CLICK, category: "action" },
+        { index: 11, type: r.a.RSTICK_CLICK, category: "action" },
+        { index: 12, type: r.a.DIR_UP, category: "navigation" },
+        { index: 13, type: r.a.DIR_DOWN, category: "navigation" },
+        { index: 14, type: r.a.DIR_LEFT, category: "navigation" },
+        { index: 15, type: r.a.DIR_RIGHT, category: "navigation" },
+        { index: 16, type: r.a.STEAM_GUIDE, category: "action" },
+        { index: 17, type: r.a.SELECT, category: "action" },
+      ],
+      c = (function (t) {
+        function e() {
+          var e = t.call(this) || this;
+          return (
+            (e.m_rgGamepadStatus = []),
+            e.SetSourceType(r.b.GAMEPAD),
+            window.addEventListener("gamepadconnected", function (t) {
+              e.m_bGamepadDetected || (e.OnGamepadDetected(), e.PollGamepads());
+            }),
+            e
+          );
+        }
+        return (
+          Object(o.d)(e, t),
+          (e.prototype.PollGamepads = function () {
+            for (
+              var t = navigator.getGamepads(), e = !1, n = 0;
+              n < t.length;
+              n++
+            ) {
+              var o = t[n];
+              if (o) {
+                this.m_rgGamepadStatus[n] ||
+                  (this.m_rgGamepadStatus[n] = { buttons: [] });
+                for (
+                  var r = this.m_rgGamepadStatus[n], i = 0;
+                  i < a.length;
+                  i++
+                ) {
+                  var c = a[i],
+                    u = c.index;
+                  o.buttons[u] &&
+                    (o.buttons[u].pressed
+                      ? ((e = !0),
+                        r.buttons[u] ||
+                          ((r.buttons[u] = !0), this.OnButtonDown(c.type)))
+                      : r.buttons[u] &&
+                        (this.OnButtonUp(c.type), (r.buttons[u] = !1)));
+                }
+              }
+            }
+            document.hasFocus() || e
+              ? requestAnimationFrame(this.PollGamepads)
+              : (console.log("Lost focus - suspending gamepad polling"),
+                window.addEventListener("focusin", this.OnWindowRegainedFocus));
+          }),
+          (e.prototype.OnWindowRegainedFocus = function () {
+            window.removeEventListener("focusin", this.OnWindowRegainedFocus),
+              this.PollGamepads();
+          }),
+          Object(o.c)([i.a], e.prototype, "PollGamepads", null),
+          Object(o.c)([i.a], e.prototype, "OnWindowRegainedFocus", null),
+          e
+        );
+      })(r.c);
+  },
   SQr7: function (t, e, n) {
     "use strict";
     "VALVE_PUBLIC_PATH" in window
@@ -177,84 +261,8 @@ var CLSTAMP = "6977422";
     var o = n("mrSG"),
       r = (n("SQr7"), n("xeH2")),
       i = n.n(r),
-      a = n("rHSA"),
-      c = n("XxJJ"),
-      u = [
-        { index: 0, type: a.a.OK, category: "action" },
-        { index: 1, type: a.a.CANCEL, category: "action" },
-        { index: 2, type: a.a.SECONDARY, category: "action" },
-        { index: 3, type: a.a.OPTIONS, category: "action" },
-        { index: 4, type: a.a.BUMPER_LEFT, category: "action" },
-        { index: 5, type: a.a.BUMPER_RIGHT, category: "action" },
-        { index: 6, type: a.a.TRIGGER_LEFT, category: "action" },
-        { index: 7, type: a.a.TRIGGER_RIGHT, category: "action" },
-        { index: 8, type: a.a.SELECT, category: "action" },
-        { index: 9, type: a.a.START, category: "action" },
-        { index: 10, type: a.a.LSTICK_CLICK, category: "action" },
-        { index: 11, type: a.a.RSTICK_CLICK, category: "action" },
-        { index: 12, type: a.a.DIR_UP, category: "navigation" },
-        { index: 13, type: a.a.DIR_DOWN, category: "navigation" },
-        { index: 14, type: a.a.DIR_LEFT, category: "navigation" },
-        { index: 15, type: a.a.DIR_RIGHT, category: "navigation" },
-        { index: 16, type: a.a.STEAM_GUIDE, category: "action" },
-        { index: 17, type: a.a.SELECT, category: "action" },
-      ],
-      s = (function (t) {
-        function e() {
-          var e = t.call(this) || this;
-          return (
-            (e.m_rgGamepadStatus = []),
-            e.SetSourceType(a.b.GAMEPAD),
-            window.addEventListener("gamepadconnected", function (t) {
-              e.m_bGamepadDetected || (e.OnGamepadDetected(), e.PollGamepads());
-            }),
-            e
-          );
-        }
-        return (
-          Object(o.d)(e, t),
-          (e.prototype.PollGamepads = function () {
-            for (
-              var t = navigator.getGamepads(), e = !1, n = 0;
-              n < t.length;
-              n++
-            ) {
-              var o = t[n];
-              if (o) {
-                this.m_rgGamepadStatus[n] ||
-                  (this.m_rgGamepadStatus[n] = { buttons: [] });
-                for (
-                  var r = this.m_rgGamepadStatus[n], i = 0;
-                  i < u.length;
-                  i++
-                ) {
-                  var a = u[i],
-                    c = a.index;
-                  o.buttons[c] &&
-                    (o.buttons[c].pressed
-                      ? ((e = !0),
-                        r.buttons[c] ||
-                          ((r.buttons[c] = !0), this.OnButtonDown(a.type)))
-                      : r.buttons[c] &&
-                        (this.OnButtonUp(a.type), (r.buttons[c] = !1)));
-                }
-              }
-            }
-            document.hasFocus() || e
-              ? requestAnimationFrame(this.PollGamepads)
-              : (console.log("Lost focus - suspending gamepad polling"),
-                window.addEventListener("focusin", this.OnWindowRegainedFocus));
-          }),
-          (e.prototype.OnWindowRegainedFocus = function () {
-            window.removeEventListener("focusin", this.OnWindowRegainedFocus),
-              this.PollGamepads();
-          }),
-          Object(o.c)([c.a], e.prototype, "PollGamepads", null),
-          Object(o.c)([c.a], e.prototype, "OnWindowRegainedFocus", null),
-          e
-        );
-      })(a.c);
-    function p(t) {
+      a = n("SHRt");
+    function c(t) {
       return Object(o.b)(this, void 0, void 0, function () {
         return Object(o.e)(this, function (e) {
           switch (e.label) {
@@ -269,11 +277,11 @@ var CLSTAMP = "6977422";
     n.p.endsWith("shared/") || (n.p = n.p + "shared/"),
       i()(function () {
         var t;
-        (t = new s()),
+        (t = new a.a()),
           navigator.userAgent.includes("Valve Steam Gamepad")
-            ? p(t)
+            ? c(t)
             : t.RegisterForGamepadDetected(function () {
-                return p(t);
+                return c(t);
               });
       });
   },

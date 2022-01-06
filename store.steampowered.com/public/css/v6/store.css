@@ -5928,6 +5928,6 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 }
 
 .gpfocusring {
-	border: 4px solid white;
+	border: 4px solid;
 	transition: left 0.1s, top 0.1s, height 0.1s, width 0.1s;
 }

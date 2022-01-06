@@ -2082,23 +2082,37 @@ function CloseReviewSettingsModal()
 
 function BindFocusVideoOnTablet()
 {
-    $J( '.highlight_movie' ).on( "focusin", function( event ) {
-    	this.play();
-    } );
-
-    $J( '.highlight_movie' ).on( "vgp_onok, click", function( event ) {
-		if (!document.fullscreenElement )
-		{
-			this.requestFullscreen();
-			this.play();
-		} else if ( document.exitFullscreen )
-		{
-			document.exitFullscreen();
-		}
-    } );
-
     $J( '.highlight_movie' ).on( "focusout", function( event ) {
 		this.pause();
     } );
+}
+function GamepadVideoTogglePlay()
+{
+	var $video = $J(document.activeElement);
+	if ( $video.prop('tagName').toLowerCase().indexOf( 'video' ) != -1 )
+	{
+		var video = $video[0];
+		if ( video.paused ) 
+			video.play();
+		else 
+			video.pause(); 
+	}
+	else
+	{
+		console.error('received a video toggle play but video is not in focus');
+	}
+}
+function GamepadVideoToggleMute()
+{
+	var $video = $J(document.activeElement);
+	if ( $video.prop('tagName').toLowerCase().indexOf( 'video' ) != -1 )
+	{
+		var video = $video[0];
+		video.muted = !video.muted;
+	}
+	else
+	{
+		console.error('received a video toggle mute but video is not in focus');
+	}
 }
 
