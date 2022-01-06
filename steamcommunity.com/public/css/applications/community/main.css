@@ -788,6 +788,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   white-space: nowrap;
   overflow-y: overlay;
   flex-shrink: 1;
+  flex-grow: 1;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
   white-space: normal;
