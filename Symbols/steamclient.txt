@@ -666,6 +666,8 @@
  getpeername$UNIX2003
  getpid
  getpwuid
+ getrlimit
+ getrlimit$UNIX2003
  getsockname
  getsockname$UNIX2003
  getsockopt
