@@ -4420,24 +4420,6 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   .animated_featured_capsule_SuperCapsuleCtn_olJ0b {
   height: 647px;
   background: none;
-  -webkit-mask: radial-gradient(
-      51.31% 143.89% at 49.99% 24.75%,
-      #000000 0%,
-      #000000 52.6%,
-      rgba(0, 0, 0, 0.18) 83.33%,
-      rgba(0, 0, 0, 0) 95.31%
-    ),
-    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
-  mask: radial-gradient(
-      51.31% 143.89% at 49.99% 24.75%,
-      #000000 0%,
-      #000000 52.6%,
-      rgba(0, 0, 0, 0.18) 83.33%,
-      rgba(0, 0, 0, 0) 95.31%
-    ),
-    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-composite: source-in;
-  mask-composite: source-in;
 }
 @media screen and (max-width: 940px) {
   .ContentHubSalePage
@@ -4544,6 +4526,24 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   max-width: 1920px;
   height: 100%;
   mix-blend-mode: overlay;
+  -webkit-mask: radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
+  mask: radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
 }
 .animated_featured_capsule_CapsuleDecorators_jaTSi {
   position: absolute;
@@ -13525,6 +13525,23 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 940px) {
+  .sale_page_n_section .responsive_page_frame {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+}
+html.responsive.touch .ContentHubSalePage {
+  width: auto;
+  position: relative;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .ContentHubSalePage {
+    width: auto;
+    position: relative;
+  }
+}
 .partnersaledisplay_SaleHeaderContainer_W4mvn {
   display: flex;
   margin: 0 auto;
@@ -15033,6 +15050,14 @@ Body.v6.tag_page.contenthub_page {
   position: relative;
   z-index: 1;
 }
+html.responsive.touch .contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop) .contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
+    margin-bottom: 8px;
+  }
+}
 .contenthubmaincarousel_ContentHubTitle_saHqN {
   padding-left: 5px;
   color: #eee;
@@ -15040,9 +15065,24 @@ Body.v6.tag_page.contenthub_page {
   font-weight: 200;
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
 }
-@media screen and (max-width: 940px) {
-  .contenthubmaincarousel_ContentHubTitle_saHqN {
+html.responsive.touch .contenthubmaincarousel_ContentHubTitle_saHqN {
+  padding-left: 15px;
+  font-size: 32px;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .contenthubmaincarousel_ContentHubTitle_saHqN {
     padding-left: 15px;
+    font-size: 32px;
+  }
+}
+html.responsive.touch .contenthubmaincarousel_ContentHubTitle_saHqN {
+  font-size: 28px;
+  padding-left: 0px;
+}
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop) .contenthubmaincarousel_ContentHubTitle_saHqN {
+    font-size: 28px;
+    padding-left: 0px;
   }
 }
 .contenthubmaincarousel_ContentHubSubtitle_11kuP {
@@ -15061,18 +15101,37 @@ Body.v6.tag_page.contenthub_page {
   width: 250px;
   opacity: 85%;
 }
-@media screen and (max-width: 940px) {
-  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW {
+html.responsive.touch .contenthubmaincarousel_ContentHubLabsWidget_3IwCW {
+  display: block;
+  position: unset;
+  top: unset;
+  width: 100%;
+}
+html.responsive.touch
+  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
+  .contenthubmaincarousel_SteamLabsBannerCtn_1C-mg {
+  padding: 5px;
+}
+html.responsive.touch
+  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
+  .contenthubmaincarousel_SteamLabsIdentifiers_Ag4WC
+  .contenthubmaincarousel_SteamLabsName_2BTZE {
+  font-size: 12px !important;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .contenthubmaincarousel_ContentHubLabsWidget_3IwCW {
     display: block;
     position: unset;
     top: unset;
     width: 100%;
   }
-  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
+  html:not(.force_desktop)
+    .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
     .contenthubmaincarousel_SteamLabsBannerCtn_1C-mg {
     padding: 5px;
   }
-  .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
+  html:not(.force_desktop)
+    .contenthubmaincarousel_ContentHubLabsWidget_3IwCW
     .contenthubmaincarousel_SteamLabsIdentifiers_Ag4WC
     .contenthubmaincarousel_SteamLabsName_2BTZE {
     font-size: 12px !important;
@@ -15090,7 +15149,7 @@ Body.v6.tag_page.contenthub_page {
   color: #fff;
   letter-spacing: 1px;
   text-transform: uppercase;
-  width: 1200px;
+  flex-grow: 1;
   text-align: right;
   padding-right: 8px;
 }
@@ -15803,6 +15862,20 @@ Body.v6.tag_page.contenthub_page {
   box-sizing: border-box;
   flex-wrap: wrap;
 }
+html.responsive.touch
+  .saleitembrowser_SaleItemBrowserContainer_18byE
+  .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK
+  .saleitembrowser_SaleItemBrowserHeader_Eh-ow {
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop)
+    .saleitembrowser_SaleItemBrowserContainer_18byE
+    .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK
+    .saleitembrowser_SaleItemBrowserHeader_Eh-ow {
+    flex-wrap: nowrap;
+  }
+}
 .saleitembrowser_SaleItemBrowserContainer_18byE
   .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK
   .saleitembrowser_SaleItemBrowserHeader_Eh-ow
@@ -15836,6 +15909,26 @@ Body.v6.tag_page.contenthub_page {
   .saleitembrowser_SaleItemBrowserHeader_Eh-ow
   .saleitembrowser_FlavorLabel_KDLAS:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+html.responsive.touch
+  .saleitembrowser_SaleItemBrowserContainer_18byE
+  .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK
+  .saleitembrowser_SaleItemBrowserHeader_Eh-ow
+  .saleitembrowser_FlavorLabel_KDLAS {
+  margin: inherit 3px inherit;
+  letter-spacing: 0;
+  text-transform: initial;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop)
+    .saleitembrowser_SaleItemBrowserContainer_18byE
+    .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK
+    .saleitembrowser_SaleItemBrowserHeader_Eh-ow
+    .saleitembrowser_FlavorLabel_KDLAS {
+    margin: inherit 3px inherit;
+    letter-spacing: 0;
+    text-transform: initial;
+  }
 }
 .saleitembrowser_SaleItemBrowserContainer_18byE
   .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK

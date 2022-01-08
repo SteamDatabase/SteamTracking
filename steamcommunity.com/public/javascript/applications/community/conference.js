@@ -59035,7 +59035,7 @@
         s = (n("mgoM"), n("kyHq"), n("kLLr"), n("+d9t"), n("AiWL"), n("OS6B")),
         c = n("lkRc"),
         l = n("q1tI"),
-        u = "unUserdataVersion";
+        u = (n("aoTL"), "unUserdataVersion");
       function d() {
         var e = Object(l.useState)(!m.Get().BIsLoaded()),
           t = e[0],
@@ -59075,6 +59075,8 @@
             (this.m_secondaryLanguages = new Set()),
             (this.m_setRecommendedTags = new Set()),
             (this.m_mapRecommendingCuratorsForApp = new Map()),
+            (this.m_setPackagesInCart = new Set()),
+            (this.m_setAppsInCart = new Set()),
             (this.m_bIsLoaded = !1);
         }
         return (
@@ -59084,6 +59086,9 @@
           (e.prototype.GetWishlistGamesInUserOrder = function () {
             return this.m_wishlistInOrder;
           }),
+          (e.prototype.GetWishlistGameCount = function () {
+            return this.m_setWishList.size;
+          }),
           (e.prototype.GetRecommendedGamesInIRPriorityOrder = function () {
             return this.m_recAppInOrder;
           }),
@@ -59092,6 +59097,12 @@
           }),
           (e.prototype.GetFollowedCuratorsAccountID = function () {
             return Array.from(this.m_setCuratorsFollowed);
+          }),
+          (e.prototype.GetPackagesInCartCount = function () {
+            return this.m_setPackagesInCart.size;
+          }),
+          (e.prototype.GetAppInCartCount = function () {
+            return this.m_setAppsInCart.size;
           }),
           (e.prototype.BIsFollowingCurator = function (e) {
             var t =
@@ -59321,6 +59332,14 @@
                                 i.data.rgRecommendedTags.map(function (e) {
                                   return e.tagid;
                                 })
+                              )),
+                            i.data.rgAppsInCart &&
+                              (m.m_setAppsInCart = new Set(
+                                i.data.rgAppsInCart
+                              )),
+                            i.data.rgPackagesInCart &&
+                              (m.m_setPackagesInCart = new Set(
+                                i.data.rgPackagesInCart
                               )),
                             i.data.rgCurations)
                           )
@@ -59687,6 +59706,8 @@
             "m_mapRecommendingCuratorsForApp",
             void 0
           ),
+          Object(r.c)([o.C], e.prototype, "m_setPackagesInCart", void 0),
+          Object(r.c)([o.C], e.prototype, "m_setAppsInCart", void 0),
           Object(r.c)([o.k], e.prototype, "UpdateAppIgnore", null),
           e
         );
