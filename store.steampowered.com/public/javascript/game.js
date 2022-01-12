@@ -305,6 +305,17 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 {
 	var rgRecommendationsToShow = [];
 	var fnScore = fnRecScore || DefaultRecScoreFactory( 3 );
+	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode(); 
+	var strViewAllLink = "";
+
+	if ( bSupportTabletMode ) 
+	{
+		var $elBlock = elTarget.closest( 'div.block' );
+		var $elAnchor = $elBlock ? $J( 'a.deck_view_all_action_link', $elBlock ) : null;
+		if ( $elAnchor && $elAnchor.attr('href') !== undefined )
+			strViewAllLink = $elAnchor.attr('href');
+
+					}
 
 	for ( var i = 0; i < rgRecommendedAppIDs.length; i++ )
 	{
@@ -330,6 +341,13 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 			'data-ds-appid': unAppID,
 			'href': GStoreItemData.GetAppURL( unAppID, strAppURL )
 		};
+
+				if ( bSupportTabletMode && strViewAllLink !== "" ) 
+		{
+			const panelString = '{"onOptionsActionDescription":"View all","onOptionsButton":"window.location=\'%1$s\'"}';
+			params['data-panel'] = panelString.replace( '%1$s', strViewAllLink );
+		}
+
 		if ( rgItemData['steam_deck_compat_category'] !== undefined )
 		{
 			params['data-ds-steam-deck-compat-category'] = rgItemData['steam_deck_compat_category'];

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6992526";
+var CLSTAMP = "6998255";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -100,13 +100,13 @@ var CLSTAMP = "6992526";
         return i;
       }),
       n.d(t, "r", function () {
-        return u;
+        return a;
       }),
       n.d(t, "p", function () {
         return c;
       }),
       n.d(t, "j", function () {
-        return a;
+        return u;
       }),
       n.d(t, "k", function () {
         return s;
@@ -139,15 +139,15 @@ var CLSTAMP = "6992526";
         return h;
       }),
       n.d(t, "c", function () {
-        return g;
+        return A;
       }),
       n.d(t, "f", function () {
-        return A;
+        return g;
       });
     var i = 1,
-      u = 4,
+      a = 4,
       c = 7,
-      a = 750,
+      u = 750,
       s = 799,
       _ = 250820,
       l = 330050,
@@ -225,7 +225,7 @@ var CLSTAMP = "6992526";
     var h = function (e) {
       return "koreana" === e ? "korean" : e;
     };
-    function g(e, t) {
+    function A(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -291,7 +291,7 @@ var CLSTAMP = "6992526";
           return t;
       }
     }
-    function A(e, t) {
+    function g(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -358,7 +358,7 @@ var CLSTAMP = "6992526";
           return t;
       }
     }
-    var C, b, v, T, y, R, O;
+    var b, C, y, R, v, T, k;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -370,19 +370,19 @@ var CLSTAMP = "6992526";
           "k_EConnectivityTestResult_TimedOut"),
         (e[(e.k_EConnectivityTestResult_Failed = 4)] =
           "k_EConnectivityTestResult_Failed");
-    })(C || (C = {})),
+    })(b || (b = {})),
       (function (e) {
-        (e[(e.k_EConnectivityTestSimulation_None = 0)] =
-          "k_EConnectivityTestSimulation_None"),
-          (e[(e.k_EConnectivityTestSimulation_CaptivePortal_Redirected = 1)] =
-            "k_EConnectivityTestSimulation_CaptivePortal_Redirected"),
-          (e[(e.k_EConnectivityTestSimulation_CaptivePortal_InPlace = 2)] =
-            "k_EConnectivityTestSimulation_CaptivePortal_InPlace"),
-          (e[(e.k_EConnectivityTestSimulation_TimeOut = 3)] =
-            "k_EConnectivityTestSimulation_TimeOut"),
-          (e[(e.k_EConnectivityTestSimulation_Fail = 4)] =
-            "k_EConnectivityTestSimulation_Fail");
-      })(b || (b = {})),
+        (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
+          "k_ENetFakeLocalSystemState_Normal"),
+          (e[(e.k_ENetFakeLocalSystemState_NoLAN = 1)] =
+            "k_ENetFakeLocalSystemState_NoLAN"),
+          (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_Redirected = 2)] =
+            "k_ENetFakeLocalSystemState_CaptivePortal_Redirected"),
+          (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_InPlace = 3)] =
+            "k_ENetFakeLocalSystemState_CaptivePortal_InPlace"),
+          (e[(e.k_ENetFakeLocalSystemState_NoInternet = 4)] =
+            "k_ENetFakeLocalSystemState_NoInternet");
+      })(C || (C = {})),
       (function (e) {
         (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
           "k_ESuspendResumeProgressState_Invalid"),
@@ -394,7 +394,7 @@ var CLSTAMP = "6992526";
             "k_ESuspendResumeProgressState_LoggingIn"),
           (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
             "k_ESuspendResumeProgressState_WaitingForApp");
-      })(v || (v = {})),
+      })(y || (y = {})),
       (function (e) {
         (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
           "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -404,7 +404,7 @@ var CLSTAMP = "6992526";
             "k_EFloatingGamepadTextInputModeModeEmail"),
           (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
             "k_EFloatingGamepadTextInputModeModeNumeric");
-      })(T || (T = {})),
+      })(R || (R = {})),
       (function (e) {
         (e[(e.k_EAppUpdateContentType_Content = 0)] =
           "k_EAppUpdateContentType_Content"),
@@ -414,31 +414,31 @@ var CLSTAMP = "6992526";
             "k_EAppUpdateContentType_Shader"),
           (e[(e.k_EAppUpdateContentType_Max = 3)] =
             "k_EAppUpdateContentType_Max");
-      })(y || (y = {})),
+      })(v || (v = {})),
       (function (e) {
         (e[(e.k_EOverlayToStoreFlag_None = 0)] = "k_EOverlayToStoreFlag_None"),
           (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
             "k_EOverlayToStoreFlag_AddToCart"),
           (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
             "k_EOverlayToStoreFlag_AddToCartAndShow");
-      })(R || (R = {})),
+      })(T || (T = {})),
       (function (e) {
         (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
           "k_EActivateGameOverlayToWebPageMode_Default"),
           (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
             "k_EActivateGameOverlayToWebPageMode_Modal");
-      })(O || (O = {}));
+      })(k || (k = {}));
   },
   "1n9R": function (e, t, n) {
     "use strict";
     n.d(t, "d", function () {
-      return u;
+      return a;
     }),
       n.d(t, "j", function () {
         return c;
       }),
       n.d(t, "b", function () {
-        return a;
+        return u;
       }),
       n.d(t, "c", function () {
         return s;
@@ -465,7 +465,7 @@ var CLSTAMP = "6992526";
     var r,
       o = n("/7KC"),
       i = n("YlSc"),
-      u =
+      a =
         (n("0N1H"),
         {
           EUNIVERSE: 0,
@@ -535,7 +535,7 @@ var CLSTAMP = "6992526";
         short_url: "",
         country_code: "",
       },
-      a = { steamid: "", clanid: 0, listid: 0 },
+      u = { steamid: "", clanid: 0, listid: 0 },
       s = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
@@ -573,14 +573,14 @@ var CLSTAMP = "6992526";
       void 0 === e && (e = "webui_config");
       var t = {},
         n = f("config", e);
-      n && (delete n.SESSIONID, Object.assign(u, n), (t.config = !0));
+      n && (delete n.SESSIONID, Object.assign(a, n), (t.config = !0));
       var r = f("userinfo", e);
       r &&
         (Object.assign(c, r),
         (t.userConfig = !0),
         c.is_support && d() && (c.is_support = !1));
       var o = f("broadcast", e);
-      o && (Object.assign(a, o), (t.broadcastConfig = !0));
+      o && (Object.assign(u, o), (t.broadcastConfig = !0));
       var i = f("community", e);
       i && (Object.assign(s, i), (t.communityConfig = !0));
       var l = f("event", e);
@@ -608,40 +608,40 @@ var CLSTAMP = "6992526";
       if (!window || !window.location || !window.location.href)
         return console.warn("Unable to determine base url!"), "unknown";
       var e = window.location.href;
-      return m(e, u.STORE_BASE_URL)
-        ? u.STORE_BASE_URL
-        : m(e, u.COMMUNITY_BASE_URL)
-        ? u.COMMUNITY_BASE_URL
-        : m(e, u.CHAT_BASE_URL)
-        ? u.CHAT_BASE_URL
-        : m(e, u.PARTNER_BASE_URL)
-        ? u.PARTNER_BASE_URL
-        : m(e, u.HELP_BASE_URL)
-        ? u.HELP_BASE_URL
-        : m(e, u.STEAMTV_BASE_URL)
-        ? u.STEAMTV_BASE_URL
-        : m(e, u.STATS_BASE_URL)
-        ? u.STATS_BASE_URL
-        : m(e, u.INTERNAL_STATS_BASE_URL)
-        ? u.INTERNAL_STATS_BASE_URL
+      return m(e, a.STORE_BASE_URL)
+        ? a.STORE_BASE_URL
+        : m(e, a.COMMUNITY_BASE_URL)
+        ? a.COMMUNITY_BASE_URL
+        : m(e, a.CHAT_BASE_URL)
+        ? a.CHAT_BASE_URL
+        : m(e, a.PARTNER_BASE_URL)
+        ? a.PARTNER_BASE_URL
+        : m(e, a.HELP_BASE_URL)
+        ? a.HELP_BASE_URL
+        : m(e, a.STEAMTV_BASE_URL)
+        ? a.STEAMTV_BASE_URL
+        : m(e, a.STATS_BASE_URL)
+        ? a.STATS_BASE_URL
+        : m(e, a.INTERNAL_STATS_BASE_URL)
+        ? a.INTERNAL_STATS_BASE_URL
         : m(e, "https://steamloopback.host")
         ? "https://steamloopback.host"
         : "";
     }
     function E() {
       var e = window.location.href;
-      return e.startsWith(u.STORE_BASE_URL)
+      return e.startsWith(a.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(u.COMMUNITY_BASE_URL)
+        : e.startsWith(a.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(u.PARTNER_BASE_URL)
+        : e.startsWith(a.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(u.HELP_BASE_URL)
+        : e.startsWith(a.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(u.STEAMTV_BASE_URL)
+        : e.startsWith(a.STEAMTV_BASE_URL)
         ? "steamtv"
-        : e.startsWith(u.STATS_BASE_URL) ||
-          e.startsWith(u.INTERNAL_STATS_BASE_URL)
+        : e.startsWith(a.STATS_BASE_URL) ||
+          e.startsWith(a.INTERNAL_STATS_BASE_URL)
         ? "stats"
         : "";
     }
@@ -659,7 +659,7 @@ var CLSTAMP = "6992526";
       o = { success: !0, result: 1 },
       i = (function () {
         function e() {
-          (this.m_connection = new u()),
+          (this.m_connection = new a()),
             (this.m_bAllowAccountMismatch = !1),
             (this.m_mapCacheSubscribedApp = new Map());
         }
@@ -762,7 +762,7 @@ var CLSTAMP = "6992526";
           e
         );
       })(),
-      u = (function () {
+      a = (function () {
         function e() {
           (this.m_mapWaitingCallbacks = new Map()),
             (this.m_iCallSeq = 1),
@@ -913,9 +913,9 @@ var CLSTAMP = "6992526";
         r || (r = "/");
         var o = "";
         if (void 0 !== n && n) {
-          var u = new Date();
-          u.setTime(u.getTime() + 864e5 * n),
-            (o = "; expires=" + u.toUTCString());
+          var a = new Date();
+          a.setTime(a.getTime() + 864e5 * n),
+            (o = "; expires=" + a.toUTCString());
         }
         document.cookie =
           encodeURIComponent(e) +
@@ -948,13 +948,13 @@ var CLSTAMP = "6992526";
         return i;
       }),
       n.d(t, "f", function () {
-        return u;
+        return a;
       }),
       n.d(t, "c", function () {
         return c;
       }),
       n.d(t, "b", function () {
-        return a;
+        return u;
       }),
       n.d(t, "e", function () {
         return s;
@@ -1007,7 +1007,7 @@ PERFORMANCE OF THIS SOFTWARE.
           return e;
         }).apply(this, arguments);
     };
-    function u(e, t) {
+    function a(e, t) {
       var n = {};
       for (var r in e)
         Object.prototype.hasOwnProperty.call(e, r) &&
@@ -1025,37 +1025,37 @@ PERFORMANCE OF THIS SOFTWARE.
     function c(e, t, n, r) {
       var o,
         i = arguments.length,
-        u =
+        a =
           i < 3
             ? t
             : null === r
             ? (r = Object.getOwnPropertyDescriptor(t, n))
             : r;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-        u = Reflect.decorate(e, t, n, r);
+        a = Reflect.decorate(e, t, n, r);
       else
         for (var c = e.length - 1; c >= 0; c--)
           (o = e[c]) &&
-            (u = (i < 3 ? o(u) : i > 3 ? o(t, n, u) : o(t, n)) || u);
-      return i > 3 && u && Object.defineProperty(t, n, u), u;
+            (a = (i < 3 ? o(a) : i > 3 ? o(t, n, a) : o(t, n)) || a);
+      return i > 3 && a && Object.defineProperty(t, n, a), a;
     }
-    function a(e, t, n, r) {
+    function u(e, t, n, r) {
       return new (n || (n = Promise))(function (o, i) {
-        function u(e) {
+        function a(e) {
           try {
-            a(r.next(e));
+            u(r.next(e));
           } catch (e) {
             i(e);
           }
         }
         function c(e) {
           try {
-            a(r.throw(e));
+            u(r.throw(e));
           } catch (e) {
             i(e);
           }
         }
-        function a(e) {
+        function u(e) {
           var t;
           e.done
             ? o(e.value)
@@ -1064,9 +1064,9 @@ PERFORMANCE OF THIS SOFTWARE.
                 ? t
                 : new n(function (e) {
                     e(t);
-                  })).then(u, c);
+                  })).then(a, c);
         }
-        a((r = r.apply(e, t || [])).next());
+        u((r = r.apply(e, t || [])).next());
       });
     }
     function s(e, t) {
@@ -1074,7 +1074,7 @@ PERFORMANCE OF THIS SOFTWARE.
         r,
         o,
         i,
-        u = {
+        a = {
           label: 0,
           sent: function () {
             if (1 & o[0]) throw o[1];
@@ -1095,7 +1095,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return function (c) {
           return (function (i) {
             if (n) throw new TypeError("Generator is already executing.");
-            for (; u; )
+            for (; a; )
               try {
                 if (
                   ((n = 1),
@@ -1115,38 +1115,38 @@ PERFORMANCE OF THIS SOFTWARE.
                     o = i;
                     break;
                   case 4:
-                    return u.label++, { value: i[1], done: !1 };
+                    return a.label++, { value: i[1], done: !1 };
                   case 5:
-                    u.label++, (r = i[1]), (i = [0]);
+                    a.label++, (r = i[1]), (i = [0]);
                     continue;
                   case 7:
-                    (i = u.ops.pop()), u.trys.pop();
+                    (i = a.ops.pop()), a.trys.pop();
                     continue;
                   default:
                     if (
-                      !((o = u.trys),
+                      !((o = a.trys),
                       (o = o.length > 0 && o[o.length - 1]) ||
                         (6 !== i[0] && 2 !== i[0]))
                     ) {
-                      u = 0;
+                      a = 0;
                       continue;
                     }
                     if (3 === i[0] && (!o || (i[1] > o[0] && i[1] < o[3]))) {
-                      u.label = i[1];
+                      a.label = i[1];
                       break;
                     }
-                    if (6 === i[0] && u.label < o[1]) {
-                      (u.label = o[1]), (o = i);
+                    if (6 === i[0] && a.label < o[1]) {
+                      (a.label = o[1]), (o = i);
                       break;
                     }
-                    if (o && u.label < o[2]) {
-                      (u.label = o[2]), u.ops.push(i);
+                    if (o && a.label < o[2]) {
+                      (a.label = o[2]), a.ops.push(i);
                       break;
                     }
-                    o[2] && u.ops.pop(), u.trys.pop();
+                    o[2] && a.ops.pop(), a.trys.pop();
                     continue;
                 }
-                i = t.call(e, u);
+                i = t.call(e, a);
               } catch (e) {
                 (i = [6, e]), (r = 0);
               } finally {
@@ -1164,8 +1164,8 @@ PERFORMANCE OF THIS SOFTWARE.
       var r = Array(e),
         o = 0;
       for (t = 0; t < n; t++)
-        for (var i = arguments[t], u = 0, c = i.length; u < c; u++, o++)
-          r[o] = i[u];
+        for (var i = arguments[t], a = 0, c = i.length; a < c; a++, o++)
+          r[o] = i[a];
       return r;
     }
   },

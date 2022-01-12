@@ -637,11 +637,24 @@ CWishlistController.prototype.MoveToPosition = function( unAppId, unPosition )
 {
 	var oldIdx = this.rgAllApps.indexOf("" + unAppId);
 
+	// When an AppId position changes, move the wishlist row div to its new position in the DOM.  This keeps the gamepad nav tree in sync.
+	if ( oldIdx != unPosition )
+	{
+		// Each wishlist row has an id set to its corresponding AppId
+		var $elInsertionPoint = $J('#wishlist_row_' + this.rgAllApps[ oldIdx ]);
+		var $elMoved = $J('#wishlist_row_' + this.rgAllApps[ unPosition ]);
+
+		if ( $elInsertionPoint && $elMoved )
+		{
+			if ( oldIdx > unPosition ) // $elMoved went up
+				$elMoved.before( $elInsertionPoint );
+			else
+				$elMoved.after( $elInsertionPoint );
+		}
+	}
 
 	this.rgAllApps.splice( oldIdx, 1 );
 	this.rgAllApps.splice( unPosition, 0, "" + unAppId );
-
-
 
 	for( var i=0; i<this.rgAllApps.length; i++)
 	{

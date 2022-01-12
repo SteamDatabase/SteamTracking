@@ -1717,7 +1717,7 @@ GHomepage = {
 
 				if ( bSupportTabletMode ) 
 		{
-			var $elAnchor = $J('a.view_all_link', $elTarget);
+			var $elAnchor = $J('a.deck_view_all_action_link', $elTarget);
 			if ( $elAnchor && $elAnchor.attr('href') !== undefined ) 
 				strViewAllLink = $elAnchor.attr('href');
 		}
@@ -1750,6 +1750,12 @@ GHomepage = {
 				if( !$CapCtn )
 					continue;
 
+								if ( bSupportTabletMode && strViewAllLink !== "" )
+				{
+					const panelString = '{"onOptionsActionDescription":"View all","onOptionsButton":"window.location=\'%1$s\'"}';
+					$CapCtn.attr( 'data-panel', panelString.replace( '%1$s', strViewAllLink ) );
+				}
+
 				// Don't try to do automatic visibilty tracking on non-visible clusters.
 				if( j > 0 )
 					$CapCtn.attr('data-manual-tracking', 1);
@@ -1765,12 +1771,6 @@ GHomepage = {
 			{
 				$elThumbTarget.append($J('<div/>'));
 			}
-		}
-
-				if ( bSupportTabletMode && strViewAllLink !== "" )
-		{
-			var $elPageViewMore = $J('<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="carousel_view_all store_capsule" onclick="window.location=\'' + strViewAllLink + '\'" ><div>View all</div></div>');
-			$elCapsuleTarget.append( $elPageViewMore );
 		}
 
 		if ( $elCapsuleTarget.children().length > 0 )

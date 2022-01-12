@@ -194,7 +194,7 @@
 	html.responsive .page_content_ctn.dark:last-child {
 		margin-bottom: unset;
 	}
-	
+
 	/* Featured and recommended */
 	html.responsive .carousel_container.maincap {
 		margin: unset;
@@ -496,7 +496,7 @@
 
 	html.responsive .community_recommendation_app > .right_col {
 		background: unset;
-		height: 188px;
+		height: 160px;
 		border-radius: 0px;
 		padding-right: 0px;
 	}
@@ -518,7 +518,7 @@
 		height: unset;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		-webkit-line-clamp: 4;
+		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		display: -webkit-box;
 		padding-right: 8px;

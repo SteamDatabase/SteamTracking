@@ -13418,6 +13418,10 @@ Body.v6.tag_page.contenthub_page {
     display: none;
   }
 }
+.SaleSectionTabListContainer .SaleSectionCtn.contenthubsections.expanded {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
 .contenthubshared_SpotlightsColumn_2Y2C1 {
   height: 395px;
   display: flex;

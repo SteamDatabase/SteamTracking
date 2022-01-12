@@ -435,17 +435,31 @@
 .focusring_FocusRing_1sTuv {
   position: absolute;
   pointer-events: none;
-  border-color: #add8e6;
-  border-style: solid;
-  border-width: 4px;
-  animation: focusring_FocusRingActiveAnimation_2Xpb2 0.25s ease-in;
+  outline-offset: 2px;
+  outline: 3px solid #fff;
+  animation: focusring_growOutline_3vSPb 0.4s ease,
+    focusring_fadeOutline_xL-jG 0.4s ease-in-out,
+    focusring_blinker_3mURo 1.2s ease-in-out 0.2s 60;
 }
-@keyframes focusring_FocusRingActiveAnimation_2Xpb2 {
+@keyframes focusring_growOutline_3vSPb {
   0% {
-    border-color: rgba(173, 216, 230, 0.2);
+    outline: 12px solid;
   }
   100% {
-    border-color: #add8e6;
+    outline: 3px solid;
+  }
+}
+@keyframes focusring_fadeOutline_xL-jG {
+  0% {
+    outline-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    outline-color: #fff;
+  }
+}
+@keyframes focusring_blinker_3mURo {
+  50% {
+    opacity: 0.5;
   }
 }
 .contextmenu_ContextMenuMouseOverlay_3Knd7 {
@@ -760,6 +774,76 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 .tooltip_ToolTipCustom_3XGRk .tooltip_ToolTipInsetContent_i4LuY {
   color: #aaacb6;
   margin: 6px 4px;
+}
+.dropdownlabel_DropDownLabelContainer_uujQH {
+  display: flex;
+  flex-direction: row;
+}
+.dropdownlabel_DropDownLabelIconContainer_3H05C {
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-height: 32px;
+  max-width: 32px;
+  padding-right: 12px;
+}
+.dropdownlabel_DropDownLabelIconContainer_3H05C > svg {
+  width: 100%;
+  height: 100%;
+}
+.dropdownlabel_DropDownLabelTextColumn_3WTX4 {
+  min-width: 50%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.dropdownlabel_DropDownLabelTitle_3g-QH {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  color: #b8bcbf;
+}
+.dropdownlabel_DropDownLabelUpperDescription_2fl-T {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8b929a;
+}
+.dropdownlabel_DropDownLabelDescription_cbinv {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8b929a;
 }
 .pagedsettings_PagedSettingsDialog_2sssI {
   display: flex;

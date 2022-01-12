@@ -14825,6 +14825,10 @@ Body.v6.tag_page.contenthub_page {
     display: none;
   }
 }
+.SaleSectionTabListContainer .SaleSectionCtn.contenthubsections.expanded {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
 .contenthubshared_SpotlightsColumn_2Y2C1 {
   height: 395px;
   display: flex;
@@ -19616,8 +19620,11 @@ p a:hover {
   margin-left: 20px;
   margin-top: 8px;
 }
-.partnereventshareddates_TimeWidth_3JGsB {
+.partnereventshareddates_DateWidth_2P2kw {
   max-width: 200px;
+}
+.partnereventshareddates_TimeWidth_3JGsB {
+  max-width: 100px;
 }
 .partnereventshareddates_InputBorder_1_H1s.partnereventshareddates_TimeBlock_2xLBs {
   margin-right: 8px;

@@ -133,6 +133,11 @@
 		font-size: 16px;
 	}
 
+	/* hide because we instead create a Y button action for this link */
+	html.responsive .deck_view_all_action_link {
+		display: none;
+	}
+
 	/* hide sections */
 	html.responsive #shareEmbedRow,
 	html.responsive #achievement_block,
@@ -1066,6 +1071,7 @@
 	}
 	html.responsive #languageTable .game_language_options {
 		width: 100%;
+		margin-top: 10px;
 	}
 
 	html.responsive #writeReviewTable {
@@ -1644,6 +1650,11 @@
 		color: unset;
 	}
 
+	html.responsive .game_area_purchase_game p.package_contents {
+		display: flex;
+		flex-direction: column;
+	}
+
 	html.responsive .bundle_contents_preview {
 		margin: 8px 0px;
 		background: var(--gpBackground-DarkHard);
@@ -1998,20 +2009,8 @@
 
 
 
-	/* Media carousel */
-	html.responsive .highlight_carousel_item {
-		outline: var(--gpUnfocus);
-		transition: var(--gpTransition-Short);;
-	}
-
-	html.responsive .highlight_carousel_item.gpfocus {
-		outline: var(--gpFocus);
-	}
-
-
-
 	/* Tags */
-	html.responsive .details_block a.linkbar
+	html.responsive .details_block a.linkbar,
 	html.responsive .responsive_banner_link,
 	html.responsive .user_reviews,
 	html.responsive .purchase_options_banners,
@@ -2086,15 +2085,13 @@
 	}
 
 	html.responsive .responsive_banner_link_title {
-		background: var(--gpBackground-LightSoft);
 		border-radius: var(--gpCorner-Medium);
 		color: var(--gpColor-Blue);
 		transition: 0.1s all ease;
 	}
 
-	html.responsive .responsive_banner_link_title:hover {
-		background: var(--gpBackground-LightMedium);
-		border-radius: var(--gpCorner-Medium);
+	html.responsive .responsive_banner_link_title:hover,
+	html.responsive .responsive_banner_link.gpfocus .responsive_banner_link_title {
 		color: white;
 	}
 
