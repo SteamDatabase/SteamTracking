@@ -758,6 +758,7 @@ compat_tool_hash
 %s/swarm_shader_download.vdf
 Failed to load file to buffer %s
 Failed to parse KV %s
+Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...
 WritePrecompiledCache returned result '%s'. foz file missing from depot?
 WritePrecompiledCache success for GPU: '%s' Driver: '%s' CacheType: %d
 %s_
@@ -1316,10 +1317,8 @@ j
 @
 @
 0
-
 0
 Ic
-"
 
 =
 @
