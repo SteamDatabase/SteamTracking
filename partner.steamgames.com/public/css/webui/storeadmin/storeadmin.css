@@ -21964,6 +21964,30 @@ div.savetoolbar_HoverToolTip_gba9O {
   font-size: 16;
   color: #fff;
 }
+.discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76 {
+  background: #c1c5cd;
+}
+.discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76:hover {
+  background: #a3a7ad;
+}
+.discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76
+  .discountgridheaders_EventDates_2kY09 {
+  color: #000;
+}
+.discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76
+  .discountgridheaders_EventLink_VZ3pV {
+  color: #000;
+}
+.discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76
+  .discountgridheaders_EventParticipationCtn_2iuUu
+  .discountgridheaders_Title_3mO71 {
+  color: #556066;
+}
+.discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76
+  .discountgridheaders_EventParticipationCtn_2iuUu
+  .discountgridheaders_Count_1pDZ1 {
+  color: #000;
+}
 .discountgridheaders_ParticipationToolTip_36hxa {
   background-color: #1b1e22;
   padding: 8px;
