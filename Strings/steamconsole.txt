@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+pJ
+pJ
 __stubs
 __TEXT
 __stub_helper
@@ -744,6 +746,7 @@ GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
 StartDepotBuild success. manifest: %llu size: %llu
 ReportExternalBuild ERROR %u!
 AppID %u done! Restarting.
+%s/swarm_shader_download.vdf
 SteamSwarm
 G7:VulkanPipelinesV%u%%
 GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu GPUDesc: %s DriverDesc: %s
@@ -755,7 +758,6 @@ DownloadDepot ERROR %s!
 stale_gpu_desc
 stale_driver_desc
 compat_tool_hash
-%s/swarm_shader_download.vdf
 Failed to load file to buffer %s
 Failed to parse KV %s
 Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...
@@ -1317,8 +1319,9 @@ j
 @
 @
 0
-0
 Ic
+t
+0
 
 =
 @
