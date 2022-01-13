@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7001031";
+var CLSTAMP = "7003732";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -32658,7 +32658,7 @@ var CLSTAMP = "7001031";
                     ? void 0
                     : l.stream_url
                         .replace("https://www.twitch.tv/", "")
-                        .replace("twitch.tv/", "")) +
+                        .replace("https://twitch.tv/", "")) +
                   "&parent=" +
                   c),
                   (t =
@@ -32667,7 +32667,7 @@ var CLSTAMP = "7001031";
                       ? void 0
                       : l.stream_url
                           .replace("https://www.twitch.tv/", "")
-                          .replace("twitch.tv/", "")) +
+                          .replace("https://twitch.tv/", "")) +
                     "/chat?darkpopout&parent=" +
                     c);
                 break;
