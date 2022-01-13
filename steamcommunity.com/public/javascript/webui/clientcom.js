@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6998255";
+var CLSTAMP = "7001762";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -369,7 +369,11 @@ var CLSTAMP = "6998255";
         (e[(e.k_EConnectivityTestResult_TimedOut = 3)] =
           "k_EConnectivityTestResult_TimedOut"),
         (e[(e.k_EConnectivityTestResult_Failed = 4)] =
-          "k_EConnectivityTestResult_Failed");
+          "k_EConnectivityTestResult_Failed"),
+        (e[(e.k_EConnectivityTestResult_WifiDisabled = 5)] =
+          "k_EConnectivityTestResult_WifiDisabled"),
+        (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
+          "k_EConnectivityTestResult_NoLAN");
     })(b || (b = {})),
       (function (e) {
         (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
