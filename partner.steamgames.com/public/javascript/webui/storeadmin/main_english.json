@@ -335,6 +335,7 @@
     "DiscountDashboard_PackagesDiscounted": "Packages Discounted",
     "DiscountDashboard_SetDiscountsCount": "Packages Discounted: %1$s",
     "DiscountDashboard_AvailableDiscountsCount": "Available for Discount: %1$s",
+    "DiscountDashboard_CooldownConflictsCount": "Blocked by Conflict: %1$s",
     "DiscountDashboard_BlockedDiscountsCount": "Require App Registration: %1$s",
     "DiscountDashboard_IneligibleDiscountsCount": "Ineligible for Discount: %1$s",
     "DiscountDashboard_DiscountFilterByEventButton": "filter by event",

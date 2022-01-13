@@ -21778,7 +21778,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   right: 0;
   padding: 16px;
   background-color: #9297a5;
-  transform: translateY(80px);
+  transform: translateY(94px);
   transition: transform 0.3s ease-in;
 }
 .savetoolbar_ToolbarCtn_Kfoep.savetoolbar_Visible_3O9re {
@@ -21965,7 +21965,8 @@ div.savetoolbar_HoverToolTip_gba9O {
   color: #fff;
 }
 .discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76 {
-  background: #c1c5cd;
+  background: #535865;
+  text-shadow: none;
 }
 .discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76:hover {
   background: #a3a7ad;
@@ -21981,7 +21982,7 @@ div.savetoolbar_HoverToolTip_gba9O {
 .discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76
   .discountgridheaders_EventParticipationCtn_2iuUu
   .discountgridheaders_Title_3mO71 {
-  color: #556066;
+  color: #9ba6ab;
 }
 .discountgridheaders_EventDetails_3LMXj.discountgridheaders_Selected_36G76
   .discountgridheaders_EventParticipationCtn_2iuUu
