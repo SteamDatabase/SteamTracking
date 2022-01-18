@@ -1596,6 +1596,8 @@
     "Sale_Subscription_Monthly_Body": "Pay month-to-month and cancel any time",
     "Sale_Subscription_Monthly_Body_Discount": "%1$s billed monthly thereafter, cancel anytime",
     "Sale_Subscription_Monthly_Button": "Subscribe Monthly",
+    "Sale_Subscription_SpecialThreeMonth_Price": "%1$s for three months",
+    "Sale_Subscription_SpecialThreeMonth_Body": "%1$s\/month thereafter, cancel any time. \nNew subscribers only. \nIntroductory Offer ends Feb 8, 2022.",
     "Sale_Subscription_DiscountEnd": "Save %2$s when you sign up by %1$s",
     "Sale_Subscription_OfferEnds": "Offer ends %1$s",
     "Sale_Subscription_NewSubsOfferEnds": "Offer only for new subscribers. Ends %1$s",
