@@ -843,6 +843,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
     color: #a3ce08;
     font-weight: 600;
     font-size: 14px;
+	padding-right: 8px;
 }
 
 .game_area_purchase_game_dropdown_right_panel .btn_addtocart
