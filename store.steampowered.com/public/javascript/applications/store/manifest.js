@@ -1,19 +1,19 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7013136";
+var CLSTAMP = "7013598";
 !(function (e) {
   function a(a) {
     for (
-      var n, s, i = a[0], f = a[1], b = a[2], r = 0, l = [];
-      r < i.length;
-      r++
+      var n, s, i = a[0], f = a[1], r = a[2], b = 0, l = [];
+      b < i.length;
+      b++
     )
-      (s = i[r]),
+      (s = i[b]),
         Object.prototype.hasOwnProperty.call(d, s) && d[s] && l.push(d[s][0]),
         (d[s] = 0);
     for (n in f) Object.prototype.hasOwnProperty.call(f, n) && (e[n] = f[n]);
     for (t && t(a); l.length; ) l.shift()();
-    return o.push.apply(o, b || []), c();
+    return o.push.apply(o, r || []), c();
   }
   function c() {
     for (var e, a = 0; a < o.length; a++) {
@@ -206,7 +206,7 @@ var CLSTAMP = "7013136";
                     37: "31d6cfe0d16ae931b73c",
                     38: "31d6cfe0d16ae931b73c",
                     39: "31d6cfe0d16ae931b73c",
-                    40: "3cbabc4e527bb3fbf16e",
+                    40: "7ffaf2ba6e5ae490e491",
                     42: "31d6cfe0d16ae931b73c",
                     43: "31d6cfe0d16ae931b73c",
                     44: "31d6cfe0d16ae931b73c",
@@ -306,14 +306,14 @@ var CLSTAMP = "7013136";
               f < o.length;
               f++
             ) {
-              var b =
+              var r =
                 (t = o[f]).getAttribute("data-href") || t.getAttribute("href");
-              if ("stylesheet" === t.rel && (b === n || b === d)) return a();
+              if ("stylesheet" === t.rel && (r === n || r === d)) return a();
             }
-            var r = document.getElementsByTagName("style");
-            for (f = 0; f < r.length; f++) {
+            var b = document.getElementsByTagName("style");
+            for (f = 0; f < b.length; f++) {
               var t;
-              if ((b = (t = r[f]).getAttribute("data-href")) === n || b === d)
+              if ((r = (t = b[f]).getAttribute("data-href")) === n || r === d)
                 return a();
             }
             var l = document.createElement("link");
@@ -539,7 +539,7 @@ var CLSTAMP = "7013136";
                 78: "00369d1268b360dc5f31",
                 79: "5d973972f7ea09e6f281",
                 80: "753587e8e1e33c8cff6b",
-                81: "574f5b97c50340bd15a7",
+                81: "2e5c61b96345d99b83c1",
                 82: "c2a8d393bb6f06b8e2ef",
                 83: "bed476ac9fe0a3d25dc5",
                 84: "e39e8a9674ceaa26493a",
@@ -596,25 +596,25 @@ var CLSTAMP = "7013136";
               }[e]
             );
           })(e));
-        var b = new Error();
+        var r = new Error();
         o = function (a) {
-          (f.onerror = f.onload = null), clearTimeout(r);
+          (f.onerror = f.onload = null), clearTimeout(b);
           var c = d[e];
           if (0 !== c) {
             if (c) {
               var n = a && ("load" === a.type ? "missing" : a.type),
                 s = a && a.target && a.target.src;
-              (b.message =
+              (r.message =
                 "Loading chunk " + e + " failed.\n(" + n + ": " + s + ")"),
-                (b.name = "ChunkLoadError"),
-                (b.type = n),
-                (b.request = s),
-                c[1](b);
+                (r.name = "ChunkLoadError"),
+                (r.type = n),
+                (r.request = s),
+                c[1](r);
             }
             d[e] = void 0;
           }
         };
-        var r = setTimeout(function () {
+        var b = setTimeout(function () {
           o({ type: "timeout", target: f });
         }, 12e4);
         (f.onerror = f.onload = o), document.head.appendChild(f);
@@ -670,9 +670,9 @@ var CLSTAMP = "7013136";
       throw (console.error(e), e);
     });
   var f = (window.webpackJsonp = window.webpackJsonp || []),
-    b = f.push.bind(f);
+    r = f.push.bind(f);
   (f.push = a), (f = f.slice());
-  for (var r = 0; r < f.length; r++) a(f[r]);
-  var t = b;
+  for (var b = 0; b < f.length; b++) a(f[b]);
+  var t = r;
   c();
 })([]);
