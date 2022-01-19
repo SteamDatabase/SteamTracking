@@ -22080,27 +22080,23 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 .savetoolbar_DiscountSummary_1bNwv {
   display: flex;
   font-size: 12px;
-  flex-grow: 1;
+  width: 100%;
 }
 .savetoolbar_DiscountSummary_1bNwv .savetoolbar_PackageName_10l8z,
 .savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountDelta_FrNhS,
 .savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountEventName_2a8my {
-  padding: 0 4px;
+  padding: 0 8px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 40%;
-}
-.savetoolbar_DiscountSummary_1bNwv .savetoolbar_PackageName_10l8z:hover {
-  min-width: fit-content;
-  overflow: visible;
-  z-index: 400;
+  box-sizing: border-box;
 }
 .savetoolbar_DiscountSummary_1bNwv .savetoolbar_DiscountDelta_FrNhS {
-  max-width: 20%;
+  max-width: 16%;
 }
-.savetoolbar_ProgressRow_1yc_K {
-  display: flex;
+.savetoolbar_ProgressIcon_24b4e {
+  min-width: 18px;
 }
 .savetoolbar_ProgressIconBlank_3QeQi,
 .savetoolbar_ProgressIconCheck_32a73,
@@ -22108,7 +22104,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 .savetoolbar_ProgressIconThrobber_1h_MO {
   height: 18px;
   width: 18px;
-  margin-right: 6px;
 }
 .savetoolbar_ProgressIconCheck_32a73 polyline {
   stroke: green;
@@ -22123,6 +22118,7 @@ div.savetoolbar_HoverToolTip_gba9O {
   color: #ac5228;
 }
 .discountgridheaders_EventDetails_3LMXj {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100px;
@@ -22249,6 +22245,7 @@ div.savetoolbar_HoverToolTip_gba9O {
 .tabulator .tabulator-header.tabulator-header {
   background-color: #3e424c;
   border-bottom: 1px solid #303238;
+  overflow: visible;
 }
 .tabulator
   .tabulator-header.tabulator-header
@@ -22256,6 +22253,7 @@ div.savetoolbar_HoverToolTip_gba9O {
   .tabulator-col {
   background-color: #3e424c;
   border-right: 1px solid #303238;
+  overflow: visible;
 }
 .tabulator
   .tabulator-header.tabulator-header
@@ -22333,6 +22331,7 @@ div.savetoolbar_HoverToolTip_gba9O {
   .tabulator-col-title {
   white-space: normal;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  overflow: visible;
 }
 .tabulator
   .tabulator-header.tabulator-header
@@ -22535,6 +22534,32 @@ div.savetoolbar_HoverToolTip_gba9O {
   100% {
     background-color: #3e424c;
   }
+}
+.singleeventdetails_DetailsPaneAnchor_18WNV {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.singleeventdetails_SingleEventDetailsCtn_381ib {
+  position: absolute;
+  z-index: 1;
+  left: 8px;
+  padding: 12px;
+  background-color: #838ba0;
+  color: #c1c5cd;
+  display: none;
+}
+.singleeventdetails_SingleEventDetailsCtn_381ib.singleeventdetails_Visible_1qjHy {
+  display: block;
+}
+.singleeventdetails_SectionLabel_1RuFO {
+  font-size: 12px;
+  white-space: nowrap;
+  padding-bottom: 8px;
+  color: #bbb;
+}
+.singleeventdetails_SectionDate_3DpTZ {
+  white-space: nowrap;
 }
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
