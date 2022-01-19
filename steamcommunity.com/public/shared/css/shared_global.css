@@ -2845,16 +2845,25 @@ body.v6 #footer_spacer.china_spacer {
 
 
 /* for dynamic store items */
-.ds_steam_deck_compat {
+html.responsive .ds_steam_deck_compat {
 	display: block;
 	position: absolute;
 	pointer-events: none;
-	bottom: 3px;
-	left: 2px;
+	top: 4px;
+	right: 4px;
 	z-index: 15;
 	width: 44px;
 	height: 24px;
 	border-radius: 24px;
+	opacity: 0;
+	background-color: var(--gpBackground-DarkMedium);
+	backdrop-filter: blur(24px);
+	transition: opacity 0.1s ease;
+}
+html.responsive .gpfocus .ds_steam_deck_compat {
+	transition: opacity 0.2s ease 0.1s;
+	opacity: 1;
+
 }
 .ds_steam_deck_compat.verified {
 	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') 3px no-repeat, url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-verified.svg') 22px no-repeat;

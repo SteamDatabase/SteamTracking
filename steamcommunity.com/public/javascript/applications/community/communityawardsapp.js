@@ -3340,7 +3340,7 @@
                     var j = 0 === d || w.get(d),
                       S = !h || h.greaterThanOrEqual(R),
                       E = i.createElement(
-                        q.q,
+                        q.r,
                         {
                           onClick: function () {
                             return e.setState({ ePhase: D.CONFIRM });
@@ -3523,7 +3523,7 @@
                           Object(m.f)("#GrantAward_Back")
                         ),
                         i.createElement(
-                          q.q,
+                          q.r,
                           {
                             onClick: this.GrantAward,
                             title: Object(m.f)("#GrantAward_SubmitTooltip"),

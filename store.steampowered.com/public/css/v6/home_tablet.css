@@ -137,8 +137,8 @@
 	}
 
 	html.responsive .friends_recently_purchased .ds_steam_deck_compat {
-		bottom: unset;
-		top: 87px;
+		/* bottom: unset;
+		top: 87px; */
 	}
 
 	html.responsive .friends_recently_purchased .store_capsule {
@@ -240,8 +240,7 @@
 	}
 
 	html.responsive .store_main_capsule .ds_steam_deck_compat {
-		top: 200px;
-		left: 6px;
+		/* top: 200px; */
 	}
 
 
@@ -309,6 +308,7 @@
 		background: white;
 		color: black;
 		outline: none;
+		border-radius: 0px;
 	}
 
 
@@ -352,8 +352,13 @@
 		grid-gap: var(--gpSpace-Gap);
 	}
 
-	html.responsive .spotlight_col .daily_deal .ds_steam_deck_compat {
-		top: 92px;
+	html.responsive .spotlight_col .daily_deal .ds_steam_deck_compat,
+	html.responsive .carousel_container.spotlight .carousel_items > * .store_capsule .ds_steam_deck_compat {
+		/* top: 92px; */
+	}
+
+	html.responsive .carousel_container.spotlight .carousel_items > * > div .ds_steam_deck_compat {
+		/* bottom: 100px; */
 	}
 
 	.home_area_spotlight {
@@ -719,10 +724,16 @@
 		left: 6px;
 	}
 
+	/* html.responsive .steam_curator_for_app {
+		width: 24px;
+		height: 24px;
+		display: flex;
+	} */
+
 	html.responsive .more_apps_by_curators_capsule .ds_steam_deck_compat {
-		bottom: unset;
+		/* bottom: unset;
 		top: 122px;
-		left: 38px;
+		left: 38px; */
 	}
 
 
@@ -754,9 +765,9 @@
 	}
 
 	html.responsive .recommended_creators_ctn .ds_steam_deck_compat {
-		bottom: unset;
+		/* bottom: unset;
 		top: 122px;
-		left: 38px;
+		left: 38px; */
 	}
 
 	html.responsive .recommended_creators_ctn .recommended_creators_container .avatars > a img {
@@ -880,8 +891,8 @@
 	}
 	html.responsive .home_content.twowide .ds_steam_deck_compat,
 	html.responsive .home_content.fourwide .ds_steam_deck_compat{
-		bottom: unset;
-		top: 160px;
+		/* bottom: unset;
+		top: 160px; */
 	}
 
 
@@ -1003,7 +1014,7 @@
 	html.responsive .store_horizontal_autoslider_ctn {
 		overflow: unset;
 		margin-bottom: unset;
-		height: unset !important; /*overriding inline style*/
+		height: unset !important;
 	}
 
 
@@ -1021,23 +1032,7 @@
 
 	/* New on Steam */
 	html.responsive .newonsteam_headercap .ds_steam_deck_compat {
-		top: 156px;
-	}
-
-
-
-
-
-	html.responsive .store_main_capsule .ds_steam_deck_compat,
-	html.responsive .responsive_giant_curator_capsule .ds_steam_deck_compat,
-	html.responsive .tab_item .ds_steam_deck_compat,
-	html.responsive .friends_recently_purchased .ds_steam_deck_compat,
-	html.responsive .home_content .ds_steam_deck_compat,
-	html.responsive .live_streams_ctn .broadcast_capsule .ds_steam_deck_compat,
-	html.responsive .spotlight_col .daily_deal .ds_steam_deck_compat,
-	html.responsive .newonsteam_headercap .ds_steam_deck_compat {
-		background-color: var(--gpBackground-DarkMedium);
-		backdrop-filter: blur(24px);
+		/* top: 156px; */
 	}
 
 }

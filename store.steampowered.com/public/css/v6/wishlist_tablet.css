@@ -157,6 +157,7 @@
 	html.responsive #wishlist_search:focus {
 		background-color: white;
 		color: black;
+		border-radius: 0px;
 	}
 
 	html.responsive #wishlist_search::placeholder {

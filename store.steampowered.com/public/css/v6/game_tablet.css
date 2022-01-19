@@ -822,11 +822,13 @@
 
 
 	html.responsive .game_description_column .block .block_content a .ds_steam_deck_compat {
-		bottom: unset;
+		/* bottom: unset;
 		top: 55px;
 		left: 13px;
 		background-color: var(--gpBackground-DarkMedium);
-		backdrop-filter: blur(24px);
+		backdrop-filter: blur(24px); */
+		top: 12px;
+		right: 12px;
 	}
 
 	/* Curators section uses the banner format on mobile and needs extra margin on top and bottom because it's by itself */
@@ -1994,14 +1996,6 @@
 
 
 
-
-
-
-
-
-
-
-
 	/* Links */
 	#game_highlights a {
 		color: var(--gpColor-Blue);
@@ -2359,7 +2353,7 @@
 	html.responsive .game_description_column .block .block_content a {
 		border:unset;
 		background: var(--gpStoreDarkestGrey);
-		margin-right: 8px;
+		margin: 5px 8px 5px 0;
 		padding: 8px;
 		height: auto;
 		scroll-snap-align: start;
@@ -2412,6 +2406,7 @@
 		padding: 8px;
 		background: var(--gpStoreDarkestGrey);
 		margin-right: 8px;
+		position: relative;
 	}
 
 	html.responsive .similar_recent_apps_container {
@@ -2740,7 +2735,9 @@
 	}
 
 	html.responsive .tab_item .ds_steam_deck_compat {
-		top: 34px;
+		right: unset;
+		left: 100px;
+		top: 12px;
 	}
 
 	html.responsive .tablet_list_item .tab_item_discount {

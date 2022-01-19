@@ -615,7 +615,7 @@
                           cc: g.d.COUNTRY,
                           l: g.d.LANGUAGE,
                           v: 1,
-                          tag: w.a.Get().GetDefinition().strTag,
+                          tag: w.a.Get().GetDefinition("").strTag,
                           tagid:
                             null === (n = c.params) || void 0 === n
                               ? void 0
@@ -1315,7 +1315,7 @@
                 o.a.createElement(
                   "div",
                   { className: D.SuggestContainer },
-                  o.a.createElement(L.k, {
+                  o.a.createElement(L.l, {
                     type: "text",
                     value: c,
                     onChange: function (e) {

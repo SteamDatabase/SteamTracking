@@ -158,6 +158,10 @@
 		border: unset;
 	}
 
+	html.responsive #term.gpfocus {
+		border-radius: 0px;
+	}
+
 	html.responsive #term:focus {
 		background-color: white;
 		color: black;
@@ -432,6 +436,10 @@
         color: var(--gpStoreLightestGrey);
         line-height: unset;
     }
+
+	.responsive_page_frame:not(.in_menu_drag) .responsive_page_menu_ctn {
+		transition: left 0.3s ease, right 0.3s ease !important;
+	}
 
 
 

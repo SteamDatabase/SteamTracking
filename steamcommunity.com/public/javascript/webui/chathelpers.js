@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7001762";
+var CLSTAMP = "7013130";
 !(function (e) {
   function t(t) {
     for (
@@ -119,65 +119,65 @@ var CLSTAMP = "7001762";
               ".js?contenthash=" +
               {
                 9: "51d9833326b9684fcced",
-                10: "a40adb150be5e3b0fc56",
-                11: "cd34ae3f6723cee6462d",
-                12: "b6e73ed30b61002b1222",
-                13: "85a248270b28369e7982",
-                14: "34f67068d39237e50d7c",
-                15: "2b8a7faefbd293fb55ec",
-                16: "361a10cec41e2db6e13b",
-                17: "bb1b7c6b47e3958de502",
-                18: "197454a4d2e3ad985509",
-                19: "7ab1ea66e30550cf81a9",
-                20: "db63262e4419a800756c",
-                21: "a433adf6896bf5e0d244",
-                22: "0bd88f5c4c010b2a43d5",
-                23: "076e4929518ceda467b4",
-                24: "d7eeabf0d917bb43f428",
-                25: "ce0fa740c38753a57154",
+                10: "5897e1fc97c66d57b61c",
+                11: "7b94c6f145d8b9fbdc09",
+                12: "81a182598be970a8b915",
+                13: "60aa08788ee1ff5a4006",
+                14: "61683ae5929918fd154f",
+                15: "74b43037cf8c0f756d8b",
+                16: "ccd26608775093672f7f",
+                17: "b546d127d18f0120a76b",
+                18: "5a2fd64683fb41139e3c",
+                19: "a1d1ffcd9c40b005a854",
+                20: "c7e2fbce9ba2bf10b3df",
+                21: "feeeadb689735c915ffe",
+                22: "cf5ecd1eb459ac1192c9",
+                23: "8a12d8482bb46a335401",
+                24: "6504f47cd4b630186b71",
+                25: "8d93b4b6b6accbc22913",
                 26: "47826b36deceb146b25c",
-                27: "93d09e99ca19b6349ac9",
-                28: "173f4dc2d7c22a53da6b",
-                29: "b4e1a09d1de6c329f475",
+                27: "7985616c8319a641ebfe",
+                28: "ab3a0659a1a5a003af7f",
+                29: "c0ffecdcba43b14e4f74",
                 30: "6d7365c7989476aed423",
-                31: "9fe6e97642025f1f4892",
-                32: "e980d93dacee9b9d421c",
-                33: "2668eb779f824eff7c87",
-                34: "a3ef1d48ee9dce350a16",
-                35: "88072846769b64a0e266",
-                36: "91eab7d6671d60d10ddc",
-                37: "cf4d5066ff466a6d4fd9",
-                38: "545e7815939204360615",
+                31: "498b62a8ddd2ac6fcab7",
+                32: "9af5bf85a54ed34ddf90",
+                33: "fd0e198a068729749f4c",
+                34: "4b5a6b85b18329aee840",
+                35: "4e5a9379d57e36e6bdbc",
+                36: "d3a0b25fccadbdfca5f5",
+                37: "0bbda693f9f36bac3f98",
+                38: "28906ea630043dd0c7ff",
                 39: "01e61b4c2d0faedc8e45",
-                40: "f8a47e8c72160f1cc357",
-                41: "61ce1a319f10a6c5a010",
-                42: "33a20c71364994a6bf29",
-                43: "7341fd1c12fd5872eecc",
-                44: "16b806be2a7961ba5412",
-                45: "67bc1ed8519aa2b4f334",
-                46: "5d34df84779fb53fdf2b",
-                47: "1209fb11256c1d036704",
-                48: "37fff86b4fc9571e4dd1",
-                49: "65914afc03ca2e9b7901",
-                50: "daaabc2018ef7604ab66",
-                51: "3b367718e7b1e4c3418f",
-                52: "1186a976f0e94feef731",
-                53: "d5f619afdd8465774f7e",
-                54: "2aa17c65fbc8b159be57",
-                55: "5dce78857459fe5f1f2e",
+                40: "ba986c1e868b328488a3",
+                41: "3cfa1058a1f8b27bd243",
+                42: "67ba2ba7b4cbbb733163",
+                43: "cb50dbe67bf8b1a21055",
+                44: "7a4063c40489b3d0188d",
+                45: "c5335dea10a3cbc94964",
+                46: "58d2408ddeff15e7c676",
+                47: "d80077f83acea2074b02",
+                48: "4646f74d206315dcf999",
+                49: "c18d0a5a3a88f089d941",
+                50: "c20a276d700e2152413c",
+                51: "58ad11327e8f94ea41fc",
+                52: "97da11e0c6ad5bc7f6e7",
+                53: "95a087aa5f19d908f77a",
+                54: "5a98ba2379147a350b9d",
+                55: "371abe9054947177c5cd",
                 56: "88e25c5df774ba227d48",
-                57: "1dc8e27384b0f0215a91",
-                58: "caf6224d4fd19c2e29d2",
-                59: "cba1531f1c4c34cca70d",
+                57: "599025707859b6f9f6b8",
+                58: "3fbae982a13a192ca3ed",
+                59: "9534067e3489dd846a7c",
                 60: "f38c73d28c350eb2f7c9",
-                61: "c56fc2b85c3487e9003d",
-                62: "5114e4fb2aa239f3a28d",
-                63: "12e591279cce095715da",
-                64: "c0e8b6771b7eab36748a",
-                65: "0b8ba7550c1f54799091",
-                66: "1eee13a62980dd9fb894",
-                67: "c254720c306094cfc14a",
-                68: "e6480be8c5aa3245658b",
+                61: "0ecc83506ec7598faa2a",
+                62: "727d42b8206e8ff8942f",
+                63: "59fc801c29faf331113d",
+                64: "090ba8814bff662fe9ef",
+                65: "ac00c1cbcc346afb657c",
+                66: "e3969ff5ee1b47814176",
+                67: "a5dfbe064e7b45be3476",
+                68: "8d8f12d1f5c20b08bffd",
               }[e]
             );
           })(e));
@@ -563,7 +563,7 @@ var CLSTAMP = "7001762";
           return t;
       }
     }
-    var E, k, C, S, T, I, R;
+    var E, k, S, C, T, I, R;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -590,7 +590,9 @@ var CLSTAMP = "7001762";
           (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_InPlace = 3)] =
             "k_ENetFakeLocalSystemState_CaptivePortal_InPlace"),
           (e[(e.k_ENetFakeLocalSystemState_NoInternet = 4)] =
-            "k_ENetFakeLocalSystemState_NoInternet");
+            "k_ENetFakeLocalSystemState_NoInternet"),
+          (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
+            "k_ENetFakeLocalSystemState_NoSteam");
       })(k || (k = {})),
       (function (e) {
         (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
@@ -603,7 +605,7 @@ var CLSTAMP = "7001762";
             "k_ESuspendResumeProgressState_LoggingIn"),
           (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
             "k_ESuspendResumeProgressState_WaitingForApp");
-      })(C || (C = {})),
+      })(S || (S = {})),
       (function (e) {
         (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
           "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -613,7 +615,7 @@ var CLSTAMP = "7001762";
             "k_EFloatingGamepadTextInputModeModeEmail"),
           (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
             "k_EFloatingGamepadTextInputModeModeNumeric");
-      })(S || (S = {})),
+      })(C || (C = {})),
       (function (e) {
         (e[(e.k_EAppUpdateContentType_Content = 0)] =
           "k_EAppUpdateContentType_Content"),
@@ -865,6 +867,9 @@ var CLSTAMP = "7001762";
       }),
       n.d(t, "b", function () {
         return a;
+      }),
+      n.d(t, "d", function () {
+        return s;
       });
     n("mrSG");
     var r = n("cDcd");
@@ -891,6 +896,24 @@ var CLSTAMP = "7001762";
           }
         },
         [e, t]
+      );
+    }
+    function s(e) {
+      var t = r.useState(null == e ? void 0 : e.Value),
+        n = t[0],
+        i = t[1];
+      return (
+        r.useEffect(
+          function () {
+            if (null == e) return function () {};
+            var t = e.Subscribe(i);
+            return (
+              n !== e.Value && i(e.Value), null == t ? void 0 : t.Unsubscribe
+            );
+          },
+          [e]
+        ),
+        n
       );
     }
   },
@@ -955,6 +978,9 @@ var CLSTAMP = "7001762";
       }),
       n.d(t, "d", function () {
         return r.b;
+      }),
+      n.d(t, "h", function () {
+        return r.d;
       }),
       n.d(t, "c", function () {
         return o;
@@ -1556,10 +1582,10 @@ var CLSTAMP = "7001762";
         return b;
       }),
       n.d(t, "c", function () {
-        return C;
+        return S;
       }),
       n.d(t, "b", function () {
-        return S;
+        return C;
       }),
       n.d(t, "d", function () {
         return I;
@@ -1751,7 +1777,7 @@ var CLSTAMP = "7001762";
               n < l
                 ? Object(o.f)("#Time_Tomorrow")
                 : (l.setDate(l.getDate() + 5),
-                  n < l ? S(n) : C(n, !0, c.bAbbreviateDayOfWeek)))
+                  n < l ? C(n) : S(n, !0, c.bAbbreviateDayOfWeek)))
         );
       }
       s.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
@@ -1765,7 +1791,7 @@ var CLSTAMP = "7001762";
           ? Object(o.f)("#Time_Yesterday_At", d(e))
           : Object(o.f)("#Time_Yesterday");
       if ((f.setDate(f.getDate() - 7), c.bGranularWeek && n >= f))
-        return C(n, !1, !c.bAbbreviateDayOfWeek);
+        return S(n, !1, !c.bAbbreviateDayOfWeek);
       if (c.bGranularPast)
         return Object(o.f)(
           "#Time_Past_At",
@@ -1793,7 +1819,7 @@ var CLSTAMP = "7001762";
       y = new Map(),
       E = new Map(),
       k = new Map();
-    function C(e, t, n) {
+    function S(e, t, n) {
       void 0 === t && (t = !1), void 0 === n && (n = !0);
       var r = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
         i = k.get(r);
@@ -1808,7 +1834,7 @@ var CLSTAMP = "7001762";
         i)
       );
     }
-    function S(e) {
+    function C(e) {
       var t = g.get(e.getDay());
       return (
         t ||
@@ -2076,7 +2102,7 @@ var CLSTAMP = "7001762";
         return y;
       }),
       n.d(t, "p", function () {
-        return S;
+        return C;
       });
     var r = n("0N1H");
     n.d(t, "l", function () {
@@ -2342,7 +2368,7 @@ var CLSTAMP = "7001762";
         (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
           "k_BluetoothDeviceType_Keyboard");
     })(E || (E = {}));
-    var k, C, S, T, I;
+    var k, S, C, T, I;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
@@ -2357,14 +2383,14 @@ var CLSTAMP = "7001762";
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(C || (C = {})),
+      })(S || (S = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
-      })(S || (S = {})),
+      })(C || (C = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -3300,7 +3326,7 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     window.AssertMsg = u.a;
     var k = new s.a();
-    function C(e) {
+    function S(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -3309,7 +3335,7 @@ PERFORMANCE OF THIS SOFTWARE.
       var n = new b(t);
       o.render(i.createElement(g, { controller: n }), e);
     }
-    function S(e) {
+    function C(e) {
       return Object(r.b)(this, void 0, void 0, function () {
         var t, i, o, a, s, u, l;
         return Object(r.e)(this, function (d) {
@@ -3351,7 +3377,7 @@ PERFORMANCE OF THIS SOFTWARE.
           return Object(r.e)(this, function (e) {
             switch (e.label) {
               case 0:
-                return Object(a.c)(), [4, S(a.a.LANGUAGE)];
+                return Object(a.c)(), [4, C(a.a.LANGUAGE)];
               case 1:
                 return (
                   e.sent(),
@@ -3366,7 +3392,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         r = n.getAttribute("data-component");
                       switch (r) {
                         case "ChatInvite":
-                          C(n);
+                          S(n);
                           break;
                         default:
                           Object(u.a)(!1, 'unknown component: "' + r + '"');

@@ -940,6 +940,10 @@ body.v6 .cart_digital_notice_ctn h2
 	cursor: pointer;
 }
 
+.cart_tab_inactive.gpfocus {
+	color: #66c0f4;
+}
+
 .cart_tab_off {
 	color: #56707f;
 }

@@ -1868,7 +1868,7 @@
                         M.UrlSettingCtn
                       ),
                     },
-                    m.a.createElement(h.k, {
+                    m.a.createElement(h.l, {
                       className: M.RssInpu,
                       type: "text",
                       name: "link_url",
@@ -2123,7 +2123,7 @@
                       m.a.createElement(
                         h.d,
                         {
-                          disabled: !h.k.validateUrl(this.props.strRssURL),
+                          disabled: !h.l.validateUrl(this.props.strRssURL),
                           onClick: this.OnLoadPreview,
                         },
                         Object(E.f)("#CuratorAdmin_RSSFeed_preview")
@@ -2290,7 +2290,7 @@
                         { className: M.Error },
                         this.state.strErrorMessage
                       ),
-                    m.a.createElement(h.o, {
+                    m.a.createElement(h.p, {
                       onChange: this.OnToggleChannelAutomation,
                       label: Object(E.f)("#RSSManager_Status_Automation_Desc"),
                       checked: this.props.admin.BIsAutomationEnabled(),
@@ -2830,7 +2830,7 @@
                   return m.a.createElement(
                     w.e,
                     null,
-                    m.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    m.a.createElement(h.k, null, " ", this.GetStrTitle(), " "),
                     m.a.createElement(
                       h.b,
                       null,
@@ -2888,9 +2888,9 @@
                         )
                       ),
                       m.a.createElement(
-                        h.i,
+                        h.j,
                         null,
-                        m.a.createElement(h.m, {
+                        m.a.createElement(h.n, {
                           bOKDisabled: !Boolean(
                             this.state.bPermissions && this.state.bConduct
                           ),
@@ -2936,7 +2936,7 @@
                   return m.a.createElement(
                     w.e,
                     null,
-                    m.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    m.a.createElement(h.k, null, " ", this.GetStrTitle(), " "),
                     m.a.createElement(
                       h.b,
                       null,
@@ -2971,9 +2971,9 @@
                         )
                       ),
                       m.a.createElement(
-                        h.i,
+                        h.j,
                         null,
-                        m.a.createElement(h.m, {
+                        m.a.createElement(h.n, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal,
                         })
@@ -2984,7 +2984,7 @@
                   return m.a.createElement(
                     w.e,
                     null,
-                    m.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    m.a.createElement(h.k, null, " ", this.GetStrTitle(), " "),
                     m.a.createElement(
                       h.b,
                       null,
@@ -3009,9 +3009,9 @@
                         )
                       ),
                       m.a.createElement(
-                        h.i,
+                        h.j,
                         null,
-                        m.a.createElement(h.m, {
+                        m.a.createElement(h.n, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal,
                         })

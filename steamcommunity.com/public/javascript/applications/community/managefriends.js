@@ -358,7 +358,7 @@
                       )
                     ),
                     s.a.createElement(
-                      u.q,
+                      u.r,
                       {
                         style: {
                           width: "fit-content",
@@ -391,7 +391,7 @@
                       s.a.createElement(
                         "div",
                         { style: { width: "100%" } },
-                        s.a.createElement(u.l, {
+                        s.a.createElement(u.m, {
                           className: f.a.Input,
                           onKeyDown: this.OnSearchKeyDown,
                           value: this.state.input_search,
@@ -534,7 +534,7 @@
               return s.a.createElement(
                 "div",
                 null,
-                s.a.createElement(u.l, {
+                s.a.createElement(u.m, {
                   className: f.a.Input,
                   value: this.state.input_friend_code,
                   onChange: this.OnFriendCodeChange,
@@ -596,7 +596,7 @@
                         )
                       ),
                       s.a.createElement(
-                        u.q,
+                        u.r,
                         {
                           onClick: function () {
                             return e.OnActionClick(

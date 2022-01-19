@@ -1272,6 +1272,112 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   font-weight: 600;
   padding: 0px;
 }
+.deckverified_DeckVerifiedModal_2PVG- {
+  background: #0e141b !important;
+}
+.deckverified_BannerContainer_29jK3 {
+  padding-top: 5;
+  padding-bottom: 20px;
+}
+.deckverified_BannerHeader_3yxJH {
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5;
+}
+.deckverified_BannerContent_2dGPT {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #3b5a7280;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+.deckverified_BannerContent_2dGPT:focus-within {
+  background-color: #678ba670;
+}
+img.deckverified_CategoryIcon_3qF71 {
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.deckverified_LearnMore_2gXzK {
+  padding: 6px 16px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1a9fff;
+  border-radius: 2px;
+  box-shadow: 0px 3px 6px 0px #0000003d;
+  transition: all 0.1s ease;
+}
+.deckverified_LearnMore_2gXzK:hover {
+  color: #fff;
+  background-color: #0bf;
+}
+.deckverified_LearnMore_2gXzK.gpfocus {
+  background-color: #fff;
+  border-radius: 0px;
+  color: #000;
+}
+.deckverified_CompatibilityDetailsContainer_1-O8t {
+  display: flex;
+  flex-direction: column;
+  background-color: #0e141b;
+  padding: 10px;
+}
+.deckverified_CompatibilityDetailsHeader_Y6Inr {
+  padding-bottom: 5px;
+  display: inline-flex;
+  font-size: 13px;
+  word-break: break-word;
+}
+.deckverified_CompatibilityDetailRatingSummary_mJGYS {
+  padding-bottom: 10px;
+}
+.deckverified_CompatibilityDetailRatingDescription_3456E {
+  vertical-align: middle;
+  font-size: 14px;
+}
+.deckverified_CompatibilityDetailRatingDescription_3456E
+  .deckverified_Verified_ewmg- {
+  color: #59bf40;
+}
+.deckverified_CompatibilityDetailRatingDescription_3456E
+  .deckverified_Playable_1n8va {
+  color: #ffc82c;
+}
+.deckverified_CompatibilityDetailRatingDescription_3456E
+  .deckverified_Unsupported_2Q0ld {
+  color: #7c8ea3;
+}
+.deckverified_CompatibilityDetailsSeparator_2mwbd {
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 20px;
+}
+.deckverified_CompatibilityDetailsResultIcon_-L3Xu {
+  height: 16px;
+  padding-right: 15px;
+}
+.deckverified_CompatibilityDetailsNote_1M2Gb {
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 0px 5px 15px;
+}
+.deckverified_CompatibilityDetailsNoteHeader_1PXqk {
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 0px 5px 15px;
+}
+.deckverified_CompatibilityDetailsNoteRow_1Wu_j {
+  padding-left: 15px;
+  padding-bottom: 5px;
+  display: inline-flex;
+  font-size: 13px;
+  word-break: break-word;
+}
 .creatorhomeembed_DevSummaryCtn_1k0S- {
   flex-grow: 1;
   flex-basis: 0;
@@ -4924,6 +5030,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   box-shadow: #000 0px 0px 4px inset;
   background-color: #1b1c20;
   margin-left: 8px;
+  min-height: 46px;
 }
 .chatentry_chatEntryActionsContainer_W0Ohk,
 .chatentry_chatEntryActionsGroup_2WfNo {
@@ -4968,7 +5075,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   margin: 0px;
   margin-top: 0px;
   max-width: 46px;
-  max-height: 50px;
+  max-height: 46px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -5393,6 +5500,83 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 }
 .gamepadui_svg_library_Spinner_3m_2l > path:nth-child(8) {
   animation-delay: -0.4s;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8- > path {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8-
+  .gamepadui_svg_library_WifiBar1_1o6HA {
+  animation-name: gamepadui_svg_library_WifiBar1Anim_1PDAZ;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8-
+  .gamepadui_svg_library_WifiBar2_1q8-n {
+  animation-name: gamepadui_svg_library_WifiBar2Anim_QyijT;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8-
+  .gamepadui_svg_library_WifiBar3_23ih_ {
+  animation-name: gamepadui_svg_library_WifiBar3Anim_2wGDz;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8-
+  .gamepadui_svg_library_WifiBar4_2DSRH {
+  animation-name: gamepadui_svg_library_WifiBar4Anim_3jrA8;
+}
+@keyframes gamepadui_svg_library_WifiBar1Anim_1PDAZ {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar2Anim_QyijT {
+  0% {
+    opacity: 0.25;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar3Anim_2wGDz {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar4Anim_3jrA8 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .reorderablelist_WhitelistNumber_IY3dF {
   width: 30px;
@@ -14756,6 +14940,7 @@ html.responsive.touch
   flex-grow: 1;
   font-size: 17px;
   font-weight: 200;
+  white-space: pre-line;
 }
 .salesectionsubscription_ExpirationTextBlock_cw1hB {
   margin-top: 2px;
@@ -19097,19 +19282,6 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   overflow: hidden;
   padding-right: 10px;
 }
-.saleeditorlocationcontrolwidget_DisplayWarning_162UW {
-  padding: 5px;
-  font-weight: bolder;
-}
-.saleeditorlocationcontrolwidget_SelectArea_3hAkB {
-  min-height: 100px;
-}
-.saleeditorlocationcontrolwidget_SelectArea_3hAkB
-  .saleeditorlocationcontrolwidget_dropDown_a8hfO {
-  margin-top: 12px;
-  position: absolute;
-  width: 90%;
-}
 .contenthubsectionseditor_ContentHubSectionCtn_G2T4g {
   flex-grow: 1;
   margin-right: 16px;
@@ -19124,6 +19296,23 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .contenthubsectionseditor_ContentHubSectionCtn_G2T4g
   .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL:first-child {
   flex-grow: 4;
+}
+.saleeditorlocationcontrolwidget_DisplayWarning_162UW {
+  padding: 5px;
+  font-weight: bolder;
+}
+.saleeditorlocationcontrolwidget_SelectArea_3hAkB {
+  min-height: 100px;
+}
+.saleeditorlocationcontrolwidget_SelectArea_3hAkB
+  .saleeditorlocationcontrolwidget_dropDown_a8hfO {
+  margin-top: 12px;
+  position: absolute;
+  width: 90%;
+}
+.saleitemdefwidgeteditor_itemimg_2by5O {
+  width: auto;
+  height: 100px;
 }
 .partnereventdescriptiontab_ToolContainer_1YUip {
   padding: 10px 0px;
@@ -19145,10 +19334,6 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 }
 .partnereventdescriptiontab_DescEditorPadding_3mLVV.partnereventdescriptiontab_ImagePickerCtn_Mc28x {
   width: 395px;
-}
-.saleitemdefwidgeteditor_itemimg_2by5O {
-  width: auto;
-  height: 100px;
 }
 .partnereventsaletagitems_FilterDisplayCtn_3y3Xg
   .partnereventsaletagitems_FilterTitle_24W_L {

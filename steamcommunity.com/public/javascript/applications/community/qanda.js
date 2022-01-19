@@ -1593,7 +1593,7 @@
           o.a.createElement(
             "div",
             { className: G.a.InputCtn },
-            o.a.createElement(w.l, {
+            o.a.createElement(w.m, {
               type: "text",
               placeholder: n,
               maxLength: 512,

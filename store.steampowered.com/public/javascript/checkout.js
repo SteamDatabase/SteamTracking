@@ -5060,6 +5060,7 @@ function SetTabEnabled( tab_name, bResetTab )
 				$( curTab+'_tab_select' ).className = 'cart_tab_inactive';
 				$( curTab+'_tab_select_left' ).className = 'cart_tab_left_inactive';
 				$( curTab+'_tab_select_right' ).className = 'cart_tab_right_inactive';
+				$J('#'+curTab+'_tab_select').data( 'gpFocusDisabled', false );
 				
 																if ( curTab == 'review' )
 					$( curTab+'_tab_select' ).onclick = function() { SubmitPaymentInfoForm(); };
@@ -5076,7 +5077,7 @@ function SetTabEnabled( tab_name, bResetTab )
 				$( curTab+'_tab_select_left' ).className = 'cart_tab_left_on';
 				$( curTab+'_tab_select_right' ).className = 'cart_tab_right_on';
 				$( curTab+'_tab_select' ).onclick = function() { return true; };
-				
+				$J('#'+curTab+'_tab_select').data( 'gpFocusDisabled', true );
 				$( curTab+'_tab' ).style.display = 'block';
 				$( 'col_right_'+curTab ).style.display = 'block';
 				if ( $('footer_note_'+curTab) ) $('footer_note_'+curTab).show();
@@ -5094,7 +5095,12 @@ function SetTabEnabled( tab_name, bResetTab )
 										ShowFirstPaymentStep();
 				}
 			}
+			else
+			{
+				$J('#'+curTab+'_tab_select').data( 'gpFocusDisabled', true );
+			}
 		}
+
 
 		// scroll back to the top (mostly for mobile devices)
 		ScrollToIfNotInView( $J('.checkout_main'), null, 20 );

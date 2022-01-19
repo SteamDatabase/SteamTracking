@@ -294,16 +294,20 @@ GHomepage = {
 
 	OnHomeDataReady: function()
 	{
-		try {
-			if ( g_AccountID != 0 )
-			{
-				$J('#discovery_queue').append($J('#static_discovery_queue_elements').children());
-				$J('#static_discovery_queeue_elements').remove();
-				$J('.discovery_queue_ctn').show();
-			}
+		var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
+		// Deck: Hide discovery queue shenanigans for now
+		if( !bSupportTabletMode )
+		{
+			try {
+				if ( g_AccountID != 0 )
+				{
+					$J('#discovery_queue').append($J('#static_discovery_queue_elements').children());
+					$J('#static_discovery_queeue_elements').remove();
+					$J('.discovery_queue_ctn').show();
+				}
 
-		} catch(e) { OnHomepageException(e); }
-
+			} catch(e) { OnHomepageException(e); }
+		}
 		GDynamicStore.OnReady( GHomepage.OnDynamicStoreReady );
 	},
 
@@ -1619,6 +1623,10 @@ GHomepage = {
 		});
 
 		GDynamicStore.DecorateDynamicItems( $J('.specials_target') );
+
+		// somtimes this carousel gets scrolled during recreation, slam to 0 just in case
+		$J('#spotlight_carousel > .carousel_items')[0].scrollLeft = 0;
+
 		$J('#spotlight_carousel').css( 'visibility', '' );
 
 	},

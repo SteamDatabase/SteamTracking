@@ -64,8 +64,8 @@
         d = a("bxBv"),
         u = (a("TX96"), a("TLQK")),
         m = a("opsS"),
-        p = a("lkRc"),
-        b = a("WBba"),
+        b = a("lkRc"),
+        p = a("WBba"),
         _ = a("2lpH"),
         f = a.n(_),
         h = a("2vnA"),
@@ -81,7 +81,7 @@
           }
           return (
             (e.prototype.BIsLoggedIn = function () {
-              return p.k.logged_in;
+              return b.k.logged_in;
             }),
             (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
@@ -135,7 +135,7 @@
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
                           (e = d.b.Init(E.g)).SetBodyFields({
-                            steamid: p.k.steamid,
+                            steamid: b.k.steamid,
                           }),
                           [4, E.o.GetSummary(this.m_transport, e)])
                         : [2, Promise.resolve(null)];
@@ -309,7 +309,7 @@
                   (t =
                     !this.props.bDisableAnimation &&
                     (this.state.bHovered || this.props.bForceAnimated)),
-                  p.d.STORE_CDN_URL +
+                  b.d.STORE_CDN_URL +
                     "public/images/loyalty/reactions/" +
                     (t ? "animated" : "still") +
                     "/" +
@@ -338,7 +338,7 @@
                   [
                     4,
                     s.a.get(
-                      Object(p.f)() + "pointssummary/ajaxgetasyncconfig",
+                      Object(b.f)() + "pointssummary/ajaxgetasyncconfig",
                       { withCredentials: !0 }
                     ),
                   ]
@@ -398,7 +398,7 @@
                         ? [2]
                         : e
                         ? ((a.s_LoyaltyAwardModalStore = new g(e)), [2])
-                        : ((t = Object(p.h)(
+                        : ((t = Object(b.h)(
                             "loyaltystore",
                             "application_config"
                           )),
@@ -407,7 +407,7 @@
                       return (
                         (r = s.sent()),
                         (o = Object(n.a)(Object(n.a)({}, t), r)),
-                        (i = new b.a(p.d.WEBAPI_BASE_URL, o.webapi_token)),
+                        (i = new p.a(b.d.WEBAPI_BASE_URL, o.webapi_token)),
                         (a.s_LoyaltyAwardModalStore = new g(
                           i.GetServiceTransport()
                         )),
@@ -428,7 +428,7 @@
                 d = t.targetid,
                 u = t.ugcType,
                 m = t.initialSelectedReaction,
-                p = a.s_LoyaltyAwardModalStore;
+                b = a.s_LoyaltyAwardModalStore;
               if (!o) return null;
               if (n)
                 return r.createElement(
@@ -452,7 +452,7 @@
                     )
                   )
                 );
-              p.GetAwardConfigurations();
+              b.GetAwardConfigurations();
               return r.createElement(I, {
                 key: d,
                 targetid: d,
@@ -539,7 +539,7 @@
                 s = t.onDismiss,
                 d = this.state,
                 m = d.selectedReaction,
-                b = d.ePhase,
+                p = d.ePhase,
                 _ = d.celebrate;
               if (!a) return null;
               var f,
@@ -588,12 +588,12 @@
                 case 5:
                   G = Object(u.f)("#GrantAwardDescription_Comment");
               }
-              switch (b) {
+              switch (p) {
                 case R.SELECTING:
                   var T = 0 === m || h.get(m),
                     j = !g || g.greaterThanOrEqual(O),
                     I = r.createElement(
-                      S.p,
+                      S.q,
                       {
                         onClick: function () {
                           return e.setState({ ePhase: R.CONFIRM });
@@ -665,7 +665,7 @@
                               "a",
                               {
                                 key: "button",
-                                href: p.d.STORE_BASE_URL + "points/howitworks",
+                                href: b.d.STORE_BASE_URL + "points/howitworks",
                               },
                               r.createElement(
                                 S.d,
@@ -693,7 +693,7 @@
                         {
                           className: Object(w.a)(
                             l.ConfirmContainer,
-                            b === R.CONFIRM && l.Visible
+                            p === R.CONFIRM && l.Visible
                           ),
                         },
                         r.createElement(N, {
@@ -734,7 +734,7 @@
                         {
                           className: Object(w.a)(
                             l.LoadingContainer,
-                            b === R.SUBMITTING && l.Visible
+                            p === R.SUBMITTING && l.Visible
                           ),
                         },
                         r.createElement(D, null)
@@ -744,7 +744,7 @@
                         {
                           className: Object(w.a)(
                             l.SuccessContainer,
-                            b === R.DONE && l.Visible
+                            p === R.DONE && l.Visible
                           ),
                         },
                         r.createElement(N, {
@@ -768,16 +768,16 @@
                           onClick: function () {
                             return e.setState({ ePhase: R.SELECTING });
                           },
-                          disabled: b !== R.CONFIRM,
+                          disabled: p !== R.CONFIRM,
                         },
                         Object(u.f)("#GrantAward_Back")
                       ),
                       r.createElement(
-                        S.p,
+                        S.q,
                         {
                           onClick: this.GrantAward,
                           title: Object(u.f)("#GrantAward_SubmitTooltip"),
-                          disabled: b !== R.CONFIRM,
+                          disabled: p !== R.CONFIRM,
                         },
                         Object(u.f)("#GrantAwardNowButton")
                       )
@@ -927,7 +927,7 @@
                 "a",
                 {
                   className: l.FooterLink,
-                  href: p.d.STORE_BASE_URL + "points/howitworks",
+                  href: b.d.STORE_BASE_URL + "points/howitworks",
                 },
                 Object(u.f)("#GrantAward_PointsLink")
               )

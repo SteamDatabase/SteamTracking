@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7001762";
+var CLSTAMP = "7013130";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -127,10 +127,10 @@ var CLSTAMP = "7001762";
         return f;
       }),
       n.d(t, "i", function () {
-        return m;
+        return S;
       }),
       n.d(t, "h", function () {
-        return S;
+        return m;
       }),
       n.d(t, "d", function () {
         return E;
@@ -154,8 +154,8 @@ var CLSTAMP = "7001762";
       d = 358510,
       p = 366490,
       f = "18446744073709551615",
-      m = 0,
-      S = 2147483647;
+      S = 0,
+      m = 2147483647;
     function E(e, t) {
       switch ((void 0 === t && (t = "en"), e)) {
         case 0:
@@ -385,7 +385,9 @@ var CLSTAMP = "7001762";
           (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_InPlace = 3)] =
             "k_ENetFakeLocalSystemState_CaptivePortal_InPlace"),
           (e[(e.k_ENetFakeLocalSystemState_NoInternet = 4)] =
-            "k_ENetFakeLocalSystemState_NoInternet");
+            "k_ENetFakeLocalSystemState_NoInternet"),
+          (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
+            "k_ENetFakeLocalSystemState_NoSteam");
       })(C || (C = {})),
       (function (e) {
         (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
@@ -460,7 +462,7 @@ var CLSTAMP = "7001762";
         return f;
       }),
       n.d(t, "e", function () {
-        return S;
+        return m;
       }),
       n.d(t, "f", function () {
         return E;
@@ -605,30 +607,30 @@ var CLSTAMP = "7001762";
         }
       else console.error("Missing config element #", t);
     }
-    function m(e, t) {
+    function S(e, t) {
       return 0 != t.length && e.startsWith(t);
     }
-    function S() {
+    function m() {
       if (!window || !window.location || !window.location.href)
         return console.warn("Unable to determine base url!"), "unknown";
       var e = window.location.href;
-      return m(e, a.STORE_BASE_URL)
+      return S(e, a.STORE_BASE_URL)
         ? a.STORE_BASE_URL
-        : m(e, a.COMMUNITY_BASE_URL)
+        : S(e, a.COMMUNITY_BASE_URL)
         ? a.COMMUNITY_BASE_URL
-        : m(e, a.CHAT_BASE_URL)
+        : S(e, a.CHAT_BASE_URL)
         ? a.CHAT_BASE_URL
-        : m(e, a.PARTNER_BASE_URL)
+        : S(e, a.PARTNER_BASE_URL)
         ? a.PARTNER_BASE_URL
-        : m(e, a.HELP_BASE_URL)
+        : S(e, a.HELP_BASE_URL)
         ? a.HELP_BASE_URL
-        : m(e, a.STEAMTV_BASE_URL)
+        : S(e, a.STEAMTV_BASE_URL)
         ? a.STEAMTV_BASE_URL
-        : m(e, a.STATS_BASE_URL)
+        : S(e, a.STATS_BASE_URL)
         ? a.STATS_BASE_URL
-        : m(e, a.INTERNAL_STATS_BASE_URL)
+        : S(e, a.INTERNAL_STATS_BASE_URL)
         ? a.INTERNAL_STATS_BASE_URL
-        : m(e, "https://steamloopback.host")
+        : S(e, "https://steamloopback.host")
         ? "https://steamloopback.host"
         : "";
     }

@@ -546,7 +546,7 @@
                       className: w.a.AccountPasswordForm,
                       onSubmit: this.OnSubmit,
                     },
-                    o.a.createElement(T.l, {
+                    o.a.createElement(T.m, {
                       className: Object(O.a)(w.a.AccountNameLabel, t),
                       label: Object(E.f)("#Login_AccountName"),
                       type: "text",
@@ -555,7 +555,7 @@
                       maxLength: 64,
                       onChange: this.OnChangeName,
                     }),
-                    o.a.createElement(T.l, {
+                    o.a.createElement(T.m, {
                       bIsPassword: !0,
                       className: Object(O.a)(w.a.PasswordDots, e),
                       label: Object(E.f)("#Login_Password"),
@@ -577,7 +577,7 @@
                     }),
                     n.GetCaptchaURL() && o.a.createElement(P, { manager: n }),
                     o.a.createElement(
-                      T.q,
+                      T.r,
                       { disabled: this.props.manager.IsRequestInFlight() },
                       Object(E.f)("#Login_SignIn").toLocaleUpperCase()
                     )
@@ -649,7 +649,7 @@
                         src: t.GetCaptchaURL(),
                       })
                     ),
-                    o.a.createElement(T.l, {
+                    o.a.createElement(T.m, {
                       className: w.a.CaptchaInput,
                       type: "text",
                       autoComplete: "off",
@@ -728,7 +728,7 @@
               return o.a.createElement(
                 "div",
                 { className: w.a.AuthenticationPanel },
-                o.a.createElement(T.m, null, Object(E.f)("#Login_SigningIn")),
+                o.a.createElement(T.n, null, Object(E.f)("#Login_SigningIn")),
                 o.a.createElement(
                   "div",
                   { className: w.a.SigningInAccountName },
@@ -745,7 +745,7 @@
                       className: w.a.AccountPasswordForm,
                       onSubmit: this.OnSubmit,
                     },
-                    o.a.createElement(T.l, {
+                    o.a.createElement(T.m, {
                       className: Object(O.a)(w.a.AccountName),
                       label: "Steam Guard Code",
                       type: "text",
@@ -756,7 +756,7 @@
                       onChange: this.OnChangeAuthCode,
                     }),
                     o.a.createElement(
-                      T.q,
+                      T.r,
                       { disabled: this.props.manager.IsRequestInFlight() },
                       Object(E.f)("#Login_SteamguardSubmit").toLocaleUpperCase()
                     )

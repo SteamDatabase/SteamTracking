@@ -550,7 +550,7 @@
                     ? e
                     : v.AppSelector,
                 a = null,
-                n = b.a.createElement(S.k, {
+                n = b.a.createElement(S.l, {
                   type: "text",
                   onChange: this.UpdateAppSuggestions,
                 });
@@ -1966,14 +1966,14 @@
           _.createElement(
             S.b,
             { className: te.ClusterConfig },
-            _.createElement(S.k, {
+            _.createElement(S.l, {
               label: "SteamID",
               type: "text",
               value: n,
               onChange: m,
               explainer: !b && "Invalid SteamID",
             }),
-            _.createElement(S.k, {
+            _.createElement(S.l, {
               label: "Clusters to return (Set to blank for all clusters)",
               type: "text",
               value: l,

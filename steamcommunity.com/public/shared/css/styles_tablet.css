@@ -487,7 +487,7 @@
 		overflow: scroll;
 		scroll-snap-type: x mandatory;
 		scroll-padding: var(--gpSpace-Gutter);
-		padding: 4px 0px var(--gpSpace-Gap) var(--gpSpace-Gutter);
+		padding: 8px 0px var(--gpSpace-Gap) var(--gpSpace-Gutter);
 		margin: 0px calc(0px - var(--gpSpace-Gutter));
 	}
 
@@ -617,10 +617,8 @@
 	}
 
 	html.responsive .tab_item .ds_steam_deck_compat {
-		top: 72px;
-		background-color: var(--gpBackground-DarkMedium);
-		backdrop-filter: blur(24px);
-		left: 12px;
+		top: 12px;
+		right: 12px;
 	}
 
 	html.responsive .vr_required,
@@ -1159,8 +1157,12 @@
 		padding-top: 4px;
 	}
 
-
+	html.responsive .SliderBody ul
+	{
+		gap: 16px;
+	}
 }
+
 
 
 
