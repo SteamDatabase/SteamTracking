@@ -559,6 +559,7 @@ function CModal( $Content, rgParams )
 	this.m_nMaxHeight = 0;
 
 	this.m_fnOnDismiss = null;
+	this.m_fnGPOnCloseModal = null;
 	this.m_bRemoveContentOnDismissal = false;
 
 	this.m_nInitialOffsetTop = $J(window).scrollTop();
@@ -728,6 +729,10 @@ CModal.prototype.Show = function()
 
 	this.AdjustSizing();
 
+	// if we're in gamepad, notify gamepad navigation of the modal
+	if ( typeof GPOnShowingModalWindow === "function" )
+		this.m_fnGPOnCloseModal = GPOnShowingModalWindow( this.m_$Content.get( 0 ) );
+
 	this.m_$Content.show();
 
 	// resize as any child image elements load in.
@@ -746,6 +751,13 @@ CModal.prototype.Dismiss = function()
 		return;
 
 	this.m_bVisible = false;
+
+	// tell gamepad navigation we're closing this modal
+	if ( this.m_fnGPOnCloseModal )
+	{
+		this.m_fnGPOnCloseModal();
+		this.m_fnGPOnCloseModal = null;
+	}
 
 	this.m_$Content.hide();
 

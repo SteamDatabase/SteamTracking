@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7014680";
+var CLSTAMP = "7018517";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -572,237 +572,237 @@ var CLSTAMP = "7014680";
     "6Y59": function (e, t, n) {
       "use strict";
       n.d(t, "bb", function () {
-        return c;
+        return l;
       }),
         n.d(t, "s", function () {
-          return l;
-        }),
-        n.d(t, "y", function () {
           return u;
         }),
-        n.d(t, "L", function () {
+        n.d(t, "y", function () {
           return p;
         }),
-        n.d(t, "w", function () {
+        n.d(t, "L", function () {
           return d;
         }),
-        n.d(t, "ib", function () {
+        n.d(t, "w", function () {
           return h;
         }),
-        n.d(t, "H", function () {
+        n.d(t, "ib", function () {
           return m;
         }),
-        n.d(t, "V", function () {
+        n.d(t, "H", function () {
           return f;
         }),
-        n.d(t, "vb", function () {
+        n.d(t, "V", function () {
           return g;
         }),
-        n.d(t, "wb", function () {
+        n.d(t, "vb", function () {
           return b;
         }),
-        n.d(t, "R", function () {
+        n.d(t, "wb", function () {
           return v;
         }),
-        n.d(t, "sb", function () {
+        n.d(t, "R", function () {
           return _;
         }),
-        n.d(t, "qb", function () {
+        n.d(t, "sb", function () {
           return y;
         }),
-        n.d(t, "U", function () {
+        n.d(t, "qb", function () {
           return w;
+        }),
+        n.d(t, "U", function () {
+          return E;
         }),
         n.d(t, "T", function () {
           return O;
         }),
         n.d(t, "m", function () {
-          return E;
-        }),
-        n.d(t, "k", function () {
           return C;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "k", function () {
           return S;
         }),
-        n.d(t, "J", function () {
+        n.d(t, "q", function () {
           return D;
         }),
-        n.d(t, "jb", function () {
+        n.d(t, "J", function () {
           return M;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "jb", function () {
           return k;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "e", function () {
           return x;
         }),
-        n.d(t, "p", function () {
+        n.d(t, "c", function () {
           return R;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "p", function () {
           return I;
         }),
-        n.d(t, "M", function () {
+        n.d(t, "r", function () {
           return T;
         }),
-        n.d(t, "P", function () {
+        n.d(t, "M", function () {
           return j;
         }),
-        n.d(t, "Y", function () {
+        n.d(t, "P", function () {
           return L;
         }),
-        n.d(t, "X", function () {
+        n.d(t, "Y", function () {
           return B;
         }),
-        n.d(t, "lb", function () {
+        n.d(t, "X", function () {
           return A;
         }),
-        n.d(t, "C", function () {
+        n.d(t, "lb", function () {
           return N;
         }),
-        n.d(t, "N", function () {
+        n.d(t, "C", function () {
           return P;
         }),
-        n.d(t, "gb", function () {
+        n.d(t, "N", function () {
           return F;
         }),
-        n.d(t, "rb", function () {
+        n.d(t, "gb", function () {
           return G;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "rb", function () {
           return U;
         }),
-        n.d(t, "D", function () {
+        n.d(t, "l", function () {
           return H;
         }),
-        n.d(t, "eb", function () {
+        n.d(t, "D", function () {
           return W;
         }),
-        n.d(t, "Z", function () {
+        n.d(t, "eb", function () {
           return V;
         }),
-        n.d(t, "ab", function () {
+        n.d(t, "Z", function () {
           return z;
         }),
-        n.d(t, "db", function () {
+        n.d(t, "ab", function () {
           return K;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "db", function () {
           return Y;
         }),
-        n.d(t, "Q", function () {
+        n.d(t, "f", function () {
           return q;
         }),
-        n.d(t, "pb", function () {
+        n.d(t, "Q", function () {
           return X;
         }),
-        n.d(t, "I", function () {
+        n.d(t, "pb", function () {
           return J;
         }),
-        n.d(t, "x", function () {
+        n.d(t, "I", function () {
           return Q;
         }),
-        n.d(t, "nb", function () {
+        n.d(t, "x", function () {
           return Z;
         }),
-        n.d(t, "mb", function () {
+        n.d(t, "nb", function () {
           return $;
         }),
-        n.d(t, "j", function () {
+        n.d(t, "mb", function () {
           return ee;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "j", function () {
           return te;
         }),
-        n.d(t, "fb", function () {
+        n.d(t, "n", function () {
           return ne;
         }),
-        n.d(t, "t", function () {
+        n.d(t, "fb", function () {
           return re;
         }),
-        n.d(t, "A", function () {
+        n.d(t, "t", function () {
           return oe;
         }),
-        n.d(t, "v", function () {
+        n.d(t, "A", function () {
           return ie;
         }),
-        n.d(t, "F", function () {
+        n.d(t, "v", function () {
           return ae;
         }),
-        n.d(t, "B", function () {
+        n.d(t, "F", function () {
           return se;
         }),
-        n.d(t, "u", function () {
+        n.d(t, "B", function () {
           return ce;
         }),
-        n.d(t, "S", function () {
+        n.d(t, "u", function () {
           return le;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "S", function () {
           return ue;
         }),
-        n.d(t, "tb", function () {
+        n.d(t, "b", function () {
           return pe;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "tb", function () {
           return de;
         }),
-        n.d(t, "O", function () {
+        n.d(t, "a", function () {
           return he;
         }),
-        n.d(t, "G", function () {
+        n.d(t, "O", function () {
           return me;
         }),
-        n.d(t, "z", function () {
+        n.d(t, "G", function () {
           return fe;
         }),
-        n.d(t, "E", function () {
+        n.d(t, "z", function () {
           return ge;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "E", function () {
           return be;
         }),
-        n.d(t, "kb", function () {
+        n.d(t, "o", function () {
           return ve;
         }),
-        n.d(t, "ob", function () {
+        n.d(t, "kb", function () {
           return _e;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "ob", function () {
           return ye;
         }),
-        n.d(t, "K", function () {
+        n.d(t, "d", function () {
           return we;
+        }),
+        n.d(t, "K", function () {
+          return Ee;
         }),
         n.d(t, "W", function () {
           return Oe;
         }),
         n.d(t, "ub", function () {
-          return Ee;
-        }),
-        n.d(t, "i", function () {
           return Ce;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "i", function () {
           return Se;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "h", function () {
           return De;
         }),
-        n.d(t, "cb", function () {
+        n.d(t, "g", function () {
           return Me;
         }),
-        n.d(t, "hb", function () {
+        n.d(t, "cb", function () {
           return ke;
+        }),
+        n.d(t, "hb", function () {
+          return xe;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
         i = n("2i24"),
         a = n.n(i),
-        s = n("exH9");
-      n("YyVH"), n("Z7Ow");
-      function c() {
+        s = n("exH9"),
+        c = (n("YyVH"), n("Z7Ow"), n("lkRc"));
+      function l() {
         return o.createElement(
           "svg",
           {
@@ -824,7 +824,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function l() {
+      function u() {
         return o.createElement(
           "svg",
           {
@@ -841,7 +841,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function u(e) {
+      function p(e) {
         return o.createElement(
           "svg",
           {
@@ -860,7 +860,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function p(e) {
+      function d(e) {
         var t = "SVGIcon_Button SVGIcon_MagnifyingGlass";
         return (
           e.className && (t += " " + e.className),
@@ -892,7 +892,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function d() {
+      function h() {
         return o.createElement(
           "svg",
           {
@@ -948,36 +948,56 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function h() {
-        return o.createElement(
-          "svg",
-          {
-            fill: "#FFFFFF",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Submit",
-            version: "1.1",
-            x: "0px",
-            y: "0px",
-            viewBox: "0 0 100 100",
-          },
-          o.createElement(
-            "g",
-            { transform: "translate(0,-952.36218)" },
-            o.createElement("path", {
-              d:
-                "m 92.115057,974.14842 a 2.0001999,2.0001999 0 0 0 -1.96764,2.02965 l 0.0376,31.19553 -77.475501,0 16.161909,-15.73013 a 2.0002746,2.0002746 0 1 0 -2.790355,-2.8667 L 6.3913393,1007.9405 a 2.0001999,2.0001999 0 0 0 -0.0011,2.8646 l 19.6896957,19.2036 a 2.0002671,2.0002671 0 1 0 2.792551,-2.8646 l -16.170767,-15.771 79.153048,0 a 2.0001999,2.0001999 0 0 0 1.72959,-0.5437 2.0001999,2.0001999 0 0 0 0.0598,-0.058 2.0001999,2.0001999 0 0 0 0.54259,-1.7218 l -0.0388,-32.87638 a 2.0001999,2.0001999 0 0 0 -2.03297,-2.02522 z",
-              fill: "#FFFFFF",
-              fillOpacity: "1",
-              fillRule: "evenodd",
-              stroke: "none",
-              visibility: "visible",
-              display: "inline",
-              overflow: "visible",
-            })
-          )
-        );
+      function m(e) {
+        return c.c.IN_GAMEPADUI
+          ? o.createElement(
+              "svg",
+              Object(r.a)(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  className: "SVGIcon_Button SVGIcon_Submit",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                e
+              ),
+              o.createElement("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d:
+                  "M34 15.5V8H29V15.5C29 15.8978 28.842 16.2794 28.5607 16.5607C28.2794 16.842 27.8978 17 27.5 17H12.0355L16.7678 12.2678L13.2322 8.73224L2.46446 19.5L13.2322 30.2678L16.7678 26.7322L12.0355 22H27.5C29.2239 22 30.8772 21.3152 32.0962 20.0962C33.3152 18.8772 34 17.2239 34 15.5Z",
+                fill: "currentColor",
+              })
+            )
+          : o.createElement(
+              "svg",
+              {
+                fill: "#FFFFFF",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_Submit",
+                version: "1.1",
+                x: "0px",
+                y: "0px",
+                viewBox: "0 0 100 100",
+              },
+              o.createElement(
+                "g",
+                { transform: "translate(0,-952.36218)" },
+                o.createElement("path", {
+                  d:
+                    "m 92.115057,974.14842 a 2.0001999,2.0001999 0 0 0 -1.96764,2.02965 l 0.0376,31.19553 -77.475501,0 16.161909,-15.73013 a 2.0002746,2.0002746 0 1 0 -2.790355,-2.8667 L 6.3913393,1007.9405 a 2.0001999,2.0001999 0 0 0 -0.0011,2.8646 l 19.6896957,19.2036 a 2.0002671,2.0002671 0 1 0 2.792551,-2.8646 l -16.170767,-15.771 79.153048,0 a 2.0001999,2.0001999 0 0 0 1.72959,-0.5437 2.0001999,2.0001999 0 0 0 0.0598,-0.058 2.0001999,2.0001999 0 0 0 0.54259,-1.7218 l -0.0388,-32.87638 a 2.0001999,2.0001999 0 0 0 -2.03297,-2.02522 z",
+                  fill: "#FFFFFF",
+                  fillOpacity: "1",
+                  fillRule: "evenodd",
+                  stroke: "none",
+                  visibility: "visible",
+                  display: "inline",
+                  overflow: "visible",
+                })
+              )
+            );
       }
-      function m() {
+      function f() {
         return o.createElement(
           "svg",
           {
@@ -1002,7 +1022,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function f() {
+      function g() {
         return o.createElement(
           "svg",
           {
@@ -1019,7 +1039,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function g(e) {
+      function b(e) {
         return o.createElement(
           "svg",
           Object(r.a)(
@@ -1044,7 +1064,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function b(e) {
+      function v(e) {
         var t = e.color || "#FFFFFF";
         return o.createElement(
           "svg",
@@ -1081,7 +1101,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function v() {
+      function _() {
         return o.createElement(
           "svg",
           {
@@ -1105,7 +1125,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function _(e) {
+      function y(e) {
         var t = e.muted,
           n = e.className;
         return o.createElement(
@@ -1179,7 +1199,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function y() {
+      function w() {
         return o.createElement(
           "svg",
           { width: "50px", height: "25px", viewBox: "0 0 50 25" },
@@ -1189,7 +1209,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function w() {
+      function E() {
         return o.createElement(
           "svg",
           {
@@ -1234,7 +1254,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function E() {
+      function C() {
         return o.createElement(
           "svg",
           {
@@ -1259,7 +1279,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function C() {
+      function S() {
         return o.createElement(
           "svg",
           {
@@ -1288,7 +1308,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function S(e) {
+      function D(e) {
         var t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         return o.createElement(
@@ -1368,7 +1388,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function D() {
+      function M() {
         return o.createElement(
           "svg",
           {
@@ -1398,7 +1418,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function M(e) {
+      function k(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -1642,27 +1662,47 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function k() {
-        return o.createElement(
-          "svg",
-          {
-            version: "1.1",
-            id: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Bell",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          o.createElement("path", {
-            d:
-              "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z",
-          })
-        );
-      }
       function x(e) {
+        return c.c.IN_GAMEPADUI
+          ? o.createElement(
+              "svg",
+              Object(r.a)(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  className: "SVGIcon_Button SVGIcon_Bell",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                e
+              ),
+              o.createElement("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d:
+                  "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24ZM18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
+                fill: "currentColor",
+              })
+            )
+          : o.createElement(
+              "svg",
+              {
+                version: "1.1",
+                id: "base",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_Bell",
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 256 256",
+              },
+              o.createElement("path", {
+                d:
+                  "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z",
+              })
+            );
+      }
+      function R(e) {
         return o.createElement(
           "svg",
           {
@@ -1697,7 +1737,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function R() {
+      function I() {
         return o.createElement(
           "svg",
           {
@@ -1717,7 +1757,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function I(e) {
+      function T(e) {
         return o.createElement(
           "svg",
           {
@@ -1753,7 +1793,7 @@ var CLSTAMP = "7014680";
             })
         );
       }
-      function T() {
+      function j() {
         return o.createElement(
           "svg",
           {
@@ -1789,7 +1829,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function j() {
+      function L() {
         return o.createElement(
           "svg",
           {
@@ -1815,7 +1855,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function L() {
+      function B() {
         return o.createElement(
           "svg",
           {
@@ -1848,7 +1888,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function B() {
+      function A() {
         return o.createElement(
           "svg",
           {
@@ -1876,7 +1916,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function A() {
+      function N() {
         return o.createElement(
           "svg",
           {
@@ -1955,7 +1995,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function N(e) {
+      function P(e) {
         return o.createElement(
           "svg",
           {
@@ -1976,7 +2016,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function P(e) {
+      function F(e) {
         return o.createElement(
           "svg",
           {
@@ -2017,7 +2057,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function F(e) {
+      function G(e) {
         var t = Object(s.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -2051,7 +2091,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function G() {
+      function U() {
         return o.createElement(
           "svg",
           {
@@ -2079,7 +2119,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function U() {
+      function H() {
         return o.createElement(
           "svg",
           {
@@ -2101,7 +2141,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function H() {
+      function W() {
         return o.createElement(
           "svg",
           {
@@ -2123,7 +2163,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function W() {
+      function V() {
         return o.createElement(
           "svg",
           {
@@ -2144,7 +2184,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function V() {
+      function z() {
         return o.createElement(
           "svg",
           {
@@ -2181,7 +2221,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function z() {
+      function K() {
         return o.createElement(
           "svg",
           {
@@ -2209,7 +2249,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function K() {
+      function Y() {
         return o.createElement(
           "svg",
           {
@@ -2276,7 +2316,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function Y() {
+      function q() {
         return o.createElement(
           "svg",
           {
@@ -2297,7 +2337,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function q(e) {
+      function X(e) {
         var t = e.className;
         return o.createElement(
           "svg",
@@ -2318,7 +2358,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function X() {
+      function J() {
         return o.createElement(
           "svg",
           {
@@ -2342,7 +2382,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function J() {
+      function Q() {
         return o.createElement(
           "svg",
           {
@@ -2392,7 +2432,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function Q() {
+      function Z() {
         return o.createElement(
           "svg",
           {
@@ -2425,7 +2465,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function Z() {
+      function $() {
         return o.createElement(
           "svg",
           {
@@ -2445,7 +2485,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function $() {
+      function ee() {
         return o.createElement(
           "svg",
           {
@@ -2465,7 +2505,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function ee() {
+      function te() {
         return o.createElement(
           "svg",
           {
@@ -2487,7 +2527,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function te() {
+      function ne() {
         return o.createElement(
           "svg",
           {
@@ -2521,7 +2561,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function ne(e) {
+      function re(e) {
         var t = Object(s.a)(
           "SVGIcon_Button",
           e.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled"
@@ -2548,7 +2588,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function re() {
+      function oe() {
         return o.createElement(
           "svg",
           {
@@ -2598,7 +2638,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function oe() {
+      function ie() {
         return o.createElement(
           "svg",
           {
@@ -2618,7 +2658,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function ie() {
+      function ae() {
         return o.createElement(
           "svg",
           {
@@ -2658,7 +2698,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function ae() {
+      function se() {
         return o.createElement(
           "svg",
           {
@@ -2694,7 +2734,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function se() {
+      function ce() {
         return o.createElement(
           "svg",
           {
@@ -2714,7 +2754,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function ce(e) {
+      function le(e) {
         return o.createElement(
           "svg",
           {
@@ -2744,7 +2784,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function le() {
+      function ue() {
         return o.createElement(
           "svg",
           {
@@ -2772,7 +2812,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function ue() {
+      function pe() {
         return o.createElement(
           "svg",
           {
@@ -2796,7 +2836,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function pe() {
+      function de() {
         return o.createElement(
           "svg",
           {
@@ -2815,7 +2855,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function de() {
+      function he() {
         return o.createElement(
           "svg",
           {
@@ -2845,7 +2885,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function he() {
+      function me() {
         return o.createElement(
           "svg",
           {
@@ -2861,7 +2901,7 @@ var CLSTAMP = "7014680";
           o.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function me() {
+      function fe() {
         return o.createElement(
           "svg",
           {
@@ -2881,7 +2921,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function fe() {
+      function ge() {
         return o.createElement(
           "svg",
           {
@@ -2901,7 +2941,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function ge() {
+      function be() {
         return o.createElement(
           "svg",
           {
@@ -2924,27 +2964,45 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function be(e) {
-        return o.createElement(
-          "svg",
-          {
-            version: "1.1",
-            id: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: e.className,
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 409.6 409.6",
-          },
-          o.createElement("path", {
-            d:
-              "M109.9,96.2H302c16.3,0,29.6,13,29.6,29v101.4c0,16-13.2,29-29.6,29h-90.1l-57.6,57.9L138,255.6h-28.1\r\n\t\t\t\tc-16.3,0-29.6-13-29.6-29V125.2C80.4,109.2,93.6,96.2,109.9,96.2z",
-          })
-        );
+      function ve(e, t) {
+        return c.c.IN_GAMEPADUI
+          ? o.createElement(
+              "svg",
+              Object(r.a)(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                e
+              ),
+              o.createElement("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M2 4V16V20L7 16H24V4H2ZM12 20V32H29L34 36V32V20H12Z",
+                fill: "currentColor",
+              })
+            )
+          : o.createElement(
+              "svg",
+              {
+                version: "1.1",
+                id: "Layer_2",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: e.className,
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 409.6 409.6",
+              },
+              o.createElement("path", {
+                d:
+                  "M109.9,96.2H302c16.3,0,29.6,13,29.6,29v101.4c0,16-13.2,29-29.6,29h-90.1l-57.6,57.9L138,255.6h-28.1\r\n\t\t\t\tc-16.3,0-29.6-13-29.6-29V125.2C80.4,109.2,93.6,96.2,109.9,96.2z",
+              })
+            );
       }
-      function ve(e) {
+      function _e(e) {
         return o.createElement(
           "svg",
           {
@@ -2964,7 +3022,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function _e(e) {
+      function ye(e) {
         return o.createElement(
           "svg",
           {
@@ -3002,7 +3060,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function ye(e) {
+      function we(e) {
         var t = e.className,
           n = e.color;
         return o.createElement(
@@ -3031,7 +3089,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function we(e) {
+      function Ee(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return o.createElement(
@@ -3244,7 +3302,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function Ee(e) {
+      function Ce(e) {
         return o.createElement(
           "svg",
           Object(r.a)({}, e, {
@@ -3261,7 +3319,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function Ce() {
+      function Se() {
         return o.createElement(
           "svg",
           {
@@ -3280,7 +3338,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function Se() {
+      function De() {
         return o.createElement(
           "svg",
           {
@@ -3303,7 +3361,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function De() {
+      function Me() {
         return o.createElement(
           "svg",
           {
@@ -3345,7 +3403,7 @@ var CLSTAMP = "7014680";
           )
         );
       }
-      function Me(e) {
+      function ke(e) {
         return o.createElement(
           "svg",
           Object(r.a)({}, e, {
@@ -3364,7 +3422,7 @@ var CLSTAMP = "7014680";
           })
         );
       }
-      function ke() {
+      function xe() {
         return o.createElement(
           "svg",
           {
@@ -3638,10 +3696,10 @@ var CLSTAMP = "7014680";
           return w;
         }),
         n.d(t, "h", function () {
-          return O;
+          return E;
         }),
         n.d(t, "a", function () {
-          return E;
+          return O;
         }),
         n.d(t, "b", function () {
           return C;
@@ -3909,7 +3967,7 @@ var CLSTAMP = "7014680";
       i.a.forwardRef(function (e, t) {
         return i.a.createElement(p.f, Object(r.a)({}, e, { ref: t }));
       });
-      function O(e) {
+      function E(e) {
         var t = e.navRef,
           n = Object(r.f)(e, ["navRef"]),
           a = i.a.useRef(),
@@ -3954,7 +4012,7 @@ var CLSTAMP = "7014680";
           { ref: a, node: u }
         );
       }
-      function E(e) {
+      function O(e) {
         var t = e.onButtonDown,
           n = e.onButtonUp,
           o = e.onOKButton,
@@ -4036,9 +4094,9 @@ var CLSTAMP = "7014680";
           _ = e.navScrollSnapY,
           y = e.navScrollSnapOffsetY,
           w = e.navEntryPreferPosition,
-          O = e.scrollIntoViewWhenChildFocused,
+          E = e.scrollIntoViewWhenChildFocused,
           C = e.fnScrollIntoViewHandler,
-          S = E(
+          S = O(
             Object(r.f)(e, [
               "autoFocus",
               "preferredFocus",
@@ -4088,7 +4146,7 @@ var CLSTAMP = "7014680";
             navScrollSnapY: _,
             navScrollSnapOffsetY: y,
             navEntryPreferPosition: w,
-            scrollIntoViewWhenChildFocused: O,
+            scrollIntoViewWhenChildFocused: E,
             fnScrollIntoViewHandler: C,
             actionDescriptionMap: Object(r.a)(Object(r.a)({}, d), M),
           },
@@ -4132,7 +4190,7 @@ var CLSTAMP = "7014680";
           u = a.navOptions,
           p = a.gamepadEvents;
         void 0 !== u.focusable || l.disabled || (u.focusable = !0);
-        var d = O(Object(r.a)({}, u)),
+        var d = E(Object(r.a)({}, u)),
           m = d.ref,
           f = d.node,
           g = Object(o.useCallback)(
@@ -4151,7 +4209,7 @@ var CLSTAMP = "7014680";
           u.focusable && (l.tabIndex = l.tabIndex || 0),
           Object(h.a)(p, m);
         var w = Object(c.f)(n, m),
-          E = l.children;
+          O = l.children;
         delete l.children;
         var S = l.focusClassName;
         return (
@@ -4170,7 +4228,7 @@ var CLSTAMP = "7014680";
                   v && "gpfocus"
                 ),
               }),
-              E
+              O
             )
           )
         );
@@ -4256,7 +4314,7 @@ var CLSTAMP = "7014680";
           return y;
         }),
         n.d(t, "a", function () {
-          return O;
+          return E;
         });
       var r,
         o,
@@ -4342,7 +4400,7 @@ var CLSTAMP = "7014680";
           !1 !== e(t) && (t.stopPropagation(), t.preventDefault());
         };
       }
-      function O(e) {
+      function E(e) {
         var t = e.onOKActionDescription,
           n = e.onCancelActionDescription,
           r = e.onSecondaryActionDescription,
@@ -4663,10 +4721,10 @@ var CLSTAMP = "7014680";
                       ),
                       y = _.nLeft,
                       w = _.nTop,
-                      O = _.nOverflow,
-                      E = _.nLateralOverflow;
+                      E = _.nOverflow,
+                      O = _.nLateralOverflow;
                     if (
-                      (O < g && ((p = v), (m = y), (f = w), (g = O), (b = E)),
+                      (E < g && ((p = v), (m = y), (f = w), (g = E), (b = O)),
                       g > this.props.nAllowOffscreenPx)
                     )
                       return (
@@ -5558,10 +5616,10 @@ var CLSTAMP = "7014680";
         return y;
       }),
         n.d(t, "b", function () {
-          return O;
+          return E;
         }),
         n.d(t, "h", function () {
-          return E;
+          return O;
         }),
         n.d(t, "a", function () {
           return C;
@@ -5626,7 +5684,7 @@ var CLSTAMP = "7014680";
           t && a ? i.createPortal(n, a) : null
         );
       }
-      var O = function (e) {
+      var E = function (e) {
         var t = e.active,
           n = e.onDismiss,
           r = e.className,
@@ -5636,13 +5694,13 @@ var CLSTAMP = "7014680";
           w,
           { active: t },
           o.createElement(
-            E,
+            O,
             { onEscKeypress: n, className: i },
             o.createElement(c.f, { className: r }, a)
           )
         );
       };
-      function E(e) {
+      function O(e) {
         var t = o.useContext(y);
         return o.createElement(
           b.f,
@@ -5827,7 +5885,7 @@ var CLSTAMP = "7014680";
             }),
             (t.prototype.render = function () {
               return o.createElement(
-                E,
+                O,
                 {
                   onEscKeypress: this.Cancel,
                   bDestructiveWarning: this.props.bDestructiveWarning,
@@ -5934,6 +5992,7 @@ var CLSTAMP = "7014680";
                 "div",
                 Object(r.a)({}, i, {
                   className: Object(h.a)(i.className, "FullModalOverlay"),
+                  "data-nav-modal": "true",
                 }),
                 o.createElement("div", {
                   className: "ModalOverlayContent ModalOverlayBackground",
@@ -6164,7 +6223,7 @@ var CLSTAMP = "7014680";
           return w;
         }),
         n.d(t, "f", function () {
-          return E;
+          return O;
         }),
         n.d(t, "g", function () {
           return D;
@@ -6245,10 +6304,10 @@ var CLSTAMP = "7014680";
           Object(p.c)("DialogControlsSection"),
           Object(p.c)("DialogControlsSectionHeader"),
           m("DialogTwoColLayout _DialogColLayout")),
-        O = m("DialogThreeColLayout _DialogColLayout");
+        E = m("DialogThreeColLayout _DialogColLayout");
       m("DialogTwoThirdColLayout _DialogColLayout"),
         Object(p.c)("DialogColumn _DialogLayout");
-      function E(e) {
+      function O(e) {
         var t = Object(u.b)();
         return o.createElement(
           p.f,
@@ -6310,7 +6369,7 @@ var CLSTAMP = "7014680";
           n = e.bCenterVertically,
           i = Object(r.f)(e, ["classNameContent", "bCenterVertically"]);
         return o.createElement(
-          E,
+          O,
           { className: t, bCenterVertically: n },
           o.createElement(S, Object(r.a)({}, i))
         );
@@ -6426,7 +6485,7 @@ var CLSTAMP = "7014680";
       }
       function T(e) {
         return o.createElement(
-          O,
+          E,
           null,
           o.createElement(
             k,
@@ -7431,7 +7490,15 @@ var CLSTAMP = "7014680";
               configurable: !0,
             }),
             (t.prototype.ToggleMenu = function () {
-              this.state.bOpened ? this.HideMenu() : this.ShowMenu();
+              if (this.state.bOpened) this.HideMenu();
+              else {
+                if (
+                  this.props.onMenuWillOpen &&
+                  0 == this.props.onMenuWillOpen(this.ShowMenu)
+                )
+                  return;
+                this.ShowMenu();
+              }
             }),
             (t.prototype.OnValueSelected = function (e) {
               this.HideMenu(),
@@ -8267,8 +8334,8 @@ var CLSTAMP = "7014680";
             );
           })(o.Component)
         ),
-        Oe = n("zBSo"),
-        Ee = n.n(Oe),
+        Ee = n("zBSo"),
+        Oe = n.n(Ee),
         Ce = (n("NxAk"), n("IjL/"));
       n("AZ7r"), n("VeD8"), n("pQ8y");
       !(function (e) {
@@ -8296,7 +8363,7 @@ var CLSTAMP = "7014680";
               ? n
               : "standard";
         return o.createElement(
-          E,
+          O,
           {
             className: Object(l.a)(
               e.stylesheet.PagedSettingsDialog_PageContent,
@@ -8316,7 +8383,7 @@ var CLSTAMP = "7014680";
       o.forwardRef(function (e, t) {
         var n,
           r,
-          i = null !== (n = e.stylesheet) && void 0 !== n ? n : Ee.a,
+          i = null !== (n = e.stylesheet) && void 0 !== n ? n : Oe.a,
           a = e.pages,
           s =
             null != e.startingPage
@@ -8379,8 +8446,8 @@ var CLSTAMP = "7014680";
               active: a,
             });
           }),
-          O = Object(h.a)(),
-          E = b.hideTitle,
+          E = Object(h.a)(),
+          O = b.hideTitle,
           C = null === (r = e.showTitle) || void 0 === r || r,
           S = Object(l.a)(
             "DialogContentTransition",
@@ -8400,7 +8467,7 @@ var CLSTAMP = "7014680";
               onButtonDown: function (e) {
                 var t;
                 e.detail.button == Se.a.OK &&
-                  (null === (t = O.current) ||
+                  (null === (t = E.current) ||
                     void 0 === t ||
                     t.TakeFocus(e.detail.button));
               },
@@ -8424,7 +8491,7 @@ var CLSTAMP = "7014680";
           ),
           o.createElement(
             d.a,
-            { className: S, onCancelButton: y, navRef: O },
+            { className: S, onCancelButton: y, navRef: E },
             o.createElement(
               p.f,
               {
@@ -8437,7 +8504,7 @@ var CLSTAMP = "7014680";
                 o.createElement(xe, {
                   key: b.identifier,
                   stylesheet: i,
-                  hideTitle: E,
+                  hideTitle: O,
                   activePage: b,
                 })
             )
@@ -8610,12 +8677,12 @@ var CLSTAMP = "7014680";
           return w;
         }),
         n.d(t, "a", function () {
-          return O;
+          return E;
         });
-      var r = n("mrSG"),
-        o = (n("Kw0F"), n("rHSA")),
-        i = (n("9cYf"), n("r64O")),
-        a = (n("qiKp"), n("XxJJ"), n("BaVA")),
+      var r = n("rHSA"),
+        o = (n("9cYf"), n("r64O")),
+        i = n("BaVA"),
+        a = n("mrSG"),
         s = n("j+5p"),
         c = (function () {
           function e(e) {
@@ -8640,11 +8707,11 @@ var CLSTAMP = "7014680";
             }),
             (e.RestoreSerializedNavNode = function (t, n) {
               var r = n.sNavKey,
-                o = n.iActiveChild,
+                i = n.iActiveChild,
                 a = n.rgChildren;
               if (
-                (r && Object(i.a)(r == t.NavKey, "navkey mismatch"),
-                t.SetActiveChild(o),
+                (r && Object(o.a)(r == t.NavKey, "navkey mismatch"),
+                t.SetActiveChild(i),
                 a && a.length)
               ) {
                 var s = t.GetChildren()[0],
@@ -8659,8 +8726,8 @@ var CLSTAMP = "7014680";
                     d && e.RestoreSerializedNavNode(d, p);
                   }
                 }
-                if (-1 != o && a[o].sNavKey) {
-                  var h = c.get(a[o].sNavKey);
+                if (-1 != i && a[i].sNavKey) {
+                  var h = c.get(a[i].sNavKey);
                   h && t.SetActiveChild(s.indexOf(h));
                 }
                 for (var m = 0, f = 0; m < s.length && f < a.length; ) {
@@ -8680,7 +8747,7 @@ var CLSTAMP = "7014680";
             return (t.m_rgHistory = []), t;
           }
           return (
-            Object(r.d)(t, e),
+            Object(a.d)(t, e),
             (t.prototype.PushState = function () {
               this.m_rgHistory.push(c.SerializeNavNode(this.m_root));
             }),
@@ -8690,7 +8757,7 @@ var CLSTAMP = "7014680";
                   this.m_root,
                   this.m_rgHistory.pop()
                 ),
-                this.m_root.BTakeFocus(a.c.APPLICATION));
+                this.m_root.BTakeFocus(i.c.APPLICATION));
             }),
             t
           );
@@ -8770,7 +8837,9 @@ var CLSTAMP = "7014680";
           t && d("x", t), n && d("y", n);
         }
       }
+      n("Kw0F"), n("XxJJ"), n("qiKp");
       var m = n("bDQf");
+      new m.a("FocusNavigation").Debug, new m.a("GamepadEvents").Debug;
       new m.a("FocusNavigation").Debug, new m.a("GamepadEvents").Debug;
       var f = (function () {
         function e(e) {
@@ -8778,14 +8847,14 @@ var CLSTAMP = "7014680";
         }
         return (
           (e.prototype.TakeFocus = function (e) {
-            return this.m_node.BTakeFocus(e ? a.c.GAMEPAD : a.c.APPLICATION, e);
+            return this.m_node.BTakeFocus(e ? i.c.GAMEPAD : i.c.APPLICATION, e);
           }),
           (e.prototype.ParentTakeFocus = function (e) {
-            this.m_node.Parent.BTakeFocus(e ? a.c.GAMEPAD : a.c.APPLICATION, e);
+            this.m_node.Parent.BTakeFocus(e ? i.c.GAMEPAD : i.c.APPLICATION, e);
           }),
           (e.prototype.ChildTakeFocus = function (e) {
             return this.m_node.BChildTakeFocus(
-              e ? a.c.GAMEPAD : a.c.APPLICATION,
+              e ? i.c.GAMEPAD : i.c.APPLICATION,
               e
             );
           }),
@@ -8825,7 +8894,7 @@ var CLSTAMP = "7014680";
           ? t.x + t.width > n.x && t.x < n.x + n.width
           : "y" == e
           ? t.y + t.height > n.y && t.y < n.y + n.height
-          : (Object(i.a)(!1, "Invalid axis " + e), !1);
+          : (Object(o.a)(!1, "Invalid axis " + e), !1);
       }
       function b(e, t, n) {
         var r;
@@ -8835,20 +8904,20 @@ var CLSTAMP = "7014680";
             : "y" == e
             ? (r =
                 Math.min(t.y + t.height, n.y + n.height) - Math.max(t.y, n.y))
-            : (Object(i.a)(!1, "Invalid axis " + e), (r = 0)),
+            : (Object(o.a)(!1, "Invalid axis " + e), (r = 0)),
           r < 0 ? 0 : r
         );
       }
       function v(e, t, n) {
         var r = t[e],
-          o = (function (e, t) {
+          i = (function (e, t) {
             return "x" == e
               ? { min: t.x, max: t.x + t.width }
               : "y" == e
               ? { min: t.y, max: t.y + t.height }
-              : void Object(i.a)(!1, "Invalid axis " + e);
+              : void Object(o.a)(!1, "Invalid axis " + e);
           })(e, n);
-        return r < o.min ? o.min - r : r > o.max ? r - o.max : 0;
+        return r < i.min ? i.min - r : r > i.max ? r - i.max : 0;
       }
       function _(e) {
         return { x: e.x, y: e.y };
@@ -8885,13 +8954,13 @@ var CLSTAMP = "7014680";
         }
         return s.b.COLUMN;
       }
-      function O(e) {
+      function E(e) {
         switch (e) {
-          case o.a.DIR_UP:
-          case o.a.DIR_DOWN:
+          case r.a.DIR_UP:
+          case r.a.DIR_DOWN:
             return "y";
-          case o.a.DIR_LEFT:
-          case o.a.DIR_RIGHT:
+          case r.a.DIR_LEFT:
+          case r.a.DIR_RIGHT:
             return "x";
           default:
             return;
@@ -10791,14 +10860,28 @@ var CLSTAMP = "7014680";
         p =
           (n("JMS6"),
           (function () {
-            function e() {}
+            function e() {
+              this.m_nKey = null;
+            }
             return (
+              Object.defineProperty(e.prototype, "key", {
+                get: function () {
+                  return (
+                    null == this.m_nKey &&
+                      ((this.m_nKey = e.s_nNextKeyValue), e.s_nNextKeyValue++),
+                    this.m_nKey
+                  );
+                },
+                enumerable: !1,
+                configurable: !0,
+              }),
               (e.GetBrowserInfoForPopup = function (e) {
                 return null;
               }),
               (e.prototype.SetTakeFocus = function (e) {
                 this.m_fnTakeFocus = e;
               }),
+              (e.s_nNextKeyValue = 1),
               Object(o.c)([i.C], e.prototype, "m_refContextMenu", void 0),
               e
             );
@@ -11408,10 +11491,10 @@ var CLSTAMP = "7014680";
           return w;
         }),
         n.d(t, "c", function () {
-          return O;
+          return E;
         }),
         n.d(t, "v", function () {
-          return E;
+          return O;
         }),
         n.d(t, "n", function () {
           return C;
@@ -11575,7 +11658,7 @@ var CLSTAMP = "7014680";
         }
         return t;
       }
-      function O(e, t) {
+      function E(e, t) {
         if ("x" === t) {
           if (e.scrollWidth <= e.clientWidth) return !1;
         } else if (e.scrollHeight <= e.clientHeight) return !1;
@@ -11583,7 +11666,7 @@ var CLSTAMP = "7014680";
           r = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === r || "scroll" === r;
       }
-      function E(e, t) {
+      function O(e, t) {
         return Object(r.b)(this, void 0, void 0, function () {
           var n, o;
           return Object(r.e)(this, function (r) {
@@ -11713,7 +11796,7 @@ var CLSTAMP = "7014680";
           return b;
         }),
         n.d(t, "d", function () {
-          return E;
+          return O;
         }),
         n.d(t, "c", function () {
           return C;
@@ -11911,7 +11994,7 @@ var CLSTAMP = "7014680";
                 n < u
                   ? Object(i.f)("#Time_Tomorrow")
                   : (u.setDate(u.getDate() + 5),
-                    n < u ? C(n) : E(n, !0, c.bAbbreviateDayOfWeek)))
+                    n < u ? C(n) : O(n, !0, c.bAbbreviateDayOfWeek)))
           );
         }
         s.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
@@ -11925,7 +12008,7 @@ var CLSTAMP = "7014680";
             ? Object(i.f)("#Time_Yesterday_At", p(e))
             : Object(i.f)("#Time_Yesterday");
         if ((d.setDate(d.getDate() - 7), c.bGranularWeek && n >= d))
-          return E(n, !1, !c.bAbbreviateDayOfWeek);
+          return O(n, !1, !c.bAbbreviateDayOfWeek);
         if (c.bGranularPast)
           return Object(i.f)(
             "#Time_Past_At",
@@ -11953,11 +12036,11 @@ var CLSTAMP = "7014680";
         _ = new Map(),
         y = new Map(),
         w = new Map(),
-        O = new Map();
-      function E(e, t, n) {
+        E = new Map();
+      function O(e, t, n) {
         void 0 === t && (t = !1), void 0 === n && (n = !0);
         var r = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
-          o = O.get(r);
+          o = E.get(r);
         return (
           o ||
           ((o = e.toLocaleDateString(i.e.GetPreferredLocales(), {
@@ -11965,7 +12048,7 @@ var CLSTAMP = "7014680";
             day: "numeric",
             month: t ? "long" : "short",
           })),
-          O.set(r, o),
+          E.set(r, o),
           o)
         );
       }
@@ -12080,48 +12163,48 @@ var CLSTAMP = "7014680";
               _ = v.elemProps,
               y = v.navOptions,
               w = v.gamepadEvents,
-              O = i.a.useRef(null);
-            O.current || (O.current = n.NewGamepadNavigationTree(m));
-            var E = O.current;
+              E = i.a.useRef(null);
+            E.current || (E.current = n.NewGamepadNavigationTree(m));
+            var O = E.current;
             i.a.useLayoutEffect(function () {
               var e = Object(c.a)(g);
-              E.Root.SetProperties(
+              O.Root.SetProperties(
                 Object(r.a)(Object(r.a)({}, y), { layout: e })
               );
             });
             var C = i.a.useRef();
-            E.SetUseVirtualFocus(h),
-              Object(s.d)(E.OnActivateCallbacks, o),
-              Object(s.d)(E.OnDeactivateCallbacks, u),
-              Object(l.b)(w, C, O.current),
+            O.SetUseVirtualFocus(h),
+              Object(s.d)(O.OnActivateCallbacks, o),
+              Object(s.d)(O.OnDeactivateCallbacks, u),
+              Object(l.b)(w, C, E.current),
               i.a.useLayoutEffect(
                 function () {
-                  return E.RegisterNavigationItem(E.Root, C.current);
+                  return O.RegisterNavigationItem(O.Root, C.current);
                 },
-                [E, C]
+                [O, C]
               ),
               i.a.useLayoutEffect(
                 function () {
-                  return n.RegisterGamepadNavigationTree(E, d);
+                  return n.RegisterGamepadNavigationTree(O, d);
                 },
-                [n, d, E]
+                [n, d, O]
               ),
               i.a.useLayoutEffect(
                 function () {
                   return (
-                    Object(s.c)(p, E),
+                    Object(s.c)(p, O),
                     function () {
                       return Object(s.c)(p, null);
                     }
                   );
                 },
-                [p, E]
+                [p, O]
               );
             var S = Object(s.f)(C, t);
             return i.a.createElement(
               "div",
               Object(r.a)({}, _, { "data-react-nav-root": m, ref: S }),
-              i.a.createElement(a.g.Provider, { value: E.Root }, f)
+              i.a.createElement(a.g.Provider, { value: O.Root }, f)
             );
           }));
       function p() {
@@ -12163,6 +12246,7 @@ var CLSTAMP = "7014680";
           "UIStore/BasicUIStore",
           "SystemNetworkStore",
           "SteamClient",
+          "AudioPlaybackManager",
         ];
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
@@ -14519,7 +14603,7 @@ var CLSTAMP = "7014680";
           (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
             "k_BluetoothDeviceType_Keyboard");
       })(b || (b = {}));
-      var v, _, y, w, O;
+      var v, _, y, w, E;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
@@ -14558,12 +14642,12 @@ var CLSTAMP = "7014680";
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(O || (O = {}));
-      var E, C;
+        })(E || (E = {}));
+      var O, C;
       !(function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(E || (E = {})),
+      })(O || (O = {})),
         (function (e) {
           (e[(e.Hidden = 0)] = "Hidden"),
             (e[(e.Notification = 1)] = "Notification"),
@@ -15227,12 +15311,12 @@ var CLSTAMP = "7014680";
             n.bind(null, "JZ7q")
           );
         }),
-        O = i.a.lazy(function () {
+        E = i.a.lazy(function () {
           return Promise.all([n.e(0), n.e(3), n.e(1), n.e(2), n.e(9)]).then(
             n.bind(null, "erIC")
           );
         }),
-        E = i.a.lazy(function () {
+        O = i.a.lazy(function () {
           return Promise.all([n.e(0), n.e(3), n.e(2), n.e(132)]).then(
             n.bind(null, "KVeB")
           );
@@ -15434,8 +15518,8 @@ var CLSTAMP = "7014680";
                       },
                     }),
                     i.a.createElement(l.c, { path: W(), component: w }),
-                    i.a.createElement(l.c, { path: V(), component: E }),
-                    i.a.createElement(l.c, { path: z(), component: O }),
+                    i.a.createElement(l.c, { path: V(), component: O }),
+                    i.a.createElement(l.c, { path: z(), component: E }),
                     i.a.createElement(l.c, {
                       path: K(),
                       render: function (e) {
@@ -15531,7 +15615,7 @@ var CLSTAMP = "7014680";
     qDk6: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return v;
+        return _;
       });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -15546,7 +15630,8 @@ var CLSTAMP = "7014680";
         h = n("vDqi"),
         m = n.n(h),
         f = n("lkRc"),
-        g = (function () {
+        g = new (n("bDQf").a)("AudioPlaybackManager"),
+        b = (function () {
           function e() {
             (this.m_mapPlaybackObjs = new Map()),
               (this.m_bVoiceActive = !1),
@@ -15600,8 +15685,8 @@ var CLSTAMP = "7014680";
                       this.m_voiceStore.GetSelectedOutputDevice()
                     );
                   } catch (t) {
-                    console.log(
-                      "(CAudioPlaybackManager) Failed setting audio output device to " +
+                    g.Error(
+                      "Failed setting audio output device to " +
                         this.m_voiceStore.GetSelectedOutputDevice() +
                         ": " +
                         t
@@ -15617,11 +15702,9 @@ var CLSTAMP = "7014680";
             }),
             (e.prototype.PlayAudioURLWithRepeats = function (e, t) {
               void 0 === t && (t = 0),
-                console.log(
-                  "(CAudioPlaybackManager) web audio playback requested: " + e
-                ),
+                g.Debug("web audio playback requested: " + e),
                 this.CreateContextIfNeeded();
-              var n = new b(this, e, t);
+              var n = new v(this, e, t);
               return this.m_mapPlaybackObjs.set(n, !0), n;
             }),
             (e.prototype.PlaybackFinished = function (e) {
@@ -15639,15 +15722,12 @@ var CLSTAMP = "7014680";
             }),
             (e.prototype.CreateContextIfNeeded = function (e) {
               if ((void 0 === e && (e = void 0), null == this.m_Context)) {
-                console.log("(CAudioPlaybackManager) new context");
+                g.Debug("new context");
                 var t = window,
                   n = t.AudioContext || t.webkitAudioContext || !1;
                 (this.m_Context = new n()),
                   (this.m_Context.onstatechange = this.OnAudioContextStateChange),
-                  console.log(
-                    "(CAudioPlaybackManager) sample rate " +
-                      this.m_Context.sampleRate
-                  ),
+                  g.Debug("sample rate " + this.m_Context.sampleRate),
                   (this.m_nLastObservedSampleRate = this.m_Context.sampleRate);
                 var r = this.m_Context;
                 null != r.audioWorklet
@@ -15658,14 +15738,14 @@ var CLSTAMP = "7014680";
                           "public/javascript/webui/noisegate-audio-worklet.js?v=4"
                       )
                       .then(function () {
-                        console.log(
-                          "(CAudioPlaybackManager) noisegate-audio-worklet.js worklet processor loaded"
+                        g.Debug(
+                          "noisegate-audio-worklet.js worklet processor loaded"
                         ),
                           e && e();
                       })
                       .catch(function (t) {
-                        console.log(
-                          "(CAudioPlaybackManager) Failed to load noisegate-audio-worklet.js worklet processor"
+                        g.Error(
+                          "Failed to load noisegate-audio-worklet.js worklet processor"
                         ),
                           e && e();
                       }))
@@ -15676,7 +15756,7 @@ var CLSTAMP = "7014680";
               (this.m_hCloseContextTimeout = void 0),
                 0 == this.m_mapPlaybackObjs.size &&
                   0 == this.m_bVoiceActive &&
-                  (console.log("(CAudioPlaybackManager) close context"),
+                  (g.Debug("close context"),
                   null != this.m_MediaStreamAudioElem &&
                     (this.m_MediaStreamAudioElem.pause(),
                     (this.m_MediaStreamAudioElem.src = void 0),
@@ -15706,9 +15786,8 @@ var CLSTAMP = "7014680";
             }),
             (e.prototype.OnAudioContextStateChange = function () {
               null != this.m_Context &&
-                console.log(
-                  "(CAudioPlaybackManager) web audio context state changed: " +
-                    this.m_Context.state
+                g.Debug(
+                  "web audio context state changed: " + this.m_Context.state
                 );
             }),
             (e.sm_instance = null),
@@ -15739,7 +15818,7 @@ var CLSTAMP = "7014680";
             e
           );
         })(),
-        b = (function () {
+        v = (function () {
           function e(e, t, n) {
             var r = this;
             (this.m_Source = void 0),
@@ -15828,14 +15907,14 @@ var CLSTAMP = "7014680";
             e
           );
         })();
-      var v = i.a.forwardRef(function (e, t) {
+      var _ = i.a.forwardRef(function (e, t) {
         var n = e["flow-children"],
           o = e.onActivate,
           d = e.onCancel,
           h = e.focusClassName,
           m = e.focusWithinClassName,
           f = e.audioEvents,
-          b = Object(r.f)(e, [
+          g = Object(r.f)(e, [
             "flow-children",
             "onActivate",
             "onCancel",
@@ -15843,53 +15922,53 @@ var CLSTAMP = "7014680";
             "focusWithinClassName",
             "audioEvents",
           ]),
-          v = Object(a.b)(b),
+          v = Object(a.b)(g),
           _ = v.elemProps,
           y = v.navOptions,
           w = v.gamepadEvents,
-          O = {},
-          E = Object(p.a)(n);
-        E != l.b.NONE && (O.layout = E),
+          E = {},
+          O = Object(p.a)(n);
+        O != l.b.NONE && (E.layout = O),
           o &&
             ((_.onClick = _.onClick || o), (w.onOKButton = w.onOKButton || o)),
           w.onOKButton && void 0 === y.focusable && (y.focusable = !0),
           y.focusable && (_.tabIndex = _.tabIndex || 0),
           d && (w.onCancelButton = w.onCancelButton || d),
           (_.className = Object(s.a)(_.className, "Panel", "Focusable"));
-        var C = Object(a.h)(Object(r.a)(Object(r.a)({}, O), y)),
+        var C = Object(a.h)(Object(r.a)(Object(r.a)({}, E), y)),
           S = C.ref,
           D = C.node;
         !(function (e, t) {
           var n = {};
           e &&
-            g.Get() &&
+            b.Get() &&
             (e.onOKButton &&
               (n.onOKButton = function () {
-                g.Get().PlayAudioURL(e.onOKButton);
+                b.Get().PlayAudioURL(e.onOKButton);
               }),
             e.onCancelButton &&
               (n.onCancelButton = function () {
-                g.Get().PlayAudioURL(e.onCancelButton);
+                b.Get().PlayAudioURL(e.onCancelButton);
               }),
             e.onSecondaryButton &&
               (n.onSecondaryButton = function () {
-                g.Get().PlayAudioURL(e.onSecondaryButton);
+                b.Get().PlayAudioURL(e.onSecondaryButton);
               }),
             e.onOptionsButton &&
               (n.onOptionsButton = function () {
-                g.Get().PlayAudioURL(e.onOptionsButton);
+                b.Get().PlayAudioURL(e.onOptionsButton);
               }),
             e.onMenuButton &&
               (n.onMenuButton = function () {
-                g.Get().PlayAudioURL(e.onMenuButton);
+                b.Get().PlayAudioURL(e.onMenuButton);
               }),
             e.onGamepadFocus &&
               (n.onGamepadFocus = function () {
-                g.Get().PlayAudioURL(e.onGamepadFocus);
+                b.Get().PlayAudioURL(e.onGamepadFocus);
               }),
             e.onGamepadBlur &&
               (n.onGamepadBlur = function () {
-                g.Get().PlayAudioURL(e.onGamepadBlur);
+                b.Get().PlayAudioURL(e.onGamepadBlur);
               })),
             Object(u.a)(n, t);
         })(f, S),
@@ -16329,7 +16408,7 @@ var CLSTAMP = "7014680";
       "use strict";
       (function (e) {
         n.d(t, "a", function () {
-          return E;
+          return O;
         });
         var r,
           o = n("mrSG"),
@@ -16535,7 +16614,7 @@ var CLSTAMP = "7014680";
                             (a = i.filter(function (e) {
                               return !!e.match(_);
                             })),
-                            (s = O(a[n])),
+                            (s = E(a[n])),
                             r && (s = s + " " + e.message),
                             (c = i
                               .map(function (e) {
@@ -16583,7 +16662,7 @@ var CLSTAMP = "7014680";
                             (a = i.filter(function (e) {
                               return !!e.match(y);
                             })),
-                            (s = O(a[n])),
+                            (s = E(a[n])),
                             r && (s = s + " " + e.message),
                             (c = i
                               .map(function (e) {
@@ -16623,7 +16702,7 @@ var CLSTAMP = "7014680";
             return console.warn("Failed to normalize error stack: " + e), null;
           }
         }
-        function O(e) {
+        function E(e) {
           return (function (e) {
             var t = "https://",
               n = e.indexOf(t);
@@ -16639,7 +16718,7 @@ var CLSTAMP = "7014680";
             })(e)
           );
         }
-        var E = function () {
+        var O = function () {
             return v || C(new g()), v;
           },
           C = function (e) {
@@ -16717,7 +16796,7 @@ var CLSTAMP = "7014680";
     "y+6m": function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
-        return E;
+        return O;
       }),
         n.d(t, "d", function () {
           return C;
@@ -16756,10 +16835,10 @@ var CLSTAMP = "7014680";
         _ = n("lkRc"),
         y = n("+jbA"),
         w = n.n(y),
-        O = Object(d.a)("ContextMenuInstanceContext", function () {
+        E = Object(d.a)("ContextMenuInstanceContext", function () {
           return i.createContext(null);
         }),
-        E = (function (e) {
+        O = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_navRef = Object(l.a)()), t;
@@ -16885,7 +16964,7 @@ var CLSTAMP = "7014680";
                 c
               );
             }),
-            (t.contextType = O),
+            (t.contextType = E),
             Object(r.c)([v.a], t.prototype, "HideIfSubmenu", null),
             Object(r.c)([v.a], t.prototype, "HideMenu", null),
             (t = Object(r.c)([o.a], t))
@@ -17001,7 +17080,7 @@ var CLSTAMP = "7014680";
                 this.props.children
               );
             }),
-            (t.contextType = O),
+            (t.contextType = E),
             Object(r.c)([v.a], t.prototype, "OnClick", null),
             Object(r.c)([v.a], t.prototype, "OnOKButton", null),
             Object(r.c)([v.a], t.prototype, "OnMouseEnter", null),
@@ -17035,7 +17114,7 @@ var CLSTAMP = "7014680";
         })(i.PureComponent);
       function D(e) {
         var t,
-          n = i.useContext(O),
+          n = i.useContext(E),
           r =
             null !== (t = null == n ? void 0 : n.styles) && void 0 !== t
               ? t
@@ -17178,14 +17257,14 @@ var CLSTAMP = "7014680";
                   var _ = (a.bOverlapHorizontal ? b : f) - v,
                     y = _ > 0,
                     w = u - (a.bOverlapHorizontal ? f : b) - v,
-                    O = w > 0,
-                    E = (a.bPreferPopLeft || !O) && y;
+                    E = w > 0,
+                    O = (a.bPreferPopLeft || !E) && y;
                   y ||
-                    O ||
-                    ((E = y > O),
+                    E ||
+                    ((O = y > E),
                     a.bFitToWindow &&
-                      ((v += (E ? _ : w) - 8), (s.menuWidth = v))),
-                    (!a.bPreferPopLeft && O) || !y
+                      ((v += (O ? _ : w) - 8), (s.menuWidth = v))),
+                    (!a.bPreferPopLeft && E) || !y
                       ? (s.menuLeft = a.bOverlapHorizontal ? f : b)
                       : (s.menuRight = u - (a.bOverlapHorizontal ? b : f));
                   var C = l || r.top,
@@ -17295,7 +17374,7 @@ var CLSTAMP = "7014680";
                   (r += " visible"),
                 (r += " " + w.a.ContextMenuFocusContainer),
                 i.createElement(
-                  O.Provider,
+                  E.Provider,
                   { value: this.props.instance },
                   i.createElement(
                     "div",
@@ -17501,7 +17580,7 @@ var CLSTAMP = "7014680";
             ),
           t.length)
         )
-          Object(s.a)(i.createElement(E, null, t), e);
+          Object(s.a)(i.createElement(O, null, t), e);
         else {
           if (e.shiftKey) return;
           e.preventDefault(), e.stopPropagation();

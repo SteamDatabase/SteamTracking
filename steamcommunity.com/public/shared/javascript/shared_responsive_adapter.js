@@ -87,10 +87,19 @@ jQuery( function($) {
 	var fnBuildMenuEvents = function( $Menu, strMenuName, fnFirstTimeInitialization )
 	{
 		var strActiveClass = strMenuName + '_active';
+		var fnGPOnClosingModalWindow = null;
+
 		var fnDismissMenu = function() {
 			$ContentCtn.off( 'click.ReponsiveMenuDismiss');
 			$Frame.removeClass(strActiveClass);
 			$J(document.body).removeClass('overflow_hidden' );
+
+			// tell gamepad navigation we're closing the menu
+			if ( fnGPOnClosingModalWindow )
+			{
+				fnGPOnClosingModalWindow();
+				fnGPOnClosingModalWindow = null;
+			}
 
 			window.setTimeout( function() {
 				if ( !$Frame.hasClass('mainmenu_active') && !$Frame.hasClass('localmenu_active') )
@@ -120,6 +129,10 @@ jQuery( function($) {
 				$ContentOverlay.one( 'click.ResponsiveMenuDismiss', function() {
 					fnDismissMenu();
 				});
+
+				// tell gamepad navigation to treat this menu as a modal dialog
+				if ( typeof GPOnShowingModalWindow === "function" )
+					fnGPOnClosingModalWindow = GPOnShowingModalWindow( $Menu.get( 0 ) );
 			}
 		};
 

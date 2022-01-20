@@ -2379,6 +2379,21 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
+.chatentry_chatTextarea_113iu.GamepadMode,
+.GamepadMode .chatentry_chatTextarea_113iu {
+  box-shadow: none;
+  font-size: 16px;
+  padding: 4px 0 0 8px;
+  margin-right: 0;
+  max-height: 40px;
+  height: 40px;
+  transition: none;
+}
+.chatentry_chatTextarea_113iu.GamepadMode.gpfocus,
+.GamepadMode .chatentry_chatTextarea_113iu.gpfocus {
+  background-color: #fff;
+  color: #000;
+}
 .chatentry_chatEntryActionsGroup_2WfNo {
   padding: 2px;
   box-shadow: #000 0px 0px 4px inset;
@@ -2445,6 +2460,11 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe:focus {
   background-color: #3d424b;
 }
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus {
+  background: #fff;
+}
 .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
   .SVGIcon_Button.SVGIcon_Submit
   path,
@@ -2455,10 +2475,38 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   stroke: #fff;
 }
 .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #000;
+}
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
   .SVGIcon_Button,
 .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
   .SVGIcon_Button {
   fill: #f5ffd7;
+}
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
+  .SVGIcon_Button.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
+  .SVGIcon_Button,
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_Button.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_Button {
+  fill: #000;
 }
 .chatentry_chatSubmitButton_RVIs8.chatentry_Inactive_3G-I9
   .SVGIcon_Microphone_Off {
@@ -2568,6 +2616,18 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   align-self: flex-end;
   min-height: 46px;
   margin-bottom: 2px;
+}
+.chatentry_chatEntryControls_3Ule3
+  .chatentry_chatSubmitButton_RVIs8.GamepadMode,
+.GamepadMode
+  .chatentry_chatEntryControls_3Ule3
+  .chatentry_chatSubmitButton_RVIs8 {
+  min-height: 0px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: 0px solid transparent;
 }
 .compactView
   .chatentry_chatEntryControls_3Ule3
@@ -4177,6 +4237,19 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .creatorhomeembed_MembersListLink_3DO0N {
   font-size: 13px;
 }
+.deckcompaticons_CompatIcon_3cEK5 {
+  opacity: 1;
+  transition: opacity 0.2s ease 0.1s;
+  display: block;
+  top: 4px;
+  right: 4px;
+  width: 44px;
+  height: 24px;
+  position: absolute;
+  border-radius: 24px;
+  background-color: var(--gpBackground-DarkMedium) !important;
+  backdrop-filter: blur(24px);
+}
 .gameactions_GotSteamDialog_2Qusm .gameactions_DownloadSteamUrl_10lP7 {
   color: #fff;
 }
@@ -4950,6 +5023,9 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   100% {
     transform: translateX(0px);
   }
+}
+.animated_featured_capsule_DeckCompatIconOverride_2Zatu {
+  top: 45px;
 }
 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
   display: flex;
