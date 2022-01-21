@@ -7867,48 +7867,48 @@
               r.strShortDescription,
               e.id),
             d = e.type,
-            m = e.strReason,
-            p = e.bHidePrice,
-            f = e.bHidePlatforms,
-            h = (e.bShowDemoButton, e.bUseSubscriptionLayout),
-            _ = Object(B.a)(u, Object(w.e)(d), {
+            p = e.strReason,
+            f = e.bHidePrice,
+            h = e.bHidePlatforms,
+            _ = (e.bShowDemoButton, e.bUseSubscriptionLayout),
+            v = Object(B.a)(u, Object(w.e)(d), {
               include_assets: !0,
               include_platforms: !0,
             })[0],
-            v = Object(B.a)(
+            g = Object(B.a)(
               null == c ? void 0 : c.full_game_appid,
               Object(w.e)(d),
               { include_assets: !0, include_platforms: !0 }
             )[0],
-            g = Object(F.c)();
-          if (!_ || !o) return null;
-          var y = "",
-            S = "",
-            C = "";
-          v && l
-            ? ((y =
-                (null === (t = v.assets.GetLibraryHeroURL()) || void 0 === t
+            y = Object(F.c)();
+          if (!v || !o) return null;
+          var S = "",
+            C = "",
+            O = "";
+          g && l
+            ? ((S =
+                (null === (t = g.assets.GetLibraryHeroURL()) || void 0 === t
                   ? void 0
                   : t.trim().length) > 0
-                  ? v.assets.GetLibraryHeroURL()
-                  : v.assets.GetPageBackgroundURL()),
-              (S = null == l ? void 0 : l.microtrailer),
-              (C = null == l ? void 0 : l.microtrailer_mp4))
-            : ((y =
-                (null === (n = _.assets.GetLibraryHeroURL()) || void 0 === n
+                  ? g.assets.GetLibraryHeroURL()
+                  : g.assets.GetPageBackgroundURL()),
+              (C = null == l ? void 0 : l.microtrailer),
+              (O = null == l ? void 0 : l.microtrailer_mp4))
+            : ((S =
+                (null === (n = v.assets.GetLibraryHeroURL()) || void 0 === n
                   ? void 0
                   : n.trim().length) > 0
-                  ? _.assets.GetLibraryHeroURL()
-                  : _.assets.GetPageBackgroundURL()),
-              (S = null == c ? void 0 : c.microtrailer),
-              (C = null == c ? void 0 : c.microtrailer_mp4));
-          var O = Object(b.b)(_.GetStorePageURL(), g),
-            I = Object(b.c)(g);
+                  ? v.assets.GetLibraryHeroURL()
+                  : v.assets.GetPageBackgroundURL()),
+              (C = null == c ? void 0 : c.microtrailer),
+              (O = null == c ? void 0 : c.microtrailer_mp4));
+          var I = Object(b.b)(v.GetStorePageURL(), y),
+            j = Object(b.c)(y);
           return s.a.createElement(
             T.a,
-            { appid: _.GetAppID() },
+            { appid: v.GetAppID() },
             s.a.createElement(
-              "div",
+              m.a,
               { className: N.SuperCapsuleCtn },
               s.a.createElement(
                 "div",
@@ -7922,12 +7922,12 @@
                   "div",
                   {
                     className: Object(A.a)(N.BGImage),
-                    style: { backgroundImage: 'url("' + y + '")' },
+                    style: { backgroundImage: 'url("' + S + '")' },
                   },
                   " "
                 ),
-                S &&
-                  "" !== S &&
+                C &&
+                  "" !== C &&
                   s.a.createElement(
                     "video",
                     {
@@ -7937,9 +7937,9 @@
                       muted: !0,
                       loop: !0,
                     },
-                    s.a.createElement("source", { src: S, type: "video/webm" }),
+                    s.a.createElement("source", { src: C, type: "video/webm" }),
                     Boolean(!G.c.IN_LIBRARY) &&
-                      s.a.createElement("source", { src: C, type: "video/mp4" })
+                      s.a.createElement("source", { src: O, type: "video/mp4" })
                   )
               ),
               s.a.createElement(
@@ -7947,13 +7947,13 @@
                 { className: Object(A.a)(N.FeatureCtn) },
                 s.a.createElement(
                   "a",
-                  { href: O, className: Object(A.a)(N.Artwork) },
+                  { href: I, className: Object(A.a)(N.Artwork) },
                   s.a.createElement(P.c, {
-                    snr: I,
+                    snr: j,
                     appID: null == c ? void 0 : c.appid,
                     classOverride: Object(A.a)("WishlistButton"),
                   }),
-                  J(_.GetAppID(), _.GetAppIDToRun()) &&
+                  J(v.GetAppID(), v.GetAppIDToRun()) &&
                     s.a.createElement(
                       "div",
                       { className: N.CapsuleDecorators },
@@ -7969,12 +7969,12 @@
                       (null == c ? void 0 : c.deck_compatibility_category),
                     className: N.DeckCompatIconOverride,
                   }),
-                  Boolean(h && c)
+                  Boolean(_ && c)
                     ? s.a.createElement(ie, { appid: c.appid, bIsMuted: a })
                     : s.a.createElement($, {
                         info: o,
-                        bHidePlatforms: f,
-                        bHidePrice: p,
+                        bHidePlatforms: h,
+                        bHidePrice: f,
                       })
                 ),
                 s.a.createElement(
@@ -7982,10 +7982,10 @@
                   { className: Object(A.a)(N.Info) },
                   s.a.createElement(
                     "a",
-                    { className: N.Title, href: O },
+                    { className: N.Title, href: I },
                     o.name
                   ),
-                  s.a.createElement("div", { className: N.Reason }, m),
+                  s.a.createElement("div", { className: N.Reason }, p),
                   !!c &&
                     s.a.createElement(
                       "div",
@@ -8019,7 +8019,14 @@
           var t = e.displayStyle;
           if ("bundle" == e.type || "sub" == e.type)
             return s.a.createElement(Y, Object(r.a)({}, e));
-          if (G.c.IN_GAMEPADUI) return s.a.createElement(Y, Object(r.a)({}, e));
+          if (G.c.IN_GAMEPADUI)
+            switch (t) {
+              case "animated":
+              case "bordered":
+                return s.a.createElement(x, Object(r.a)({}, e));
+              default:
+                return s.a.createElement(Y, Object(r.a)({}, e));
+            }
           switch (
             (!Object(D.a)() ||
               ("library" != t && "animated" != t) ||
@@ -17214,7 +17221,10 @@
                       null == n ||
                         n.forEach(function (e) {
                           var n = e.capsule;
-                          pn(n) && !t.BIsTabFilteringEnabled() && r.add(n.id);
+                          !pn(n) ||
+                            (t.BIsTabFilteringEnabled() &&
+                              !t.ShouldShowCapsule(n)) ||
+                            r.add(n.id);
                         }),
                       r
                     );
@@ -17450,7 +17460,8 @@
         return r;
       }
       function Sn(e, t) {
-        if (e.disable_background) return { paddingLeft: 0, paddingRight: 0 };
+        if (e.disable_background && !C.c.IN_GAMEPADUI)
+          return { paddingLeft: 0, paddingRight: 0 };
         var n = "";
         e.background_image &&
           (n +=
@@ -22978,7 +22989,8 @@
             }),
             (e.prototype.QueueStoreItemRequest = function (t, n, i) {
               return Object(r.b)(this, void 0, void 0, function () {
-                var a = this;
+                var a,
+                  o = this;
                 return Object(r.e)(this, function (r) {
                   if (
                     (Object(v.a)(
@@ -22987,7 +22999,7 @@
                     ),
                     this.BHasStoreItem(t, n, i))
                   )
-                    return [2, Promise.resolve()];
+                    return [2, Promise.resolve(1)];
                   if (!t)
                     return (
                       Object(v.a)(
@@ -22997,15 +23009,15 @@
                           " of zero or undefined for type " +
                           n
                       ),
-                      [2, Promise.resolve()]
+                      [2, Promise.resolve(8)]
                     );
                   switch (
                     (this.m_PendingInfoPromise ||
                       ((this.m_PendingInfoPromise = new Promise(function (e) {
-                        return (a.m_PendingInfoResolve = e);
+                        return (o.m_PendingInfoResolve = e);
                       })),
                       window.setTimeout(function () {
-                        return a.FlushPendingInfo();
+                        return o.FlushPendingInfo();
                       }, this.k_QueueWaitUntilRequestMS)),
                     (this.m_setPendingDataRequest = e.MergeDataRequest(
                       this.m_setPendingDataRequest,
@@ -23026,13 +23038,13 @@
                       Object(v.a)(!1, "Unexpected Type " + n);
                   }
                   return (
+                    (a = this.m_PendingInfoPromise),
                     100,
                     this.m_setPendingAppInfo.size +
                       this.m_setPendingPackageInfo.size +
                       this.m_setPendingBundleInfo.size >=
-                    100
-                      ? [2, this.FlushPendingInfo()]
-                      : [2, this.m_PendingInfoPromise]
+                      100 && this.FlushPendingInfo(),
+                    [2, a]
                   );
                 });
               });
@@ -23053,14 +23065,12 @@
                     this.m_setPendingBundleInfo.clear(),
                     this.m_setPendingPackageInfo.clear(),
                     (this.m_setPendingDataRequest = {}),
-                    [
-                      2,
-                      this.HintLoadStoreItems(void 0, t, n, i, a).then(
-                        function (t) {
-                          return e();
-                        }
-                      ),
-                    ]
+                    this.HintLoadStoreItems(void 0, t, n, i, a).then(function (
+                      t
+                    ) {
+                      return e(t);
+                    }),
+                    [2]
                   );
                 });
               });
@@ -23140,7 +23150,10 @@
                             "CStoreItemCache::HintLoadStoreItems failed with eResult: " +
                               p.GetEResult() +
                               " msg: " +
-                              p.GetEMsg()
+                              p.GetEMsg(),
+                            l,
+                            u,
+                            d
                           ),
                           [2, p.GetEResult()])
                         : (p
@@ -23167,56 +23180,50 @@
                 });
               });
             }),
-            (e.prototype.BHasStoreItem = function (e, t, n) {
-              switch (t) {
+            (e.prototype.GetMapForType = function (e) {
+              var t;
+              switch (e) {
                 case 0:
-                  return this.BHasApp(e, n);
+                  t = this.m_mapApps;
+                  break;
                 case 2:
-                  return this.BHasBundle(e, n);
+                  t = this.m_mapBundles;
+                  break;
                 case 1:
-                  return this.BHasPackage(e, n);
+                  t = this.m_mapPackages;
+                  break;
                 default:
-                  return !1;
+                  console.error("Invalid map type requested", e);
               }
+              return t;
+            }),
+            (e.prototype.BHasStoreItem = function (e, t, n) {
+              var r = this.GetMapForType(t);
+              return Boolean(
+                r && r.has(e) && (!n || r.get(e).BContainDataRequest(n))
+              );
             }),
             (e.prototype.GetStoreItem = function (e, t) {
-              switch (t) {
-                case 0:
-                  return this.GetApp(e);
-                case 2:
-                  return this.GetBundle(e);
-                case 1:
-                  return this.GetPackage(e);
-                default:
-                  return;
-              }
+              var n = this.GetMapForType(t);
+              return null == n ? void 0 : n.get(e);
             }),
             (e.prototype.BHasApp = function (e, t) {
-              return Boolean(
-                this.m_mapApps.has(e) &&
-                  (!t || this.m_mapApps.get(e).BContainDataRequest(t))
-              );
+              return this.BHasStoreItem(e, 0, t);
             }),
             (e.prototype.GetApp = function (e) {
-              return this.m_mapApps.get(e);
+              return this.GetStoreItem(e, 0);
             }),
             (e.prototype.BHasPackage = function (e, t) {
-              return Boolean(
-                this.m_mapPackages.has(e) &&
-                  (!t || this.m_mapPackages.get(e).BContainDataRequest(t))
-              );
+              return this.BHasStoreItem(e, 1, t);
             }),
             (e.prototype.GetPackage = function (e) {
-              return this.m_mapPackages.get(e);
+              return this.GetStoreItem(e, 1);
             }),
             (e.prototype.BHasBundle = function (e, t) {
-              return Boolean(
-                this.m_mapBundles.has(e) &&
-                  (!t || this.m_mapBundles.get(e).BContainDataRequest(t))
-              );
+              return this.BHasStoreItem(e, 2, t);
             }),
             (e.prototype.GetBundle = function (e) {
-              return this.m_mapBundles.get(e);
+              return this.GetStoreItem(e, 2);
             }),
             (e.prototype.ReadResults = function (e, t) {
               for (var n = [], r = 0, i = e; r < i.length; r++) {
@@ -44490,51 +44497,52 @@
     b3LC: function (e, t, n) {
       "use strict";
       n.d(t, "d", function () {
-        return l;
+        return c;
       }),
         n.d(t, "a", function () {
-          return u;
+          return l;
         }),
         n.d(t, "b", function () {
-          return d;
+          return u;
         }),
         n.d(t, "c", function () {
-          return m;
+          return d;
         });
       var r = n("vDqi"),
         i = n.n(r),
         a = n("q1tI"),
         o = n("ZeAL"),
-        s = (n("kyHq"), n("sRB7"), n("opsS")),
-        c = (n("g4bM"), n("C4Nl"));
-      function l(e, t, n) {
+        s = (n("kyHq"), n("sRB7"), n("opsS"), n("g4bM"), n("C4Nl"));
+      function c(e, t, n) {
         void 0 === n && (n = !0);
-        var r = n ? c.a.k_DataRequest_BasicInfo : c.a.k_DataRequest_CommonOnly,
-          i = u(n || c.a.Get().BHasStoreItem(e, t, r) ? e : null, t, r),
+        var r = n ? s.a.k_DataRequest_BasicInfo : s.a.k_DataRequest_CommonOnly,
+          i = l(n || s.a.Get().BHasStoreItem(e, t, r) ? e : null, t, r),
           a = i[0],
-          s = i[1];
+          c = i[1];
         return [
           (null == a ? void 0 : a.GetShortDescription())
             ? Object(o.c)(a.GetShortDescription())
             : "",
-          3 == s,
+          3 == c,
         ];
       }
-      function u(e, t, n) {
-        var r = Object(s.e)(),
-          o = Object(a.useRef)();
+      function l(e, t, n) {
+        var r = Object(a.useRef)();
+        r.current = e;
+        var o = Object(a.useState)(void 0),
+          c = o[0],
+          l = o[1];
         if (
-          ((o.current = e),
-          Object(a.useEffect)(
+          (Object(a.useEffect)(
             function () {
-              if (e && !c.a.Get().BHasStoreItem(e, t, n)) {
+              if (e && void 0 === c && !s.a.Get().BHasStoreItem(e, t, n)) {
                 var a = i.a.CancelToken.source();
                 return (
-                  c.a
+                  s.a
                     .Get()
                     .QueueStoreItemRequest(e, t, n)
-                    .then(function () {
-                      a.token.reason || o.current !== e || r();
+                    .then(function (t) {
+                      a.token.reason || r.current !== e || l(1 == t);
                     }),
                   function () {
                     return a.cancel("useStoreItemCache: unmounting");
@@ -44542,21 +44550,22 @@
                 );
               }
             },
-            [e, t, n, r]
+            [e, t, n, c]
           ),
           !e)
         )
           return [null, 2];
-        if (!c.a.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        var l = c.a.Get().GetStoreItem(e, t),
-          u = (null == l ? void 0 : l.BIsVisible()) ? 3 : 2;
-        return [l, u];
+        if (!1 === c) return [void 0, 2];
+        if (!s.a.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
+        var u = s.a.Get().GetStoreItem(e, t),
+          d = (null == u ? void 0 : u.BIsVisible()) ? 3 : 2;
+        return [u, d];
+      }
+      function u(e, t) {
+        return l(e, 0, t);
       }
       function d(e, t) {
-        return u(e, 0, t);
-      }
-      function m(e, t) {
-        return u(e, 1, t);
+        return l(e, 1, t);
       }
     },
     bS9Q: function (e, t, n) {

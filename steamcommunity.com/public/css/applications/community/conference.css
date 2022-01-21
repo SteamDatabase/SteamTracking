@@ -944,8 +944,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
 }
 .chatentry_chatTextarea_113iu.GamepadMode.gpfocus,
 .GamepadMode .chatentry_chatTextarea_113iu.gpfocus {
-  background-color: #fff;
-  color: #000;
+  background-color: #3d4450;
+  color: #fff;
 }
 .chatentry_chatEntryActionsGroup_2WfNo {
   padding: 2px;
@@ -1109,6 +1109,10 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
   fill: #8592a5;
   stroke-width: 2px;
 }
+.chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path.GamepadMode,
+.GamepadMode .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
+  stroke: #0e141b;
+}
 .chatentry_EmbedButton_3zOBe {
   background-image: none;
   margin-right: 2px;
@@ -1181,6 +1185,24 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
   width: 100%;
   height: 100%;
   border: 0px solid transparent;
+  border-left: 2px solid #000;
+  background-color: #000;
+  max-width: 48px;
+}
+.chatentry_chatEntryControls_3Ule3
+  .chatentry_chatSubmitButton_RVIs8.GamepadMode:not(.chatentry_disabled_jaQN2),
+.GamepadMode
+  .chatentry_chatEntryControls_3Ule3
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2) {
+  border-left: 2px solid #0e141b;
+  background-color: #23262e;
+}
+.chatentry_chatEntryControls_3Ule3
+  .chatentry_chatSubmitButton_RVIs8.GamepadMode:not(.chatentry_disabled_jaQN2).gpfocus,
+.GamepadMode
+  .chatentry_chatEntryControls_3Ule3
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2).gpfocus {
+  background-color: #fff;
 }
 .compactView
   .chatentry_chatEntryControls_3Ule3
@@ -1998,7 +2020,7 @@ img.deckverified_CategoryIcon_3qF71 {
   color: #fff;
   background-color: #1a9fff;
   border-radius: 2px;
-  box-shadow: 0px 3px 6px 0px #0000003d;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
   transition: all 0.1s ease;
 }
 .deckverified_LearnMore_2gXzK:hover {

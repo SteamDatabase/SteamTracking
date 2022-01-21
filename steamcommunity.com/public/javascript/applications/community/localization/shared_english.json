@@ -1164,6 +1164,7 @@
     "ChatEntryButton_Emoticon": "Emoticon Picker",
     "ChatEntryButton_Flair": "Flair Picker",
     "ChatEntryButton_SendEmbed": "Send Special",
+    "ChatEntryButton_Clear": "Clear",
     "Store_AddToCart": "Add to Cart",
     "YouTubePlayer_Loading": "Loading YouTube...",
     "VODPlayer_Loading": "Loading VOD Content for AppID %1$s...",
@@ -1867,5 +1868,11 @@
     "SteamDeckVerified_Category_Playable": "Playable",
     "SteamDeckVerified_Category_Unsupported": "Unsupported",
     "SteamDeckVerified_Category_Unknown": "Unknown",
+    "DateTimePicker_Enter_Date": "Select Date",
+    "DateTimePicker_Enter_Time": "Select Time",
+    "DateTimePicker_DateTime_Fixed": "NOTE: this date and time were specified and are not editable.",
+    "DateTimePicker_Fallback_Invalid_DateTime": "Invalid Date Time",
+    "DateTimePicker_Date_CannotParse": "Cannot parse the date entered below",
+    "DateTimePicker_Time_CannotParse": "Cannot parse the time entered below",
     "shared_dummy": "dont translate"
 }
