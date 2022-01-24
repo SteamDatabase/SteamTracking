@@ -1401,7 +1401,7 @@ GHomepage = {
 	},
 
 
-	RenderPrioritizedSpotlightsAndSpecials: function()
+	RenderSpotlightSection: function()
 	{
 		var $Spotlights = $J('#spotlight_carousel');
 		var $Pages = $J('#spotlight_carousel > .carousel_items').children();
@@ -1519,117 +1519,6 @@ GHomepage = {
 		$Spotlights.css( 'visibility', '' );
 	},
 
-
-	RenderSpotlightSection: function()
-	{
-		if ( g_rgAppPriorityLists && g_rgAppPriorityLists['spotlights'] )
-		{
-			GHomepage.RenderPrioritizedSpotlightsAndSpecials();
-			return;
-		}
-
-		var Settings = GHomepage.oSettings['home'] || {};
-		var ApplicableSettings = GHomepage.oApplicableSettings['home'] || {};
-
-		var cSpotlightsShown = 0, cDailyDealsShown = 0;
-		$J('.home_area_spotlight').each( function( i, j){
-
-			var $elem = $J(j);
-			var unAppId = $elem.data('ds-appid');
-
-			if ( unAppId && !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
-			{
-				$elem.replaceWith( '<div><div class="specials_target"></div><div class="specials_target"></div></div>');
-				return;
-			}
-
-			cSpotlightsShown++;
-
-			if ( unAppId && cSpotlightsShown < 3 )
-				GDynamicStore.MarkAppIDsAsDisplayed( [unAppId] );
-		});
-
-
-		$J('.store_capsule.daily_deal').each( function( i, j) {
-
-			var $elem = $J(j);
-			var unAppId = $elem.data('ds-appid');
-			var unBundleId = $elem.data('ds-bundleid');
-
-			if ( unBundleId )
-			{
-				if ( !GStoreItemData.BBundlePassesFilters( unBundleId, Settings, ApplicableSettings ) )
-				{
-					$elem.replaceWith( '<div class="specials_target"></div>');
-					return;
-				}
-			}
-			else if ( unAppId && !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
-			{
-				$elem.replaceWith( '<div class="specials_target"></div>');
-				return;
-			}
-
-			cDailyDealsShown++;
-
-			if ( unAppId && ( cSpotlightsShown * 2 + cDailyDealsShown ) < 6 )
-				GDynamicStore.MarkAppIDsAsDisplayed( [unAppId] );
-		});
-
-		var nSpecials = $J('.specials_target').length;
-
-				var specials = [];
-		var rgSeen = {};
-		for ( var i = 0; i < GHomepage.oDisplayLists.specials.length; ++i )
-		{
-			var oItem = GHomepage.oDisplayLists.specials[i];
-			var id = ( oItem.appid || oItem.packageid || oItem.bundleid ) + '_key';
-			if ( !rgSeen[id] )
-			{
-				rgSeen[id] = true;
-				specials.push( oItem );
-			}
-		}
-
-		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			specials, 'home', nSpecials, nSpecials, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
-		);
-
-		if( !rgCapsules || rgCapsules.length < 1 )
-			return;
-
-		GDynamicStore.MarkAppDisplayed ( rgCapsules, Math.max( 0, 6 - ( cSpotlightsShown * 2 + cDailyDealsShown ) ) );
-
-
-		$J('.specials_target').each(function(i,j){
-			var idx = i % nSpecials;
-			if ( i >= rgCapsules.length )
-				return;
-
-			oItem = rgCapsules[ idx ];
-			var strHTMLID = ( oItem.appid || oItem.packageid || oItem.bundleid ) + '_special_timer';
-
-			var $Target = $J(j);
-			$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
-					'discount_class': 'daily_deal_discount discount_block_large',
-					'capsule_size': 'header'
-			}, $Target.data('depth') + 1 ) );
-
-			$J( function() {
-				InitDailyDealTimer( $J('#'+strHTMLID),oItem.discount_end);
-			});
-
-
-		});
-
-		GDynamicStore.DecorateDynamicItems( $J('.specials_target') );
-
-		// somtimes this carousel gets scrolled during recreation, slam to 0 just in case
-		$J('#spotlight_carousel > .carousel_items')[0].scrollLeft = 0;
-
-		$J('#spotlight_carousel').css( 'visibility', '' );
-
-	},
 
 	RenderTopNewReleases: function()
 	{
