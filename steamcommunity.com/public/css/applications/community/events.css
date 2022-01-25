@@ -14295,6 +14295,14 @@ html.responsive.touch
   background: #7a5a6c;
   border-color: #fff;
 }
+.partnersaledisplay_SalePageLogoCtn_xP8Lp {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.partnersaledisplay_SalePageLogoCtn_xP8Lp img {
+  width: 100%;
+}
 .salesectioneventschedule_SaleSchedCtn_2g7il {
   height: 480px;
   background-image: radial-gradient(
@@ -15374,7 +15382,9 @@ html.responsive.touch .contenthubmaincarousel_ContentHubTitle_saHqN {
 .contenthubmaincarousel_ContentHubSubtitle_11kuP {
   font-size: 18px;
   font-weight: 300;
-  opacity: 50%;
+  opacity: 75%;
+  margin-left: 8px;
+  margin-top: 16px;
 }
 .contenthubmaincarousel_ContentHubPlaceholder_ZZAuj {
   font-size: 24px;

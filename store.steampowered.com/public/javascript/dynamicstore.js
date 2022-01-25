@@ -1272,6 +1272,11 @@ GDynamicStore = {
 		return GDynamicStore.s_rgMasterSubApps[appid] ? true : false;
 	},
 
+	BIsSalePageAppID: function( appid )
+	{
+				return GStoreItemData.rgAppData[ appid ] && GStoreItemData.rgAppData[ appid ].url;
+	},
+
 	BIsPackageOwned: function( packageid )
 	{
 		return GDynamicStore.s_rgOwnedPackages[packageid] ? true : false;
@@ -2470,10 +2475,10 @@ GDynamicStorePage = {
 			var $capsule = $J( rgCapsules[i] );
 			var itemid = GDynamicStorePage.ItemIDFromCapsule( $capsule );
 
-			if ( !itemid )
+			if ( !itemid || ( itemid.appid && GDynamicStore.BIsSalePageAppID( itemid.appid ) ) )
 			{
 				// if there's no item associated, preseve it; it's probably a sale page or event
-				rgUnidentifiedCaps.push( $capsule );
+				rgUnidentifiedCaps.push( i );
 				continue;
 			}
 			else if ( !GDynamicStorePage.BItemValid( itemid, oShownItems ) )
@@ -2489,9 +2494,13 @@ GDynamicStorePage = {
 		rgItems =  SortItemListByPriorityList( rgItems, strPriorityListKey );
 		var rgItems = GDynamicStorePage.FilterItemsForDisplay( rgItems, strSettingsName, cMinItemsToDisplay, rgItems.length, AdditionalSettings );
 
-		// put anything we didn't understand at the front
-		while ( rgUnidentifiedCaps.length )
-			rgItems.unshift( { capsule: rgUnidentifiedCaps.shift(), priority: 1 } );
+		// splce anything we don't have info about back in the list in the same position it was before.
+		for ( var i = 0; i < rgUnidentifiedCaps.length; i++ )
+		{
+			var $capsule = $J( rgCapsules[ rgUnidentifiedCaps[i] ] );
+			rgItems.splice( rgUnidentifiedCaps[i], 0, { capsule: $capsule, priority: 1 } );
+		}
+
 
 		return rgItems;
 	},

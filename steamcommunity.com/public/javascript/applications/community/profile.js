@@ -2848,6 +2848,7 @@
               localized_sale_overlay: new Array(30),
               localized_sale_product_banner: new Array(30),
               localized_sale_product_mobile_banner: new Array(30),
+              localized_sale_logo: new Array(30),
               sale_font: "",
               sale_background_color: "",
               sale_header_offset: 150,
@@ -3090,7 +3091,9 @@
                   t = this.jsondata.localized_per_day_sales_header[n];
                 } else t = this.jsondata.localized_sale_header;
               else
-                "sale_overlay" === e
+                "sale_logo" === e
+                  ? (t = this.jsondata.localized_sale_logo)
+                  : "sale_overlay" === e
                   ? (t = this.jsondata.localized_sale_overlay)
                   : "localized_image_group" === e ||
                     "link_capsule" === e ||
@@ -12266,44 +12269,61 @@
         Se = n("Mgs7"),
         Be = n("IjL/"),
         Ee = n("lzlO"),
-        Ce = n("6Y59"),
-        we = function (e) {
-          var t = $(e.hubtype, e.category, e.tagid),
-            n = t.bLoading,
-            r = t.title;
-          return n
-            ? null
-            : r
-            ? l.a.createElement(
-                "div",
-                { className: Ee.ContentHubTitleCtn },
-                l.a.createElement(
+        Ce = n("6Y59");
+      var we = function (e) {
+          var t = e.hubtype,
+            n = e.category,
+            r = e.tagid,
+            i = $(t, n, r),
+            a = i.bLoading,
+            o = i.title,
+            s = Object(c.useRef)();
+          return (
+            Object(c.useEffect)(
+              function () {
+                s.current && !a && o && (s.current.innerHTML = o.strSubtitle);
+              },
+              [a, o]
+            ),
+            a
+              ? null
+              : o
+              ? l.a.createElement(
                   "div",
-                  { className: Ee.ContentHubLabsWidget },
-                  l.a.createElement(Oe, {
-                    strLabNumber: "013",
-                    strLabName: "contenthub",
-                    strForumURL:
-                      C.c.COMMUNITY_BASE_URL +
-                      "groups/SteamLabs/discussions/15/",
-                    bShowOptOut: !0,
-                  })
-                ),
-                l.a.createElement(
-                  "div",
-                  { className: Ee.ContentHubTitle },
-                  r.strTitle
+                  { className: Ee.ContentHubTitleCtn },
+                  l.a.createElement(
+                    "div",
+                    { className: Ee.ContentHubLabsWidget },
+                    l.a.createElement(Oe, {
+                      strLabNumber: "013",
+                      strLabName: "contenthub",
+                      strForumURL:
+                        C.c.COMMUNITY_BASE_URL +
+                        "groups/SteamLabs/discussions/15/",
+                      bShowOptOut: !0,
+                    })
+                  ),
+                  l.a.createElement(
+                    "div",
+                    { className: Ee.ContentHubTitle },
+                    o.strTitle
+                  ),
+                  "earlyaccess" === t &&
+                    l.a.createElement("div", {
+                      ref: s,
+                      className: Ee.ContentHubSubtitle,
+                    })
                 )
-              )
-            : l.a.createElement(
-                "div",
-                { className: Ee.ContentHubTitleCtn },
-                l.a.createElement(
+              : l.a.createElement(
                   "div",
-                  { className: Ee.ContentHubPlaceholder },
-                  Object(le.f)("#ContentHub_SalePagePlaceholder")
+                  { className: Ee.ContentHubTitleCtn },
+                  l.a.createElement(
+                    "div",
+                    { className: Ee.ContentHubPlaceholder },
+                    Object(le.f)("#ContentHub_SalePagePlaceholder")
+                  )
                 )
-              );
+          );
         },
         Oe = function (e) {
           var t = e.strLabNumber,
@@ -15016,31 +15036,33 @@
       }
       function Zt(e) {
         var t,
-          n = e.promotionName,
-          r = e.eventModel,
-          i = e.bIsPreview,
-          a = e.language,
-          o = c.useState(null == r ? void 0 : r.GetDayIndexFromEventStart()),
-          s = o[0],
-          l = o[1],
-          u = c.useState(null),
-          d = u[0],
-          m = u[1];
+          n,
+          r,
+          i = e.promotionName,
+          a = e.eventModel,
+          o = e.bIsPreview,
+          s = e.language,
+          l = c.useState(null == a ? void 0 : a.GetDayIndexFromEventStart()),
+          u = l[0],
+          d = l[1],
+          m = c.useState(null),
+          p = m[0],
+          f = m[1];
         if (
           (c.useEffect(
             function () {
               if (
-                r.jsondata.sale_custom_css &&
-                !d &&
-                i &&
+                a.jsondata.sale_custom_css &&
+                !p &&
+                o &&
                 Boolean(
-                  r.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                  a.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
                 )
               ) {
                 var e = document.getElementsByTagName("HEAD")[0],
                   t = document.createElement("style");
-                (t.innerText = r.jsondata.sale_custom_css),
-                  m(t),
+                (t.innerText = a.jsondata.sale_custom_css),
+                  f(t),
                   e.appendChild(t);
               }
               var n = document.getElementsByClassName(
@@ -15053,23 +15075,32 @@
                 ),
                 n.length >= 1 && (n[0].style.backgroundImage = null),
                 function () {
-                  d && (d.remove(), m(null));
+                  p && (p.remove(), f(null));
                 }
               );
             },
-            [r, d, i]
+            [a, p, o]
           ),
-          r && void 0 !== s)
+          a && void 0 !== u)
         ) {
-          var p = {
-            promotionName: n,
-            clanid: Number(C.b.CLANACCOUNTID),
-            nAppIDVOD: Number(r.jsondata.broadcast_preroll_vod_appid),
-            event: r,
-            bIsPreview: i,
-            language: a,
-            accountIDs: i ? r.jsondata.broadcast_whitelist : void 0,
-          };
+          var h = {
+              promotionName: i,
+              clanid: Number(C.b.CLANACCOUNTID),
+              nAppIDVOD: Number(a.jsondata.broadcast_preroll_vod_appid),
+              event: a,
+              bIsPreview: o,
+              language: s,
+              accountIDs: o ? a.jsondata.broadcast_whitelist : void 0,
+            },
+            _ =
+              (null === (n = a.jsondata.localized_sale_logo) || void 0 === n
+                ? void 0
+                : n.length) > 0 &&
+              (null ===
+                (r = le.a.GetWithFallback(a.jsondata.localized_sale_logo, s)) ||
+              void 0 === r
+                ? void 0
+                : r.length) > 0;
           return c.createElement(
             Be.a,
             null,
@@ -15078,7 +15109,7 @@
               null,
               c.createElement(
                 et.b,
-                { event: r, language: a, bIsPreview: i },
+                { event: a, language: s, bIsPreview: o },
                 c.createElement(
                   "div",
                   {
@@ -15086,29 +15117,40 @@
                       ((t = {}),
                       (t[$e.a.SaleOuterContainer] = !0),
                       (t[
-                        $e.a["CustomStyle_" + r.jsondata.sale_vanity_id]
+                        $e.a["CustomStyle_" + a.jsondata.sale_vanity_id]
                       ] = !0),
                       (t.SaleOuterContainer = !0),
                       t)
                     ),
                     style: {
-                      marginTop: (r.jsondata.sale_header_offset || 0) + "px",
+                      marginTop: (a.jsondata.sale_header_offset || 0) + "px",
                     },
                   },
-                  c.createElement(et.d, { event: r, broadcastEmbedContext: p }),
+                  c.createElement(et.d, { event: a, broadcastEmbedContext: h }),
+                  _ &&
+                    c.createElement(
+                      "div",
+                      { className: $e.a.SalePageLogoCtn },
+                      c.createElement("img", {
+                        src: le.a.GetWithFallback(
+                          a.jsondata.localized_sale_logo,
+                          s
+                        ),
+                      })
+                    ),
                   c.createElement($t, {
-                    bIsPreview: i,
-                    event: r,
-                    language: a,
-                    promotionName: n,
-                    nSaleDayIndex: s,
-                    broadcastEmbedContext: p,
+                    bIsPreview: o,
+                    event: a,
+                    language: s,
+                    promotionName: i,
+                    nSaleDayIndex: u,
+                    broadcastEmbedContext: h,
                   }),
                   c.createElement(et.c, {
-                    event: r,
-                    bIsPreview: i,
+                    event: a,
+                    bIsPreview: o,
                     fnOnChangeDayIndex: function (e) {
-                      e != s && ((r.m_overrideCurrentDay = e), l(e));
+                      e != u && ((a.m_overrideCurrentDay = e), d(e));
                     },
                   })
                 )
@@ -18004,6 +18046,11 @@
                 )),
                 (n.jsondata.localized_sale_product_mobile_banner = Object(m.e)(
                   n.jsondata.localized_sale_product_mobile_banner || [],
+                  30,
+                  null
+                )),
+                (n.jsondata.localized_sale_logo = Object(m.e)(
+                  n.jsondata.localized_sale_logo || [],
                   30,
                   null
                 )),
@@ -40036,6 +40083,7 @@
         product_mobile_banner_override: { width: 500, height: 160 },
         schedule_track_art: { width: 196, height: 92 },
         tab_bar_background: { width: 1500, height: 100 },
+        sale_logo: { width: 940, height: 460 },
       };
       function i(e, t, n) {
         var i = r[n];
@@ -53072,6 +53120,7 @@
         SectionLabelRight: "partnersaledisplay_SectionLabelRight_19YHY",
         SectionLabelLinkButton:
           "partnersaledisplay_SectionLabelLinkButton_1tTSn",
+        SalePageLogoCtn: "partnersaledisplay_SalePageLogoCtn_xP8Lp",
       };
     },
     a5LV: function (e, t, n) {

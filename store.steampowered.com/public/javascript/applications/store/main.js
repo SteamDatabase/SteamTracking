@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7013598";
+var CLSTAMP = "7026313";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [41],
   {
@@ -3111,6 +3111,7 @@ var CLSTAMP = "7013598";
               localized_sale_overlay: new Array(30),
               localized_sale_product_banner: new Array(30),
               localized_sale_product_mobile_banner: new Array(30),
+              localized_sale_logo: new Array(30),
               sale_font: "",
               sale_background_color: "",
               sale_header_offset: 150,
@@ -3387,7 +3388,9 @@ var CLSTAMP = "7013598";
                   t = this.jsondata.localized_per_day_sales_header[n];
                 } else t = this.jsondata.localized_sale_header;
               else
-                "sale_overlay" === e
+                "sale_logo" === e
+                  ? (t = this.jsondata.localized_sale_logo)
+                  : "sale_overlay" === e
                   ? (t = this.jsondata.localized_sale_overlay)
                   : "localized_image_group" === e ||
                     "link_capsule" === e ||
@@ -11359,47 +11362,61 @@ var CLSTAMP = "7013598";
         P = n("dStQ"),
         W = n("lzlO"),
         x = n("TLQK"),
-        U = n("6Y59"),
-        H = function (e) {
+        U = n("6Y59");
+      var H = function (e) {
           var t = e.hubtype,
             n = e.category,
             r = e.tagid,
             i = Object(P.b)(t, n, r),
             a = i.bLoading,
-            o = i.title;
-          return a
-            ? null
-            : o
-            ? c.a.createElement(
-                "div",
-                { className: W.ContentHubTitleCtn },
-                c.a.createElement(
+            o = i.title,
+            l = Object(s.useRef)();
+          return (
+            Object(s.useEffect)(
+              function () {
+                l.current && !a && o && (l.current.innerHTML = o.strSubtitle);
+              },
+              [a, o]
+            ),
+            a
+              ? null
+              : o
+              ? c.a.createElement(
                   "div",
-                  { className: W.ContentHubLabsWidget },
-                  c.a.createElement(q, {
-                    strLabNumber: "013",
-                    strLabName: "contenthub",
-                    strForumURL:
-                      I.d.COMMUNITY_BASE_URL +
-                      "groups/SteamLabs/discussions/15/",
-                    bShowOptOut: !0,
-                  })
-                ),
-                c.a.createElement(
-                  "div",
-                  { className: W.ContentHubTitle },
-                  o.strTitle
+                  { className: W.ContentHubTitleCtn },
+                  c.a.createElement(
+                    "div",
+                    { className: W.ContentHubLabsWidget },
+                    c.a.createElement(q, {
+                      strLabNumber: "013",
+                      strLabName: "contenthub",
+                      strForumURL:
+                        I.d.COMMUNITY_BASE_URL +
+                        "groups/SteamLabs/discussions/15/",
+                      bShowOptOut: !0,
+                    })
+                  ),
+                  c.a.createElement(
+                    "div",
+                    { className: W.ContentHubTitle },
+                    o.strTitle
+                  ),
+                  "earlyaccess" === t &&
+                    c.a.createElement("div", {
+                      ref: l,
+                      className: W.ContentHubSubtitle,
+                    })
                 )
-              )
-            : c.a.createElement(
-                "div",
-                { className: W.ContentHubTitleCtn },
-                c.a.createElement(
+              : c.a.createElement(
                   "div",
-                  { className: W.ContentHubPlaceholder },
-                  Object(x.f)("#ContentHub_SalePagePlaceholder")
+                  { className: W.ContentHubTitleCtn },
+                  c.a.createElement(
+                    "div",
+                    { className: W.ContentHubPlaceholder },
+                    Object(x.f)("#ContentHub_SalePagePlaceholder")
+                  )
                 )
-              );
+          );
         },
         q = function (e) {
           var t = e.strLabNumber,
@@ -15757,31 +15774,33 @@ var CLSTAMP = "7013598";
       }
       function En(e) {
         var t,
-          n = e.promotionName,
-          r = e.eventModel,
-          i = e.bIsPreview,
-          a = e.language,
-          o = s.useState(null == r ? void 0 : r.GetDayIndexFromEventStart()),
-          c = o[0],
-          l = o[1],
-          u = s.useState(null),
-          d = u[0],
-          p = u[1];
+          n,
+          r,
+          i = e.promotionName,
+          a = e.eventModel,
+          o = e.bIsPreview,
+          c = e.language,
+          l = s.useState(null == a ? void 0 : a.GetDayIndexFromEventStart()),
+          u = l[0],
+          d = l[1],
+          p = s.useState(null),
+          m = p[0],
+          f = p[1];
         if (
           (s.useEffect(
             function () {
               if (
-                r.jsondata.sale_custom_css &&
-                !d &&
-                i &&
+                a.jsondata.sale_custom_css &&
+                !m &&
+                o &&
                 Boolean(
-                  r.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                  a.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
                 )
               ) {
                 var e = document.getElementsByTagName("HEAD")[0],
                   t = document.createElement("style");
-                (t.innerText = r.jsondata.sale_custom_css),
-                  p(t),
+                (t.innerText = a.jsondata.sale_custom_css),
+                  f(t),
                   e.appendChild(t);
               }
               var n = document.getElementsByClassName(
@@ -15794,23 +15813,32 @@ var CLSTAMP = "7013598";
                 ),
                 n.length >= 1 && (n[0].style.backgroundImage = null),
                 function () {
-                  d && (d.remove(), p(null));
+                  m && (m.remove(), f(null));
                 }
               );
             },
-            [r, d, i]
+            [a, m, o]
           ),
-          r && void 0 !== c)
+          a && void 0 !== u)
         ) {
-          var m = {
-            promotionName: n,
-            clanid: Number(I.c.CLANACCOUNTID),
-            nAppIDVOD: Number(r.jsondata.broadcast_preroll_vod_appid),
-            event: r,
-            bIsPreview: i,
-            language: a,
-            accountIDs: i ? r.jsondata.broadcast_whitelist : void 0,
-          };
+          var h = {
+              promotionName: i,
+              clanid: Number(I.c.CLANACCOUNTID),
+              nAppIDVOD: Number(a.jsondata.broadcast_preroll_vod_appid),
+              event: a,
+              bIsPreview: o,
+              language: c,
+              accountIDs: o ? a.jsondata.broadcast_whitelist : void 0,
+            },
+            b =
+              (null === (n = a.jsondata.localized_sale_logo) || void 0 === n
+                ? void 0
+                : n.length) > 0 &&
+              (null ===
+                (r = x.a.GetWithFallback(a.jsondata.localized_sale_logo, c)) ||
+              void 0 === r
+                ? void 0
+                : r.length) > 0;
           return s.createElement(
             F.a,
             null,
@@ -15819,7 +15847,7 @@ var CLSTAMP = "7013598";
               null,
               s.createElement(
                 Ue,
-                { event: r, language: a, bIsPreview: i },
+                { event: a, language: c, bIsPreview: o },
                 s.createElement(
                   "div",
                   {
@@ -15827,29 +15855,40 @@ var CLSTAMP = "7013598";
                       ((t = {}),
                       (t[Ee.a.SaleOuterContainer] = !0),
                       (t[
-                        Ee.a["CustomStyle_" + r.jsondata.sale_vanity_id]
+                        Ee.a["CustomStyle_" + a.jsondata.sale_vanity_id]
                       ] = !0),
                       (t.SaleOuterContainer = !0),
                       t)
                     ),
                     style: {
-                      marginTop: (r.jsondata.sale_header_offset || 0) + "px",
+                      marginTop: (a.jsondata.sale_header_offset || 0) + "px",
                     },
                   },
-                  s.createElement(Pe, { event: r, broadcastEmbedContext: m }),
+                  s.createElement(Pe, { event: a, broadcastEmbedContext: h }),
+                  b &&
+                    s.createElement(
+                      "div",
+                      { className: Ee.a.SalePageLogoCtn },
+                      s.createElement("img", {
+                        src: x.a.GetWithFallback(
+                          a.jsondata.localized_sale_logo,
+                          c
+                        ),
+                      })
+                    ),
                   s.createElement(wn, {
-                    bIsPreview: i,
-                    event: r,
-                    language: a,
-                    promotionName: n,
-                    nSaleDayIndex: c,
-                    broadcastEmbedContext: m,
+                    bIsPreview: o,
+                    event: a,
+                    language: c,
+                    promotionName: i,
+                    nSaleDayIndex: u,
+                    broadcastEmbedContext: h,
                   }),
                   s.createElement(We, {
-                    event: r,
-                    bIsPreview: i,
+                    event: a,
+                    bIsPreview: o,
                     fnOnChangeDayIndex: function (e) {
-                      e != c && ((r.m_overrideCurrentDay = e), l(e));
+                      e != u && ((a.m_overrideCurrentDay = e), d(e));
                     },
                   })
                 )
@@ -16296,6 +16335,7 @@ var CLSTAMP = "7013598";
                               category: n.GetContentHubCategory(),
                               tagid: n.GetContentHubTag(),
                               bAutoAdvance: t.carousel_auto_advance,
+                              prioritize_discounts: t.prioritize_discounts,
                             },
                             e.props
                           )
@@ -21857,6 +21897,11 @@ var CLSTAMP = "7013598";
                   30,
                   null
                 )),
+                (n.jsondata.localized_sale_logo = Object(p.e)(
+                  n.jsondata.localized_sale_logo || [],
+                  30,
+                  null
+                )),
                 void 0 !== n.jsondata.sale_num_headers)
               )
                 for (var s = 0; s < n.jsondata.sale_num_headers; ++s)
@@ -23274,15 +23319,15 @@ var CLSTAMP = "7013598";
       var r,
         i,
         a = n("mrSG"),
-        o = n("BBEf"),
-        s = (n("kyHq"), n("lkRc")),
-        c = n("WKKl"),
-        l = (n("35zc"), n("vDqi")),
-        u = n.n(l),
-        d = (n("AiWL"), n("ee7K")),
-        p = (n("3+zv"), n("gyoR")),
-        m = n("5eAM"),
-        f = n("dStQ");
+        o = n("vDqi"),
+        s = n.n(o),
+        c = (n("kyHq"), n("BBEf")),
+        l = (n("3+zv"), n("5eAM")),
+        u = n("ee7K"),
+        d = (n("35zc"), n("dStQ")),
+        p = n("gyoR"),
+        m = (n("AiWL"), n("lkRc")),
+        f = n("WKKl");
       !(function (e) {
         (e[(e.k_EStatusString = 0)] = "k_EStatusString"),
           (e[(e.k_ECreator = 1)] = "k_ECreator"),
@@ -23310,36 +23355,36 @@ var CLSTAMP = "7013598";
           (this.m_mapStoreDataForHub = new Map()),
             (this.m_mapDisplayDataForHub = new Map()),
             (this.m_mapPromiseForHub = new Map()),
-            "dev" === s.d.WEB_UNIVERSE && (window.g_ContentHubStore = this);
-          var e = Object(s.h)("ch_hub_data", "application_config");
+            "dev" === m.d.WEB_UNIVERSE && (window.g_ContentHubStore = this);
+          var e = Object(m.h)("ch_hub_data", "application_config");
           if (e) {
             var t = h(e.strHubType, e.strCategory, e.nTagID);
             this.CreateStoreData(t);
-            var n = Object(s.h)("ch_section_data", "application_config");
+            var n = Object(m.h)("ch_section_data", "application_config");
             this.ValidateSectionData(n) && this.SetSectionData(t, n);
-            var r = Object(s.h)("ch_list_data", "application_config");
+            var r = Object(m.h)("ch_list_data", "application_config");
             this.ValidateAppListData(r) && this.SetAppListData(t, r),
-              (this.m_mapStoreDataForHub.get(t).definition = Object(s.h)(
+              (this.m_mapStoreDataForHub.get(t).definition = Object(m.h)(
                 "ch_static_data",
                 "application_config"
               )),
-              (this.m_mapStoreDataForHub.get(t).title = Object(s.h)(
+              (this.m_mapStoreDataForHub.get(t).title = Object(m.h)(
                 "ch_title_data",
                 "application_config"
               )),
-              (this.m_mapStoreDataForHub.get(t).rgSpotlights = Object(s.h)(
+              (this.m_mapStoreDataForHub.get(t).rgSpotlights = Object(m.h)(
                 "ch_spotlights_data",
                 "application_config"
               )),
-              (this.m_mapStoreDataForHub.get(t).rgDailyDeals = Object(s.h)(
+              (this.m_mapStoreDataForHub.get(t).rgDailyDeals = Object(m.h)(
                 "ch_dailydeals_data",
                 "application_config"
               )),
               (this.m_mapStoreDataForHub.get(t).partnerTakeoverData = Object(
-                s.h
+                m.h
               )("ch_partner_takeover_data", "application_config"));
           }
-          this.m_searchPreferences = Object(s.h)(
+          this.m_searchPreferences = Object(m.h)(
             "search_preferences",
             "application_config"
           );
@@ -23425,99 +23470,99 @@ var CLSTAMP = "7013598";
               ? void 0
               : t.rgDailyDeals;
           }),
-          (e.prototype.LoadContentHubData = function (e, t, n) {
+          (e.prototype.LoadContentHubData = function (e, t, n, r) {
             return Object(a.b)(this, void 0, void 0, function () {
-              var r;
-              return Object(a.e)(this, function (i) {
+              var i;
+              return Object(a.e)(this, function (a) {
                 return (
-                  (r = h(e, t, n)),
-                  this.BHasContentHubData(r)
+                  (i = h(e, t, n)),
+                  this.BHasContentHubData(i)
                     ? [2]
-                    : (this.m_mapPromiseForHub.has(r) ||
+                    : (this.m_mapPromiseForHub.has(i) ||
                         this.m_mapPromiseForHub.set(
-                          r,
-                          this.InternalLoadContentHubData(e, t, n)
+                          i,
+                          this.InternalLoadContentHubData(e, t, n, r)
                         ),
-                      [2, this.m_mapPromiseForHub.get(r)])
+                      [2, this.m_mapPromiseForHub.get(i)])
                 );
               });
             });
           }),
-          (e.prototype.InternalLoadContentHubData = function (t, n, r) {
-            var i;
+          (e.prototype.InternalLoadContentHubData = function (t, n, r, i) {
+            var o;
             return Object(a.b)(this, void 0, void 0, function () {
-              var o, l, d, m, f, b, _, v, g, y, S;
+              var c, l, u, d, b, _, v, g, y, S, M;
               return Object(a.e)(this, function (a) {
                 switch (a.label) {
                   case 0:
                     return (
-                      (o = h(t, n, r)),
-                      this.m_mapStoreDataForHub.has(o)
+                      (c = h(t, n, r)),
+                      this.m_mapStoreDataForHub.has(c)
                         ? [3, 2]
                         : ((l =
-                            s.d.STORE_BASE_URL +
+                            m.d.STORE_BASE_URL +
                             "contenthub/ajaxgetcontenthubdata"),
-                          (d = { hubtype: t, category: n, tagid: r }),
-                          [4, u.a.get(l, { params: d, withCredentials: !0 })])
+                          (u = { hubtype: t, category: n, tagid: r }),
+                          [4, s.a.get(l, { params: u, withCredentials: !0 })])
                     );
                   case 1:
-                    (m = a.sent()),
+                    (d = a.sent()),
                       1 ===
-                        (null === (i = null == m ? void 0 : m.data) ||
-                        void 0 === i
+                        (null === (o = null == d ? void 0 : d.data) ||
+                        void 0 === o
                           ? void 0
-                          : i.success) &&
-                        (c.a.Get().SetHomeViewSetting(m.data.homeViewSetting),
-                        c.a
+                          : o.success) &&
+                        (f.a.Get().SetHomeViewSetting(d.data.homeViewSetting),
+                        f.a
                           .Get()
                           .SetHomeViewSettingOverride(
-                            m.data.homeViewSettingOverride
+                            d.data.homeViewSettingOverride
                           ),
-                        (this.m_searchPreferences = m.data.searchPreferences),
-                        this.CreateStoreData(o),
-                        this.SetSectionData(o, m.data.sectionData),
-                        this.SetAppListData(o, m.data.listData),
-                        (this.m_mapStoreDataForHub.get(o).title = {
-                          strTitle: m.data.title,
-                          strSubtitle: m.data.subtitle,
+                        (this.m_searchPreferences = d.data.searchPreferences),
+                        this.CreateStoreData(c),
+                        this.SetSectionData(c, d.data.sectionData),
+                        this.SetAppListData(c, d.data.listData),
+                        (this.m_mapStoreDataForHub.get(c).title = {
+                          strTitle: d.data.title,
+                          strSubtitle: d.data.subtitle,
                         }),
-                        (this.m_mapStoreDataForHub.get(o).rgDailyDeals =
-                          m.data.dailyDeals),
-                        (this.m_mapStoreDataForHub.get(o).rgSpotlights =
-                          m.data.spotlights),
-                        (this.m_mapStoreDataForHub.get(o).partnerTakeoverData =
-                          m.data.partnerTakeover)),
+                        (this.m_mapStoreDataForHub.get(c).rgDailyDeals =
+                          d.data.dailyDeals),
+                        (this.m_mapStoreDataForHub.get(c).rgSpotlights =
+                          d.data.spotlights),
+                        (this.m_mapStoreDataForHub.get(c).partnerTakeoverData =
+                          d.data.partnerTakeover)),
                       (a.label = 2);
                   case 2:
                     for (
-                      f = [],
-                        b = 0,
-                        _ = Array.from(
-                          this.m_mapStoreDataForHub.get(o).mapAppLists.keys()
+                      b = [],
+                        _ = 0,
+                        v = Array.from(
+                          this.m_mapStoreDataForHub.get(c).mapAppLists.keys()
                         );
-                      b < _.length;
-                      b++
+                      _ < v.length;
+                      _++
                     )
                       for (
-                        v = _[b],
-                          g = 0,
-                          y = this.m_mapStoreDataForHub
-                            .get(o)
-                            .mapAppLists.get(v).apps;
-                        g < y.length;
-                        g++
+                        g = v[_],
+                          y = 0,
+                          S = this.m_mapStoreDataForHub
+                            .get(c)
+                            .mapAppLists.get(g).apps;
+                        y < S.length;
+                        y++
                       )
-                        (S = y[g]),
-                          f.push(e.SaleCapsuleFromContentHubCapsule(S));
-                    return [4, Object(p.h)(f)];
+                        (M = S[y]),
+                          b.push(e.SaleCapsuleFromContentHubCapsule(M));
+                    return [4, Object(p.h)(b)];
                   case 3:
                     return (
                       a.sent(),
-                      this.CreateDisplayData(o),
-                      [4, this.ApplyUserAndHomeViewFilters(o)]
+                      this.CreateDisplayData(c),
+                      [4, this.ApplyUserAndHomeViewFilters(c, i)]
                     );
                   case 4:
-                    return a.sent(), [4, this.UpdateRecommendationReasons(o)];
+                    return a.sent(), [4, this.UpdateRecommendationReasons(c)];
                   case 5:
                     return a.sent(), [2];
                 }
@@ -23539,26 +23584,26 @@ var CLSTAMP = "7013598";
               mapOtherCarousels: new Map(),
             });
           }),
-          (e.prototype.ApplyUserAndHomeViewFilters = function (e) {
+          (e.prototype.ApplyUserAndHomeViewFilters = function (e, t) {
             return Object(a.b)(this, void 0, void 0, function () {
-              var t, n;
-              return Object(a.e)(this, function (r) {
-                switch (r.label) {
+              var n, r;
+              return Object(a.e)(this, function (i) {
+                switch (i.label) {
                   case 0:
                     return (
-                      (t = new o.a()),
-                      (n = Object(a.a)(
-                        Object(a.a)({}, c.a.Get().GetHomeView()),
+                      (n = new c.a()),
+                      (r = Object(a.a)(
+                        Object(a.a)({}, f.a.Get().GetHomeView()),
                         { enforce_minimum: !0 }
                       )),
-                      [4, this.BuildFeaturedCarouselContent(e, t, n)]
+                      [4, this.BuildFeaturedCarouselContent(e, n, r, t)]
                     );
                   case 1:
                     return (
-                      r.sent(), [4, this.BuildAllOtherCarouselContent(e, t, n)]
+                      i.sent(), [4, this.BuildAllOtherCarouselContent(e, n, r)]
                     );
                   case 2:
-                    return r.sent(), [2];
+                    return i.sent(), [2];
                 }
               });
             });
@@ -23594,7 +23639,7 @@ var CLSTAMP = "7013598";
           (e.prototype.BuildAllOtherCarouselContent = function (e, t, n) {
             var r;
             return Object(a.b)(this, void 0, void 0, function () {
-              var i, s, c, l, u;
+              var i, o, s, l, u;
               return Object(a.e)(this, function (a) {
                 switch (a.label) {
                   case 0:
@@ -23602,19 +23647,19 @@ var CLSTAMP = "7013598";
                       e
                     ).mapOtherCarousels = new Map()),
                       (i = 0),
-                      (s = this.m_mapStoreDataForHub.get(e).rgSections),
+                      (o = this.m_mapStoreDataForHub.get(e).rgSections),
                       (a.label = 1);
                   case 1:
-                    return i < s.length
-                      ? ((c = s[i]),
+                    return i < o.length
+                      ? ((s = o[i]),
                         (l = this.m_mapStoreDataForHub
                           .get(e)
-                          .mapAppLists.get(c.id)),
+                          .mapAppLists.get(s.id)),
                         (null === (r = null == l ? void 0 : l.apps) ||
                         void 0 === r
                           ? void 0
                           : r.length) > 0
-                          ? ((u = Object(o.b)(l.apps, n, t, 40, 4)),
+                          ? ((u = Object(c.b)(l.apps, n, t, 40, 4)),
                             [4, this.ApplyStoreAndSearchPreferenceFilters(u)])
                           : [3, 3])
                       : [3, 4];
@@ -23622,7 +23667,7 @@ var CLSTAMP = "7013598";
                     (u = a.sent()),
                       this.m_mapDisplayDataForHub
                         .get(e)
-                        .mapOtherCarousels.set(c.id, u),
+                        .mapOtherCarousels.set(s.id, u),
                       (a.label = 3);
                   case 3:
                     return i++, [3, 1];
@@ -23637,13 +23682,13 @@ var CLSTAMP = "7013598";
             e.forEach(function (e) {
               return n.push(0);
             });
-            for (var r = [], i = 1; r.length < 12 && i <= o.c; ) {
-              for (var a = !1, s = 0; s < e.length; ++s) {
-                var c = e[s],
-                  l = n[s];
-                if (l < c.length && c[l].priority <= i) {
-                  (a = !0), (n[s] += 1);
-                  var u = c[l];
+            for (var r = [], i = 1; r.length < 12 && i <= c.c; ) {
+              for (var a = !1, o = 0; o < e.length; ++o) {
+                var s = e[o],
+                  l = n[o];
+                if (l < s.length && s[l].priority <= i) {
+                  (a = !0), (n[o] += 1);
+                  var u = s[l];
                   if (
                     (t.BHasStoreItemKey(u) || (r.push(u), t.AddStoreItemKey(u)),
                     r.length >= 12)
@@ -23655,22 +23700,28 @@ var CLSTAMP = "7013598";
             }
             return r;
           }),
-          (e.prototype.BuildFeaturedCarouselContent = function (t, n, r) {
-            var i;
+          (e.prototype.BuildFeaturedCarouselContent = function (t, n, r, i) {
+            var o;
             return Object(a.b)(this, void 0, void 0, function () {
               var s,
-                c,
                 l,
                 u,
                 d,
-                p,
                 m,
-                f = this;
+                f,
+                h,
+                b,
+                _,
+                v,
+                g,
+                y,
+                S,
+                M = this;
               return Object(a.e)(this, function (a) {
                 switch (a.label) {
                   case 0:
                     return (
-                      (s = Object(o.b)(
+                      (s = Object(c.b)(
                         this.m_mapStoreDataForHub
                           .get(t)
                           .mapAppLists.get("featured").apps,
@@ -23686,60 +23737,78 @@ var CLSTAMP = "7013598";
                       (this.m_mapDisplayDataForHub.get(
                         t
                       ).rgMainCapsule = e.ZipperMerge([s], n)),
-                      (c = (c = [
+                      (l = (l = [
                         "featured_recommended",
                         "top_sellers",
                         "specials",
                         "concurrent",
                       ]).filter(function (e) {
-                        return f.m_mapStoreDataForHub.get(t).mapAppLists.has(e);
+                        return M.m_mapStoreDataForHub.get(t).mapAppLists.has(e);
                       })),
-                      (l = c.map(function (e) {
-                        return f.m_mapStoreDataForHub.get(t).mapAppLists.get(e);
+                      (u = l.map(function (e) {
+                        return M.m_mapStoreDataForHub.get(t).mapAppLists.get(e);
                       })),
-                      (u = 0),
-                      (d = l),
+                      (d = 0),
+                      (m = u),
                       (a.label = 2);
                   case 2:
-                    return u < d.length
-                      ? (p = d[u])
-                        ? ((p.apps =
-                            null === (i = p.apps) || void 0 === i
+                    return d < m.length
+                      ? (f = m[d])
+                        ? ((f.apps =
+                            null === (o = f.apps) || void 0 === o
                               ? void 0
-                              : i.filter(function (e) {
+                              : o.filter(function (e) {
                                   return (
                                     "bundle" !== e.item_type &&
                                     "sub" !== e.item_type
                                   );
                                 })),
-                          (p.apps = Object(o.b)(p.apps || [], r, n, 12, 4)),
-                          (m = p),
+                          (f.apps = Object(c.b)(f.apps || [], r, n, 12, 4)),
+                          (h = f),
                           [
                             4,
-                            this.ApplyStoreAndSearchPreferenceFilters(p.apps),
+                            this.ApplyStoreAndSearchPreferenceFilters(f.apps),
                           ])
                         : [3, 4]
                       : [3, 5];
                   case 3:
-                    (m.apps = a.sent()), (a.label = 4);
+                    (h.apps = a.sent()), (a.label = 4);
                   case 4:
-                    return u++, [3, 2];
+                    return d++, [3, 2];
                   case 5:
-                    return (
-                      (this.m_mapDisplayDataForHub.get(
+                    if (
+                      ((this.m_mapDisplayDataForHub.get(
                         t
                       ).rgMainCapsule = this.m_mapDisplayDataForHub
                         .get(t)
                         .rgMainCapsule.concat(
                           e.ZipperMerge(
-                            l.map(function (e) {
+                            u.map(function (e) {
                               return e.apps;
                             }),
                             n
                           )
                         )),
-                      [2]
-                    );
+                      i)
+                    ) {
+                      for (
+                        b = [],
+                          _ = [],
+                          v = 0,
+                          g = this.m_mapDisplayDataForHub.get(t).rgMainCapsule;
+                        v < g.length;
+                        v++
+                      )
+                        (y = g[v]),
+                          (S = Object(p.g)(
+                            e.SaleCapsuleFromContentHubCapsule(y)
+                          )),
+                          Boolean(S.discount_percent) ? b.push(y) : _.push(y);
+                      this.m_mapDisplayDataForHub.get(
+                        t
+                      ).rgMainCapsule = b.concat(_);
+                    }
+                    return [2];
                 }
               });
             });
@@ -23747,7 +23816,7 @@ var CLSTAMP = "7013598";
           (e.prototype.ApplyStoreAndSearchPreferenceFilters = function (t) {
             var n, r, i;
             return Object(a.b)(this, void 0, void 0, function () {
-              var o, s, c, l, u, d;
+              var o, s, c, l, u, m;
               return Object(a.e)(this, function (a) {
                 switch (a.label) {
                   case 0:
@@ -23764,13 +23833,13 @@ var CLSTAMP = "7013598";
                         null === (i = this.m_searchPreferences) || void 0 === i
                           ? void 0
                           : i.hide_ignored),
-                      (l = Object(f.a)(t)),
+                      (l = Object(d.a)(t)),
                       [4, Object(p.b)(l, !1, o, s, !1, c)]
                     );
                   case 1:
                     return (
                       (u = a.sent()),
-                      (d = new Set(
+                      (m = new Set(
                         u.map(function (t) {
                           return e.GetKeyForCapsule(t);
                         })
@@ -23778,7 +23847,7 @@ var CLSTAMP = "7013598";
                       [
                         2,
                         t.filter(function (t) {
-                          return d.has(
+                          return m.has(
                             e.GetKeyForCapsule({ type: t.item_type, id: t.id })
                           );
                         }),
@@ -23813,8 +23882,8 @@ var CLSTAMP = "7013598";
             return Object(a.b)(this, void 0, void 0, function () {
               var s,
                 c,
-                l,
-                u,
+                d,
+                m,
                 f,
                 b,
                 _,
@@ -23854,24 +23923,24 @@ var CLSTAMP = "7013598";
                     );
                   case 1:
                     for (
-                      c = a.sent(), l = [], u = "game", f = 0, b = c;
+                      c = a.sent(), d = [], m = "game", f = 0, b = c;
                       f < b.length;
                       f++
                     )
                       (_ = b[f]),
-                        (v = m.a.GetAppLinkInfo(_)),
-                        (l = l.concat(v.tags)),
+                        (v = l.a.GetAppLinkInfo(_)),
+                        (d = d.concat(v.tags)),
                         ("software" !== v.type && "video" !== v.type) ||
-                          (u = v.type);
+                          (m = v.type);
                     for (
-                      g = [], y = 0, S = l;
+                      g = [], y = 0, S = d;
                       y < S.length &&
                       ((M = S[y]),
                       !(g.length > e.k_nMaxMatchingRecommendedTags));
                       y++
                     )
                       ("tags" === n && o === M.tagid) ||
-                        (d.a.Get().GetRecommendedTags().has(M.tagid) &&
+                        (u.a.Get().GetRecommendedTags().has(M.tagid) &&
                           g.push(M));
                     if (g.length < e.k_nMaxMatchingRecommendedTags) {
                       if (t.creator_relationship)
@@ -23882,7 +23951,7 @@ var CLSTAMP = "7013598";
                         )
                           if (
                             ((B = E[O]),
-                            d.a.Get().BIsFollowingCurator(Number(B)))
+                            u.a.Get().BIsFollowingCurator(Number(B)))
                           )
                             return (
                               (t.recommendation = {
@@ -23896,10 +23965,10 @@ var CLSTAMP = "7013598";
                             );
                       if (
                         t.appid &&
-                        d.a.Get().BIsAppRecommendedBySomeCurator(t.appid)
+                        u.a.Get().BIsAppRecommendedBySomeCurator(t.appid)
                       )
                         return (
-                          (C = d.a
+                          (C = u.a
                             .Get()
                             .GetRecommendingCuratorsForApp(t.appid)),
                           (t.recommendation = {
@@ -23914,7 +23983,7 @@ var CLSTAMP = "7013598";
                         (t.recommendation = {
                           reason: r.k_ETags,
                           tags: g,
-                          appType: u,
+                          appType: m,
                         }),
                         [2]
                       );
@@ -23979,7 +24048,7 @@ var CLSTAMP = "7013598";
             return (
               e.s_globalSingletonStore ||
                 ((e.s_globalSingletonStore = new e()),
-                "dev" == s.d.WEB_UNIVERSE &&
+                "dev" == m.d.WEB_UNIVERSE &&
                   (window.g_ContentHubStore = e.s_globalSingletonStore)),
               e.s_globalSingletonStore
             );
@@ -24278,10 +24347,11 @@ var CLSTAMP = "7013598";
             n = e.category,
             r = e.tagid,
             i = e.bAutoAdvance,
-            c = Object(p.b)(t, n, r),
-            l = c.bLoading,
-            u = c.mainCapsuleList;
-          return l
+            c = e.prioritize_discounts,
+            l = Object(p.b)(t, n, r, c),
+            u = l.bLoading,
+            m = l.mainCapsuleList;
+          return u
             ? a.a.createElement(d.a, { position: "center" })
             : a.a.createElement(
                 o.a,
@@ -24292,7 +24362,7 @@ var CLSTAMP = "7013598";
                   className: s.MainCarousel,
                   bAutoAdvance: i,
                 },
-                u.map(function (e) {
+                m.map(function (e) {
                   return a.a.createElement(h, {
                     key: e.item_type + " " + e.id,
                     capsule: e,
@@ -40115,6 +40185,7 @@ var CLSTAMP = "7013598";
         product_mobile_banner_override: { width: 500, height: 160 },
         schedule_track_art: { width: 196, height: 92 },
         tab_bar_background: { width: 1500, height: 100 },
+        sale_logo: { width: 940, height: 460 },
       };
       function i(e, t, n) {
         var i = r[n];
@@ -56929,6 +57000,7 @@ var CLSTAMP = "7013598";
         SectionLabelLinkButton:
           "partnersaledisplay_SectionLabelLinkButton_1tTSn",
         DefaultCreatorCtn: "partnersaledisplay_DefaultCreatorCtn_3KzJ1",
+        SalePageLogoCtn: "partnersaledisplay_SalePageLogoCtn_xP8Lp",
       };
     },
     a5LV: function (e, t, n) {
@@ -64446,58 +64518,58 @@ var CLSTAMP = "7013598";
           n
         );
       }
-      function p(e, t, n) {
-        var a = i.a.Get(),
-          o = Object(i.d)(e, t, n),
-          s = Object(r.useState)(!a.BHasContentHubData(o)),
-          c = s[0],
-          l = s[1],
-          u = Object(r.useState)(a.GetTitle(o)),
-          d = u[0],
-          p = u[1],
-          m = Object(r.useState)(a.GetMainCapsuleList(o)),
-          f = m[0],
-          h = m[1],
-          b = Object(r.useState)(a.GetSections(o)),
-          _ = b[0],
-          v = b[1],
-          g = Object(r.useState)(a.GetMapOtherCarousels(o)),
-          y = g[0],
-          S = g[1],
-          M = Object(r.useState)(a.GetSpotlights(o)),
-          O = M[0],
-          E = M[1],
-          B = Object(r.useState)(a.GetDailyDeals(o)),
-          C = B[0],
-          w = B[1],
-          A = Object(r.useState)(a.GetPartnerTakeoverData(o)),
-          T = A[0],
-          I = A[1];
+      function p(e, t, n, a) {
+        var o = i.a.Get(),
+          s = Object(i.d)(e, t, n),
+          c = Object(r.useState)(!o.BHasContentHubData(s)),
+          l = c[0],
+          u = c[1],
+          d = Object(r.useState)(o.GetTitle(s)),
+          p = d[0],
+          m = d[1],
+          f = Object(r.useState)(o.GetMainCapsuleList(s)),
+          h = f[0],
+          b = f[1],
+          _ = Object(r.useState)(o.GetSections(s)),
+          v = _[0],
+          g = _[1],
+          y = Object(r.useState)(o.GetMapOtherCarousels(s)),
+          S = y[0],
+          M = y[1],
+          O = Object(r.useState)(o.GetSpotlights(s)),
+          E = O[0],
+          B = O[1],
+          C = Object(r.useState)(o.GetDailyDeals(s)),
+          w = C[0],
+          A = C[1],
+          T = Object(r.useState)(o.GetPartnerTakeoverData(s)),
+          I = T[0],
+          L = T[1];
         return (
           Object(r.useEffect)(
             function () {
-              a.LoadContentHubData(e, t, n).then(function () {
-                p(a.GetTitle(o)),
-                  h(a.GetMainCapsuleList(o)),
-                  v(a.GetSections(o)),
-                  S(a.GetMapOtherCarousels(o)),
-                  E(a.GetSpotlights(o)),
-                  w(a.GetDailyDeals(o)),
-                  I(a.GetPartnerTakeoverData(o)),
-                  l(!1);
+              o.LoadContentHubData(e, t, n, a).then(function () {
+                m(o.GetTitle(s)),
+                  b(o.GetMainCapsuleList(s)),
+                  g(o.GetSections(s)),
+                  M(o.GetMapOtherCarousels(s)),
+                  B(o.GetSpotlights(s)),
+                  A(o.GetDailyDeals(s)),
+                  L(o.GetPartnerTakeoverData(s)),
+                  u(!1);
               });
             },
-            [t, e, a, o, n]
+            [t, e, a, o, s, n]
           ),
           {
-            bLoading: c,
-            title: d,
-            mainCapsuleList: f,
-            sections: _,
-            mapSectionLists: y,
-            spotlights: O,
-            dailyDeals: C,
-            partnerTakeoverData: T,
+            bLoading: l,
+            title: p,
+            mainCapsuleList: h,
+            sections: v,
+            mapSectionLists: S,
+            spotlights: E,
+            dailyDeals: w,
+            partnerTakeoverData: I,
           }
         );
       }
