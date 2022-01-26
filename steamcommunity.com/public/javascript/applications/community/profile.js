@@ -91719,7 +91719,9 @@
               (this.m_rgFlairs = []),
               (this.m_rgStickers = []),
               (this.m_rgEffects = []),
-              (this.m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER);
+              (this.m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER),
+              (this.m_emoticonTrackerCallback = null),
+              (this.m_stickerTrackerCallback = null);
           }
           return (
             (e.GetEmoticonURL = function (e, t) {
@@ -91868,8 +91870,16 @@
               enumerable: !1,
               configurable: !0,
             }),
+            (e.prototype.SetEmoticonTrackerCallback = function (e) {
+              this.m_emoticonTrackerCallback = e;
+            }),
+            (e.prototype.SetStickerTrackerCallback = function (e) {
+              this.m_stickerTrackerCallback = e;
+            }),
             (e.prototype.TrackEmoticonUsage = function (e, t) {
               if (this.m_bInitialized) {
+                this.m_emoticonTrackerCallback &&
+                  this.m_emoticonTrackerCallback(e, t);
                 for (
                   var n, r = new Map(), i = /\[emoticon\]([^[]*)/g;
                   (n = i.exec(e));
@@ -91925,6 +91935,8 @@
             }),
             (e.prototype.TrackStickerUsage = function (e, t) {
               if (this.m_bInitialized) {
+                this.m_stickerTrackerCallback &&
+                  this.m_stickerTrackerCallback(e, t);
                 var n = this.m_rgStickers.find(function (t) {
                   return t.name === e;
                 });
