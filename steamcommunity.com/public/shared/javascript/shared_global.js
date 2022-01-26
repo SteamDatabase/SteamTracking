@@ -566,8 +566,10 @@ function CModal( $Content, rgParams )
 	this.m_nInitialOffsetLeft = $J(window).scrollLeft();
 	this.m_$Content.css( 'position', 'fixed' );
 	this.m_$Content.css( 'z-index', 1000 );
+
+	/* default gamepad behavior is B button closes the dialog */
 	if ( !this.m_$Content.attr('panel' ) )
-		this.m_$Content.attr( 'data-panel', '[]' );
+		this.m_$Content.attr( 'data-panel', '{"onCancelButton":"CModal.DismissActiveModal()"}' );
 
 	this.m_$StandardContent = null;
 	this.m_$SizedContent = null;

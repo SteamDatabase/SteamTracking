@@ -14,7 +14,7 @@
 
 	/* Remove breadcrumbs */
 	html.responsive .breadcrumbs {
-		/* display: none; */
+		display: none;
 	}
 
 
@@ -23,6 +23,10 @@
 		display: none;
 	}
 
+	/* Remove mouse hover tooltips */
+	html.responsive .hover_tooltip {
+		display: none;
+	}
 
 	/* TEXT */
 	html.responsive body.v6 {

@@ -3308,6 +3308,11 @@ div .cdkey_request_details_row
     font-size: 12px;
     color: #a4d007;
 }
+.optedout_text {
+	padding: 2px;
+	font-size: 12px;
+	color: #d0616e;
+}
 .available_text {
     padding: 2px 6px;
     font-size: 12px;

@@ -542,7 +542,7 @@ function TagBoxTopDecoration()
 
 function SaleTagTexture( suffix )
 {
-	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/' + suffix + '_page.jpg"); background-repeat: repeat;';
+	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/lunar2022/' + suffix + '_page.jpg"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )
@@ -651,7 +651,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	else if(strTagMethod === "default") { title='<b>POPULAR GAMES </b><br/>SIMILAR TO';}
 	else { noTags = true;}
 
-	var rgTextures = [ 'green', 'orange', 'yellow', 'brown' ];
+	var rgTextures = [ 'green', 'orange', 'olive', 'red', 'blue' ];
 	var randomKey = Math.floor( Math.random() * rgTextures.length );
 	var texture = rgTextures[ randomKey ];
 

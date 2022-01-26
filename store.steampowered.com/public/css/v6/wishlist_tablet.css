@@ -45,6 +45,7 @@
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
 
+
 	/* Corners */
 	--gpCorner-Small: 1px;
 	--gpCorner-Medium: 2px;
@@ -58,6 +59,10 @@
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 32vw;
+
+	/* Game capsule widths */
+	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -76,14 +81,9 @@
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
-	/* Animation */
+	/* Animation TODO: REMOVE THESE */
 	--gpTransition-Short: all 0.2s ease;
 	--gpTransition-Shorter: all 0.1s ease;
-
-	/* Focus */
-	--gpFocus: 4px solid white;
-	--gpUnfocus: 0px solid #FFFFFF00;
-
 }
 
 @media screen and ( min-width: 501px ) and ( max-width: 910px ) {

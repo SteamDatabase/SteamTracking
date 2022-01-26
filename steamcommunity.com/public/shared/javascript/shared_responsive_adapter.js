@@ -243,7 +243,29 @@ jQuery( function($) {
 	Responsive_InitResponsiveToggleEvents( $ );
 
 	Responsive_InitJQPlotHooks( $ );
+
+	if ( window.SupportTabletScreenMode && window.SupportTabletScreenMode() )
+		Responsive_InitForTablet( $ );
 });
+
+function Responsive_InitForTablet( $ )
+{
+	// support using gamepad to change slider position
+	$( 'input[type=range]' ).on( 'vgp_ondirection', function( event ) {
+									
+		if ( event.originalEvent.detail.button == 11 || event.originalEvent.detail.button == 12 )
+		{
+			if ( event.originalEvent.detail.button == 11 ) // EGamepadButton.DIR_LEFT
+				this.stepDown();
+			else if ( event.originalEvent.detail.button == 12 ) // EGamepadButton.DIR_RIGHT
+				this.stepUp();
+
+			$( this ).trigger( 'input' ).trigger( 'change' );
+
+			return false; // prevent the message from propagating
+		}
+	} );
+}
 
 function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalMenuEvents )
 {

@@ -532,6 +532,14 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 	ShowWithFade( $Hover, speed );
 }
 
+function UpdateWishlistCount( nCount )
+{
+	if ( nCount == 0 )
+		$JFromIDOrElement('wishlist_link').text( 'Wishlist' );
+	else
+		$JFromIDOrElement('wishlist_link').html( 'Wishlist (<span id="wishlist_item_count_value">' + nCount.toString() + '</span>)' );
+}
+
 function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref, divToHide2 )
 {
 	if ( !g_AccountID )
@@ -566,6 +574,8 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
                 $JFromIDOrElement(divToShowError).show();
             }
 
+			UpdateWishlistCount( data.wishlistCount );
+
 			if ( typeof GDynamicStore != 'undefined' )
 				GDynamicStore.InvalidateCache();
 		}).fail( function() {
@@ -595,6 +605,8 @@ function RemoveFromWishlist( appid, divToHide, divToShowSuccess, divToShowError,
 				$JFromIDOrElement(divToShowError).show();
 			}
 
+			UpdateWishlistCount( data.wishlistCount );
+
 			if ( typeof GDynamicStore != 'undefined' )
 				GDynamicStore.InvalidateCache();
 		}).fail( function() {
@@ -616,6 +628,7 @@ function AddToWishlistButton( button, appid, navref )
 			{
 				$J(button).addClass('btn_disabled');
 				$J('span',button).text("On Wishlist");
+				UpdateWishlistCount( data.wishlistCount );
 			}
 			else
 			{

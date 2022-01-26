@@ -45,6 +45,7 @@
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
 
+
 	/* Corners */
 	--gpCorner-Small: 1px;
 	--gpCorner-Medium: 2px;
@@ -58,6 +59,10 @@
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 32vw;
+
+	/* Game capsule widths */
+	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -76,14 +81,9 @@
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
-	/* Animation */
+	/* Animation TODO: REMOVE THESE */
 	--gpTransition-Short: all 0.2s ease;
 	--gpTransition-Shorter: all 0.1s ease;
-
-	/* Focus */
-	--gpFocus: 4px solid white;
-	--gpUnfocus: 0px solid #FFFFFF00;
-
 }
 @media screen and ( min-width: 501px ) and ( max-width: 910px ) {
 
@@ -1040,6 +1040,13 @@
 		display: block !important;
 	}
 
+
+	html.responsive #appDetailsUnderlinedLinks {
+		margin-top: 24px;
+	}
+
+
+
 	/* apply a right chevron to the right side of the element's background  */
 	html.responsive .responsive_chevron_right {
 		background-image: url('/public/images//v6/chevron_right.png');
@@ -1249,6 +1256,10 @@
 	/* Carousel items */
 	html.responsive .highlight_carousel_item {
 		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive:not(.legacy_mobile) .carousel_container .responsive_scroll_snap_ctn {
+		padding-right: unset;
 	}
 
 
@@ -1868,6 +1879,7 @@
 
 	html.responsive #review_create .input_box {
 		resize: none;
+		height: 80px;
 	}
 
 	html.responsive .review_controls_right {
@@ -2013,6 +2025,16 @@
 		border-radius: var(--gpCorner-Medium);
 		color: var(--gpColor-Blue);
 		transition: all 0.1s ease;
+	}
+
+	html.responsive .details_block a.linkbar.gpfocus,
+	html.responsive .responsive_banner_link.gpfocus,
+	html.responsive .user_reviews.gpfocus,
+	html.responsive .purchase_options_banners.gpfocus,
+	html.responsive .glance_tags_ctn .glance_tags .app_tag.gpfocus {
+		background-color: var(--gpBackground-LightHard);
+		border-radius: 0px;
+		color: white !important;
 	}
 
 
@@ -2353,7 +2375,7 @@
 	html.responsive .game_description_column .block .block_content a {
 		border:unset;
 		background: var(--gpStoreDarkestGrey);
-		margin: 5px 8px 5px 0;
+		margin: 8px 8px 8px 0;
 		padding: 8px;
 		height: auto;
 		scroll-snap-align: start;
@@ -2540,6 +2562,10 @@
 	html.responsive .responsive_review_leftcol_ctn .num_owned_games,
 	html.responsive .responsive_review_leftcol_ctn .num_reviews {
 		border-left: 1px solid var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .review_box.partial .content {
+		max-height: 80px;
 	}
 
 
@@ -3007,7 +3033,20 @@
 		background: var(--gpColor-BlueHi) !important;
 	}
 
+    html.responsive .block .block_content_inner #AwardsDefault img {
+        max-width: 100px;
+    }
 
+    html.responsive #AwardsDefault .game_page_autocollapse {
+		align-items: center;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 10px;
+		justify-items: center;
+    }
 
+	html.responsive #AwardsDefault br {
+		display: none;
+	}
 
 }

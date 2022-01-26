@@ -43,15 +43,18 @@
                 this.isExpired() &&
                   !r &&
                   ((this.eState = i.Pending),
-                  t().then(function (r) {
-                    if (n.eState == i.Rerequest)
-                      return n.expireData(), void n.getData(e, t, a);
-                    r
-                      ? ((n.data = a ? a(r) : r),
-                        n.delayNewData(e),
-                        (n.eState = i.Valid))
-                      : (n.eState = i.Failed);
-                  })),
+                  t()
+                    .then(function (r) {
+                      if (n.eState == i.Rerequest)
+                        return n.expireData(), void n.getData(e, t, a);
+                      (n.data = a ? a(r) : r),
+                        r
+                          ? (n.delayNewData(e), (n.eState = i.Valid))
+                          : (n.eState = i.Failed);
+                    })
+                    .catch(function (e) {
+                      (n.data = a(void 0)), (n.eState = i.Failed);
+                    })),
                 this.data
               );
             }),

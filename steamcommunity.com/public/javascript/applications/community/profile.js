@@ -300,6 +300,8 @@
         WifiBar3Anim: "gamepadui_svg_library_WifiBar3Anim_2wGDz",
         WifiBar4: "gamepadui_svg_library_WifiBar4_2DSRH",
         WifiBar4Anim: "gamepadui_svg_library_WifiBar4Anim_3jrA8",
+        GenericGamepadHighlight:
+          "gamepadui_svg_library_GenericGamepadHighlight_3-ZZD",
       };
     },
     "0JRL": function (e, t, n) {
@@ -4687,7 +4689,7 @@
                 L.d,
                 {
                   onClick: function (e) {
-                    var t = Object(W.m)(e),
+                    var t = Object(W.n)(e),
                       n = g.GetUploadImages()[0];
                     Object(z.d)(
                       c.createElement(ee.a, {
@@ -4799,7 +4801,7 @@
                         return C(g, e);
                       },
                     }),
-                    Object(W.m)(e)
+                    Object(W.n)(e)
                   );
                 },
               },
@@ -5143,7 +5145,7 @@
                 c.createElement(ue, {
                   textareaRef: this.props.fnTextareaRef(),
                 }),
-                Object(W.m)(e)
+                Object(W.n)(e)
               );
             }),
             (t.prototype.ShowHelpDialog = function (e) {
@@ -5152,7 +5154,7 @@
                   c.createElement(ae, {
                     formatType: this.props.showFormatHelp,
                   }),
-                  Object(W.m)(e)
+                  Object(W.n)(e)
                 );
             }),
             (t.prototype.OnConvertHTMLToBBCodeDialog = function (e) {
@@ -5160,7 +5162,7 @@
                 c.createElement(pe, {
                   textareaRef: this.props.fnTextareaRef(),
                 }),
-                Object(W.m)(e)
+                Object(W.n)(e)
               );
             }),
             (t.prototype.OnOpenYoutubeDialog = function (e) {
@@ -5170,7 +5172,7 @@
                   textareaRef: this.props.fnTextareaRef(),
                   pathToImages: t,
                 }),
-                Object(W.m)(e)
+                Object(W.n)(e)
               );
             }),
             (t.prototype.OnOpenImageDialog = function (e) {
@@ -5178,7 +5180,7 @@
                 c.createElement(de, {
                   textareaRef: this.props.fnTextareaRef(),
                 }),
-                Object(W.m)(e)
+                Object(W.n)(e)
               );
             }),
             (t.prototype.OnOpenSpeakerDialog = function (e) {
@@ -5187,7 +5189,7 @@
                   clanSteamID: this.props.clanSteamID,
                   textareaRef: this.props.fnTextareaRef(),
                 }),
-                Object(W.m)(e)
+                Object(W.n)(e)
               );
             }),
             (t.prototype.OnEmoticonSelected = function (e, t) {
@@ -13371,7 +13373,7 @@
                     onClick: function (n) {
                       Object(_.c)(t),
                         (function (e, t, n) {
-                          var r = Object(a.m)(e),
+                          var r = Object(a.n)(e),
                             i = r.document.createElement("form");
                           (i.action = C.c.STORE_BASE_URL + "cart/"),
                             (i.method = "POST"),
@@ -14033,7 +14035,7 @@
               ? Ze.a
               : C.h.is_limited
               ? function (e) {
-                  var t = Object(a.m)(e),
+                  var t = Object(a.n)(e),
                     n = c.createElement(
                       "a",
                       { href: C.c.HELP_BASE_URL },
@@ -14051,7 +14053,7 @@
                   );
                 }
               : function (e) {
-                  var t = Object(a.m)(e);
+                  var t = Object(a.n)(e);
                   Object(xe.b)(
                     c.createElement(kt, { eGenre: s, language: o }),
                     t,
@@ -15132,10 +15134,7 @@
                       "div",
                       { className: $e.a.SalePageLogoCtn },
                       c.createElement("img", {
-                        src: le.a.GetWithFallback(
-                          a.jsondata.localized_sale_logo,
-                          s
-                        ),
+                        src: a.GetImageURLWithFallback("sale_logo", s),
                       })
                     ),
                   c.createElement($t, {
@@ -15682,6 +15681,7 @@
                                   !Boolean(
                                     n.jsondata.content_hub_restricted_width
                                   )),
+                                (p[t.single_item_style || ""] = !0),
                                 p)
                               ),
                             },
@@ -15854,34 +15854,36 @@
           )
             return null;
           var o = le.a.GetWithFallback(t.text_section_contents, r);
-          return c.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                $e.a.SaleSection,
-                je.a.SaleSectionCtn,
-                "SaleSectionForCustomCSS"
-              ),
-              style: Sn(t, n),
-            },
-            c.createElement(en, Object(i.a)({}, e)),
-            c.createElement(
-              "div",
-              {
-                className: Object(ce.a)(
-                  Re.a.SaleSectionContainer,
-                  "SaleTextCtn"
-                ),
-              },
-              c.createElement(Ye.a, {
-                text: o,
-                partnerEventStore: D.d,
-                showErrorInfo: a,
-                event: n,
-                languageOverride: r,
-              })
-            )
-          );
+          return null == o || 0 === o.length
+            ? null
+            : c.createElement(
+                "div",
+                {
+                  className: Object(ce.a)(
+                    $e.a.SaleSection,
+                    je.a.SaleSectionCtn,
+                    "SaleSectionForCustomCSS"
+                  ),
+                  style: Sn(t, n),
+                },
+                c.createElement(en, Object(i.a)({}, e)),
+                c.createElement(
+                  "div",
+                  {
+                    className: Object(ce.a)(
+                      Re.a.SaleSectionContainer,
+                      "SaleTextCtn"
+                    ),
+                  },
+                  c.createElement(Ye.a, {
+                    text: o,
+                    partnerEventStore: D.d,
+                    showErrorInfo: a,
+                    event: n,
+                    languageOverride: r,
+                  })
+                )
+              );
         }),
         an = (function () {
           function e(e) {
@@ -16671,7 +16673,7 @@
                   expectedMatches: m,
                   saleCapsules: Object(B.g)(r.facets),
                 }),
-                Object(a.m)(e)
+                Object(a.n)(e)
               );
             }),
             (t.prototype.PrependDynamicRevealEvents = function (e, t) {
@@ -19391,6 +19393,7 @@
         ColorNightmareTheme: "profilethemecolors_ColorNightmareTheme_2LNsd",
         MurugiahTheme: "profilethemecolors_MurugiahTheme_22BXC",
         Winter2021Theme: "profilethemecolors_Winter2021Theme_X0_g8",
+        Lunar2022Theme: "profilethemecolors_Lunar2022Theme_1NSMH",
       };
     },
     "90oc": function (e, t, n) {
@@ -19442,7 +19445,10 @@
         return r;
       }),
         n.d(t, "a", function () {
-          return b;
+          return g;
+        }),
+        n.d(t, "c", function () {
+          return y;
         });
       var r,
         i = n("mrSG"),
@@ -19598,45 +19604,44 @@
             e
           );
         })(),
-        h = (n("kLLr"), n("r64O")),
-        _ =
-          (n("6oCP"),
-          n("q1tI"),
-          (function () {
-            function e(e) {
-              (this.appid = 0),
-                (this.can_edit = !1),
-                (this.owns_app = !1),
-                (this.follows_app = !1),
-                (this.support_user = !1),
-                (this.valve_admin = !1),
-                (this.limited_user = !1),
-                (this.event_ignored = new Array()),
-                (this.event_followed = new Array()),
-                (this.event_followed_flags = new Array()),
-                (this.clanid = e);
-            }
-            return (
-              Object(i.c)([s.C], e.prototype, "clanid", void 0),
-              Object(i.c)([s.C], e.prototype, "appid", void 0),
-              Object(i.c)([s.C], e.prototype, "can_edit", void 0),
-              Object(i.c)([s.C], e.prototype, "owns_app", void 0),
-              Object(i.c)([s.C], e.prototype, "follows_app", void 0),
-              Object(i.c)([s.C], e.prototype, "support_user", void 0),
-              Object(i.c)([s.C], e.prototype, "valve_admin", void 0),
-              Object(i.c)([s.C], e.prototype, "limited_user", void 0),
-              Object(i.c)([s.C], e.prototype, "event_ignored", void 0),
-              Object(i.c)([s.C], e.prototype, "event_followed", void 0),
-              Object(i.c)([s.C], e.prototype, "event_followed_flags", void 0),
-              e
-            );
-          })());
+        h = n("kLLr"),
+        _ = n("r64O"),
+        b = (n("6oCP"), n("q1tI")),
+        v = (function () {
+          function e(e) {
+            (this.appid = 0),
+              (this.can_edit = !1),
+              (this.owns_app = !1),
+              (this.follows_app = !1),
+              (this.support_user = !1),
+              (this.valve_admin = !1),
+              (this.limited_user = !1),
+              (this.event_ignored = new Array()),
+              (this.event_followed = new Array()),
+              (this.event_followed_flags = new Array()),
+              (this.clanid = e);
+          }
+          return (
+            Object(i.c)([s.C], e.prototype, "clanid", void 0),
+            Object(i.c)([s.C], e.prototype, "appid", void 0),
+            Object(i.c)([s.C], e.prototype, "can_edit", void 0),
+            Object(i.c)([s.C], e.prototype, "owns_app", void 0),
+            Object(i.c)([s.C], e.prototype, "follows_app", void 0),
+            Object(i.c)([s.C], e.prototype, "support_user", void 0),
+            Object(i.c)([s.C], e.prototype, "valve_admin", void 0),
+            Object(i.c)([s.C], e.prototype, "limited_user", void 0),
+            Object(i.c)([s.C], e.prototype, "event_ignored", void 0),
+            Object(i.c)([s.C], e.prototype, "event_followed", void 0),
+            Object(i.c)([s.C], e.prototype, "event_followed_flags", void 0),
+            e
+          );
+        })();
       !(function (e) {
         (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
           (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
           (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
       })(r || (r = {}));
-      var b = (function () {
+      var g = (function () {
         function e() {
           (this.m_mapClanToUserPermissions = new Map()),
             (this.m_mapAnnounceGIDToVote = new Map()),
@@ -19647,7 +19652,7 @@
         return (
           (e.Get = function () {
             return (
-              Object(h.a)(
+              Object(_.a)(
                 !!e.s_EventUserStore,
                 "Have not yet initialized global EventUserStore"
               ),
@@ -19664,7 +19669,7 @@
                 switch (r.label) {
                   case 0:
                     return (
-                      Object(h.a)(
+                      Object(_.a)(
                         !e.s_EventUserStore,
                         "Already initialized global EventUserStore"
                       ),
@@ -19701,7 +19706,7 @@
                     this.ValidateStoreDefault(n) &&
                       (Object(s.G)(function () {
                         n.forEach(function (t) {
-                          var n = new _(t.clanid),
+                          var n = new v(t.clanid),
                             r = { result: n, promise: e.RemapToPromise(n) };
                           a.CopyFromResponseToTrack(r, t),
                             a.m_mapClanToUserPermissions.set(t.clanid, r);
@@ -19785,7 +19790,7 @@
             return this.m_mapClanToUserPermissions.has(e);
           }),
           (e.prototype.GetPartnerEventPermissions = function (e) {
-            if (!e || !e.BIsValid()) return new _(0);
+            if (!e || !e.BIsValid()) return new v(0);
             var t = e.GetAccountID();
             return (
               this.m_mapClanToUserPermissions.has(t) ||
@@ -19817,7 +19822,7 @@
                   (n = this.m_mapClanToUserPermissions.get(t)) ||
                     ((n = {
                       promise: this.InternalLoadSingleAppEventPermissions(e),
-                      result: new _(t),
+                      result: new v(t),
                     }),
                     this.m_mapClanToUserPermissions.set(t, n)),
                   [2, n.promise]
@@ -19853,7 +19858,7 @@
                 d,
                 f,
                 h,
-                b = this;
+                _ = this;
               return Object(i.e)(this, function (i) {
                 switch (i.label) {
                   case 0:
@@ -19861,7 +19866,7 @@
                       (r = t.GetAccountID()),
                       (a = !Boolean(m.h.logged_in)),
                       this.m_mapClanToUserPermissions.has(r) ||
-                        ((c = new _(t.GetAccountID())),
+                        ((c = new v(t.GetAccountID())),
                         this.m_mapClanToUserPermissions.set(r, {
                           result: c,
                           promise: e.RemapToPromise(c),
@@ -19921,7 +19926,7 @@
                     return (
                       a &&
                         Object(s.G)(function () {
-                          var e = b.m_mapClanToUserPermissions.get(r);
+                          var e = _.m_mapClanToUserPermissions.get(r);
                           (e.result.appid = n && n.data ? n.data.appid : 0),
                             (e.result.can_edit = !1),
                             (e.result.clanid = n && n.data ? n.data.clanid : 0),
@@ -20189,6 +20194,31 @@
           e
         );
       })();
+      function y(e) {
+        var t = Object(b.useState)(g.Get().BIsPartnerEventPermissionsLoaded(e)),
+          n = t[0],
+          r = t[1],
+          i = h.a.InitFromClanID(e),
+          a = Object(b.useState)(g.Get().GetPartnerEventPermissions(i)),
+          o = a[0],
+          s = a[1];
+        return (
+          Object(b.useEffect)(
+            function () {
+              if (!n) {
+                var t = h.a.InitFromClanID(e);
+                g.Get()
+                  .LoadSingleAppEventPermissions(t)
+                  .then(function (e) {
+                    s(e), r(!0);
+                  });
+              }
+            },
+            [n, e]
+          ),
+          o
+        );
+      }
     },
     A5MU: function (e, t, n) {
       "use strict";
@@ -22108,7 +22138,7 @@
                         })
                       )
                     ),
-                    Object(p.m)(t)
+                    Object(p.n)(t)
                   );
                 } else b(!c);
             };
@@ -22562,14 +22592,17 @@
                   );
                 }),
               r &&
-                a.a.createElement("div", {
-                  className: S.a.CompatibilityDetailsSeparator,
-                }),
-              r &&
                 a.a.createElement(
                   "div",
-                  { className: S.a.CompatibilityDetailsNoteHeader },
-                  Object(g.f)("#SteamDeckVerified_DescriptionSubHeader_Note")
+                  { className: S.a.CompatabilityDetailsNoteContainer },
+                  a.a.createElement(
+                    "div",
+                    { className: S.a.CompatibilityDetailsNoteLabel },
+                    Object(g.f)("#SteamDeckVerified_DescriptionSubHeader_Note")
+                  ),
+                  a.a.createElement("div", {
+                    className: S.a.CompatibilityDetailsSeparator,
+                  })
                 ),
               r &&
                 n.resolved_items
@@ -22585,7 +22618,11 @@
                       },
                       a.a.createElement("span", null, Object(g.f)(e.loc_token))
                     );
-                  })
+                  }),
+              !r &&
+                a.a.createElement("div", {
+                  className: S.a.CompatibilityNoNotes,
+                })
             )
           : null;
       }
@@ -22635,7 +22672,7 @@
               s.c,
               {
                 onClick: function (e) {
-                  return E(Object(v.m)(e), o);
+                  return E(Object(v.n)(e), o);
                 },
               },
               a.a.createElement(
@@ -32866,12 +32903,17 @@
         X = function (e) {
           var t = e.emoticon,
             n = e.emoticonHoverStore,
-            r = !t.last_used && t.time_received;
+            r = e.large,
+            i = !t.last_used && t.time_received;
           return a.a.createElement(
             "div",
             { className: _.a.EmoticonItem },
-            a.a.createElement(P, { emoticon: t.name, emoticonHoverStore: n }),
-            r && a.a.createElement(re, null)
+            a.a.createElement(P, {
+              emoticon: t.name,
+              emoticonHoverStore: n,
+              large: r,
+            }),
+            i && a.a.createElement(re, null)
           );
         },
         $ = (function (e) {
@@ -49585,8 +49627,8 @@
         Z1: "friendsnooze_Z1_2hnF3",
         Z2: "friendsnooze_Z2_VmQTO",
         Z3: "friendsnooze_Z3_29mta",
-        animating: "friendsnooze_animating_2rXc7",
         hoverParent: "friendsnooze_hoverParent_3-8cB",
+        animating: "friendsnooze_animating_2rXc7",
         Snoring: "friendsnooze_Snoring_38wIV",
       };
     },
@@ -51449,7 +51491,7 @@
                     case 0:
                       return (
                         (t = f.a.BIsDoorOpened(this.props.iDoorIndex)),
-                        (n = Object(I.m)(e)),
+                        (n = Object(I.n)(e)),
                         t
                           ? (Object(F.b)(
                               s.createElement(
@@ -51478,7 +51520,7 @@
               });
             }),
             (t.prototype.ShowLimitedUserDialog = function (e) {
-              var t = Object(I.m)(e),
+              var t = Object(I.n)(e),
                 n = s.createElement(
                   "a",
                   { href: A.c.HELP_BASE_URL },
@@ -51766,248 +51808,223 @@
     YWVM: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return y;
+        return v;
       });
-      var r = n("mrSG"),
-        i = n("TyAF"),
-        a = n("q1tI"),
-        o = (n("BVKn"), n("9w6b")),
-        s = n("6oCP"),
-        c = n("Mgs7"),
-        l = n("IjL/"),
-        u = n("Z7M3"),
-        d = n("mB/g"),
-        m = n("fpVW"),
-        p = n("ka0M"),
-        f = n("exH9"),
-        h = n("X3Ds"),
-        _ = n("TLQK"),
-        b = n("opsS"),
-        v = n("lkRc"),
-        g = n("6eA3"),
-        y = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (
-              (t.state = {
-                bRedirectToHome: !1,
-                nMaxSaleDayIndex: S(t.props.eventModel),
-                nSaleDayIndex: t.props.eventModel
-                  ? t.props.eventModel.GetDayIndexFromEventStart()
-                  : 0,
-              }),
-              t
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.OnDeleteVerifyRequest = function (e) {
-              Object(p.c)(
-                a.createElement(u.a, {
-                  eventModel: this.props.eventModel,
-                  onDeleteSuccessAndCloseDialog: this
-                    .OnDeleteSuccessAndComplete,
-                  partnerEventStore: this.props.partnerEventStore,
-                }),
-                Object(h.m)(e)
-              );
-            }),
-            (t.prototype.OnDeleteSuccessAndComplete = function () {
-              this.setState({ bRedirectToHome: !0 });
-            }),
-            (t.prototype.OnChangeVisibilityDate = function (e) {
-              this.setState({ nSaleDayIndex: e }),
-                this.props.fnOnUpdateSaleDayIndex(e);
-            }),
-            (t.prototype.render = function () {
-              var e = this,
-                t = this.props,
-                n = t.addtionalAdminButtons,
-                r = t.eventModel,
-                i = t.bPreviewMode,
-                u = t.partnerEventStore;
-              if (this.state.bRedirectToHome)
-                return Object(d.j)(r, d.a.k_eCommunityAdminPage);
-              var p = o.a.Get().GetPartnerEventPermissions(r.clanSteamID),
-                h = r.visibility_state == s.b.k_EEventStateVisible,
-                b = r.visibility_state == s.b.k_EEventStateStaged;
-              if (p.can_edit || p.support_user) {
-                var y = [];
-                if (void 0 !== this.state.nMaxSaleDayIndex)
-                  for (var S = 0; S <= this.state.nMaxSaleDayIndex; ++S)
-                    y.push({
-                      label: Object(_.f)("#SalePage_Admin_SaleEventDay", S + 1),
-                      data: S,
+      var r = n("aoTL"),
+        i = n("q1tI"),
+        a = (n("BVKn"), n("9w6b")),
+        o = n("6oCP"),
+        s = n("Mgs7"),
+        c = n("IjL/"),
+        l = n("Z7M3"),
+        u = n("mB/g"),
+        d = n("fpVW"),
+        m = n("ka0M"),
+        p = n("exH9"),
+        f = n("X3Ds"),
+        h = n("TLQK"),
+        _ = n("lkRc"),
+        b = n("6eA3");
+      function v(e) {
+        var t = e.eventModel,
+          n = e.partnerEventStore,
+          v = e.addtionalAdminButtons,
+          g = e.fnOnUpdateSaleDayIndex,
+          y = e.bPreviewMode,
+          S = i.useState(!1),
+          B = S[0],
+          E = S[1],
+          C = i.useState(
+            (function (e) {
+              var t = void 0;
+              e &&
+                e.GetSaleSectionCount() > 0 &&
+                e.BHasSaleEnabled() &&
+                e.GetSaleSections().forEach(function (e) {
+                  "items" != e.section_type ||
+                    e.smart_section ||
+                    e.capsules.forEach(function (e) {
+                      void 0 !== e.visibility_index &&
+                        (void 0 === t || t < e.visibility_index) &&
+                        (t = e.visibility_index);
                     });
-                var B = Object(v.e)(),
-                  E = "community" == B,
-                  C = "store" == B;
-                return a.createElement(
-                  l.a,
-                  null,
-                  a.createElement(
-                    "div",
-                    { className: g.DisplayAdminPanel },
-                    a.createElement(
-                      "span",
-                      { className: g.DisplayAdminPanel_Title },
-                      Object(_.f)("#EventDisplay_Admin_Title")
-                    ),
-                    a.createElement(
-                      "div",
-                      { className: g.DisplayAdminPanel_ctn },
-                      n,
-                      n &&
-                        a.createElement(
-                          "span",
-                          { className: g.DisplayAdminPanel_Spacer },
-                          " "
-                        ),
-                      a.createElement(
-                        d.c,
-                        {
-                          eventModel: r,
-                          route: d.a.k_eCommunityEdit,
-                          className: Object(f.a)(m.Button, g.AdminButton),
-                        },
-                        Object(_.f)("#EventEditor_Edit")
-                      ),
-                      u &&
-                        a.createElement(
-                          "span",
-                          {
-                            className: m.Button + " " + g.AdminButton,
-                            onClick: this.OnDeleteVerifyRequest,
-                          },
-                          Object(_.f)("#EventDisplay_DeleteEvent")
-                        ),
-                      !h &&
-                        a.createElement(
-                          a.Fragment,
-                          null,
-                          a.createElement(
-                            d.c,
-                            {
-                              eventModel: r,
-                              route: d.a.k_eCommunityPublish,
-                              className: Object(f.a)(m.Button, g.AdminButton),
-                            },
-                            Object(_.f)(
-                              b
-                                ? "#EventEditor_Publish_VisibleNow"
-                                : "#Button_Publish"
-                            )
-                          )
-                        ),
-                      a.createElement(
-                        d.c,
-                        {
-                          eventModel: r,
-                          route: d.a.k_eCommunityAdminPage,
-                          className: Object(f.a)(m.Button, g.AdminButton),
-                        },
-                        Object(_.f)("#EventDisplay_Events")
-                      ),
-                      Boolean(
-                        void 0 !== this.state.nMaxSaleDayIndex && y.length > 0
-                      ) &&
-                        a.createElement(c.h, {
-                          strDropDownClassName: m.DropDownScroll,
-                          rgOptions: y,
-                          selectedOption: Math.min(
-                            this.state.nMaxSaleDayIndex,
-                            this.state.nSaleDayIndex
-                          ),
-                          onChange: function (t) {
-                            return e.OnChangeVisibilityDate(t.data);
-                          },
-                          bDisableMouseOverlay: !0,
-                          contextMenuPositionOptions: {
-                            bDisableMouseOverlay: !0,
-                          },
-                        }),
-                      Boolean(
-                        r.jsondata.bSaleEnabled && this.props.bPreviewMode
-                      ) &&
-                        a.createElement(
-                          d.c,
-                          {
-                            eventModel: r,
-                            route: d.a.k_eStoreSalePage,
-                            className: Object(f.a)(m.Button, g.AdminButton),
-                          },
-                          Object(_.f)("#EventDisplay_SalesPage")
-                        ),
-                      Boolean(
-                        r.jsondata.bSaleEnabled && v.h.is_support && r.GID
-                      ) &&
-                        a.createElement(
-                          "a",
-                          {
-                            href:
-                              v.c.STATS_BASE_URL +
-                              "sales/details/?gid=" +
-                              r.GID +
-                              "&clanid=" +
-                              r.clanSteamID.GetAccountID(),
-                            target: v.c.IN_CLIENT ? "" : "_blank",
-                            className: Object(f.a)(
-                              m.Button,
-                              g.AdminButton,
-                              m.ValveOnlyBackground
-                            ),
-                          },
-                          Object(_.f)("#EventDisplay_StatsPage")
-                        ),
-                      Boolean(h && (C || i)) &&
-                        a.createElement(
-                          d.c,
-                          {
-                            eventModel: r,
-                            route: d.a.k_eCommunityView,
-                            className: Object(f.a)(m.Button, g.AdminButton),
-                          },
-                          Object(_.f)("#EventDisplay_ViewOnCommunity")
-                        ),
-                      Boolean(h && E) &&
-                        a.createElement(
-                          d.c,
-                          {
-                            eventModel: r,
-                            route: d.a.k_eStoreView,
-                            className: Object(f.a)(m.Button, g.AdminButton),
-                          },
-                          Object(_.f)("#EventDisplay_ViewOnStore")
-                        )
-                    )
-                  )
-                );
-              }
-              return a.createElement("span", null);
-            }),
-            Object(r.c)([b.a], t.prototype, "OnDeleteVerifyRequest", null),
-            Object(r.c)([b.a], t.prototype, "OnDeleteSuccessAndComplete", null),
-            Object(r.c)([b.a], t.prototype, "OnChangeVisibilityDate", null),
-            (t = Object(r.c)([i.a], t))
-          );
-        })(a.Component);
-      function S(e) {
-        var t = void 0;
-        return (
-          e &&
-            e.GetSaleSectionCount() > 0 &&
-            e.BHasSaleEnabled() &&
-            e.GetSaleSections().forEach(function (e) {
-              "items" != e.section_type ||
-                e.smart_section ||
-                e.capsules.forEach(function (e) {
-                  void 0 !== e.visibility_index &&
-                    (void 0 === t || t < e.visibility_index) &&
-                    (t = e.visibility_index);
                 });
-            }),
-          t
-        );
+              return t;
+            })(t)
+          ),
+          w = C[0],
+          O = (C[1], i.useState(t ? t.GetDayIndexFromEventStart() : 0)),
+          I = O[0],
+          j = O[1],
+          T = Object(r.d)(function () {
+            return [
+              t.visibility_state,
+              t.jsondata.bSaleEnabled,
+              t.GID,
+              t.clanSteamID.GetAccountID(),
+            ];
+          }),
+          R = T[0],
+          A = T[1],
+          D = T[2],
+          M = T[3],
+          k = Object(a.c)(M);
+        if (B) return Object(u.j)(t, u.a.k_eCommunityAdminPage);
+        var L = R == o.b.k_EEventStateVisible,
+          P = R == o.b.k_EEventStateStaged;
+        if ((k.can_edit || k.support_user) && !_.c.IN_GAMEPADUI) {
+          var G = [];
+          if (void 0 !== w)
+            for (var N = 0; N <= w; ++N)
+              G.push({
+                label: Object(h.f)("#SalePage_Admin_SaleEventDay", N + 1),
+                data: N,
+              });
+          var F = Object(_.e)(),
+            z = "community" == F,
+            U = "store" == F;
+          return i.createElement(
+            c.a,
+            null,
+            i.createElement(
+              "div",
+              { className: b.DisplayAdminPanel },
+              i.createElement(
+                "span",
+                { className: b.DisplayAdminPanel_Title },
+                Object(h.f)("#EventDisplay_Admin_Title")
+              ),
+              i.createElement(
+                "div",
+                { className: b.DisplayAdminPanel_ctn },
+                v,
+                v &&
+                  i.createElement(
+                    "span",
+                    { className: b.DisplayAdminPanel_Spacer },
+                    " "
+                  ),
+                i.createElement(
+                  u.c,
+                  {
+                    eventModel: t,
+                    route: u.a.k_eCommunityEdit,
+                    className: Object(p.a)(d.Button, b.AdminButton),
+                  },
+                  Object(h.f)("#EventEditor_Edit")
+                ),
+                n &&
+                  i.createElement(
+                    "span",
+                    {
+                      className: d.Button + " " + b.AdminButton,
+                      onClick: function (e) {
+                        Object(m.d)(
+                          i.createElement(l.a, {
+                            eventModel: t,
+                            onDeleteSuccessAndCloseDialog: function () {
+                              return E(!0);
+                            },
+                            partnerEventStore: n,
+                          }),
+                          Object(f.n)(e)
+                        );
+                      },
+                    },
+                    Object(h.f)("#EventDisplay_DeleteEvent")
+                  ),
+                !L &&
+                  i.createElement(
+                    i.Fragment,
+                    null,
+                    i.createElement(
+                      u.c,
+                      {
+                        eventModel: t,
+                        route: u.a.k_eCommunityPublish,
+                        className: Object(p.a)(d.Button, b.AdminButton),
+                      },
+                      Object(h.f)(
+                        P
+                          ? "#EventEditor_Publish_VisibleNow"
+                          : "#Button_Publish"
+                      )
+                    )
+                  ),
+                i.createElement(
+                  u.c,
+                  {
+                    eventModel: t,
+                    route: u.a.k_eCommunityAdminPage,
+                    className: Object(p.a)(d.Button, b.AdminButton),
+                  },
+                  Object(h.f)("#EventDisplay_Events")
+                ),
+                Boolean(void 0 !== w && G.length > 0) &&
+                  i.createElement(s.h, {
+                    strDropDownClassName: d.DropDownScroll,
+                    rgOptions: G,
+                    selectedOption: Math.min(w, I),
+                    onChange: function (e) {
+                      j(e.data), g(e.data);
+                    },
+                    bDisableMouseOverlay: !0,
+                    contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
+                  }),
+                Boolean(t.jsondata.bSaleEnabled && y) &&
+                  i.createElement(
+                    u.c,
+                    {
+                      eventModel: t,
+                      route: u.a.k_eStoreSalePage,
+                      className: Object(p.a)(d.Button, b.AdminButton),
+                    },
+                    Object(h.f)("#EventDisplay_SalesPage")
+                  ),
+                Boolean(A && _.h.is_support && D) &&
+                  i.createElement(
+                    "a",
+                    {
+                      href:
+                        _.c.STATS_BASE_URL +
+                        "sales/details/?gid=" +
+                        D +
+                        "&clanid=" +
+                        M,
+                      target: _.c.IN_CLIENT ? "" : "_blank",
+                      className: Object(p.a)(
+                        d.Button,
+                        b.AdminButton,
+                        d.ValveOnlyBackground
+                      ),
+                    },
+                    Object(h.f)("#EventDisplay_StatsPage")
+                  ),
+                Boolean(L && (U || y)) &&
+                  i.createElement(
+                    u.c,
+                    {
+                      eventModel: t,
+                      route: u.a.k_eCommunityView,
+                      className: Object(p.a)(d.Button, b.AdminButton),
+                    },
+                    Object(h.f)("#EventDisplay_ViewOnCommunity")
+                  ),
+                Boolean(L && z) &&
+                  i.createElement(
+                    u.c,
+                    {
+                      eventModel: t,
+                      route: u.a.k_eStoreView,
+                      className: Object(p.a)(d.Button, b.AdminButton),
+                    },
+                    Object(h.f)("#EventDisplay_ViewOnStore")
+                  )
+              )
+            )
+          );
+        }
+        return i.createElement("span", null);
       }
     },
     YgaH: function (e, t, n) {
@@ -57836,13 +57853,15 @@
         Verified: "deckverified_Verified_ewmg-",
         Playable: "deckverified_Playable_1n8va",
         Unsupported: "deckverified_Unsupported_2Q0ld",
+        CompatibilityNoNotes: "deckverified_CompatibilityNoNotes_2u5TR",
         CompatibilityDetailsSeparator:
           "deckverified_CompatibilityDetailsSeparator_2mwbd",
         CompatibilityDetailsResultIcon:
           "deckverified_CompatibilityDetailsResultIcon_-L3Xu",
-        CompatibilityDetailsNote: "deckverified_CompatibilityDetailsNote_1M2Gb",
-        CompatibilityDetailsNoteHeader:
-          "deckverified_CompatibilityDetailsNoteHeader_1PXqk",
+        CompatabilityDetailsNoteContainer:
+          "deckverified_CompatabilityDetailsNoteContainer_6_voo",
+        CompatibilityDetailsNoteLabel:
+          "deckverified_CompatibilityDetailsNoteLabel_32Xvt",
         CompatibilityDetailsNoteRow:
           "deckverified_CompatibilityDetailsNoteRow_1Wu_j",
       };
@@ -59685,7 +59704,7 @@
                   strDescription: Object(b.f)("#EventCurator_DismissBody"),
                   onOK: this.OnCommitDismiss,
                 }),
-                Object(D.m)(e)
+                Object(D.n)(e)
               );
             }),
             (t.prototype.GenerateNewsCuratorList = function () {
@@ -61890,7 +61909,7 @@
             (e.prototype.ShowBrowseCurator = function (t) {
               Ge()
                 ? e.Get().SetDisplay("browse_curator")
-                : Object(k.d)(c.createElement(q, null), Object(D.m)(t));
+                : Object(k.d)(c.createElement(q, null), Object(D.n)(t));
             }),
             Object(r.c)([o.C], e.prototype, "m_curDisplay", void 0),
             e
@@ -64848,7 +64867,13 @@
                       e.width &&
                       e.height &&
                       this.m_player.setSize(e.width, e.height)),
-                  !1);
+                  n.forcePause != e.forcePause);
+            }),
+            (t.prototype.componentDidUpdate = function (e) {
+              e.forcePause != this.props.forcePause &&
+                (this.props.forcePause
+                  ? this.m_player.pauseVideo()
+                  : this.m_player.playVideo());
             }),
             (t.prototype.DestroyPlayer = function () {
               if (this.m_player)
@@ -65121,7 +65146,7 @@
                       Object(F.f)("#EventCalendar_ManageMutedSources")
                     )
                   ),
-                  Object(te.m)(e)
+                  Object(te.n)(e)
                 );
               }),
               (t.prototype.OnUnMuteButton = function () {
@@ -73552,7 +73577,7 @@
             }),
             (t.prototype.FindScrollableAncestor = function (e) {
               var n = this;
-              return a.k(e, function (e) {
+              return a.l(e, function (e) {
                 var r = n.props.bHorizontal
                   ? window.getComputedStyle(e).overflowX
                   : window.getComputedStyle(e).overflowY;
@@ -74844,7 +74869,7 @@
                               : s.a.GetAppLinkInfo(e.appid),
                             onClick: function (t) {
                               c.a.Get().RecordEventRead(e, 8),
-                                Object(y.a)(e, b.m(t)),
+                                Object(y.a)(e, b.n(t)),
                                 t.stopPropagation(),
                                 t.preventDefault();
                             },
@@ -83268,7 +83293,7 @@
                     {
                       className: X.a.EventDetailsBtn,
                       onClick: function (t) {
-                        Object(W.a)(e.event, D.m(t)), t.preventDefault();
+                        Object(W.a)(e.event, D.n(t)), t.preventDefault();
                       },
                     },
                     Object(M.f)("#Sale_SeeEventDetails")
@@ -93432,6 +93457,7 @@
                   s.createElement(
                     "div",
                     { className: C.a.EventDetailTitleContainer },
+                    this.props.headerElement,
                     s.createElement(
                       "div",
                       {
@@ -94956,7 +94982,7 @@
                 emoticonStore: this.props.emoticonStore,
                 partnerEventStore: this.props.partnerEventStore,
               }),
-              Object(p.m)(e),
+              Object(p.n)(e),
               { strTitle: Object(c.f)("#Button_Share") }
             );
           }),
@@ -94967,13 +94993,13 @@
                   "#EventDisplay_Share_CommentMigrationInProcess"
                 ),
               }),
-              Object(p.m)(e)
+              Object(p.n)(e)
             );
           }),
           (t.prototype.OpenRepostDialogs = function (e) {
             Object(m.d)(
               i.createElement(ie, { eventModel: this.props.eventModel }),
-              Object(p.m)(e)
+              Object(p.n)(e)
             );
           }),
           (t.prototype.render = function () {
@@ -96274,7 +96300,7 @@
                             myReserveState: p,
                             fnSetTestReservationState: d,
                           }),
-                          Object(R.m)(e)
+                          Object(R.n)(e)
                         );
                       },
                     },
@@ -96463,7 +96489,7 @@
                       });
                   },
                 }),
-                Object(R.m)(e)
+                Object(R.n)(e)
               );
             },
             disabled: t,

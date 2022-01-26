@@ -162,11 +162,7 @@ CWishlistController.prototype.RemoveFromWishlist = function( nAppId = 0 )
 
 	ShowConfirmDialog("Remove this item from your wishlist?", "Are you sure you want to remove '%1$s' from your wishlist?<br><br>It can be re-added via the store page at any time.".replace(/%1\$s/,V_EscapeHTML(strName))).done(function(){
 
-		$J.ajax({
-			type: "POST",
-			url: g_strWishlistBaseURL + 'remove/',
-			data: {'appid':nAppId, sessionid: g_sessionID}
-		});
+		window.RemoveFromWishlist( nAppId );
 		GDynamicStore.InvalidateCache();
 
 		$J( '#wishlist_ctn' ).removeClass ( 'sorting' );

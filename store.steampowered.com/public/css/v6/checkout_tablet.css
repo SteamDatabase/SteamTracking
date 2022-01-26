@@ -45,6 +45,7 @@
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
 
+
 	/* Corners */
 	--gpCorner-Small: 1px;
 	--gpCorner-Medium: 2px;
@@ -58,6 +59,10 @@
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 32vw;
+
+	/* Game capsule widths */
+	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -76,14 +81,9 @@
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
-	/* Animation */
+	/* Animation TODO: REMOVE THESE */
 	--gpTransition-Short: all 0.2s ease;
 	--gpTransition-Shorter: all 0.1s ease;
-
-	/* Focus */
-	--gpFocus: 4px solid white;
-	--gpUnfocus: 0px solid #FFFFFF00;
-
 }
 
 @media screen and ( min-width: 501px ) and ( max-width: 910px ) {
@@ -239,6 +239,11 @@
 		color: white;
 	}
 
+	html.responsive .cart_tab_inactive.gpfocus {
+		background-color: white;
+		color: black;
+	}
+
 	html.responsive .cart_tab_off {
 		color: var(--gpStoreLightGrey);
 	}
@@ -308,12 +313,14 @@
         margin-bottom: 24px;
     }
 
-    html.responsive body.checkout .rightcol .block {
+    html.responsive body.checkout .rightcol .block,
+	html.responsive #col_right_gift_recipient.block {
         margin: unset;
         background: unset;
     }
 
-    html.responsive body.checkout .rightcol .block .block_header {
+    html.responsive body.checkout .rightcol .block .block_header,
+	html.responsive #col_right_gift_recipient .block_header {
         margin: unset;
         padding: unset;
     }
@@ -327,6 +334,33 @@
         margin: 8px 0px;
         color: var(--gpStoreLighterGrey);
     }
+
+
+	/* Expiration dates */
+	html.responsive #expiration_date_section,
+	html.responsive #security_code_section {
+		margin-top: 16px;
+	}
+
+	html.responsive #security_code_section {
+		margin-left: 16px;
+	}
+
+	html.responsive #security_code {
+		width: 64px;
+	}
+
+	html.responsive #expiration_month_dselect_container,
+	html.responsive #expiration_year_dselect_container {
+		width: 80px;
+		margin-right: 4px;
+	}
+
+
+	/* Billing info */
+	html.responsive .checkout_content_box h3.tab_header.billing_information_header {
+		margin-top: 32px;
+	}
 
 
     /* Action buttons */
@@ -382,23 +416,23 @@
     }
 
     html.responsive .review_row_label {
-        font: var(--gpText-BodyLarge);
+        font: var(--gpText-BodyMedium);
         color: var(--gpStoreLighterGrey);
     }
 
     html.responsive .review_row_value {
-        font: var(--gpText-BodyLarge);
+        font: var(--gpText-BodyMedium);
         color: var(--gpStoreLightestGrey);
     }
 
     html.responsive .review_row_value {
-        padding-left: 18vw;
+        padding-left: 140px;
     }
 
     html.responsive .checkout_review_payment_method_area {
         border-bottom: 1px solid var(--gpBackground-LightMedium);
-        padding: 12px 0px;
-        margin-bottom: 12px;
+        padding: 8px 0px;
+        margin-bottom: 8px;
     }
 
     html.responsive #purchase_bottom {
@@ -413,6 +447,19 @@
     html.responsive .payment_method_total {
         right: 0px;
     }
+
+
+	/* Display billing address on single line */
+	html.responsive p#review_address_body {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 100%;
+	}
+
+	html.responsive p#review_address_body br {
+		display: none;
+	}
 
 
 
@@ -484,6 +531,10 @@
         color: white;
     }
 
+	html.responsive body.v6 .page_content.gift_recipient_active #error_display {
+		width: calc(100vw - var(--gpPaymentsNavWidth) - (3 * var(--gpSpace-Gutter)));
+	}
+
 
 
 
@@ -495,15 +546,19 @@
         top: 0px;
         background-color: var(--gpBackground-DarkMedium);
         height: 100vh;
-        padding: 24px;
+        padding: 0px 24px;
         box-sizing: border-box;
-        overflow-y: scroll;
     }
 
     html.responsive .tablet_checkout_right_column .checkout_content.confirm {
-        margin-top: 8px;
+        padding-top: 8px;
         margin-bottom: 12px;
+		margin-top: unset;
     }
+
+	html.responsive .cart_totals_area {
+		margin-top: 0px;
+	}
 
 
     /* Total prices */
@@ -537,18 +592,23 @@
         text-align: unset;
         display: flex;
         flex-direction: column;
+		padding: 24px 0px 6px;
+		max-height: calc(100vh - 205px);
+		overflow-y: scroll;
+		-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1.0) 96%, transparent 100%);
     }
 
     html.responsive .checkout_review_cart_item {
         margin: unset;
         min-height: unset;
         background: unset;
-        padding: 6px 0px;
+        padding: 8px 0px;
         border-bottom: 1px solid var(--gpBackground-LightSoft);
     }
 
     html.responsive .checkout_review_cart_item:first-child {
         padding-top: 0px;
+		border-top: none;
     }
 
     html.responsive .checkout_review_item_desc,
@@ -580,6 +640,11 @@
     html.responsive .checkout_review_item_platform {
         display: none;
     }
+
+	html.responsive .checkout_review_item_desc_ext {
+		color: var(--gpStoreLightGrey);
+		font: var(--gpText-BodySmall);
+	}
 
 
     /* Points total */
@@ -768,39 +833,47 @@
 		display: none;
 	}
 
-    html.responsive #friends_list_wrapper {
-        position: fixed;
-        left: var(--gpSpace-Gutter);
-        top: 0px;
+	html.responsive #friends_chooser {
+		border: unset;
+		margin-bottom: 24px;
+	}
+
+	html.responsive #friends_list_wrapper {
         width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
-        height: 100vh;
-        overflow: scroll;
-        margin-top: unset;
-        padding: 46px 0px 0px 0px;
-		box-sizing: border-box;
-    }
+	}
 
-    html.responsive #friends_chooser {
-        max-width: unset;
-        min-height: unset;
-        max-height: unset;
-        border: unset;
-        overflow: unset;
-        margin-top: 8px;
-        padding-bottom: 24px;
-    }
+	html.responsive body.v6 .page_content.gift_recipient_active {
+		width: unset;
+	}
 
-    html.responsive body.v6 .gift_recipient_active {
-        position: fixed;
-        right: 0px;
-        top: 0px;
-        width: calc(var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
-        height: 100vh;
-        overflow: scroll;
-        margin: 0px;
-        padding: 24px;
-        background-color: var(--gpBackground-DarkMedium);
-    }
+	html.responsive .send_choice_inner {
+		display: flex;
+		gap: 24px;
+	}
+
+	html.responsive #friends_chooser {
+		margin-bottom: unset;
+		max-height: unset;
+		min-height: unset;
+	}
+
+	html.responsive #deck_right_col_ctn {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		background-color: var(--gpBackground-DarkMedium);
+		padding: 24px;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: calc(var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+		height: 100vh;
+	}
+
+	html.responsive #deck_right_col_ctn .client_button_row {
+		margin: unset;
+		gap: unset;
+	}
 
 	html.responsive #cart_send_schedule_options {
 		margin-top: 0px;
@@ -826,25 +899,35 @@
         gap: 8px;
     }
 
-    html.responsive #seach_friends {
+    html.responsive #seach_friends,
+	html.responsive .checkout_content_box input[type="text"] {
 		background-color: var(--gpBackground-LightMedium);
 		border-radius: var(--gpCorner-Medium);
 		font: var(--gpText-BodyLarge);
 		color: white;
 		transition: all 0.1s ease;
 		padding: 10px 10px;
-
 		box-shadow: unset;
 		border: unset;
-        width: 50%;
         margin: unset;
 	}
 
-	html.responsive #seach_friends:hover {
+	html.responsive #seach_friends {
+		width: 50%;
+	}
+
+	html.responsive #seach_friends.gpfocus,
+	html.responsive .checkout_content_box input[type="text"].gpfocus {
+		border-radius: 0px;
+	}
+
+	html.responsive #seach_friends:hover,
+	html.responsive .checkout_content_box input[type="text"]:hover {
 		background-color: var(--gpBackground-LightHard);
 	}
 
-	html.responsive #seach_friends:focus {
+	html.responsive #seach_friends:focus,
+	html.responsive .checkout_content_box input[type="text"]:focus {
 		background-color: white;
 		color: black;
 	}
@@ -871,11 +954,12 @@
 
     html.responsive #friends_chooser {
         margin-top: 16px;
+		max-width: unset;
     }
 
     html.responsive #friends_chooser .friend_block {
         border: unset;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
         display: flex;
         align-items: center;
         padding: 4px 12px;
@@ -886,18 +970,20 @@
         transition: all 0.2s ease;
     }
 
-    html.responsive #friends_chooser .friend_block:hover,
-    html.responsive #friends_chooser .friend_block.active {
-        background: var(--gpBackground-LightHard);
+    html.responsive #friends_chooser .friend_block.gpfocus:not(.active),
+	html.responsive #friends_chooser .friend_block:hover:not(.active) {
+		background: var(--gpBackground-LightMedium) !important;
     }
 
-    html.responsive #friends_chooser .friend_block:focus-within {
+	html.responsive #friends_chooser .friend_block.active {
         background: white;
         box-shadow: var(--gpShadow-Small);
     }
-    html.responsive #friends_chooser .friend_block:focus-within .friend_name {
-        color: black;
+
+    html.responsive #friends_chooser .friend_block.active .friend_name {
+		color: black;
     }
+
 
     /* Reset positions */
     html.responsive #friends_chooser .friend_block .friend_block_radio,
@@ -905,6 +991,7 @@
     html.responsive #friends_chooser .friend_block .friend_name {
         position: unset;
     }
+
 
     /* Reset text formatting */
     html.responsive #friends_chooser .friend_block .friend_name {
@@ -939,6 +1026,34 @@
 	/* Set delivery time */
 	html.responsive .cart_send_schedule_datepicker {
 		margin-top: unset;
+	}
+
+	html.responsive .cart_send_schedule_options.schedule_selected .cart_send_schedule_datepicker {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	html.responsive .cart_send_schedule_datepicker .datepicker_group {
+		margin: unset;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	html.responsive .checkout_content.cart_send_choice {
+		font-weight: 400;
+	}
+
+	html.responsive .cart_send_schedule_datepicker .dselect_container,
+	html.responsive #schedule_send_time,
+	html.responsive .dselect_container a.trigger {
+		margin: unset;
+	}
+
+	html.responsive .cart_send_schedule_datepicker_title {
+		font: var(--gpText-BodyLarge);
+		margin: unset;
 	}
 
 	html.responsive .cart_send_schedule_datepicker h4 {
@@ -1011,7 +1126,6 @@
 	html.responsive .checkout_review_gift_area br {
 		display: none;
 	}
-
 
 
 

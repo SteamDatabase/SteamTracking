@@ -1325,7 +1325,7 @@ img.deckverified_CategoryIcon_3qF71 {
   display: flex;
   flex-direction: column;
   background-color: #0e141b;
-  padding: 10px;
+  padding: 0px 10px;
 }
 .deckverified_CompatibilityDetailsHeader_Y6Inr {
   padding-bottom: 5px;
@@ -1335,6 +1335,7 @@ img.deckverified_CategoryIcon_3qF71 {
 }
 .deckverified_CompatibilityDetailRatingSummary_mJGYS {
   padding-bottom: 10px;
+  font-size: 14px;
 }
 .deckverified_CompatibilityDetailRatingDescription_3456E {
   vertical-align: middle;
@@ -1352,28 +1353,33 @@ img.deckverified_CategoryIcon_3qF71 {
   .deckverified_Unsupported_2Q0ld {
   color: #7c8ea3;
 }
+.deckverified_CompatibilityNoNotes_2u5TR {
+  height: 20px;
+}
 .deckverified_CompatibilityDetailsSeparator_2mwbd {
   height: 1px;
+  margin-top: 11px;
+  margin-right: 20px;
   background-color: #ccc;
-  margin-top: 20px;
+  width: 100%;
 }
 .deckverified_CompatibilityDetailsResultIcon_-L3Xu {
   height: 16px;
   padding-right: 15px;
 }
-.deckverified_CompatibilityDetailsNote_1M2Gb {
-  font-size: 14px;
-  color: #fff;
-  padding: 10px 0px 5px 15px;
+.deckverified_CompatabilityDetailsNoteContainer_6_voo {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 0px;
 }
-.deckverified_CompatibilityDetailsNoteHeader_1PXqk {
+.deckverified_CompatibilityDetailsNoteLabel_32Xvt {
   font-size: 14px;
   color: #fff;
-  padding: 10px 0px 5px 15px;
+  padding-right: 5px;
 }
 .deckverified_CompatibilityDetailsNoteRow_1Wu_j {
   padding-left: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   display: inline-flex;
   font-size: 13px;
   word-break: break-word;
@@ -5675,6 +5681,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   100% {
     opacity: 1;
   }
+}
+.gamepadui_svg_library_GenericGamepadHighlight_3-ZZD {
+  fill: green;
 }
 .reorderablelist_WhitelistNumber_IY3dF {
   width: 30px;

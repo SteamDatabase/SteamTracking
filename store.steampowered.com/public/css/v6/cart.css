@@ -1736,15 +1736,26 @@ div.game_hover {
 	width: auto;
 	padding: 2px;
 	line-height: 18px;
-	margin: 4px;
+	margin: 0 4px;
 }
 .checkout_content_box  .cart_send_schedule_datepicker input[type="text"] {
-	padding: 2px 6px;
+	padding: 6px;
 }
 
 .cart_send_schedule_datepicker .datepicker_group {
-	display: inline-block;
 	white-space: nowrap;
+	margin: 3px 0;
+}
+
+.cart_send_schedule_datepicker_title {
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.cart_send_schedule_datepicker .dselect_container, #schedule_send_time {
+    max-width: 80px;
+    vertical-align: bottom;
+    margin: 0 2px;
 }
 
 .checkout_content .cart_bodycopy {

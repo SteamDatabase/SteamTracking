@@ -13,6 +13,11 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode .friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 8px;
+  font-weight: bold;
+}
 .friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Medium_1iYPl
   .friendsnooze_SnoozeZ_2n0Ei {
   font-size: 8px;
@@ -46,21 +51,58 @@
 .friendsnooze_SnoozeContainer_1Dsum.online .friendsnooze_SnoozeZ_2n0Ei {
   color: #4c91ac;
 }
+.friendsnooze_SnoozeContainer_1Dsum.online
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.online
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #0056d6;
+}
 .friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
   .friendsnooze_SnoozeZ_2n0Ei {
   color: #c9bdf7;
 }
+.friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #5340a6;
+}
 .friendsnooze_SnoozeContainer_1Dsum.in-game .friendsnooze_SnoozeZ_2n0Ei {
   color: #91c257;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.in-game
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #3e862d;
 }
 .friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
   .friendsnooze_SnoozeZ_2n0Ei {
   color: #6dcff6;
 }
+.friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #0056d6;
+}
 .friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
   .friendsnooze_SnoozeZ_2n0Ei {
   color: #a1f410;
 }
+.friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #3e862d;
+}
+.friend.gpfocus .friendsnooze_SnoozeZ_2n0Ei,
+.friendsnooze_hoverParent_3-8cB.gpfocus .friendsnooze_SnoozeZ_2n0Ei,
 .friendsnooze_SnoozeContainer_1Dsum.friendsnooze_animating_2rXc7
   .friendsnooze_SnoozeZ_2n0Ei,
 .friendsnooze_hoverParent_3-8cB:hover * .friendsnooze_SnoozeZ_2n0Ei {
@@ -126,6 +168,10 @@
     #8cd61d 100%
   );
 }
+.ingame .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .ingame .steamavatar_avatarStatus_3xUpb {
+  background: #59bf40;
+}
 .ingame .X-Large .steamavatar_avatarStatus_3xUpb {
   background: #bff02b;
 }
@@ -147,6 +193,10 @@
     #6dcff6 100%
   );
 }
+.online .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .online .steamavatar_avatarStatus_3xUpb {
+  background: #1a9fff;
+}
 .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-y;
@@ -155,6 +205,10 @@
     repeat-y;
   mask-size: 5px 5px;
   opacity: 0.75;
+}
+.awayOrSnooze .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
+  opacity: 1;
 }
 .steamavatar_avatarStatus_3xUpb.right {
   position: absolute;
@@ -390,6 +444,9 @@
   100% {
     opacity: 1;
   }
+}
+.gamepadui_svg_library_GenericGamepadHighlight_3-ZZD {
+  fill: green;
 }
 .miniprofile_miniProfile_2QPdq {
   width: fit-content;
@@ -1845,7 +1902,7 @@ img.deckverified_CategoryIcon_3qF71 {
   display: flex;
   flex-direction: column;
   background-color: #0e141b;
-  padding: 10px;
+  padding: 0px 10px;
 }
 .deckverified_CompatibilityDetailsHeader_Y6Inr {
   padding-bottom: 5px;
@@ -1855,6 +1912,7 @@ img.deckverified_CategoryIcon_3qF71 {
 }
 .deckverified_CompatibilityDetailRatingSummary_mJGYS {
   padding-bottom: 10px;
+  font-size: 14px;
 }
 .deckverified_CompatibilityDetailRatingDescription_3456E {
   vertical-align: middle;
@@ -1872,28 +1930,33 @@ img.deckverified_CategoryIcon_3qF71 {
   .deckverified_Unsupported_2Q0ld {
   color: #7c8ea3;
 }
+.deckverified_CompatibilityNoNotes_2u5TR {
+  height: 20px;
+}
 .deckverified_CompatibilityDetailsSeparator_2mwbd {
   height: 1px;
+  margin-top: 11px;
+  margin-right: 20px;
   background-color: #ccc;
-  margin-top: 20px;
+  width: 100%;
 }
 .deckverified_CompatibilityDetailsResultIcon_-L3Xu {
   height: 16px;
   padding-right: 15px;
 }
-.deckverified_CompatibilityDetailsNote_1M2Gb {
-  font-size: 14px;
-  color: #fff;
-  padding: 10px 0px 5px 15px;
+.deckverified_CompatabilityDetailsNoteContainer_6_voo {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 0px;
 }
-.deckverified_CompatibilityDetailsNoteHeader_1PXqk {
+.deckverified_CompatibilityDetailsNoteLabel_32Xvt {
   font-size: 14px;
   color: #fff;
-  padding: 10px 0px 5px 15px;
+  padding-right: 5px;
 }
 .deckverified_CompatibilityDetailsNoteRow_1Wu_j {
   padding-left: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   display: inline-flex;
   font-size: 13px;
   word-break: break-word;
@@ -19765,6 +19828,18 @@ body.profilethemecolors_Winter2021Theme_X0_g8 {
   --btn-background: rgb(184 99 69);
   --btn-background-hover: rgb(206 131 36);
   --btn-outline: rgb(196 96 50);
+}
+body.profilethemecolors_Lunar2022Theme_1NSMH {
+  --gradient-right: rgb(232 63 12 / 78%);
+  --gradient-left: rgb(239 65 12);
+  --gradient-background: rgb(58 44 122 / 83%);
+  --gradient-background-right: rgb(135 25 2 / 65%);
+  --gradient-background-left: rgb(211 72 31 / 60%);
+  --color-showcase-header: rgb(86 62 173);
+  --gradient-showcase-header-left: rgb(234 101 69);
+  --btn-background: rgb(86 62 173);
+  --btn-background-hover: rgb(146 78 131);
+  --btn-outline: rgb(173 85 113);
 }
 .profileeditshell_Shell_2kqKZ {
   display: flex;

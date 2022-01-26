@@ -1404,7 +1404,7 @@ GHomepage = {
 	RenderSpotlightSection: function()
 	{
 		var $Spotlights = $J('#spotlight_carousel');
-		var $Pages = $J('#spotlight_carousel > .carousel_items').children();
+		var $Pages = $J('#spotlight_carousel > .carousel_items .home_special_offers_group');
 
 		var oShownItems = {};
 		var Settings = {
@@ -1516,6 +1516,8 @@ GHomepage = {
 				GDynamicStore.MarkAppDisplayed( rgItemsShown );
 		}
 
+		// sometimes this carousel gets scrolled during recreation, slam to 0 just in case
+		$J('#spotlight_carousel > .carousel_items')[0].scrollLeft = 0;
 		$Spotlights.css( 'visibility', '' );
 	},
 

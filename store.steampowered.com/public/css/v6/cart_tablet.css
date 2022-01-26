@@ -45,6 +45,7 @@
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
 
+
 	/* Corners */
 	--gpCorner-Small: 1px;
 	--gpCorner-Medium: 2px;
@@ -58,6 +59,10 @@
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 32vw;
+
+	/* Game capsule widths */
+	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -76,14 +81,9 @@
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
-	/* Animation */
+	/* Animation TODO: REMOVE THESE */
 	--gpTransition-Short: all 0.2s ease;
 	--gpTransition-Shorter: all 0.1s ease;
-
-	/* Focus */
-	--gpFocus: 4px solid white;
-	--gpUnfocus: 0px solid #FFFFFF00;
-
 }
 
 @media screen and ( min-width: 501px ) and ( max-width: 910px ) {
@@ -93,7 +93,7 @@
 	html.responsive .page_header_ctn {
 		background: unset;
 		padding-bottom: 0px;
-		margin-bottom: 16px;
+		margin-bottom: 12px;
 	}
 
 
@@ -180,17 +180,39 @@
 		font: var(--gpText-BodyLarge);
 		color: white;
 		font-weight: 700;
+		height: auto;
 	}
 
-	html.responsive .cart_item_price .remove_link,
+	html.responsive .cart_item_price .price:nth-last-child(2) {
+		border-right: 1px solid var(--gpBackground-LightMedium);
+		padding-right: 16px;
+	}
+
 	html.responsive .remove_link {
 		font: var(--gpText-BodyLarge);
 		color: unset;
-		transition: var(--gpTransition-Shorter);
+	}
+
+
+	/* Remove link */
+	html.responsive .cart_item_price .remove_link {
+		font: var(--gpText-BodyLarge);
+		color: var(--gpStoreLightestGrey);
+		margin-left: 8px;
+		border-radius: var(--gpCorner-Medium);
+		padding: 8px 40px 8px 12px;
+		text-decoration: none;
+		background-image: url('../../../../shared/public/images/glyphs/shared_button_x.svg');
+		background-size: 24px 24px;
+		background-repeat: no-repeat;
+		background-position-x: calc(100% - 8px);
+		background-position-y: center;
+		transition: background-color 0.2s ease, color 0.2s ease;
 	}
 
 	html.responsive .cart_item_price .remove_link:hover {
-		background: var(--gpBackground-LightHard);
+		background-color: var(--gpBackground-LightMedium);
+		color: white;
 	}
 
 	html.responsive .cart_item .platform_img {
@@ -200,12 +222,6 @@
 	html.responsive .remove_link {
 		color: var(--gpStoreLighterGrey);
 	}
-
-	/* html.responsive .remove_link.gpfocus {
-		color: black;
-		background: white !important;
-		border-radius: 0px !important;
-	} */
 
 	html.responsive .cart_item_price .original_price {
 		margin-right: 4px;
@@ -238,14 +254,7 @@
 
 
 
-	/* Remove link */
-	html.responsive .cart_item_price .remove_link {
-		margin-left: 16px;
-		background: var(--gpBackground-LightMedium);
-		border-radius: var(--gpCorner-Medium);
-		padding: 8px 12px;
-		text-decoration: none;
-	}
+
 
 
 
@@ -298,13 +307,12 @@
 		padding: 8px 12px;
 		margin: unset;
 		font: var(--gpText-BodyMedium);
-		border-radius: var(--gpCorner-Large);
 	}
 
 	html.responsive .cart_status_message_area,
 	html.responsive .checkout_error {
 		height: unset;
-		margin-bottom: 12px;
+		margin-bottom: 4px;
 	}
 
 	/* hide arrow */
@@ -314,13 +322,10 @@
 
 
 
+
 	/* Warnings and errors */
 	html.responsive .checkout_error {
 		background: var(--gpColor-Orange);
-
-		/* background: none; */
-		/* border: 2px solid var(--gpBackground-LightSoft); */
-
 	}
 	html.responsive .checkout_error.steam_deck_compat_unsupported {
 		background: var(--gpColor-Red);
@@ -344,9 +349,16 @@
 
 
 	/* Total price and messaging */
-	html.responsive .checkout_content_box .checkout_content.cart,
-	html.responsive .checkout_content_box .checkout_content.confirm {
+	html.responsive .checkout_content_box .checkout_content {
 		background: unset;
+	}
+
+	html.responsive .checkout_content_box .checkout_content.cart {
+		margin-top: 12px;
+	}
+
+	html.responsive .cart_total_row#cart_estimated_total_text {
+		margin-top: 0px;
 	}
 
 	html.responsive .cart_total_row#cart_estimated_total_text,
@@ -419,16 +431,21 @@
 
 
 	/* Continue shopping */
+	html.responsive .checkout_notes_and_continue_shopping_ctn {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		margin-bottom: 24px;
+	}
+
 	html.responsive .leftcol br {
 		display: none;
 	}
 
-	/* html.responsive .remove_ctn {
-		display: none;
-	} */
-
-
-
+	html.responsive .continue_shopping_ctn {
+		margin-bottom: unset;
+	}
 
 	/* Cart notice */
 	html.responsive .cart_notice_section {
@@ -559,7 +576,4 @@
 		margin-left: -24px;
 		margin-right: -24px;
 	}
-
-
-
 }

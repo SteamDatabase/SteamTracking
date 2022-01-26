@@ -1019,6 +1019,9 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
     opacity: 1;
   }
 }
+.gamepadui_svg_library_GenericGamepadHighlight_3-ZZD {
+  fill: green;
+}
 .youtubeembed_DynamicLinkBox_1IGUR {
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
@@ -1984,7 +1987,7 @@ img.deckverified_CategoryIcon_3qF71 {
   display: flex;
   flex-direction: column;
   background-color: #0e141b;
-  padding: 10px;
+  padding: 0px 10px;
 }
 .deckverified_CompatibilityDetailsHeader_Y6Inr {
   padding-bottom: 5px;
@@ -1994,6 +1997,7 @@ img.deckverified_CategoryIcon_3qF71 {
 }
 .deckverified_CompatibilityDetailRatingSummary_mJGYS {
   padding-bottom: 10px;
+  font-size: 14px;
 }
 .deckverified_CompatibilityDetailRatingDescription_3456E {
   vertical-align: middle;
@@ -2011,28 +2015,33 @@ img.deckverified_CategoryIcon_3qF71 {
   .deckverified_Unsupported_2Q0ld {
   color: #7c8ea3;
 }
+.deckverified_CompatibilityNoNotes_2u5TR {
+  height: 20px;
+}
 .deckverified_CompatibilityDetailsSeparator_2mwbd {
   height: 1px;
+  margin-top: 11px;
+  margin-right: 20px;
   background-color: #ccc;
-  margin-top: 20px;
+  width: 100%;
 }
 .deckverified_CompatibilityDetailsResultIcon_-L3Xu {
   height: 16px;
   padding-right: 15px;
 }
-.deckverified_CompatibilityDetailsNote_1M2Gb {
-  font-size: 14px;
-  color: #fff;
-  padding: 10px 0px 5px 15px;
+.deckverified_CompatabilityDetailsNoteContainer_6_voo {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 0px;
 }
-.deckverified_CompatibilityDetailsNoteHeader_1PXqk {
+.deckverified_CompatibilityDetailsNoteLabel_32Xvt {
   font-size: 14px;
   color: #fff;
-  padding: 10px 0px 5px 15px;
+  padding-right: 5px;
 }
 .deckverified_CompatibilityDetailsNoteRow_1Wu_j {
   padding-left: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   display: inline-flex;
   font-size: 13px;
   word-break: break-word;
@@ -18707,6 +18716,10 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
     #8cd61d 100%
   );
 }
+.ingame .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .ingame .steamavatar_avatarStatus_3xUpb {
+  background: #59bf40;
+}
 .ingame .X-Large .steamavatar_avatarStatus_3xUpb {
   background: #bff02b;
 }
@@ -18728,6 +18741,10 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
     #6dcff6 100%
   );
 }
+.online .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .online .steamavatar_avatarStatus_3xUpb {
+  background: #1a9fff;
+}
 .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-y;
@@ -18736,6 +18753,10 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
     repeat-y;
   mask-size: 5px 5px;
   opacity: 0.75;
+}
+.awayOrSnooze .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
+  opacity: 1;
 }
 .steamavatar_avatarStatus_3xUpb.right {
   position: absolute;

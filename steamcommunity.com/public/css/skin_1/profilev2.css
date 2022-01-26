@@ -350,6 +350,19 @@ body.Winter2021Theme {
     --btn-outline: rgb(196 96 50);
 }
 
+body.Lunar2022Theme {
+	--gradient-right: rgb(232 63 12 / 78%);
+    --gradient-left: rgb(239 65 12);
+    --gradient-background: rgb(58 44 122 / 83%);
+    --gradient-background-right: rgb(135 25 2 / 65%);
+    --gradient-background-left: rgb(211 72 31 / 60%);
+    --color-showcase-header: rgb(86 62 173);
+    --gradient-showcase-header-left: rgb(234 101 69);
+    --btn-background: rgb(86 62 173);
+    --btn-background-hover: rgb(146 78 131);
+    --btn-outline: rgb(173 85 113);
+}
+
 
 div.profile_page {
 	position: relative;
