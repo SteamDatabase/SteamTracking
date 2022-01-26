@@ -15151,7 +15151,8 @@
                 (r = le.a.GetWithFallback(a.jsondata.localized_sale_logo, s)) ||
               void 0 === r
                 ? void 0
-                : r.length) > 0;
+                : r.length) > 0,
+            b = a.jsondata.sale_logo_url || "";
           return c.createElement(
             Be.a,
             null,
@@ -15180,8 +15181,11 @@
                   c.createElement(et.d, { event: a, broadcastEmbedContext: h }),
                   _ &&
                     c.createElement(
-                      "div",
-                      { className: $e.a.SalePageLogoCtn },
+                      "a",
+                      {
+                        className: $e.a.SalePageLogoCtn,
+                        href: C.c.STORE_BASE_URL + b,
+                      },
                       c.createElement("img", {
                         src: a.GetImageURLWithFallback("sale_logo", s),
                       })

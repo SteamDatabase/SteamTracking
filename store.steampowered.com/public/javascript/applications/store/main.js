@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7029291";
+var CLSTAMP = "7031485";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [41],
   {
@@ -19394,7 +19394,8 @@ var CLSTAMP = "7029291";
                 (r = C.a.GetWithFallback(a.jsondata.localized_sale_logo, c)) ||
               void 0 === r
                 ? void 0
-                : r.length) > 0;
+                : r.length) > 0,
+            _ = a.jsondata.sale_logo_url || "";
           return s.createElement(
             We.a,
             null,
@@ -19423,8 +19424,11 @@ var CLSTAMP = "7029291";
                   s.createElement(Dt, { event: a, broadcastEmbedContext: h }),
                   b &&
                     s.createElement(
-                      "div",
-                      { className: vt.a.SalePageLogoCtn },
+                      "a",
+                      {
+                        className: vt.a.SalePageLogoCtn,
+                        href: w.d.STORE_BASE_URL + _,
+                      },
                       s.createElement("img", {
                         src: a.GetImageURLWithFallback("sale_logo", c),
                       })
