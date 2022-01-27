@@ -14309,6 +14309,11 @@ html.responsive.touch
 .partnersaledisplay_SalePageLogoCtn_xP8Lp img {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .partnersaledisplay_SalePageLogoCtn_xP8Lp {
+    margin-bottom: 0px;
+  }
+}
 .salesectioneventschedule_SaleSchedCtn_2g7il {
   height: 480px;
   background-image: radial-gradient(

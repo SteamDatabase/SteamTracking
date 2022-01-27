@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7031799";
+var CLSTAMP = "7032535";
 !(function (e) {
   function t(t) {
     for (
@@ -124,7 +124,7 @@ var CLSTAMP = "7031799";
                 12: "5de1212cb5e1d1f2ecb6",
                 13: "76e7ee1cc3a91e02dc59",
                 14: "17e1dfc7ef2ede45d999",
-                15: "b9533ac41e466981e441",
+                15: "db23c1647c003ad404d7",
                 16: "3b253b9c1037335b865a",
                 17: "98e6109809942413f9f6",
                 18: "4a27e6ebe2d75cf14e75",
@@ -1752,6 +1752,7 @@ var CLSTAMP = "7031799";
         c = Object(i.a)(
           {
             bGranularFutureTime: !1,
+            bGranularTodayTimeOnly: !1,
             bGranularToday: !1,
             bGranularYesterday: !1,
             bGranularWeek: !1,
@@ -1784,7 +1785,9 @@ var CLSTAMP = "7031799";
       var f = new Date();
       if ((f.setHours(0, 0, 0, 0), n >= f))
         return c.bGranularToday
-          ? Object(o.f)("#Time_Today_At", d(e))
+          ? c.bGranularTodayTimeOnly
+            ? d(e)
+            : Object(o.f)("#Time_Today_At", d(e))
           : Object(o.f)("#Time_Today");
       if ((f.setDate(f.getDate() - 1), n >= f))
         return c.bGranularYesterday

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7031799";
+var CLSTAMP = "7032535";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -11906,6 +11906,7 @@ var CLSTAMP = "7031799";
           c = Object(o.a)(
             {
               bGranularFutureTime: !1,
+              bGranularTodayTimeOnly: !1,
               bGranularToday: !1,
               bGranularYesterday: !1,
               bGranularWeek: !1,
@@ -11938,7 +11939,9 @@ var CLSTAMP = "7031799";
         var d = new Date();
         if ((d.setHours(0, 0, 0, 0), n >= d))
           return c.bGranularToday
-            ? Object(i.f)("#Time_Today_At", p(e))
+            ? c.bGranularTodayTimeOnly
+              ? p(e)
+              : Object(i.f)("#Time_Today_At", p(e))
             : Object(i.f)("#Time_Today");
         if ((d.setDate(d.getDate() - 1), n >= d))
           return c.bGranularYesterday
