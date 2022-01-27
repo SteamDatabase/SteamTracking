@@ -12279,7 +12279,8 @@
             i = $(t, n, r),
             a = i.bLoading,
             o = i.title,
-            s = Object(c.useRef)();
+            s = Object(c.useRef)(),
+            u = Object(C.f)("ch_force_optin", "application_config");
           return (
             Object(c.useEffect)(
               function () {
@@ -12293,18 +12294,19 @@
               ? l.a.createElement(
                   "div",
                   { className: Ee.ContentHubTitleCtn },
-                  l.a.createElement(
-                    "div",
-                    { className: Ee.ContentHubLabsWidget },
-                    l.a.createElement(Oe, {
-                      strLabNumber: "013",
-                      strLabName: "contenthub",
-                      strForumURL:
-                        C.c.COMMUNITY_BASE_URL +
-                        "groups/SteamLabs/discussions/15/",
-                      bShowOptOut: !0,
-                    })
-                  ),
+                  !C.c.IN_GAMEPADUI &&
+                    l.a.createElement(
+                      "div",
+                      { className: Ee.ContentHubLabsWidget },
+                      l.a.createElement(Oe, {
+                        strLabNumber: "013",
+                        strLabName: "contenthub",
+                        strForumURL:
+                          C.c.COMMUNITY_BASE_URL +
+                          "groups/SteamLabs/discussions/15/",
+                        bShowOptOut: !u,
+                      })
+                    ),
                   l.a.createElement(
                     "div",
                     { className: Ee.ContentHubTitle },

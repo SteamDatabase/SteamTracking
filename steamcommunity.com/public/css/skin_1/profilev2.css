@@ -779,12 +779,13 @@ body.profile_page.flat_page #footer_spacer {
 .favorite_badge {
 	position: relative;
 	padding: 8px 8px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .favorite_badge_icon {
-	position: absolute;
-	top: 8px;
-	left: 8px;
+	display: flex;
 }
 
 .favorite_badge_icon img {
@@ -793,8 +794,6 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 .favorite_badge_description {
-	padding-left: 64px;
-	padding-top: 12px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -2045,6 +2044,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 .recentgame_quicklinks {
 	float: right;
+	display: flex;
+	gap: 8px;
+	align-items: center;
 }
 
 

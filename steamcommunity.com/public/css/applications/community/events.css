@@ -13945,11 +13945,8 @@ html.responsive.touch .ContentHubSalePage {
     margin-top: 41vw !important;
     padding: 0px 10px;
   }
-  html.responsive
-    .ContentHubSalePage
-    .partnersaledisplay_SaleOuterContainer_150kd {
+  .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_150kd {
     margin-top: 2vw !important;
-    margin-top: 100px;
   }
 }
 .partnersaledisplay_SaleBackground_2N8Se {
