@@ -818,7 +818,12 @@
                             (l = "auto"),
                           P(i, s, e, l) ||
                             s.scrollIntoView({ behavior: l, block: "nearest" });
-                      } else s.scrollIntoView({ behavior: "auto" });
+                      } else
+                        s.scrollIntoView({
+                          behavior: "auto",
+                          block: "nearest",
+                          inline: "nearest",
+                        });
                     }
                   })(e, o)),
                   o &&
@@ -2488,7 +2493,7 @@
         void 0 === e && (e = !1);
         performance.now();
         var n =
-          "a,button,input:not(input[type=hidden]),label:not([for]),[data-panel],[data-react-nav-root],[data-nav-modal]";
+          "a,button,textarea,input:not(input[type=hidden]),label:not([for]),[data-panel],[data-react-nav-root],[data-nav-modal]";
         s()(n, t)
           .addBack(n)
           .each(function () {
@@ -2517,6 +2522,7 @@
         return (
           !e.data("gpFocusDisabled") &&
           e.is(":visible") &&
+          "hidden" != e.css("visibility") &&
           ((e.outerWidth() > 0 && e.outerHeight() > 0) ||
             "hidden" !== e.css("overflow"))
         );
@@ -2569,6 +2575,9 @@
             case "password":
               g.enableVirtualKeyboard = !0;
           }
+        else
+          "TEXTAREA" == t.tagName &&
+            ((g.focusable = !0), (g.enableVirtualKeyboard = !0));
         var m = g["flow-children"];
         delete g["flow-children"];
         var v = g.clickOnActivate,
@@ -2774,6 +2783,7 @@
             switch (t.tagName) {
               case "A":
               case "INPUT":
+              case "TEXTAREA":
                 e = !0;
                 break;
               case "DIV":

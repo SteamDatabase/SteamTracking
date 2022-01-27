@@ -47,11 +47,11 @@ var CWishlistController = function()
 		'ex_prerelease': "Exclude",
 		'ex_vr': "Exclude"	}
 
-	// 'last_sort' and 'term' are not in this list because they are not saved
-	this.rgValidSavedSettings = [ 
+	this.rgValidFilters = [ 
 		'platform', 
 		'type',
 		'sort',
+		'term',
 		'price_1', 'price_2', 'price_wallet', 
 		'ex_earlyaccess', 'ex_prerelease', 'ex_vr',
 		'discount_any', 'discount_50', 'discount_75' 
@@ -460,7 +460,7 @@ CWishlistController.prototype.LoadSettings = function()
 		{
 			var rgKV = rgPairs[ i ].split ( '=' );
 
-			if ( this.rgValidSavedSettings.includes( rgKV[ 0 ] ) )
+			if ( this.rgValidFilters.includes( rgKV[ 0 ] ) )
 			{
 				this.rgFilterSettings[ rgKV[ 0 ] ] = decodeURIComponent( rgKV[ 1 ] );
 				$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);

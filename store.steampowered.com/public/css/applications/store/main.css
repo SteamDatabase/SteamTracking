@@ -4792,6 +4792,9 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   height: 32px;
   margin-right: 8px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .gamehover_HoverContentTransition_3-pnC {
   height: 100%;
   transition: transform 0.15s ease-out;
@@ -4938,6 +4941,9 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   display: flex;
   overflow: hidden;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+}
+.BasicUI .gamehover_WishlistButton_3notz {
+  display: none;
 }
 .gamehover_WishlistButton_3notz svg {
   padding: 4px;
@@ -5141,6 +5147,7 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 .BasicUI .animated_featured_capsule_FeatureCtn_rq-9_ {
   height: 100%;
   min-height: 100%;
+  width: 820px;
 }
 .animated_featured_capsule_SuperCapsuleCtn_olJ0b {
   width: 100%;
@@ -12858,6 +12865,13 @@ html.responsive.touch .ContentHubSalePage {
     position: relative;
   }
 }
+.BasicUI
+  .SaleSectionCtn.animated
+  .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD
+  .SliderBody
+  ul {
+  gap: 0;
+}
 .partnersaledisplay_SaleHeaderContainer_W4mvn {
   display: flex;
   margin: 0 auto;
@@ -12889,9 +12903,8 @@ html.responsive.touch .ContentHubSalePage {
 }
 .BasicUI
   .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD
-  .SliderBody
-  ul {
-  gap: 0;
+  .carousel__slider {
+  overflow: visible;
 }
 .partnersaledisplay_SaleSection_1cOoC .partnersaledisplay_SaleViewAll_1bsBz {
   display: flex;
@@ -12973,7 +12986,9 @@ html.responsive.touch .ContentHubSalePage {
   display: flex;
   flex-direction: column;
 }
-.BasicUI .partnersaledisplay_SaleOuterContainer_150kd {
+.BasicUI
+  .SaleBackgroundCtn:not(.ContentHubSalePage)
+  .partnersaledisplay_SaleOuterContainer_150kd {
   padding: 0px;
   background: var(--gpGradient-StoreBackground);
 }
@@ -12987,11 +13002,11 @@ html.responsive.touch .ContentHubSalePage {
     margin-top: 41vw !important;
     padding: 0px 10px;
   }
-  html.responsive
-    .ContentHubSalePage
-    .partnersaledisplay_SaleOuterContainer_150kd {
+  .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_150kd {
     margin-top: 2vw !important;
-    margin-top: 100px;
+  }
+  .BasicUI .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_150kd {
+    margin-top: 60px !important;
   }
 }
 .partnersaledisplay_SaleBackground_2N8Se {
@@ -13357,8 +13372,21 @@ html.responsive.touch
   margin: 0 auto;
   margin-bottom: 32px;
 }
+.BasicUI .partnersaledisplay_SalePageLogoCtn_xP8Lp {
+  max-height: 230px;
+  margin-bottom: 0px;
+}
 .partnersaledisplay_SalePageLogoCtn_xP8Lp img {
   width: 100%;
+}
+.BasicUI .partnersaledisplay_SalePageLogoCtn_xP8Lp img {
+  max-height: 230px;
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  .partnersaledisplay_SalePageLogoCtn_xP8Lp {
+    margin-bottom: 0px;
+  }
 }
 .salesectioneventschedule_SaleSchedCtn_2g7il {
   height: 480px;
@@ -14134,9 +14162,9 @@ Body.v6.tag_page.contenthub_page {
   margin: 0px auto 20px auto;
 }
 .BasicUI .ContentHubSalePage .contenthubmaincarousel {
-  max-width: 852px;
-  width: 852px;
-  padding: 16px;
+  max-width: 832px;
+  width: 832px;
+  padding: 14px;
   box-sizing: border-box;
 }
 .BasicUI .ContentHubSalePage .contenthubmaincarousel .SliderBody ul {
@@ -14421,6 +14449,9 @@ Body.v6.tag_page.contenthub_page {
   margin-bottom: 36px;
   position: relative;
   z-index: 1;
+}
+.BasicUI .contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
+  margin-bottom: 0px;
 }
 html.responsive.touch .contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
   margin-bottom: 8px;

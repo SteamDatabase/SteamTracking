@@ -195,6 +195,12 @@
 	}
 
 
+	/* Autocomplete */
+	html.responsive #term_options {
+		display: none;
+	}
+
+
     /* Sort dropdown */
     html.responsive .sortbox {
         display: flex;

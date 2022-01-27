@@ -657,7 +657,7 @@
 	}
 
 	html.responsive .top_new_releases_banner_ctn a {
-		background: unset;
+        background: rgba(0,0,0,0.4);
 		box-shadow: unset;
 		height: unset;
 		padding: var(--gpSpace-Gutter) 0px var(--gpSpace-Gap) 0px;
@@ -666,7 +666,7 @@
 
 	html.responsive .top_new_releases_background {
 		-webkit-mask-image: linear-gradient( 0deg, transparent 10%, black 50%, black 100%, transparent 0%);
-		top: 0px;
+		top: -18px;
 		width: 150%;
 		background-size: cover;
 	}
