@@ -15424,7 +15424,7 @@
                 O = [];
               Object(d.a)(m.d.EREALM)
                 ? O.push(r(1846860), r(1526200))
-                : O.push(r(1846860), r(1277400), r(292030)),
+                : O.push(r(1880140), r(1846860), r(1277400), r(292030)),
                 (S = {
                   type: "banner",
                   title: Object(s.f)("#FeaturedBanner_ArtistProfiles_Headline"),
