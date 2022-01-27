@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-pJ
-pJ
+@_
+@_
 __stubs
 __TEXT
 __stub_helper
@@ -12,6 +12,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+$"
 __objc_methname
 __TEXT
 __unwind_info
@@ -41,7 +42,6 @@ __thread_bss
 __DATA
 __bss
 __DATA
-97
 __common
 __DATA
 xC
@@ -111,7 +111,7 @@ N10CSteamUser24CCallback_OnLogonFailureE
 13CCallbackImplILi8EE
 N10CSteamUser26CCallback_OnPostLogonStateE
 9CCallbackI10CSteamUser16PostLogonState_tLb0EE
-13CCallbackImplILi9EE
+13CCallbackImplILi10EE
 N10CSteamUser33CCallback_OnSteamGuardFileCreatedE
 9CCallbackI10CSteamUser23SteamGuardFileCreated_tLb0EE
 10CUtlString
@@ -123,7 +123,6 @@ N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedServerE
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 20CMultipleCallResultsI25CControllerConfigUploader32RemoteStoragePublishFileResult_tE
 20CMultipleCallResultsI25CControllerConfigUploader40RemoteStorageUpdatePublishedFileResult_tE
-N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
 9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
 13CCallbackImplILi40EE
 25SteamClientConVarAccessor
@@ -265,6 +264,8 @@ Set the base used to construct quick login URLs
 Set the community URL
 -store
 Set the store URL
+-help
+Set the help/support URL
 /
 %s/
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
@@ -464,14 +465,8 @@ enablelzma
 disablelzma
 nocegsniff
 enablesymlinks
-rebuildcache
-.
-Preparing update...
-Building file mapping...
-Scanning content
-Updating local CS
-Signing install script
-Uploading content
+%.1fMB (%d%%)
+%.1fMB
 app_build_all_depots
 app_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <folder> -buildoutput <folder> <appid>  : Build all depots for one app
 ERROR! Not logged on.
@@ -479,8 +474,6 @@ run_app_build
 run_app_build [-preview] [-desc <text>] <appbuildfile> : run app depot build as specified in appbuildfile
 run_app_build_http
 run_app_build_http : alias for run_app_build
-set_depot_key
-set_depot_key <depotid> <hexkey> : alias for run_app_build
 build_installer
 <project file> <target folder> [beta key] [beta pwd]
 build_backup
@@ -540,7 +533,6 @@ Building depot %u...
 Successfully finished AppID %u build preview.
 ERROR! Failed to commit build for AppID %u : %s
 Successfully finished AppID %u build (BuildID %d).
-invalid key length
 CAppInstallerBuilder::OnAppBackupStatus
 ERROR! Failed to begin installer build
 ERROR! Installer build failed (%s)
@@ -556,11 +548,18 @@ Item download to "%s" finish (%s)
 Invalid parameters
 Chunk download to "%s"
 Chunk download failed : %s
+.
+Uploading content...
+Signing install script
+Updating local CS
+Scanning content
+Building file mapping...
+Preparing update...
 ERROR! Failed to parse parameters
 -globaluser
 -master_ipc_name_override
 @ShutdownOnFailedCommand
-Exit steamcmd immediately upon any failed build-related command
+Exit steamcmd immediately upon any failed console command
 @LogFileFolderName
 Use something other than 'logs' as the folder for log files
 @bSiteLicenseServer
@@ -629,7 +628,6 @@ https://www.example.com/
 GetBootstrapperVersion
 Steam Console Client (c) Valve Corporation
 - version %llu
--help
 --help
 -h
 /h
@@ -684,8 +682,6 @@ swarm_tc_download
 swarm_tc_download <src_bucket_hw_id> <src_bucketsw_id> <work_dir>
 swarm_tc_upload
 <src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <work_dir> <appid> <bucketid>
-swarm_tc_loop
-<src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <work_dir> <tool_appid> <entrypoint> <src_file> <dst_file>
 swarm_shader_download
 <work_dir>
 swarm_shader_compile
@@ -706,10 +702,7 @@ incoming_path
 outgoing_path
 gpu_desc
 driver_desc
-ERROR! Upload folder %s is empty
 Using baseline bucket manifest %llu size: %llu
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamconsole/shader.cpp
-callback.m_unBucketID == ulBucketID
 ERROR! Failed getting bucket : %s
 baselinemanifest
 filemapping
@@ -720,63 +713,43 @@ recursive
 ERROR! Build for depot failed : %s
 Finished uploading depot ( manifest: %llu, size: %llu )
 ERROR! Failed to report shader build : %s
-Transcode upload complete ( AppID: %u, BucketID: %llu )
-%s/tools_install_dir/%u
-Tool DownloadDepot ERROR %u!
-Tool DownloadDepot success: %s
-%s/%s
-Tool entrypoint %s not found!
-Tool entrypoint found at %s
-GetStaleBucket ERROR %u!
-GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu
-%s/incoming_content/app_%u/bucket_%llu
-%s/incoming_content/app_%u/%llu.tcdepotmanifestcache
-Updating depot from %llu to %llu .
-DownloadDepot ERROR %u!
-DownloadDepot success: %s
-%s/outgoing_content/%u/%llu
-%s/depot_root
-%s/depot_build_output
-ERROR: Source file %s doesn't exist!
-%s %s %s
-TC command line: %s
-ERROR %u running TC tool!
-GetBucketManifest ERROR %u!
-GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
-StartDepotBuild success. manifest: %llu size: %llu
-ReportExternalBuild ERROR %u!
-AppID %u done! Restarting.
+Transcode upload complete ( AppID: %u, BucketID: %llu ) ulTranscodedSizeBytes %llu
 %s/swarm_shader_download.vdf
 SteamSwarm
 G7:VulkanPipelinesV%u%%
 GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu GPUDesc: %s DriverDesc: %s
+%s/incoming_content/app_%u/bucket_%llu
 %s/incoming_content/app_%u/%llu.shaderdepotmanifestcache
 _
 Using compat tool hash: %s
 shader_depot_manifest_cache
+Updating depot from %llu to %llu .
 DownloadDepot ERROR %s!
+DownloadDepot success: %s
 stale_gpu_desc
 stale_driver_desc
 compat_tool_hash
 Failed to load file to buffer %s
 Failed to parse KV %s
 Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...
-WritePrecompiledCache returned result '%s'. foz file missing from depot?
+%s/outgoing_content/%u/%llu
+WritePrecompiledCache returned result '%s'. foz file missing from depot or no full pipelines in it.
 WritePrecompiledCache success for GPU: '%s' Driver: '%s' CacheType: %d
 %s_
 %s%d:VP%d_%sprecomp_%s
 W
 Building depot for %s / %s
 GetBucketManifest ERROR %s (this is normal if it's the first time built)
-Shader upload complete ( AppID: %u, BucketID: %llu )
+GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
+%s/depot_build_output
+StartDepotBuild success. manifest: %llu size: %llu
+Shader upload complete ( AppID: %u, BucketID: %llu ) bHasPrecompiledCache %d
 ERROR. Shader processing failed!
 ERROR! Shader conversion failed!
 ERROR! Failed to write swarm_tc_download.vdf
 ERROR! Invalid stale bucket!
 Done. No more bucket to transcode
 Using no baseline manifest for upload
-ShaderConversion ERROR!
-ShaderConversion success
 ERROR! Failed to write swarm_shader_download.vdf
 Current downloaded manifest matches, skipping download.
 got empty manifest from GetStaleBucket!
@@ -804,6 +777,7 @@ visibility
 previewfile
 contentfolder
 changenote
+Preparing update...
 Preparing content...
 Uploading content...
 Uploading preview image...
@@ -896,6 +870,7 @@ static_cast<Node_t*>(pNode)->elem
 m_queueItemsPending.Count() == 0
 m_vecRegisteredWriters.Count() == 0
 CFileWriterThread already exited
+m_unInCounter == m_unOutCounter
 pFile
 cubData < FIO_MAX_IO_BYTES
 pFile->m_hFileDest != INVALID_OSFILEHANDLE
@@ -933,6 +908,7 @@ POSIX
 LINUX
 LINUX32
 LINUX64
+LINUXARM64
 ANDROID
 ANDROID32
 ANDROID64
@@ -1153,6 +1129,7 @@ Client no longer supported
 The current Steam realm does not match the requested resource
 Signature check failed
 Failed to parse input
+No verified phone number
 Invalid
 Public
 Beta
@@ -1319,9 +1296,9 @@ j
 @
 @
 0
-Ic
-t
 0
+Ic
+b
 
 =
 @
@@ -1339,6 +1316,6 @@ t
 0
 0
 0
+F
 0
 0
-?
