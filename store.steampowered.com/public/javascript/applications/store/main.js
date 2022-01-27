@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7033699";
+var CLSTAMP = "7033984";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [41],
   {
@@ -31826,7 +31826,7 @@ var CLSTAMP = "7033699";
             );
           return l.a.createElement(
             ee,
-            Object(r.a)({ hoverContent: N }, _),
+            Object(r.a)({ hoverContent: N, strClickUrl: R }, _),
             e.children
           );
         },
@@ -31874,6 +31874,7 @@ var CLSTAMP = "7033699";
             return (
               (t.m_refHoverSourceDiv = l.a.createRef()),
               (t.m_bPopupShowPending = !1),
+              (t.m_bHoversEnabled = !0),
               t
             );
           }
@@ -31907,14 +31908,18 @@ var CLSTAMP = "7033699";
                         (n = e.hoverContent),
                         (i = e.hoverProps),
                         (a = e.nDelayShowMs),
+                        e.strClickUrl,
                         e.children,
                         Object(r.f)(e, [
                           "hoverContent",
                           "hoverProps",
                           "nDelayShowMs",
+                          "strClickUrl",
                           "children",
                         ]),
-                        (o = this.m_refHoverSourceDiv.current) && n
+                        (o = this.m_refHoverSourceDiv.current) &&
+                        n &&
+                        this.m_bHoversEnabled
                           ? ((s = o.clientWidth < 200 ? "8px" : "10px"),
                             (c = Object(r.a)(
                               Object(r.a)(
@@ -31975,24 +31980,37 @@ var CLSTAMP = "7033699";
               });
             }),
             (t.prototype.render = function () {
-              var e = this.props,
-                t = (e.hoverContent, e.hoverProps, e.nDelayShowMs, e.children),
-                n = Object(r.f)(e, [
+              var e,
+                t = this,
+                n = this.props,
+                i =
+                  (n.hoverContent, n.hoverProps, n.nDelayShowMs, n.strClickUrl),
+                a = n.children,
+                o = Object(r.f)(n, [
                   "hoverContent",
                   "hoverProps",
                   "nDelayShowMs",
+                  "strClickUrl",
                   "children",
-                ]),
-                i = !!T.d.IN_GAMEPADUI;
+                ]);
+              i &&
+                (e = function (e) {
+                  (t.m_bHoversEnabled = !1), (window.location.href = i);
+                });
+              var s = !!T.d.IN_GAMEPADUI;
               return l.a.createElement(
                 "div",
-                Object(r.a)({ ref: this.m_refHoverSourceDiv }, n, {
-                  onMouseEnter: i ? null : this.OnHover,
-                  onMouseLeave: i ? null : this.OnUnhover,
+                Object(r.a)({ ref: this.m_refHoverSourceDiv }, o, {
+                  onMouseEnter: s ? null : this.OnHover,
+                  onMouseLeave: s ? null : this.OnUnhover,
                   onFocus: this.OnHover,
                   onBlur: this.OnUnhover,
+                  onClick: e,
+                  onTouchStart: function (e) {
+                    t.m_bHoversEnabled = !1;
+                  },
                 }),
-                l.a.createElement(g.a, null, t)
+                l.a.createElement(g.a, null, a)
               );
             }),
             (t.sm_embeddedElements = new p.a("item-hover-source-elements")),
