@@ -108,11 +108,11 @@ function filterApps()
 	CScrollOffsetWatcher.ForceRecalc();
 }
 
-function AchievementHover( elem, event, divHover ) 
+function AchievementHover( elem, event, divHover )
 {
 	if (!event) var event = window.event;
     elem = $(elem);
-	
+
 	var hover = $(divHover);
 	if ( hover.visible() && hover.target == elem )
 	{
@@ -144,11 +144,11 @@ function ShowAchievementHover( elem, divHover )
 	var hover = $(divHover);
 	hover.style.visibility = 'hidden';
 	hover.show();
-	
+
 	hover.clonePosition( elem, {setWidth: false, setHeight: false} );
 	var hover_box = hover.down( '.hover_box' );
 	var hover_arrow = hover.down( '.hover_arrow' );
-	
+
 	if ( Prototype.Browser.IE )
 	{
 		hover.style.paddingTop = '12px';
@@ -164,27 +164,27 @@ function ShowAchievementHover( elem, divHover )
 		var nViewportAdjustment = ( hover_box.getHeight() + 8 ) - ( document.viewport.getHeight() - boxTopViewport );
 				nViewportAdjustment = Math.min( hover_box.getHeight() - 74, nViewportAdjustment );
 		hover.style.top = ( parseInt( hover.style.top ) - nViewportAdjustment ) + 'px';
-		
+
 		hover_arrow.style.top = ( 48 + nViewportAdjustment ) + 'px';
 	}
 	else
 	{
 		hover_arrow.style.top = '';
 	}
-	
+
 	hover.style.visibility = '';
-	
+
 	hover.target = elem;
 }
 
 
 
-var gameTemplate = new Template( "<div class=\"gameListRowLogo #{logo_class}\">\r\n\t<a href=\"#{link}\">\r\n\t\t<img class=\"game_capsule\" src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/trans.gif\" id=\"delayedimage_game_logo_#{appid}_0\">\r\n\t<\/a>\r\n<\/div>\r\n<div class=\"gameListRowItem\">\r\n\t#{achievement_block}\r\n\t<div class=\"gameListRowItemTop\">\r\n\t\t<div class=\"gameListRowItemTopPrimary\">\r\n\t\t\t<div class=\"gameListRowItemName ellipsis #{text_color}\">#{name_escaped}<\/div>\r\n\t\t\t<h5 class=\"ellipsis hours_played\">#{hours_message}<\/h5>\r\n\t\t<\/div>\r\n\t\t<div class=\"gameListRowItemTopSecondary\">\r\n    \t\t#{client_block}\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t<div class=\"bottom_controls\">\r\n\t\t<div class=\"pullup_item\" onclick=\"ShowMenuCumulative( this, 'links_dropdown_#{appid}', 'left' );\">\r\n\t\t\t<div class=\"menu_ico\">\r\n\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/ico_www.png\" width=\"16\" height=\"16\" border=\"0\" \/>\r\n\t\t\t<\/div>\r\n\t\t\tLinks\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/header\/btn_arrow_down.png\" border=\"0\" class=\"menuarrow\" \/>\r\n\t\t<\/div>\r\n\t\t\t#{stats_button} #{gcpd_button} #{review_button}\r\n\t\t<\/div>\r\n\t<\/div>\r\n<\/div>\r\n" );
+var gameTemplate = new Template( "<div class=\"gameListRowLogo #{logo_class}\">\r\n\t<a href=\"#{link}\">\r\n\t\t<img class=\"game_capsule\" src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/trans.gif\" id=\"delayedimage_game_logo_#{appid}_0\">\r\n\t<\/a>\r\n<\/div>\r\n<div class=\"gameListRowItem\">\r\n\t#{achievement_block}\r\n\t<div class=\"gameListRowItemTop\">\r\n\t\t<div class=\"gameListRowItemTopPrimary\">\r\n\t\t\t<div class=\"gameListRowItemName ellipsis #{text_color}\">#{name_escaped}<\/div>\r\n\t\t\t<h5 class=\"ellipsis hours_played\">#{hours_message}<\/h5>\r\n\t\t<\/div>\r\n\t\t<div class=\"gameListRowItemTopSecondary\">\r\n    \t\t#{client_block}\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t<div class=\"bottom_controls\">\r\n\t\t<div data-panel=\"{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}\" class=\"pullup_item\" onclick=\"ShowMenuCumulative( this, 'links_dropdown_#{appid}', 'left' );\">\r\n\t\t\t<div class=\"menu_ico\">\r\n\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/ico_www.png\" width=\"16\" height=\"16\" border=\"0\" \/>\r\n\t\t\t<\/div>\r\n\t\t\tLinks\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/header\/btn_arrow_down.png\" border=\"0\" class=\"menuarrow\" \/>\r\n\t\t<\/div>\r\n\t\t\t#{stats_button} #{gcpd_button} #{review_button}\r\n\t\t<\/div>\r\n\t<\/div>\r\n<\/div>\r\n" );
 var changingGameTemplate = new Template( "<div class=\"changingGameListRowLogo\">\r\n\t<div class=\"changingGameLogoHolder\">\r\n        <div class=\"changingGameLogo\">\r\n            <a href=\"#{link}\">\r\n\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/trans.gif\" id=\"delayedimage_game_logo_#{appid}\">\r\n            <\/a>\r\n        <\/div>\r\n    <\/div>\r\n<\/div>\r\n<div class=\"changingGameListRowItem\">\r\n\t<div class=\"gameListRowItemName #{text_color}\">#{name_escaped}<\/div>\r\n\t<h5>#{hours_message}<\/h5>\r\n<\/div>\r\n" );
 var gameHoursForeverTemplate = new Template ( '#{hours_forever} hrs on record' );
 var gameHoursRecentTemplate = new Template ( '#{hours} hrs last two weeks / #{hours_forever} hrs on record' );
-var gameStatsTemplate = new Template( "\t<div class=\"pullup_item\" onclick=\"ShowMenuCumulative( this, 'stats_dropdown_#{appid}', 'right' );\">\r\n\t\t<div class=\"menu_ico\"><img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/ico_stats.png\" width=\"16\" height=\"16\" border=\"0\" \/><\/div>\r\n\t\tView Stats<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/header\/btn_arrow_down.png\" border=\"0\" class=\"menuarrow\" \/>\r\n\t<\/div>\r\n" );
-var gamePersonalDataTemplate = new Template( "<div class=\"pullup_item\" onclick=\"ShowMenuCumulative( this, 'gcpd_dropdown_#{appid}', 'right' );\">\r\n\t<div class=\"menu_ico\"><img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/ico_stats.png\" width=\"16\" height=\"16\" border=\"0\" \/><\/div>\r\nPersonal Game Data<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/header\/btn_arrow_down.png\" border=\"0\" class=\"menuarrow\" \/>\r\n<\/div>\r\n" );
+var gameStatsTemplate = new Template( "\t<div data-panel=\"{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}\" class=\"pullup_item\" onclick=\"ShowMenuCumulative( this, 'stats_dropdown_#{appid}', 'right' );\">\r\n\t\t<div class=\"menu_ico\"><img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/ico_stats.png\" width=\"16\" height=\"16\" border=\"0\" \/><\/div>\r\n\t\tView Stats<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/header\/btn_arrow_down.png\" border=\"0\" class=\"menuarrow\" \/>\r\n\t<\/div>\r\n" );
+var gamePersonalDataTemplate = new Template( "<div data-panel=\"{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}\" class=\"pullup_item\" onclick=\"ShowMenuCumulative( this, 'gcpd_dropdown_#{appid}', 'right' );\">\r\n\t<div class=\"menu_ico\"><img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/ico_stats.png\" width=\"16\" height=\"16\" border=\"0\" \/><\/div>\r\nPersonal Game Data<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/header\/btn_arrow_down.png\" border=\"0\" class=\"menuarrow\" \/>\r\n<\/div>\r\n" );
 var gameLinksPopupTemplate = new Template( "\t<div class=\"shadow_ul\"><\/div><div class=\"shadow_top\"><\/div><div class=\"shadow_ur\"><\/div><div class=\"shadow_left\"><\/div><div class=\"shadow_right\"><\/div><div class=\"shadow_bl\"><\/div><div class=\"shadow_bottom\"><\/div><div class=\"shadow_br\"><\/div>\t<div class=\"popup_body2 popup_menu2 shadow_content\">\r\n\t\t<a class=\"popup_menu_item2 tight\" href=\"https:\/\/store.steampowered.com\/app\/#{appid}\">\r\n\t\t\t<h5>Visit the Store Page<\/h5>\r\n\t\t<\/a>\r\n\t\t\t\t<a class=\"popup_menu_item2 tight\" href=\"https:\/\/store.steampowered.com\/forum\/#{appid}\">\r\n\t\t\t<h5>Visit the Forums<\/h5>\r\n\t\t<\/a>\r\n\t\t<a class=\"popup_menu_item2 tight\" href=\"https:\/\/steamcommunity.com\/search\/groups\/?text=#{name_encoded}\">\r\n\t\t\t<h5>Find Community Groups<\/h5>\r\n\t\t<\/a>\r\n\t\t<a class=\"popup_menu_item2 tight\" href=\"https:\/\/store.steampowered.com\/appofficialsite\/#{appid}\">\r\n\t\t\t<h5>Visit official website<\/h5>\r\n\t\t<\/a>\r\n\t\t<a class=\"popup_menu_item2 tight\" href=\"https:\/\/store.steampowered.com\/news\/?appids=#{appid}\">\r\n\t\t\t<h5>Read related news<\/h5>\r\n\t\t<\/a>\r\n\t\t\t<\/div>\r\n" );
 var gameStatsPopupTemplate = new Template( "\t<div class=\"shadow_ul\"><\/div><div class=\"shadow_top\"><\/div><div class=\"shadow_ur\"><\/div><div class=\"shadow_left\"><\/div><div class=\"shadow_right\"><\/div><div class=\"shadow_bl\"><\/div><div class=\"shadow_bottom\"><\/div><div class=\"shadow_br\"><\/div>\t<div class=\"popup_body2 popup_menu2 shadow_content\">\r\n\t#{stats_links}\r\n\t<\/div>\r\n" );
 var gamePersonalDataPopupTemplate = new Template( "<div class=\"shadow_ul\"><\/div><div class=\"shadow_top\"><\/div><div class=\"shadow_ur\"><\/div><div class=\"shadow_left\"><\/div><div class=\"shadow_right\"><\/div><div class=\"shadow_bl\"><\/div><div class=\"shadow_bottom\"><\/div><div class=\"shadow_br\"><\/div><div class=\"popup_body2 popup_menu2 shadow_content\">\r\n#{gcpd_links}\r\n<\/div>\r\n" );
@@ -289,7 +289,7 @@ function BuildGameRow( gameInfo, bViewingOwnProfile )
 		gameInfo['stats_links'] = statsLinks;
 		gameInfo['stats_button'] = gameStatsTemplate.evaluate(gameInfo);
 
-		var e = new Element('div', {'class': "popup_block2", 'id': "stats_dropdown_" + gameInfo['appid']} );
+		var e = new Element('div', {'class': "popup_block2", 'id': "stats_dropdown_" + gameInfo['appid']  } );
 		e.update( gameStatsPopupTemplate.evaluate( gameInfo ) );
 		e.hide();
 		$(document.body).appendChild(e);
@@ -315,6 +315,7 @@ function BuildGameRow( gameInfo, bViewingOwnProfile )
 	var html = gameTemplate.evaluate( gameInfo );
 
 	var div = new Element('div', {'class': 'gameListRow', id: 'game_' + gameInfo['appid'] } );
+	div.setAttribute( "data-panel","{\"type\":\"PanelGroup\"}" );
 	if ( gameInfo.item_background )
 		div.addClassName( gameInfo.item_background );
 
@@ -406,10 +407,10 @@ function GetClientActionIcon( summary, appid )
 				actionIconOnClick = ' onClick="DimButton(this, event, function() { ' + onClickFunc + ' } );"';
 			}
 		}
-		
+
 		return '<div class="clientConnItemIcon ' + actionApi + '" style="background-image: url(' + actionIcon + ');"' + actionIconOnClick + '></div>';
 	}
-	
+
 	return '';
 }
 
@@ -422,10 +423,10 @@ function UpdateGameInfoFromSummary( gameInfo, summary )
 		summary['state'] = 'uninstalled';
 		summary['status'] = 'Not installed';
 	}
-	
+
 	gameInfo['text_color'] = '';
 	gameInfo['item_background'] = '';
-	
+
 	if ( summary['state'] == 'uninstalled' )
 	{
         // Apps which have finished uninstalling recently are still colored
@@ -463,7 +464,7 @@ function UpdateGameInfoFromSummary( gameInfo, summary )
 			gameInfo['item_background'] = 'gameListItemInstalled';
 		}
 	}
-	
+
 	gameInfo['status'] = summary['status'];
 	gameInfo['localContentSize'] = summary['localContentSize'];
 
@@ -479,14 +480,14 @@ function IsGameActive( div )
 	{
 		return true;
 	}
-	
+
 	return false;
 }
 
 function InsertActiveGameRow( div, divName )
 {
 	var allRows = $('games_list_rows');
-	
+
 	var nextChild = allRows.firstDescendant();
 	if (!nextChild)
 	{
@@ -495,7 +496,7 @@ function InsertActiveGameRow( div, divName )
 	}
 
 	var nameLower = divName.toLowerCase();
-	
+
 	while (IsGameActive(nextChild))
 	{
 		var childName = nextChild.down('.gameListRowItemName').innerHTML.toLowerCase();
@@ -503,10 +504,10 @@ function InsertActiveGameRow( div, divName )
 		{
 			break;
 		}
-		
+
 		nextChild = nextChild.next();
 	}
-	
+
 	allRows.insertBefore(div, nextChild);
 }
 
@@ -573,7 +574,7 @@ function DelayRequestChangingGames( delay, retries )
     {
         ActivationRetries = retries;
     }
-	
+
 	window.setTimeout( RequestChangingGames, delay );
 }
 

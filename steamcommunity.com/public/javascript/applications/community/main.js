@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7032535";
+var CLSTAMP = "7037730";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -4251,8 +4251,8 @@ var CLSTAMP = "7032535";
                   onEnterKeyPress: e.onEnterKeyPress,
                   strEnterKeyLabel: e.strEnterKeyLabel,
                   onKeyboardNavOut: e.onKeyboardNavOut,
-                  onKeyboardInUse: e.onKeyboardInUse,
-                  onKeyboardShown: e.onKeyboardShown,
+                  onKeyboardShow: e.onKeyboardShow,
+                  onKeyboardFullyVisible: e.onKeyboardFullyVisible,
                   onTextEntered: e.onTextEntered,
                   BIsElementValidForInput: e.BIsElementValidForInput,
                 },
@@ -4260,8 +4260,8 @@ var CLSTAMP = "7032535";
                   "onEnterKeyPress",
                   "strEnterKeyLabel",
                   "onKeyboardNavOut",
-                  "onKeyboardInUse",
-                  "onKeyboardShown",
+                  "onKeyboardShow",
+                  "onKeyboardFullyVisible",
                   "onTextEntered",
                   "BIsElementValidForInput",
                 ]),
@@ -5618,34 +5618,34 @@ var CLSTAMP = "7032535";
     "Jqb/": function (e, t, n) {
       "use strict";
       n.d(t, "i", function () {
-        return w;
+        return E;
       }),
         n.d(t, "b", function () {
-          return O;
-        }),
-        n.d(t, "h", function () {
           return C;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "h", function () {
           return S;
         }),
-        n.d(t, "j", function () {
+        n.d(t, "a", function () {
           return D;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "j", function () {
           return M;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "d", function () {
           return k;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "e", function () {
           return x;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "f", function () {
           return R;
         }),
+        n.d(t, "c", function () {
+          return I;
+        }),
         n.d(t, "g", function () {
-          return L;
+          return B;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -5665,10 +5665,11 @@ var CLSTAMP = "7032535";
         v = n("gQFo"),
         _ = n("qiKp"),
         y = n("qDk6"),
-        w = Object(v.a)("ModalPresentationContext", function () {
+        w = n("lkRc"),
+        E = Object(v.a)("ModalPresentationContext", function () {
           return o.createContext({});
         });
-      function E(e) {
+      function O(e) {
         var t = e.active,
           n = e.children,
           r = o.useState(null),
@@ -5679,7 +5680,7 @@ var CLSTAMP = "7032535";
           o.useEffect(
             function () {
               return (
-                t && !c.current && (c.current = L(window).ShowPortaledModal(s)),
+                t && !c.current && (c.current = B(window).ShowPortaledModal(s)),
                 function () {
                   c.current && (c.current.Close(), (c.current = null));
                 }
@@ -5690,30 +5691,30 @@ var CLSTAMP = "7032535";
           t && a ? i.createPortal(n, a) : null
         );
       }
-      var O = function (e) {
+      var C = function (e) {
         var t = e.active,
           n = e.onDismiss,
           r = e.className,
           i = e.modalClassName,
           a = e.children;
         return o.createElement(
-          E,
+          O,
           { active: t },
           o.createElement(
-            C,
+            S,
             { onEscKeypress: n, className: i },
             o.createElement(c.f, { className: r }, a)
           )
         );
       };
-      function C(e) {
-        var t = o.useContext(w);
+      function S(e) {
+        var t = o.useContext(E);
         return o.createElement(
           b.f,
-          Object(r.a)({ component: t.ModalPosition, fallback: S }, e)
+          Object(r.a)({ component: t.ModalPosition, fallback: D }, e)
         );
       }
-      function S(e) {
+      function D(e) {
         var t,
           n = {};
         e.onEscKeypress &&
@@ -5761,7 +5762,7 @@ var CLSTAMP = "7032535";
           s({ className: "ModalPosition_Content", children: c })
         );
       }
-      var D = (function (e) {
+      var M = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -5799,7 +5800,7 @@ var CLSTAMP = "7032535";
             t
           );
         })(o.Component),
-        M = (function (e) {
+        k = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5827,7 +5828,7 @@ var CLSTAMP = "7032535";
                 ]),
                 d = i || Object(s.f)("#Button_Close");
               return o.createElement(
-                k,
+                x,
                 Object(r.a)({}, p),
                 o.createElement(
                   y.a,
@@ -5863,7 +5864,7 @@ var CLSTAMP = "7032535";
             (t = Object(r.c)([d.a], t))
           );
         })(o.Component),
-        k = (function (e) {
+        x = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5895,7 +5896,7 @@ var CLSTAMP = "7032535";
             }),
             (t.prototype.render = function () {
               return o.createElement(
-                C,
+                S,
                 {
                   onEscKeypress: this.Cancel,
                   bDestructiveWarning: this.props.bDestructiveWarning,
@@ -5912,7 +5913,7 @@ var CLSTAMP = "7032535";
                       this.props.className
                     ),
                     onSubmit: this.OK,
-                    bCenterVertically: !0,
+                    bCenterVertically: !w.c.IN_GAMEPADUI,
                   },
                   this.props.children
                 )
@@ -5923,7 +5924,7 @@ var CLSTAMP = "7032535";
             (t = Object(r.c)([d.a], t))
           );
         })(o.Component),
-        x = (function (e) {
+        R = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5943,12 +5944,12 @@ var CLSTAMP = "7032535";
                 },
                 this.props
               );
-              return o.createElement(M, Object(r.a)({}, e));
+              return o.createElement(k, Object(r.a)({}, e));
             }),
             (t = Object(r.c)([d.a], t))
           );
         })(o.Component),
-        R = (function (e) {
+        I = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -6013,7 +6014,7 @@ var CLSTAMP = "7032535";
             t
           );
         })(o.Component),
-        I = (function () {
+        T = (function () {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -6104,23 +6105,23 @@ var CLSTAMP = "7032535";
             e
           );
         })(),
-        T = (function () {
+        j = (function () {
           function e() {
             this.m_mapModalManager = new WeakMap();
           }
           return (
             (e.prototype.GetModalManager = function (e) {
               var t = this.m_mapModalManager.get(e);
-              return t || ((t = new I()), this.m_mapModalManager.set(e, t)), t;
+              return t || ((t = new T()), this.m_mapModalManager.set(e, t)), t;
             }),
             e
           );
         })(),
-        j = Object(v.a)("ModalManagerFactory", function () {
-          return new T();
+        L = Object(v.a)("ModalManagerFactory", function () {
+          return new j();
         });
-      function L(e) {
-        return j.GetModalManager(e);
+      function B(e) {
+        return L.GetModalManager(e);
       }
     },
     Kw0F: function (e, t, n) {
@@ -14789,6 +14790,7 @@ var CLSTAMP = "7032535";
             DEV_MODE: !1,
             IN_LIBRARY: !1,
             IN_GAMEPADUI: !1,
+            ON_DECK: !1,
             IN_LOGIN: !1,
           }),
         s = {

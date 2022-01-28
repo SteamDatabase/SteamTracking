@@ -12,7 +12,7 @@
 	--gpStoreLightestGrey: #CCD8E3;
 	--gpStoreLighterGrey: #A7BACC;
 	--gpStoreLightGrey: #7C8EA3;
-	--gpStoreGrey: #5B6D82;
+	--gpStoreGrey: #4e697d;
 	--gpStoreDarkGrey: #2A475E;
 	--gpStoreDarkerGrey: #1B2838;
 	--gpStoreDarkestGrey: #000F18;
@@ -59,6 +59,7 @@
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 32vw;
+	--gpDselectWidth: 320px;
 
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);

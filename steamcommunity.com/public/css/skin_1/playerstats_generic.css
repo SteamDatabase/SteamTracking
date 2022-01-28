@@ -1,4 +1,4 @@
-  
+
 
 #BG_top {
 	position:relative;
@@ -60,6 +60,7 @@
 	color:#747474;
 	border-radius: 3px;
 	min-height: 69px;
+	margin-bottom: 16px;
 }
 
 #tsblTitle {
@@ -366,7 +367,7 @@
 .rRh {
 	background-color:#505050;
 }
-	
+
 .friendBlockIcon {
 	padding-right:20px;
 }

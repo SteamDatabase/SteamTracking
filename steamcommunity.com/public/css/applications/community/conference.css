@@ -944,7 +944,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
 }
 .chatentry_chatTextarea_113iu.GamepadMode.gpfocus,
 .GamepadMode .chatentry_chatTextarea_113iu.gpfocus {
-  background-color: #3d4450;
   color: #fff;
 }
 .chatentry_chatEntryActionsGroup_2WfNo {
@@ -1017,6 +1016,15 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
 .GamepadMode
   .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus {
   background: #fff;
+}
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2)
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #fff;
 }
 .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
   .SVGIcon_Button.SVGIcon_Submit
@@ -1103,7 +1111,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit {
   width: 24px;
   height: 24px;
-  margin-top: 3px;
+  margin-top: 6px;
 }
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
   fill: #8592a5;
@@ -1111,7 +1119,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
 }
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path.GamepadMode,
 .GamepadMode .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
-  stroke: #0e141b;
+  stroke-width: 0px;
+  fill: #67707b;
 }
 .chatentry_EmbedButton_3zOBe {
   background-image: none;
@@ -1185,17 +1194,17 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
   width: 100%;
   height: 100%;
   border: 0px solid transparent;
-  border-left: 2px solid #000;
-  background-color: #000;
-  max-width: 48px;
+  background-color: transparent;
+  max-width: 44px;
+  min-width: 0;
 }
 .chatentry_chatEntryControls_3Ule3
   .chatentry_chatSubmitButton_RVIs8.GamepadMode:not(.chatentry_disabled_jaQN2),
 .GamepadMode
   .chatentry_chatEntryControls_3Ule3
   .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2) {
-  border-left: 2px solid #0e141b;
-  background-color: #23262e;
+  background-color: #67707b;
+  color: #fff;
 }
 .chatentry_chatEntryControls_3Ule3
   .chatentry_chatSubmitButton_RVIs8.GamepadMode:not(.chatentry_disabled_jaQN2).gpfocus,
@@ -17621,6 +17630,26 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
   flex-shrink: 0;
   z-index: 2;
   pointer-events: none;
+}
+.insetshadow_FriendListInsetShadowTop_1osHa.GamepadMode,
+.GamepadMode .insetshadow_FriendListInsetShadowTop_1osHa {
+  height: 8px;
+  background: linear-gradient(
+    to bottom,
+    #0e141b 0%,
+    rgba(14, 20, 27, 0.5) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.GamepadMode
+  .multiChatDialog.gpfocuswithin
+  .insetshadow_FriendListInsetShadowTop_1osHa {
+  background: linear-gradient(
+    to bottom,
+    #23262e 0%,
+    rgba(35, 38, 46, 0.5) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 .insetshadow_FriendListInsetShadowBottom_2OoTJ {
   background: linear-gradient(

@@ -56,7 +56,7 @@
 .GamepadMode
   .friendsnooze_SnoozeContainer_1Dsum.online
   .friendsnooze_SnoozeZ_2n0Ei {
-  color: #0056d6;
+  color: #4cb4ff;
 }
 .friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
   .friendsnooze_SnoozeZ_2n0Ei {
@@ -88,7 +88,7 @@
 .GamepadMode
   .friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
   .friendsnooze_SnoozeZ_2n0Ei {
-  color: #0056d6;
+  color: #4cb4ff;
 }
 .friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
   .friendsnooze_SnoozeZ_2n0Ei {
@@ -199,7 +199,7 @@
 }
 .online .steamavatar_avatarStatus_3xUpb.GamepadMode,
 .GamepadMode .online .steamavatar_avatarStatus_3xUpb {
-  background: #1a9fff;
+  background: #4cb4ff;
 }
 .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
@@ -221,12 +221,22 @@
   right: 0;
   width: 2px;
 }
+.steamavatar_avatarStatus_3xUpb.right.GamepadMode,
+.GamepadMode .steamavatar_avatarStatus_3xUpb.right {
+  width: 3px;
+  right: -3px;
+}
 .steamavatar_avatarStatus_3xUpb.bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 2px;
+}
+.steamavatar_avatarStatus_3xUpb.bottom.GamepadMode,
+.GamepadMode .steamavatar_avatarStatus_3xUpb.bottom {
+  height: 3px;
+  bottom: -3px;
 }
 .awayOrSnooze .steamavatar_avatarStatus_3xUpb.bottom {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
@@ -244,6 +254,12 @@
   width: calc(100% - 2px);
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
   transition: filter 0.24s ease-in-out;
+}
+.steamavatar_avatar_3h-QR.GamepadMode,
+.GamepadMode .steamavatar_avatar_3h-QR {
+  border: 0px solid transparent;
+  height: 100%;
+  width: 100%;
 }
 .steamavatar_avatarFrame_X_mJE {
   position: absolute;
@@ -333,7 +349,7 @@
   .personastatusicons_PersonaStatusIcon_KxAI_.online
   .SVGIcon_BigPicture
   path {
-  fill: #0056d6;
+  fill: #4cb4ff;
 }
 @keyframes gamepadui_svg_library_SpinnerSpokeFade_2Wg5d {
   0% {
@@ -6002,7 +6018,6 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 }
 .chatentry_chatTextarea_113iu.GamepadMode.gpfocus,
 .GamepadMode .chatentry_chatTextarea_113iu.gpfocus {
-  background-color: #3d4450;
   color: #fff;
 }
 .chatentry_chatEntryActionsGroup_2WfNo {
@@ -6075,6 +6090,15 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .GamepadMode
   .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus {
   background: #fff;
+}
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2)
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #fff;
 }
 .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
   .SVGIcon_Button.SVGIcon_Submit
@@ -6161,7 +6185,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit {
   width: 24px;
   height: 24px;
-  margin-top: 3px;
+  margin-top: 6px;
 }
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
   fill: #8592a5;
@@ -6169,7 +6193,8 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 }
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path.GamepadMode,
 .GamepadMode .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
-  stroke: #0e141b;
+  stroke-width: 0px;
+  fill: #67707b;
 }
 .chatentry_EmbedButton_3zOBe {
   background-image: none;
@@ -6243,17 +6268,17 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   width: 100%;
   height: 100%;
   border: 0px solid transparent;
-  border-left: 2px solid #000;
-  background-color: #000;
-  max-width: 48px;
+  background-color: transparent;
+  max-width: 44px;
+  min-width: 0;
 }
 .chatentry_chatEntryControls_3Ule3
   .chatentry_chatSubmitButton_RVIs8.GamepadMode:not(.chatentry_disabled_jaQN2),
 .GamepadMode
   .chatentry_chatEntryControls_3Ule3
   .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2) {
-  border-left: 2px solid #0e141b;
-  background-color: #23262e;
+  background-color: #67707b;
+  color: #fff;
 }
 .chatentry_chatEntryControls_3Ule3
   .chatentry_chatSubmitButton_RVIs8.GamepadMode:not(.chatentry_disabled_jaQN2).gpfocus,

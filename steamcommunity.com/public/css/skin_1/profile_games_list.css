@@ -102,7 +102,7 @@ h6 {
 	line-height: 25px;
 	padding: 0px 12px;
 	margin-left: 9px;
-	
+
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	-moz-border-radius-topleft: 3px;
@@ -240,6 +240,10 @@ text-align: right;
 
 }
 
+.sort_options_label {
+	display: inline;
+}
+
 .sort_options {
 color: #8F98A0;
 margin-bottom: 6px;
@@ -348,7 +352,7 @@ color: #EBEBEB;
 	width: 2px;
 	height: 34px;
 	top: 0px;
-	
+
 	background-image: url( https://community.cloudflare.steamstatic.com/public/images/storeImages/btn_storepage_corners.png );
 }
 
@@ -365,17 +369,17 @@ color: #EBEBEB;
 .btn_storepage a.btn_storepage_content {
 	display: inline-block;
 	height: 34px;
-	
+
 	font-size: 11px;
 	color: #ffffff;
 	text-align: center;
-	
+
 	padding: 0px 11px;
 	line-height: 34px;
-	
+
 	background-image: url( https://community.cloudflare.steamstatic.com/public/images/storeImages/btn_storepage_repeat.png );
 	background-repeat: repeat-x;
-	
+
 	text-transform: uppercase;
 }
 
@@ -396,7 +400,7 @@ div.hover {
 	border: 1px solid #82807c;
 	background-color: #3b3938;
 	width: 256px;
-	
+
 	color: #b0aeac;
 	font-size: 12px;
 }
@@ -481,7 +485,7 @@ div.hover {
 
 .popup_menu2 a.bottom {
 	border-bottom: 1px solid #82807c;
-}	
+}
 
 .popup_menu2 a.popup_menu_item2:hover {
 	color: #ffffff;
@@ -554,7 +558,7 @@ a.pullup_item {
 }
 
 .recommendationRowContent {
-	
+
 }
 
 a.recommendation_btn, a.recommendation_imgbtn
@@ -565,7 +569,7 @@ a.recommendation_btn, a.recommendation_imgbtn
 	color: #82807c;
 	font-size: 11px;
 	background-color: #1a1a1a;
-	
+
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 }
@@ -661,12 +665,12 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 div.wishlist_rank_ro, input.wishlist_rank {
-	
+
 	line-height: 24px;
 	font-weight: bold;
 	text-align: right;
 	font-size: 16px;
-	
+
 	color: #ffffff;
 	padding-right: 9px;
 	width: 29px;
@@ -746,9 +750,9 @@ a.btn_visit_store
 	background-color: #2c2c2d;
 	border: 1px solid #404040;
 	padding: 0px 12px;
-	
+
 	text-transform: uppercase;
-	
+
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 }
@@ -766,17 +770,17 @@ a.btn_visit_store:hover
 	background-repeat: repeat-x;
 	background-align: top;
 	background-color: #262626;
-	
+
 	border: 1px solid #8bc53f;
 	color: #8bc53f;
-	
+
 	width: 78px;
 	height: 18px;
-	
+
 	line-height: 18px;
 	font-size: 11px;
 	text-align: center;
-	
+
 	cursor: pointer;
 }
 
