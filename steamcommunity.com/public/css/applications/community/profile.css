@@ -155,6 +155,9 @@
   height: 100%;
   width: 100%;
 }
+.ChatSpeaker.ChatRoomSpeaker .steamavatar_avatarHolder_nibod {
+  transform: scale(1, 1) translateX(0px);
+}
 .steamavatar_avatarHolder_nibod .steamavatar_avatarStatus_3xUpb.right,
 .steamavatar_avatarHolder_nibod .steamavatar_avatarStatus_3xUpb.bottom {
   display: block !important;

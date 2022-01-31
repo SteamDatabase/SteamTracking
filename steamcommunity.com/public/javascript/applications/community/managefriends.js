@@ -317,7 +317,8 @@
                     s.a.createElement(b, {
                       onButtonClick: this.OnAddFriend,
                       buttonText: Object(d.f)("#ManageFriends_SendInvite"),
-                      bDisableForSelfAndFriends: !0,
+                      bDisableForSelf: !0,
+                      bDisableForFriends: !0,
                       bShowStatus: !0,
                     })
                   ),
@@ -481,8 +482,10 @@
                               searchResult: n,
                               disable_send_invite:
                                 m.h.is_limited ||
-                                (this.props.bDisableForSelfAndFriends &&
-                                  (n.is_friend || n.steamid === m.h.steamid)),
+                                (this.props.bDisableForFriends &&
+                                  n.is_friend) ||
+                                (this.props.bDisableForSelf &&
+                                  n.steamid === m.h.steamid),
                             })
                           : this.setState({ searchResult: null }),
                         [3, 3]
