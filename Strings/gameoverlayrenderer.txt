@@ -81,6 +81,7 @@ __LINKEDIT
 /System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libobjc.A.dylib
+^_[]
  ^_]
 QPSV
 ^_[]
@@ -183,27 +184,29 @@ VWVWP
 ^_[]
 ^_[]
 ^_[]
-H@^_]
+HD^_]
 ^_[]
 ^_[]
-u&9^
-u	9N
-QPhX
-<^_[]
+PQRS
+u19Y
+u,9Q
+;A$u
+RPhg
+^_[]
 ^_[]
 9;t!
 ^_[]
 ^_[]
 PPWQPP
-wDh@
+wHh@
 QPWW
-pdh@
+phh@
 WVh'
 PRWW
 QPRR
 <^_[]
-j@RW
-G^8C
+j@RV
+Gf8C
 ^_[]
 ^_[]
 ^_[]
@@ -614,6 +617,87 @@ SteamStreamingMaximumResolution
 %dx%d
 SteamStreamingVideoDisableVSync
 SteamStreamingAllowGameVsync
+Game Delayed OpenGL NV12
+Game OpenGL NV12
+Game Delayed OpenGL RGB
+Game OpenGL RGB
+COpenGLFrameCapture - missing opengl methods
+Failed to create y plane
+Failed to create uv plane
+Failed to create rgba plane
+Invalid texture for fbo generated
+COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
+COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
+bFlipRendering
+srcWidth
+srcHeight
+Not enough room in mem stream for video frame
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ycoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
+    // Calculate the YUV values 
+    yuv.x = dot(rgb, Ycoeff) + %f;
+    // Write the YUV values 
+    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ycoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture(tex0, textCoord).rgb;
+    // Calculate the YUV values 
+    yuv.x = dot(rgb, Ycoeff) + %f;
+    // Write the YUV values 
+    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ucoeff = vec3(%f, %f, %f);
+const vec3 Vcoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
+    // Calculate the YUV values 
+    yuv.y = dot(rgb, Ucoeff) + 0.5;
+    yuv.z = dot(rgb, Vcoeff) + 0.5;
+    // Write the YUV values 
+    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ucoeff = vec3(%f, %f, %f);
+const vec3 Vcoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture(tex0, textCoord).rgb;
+    // Calculate the YUV values 
+    yuv.y = dot(rgb, Ucoeff) + 0.5;
+    yuv.z = dot(rgb, Vcoeff) + 0.5;
+    // Write the YUV values 
+    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+void main()
+    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+void main()
+    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
 uniform bool bFlipRendering;
 void main()
 	gl_TexCoord[0] = gl_MultiTexCoord0;
@@ -640,87 +724,6 @@ void main()
    if ( bFlipRendering )
        gl_Position.y = -gl_Position.y;
    textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(0.257, 0.504, 0.098);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + 0.0625;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(0.257, 0.504, 0.098);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + 0.0625;
-    // Write the YUV values 
-    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(-0.148, -0.291, 0.439);
-const vec3 Vcoeff = vec3(0.439, -0.368, -0.071);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(-0.148, -0.291, 0.439);
-const vec3 Vcoeff = vec3(0.439, -0.368, -0.071);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-void main()
-    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-void main()
-    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
-Game Delayed OpenGL NV12
-Game OpenGL NV12
-Game Delayed OpenGL RGB
-Game OpenGL RGB
-COpenGLFrameCapture - missing opengl methods
-Failed to create y plane
-Failed to create uv plane
-Failed to create rgba plane
-Invalid texture for fbo generated
-COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
-COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
-bFlipRendering
-srcWidth
-srcHeight
-Not enough room in mem stream for video frame
 /System/Library/Frameworks/OpenGL.framework/Libraries/libGL.dylib
 GLSL Fragment Shader log:
 GLSL Program log:
@@ -1585,7 +1588,7 @@ ValveHookScreenshots
 ^SetNotificationPosition
 dBOverlayNeedsPresent
 jIsOverlayEnabled
-cYY0T
+cYY*T
 BrrrXJ\Z
 :>6x
 :L	s
@@ -1839,32 +1842,37 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-}{G~
--IW`
-a]|y
-;~7s9z
-JXr 
-dB{*
-z/GF
-/\q\
-b<Rg
+_W[A
+W|k\i
+v0-2
+t7ame
+CogR.4FM
+gM#0
+z7`|
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-$odD
-ul7c
-W}1t
-}>:Y	.>
-SBMU
-AGxr
-MGj>
-4DBX$1
-f)bbc6
-	Bl5
-b~>D
-i*ett
-CaEX
+uDy[
+MOS3
+nX#T
+>/;*u.
+0[)R1
+H) kR
+pN.-
+_sDf
+^&Tp
+p0CPz
+kv!{7
+1A4X
+9\)>
+]{k^}
+1vp4
+41!p2
+O~ Kr
+K#irCJ
+gPz/4
+!CFd
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1920,8 +1928,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173417Z0/
-[OuP
+220201034520Z0/
+d&&0[
+S1=<
+kq0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1929,33 +1939,36 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		dKRmD+W3dgmeV4VD9ltPdVD093A=
+		bVGKUzE9PAcVY+BmR0cQoGD9a3E=
 		</data>
 		<data>
-		7M3ErNmDc+SJRAM1DevEeBLrERA=
+		fG/D1NbwF2oYE8ZapJ3sHpyfySg=
 		</data>
 	</array>
 </dict>
 </plist>
-oXPb`
-DNeZ#
-20220116173439Z0
+}?\h
+Xe+O
+20220201034551Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221171501Z
-220201171500Z0B1
+220118170501Z
+220301170500Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-!b8V|
-h%q6
+"f/N
+chD8
+z++.4]
+`B&63
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-J	b3
-XG7	
+~9:]\
+@WZSdF#?
+vHm0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1994,10 +2007,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173439Z0#
-i0JQ
-[0h%p
-SGxW
+220201034551Z0#
+0uSA
+GgA/
+cw~U&
+V;! V
 __TEXT
 __text
 __TEXT
@@ -2257,14 +2271,13 @@ AVSH
 AVSI
 [A^]
 AWAVAUATSH
-u&D9c(u D9{,u
-;C u
+u>D9c(u8D9{,u2
+;C u'
 ;C$u
-C	8C
+;C4u
+AWAVh
 ARPhg
-PARh
-ARPh
-K0E1
+	H;M
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2277,13 +2290,13 @@ AWAVAUATSH
 AWAVAUATSH
 D$?A
 L$@A
-L$HA
 L$LA
 L$PA
-L$TE
-l$DfA
-L$ZA
-D$^A8F
+L$TA
+L$XE
+l$HfA
+L$^A
+D$bA8F
 [A\A]A^A_]
 AWAVAUATSH
 L$ A
@@ -2304,13 +2317,13 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
-Y-5z
+Y-U{
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
 D9c ~
 |$$I
-(%Zv
+(%zw
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2355,7 +2368,8 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-Y%U]
+Y%u^
+(%-^
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2472,7 +2486,7 @@ AWAVATSI
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
-H9=A
+H9=)
 [A^]
 H9GHt.H
 AWAVATSH
@@ -2521,8 +2535,8 @@ h[A\A]A^A_]
 h[A\A]A^A_]
 AWAVAUATSH
 t9L9
-D8=J
-D8=)
+D8=*
+D8=	
 |$$I
 E;u,s*H
 P0E;u4s
@@ -2562,7 +2576,7 @@ AVS1
 AWAVSH
 H92u
 ([A^A_]
-H9=ra
+H9=Rb
 AWAVSPI
 [A^A_]
 AWAVSP
@@ -2986,6 +3000,87 @@ SteamStreamingMaximumResolution
 %dx%d
 SteamStreamingVideoDisableVSync
 SteamStreamingAllowGameVsync
+Game Delayed OpenGL NV12
+Game OpenGL NV12
+Game Delayed OpenGL RGB
+Game OpenGL RGB
+COpenGLFrameCapture - missing opengl methods
+Failed to create y plane
+Failed to create uv plane
+Failed to create rgba plane
+Invalid texture for fbo generated
+COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
+COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
+bFlipRendering
+srcWidth
+srcHeight
+Not enough room in mem stream for video frame
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ycoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
+    // Calculate the YUV values 
+    yuv.x = dot(rgb, Ycoeff) + %f;
+    // Write the YUV values 
+    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ycoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture(tex0, textCoord).rgb;
+    // Calculate the YUV values 
+    yuv.x = dot(rgb, Ycoeff) + %f;
+    // Write the YUV values 
+    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ucoeff = vec3(%f, %f, %f);
+const vec3 Vcoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
+    // Calculate the YUV values 
+    yuv.y = dot(rgb, Ucoeff) + 0.5;
+    yuv.z = dot(rgb, Vcoeff) + 0.5;
+    // Write the YUV values 
+    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ucoeff = vec3(%f, %f, %f);
+const vec3 Vcoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture(tex0, textCoord).rgb;
+    // Calculate the YUV values 
+    yuv.y = dot(rgb, Ucoeff) + 0.5;
+    yuv.z = dot(rgb, Vcoeff) + 0.5;
+    // Write the YUV values 
+    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+void main()
+    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+void main()
+    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
 uniform bool bFlipRendering;
 void main()
 	gl_TexCoord[0] = gl_MultiTexCoord0;
@@ -3012,87 +3107,6 @@ void main()
    if ( bFlipRendering )
        gl_Position.y = -gl_Position.y;
    textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(0.257, 0.504, 0.098);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + 0.0625;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(0.257, 0.504, 0.098);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + 0.0625;
-    // Write the YUV values 
-    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(-0.148, -0.291, 0.439);
-const vec3 Vcoeff = vec3(0.439, -0.368, -0.071);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(-0.148, -0.291, 0.439);
-const vec3 Vcoeff = vec3(0.439, -0.368, -0.071);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-void main()
-    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-void main()
-    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
-Game Delayed OpenGL NV12
-Game OpenGL NV12
-Game Delayed OpenGL RGB
-Game OpenGL RGB
-COpenGLFrameCapture - missing opengl methods
-Failed to create y plane
-Failed to create uv plane
-Failed to create rgba plane
-Invalid texture for fbo generated
-COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
-COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
-bFlipRendering
-srcWidth
-srcHeight
-Not enough room in mem stream for video frame
 /System/Library/Frameworks/OpenGL.framework/Libraries/libGL.dylib
 GLSL Fragment Shader log:
 GLSL Program log:
@@ -4323,48 +4337,37 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-\><\
-xad2p
-U!{k
-^a%9
-l~,2
-Fza~
-N5g`
-ci][
-L~7)'_
-[aOP
-xV5c
-9kJ+
-0yVf
+%Q0]l>
+H0f?
+Sh-8;
+%4KE;
+*1'b>
+KM Y
+zQXc
+rH@Y./d
+sb2v
+98qB
+o6,m
+f(_s
+4;FZ
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-gnzdD
-@e	R
-g~9M
-r|HT
-I6UD	z
-ArkC 
-? ~5
-o	=a
-a!rl~
-.vL\:
-oJ3[
-pzK=
-$e+T
-	BFs
-Qyvl
-C4l3
-~g]-
-wk<I
-o{ay
-Z<ZTL
-,}Q:
-:[[Q3
-v5S9
-M)V+3_Yx
-(z?$Qx
+x>Hq
+`GACa
+@#+I
+G--@*V
+h=H/
+5?jK
+"y|e
+:K}r
++k7f/
+-{-1
+0%G 
+L]]OS
+V{Rfa
+ai)=k1
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4420,8 +4423,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173417Z0/
-::G0
+220201034520Z0/
+	Hw0
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4429,34 +4432,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		hU6VMZ2QixnLt5ctrmwBOTg0qbw=
+		XN/ch8NBrR1d4tXdMVaerfE1P6g=
 		</data>
 		<data>
-		+njeV5Uf9gZtN1wRz3fmaiGHOjs=
+		mhRPSrdnxfdPlTqh5D1HBIjPwFg=
 		</data>
 	</array>
 </dict>
 </plist>
-)q\?
-O=Tm
-&NO&
-={MWB
-Vy"=
-20220116173439Z0
+_<s-/
+FE\%
+0ua}
+	\Og
+20220201034552Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221172503Z
-220201172502Z0B1
+220118172001Z
+220301172000Z0B1
 Timestamp Signer NWK11
 Apple Inc.1
-I>^t
+lzQfr
+jb57
+)vqu
+(NTF
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-kD`2
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4495,13 +4499,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173439Z0#
-/tZSp{
-{	A]Y
-Uo9;
-1Q1_c
-D?d4g
-9G9k|8$
+220201034552Z0#
+e^BN
+0FFu
 __TEXT
 __text
 __TEXT
@@ -4562,7 +4562,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-a(+2
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -4577,6 +4576,7 @@ a(+2
 /System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libobjc.A.dylib
++ih8J	
 h"@9
 (a@9
 5(	@
@@ -4592,8 +4592,7 @@ ia@9i
 ia@9i
 	a@9Ia
 h&B)
-56L@
-;wA9
+56P@
 @9h*
 h&E9
  E9H
@@ -4606,30 +4605,35 @@ h2E9
 $E9H
 &E9h
 h&A)
-45+	0
 jh8)	
+@)H(
 19:#	
+h"@9
 Th*@
 Th.@
-9h"@9h
+Th6@
+WG)uZ
 h&D)
+XcZ@
 h&@9
-J~	0
-hVB9
-hRB9
-C9DA
-Z)kA
-a"A9
+hvB9
+hrB9
+C9a"C9b&C9c*C9FA
+[)mA
+tT	p
+vT	p
+aBA9
+aP	P
 h&D)
 i"@9
-<*{	
 9h2@
 	)h"@
-yh6@
+)hBB
+yh:@
 <h"@9
-T`x	P
-`p	0
-4`_	P
+T &	0
+@v	p
+4`e	
 bD9h
 Th#@
 hbN9
@@ -4732,6 +4736,8 @@ hjA9(
 i"V)
 Ci8}
 hfA9
+He	X
+He	X
 &D9?
 &D9(
 	*h&@
@@ -4741,8 +4747,7 @@ hfA9
 Th&@
 Th&@
 Rh:@
-`)	X
-'	XA
+-	XA
 T`*@
 4a*@
 4hrA9
@@ -4756,7 +4761,7 @@ hrD9h
 hrD9
 hBD9
 hBD9h
-	J9(
+)J9(
 !IzH
 +ih8J	
 12CIMENullImpl
@@ -4857,6 +4862,87 @@ SteamStreamingMaximumResolution
 %dx%d
 SteamStreamingVideoDisableVSync
 SteamStreamingAllowGameVsync
+Game Delayed OpenGL NV12
+Game OpenGL NV12
+Game Delayed OpenGL RGB
+Game OpenGL RGB
+COpenGLFrameCapture - missing opengl methods
+Failed to create y plane
+Failed to create uv plane
+Failed to create rgba plane
+Invalid texture for fbo generated
+COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
+COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
+bFlipRendering
+srcWidth
+srcHeight
+Not enough room in mem stream for video frame
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ycoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
+    // Calculate the YUV values 
+    yuv.x = dot(rgb, Ycoeff) + %f;
+    // Write the YUV values 
+    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ycoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture(tex0, textCoord).rgb;
+    // Calculate the YUV values 
+    yuv.x = dot(rgb, Ycoeff) + %f;
+    // Write the YUV values 
+    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ucoeff = vec3(%f, %f, %f);
+const vec3 Vcoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
+    // Calculate the YUV values 
+    yuv.y = dot(rgb, Ucoeff) + 0.5;
+    yuv.z = dot(rgb, Vcoeff) + 0.5;
+    // Write the YUV values 
+    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+// YUV coefficients 
+const vec3 Ucoeff = vec3(%f, %f, %f);
+const vec3 Vcoeff = vec3(%f, %f, %f);
+void main()
+    vec3 yuv, rgb;
+    // Get the color value 
+    rgb = texture(tex0, textCoord).rgb;
+    // Calculate the YUV values 
+    yuv.y = dot(rgb, Ucoeff) + 0.5;
+    yuv.z = dot(rgb, Vcoeff) + 0.5;
+    // Write the YUV values 
+    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
+#extension GL_ARB_texture_rectangle : enable
+uniform sampler2DRect tex0;
+void main()
+    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
+#version 150
+in vec2 textCoord;
+out vec4 FragColor;
+uniform sampler2DRect tex0;
+void main()
+    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
 uniform bool bFlipRendering;
 void main()
 	gl_TexCoord[0] = gl_MultiTexCoord0;
@@ -4883,87 +4969,6 @@ void main()
    if ( bFlipRendering )
        gl_Position.y = -gl_Position.y;
    textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(0.257, 0.504, 0.098);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + 0.0625;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(0.257, 0.504, 0.098);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + 0.0625;
-    // Write the YUV values 
-    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(-0.148, -0.291, 0.439);
-const vec3 Vcoeff = vec3(0.439, -0.368, -0.071);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(-0.148, -0.291, 0.439);
-const vec3 Vcoeff = vec3(0.439, -0.368, -0.071);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-void main()
-    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-void main()
-    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
-Game Delayed OpenGL NV12
-Game OpenGL NV12
-Game Delayed OpenGL RGB
-Game OpenGL RGB
-COpenGLFrameCapture - missing opengl methods
-Failed to create y plane
-Failed to create uv plane
-Failed to create rgba plane
-Invalid texture for fbo generated
-COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
-COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
-bFlipRendering
-srcWidth
-srcHeight
-Not enough room in mem stream for video frame
 /System/Library/Frameworks/OpenGL.framework/Libraries/libGL.dylib
 GLSL Fragment Shader log:
 GLSL Program log:
@@ -6086,28 +6091,32 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-7z1w.j
-S]M%
-#.wD
-h<8WETL
-4:%^
-cY/G
+1wO%
+;$RP
+2R!9
+"&03
+m%0z)
+DN#b
 {e~p,X
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-,6d)
-Cj}1
-88<'
-}\2	
-"N8(K>
-?:1@
-$Ot6
-1T 9
-s)M2
+ &lX
+F6It
+::GZ
+B5tm
+ENt;SE
+X^NS
+j&1w
+OFG=)
+U`:B
+kj$1@
+POzW
 g4%s
-Frm}=sF
+q5(x
+B#jpx"
+R,Wa
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -6163,9 +6172,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173417Z0/
-?'30[
-K(iM
+220201034520Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6173,35 +6180,36 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		99tk+BrQE9HbakmgSyhpTdK14Rg=
+		fH41gAk+/LpsZGcZhhTSgtsTy0A=
 		</data>
 		<data>
-		7dta5nn/CLKfxO00eN4x/s3ttK0=
+		16sCs9E+r3+RlhxuzbHdi06r/4Q=
 		</data>
 	</array>
 </dict>
 </plist>
-=2\G
-GEvu
-8_3SNe
-i?6e}
-20220116173439Z0
+sXS"
+k8UL
+20220201034552Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221171501Z
-220201171500Z0B1
+220118170501Z
+220301170500Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-!b8V|
-h%q6
+"f/N
+chD8
+z++.4]
+`B&63
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-J	b3
-XG7	
+~9:]\
+@WZSdF#?
+vHm0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6240,8 +6248,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173439Z0#
-H22PXc
-9~qM)7
-1k=Q
-ZA7G
+220201034552Z0#
+0uSA
+z%QKa
+'JCb
+\a#=
+%.T*

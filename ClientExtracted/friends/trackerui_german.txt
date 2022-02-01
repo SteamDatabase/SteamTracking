@@ -558,12 +558,12 @@
 "Limited_ForDetails"	"Besuchen Sie den Steam-Support, um weitere Informationen zu erhalten."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
-"Friends_Chat_RoomModerated_Entry"		"Dieser Chat wurde von %member_making_change% so eingestellt, dass nur Gruppenleiter schreiben können.\n"
+"Friends_Chat_RoomModerated_Entry"		"Dieser Chat wurde von %member_making_change% so eingestellt, dass nur Administratoren schreiben können.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Dieser Chatraum ist für alle zugänglich und wurde von %member_making_change% so eingerichtet.\n"
-"Friends_Chat_RoomUnmoderated_Info"			"Nur Gruppenleiter können im Moderationschat Nachrichten versenden"
+"Friends_Chat_RoomUnmoderated_Info"			"Nur Gruppenadministratoren können im Moderationschat Nachrichten versenden"
 "Friends_Chat_ModerateRoom"				"Moderationschat aktivieren"
 "Friends_Chat_UnmoderateRoom"			"Moderationschat deaktivieren (Chat für alle)"
-"Friends_Chat_ModerateRoom_Status"			"Nur Gruppenleiter dieser Gruppe können chatten"
+"Friends_Chat_ModerateRoom_Status"			"Nur Administratoren dieser Gruppe können chatten"
 
 "Friends_InviteToGame_Title"	"Wählen Sie Freunde zum Einladen"
 "Friends_InviteToGame_Close"	"Zurück zum Spiel"

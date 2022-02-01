@@ -137,7 +137,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press SPACE, Jump"
+							"binding"		"key_press SPACE"
 						}
 						"settings"
 						{
@@ -154,7 +154,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E, Use"
+							"binding"		"key_press E"
 						}
 						"settings"
 						{
@@ -171,7 +171,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press R, Reload"
+							"binding"		"key_press R"
 						}
 						"settings"
 						{
@@ -188,7 +188,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press F, Flashlight"
+							"binding"		"key_press F"
 						}
 						"settings"
 						{
@@ -218,7 +218,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 1, Weapon 1"
+							"binding"		"key_press 1"
 						}
 						"settings"
 						{
@@ -236,7 +236,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 3, Weapon 3"
+							"binding"		"key_press 3"
 						}
 						"settings"
 						{
@@ -254,7 +254,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 2, Weapon 2"
+							"binding"		"key_press 2"
 						}
 						"settings"
 						{
@@ -272,7 +272,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 4, Weapon 4"
+							"binding"		"key_press 4"
 						}
 						"settings"
 						{
@@ -305,7 +305,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E, Use"
+							"binding"		"mouse_button LEFT"
 						}
 						"settings"
 						{
@@ -338,7 +338,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press W, Move Forward"
+							"binding"		"key_press W"
 						}
 						"settings"
 						{
@@ -356,7 +356,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press S, Move Back"
+							"binding"		"key_press S"
 						}
 						"settings"
 						{
@@ -374,7 +374,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press D, Move Right"
+							"binding"		"key_press D"
 						}
 						"settings"
 						{
@@ -392,7 +392,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press A, Move Left"
+							"binding"		"key_press A"
 						}
 						"settings"
 						{
@@ -410,7 +410,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press LEFT_SHIFT, Sprint"
+							"binding"		"key_press LEFT_SHIFT"
 						}
 						"settings"
 						{
@@ -493,7 +493,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 1"
+							"binding"		"key_press UP_ARROW"
 						}
 						"settings"
 						{
@@ -510,7 +510,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 3"
+							"binding"		"key_press DOWN_ARROW"
 						}
 						"settings"
 						{
@@ -527,7 +527,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 2"
+							"binding"		"key_press RIGHT_ARROW"
 						}
 						"settings"
 						{
@@ -544,7 +544,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 4"
+							"binding"		"key_press LEFT_ARROW"
 						}
 						"settings"
 						{
@@ -602,7 +602,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press ESCAPE, Menu"
+							"binding"		"key_press ESCAPE"
 						}
 					}
 				}
@@ -615,7 +615,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press TAB, Map"
+							"binding"		"key_press TAB"
 						}
 					}
 				}
@@ -628,7 +628,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_wheel SCROLL_DOWN, Previous Weapon"
+							"binding"		"mouse_wheel SCROLL_DOWN"
 						}
 					}
 				}
@@ -641,7 +641,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_wheel SCROLL_UP, Next Weapon"
+							"binding"		"mouse_wheel SCROLL_UP"
 						}
 					}
 				}
@@ -654,7 +654,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press SPACE"
 						}
 					}
 				}
@@ -667,7 +666,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press R"
 						}
 					}
 				}
@@ -680,7 +678,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E"
 						}
 					}
 				}
@@ -693,7 +690,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press F"
 						}
 					}
 				}

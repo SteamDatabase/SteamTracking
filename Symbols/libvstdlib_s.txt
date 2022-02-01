@@ -134,6 +134,7 @@
  T V_IsAbsolutePath
  T V_IsDeprecatedW
  T V_IsMeanSpaceW
+ T V_IsSteamCloseProtocol
  T V_IsTLD
  T V_IsValidDomainNameCharacter
  T V_IsValidUChar32

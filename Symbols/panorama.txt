@@ -98,8 +98,8 @@
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsInDebugSession
+ Plat_IsSteamDeck
  Plat_IsSteamOS
- Plat_IsSteamPal
  Plat_MSTime
  Plat_OutputDebugString
  Plat_RelativeTickFrequency

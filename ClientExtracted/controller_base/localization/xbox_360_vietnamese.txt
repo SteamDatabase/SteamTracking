@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"Đệm phải"
 	"origin_xbox360_button_start"					"Nút Start"
 	"origin_xbox360_button_back"					"Nút Back"
-	}
+	"origin_xbox360_button_dpad_move"				"Chuyển động D-Pad"
+}

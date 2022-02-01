@@ -1,3 +1,4 @@
+import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
@@ -69,6 +70,13 @@ message CTwoFactor_FinalizeAddAuthenticator_Response {
 	optional int32 status = 4 [(description) = "Result code"];
 }
 
+message CTwoFactor_UpdateTokenVersion_Request {
+	optional uint32 version = 2 [(description) = "What the version of our token should be"];
+}
+
+message CTwoFactor_UpdateTokenVersion_Response {
+}
+
 message CTwoFactor_RemoveAuthenticator_Request {
 	optional string revocation_code = 2 [(description) = "Password needed to remove token"];
 	optional uint32 revocation_reason = 5 [(description) = "Reason the authenticator is being removed"];
@@ -122,6 +130,10 @@ service TwoFactor {
 
 	rpc FinalizeAddAuthenticator (.CTwoFactor_FinalizeAddAuthenticator_Request) returns (.CTwoFactor_FinalizeAddAuthenticator_Response) {
 		option (method_description) = "Finalize two-factor authentication addition to the logged-in account";
+	}
+
+	rpc UpdateTokenVersion (.CTwoFactor_UpdateTokenVersion_Request) returns (.CTwoFactor_UpdateTokenVersion_Response) {
+		option (method_description) = "Update the version for my token";
 	}
 
 	rpc RemoveAuthenticator (.CTwoFactor_RemoveAuthenticator_Request) returns (.CTwoFactor_RemoveAuthenticator_Response) {

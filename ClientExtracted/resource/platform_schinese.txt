@@ -37,7 +37,7 @@
 "Steam_RefreshEnterTwoFactorCode"				"请输入来自您 Steam 令牌验证器上的最新认证码。"
 "Steam_RefreshLogin_RateLimited"		"短期内来自您网络的失败登录过多。请稍后再试。"
 "Steam_RefreshLogin_Title"			"Steam - 刷新登录"
-"Steam_RefreshLogin_InfoTicketExpired"	"您的 Steam 许可已过期。\n请重新输入您的密码以继续。"
+"Steam_RefreshLogin_InfoTicketExpired"	"您的 Steam 票证已过期。\n请重新输入您的密码以继续。"
 "Steam_RefreshLogin_InvalidPassword"	"您的帐户凭据已更改。\n请重新输入您的密码再继续。"
 
 "Steam_RefreshLogin_PurchaseSecurity"		"出于安全考虑，您需要重新输入密码才能继续。"

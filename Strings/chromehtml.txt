@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+c
+c
 __stubs
 __TEXT
 __stub_helper
@@ -46,7 +48,7 @@ __DATA
 P
 __data
 __DATA
-@%
+&
 __thread_vars
 __DATA
 __thread_data
@@ -138,6 +140,7 @@ X
 
 (
 0
+0
 8
 (
 0
@@ -160,6 +163,7 @@ $
 4
 (
 5
+4
 )
 ,
 0
@@ -225,6 +229,7 @@ $
 (
 =
 0
+>
 $
 (
 ,
@@ -289,11 +294,12 @@ l
 r
 s
 p
-0
+8
 H
 X
 (
 (
+(
 0
 0
 0
@@ -304,6 +310,7 @@ X
 (
 (
 0
+8
 8
 (
 8
@@ -388,6 +395,7 @@ H
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 30CMsgSetLocalFileRequestMapping
 23CMsgBrowserErrorStrings
+18CMsgBrowserSetName
 15CMsgBrowserSize
 21CMsgBrowserSetMinSize
 19CMsgBrowserPosition
@@ -418,6 +426,8 @@ H
 14CMsgViewSource
 16CMsgBrowserReady
 14CMsgURLChanged
+13CHistoryEntry
+18CMsgHistoryChanged
 11CHTMLHeader
 21CHTMLPageSecurityInfo
 19CMsgFinishedRequest
@@ -501,6 +511,8 @@ H
 21CMsgJSReleaseCallback
 20CMsgJSRaiseException
 20CMsgLoadLocalization
+24CMsgNotifyUserActivation
+30CMsgSetNetFakeLocalSystemState
 16CMsgJumpListLink
 18CMSgJumpListMRUApp
 15CMsgSetJumpList
@@ -605,6 +617,7 @@ NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 16CHTMLProtoBufMsgI20CMsgGetCookiesForURLE
 16CHTMLProtoBufMsgI19CMsgClearAllCookiesE
 16CHTMLProtoBufMsgI14CMsgUnlockH264E
+16CHTMLProtoBufMsgI30CMsgSetNetFakeLocalSystemStateE
 16CHTMLProtoBufMsgI22CMsgAuthedSteamDomainsE
 16CHTMLProtoBufMsgI23CMsgSteamAuthCookiesSetE
 7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE
@@ -1045,8 +1058,9 @@ wt
 -steamid=%llu
 -logdir=%s
 -composer-mode=%d
--steampal
+-gamepadui
 -steamdeck
+-steamos3
 "
 --proxy-server="%s"
 -html-perf-monitor
@@ -1065,7 +1079,8 @@ clientui
 -fakeoffline
 --enable-blink-features=ResizeObserver,Worklet,AudioWorklet
 --enable-media-stream
--opendevtools
+--disable-blink-features=Badging
+.cef-enable-remote-debugging
 -devtools-address
 127.0.0.1
 -devtools-port
@@ -1078,8 +1093,9 @@ clientui
 --disable-gpu-compositing --disable-gpu
 --disable-accelerated-video-decode
 --disablehighdpi --force-device-scale-factor=1 --device-scale-factor=1
--gamepadui
---force-device-scale-factor=1.5 --device-scale-factor=1.5
+1.5
+-gamepaduiscale
+--force-device-scale-factor=%s --device-scale-factor=%s
 --no-sandbox
 -force-sandbox
 --disable-winh264
@@ -2284,18 +2300,9 @@ sc_schinese
 @
 
 
-
-
-
-
 @
-Z
-
-S
-8
-
-
-
+i
+E
 
 
 
@@ -2311,6 +2318,9 @@ AT=
 AT5
 AT5
 AT=
+
+
+
 ?
 D
 @
@@ -2350,10 +2360,13 @@ V
 =
 =
 @
+c
 @
 M9e
 @
 @
+v
+i
 ?
 ?
 ?
@@ -2370,6 +2383,7 @@ M9e
 ?
 ?
 
+:
 Ic
 @
 @

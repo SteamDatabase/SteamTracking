@@ -1,5 +1,13 @@
+ ABGRToNV12
  AEBuildAppleEvent
  AESendMessage
+ ARGBAttenuate
+ ARGBBlend
+ ARGBCopy
+ ARGBToNV12
+ ARGBToNV12Matrix
+ ARGBToNV21Matrix
+ ARGBToRAW
  AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
  AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  AudioConvertHostTimeToNanos
@@ -157,7 +165,6 @@
  CGRegisterScreenRefreshCallback
  CGUnregisterScreenRefreshCallback
  CGWindowListCopyWindowInfo
- CStringNormalization::Normalize(bool, char const*, char*, int)
  CStringNormalization::ValidateStatics(CValidator&, char const*)
  CTier0::ValidateGlobals(CValidator&)
  CURLUtils::ValidateStatics(CValidator&, char const*)
@@ -165,6 +172,7 @@
  CanBreakBetween
  CatchAndWriteMiniDumpForVoidPtrFn
  CompareAndSwap
+ CopyPlane
  CreateAudioResampler
  CreateVideoPlayer
  D ASWAVCaptureCodecFactory::defaultCodecType
@@ -173,6 +181,8 @@
  D pcre_stack_free
  D pcre_stack_malloc
  D typeinfo for CAException
+ D typeinfo for bool (*)(char const*)
+ D typeinfo for bool (char const*)
  D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -229,6 +239,7 @@
  GetProcessForPID
  GetProcessPID
  GetSpewOutputFunc
+ I420ToARGB
  IOConnectCallMethod
  IOConnectCallScalarMethod
  IOConnectSetCFProperties
@@ -253,6 +264,12 @@
  IOSurfaceIncrementUseCount
  IOSurfaceLock
  IOSurfaceUnlock
+ InitCpuFlags
+ InterpolateRow_AVX2
+ InterpolateRow_Any_AVX2
+ InterpolateRow_Any_SSSE3
+ InterpolateRow_C
+ InterpolateRow_SSSE3
  Is64BitOS
  KeyValuesSystemSteam
  LSSharedFileListCopySnapshot
@@ -274,6 +291,7 @@
  NSWorkspaceDidActivateApplicationNotification
  NSWorkspaceDidDeactivateApplicationNotification
  NSZeroRect
+ NV12ToARGBMatrix
  OBJC_CLASS_$_NSAppleEventManager
  OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSArray
@@ -310,11 +328,13 @@
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsChromeOS
+ Plat_IsGamepadUI
+ Plat_IsGamescope
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
+ Plat_IsSteamDeck
  Plat_IsSteamOS
  Plat_IsSteamOS3
- Plat_IsSteamPal
  Plat_MSTime
  Plat_MSTime64
  Plat_OutputDebugString
@@ -329,6 +349,8 @@
  Plat_timegm
  Plat_timezone
  R typeinfo name for CAException
+ R typeinfo name for bool (*)(char const*)
+ R typeinfo name for bool (char const*)
  R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -338,6 +360,9 @@
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for void ()
  R typeinfo name for void (*)()
+ RAWToARGB
+ RGB24ToARGB
+ RGB565ToARGB
  RealGetCallStack
  RealPrintCallStack
  RescaleBase
@@ -411,9 +436,37 @@
  SDL_free
  SDL_memset
  SameProcess
+ ScaleARGBCols64_C
+ ScaleARGBColsUp2_C
+ ScaleARGBColsUp2_SSE2
+ ScaleARGBCols_C
+ ScaleARGBCols_SSE2
+ ScaleARGBFilterCols64_C
+ ScaleARGBFilterCols_C
+ ScaleARGBFilterCols_SSSE3
+ ScaleARGBRowDown2Box_Any_SSE2
+ ScaleARGBRowDown2Box_C
+ ScaleARGBRowDown2Box_SSE2
+ ScaleARGBRowDown2Linear_Any_SSE2
+ ScaleARGBRowDown2Linear_C
+ ScaleARGBRowDown2Linear_SSE2
+ ScaleARGBRowDown2_Any_SSE2
+ ScaleARGBRowDown2_C
+ ScaleARGBRowDown2_SSE2
+ ScaleARGBRowDownEvenBox_Any_SSE2
+ ScaleARGBRowDownEvenBox_C
+ ScaleARGBRowDownEvenBox_SSE2
+ ScaleARGBRowDownEven_Any_SSE2
+ ScaleARGBRowDownEven_C
+ ScaleARGBRowDownEven_SSE2
+ ScaleFilterReduce
+ ScalePlane
+ ScalePlaneVertical
+ ScaleSlope
  SecureRandomBytes
  SetMiniDumpBuildID
  SetMiniDumpSteamID
+ SetPlane
  SpewAndLogActivate
  SpewOutputFunc
  SteamInput_Available
@@ -475,6 +528,8 @@
  StringAfterPrefix
  StringAfterPrefixCaseSensitive
  StringFindSuffix
+ T ARGBScale
+ T ARGBScaleClip
  T ASWAVCapture::ASWAVCapture(unsigned int)
  T ASWAVCapture::ActualCaptureFrameRate()
  T ASWAVCapture::AddStartOfStreamTime(unsigned int, unsigned long long)
@@ -889,6 +944,7 @@
  T SpanList::~SpanList()
  T SteamDllMain
  T SteamDllMainEx
+ T YUVToARGBScaleClip
  T opus_decode
  T opus_decode_float
  T opus_decoder_create
@@ -1068,6 +1124,7 @@
  V_GetFileExtension
  V_HtmlEntityDecodeToUTF8
  V_IsAbsolutePath
+ V_IsSteamCloseProtocol
  V_IsValidURLCharacter
  V_JoinNumbersUint
  V_MakeAbsolutePath
@@ -1232,11 +1289,13 @@
  copyfile_state_alloc
  copyfile_state_free
  cos
+ cpu_info_
  crc32
  deflate
  deflateEnd
  deflateInit2_
  deflateReset
+ difftime
  dispatch_apply
  dispatch_async
  dispatch_get_context
@@ -1336,6 +1395,10 @@
  inflateInit_
  inflateReset
  ioctl
+ kBgrF709Constants
+ kBgrH709Constants
+ kBgrI601Constants
+ kBgrJPEGConstants
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault
  kCFAllocatorMalloc
@@ -1367,6 +1430,14 @@
  kIOSurfaceWidth
  kLSSharedFileListItemBeforeFirst
  kLSSharedFileListSessionLoginItems
+ kRgbF709Constants
+ kRgbH709Constants
+ kRgbI601Constants
+ kRgbJPEGConstants
+ kYuvF709Constants
+ kYuvH709Constants
+ kYuvI601Constants
+ kYuvJPEGConstants
  kevent
  kill
  kqueue

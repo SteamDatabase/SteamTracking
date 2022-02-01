@@ -6,8 +6,8 @@
 "ServerBrowser_Filter"				"Szűrő"
 "ServerBrowser_All"				"<Mind>"
 "ServerBrowser_World"				"Világ"
-"ServerBrowser_US_East"				"US - Kelet"
-"ServerBrowser_US_West"				"US - Nyugat"
+"ServerBrowser_US_East"				"USA - Kelet"
+"ServerBrowser_US_West"				"USA - Nyugat"
 "ServerBrowser_SouthAmerica"			"Dél-Amerika"
 "ServerBrowser_Europe"				"Európa"
 "ServerBrowser_Asia"				"Ázsia"
@@ -69,7 +69,7 @@
 "ServerBrowser_FriendsTab"			"Barátok"
 "ServerBrowser_HistoryTab"			"Előzmények"
 "ServerBrowser_GameInfoTitle"			"Játékinfó"
-"ServerBrowser_AddToFavorites"			"Felvétel a Kedvencekbe"
+"ServerBrowser_AddToFavorites"			"Kedvencekhez adás"
 "ServerBrowser_GameInfoWithNameTitle"		"Játékinfó - %game%"
 "ServerBrowser_PressJoinToConnect"		"Nyomd meg a „Belépést” a szerverhez csatlakozáshoz."
 "ServerBrowser_JoinWhenSlotIsFree"		"Csatlakozni fogsz a szerverhez, amint lesz szabad hely."
@@ -123,7 +123,7 @@
 "ServerBrowser_ConnectToServer"		"Csatlakozás a szerverhez"
 "ServerBrowser_ViewServerInfo"		"Szerverinfó megnézése"
 "ServerBrowser_RefreshServer"		"Szerver frissítése"
-"ServerBrowser_AddServerToFavorites"		"Szerver felvétele a kedvencekbe"
+"ServerBrowser_AddServerToFavorites"		"Szerver kedvencekhez adása"
 "ServerBrowser_NotResponding"		"< nem válaszol >"
 "ServerBrowser_FiltersActive"		"Aktív szűrők"
 "ServerBrowser_ServerOutOfDate"		"A szerver elavult."
@@ -170,7 +170,7 @@
 "ServerBrowser_NonSteamGame"	"A játékállapot nem elérhető."
 
 "ServerBrowser_AddSelectedToFavorites"	"A kiválasztott szerver felvétele a kedvencekbe"
-"ServerBrowser_AddAddressToFavorites"	"Cím felvétele a kedvencekbe"
+"ServerBrowser_AddAddressToFavorites"	"Cím kedvencekhez adása"
 "ServerBrowser_FindGames"	"Játék keresése ezen a címen..."
 } 
 }  

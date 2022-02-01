@@ -171,7 +171,6 @@ WVRQP
 0^_]
 QPRRR
 ^_[]
-QPRRj
 ~@O1
 ^_[]
 ^_[]
@@ -529,12 +528,13 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jan 16 2022
-09:34:06
+Jan 31 2022
+19:45:09
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 Out of thread local storage!
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
@@ -758,13 +758,13 @@ CreateInterface
 2$$$&$
 TJ",\
 c5u8
-$z$WnJ
+z$WnJ
 *>pl
 Dzll
 ){c$V
 `m(w
 !	'J+
-uL."&
+uZ."&
 Qg	~
 |`n>>
 _Breakpad_SetSteamID
@@ -929,21 +929,17 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-FE^n
-E){G|C
-:"v[
-.e#-Ji
-/`~d
-{$1w
-@AYt
+i2Aw
+KqL\
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-FR(]L
-&rl"
-|rtj
-r.C}
+7tVY
+ve-`
+.d4G
+SG*~V
+=JD}
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -999,9 +995,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173429Z0/
-/;d0[
- :-0
+220201034535Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1009,36 +1003,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		f0NQosdOMtb5M4U8JOZJYGzT5YY=
+		SPSnKf2W8f09wIgM0WkVxpyF6qk=
 		</data>
 		<data>
-		Oi0wgOTVS4GGZAqcYa2HMv2uNxw=
+		lQTAUArYrQisqkf4+VdE9ftisFY=
 		</data>
 	</array>
 </dict>
 </plist>
-YB16
-gY99
-t0X2H
-Gkpn
-}IQ0,
-20220116173451Z0
+|W2U
+f"MU
+iMto	
+%m~K
+iYXzg4
+20220201034606Z0
+e:H*g
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221171501Z
-220201171500Z0B1
+220118170501Z
+220301170500Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-!b8V|
-h%q6
+"f/N
+chD8
+z++.4]
+`B&63
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-J	b3
-XG7	
+~9:]\
+@WZSdF#?
+vHm0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1077,10 +1075,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173451Z0#
-Iu+L
-bDj_H
-12uW
+220201034606Z0#
+0uSA
+*3PjD
+NAJ}g!z
+ ]LW
 __TEXT
 __text
 __TEXT
@@ -1126,6 +1125,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
+*)_$
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1328,8 +1328,8 @@ AWAVAUATSH
 AWAVSH
 	H;M
 [A^A_]
-AWAVSPI
-[A^A_]
+AVSH
+[A^]
 AWAVAUATSH
 [A\A]A^A_]
 	H;M
@@ -1701,6 +1701,8 @@ pid %d != %d, clearing client_port = %d, server_port = %d
 pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
 pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 crashhandler001
 crashhandler002
 crashhandler003
@@ -1738,8 +1740,6 @@ checkLen >= 0
 argLen < 0x10000000u
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 %s%c.temp_write_%x
 %s%c%s
@@ -1805,12 +1805,13 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jan 16 2022
-09:34:09
+Jan 31 2022
+19:45:10
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 Out of thread local storage!
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
@@ -2071,6 +2072,7 @@ CreateInterface
 -Breakpad_SetSteamID
 6@@D
 }Z>x;
+(4jx
 @jtt
 Fvvh
 N~{ 
@@ -2239,27 +2241,29 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-_n.3
-`&U8
-dVWQ
-8fT	
-zp3(
-DJEkM.
-8bsnWc
-O+9	
+sE(P
+X6'C
+TgAM
+CN%4
+\Pq}
+EViuUF
+)=^M
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-`y0_
-ffr6
-)\7SP
-C;. 
-Sk\{s\
-s}6e@
-P@{E
-~S&<
-}@P;xY
+'fAO
+@Ae>ZI
+B7V:
+x29(
+	Q>#
+OY*A_
+]s=$+k
+9djp"
+f*2B3
+v?w1)I
+"qzQ
+s;j)
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2315,10 +2319,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173429Z0/
-5D0[
-q20-
-1n$h
+220201034535Z0/
+S{0[
+cl=X
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2326,30 +2329,33 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		aYPUkaYWxNc3GbTr0NwcJvyzcTI=
+		6dzLcBcan/oOW7woyvhjbD1YwOQ=
 		</data>
 		<data>
-		GSyHQMr3MW4kaBW+AeYdO6ipJ/E=
+		+jY1X6ARO6pMDt2Omqmj76d7iZY=
 		</data>
 	</array>
 </dict>
 </plist>
-S*x3
-20220116173451Z0
+7:.	
+byAx
+20220201034606Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221172503Z
-220201172502Z0B1
+220118172001Z
+220301172000Z0B1
 Timestamp Signer NWK11
 Apple Inc.1
-I>^t
+lzQfr
+jb57
+)vqu
+(NTF
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-kD`2
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2388,12 +2394,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173451Z0#
-/tZSp{
-{	A]Y
-hY-b
-H-;#
-(`oz<
+220201034606Z0#
++8Ini
+.>SB7
 __TEXT
 __text
 __TEXT
@@ -2454,8 +2457,8 @@ Tv*@
  @9H5
 cS9 
 Q)Ij8?
-	Xw2
-	Xt2
+	Xm2
+	Xj2
  @9H
 5h"@9
 h&B)
@@ -2463,8 +2466,8 @@ h&B)
 Lii8k	
 		n9
 R		.9
-WV	X
- G	X
+WW	X
+ H	X
 jv8(
 h(8*
 ij`8
@@ -2507,11 +2510,11 @@ ii8J
 T+	@
 a}9h
 	i}9
-R	i=9`R
+R	i=9
 e=9h
 (a=9
 	m}9
-R	m=9
+R	m=9`N
 @9_q
 jt8 
  @9h
@@ -2696,12 +2699,13 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jan 16 2022
-09:34:12
+Jan 31 2022
+19:45:10
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 Out of thread local storage!
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
@@ -3124,25 +3128,24 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-	}v@.W
-="?%V
+7m)/
+CT\J!~
+Z	!.
+w*|${u
+%iRA
+H0J+
+8;l7
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-!P(W
-Rx1$
-L-4}
-7	kj
-z?oJ
-03a/
-B\D(`
--5b0A
-cU/;].
-0W)&
-wa\0
->Wn4
-:Hvh~5%
+EN@r]
+\ `V
+qa:-y
+2		e
+(s8*K'
+vbEd
+ n }e
 eF1]
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3199,8 +3202,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173429Z0/
-9kaY6`
+220201034535Z0/
+u##0-
+G-& 
+F1j)M
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3208,35 +3213,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		5mdhBR3k0KmzDjli9TLBVZYg+LQ=
+		7AJvkoZCir03pNjo/YEXYh91IyM=
 		</data>
 		<data>
-		S/sQik2nUW0yv5OUQhuDlzlrYVk=
+		G8Wupm9VFgIXxJwafafyRy0mIAE=
 		</data>
 	</array>
 </dict>
 </plist>
-1#ht
-`l\.:
-)W})
-`z<y
-20220116173451Z0
+rf0;
+20220201034606Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221171501Z
-220201171500Z0B1
+220118170501Z
+220301170500Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-!b8V|
-h%q6
+"f/N
+chD8
+z++.4]
+`B&63
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-J	b3
-XG7	
+~9:]\
+@WZSdF#?
+vHm0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3275,8 +3280,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173451Z0#
-AQ/&
-=xXu
-I	th
-UC+~
+220201034606Z0#
+0uSA
+>.z7
+MGB:
+pA:}

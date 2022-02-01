@@ -40,11 +40,11 @@
 "Friends_Chat_CreateFailed_Generic"		"Keskustelun luominen epäonnistui"
 "Friends_Chat_CreateFailed_TooMany"		"Olet luonut liian monta chatia. Jotkin chatit on tyhjennettävä, ennen kuin voit luoda uusia."
 
-"Friends_Title_Online"	"Kaverit - %name%"
-"Friends_Title_Busy"	"Kaverit - %name% - Varattu"
-"Friends_Title_Away"	"Kaverit - %name% - Poissa"
-"Friends_Title_Snooze"	"Kaverit - %name% - Varattu"
-"Friends_Title_Offline"	"Kaverit - Kirjautunut ulos"
+"Friends_Title_Online"	"Kaverit"
+"Friends_Title_Busy"	"Kaverit"
+"Friends_Title_Away"	"Kaverit"
+"Friends_Title_Snooze"	"Kaverit"
+"Friends_Title_Offline"	"Kaverit"
 
 "Friends_Page_Groups"	"RYHMÄT"
 "Friends_Page_Friends"	"KAVERIT"
@@ -220,7 +220,7 @@
 
 "Friends_Chat_InviteToChatRoom"							"Kutsu keskusteluun"
 "Friends_Chat_InviteToChatRoom_Title"					"Steam-yhteisö - Kutsu keskusteluun"
-"Friends_Chat_InviteToChatRoom_Info"					"%patron% on kutsunut sinut ryhmäkeskusteluun %chat%."
+"Friends_Chat_InviteToChatRoom_Info"					"%patron% on kutsunut sinut chattiin %chat%."
 "Friends_Chat_InviteToPrivateChatRoom_Info"				"Sinut on kutsuttu yksityiseen keskusteluun henkilön %patron% kanssa."
 "Friends_Chat_InviteReceivedTime"						"Kutsu vastaanotettu: %date% klo %time%"
 
@@ -655,7 +655,7 @@
 "friends_group_edittags_title"		"%friend% - Tunnisteet"
 
 "friends_insertitem"			"Näytä esine tavaraluettelostasi..."
-"group_enterchatroom"			"Liity ryhmäkeskusteluun"
+"group_enterchatroom"			"Liity ryhmächattiin"
 
 "friends_giftreceived_info"		"on lähettänyt sinulle lahjan"
 "friends_itemreceived_info"		"Sinulla on 1 uusi esine tavaraluettelossasi"

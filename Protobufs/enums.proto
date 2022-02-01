@@ -130,6 +130,57 @@ enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Keyboard = 11;
 }
 
+enum ESystemServiceState {
+	k_ESystemServiceState_Unavailable = 0;
+	k_ESystemServiceState_Disabled = 1;
+	k_ESystemServiceState_Enabled = 2;
+}
+
+enum EGraphicsPerfOverlayLevel {
+	k_EGraphicsPerfOverlayLevel_Hidden = 0;
+	k_EGraphicsPerfOverlayLevel_Basic = 1;
+	k_EGraphicsPerfOverlayLevel_Medium = 2;
+	k_EGraphicsPerfOverlayLevel_Full = 3;
+}
+
+enum EGPUPerformanceLevel {
+	k_EGPUPerformanceLevel_Invalid = 0;
+	k_EGPUPerformanceLevel_Auto = 1;
+	k_EGPUPerformanceLevel_Manual = 2;
+	k_EGPUPerformanceLevel_Low = 3;
+	k_EGPUPerformanceLevel_High = 4;
+	k_EGPUPerformanceLevel_Profiling = 5;
+}
+
+enum ECPUGovernor {
+	k_ECPUGovernor_Invalid = 0;
+	k_ECPUGovernor_Perf = 1;
+	k_ECPUGovernor_Powersave = 2;
+	k_ECPUGovernor_Manual = 3;
+}
+
+enum EUpdaterType {
+	k_EUpdaterType_Invalid = 0;
+	k_EUpdaterType_Client = 1;
+	k_EUpdaterType_OS = 2;
+	k_EUpdaterType_BIOS = 3;
+	k_EUpdaterType_Aggregated = 4;
+	k_EUpdaterType_Test1 = 5;
+	k_EUpdaterType_Test2 = 6;
+	k_EUpdaterType_Dummy = 7;
+}
+
+enum EUpdaterState {
+	k_EUpdaterState_Invalid = 0;
+	k_EUpdaterState_Error = 1;
+	k_EUpdaterState_UpToDate = 2;
+	k_EUpdaterState_Checking = 3;
+	k_EUpdaterState_Available = 4;
+	k_EUpdaterState_Applying = 5;
+	k_EUpdaterState_ClientRestartPending = 6;
+	k_EUpdaterState_SystemRestartPending = 7;
+}
+
 enum EStorageBlockContentType {
 	k_EStorageBlockContentType_Invalid = 0;
 	k_EStorageBlockContentType_Unknown = 1;
@@ -143,4 +194,19 @@ enum EStorageBlockFileSystemType {
 	k_EStorageBlockFileSystemType_Unknown = 1;
 	k_EStorageBlockFileSystemType_VFat = 2;
 	k_EStorageBlockFileSystemType_Ext4 = 3;
+}
+
+enum ESteamDeckCompatibilityCategory {
+	k_ESteamDeckCompatibilityCategory_Unknown = 0;
+	k_ESteamDeckCompatibilityCategory_Unsupported = 1;
+	k_ESteamDeckCompatibilityCategory_Playable = 2;
+	k_ESteamDeckCompatibilityCategory_Verified = 3;
+}
+
+enum ESteamDeckCompatibilityResultDisplayType {
+	k_ESteamDeckCompatibilityResultDisplayType_Invisible = 0;
+	k_ESteamDeckCompatibilityResultDisplayType_Informational = 1;
+	k_ESteamDeckCompatibilityResultDisplayType_Unsupported = 2;
+	k_ESteamDeckCompatibilityResultDisplayType_Playable = 3;
+	k_ESteamDeckCompatibilityResultDisplayType_Verified = 4;
 }

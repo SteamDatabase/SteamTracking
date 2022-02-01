@@ -31,6 +31,19 @@
 					}
 				}
 			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action SHOW_KEYBOARD"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -105,6 +118,23 @@
 		"mode"		"absolute_mouse"
 		"inputs"
 		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT"
+						}
+						"settings"
+						{
+							"activation_threshold"		"18000"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"

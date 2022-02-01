@@ -329,6 +329,12 @@
 .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2 input {
   box-shadow: none;
 }
+.qrcode_QRBits_3BALY {
+  display: grid;
+}
+.qrcode_Bit_1YVDT.qrcode_Active_1zNnN {
+  background-color: #1999ff;
+}
 .qrlogin_LoginQR_xlEVp {
   position: relative;
   width: 200px;
@@ -336,12 +342,6 @@
 }
 .qrlogin_LoginQR_xlEVp.qrlogin_Blur_1rteF {
   filter: blur(5px);
-}
-.qrlogin_QRBits_1ySP9 {
-  display: grid;
-}
-.qrlogin_Bit_3ma26.qrlogin_Active_M9jfk {
-  background-color: #1999ff;
 }
 .qrlogin_Overlay_464mF {
   position: absolute;

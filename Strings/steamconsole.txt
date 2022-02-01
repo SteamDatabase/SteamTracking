@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-@_
-@_
+_
+_
 __stubs
 __TEXT
 __stub_helper
@@ -1130,6 +1130,7 @@ The current Steam realm does not match the requested resource
 Signature check failed
 Failed to parse input
 No verified phone number
+Insufficient battery charge
 Invalid
 Public
 Beta

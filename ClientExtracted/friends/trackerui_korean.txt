@@ -37,14 +37,14 @@
 "Friends_Chat_InviteToWatch"		"방송에 초대하기"
 
 "Friends_Chat_CreateFailed_Title"		"채팅 생성 실패"
-"Friends_Chat_CreateFailed_Generic"		"대화방 생성 실패"
+"Friends_Chat_CreateFailed_Generic"		"채팅방 생성 실패"
 "Friends_Chat_CreateFailed_TooMany"		"너무 많은 채팅을 생성하였습니다. 다른 채팅을 생성하기 전에 일부 채팅을 비워야 합니다."
 
-"Friends_Title_Online"	"친구 - %name%"
-"Friends_Title_Busy"	"친구 - %name% - 다른 용무 중"
-"Friends_Title_Away"	"친구 - %name% - 자리 비움"
-"Friends_Title_Snooze"	"친구 - %name% - 수면 중 "
-"Friends_Title_Offline"	"친구 - 오프라인"
+"Friends_Title_Online"	"친구"
+"Friends_Title_Busy"	"친구"
+"Friends_Title_Away"	"친구"
+"Friends_Title_Snooze"	"친구"
+"Friends_Title_Offline"	"친구"
 
 "Friends_Page_Groups"	"그룹"
 "Friends_Page_Friends"	"친구"
@@ -218,14 +218,14 @@
 "Friends_Chat_MemberWasBanned"						"%member_making_change% 님이 %member_changed%님을 차단했습니다.\n"
 "Friends_Chat_MemberIgnored"						"(차단됨)"	
 
-"Friends_Chat_InviteToChatRoom"							"대화방으로 초대"
-"Friends_Chat_InviteToChatRoom_Title"					"Steam 커뮤니티 - 대화방 초대"
+"Friends_Chat_InviteToChatRoom"							"채팅방으로 초대"
+"Friends_Chat_InviteToChatRoom_Title"					"Steam 커뮤니티 - 채팅방 초대"
 "Friends_Chat_InviteToChatRoom_Info"					"%patron% 님이 %chat% 채팅에 참여하도록 초대했습니다."
 "Friends_Chat_InviteToPrivateChatRoom_Info"				"%patron%님께서 일대일 대화를 요청해오셨습니다."
 "Friends_Chat_InviteReceivedTime"						"초대받은 시각: %date%, %time%"
 
-"Friends_Chat_KickFromChatRoom"       "대화방에서 추방"
-"Friends_Chat_BanFromChatRoom"        "대화방에서 차단"
+"Friends_Chat_KickFromChatRoom"       "채팅방에서 추방"
+"Friends_Chat_BanFromChatRoom"        "채팅방에서 차단"
 
 "Friends_Chat_ToggleAvatars"			"아바타 표시"
 "Friends_Chat_ToggleBeeps"            "메시지 전송 시 경고음"
@@ -233,9 +233,9 @@
 
 "Friends_Chat_ManageBanList"			"차단 목록 관리"
 "Friends_Chat_LockRoom"				"방 잠그기(비공개)"
-"Friends_Chat_OpenRoom"               "대화방 공개하기"
+"Friends_Chat_OpenRoom"               "채팅방 공개하기"
 
-"Friends_Chat_DeniedChat_Title"		"Steam - 대화방에 입장할 수 없음"
+"Friends_Chat_DeniedChat_Title"		"Steam - 채팅방에 입장할 수 없음"
 "Friends_Chat_DeniedChat_DoesntExist" "해당 %chat% 채팅이 닫힘."
 "Friends_Chat_DeniedChat_NotAllowed"  "해당 %chat% 채팅에 입장할 수 있는 권한이 없음."
 "Friends_Chat_DeniedChat_Full"        "해당 %chat% 채팅의 정원이 모두 찼음."
@@ -251,14 +251,14 @@
 "Friends_Chat_ActionResultUnBanSuccess"   "%user_name% 님을 더 이상 차단하지 않습니다."
 
 "Friends_Chat_ActionResultLockChatSuccess"	"채팅이 현재 잠겼습니다(그룹 회원 또는 초대받은 사용자만 입장 가능).\n"
-"Friends_Chat_ActionResultUnlockChatSuccess"	"이제 대화방이 공개되었습니다. (모든 사용자에게 개방)\n"
+"Friends_Chat_ActionResultUnlockChatSuccess"	"이제 채팅방이 공개되었습니다. (모든 사용자에게 개방)\n"
 
 "Friends_Chat_ActionResultTitleFailed"    "액션 실패"
 "Friends_Chat_ActionResultInviteFailed"   "%user_name% 님을 %chat% 채팅에 초대하려 했으나 실패했습니다.\n%action_result%"
 "Friends_Chat_ActionResultKickFailed"     "%user_name% 님을 %chat% 채팅에서 퇴장시키려 했으나 실패했습니다.\n%action_result%"
 "Friends_Chat_ActionResultUnBanFailed"    "%user_name% 님을 %chat% 채팅에서 차단 해제하려 했으나 실패했습니다.\n%action_result%"
 "Friends_Chat_ActionResultLockChatFailed"	"%chat% 채팅을 종료하려 했으나\n%action_result%의 이유로 인해 실패했습니다."
-"Friends_Chat_ActionResultUnlockChatFailed"	"%chat% 대화방을 공개하려 했으나\n%action_result%의 이유로 실패했습니다."
+"Friends_Chat_ActionResultUnlockChatFailed"	"%chat% 채팅방을 공개하려 했으나\n%action_result%의 이유로 실패했습니다."
 "Friends_Chat_ActionResultCloseFailed"	"%chat% 채팅을 종료하려 했으나\n%action_result%의 이유로 실패했습니다."
 
 
@@ -266,7 +266,7 @@
 "Friends_Chat_ActionResultNotPermitted"				"이 액션을 수행할 권한이 없습니다."
 "Friends_Chat_ActionResultNotAllowedOnClanMember"     "상위 등급이 아닌 경우 클랜 회원에게 액션을 사용할 수 없습니다."
 "Friends_Chat_ActionResultNotAllowedOnBannedUser"     "차단된 사용자에게는 액션을 사용할 수 없습니다."
-"Friends_Chat_ActionResultManageBans"					"대화방 차단 목록 관리"
+"Friends_Chat_ActionResultManageBans"					"채팅방 차단 목록 관리"
 "Friends_Chat_ActionResultNotAllowedOnChatOwner"      "방장에게는 액션을 사용할 수 없습니다."
 "Friends_Chat_ActionResultNotAllowedOnSelf"           "본인에게 액션을 사용할 수 없습니다."
 "Friends_Chat_ActionResultChatDoesntExist"			"해당 채팅이 종료됨"
@@ -297,10 +297,10 @@
 
 "Friends_Chat_DisconnectedNoRetry_Entry"     "Steam에 연결할 수 없습니다.\n"
 
-"Friends_Chat_RoomLocked_Entry"		"%member_making_change% 님이 해당 대화방을 잠근 상태입니다.\n"
-"Friends_Chat_RoomUnlocked_Entry"		"%member_making_change% 님이 해당 대화방의 잠금을 해제한 상태입니다(모두에게 공개).\n"
+"Friends_Chat_RoomLocked_Entry"		"%member_making_change% 님이 해당 채팅방을 잠근 상태입니다.\n"
+"Friends_Chat_RoomUnlocked_Entry"		"%member_making_change% 님이 해당 채팅방의 잠금을 해제한 상태입니다(모두에게 공개).\n"
 
-"Friends_Chat_RackBouncing_Entry"		"Steam 서버가 곧 다시 부팅됩니다. 이 대화방에 대한 연결은 다시 부팅된 이후에 복원됩니다.\n"
+"Friends_Chat_RackBouncing_Entry"		"Steam 서버가 곧 다시 부팅됩니다. 이 채팅방에 대한 연결은 다시 부팅된 이후에 복원됩니다.\n"
 
 "Friends_MsgNotification_Sender"		"%name% 님의 말,"
 "Friends_MsgNotification_Body"		"%message%"
@@ -350,7 +350,7 @@
 "Friends_GroupSectionInfo_PublicGroup"	"%groupname%(공개 그룹)"
 
 "Friends_ViewGroupSteamID"			"그룹 프로필 보기"
-"Friends_JoinGroupChatRoom"			"그룹 대화방 참가"
+"Friends_JoinGroupChatRoom"			"그룹 채팅방 참가"
 "Friends_OpenAdministerGroupPage"		"이 그룹 관리"
 "Friends_LeaveThisGroup"				"이 그룹 나가기"
 
@@ -388,7 +388,7 @@
 "Friends_NameTooShort_Title"			"친구 - 별명이 너무 짧음"
 "Friends_NameTooShort_Info"			"별명은 최소한 두 글자 이상이어야 합니다."
 "Friends_NameChangeFailed_Title"		"친구 - 프로필 이름을 변경하지 못했습니다"
-"Friends_NameChangeFailed_Info"		"프로필 이름을 변경하는데 실패했습니다. 몇 분 후 다시 시도하십시오."
+"Friends_NameChangeFailed_Info"		"프로필 이름을 변경하는데 실패했습니다. 몇 분 후 다시 시도해 주세요."
 "Friends_NameChangeThrottled_Info"		"프로필 이름을 너무 자주 변경할 수 없습니다. 몇 분 후에 다시 시도하세요."
 
 "Friends_OnlineNotification_Info"			"현재 온라인 상태"
@@ -500,7 +500,7 @@
 
 "Friends_ChatIntro_Info"		"다음 사용자에게서 채팅 요청을 받았습니다."
 "Friends_ChatIntro_Info2"		"공통으로 공유하는 그룹:"
-"Friends_ChatIntro_InfoChatRoom"	"이 대화방에 함께 있습니다:"
+"Friends_ChatIntro_InfoChatRoom"	"이 채팅방에 함께 있습니다:"
 "Friends_ChatIntro_Request"	"이 채팅 요청을 수락하시겠습니까?"		
 "Friends_ChatIntro_DontShowCheckBox" "이 사용자의 채팅 요청을 항상 수락합니다."
 
@@ -558,8 +558,8 @@
 "Limited_ForDetails"	"자세한 내용은 Steam 고객지원을 방문하십시오."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
-"Friends_Chat_RoomModerated_Entry"		"%member_making_change% 님이 해당 대화방을 운영자 전용 채팅으로 설정했습니다.\n"
-"Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% 님이 해당 대화방을 모든 사용자 채팅으로 설정했습니다.\n"
+"Friends_Chat_RoomModerated_Entry"		"%member_making_change% 님이 해당 채팅방을 운영자 전용 채팅으로 설정했습니다.\n"
+"Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% 님이 해당 채팅방을 모든 사용자 채팅으로 설정했습니다.\n"
 "Friends_Chat_RoomUnmoderated_Info"			"운영자 전용 채팅에서는 그룹 운영자만 메시지를 보낼 수 있습니다."
 "Friends_Chat_ModerateRoom"				"운영자 전용 채팅 설정"
 "Friends_Chat_UnmoderateRoom"			"운영자 전용 채팅 해제(모든 사용자가 채팅 가능)"

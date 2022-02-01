@@ -59,8 +59,8 @@
 
 "SteamGuardBanner"				"Steam Guard met Intel® Identity Protection Technology"
 "LoginIPTNotDetected"			"2e generatie Intel® Core™ Processor niet gevonden.\nDit account kan niet worden gebruikt op deze computer."
-"LoginIPTDetected"				"2e generatie Intel® Core™\nProcessor gevonden..."
-"LoginIPTNotEnabledOnAccount"	"IPT niet ingeschakeld voor dit account..."
+"LoginIPTDetected"				"2e generatie Intel® Core™\nProcessor gevonden ..."
+"LoginIPTNotEnabledOnAccount"	"IPT niet ingeschakeld voor dit account ..."
 "LoginIPTAuthenticatingWithSteam" "IPT verbinden met Steam..."
 "LoginIPTConfirmed"				"Authenticatie was succesvol. Je wordt ingelogd ..."
 "LoginIPTNotConfirmed"			"IPT kon niet worden geverifieerd. Dit\naccount kan niet op deze computer gebruikt worden."

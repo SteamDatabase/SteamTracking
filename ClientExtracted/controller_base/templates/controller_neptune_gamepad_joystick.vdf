@@ -321,23 +321,6 @@
 		"mode"		"trigger"
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button TRIGGER_LEFT"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
 		}
 		"settings"
 		{
@@ -350,23 +333,6 @@
 		"mode"		"trigger"
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button TRIGGER_RIGHT"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
 		}
 		"settings"
 		{
@@ -624,7 +590,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button X"
 						}
 					}
 				}
@@ -637,7 +602,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button A"
 						}
 					}
 				}
@@ -650,7 +614,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button Y"
 						}
 					}
 				}
@@ -663,7 +626,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button B"
 						}
 					}
 				}

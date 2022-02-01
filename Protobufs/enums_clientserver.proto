@@ -106,8 +106,8 @@ enum EMsg {
 	k_EMsgAIGetAppListResponse = 426;
 	k_EMsgAISGetCouponDefinition = 429;
 	k_EMsgAISGetCouponDefinitionResponse = 430;
-	k_EMsgAISUpdateSlaveContentDescription = 431;
-	k_EMsgAISUpdateSlaveContentDescriptionResponse = 432;
+	k_EMsgAISUpdateSubordinateContentDescription = 431;
+	k_EMsgAISUpdateSubordinateContentDescriptionResponse = 432;
 	k_EMsgAISTestEnableGC = 433;
 	k_EMsgBaseAM = 500;
 	k_EMsgAMUpdateUserBanRequest = 504;
@@ -734,7 +734,6 @@ enum EMsg {
 	k_EMsgAMSupportIsAccountEnabled = 4209;
 	k_EMsgAMSupportIsAccountEnabledResponse = 4210;
 	k_EMsgUGSGetUserStats = 4211;
-	k_EMsgAMSupportKickSession = 4212;
 	k_EMsgAMGSSearch = 4213;
 	k_EMsgMarketingMessageUpdate = 4216;
 	k_EMsgChatServerRouteFriendMsg = 4219;
@@ -892,6 +891,8 @@ enum EMsg {
 	k_EMsgAMRequestPersonaUpdateForChatServer = 4420;
 	k_EMsgAMPerfectWorldPayment = 4421;
 	k_EMsgAMPerfectWorldPaymentResponse = 4422;
+	k_EMsgAMECommPayPayment = 4423;
+	k_EMsgAMECommPayPaymentResponse = 4424;
 	k_EMsgBasePSRange = 5000;
 	k_EMsgPSCreateShoppingCart = 5001;
 	k_EMsgPSCreateShoppingCartResponse = 5002;
@@ -1141,8 +1142,8 @@ enum EMsg {
 	k_EMsgClientNetworkingMobileCertRequest = 5626;
 	k_EMsgClientNetworkingMobileCertRequestResponse = 5627;
 	k_EMsgBaseMDS = 5800;
-	k_EMsgAMToMDSGetDepotDecryptionKey = 5812;
-	k_EMsgMDSToAMGetDepotDecryptionKeyResponse = 5813;
+	k_EMsgMDSGetDepotDecryptionKey = 5812;
+	k_EMsgMDSGetDepotDecryptionKeyResponse = 5813;
 	k_EMsgMDSContentServerConfigRequest = 5827;
 	k_EMsgMDSContentServerConfig = 5828;
 	k_EMsgMDSGetDepotManifest = 5829;

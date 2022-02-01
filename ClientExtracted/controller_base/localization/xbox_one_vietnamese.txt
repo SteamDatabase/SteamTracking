@@ -28,8 +28,10 @@
 	"origin_xboxone_shoulder_r"						"Đệm phải"
 	"origin_xboxone_button_menu"					"Nút Menu"
 	"origin_xboxone_button_view"					"Hiện nút"
+	"origin_xboxone_button_dpad_move"				"Chuyển động D-Pad"
 	"origin_xboxone_button_paddle_1"				"Paddle P1"
 	"origin_xboxone_button_paddle_2"				"Paddle P2"
 	"origin_xboxone_button_paddle_3"				"Paddle P3"
 	"origin_xboxone_button_paddle_4"				"Paddle P4"
-	}
+	"origin_xboxone_button_share"					"Nút SHARE"
+}

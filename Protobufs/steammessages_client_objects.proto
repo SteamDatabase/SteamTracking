@@ -11,6 +11,12 @@ enum ECloudPendingRemoteOperation {
 	k_ECloudPendingRemoteOperationAppSessionSuspended = 4;
 }
 
+enum ESteamDeckKeyboardLayout {
+	k_ESteamDeckKeyboardLayout_QWERTY = 0;
+	k_ESteamDeckKeyboardLayout_German = 1;
+	k_ESteamDeckKeyboardLayout_French = 2;
+}
+
 message SteamMessagesClientIClientForcedEnumDependencies {
 	optional .EBluetoothDeviceType a = 1 [default = k_BluetoothDeviceType_Invalid];
 	optional .EStorageBlockContentType b = 2 [default = k_EStorageBlockContentType_Invalid];
@@ -201,7 +207,53 @@ message CMsgSystemPerfDiagnosticInfo {
 
 message CMsgSystemPerfSettings {
 	optional float diagnostic_update_rate = 1;
-	optional bool is_shark_mode = 2;
+	optional .ESystemServiceState system_trace_service_state = 2 [default = k_ESystemServiceState_Unavailable];
+	optional .ESystemServiceState graphics_profiling_service_state = 3 [default = k_ESystemServiceState_Unavailable];
+	optional .ESystemServiceState perf_overlay_service_state = 4 [default = k_ESystemServiceState_Unavailable];
+	optional .EGraphicsPerfOverlayLevel perf_overlay_level = 5 [default = k_EGraphicsPerfOverlayLevel_Hidden];
+	repeated .EGPUPerformanceLevel gpu_performance_levels_available = 6;
+	optional .EGPUPerformanceLevel gpu_performance_level = 7 [default = k_EGPUPerformanceLevel_Invalid];
+	optional int32 gpu_performance_manual_mhz = 8;
+	optional int32 gpu_performance_manual_min_mhz = 9;
+	optional int32 gpu_performance_manual_max_mhz = 10;
+	optional bool perf_overlay_is_standalone = 11;
+	optional int32 fps_limit = 12;
+	optional bool is_variable_resolution_enabled = 13;
+	optional bool is_dynamic_refresh_rate_enabled = 14;
+	optional int32 tdp_limit = 15;
+	optional .ECPUGovernor cpu_governor = 16 [default = k_ECPUGovernor_Invalid];
+	optional int32 cpu_governor_manual_mhz = 17;
+	optional bool is_fsr_enabled = 18;
+	optional int32 fsr_sharpness = 19;
+	optional int32 cpu_governor_manual_min_mhz = 20;
+	optional int32 cpu_governor_manual_max_mhz = 21;
+	optional int32 fsr_sharpness_min = 22;
+	optional int32 fsr_sharpness_max = 23;
+}
+
+message CMsgSystemManagerSettings {
+	optional float idle_backlight_dim_battery_seconds = 1;
+	optional float idle_backlight_dim_ac_seconds = 2;
+	optional float idle_suspend_battery_seconds = 3;
+	optional float idle_suspend_ac_seconds = 4;
+	optional bool idle_suspend_supressed = 5;
+	optional bool automatic_display_brightness_enabled = 6;
+	optional float als_lux_latest = 7;
+	optional float als_lux_median = 8;
+	optional float display_brightness_linear = 9;
+}
+
+message CMsgUpdaterProgress {
+	optional float stage_progress = 1;
+	optional int64 stage_size_bytes = 2;
+	optional fixed32 rtime_estimated_completion = 3;
+}
+
+message CMsgUpdaterInfo {
+	optional .EUpdaterState state = 1 [default = k_EUpdaterState_Invalid];
+	optional .EUpdaterState previous_state = 2 [default = k_EUpdaterState_Invalid];
+	optional int32 eresult_previous_state = 3 [default = 2];
+	optional .CMsgUpdaterProgress progress = 4;
 }
 
 message CMsgCellList {

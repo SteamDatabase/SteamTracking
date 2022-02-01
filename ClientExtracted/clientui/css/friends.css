@@ -415,6 +415,20 @@
 .shared_svg_library_EmoticonBow_st1_3wZe- {
   fill: #e41e25;
 }
+.shared_svg_library_SteamDeckCompatInfo_3266r {
+  display: flex;
+  background-color: #0e141b;
+  padding: 2px;
+  border-radius: 20px;
+}
+.shared_svg_library_SteamDeckCompatLogo_Xa7Sr {
+  width: 20px;
+  height: 20px;
+}
+.shared_svg_library_SteamDeckCompatIcon_1_u0j {
+  width: 20px;
+  height: 20px;
+}
 button.DialogButton {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -966,7 +980,9 @@ button.DialogButton::before {
   transition: opacity 200ms ease-in-out;
 }
 button.DialogButton:disabled:hover::before,
-button.DialogButton:disabled::before {
+button.DialogButton:disabled::before,
+button.DialogButton.Disabled:hover::before,
+button.DialogButton.Disabled::before {
   opacity: 0;
 }
 button.DialogButton:hover::before {
@@ -1037,11 +1053,14 @@ button.DialogButton:hover {
   color: #fff;
 }
 button.DialogButton:disabled,
-button.DialogButton:disabled:hover {
+button.DialogButton:disabled:hover,
+button.DialogButton.Disabled,
+button.DialogButton.Disabled:hover {
   background: rgba(61, 67, 77, 0.35);
   color: #464d58;
   box-shadow: none;
   cursor: default;
+  pointer-events: none;
 }
 button.DialogButton.Small {
   line-height: 22px;
@@ -1072,7 +1091,8 @@ button.TextButton:focus {
   vertical-align: middle;
   margin-right: 2px;
 }
-.DialogButton:disabled .SVGIcon_Button {
+.DialogButton:disabled .SVGIcon_Button,
+.DialogButton.Disabled .SVGIcon_Button {
   opacity: 0.1;
 }
 .DialogOnOffToggle_NewUIContainer {

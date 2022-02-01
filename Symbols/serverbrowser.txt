@@ -94,6 +94,7 @@
  V_FixSlashes
  V_GetFileExtension
  V_IsAbsolutePath
+ V_IsSteamCloseProtocol
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_RemoveDotSlashes

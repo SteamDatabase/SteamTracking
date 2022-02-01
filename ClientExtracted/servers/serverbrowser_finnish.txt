@@ -76,7 +76,7 @@
 "ServerBrowser_AlertWhenSlotIsFree"		"Saat ilmoituksen, kun palvelimella on vapaa pelaajapaikka."
 "ServerBrowser_CouldNotConnectServerFull"	"Yhteyttä ei voi muodostaa, sillä palvelin on täynnä."
 "ServerBrowser_ServerNotResponding"		"Palvelin ei vastaa."
-"ServerBrowser_RefreshingPercentDone"		"Päivitetään palvelinluetteloa... %s1 prosenttia valmiina"
+"ServerBrowser_RefreshingPercentDone"		"Päivitetään palvelinluetteloa... %s1 % valmiina"
 "ServerBrowser_ServersResponding"		"Kohteesta %s1 vastaavat pelipalvelimet"
 "ServerBrowser_ServersRespondingLocal"	"Paikalliselta koneelta vastaavat pelipalvelimet"
 "ServerBrowser_RefreshingServerList"		"Päivitetään palvelinluetteloa..."

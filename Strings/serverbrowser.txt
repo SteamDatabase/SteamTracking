@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+f
+f
 __stubs
 __TEXT
 __stub_helper
@@ -34,23 +36,20 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
+q7
 __thread_vars
 __DATA
 0
 __thread_data
 __DATA
 @
-'
-@
-@
-'
 __thread_bss
 __DATA
-'
 __bss
 __DATA
 __common
 __DATA
+87'
 H
 __LINKEDIT
 @'
@@ -59,10 +58,8 @@ __LINKEDIT
 @loader_path/serverbrowser.dylib
 "
 @'
-h\'
-X_'
-8
-(!
+X
+@!
 P
 
 
@@ -93,6 +90,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+P3
 )
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
@@ -372,6 +370,7 @@ X
 
 (
 0
+0
 8
 (
 0
@@ -394,6 +393,7 @@ $
 4
 (
 5
+4
 )
 ,
 0
@@ -459,6 +459,7 @@ $
 (
 =
 0
+>
 $
 (
 ,
@@ -523,11 +524,12 @@ l
 r
 s
 p
-0
+8
 H
 X
 (
 (
+(
 0
 0
 0
@@ -538,6 +540,7 @@ X
 (
 (
 0
+8
 8
 (
 8
@@ -622,6 +625,7 @@ H
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 30CMsgSetLocalFileRequestMapping
 23CMsgBrowserErrorStrings
+18CMsgBrowserSetName
 15CMsgBrowserSize
 21CMsgBrowserSetMinSize
 19CMsgBrowserPosition
@@ -652,6 +656,8 @@ H
 14CMsgViewSource
 16CMsgBrowserReady
 14CMsgURLChanged
+13CHistoryEntry
+18CMsgHistoryChanged
 11CHTMLHeader
 21CHTMLPageSecurityInfo
 19CMsgFinishedRequest
@@ -735,6 +741,8 @@ H
 21CMsgJSReleaseCallback
 20CMsgJSRaiseException
 20CMsgLoadLocalization
+24CMsgNotifyUserActivation
+30CMsgSetNetFakeLocalSystemState
 16CMsgJumpListLink
 18CMSgJumpListMRUApp
 15CMsgSetJumpList
@@ -2437,6 +2445,8 @@ Set the base used to construct quick login URLs
 Set the community URL
 -store
 Set the store URL
+-help
+Set the help/support URL
 /
 http://
 https://
@@ -2802,14 +2812,11 @@ BrowserDisabledKBLink
 #Steam_Browser_Disabled_KB_URL
 DefaultFixed
 HTML::Paint()
+ShowPanel
 HTML.SearchInsetY
 HTML.SearchInsetX
 HTML.SearchTall
 HTML.SearchWide
-%s%s.html
-steam\cached\offline_
-%senglish.html
-file://%s
 #vgui_HTMLBack
 back
 #vgui_HTMLForward
@@ -2960,7 +2967,6 @@ m_DirWatcherClient
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 m_iRefs > 0 && m_iRefs < 0x1000000
 HtmlPopup
-steam://close
 PageLoadThrobber
 graphics/rampDown_4
 URLBar
@@ -3712,6 +3718,7 @@ POSIX
 LINUX
 LINUX32
 LINUX64
+LINUXARM64
 ANDROID
 ANDROID32
 ANDROID64
@@ -3803,7 +3810,6 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-p&
 0
 j
 j
@@ -3813,9 +3819,6 @@ j
 j
 j
 j
-&
-&
-&
 p
 0
 p
@@ -3841,13 +3844,13 @@ j
 j
 j
 0
+p
+0
+j
+j
+j
+j
 %
-p
-0
-j
-j
-j
-j
 0
 0
 AT=
@@ -3891,9 +3894,9 @@ IcE
 @
 V
 =
-"
 =
 @
+c
 @
 M9e
 @
@@ -3918,11 +3921,8 @@ M9e
 
 
 
-
 d
 A+M
-
-
 j
 j
 j
@@ -3962,11 +3962,11 @@ j
 j
 j
 
-#
 d
 &
 &
 d
+Y
 0
 A+4$A+u
 ~m=
@@ -3974,7 +3974,6 @@ A+4$A+u
 =
 =
 @
-j
 j
 j
 j
@@ -4170,8 +4169,7 @@ d
 @
 @
 @
-e
-K
+I
 @
 @
 @

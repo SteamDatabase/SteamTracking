@@ -115,6 +115,7 @@ message CMsgRemoteClientBroadcastStatus {
 	optional string public_ip_address = 21;
 	optional bool remoteplay_active = 22;
 	optional uint32 supported_services = 23;
+	optional bool steam_deck = 24;
 }
 
 message CMsgRemoteClientBroadcastDiscovery {

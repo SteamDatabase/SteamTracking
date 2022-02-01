@@ -25,7 +25,7 @@
 "Friends_Chat_InviteToChat"			"Inviter til samtale"
 "Friends_Chat_ReJoin"					"Bli med igjen"
 "Friends_Chat_CannotSendFriendOffline" "%friend% er for øyeblikket frakoblet. Meldingen kan ikke sendes.\n"
-"Friends_Chat_SendOfflineMessage" "%friend% er for øyeblikket frakoblet, og vil motta meldingen din neste gang de logger inn.\n"
+"Friends_Chat_SendOfflineMessage" "%friend% er for øyeblikket frakoblet, og mottar meldingen din ved neste innlogging.\n"
 "Friends_Chat_InvitedToGame"			"%friend% har invitert deg til å bli med å spille %game%. "
 "Friends_Chat_FriendHasChangedGame"	"%friend% spiller %game%. "
 "Friends_Chat_FriendHasChangedApp"	"%friend% bruker nå %game%. "
@@ -110,7 +110,7 @@
 
 "Friends_NotConnectedToFriendsNetwork"		"Kunne ikke opprette en tilkobling til vennenettverket. Steam forsøker å koble til på nytt automatisk til tjenesten blir tilgjengelig."
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Du må logge på Steam på nytt for å kunne bruke Venner."
-"Friends_NotConnectedToFriendsNetwork_LoggedInElsewhere"	"Du er logget av Venner på grunn av at denne kontoen er logget på et annet sted.\n"
+"Friends_NotConnectedToFriendsNetwork_LoggedInElsewhere"	"Du er logget av Venner på grunn av at denne kontoen er logget inn et annet sted.\n"
 "Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Denne versjonen av Steam er for gammel til å koble til Venner. Start Steam på nytt for å motta den siste oppdateringen."
 "Friends_NotConnectedToFriendsNetwork_ServersBusy"		"Steam-tjenerne er for øyeblikket nede på grunn av rutinemessig vedlikehold. Venner blir koblet til på nytt automatisk med en gang tjenerne blir tilgjengelige."
 "Friends_NotConnectedToFriendsNetwork_NoConnection"		"Kunne ikke opprette nettverkstilkobling til Steam-tjenerne. Steam forsøker å koble til på nytt automatisk til tjenesten blir tilgjengelig."
@@ -143,7 +143,7 @@
 "Friends_FriendInvitedToGame_Info"	"En invitasjon til å bli med i spillet er sendt til %friend%."
 
 "Friends_NotifyFriendOnline_Title"	"%friend% – beskjed til venner som er tilkoblet"
-"Friends_NotifyFriendOnline_Info"		"Din venn %friend% har koblet seg til."
+"Friends_NotifyFriendOnline_Info"		"Vennen din %friend% har koblet seg til."
 
 "Friends_RefreshLogin_Title"			"Steam – oppdater pålogging"
 "Friends_RefreshLogin"				"Skriv inn påloggingsdetaljene for Steam på nytt for å logge på Venner."
@@ -292,7 +292,7 @@
 "Friends_Chat_FailedRejoin_Entry"			"Du kunne ikke bli med i samtalen igjen.\n"
 "Friends_Chat_FailedRejoin_Rejoin_Entry"	"Du ble med i samtalen igjen.\n"
 
-"Friends_Chat_Disconnected_Entry"           "Mistet tilkobling til Steam, vil bli med i samtalen igjen automatisk når tilkoblingen er gjenopprettet.\n"
+"Friends_Chat_Disconnected_Entry"           "Mistet tilkobling til Steam og blir med i samtalen igjen automatisk når tilkoblingen er gjenopprettet.\n"
 "Friends_Chat_Disconnected_Rejoin_Entry"    "Tilkoblet igjen, og er tilbake i samtalen.\n"
 
 "Friends_Chat_DisconnectedNoRetry_Entry"     "Ingen tilkobling til Steam.\n"
@@ -300,7 +300,7 @@
 "Friends_Chat_RoomLocked_Entry"		"Samtalerommet har blitt låst av %member_making_change%.\n"
 "Friends_Chat_RoomUnlocked_Entry"		"Samtalerommet har blitt låst opp (åpnet for alle) av %member_making_change%.\n"
 
-"Friends_Chat_RackBouncing_Entry"		"Steam-tjenerne vil starte på nytt om kort tid. Tilkoblingen til dette samtalerommet vil bli gjenopprettet etter omstarten.\n"
+"Friends_Chat_RackBouncing_Entry"		"Steam-tjenerne starter på nytt om kort tid. Tilkoblingen til dette samtalerommet gjenopprettes etter omstarten.\n"
 
 "Friends_MsgNotification_Sender"		"%name% sier"
 "Friends_MsgNotification_Body"		"%message%"
@@ -624,7 +624,7 @@
 "friends_trade_you_recently_changed_email"	"Du endret nylig e-postadressen tilknyttet med Steam-kontoen. Du vil ikke kunne bytte før om 5 dager etter at e-postadressen ble endret."
 "friends_trade_you_recently_changed_email_days"	"Du endret nylig e-postadressen tilknyttet med Steam-kontoen. For å beskytte gjenstandene i lageret ditt, vil du ikke kunne bytte før om %days% dager."
 "friends_trade_you_recently_changed_email_oneday" "Du endret nylig e-postadressen tilknyttet med Steam-kontoen. For å beskytte gjenstandene i lageret ditt, vil du ikke kunne bytte før om én dag."
-"friends_trade_their_account_cannot_trade"	"%friend% er ikke tilgjengelig for en byttehandel. Mer informasjon vil bli vist til %friend%, om de inviterer deg til en byttehandel."
+"friends_trade_their_account_cannot_trade"	"%friend% er ikke tilgjengelig for byttehandel. Mer informasjon vises til %friend% om de inviterer deg til en byttehandel."
 "friends_trade_trade_hold_for_cleared_trades_initiator"		"Du kan ikke bytte med %friend%, fordi du nylig avbrøt alle dine byttetilbud."
 "friends_trade_would_exceed_max_asset_count"		"Denne byttehandelen kan ikke fullføres, fordi den vil overskride maks antall gjenstander tillatt i lageret ditt."
 
@@ -650,7 +650,7 @@
 "friends_voice_usedbygame"			"Mikrofon i bruk av spillet"
 
 "friends_group_tag_as"			"Merk som …"
-"friends_group_edit_categories" 	"Merk denne vennen så du kan finne dem raskt. Merkede venner vil bli gruppert sammen i vennelisten din."
+"friends_group_edit_categories" 	"Merk denne vennen så du kan finne dem raskt. Merkede venner grupperes sammen i vennelisten."
 "friends_group_addtag"			"LEGG TIL MERKE"
 "friends_group_edittags_title"		"%friend% - Merker"
 
@@ -686,7 +686,7 @@
 
 "Broadcast_FirstTime_Header" "Velkommen til Steam-kringkasting! Du kan nå se på andre spillere og kringkaste dine egne spill med Steam."
 "Broadcast_FirstTime_PermissionHeader" "Ta deg tid til å sette opp preferansene dine …"
-"Broadcast_FirstTime_DesktopOnly" "Som standard, vil det kun være mulig å se innholdet i spillet ditt. Skrivebordet ditt vil ikke bli sendt."
+"Broadcast_FirstTime_DesktopOnly" "Som standard er det kun mulig å se innholdet i spillet ditt. Skrivebordet ditt sendes ikke."
 "Broadcast_FirstTime_FAQ" "Les vanlige spørsmål om Steam-kringkasting"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam-kringkasting"

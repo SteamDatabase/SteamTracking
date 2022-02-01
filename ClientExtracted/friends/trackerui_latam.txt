@@ -387,8 +387,8 @@
 "Friends_ChangeAvatar"				"Cambiar"
 "Friends_NameTooShort_Title"			"Amigos - Nombre del perfil demasiado corto"
 "Friends_NameTooShort_Info"			"El nombre del perfil debe contener al menos dos caracteres."
-"Friends_NameChangeFailed_Title"		"Amigos - Error al cambiar el nombre del perfil"
-"Friends_NameChangeFailed_Info"		"Error al cambiar el nombre del perfil. Por favor, inténtalo de nuevo en unos minutos."
+"Friends_NameChangeFailed_Title"		"Amigos - Error al cambiar el nombre de perfil"
+"Friends_NameChangeFailed_Info"		"Error al cambiar el nombre de perfil. Por favor, inténtalo de nuevo en unos minutos."
 "Friends_NameChangeThrottled_Info"		"Los cambios muy seguidos de nombres de perfil no están permitidos. Por favor, inténtalo de nuevo en unos minutos."
 
 "Friends_OnlineNotification_Info"			"está en línea en este momento"

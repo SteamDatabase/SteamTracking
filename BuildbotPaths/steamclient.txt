@@ -99,6 +99,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/steamp2pvoice.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/streamingfeature.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/subscribedfilelistcache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/ugcmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/unified_messages_client.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/user.cpp
@@ -198,6 +199,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processkill.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processworkitem.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/resourcecache.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
@@ -259,6 +261,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/steamvariant.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/thash.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlassociativelist.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldualhashmap.h

@@ -82,8 +82,8 @@ message CMsgClientLogon {
 
 message CMsgClientLogonResponse {
 	optional int32 eresult = 1 [default = 2];
-	optional int32 out_of_game_heartbeat_seconds = 2;
-	optional int32 in_game_heartbeat_seconds = 3;
+	optional int32 legacy_out_of_game_heartbeat_seconds = 2;
+	optional int32 heartbeat_seconds = 3;
 	optional uint32 deprecated_public_ip = 4;
 	optional fixed32 rtime32_server_time = 5;
 	optional uint32 account_flags = 6;

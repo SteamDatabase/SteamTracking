@@ -105,6 +105,7 @@ message CMsgSetLocalFileRequestMapping {
 		optional string relative_url = 1;
 		optional string local_path = 2;
 		optional string allowed_extensions = 3;
+		optional bool url_rewrite = 4;
 	}
 
 	optional uint32 browser_handle = 1;
@@ -122,6 +123,11 @@ message CMsgBrowserErrorStrings {
 	optional string connection_problem = 6;
 	optional string proxy_problem = 7;
 	optional string unknown = 8;
+}
+
+message CMsgBrowserSetName {
+	optional uint32 browser_handle = 1;
+	optional string name = 2;
 }
 
 message CMsgBrowserSize {
@@ -286,6 +292,16 @@ message CMsgURLChanged {
 	optional bool bIsRedirect = 4;
 	optional string pagetitle = 5;
 	optional bool bNewNavigation = 6;
+}
+
+message CHistoryEntry {
+	optional string url = 1;
+}
+
+message CMsgHistoryChanged {
+	optional uint32 browser_handle = 1;
+	optional uint32 index = 2;
+	repeated .CHistoryEntry entries = 3;
 }
 
 message CHTMLHeader {
@@ -656,6 +672,7 @@ message CMsgNodeHasFocus {
 	optional string searchbuttontext = 5;
 	optional bool bHasMultipleInputs = 6;
 	optional string input_type = 7;
+	optional bool bIsMainFrame = 8;
 }
 
 message CMsgZoomToFocusedElement {
@@ -786,6 +803,14 @@ message CMsgLoadLocalization {
 	optional uint32 browser_handle = 1;
 	optional string localization_path = 2;
 	optional string language = 3;
+}
+
+message CMsgNotifyUserActivation {
+	optional uint32 browser_handle = 1;
+}
+
+message CMsgSetNetFakeLocalSystemState {
+	optional uint32 state = 1;
 }
 
 message CMsgJumpListLink {

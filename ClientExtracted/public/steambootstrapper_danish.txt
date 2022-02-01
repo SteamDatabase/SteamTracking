@@ -24,7 +24,7 @@
 "SteamBootstrapper_UpdatePrepare"				"Forbereder opdatering..."
 "SteamBootstrapper_UpdateDownload"			"Henter opdatering..."
 "SteamBootstrapper_UpdateDownloading"			"Henter opdatering (%bytes% af %size% KB)..."
-"SteamBootstrapper_UpdateExtractingPackage"	"Pakker pakken ud..."
+"SteamBootstrapper_UpdateExtractingPackage"	"Pakker ud..."
 "SteamBootstrapper_UpdateInstalling"			"Installerer opdatering..."
 "SteamBootstrapper_InstallVerify"				"Verificerer installation..."
 "SteamBootstrapper_DownloadComplete"			"Download fuldført."

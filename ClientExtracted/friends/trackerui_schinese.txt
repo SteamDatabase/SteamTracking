@@ -211,8 +211,8 @@
 
 "Friends_Chat_MemberNameChanged" "%old_name% 已将其名称更改为 %member_name%。\n"
 
-"Friends_Chat_MemberEntered"							"%member_changed% 已进入聊天。%ignored%\n"
-"Friends_Chat_MemberLeft"								"%member_changed% 已离开聊天。%ignored%\n "
+"Friends_Chat_MemberEntered"							"%member_changed% 加入了聊天。%ignored%\n"
+"Friends_Chat_MemberLeft"								"%member_changed% 离开了聊天。%ignored%\n "
 "Friends_Chat_MemberDisconnected"						"%member_changed% 已断开连接。%ignored%\n"
 "Friends_Chat_MemberWasKicked"						"%member_changed% 已被 %member_making_change% 踢出。\n"
 "Friends_Chat_MemberWasBanned"						"%member_changed% 已被 %member_making_change% 禁止。\n"

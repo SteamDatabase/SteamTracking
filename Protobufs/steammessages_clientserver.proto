@@ -231,6 +231,10 @@ message CMsgClientConnectionStats {
 		optional uint32 seconds_running = 5;
 		optional uint32 msec_tologonthistime = 6;
 		optional uint32 count_bad_cms = 7;
+		optional bool no_udp_connectivity = 8;
+		optional bool no_tcp_connectivity = 9;
+		optional bool no_websocket_443_connectivity = 10;
+		optional bool no_websocket_non_443_connectivity = 11;
 	}
 
 	message Stats_UDP {

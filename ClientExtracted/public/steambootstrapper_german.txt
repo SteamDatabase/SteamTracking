@@ -41,5 +41,5 @@
 "SteamBootstrapper_WindowTitle"			"%appname%"
 "SteamBootstrapper_Error_Title"			"%appname% - Kritischer Fehler"
 "SteamBootstrapper_Warning_Title"			"%appname% - Warnung"
-"SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% wird von Ihrer Betriebssystemversion nicht mehr unterstützt."
+"SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% wird von Ihrem Betriebssystem nicht mehr unterstützt."
 }

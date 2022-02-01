@@ -161,7 +161,7 @@
 "Overlay_MicroTxnAuth_Total"		"Totalt skyldig"
 "Overlay_MicroTxnAuth_Header_Name"	"Navn"
 "Overlay_MicroTxnAuth_Header_Price"	"Pris"
-"Overlay_MicroTxnAuth_header_Quantity"	"Kvantitet"
+"Overlay_MicroTxnAuth_header_Quantity"	"Antall"
 "Overlay_MicroTxnAuth_Balance"		"%balance%"
 "Overlay_MicroTxnAuth_BalanceLabel" "Din saldo"
 "Overlay_MicroTxnAuth_Tax"			"Avgift"

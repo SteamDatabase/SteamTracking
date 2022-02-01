@@ -118,7 +118,7 @@
 "ServerBrowser_RemoveServerFromHistory"		"从历史记录中删除服务器"
 "ServerBrowser_LastPlayed"			"最后运行日期"
 
-"ServerBrowser_OfflineMode" 			"Steam 目前处于离线状态。在连接到网络并重启 Steam 前，联网游戏将不可使用。"
+"ServerBrowser_OfflineMode" 			"Steam 目前处于离线模式。在连接到网络并重启 Steam 前，联网游戏将不可使用。"
 
 "ServerBrowser_ConnectToServer"		"连接服务器"
 "ServerBrowser_ViewServerInfo"		"查看服务器信息"

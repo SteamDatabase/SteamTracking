@@ -67,7 +67,7 @@
 "Overlay_Taskbar_Screenshots"	"Скриншоты"
 "Overlay_Taskbar_DLC"		"Доп. контент"
 "Overlay_Taskbar_Guide"		"Руководство"
-"Overlay_Taskbar_legacycdkey"	"Цифровой ключ"
+"Overlay_Taskbar_legacycdkey"	"Ключ активации"
 "Overlay_Taskbar_Recommend"	"Порекомендовать"
 "Overlay_Taskbar_Workshop"	"Мастерская"
 "Overlay_Taskbar_SteamGuides"		"Руководства и советы"
@@ -122,10 +122,10 @@
 
 "Overlay_LowBattery_Message"	"Заряда аккумулятора хватит ещё на %batteryTime% мин."
 
-"Overlay_CDKeyNotification_Message" "Этой игре требуется специальный ключ, показанный ниже. После запроса введите его, как показано здесь."
-"Overlay_CDKeyNotification_Message_MultipleKey" "Этой игре требуется несколько регистрационных ключей. Когда игра запросит ключ, вы можете нажать %hotkey%, чтобы просмотреть их."
+"Overlay_CDKeyNotification_Message" "Этой игре требуется особый ключ активации. Когда игра запросит его, введите ключ, указанный ниже."
+"Overlay_CDKeyNotification_Message_MultipleKey" "Этой игре требуется несколько ключей активации. Когда игра запросит ключ, вы можете нажать %hotkey%, чтобы увидеть его."
 "Overlay_CDKeyNotification_MessageApp" "Этому приложению Steam требуется специальный ключ, показанный ниже. После запроса введите его, как показано здесь."
-"Overlay_CDKeyNotification_Message_MultipleKeyApp" "Этому приложению Steam требуется несколько регистрационных ключей. Когда приложение запросит ключ, вы можете нажать %hotkey%, чтобы просмотреть ваши регистрационные ключи."
+"Overlay_CDKeyNotification_Message_MultipleKeyApp" "Этому приложению требуется несколько ключей активации. Когда приложение запросит ключ, вы можете нажать %hotkey%, чтобы увидеть его."
 "Overlay_CDKeyNotification_CDKey"   "%cdkey%"
 "Overlay_CDKeyNotification_Hotkey"  "Нажмите %hotkey%, чтобы закрыть сообщение"
 "Overlay_CDKeyNotification_Title"	"Цифровой ключ %gamename%"
@@ -133,7 +133,7 @@
 "Overlay_DontNotifyAgain"		"Больше не напоминать об этом"
 
 "Overlay_CDKeyDialog_NameColumn"	"Продукт"
-"Overlay_CDKeyDialog_KeyColumn"		"Цифровой ключ продукта"
+"Overlay_CDKeyDialog_KeyColumn"		"Ключ активации"
 
 "Overlay_FriendChangeConfirmation_Title"					"Изменение списка друзей"
 "Overlay_FriendChangeConfirmation_Confirm"					"Подтвердить изменения"

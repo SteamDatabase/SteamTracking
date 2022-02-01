@@ -146,7 +146,7 @@
 "Friends_NotifyFriendOnline_Info"		"O teu amigo %friend% está online."
 
 "Friends_RefreshLogin_Title"			"Steam - Atualizar sessão"
-"Friends_RefreshLogin"				"Por favor, reintroduz os dados de início de sessão do Steam para poderes estar online com Amigos."
+"Friends_RefreshLogin"				"Reintroduz as credenciais da tua conta Steam para poderes aceder à tua lista de amigos."
 "Friends_AccountName"					"Nome da conta"
 "Friends_Login_Btn"					"Iniciar sessão"
 "Friends_Login_Password"				"Palavra-passe"

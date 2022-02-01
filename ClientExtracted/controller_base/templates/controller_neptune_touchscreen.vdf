@@ -542,7 +542,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press SPACE"
 						}
 					}
 				}
@@ -555,7 +554,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press R"
 						}
 					}
 				}
@@ -568,7 +566,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E"
 						}
 					}
 				}
@@ -581,7 +578,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press F"
 						}
 					}
 				}

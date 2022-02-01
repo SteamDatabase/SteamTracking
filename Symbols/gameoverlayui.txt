@@ -236,6 +236,7 @@
  T pcrecpp::RE::~RE()
  T sha1_block_data_order
  T sha256_block_data_order
+ T sha512_block_data_order
  Test_IsActive
  Test_SetFailed
  ThreadGetCurrentId
@@ -261,6 +262,7 @@
  V_FixSlashes
  V_GetFileExtension
  V_IsAbsolutePath
+ V_IsSteamCloseProtocol
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_RemoveDotSlashes

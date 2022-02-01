@@ -1,4 +1,5 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="16" cy="16" r="15" fill="#0E141B" stroke="white" stroke-width="2"/>
-<path d="M24 21H8L16 7L24 21Z" stroke="white" stroke-width="2"/>
+<path d="M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16Z" fill="#0E141B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30ZM16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.98444L25.7232 22H6.27686L16 4.98444ZM9.72321 20H22.2769L16 9.01556L9.72321 20Z" fill="white"/>
 </svg>

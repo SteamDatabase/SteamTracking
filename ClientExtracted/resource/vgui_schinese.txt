@@ -211,7 +211,7 @@
 "vgui_Webkit_cachemiss" "您的表格提交超时了。单击刷新重新提交表格数据。"
 "vgui_Webkit_badurl" "无法载入此 URL，主机名或格式错误"
 "vgui_Webkit_connectionproblem" "服务器连接失败。服务器可能脱机，或者您当前没有与互联网连接。"
-"vgui_Webkit_proxyconnectionproblem" "HTTP 代理连接失败。可能您的代理配置有错误，或者脱机。"
+"vgui_Webkit_proxyconnectionproblem" "HTTP 代理连接失败。您的代理配置可能有错误，或处于离线状态。"
 "vgui_Webkit_unknown" "无法载入网页（未知错误）。"
 "vgui_HTMLBack" "退回"
 "vgui_HTMLForward" "下一步"

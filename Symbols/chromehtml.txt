@@ -43,8 +43,10 @@
  Plat_CommandLineParamValue
  Plat_FloatTime
  Plat_GetExecutablePathUTF8
+ Plat_IsGamepadUI
  Plat_IsInDebugSession
- Plat_IsSteamPal
+ Plat_IsSteamDeck
+ Plat_IsSteamOS3
  Plat_MSTime
  Plat_MSTime64
  Plat_RelativeTicks

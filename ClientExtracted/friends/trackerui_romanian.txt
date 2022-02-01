@@ -225,7 +225,7 @@
 "Friends_Chat_InviteReceivedTime"						"Invitaţie primită la: %date%, %time%"
 
 "Friends_Chat_KickFromChatRoom"       "Elimină din camera de chat"
-"Friends_Chat_BanFromChatRoom"        "Banează din camera de discuții"
+"Friends_Chat_BanFromChatRoom"        "Interdicție pentru chat"
 
 "Friends_Chat_ToggleAvatars"			"Afișează avatarurile"
 "Friends_Chat_ToggleBeeps"            "Alertează-mă când utilizatorii trimit mesaje"
@@ -624,7 +624,7 @@
 "friends_trade_you_recently_changed_email"	"Ți-ai schimbat recent adresa de e-mail asociată contului tău de Steam. Nu vei putea face schimburi până nu trec cinci zile după schimbarea adresei tale de e-mail."
 "friends_trade_you_recently_changed_email_days"	"De curând ți-ai schimbat parola de e-mail asociată contului tău Steam. Pentru a-ți proteja obiectele din inventar, nu vei putea face schimburi pentru încă %days% zile."
 "friends_trade_you_recently_changed_email_oneday" "Ai schimbat de curând adresa de e-mail asociată contului tău Steam. Ca să fie protejate obiectele din inventarul tău, nu vei putea face schimburi pentru încă o zi."
-"friends_trade_their_account_cannot_trade"	"%friend% nu este disponibil pentru schimburi. Mai multe informaţii vor fi oferite lui %friend% dacă te invită să faceţi un schimb."
+"friends_trade_their_account_cannot_trade"	"%friend% nu este disponibil pentru schimburi. Mai multe informații vor fi oferite lui %friend% dacă te invită să faceţi un schimb."
 "friends_trade_trade_hold_for_cleared_trades_initiator"		"
 Nu poți face schimburi cu %friend% pentru că ți-ai anulat recent toate ofertele de schimb."
 "friends_trade_would_exceed_max_asset_count"		"Acest schimb nu poate fi finalizat deoarece ar depăși numărul maxim de obiecte permise în inventarul tău."

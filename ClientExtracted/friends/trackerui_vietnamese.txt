@@ -4,7 +4,7 @@
 "Tokens" 
 { 
 "TrackerUI_ConnectionSpeed"				"Tốc độ kết nối internet"
-"TrackerUI_FavoriteWindowLabel_Windows"	"Chọn cửa sổ Steam được hiện lên khi khởi động Steam, và khi bạn nháy đúp chuột vào biểu tượng trên thanh tác vụ."
+"TrackerUI_FavoriteWindowLabel_Windows"	"Chọn cửa sổ Steam được hiện lên khi khởi động Steam, và khi bạn nhấp đúp chuột vào biểu tượng trên thanh tác vụ."
 "TrackerUI_FavoriteWindowLabel"			"Chọn cửa sổ Steam hiện lên khi chương trình chạy."
 "TrackerUI_FavoriteWindow"			"Cửa sổ yêu thích"
 

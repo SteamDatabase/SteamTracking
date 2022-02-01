@@ -402,9 +402,9 @@
 "Friends_ChatNoTextNotification_Info"		"bir mesaj gönderdi"
 "Friends_BroadcastChannelLive"		"şu an SteamTV'de canlı yayında"
 
-"Friends_OnlineNotification_Hotkey"		"%hotkey% tuşlarına basarak görüntüle"
-"Friends_InviteNotification_Hotkey"		"%hotkey% tuşlarına basarak görüntüle"
-"Friends_ChatNotification_Hotkey"			"%hotkey% tuşlarına basarak yanıtla"
+"Friends_OnlineNotification_Hotkey"		"%hotkey% tuşlarına basarak görüntüleyin"
+"Friends_InviteNotification_Hotkey"		"%hotkey% tuşlarına basarak görüntüleyin"
+"Friends_ChatNotification_Hotkey"			"%hotkey% tuşlarına basarak yanıtlayın"
 
 "Friends_PlayersDialog_Title"				"Oyuncular"
 "Friends_CurrentPlayers_TabTitle"			"ŞU ANKİ OYUN"

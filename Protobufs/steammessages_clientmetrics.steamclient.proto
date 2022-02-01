@@ -1,3 +1,4 @@
+import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 import "clientmetrics.proto";
 
@@ -59,6 +60,7 @@ message CClientMetrics_SteamPipeWorkStats_Notification {
 	optional uint32 depotid = 2;
 	optional .ESteamPipeWorkType work_type = 3 [default = k_ESteamPipeClientWorkType_Invalid];
 	repeated .CClientMetrics_SteamPipeWorkStats_Operation operations = 4;
+	optional uint32 hardware_type = 5;
 }
 
 message CClientMetrics_ReportClientError_Notification {

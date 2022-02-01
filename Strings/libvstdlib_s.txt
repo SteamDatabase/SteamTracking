@@ -40,7 +40,6 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/libvstdlib_s.dylib
-gJ8%
 @loader_path/libtier0_s.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -70,6 +69,7 @@ VRSPj
 ^_[]
 ^_[]
 ^_[]
+(^_[]
 98u+
 ^_[]
 $^_[]
@@ -110,7 +110,7 @@ WPRQ
 SSh)
 ^_[]
 SWQP
-RRhJ
+RRhT
 ^_[]
 ^_[]
  ^_]
@@ -427,7 +427,6 @@ WWh1
 ^_[]
 QVRW
 ^_[]
-(^_[]
  ^_]
 QVRW
 ^_[]
@@ -896,6 +895,8 @@ V_ConvertUUIDToString
 str != NULL
 prefix != NULL
 the 
+steam://close
+steam://close/
 &quot;
 &#039;
 &lt;
@@ -1563,7 +1564,7 @@ InstallUniformRandomStream
 WeakRandom
 vstdlib_wcs
 String
-%BHanIdeograph
+&BHanIdeograph
 reateInterface
 oroutine_
 9V_stristrPKcS0_
@@ -1604,7 +1605,7 @@ binarytohex
 DefaultExtension
 TruncateAbsolutePathToDiskIdentity
 JoinNumbers
-!BasicHtmlEntityEncode
+"BasicHtmlEntityEncode
 %HtmlEntityDecodeToUTF8
 'ParseURLQueryString
 	nqualifiedFileName
@@ -1657,7 +1658,7 @@ ui64
 numeric
 validhex
 breakablewspace
-)strlower
+*strlower
 *walpha32
 wprintf
 printf
@@ -1670,7 +1671,8 @@ MeanSpaceW
 DeprecatedW
 AbsolutePath
 Valid
-&TLD
+&SteamCloseProtocol
+*TLD
 plit
 Left
 "Trim
@@ -1725,24 +1727,24 @@ ight
 StringInternal
 Numbers
 3V_ParseShellCommandLinePKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
-"8V_ParseShellCommandLine
-"0V_UnicodeCaseConvert
+#8V_ParseShellCommandLine
+#0V_UnicodeCaseConvert
 SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
  Convert
 4V_SplitString3PKcPKS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS4_EES8_
 !0V_atoui128PKc
 "7V_UnicodeValidatePK
 +5V_Unicode
-+6V_UnicodeAdvanceP
+,6V_UnicodeAdvanceP
 Uint
 Uint
 Tail
 POSIXPKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
-#Win32PKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+$Win32PKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
 0V_EscapeShellArgumentAndAppendP
 $5V_EscapeShellArgumentAndAppend
 cmPKc
-$17CUtlStringBuilderPKc
+%17CUtlStringBuilderPKc
 POSIXPcmPKc
 %Win32PcmPKc
 Buffer
@@ -1758,11 +1760,11 @@ RLCharacter
 String
 'DNSName
 lower
-'upper
+(upper
 StringToUUIDPK
 (UUIDToStringPK6V_UUID16EUUIDStringFlagsP
 c16EUUIDStringFlagsP6V_UUID
-(w16EUUIDStringFlagsP6V_UUID
+)w16EUUIDStringFlagsP6V_UUID
 EndLine
 eginLine
 )reak
@@ -1788,11 +1790,11 @@ cPcii25EStringConvertErrorPolicy
 0CUtl
 07CUtlStringBuilderi25EStringConvertErrorPolicy
 Stringi25EStringConvertErrorPolicy
-0VectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
+1VectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
 5IsTLDEPKc
-120FixupSeparatorSchemeER10CUtlString
-115ValidateStaticsER10CValidatorPKc
-2V20CUniformRandomStream
+220FixupSeparatorSchemeER10CUtlString
+215ValidateStaticsER10CValidatorPKc
+3V20CUniformRandomStream
 NSt3__117bad_function_callE
 220CUniformRandomStream
 NSt3__117bad_function_callE
@@ -1876,6 +1878,7 @@ _V_HtmlEntityDecodeToUTF8
 _V_IsAbsolutePath
 _V_IsDeprecatedW
 _V_IsMeanSpaceW
+_V_IsSteamCloseProtocol
 _V_IsTLD
 _V_IsValidDomainNameCharacter
 _V_IsValidUChar32
@@ -2202,45 +2205,35 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-P\Qj
-CE$m
-g$3)KZ/
-J]h,
-&/"^
-Mb_W
-gO48k
-9Y|[_yB
-:YI<T
+:Fhj=
+Ad>R
+s{jK
+`iMK
+,n77^
+Nv^JCp
+Y-9$(@\
+\6]u
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-4`[h
- !CM?Qy
-p]}XW4X)
-+fb`
-shWv=e
-XB2>
-i<*!
-pU|[0G
-*u2W
-hgv~
-`ML=v
-L@`	
-/5&\
-oK9l9
-T{LI
-t2aw
-fqaQQ
-6vU%0
-l#Ugg
-hj>n
-=`-Z
-Y:$F
-Nj`f
->3s9
-{U/W*
-Xsdb
+DHg-VK
+[/-!F
+"W*\
+u>p=
+b*Yo
+\VR.
+shRP6
+>SK{
+M\h\h
+	>U8.
+!VJ|?)
+7Ips
+VJyyE
+ Y_d+
+[-qb
+)e0UF
+Ve`q0G
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2296,8 +2289,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173441Z0/
-'W.*os
+220201034547Z0/
+V\20O
+WqT=
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2305,34 +2299,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		ymzeNg9pPpwaziMfakA2HHykbAw=
+		jMOFRO11eskPORaDQuc8yZ3hq20=
 		</data>
 		<data>
-		tMKIYrJM3r5/oUGR2xKBNRnulug=
+		gZBXzdHUyPPxiBSjV3FUPaQH4/g=
 		</data>
 	</array>
 </dict>
 </plist>
-vd3	w
->=2= q
-bASN@
-Eja:
-E&PV
-20220116173503Z0
+/o)q
+-jaR
+AOnD
+wR}r&@S
+-su:
+20220201034618Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221172503Z
-220201172502Z0B1
-Timestamp Signer NWK11
+220118170501Z
+220301170500Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-I>^t
+"f/N
+chD8
+z++.4]
+`B&63
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-kD`2
+~9:]\
+@WZSdF#?
+vHm0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2371,9 +2370,14 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173503Z0#
-/tZSp{
-{	A]Y
+220201034618Z0#
+0uSA
+eeV8-
+%3e#;
+RJa4
+tWB8[
+ZHS6
+@KZd
 __TEXT
 __text
 __TEXT
@@ -2487,6 +2491,8 @@ AVSH
 AWAVSPI
 [A^A_]
 [A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
 AWAVATSI
 8u"H
 w<fA
@@ -2556,8 +2562,6 @@ AWAVSH
 	H;M
 AWAVSH
 [A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
 AWAVAUATSH
 rkM9
 [A\A]A^A_]
@@ -2679,7 +2683,6 @@ AVSH
 [A^]
 AVSH
 w-Hc
-Lc5Nl
 [A^]
 AWAVAUATSH
 ~vLi
@@ -2868,6 +2871,7 @@ AWAVATSH
 AVSH
 [A^]
 AWAVAUATSH
+Lc5v
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -2934,7 +2938,6 @@ AWAVAUATSPI
 AVSI
 [A^]
 AWAVSH
-Lc5R
 x(Hc
 VUUUH
 X[A^A_]
@@ -3357,11 +3360,8 @@ resizeNumBits >= 0
 GetInts()
 CVariableBitStringBase
 0123456789ABCDEF
-%llu
 console
 false
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-!pszString || pszString[nChars] == '\0'
 m_Tree
 m_Elements
 m_Memory
@@ -3379,6 +3379,9 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
 cbActual < (uint32)nBufSizeWithTerminator
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
@@ -3719,6 +3722,10 @@ V_ConvertUUIDToString
 str != NULL
 prefix != NULL
 the 
+steam://close
+steam://close/
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+!pszString || pszString[nChars] == '\0'
 &quot;
 &#039;
 &lt;
@@ -3726,7 +3733,6 @@ the
 &amp;
 &nbsp;
 <br>
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nBytes
 &apos;
 &trade;
@@ -3831,8 +3837,7 @@ nBytes
 &lsquo;
 &rsquo;
 &hellip;
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+%llu
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
@@ -4419,7 +4424,7 @@ InstallUniformRandomStream
 WeakRandom
 vstdlib_wcs
 String
-%BHanIdeograph
+&BHanIdeograph
 reateInterface
 oroutine_
 9V_stristrPKcS0_
@@ -4460,7 +4465,7 @@ binarytohex
 DefaultExtension
 TruncateAbsolutePathToDiskIdentity
 JoinNumbers
-!BasicHtmlEntityEncode
+"BasicHtmlEntityEncode
 %HtmlEntityDecodeToUTF8
 'ParseURLQueryString
 	nqualifiedFileName
@@ -4513,7 +4518,7 @@ ui64
 numeric
 validhex
 breakablewspace
-)strlower
+*strlower
 *walpha32
 wprintf
 printf
@@ -4526,7 +4531,8 @@ MeanSpaceW
 DeprecatedW
 AbsolutePath
 Valid
-&TLD
+&SteamCloseProtocol
+*TLD
 plit
 Left
 "Trim
@@ -4581,24 +4587,24 @@ ight
 StringInternal
 Numbers
 3V_ParseShellCommandLinePKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
-"8V_ParseShellCommandLine
-"0V_UnicodeCaseConvert
+#8V_ParseShellCommandLine
+#0V_UnicodeCaseConvert
 SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
  Convert
 4V_SplitString3PKcPKS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS4_EES8_
 !0V_atoui128PKc
 "7V_UnicodeValidatePK
 +5V_Unicode
-+6V_UnicodeAdvanceP
+,6V_UnicodeAdvanceP
 Uint
 Uint
 Tail
 POSIXPKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
-#Win32PKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+$Win32PKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
 0V_EscapeShellArgumentAndAppendP
 $5V_EscapeShellArgumentAndAppend
 cmPKc
-$17CUtlStringBuilderPKc
+%17CUtlStringBuilderPKc
 POSIXPcmPKc
 %Win32PcmPKc
 Buffer
@@ -4614,11 +4620,11 @@ RLCharacter
 String
 'DNSName
 lower
-'upper
+(upper
 StringToUUIDPK
 (UUIDToStringPK6V_UUID16EUUIDStringFlagsP
 c16EUUIDStringFlagsP6V_UUID
-(w16EUUIDStringFlagsP6V_UUID
+)w16EUUIDStringFlagsP6V_UUID
 EndLine
 eginLine
 )reak
@@ -4644,11 +4650,11 @@ cPcii25EStringConvertErrorPolicy
 0CUtl
 07CUtlStringBuilderi25EStringConvertErrorPolicy
 Stringi25EStringConvertErrorPolicy
-0VectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
+1VectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
 5IsTLDEPKc
-120FixupSeparatorSchemeER10CUtlString
-115ValidateStaticsER10CValidatorPKc
-2V20CUniformRandomStream
+220FixupSeparatorSchemeER10CUtlString
+215ValidateStaticsER10CValidatorPKc
+3V20CUniformRandomStream
 NSt3__117bad_function_callE
 220CUniformRandomStream
 NSt3__117bad_function_callE
@@ -4724,6 +4730,7 @@ _V_HtmlEntityDecodeToUTF8
 _V_IsAbsolutePath
 _V_IsDeprecatedW
 _V_IsMeanSpaceW
+_V_IsSteamCloseProtocol
 _V_IsTLD
 _V_IsValidDomainNameCharacter
 _V_IsValidUChar32
@@ -5048,46 +5055,43 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-*&1:
- I<s;3=k$
-2k!!U
-Q`Vf
-52B)3
-oDg(
+Xg13
+\w9G
+0L3,
+3A6@
+f$Lo
+1(.'
+]`j0
+W]-HS
+U*60
 c$$6
-nItI
-L:)#W
-}b"I
-U<G,J
-YgtAK%<
+umC~>
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-@Uy9]v
-U)lDK
-NNQ7
-ZA`A
-^@W;1
-8jHm
-4Sd I
-Ut\BC
-sQ?]
-Nu>J
-2f8b
-P_4&
-[z|F
-I^{ sO|
-i_]?
-mYnG
-sZ	1
+,R~aI
+m-}rc
+Id2d
+V%+2gT
+M0H?
++Piz2s
+ $ay
+%uG)`Y
+"h}6
+]m!a3:`
+nyUR
+Uw&#
+ua%[
+Yx19
+XGaf
 C24zZ
 3:gz,	
 mH3Y
-_1~<
-~c3NO
-wP,)
-HGFv{J
+dm~E~
+jbiOw
+>J:q
+`:&d
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -5143,7 +5147,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173441Z0/
+220201034547Z0/
+@N\2
+ X?s'
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5151,35 +5157,31 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		HXT7C17fNEKtVxsNSsNBWAc1Kdg=
+		hfEBnrp1deOeVug01cNJkFNuA04=
 		</data>
 		<data>
-		6dh9ZeZBEvhxzmhcHe9PILWKlC4=
+		WD9zJxFSHFvR3TDNPWlG5+qi7pI=
 		</data>
 	</array>
 </dict>
 </plist>
-NtAW2^1#
-w9]g
-9-nUZ3/{
-a1D!j
-20220116173503Z0
+20220201034618Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221171501Z
-220201171500Z0B1
-Timestamp Signer NWK21
+220118172001Z
+220301172000Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-!b8V|
-h%q6
+lzQfr
+jb57
+)vqu
+(NTF
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-J	b3
-XG7	
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5218,10 +5220,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173503Z0#
-0-"&
-EFfti
-'Hjua
+220201034618Z0#
+{+Kd
+	hFB
+.~eB
 __TEXT
 __text
 __TEXT
@@ -5262,6 +5264,7 @@ __bss
 __DATA
 __LINKEDIT
 @loader_path/libvstdlib_s.dylib
+^@Nf
 @loader_path/libtier0_s.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -5354,7 +5357,8 @@ T9|@
 R(#	
 Rh!	
 Rl}@
-C`	P
+bb	0
+#]	P
 +ih8J	
 Lii8k	
 T	]	
@@ -5363,15 +5367,16 @@ ii8J
 yixJ	
 +yhxJ	
 ii8J	
+`y	p
+ #	0
+A|	0
 @9,!
 @9,!
-`b	p
-be	0
+ f	p
 Th! 
 T6|@
-""	0
+"$	0
 K"}@
-@9t;
 jv8(
 T	@!
 h(8*
@@ -5429,12 +5434,11 @@ R	kzx*
 ji8?
 7HK6
 @9[3
-IB	X)
+IF	X)
 hj8*i(8
 ?i(8
-3	X)
+7	X)
 .@8h
-		X)
 @9 z
 4kj 8
 lj 8
@@ -5907,6 +5911,8 @@ V_ConvertUUIDToString
 str != NULL
 prefix != NULL
 the 
+steam://close
+steam://close/
 &quot;
 &#039;
 &lt;
@@ -6607,7 +6613,7 @@ InstallUniformRandomStream
 WeakRandom
 vstdlib_wcs
 String
-%BHanIdeograph
+&BHanIdeograph
 reateInterface
 oroutine_
 9V_stristrPKcS0_
@@ -6648,7 +6654,7 @@ binarytohex
 DefaultExtension
 TruncateAbsolutePathToDiskIdentity
 JoinNumbers
-!BasicHtmlEntityEncode
+"BasicHtmlEntityEncode
 %HtmlEntityDecodeToUTF8
 'ParseURLQueryString
 	nqualifiedFileName
@@ -6701,7 +6707,7 @@ ui64
 numeric
 validhex
 breakablewspace
-)strlower
+*strlower
 *walpha32
 wprintf
 printf
@@ -6714,7 +6720,8 @@ MeanSpaceW
 DeprecatedW
 AbsolutePath
 Valid
-&TLD
+&SteamCloseProtocol
+*TLD
 plit
 Left
 "Trim
@@ -6769,24 +6776,24 @@ ight
 StringInternal
 Numbers
 3V_ParseShellCommandLinePKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
-"8V_ParseShellCommandLine
-"0V_UnicodeCaseConvert
+#8V_ParseShellCommandLine
+#0V_UnicodeCaseConvert
 SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
  Convert
 4V_SplitString3PKcPKS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS4_EES8_
 !0V_atoui128PKc
 "7V_UnicodeValidatePK
 +5V_Unicode
-+6V_UnicodeAdvanceP
+,6V_UnicodeAdvanceP
 Uint
 Uint
 Tail
 POSIXPKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
-#Win32PKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+$Win32PKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
 0V_EscapeShellArgumentAndAppendP
 $5V_EscapeShellArgumentAndAppend
 cmPKc
-$17CUtlStringBuilderPKc
+%17CUtlStringBuilderPKc
 POSIXPcmPKc
 %Win32PcmPKc
 Buffer
@@ -6802,11 +6809,11 @@ RLCharacter
 String
 'DNSName
 lower
-'upper
+(upper
 StringToUUIDPK
 (UUIDToStringPK6V_UUID16EUUIDStringFlagsP
 c16EUUIDStringFlagsP6V_UUID
-(w16EUUIDStringFlagsP6V_UUID
+)w16EUUIDStringFlagsP6V_UUID
 EndLine
 eginLine
 )reak
@@ -6832,10 +6839,10 @@ cPcii25EStringConvertErrorPolicy
 0CUtl
 07CUtlStringBuilderi25EStringConvertErrorPolicy
 Stringi25EStringConvertErrorPolicy
-0VectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
+1VectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
 5IsTLDEPKc
-120FixupSeparatorSchemeER10CUtlString
-115ValidateStaticsER10CValidatorPKc
+220FixupSeparatorSchemeER10CUtlString
+215ValidateStaticsER10CValidatorPKc
 S20CUniformRandomStream
 2V20CUniformRandomStream
 2I20CUniformRandomStream
@@ -6906,6 +6913,7 @@ _V_HtmlEntityDecodeToUTF8
 _V_IsAbsolutePath
 _V_IsDeprecatedW
 _V_IsMeanSpaceW
+_V_IsSteamCloseProtocol
 _V_IsTLD
 _V_IsValidDomainNameCharacter
 _V_IsValidUChar32
@@ -7229,38 +7237,40 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-5o^w
-Mbv*
-y!i$?VU
-e4[vE
+dI%W
+#[n<
+BVtc
+nfyH
+!h+td
+7*md
+S;Q;
+'~FF
+<{L%
+H/p;/
+aH=S`1
+N(ob
+a?:$
+UD;0
+Hg>c
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-D\T{
-b6h1
-$>%sP
-F7uU
-2>5!
-H.G^
-qYYF
-;1obi
-GZ{,=
-	PSOb
-Bvbo
-]64?
-w85f
-,D%]M
-awnJV
-Cs	y
-*i_q
-8DJ8
-'vCQ
-/%km
-+%$v\
-B@mp
-g(_u
-_"R0
+lH-vnLY
+,:VO
+QQ(w
+j:"8#
+JO0a
+OyfT
+w]*K
+peMl
+4(_y
+`#;l
+";xD
+z&i*
+{CxD
+!Xib)
+{WF:9K
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -7316,8 +7326,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173441Z0/
-*%s)
+220201034547Z0/
+.xV43
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -7325,33 +7335,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		TLdHibv3xc2daAviwPMw2mjqCno=
+		zPHyJfTPmNodLv6nkqAV6LKo4nQ=
 		</data>
 		<data>
-		x/8qJXMpyBF3+z2C6PZy8sHph7A=
+		mr0jdajLFTkPCC+Cl9uRQeL00jw=
 		</data>
 	</array>
 </dict>
 </plist>
-Qe",(
-b9$_
-b*%U
-	twG;
-20220116173503Z0
+@Q45
+!b{`/5
+xTaz
+20220201034618Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211221172503Z
-220201172502Z0B1
-Timestamp Signer NWK11
+220118170501Z
+220301170500Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-I>^t
+"f/N
+chD8
+z++.4]
+`B&63
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-kD`2
+~9:]\
+@WZSdF#?
+vHm0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -7390,9 +7404,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220116173503Z0#
-m}90+
-/tZSp{
-{	A]Y
-Hqbq
-} DTjs
+220201034618Z0#
+0uSA
+'"9,,
+\g7c
+gH^|eZ

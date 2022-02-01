@@ -47,27 +47,17 @@
  CFGetTypeID
  CFNetworkCopyProxiesForAutoConfigurationScript
  CFNetworkCopyProxiesForURL
- CFNumberCreate
  CFNumberGetTypeID
  CFNumberGetValue
  CFRelease
  CFRunLoopAddSource
  CFRunLoopGetCurrent
- CFRunLoopGetMain
  CFRunLoopRunInMode
- CFRunLoopSourceCreate
  CFRunLoopSourceInvalidate
- CFRunLoopSourceSignal
- CFRunLoopStop
- CFRunLoopWakeUp
- CFSetGetCount
- CFSetGetValues
  CFStringCompare
  CFStringCreateWithBytes
- CFStringCreateWithCString
  CFStringCreateWithCStringNoCopy
  CFStringCreateWithFormat
- CFStringGetBytes
  CFStringGetCString
  CFStringGetCharacterAtIndex
  CFStringGetLength
@@ -146,24 +136,8 @@
  GetSpewOutputFunc
  IOAllowPowerChange
  IODeregisterForSystemPower
- IODispatchCalloutFromMessage
- IOHIDDeviceClose
- IOHIDDeviceGetProperty
- IOHIDDeviceGetReport
- IOHIDDeviceOpen
- IOHIDDeviceRegisterInputReportCallback
- IOHIDDeviceScheduleWithRunLoop
- IOHIDDeviceSetReport
- IOHIDDeviceUnscheduleFromRunLoop
- IOHIDManagerCopyDevices
- IOHIDManagerCreate
- IOHIDManagerRegisterDeviceRemovalCallback
- IOHIDManagerScheduleWithRunLoop
- IOHIDManagerSetDeviceMatching
  IOIteratorNext
- IONotificationPortCreate
  IONotificationPortDestroy
- IONotificationPortGetMachPort
  IONotificationPortSetDispatchQueue
  IOObjectRelease
  IOPSCopyPowerSourcesInfo
@@ -173,7 +147,6 @@
  IORegistryEntryCreateCFProperty
  IORegistryEntryGetParentEntry
  IORegistryEntrySearchCFProperty
- IOServiceAddMatchingNotification
  IOServiceClose
  IOServiceGetMatchingService
  IOServiceGetMatchingServices
@@ -225,10 +198,12 @@
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsChromeOS
+ Plat_IsGamepadUI
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
+ Plat_IsSteamDeck
  Plat_IsSteamOS
- Plat_IsSteamPal
+ Plat_IsSteamOS3
  Plat_MSTime
  Plat_MSTime64
  Plat_OutputDebugString
@@ -351,6 +326,7 @@
  ThreadFindProcessByName
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
+ ThreadGetProcessExitCode
  ThreadGetProcessId
  ThreadGetProcessListInfo
  ThreadImplOneTimeInit
@@ -601,11 +577,13 @@
  dlopen
  dlsym
  dup
+ dup2
  dyld_stub_binder
  execvp
  exit
  exp
  exp2
+ exp2f
  fchmod
  fchmod$UNIX2003
  fchown
@@ -786,15 +764,6 @@
  pthread_attr_getschedparam
  pthread_attr_init
  pthread_attr_setschedparam
- pthread_cond_broadcast
- pthread_cond_destroy
- pthread_cond_init
- pthread_cond_init$UNIX2003
- pthread_cond_signal
- pthread_cond_timedwait
- pthread_cond_timedwait$UNIX2003
- pthread_cond_wait
- pthread_cond_wait$UNIX2003
  pthread_create
  pthread_equal
  pthread_getschedparam
@@ -1020,7 +989,6 @@
  strcmp
  strcpy
  strcspn
- strdup
  strerror
  strerror$UNIX2003
  strftime
@@ -1093,6 +1061,7 @@
  virtual thunk to std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()
  virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
  virtual thunk to std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
+ void std::__1::__sort<std::__1::__less<float, float>&, float*>(float*, float*, std::__1::__less<float, float>&)
  void std::__1::__sort<std::__1::__less<int, int>&, int*>(int*, int*, std::__1::__less<int, int>&)
  void std::__1::__sort<std::__1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, std::__1::__less<unsigned char, unsigned char>&)
  void std::__1::__sort<std::__1::__less<unsigned int, unsigned int>&, unsigned int*>(unsigned int*, unsigned int*, std::__1::__less<unsigned int, unsigned int>&)
@@ -1110,7 +1079,6 @@
  vtable for std::out_of_range
  vtable for std::overflow_error
  wcscmp
- wcscpy
  wcslen
  wcstol
  wmemcmp

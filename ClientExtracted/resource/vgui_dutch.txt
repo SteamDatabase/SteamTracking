@@ -41,7 +41,7 @@
 "vgui_CreateDirectoryFail_Title"	"Map aanmaken - fout"
 "vgui_CreateDirectoryFail_Info"		"Kon map niet aanmaken, station is alleen-lezen."
 "vgui_CreateDirectoryFail_AlreadyExists" "Deze map bestaat al."
-"vgui_ShuttingDown"		"Afsluiten..."
+"vgui_ShuttingDown"		"Afsluiten ..."
 
 "TextEntry_Language"		"Taal"
 "TextEntry_ConversionMode"	"Conversiemodus"
@@ -74,8 +74,8 @@
 "IME_0410"			"Italiaans (standaard)"
 "IME_040a"			"Spaans (Spanje, traditioneel)"
 
-"vgui_FileCopyDialog_Title"	"Kopiëren..."
-"vgui_FileMoveDialog_Title"	"Verplaatsen..."
+"vgui_FileCopyDialog_Title"	"Kopiëren ..."
+"vgui_FileMoveDialog_Title"	"Verplaatsen ..."
 "vgui_FileCopy_Estimate"	"%s1 resterend"
 "vgui_FileCopy_Copying_Multiple" "'%s1' kopiëren (%s2 resterend)"
 "vgui_FileCopy_Copying_Single" 	"'%s1' kopiëren"
@@ -218,7 +218,7 @@
 "vgui_HTMLReload" "Vernieuwen"
 "vgui_HTMLStop" "Stoppen"
 "vgui_HTMLCopyUrl" "Pagina-URL kopiëren"
-"vgui_HTMLViewSource" "Bron weergeven..."
+"vgui_HTMLViewSource" "Bron weergeven ..."
 "vgui_HTMLCopyLink" "Linkadres kopiëren"
 "vgui_HTMLSearchMatch" "%findactive% van %findcount%"
 "vgui_HTMLSearchThisPage" "Zoeken in pagina"

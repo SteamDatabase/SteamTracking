@@ -115,7 +115,7 @@
 "steam_menu_friends_hideoffline"	 "Alleen vrienden weergeven die online zijn"
 "steam_menu_friends_players"			 "Spelers"
 "steam_menu_friends_tools"         "Tools"
-"steam_menu_friends_add"					 "Een vriend toevoegen..."
+"steam_menu_friends_add"					 "Een vriend toevoegen"
 "steam_menu_friends_settings"      "Instellingen"
 
 "friends_searchOnline"				 "Leden van de Steam Community zoeken"

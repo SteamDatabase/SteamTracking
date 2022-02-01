@@ -40,11 +40,11 @@
 "Friends_Chat_CreateFailed_Generic"		"聊天室建立失敗"
 "Friends_Chat_CreateFailed_TooMany"		"您已建立太多交談，請先清除一些才能建立更多。"
 
-"Friends_Title_Online"	"好友 - %name%"
-"Friends_Title_Busy"	"好友 - %name% - 忙碌"
-"Friends_Title_Away"	"好友 - %name% - 離開"
-"Friends_Title_Snooze"	"好友 - %name% - 打瞌睡 "
-"Friends_Title_Offline"	"好友 - 離線"
+"Friends_Title_Online"	"好友"
+"Friends_Title_Busy"	"好友"
+"Friends_Title_Away"	"好友"
+"Friends_Title_Snooze"	"好友"
+"Friends_Title_Offline"	"好友"
 
 "Friends_Page_Groups"	"群組"
 "Friends_Page_Friends"	"好友"

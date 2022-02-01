@@ -127,7 +127,7 @@
 "ServerBrowser_NotResponding"		"< svarer ikke >"
 "ServerBrowser_FiltersActive"		"Filtrene er aktive"
 "ServerBrowser_ServerOutOfDate"		"Tjeneren er utdatert."
-"ServerBrowser_ClientOutOfDate"		"Din versjonen stemmer ikke med tjenerne.\nStart spillet på nytt."
+"ServerBrowser_ClientOutOfDate"		"Versjonen din stemmer ikke med tjenerne.\nStart spillet på nytt."
 "ServerBrowser_PlayerName"		"Spillernavn"
 "ServerBrowser_Score"			"Poeng"
 "ServerBrowser_Time"			"Tid"

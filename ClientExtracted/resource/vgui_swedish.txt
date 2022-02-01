@@ -210,7 +210,7 @@
 "vgui_Webkit_pagetypeunsupported" "Kunde inte ladda sidan, sidformatet stöds inte"
 "vgui_Webkit_cachemiss" "Din formulärbegäran har upphört. Tryck på uppdatera för att skicka formulärdatan igen."
 "vgui_Webkit_badurl" "Kunde inte ladda URL, felaktigt värdnamn eller format"
-"vgui_Webkit_connectionproblem" "Kunde inte ansluta till servern, den kan vara nere eller så är du inte ansluten till Internet."
+"vgui_Webkit_connectionproblem" "Kunde inte ansluta till servern. Servern kanske är offline eller kanske är du inte ansluten till internet."
 "vgui_Webkit_proxyconnectionproblem" "Kunde ej ansluta till HTTP-proxy. Din proxy är antingen felkonfigurerad eller avstängd."
 "vgui_Webkit_unknown" "Kunde ej ladda hemsida (okänt fel)."
 "vgui_HTMLBack" "Backa"

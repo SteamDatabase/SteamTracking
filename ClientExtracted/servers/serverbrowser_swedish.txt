@@ -118,7 +118,7 @@
 "ServerBrowser_RemoveServerFromHistory"		"Ta bort server ur historiken"
 "ServerBrowser_LastPlayed"			"Senast spelad"
 
-"ServerBrowser_OfflineMode" 			"Steam körs för närvarande inte uppkopplad mot Internet. Internetspelen blir inte tillgängliga förrän du startat om\nSteam när du är ansluten till Internet."
+"ServerBrowser_OfflineMode" 			"Steam körs för närvarande inte uppkopplad mot Internet. Internetspelen blir inte tillgängliga förrän du startat om\nSteam när du är ansluten till internet."
 
 "ServerBrowser_ConnectToServer"		"Anslut till server"
 "ServerBrowser_ViewServerInfo"		"Visa serverinfo"

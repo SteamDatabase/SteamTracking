@@ -1,3 +1,4 @@
+import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 import "enums.proto";
 
@@ -454,6 +455,15 @@ message CPlayer_GetLastPlayedTimes_Response {
 	repeated .CPlayer_GetLastPlayedTimes_Response.Game games = 1;
 }
 
+message CPlayer_GetTimeSSAAccepted_Request {
+}
+
+message CPlayer_GetTimeSSAAccepted_Response {
+	optional uint32 time_ssa_accepted = 1;
+	optional uint32 time_ssa_updated = 2;
+	optional uint32 time_chinassa_accepted = 3;
+}
+
 message CPlayer_AcceptSSA_Request {
 	optional .EAgreementType agreement_type = 1 [default = k_EAgreementType_Invalid];
 	optional uint32 time_signed_utc = 2;
@@ -775,6 +785,10 @@ service Player {
 
 	rpc ClientGetLastPlayedTimes (.CPlayer_GetLastPlayedTimes_Request) returns (.CPlayer_GetLastPlayedTimes_Response) {
 		option (method_description) = "Gets the last-played times for the account";
+	}
+
+	rpc GetTimeSSAAccepted (.CPlayer_GetTimeSSAAccepted_Request) returns (.CPlayer_GetTimeSSAAccepted_Response) {
+		option (method_description) = "Gets the time when the user accepted the SSA";
 	}
 
 	rpc AcceptSSA (.CPlayer_AcceptSSA_Request) returns (.CPlayer_AcceptSSA_Response) {

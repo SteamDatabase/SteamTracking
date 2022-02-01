@@ -40,11 +40,11 @@
 "Friends_Chat_CreateFailed_Generic"		"Chattrummet kunde inte skapas"
 "Friends_Chat_CreateFailed_TooMany"		"Du har skapat för många chattar. Några av dem måste tömmas innan du kan skapa fler."
 
-"Friends_Title_Online"	"Vänner - %name%"
-"Friends_Title_Busy"	"Vänner - %name% – Upptagen"
-"Friends_Title_Away"	"Vänner - %name% – Borta"
-"Friends_Title_Snooze"	"Vänner - %name% – Vila "
-"Friends_Title_Offline"	"Vänner – Offline"
+"Friends_Title_Online"	"Vänner"
+"Friends_Title_Busy"	"Vänner"
+"Friends_Title_Away"	"Vänner"
+"Friends_Title_Snooze"	"Vänner"
+"Friends_Title_Offline"	"Vänner"
 
 "Friends_Page_Groups"	"GRUPPER"
 "Friends_Page_Friends"	"VÄNNER"

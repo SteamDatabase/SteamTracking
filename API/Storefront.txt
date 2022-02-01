@@ -19,3 +19,4 @@
 %s/api/trailerslideshow/?cc=%s&l=%s
 %s/api/trailerslideshow/?cc=%s&l=%s&f=%s
 %s/api/verifyshippingaddress/?cc=%s&l=%s
+controller_base/images/api/knockout

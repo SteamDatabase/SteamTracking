@@ -24,7 +24,7 @@
       var e = o("mrSG"),
         a = o("q1tI"),
         r = o.n(a),
-        c = o("ascj"),
+        c = (o("+z9g"), o("ascj")),
         i = o("5E+2"),
         s = o("Jbdm"),
         p = o.n(s),
@@ -37,7 +37,7 @@
           return (
             Object(e.d)(t, n),
             (t.prototype.render = function () {
-              var n = Object(u.m)(
+              var n = Object(u.n)(
                 "#RewardsReaction_Tooltip",
                 this.props.reaction.count || 0,
                 Object(c.a)(this.props.reaction.reaction_type)

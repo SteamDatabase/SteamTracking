@@ -46,4 +46,5 @@
 	"origin_switch_r_gyro_pitch"				"Di chuyển gyro JoyCon phải (trục dọc xuống)"
 	"origin_switch_r_gyro_yaw"					"Di chuyển gyro JoyCon phải (trục đảo)"
 	"origin_switch_r_gyro_roll"					"Di chuyển gyro JoyCon phải (trục nghiêng)"
-	}
+	"origin_switch_button_dpad_move"			"Chuyển động D-Pad"
+}

@@ -1,7 +1,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/appregkeystring.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cellmap.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/commonkeycode.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
@@ -91,6 +90,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/data/panoramavideoplayer.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/csshelpers.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/fillbrush.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/panel2dfactory.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/stylepropertyfactory.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/uilength.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/panoramasymbol.cpp
@@ -246,7 +246,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuicontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuicurrentusercontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiinputcontroller.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuinetworkcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuisurveycontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiupdatecontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiurlcontroller.cpp
@@ -254,6 +253,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamurlcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/subpaneloptionsfamily.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemaudiocontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemdevkitcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.cpp
@@ -549,7 +549,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ProgressBox.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/PropertySheet.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/RichText.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/SectionedListPanel.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextEntry.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ToolWindow.cpp
