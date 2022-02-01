@@ -22287,7 +22287,8 @@ div.savetoolbar_HoverToolTip_gba9O {
   font-size: 14px;
   font-weight: 500;
   color: #fff;
-  line-height: 20px;
+  line-height: 17px;
+  margin-bottom: 4px;
 }
 .discountgridheaders_EventDetails_3LMXj
   .discountgridheaders_EventName_2bJFF
@@ -22454,6 +22455,32 @@ div.savetoolbar_HoverToolTip_gba9O {
   .tabulator-headers
   .tabulator-col.discountgridheaders_DiscountGridDataColumn_1yW70:hover {
   background-color: #50535e;
+}
+.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.discountgridheaders_NewCooldownRuleLaunchDate_3UA6S {
+  background-color: #2d686c;
+}
+.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.discountgridheaders_NewCooldownRuleLaunchDate_3UA6S
+  .discountgridheaders_NewCooldownRuleHeaderText_2_-Y6 {
+  text-align: center;
+  color: #c8eef1;
+}
+.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.discountgridheaders_NewCooldownRuleLaunchDate_3UA6S
+  .discountgridheaders_NewCooldownRuleDetailsLink_2835e {
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  margin-top: 8px;
 }
 .tabulator
   .tabulator-header.tabulator-header
@@ -22658,6 +22685,10 @@ div.savetoolbar_HoverToolTip_gba9O {
   .tabulator-cell.tabulator-cell.discountgridheaders_DiscountGridDataColumn_1yW70.discountgridheaders_CollisionFreeDiscountEvent_15fBc {
   background-color: inherit;
 }
+.tabulator
+  .tabulator-cell.tabulator-cell.discountgridheaders_NewCooldownRuleLaunchDate_3UA6S {
+  background-color: #1e4548;
+}
 .discountgridheaders_GridRowLoadingThrobber_r2FLR {
   height: 24px;
   width: 24px;
@@ -22677,22 +22708,94 @@ div.savetoolbar_HoverToolTip_gba9O {
   position: absolute;
   z-index: 1;
   top: 140px;
-  padding: 12px;
+  padding: 8px 12px 12px;
+  box-sizing: border-box;
+  width: 360px;
+  margin-left: 32px;
   background-color: #838ba0;
-  color: #c1c5cd;
+  color: #fff;
+  box-shadow: 0 0 10px #000;
   display: none;
 }
 .singleeventdetails_SingleEventDetailsCtn_381ib.singleeventdetails_Visible_1qjHy {
   display: block;
 }
-.singleeventdetails_SectionLabel_1RuFO {
+.singleeventdetails_SingleEventDetailsCtn_381ib:after {
+  right: 100%;
+  top: 17px;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: #838ba0;
+  border-width: 15px;
+  margin-top: 0px;
+}
+.singleeventdetails_SectionLabel_1RuFO:not(first-child) {
   font-size: 12px;
   white-space: nowrap;
-  padding-bottom: 8px;
-  color: #bbb;
+  margin-top: 16px;
+  padding-bottom: 4px;
+  color: #000;
+  font-weight: 500;
 }
 .singleeventdetails_SectionDate_3DpTZ {
   white-space: nowrap;
+  padding-right: 12px;
+}
+.singleeventdetails_ViewSummary_1asTw {
+  padding: 4px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  font-weight: 400;
+  color: #fff;
+}
+.singleeventdetails_SectionText_2oFM4 {
+  font-size: 12px;
+  color: #d7dcea;
+}
+.singleeventdetails_SectionText_2oFM4.singleeventdetails_fillAllCtn_2BugW {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.singleeventdetails_helpCtn_2MBA- svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  margin-left: 6px;
+}
+.singleeventdetails_BatchDiscountLine_YW4tz {
+  display: flex;
+  align-items: center;
+  max-height: 36px;
+  padding-bottom: 42px;
+}
+.singleeventdetails_BatchDiscountLine_YW4tz.singleeventdetails_Disabled_3ndVf {
+  color: dimgray;
+}
+.singleeventdetails_BatchDiscountLine_YW4tz
+  .singleeventdetails_BatchDiscountInput_2Vsri {
+  width: 20px;
+  padding: 5px;
+  text-align: right;
+}
+.singleeventdetails_BatchDiscountLine_YW4tz
+  .singleeventdetails_BatchDiscountInput_2Vsri:focus {
+  padding: 5px;
+}
+.singleeventdetails_BatchDiscountLine_YW4tz .singleeventdetails_CellPct_1NHr4 {
+  padding: 4px 16px 4px 4px;
+}
+.singleeventdetails_BatchDiscountLine_YW4tz
+  .singleeventdetails_BatchDiscountButton_2SPUS {
+  width: fit-content;
+  padding: 0 20px;
 }
 .discountcustomdialog_CreateCustomDiscountCtn_2T8Dy {
   position: relative;
@@ -22804,6 +22907,10 @@ div.savetoolbar_HoverToolTip_gba9O {
   font-size: 18px;
   margin-left: 8px;
 }
+.discountdashboard_FeedbackLink_2sPPE {
+  margin-left: 12px;
+  font-size: 16px;
+}
 .discountdashboard_ConfidentialBanner_2H9Kz {
   width: 100%;
   position: relative;
@@ -22866,6 +22973,39 @@ div.savetoolbar_HoverToolTip_gba9O {
 }
 .discountdashboard_PageToolsCtn_y6a8w .discountdashboard_ToolsNotes_3_Bu_ {
   flex-grow: 3;
+}
+.discountimportexport_Instructions_3XzkB {
+  padding-top: 8px;
+}
+.discountimportexport_ChoiceSeparator_2MThy {
+  text-align: center;
+  padding: 12px;
+}
+.discountimportexport_ButtonRow_169eH {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+.discountimportexport_ButtonRow_169eH .discountimportexport_Button_how9a {
+  width: 50%;
+  margin: 0 8px;
+}
+.discountimportexport_ButtonRow_169eH
+  .discountimportexport_ImportButtonLabel_MoV1b {
+  display: block;
+}
+.discountimportexport_ParseResultCount_3wac_ {
+  color: #a4d007;
+  padding: 16px;
+}
+.discountimportexport_ErrorHeader_bh1JB {
+  padding: 8px 0;
+}
+.discountimportexport_ParseErrors_2sHaV {
+  padding: 4px;
+  color: #a15212;
+  max-height: 200px;
+  overflow-y: auto;
 }
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
