@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7042518";
+var CLSTAMP = "7043592";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -4083,30 +4083,32 @@ var CLSTAMP = "7042518";
       function S(e) {
         var t = e.autoFocus,
           n = e.preferredFocus,
-          o = e.fnCanTakeFocus,
-          i = e.childFocusDisabled,
-          a = e.onFocusWithin,
-          s = e.navKey,
-          c = e.noFocusRing,
-          l = e.focusable,
-          u = e.focusableIfNoChildren,
-          p = e.navRef,
-          d = e.actionDescriptionMap,
-          h = e.onMoveUp,
-          m = e.onMoveRight,
-          f = e.onMoveDown,
-          g = e.onMoveLeft,
-          b = e.navScrollSnapX,
-          v = e.navScrollSnapOffsetX,
-          _ = e.navScrollSnapY,
-          y = e.navScrollSnapOffsetY,
-          w = e.navEntryPreferPosition,
-          O = e.scrollIntoViewWhenChildFocused,
-          E = e.fnScrollIntoViewHandler,
-          S = C(
+          o = e.disableNavSounds,
+          i = e.fnCanTakeFocus,
+          a = e.childFocusDisabled,
+          s = e.onFocusWithin,
+          c = e.navKey,
+          l = e.noFocusRing,
+          u = e.focusable,
+          p = e.focusableIfNoChildren,
+          d = e.navRef,
+          h = e.actionDescriptionMap,
+          m = e.onMoveUp,
+          f = e.onMoveRight,
+          g = e.onMoveDown,
+          b = e.onMoveLeft,
+          v = e.navScrollSnapX,
+          _ = e.navScrollSnapOffsetX,
+          y = e.navScrollSnapY,
+          w = e.navScrollSnapOffsetY,
+          O = e.navEntryPreferPosition,
+          E = e.scrollIntoViewWhenChildFocused,
+          S = e.fnScrollIntoViewHandler,
+          D = C(
             Object(r.f)(e, [
               "autoFocus",
               "preferredFocus",
+              "disableNavSounds",
               "fnCanTakeFocus",
               "childFocusDisabled",
               "onFocusWithin",
@@ -4129,35 +4131,36 @@ var CLSTAMP = "7042518";
               "fnScrollIntoViewHandler",
             ])
           ),
-          D = S.gamepadEvents,
-          M = S.actionDescriptions;
+          M = D.gamepadEvents,
+          k = D.actionDescriptions;
         return {
-          elemProps: S.props,
+          elemProps: D.props,
           navOptions: {
             autoFocus: t,
             preferredFocus: n,
-            fnCanTakeFocus: o,
-            childFocusDisabled: i,
-            onFocusWithin: a,
-            navKey: s,
-            noFocusRing: c,
-            focusable: l,
-            focusableIfNoChildren: u,
-            navRef: p,
-            onMoveUp: h,
-            onMoveRight: m,
-            onMoveDown: f,
-            onMoveLeft: g,
-            navScrollSnapX: b,
-            navScrollSnapOffsetX: v,
-            navScrollSnapY: _,
-            navScrollSnapOffsetY: y,
-            navEntryPreferPosition: w,
-            scrollIntoViewWhenChildFocused: O,
-            fnScrollIntoViewHandler: E,
-            actionDescriptionMap: Object(r.a)(Object(r.a)({}, d), M),
+            disableNavSounds: o,
+            fnCanTakeFocus: i,
+            childFocusDisabled: a,
+            onFocusWithin: s,
+            navKey: c,
+            noFocusRing: l,
+            focusable: u,
+            focusableIfNoChildren: p,
+            navRef: d,
+            onMoveUp: m,
+            onMoveRight: f,
+            onMoveDown: g,
+            onMoveLeft: b,
+            navScrollSnapX: v,
+            navScrollSnapOffsetX: _,
+            navScrollSnapY: y,
+            navScrollSnapOffsetY: w,
+            navEntryPreferPosition: O,
+            scrollIntoViewWhenChildFocused: E,
+            fnScrollIntoViewHandler: S,
+            actionDescriptionMap: Object(r.a)(Object(r.a)({}, h), k),
           },
-          gamepadEvents: D,
+          gamepadEvents: M,
         };
       }
       function D(e) {
@@ -13599,13 +13602,17 @@ var CLSTAMP = "7042518";
                 return !1;
               case "self":
                 return (
-                  null != t && w.a.PlayNavSound(w.b.BasicNav),
+                  null == t ||
+                    this.m_Properties.disableNavSounds ||
+                    w.a.PlayNavSound(w.b.BasicNav),
                   this.m_Tree.TransferFocus(e, this, Object(p.a)(t)),
                   !0
                 );
               case "children":
                 return (
-                  null != t && w.a.PlayNavSound(w.b.BasicNav),
+                  null == t ||
+                    this.m_Properties.disableNavSounds ||
+                    w.a.PlayNavSound(w.b.BasicNav),
                   this.BChildTakeFocus(e, t)
                 );
             }
@@ -13732,9 +13739,10 @@ var CLSTAMP = "7042518";
                 s && (c = s(e.detail));
             }
             return (
-              c
-                ? w.a.PlayNavSound(w.b.BasicNav)
-                : w.a.PlayNavSound(w.b.FailedNav),
+              this.m_Properties.disableNavSounds ||
+                (c
+                  ? w.a.PlayNavSound(w.b.BasicNav)
+                  : w.a.PlayNavSound(w.b.FailedNav)),
               c
             );
           }),

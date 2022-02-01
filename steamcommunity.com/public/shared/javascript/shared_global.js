@@ -3059,13 +3059,32 @@ function RegisterPopupDismissal( dismissFunc, elemIgnore )
 				return;
 
 			dismissFunc();
-			$J(document).off('.RegisterPopupDismissal');
+			UnregisterPopupDismissal( elemIgnore );
+		});
+
+		// support gamepad B button to dismiss
+		$Ignore.on( 'vgp_oncancel', function ( event ) {
+			dismissFunc();
+			UnregisterPopupDismissal( elemIgnore );
+
+			event.stopPropagation();
+			event.preventDefault();
 		});
 	}, 1 );
 }
 
+/* Cleanup function for the above RegisterPopupDismissal()  
+   This needs to be accessible to popup owners so they can call this if they're closing the popup */
+function UnregisterPopupDismissal( elemIgnore )
+{
+	$J(document).off( '.RegisterPopupDismissal' );
 
-
+	if ( elemIgnore )
+	{
+		// unregister gamepad B button press handling
+		$JFromIDOrElement( elemIgnore ).off( 'vgp_oncancel' );
+	}
+}
 
 
 function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
@@ -3084,6 +3103,9 @@ function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	ShowWithFade( $Popup );
 	$Link.addClass('focus');
 	RegisterPopupDismissal( function() { HideMenu( elemLink, elemPopup ); }, $Popup );
+
+	// If we use this control on gamepad (haven't found an example yet we're going to keep) then we'll need to 
+	// add calling: GPOnShowingModalWindow( $Popup[0] ).  See shared_responsive_adapter.js for example
 }
 
 function HideMenu( elemLink, elemPopup )
@@ -3094,7 +3116,8 @@ function HideMenu( elemLink, elemPopup )
 	$Link.data( 'menu-active', false );
 	HideWithFade( $Popup );
 	$Link.removeClass( 'focus' );
-	$J(document).off('.RegisterPopupDismissal');
+
+	UnregisterPopupDismissal( elemPopup );
 }
 
 function HideMenuFast( elemLink, elemPopup )
@@ -3104,7 +3127,8 @@ function HideMenuFast( elemLink, elemPopup )
 
 	$Popup.hide();
 	$Link.removeClass( 'focus' );
-	$J(document).off('.RegisterPopupDismissal');
+
+	UnregisterPopupDismissal( elemPopup );
 }
 
 

@@ -83,7 +83,14 @@ function CloseSupportMessageWindow()
 					}
 					else
 					{
-											window.close();
+						if ( typeof SteamClient != 'undefined' && SteamClient.BrowserView && SteamClient.BrowserView.PostMessageToParent )
+						{
+							SteamClient.BrowserView.PostMessageToParent( 'SupportMessages', 'CloseBrowser' );
+						}
+						else
+						{
+														window.close();
+						}
 					}
 				}
 				else if ( transport.responseText )

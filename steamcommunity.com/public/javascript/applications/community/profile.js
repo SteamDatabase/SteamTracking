@@ -9804,6 +9804,7 @@
                                 start: B.solr_index,
                                 count: Math.max(j, 25),
                                 tabuniqueid: r,
+                                sectionuniqueid: b,
                                 return_capsules: !0,
                                 search: t ? u : void 0,
                                 origin: self.origin,

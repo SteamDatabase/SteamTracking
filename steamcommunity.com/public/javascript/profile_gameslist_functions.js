@@ -68,12 +68,33 @@ function ShowMenuCumulative( elemLink, elemPopup, align, valign )
 {
 	var elemLink = $(elemLink);
 	var elemPopup = $(elemPopup);
+	
+	// used for modal navigation support on gamepad
+	var fnUnregisterShowMenuCumulative = null;
 
 	AlignMenuCumulative( elemLink, elemPopup, align, valign );
 
 	ShowWithFade( elemPopup );
 	Element.addClassName.defer(elemLink,'focus');
-	RegisterPopupDismissal( function() { HideWithFade( elemPopup ); elemLink.removeClassName('focus'); }, elemPopup );
+
+	// if we're on gamepad, register this menu as a modal window
+	if ( typeof GPOnShowingModalWindow === "function" )
+	{
+		fnUnregisterShowMenuCumulative = GPOnShowingModalWindow( elemPopup );
+	}
+
+	RegisterPopupDismissal( function() 
+	{ 
+		HideWithFade( elemPopup ); 
+		elemLink.removeClassName('focus'); 
+
+		// tell gamepad navigation the modal closed
+		if ( fnUnregisterShowMenuCumulative )
+		{
+			fnUnregisterShowMenuCumulative();
+			fnUnregisterShowMenuCumulative = null;
+		}
+	}, elemPopup );
 }
 
 function filterApps()
