@@ -391,7 +391,7 @@
     "EventEditor_Options_ShowInSteamGlobal": "Hide in Steam",
     "EventEditor_Options_ShowInSteamGlobal_Desc": "For events shown in Steam China, this can be used to disable the event from showing up to global users",
     "EventEditor_Clone_MultiLanguages": "The event to be cloned has content in the following languages. Check the boxes whose languages you want to keep in the cloned event.",
-    "EventEditor_Clone_Alert": "In most cases it's not a good idea to clone existing languages. Please un-check them all.",
+    "EventEditor_Clone_Alert": "In most cases it's not a good idea to clone existing languages.",
     "EventEditor_InvalidCapsuleItem": "ERROR: Invalid item",
     "EventEditor_Options_Themed_title": "Theme Events: %1$s",
     "EventEditor_Options_Themed_Halloween2019_title": "Halloween 2019",

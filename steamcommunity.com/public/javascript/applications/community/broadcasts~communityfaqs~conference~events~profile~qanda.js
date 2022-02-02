@@ -713,7 +713,7 @@
                   break;
                 case v.EmailCode:
                   (r = e.GetEmailAuthCode()),
-                    (n = Object(E.n)(
+                    (n = Object(E.m)(
                       "#Login_SentSteamguard",
                       o.a.createElement(
                         "span",
@@ -1390,7 +1390,7 @@
                     a.createElement(
                       "div",
                       { className: s.RightSideTitles },
-                      Object(i.n)(
+                      Object(i.m)(
                         "#EventDisplay_EventUpcoming_WithDateAndTime",
                         d,
                         a.createElement(
@@ -1422,7 +1422,7 @@
                 var T = a.createElement(
                   "div",
                   { className: s.ShortDateAndTime },
-                  Object(i.q)(b, !0)
+                  Object(i.p)(b, !0)
                 );
                 E =
                   r < h
@@ -1435,7 +1435,7 @@
                     : a.createElement(
                         "div",
                         { className: s.RightSideTitles },
-                        Object(i.n)(
+                        Object(i.m)(
                           _
                             ? "#EventDisplay_TimeLeft"
                             : "#EventDisplay_RunsForDuration",

@@ -1067,7 +1067,7 @@
         u[1];
         if (!l) return null;
         var d = r - l.rtPostTime,
-          m = d < L.f.PerDay ? Object(M.q)(d) : Object(M.p)(l.rtPostTime),
+          m = d < L.f.PerDay ? Object(M.p)(d) : Object(M.o)(l.rtPostTime),
           p = a
             ? function () {
                 return i(n, !l.bUserUpVoted);
@@ -1158,7 +1158,7 @@
           s = t.rtAnswerTime && n - t.rtAnswerTime,
           a =
             t.rtAnswerTime &&
-            (s < L.f.PerDay ? Object(M.q)(s) : Object(M.p)(t.rtAnswerTime));
+            (s < L.f.PerDay ? Object(M.p)(s) : Object(M.o)(t.rtAnswerTime));
         return t.strAnswerText
           ? o.a.createElement(
               "div",
