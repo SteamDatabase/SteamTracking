@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7045842";
+var CLSTAMP = "7046252";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -3710,13 +3710,13 @@ var CLSTAMP = "7045842";
           return S;
         }),
         n.d(t, "c", function () {
-          return D;
+          return M;
         }),
         n.d(t, "e", function () {
-          return k;
+          return x;
         }),
         n.d(t, "f", function () {
-          return x;
+          return R;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -4164,93 +4164,104 @@ var CLSTAMP = "7045842";
         };
       }
       function D(e) {
-        var t = e.focusClassName,
-          n = e.focusWithinClassName,
-          o = e.className,
-          a = e.divRef,
-          l = e.node,
-          u = Object(r.f)(e, [
-            "focusClassName",
-            "focusWithinClassName",
-            "className",
-            "divRef",
-            "node",
-          ]),
-          p = i.a.useState(l.BHasFocus()),
-          d = p[0],
-          h = p[1];
-        Object(c.d)(l.FocusCallbackList, h);
-        var m = i.a.useState(l.BFocusWithin()),
-          f = m[0],
-          g = m[1];
-        return (
-          Object(c.d)(l.FocusWithinCallbackList, g),
-          i.a.createElement(
-            "div",
-            Object(r.a)({}, u, {
-              className: Object(s.a)(o, d && t, f && n),
-              ref: a,
-            })
-          )
-        );
-      }
-      function M(e, t, n) {
-        var a = S(t),
-          l = a.elemProps,
-          u = a.navOptions,
-          p = a.gamepadEvents;
-        void 0 !== u.focusable || l.disabled || (u.focusable = !0);
-        var d = E(Object(r.a)({}, u)),
-          m = d.ref,
-          f = d.node,
-          g = Object(o.useCallback)(
-            function () {
-              return y.a.PlayNavSound(y.b.DefaultOk), m.current.click(), !0;
-            },
-            [m]
-          );
-        p.onOKButton ||
-          ((l.onClick || ("button" == e && "submit" == l.type) || "a" == e) &&
-            (p.onOKButton = g));
-        var b = i.a.useState(null == f ? void 0 : f.BHasFocus()),
-          v = b[0],
-          _ = b[1];
-        Object(c.d)(null == f ? void 0 : f.FocusCallbackList, f ? _ : null),
-          u.focusable && (l.tabIndex = l.tabIndex || 0),
-          Object(h.a)(p, m);
-        var O = Object(c.f)(n, m),
-          C = l.children;
-        delete l.children;
-        var D = l.focusClassName;
-        return (
-          delete l.focusClassName,
-          i.a.createElement(
-            w.Provider,
-            { value: f },
+        return function (t) {
+          var n = t.focusClassName,
+            o = t.focusWithinClassName,
+            a = t.className,
+            l = t.divRef,
+            u = t.node,
+            p = t.children,
+            d = Object(r.f)(t, [
+              "focusClassName",
+              "focusWithinClassName",
+              "className",
+              "divRef",
+              "node",
+              "children",
+            ]),
+            h = i.a.useState(u.BHasFocus()),
+            m = h[0],
+            f = h[1];
+          Object(c.d)(u.FocusCallbackList, f);
+          var g = i.a.useState(u.BFocusWithin()),
+            b = g[0],
+            v = g[1];
+          return (
+            Object(c.d)(u.FocusWithinCallbackList, v),
             i.a.createElement(
               e,
-              Object(r.a)(Object(r.a)({}, l), {
-                ref: O,
-                className: Object(s.a)(
-                  l.className,
-                  "Focusable",
-                  v && D,
-                  v && "gpfocus"
-                ),
+              Object(r.a)(Object(r.a)({}, d), {
+                className: Object(s.a)(a, m && n, b && o),
+                ref: l,
               }),
-              C
+              p
             )
+          );
+        };
+      }
+      var M = D("div");
+      function k(e, t, n, a) {
+        var l = S(n),
+          u = l.elemProps,
+          p = l.navOptions,
+          d = l.gamepadEvents;
+        void 0 !== p.focusable || u.disabled || (p.focusable = !0);
+        var m = E(Object(r.a)({}, p)),
+          f = m.ref,
+          g = m.node,
+          b = Object(o.useCallback)(
+            function () {
+              return y.a.PlayNavSound(y.b.DefaultOk), f.current.click(), !0;
+            },
+            [f]
+          );
+        d.onOKButton ||
+          ((u.onClick || ("button" == e && "submit" == u.type) || "a" == e) &&
+            (d.onOKButton = b)),
+          p.focusable && (u.tabIndex = u.tabIndex || 0),
+          Object(h.a)(d, f);
+        var v = Object(c.f)(a, f),
+          _ = u.children;
+        delete u.children;
+        var O = u.focusClassName;
+        return (
+          delete u.focusClassName,
+          i.a.createElement(
+            w.Provider,
+            { value: g },
+            g
+              ? i.a.createElement(
+                  t,
+                  Object(r.a)(Object(r.a)({}, u), {
+                    divRef: v,
+                    node: g,
+                    focusClassName: Object(s.a)(O, "gpfocus"),
+                    focusWithinClassName: "gpfocuswithin",
+                    className: Object(s.a)(u.className, "Focusable"),
+                  }),
+                  _
+                )
+              : i.a.createElement(
+                  e,
+                  Object(r.a)(Object(r.a)({}, u), {
+                    ref: v,
+                    className: Object(s.a)(u.className, "Focusable"),
+                  }),
+                  _
+                )
           )
         );
       }
-      function k(e) {
-        return i.a.forwardRef(function (t, n) {
-          return M(e, t, n);
+      function x(e) {
+        var t = D(e);
+        return i.a.forwardRef(function (n, r) {
+          return k(e, t, n, r);
         });
       }
-      function x(e) {
-        return i.a.forwardRef(function (t, n) {
-          var o = (function (e) {
+      function R(e) {
+        var t = D(e);
+        return i.a.forwardRef(function (n, o) {
+          var i = (function (e) {
               return {
                 virtualKeyboardProps: {
                   onEnterKeyPress: e.onEnterKeyPress,
@@ -4271,14 +4282,14 @@ var CLSTAMP = "7045842";
                   "BIsElementValidForInput",
                 ]),
               };
-            })(t),
-            i = o.virtualKeyboardProps,
-            a = o.props,
-            s = a.refKeyboardHandle,
-            l = Object(r.f)(a, ["refKeyboardHandle"]),
-            u = b(i, s),
-            p = Object(c.f)(n, u);
-          return M(e, l, p);
+            })(n),
+            a = i.virtualKeyboardProps,
+            s = i.props,
+            l = s.refKeyboardHandle,
+            u = Object(r.f)(s, ["refKeyboardHandle"]),
+            p = b(a, l),
+            d = Object(c.f)(o, p);
+          return k(e, t, u, d);
         });
       }
     },
