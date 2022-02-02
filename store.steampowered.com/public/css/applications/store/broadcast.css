@@ -1,3 +1,6 @@
+:root {
+  --basicui-header-height: 0px;
+}
 .insetshadow_FriendsListInsetShadowCtn_1qeW3 {
   position: relative;
   height: 0;
@@ -20,6 +23,26 @@
   flex-shrink: 0;
   z-index: 2;
   pointer-events: none;
+}
+.insetshadow_FriendListInsetShadowTop_1osHa.GamepadMode,
+.GamepadMode .insetshadow_FriendListInsetShadowTop_1osHa {
+  height: 8px;
+  background: linear-gradient(
+    to bottom,
+    #0e141b 0%,
+    rgba(14, 20, 27, 0.5) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.GamepadMode
+  .multiChatDialog.gpfocuswithin
+  .insetshadow_FriendListInsetShadowTop_1osHa {
+  background: linear-gradient(
+    to bottom,
+    #23262e 0%,
+    rgba(35, 38, 46, 0.5) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 .insetshadow_FriendListInsetShadowBottom_2OoTJ {
   background: linear-gradient(

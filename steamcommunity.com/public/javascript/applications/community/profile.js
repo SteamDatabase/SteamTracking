@@ -9998,7 +9998,7 @@
             (e.prototype.GetWishlistedInContentHub = function (e, t, n, r) {
               var a;
               return Object(i.b)(this, void 0, void 0, function () {
-                var o, s, c, l, u, d, m, p, f, h, _;
+                var o, s, c, l, u, d, m, p, f, h, _, b, v, g;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
@@ -10054,25 +10054,30 @@
                           (null === (a = null == u ? void 0 : u.data) ||
                           void 0 === a
                             ? void 0
-                            : a.success) && (s.appids = u.data.appids),
+                            : a.success) && (s = u.data),
                         (i.label = 3);
                     case 3:
                       if (!s) return [2, []];
                       for (
-                        d = new Set(s.appids),
-                          m = w.a.Get().GetWishlistGamesInUserOrder(),
-                          p = [],
-                          f = 0,
-                          h = m;
-                        f < h.length;
-                        f++
+                        d = new Set(), m = 0, p = s.appids;
+                        m < p.length;
+                        m++
                       )
-                        (_ = h[f]),
-                          d.has(_) &&
-                            !w.a.Get().BOwnsApp(_) &&
-                            w.a.Get().BIsGameWishlisted(_) &&
-                            p.push(_);
-                      return this.m_mapMyWishlistInContentHub.set(o, p), [2, p];
+                        (f = p[m]), d.add(Number(f));
+                      for (
+                        h = w.a.Get().GetWishlistGamesInUserOrder(),
+                          _ = [],
+                          b = 0,
+                          v = h;
+                        b < v.length;
+                        b++
+                      )
+                        (g = v[b]),
+                          d.has(g) &&
+                            !w.a.Get().BOwnsApp(g) &&
+                            w.a.Get().BIsGameWishlisted(g) &&
+                            _.push(g);
+                      return this.m_mapMyWishlistInContentHub.set(o, _), [2, _];
                     case 4:
                       return i.sent(), [2, []];
                     case 5:
@@ -22722,7 +22727,8 @@
       function E(e) {
         var t,
           n = e.results,
-          r =
+          r = e.appName,
+          i =
             -1 !==
             (null === (t = n.resolved_items) || void 0 === t
               ? void 0
@@ -22733,7 +22739,10 @@
           ? a.a.createElement(
               "div",
               { className: S.a.CompatibilityDetailsContainer },
-              a.a.createElement(O, { category: n.resolved_category }),
+              a.a.createElement(O, {
+                category: n.resolved_category,
+                appName: r,
+              }),
               n.resolved_items
                 .filter(function (e) {
                   return 1 !== e.display_type;
@@ -22749,7 +22758,7 @@
                     a.a.createElement("span", null, Object(g.f)(e.loc_token))
                   );
                 }),
-              r &&
+              i &&
                 a.a.createElement(
                   "div",
                   { className: S.a.CompatabilityDetailsNoteContainer },
@@ -22762,7 +22771,7 @@
                     className: S.a.CompatibilityDetailsSeparator,
                   })
                 ),
-              r &&
+              i &&
                 n.resolved_items
                   .filter(function (e) {
                     return 1 == e.display_type;
@@ -22777,7 +22786,7 @@
                       a.a.createElement("span", null, Object(g.f)(e.loc_token))
                     );
                   }),
-              !r &&
+              !i &&
                 a.a.createElement("div", {
                   className: S.a.CompatibilityNoNotes,
                 })
@@ -22876,36 +22885,48 @@
         );
       }
       function O(e) {
-        var t = e.category;
+        var t = e.category,
+          n = e.appName;
         if (0 == t)
           return a.a.createElement(
             "div",
             { className: S.a.CompatibilityDetailRatingSummary },
-            Object(g.f)("#SteamDeckVerified_DescriptionHeader_Unknown")
+            n
+              ? Object(g.n)(
+                  "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
+                  a.a.createElement("b", null, n)
+                )
+              : Object(g.f)("#SteamDeckVerified_DescriptionHeader_Unknown")
           );
-        var n = "",
-          r = null;
+        var r = "",
+          i = null;
         switch (t) {
           case 3:
-            (n = "#SteamDeckVerified_DescriptionHeader_Verified"),
-              (r = S.a.Verified);
+            (r = "#SteamDeckVerified_DescriptionHeader_Verified"),
+              (i = S.a.Verified);
             break;
           case 2:
-            (n = "#SteamDeckVerified_DescriptionHeader_Playable"),
-              (r = S.a.Playable);
+            (r = "#SteamDeckVerified_DescriptionHeader_Playable"),
+              (i = S.a.Playable);
             break;
           case 1:
-            (n = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
-              (r = S.a.Unsupported);
+            (r = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
+              (i = S.a.Unsupported);
         }
+        var o = a.a.createElement("b", null, Object(g.f)(I(t))),
+          s = a.a.createElement("span", { className: i }, Object(g.f)(r)),
+          c = n
+            ? Object(g.n)(
+                "#SteamDeckVerified_DescriptionHeader_WithAppName",
+                a.a.createElement("b", null, n),
+                o,
+                s
+              )
+            : Object(g.n)("#SteamDeckVerified_DescriptionHeader", o, s);
         return a.a.createElement(
           "div",
           { className: S.a.CompatibilityDetailRatingSummary },
-          Object(g.n)(
-            "#SteamDeckVerified_DescriptionHeader",
-            a.a.createElement("b", null, Object(g.f)(I(t))),
-            a.a.createElement("span", { className: r }, Object(g.f)(n))
-          )
+          c
         );
       }
       function I(e) {

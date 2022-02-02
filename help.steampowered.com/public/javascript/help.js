@@ -131,6 +131,22 @@ HelpWizard = {
 		this.BindSearchInputs();
 
 		BindHelpTooltip($J('#wizard_contents [data-help-tooltip]'));
+
+		if ( g_rgDefaultWizardPageParams.gamepad )
+		{
+		    $J( '.help_wizard_button' ).each(
+		        function( index ) {
+		            if ( index === 0 )
+		            {
+		                $J( this ).attr( "data-panel","{\"autoFocus\":true}" );
+		            }
+		            else
+		            {
+		                $J( this ).attr( "data-panel","[]" );
+		            }
+		        }
+		    );
+		}
 	},
 
 	InitStaticPage: function()

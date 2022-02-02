@@ -12,7 +12,7 @@
 	--gpStoreLightestGrey: #CCD8E3;
 	--gpStoreLighterGrey: #A7BACC;
 	--gpStoreLightGrey: #7C8EA3;
-	--gpStoreGrey: #5B6D82;
+	--gpStoreGrey: #4e697d;
 	--gpStoreDarkGrey: #2A475E;
 	--gpStoreDarkerGrey: #1B2838;
 	--gpStoreDarkestGrey: #000F18;
@@ -59,6 +59,7 @@
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 32vw;
+	--gpDselectWidth: 320px;
 
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
@@ -91,8 +92,7 @@
 	html.responsive .tablet_grid {
 		display: flex;
 		flex-direction: row;
-		margin: 0px var(--gpSpace-Gutter);
-		gap: var(--gpSpace-Gutter);
+		margin: 0px 0px 0px var(--gpSpace-Gutter);
 	}
 
 	html.responsive .tablet_hidden {
@@ -103,11 +103,12 @@
 		display: block !important;
 		box-sizing: border-box;
 		right: 0;
-		padding-bottom: 20px;
-		width: var(--gpPurchaseOptionsWidth);
+		padding: var(--gpSpace-Gutter);
+		padding-top: 0px;
 		overflow-y: auto;
 		position: sticky;
 		z-index: 100;
+		flex: auto;
 
 		/* Re-defining here prevents the entire page from padding as we scroll */
 		scroll-snap-type: inline;
@@ -116,7 +117,7 @@
 	}
 
 	html.responsive .page_content_ctn {
-		width: calc(100% - var(--gpPurchaseOptionsWidth) - var(--gpSpace-Gutter));
+		width: calc(100% - var(--gpPurchaseOptionsWidth) - ( 2 * var(--gpSpace-Gutter) ));
 	}
 
 	html.responsive #responsive_apppage_details_left_ctn,
@@ -984,7 +985,7 @@
 
 	/* make the review detail header fit flush against the top border  */
 	html.responsive .review_box .rightcol {
-		padding: 1px 0px 10px 0px;
+		padding: 1px 0px 0px 0px;
 	}
 
 	/* review thumb up/down image */
@@ -1259,7 +1260,31 @@
 	}
 
 	html.responsive:not(.legacy_mobile) .carousel_container .responsive_scroll_snap_ctn {
-		padding-right: unset;
+		box-sizing: border-box;
+    	width: calc(100% + 48px);
+	}
+
+	html.responsive .carousel_container .highlight_carousel_item {
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: auto;
+		width: calc(80% - (1 * var(--gpSpace-Gutter)));
+		min-width: calc(80% - (1 * var(--gpSpace-Gutter)));
+		margin-right: var(--gpSpace-Gap);
+		display: block;
+		scroll-snap-align: center !important;
+	}
+
+	html.responsive .carousel_container .screenshot_carousel_items {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing: content-box;
+		padding-bottom: 20px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-wrap: nowrap;
 	}
 
 
@@ -1536,7 +1561,7 @@
 
 	html.responsive .game_area_purchase_game_dropdown_selection {
 		background: unset;
-		border: 1px solid #ffffff6b;
+		border: none;
 		border-radius: var(--gpCorner-Large);
 		transition: all 0.1s ease;
 		padding: 8px 8px 8px 12px;
@@ -1547,10 +1572,18 @@
 		justify-content: space-between;
         white-space: normal;
 		font: var(--gpText-BodyLarge);
+		background: var(--gpBackground-LightMedium);
 	}
 
 	html.responsive .game_area_purchase_game_dropdown_selection:hover {
-		border: 1px solid white;
+		/* border: 1px solid white; */
+		background: var(--gpBackground-LightHard);
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_selection.gpfocus {
+		border-radius: 0px;
+		background: white;
+		color: black;
 	}
 
 	html.responsive .game_area_purchase_game_dropdown br, html.responsive .game_area_purchase_game_dropdown_subscription br { /*hide inline BR*/
@@ -1593,16 +1626,25 @@
 	}
 
 	html.responsive h2 span.note a {
-		border: 1px solid #ffffff6b;
+		border: none;
 		border-radius: var(--gpCorner-Large);
 		transition: all 0.1s ease;
 		padding: 8px;
 		text-align: center;
 		font: var(--gpText-BodyLarge);
+		background: var(--gpBackground-LightMedium);
 	}
 
 	html.responsive h2 span.note a:hover {
-		border: 1px solid white;
+		background: var(--gpBackground-LightHard);
+	}
+	html.responsive h2 span.note a.gpfocus {
+		background: white;
+		color: black;
+		border-radius: 0px;
+	}
+	html.responsive h2 span.note a.gpfocus em {
+		color: black;
 	}
 
 	html.responsive .game_area_dlc_price {
@@ -1621,10 +1663,12 @@
 	}
 
 	html.responsive .game_area_dlc_row {
-		padding: 4px !important; /* overriding important */
-		border-bottom: 1px solid var(--gpBackground-LightMedium);
+		padding: 4px 8px !important; /* overriding important */
+		/* border-bottom: 1px solid var(--gpBackground-LightMedium); */
 		font: var(--gpText-BodyMedium);
 		transition: all 0.1s ease;
+		border-radius: var(--gpCorner-Medium);
+		/* background: var(--gpBackground-DarkMedium); */
 	}
 
 	html.responsive .game_area_dlc_row:hover,
@@ -2508,8 +2552,16 @@
 		margin: 0px;
 	}
 
+	html.responsive .review_box .short_header {
+		background: none;
+	}
+
 	html.responsive .review_box .review_award_ctn {
 		margin-top: 12px;
+	}
+
+	html.responsive .review_box.short .shortcol {
+		padding-left: unset;
 	}
 
 	html.responsive .review_box .review_award,
@@ -2527,7 +2579,8 @@
 	}
 
 	html.responsive .review_box .hr {
-		margin: 12px 0px;
+		/* margin: 12px 0px; */
+		display: none;
 	}
 
 	html.responsive .review_box .content {
@@ -2566,6 +2619,44 @@
 
 	html.responsive .review_box.partial .content {
 		max-height: 80px;
+	}
+
+	html.responsive .vote_button_ctn {
+		padding: 4px 0px;
+	}
+
+	html.responsive .review_box.partial .view_more {
+		margin-right: unset;
+		display: flex;
+	}
+
+	html.responsive .review_box.partial .view_more a {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+		padding: 3px 8px;
+		background: var(--gpBackground-LightSofter);
+		border-radius: var(--gpCorner-Medium);
+		text-transform: unset;
+		transition: all 0.2s ease;
+	}
+
+	html.responsive .review_box.partial .view_more a:hover,
+	html.responsive .review_box.partial .view_more a.gpfocus {
+		color: var(--gpStoreLightestGrey);
+		background: var(--gpBackground-LightHard);
+	}
+
+	html.responsive .review_box.partial .view_more a.gpfocus {
+		border-radius: 0px;
+	}
+
+
+	html.responsive .review_control_ctn {
+		/* display: none; */
+	}
+
+	html.responsive .review_box .review_content_summary:focus-within .review_control_ctn {
+		display: block;
 	}
 
 

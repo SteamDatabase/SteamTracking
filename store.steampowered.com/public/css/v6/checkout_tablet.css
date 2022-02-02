@@ -12,7 +12,7 @@
 	--gpStoreLightestGrey: #CCD8E3;
 	--gpStoreLighterGrey: #A7BACC;
 	--gpStoreLightGrey: #7C8EA3;
-	--gpStoreGrey: #5B6D82;
+	--gpStoreGrey: #4e697d;
 	--gpStoreDarkGrey: #2A475E;
 	--gpStoreDarkerGrey: #1B2838;
 	--gpStoreDarkestGrey: #000F18;
@@ -59,6 +59,7 @@
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 32vw;
+	--gpDselectWidth: 320px;
 
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
@@ -523,12 +524,13 @@
         font: var(--gpText-BodyLarge);
         margin: var(--gpSpace-Gutter) 0px 0px 0px;
         padding: 8px 12px;
-        background: var(--gpColor-Orange) !important;
-        border-radius: var(--gpCorner-Medium);
+		color: var(--gpStoreDarkestGrey);
+        background: var(--gpColor-Yellow) !important;
+        /* border-radius: var(--gpCorner-Medium); */
     }
 
     html.responsive #error_display a {
-        color: white;
+        color: var(--gpStoreDarkestGrey);
     }
 
 	html.responsive body.v6 .page_content.gift_recipient_active #error_display {
@@ -1401,6 +1403,14 @@
         padding: 0px;
     }
 
+
+
+
+
+	/* PAYPAY IFRAME */
+	iframe.paypal-checkout-sandbox-iframe {
+		border: none;
+	}
 
 
 

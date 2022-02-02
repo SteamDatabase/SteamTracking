@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7043592";
+var CLSTAMP = "7045842";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -12727,22 +12727,26 @@ var CLSTAMP = "7043592";
       var r,
         o = n("qiKp");
       !(function (e) {
-        (e[(e.VolSound = 0)] = "VolSound"),
-          (e[(e.IntoGameDetail = 1)] = "IntoGameDetail"),
-          (e[(e.OutOfGameDetail = 2)] = "OutOfGameDetail"),
-          (e[(e.PagedNavigation = 3)] = "PagedNavigation"),
-          (e[(e.ToggleOn = 4)] = "ToggleOn"),
-          (e[(e.ToggleOff = 5)] = "ToggleOff"),
-          (e[(e.SliderUp = 6)] = "SliderUp"),
-          (e[(e.SliderDown = 7)] = "SliderDown"),
-          (e[(e.ChangeTabs = 8)] = "ChangeTabs"),
-          (e[(e.DefaultOk = 9)] = "DefaultOk"),
-          (e[(e.OpenSideMenu = 10)] = "OpenSideMenu"),
-          (e[(e.CloseSideMenu = 11)] = "CloseSideMenu"),
-          (e[(e.ShowModal = 12)] = "ShowModal"),
-          (e[(e.HideModal = 13)] = "HideModal"),
-          (e[(e.BasicNav = 14)] = "BasicNav"),
-          (e[(e.FailedNav = 15)] = "FailedNav");
+        (e[(e.LaunchGame = 0)] = "LaunchGame"),
+          (e[(e.ToastMessage = 1)] = "ToastMessage"),
+          (e[(e.ToastAchievement = 2)] = "ToastAchievement"),
+          (e[(e.ToastMisc = 3)] = "ToastMisc"),
+          (e[(e.VolSound = 4)] = "VolSound"),
+          (e[(e.ShowModal = 5)] = "ShowModal"),
+          (e[(e.HideModal = 6)] = "HideModal"),
+          (e[(e.IntoGameDetail = 7)] = "IntoGameDetail"),
+          (e[(e.OutOfGameDetail = 8)] = "OutOfGameDetail"),
+          (e[(e.PagedNavigation = 9)] = "PagedNavigation"),
+          (e[(e.ToggleOn = 10)] = "ToggleOn"),
+          (e[(e.ToggleOff = 11)] = "ToggleOff"),
+          (e[(e.SliderUp = 12)] = "SliderUp"),
+          (e[(e.SliderDown = 13)] = "SliderDown"),
+          (e[(e.ChangeTabs = 14)] = "ChangeTabs"),
+          (e[(e.DefaultOk = 15)] = "DefaultOk"),
+          (e[(e.OpenSideMenu = 16)] = "OpenSideMenu"),
+          (e[(e.CloseSideMenu = 17)] = "CloseSideMenu"),
+          (e[(e.BasicNav = 18)] = "BasicNav"),
+          (e[(e.FailedNav = 19)] = "FailedNav");
       })(r || (r = {}));
       var i = new ((function () {
         function e() {

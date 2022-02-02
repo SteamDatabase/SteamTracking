@@ -1465,7 +1465,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', { 'class': 'spotlight_col responsive_scroll_snap_start', 'data-panel': '{"flow-children":"column"}' } );
+					$Col = $J('<div/>', { 'class': 'spotlight_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 
@@ -1491,7 +1491,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', {'data-panel': '{"flow-children":"column"}' } );
+					$Col = $J('<div/>', {'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 
@@ -1611,13 +1611,13 @@ GHomepage = {
 	{
 		var $elCapsuleTarget = $J('.carousel_items', $elTarget);
 		var $elThumbTarget = $J('.carousel_thumbs', $elTarget);
-		var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode(); 
+		var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
 		var strViewAllLink = "";
 
-				if ( bSupportTabletMode ) 
+				if ( bSupportTabletMode )
 		{
 			var $elAnchor = $J('a.deck_view_all_action_link', $elTarget);
-			if ( $elAnchor && $elAnchor.attr('href') !== undefined ) 
+			if ( $elAnchor && $elAnchor.attr('href') !== undefined )
 				strViewAllLink = $elAnchor.attr('href');
 		}
 

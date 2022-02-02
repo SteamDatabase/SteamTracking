@@ -3394,3 +3394,18 @@ ul.pub_rights li {
     display: inline-block;
     margin-top: 8px;
 }
+
+.toolBetaNotice {
+    background: #00BBFF;
+    color: white;
+    border-radius: 2px;
+    padding: 3px 12px;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.toolBetaNotice a {
+    color: white;
+}
