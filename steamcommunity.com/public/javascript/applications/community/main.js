@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7049534";
+var CLSTAMP = "7051714";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -3590,7 +3590,7 @@ var CLSTAMP = "7049534";
           }, n);
       }
       function u(e) {
-        e.stopPropagation();
+        return e.stopPropagation(), !1;
       }
       function p(e, t, n) {
         var o = e.onButtonDown,
@@ -3817,7 +3817,7 @@ var CLSTAMP = "7049534";
                       s =
                         ((l = r.selectionDirection),
                         "backward" === l ? -1 : "forward" === l ? 1 : 0),
-                      c = m.s(r);
+                      c = m.t(r);
                     var l;
                     if (1 === o.length || ("Enter" === o && c)) {
                       var u = "Enter" === o ? "\n" : o,
@@ -5407,7 +5407,7 @@ var CLSTAMP = "7049534";
                 t &&
                   ((this.m_DynamicCSSObserver = new MutationObserver(
                     function () {
-                      var t = s.o();
+                      var t = s.p();
                       e.m_mapPopups.forEach(function (e) {
                         s.a(e.window, t);
                       });
@@ -5505,7 +5505,7 @@ var CLSTAMP = "7049534";
               return (
                 u.document.write(h),
                 (u.document.title = i),
-                s.a(u, s.o()),
+                s.a(u, s.p()),
                 { popup: u, element: u.document.getElementById("popup_target") }
               );
             }),
@@ -8802,6 +8802,7 @@ var CLSTAMP = "7049534";
           );
         })(c),
         u = (n("Kw0F"), n("XxJJ"), n("qiKp"), n("X3Ds"), n("bDQf"));
+      n("YyVH");
       new u.a("FocusNavigation").Debug, new u.a("GamepadEvents").Debug;
       new u.a("FocusNavigation").Debug, new u.a("GamepadEvents").Debug;
       var p = (function () {
@@ -11397,7 +11398,7 @@ var CLSTAMP = "7049534";
     },
     X3Ds: function (e, t, n) {
       "use strict";
-      n.d(t, "p", function () {
+      n.d(t, "q", function () {
         return o;
       }),
         n.d(t, "e", function () {
@@ -11412,10 +11413,10 @@ var CLSTAMP = "7049534";
         n.d(t, "h", function () {
           return c;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "o", function () {
           return l;
         }),
-        n.d(t, "m", function () {
+        n.d(t, "n", function () {
           return u;
         }),
         n.d(t, "i", function () {
@@ -11427,41 +11428,44 @@ var CLSTAMP = "7049534";
         n.d(t, "b", function () {
           return h;
         }),
-        n.d(t, "t", function () {
+        n.d(t, "u", function () {
           return m;
         }),
         n.d(t, "g", function () {
           return f;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "s", function () {
           return g;
         }),
-        n.d(t, "s", function () {
+        n.d(t, "t", function () {
           return b;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "r", function () {
           return v;
         }),
-        n.d(t, "u", function () {
+        n.d(t, "v", function () {
           return _;
         }),
         n.d(t, "f", function () {
           return y;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "m", function () {
           return w;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "l", function () {
           return O;
         }),
-        n.d(t, "v", function () {
+        n.d(t, "c", function () {
           return C;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "w", function () {
           return E;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "p", function () {
           return S;
+        }),
+        n.d(t, "a", function () {
+          return D;
         });
       var r = n("mrSG");
       n("Kw0F"), n("r64O");
@@ -11616,12 +11620,31 @@ var CLSTAMP = "7049534";
         );
       }
       function w(e, t) {
+        for (var n = e.parentElement; n; ) {
+          var r;
+          if (!t || "x" == t)
+            if (
+              "scroll" == (r = window.getComputedStyle(n).overflowX) ||
+              "auto" == r
+            )
+              break;
+          if (!t || "y" == t)
+            if (
+              "scroll" == (r = window.getComputedStyle(n).overflowY) ||
+              "auto" == r
+            )
+              break;
+          n = n.parentElement;
+        }
+        return n;
+      }
+      function O(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
         }
       }
-      function O(e, t) {
+      function C(e, t) {
         if ("x" === t) {
           if (e.scrollWidth <= e.clientWidth) return !1;
         } else if (e.scrollHeight <= e.clientHeight) return !1;
@@ -11629,7 +11652,7 @@ var CLSTAMP = "7049534";
           r = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === r || "scroll" === r;
       }
-      function C(e, t) {
+      function E(e, t) {
         return Object(r.b)(this, void 0, void 0, function () {
           var n, o;
           return Object(r.e)(this, function (r) {
@@ -11647,7 +11670,7 @@ var CLSTAMP = "7049534";
           });
         });
       }
-      function E() {
+      function S() {
         return (
           (e = document),
           (t = {}),
@@ -11658,10 +11681,10 @@ var CLSTAMP = "7049534";
         );
         var e, t;
       }
-      function S(e, t) {
-        D(e.document, t, !0);
+      function D(e, t) {
+        M(e.document, t, !0);
       }
-      function D(e, t, n) {
+      function M(e, t, n) {
         for (
           var r = Object.assign({}, t),
             o = e.getElementsByTagName("head")[0],
@@ -12907,7 +12930,7 @@ var CLSTAMP = "7049534";
         n("gCFW"),
         n("SRyh");
       n("xnZ7"), n("idvb");
-      Object(m.u)(function () {
+      Object(m.v)(function () {
         return Object(r.b)(void 0, void 0, void 0, function () {
           return Object(r.e)(this, function (e) {
             switch (e.label) {
@@ -13095,7 +13118,7 @@ var CLSTAMP = "7049534";
         })(),
         s = (function (e) {
           function t(t, n, r) {
-            var o = e.call(this, i.m(t), r) || this;
+            var o = e.call(this, i.n(t), r) || this;
             return (o.m_props = {}), (o.m_object = t), (o.m_propTargets = n), o;
           }
           return (
@@ -13120,7 +13143,7 @@ var CLSTAMP = "7049534";
         })(a),
         c = (function (e) {
           function t(t, n, r) {
-            var a = e.call(this, i.m(o.findDOMNode(t)), r) || this;
+            var a = e.call(this, i.n(o.findDOMNode(t)), r) || this;
             return (
               (a.m_props = {}),
               (a.m_component = t),
@@ -13167,7 +13190,7 @@ var CLSTAMP = "7049534";
           return v;
         }),
         n.d(t, "a", function () {
-          return C;
+          return O;
         });
       var r = n("mrSG"),
         o = n("rHSA"),
@@ -13287,8 +13310,7 @@ var CLSTAMP = "7049534";
         v,
         _,
         y,
-        w = n("d1jy"),
-        O = new l.a("FocusNavigationMovement").Debug;
+        w = new l.a("FocusNavigationMovement").Debug;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -13318,7 +13340,7 @@ var CLSTAMP = "7049534";
             (e[(e.FORWARD = 1)] = "FORWARD"),
             (e[(e.BACKWARD = 2)] = "BACKWARD");
         })(y || (y = {}));
-      var C = (function () {
+      var O = (function () {
         function e(e, t, n) {
           (this.m_rgChildren = []),
             (this.m_iActiveChild = -1),
@@ -13636,20 +13658,9 @@ var CLSTAMP = "7049534";
               case "none":
                 return !1;
               case "self":
-                return (
-                  null == t ||
-                    this.m_Properties.disableNavSounds ||
-                    w.a.PlayNavSound(w.b.BasicNav),
-                  this.m_Tree.TransferFocus(e, this, Object(p.a)(t)),
-                  !0
-                );
+                return this.m_Tree.TransferFocus(e, this, Object(p.a)(t)), !0;
               case "children":
-                return (
-                  null == t ||
-                    this.m_Properties.disableNavSounds ||
-                    w.a.PlayNavSound(w.b.BasicNav),
-                  this.BChildTakeFocus(e, t)
-                );
+                return this.BChildTakeFocus(e, t);
             }
           }),
           (e.prototype.BChildTakeFocus = function (e, t) {
@@ -13687,7 +13698,7 @@ var CLSTAMP = "7049534";
                   f = a == v.MAINTAIN_X ? "x" : "y";
                 f == i.a[n] &&
                   (m = this.m_Tree.GetLastFocusedMovementRect(i.a[n])),
-                  O(
+                  w(
                     "Taking focus while preserving " +
                       v[a] +
                       " preserved: " +
@@ -13733,7 +13744,7 @@ var CLSTAMP = "7049534";
                   : document.body.getBoundingClientRect()
               );
             return (
-              O(
+              w(
                 "Focusing visible child, best child match is " +
                   (null === (t = null == n ? void 0 : n.child) || void 0 === t
                     ? void 0
@@ -13773,19 +13784,13 @@ var CLSTAMP = "7049534";
               case o.a.DIR_LEFT:
                 s && (c = s(e.detail));
             }
-            return (
-              this.m_Properties.disableNavSounds ||
-                (c
-                  ? w.a.PlayNavSound(w.b.BasicNav)
-                  : w.a.PlayNavSound(w.b.FailedNav)),
-              c
-            );
+            return c;
           }),
           (e.prototype.BTryInternalNavigation = function (e) {
             var t = this.GetLayout(),
               n = this.ComputeRelativeDirection(e, t);
             if (
-              (O(
+              (w(
                 "Handling navigation event " +
                   o.a[e] +
                   " - " +
@@ -13798,7 +13803,7 @@ var CLSTAMP = "7049534";
             )
               return !1;
             if (this.m_Properties.focusable && this.m_bFocused)
-              return O("Skipping navigation within focused element"), !1;
+              return w("Skipping navigation within focused element"), !1;
             if ((this.EnsureChildrenSorted(!0), t == b.GRID))
               return this.BPerformGridNavigation(this.m_iActiveChild, n, e);
             var r = this.m_iActiveChild;
@@ -17633,7 +17638,7 @@ var CLSTAMP = "7049534";
       }
       function R(e) {
         var t = [],
-          n = g.n(e),
+          n = g.o(e),
           r = n.getSelection(),
           o = r && r.rangeCount > 0 && r.toString().length > 0,
           a = e.target,

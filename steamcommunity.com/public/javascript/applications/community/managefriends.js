@@ -91,6 +91,7 @@
         Text: "managefriends_Text_1ehqR",
         Link: "managefriends_Link_18Sc0",
         Button: "managefriends_Button_2772E",
+        GenerateLinkButton: "managefriends_GenerateLinkButton_T52tU",
         ProfileCard: "managefriends_ProfileCard_28a_C",
         UserContainer: "managefriends_UserContainer_29w-2",
         Image: "managefriends_Image_1n4lD",
@@ -294,8 +295,9 @@
                         m.h.accountid
                       ),
                       s.a.createElement(
-                        u.d,
+                        u.r,
                         {
+                          autoFocus: !0,
                           className: f.a.Button,
                           onClick: function () {
                             return e.OnCopy(
@@ -346,7 +348,7 @@
                       Boolean(this.state.invite_token) &&
                         s.a.createElement("div", { className: f.a.Link }, t),
                       s.a.createElement(
-                        u.d,
+                        u.r,
                         {
                           className: f.a.Button,
                           onClick: function () {
@@ -359,12 +361,9 @@
                       )
                     ),
                     s.a.createElement(
-                      u.r,
+                      u.d,
                       {
-                        style: {
-                          width: "fit-content",
-                          padding: "0px 20px 0px 20px",
-                        },
+                        className: f.a.GenerateLinkButton,
                         onClick: this.OnCreateInviteLink,
                       },
                       Object(d.f)("#ManageFriends_CreateInviteLink")
