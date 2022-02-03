@@ -9839,8 +9839,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jan 31 2022
-19:47:24
+Feb  2 2022
+16:46:33
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
