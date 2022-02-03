@@ -19236,6 +19236,14 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .partnereventsalewidgeteditor_SingleLine_JPNIC {
   display: inline-block;
 }
+.eventsearch_SearchResults_1ZSuk {
+  overflow: scroll;
+  max-height: 300px;
+}
+.eventsearch_SmallText_3KfJI {
+  color: gray;
+  font-size: 10px;
+}
 .partnereventsale_SaleContainer_3BwSi {
   position: relative;
   max-width: 920px;

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7051714";
+var CLSTAMP = "7053027";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -10807,342 +10807,54 @@ var CLSTAMP = "7051714";
     TtDX: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return v;
+        return s;
       });
-      var r = n("q1tI"),
-        o = n("mrSG"),
-        i = n("2vnA");
-      n("mgoM"), n("kyHq");
-      n("2lL1");
-      var a = n("X3Ds"),
-        s = n("y+6m"),
-        c = n("+jbA"),
-        l = n.n(c),
-        u = n("sUmc"),
-        p =
-          (n("JMS6"),
+      n("q1tI");
+      var r = n("ojgN"),
+        o = n("gQFo"),
+        i =
+          (n("y+6m"),
           (function () {
             function e() {
-              this.m_nKey = null;
+              this.m_ctorContextMenu = r.a;
             }
             return (
-              Object.defineProperty(e.prototype, "key", {
-                get: function () {
-                  return (
-                    null == this.m_nKey &&
-                      ((this.m_nKey = e.s_nNextKeyValue), e.s_nNextKeyValue++),
-                    this.m_nKey
-                  );
-                },
-                enumerable: !1,
-                configurable: !0,
+              (e.prototype.CreateContextMenuInstance = function (
+                e,
+                t,
+                n,
+                r,
+                o
+              ) {
+                return new this.m_ctorContextMenu(e, t, n, r, o);
               }),
-              (e.GetBrowserInfoForPopup = function (e) {
-                return null;
+              (e.prototype.SetContextMenuConstructor = function (e) {
+                this.m_ctorContextMenu = e;
               }),
-              (e.prototype.SetTakeFocus = function (e) {
-                this.m_fnTakeFocus = e;
-              }),
-              (e.s_nNextKeyValue = 1),
-              Object(o.c)([i.C], e.prototype, "m_refContextMenu", void 0),
               e
             );
           })()),
-        d = (function (e) {
-          function t(t) {
-            var n = e.call(this) || this;
-            return (
-              (n.m_bVisible = !1),
-              (n.m_elSubmenuItem = null),
-              (n.m_timerHideSubMenu = 0),
-              (n.m_ownerWindow = t),
-              n
-            );
-          }
-          return (
-            Object(o.d)(t, e),
-            (t.prototype.RenderElements = function (e, t) {
-              0 == this.presentation &&
-              (e.options.bForcePopup || this.m_ownerWindow.innerWidth) < 400 &&
-              this.m_ownerWindow.SteamClient &&
-              this.m_ownerWindow.SteamClient.Window
-                ? (this.m_popupContextMenu = new s.a(
-                    e,
-                    t,
-                    p.GetBrowserInfoForPopup(this.m_ownerWindow)
-                  ))
-                : ((this.m_embeddedElementInstance = Object(u.b)(
-                    this.m_ownerWindow.document
-                  )),
-                  (this.m_rctElement = r.createElement(s.f, e, t)));
-            }),
-            (t.prototype.SetOnHideCallback = function (e) {
-              this.m_fnOnHideCallback = e;
-            }),
-            (t.prototype.Show = function () {
-              this.m_rctElement
-                ? this.m_embeddedElementInstance.Show(this.m_rctElement)
-                : this.m_popupContextMenu.Show(),
-                (this.m_bVisible = !0);
-            }),
-            (t.prototype.Hide = function () {
-              this.InternalHide();
-            }),
-            (t.prototype.HideIfNotInFocus = function () {
-              this.BHasFocus() ||
-                this.BIsFocusInChildHierarchy() ||
-                this.Hide();
-            }),
-            (t.prototype.InternalHide = function () {
-              this.m_bVisible &&
-                ((this.m_bVisible = !1),
-                this.InternalHideSubMenu(),
-                this.m_fnOnHideCallback && this.m_fnOnHideCallback(),
-                this.m_embeddedElementInstance
-                  ? this.m_embeddedElementInstance.Hide(300)
-                  : this.m_popupContextMenu.Close());
-            }),
-            Object.defineProperty(t.prototype, "visible", {
-              get: function () {
-                return this.m_bVisible;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            Object.defineProperty(t.prototype, "options", {
-              get: function () {
-                return this.m_options;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            Object.defineProperty(t.prototype, "presentation", {
-              get: function () {
-                return 0;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            Object.defineProperty(t.prototype, "styles", {
-              get: function () {
-                return l.a;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            Object.defineProperty(t.prototype, "owner_window", {
-              get: function () {
-                return this.m_ownerWindow;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            (t.prototype.ShowSubMenu = function (e, t) {
-              return this.m_elSubmenuItem == e
-                ? (this.CancelHideSubMenuTimer(),
-                  this.m_submenu.TakeFocus(),
-                  null)
-                : (this.InternalHideSubMenu(),
-                  (this.m_elSubmenuItem = e),
-                  (this.m_submenu = new m(this, t(), e)),
-                  this.m_submenu.Show(),
-                  this.m_submenu);
-            }),
-            (t.prototype.CancelHideSubMenuTimer = function () {
-              this.m_timerHideSubMenu > 0 &&
-                (clearTimeout(this.m_timerHideSubMenu),
-                (this.m_timerHideSubMenu = 0));
-            }),
-            (t.prototype.HideSubMenu = function () {
-              var e = this;
-              if (this.m_submenu) {
-                if (!(this.m_timerHideSubMenu > 0)) {
-                  this.m_timerHideSubMenu = window.setTimeout(function () {
-                    e.InternalHideSubMenu(), (e.m_timerHideSubMenu = 0);
-                  }, 150);
-                }
-              } else this.CancelHideSubMenuTimer();
-            }),
-            (t.prototype.HideSelf = function () {
-              this.InternalHide();
-            }),
-            (t.prototype.InternalHideSubMenu = function () {
-              this.CancelHideSubMenuTimer(),
-                this.m_submenu &&
-                  (this.BIsFocusInChildHierarchy() && this.TakeFocus(),
-                  (this.m_elSubmenuItem = null),
-                  this.m_submenu.InternalHide(),
-                  (this.m_submenu = null));
-            }),
-            (t.prototype.TakeFocus = function () {
-              this.m_popupContextMenu && this.m_popupContextMenu.Focus(),
-                this.m_fnTakeFocus && this.m_fnTakeFocus();
-            }),
-            (t.prototype.BInternalElementInParentHierarchy = function (e) {
-              return (
-                this.m_parentInstance &&
-                (this.m_parentInstance.BIsChildElement(e) ||
-                  this.m_parentInstance.BInternalElementInParentHierarchy(e))
-              );
-            }),
-            (t.prototype.BInternalElementInChildHierarchy = function (e) {
-              return (
-                this.m_submenu &&
-                (this.m_submenu.BIsChildElement(e) ||
-                  this.m_submenu.BInternalElementInChildHierarchy(e))
-              );
-            }),
-            (t.prototype.BIsChildElement = function (e) {
-              return this.m_embeddedElementInstance
-                ? this.m_embeddedElementInstance.BIsChildElement(e)
-                : a.e(this.m_popupContextMenu.root_element, e);
-            }),
-            (t.prototype.BHasFocus = function () {
-              return this.m_embeddedElementInstance
-                ? this.m_embeddedElementInstance.BIsChildElement(
-                    this.m_ownerWindow.document.activeElement
-                  )
-                : this.m_popupContextMenu.focused;
-            }),
-            (t.prototype.BIsFocusInChildHierarchy = function () {
-              return (
-                this.m_submenu &&
-                (this.m_submenu.BHasFocus() ||
-                  this.m_submenu.BIsFocusInChildHierarchy())
-              );
-            }),
-            (t.prototype.BIsElementInMenuHierarchy = function (e) {
-              return (
-                this.BInternalElementInParentHierarchy(e) ||
-                this.BInternalElementInChildHierarchy(e)
-              );
-            }),
-            (t.prototype.BIsSubMenuVisible = function () {
-              return !!this.m_submenu;
-            }),
-            (t.prototype.SetLabel = function (e) {}),
-            Object(o.c)([i.C], t.prototype, "m_bVisible", void 0),
-            t
-          );
-        })(p),
-        h = (function (e) {
-          function t(t, n, r, o, i) {
-            var a = e.call(this, n.ownerDocument.defaultView) || this;
-            p.sm_iActiveContextMenuInstance &&
-              p.sm_iActiveContextMenuInstance.Hide(),
-              (p.sm_iActiveContextMenuInstance = a),
-              (a.m_options = i || {});
-            var s = {
-              element: n,
-              clientX: r,
-              clientY: o,
-              instance: a,
-              options: a.m_options,
-              fnOnMenuItemSelected: function () {
-                a.Hide();
-              },
-            };
-            return a.RenderElements(s, t), a;
-          }
-          return (
-            Object(o.d)(t, e),
-            (t.prototype.Show = function () {
-              this.m_options.bDisableMouseOverlay ||
-                ((this.m_embeddedElementInstanceOverlay = Object(u.b)(
-                  this.m_ownerWindow.document
-                )),
-                this.m_embeddedElementInstanceOverlay.Show(
-                  r.createElement(s.e)
-                )),
-                e.prototype.Show.call(this);
-            }),
-            (t.prototype.Hide = function () {
-              this.m_embeddedElementInstanceOverlay &&
-                this.m_embeddedElementInstanceOverlay.Hide(0),
-                e.prototype.Hide.call(this);
-            }),
-            (t.prototype.BIsSubMenu = function () {
-              return !1;
-            }),
-            t
-          );
-        })(d),
-        m = (function (e) {
-          function t(t, n, r) {
-            var o = e.call(this, r.ownerDocument.defaultView) || this;
-            (o.m_parentInstance = t),
-              (o.m_options = {
-                bOverlapVertical: !0,
-                bUseWebStyles: t.options.bUseWebStyles,
-                strClassName: t.options.strClassName,
-                bFitToWindow: t.options.bFitToWindow,
-                bShiftToFitWindow: t.options.bShiftToFitWindow,
-              });
-            var i = {
-              element: r,
-              clientX: null,
-              clientY: null,
-              instance: o,
-              options: o.m_options,
-              fnOnMenuItemSelected: function () {
-                o.Hide();
-              },
-              bSubmenu: !0,
-            };
-            return o.RenderElements(i, n), o;
-          }
-          return (
-            Object(o.d)(t, e),
-            (t.prototype.Hide = function () {
-              var e = this;
-              this.m_popupContextMenu
-                ? window.setTimeout(function () {
-                    e.m_parentInstance.HideIfNotInFocus();
-                  }, 10)
-                : this.m_parentInstance.Hide();
-            }),
-            (t.prototype.BIsSubMenu = function () {
-              return !0;
-            }),
-            t
-          );
-        })(d),
-        f = n("gQFo"),
-        g = (function () {
-          function e() {
-            this.m_ctorContextMenu = h;
-          }
-          return (
-            (e.prototype.CreateContextMenuInstance = function (e, t, n, r, o) {
-              return new this.m_ctorContextMenu(e, t, n, r, o);
-            }),
-            (e.prototype.SetContextMenuConstructor = function (e) {
-              this.m_ctorContextMenu = e;
-            }),
-            e
-          );
-        })(),
-        b = Object(f.a)("ContextMenuFactory", function () {
-          return new g();
+        a = Object(o.a)("ContextMenuFactory", function () {
+          return new i();
         });
-      function v(e, t, n) {
+      function s(e, t, n) {
         var r,
           o = void 0,
           i = void 0,
-          a = t;
+          s = t;
         if (
-          (null == a ? void 0 : a.preventDefault) &&
-          (null == a ? void 0 : a.stopPropagation)
+          (null == s ? void 0 : s.preventDefault) &&
+          (null == s ? void 0 : s.stopPropagation)
         ) {
-          if (a.shiftKey) return null;
-          a.preventDefault(),
-            a.stopPropagation(),
-            (r = a.currentTarget),
-            (o = a.clientX),
-            (i = a.clientY);
+          if (s.shiftKey) return null;
+          s.preventDefault(),
+            s.stopPropagation(),
+            (r = s.currentTarget),
+            (o = s.clientX),
+            (i = s.clientY);
         } else r = t;
-        var s = b.CreateContextMenuInstance(e, r, o, i, n);
-        return s.Show(), s;
+        var c = a.CreateContextMenuInstance(e, r, o, i, n);
+        return c.Show(), c;
       }
     },
     WBba: function (e, t, n) {
@@ -13859,8 +13571,7 @@ var CLSTAMP = "7051714";
               i >= 0 && i < this.m_rgChildren.length;
               i += o
             ) {
-              if (this.m_rgChildren[i].BTakeFocus(e, r))
-                return (this.m_iActiveChild = i), !0;
+              if (this.m_rgChildren[i].BTakeFocus(e, r)) return !0;
             }
             return !1;
           }),
@@ -13907,19 +13618,31 @@ var CLSTAMP = "7051714";
                   }) && !c
               );
             }
-            var l = this.ScanChildren(this.AdvanceIndex(e, t), t, function (e) {
-              return !Object(p.b)("y", a, e.GetBoundingRect());
-            });
-            if (-1 == l) return !1;
-            var d = this.m_rgChildren[l].GetBoundingRect();
-            return !!this.BFocusClosestChildInNextAxiallyAlignedSet(
-              "x",
-              t,
-              n,
-              a,
-              l,
-              d
-            );
+            for (var l = e; -1 != l; ) {
+              var d = this.ScanChildren(
+                this.AdvanceIndex(l, t),
+                t,
+                function (e) {
+                  return !Object(p.b)("y", a, e.GetBoundingRect());
+                }
+              );
+              if (-1 != d) {
+                var h = this.m_rgChildren[d].GetBoundingRect();
+                if (
+                  this.BFocusClosestChildInNextAxiallyAlignedSet(
+                    "x",
+                    t,
+                    n,
+                    a,
+                    d,
+                    h
+                  )
+                )
+                  return !0;
+              }
+              l = d;
+            }
+            return !1;
           }),
           (e.prototype.BFocusClosestChildInNextAxiallyAlignedSet = function (
             e,
@@ -15730,6 +15453,310 @@ var CLSTAMP = "7051714";
         var t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
+    },
+    ojgN: function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return h;
+      });
+      var r = n("mrSG"),
+        o = n("2vnA"),
+        i = n("q1tI");
+      n("mgoM"), n("kyHq");
+      n("2lL1");
+      var a = n("X3Ds"),
+        s = n("y+6m"),
+        c = n("+jbA"),
+        l = n.n(c),
+        u = n("sUmc"),
+        p =
+          (n("JMS6"),
+          (function () {
+            function e() {
+              this.m_nKey = null;
+            }
+            return (
+              Object.defineProperty(e.prototype, "key", {
+                get: function () {
+                  return (
+                    null == this.m_nKey &&
+                      ((this.m_nKey = e.s_nNextKeyValue), e.s_nNextKeyValue++),
+                    this.m_nKey
+                  );
+                },
+                enumerable: !1,
+                configurable: !0,
+              }),
+              (e.GetBrowserInfoForPopup = function (e) {
+                return null;
+              }),
+              (e.prototype.SetTakeFocus = function (e) {
+                this.m_fnTakeFocus = e;
+              }),
+              (e.s_nNextKeyValue = 1),
+              Object(r.c)([o.C], e.prototype, "m_refContextMenu", void 0),
+              e
+            );
+          })()),
+        d = (function (e) {
+          function t(t) {
+            var n = e.call(this) || this;
+            return (
+              (n.m_bVisible = !1),
+              (n.m_elSubmenuItem = null),
+              (n.m_timerHideSubMenu = 0),
+              (n.m_ownerWindow = t),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.RenderElements = function (e, t) {
+              0 == this.presentation &&
+              (e.options.bForcePopup || this.m_ownerWindow.innerWidth) < 400 &&
+              this.m_ownerWindow.SteamClient &&
+              this.m_ownerWindow.SteamClient.Window
+                ? (this.m_popupContextMenu = new s.a(
+                    e,
+                    t,
+                    p.GetBrowserInfoForPopup(this.m_ownerWindow)
+                  ))
+                : ((this.m_embeddedElementInstance = Object(u.b)(
+                    this.m_ownerWindow.document
+                  )),
+                  (this.m_rctElement = i.createElement(s.f, e, t)));
+            }),
+            (t.prototype.SetOnHideCallback = function (e) {
+              this.m_fnOnHideCallback = e;
+            }),
+            (t.prototype.Show = function () {
+              this.m_rctElement
+                ? this.m_embeddedElementInstance.Show(this.m_rctElement)
+                : this.m_popupContextMenu.Show(),
+                (this.m_bVisible = !0);
+            }),
+            (t.prototype.Hide = function () {
+              this.InternalHide();
+            }),
+            (t.prototype.HideIfNotInFocus = function () {
+              this.BHasFocus() ||
+                this.BIsFocusInChildHierarchy() ||
+                this.Hide();
+            }),
+            (t.prototype.InternalHide = function () {
+              this.m_bVisible &&
+                ((this.m_bVisible = !1),
+                this.InternalHideSubMenu(),
+                this.m_fnOnHideCallback && this.m_fnOnHideCallback(),
+                this.m_embeddedElementInstance
+                  ? this.m_embeddedElementInstance.Hide(300)
+                  : this.m_popupContextMenu.Close());
+            }),
+            Object.defineProperty(t.prototype, "visible", {
+              get: function () {
+                return this.m_bVisible;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            Object.defineProperty(t.prototype, "options", {
+              get: function () {
+                return this.m_options;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            Object.defineProperty(t.prototype, "presentation", {
+              get: function () {
+                return 0;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            Object.defineProperty(t.prototype, "styles", {
+              get: function () {
+                return l.a;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            Object.defineProperty(t.prototype, "owner_window", {
+              get: function () {
+                return this.m_ownerWindow;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            (t.prototype.ShowSubMenu = function (e, t) {
+              return this.m_elSubmenuItem == e
+                ? (this.CancelHideSubMenuTimer(),
+                  this.m_submenu.TakeFocus(),
+                  null)
+                : (this.InternalHideSubMenu(),
+                  (this.m_elSubmenuItem = e),
+                  (this.m_submenu = new m(this, t(), e)),
+                  this.m_submenu.Show(),
+                  this.m_submenu);
+            }),
+            (t.prototype.CancelHideSubMenuTimer = function () {
+              this.m_timerHideSubMenu > 0 &&
+                (clearTimeout(this.m_timerHideSubMenu),
+                (this.m_timerHideSubMenu = 0));
+            }),
+            (t.prototype.HideSubMenu = function () {
+              var e = this;
+              if (this.m_submenu) {
+                if (!(this.m_timerHideSubMenu > 0)) {
+                  this.m_timerHideSubMenu = window.setTimeout(function () {
+                    e.InternalHideSubMenu(), (e.m_timerHideSubMenu = 0);
+                  }, 150);
+                }
+              } else this.CancelHideSubMenuTimer();
+            }),
+            (t.prototype.HideSelf = function () {
+              this.InternalHide();
+            }),
+            (t.prototype.InternalHideSubMenu = function () {
+              this.CancelHideSubMenuTimer(),
+                this.m_submenu &&
+                  (this.BIsFocusInChildHierarchy() && this.TakeFocus(),
+                  (this.m_elSubmenuItem = null),
+                  this.m_submenu.InternalHide(),
+                  (this.m_submenu = null));
+            }),
+            (t.prototype.TakeFocus = function () {
+              this.m_popupContextMenu && this.m_popupContextMenu.Focus(),
+                this.m_fnTakeFocus && this.m_fnTakeFocus();
+            }),
+            (t.prototype.BInternalElementInParentHierarchy = function (e) {
+              return (
+                this.m_parentInstance &&
+                (this.m_parentInstance.BIsChildElement(e) ||
+                  this.m_parentInstance.BInternalElementInParentHierarchy(e))
+              );
+            }),
+            (t.prototype.BInternalElementInChildHierarchy = function (e) {
+              return (
+                this.m_submenu &&
+                (this.m_submenu.BIsChildElement(e) ||
+                  this.m_submenu.BInternalElementInChildHierarchy(e))
+              );
+            }),
+            (t.prototype.BIsChildElement = function (e) {
+              return this.m_embeddedElementInstance
+                ? this.m_embeddedElementInstance.BIsChildElement(e)
+                : a.e(this.m_popupContextMenu.root_element, e);
+            }),
+            (t.prototype.BHasFocus = function () {
+              return this.m_embeddedElementInstance
+                ? this.m_embeddedElementInstance.BIsChildElement(
+                    this.m_ownerWindow.document.activeElement
+                  )
+                : this.m_popupContextMenu.focused;
+            }),
+            (t.prototype.BIsFocusInChildHierarchy = function () {
+              return (
+                this.m_submenu &&
+                (this.m_submenu.BHasFocus() ||
+                  this.m_submenu.BIsFocusInChildHierarchy())
+              );
+            }),
+            (t.prototype.BIsElementInMenuHierarchy = function (e) {
+              return (
+                this.BInternalElementInParentHierarchy(e) ||
+                this.BInternalElementInChildHierarchy(e)
+              );
+            }),
+            (t.prototype.BIsSubMenuVisible = function () {
+              return !!this.m_submenu;
+            }),
+            (t.prototype.SetLabel = function (e) {}),
+            Object(r.c)([o.C], t.prototype, "m_bVisible", void 0),
+            t
+          );
+        })(p),
+        h = (function (e) {
+          function t(t, n, r, o, i) {
+            var a = e.call(this, n.ownerDocument.defaultView) || this;
+            p.sm_iActiveContextMenuInstance &&
+              p.sm_iActiveContextMenuInstance.Hide(),
+              (p.sm_iActiveContextMenuInstance = a),
+              (a.m_options = i || {});
+            var s = {
+              element: n,
+              clientX: r,
+              clientY: o,
+              instance: a,
+              options: a.m_options,
+              fnOnMenuItemSelected: function () {
+                a.Hide();
+              },
+            };
+            return a.RenderElements(s, t), a;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.Show = function () {
+              this.m_options.bDisableMouseOverlay ||
+                ((this.m_embeddedElementInstanceOverlay = Object(u.b)(
+                  this.m_ownerWindow.document
+                )),
+                this.m_embeddedElementInstanceOverlay.Show(
+                  i.createElement(s.e)
+                )),
+                e.prototype.Show.call(this);
+            }),
+            (t.prototype.Hide = function () {
+              this.m_embeddedElementInstanceOverlay &&
+                this.m_embeddedElementInstanceOverlay.Hide(0),
+                e.prototype.Hide.call(this);
+            }),
+            (t.prototype.BIsSubMenu = function () {
+              return !1;
+            }),
+            t
+          );
+        })(d),
+        m = (function (e) {
+          function t(t, n, r) {
+            var o = e.call(this, r.ownerDocument.defaultView) || this;
+            (o.m_parentInstance = t),
+              (o.m_options = {
+                bOverlapVertical: !0,
+                bUseWebStyles: t.options.bUseWebStyles,
+                strClassName: t.options.strClassName,
+                bFitToWindow: t.options.bFitToWindow,
+                bShiftToFitWindow: t.options.bShiftToFitWindow,
+              });
+            var i = {
+              element: r,
+              clientX: null,
+              clientY: null,
+              instance: o,
+              options: o.m_options,
+              fnOnMenuItemSelected: function () {
+                o.Hide();
+              },
+              bSubmenu: !0,
+            };
+            return o.RenderElements(i, n), o;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.Hide = function () {
+              var e = this;
+              this.m_popupContextMenu
+                ? window.setTimeout(function () {
+                    e.m_parentInstance.HideIfNotInFocus();
+                  }, 10)
+                : this.m_parentInstance.Hide();
+            }),
+            (t.prototype.BIsSubMenu = function () {
+              return !0;
+            }),
+            t
+          );
+        })(d);
     },
     opsS: function (e, t, n) {
       "use strict";

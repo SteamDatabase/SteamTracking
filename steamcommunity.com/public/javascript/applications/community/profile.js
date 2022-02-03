@@ -12131,7 +12131,7 @@
               for (var n = new Map(), r = 0, i = e; r < i.length; r++) {
                 var a = i[r].id,
                   o = f.a.GetAppLinkInfo(a);
-                if (null == o ? void 0 : o.creator_clan_ids)
+                if (null == o ? void 0 : o.creator_clan_ids) {
                   for (var s = 0, c = o.creator_clan_ids; s < c.length; s++) {
                     var l = c[s];
                     if (t.BIsFollowingCreator(l)) {
@@ -12139,6 +12139,8 @@
                       break;
                     }
                   }
+                  n.has(a) || n.set(a, o.creator_clan_ids[0]);
+                }
               }
               return n;
             })(s, o);
@@ -63511,9 +63513,16 @@
           }),
           (e.prototype.BIsAnyLanguageEnabled = function (e) {
             var t = this;
-            return e.some(function (e) {
-              return t.m_primaryLanguage === e || t.m_secondaryLanguages.has(e);
-            });
+            return (
+              null == this.m_primaryLanguage ||
+              this.m_primaryLanguage <= -1 ||
+              30 <= this.m_primaryLanguage ||
+              e.some(function (e) {
+                return (
+                  t.m_primaryLanguage === e || t.m_secondaryLanguages.has(e)
+                );
+              })
+            );
           }),
           (e.prototype.GetRecommendedTags = function () {
             return this.m_setRecommendedTags;
