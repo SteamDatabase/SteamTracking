@@ -1822,6 +1822,9 @@ button.TextButton:focus {
   flex-shrink: 0;
   margin-left: 6px;
 }
+.DialogOnOffToggle_OptionPanel {
+  display: flex;
+}
 .DialogOnOffToggle_Option {
   text-transform: uppercase;
   width: 66px;

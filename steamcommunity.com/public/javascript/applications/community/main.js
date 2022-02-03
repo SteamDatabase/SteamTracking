@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7048850";
+var CLSTAMP = "7049534";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -6802,22 +6802,29 @@ var CLSTAMP = "7048850";
                           onClick: this.Toggle,
                         },
                         o.createElement(
-                          "div",
+                          d.a,
                           {
-                            className:
-                              "DialogOnOffToggle_Option Off" +
-                              (this.state.checked ? "" : " Active"),
+                            className: "DialogOnOffToggle_OptionPanel",
+                            onActivate: this.Toggle,
                           },
-                          Object(a.f)("#Dialog_Off")
-                        ),
-                        o.createElement(
-                          "div",
-                          {
-                            className:
-                              "DialogOnOffToggle_Option On" +
-                              (this.state.checked ? " Active" : ""),
-                          },
-                          Object(a.f)("#Dialog_On")
+                          o.createElement(
+                            "div",
+                            {
+                              className:
+                                "DialogOnOffToggle_Option Off" +
+                                (this.state.checked ? "" : " Active"),
+                            },
+                            Object(a.f)("#Dialog_Off")
+                          ),
+                          o.createElement(
+                            "div",
+                            {
+                              className:
+                                "DialogOnOffToggle_Option On" +
+                                (this.state.checked ? " Active" : ""),
+                            },
+                            Object(a.f)("#Dialog_On")
+                          )
                         )
                       )
                 )
