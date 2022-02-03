@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7003732";
+var CLSTAMP = "7049390";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -31162,10 +31162,6 @@ var CLSTAMP = "7003732";
           var o = Ot.a.Get().GetTeamNames(r.team_id_1),
             i = Ot.a.Get().GetTeamNames(r.team_id_2);
           if (!o || !i) return null;
-          h.a.IMG_URL,
-            r.team_id_1 && r.team_id_1,
-            h.a.IMG_URL,
-            r.team_id_2 && r.team_id_2;
           var l = Pe()(1e3 * (null == r ? void 0 : r.scheduled_time))
             .format("DD MMM LT")
             .toString();
