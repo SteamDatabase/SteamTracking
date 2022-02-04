@@ -12501,6 +12501,7 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV
 .appdetailsplaysection_ActionSection_2zxzS {
   flex: none;
   height: 46px;
+  margin-right: 10px;
 }
 .appdetailsplaysection_StickyHeader_39Rhe
   .appdetailsplaysection_ActionSection_2zxzS {
@@ -12901,11 +12902,15 @@ div.NarrowRightPanel
   flex-shrink: 0;
   display: flex;
   flex-flow: row;
-  margin: 0px 0px 20px 25px;
-  height: 31px;
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 6px;
+  border-radius: 4px;
 }
 div.NarrowRightPanel .appdetailsplaysection_GameStat_1kiZK {
   margin-top: 1px;
+  padding: 0px;
 }
 .appdetailsplaysection_GameStat_1kiZK .appdetailsplaysection_GameStatIcon_1tIg-,
 .appdetailsplaysection_GameStat_1kiZK
@@ -12913,6 +12918,15 @@ div.NarrowRightPanel .appdetailsplaysection_GameStat_1kiZK {
   width: 30px;
   height: 30px;
   margin: 3px;
+}
+div.NarrowRightPanel
+  .appdetailsplaysection_GameStat_1kiZK
+  .appdetailsplaysection_GameStatIcon_1tIg-,
+.appdetailsplaysection_GameStat_1kiZK
+  .appdetailsplaysection_GameStatIconForced_3bkqc {
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
 }
 div.NarrowRightPanel
   .appdetailsplaysection_GameStat_1kiZK
@@ -12956,6 +12970,28 @@ div.NarrowRightPanel
   flex: 0 0 auto;
 }
 div.NarrowRightPanel .appdetailsplaysection_MiniAchievements_UAhWi {
+  display: none;
+}
+button.DialogButton.appdetailsplaysection_ClickablePlayBarItem_1qG6x {
+  background-color: #acb2c924;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+button.DialogButton.appdetailsplaysection_ClickablePlayBarItem_1qG6x:hover {
+  background-color: rgba(205, 213, 226, 0.26);
+}
+button.DialogButton.appdetailsplaysection_ClickablePlayBarItem_1qG6x:hover
+  .SVGIcon_Settings
+  path {
+  fill: #fff;
+}
+button.DialogButton.appdetailsplaysection_ClickablePlayBarItem_1qG6x:hover
+  .SVGIcon_DoubleArrow
+  polyline {
+  stroke: #fff;
+}
+div.NarrowRightPanel .appdetailsplaysection_HideWhenNarrow_2YTg3 {
   display: none;
 }
 .appdetailsplaysection_PlayBarLabel_34lrt {

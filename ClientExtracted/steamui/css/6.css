@@ -834,6 +834,14 @@ div.ShortWindow
   color: #26b7ff;
   font-weight: 300;
 }
+.gamelistentry_Container_2-O4Z.gamelistentry_Synchronizing_1yaIZ {
+  color: #26b7ff;
+  font-weight: 300;
+}
+.gamelistentry_Container_2-O4Z.gamelistentry_CloudError_cMb2t {
+  color: #26b7ff;
+  font-weight: 300;
+}
 .gamelistentry_Container_2-O4Z.gamelistentry_Selected_1UBpA.gamelistentry_Updating_1LVQp,
 .gamelistentry_Selected_1UBpA
   .gamelistentry_Container_2-O4Z.gamelistentry_Updating_1LVQp {
@@ -884,6 +892,36 @@ div.ShortWindow
   box-sizing: border-box;
   flex-direction: row;
   padding: 2px 4px 2px 22px;
+}
+.gamelistentry_Container_2-O4Z .gamelistentry_GameListEntryContainer_1vO6B svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-right: 5px;
+  color: #f1f7ff;
+}
+.gamelistentry_Container_2-O4Z
+  .gamelistentry_GameListEntryContainer_1vO6B
+  svg
+  polyline,
+.gamelistentry_Container_2-O4Z
+  .gamelistentry_GameListEntryContainer_1vO6B
+  svg
+  path {
+  stroke: rgba(255, 255, 255, 0.4);
+}
+.gamelistentry_Container_2-O4Z
+  .gamelistentry_GameListEntryContainer_1vO6B
+  svg
+  circle {
+  stroke: rgba(255, 255, 255, 0.24);
+  fill: rgba(255, 255, 255, 0.24);
+  stroke-width: 12px;
+}
+.gamelistentry_Container_2-O4Z
+  .gamelistentry_GameListEntryContainer_1vO6B.gamelistentry_CloudError_cMb2t {
+  padding-left: 0px;
 }
 .gamelistentry_Container_2-O4Z
   .gamelistentry_GameListEntryContainer_1vO6B
@@ -953,6 +991,32 @@ div.ShortWindow
 .gamelistentry_Selected_1UBpA
   .gamelistentry_Container_2-O4Z
   .gamelistentry_Updating_1LVQp {
+  color: #74d1ff;
+  background: linear-gradient(
+    to right,
+    #4f5364 0%,
+    #444757 90%,
+    rgba(69, 73, 88, 0) 110%
+  );
+}
+.gamelistentry_Selected_1UBpA.gamelistentry_Container_2-O4Z
+  .gamelistentry_Synchronizing_1yaIZ,
+.gamelistentry_Selected_1UBpA
+  .gamelistentry_Container_2-O4Z
+  .gamelistentry_Synchronizing_1yaIZ {
+  color: #74d1ff;
+  background: linear-gradient(
+    to right,
+    #4f5364 0%,
+    #444757 90%,
+    rgba(69, 73, 88, 0) 110%
+  );
+}
+.gamelistentry_Selected_1UBpA.gamelistentry_Container_2-O4Z
+  .gamelistentry_CloudError_cMb2t,
+.gamelistentry_Selected_1UBpA
+  .gamelistentry_Container_2-O4Z
+  .gamelistentry_CloudError_cMb2t {
   color: #74d1ff;
   background: linear-gradient(
     to right,

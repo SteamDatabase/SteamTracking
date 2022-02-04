@@ -37,6 +37,7 @@ enum EDisplayStatus {
 	k_EDisplayStatusPurchase = 31;
 	k_EDisplayStatusUnavailable = 32;
 	k_EDisplayStatusNotLaunchable = 33;
+	k_EDisplayStatusCloudError = 34;
 }
 
 enum EAppCloudStatus {

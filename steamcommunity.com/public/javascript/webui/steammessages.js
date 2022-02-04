@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7053027";
+var CLSTAMP = "7056321";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -21113,14 +21113,91 @@ var CLSTAMP = "7053027";
             }),
             r
           );
+        })(l),
+        k = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var i = e.call(this) || this;
+            return (
+              r.prototype.request_id || o.a(r.M()),
+              l.initialize(i, t, 0, -1, void 0, null),
+              i
+            );
+          }
+          return (
+            Object(i.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      request_id: {
+                        n: 1,
+                        br: o.d.readUint64String,
+                        bw: o.h.writeUint64String,
+                      },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.serializeBase64String = function () {
+              var e = new n.BinaryWriter();
+              return (
+                r.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
+            (r.prototype.getClassName = function () {
+              return "CCloud_ClientLogUploadRequest_Notification";
+            }),
+            r
+          );
         })(l);
       !(function (e) {
-        (e.GetUploadServerInfo = function (e, r) {
-          return e.SendMsg("Cloud.GetUploadServerInfo#1", r, f, {
-            bConstMethod: !0,
+        (e.ClientLogUploadCheck = function (e, r) {
+          return e.SendNotification("Cloud.ClientLogUploadCheck#1", r, {
             ePrivilege: 1,
           });
         }),
+          (e.ClientLogUploadComplete = function (e, r) {
+            return e.SendNotification("Cloud.ClientLogUploadComplete#1", r, {
+              ePrivilege: 1,
+            });
+          }),
+          (e.GetUploadServerInfo = function (e, r) {
+            return e.SendMsg("Cloud.GetUploadServerInfo#1", r, f, {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            });
+          }),
           (e.BeginHTTPUpload = function (e, r) {
             return e.SendMsg("Cloud.BeginHTTPUpload#1", r, m, {
               ePrivilege: 1,
@@ -21252,10 +21329,14 @@ var CLSTAMP = "7053027";
           });
       })(u || (u = {})),
         (function (e) {
-          e.NotifyAppStateChangeHandler = {
+          (e.NotifyAppStateChangeHandler = {
             name: "CloudClient.NotifyAppStateChange#1",
             request: C,
-          };
+          }),
+            (e.ClientLogUploadRequestHandler = {
+              name: "CloudClient.ClientLogUploadRequest#1",
+              request: k,
+            });
         })(s || (s = {}));
     },
     "R/D/": function (e, r, t) {
@@ -34278,6 +34359,11 @@ var CLSTAMP = "7053027";
                         br: o.d.readBool,
                         bw: o.h.writeBool,
                       },
+                      is_steam_deck: {
+                        n: 107,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool,
+                      },
                     },
                   }),
                 r.sm_m
@@ -39480,8 +39566,8 @@ var CLSTAMP = "7053027";
                     fields: {
                       primary_language: {
                         n: 1,
-                        br: o.d.readUint32,
-                        bw: o.h.writeUint32,
+                        br: o.d.readInt32,
+                        bw: o.h.writeInt32,
                       },
                       secondary_languages: {
                         n: 2,

@@ -65393,6 +65393,11 @@
                     null,
                     i.createElement(p.a, {
                       overview: n,
+                      feature: v.c.Cloud,
+                      minimode: !0,
+                    }),
+                    i.createElement(p.a, {
+                      overview: n,
                       feature: v.c.SinglePlayer,
                       minimode: !0,
                     }),

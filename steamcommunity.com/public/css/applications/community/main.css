@@ -425,6 +425,16 @@
   width: 20px;
   height: 20px;
 }
+.shared_svg_library_SteamDeckCompatVerified_kEODD {
+  color: #59bf40;
+}
+.shared_svg_library_SteamDeckCompatPlayable_mPD42 {
+  color: #ffc82c;
+}
+.shared_svg_library_SteamDeckCompatUnsupported_2LAax,
+.shared_svg_library_SteamDeckCompatUnknown_xBqU_ {
+  color: #dcdedf;
+}
 .focusring_FocusRingRoot_3m2Fo {
   position: absolute;
   pointer-events: none;
@@ -794,6 +804,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 .dropdownlabel_DropDownLabelContainer_uujQH {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .dropdownlabel_DropDownLabelIconContainer_3H05C {
   flex-grow: 0;
@@ -811,6 +822,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .dropdownlabel_DropDownLabelTitle_3g-QH {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -826,6 +838,9 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   letter-spacing: 0px;
   color: #fff;
   color: #b8bcbf;
+}
+.gpfocus .dropdownlabel_DropDownLabelTitle_3g-QH {
+  color: #0e141b;
 }
 .dropdownlabel_DropDownLabelUpperDescription_2fl-T {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -844,6 +859,9 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   line-height: 16px;
   color: #8b929a;
 }
+.gpfocus .dropdownlabel_DropDownLabelUpperDescription_2fl-T {
+  color: #67707b;
+}
 .dropdownlabel_DropDownLabelDescription_cbinv {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -860,6 +878,9 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   font-size: 12px;
   line-height: 16px;
   color: #8b929a;
+}
+.gpfocus .dropdownlabel_DropDownLabelDescription_cbinv {
+  color: #67707b;
 }
 .pagedsettings_PagedSettingsDialog_2sssI {
   display: flex;

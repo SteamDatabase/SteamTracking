@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7053027";
+var CLSTAMP = "7056321";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -4105,7 +4105,8 @@ var CLSTAMP = "7053027";
           C = e.navEntryPreferPosition,
           S = e.scrollIntoViewWhenChildFocused,
           D = e.fnScrollIntoViewHandler,
-          M = E(
+          M = e.scrollIntoViewType,
+          k = E(
             Object(r.f)(e, [
               "autoFocus",
               "preferredFocus",
@@ -4131,12 +4132,13 @@ var CLSTAMP = "7053027";
               "navEntryPreferPosition",
               "scrollIntoViewWhenChildFocused",
               "fnScrollIntoViewHandler",
+              "scrollIntoViewType",
             ])
           ),
-          k = M.gamepadEvents,
-          x = M.actionDescriptions;
+          x = k.gamepadEvents,
+          R = k.actionDescriptions;
         return {
-          elemProps: M.props,
+          elemProps: k.props,
           navOptions: {
             autoFocus: t,
             preferredFocus: n,
@@ -4161,9 +4163,10 @@ var CLSTAMP = "7053027";
             navEntryPreferPosition: C,
             scrollIntoViewWhenChildFocused: S,
             fnScrollIntoViewHandler: D,
-            actionDescriptionMap: Object(r.a)(Object(r.a)({}, m), x),
+            scrollIntoViewType: M,
+            actionDescriptionMap: Object(r.a)(Object(r.a)({}, m), R),
           },
-          gamepadEvents: k,
+          gamepadEvents: x,
         };
       }
       function D(e) {
@@ -11809,6 +11812,14 @@ var CLSTAMP = "7053027";
         SteamDeckCompatInfo: "shared_svg_library_SteamDeckCompatInfo_3VPnv",
         SteamDeckCompatLogo: "shared_svg_library_SteamDeckCompatLogo_1dzQL",
         SteamDeckCompatIcon: "shared_svg_library_SteamDeckCompatIcon_3hAj0",
+        SteamDeckCompatVerified:
+          "shared_svg_library_SteamDeckCompatVerified_kEODD",
+        SteamDeckCompatPlayable:
+          "shared_svg_library_SteamDeckCompatPlayable_mPD42",
+        SteamDeckCompatUnsupported:
+          "shared_svg_library_SteamDeckCompatUnsupported_2LAax",
+        SteamDeckCompatUnknown:
+          "shared_svg_library_SteamDeckCompatUnknown_xBqU_",
       };
     },
     "av+R": function (e, t, n) {
@@ -11933,6 +11944,7 @@ var CLSTAMP = "7053027";
         s = n("qiKp"),
         c = [
           "ActionDescription",
+          "Backstack",
           "GroupMemberStore",
           "Chat",
           "ChatRoom",
@@ -12481,25 +12493,30 @@ var CLSTAMP = "7053027";
         o = n("qiKp");
       !(function (e) {
         (e[(e.LaunchGame = 0)] = "LaunchGame"),
-          (e[(e.ToastMessage = 1)] = "ToastMessage"),
-          (e[(e.ToastAchievement = 2)] = "ToastAchievement"),
-          (e[(e.ToastMisc = 3)] = "ToastMisc"),
-          (e[(e.VolSound = 4)] = "VolSound"),
-          (e[(e.ShowModal = 5)] = "ShowModal"),
-          (e[(e.HideModal = 6)] = "HideModal"),
-          (e[(e.IntoGameDetail = 7)] = "IntoGameDetail"),
-          (e[(e.OutOfGameDetail = 8)] = "OutOfGameDetail"),
-          (e[(e.PagedNavigation = 9)] = "PagedNavigation"),
-          (e[(e.ToggleOn = 10)] = "ToggleOn"),
-          (e[(e.ToggleOff = 11)] = "ToggleOff"),
-          (e[(e.SliderUp = 12)] = "SliderUp"),
-          (e[(e.SliderDown = 13)] = "SliderDown"),
-          (e[(e.ChangeTabs = 14)] = "ChangeTabs"),
-          (e[(e.DefaultOk = 15)] = "DefaultOk"),
-          (e[(e.OpenSideMenu = 16)] = "OpenSideMenu"),
-          (e[(e.CloseSideMenu = 17)] = "CloseSideMenu"),
-          (e[(e.BasicNav = 18)] = "BasicNav"),
-          (e[(e.FailedNav = 19)] = "FailedNav");
+          (e[(e.FriendMessage = 1)] = "FriendMessage"),
+          (e[(e.ChatMention = 2)] = "ChatMention"),
+          (e[(e.ChatMessage = 3)] = "ChatMessage"),
+          (e[(e.ToastMessage = 4)] = "ToastMessage"),
+          (e[(e.ToastAchievement = 5)] = "ToastAchievement"),
+          (e[(e.ToastMisc = 6)] = "ToastMisc"),
+          (e[(e.FriendOnline = 7)] = "FriendOnline"),
+          (e[(e.FriendInGame = 8)] = "FriendInGame"),
+          (e[(e.VolSound = 9)] = "VolSound"),
+          (e[(e.ShowModal = 10)] = "ShowModal"),
+          (e[(e.HideModal = 11)] = "HideModal"),
+          (e[(e.IntoGameDetail = 12)] = "IntoGameDetail"),
+          (e[(e.OutOfGameDetail = 13)] = "OutOfGameDetail"),
+          (e[(e.PagedNavigation = 14)] = "PagedNavigation"),
+          (e[(e.ToggleOn = 15)] = "ToggleOn"),
+          (e[(e.ToggleOff = 16)] = "ToggleOff"),
+          (e[(e.SliderUp = 17)] = "SliderUp"),
+          (e[(e.SliderDown = 18)] = "SliderDown"),
+          (e[(e.ChangeTabs = 19)] = "ChangeTabs"),
+          (e[(e.DefaultOk = 20)] = "DefaultOk"),
+          (e[(e.OpenSideMenu = 21)] = "OpenSideMenu"),
+          (e[(e.CloseSideMenu = 22)] = "CloseSideMenu"),
+          (e[(e.BasicNav = 23)] = "BasicNav"),
+          (e[(e.FailedNav = 24)] = "FailedNav");
       })(r || (r = {}));
       var i = new ((function () {
         function e() {
@@ -12510,7 +12527,8 @@ var CLSTAMP = "7053027";
             return this.m_fnCallbackOnPlaySound.Register(e);
           }),
           (e.prototype.PlayNavSound = function (e) {
-            this.m_fnCallbackOnPlaySound.Dispatch(e);
+            console.trace("SOUND:", r[e]),
+              this.m_fnCallbackOnPlaySound.Dispatch(e);
           }),
           e
         );
@@ -12901,8 +12919,11 @@ var CLSTAMP = "7053027";
         n.d(t, "c", function () {
           return v;
         }),
+        n.d(t, "d", function () {
+          return _;
+        }),
         n.d(t, "a", function () {
-          return O;
+          return C;
         });
       var r = n("mrSG"),
         o = n("rHSA"),
@@ -13022,7 +13043,8 @@ var CLSTAMP = "7053027";
         v,
         _,
         y,
-        w = new l.a("FocusNavigationMovement").Debug;
+        w,
+        O = new l.a("FocusNavigationMovement").Debug;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -13040,19 +13062,23 @@ var CLSTAMP = "7053027";
             (e[(e.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
         })(v || (v = {})),
         (function (e) {
+          (e[(e.Standard = 0)] = "Standard"),
+            (e[(e.NoTransform = 1)] = "NoTransform");
+        })(_ || (_ = {})),
+        (function (e) {
           (e[(e.LAZY = 0)] = "LAZY"),
             (e[(e.START = 1)] = "START"),
             (e[(e.CENTER = 2)] = "CENTER"),
             (e[(e.END = 3)] = "END"),
             (e[(e.NEAREST = 4)] = "NEAREST"),
             (e[(e.NONE = 5)] = "NONE");
-        })(_ || (_ = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.INVALID = 0)] = "INVALID"),
             (e[(e.FORWARD = 1)] = "FORWARD"),
             (e[(e.BACKWARD = 2)] = "BACKWARD");
-        })(y || (y = {}));
-      var O = (function () {
+        })(w || (w = {}));
+      var C = (function () {
         function e(e, t, n) {
           (this.m_rgChildren = []),
             (this.m_iActiveChild = -1),
@@ -13272,7 +13298,8 @@ var CLSTAMP = "7053027";
           (e.prototype.RegisterDOMEvents = function () {
             var e = this;
             !this.m_rgNavigationHandlers.length &&
-              (this.GetLayout() ||
+              (this.m_rgChildren.length >= 2 ||
+                this.m_Properties.layout != b.NONE ||
                 this.m_Properties.onMoveUp ||
                 this.m_Properties.onMoveRight ||
                 this.m_Properties.onMoveDown ||
@@ -13346,10 +13373,10 @@ var CLSTAMP = "7053027";
           (e.prototype.OnDOMBlur = function (e) {
             this.m_bFocused && this.m_Tree.TransferFocus(u.c.BROWSER, null);
           }),
-          (e.prototype.RequestFocus = function () {
+          (e.prototype.UpdateParentActiveChild = function () {
             this.m_Parent &&
               (this.m_Parent.SetActiveChild(this),
-              this.m_Parent.RequestFocus());
+              this.m_Parent.UpdateParentActiveChild());
           }),
           (e.prototype.GetFocusable = function () {
             var e = this.m_Properties,
@@ -13366,86 +13393,103 @@ var CLSTAMP = "7053027";
               : "none";
           }),
           (e.prototype.BTakeFocus = function (e, t) {
+            var n = this.FindFocusableNode(t);
+            return !!n && (this.m_Tree.TransferFocus(e, n, Object(p.a)(t)), !0);
+          }),
+          (e.prototype.FindFocusableNode = function (e) {
             switch (this.GetFocusable()) {
               case "none":
-                return !1;
+                return null;
               case "self":
-                return this.m_Tree.TransferFocus(e, this, Object(p.a)(t)), !0;
+                return this;
               case "children":
-                return this.BChildTakeFocus(e, t);
+                return this.FindFocusableDescendant(e);
             }
           }),
           (e.prototype.BChildTakeFocus = function (e, t) {
-            var n = Object(p.a)(t),
-              r = this.m_Properties,
-              o = r.focusableIfNoChildren;
-            if (r.childFocusDisabled) return !1;
+            var n = this.FindFocusableDescendant(t);
+            return !!n && (this.m_Tree.TransferFocus(e, n, Object(p.a)(t)), !0);
+          }),
+          (e.prototype.FindFocusableDescendant = function (e) {
+            var t = Object(p.a)(e),
+              n = this.m_Properties,
+              r = n.focusableIfNoChildren;
+            if (n.childFocusDisabled) return null;
             if (this.m_rgChildren.length) {
               this.EnsureChildrenSorted();
-              var a = this.m_Properties.navEntryPreferPosition,
-                s = this.m_iActiveChild;
-              if (s < 0 || s >= this.m_rgChildren.length) {
-                s = 0;
-                var c = this.GetLayout();
-                (c != b.ROW_REVERSE && c != b.COLUMN_REVERSE && a != v.LAST) ||
-                  (s = this.m_rgChildren.length - 1);
+              var o = this.m_Properties.navEntryPreferPosition,
+                a = this.m_iActiveChild;
+              if (a < 0 || a >= this.m_rgChildren.length) {
+                a = 0;
+                var s = this.GetLayout();
+                (s != b.ROW_REVERSE && s != b.COLUMN_REVERSE && o != v.LAST) ||
+                  (a = this.m_rgChildren.length - 1);
               }
-              if ((a != v.MAINTAIN_X && a != v.MAINTAIN_Y) || !n) {
-                if (a == v.PREFERRED_CHILD)
-                  for (var l = 0, d = this.m_rgChildren; l < d.length; l++) {
-                    var h = d[l];
+              var c = void 0;
+              if ((o != v.MAINTAIN_X && o != v.MAINTAIN_Y) || !t)
+                if (o == v.PREFERRED_CHILD)
+                  for (var l = 0, u = this.m_rgChildren; l < u.length; l++) {
+                    var d = u[l];
                     if (
-                      h.BWantsPreferredFocus() &&
-                      h.BTakeFocus(u.c.GAMEPAD, t)
+                      (c = d.BWantsPreferredFocus() && d.FindFocusableNode(e))
                     )
-                      return !0;
+                      return c;
                   }
-                else if (
-                  a == v.LAST &&
-                  this.BFocusNextChildInDirection(e, s + 1, y.BACKWARD, t)
-                )
-                  return !0;
-              } else {
-                var m,
-                  f = a == v.MAINTAIN_X ? "x" : "y";
-                f == i.a[n] &&
-                  (m = this.m_Tree.GetLastFocusedMovementRect(i.a[n])),
-                  w(
+                else
+                  o == v.LAST &&
+                    (c = this.FindNextFocusableChildInDirection(
+                      a + 1,
+                      w.BACKWARD,
+                      e
+                    ));
+              else {
+                var h,
+                  m = o == v.MAINTAIN_X ? "x" : "y";
+                m == i.a[t] &&
+                  (h = this.m_Tree.GetLastFocusedMovementRect(i.a[t])),
+                  O(
                     "Taking focus while preserving " +
-                      v[a] +
+                      v[o] +
                       " preserved: " +
-                      f +
+                      m +
                       " movement: " +
-                      n +
+                      t +
                       ", node:",
-                    m
+                    h
                   );
-                var g = this.ComputeRelativeDirection(t, b.GRID);
-                if (m) {
-                  var _ = g == y.BACKWARD ? this.m_rgChildren.length - 1 : 0;
-                  if (
-                    this.BFocusClosestChildInNextAxiallyAlignedSet(
-                      f,
-                      g,
-                      t,
-                      m,
-                      _,
-                      this.m_rgChildren[_].GetBoundingRect()
-                    )
-                  )
-                    return !0;
-                } else if (f != i.a[n]) {
-                  _ = g == y.BACKWARD ? this.m_rgChildren.length : -1;
-                  if (this.BFocusNextChildInDirection(e, _, g, t)) return !0;
+                var f = this.ComputeRelativeDirection(e, b.GRID);
+                if (h) {
+                  var g = f == w.BACKWARD ? this.m_rgChildren.length - 1 : 0;
+                  c = this.FindClosestChildInNextAxiallyAlignedSet(
+                    m,
+                    f,
+                    e,
+                    h,
+                    g,
+                    this.m_rgChildren[g].GetBoundingRect()
+                  );
+                } else if (m != i.a[t]) {
+                  g = f == w.BACKWARD ? this.m_rgChildren.length : -1;
+                  c = this.FindNextFocusableChildInDirection(g, f, e);
                 }
               }
               return (
-                !!this.BFocusNextChildInDirection(e, s - 1, y.FORWARD, t) ||
-                !!this.BFocusNextChildInDirection(e, s, y.BACKWARD, t) ||
-                (!!o && (this.m_Tree.TransferFocus(e, this, n), !0))
+                c ||
+                  (c = this.FindNextFocusableChildInDirection(
+                    a - 1,
+                    w.FORWARD,
+                    e
+                  )),
+                c ||
+                  (c = this.FindNextFocusableChildInDirection(
+                    a,
+                    w.BACKWARD,
+                    e
+                  )),
+                c || (r ? this : null)
               );
             }
-            return !1;
+            return null;
           }),
           (e.prototype.BVisibleChildTakeFocus = function (e) {
             var t,
@@ -13456,7 +13500,7 @@ var CLSTAMP = "7053027";
                   : document.body.getBoundingClientRect()
               );
             return (
-              w(
+              O(
                 "Focusing visible child, best child match is " +
                   (null === (t = null == n ? void 0 : n.child) || void 0 === t
                     ? void 0
@@ -13499,29 +13543,34 @@ var CLSTAMP = "7053027";
             return c;
           }),
           (e.prototype.BTryInternalNavigation = function (e) {
-            var t = this.GetLayout(),
-              n = this.ComputeRelativeDirection(e, t);
+            var t,
+              n = this.GetLayout(),
+              r = this.ComputeRelativeDirection(e, n);
             if (
-              (w(
+              (O(
                 "Handling navigation event " +
                   o.a[e] +
                   " - " +
-                  b[t] +
+                  b[n] +
                   " - " +
-                  y[n],
+                  w[r],
                 this.m_element
               ),
-              n == y.INVALID)
+              r == w.INVALID)
             )
               return !1;
             if (this.m_Properties.focusable && this.m_bFocused)
-              return w("Skipping navigation within focused element"), !1;
-            if ((this.EnsureChildrenSorted(!0), t == b.GRID))
-              return this.BPerformGridNavigation(this.m_iActiveChild, n, e);
-            var r = this.m_iActiveChild;
+              return O("Skipping navigation within focused element"), !1;
+            if ((this.EnsureChildrenSorted(!0), n == b.GRID))
+              t = this.FindNextFocusableChildInGrid(this.m_iActiveChild, r, e);
+            else {
+              var i = this.m_iActiveChild;
+              -1 == i && (i = r == w.FORWARD ? -1 : this.m_rgChildren.length),
+                (t = this.FindNextFocusableChildInDirection(i, r, e));
+            }
             return (
-              -1 == r && (r = n == y.FORWARD ? -1 : this.m_rgChildren.length),
-              this.BFocusNextChildInDirection(u.c.GAMEPAD, r, n, e)
+              !!t &&
+              (this.m_Tree.TransferFocus(u.c.GAMEPAD, t, Object(p.a)(e)), !0)
             );
           }),
           (e.prototype.ComputeRelativeDirection = function (e, t) {
@@ -13531,120 +13580,112 @@ var CLSTAMP = "7053027";
               case b.ROW_REVERSE:
                 switch (e) {
                   case o.a.DIR_LEFT:
-                    return n ? y.FORWARD : y.BACKWARD;
+                    return n ? w.FORWARD : w.BACKWARD;
                   case o.a.DIR_RIGHT:
-                    return n ? y.BACKWARD : y.FORWARD;
+                    return n ? w.BACKWARD : w.FORWARD;
                   default:
-                    return y.INVALID;
+                    return w.INVALID;
                 }
               case b.COLUMN:
               case b.COLUMN_REVERSE:
                 switch (e) {
                   case o.a.DIR_UP:
-                    return n ? y.FORWARD : y.BACKWARD;
+                    return n ? w.FORWARD : w.BACKWARD;
                   case o.a.DIR_DOWN:
-                    return n ? y.BACKWARD : y.FORWARD;
+                    return n ? w.BACKWARD : w.FORWARD;
                   default:
-                    return y.INVALID;
+                    return w.INVALID;
                 }
               case b.GRID:
                 switch (e) {
                   case o.a.DIR_LEFT:
                   case o.a.DIR_UP:
-                    return n ? y.FORWARD : y.BACKWARD;
+                    return n ? w.FORWARD : w.BACKWARD;
                   case o.a.DIR_RIGHT:
                   case o.a.DIR_DOWN:
-                    return n ? y.BACKWARD : y.FORWARD;
+                    return n ? w.BACKWARD : w.FORWARD;
                   default:
-                    return y.INVALID;
+                    return w.INVALID;
                 }
               default:
-                return y.INVALID;
+                return w.INVALID;
             }
           }),
           (e.prototype.AdvanceIndex = function (e, t) {
-            return e + (t == y.FORWARD ? 1 : -1);
+            return e + (t == w.FORWARD ? 1 : -1);
           }),
-          (e.prototype.BFocusNextChildInDirection = function (e, t, n, r) {
+          (e.prototype.FindNextFocusableChildInDirection = function (e, t, n) {
             for (
-              var o = n == y.FORWARD ? 1 : -1, i = t + o;
-              i >= 0 && i < this.m_rgChildren.length;
-              i += o
+              var r = t == w.FORWARD ? 1 : -1, o = e + r;
+              o >= 0 && o < this.m_rgChildren.length;
+              o += r
             ) {
-              if (this.m_rgChildren[i].BTakeFocus(e, r)) return !0;
+              var i = this.m_rgChildren[o].FindFocusableNode(n);
+              if (i) return i;
             }
-            return !1;
+            return null;
           }),
           (e.prototype.ScanChildren = function (e, t, n) {
             for (
-              var r = t == y.FORWARD ? 1 : -1, o = e;
+              var r = t == w.FORWARD ? 1 : -1, o = e;
               o >= 0 && o < this.m_rgChildren.length;
               o += r
             )
               if (n(this.m_rgChildren[o], o)) return o;
             return -1;
           }),
-          (e.prototype.BPerformGridNavigation = function (e, t, n) {
+          (e.prototype.FindNextFocusableChildInGrid = function (e, t, n) {
             var r = n == o.a.DIR_UP || n == o.a.DIR_DOWN,
               i = this.GetLastFocusElement();
             if (!i || i == this.m_element)
               return (
-                !!this.BFocusNextChildInDirection(
-                  u.c.GAMEPAD,
-                  this.m_iActiveChild,
-                  t,
-                  n
-                ) ||
-                this.BFocusNextChildInDirection(
-                  u.c.GAMEPAD,
-                  this.m_iActiveChild,
-                  t == y.FORWARD ? y.BACKWARD : y.FORWARD,
-                  n
-                )
+                Object(a.a)(!1, "No active child for grid navigation"),
+                this.FindFocusableDescendant(n)
               );
-            var a = (this.GetActiveChild() || this).GetBoundingRect();
+            var s = (this.GetActiveChild() || this).GetBoundingRect();
             if (n == o.a.DIR_UP || n == o.a.DIR_DOWN) {
-              var s = this.m_Tree.GetLastFocusedMovementRect("x");
-              s && ((a.x = s.x), (a.width = s.width));
+              var c = this.m_Tree.GetLastFocusedMovementRect("x");
+              c && ((s.x = c.x), (s.width = c.width));
             }
-            if (!r) {
-              var c = !1;
-              return (
-                -1 !=
-                  this.ScanChildren(this.AdvanceIndex(e, t), t, function (e) {
-                    return Object(p.b)("y", a, e.GetBoundingRect())
-                      ? e.BTakeFocus(u.c.GAMEPAD, n)
-                      : ((c = !0), !0);
-                  }) && !c
-              );
-            }
-            for (var l = e; -1 != l; ) {
-              var d = this.ScanChildren(
-                this.AdvanceIndex(l, t),
-                t,
-                function (e) {
-                  return !Object(p.b)("y", a, e.GetBoundingRect());
-                }
-              );
-              if (-1 != d) {
-                var h = this.m_rgChildren[d].GetBoundingRect();
-                if (
-                  this.BFocusClosestChildInNextAxiallyAlignedSet(
-                    "x",
-                    t,
-                    n,
-                    a,
-                    d,
-                    h
+            if (r)
+              for (var l = e; -1 != l; ) {
+                var u = this.ScanChildren(
+                  this.AdvanceIndex(l, t),
+                  t,
+                  function (e) {
+                    return !Object(p.b)("y", s, e.GetBoundingRect());
+                  }
+                );
+                if (-1 != u) {
+                  var d = this.m_rgChildren[u].GetBoundingRect();
+                  if (
+                    (f = this.FindClosestChildInNextAxiallyAlignedSet(
+                      "x",
+                      t,
+                      n,
+                      s,
+                      u,
+                      d
+                    ))
                   )
-                )
-                  return !0;
+                    return f;
+                }
+                l = u;
               }
-              l = d;
-            }
-            return !1;
+            else
+              for (
+                var h = t == w.FORWARD ? 1 : -1, m = this.AdvanceIndex(e, t);
+                m >= 0 && m < this.m_rgChildren.length;
+                m += h
+              ) {
+                var f,
+                  g = this.m_rgChildren[m];
+                if (!Object(p.b)("y", s, g.GetBoundingRect())) return null;
+                if ((f = g.FindFocusableNode(n))) return f;
+              }
+            return null;
           }),
-          (e.prototype.BFocusClosestChildInNextAxiallyAlignedSet = function (
+          (e.prototype.FindClosestChildInNextAxiallyAlignedSet = function (
             e,
             t,
             n,
@@ -13667,15 +13708,16 @@ var CLSTAMP = "7053027";
                 !1)
               );
             }),
-              t == y.BACKWARD && s.reverse(),
+              t == w.BACKWARD && s.reverse(),
               s.sort(function (e, t) {
                 var n = t.overlap - e.overlap;
                 return 0 != n ? n : e.dist - t.dist;
               });
-            for (var l = 0, d = s; l < d.length; l++) {
-              if (d[l].child.BTakeFocus(u.c.GAMEPAD, n)) return !0;
+            for (var l = 0, u = s; l < u.length; l++) {
+              var d = u[l].child.FindFocusableNode(n);
+              if (d) return d;
             }
-            return !1;
+            return null;
           }),
           (e.prototype.GetChildren = function () {
             return (
