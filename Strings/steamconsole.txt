@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-_
-_
 __stubs
 __TEXT
 __stub_helper
@@ -685,6 +683,7 @@ swarm_tc_upload
 swarm_shader_download
 <work_dir>
 swarm_shader_compile
+<work_dir> <threadCount>
 swarm_shader_upload
 ERROR %u!
 SUCCESS: manifest: %llu size: %llu bucketID: %llu
@@ -1299,7 +1298,6 @@ j
 0
 0
 Ic
-b
 
 =
 @
