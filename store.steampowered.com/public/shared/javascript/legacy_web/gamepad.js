@@ -2785,7 +2785,9 @@
               return Nt.ShowVirtualKeyboard();
             }),
             o.on("blur.vkbindings", function () {
-              return Nt.HideVirtualKeyboard();
+              document.hasFocus() &&
+                document.activeElement != t &&
+                Nt.HideVirtualKeyboard();
             }),
             wt(t, function () {
               o.off(".vkbindings");
