@@ -4,21 +4,21 @@ declare(strict_types=1);
 $KnownUrls = ParseUrls();
 
 // Don't care about some libraries
-$KnownUrls[ 'https://store.steampowered.com/public/javascript/applications/store/libraries.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/css/motiva_sans.css?__TIME__' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/css/ui-lightness/jquery-ui-1.7.2.custom.css?__TIME__' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/dselect.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/flot-0.8/jquery.flot.min.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/flot-0.8/jquery.flot.resize.min.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/flot-0.8/jquery.flot.selection.min.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/flot-0.8/jquery.flot.time.min.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/jquery-1.8.3.min.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/jquery-ui-1.9.2.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/tooltip.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://steamcommunity.com/public/javascript/prototype-1.7.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://steamcommunity.com/public/javascript/scriptaculous/_combined.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://steamcommunity.com/public/javascript/jquery-1.11.1.min.js?__TIME__&l=english' ] = true;
-$KnownUrls[ 'https://steamcommunity.com/public/javascript/applications/community/libraries.js?__TIME__&l=english' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/javascript/applications/store/libraries.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/css/motiva_sans.css?__TIME__&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/css/ui-lightness/jquery-ui-1.7.2.custom.css?__TIME__&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/dselect.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/flot-0.8/jquery.flot.min.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/flot-0.8/jquery.flot.resize.min.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/flot-0.8/jquery.flot.selection.min.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/flot-0.8/jquery.flot.time.min.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/jquery-1.8.3.min.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/jquery-ui-1.9.2.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://store.steampowered.com/public/shared/javascript/tooltip.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://steamcommunity.com/public/javascript/prototype-1.7.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://steamcommunity.com/public/javascript/scriptaculous/_combined.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://steamcommunity.com/public/javascript/jquery-1.11.1.min.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
+$KnownUrls[ 'https://steamcommunity.com/public/javascript/applications/community/libraries.js?__TIME__&l=english&_cdn=cloudflare' ] = true;
 
 $Urls = [];
 $Time = (string)time();
@@ -100,11 +100,11 @@ foreach( $FoundUrls as $Url )
 
 	if( str_ends_with( $Url, '.js' ) )
 	{
-		$Url .= '?__TIME__&l=english';
+		$Url .= '?__TIME__&l=english&_cdn=cloudflare';
 	}
 	if( str_ends_with( $Url, '.css' ) )
 	{
-		$Url .= '?__TIME__';
+		$Url .= '?__TIME__&_cdn=cloudflare';
 	}
 
 	if( !isset( $KnownUrls[ $Url ] )

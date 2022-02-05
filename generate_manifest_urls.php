@@ -7,24 +7,24 @@ $Manifests =
 		'Manifest' => __DIR__ . '/steamcommunity.com/public/javascript/applications/community/manifest.js',
 		'Paths' =>
 		[
-			[ 'Prepend' => 'https://steamcommunity.com/public/javascript/applications/community/', 'Append' => '.js?__TIME__&l=english' ],
-			[ 'Prepend' => 'https://steamcommunity.com/public/css/applications/community/', 'Append' => '.css?__TIME__' ],
+			[ 'Prepend' => 'https://steamcommunity.com/public/javascript/applications/community/', 'Append' => '.js?__TIME__&l=english&_cdn=cloudflare' ],
+			[ 'Prepend' => 'https://steamcommunity.com/public/css/applications/community/', 'Append' => '.css?__TIME__&_cdn=cloudflare' ],
 		],
 	],
 	[
 		'Manifest' => __DIR__ . '/store.steampowered.com/public/javascript/applications/store/manifest.js',
 		'Paths' =>
 		[
-			[ 'Prepend' => 'https://store.steampowered.com/public/javascript/applications/store/', 'Append' => '.js?__TIME__&l=english' ],
-			[ 'Prepend' => 'https://store.steampowered.com/public/css/applications/store/', 'Append' => '.css?__TIME__' ],
+			[ 'Prepend' => 'https://store.steampowered.com/public/javascript/applications/store/', 'Append' => '.js?__TIME__&l=english&_cdn=cloudflare' ],
+			[ 'Prepend' => 'https://store.steampowered.com/public/css/applications/store/', 'Append' => '.css?__TIME__&_cdn=cloudflare' ],
 		],
 	],
 	[
 		'Manifest' => __DIR__ . '/help.steampowered.com/public/javascript/applications/help/manifest.js',
 		'Paths' =>
 		[
-			[ 'Prepend' => 'https://help.steampowered.com/public/javascript/applications/help/', 'Append' => '.js?__TIME__&l=english' ],
-			[ 'Prepend' => 'https://help.steampowered.com/public/css/applications/help/', 'Append' => '.css?__TIME__' ],
+			[ 'Prepend' => 'https://help.steampowered.com/public/javascript/applications/help/', 'Append' => '.js?__TIME__&l=english&_cdn=cloudflare' ],
+			[ 'Prepend' => 'https://help.steampowered.com/public/css/applications/help/', 'Append' => '.css?__TIME__&_cdn=cloudflare' ],
 		],
 	],
 ];
