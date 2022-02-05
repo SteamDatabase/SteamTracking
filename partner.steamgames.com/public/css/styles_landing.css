@@ -1352,6 +1352,11 @@ div + #landingFooter.nonconfidential {
 	display: inline-block;
 }
 
+.CurrencySymbol
+{
+	color: gray;
+}
+
 .packagePriceForm
 {
 	width: 500px;
