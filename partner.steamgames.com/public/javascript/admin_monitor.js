@@ -420,7 +420,7 @@ function UpdateItemRows( rgResults, id )
 				$J('.item_name', elItemTarget).text(  item.name );
 				$J('.item_icon', elItemTarget).attr( 'title' , item.icon_url || "No Image");
 
-				$J('.item_icon', elItemTarget).attr( 'src-hidden' , "https://community.cloudflare.steamstatic.com/economy/image/" + item.icon_url_hash + "/128fx128f");
+				$J('.item_icon', elItemTarget).attr( 'src-hidden' , "https://community.akamai.steamstatic.com/economy/image/" + item.icon_url_hash + "/128fx128f");
 				$J('.item_notes', elItemTarget).html( "ID: " + item.itemdefid + ", Rev: " + parseInt(item.revision) + "<br>Modified: " + strDate);
 
 				if( nItemFishy > 0 )
