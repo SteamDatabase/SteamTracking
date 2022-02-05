@@ -397,7 +397,7 @@
 						' --filter-known-protos'
 					);
 				}
-				else
+				else if( str_ends_with( $File, '.js' ) )
 				{
 					file_put_contents( __DIR__ . '/.support/original_js/' . md5( $OriginalFile ) . '.js', $Data );
 					$this->DumpWebProtobufs = true;

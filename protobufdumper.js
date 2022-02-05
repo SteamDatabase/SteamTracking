@@ -116,7 +116,7 @@ function Start(knownMessages, knownServices, files) {
 		knownMessages.set('NotImplemented', CONFIG.CommonProtoFileName);
 	}
 
-	Dump(CONFIG.OutputPath, filteredProtos, filteredServices, knownMessages);
+	return Dump(CONFIG.OutputPath, filteredProtos, filteredServices, knownMessages);
 }
 
 function mergeProtos(toProtos, fromProtos) {
@@ -526,7 +526,8 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 	filteredProtos.sort((a, b) => a.name.localeCompare(b.name, 'en-US'));
 
 	let fileName = path.join(outputFullPath, CONFIG.CommonProtoFileName);
-	outputToFile(fileName, imports, filteredProtos, filteredServices);
+
+	return outputToFile(fileName, imports, filteredProtos, filteredServices);
 }
 
 function outputImports(imports, stream = process.stdout) {
@@ -575,11 +576,14 @@ function outputProtos(protos, stream = process.stdout) {
 }
 
 function outputToFile(fileName, imports, protos, services) {
-	let stream = fs.createWriteStream(fileName, { flags: 'w', encoding: 'utf8' });
+	return new Promise( resolve => {
+		let stream = fs.createWriteStream(fileName, { flags: 'w', encoding: 'utf8' });
+		stream.once('close', resolve);
 
-	outputImports(imports, stream);
-	outputProtos(protos, stream);
-	outputServices(services, stream);
+		outputImports(imports, stream);
+		outputProtos(protos, stream);
+		outputServices(services, stream);
 
-	stream.end();
+		stream.end();
+	});
 }
