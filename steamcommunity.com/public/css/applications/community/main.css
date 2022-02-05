@@ -449,7 +449,7 @@
   outline: 2px solid rgba(255, 255, 255, 0.6);
   animation: focusring_flash_15zi- 0.5s ease,
     focusring_growOutline_3vSPb 0.4s ease, focusring_fadeOutline_xL-jG 0.4s ease,
-    focusring_blinker_3mURo 1.2s ease-in-out 0.4s 60;
+    focusring_blinker_3mURo 1.2s ease-in-out 0.4s 20;
 }
 .focusring_FocusRing_1sTuv.focusring_DebugFocusRing_1cTVW {
   outline-color: #ff0;

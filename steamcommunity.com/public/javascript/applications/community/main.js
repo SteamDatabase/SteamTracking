@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7056321";
+var CLSTAMP = "7058709";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -11360,9 +11360,7 @@ var CLSTAMP = "7056321";
         }
       }
       function C(e, t) {
-        if ("x" === t) {
-          if (e.scrollWidth <= e.clientWidth) return !1;
-        } else if (e.scrollHeight <= e.clientHeight) return !1;
+        if (!("ownerDocument" in e)) return !0;
         var n = e.ownerDocument.defaultView.getComputedStyle(e),
           r = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === r || "scroll" === r;
@@ -12527,8 +12525,7 @@ var CLSTAMP = "7056321";
             return this.m_fnCallbackOnPlaySound.Register(e);
           }),
           (e.prototype.PlayNavSound = function (e) {
-            console.trace("SOUND:", r[e]),
-              this.m_fnCallbackOnPlaySound.Dispatch(e);
+            this.m_fnCallbackOnPlaySound.Dispatch(e);
           }),
           e
         );
