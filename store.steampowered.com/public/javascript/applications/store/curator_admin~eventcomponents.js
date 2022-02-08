@@ -1599,7 +1599,7 @@
     wjMc: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return G;
+        return T;
       });
       var r = n("mrSG"),
         a = n("vDqi"),
@@ -1720,7 +1720,8 @@
         A = n("qP7j"),
         D = n.n(A),
         I = n("IzPI"),
-        U = (function (e) {
+        U = n("Z1oF"),
+        G = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -1739,11 +1740,11 @@
             (t.prototype.OnCreateOrSaveFeed = function (e) {
               e.preventDefault(),
                 Object(R.d)(
-                  m.a.createElement(N, {
+                  m.a.createElement(W, {
                     strRSSUrl: this.state.strRssURL,
                     admin: this.m_Admin,
                   }),
-                  Object(C.n)(e)
+                  Object(C.o)(e)
                 );
             }),
             (t.prototype.OnRevert = function (e) {
@@ -1779,7 +1780,7 @@
                   m.a.createElement(
                     "p",
                     null,
-                    Object(E.n)(
+                    Object(E.m)(
                       "#CuratorAdmin_RSSFeed_doc_link",
                       m.a.createElement(
                         "a",
@@ -1903,9 +1904,9 @@
                         Object(E.f)("#Button_Revert")
                       )
                   ),
-                  m.a.createElement(T, { admin: n }),
+                  m.a.createElement(z, { admin: n }),
                   m.a.createElement("br", null),
-                  m.a.createElement(G, {
+                  m.a.createElement(T, {
                     strRssURL: this.state.strRssURL,
                     admin: n,
                   })
@@ -1918,8 +1919,8 @@
             (t = Object(r.c)([u.a], t))
           );
         })(m.a.Component),
-        G =
-          ((t.b = U),
+        T =
+          ((t.b = G),
           (function (e) {
             function t() {
               var t = (null !== e && e.apply(this, arguments)) || this;
@@ -1966,7 +1967,7 @@
                       : n.post.rtime_date - e.post.rtime_date;
                   })).forEach(function (r) {
                     n.push(
-                      m.a.createElement(z, {
+                      m.a.createElement(N, {
                         newsData: r,
                         admin: t,
                         key: "id: " + r.unique_id,
@@ -2182,7 +2183,7 @@
               (t = Object(r.c)([u.a], t))
             );
           })(m.a.Component)),
-        T = (function (e) {
+        z = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = {}), t;
@@ -2193,7 +2194,7 @@
               e
                 ? (this.setState({ strErrorMessage: void 0 }),
                   Object(R.d)(
-                    m.a.createElement(N, {
+                    m.a.createElement(W, {
                       strRSSUrl: this.props.admin.GetRSSUrl(),
                       admin: this.props.admin,
                       bActivatePooling: !0,
@@ -2252,7 +2253,7 @@
                               "#CuratorAdmin_RSSFeed_queued"
                             ),
                           }),
-                          Object(C.n)(e)
+                          Object(C.o)(e)
                         );
                       })
                       .catch(function (t) {
@@ -2263,7 +2264,7 @@
                             ),
                             strDescription: Object(j.a)(t),
                           }),
-                          Object(C.n)(e)
+                          Object(C.o)(e)
                         );
                       })
                       .finally(function () {
@@ -2307,7 +2308,9 @@
                           !1
                         ),
                         "  @ ",
-                        Object(E.m)(this.props.admin.GetRSSLastRtimeChecked()),
+                        Object(U.f)(this.props.admin.GetRSSLastRtimeChecked(), {
+                          bForce24HourClock: !1,
+                        }),
                         " ",
                         m.a.createElement(
                           "a",
@@ -2327,7 +2330,7 @@
             (t = Object(r.c)([u.a], t))
           );
         })(m.a.Component),
-        z = (function (e) {
+        N = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -2445,13 +2448,13 @@
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
               Object(R.d)(
-                m.a.createElement(N, {
+                m.a.createElement(W, {
                   newsData: n,
                   admin: this.props.admin,
                   strRSSUrl: r(),
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                 }),
-                Object(C.n)(e)
+                Object(C.o)(e)
               );
             }),
             (t.prototype.OnUpdateNewsEvent = function (e) {
@@ -2459,14 +2462,14 @@
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
               Object(R.d)(
-                m.a.createElement(N, {
+                m.a.createElement(W, {
                   newsData: n,
                   strRSSUrl: r(),
                   admin: this.props.admin,
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                   bUpdatePost: !0,
                 }),
-                Object(C.n)(e)
+                Object(C.o)(e)
               );
             }),
             (t.prototype.HideModalEvent = function () {
@@ -2499,7 +2502,7 @@
                     disabled: !0,
                   })
                 ),
-                Object(C.n)(e)
+                Object(C.o)(e)
               );
             }),
             (t.prototype.render = function () {
@@ -2524,7 +2527,10 @@
                 var _ =
                   r.GetVisibilityStartTimeAndDateUnixSeconds() ||
                   r.GetPostTimeAndDateUnixSeconds();
-                p = Object(E.o)(_) + " @ " + Object(E.m)(_);
+                p =
+                  Object(E.n)(_) +
+                  " @ " +
+                  Object(U.f)(_, { bForce24HourClock: !1 });
               }
               return m.a.createElement(
                 "div",
@@ -2691,7 +2697,7 @@
             (t = Object(r.c)([u.a], t))
           );
         })(m.a.Component),
-        N = (function (e) {
+        W = (function (e) {
           function t() {
             var n = (null !== e && e.apply(this, arguments)) || this;
             return (

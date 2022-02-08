@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [103],
+  [74],
   {
     ARGL: function (e, t, a) {
       e.exports = {
@@ -703,7 +703,7 @@
                         r.createElement(
                           "div",
                           { className: l.ConfirmText },
-                          Object(u.n)(
+                          Object(u.m)(
                             "#GrantAward_Confirm",
                             r.createElement(F, null, O.toLocaleString()),
                             r.createElement(
@@ -716,7 +716,7 @@
                         r.createElement(
                           "div",
                           { className: l.ConfirmText },
-                          Object(u.n)(
+                          Object(u.m)(
                             "#GrantAward_Confirm_Details",
                             r.createElement(F, null, L.toLocaleString()),
                             r.createElement(

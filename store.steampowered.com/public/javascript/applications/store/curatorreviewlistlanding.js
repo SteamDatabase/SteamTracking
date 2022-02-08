@@ -92,7 +92,7 @@
         var t = Object(n.a)();
         return o.a.createElement(
           E.a,
-          { navID: "StoreCuratorPageRoot", focusNavController: t },
+          { navID: "StoreCuratorPageRoot", NavigationManager: t },
           o.a.createElement(B, { listid: e.listid })
         );
       };
@@ -190,7 +190,7 @@
                     "flow-children": "grid",
                   },
                   p.map(function (e, t) {
-                    return o.a.createElement(U, {
+                    return o.a.createElement(j, {
                       key: "rec_" + e.recommended_app.appid,
                       item: e,
                       listDetails: n,
@@ -225,7 +225,7 @@
                   o.a.createElement(
                     i.c,
                     { href: a.vanity_url },
-                    Object(u.n)("#SteamCurator_MoreReviews", a.group_name)
+                    Object(u.m)("#SteamCurator_MoreReviews", a.group_name)
                   )
                 )
               )
@@ -282,7 +282,7 @@
           p && o.a.createElement(K, { url: p })
         );
       }
-      var U = Object(d.a)(function (e) {
+      var j = Object(d.a)(function (e) {
         var t,
           a,
           n = e.item,
@@ -325,7 +325,7 @@
             "div",
             { className: N.a.CapsuleCtn },
             O
-              ? o.a.createElement(j, {
+              ? o.a.createElement(U, {
                   strVideoID: O.strVideoID,
                   nStartSeconds: O.nStartSeconds,
                   appInfo: T,
@@ -333,7 +333,7 @@
                   bShowDemoButton: L,
                   strExtraParams: G,
                 })
-              : o.a.createElement(S.a, {
+              : o.a.createElement(S.b, {
                   imageType: "header",
                   capsule: T,
                   bShowDemoButton: L,
@@ -355,7 +355,7 @@
               o.a.createElement(
                 "div",
                 { className: N.a.ReviewDate },
-                h ? T.release : Object(u.o)(I)
+                h ? T.release : Object(u.n)(I)
               )
             ),
             Boolean(w) &&
@@ -368,7 +368,7 @@
           )
         );
       });
-      function j(e) {
+      function U(e) {
         var t = e.strVideoID,
           a = e.nStartSeconds,
           n = e.appInfo,
@@ -711,7 +711,7 @@
               var t = e.code,
                 a = e.ctrlKey,
                 n =
-                  p.p(e.target) &&
+                  p.q(e.target) &&
                   ("INPUT" === e.target.nodeName ||
                     "TEXTAREA" === e.target.nodeName);
               if (a)
@@ -882,41 +882,43 @@
     "ykc/": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return s;
+        return m;
       });
-      var n = a("q1tI"),
-        r = a.n(n),
-        o = a("av+R"),
-        i = a("yLGM"),
-        c = a("qDk6"),
-        l = (a("NxAk"), a("lkRc"));
-      function s(e) {
-        var t = e.navID,
-          a = e.children,
-          n = e.focusNavController,
-          s = r.a.useRef();
-        return !l.d.IN_GAMEPADUI ||
-          ("dev" != l.d.WEB_UNIVERSE && "beta" != l.d.WEB_UNIVERSE)
-          ? r.a.createElement(r.a.Fragment, null, a)
-          : r.a.createElement(
-              o.b,
-              { navID: t, NavigationManager: n, navTreeRef: s, secondary: !0 },
-              r.a.createElement(
-                i.a,
+      var n = a("mrSG"),
+        r = a("q1tI"),
+        o = a.n(r),
+        i = a("opsS"),
+        c = a("av+R"),
+        l = a("yLGM"),
+        s = a("qDk6"),
+        u = (a("NxAk"), a("lkRc"));
+      function m(e) {
+        var t = e.children,
+          a = e.navTreeRef,
+          r = Object(n.f)(e, ["children", "navTreeRef"]),
+          m = o.a.useRef(),
+          d = Object(i.f)(m, a);
+        return u.d.IN_GAMEPADUI
+          ? o.a.createElement(
+              c.b,
+              Object(n.a)({}, r, { navTreeRef: d, secondary: !0 }),
+              o.a.createElement(
+                l.a,
                 null,
-                r.a.createElement(
-                  c.a,
+                o.a.createElement(
+                  s.a,
                   {
                     autoFocus: !0,
                     "flow-children": "column",
                     onMoveUp: function () {
-                      return s.current.Deactivate(), !0;
+                      return m.current.Deactivate(), !0;
                     },
                   },
-                  a
+                  t
                 )
               )
-            );
+            )
+          : o.a.createElement(o.a.Fragment, null, t);
       }
     },
   },

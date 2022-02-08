@@ -2053,7 +2053,7 @@
                     null,
                     _.createElement("b", null, "Last Played:"),
                     " ",
-                    Object(ee.o)(t.rtLastPlayed),
+                    Object(ee.n)(t.rtLastPlayed),
                     " "
                   ),
                   _.createElement(

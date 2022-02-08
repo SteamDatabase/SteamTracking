@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7057800";
+var CLSTAMP = "7062365";
 /* Third-party software licenses can be found at licenses.txt */
 !(function (t) {
   function e(e) {
@@ -32,7 +32,7 @@ var CLSTAMP = "7057800";
                   "css/legacy_web/" +
                   ({ 0: "gamepad" }[t] || t) +
                   ".css?contenthash=" +
-                  { 0: "70c2f068ac63eb91fe25" }[t],
+                  { 0: "7bb5d8afc784790657f5" }[t],
                 a = i.p + o,
                 c = document.getElementsByTagName("link"),
                 u = 0;
@@ -89,7 +89,7 @@ var CLSTAMP = "7057800";
               "javascript/legacy_web/" +
               ({ 0: "gamepad" }[t] || t) +
               ".js?contenthash=" +
-              { 0: "c8f24e8049baf3fede90" }[t]
+              { 0: "be388a64098f10408e34" }[t]
             );
           })(t));
         var s = new Error();

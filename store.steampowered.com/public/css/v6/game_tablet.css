@@ -1660,20 +1660,20 @@
 	html.responsive .game_area_dlc_row.odd,
 	html.responsive .game_area_dlc_row.even {
 		background: unset;
+		background-color: var(--gpBackground-LightSofter);
+		margin: 2px 0px;
 	}
 
 	html.responsive .game_area_dlc_row {
 		padding: 4px 8px !important; /* overriding important */
-		/* border-bottom: 1px solid var(--gpBackground-LightMedium); */
 		font: var(--gpText-BodyMedium);
 		transition: all 0.1s ease;
 		border-radius: var(--gpCorner-Medium);
-		/* background: var(--gpBackground-DarkMedium); */
 	}
 
 	html.responsive .game_area_dlc_row:hover,
 	html.responsive .game_area_dlc_row.gpfocus {
-		background: var(--gpBackground-LightSoft);
+		background-color: var(--gpBackground-LightSoft);
 	}
 
 	html.responsive .discount_block_inline .discount_prices {
@@ -1716,6 +1716,26 @@
 		margin: 8px 0px;
 		background: var(--gpBackground-DarkHard);
 		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive #dlc_footer {
+		display: flex;
+		flex-direction: column-reverse;
+		margin: unset;
+		text-transform: unset;
+	}
+
+	html.responsive #dlc_footer div.dlc_footer_element {
+		padding: 4px 0px;
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLightGrey);
+	}
+
+	html.responsive .pulldown {
+		padding: 8px 12px;
+		border-radius: 2px;
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLightestGrey);
 	}
 
 
@@ -2499,6 +2519,10 @@
 
 
 	/* Customer reviews */
+	html.responsive #reviews_active_filters {
+		display: none; /* hide filters on deck until optimised */
+	}
+
 	html.responsive .review_box {
 		background: var(--gpStoreDarkestGrey);
 		padding: 16px;

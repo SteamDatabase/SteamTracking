@@ -4790,6 +4790,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		padding-top: 57.30519480519481%;
 		height: 0;
 		width: 100%;
+        overflow: hidden;
 	}
 
 	html.responsive .carousel_container.maincap {

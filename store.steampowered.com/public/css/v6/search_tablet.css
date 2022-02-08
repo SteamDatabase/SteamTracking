@@ -452,4 +452,18 @@
 
 
 
+	html.responsive .responsive_page_frame.no_header.localmenu_active .responsive_page_menu_ctn {
+		display: block;
+	}
+
+	html.responsive .responsive_page_frame.no_header .responsive_page_menu_ctn {
+		display: none;
+	}
+
+
+
+
+
+
+
 }

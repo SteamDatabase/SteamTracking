@@ -3,32 +3,386 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [3],
   {
-    byIC: function (e, t, r) {
+    "FT/q": function (e, t, n) {
       "use strict";
-      r.r(t),
-        r.d(t, "AccountPreferencesRoutes", function () {
-          return A;
+      n.d(t, "a", function () {
+        return b;
+      });
+      var r,
+        i = n("mrSG"),
+        o = n("rHSA"),
+        a = n("XxJJ"),
+        s = [
+          { index: 0, type: o.a.OK, category: "action" },
+          { index: 1, type: o.a.CANCEL, category: "action" },
+          { index: 2, type: o.a.SECONDARY, category: "action" },
+          { index: 3, type: o.a.OPTIONS, category: "action" },
+          { index: 4, type: o.a.BUMPER_LEFT, category: "action" },
+          { index: 5, type: o.a.BUMPER_RIGHT, category: "action" },
+          { index: 6, type: o.a.TRIGGER_LEFT, category: "action" },
+          { index: 7, type: o.a.TRIGGER_RIGHT, category: "action" },
+          { index: 8, type: o.a.SELECT, category: "action" },
+          { index: 9, type: o.a.START, category: "action" },
+          { index: 10, type: o.a.LSTICK_CLICK, category: "action" },
+          { index: 11, type: o.a.RSTICK_CLICK, category: "action" },
+          { index: 12, type: o.a.DIR_UP, category: "navigation" },
+          { index: 13, type: o.a.DIR_DOWN, category: "navigation" },
+          { index: 14, type: o.a.DIR_LEFT, category: "navigation" },
+          { index: 15, type: o.a.DIR_RIGHT, category: "navigation" },
+          { index: 16, type: o.a.STEAM_GUIDE, category: "action" },
+          { index: 17, type: o.a.SELECT, category: "action" },
+        ],
+        c = (function (e) {
+          function t() {
+            var t = e.call(this) || this;
+            return (
+              (t.m_rgGamepadStatus = []),
+              t.SetSourceType(o.b.GAMEPAD),
+              window.addEventListener("gamepadconnected", function (e) {
+                t.m_bGamepadDetected ||
+                  (t.OnGamepadDetected(), t.PollGamepads());
+              }),
+              t
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.prototype.PollGamepads = function () {
+              for (
+                var e = navigator.getGamepads(), t = !1, n = 0;
+                n < e.length;
+                n++
+              ) {
+                var r = e[n];
+                if (r) {
+                  this.m_rgGamepadStatus[n] ||
+                    (this.m_rgGamepadStatus[n] = { buttons: [] });
+                  for (
+                    var i = this.m_rgGamepadStatus[n], o = 0;
+                    o < s.length;
+                    o++
+                  ) {
+                    var a = s[o],
+                      c = a.index;
+                    r.buttons[c] &&
+                      (r.buttons[c].pressed
+                        ? ((t = !0),
+                          i.buttons[c] ||
+                            ((i.buttons[c] = !0), this.OnButtonDown(a.type)))
+                        : i.buttons[c] &&
+                          (this.OnButtonUp(a.type), (i.buttons[c] = !1)));
+                  }
+                }
+              }
+              document.hasFocus() || t
+                ? requestAnimationFrame(this.PollGamepads)
+                : (console.log("Lost focus - suspending gamepad polling"),
+                  window.addEventListener(
+                    "focusin",
+                    this.OnWindowRegainedFocus
+                  ));
+            }),
+            (t.prototype.OnWindowRegainedFocus = function () {
+              window.removeEventListener("focusin", this.OnWindowRegainedFocus),
+                this.PollGamepads();
+            }),
+            Object(i.c)([a.a], t.prototype, "PollGamepads", null),
+            Object(i.c)([a.a], t.prototype, "OnWindowRegainedFocus", null),
+            t
+          );
+        })(o.c),
+        l = n("kyHq"),
+        u = {
+          A: o.a.OK,
+          B: o.a.CANCEL,
+          X: o.a.SECONDARY,
+          Y: o.a.OPTIONS,
+          SELECT: o.a.SELECT,
+          START: o.a.START,
+          LSHOULDER: o.a.BUMPER_LEFT,
+          RSHOULDER: o.a.BUMPER_RIGHT,
+          LTRIGGER: o.a.TRIGGER_LEFT,
+          RTRIGGER: o.a.TRIGGER_RIGHT,
+          LEFTSTICK_UP: o.a.DIR_UP,
+          LEFTSTICK_RIGHT: o.a.DIR_RIGHT,
+          LEFTSTICK_DOWN: o.a.DIR_DOWN,
+          LEFTSTICK_LEFT: o.a.DIR_LEFT,
+          LEFTSTICK_CLICK: o.a.LSTICK_CLICK,
+          RIGHTSTICK_CLICK: o.a.RSTICK_CLICK,
+          LeftStick: o.a.LSTICK_TOUCH,
+          RightStick: o.a.RSTICK_TOUCH,
+          LeftTrackpad: o.a.LPAD_TOUCH,
+          LeftTrackpadClick: o.a.LPAD_CLICK,
+          RightTrackpad: o.a.RPAD_TOUCH,
+          RightTrackpadClick: o.a.RPAD_CLICK,
+          RearLeftUpper: o.a.REAR_LEFT_UPPER,
+          RearLeftLower: o.a.REAR_LEFT_LOWER,
+          RearRightUpper: o.a.REAR_RIGHT_UPPER,
+          RearRightLower: o.a.REAR_RIGHT_LOWER,
+        },
+        f =
+          (((r = {})[l.h.SystemKey0] = o.a.STEAM_GUIDE),
+          (r[l.h.SystemKey1] = o.a.STEAM_QUICK_MENU),
+          r),
+        _ = (function (e) {
+          function t() {
+            var t = e.call(this) || this;
+            return (
+              (t.m_rgControllers = new Map()),
+              "undefined" != typeof SteamClient &&
+                ((t.m_hUnregisterControllerInput = SteamClient.Input.RegisterForControllerInputMessages(
+                  t.HandleControllerInputMessages
+                )),
+                SteamClient.System.UI.RegisterForSystemKeyEvents(
+                  t.HandleSystemKeyEvents
+                )),
+              t.SetSourceType(o.b.GAMEPAD),
+              t
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.prototype.HandleSystemKeyEvents = function (e) {
+              var t = f[e.eKey];
+              t && this.OnSystemButtonPress(t, e.nControllerIndex);
+            }),
+            (t.prototype.OnSystemButtonPress = function (e, t) {
+              this.OnButtonDown(e, t), this.OnButtonUp(e, t);
+            }),
+            (t.prototype.GetController = function (e) {
+              var t = this.m_rgControllers.get(e);
+              return (
+                t ||
+                  ((t = { activeButtons: {} }), this.m_rgControllers.set(e, t)),
+                t
+              );
+            }),
+            (t.prototype.HandleControllerInputMessages = function (e) {
+              for (var t = 0, n = e; t < n.length; t++) {
+                var r = n[t],
+                  i = u[r.strActionName];
+                if (null != i) {
+                  var o = this.GetController(r.nController);
+                  r.bState && !o.activeButtons[i]
+                    ? ((o.activeButtons[i] = !0),
+                      this.OnButtonDown(i, r.nController))
+                    : !r.bState &&
+                      o.activeButtons[i] &&
+                      ((o.activeButtons[i] = !1),
+                      this.OnButtonUp(i, r.nController));
+                }
+              }
+            }),
+            Object(i.c)([a.a], t.prototype, "HandleSystemKeyEvents", null),
+            Object(i.c)(
+              [a.a],
+              t.prototype,
+              "HandleControllerInputMessages",
+              null
+            ),
+            t
+          );
+        })(o.c),
+        m = n("X3Ds"),
+        p = (function (e) {
+          function t(t) {
+            var n = e.call(this) || this;
+            return (
+              (n.m_lastButtonDown = o.a.INVALID),
+              n.SetSourceType(o.b.KEYBOARD),
+              t.addEventListener("keydown", n.OnKeyDown),
+              t.addEventListener("keyup", n.OnKeyUp),
+              t.addEventListener("blur", n.Reset),
+              n
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.prototype.OnKeyDown = function (e) {
+              var t = this.TranslateKey(e);
+              t != o.a.INVALID &&
+                t != this.m_lastButtonDown &&
+                (this.Reset(),
+                this.OnButtonDown(t),
+                (this.m_lastButtonDown = t),
+                e.preventDefault());
+            }),
+            (t.prototype.OnKeyUp = function (e) {
+              var t = this.TranslateKey(e);
+              t != o.a.INVALID &&
+                (this.OnButtonUp(t),
+                (this.m_lastButtonDown = o.a.INVALID),
+                e.preventDefault());
+            }),
+            (t.prototype.Reset = function () {
+              this.m_lastButtonDown != o.a.INVALID &&
+                (this.OnButtonUp(this.m_lastButtonDown),
+                (this.m_lastButtonDown = o.a.INVALID));
+            }),
+            (t.prototype.TranslateKey = function (e) {
+              var t = e.code,
+                n = e.ctrlKey,
+                r =
+                  m.q(e.target) &&
+                  ("INPUT" === e.target.nodeName ||
+                    "TEXTAREA" === e.target.nodeName);
+              if (n)
+                switch (t) {
+                  case "Digit1":
+                    return o.a.STEAM_GUIDE;
+                  case "Digit2":
+                    return o.a.STEAM_QUICK_MENU;
+                  case "Digit3":
+                    return o.a.SELECT;
+                  case "Digit4":
+                    return o.a.BUMPER_LEFT;
+                  case "Digit5":
+                    return o.a.BUMPER_RIGHT;
+                  case "Digit6":
+                    return o.a.LSTICK_CLICK;
+                  case "Digit7":
+                    return o.a.RSTICK_CLICK;
+                  case "Digit8":
+                    return o.a.OPTIONS;
+                  case "Digit9":
+                    return o.a.SELECT;
+                  case "Digit0":
+                    return o.a.START;
+                }
+              switch (t) {
+                case "Escape":
+                  return o.a.CANCEL;
+                case "Enter":
+                  return r ? o.a.INVALID : o.a.OK;
+                case "Backspace":
+                  return r ? o.a.INVALID : o.a.SECONDARY;
+                case "ArrowUp":
+                  return o.a.DIR_UP;
+                case "ArrowDown":
+                  return o.a.DIR_DOWN;
+                case "ArrowLeft":
+                  return o.a.DIR_LEFT;
+                case "ArrowRight":
+                  return o.a.DIR_RIGHT;
+              }
+              return o.a.INVALID;
+            }),
+            Object(i.c)([a.a], t.prototype, "OnKeyDown", null),
+            Object(i.c)([a.a], t.prototype, "OnKeyUp", null),
+            Object(i.c)([a.a], t.prototype, "Reset", null),
+            t
+          );
+        })(o.c),
+        y = (function (e) {
+          function t(t) {
+            var n = e.call(this) || this;
+            return (
+              (n.m_nAccumulatedMouseMovement = 0),
+              (n.m_bFirstMouseUpdate = !0),
+              n.SetSourceType(o.b.MOUSE),
+              t.addEventListener("mousedown", n.OnMouseDown),
+              t.addEventListener("mousemove", n.OnMouseMove),
+              t.addEventListener("blur", n.Reset),
+              n
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.prototype.OnMouseDown = function (e) {
+              e.defaultPrevented || this.OnNavigationTypeChanged(o.b.MOUSE);
+            }),
+            (t.prototype.OnMouseMove = function (e) {
+              if (!e.defaultPrevented) {
+                if (this.m_bFirstMouseUpdate)
+                  return (
+                    (this.m_nLastScreenX = e.screenX),
+                    (this.m_nLastScreenY = e.screenY),
+                    void (this.m_bFirstMouseUpdate = !1)
+                  );
+                (this.m_nAccumulatedMouseMovement +=
+                  Math.abs(e.screenX - this.m_nLastScreenX) +
+                  Math.abs(e.screenY - this.m_nLastScreenY)),
+                  this.m_nAccumulatedMouseMovement > 500 &&
+                    (this.Reset(), this.OnNavigationTypeChanged(o.b.MOUSE));
+              }
+            }),
+            (t.prototype.Reset = function () {
+              (this.m_nAccumulatedMouseMovement = 0),
+                (this.m_bFirstMouseUpdate = !0);
+            }),
+            Object(i.c)([a.a], t.prototype, "OnMouseDown", null),
+            Object(i.c)([a.a], t.prototype, "OnMouseMove", null),
+            Object(i.c)([a.a], t.prototype, "Reset", null),
+            t
+          );
+        })(o.c),
+        d = n("NxAk"),
+        g = n("lkRc"),
+        h = (function () {
+          function e() {
+            (this.m_GamepadNavigationController = new d.c()),
+              g.d.IN_GAMEPADUI &&
+                (this.m_GamepadNavigationController.RegisterInputSource(
+                  new _()
+                ),
+                this.m_GamepadNavigationController.RegisterInputSource(
+                  new c()
+                )),
+              "dev" == g.d.WEB_UNIVERSE &&
+                (this.m_GamepadNavigationController.RegisterInputSource(
+                  new p(window)
+                ),
+                this.m_GamepadNavigationController.RegisterInputSource(
+                  new y(window)
+                ));
+          }
+          return (
+            (e.prototype.GetNavigationController = function () {
+              return this.m_GamepadNavigationController;
+            }),
+            (e.Get = function () {
+              return (
+                e.s_Singleton ||
+                  ((e.s_Singleton = new e()),
+                  "dev" == g.d.WEB_UNIVERSE &&
+                    (window.g_StoreWebNavStore = e.s_Singleton)),
+                e.s_Singleton
+              );
+            }),
+            e
+          );
+        })();
+      function b() {
+        var e = window.legacyWebFocusNavController;
+        return e || h.Get().GetNavigationController();
+      }
+    },
+    byIC: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, "AccountPreferencesRoutes", function () {
+          return L;
         });
-      var n = r("q1tI"),
-        i = r.n(n),
-        o = r("EC67"),
-        a = r("mrSG"),
-        s = r("vDqi"),
-        c = r.n(s),
-        l = r("2vnA"),
-        u = (r("mgoM"), r("OS6B"), r("lkRc")),
-        f = r("hRO2"),
-        _ = r("OS8t"),
+      var r = n("q1tI"),
+        i = n.n(r),
+        o = n("EC67"),
+        a = n("mrSG"),
+        s = n("vDqi"),
+        c = n.n(s),
+        l = n("2vnA"),
+        u = (n("mgoM"), n("OS6B"), n("lkRc")),
+        f = n("hRO2"),
+        _ = n("OS8t"),
         m = f.Message;
       var p,
         y = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
+          function t(n) {
+            void 0 === n && (n = null);
+            var r = e.call(this) || this;
             return (
               t.prototype.version || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
+              m.initialize(r, n, 0, -1, void 0, null),
+              r
             );
           }
           return (
@@ -46,9 +400,9 @@
                         bw: _.h.writeEnum,
                       },
                       content_customization: { n: 3, c: d },
-                      valve_analytics: { n: 4, c: b },
+                      valve_analytics: { n: 4, c: g },
                       third_party_analytics: { n: 5, c: h },
-                      third_party_content: { n: 6, c: g },
+                      third_party_content: { n: 6, c: b },
                       utm_enabled: {
                         n: 7,
                         d: !0,
@@ -66,26 +420,26 @@
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
+            (t.toObject = function (e, n) {
+              return _.g(t.M(), e, n);
             }),
             (t.fromObject = function (e) {
               return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
+              var n = new f.BinaryReader(e),
+                r = new t();
+              return t.deserializeBinaryFromReader(r, n);
             }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
+            (t.deserializeBinaryFromReader = function (e, n) {
+              return _.b(t.MBF(), e, n);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
+            (t.serializeBinaryToWriter = function (e, n) {
+              _.f(t.M(), e, n);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new f.BinaryWriter();
@@ -100,13 +454,13 @@
           );
         })(m),
         d = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
+          function t(n) {
+            void 0 === n && (n = null);
+            var r = e.call(this) || this;
             return (
               t.prototype.recentapps || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
+              m.initialize(r, n, 0, -1, void 0, null),
+              r
             );
           }
           return (
@@ -129,26 +483,26 @@
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
+            (t.toObject = function (e, n) {
+              return _.g(t.M(), e, n);
             }),
             (t.fromObject = function (e) {
               return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
+              var n = new f.BinaryReader(e),
+                r = new t();
+              return t.deserializeBinaryFromReader(r, n);
             }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
+            (t.deserializeBinaryFromReader = function (e, n) {
+              return _.b(t.MBF(), e, n);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
+            (t.serializeBinaryToWriter = function (e, n) {
+              _.f(t.M(), e, n);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new f.BinaryWriter();
@@ -162,14 +516,14 @@
             t
           );
         })(m),
-        b = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
+        g = (function (e) {
+          function t(n) {
+            void 0 === n && (n = null);
+            var r = e.call(this) || this;
             return (
               t.prototype.product_impressions_tracking || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
+              m.initialize(r, n, 0, -1, void 0, null),
+              r
             );
           }
           return (
@@ -196,26 +550,26 @@
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
+            (t.toObject = function (e, n) {
+              return _.g(t.M(), e, n);
             }),
             (t.fromObject = function (e) {
               return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
+              var n = new f.BinaryReader(e),
+                r = new t();
+              return t.deserializeBinaryFromReader(r, n);
             }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
+            (t.deserializeBinaryFromReader = function (e, n) {
+              return _.b(t.MBF(), e, n);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
+            (t.serializeBinaryToWriter = function (e, n) {
+              _.f(t.M(), e, n);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new f.BinaryWriter();
@@ -230,13 +584,13 @@
           );
         })(m),
         h = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
+          function t(n) {
+            void 0 === n && (n = null);
+            var r = e.call(this) || this;
             return (
               t.prototype.google_analytics || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
+              m.initialize(r, n, 0, -1, void 0, null),
+              r
             );
           }
           return (
@@ -263,26 +617,26 @@
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
+            (t.toObject = function (e, n) {
+              return _.g(t.M(), e, n);
             }),
             (t.fromObject = function (e) {
               return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
+              var n = new f.BinaryReader(e),
+                r = new t();
+              return t.deserializeBinaryFromReader(r, n);
             }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
+            (t.deserializeBinaryFromReader = function (e, n) {
+              return _.b(t.MBF(), e, n);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
+            (t.serializeBinaryToWriter = function (e, n) {
+              _.f(t.M(), e, n);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new f.BinaryWriter();
@@ -296,14 +650,14 @@
             t
           );
         })(m),
-        g = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
+        b = (function (e) {
+          function t(n) {
+            void 0 === n && (n = null);
+            var r = e.call(this) || this;
             return (
               t.prototype.youtube || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
+              m.initialize(r, n, 0, -1, void 0, null),
+              r
             );
           }
           return (
@@ -329,26 +683,26 @@
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
+            (t.toObject = function (e, n) {
+              return _.g(t.M(), e, n);
             }),
             (t.fromObject = function (e) {
               return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
+              var n = new f.BinaryReader(e),
+                r = new t();
+              return t.deserializeBinaryFromReader(r, n);
             }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
+            (t.deserializeBinaryFromReader = function (e, n) {
+              return _.b(t.MBF(), e, n);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
+            (t.serializeBinaryToWriter = function (e, n) {
+              _.f(t.M(), e, n);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new f.BinaryWriter();
@@ -363,13 +717,13 @@
           );
         })(m),
         v = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
+          function t(n) {
+            void 0 === n && (n = null);
+            var r = e.call(this) || this;
             return (
               t.prototype.preferences || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
+              m.initialize(r, n, 0, -1, void 0, null),
+              r
             );
           }
           return (
@@ -390,26 +744,26 @@
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
+            (t.toObject = function (e, n) {
+              return _.g(t.M(), e, n);
             }),
             (t.fromObject = function (e) {
               return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
+              var n = new f.BinaryReader(e),
+                r = new t();
+              return t.deserializeBinaryFromReader(r, n);
             }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
+            (t.deserializeBinaryFromReader = function (e, n) {
+              return _.b(t.MBF(), e, n);
             }),
             (t.prototype.serializeBinary = function () {
               var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
+            (t.serializeBinaryToWriter = function (e, n) {
+              _.f(t.M(), e, n);
             }),
             (t.prototype.serializeBase64String = function () {
               var e = new f.BinaryWriter();
@@ -430,9 +784,9 @@
           });
         };
       })(p || (p = {}));
-      var P,
-        k = r("TLQK"),
-        C = (function () {
+      var C,
+        T = n("TLQK"),
+        E = (function () {
           function e(e) {
             (this.m_Preferences = e),
               (this.m_Preferences.content_customization &&
@@ -566,15 +920,15 @@
             (e.prototype.PostCookieSettings = function () {
               var e, t;
               return Object(a.b)(this, void 0, void 0, function () {
-                var r, n, i, o, s, l;
+                var n, r, i, o, s, l;
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
-                      (r =
+                      (n =
                         u.d.STORE_BASE_URL +
                         "account/ajaxsetcookiepreferences"),
-                        (n = new FormData()).set("sessionid", u.d.SESSIONID),
-                        n.append(
+                        (r = new FormData()).set("sessionid", u.d.SESSIONID),
+                        r.append(
                           "cookiepreferences",
                           JSON.stringify(this.m_Preferences)
                         ),
@@ -582,7 +936,7 @@
                     case 1:
                       return (
                         a.trys.push([1, 3, , 4]),
-                        [4, c.a.post(r, n, { withCredentials: !0 })]
+                        [4, c.a.post(n, r, { withCredentials: !0 })]
                       );
                     case 2:
                       return (
@@ -593,8 +947,8 @@
                             ? void 0
                             : e.success)
                           ? window.ShowAlertDialog(
-                              Object(k.f)("#CookiePref_Error"),
-                              Object(k.f)("#CookiePref_ErrorNotSaved")
+                              Object(T.f)("#CookiePref_Error"),
+                              Object(T.f)("#CookiePref_ErrorNotSaved")
                             )
                           : 1 ==
                               (null === (t = null == i ? void 0 : i.data) ||
@@ -613,8 +967,8 @@
                       return (
                         a.sent(),
                         window.ShowAlertDialog(
-                          Object(k.f)("#CookiePref_Error"),
-                          Object(k.f)("#CookiePref_ErrorNotSaved")
+                          Object(T.f)("#CookiePref_Error"),
+                          Object(T.f)("#CookiePref_ErrorNotSaved")
                         ),
                         [3, 4]
                       );
@@ -625,104 +979,109 @@
               });
             }),
             (e.prototype.TransferCookiePreferencesToSites = function (e, t) {
-              var r = new FormData();
-              r.set("transfer_params", t);
-              for (var n = 0, i = e; n < i.length; n++) {
-                var o = i[n];
-                c.a.post(o, r);
+              var n = new FormData();
+              n.set("transfer_params", t);
+              for (var r = 0, i = e; r < i.length; r++) {
+                var o = i[r];
+                c.a.post(o, n);
               }
             }),
             Object(a.c)([l.C], e.prototype, "m_Preferences", void 0),
             e
           );
         })(),
-        B = r("TyAF"),
-        O = r("Mgs7"),
-        j = r("nNQW"),
-        T = r("exH9");
-      var N = Object(B.a)(function () {
+        O = n("TyAF"),
+        P = n("Mgs7"),
+        S = n("nNQW"),
+        k = n("exH9"),
+        B = n("qDk6"),
+        R = n("FT/q"),
+        N = n("ykc/"),
+        j = n("av+R");
+      var D = Object(O.a)(function () {
           var e = (function () {
-              if (!P) {
+              if (!C) {
                 var e = Object(u.h)("cookiepreferences", "application_config");
-                P = new C(e);
+                C = new E(e);
               }
-              return P;
+              return C;
             })(),
-            t = Object(n.useCallback)(
+            t = Object(R.a)(),
+            n = Object(r.useCallback)(
               function () {
                 e.SetPreferenceState(1);
               },
               [e]
             ),
-            r = Object(n.useCallback)(
+            o = Object(r.useCallback)(
               function () {
                 e.SetPreferenceState(2);
               },
               [e]
             );
           return i.a.createElement(
-            "div",
-            null,
+            N.a,
+            { navID: "StoreCookiesSettings", NavigationManager: t },
             i.a.createElement(
               "div",
               {
-                className: Object(T.a)(
-                  j.CookieSettingsHeader,
+                className: Object(k.a)(
+                  S.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
               i.a.createElement(
                 "div",
                 null,
-                Object(k.f)("#CookiePref_OptionalCookies_Title")
+                Object(T.f)("#CookiePref_OptionalCookies_Title")
               )
             ),
             i.a.createElement(
               "div",
               { className: "account_settings_container" },
               i.a.createElement(
-                "div",
-                { className: j.ButtonGroup },
+                B.a,
+                { "flow-children": "row", className: S.ButtonGroup },
                 i.a.createElement(
-                  "div",
+                  j.e,
                   {
-                    className: Object(T.a)(
-                      j.AllButton,
-                      e.BIsRejectAll() ? j.ButtonHighlight : ""
+                    className: Object(k.a)(
+                      S.AllButton,
+                      e.BIsRejectAll() ? S.ButtonHighlight : ""
                     ),
-                    onClick: r,
+                    onClick: o,
                   },
-                  Object(k.f)("#CookiePref_RejectAll")
+                  Object(T.f)("#CookiePref_RejectAll")
                 ),
                 i.a.createElement(
-                  "div",
+                  j.e,
                   {
-                    className: Object(T.a)(
-                      j.AllButton,
-                      e.BIsAllowAll() ? j.ButtonHighlight : ""
+                    className: Object(k.a)(
+                      S.AllButton,
+                      e.BIsAllowAll() ? S.ButtonHighlight : ""
                     ),
-                    onClick: t,
+                    onClick: n,
                   },
-                  Object(k.f)("#CookiePref_AcceptAll")
+                  Object(T.f)("#CookiePref_AcceptAll")
                 )
               ),
-              i.a.createElement(E, { settings: e }),
-              i.a.createElement(S, { settings: e }),
               i.a.createElement(w, { settings: e }),
-              i.a.createElement(z, { settings: e })
+              i.a.createElement(I, { settings: e }),
+              i.a.createElement(M, { settings: e }),
+              i.a.createElement(A, { settings: e })
             ),
             i.a.createElement(
               "div",
               {
-                className: Object(T.a)(
-                  j.CookieSettingsHeader,
+                className: Object(k.a)(
+                  S.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
               i.a.createElement(
                 "div",
                 null,
-                Object(k.f)("#CookiePref_TechnicallyNeccesary_Title")
+                Object(T.f)("#CookiePref_TechnicallyNeccesary_Title")
               )
             ),
             i.a.createElement(
@@ -731,121 +1090,121 @@
               i.a.createElement(
                 "p",
                 null,
-                Object(k.f)("#CookiePref_TechnicallyNeccesary_Desc")
+                Object(T.f)("#CookiePref_TechnicallyNeccesary_Desc")
               ),
               i.a.createElement(
                 "div",
-                { className: j.CookieGroup },
+                { className: S.CookieGroup },
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: S.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
-                    Object(k.f)("#CookiePref_SessionID_Title")
+                    { className: S.NecessaryTitle },
+                    Object(T.f)("#CookiePref_SessionID_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
-                    Object(k.f)("#CookiePref_SessionID_Desc")
+                    { className: S.NecessaryDesc },
+                    Object(T.f)("#CookiePref_SessionID_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: S.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
-                    Object(k.f)("#CookiePref_ShoppingCart_Title")
+                    { className: S.NecessaryTitle },
+                    Object(T.f)("#CookiePref_ShoppingCart_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
-                    Object(k.f)("#CookiePref_ShoppingCart_Desc")
+                    { className: S.NecessaryDesc },
+                    Object(T.f)("#CookiePref_ShoppingCart_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: S.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
-                    Object(k.f)("#CookiePref_SteamCountry_Title")
+                    { className: S.NecessaryTitle },
+                    Object(T.f)("#CookiePref_SteamCountry_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
-                    Object(k.f)("#CookiePref_SteamCountry_Desc")
+                    { className: S.NecessaryDesc },
+                    Object(T.f)("#CookiePref_SteamCountry_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: S.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
-                    Object(k.f)("#CookiePref_Timezone_Title")
+                    { className: S.NecessaryTitle },
+                    Object(T.f)("#CookiePref_Timezone_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
-                    Object(k.f)("#CookiePref_Timezone_Desc")
+                    { className: S.NecessaryDesc },
+                    Object(T.f)("#CookiePref_Timezone_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: S.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
-                    Object(k.f)("#CookiePref_BirthTime_Title")
+                    { className: S.NecessaryTitle },
+                    Object(T.f)("#CookiePref_BirthTime_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
-                    Object(k.f)("#CookiePref_BirthTime_Desc")
+                    { className: S.NecessaryDesc },
+                    Object(T.f)("#CookiePref_BirthTime_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: S.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
-                    Object(k.f)("#CookiePref_Login_Title")
+                    { className: S.NecessaryTitle },
+                    Object(T.f)("#CookiePref_Login_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
-                    Object(k.f)("#CookiePref_Login_Desc")
+                    { className: S.NecessaryDesc },
+                    Object(T.f)("#CookiePref_Login_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: S.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
-                    Object(k.f)("#CookiePref_Language_Title")
+                    { className: S.NecessaryTitle },
+                    Object(T.f)("#CookiePref_Language_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
-                    Object(k.f)("#CookiePref_Language_Desc")
+                    { className: S.NecessaryDesc },
+                    Object(T.f)("#CookiePref_Language_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: S.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
-                    Object(k.f)("#CookiePref_CookieSettings_Title")
+                    { className: S.NecessaryTitle },
+                    Object(T.f)("#CookiePref_CookieSettings_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
-                    Object(k.f)("#CookiePref_CookieSettings_Desc")
+                    { className: S.NecessaryDesc },
+                    Object(T.f)("#CookiePref_CookieSettings_Desc")
                   )
                 )
               )
@@ -853,28 +1212,28 @@
             i.a.createElement(
               "div",
               {
-                className: Object(T.a)(
-                  j.CookieSettingsHeader,
+                className: Object(k.a)(
+                  S.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
               i.a.createElement(
                 "div",
                 null,
-                Object(k.f)("#PrivacySettings_Marketing_Header")
+                Object(T.f)("#PrivacySettings_Marketing_Header")
               )
             ),
             i.a.createElement(
               "div",
               { className: "account_settings_container" },
-              i.a.createElement(M, { settings: e })
+              i.a.createElement(G, { settings: e })
             ),
             null
           );
         }),
-        E = Object(B.a)(function (e) {
+        w = Object(O.a)(function (e) {
           var t = e.settings,
-            r = Object(n.useCallback)(
+            n = Object(r.useCallback)(
               function () {
                 t.ToggleRecentApps();
               },
@@ -882,32 +1241,32 @@
             );
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: S.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: S.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#CookiePref_Content_Title")
+                Object(T.f)("#CookiePref_Content_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
-                Object(k.f)("#CookiePref_Content_Desc")
+                { className: S.SectionDescription },
+                Object(T.f)("#CookiePref_Content_Desc")
               ),
-              i.a.createElement(O.p, {
-                onChange: r,
-                label: Object(k.f)("#CookiePref_Content_ToggleTitle"),
+              i.a.createElement(P.p, {
+                onChange: n,
+                label: Object(T.f)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
-                description: Object(k.f)("#CookiePref_Content_ToggleDesc"),
+                description: Object(T.f)("#CookiePref_Content_ToggleDesc"),
               })
             )
           );
         }),
-        S = Object(B.a)(function (e) {
+        I = Object(O.a)(function (e) {
           var t = e.settings,
-            r = Object(n.useCallback)(
+            n = Object(r.useCallback)(
               function () {
                 t.ToggleImpressions();
               },
@@ -915,34 +1274,34 @@
             );
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: S.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: S.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#CookiePref_ValveAnalytics_Title")
+                Object(T.f)("#CookiePref_ValveAnalytics_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
-                Object(k.f)("#CookiePref_ValveAnalytics_Desc")
+                { className: S.SectionDescription },
+                Object(T.f)("#CookiePref_ValveAnalytics_Desc")
               ),
-              i.a.createElement(O.p, {
-                onChange: r,
-                label: Object(k.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
+              i.a.createElement(P.p, {
+                onChange: n,
+                label: Object(T.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
-                description: Object(k.f)(
+                description: Object(T.f)(
                   "#CookiePref_ValveAnalytics_ToggleDesc"
                 ),
               })
             )
           );
         }),
-        w = Object(B.a)(function (e) {
+        M = Object(O.a)(function (e) {
           var t = e.settings,
-            r = Object(n.useCallback)(
+            n = Object(r.useCallback)(
               function () {
                 t.ToggleGoogleAnalytics();
               },
@@ -950,46 +1309,46 @@
             );
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: S.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: S.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#CookiePref_GoogleAnalytics_Title")
+                Object(T.f)("#CookiePref_GoogleAnalytics_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
-                Object(k.f)("#CookiePref_GoogleAnalytics_Desc")
+                { className: S.SectionDescription },
+                Object(T.f)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              i.a.createElement(O.p, {
-                onChange: r,
-                label: Object(k.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
+              i.a.createElement(P.p, {
+                onChange: n,
+                label: Object(T.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
-                description: Object(k.f)(
+                description: Object(T.f)(
                   "#CookiePref_GoogleAnalytics_ToggleDesc"
                 ),
               })
             )
           );
         }),
-        z = Object(B.a)(function (e) {
+        A = Object(O.a)(function (e) {
           var t = e.settings,
-            r = Object(n.useCallback)(
+            n = Object(r.useCallback)(
               function () {
                 t.ToggleYouTube();
               },
               [t]
             ),
-            o = Object(n.useCallback)(
+            o = Object(r.useCallback)(
               function () {
                 t.ToggleVimeo();
               },
               [t]
             ),
-            a = Object(n.useCallback)(
+            a = Object(r.useCallback)(
               function () {
                 t.ToggleSketchfab();
               },
@@ -997,44 +1356,44 @@
             );
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: S.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: S.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#CookiePref_ThirdParty_Title")
+                Object(T.f)("#CookiePref_ThirdParty_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
-                Object(k.f)("#CookiePref_ThirdParty_Desc")
+                { className: S.SectionDescription },
+                Object(T.f)("#CookiePref_ThirdParty_Desc")
               ),
-              i.a.createElement(O.p, {
-                onChange: r,
-                label: Object(k.f)("#CookiePref_YouTube_Title"),
+              i.a.createElement(P.p, {
+                onChange: n,
+                label: Object(T.f)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
-                description: Object(k.f)("#CookiePref_YouTube_Desc"),
+                description: Object(T.f)("#CookiePref_YouTube_Desc"),
               }),
-              i.a.createElement(O.p, {
+              i.a.createElement(P.p, {
                 onChange: o,
-                label: Object(k.f)("#CookiePref_Vimeo_Title"),
+                label: Object(T.f)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
-                description: Object(k.f)("#CookiePref_Vimeo_Desc"),
+                description: Object(T.f)("#CookiePref_Vimeo_Desc"),
               }),
-              i.a.createElement(O.p, {
+              i.a.createElement(P.p, {
                 onChange: a,
-                label: Object(k.f)("#CookiePref_Sketchfab_Title"),
+                label: Object(T.f)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
-                description: Object(k.f)("#CookiePref_Sketchfab_Desc"),
+                description: Object(T.f)("#CookiePref_Sketchfab_Desc"),
               })
             )
           );
         }),
-        M = Object(B.a)(function (e) {
+        G = Object(O.a)(function (e) {
           var t = e.settings,
-            r = Object(n.useCallback)(
+            n = Object(r.useCallback)(
               function () {
                 t.ToggleUTMEnabled();
               },
@@ -1042,49 +1401,49 @@
             );
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: S.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: S.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#PrivacySettings_Marketing_Title")
+                Object(T.f)("#PrivacySettings_Marketing_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
-                Object(k.f)("#PrivacySettings_Marketing_Desc")
+                { className: S.SectionDescription },
+                Object(T.f)("#PrivacySettings_Marketing_Desc")
               ),
-              i.a.createElement(O.p, {
-                onChange: r,
-                label: Object(k.f)("#PrivacySettings_UTM_ToggleLabel"),
+              i.a.createElement(P.p, {
+                onChange: n,
+                label: Object(T.f)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
-                description: Object(k.f)("#PrivacySettings_UTM_ToggleDesc"),
+                description: Object(T.f)("#PrivacySettings_UTM_ToggleDesc"),
               })
             )
           );
         }),
-        A = {
+        L = {
           CookieSettings: function () {
             return "/cookiepreferences";
           },
         };
       t.default = function (e) {
         var t = e.match.url,
-          r = A;
+          n = L;
         return i.a.createElement(
           o.d,
           null,
           i.a.createElement(
             o.b,
-            { path: "" + t + r.CookieSettings() },
-            i.a.createElement(N, null)
+            { path: "" + t + n.CookieSettings() },
+            i.a.createElement(D, null)
           )
         );
       };
     },
-    nNQW: function (e, t, r) {
+    nNQW: function (e, t, n) {
       e.exports = {
         AllButton: "cookiesettings_AllButton_24Y_0",
         ButtonHighlight: "cookiesettings_ButtonHighlight_3OVHZ",
@@ -1097,6 +1456,48 @@
         NecessaryTitle: "cookiesettings_NecessaryTitle_3if8Z",
         NecessaryDesc: "cookiesettings_NecessaryDesc_9NmWi",
       };
+    },
+    "ykc/": function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return f;
+      });
+      var r = n("mrSG"),
+        i = n("q1tI"),
+        o = n.n(i),
+        a = n("opsS"),
+        s = n("av+R"),
+        c = n("yLGM"),
+        l = n("qDk6"),
+        u = (n("NxAk"), n("lkRc"));
+      function f(e) {
+        var t = e.children,
+          n = e.navTreeRef,
+          i = Object(r.f)(e, ["children", "navTreeRef"]),
+          f = o.a.useRef(),
+          _ = Object(a.f)(f, n);
+        return u.d.IN_GAMEPADUI
+          ? o.a.createElement(
+              s.b,
+              Object(r.a)({}, i, { navTreeRef: _, secondary: !0 }),
+              o.a.createElement(
+                c.a,
+                null,
+                o.a.createElement(
+                  l.a,
+                  {
+                    autoFocus: !0,
+                    "flow-children": "column",
+                    onMoveUp: function () {
+                      return f.current.Deactivate(), !0;
+                    },
+                  },
+                  t
+                )
+              )
+            )
+          : o.a.createElement(o.a.Fragment, null, t);
+      }
     },
   },
 ]);
