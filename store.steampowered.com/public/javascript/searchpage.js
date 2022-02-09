@@ -303,6 +303,12 @@ function ExecuteSearch( rgParameters )
 	if ( g_rgCurrentParameters && Object.toQueryString( g_rgCurrentParameters ) == Object.toQueryString( rgParameters ) )
 		return;
 
+	// On tablet hide the virtual keyboard
+	if ( window.SupportTabletScreenMode && window.SupportTabletScreenMode() ) 
+	{
+		GPShowVirtualKeyboard( false );
+	}
+
 	g_rgCurrentParameters = rgParameters;
 	new Effect.Fade( $('search_result_container'), { from: 1.0, to: 0.5, duration: 0.1 } );
 	g_ajaxInFlight = new Ajax.Updater( 'search_results', 'https://store.steampowered.com/search/results', { parameters: rgParameters, method: 'get', evalScripts: true, onComplete: SearchCompleted.bind( null, rgParameters ) } );

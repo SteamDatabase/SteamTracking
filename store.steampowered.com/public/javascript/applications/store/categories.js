@@ -6,7 +6,7 @@
     "FT/q": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return R;
+        return E;
       });
       var a,
         r = n("mrSG"),
@@ -184,7 +184,7 @@
           );
         })(o.c),
         m = n("X3Ds"),
-        g = (function (e) {
+        f = (function (e) {
           function t(t) {
             var n = e.call(this) || this;
             return (
@@ -273,7 +273,7 @@
             t
           );
         })(o.c),
-        y = (function (e) {
+        g = (function (e) {
           function t(t) {
             var n = e.call(this) || this;
             return (
@@ -316,24 +316,24 @@
             t
           );
         })(o.c),
-        f = n("NxAk"),
-        _ = n("lkRc"),
-        E = (function () {
+        y = n("NxAk"),
+        R = n("lkRc"),
+        _ = (function () {
           function e() {
-            (this.m_GamepadNavigationController = new f.c()),
-              _.d.IN_GAMEPADUI &&
+            (this.m_GamepadNavigationController = new y.c()),
+              R.d.IN_GAMEPADUI &&
                 (this.m_GamepadNavigationController.RegisterInputSource(
                   new d()
                 ),
                 this.m_GamepadNavigationController.RegisterInputSource(
                   new s()
                 )),
-              "dev" == _.d.WEB_UNIVERSE &&
+              "dev" == R.d.WEB_UNIVERSE &&
                 (this.m_GamepadNavigationController.RegisterInputSource(
-                  new g(window)
+                  new f(window)
                 ),
                 this.m_GamepadNavigationController.RegisterInputSource(
-                  new y(window)
+                  new g(window)
                 ));
           }
           return (
@@ -344,7 +344,7 @@
               return (
                 e.s_Singleton ||
                   ((e.s_Singleton = new e()),
-                  "dev" == _.d.WEB_UNIVERSE &&
+                  "dev" == R.d.WEB_UNIVERSE &&
                     (window.g_StoreWebNavStore = e.s_Singleton)),
                 e.s_Singleton
               );
@@ -352,9 +352,9 @@
             e
           );
         })();
-      function R() {
+      function E() {
         var e = window.legacyWebFocusNavController;
-        return e || E.Get().GetNavigationController();
+        return e || _.Get().GetNavigationController();
       }
     },
     OVk1: function (e, t, n) {
@@ -371,7 +371,7 @@
         p = n("exH9"),
         d = n("opsS"),
         m = n("EC67");
-      function g(e, t, n) {
+      function f(e, t, n) {
         var a,
           o = e + "_HistoryValue",
           c = Object(m.g)(),
@@ -380,7 +380,7 @@
           u = r.useRef(!1),
           p = r.useRef(),
           d = r.useRef(),
-          g = r.useCallback(
+          f = r.useCallback(
             function (e) {
               if (u.current && ((p.current = e), !d.current)) {
                 var n = c.location.pathname;
@@ -405,13 +405,98 @@
           r.useEffect(function () {
             u.current = !0;
           }, []),
-          [s, g]
+          [s, f]
         );
       }
-      var y = n("yLGM"),
-        f = n("ZAxP"),
-        _ = n.n(f),
-        E = o.a.forwardRef(function (e, t) {
+      n("BaVA");
+      var g = n("j+5p"),
+        y = n("hJxo"),
+        R = n("rHSA");
+      function _(e, t, n, a) {
+        void 0 === t && (t = "smooth");
+        var r = (null != n ? n : 30) / 100,
+          c = o.a.useRef(void 0),
+          i = o.a.useRef(void 0),
+          s = o.a.useCallback(function () {
+            (c.current = void 0), (i.current = void 0);
+          }, []),
+          l = (function (e, t) {
+            var n = o.a.useRef();
+            return o.a.useCallback(
+              function (a, r) {
+                var o = "sine";
+                n.current && (n.current.Cancel(), (o = "linear")),
+                  void 0 === a && (a = e.current.scrollTop),
+                  void 0 === r && (r = e.current.scrollLeft);
+                var c = Math.max(
+                  Math.abs(e.current.scrollTop - a),
+                  Math.abs(e.current.scrollLeft - r)
+                );
+                if (c > 0) {
+                  var i = Math.max(Math.min((c / 1e3) * 200, 500), 300);
+                  (n.current = new y.a(
+                    e.current,
+                    { scrollTop: a, scrollLeft: r },
+                    { msDuration: i, timing: o, onComplete: t }
+                  )),
+                    n.current.Start();
+                } else t && t();
+              },
+              [e, t]
+            );
+          })(e, s);
+        return o.a.useCallback(
+          function (n) {
+            var o, u;
+            if (a && !a(n)) return !1;
+            var p = e.current,
+              d = p.scrollTop,
+              m = p.scrollHeight,
+              f = p.clientHeight,
+              g = p.scrollLeft,
+              y = p.scrollWidth,
+              _ = p.clientWidth,
+              E = null !== (o = c.current) && void 0 !== o ? o : d,
+              S = null !== (u = i.current) && void 0 !== u ? u : g;
+            switch (n.detail.button) {
+              case R.a.DIR_UP:
+                if (E <= 2) return !1;
+                c.current = Math.max(0, E - f * r);
+                break;
+              case R.a.DIR_DOWN:
+                if (E >= m - f - 2) return !1;
+                c.current = Math.min(m - f, E + f * r);
+                break;
+              case R.a.DIR_LEFT:
+                if (S <= 2) return !1;
+                i.current = Math.max(0, S - _ * r);
+                break;
+              case R.a.DIR_RIGHT:
+                if (S >= y - _ - 2) return !1;
+                i.current = Math.min(y - _, S + _ * r);
+                break;
+              default:
+                return !1;
+            }
+            return (
+              t && "smooth" != t
+                ? (e.current.scrollTo({
+                    top: c.current,
+                    left: i.current,
+                    behavior: "auto",
+                  }),
+                  s())
+                : l(c.current, i.current),
+              !0
+            );
+          },
+          [a, e, t, r, l, s]
+        );
+      }
+      var E = n("yLGM"),
+        S = n("ZAxP"),
+        v = n.n(S),
+        h = o.a.forwardRef(function (e, t) {
           var n,
             a = e.scrollDirection,
             r = e.scrollPaddingTop,
@@ -420,8 +505,8 @@
             u = e.scrollPaddingLeft,
             d = e.className,
             m = e.children,
-            g = e.style,
-            f = Object(l.f)(e, [
+            f = e.style,
+            g = Object(l.f)(e, [
               "scrollDirection",
               "scrollPaddingTop",
               "scrollPaddingRight",
@@ -433,93 +518,117 @@
             ]);
           switch (a) {
             case "x":
-              n = _.a.ScrollX;
+              n = v.a.ScrollX;
               break;
             case "both":
-              n = _.a.ScrollBoth;
+              n = v.a.ScrollBoth;
               break;
             case "y":
             default:
-              n = _.a.ScrollY;
+              n = v.a.ScrollY;
           }
-          var E = Object(l.a)({}, g);
+          var y = Object(l.a)({}, f);
           return (
-            (r || 0 === r) && (E.scrollPaddingTop = r),
-            (c || 0 === c) && (E.scrollPaddingRight = c),
-            (i || 0 === i) && (E.scrollPaddingBottom = i),
-            (u || 0 === u) && (E.scrollPaddingLeft = u),
+            (r || 0 === r) && (y.scrollPaddingTop = r),
+            (c || 0 === c) && (y.scrollPaddingRight = c),
+            (i || 0 === i) && (y.scrollPaddingBottom = i),
+            (u || 0 === u) && (y.scrollPaddingLeft = u),
             o.a.createElement(
               s.a,
-              Object(l.a)({}, f, {
-                style: E,
-                className: Object(p.a)(d, _.a.ScrollPanel, n),
+              Object(l.a)({}, g, {
+                style: y,
+                className: Object(p.a)(d, v.a.ScrollPanel, n),
                 ref: t,
               }),
-              o.a.createElement(y.a, null, m)
+              o.a.createElement(E.a, null, m)
             )
           );
         }),
-        R =
+        C =
           (o.a.forwardRef(function (e, t) {
+            var n = e.scrollStepPercent,
+              a = e.scrollBehavior,
+              r = Object(l.f)(e, ["scrollStepPercent", "scrollBehavior"]),
+              c = o.a.useRef(),
+              i = _(
+                c,
+                a,
+                n,
+                o.a.useCallback(function (e) {
+                  return e.currentTarget != e.target;
+                }, [])
+              ),
+              s = Object(d.f)(c, t);
+            return o.a.createElement(
+              h,
+              Object(l.a)({}, r, {
+                onGamepadDirection: i,
+                ref: s,
+                scrollIntoViewType: g.d.NoTransformSparseContent,
+              })
+            );
+          }),
+          o.a.forwardRef(function (e, t) {
             var n = e.name,
               a = e.msScrollRestoreDelay,
               r = e.onScroll,
               c = Object(l.f)(e, ["name", "msScrollRestoreDelay", "onScroll"]),
-              i = g(n + "ScrollTop", 250, 0),
+              i = f(n + "ScrollTop", 250, 0),
               s = i[0],
               p = i[1],
-              m = g(n + "ScrollLeft", 250, 0),
-              y = m[0],
-              f = m[1],
-              _ = o.a.useRef(0),
+              m = f(n + "ScrollLeft", 250, 0),
+              g = m[0],
+              y = m[1],
               R = o.a.useRef(0),
-              S = o.a.useRef(),
-              C = o.a.useCallback(
+              _ = o.a.useRef(0),
+              E = o.a.useRef(),
+              S = o.a.useCallback(
                 function (e) {
                   var t = e.currentTarget,
                     n = t.scrollTop,
                     a = t.scrollLeft;
-                  p(n), (_.current = n), f(a), (R.current = a), r && r(e);
+                  p(n), (R.current = n), y(a), (_.current = a), r && r(e);
                 },
-                [p, f, r]
+                [p, y, r]
               );
             o.a.useLayoutEffect(
               function () {
                 var e = function () {
                   Object(u.a)(
-                    S.current.scrollHeight >= s,
+                    E.current.scrollHeight >= s,
                     "Element is " +
-                      S.current.scrollHeight +
+                      E.current.scrollHeight +
                       " high but trying to restore scrollTop of " +
                       s +
                       ", element may need more time to lay out.",
-                    S.current
+                    E.current
                   ),
-                    (_.current = s),
-                    (R.current = y),
-                    S.current.scrollTo({ top: s, left: y, behavior: "auto" });
+                    (R.current = s),
+                    (_.current = g),
+                    E.current.scrollTo({ top: s, left: g, behavior: "auto" });
                 };
-                (s == _.current && y == R.current) ||
+                (s == R.current && g == _.current) ||
                   (a ? window.setTimeout(e, a) : e());
               },
-              [s, y, a]
+              [s, g, a]
             );
-            var h = Object(d.f)(t, S);
+            var v = Object(d.f)(t, E);
             return o.a.createElement(
-              E,
-              Object(l.a)({}, c, { onScroll: C, ref: h })
+              h,
+              Object(l.a)({}, c, { onScroll: S, ref: v })
             );
           }),
-          n("j+5p")),
-        S = (n("kKgT"), n("3+zv"), n("5eAM")),
-        C = n("gyoR"),
-        h = n("MnIK"),
-        v = n("0OaU"),
-        T = n("lkRc"),
-        I = n("jIbu"),
-        O = (function () {
+          n("kKgT"),
+          n("3+zv"),
+          n("5eAM")),
+        T = n("gyoR"),
+        I = n("MnIK"),
+        O = n("0OaU"),
+        L = n("lkRc"),
+        b = n("jIbu"),
+        D = (function () {
           function e() {
-            this.m_rgSections = Object(T.h)("categories", "application_config");
+            this.m_rgSections = Object(L.h)("categories", "application_config");
           }
           return (
             (e.prototype.GetSections = function () {
@@ -531,25 +640,25 @@
             e
           );
         })();
-      function L(e) {
+      function w(e) {
         var t = e.section;
         return o.a.createElement(
           "div",
-          { className: I.CategorySection },
+          { className: b.CategorySection },
           o.a.createElement(
             "span",
-            { className: I.CategorySectionName },
+            { className: b.CategorySectionName },
             t.name
           ),
           o.a.createElement(
-            E,
+            h,
             {
-              className: I.CategoriesCtn,
+              className: b.CategoriesCtn,
               scrollDirection: "x",
-              navEntryPreferPosition: R.c.MAINTAIN_X,
+              navEntryPreferPosition: g.c.MAINTAIN_X,
             },
             t.categories.map(function (e) {
-              return o.a.createElement(D, {
+              return o.a.createElement(G, {
                 key: "category" + e.name,
                 category: e,
               });
@@ -557,7 +666,7 @@
           )
         );
       }
-      function D(e) {
+      function G(e) {
         var t,
           n = e.category,
           a = Object(r.useState)(Boolean(n.items)),
@@ -566,9 +675,9 @@
           u = Object(r.useState)(!1),
           d = u[0],
           m = u[1],
-          g = Object(r.useState)(),
-          y = g[0],
-          f = g[1];
+          f = Object(r.useState)(),
+          g = f[0],
+          y = f[1];
         return (
           Object(r.useEffect)(
             function () {
@@ -577,9 +686,9 @@
                   var r = a[t];
                   e.add(r.id);
                 }
-                S.a.LoadAppLinkInfo(Array.from(e)).then(function () {
-                  Object(C.a)(n.items, !1).then(function (e) {
-                    f(e), l(!1);
+                C.a.LoadAppLinkInfo(Array.from(e)).then(function () {
+                  Object(T.a)(n.items, !1).then(function (e) {
+                    y(e), l(!1);
                   });
                 });
               }
@@ -590,7 +699,7 @@
             s.a,
             { focusableIfNoChildren: !0 },
             o.a.createElement(
-              h.a,
+              I.a,
               {
                 placeholderWidth: "110px",
                 placeholderHeight: "150px",
@@ -602,42 +711,42 @@
               o.a.createElement(
                 c.c,
                 {
-                  href: T.d.STORE_BASE_URL + n.url,
+                  href: L.d.STORE_BASE_URL + n.url,
                   className: Object(p.a)(
                     ((t = {}),
-                    (t[I.Category] = !0),
-                    (t[I.TopLevelCategory] = n.is_toplevel_genre),
+                    (t[b.Category] = !0),
+                    (t[b.TopLevelCategory] = n.is_toplevel_genre),
                     t)
                   ),
                 },
                 o.a.createElement(
                   "span",
-                  { className: I.CategoryName },
+                  { className: b.CategoryName },
                   o.a.createElement("span", null, n.name)
                 ),
                 i
-                  ? o.a.createElement(v.a, {
+                  ? o.a.createElement(O.a, {
                       size: "small",
                       position: "center",
                     })
-                  : o.a.createElement(b, { apps: y })
+                  : o.a.createElement(A, { apps: g })
               )
             )
           )
         );
       }
-      function b(e) {
+      function A(e) {
         var t = e.apps;
         if (!t) return null;
         var n = (t = t.slice(0, 6)).map(function (e) {
-          return S.a.GetAppLinkInfo(e.id);
+          return C.a.GetAppLinkInfo(e.id);
         });
         return o.a.createElement(
           "div",
-          { className: I.GridOuter },
+          { className: b.GridOuter },
           o.a.createElement(
             "div",
-            { className: I.Grid },
+            { className: b.Grid },
             n.map(function (e) {
               return o.a.createElement("img", { key: e.id, src: e.capsule });
             })
@@ -646,7 +755,7 @@
       }
       t.default = function () {
         var e = (function () {
-            var e = O.Get(),
+            var e = D.Get(),
               t = Object(r.useState)(e.GetSections()),
               n = t[0];
             return t[1], { sections: n };
@@ -662,9 +771,9 @@
             { navID: "CategoriesApp", NavigationManager: t, navTreeRef: n },
             o.a.createElement(
               "div",
-              { className: I.CategorySectionsCtn },
+              { className: b.CategorySectionsCtn },
               e.map(function (e) {
-                return o.a.createElement(L, {
+                return o.a.createElement(w, {
                   key: "section" + e.name,
                   section: e,
                 });

@@ -1915,7 +1915,7 @@
     "SteamDeckVerified_DescriptionHeader_Unknown_WithAppName": "Valve is still learning about %1$s. We do not currently have further information regarding Steam Deck compatiblity.",
     "SteamDeckVerified_DescriptionSubHeader_Note": "Note",
     "SteamDeckVerified_DescriptionSubHeader_TestLineItems": "Here are the results of our compatibility check:",
-    "SteamDeckVerified_Store_CompatSectionHeader_Desktop": "Valve's Steam Deck Compatibility Test Results",
+    "SteamDeckVerified_Store_CompatSectionHeader_Desktop": "Steam Deck Compatibility",
     "SteamDeckVerified_Store_CompatSectionHeader_GamepadUI": "Steam Deck Compatibility",
     "SteamDeckVerified_Store_CompatSection_LearnMore": "Learn more",
     "SteamDeckVerified_Category_Verified": "Verified",

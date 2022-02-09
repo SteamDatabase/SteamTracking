@@ -251,7 +251,7 @@ GHomepage = {
 				$J.ajax( {
 					url: "https:\/\/store.steampowered.com\/default\/home_additional\/",
 					data: {
-						bNeedRecommendedCurators: GSteamCurators.bNeedRecommendedCurators ? 1 : 0
+						bNeedRecommendedCurators: 0
 					},
 					dataType: 'json',
 					type: 'GET'
@@ -2738,8 +2738,13 @@ GSteamCurators = {
 	RenderRecommendedCurators: function( strCuratorHTML )
 	{
 		// if we rendered recommended apps above, there's no need to render recommended curators
-		if ( !GSteamCurators.bNeedRecommendedCurators )
+		//
+		// On deck, we want to suppress the suggested curators.
+		var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
+		if ( !GSteamCurators.bNeedRecommendedCurators || bSupportTabletMode )
+		{
 			return;
+		}
 
 		$J('#steam_curators_not_empty').html( strCuratorHTML ).show();
 		$J('.steam_curators_ctn').show();

@@ -99,6 +99,10 @@
 		display: none;
 	}
 
+    html.responsive .purchase_options_content_tablet.isCurrentlySticky {
+        padding-top: 10px;
+    }
+
 	html.responsive .purchase_options_content_tablet {
 		display: block !important;
 		box-sizing: border-box;
@@ -109,6 +113,7 @@
 		position: sticky;
 		z-index: 100;
 		flex: auto;
+		transition: padding-top 0.2s ease;
 
 		/* Re-defining here prevents the entire page from padding as we scroll */
 		scroll-snap-type: inline;
@@ -251,6 +256,11 @@
 
 	html.responsive .glance_ctn_responsive_right {
 		padding: 0px;
+	}
+
+	/* Hide "add" tag on Deck */
+	html.responsive .glance_tags_ctn .glance_tags .app_tag.add_button {
+		display: none;
 	}
 
 
@@ -1328,13 +1338,14 @@
 	}
 
 	html.responsive .game_area_purchase_game_wrapper .ds_completetheset {
-		position: unset;
 		box-shadow: unset;
 		height: unset;
-		background-color: var(--gpBackground-LightSoft);
 		color: white;
 		border-radius: var(--gpCorner-Medium);
-		padding: 0px 0px 16px 16px;
+		padding: 0px 6px;
+		top: -8px;
+		right: 0px;
+		left: unset;
 	}
 
 
@@ -2390,12 +2401,34 @@
 		float: left;
 	}
 
+	html.responsive .game_area_description a {
+		display: inline-flex;
+	}
+
 
 
 
 	/* System requirements */
 	html.responsive .sys_req {
 		display: none;
+	}
+
+
+
+	/* Content requires base game */
+	html.responsive .glance_details {
+		border: 1px solid var(--gpBackground-LightSoft);
+		padding: 8px 12px;
+		margin-bottom: 12px;
+	}
+
+	html.responsive .glance_details a {
+		display: inline-flex;
+	}
+
+	html.responsive .glance_details p {
+		margin-bottom: 8px;
+		font: var(--gpText-BodyMedium);
 	}
 
 
@@ -2433,7 +2466,8 @@
 		margin: 0px calc(0px - var(--gpSpace-Gutter));
 		padding-left: var(--gpSpace-Gutter);
 		scroll-padding: var(--gpSpace-Gutter);
-		width: calc(100% + var(--gpSpace-Gutter));
+		width: calc(100% + (var(--gpSpace-Gutter) * 2));
+		box-sizing: border-box;
 	}
 
 	html.responsive .game_description_column .block .block_content a {
@@ -2513,6 +2547,13 @@
 
 	html.responsive #responsive_apppage_details_right_ctn .friend_blocks_grid {
 		margin-bottom: unset;
+	}
+
+
+
+	/* Merchandise */
+	html.responsive .merchandise_ctn a {
+		display: inline-flex;
 	}
 
 
@@ -3162,6 +3203,11 @@
 
 	html.responsive #AwardsDefault br {
 		display: none;
+	}
+
+	html.responsive .agegate_content_descriptors_notes {
+		margin-top: 12px;
+		font: var(--gpText-BodyMedium);
 	}
 
 }

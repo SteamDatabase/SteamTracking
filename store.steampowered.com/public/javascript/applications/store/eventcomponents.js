@@ -434,10 +434,10 @@
           return wt;
         }),
         n.d(t, "EventSteamGameFestivalDebug", function () {
-          return Lt;
+          return Gt;
         }),
         n.d(t, "RssEnabledAccountDashboard", function () {
-          return Gt;
+          return Lt;
         }),
         n.d(t, "StoreSaleDisplay", function () {
           return kt;
@@ -462,8 +462,8 @@
         g = n("kLLr"),
         S = n("U+Q5"),
         y = n("TQGK"),
-        O = n("N0Ye"),
-        A = n("f0Wu"),
+        A = n("N0Ye"),
+        O = n("f0Wu"),
         C = ["mod_reviewed", "auto_migrated"],
         T = (function () {
           function e() {
@@ -509,19 +509,19 @@
               if ("string" == typeof n.eventtype) {
                 if (n.eventtype.length > 0) {
                   var l = Number.parseInt(n.eventtype);
-                  i = [{ label: Object(O.b)(l), value: l }];
+                  i = [{ label: Object(A.b)(l), value: l }];
                 }
               } else
                 n.eventtype &&
                   ((i = []),
                   n.eventtype.forEach(function (e) {
                     var t = Number.parseInt(e);
-                    i.push({ label: Object(O.b)(t), value: t });
+                    i.push({ label: Object(A.b)(t), value: t });
                   }));
               var s = void 0;
               "string" == typeof n.filterDate &&
                 n.filterDate.length > 0 &&
-                (s = A.unix(Number(n.filterDate)));
+                (s = O.unix(Number(n.filterDate)));
               var c = !1;
               "string" == typeof n.orderByVisibility &&
                 n.orderByVisibility.length > 0 &&
@@ -791,7 +791,7 @@
             e
           );
         })(),
-        L = (function () {
+        G = (function () {
           function e() {
             (this.m_mapEventGIDToSolrData = new Map()),
               (this.m_listEvents = new Array());
@@ -976,7 +976,7 @@
             e
           );
         })(),
-        G = n("6oCP"),
+        L = n("6oCP"),
         k = n("C4Nl"),
         B = n("Mgs7"),
         P = n("IjL/"),
@@ -1058,7 +1058,7 @@
                 "#EventModTile_Action_NewEventType",
                 r.createElement("span", null, n),
                 o,
-                Object(O.b)(t.m_newEventType)
+                Object(A.b)(t.m_newEventType)
               )
             );
           case a.k_UpdateSeasonTags:
@@ -1331,7 +1331,7 @@
                     n.bOrderByVisibilityStartTime
                   );
                 } else
-                  t = L.Get().LoadPartnerEventForModerationIncremental(
+                  t = G.Get().LoadPartnerEventForModerationIncremental(
                     this.m_cancelSignal,
                     n.eventsToLoadPerPaging
                   );
@@ -1356,7 +1356,7 @@
               return (
                 (T.Get().bUseCustomQuery
                   ? M.Get().GetAllSolrEvents()
-                  : L.Get().GetAllSolrEvents()
+                  : G.Get().GetAllSolrEvents()
                 ).forEach(function (t) {
                   e.push(
                     o.a.createElement(Ee, { solrData: t, key: t.unique_id })
@@ -1386,7 +1386,7 @@
             }),
             (t.prototype.RefetchAllEventTiles = function () {
               (this.m_nPage = 0),
-                L.Get().ClearAllSolrEvents(),
+                G.Get().ClearAllSolrEvents(),
                 M.Get().ClearAllSolrEvents(),
                 this.setState(
                   Object(l.a)({}, se),
@@ -1511,7 +1511,7 @@
             n = e.fnRequireRefetchEvents,
             a = b.d
               .map(function (e) {
-                return { value: e, label: Object(O.b)(e) };
+                return { value: e, label: Object(A.b)(e) };
               })
               .sort(function (e, t) {
                 return e.label.localeCompare(t.label);
@@ -1706,7 +1706,7 @@
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.state = {
-                bLoadingEvent: !G.c.BHasClanEventModel(
+                bLoadingEvent: !L.c.BHasClanEventModel(
                   t.props.solrData.unique_id
                 ),
                 bShowAsModal: !1,
@@ -1722,8 +1722,8 @@
               var e = this,
                 t = this.props.solrData,
                 n = t.unique_id;
-              G.c.BHasClanEventModel(n) ||
-                G.c
+              L.c.BHasClanEventModel(n) ||
+                L.c
                   .LoadHiddenPartnerEvent(new g.a(t.clan_steamid), n)
                   .then(function () {
                     return e.setState({ bLoadingEvent: !1 });
@@ -1745,7 +1745,7 @@
             (t.prototype.ShowModalEvent = function (e) {
               var t = this.props.solrData.unique_id;
               !this.state.bLoadingEvent &&
-                G.c.BHasClanEventModel(t) &&
+                L.c.BHasClanEventModel(t) &&
                 this.setState({ bShowAsModal: !0 }),
                 e.preventDefault(),
                 e.stopPropagation();
@@ -1756,7 +1756,7 @@
             (t.prototype.SetAdultContentState = function (e) {
               if (!this.state.bSavingModeration) {
                 var t = this.props.solrData.unique_id,
-                  n = G.c.GetClanEventModel(t);
+                  n = L.c.GetClanEventModel(t);
                 if (n)
                   if (e !== n.BHasTag("adult_only_content")) {
                     var a = new Array(),
@@ -1772,7 +1772,7 @@
             (t.prototype.SetModeratedState = function (e) {
               if (!this.state.bSavingModeration) {
                 var t = this.props.solrData.unique_id,
-                  n = G.c.GetClanEventModel(t);
+                  n = L.c.GetClanEventModel(t);
                 if (n)
                   if (e !== Object(f.g)(n)) {
                     var a = new Array(),
@@ -1797,13 +1797,13 @@
                     return Object(l.e)(this, function (l) {
                       switch (l.label) {
                         case 0:
-                          (r = G.c.GetClanEventModel(e)), (l.label = 1);
+                          (r = L.c.GetClanEventModel(e)), (l.label = 1);
                         case 1:
                           return (
                             l.trys.push([1, 3, , 4]),
                             [
                               4,
-                              L.Get().UpdateTagsOnPartnerEvent(
+                              G.Get().UpdateTagsOnPartnerEvent(
                                 this.m_cancelSignal,
                                 r.clanSteamID,
                                 r.AnnouncementGID,
@@ -1834,7 +1834,7 @@
             }),
             (t.prototype.OnChangeCategory = function (e) {
               var t = this.props.solrData,
-                n = G.c.GetClanEventModel(t.unique_id);
+                n = L.c.GetClanEventModel(t.unique_id);
               Object(Z.d)(
                 o.a.createElement(be, { eventModel: n }),
                 Object(ae.o)(e)
@@ -1842,7 +1842,7 @@
             }),
             (t.prototype.OnUpdateSeasonalTag = function (e) {
               var t = this.props.solrData,
-                n = G.c.GetClanEventModel(t.unique_id);
+                n = L.c.GetClanEventModel(t.unique_id);
               Object(Z.d)(
                 o.a.createElement(fe, { eventModel: n }),
                 Object(ae.o)(e)
@@ -1854,7 +1854,7 @@
                 n = t.unique_id,
                 a = Number(t.appid),
                 r = Object(b.k)(j.d.LANGUAGE),
-                i = G.c.GetClanEventModel(n),
+                i = L.c.GetClanEventModel(n),
                 l = null;
               if (i) {
                 this.state.bShowAsModal &&
@@ -2311,7 +2311,7 @@
               (t.state = {
                 bUpdating: !1,
                 newCategoryOption: {
-                  label: Object(O.b)(34),
+                  label: Object(A.b)(34),
                   value: { eventType: 34 },
                 },
               }),
@@ -2343,7 +2343,7 @@
                         (r = a.value.eventType),
                         [
                           4,
-                          L.Get().UpdatePartnerEventType(
+                          G.Get().UpdatePartnerEventType(
                             this.m_cancelSignal,
                             t.clanSteamID,
                             t.GID,
@@ -2366,7 +2366,7 @@
                           }),
                         [
                           4,
-                          L.Get().UpdateTagsOnPartnerEvent(
+                          G.Get().UpdateTagsOnPartnerEvent(
                             this.m_cancelSignal,
                             t.clanSteamID,
                             t.GetAnnouncementGID(),
@@ -2421,7 +2421,7 @@
                     var t = { eventType: e };
                     return (
                       12 == e && (t.tags = ["patchnotes"]),
-                      { label: Object(O.b)(e), value: t }
+                      { label: Object(A.b)(e), value: t }
                     );
                   });
               return (
@@ -2579,7 +2579,7 @@
                         (n = this.props.eventModel),
                         [
                           4,
-                          L.Get().UpdateTagsOnPartnerEvent(
+                          G.Get().UpdateTagsOnPartnerEvent(
                             this.m_cancelSignal,
                             n.clanSteamID,
                             n.AnnouncementGID,
@@ -2694,7 +2694,7 @@
         ge = (n("Xhj9"), n("5eAM")),
         Se = n("ir+G"),
         ye = n("gOcu"),
-        Oe = (function (e) {
+        Ae = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -2721,12 +2721,12 @@
                         (t = e.clanEventGID),
                         (n = e.clanAccountID),
                         console.log(t, n, typeof t, typeof n),
-                        !t || G.c.BHasClanEventModel(t)
+                        !t || L.c.BHasClanEventModel(t)
                           ? [3, 8]
                           : ((a = g.a.InitFromClanID(Number.parseInt(n))),
                             [
                               4,
-                              G.c.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                              L.c.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                                 a,
                                 t,
                                 0
@@ -3116,7 +3116,7 @@
             (t = Object(l.c)([u.a], t))
           );
         })(r.Component),
-        Ae = new ((function () {
+        Oe = new ((function () {
           function e() {
             (this.m_backfill = void 0),
               (this.m_mapEventGIDProcessed = new Map()),
@@ -3268,8 +3268,8 @@
                 a
                   ? ((a.bFailed = !0),
                     (a.strMessage = o),
-                    Ae.CloseProgress(e, a))
-                  : Ae.CompleteBackfill("resize_image");
+                    Oe.CloseProgress(e, a))
+                  : Oe.CompleteBackfill("resize_image");
             }),
             (t.prototype.HandleResizeForImageType = function (e, t, n, a, r) {
               return Object(l.b)(this, void 0, void 0, function () {
@@ -3423,9 +3423,9 @@
                 return Object(l.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      Ae.StartBackfill("resize_image"), (e = 0), (i.label = 1);
+                      Oe.StartBackfill("resize_image"), (e = 0), (i.label = 1);
                     case 1:
-                      return Ae.BIsBackkFillInProgress()
+                      return Oe.BIsBackkFillInProgress()
                         ? [
                             4,
                             M.Get()
@@ -3446,7 +3446,7 @@
                     case 2:
                       if (!(t = i.sent()) || 0 == t.length)
                         return (
-                          Ae.CompleteBackfill("resize_image"),
+                          Oe.CompleteBackfill("resize_image"),
                           console.log("Compelted the backfill"),
                           [3, 7]
                         );
@@ -3458,14 +3458,14 @@
                               case 0:
                                 return (
                                   (n = t[e]),
-                                  (r = Ae.CreateOrGetBackfillProgess(
+                                  (r = Oe.CreateOrGetBackfillProgess(
                                     n.unique_id
                                   )),
                                   n.announcement_gid &&
                                   0 != n.announcement_gid.length
                                     ? [
                                         4,
-                                        G.c
+                                        L.c
                                           .LoadPartnerEventFromAnnoucementGID(
                                             Number(n.appid),
                                             n.announcement_gid,
@@ -3482,7 +3482,7 @@
                                       ]
                                     : ((r.bSkipped = !0),
                                       (r.bWarning = !0),
-                                      Ae.CloseProgress(n.unique_id, r),
+                                      Oe.CloseProgress(n.unique_id, r),
                                       [2, "continue"])
                                 );
                               case 1:
@@ -3490,20 +3490,20 @@
                                   l.sent(),
                                   r.bFailed
                                     ? [2, "continue"]
-                                    : (i = G.c.GetClanEventFromAnnouncementGID(
+                                    : (i = L.c.GetClanEventFromAnnouncementGID(
                                         n.announcement_gid
                                       ))
                                     ? r.bSucceeded ||
                                       r.bFailed ||
                                       r.bAlreadyProcessed
                                       ? ((r.bAlreadyProcessed = !0),
-                                        Ae.CloseProgress(n.unique_id, r),
+                                        Oe.CloseProgress(n.unique_id, r),
                                         [2, "continue"])
                                       : ((r.bAnalysing = !0),
                                         a.setState({
                                           strInfo:
                                             "Processing " +
-                                            Ae.GetBackfillGIDs().length +
+                                            Oe.GetBackfillGIDs().length +
                                             " Appid: " +
                                             i.appid +
                                             " Event " +
@@ -3540,7 +3540,7 @@
                                       (r.strMessage =
                                         "Failed to load the event: " +
                                         n.unique_id),
-                                      Ae.CloseProgress(n.unique_id, r),
+                                      Oe.CloseProgress(n.unique_id, r),
                                       [2, "continue"])
                                 );
                               case 2:
@@ -3599,8 +3599,8 @@
                                 l.sent(), (l.label = 7);
                               case 7:
                                 return (
-                                  Ae.CloseProgress(n.unique_id, r),
-                                  Ae.BIsBackkFillInProgress()
+                                  Oe.CloseProgress(n.unique_id, r),
+                                  Oe.BIsBackkFillInProgress()
                                     ? [2]
                                     : [2, "break"]
                                 );
@@ -3618,7 +3618,7 @@
                     case 5:
                       return ++r, [3, 3];
                     case 6:
-                      return Ae.m_nFailures > 5e3
+                      return Oe.m_nFailures > 5e3
                         ? (console.log(
                             "Hit too many errors, stoppinng the backfill"
                           ),
@@ -3633,11 +3633,11 @@
             (t.prototype.RenderFailure = function () {
               var e = new Array();
               return (
-                Ae.m_nFailures > 0 &&
-                  Ae.GetBackfillGIDs().forEach(function (t) {
-                    var n = Ae.GetEventBackfillProgress().get(t);
+                Oe.m_nFailures > 0 &&
+                  Oe.GetBackfillGIDs().forEach(function (t) {
+                    var n = Oe.GetEventBackfillProgress().get(t);
                     if (n && n.bFailed) {
-                      var a = G.c.GetClanEventModel(t);
+                      var a = L.c.GetClanEventModel(t);
                       a &&
                         e.push(
                           r.createElement(
@@ -3723,7 +3723,7 @@
                     "button",
                     {
                       onClick: function () {
-                        return Ae.CompleteBackfill("resize_image");
+                        return Oe.CompleteBackfill("resize_image");
                       },
                     },
                     "Stop Backfill"
@@ -3740,17 +3740,17 @@
                   "div",
                   null,
                   "Events Processed: ",
-                  Ae.m_nProcessed
+                  Oe.m_nProcessed
                 ),
                 r.createElement(
                   "div",
                   null,
                   "Events Succeeded: ",
-                  Ae.m_nSuccesses
+                  Oe.m_nSuccesses
                 ),
-                r.createElement("div", null, "Events Warning: ", Ae.m_nWarning),
-                r.createElement("div", null, "Events Failed: ", Ae.m_nFailures),
-                r.createElement("div", null, "Events Skipped: ", Ae.m_nSkipped),
+                r.createElement("div", null, "Events Warning: ", Oe.m_nWarning),
+                r.createElement("div", null, "Events Failed: ", Oe.m_nFailures),
+                r.createElement("div", null, "Events Skipped: ", Oe.m_nSkipped),
                 e.length > 0 &&
                   r.createElement(
                     r.Fragment,
@@ -3782,8 +3782,8 @@
         Me = n("9w6b"),
         Re = (n("MUT6"), n("BVKn")),
         we = n("YWVM"),
-        Le = n("r3N9"),
-        Ge = n("SdTr"),
+        Ge = n("r3N9"),
+        Le = n("SdTr"),
         ke = n("YNty"),
         Be = n("6eA3"),
         Pe = n.n(Be),
@@ -4214,7 +4214,7 @@
                       position: "center",
                     }),
                 postbody: Boolean(m && i)
-                  ? o.a.createElement(Ge.a, {
+                  ? o.a.createElement(Le.a, {
                       clanAccountID: i.GetAccountID(),
                       partnerEventStore: ze,
                     })
@@ -4226,7 +4226,7 @@
             ? o.a.createElement(
                 P.a,
                 null,
-                o.a.createElement(Le.a, {
+                o.a.createElement(Ge.a, {
                   appid: d.appid,
                   trackingLocation: 7,
                   announcementGID: d.GetAnnouncementGID(),
@@ -4254,7 +4254,7 @@
                           eventModel: d,
                           partnerEventStore: ze,
                         }),
-                  otherEventRow: o.a.createElement(Ge.a, {
+                  otherEventRow: o.a.createElement(Le.a, {
                     clanAccountID: d.clanSteamID.GetAccountID(),
                     gidAnnouncement: d.AnnouncementGID,
                     partnerEventStore: ze,
@@ -4293,7 +4293,7 @@
                 (n.state.last_update_event = a.last_update_event),
                 (n.state.events = []),
                 n.state.announcementGIDList.forEach(function (e) {
-                  var t = G.c.GetClanEventFromAnnouncementGID(e);
+                  var t = L.c.GetClanEventFromAnnouncementGID(e);
                   t && n.state.events.push(t);
                 })),
               n
@@ -4455,8 +4455,11 @@
                 Xe.e,
                 { className: d },
                 this.state.bShowModal &&
-                  o.a.createElement(Le.a, {
-                    classname: nt.StoreHeaderAdjust,
+                  o.a.createElement(Ge.a, {
+                    classname: j.d.IN_GAMEPADUI ? void 0 : nt.StoreHeaderAdjust,
+                    eventClassName: j.d.IN_GAMEPADUI
+                      ? nt.GamePadUIWidthAdjust
+                      : void 0,
                     appid: u,
                     trackingLocation: p,
                     announcementGID:
@@ -4508,8 +4511,8 @@
                       n.slice(0, a).map(function (e) {
                         var a =
                           1 === n.length && window.screen.width > 500
-                            ? Ge.c
-                            : Ge.b;
+                            ? Le.c
+                            : Le.b;
                         return o.a.createElement(a, {
                           key: e.GID,
                           event: e,
@@ -4528,7 +4531,7 @@
                     announcementGID: l,
                     onClick: this.ShowLatestUpdateModal,
                   }),
-                Boolean(i && !l) &&
+                Boolean(i && !l && !j.d.IN_GAMEPADUI) &&
                   o.a.createElement(ot, {
                     nUpdateTime: this.state.last_update_event.rtime,
                     onClick: this.ShowLatestUpdateModal,
@@ -4564,7 +4567,7 @@
         var t = e.nUpdateTime,
           n = e.announcementGID,
           a = e.onClick,
-          r = n ? G.c.GetClanEventFromAnnouncementGID(n) : null,
+          r = n ? L.c.GetClanEventFromAnnouncementGID(n) : null,
           i = function (e) {
             null == a || a(), e.stopPropagation(), e.preventDefault();
           };
@@ -4593,7 +4596,7 @@
                 "flow-children": "column",
                 navEntryPreferPosition: Je.c.PREFERRED_CHILD,
               },
-              o.a.createElement(Ge.c, { event: r, onClick: i })
+              o.a.createElement(Le.c, { event: r, onClick: i })
             )
         );
       }
@@ -5254,9 +5257,9 @@
           );
         },
         yt = n("FT/q"),
-        Ot = n("4spj"),
-        At = n("ykc/");
-      Qe.a.Init(new qe.a(j.d.WEBAPI_BASE_URL)), G.c.Init();
+        At = n("4spj"),
+        Ot = n("ykc/");
+      Qe.a.Init(new qe.a(j.d.WEBAPI_BASE_URL)), L.c.Init();
       var Ct = function (e) {
         var t = e.children,
           n = Object(r.useState)(Me.a.IsInitialized()),
@@ -5296,13 +5299,13 @@
             trackingLocation: 3,
           });
         }),
-        Lt = Tt(Oe),
-        Gt = Tt(vt),
+        Gt = Tt(Ae),
+        Lt = Tt(vt),
         kt = Tt(function (e) {
           var t = e.promotionName,
             n = e.language,
             a = o.a.useState(
-              G.c.GetClanEventFromAnnouncementGID(j.e.ANNOUNCEMENT_GID)
+              L.c.GetClanEventFromAnnouncementGID(j.e.ANNOUNCEMENT_GID)
             ),
             r = a[0],
             i = a[1],
@@ -5315,7 +5318,7 @@
                   j.e.ANNOUNCEMENT_GID
                 ) {
                   var e = new g.a(j.c.CLANSTEAMID);
-                  G.c
+                  L.c
                     .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                       e,
                       j.e.ANNOUNCEMENT_GID,
@@ -5338,9 +5341,9 @@
             );
           var s = r.visibility_state !== f.j.k_EEventStateVisible;
           return o.a.createElement(
-            At.a,
+            Ot.a,
             { navID: "StoreSalePageRoot", NavigationManager: l },
-            o.a.createElement(Ot.h, {
+            o.a.createElement(At.h, {
               promotionName: t,
               language: n,
               eventModel: r,

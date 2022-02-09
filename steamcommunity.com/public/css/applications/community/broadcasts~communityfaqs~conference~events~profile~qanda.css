@@ -1,3 +1,6 @@
+:root {
+  --basicui-header-height: 0px;
+}
 .partnereventshared_PartnerEventFont_LK4bX {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -564,8 +567,19 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+.BasicUI .partnereventshared_SaleSectionHeader_2WMiQ {
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
+  text-transform: unset;
+  letter-spacing: unset;
+  text-shadow: unset;
+  margin-bottom: 8px;
+}
 .ContentHubSalePage .partnereventshared_SaleSectionHeader_2WMiQ {
   padding-left: 8px;
+}
+.BasicUI .ContentHubSalePage .partnereventshared_SaleSectionHeader_2WMiQ {
+  padding-left: 0px;
 }
 .partnereventshared_SaleSectionHeader_2WMiQ img {
   max-width: 100%;

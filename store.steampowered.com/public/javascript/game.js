@@ -2134,3 +2134,13 @@ function GamepadVideoToggleMute()
 	}
 }
 
+function AddRightNavStickyPaddingOnTablet()
+{
+	const elSticky = document.querySelector('.purchase_options_content_tablet' );
+	const observer = new IntersectionObserver(
+		([e]) => e.target.classList.toggle('isCurrentlySticky', e.isIntersecting ),
+		{threshold: [1]}
+	);
+	observer.observe( elSticky )
+}
+
