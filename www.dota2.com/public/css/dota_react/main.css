@@ -20133,16 +20133,11 @@ a {
   color: #ccc;
   background-color: #444;
 }
-.standingsbracket_ds16_DPCStandingsBracketDoubleSeeded16_9FBtL {
-  width: 1350px;
-  height: 780px;
+.standingsbrackettree_DPCStandingsBracketTree_2H-GO {
   position: relative;
 }
-.standingsbracket_ds16_DPCStandingsBracketDoubleSeeded16_9FBtL.standingsbracket_ds16_Teams12_11UqB {
-  width: 1160px;
-}
-.standingsbracket_ds16_BracketNodeContainer_1mQNo,
-.standingsbracket_ds16_BracketConnectorContainer_1TTtI {
+.standingsbrackettree_BracketNodeContainer_1jV6B,
+.standingsbrackettree_BracketConnectorContainer_2vOTg {
   position: absolute;
 }
 .standingsresults_DPCStandingsResults_2TWyU {
@@ -20881,6 +20876,25 @@ a {
   margin-bottom: 200px;
 }
 .standingspage_DPCStandingsPageMajor_m2Itz .standingspage_Header_3pHiA {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+}
+.standingspage_DPCStandingsPageLeagueFinals_2mzfM {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.standingspage_DPCStandingsPageLeagueFinals_2mzfM .standingspage_Header_3pHiA {
   width: 100%;
   max-width: 1200px;
   display: flex;
