@@ -893,7 +893,9 @@ div.ShortWindow
   flex-direction: row;
   padding: 2px 4px 2px 22px;
 }
-.gamelistentry_Container_2-O4Z .gamelistentry_GameListEntryContainer_1vO6B svg {
+.gamelistentry_Container_2-O4Z
+  .gamelistentry_GameListEntryContainer_1vO6B
+  svg:not(.SVGIcon_FriendIcon) {
   width: 16px;
   height: 16px;
   margin-left: 2px;
@@ -903,19 +905,19 @@ div.ShortWindow
 }
 .gamelistentry_Container_2-O4Z
   .gamelistentry_GameListEntryContainer_1vO6B
-  svg
+  svg:not(.SVGIcon_FriendIcon)
   polyline,
 .gamelistentry_Container_2-O4Z
   .gamelistentry_GameListEntryContainer_1vO6B
-  svg
+  svg:not(.SVGIcon_FriendIcon)
   path {
   stroke: rgba(255, 255, 255, 0.4);
 }
 .gamelistentry_Container_2-O4Z
   .gamelistentry_GameListEntryContainer_1vO6B
-  svg
+  svg:not(.SVGIcon_FriendIcon)
   circle {
-  stroke: rgba(255, 255, 255, 0.24);
+  stroke: rgba(255, 255, 255, 0.25);
   fill: rgba(255, 255, 255, 0.24);
   stroke-width: 12px;
 }

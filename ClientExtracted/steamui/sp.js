@@ -14114,8 +14114,8 @@
               Object({
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Feb 4 2022 : 12:58:02",
-                BUILD_TIME_UTC: "Feb 4 2022 : 20:58:02",
+                BUILD_TIME_LOCAL: "Feb 9 2022 : 15:59:02",
+                BUILD_TIME_UTC: "Feb 9 2022 : 23:59:02",
               }).MOBILE_BUILD ||
                 window.addEventListener("unload", this.OnUnload);
           }
@@ -26987,8 +26987,8 @@
           t = A.nSteamVersion > 0 ? A.nSteamVersion.toString() : "local",
           a =
             "linux" == It.c.PLATFORM
-              ? "Feb 4 2022 : 20:58:02"
-              : "Feb 4 2022 : 12:58:02",
+              ? "Feb 9 2022 : 23:59:02"
+              : "Feb 9 2022 : 15:59:02",
           o = A.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           r = Object(vt.a)(1024 * A.nSystemRAMSizeMB * 1024),
           l = Object(vt.a)(1024 * A.nVideoRAMSizeMB * 1024),
