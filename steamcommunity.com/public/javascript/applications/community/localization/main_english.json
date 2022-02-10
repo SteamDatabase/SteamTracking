@@ -438,6 +438,7 @@
     "EventEditor_ArtworkType_product_mobile_banner": "Store Page (Mobile) Banner",
     "EventEditor_ArtworkType_sale_logo": "Sale Page Logo",
     "EventEditor_ArtworkType_sale_logo_url": "Target URL (relative to store home page)",
+    "EventEditor_ArtworkType_sale_logo_url_tooltip": "Allows clicking the sale page logo to take the user to another place on the store. For instance, the front page.",
     "EventEditor_ArtworkType_SpotlightNotSupport": "Uploading or choosing Spotlight artwork is not available for the current event type %1$s.",
     "EventEditor_ArtworkMissing": "No Artwork Uploaded",
     "EventEditor_ViewExamples": "View Examples",
