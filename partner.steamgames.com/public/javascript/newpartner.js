@@ -2,6 +2,44 @@
 /* captcha */
 var iAjaxCalls = 0;
 
+var rgEUCountries = [
+			'AT',
+				'BE',
+				'BG',
+				'HR',
+				'CY',
+				'CZ',
+				'DK',
+				'EE',
+				'FI',
+				'FR',
+				'DE',
+				'GR',
+				'HU',
+				'IE',
+				'IT',
+				'LV',
+				'LT',
+				'LU',
+				'MT',
+				'NL',
+				'PL',
+				'PT',
+				'RO',
+				'SK',
+				'SI',
+				'ES',
+				'SE',
+				'GB',
+		];
+
+function IsEUCountry( fieldName )
+{
+	var field = $J( fieldName ).prop('value');
+
+	return rgEUCountries.includes( field );
+}
+
 // Refresh the catpcha image
 function RefreshCaptcha()
 {
@@ -101,12 +139,21 @@ function IsValidOptionalField( fieldName, regex )
 	return true;
 }
 
-function IsValidOptionalVatIdField( fieldNameVatId, fieldNameCountry, regex )
+function IsValidVatIdField( bRequired, fieldNameVatId, fieldNameCountry, regex )
 {
-	if ( !IsValidOptionalField( fieldNameVatId, regex ) )
+	if ( bRequired )
 	{
-		$J( fieldNameVatId ).addClass( "errorRequiredField" );
-		return false;
+		if (!IsValidRequiredField(fieldNameVatId, regex)) {
+			$J(fieldNameVatId).addClass("errorRequiredField");
+			return false;
+		}
+	}
+	else
+	{
+		if (!IsValidOptionalField(fieldNameVatId, regex)) {
+			$J(fieldNameVatId).addClass("errorRequiredField");
+			return false;
+		}
 	}
 
 	var field = $J( fieldNameVatId );
@@ -187,9 +234,12 @@ function ValidateSigneeInfoOnAgreementPage()
 	return true;
 }
 
-function ValidateCompanyInfo( bTransition, nextSection )
+function ValidateCompanyInfo( bTransition, bRequireVATForEU, nextSection )
 {
 	var bHasRequiredFields = true;
+
+	var bRequireVAT = bRequireVATForEU && IsEUCountry( "[name='partner_info[country_code]']" );
+
 	// company info
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[partner_name]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[company_form]']", gValidFieldAlphaNumericRegex );
@@ -200,7 +250,7 @@ function ValidateCompanyInfo( bTransition, nextSection )
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[postal_code]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidOptionalField( "[name='partner_info[fax]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= HasRequiredField( "[name='partner_info[finance_email]']" );
-	bHasRequiredFields &= IsValidOptionalVatIdField( "[name='partner_info[vat_id]']", "[name='partner_info[country_code]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidVatIdField( bRequireVAT, "[name='partner_info[vat_id]']", "[name='partner_info[country_code]']", gValidFieldAlphaNumericRegex );
 
 	if ( !bHasRequiredFields )
 	{
