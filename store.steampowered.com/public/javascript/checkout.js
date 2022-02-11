@@ -4989,6 +4989,32 @@ function NewSetTabEnabledClosure( a_tab_name )
 	return function() { SetTabEnabled( tab_name ) };
 }
 
+function NavigateToPreviousTab()
+{
+    if ( g_bPayPalAuthInFlight )
+    {
+        //swallow these because we cant interact with the paypal iframe and we dont want to nav around behind the window
+        return true;
+    }
+
+    for( var i=0; i < rgValidTabs.length; ++i )
+    {
+        var curTab = rgValidTabs[i];
+
+		        if ( $(rgValidTabs[i] + '_tab_select').className == 'cart_tab_on' )
+        {
+            if ( i == 0 )
+                return false;
+
+            var prevTag = rgValidTabs[i-1];
+            SetTabEnabled( prevTag );
+            return true;
+        }
+    }
+
+    return false;
+}
+
 
 function SetTabEnabled( tab_name, bResetTab )
 {

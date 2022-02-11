@@ -1878,6 +1878,7 @@
     "LOC_Ordinal_Suffix_91": "st",
     "LOC_Ordinal_Suffix_92": "nd",
     "LOC_Ordinal_Suffix_93": "rd",
+    "SteamDeckVerified_SeeAll": "See all Verified games on Steam",
     "SteamDeckVerified_TestResult_DefaultControllerConfigFullyFunctional": "All functionality is accessible when using the default controller configuration",
     "SteamDeckVerified_TestResult_ControllerGlyphsMatchDeckDevice": "This game shows Steam Deck controller icons",
     "SteamDeckVerified_TestResult_DefaultConfigurationIsPerformant": "This game's default graphics configuration performs well on Steam Deck",

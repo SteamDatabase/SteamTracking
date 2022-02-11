@@ -882,43 +882,34 @@
     "ykc/": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return m;
+        return u;
       });
       var n = a("mrSG"),
         r = a("q1tI"),
         o = a.n(r),
-        i = a("opsS"),
-        c = a("av+R"),
-        l = a("yLGM"),
-        s = a("qDk6"),
-        u = (a("NxAk"), a("lkRc"));
-      function m(e) {
+        i = a("av+R"),
+        c = a("yLGM"),
+        l = a("opsS"),
+        s = a("lkRc");
+      function u(e) {
         var t = e.children,
           a = e.navTreeRef,
           r = Object(n.f)(e, ["children", "navTreeRef"]),
-          m = o.a.useRef(),
-          d = Object(i.f)(m, a);
-        return u.d.IN_GAMEPADUI
-          ? o.a.createElement(
-              c.b,
-              Object(n.a)({}, r, { navTreeRef: d, secondary: !0 }),
-              o.a.createElement(
-                l.a,
-                null,
-                o.a.createElement(
-                  s.a,
-                  {
-                    autoFocus: !0,
-                    "flow-children": "column",
-                    onMoveUp: function () {
-                      return m.current.Deactivate(), !0;
-                    },
-                  },
-                  t
-                )
-              )
-            )
-          : o.a.createElement(o.a.Fragment, null, t);
+          u = o.a.useRef(),
+          m = Object(l.f)(u, a);
+        if (s.d.IN_GAMEPADUI) {
+          var d = window.__nav_tree_root;
+          return o.a.createElement(
+            i.b,
+            Object(n.a)({}, r, {
+              navTreeRef: m,
+              secondary: !0,
+              parentEmbeddedNavTree: d,
+            }),
+            o.a.createElement(c.a, null, t)
+          );
+        }
+        return o.a.createElement(o.a.Fragment, null, t);
       }
     },
   },

@@ -74,101 +74,11 @@
   .categoriesapp_CategorySection_2MUQ8
   .categoriesapp_CategoriesCtn_3yuPy
   .categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM {
-  position: absolute;
-  top: -60px;
-  left: -30px;
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  .categoriesapp_Category_1uwcZ
   .categoriesapp_GridOuter_3Q4XM
   .categoriesapp_Grid_3anY0 {
   position: relative;
   width: 240px;
   height: 233px;
-  transform: scaleX(2) scaleY(1.2) rotateZ(-45deg) translate(5px, 46px);
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  .categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM
-  .categoriesapp_Grid_3anY0
-  img {
-  position: absolute;
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  .categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM
-  .categoriesapp_Grid_3anY0
-  img:nth-child(1) {
-  width: 180px;
-  height: 84px;
-  left: 20px;
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  .categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM
-  .categoriesapp_Grid_3anY0
-  img:nth-child(2) {
-  width: 120px;
-  height: 56px;
-  top: 84px;
-  left: -40px;
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  .categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM
-  .categoriesapp_Grid_3anY0
-  img:nth-child(3) {
-  width: 120px;
-  height: 56px;
-  top: 84px;
-  left: 80px;
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  .categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM
-  .categoriesapp_Grid_3anY0
-  img:nth-child(4) {
-  width: 80px;
-  height: 37px;
-  top: 140px;
-  left: 20px;
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  .categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM
-  .categoriesapp_Grid_3anY0
-  img:nth-child(5) {
-  width: 80px;
-  height: 37px;
-  top: 140px;
-  left: 100px;
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  .categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM
-  .categoriesapp_Grid_3anY0
-  img:nth-child(6) {
-  width: 120px;
-  height: 56px;
-  top: 177px;
-  left: 50px;
 }
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8

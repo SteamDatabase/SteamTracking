@@ -634,6 +634,23 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 14px;
   color: #c44848;
 }
+.rdt .rdtPicker {
+  background: #576070;
+  border: 1px solid #646f82;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+}
+.rdt .rdtPicker th {
+  border-bottom: transparent;
+}
+.rdt .rdtPicker td {
+  color: #fff;
+}
+.rdt .rdtPicker td:hover {
+  color: #000;
+}
+.rdt .rdtPicker td.rdtNew {
+  color: #fff;
+}
 .login_LoginDialog_2Hj3a {
   background-color: #101114;
   background-image: linear-gradient(to bottom, #101114, #1f2127);

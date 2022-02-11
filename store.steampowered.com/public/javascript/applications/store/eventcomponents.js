@@ -4481,30 +4481,31 @@
                       null,
                       Object(U.f)("#EventBrowse_RecentEvents")
                     ),
-                    o.a.createElement(
-                      "div",
-                      { className: nt.SectionButtonCtn },
-                      this.props.bViewAllShowInfiniteScroll
-                        ? o.a.createElement(
-                            Xe.e,
-                            {
-                              className: nt.SectionButton,
-                              onClick: function () {
-                                return t.ShowModal(n[0]);
+                    !j.d.IN_GAMEPADUI &&
+                      o.a.createElement(
+                        "div",
+                        { className: nt.SectionButtonCtn },
+                        this.props.bViewAllShowInfiniteScroll
+                          ? o.a.createElement(
+                              Xe.e,
+                              {
+                                className: nt.SectionButton,
+                                onClick: function () {
+                                  return t.ShowModal(n[0]);
+                                },
                               },
-                            },
-                            Object(U.f)("#EventBrowse_MoreEventsBtn")
-                          )
-                        : o.a.createElement(
-                            Ie.c,
-                            {
-                              eventModel: n[0],
-                              route: Ie.a.k_eViewWebSiteHub,
-                              className: nt.SectionButton,
-                            },
-                            Object(U.f)("#EventBrowse_MoreEventsBtn")
-                          )
-                    ),
+                              Object(U.f)("#EventBrowse_MoreEventsBtn")
+                            )
+                          : o.a.createElement(
+                              Ie.c,
+                              {
+                                eventModel: n[0],
+                                route: Ie.a.k_eViewWebSiteHub,
+                                className: nt.SectionButton,
+                              },
+                              Object(U.f)("#EventBrowse_MoreEventsBtn")
+                            )
+                      ),
                     o.a.createElement(
                       "div",
                       { className: nt.EventsSummariesCtn },
@@ -5358,43 +5359,34 @@
     "ykc/": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return u;
+        return d;
       });
       var a = n("mrSG"),
         r = n("q1tI"),
         o = n.n(r),
-        i = n("opsS"),
-        l = n("av+R"),
-        s = n("yLGM"),
-        c = n("qDk6"),
-        d = (n("NxAk"), n("lkRc"));
-      function u(e) {
+        i = n("av+R"),
+        l = n("yLGM"),
+        s = n("opsS"),
+        c = n("lkRc");
+      function d(e) {
         var t = e.children,
           n = e.navTreeRef,
           r = Object(a.f)(e, ["children", "navTreeRef"]),
-          u = o.a.useRef(),
-          p = Object(i.f)(u, n);
-        return d.d.IN_GAMEPADUI
-          ? o.a.createElement(
-              l.b,
-              Object(a.a)({}, r, { navTreeRef: p, secondary: !0 }),
-              o.a.createElement(
-                s.a,
-                null,
-                o.a.createElement(
-                  c.a,
-                  {
-                    autoFocus: !0,
-                    "flow-children": "column",
-                    onMoveUp: function () {
-                      return u.current.Deactivate(), !0;
-                    },
-                  },
-                  t
-                )
-              )
-            )
-          : o.a.createElement(o.a.Fragment, null, t);
+          d = o.a.useRef(),
+          u = Object(s.f)(d, n);
+        if (c.d.IN_GAMEPADUI) {
+          var p = window.__nav_tree_root;
+          return o.a.createElement(
+            i.b,
+            Object(a.a)({}, r, {
+              navTreeRef: u,
+              secondary: !0,
+              parentEmbeddedNavTree: p,
+            }),
+            o.a.createElement(l.a, null, t)
+          );
+        }
+        return o.a.createElement(o.a.Fragment, null, t);
       }
     },
     zrk3: function (e, t, n) {

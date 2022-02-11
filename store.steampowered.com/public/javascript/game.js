@@ -1981,7 +1981,9 @@ function ReparentAppLandingPageForSmallScreens()
 	fn_reparent( '#bannerPointsShop', $J( '#appLinksAndInfo' ) );
 	fn_reparent( '#bannerItemStore', $J( '#appLinksAndInfo' ) );
 	fn_reparent( '#bannerCommunity', $J( '#appLinksAndInfo' ) );
-	fn_reparent( '#appDetailsUnderlinedLinks', $J( '#appLinksAndInfo' ) );
+
+	// on tablet these go into a dropdown
+	fn_reparent( '#appDetailsUnderlinedLinks', bSupportTabletMode ? $J( '#appLinksAndInfo_TabletDropdownContent' ) : $J( '#appLinksAndInfo' ) );
 
 	// place the active review filter list in the review details section
 	fn_reparent( '#reviews_active_filters', $J('.reviews_info_ctn') );

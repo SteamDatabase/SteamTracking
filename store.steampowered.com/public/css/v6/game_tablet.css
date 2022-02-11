@@ -351,6 +351,20 @@
 		font-size: 14px;
 	}
 
+	
+	html.responsive .game_area_description h2:not(#aboutThisGame h2, h2.bb_tag),
+	html.responsive #aboutThisGame h2:not(h2.bb_tag)
+	{
+		text-transform: uppercase;
+		display: inline-block;
+		color: #ffffff !important;
+		font-size: 12px;
+		font-weight: 700;
+		margin-bottom: 8px;
+		padding-left: 0px !important;
+		letter-spacing: 0.5px;
+	}
+
 	/* section headers */
 	html.responsive .responsive_block_header,
 	html.responsive .block_title.vrsupport,
@@ -359,8 +373,6 @@
 	html.responsive .responsive_apppage_details_right.heading:not(.responsive_hidden),
 	html.responsive .early_access_announcements h2,
 	html.responsive .sys_req h2,
-	html.responsive .game_area_description h2:not(#aboutThisGame h2, h2.bb_tag),
-	html.responsive #aboutThisGame h2:not(h2.bb_tag),
 	html.responsive #franchise_block h2,
 	html.responsive #recommended_block h2,
 	html.responsive #app_reviews_hash h2,
@@ -550,7 +562,7 @@
 	/* the genres and manufacturer section has a different format.  These style changes help the section look good next to the other content*/
 	html.responsive #genresAndManufacturer.details_block {
 		margin-left: 0px;
-		margin-top: 20px;
+		margin-top: 0px;
 		color: var(--gpStoreLighterGrey);
 	}
 	html.responsive #genresAndManufacturer.details_block a {
@@ -793,12 +805,6 @@
 		align-content: center;
 		max-width: unset;
 		top: unset;
-	}
-
-
-	/* Hide the "view all" button for recent events and announcements */
-	html.responsive div[class*='partnereventwebrowembed_SectionButtonCtn_'] {
-		display: none;
 	}
 
 	/* reduce font sizes in Early Access Game section */
@@ -1051,10 +1057,6 @@
 		display: block !important;
 	}
 
-
-	html.responsive #appDetailsUnderlinedLinks {
-		margin-top: 24px;
-	}
 
 
 
@@ -3112,6 +3114,25 @@
 	/* More like this carousel */
 	html.responsive .game_description_column .block .block_content a img {
 		width: 196px;
+	}
+
+
+	/* Links and info */
+	html.responsive #appDetailsUnderlinedLinks a.linkbar {
+		background-color: unset;
+		border-bottom: 1px solid var(--gpBackground-LightSoft);
+		margin: unset;
+		padding: 5px 12px 5px 24px;
+	}
+
+	html.responsive #appDetailsUnderlinedLinks a:hover {
+		background-color: var(--gpBackground-LightSoft);
+		border-bottom-color: transparent;
+	}
+
+	html.responsive #appDetailsUnderlinedLinks a.gpfocus {
+		background-color: var(--gpBackground-LightSoft);
+		border-bottom-color: transparent;
 	}
 
 

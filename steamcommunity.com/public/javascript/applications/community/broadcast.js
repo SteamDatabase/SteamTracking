@@ -80,7 +80,7 @@
         w = r.n(v),
         M = Object(o.a)(function (e) {
           var t = e.appid,
-            r = Object(p.d)(t, 0, !0),
+            r = Object(p.e)(t, 0, !0),
             i = (r[0], r[1]),
             a = Object(b.c)();
           Object(s.useEffect)(

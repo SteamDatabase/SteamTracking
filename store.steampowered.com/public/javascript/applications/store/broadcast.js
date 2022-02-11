@@ -6877,7 +6877,7 @@
         Rt = r.n(zt),
         Ft = Object(o.a)(function (e) {
           var t = e.appid,
-            r = Object(vt.d)(t, 0, !0),
+            r = Object(vt.e)(t, 0, !0),
             i = (r[0], r[1]),
             a = Object(Ot.c)();
           Object(s.useEffect)(
