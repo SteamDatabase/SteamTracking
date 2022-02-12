@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7075780";
+var CLSTAMP = "7077401";
 !(function (e) {
   function t(t) {
     for (
@@ -124,7 +124,7 @@ var CLSTAMP = "7075780";
                 12: "d68c50d043a17a9ece4a",
                 13: "005ce512dd893a28a63b",
                 14: "7c209c56be0f352544dd",
-                15: "cf6eb4521780a5432539",
+                15: "1e51a48f4fa6274bd052",
                 16: "95966e7c46a2fa99e808",
                 17: "1caf56b7f345bd073bf6",
                 18: "a17a53e27e102f9919df",
@@ -2795,11 +2795,12 @@ PERFORMANCE OF THIS SOFTWARE.
         (e.prototype.SetPreferredLocales = function (e) {
           this.m_rgLocalesToUse = e;
         }),
-        (e.prototype.LocalizeString = function (t) {
+        (e.prototype.LocalizeString = function (t, n) {
           if (t && 0 != t.length && "#" == t.charAt(0)) {
-            var n = this.m_mapTokens.get(t.substring(1));
-            if (void 0 !== n) return n;
-            e.sm_ErrorReportingStore &&
+            var r = this.m_mapTokens.get(t.substring(1));
+            if (void 0 !== r) return r;
+            !n &&
+              e.sm_ErrorReportingStore &&
               e.sm_ErrorReportingStore.ReportError(
                 new Error(
                   "Unable to find localization token '" +

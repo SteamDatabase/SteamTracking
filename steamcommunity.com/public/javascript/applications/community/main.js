@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7075780";
+var CLSTAMP = "7076064";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -10898,11 +10898,12 @@ var CLSTAMP = "7075780";
           (e.prototype.SetPreferredLocales = function (e) {
             this.m_rgLocalesToUse = e;
           }),
-          (e.prototype.LocalizeString = function (t) {
+          (e.prototype.LocalizeString = function (t, n) {
             if (t && 0 != t.length && "#" == t.charAt(0)) {
-              var n = this.m_mapTokens.get(t.substring(1));
-              if (void 0 !== n) return n;
-              e.sm_ErrorReportingStore &&
+              var r = this.m_mapTokens.get(t.substring(1));
+              if (void 0 !== r) return r;
+              !n &&
+                e.sm_ErrorReportingStore &&
                 e.sm_ErrorReportingStore.ReportError(
                   new Error(
                     "Unable to find localization token '" +
