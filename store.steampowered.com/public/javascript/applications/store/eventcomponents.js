@@ -48,360 +48,6 @@
         HasAdultContent: "eventmoderation_HasAdultContent_2PcmC",
       };
     },
-    "FT/q": function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return f;
-      });
-      var a,
-        r = n("mrSG"),
-        o = n("rHSA"),
-        i = n("XxJJ"),
-        l = [
-          { index: 0, type: o.a.OK, category: "action" },
-          { index: 1, type: o.a.CANCEL, category: "action" },
-          { index: 2, type: o.a.SECONDARY, category: "action" },
-          { index: 3, type: o.a.OPTIONS, category: "action" },
-          { index: 4, type: o.a.BUMPER_LEFT, category: "action" },
-          { index: 5, type: o.a.BUMPER_RIGHT, category: "action" },
-          { index: 6, type: o.a.TRIGGER_LEFT, category: "action" },
-          { index: 7, type: o.a.TRIGGER_RIGHT, category: "action" },
-          { index: 8, type: o.a.SELECT, category: "action" },
-          { index: 9, type: o.a.START, category: "action" },
-          { index: 10, type: o.a.LSTICK_CLICK, category: "action" },
-          { index: 11, type: o.a.RSTICK_CLICK, category: "action" },
-          { index: 12, type: o.a.DIR_UP, category: "navigation" },
-          { index: 13, type: o.a.DIR_DOWN, category: "navigation" },
-          { index: 14, type: o.a.DIR_LEFT, category: "navigation" },
-          { index: 15, type: o.a.DIR_RIGHT, category: "navigation" },
-          { index: 16, type: o.a.STEAM_GUIDE, category: "action" },
-          { index: 17, type: o.a.SELECT, category: "action" },
-        ],
-        s = (function (e) {
-          function t() {
-            var t = e.call(this) || this;
-            return (
-              (t.m_rgGamepadStatus = []),
-              t.SetSourceType(o.b.GAMEPAD),
-              window.addEventListener("gamepadconnected", function (e) {
-                t.m_bGamepadDetected ||
-                  (t.OnGamepadDetected(), t.PollGamepads());
-              }),
-              t
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.PollGamepads = function () {
-              for (
-                var e = navigator.getGamepads(), t = !1, n = 0;
-                n < e.length;
-                n++
-              ) {
-                var a = e[n];
-                if (a) {
-                  this.m_rgGamepadStatus[n] ||
-                    (this.m_rgGamepadStatus[n] = { buttons: [] });
-                  for (
-                    var r = this.m_rgGamepadStatus[n], o = 0;
-                    o < l.length;
-                    o++
-                  ) {
-                    var i = l[o],
-                      s = i.index;
-                    a.buttons[s] &&
-                      (a.buttons[s].pressed
-                        ? ((t = !0),
-                          r.buttons[s] ||
-                            ((r.buttons[s] = !0), this.OnButtonDown(i.type)))
-                        : r.buttons[s] &&
-                          (this.OnButtonUp(i.type), (r.buttons[s] = !1)));
-                  }
-                }
-              }
-              document.hasFocus() || t
-                ? requestAnimationFrame(this.PollGamepads)
-                : (console.log("Lost focus - suspending gamepad polling"),
-                  window.addEventListener(
-                    "focusin",
-                    this.OnWindowRegainedFocus
-                  ));
-            }),
-            (t.prototype.OnWindowRegainedFocus = function () {
-              window.removeEventListener("focusin", this.OnWindowRegainedFocus),
-                this.PollGamepads();
-            }),
-            Object(r.c)([i.a], t.prototype, "PollGamepads", null),
-            Object(r.c)([i.a], t.prototype, "OnWindowRegainedFocus", null),
-            t
-          );
-        })(o.c),
-        c = n("kyHq"),
-        d = {
-          A: o.a.OK,
-          B: o.a.CANCEL,
-          X: o.a.SECONDARY,
-          Y: o.a.OPTIONS,
-          SELECT: o.a.SELECT,
-          START: o.a.START,
-          LSHOULDER: o.a.BUMPER_LEFT,
-          RSHOULDER: o.a.BUMPER_RIGHT,
-          LTRIGGER: o.a.TRIGGER_LEFT,
-          RTRIGGER: o.a.TRIGGER_RIGHT,
-          LEFTSTICK_UP: o.a.DIR_UP,
-          LEFTSTICK_RIGHT: o.a.DIR_RIGHT,
-          LEFTSTICK_DOWN: o.a.DIR_DOWN,
-          LEFTSTICK_LEFT: o.a.DIR_LEFT,
-          LEFTSTICK_CLICK: o.a.LSTICK_CLICK,
-          RIGHTSTICK_CLICK: o.a.RSTICK_CLICK,
-          LeftStick: o.a.LSTICK_TOUCH,
-          RightStick: o.a.RSTICK_TOUCH,
-          LeftTrackpad: o.a.LPAD_TOUCH,
-          LeftTrackpadClick: o.a.LPAD_CLICK,
-          RightTrackpad: o.a.RPAD_TOUCH,
-          RightTrackpadClick: o.a.RPAD_CLICK,
-          RearLeftUpper: o.a.REAR_LEFT_UPPER,
-          RearLeftLower: o.a.REAR_LEFT_LOWER,
-          RearRightUpper: o.a.REAR_RIGHT_UPPER,
-          RearRightLower: o.a.REAR_RIGHT_LOWER,
-        },
-        u =
-          (((a = {})[c.h.SystemKey0] = o.a.STEAM_GUIDE),
-          (a[c.h.SystemKey1] = o.a.STEAM_QUICK_MENU),
-          a),
-        p = (function (e) {
-          function t() {
-            var t = e.call(this) || this;
-            return (
-              (t.m_rgControllers = new Map()),
-              "undefined" != typeof SteamClient &&
-                ((t.m_hUnregisterControllerInput = SteamClient.Input.RegisterForControllerInputMessages(
-                  t.HandleControllerInputMessages
-                )),
-                SteamClient.System.UI.RegisterForSystemKeyEvents(
-                  t.HandleSystemKeyEvents
-                )),
-              t.SetSourceType(o.b.GAMEPAD),
-              t
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.HandleSystemKeyEvents = function (e) {
-              var t = u[e.eKey];
-              t && this.OnSystemButtonPress(t, e.nControllerIndex);
-            }),
-            (t.prototype.OnSystemButtonPress = function (e, t) {
-              this.OnButtonDown(e, t), this.OnButtonUp(e, t);
-            }),
-            (t.prototype.GetController = function (e) {
-              var t = this.m_rgControllers.get(e);
-              return (
-                t ||
-                  ((t = { activeButtons: {} }), this.m_rgControllers.set(e, t)),
-                t
-              );
-            }),
-            (t.prototype.HandleControllerInputMessages = function (e) {
-              for (var t = 0, n = e; t < n.length; t++) {
-                var a = n[t],
-                  r = d[a.strActionName];
-                if (null != r) {
-                  var o = this.GetController(a.nController);
-                  a.bState && !o.activeButtons[r]
-                    ? ((o.activeButtons[r] = !0),
-                      this.OnButtonDown(r, a.nController))
-                    : !a.bState &&
-                      o.activeButtons[r] &&
-                      ((o.activeButtons[r] = !1),
-                      this.OnButtonUp(r, a.nController));
-                }
-              }
-            }),
-            Object(r.c)([i.a], t.prototype, "HandleSystemKeyEvents", null),
-            Object(r.c)(
-              [i.a],
-              t.prototype,
-              "HandleControllerInputMessages",
-              null
-            ),
-            t
-          );
-        })(o.c),
-        m = n("X3Ds"),
-        v = (function (e) {
-          function t(t) {
-            var n = e.call(this) || this;
-            return (
-              (n.m_lastButtonDown = o.a.INVALID),
-              n.SetSourceType(o.b.KEYBOARD),
-              t.addEventListener("keydown", n.OnKeyDown),
-              t.addEventListener("keyup", n.OnKeyUp),
-              t.addEventListener("blur", n.Reset),
-              n
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.OnKeyDown = function (e) {
-              var t = this.TranslateKey(e);
-              t != o.a.INVALID &&
-                t != this.m_lastButtonDown &&
-                (this.Reset(),
-                this.OnButtonDown(t),
-                (this.m_lastButtonDown = t),
-                e.preventDefault());
-            }),
-            (t.prototype.OnKeyUp = function (e) {
-              var t = this.TranslateKey(e);
-              t != o.a.INVALID &&
-                (this.OnButtonUp(t),
-                (this.m_lastButtonDown = o.a.INVALID),
-                e.preventDefault());
-            }),
-            (t.prototype.Reset = function () {
-              this.m_lastButtonDown != o.a.INVALID &&
-                (this.OnButtonUp(this.m_lastButtonDown),
-                (this.m_lastButtonDown = o.a.INVALID));
-            }),
-            (t.prototype.TranslateKey = function (e) {
-              var t = e.code,
-                n = e.ctrlKey,
-                a =
-                  m.q(e.target) &&
-                  ("INPUT" === e.target.nodeName ||
-                    "TEXTAREA" === e.target.nodeName);
-              if (n)
-                switch (t) {
-                  case "Digit1":
-                    return o.a.STEAM_GUIDE;
-                  case "Digit2":
-                    return o.a.STEAM_QUICK_MENU;
-                  case "Digit3":
-                    return o.a.SELECT;
-                  case "Digit4":
-                    return o.a.BUMPER_LEFT;
-                  case "Digit5":
-                    return o.a.BUMPER_RIGHT;
-                  case "Digit6":
-                    return o.a.LSTICK_CLICK;
-                  case "Digit7":
-                    return o.a.RSTICK_CLICK;
-                  case "Digit8":
-                    return o.a.OPTIONS;
-                  case "Digit9":
-                    return o.a.SELECT;
-                  case "Digit0":
-                    return o.a.START;
-                }
-              switch (t) {
-                case "Escape":
-                  return o.a.CANCEL;
-                case "Enter":
-                  return a ? o.a.INVALID : o.a.OK;
-                case "Backspace":
-                  return a ? o.a.INVALID : o.a.SECONDARY;
-                case "ArrowUp":
-                  return o.a.DIR_UP;
-                case "ArrowDown":
-                  return o.a.DIR_DOWN;
-                case "ArrowLeft":
-                  return o.a.DIR_LEFT;
-                case "ArrowRight":
-                  return o.a.DIR_RIGHT;
-              }
-              return o.a.INVALID;
-            }),
-            Object(r.c)([i.a], t.prototype, "OnKeyDown", null),
-            Object(r.c)([i.a], t.prototype, "OnKeyUp", null),
-            Object(r.c)([i.a], t.prototype, "Reset", null),
-            t
-          );
-        })(o.c),
-        E = (function (e) {
-          function t(t) {
-            var n = e.call(this) || this;
-            return (
-              (n.m_nAccumulatedMouseMovement = 0),
-              (n.m_bFirstMouseUpdate = !0),
-              n.SetSourceType(o.b.MOUSE),
-              t.addEventListener("mousedown", n.OnMouseDown),
-              t.addEventListener("mousemove", n.OnMouseMove),
-              t.addEventListener("blur", n.Reset),
-              n
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.OnMouseDown = function (e) {
-              e.defaultPrevented || this.OnNavigationTypeChanged(o.b.MOUSE);
-            }),
-            (t.prototype.OnMouseMove = function (e) {
-              if (!e.defaultPrevented) {
-                if (this.m_bFirstMouseUpdate)
-                  return (
-                    (this.m_nLastScreenX = e.screenX),
-                    (this.m_nLastScreenY = e.screenY),
-                    void (this.m_bFirstMouseUpdate = !1)
-                  );
-                (this.m_nAccumulatedMouseMovement +=
-                  Math.abs(e.screenX - this.m_nLastScreenX) +
-                  Math.abs(e.screenY - this.m_nLastScreenY)),
-                  this.m_nAccumulatedMouseMovement > 500 &&
-                    (this.Reset(), this.OnNavigationTypeChanged(o.b.MOUSE));
-              }
-            }),
-            (t.prototype.Reset = function () {
-              (this.m_nAccumulatedMouseMovement = 0),
-                (this.m_bFirstMouseUpdate = !0);
-            }),
-            Object(r.c)([i.a], t.prototype, "OnMouseDown", null),
-            Object(r.c)([i.a], t.prototype, "OnMouseMove", null),
-            Object(r.c)([i.a], t.prototype, "Reset", null),
-            t
-          );
-        })(o.c),
-        h = n("NxAk"),
-        _ = n("lkRc"),
-        b = (function () {
-          function e() {
-            (this.m_GamepadNavigationController = new h.c()),
-              _.d.IN_GAMEPADUI &&
-                (this.m_GamepadNavigationController.RegisterInputSource(
-                  new p()
-                ),
-                this.m_GamepadNavigationController.RegisterInputSource(
-                  new s()
-                )),
-              "dev" == _.d.WEB_UNIVERSE &&
-                (this.m_GamepadNavigationController.RegisterInputSource(
-                  new v(window)
-                ),
-                this.m_GamepadNavigationController.RegisterInputSource(
-                  new E(window)
-                ));
-          }
-          return (
-            (e.prototype.GetNavigationController = function () {
-              return this.m_GamepadNavigationController;
-            }),
-            (e.Get = function () {
-              return (
-                e.s_Singleton ||
-                  ((e.s_Singleton = new e()),
-                  "dev" == _.d.WEB_UNIVERSE &&
-                    (window.g_StoreWebNavStore = e.s_Singleton)),
-                e.s_Singleton
-              );
-            }),
-            e
-          );
-        })();
-      function f() {
-        var e = window.legacyWebFocusNavController;
-        return e || b.Get().GetNavigationController();
-      }
-    },
     WGPV: function (e, t, n) {
       e.exports = {
         SectionContainer: "rss_moderation_SectionContainer_3P-ff",
@@ -428,10 +74,10 @@
           return Mt;
         }),
         n.d(t, "EventDetailView", function () {
-          return Rt;
+          return wt;
         }),
         n.d(t, "Events", function () {
-          return wt;
+          return Rt;
         }),
         n.d(t, "EventSteamGameFestivalDebug", function () {
           return Gt;
@@ -703,8 +349,8 @@
           (e[(e.k_ModRemoveAdultOnlyContent = 7)] =
             "k_ModRemoveAdultOnlyContent");
       })(a || (a = {}));
-      var R = "ModAct",
-        w = (function () {
+      var w = "ModAct",
+        R = (function () {
           function e() {}
           return (
             (e.prototype.ToModString = function () {
@@ -726,7 +372,7 @@
             }),
             (e.prototype.FromString = function (e) {
               var t = e.split("_");
-              if (!t || t[0] !== R) return !1;
+              if (!t || t[0] !== w) return !1;
               switch (
                 ((this.m_moderator = Number(t[1])),
                 (this.m_rtWhen = Number(t[2])),
@@ -777,7 +423,7 @@
               );
             }),
             (e.IsAuditAction = function (e) {
-              return e.startsWith(R);
+              return e.startsWith(w);
             }),
             (e.prototype.SetUpdateSeasonalTags = function (e) {
               return (
@@ -1127,7 +773,7 @@
           o = e.eventModel
             .GetAllTags()
             .filter(function (e) {
-              return w.IsAuditAction(e);
+              return R.IsAuditAction(e);
             })
             .reverse(),
           i = o.length,
@@ -1146,7 +792,7 @@
               (function (t) {
                 var n = e.eventModel;
                 return t.map(function (e) {
-                  var t = new w();
+                  var t = new R();
                   return (
                     t.FromString(e),
                     r.createElement(W, { key: n.GID + e, modAction: t })
@@ -1761,7 +1407,7 @@
                   if (e !== n.BHasTag("adult_only_content")) {
                     var a = new Array(),
                       r = new Array(),
-                      o = new w().SetAdultOnlyContentAction(e);
+                      o = new R().SetAdultOnlyContentAction(e);
                     e
                       ? a.push("adult_only_content")
                       : r.push("adult_only_content"),
@@ -1777,7 +1423,7 @@
                   if (e !== Object(f.g)(n)) {
                     var a = new Array(),
                       r = new Array(),
-                      o = new w().SetReviewAction(e);
+                      o = new R().SetReviewAction(e);
                     e
                       ? (a.push("mod_reviewed"),
                         r.push("mod_require_rereview"),
@@ -2359,7 +2005,7 @@
                         a.value.tags &&
                           a.value.tags.forEach(function (e) {
                             i.push(e);
-                            var t = new w()
+                            var t = new R()
                               .SetUpdateSeasonalTags(e)
                               .ToModString();
                             i.push(t);
@@ -2372,7 +2018,7 @@
                             t.GetAnnouncementGID(),
                             i,
                             o,
-                            new w().SetActionChangeEvent(r)
+                            new R().SetActionChangeEvent(r)
                           ),
                         ]
                       );
@@ -2585,7 +2231,7 @@
                             n.AnnouncementGID,
                             e,
                             t,
-                            new w().SetUpdateSeasonalTags(
+                            new R().SetUpdateSeasonalTags(
                               this.state.bAccept
                                 ? "halloween2019"
                                 : "halloween2019reviewed"
@@ -3780,8 +3426,8 @@
         })(r.Component),
         je = n("6AJf"),
         Me = n("9w6b"),
-        Re = (n("MUT6"), n("BVKn")),
-        we = n("YWVM"),
+        we = (n("MUT6"), n("BVKn")),
+        Re = n("YWVM"),
         Ge = n("r3N9"),
         Le = n("SdTr"),
         ke = n("YNty"),
@@ -3926,7 +3572,7 @@
           var s = g.a.InitFromClanID(i);
           return j.k.is_support ||
             Me.a.Get().GetPartnerEventPermissions(s).can_edit
-            ? r.createElement(we.a, {
+            ? r.createElement(Re.a, {
                 eventModel: o,
                 partnerEventStore: e.partnerEventStore,
                 addtionalAdminButtons: n
@@ -4094,7 +3740,7 @@
             Object(U.f)("#EventAdmin_Moderation_HideEventInSC")
           );
         },
-        ze = Re.a.Get();
+        ze = we.a.Get();
       function We() {
         document.body.classList.contains("events_hub") &&
           document.body.classList.remove("events_hub");
@@ -4250,7 +3896,7 @@
                   adminPanel:
                     j.d.EREALM === b.g.k_ESteamRealmChina
                       ? o.a.createElement(He, { eventModel: d })
-                      : o.a.createElement(we.a, {
+                      : o.a.createElement(Re.a, {
                           eventModel: d,
                           partnerEventStore: ze,
                         }),
@@ -5257,7 +4903,7 @@
             )
           );
         },
-        yt = n("FT/q"),
+        yt = n("hwrv"),
         At = n("4spj"),
         Ot = n("ykc/");
       Qe.a.Init(new qe.a(j.d.WEBAPI_BASE_URL)), L.c.Init();
@@ -5282,15 +4928,15 @@
         Dt = Tt(De),
         jt = Tt(je.b),
         Mt = Tt(i.c),
-        Rt = Tt(Ke),
-        wt = Tt(function (e) {
+        wt = Tt(Ke),
+        Rt = Tt(function (e) {
           var t = Object(Ye.b)(),
             n = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
             a = Math.floor(n.getTime() / 1e3),
             r = e.appid;
           return o.a.createElement(rt, {
             appid: r,
-            partnerEventStore: Re.a.Get(),
+            partnerEventStore: we.a.Get(),
             event_customization: {
               rtime_oldestevent: a,
               exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
@@ -5352,6 +4998,360 @@
             })
           );
         });
+    },
+    hwrv: function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return f;
+      });
+      var a,
+        r = n("mrSG"),
+        o = n("rHSA"),
+        i = n("XxJJ"),
+        l = [
+          { index: 0, type: o.a.OK, category: "action" },
+          { index: 1, type: o.a.CANCEL, category: "action" },
+          { index: 2, type: o.a.SECONDARY, category: "action" },
+          { index: 3, type: o.a.OPTIONS, category: "action" },
+          { index: 4, type: o.a.BUMPER_LEFT, category: "action" },
+          { index: 5, type: o.a.BUMPER_RIGHT, category: "action" },
+          { index: 6, type: o.a.TRIGGER_LEFT, category: "action" },
+          { index: 7, type: o.a.TRIGGER_RIGHT, category: "action" },
+          { index: 8, type: o.a.SELECT, category: "action" },
+          { index: 9, type: o.a.START, category: "action" },
+          { index: 10, type: o.a.LSTICK_CLICK, category: "action" },
+          { index: 11, type: o.a.RSTICK_CLICK, category: "action" },
+          { index: 12, type: o.a.DIR_UP, category: "navigation" },
+          { index: 13, type: o.a.DIR_DOWN, category: "navigation" },
+          { index: 14, type: o.a.DIR_LEFT, category: "navigation" },
+          { index: 15, type: o.a.DIR_RIGHT, category: "navigation" },
+          { index: 16, type: o.a.STEAM_GUIDE, category: "action" },
+          { index: 17, type: o.a.SELECT, category: "action" },
+        ],
+        s = (function (e) {
+          function t() {
+            var t = e.call(this) || this;
+            return (
+              (t.m_rgGamepadStatus = []),
+              t.SetSourceType(o.b.GAMEPAD),
+              window.addEventListener("gamepadconnected", function (e) {
+                t.m_bGamepadDetected ||
+                  (t.OnGamepadDetected(), t.PollGamepads());
+              }),
+              t
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.PollGamepads = function () {
+              for (
+                var e = navigator.getGamepads(), t = !1, n = 0;
+                n < e.length;
+                n++
+              ) {
+                var a = e[n];
+                if (a) {
+                  this.m_rgGamepadStatus[n] ||
+                    (this.m_rgGamepadStatus[n] = { buttons: [] });
+                  for (
+                    var r = this.m_rgGamepadStatus[n], o = 0;
+                    o < l.length;
+                    o++
+                  ) {
+                    var i = l[o],
+                      s = i.index;
+                    a.buttons[s] &&
+                      (a.buttons[s].pressed
+                        ? ((t = !0),
+                          r.buttons[s] ||
+                            ((r.buttons[s] = !0), this.OnButtonDown(i.type)))
+                        : r.buttons[s] &&
+                          (this.OnButtonUp(i.type), (r.buttons[s] = !1)));
+                  }
+                }
+              }
+              document.hasFocus() || t
+                ? requestAnimationFrame(this.PollGamepads)
+                : (console.log("Lost focus - suspending gamepad polling"),
+                  window.addEventListener(
+                    "focusin",
+                    this.OnWindowRegainedFocus
+                  ));
+            }),
+            (t.prototype.OnWindowRegainedFocus = function () {
+              window.removeEventListener("focusin", this.OnWindowRegainedFocus),
+                this.PollGamepads();
+            }),
+            Object(r.c)([i.a], t.prototype, "PollGamepads", null),
+            Object(r.c)([i.a], t.prototype, "OnWindowRegainedFocus", null),
+            t
+          );
+        })(o.c),
+        c = n("kyHq"),
+        d = {
+          A: o.a.OK,
+          B: o.a.CANCEL,
+          X: o.a.SECONDARY,
+          Y: o.a.OPTIONS,
+          SELECT: o.a.SELECT,
+          START: o.a.START,
+          LSHOULDER: o.a.BUMPER_LEFT,
+          RSHOULDER: o.a.BUMPER_RIGHT,
+          LTRIGGER: o.a.TRIGGER_LEFT,
+          RTRIGGER: o.a.TRIGGER_RIGHT,
+          LEFTSTICK_UP: o.a.DIR_UP,
+          LEFTSTICK_RIGHT: o.a.DIR_RIGHT,
+          LEFTSTICK_DOWN: o.a.DIR_DOWN,
+          LEFTSTICK_LEFT: o.a.DIR_LEFT,
+          LEFTSTICK_CLICK: o.a.LSTICK_CLICK,
+          RIGHTSTICK_CLICK: o.a.RSTICK_CLICK,
+          LeftStick: o.a.LSTICK_TOUCH,
+          RightStick: o.a.RSTICK_TOUCH,
+          LeftTrackpad: o.a.LPAD_TOUCH,
+          LeftTrackpadClick: o.a.LPAD_CLICK,
+          RightTrackpad: o.a.RPAD_TOUCH,
+          RightTrackpadClick: o.a.RPAD_CLICK,
+          RearLeftUpper: o.a.REAR_LEFT_UPPER,
+          RearLeftLower: o.a.REAR_LEFT_LOWER,
+          RearRightUpper: o.a.REAR_RIGHT_UPPER,
+          RearRightLower: o.a.REAR_RIGHT_LOWER,
+        },
+        u =
+          (((a = {})[c.h.SystemKey0] = o.a.STEAM_GUIDE),
+          (a[c.h.SystemKey1] = o.a.STEAM_QUICK_MENU),
+          a),
+        p = (function (e) {
+          function t() {
+            var t = e.call(this) || this;
+            return (
+              (t.m_rgControllers = new Map()),
+              "undefined" != typeof SteamClient &&
+                ((t.m_hUnregisterControllerInput = SteamClient.Input.RegisterForControllerInputMessages(
+                  t.HandleControllerInputMessages
+                )),
+                SteamClient.System.UI.RegisterForSystemKeyEvents(
+                  t.HandleSystemKeyEvents
+                )),
+              t.SetSourceType(o.b.GAMEPAD),
+              t
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.HandleSystemKeyEvents = function (e) {
+              var t = u[e.eKey];
+              t && this.OnSystemButtonPress(t, e.nControllerIndex);
+            }),
+            (t.prototype.OnSystemButtonPress = function (e, t) {
+              this.OnButtonDown(e, t), this.OnButtonUp(e, t);
+            }),
+            (t.prototype.GetController = function (e) {
+              var t = this.m_rgControllers.get(e);
+              return (
+                t ||
+                  ((t = { activeButtons: {} }), this.m_rgControllers.set(e, t)),
+                t
+              );
+            }),
+            (t.prototype.HandleControllerInputMessages = function (e) {
+              for (var t = 0, n = e; t < n.length; t++) {
+                var a = n[t],
+                  r = d[a.strActionName];
+                if (null != r) {
+                  var o = this.GetController(a.nController);
+                  a.bState && !o.activeButtons[r]
+                    ? ((o.activeButtons[r] = !0),
+                      this.OnButtonDown(r, a.nController))
+                    : !a.bState &&
+                      o.activeButtons[r] &&
+                      ((o.activeButtons[r] = !1),
+                      this.OnButtonUp(r, a.nController));
+                }
+              }
+            }),
+            Object(r.c)([i.a], t.prototype, "HandleSystemKeyEvents", null),
+            Object(r.c)(
+              [i.a],
+              t.prototype,
+              "HandleControllerInputMessages",
+              null
+            ),
+            t
+          );
+        })(o.c),
+        m = n("X3Ds"),
+        v = (function (e) {
+          function t(t) {
+            var n = e.call(this) || this;
+            return (
+              (n.m_lastButtonDown = o.a.INVALID),
+              n.SetSourceType(o.b.KEYBOARD),
+              t.addEventListener("keydown", n.OnKeyDown),
+              t.addEventListener("keyup", n.OnKeyUp),
+              t.addEventListener("blur", n.Reset),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.OnKeyDown = function (e) {
+              var t = this.TranslateKey(e);
+              t != o.a.INVALID &&
+                t != this.m_lastButtonDown &&
+                (this.Reset(),
+                this.OnButtonDown(t),
+                (this.m_lastButtonDown = t),
+                e.preventDefault());
+            }),
+            (t.prototype.OnKeyUp = function (e) {
+              var t = this.TranslateKey(e);
+              t != o.a.INVALID &&
+                (this.OnButtonUp(t),
+                (this.m_lastButtonDown = o.a.INVALID),
+                e.preventDefault());
+            }),
+            (t.prototype.Reset = function () {
+              this.m_lastButtonDown != o.a.INVALID &&
+                (this.OnButtonUp(this.m_lastButtonDown),
+                (this.m_lastButtonDown = o.a.INVALID));
+            }),
+            (t.prototype.TranslateKey = function (e) {
+              var t = e.code,
+                n = e.ctrlKey,
+                a =
+                  m.q(e.target) &&
+                  ("INPUT" === e.target.nodeName ||
+                    "TEXTAREA" === e.target.nodeName);
+              if (n)
+                switch (t) {
+                  case "Digit1":
+                    return o.a.STEAM_GUIDE;
+                  case "Digit2":
+                    return o.a.STEAM_QUICK_MENU;
+                  case "Digit3":
+                    return o.a.SELECT;
+                  case "Digit4":
+                    return o.a.BUMPER_LEFT;
+                  case "Digit5":
+                    return o.a.BUMPER_RIGHT;
+                  case "Digit6":
+                    return o.a.LSTICK_CLICK;
+                  case "Digit7":
+                    return o.a.RSTICK_CLICK;
+                  case "Digit8":
+                    return o.a.OPTIONS;
+                  case "Digit9":
+                    return o.a.SELECT;
+                  case "Digit0":
+                    return o.a.START;
+                }
+              switch (t) {
+                case "Escape":
+                  return o.a.CANCEL;
+                case "Enter":
+                  return a ? o.a.INVALID : o.a.OK;
+                case "Backspace":
+                  return a ? o.a.INVALID : o.a.SECONDARY;
+                case "ArrowUp":
+                  return o.a.DIR_UP;
+                case "ArrowDown":
+                  return o.a.DIR_DOWN;
+                case "ArrowLeft":
+                  return o.a.DIR_LEFT;
+                case "ArrowRight":
+                  return o.a.DIR_RIGHT;
+              }
+              return o.a.INVALID;
+            }),
+            Object(r.c)([i.a], t.prototype, "OnKeyDown", null),
+            Object(r.c)([i.a], t.prototype, "OnKeyUp", null),
+            Object(r.c)([i.a], t.prototype, "Reset", null),
+            t
+          );
+        })(o.c),
+        E = (function (e) {
+          function t(t) {
+            var n = e.call(this) || this;
+            return (
+              (n.m_nAccumulatedMouseMovement = 0),
+              (n.m_bFirstMouseUpdate = !0),
+              n.SetSourceType(o.b.MOUSE),
+              t.addEventListener("mousedown", n.OnMouseDown),
+              t.addEventListener("mousemove", n.OnMouseMove),
+              t.addEventListener("blur", n.Reset),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.OnMouseDown = function (e) {
+              e.defaultPrevented || this.OnNavigationTypeChanged(o.b.MOUSE);
+            }),
+            (t.prototype.OnMouseMove = function (e) {
+              if (!e.defaultPrevented) {
+                if (this.m_bFirstMouseUpdate)
+                  return (
+                    (this.m_nLastScreenX = e.screenX),
+                    (this.m_nLastScreenY = e.screenY),
+                    void (this.m_bFirstMouseUpdate = !1)
+                  );
+                (this.m_nAccumulatedMouseMovement +=
+                  Math.abs(e.screenX - this.m_nLastScreenX) +
+                  Math.abs(e.screenY - this.m_nLastScreenY)),
+                  this.m_nAccumulatedMouseMovement > 500 &&
+                    (this.Reset(), this.OnNavigationTypeChanged(o.b.MOUSE));
+              }
+            }),
+            (t.prototype.Reset = function () {
+              (this.m_nAccumulatedMouseMovement = 0),
+                (this.m_bFirstMouseUpdate = !0);
+            }),
+            Object(r.c)([i.a], t.prototype, "OnMouseDown", null),
+            Object(r.c)([i.a], t.prototype, "OnMouseMove", null),
+            Object(r.c)([i.a], t.prototype, "Reset", null),
+            t
+          );
+        })(o.c),
+        h = n("NxAk"),
+        _ = n("lkRc"),
+        b = (function () {
+          function e() {
+            (this.m_GamepadNavigationController = new h.c()),
+              _.d.IN_GAMEPADUI &&
+                (this.m_GamepadNavigationController.RegisterInputSource(
+                  new p()
+                ),
+                this.m_GamepadNavigationController.RegisterInputSource(
+                  new s()
+                )),
+              "dev" == _.d.WEB_UNIVERSE &&
+                (this.m_GamepadNavigationController.RegisterInputSource(
+                  new v(window)
+                ),
+                this.m_GamepadNavigationController.RegisterInputSource(
+                  new E(window)
+                ));
+          }
+          return (
+            (e.prototype.GetNavigationController = function () {
+              return this.m_GamepadNavigationController;
+            }),
+            (e.Get = function () {
+              return (
+                e.s_Singleton ||
+                  ((e.s_Singleton = new e()),
+                  "dev" == _.d.WEB_UNIVERSE &&
+                    (window.g_StoreWebNavStore = e.s_Singleton)),
+                e.s_Singleton
+              );
+            }),
+            e
+          );
+        })();
+      function f() {
+        var e = window.legacyWebFocusNavController;
+        return e || b.Get().GetNavigationController();
+      }
     },
     vNkc: function (e, t, n) {
       e.exports = { Error: "eventbackfill_Error_1eWgI" };

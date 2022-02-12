@@ -9,7 +9,7 @@
         a.d(t, "CuratorReviewList", function () {
           return B;
         });
-      var n = a("FT/q"),
+      var n = a("hwrv"),
         r = a("q1tI"),
         o = a.n(r),
         i = a("av+R"),
@@ -179,7 +179,7 @@
               o.a.createElement(
                 "div",
                 { className: N.a.CuratorListCtn },
-                o.a.createElement(F, { listDetails: n }),
+                o.a.createElement(j, { listDetails: n }),
                 o.a.createElement(
                   c.a,
                   {
@@ -190,7 +190,7 @@
                     "flow-children": "grid",
                   },
                   p.map(function (e, t) {
-                    return o.a.createElement(j, {
+                    return o.a.createElement(F, {
                       key: "rec_" + e.recommended_app.appid,
                       item: e,
                       listDetails: n,
@@ -233,7 +233,7 @@
           )
         );
       }
-      function F(e) {
+      function j(e) {
         var t = e.listDetails,
           a = Object(g.d)(t),
           n = Object(m.h)("showlisttitle", "application_config"),
@@ -282,7 +282,7 @@
           p && o.a.createElement(K, { url: p })
         );
       }
-      var j = Object(d.a)(function (e) {
+      var F = Object(d.a)(function (e) {
         var t,
           a,
           n = e.item,
@@ -491,7 +491,7 @@
     C4Er: function (e, t, a) {
       e.exports = { BreadContainer: "curatorminiheader_BreadContainer_GkVFI" };
     },
-    "FT/q": function (e, t, a) {
+    hwrv: function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
         return I;

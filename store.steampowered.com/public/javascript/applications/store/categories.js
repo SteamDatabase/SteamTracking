@@ -3,7 +3,156 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [5],
   {
-    "FT/q": function (e, t, n) {
+    OVk1: function (e, t, n) {
+      "use strict";
+      n.r(t);
+      var a = n("mrSG"),
+        o = n("hwrv"),
+        r = n("q1tI"),
+        i = n.n(r),
+        s = n("av+R"),
+        c = n("ykc/"),
+        u = n("qDk6"),
+        l = n("Jz9t"),
+        p = n("j+5p"),
+        d = (n("kKgT"), n("MnIK")),
+        g = n("exH9"),
+        m = n("lkRc"),
+        y = n("jIbu"),
+        _ =
+          (n("3+zv"),
+          (function () {
+            function e() {
+              this.m_rgSections = Object(m.h)(
+                "categories",
+                "application_config"
+              );
+            }
+            return (
+              (e.prototype.GetSections = function () {
+                return this.m_rgSections;
+              }),
+              (e.Get = function () {
+                return (
+                  e.s_singleton || (e.s_singleton = new e()), e.s_singleton
+                );
+              }),
+              e
+            );
+          })());
+      function E(e) {
+        var t = e.section;
+        e.autoFocus;
+        return i.a.createElement(
+          "div",
+          { className: y.CategorySection },
+          i.a.createElement(
+            "span",
+            { className: y.CategorySectionName },
+            t.name
+          ),
+          i.a.createElement(
+            l.a,
+            {
+              className: y.CategoriesCtn,
+              scrollDirection: "x",
+              navEntryPreferPosition: p.c.MAINTAIN_X,
+            },
+            t.categories.map(function (t, n) {
+              return i.a.createElement(R, {
+                key: "category" + t.name,
+                category: t,
+                autoFocus: e.autoFocus && 0 === n,
+              });
+            })
+          )
+        );
+      }
+      function R(e) {
+        var t,
+          n = e.category;
+        return i.a.createElement(
+          u.a,
+          { focusableIfNoChildren: !0, autoFocus: e.autoFocus },
+          i.a.createElement(
+            d.a,
+            {
+              placeholderWidth: "110px",
+              placeholderHeight: "150px",
+              bHorizontal: !0,
+            },
+            i.a.createElement(
+              s.c,
+              {
+                href: m.d.STORE_BASE_URL + n.url,
+                className: Object(g.a)(
+                  ((t = {}),
+                  (t[y.Category] = !0),
+                  (t[y.TopLevelCategory] = n.is_toplevel_genre),
+                  t)
+                ),
+              },
+              i.a.createElement(
+                "span",
+                { className: y.CategoryName },
+                i.a.createElement("span", null, n.name)
+              ),
+              i.a.createElement(C, Object(a.a)({}, e))
+            )
+          )
+        );
+      }
+      function C(e) {
+        var t = e.category;
+        return t && t.image
+          ? i.a.createElement(
+              "div",
+              { className: y.GridOuter },
+              i.a.createElement(
+                "div",
+                { className: y.Grid },
+                i.a.createElement("img", {
+                  src: "data:image/png;base64," + t.image,
+                })
+              )
+            )
+          : null;
+      }
+      t.default = function () {
+        var e = (function () {
+            var e = _.Get(),
+              t = Object(r.useState)(e.GetSections()),
+              n = t[0];
+            return t[1], { sections: n };
+          })().sections,
+          t = Object(o.a)(),
+          n = i.a.useRef();
+        return (
+          i.a.useEffect(function () {
+            var e;
+            return null === (e = n.current) || void 0 === e
+              ? void 0
+              : e.Activate(!0);
+          }, []),
+          i.a.createElement(
+            c.a,
+            { navID: "CategoriesApp", NavigationManager: t, navTreeRef: n },
+            i.a.createElement(
+              "div",
+              { className: y.CategorySectionsCtn },
+              e.map(function (e, t) {
+                return i.a.createElement(E, {
+                  key: "section" + e.name,
+                  section: e,
+                  autoFocus: 0 == t,
+                });
+              })
+            )
+          )
+        );
+      };
+    },
+    hwrv: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
         return C;
@@ -356,155 +505,6 @@
         var e = window.legacyWebFocusNavController;
         return e || R.Get().GetNavigationController();
       }
-    },
-    OVk1: function (e, t, n) {
-      "use strict";
-      n.r(t);
-      var a = n("mrSG"),
-        o = n("FT/q"),
-        r = n("q1tI"),
-        i = n.n(r),
-        s = n("av+R"),
-        c = n("ykc/"),
-        u = n("qDk6"),
-        l = n("Jz9t"),
-        p = n("j+5p"),
-        d = (n("kKgT"), n("MnIK")),
-        g = n("exH9"),
-        m = n("lkRc"),
-        y = n("jIbu"),
-        _ =
-          (n("3+zv"),
-          (function () {
-            function e() {
-              this.m_rgSections = Object(m.h)(
-                "categories",
-                "application_config"
-              );
-            }
-            return (
-              (e.prototype.GetSections = function () {
-                return this.m_rgSections;
-              }),
-              (e.Get = function () {
-                return (
-                  e.s_singleton || (e.s_singleton = new e()), e.s_singleton
-                );
-              }),
-              e
-            );
-          })());
-      function E(e) {
-        var t = e.section;
-        e.autoFocus;
-        return i.a.createElement(
-          "div",
-          { className: y.CategorySection },
-          i.a.createElement(
-            "span",
-            { className: y.CategorySectionName },
-            t.name
-          ),
-          i.a.createElement(
-            l.a,
-            {
-              className: y.CategoriesCtn,
-              scrollDirection: "x",
-              navEntryPreferPosition: p.c.MAINTAIN_X,
-            },
-            t.categories.map(function (t, n) {
-              return i.a.createElement(R, {
-                key: "category" + t.name,
-                category: t,
-                autoFocus: e.autoFocus && 0 === n,
-              });
-            })
-          )
-        );
-      }
-      function R(e) {
-        var t,
-          n = e.category;
-        return i.a.createElement(
-          u.a,
-          { focusableIfNoChildren: !0, autoFocus: e.autoFocus },
-          i.a.createElement(
-            d.a,
-            {
-              placeholderWidth: "110px",
-              placeholderHeight: "150px",
-              bHorizontal: !0,
-            },
-            i.a.createElement(
-              s.c,
-              {
-                href: m.d.STORE_BASE_URL + n.url,
-                className: Object(g.a)(
-                  ((t = {}),
-                  (t[y.Category] = !0),
-                  (t[y.TopLevelCategory] = n.is_toplevel_genre),
-                  t)
-                ),
-              },
-              i.a.createElement(
-                "span",
-                { className: y.CategoryName },
-                i.a.createElement("span", null, n.name)
-              ),
-              i.a.createElement(C, Object(a.a)({}, e))
-            )
-          )
-        );
-      }
-      function C(e) {
-        var t = e.category;
-        return t && t.image
-          ? i.a.createElement(
-              "div",
-              { className: y.GridOuter },
-              i.a.createElement(
-                "div",
-                { className: y.Grid },
-                i.a.createElement("img", {
-                  src: "data:image/png;base64," + t.image,
-                })
-              )
-            )
-          : null;
-      }
-      t.default = function () {
-        var e = (function () {
-            var e = _.Get(),
-              t = Object(r.useState)(e.GetSections()),
-              n = t[0];
-            return t[1], { sections: n };
-          })().sections,
-          t = Object(o.a)(),
-          n = i.a.useRef();
-        return (
-          i.a.useEffect(function () {
-            var e;
-            return null === (e = n.current) || void 0 === e
-              ? void 0
-              : e.Activate(!0);
-          }, []),
-          i.a.createElement(
-            c.a,
-            { navID: "CategoriesApp", NavigationManager: t, navTreeRef: n },
-            i.a.createElement(
-              "div",
-              { className: y.CategorySectionsCtn },
-              e.map(function (e, t) {
-                return i.a.createElement(E, {
-                  key: "section" + e.name,
-                  section: e,
-                  autoFocus: 0 == t,
-                });
-              })
-            )
-          )
-        );
-      };
     },
     jIbu: function (e, t, n) {
       e.exports = {

@@ -3,360 +3,6 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [3],
   {
-    "FT/q": function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return b;
-      });
-      var r,
-        i = n("mrSG"),
-        o = n("rHSA"),
-        a = n("XxJJ"),
-        s = [
-          { index: 0, type: o.a.OK, category: "action" },
-          { index: 1, type: o.a.CANCEL, category: "action" },
-          { index: 2, type: o.a.SECONDARY, category: "action" },
-          { index: 3, type: o.a.OPTIONS, category: "action" },
-          { index: 4, type: o.a.BUMPER_LEFT, category: "action" },
-          { index: 5, type: o.a.BUMPER_RIGHT, category: "action" },
-          { index: 6, type: o.a.TRIGGER_LEFT, category: "action" },
-          { index: 7, type: o.a.TRIGGER_RIGHT, category: "action" },
-          { index: 8, type: o.a.SELECT, category: "action" },
-          { index: 9, type: o.a.START, category: "action" },
-          { index: 10, type: o.a.LSTICK_CLICK, category: "action" },
-          { index: 11, type: o.a.RSTICK_CLICK, category: "action" },
-          { index: 12, type: o.a.DIR_UP, category: "navigation" },
-          { index: 13, type: o.a.DIR_DOWN, category: "navigation" },
-          { index: 14, type: o.a.DIR_LEFT, category: "navigation" },
-          { index: 15, type: o.a.DIR_RIGHT, category: "navigation" },
-          { index: 16, type: o.a.STEAM_GUIDE, category: "action" },
-          { index: 17, type: o.a.SELECT, category: "action" },
-        ],
-        c = (function (e) {
-          function t() {
-            var t = e.call(this) || this;
-            return (
-              (t.m_rgGamepadStatus = []),
-              t.SetSourceType(o.b.GAMEPAD),
-              window.addEventListener("gamepadconnected", function (e) {
-                t.m_bGamepadDetected ||
-                  (t.OnGamepadDetected(), t.PollGamepads());
-              }),
-              t
-            );
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.PollGamepads = function () {
-              for (
-                var e = navigator.getGamepads(), t = !1, n = 0;
-                n < e.length;
-                n++
-              ) {
-                var r = e[n];
-                if (r) {
-                  this.m_rgGamepadStatus[n] ||
-                    (this.m_rgGamepadStatus[n] = { buttons: [] });
-                  for (
-                    var i = this.m_rgGamepadStatus[n], o = 0;
-                    o < s.length;
-                    o++
-                  ) {
-                    var a = s[o],
-                      c = a.index;
-                    r.buttons[c] &&
-                      (r.buttons[c].pressed
-                        ? ((t = !0),
-                          i.buttons[c] ||
-                            ((i.buttons[c] = !0), this.OnButtonDown(a.type)))
-                        : i.buttons[c] &&
-                          (this.OnButtonUp(a.type), (i.buttons[c] = !1)));
-                  }
-                }
-              }
-              document.hasFocus() || t
-                ? requestAnimationFrame(this.PollGamepads)
-                : (console.log("Lost focus - suspending gamepad polling"),
-                  window.addEventListener(
-                    "focusin",
-                    this.OnWindowRegainedFocus
-                  ));
-            }),
-            (t.prototype.OnWindowRegainedFocus = function () {
-              window.removeEventListener("focusin", this.OnWindowRegainedFocus),
-                this.PollGamepads();
-            }),
-            Object(i.c)([a.a], t.prototype, "PollGamepads", null),
-            Object(i.c)([a.a], t.prototype, "OnWindowRegainedFocus", null),
-            t
-          );
-        })(o.c),
-        l = n("kyHq"),
-        u = {
-          A: o.a.OK,
-          B: o.a.CANCEL,
-          X: o.a.SECONDARY,
-          Y: o.a.OPTIONS,
-          SELECT: o.a.SELECT,
-          START: o.a.START,
-          LSHOULDER: o.a.BUMPER_LEFT,
-          RSHOULDER: o.a.BUMPER_RIGHT,
-          LTRIGGER: o.a.TRIGGER_LEFT,
-          RTRIGGER: o.a.TRIGGER_RIGHT,
-          LEFTSTICK_UP: o.a.DIR_UP,
-          LEFTSTICK_RIGHT: o.a.DIR_RIGHT,
-          LEFTSTICK_DOWN: o.a.DIR_DOWN,
-          LEFTSTICK_LEFT: o.a.DIR_LEFT,
-          LEFTSTICK_CLICK: o.a.LSTICK_CLICK,
-          RIGHTSTICK_CLICK: o.a.RSTICK_CLICK,
-          LeftStick: o.a.LSTICK_TOUCH,
-          RightStick: o.a.RSTICK_TOUCH,
-          LeftTrackpad: o.a.LPAD_TOUCH,
-          LeftTrackpadClick: o.a.LPAD_CLICK,
-          RightTrackpad: o.a.RPAD_TOUCH,
-          RightTrackpadClick: o.a.RPAD_CLICK,
-          RearLeftUpper: o.a.REAR_LEFT_UPPER,
-          RearLeftLower: o.a.REAR_LEFT_LOWER,
-          RearRightUpper: o.a.REAR_RIGHT_UPPER,
-          RearRightLower: o.a.REAR_RIGHT_LOWER,
-        },
-        _ =
-          (((r = {})[l.h.SystemKey0] = o.a.STEAM_GUIDE),
-          (r[l.h.SystemKey1] = o.a.STEAM_QUICK_MENU),
-          r),
-        f = (function (e) {
-          function t() {
-            var t = e.call(this) || this;
-            return (
-              (t.m_rgControllers = new Map()),
-              "undefined" != typeof SteamClient &&
-                ((t.m_hUnregisterControllerInput = SteamClient.Input.RegisterForControllerInputMessages(
-                  t.HandleControllerInputMessages
-                )),
-                SteamClient.System.UI.RegisterForSystemKeyEvents(
-                  t.HandleSystemKeyEvents
-                )),
-              t.SetSourceType(o.b.GAMEPAD),
-              t
-            );
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.HandleSystemKeyEvents = function (e) {
-              var t = _[e.eKey];
-              t && this.OnSystemButtonPress(t, e.nControllerIndex);
-            }),
-            (t.prototype.OnSystemButtonPress = function (e, t) {
-              this.OnButtonDown(e, t), this.OnButtonUp(e, t);
-            }),
-            (t.prototype.GetController = function (e) {
-              var t = this.m_rgControllers.get(e);
-              return (
-                t ||
-                  ((t = { activeButtons: {} }), this.m_rgControllers.set(e, t)),
-                t
-              );
-            }),
-            (t.prototype.HandleControllerInputMessages = function (e) {
-              for (var t = 0, n = e; t < n.length; t++) {
-                var r = n[t],
-                  i = u[r.strActionName];
-                if (null != i) {
-                  var o = this.GetController(r.nController);
-                  r.bState && !o.activeButtons[i]
-                    ? ((o.activeButtons[i] = !0),
-                      this.OnButtonDown(i, r.nController))
-                    : !r.bState &&
-                      o.activeButtons[i] &&
-                      ((o.activeButtons[i] = !1),
-                      this.OnButtonUp(i, r.nController));
-                }
-              }
-            }),
-            Object(i.c)([a.a], t.prototype, "HandleSystemKeyEvents", null),
-            Object(i.c)(
-              [a.a],
-              t.prototype,
-              "HandleControllerInputMessages",
-              null
-            ),
-            t
-          );
-        })(o.c),
-        m = n("X3Ds"),
-        p = (function (e) {
-          function t(t) {
-            var n = e.call(this) || this;
-            return (
-              (n.m_lastButtonDown = o.a.INVALID),
-              n.SetSourceType(o.b.KEYBOARD),
-              t.addEventListener("keydown", n.OnKeyDown),
-              t.addEventListener("keyup", n.OnKeyUp),
-              t.addEventListener("blur", n.Reset),
-              n
-            );
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.OnKeyDown = function (e) {
-              var t = this.TranslateKey(e);
-              t != o.a.INVALID &&
-                t != this.m_lastButtonDown &&
-                (this.Reset(),
-                this.OnButtonDown(t),
-                (this.m_lastButtonDown = t),
-                e.preventDefault());
-            }),
-            (t.prototype.OnKeyUp = function (e) {
-              var t = this.TranslateKey(e);
-              t != o.a.INVALID &&
-                (this.OnButtonUp(t),
-                (this.m_lastButtonDown = o.a.INVALID),
-                e.preventDefault());
-            }),
-            (t.prototype.Reset = function () {
-              this.m_lastButtonDown != o.a.INVALID &&
-                (this.OnButtonUp(this.m_lastButtonDown),
-                (this.m_lastButtonDown = o.a.INVALID));
-            }),
-            (t.prototype.TranslateKey = function (e) {
-              var t = e.code,
-                n = e.ctrlKey,
-                r =
-                  m.q(e.target) &&
-                  ("INPUT" === e.target.nodeName ||
-                    "TEXTAREA" === e.target.nodeName);
-              if (n)
-                switch (t) {
-                  case "Digit1":
-                    return o.a.STEAM_GUIDE;
-                  case "Digit2":
-                    return o.a.STEAM_QUICK_MENU;
-                  case "Digit3":
-                    return o.a.SELECT;
-                  case "Digit4":
-                    return o.a.BUMPER_LEFT;
-                  case "Digit5":
-                    return o.a.BUMPER_RIGHT;
-                  case "Digit6":
-                    return o.a.LSTICK_CLICK;
-                  case "Digit7":
-                    return o.a.RSTICK_CLICK;
-                  case "Digit8":
-                    return o.a.OPTIONS;
-                  case "Digit9":
-                    return o.a.SELECT;
-                  case "Digit0":
-                    return o.a.START;
-                }
-              switch (t) {
-                case "Escape":
-                  return o.a.CANCEL;
-                case "Enter":
-                  return r ? o.a.INVALID : o.a.OK;
-                case "Backspace":
-                  return r ? o.a.INVALID : o.a.SECONDARY;
-                case "ArrowUp":
-                  return o.a.DIR_UP;
-                case "ArrowDown":
-                  return o.a.DIR_DOWN;
-                case "ArrowLeft":
-                  return o.a.DIR_LEFT;
-                case "ArrowRight":
-                  return o.a.DIR_RIGHT;
-              }
-              return o.a.INVALID;
-            }),
-            Object(i.c)([a.a], t.prototype, "OnKeyDown", null),
-            Object(i.c)([a.a], t.prototype, "OnKeyUp", null),
-            Object(i.c)([a.a], t.prototype, "Reset", null),
-            t
-          );
-        })(o.c),
-        y = (function (e) {
-          function t(t) {
-            var n = e.call(this) || this;
-            return (
-              (n.m_nAccumulatedMouseMovement = 0),
-              (n.m_bFirstMouseUpdate = !0),
-              n.SetSourceType(o.b.MOUSE),
-              t.addEventListener("mousedown", n.OnMouseDown),
-              t.addEventListener("mousemove", n.OnMouseMove),
-              t.addEventListener("blur", n.Reset),
-              n
-            );
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.OnMouseDown = function (e) {
-              e.defaultPrevented || this.OnNavigationTypeChanged(o.b.MOUSE);
-            }),
-            (t.prototype.OnMouseMove = function (e) {
-              if (!e.defaultPrevented) {
-                if (this.m_bFirstMouseUpdate)
-                  return (
-                    (this.m_nLastScreenX = e.screenX),
-                    (this.m_nLastScreenY = e.screenY),
-                    void (this.m_bFirstMouseUpdate = !1)
-                  );
-                (this.m_nAccumulatedMouseMovement +=
-                  Math.abs(e.screenX - this.m_nLastScreenX) +
-                  Math.abs(e.screenY - this.m_nLastScreenY)),
-                  this.m_nAccumulatedMouseMovement > 500 &&
-                    (this.Reset(), this.OnNavigationTypeChanged(o.b.MOUSE));
-              }
-            }),
-            (t.prototype.Reset = function () {
-              (this.m_nAccumulatedMouseMovement = 0),
-                (this.m_bFirstMouseUpdate = !0);
-            }),
-            Object(i.c)([a.a], t.prototype, "OnMouseDown", null),
-            Object(i.c)([a.a], t.prototype, "OnMouseMove", null),
-            Object(i.c)([a.a], t.prototype, "Reset", null),
-            t
-          );
-        })(o.c),
-        d = n("NxAk"),
-        g = n("lkRc"),
-        h = (function () {
-          function e() {
-            (this.m_GamepadNavigationController = new d.c()),
-              g.d.IN_GAMEPADUI &&
-                (this.m_GamepadNavigationController.RegisterInputSource(
-                  new f()
-                ),
-                this.m_GamepadNavigationController.RegisterInputSource(
-                  new c()
-                )),
-              "dev" == g.d.WEB_UNIVERSE &&
-                (this.m_GamepadNavigationController.RegisterInputSource(
-                  new p(window)
-                ),
-                this.m_GamepadNavigationController.RegisterInputSource(
-                  new y(window)
-                ));
-          }
-          return (
-            (e.prototype.GetNavigationController = function () {
-              return this.m_GamepadNavigationController;
-            }),
-            (e.Get = function () {
-              return (
-                e.s_Singleton ||
-                  ((e.s_Singleton = new e()),
-                  "dev" == g.d.WEB_UNIVERSE &&
-                    (window.g_StoreWebNavStore = e.s_Singleton)),
-                e.s_Singleton
-              );
-            }),
-            e
-          );
-        })();
-      function b() {
-        var e = window.legacyWebFocusNavController;
-        return e || h.Get().GetNavigationController();
-      }
-    },
     byIC: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -995,7 +641,7 @@
         S = n("nNQW"),
         k = n("exH9"),
         B = n("qDk6"),
-        R = n("FT/q"),
+        R = n("hwrv"),
         N = n("ykc/"),
         j = n("av+R");
       var w = Object(O.a)(function () {
@@ -1442,6 +1088,360 @@
           )
         );
       };
+    },
+    hwrv: function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return b;
+      });
+      var r,
+        i = n("mrSG"),
+        o = n("rHSA"),
+        a = n("XxJJ"),
+        s = [
+          { index: 0, type: o.a.OK, category: "action" },
+          { index: 1, type: o.a.CANCEL, category: "action" },
+          { index: 2, type: o.a.SECONDARY, category: "action" },
+          { index: 3, type: o.a.OPTIONS, category: "action" },
+          { index: 4, type: o.a.BUMPER_LEFT, category: "action" },
+          { index: 5, type: o.a.BUMPER_RIGHT, category: "action" },
+          { index: 6, type: o.a.TRIGGER_LEFT, category: "action" },
+          { index: 7, type: o.a.TRIGGER_RIGHT, category: "action" },
+          { index: 8, type: o.a.SELECT, category: "action" },
+          { index: 9, type: o.a.START, category: "action" },
+          { index: 10, type: o.a.LSTICK_CLICK, category: "action" },
+          { index: 11, type: o.a.RSTICK_CLICK, category: "action" },
+          { index: 12, type: o.a.DIR_UP, category: "navigation" },
+          { index: 13, type: o.a.DIR_DOWN, category: "navigation" },
+          { index: 14, type: o.a.DIR_LEFT, category: "navigation" },
+          { index: 15, type: o.a.DIR_RIGHT, category: "navigation" },
+          { index: 16, type: o.a.STEAM_GUIDE, category: "action" },
+          { index: 17, type: o.a.SELECT, category: "action" },
+        ],
+        c = (function (e) {
+          function t() {
+            var t = e.call(this) || this;
+            return (
+              (t.m_rgGamepadStatus = []),
+              t.SetSourceType(o.b.GAMEPAD),
+              window.addEventListener("gamepadconnected", function (e) {
+                t.m_bGamepadDetected ||
+                  (t.OnGamepadDetected(), t.PollGamepads());
+              }),
+              t
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.prototype.PollGamepads = function () {
+              for (
+                var e = navigator.getGamepads(), t = !1, n = 0;
+                n < e.length;
+                n++
+              ) {
+                var r = e[n];
+                if (r) {
+                  this.m_rgGamepadStatus[n] ||
+                    (this.m_rgGamepadStatus[n] = { buttons: [] });
+                  for (
+                    var i = this.m_rgGamepadStatus[n], o = 0;
+                    o < s.length;
+                    o++
+                  ) {
+                    var a = s[o],
+                      c = a.index;
+                    r.buttons[c] &&
+                      (r.buttons[c].pressed
+                        ? ((t = !0),
+                          i.buttons[c] ||
+                            ((i.buttons[c] = !0), this.OnButtonDown(a.type)))
+                        : i.buttons[c] &&
+                          (this.OnButtonUp(a.type), (i.buttons[c] = !1)));
+                  }
+                }
+              }
+              document.hasFocus() || t
+                ? requestAnimationFrame(this.PollGamepads)
+                : (console.log("Lost focus - suspending gamepad polling"),
+                  window.addEventListener(
+                    "focusin",
+                    this.OnWindowRegainedFocus
+                  ));
+            }),
+            (t.prototype.OnWindowRegainedFocus = function () {
+              window.removeEventListener("focusin", this.OnWindowRegainedFocus),
+                this.PollGamepads();
+            }),
+            Object(i.c)([a.a], t.prototype, "PollGamepads", null),
+            Object(i.c)([a.a], t.prototype, "OnWindowRegainedFocus", null),
+            t
+          );
+        })(o.c),
+        l = n("kyHq"),
+        u = {
+          A: o.a.OK,
+          B: o.a.CANCEL,
+          X: o.a.SECONDARY,
+          Y: o.a.OPTIONS,
+          SELECT: o.a.SELECT,
+          START: o.a.START,
+          LSHOULDER: o.a.BUMPER_LEFT,
+          RSHOULDER: o.a.BUMPER_RIGHT,
+          LTRIGGER: o.a.TRIGGER_LEFT,
+          RTRIGGER: o.a.TRIGGER_RIGHT,
+          LEFTSTICK_UP: o.a.DIR_UP,
+          LEFTSTICK_RIGHT: o.a.DIR_RIGHT,
+          LEFTSTICK_DOWN: o.a.DIR_DOWN,
+          LEFTSTICK_LEFT: o.a.DIR_LEFT,
+          LEFTSTICK_CLICK: o.a.LSTICK_CLICK,
+          RIGHTSTICK_CLICK: o.a.RSTICK_CLICK,
+          LeftStick: o.a.LSTICK_TOUCH,
+          RightStick: o.a.RSTICK_TOUCH,
+          LeftTrackpad: o.a.LPAD_TOUCH,
+          LeftTrackpadClick: o.a.LPAD_CLICK,
+          RightTrackpad: o.a.RPAD_TOUCH,
+          RightTrackpadClick: o.a.RPAD_CLICK,
+          RearLeftUpper: o.a.REAR_LEFT_UPPER,
+          RearLeftLower: o.a.REAR_LEFT_LOWER,
+          RearRightUpper: o.a.REAR_RIGHT_UPPER,
+          RearRightLower: o.a.REAR_RIGHT_LOWER,
+        },
+        _ =
+          (((r = {})[l.h.SystemKey0] = o.a.STEAM_GUIDE),
+          (r[l.h.SystemKey1] = o.a.STEAM_QUICK_MENU),
+          r),
+        f = (function (e) {
+          function t() {
+            var t = e.call(this) || this;
+            return (
+              (t.m_rgControllers = new Map()),
+              "undefined" != typeof SteamClient &&
+                ((t.m_hUnregisterControllerInput = SteamClient.Input.RegisterForControllerInputMessages(
+                  t.HandleControllerInputMessages
+                )),
+                SteamClient.System.UI.RegisterForSystemKeyEvents(
+                  t.HandleSystemKeyEvents
+                )),
+              t.SetSourceType(o.b.GAMEPAD),
+              t
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.prototype.HandleSystemKeyEvents = function (e) {
+              var t = _[e.eKey];
+              t && this.OnSystemButtonPress(t, e.nControllerIndex);
+            }),
+            (t.prototype.OnSystemButtonPress = function (e, t) {
+              this.OnButtonDown(e, t), this.OnButtonUp(e, t);
+            }),
+            (t.prototype.GetController = function (e) {
+              var t = this.m_rgControllers.get(e);
+              return (
+                t ||
+                  ((t = { activeButtons: {} }), this.m_rgControllers.set(e, t)),
+                t
+              );
+            }),
+            (t.prototype.HandleControllerInputMessages = function (e) {
+              for (var t = 0, n = e; t < n.length; t++) {
+                var r = n[t],
+                  i = u[r.strActionName];
+                if (null != i) {
+                  var o = this.GetController(r.nController);
+                  r.bState && !o.activeButtons[i]
+                    ? ((o.activeButtons[i] = !0),
+                      this.OnButtonDown(i, r.nController))
+                    : !r.bState &&
+                      o.activeButtons[i] &&
+                      ((o.activeButtons[i] = !1),
+                      this.OnButtonUp(i, r.nController));
+                }
+              }
+            }),
+            Object(i.c)([a.a], t.prototype, "HandleSystemKeyEvents", null),
+            Object(i.c)(
+              [a.a],
+              t.prototype,
+              "HandleControllerInputMessages",
+              null
+            ),
+            t
+          );
+        })(o.c),
+        m = n("X3Ds"),
+        p = (function (e) {
+          function t(t) {
+            var n = e.call(this) || this;
+            return (
+              (n.m_lastButtonDown = o.a.INVALID),
+              n.SetSourceType(o.b.KEYBOARD),
+              t.addEventListener("keydown", n.OnKeyDown),
+              t.addEventListener("keyup", n.OnKeyUp),
+              t.addEventListener("blur", n.Reset),
+              n
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.prototype.OnKeyDown = function (e) {
+              var t = this.TranslateKey(e);
+              t != o.a.INVALID &&
+                t != this.m_lastButtonDown &&
+                (this.Reset(),
+                this.OnButtonDown(t),
+                (this.m_lastButtonDown = t),
+                e.preventDefault());
+            }),
+            (t.prototype.OnKeyUp = function (e) {
+              var t = this.TranslateKey(e);
+              t != o.a.INVALID &&
+                (this.OnButtonUp(t),
+                (this.m_lastButtonDown = o.a.INVALID),
+                e.preventDefault());
+            }),
+            (t.prototype.Reset = function () {
+              this.m_lastButtonDown != o.a.INVALID &&
+                (this.OnButtonUp(this.m_lastButtonDown),
+                (this.m_lastButtonDown = o.a.INVALID));
+            }),
+            (t.prototype.TranslateKey = function (e) {
+              var t = e.code,
+                n = e.ctrlKey,
+                r =
+                  m.q(e.target) &&
+                  ("INPUT" === e.target.nodeName ||
+                    "TEXTAREA" === e.target.nodeName);
+              if (n)
+                switch (t) {
+                  case "Digit1":
+                    return o.a.STEAM_GUIDE;
+                  case "Digit2":
+                    return o.a.STEAM_QUICK_MENU;
+                  case "Digit3":
+                    return o.a.SELECT;
+                  case "Digit4":
+                    return o.a.BUMPER_LEFT;
+                  case "Digit5":
+                    return o.a.BUMPER_RIGHT;
+                  case "Digit6":
+                    return o.a.LSTICK_CLICK;
+                  case "Digit7":
+                    return o.a.RSTICK_CLICK;
+                  case "Digit8":
+                    return o.a.OPTIONS;
+                  case "Digit9":
+                    return o.a.SELECT;
+                  case "Digit0":
+                    return o.a.START;
+                }
+              switch (t) {
+                case "Escape":
+                  return o.a.CANCEL;
+                case "Enter":
+                  return r ? o.a.INVALID : o.a.OK;
+                case "Backspace":
+                  return r ? o.a.INVALID : o.a.SECONDARY;
+                case "ArrowUp":
+                  return o.a.DIR_UP;
+                case "ArrowDown":
+                  return o.a.DIR_DOWN;
+                case "ArrowLeft":
+                  return o.a.DIR_LEFT;
+                case "ArrowRight":
+                  return o.a.DIR_RIGHT;
+              }
+              return o.a.INVALID;
+            }),
+            Object(i.c)([a.a], t.prototype, "OnKeyDown", null),
+            Object(i.c)([a.a], t.prototype, "OnKeyUp", null),
+            Object(i.c)([a.a], t.prototype, "Reset", null),
+            t
+          );
+        })(o.c),
+        y = (function (e) {
+          function t(t) {
+            var n = e.call(this) || this;
+            return (
+              (n.m_nAccumulatedMouseMovement = 0),
+              (n.m_bFirstMouseUpdate = !0),
+              n.SetSourceType(o.b.MOUSE),
+              t.addEventListener("mousedown", n.OnMouseDown),
+              t.addEventListener("mousemove", n.OnMouseMove),
+              t.addEventListener("blur", n.Reset),
+              n
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.prototype.OnMouseDown = function (e) {
+              e.defaultPrevented || this.OnNavigationTypeChanged(o.b.MOUSE);
+            }),
+            (t.prototype.OnMouseMove = function (e) {
+              if (!e.defaultPrevented) {
+                if (this.m_bFirstMouseUpdate)
+                  return (
+                    (this.m_nLastScreenX = e.screenX),
+                    (this.m_nLastScreenY = e.screenY),
+                    void (this.m_bFirstMouseUpdate = !1)
+                  );
+                (this.m_nAccumulatedMouseMovement +=
+                  Math.abs(e.screenX - this.m_nLastScreenX) +
+                  Math.abs(e.screenY - this.m_nLastScreenY)),
+                  this.m_nAccumulatedMouseMovement > 500 &&
+                    (this.Reset(), this.OnNavigationTypeChanged(o.b.MOUSE));
+              }
+            }),
+            (t.prototype.Reset = function () {
+              (this.m_nAccumulatedMouseMovement = 0),
+                (this.m_bFirstMouseUpdate = !0);
+            }),
+            Object(i.c)([a.a], t.prototype, "OnMouseDown", null),
+            Object(i.c)([a.a], t.prototype, "OnMouseMove", null),
+            Object(i.c)([a.a], t.prototype, "Reset", null),
+            t
+          );
+        })(o.c),
+        d = n("NxAk"),
+        g = n("lkRc"),
+        h = (function () {
+          function e() {
+            (this.m_GamepadNavigationController = new d.c()),
+              g.d.IN_GAMEPADUI &&
+                (this.m_GamepadNavigationController.RegisterInputSource(
+                  new f()
+                ),
+                this.m_GamepadNavigationController.RegisterInputSource(
+                  new c()
+                )),
+              "dev" == g.d.WEB_UNIVERSE &&
+                (this.m_GamepadNavigationController.RegisterInputSource(
+                  new p(window)
+                ),
+                this.m_GamepadNavigationController.RegisterInputSource(
+                  new y(window)
+                ));
+          }
+          return (
+            (e.prototype.GetNavigationController = function () {
+              return this.m_GamepadNavigationController;
+            }),
+            (e.Get = function () {
+              return (
+                e.s_Singleton ||
+                  ((e.s_Singleton = new e()),
+                  "dev" == g.d.WEB_UNIVERSE &&
+                    (window.g_StoreWebNavStore = e.s_Singleton)),
+                e.s_Singleton
+              );
+            }),
+            e
+          );
+        })();
+      function b() {
+        var e = window.legacyWebFocusNavController;
+        return e || h.Get().GetNavigationController();
+      }
     },
     nNQW: function (e, t, n) {
       e.exports = {

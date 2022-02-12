@@ -838,6 +838,7 @@
 	html.responsive #friends_chooser {
 		border: unset;
 		margin-bottom: 24px;
+        overflow:initial;
 	}
 
 	html.responsive #friends_list_wrapper {
