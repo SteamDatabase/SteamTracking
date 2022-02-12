@@ -1,18 +1,3 @@
-.scrollpanel_ScrollPanel_1Ecbh {
-  position: relative;
-}
-.scrollpanel_ScrollY_3yFwd,
-.scrollpanel_ScrollBoth_7h7DE {
-  overflow-y: auto;
-  scroll-padding-top: 20px;
-  scroll-padding-bottom: 20px;
-}
-.scrollpanel_ScrollX_3TJWg,
-.scrollpanel_ScrollBoth_7h7DE {
-  overflow-x: auto;
-  scroll-padding-left: 20px;
-  scroll-padding-right: 20px;
-}
 :root {
   --basicui-header-height: 0px;
 }
@@ -52,8 +37,8 @@
   column-gap: 12px;
   flex-wrap: nowrap;
   padding: 8px 24px 12px 24px;
-  margin-left: calc(0px - 24px);
-  margin-right: calc(0px - 24px);
+  margin-left: -24px;
+  margin-right: -24px;
   scroll-padding-left: 24px;
   scroll-padding-right: 24px;
 }
@@ -63,7 +48,7 @@
   .categoriesapp_Category_1uwcZ {
   display: block;
   position: relative;
-  width: calc((100vw - 24px - 24px - (12px * 3)) / 4);
+  width: calc((100vw - 24px - 24px - 36px) / 4);
   height: 272px;
   overflow: hidden;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
@@ -125,7 +110,7 @@
   div:first-child
   div
   a.categoriesapp_Category_1uwcZ {
-  width: calc((100vw - 24px - 24px - (12px * 2)) / 3);
+  width: calc((100vw - 24px - 24px - 24px) / 3);
 }
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8

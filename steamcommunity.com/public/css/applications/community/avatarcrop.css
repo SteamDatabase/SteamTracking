@@ -69,18 +69,18 @@
 .cropper-dashed.dashed-h {
   border-bottom-width: 1px;
   border-top-width: 1px;
-  height: calc(100% / 3);
+  height: 33.3333333333%;
   left: 0;
-  top: calc(100% / 3);
+  top: 33.3333333333%;
   width: 100%;
 }
 .cropper-dashed.dashed-v {
   border-left-width: 1px;
   border-right-width: 1px;
   height: 100%;
-  left: calc(100% / 3);
+  left: 33.3333333333%;
   top: 0;
-  width: calc(100% / 3);
+  width: 33.3333333333%;
 }
 .cropper-center {
   display: block;

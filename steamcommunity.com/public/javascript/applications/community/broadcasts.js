@@ -6650,7 +6650,9 @@
           u = a && !n;
         return i.a.createElement(
           "div",
-          { className: g.a.CapsuleDecorators },
+          {
+            className: Object(O.a)(g.a.CapsuleDecorators, "CapsuleDecorators"),
+          },
           c &&
             i.a.createElement(
               "span",
@@ -27089,13 +27091,13 @@
     HKTa: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return w;
+        return P;
       });
-      var r = n("q1tI"),
-        a = n.n(r),
-        i = (n("kyHq"), n("av+R")),
-        o = (n("li7h"), n("mrSG")),
-        s = n("hRO2"),
+      var r = n("mrSG"),
+        a = n("q1tI"),
+        i = n.n(a),
+        o = (n("kyHq"), n("av+R")),
+        s = (n("li7h"), n("hRO2")),
         c = (n("OS8t"), s.Message, n("vDqi")),
         l = n.n(c),
         u = (n("mgoM"), n("AiWL"), n("OS6B")),
@@ -27139,8 +27141,8 @@
                 this.GetCallbackForAppList(e.appid).Dispatch(e);
             }),
             (e.prototype.LoadAppCompabitilityResult = function (e) {
-              return Object(o.b)(this, void 0, void 0, function () {
-                return Object(o.e)(this, function (t) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                return Object(r.e)(this, function (t) {
                   return this.m_mapAppResults.has(e)
                     ? [2, !0]
                     : (this.m_mapAppResultsPromises.has(e) ||
@@ -27154,24 +27156,24 @@
             }),
             (e.prototype.InternalLoadAppCompatability = function (e) {
               var t, n;
-              return Object(o.b)(this, void 0, void 0, function () {
-                var r, a, i, s, c;
-                return Object(o.e)(this, function (o) {
-                  switch (o.label) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                var a, i, o, s, c;
+                return Object(r.e)(this, function (r) {
+                  switch (r.label) {
                     case 0:
-                      (r = null), (o.label = 1);
+                      (a = null), (r.label = 1);
                     case 1:
                       return (
-                        o.trys.push([1, 3, , 4]),
-                        (a = { nAppID: e, l: p.c.LANGUAGE, cc: p.c.COUNTRY }),
-                        (i =
+                        r.trys.push([1, 3, , 4]),
+                        (i = { nAppID: e, l: p.c.LANGUAGE, cc: p.c.COUNTRY }),
+                        (o =
                           p.c.STORE_BASE_URL +
                           "saleaction/ajaxgetdeckappcompatibilityreport"),
-                        [4, l.a.get(i, { params: a, withCredentials: !0 })]
+                        [4, l.a.get(o, { params: i, withCredentials: !0 })]
                       );
                     case 2:
                       return 200 ==
-                        (null == (s = o.sent()) ? void 0 : s.status) &&
+                        (null == (s = r.sent()) ? void 0 : s.status) &&
                         1 ==
                           (null === (t = s.data) || void 0 === t
                             ? void 0
@@ -27180,15 +27182,15 @@
                           ? void 0
                           : n.results)
                         ? (this.AddCompatabilityResult(s.data.results), [2, !0])
-                        : ((r = Object(u.a)(s)), [3, 4]);
+                        : ((a = Object(u.a)(s)), [3, 4]);
                     case 3:
-                      return (c = o.sent()), (r = Object(u.a)(c)), [3, 4];
+                      return (c = r.sent()), (a = Object(u.a)(c)), [3, 4];
                     case 4:
                       return (
                         console.error(
                           "CDeckVerifiedDetailsStore.InternalLoadAppCompatability failed: " +
-                            (null == r ? void 0 : r.strErrorMsg),
-                          r
+                            (null == a ? void 0 : a.strErrorMsg),
+                          a
                         ),
                         [2, !1]
                       );
@@ -27214,141 +27216,484 @@
                 "object" == typeof t.resolved_items
               );
             }),
-            Object(o.c)([m.a], e.prototype, "LoadAppCompabitilityResult", null),
+            Object(r.c)([m.a], e.prototype, "LoadAppCompabitilityResult", null),
             e
           );
         })();
       var h = n("Jqb/"),
-        _ = n("ka0M"),
-        b = n("X3Ds"),
-        g = n("TLQK"),
-        v = n("carw"),
-        y = n.n(v);
-      function S(e) {
-        var t,
-          n = e.results,
-          r = e.appName,
-          i =
-            -1 !==
-            (null === (t = n.resolved_items) || void 0 === t
-              ? void 0
-              : t.findIndex(function (e) {
-                  return 1 == e.display_type;
-                }));
-        return n
-          ? a.a.createElement(
-              "div",
-              { className: y.a.CompatibilityDetailsContainer },
-              a.a.createElement(E, {
-                category: n.resolved_category,
-                appName: r,
-              }),
-              n.resolved_items
-                .filter(function (e) {
-                  return 1 !== e.display_type;
-                })
-                .map(function (e) {
-                  return a.a.createElement(
-                    "div",
-                    {
-                      key: e.loc_token + e.display_type,
-                      className: y.a.CompatibilityDetailsHeader,
-                    },
-                    a.a.createElement(C, { displaytype: e.display_type }),
-                    a.a.createElement("span", null, Object(g.f)(e.loc_token))
-                  );
-                }),
-              i &&
-                a.a.createElement(
-                  "div",
-                  { className: y.a.CompatabilityDetailsNoteContainer },
-                  a.a.createElement(
-                    "div",
-                    { className: y.a.CompatibilityDetailsNoteLabel },
-                    Object(g.f)("#SteamDeckVerified_DescriptionSubHeader_Note")
-                  ),
-                  a.a.createElement("div", {
-                    className: y.a.CompatibilityDetailsSeparator,
-                  })
-                ),
-              i &&
-                n.resolved_items
-                  .filter(function (e) {
-                    return 1 == e.display_type;
-                  })
-                  .map(function (e) {
-                    return a.a.createElement(
-                      "div",
-                      {
-                        key: e.loc_token + e.display_type,
-                        className: y.a.CompatibilityDetailsNoteRow,
-                      },
-                      a.a.createElement("span", null, Object(g.f)(e.loc_token))
-                    );
-                  }),
-              !i &&
-                a.a.createElement("div", {
-                  className: y.a.CompatibilityNoNotes,
-                })
-            )
-          : null;
-      }
-      function B(e, t) {
-        Object(_.d)(
-          a.a.createElement(
-            h.d,
-            {
-              className: y.a.DeckVerifiedModal,
-              bAlertDialog: !0,
-              strOKButtonText: Object(g.f)("#Button_Got_It"),
-              strTitle: Object(g.f)(
-                "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI"
-              ),
+        _ = n("TLQK"),
+        b = n("qDk6"),
+        g = n("yLGM"),
+        v = (n("kKgT"), n("ZFdz"), n("BaVA"), n("carw")),
+        y = n.n(v),
+        S = n("ka0M"),
+        B = n("X3Ds"),
+        w = n("r64O"),
+        C = n("exH9"),
+        E = n("EC67");
+      function O(e, t, n) {
+        var i,
+          o = e + "_HistoryValue",
+          s = Object(E.h)(),
+          c = Object(E.i)(),
+          l = null !== (i = c.state && c.state[o]) && void 0 !== i ? i : n,
+          u = a.useRef(!1),
+          d = a.useRef(),
+          m = a.useRef(),
+          p = a.useCallback(
+            function (e) {
+              if (u.current && ((d.current = e), !m.current)) {
+                var n = s.location.pathname;
+                m.current = window.setTimeout(function () {
+                  var e;
+                  s.location.pathname == n &&
+                    s.location.state[o] != d.current &&
+                    s.replace(
+                      s.location.pathname,
+                      Object(r.a)(
+                        Object(r.a)({}, s.location.state),
+                        (((e = {})[o] = d.current), e)
+                      )
+                    ),
+                    (m.current = void 0);
+                }, t);
+              }
             },
-            a.a.createElement(S, { results: t })
-          ),
-          e
+            [s, o, t]
+          );
+        return (
+          a.useEffect(function () {
+            u.current = !0;
+          }, []),
+          [l, p]
         );
       }
-      function w(e) {
+      var I = n("j+5p"),
+        j = n("hJxo"),
+        T = n("rHSA");
+      function M(e, t, n, r) {
+        void 0 === t && (t = "smooth");
+        var a = (null != n ? n : 30) / 100,
+          o = i.a.useRef(void 0),
+          s = i.a.useRef(void 0),
+          c = i.a.useCallback(function () {
+            (o.current = void 0), (s.current = void 0);
+          }, []),
+          l = (function (e, t) {
+            var n = i.a.useRef();
+            return i.a.useCallback(
+              function (r, a) {
+                var i = "sine";
+                n.current && (n.current.Cancel(), (i = "linear")),
+                  void 0 === r && (r = e.current.scrollTop),
+                  void 0 === a && (a = e.current.scrollLeft);
+                var o = Math.max(
+                  Math.abs(e.current.scrollTop - r),
+                  Math.abs(e.current.scrollLeft - a)
+                );
+                if (o > 0) {
+                  var s = Math.max(Math.min((o / 1e3) * 200, 500), 300);
+                  (n.current = new j.a(
+                    e.current,
+                    { scrollTop: r, scrollLeft: a },
+                    { msDuration: s, timing: i, onComplete: t }
+                  )),
+                    n.current.Start();
+                } else t && t();
+              },
+              [e, t]
+            );
+          })(e, c);
+        return i.a.useCallback(
+          function (n) {
+            var i, u;
+            if (r && !r(n)) return !1;
+            var d = e.current,
+              m = d.scrollTop,
+              p = d.scrollHeight,
+              f = d.clientHeight,
+              h = d.scrollLeft,
+              _ = d.scrollWidth,
+              b = d.clientWidth,
+              g = null !== (i = o.current) && void 0 !== i ? i : m,
+              v = null !== (u = s.current) && void 0 !== u ? u : h;
+            switch (n.detail.button) {
+              case T.a.DIR_UP:
+                if (g <= 2) return !1;
+                o.current = Math.max(0, g - f * a);
+                break;
+              case T.a.DIR_DOWN:
+                if (g >= p - f - 2) return !1;
+                o.current = Math.min(p - f, g + f * a);
+                break;
+              case T.a.DIR_LEFT:
+                if (v <= 2) return !1;
+                s.current = Math.max(0, v - b * a);
+                break;
+              case T.a.DIR_RIGHT:
+                if (v >= _ - b - 2) return !1;
+                s.current = Math.min(_ - b, v + b * a);
+                break;
+              default:
+                return !1;
+            }
+            return (
+              t && "smooth" != t
+                ? (e.current.scrollTo({
+                    top: o.current,
+                    left: s.current,
+                    behavior: "auto",
+                  }),
+                  c())
+                : l(o.current, s.current),
+              !0
+            );
+          },
+          [r, e, t, a, l, c]
+        );
+      }
+      var R = n("ZAxP"),
+        D = n.n(R),
+        A = i.a.forwardRef(function (e, t) {
+          var n,
+            a = e.scrollDirection,
+            o = e.scrollPaddingTop,
+            s = e.scrollPaddingRight,
+            c = e.scrollPaddingBottom,
+            l = e.scrollPaddingLeft,
+            u = e.className,
+            d = e.children,
+            m = e.style,
+            p = Object(r.f)(e, [
+              "scrollDirection",
+              "scrollPaddingTop",
+              "scrollPaddingRight",
+              "scrollPaddingBottom",
+              "scrollPaddingLeft",
+              "className",
+              "children",
+              "style",
+            ]);
+          switch (a) {
+            case "x":
+              n = D.a.ScrollX;
+              break;
+            case "both":
+              n = D.a.ScrollBoth;
+              break;
+            case "y":
+            default:
+              n = D.a.ScrollY;
+          }
+          var f = Object(r.a)({}, m);
+          return (
+            (o || 0 === o) && (f.scrollPaddingTop = o),
+            (s || 0 === s) && (f.scrollPaddingRight = s),
+            (c || 0 === c) && (f.scrollPaddingBottom = c),
+            (l || 0 === l) && (f.scrollPaddingLeft = l),
+            i.a.createElement(
+              b.a,
+              Object(r.a)({}, p, {
+                style: f,
+                className: Object(C.a)(u, D.a.ScrollPanel, n),
+                ref: t,
+              }),
+              i.a.createElement(g.a, null, d)
+            )
+          );
+        }),
+        k = i.a.forwardRef(function (e, t) {
+          var n = e.scrollStepPercent,
+            a = e.scrollBehavior,
+            o = Object(r.f)(e, ["scrollStepPercent", "scrollBehavior"]),
+            s = i.a.useRef(),
+            c = M(
+              s,
+              a,
+              n,
+              i.a.useCallback(function (e) {
+                return e.currentTarget != e.target;
+              }, [])
+            ),
+            l = Object(m.f)(s, t);
+          return i.a.createElement(
+            A,
+            Object(r.a)({}, o, {
+              onGamepadDirection: c,
+              ref: l,
+              scrollIntoViewType: I.d.NoTransformSparseContent,
+            })
+          );
+        });
+      i.a.forwardRef(function (e, t) {
+        var n = e.name,
+          a = e.msScrollRestoreDelay,
+          o = e.onScroll,
+          s = Object(r.f)(e, ["name", "msScrollRestoreDelay", "onScroll"]);
+        return i.a.createElement(
+          L,
+          { name: n, msScrollRestoreDelay: a, parentOnScroll: o, refDiv: t },
+          function (e, t) {
+            return i.a.createElement(
+              A,
+              Object(r.a)({}, s, { onScroll: e, ref: t })
+            );
+          }
+        );
+      });
+      function L(e) {
+        var t = e.name,
+          n = e.msScrollRestoreDelay,
+          r = e.parentOnScroll,
+          a = e.refDiv,
+          o = e.children,
+          s = O(t + "ScrollTop", 250, 0),
+          c = s[0],
+          l = s[1],
+          u = O(t + "ScrollLeft", 250, 0),
+          d = u[0],
+          p = u[1],
+          f = i.a.useRef(0),
+          h = i.a.useRef(0),
+          _ = i.a.useRef(),
+          b = i.a.useCallback(
+            function (e) {
+              var t = e.currentTarget,
+                n = t.scrollTop,
+                a = t.scrollLeft;
+              l(n), (f.current = n), p(a), (h.current = a), r && r(e);
+            },
+            [l, p, r]
+          );
+        i.a.useLayoutEffect(
+          function () {
+            var e = function () {
+              Object(w.a)(
+                _.current.scrollHeight >= c,
+                "Element is " +
+                  _.current.scrollHeight +
+                  " high but trying to restore scrollTop of " +
+                  c +
+                  ", element may need more time to lay out.",
+                _.current
+              ),
+                (f.current = c),
+                (h.current = d),
+                _.current.scrollTo({ top: c, left: d, behavior: "auto" }),
+                _.current.dispatchEvent(new UIEvent("scroll"));
+            };
+            (c == f.current && d == h.current) ||
+              (n ? window.setTimeout(e, n) : e());
+          },
+          [c, d, n]
+        );
+        var g = Object(m.f)(_, a);
+        return i.a.useMemo(
+          function () {
+            return o(b, g);
+          },
+          [b, g, o]
+        );
+      }
+      var G = n("bS9Q"),
+        F = n("Mgs7");
+      function N(e) {
+        var t,
+          n,
+          a = e.results,
+          o = e.appName,
+          s = e.buttonProps;
+        if (!a) return null;
+        var c =
+          -1 !==
+          (null === (t = a.resolved_items) || void 0 === t
+            ? void 0
+            : t.findIndex(function (e) {
+                return 1 == e.display_type;
+              }));
+        return (
+          null === (n = a.resolved_items) || void 0 === n ? void 0 : n.length
+        )
+          ? i.a.createElement(
+              b.a,
+              Object(r.a)({ className: y.a.CompatibilityDetailsContainer }, s),
+              i.a.createElement(
+                "div",
+                null,
+                i.a.createElement(
+                  "div",
+                  { className: y.a.DialogHeader },
+                  i.a.createElement(
+                    "div",
+                    { className: y.a.DialogTitle },
+                    Object(_.f)(
+                      "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI"
+                    )
+                  ),
+                  i.a.createElement(
+                    "div",
+                    { className: y.a.AppTitleCategory },
+                    i.a.createElement("img", {
+                      className: y.a.CategoryIcon,
+                      src: U(a.resolved_category),
+                    })
+                  )
+                ),
+                i.a.createElement(x, {
+                  category: a.resolved_category,
+                  appName: o,
+                })
+              ),
+              i.a.createElement("div", {
+                className: y.a.CompatibilityDetailsSeparator,
+              }),
+              i.a.createElement(
+                k,
+                { className: y.a.CompatibilityDetailsInterior },
+                i.a.createElement(
+                  b.a,
+                  { autoFocus: !0, noFocusRing: !0, focusableIfNoChildren: !0 },
+                  a.resolved_items
+                    .filter(function (e) {
+                      return 1 !== e.display_type;
+                    })
+                    .map(function (e) {
+                      return i.a.createElement(
+                        "div",
+                        {
+                          key: e.loc_token + e.display_type,
+                          className: y.a.CompatibilityDetailsRow,
+                        },
+                        i.a.createElement(z, { displaytype: e.display_type }),
+                        i.a.createElement(
+                          "span",
+                          null,
+                          Object(_.f)(e.loc_token)
+                        )
+                      );
+                    }),
+                  c &&
+                    i.a.createElement(
+                      "div",
+                      { className: y.a.CompatibilityNotes },
+                      a.resolved_items
+                        .filter(function (e) {
+                          return 1 == e.display_type;
+                        })
+                        .map(function (e) {
+                          return i.a.createElement(
+                            "div",
+                            {
+                              key: e.loc_token + e.display_type,
+                              className: y.a.CompatibilityDetailsNoteRow,
+                            },
+                            i.a.createElement(
+                              "span",
+                              null,
+                              Object(_.f)(e.loc_token)
+                            )
+                          );
+                        })
+                    )
+                )
+              )
+            )
+          : i.a.createElement(
+              b.a,
+              Object(r.a)(
+                {
+                  focusable: !0,
+                  noFocusRing: !0,
+                  autoFocus: !0,
+                  className: y.a.CompatibilityDetailsContainer,
+                },
+                s
+              ),
+              i.a.createElement(
+                "div",
+                null,
+                i.a.createElement(
+                  "div",
+                  { className: y.a.DialogHeader },
+                  i.a.createElement(
+                    "div",
+                    { className: y.a.DialogTitle },
+                    Object(_.f)(
+                      "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI"
+                    )
+                  ),
+                  i.a.createElement(
+                    "div",
+                    { className: y.a.AppTitleCategory },
+                    i.a.createElement("img", {
+                      className: y.a.CategoryIcon,
+                      src: U(a.resolved_category),
+                    })
+                  )
+                ),
+                i.a.createElement(x, {
+                  category: a.resolved_category,
+                  appName: o,
+                })
+              )
+            );
+      }
+      function P(e) {
         var t,
           n,
           r,
-          o,
+          a,
           s =
             ((t = e.nAppID),
-            (n = a.a.useState(f.Get().GetCompatabilityResultForApp(t))),
+            (n = i.a.useState(f.Get().GetCompatabilityResultForApp(t))),
             (r = n[0]),
-            (o = n[1]),
-            Object(m.d)(f.Get().GetCallbackForAppList(t), o),
-            a.a.useEffect(
+            (a = n[1]),
+            Object(m.d)(f.Get().GetCallbackForAppList(t), a),
+            i.a.useEffect(
               function () {
                 f.Get().BHasCompatabilityResultForApp(t) ||
                   f
                     .Get()
                     .LoadAppCompabitilityResult(t)
                     .then(function () {
-                      return o(f.Get().GetCompatabilityResultForApp(t));
+                      return a(f.Get().GetCompatabilityResultForApp(t));
                     });
               },
               [t]
             ),
             r);
         return s
-          ? a.a.createElement(
+          ? i.a.createElement(
               "div",
               { className: y.a.LearnMoreCtn },
-              a.a.createElement(
-                i.c,
+              i.a.createElement(
+                o.c,
                 {
                   onClick: function (e) {
-                    return B(Object(b.o)(e), s);
+                    return (function (e, t) {
+                      Object(S.d)(
+                        i.a.createElement(
+                          h.e,
+                          { modalClassName: "DeckVerifiedModalDialog" },
+                          i.a.createElement(
+                            F.b,
+                            null,
+                            i.a.createElement(
+                              b.a,
+                              { focusable: !1, "flow-children": "column" },
+                              i.a.createElement(N, { results: t })
+                            )
+                          )
+                        ),
+                        e
+                      );
+                    })(Object(B.o)(e), s);
                   },
                 },
-                a.a.createElement(
+                i.a.createElement(
                   "span",
                   { className: y.a.LearnMorePC },
-                  Object(g.f)(
+                  Object(_.f)(
                     "#SteamDeckVerified_Store_CompatSectionHeader_Desktop"
                   )
                 )
@@ -27356,7 +27701,7 @@
             )
           : null;
       }
-      function C(e) {
+      function z(e) {
         var t = e.displaytype,
           n =
             p.c.STORE_CDN_URL + "public/shared/images/ico/ico-deck-unknown.svg";
@@ -27382,58 +27727,86 @@
                 "deck verified banner shouldn't try to display the information display type for appid"
               );
         }
-        return a.a.createElement(
+        return i.a.createElement(
           "div",
           { className: y.a.CompatibilityDetailsResultIcon },
-          a.a.createElement("img", { src: n })
+          i.a.createElement("img", { src: n })
         );
       }
-      function E(e) {
+      function U(e) {
+        switch (e) {
+          case 3:
+            return (
+              p.c.STORE_CDN_URL +
+              "public/shared/images/ico/ico-deck-verified.svg"
+            );
+          case 2:
+            return (
+              p.c.STORE_CDN_URL +
+              "public/shared/images/ico/ico-deck-playable.svg"
+            );
+          case 1:
+            return (
+              p.c.STORE_CDN_URL +
+              "public/shared/images/ico/ico-deck-unsupported.svg"
+            );
+          case 0:
+            return (
+              p.c.STORE_CDN_URL +
+              "public/shared/images/ico/ico-deck-unknown.svg"
+            );
+        }
+      }
+      function x(e) {
         var t = e.category,
           n = e.appName;
         if (0 == t)
-          return a.a.createElement(
+          return i.a.createElement(
             "div",
             { className: y.a.CompatibilityDetailRatingSummary },
             n
-              ? Object(g.m)(
+              ? Object(_.m)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                  a.a.createElement("b", null, n)
+                  i.a.createElement("b", null, Object(G.b)(n))
                 )
-              : Object(g.f)("#SteamDeckVerified_DescriptionHeader_Unknown")
+              : Object(_.f)("#SteamDeckVerified_DescriptionHeader_Unknown")
           );
         var r = "",
-          i = null;
+          a = null;
         switch (t) {
           case 3:
             (r = "#SteamDeckVerified_DescriptionHeader_Verified"),
-              (i = y.a.Verified);
+              (a = y.a.Verified);
             break;
           case 2:
             (r = "#SteamDeckVerified_DescriptionHeader_Playable"),
-              (i = y.a.Playable);
+              (a = y.a.Playable);
             break;
           case 1:
             (r = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
-              (i = y.a.Unsupported);
+              (a = y.a.Unsupported);
         }
-        var o = a.a.createElement("b", null, Object(g.f)(O(t))),
-          s = a.a.createElement("span", { className: i }, Object(g.f)(r)),
+        var o = i.a.createElement("span", { className: a }, Object(_.f)(W(t))),
+          s = i.a.createElement(
+            "span",
+            { className: y.a.CompatibilityDetailRatingSummary },
+            Object(_.f)(r)
+          ),
           c = n
-            ? Object(g.m)(
+            ? Object(_.m)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                a.a.createElement("b", null, n),
+                i.a.createElement("b", null, n),
                 o,
                 s
               )
-            : Object(g.m)("#SteamDeckVerified_DescriptionHeader", o, s);
-        return a.a.createElement(
+            : Object(_.m)("#SteamDeckVerified_DescriptionHeader", o, s);
+        return i.a.createElement(
           "div",
           { className: y.a.CompatibilityDetailRatingSummary },
           c
         );
       }
-      function O(e) {
+      function W(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -43263,6 +43636,14 @@
         Active: "chatentry_Active_37tPt",
       };
     },
+    ZAxP: function (e, t, n) {
+      e.exports = {
+        ScrollPanel: "scrollpanel_ScrollPanel_1Ecbh",
+        ScrollY: "scrollpanel_ScrollY_3yFwd",
+        ScrollBoth: "scrollpanel_ScrollBoth_7h7DE",
+        ScrollX: "scrollpanel_ScrollX_3TJWg",
+      };
+    },
     ZC8J: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -48813,7 +49194,6 @@
     },
     carw: function (e, t, n) {
       e.exports = {
-        DeckVerifiedModal: "deckverified_DeckVerifiedModal_2PVG-",
         BannerContainer: "deckverified_BannerContainer_29jK3",
         BannerHeader: "deckverified_BannerHeader_3yxJH",
         BannerContent: "deckverified_BannerContent_2dGPT",
@@ -48821,26 +49201,30 @@
         LearnMoreCtn: "deckverified_LearnMoreCtn_2IcEu",
         LearnMorePC: "deckverified_LearnMorePC_CrSPf",
         LearnMore: "deckverified_LearnMore_2gXzK",
+        DialogHeader: "deckverified_DialogHeader_ZEuE1",
+        DialogTitle: "deckverified_DialogTitle_2WJTd",
+        AppTitleCategory: "deckverified_AppTitleCategory_23sFZ",
+        CompatibilityDetailsStillLearning:
+          "deckverified_CompatibilityDetailsStillLearning_1WWwt",
         CompatibilityDetailsContainer:
           "deckverified_CompatibilityDetailsContainer_1-O8t",
-        CompatibilityDetailsHeader:
-          "deckverified_CompatibilityDetailsHeader_Y6Inr",
+        CompatibilityDetailsInterior:
+          "deckverified_CompatibilityDetailsInterior_2fGSc",
+        CompatibilityDetailsRow: "deckverified_CompatibilityDetailsRow_32fPp",
         CompatibilityDetailRatingSummary:
           "deckverified_CompatibilityDetailRatingSummary_mJGYS",
-        CompatibilityDetailRatingDescription:
-          "deckverified_CompatibilityDetailRatingDescription_3456E",
         Verified: "deckverified_Verified_ewmg-",
         Playable: "deckverified_Playable_1n8va",
         Unsupported: "deckverified_Unsupported_2Q0ld",
-        CompatibilityNoNotes: "deckverified_CompatibilityNoNotes_2u5TR",
+        CompatibilityDetailRatingDescription:
+          "deckverified_CompatibilityDetailRatingDescription_3456E",
         CompatibilityDetailsSeparator:
           "deckverified_CompatibilityDetailsSeparator_2mwbd",
         CompatibilityDetailsResultIcon:
           "deckverified_CompatibilityDetailsResultIcon_-L3Xu",
         CompatabilityDetailsNoteContainer:
           "deckverified_CompatabilityDetailsNoteContainer_6_voo",
-        CompatibilityDetailsNoteLabel:
-          "deckverified_CompatibilityDetailsNoteLabel_32Xvt",
+        CompatibilityNotes: "deckverified_CompatibilityNotes_1aoam",
         CompatibilityDetailsNoteRow:
           "deckverified_CompatibilityDetailsNoteRow_1Wu_j",
       };

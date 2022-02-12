@@ -1279,6 +1279,18 @@ button.DialogButton::-moz-focus-inner {
   top: 4px;
   z-index: 1;
 }
+.DeckVerifiedModalDialog .DialogContent {
+  padding: 16px 24px;
+  background: #0e141b !important;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.DeckVerifiedModalDialog .ModalPosition_TopBar {
+  display: none;
+}
+.DeckVerifiedModalDialog .ModalPosition_Dismiss .closeButton {
+  width: 20px;
+  height: 20px;
+}
 .ModalPosition_Dismiss .closeButton {
   width: 14px;
   height: 14px;

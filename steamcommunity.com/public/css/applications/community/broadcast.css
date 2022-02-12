@@ -544,12 +544,12 @@
   border: none;
   width: 100%;
   overflow: hidden;
-  height: calc((100vw - 340px) * (9 / 16));
+  height: calc((100vw - 340px) * 0.5625);
   padding-right: 340px;
 }
 .broadcast_embeddable_video_placeholder_1KU95.broadcast_embeddable_NoChat_2QQm1,
 .broadcast_embeddable_embedded_player_12fBJ.broadcast_embeddable_NoChat_2QQm1 {
-  height: calc((100vw) * (9 / 16));
+  height: 56.25vw;
   padding-right: unset;
 }
 .broadcast_embeddable_video_container_1gbNx {
@@ -948,7 +948,7 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
   .broadcast_embeddable_BroadcastAndChat_1aJ9y
     .broadcast_embeddable_embedded_player_12fBJ {
     padding-right: 0px;
-    height: calc((100vw - 48px) * (9 / 16));
+    height: calc((100vw - 48px) * 0.5625);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   }
   .broadcast_embeddable_detail_chat_ctn_IaFns {
@@ -963,7 +963,7 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
   .broadcast_embeddable_bordered_container_3zXpF
     .broadcast_embeddable_embedded_player_12fBJ {
     max-height: 30vh;
-    height: calc((100vw - 30px) * (9 / 16));
+    height: calc((100vw - 30px) * 0.5625);
     min-height: 270px;
   }
 }
@@ -977,7 +977,7 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
     .broadcast_embeddable_video_container_1gbNx,
   .broadcast_embeddable_BroadcastAndChat_1aJ9y
     .broadcast_embeddable_embedded_player_12fBJ {
-    height: calc(100vw * (9 / 16));
+    height: 56.25vw;
   }
   .broadcast_embeddable_BroadcastAndChat_1aJ9y
     .broadcast_embeddable_ChatEntry_Rs7El {

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7072054";
+var CLSTAMP = "7075780";
 !(function (e) {
   function t(t) {
     for (
@@ -146,38 +146,38 @@ var CLSTAMP = "7072054";
                 34: "ae31a5f73ce63eabf029",
                 35: "e55586022ea5c496303b",
                 36: "e1bc92d8b78d9ba62bc3",
-                37: "33a02f1625caf9cc6111",
+                37: "19d7cbe699c7b22229de",
                 38: "ef33b37b0b500cf230db",
                 39: "01e61b4c2d0faedc8e45",
-                40: "cf0d4fdf263d52ab858a",
-                41: "ead8980f506eda87f527",
-                42: "c1e3cc277457cdd82341",
-                43: "eba28ac0cd750e442800",
-                44: "91e8305f95abb9e297bc",
-                45: "c28b50c7ccca1cd78cc7",
-                46: "915e3d70143d87646cbf",
-                47: "0e07e760aa2de0d2fa9e",
-                48: "7553f3741e76c3706c65",
-                49: "8aab4351dbcd44fcfdae",
-                50: "9c8b67fe59de04212277",
-                51: "2f26a42a79e800c0d257",
-                52: "38847c814e1a15674aa2",
-                53: "2697d9556e3cb527545d",
-                54: "df26bd48a71e4bb5f57c",
-                55: "1589abe05ca32e945452",
-                56: "f26d87d6f8fbf50df5e8",
-                57: "89a87b4d82f35c772ca0",
-                58: "fe03f45dfba5b5a3f579",
-                59: "a02f39e8c87c8745e352",
+                40: "4534182a8bb39bdc3991",
+                41: "ea32d71c3c4d0b9ba9e2",
+                42: "ee958164f9a5056c3b85",
+                43: "1bc59762900b944a2a7a",
+                44: "38d0cbaa9feb8826c3f8",
+                45: "8fcb49f3f88e3251d673",
+                46: "7ddf980b029795faaeb0",
+                47: "877a3a21153b5942c264",
+                48: "c7495c09e529e626e4ff",
+                49: "e7647f2cfedac314fc47",
+                50: "2d1a526218b2fb772569",
+                51: "a9da061f0287925f238a",
+                52: "26bd62a64551b617bba6",
+                53: "03937e6eec6ecd6fb5b3",
+                54: "9b6208325dec4cc90ffb",
+                55: "2eec1abf96d4d0e270a2",
+                56: "fded42e5383096b1f927",
+                57: "95425f858e29440d9f98",
+                58: "e0ed44da5686732d7075",
+                59: "9eb94779d0ce85c84df7",
                 60: "f38c73d28c350eb2f7c9",
-                61: "f24987be89e3a8d556c5",
-                62: "1e85f90e0cf9daf00c80",
-                63: "7c35c269d8c32f95820d",
-                64: "738de78ad605896b3e8e",
-                65: "4c16704e3454c84f9f7f",
-                66: "7572c17158650bd93c4b",
-                67: "54785576ca41a82456e2",
-                68: "966bd8cc33dbc51f2ea5",
+                61: "4c72d99915de551a709f",
+                62: "72b1f849faeaec46e006",
+                63: "1f185630e3382cdba05d",
+                64: "26be1c38e18771cd86fd",
+                65: "a44082f1b0ee5d3a6728",
+                66: "a4c1d355ccfc792bc772",
+                67: "7ba9848291d66e11d42f",
+                68: "d87e4a13de43de9cea4e",
               }[e]
             );
           })(e));
@@ -2671,16 +2671,16 @@ PERFORMANCE OF THIS SOFTWARE.
         return _;
       }),
       n.d(t, "a", function () {
-        return p;
+        return m;
       }),
       n.d(t, "d", function () {
-        return b;
-      }),
-      n.d(t, "c", function () {
         return g;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "c", function () {
         return v;
+      }),
+      n.d(t, "e", function () {
+        return y;
       });
     var r = n("mrSG"),
       i = n("cDcd"),
@@ -2826,23 +2826,13 @@ PERFORMANCE OF THIS SOFTWARE.
     function f(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = v.LocalizeString(e);
-      return void 0 === r
-        ? e
-        : (t.length > 0 &&
-            (r = r.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
-              if (n <= t.length && n >= 1) {
-                var r = t[n - 1];
-                return String(null == r ? "" : r);
-              }
-              return e;
-            })),
-          r);
+      var i = y.LocalizeString(e);
+      return void 0 === i ? e : p.apply(void 0, Object(r.g)([i], t));
     }
     function h(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var o = v.LocalizeString(e);
+      var o = y.LocalizeString(e);
       if (void 0 === o) return e;
       for (var a, s = [], c = /(.*?)%(\d+)\$s/g, u = 0; (a = c.exec(o)); ) {
         (u += a[0].length), s.push(a[1]);
@@ -2861,7 +2851,20 @@ PERFORMANCE OF THIS SOFTWARE.
         ? f.apply(void 0, Object(r.g)([e, t], n))
         : f.apply(void 0, Object(r.g)([e + "_Plural", t], n));
     }
-    var p = (function () {
+    function p(e) {
+      for (var t = [], n = 1; n < arguments.length; n++)
+        t[n - 1] = arguments[n];
+      return 0 == t.length
+        ? e
+        : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
+            if (n <= t.length && n >= 1) {
+              var r = t[n - 1];
+              return String(null == r ? "" : r);
+            }
+            return e;
+          }));
+    }
+    var m = (function () {
         function e() {}
         return (
           (e.Set = function (e, t, n) {
@@ -2882,7 +2885,7 @@ PERFORMANCE OF THIS SOFTWARE.
           e
         );
       })(),
-      m = {
+      b = {
         english: "en",
         german: "de",
         french: "fr",
@@ -2915,7 +2918,7 @@ PERFORMANCE OF THIS SOFTWARE.
         sc_schinese: "zh-cn",
         koreana: "ko",
       },
-      b = {
+      g = {
         "en-US": 0,
         "de-DE": 1,
         "fr-FR": 2,
@@ -2946,11 +2949,11 @@ PERFORMANCE OF THIS SOFTWARE.
         "es-419": 27,
         "vi-VN": 28,
       };
-    function g() {
-      return m[s.d.LANGUAGE] || null;
+    function v() {
+      return b[s.d.LANGUAGE] || null;
     }
-    var v = new d();
-    window.LocalizationManager = v;
+    var y = new d();
+    window.LocalizationManager = y;
   },
   "qM/t": function (e, t, n) {
     "use strict";

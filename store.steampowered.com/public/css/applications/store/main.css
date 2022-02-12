@@ -4418,9 +4418,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
 :root {
   --basicui-header-height: 0px;
 }
-.deckverified_DeckVerifiedModal_2PVG- {
-  background: #0e141b !important;
-}
 .deckverified_BannerContainer_29jK3 {
   padding-top: 5;
   padding-bottom: 20px;
@@ -4456,7 +4453,6 @@ img.deckverified_CategoryIcon_3qF71 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 40px;
 }
 .deckverified_LearnMoreCtn_2IcEu a:hover {
   cursor: pointer;
@@ -4487,21 +4483,76 @@ img.deckverified_CategoryIcon_3qF71 {
   border-radius: 0px;
   color: #000;
 }
+.deckverified_DialogHeader_ZEuE1 {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+.deckverified_DialogTitle_2WJTd {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  color: #dbdbdb;
+}
+.deckverified_AppTitleCategory_23sFZ {
+  padding-left: 15px;
+}
+.deckverified_AppTitleCategory_23sFZ img.deckverified_CategoryIcon_3qF71 {
+  padding-top: 1px;
+  width: 26px;
+  height: 100%;
+}
+.deckverified_CompatibilityDetailsStillLearning_1WWwt {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
 .deckverified_CompatibilityDetailsContainer_1-O8t {
   display: flex;
   flex-direction: column;
-  background-color: #0e141b;
-  padding: 0px 10px;
+  overflow: hidden;
+  width: 100%;
+  max-height: 65vh;
 }
-.deckverified_CompatibilityDetailsHeader_Y6Inr {
-  padding-bottom: 5px;
+.deckverified_CompatibilityDetailsContainer_1-O8t
+  .deckverified_CompatibilityDetailsInterior_2fGSc {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex: 1;
+  padding-right: 15px;
+}
+.deckverified_CompatibilityDetailsContainer_1-O8t
+  .deckverified_CompatibilityDetailsInterior_2fGSc::-webkit-scrollbar {
+  display: inline;
+  padding-left: 20px;
+}
+.deckverified_CompatibilityDetailsRow_32fPp {
+  padding-bottom: 10px;
   display: inline-flex;
-  font-size: 13px;
+  font-size: 14px;
   word-break: break-word;
+  color: #fff;
+  width: 100%;
 }
 .deckverified_CompatibilityDetailRatingSummary_mJGYS {
   padding-bottom: 10px;
   font-size: 14px;
+  color: #fff;
+}
+.deckverified_CompatibilityDetailRatingSummary_mJGYS
+  .deckverified_Verified_ewmg- {
+  font-weight: bold;
+  color: #59bf40;
+}
+.deckverified_CompatibilityDetailRatingSummary_mJGYS
+  .deckverified_Playable_1n8va {
+  font-weight: bold;
+  color: #ffc82c;
+}
+.deckverified_CompatibilityDetailRatingSummary_mJGYS
+  .deckverified_Unsupported_2Q0ld {
+  font-weight: bold;
+  color: #7c8ea3;
 }
 .deckverified_CompatibilityDetailRatingDescription_3456E {
   vertical-align: middle;
@@ -4519,15 +4570,11 @@ img.deckverified_CategoryIcon_3qF71 {
   .deckverified_Unsupported_2Q0ld {
   color: #7c8ea3;
 }
-.deckverified_CompatibilityNoNotes_2u5TR {
-  height: 20px;
-}
 .deckverified_CompatibilityDetailsSeparator_2mwbd {
   height: 1px;
-  margin-top: 11px;
-  margin-right: 20px;
-  background-color: #ccc;
+  background-color: #5b5b5b;
   width: 100%;
+  margin-bottom: 15px;
 }
 .deckverified_CompatibilityDetailsResultIcon_-L3Xu {
   height: 16px;
@@ -4538,17 +4585,32 @@ img.deckverified_CategoryIcon_3qF71 {
   flex-direction: row;
   padding: 7px 0px;
 }
-.deckverified_CompatibilityDetailsNoteLabel_32Xvt {
-  font-size: 14px;
-  color: #fff;
-  padding-right: 5px;
+.deckverified_CompatibilityNotes_1aoam {
+  padding: 5px 0px;
 }
 .deckverified_CompatibilityDetailsNoteRow_1Wu_j {
-  padding-left: 15px;
-  padding-bottom: 3px;
+  padding-left: 35px;
+  padding-bottom: 5px;
+  font-style: italic;
   display: inline-flex;
-  font-size: 13px;
+  font-size: 14px;
+  color: #a9a9a9;
   word-break: break-word;
+}
+.scrollpanel_ScrollPanel_1Ecbh {
+  position: relative;
+}
+.scrollpanel_ScrollY_3yFwd,
+.scrollpanel_ScrollBoth_7h7DE {
+  overflow-y: auto;
+  scroll-padding-top: 20px;
+  scroll-padding-bottom: 20px;
+}
+.scrollpanel_ScrollX_3TJWg,
+.scrollpanel_ScrollBoth_7h7DE {
+  overflow-x: auto;
+  scroll-padding-left: 20px;
+  scroll-padding-right: 20px;
 }
 .creatorhomeembed_DevSummaryCtn_1k0S- {
   flex-grow: 1;
@@ -13446,8 +13508,8 @@ Body.v6.tag_page.contenthub_page {
   gap: 12px;
 }
 .BasicUI .ContentHubSalePage .contenthubmaincarousel .SliderBody ul li {
-  width: calc(100vw - (2 * var(--gpSpace-Gutter))) !important;
-  max-width: calc(100vw - (2 * var(--gpSpace-Gutter))) !important;
+  width: calc(100vw - 2 * var(--gpSpace-Gutter)) !important;
+  max-width: calc(100vw - 2 * var(--gpSpace-Gutter)) !important;
   overflow: hidden;
 }
 .BasicUI .ContentHubSalePage .carousel__slider-tray-wrapper {
@@ -18555,7 +18617,7 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   fill: #fffc;
 }
 .videoTimelineMain {
-  width: calc(100% - 8%);
+  width: 92%;
   margin-left: 4%;
   margin-top: 48px;
   position: relative;
@@ -20955,6 +21017,18 @@ button.DialogButton::-moz-focus-inner {
   right: 4px;
   top: 4px;
   z-index: 1;
+}
+.DeckVerifiedModalDialog .DialogContent {
+  padding: 16px 24px;
+  background: #0e141b !important;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.DeckVerifiedModalDialog .ModalPosition_TopBar {
+  display: none;
+}
+.DeckVerifiedModalDialog .ModalPosition_Dismiss .closeButton {
+  width: 20px;
+  height: 20px;
 }
 .ModalPosition_Dismiss .closeButton {
   width: 14px;
