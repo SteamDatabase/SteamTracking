@@ -163,22 +163,23 @@
 					foreach( $Test[ 1 ] as $Index => $Archive )
 					{
 						$Hash = $Test[ 2 ][ $Index ];
+						$Path = '.support/archives/' . $Archive;
 
-						if( !isset( $this->ETags[ $Archive ] ) || $this->ETags[ $Archive ] !== $Hash )
+						if( ( $this->ETags[ $Path ] ?? null ) !== $Hash )
 						{
-							$this->Log( 'Downloading {lightblue}' . $Archive . '{normal} - checksum: ' . $Hash );
+							$this->Log( 'Downloading {lightblue}' . $Path . '{normal} - checksum: ' . $Hash );
 
-							$this->ETags[ $Archive ] = $Hash;
+							$this->ETags[ $Path ] = $Hash;
 
 							$this->URLsToFetch[ ] =
 							[
 								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Hash,
-								'File' => '.support/archives/' . $Archive
+								'File' => $Path,
 							];
 						}
 						else
 						{
-							$this->Log( 'Matched {lightblue}' . $Archive . '{normal}, but we already have it cached' );
+							$this->Log( 'Matched {lightblue}' . $Path . '{normal}, but we already have it cached' );
 						}
 					}
 				}
@@ -197,17 +198,18 @@
 					foreach( $Test[ 1 ] as $Index => $Archive )
 					{
 						$Hash = $Test[ 2 ][ $Index ];
+						$Path = '.support/linux_archives/' . $Archive;
 
-						if( !isset( $this->ETags[ $Archive ] ) || $this->ETags[ $Archive ] !== $Hash )
+						if( ( $this->ETags[ $Path ] ?? null ) !== $Hash )
 						{
-							$this->Log( 'Downloading {lightblue}' . $Archive . '{normal} - checksum: ' . $Hash );
+							$this->Log( 'Downloading {lightblue}' . $Path . '{normal} - checksum: ' . $Hash );
 
-							$this->ETags[ $Archive ] = $Hash;
+							$this->ETags[ $Path ] = $Hash;
 
 							$this->URLsToFetch[ ] =
 							[
 								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Hash,
-								'File' => '.support/linux_archives/' . $Archive
+								'File' => $Path,
 							];
 						}
 						else
