@@ -302,18 +302,16 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			// Unzip it
 			else if( str_ends_with( $File, '.zip' ) )
 			{
-				$File = __DIR__ . '/' . $File;
-
-				file_put_contents( $File, $Data );
-
-				$Archive = substr( strrchr( $File, '/' ), 1 );
-
-				if( sha1_file( $File ) !== $this->ETags[ $Archive ] )
+				if( sha1_file( $File ) !== $this->ETags[ 'hash_for_' . $File ] )
 				{
-					$this->Log( '{lightred}Checksum mismatch for ' . $Archive );
+					$this->Log( '{lightred}Checksum mismatch for ' . $File );
 
 					return false;
 				}
+
+				$File = __DIR__ . '/' . $File;
+
+				file_put_contents( $File, $Data );
 
 				$this->ExtractClientArchives = true;
 
