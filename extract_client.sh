@@ -58,6 +58,7 @@ cp "$DIR/ClientExtracted/steamui/broadcast.js" "$DIR/.support/original_js/steamu
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
 ./steamworks_dumper/build/steamworks_dumper "linux_bins/ubuntu12_32/steamclient.so" "$DIR/Structs/"
+./steamworks_dumper/build/steamworks_dumper "linux_bins/ubuntu12_32/steamui.so" "$DIR/Structs/"
 
 #
 # BUILDBOT PATHS
