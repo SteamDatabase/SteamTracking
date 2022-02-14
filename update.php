@@ -165,11 +165,12 @@
 						$Hash = $Test[ 2 ][ $Index ];
 						$Path = '.support/archives/' . $Archive;
 
-						if( ( $this->ETags[ $Path ] ?? null ) !== $Hash )
+						if( ( $this->ETags[ 'hash_for_' . $Path ] ?? null ) !== $Hash )
 						{
 							$this->Log( 'Downloading {lightblue}' . $Path . '{normal} - checksum: ' . $Hash );
 
-							$this->ETags[ $Path ] = $Hash;
+							// Separate prefix so it doesn't get hit in the downloader as an actual etag
+							$this->ETags[ 'hash_for_' . $Path ] = $Hash;
 
 							$this->URLsToFetch[ ] =
 							[
@@ -200,11 +201,12 @@
 						$Hash = $Test[ 2 ][ $Index ];
 						$Path = '.support/linux_archives/' . $Archive;
 
-						if( ( $this->ETags[ $Path ] ?? null ) !== $Hash )
+						if( ( $this->ETags[ 'hash_for_' . $Path ] ?? null ) !== $Hash )
 						{
 							$this->Log( 'Downloading {lightblue}' . $Path . '{normal} - checksum: ' . $Hash );
 
-							$this->ETags[ $Path ] = $Hash;
+							// Separate prefix so it doesn't get hit in the downloader as an actual etag
+							$this->ETags[ 'hash_for_' . $Path ] = $Hash;
 
 							$this->URLsToFetch[ ] =
 							[
