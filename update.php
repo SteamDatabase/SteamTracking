@@ -684,7 +684,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					$Url = $Line;
 					$ParsedUrl = parse_url( $Url );
 
-					if( $ParsedUrl === false )
+					if( $ParsedUrl === false || empty( $ParsedUrl[ 'host' ] ) || empty( $ParsedUrl[ 'path' ] ) )
 					{
 						$this->Log( $Line . ' is malformed' );
 						continue;

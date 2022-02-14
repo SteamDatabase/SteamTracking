@@ -1,9 +1,9 @@
-node_modules/
-Protobufs/google/
-.support/
-yarn.lock
-package-lock.json
-npm-debug.log*
+/.support/
+/node_modules/
+/npm-debug.log*
+/package-lock.json
+/vendor/
+/composer.lock
 
 *.gz
 *.asi
@@ -17,11 +17,11 @@ npm-debug.log*
 *.webm
 *.swp
 
-ClientExtracted/steamcmd
-ClientExtracted/steam_osx
-ClientExtracted/steamchina_osx
-ClientExtracted/ubuntu12_32/steam
-ClientExtracted/ubuntu12_64/steam
-ClientExtracted/steam/drivercheck/
-ClientExtracted/ThirdPartyLegalNotices.doc
-ClientExtracted/Frameworks*
+/ClientExtracted/steamcmd
+/ClientExtracted/steam_osx
+/ClientExtracted/steamchina_osx
+/ClientExtracted/ubuntu12_32/steam
+/ClientExtracted/ubuntu12_64/steam
+/ClientExtracted/steam/drivercheck/
+/ClientExtracted/ThirdPartyLegalNotices.doc
+/ClientExtracted/Frameworks*
