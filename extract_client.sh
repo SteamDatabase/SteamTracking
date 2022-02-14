@@ -34,6 +34,14 @@ do
 	fi
 done
 
+for z in linux_archives/*.zip;
+do
+	if [[ "$z" == *"bins"* ]];
+	then
+		unzip -q -n "$z" -d linux_bins/
+	fi
+done
+
 #
 # PROTOBUF DUMP
 #
@@ -49,7 +57,7 @@ cp "$DIR/ClientExtracted/steamui/broadcast.js" "$DIR/.support/original_js/steamu
 
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
-./MachoDumper/swdumper bins/steamclient.dylib "$DIR/Structs/"
+./steamworks_dumper/build/steamworks_dumper linux_bins/steamclient.dylib "$DIR/Structs/"
 
 #
 # BUILDBOT PATHS

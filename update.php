@@ -189,6 +189,40 @@
 
 				unset( $Test, $Archive, $Hash, $Index );
 			}
+			// Get archives from beta manifest
+			else if( $File === 'ClientManifest/steam_client_publicbeta_ubuntu12' || $File === 'ClientManifest/steam_cmd_publicbeta_linux' )
+			{
+				if( preg_match_all( '/"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/', $Data, $Test ) > 0 )
+				{
+					foreach( $Test[ 1 ] as $Index => $Archive )
+					{
+						$Hash = $Test[ 2 ][ $Index ];
+
+						if( !isset( $this->ETags[ $Archive ] ) || $this->ETags[ $Archive ] !== $Hash )
+						{
+							$this->Log( 'Downloading {lightblue}' . $Archive . '{normal} - checksum: ' . $Hash );
+
+							$this->ETags[ $Archive ] = $Hash;
+
+							$this->URLsToFetch[ ] =
+							[
+								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Hash,
+								'File' => '.support/linux_archives/' . $Archive
+							];
+						}
+						else
+						{
+							$this->Log( 'Matched {lightblue}' . $Archive . '{normal}, but we already have it cached' );
+						}
+					}
+				}
+				else
+				{
+					$this->Log( '{yellow}Failed to find any archives' );
+				}
+
+				unset( $Test, $Archive, $Hash, $Index );
+			}
 			// Convert group members to JSON
 			else if( $File === 'Random/ValveGroup.json' || $File === 'Random/SteamModerators.json' || $File === 'Random/SteamDevs.json' )
 			{
