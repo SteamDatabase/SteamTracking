@@ -176,8 +176,8 @@
         }),
         C = (r("kdZy"), r("wogL"), r("1BdX")),
         O = r("boaH"),
-        z = r("nWbB"),
-        j = (r("Bniq"), r("5L1o")),
+        j = r("nWbB"),
+        z = (r("Bniq"), r("5L1o")),
         R = r("02Wr"),
         F = r("MnIK"),
         T = r("6Y59"),
@@ -333,7 +333,7 @@
                       return r.IsBroadcastAllowed()
                         ? [
                             4,
-                            z.a
+                            j.a
                               .Get()
                               .LoadBIsEmbeddedBroadcastHidden(
                                 this.m_cancelSignal
@@ -346,13 +346,13 @@
                         this.m_cancelSignal.token.reason ||
                           this.setState({
                             bLoadingPreference: !1,
-                            bExpanded: !z.a
+                            bExpanded: !j.a
                               .Get()
                               .BIsEmbeddedBroadcastHiddenByDefaultUserSettings(),
                             innerStyle: Object(n.a)(
                               Object(n.a)({}, this.state.innerStyle),
                               {
-                                maxHeight: z.a
+                                maxHeight: j.a
                                   .Get()
                                   .BIsEmbeddedBroadcastHiddenByDefaultUserSettings()
                                   ? "0vh"
@@ -363,17 +363,17 @@
                         [
                           4,
                           this.props.bIsPreview && this.props.accountIDs
-                            ? z.a
+                            ? j.a
                                 .Get()
                                 .HintLoadEmbeddablePreviewStreams(this.props)
-                            : z.a.Get().HintLoadEmbeddableStreams(this.props),
+                            : j.a.Get().HintLoadEmbeddableStreams(this.props),
                         ]
                       );
                     case 2:
                       return (
                         t.sent(),
                         this.props.nAppIDVOD &&
-                          (z.a
+                          (j.a
                             .Get()
                             .SetupEmbeddableVOD(
                               this.props,
@@ -402,9 +402,9 @@
             }),
             (t.prototype.ToggleBroadcastExpandShrink = function () {
               var e = this,
-                t = z.a.Get().GetPlayReadyStream(this.props),
+                t = j.a.Get().GetPlayReadyStream(this.props),
                 r = O.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID;
-              Object(z.e)(r, this.state.bExpanded ? 2 : 3, t.snr);
+              Object(j.e)(r, this.state.bExpanded ? 2 : 3, t.snr);
               var i = this.state.bExpanded;
               window.setTimeout(function () {
                 return e.setState({
@@ -417,7 +417,7 @@
                   this.setState(
                     { bExpanded: !this.state.bExpanded },
                     function () {
-                      return z.a
+                      return j.a
                         .Get()
                         .SetEmbeddedStreamCollapsed(!e.state.bExpanded);
                     }
@@ -426,7 +426,7 @@
             (t.prototype.OnShrinkTransitionEnd = function () {
               "0vh" === this.state.innerStyle.maxHeight &&
                 this.setState({ bExpanded: !1 }, function () {
-                  return z.a.Get().SetEmbeddedStreamCollapsed(!0);
+                  return j.a.Get().SetEmbeddedStreamCollapsed(!0);
                 });
             }),
             (t.prototype.onStreamSelect = function (e) {
@@ -436,10 +436,10 @@
                     case 0:
                       return (
                         this.setState({ bStartMuted: !1 }),
-                        z.a.Get().GetPlayReadyStream(this.props).accountid ==
+                        j.a.Get().GetPlayReadyStream(this.props).accountid ==
                         e.accountid
                           ? [3, 2]
-                          : [4, z.a.Get().AttemptToPlayStream(this.props, e)]
+                          : [4, j.a.Get().AttemptToPlayStream(this.props, e)]
                       );
                     case 1:
                       t.sent(), (t.label = 2);
@@ -460,7 +460,7 @@
                   switch (n.label) {
                     case 0:
                       this.setState({ bStartMuted: !1 }),
-                        (e = z.a
+                        (e = j.a
                           .Get()
                           .GetStreams(this.props)
                           .filter(function (e) {
@@ -469,7 +469,7 @@
                               a.props.fnFilterStreams(e)
                             );
                           })),
-                        Object(z.f)(e),
+                        Object(j.f)(e),
                         (t = 0),
                         (r = e),
                         (n.label = 1);
@@ -477,7 +477,7 @@
                       return t < r.length
                         ? (i = r[t]).nAppIDVOD
                           ? [3, 3]
-                          : [4, z.a.Get().AttemptToPlayStream(this.props, i)]
+                          : [4, j.a.Get().AttemptToPlayStream(this.props, i)]
                         : [3, 4];
                     case 2:
                       return n.sent(), [2];
@@ -496,7 +496,7 @@
                 bRightPanelArtworkOrEmpty: !0,
               };
               if (this.props.bWidePlayer) return r;
-              var n = z.a.Get().GetConcurrentStreams(this.props) > 1,
+              var n = j.a.Get().GetConcurrentStreams(this.props) > 1,
                 i = O.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
                 a = s.createElement(
                   "div",
@@ -556,9 +556,9 @@
                 i = this;
               if (!r.IsBroadcastAllowed() || this.state.bLoadingPreference)
                 return null;
-              var a = z.a.Get().GetPlayReadyStream(this.props);
+              var a = j.a.Get().GetPlayReadyStream(this.props);
               if (a) {
-                var o = "show" === z.a.Get().GetChatVisibility(),
+                var o = "show" === j.a.Get().GetChatVisibility(),
                   c = this.props,
                   u = c.event,
                   l = c.language,
@@ -567,20 +567,20 @@
                   (a = Object(n.a)(Object(n.a)({}, a), {
                     left_panel: u.GetImageURL(
                       "broadcast_left",
-                      l || Object(S.i)(g.c.LANGUAGE)
+                      l || Object(S.j)(g.c.LANGUAGE)
                     ),
                     right_panel: u.GetImageURL(
                       "broadcast_right",
-                      l || Object(S.i)(g.c.LANGUAGE)
+                      l || Object(S.j)(g.c.LANGUAGE)
                     ),
                     store_title: u.GetBroadcastTitle(
-                      l || Object(S.i)(g.c.LANGUAGE)
+                      l || Object(S.j)(g.c.LANGUAGE)
                     ),
                     broadcast_chat_visibility: u.GetBroadcastChatVisibility(),
                   }));
                 var m = this.ConstructSidePanels(a, o),
                   p = a.store_title ? a.store_title : a.title,
-                  f = z.a.Get().GetConcurrentStreams(this.props) > 1;
+                  f = j.a.Get().GetConcurrentStreams(this.props) > 1;
                 u && u.jsondata && u.jsondata.broadcast_gradient_inner_color,
                   u && u.jsondata && u.jsondata.broadcast_gradient_outer_color;
                 return s.createElement(
@@ -611,7 +611,7 @@
                             "bordered_title_trgt"
                           ),
                         },
-                        s.createElement(j.i, null),
+                        s.createElement(z.i, null),
                         p,
                         s.createElement(
                           "div",
@@ -730,7 +730,7 @@
               (t.prototype.CloseBroadcastPopup = function () {
                 var e = O.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                   .m_nAppID;
-                Object(z.e)(e, 7, this.props.stream.snr),
+                Object(j.e)(e, 7, this.props.stream.snr),
                   this.setState({ bPopout: !1, bPreventPopup: !0 });
               }),
               (t.prototype.OnEnter = function () {
@@ -850,22 +850,22 @@
               e.preventDefault();
               var t = O.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                 .m_nAppID;
-              Object(z.e)(
+              Object(j.e)(
                 t,
-                "show" === z.a.Get().GetChatVisibility() ? 5 : 4,
+                "show" === j.a.Get().GetChatVisibility() ? 5 : 4,
                 this.props.stream.snr
               ),
-                z.a.Get().ToggleChatVisibility();
+                j.a.Get().ToggleChatVisibility();
             }),
             (t.prototype.onWatchBroadcastPage = function () {
               var e = O.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                 .m_nAppID;
-              Object(z.e)(e, 9, this.props.stream.snr);
+              Object(j.e)(e, 9, this.props.stream.snr);
             }),
             (t.prototype.render = function () {
               var e = this.ConstructBroadcastLink(),
-                t = "remove" != z.a.Get().GetChatVisibility(),
-                r = "hide" === z.a.Get().GetChatVisibility(),
+                t = "remove" != j.a.Get().GetChatVisibility(),
+                r = "hide" === j.a.Get().GetChatVisibility(),
                 n = Number.parseInt(
                   "" +
                     O.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
@@ -1002,7 +1002,7 @@
             Object(n.d)(t, e),
             (t.prototype.GetFilteredStreamList = function () {
               var e = this,
-                t = z.a
+                t = j.a
                   .Get()
                   .GetStreams(this.props.broadcastEmbedContext)
                   .filter(function (t) {
@@ -1010,7 +1010,7 @@
                       !e.props.fnFilterStreams || e.props.fnFilterStreams(t)
                     );
                   });
-              return Object(z.f)(t), t;
+              return Object(j.f)(t), t;
             }),
             (t.prototype.CalculateStreamHeight = function (e) {
               var t = O.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
@@ -1112,7 +1112,7 @@
             }),
             (t.GetClassForStreamPriority = function (e) {
               switch (e) {
-                case z.b.k_eFeatured:
+                case j.b.k_eFeatured:
                   return U.a.stream_featured;
               }
               return null;
@@ -1122,7 +1122,7 @@
                 t = this.props,
                 n = t.stream,
                 i = t.bShowCapsuleArt;
-              if (!Object(z.d)(n)) return null;
+              if (!Object(j.d)(n)) return null;
               var a = O.a.GetOrCreateBroadcastInfo(n.steamid).m_nAppID,
                 o = d.a.GetAppLinkInfo(
                   null !== (e = n.nAppIDVOD) && void 0 !== e ? e : a
@@ -1205,7 +1205,7 @@
                       "div",
                       { className: U.a.ChatContainer },
                       s.createElement(u.a, {
-                        emoticonStore: z.g,
+                        emoticonStore: j.g,
                         watchLocation: 6,
                         steamID: this.props.stream.steamid,
                         broadcastID: t.m_ulBroadcastID,
@@ -1305,8 +1305,8 @@
         M = r("6Y59"),
         C = r("exH9"),
         O = r("TLQK"),
-        z = r("opsS"),
-        j = r("lkRc"),
+        j = r("opsS"),
+        z = r("lkRc"),
         R = r("3sYe"),
         F = r.n(R),
         T = r("A5MU"),
@@ -1341,7 +1341,7 @@
                       F.a.MessageName,
                       F.a.MessagePresenter
                     ),
-                    href: j.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    href: z.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
@@ -1361,7 +1361,7 @@
                 "a",
                 {
                   className: Object(C.a)(F.a.MessageName, i),
-                  href: j.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                  href: z.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                   "data-miniprofile": "s" + r.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
@@ -1493,7 +1493,7 @@
                 a = this.m_chat.BIsUserBroadcastModerator(
                   this.m_chat.GetUserSteamID()
                 );
-              ((j.h && j.h.is_support) || i || a
+              ((z.h && z.h.is_support) || i || a
                 ? n.push(
                     o.createElement(
                       f.d,
@@ -1621,7 +1621,7 @@
                       Object(O.f)("#BroadcastChat_MuteLocal")
                     )
                   ),
-              (j.h && j.h.is_support) ||
+              (z.h && z.h.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
                 t.steamid &&
                 (this.m_chat.BIsUserBroadcastModerator(t.steamid)
@@ -1815,10 +1815,10 @@
               );
             }),
             Object(n.c)([i.C], t.prototype, "m_chat", void 0),
-            Object(n.c)([z.a], t.prototype, "StartChat", null),
-            Object(n.c)([z.a], t.prototype, "HandleScroll", null),
-            Object(n.c)([z.a], t.prototype, "OnContextMenu", null),
-            Object(n.c)([z.a], t.prototype, "RenderUserChatLine", null),
+            Object(n.c)([j.a], t.prototype, "StartChat", null),
+            Object(n.c)([j.a], t.prototype, "HandleScroll", null),
+            Object(n.c)([j.a], t.prototype, "OnContextMenu", null),
+            Object(n.c)([j.a], t.prototype, "RenderUserChatLine", null),
             (t = Object(n.c)([a.a], t))
           );
         })(o.Component);
@@ -1826,9 +1826,9 @@
         var t = e.oChat,
           r = e.emoticonStore;
         return !e.bPartnerMemberOnlyChat ||
-          ((null === j.h || void 0 === j.h ? void 0 : j.h.logged_in) &&
-            (null === j.h || void 0 === j.h ? void 0 : j.h.is_partner_member))
-          ? (null === j.h || void 0 === j.h ? void 0 : j.h.logged_in)
+          ((null === z.h || void 0 === z.h ? void 0 : z.h.logged_in) &&
+            (null === z.h || void 0 === z.h ? void 0 : z.h.is_partner_member))
+          ? (null === z.h || void 0 === z.h ? void 0 : z.h.logged_in)
             ? o.createElement(U, { oChat: t, emoticonStore: r })
             : null
           : o.createElement(G, null);
@@ -1989,7 +1989,7 @@
             { className: F.a.LogInPrompt },
             Object(O.f)("#Broadcast_PartnerChat_Login")
           ),
-          !j.h.logged_in &&
+          !z.h.logged_in &&
             o.createElement(
               h.d,
               { onClick: y.a, className: Object(C.a)(F.a.SignInButton) },
@@ -2001,7 +2001,7 @@
     gJzY: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return z;
+        return j;
       });
       var n,
         i,
@@ -2526,7 +2526,7 @@
         M = r("lkRc"),
         C = (r("mgoM"), r("75qM"), r("kyHq")),
         O = r("uobO"),
-        z =
+        j =
           (r("AiWL"),
           (function () {
             function e() {
@@ -2539,7 +2539,7 @@
                 (this.m_regexBannedWords = null),
                 (this.m_regexCleanWords = null),
                 (this.m_bShownFilterTip = !1),
-                (this.m_TextFilterPreferences = new C.j());
+                (this.m_TextFilterPreferences = new C.k());
               var e = new v.a();
               (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
                 (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
@@ -3797,7 +3797,7 @@
             t
           );
         })(h),
-        z = (function (e) {
+        j = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -3906,7 +3906,7 @@
             t
           );
         })(h),
-        j = (function (e) {
+        z = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -4068,7 +4068,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: j, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: z, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -4129,7 +4129,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: j, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: z, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -4447,7 +4447,7 @@
                         br: f.d.readUint64String,
                         bw: f.h.writeUint64String,
                       },
-                      channels: { n: 5, c: j, r: !0, q: !0 },
+                      channels: { n: 5, c: z, r: !0, q: !0 },
                       release_date: {
                         n: 6,
                         br: f.d.readString,
@@ -4585,7 +4585,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: j, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: z, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -5609,7 +5609,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: j, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: z, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -5784,7 +5784,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: j, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: z, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -5845,7 +5845,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { broadcasts: { n: 1, c: j, r: !0, q: !0 } },
+                    fields: { broadcasts: { n: 1, c: z, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -5907,7 +5907,7 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      broadcasts: { n: 1, c: j, r: !0, q: !0 },
+                      broadcasts: { n: 1, c: z, r: !0, q: !0 },
                       appid: { n: 2, br: f.d.readUint32, bw: f.h.writeUint32 },
                       title: { n: 3, br: f.d.readString, bw: f.h.writeString },
                     },
@@ -5978,7 +5978,7 @@
                         br: f.d.readString,
                         bw: f.h.writeString,
                       },
-                      broadcast: { n: 3, c: j },
+                      broadcast: { n: 3, c: z },
                     },
                   }),
                 t.sm_m
@@ -6105,7 +6105,7 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      broadcasts: { n: 1, c: j, r: !0, q: !0 },
+                      broadcasts: { n: 1, c: z, r: !0, q: !0 },
                       title: { n: 2, br: f.d.readString, bw: f.h.writeString },
                     },
                   }),
@@ -6169,7 +6169,7 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      broadcasts: { n: 1, c: j, r: !0, q: !0 },
+                      broadcasts: { n: 1, c: z, r: !0, q: !0 },
                       title: { n: 2, br: f.d.readString, bw: f.h.writeString },
                     },
                   }),
@@ -6233,7 +6233,7 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      broadcast: { n: 1, c: j },
+                      broadcast: { n: 1, c: z },
                       title: { n: 2, br: f.d.readString, bw: f.h.writeString },
                       chat_group_id: {
                         n: 3,
@@ -6302,7 +6302,7 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      broadcast: { n: 1, c: j },
+                      broadcast: { n: 1, c: z },
                       title: { n: 2, br: f.d.readString, bw: f.h.writeString },
                     },
                   }),
@@ -6857,7 +6857,7 @@
             });
           }),
           (e.GetBroadcastChannelStatus = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelStatus#1", t, z, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelStatus#1", t, j, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
