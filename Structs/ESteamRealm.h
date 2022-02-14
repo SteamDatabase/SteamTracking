@@ -1,6 +1,6 @@
 typedef enum ESteamRealm
 {
-    k_ESteamRealmUnknown, // unknown
-    k_ESteamRealmSteamglobal, // steamglobal
-    k_ESteamRealmSteamchina, // steamchina
+    k_ESteamRealmUnknown = 0,
+    k_ESteamRealmSteamglobal = 1,
+    k_ESteamRealmSteamchina = 2,
 } ESteamRealm;

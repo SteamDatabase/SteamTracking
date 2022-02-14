@@ -1,27 +1,27 @@
 typedef enum EBroadcastUploadResult
 {
-    k_EBroadcastUploadResultNone, // None
-    k_EBroadcastUploadResultOK, // OK
-    k_EBroadcastUploadResultInitFailed, // Init Failed
-    k_EBroadcastUploadResultFrameFailed, // Frame Failed
-    k_EBroadcastUploadResultUploadTimeout, // Upload Timeout
-    k_EBroadcastUploadResultBandwidthExceeded, // Bandwidth Exceeded
-    k_EBroadcastUploadResultLowFPS, // Low FPS
-    k_EBroadcastUploadResultMissingKeyFrames, // Missing Key Frames
-    k_EBroadcastUploadResultNoConnection, // No Connection
-    k_EBroadcastUploadResultRelayFailed, // Relay Failed
-    k_EBroadcastUploadResultSettingsChanged, // Settings Changed
-    k_EBroadcastUploadResultMissingAudio, // Missing Audio
-    k_EBroadcastUploadResultTooFarBehind, // Too Far behind
-    k_EBroadcastUploadResultTranscodeBehind, // Transcode Behind
-    k_EBroadcastUploadResultNotAllowedToPlay, // Not allowed to play
-    k_EBroadcastUploadResultServerBusy, // Server Busy
-    k_EBroadcastUploadResultBanned, // Banned
-    k_EBroadcastUploadResultAlreadyActive, // Already Active
-    k_EBroadcastUploadResultForcedOff, // Forced Off
-    k_EBroadcastUploadResultAudioBehind, // Audio Behind
-    k_EBroadcastUploadResultServerShutdown, // Server Shutdown
-    k_EBroadcastUploadResultUploadDisconnected, // Upload Disconnected
-    k_EBroadcastUploadResultVideoInitFailed, // Video Init Failed
-    k_EBroadcastUploadResultAudioInitFailed, // Audio Init Failed
+    k_EBroadcastUploadResultNone = 0,
+    k_EBroadcastUploadResultOK = 1,
+    k_EBroadcastUploadResultInitFailed = 2,
+    k_EBroadcastUploadResultFrameFailed = 3,
+    k_EBroadcastUploadResultUploadTimeout = 4,
+    k_EBroadcastUploadResultBandwidthExceeded = 5,
+    k_EBroadcastUploadResultLowFPS = 6,
+    k_EBroadcastUploadResultMissingKeyFrames = 7,
+    k_EBroadcastUploadResultNoConnection = 8,
+    k_EBroadcastUploadResultRelayFailed = 9,
+    k_EBroadcastUploadResultSettingsChanged = 10,
+    k_EBroadcastUploadResultMissingAudio = 11,
+    k_EBroadcastUploadResultTooFarBehind = 12,
+    k_EBroadcastUploadResultTranscodeBehind = 13,
+    k_EBroadcastUploadResultNotAllowedToPlay = 14,
+    k_EBroadcastUploadResultServerBusy = 15,
+    k_EBroadcastUploadResultBanned = 16,
+    k_EBroadcastUploadResultAlreadyActive = 17,
+    k_EBroadcastUploadResultForcedOff = 18,
+    k_EBroadcastUploadResultAudioBehind = 19,
+    k_EBroadcastUploadResultServerShutdown = 20,
+    k_EBroadcastUploadResultUploadDisconnected = 21,
+    k_EBroadcastUploadResultVideoInitFailed = 22,
+    k_EBroadcastUploadResultAudioInitFailed = 23,
 } EBroadcastUploadResult;

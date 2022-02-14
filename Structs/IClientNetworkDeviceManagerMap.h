@@ -1,0 +1,47 @@
+class IClientNetworkDeviceManagerMap
+{
+public:
+    virtual unknown_ret IsInterfaceValid() = 0;
+    virtual unknown_ret RefreshDevices() = 0;
+    virtual unknown_ret GetNetworkDevicesData(void*) = 0;
+    virtual unknown_ret ConnectToDevice(void*) = 0;
+    virtual unknown_ret DisconnectFromDevice(void*) = 0;
+    virtual unknown_ret SetWifiEnabled(void*) = 0;
+    virtual unknown_ret SetWifiScanningEnabled(void*) = 0;
+    virtual unknown_ret ForgetWirelessEndpoint(void*,void*) = 0;
+    virtual unknown_ret SetWirelessEndpointAutoconnect(void*,void*,void*) = 0;
+    virtual unknown_ret SetCustomIPSettings(void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret GetCustomIPSettings(void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret SetProxyInfo(void*,void*,void*) = 0;
+    virtual unknown_ret GetProxyInfo(void*,void*,void*,void*) = 0;
+    virtual unknown_ret GetObviousConnectivityProblem() = 0;
+    virtual unknown_ret TEST_SetFakeLocalSystemStateSetting(void*) = 0;
+    virtual unknown_ret TEST_GetFakeLocalSystemStateSetting() = 0;
+    virtual unknown_ret TEST_GetFakeLocalSystemEffectiveState() = 0;
+    virtual unknown_ret TEST_SetEmulateSingleWirelessDevice(void*) = 0;
+    virtual unknown_ret TEST_GetEmulateSingleWirelessDevice() = 0;
+    virtual unknown_ret LEGACY_EnumerateNetworkDevices(void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetDeviceType(void*) = 0;
+    virtual unknown_ret LEGACY_IsCurrentDevice(void*) = 0;
+    virtual unknown_ret LEGACY_IsCurrentlyConnected(void*) = 0;
+    virtual unknown_ret LEGACY_GetDeviceIP4(void*,void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetDeviceBroadcastIP4(void*,void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetDeviceIPV6InterfaceIndex(void*) = 0;
+    virtual unknown_ret LEGACY_GetDeviceVendor(void*) = 0;
+    virtual unknown_ret LEGACY_GetDeviceProduct(void*) = 0;
+    virtual unknown_ret LEGACY_GetMacAddress(void*) = 0;
+    virtual unknown_ret LEGACY_GetSubnetMaskBitCount(void*,void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetRouterAddressIP4(void*,void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetDNSResolversIP4(void*,void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetDeviceState(void*) = 0;
+    virtual unknown_ret LEGACY_GetDevicePluggedState(void*) = 0;
+    virtual unknown_ret LEGACY_EnumerateWirelessEndpoints(void*,void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetConnectedWirelessEndpointSSID(void*) = 0;
+    virtual unknown_ret LEGACY_GetWirelessSecurityCapabilities(void*) = 0;
+    virtual unknown_ret LEGACY_GetWirelessEndpointSSIDUserDisplayString(void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetWirelessEndpointStrength(void*,void*) = 0;
+    virtual unknown_ret LEGACY_IsSecurityRequired(void*,void*) = 0;
+    virtual unknown_ret LEGACY_GetCachedWirelessCredentials(void*,void*) = 0;
+    virtual unknown_ret LEGACY_IsWirelessEndpointForgettable(void*,void*) = 0;
+    virtual unknown_ret LEGACY_IsUsingDHCP(void*) = 0;
+};

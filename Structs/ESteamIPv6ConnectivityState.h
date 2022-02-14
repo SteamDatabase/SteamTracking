@@ -1,6 +1,6 @@
 typedef enum ESteamIPv6ConnectivityState
 {
-    k_ESteamIPv6ConnectivityStateUnknown, // unknown
-    k_ESteamIPv6ConnectivityStateGood, // good
-    k_ESteamIPv6ConnectivityStateBad, // bad
+    k_ESteamIPv6ConnectivityStateUnknown = 0,
+    k_ESteamIPv6ConnectivityStateGood = 1,
+    k_ESteamIPv6ConnectivityStateBad = 2,
 } ESteamIPv6ConnectivityState;

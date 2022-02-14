@@ -1,48 +1,48 @@
 typedef enum EHTTPStatusCode
 {
-    k_EHTTPStatusCodeInvalid, // Invalid
-    k_EHTTPStatusCodeContinue = 100, // Continue
-    k_EHTTPStatusCodeSwitchingProtocols, // Switching Protocols
-    k_EHTTPStatusCodeOK = 200, // OK
-    k_EHTTPStatusCodeCreated, // Created
-    k_EHTTPStatusCodeAccepted, // Accepted
-    k_EHTTPStatusCodeNonAuthoritativeInformation, // Non-Authoritative Information
-    k_EHTTPStatusCodeNoContent, // No Content
-    k_EHTTPStatusCodeResetContent, // Reset Content
-    k_EHTTPStatusCodePartialContent, // Partial Content
-    k_EHTTPStatusCodeMultipleChoices = 300, // Multiple Choices
-    k_EHTTPStatusCodeMovedPermanently, // Moved Permanently
-    k_EHTTPStatusCodeFound, // Found
-    k_EHTTPStatusCodeSeeOther, // See Other
-    k_EHTTPStatusCodeNotModified, // Not Modified
-    k_EHTTPStatusCodeUseProxy, // Use Proxy
-    k_EHTTPStatusCodeTemporaryRedirect = 307, // Temporary Redirect
-    k_EHTTPStatusCodeBadRequest = 400, // Bad Request
-    k_EHTTPStatusCodeUnauthorized, // Unauthorized
-    k_EHTTPStatusCodePaymentRequired, // Payment Required
-    k_EHTTPStatusCodeForbidden, // Forbidden
-    k_EHTTPStatusCodeNotFound, // Not Found
-    k_EHTTPStatusCodeMethodNotAllowed, // Method Not Allowed
-    k_EHTTPStatusCodeNotAcceptable, // Not Acceptable
-    k_EHTTPStatusCodeProxyAuthenticationRequired, // Proxy Authentication Required
-    k_EHTTPStatusCodeRequestTimeout, // Request Timeout
-    k_EHTTPStatusCodeConflict, // Conflict
-    k_EHTTPStatusCodeGone, // Gone
-    k_EHTTPStatusCodeLengthRequired, // Length Required
-    k_EHTTPStatusCodePreconditionFailed, // Precondition Failed
-    k_EHTTPStatusCodeRequestEntityTooLarge, // Request Entity Too Large
-    k_EHTTPStatusCodeRequestURITooLarge, // Request-URI Too Large
-    k_EHTTPStatusCodeUnsupportedMediaType, // Unsupported Media Type
-    k_EHTTPStatusCodeRequestedRangeNotSatisfiable, // Requested range not satisfiable
-    k_EHTTPStatusCodeExpectationFailed, // Expectation Failed
-    k_EHTTPStatusCodeUnknownHTTP4xx, // Unknown HTTP 4xx
-    k_EHTTPStatusCodeTooManyRequests = 429, // Too Many Requests
-    k_EHTTPStatusCodeConnectionClosed = 444, // Connection closed
-    k_EHTTPStatusCodeInternalServerError = 500, // Internal Server Error
-    k_EHTTPStatusCodeNotImplemented, // Not Implemented
-    k_EHTTPStatusCodeBadGateway, // Bad Gateway
-    k_EHTTPStatusCodeServiceUnavailable, // Service Unavailable
-    k_EHTTPStatusCodeGatewayTimeout, // Gateway Time-out
-    k_EHTTPStatusCodeHTTPVersionNotSupported, // HTTP Version not supported
-    k_EHTTPStatusCodeUnknownHTTP5xx = 599, // Unknown HTTP 5xx
+    k_EHTTPStatusCodeInvalid = 0,
+    k_EHTTPStatusCodeContinue = 100,
+    k_EHTTPStatusCodeSwitchingProtocols = 101,
+    k_EHTTPStatusCodeOK = 200,
+    k_EHTTPStatusCodeCreated = 201,
+    k_EHTTPStatusCodeAccepted = 202,
+    k_EHTTPStatusCodeNonAuthoritativeInformation = 203,
+    k_EHTTPStatusCodeNoContent = 204,
+    k_EHTTPStatusCodeResetContent = 205,
+    k_EHTTPStatusCodePartialContent = 206,
+    k_EHTTPStatusCodeMultipleChoices = 300,
+    k_EHTTPStatusCodeMovedPermanently = 301,
+    k_EHTTPStatusCodeFound = 302,
+    k_EHTTPStatusCodeSeeOther = 303,
+    k_EHTTPStatusCodeNotModified = 304,
+    k_EHTTPStatusCodeUseProxy = 305,
+    k_EHTTPStatusCodeTemporaryRedirect = 307,
+    k_EHTTPStatusCodeBadRequest = 400,
+    k_EHTTPStatusCodeUnauthorized = 401,
+    k_EHTTPStatusCodePaymentRequired = 402,
+    k_EHTTPStatusCodeForbidden = 403,
+    k_EHTTPStatusCodeNotFound = 404,
+    k_EHTTPStatusCodeMethodNotAllowed = 405,
+    k_EHTTPStatusCodeNotAcceptable = 406,
+    k_EHTTPStatusCodeProxyAuthenticationRequired = 407,
+    k_EHTTPStatusCodeRequestTimeout = 408,
+    k_EHTTPStatusCodeConflict = 409,
+    k_EHTTPStatusCodeGone = 410,
+    k_EHTTPStatusCodeLengthRequired = 411,
+    k_EHTTPStatusCodePreconditionFailed = 412,
+    k_EHTTPStatusCodeRequestEntityTooLarge = 413,
+    k_EHTTPStatusCodeRequestURITooLarge = 414,
+    k_EHTTPStatusCodeUnsupportedMediaType = 415,
+    k_EHTTPStatusCodeRequestedRangeNotSatisfiable = 416,
+    k_EHTTPStatusCodeExpectationFailed = 417,
+    k_EHTTPStatusCodeUnknownHTTP4xx = 418,
+    k_EHTTPStatusCodeTooManyRequests = 429,
+    k_EHTTPStatusCodeConnectionClosed = 444,
+    k_EHTTPStatusCodeInternalServerError = 500,
+    k_EHTTPStatusCodeNotImplemented = 501,
+    k_EHTTPStatusCodeBadGateway = 502,
+    k_EHTTPStatusCodeServiceUnavailable = 503,
+    k_EHTTPStatusCodeGatewayTimeout = 504,
+    k_EHTTPStatusCodeHTTPVersionNotSupported = 505,
+    k_EHTTPStatusCodeUnknownHTTP5xx = 599,
 } EHTTPStatusCode;

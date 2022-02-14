@@ -1,20 +1,21 @@
 typedef enum ELaunchOptionType
 {
-    k_ELaunchOptionTypeNone, // None
-    k_ELaunchOptionTypeDefault, // Default
-    k_ELaunchOptionTypeSafeMode, // SafeMode
-    k_ELaunchOptionTypeMultiplayer, // Multiplayer
-    k_ELaunchOptionTypeConfig, // Config
-    k_ELaunchOptionTypeVR, // VR
-    k_ELaunchOptionTypeServer, // Server
-    k_ELaunchOptionTypeEditor, // Editor
-    k_ELaunchOptionTypeManual, // Manual
-    k_ELaunchOptionTypeBenchmark, // Benchmark
-    k_ELaunchOptionTypeOption1, // Option1
-    k_ELaunchOptionTypeOption2, // Option2
-    k_ELaunchOptionTypeOption3, // Option3
-    k_ELaunchOptionTypeOthervr, // othervr
-    k_ELaunchOptionTypeOpenvroverlay, // openvroverlay
-    k_ELaunchOptionTypeOsvr, // osvr
-    k_ELaunchOptionTypeDialog = 1000, // Dialog
+    k_ELaunchOptionTypeNone = 0,
+    k_ELaunchOptionTypeDefault = 1,
+    k_ELaunchOptionTypeSafeMode = 2,
+    k_ELaunchOptionTypeMultiplayer = 3,
+    k_ELaunchOptionTypeConfig = 4,
+    k_ELaunchOptionTypeVR = 5,
+    k_ELaunchOptionTypeServer = 6,
+    k_ELaunchOptionTypeEditor = 7,
+    k_ELaunchOptionTypeManual = 8,
+    k_ELaunchOptionTypeBenchmark = 9,
+    k_ELaunchOptionTypeOption1 = 10,
+    k_ELaunchOptionTypeOption2 = 11,
+    k_ELaunchOptionTypeOption3 = 12,
+    k_ELaunchOptionTypeOthervr = 13,
+    k_ELaunchOptionTypeOpenvroverlay = 14,
+    k_ELaunchOptionTypeOsvr = 15,
+    k_ELaunchOptionTypeOpenxr = 16,
+    k_ELaunchOptionTypeDialog = 1000,
 } ELaunchOptionType;

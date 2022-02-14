@@ -1,11 +1,11 @@
 typedef enum EFriendRelationship
 {
-    k_EFriendRelationshipNone, // None
-    k_EFriendRelationshipBlocked, // Blocked
-    k_EFriendRelationshipPendingInvitee, // Pending (Invitee)
-    k_EFriendRelationshipFriend, // Friend
-    k_EFriendRelationshipPendingInviter, // Pending (Inviter)
-    k_EFriendRelationshipIgnored, // Ignored
-    k_EFriendRelationshipIgnoredFriend, // IgnoredFriend
-    k_EFriendRelationshipSuggestedFriend, // SuggestedFriend
+    k_EFriendRelationshipNone = 0,
+    k_EFriendRelationshipBlocked = 1,
+    k_EFriendRelationshipPendingInvitee = 2,
+    k_EFriendRelationshipFriend = 3,
+    k_EFriendRelationshipPendingInviter = 4,
+    k_EFriendRelationshipIgnored = 5,
+    k_EFriendRelationshipIgnoredFriend = 6,
+    k_EFriendRelationshipSuggestedFriend = 7,
 } EFriendRelationship;

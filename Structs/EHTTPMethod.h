@@ -1,11 +1,11 @@
 typedef enum EHTTPMethod
 {
-    k_EHTTPMethodINVALID, // INVALID
-    k_EHTTPMethodGET, // GET
-    k_EHTTPMethodHEAD, // HEAD
-    k_EHTTPMethodPOST, // POST
-    k_EHTTPMethodPUT, // PUT
-    k_EHTTPMethodDELETE, // DELETE
-    k_EHTTPMethodOPTIONS, // OPTIONS
-    k_EHTTPMethodPATCH, // PATCH
+    k_EHTTPMethodINVALID = 0,
+    k_EHTTPMethodGET = 1,
+    k_EHTTPMethodHEAD = 2,
+    k_EHTTPMethodPOST = 3,
+    k_EHTTPMethodPUT = 4,
+    k_EHTTPMethodDELETE = 5,
+    k_EHTTPMethodOPTIONS = 6,
+    k_EHTTPMethodPATCH = 7,
 } EHTTPMethod;

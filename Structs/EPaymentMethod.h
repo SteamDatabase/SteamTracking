@@ -1,143 +1,156 @@
 typedef enum EPaymentMethod
 {
-    k_EPaymentMethodNone, // None
-    k_EPaymentMethodCDKey, // CD Key
-    k_EPaymentMethodCreditCard, // Credit Card
-    k_EPaymentMethodGiropay, // Giropay
-    k_EPaymentMethodPayPal, // PayPal
-    k_EPaymentMethodIDEAL, // iDEAL
-    k_EPaymentMethodPaySafeCard, // PaySafeCard
-    k_EPaymentMethodSofort, // Sofort
-    k_EPaymentMethodGuestPass, // Guest Pass
-    k_EPaymentMethodWebMoney, // WebMoney
-    k_EPaymentMethodMoneyBookers, // MoneyBookers
-    k_EPaymentMethodAliPay, // AliPay
-    k_EPaymentMethodYandex, // Yandex
-    k_EPaymentMethodKiosk, // Kiosk
-    k_EPaymentMethodQIWI, // QIWI
-    k_EPaymentMethodGameStop, // GameStop
-    k_EPaymentMethodHardwarePromo, // Hardware Promo
-    k_EPaymentMethodMopay, // mopay
-    k_EPaymentMethodBoletoBancario, // Boleto Bancario
-    k_EPaymentMethodBoaCompraGold, // BoaCompra Gold
-    k_EPaymentMethodBancoDoBrasilOnline, // Banco do Brasil Online
-    k_EPaymentMethodItauOnline, // Itau Online
-    k_EPaymentMethodBradescoOnline, // Bradesco Online
-    k_EPaymentMethodPagseguro, // Pagseguro
-    k_EPaymentMethodVisaBoaCompra, // Visa (BoaCompra)
-    k_EPaymentMethodAmexBoaCompra, // Amex (BoaCompra)
-    k_EPaymentMethodAura, // Aura
-    k_EPaymentMethodHipercard, // Hipercard
-    k_EPaymentMethodMastercardBoaCompra, // Mastercard (BoaCompra)
-    k_EPaymentMethodDinersCardBoaCompra, // Diner's Card (BoaCompra)
-    k_EPaymentMethodAuthorizedDevice, // Authorized Device
-    k_EPaymentMethodMOLPoints, // MOL Points
-    k_EPaymentMethodClickBuy, // Click&Buy
-    k_EPaymentMethodBeeline, // Beeline
-    k_EPaymentMethodKonbini, // Konbini
-    k_EPaymentMethodEClubPoints, // EClub Points
-    k_EPaymentMethodCreditCardDegica, // Credit Card (Degica)
-    k_EPaymentMethodBankTransferDegica, // Bank Transfer (Degica)
-    k_EPaymentMethodPayEasyDegica, // Pay Easy (Degica)
-    k_EPaymentMethodZong, // Zong
-    k_EPaymentMethodCultureVoucher, // Culture Voucher
-    k_EPaymentMethodBookVoucher, // Book Voucher
-    k_EPaymentMethodHappymoneyVoucher, // Happymoney Voucher
-    k_EPaymentMethodConvenientStoreVoucher, // Convenient Store Voucher
-    k_EPaymentMethodGameVoucher, // Game Voucher
-    k_EPaymentMethodMultibanco, // Multibanco
-    k_EPaymentMethodPayshop, // Payshop
-    k_EPaymentMethodMaestro, // Maestro
-    k_EPaymentMethodOXXO, // OXXO
-    k_EPaymentMethodToditoCash, // Todito Cash
-    k_EPaymentMethodCarnet, // Carnet
-    k_EPaymentMethodSPEI, // SPEI
-    k_EPaymentMethod3pay, // 3pay
-    k_EPaymentMethodIsBank, // Is Bank
-    k_EPaymentMethodGaranti, // Garanti
-    k_EPaymentMethodAkbank, // Akbank
-    k_EPaymentMethodYapiKredi, // Yapi Kredi
-    k_EPaymentMethodHalkbank, // Halkbank
-    k_EPaymentMethodBankAsya, // Bank Asya
-    k_EPaymentMethodFinansbank, // Finansbank
-    k_EPaymentMethodDenizBank, // DenizBank
-    k_EPaymentMethodPTT, // PTT
-    k_EPaymentMethodCashU, // CashU
-    k_EPaymentMethodSantanderRio, // Santander Rio
-    k_EPaymentMethodAutoGrant, // Auto Grant
-    k_EPaymentMethodWebMoneyDegica, // WebMoney (Degica)
-    k_EPaymentMethodOneCard, // OneCard
-    k_EPaymentMethodPSE, // PSE
-    k_EPaymentMethodExito, // Exito
-    k_EPaymentMethodEfecty, // Efecty
-    k_EPaymentMethodBalota, // Balota
-    k_EPaymentMethodPinValidda, // PinValidda
-    k_EPaymentMethodMangirKart, // MangirKart
-    k_EPaymentMethodBancoCreditoDePeru, // Banco Credito de Peru
-    k_EPaymentMethodBBVAContinental, // BBVA Continental
-    k_EPaymentMethodSafetyPay, // SafetyPay
-    k_EPaymentMethodPagoEfectivo, // PagoEfectivo
-    k_EPaymentMethodTrustly, // Trustly
-    k_EPaymentMethodUnionPay, // UnionPay
-    k_EPaymentMethodBitcoin, // Bitcoin
-    k_EPaymentMethodLicensedSite, // Licensed Site
-    k_EPaymentMethodBitCash, // BitCash
-    k_EPaymentMethodNetCash, // NetCash
-    k_EPaymentMethodNanaco, // Nanaco
-    k_EPaymentMethodTenpay, // Tenpay
-    k_EPaymentMethodWeChat, // WeChat
-    k_EPaymentMethodCashOnDelivery, // Cash on Delivery
-    k_EPaymentMethodCreditCardNodwin, // Credit Card (Nodwin)
-    k_EPaymentMethodDebitCardNodwin, // Debit Card (Nodwin)
-    k_EPaymentMethodNetBankingNodwin, // Net Banking (Nodwin)
-    k_EPaymentMethodCashCardNodwin, // Cash Card (Nodwin)
-    k_EPaymentMethodWalletNodwin, // Wallet (Nodwin)
-    k_EPaymentMethodMobileDegica, // Mobile (Degica)
-    k_EPaymentMethodNaranja, // Naranja
-    k_EPaymentMethodCencosud, // Cencosud
-    k_EPaymentMethodCabal, // Cabal
-    k_EPaymentMethodPagoFacil, // Pago Facil
-    k_EPaymentMethodRapipago, // Rapipago
-    k_EPaymentMethodBancoNacionalDeCostaRica, // Banco Nacional de Costa Rica
-    k_EPaymentMethodBancoPoplar, // Banco Poplar
-    k_EPaymentMethodRedPagos, // Red Pagos
-    k_EPaymentMethodSPE, // SPE
-    k_EPaymentMethodMulticaja, // Multicaja
-    k_EPaymentMethodRedCompra, // RedCompra
-    k_EPaymentMethodZiraatBank, // Ziraat Bank
-    k_EPaymentMethodVakiflarBank, // Vakiflar Bank
-    k_EPaymentMethodKuveytTurkBank, // Kuveyt Turk Bank
-    k_EPaymentMethodEkonomiBank, // Ekonomi Bank
-    k_EPaymentMethodPichincha, // Pichincha
-    k_EPaymentMethodPichinchaCash, // Pichincha Cash
-    k_EPaymentMethodPrzelewy24, // Przelewy24
-    k_EPaymentMethodTrustpay, // Trustpay
-    k_EPaymentMethodPOLi, // POLi
-    k_EPaymentMethodMercadoPago, // MercadoPago
-    k_EPaymentMethodPayU, // PayU
-    k_EPaymentMethodVTCPayWallet, // VTC Pay Wallet
-    k_EPaymentMethodMrCash, // MrCash
-    k_EPaymentMethodEPS, // EPS
-    k_EPaymentMethodInterac, // Interac
-    k_EPaymentMethodVTCPayCards, // VTC Pay Cards
-    k_EPaymentMethodVTCPayOnlineBanking, // VTC Pay Online Banking
-    k_EPaymentMethodVisaElectronBoaCompra, // Visa Electron (BoaCompra)
-    k_EPaymentMethodCafeFunded, // Cafe Funded
-    k_EPaymentMethodOCA, // OCA
-    k_EPaymentMethodLider, // Lider
-    k_EPaymentMethodWebMoneySteamCardJapan, // WebMoney Steam Card (Japan)
-    k_EPaymentMethodWebMoneySteamCardTopUpJapan, // WebMoney Steam Card Top Up (Japan)
-    k_EPaymentMethodToss, // Toss
-    k_EPaymentMethodWallet, // Wallet
-    k_EPaymentMethodValve, // Valve
-    k_EPaymentMethodSteamPressMaster, // Steam/Press Master
-    k_EPaymentMethodStorePromotion, // Store Promotion
-    k_EPaymentMethodMasterSubscription = 134, // Master Subscription
-    k_EPaymentMethodPayco, // Payco
-    k_EPaymentMethodMobileWalletJapan, // Mobile Wallet (Japan)
-    k_EPaymentMethodBoletoFlash, // Boleto Flash
-    k_EPaymentMethodPIX, // PIX
-    k_EPaymentMethodOEMTicket = 256, // OEM Ticket
-    k_EPaymentMethodSplit = 512, // Split
-    k_EPaymentMethodComplimentary = 1024, // Complimentary
+    k_EPaymentMethodNone = 0,
+    k_EPaymentMethodCDKey = 1,
+    k_EPaymentMethodCreditCard = 2,
+    k_EPaymentMethodGiropay = 3,
+    k_EPaymentMethodPayPal = 4,
+    k_EPaymentMethodIDEAL = 5,
+    k_EPaymentMethodPaySafeCard = 6,
+    k_EPaymentMethodSofort = 7,
+    k_EPaymentMethodGuestPass = 8,
+    k_EPaymentMethodWebMoney = 9,
+    k_EPaymentMethodMoneyBookers = 10,
+    k_EPaymentMethodAliPay = 11,
+    k_EPaymentMethodYandex = 12,
+    k_EPaymentMethodKiosk = 13,
+    k_EPaymentMethodQIWI = 14,
+    k_EPaymentMethodGameStop = 15,
+    k_EPaymentMethodHardwarePromo = 16,
+    k_EPaymentMethodMopay = 17,
+    k_EPaymentMethodBoletoBancario = 18,
+    k_EPaymentMethodBoaCompraGold = 19,
+    k_EPaymentMethodBancoDoBrasilOnline = 20,
+    k_EPaymentMethodItauOnline = 21,
+    k_EPaymentMethodBradescoOnline = 22,
+    k_EPaymentMethodPagseguro = 23,
+    k_EPaymentMethodVisaBoaCompra = 24,
+    k_EPaymentMethodAmexBoaCompra = 25,
+    k_EPaymentMethodAura = 26,
+    k_EPaymentMethodHipercard = 27,
+    k_EPaymentMethodMastercardBoaCompra = 28,
+    k_EPaymentMethodDinersCardBoaCompra = 29,
+    k_EPaymentMethodAuthorizedDevice = 30,
+    k_EPaymentMethodMOLPoints = 31,
+    k_EPaymentMethodClickBuy = 32,
+    k_EPaymentMethodBeeline = 33,
+    k_EPaymentMethodKonbini = 34,
+    k_EPaymentMethodEClubPoints = 35,
+    k_EPaymentMethodCreditCardDegica = 36,
+    k_EPaymentMethodBankTransferDegica = 37,
+    k_EPaymentMethodPayEasyDegica = 38,
+    k_EPaymentMethodZong = 39,
+    k_EPaymentMethodCultureVoucher = 40,
+    k_EPaymentMethodBookVoucher = 41,
+    k_EPaymentMethodHappymoneyVoucher = 42,
+    k_EPaymentMethodConvenientStoreVoucher = 43,
+    k_EPaymentMethodGameVoucher = 44,
+    k_EPaymentMethodMultibanco = 45,
+    k_EPaymentMethodPayshop = 46,
+    k_EPaymentMethodMaestro = 47,
+    k_EPaymentMethodOXXO = 48,
+    k_EPaymentMethodToditoCash = 49,
+    k_EPaymentMethodCarnet = 50,
+    k_EPaymentMethodSPEI = 51,
+    k_EPaymentMethod3pay = 52,
+    k_EPaymentMethodIsBank = 53,
+    k_EPaymentMethodGaranti = 54,
+    k_EPaymentMethodAkbank = 55,
+    k_EPaymentMethodYapiKredi = 56,
+    k_EPaymentMethodHalkbank = 57,
+    k_EPaymentMethodBankAsya = 58,
+    k_EPaymentMethodFinansbank = 59,
+    k_EPaymentMethodDenizBank = 60,
+    k_EPaymentMethodPTT = 61,
+    k_EPaymentMethodCashU = 62,
+    k_EPaymentMethodSantanderRio = 63,
+    k_EPaymentMethodAutoGrant = 64,
+    k_EPaymentMethodWebMoneyDegica = 65,
+    k_EPaymentMethodOneCard = 66,
+    k_EPaymentMethodPSE = 67,
+    k_EPaymentMethodExito = 68,
+    k_EPaymentMethodEfecty = 69,
+    k_EPaymentMethodBalota = 70,
+    k_EPaymentMethodPinValidda = 71,
+    k_EPaymentMethodMangirKart = 72,
+    k_EPaymentMethodBancoCreditoDePeru = 73,
+    k_EPaymentMethodBBVAContinental = 74,
+    k_EPaymentMethodSafetyPay = 75,
+    k_EPaymentMethodPagoEfectivo = 76,
+    k_EPaymentMethodTrustly = 77,
+    k_EPaymentMethodUnionPay = 78,
+    k_EPaymentMethodBitcoin = 79,
+    k_EPaymentMethodLicensedSite = 80,
+    k_EPaymentMethodBitCash = 81,
+    k_EPaymentMethodNetCash = 82,
+    k_EPaymentMethodNanaco = 83,
+    k_EPaymentMethodTenpay = 84,
+    k_EPaymentMethodWeChat = 85,
+    k_EPaymentMethodCashOnDelivery = 86,
+    k_EPaymentMethodCreditCardNodwin = 87,
+    k_EPaymentMethodDebitCardNodwin = 88,
+    k_EPaymentMethodNetBankingNodwin = 89,
+    k_EPaymentMethodCashCardNodwin = 90,
+    k_EPaymentMethodWalletNodwin = 91,
+    k_EPaymentMethodMobileDegica = 92,
+    k_EPaymentMethodNaranja = 93,
+    k_EPaymentMethodCencosud = 94,
+    k_EPaymentMethodCabal = 95,
+    k_EPaymentMethodPagoFacil = 96,
+    k_EPaymentMethodRapipago = 97,
+    k_EPaymentMethodBancoNacionalDeCostaRica = 98,
+    k_EPaymentMethodBancoPoplar = 99,
+    k_EPaymentMethodRedPagos = 100,
+    k_EPaymentMethodSPE = 101,
+    k_EPaymentMethodMulticaja = 102,
+    k_EPaymentMethodRedCompra = 103,
+    k_EPaymentMethodZiraatBank = 104,
+    k_EPaymentMethodVakiflarBank = 105,
+    k_EPaymentMethodKuveytTurkBank = 106,
+    k_EPaymentMethodEkonomiBank = 107,
+    k_EPaymentMethodPichincha = 108,
+    k_EPaymentMethodPichinchaCash = 109,
+    k_EPaymentMethodPrzelewy24 = 110,
+    k_EPaymentMethodTrustpay = 111,
+    k_EPaymentMethodPOLi = 112,
+    k_EPaymentMethodMercadoPago = 113,
+    k_EPaymentMethodPayU = 114,
+    k_EPaymentMethodVTCPayWallet = 115,
+    k_EPaymentMethodMrCash = 116,
+    k_EPaymentMethodEPS = 117,
+    k_EPaymentMethodInterac = 118,
+    k_EPaymentMethodVTCPayCards = 119,
+    k_EPaymentMethodVTCPayOnlineBanking = 120,
+    k_EPaymentMethodVisaElectronBoaCompra = 121,
+    k_EPaymentMethodCafeFunded = 122,
+    k_EPaymentMethodOCA = 123,
+    k_EPaymentMethodLider = 124,
+    k_EPaymentMethodWebMoneySteamCardJapan = 125,
+    k_EPaymentMethodWebMoneySteamCardTopUpJapan = 126,
+    k_EPaymentMethodToss = 127,
+    k_EPaymentMethodWallet = 128,
+    k_EPaymentMethodValve = 129,
+    k_EPaymentMethodSteamPressMaster = 130,
+    k_EPaymentMethodStorePromotion = 131,
+    k_EPaymentMethodMasterSubscription = 134,
+    k_EPaymentMethodPayco = 135,
+    k_EPaymentMethodMobileWalletJapan = 136,
+    k_EPaymentMethodBoletoFlash = 137,
+    k_EPaymentMethodPIX = 138,
+    k_EPaymentMethodGCash = 139,
+    k_EPaymentMethodKakaoPay = 140,
+    k_EPaymentMethodDana = 141,
+    k_EPaymentMethodTrueMoney = 142,
+    k_EPaymentMethodTouchnGo = 143,
+    k_EPaymentMethodLinePay = 144,
+    k_EPaymentMethodMerPay = 145,
+    k_EPaymentMethodPayPay = 146,
+    k_EPaymentMethodAlfaClick = 147,
+    k_EPaymentMethodSberbank = 148,
+    k_EPaymentMethodYooMoney = 149,
+    k_EPaymentMethodTinkoff = 150,
+    k_EPaymentMethodCashInCIS = 151,
+    k_EPaymentMethodOEMTicket = 256,
+    k_EPaymentMethodSplit = 512,
+    k_EPaymentMethodComplimentary = 1024,
 } EPaymentMethod;

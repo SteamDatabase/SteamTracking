@@ -1,20 +1,20 @@
 typedef enum EFileIOError
 {
-    k_EFileIOErrorNone, // None
-    k_EFileIOErrorUnknown, // Unknown
-    k_EFileIOErrorFileNotFound, // File Not Found
-    k_EFileIOErrorDiskFull, // Disk Full
-    k_EFileIOErrorTimeout, // Timeout
-    k_EFileIOErrorAccessDenied, // Access Denied
-    k_EFileIOErrorInvalidHandle, // Invalid Handle
-    k_EFileIOErrorSeekFailed, // Seek Failed
-    k_EFileIOErrorCanceled, // Canceled
-    k_EFileIOErrorReadFailed, // Read Failed
-    k_EFileIOErrorWriteFailed, // Write Failed
-    k_EFileIOErrorEndOfFile, // End of File
-    k_EFileIOErrorDeviceNotFound, // Device Not Found
-    k_EFileIOErrorDeviceCorrupt, // Device Corrupt
-    k_EFileIOErrorDeviceError, // Device Error
-    k_EFileIOErrorFileLocked, // File Locked
-    k_EFileIOErrorOutOfResources, // Out of Resources
+    k_EFileIOErrorNone = 0,
+    k_EFileIOErrorUnknown = 1,
+    k_EFileIOErrorFileNotFound = 2,
+    k_EFileIOErrorDiskFull = 3,
+    k_EFileIOErrorTimeout = 4,
+    k_EFileIOErrorAccessDenied = 5,
+    k_EFileIOErrorInvalidHandle = 6,
+    k_EFileIOErrorSeekFailed = 7,
+    k_EFileIOErrorCanceled = 8,
+    k_EFileIOErrorReadFailed = 9,
+    k_EFileIOErrorWriteFailed = 10,
+    k_EFileIOErrorEndOfFile = 11,
+    k_EFileIOErrorDeviceNotFound = 12,
+    k_EFileIOErrorDeviceCorrupt = 13,
+    k_EFileIOErrorDeviceError = 14,
+    k_EFileIOErrorFileLocked = 15,
+    k_EFileIOErrorOutOfResources = 16,
 } EFileIOError;

@@ -1,14 +1,14 @@
 typedef enum EAccountType
 {
-    k_EAccountTypeInvalid, // Invalid
-    k_EAccountTypeIndividual, // Individual
-    k_EAccountTypeMultiseat, // Multiseat
-    k_EAccountTypeGameServer, // Game Server
-    k_EAccountTypeAnonymousGameServer, // Anonymous Game Server
-    k_EAccountTypePending, // Pending
-    k_EAccountTypeContentServer, // Content Server
-    k_EAccountTypeClan, // Clan
-    k_EAccountTypeChat, // Chat
-    k_EAccountTypeConsoleUser, // Console User
-    k_EAccountTypeAnonymousUser, // Anonymous User
+    k_EAccountTypeInvalid = 0,
+    k_EAccountTypeIndividual = 1,
+    k_EAccountTypeMultiseat = 2,
+    k_EAccountTypeGameServer = 3,
+    k_EAccountTypeAnonymousGameServer = 4,
+    k_EAccountTypePending = 5,
+    k_EAccountTypeContentServer = 6,
+    k_EAccountTypeClan = 7,
+    k_EAccountTypeChat = 8,
+    k_EAccountTypeConsoleUser = 9,
+    k_EAccountTypeAnonymousUser = 10,
 } EAccountType;

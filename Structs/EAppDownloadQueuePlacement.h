@@ -1,11 +1,11 @@
 typedef enum EAppDownloadQueuePlacement
 {
-    k_EAppDownloadQueuePlacementPriorityNone, // Priority None
-    k_EAppDownloadQueuePlacementPriorityFirst, // Priority First
-    k_EAppDownloadQueuePlacementPriorityUserInitiated, // Priority User Initiated
-    k_EAppDownloadQueuePlacementPriorityUp, // Priority Up
-    k_EAppDownloadQueuePlacementPriorityDown, // Priority Down
-    k_EAppDownloadQueuePlacementPriorityLast, // Priority Last
-    k_EAppDownloadQueuePlacementPriorityPaused, // Priority Paused
-    k_EAppDownloadQueuePlacementPriorityManual, // Priority Manual
+    k_EAppDownloadQueuePlacementPriorityNone = 0,
+    k_EAppDownloadQueuePlacementPriorityFirst = 1,
+    k_EAppDownloadQueuePlacementPriorityUserInitiated = 2,
+    k_EAppDownloadQueuePlacementPriorityUp = 3,
+    k_EAppDownloadQueuePlacementPriorityDown = 4,
+    k_EAppDownloadQueuePlacementPriorityAutoUpdate = 5,
+    k_EAppDownloadQueuePlacementPriorityPaused = 6,
+    k_EAppDownloadQueuePlacementPriorityManual = 7,
 } EAppDownloadQueuePlacement;

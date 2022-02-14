@@ -1,8 +1,9 @@
 typedef enum EAppReleaseState
 {
-    k_EAppReleaseStateUnknown, // unknown
-    k_EAppReleaseStateUnavailable, // unavailable
-    k_EAppReleaseStatePrerelease, // prerelease
-    k_EAppReleaseStatePreloadonly, // preloadonly
-    k_EAppReleaseStateReleased, // released
+    k_EAppReleaseStateUnknown = 0,
+    k_EAppReleaseStateUnavailable = 1,
+    k_EAppReleaseStatePrerelease = 2,
+    k_EAppReleaseStatePreloadonly = 3,
+    k_EAppReleaseStateReleased = 4,
+    k_EAppReleaseStateDisabled = 5,
 } EAppReleaseState;

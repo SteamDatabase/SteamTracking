@@ -1,12 +1,12 @@
 typedef enum ETransportError
 {
-    k_ETransportErrorOK = 1, // OK
-    k_ETransportErrorRequestNotSent, // Request Not Sent
-    k_ETransportErrorResponseNotReceived, // Response Not Received
-    k_ETransportErrorIncorrectParameter, // Incorrect Parameter
-    k_ETransportErrorMethodNotFound = 100, // Method Not Found
-    k_ETransportErrorCallMismatch, // Call Mismatch
-    k_ETransportErrorSetupError, // Setup Error
-    k_ETransportErrorInternalError, // Internal Error
-    k_ETransportErrorNotSupported, // Not Supported
+    k_ETransportErrorOK = 1,
+    k_ETransportErrorRequestNotSent = 2,
+    k_ETransportErrorResponseNotReceived = 3,
+    k_ETransportErrorIncorrectParameter = 4,
+    k_ETransportErrorMethodNotFound = 100,
+    k_ETransportErrorCallMismatch = 101,
+    k_ETransportErrorSetupError = 102,
+    k_ETransportErrorInternalError = 103,
+    k_ETransportErrorNotSupported = 104,
 } ETransportError;

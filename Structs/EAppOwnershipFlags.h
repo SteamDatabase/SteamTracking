@@ -1,26 +1,26 @@
 typedef enum EAppOwnershipFlags
 {
-    k_EAppOwnershipFlagsNone, // None
-    k_EAppOwnershipFlagsSubscribed, // Subscribed
-    k_EAppOwnershipFlagsFree, // Free
-    k_EAppOwnershipFlagsRegionRestricted = 4, // Region restricted
-    k_EAppOwnershipFlagsLowViolence = 8, // Low Violence
-    k_EAppOwnershipFlagsInvalidPlatform = 16, // Invalid Platform
-    k_EAppOwnershipFlagsBorrowed = 32, // Borrowed
-    k_EAppOwnershipFlagsFreeWeekend = 64, // Free Weekend
-    k_EAppOwnershipFlagsRetail = 128, // Retail
-    k_EAppOwnershipFlagsLocked = 256, // Locked
-    k_EAppOwnershipFlagsPending = 512, // Pending
-    k_EAppOwnershipFlagsExpired = 1024, // Expired
-    k_EAppOwnershipFlagsPermanent = 2048, // Permanent
-    k_EAppOwnershipFlagsRecurring = 4096, // Recurring
-    k_EAppOwnershipFlagsCanceled = 8192, // Canceled
-    k_EAppOwnershipFlagsAutoGrant = 16384, // Auto Grant
-    k_EAppOwnershipFlagsPendingGift = 32768, // Pending Gift
-    k_EAppOwnershipFlagsRentalnotActivated = 65536, // Rental (not activated)
-    k_EAppOwnershipFlagsRental = 131072, // Rental
-    k_EAppOwnershipFlagsSiteLicense = 262144, // Site License
-    k_EAppOwnershipFlagsLegacyFreeSub = 524288, // Legacy Free Sub
-    k_EAppOwnershipFlagsInvalidOSType = 1048576, // Invalid OS Type
-    k_EAppOwnershipFlagsTimedTrial = 2097152, // Timed Trial
+    k_EAppOwnershipFlagsNone = 0,
+    k_EAppOwnershipFlagsSubscribed = 1,
+    k_EAppOwnershipFlagsFree = 2,
+    k_EAppOwnershipFlagsRegionRestricted = 4,
+    k_EAppOwnershipFlagsLowViolence = 8,
+    k_EAppOwnershipFlagsInvalidPlatform = 16,
+    k_EAppOwnershipFlagsBorrowed = 32,
+    k_EAppOwnershipFlagsFreeWeekend = 64,
+    k_EAppOwnershipFlagsRetail = 128,
+    k_EAppOwnershipFlagsLocked = 256,
+    k_EAppOwnershipFlagsPending = 512,
+    k_EAppOwnershipFlagsExpired = 1024,
+    k_EAppOwnershipFlagsPermanent = 2048,
+    k_EAppOwnershipFlagsRecurring = 4096,
+    k_EAppOwnershipFlagsCanceled = 8192,
+    k_EAppOwnershipFlagsAutoGrant = 16384,
+    k_EAppOwnershipFlagsPendingGift = 32768,
+    k_EAppOwnershipFlagsRentalnotActivated = 65536,
+    k_EAppOwnershipFlagsRental = 131072,
+    k_EAppOwnershipFlagsSiteLicense = 262144,
+    k_EAppOwnershipFlagsLegacyFreeSub = 524288,
+    k_EAppOwnershipFlagsInvalidOSType = 1048576,
+    k_EAppOwnershipFlagsTimedTrial = 2097152,
 } EAppOwnershipFlags;

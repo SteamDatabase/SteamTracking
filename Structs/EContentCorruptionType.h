@@ -1,10 +1,10 @@
 typedef enum EContentCorruptionType
 {
-    k_EContentCorruptionTypeUnknown, // unknown
-    k_EContentCorruptionTypeUnexpected_size, // unexpected_size
-    k_EContentCorruptionTypeCrc_header_mismatch, // crc_header_mismatch
-    k_EContentCorruptionTypeSha_header_mismatch, // sha_header_mismatch
-    k_EContentCorruptionTypeDecompress_failed, // decompress_failed
-    k_EContentCorruptionTypeChecksum_error, // checksum_error
-    k_EContentCorruptionTypeParsing_failed, // parsing_failed
+    k_EContentCorruptionTypeUnknown = 0,
+    k_EContentCorruptionTypeUnexpected_size = 1,
+    k_EContentCorruptionTypeCrc_header_mismatch = 2,
+    k_EContentCorruptionTypeSha_header_mismatch = 3,
+    k_EContentCorruptionTypeDecompress_failed = 4,
+    k_EContentCorruptionTypeChecksum_error = 5,
+    k_EContentCorruptionTypeParsing_failed = 6,
 } EContentCorruptionType;

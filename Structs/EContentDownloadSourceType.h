@@ -1,13 +1,13 @@
 typedef enum EContentDownloadSourceType
 {
-    k_EContentDownloadSourceTypeInvalid, // Invalid
-    k_EContentDownloadSourceTypeCS, // CS
-    k_EContentDownloadSourceTypeCDN, // CDN
-    k_EContentDownloadSourceTypeLCS, // LCS
-    k_EContentDownloadSourceTypeProxy, // Proxy
-    k_EContentDownloadSourceTypeLANPeer, // LANPeer
-    k_EContentDownloadSourceTypeSLS, // SLS
-    k_EContentDownloadSourceTypeSteamCache, // SteamCache
-    k_EContentDownloadSourceTypeOpenCache, // OpenCache
-    k_EContentDownloadSourceTypeLANCache, // LANCache
+    k_EContentDownloadSourceTypeInvalid = 0,
+    k_EContentDownloadSourceTypeCS = 1,
+    k_EContentDownloadSourceTypeCDN = 2,
+    k_EContentDownloadSourceTypeLCS = 3,
+    k_EContentDownloadSourceTypeProxy = 4,
+    k_EContentDownloadSourceTypeLANPeer = 5,
+    k_EContentDownloadSourceTypeSLS = 6,
+    k_EContentDownloadSourceTypeSteamCache = 7,
+    k_EContentDownloadSourceTypeOpenCache = 8,
+    k_EContentDownloadSourceTypeLANCache = 9,
 } EContentDownloadSourceType;
