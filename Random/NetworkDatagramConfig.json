@@ -1,5 +1,5 @@
 {
-  "revision": 371,
+  "revision": 372,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFsdDhYU2xEuhzKT6tfJIvitz8MkBACp23S+Pa/Q9xibfZM13fUF1a4sYn0TPCEm3GnMuKPtjJx01yrxWrHJgf8sjsnZV07r9y0EQEWxu6x/5OyZQD",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFsdDhYU2xN6RlUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAmyE4nmnaqB3H5flYSaLGFs3vcPYZ4ez20pEJViLwTexL4zNGLLEKr2rIZcoNRUSzUb2Oqn8inB9ucu+4fSERAA==",
@@ -234,6 +234,10 @@
         },
         {
           "ipv4": "155.133.253.54",
+          "port_range": [ 27015, 27060 ]
+        },
+        {
+          "ipv4": "155.133.253.55",
           "port_range": [ 27015, 27060 ]
         }
       ],
