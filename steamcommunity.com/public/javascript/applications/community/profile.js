@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [102],
+  [131],
   {
     "+VX6": function (e, t, n) {
       "use strict";
@@ -15263,9 +15263,13 @@
                   src: t.GetImageURLWithFallback("sale_logo", n),
                 })
               )
-            : u.createElement("img", {
-                src: t.GetImageURLWithFallback("sale_logo", n),
-              })
+            : u.createElement(
+                "div",
+                { className: de.a.SalePageLogoCtn },
+                u.createElement("img", {
+                  src: t.GetImageURLWithFallback("sale_logo", n),
+                })
+              )
           : null;
       }
       var un = (function () {
@@ -22881,10 +22885,11 @@
           );
         },
         Y = function (e) {
-          var t = e.appInfo,
-            n = v.a.Get().BShowFilteredUserReviewScores()
-              ? t.reviews_filtered
-              : t.reviews_unfiltered;
+          var t = e.appInfo;
+          if (!t) return null;
+          var n = v.a.Get().BShowFilteredUserReviewScores()
+            ? t.reviews_filtered
+            : t.reviews_unfiltered;
           if (!n || 0 == n.score) return null;
           var r =
               n.score < 5

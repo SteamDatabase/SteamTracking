@@ -15312,9 +15312,13 @@
                   src: t.GetImageURLWithFallback("sale_logo", n),
                 })
               )
-            : u.createElement("img", {
-                src: t.GetImageURLWithFallback("sale_logo", n),
-              })
+            : u.createElement(
+                "div",
+                { className: de.a.SalePageLogoCtn },
+                u.createElement("img", {
+                  src: t.GetImageURLWithFallback("sale_logo", n),
+                })
+              )
           : null;
       }
       var un = (function () {
@@ -24879,10 +24883,11 @@
           );
         },
         Q = function (e) {
-          var t = e.appInfo,
-            n = g.a.Get().BShowFilteredUserReviewScores()
-              ? t.reviews_filtered
-              : t.reviews_unfiltered;
+          var t = e.appInfo;
+          if (!t) return null;
+          var n = g.a.Get().BShowFilteredUserReviewScores()
+            ? t.reviews_filtered
+            : t.reviews_unfiltered;
           if (!n || 0 == n.score) return null;
           var r =
               n.score < 5
