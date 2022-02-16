@@ -10,8 +10,8 @@ public:
     virtual unknown_ret GetStat(void*,void*,void*) = 0;
     virtual unknown_ret GetStat(void*,void*,void*) = 0;
     virtual unknown_ret SetStat(void*,void*,void*) = 0;
-    virtual unknown_ret SetStat(void*,void*) = 0;
-    virtual unknown_ret UpdateAvgRateStat(void*,void*) = 0;
+    virtual unknown_ret SetStat(void*,void*,void*) = 0;
+    virtual unknown_ret UpdateAvgRateStat(void*,void*,void*,void*) = 0;
     virtual unknown_ret GetAchievement(void*,void*,void*,void*) = 0;
     virtual unknown_ret SetAchievement(void*,void*) = 0;
     virtual unknown_ret ClearAchievement(void*,void*) = 0;

@@ -11,5 +11,5 @@ public:
     virtual unknown_ret GetVoiceOptimalSampleRate() = 0;
     virtual unknown_ret BAppUsesVoice(void*) = 0;
     virtual unknown_ret GetGameSystemVolume() = 0;
-    virtual unknown_ret SetGameSystemVolume() = 0;
+    virtual unknown_ret SetGameSystemVolume(void*) = 0;
 };

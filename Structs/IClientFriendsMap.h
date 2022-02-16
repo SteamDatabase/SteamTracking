@@ -132,8 +132,8 @@ public:
     virtual unknown_ret VoiceCallNew(void*,void*,void*,void*) = 0;
     virtual unknown_ret VoiceCall(void*,void*,void*,void*) = 0;
     virtual unknown_ret VoiceHangUp(void*,void*,void*) = 0;
-    virtual unknown_ret SetVoiceSpeakerVolume() = 0;
-    virtual unknown_ret SetVoiceMicrophoneVolume() = 0;
+    virtual unknown_ret SetVoiceSpeakerVolume(void*) = 0;
+    virtual unknown_ret SetVoiceMicrophoneVolume(void*) = 0;
     virtual unknown_ret SetAutoAnswer(void*) = 0;
     virtual unknown_ret VoiceAnswer(void*) = 0;
     virtual unknown_ret AcceptVoiceCall(void*,void*,void*,void*) = 0;
@@ -206,7 +206,7 @@ public:
     virtual unknown_ret VoiceIsAvailable() = 0;
     virtual unknown_ret TestVoiceDisconnect(void*) = 0;
     virtual unknown_ret TestChatRoomPeerDisconnect(void*,void*,void*,void*) = 0;
-    virtual unknown_ret TestVoicePacketLoss() = 0;
+    virtual unknown_ret TestVoicePacketLoss(void*) = 0;
     virtual unknown_ret FindFriendVoiceChatHandle(void*,void*) = 0;
     virtual unknown_ret RequestFriendsWhoPlayGame(void*) = 0;
     virtual unknown_ret GetCountFriendsWhoPlayGame(void*) = 0;

@@ -10,7 +10,7 @@ public:
     virtual unknown_ret ProcessStreamClientConnected(void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret GetStreamClientPlayer(void*,void*) = 0;
     virtual unknown_ret GetStreamClientFormFactor(void*) = 0;
-    virtual unknown_ret UpdateStreamClientNetworkUtilization(void*) = 0;
+    virtual unknown_ret UpdateStreamClientNetworkUtilization(void*,void*,void*) = 0;
     virtual unknown_ret ProcessStreamClientDisconnected(void*) = 0;
     virtual unknown_ret BGetStreamTransportSignal(void*,void*) = 0;
     virtual unknown_ret SendStreamTransportSignal(void*,void*) = 0;

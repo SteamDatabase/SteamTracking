@@ -29,7 +29,7 @@ public:
     virtual unknown_ret PlayNext() = 0;
     virtual unknown_ret PlayEntry(void*) = 0;
     virtual unknown_ret TogglePlayPause() = 0;
-    virtual unknown_ret SetVolume() = 0;
+    virtual unknown_ret SetVolume(void*) = 0;
     virtual unknown_ret GetVolume() = 0;
     virtual unknown_ret ToggleMuteVolume() = 0;
     virtual unknown_ret IncreaseVolume() = 0;
@@ -118,7 +118,7 @@ public:
     virtual unknown_ret UpdatePlaybackStatus(void*) = 0;
     virtual unknown_ret UpdateShuffled(void*) = 0;
     virtual unknown_ret UpdateLooped(void*) = 0;
-    virtual unknown_ret UpdateVolume() = 0;
+    virtual unknown_ret UpdateVolume(void*) = 0;
     virtual unknown_ret CurrentEntryWillChange() = 0;
     virtual unknown_ret CurrentEntryIsAvailable(void*) = 0;
     virtual unknown_ret UpdateCurrentEntryText(void*) = 0;

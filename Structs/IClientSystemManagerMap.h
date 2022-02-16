@@ -9,7 +9,7 @@ public:
     virtual unknown_ret FactoryReset() = 0;
     virtual unknown_ret RebootToFactoryTestImage(void*) = 0;
     virtual unknown_ret GetDisplayBrightness(void*) = 0;
-    virtual unknown_ret SetDisplayBrightness() = 0;
+    virtual unknown_ret SetDisplayBrightness(void*) = 0;
     virtual unknown_ret FormatRemovableStorage() = 0;
     virtual unknown_ret CheckForUpdate(void*) = 0;
     virtual unknown_ret ApplyUpdate(void*) = 0;
