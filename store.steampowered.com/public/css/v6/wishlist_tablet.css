@@ -58,7 +58,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
-	--gpPurchaseOptionsWidth: 32vw;
+	--gpPurchaseOptionsWidth: 270px;
 	--gpDselectWidth: 320px;
 
 	/* Game capsule widths */
@@ -218,7 +218,7 @@
 
 	/* WISLIST ITEMS CONTAINER */
 	html.responsive #wishlist_ctn {
-		margin-top: 16px;
+		margin: 16px 0px 24px 0px;
 	}
 
 
@@ -228,7 +228,7 @@
 	html.responsive .wishlist_row {
 		padding: 8px 16px 8px 8px;
 		width: 100%;
-		margin-bottom: 4px;
+		margin-bottom: 6px;
 		box-shadow: none;
 		background: var(--gpBackground-DarkSoft);
 		box-sizing: border-box;
@@ -236,7 +236,7 @@
 
 	html.responsive .wishlist_row:hover,
 	html.responsive .wishlist_row.gpfocus {
-		background: var(--gpBackground-LightMedium);
+		background: var(--gpBackground-LightSoft);
 	}
 
 	html.responsive .wishlist_row:hover .tags .tag,
@@ -368,6 +368,12 @@
 
 	html.responsive .compact .wishlist_row .platform_icons {
 		display: unset;
+	}
+
+
+	/* Hide button actions */
+	html.responsive .wishlist_row .purchase_area .btn_medium {
+		display: none;
 	}
 
 

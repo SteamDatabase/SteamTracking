@@ -58,7 +58,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
-	--gpPurchaseOptionsWidth: 32vw;
+	--gpPurchaseOptionsWidth: 270px;
 	--gpDselectWidth: 320px;
 
 	/* Game capsule widths */
@@ -335,6 +335,10 @@
 		padding: 4px 6px;
 	}
 
+	html.responsive .dailydeal_desc {
+		padding-right: unset;
+	}
+
 	html.responsive .carousel_container.spotlight .carousel_items > * > div {
 		/* display: flex; */
 		/* flex-direction: column; */
@@ -459,8 +463,96 @@
 
 	html.responsive .page_content_ctn.dark .home_content {
 		padding: unset;
-		margin-bottom: var(--gpSpace-Gutter);
+		margin-bottom: calc(var(--gpSpace-Gutter));
 	}
+
+	html.responsive #content_more .home_content h2 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: 12px;
+	}
+
+	html.responsive #content_more .home_content h2 span {
+		margin-left: 0px;
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive #content_more .home_content h2 a {
+		width: fit-content;
+		padding: 8px 16px;
+		border-radius: var(--gpCorner-Medium);
+		background-color: var(--gpBackground-LightSoft);
+		transition: all 0.1s ease;
+	}
+
+	html.responsive #content_more .home_content h2 a:hover,
+	html.responsive #content_more .home_content h2 a.gpfocus {
+		background-color: var(--gpBackground-LightMedium);
+		color: white;
+	}
+
+	html.responsive #content_more .home_content h2 a.gpfocus {
+		border-radius: 0px;
+	}
+
+	html.responsive .gp_contiguous_singles {
+		margin-bottom: 24px;
+	}
+
+	html.responsive .home_content_items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	html.responsive .home_content a.home_content_item .home_content_item_info {
+		padding: 8px 12px;
+	}
+
+	html.responsive .home_content a.home_content_item {
+		margin: unset !important;
+		width: var(--gpWidth-2colcap) !important;
+		background-color: var(--gpBackground-DarkMedium);
+	}
+
+	html.responsive .home_content.single {
+		width: var(--gpWidth-3colcap);
+		box-sizing: border-box;
+		background-color: var(--gpBackground-DarkMedium);
+		padding: 12px;
+	}
+
+	html.responsive .home_content.single .capsule {
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+
+
+
+	/* Hardware banners */
+	html.responsive .home_hardware_banner {
+		padding: 0px var(--gpSpace-Gutter);
+		margin: 8px 0px 16px;
+	}
+
+	html.responsive .home_hardware_banner > a {
+		height: 5.9vw;
+		background-size: cover;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .hardware_index_banner {
+		margin-left: 12px;
+	}
+
+	html.responsive .home_hardware_banner > a:hover {
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+
 
 
 
@@ -564,6 +656,12 @@
 	/* Under $10 */
 	html.responsive .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
 		padding: unset;
+	}
+
+	html.responsive .home_page_content > *[data-content-dive=true] {
+		display: flex;
+		justify-content: center;
+		gap: 12px;
 	}
 
 

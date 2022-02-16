@@ -1400,14 +1400,16 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	margin-right: 20px;
 }
 
-.showcase_award {
-	float: left;
-	//margin-left: 4.5%;
-	margin-left: 3%;
-	padding: 6px;
+.awards_showcase .showcase_content_bg {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
-.showcase_award:nth-child(5n-4) {
-	margin-left: 0;
+
+.showcase_award {
+	padding: 6px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .showcase_award_icon {
@@ -1415,8 +1417,6 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	height: 64px;
 	width: 75px;
 	height: 75px;
-	//padding: 5px;
-	//background-color: rgba( 0, 0, 0, 0.25 );
 }
 
 @media screen and (max-width: 910px)

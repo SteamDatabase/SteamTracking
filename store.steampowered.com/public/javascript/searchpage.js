@@ -933,22 +933,25 @@ function OnClickClientFilter( $Control, strFilter, results_container )
     };
 }
 
-function OnSelectFilteredContentSettingsMenu( elSource )
+function OnClickShowFilteredContentSettingsModal()
 {
-	var d = $J(elSource).data('dropdownValue');
+	let $dialog = ShowConfirmDialog(
+		"Content Filtering",
+		"The preferences you set affect what titles are displayed to you throughout the Steam Store, including on the home page, search results, etc.",
+		"View unfiltered search results",
+		"Close",
+		"Edit your preferences" );
 
-	switch( d )
-	{
-		case 'explain':
-			ShowAlertDialog( "Content Filtering", "The preferences you set affect what titles are displayed to you throughout the Steam Store, including on the home page, search results, etc." );
-			break;
-		case 'preferences':
-			top.location.href = "https://store.steampowered.com/account/preferences/";
-			break;
-		case 'unfiltered':
+	$dialog.done( function( strButton ) {
+		if ( strButton == 'OK' )
+		{
 			top.location.href = g_strUnfilteredURL;
-			break;
-	}
+		}
+		else if ( strButton == 'SECONDARY' )
+		{
+			top.location.href = "https://store.steampowered.com/account/preferences/";
+		}
+	}  );
 }
 
 function jqEscapeSelectorAttribute(str)

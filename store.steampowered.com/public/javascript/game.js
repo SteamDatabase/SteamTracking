@@ -2106,34 +2106,118 @@ function BindFocusVideoOnTablet()
 		this.pause();
     } );
 }
-function GamepadVideoTogglePlay()
+
+// enable seeking via dpad
+function GamepadVideoOnDirection( event /* GamepadEvent */, videoID )
 {
-	var $video = $J(document.activeElement);
-	if ( $video.prop('tagName').toLowerCase().indexOf( 'video' ) != -1 )
+	// focus should be on a video element
+	var video = $J( '#' + videoID )[0];
+
+	// only handle the navigation if we're in fullscreen
+	if ( video && ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement ) )
 	{
-		var video = $video[0];
-		if ( video.paused ) 
-			video.play();
-		else 
-			video.pause(); 
+		/* TODO: figure out how to display media volume 
+		   We considered adding this but it's an odd user experience without a visual indicator of media volume
+
+			const fVolumeStep = 0.05;
+			if ( event.detail.button == 9 ) // up
+				video.volume = Math.min( video.volume + fVolumeStep, 1.0 ).toFixed( 2 );
+			else if ( event.detail.button == 10 ) // down
+				video.volume = Math.max( video.volume - fVolumeStep, 0 ).toFixed( 2 );
+		*/
+
+		const nPositionStep = 10;
+		if ( event.detail.button == 11 && video.currentTime > 0 ) // left
+			video.currentTime = Math.max( video.currentTime - nPositionStep, 0 );
+		else if ( event.detail.button == 12 && video.currentTime < video.duration ) // right
+			video.currentTime = Math.min( video.currentTime + nPositionStep, video.duration );
+
+		return true; // return true for moveup, movedown to prevent dpad navigation out of the video  
 	}
-	else
+
+	return false; // allow event to propogate
+}
+
+function GamepadVideoOnCancel( videoID )
+{
+	// if we're in fullscreen pause the video and exit fullscreen 
+	if ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement )
 	{
-		console.error('received a video toggle play but video is not in focus');
+		GamepadVideoPause( videoID );
+		GamepadVideoSetFullscreen( videoID, false );
+		return true; 
+	}
+
+	return false; // allow event to propagate
+}
+
+function GamepadVideoSetFullscreen( videoID, bFullscreen )
+{
+	// focus should be on a video element
+	var video = $J( '#' + videoID )[0];
+	if ( !video )
+		return;
+
+	if ( bFullscreen )
+	{
+		if ( !document.webkitFullscreenElement && !document.fullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement )
+		{
+			if ( video.requestFullscreen ) {
+				video.requestFullscreen().catch( ( e ) => { console.error( "requestFullscreen exception:", e ); } );
+			} else if ( video.webkitRequestFullscreen ) { 
+				video.webkitRequestFullscreen().catch( ( e ) => { console.error( "webkitRequestFullscreen exception", e ); } );
+			} else if ( video.mozRequestFullScreen ) { 
+				video.mozRequestFullScreen().catch( ( e ) => { console.error( "mozRequestFullScreen exception", e ); } );
+			} else if ( video.msRequestFullscreen ) { 
+				video.msRequestFullscreen().catch( ( e ) => { console.error( "msRequestFullscreen exception", e ); } );
+			}
+		}
+	} 
+	else if ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement )
+	{
+		if ( document.exitFullscreen ) {
+			document.exitFullscreen().catch( ( e ) => { console.error( "exitFullscreen exception:", e ); } );
+		} else if ( document.webkitExitFullscreen ) { 
+			document.webkitExitFullscreen().catch( ( e ) => { console.error( "webkitExitFullscreen exception", e ); } );
+		} else if ( document.mozCancelFullScreen ) { 
+			document.mozCancelFullScreen().catch( ( e ) => { console.error( "mozCancelFullScreen exception", e ); } );
+		} else if ( document.msExitFullscreen ) { 
+			document.msExitFullscreen().catch( ( e ) => { console.error( "msRequestFullscreen exception", e ); } );
+		}
+
+		// make sure we scroll to the currently selected video
+		setTimeout( function () { video.scrollIntoView() }, 0 ); 
 	}
 }
-function GamepadVideoToggleMute()
+
+function GamepadVideoPause( videoID )
 {
-	var $video = $J(document.activeElement);
-	if ( $video.prop('tagName').toLowerCase().indexOf( 'video' ) != -1 )
+	var video = $J( '#' + videoID )[0];
+	if ( video && !video.paused )
+		video.pause(); 
+}
+
+function GamepadVideoTogglePlay( videoID )
+{
+	var video = $J( '#' + videoID )[0];
+	if ( !video )
+		return;
+
+	if ( video.paused )
+	{ 
+		video.play();
+		GamepadVideoSetFullscreen( videoID, true );
+	}
+	else 
 	{
-		var video = $video[0];
+		video.pause(); 
+	}
+}
+function GamepadVideoToggleMute( videoID )
+{
+	var video = $J( '#' + videoID )[0];
+	if ( video )
 		video.muted = !video.muted;
-	}
-	else
-	{
-		console.error('received a video toggle mute but video is not in focus');
-	}
 }
 
 function AddRightNavStickyPaddingOnTablet()

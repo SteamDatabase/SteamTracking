@@ -58,7 +58,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
-	--gpPurchaseOptionsWidth: 32vw;
+	--gpPurchaseOptionsWidth: 270px;
 	--gpDselectWidth: 320px;
 
 	/* Game capsule widths */
@@ -100,7 +100,7 @@
 	}
 
     html.responsive .purchase_options_content_tablet.isCurrentlySticky {
-        padding-top: 10px;
+        padding-top: 8px;
     }
 
 	html.responsive .purchase_options_content_tablet {
@@ -108,7 +108,7 @@
 		box-sizing: border-box;
 		right: 0;
 		padding: var(--gpSpace-Gutter);
-		padding-top: 0px;
+		padding-top: 8px;
 		overflow-y: auto;
 		position: sticky;
 		z-index: 100;
@@ -119,10 +119,12 @@
 		scroll-snap-type: inline;
 		scroll-padding-bottom: 80px;
 		scroll-padding-top: 80px;
+
+		width: var(--gpPurchaseOptionsWidth);
 	}
 
 	html.responsive .page_content_ctn {
-		width: calc(100% - var(--gpPurchaseOptionsWidth) - ( 2 * var(--gpSpace-Gutter) ));
+		width: calc(100vw - var(--gpPurchaseOptionsWidth) - ( 3 * var(--gpSpace-Gutter) ));
 	}
 
 	html.responsive #responsive_apppage_details_left_ctn,
@@ -1280,8 +1282,8 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		height: auto;
-		width: calc(80% - (1 * var(--gpSpace-Gutter)));
-		min-width: calc(80% - (1 * var(--gpSpace-Gutter)));
+		width: calc(86% - (1 * var(--gpSpace-Gutter)));
+		min-width: calc(86% - (1 * var(--gpSpace-Gutter)));
 		margin-right: var(--gpSpace-Gap);
 		display: block;
 		scroll-snap-align: center !important;
@@ -1813,6 +1815,12 @@
 		padding-top: 0px;
 	}
 
+	html.responsive .game_area_comingsoon h1 {
+		font: var(--gpText-HeadingSmall);
+		line-height: 1.2;
+		margin-top: 4px;
+	}
+
 
 
 
@@ -2192,9 +2200,6 @@
 		background: unset;
 	}
 
-	html.responsive .partnereventwebrowembed_EventsSummariesCtn_1snIw {
-		margin-top: 0px;
-	}
 
 
 
@@ -2300,6 +2305,15 @@
 		border-radius: var(--gpCorner-Large);
 	}
 
+	html.responsive .referring_curator .avatar,
+	html.responsive .referring_curator .avatar img {
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive .referring_curator .blurb {
+		font-weight: 400;
+	}
+
 	html.responsive .referring_curator .blurb .review_title {
 		font: var(--gpText-BodyLarge);
 		text-transform: unset;
@@ -2309,6 +2323,7 @@
 	html.responsive .referring_curator .blurb p {
 		margin-bottom: 12px;
 		color: var(--gpStoreLightestGrey);
+		line-height: 1.4;
 	}
 
 	html.responsive .referringSteamCurator,

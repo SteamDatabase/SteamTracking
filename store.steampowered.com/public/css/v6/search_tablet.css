@@ -58,7 +58,7 @@
 	/* Fixed widths */
 	--gpNavWidth: 240px;
 	--gpPaymentsNavWidth: 40vw;
-	--gpPurchaseOptionsWidth: 32vw;
+	--gpPurchaseOptionsWidth: 270px;
 	--gpDselectWidth: 320px;
 
 	/* Game capsule widths */
@@ -402,10 +402,11 @@
 
     html.responsive .responsive_page_menu_ctn.localmenu .responsive_page_menu {
         background: var(--gpStoreDarkerGrey);
+		scroll-padding: 64px 0px;
     }
 
     html.responsive .localmenu_content {
-        padding: unset;
+        padding: 8px;
     }
 
     /* Blocks */
@@ -420,7 +421,12 @@
         color: white;
         padding: 10px 12px;
         background: var(--gpBackground-LightSoft);
+		transition: all 0.1s ease;
     }
+
+	html.responsive .block .block_header.gpfocus {
+		background: var(--gpBackground-LightMedium);
+	}
 
     /* Hide new badges on deck */
     html.responsive .labs_new {
@@ -430,10 +436,14 @@
     /* Block content */
     html.responsive .block_content {
         border: unset;
+		border-radius: unset;
     }
 
     html.responsive .block_content_inner {
         padding: unset;
+		display: flex;
+		flex-direction: column;
+		row-gap: 6px;
     }
 
     /* Filter items */
@@ -444,16 +454,46 @@
         line-height: unset;
     }
 
+	html.responsive .range_display {
+		padding: 8px 0px 0px 0px;
+	}
+
+	html.responsive .tab_filter_control {
+		margin-bottom: unset;
+	}
+
+	html.responsive .tab_filter_control_row.checked {
+		background: var(--gpColor-Blue);
+	}
+
 	.responsive_page_frame:not(.in_menu_drag) .responsive_page_menu_ctn {
 		transition: left 0.3s ease, right 0.3s ease !important;
 	}
 
+	/* Range display */
+	html.responsive .range_display {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+		color: white;
+	}
+
+	html.responsive .range_container {
+		padding: unset;
+	}
+
+	/* Search for tags */
+
+	/* Hiding on Deck */
+	html.responsive #TagSuggest {
+		display: none;
+	}
 
 
 
 
 	html.responsive .responsive_page_frame.no_header.localmenu_active .responsive_page_menu_ctn {
 		display: block;
+		width: 320px;
 	}
 
 	html.responsive .responsive_page_frame.no_header .responsive_page_menu_ctn {

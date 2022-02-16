@@ -136,20 +136,10 @@
 	margin-left: 2px;
 	position: relative;
 	background-image: url( '/public/images/bigpicture/icon_settings.png' );
-	background-position: left center;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
 	background-origin: content-box;
-}
-
-.settings_tab::after {
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	width: 20px;
-	background: url('/public/images/v6/ico/ico_arrow_dn_for_select.png') no-repeat left center;
-	content: '';
 }
 
 .settings_tab:hover {

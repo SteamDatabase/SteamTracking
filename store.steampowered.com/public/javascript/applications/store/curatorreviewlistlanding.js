@@ -9,45 +9,44 @@
         a.d(t, "CuratorReviewList", function () {
           return B;
         });
-      var n = a("hwrv"),
+      var n = a("TyAF"),
         r = a("q1tI"),
         o = a.n(r),
-        i = a("av+R"),
-        c = a("qDk6"),
-        l = a("ee7K"),
-        s = a("exH9"),
-        u = a("TLQK"),
-        m = a("lkRc");
-      a("1v2s");
-      var d = a("TyAF"),
-        p = a("rcjX"),
-        _ = a("mgoM"),
-        v = a("kyHq"),
-        E = a("ykc/"),
-        R = a("+VX6"),
-        C = (a("3+zv"), a("Xhj9"), a("5eAM")),
-        I = a("VQ2A"),
-        g = a("UCyf"),
-        f = a("gOcu"),
-        b = a("Fmfl"),
-        T = a("gyoR"),
-        h = a("5L1o"),
-        S = a("4pOC"),
-        y = a("0OaU"),
-        O = a("3Gzo"),
-        w = a("j54C"),
-        L = a("IzPI"),
+        i = a("rcjX"),
+        c = a("mgoM"),
+        l = a("kyHq"),
+        s = a("av+R"),
+        u = a("ykc/"),
+        m = a("qDk6"),
+        d = a("+VX6"),
+        p = (a("3+zv"), a("Xhj9"), a("5eAM")),
+        _ = a("VQ2A"),
+        v = a("UCyf"),
+        E = a("hwrv"),
+        R = a("gOcu"),
+        C = a("ee7K"),
+        I = a("Fmfl"),
+        g = a("gyoR"),
+        f = a("5L1o"),
+        b = a("4pOC"),
+        T = a("0OaU"),
+        h = a("3Gzo"),
+        S = a("j54C"),
+        y = a("exH9"),
+        O = a("TLQK"),
+        w = a("IzPI"),
+        L = a("lkRc"),
         D = a("pcg8"),
         N = a.n(D),
         G = (a("TQGK"), a("477j")),
         A = a("C4Er");
       function M(e) {
         var t = e.clanInfo,
-          a = Object(m.h)("curator_header", "application_config"),
+          a = Object(L.h)("curator_header", "application_config"),
           n = a.curator_link,
           r = a.curator_medium_avatar;
         return o.a.createElement(
-          c.a,
+          m.a,
           {
             className: "page_content_ctn",
             "flow-children": "column",
@@ -57,13 +56,13 @@
             "div",
             { className: "page_content" },
             o.a.createElement(
-              c.a,
+              m.a,
               { className: "list_header_area", "flow-children": "row" },
               o.a.createElement(
                 "div",
                 { className: "curator_avatar_image" },
                 o.a.createElement(
-                  i.c,
+                  s.c,
                   { href: n },
                   o.a.createElement("img", {
                     className: "curator_avatar",
@@ -76,45 +75,46 @@
                 { className: "curator_details" },
                 o.a.createElement(G.a, {
                   className: A.BreadContainer,
-                  crumbs: Object(m.h)("breadcrumbs", "application_config"),
+                  crumbs: Object(L.h)("breadcrumbs", "application_config"),
                 }),
                 o.a.createElement(
-                  i.c,
+                  s.c,
                   { className: "pageheader curator_name", href: n },
-                  Object(u.f)("#SteamCurator_List_Header_List", t.group_name)
+                  Object(O.f)("#SteamCurator_List_Header_List", t.group_name)
                 )
               )
             )
           )
         );
       }
+      a("1v2s");
       t.default = function (e) {
-        var t = Object(n.a)();
+        var t = Object(E.a)();
         return o.a.createElement(
-          E.a,
+          u.a,
           { navID: "StoreCuratorPageRoot", NavigationManager: t },
           o.a.createElement(B, { listid: e.listid })
         );
       };
       function B(e) {
         var t = parseInt(
-            Object(m.h)("curator_account_id", "application_config")
+            Object(L.h)("curator_account_id", "application_config")
           ),
-          a = Object(g.f)(t),
-          n = Object(g.g)(null == a ? void 0 : a.clanSteamID, e.listid),
-          r = Object(g.e)(n),
-          d = o.a.useState(null),
-          p = d[0],
-          _ = d[1],
-          v = o.a.useState(0),
-          E = v[0],
-          R = v[1];
+          a = Object(v.f)(t),
+          n = Object(v.g)(null == a ? void 0 : a.clanSteamID, e.listid),
+          r = Object(v.e)(n),
+          i = o.a.useState(null),
+          c = i[0],
+          l = i[1],
+          u = o.a.useState(0),
+          d = u[0],
+          _ = u[1];
         if (
           (o.a.useEffect(
             function () {
               var e;
               if (n) {
-                var t = Object(g.a)(n)
+                var t = Object(v.a)(n)
                   ? null === (e = n.apps) || void 0 === e
                     ? void 0
                     : e.filter(function (e) {
@@ -128,28 +128,28 @@
                             );
                       })
                   : n.apps;
-                R((null == t ? void 0 : t.length) || 0),
-                  l.a
+                _((null == t ? void 0 : t.length) || 0),
+                  C.a
                     .Get()
                     .HintLoad()
                     .then(function () {
-                      C.a
+                      p.a
                         .LoadAppLinkInfo(
                           t.map(function (e) {
                             return e.recommended_app.appid;
                           })
                         )
                         .then(function () {
-                          _(
+                          l(
                             t.filter(function (e) {
-                              return !Object(T.d)(
-                                C.a.GetAppLinkInfo(e.recommended_app.appid)
+                              return !Object(g.d)(
+                                p.a.GetAppLinkInfo(e.recommended_app.appid)
                               );
                             })
                           );
                         })
                         .catch(function () {
-                          return _([]);
+                          return l([]);
                         });
                     });
               }
@@ -159,13 +159,13 @@
           !n)
         )
           return null;
-        if (null == p)
-          return o.a.createElement(y.a, {
-            string: Object(u.f)("#Loading"),
+        if (null == c)
+          return o.a.createElement(T.a, {
+            string: Object(O.f)("#Loading"),
             position: "center",
             size: "medium",
           });
-        var I = 1 == n.list_type;
+        var E = 1 == n.list_type;
         return o.a.createElement(
           o.a.Fragment,
           null,
@@ -179,39 +179,39 @@
               o.a.createElement(
                 "div",
                 { className: N.a.CuratorListCtn },
-                o.a.createElement(j, { listDetails: n }),
+                o.a.createElement(F, { listDetails: n }),
                 o.a.createElement(
-                  c.a,
+                  m.a,
                   {
-                    className: Object(s.a)(
+                    className: Object(y.a)(
                       N.a.CuratorList,
-                      I && N.a.CuratorListGrid
+                      E && N.a.CuratorListGrid
                     ),
                     "flow-children": "grid",
                   },
-                  p.map(function (e, t) {
-                    return o.a.createElement(F, {
+                  c.map(function (e, t) {
+                    return o.a.createElement(j, {
                       key: "rec_" + e.recommended_app.appid,
                       item: e,
                       listDetails: n,
-                      bWantsFocus: 0 == t,
+                      bAutoFocus: 0 == t,
                     });
                   })
                 ),
-                Boolean(E > p.length) &&
+                Boolean(d > c.length) &&
                   o.a.createElement(
                     "div",
                     null,
                     o.a.createElement(
                       "span",
                       null,
-                      Object(u.l)("#SteamCurator_Hidden", E - p.length),
+                      Object(O.l)("#SteamCurator_Hidden", d - c.length),
                       " "
                     ),
                     o.a.createElement(
-                      i.c,
-                      { href: m.d.STORE_BASE_URL + "account/preferences/" },
-                      Object(u.f)("#SteamCurator_Setting")
+                      s.c,
+                      { href: L.d.STORE_BASE_URL + "account/preferences/" },
+                      Object(O.f)("#SteamCurator_Setting")
                     )
                   ),
                 o.a.createElement(
@@ -220,12 +220,12 @@
                   o.a.createElement(
                     "h2",
                     null,
-                    Object(u.f)("#SteamCurator_ExploreMoreTitle")
+                    Object(O.f)("#SteamCurator_ExploreMoreTitle")
                   ),
                   o.a.createElement(
-                    i.c,
+                    s.c,
                     { href: a.vanity_url },
-                    Object(u.m)("#SteamCurator_MoreReviews", a.group_name)
+                    Object(O.m)("#SteamCurator_MoreReviews", a.group_name)
                   )
                 )
               )
@@ -233,43 +233,43 @@
           )
         );
       }
-      function j(e) {
+      function F(e) {
         var t = e.listDetails,
-          a = Object(g.d)(t),
-          n = Object(m.h)("showlisttitle", "application_config"),
-          r = Object(m.h)("titleareaheight", "application_config"),
-          c =
+          a = Object(v.d)(t),
+          n = Object(L.h)("showlisttitle", "application_config"),
+          r = Object(L.h)("titleareaheight", "application_config"),
+          i =
             t.list_jsondata.youtube_link &&
-            Object(R.b)(t.list_jsondata.youtube_link),
-          l = Object(_.g)(m.d.LANGUAGE),
-          s = u.a.GetWithFallback(t.localized_flat_title, l),
-          d = u.a.GetWithFallback(t.localized_flat_blurb, l),
-          p = u.a.GetWithFallback(t.localized_flat_link, l),
-          v =
+            Object(d.b)(t.list_jsondata.youtube_link),
+          l = Object(c.g)(L.d.LANGUAGE),
+          u = O.a.GetWithFallback(t.localized_flat_title, l),
+          m = O.a.GetWithFallback(t.localized_flat_blurb, l),
+          p = O.a.GetWithFallback(t.localized_flat_link, l),
+          _ =
             a &&
             a.GetImageURL(
-              Object(O.a)() ? "product_mobile_banner" : "product_banner",
+              Object(h.a)() ? "product_mobile_banner" : "product_banner",
               l
             );
         return o.a.createElement(
           "div",
           { className: N.a.TopReviewInfo },
-          Boolean(v) &&
+          Boolean(_) &&
             o.a.createElement(
-              i.c,
+              s.c,
               { href: a.GetSaleURL() },
-              o.a.createElement("img", { className: N.a.SaleBanner, src: v })
+              o.a.createElement("img", { className: N.a.SaleBanner, src: _ })
             ),
-          n && s && o.a.createElement("div", { className: N.a.Title }, s),
-          n && d && o.a.createElement("div", { className: N.a.Blurb }, d),
+          n && u && o.a.createElement("div", { className: N.a.Title }, u),
+          n && m && o.a.createElement("div", { className: N.a.Blurb }, m),
           r > 0 && o.a.createElement("div", { style: { height: r } }),
-          c &&
+          i &&
             o.a.createElement(
               "div",
               { className: N.a.VideoReviewCtn },
-              o.a.createElement(w.b, {
-                video: c.strVideoID,
-                startSeconds: c.nStartSeconds,
+              o.a.createElement(S.b, {
+                video: i.strVideoID,
+                startSeconds: i.nStartSeconds,
                 autoplay: !0,
                 autopause: !0,
                 showFullscreenBtn: !0,
@@ -282,14 +282,14 @@
           p && o.a.createElement(K, { url: p })
         );
       }
-      var F = Object(d.a)(function (e) {
+      var j = Object(n.a)(function (e) {
         var t,
           a,
           n = e.item,
           r = e.listDetails,
-          i = e.bWantsFocus,
-          l = parseInt(Object(m.h)("curator_account_id", "application_config")),
-          s = Object(g.f)(l);
+          i = e.bAutoFocus,
+          c = parseInt(Object(L.h)("curator_account_id", "application_config")),
+          s = Object(v.f)(c);
         if (
           !s ||
           !(null === (t = null == n ? void 0 : n.recommended_app) ||
@@ -298,45 +298,46 @@
             : t.appid)
         )
           return null;
-        var d = n.recommended_app,
-          p = d.appid,
-          _ = d.link_url,
-          E = d.blurb,
-          I = d.time_recommended,
-          b = d.recommendation_state,
-          T = C.a.GetAppLinkInfo(p);
-        if (!T) return null;
-        if (!Object(v.b)(T.type)) return null;
-        var h = s.is_creator_home,
-          y =
+        var u = n.recommended_app,
+          _ = u.appid,
+          E = u.link_url,
+          C = u.blurb,
+          I = u.time_recommended,
+          g = u.recommendation_state,
+          f = p.a.GetAppLinkInfo(_);
+        if (!f) return null;
+        if (!Object(l.b)(f.type)) return null;
+        var T = s.is_creator_home,
+          h =
             null === (a = r.list_jsondata.app_data) || void 0 === a
               ? void 0
-              : a[p],
-          O = _ && Object(R.b)(_),
-          w = E != g.c && E,
-          L = f.a.Get().BHasDemoAppID(p),
-          D = null == y ? void 0 : y.img_url,
+              : a[_],
+          S = E && Object(d.b)(E),
+          y = C != v.c && C,
+          w = R.a.Get().BHasDemoAppID(_),
+          D = null == h ? void 0 : h.img_url,
           G =
             "curator_clanid=" + s.clanAccountID + "&curator_listid=" + r.listid;
         return o.a.createElement(
-          c.a,
+          m.a,
           { className: N.a.CuratorReview, autoFocus: i },
           o.a.createElement(
             "div",
             { className: N.a.CapsuleCtn },
-            O
+            S
               ? o.a.createElement(U, {
-                  strVideoID: O.strVideoID,
-                  nStartSeconds: O.nStartSeconds,
-                  appInfo: T,
+                  strVideoID: S.strVideoID,
+                  nStartSeconds: S.nStartSeconds,
+                  appInfo: f,
                   strImgOverrideUrl: D,
-                  bShowDemoButton: L,
+                  bShowDemoButton: w,
                   strExtraParams: G,
                 })
-              : o.a.createElement(S.b, {
+              : o.a.createElement(b.b, {
                   imageType: "header",
-                  capsule: T,
-                  bShowDemoButton: L,
+                  bAutoFocus: i,
+                  capsule: f,
+                  bShowDemoButton: w,
                   strExtraParams: G,
                 })
           ),
@@ -346,25 +347,25 @@
             o.a.createElement(
               "div",
               { className: N.a.GameTitle },
-              null == T ? void 0 : T.name
+              null == f ? void 0 : f.name
             ),
             o.a.createElement(
               "div",
               { className: N.a.RecommendationTypeAndDate },
-              o.a.createElement(P, { type: b }),
+              o.a.createElement(P, { type: g }),
               o.a.createElement(
                 "div",
                 { className: N.a.ReviewDate },
-                h ? T.release : Object(u.n)(I)
+                T ? f.release : Object(O.n)(I)
               )
             ),
-            Boolean(w) &&
+            Boolean(y) &&
               o.a.createElement(
                 "div",
                 { className: N.a.ReviewBlurb },
-                Object(u.f)("#SteamCurator_ReviewTextQuoted", w)
+                Object(O.f)("#SteamCurator_ReviewTextQuoted", y)
               ),
-            Boolean(_) && o.a.createElement(K, { url: _ })
+            Boolean(E) && o.a.createElement(K, { url: E })
           )
         );
       });
@@ -381,7 +382,7 @@
           o.a.createElement(
             "div",
             { className: N.a.YouTubeCtn },
-            o.a.createElement(w.b, {
+            o.a.createElement(S.b, {
               video: t,
               startSeconds: a,
               autoplay: !0,
@@ -401,7 +402,7 @@
               "div",
               { className: N.a.GameImageCtn },
               o.a.createElement(
-                b.d,
+                I.d,
                 {
                   item: n,
                   bShowDemoButton: i,
@@ -418,7 +419,7 @@
                 })
               )
             ),
-            o.a.createElement(h.c, { info: n, strClassName: N.a.FullWidth })
+            o.a.createElement(f.c, { info: n, strClassName: N.a.FullWidth })
           )
         );
       }
@@ -428,45 +429,47 @@
             return o.a.createElement(
               "div",
               { className: N.a.Recommended },
-              Object(u.f)("#SteamCurator_Recommended")
+              Object(O.f)("#SteamCurator_Recommended")
             );
           case 1:
             return o.a.createElement(
               "div",
               { className: N.a.NotRecommended },
-              Object(u.f)("#SteamCurator_NotRecommended")
+              Object(O.f)("#SteamCurator_NotRecommended")
             );
           case 2:
             return o.a.createElement(
               "div",
               { className: N.a.Informational },
-              Object(u.f)("#SteamCurator_Informational")
+              Object(O.f)("#SteamCurator_Informational")
             );
           default:
             return null;
         }
       }
       function K(e) {
-        var t = Object(I.d)(e.url);
-        Object(p.b)(t) &&
+        var t = Object(_.d)(e.url);
+        Object(i.b)(t) &&
           (t =
-            (m.d.IN_CLIENT ? "steam://openurl_external/" : "") +
-            m.d.COMMUNITY_BASE_URL +
+            (L.d.IN_CLIENT ? "steam://openurl_external/" : "") +
+            L.d.COMMUNITY_BASE_URL +
             "linkfilter/?url=" +
             t);
-        var a = Object(L.f)(e.url),
-          n = Object(R.a)(e.url);
+        var a = Object(w.f)(e.url),
+          n = Object(d.a)(e.url);
         return o.a.createElement(
           "div",
           { className: N.a.FullReviewLink },
           o.a.createElement(
-            i.c,
+            s.c,
             {
               className: N.a.FullReviewAnchor,
               href: t,
               rel: "noopener nofollow",
+              preferredFocus: !1,
+              autoFocus: !1,
             },
-            Object(u.f)(
+            Object(O.f)(
               n
                 ? "#SteamCurator_WatchFullReview"
                 : "#SteamCurator_ReadFullReview"
@@ -475,7 +478,7 @@
           o.a.createElement(
             "div",
             { className: N.a.FullReviewDomain },
-            Object(u.f)("#SteamCurator_ReviewLinkHostnameBracketed", a)
+            Object(O.f)("#SteamCurator_ReviewLinkHostnameBracketed", a)
           )
         );
       }

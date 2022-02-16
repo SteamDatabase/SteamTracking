@@ -1,3 +1,6 @@
+:root {
+  --basicui-header-height: 0px;
+}
 .partnereventwebrowembed_Container_2Jd3M {
   padding-top: 5px;
 }
@@ -47,6 +50,10 @@
   margin-bottom: 5px;
   margin-top: 5px;
   overflow-x: auto;
+}
+.BasicUI .partnereventwebrowembed_EventsSummariesCtn_1snIw {
+  margin: unset;
+  gap: var(--gpSpace-Gap);
 }
 .partnereventwebrowembed_LatestUpdateButtonCtn_2vEwZ {
   display: flex;

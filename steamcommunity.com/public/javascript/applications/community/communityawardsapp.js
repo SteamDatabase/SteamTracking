@@ -67,13 +67,13 @@
         return l;
       }),
         r.d(t, "a", function () {
-          return p;
+          return w;
         }),
         r.d(t, "c", function () {
-          return g;
+          return h;
         }),
         r.d(t, "b", function () {
-          return v;
+          return R;
         }),
         r.d(t, "e", function () {
           return s;
@@ -552,6 +552,48 @@
           );
         })(o),
         p = (function (e) {
+          function t(t) {
+            void 0 === t && (t = null);
+            var r = e.call(this) || this;
+            return o.initialize(r, t, 0, -1, void 0, null), r;
+          }
+          return (
+            Object(n.d)(t, e),
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
+            }),
+            (t.toObject = function (e, t) {
+              return e ? { $jspbMessageInstance: t } : {};
+            }),
+            (t.fromObject = function (e) {
+              return new t();
+            }),
+            (t.deserializeBinary = function (e) {
+              var r = new i.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
+            }),
+            (t.deserializeBinaryFromReader = function (e, t) {
+              return e;
+            }),
+            (t.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.serializeBase64String = function () {
+              var e = new i.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
+            (t.prototype.getClassName = function () {
+              return "CLoyaltyRewards_RegisterForSteamDeckRewards_Response";
+            }),
+            t
+          );
+        })(o),
+        w = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -628,7 +670,7 @@
             t
           );
         })(o),
-        w = (function (e) {
+        g = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
@@ -670,7 +712,7 @@
             t
           );
         })(o),
-        g = (function (e) {
+        h = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -742,7 +784,7 @@
             t
           );
         })(o),
-        h = (function (e) {
+        B = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -811,7 +853,7 @@
             t
           );
         })(o),
-        B = (function (e) {
+        _ = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -829,12 +871,12 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      total: { n: 1, c: _, r: !0, q: !0 },
-                      user_reviews: { n: 2, c: _, r: !0, q: !0 },
-                      ugc: { n: 3, c: _, r: !0, q: !0 },
-                      profile: { n: 4, c: _, r: !0, q: !0 },
-                      forum_topics: { n: 5, c: _, r: !0, q: !0 },
-                      comments: { n: 6, c: _, r: !0, q: !0 },
+                      total: { n: 1, c: v, r: !0, q: !0 },
+                      user_reviews: { n: 2, c: v, r: !0, q: !0 },
+                      ugc: { n: 3, c: v, r: !0, q: !0 },
+                      profile: { n: 4, c: v, r: !0, q: !0 },
+                      forum_topics: { n: 5, c: v, r: !0, q: !0 },
+                      comments: { n: 6, c: v, r: !0, q: !0 },
                       total_given: {
                         n: 7,
                         br: a.d.readUint32,
@@ -899,7 +941,7 @@
             t
           );
         })(o),
-        _ = (function (e) {
+        v = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -978,7 +1020,7 @@
             t
           );
         })(o),
-        v = (function (e) {
+        R = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
@@ -1020,7 +1062,7 @@
             t
           );
         })(o),
-        R = (function (e) {
+        M = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1037,7 +1079,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { reactions: { n: 3, c: M, r: !0, q: !0 } },
+                    fields: { reactions: { n: 3, c: C, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -1081,7 +1123,7 @@
             t
           );
         })(o),
-        M = (function (e) {
+        C = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1168,7 +1210,7 @@
             t
           );
         })(o),
-        C = (function (e) {
+        O = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1264,7 +1306,7 @@
             t
           );
         })(o),
-        O = (function (e) {
+        z = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1281,7 +1323,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { apps: { n: 1, c: z, r: !0, q: !0 } },
+                    fields: { apps: { n: 1, c: j, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -1325,7 +1367,7 @@
             t
           );
         })(o),
-        z = (function (e) {
+        j = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1399,7 +1441,7 @@
             t
           );
         })(o),
-        j = (function (e) {
+        S = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1466,7 +1508,7 @@
                         bw: a.h.writeString,
                       },
                       active: { n: 12, br: a.d.readBool, bw: a.h.writeBool },
-                      community_item_data: { n: 13, c: S },
+                      community_item_data: { n: 13, c: E },
                       bundle_defids: {
                         n: 15,
                         r: !0,
@@ -1528,7 +1570,7 @@
             t
           );
         })(o),
-        S = (function (e) {
+        E = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1592,7 +1634,7 @@
                         bw: a.h.writeString,
                       },
                       animated: { n: 8, br: a.d.readBool, bw: a.h.writeBool },
-                      badge_data: { n: 9, c: E, r: !0, q: !0 },
+                      badge_data: { n: 9, c: L, r: !0, q: !0 },
                       profile_theme_id: {
                         n: 12,
                         br: a.d.readString,
@@ -1642,7 +1684,7 @@
             t
           );
         })(o),
-        E = (function (e) {
+        L = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1706,7 +1748,7 @@
             t
           );
         })(o),
-        L = (function (e) {
+        T = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1791,7 +1833,7 @@
             t
           );
         })(o),
-        T = (function (e) {
+        F = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1808,7 +1850,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { bonuses: { n: 1, c: L, r: !0, q: !0 } },
+                    fields: { bonuses: { n: 1, c: T, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -1852,7 +1894,7 @@
             t
           );
         })(o),
-        F = (function (e) {
+        W = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1870,7 +1912,7 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      definitions: { n: 1, c: j, r: !0, q: !0 },
+                      definitions: { n: 1, c: S, r: !0, q: !0 },
                       total_count: {
                         n: 2,
                         br: a.d.readInt32,
@@ -1926,7 +1968,7 @@
             t
           );
         })(o),
-        W = (function (e) {
+        I = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -1943,7 +1985,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { responses: { n: 1, c: I, r: !0, q: !0 } },
+                    fields: { responses: { n: 1, c: A, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -1987,7 +2029,7 @@
             t
           );
         })(o),
-        I = (function (e) {
+        A = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -2006,7 +2048,7 @@
                     proto: t,
                     fields: {
                       eresult: { n: 1, br: a.d.readInt32, bw: a.h.writeInt32 },
-                      response: { n: 2, c: F },
+                      response: { n: 2, c: W },
                     },
                   }),
                 t.sm_m
@@ -2051,7 +2093,7 @@
             t
           );
         })(o),
-        A = (function (e) {
+        N = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -2079,7 +2121,7 @@
                         br: a.d.readUint32,
                         bw: a.h.writeUint32,
                       },
-                      reward_item: { n: 3, c: j },
+                      reward_item: { n: 3, c: S },
                     },
                   }),
                 t.sm_m
@@ -2124,7 +2166,7 @@
             t
           );
         })(o),
-        N = (function (e) {
+        G = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -2148,7 +2190,7 @@
                         br: a.d.readUint32,
                         bw: a.h.writeUint32,
                       },
-                      reward_item: { n: 3, c: j },
+                      reward_item: { n: 3, c: S },
                     },
                   }),
                 t.sm_m
@@ -2244,13 +2286,21 @@
               { ePrivilege: 1 }
             );
           }),
+          (e.RegisterForSteamDeckRewards = function (e, t) {
+            return e.SendMsg(
+              "LoyaltyRewards.RegisterForSteamDeckRewards#1",
+              t,
+              p,
+              { ePrivilege: 1 }
+            );
+          }),
           (e.AddReaction = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.AddReaction#1", t, w, {
+            return e.SendMsg("LoyaltyRewards.AddReaction#1", t, g, {
               ePrivilege: 1,
             });
           }),
           (e.GetReactions = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.GetReactions#1", t, h, {
+            return e.SendMsg("LoyaltyRewards.GetReactions#1", t, B, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -2259,12 +2309,12 @@
             return e.SendMsg(
               "LoyaltyRewards.GetReactionsSummaryForUser#1",
               t,
-              B,
+              _,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
             );
           }),
           (e.GetReactionConfig = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, R, {
+            return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, M, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
@@ -2274,12 +2324,12 @@
             return e.SendMsg(
               "LoyaltyRewards.GetProfileCustomizationsConfig#1",
               t,
-              C,
+              O,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
           (e.GetEligibleApps = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, O, {
+            return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, z, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -2289,19 +2339,19 @@
             return e.SendMsg(
               "LoyaltyRewards.GetActivePurchaseBonuses#1",
               t,
-              T,
+              F,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
             );
           }),
           (e.QueryRewardItems = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, F, {
+            return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, W, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.BatchedQueryRewardItems = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, W, {
+            return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, I, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -2310,12 +2360,12 @@
       })(s || (s = {})),
         (function (e) {
           (e.ClaimItem = function (e, t) {
-            return e.SendMsg("SaleItemRewards.ClaimItem#1", t, A, {
+            return e.SendMsg("SaleItemRewards.ClaimItem#1", t, N, {
               ePrivilege: 1,
             });
           }),
             (e.CanClaimItem = function (e, t) {
-              return e.SendMsg("SaleItemRewards.CanClaimItem#1", t, N, {
+              return e.SendMsg("SaleItemRewards.CanClaimItem#1", t, G, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
@@ -2743,8 +2793,8 @@
             t,
             u.map(function (e, t) {
               return e.flRandom > 0.5
-                ? a.a.createElement(P, { key: t, style: e })
-                : a.a.createElement(U, { key: t, style: e });
+                ? a.a.createElement(U, { key: t, style: e })
+                : a.a.createElement(P, { key: t, style: e });
             })
           );
         },
@@ -2774,7 +2824,7 @@
             }),
           });
         },
-        U = function (e) {
+        P = function (e) {
           var t = e.style;
           return a.a.createElement(
             j.animated.svg,
@@ -2793,7 +2843,7 @@
             })
           );
         },
-        P = function (e) {
+        U = function (e) {
           var t = e.style;
           return a.a.createElement(
             j.animated.svg,

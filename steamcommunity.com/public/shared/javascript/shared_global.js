@@ -470,7 +470,7 @@ function _BindOnEnterKeyPressForDialog( Modal, deferred, fnOnEnter )
 function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalParams )
 {
 	var $Dialog = $J('<div/>', {'class': 'newmodal'} );
-	var $CloseButton = $J('<div/>', {'class': 'newmodal_close' });
+	var $CloseButton = $J('<div/>', {'class': 'newmodal_close', 'data-panel': '{"focusable":true,"clickOnActivate":true}' } );
 	var $Header = ( $J('<div/>', {'class': 'newmodal_header' }) );
 	var $TopBar = ( $J('<div/>', {'class': 'modal_top_bar' }) );
 	if ( strTitle )
