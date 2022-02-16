@@ -1,22 +1,25 @@
 typedef enum ERemoteStorageFileRoot
 {
-    k_ERemoteStorageFileRootInvalid = -1, // Invalid
-    k_ERemoteStorageFileRootDefault, // Default
-    k_ERemoteStorageFileRootGameInstall, // GameInstall
-    k_ERemoteStorageFileRootWinMyDocuments, // WinMyDocuments
-    k_ERemoteStorageFileRootWinAppDataLocal, // WinAppDataLocal
-    k_ERemoteStorageFileRootWinAppDataRoaming, // WinAppDataRoaming
-    k_ERemoteStorageFileRootSteamUserBaseStorage, // SteamUserBaseStorage
-    k_ERemoteStorageFileRootMacHome, // MacHome
-    k_ERemoteStorageFileRootMacAppSupport, // MacAppSupport
-    k_ERemoteStorageFileRootMacDocuments, // MacDocuments
-    k_ERemoteStorageFileRootWinSavedGames, // WinSavedGames
-    k_ERemoteStorageFileRootWinProgramData, // WinProgramData
-    k_ERemoteStorageFileRootSteamCloudDocuments, // SteamCloudDocuments
-    k_ERemoteStorageFileRootWinAppDataLocalLow, // WinAppDataLocalLow
-    k_ERemoteStorageFileRootMacCaches, // MacCaches
-    k_ERemoteStorageFileRootLinuxHome, // LinuxHome
-    k_ERemoteStorageFileRootLinuxXdgDataHome, // LinuxXdgDataHome
-    k_ERemoteStorageFileRootLinuxXdgConfigHome, // LinuxXdgConfigHome
-    k_ERemoteStorageFileRootAndroidSteamPackageRoot, // AndroidSteamPackageRoot
+    k_ERemoteStorageFileRootInvalid = -1,
+    k_ERemoteStorageFileRootDefault = 0,
+    k_ERemoteStorageFileRootGameInstall = 1,
+    k_ERemoteStorageFileRootWinMyDocuments = 2,
+    k_ERemoteStorageFileRootWinAppDataLocal = 3,
+    k_ERemoteStorageFileRootWinAppDataRoaming = 4,
+    k_ERemoteStorageFileRootSteamUserBaseStorage = 5,
+    k_ERemoteStorageFileRootMacHome = 6,
+    k_ERemoteStorageFileRootMacAppSupport = 7,
+    k_ERemoteStorageFileRootMacDocuments = 8,
+    k_ERemoteStorageFileRootWinSavedGames = 9,
+    k_ERemoteStorageFileRootWinProgramData = 10,
+    k_ERemoteStorageFileRootSteamCloudDocuments = 11,
+    k_ERemoteStorageFileRootWinAppDataLocalLow = 12,
+    k_ERemoteStorageFileRootMacCaches = 13,
+    k_ERemoteStorageFileRootLinuxHome = 14,
+    k_ERemoteStorageFileRootLinuxXdgDataHome = 15,
+    k_ERemoteStorageFileRootLinuxXdgConfigHome = 16,
+    k_ERemoteStorageFileRootAndroidSteamPackageRoot = 17,
+    k_ERemoteStorageFileRootBanned = 24936422,
+    k_ERemoteStorageFileRootClean = 24936439,
+    k_ERemoteStorageFileRootCustom_clean = 24936451,
 } ERemoteStorageFileRoot;
