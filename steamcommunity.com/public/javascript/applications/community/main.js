@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7086530";
+var CLSTAMP = "7088960";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -11515,7 +11515,9 @@ var CLSTAMP = "7086530";
       }
       function p(e) {
         var t = window.document;
-        window.parent && (t = window.parent.document);
+        try {
+          t = window.top.document;
+        } catch (e) {}
         var n = t.createElement("textarea");
         (n.textContent = e),
           (n.style.position = "fixed"),
@@ -12610,6 +12612,7 @@ var CLSTAMP = "7086530";
         c = [
           "ActionDescription",
           "Backstack",
+          "BrowserBackstack",
           "GroupMemberStore",
           "Chat",
           "ChatRoom",
@@ -13700,11 +13703,16 @@ var CLSTAMP = "7086530";
             top: 0,
             bottom: e.innerHeight,
           };
-        for (var t = 0, n = 0, r = e; r; )
-          (t += r.offsetTop), (n += r.offsetLeft), (r = r.offsetParent);
+        for (var t = 0, n = 0, r = e; r; ) {
+          if (((t += r.offsetTop), (n += r.offsetLeft), "ownerDocument" in r))
+            if ("fixed" === window.getComputedStyle(r).position) break;
+          r = r.offsetParent;
+        }
         for (r = null == e ? void 0 : e.parentElement; r; ) {
           var o = L(r);
-          (t -= o.scrollTop), (n -= o.scrollLeft), (r = r.parentElement);
+          if (((t -= o.scrollTop), (n -= o.scrollLeft), "ownerDocument" in r))
+            if ("fixed" === window.getComputedStyle(r).position) break;
+          r = r.parentElement;
         }
         return {
           left: n,
@@ -14118,7 +14126,20 @@ var CLSTAMP = "7086530";
           }),
           Object.defineProperty(e.prototype, "NavKey", {
             get: function () {
-              return this.m_Properties && this.m_Properties.navKey;
+              var e, t;
+              return (
+                null === (e = this.m_Properties) || void 0 === e
+                  ? void 0
+                  : e.navKey
+              )
+                ? this.m_Properties.navKey
+                : (
+                    null === (t = this.m_element) || void 0 === t
+                      ? void 0
+                      : t.id
+                  )
+                ? this.m_element.id
+                : void 0;
             },
             enumerable: !1,
             configurable: !0,

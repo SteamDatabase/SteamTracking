@@ -408,6 +408,13 @@ $J( function($) {
 			return;
 		}
 
+		// or if we're in gamepadui
+		if ( window.bSupportsGamepadUI )
+		{
+			window.location = strURL;
+			return;
+		}
+
 		var strModalURL = $Link.data('modalContentPopupUrl');
 		if ( !strModalURL )
 			strModalURL = strURL + ( strURL.indexOf( "?" ) != -1 ? '&' : '?' ) + 'insideModal=1';

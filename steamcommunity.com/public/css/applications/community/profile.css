@@ -3032,6 +3032,18 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 .carousel__slide .animated_featured_capsule_BGVideo_XXdrS {
   opacity: 0;
 }
+.BlurImage.animated_featured_capsule_BGImage_30XmW {
+  filter: blur(4px);
+}
+.DesaturateImage.animated_featured_capsule_BGImage_30XmW {
+  filter: saturate(0.2);
+}
+.BlurAndDesaturateImage.animated_featured_capsule_BGImage_30XmW {
+  filter: blur(4px) saturate(0.2);
+}
+.DesaturateVideo.animated_featured_capsule_BGVideo_XXdrS {
+  filter: saturate(0.2);
+}
 .SliderBody.CarouselSlidingRight
   .carousel__slide.carousel__slide--visible
   .animated_featured_capsule_Info_2xDhg {
@@ -3071,6 +3083,12 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+.FastAnimation .animated_featured_capsule_Info_2xDhg {
+  animation-duration: 0.1s !important;
+}
+.FastAnimation .animated_featured_capsule_Artwork_3htJK {
+  animation-duration: 0.1s !important;
 }
 .carousel__slide.carousel__slide--hidden
   .animated_featured_capsule_BGImage_30XmW {
@@ -14243,6 +14261,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .carousel_innerSlide_3Cc2b div {
   outline-width: 0px;
 }
+.DisableSliderMotion {
+  transition: none;
+}
 .eventtilecarousel_EventTileCarousel_1mKD0 {
   width: 100%;
   max-width: 980px;
@@ -15727,6 +15748,38 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubshared_ContentHubTakeoverCtn_2NgkN a img {
   margin: 0 auto;
+}
+.contenthubshared_TweaksMenu_3N0H1 {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px rgba(255, 255, 255, 0.3) solid;
+  border-radius: 4px;
+  width: 200px;
+  z-index: 100;
+}
+.contenthubshared_TweaksMenu_3N0H1 .contenthubshared_MenuTitle_1qcGK {
+  padding: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px rgba(0, 0, 0, 0.8) solid;
+}
+.contenthubshared_TweaksMenu_3N0H1 .contenthubshared_MenuOptions_2BNKa {
+  padding: 8px;
+}
+.contenthubshared_TweaksMenu_3N0H1
+  .contenthubshared_MenuOptions_2BNKa
+  .DialogCheckbox_Container {
+  margin-bottom: 0;
+  padding: 1px;
+  height: 22px;
+}
+.contenthubshared_TweaksMenu_3N0H1
+  .contenthubshared_MenuOptions_2BNKa
+  .DialogCheckbox_Container
+  .DialogToggle_Label {
+  margin-top: 2px;
 }
 :root {
   --basicui-header-height: 0px;
