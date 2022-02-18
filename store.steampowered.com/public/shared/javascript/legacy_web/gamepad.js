@@ -2846,7 +2846,7 @@
                   window.top != window.self),
                 (this.m_postMessage = new St(window.top))),
             this.m_postMessage.RegisterForMessage(this.OnMessage),
-            window.addEventListener("beforeunload", this.PostPageUnloading),
+            window.addEventListener("unload", this.PostPageUnloading),
             this.m_NavigationController.RegisterForUnhandledButtonDownEvents(
               function (t) {
                 return e.PostButtonPressToSteam(t.detail.button);
