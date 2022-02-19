@@ -60,6 +60,8 @@
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 270px;
 	--gpDselectWidth: 320px;
+	--gpSidePanelWidth: 348px;
+	--gpGiftingPanelWidth: 280px;
 
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
@@ -2347,6 +2349,18 @@
 
 
 
+	/* Bundle contents preview */
+	html.responsive .bundle_contents_preview_position {
+		scroll-snap-type: x mandatory;
+		overflow-x: scroll;
+	}
+
+	html.responsive .bundle_contents_preview_position a.gpfocus {
+		z-index: 99 !important;
+	}
+
+
+
 	/* Recent events and announcements */
 	html.responsive body.v6 .early_access_announcements h2 {
 		margin-bottom: 16px;
@@ -2354,6 +2368,11 @@
 
 	html.responsive .game_description_column {
 		margin-top: 16px;
+	}
+
+	/* Hide iFrames */
+	html.responsive .game_description_column p iframe {
+		display: none;
 	}
 
 	html.responsive .localdateandtime_DateAndTime_2V6GL,
@@ -2772,11 +2791,10 @@
 
 
 
-
 	/* Early access game */
 	html.responsive .early_access_header {
 		border: unset;
-		border-bottom: 1px solid var(--gpBackground-LightSoft);
+		margin-bottom: 0px;
 	}
 
 	html.responsive .early_access_header .heading {
@@ -2787,8 +2805,10 @@
 	html.responsive .early_access_header .heading h2,
 	html.responsive .early_access_header .heading p {
 		font: var(--gpText-BodyMedium);
+		line-height: 1.3;
 		color: white;
 		letter-spacing: unset;
+		opacity: 0.8;
 	}
 
 	html.responsive .early_access_header .heading h1 {
@@ -2801,7 +2821,13 @@
 	}
 
 	html.responsive .early_access_header .heading p {
-		margin-top: 8px;
+		margin: 4px 0px 8px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+        line-clamp: 3;
+		-webkit-box-orient: vertical;
 	}
 
 	html.responsive .early_access_header .heading p span {
@@ -3240,6 +3266,10 @@
 	html.responsive #AwardsDefault br {
 		display: none;
 	}
+
+    html.responsive #apppage_metacritic_block {
+        display: none;
+    }
 
 	html.responsive .agegate_content_descriptors_notes {
 		margin-top: 12px;

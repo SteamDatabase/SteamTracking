@@ -60,6 +60,8 @@
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 270px;
 	--gpDselectWidth: 320px;
+	--gpSidePanelWidth: 348px;
+	--gpGiftingPanelWidth: 280px;
 
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
@@ -95,6 +97,7 @@
 		/* display: none; */
 	}
 
+
     /* Page title */
 	html.responsive h3#payment_header,
     html.responsive #payment_row_method_name,
@@ -118,6 +121,9 @@
 		margin-top: 12px;
 	}
 
+	html.responsive #what_is_this {
+		display: none;
+	}
 
 
     /* TEXT */
@@ -202,6 +208,7 @@
 
 	html.responsive #checkout_pipeline {
 		padding: 20px 0px 0px;
+		width: calc(100vw - var(--gpGiftingPanelWidth) - (2 * var(--gpSpace-Gutter)));
 	}
 
 	/* Tab styles */
@@ -842,7 +849,7 @@
 	}
 
 	html.responsive #friends_list_wrapper {
-        width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+        width: calc(100vw - var(--gpGiftingPanelWidth) - (2 * var(--gpSpace-Gutter)));
 	}
 
 	html.responsive body.v6 .page_content.gift_recipient_active {
@@ -869,7 +876,7 @@
 		position: fixed;
 		top: 0px;
 		right: 0px;
-		width: calc(var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+		width: calc(var(--gpGiftingPanelWidth) - (2 * var(--gpSpace-Gutter)));
 		height: 100vh;
 	}
 

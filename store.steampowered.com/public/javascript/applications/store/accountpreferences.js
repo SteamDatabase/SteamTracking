@@ -3,32 +3,32 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [3],
   {
-    byIC: function (e, t, n) {
+    byIC: function (e, t, r) {
       "use strict";
-      n.r(t),
-        n.d(t, "AccountPreferencesRoutes", function () {
-          return L;
+      r.r(t),
+        r.d(t, "AccountPreferencesRoutes", function () {
+          return W;
         });
-      var r = n("q1tI"),
-        i = n.n(r),
-        o = n("EC67"),
-        a = n("mrSG"),
-        s = n("vDqi"),
-        c = n.n(s),
-        l = n("2vnA"),
-        u = (n("mgoM"), n("OS6B"), n("lkRc")),
-        _ = n("hRO2"),
-        f = n("OS8t"),
-        m = _.Message;
+      var n = r("q1tI"),
+        i = r.n(n),
+        o = r("EC67"),
+        a = r("mrSG"),
+        c = r("vDqi"),
+        s = r.n(c),
+        l = r("2vnA"),
+        u = (r("mgoM"), r("OS6B"), r("lkRc")),
+        f = r("hRO2"),
+        _ = r("OS8t"),
+        m = f.Message;
       var p,
         y = (function (e) {
-          function t(n) {
-            void 0 === n && (n = null);
-            var r = e.call(this) || this;
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              t.prototype.version || f.a(t.M()),
-              m.initialize(r, n, 0, -1, void 0, null),
-              r
+              t.prototype.version || _.a(t.M()),
+              m.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
@@ -39,21 +39,21 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      version: { n: 1, br: f.d.readEnum, bw: f.h.writeEnum },
+                      version: { n: 1, br: _.d.readEnum, bw: _.h.writeEnum },
                       preference_state: {
                         n: 2,
-                        br: f.d.readEnum,
-                        bw: f.h.writeEnum,
+                        br: _.d.readEnum,
+                        bw: _.h.writeEnum,
                       },
                       content_customization: { n: 3, c: d },
-                      valve_analytics: { n: 4, c: g },
+                      valve_analytics: { n: 4, c: b },
                       third_party_analytics: { n: 5, c: h },
-                      third_party_content: { n: 6, c: b },
+                      third_party_content: { n: 6, c: g },
                       utm_enabled: {
                         n: 7,
                         d: !0,
-                        br: f.d.readBool,
-                        bw: f.h.writeBool,
+                        br: _.d.readBool,
+                        bw: _.h.writeBool,
                       },
                     },
                   }),
@@ -61,34 +61,34 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = f.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, n) {
-              return f.g(t.M(), e, n);
+            (t.toObject = function (e, r) {
+              return _.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return f.c(t.M(), e);
+              return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var n = new _.BinaryReader(e),
-                r = new t();
-              return t.deserializeBinaryFromReader(r, n);
+              var r = new f.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (t.deserializeBinaryFromReader = function (e, n) {
-              return f.b(t.MBF(), e, n);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return _.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, n) {
-              f.f(t.M(), e, n);
+            (t.serializeBinaryToWriter = function (e, r) {
+              _.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -100,13 +100,13 @@
           );
         })(m),
         d = (function (e) {
-          function t(n) {
-            void 0 === n && (n = null);
-            var r = e.call(this) || this;
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              t.prototype.recentapps || f.a(t.M()),
-              m.initialize(r, n, 0, -1, void 0, null),
-              r
+              t.prototype.recentapps || _.a(t.M()),
+              m.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
@@ -117,41 +117,41 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      recentapps: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
+                      recentapps: { n: 1, br: _.d.readBool, bw: _.h.writeBool },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = f.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, n) {
-              return f.g(t.M(), e, n);
+            (t.toObject = function (e, r) {
+              return _.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return f.c(t.M(), e);
+              return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var n = new _.BinaryReader(e),
-                r = new t();
-              return t.deserializeBinaryFromReader(r, n);
+              var r = new f.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (t.deserializeBinaryFromReader = function (e, n) {
-              return f.b(t.MBF(), e, n);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return _.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, n) {
-              f.f(t.M(), e, n);
+            (t.serializeBinaryToWriter = function (e, r) {
+              _.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -162,14 +162,14 @@
             t
           );
         })(m),
-        g = (function (e) {
-          function t(n) {
-            void 0 === n && (n = null);
-            var r = e.call(this) || this;
+        b = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              t.prototype.product_impressions_tracking || f.a(t.M()),
-              m.initialize(r, n, 0, -1, void 0, null),
-              r
+              t.prototype.product_impressions_tracking || _.a(t.M()),
+              m.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
@@ -182,8 +182,8 @@
                     fields: {
                       product_impressions_tracking: {
                         n: 1,
-                        br: f.d.readBool,
-                        bw: f.h.writeBool,
+                        br: _.d.readBool,
+                        bw: _.h.writeBool,
                       },
                     },
                   }),
@@ -191,34 +191,34 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = f.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, n) {
-              return f.g(t.M(), e, n);
+            (t.toObject = function (e, r) {
+              return _.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return f.c(t.M(), e);
+              return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var n = new _.BinaryReader(e),
-                r = new t();
-              return t.deserializeBinaryFromReader(r, n);
+              var r = new f.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (t.deserializeBinaryFromReader = function (e, n) {
-              return f.b(t.MBF(), e, n);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return _.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, n) {
-              f.f(t.M(), e, n);
+            (t.serializeBinaryToWriter = function (e, r) {
+              _.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -230,13 +230,13 @@
           );
         })(m),
         h = (function (e) {
-          function t(n) {
-            void 0 === n && (n = null);
-            var r = e.call(this) || this;
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              t.prototype.google_analytics || f.a(t.M()),
-              m.initialize(r, n, 0, -1, void 0, null),
-              r
+              t.prototype.google_analytics || _.a(t.M()),
+              m.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
@@ -249,8 +249,8 @@
                     fields: {
                       google_analytics: {
                         n: 1,
-                        br: f.d.readBool,
-                        bw: f.h.writeBool,
+                        br: _.d.readBool,
+                        bw: _.h.writeBool,
                       },
                     },
                   }),
@@ -258,34 +258,34 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = f.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, n) {
-              return f.g(t.M(), e, n);
+            (t.toObject = function (e, r) {
+              return _.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return f.c(t.M(), e);
+              return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var n = new _.BinaryReader(e),
-                r = new t();
-              return t.deserializeBinaryFromReader(r, n);
+              var r = new f.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (t.deserializeBinaryFromReader = function (e, n) {
-              return f.b(t.MBF(), e, n);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return _.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, n) {
-              f.f(t.M(), e, n);
+            (t.serializeBinaryToWriter = function (e, r) {
+              _.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -296,14 +296,14 @@
             t
           );
         })(m),
-        b = (function (e) {
-          function t(n) {
-            void 0 === n && (n = null);
-            var r = e.call(this) || this;
+        g = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              t.prototype.youtube || f.a(t.M()),
-              m.initialize(r, n, 0, -1, void 0, null),
-              r
+              t.prototype.youtube || _.a(t.M()),
+              m.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
@@ -314,44 +314,44 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      youtube: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
-                      vimeo: { n: 2, br: f.d.readBool, bw: f.h.writeBool },
-                      sketchfab: { n: 3, br: f.d.readBool, bw: f.h.writeBool },
-                      twitter: { n: 4, br: f.d.readBool, bw: f.h.writeBool },
+                      youtube: { n: 1, br: _.d.readBool, bw: _.h.writeBool },
+                      vimeo: { n: 2, br: _.d.readBool, bw: _.h.writeBool },
+                      sketchfab: { n: 3, br: _.d.readBool, bw: _.h.writeBool },
+                      twitter: { n: 4, br: _.d.readBool, bw: _.h.writeBool },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = f.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, n) {
-              return f.g(t.M(), e, n);
+            (t.toObject = function (e, r) {
+              return _.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return f.c(t.M(), e);
+              return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var n = new _.BinaryReader(e),
-                r = new t();
-              return t.deserializeBinaryFromReader(r, n);
+              var r = new f.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (t.deserializeBinaryFromReader = function (e, n) {
-              return f.b(t.MBF(), e, n);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return _.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, n) {
-              f.f(t.M(), e, n);
+            (t.serializeBinaryToWriter = function (e, r) {
+              _.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -363,13 +363,13 @@
           );
         })(m),
         v = (function (e) {
-          function t(n) {
-            void 0 === n && (n = null);
-            var r = e.call(this) || this;
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              t.prototype.preferences || f.a(t.M()),
-              m.initialize(r, n, 0, -1, void 0, null),
-              r
+              t.prototype.preferences || _.a(t.M()),
+              m.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
@@ -385,34 +385,34 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = f.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (t.toObject = function (e, n) {
-              return f.g(t.M(), e, n);
+            (t.toObject = function (e, r) {
+              return _.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return f.c(t.M(), e);
+              return _.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var n = new _.BinaryReader(e),
-                r = new t();
-              return t.deserializeBinaryFromReader(r, n);
+              var r = new f.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (t.deserializeBinaryFromReader = function (e, n) {
-              return f.b(t.MBF(), e, n);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return _.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (t.serializeBinaryToWriter = function (e, n) {
-              f.f(t.M(), e, n);
+            (t.serializeBinaryToWriter = function (e, r) {
+              _.f(t.M(), e, r);
             }),
             (t.prototype.serializeBase64String = function () {
-              var e = new _.BinaryWriter();
+              var e = new f.BinaryWriter();
               return (
                 t.serializeBinaryToWriter(this, e), e.getResultBase64String()
               );
@@ -430,9 +430,9 @@
           });
         };
       })(p || (p = {}));
-      var C,
-        T = n("TLQK"),
-        E = (function () {
+      var P,
+        k = r("TLQK"),
+        C = (function () {
           function e(e) {
             (this.m_Preferences = e),
               (this.m_Preferences.content_customization &&
@@ -566,15 +566,15 @@
             (e.prototype.PostCookieSettings = function () {
               var e, t;
               return Object(a.b)(this, void 0, void 0, function () {
-                var n, r, i, o, s, l;
+                var r, n, i, o, c, l;
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
-                      (n =
+                      (r =
                         u.d.STORE_BASE_URL +
                         "account/ajaxsetcookiepreferences"),
-                        (r = new FormData()).set("sessionid", u.d.SESSIONID),
-                        r.append(
+                        (n = new FormData()).set("sessionid", u.d.SESSIONID),
+                        n.append(
                           "cookiepreferences",
                           JSON.stringify(this.m_Preferences)
                         ),
@@ -582,7 +582,7 @@
                     case 1:
                       return (
                         a.trys.push([1, 3, , 4]),
-                        [4, c.a.post(n, r, { withCredentials: !0 })]
+                        [4, s.a.post(r, n, { withCredentials: !0 })]
                       );
                     case 2:
                       return (
@@ -593,8 +593,8 @@
                             ? void 0
                             : e.success)
                           ? window.ShowAlertDialog(
-                              Object(T.f)("#CookiePref_Error"),
-                              Object(T.f)("#CookiePref_ErrorNotSaved")
+                              Object(k.f)("#CookiePref_Error"),
+                              Object(k.f)("#CookiePref_ErrorNotSaved")
                             )
                           : 1 ==
                               (null === (t = null == i ? void 0 : i.data) ||
@@ -602,19 +602,19 @@
                                 ? void 0
                                 : t.success) &&
                             ((o = i.data),
-                            (s = o.transfer_urls),
+                            (c = o.transfer_urls),
                             (l = o.transfer_params),
-                            s &&
+                            c &&
                               l &&
-                              this.TransferCookiePreferencesToSites(s, l)),
+                              this.TransferCookiePreferencesToSites(c, l)),
                         [3, 4]
                       );
                     case 3:
                       return (
                         a.sent(),
                         window.ShowAlertDialog(
-                          Object(T.f)("#CookiePref_Error"),
-                          Object(T.f)("#CookiePref_ErrorNotSaved")
+                          Object(k.f)("#CookiePref_Error"),
+                          Object(k.f)("#CookiePref_ErrorNotSaved")
                         ),
                         [3, 4]
                       );
@@ -625,109 +625,109 @@
               });
             }),
             (e.prototype.TransferCookiePreferencesToSites = function (e, t) {
-              var n = new FormData();
-              n.set("transfer_params", t);
-              for (var r = 0, i = e; r < i.length; r++) {
-                var o = i[r];
-                c.a.post(o, n);
+              var r = new FormData();
+              r.set("transfer_params", t);
+              for (var n = 0, i = e; n < i.length; n++) {
+                var o = i[n];
+                s.a.post(o, r);
               }
             }),
             Object(a.c)([l.C], e.prototype, "m_Preferences", void 0),
             e
           );
         })(),
-        O = n("TyAF"),
-        P = n("Mgs7"),
-        S = n("nNQW"),
-        k = n("exH9"),
-        B = n("qDk6"),
-        R = n("hwrv"),
-        N = n("ykc/"),
-        j = n("av+R");
-      var w = Object(O.a)(function () {
+        B = r("TyAF"),
+        O = r("Mgs7"),
+        j = r("nNQW"),
+        T = r("exH9"),
+        N = r("qDk6"),
+        E = r("hwrv"),
+        S = r("ykc/"),
+        w = r("av+R");
+      var z = Object(B.a)(function () {
           var e = (function () {
-              if (!C) {
+              if (!P) {
                 var e = Object(u.h)("cookiepreferences", "application_config");
-                C = new E(e);
+                P = new C(e);
               }
-              return C;
+              return P;
             })(),
-            t = Object(R.a)(),
-            n = Object(r.useCallback)(
+            t = Object(E.a)(),
+            r = Object(n.useCallback)(
               function () {
                 e.SetPreferenceState(1);
               },
               [e]
             ),
-            o = Object(r.useCallback)(
+            o = Object(n.useCallback)(
               function () {
                 e.SetPreferenceState(2);
               },
               [e]
             );
           return i.a.createElement(
-            N.a,
+            S.a,
             { navID: "StoreCookiesSettings", NavigationManager: t },
             i.a.createElement(
               "div",
               {
-                className: Object(k.a)(
-                  S.CookieSettingsHeader,
+                className: Object(T.a)(
+                  j.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
               i.a.createElement(
                 "div",
                 null,
-                Object(T.f)("#CookiePref_OptionalCookies_Title")
+                Object(k.f)("#CookiePref_OptionalCookies_Title")
               )
             ),
             i.a.createElement(
               "div",
               { className: "account_settings_container" },
               i.a.createElement(
-                B.a,
-                { "flow-children": "row", className: S.ButtonGroup },
+                N.a,
+                { "flow-children": "row", className: j.ButtonGroup },
                 i.a.createElement(
-                  j.e,
+                  w.e,
                   {
-                    className: Object(k.a)(
-                      S.AllButton,
-                      e.BIsRejectAll() ? S.ButtonHighlight : ""
+                    className: Object(T.a)(
+                      j.AllButton,
+                      e.BIsRejectAll() ? j.ButtonHighlight : ""
                     ),
                     onClick: o,
                   },
-                  Object(T.f)("#CookiePref_RejectAll")
+                  Object(k.f)("#CookiePref_RejectAll")
                 ),
                 i.a.createElement(
-                  j.e,
+                  w.e,
                   {
-                    className: Object(k.a)(
-                      S.AllButton,
-                      e.BIsAllowAll() ? S.ButtonHighlight : ""
+                    className: Object(T.a)(
+                      j.AllButton,
+                      e.BIsAllowAll() ? j.ButtonHighlight : ""
                     ),
-                    onClick: n,
+                    onClick: r,
                   },
-                  Object(T.f)("#CookiePref_AcceptAll")
+                  Object(k.f)("#CookiePref_AcceptAll")
                 )
               ),
-              i.a.createElement(D, { settings: e }),
-              i.a.createElement(I, { settings: e }),
               i.a.createElement(M, { settings: e }),
-              i.a.createElement(A, { settings: e })
+              i.a.createElement(A, { settings: e }),
+              i.a.createElement(G, { settings: e }),
+              i.a.createElement(R, { settings: e })
             ),
             i.a.createElement(
               "div",
               {
-                className: Object(k.a)(
-                  S.CookieSettingsHeader,
+                className: Object(T.a)(
+                  j.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
               i.a.createElement(
                 "div",
                 null,
-                Object(T.f)("#CookiePref_TechnicallyNeccesary_Title")
+                Object(k.f)("#CookiePref_TechnicallyNeccesary_Title")
               )
             ),
             i.a.createElement(
@@ -736,121 +736,121 @@
               i.a.createElement(
                 "p",
                 null,
-                Object(T.f)("#CookiePref_TechnicallyNeccesary_Desc")
+                Object(k.f)("#CookiePref_TechnicallyNeccesary_Desc")
               ),
               i.a.createElement(
                 "div",
-                { className: S.CookieGroup },
+                { className: j.CookieGroup },
                 i.a.createElement(
                   "div",
-                  { className: S.NecessaryGroup },
+                  { className: j.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryTitle },
-                    Object(T.f)("#CookiePref_SessionID_Title")
+                    { className: j.NecessaryTitle },
+                    Object(k.f)("#CookiePref_SessionID_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryDesc },
-                    Object(T.f)("#CookiePref_SessionID_Desc")
+                    { className: j.NecessaryDesc },
+                    Object(k.f)("#CookiePref_SessionID_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: S.NecessaryGroup },
+                  { className: j.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryTitle },
-                    Object(T.f)("#CookiePref_ShoppingCart_Title")
+                    { className: j.NecessaryTitle },
+                    Object(k.f)("#CookiePref_ShoppingCart_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryDesc },
-                    Object(T.f)("#CookiePref_ShoppingCart_Desc")
+                    { className: j.NecessaryDesc },
+                    Object(k.f)("#CookiePref_ShoppingCart_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: S.NecessaryGroup },
+                  { className: j.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryTitle },
-                    Object(T.f)("#CookiePref_SteamCountry_Title")
+                    { className: j.NecessaryTitle },
+                    Object(k.f)("#CookiePref_SteamCountry_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryDesc },
-                    Object(T.f)("#CookiePref_SteamCountry_Desc")
+                    { className: j.NecessaryDesc },
+                    Object(k.f)("#CookiePref_SteamCountry_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: S.NecessaryGroup },
+                  { className: j.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryTitle },
-                    Object(T.f)("#CookiePref_Timezone_Title")
+                    { className: j.NecessaryTitle },
+                    Object(k.f)("#CookiePref_Timezone_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryDesc },
-                    Object(T.f)("#CookiePref_Timezone_Desc")
+                    { className: j.NecessaryDesc },
+                    Object(k.f)("#CookiePref_Timezone_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: S.NecessaryGroup },
+                  { className: j.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryTitle },
-                    Object(T.f)("#CookiePref_BirthTime_Title")
+                    { className: j.NecessaryTitle },
+                    Object(k.f)("#CookiePref_BirthTime_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryDesc },
-                    Object(T.f)("#CookiePref_BirthTime_Desc")
+                    { className: j.NecessaryDesc },
+                    Object(k.f)("#CookiePref_BirthTime_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: S.NecessaryGroup },
+                  { className: j.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryTitle },
-                    Object(T.f)("#CookiePref_Login_Title")
+                    { className: j.NecessaryTitle },
+                    Object(k.f)("#CookiePref_Login_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryDesc },
-                    Object(T.f)("#CookiePref_Login_Desc")
+                    { className: j.NecessaryDesc },
+                    Object(k.f)("#CookiePref_Login_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: S.NecessaryGroup },
+                  { className: j.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryTitle },
-                    Object(T.f)("#CookiePref_Language_Title")
+                    { className: j.NecessaryTitle },
+                    Object(k.f)("#CookiePref_Language_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryDesc },
-                    Object(T.f)("#CookiePref_Language_Desc")
+                    { className: j.NecessaryDesc },
+                    Object(k.f)("#CookiePref_Language_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: S.NecessaryGroup },
+                  { className: j.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryTitle },
-                    Object(T.f)("#CookiePref_CookieSettings_Title")
+                    { className: j.NecessaryTitle },
+                    Object(k.f)("#CookiePref_CookieSettings_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: S.NecessaryDesc },
-                    Object(T.f)("#CookiePref_CookieSettings_Desc")
+                    { className: j.NecessaryDesc },
+                    Object(k.f)("#CookiePref_CookieSettings_Desc")
                   )
                 )
               )
@@ -858,28 +858,28 @@
             i.a.createElement(
               "div",
               {
-                className: Object(k.a)(
-                  S.CookieSettingsHeader,
+                className: Object(T.a)(
+                  j.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
               i.a.createElement(
                 "div",
                 null,
-                Object(T.f)("#PrivacySettings_Marketing_Header")
+                Object(k.f)("#PrivacySettings_Marketing_Header")
               )
             ),
             i.a.createElement(
               "div",
               { className: "account_settings_container" },
-              i.a.createElement(G, { settings: e })
+              i.a.createElement(D, { settings: e })
             ),
             null
           );
         }),
-        D = Object(O.a)(function (e) {
+        M = Object(B.a)(function (e) {
           var t = e.settings,
-            n = Object(r.useCallback)(
+            r = Object(n.useCallback)(
               function () {
                 t.ToggleRecentApps();
               },
@@ -887,32 +887,32 @@
             );
           return i.a.createElement(
             "div",
-            { className: S.CookieGroup },
+            { className: j.CookieGroup },
             i.a.createElement(
               "div",
-              { className: S.CookieSection },
+              { className: j.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(T.f)("#CookiePref_Content_Title")
+                Object(k.f)("#CookiePref_Content_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: S.SectionDescription },
-                Object(T.f)("#CookiePref_Content_Desc")
+                { className: j.SectionDescription },
+                Object(k.f)("#CookiePref_Content_Desc")
               ),
-              i.a.createElement(P.p, {
-                onChange: n,
-                label: Object(T.f)("#CookiePref_Content_ToggleTitle"),
+              i.a.createElement(O.p, {
+                onChange: r,
+                label: Object(k.f)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
-                description: Object(T.f)("#CookiePref_Content_ToggleDesc"),
+                description: Object(k.f)("#CookiePref_Content_ToggleDesc"),
               })
             )
           );
         }),
-        I = Object(O.a)(function (e) {
+        A = Object(B.a)(function (e) {
           var t = e.settings,
-            n = Object(r.useCallback)(
+            r = Object(n.useCallback)(
               function () {
                 t.ToggleImpressions();
               },
@@ -920,34 +920,34 @@
             );
           return i.a.createElement(
             "div",
-            { className: S.CookieGroup },
+            { className: j.CookieGroup },
             i.a.createElement(
               "div",
-              { className: S.CookieSection },
+              { className: j.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(T.f)("#CookiePref_ValveAnalytics_Title")
+                Object(k.f)("#CookiePref_ValveAnalytics_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: S.SectionDescription },
-                Object(T.f)("#CookiePref_ValveAnalytics_Desc")
+                { className: j.SectionDescription },
+                Object(k.f)("#CookiePref_ValveAnalytics_Desc")
               ),
-              i.a.createElement(P.p, {
-                onChange: n,
-                label: Object(T.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
+              i.a.createElement(O.p, {
+                onChange: r,
+                label: Object(k.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
-                description: Object(T.f)(
+                description: Object(k.f)(
                   "#CookiePref_ValveAnalytics_ToggleDesc"
                 ),
               })
             )
           );
         }),
-        M = Object(O.a)(function (e) {
+        G = Object(B.a)(function (e) {
           var t = e.settings,
-            n = Object(r.useCallback)(
+            r = Object(n.useCallback)(
               function () {
                 t.ToggleGoogleAnalytics();
               },
@@ -955,46 +955,46 @@
             );
           return i.a.createElement(
             "div",
-            { className: S.CookieGroup },
+            { className: j.CookieGroup },
             i.a.createElement(
               "div",
-              { className: S.CookieSection },
+              { className: j.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(T.f)("#CookiePref_GoogleAnalytics_Title")
+                Object(k.f)("#CookiePref_GoogleAnalytics_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: S.SectionDescription },
-                Object(T.f)("#CookiePref_GoogleAnalytics_Desc")
+                { className: j.SectionDescription },
+                Object(k.f)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              i.a.createElement(P.p, {
-                onChange: n,
-                label: Object(T.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
+              i.a.createElement(O.p, {
+                onChange: r,
+                label: Object(k.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
-                description: Object(T.f)(
+                description: Object(k.f)(
                   "#CookiePref_GoogleAnalytics_ToggleDesc"
                 ),
               })
             )
           );
         }),
-        A = Object(O.a)(function (e) {
+        R = Object(B.a)(function (e) {
           var t = e.settings,
-            n = Object(r.useCallback)(
+            r = Object(n.useCallback)(
               function () {
                 t.ToggleYouTube();
               },
               [t]
             ),
-            o = Object(r.useCallback)(
+            o = Object(n.useCallback)(
               function () {
                 t.ToggleVimeo();
               },
               [t]
             ),
-            a = Object(r.useCallback)(
+            a = Object(n.useCallback)(
               function () {
                 t.ToggleSketchfab();
               },
@@ -1002,44 +1002,44 @@
             );
           return i.a.createElement(
             "div",
-            { className: S.CookieGroup },
+            { className: j.CookieGroup },
             i.a.createElement(
               "div",
-              { className: S.CookieSection },
+              { className: j.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(T.f)("#CookiePref_ThirdParty_Title")
+                Object(k.f)("#CookiePref_ThirdParty_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: S.SectionDescription },
-                Object(T.f)("#CookiePref_ThirdParty_Desc")
+                { className: j.SectionDescription },
+                Object(k.f)("#CookiePref_ThirdParty_Desc")
               ),
-              i.a.createElement(P.p, {
-                onChange: n,
-                label: Object(T.f)("#CookiePref_YouTube_Title"),
+              i.a.createElement(O.p, {
+                onChange: r,
+                label: Object(k.f)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
-                description: Object(T.f)("#CookiePref_YouTube_Desc"),
+                description: Object(k.f)("#CookiePref_YouTube_Desc"),
               }),
-              i.a.createElement(P.p, {
+              i.a.createElement(O.p, {
                 onChange: o,
-                label: Object(T.f)("#CookiePref_Vimeo_Title"),
+                label: Object(k.f)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
-                description: Object(T.f)("#CookiePref_Vimeo_Desc"),
+                description: Object(k.f)("#CookiePref_Vimeo_Desc"),
               }),
-              i.a.createElement(P.p, {
+              i.a.createElement(O.p, {
                 onChange: a,
-                label: Object(T.f)("#CookiePref_Sketchfab_Title"),
+                label: Object(k.f)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
-                description: Object(T.f)("#CookiePref_Sketchfab_Desc"),
+                description: Object(k.f)("#CookiePref_Sketchfab_Desc"),
               })
             )
           );
         }),
-        G = Object(O.a)(function (e) {
+        D = Object(B.a)(function (e) {
           var t = e.settings,
-            n = Object(r.useCallback)(
+            r = Object(n.useCallback)(
               function () {
                 t.ToggleUTMEnabled();
               },
@@ -1047,403 +1047,49 @@
             );
           return i.a.createElement(
             "div",
-            { className: S.CookieGroup },
+            { className: j.CookieGroup },
             i.a.createElement(
               "div",
-              { className: S.CookieSection },
+              { className: j.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
-                Object(T.f)("#PrivacySettings_Marketing_Title")
+                Object(k.f)("#PrivacySettings_Marketing_Title")
               ),
               i.a.createElement(
                 "p",
-                { className: S.SectionDescription },
-                Object(T.f)("#PrivacySettings_Marketing_Desc")
+                { className: j.SectionDescription },
+                Object(k.f)("#PrivacySettings_Marketing_Desc")
               ),
-              i.a.createElement(P.p, {
-                onChange: n,
-                label: Object(T.f)("#PrivacySettings_UTM_ToggleLabel"),
+              i.a.createElement(O.p, {
+                onChange: r,
+                label: Object(k.f)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
-                description: Object(T.f)("#PrivacySettings_UTM_ToggleDesc"),
+                description: Object(k.f)("#PrivacySettings_UTM_ToggleDesc"),
               })
             )
           );
         }),
-        L = {
+        W = {
           CookieSettings: function () {
             return "/cookiepreferences";
           },
         };
       t.default = function (e) {
         var t = e.match.url,
-          n = L;
+          r = W;
         return i.a.createElement(
           o.d,
           null,
           i.a.createElement(
             o.b,
-            { path: "" + t + n.CookieSettings() },
-            i.a.createElement(w, null)
+            { path: "" + t + r.CookieSettings() },
+            i.a.createElement(z, null)
           )
         );
       };
     },
-    hwrv: function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return b;
-      });
-      var r,
-        i = n("mrSG"),
-        o = n("rHSA"),
-        a = n("XxJJ"),
-        s = [
-          { index: 0, type: o.a.OK, category: "action" },
-          { index: 1, type: o.a.CANCEL, category: "action" },
-          { index: 2, type: o.a.SECONDARY, category: "action" },
-          { index: 3, type: o.a.OPTIONS, category: "action" },
-          { index: 4, type: o.a.BUMPER_LEFT, category: "action" },
-          { index: 5, type: o.a.BUMPER_RIGHT, category: "action" },
-          { index: 6, type: o.a.TRIGGER_LEFT, category: "action" },
-          { index: 7, type: o.a.TRIGGER_RIGHT, category: "action" },
-          { index: 8, type: o.a.SELECT, category: "action" },
-          { index: 9, type: o.a.START, category: "action" },
-          { index: 10, type: o.a.LSTICK_CLICK, category: "action" },
-          { index: 11, type: o.a.RSTICK_CLICK, category: "action" },
-          { index: 12, type: o.a.DIR_UP, category: "navigation" },
-          { index: 13, type: o.a.DIR_DOWN, category: "navigation" },
-          { index: 14, type: o.a.DIR_LEFT, category: "navigation" },
-          { index: 15, type: o.a.DIR_RIGHT, category: "navigation" },
-          { index: 16, type: o.a.STEAM_GUIDE, category: "action" },
-          { index: 17, type: o.a.SELECT, category: "action" },
-        ],
-        c = (function (e) {
-          function t() {
-            var t = e.call(this) || this;
-            return (
-              (t.m_rgGamepadStatus = []),
-              t.SetSourceType(o.b.GAMEPAD),
-              window.addEventListener("gamepadconnected", function (e) {
-                t.m_bGamepadDetected ||
-                  (t.OnGamepadDetected(), t.PollGamepads());
-              }),
-              t
-            );
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.PollGamepads = function () {
-              for (
-                var e = navigator.getGamepads(), t = !1, n = 0;
-                n < e.length;
-                n++
-              ) {
-                var r = e[n];
-                if (r) {
-                  this.m_rgGamepadStatus[n] ||
-                    (this.m_rgGamepadStatus[n] = { buttons: [] });
-                  for (
-                    var i = this.m_rgGamepadStatus[n], o = 0;
-                    o < s.length;
-                    o++
-                  ) {
-                    var a = s[o],
-                      c = a.index;
-                    r.buttons[c] &&
-                      (r.buttons[c].pressed
-                        ? ((t = !0),
-                          i.buttons[c] ||
-                            ((i.buttons[c] = !0), this.OnButtonDown(a.type)))
-                        : i.buttons[c] &&
-                          (this.OnButtonUp(a.type), (i.buttons[c] = !1)));
-                  }
-                }
-              }
-              document.hasFocus() || t
-                ? requestAnimationFrame(this.PollGamepads)
-                : (console.log("Lost focus - suspending gamepad polling"),
-                  window.addEventListener(
-                    "focusin",
-                    this.OnWindowRegainedFocus
-                  ));
-            }),
-            (t.prototype.OnWindowRegainedFocus = function () {
-              window.removeEventListener("focusin", this.OnWindowRegainedFocus),
-                this.PollGamepads();
-            }),
-            Object(i.c)([a.a], t.prototype, "PollGamepads", null),
-            Object(i.c)([a.a], t.prototype, "OnWindowRegainedFocus", null),
-            t
-          );
-        })(o.c),
-        l = n("kyHq"),
-        u = {
-          A: o.a.OK,
-          B: o.a.CANCEL,
-          X: o.a.SECONDARY,
-          Y: o.a.OPTIONS,
-          SELECT: o.a.SELECT,
-          START: o.a.START,
-          LSHOULDER: o.a.BUMPER_LEFT,
-          RSHOULDER: o.a.BUMPER_RIGHT,
-          LTRIGGER: o.a.TRIGGER_LEFT,
-          RTRIGGER: o.a.TRIGGER_RIGHT,
-          LEFTSTICK_UP: o.a.DIR_UP,
-          LEFTSTICK_RIGHT: o.a.DIR_RIGHT,
-          LEFTSTICK_DOWN: o.a.DIR_DOWN,
-          LEFTSTICK_LEFT: o.a.DIR_LEFT,
-          LEFTSTICK_CLICK: o.a.LSTICK_CLICK,
-          RIGHTSTICK_CLICK: o.a.RSTICK_CLICK,
-          LeftStick: o.a.LSTICK_TOUCH,
-          RightStick: o.a.RSTICK_TOUCH,
-          LeftTrackpad: o.a.LPAD_TOUCH,
-          LeftTrackpadClick: o.a.LPAD_CLICK,
-          RightTrackpad: o.a.RPAD_TOUCH,
-          RightTrackpadClick: o.a.RPAD_CLICK,
-          RearLeftUpper: o.a.REAR_LEFT_UPPER,
-          RearLeftLower: o.a.REAR_LEFT_LOWER,
-          RearRightUpper: o.a.REAR_RIGHT_UPPER,
-          RearRightLower: o.a.REAR_RIGHT_LOWER,
-        },
-        _ =
-          (((r = {})[l.h.SystemKey0] = o.a.STEAM_GUIDE),
-          (r[l.h.SystemKey1] = o.a.STEAM_QUICK_MENU),
-          r),
-        f = (function (e) {
-          function t() {
-            var t = e.call(this) || this;
-            return (
-              (t.m_rgControllers = new Map()),
-              "undefined" != typeof SteamClient &&
-                ((t.m_hUnregisterControllerInput = SteamClient.Input.RegisterForControllerInputMessages(
-                  t.HandleControllerInputMessages
-                )),
-                SteamClient.System.UI.RegisterForSystemKeyEvents(
-                  t.HandleSystemKeyEvents
-                )),
-              t.SetSourceType(o.b.GAMEPAD),
-              t
-            );
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.HandleSystemKeyEvents = function (e) {
-              var t = _[e.eKey];
-              t && this.OnSystemButtonPress(t, e.nControllerIndex);
-            }),
-            (t.prototype.OnSystemButtonPress = function (e, t) {
-              this.OnButtonDown(e, t), this.OnButtonUp(e, t);
-            }),
-            (t.prototype.GetController = function (e) {
-              var t = this.m_rgControllers.get(e);
-              return (
-                t ||
-                  ((t = { activeButtons: {} }), this.m_rgControllers.set(e, t)),
-                t
-              );
-            }),
-            (t.prototype.HandleControllerInputMessages = function (e) {
-              for (var t = 0, n = e; t < n.length; t++) {
-                var r = n[t],
-                  i = u[r.strActionName];
-                if (null != i) {
-                  var o = this.GetController(r.nController);
-                  r.bState && !o.activeButtons[i]
-                    ? ((o.activeButtons[i] = !0),
-                      this.OnButtonDown(i, r.nController))
-                    : !r.bState &&
-                      o.activeButtons[i] &&
-                      ((o.activeButtons[i] = !1),
-                      this.OnButtonUp(i, r.nController));
-                }
-              }
-            }),
-            Object(i.c)([a.a], t.prototype, "HandleSystemKeyEvents", null),
-            Object(i.c)(
-              [a.a],
-              t.prototype,
-              "HandleControllerInputMessages",
-              null
-            ),
-            t
-          );
-        })(o.c),
-        m = n("X3Ds"),
-        p = (function (e) {
-          function t(t) {
-            var n = e.call(this) || this;
-            return (
-              (n.m_lastButtonDown = o.a.INVALID),
-              n.SetSourceType(o.b.KEYBOARD),
-              t.addEventListener("keydown", n.OnKeyDown),
-              t.addEventListener("keyup", n.OnKeyUp),
-              t.addEventListener("blur", n.Reset),
-              n
-            );
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.OnKeyDown = function (e) {
-              var t = this.TranslateKey(e);
-              t != o.a.INVALID &&
-                t != this.m_lastButtonDown &&
-                (this.Reset(),
-                this.OnButtonDown(t),
-                (this.m_lastButtonDown = t),
-                e.preventDefault());
-            }),
-            (t.prototype.OnKeyUp = function (e) {
-              var t = this.TranslateKey(e);
-              t != o.a.INVALID &&
-                (this.OnButtonUp(t),
-                (this.m_lastButtonDown = o.a.INVALID),
-                e.preventDefault());
-            }),
-            (t.prototype.Reset = function () {
-              this.m_lastButtonDown != o.a.INVALID &&
-                (this.OnButtonUp(this.m_lastButtonDown),
-                (this.m_lastButtonDown = o.a.INVALID));
-            }),
-            (t.prototype.TranslateKey = function (e) {
-              var t = e.code,
-                n = e.ctrlKey,
-                r =
-                  m.q(e.target) &&
-                  ("INPUT" === e.target.nodeName ||
-                    "TEXTAREA" === e.target.nodeName);
-              if (n)
-                switch (t) {
-                  case "Digit1":
-                    return o.a.STEAM_GUIDE;
-                  case "Digit2":
-                    return o.a.STEAM_QUICK_MENU;
-                  case "Digit3":
-                    return o.a.SELECT;
-                  case "Digit4":
-                    return o.a.BUMPER_LEFT;
-                  case "Digit5":
-                    return o.a.BUMPER_RIGHT;
-                  case "Digit6":
-                    return o.a.LSTICK_CLICK;
-                  case "Digit7":
-                    return o.a.RSTICK_CLICK;
-                  case "Digit8":
-                    return o.a.OPTIONS;
-                  case "Digit9":
-                    return o.a.SELECT;
-                  case "Digit0":
-                    return o.a.START;
-                }
-              switch (t) {
-                case "Escape":
-                  return o.a.CANCEL;
-                case "Enter":
-                  return r ? o.a.INVALID : o.a.OK;
-                case "Backspace":
-                  return r ? o.a.INVALID : o.a.SECONDARY;
-                case "ArrowUp":
-                  return o.a.DIR_UP;
-                case "ArrowDown":
-                  return o.a.DIR_DOWN;
-                case "ArrowLeft":
-                  return o.a.DIR_LEFT;
-                case "ArrowRight":
-                  return o.a.DIR_RIGHT;
-              }
-              return o.a.INVALID;
-            }),
-            Object(i.c)([a.a], t.prototype, "OnKeyDown", null),
-            Object(i.c)([a.a], t.prototype, "OnKeyUp", null),
-            Object(i.c)([a.a], t.prototype, "Reset", null),
-            t
-          );
-        })(o.c),
-        y = (function (e) {
-          function t(t) {
-            var n = e.call(this) || this;
-            return (
-              (n.m_nAccumulatedMouseMovement = 0),
-              (n.m_bFirstMouseUpdate = !0),
-              n.SetSourceType(o.b.MOUSE),
-              t.addEventListener("mousedown", n.OnMouseDown),
-              t.addEventListener("mousemove", n.OnMouseMove),
-              t.addEventListener("blur", n.Reset),
-              n
-            );
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.OnMouseDown = function (e) {
-              e.defaultPrevented || this.OnNavigationTypeChanged(o.b.MOUSE);
-            }),
-            (t.prototype.OnMouseMove = function (e) {
-              if (!e.defaultPrevented) {
-                if (this.m_bFirstMouseUpdate)
-                  return (
-                    (this.m_nLastScreenX = e.screenX),
-                    (this.m_nLastScreenY = e.screenY),
-                    void (this.m_bFirstMouseUpdate = !1)
-                  );
-                (this.m_nAccumulatedMouseMovement +=
-                  Math.abs(e.screenX - this.m_nLastScreenX) +
-                  Math.abs(e.screenY - this.m_nLastScreenY)),
-                  this.m_nAccumulatedMouseMovement > 500 &&
-                    (this.Reset(), this.OnNavigationTypeChanged(o.b.MOUSE));
-              }
-            }),
-            (t.prototype.Reset = function () {
-              (this.m_nAccumulatedMouseMovement = 0),
-                (this.m_bFirstMouseUpdate = !0);
-            }),
-            Object(i.c)([a.a], t.prototype, "OnMouseDown", null),
-            Object(i.c)([a.a], t.prototype, "OnMouseMove", null),
-            Object(i.c)([a.a], t.prototype, "Reset", null),
-            t
-          );
-        })(o.c),
-        d = n("NxAk"),
-        g = n("lkRc"),
-        h = (function () {
-          function e() {
-            (this.m_GamepadNavigationController = new d.c()),
-              g.d.IN_GAMEPADUI &&
-                (this.m_GamepadNavigationController.RegisterInputSource(
-                  new f()
-                ),
-                this.m_GamepadNavigationController.RegisterInputSource(
-                  new c()
-                )),
-              "dev" == g.d.WEB_UNIVERSE &&
-                (this.m_GamepadNavigationController.RegisterInputSource(
-                  new p(window)
-                ),
-                this.m_GamepadNavigationController.RegisterInputSource(
-                  new y(window)
-                ));
-          }
-          return (
-            (e.prototype.GetNavigationController = function () {
-              return this.m_GamepadNavigationController;
-            }),
-            (e.Get = function () {
-              return (
-                e.s_Singleton ||
-                  ((e.s_Singleton = new e()),
-                  "dev" == g.d.WEB_UNIVERSE &&
-                    (window.g_StoreWebNavStore = e.s_Singleton)),
-                e.s_Singleton
-              );
-            }),
-            e
-          );
-        })();
-      function b() {
-        var e = window.legacyWebFocusNavController;
-        return e || h.Get().GetNavigationController();
-      }
-    },
-    nNQW: function (e, t, n) {
+    nNQW: function (e, t, r) {
       e.exports = {
         AllButton: "cookiesettings_AllButton_24Y_0",
         ButtonHighlight: "cookiesettings_ButtonHighlight_3OVHZ",
@@ -1457,34 +1103,34 @@
         NecessaryDesc: "cookiesettings_NecessaryDesc_9NmWi",
       };
     },
-    "ykc/": function (e, t, n) {
+    "ykc/": function (e, t, r) {
       "use strict";
-      n.d(t, "a", function () {
+      r.d(t, "a", function () {
         return u;
       });
-      var r = n("mrSG"),
-        i = n("q1tI"),
-        o = n.n(i),
-        a = n("av+R"),
-        s = n("yLGM"),
-        c = n("opsS"),
-        l = n("lkRc");
+      var n = r("mrSG"),
+        i = r("q1tI"),
+        o = r.n(i),
+        a = r("av+R"),
+        c = r("yLGM"),
+        s = r("opsS"),
+        l = r("lkRc");
       function u(e) {
         var t = e.children,
-          n = e.navTreeRef,
-          i = Object(r.f)(e, ["children", "navTreeRef"]),
+          r = e.navTreeRef,
+          i = Object(n.f)(e, ["children", "navTreeRef"]),
           u = o.a.useRef(),
-          _ = Object(c.f)(u, n);
+          f = Object(s.f)(u, r);
         if (l.d.IN_GAMEPADUI) {
-          var f = window.__nav_tree_root;
+          var _ = window.__nav_tree_root;
           return o.a.createElement(
             a.b,
-            Object(r.a)({}, i, {
-              navTreeRef: _,
+            Object(n.a)({}, i, {
+              navTreeRef: f,
               secondary: !0,
-              parentEmbeddedNavTree: f,
+              parentEmbeddedNavTree: _,
             }),
-            o.a.createElement(s.a, null, t)
+            o.a.createElement(c.a, null, t)
           );
         }
         return o.a.createElement(o.a.Fragment, null, t);

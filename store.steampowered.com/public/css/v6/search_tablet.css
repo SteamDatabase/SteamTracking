@@ -60,6 +60,8 @@
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 270px;
 	--gpDselectWidth: 320px;
+	--gpSidePanelWidth: 348px;
+	--gpGiftingPanelWidth: 280px;
 
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
@@ -371,7 +373,7 @@
     /* FILTER PANEL */
 
     /* Toggle filter visibility */
-    html.responsive .responsive_local_menu_tab.active {
+    /* html.responsive .responsive_local_menu_tab.active {
         border-radius: unset;
         width: unset;
         height: unset;
@@ -380,7 +382,7 @@
         top: unset;
         right: var(--gpSpace-Gutter);
         bottom: var(--gpSpace-Gutter);
-    }
+    } */
 
     html.responsive .gamepad_filter_toggle {
         background: white;
@@ -481,8 +483,6 @@
 		padding: unset;
 	}
 
-	/* Search for tags */
-
 	/* Hiding on Deck */
 	html.responsive #TagSuggest {
 		display: none;
@@ -490,19 +490,11 @@
 
 
 
-
-	html.responsive .responsive_page_frame.no_header.localmenu_active .responsive_page_menu_ctn {
-		display: block;
-		width: 320px;
-	}
-
-	html.responsive .responsive_page_frame.no_header .responsive_page_menu_ctn {
+	/* Hide button to open the right panel */
+	html.responsive .responsive_local_menu_tab.active {
+		top: 60px;
 		display: none;
 	}
-
-
-
-
 
 
 

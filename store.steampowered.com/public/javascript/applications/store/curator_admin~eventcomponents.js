@@ -1587,8 +1587,6 @@
       e.exports = {
         Container: "partnereventwebrowembed_Container_2Jd3M",
         StoreHeaderAdjust: "partnereventwebrowembed_StoreHeaderAdjust_3YyCp",
-        GamePadUIWidthAdjust:
-          "partnereventwebrowembed_GamePadUIWidthAdjust_3FoUC",
         SectionButtonCtn: "partnereventwebrowembed_SectionButtonCtn_1HP0y",
         SectionButton: "partnereventwebrowembed_SectionButton_3n8sw",
         EventsSummariesCtn: "partnereventwebrowembed_EventsSummariesCtn_1snIw",

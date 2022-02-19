@@ -60,6 +60,8 @@
 	--gpPaymentsNavWidth: 40vw;
 	--gpPurchaseOptionsWidth: 270px;
 	--gpDselectWidth: 320px;
+	--gpSidePanelWidth: 348px;
+	--gpGiftingPanelWidth: 280px;
 
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);

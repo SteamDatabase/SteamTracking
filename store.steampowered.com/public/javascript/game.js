@@ -1936,6 +1936,41 @@ function ShareDialogCopyToClipboard()
 	document.getSelection().removeAllRanges();
 }
 
+// A very basic scroll helper which only supports vertical scrolling
+// Added to translate gamepad navigation events into scroll up/down
+function ScrollElement( elementID, nAmount )
+{
+	var element = $J( elementID )[0];
+	if ( !element )
+		return false;
+
+	if ( nAmount > 0 && element.scrollTop + element.clientHeight < element.scrollHeight )
+		element.scrollBy( 0, nAmount );
+	else if ( nAmount < 0 && element.scrollTop > 0 )
+		element.scrollBy( 0, nAmount );
+	else 
+		return false;
+
+	return true;
+}
+
+// initially only used by tablet
+function ShowEarlyAccessModal( contentID )
+{
+	var $Content = $J( contentID );
+	$Content.detach();
+	$Content.show();
+
+	ShowDialog( "Early Access Software", $Content ).always(
+		function() {
+
+			// save it away again for later
+			$Content.hide();
+			$J( document.body ).append( $Content );
+		}
+	);
+}
+
 // applies layout changes for mobile and tablet screen sizes
 function ReparentAppLandingPageForSmallScreens()
 {
@@ -1962,8 +1997,19 @@ function ReparentAppLandingPageForSmallScreens()
 
 		var fn_reparent = bSupportTabletMode ? Responsive_ReparentItemsInResponsiveMode : Responsive_ReparentItemsInMobileMode;
 
+	// move early access content into the purchase options parent
+	if ( bSupportTabletMode )
+	{
+		// on tablet we provide a learn more link which opens a dialog containing early access details
+		fn_reparent( $J('#earlyAccessBody'), $J('#earlyAccessTabletDialogContent') );
+		fn_reparent( $J('#earlyAccessTabletContent'), $J('#purchaseOptionsContent') );
+	}
+	else
+	{
+		fn_reparent( '.early_access_header', $J('#purchaseOptionsContent') );
+	}
+
 	// move purchase options into a new container for responsive UX
-	fn_reparent( '.early_access_header', $J('#purchaseOptionsContent') );
 	fn_reparent( '#game_area_purchase', $J('#purchaseOptionsContent') );
 
 	// order the action buttons

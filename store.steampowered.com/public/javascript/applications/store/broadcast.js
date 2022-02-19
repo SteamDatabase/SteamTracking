@@ -6759,7 +6759,7 @@
                     t.SendMessage(a), o("");
                   },
                 },
-                s.createElement(it.lb, null)
+                s.createElement(it.pb, null)
               )
             ),
             s.createElement(
@@ -7693,7 +7693,7 @@
                   {
                     className: Object(at.a)(At.a.viewer_count, "viewer_count"),
                   },
-                  s.createElement(it.vb, null),
+                  s.createElement(it.zb, null),
                   n.toLocaleString(Me.e.GetPreferredLocales())
                 ),
                 s.createElement(
@@ -7807,7 +7807,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(it.zb, null)
+              s.createElement(it.Db, null)
             )
           );
         }),
@@ -7990,7 +7990,7 @@
                     ? s.createElement(
                         s.Fragment,
                         null,
-                        s.createElement(it.vb, null),
+                        s.createElement(it.zb, null),
                         " ",
                         u.toLocaleString(Me.e.GetPreferredLocales())
                       )
