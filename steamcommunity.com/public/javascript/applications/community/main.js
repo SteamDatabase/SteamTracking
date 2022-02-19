@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7092841";
+var CLSTAMP = "7096084";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -577,237 +577,251 @@ var CLSTAMP = "7092841";
     "6Y59": function (e, t, n) {
       "use strict";
       n.d(t, "bb", function () {
-        return l;
+        return p;
       }),
         n.d(t, "s", function () {
-          return u;
-        }),
-        n.d(t, "y", function () {
-          return p;
-        }),
-        n.d(t, "L", function () {
           return d;
         }),
-        n.d(t, "w", function () {
+        n.d(t, "y", function () {
           return h;
         }),
-        n.d(t, "ib", function () {
+        n.d(t, "L", function () {
           return m;
         }),
-        n.d(t, "H", function () {
+        n.d(t, "w", function () {
           return f;
         }),
-        n.d(t, "V", function () {
+        n.d(t, "mb", function () {
           return g;
         }),
-        n.d(t, "vb", function () {
+        n.d(t, "H", function () {
           return v;
         }),
-        n.d(t, "wb", function () {
+        n.d(t, "V", function () {
           return b;
         }),
-        n.d(t, "R", function () {
+        n.d(t, "zb", function () {
           return _;
         }),
-        n.d(t, "sb", function () {
+        n.d(t, "Ab", function () {
           return y;
         }),
-        n.d(t, "qb", function () {
+        n.d(t, "R", function () {
           return w;
         }),
-        n.d(t, "U", function () {
+        n.d(t, "wb", function () {
           return C;
         }),
-        n.d(t, "T", function () {
+        n.d(t, "ub", function () {
           return O;
         }),
-        n.d(t, "m", function () {
+        n.d(t, "U", function () {
           return E;
         }),
-        n.d(t, "k", function () {
+        n.d(t, "T", function () {
           return S;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "m", function () {
           return D;
         }),
-        n.d(t, "J", function () {
+        n.d(t, "k", function () {
           return M;
         }),
-        n.d(t, "jb", function () {
-          return T;
-        }),
-        n.d(t, "e", function () {
+        n.d(t, "q", function () {
           return k;
         }),
-        n.d(t, "c", function () {
-          return R;
-        }),
-        n.d(t, "p", function () {
-          return I;
-        }),
-        n.d(t, "r", function () {
-          return x;
-        }),
-        n.d(t, "M", function () {
-          return L;
-        }),
-        n.d(t, "P", function () {
-          return j;
-        }),
-        n.d(t, "Y", function () {
-          return B;
-        }),
-        n.d(t, "X", function () {
-          return N;
-        }),
-        n.d(t, "lb", function () {
-          return A;
-        }),
-        n.d(t, "C", function () {
-          return P;
-        }),
-        n.d(t, "N", function () {
-          return F;
-        }),
-        n.d(t, "gb", function () {
-          return G;
-        }),
-        n.d(t, "rb", function () {
-          return U;
-        }),
-        n.d(t, "l", function () {
-          return H;
-        }),
-        n.d(t, "D", function () {
-          return W;
-        }),
-        n.d(t, "eb", function () {
-          return V;
-        }),
-        n.d(t, "Z", function () {
-          return z;
-        }),
-        n.d(t, "ab", function () {
-          return K;
-        }),
-        n.d(t, "db", function () {
-          return Y;
-        }),
-        n.d(t, "f", function () {
-          return q;
-        }),
-        n.d(t, "Q", function () {
-          return X;
-        }),
-        n.d(t, "pb", function () {
-          return J;
-        }),
-        n.d(t, "I", function () {
-          return Q;
-        }),
-        n.d(t, "x", function () {
-          return Z;
+        n.d(t, "J", function () {
+          return T;
         }),
         n.d(t, "nb", function () {
-          return $;
+          return R;
         }),
-        n.d(t, "mb", function () {
-          return ee;
+        n.d(t, "e", function () {
+          return I;
         }),
-        n.d(t, "j", function () {
-          return te;
+        n.d(t, "c", function () {
+          return x;
         }),
-        n.d(t, "n", function () {
-          return ne;
+        n.d(t, "p", function () {
+          return L;
         }),
-        n.d(t, "fb", function () {
-          return re;
+        n.d(t, "r", function () {
+          return j;
         }),
-        n.d(t, "t", function () {
-          return oe;
+        n.d(t, "M", function () {
+          return B;
         }),
-        n.d(t, "A", function () {
-          return ie;
+        n.d(t, "P", function () {
+          return N;
         }),
-        n.d(t, "v", function () {
-          return ae;
+        n.d(t, "Y", function () {
+          return A;
         }),
-        n.d(t, "F", function () {
-          return se;
+        n.d(t, "X", function () {
+          return P;
         }),
-        n.d(t, "B", function () {
-          return ce;
+        n.d(t, "pb", function () {
+          return F;
         }),
-        n.d(t, "u", function () {
-          return le;
+        n.d(t, "C", function () {
+          return G;
         }),
-        n.d(t, "S", function () {
-          return ue;
-        }),
-        n.d(t, "b", function () {
-          return pe;
-        }),
-        n.d(t, "tb", function () {
-          return de;
-        }),
-        n.d(t, "a", function () {
-          return he;
-        }),
-        n.d(t, "O", function () {
-          return me;
-        }),
-        n.d(t, "G", function () {
-          return fe;
-        }),
-        n.d(t, "z", function () {
-          return ge;
-        }),
-        n.d(t, "E", function () {
-          return ve;
-        }),
-        n.d(t, "o", function () {
-          return be;
+        n.d(t, "N", function () {
+          return U;
         }),
         n.d(t, "kb", function () {
+          return H;
+        }),
+        n.d(t, "vb", function () {
+          return W;
+        }),
+        n.d(t, "l", function () {
+          return V;
+        }),
+        n.d(t, "D", function () {
+          return z;
+        }),
+        n.d(t, "eb", function () {
+          return K;
+        }),
+        n.d(t, "Z", function () {
+          return Y;
+        }),
+        n.d(t, "ab", function () {
+          return q;
+        }),
+        n.d(t, "db", function () {
+          return X;
+        }),
+        n.d(t, "f", function () {
+          return Z;
+        }),
+        n.d(t, "Q", function () {
+          return J;
+        }),
+        n.d(t, "tb", function () {
+          return Q;
+        }),
+        n.d(t, "I", function () {
+          return $;
+        }),
+        n.d(t, "x", function () {
+          return ee;
+        }),
+        n.d(t, "rb", function () {
+          return te;
+        }),
+        n.d(t, "qb", function () {
+          return ne;
+        }),
+        n.d(t, "j", function () {
+          return re;
+        }),
+        n.d(t, "n", function () {
+          return oe;
+        }),
+        n.d(t, "fb", function () {
+          return ie;
+        }),
+        n.d(t, "t", function () {
+          return ae;
+        }),
+        n.d(t, "A", function () {
+          return se;
+        }),
+        n.d(t, "v", function () {
+          return ce;
+        }),
+        n.d(t, "F", function () {
+          return le;
+        }),
+        n.d(t, "B", function () {
+          return ue;
+        }),
+        n.d(t, "u", function () {
+          return pe;
+        }),
+        n.d(t, "S", function () {
+          return de;
+        }),
+        n.d(t, "b", function () {
+          return he;
+        }),
+        n.d(t, "xb", function () {
+          return me;
+        }),
+        n.d(t, "a", function () {
+          return fe;
+        }),
+        n.d(t, "O", function () {
+          return ge;
+        }),
+        n.d(t, "G", function () {
+          return ve;
+        }),
+        n.d(t, "z", function () {
+          return be;
+        }),
+        n.d(t, "E", function () {
           return _e;
         }),
-        n.d(t, "ob", function () {
+        n.d(t, "o", function () {
           return ye;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "ob", function () {
           return we;
         }),
-        n.d(t, "K", function () {
+        n.d(t, "sb", function () {
           return Ce;
         }),
-        n.d(t, "W", function () {
+        n.d(t, "d", function () {
           return Oe;
         }),
-        n.d(t, "ub", function () {
+        n.d(t, "K", function () {
           return Ee;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "W", function () {
           return Se;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "yb", function () {
           return De;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "i", function () {
           return Me;
         }),
-        n.d(t, "cb", function () {
+        n.d(t, "h", function () {
+          return ke;
+        }),
+        n.d(t, "g", function () {
           return Te;
         }),
+        n.d(t, "cb", function () {
+          return Re;
+        }),
+        n.d(t, "lb", function () {
+          return Ie;
+        }),
+        n.d(t, "jb", function () {
+          return xe;
+        }),
+        n.d(t, "gb", function () {
+          return Le;
+        }),
+        n.d(t, "ib", function () {
+          return je;
+        }),
         n.d(t, "hb", function () {
-          return ke;
+          return Be;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
         i = n("2i24"),
         a = n.n(i),
         s = n("exH9"),
-        c = (n("YyVH"), n("Z7Ow"), n("lkRc"));
-      function l() {
+        c = (n("YyVH"), n("Z7Ow")),
+        l = n.n(c),
+        u = n("lkRc");
+      function p() {
         return o.createElement(
           "svg",
           {
@@ -829,7 +843,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function u() {
+      function d() {
         return o.createElement(
           "svg",
           {
@@ -846,7 +860,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function p(e) {
+      function h(e) {
         return o.createElement(
           "svg",
           {
@@ -865,7 +879,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function d(e) {
+      function m(e) {
         var t = "SVGIcon_Button SVGIcon_MagnifyingGlass";
         return (
           e.className && (t += " " + e.className),
@@ -897,7 +911,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function h() {
+      function f() {
         return o.createElement(
           "svg",
           {
@@ -953,8 +967,8 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function m(e) {
-        return c.c.IN_GAMEPADUI
+      function g(e) {
+        return u.c.IN_GAMEPADUI
           ? o.createElement(
               "svg",
               Object(r.a)(
@@ -1004,7 +1018,7 @@ var CLSTAMP = "7092841";
               )
             );
       }
-      function f() {
+      function v() {
         return o.createElement(
           "svg",
           {
@@ -1029,7 +1043,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function g() {
+      function b() {
         return o.createElement(
           "svg",
           {
@@ -1046,7 +1060,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function v(e) {
+      function _(e) {
         return o.createElement(
           "svg",
           Object(r.a)(
@@ -1071,7 +1085,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function b(e) {
+      function y(e) {
         var t = e.color || "#FFFFFF";
         return o.createElement(
           "svg",
@@ -1108,7 +1122,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function _() {
+      function w() {
         return o.createElement(
           "svg",
           {
@@ -1132,7 +1146,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function y(e) {
+      function C(e) {
         var t = e.muted,
           n = e.className;
         return o.createElement(
@@ -1206,7 +1220,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function w() {
+      function O() {
         return o.createElement(
           "svg",
           { width: "50px", height: "25px", viewBox: "0 0 50 25" },
@@ -1216,7 +1230,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function C() {
+      function E() {
         return o.createElement(
           "svg",
           {
@@ -1237,7 +1251,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function O() {
+      function S() {
         return o.createElement(
           "svg",
           {
@@ -1261,7 +1275,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function E() {
+      function D() {
         return o.createElement(
           "svg",
           {
@@ -1286,7 +1300,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function S() {
+      function M() {
         return o.createElement(
           "svg",
           {
@@ -1315,7 +1329,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function D(e) {
+      function k(e) {
         var t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         return o.createElement(
@@ -1395,7 +1409,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function M() {
+      function T() {
         return o.createElement(
           "svg",
           {
@@ -1425,7 +1439,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function T(e) {
+      function R(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -1669,8 +1683,8 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function k(e) {
-        return c.c.IN_GAMEPADUI
+      function I(e) {
+        return u.c.IN_GAMEPADUI
           ? o.createElement(
               "svg",
               Object(r.a)(
@@ -1709,7 +1723,7 @@ var CLSTAMP = "7092841";
               })
             );
       }
-      function R(e) {
+      function x(e) {
         return o.createElement(
           "svg",
           {
@@ -1744,7 +1758,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function I() {
+      function L() {
         return o.createElement(
           "svg",
           {
@@ -1764,7 +1778,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function x(e) {
+      function j(e) {
         return o.createElement(
           "svg",
           {
@@ -1800,7 +1814,7 @@ var CLSTAMP = "7092841";
             })
         );
       }
-      function L() {
+      function B() {
         return o.createElement(
           "svg",
           {
@@ -1836,7 +1850,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function j() {
+      function N() {
         return o.createElement(
           "svg",
           {
@@ -1862,7 +1876,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function B() {
+      function A() {
         return o.createElement(
           "svg",
           {
@@ -1895,7 +1909,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function N() {
+      function P() {
         return o.createElement(
           "svg",
           {
@@ -1923,7 +1937,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function A() {
+      function F() {
         return o.createElement(
           "svg",
           {
@@ -2002,7 +2016,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function P(e) {
+      function G(e) {
         return o.createElement(
           "svg",
           {
@@ -2023,7 +2037,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function F(e) {
+      function U(e) {
         return o.createElement(
           "svg",
           {
@@ -2064,7 +2078,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function G(e) {
+      function H(e) {
         var t = Object(s.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -2098,7 +2112,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function U() {
+      function W() {
         return o.createElement(
           "svg",
           {
@@ -2126,7 +2140,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function H() {
+      function V() {
         return o.createElement(
           "svg",
           {
@@ -2148,7 +2162,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function W() {
+      function z() {
         return o.createElement(
           "svg",
           {
@@ -2170,7 +2184,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function V() {
+      function K() {
         return o.createElement(
           "svg",
           {
@@ -2191,7 +2205,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function z() {
+      function Y() {
         return o.createElement(
           "svg",
           {
@@ -2228,7 +2242,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function K() {
+      function q() {
         return o.createElement(
           "svg",
           {
@@ -2256,7 +2270,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function Y() {
+      function X() {
         return o.createElement(
           "svg",
           {
@@ -2323,7 +2337,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function q() {
+      function Z() {
         return o.createElement(
           "svg",
           {
@@ -2344,7 +2358,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function X(e) {
+      function J(e) {
         var t = e.className;
         return o.createElement(
           "svg",
@@ -2365,7 +2379,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function J() {
+      function Q() {
         return o.createElement(
           "svg",
           {
@@ -2389,7 +2403,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function Q() {
+      function $() {
         return o.createElement(
           "svg",
           {
@@ -2439,7 +2453,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function Z() {
+      function ee() {
         return o.createElement(
           "svg",
           {
@@ -2472,7 +2486,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function $() {
+      function te() {
         return o.createElement(
           "svg",
           {
@@ -2492,7 +2506,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ee() {
+      function ne() {
         return o.createElement(
           "svg",
           {
@@ -2512,7 +2526,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function te() {
+      function re() {
         return o.createElement(
           "svg",
           {
@@ -2534,7 +2548,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ne() {
+      function oe() {
         return o.createElement(
           "svg",
           {
@@ -2568,7 +2582,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function re(e) {
+      function ie(e) {
         var t = Object(s.a)(
           "SVGIcon_Button",
           e.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled"
@@ -2595,7 +2609,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function oe() {
+      function ae() {
         return o.createElement(
           "svg",
           {
@@ -2645,7 +2659,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function ie() {
+      function se() {
         return o.createElement(
           "svg",
           {
@@ -2665,7 +2679,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ae() {
+      function ce() {
         return o.createElement(
           "svg",
           {
@@ -2705,7 +2719,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function se() {
+      function le() {
         return o.createElement(
           "svg",
           {
@@ -2741,7 +2755,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ce() {
+      function ue() {
         return o.createElement(
           "svg",
           {
@@ -2761,7 +2775,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function le(e) {
+      function pe(e) {
         return o.createElement(
           "svg",
           {
@@ -2791,7 +2805,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ue() {
+      function de() {
         return o.createElement(
           "svg",
           {
@@ -2819,7 +2833,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function pe() {
+      function he() {
         return o.createElement(
           "svg",
           {
@@ -2843,7 +2857,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function de() {
+      function me() {
         return o.createElement(
           "svg",
           {
@@ -2862,7 +2876,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function he() {
+      function fe() {
         return o.createElement(
           "svg",
           {
@@ -2892,7 +2906,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function me() {
+      function ge() {
         return o.createElement(
           "svg",
           {
@@ -2908,7 +2922,7 @@ var CLSTAMP = "7092841";
           o.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function fe() {
+      function ve() {
         return o.createElement(
           "svg",
           {
@@ -2928,7 +2942,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ge() {
+      function be() {
         return o.createElement(
           "svg",
           {
@@ -2948,7 +2962,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ve() {
+      function _e() {
         return o.createElement(
           "svg",
           {
@@ -2971,8 +2985,8 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function be(e, t) {
-        return c.c.IN_GAMEPADUI
+      function ye(e, t) {
+        return u.c.IN_GAMEPADUI
           ? o.createElement(
               "svg",
               Object(r.a)(
@@ -3009,7 +3023,7 @@ var CLSTAMP = "7092841";
               })
             );
       }
-      function _e(e) {
+      function we(e) {
         return o.createElement(
           "svg",
           {
@@ -3029,7 +3043,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ye(e) {
+      function Ce(e) {
         return o.createElement(
           "svg",
           {
@@ -3067,7 +3081,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function we(e) {
+      function Oe(e) {
         var t = e.className,
           n = e.color;
         return o.createElement(
@@ -3096,7 +3110,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function Ce(e) {
+      function Ee(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return o.createElement(
@@ -3276,7 +3290,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function Oe() {
+      function Se() {
         return o.createElement(
           "svg",
           {
@@ -3309,7 +3323,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function Ee(e) {
+      function De(e) {
         return o.createElement(
           "svg",
           Object(r.a)({}, e, {
@@ -3326,7 +3340,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function Se() {
+      function Me() {
         return o.createElement(
           "svg",
           {
@@ -3345,7 +3359,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function De() {
+      function ke() {
         return o.createElement(
           "svg",
           {
@@ -3368,7 +3382,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function Me() {
+      function Te() {
         return o.createElement(
           "svg",
           {
@@ -3410,7 +3424,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function Te(e) {
+      function Re(e) {
         return o.createElement(
           "svg",
           Object(r.a)({}, e, {
@@ -3429,7 +3443,7 @@ var CLSTAMP = "7092841";
           })
         );
       }
-      function ke() {
+      function Ie() {
         return o.createElement(
           "svg",
           {
@@ -3463,6 +3477,122 @@ var CLSTAMP = "7092841";
               strokeLinejoin: "round",
             })
           )
+        );
+      }
+      function xe(e) {
+        var t = e.className,
+          n = Object(r.f)(e, ["className"]);
+        return o.createElement(
+          "svg",
+          Object(r.a)(
+            {
+              className: Object(s.a)(
+                l.a.SteamDeckCompatIcon,
+                l.a.SteamDeckCompatVerified,
+                t
+              ),
+            },
+            n,
+            {
+              viewBox: "0 0 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            }
+          ),
+          o.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d:
+              "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
+            fill: "currentColor",
+          })
+        );
+      }
+      function Le(e) {
+        var t = e.className,
+          n = Object(r.f)(e, ["className"]);
+        return o.createElement(
+          "svg",
+          Object(r.a)(
+            {
+              className: Object(s.a)(
+                l.a.SteamDeckCompatIcon,
+                l.a.SteamDeckCompatPlayable,
+                t
+              ),
+            },
+            n,
+            {
+              viewBox: "0 0 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            }
+          ),
+          o.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d:
+              "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.61079 9.44444V15H11.3886V9.44444H8.61079ZM9.07372 8.05245C9.34781 8.23558 9.67004 8.33333 9.99967 8.33333C10.4417 8.33333 10.8656 8.15774 11.1782 7.84518C11.4907 7.53262 11.6663 7.10869 11.6663 6.66667C11.6663 6.33703 11.5686 6.0148 11.3855 5.74072C11.2023 5.46663 10.942 5.25301 10.6375 5.12687C10.3329 5.00072 9.99783 4.96771 9.67452 5.03202C9.35122 5.09633 9.05425 5.25507 8.82116 5.48815C8.58808 5.72124 8.42934 6.01821 8.36503 6.34152C8.30072 6.66482 8.33373 6.99993 8.45988 7.30447C8.58602 7.60902 8.79964 7.86931 9.07372 8.05245Z",
+            fill: "currentColor",
+          })
+        );
+      }
+      function je(e) {
+        var t = e.className,
+          n = Object(r.f)(e, ["className"]);
+        return o.createElement(
+          "svg",
+          Object(r.a)(
+            {
+              className: Object(s.a)(
+                l.a.SteamDeckCompatIcon,
+                l.a.SteamDeckCompatUnsupported,
+                t
+              ),
+            },
+            n,
+            {
+              viewBox: "0 0 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            }
+          ),
+          o.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d:
+              "M14.1931 15.6064C13.0246 16.4816 11.5733 17 10.001 17C6.13498 17 3.00098 13.866 3.00098 10C3.00098 8.42766 3.51938 6.97641 4.39459 5.80783L14.1931 15.6064ZM15.6074 14.1922C16.4826 13.0236 17.001 11.5723 17.001 10C17.001 6.13401 13.867 3 10.001 3C8.42864 3 6.97739 3.5184 5.80881 4.39362L15.6074 14.1922ZM19.001 10C19.001 14.9706 14.9715 19 10.001 19C5.03041 19 1.00098 14.9706 1.00098 10C1.00098 5.02944 5.03041 1 10.001 1C14.9715 1 19.001 5.02944 19.001 10Z",
+            fill: "currentColor",
+          })
+        );
+      }
+      function Be(e) {
+        var t = e.className,
+          n = Object(r.f)(e, ["className"]);
+        return o.createElement(
+          "svg",
+          Object(r.a)(
+            {
+              className: Object(s.a)(
+                l.a.SteamDeckCompatIcon,
+                l.a.SteamDeckCompatUnknown,
+                t
+              ),
+            },
+            n,
+            {
+              viewBox: "0 0 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            }
+          ),
+          o.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d:
+              "M17.3972 11.2461L18.8767 11.4932C18.9578 11.0075 19 10.5087 19 10C19 9.49131 18.9578 8.99248 18.8767 8.50682L17.3972 8.75386C17.4647 9.15821 17.5 9.57442 17.5 10C17.5 10.4256 17.4647 10.8418 17.3972 11.2461ZM17.0295 7.3783L18.4348 6.8539C18.0814 5.90668 17.5729 5.03501 16.9403 4.26971L15.7842 5.22538C16.3119 5.86387 16.7354 6.59021 17.0295 7.3783ZM14.7746 4.21582L15.7303 3.05967C14.965 2.42708 14.0933 1.91864 13.1461 1.56519L12.6217 2.97054C13.4098 3.26461 14.1361 3.68805 14.7746 4.21582ZM11.2461 2.60281L11.4932 1.1233C11.0075 1.0422 10.5087 1 10 1C9.49131 1 8.99248 1.0422 8.50682 1.1233L8.75386 2.60281C9.15821 2.5353 9.57442 2.5 10 2.5C10.4256 2.5 10.8418 2.5353 11.2461 2.60281ZM7.3783 2.97054L6.8539 1.56519C5.90668 1.91864 5.03501 2.42708 4.26971 3.05967L5.22538 4.21582C5.86387 3.68805 6.59021 3.26461 7.3783 2.97054ZM4.21582 5.22538L3.05967 4.26971C2.42708 5.03501 1.91864 5.90668 1.56519 6.8539L2.97054 7.3783C3.26461 6.59022 3.68805 5.86387 4.21582 5.22538ZM1 10C1 9.49131 1.0422 8.99248 1.1233 8.50682L2.60281 8.75386C2.5353 9.15821 2.5 9.57442 2.5 10C2.5 10.4256 2.5353 10.8418 2.60281 11.2461L1.1233 11.4932C1.0422 11.0075 1 10.5087 1 10ZM2.97054 12.6217L1.56519 13.1461C1.91864 14.0933 2.42708 14.965 3.05967 15.7303L4.21582 14.7746C3.68805 14.1361 3.26461 13.4098 2.97054 12.6217ZM5.22538 15.7842L4.26971 16.9403C5.03501 17.5729 5.90668 18.0814 6.8539 18.4348L7.3783 17.0295C6.59022 16.7354 5.86387 16.3119 5.22538 15.7842ZM8.75386 17.3972L8.50682 18.8767C8.99248 18.9578 9.49131 19 10 19C10.5087 19 11.0075 18.9578 11.4932 18.8767L11.2461 17.3972C10.8418 17.4647 10.4256 17.5 10 17.5C9.57442 17.5 9.15821 17.4647 8.75386 17.3972ZM12.6217 17.0295L13.1461 18.4348C14.0933 18.0814 14.965 17.5729 15.7303 16.9403L14.7746 15.7842C14.1361 16.3119 13.4098 16.7354 12.6217 17.0295ZM15.7842 14.7746L16.9403 15.7303C17.5729 14.965 18.0814 14.0933 18.4348 13.1461L17.0295 12.6217C16.7354 13.4098 16.3119 14.1361 15.7842 14.7746ZM9.2425 14.7702C9.46679 14.92 9.73048 15 10.0002 15C10.362 15 10.7089 14.8563 10.9646 14.6006C11.2204 14.3448 11.3641 13.998 11.3641 13.6363C11.3641 13.3666 11.2841 13.1029 11.1343 12.8787C10.9844 12.6544 10.7714 12.4796 10.5222 12.3764C10.2729 12.2732 9.99872 12.2462 9.73415 12.2988C9.46958 12.3514 9.22656 12.4813 9.03582 12.672C8.84508 12.8628 8.71518 13.1057 8.66255 13.3703C8.60993 13.6348 8.63694 13.909 8.74016 14.1582C8.84339 14.4074 9.01821 14.6203 9.2425 14.7702ZM11.0981 10.3552C11.1722 10.2348 11.2765 10.1358 11.4005 10.068C11.8099 9.82315 12.1479 9.47526 12.3808 9.05903C12.6137 8.64279 12.7333 8.17276 12.7278 7.69584C12.7223 7.21892 12.5918 6.75179 12.3493 6.34105C12.1069 5.93031 11.7609 5.59033 11.346 5.35502C10.9311 5.11972 10.4617 4.99732 9.98466 5.00004C9.50764 5.00277 9.03969 5.13052 8.62748 5.37054C8.21527 5.61057 7.87321 5.95448 7.63545 6.36796C7.39769 6.78144 7.27253 7.25004 7.27246 7.72699H9.23191C9.23191 7.6261 9.25178 7.52621 9.29039 7.43301C9.32901 7.3398 9.3856 7.25511 9.45694 7.18378C9.52829 7.11244 9.61299 7.05586 9.70621 7.01725C9.79942 6.97865 9.89933 6.95878 10.0002 6.95878C10.1659 6.96387 10.3255 7.02207 10.4556 7.12479C10.5856 7.22751 10.6792 7.3693 10.7225 7.52925C10.7658 7.6892 10.7565 7.85883 10.6961 8.01311C10.6356 8.16739 10.5271 8.29816 10.3867 8.3861C9.97322 8.62846 9.63003 8.97429 9.39088 9.38955C9.15173 9.80482 9.02487 10.2752 9.02278 10.7544V11.3635H10.9777V10.7544C10.9825 10.6131 11.024 10.4755 11.0981 10.3552Z",
+            fill: "currentColor",
+          })
         );
       }
     },
@@ -3709,10 +3839,10 @@ var CLSTAMP = "7092841";
           return D;
         }),
         n.d(t, "e", function () {
-          return T;
+          return k;
         }),
         n.d(t, "f", function () {
-          return k;
+          return T;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -3780,6 +3910,10 @@ var CLSTAMP = "7092841";
                     if ("Enter" == e)
                       return (
                         SteamClient.Input.ControllerKeyboardSendText(""), !0
+                      );
+                    if ("Tab" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText("\t"), !0
                       );
                     if (
                       1 === e.length ||
@@ -4100,7 +4234,7 @@ var CLSTAMP = "7092841";
           S = e.scrollIntoViewWhenChildFocused,
           D = e.fnScrollIntoViewHandler,
           M = e.scrollIntoViewType,
-          T = O(
+          k = O(
             Object(r.f)(e, [
               "autoFocus",
               "preferredFocus",
@@ -4129,10 +4263,10 @@ var CLSTAMP = "7092841";
               "scrollIntoViewType",
             ])
           ),
-          k = T.gamepadEvents,
-          R = T.actionDescriptions;
+          T = k.gamepadEvents,
+          R = k.actionDescriptions;
         return {
-          elemProps: T.props,
+          elemProps: k.props,
           navOptions: {
             autoFocus: t,
             preferredFocus: n,
@@ -4160,7 +4294,7 @@ var CLSTAMP = "7092841";
             scrollIntoViewType: M,
             actionDescriptionMap: Object(r.a)(Object(r.a)({}, m), R),
           },
-          gamepadEvents: k,
+          gamepadEvents: T,
         };
       }
       function S(e) {
@@ -4252,13 +4386,13 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      function T(e) {
+      function k(e) {
         var t = S(e);
         return i.a.forwardRef(function (n, r) {
           return M(e, t, n, r);
         });
       }
-      function k(e) {
+      function T(e) {
         var t = S(e);
         return i.a.forwardRef(function (n, o) {
           var i = (function (e) {
@@ -5608,10 +5742,10 @@ var CLSTAMP = "7092841";
           return M;
         }),
         n.d(t, "f", function () {
-          return T;
+          return k;
         }),
         n.d(t, "c", function () {
-          return k;
+          return T;
         }),
         n.d(t, "g", function () {
           return N;
@@ -5721,7 +5855,7 @@ var CLSTAMP = "7092841";
                 i.createElement(
                   "div",
                   { className: "closeButton", onClick: e.onEscKeypress },
-                  i.createElement(u.wb, null)
+                  i.createElement(u.Ab, null)
                 )
               ),
             i.createElement(l.a, null, e.children)
@@ -5908,7 +6042,7 @@ var CLSTAMP = "7092841";
             (t = Object(r.c)([o.a], t))
           );
         })(i.Component),
-        T = (function (e) {
+        k = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5933,7 +6067,7 @@ var CLSTAMP = "7092841";
             (t = Object(r.c)([o.a], t))
           );
         })(i.Component);
-      function k(e) {
+      function T(e) {
         var t = e.ModalManager,
           n = e.DialogWrapper,
           o = Object(r.f)(e, ["ModalManager", "DialogWrapper"]),
@@ -6482,7 +6616,7 @@ var CLSTAMP = "7092841";
           return q;
         }),
         n.d(t, "t", function () {
-          return J;
+          return Z;
         }),
         n.d(t, "h", function () {
           return le;
@@ -6574,10 +6708,10 @@ var CLSTAMP = "7092841";
         var t = Object(u.b)();
         return o.createElement(
           p.f,
-          Object(r.a)({ component: t.Content, fallback: T }, e)
+          Object(r.a)({ component: t.Content, fallback: k }, e)
         );
       }
-      function T(e) {
+      function k(e) {
         var t = e.children,
           n = e.bCenterVertically,
           i = e.renderDialogContentDiv,
@@ -6608,7 +6742,7 @@ var CLSTAMP = "7092841";
           )
         );
       }
-      var k = (function (e) {
+      var T = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -6634,7 +6768,7 @@ var CLSTAMP = "7092841";
         return o.createElement(
           M,
           { className: t, bCenterVertically: n },
-          o.createElement(k, Object(r.a)({}, i))
+          o.createElement(T, Object(r.a)({}, i))
         );
       }
       var I = o.forwardRef(function (e, t) {
@@ -7338,7 +7472,7 @@ var CLSTAMP = "7092841";
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick,
                       },
-                      o.createElement(a.wb, null)
+                      o.createElement(a.Ab, null)
                     ),
                   p
                 ),
@@ -7429,14 +7563,14 @@ var CLSTAMP = "7092841";
         X = function (e) {
           return "" + Number.parseFloat(e.toFixed(2));
         },
-        J = function (e) {
+        Z = function (e) {
           var t = Object(u.b)();
           return o.createElement(
             p.f,
-            Object(r.a)({ component: t.SliderField, fallback: Q }, e)
+            Object(r.a)({ component: t.SliderField, fallback: J }, e)
           );
         },
-        Q = (function (e) {
+        J = (function (e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -7620,7 +7754,7 @@ var CLSTAMP = "7092841";
             t
           );
         })(o.Component),
-        Z = n("TtDX"),
+        Q = n("TtDX"),
         $ = (n("y+6m"), n("P++D")),
         ee = n.n($),
         te = n("5E+2"),
@@ -7842,7 +7976,7 @@ var CLSTAMP = "7092841";
                   void 0 === e
                     ? void 0
                     : e.onCancel;
-              (this.m_iMenuInstance = Object(Z.a)(
+              (this.m_iMenuInstance = Object(Q.a)(
                 o.createElement(fe, {
                   rgOptions: this.props.rgOptions,
                   onValueSelected: this.OnValueSelected,
@@ -8640,8 +8774,8 @@ var CLSTAMP = "7092841";
             );
           })(o.Component)
         ),
-        Te = n("rHSA"),
-        ke = (n("NxAk"), n("d1jy")),
+        ke = n("rHSA"),
+        Te = (n("NxAk"), n("d1jy")),
         Re = n("IjL/"),
         Ie = n("zBSo"),
         xe = n.n(Ie),
@@ -8738,7 +8872,7 @@ var CLSTAMP = "7092841";
               ),
               key: t.title,
               onClick: function () {
-                ke.a.PlayNavSound(ke.b.PagedNavigation),
+                Te.a.PlayNavSound(Te.b.PagedNavigation),
                   e.onPageRequested && e.onPageRequested(t.identifier),
                   t.click ? t.click() : c && n != d && h(n);
               },
@@ -8767,7 +8901,7 @@ var CLSTAMP = "7092841";
               navRef: b,
               onButtonDown: function (e) {
                 var t;
-                e.detail.button == Te.a.OK &&
+                e.detail.button == ke.a.OK &&
                   (null === (t = w.current) ||
                     void 0 === t ||
                     t.TakeFocus(e.detail.button));
@@ -11902,7 +12036,7 @@ var CLSTAMP = "7092841";
         return n.toLocaleTimeString(
           r,
           o
-            ? { hour: "numeric", minute: "2-digit", hour12: !1 }
+            ? { hour: "numeric", minute: "2-digit", hourCycle: "h23" }
             : { hour: "numeric", minute: "2-digit" }
         );
       }
@@ -12629,6 +12763,7 @@ var CLSTAMP = "7092841";
           "SystemNetworkStore",
           "SteamClient",
           "AudioPlaybackManager",
+          "LaunchStates",
         ];
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
@@ -13788,10 +13923,10 @@ var CLSTAMP = "7092841";
           bottom: Math.max(0, t.bottom - n.bottom),
         };
       }
-      function T(e) {
+      function k(e) {
         return e > -1 && e < 1;
       }
-      function k(e, t, n, r, o) {
+      function T(e, t, n, r, o) {
         _(
           "----------------------------------------------------------------------------------"
         ),
@@ -13863,12 +13998,12 @@ var CLSTAMP = "7092841";
             });
         }
         for (var f = !1, g = 0, b = i; g < b.length; g++) {
-          if (!T((m = b[g]).left) || !T(m.top)) {
+          if (!k((m = b[g]).left) || !k(m.top)) {
             var y = (h = x(m.element)).scrollTop + m.top,
               w = h.scrollLeft + m.left;
             (w = v.a(w, 0, h.MaxScrollLeft())),
               (y = v.a(y, 0, h.MaxScrollTop())),
-              (T(h.scrollLeft - w) && T(h.scrollTop - y)) ||
+              (k(h.scrollLeft - w) && k(h.scrollTop - y)) ||
                 (h.scrollTo({ left: w, top: y, behavior: n }),
                 f || (_("Scrolling:"), (f = !0)),
                 _(
@@ -14653,7 +14788,7 @@ var CLSTAMP = "7092841";
                         s +
                         " axis "
                     ),
-                    k(n.Element, n.Element, "smooth", s, c),
+                    T(n.Element, n.Element, "smooth", s, c),
                     !0
                   );
               }
@@ -14899,11 +15034,11 @@ var CLSTAMP = "7092841";
                     h && (w = performance.now()),
                       e.Tree.Controller.BIsRestoringHistory() && (f = "auto"),
                       p
-                        ? k(0, u, f)
+                        ? T(0, u, f)
                         : u.scrollIntoView({ behavior: f, block: "nearest" });
                   } else
                     p
-                      ? k(0, u, "auto")
+                      ? T(0, u, "auto")
                       : u.scrollIntoView({
                           behavior: "auto",
                           block: "nearest",
@@ -15404,7 +15539,7 @@ var CLSTAMP = "7092841";
                             e && e.close();
                           },
                         },
-                        o.createElement(l.wb, null)
+                        o.createElement(l.Ab, null)
                       ),
                       !this.props.hideMinMax &&
                         o.createElement(
@@ -16549,7 +16684,9 @@ var CLSTAMP = "7092841";
             (e[(e.k_ESuspendResumeProgressState_LoggingIn = 3)] =
               "k_ESuspendResumeProgressState_LoggingIn"),
             (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
-              "k_ESuspendResumeProgressState_WaitingForApp");
+              "k_ESuspendResumeProgressState_WaitingForApp"),
+            (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
+              "k_ESuspendResumeProgressState_Working");
         })(d || (d = {})),
         (function (e) {
           (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
@@ -16657,10 +16794,10 @@ var CLSTAMP = "7092841";
         M = function (e) {
           return "/" + E() + "/" + e + "/(partnerevents|events|announcements)";
         },
-        T = function (e) {
+        k = function (e) {
           return "/app/" + e + "(/workshop/)?";
         },
-        k = function (e) {
+        T = function (e) {
           return "/groups/" + e + "/";
         },
         R = function (e) {
@@ -16723,7 +16860,7 @@ var CLSTAMP = "7092841";
             (t.prototype.render = function () {
               return i.a.createElement(
                 c.a,
-                { basename: J() },
+                { basename: Z() },
                 i.a.createElement(
                   i.a.Suspense,
                   { fallback: i.a.createElement("div", null) },
@@ -16750,7 +16887,7 @@ var CLSTAMP = "7092841";
                     i.a.createElement(l.c, { path: D(), component: v }),
                     i.a.createElement(l.c, { path: F(), component: _ }),
                     i.a.createElement(l.c, {
-                      path: T(":appid"),
+                      path: k(":appid"),
                       render: function (e) {
                         return i.a.createElement(d.a, {
                           config: {
@@ -16768,7 +16905,7 @@ var CLSTAMP = "7092841";
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: k(":groupid_or_vanity_str"),
+                      path: T(":groupid_or_vanity_str"),
                       render: function (e) {
                         return i.a.createElement(d.a, {
                           config: {
@@ -16881,7 +17018,7 @@ var CLSTAMP = "7092841";
             )
           : i.a.createElement(l.b, { push: !0, to: "/" });
       }
-      function J() {
+      function Z() {
         var e = document.createElement("a");
         e.href = h.c.COMMUNITY_BASE_URL;
         var t = e.pathname;
@@ -18260,10 +18397,10 @@ var CLSTAMP = "7092841";
           return D;
         }),
         n.d(t, "f", function () {
-          return T;
+          return k;
         }),
         n.d(t, "a", function () {
-          return k;
+          return T;
         }),
         n.d(t, "e", function () {
           return R;
@@ -18579,7 +18716,7 @@ var CLSTAMP = "7092841";
         return i.createElement("div", { className: r.ContextMenuSeparator });
       }
       i.PureComponent;
-      var T = (function (e) {
+      var k = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
@@ -18729,19 +18866,19 @@ var CLSTAMP = "7092841";
                     D = e.scrollHeight;
                   a.bMatchHeight && ((D = S - E), (s.menuHeight = D));
                   var M = (a.bOverlapVertical ? S : E) - D,
-                    T = M > 0,
-                    k = p - (a.bOverlapVertical ? E : S) - D,
-                    R = k > 0,
-                    I = (a.bPreferPopTop || !R) && T && !a.bDisablePopTop;
-                  if (!T && !R) {
+                    k = M > 0,
+                    T = p - (a.bOverlapVertical ? E : S) - D,
+                    R = T > 0,
+                    I = (a.bPreferPopTop || !R) && k && !a.bDisablePopTop;
+                  if (!k && !R) {
                     var x =
                       void 0 !== a.bShiftToFitWindow
                         ? a.bShiftToFitWindow
                         : a.bFitToWindow && !a.bOverlapHorizontal;
-                    (I = M > k && !a.bDisablePopTop),
+                    (I = M > T && !a.bDisablePopTop),
                       x && (I ? (s.menuTop = 4) : (s.menuBottom = 4)),
                       a.bFitToWindow &&
-                        (x ? (D = Math.min(D, p - 8)) : (D += I ? M : k),
+                        (x ? (D = Math.min(D, p - 8)) : (D += I ? M : T),
                         (s.menuHeight = D - 8));
                   }
                   void 0 === s.menuBottom &&
@@ -18861,7 +18998,7 @@ var CLSTAMP = "7092841";
             (t = Object(r.c)([o.a], t))
           );
         })(i.Component),
-        k = (function (e) {
+        T = (function (e) {
           function t(n, r, o) {
             var i =
               e.call(this, "contextmenu_" + t.sm_iContextMenuInstance++, {
@@ -18905,7 +19042,7 @@ var CLSTAMP = "7092841";
             (t.prototype.Render = function (e, t) {
               a.render(
                 i.createElement(
-                  T,
+                  k,
                   Object(r.a)({}, this.m_menuProps, { popup: this }),
                   this.m_children
                 ),
@@ -19178,12 +19315,12 @@ var CLSTAMP = "7092841";
             },
             [c, l, _, b, E, S, p]
           ),
-          T = s,
-          k = b || {};
-        c && l.current && (c.BWantsFocusRing() || (T = !1)),
+          k = s,
+          T = b || {};
+        c && l.current && (c.BWantsFocusRing() || (k = !1)),
           c != m && (g(c), (D.current = performance.now()), M(), w && C(!1)),
           i.a.useEffect(function () {
-            if (T && !(performance.now() - D.current > 500)) {
+            if (k && !(performance.now() - D.current > 500)) {
               var e,
                 t = function () {
                   e = requestAnimationFrame(function () {
@@ -19201,8 +19338,8 @@ var CLSTAMP = "7092841";
         var R = n || f;
         return i.a.createElement(
           R,
-          Object(r.a)({}, k, {
-            visible: T && null !== b,
+          Object(r.a)({}, T, {
+            visible: k && null !== b,
             key: D.current,
             className: Object(a.a)(t, E && u.a.FocusRingOnHiddenItem),
             animationEnabled: !w,

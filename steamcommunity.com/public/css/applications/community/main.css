@@ -1279,14 +1279,23 @@ button.DialogButton::-moz-focus-inner {
   top: 4px;
   z-index: 1;
 }
+.DeckVerifiedModalDialogClient .DialogContent,
 .DeckVerifiedModalDialog .DialogContent {
   padding: 16px 24px;
   background: #0e141b !important;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
+.DeckVerifiedModalDialogClient .DialogContent {
+  max-height: 70vh;
+}
+.DeckVerifiedModalDialog .DialogContent {
+  max-height: 85vh;
+}
+.DeckVerifiedModalDialogClient .ModalPosition_TopBar,
 .DeckVerifiedModalDialog .ModalPosition_TopBar {
   display: none;
 }
+.DeckVerifiedModalDialogClient .ModalPosition_Dismiss .closeButton,
 .DeckVerifiedModalDialog .ModalPosition_Dismiss .closeButton {
   width: 20px;
   height: 20px;

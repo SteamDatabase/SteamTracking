@@ -42,6 +42,7 @@
   border: 1px solid #464b58;
   padding: 16px;
   border-radius: 4px;
+  margin-top: 8px;
 }
 .partnereventshared_EventDefaultRowContainer_3WO6c.partnereventshared_EventStartPublic_2LU_Y {
   border-left: 1px solid #a3cf06;
@@ -650,6 +651,10 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .rdt .rdtPicker td.rdtNew {
   color: #fff;
+}
+.partnereventshared_GamepadOnlyScrollPanel_2NO6w {
+  height: 100vh;
+  overflow-y: scroll;
 }
 .login_LoginDialog_2Hj3a {
   background-color: #101114;

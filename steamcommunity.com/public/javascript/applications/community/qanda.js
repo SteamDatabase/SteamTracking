@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [103],
+  [132],
   {
     "0OaU": function (e, t, n) {
       "use strict";
@@ -43,8 +43,8 @@
                 o.a.createElement(
                   "div",
                   { className: u.a.Throbber },
-                  o.a.createElement(i.jb, { className: u.a.base }),
-                  o.a.createElement(i.jb, { className: u.a.blur })
+                  o.a.createElement(i.nb, { className: u.a.base }),
+                  o.a.createElement(i.nb, { className: u.a.blur })
                 )
               );
               return o.a.createElement(
@@ -112,7 +112,12 @@
               },
               r.createElement(
                 "div",
-                { className: l.EventEditorTextTitle },
+                {
+                  className: Object(u.a)(
+                    l.EventEditorTextTitle,
+                    "EventEditorTextTitle"
+                  ),
+                },
                 e.title,
                 Boolean(e.tooltip) && r.createElement(_, { tooltip: e.tooltip })
               ),
@@ -298,7 +303,7 @@
             (e.prototype.LoadSession = function (e, t, n) {
               var a, o, i, r, u, l, c, m, p, b;
               return Object(s.b)(this, void 0, void 0, function () {
-                var v, _, A, h, g, C, S, E, w, I, O, N, T, j, k, q, M;
+                var v, _, A, h, g, E, C, S, w, I, O, N, T, j, k, q, M;
                 return Object(s.e)(this, function (L) {
                   switch (L.label) {
                     case 0:
@@ -333,22 +338,22 @@
                       );
                     case 2:
                       if (
-                        200 == (null == (C = L.sent()) ? void 0 : C.status) &&
+                        200 == (null == (E = L.sent()) ? void 0 : E.status) &&
                         1 ==
-                          (null === (a = C.data) || void 0 === a
+                          (null === (a = E.data) || void 0 === a
                             ? void 0
                             : a.success) &&
-                        C.data.qanda &&
-                        C.data.questions
+                        E.data.qanda &&
+                        E.data.questions
                       ) {
                         for (
-                          this.PreloadPosterProfiles(C.data.questions, n),
-                            S = 0,
-                            E = C.data.questions;
-                          S < E.length;
-                          S++
+                          this.PreloadPosterProfiles(E.data.questions, n),
+                            C = 0,
+                            S = E.data.questions;
+                          C < S.length;
+                          C++
                         )
-                          (w = E[S]),
+                          (w = S[C]),
                             (I = w.gidQuestion),
                             (O =
                               null !==
@@ -373,7 +378,7 @@
                                   ? void 0
                                   : r.bUserCanModerate) && void 0 !== u
                               ? u
-                              : C.data.qanda.bUserCanModerate),
+                              : E.data.qanda.bUserCanModerate),
                           (j =
                             null !==
                               (c =
@@ -382,20 +387,20 @@
                                   ? void 0
                                   : l.bUserCanAskQuestions) && void 0 !== c
                               ? c
-                              : C.data.qanda.bUserCanAskQuestions),
-                          (k = Object(s.a)(Object(s.a)({}, C.data.qanda), {
+                              : E.data.qanda.bUserCanAskQuestions),
+                          (k = Object(s.a)(Object(s.a)({}, E.data.qanda), {
                             bUserCanModerate: T,
                             bUserCanAskQuestions: j,
                           })),
                           this.m_mapQAndASessions.set(e, k),
                           this.GetQAndACallbackList(e).Dispatch(k),
                           this.UpdatePendingQuestionList(
-                            C.data.qanda.rgQuestionGIDs
+                            E.data.qanda.rgQuestionGIDs
                           ),
                           [2, 1]
                         );
                       }
-                      return (g = { response: C }), [3, 4];
+                      return (g = { response: E }), [3, 4];
                     case 3:
                       return (q = L.sent()), (g = q), [3, 4];
                     case 4:
@@ -704,8 +709,8 @@
               var o, i, r, u, l;
               return Object(s.b)(this, void 0, void 0, function () {
                 var c, m, p, b, v, _, A, h, g;
-                return Object(s.e)(this, function (C) {
-                  switch (C.label) {
+                return Object(s.e)(this, function (E) {
+                  switch (E.label) {
                     case 0:
                       if (
                         !d.h.logged_in ||
@@ -737,10 +742,10 @@
                         v.append("gidquestion", t),
                         v.append("up", n ? "1" : "0"),
                         (_ = null),
-                        (C.label = 1);
+                        (E.label = 1);
                     case 1:
                       return (
-                        C.trys.push([1, 3, , 4]),
+                        E.trys.push([1, 3, , 4]),
                         [
                           4,
                           f.a.post(b, v, {
@@ -751,7 +756,7 @@
                       );
                     case 2:
                       return 200 ==
-                        (null == (A = C.sent()) ? void 0 : A.status) &&
+                        (null == (A = E.sent()) ? void 0 : A.status) &&
                         1 ==
                           (null === (i = A.data) || void 0 === i
                             ? void 0
@@ -759,7 +764,7 @@
                         ? [2, 1]
                         : ((_ = { response: A }), [3, 4]);
                     case 3:
-                      return (h = C.sent()), (_ = h), [3, 4];
+                      return (h = E.sent()), (_ = h), [3, 4];
                     case 4:
                       return (
                         (c = Object(s.a)(Object(s.a)({}, c), {
@@ -937,8 +942,8 @@
           l
         );
       }
-      var C = null;
-      function S(e) {
+      var E = null;
+      function C(e) {
         var t,
           n,
           s,
@@ -986,11 +991,11 @@
         return (
           o.a.useEffect(
             function () {
-              if (C) return function () {};
+              if (E) return function () {};
               return (
-                (C = window.setInterval(d, 1e4)),
+                (E = window.setInterval(d, 1e4)),
                 function () {
-                  return window.clearInterval(C);
+                  return window.clearInterval(E);
                 }
               );
             },
@@ -1004,7 +1009,7 @@
           )
         );
       }
-      function E(e) {
+      function S(e) {
         var t = Object(A.a)("useQuestionModeratorActions"),
           n = o.a.useCallback(
             function (n, s) {
@@ -1115,7 +1120,7 @@
                   o.a.createElement(
                     "div",
                     { className: Object(q.a)(b, G.a.Votes), onClick: p },
-                    o.a.createElement(N.kb, { className: G.a.RateIcon }),
+                    o.a.createElement(N.ob, { className: G.a.RateIcon }),
                     o.a.createElement(
                       "div",
                       { className: G.a.VoteCount },
@@ -1230,7 +1235,7 @@
         var t = e.gidSession,
           n = e.gidQuestion,
           s = e.eState,
-          a = E(t),
+          a = S(t),
           i = a.fnAnswerQuestion,
           r = a.fnModerateQuestion,
           u = 0 == s || 3 == s,
@@ -1393,18 +1398,18 @@
           p = i.rgModeratedQuestionGIDs,
           v = i.rgAnsweredQuestionGIDs,
           _ = i.rgNewQuestionGIDs,
-          f = S(n),
+          f = C(n),
           A = f.fnReload,
           Q = f.bIsReloading,
           h = Object(r.c)(10),
-          C = c && a,
-          I = E(n).fnModerateQuestion;
+          E = c && a,
+          I = S(n).fnModerateQuestion;
         return o.a.createElement(
           "div",
           { className: Object(q.a)(G.a.QAMainCtn, a && G.a.QASplitColumns) },
           o.a.createElement(
             "div",
-            { className: Object(q.a)(G.a.QAHeader, C && G.a.ModerationHeader) },
+            { className: Object(q.a)(G.a.QAHeader, E && G.a.ModerationHeader) },
             o.a.createElement(
               w.d,
               {
@@ -1422,7 +1427,7 @@
                 o.a.createElement(N.X, null)
               )
             ),
-            C
+            E
               ? o.a.createElement(
                   o.a.Fragment,
                   null,
@@ -1496,7 +1501,7 @@
                           key: e,
                           gidSession: n,
                           gidQuestion: e,
-                          bUserCanModerate: C,
+                          bUserCanModerate: E,
                           bUserCanVote: l,
                           fnVoteOnQuestion: m,
                           rtNow: h,
@@ -1521,7 +1526,7 @@
                           key: e,
                           gidSession: n,
                           gidQuestion: e,
-                          bUserCanModerate: C,
+                          bUserCanModerate: E,
                           bUserCanVote: l,
                           fnVoteOnQuestion: m,
                           rtNow: h,

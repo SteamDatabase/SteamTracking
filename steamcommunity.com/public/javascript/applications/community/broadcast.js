@@ -877,7 +877,7 @@
                 s.createElement(
                   "div",
                   { className: Object(B.a)(U.a.viewer_count, "viewer_count") },
-                  s.createElement(T.rb, null),
+                  s.createElement(T.vb, null),
                   n.toLocaleString(I.e.GetPreferredLocales())
                 ),
                 s.createElement(
@@ -989,7 +989,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(T.vb, null)
+              s.createElement(T.zb, null)
             )
           );
         }),
@@ -1169,7 +1169,7 @@
                     ? s.createElement(
                         s.Fragment,
                         null,
-                        s.createElement(T.rb, null),
+                        s.createElement(T.vb, null),
                         " ",
                         u.toLocaleString(I.e.GetPreferredLocales())
                       )
@@ -1892,7 +1892,7 @@
                     t.SendMessage(a), s("");
                   },
                 },
-                o.createElement(M.ib, null)
+                o.createElement(M.mb, null)
               )
             ),
             o.createElement(

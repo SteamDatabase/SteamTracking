@@ -3,6 +3,21 @@
   border: 1px solid;
   padding: 10px;
 }
+.scrollpanel_ScrollPanel_1Ecbh {
+  position: relative;
+}
+.scrollpanel_ScrollY_3yFwd,
+.scrollpanel_ScrollBoth_7h7DE {
+  overflow-y: auto;
+  scroll-padding-top: 20px;
+  scroll-padding-bottom: 20px;
+}
+.scrollpanel_ScrollX_3TJWg,
+.scrollpanel_ScrollBoth_7h7DE {
+  overflow-x: auto;
+  scroll-padding-left: 20px;
+  scroll-padding-right: 20px;
+}
 .youtubeembed_DynamicLinkBox_1IGUR {
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
@@ -1286,8 +1301,8 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   --basicui-header-height: 0px;
 }
 .deckverified_BannerContainer_29jK3 {
-  padding-top: 5;
-  padding-bottom: 20px;
+  padding-top: 4;
+  padding-bottom: 12px;
 }
 .deckverified_BannerHeader_3yxJH {
   text-transform: uppercase;
@@ -1309,7 +1324,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .deckverified_BannerContent_2dGPT:focus-within {
   background-color: #678ba670;
 }
-img.deckverified_CategoryIcon_3qF71 {
+.deckverified_CategoryIcon_3qF71 {
   padding-right: 10px;
   vertical-align: middle;
 }
@@ -1365,7 +1380,7 @@ img.deckverified_CategoryIcon_3qF71 {
 .deckverified_AppTitleCategory_23sFZ {
   padding-left: 15px;
 }
-.deckverified_AppTitleCategory_23sFZ img.deckverified_CategoryIcon_3qF71 {
+.deckverified_AppTitleCategory_23sFZ .deckverified_CategoryIcon_3qF71 {
   padding-top: 1px;
   width: 26px;
   height: 100%;
@@ -1380,7 +1395,7 @@ img.deckverified_CategoryIcon_3qF71 {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  max-height: 65vh;
+  max-height: 85vh;
 }
 .deckverified_CompatibilityDetailsContainer_1-O8t
   .deckverified_CompatibilityDetailsInterior_2fGSc {
@@ -1445,8 +1460,10 @@ img.deckverified_CategoryIcon_3qF71 {
   margin-bottom: 15px;
 }
 .deckverified_CompatibilityDetailsResultIcon_-L3Xu {
-  height: 16px;
+  height: 20px;
+  width: 20px;
   padding-right: 15px;
+  flex-shrink: 0;
 }
 .deckverified_CompatabilityDetailsNoteContainer_6_voo {
   display: flex;
@@ -1464,21 +1481,6 @@ img.deckverified_CategoryIcon_3qF71 {
   font-size: 14px;
   color: #a9a9a9;
   word-break: break-word;
-}
-.scrollpanel_ScrollPanel_1Ecbh {
-  position: relative;
-}
-.scrollpanel_ScrollY_3yFwd,
-.scrollpanel_ScrollBoth_7h7DE {
-  overflow-y: auto;
-  scroll-padding-top: 20px;
-  scroll-padding-bottom: 20px;
-}
-.scrollpanel_ScrollX_3TJWg,
-.scrollpanel_ScrollBoth_7h7DE {
-  overflow-x: auto;
-  scroll-padding-left: 20px;
-  scroll-padding-right: 20px;
 }
 .creatorhomeembed_DevSummaryCtn_1k0S- {
   flex-grow: 1;
@@ -4548,6 +4550,15 @@ html.touch
   padding-left: 0;
   padding-top: 4px;
 }
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_gASJ2
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
+  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
+  .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
+  .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3wryh
+  .ReviewScore {
+  padding-top: 0px;
+}
 .salepreviewwidgets_SaleItemBrowserRow_gASJ2
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_1_P15
   .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
@@ -7283,6 +7294,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   .nominationandvote_SteamAwardCategoryTitle_JVE9O {
   padding-left: 8px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 body.v6.partner_events {
   background: #24282e;
 }
@@ -7612,6 +7626,11 @@ body.v6.partner_events {
   .partnereventdisplay_EventDetailTitle_TqEPC {
   font-size: 24px;
   margin-top: 12px;
+}
+.BasicUI .partnereventdisplay_EventDetailTitle_TqEPC {
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 8px;
 }
 .partnereventdisplay_InLibraryView_3_SEi.partnereventdisplay_InEditor_2YuAT
   .partnereventdisplay_EventDetailTitle_TqEPC {
@@ -8279,6 +8298,9 @@ body.v6.partner_events {
 .partnereventdisplay_ReadMoreCnt_1L8Mo {
   padding-top: 20px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 html:not(.client)
   .events_listing
   .apppartnereventspage_AppPartnerEventsPage_3CJsg
@@ -8378,6 +8400,9 @@ html:not(.client)
   grid-template-columns: 142px 1fr;
   grid-template-rows: 38px 28px;
   grid-column-gap: 15px;
+}
+.BasicUI .apppartnereventspage_AppBannerGroup_qexk- {
+  display: none;
 }
 @media screen and (max-width: 500px) {
   .apppartnereventspage_AppBannerGroup_qexk- {
@@ -8576,6 +8601,9 @@ html:not(.client)
     padding: 0px 10px 0px 10px;
   }
 }
+.BasicUI .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
+  margin: unset;
+}
 .apppartnereventspage_PartnerEvent_1KsYS {
   max-width: 848px;
   overflow: hidden;
@@ -8597,6 +8625,12 @@ html:not(.client)
   font-size: 17px;
   padding-bottom: 10px;
 }
+.BasicUI .apppartnereventspage_PartnerEvent_1KsYS {
+  margin: 40px auto;
+  border: none;
+  border-radius: 0px;
+  max-width: 640px;
+}
 div.apppartnereventspage_EventDetailsBody_3NW5v {
   min-height: 0;
 }
@@ -8615,6 +8649,10 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 }
 .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoScrollArrows_39hJ8 {
   top: 136px;
+}
+.BasicUI
+  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoScrollArrows_39hJ8 {
+  display: none;
 }
 .apppartnereventspage_ControlSection_2pA5C
   .apppartnereventspage_ControlSectionWidth_3yfs7 {
@@ -14085,6 +14123,77 @@ Body.v6.tag_page.contenthub_page {
   .contenthubshared_FinalPrice_3eTyj {
   color: #acdbf5;
 }
+.contenthubshared_BroadcastCtn_1D6il {
+  height: 190px;
+  width: 297px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+.contenthubshared_BroadcastCtn_1D6il .contenthubshared_BroadcastImageCtn_cIETZ {
+  height: 136px;
+  position: relative;
+}
+.contenthubshared_BroadcastCtn_1D6il
+  .contenthubshared_BroadcastImageCtn_cIETZ
+  a
+  img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.contenthubshared_BroadcastCtn_1D6il
+  .contenthubshared_BroadcastImageCtn_cIETZ
+  a
+  img.contenthubshared_BroadcastVideoThumbnail_39GHo {
+  z-index: 10;
+}
+.contenthubshared_BroadcastCtn_1D6il
+  .contenthubshared_BroadcastImageCtn_cIETZ
+  a
+  .contenthubshared_BroadcastPlayIcon_39krE {
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenthubshared_BroadcastCtn_1D6il
+  .contenthubshared_BroadcastImageCtn_cIETZ
+  a
+  .contenthubshared_BroadcastPlayIcon_39krE
+  svg {
+  z-index: 20;
+  width: 48px;
+  height: 48px;
+  padding: auto;
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8));
+}
+.contenthubshared_BroadcastCtn_1D6il .contenthubshared_BroadcastTextCtn_14UDZ {
+  background: url(https://store.akamai.steamstatic.com/public/images/v6/spotlight_background.jpg?v=1)
+    bottom center no-repeat;
+  width: 100%;
+  flex-grow: 1;
+}
+.contenthubshared_BroadcastCtn_1D6il
+  .contenthubshared_BroadcastTextCtn_14UDZ
+  .contenthubshared_BroadcastName_3mq3U {
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 8px;
+}
+.contenthubshared_BroadcastCtn_1D6il
+  .contenthubshared_BroadcastTextCtn_14UDZ
+  .contenthubshared_BroadcastDesc_3jIzv {
+  font-size: 12px;
+  padding: 4px;
+  padding-left: 8px;
+  padding-top: 0;
+}
 .contenthubshared_DailyDealCtn_3pSAN {
   height: 190px;
   width: 297px;
@@ -14168,6 +14277,11 @@ Body.v6.tag_page.contenthub_page {
   .contenthubshared_FinalPrice_3eTyj {
   color: #acdbf5;
 }
+.BasicUI .contenthubshared_ContentHubTakeoverCtn_2NgkN {
+  height: unset !important;
+  margin: 0px var(--gpSpace-Gutter) 16px;
+  box-shadow: var(--gpShadow-Medium);
+}
 .contenthubshared_ContentHubTakeoverCtn_2NgkN a {
   display: flex;
   justify-content: center;
@@ -14176,8 +14290,17 @@ Body.v6.tag_page.contenthub_page {
   width: 100%;
   z-index: 1;
 }
+.BasicUI .contenthubshared_ContentHubTakeoverCtn_2NgkN a {
+  position: unset;
+  height: 32vw;
+  overflow: hidden;
+}
 .contenthubshared_ContentHubTakeoverCtn_2NgkN a img {
   margin: 0 auto;
+}
+.BasicUI .contenthubshared_ContentHubTakeoverCtn_2NgkN a img {
+  margin: auto;
+  height: inherit;
 }
 .contenthubshared_TweaksMenu_3N0H1 {
   position: absolute;
@@ -14223,7 +14346,7 @@ Body.v6.tag_page.contenthub_page {
   z-index: 1;
 }
 .BasicUI .contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   padding: 0px var(--gpSpace-Gutter);
 }
 html.responsive.touch .contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
@@ -14264,7 +14387,7 @@ html.responsive.touch .contenthubmaincarousel_ContentHubTitle_saHqN {
 .BasicUI
   .contenthubmaincarousel_ContentHubTitle_saHqN.contenthubmaincarousel_ContentHubTitle_saHqN.contenthubmaincarousel_ContentHubTitle_saHqN {
   font: var(--gpText-HeadingLarge);
-  padding: 0px 0px 12px 0px;
+  padding: 0px;
   color: #fff;
   text-shadow: unset;
 }
@@ -14274,6 +14397,22 @@ html.responsive.touch .contenthubmaincarousel_ContentHubTitle_saHqN {
   opacity: 75%;
   margin-left: 8px;
   margin-top: 16px;
+}
+.BasicUI .contenthubmaincarousel_ContentHubSubtitle_11kuP {
+  font: var(--gpText-HeadingSmall);
+  padding: 0px;
+  color: #fff;
+  text-shadow: unset;
+  opacity: 0.7;
+  margin: unset;
+  font-weight: 400;
+}
+.contenthubmaincarousel_ContentHubSubtitle_11kuP.contenthubmaincarousel_AONotice_3TwUS {
+  font-size: 14px;
+  padding: 8px;
+  background-color: rgba(32, 32, 32, 0.75);
+  border: 1px rgba(255, 255, 255, 0.75) solid;
+  border-radius: 2px;
 }
 .contenthubmaincarousel_ContentHubPlaceholder_ZZAuj {
   font-size: 24px;
@@ -19822,6 +19961,9 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   margin-left: auto;
   margin-top: auto;
 }
+.partnereventeditor_SaleSectionTitleHeader_1PZp0 .EventEditorTextTitle {
+  padding-top: 6px;
+}
 .partnereventeditor_TabsSelectorEntry_rTO_V {
   height: 100%;
   width: 100%;
@@ -20029,6 +20171,9 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .collapseablesection_required_title_3yDPZ {
   display: flex;
 }
+.collapseablesection_SectionTitleHeader_2g5oN .EventEditorTextTitle {
+  padding-top: 6px;
+}
 .partnereventshareddates_EventTimeSection_3HyTV:first-child {
   margin-bottom: 12px;
 }
@@ -20209,6 +20354,10 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   .partnereventsale_SectionTypePicker_3Tjtf {
   display: flex;
   align-items: center;
+}
+.partnereventsale_SaleSection_SOMqO
+  .partnereventsale_EditorCtn_1SyQQ
+  .partnereventsale_SectionTypePicker_3Tjtf:not(:last-child) {
   margin-bottom: 20px;
 }
 .partnereventsale_SaleSection_SOMqO
@@ -20467,6 +20616,18 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   display: flex;
   flex-direction: row;
 }
+.LongURL {
+  overflow-wrap: anywhere;
+}
+.partnereventsale_SectionOverrideCtn_1jCl_ {
+  margin-top: 8px;
+}
+.partnereventsale_SalePageLogoCtn_3YZLN {
+  margin-top: 16px;
+}
+.partnereventsale_SalePageLogoCtn_3YZLN > div {
+  margin-top: 0px;
+}
 .partnereventshared_ErrorPage_1HZBl {
   padding: 24px;
   text-align: center;
@@ -20493,6 +20654,19 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   height: 20px;
   overflow: hidden;
   padding-right: 10px;
+}
+.saletabeditor_ColorButtonsCtn_pxbho button.DialogButton {
+  text-align: left;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  padding: 2px 12px;
+  box-sizing: border-box;
+  margin: 4px 0px;
+}
+.saletabeditor_ColorButtonsCtn_pxbho .saletabeditor_EventEditorTextTitle_2QrzB {
+  padding-top: 0px;
+}
+.saletabeditor_SelectedTabDetailsCtn_3FCo- {
+  margin-left: 70px;
 }
 .contenthubsectionseditor_ContentHubSectionCtn_G2T4g {
   flex-grow: 1;

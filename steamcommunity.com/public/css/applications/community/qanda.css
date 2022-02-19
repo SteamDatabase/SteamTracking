@@ -10,6 +10,9 @@
 .collapseablesection_required_title_3yDPZ {
   display: flex;
 }
+.collapseablesection_SectionTitleHeader_2g5oN .EventEditorTextTitle {
+  padding-top: 6px;
+}
 body.qanda {
   background-color: #111113;
 }

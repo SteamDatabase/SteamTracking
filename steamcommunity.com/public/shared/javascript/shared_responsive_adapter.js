@@ -230,6 +230,10 @@ jQuery( function($) {
 				bLocalMenuEnabed = bShouldUseResponsiveMenu;
 			}
 		} ).trigger( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu');
+
+		// menu is available, so set the action description for the page content.
+		GPNavUpdateActionDescriptions( $('#responsive_page_template_content'), { onOptionsActionDescription:'Menu' } );
+		$('#responsive_page_template_content').on( 'vgp_onoptions', function() { LocalMenuEvents.fnActivateMenu(); } );
 	}
 
 	Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalMenuEvents );
@@ -252,7 +256,7 @@ function Responsive_InitForTablet( $ )
 {
 	// support using gamepad to change slider position
 	$( 'input[type=range]' ).on( 'vgp_ondirection', function( event ) {
-									
+
 		if ( event.originalEvent.detail.button == 11 || event.originalEvent.detail.button == 12 )
 		{
 			if ( event.originalEvent.detail.button == 11 ) // EGamepadButton.DIR_LEFT
@@ -768,7 +772,7 @@ function Responsive_InitJQPlotHooks( $ )
 
 // Enable toggling the local menu via JS
 // Added so search can support use of a gamepad button to open the filter window
-var g_fnActivateLocalMenu = false; 
+var g_fnActivateLocalMenu = false;
 function Responsive_ToggleLocalMenu()
 {
 	if ( g_fnActivateLocalMenu )

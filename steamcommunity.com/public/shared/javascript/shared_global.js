@@ -4911,3 +4911,50 @@ CAppearMonitor.prototype.ClearElements = function()
 	this.rgMonitoredElements = [];
 }
 
+// gamepad navigation wrappers, the implementations of these are stored in legacy_web.
+// once legacy web initializes, these functions will be replaced by the real thing.  In the mean time,
+// we will queue any commands and send them when ready.
+var g_rgQueuedGamepadCommands = [];
+var g_rgOnReadyCallbacks = [];
+var g_bGamepadNavReady = false;
+function RunWhenGamepadNavReady( callback )
+{
+	if ( g_bGamepadNavReady )
+		callback();
+	else
+		g_rgOnReadyCallbacks.push( callback );
+}
+window.addEventListener( 'vgp_gamepadnavready', function() {
+		g_rgQueuedGamepadCommands.forEach( function( command ) { window[command.name].apply( window, command.args ); } );
+	g_rgQueuedGamepadCommands = [];
+
+	g_rgOnReadyCallbacks.forEach( function( fn ) { fn(); } );
+	g_rgOnReadyCallbacks = [];
+});
+
+function InstrumentFocusElements( element )
+{
+	g_rgQueuedGamepadCommands.push( { name: 'InstrumentFocusElements', args: arguments } );
+}
+function ForceUpdateFocusElements( element )
+{
+	g_rgQueuedGamepadCommands.push( { name: 'ForceUpdateFocusElements', args: arguments } );
+}
+function GPNavFocusChild( element )
+{
+	g_rgQueuedGamepadCommands.push( { name: 'GPNavFocusChild', args: arguments } );
+}
+function GPOnShowingModalWindow( element )
+{
+	g_rgQueuedGamepadCommands.push( { name: 'GPOnShowingModalWindow', args: arguments } );
+}
+function GPShowVirtualKeyboard( bShowKeyboard )
+{
+	g_rgQueuedGamepadCommands.push( { name: 'GPShowVirtualKeyboard', args: arguments } );
+}
+function GPNavUpdateActionDescriptions( element, actionDescriptions )
+{
+	g_rgQueuedGamepadCommands.push( { name: 'GPNavUpdateActionDescriptions', args: arguments } );
+}
+
+

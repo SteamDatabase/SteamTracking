@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7092841";
+var CLSTAMP = "7096084";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -139,10 +139,10 @@ var CLSTAMP = "7092841";
         return h;
       }),
       n.d(t, "c", function () {
-        return A;
+        return g;
       }),
       n.d(t, "f", function () {
-        return g;
+        return A;
       });
     var i = 1,
       a = 4,
@@ -225,7 +225,7 @@ var CLSTAMP = "7092841";
     var h = function (e) {
       return "koreana" === e ? "korean" : e;
     };
-    function A(e, t) {
+    function g(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -291,7 +291,7 @@ var CLSTAMP = "7092841";
           return t;
       }
     }
-    function g(e, t) {
+    function A(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -358,7 +358,7 @@ var CLSTAMP = "7092841";
           return t;
       }
     }
-    var b, C, y, R, v, T, k;
+    var b, C, y, R, v, k, T;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -399,7 +399,9 @@ var CLSTAMP = "7092841";
           (e[(e.k_ESuspendResumeProgressState_LoggingIn = 3)] =
             "k_ESuspendResumeProgressState_LoggingIn"),
           (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
-            "k_ESuspendResumeProgressState_WaitingForApp");
+            "k_ESuspendResumeProgressState_WaitingForApp"),
+          (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
+            "k_ESuspendResumeProgressState_Working");
       })(y || (y = {})),
       (function (e) {
         (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
@@ -427,13 +429,13 @@ var CLSTAMP = "7092841";
             "k_EOverlayToStoreFlag_AddToCart"),
           (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
             "k_EOverlayToStoreFlag_AddToCartAndShow");
-      })(T || (T = {})),
+      })(k || (k = {})),
       (function (e) {
         (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
           "k_EActivateGameOverlayToWebPageMode_Default"),
           (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
             "k_EActivateGameOverlayToWebPageMode_Modal");
-      })(k || (k = {}));
+      })(T || (T = {}));
   },
   "1n9R": function (e, t, n) {
     "use strict";

@@ -445,7 +445,7 @@
                 o.a.createElement(
                   "div",
                   { className: w.a.LoginPanelBackground },
-                  o.a.createElement(C.gb, null)
+                  o.a.createElement(C.kb, null)
                 ),
                 o.a.createElement(
                   "div",
@@ -1612,6 +1612,8 @@
         PixelOffsetNote: "partnereventshared_PixelOffsetNote_JjEwa",
         PixelOffsetCallout: "partnereventshared_PixelOffsetCallout_f5QZT",
         Error: "partnereventshared_Error_mSSED",
+        GamepadOnlyScrollPanel:
+          "partnereventshared_GamepadOnlyScrollPanel_2NO6w",
       };
     },
     "r+Z0": function (t, e, r) {
