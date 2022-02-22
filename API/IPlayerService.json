@@ -2,6 +2,32 @@
     "name": "IPlayerService",
     "methods": [
         {
+            "name": "IsPlayingSharedGame",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Obsolete, partners should use ISteamUser.CheckAppOwnership",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The player we're asking about"
+                },
+                {
+                    "name": "appid_playing",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The game player is currently playing"
+                }
+            ]
+        },
+        {
             "name": "RecordOfflinePlaytime",
             "version": 1,
             "httpmethod": "POST",
@@ -163,32 +189,6 @@
                     "type": "int32",
                     "optional": false,
                     "description": "The badge we're asking about"
-                }
-            ]
-        },
-        {
-            "name": "IsPlayingSharedGame",
-            "version": 1,
-            "httpmethod": "GET",
-            "description": "Returns valid lender SteamID if game currently played is borrowed",
-            "parameters": [
-                {
-                    "name": "key",
-                    "type": "string",
-                    "optional": false,
-                    "description": "Access key"
-                },
-                {
-                    "name": "steamid",
-                    "type": "uint64",
-                    "optional": false,
-                    "description": "The player we're asking about"
-                },
-                {
-                    "name": "appid_playing",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "The game player is currently playing"
                 }
             ]
         }
