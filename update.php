@@ -123,6 +123,12 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
 				system( 'node protobufdumper.js' );
+				system(
+					'grep \'([A-Z_]+)BASE_URL\+"[0-9a-z\/]+"\' --no-filename --only-matching --extended-regexp --recursive ' .
+					escapeshellarg( __DIR__ . '/.support/original_js/' ) .
+					' | sort --unique > ' .
+					escapeshellarg( __DIR__ . '/API/Javascript.txt' )
+				);
 			}
 
 			if( $this->SyncProtobufs )
