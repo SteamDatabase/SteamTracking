@@ -1301,6 +1301,7 @@
 		display: -webkit-flex;
 		display: flex;
 		flex-wrap: nowrap;
+		max-height: 236px;
 	}
 
 
@@ -1499,7 +1500,7 @@
 		text-align: left;
 		color: white;
 		font-weight: 700;
-
+		white-space: initial;
 	}
 
 	html.responsive .discount_block.game_purchase_discount.no_discount .discount_final_price {
@@ -2968,7 +2969,10 @@
 	html.responsive .tablet_list_item .tab_item_discount {
 		position: absolute;
 		right: 8px;
+		bottom: 4px;
 	}
+
+
 
 	html.responsive .tablet_list_item .tab_item_overlay img {
 		display: none;
@@ -3005,7 +3009,6 @@
 
 	html.responsive .tablet_list_item .tab_item_name {
 		font: var(--gpText-BodyLarge);
-		max-width: 23ch;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -3014,6 +3017,7 @@
 	html.responsive .tablet_list_item .tab_item_details {
 		font: var(--gpText-BodyMedium);
 		color: var(--gpStoreLighterGrey);
+		display: none;
 	}
 
 	html.responsive .tablet_list_item .tab_item_discount .discount_final_price {

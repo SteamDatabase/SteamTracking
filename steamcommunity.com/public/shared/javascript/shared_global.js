@@ -4677,12 +4677,6 @@ var g_bTooltipMutationObserverDisabled = false;
 function SetupTooltips( rgOptions )
 {
 	function InnerSetupTooltips() {
-        if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
-		{
-			// We don't want tooltips in small screen mode
-			// However, for now we won't unbind any that were previously bound.
-			return;
-		}
 
         BindTooltips(document, rgOptions);
 

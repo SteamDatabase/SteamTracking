@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [40],
+  [69],
   {
     "++az": function (e, t, n) {
       e.exports =
@@ -1581,7 +1581,7 @@
                     this.props.definition.rewardDefinition.defid
                   : null;
               return r.createElement(
-                d.h,
+                d.i,
                 {
                   onEscKeypress: this.CloseModal,
                   bHideCloseIcon: !0,
@@ -1649,7 +1649,7 @@
               ? oe.a.GetAppInfo(t.rewardDefinition.appid)
               : null;
           return r.createElement(
-            d.h,
+            d.i,
             { onEscKeypress: n, bHideCloseIcon: !0, hideTopBar: !1 },
             r.createElement(
               "div",
@@ -4322,35 +4322,35 @@
     },
     Aqke: function (e, t, n) {
       var a = {
-        "./loyalty_brazilian.json": ["jJTi", 106],
-        "./loyalty_bulgarian.json": ["YXmX", 107],
-        "./loyalty_czech.json": ["Yw6T", 108],
-        "./loyalty_danish.json": ["LeJ7", 109],
-        "./loyalty_dutch.json": ["3s9e", 110],
-        "./loyalty_english.json": ["nz6u", 111],
-        "./loyalty_finnish.json": ["cCRj", 112],
-        "./loyalty_french.json": ["WjZg", 113],
-        "./loyalty_german.json": ["2HFY", 114],
-        "./loyalty_greek.json": ["puzw", 115],
-        "./loyalty_hungarian.json": ["h+vV", 116],
-        "./loyalty_italian.json": ["1xjJ", 117],
-        "./loyalty_japanese.json": ["KhFN", 118],
-        "./loyalty_koreana.json": ["0T2E", 119],
-        "./loyalty_latam.json": ["SFVQ", 120],
-        "./loyalty_norwegian.json": ["6qpk", 121],
-        "./loyalty_polish.json": ["c9AW", 122],
-        "./loyalty_portuguese.json": ["H3eu", 123],
-        "./loyalty_romanian.json": ["gt0D", 124],
-        "./loyalty_russian.json": ["4nQk", 125],
-        "./loyalty_sc_schinese.json": ["0Z0/", 126],
-        "./loyalty_schinese.json": ["svug", 127],
-        "./loyalty_spanish.json": ["x/nm", 128],
-        "./loyalty_swedish.json": ["d/hP", 129],
-        "./loyalty_tchinese.json": ["EWje", 130],
-        "./loyalty_thai.json": ["SnkP", 131],
-        "./loyalty_turkish.json": ["cD82", 132],
-        "./loyalty_ukrainian.json": ["jV8j", 133],
-        "./loyalty_vietnamese.json": ["TxFk", 134],
+        "./loyalty_brazilian.json": ["jJTi", 40],
+        "./loyalty_bulgarian.json": ["YXmX", 41],
+        "./loyalty_czech.json": ["Yw6T", 42],
+        "./loyalty_danish.json": ["LeJ7", 43],
+        "./loyalty_dutch.json": ["3s9e", 44],
+        "./loyalty_english.json": ["nz6u", 45],
+        "./loyalty_finnish.json": ["cCRj", 46],
+        "./loyalty_french.json": ["WjZg", 47],
+        "./loyalty_german.json": ["2HFY", 48],
+        "./loyalty_greek.json": ["puzw", 49],
+        "./loyalty_hungarian.json": ["h+vV", 50],
+        "./loyalty_italian.json": ["1xjJ", 51],
+        "./loyalty_japanese.json": ["KhFN", 52],
+        "./loyalty_koreana.json": ["0T2E", 53],
+        "./loyalty_latam.json": ["SFVQ", 54],
+        "./loyalty_norwegian.json": ["6qpk", 55],
+        "./loyalty_polish.json": ["c9AW", 56],
+        "./loyalty_portuguese.json": ["H3eu", 57],
+        "./loyalty_romanian.json": ["gt0D", 58],
+        "./loyalty_russian.json": ["4nQk", 59],
+        "./loyalty_sc_schinese.json": ["0Z0/", 60],
+        "./loyalty_schinese.json": ["svug", 61],
+        "./loyalty_spanish.json": ["x/nm", 62],
+        "./loyalty_swedish.json": ["d/hP", 63],
+        "./loyalty_tchinese.json": ["EWje", 64],
+        "./loyalty_thai.json": ["SnkP", 65],
+        "./loyalty_turkish.json": ["cD82", 66],
+        "./loyalty_ukrainian.json": ["jV8j", 67],
+        "./loyalty_vietnamese.json": ["TxFk", 68],
       };
       function r(e) {
         if (!n.o(a, e))
@@ -5329,14 +5329,15 @@
                 d = e.bHideGameName,
                 u = e.bHideEnhancedRichPresenceLabel,
                 p = e.bHideSnooze,
-                f = e.renderStatus,
-                _ = e.renderRichPresence,
-                h = e.bHidePersona,
-                y = e.bDNDSet,
-                C = e.bHasPartyBeacon,
-                I = e.bHasGamePrivacy,
-                v = e.bNoMask,
-                w = Object(a.f)(e, [
+                f = e.bHideStatus,
+                _ = e.renderStatus,
+                h = e.renderRichPresence,
+                y = e.bHidePersona,
+                C = e.bDNDSet,
+                I = e.bHasPartyBeacon,
+                v = e.bHasGamePrivacy,
+                w = e.bNoMask,
+                M = Object(a.f)(e, [
                   "className",
                   "onContextMenu",
                   "persona",
@@ -5348,6 +5349,7 @@
                   "bHideGameName",
                   "bHideEnhancedRichPresenceLabel",
                   "bHideSnooze",
+                  "bHideStatus",
                   "renderStatus",
                   "renderRichPresence",
                   "bHidePersona",
@@ -5356,59 +5358,62 @@
                   "bHasGamePrivacy",
                   "bNoMask",
                 ]),
-                M = null,
                 N = null,
                 E = null,
-                j = [
+                j = null,
+                S = [
                   t,
                   ye.a.personaNameAndStatusLabel,
                   Object(ce.b)(i),
                   m && ye.a.compactView,
-                  v && ye.a.NoMask,
+                  w && ye.a.NoMask,
                 ];
-              f
-                ? (N = f())
-                : C || i.has_public_party_beacon
-                ? (N = r.createElement(Ce, { persona: i }))
+              _
+                ? (E = _())
+                : I || i.has_public_party_beacon
+                ? (E = r.createElement(Ce, { persona: i }))
                 : Object(le.a)(o)
-                ? ((N = Object(g.f)("#PersonaStateBlocked")),
-                  j.push(ye.a.blocked))
+                ? ((E = Object(g.f)("#PersonaStateBlocked")),
+                  S.push(ye.a.blocked))
                 : i.is_ingame
-                ? ((N =
+                ? ((E =
                     !i.is_in_nonsteam_game || s || Object(le.b)(o)
                       ? i.GetCurrentGameName()
                       : Object(g.f)("#PersonaStateInNonSteamGame")),
-                  s || h
+                  s || y
                     ? s &&
                       i.is_awayOrSnooze &&
-                      (E = Object(g.f)("#PersonaStateAway"))
-                    : (E = i.GetCurrentGameRichPresence()))
+                      (j = Object(g.f)("#PersonaStateAway"))
+                    : (j = i.GetCurrentGameRichPresence()))
                 : i.m_broadcastAccountId &&
-                  (N = Object(g.f)("#PersonaStateWatchingBroadcast")),
-                N || (N = i.GetLocalizedOnlineStatus());
-              var S = !h && !p;
-              !1 === p && (S = !0),
+                  (E = Object(g.f)("#PersonaStateWatchingBroadcast")),
+                E || (E = i.GetLocalizedOnlineStatus());
+              var O = !y && !p;
+              !1 === p && (O = !0),
                 i.is_awayOrSnooze &&
-                  S &&
-                  (M = r.createElement(ue, { persona: i }));
-              var O = null;
+                  O &&
+                  (N = r.createElement(ue, { persona: i }));
+              var A = null;
               n
-                ? (O = r.createElement(
+                ? (A = r.createElement(
                     "div",
                     { className: "ContextMenuButton", onClick: n },
                     r.createElement(pe.x, null)
                   ))
-                : j.push(ye.a.noContextMenu),
-                h && j.push(ye.a.hidePersona),
-                _ && (E = _()),
-                (!d && E) || j.push(ye.a.twoLine);
-              var A = c && !l,
-                D = A ? c : i.m_strPlayerName,
-                P = !h && (!d || !E) && !u && E;
+                : S.push(ye.a.noContextMenu),
+                y && S.push(ye.a.hidePersona),
+                h && (j = h()),
+                (!d && j) || S.push(ye.a.twoLine);
+              var D = i.is_ingame && !d,
+                P = !i.is_ingame && !f,
+                x = !u && j,
+                B = c && !l,
+                L = B ? c : i.m_strPlayerName,
+                R = !y && (D || P) && x;
               return r.createElement(
                 "div",
-                Object(a.a)({}, w, {
-                  className: b.a.apply(void 0, j),
+                Object(a.a)({}, M, {
+                  className: b.a.apply(void 0, S),
                   onContextMenu: n,
                 }),
                 r.createElement(
@@ -5416,13 +5421,13 @@
                   {
                     className: Object(b.a)(
                       ye.a.statusAndName,
-                      P && ye.a.threeLines
+                      R && ye.a.threeLines
                     ),
                   },
                   r.createElement(
                     "div",
                     { className: ye.a.playerName },
-                    D || " ",
+                    L || " ",
                     l &&
                       c &&
                       r.createElement(
@@ -5433,7 +5438,7 @@
                         ")"
                       )
                   ),
-                  y &&
+                  C &&
                     r.createElement(
                       "div",
                       {
@@ -5442,7 +5447,7 @@
                       },
                       r.createElement(pe.v, null)
                     ),
-                  A &&
+                  B &&
                     r.createElement(
                       "span",
                       {
@@ -5452,7 +5457,7 @@
                       " *"
                     ),
                   r.createElement(he, { persona: i }),
-                  M,
+                  N,
                   (i.m_bPlayerNamePending || i.m_bAvatarPending) &&
                     r.createElement(
                       "div",
@@ -5462,24 +5467,24 @@
                       },
                       r.createElement(pe.q, null)
                     ),
-                  O
+                  A
                 ),
-                !h &&
+                !y &&
                   r.createElement(
                     "div",
                     { className: ye.a.richPresenceContainer },
-                    (!i.is_ingame || !d) &&
+                    (D || P) &&
                       r.createElement(
                         "div",
                         {
                           className: Object(b.a)(
                             ye.a.gameName,
-                            P && ye.a.threeLines,
+                            R && ye.a.threeLines,
                             ye.a.richPresenceLabel,
                             "no-drag"
                           ),
                         },
-                        I &&
+                        v &&
                           r.createElement(
                             "div",
                             {
@@ -5488,10 +5493,9 @@
                             },
                             r.createElement(pe.I, null)
                           ),
-                        N
+                        E
                       ),
-                    !u &&
-                      E &&
+                    x &&
                       r.createElement(
                         "div",
                         {
@@ -5500,7 +5504,7 @@
                             "no-drag"
                           ),
                         },
-                        E,
+                        j,
                         " "
                       )
                   )
@@ -5867,10 +5871,10 @@
           return e.toString().padStart(2, "0");
         },
         Je = i.a.lazy(function () {
-          return n.e(73).then(n.bind(null, "yDev"));
+          return n.e(102).then(n.bind(null, "yDev"));
         }),
         Xe = i.a.lazy(function () {
-          return n.e(72).then(n.bind(null, "f4w8"));
+          return n.e(101).then(n.bind(null, "f4w8"));
         }),
         Ke = (function (e) {
           function t() {

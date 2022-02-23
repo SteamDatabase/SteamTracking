@@ -101,8 +101,9 @@
   line-height: 22px;
   text-align: center;
   width: 100%;
-  padding: 0px 12%;
+  padding: 0px 10%;
   box-sizing: border-box;
+  word-break: break-word;
 }
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8

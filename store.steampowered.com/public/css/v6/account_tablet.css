@@ -28,6 +28,8 @@
 		display: none;
 	}
 
+
+
 	/* TEXT */
 	html.responsive body.v6 {
 		font: var(--gpText-BodyLarge);
@@ -142,9 +144,13 @@
 		display: flex;
 		flex-direction: column;
 		position: fixed;
-		top: 16px;
+		top: 0px;
 		left: 0px;
 		height: 100%;
+		background-color: var(--gpStoreDarkerGrey);
+		scroll-padding: 48px 0px;
+		padding: 8px;
+		box-sizing: border-box;
 	}
 
 	html.responsive .two_column.right {
@@ -155,7 +161,7 @@
 	/* Right coloumn layout */
 	html.responsive #main_content .two_column.right,
 	html.responsive .page_header_ctn .page_content {
-		background-color: var(--gpStoreDarkerGrey);
+		/* background-color: var(--gpStoreDarkerGrey); */
 	}
 
 	html.responsive #main_content .two_column.right {
@@ -197,16 +203,24 @@
 		padding: 12px 16px;
 		transition: all 0.1s ease;
 		font-size: unset;
-	}
-
-	html.responsive .two_column .nav_item.active {
-		background-color: var(--gpBackground-LightMedium);
+		color: var(--gpStoreLightestGrey);
 	}
 
 	html.responsive .two_column .nav_item:hover,
 	html.responsive .two_column .nav_item.gpfocus {
-		background-color: white;
-		color: var(--gpStoreDarkestGrey);
+		background-color: var(--gpBackground-LightSoft);
+		color: white;
+		/* color: var(--gpStoreDarkestGrey); */
+	}
+
+	html.responsive .two_column .nav_item.active {
+		background-color: var(--gpBackground-LightMedium);
+		color: white;
+	}
+
+	html.responsive .two_column .nav_item.active.gpfocus {
+		background-color: var(--gpBackground-LightHard);
+		color: white;
 	}
 
 
@@ -360,7 +374,67 @@
 
 
 
+	/* IGNORED PRODUCTS */
+
+	html.responsive .ignored_app .ignored_app_name {
+		min-width: unset;
+	}
+
+	html.responsive .ignored_app .remove {
+		width: unset;
+	}
+
+	html.responsive .ignored_app .ignored_app_reason {
+		min-width: 200px;
+	}
+
+	html.responsive .ignored_app {
+		align-items: center;
+		background-color: var(--gpBackground-DarkMedium);
+		margin-bottom: 4px;
+	}
+
+
+
 	/* TAGS TO EXLUDE */
+
+	html.responsive #app_tag_form,
+	html.responsive #text_filter_custom_banned_words_form,
+	html.responsive #text_filter_custom_clean_words_form {
+		width: unset;
+	}
+
+	html.responsive .app_tag_form_ctn,
+	html.responsive .text_filter_custom_banned_words_form_ctn,
+	html.responsive .text_filter_custom_clean_words_form_ctn {
+		display: inline-flex;
+		gap: 8px;
+		margin-bottom: 12px;
+	}
+
+	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input,
+	html.responsive .text_filter_custom_banned_words_form_ctn .gray_bevel.for_text_input,
+	html.responsive .text_filter_custom_clean_words_form_ctn .gray_bevel.for_text_input {
+		height: unset;
+		overflow: unset;
+	}
+
+	html.responsive .app_tag_form_ctn button,
+	html.responsive .text_filter_custom_banned_words_form_ctn button,
+	html.responsive .text_filter_custom_clean_words_form_ctn button {
+		float: unset;
+		margin-left: unset;
+	}
+
+	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input input,
+	html.responsive .text_filter_custom_banned_words_form_ctn .gray_bevel.for_text_input input,
+	html.responsive .text_filter_custom_clean_words_form_ctn .gray_bevel.for_text_input input {
+		box-sizing: border-box;
+		height: unset;
+		line-height: unset;
+	}
+
+
 
 	/* Tag input field */
 	/* html.responsive .app_tag_form_ctn .gray_bevel.for_text_input input {

@@ -2167,6 +2167,7 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   border: 1px solid #464b58;
   padding: 16px;
   border-radius: 4px;
+  margin-top: 8px;
 }
 .partnereventshared_EventDefaultRowContainer_2PZFs.partnereventshared_EventStartPublic_2Z9-l {
   border-left: 1px solid #a3cf06;
@@ -2764,6 +2765,25 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .rdt .rdtPicker td.rdtNew {
   color: #fff;
+}
+.partnereventshared_GamepadOnlyScrollPanel_Cpk7n {
+  height: 100vh;
+  overflow-y: scroll;
+}
+.scrollpanel_ScrollPanel_3ozfo {
+  position: relative;
+}
+.scrollpanel_ScrollY_3MFgE,
+.scrollpanel_ScrollBoth_Ffrn- {
+  overflow-y: auto;
+  scroll-padding-top: 20px;
+  scroll-padding-bottom: 20px;
+}
+.scrollpanel_ScrollX_m0VVu,
+.scrollpanel_ScrollBoth_Ffrn- {
+  overflow-x: auto;
+  scroll-padding-left: 20px;
+  scroll-padding-right: 20px;
 }
 .suggestdialog_mentionDialogPosition_1z636 {
   position: absolute;
@@ -5280,8 +5300,8 @@ a.bbcodes_LinkButton_14_Fn:hover {
   padding: 0px;
 }
 .deckverified_BannerContainer_zoxHi {
-  padding-top: 5;
-  padding-bottom: 20px;
+  padding-top: 4;
+  padding-bottom: 12px;
 }
 .deckverified_BannerHeader_3Lsq6 {
   text-transform: uppercase;
@@ -5299,12 +5319,14 @@ a.bbcodes_LinkButton_14_Fn:hover {
   background-color: #3b5a7280;
   align-items: center;
   transition: background-color 0.2s ease;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .deckverified_BannerContent_hDTtf:focus-within {
   background-color: #678ba670;
 }
-img.deckverified_CategoryIcon_2L6Br {
-  padding-right: 10px;
+.deckverified_CategoryIcon_2L6Br {
+  padding-right: 6px;
   vertical-align: middle;
 }
 .deckverified_LearnMoreCtn_trFCC {
@@ -5326,7 +5348,7 @@ img.deckverified_CategoryIcon_2L6Br {
 }
 .deckverified_LearnMorePC_83ZIV,
 .deckverified_LearnMore_2sOzU {
-  padding: 6px 16px;
+  padding: 6px 12px;
   color: #fff;
   background-color: #1a9fff;
   border-radius: 2px;
@@ -5359,7 +5381,7 @@ img.deckverified_CategoryIcon_2L6Br {
 .deckverified_AppTitleCategory_iEQjF {
   padding-left: 15px;
 }
-.deckverified_AppTitleCategory_iEQjF img.deckverified_CategoryIcon_2L6Br {
+.deckverified_AppTitleCategory_iEQjF .deckverified_CategoryIcon_2L6Br {
   padding-top: 1px;
   width: 26px;
   height: 100%;
@@ -5374,7 +5396,7 @@ img.deckverified_CategoryIcon_2L6Br {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  max-height: 65vh;
+  max-height: 85vh;
 }
 .deckverified_CompatibilityDetailsContainer_Ze2dD
   .deckverified_CompatibilityDetailsInterior_wd8rK {
@@ -5439,8 +5461,10 @@ img.deckverified_CategoryIcon_2L6Br {
   margin-bottom: 15px;
 }
 .deckverified_CompatibilityDetailsResultIcon_7xKM6 {
-  height: 16px;
+  height: 20px;
+  width: 20px;
   padding-right: 15px;
+  flex-shrink: 0;
 }
 .deckverified_CompatabilityDetailsNoteContainer_3uIY7 {
   display: flex;
@@ -5458,21 +5482,6 @@ img.deckverified_CategoryIcon_2L6Br {
   font-size: 14px;
   color: #a9a9a9;
   word-break: break-word;
-}
-.scrollpanel_ScrollPanel_3ozfo {
-  position: relative;
-}
-.scrollpanel_ScrollY_3MFgE,
-.scrollpanel_ScrollBoth_Ffrn- {
-  overflow-y: auto;
-  scroll-padding-top: 20px;
-  scroll-padding-bottom: 20px;
-}
-.scrollpanel_ScrollX_m0VVu,
-.scrollpanel_ScrollBoth_Ffrn- {
-  overflow-x: auto;
-  scroll-padding-left: 20px;
-  scroll-padding-right: 20px;
 }
 .creatorhomeembed_DevSummaryCtn_U7GS1 {
   flex-grow: 1;
@@ -6344,6 +6353,18 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 .carousel__slide .animated_featured_capsule_BGVideo_3t6Hv {
   opacity: 0;
 }
+.BlurImage.animated_featured_capsule_BGImage_1vLqA {
+  filter: blur(4px);
+}
+.DesaturateImage.animated_featured_capsule_BGImage_1vLqA {
+  filter: saturate(0.2);
+}
+.BlurAndDesaturateImage.animated_featured_capsule_BGImage_1vLqA {
+  filter: blur(4px) saturate(0.2);
+}
+.DesaturateVideo.animated_featured_capsule_BGVideo_3t6Hv {
+  filter: saturate(0.2);
+}
 .SliderBody.CarouselSlidingRight
   .carousel__slide.carousel__slide--visible
   .animated_featured_capsule_Info_1cMHE {
@@ -6383,6 +6404,12 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+.FastAnimation .animated_featured_capsule_Info_1cMHE {
+  animation-duration: 0.1s !important;
+}
+.FastAnimation .animated_featured_capsule_Artwork_1FF93 {
+  animation-duration: 0.1s !important;
 }
 .carousel__slide.carousel__slide--hidden
   .animated_featured_capsule_BGImage_1vLqA {
@@ -14904,6 +14931,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .carousel_innerSlide_2pX3m div {
   outline-width: 0px;
 }
+.DisableSliderMotion {
+  transition: none;
+}
 .eventtilecarousel_EventTileCarousel_Q2o5R {
   width: 100%;
   max-width: 980px;
@@ -16076,6 +16106,85 @@ Body.v6.tag_page.contenthub_page {
   .contenthubshared_FinalPrice_fctkc {
   color: #acdbf5;
 }
+.contenthubshared_BroadcastPage_2S-CE {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.contenthubshared_BroadcastCtn_6noJq {
+  height: 190px;
+  width: 297px;
+  margin-bottom: 9px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+.contenthubshared_BroadcastCtn_6noJq .contenthubshared_BroadcastImageCtn_1WTAa {
+  height: 136px;
+  position: relative;
+}
+.contenthubshared_BroadcastCtn_6noJq
+  .contenthubshared_BroadcastImageCtn_1WTAa
+  a
+  img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.contenthubshared_BroadcastCtn_6noJq
+  .contenthubshared_BroadcastImageCtn_1WTAa
+  a
+  img.contenthubshared_BroadcastVideoThumbnail_1oxWz {
+  z-index: 10;
+}
+.contenthubshared_BroadcastCtn_6noJq
+  .contenthubshared_BroadcastImageCtn_1WTAa
+  a
+  .contenthubshared_BroadcastPlayIcon_NHhhM {
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenthubshared_BroadcastCtn_6noJq
+  .contenthubshared_BroadcastImageCtn_1WTAa
+  a
+  .contenthubshared_BroadcastPlayIcon_NHhhM
+  svg {
+  z-index: 20;
+  width: 48px;
+  height: 48px;
+  padding: auto;
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8));
+}
+.contenthubshared_BroadcastCtn_6noJq .contenthubshared_BroadcastTextCtn_23kCa {
+  background: url(https://store.akamai.steamstatic.com/public/images/v6/spotlight_background.jpg?v=1)
+    bottom center no-repeat;
+  width: 100%;
+  flex-grow: 1;
+}
+.contenthubshared_BroadcastCtn_6noJq
+  .contenthubshared_BroadcastTextCtn_23kCa
+  .contenthubshared_BroadcastName_3E8VJ {
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 8px;
+}
+.contenthubshared_BroadcastCtn_6noJq
+  .contenthubshared_BroadcastTextCtn_23kCa
+  .contenthubshared_BroadcastDesc_2QGow {
+  font-size: 12px;
+  padding: 4px;
+  padding-left: 8px;
+  padding-top: 0;
+}
 .contenthubshared_DailyDealCtn_1cIEx {
   height: 190px;
   width: 297px;
@@ -16170,6 +16279,38 @@ Body.v6.tag_page.contenthub_page {
 .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   margin: 0 auto;
 }
+.contenthubshared_TweaksMenu_1DTXi {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px rgba(255, 255, 255, 0.3) solid;
+  border-radius: 4px;
+  width: 200px;
+  z-index: 100;
+}
+.contenthubshared_TweaksMenu_1DTXi .contenthubshared_MenuTitle_2Ks83 {
+  padding: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px rgba(0, 0, 0, 0.8) solid;
+}
+.contenthubshared_TweaksMenu_1DTXi .contenthubshared_MenuOptions_1jYJZ {
+  padding: 8px;
+}
+.contenthubshared_TweaksMenu_1DTXi
+  .contenthubshared_MenuOptions_1jYJZ
+  .DialogCheckbox_Container {
+  margin-bottom: 0;
+  padding: 1px;
+  height: 22px;
+}
+.contenthubshared_TweaksMenu_1DTXi
+  .contenthubshared_MenuOptions_1jYJZ
+  .DialogCheckbox_Container
+  .DialogToggle_Label {
+  margin-top: 2px;
+}
 .contenthubmaincarousel_ContentHubTitleCtn_16cIW {
   max-width: 940px;
   margin-left: auto;
@@ -16219,6 +16360,13 @@ html.responsive.touch .contenthubmaincarousel_ContentHubTitle_3Xj5I {
   opacity: 75%;
   margin-left: 8px;
   margin-top: 16px;
+}
+.contenthubmaincarousel_ContentHubSubtitle_t1mzq.contenthubmaincarousel_AONotice_6dj45 {
+  font-size: 14px;
+  padding: 8px;
+  background-color: rgba(32, 32, 32, 0.75);
+  border: 1px rgba(255, 255, 255, 0.75) solid;
+  border-radius: 2px;
 }
 .contenthubmaincarousel_ContentHubPlaceholder_3hHXa {
   font-size: 24px;
@@ -22451,7 +22599,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   .discountgrid_DiscountGrid_39Ize
   .discountgrid_DataCell_3V8Jb
   .discountgrid_DiscountInput_2bWSQ {
-  width: 20px;
+  width: 32px;
+  box-sizing: border-box;
   padding: 1px 6px;
   text-align: right;
   color: inherit;
@@ -23938,6 +24087,9 @@ div.savetoolbar_HoverToolTip_gba9O {
 .collapseablesection_required_title_CKeWA {
   display: flex;
 }
+.collapseablesection_SectionTitleHeader_2Yd_W .EventEditorTextTitle {
+  padding-top: 6px;
+}
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
   overflow-y: auto;
@@ -24017,7 +24169,14 @@ div.savetoolbar_HoverToolTip_gba9O {
   .dailydealadmincreatenew_DealName_2Ruo9 {
   font-size: 20px;
   color: #fff;
-  font-weight: 500;
+  font-weight: 300;
+}
+.dailydealadmincreatenew_DealCapCtn_3n8tu
+  .dailydealadmincreatenew_DealNameCtn_3z8vI
+  .dailydealadmincreatenew_DealName_2Ruo9
+  a {
+  text-decoration: none;
+  color: #fff;
 }
 .dailydealadmincreatenew_DiscountLiveWarning_28bha {
   color: #a75353;
@@ -24623,6 +24782,29 @@ ul li {
   width: 100%;
   height: 123px;
 }
+.promotionplaneditor_FeatureSelectBtn_KdmlA {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.promotionplaneditor_FeatureSelectBtn_KdmlA button {
+  width: 30%;
+}
+.promotionplaneditor_LinksCtn_2SJfi {
+  display: flex;
+  flex-direction: column;
+}
+.promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_LinkCtn_2s6vN {
+  background: #353840;
+  padding: 6px 12px;
+  margin-bottom: 1px;
+  font-size: 13px;
+  color: #fff;
+}
+.promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_LinkCtn_2s6vN a {
+  text-decoration: none;
+}
 .community_event_Container_2BtrR {
   padding: 10px 10px 0 10px;
   display: flex;
@@ -25215,14 +25397,23 @@ button.DialogButton::-moz-focus-inner {
   top: 4px;
   z-index: 1;
 }
+.DeckVerifiedModalDialogClient .DialogContent,
 .DeckVerifiedModalDialog .DialogContent {
   padding: 16px 24px;
   background: #0e141b !important;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
+.DeckVerifiedModalDialogClient .DialogContent {
+  max-height: 70vh;
+}
+.DeckVerifiedModalDialog .DialogContent {
+  max-height: 85vh;
+}
+.DeckVerifiedModalDialogClient .ModalPosition_TopBar,
 .DeckVerifiedModalDialog .ModalPosition_TopBar {
   display: none;
 }
+.DeckVerifiedModalDialogClient .ModalPosition_Dismiss .closeButton,
 .DeckVerifiedModalDialog .ModalPosition_Dismiss .closeButton {
   width: 20px;
   height: 20px;

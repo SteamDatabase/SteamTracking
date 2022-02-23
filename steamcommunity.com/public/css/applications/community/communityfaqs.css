@@ -1320,12 +1320,14 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   background-color: #3b5a7280;
   align-items: center;
   transition: background-color 0.2s ease;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .deckverified_BannerContent_2dGPT:focus-within {
   background-color: #678ba670;
 }
 .deckverified_CategoryIcon_3qF71 {
-  padding-right: 10px;
+  padding-right: 6px;
   vertical-align: middle;
 }
 .deckverified_LearnMoreCtn_2IcEu {
@@ -1347,7 +1349,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 }
 .deckverified_LearnMorePC_CrSPf,
 .deckverified_LearnMore_2gXzK {
-  padding: 6px 16px;
+  padding: 6px 12px;
   color: #fff;
   background-color: #1a9fff;
   border-radius: 2px;
@@ -8625,12 +8627,6 @@ html:not(.client)
   font-size: 17px;
   padding-bottom: 10px;
 }
-.BasicUI .apppartnereventspage_PartnerEvent_1KsYS {
-  margin: 40px auto;
-  border: none;
-  border-radius: 0px;
-  max-width: 640px;
-}
 div.apppartnereventspage_EventDetailsBody_3NW5v {
   min-height: 0;
 }
@@ -13238,6 +13234,12 @@ html.responsive.touch .ContentHubSalePage {
   li {
   scroll-snap-align: start;
 }
+.BasicUI
+  .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD
+  .carousel__slider-tray:after {
+  content: " ";
+  min-width: 24px;
+}
 .partnersaledisplay_SaleSection_1cOoC .partnersaledisplay_SaleViewAll_1bsBz {
   display: flex;
   justify-content: flex-end;
@@ -13921,7 +13923,8 @@ Body.v6.tag_page.contenthub_page {
   margin: 0px auto 20px auto;
 }
 .BasicUI .ContentHubSalePage .contenthubshared_MainCarousel_3SWsM {
-  margin-bottom: 16px;
+  margin-bottom: 0px;
+  padding-bottom: 8px;
 }
 .BasicUI .ContentHubSalePage .contenthubmaincarousel {
   max-width: 100vw;
@@ -13947,6 +13950,10 @@ Body.v6.tag_page.contenthub_page {
   padding: 0px 24px 8px 24px;
   scroll-padding-left: 24px;
   scroll-padding-right: 24px;
+}
+.BasicUI .ContentHubSalePage .carousel__slider-tray:after {
+  content: " ";
+  min-width: 24px;
 }
 .ContentHubSalePage
   .contenthubmaincarousel.expanded
@@ -14123,10 +14130,18 @@ Body.v6.tag_page.contenthub_page {
   .contenthubshared_FinalPrice_3eTyj {
   color: #acdbf5;
 }
+.contenthubshared_BroadcastPage_2wLdH {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
 .contenthubshared_BroadcastCtn_1D6il {
   height: 190px;
   width: 297px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  margin-bottom: 9px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
 }
@@ -14346,7 +14361,7 @@ Body.v6.tag_page.contenthub_page {
   z-index: 1;
 }
 .BasicUI .contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
   padding: 0px var(--gpSpace-Gutter);
 }
 html.responsive.touch .contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
@@ -15363,7 +15378,6 @@ html.responsive.touch
   .saleitembrowser_FlavorLabel_KDLAS.gpfocus {
   color: #000;
   background-color: #fff;
-  border-radius: 0px;
   box-shadow: var(--gpShadow-Medium);
 }
 .saleitembrowser_SaleItemBrowserContainer_18byE

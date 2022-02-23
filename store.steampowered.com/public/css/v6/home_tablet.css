@@ -193,6 +193,9 @@
 		margin-bottom: unset;
 	}
 
+
+
+
 	/* Featured and recommended */
 	html.responsive .carousel_container.maincap {
 		margin: unset;
@@ -235,6 +238,16 @@
 
 	html.responsive .store_main_capsule .app_name > div {
 		padding-bottom: 0px;
+	}
+
+	html.responsive .store_main_capsule.no_screenshots .app_name {
+		width: unset;
+	}
+
+	html.responsive .store_main_capsule.no_screenshots .app_name > div {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 

@@ -3644,8 +3644,12 @@
                 return i.createElement(
                   l.b,
                   { className: u.GrantAwardModal, active: r, onDismiss: s },
-                  b && i.createElement(I, { eType: z.Default }),
-                  p
+                  i.createElement(
+                    l.d,
+                    { navID: "GrantAward", closeModal: s },
+                    b && i.createElement(I, { eType: z.Default }),
+                    p
+                  )
                 );
               }),
               (t.prototype.GrantAward = function () {

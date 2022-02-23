@@ -321,6 +321,7 @@
 	/* Pricing and add to cart */
 	html.responsive .wishlist_row .purchase_area {
 		background: none;
+		margin-top: -18px;
 	}
 
 	html.responsive .wishlist_row .purchase_area .btn_medium {

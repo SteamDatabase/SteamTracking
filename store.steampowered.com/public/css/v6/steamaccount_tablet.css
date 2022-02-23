@@ -204,14 +204,10 @@
 		border: none;
     }
 
-    html.responsive .wallet_history_table tr:hover {
+    html.responsive .wallet_history_table tr:hover,
+	html.responsive .wallet_history_table tr.gpfocus {
         background: var(--gpBackground-LightMedium);
         color: white;
-    }
-
-    html.responsive .wallet_history_table tr.gpfocus {
-        background: white;
-        color: black;
     }
 
     html.responsive .wallet_history_table td {
@@ -236,10 +232,6 @@
 
     html.responsive .wth_payment {
         color: var(--gpStoreLighterGrey);
-    }
-
-    html.responsive .wallet_history_table tr.gpfocus .wth_payment {
-        color: var(--gpStoreDarkGrey);
     }
 
 
@@ -272,6 +264,44 @@
 		padding-bottom: 8px;
 	}
 
+
+	/* Family library sharing */
+	html.responsive .accountTable > tbody > tr:nth-child(odd) {
+		background-color: unset;
+		background-color: var(--gpBackground-LightSofter);
+	}
+
+	html.responsive .accountTable > tbody > tr:nth-child(even) {
+		background-color: unset;
+		background-color: var(--gpBackground-LightSofter);
+	}
+
+	html.responsive .accountTable > tbody > tr {
+		transition: background-color 0.2s ease;
+	}
+
+	html.responsive .accountTable > tbody > tr:focus-within {
+		background-color: var(--gpBackground-LightMedium);
+		color: white;
+	}
+
+	html.responsive .accountTable th {
+		font: var(--gpText-BodySmall);
+		color: var(--gpStoreLighterGrey);
+		font-weight: 500;
+	}
+
+	html.responsive .accountTable > thead > tr {
+		background-color: var(--gpBackground-LightMedium);
+	}
+
+	html.responsive .accountTable a {
+		color: var(--gpColor-Blue);
+	}
+
+	html.responsive .accountTable td {
+		padding: 8px 12px;
+	}
 
 
 

@@ -1689,6 +1689,8 @@
     "FacetedBrowseEditor_SyncTopNTags": "Sync top 20 store tags",
     "FacetedBrowseEditor_SyncTopNTags_Tooltip": "By default, only the top 10 store tags are synced for each item. Check this box to sync the top 20 store tags instead.",
     "FacetedBrowseEditor_GenerateDebugInfo": "Generate information for debugging",
+    "FacetedBrowseEditor_LogicalAND": "Logical AND",
+    "FacetedBrowseEditor_LogicalAND_Tooltip": "If checked, when the user selects multiple facet values in this facet, the logical AND of the selected facet value filters is applied. Otherwise, the logical OR of the selected facet value filters is applied.",
     "Sale_BrowseSection_ContentHubTitle": "Item Source Settings (Optional)",
     "Sale_BrowseSection_ContentHubTooltip": "Instead of specifying a list of linked apps, you can specify the name of a content hub from which to pull items for this sale event. If specified, the linked app list for this sale is ignored, and the sale page will surface everything from the given content hub.",
     "Sale_BrowseSection_ContentHubType": "Content Hub Type",
