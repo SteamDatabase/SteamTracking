@@ -275,6 +275,11 @@ textarea.gray {
 	line-height: 15px;
 }
 
+/* need more room for the external link labels */
+#external_links .formlabel {
+	min-width: 15em;
+}
+
 .formlabelwide {
 	width: 24em;
 	float: left;
