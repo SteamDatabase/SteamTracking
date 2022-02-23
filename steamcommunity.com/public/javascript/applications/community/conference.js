@@ -18250,6 +18250,7 @@
             (e.background_gradient_top || "transparent") +
             " 100%)" +
             n,
+          backgroundRepeat: e.background_repeat,
         };
       }
       function Nn(e, t, n) {
@@ -95632,6 +95633,7 @@
                 flexDirection: "column",
                 backgroundImage: h,
                 backgroundColor: n.jsondata.sale_background_color,
+                backgroundRepeat: n.jsondata.sale_background_repeat,
               },
               ref: l,
             },

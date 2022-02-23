@@ -2115,6 +2115,16 @@
   width: 20px;
   height: 20px;
 }
+.shared_svg_library_SteamDeckCompatVerified_1x-dZ {
+  color: #59bf40;
+}
+.shared_svg_library_SteamDeckCompatPlayable_1f6j0 {
+  color: #ffc82c;
+}
+.shared_svg_library_SteamDeckCompatUnsupported_wUjbD,
+.shared_svg_library_SteamDeckCompatUnknown_2b1JZ {
+  color: #dcdedf;
+}
 .teamlogo_colorBlack_1gyoR {
   color: #0f1417;
 }
