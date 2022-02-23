@@ -6686,6 +6686,8 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   justify-self: end;
   align-items: stretch;
   flex-direction: column;
+  bottom: unset;
+  margin-top: 5px;
   flex-wrap: nowrap;
   justify-content: unset;
 }
