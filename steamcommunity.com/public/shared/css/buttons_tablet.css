@@ -1,0 +1,347 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #4e697d;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA670;
+	--gpBackground-LightHard: #93B8D480;
+	--gpBackground-LightHarder: #bad5ea80;
+
+	--gpBackground-DarkSofter: #0e141b33;
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 270px;
+	--gpDselectWidth: 320px;
+	--gpSidePanelWidth: 348px;
+	--gpGiftingPanelWidth: 280px;
+
+	/* Game capsule widths */
+	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 58px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+	/* Animation TODO: REMOVE THESE */
+	--gpTransition-Short: all 0.2s ease;
+	--gpTransition-Shorter: all 0.1s ease;
+}
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+    .btn_green_white_innerfade,
+    .btn_blue_white_innerfade,
+    .btn_darkblue_white_innerfade,
+    .btn_grey_white_innerfade,
+    .btn_grey_grey,
+    .btn_grey_grey_outer_bevel,
+    .btn_grey_black,
+    .btn_black,
+    .btnv6_blue_hoverfade,
+    .btnv6_lightblue_blue,
+    .btnv6_blue_blue_innerfade,
+    .btnv6_green_white_innerfade,
+    .btnv6_grey_black,
+    .btnv6_white_transparent,
+    .btn_darkred_white_innerfade,
+    .btn_green_steamui,
+    .btn_grey_steamui,
+    .btn_blue_steamui {
+        transition: all 0.1s ease;
+        text-align: center;
+    }
+
+
+
+    /* RESET */
+    .btn_small_thin,
+    .btn_small,
+    .btn_uppercase,
+    .btn_small_tall,
+    .btn_border_2px,
+    .btn_medium {
+        border-radius: var(--gpCorner-Medium);
+        border: unset;
+    }
+
+    /* Set 2 sizes */
+    .btn_small_thin,
+    .btn_small_tall,
+    .btn_small {
+        padding: 6px 12px;
+    }
+
+    .btn_medium {
+        padding: 10px 20px;
+    }
+
+    /* Unify fonts */
+    .btn_small_thin span,
+    .btn_uppercase span,
+    .btn_small span,
+	.btn_small_tall span {
+        font: var(--gpText-BodyMedium);
+    }
+
+    .btn_medium span,
+    .btn_border_2px span,
+    .btn_medium span {
+        font: var(--gpText-BodyLarge);
+    }
+
+    .btn_small_thin span,
+    .btn_small span,
+    .btn_uppercase span,
+    .btn_medium span,
+    .btn_border_2px span,
+    .btn_medium span,
+	.btn_small_tall span {
+        text-transform: unset;
+        padding: unset;
+        background: unset !important;
+        box-shadow: unset !important;
+        text-shadow: none !important;
+        border: unset !important;
+        text-align: center;
+		/* transition: all 1s ease; */
+    }
+
+    .inner_bevel {
+        box-shadow: unset;
+    }
+
+
+
+
+    /* PRIMARY */
+
+    /* Green */
+    .btn_green_white_innerfade,
+    .btnv6_green_white_innerfade,
+    .btn_green_steamui {
+        color: white !important;
+        background: var(--gpColor-Green);
+        box-shadow: var(--gpShadow-Medium);
+    }
+
+    .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        background: var(--gpColor-GreenHi) !important;
+    }
+
+    .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus {
+        background: white !important;
+        color: black !important;
+        border-radius: 0px;
+    }
+
+	.btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img {
+        filter: brightness(0);
+    }
+
+    /* Blue */
+    .btn_blue_steamui,
+    .btn_blue_white_innerfade,
+    .btnv6_lightblue_blue {
+        color: white !important;
+        background: var(--gpColor-Blue);
+        box-shadow: var(--gpShadow-Medium);
+    }
+
+    .btn_blue_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        background: var(--gpColor-BlueHi);
+    }
+
+    .btn_blue_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus {
+        background: white;
+        color: black !important;
+        border-radius: 0px;
+    }
+
+	.btn_blue_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img {
+        filter: brightness(0);
+    }
+
+    /* Error */
+    .btn_darkred_white_innerfade {
+        color: white !important;
+        background: var(--gpColor-Red);
+        box-shadow: var(--gpShadow-Medium);
+    }
+
+    .btn_darkred_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        color: white;
+        background: var(--gpColor-RedHi) !important;
+    }
+
+    .btn_darkred_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus {
+        color: var(--gpColor-Red);
+        background: white;
+    }
+
+
+
+
+    /* SECONDARY */
+    .btn_grey_steamui,
+    .btnv6_grey_black,
+    .btnv6_blue_hoverfade,
+    .btn_grey_white_innerfade,
+    .btn_grey_grey,
+    .btn_grey_grey_outer_bevel,
+    .btn_black,
+    .btn_grey_black,
+    .btnv6_blue_blue_innerfade,
+    .btn_darkblue_white_innerfade {
+        color: white !important;
+        background: var(--gpBackground-LightMedium);
+    }
+
+    .btn_grey_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_grey_grey:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        color: white !important;
+        background: var(--gpBackground-LightHard) !important;
+    }
+
+    .btn_grey_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_grey_grey:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus {
+        color: black !important;
+        background: white !important;
+        border-radius: 0px;
+    }
+
+	.btn_grey_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_grey_grey:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img {
+        filter: brightness(0) !important;
+    }
+
+
+
+
+    /* GHOST */
+    .btnv6_white_transparent {
+        border: 1px solid var(--gpBackground-LightHard);
+        border-radius: var(--gpCorner-Large);
+    }
+
+    .btnv6_white_transparent.btn_small_thin,
+    .btnv6_white_transparent.btn_small,
+    .btnv6_white_transparent.btn_small_tall {
+        padding: 5px 11px;
+    }
+
+    .btnv6_white_transparent.btn_medium {
+        padding: 9px 19px;
+    }
+
+    .btnv6_white_transparent:hover:not(.btn_disabled):not(:disabled) {
+        border: 1px solid white;
+    }
+
+	.btnv6_white_transparent.gpfocus:not(.btn_disabled):not(:disabled) {
+		border-radius: 0px;
+		background: white;
+		border-color: transparent;
+    }
+
+	.btnv6_white_transparent.gpfocus:not(.btn_disabled):not(:disabled) span {
+		color: black;
+    }
+
+}

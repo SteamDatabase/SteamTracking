@@ -1,0 +1,559 @@
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+	/* GLOBAL */
+	html.responsive .profile_header {
+		padding: 0px var(--gpSpace-Gutter) 16px;
+	}
+
+	html.responsive .profile_leftcol {
+		padding: 0px var(--gpSpace-Gutter);
+	}
+
+	html.responsive .profile_rightcol {
+		padding: 0px var(--gpSpace-Gutter);
+		background: none;
+		backdrop-filter: unset;
+	}
+
+	html.responsive .actual_persona_name {
+		font-weight: 700;
+	}
+
+	html.responsive .profile_content {
+		padding: 0px;
+	}
+
+	html.responsive .profile_customization {
+		border-radius: unset;
+	}
+
+	html.responsive .profile_customization_header {
+		font: var(--gpText-BodySmall);
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		border-radius: unset;
+		padding: 12px;
+	}
+
+
+	/* White link */
+	html.responsive .game_info_achievement_summary a.whiteLink,
+	html.responsive .recentgame_quicklinks a.whiteLink,
+	html.responsive .profile_summary_footer span.whiteLink {
+		padding: 6px 12px;
+		background-color: #ffffff20;
+		border-radius: var(--gpCorner-Medium);
+		transition: all 0.2s ease;
+	}
+
+	html.responsive .game_info_achievement_summary a.whiteLink:hover,
+	html.responsive .recentgame_quicklinks a.whiteLink:hover,
+	html.responsive .profile_summary_footer span.whiteLink:hover {
+		color: #FFFFFF;
+		background-color: #ffffff30;
+	}
+
+	html.responsive .game_info_achievement_summary a.whiteLink.gpfocus,
+	html.responsive .recentgame_quicklinks a.whiteLink.gpfocus,
+	html.responsive .profile_summary_footer span.whiteLink.gpfocus {
+		color: black;
+		background-color: white;
+		border-radius: 0px;
+	}
+
+	/* TODO: Create new link style for Deck to replace above */
+
+
+
+	/* VALVE EMPLOYEE HEADER */
+	html.responsive .profile_header_valve_employee {
+		padding:8px;
+		margin-bottom: 0px;
+		margin-left: calc(0px - var(--gpSpace-Gutter));
+		margin-right: calc(0px - var(--gpSpace-Gutter));
+
+	}
+
+	html.responsive .profile_header_valve_employee_desc {
+		font-weight: 400;
+		opacity: 0.8;
+	}
+
+
+
+	/* HEADER */
+	html.responsive .profile_header_content {
+		padding-right: unset;
+		padding-top: 24px;
+	}
+
+	html.responsive .profile_summary_footer {
+		display: flex;
+	}
+
+	html.responsive .profile_header .persona_name {
+		font-weight: 400;
+	}
+
+	html.responsive .profile_header .persona_name .namehistory_link {
+		display: none;
+	}
+
+	html.responsive .persona_level_btn {
+		display: flex;
+		margin-bottom: 4px;
+		background-color: rgba( 0, 0, 0, 0.3 );
+		padding: 8px 16px;
+	}
+
+	html.responsive .profile_header_badgeinfo .persona_level {
+		margin-bottom: 0px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	html.responsive .friendPlayerLevel {
+		margin-top: 0px;
+	}
+
+	html.responsive .profile_header_actions {
+		display: flex;
+		column-gap: 6px;
+	}
+
+	/* Add friend button */
+	html.responsive .btn_profile_action {
+		flex: auto;
+	}
+
+	html.responsive .btn_profile_action,
+	html.responsive .btn_profile_action span {
+		transition: all 0.2s ease;
+	}
+
+	html.responsive .btn_profile_action.gpfocus {
+		background: white;
+		border-radius: 0px;
+	}
+
+	html.responsive .btn_profile_action.gpfocus span {
+		color: black;
+	}
+
+
+
+	/* STATUS */
+	html.responsive .responsive_status_info {
+		margin-top: 0px;
+		background: none;
+		border-bottom: 1px solid #FFFFFF20;
+		border-top: 1px solid #FFFFFF20;
+		padding: 12px 0px;
+		margin-bottom: 8px;
+	}
+
+	html.responsive .profile_in_game_header {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+	}
+
+	html.responsive .responsive_status_info .profile_in_game {
+		display: flex;
+		align-items: baseline;
+		gap: 12px;
+	}
+
+	html.responsive .responsive_status_info .profile_in_game_name,
+	html.responsive .responsive_status_info .profile_ban_status,
+	html.responsive .responsive_status_info .profile_in_game_broadcastpreview,
+	html.responsive .responsive_status_info .profile_in_game_joingame {
+		margin-top: 0px;
+	}
+
+
+
+	/* BUCKETS */
+	html.responsive .responsive_count_link_area {
+		display: flex;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		gap: 6px;
+		margin-left: calc( 0px - var(--gpSpace-Gutter) );
+		margin-right: calc( 0px - var(--gpSpace-Gutter) );
+		scroll-padding-left: 24px;
+		scroll-padding-right: 24px;
+		padding: 0px 24px;
+	}
+
+	html.responsive .profile_item_links {
+		display: flex;
+		gap: 6px;
+		margin: 8px 0px;
+	}
+
+	html.responsive #responsive_groupfriends_element_ctn {
+		display: flex;
+		gap: 6px;
+		margin: 8px 0px;
+	}
+
+	html.responsive .profile_awards {
+		display: flex;
+		gap: 6px;
+		margin: 8px 0px;
+	}
+
+	html.responsive .profile_badges {
+		display: flex;
+		gap: 6px;
+		margin: 8px 0px;
+	}
+
+	html.responsive .profile_count_link,
+	html.responsive .profile_count_link_preview_ctn {
+		float: unset;
+		width: 16.4vw;
+		scroll-snap-align: start;
+		margin: 0px;
+		height: 72px;
+		box-shadow: unset;
+		display: flex;
+		flex-direction: column;
+	}
+
+	html.responsive .profile_count_link_preview {
+		height: 100px;
+		overflow: hidden;
+		line-height: unset;
+	}
+
+
+
+
+	/* CUSTOMISATION AREA */
+	html.responsive .profile_customization_area {
+		margin-top: 24px;
+	}
+
+	html.responsive .favoritegroup_avatar a {
+		display: flex;
+	}
+
+	html.responsive .profile_customization_block {
+		padding: 12px;
+	}
+
+	html.responsive .showcase_content_bg {
+		border-radius: unset;
+		padding: 12px;
+	}
+
+	html.responsive .profile_customization {
+		transition: background-color 0.2s ease;
+	}
+
+	html.responsive .profile_customization.gpfocus {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+
+
+	/* SHOWCASE */
+	html.responsive .showcase_slot a {
+		display: flex;
+	}
+
+
+
+	/* RECENT ACTIVITY */
+	html.responsive .recent_game .game_info .game_info_cap {
+		margin-right: 16px;
+	}
+
+	html.responsive .game_info_cap a {
+		display: flex;
+	}
+
+	html.responsive .game_info_achievement a {
+		display: flex;
+	}
+
+	html.responsive .recent_game .game_info .game_name {
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .profile_recentgame_header {
+		background: none;
+		margin: unset;
+		padding: 12px 0px 8px;
+		display: flex;
+		align-items: baseline;
+		width: 100%;
+		gap: 12px;
+	}
+
+	html.responsive .profile_content h2 {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+		color: white;
+	}
+
+	html.responsive .recentgame_quicklinks h2 {
+		font: var(--gpText-BodyLarge);
+		font-weight: 400;
+		opacity: 0.6;
+	}
+
+	html.responsive .recent_game {
+		border-radius: unset;
+		margin-bottom: 16px;
+	}
+
+	html.responsive .link_separator {
+		display: none;
+	}
+
+	html.responsive .game_info_details {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .game_info_achievement_summary .ellipsis {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .game_info_achievements_only_ctn .game_info_achievements_summary_area {
+		width: 420px;
+	}
+
+
+
+	/* COMMENTS */
+	html.responsive .profile_comment_area {
+		margin-top: 48px;
+	}
+
+	html.responsive .profile_comment_area .commentthread_header {
+		background: none;
+		padding: 0px;
+	}
+
+	html.responsive .profile_comment_area .commentthread_header .commentthread_count {
+
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	html.responsive .commentthread_header_label {
+		font-weight: 500;
+		color: white;
+	}
+
+	html.responsive .commentthread_count_label {
+		margin-right: unset;
+	}
+
+	html.responsive .commentthread_user_avatar a {
+		display: flex;
+	}
+
+	html.responsive .commentthread_comment_avatar a {
+		display: flex;
+	}
+
+	html.responsive .commentthread_entry_quotebox {
+		border: unset;
+		border-radius: unset;
+		background: none;
+		box-shadow: unset;
+		padding: unset;
+		margin: unset;
+	}
+
+
+	/* Comment items */
+	html.responsive .profile_comment_area .commentthread_comment_container {
+		border: none;
+	}
+
+	html.responsive .commentthread_comments {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		backdrop-filter: blur(8px);
+	}
+
+	html.responsive .commentthread_comment {
+		transition: background-color 0.1s ease;
+		background-color: #ffffff10;
+		margin: unset;
+		display: flex;
+		padding: 16px;
+		min-height: unset;
+		gap: 16px;
+	}
+
+	html.responsive .commentthread_comment_avatar {
+		position: unset;
+	}
+
+	html.responsive .commentthread_comment_content {
+		flex: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+
+	html.responsive .commentthread_comment:hover {
+		background-color: #ffffff20;
+	}
+
+	html.responsive .commentthread_comment.gpfocus {
+		background-color: #ffffff20;
+	}
+
+	html.responsive .commentthread_comment_author {
+		margin: unset;
+		line-height: unset;
+		font: var(--gpText-BodyMedium);
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	html.responsive .commentthread_comment_author a {
+		font-size: unset;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	html.responsive .commentthread_comment_timestamp {
+		font-size: unset;
+		color: unset;
+		margin: unset;
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	html.responsive .commentthread_comment_text {
+		font-size: unset;
+		color: unset;
+		color: rgba(255, 255, 255, 0.9);
+		line-height: unset;
+	}
+
+
+
+	/* Comment box */
+	html.responsive .commentthread_entry_quotebox textarea {
+		background-color: #FFFFFF20;
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 8px 10px;
+		box-shadow: unset;
+		border: unset;
+        margin: unset;
+		box-sizing: border-box;
+		text-shadow: unset;
+		height: unset !important;
+	}
+
+	html.responsive .commentthread_entry_quotebox textarea::placeholder {
+		color: unset;
+		opacity: 0.5;
+	}
+
+	html.responsive .commentthread_entry_quotebox textarea:hover {
+		background-color: #ffffff30;
+	}
+
+	html.responsive .commentthread_entry_quotebox textarea:focus {
+		background-color: white;
+        color: black;
+		height: 80px !important;
+	}
+
+	html.responsive .commentthread_entry_quotebox textarea.gpfocus {
+		border-radius: 0px;
+	}
+
+	html.responsive .commentthread_footer {
+		border: none;
+	}
+
+	html.responsive.touch .commentthread_pagedropdown,
+	html.responsive .commentthread_pagedropdown {
+		display: none;
+	}
+
+	html.responsive .pagebtn,
+	html.responsive a.pagebtn {
+		padding: 6px 16px;
+		color: white;
+		background-color: #FFFFFF20;
+		border-radius: var(--gpCorner-Medium);
+		transition: all 0.2s ease;
+		font-weight: 700;
+	}
+
+	html.responsive .pagebtn:hover,
+	html.responsive a.pagebtn:hover {
+		color: #FFFFFF;
+		background-color: #ffffff30;
+	}
+
+	html.responsive .pagebtn.gpfocus,
+	html.responsive a.pagebtn.gpfocus {
+		color: black;
+		background-color: white;
+		border-radius: 0px;
+	}
+
+	html.responsive .profile_comment_area .commentthread_header .commentthread_allcommentslink {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .profile_comment_area .commentthread_subscribe_checkbox {
+		width: 20px;
+		height: 20px;
+		border: none;
+		background-color: var(--gpBackground-LightSoft);
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive .commentthread_subscribe_hint {
+		display: none;
+	}
+
+
+	/* Subscribe link */
+	html.responsive .commentthread_subscribe_ctn {
+		display: inline-flex;
+		align-items: center;
+		padding: 4px 12px 4px 4px;
+		gap: 4px;
+		border-radius: var(--gpCorner-Medium);
+		transition: background-color 0.2s ease;
+	}
+
+	html.responsive .commentthread_subscribe_ctn:hover {
+		background-color: #FFFFFF20;
+	}
+
+	html.responsive .commentthread_subscribe_ctn {
+		font: var(--gpText-BodyMedium);
+	}
+
+
+
+
+
+
+
+
+
+
+
+}

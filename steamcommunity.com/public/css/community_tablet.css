@@ -1,0 +1,183 @@
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+	html.responsive body {
+		font: var(--gpText-BodyLarge);
+		color: var(--gpStoreLightestGrey);
+	}
+
+
+
+	/* MINI PROFILE */
+	html.responsive .miniprofile_hover {
+		display: none !important;
+	}
+
+
+
+
+	/* PAGE */
+	html.responsive .responsive_page_content {
+		min-height: 100vh;
+		background: var(--gpGradient-StoreBackground);
+		background-attachment: fixed;
+	}
+
+	html.responsive .leftcol {
+		max-width: 820px;
+		margin: auto;
+	}
+
+
+
+	/* HEADER */
+	html.responsive .profile_small_header_name {
+		font: var(--gpText-HeadingLarge);
+	}
+
+	html.responsive .profile_small_header_additional .gameLogo a {
+		display: flex;
+	}
+
+	html.responsive .profile_small_header_bg {
+		background: none;
+		height: unset;
+		margin: unset;
+	}
+
+	html.responsive .profile_small_header_text {
+		padding-left: calc( 60px + 3% );
+		bottom: 36px;
+	}
+
+	html.responsive .profile_small_header_texture {
+		background: none;
+	}
+
+
+
+
+
+	/* MAIN CONTAINER */
+	html.responsive body.migrated_profile_page #BG_bottom.maincontent,
+	html.responsive .maincontent {
+		margin: 0px;
+		padding: var(--gpSpace-Gutter);
+		padding-top: 0px;
+		background: none;
+	}
+
+
+
+
+
+	/* TABS */
+
+	/* Container */
+	html.responsive .sectionTabs,
+	html.responsive .apphub_sectionTabs {
+		display: flex !important;
+		column-gap: 6px;
+		padding: unset;
+		margin: unset;
+		font-size: unset;
+		margin: 0px -24px;
+		padding: 12px 24px;
+		scroll-padding: 0px 96px;
+	}
+
+	html.responsive .sectionTabs {
+		background: var(--gpBackground-DarkMedium);
+	}
+
+	html.responsive .sectionTabs:after,
+	html.responsive .apphub_sectionTabs:after {
+		content: "\00a0";
+	}
+
+	html.responsive .apphub_sectionTabs {
+		scroll-snap-align: start;
+		padding-bottom: 16px;
+	}
+
+
+	/* Items */
+	html.responsive .sectionTab,
+	html.responsive a.sectionTab,
+	html.responsive .apphub_sectionTab {
+		margin: unset;
+		float: unset;
+		height: unset;
+		padding: 8px 12px;
+		font: var(--gpText-BodyLarge);
+		border-radius: var(--gpCorner-Medium);
+		background: none;
+		background-color: var(--gpBackground-LightSofter);
+		transition: all 0.2s ease;
+	}
+
+	/* Hovers */
+	html.responsive .sectionTab:hover,
+	html.responsive a.sectionTab:hover,
+	html.responsive .apphub_sectionTab:hover {
+		background-color: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .apphub_sectionTab.active > span {
+		padding: unset;
+		border-radius: unset;
+		background: unset;
+	}
+
+	html.responsive .apphub_sectionTab.active:hover {
+		padding: 8px 12px;
+	}
+
+	/* Focus */
+	html.responsive .sectionTab.gpfocus,
+	html.responsive a.sectionTab.gpfocus,
+	html.responsive .apphub_sectionTab.gpfocus {
+		border-radius: 0px;
+		background-color: var(--gpBackground-LightHard);
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .sectionTab.gpfocus > span,
+	html.responsive a.sectionTab.gpfocus > span,
+	html.responsive .apphub_sectionTab.gpfocus > span {
+		color: white;
+	}
+
+	/* Active */
+	html.responsive .sectionTab.active,
+	html.responsive .apphub_sectionTab.active {
+		background: white;
+		color: black;
+	}
+
+	html.responsive .sectionTab.active > span,
+	html.responsive .apphub_sectionTab.active > span {
+		color: black;
+		height: unset;
+		padding: unset;
+		background: none;
+		line-height: unset;
+		transition: all 0.2s ease;
+	}
+
+	/* Hide tab select */
+	html.responsive .nonresponsive_hidden.responsive_tab_ctn {
+		display: none;
+	}
+
+
+
+
+
+
+
+
+
+
+
+}

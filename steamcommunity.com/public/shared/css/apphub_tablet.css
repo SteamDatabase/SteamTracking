@@ -1,0 +1,78 @@
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+
+	/* HUB CONTENT */
+	html.responsive .apphub_CardControls {
+		display: none;
+	}
+
+	/* App hub header */
+	html.responsive .apphub_HomeHeader {
+		padding-bottom: 0px;
+		margin-bottom: 24px;
+	}
+
+	html.responsive .apphub_HomeHeaderContent {
+		padding: var(--gpSpace-Gutter);
+		padding-bottom: 0px;
+		background-color: var(--gpBackground-DarkMedium);
+	}
+
+	html.responsive .apphub_HeaderTop {
+		padding: 0px;
+	}
+
+	html.responsive .apphub_AppName {
+		font: var(--gpText-HeadingLarge);
+		padding-bottom: 8px;
+	}
+
+	/* App hub background */
+	html.responsive .apphub_background {
+		background: none !important;
+	}
+
+	/* Filters */
+	html.responsive .apphub_SectionFilter {
+		background: none;
+		min-height: unset;
+		margin: 0px var(--gpSpace-Gutter);
+		padding: 24px 0px 0px 0px;
+	}
+
+	html.responsive .apphub_SectionFilterLabel {
+		float: unset;
+		padding: unset;
+		font: var(--gpText-BodyMedium);
+		text-transform: unset;
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .apphub_SectionFilter .learnMore {
+		padding: unset;
+		margin-left: auto;
+	}
+
+	/* Hide (?) on deck */
+	html.responsive .apphub_MostPopularLink {
+		display: none;
+	}
+
+
+
+
+	/* FORUMS */
+	html.responsive .apphub_Discussion_Content {
+		margin: 0px 24px;
+	}
+
+	html.responsive .leftcol {
+		max-width: unset;
+		margin: 0px var(--gpSpace-Gutter);
+	}
+
+	html.responsive .responsive_tab_control {
+		text-align: left;
+	}
+}

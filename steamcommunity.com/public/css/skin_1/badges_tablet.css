@@ -1,0 +1,248 @@
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+	/* GLOBAL */
+	html.responsive .game_cards_clear {
+		display: none;
+	}
+
+
+
+	/* CONTAINER */
+	html.responsive .badge_row.depressed {
+		box-shadow: unset;
+		border-radius: unset;
+		background: var(--gpBackground-DarkMedium);
+		padding: 16px;
+		border: none;
+
+		/* padding: 0px; */
+		/* background: none; */
+	}
+
+
+	/* Title */
+	html.responsive .badge_title {
+		font: var(--gpText-HeadingMedium);
+		font-weight: 500;
+	}
+
+	html.responsive .badge_title_rule {
+		display: none;
+	}
+
+	html.responsive .badge_row_inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+	}
+
+	html.responsive .badge_title_stats {
+		font-size: unset;
+		color: unset;
+		position: absolute;
+		top: 16px;
+		right: 16px;
+	}
+
+	html.responsive .badge_title_row {
+		padding: unset;
+		height: unset;
+	}
+
+
+	/* Badge */
+	html.responsive .gamecard_details {
+		padding: unset;
+	}
+
+	html.responsive .gamecard_details .badge_info {
+		border: 2px solid var(--gpBackground-LightMedium);
+		border-radius: unset;
+		max-width: unset;
+		padding: 10px;
+		margin: unset;
+		display: flex;
+		align-items: center;
+		column-gap: 12px;
+	}
+
+	html.responsive .badge_empty_circle {
+		float: unset;
+		margin: unset;
+		border-color: var(--gpStoreGrey);
+	}
+
+	html.responsive .badge_empty_right {
+		margin: unset;
+	}
+
+	html.responsive .badge_empty_name {
+		color: var(--gpStoreLightGrey);
+	}
+
+
+	/* Footer */
+	html.responsive .badge_detail_tasks.footer {
+		display: none;
+	}
+
+
+
+
+	/* CARDS */
+	html.responsive .badge_card_set_cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		column-gap: 16px;
+		row-gap: 32px;
+	}
+
+	html.responsive .badge_card_set_card {
+		margin: 0px;
+		width: unset;
+		padding: 0px;
+		/* background: var(--gpBackground-DarkSoft); */
+	}
+
+	html.responsive .game_card_ctn {
+		margin-bottom: 12px;
+		display: flex;
+		border-radius: var(--gpCorner-Large);
+		overflow: hidden;
+		box-shadow: var(--gpShadow-Small);
+		transition: box-shadow 0.4s ease;
+	}
+
+	html.responsive .game_card_ctn.gpfocus:not( .badge_card_set_card.unowned .game_card_ctn ) {
+		box-shadow: 0px 24px 32px 0px rgba(0,0,0,0.4);
+	}
+
+	html.responsive .badge_card_set_text {
+		color: unset;
+		margin: unset;
+	}
+
+	html.responsive .game_card_unowned_border {
+		display: none;
+	}
+
+	html.responsive .badge_card_set_card.unowned img.gamecard {
+		opacity: 0.3;
+	}
+
+	html.responsive .badge_card_set_card.unowned .badge_card_set_text {
+		opacity: 0.4;
+	}
+
+
+
+
+	/* TASKS */
+	html.responsive .badge_detail_tasks {
+		margin: unset;
+		padding: unset;
+		background: none;
+		display: flex;
+		flex-direction: column;
+		row-gap: 12px;
+		/* padding-top: 16px; */
+		/* border-top: 1px solid var(--gpBackground-LightSoft); */
+	}
+
+
+
+
+	/* FRIENDS */
+	html.responsive .badge_friends_have_earned {
+		padding: unset;
+	}
+
+	html.responsive .playerAvatar a {
+		display: flex;
+	}
+
+
+
+
+	/* CARDS TO COLLECT */
+	html.responsive .badge_cards_to_collect {
+		display: flex;
+		flex-direction: column;
+		row-gap: 6px;
+		padding-top: 16px;
+		border-top: 1px solid var(--gpBackground-LightSoft);
+		/* padding: 16px; */
+		/* background: var(--gpBackground-DarkSoft); */
+		/* margin-left: calc( 0px - var(--gpSpace-Gutter) ); */
+		/* margin-right: calc( 0px - var(--gpSpace-Gutter) ); */
+	}
+
+	html.responsive .gamecards_inventorylink {
+		padding: unset;
+		margin: unset;
+		display: flex;
+		gap: 6px;
+	}
+
+	html.responsive .badge_card_to_collect {
+		margin: unset;
+		padding: 12px 16px;
+		background-color: var(--gpBackground-LightSofter);
+		min-height: unset;
+		display: flex;
+		gap: 16px;
+		transition: background-color 0.2s ease;
+	}
+
+	html.responsive .badge_card_to_collect.gpfocus {
+		background-color: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .badge_card_set_unowned {
+		position: unset;
+		margin: unset;
+	}
+
+	html.responsive .badge_card_to_collect_info {
+		flex: auto;
+		padding: unset;
+		display: flex;
+		flex-direction: column;
+	}
+
+	html.responsive .badge_card_to_collect_header {
+		color: unset;
+		margin: unset;
+	}
+
+	html.responsive .badge_card_set_text,
+	html.responsive .badge_card_to_collect_info {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .badge_card_to_collect_links {
+		display: flex;
+		flex-direction: column;
+		row-gap: 6px;
+		position: absolute;
+		top: 16px;
+		right: 16px;
+	}
+
+	html.responsive .badge_card_to_collect_links > a {
+		margin: unset;
+	}
+
+
+
+	/* TEXT OVERRIDES */
+	html.responsive .badge_card_set_title {
+		font: var(--gpText-BodyLarge);
+		font-weight: 500;
+		color: white;
+	}
+
+
+}

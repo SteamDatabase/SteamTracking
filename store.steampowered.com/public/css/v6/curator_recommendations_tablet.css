@@ -1,0 +1,583 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #4e697d;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA670;
+	--gpBackground-LightHard: #93B8D480;
+	--gpBackground-LightHarder: #bad5ea80;
+
+	--gpBackground-DarkSofter: #0e141b33;
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 270px;
+	--gpDselectWidth: 320px;
+	--gpSidePanelWidth: 348px;
+	--gpGiftingPanelWidth: 280px;
+
+	/* Game capsule widths */
+	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 58px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+	/* Animation TODO: REMOVE THESE */
+	--gpTransition-Short: all 0.2s ease;
+	--gpTransition-Shorter: all 0.1s ease;
+}
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+	/* FRAMEWORK */
+
+	/* Text */
+	html.responsive body.v6 .section_title_ctn p {
+		color: var(--gpStoreLighterGrey);
+		margin-top: unset;
+	}
+
+	html.responsive .page_section.single_item {
+		margin-top: 12px;
+	}
+
+	html.responsive body.v6 h2 {
+		margin-bottom: 4px;
+	}
+
+
+	/* Sections */
+	html.responsive .page_section.single_item {
+		margin-top: 12px;
+	}
+
+
+	/* Backgound */
+	html.responsive #page_background_container {
+		background: none !important;
+	}
+
+
+
+
+	/* CURATOR HEADER */
+	html.responsive #curator_header_area_ctn_id .curator_header_ctn {
+		margin: 0px;
+	}
+
+
+	html.responsive .background_header_ctn {
+		display: none;
+	}
+
+	html.responsive .curator_header_ctn {
+		background-size: cover;
+	}
+
+	html.responsive .curator_header_ctn .curator_avatar_image {
+		padding: unset;
+		margin-top: unset;
+		width: 160px;
+	}
+
+	html.responsive .creatorhome .curator_avatar {
+		border-radius: 0px;
+	}
+
+	html.responsive .curator_header_ctn .curator_avatar_image a {
+		display: flex;
+		border-radius: var(--gpCorner-Large);
+		box-shadow: var(--gpShadow-Medium);
+		overflow: hidden;
+		box-shadow: var(--gpShadow-Medium);
+		transition: border-radius, 0.1s ease;
+	}
+
+	html.responsive .curator_header_ctn .curator_avatar_image a.gpfocus {
+		border-radius: 0px;
+	}
+
+	html.responsive .curator_header_ctn .curator_avatar {
+		box-shadow: unset;
+		width: 100%;
+	}
+
+	html.responsive .curator_header_area_ctn {
+		height: unset;
+		margin-bottom: 0px;
+	}
+
+	html.responsive body.v6 .page_content.curator_header_ctn.creator_announcement_browse_adjustment {
+		margin: 0px;
+	}
+
+	html.responsive .curator_header_ctn .header_area {
+		height: unset;
+		padding: var(--gpSpace-Gutter);
+		margin-bottom: unset;
+		gap: var(--gpSpace-Gutter);
+		align-items: center;
+	}
+
+	html.responsive .curator_header_ctn .curator_details {
+		text-shadow: unset;
+		overflow: visible;
+	}
+
+	html.responsive #curator_header_area_ctn_id .curator_header_ctn {
+		background-position-x: center;
+	}
+
+
+	/* Social media */
+	html.responsive .socialmedia_accounts {
+		display: flex;
+		column: 2px;
+		font: var(--gpText-BodyMedium);
+		margin: 2px 0px;
+	}
+
+	html.responsive .socialmedia_accounts > * {
+		background: unset;
+		padding: 0px;
+	}
+
+	html.responsive .socialmedia_accounts a {
+		align-items: center;
+		padding: 4px 8px;
+		border-radius: var(--gpCorner-Medium);
+		margin: 0px;
+		transition: var(--gpTransition-Shorter);
+	}
+
+	html.responsive .socialmedia_accounts a.gpfocus {
+		color: black;
+		background: white;
+		box-shadow: var(--gpShadow-Medium);
+		border-radius: 0px;
+	}
+
+	html.responsive .socialmedia_accounts a img {
+		transition: var(--gpTransition-Shorter);
+	}
+
+	html.responsive .socialmedia_accounts a.gpfocus img {
+		filter: brightness(0);
+	}
+
+	html.responsive .socialmedia_accounts a:hover:not(.gpfocus) {
+		color: unset;
+		background: #FFFFFF40;
+	}
+
+	html.responsive .follow_controls .follow_btn {
+		margin-right: unset;
+	}
+
+	html.responsive .follow_controls,
+	html.responsive .ignore_controls.ignored {
+		overflow: visible;
+		background: var(--gpBackground-DarkSoft);
+		align-items: center;
+		border-radius: var(--gpCorner-Large);
+		backdrop-filter: blur(24px);
+	}
+
+	html.responsive .follow_btn_stats {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		padding: 0px 12px;
+	}
+
+	html.responsive .num_followers {
+		font-size: unset;
+	}
+
+	html.responsive .num_followers_text {
+		text-transform: unset;
+		font-size: unset;
+		margin-top: unset;
+	}
+
+	/* DLC header */
+	html.responsive body.dlc_curator .curator_header_ctn .header_area {
+		/* padding: var(--gpSpace-Gutter) 0px; */
+		/* margin-bottom: var(--gpSpace-Gutter); */
+		border-top: 1px solid var(--gpBackground-LightSoft);
+	}
+
+	html.responsive body.dlc_curator .curator_header_ctn .curator_avatar_image {
+		width: unset;
+	}
+
+
+
+
+
+	/* SPECIALS */
+	html.responsive .curator .type_four_row .store_capsule {
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .tags_list_container.carousel_container.paging_capsules .curator_featured_tags {
+		flex-direction: row;
+	}
+
+	html.responsive .tags_list_container.carousel_container.paging_capsules .curator_featured_tags > * {
+		width: auto;
+	}
+
+	html.responsive .v6.creatorhome .store_capsule,
+	html.responsive .v6.dlc_curator .store_capsule {
+		height: 17.6vw;
+		background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
+	}
+
+	html.responsive .v6.creatorhome .store_capsule .discount_block,
+	html.responsive .v6.dlc_curator .store_capsule .discount_block {
+		right: 4px;
+		bottom: 4px;
+	}
+
+
+
+
+
+
+	/* COMING SOON GAME AND SCREENSHOTS MODULE */
+	html.responsive .curator_featured {
+		width: 100%;
+		background: var(--gpBackground-DarkMedium);
+		padding: var(--gpSpace-Gap);
+		margin: 8px 0px 0px 0px;
+		box-sizing: border-box;
+	}
+
+	html.responsive .curator_featured > div {
+		border-radius: 0px;
+		padding: 0px;
+		background: none;
+		overflow: hidden;
+		gap: var(--gpSpace-Gap);
+		margin-top: 24px;
+		box-shadow: none;
+	}
+
+	html.responsive .curator_featured > div:first-child {
+		margin-top: unset;
+	}
+
+	html.responsive .curator_featured .contents {
+		display: unset;
+		flex-shrink: unset;
+		margin-left: 0px;
+	}
+
+	html.responsive .curator_featured .capsule {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		margin-right: 0px !important;
+		flex-shrink: 2;
+	}
+
+	html.responsive .curator_featured .capsule a {
+		display: flex;
+		box-shadow: var(--gpShadow-Medium);
+		position: relative;
+	}
+
+	html.responsive .curator_featured .capsule a .ds_steam_deck_compat {
+		background-color: var(--gpBackground-DarkMedium);
+		backdrop-filter: blur(24px);
+	}
+
+	html.responsive .curator_featured .curator_review {
+		font: var(--gpText-BodyMedium);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 6; /* number of lines to show */
+		-webkit-box-orient: vertical;
+	}
+
+	html.responsive .curator_featured .curator_review .review_details {
+		height: unset;
+		display: flex;
+	}
+
+	html.responsive .curator_featured .curator_review_date {
+		font: var(--gpText-BodyMedium);
+		padding-bottom: 4px;
+	}
+
+	html.responsive .curator_featured .curator_review .app_platforms {
+		display: none;
+	}
+
+	html.responsive .creatorhome .curator_featured .screenshots > div {
+		box-shadow: unset;
+		border: 1px solid transparent;
+		box-sizing: border-box;
+	}
+
+
+
+
+	/* THE LATEST 2 COL TILES */
+	html.responsive #featured_list_2 {
+		margin-top: 24px;
+	}
+
+	html.responsive .list_capsules {
+		display: flex;
+		gap: 0px;
+		width: auto !important;
+	}
+
+
+
+
+	/* LIST AUTHORS */
+	html.responsive .page_section.type_list_squares {
+		margin-top: 16px;
+	}
+
+	html.responsive .type_list_squares .carousel_container .carousel_items:not(.no_paging) > * {
+		margin-right: 0px;
+		width: auto;
+	}
+
+	html.reposnsive .lists_more_container {
+		height: unset;
+
+	}
+
+	html.responsive .lists_more_container .item {
+		box-shadow: var(--gpShadow-Medium);
+		width: calc((100vw - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
+		min-width: calc((100vw - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
+		box-sizing: border-box;
+		height: 22.5vw;
+		overflow: visible;
+
+	}
+
+	html.responsive .lists_more_container .item > div {
+		padding-top: unset;
+	}
+
+	html.responsive .lists_more_container .item .curator_list_name {
+		position: absolute;
+		top: 23vw;
+	}
+
+	html.responsive .lists_more_container .item > div div {
+		font: var(--gpText-BodyLarge);
+		background: none;
+	}
+
+	html.responsive .lists_more_container .item .overlay {
+		display: none;
+	}
+
+	html.responsive .lists_more_container .item .bg {
+		filter: unset;
+		border-radius: var(--gpCorner-Large);
+		overflow: hidden;
+	}
+
+	html.responsive .lists_more_container .item:hover .bg {
+		transform: unset;
+		filter: unset;
+	}
+
+
+
+
+	/* TABBED CONTAINER */
+	html.responsive .page_content_ctn.tabbed_ctn {
+		margin-top: 24px;
+	}
+
+	html.responsive body.v6.creatorhome .page_content.browse_reviews {
+		background: unset;
+		padding-top: unset;
+	}
+
+	html.responsive .browse_ctn_background {
+		background: none;
+	}
+
+	html.responsive .browse_container {
+		padding-top: unset;
+	}
+
+	html.responsive .browse_content .recommendation {
+		border: none;
+		padding: 12px;
+		margin-bottom: 4px;
+		background: var(--gpBackground-DarkSoft);
+		transition: var(--gpTransition-Short);
+		gap: 16px;
+	}
+
+	html.responsive .browse_content .recommendation:hover,
+	html.responsive .browse_content .recommendation.gpfocus {
+		background: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .browse_content .recommendation .recommendation_midcol {
+		padding: 0px;
+	}
+
+	html.responsive .browse_content .recommendation .platform_img {
+		display: none;
+	}
+
+	html.responsive .recommendation_desc:before,
+	html.responsive .recommendation_desc:after {
+		display: none;
+	}
+
+	html.responsive .browse_content .recommendation .recommendation_type_ctn {
+		text-transform: unset;
+		letter-spacing: unset;
+	}
+
+	html.responsive .browse_content .recommendation .recommendation_type_ctn .color_created {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+		color: white;
+	}
+
+	html.responsive .browse_content .recommendation .recommendation_type_ctn .curator_review_date {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .browse_content .recommendation .recommendation_desc {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLightestGrey);
+		line-height: 1.2;
+	}
+
+	html.responsive .curator #RecommendationsRows .store_capsule.price_inline .discount_block {
+		left: 336px;
+		display: flex;
+		gap: unset;
+		min-width: unset;
+	}
+
+	html.responsive .browse_content .recommendation .recommendation_midcol {
+		height: unset;
+		max-height: unset;
+	}
+
+	html.responsive .browse_content .recommendation .store_capsule {
+		padding: 0px 4px;
+		background: none;
+		width: 320px;
+		padding: 0px !important;
+	}
+
+	html.responsive .browse_content .recommendation .store_capsule .ds_steam_deck_compat {
+		background-color: var(--gpBackground-DarkMedium);
+		backdrop-filter: blur(24px);
+	}
+
+	html.responsive .store_capsule.price_inline .discount_block .discount_prices {
+		background: none;
+		padding-left: 4px;
+	}
+
+	html.responsive body.v6 .page_content.browse_reviews {
+		background: none;
+		padding-top: unset;
+	}
+
+
+
+
+
+	/* DLC */
+	html.responsive .dlc_curator h4 {
+		font: var(--gpText-BodySmall);
+		font-weight: 400;
+		letter-spacing: 0.5px;
+		text-shadow: unset;
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .page_content_ctn.dlc_associated_franchise {
+		background: none;
+		padding-top: unset;
+	}
+
+
+
+
+}

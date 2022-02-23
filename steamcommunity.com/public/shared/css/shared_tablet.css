@@ -1,0 +1,975 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #4e697d;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA670;
+	--gpBackground-LightHard: #93B8D480;
+	--gpBackground-LightHarder: #bad5ea80;
+
+	--gpBackground-DarkSofter: #0e141b33;
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 40vw;
+	--gpPurchaseOptionsWidth: 270px;
+	--gpDselectWidth: 320px;
+	--gpSidePanelWidth: 348px;
+	--gpGiftingPanelWidth: 280px;
+
+	/* Game capsule widths */
+	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 58px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+	/* Animation TODO: REMOVE THESE */
+	--gpTransition-Short: all 0.2s ease;
+	--gpTransition-Shorter: all 0.1s ease;
+}
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+
+	/* PAGE SETUP */
+
+	/* Required to pad scroll on up and down navigation bringing entire element plus a visual queue of the content above or below */
+	html.responsive {
+		height: 100%;
+		scroll-padding-bottom: 80px;
+		scroll-padding-top: 80px;
+	}
+
+
+	/* Margin at top of page */
+	html.responsive .responsive_page_template_content {
+		padding-bottom: unset !important;
+	}
+
+
+	/* Page body and framework */
+	html.responsive body.v6 .page_content {
+		margin: 0px var(--gpSpace-Gutter);
+	}
+
+
+	/* Hide top spacer */
+	html.responsive .responsive_store_nav_ctn_spacer {
+		display: none;
+	}
+
+
+	/* Hide webkit scrollbar */
+	html.responsive ::-webkit-scrollbar {
+		display: none;
+	}
+
+
+	/* Hide outline */
+	html.responsive * :focus {
+		outline: none;
+	}
+
+
+	/* Hide global game hover */
+	html.responsive #global_hover {
+		display: none !important;
+	}
+
+
+	/* TEMP Temporarily hide performance links while styling */
+	html.responsive .perf_timing_area {
+		display: none;
+	}
+
+
+	/* Background */
+	html.responsive body.v6:not( .sale_page_background ) {
+		background: var(--gpGradient-StoreBackground);
+		background-attachment: fixed;
+	}
+
+	html.responsive body.login {
+		background: var(--gpGradient-StoreBackground) !important;
+		background-attachment: fixed !important;
+	}
+
+
+
+
+
+
+	/* TEXT */
+
+	html.responsive body.v6 h2.pageheader {
+		font: var(--gpText-HeadingLarge);
+		font-weight: 700;
+		text-shadow: unset;
+		text-transform: unset;
+		margin-top: 0px !important; /* !important - Overriding important fromt contenthub css* */
+		padding: unset;
+	}
+
+	html.responsive body.v6 h2 {
+		font: var(--gpText-BodySmall);
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		margin-bottom: 4px;
+	}
+
+	html.responsive body.v6 {
+		font: var(--gpText-BodyLarge);
+		font-weight: 400;
+		color: var(--gpStoreLightestGrey);
+	}
+
+
+
+
+
+
+	/* PILL TAB MENU */
+
+	html.responsive .pill_tab_menu_ctn {
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing: content-box;
+		flex-wrap: nowrap;
+		white-space: nowrap;
+		scroll-padding: 0 48px;
+		padding: 12px 16px;
+		margin: 0 auto;
+		-webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+	}
+
+    html.responsive .tablet_header_menu_ctn {
+        height: var( --gpStoreMenuHeight );
+        display: flex;
+		justify-content: space-between;
+		align-items: center;
+    }
+
+	html.responsive .pill_tab_menu_item {
+		padding: 8px 16px;
+		font: var(--gpText-BodySmall);
+		color: var(--gpStoreLightestGrey);
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		border-radius: 80px;
+		transition: all 0.2s ease;
+		display: inline-block;
+	}
+
+    html.responsive .tablet_header_glyph {
+        width: 32px;
+		margin: 0 24px;
+    }
+
+	html.responsive .pill_tab_menu_item:hover,
+	html.responsive .pill_tab_menu_item:active,
+	html.responsive .pill_tab_menu_item.active{
+		background-color: var(--gpBackground-LightMedium);
+		color: white;
+	}
+
+	html.responsive .pill_tab_menu_item:focus,
+	html.responsive .pill_tab_menu_item.gpfocus {
+		background-color: white;
+		color: var(--gpSystemDarkestGrey);
+		box-shadow: var(--gpShadow-Medium);
+		outline: none;
+	}
+
+	/* Cart menu item */
+	html.responsive #cart_pill_tab_menu_item {
+		padding-right: 6px;
+	}
+
+	/* Badging */
+	html.responsive #cart_pill_tab_menu_item b {
+		background-color: var(--gpColor-Green);
+		border-radius: 16px;
+		padding: 4px 12px;
+		color: white;
+	}
+
+	html.responsive .pill_tab_menu_item .pill_tab_menu_item_count {
+		opacity: 0.6;
+	}
+
+
+
+	/* INPUT FIELDS */
+
+	/* Wrappers */
+	html.responsive input.gray_bevel,
+	html.responsive textarea.gray_bevel,
+	html.responsive .gray_bevel,
+	html.responsive .commentthread_comment_edit_textarea_ctn {
+		background-color: unset;
+		border-radius: unset;
+		border: unset;
+		box-shadow: unset;
+		color: unset;
+		margin: unset;
+		outline: unset;
+		padding: unset;
+		height: unset;
+	}
+
+	/* Inputs and textareas */
+    html.responsive input.text,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text,
+	html.responsive textarea,
+	html.responsive #review_create .input_box,
+	html.responsive .gray_bevel input,
+	html.responsive .gray_bevel textarea,
+	html.responsive .gamepad_input,
+	html.responsive .DialogInputPlaceholder {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 8px 10px;
+		box-shadow: unset;
+		border: unset;
+		margin: unset;
+	}
+
+	html.responsive input.text::placeholder,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text::placeholder,
+	html.responsive textarea::placeholder,
+	html.responsive #review_create .input_box::placeholder,
+	html.responsive .gray_bevel input::placeholder,
+	html.responsive .gray_bevel textarea::placeholder,
+	html.responsive .gamepad_input::placeholder,
+	html.responsive .DialogInputPlaceholder::placeholder {
+		color: rgba(255, 255, 255, 0.5);
+		transition: color 0.2s ease;
+	}
+
+    html.responsive input.text:hover,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text:hover,
+	html.responsive textarea:hover,
+	html.responsive #review_create .input_box:hover,
+	html.responsive .gray_bevel input:hover,
+	html.responsive .gray_bevel textarea:hover,
+	html.responsive .gamepad_input:hover,
+	html.responsive .DialogInputPlaceholder:hover {
+		background-color: var(--gpBackground-LightHard);
+	}
+
+    html.responsive input.text:focus,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text:focus,
+	html.responsive textarea:focus,
+	html.responsive #review_create .input_box:focus,
+	html.responsive .gray_bevel input:focus,
+	html.responsive .gray_bevel textarea:focus,
+	html.responsive .gamepad_input:focus,
+	html.responsive .DialogInputPlaceholder:focus {
+		background-color: white;
+        color: black;
+	}
+
+	html.responsive input.text.gpfocus,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text.gpfocus,
+	html.responsive textarea.gpfocus,
+	html.responsive #review_create .input_box.gpfocus,
+	html.responsive .gray_bevel input.gpfocus,
+	html.responsive .gray_bevel textarea.gpfocus,
+	html.responsive .gamepad_input.gpfocus,
+	html.responsive .DialogInputPlaceholder.gpfocus {
+		border-radius: 0px;
+	}
+
+	html.responsive input.text.gpfocus::placeholder,
+	html.responsive .wallet_code_input_ctn .redeem_input_box_text.gpfocus::placeholder,
+	html.responsive textarea.gpfocus::placeholder,
+	html.responsive #review_create .input_box.gpfocus::placeholder,
+	html.responsive .gray_bevel input.gpfocus::placeholder,
+	html.responsive .gray_bevel textarea.gpfocus::placeholder,
+	html.responsive .gamepad_input.gpfocus::placeholder,
+	html.responsive .DialogInputPlaceholder.gpfocus::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	/* TODO: unify input styling */
+
+
+
+
+	/* DROPDOWN DSELECTS */
+
+	/* Style dselect container */
+	html.responsive .dselect_container a.trigger,
+	html.responsive .dselect_container a.activetrigger {
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		transition: all 0.1s ease;
+		padding: 10px 12px;
+		border: unset;
+		box-shadow: unset;
+	}
+
+	html.responsive .dselect_container a.trigger {
+        background: var(--gpBackground-LightMedium);
+		color: white;
+    }
+
+	html.responsive .dselect_container a.trigger:hover {
+        background: var(--gpBackground-LightHard);
+    }
+
+	html.responsive .dselect_container a.trigger.gpfocus {
+		background: var(--gpBackground-LightHard);
+		border-radius: 0px;
+	}
+
+	html.responsive .dselect_container a.trigger:active,
+	html.responsive .dselect_container a.trigger.activetrigger {
+        background: white;
+		color: black;
+		border-radius: 0px;
+    }
+
+	/* Style drop container */
+	html.responsive .dropcontainer {
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .dropcontainer ul {
+		line-height: unset;
+		box-shadow: var(--gpShadow-Large);
+		max-height: 80vh !important;
+		overflow-y: scroll;
+		scroll-snap-type: y mandatory;
+		scroll-padding-top: 40px;
+		scroll-padding-bottom: 40px;
+	}
+
+	/* Wrap all list content text */
+	html.responsive .dropcontainer li > * {
+		white-space: normal;
+	}
+
+	html.responsive .inactive_selection,
+	html.responsive .highlighted_selection {
+		padding: 10px 12px;
+	}
+
+	html.responsive .dselect_container .dropcontainer a.inactive_selection {
+		background: var(--gpStoreDarkGrey);
+		color: white;
+	}
+
+	html.responsive .dselect_container .dropcontainer a.highlighted_selection {
+		background: #44627a;
+		color: white;
+	}
+
+	html.responsive .dselect_container .dropcontainer a.gpfocus {
+		background: white;
+		color: black;
+	}
+
+
+
+	/* DROPDOWN FILTER SELECTS */
+	html.responsive div.filterselect {
+		height: unset;
+		margin: unset;
+		padding: 6px 12px;
+		font: var(--gpText-BodyMedium);
+		text-transform: unset;
+		background: var(--gpBackground-LightMedium);
+	}
+
+	html.responsive div.filterselect .filterselect_arrow,
+	html.responsive div.filterselect #filterselect_arrow {
+		top: 50%;
+		transform: translateY(-50%);
+		right: 8px;
+	}
+
+	html.responsive div.filterselect div.option,
+	html.responsive div.filterselect_options div.option {
+		font: var(--gpText-BodyMedium);
+		text-transform: unset;
+		padding: unset;
+		height: unset;
+		color: white;
+	}
+
+	html.responsive .filterselect_subtext {
+		font-size: unset;
+	}
+
+
+
+
+	/* MODAL */
+	html.responsive .newmodal {
+		min-width: 64vw !important;
+		box-shadow: var(--gpShadow-XLarge);
+		max-width: 600px;
+		background: var(--gpSystemDarkestGrey);
+		border: 2px solid var(--gpSystemDarkerGrey);
+	}
+
+	html.responsive .modal_top_bar {
+		display: none;
+	}
+
+	html.responsive .newmodal_header {
+		font: var(--gpText-HeadingMedium);
+		text-transform: unset;
+		letter-spacing: unset;
+		font-weight: 500;
+	}
+
+	html.responsive .newmodal_header .title_text {
+		padding: 32px 32px 0px 32px;
+	}
+
+	html.responsive .newmodal_content {
+		padding: 16px 32px 32px 32px;
+	}
+
+
+
+
+	/* OVERLAY */
+	html.responsive .responsive_page_content_overlay {
+		background: rgba( 0, 0, 0, 0.8);
+	}
+
+	html.responsive .newmodal_background {
+		background: rgba( 0, 0, 0, 0.8);
+	}
+
+    html.responsive .dselect_overlay {
+        position: fixed;
+        z-index: 400;
+        background: rgba( 0, 0, 0, 0.8);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    html.responsive .dselect_scroll_disable {
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+
+
+	/* LIVE CONTENT */
+	html.responsive body.v6 .broadcast_live_stream_icon {
+		height: unset;
+		box-shadow: unset;
+		font-size: 11px;
+		font-weight: 700;
+		border-radius: var(--gpCorner-Medium);
+		opacity: 0.9;
+		color: #FFFFFFdd;
+	}
+
+
+
+
+	/* BREADCRUMBS */
+	html.responsive .breadcrumbs {
+		font: var(--gpText-BodyMedium);
+		margin-bottom: 16px;
+		color: var(--gpStoreLightGrey);
+		padding-top: var(--gpSpace-Gutter);
+	}
+
+	html.responsive .breadcrumbs a {
+		background-color: var(--gpBackground-LightMedium);
+		color: var(--gpStoreLightestGrey);
+		padding: 4px 10px 4px 10px;
+		clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%, 4px 50%);
+		margin-right: -6px;
+		transition: all 0.1s ease;
+	}
+
+	html.responsive .breadcrumbs a:first-child {
+		clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%);
+	}
+
+	html.responsive .breadcrumbs a:hover {
+		background-color: var(--gpBackground-LightHard);
+		color: white;
+	}
+
+	html.responsive .breadcrumbs a.gpfocus {
+		background-color: white;
+		color: black;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .breadcrumb_separator {
+		display: none;
+	}
+
+	html.responsive .breadcrumb_current_page {
+		margin-left: 8px;
+		color: var(--gpStoreLighterGrey);
+	}
+
+
+
+
+	/* SLIDERS */
+	html.responsive .tab_controls {
+		padding: 8px 12px;
+		margin-bottom: unset;
+		align-items: center;
+	}
+
+	html.responsive .tab_control {
+		padding: 0px;
+		align-items: center;
+		border-radius: var(--gpCorner-Medium);
+		gap: 12px;
+	}
+
+	html.responsive .range_container {
+		align-items: center;
+		gap: 12px;
+		padding: 4px 8px;
+		transition: background-color 0.2s ease;
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive .range_container:hover {
+		background-color: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .range_container.gpfocus {
+		background-color: var(--gpBackground-LightSoft);
+		border-radius: 0px;
+	}
+
+	html.responsive .range_container > div {
+		margin-left: unset;
+	}
+
+	html.responsive .range_display {
+		min-width: unset;
+	}
+
+	html.responsive .range_input {
+		padding: 8px 4px;
+		margin: unset;
+	}
+
+
+
+	/* html.responsive .range_input::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		height: 10px;
+		width: 10px;
+		outline: 8px solid white;
+		outline-offset: -1px;
+		border-radius: 50px;
+		background: #ffffff;
+		cursor: pointer;
+		margin-top: -2px;
+		box-shadow: 0px 4px 8px 6px rgba( 0, 0, 0, 0.4), 0px 0px 1px 7px rgba( 0, 0, 0, 0.2);
+	}
+
+	html.responsive .range_input::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 6px;
+		cursor: pointer;
+		background: var(--gpColor-Blue);
+		border-radius: 0px;
+	}
+
+	html.responsive .range_input.gpfocus::-webkit-slider-thumb {
+		background: var(--gpColor-Blue);
+	} */
+
+	html.responsive .tab_check_control input[type=checkbox] {
+		vertical-align: unset;
+	}
+
+	html.responsive .GenericConfirmDialog .DialogBodyText {
+		margin-bottom: unset;
+	}
+
+
+
+
+	/* RIGHT THIRD PANEL */
+	html.responsive .responsive_local_menu_tab.active {
+		background: unset;
+		width: unset;
+		height: unset;
+		top: unset;
+
+		top: 20px;
+		right: 16px;
+		box-shadow: unset;
+		box-shadow: inset 0px 0px 0px 1px rgba( 255 , 255 , 255 , 0.08);
+		background-color: var(--gpBackground-DarkSoft);
+		backdrop-filter: blur(32px);
+		border-radius: 40px;
+		color: var(--gpStoreLightestGrey);
+		font: var(--gpText-BodySmall);
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		padding: 18px 40px 18px 40px;
+
+		background:
+			no-repeat 8px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/shared_button_y.svg'),
+			no-repeat 40px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/Rows.svg');
+
+		/* TODO - Reconsider how we display on screen glyphs */
+		/* display: none; */
+	}
+
+	/* Setting responsive_page_menu_ctn display to none to exlude hidden elements from focus navigation */
+	html.responsive .responsive_page_frame.no_header.localmenu_active .responsive_page_menu_ctn {
+		display: block;
+		width: var(--gpSidePanelWidth);
+	}
+
+	html.responsive .responsive_page_frame.no_header .responsive_page_menu_ctn {
+		display: none;
+	}
+
+
+
+
+}
+
+
+
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+    .btn_green_white_innerfade,
+    .btn_blue_white_innerfade,
+    .btn_darkblue_white_innerfade,
+    .btn_grey_white_innerfade,
+    .btn_grey_grey,
+    .btn_grey_grey_outer_bevel,
+    .btn_grey_black,
+    .btn_black,
+    .btnv6_blue_hoverfade,
+    .btnv6_lightblue_blue,
+    .btnv6_blue_blue_innerfade,
+    .btnv6_green_white_innerfade,
+    .btnv6_grey_black,
+    .btnv6_white_transparent,
+    .btn_darkred_white_innerfade,
+    .btn_green_steamui,
+    .btn_grey_steamui,
+    .btn_blue_steamui {
+        transition: all 0.1s ease;
+        text-align: center;
+    }
+
+
+
+    /* RESET */
+    .btn_small_thin,
+    .btn_small,
+    .btn_uppercase,
+    .btn_small_tall,
+    .btn_border_2px,
+    .btn_medium {
+        border-radius: var(--gpCorner-Medium);
+        border: unset;
+    }
+
+    /* Set 2 sizes */
+    .btn_small_thin,
+    .btn_small_tall,
+    .btn_small {
+        padding: 6px 12px;
+    }
+
+    .btn_medium {
+        padding: 10px 20px;
+    }
+
+    /* Unify fonts */
+    .btn_small_thin span,
+    .btn_uppercase span,
+    .btn_small span,
+	.btn_small_tall span {
+        font: var(--gpText-BodyMedium);
+    }
+
+    .btn_medium span,
+    .btn_border_2px span,
+    .btn_medium span {
+        font: var(--gpText-BodyLarge);
+    }
+
+    .btn_small_thin span,
+    .btn_small span,
+    .btn_uppercase span,
+    .btn_medium span,
+    .btn_border_2px span,
+    .btn_medium span,
+	.btn_small_tall span {
+        text-transform: unset;
+        padding: unset;
+        background: unset !important;
+        box-shadow: unset !important;
+        text-shadow: none !important;
+        border: unset !important;
+        text-align: center;
+		/* transition: all 1s ease; */
+    }
+
+    .inner_bevel {
+        box-shadow: unset;
+    }
+
+
+
+
+    /* PRIMARY */
+
+    /* Green */
+    .btn_green_white_innerfade,
+    .btnv6_green_white_innerfade,
+    .btn_green_steamui {
+        color: white !important;
+        background: var(--gpColor-Green);
+        box-shadow: var(--gpShadow-Medium);
+    }
+
+    .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        background: var(--gpColor-GreenHi) !important;
+    }
+
+    .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus {
+        background: white !important;
+        color: black !important;
+        border-radius: 0px;
+    }
+
+	.btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img {
+        filter: brightness(0);
+    }
+
+    /* Blue */
+    .btn_blue_steamui,
+    .btn_blue_white_innerfade,
+    .btnv6_lightblue_blue {
+        color: white !important;
+        background: var(--gpColor-Blue);
+        box-shadow: var(--gpShadow-Medium);
+    }
+
+    .btn_blue_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        background: var(--gpColor-BlueHi);
+    }
+
+    .btn_blue_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus {
+        background: white;
+        color: black !important;
+        border-radius: 0px;
+    }
+
+	.btn_blue_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img {
+        filter: brightness(0);
+    }
+
+    /* Error */
+    .btn_darkred_white_innerfade {
+        color: white !important;
+        background: var(--gpColor-Red);
+        box-shadow: var(--gpShadow-Medium);
+    }
+
+    .btn_darkred_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        color: white;
+        background: var(--gpColor-RedHi) !important;
+    }
+
+    .btn_darkred_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus {
+        color: var(--gpColor-Red);
+        background: white;
+    }
+
+
+
+
+    /* SECONDARY */
+    .btn_grey_steamui,
+    .btnv6_grey_black,
+    .btnv6_blue_hoverfade,
+    .btn_grey_white_innerfade,
+    .btn_grey_grey,
+    .btn_grey_grey_outer_bevel,
+    .btn_black,
+    .btn_grey_black,
+    .btnv6_blue_blue_innerfade,
+    .btn_darkblue_white_innerfade {
+        color: white !important;
+        background: var(--gpBackground-LightMedium);
+    }
+
+    .btn_grey_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_grey_grey:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+    .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        color: white !important;
+        background: var(--gpBackground-LightHard) !important;
+    }
+
+    .btn_grey_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_grey_grey:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus,
+    .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus {
+        color: black !important;
+        background: white !important;
+        border-radius: 0px;
+    }
+
+	.btn_grey_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_grey_grey:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img,
+    .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active).gpfocus img {
+        filter: brightness(0) !important;
+    }
+
+
+
+
+    /* GHOST */
+    .btnv6_white_transparent {
+        border: 1px solid var(--gpBackground-LightHard);
+        border-radius: var(--gpCorner-Large);
+    }
+
+    .btnv6_white_transparent.btn_small_thin,
+    .btnv6_white_transparent.btn_small,
+    .btnv6_white_transparent.btn_small_tall {
+        padding: 5px 11px;
+    }
+
+    .btnv6_white_transparent.btn_medium {
+        padding: 9px 19px;
+    }
+
+    .btnv6_white_transparent:hover:not(.btn_disabled):not(:disabled) {
+        border: 1px solid white;
+    }
+
+	.btnv6_white_transparent.gpfocus:not(.btn_disabled):not(:disabled) {
+		border-radius: 0px;
+		background: white;
+		border-color: transparent;
+    }
+
+	.btnv6_white_transparent.gpfocus:not(.btn_disabled):not(:disabled) span {
+		color: black;
+    }
+
+}

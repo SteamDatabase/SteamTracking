@@ -1,0 +1,246 @@
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+
+	/* RESPONSIVE NAVIGATION */
+	html.responsive .responsive_tab_control {
+		display: none !important;
+	}
+
+
+
+	/* SEARCH AND FILTERS */
+	html.responsive #gameslist_controls {
+		margin-bottom: 16px;
+		padding: 0px;
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive #gameslist_controls .filter_label {
+		display: none;
+	}
+
+	html.responsive .gray_bevel input,
+	html.responsive .gray_bevel input::placeholder {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .games_list {
+		padding-top: 16px !important;
+	}
+
+	html.responsive .filter_label {
+		margin-right: 4px;
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .sort_options {
+		margin: unset;
+		color: var(--gpStoreLighterGrey);
+		display: flex;
+   		align-items: center;
+    	column-gap: 4px;
+	}
+
+	html.responsive .sort_options_spacer {
+		display: none;
+	}
+
+	html.responsive .sort_options a,
+	html.responsive .sort_options span {
+		color: var(--gpStoreLighterGrey);
+		text-decoration: unset;
+		padding: 8px 12px;
+		border-radius: var(--gpCorner-Medium);
+		transition: all 0.2s ease;
+	}
+
+	html.responsive .sort_options .sort_options_label {
+		margin-right: 8px;
+	}
+
+	html.responsive .sort_options a {
+		background: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .sort_options a:hover {
+		background: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .sort_options a.gpfocus {
+		border-radius: 0px;
+		background: white;
+		color: black;
+	}
+
+	html.responsive .sort_options span {
+		background: var(--gpBackground-LightSoft);
+		color: white;
+	}
+
+	/* Hide common filter on Deck */
+	html.responsive .common_filter_ctn {
+		display: none;
+	}
+
+
+
+
+	/* GAME LIST */
+	html.responsive #games_list_rows {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	html.responsive .gameListRow {
+		background-color: var(--gpBackground-LightSoft);
+		margin: unset;
+		transition: background-color 0.2s ease;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		padding: 10px 12px;
+		overflow: unset;
+		padding-right: 24px;
+	}
+
+	html.responsive .gameListRow.gpfocus {
+		/* background-color: var(--gpBackground-DarkMedium); */
+	}
+
+	html.responsive .gameListRowLogo {
+		width: 220px;
+		margin: unset;
+		float: unset;
+	}
+
+	html.responsive .gameListRowLogo a {
+		display: flex;
+		margin: unset;
+		width: 100%;
+		float: unset;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .gameListRowLogo img {
+		max-height: 98px;
+	}
+
+	html.responsive .gameListRowItem {
+		padding: unset;
+		height: unset;
+		flex: auto;
+	}
+
+	html.responsive .bottom_controls {
+		gap: 6px;
+		margin: 4px 0px 0px 0px;
+		opacity: 0;
+		transition: opacity 0.2s ease 0.1s;
+	}
+
+	html.responsive .gameListRow:focus-within .bottom_controls {
+		opacity: 1;
+	}
+
+	html.responsive .bottom_controls > * {
+		margin: unset;
+		font: var(--gpText-BodyMedium);
+		background-color: var(--gpBackground-LightMedium);
+		padding: 6px 8px;
+		transition: all 0.2s ease;
+		color: white;
+	}
+
+	html.responsive .bottom_controls > * .menu_ico {
+		display: none;
+	}
+
+	html.responsive .bottom_controls > * .menuarrow {
+		padding-left: 4px;
+	}
+
+	html.responsive .bottom_controls > *:hover {
+		color: white;
+		background-color: var(--gpBackground-LightHard);
+	}
+
+	html.responsive .bottom_controls > *.gpfocus {
+		background: white;
+		color: black;
+		border-radius: 0px;
+	}
+
+	html.responsive .gameListRowItemName {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+	}
+
+	html.responsive h5.hours_played {
+		font: var(--gpText-BodySmall);
+		color: var(--gpStoreLighterGrey);
+		height: unset;
+	}
+
+	/* Achievements */
+	html.responsive .recentAchievements {
+		font: var(--gpText-BodySmall);
+		color: var(--gpStoreLighterGrey);
+		text-align: right;
+	}
+
+
+
+	/* POPUPS */
+	html.responsive .popup_block2 {
+		position: fixed;
+		display: block;
+		top: 0px !important;
+		left: 0px !important;
+		width: 100vw !important;
+		height: 100vh !important;
+		opacity: 1;
+		background: rgba(0,0,0,0.7);
+	}
+
+	html.responsive .popup_block2 .popup_body2 {
+		box-shadow: var(--gpShadow-XLarge);
+		width: var(--gpDselectWidth);
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		background: none;
+	}
+
+	html.responsive .popup_block2 .popup_body2 .popup_menu_item2 {
+		font: var(--gpText-BodyLarge);
+		transition: all 0.1s ease;
+		padding: 10px 12px;
+		border: unset;
+		box-shadow: unset;
+		background: var(--gpStoreDarkGrey);
+	}
+
+	html.responsive .popup_block2 .popup_body2 .popup_menu_item2:hover {
+		background: var(--gpStoreGrey);
+	}
+
+	html.responsive .popup_body2 h5 {
+		font-size: unset;
+		font-weight: unset;
+		color: unset;
+	}
+
+	html.responsive .popup_block2 .shadow_ul,
+	html.responsive .popup_block2 .shadow_top,
+	html.responsive .popup_block2 .shadow_ur,
+	html.responsive .popup_block2 .shadow_left,
+	html.responsive .popup_block2 .shadow_right,
+	html.responsive .popup_block2 .shadow_bl,
+	html.responsive .popup_block2 .shadow_bottom,
+	html.responsive .popup_block2 .shadow_br {
+		display: none;
+	}
+
+}
