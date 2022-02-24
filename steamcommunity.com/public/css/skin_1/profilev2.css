@@ -363,6 +363,19 @@ body.Lunar2022Theme {
     --btn-outline: rgb(173 85 113);
 }
 
+body.SteamDeckTheme {
+	--gradient-right: rgb(36 58 130 / 30%);
+	--gradient-left: rgb(243 9 117 / 25%);
+	--gradient-background: rgb(23 19 57 / 75%);
+	--gradient-background-right: rgb(67 9 57 / 36%);
+	--gradient-background-left: rgb(13 9 41 / 36%);
+	--color-showcase-header: rgb(173 165 191 / 74%);
+	--gradient-showcase-header-left: rgb(87 89 123 / 65%);
+	--btn-background: rgb(103 93 123);
+	--btn-background-hover: rgb(132 126 153);
+	--btn-outline: rgb(132 126 151);
+}
+
 
 div.profile_page {
 	position: relative;

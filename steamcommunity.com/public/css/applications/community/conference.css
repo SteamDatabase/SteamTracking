@@ -2032,8 +2032,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   --basicui-header-height: 0px;
 }
 .deckverified_BannerContainer_29jK3 {
-  padding-top: 4;
-  padding-bottom: 12px;
+  padding: 12px 0px;
 }
 .deckverified_BannerHeader_3yxJH {
   text-transform: uppercase;
@@ -2043,6 +2042,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   font-weight: 700;
   letter-spacing: 0.5;
 }
+.deckverified_BannerContentDesktop_Cek1s,
 .deckverified_BannerContent_2dGPT {
   display: flex;
   flex-direction: row;
@@ -2054,8 +2054,23 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   flex-wrap: wrap;
   gap: 8px;
 }
+.deckverified_BannerContentDesktop_Cek1s:focus-within,
 .deckverified_BannerContent_2dGPT:focus-within {
   background-color: #678ba670;
+}
+.deckverified_BannerContentDesktop_Cek1s {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+.deckverified_BannerContentDesktop_Cek1s .deckverified_LearnMore_2gXzK {
+  font-size: 14px;
+}
+.deckverified_DeveloperBlockLinkDesktop_1lpfU {
+  padding-left: 10px;
+  text-decoration: underline;
 }
 .deckverified_CategoryIcon_3qF71 {
   padding-right: 6px;
@@ -2092,6 +2107,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .deckverified_LearnMore_2gXzK:hover {
   color: #fff;
   background-color: #0bf;
+  cursor: pointer;
 }
 .deckverified_LearnMorePC_CrSPf.gpfocus,
 .deckverified_LearnMore_2gXzK.gpfocus {
@@ -2123,6 +2139,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   flex-direction: column;
   padding: 10px;
 }
+.deckverified_CompatibilityDetailsContainerDesktop_2ADsv,
 .deckverified_CompatibilityDetailsContainer_1-O8t {
   display: flex;
   flex-direction: column;
@@ -2130,6 +2147,8 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   width: 100%;
   max-height: 85vh;
 }
+.deckverified_CompatibilityDetailsContainerDesktop_2ADsv
+  .deckverified_CompatibilityDetailsInterior_2fGSc,
 .deckverified_CompatibilityDetailsContainer_1-O8t
   .deckverified_CompatibilityDetailsInterior_2fGSc {
   overflow-y: scroll;
@@ -2137,6 +2156,8 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   flex: 1;
   padding-right: 15px;
 }
+.deckverified_CompatibilityDetailsContainerDesktop_2ADsv
+  .deckverified_CompatibilityDetailsInterior_2fGSc::-webkit-scrollbar,
 .deckverified_CompatibilityDetailsContainer_1-O8t
   .deckverified_CompatibilityDetailsInterior_2fGSc::-webkit-scrollbar {
   display: inline;
@@ -2214,6 +2235,45 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   font-size: 14px;
   color: #a9a9a9;
   word-break: break-word;
+}
+.deckverified_DeveloperBlogYButton_3avWD svg {
+  vertical-align: bottom;
+  height: 18px;
+  width: 18px;
+}
+.deckverified_DeveloperBlogYButton_3avWD {
+  padding-left: 10px;
+  display: inline-block;
+}
+.footericons_Dark_2UAf_ .footericons_Background_yjs9m {
+  color: #0e141b;
+}
+.footericons_Dark_2UAf_ .footericons_Foreground_JgT6Z {
+  color: #fff;
+}
+.footericons_Light_1LgIo .footericons_Background_yjs9m {
+  color: #fff;
+}
+.footericons_Light_1LgIo .footericons_Foreground_JgT6Z {
+  color: #0e141b;
+}
+.footericons_Knockout_3BGwJ {
+  color: #fff;
+}
+.footericons_SizeSmall_1Zc5j {
+  width: auto;
+  height: 16px;
+}
+.footericons_SizeMedium_12wgo {
+  width: auto;
+  height: 22px;
+}
+.footericons_SizeLarge_3E-9r {
+  width: auto;
+  height: 36px;
+}
+.footericons_ChordSummary_2NB_h.footericons_SizeSmall_1Zc5j {
+  margin-right: 20px;
 }
 .creatorhomeembed_DevSummaryCtn_1k0S- {
   flex-grow: 1;
@@ -4249,6 +4309,8 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   justify-self: end;
   align-items: stretch;
   flex-direction: column;
+  bottom: unset;
+  margin-top: 5px;
   flex-wrap: nowrap;
   justify-content: unset;
 }
@@ -13568,8 +13630,7 @@ html.responsive.touch
   overflow-y: hidden;
   margin: 0px -24px;
   padding: 0px 24px;
-  scroll-padding-left: 24px;
-  scroll-padding-right: 24px;
+  scroll-padding: 0px 64px;
   width: 100vw;
 }
 .partnersaledisplay_SaleSectionTabs_1FPIV
@@ -13583,6 +13644,12 @@ html.responsive.touch
   .partnersaledisplay_SaleSectionTabsRow_30oGT {
   gap: 6px;
   padding: 16px 0px 16px;
+}
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_1FPIV
+  .partnersaledisplay_SaleSectionTabsRow_30oGT::after {
+  content: " ";
+  min-width: 24px;
 }
 .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleTab_gc-rq {
   display: flex;
@@ -13599,11 +13666,13 @@ html.responsive.touch
   border-radius: var(--gpCorner-Medium);
   padding: 12px 16px;
   scroll-snap-align: start;
+  transition: filter 0.2s ease;
 }
 .BasicUI
   .partnersaledisplay_SaleSectionTabs_1FPIV
   .partnersaledisplay_SaleTab_gc-rq.gpfocus {
   border-radius: 0px;
+  filter: brightness(1.3) saturate(1.1);
 }
 .partnersaledisplay_SaleSectionTabs_1FPIV
   .partnersaledisplay_SaleTab_gc-rq:hover

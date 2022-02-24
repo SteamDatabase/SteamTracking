@@ -9,19 +9,20 @@
         return a;
       }),
         r.d(e, "a", function () {
-          return o;
+          return i;
         });
-      var n = r("lkRc"),
-        a = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function o(t, e) {
-        var r = ".jpg";
+      var n = r("lkRc");
+      const a = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function i(t, e) {
+        let r = ".jpg";
         (t && "0000000000000000000000000000000000000000" !== t) || (t = a),
           44 == t.length && ((r = t.substr(-4)), (t = t.substr(0, 40)));
-        var o = n.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
+        let i = n.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
         return (
-          (o += t.substr(0, 2) + "/" + t),
-          e && "small" != e && (o += "_" + e),
-          (o += r)
+          (i += t.substr(0, 2) + "/" + t),
+          e && "small" != e && (i += "_" + e),
+          (i += r),
+          i
         );
       }
     },
@@ -32,811 +33,692 @@
     BFsE: function (t, e, r) {
       "use strict";
       r.d(e, "a", function () {
-        return x;
+        return F;
       });
       var n = r("mrSG"),
         a = r("q1tI"),
-        o = r.n(a),
-        i = r("2vnA"),
-        s = r("vDqi"),
-        l = r.n(s),
-        c = r("r+Z0").default;
-      function h(t, e) {
-        return t.endsWith("/") || (t += "/"), t + "login/" + e + "/";
+        i = r.n(a),
+        s = r("2vnA"),
+        o = r("vDqi"),
+        l = r.n(o);
+      const h = r("r+Z0").default;
+      function c(t, e) {
+        return t.endsWith("/") || (t += "/"), `${t}login/${e}/`;
       }
-      function u() {
-        var t = new FormData();
+      function m() {
+        let t = new FormData();
         return t.append("donotcache", new Date().getTime().toString()), t;
       }
-      function p(t) {
-        return Object(n.b)(this, void 0, void 0, function () {
-          var e, r, a, o;
-          return Object(n.e)(this, function (n) {
-            switch (n.label) {
-              case 0:
-                (e = u()),
-                  (r = h(t, "refreshcaptcha")),
-                  (a = ""),
-                  (n.label = 1);
-              case 1:
-                return n.trys.push([1, 3, , 4]), [4, l.a.post(r, e)];
-              case 2:
-                return 200 != (o = n.sent()).status
-                  ? [2, !1]
-                  : ((a = o.data.gid), [3, 4]);
-              case 3:
-                return n.sent(), [2, !1];
-              case 4:
-                return [2, a];
-            }
-          });
+      function u(t, e, r, a) {
+        return Object(n.a)(this, void 0, void 0, function* () {
+          const n = (function (t, e) {
+            let r = h.getPublicKey(e.publickey_mod, e.publickey_exp),
+              n = h.encrypt(t, r);
+            return !1 === n ? null : n;
+          })(r.strPassword, a);
+          if (!n) return null;
+          let i = m();
+          i.append("password", n),
+            i.append("username", r.strUserName),
+            i.append("twofactorcode", r.strTwoFactorCode || ""),
+            i.append("emailauth", r.strEmailAuthCode || ""),
+            i.append("loginfriendlyname", ""),
+            i.append("captchagid", r.gidCaptcha || ""),
+            i.append("captcha_text", r.strCaptchaText || ""),
+            i.append("emailsteamid", r.emailSteamID || ""),
+            i.append("rsatimestamp", a.timestamp),
+            i.append("remember_login", r.bRememberLogin ? "true" : "false");
+          let s = {};
+          e &&
+            (i.append("oauth_client_id", e),
+            i.append("mobile_chat_client", "true"));
+          let o,
+            u = c(t, "dologin");
+          try {
+            let t = yield l.a.post(u, i, s);
+            if (200 != t.status) return null;
+            let e = t.data;
+            if (!e) return null;
+            e.oauth && (e.oauth = JSON.parse(e.oauth)), (o = e);
+          } catch (t) {
+            return null;
+          }
+          return o;
         });
       }
-      function m(t, e) {
-        return Object(n.b)(this, void 0, void 0, function () {
-          var r, a, o, i, s;
-          return Object(n.e)(this, function (n) {
-            switch (n.label) {
-              case 0:
-                (r = u()).append("username", e),
-                  (a = h(t, "getrsakey")),
-                  (n.label = 1);
-              case 1:
-                return n.trys.push([1, 3, , 4]), [4, l.a.post(a, r)];
-              case 2:
-                return 200 != (i = n.sent()).status
-                  ? [2, null]
-                  : (s = i.data) &&
-                    s.success &&
-                    s.publickey_mod &&
-                    s.publickey_exp &&
-                    s.timestamp
-                  ? ((o = s), [3, 4])
-                  : [2, null];
-              case 3:
-                return n.sent(), [2, null];
-              case 4:
-                return [2, o];
-            }
-          });
-        });
-      }
-      function d(t, e, r, a) {
-        return Object(n.b)(this, void 0, void 0, function () {
-          var o, i, s, p, m, d, f;
-          return Object(n.e)(this, function (n) {
-            switch (n.label) {
-              case 0:
+      function p(t, e, r) {
+        return Object(n.a)(this, void 0, void 0, function* () {
+          if (
+            ((r = Object.assign({}, r)).strUserName &&
+              (r.strUserName = r.strUserName.replace(/[^\x00-\x7F]/g, "")),
+            !r.strPassword || r.strPassword.match(/[^\x00-\x7F]/))
+          )
+            return null;
+          if (!r.strUserName) return null;
+          let a = yield (function (t, e) {
+            return Object(n.a)(this, void 0, void 0, function* () {
+              let r = m();
+              r.append("username", e);
+              let n,
+                a = c(t, "getrsakey");
+              try {
+                let t = yield l.a.post(a, r);
+                if (200 != t.status) return null;
+                let e = t.data;
                 if (
-                  !(o = (function (t, e) {
-                    var r = c.getPublicKey(e.publickey_mod, e.publickey_exp),
-                      n = c.encrypt(t, r);
-                    return !1 === n ? null : n;
-                  })(r.strPassword, a))
+                  !(
+                    e &&
+                    e.success &&
+                    e.publickey_mod &&
+                    e.publickey_exp &&
+                    e.timestamp
+                  )
                 )
-                  return [2, null];
-                (i = u()).append("password", o),
-                  i.append("username", r.strUserName),
-                  i.append("twofactorcode", r.strTwoFactorCode || ""),
-                  i.append("emailauth", r.strEmailAuthCode || ""),
-                  i.append("loginfriendlyname", ""),
-                  i.append("captchagid", r.gidCaptcha || ""),
-                  i.append("captcha_text", r.strCaptchaText || ""),
-                  i.append("emailsteamid", r.emailSteamID || ""),
-                  i.append("rsatimestamp", a.timestamp),
-                  i.append(
-                    "remember_login",
-                    r.bRememberLogin ? "true" : "false"
-                  ),
-                  (s = {}),
-                  e &&
-                    (i.append("oauth_client_id", e),
-                    i.append("mobile_chat_client", "true")),
-                  (p = h(t, "dologin")),
-                  (n.label = 1);
-              case 1:
-                return n.trys.push([1, 3, , 4]), [4, l.a.post(p, i, s)];
-              case 2:
-                return 200 != (d = n.sent()).status
-                  ? [2, null]
-                  : (f = d.data)
-                  ? (f.oauth && (f.oauth = JSON.parse(f.oauth)),
-                    (m = f),
-                    [3, 4])
-                  : [2, null];
-              case 3:
-                return n.sent(), [2, null];
-              case 4:
-                return [2, m];
-            }
-          });
+                  return null;
+                n = e;
+              } catch (t) {
+                return null;
+              }
+              return n;
+            });
+          })(t, r.strUserName);
+          return a
+            ? yield u(t, e, r, a)
+            : (console.log("Failed to get RSA key"), null);
         });
       }
-      function f(t, e, r) {
-        return Object(n.b)(this, void 0, void 0, function () {
-          var a;
-          return Object(n.e)(this, function (n) {
-            switch (n.label) {
-              case 0:
-                return (
-                  (r = Object.assign({}, r)).strUserName &&
-                    (r.strUserName = r.strUserName.replace(
-                      /[^\x00-\x7F]/g,
-                      ""
-                    )),
-                  !r.strPassword || r.strPassword.match(/[^\x00-\x7F]/)
-                    ? [2, null]
-                    : r.strUserName
-                    ? [4, m(t, r.strUserName)]
-                    : [2, null]
-                );
-              case 1:
-                return (a = n.sent())
-                  ? [4, d(t, e, r, a)]
-                  : (console.log("Failed to get RSA key"), [2, null]);
-              case 2:
-                return [2, n.sent()];
-            }
-          });
-        });
-      }
-      var v,
-        g,
-        _ = r("XxJJ"),
-        E = r("TLQK");
+      var d = r("XxJJ"),
+        f = r("TLQK");
+      var g, v;
       !(function (t) {
         (t[(t.Invalid = 0)] = "Invalid"),
           (t[(t.AccountName = 1)] = "AccountName"),
           (t[(t.EmailCode = 2)] = "EmailCode"),
           (t[(t.TwoFactorCode = 3)] = "TwoFactorCode"),
           (t[(t.Complete = 4)] = "Complete");
-      })(v || (v = {})),
+      })(g || (g = {})),
         (function (t) {
           (t[(t.None = 0)] = "None"), (t[(t.InvalidCode = 1)] = "InvalidCode");
-        })(g || (g = {}));
-      var b = (function () {
-          function t(t, e) {
-            (this.m_strBaseURL = ""),
-              (this.m_strOAuthClientID = ""),
-              (this.m_fnLoginComplete = null),
-              (this.m_bRequestInFlight = !1),
-              (this.m_eCurrentStep = v.AccountName),
-              (this.m_strErrorMessage = ""),
-              (this.m_strEmailDomain = ""),
-              (this.m_strCaptchaURL = ""),
-              (this.m_eSteamGuardCodeError = g.None),
-              (this.m_strBaseURL = t),
-              (this.m_strOAuthClientID = e),
-              (this.m_userFields = {
-                strUserName: "",
-                strPassword: "",
-                strTwoFactorCode: "",
-                strEmailAuthCode: "",
-                emailSteamID: "",
-                gidCaptcha: "",
-                strCaptchaText: "",
-                bRememberLogin: !1,
-              });
-          }
-          return (
-            (t.prototype.Shutdown = function () {
-              this.m_fnLoginComplete = null;
-            }),
-            (t.prototype.SetLoginCompleteCallback = function (t) {
-              this.m_fnLoginComplete = t;
-            }),
-            (t.prototype.SetUserName = function (t) {
-              this.m_userFields.strUserName = t;
-            }),
-            (t.prototype.GetUserName = function () {
-              return this.m_userFields.strUserName;
-            }),
-            (t.prototype.SetPassword = function (t) {
-              this.m_userFields.strPassword = t;
-            }),
-            (t.prototype.GetPassword = function () {
-              return this.m_userFields.strPassword;
-            }),
-            (t.prototype.SetRememberPassword = function (t) {
-              this.m_userFields.bRememberLogin = t;
-            }),
-            (t.prototype.GetRememberPassword = function () {
-              return this.m_userFields.bRememberLogin;
-            }),
-            (t.prototype.SetEmailAuthCode = function (t) {
-              this.m_userFields.strEmailAuthCode = t;
-            }),
-            (t.prototype.GetEmailAuthCode = function () {
-              return this.m_userFields.strEmailAuthCode;
-            }),
-            (t.prototype.GetEmailDomain = function () {
-              return this.m_strEmailDomain;
-            }),
-            (t.prototype.SetTwoFactorCode = function (t) {
-              this.m_userFields.strTwoFactorCode = t;
-            }),
-            (t.prototype.GetTwoFactorCode = function () {
-              return this.m_userFields.strTwoFactorCode;
-            }),
-            (t.prototype.SetCaptchaText = function (t) {
-              this.m_userFields.strCaptchaText = t;
-            }),
-            (t.prototype.GetCaptchaText = function () {
-              return this.m_userFields.strCaptchaText;
-            }),
-            (t.prototype.IsRequestInFlight = function () {
-              return this.m_bRequestInFlight;
-            }),
-            (t.prototype.GetCurrentStep = function () {
-              return this.m_eCurrentStep;
-            }),
-            (t.prototype.GetErrorMessage = function () {
-              return this.m_strErrorMessage;
-            }),
-            (t.prototype.SetInitialErrorMessage = function (t) {
-              this.m_strErrorMessage = t;
-            }),
-            (t.prototype.GetSteamGuardCodeError = function () {
-              return this.m_eSteamGuardCodeError;
-            }),
-            (t.prototype.GetCaptchaURL = function () {
-              return this.m_strCaptchaURL;
-            }),
-            (t.prototype.DoLogin = function () {
-              return Object(n.b)(this, void 0, void 0, function () {
-                var t,
-                  e = this;
-                return Object(n.e)(this, function (r) {
-                  switch (r.label) {
-                    case 0:
-                      return this.m_bRequestInFlight
-                        ? [2]
-                        : (Object(i.G)(function () {
-                            (e.m_bRequestInFlight = !0),
-                              (e.m_strErrorMessage = "");
-                          }),
-                          [
-                            4,
-                            f(
-                              this.m_strBaseURL,
-                              this.m_strOAuthClientID,
-                              this.m_userFields
-                            ),
-                          ]);
-                    case 1:
-                      return (
-                        (t = r.sent()),
-                        Object(i.G)(function () {
-                          (e.m_bRequestInFlight = !1), e.UpdateLoginResult(t);
-                        }),
-                        [2]
-                      );
-                  }
-                });
-              });
-            }),
-            (t.prototype.UpdateLoginResult = function (t) {
-              if (!t)
-                return (
-                  console.log("Login timeout"),
-                  void (this.m_strErrorMessage = Object(E.f)(
-                    "#ConnectionTrouble_FailedToConnect"
-                  ))
-                );
-              if (t.login_complete) {
-                if (
-                  ((this.m_eCurrentStep = v.Complete), this.m_fnLoginComplete)
-                ) {
-                  var e = {
-                    steamID: t.oauth ? t.oauth.steamid : "",
-                    strAccountName: t.oauth ? t.oauth.account_name : "",
-                    strOAuthToken: t.oauth ? t.oauth.oauth_token : "",
-                  };
-                  this.m_fnLoginComplete(e);
-                }
-              } else
-                (this.m_strErrorMessage = t.message || ""),
-                  (this.m_eSteamGuardCodeError = g.None),
-                  t.requires_twofactor
-                    ? (this.UpdateCaptchaURL("-1"),
-                      this.m_eCurrentStep != v.TwoFactorCode ||
-                        this.m_strErrorMessage ||
-                        ((this.m_strErrorMessage = Object(E.f)(
-                          "#MobileLogin_IncorrectSteamGuard"
-                        )),
-                        (this.m_eSteamGuardCodeError = g.InvalidCode),
-                        (this.m_userFields.strTwoFactorCode = "")),
-                      (this.m_eCurrentStep = v.TwoFactorCode))
-                    : t.captcha_needed && t.captcha_gid
-                    ? ((this.m_eCurrentStep = v.AccountName),
-                      this.UpdateCaptchaURL(t.captcha_gid))
-                    : t.emailauth_needed
-                    ? (t.emaildomain && (this.m_strEmailDomain = t.emaildomain),
-                      t.emailsteamid &&
-                        (this.m_userFields.emailSteamID = t.emailsteamid),
-                      this.m_eCurrentStep != v.EmailCode ||
-                        this.m_strErrorMessage ||
-                        ((this.m_strErrorMessage = Object(E.f)(
-                          "#MobileLogin_IncorrectSteamGuard"
-                        )),
-                        (this.m_eSteamGuardCodeError = g.InvalidCode),
-                        (this.m_userFields.strEmailAuthCode = "")),
-                      (this.m_eCurrentStep = v.EmailCode))
-                    : t.agreement_session_url
-                    ? (this.Shutdown(),
-                      console.log(window.location.href),
-                      (window.location.href =
-                        t.agreement_session_url +
-                        "&redir=" +
-                        window.location.href))
-                    : console.log("Unhandled login error");
-            }),
-            (t.prototype.RefreshCaptcha = function () {
-              return Object(n.b)(this, void 0, void 0, function () {
-                var t;
-                return Object(n.e)(this, function (e) {
-                  switch (e.label) {
-                    case 0:
-                      return [4, p(this.m_strBaseURL)];
-                    case 1:
-                      return (t = e.sent())
-                        ? (this.UpdateCaptchaURL(t), [2])
-                        : (console.log("Failed to get captcha"), [2]);
-                  }
-                });
-              });
-            }),
-            (t.prototype.UpdateCaptchaURL = function (t) {
-              (this.m_userFields.gidCaptcha = t),
-                (this.m_userFields.strCaptchaText = ""),
-                (this.m_strCaptchaURL =
-                  "-1" != t
-                    ? (function (t, e) {
-                        return h(t, "rendercaptcha") + "?gid=" + e;
-                      })(this.m_strBaseURL, t)
-                    : "");
-            }),
-            Object(n.c)([i.C], t.prototype, "m_bRequestInFlight", void 0),
-            Object(n.c)([i.C], t.prototype, "m_userFields", void 0),
-            Object(n.c)([i.C], t.prototype, "m_eCurrentStep", void 0),
-            Object(n.c)([i.C], t.prototype, "m_strErrorMessage", void 0),
-            Object(n.c)([i.C], t.prototype, "m_strEmailDomain", void 0),
-            Object(n.c)([i.C], t.prototype, "m_strCaptchaURL", void 0),
-            Object(n.c)([i.C], t.prototype, "m_eSteamGuardCodeError", void 0),
-            Object(n.c)([_.a], t.prototype, "DoLogin", null),
-            Object(n.c)([i.k.bound], t.prototype, "UpdateCaptchaURL", null),
-            t
-          );
-        })(),
-        T = r("Mgs7"),
-        C = r("6Y59"),
-        y = r("TyAF"),
-        S = r("opsS"),
-        O = r("exH9"),
-        D = r("N6Aq"),
-        w = r.n(D),
-        A = r("0OaU"),
-        L = r("lkRc"),
-        N = (function (t) {
-          function e(e) {
-            var r = t.call(this, e) || this;
-            return (
-              (r.m_manager = new b(r.props.baseURL)),
-              r.props.onLoginComplete &&
-                r.m_manager.SetLoginCompleteCallback(r.props.onLoginComplete),
-              r
+        })(v || (v = {}));
+      class _ {
+        constructor(t, e) {
+          (this.m_strBaseURL = ""),
+            (this.m_strOAuthClientID = ""),
+            (this.m_fnLoginComplete = null),
+            (this.m_bRequestInFlight = !1),
+            (this.m_eCurrentStep = g.AccountName),
+            (this.m_strErrorMessage = ""),
+            (this.m_strEmailDomain = ""),
+            (this.m_strCaptchaURL = ""),
+            (this.m_eSteamGuardCodeError = v.None),
+            (this.m_strBaseURL = t),
+            (this.m_strOAuthClientID = e),
+            (this.m_userFields = {
+              strUserName: "",
+              strPassword: "",
+              strTwoFactorCode: "",
+              strEmailAuthCode: "",
+              emailSteamID: "",
+              gidCaptcha: "",
+              strCaptchaText: "",
+              bRememberLogin: !1,
+            });
+        }
+        Shutdown() {
+          this.m_fnLoginComplete = null;
+        }
+        SetLoginCompleteCallback(t) {
+          this.m_fnLoginComplete = t;
+        }
+        SetUserName(t) {
+          this.m_userFields.strUserName = t;
+        }
+        GetUserName() {
+          return this.m_userFields.strUserName;
+        }
+        SetPassword(t) {
+          this.m_userFields.strPassword = t;
+        }
+        GetPassword() {
+          return this.m_userFields.strPassword;
+        }
+        SetRememberPassword(t) {
+          this.m_userFields.bRememberLogin = t;
+        }
+        GetRememberPassword() {
+          return this.m_userFields.bRememberLogin;
+        }
+        SetEmailAuthCode(t) {
+          this.m_userFields.strEmailAuthCode = t;
+        }
+        GetEmailAuthCode() {
+          return this.m_userFields.strEmailAuthCode;
+        }
+        GetEmailDomain() {
+          return this.m_strEmailDomain;
+        }
+        SetTwoFactorCode(t) {
+          this.m_userFields.strTwoFactorCode = t;
+        }
+        GetTwoFactorCode() {
+          return this.m_userFields.strTwoFactorCode;
+        }
+        SetCaptchaText(t) {
+          this.m_userFields.strCaptchaText = t;
+        }
+        GetCaptchaText() {
+          return this.m_userFields.strCaptchaText;
+        }
+        IsRequestInFlight() {
+          return this.m_bRequestInFlight;
+        }
+        GetCurrentStep() {
+          return this.m_eCurrentStep;
+        }
+        GetErrorMessage() {
+          return this.m_strErrorMessage;
+        }
+        SetInitialErrorMessage(t) {
+          this.m_strErrorMessage = t;
+        }
+        GetSteamGuardCodeError() {
+          return this.m_eSteamGuardCodeError;
+        }
+        GetCaptchaURL() {
+          return this.m_strCaptchaURL;
+        }
+        DoLogin() {
+          return Object(n.a)(this, void 0, void 0, function* () {
+            if (this.m_bRequestInFlight) return;
+            Object(s.G)(() => {
+              (this.m_bRequestInFlight = !0), (this.m_strErrorMessage = "");
+            });
+            let t = yield p(
+              this.m_strBaseURL,
+              this.m_strOAuthClientID,
+              this.m_userFields
             );
-          }
-          return (
-            Object(n.d)(e, t),
-            (e.prototype.componentWillUnmount = function () {
-              this.m_manager.Shutdown();
-            }),
-            (e.prototype.render = function () {
-              var t = this.props,
-                e = (t.baseURL, t.onLoginComplete, t.className),
-                r = Object(n.f)(t, ["baseURL", "onLoginComplete", "className"]),
-                a = Object(O.a)(w.a.LoginDialog, e),
-                i = this.m_manager.GetCurrentStep(),
-                s = this.m_manager.GetErrorMessage();
-              return o.a.createElement(
-                "div",
-                Object(n.a)({ className: a }, r),
-                o.a.createElement(
-                  "div",
-                  { className: w.a.LoginPanelBackground },
-                  o.a.createElement(C.kb, null)
-                ),
-                o.a.createElement(
-                  "div",
-                  { className: w.a.LoginPanelContent },
-                  s && o.a.createElement(B, { text: s }),
-                  i == v.AccountName &&
-                    o.a.createElement(R, { manager: this.m_manager }),
-                  i == v.TwoFactorCode &&
-                    o.a.createElement(j, {
-                      manager: this.m_manager,
-                      authtype: v.TwoFactorCode,
-                    }),
-                  i == v.EmailCode &&
-                    o.a.createElement(j, {
-                      manager: this.m_manager,
-                      authtype: v.EmailCode,
-                    }),
-                  i == v.Complete &&
-                    o.a.createElement(
-                      "div",
-                      { className: w.a.LoginComplete },
-                      o.a.createElement(A.a, null)
-                    )
-                )
+            Object(s.G)(() => {
+              (this.m_bRequestInFlight = !1), this.UpdateLoginResult(t);
+            });
+          });
+        }
+        UpdateLoginResult(t) {
+          if (!t)
+            return (
+              console.log("Login timeout"),
+              void (this.m_strErrorMessage = Object(f.f)(
+                "#ConnectionTrouble_FailedToConnect"
+              ))
+            );
+          if (t.login_complete) {
+            if (((this.m_eCurrentStep = g.Complete), this.m_fnLoginComplete)) {
+              let e = {
+                steamID: t.oauth ? t.oauth.steamid : "",
+                strAccountName: t.oauth ? t.oauth.account_name : "",
+                strOAuthToken: t.oauth ? t.oauth.oauth_token : "",
+              };
+              this.m_fnLoginComplete(e);
+            }
+          } else
+            (this.m_strErrorMessage = t.message || ""),
+              (this.m_eSteamGuardCodeError = v.None),
+              t.requires_twofactor
+                ? (this.UpdateCaptchaURL("-1"),
+                  this.m_eCurrentStep != g.TwoFactorCode ||
+                    this.m_strErrorMessage ||
+                    ((this.m_strErrorMessage = Object(f.f)(
+                      "#MobileLogin_IncorrectSteamGuard"
+                    )),
+                    (this.m_eSteamGuardCodeError = v.InvalidCode),
+                    (this.m_userFields.strTwoFactorCode = "")),
+                  (this.m_eCurrentStep = g.TwoFactorCode))
+                : t.captcha_needed && t.captcha_gid
+                ? ((this.m_eCurrentStep = g.AccountName),
+                  this.UpdateCaptchaURL(t.captcha_gid))
+                : t.emailauth_needed
+                ? (t.emaildomain && (this.m_strEmailDomain = t.emaildomain),
+                  t.emailsteamid &&
+                    (this.m_userFields.emailSteamID = t.emailsteamid),
+                  this.m_eCurrentStep != g.EmailCode ||
+                    this.m_strErrorMessage ||
+                    ((this.m_strErrorMessage = Object(f.f)(
+                      "#MobileLogin_IncorrectSteamGuard"
+                    )),
+                    (this.m_eSteamGuardCodeError = v.InvalidCode),
+                    (this.m_userFields.strEmailAuthCode = "")),
+                  (this.m_eCurrentStep = g.EmailCode))
+                : t.agreement_session_url
+                ? (this.Shutdown(),
+                  console.log(window.location.href),
+                  (window.location.href =
+                    t.agreement_session_url + "&redir=" + window.location.href))
+                : console.log("Unhandled login error");
+        }
+        RefreshCaptcha() {
+          return Object(n.a)(this, void 0, void 0, function* () {
+            let t = yield (function (t) {
+              return Object(n.a)(this, void 0, void 0, function* () {
+                let e = m(),
+                  r = c(t, "refreshcaptcha"),
+                  n = "";
+                try {
+                  let t = yield l.a.post(r, e);
+                  if (200 != t.status) return !1;
+                  n = t.data.gid;
+                } catch (t) {
+                  return !1;
+                }
+                return n;
+              });
+            })(this.m_strBaseURL);
+            t ? this.UpdateCaptchaURL(t) : console.log("Failed to get captcha");
+          });
+        }
+        UpdateCaptchaURL(t) {
+          (this.m_userFields.gidCaptcha = t),
+            (this.m_userFields.strCaptchaText = ""),
+            (this.m_strCaptchaURL =
+              "-1" != t
+                ? (function (t, e) {
+                    return c(t, "rendercaptcha") + `?gid=${e}`;
+                  })(this.m_strBaseURL, t)
+                : "");
+        }
+      }
+      Object(n.b)([s.C], _.prototype, "m_bRequestInFlight", void 0),
+        Object(n.b)([s.C], _.prototype, "m_userFields", void 0),
+        Object(n.b)([s.C], _.prototype, "m_eCurrentStep", void 0),
+        Object(n.b)([s.C], _.prototype, "m_strErrorMessage", void 0),
+        Object(n.b)([s.C], _.prototype, "m_strEmailDomain", void 0),
+        Object(n.b)([s.C], _.prototype, "m_strCaptchaURL", void 0),
+        Object(n.b)([s.C], _.prototype, "m_eSteamGuardCodeError", void 0),
+        Object(n.b)([d.a], _.prototype, "DoLogin", null),
+        Object(n.b)([s.k.bound], _.prototype, "UpdateCaptchaURL", null);
+      var E = r("Mgs7"),
+        T = r("6Y59"),
+        b = r("TyAF"),
+        C = r("opsS"),
+        S = r("exH9"),
+        y = r("N6Aq"),
+        D = r.n(y),
+        O = r("0OaU"),
+        A = r("lkRc");
+      let L = class extends i.a.Component {
+        constructor(t) {
+          super(t),
+            (this.m_manager = new _(this.props.baseURL)),
+            this.props.onLoginComplete &&
+              this.m_manager.SetLoginCompleteCallback(
+                this.props.onLoginComplete
               );
-            }),
-            (e = Object(n.c)([y.a], e))
+        }
+        componentWillUnmount() {
+          this.m_manager.Shutdown();
+        }
+        render() {
+          let t = this.props,
+            { baseURL: e, onLoginComplete: r, className: a } = t,
+            s = Object(n.c)(t, ["baseURL", "onLoginComplete", "className"]),
+            o = Object(S.a)(D.a.LoginDialog, a),
+            l = this.m_manager.GetCurrentStep(),
+            h = this.m_manager.GetErrorMessage();
+          return i.a.createElement(
+            "div",
+            Object.assign({ className: o }, s),
+            i.a.createElement(
+              "div",
+              { className: D.a.LoginPanelBackground },
+              i.a.createElement(T.kb, null)
+            ),
+            i.a.createElement(
+              "div",
+              { className: D.a.LoginPanelContent },
+              h && i.a.createElement(w, { text: h }),
+              l == g.AccountName &&
+                i.a.createElement(N, { manager: this.m_manager }),
+              l == g.TwoFactorCode &&
+                i.a.createElement(R, {
+                  manager: this.m_manager,
+                  authtype: g.TwoFactorCode,
+                }),
+              l == g.EmailCode &&
+                i.a.createElement(R, {
+                  manager: this.m_manager,
+                  authtype: g.EmailCode,
+                }),
+              l == g.Complete &&
+                i.a.createElement(
+                  "div",
+                  { className: D.a.LoginComplete },
+                  i.a.createElement(O.a, null)
+                )
+            )
           );
-        })(o.a.Component);
-      function B(t) {
-        return o.a.createElement(
+        }
+      };
+      function w(t) {
+        return i.a.createElement(
           "div",
-          { className: w.a.ErrorMessage },
+          { className: D.a.ErrorMessage },
           t.text
         );
       }
-      var R = (function (t) {
-          function e(e) {
-            var r = t.call(this, e) || this;
-            return (r.state = { nNameSize: 0, nPassSize: 0 }), r;
-          }
+      L = Object(n.b)([b.a], L);
+      let N = class extends i.a.Component {
+        constructor(t) {
+          super(t), (this.state = { nNameSize: 0, nPassSize: 0 });
+        }
+        OnSubmit(t) {
+          t.preventDefault(), this.props.manager.DoLogin();
+        }
+        OnChangeName(t) {
+          let e = t.target.value || "";
+          this.props.manager.SetUserName(t.target.value),
+            e.length > 24 && e.length < 39
+              ? this.setState({ nNameSize: 1 })
+              : e.length > 38
+              ? this.setState({ nNameSize: 2 })
+              : this.setState({ nNameSize: 0 });
+        }
+        OnChangePassword(t) {
+          let e = t.target.value || "";
+          (e = e.replace(/[^\x00-\x7F]/g, "")),
+            this.props.manager.SetPassword(e),
+            e.length > 19 && e.length < 39
+              ? this.setState({ nPassSize: 1 })
+              : e.length > 38
+              ? this.setState({ nPassSize: 2 })
+              : this.setState({ nPassSize: 0 });
+        }
+        OnChangeRememberPass(t) {
+          this.props.manager.SetRememberPassword(t.target.checked);
+        }
+        render() {
+          let t,
+            e,
+            r = this.props.manager;
           return (
-            Object(n.d)(e, t),
-            (e.prototype.OnSubmit = function (t) {
-              t.preventDefault(), this.props.manager.DoLogin();
-            }),
-            (e.prototype.OnChangeName = function (t) {
-              var e = t.target.value || "";
-              this.props.manager.SetUserName(t.target.value),
-                e.length > 24 && e.length < 39
-                  ? this.setState({ nNameSize: 1 })
-                  : e.length > 38
-                  ? this.setState({ nNameSize: 2 })
-                  : this.setState({ nNameSize: 0 });
-            }),
-            (e.prototype.OnChangePassword = function (t) {
-              var e = t.target.value || "";
-              (e = e.replace(/[^\x00-\x7F]/g, "")),
-                this.props.manager.SetPassword(e),
-                e.length > 19 && e.length < 39
-                  ? this.setState({ nPassSize: 1 })
-                  : e.length > 38
-                  ? this.setState({ nPassSize: 2 })
-                  : this.setState({ nPassSize: 0 });
-            }),
-            (e.prototype.OnChangeRememberPass = function (t) {
-              this.props.manager.SetRememberPassword(t.target.checked);
-            }),
-            (e.prototype.render = function () {
-              var t,
-                e,
-                r = this,
-                n = this.props.manager;
-              return (
-                (e =
-                  1 == this.state.nPassSize
-                    ? w.a.MedPass
-                    : 2 == this.state.nPassSize
-                    ? w.a.LargePass
-                    : w.a.DefaultPass),
-                (t =
-                  1 == this.state.nNameSize
-                    ? w.a.MedName
-                    : 2 == this.state.nNameSize
-                    ? w.a.LargeName
-                    : w.a.DefaultNAme),
-                o.a.createElement(
+            (e =
+              1 == this.state.nPassSize
+                ? D.a.MedPass
+                : 2 == this.state.nPassSize
+                ? D.a.LargePass
+                : D.a.DefaultPass),
+            (t =
+              1 == this.state.nNameSize
+                ? D.a.MedName
+                : 2 == this.state.nNameSize
+                ? D.a.LargeName
+                : D.a.DefaultNAme),
+            i.a.createElement(
+              "div",
+              { className: D.a.AccountPasswordPanel },
+              i.a.createElement(
+                "div",
+                { className: D.a.SigninTitle },
+                Object(f.f)("#Login_SignIn")
+              ),
+              i.a.createElement(
+                "form",
+                { className: D.a.AccountPasswordForm, onSubmit: this.OnSubmit },
+                i.a.createElement(E.m, {
+                  className: Object(S.a)(D.a.AccountNameLabel, t),
+                  label: Object(f.f)("#Login_AccountName"),
+                  type: "text",
+                  value: r.GetUserName(),
+                  focusOnMount: !0,
+                  maxLength: 64,
+                  onChange: this.OnChangeName,
+                }),
+                i.a.createElement(E.m, {
+                  bIsPassword: !0,
+                  className: Object(S.a)(D.a.PasswordDots, e),
+                  label: Object(f.f)("#Login_Password"),
+                  type: "password",
+                  autoComplete: "off",
+                  maxLength: 64,
+                  size: 64,
+                  value: r.GetPassword(),
+                  onChange: this.OnChangePassword,
+                }),
+                i.a.createElement(E.e, {
+                  classname: D.a.RememberMeCheck,
+                  label: Object(f.f)("#Login_RememberMe"),
+                  disabled: !1,
+                  onChange: () => this.OnChangeRememberPass,
+                  checked: r.GetRememberPassword(),
+                }),
+                r.GetCaptchaURL() && i.a.createElement(B, { manager: r }),
+                i.a.createElement(
+                  E.r,
+                  { disabled: this.props.manager.IsRequestInFlight() },
+                  Object(f.f)("#Login_SignIn").toLocaleUpperCase()
+                )
+              ),
+              i.a.createElement(
+                "a",
+                { className: D.a.NeedHelpLink, href: A.c.HELP_BASE_URL },
+                Object(f.f)("#Login_ForgotPassword")
+              ),
+              i.a.createElement("div", { className: D.a.LoginCreateSeperator }),
+              i.a.createElement(
+                "div",
+                { className: D.a.SteamUpsellContainer },
+                i.a.createElement(
                   "div",
-                  { className: w.a.AccountPasswordPanel },
-                  o.a.createElement(
-                    "div",
-                    { className: w.a.SigninTitle },
-                    Object(E.f)("#Login_SignIn")
-                  ),
-                  o.a.createElement(
-                    "form",
-                    {
-                      className: w.a.AccountPasswordForm,
-                      onSubmit: this.OnSubmit,
-                    },
-                    o.a.createElement(T.m, {
-                      className: Object(O.a)(w.a.AccountNameLabel, t),
-                      label: Object(E.f)("#Login_AccountName"),
-                      type: "text",
-                      value: n.GetUserName(),
-                      focusOnMount: !0,
-                      maxLength: 64,
-                      onChange: this.OnChangeName,
-                    }),
-                    o.a.createElement(T.m, {
-                      bIsPassword: !0,
-                      className: Object(O.a)(w.a.PasswordDots, e),
-                      label: Object(E.f)("#Login_Password"),
-                      type: "password",
-                      autoComplete: "off",
-                      maxLength: 64,
-                      size: 64,
-                      value: n.GetPassword(),
-                      onChange: this.OnChangePassword,
-                    }),
-                    o.a.createElement(T.e, {
-                      classname: w.a.RememberMeCheck,
-                      label: Object(E.f)("#Login_RememberMe"),
-                      disabled: !1,
-                      onChange: function () {
-                        return r.OnChangeRememberPass;
-                      },
-                      checked: n.GetRememberPassword(),
-                    }),
-                    n.GetCaptchaURL() && o.a.createElement(P, { manager: n }),
-                    o.a.createElement(
-                      T.r,
-                      { disabled: this.props.manager.IsRequestInFlight() },
-                      Object(E.f)("#Login_SignIn").toLocaleUpperCase()
-                    )
-                  ),
-                  o.a.createElement(
+                  { className: D.a.SteamUpsell },
+                  Object(f.f)("#Login_NoSteamAccount")
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: D.a.CreateAccountLink },
+                  i.a.createElement(
                     "a",
-                    { className: w.a.NeedHelpLink, href: L.c.HELP_BASE_URL },
-                    Object(E.f)("#Login_ForgotPassword")
-                  ),
-                  o.a.createElement("div", {
-                    className: w.a.LoginCreateSeperator,
-                  }),
-                  o.a.createElement(
-                    "div",
-                    { className: w.a.SteamUpsellContainer },
-                    o.a.createElement(
-                      "div",
-                      { className: w.a.SteamUpsell },
-                      Object(E.f)("#Login_NoSteamAccount")
-                    ),
-                    o.a.createElement(
-                      "div",
-                      { className: w.a.CreateAccountLink },
-                      o.a.createElement(
-                        "a",
-                        { href: L.c.STORE_BASE_URL + "join/" },
-                        Object(E.f)("#Login_CreateAccount")
-                      )
-                    )
+                    { href: `${A.c.STORE_BASE_URL}join/` },
+                    Object(f.f)("#Login_CreateAccount")
                   )
                 )
-              );
-            }),
-            Object(n.c)([S.a], e.prototype, "OnSubmit", null),
-            Object(n.c)([S.a], e.prototype, "OnChangeName", null),
-            Object(n.c)([S.a], e.prototype, "OnChangePassword", null),
-            Object(n.c)([S.a], e.prototype, "OnChangeRememberPass", null),
-            (e = Object(n.c)([y.a], e))
+              )
+            )
           );
-        })(o.a.Component),
-        P = (function (t) {
-          function e() {
-            return (null !== t && t.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(e, t),
-            (e.prototype.OnCaptchaText = function (t) {
-              this.props.manager.SetCaptchaText(t.target.value);
-            }),
-            (e.prototype.RefreshCaptcha = function (t) {
-              this.props.manager.RefreshCaptcha();
-            }),
-            (e.prototype.render = function () {
-              var t = this.props.manager;
-              return o.a.createElement(
+        }
+      };
+      Object(n.b)([C.a], N.prototype, "OnSubmit", null),
+        Object(n.b)([C.a], N.prototype, "OnChangeName", null),
+        Object(n.b)([C.a], N.prototype, "OnChangePassword", null),
+        Object(n.b)([C.a], N.prototype, "OnChangeRememberPass", null),
+        (N = Object(n.b)([b.a], N));
+      let B = class extends i.a.Component {
+        OnCaptchaText(t) {
+          this.props.manager.SetCaptchaText(t.target.value);
+        }
+        RefreshCaptcha(t) {
+          this.props.manager.RefreshCaptcha();
+        }
+        render() {
+          let t = this.props.manager;
+          return i.a.createElement(
+            "div",
+            { className: D.a.CaptchaContainer },
+            i.a.createElement(
+              "div",
+              { className: D.a.CaptchaBlock },
+              i.a.createElement(
                 "div",
-                { className: w.a.CaptchaContainer },
-                o.a.createElement(
+                { className: D.a.CaptchaImageAndInput },
+                i.a.createElement(
                   "div",
-                  { className: w.a.CaptchaBlock },
-                  o.a.createElement(
-                    "div",
-                    { className: w.a.CaptchaImageAndInput },
-                    o.a.createElement(
-                      "div",
-                      { className: w.a.CaptchaImageBox },
-                      o.a.createElement("img", {
-                        className: w.a.CaptchaImage,
-                        src: t.GetCaptchaURL(),
-                      })
-                    ),
-                    o.a.createElement(T.m, {
-                      className: w.a.CaptchaInput,
-                      type: "text",
-                      autoComplete: "off",
-                      maxLength: 6,
-                      value: t.GetCaptchaText(),
-                      onChange: this.OnCaptchaText,
-                    })
-                  ),
-                  o.a.createElement(
-                    "div",
-                    { className: w.a.ErrorMessage },
-                    Object(E.f)("#Login_CaptchaVerification")
-                  )
+                  { className: D.a.CaptchaImageBox },
+                  i.a.createElement("img", {
+                    className: D.a.CaptchaImage,
+                    src: t.GetCaptchaURL(),
+                  })
                 ),
-                o.a.createElement(
-                  "div",
-                  null,
-                  o.a.createElement(
-                    "span",
-                    {
-                      className: w.a.RefreshCaptchaText,
-                      onClick: this.RefreshCaptcha,
-                    },
-                    Object(E.f)("#Login_RefreshCaptcha")
-                  )
-                )
-              );
-            }),
-            Object(n.c)([S.a], e.prototype, "OnCaptchaText", null),
-            Object(n.c)([S.a], e.prototype, "RefreshCaptcha", null),
-            (e = Object(n.c)([y.a], e))
-          );
-        })(o.a.Component),
-        j = (function (t) {
-          function e() {
-            return (null !== t && t.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(e, t),
-            (e.prototype.OnSubmit = function (t) {
-              t.preventDefault(), this.props.manager.DoLogin();
-            }),
-            (e.prototype.OnChangeAuthCode = function (t) {
-              this.props.authtype == v.TwoFactorCode
-                ? this.props.manager.SetTwoFactorCode(t.target.value)
-                : this.props.manager.SetEmailAuthCode(t.target.value);
-            }),
-            (e.prototype.render = function () {
-              var t,
-                e = this.props.manager,
-                r = "",
-                n = null,
-                a = "",
-                i = e.GetSteamGuardCodeError() == g.InvalidCode;
-              switch (this.props.authtype) {
-                case v.TwoFactorCode:
-                  (r = e.GetTwoFactorCode()),
-                    (n = Object(E.f)("#Login_Enter2FA")),
-                    (t = o.a.createElement(C.I, null)),
-                    (a = Object(E.f)("#Login_Enter2FAHelp"));
-                  break;
-                case v.EmailCode:
-                  (r = e.GetEmailAuthCode()),
-                    (n = Object(E.m)(
-                      "#Login_SentSteamguard",
-                      o.a.createElement(
-                        "span",
-                        { className: w.a.Highlight },
-                        "@",
-                        e.GetEmailDomain()
-                      )
-                    )),
-                    (a = Object(E.f)("#Login_EnterSteamguard")),
-                    (t = o.a.createElement(C.x, null));
-              }
-              return o.a.createElement(
+                i.a.createElement(E.m, {
+                  className: D.a.CaptchaInput,
+                  type: "text",
+                  autoComplete: "off",
+                  maxLength: 6,
+                  value: t.GetCaptchaText(),
+                  onChange: this.OnCaptchaText,
+                })
+              ),
+              i.a.createElement(
                 "div",
-                { className: w.a.AuthenticationPanel },
-                o.a.createElement(T.n, null, Object(E.f)("#Login_SigningIn")),
-                o.a.createElement(
-                  "div",
-                  { className: w.a.SigningInAccountName },
-                  e.GetUserName()
-                ),
-                o.a.createElement(T.c, null, n),
-                o.a.createElement(
-                  "div",
-                  { className: w.a.AuthenticatorInputcontainer },
-                  t,
-                  o.a.createElement(
-                    "form",
-                    {
-                      className: w.a.AccountPasswordForm,
-                      onSubmit: this.OnSubmit,
-                    },
-                    o.a.createElement(T.m, {
-                      className: Object(O.a)(w.a.AccountName),
-                      label: "Steam Guard Code",
-                      type: "text",
-                      autoComplete: "off",
-                      focusOnMount: !0,
-                      maxLength: 64,
-                      value: r,
-                      onChange: this.OnChangeAuthCode,
-                    }),
-                    o.a.createElement(
-                      T.r,
-                      { disabled: this.props.manager.IsRequestInFlight() },
-                      Object(E.f)("#Login_SteamguardSubmit").toLocaleUpperCase()
-                    )
-                  )
-                ),
-                o.a.createElement(
-                  "a",
-                  {
-                    className: Object(O.a)(
-                      w.a.NeedHelpLink,
-                      i ? w.a.NeedHelpHighlight : null
-                    ),
-                    href: "http://help.steampowered.com/",
-                  },
-                  a
-                )
-              );
-            }),
-            Object(n.c)([S.a], e.prototype, "OnSubmit", null),
-            Object(n.c)([S.a], e.prototype, "OnChangeAuthCode", null),
-            (e = Object(n.c)([y.a], e))
-          );
-        })(o.a.Component),
-        I = r("ka0M"),
-        F = (function (t) {
-          function e() {
-            return (null !== t && t.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(e, t),
-            (e.prototype.OnLoginComplete = function (t) {
-              window.location.href =
-                this.props.redirectURL &&
-                this.props.redirectURL !== Object(L.d)() + "login"
-                  ? this.props.redirectURL
-                  : L.c.COMMUNITY_BASE_URL;
-            }),
-            (e.prototype.render = function () {
-              return L.h && L.h.logged_in
-                ? (this.OnLoginComplete(), null)
-                : o.a.createElement(
-                    "div",
-                    null,
-                    o.a.createElement(N, {
-                      baseURL: Object(L.d)(),
-                      onLoginComplete: this.OnLoginComplete,
-                    })
-                  );
-            }),
-            Object(n.c)([S.a], e.prototype, "OnLoginComplete", null),
-            e
-          );
-        })(o.a.Component),
-        M = (function (t) {
-          function e() {
-            return (null !== t && t.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(e, t),
-            (e.prototype.render = function () {
-              return o.a.createElement(
-                I.a,
+                { className: D.a.ErrorMessage },
+                Object(f.f)("#Login_CaptchaVerification")
+              )
+            ),
+            i.a.createElement(
+              "div",
+              null,
+              i.a.createElement(
+                "span",
                 {
-                  onEscKeypress: this.props.closeModal,
-                  bDisableBackgroundDismiss: !0,
+                  className: D.a.RefreshCaptchaText,
+                  onClick: this.RefreshCaptcha,
                 },
-                o.a.createElement(F, { redirectURL: this.props.redirectURL })
-              );
-            }),
-            e
+                Object(f.f)("#Login_RefreshCaptcha")
+              )
+            )
           );
-        })(o.a.Component);
-      function x() {
-        Object(I.d)(
-          o.a.createElement(M, {
+        }
+      };
+      Object(n.b)([C.a], B.prototype, "OnCaptchaText", null),
+        Object(n.b)([C.a], B.prototype, "RefreshCaptcha", null),
+        (B = Object(n.b)([b.a], B));
+      let R = class extends i.a.Component {
+        OnSubmit(t) {
+          t.preventDefault(), this.props.manager.DoLogin();
+        }
+        OnChangeAuthCode(t) {
+          this.props.authtype == g.TwoFactorCode
+            ? this.props.manager.SetTwoFactorCode(t.target.value)
+            : this.props.manager.SetEmailAuthCode(t.target.value);
+        }
+        render() {
+          let t,
+            e = this.props.manager,
+            r = "",
+            n = null,
+            a = "",
+            s = e.GetSteamGuardCodeError() == v.InvalidCode;
+          switch (this.props.authtype) {
+            case g.TwoFactorCode:
+              (r = e.GetTwoFactorCode()),
+                (n = Object(f.f)("#Login_Enter2FA")),
+                (t = i.a.createElement(T.I, null)),
+                (a = Object(f.f)("#Login_Enter2FAHelp"));
+              break;
+            case g.EmailCode:
+              (r = e.GetEmailAuthCode()),
+                (n = Object(f.m)(
+                  "#Login_SentSteamguard",
+                  i.a.createElement(
+                    "span",
+                    { className: D.a.Highlight },
+                    "@",
+                    e.GetEmailDomain()
+                  )
+                )),
+                (a = Object(f.f)("#Login_EnterSteamguard")),
+                (t = i.a.createElement(T.x, null));
+          }
+          return i.a.createElement(
+            "div",
+            { className: D.a.AuthenticationPanel },
+            i.a.createElement(E.n, null, Object(f.f)("#Login_SigningIn")),
+            i.a.createElement(
+              "div",
+              { className: D.a.SigningInAccountName },
+              e.GetUserName()
+            ),
+            i.a.createElement(E.c, null, n),
+            i.a.createElement(
+              "div",
+              { className: D.a.AuthenticatorInputcontainer },
+              t,
+              i.a.createElement(
+                "form",
+                { className: D.a.AccountPasswordForm, onSubmit: this.OnSubmit },
+                i.a.createElement(E.m, {
+                  className: Object(S.a)(D.a.AccountName),
+                  label: "Steam Guard Code",
+                  type: "text",
+                  autoComplete: "off",
+                  focusOnMount: !0,
+                  maxLength: 64,
+                  value: r,
+                  onChange: this.OnChangeAuthCode,
+                }),
+                i.a.createElement(
+                  E.r,
+                  { disabled: this.props.manager.IsRequestInFlight() },
+                  Object(f.f)("#Login_SteamguardSubmit").toLocaleUpperCase()
+                )
+              )
+            ),
+            i.a.createElement(
+              "a",
+              {
+                className: Object(S.a)(
+                  D.a.NeedHelpLink,
+                  s ? D.a.NeedHelpHighlight : null
+                ),
+                href: "http://help.steampowered.com/",
+              },
+              a
+            )
+          );
+        }
+      };
+      Object(n.b)([C.a], R.prototype, "OnSubmit", null),
+        Object(n.b)([C.a], R.prototype, "OnChangeAuthCode", null),
+        (R = Object(n.b)([b.a], R));
+      var P = r("ka0M");
+      class I extends i.a.Component {
+        OnLoginComplete(t) {
+          window.location.href =
+            this.props.redirectURL &&
+            this.props.redirectURL !== Object(A.d)() + "login"
+              ? this.props.redirectURL
+              : A.c.COMMUNITY_BASE_URL;
+        }
+        render() {
+          return A.h && A.h.logged_in
+            ? (this.OnLoginComplete(), null)
+            : i.a.createElement(
+                "div",
+                null,
+                i.a.createElement(L, {
+                  baseURL: Object(A.d)(),
+                  onLoginComplete: this.OnLoginComplete,
+                })
+              );
+        }
+      }
+      Object(n.b)([C.a], I.prototype, "OnLoginComplete", null);
+      class x extends i.a.Component {
+        render() {
+          return i.a.createElement(
+            P.a,
+            {
+              onEscKeypress: this.props.closeModal,
+              bDisableBackgroundDismiss: !0,
+            },
+            i.a.createElement(I, { redirectURL: this.props.redirectURL })
+          );
+        }
+      }
+      function F() {
+        Object(P.d)(
+          i.a.createElement(x, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: Object(E.f)("#Login_SignIn") }
+          { strTitle: Object(f.f)("#Login_SignIn") }
         );
       }
     },
@@ -894,12 +776,12 @@
     OS6B: function (t, e, r) {
       "use strict";
       r.d(e, "a", function () {
-        return o;
+        return i;
       });
       r("mgoM");
       var n = r("vDqi"),
         a = r.n(n);
-      function o(t) {
+      function i(t) {
         if (a.a.isCancel(t))
           return { strErrorMsg: "Action Cancelled:" + t, errorCode: 52 };
         if (
@@ -948,163 +830,121 @@
     Qcoi: function (t, e, r) {
       "use strict";
       r.d(e, "a", function () {
-        return m;
+        return d;
       }),
         r.d(e, "b", function () {
-          return d;
+          return f;
         });
       var n = r("mrSG"),
         a = r("vDqi"),
-        o = r.n(a),
-        i = r("2vnA"),
-        s = r("q1tI"),
+        i = r.n(a),
+        s = r("2vnA"),
+        o = r("q1tI"),
         l = (r("mgoM"), r("kyHq"), r("8H1D")),
-        c = r("kLLr"),
-        h = (r("AiWL"), r("r64O")),
-        u = r("OS6B"),
-        p = r("lkRc"),
-        m = new ((function () {
-          function t() {
-            (this.m_mapProfiles = new Map()),
-              (this.m_mapProfilesLoading = new Map());
-          }
-          return (
-            (t.prototype.LoadProfiles = function (t, e) {
-              return Object(n.b)(this, void 0, void 0, function () {
-                var r,
-                  a,
-                  i,
-                  s,
-                  c = this;
-                return Object(n.e)(this, function (n) {
-                  switch (n.label) {
-                    case 0:
-                      return (
-                        Object(h.a)(
-                          t.length <= 500,
-                          "Check LoadProfiles, requesting too many steam IDs"
-                        ),
-                        0 ==
-                        (r = t.filter(function (t) {
-                          return (
-                            !c.m_mapProfiles.has(t) &&
-                            !c.m_mapProfilesLoading.has(t)
-                          );
-                        })).length
-                          ? [2, this.m_mapProfilesLoading.get(t[0])]
-                          : ((a =
-                              p.c.COMMUNITY_BASE_URL +
-                              "actions/ajaxresolveusers"),
-                            (i = o.a.get(a, {
-                              params: { steamids: r.join(",") },
-                              withCredentials: !0,
-                              cancelToken: null == e ? void 0 : e.token,
-                            })),
-                            r.forEach(function (t) {
-                              return c.m_mapProfilesLoading.set(t, i);
-                            }),
-                            [4, i])
-                      );
-                    case 1:
-                      return (
-                        (s = n.sent()).data &&
-                          200 == s.status &&
-                          s.data.forEach(function (t) {
-                            (t.avatar_hash = t.avatar_url),
-                              (t.avatar_url_medium = Object(l.a)(
-                                t.avatar_url,
-                                "medium"
-                              )),
-                              (t.avatar_url_full = Object(l.a)(
-                                t.avatar_url,
-                                "full"
-                              )),
-                              (t.avatar_url = Object(l.a)(t.avatar_url)),
-                              c.m_mapProfiles.set(t.steamid, t),
-                              c.m_mapProfilesLoading.delete(t.steamid);
-                          }),
-                        [2]
-                      );
-                  }
-                });
+        h = r("kLLr"),
+        c = (r("AiWL"), r("r64O")),
+        m = r("OS6B"),
+        u = r("lkRc");
+      class p {
+        constructor() {
+          (this.m_mapProfiles = new Map()),
+            (this.m_mapProfilesLoading = new Map());
+        }
+        LoadProfiles(t, e) {
+          return Object(n.a)(this, void 0, void 0, function* () {
+            Object(c.a)(
+              t.length <= 500,
+              "Check LoadProfiles, requesting too many steam IDs"
+            );
+            let r = t.filter(
+              (t) =>
+                !this.m_mapProfiles.has(t) && !this.m_mapProfilesLoading.has(t)
+            );
+            if (0 == r.length) return this.m_mapProfilesLoading.get(t[0]);
+            let n = u.c.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              a = i.a.get(n, {
+                params: { steamids: r.join(",") },
+                withCredentials: !0,
+                cancelToken: null == e ? void 0 : e.token,
               });
-            }),
-            (t.prototype.GetProfile = function (t) {
-              return this.m_mapProfiles.get(t);
-            }),
-            (t.prototype.GetProfileByAccountID = function (t) {
-              return this.m_mapProfiles.get(
-                c.a.InitFromAccountID(t).ConvertTo64BitString()
-              );
-            }),
-            (t.prototype.GetProfileBySteamID = function (t) {
-              return this.m_mapProfiles.get(t.ConvertTo64BitString());
-            }),
-            (t.prototype.BHasProfile = function (t) {
-              return this.m_mapProfiles.has(t);
-            }),
-            (t.prototype.BHasProfileByAccountID = function (t) {
-              return this.m_mapProfiles.has(
-                c.a.InitFromAccountID(t).ConvertTo64BitString()
-              );
-            }),
-            (t.prototype.BHasProfileBySteamID = function (t) {
-              return this.m_mapProfiles.has(t.ConvertTo64BitString());
-            }),
-            (t.prototype.GetProfileURLBySteamID = function (t) {
-              var e = this.GetProfileBySteamID(t);
-              return e && e.profile_url
-                ? p.c.COMMUNITY_BASE_URL + "id/" + e.profile_url
-                : p.c.COMMUNITY_BASE_URL +
-                    "profiles/" +
-                    t.ConvertTo64BitString();
-            }),
-            (t.prototype.GetPersonaNameBySteamID = function (t) {
-              var e = this.GetProfileBySteamID(t);
-              return e && e.persona_name ? e.persona_name : "";
-            }),
-            Object(n.c)([i.C], t.prototype, "m_mapProfiles", void 0),
-            t
+            r.forEach((t) => this.m_mapProfilesLoading.set(t, a));
+            let s = yield a;
+            s.data &&
+              200 == s.status &&
+              s.data.forEach((t) => {
+                (t.avatar_hash = t.avatar_url),
+                  (t.avatar_url_medium = Object(l.a)(t.avatar_url, "medium")),
+                  (t.avatar_url_full = Object(l.a)(t.avatar_url, "full")),
+                  (t.avatar_url = Object(l.a)(t.avatar_url)),
+                  this.m_mapProfiles.set(t.steamid, t),
+                  this.m_mapProfilesLoading.delete(t.steamid);
+              });
+          });
+        }
+        GetProfile(t) {
+          return this.m_mapProfiles.get(t);
+        }
+        GetProfileByAccountID(t) {
+          return this.m_mapProfiles.get(
+            h.a.InitFromAccountID(t).ConvertTo64BitString()
           );
-        })())();
-      function d(t) {
-        var e = t ? ("string" == typeof t ? new c.a(t) : t) : null,
-          r = Object(s.useState)(!!e && !m.BHasProfileBySteamID(e)),
-          n = r[0],
-          a = r[1];
-        return (
-          Object(s.useEffect)(
-            function () {
-              var t = o.a.CancelToken.source();
-              return (
-                e &&
-                  !m.BHasProfileBySteamID(e) &&
-                  m
-                    .LoadProfiles([e.ConvertTo64BitString()])
-                    .catch(function (t) {
-                      var r = Object(u.a)(t);
-                      console.error(
-                        "useUserProfile failed to load profile for " +
-                          e.ConvertTo64BitString() +
-                          ": " +
-                          r.strErrorMsg,
-                        r
-                      );
-                    })
-                    .finally(function () {
-                      t.token.reason || a(!1);
-                    }),
-                function () {
-                  return t.cancel("unmounting useUserProfile");
-                }
-              );
-            },
-            [t]
-          ),
-          [n, !!e && m.GetProfileBySteamID(e)]
-        );
+        }
+        GetProfileBySteamID(t) {
+          return this.m_mapProfiles.get(t.ConvertTo64BitString());
+        }
+        BHasProfile(t) {
+          return this.m_mapProfiles.has(t);
+        }
+        BHasProfileByAccountID(t) {
+          return this.m_mapProfiles.has(
+            h.a.InitFromAccountID(t).ConvertTo64BitString()
+          );
+        }
+        BHasProfileBySteamID(t) {
+          return this.m_mapProfiles.has(t.ConvertTo64BitString());
+        }
+        GetProfileURLBySteamID(t) {
+          const e = this.GetProfileBySteamID(t);
+          return e && e.profile_url
+            ? u.c.COMMUNITY_BASE_URL + "id/" + e.profile_url
+            : u.c.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString();
+        }
+        GetPersonaNameBySteamID(t) {
+          const e = this.GetProfileBySteamID(t);
+          return e && e.persona_name ? e.persona_name : "";
+        }
       }
-      window.g_ProfileStore = m;
+      Object(n.b)([s.C], p.prototype, "m_mapProfiles", void 0);
+      const d = new p();
+      function f(t) {
+        const e = t ? ("string" == typeof t ? new h.a(t) : t) : null,
+          [r, n] = Object(o.useState)(!!e && !d.BHasProfileBySteamID(e));
+        Object(o.useEffect)(() => {
+          const t = i.a.CancelToken.source();
+          return (
+            e &&
+              !d.BHasProfileBySteamID(e) &&
+              d
+                .LoadProfiles([e.ConvertTo64BitString()])
+                .catch((t) => {
+                  const r = Object(m.a)(t);
+                  console.error(
+                    "useUserProfile failed to load profile for " +
+                      e.ConvertTo64BitString() +
+                      ": " +
+                      r.strErrorMsg,
+                    r
+                  );
+                })
+                .finally(() => {
+                  t.token.reason || n(!1);
+                }),
+            () => t.cancel("unmounting useUserProfile")
+          );
+        }, [t]);
+        return [r, !!e && d.GetProfileBySteamID(e)];
+      }
+      window.g_ProfileStore = d;
     },
     YLyR: function (t, e, r) {
       "use strict";
@@ -1115,10 +955,10 @@
           return f;
         }),
         r.d(e, "a", function () {
-          return v;
+          return g;
         }),
         r.d(e, "g", function () {
-          return g;
+          return v;
         }),
         r.d(e, "b", function () {
           return _;
@@ -1127,31 +967,31 @@
           return E;
         }),
         r.d(e, "c", function () {
-          return b;
+          return T;
         });
       var n = r("mrSG"),
         a = r("q1tI"),
-        o = r("5E+2"),
-        i = r("TLQK"),
-        s = r("TyAF"),
+        i = r("5E+2"),
+        s = r("TLQK"),
+        o = r("TyAF"),
         l = r("exH9"),
-        c = r("CdLH"),
-        h = r("Ee63"),
-        u = r.n(h),
-        p = r("5izx"),
-        m = r("f0Wu");
+        h = r("CdLH"),
+        c = r("Ee63"),
+        m = r.n(c),
+        u = r("5izx");
+      const p = r("f0Wu");
       function d(t) {
-        var e = m.tz.guess(),
-          r = m.unix(t).tz(e),
-          n = Object(i.c)();
+        const e = p.tz.guess(),
+          r = p.unix(t).tz(e),
+          n = Object(s.c)();
         return n && r.locale(n), r.format("LT");
       }
       function f(t, e) {
-        var r = m.tz.guess(),
-          n = m.unix(t).tz(r),
-          o = Object(i.c)();
+        const r = p.tz.guess(),
+          n = p.unix(t).tz(r),
+          i = Object(s.c)();
         return (
-          o && n.locale(o),
+          i && n.locale(i),
           a.createElement(
             a.Fragment,
             null,
@@ -1167,52 +1007,54 @@
           )
         );
       }
-      var v = Object(s.a)(function (t) {
-          var e = t.dateAndTime,
-            r = t.bSingleLine,
-            o = t.bOnlyTime,
-            s = t.bOnlyDate,
-            l = !o && Boolean(e),
-            c = !s && Boolean(e),
-            h = l && Object(i.k)(e),
-            p = t.stylesmodule
-              ? Object(n.a)(Object(n.a)({}, u.a), t.stylesmodule)
-              : u.a;
+      const g = Object(o.a)((t) => {
+          const {
+              dateAndTime: e,
+              bSingleLine: r,
+              bOnlyTime: n,
+              bOnlyDate: i,
+            } = t,
+            o = !n && Boolean(e),
+            l = !i && Boolean(e),
+            h = o && Object(s.k)(e),
+            c = t.stylesmodule
+              ? Object.assign(Object.assign({}, m.a), t.stylesmodule)
+              : m.a;
           return r
             ? a.createElement(
                 "span",
-                { className: o || s ? p.DateAndTimeInline : p.DateAndTime },
-                l && h,
+                { className: n || i ? c.DateAndTimeInline : c.DateAndTime },
+                o && h,
                 a.createElement("span", null, " "),
-                Boolean(e && c) && f(e, !0)
+                Boolean(e && l) && f(e, !0)
               )
             : a.createElement(
                 "div",
-                { className: p.DateAndTime },
-                l &&
+                { className: c.DateAndTime },
+                o &&
                   a.createElement(
                     a.Fragment,
                     null,
-                    a.createElement("div", { className: p.LocalizedDate }, h),
+                    a.createElement("div", { className: c.LocalizedDate }, h),
                     " ",
-                    a.createElement("span", { className: p.At }, "@")
+                    a.createElement("span", { className: c.At }, "@")
                   ),
                 a.createElement(
                   "div",
-                  { className: p.LocalizedTime },
-                  Boolean(e && c) && f(e, !0)
+                  { className: c.LocalizedTime },
+                  Boolean(e && l) && f(e, !0)
                 )
               );
         }),
-        g = function (t) {
-          var e,
-            r = a.createElement(v, {
-              dateAndTime: t.rtFullDate,
-              bSingleLine: !0,
-              stylesmodule: t.stylesmodule,
-            });
+        v = (t) => {
+          var e;
+          const r = a.createElement(g, {
+            dateAndTime: t.rtFullDate,
+            bSingleLine: !0,
+            stylesmodule: t.stylesmodule,
+          });
           return a.createElement(
-            o.a,
+            i.a,
             {
               toolTipContent: r,
               direction: "top",
@@ -1224,292 +1066,278 @@
             },
             t.children
           );
-        },
-        _ = (function (t) {
-          function e() {
-            return (null !== t && t.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(e, t),
-            (e.prototype.render = function () {
-              var t = this.props,
-                e = t.startDateAndTime,
-                r = t.endDateAndTime,
-                o = this.props.stylesmodule
-                  ? Object(n.a)(Object(n.a)({}, u.a), this.props.stylesmodule)
-                  : u.a,
-                s =
-                  this.props.bHideEndTime ||
-                  null == this.props.endDateAndTime ||
-                  this.props.endDateAndTime < 1;
-              if (null == e || 0 == e)
-                return a.createElement(
-                  "div",
-                  { className: o.DateAndTime },
-                  a.createElement(
-                    "span",
-                    { className: o.RightSideTitles },
-                    Object(i.f)("#EventDisplay_TimeRange")
-                  ),
-                  Object(i.f)("#EventDisplay_TimeDisplayNone")
-                );
-              var h = p.a.GetTimeNowWithOverride();
-              if (s)
-                return a.createElement(
-                  "div",
-                  { className: o.StartDate },
-                  a.createElement(
-                    "div",
-                    { className: o.RightSideTitles },
-                    Object(i.f)(
-                      e < h
-                        ? "#EventDisplay_TimeInPast"
-                        : "#EventDisplay_TimeUpcoming"
-                    ),
-                    " "
-                  ),
-                  a.createElement(v, { stylesmodule: o, dateAndTime: e })
-                );
-              var m = e <= h && h <= r,
-                d = Object(c.b)(new Date(1e3 * e), new Date(1e3 * r));
-              return a.createElement(
+        };
+      let _ = class extends a.Component {
+        render() {
+          const { startDateAndTime: t, endDateAndTime: e } = this.props,
+            r = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, m.a), this.props.stylesmodule)
+              : m.a;
+          let n =
+            this.props.bHideEndTime ||
+            null == this.props.endDateAndTime ||
+            this.props.endDateAndTime < 1;
+          if (null == t || 0 == t)
+            return a.createElement(
+              "div",
+              { className: r.DateAndTime },
+              a.createElement(
+                "span",
+                { className: r.RightSideTitles },
+                Object(s.f)("#EventDisplay_TimeRange")
+              ),
+              Object(s.f)("#EventDisplay_TimeDisplayNone")
+            );
+          let i = u.a.GetTimeNowWithOverride();
+          if (n)
+            return a.createElement(
+              "div",
+              { className: r.StartDate },
+              a.createElement(
                 "div",
-                { className: o.MultiDateAndTime },
-                a.createElement(
-                  "div",
-                  { className: o.StartDate },
-                  a.createElement(
-                    "span",
-                    { className: o.RightSideTitles },
-                    Object(i.f)(
-                      e >= h
-                        ? "#EventDisplay_TimeBeginsOn"
-                        : r >= h
-                        ? "#EventDisplay_TimeBeginsOn_Past"
-                        : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past"
-                    )
-                  ),
-                  a.createElement(v, {
-                    stylesmodule: o,
-                    bSingleLine: !0,
-                    dateAndTime: e,
-                  })
+                { className: r.RightSideTitles },
+                Object(s.f)(
+                  t < i
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming"
                 ),
+                " "
+              ),
+              a.createElement(g, { stylesmodule: r, dateAndTime: t })
+            );
+          let o = t <= i && i <= e;
+          const c = Object(h.b)(new Date(1e3 * t), new Date(1e3 * e));
+          return a.createElement(
+            "div",
+            { className: r.MultiDateAndTime },
+            a.createElement(
+              "div",
+              { className: r.StartDate },
+              a.createElement(
+                "span",
+                { className: r.RightSideTitles },
+                Object(s.f)(
+                  t >= i
+                    ? "#EventDisplay_TimeBeginsOn"
+                    : e >= i
+                    ? "#EventDisplay_TimeBeginsOn_Past"
+                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past"
+                )
+              ),
+              a.createElement(g, {
+                stylesmodule: r,
+                bSingleLine: !0,
+                dateAndTime: t,
+              })
+            ),
+            a.createElement(
+              "div",
+              { className: r.EndDate },
+              a.createElement(
+                "span",
+                { className: r.RightSideTitles },
+                Object(s.f)(
+                  e < i
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn"
+                )
+              ),
+              a.createElement(g, {
+                stylesmodule: r,
+                bSingleLine: !0,
+                bOnlyTime: c,
+                dateAndTime: e,
+              })
+            ),
+            o &&
+              a.createElement(
+                "span",
+                { className: r.ActiveEvent },
                 a.createElement(
-                  "div",
-                  { className: o.EndDate },
-                  a.createElement(
-                    "span",
-                    { className: o.RightSideTitles },
-                    Object(i.f)(
-                      r < h
-                        ? "#EventDisplay_TimeEndsOn_Past"
-                        : "#EventDisplay_TimeEndsOn"
-                    )
-                  ),
-                  a.createElement(v, {
-                    stylesmodule: o,
-                    bSingleLine: !0,
-                    bOnlyTime: d,
-                    dateAndTime: r,
-                  })
-                ),
-                m &&
-                  a.createElement(
-                    "span",
-                    { className: o.ActiveEvent },
-                    a.createElement(
-                      "span",
-                      {
-                        className: Object(l.a)(
-                          o.RightSideTitles,
-                          o.ActiveEventCallOut
-                        ),
-                      },
-                      Object(i.f)("#Time_Now")
-                    )
-                  )
-              );
-            }),
-            (e = Object(n.c)([s.a], e))
+                  "span",
+                  {
+                    className: Object(l.a)(
+                      r.RightSideTitles,
+                      r.ActiveEventCallOut
+                    ),
+                  },
+                  Object(s.f)("#Time_Now")
+                )
+              )
           );
-        })(a.Component),
-        E = (function (t) {
-          function e() {
-            return (null !== t && t.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(e, t),
-            (e.prototype.render = function () {
-              var t = this.props,
-                e = t.startDateAndTime,
-                r = t.endDateAndTime,
-                o = t.bHideEndTime,
-                s = this.props.stylesmodule
-                  ? Object(n.a)(Object(n.a)({}, u.a), this.props.stylesmodule)
-                  : u.a;
-              if (null == e || 0 == e)
-                return a.createElement(
+        }
+      };
+      _ = Object(n.b)([o.a], _);
+      let E = class extends a.Component {
+        render() {
+          const {
+              startDateAndTime: t,
+              endDateAndTime: e,
+              bHideEndTime: r,
+            } = this.props,
+            n = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, m.a), this.props.stylesmodule)
+              : m.a;
+          if (null == t || 0 == t)
+            return a.createElement(
+              "div",
+              { className: n.DateAndTime },
+              a.createElement(
+                "span",
+                { className: n.RightSideTitles },
+                Object(s.f)("#EventDisplay_TimeRange")
+              ),
+              Object(s.f)("#EventDisplay_TimeDisplayNone")
+            );
+          const i = u.a.GetTimeNowWithOverrideAsDate(),
+            o = u.a.GetTimeNowWithOverride(),
+            l = Object(h.c)(new Date(1e3 * t), i),
+            c = a.createElement(
+              "div",
+              { className: n.ShortDateAndTime },
+              Object(s.k)(t, l)
+            );
+          let p = a.createElement(
+            v,
+            { rtFullDate: t, stylesmodule: n },
+            a.createElement(
+              "div",
+              { className: n.RightSideTitles },
+              Object(s.f)(
+                t < o
+                  ? "#EventDisplay_TimeInPast"
+                  : "#EventDisplay_TimeUpcoming"
+              )
+            ),
+            c
+          );
+          if (
+            (o < t &&
+              t < o + h.f.PerWeek &&
+              (p = a.createElement(
+                v,
+                { rtFullDate: t, stylesmodule: n },
+                a.createElement(
                   "div",
-                  { className: s.DateAndTime },
-                  a.createElement(
-                    "span",
-                    { className: s.RightSideTitles },
-                    Object(i.f)("#EventDisplay_TimeRange")
-                  ),
-                  Object(i.f)("#EventDisplay_TimeDisplayNone")
-                );
-              var l = p.a.GetTimeNowWithOverrideAsDate(),
-                h = p.a.GetTimeNowWithOverride(),
-                m = Object(c.c)(new Date(1e3 * e), l),
-                d = a.createElement(
-                  "div",
-                  { className: s.ShortDateAndTime },
-                  Object(i.k)(e, m)
-                ),
-                v = a.createElement(
-                  g,
-                  { rtFullDate: e, stylesmodule: s },
-                  a.createElement(
-                    "div",
-                    { className: s.RightSideTitles },
-                    Object(i.f)(
-                      e < h
-                        ? "#EventDisplay_TimeInPast"
-                        : "#EventDisplay_TimeUpcoming"
-                    )
-                  ),
-                  d
-                );
-              if (
-                (h < e &&
-                  e < h + c.f.PerWeek &&
-                  (v = a.createElement(
-                    g,
-                    { rtFullDate: e, stylesmodule: s },
+                  { className: n.RightSideTitles },
+                  Object(s.m)(
+                    "#EventDisplay_EventUpcoming_WithDateAndTime",
+                    c,
                     a.createElement(
                       "div",
-                      { className: s.RightSideTitles },
-                      Object(i.m)(
-                        "#EventDisplay_EventUpcoming_WithDateAndTime",
-                        d,
-                        a.createElement(
-                          "div",
-                          { className: s.ShortDateAndTime },
-                          f(e),
-                          " "
-                        )
-                      )
+                      { className: n.ShortDateAndTime },
+                      f(t),
+                      " "
                     )
-                  )),
-                o || null == r || r < 1)
+                  )
+                )
+              )),
+            r || null == e || e < 1)
+          )
+            return p;
+          const d = t <= o && o <= e;
+          d &&
+            (p = a.createElement(
+              v,
+              { rtFullDate: t, className: n.ActiveEvent, stylesmodule: n },
+              a.createElement(
+                "span",
+                { className: n.ActiveEventCallOut },
+                Object(s.f)("#Time_Now")
               )
-                return v;
-              var _ = e <= h && h <= r;
-              _ &&
-                (v = a.createElement(
-                  g,
-                  { rtFullDate: e, className: s.ActiveEvent, stylesmodule: s },
-                  a.createElement(
-                    "span",
-                    { className: s.ActiveEventCallOut },
-                    Object(i.f)("#Time_Now")
-                  )
-                ));
-              var E = null,
-                b = _ ? r - h : r - e;
-              if (b <= c.f.PerDay) {
-                var T = a.createElement(
-                  "div",
-                  { className: s.ShortDateAndTime },
-                  Object(i.p)(b, !0)
-                );
-                E =
-                  r < h
-                    ? a.createElement(
-                        "div",
-                        { className: s.RightSideTitles },
-                        Object(i.f)("#EventDisplay_TimeEndsOn_Ran"),
-                        T
-                      )
-                    : a.createElement(
-                        "div",
-                        { className: s.RightSideTitles },
-                        Object(i.m)(
-                          _
-                            ? "#EventDisplay_TimeLeft"
-                            : "#EventDisplay_RunsForDuration",
-                          T
-                        )
-                      );
-              } else {
-                var C = l.getFullYear() == new Date(1e3 * r).getFullYear();
-                E = a.createElement(
-                  a.Fragment,
-                  null,
-                  a.createElement(
+            ));
+          let g = null;
+          const _ = d ? e - o : e - t;
+          if (_ <= h.f.PerDay) {
+            const t = a.createElement(
+              "div",
+              { className: n.ShortDateAndTime },
+              Object(s.p)(_, !0)
+            );
+            g =
+              e < o
+                ? a.createElement(
                     "div",
-                    { className: s.RightSideTitles },
-                    Object(i.f)(
-                      r < h
-                        ? "#EventDisplay_TimeEndsOn_Past"
-                        : "#EventDisplay_TimeEndsOn"
+                    { className: n.RightSideTitles },
+                    Object(s.f)("#EventDisplay_TimeEndsOn_Ran"),
+                    t
+                  )
+                : a.createElement(
+                    "div",
+                    { className: n.RightSideTitles },
+                    Object(s.m)(
+                      d
+                        ? "#EventDisplay_TimeLeft"
+                        : "#EventDisplay_RunsForDuration",
+                      t
                     )
-                  ),
-                  a.createElement(
-                    "div",
-                    { className: s.ShortDateAndTime },
-                    Object(i.k)(r, C)
-                  )
-                );
-              }
-              var y = a.createElement(g, { rtFullDate: r, stylesmodule: s }, E);
-              return a.createElement(
+                  );
+          } else {
+            const t = i.getFullYear() == new Date(1e3 * e).getFullYear();
+            g = a.createElement(
+              a.Fragment,
+              null,
+              a.createElement(
                 "div",
-                { className: s.ShortDateRange },
-                v,
-                y
-              );
-            }),
-            (e = Object(n.c)([s.a], e))
-          );
-        })(a.Component);
-      function b(t) {
-        var e = t.rtStartDate,
-          r = t.rtEndDate,
-          n = t.strMonthFormat,
-          o = t.className;
+                { className: n.RightSideTitles },
+                Object(s.f)(
+                  e < o
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn"
+                )
+              ),
+              a.createElement(
+                "div",
+                { className: n.ShortDateAndTime },
+                Object(s.k)(e, t)
+              )
+            );
+          }
+          const E = a.createElement(v, { rtFullDate: e, stylesmodule: n }, g);
+          return a.createElement("div", { className: n.ShortDateRange }, p, E);
+        }
+      };
+      function T(t) {
+        const {
+          rtStartDate: e,
+          rtEndDate: r,
+          strMonthFormat: n,
+          className: i,
+        } = t;
         return a.createElement(
           "div",
-          { className: o },
+          { className: i },
           (function (t, e, r) {
-            var n = p.a.GetTimeNowWithOverrideAsDate(),
+            const n = u.a.GetTimeNowWithOverrideAsDate(),
               a = new Date(1e3 * t),
-              o = new Date(1e3 * e),
-              s = n.getFullYear() == a.getFullYear(),
-              l = n.getFullYear() == o.getFullYear(),
-              c = a.getFullYear() == o.getFullYear(),
-              h = c && a.getMonth() == o.getMonth(),
-              u = h && a.getDate() == o.getDate(),
-              m = {
+              i = new Date(1e3 * e),
+              o = n.getFullYear() == a.getFullYear(),
+              l = n.getFullYear() == i.getFullYear(),
+              h = a.getFullYear() == i.getFullYear(),
+              c = h && a.getMonth() == i.getMonth(),
+              m = c && a.getDate() == i.getDate(),
+              p = {
                 day: "numeric",
                 month: null != r ? r : "long",
-                year: s ? void 0 : "numeric",
+                year: o ? void 0 : "numeric",
               },
-              d = a.toLocaleDateString(i.e.GetPreferredLocales(), m);
-            if (u) return d;
-            var f = {
-              day: "numeric",
-              month: h && l ? void 0 : null != r ? r : "long",
-              year: c ? void 0 : "numeric",
-            };
-            return (
-              d + " - " + o.toLocaleDateString(i.e.GetPreferredLocales(), f)
-            );
+              d = a.toLocaleDateString(s.e.GetPreferredLocales(), p);
+            if (m) return d;
+            {
+              const t = {
+                day: "numeric",
+                month: c && l ? void 0 : null != r ? r : "long",
+                year: h ? void 0 : "numeric",
+              };
+              return (
+                d + " - " + i.toLocaleDateString(s.e.GetPreferredLocales(), t)
+              );
+            }
           })(e, r, n),
           " "
         );
       }
+      E = Object(n.b)([o.a], E);
     },
     fpVW: function (t, e, r) {
       t.exports = {
@@ -1628,20 +1456,20 @@
             ? this.fromString(t, 256)
             : this.fromString(t, e));
       }
-      function o() {
+      function i() {
         return new a(null);
       }
       "Microsoft Internet Explorer" == navigator.appName
-        ? ((a.prototype.am = function (t, e, r, n, a, o) {
-            for (var i = 32767 & e, s = e >> 15; --o >= 0; ) {
+        ? ((a.prototype.am = function (t, e, r, n, a, i) {
+            for (var s = 32767 & e, o = e >> 15; --i >= 0; ) {
               var l = 32767 & this[t],
-                c = this[t++] >> 15,
-                h = s * l + c * i;
+                h = this[t++] >> 15,
+                c = o * l + h * s;
               (a =
-                ((l = i * l + ((32767 & h) << 15) + r[n] + (1073741823 & a)) >>>
+                ((l = s * l + ((32767 & c) << 15) + r[n] + (1073741823 & a)) >>>
                   30) +
-                (h >>> 15) +
-                s * c +
+                (c >>> 15) +
+                o * h +
                 (a >>> 30)),
                 (r[n++] = 1073741823 & l);
             }
@@ -1649,23 +1477,23 @@
           }),
           (n = 30))
         : "Netscape" != navigator.appName
-        ? ((a.prototype.am = function (t, e, r, n, a, o) {
-            for (; --o >= 0; ) {
-              var i = e * this[t++] + r[n] + a;
-              (a = Math.floor(i / 67108864)), (r[n++] = 67108863 & i);
+        ? ((a.prototype.am = function (t, e, r, n, a, i) {
+            for (; --i >= 0; ) {
+              var s = e * this[t++] + r[n] + a;
+              (a = Math.floor(s / 67108864)), (r[n++] = 67108863 & s);
             }
             return a;
           }),
           (n = 26))
-        : ((a.prototype.am = function (t, e, r, n, a, o) {
-            for (var i = 16383 & e, s = e >> 14; --o >= 0; ) {
+        : ((a.prototype.am = function (t, e, r, n, a, i) {
+            for (var s = 16383 & e, o = e >> 14; --i >= 0; ) {
               var l = 16383 & this[t],
-                c = this[t++] >> 14,
-                h = s * l + c * i;
+                h = this[t++] >> 14,
+                c = o * l + h * s;
               (a =
-                ((l = i * l + ((16383 & h) << 14) + r[n] + a) >> 28) +
-                (h >> 14) +
-                s * c),
+                ((l = s * l + ((16383 & c) << 14) + r[n] + a) >> 28) +
+                (c >> 14) +
+                o * h),
                 (r[n++] = 268435455 & l);
             }
             return a;
@@ -1677,24 +1505,24 @@
       (a.prototype.FV = Math.pow(2, 52)),
         (a.prototype.F1 = 52 - n),
         (a.prototype.F2 = 2 * n - 52);
-      var i,
-        s,
+      var s,
+        o,
         l = new Array();
-      for (i = "0".charCodeAt(0), s = 0; s <= 9; ++s) l[i++] = s;
-      for (i = "a".charCodeAt(0), s = 10; s < 36; ++s) l[i++] = s;
-      for (i = "A".charCodeAt(0), s = 10; s < 36; ++s) l[i++] = s;
-      function c(t) {
+      for (s = "0".charCodeAt(0), o = 0; o <= 9; ++o) l[s++] = o;
+      for (s = "a".charCodeAt(0), o = 10; o < 36; ++o) l[s++] = o;
+      for (s = "A".charCodeAt(0), o = 10; o < 36; ++o) l[s++] = o;
+      function h(t) {
         return "0123456789abcdefghijklmnopqrstuvwxyz".charAt(t);
       }
-      function h(t, e) {
+      function c(t, e) {
         var r = l[t.charCodeAt(e)];
         return null == r ? -1 : r;
       }
-      function u(t) {
-        var e = o();
+      function m(t) {
+        var e = i();
         return e.fromInt(t), e;
       }
-      function p(t) {
+      function u(t) {
         var e,
           r = 1;
         return (
@@ -1706,7 +1534,7 @@
           r
         );
       }
-      function m(t) {
+      function p(t) {
         this.m = t;
       }
       function d(t) {
@@ -1720,10 +1548,10 @@
       function f(t, e) {
         return t & e;
       }
-      function v(t, e) {
+      function g(t, e) {
         return t | e;
       }
-      function g(t, e) {
+      function v(t, e) {
         return t ^ e;
       }
       function _(t, e) {
@@ -1741,38 +1569,38 @@
           e
         );
       }
-      function b(t) {
+      function T(t) {
         for (var e = 0; 0 != t; ) (t &= t - 1), ++e;
         return e;
       }
-      function T() {}
+      function b() {}
       function C(t) {
         return t;
       }
-      function y(t) {
-        (this.r2 = o()),
-          (this.q3 = o()),
+      function S(t) {
+        (this.r2 = i()),
+          (this.q3 = i()),
           a.ONE.dlShiftTo(2 * t.t, this.r2),
           (this.mu = this.r2.divide(t)),
           (this.m = t);
       }
-      (m.prototype.convert = function (t) {
+      (p.prototype.convert = function (t) {
         return t.s < 0 || t.compareTo(this.m) >= 0 ? t.mod(this.m) : t;
       }),
-        (m.prototype.revert = function (t) {
+        (p.prototype.revert = function (t) {
           return t;
         }),
-        (m.prototype.reduce = function (t) {
+        (p.prototype.reduce = function (t) {
           t.divRemTo(this.m, null, t);
         }),
-        (m.prototype.mulTo = function (t, e, r) {
+        (p.prototype.mulTo = function (t, e, r) {
           t.multiplyTo(e, r), this.reduce(r);
         }),
-        (m.prototype.sqrTo = function (t, e) {
+        (p.prototype.sqrTo = function (t, e) {
           t.squareTo(e), this.reduce(e);
         }),
         (d.prototype.convert = function (t) {
-          var e = o();
+          var e = i();
           return (
             t.abs().dlShiftTo(this.m.t, e),
             e.divRemTo(this.m, null, e),
@@ -1781,7 +1609,7 @@
           );
         }),
         (d.prototype.revert = function (t) {
-          var e = o();
+          var e = i();
           return t.copyTo(e), this.reduce(e), e;
         }),
         (d.prototype.reduce = function (t) {
@@ -1831,26 +1659,26 @@
             r = 2;
           }
           (this.t = 0), (this.s = 0);
-          for (var n = t.length, o = !1, i = 0; --n >= 0; ) {
-            var s = 8 == r ? 255 & t[n] : h(t, n);
-            s < 0
-              ? "-" == t.charAt(n) && (o = !0)
-              : ((o = !1),
-                0 == i
-                  ? (this[this.t++] = s)
-                  : i + r > this.DB
+          for (var n = t.length, i = !1, s = 0; --n >= 0; ) {
+            var o = 8 == r ? 255 & t[n] : c(t, n);
+            o < 0
+              ? "-" == t.charAt(n) && (i = !0)
+              : ((i = !1),
+                0 == s
+                  ? (this[this.t++] = o)
+                  : s + r > this.DB
                   ? ((this[this.t - 1] |=
-                      (s & ((1 << (this.DB - i)) - 1)) << i),
-                    (this[this.t++] = s >> (this.DB - i)))
-                  : (this[this.t - 1] |= s << i),
-                (i += r) >= this.DB && (i -= this.DB));
+                      (o & ((1 << (this.DB - s)) - 1)) << s),
+                    (this[this.t++] = o >> (this.DB - s)))
+                  : (this[this.t - 1] |= o << s),
+                (s += r) >= this.DB && (s -= this.DB));
           }
           8 == r &&
             0 != (128 & t[0]) &&
             ((this.s = -1),
-            i > 0 && (this[this.t - 1] |= ((1 << (this.DB - i)) - 1) << i)),
+            s > 0 && (this[this.t - 1] |= ((1 << (this.DB - s)) - 1) << s)),
             this.clamp(),
-            o && a.ZERO.subTo(this, this);
+            i && a.ZERO.subTo(this, this);
         }),
         (a.prototype.clamp = function () {
           for (var t = this.s & this.DM; this.t > 0 && this[this.t - 1] == t; )
@@ -1870,13 +1698,13 @@
           var r,
             n = t % this.DB,
             a = this.DB - n,
-            o = (1 << a) - 1,
-            i = Math.floor(t / this.DB),
-            s = (this.s << n) & this.DM;
+            i = (1 << a) - 1,
+            s = Math.floor(t / this.DB),
+            o = (this.s << n) & this.DM;
           for (r = this.t - 1; r >= 0; --r)
-            (e[r + i + 1] = (this[r] >> a) | s), (s = (this[r] & o) << n);
-          for (r = i - 1; r >= 0; --r) e[r] = 0;
-          (e[i] = s), (e.t = this.t + i + 1), (e.s = this.s), e.clamp();
+            (e[r + s + 1] = (this[r] >> a) | o), (o = (this[r] & i) << n);
+          for (r = s - 1; r >= 0; --r) e[r] = 0;
+          (e[s] = o), (e.t = this.t + s + 1), (e.s = this.s), e.clamp();
         }),
         (a.prototype.rShiftTo = function (t, e) {
           e.s = this.s;
@@ -1885,11 +1713,11 @@
           else {
             var n = t % this.DB,
               a = this.DB - n,
-              o = (1 << n) - 1;
+              i = (1 << n) - 1;
             e[0] = this[r] >> n;
-            for (var i = r + 1; i < this.t; ++i)
-              (e[i - r - 1] |= (this[i] & o) << a), (e[i - r] = this[i] >> n);
-            n > 0 && (e[this.t - r - 1] |= (this.s & o) << a),
+            for (var s = r + 1; s < this.t; ++s)
+              (e[s - r - 1] |= (this[s] & i) << a), (e[s - r] = this[s] >> n);
+            n > 0 && (e[this.t - r - 1] |= (this.s & i) << a),
               (e.t = this.t - r),
               e.clamp();
           }
@@ -1914,9 +1742,9 @@
         (a.prototype.multiplyTo = function (t, e) {
           var r = this.abs(),
             n = t.abs(),
-            o = r.t;
-          for (e.t = o + n.t; --o >= 0; ) e[o] = 0;
-          for (o = 0; o < n.t; ++o) e[o + r.t] = r.am(0, n[o], e, o, 0, r.t);
+            i = r.t;
+          for (e.t = i + n.t; --i >= 0; ) e[i] = 0;
+          for (i = 0; i < n.t; ++i) e[i + r.t] = r.am(0, n[i], e, i, 0, r.t);
           (e.s = 0), e.clamp(), this.s != t.s && a.ZERO.subTo(e, e);
         }),
         (a.prototype.squareTo = function (t) {
@@ -1939,51 +1767,51 @@
         (a.prototype.divRemTo = function (t, e, r) {
           var n = t.abs();
           if (!(n.t <= 0)) {
-            var i = this.abs();
-            if (i.t < n.t)
+            var s = this.abs();
+            if (s.t < n.t)
               return (
                 null != e && e.fromInt(0), void (null != r && this.copyTo(r))
               );
-            null == r && (r = o());
-            var s = o(),
+            null == r && (r = i());
+            var o = i(),
               l = this.s,
-              c = t.s,
-              h = this.DB - p(n[n.t - 1]);
-            h > 0
-              ? (n.lShiftTo(h, s), i.lShiftTo(h, r))
-              : (n.copyTo(s), i.copyTo(r));
-            var u = s.t,
-              m = s[u - 1];
-            if (0 != m) {
-              var d = m * (1 << this.F1) + (u > 1 ? s[u - 2] >> this.F2 : 0),
+              h = t.s,
+              c = this.DB - u(n[n.t - 1]);
+            c > 0
+              ? (n.lShiftTo(c, o), s.lShiftTo(c, r))
+              : (n.copyTo(o), s.copyTo(r));
+            var m = o.t,
+              p = o[m - 1];
+            if (0 != p) {
+              var d = p * (1 << this.F1) + (m > 1 ? o[m - 2] >> this.F2 : 0),
                 f = this.FV / d,
-                v = (1 << this.F1) / d,
-                g = 1 << this.F2,
+                g = (1 << this.F1) / d,
+                v = 1 << this.F2,
                 _ = r.t,
-                E = _ - u,
-                b = null == e ? o() : e;
+                E = _ - m,
+                T = null == e ? i() : e;
               for (
-                s.dlShiftTo(E, b),
-                  r.compareTo(b) >= 0 && ((r[r.t++] = 1), r.subTo(b, r)),
-                  a.ONE.dlShiftTo(u, b),
-                  b.subTo(s, s);
-                s.t < u;
+                o.dlShiftTo(E, T),
+                  r.compareTo(T) >= 0 && ((r[r.t++] = 1), r.subTo(T, r)),
+                  a.ONE.dlShiftTo(m, T),
+                  T.subTo(o, o);
+                o.t < m;
 
               )
-                s[s.t++] = 0;
+                o[o.t++] = 0;
               for (; --E >= 0; ) {
-                var T =
-                  r[--_] == m
+                var b =
+                  r[--_] == p
                     ? this.DM
-                    : Math.floor(r[_] * f + (r[_ - 1] + g) * v);
-                if ((r[_] += s.am(0, T, r, E, 0, u)) < T)
-                  for (s.dlShiftTo(E, b), r.subTo(b, r); r[_] < --T; )
-                    r.subTo(b, r);
+                    : Math.floor(r[_] * f + (r[_ - 1] + v) * g);
+                if ((r[_] += o.am(0, b, r, E, 0, m)) < b)
+                  for (o.dlShiftTo(E, T), r.subTo(T, r); r[_] < --b; )
+                    r.subTo(T, r);
               }
-              null != e && (r.drShiftTo(u, e), l != c && a.ZERO.subTo(e, e)),
-                (r.t = u),
+              null != e && (r.drShiftTo(m, e), l != h && a.ZERO.subTo(e, e)),
+                (r.t = m),
                 r.clamp(),
-                h > 0 && r.rShiftTo(h, r),
+                c > 0 && r.rShiftTo(c, r),
                 l < 0 && a.ZERO.subTo(r, r);
             }
           }
@@ -2010,12 +1838,12 @@
         }),
         (a.prototype.exp = function (t, e) {
           if (t > 4294967295 || t < 1) return a.ONE;
-          var r = o(),
-            n = o(),
-            i = e.convert(this),
-            s = p(t) - 1;
-          for (i.copyTo(r); --s >= 0; )
-            if ((e.sqrTo(r, n), (t & (1 << s)) > 0)) e.mulTo(n, i, r);
+          var r = i(),
+            n = i(),
+            s = e.convert(this),
+            o = u(t) - 1;
+          for (s.copyTo(r); --o >= 0; )
+            if ((e.sqrTo(r, n), (t & (1 << o)) > 0)) e.mulTo(n, s, r);
             else {
               var l = r;
               (r = n), (n = l);
@@ -2036,26 +1864,26 @@
           var r,
             n = (1 << e) - 1,
             a = !1,
-            o = "",
-            i = this.t,
-            s = this.DB - ((i * this.DB) % e);
-          if (i-- > 0)
+            i = "",
+            s = this.t,
+            o = this.DB - ((s * this.DB) % e);
+          if (s-- > 0)
             for (
-              s < this.DB && (r = this[i] >> s) > 0 && ((a = !0), (o = c(r)));
-              i >= 0;
+              o < this.DB && (r = this[s] >> o) > 0 && ((a = !0), (i = h(r)));
+              s >= 0;
 
             )
-              s < e
-                ? ((r = (this[i] & ((1 << s) - 1)) << (e - s)),
-                  (r |= this[--i] >> (s += this.DB - e)))
-                : ((r = (this[i] >> (s -= e)) & n),
-                  s <= 0 && ((s += this.DB), --i)),
+              o < e
+                ? ((r = (this[s] & ((1 << o) - 1)) << (e - o)),
+                  (r |= this[--s] >> (o += this.DB - e)))
+                : ((r = (this[s] >> (o -= e)) & n),
+                  o <= 0 && ((o += this.DB), --s)),
                 r > 0 && (a = !0),
-                a && (o += c(r));
-          return a ? o : "0";
+                a && (i += h(r));
+          return a ? i : "0";
         }),
         (a.prototype.negate = function () {
-          var t = o();
+          var t = i();
           return a.ZERO.subTo(this, t), t;
         }),
         (a.prototype.abs = function () {
@@ -2072,10 +1900,10 @@
         (a.prototype.bitLength = function () {
           return this.t <= 0
             ? 0
-            : this.DB * (this.t - 1) + p(this[this.t - 1] ^ (this.s & this.DM));
+            : this.DB * (this.t - 1) + u(this[this.t - 1] ^ (this.s & this.DM));
         }),
         (a.prototype.mod = function (t) {
-          var e = o();
+          var e = i();
           return (
             this.abs().divRemTo(t, null, e),
             this.s < 0 && e.compareTo(a.ZERO) > 0 && t.subTo(e, e),
@@ -2085,29 +1913,29 @@
         (a.prototype.modPowInt = function (t, e) {
           var r;
           return (
-            (r = t < 256 || e.isEven() ? new m(e) : new d(e)), this.exp(t, r)
+            (r = t < 256 || e.isEven() ? new p(e) : new d(e)), this.exp(t, r)
           );
         }),
-        (a.ZERO = u(0)),
-        (a.ONE = u(1)),
-        (T.prototype.convert = C),
-        (T.prototype.revert = C),
-        (T.prototype.mulTo = function (t, e, r) {
+        (a.ZERO = m(0)),
+        (a.ONE = m(1)),
+        (b.prototype.convert = C),
+        (b.prototype.revert = C),
+        (b.prototype.mulTo = function (t, e, r) {
           t.multiplyTo(e, r);
         }),
-        (T.prototype.sqrTo = function (t, e) {
+        (b.prototype.sqrTo = function (t, e) {
           t.squareTo(e);
         }),
-        (y.prototype.convert = function (t) {
+        (S.prototype.convert = function (t) {
           if (t.s < 0 || t.t > 2 * this.m.t) return t.mod(this.m);
           if (t.compareTo(this.m) < 0) return t;
-          var e = o();
+          var e = i();
           return t.copyTo(e), this.reduce(e), e;
         }),
-        (y.prototype.revert = function (t) {
+        (S.prototype.revert = function (t) {
           return t;
         }),
-        (y.prototype.reduce = function (t) {
+        (S.prototype.reduce = function (t) {
           for (
             t.drShiftTo(this.m.t - 1, this.r2),
               t.t > this.m.t + 1 && ((t.t = this.m.t + 1), t.clamp()),
@@ -2120,13 +1948,13 @@
           for (t.subTo(this.r2, t); t.compareTo(this.m) >= 0; )
             t.subTo(this.m, t);
         }),
-        (y.prototype.mulTo = function (t, e, r) {
+        (S.prototype.mulTo = function (t, e, r) {
           t.multiplyTo(e, r), this.reduce(r);
         }),
-        (y.prototype.sqrTo = function (t, e) {
+        (S.prototype.sqrTo = function (t, e) {
           t.squareTo(e), this.reduce(e);
         });
-      var S = [
+      var y = [
           2,
           3,
           5,
@@ -2225,7 +2053,7 @@
           503,
           509,
         ],
-        O = (1 << 26) / S[S.length - 1];
+        D = (1 << 26) / y[y.length - 1];
       (a.prototype.chunkSize = function (t) {
         return Math.floor((Math.LN2 * this.DB) / Math.log(t));
       }),
@@ -2234,36 +2062,36 @@
             return "0";
           var e = this.chunkSize(t),
             r = Math.pow(t, e),
-            n = u(r),
-            a = o(),
-            i = o(),
-            s = "";
-          for (this.divRemTo(n, a, i); a.signum() > 0; )
-            (s = (r + i.intValue()).toString(t).substr(1) + s),
-              a.divRemTo(n, a, i);
-          return i.intValue().toString(t) + s;
+            n = m(r),
+            a = i(),
+            s = i(),
+            o = "";
+          for (this.divRemTo(n, a, s); a.signum() > 0; )
+            (o = (r + s.intValue()).toString(t).substr(1) + o),
+              a.divRemTo(n, a, s);
+          return s.intValue().toString(t) + o;
         }),
         (a.prototype.fromRadix = function (t, e) {
           this.fromInt(0), null == e && (e = 10);
           for (
             var r = this.chunkSize(e),
               n = Math.pow(e, r),
-              o = !1,
-              i = 0,
+              i = !1,
               s = 0,
+              o = 0,
               l = 0;
             l < t.length;
             ++l
           ) {
-            var c = h(t, l);
-            c < 0
-              ? "-" == t.charAt(l) && 0 == this.signum() && (o = !0)
-              : ((s = e * s + c),
-                ++i >= r &&
-                  (this.dMultiply(n), this.dAddOffset(s, 0), (i = 0), (s = 0)));
+            var h = c(t, l);
+            h < 0
+              ? "-" == t.charAt(l) && 0 == this.signum() && (i = !0)
+              : ((o = e * o + h),
+                ++s >= r &&
+                  (this.dMultiply(n), this.dAddOffset(o, 0), (s = 0), (o = 0)));
           }
-          i > 0 && (this.dMultiply(Math.pow(e, i)), this.dAddOffset(s, 0)),
-            o && a.ZERO.subTo(this, this);
+          s > 0 && (this.dMultiply(Math.pow(e, s)), this.dAddOffset(o, 0)),
+            i && a.ZERO.subTo(this, this);
         }),
         (a.prototype.fromNumber = function (t, e, r) {
           if ("number" == typeof e)
@@ -2272,7 +2100,7 @@
               for (
                 this.fromNumber(t, r),
                   this.testBit(t - 1) ||
-                    this.bitwiseTo(a.ONE.shiftLeft(t - 1), v, this),
+                    this.bitwiseTo(a.ONE.shiftLeft(t - 1), g, this),
                   this.isEven() && this.dAddOffset(1, 0);
                 !this.isProbablePrime(e);
 
@@ -2282,24 +2110,24 @@
                     this.subTo(a.ONE.shiftLeft(t - 1), this);
           else {
             var n = new Array(),
-              o = 7 & t;
+              i = 7 & t;
             (n.length = 1 + (t >> 3)),
               e.nextBytes(n),
-              o > 0 ? (n[0] &= (1 << o) - 1) : (n[0] = 0),
+              i > 0 ? (n[0] &= (1 << i) - 1) : (n[0] = 0),
               this.fromString(n, 256);
           }
         }),
         (a.prototype.bitwiseTo = function (t, e, r) {
           var n,
             a,
-            o = Math.min(t.t, this.t);
-          for (n = 0; n < o; ++n) r[n] = e(this[n], t[n]);
+            i = Math.min(t.t, this.t);
+          for (n = 0; n < i; ++n) r[n] = e(this[n], t[n]);
           if (t.t < this.t) {
-            for (a = t.s & this.DM, n = o; n < this.t; ++n)
+            for (a = t.s & this.DM, n = i; n < this.t; ++n)
               r[n] = e(this[n], a);
             r.t = this.t;
           } else {
-            for (a = this.s & this.DM, n = o; n < t.t; ++n) r[n] = e(a, t[n]);
+            for (a = this.s & this.DM, n = i; n < t.t; ++n) r[n] = e(a, t[n]);
             r.t = t.t;
           }
           (r.s = e(this.s, t.s)), r.clamp();
@@ -2370,12 +2198,12 @@
             r = e.getLowestSetBit();
           if (r <= 0) return !1;
           var n = e.shiftRight(r);
-          (t = (t + 1) >> 1) > S.length && (t = S.length);
-          for (var i = o(), s = 0; s < t; ++s) {
-            i.fromInt(S[s]);
-            var l = i.modPow(n, this);
+          (t = (t + 1) >> 1) > y.length && (t = y.length);
+          for (var s = i(), o = 0; o < t; ++o) {
+            s.fromInt(y[o]);
+            var l = s.modPow(n, this);
             if (0 != l.compareTo(a.ONE) && 0 != l.compareTo(e)) {
-              for (var c = 1; c++ < r && 0 != l.compareTo(e); )
+              for (var h = 1; h++ < r && 0 != l.compareTo(e); )
                 if (0 == (l = l.modPowInt(2, this)).compareTo(a.ONE)) return !1;
               if (0 != l.compareTo(e)) return !1;
             }
@@ -2383,7 +2211,7 @@
           return !0;
         }),
         (a.prototype.clone = function () {
-          var t = o();
+          var t = i();
           return this.copyTo(t), t;
         }),
         (a.prototype.intValue = function () {
@@ -2444,31 +2272,31 @@
           return this.compareTo(t) > 0 ? this : t;
         }),
         (a.prototype.and = function (t) {
-          var e = o();
+          var e = i();
           return this.bitwiseTo(t, f, e), e;
         }),
         (a.prototype.or = function (t) {
-          var e = o();
-          return this.bitwiseTo(t, v, e), e;
-        }),
-        (a.prototype.xor = function (t) {
-          var e = o();
+          var e = i();
           return this.bitwiseTo(t, g, e), e;
         }),
+        (a.prototype.xor = function (t) {
+          var e = i();
+          return this.bitwiseTo(t, v, e), e;
+        }),
         (a.prototype.andNot = function (t) {
-          var e = o();
+          var e = i();
           return this.bitwiseTo(t, _, e), e;
         }),
         (a.prototype.not = function () {
-          for (var t = o(), e = 0; e < this.t; ++e) t[e] = this.DM & ~this[e];
+          for (var t = i(), e = 0; e < this.t; ++e) t[e] = this.DM & ~this[e];
           return (t.t = this.t), (t.s = ~this.s), t;
         }),
         (a.prototype.shiftLeft = function (t) {
-          var e = o();
+          var e = i();
           return t < 0 ? this.rShiftTo(-t, e) : this.lShiftTo(t, e), e;
         }),
         (a.prototype.shiftRight = function (t) {
-          var e = o();
+          var e = i();
           return t < 0 ? this.lShiftTo(-t, e) : this.rShiftTo(t, e), e;
         }),
         (a.prototype.getLowestSetBit = function () {
@@ -2478,7 +2306,7 @@
         }),
         (a.prototype.bitCount = function () {
           for (var t = 0, e = this.s & this.DM, r = 0; r < this.t; ++r)
-            t += b(this[r] ^ e);
+            t += T(this[r] ^ e);
           return t;
         }),
         (a.prototype.testBit = function (t) {
@@ -2488,87 +2316,87 @@
             : 0 != (this[e] & (1 << t % this.DB));
         }),
         (a.prototype.setBit = function (t) {
-          return this.changeBit(t, v);
+          return this.changeBit(t, g);
         }),
         (a.prototype.clearBit = function (t) {
           return this.changeBit(t, _);
         }),
         (a.prototype.flipBit = function (t) {
-          return this.changeBit(t, g);
+          return this.changeBit(t, v);
         }),
         (a.prototype.add = function (t) {
-          var e = o();
+          var e = i();
           return this.addTo(t, e), e;
         }),
         (a.prototype.subtract = function (t) {
-          var e = o();
+          var e = i();
           return this.subTo(t, e), e;
         }),
         (a.prototype.multiply = function (t) {
-          var e = o();
+          var e = i();
           return this.multiplyTo(t, e), e;
         }),
         (a.prototype.divide = function (t) {
-          var e = o();
+          var e = i();
           return this.divRemTo(t, e, null), e;
         }),
         (a.prototype.remainder = function (t) {
-          var e = o();
+          var e = i();
           return this.divRemTo(t, null, e), e;
         }),
         (a.prototype.divideAndRemainder = function (t) {
-          var e = o(),
-            r = o();
+          var e = i(),
+            r = i();
           return this.divRemTo(t, e, r), new Array(e, r);
         }),
         (a.prototype.modPow = function (t, e) {
           var r,
             n,
             a = t.bitLength(),
-            i = u(1);
-          if (a <= 0) return i;
+            s = m(1);
+          if (a <= 0) return s;
           (r = a < 18 ? 1 : a < 48 ? 3 : a < 144 ? 4 : a < 768 ? 5 : 6),
-            (n = a < 8 ? new m(e) : e.isEven() ? new y(e) : new d(e));
-          var s = new Array(),
+            (n = a < 8 ? new p(e) : e.isEven() ? new S(e) : new d(e));
+          var o = new Array(),
             l = 3,
-            c = r - 1,
-            h = (1 << r) - 1;
-          if (((s[1] = n.convert(this)), r > 1)) {
-            var f = o();
-            for (n.sqrTo(s[1], f); l <= h; )
-              (s[l] = o()), n.mulTo(f, s[l - 2], s[l]), (l += 2);
+            h = r - 1,
+            c = (1 << r) - 1;
+          if (((o[1] = n.convert(this)), r > 1)) {
+            var f = i();
+            for (n.sqrTo(o[1], f); l <= c; )
+              (o[l] = i()), n.mulTo(f, o[l - 2], o[l]), (l += 2);
           }
-          var v,
-            g,
+          var g,
+            v,
             _ = t.t - 1,
             E = !0,
-            b = o();
-          for (a = p(t[_]) - 1; _ >= 0; ) {
+            T = i();
+          for (a = u(t[_]) - 1; _ >= 0; ) {
             for (
-              a >= c
-                ? (v = (t[_] >> (a - c)) & h)
-                : ((v = (t[_] & ((1 << (a + 1)) - 1)) << (c - a)),
-                  _ > 0 && (v |= t[_ - 1] >> (this.DB + a - c))),
+              a >= h
+                ? (g = (t[_] >> (a - h)) & c)
+                : ((g = (t[_] & ((1 << (a + 1)) - 1)) << (h - a)),
+                  _ > 0 && (g |= t[_ - 1] >> (this.DB + a - h))),
                 l = r;
-              0 == (1 & v);
+              0 == (1 & g);
 
             )
-              (v >>= 1), --l;
+              (g >>= 1), --l;
             if (((a -= l) < 0 && ((a += this.DB), --_), E))
-              s[v].copyTo(i), (E = !1);
+              o[g].copyTo(s), (E = !1);
             else {
-              for (; l > 1; ) n.sqrTo(i, b), n.sqrTo(b, i), (l -= 2);
-              l > 0 ? n.sqrTo(i, b) : ((g = i), (i = b), (b = g)),
-                n.mulTo(b, s[v], i);
+              for (; l > 1; ) n.sqrTo(s, T), n.sqrTo(T, s), (l -= 2);
+              l > 0 ? n.sqrTo(s, T) : ((v = s), (s = T), (T = v)),
+                n.mulTo(T, o[g], s);
             }
             for (; _ >= 0 && 0 == (t[_] & (1 << a)); )
-              n.sqrTo(i, b),
-                (g = i),
-                (i = b),
-                (b = g),
+              n.sqrTo(s, T),
+                (v = s),
+                (s = T),
+                (T = v),
                 --a < 0 && ((a = this.DB - 1), --_);
           }
-          return n.revert(i);
+          return n.revert(s);
         }),
         (a.prototype.modInverse = function (t) {
           var e = t.isEven();
@@ -2576,32 +2404,32 @@
           for (
             var r = t.clone(),
               n = this.clone(),
-              o = u(1),
-              i = u(0),
-              s = u(0),
-              l = u(1);
+              i = m(1),
+              s = m(0),
+              o = m(0),
+              l = m(1);
             0 != r.signum();
 
           ) {
             for (; r.isEven(); )
               r.rShiftTo(1, r),
                 e
-                  ? ((o.isEven() && i.isEven()) ||
-                      (o.addTo(this, o), i.subTo(t, i)),
-                    o.rShiftTo(1, o))
-                  : i.isEven() || i.subTo(t, i),
-                i.rShiftTo(1, i);
+                  ? ((i.isEven() && s.isEven()) ||
+                      (i.addTo(this, i), s.subTo(t, s)),
+                    i.rShiftTo(1, i))
+                  : s.isEven() || s.subTo(t, s),
+                s.rShiftTo(1, s);
             for (; n.isEven(); )
               n.rShiftTo(1, n),
                 e
-                  ? ((s.isEven() && l.isEven()) ||
-                      (s.addTo(this, s), l.subTo(t, l)),
-                    s.rShiftTo(1, s))
+                  ? ((o.isEven() && l.isEven()) ||
+                      (o.addTo(this, o), l.subTo(t, l)),
+                    o.rShiftTo(1, o))
                   : l.isEven() || l.subTo(t, l),
                 l.rShiftTo(1, l);
             r.compareTo(n) >= 0
-              ? (r.subTo(n, r), e && o.subTo(s, o), i.subTo(l, i))
-              : (n.subTo(r, n), e && s.subTo(o, s), l.subTo(i, l));
+              ? (r.subTo(n, r), e && i.subTo(o, i), s.subTo(l, s))
+              : (n.subTo(r, n), e && o.subTo(i, o), l.subTo(s, l));
           }
           return 0 != n.compareTo(a.ONE)
             ? a.ZERO
@@ -2612,7 +2440,7 @@
             : l;
         }),
         (a.prototype.pow = function (t) {
-          return this.exp(t, new T());
+          return this.exp(t, new b());
         }),
         (a.prototype.gcd = function (t) {
           var e = this.s < 0 ? this.negate() : this.clone(),
@@ -2622,10 +2450,10 @@
             (e = r), (r = n);
           }
           var a = e.getLowestSetBit(),
-            o = r.getLowestSetBit();
-          if (o < 0) return e;
+            i = r.getLowestSetBit();
+          if (i < 0) return e;
           for (
-            a < o && (o = a), o > 0 && (e.rShiftTo(o, e), r.rShiftTo(o, r));
+            a < i && (i = a), i > 0 && (e.rShiftTo(i, e), r.rShiftTo(i, r));
             e.signum() > 0;
 
           )
@@ -2634,28 +2462,28 @@
               e.compareTo(r) >= 0
                 ? (e.subTo(r, e), e.rShiftTo(1, e))
                 : (r.subTo(e, r), r.rShiftTo(1, r));
-          return o > 0 && r.lShiftTo(o, r), r;
+          return i > 0 && r.lShiftTo(i, r), r;
         }),
         (a.prototype.isProbablePrime = function (t) {
           var e,
             r = this.abs();
-          if (1 == r.t && r[0] <= S[S.length - 1]) {
-            for (e = 0; e < S.length; ++e) if (r[0] == S[e]) return !0;
+          if (1 == r.t && r[0] <= y[y.length - 1]) {
+            for (e = 0; e < y.length; ++e) if (r[0] == y[e]) return !0;
             return !1;
           }
           if (r.isEven()) return !1;
-          for (e = 1; e < S.length; ) {
-            for (var n = S[e], a = e + 1; a < S.length && n < O; ) n *= S[a++];
-            for (n = r.modInt(n); e < a; ) if (n % S[e++] == 0) return !1;
+          for (e = 1; e < y.length; ) {
+            for (var n = y[e], a = e + 1; a < y.length && n < D; ) n *= y[a++];
+            for (n = r.modInt(n); e < a; ) if (n % y[e++] == 0) return !1;
           }
           return r.millerRabin(t);
         });
-      var D = a,
-        w = function (t, e) {
-          (this.modulus = new D(t, 16)),
-            (this.encryptionExponent = new D(e, 16));
+      var O = a,
+        A = function (t, e) {
+          (this.modulus = new O(t, 16)),
+            (this.encryptionExponent = new O(e, 16));
         },
-        A = {
+        L = {
           base64:
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
           encode: function (t) {
@@ -2664,23 +2492,23 @@
               r,
               n,
               a,
-              o,
               i,
               s,
+              o,
               l = "",
-              c = 0;
+              h = 0;
             do {
-              (a = (e = t.charCodeAt(c++)) >> 2),
-                (o = ((3 & e) << 4) | ((r = t.charCodeAt(c++)) >> 4)),
-                (i = ((15 & r) << 2) | ((n = t.charCodeAt(c++)) >> 6)),
-                (s = 63 & n),
-                isNaN(r) ? (i = s = 64) : isNaN(n) && (s = 64),
+              (a = (e = t.charCodeAt(h++)) >> 2),
+                (i = ((3 & e) << 4) | ((r = t.charCodeAt(h++)) >> 4)),
+                (s = ((15 & r) << 2) | ((n = t.charCodeAt(h++)) >> 6)),
+                (o = 63 & n),
+                isNaN(r) ? (s = o = 64) : isNaN(n) && (o = 64),
                 (l +=
                   this.base64.charAt(a) +
-                  this.base64.charAt(o) +
                   this.base64.charAt(i) +
-                  this.base64.charAt(s));
-            } while (c < t.length);
+                  this.base64.charAt(s) +
+                  this.base64.charAt(o));
+            } while (h < t.length);
             return l;
           },
           decode: function (t) {
@@ -2690,22 +2518,22 @@
               r,
               n,
               a,
-              o = "",
-              i = 0;
+              i = "",
+              s = 0;
             do {
-              (e = this.base64.indexOf(t.charAt(i++))),
-                (r = this.base64.indexOf(t.charAt(i++))),
-                (n = this.base64.indexOf(t.charAt(i++))),
-                (a = this.base64.indexOf(t.charAt(i++))),
-                (o += String.fromCharCode((e << 2) | (r >> 4))),
+              (e = this.base64.indexOf(t.charAt(s++))),
+                (r = this.base64.indexOf(t.charAt(s++))),
+                (n = this.base64.indexOf(t.charAt(s++))),
+                (a = this.base64.indexOf(t.charAt(s++))),
+                (i += String.fromCharCode((e << 2) | (r >> 4))),
                 64 != n &&
-                  (o += String.fromCharCode(((15 & r) << 4) | (n >> 2))),
-                64 != a && (o += String.fromCharCode(((3 & n) << 6) | a));
-            } while (i < t.length);
-            return o;
+                  (i += String.fromCharCode(((15 & r) << 4) | (n >> 2))),
+                64 != a && (i += String.fromCharCode(((3 & n) << 6) | a));
+            } while (s < t.length);
+            return i;
           },
         },
-        L = {
+        w = {
           hex: "0123456789abcdef",
           encode: function (t) {
             if (!t) return !1;
@@ -2734,7 +2562,7 @@
         },
         N = {
           getPublicKey: function (t, e) {
-            return new w(t, e);
+            return new A(t, e);
           },
           encrypt: function (t, e) {
             return (
@@ -2742,7 +2570,7 @@
               !!(t = this.pkcs1pad2(t, (e.modulus.bitLength() + 7) >> 3)) &&
               !!(t = t.modPowInt(e.encryptionExponent, e.modulus)) &&
               (1 == (1 & (t = t.toString(16)).length) && (t = "0" + t),
-              A.encode(L.decode(t)))
+              L.encode(w.decode(t)))
             );
           },
           pkcs1pad2: function (t, e) {
@@ -2751,7 +2579,7 @@
               r[--e] = t.charCodeAt(n--);
             for (r[--e] = 0; e > 2; )
               r[--e] = Math.floor(254 * Math.random()) + 1;
-            return (r[--e] = 2), (r[--e] = 0), new D(r);
+            return (r[--e] = 2), (r[--e] = 0), new O(r);
           },
         };
       e.default = N;

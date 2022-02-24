@@ -5300,8 +5300,7 @@ a.bbcodes_LinkButton_14_Fn:hover {
   padding: 0px;
 }
 .deckverified_BannerContainer_zoxHi {
-  padding-top: 4;
-  padding-bottom: 12px;
+  padding: 12px 0px;
 }
 .deckverified_BannerHeader_3Lsq6 {
   text-transform: uppercase;
@@ -5311,6 +5310,7 @@ a.bbcodes_LinkButton_14_Fn:hover {
   font-weight: 700;
   letter-spacing: 0.5;
 }
+.deckverified_BannerContentDesktop_3trhB,
 .deckverified_BannerContent_hDTtf {
   display: flex;
   flex-direction: row;
@@ -5322,8 +5322,23 @@ a.bbcodes_LinkButton_14_Fn:hover {
   flex-wrap: wrap;
   gap: 8px;
 }
+.deckverified_BannerContentDesktop_3trhB:focus-within,
 .deckverified_BannerContent_hDTtf:focus-within {
   background-color: #678ba670;
+}
+.deckverified_BannerContentDesktop_3trhB {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+.deckverified_BannerContentDesktop_3trhB .deckverified_LearnMore_2sOzU {
+  font-size: 14px;
+}
+.deckverified_DeveloperBlockLinkDesktop_Gd9gA {
+  padding-left: 10px;
+  text-decoration: underline;
 }
 .deckverified_CategoryIcon_2L6Br {
   padding-right: 6px;
@@ -5360,6 +5375,7 @@ a.bbcodes_LinkButton_14_Fn:hover {
 .deckverified_LearnMore_2sOzU:hover {
   color: #fff;
   background-color: #0bf;
+  cursor: pointer;
 }
 .deckverified_LearnMorePC_83ZIV.gpfocus,
 .deckverified_LearnMore_2sOzU.gpfocus {
@@ -5391,6 +5407,7 @@ a.bbcodes_LinkButton_14_Fn:hover {
   flex-direction: column;
   padding: 10px;
 }
+.deckverified_CompatibilityDetailsContainerDesktop_3u4v2,
 .deckverified_CompatibilityDetailsContainer_Ze2dD {
   display: flex;
   flex-direction: column;
@@ -5398,6 +5415,8 @@ a.bbcodes_LinkButton_14_Fn:hover {
   width: 100%;
   max-height: 85vh;
 }
+.deckverified_CompatibilityDetailsContainerDesktop_3u4v2
+  .deckverified_CompatibilityDetailsInterior_wd8rK,
 .deckverified_CompatibilityDetailsContainer_Ze2dD
   .deckverified_CompatibilityDetailsInterior_wd8rK {
   overflow-y: scroll;
@@ -5405,6 +5424,8 @@ a.bbcodes_LinkButton_14_Fn:hover {
   flex: 1;
   padding-right: 15px;
 }
+.deckverified_CompatibilityDetailsContainerDesktop_3u4v2
+  .deckverified_CompatibilityDetailsInterior_wd8rK::-webkit-scrollbar,
 .deckverified_CompatibilityDetailsContainer_Ze2dD
   .deckverified_CompatibilityDetailsInterior_wd8rK::-webkit-scrollbar {
   display: inline;
@@ -5482,6 +5503,45 @@ a.bbcodes_LinkButton_14_Fn:hover {
   font-size: 14px;
   color: #a9a9a9;
   word-break: break-word;
+}
+.deckverified_DeveloperBlogYButton_-d0ty svg {
+  vertical-align: bottom;
+  height: 18px;
+  width: 18px;
+}
+.deckverified_DeveloperBlogYButton_-d0ty {
+  padding-left: 10px;
+  display: inline-block;
+}
+.footericons_Dark_37xwx .footericons_Background_2fMyS {
+  color: #0e141b;
+}
+.footericons_Dark_37xwx .footericons_Foreground_9bLCz {
+  color: #fff;
+}
+.footericons_Light_2Yw_g .footericons_Background_2fMyS {
+  color: #fff;
+}
+.footericons_Light_2Yw_g .footericons_Foreground_9bLCz {
+  color: #0e141b;
+}
+.footericons_Knockout_3ezNH {
+  color: #fff;
+}
+.footericons_SizeSmall_InLV7 {
+  width: auto;
+  height: 16px;
+}
+.footericons_SizeMedium_2jeha {
+  width: auto;
+  height: 22px;
+}
+.footericons_SizeLarge_30ApC {
+  width: auto;
+  height: 36px;
+}
+.footericons_ChordSummary_2Ocgw.footericons_SizeSmall_InLV7 {
+  margin-right: 20px;
 }
 .creatorhomeembed_DevSummaryCtn_U7GS1 {
   flex-grow: 1;
@@ -24689,6 +24749,9 @@ ul li {
 .rbc-calendar .rbc-month-view .rbc-day-bg.rbc-off-range-bg {
   background: #23242a;
 }
+.rbc-calendar .rbc-month-view .rbc-day-bg.rbc-today {
+  background: #575b66;
+}
 .rbc-calendar .rbc-month-view .rbc-month-row,
 .rbc-calendar .rbc-month-view .rbc-day-bg {
   border-top: 1px solid #1b1e22;
@@ -24698,6 +24761,14 @@ ul li {
   color: #fff;
   border-bottom-color: #1b1e22;
   border-left-color: #1b1e22;
+}
+.rbc-calendar .rbc-month-view .rbc-event {
+  z-index: 1;
+  position: relative;
+}
+.rbc-calendar .rbc-month-view .rbc-event:hover {
+  z-index: 2;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 .rbc-toolbar .rbc-btn-group {
   position: relative;
