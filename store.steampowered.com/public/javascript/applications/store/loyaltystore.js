@@ -15456,8 +15456,8 @@
               var S,
                 O = [];
               Object(d.a)(m.d.EREALM)
-                ? O.push(r(1846860), r(1526200))
-                : O.push(r(1880140), r(1846860), r(1277400), r(292030)),
+                ? O.push(r(1880140), r(1846860))
+                : O.push(r(1446780), r(1880140), r(1846860)),
                 (S = {
                   type: "banner",
                   title: Object(s.f)("#FeaturedBanner_ArtistProfiles_Headline"),
@@ -15614,9 +15614,10 @@
                             })
                           )
                             return "continue";
-                          var n = r(e);
+                          var n = r(e),
+                            a = O.length + 2;
                           return (
-                            P.splice(6 + 6 * o, 0, {
+                            P.splice(a + o * a, 0, {
                               type: "clusterview",
                               view: n,
                             }),
