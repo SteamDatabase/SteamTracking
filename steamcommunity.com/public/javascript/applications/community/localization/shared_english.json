@@ -1518,6 +1518,7 @@
     "ContentHub_Recommendation_Specials": "On Sale Now",
     "ContentHub_Recommendation_Concurrent": "Popular",
     "ContentHub_Recommendation_Featured": "Featured",
+    "ContentHub_ReduceMotion": "Disable trailers",
     "Sale_DynamicReview_Preview": "Preview Dynamic Reveal",
     "Sale_DynamicReview_Preview_desc": "Below section has the Dynamic Reveal feature enabled. You can preview the feature by starting the test. This will reset when you leave the preview tab.",
     "Sale_DynamicReview_Preview_start": "Start Test Mode",

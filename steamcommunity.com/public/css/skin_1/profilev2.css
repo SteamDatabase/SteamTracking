@@ -364,16 +364,31 @@ body.Lunar2022Theme {
 }
 
 body.SteamDeckTheme {
-	--gradient-right: rgb(36 58 130 / 30%);
-	--gradient-left: rgb(243 9 117 / 25%);
-	--gradient-background: rgb(23 19 57 / 75%);
-	--gradient-background-right: rgb(67 9 57 / 36%);
-	--gradient-background-left: rgb(13 9 41 / 36%);
-	--color-showcase-header: rgb(173 165 191 / 74%);
-	--gradient-showcase-header-left: rgb(87 89 123 / 65%);
-	--btn-background: rgb(103 93 123);
-	--btn-background-hover: rgb(132 126 153);
-	--btn-outline: rgb(132 126 151);
+	--gradient-right: transparent;
+    --gradient-left: transparent;
+    --gradient-background: transparent;
+    --gradient-background-right: transparent;
+    --gradient-background-left: transparent;
+    --color-showcase-header: rgb(149 1 169 / 19%);
+    --gradient-showcase-header-left: rgb(87 89 123 / 0%);
+    --btn-background: rgb(29 10 25 / 10%);
+    --btn-background-hover: rgb(175 52 149 / 21%);
+    --btn-outline: rgb(29 10 25 / 0%);
+}
+
+/* Custom overrides for Steam Deck theme */
+body.SteamDeckTheme .profile_customization_header, .profile_header_badge, .profile_leftcol_header, .profile_rightcol, .btn_profile_action {
+	box-shadow: 0 0 2px 0px #fff, inset 0 0 2px #fff, 0px 0px 3px 2px #f13292, inset 0 0 10px 1px #f13292, 0 0 3px #f13292, inset 0 0 4px #f13292;
+	border-radius: 3px;
+}
+
+body.SteamDeckTheme .profile_customization {
+	overflow: visible;
+}
+
+body.SteamDeckTheme .profile_in_game, .profile_summary, .header_real_name, .persona_name, .persona_level, .profile_customization_header, .profile_content h2, .profile_count_link, .favorite_badge_description {
+	color: #ddbed2;
+    text-shadow: 0 0 6px #e5abc89c;
 }
 
 
