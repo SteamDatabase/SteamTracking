@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7110207";
+var CLSTAMP = "7115627";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -37089,8 +37089,7 @@ var CLSTAMP = "7110207";
                     })
                     .map(function (e, a) {
                       if (74 == t.id && a >= 4) return null;
-                      if (602 == e.id || 322 == e.id || 641 == e.id)
-                        return null;
+                      if (602 == e.id || 322 == e.id) return null;
                       var n = e.desc_loc;
                       e.special_values.forEach(function (e) {
                         var t =
@@ -37702,8 +37701,7 @@ var CLSTAMP = "7110207";
                   return e.ability_is_granted_by_scepter ||
                     e.ability_is_granted_by_shard ||
                     602 == e.id ||
-                    322 == e.id ||
-                    641 == e.id
+                    322 == e.id
                     ? null
                     : s.a.createElement("div", {
                         key: e.name,
