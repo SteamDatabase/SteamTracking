@@ -377,7 +377,11 @@ body.SteamDeckTheme {
 }
 
 /* Custom overrides for Steam Deck theme */
-body.SteamDeckTheme .profile_customization_header, .profile_header_badge, .profile_leftcol_header, .profile_rightcol, .btn_profile_action {
+body.SteamDeckTheme .profile_customization_header,
+body.SteamDeckTheme .profile_header_badge,
+body.SteamDeckTheme .profile_leftcol_header,
+body.SteamDeckTheme .profile_rightcol,
+body.SteamDeckTheme .btn_profile_action {
 	box-shadow: 0 0 2px 0px #fff, inset 0 0 2px #fff, 0px 0px 3px 2px #f13292, inset 0 0 10px 1px #f13292, 0 0 3px #f13292, inset 0 0 4px #f13292;
 	border-radius: 3px;
 }
@@ -386,7 +390,15 @@ body.SteamDeckTheme .profile_customization {
 	overflow: visible;
 }
 
-body.SteamDeckTheme .profile_in_game, .profile_summary, .header_real_name, .persona_name, .persona_level, .profile_customization_header, .profile_content h2, .profile_count_link, .favorite_badge_description {
+body.SteamDeckTheme .profile_in_game,
+body.SteamDeckTheme .profile_summary,
+body.SteamDeckTheme .header_real_name,
+body.SteamDeckTheme .persona_name,
+body.SteamDeckTheme .persona_level,
+body.SteamDeckTheme .profile_customization_header,
+body.SteamDeckTheme .profile_content h2,
+body.SteamDeckTheme .profile_count_link,
+body.SteamDeckTheme .favorite_badge_description {
 	color: #ddbed2;
     text-shadow: 0 0 6px #e5abc89c;
 }
