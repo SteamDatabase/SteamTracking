@@ -9468,9 +9468,9 @@
           { className: fe.ReducedMotionToggleCtn },
           d.a.createElement(de.q, {
             useToggleRail: !0,
-            label: Object(X.f)("#ContentHub_ReduceMotion"),
-            checked: e,
-            onChange: (e) => G.a.Get().SetReduceMotion(e),
+            label: Object(X.f)("#ContentHub_NoReduceMotion"),
+            checked: !e,
+            onChange: (e) => G.a.Get().SetReduceMotion(!e),
           })
         );
       }
@@ -35581,14 +35581,15 @@
       const p = a.lazy(() => r.e(5).then(r.bind(null, "NIbt"))),
         _ = "viewed";
       function h(e) {
+        var t, r;
         const {
-            event: t,
-            activeTab: r,
-            bWideBroadcastDisplay: m,
-            broadcastEmbedContext: h,
+            event: m,
+            activeTab: h,
+            bWideBroadcastDisplay: b,
+            broadcastEmbedContext: g,
           } = e,
-          [b, g] = a.useState(!r),
-          [f, v] = (function (e) {
+          [f, v] = a.useState(!h),
+          [S, y] = (function (e) {
             const [t, r] = a.useState(window.localStorage.getItem(e)),
               n = a.useRef(e);
             return (
@@ -35604,8 +35605,8 @@
               ]
             );
           })("broadcast-preroll-" + e.broadcastEmbedContext.nAppIDVOD),
-          S = Boolean(r),
-          y = f == _;
+          B = Boolean(h),
+          C = S == _;
         return a.createElement(
           s.a,
           null,
@@ -35617,54 +35618,63 @@
               { fallback: a.createElement("div", null) },
               a.createElement(
                 n.a,
-                { onEnter: () => g(!0) },
+                { onEnter: () => v(!0) },
                 a.createElement(
                   "div",
                   {
                     className: Object(c.a)({
-                      [u.a.SaleBroadcastSection]: S,
-                      [u.a.SaleBroadcastCtn]: !S,
-                      WideBroadcastCtn: m,
+                      [u.a.SaleBroadcastSection]: B,
+                      [u.a.SaleBroadcastCtn]: !B,
+                      WideBroadcastCtn: b,
                       SaleBroadcastSection_trgt: !0,
                     }),
                   },
-                  Boolean(b) &&
+                  Boolean(f) &&
                     a.createElement(
                       p,
-                      Object.assign({}, h, {
+                      Object.assign({}, g, {
                         bShowCapsuleArt: !0,
                         fnFilterStreams: (e) => {
-                          var a, n;
-                          const s = i.a.GetOrCreateBroadcastInfo(e.steamid)
+                          var t, r;
+                          const a = i.a.GetOrCreateBroadcastInfo(e.steamid)
                             .m_nAppID;
                           return (
-                            ((null === (a = null == t ? void 0 : t.jsondata) ||
-                            void 0 === a
+                            ((null === (t = null == m ? void 0 : m.jsondata) ||
+                            void 0 === t
                               ? void 0
-                              : a.broadcast_preroll_vod_appid) &&
+                              : t.broadcast_preroll_vod_appid) &&
                               e.nAppIDVOD ==
                                 Number(
                                   null ===
-                                    (n = null == t ? void 0 : t.jsondata) ||
-                                    void 0 === n
+                                    (r = null == m ? void 0 : m.jsondata) ||
+                                    void 0 === r
                                     ? void 0
-                                    : n.broadcast_preroll_vod_appid
+                                    : r.broadcast_preroll_vod_appid
                                 )) ||
-                            (null == t
+                            (null == m
                               ? void 0
-                              : t.BIsBroadcastAccountIDWhiteListed(
+                              : m.BIsBroadcastAccountIDWhiteListed(
                                   e.accountid
                                 )) ||
-                            !r ||
-                            r.ShouldShowOnTab(s)
+                            m.BUsesContentHubForItemSource() ||
+                            !h ||
+                            h.ShouldShowOnTab(a)
                           );
                         },
-                        fnOnVideoEnd: () => v(_),
-                        bSkipPreRoll: y,
-                        bWidePlayer: m,
+                        fnOnVideoEnd: () => y(_),
+                        bSkipPreRoll: C,
+                        bWidePlayer: b,
+                        tabuniqueid:
+                          null === (t = e.activeTab) || void 0 === t
+                            ? void 0
+                            : t.GetActiveTabUniqueID(),
+                        tabfilter:
+                          null === (r = e.activeTab) || void 0 === r
+                            ? void 0
+                            : r.GetStoreFilter(),
                       })
                     ),
-                  Boolean(!b) &&
+                  Boolean(!f) &&
                     a.createElement(l.a, {
                       size: "small",
                       position: "center",
@@ -64913,6 +64923,7 @@
           return a[Math.floor(Math.random() * a.length)];
         }
         MapEmbeddableStreamToRequest(e) {
+          var t, r, a;
           return {
             appid: e.appid,
             promotionName: e.bIsPreview ? "preview" : e.promotionName,
@@ -64931,6 +64942,20 @@
             test: false,
             cc: p.c.COUNTRY,
             l: p.c.LANGUAGE,
+            hubtype:
+              null === (t = e.event) || void 0 === t
+                ? void 0
+                : t.GetContentHubType(),
+            hubcategory:
+              null === (r = e.event) || void 0 === r
+                ? void 0
+                : r.GetContentHubCategory(),
+            hubtagid:
+              null === (a = e.event) || void 0 === a
+                ? void 0
+                : a.GetContentHubTag(),
+            tabuniqueid: e.tabuniqueid,
+            tabfilter: e.tabfilter,
             rt_now_override_test: d.a.BHasTimeOverride()
               ? d.a.GetTimeNowWithOverride()
               : void 0,

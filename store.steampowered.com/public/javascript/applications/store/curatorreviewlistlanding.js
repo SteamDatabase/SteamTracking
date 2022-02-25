@@ -20,8 +20,8 @@
         m = t("qDk6"),
         d = t("+VX6"),
         _ = (t("3+zv"), t("Xhj9"), t("5eAM")),
-        v = t("VQ2A"),
-        p = t("UCyf"),
+        p = t("VQ2A"),
+        v = t("UCyf"),
         b = t("hwrv"),
         f = t("gOcu"),
         E = t("ee7K"),
@@ -41,10 +41,11 @@
         k = (t("TQGK"), t("477j")),
         L = t("C4Er");
       function G(e) {
-        var a = e.clanInfo,
-          t = Object(T.h)("curator_header", "application_config"),
-          r = t.curator_link,
-          n = t.curator_medium_avatar;
+        const { clanInfo: a } = e,
+          { curator_link: t, curator_medium_avatar: r } = Object(T.h)(
+            "curator_header",
+            "application_config"
+          );
         return l.a.createElement(
           m.a,
           {
@@ -63,10 +64,10 @@
                 { className: "curator_avatar_image" },
                 l.a.createElement(
                   u.c,
-                  { href: r },
+                  { href: t },
                   l.a.createElement("img", {
                     className: "curator_avatar",
-                    src: n,
+                    src: r,
                   })
                 )
               ),
@@ -79,7 +80,7 @@
                 }),
                 l.a.createElement(
                   u.c,
-                  { className: "pageheader curator_name", href: r },
+                  { className: "pageheader curator_name", href: t },
                   Object(O.f)("#SteamCurator_List_Header_List", a.group_name)
                 )
               )
@@ -89,7 +90,7 @@
       }
       t("1v2s");
       a.default = function (e) {
-        var a = Object(b.a)();
+        const a = Object(b.a)();
         return l.a.createElement(
           s.a,
           { navID: "StoreCuratorPageRoot", NavigationManager: a },
@@ -97,75 +98,63 @@
         );
       };
       function y(e) {
-        var a = parseInt(
+        const a = parseInt(
             Object(T.h)("curator_account_id", "application_config")
           ),
-          t = Object(p.f)(a),
-          r = Object(p.g)(null == t ? void 0 : t.clanSteamID, e.listid),
-          n = Object(p.e)(r),
-          c = l.a.useState(null),
-          o = c[0],
-          i = c[1],
-          s = l.a.useState(0),
-          d = s[0],
-          v = s[1];
+          t = Object(v.f)(a),
+          r = Object(v.g)(null == t ? void 0 : t.clanSteamID, e.listid),
+          n = Object(v.e)(r),
+          [c, o] = l.a.useState(null),
+          [i, s] = l.a.useState(0);
         if (
-          (l.a.useEffect(
-            function () {
-              var e;
-              if (r) {
-                var a = Object(p.a)(r)
-                  ? null === (e = r.apps) || void 0 === e
-                    ? void 0
-                    : e.filter(function (e) {
-                        var a;
-                        return null == n
-                          ? void 0
-                          : n.has(
-                              null === (a = e.recommended_app) || void 0 === a
-                                ? void 0
-                                : a.appid
-                            );
-                      })
-                  : r.apps;
-                v((null == a ? void 0 : a.length) || 0),
-                  E.a
-                    .Get()
-                    .HintLoad()
-                    .then(function () {
-                      _.a
-                        .LoadAppLinkInfo(
-                          a.map(function (e) {
-                            return e.recommended_app.appid;
-                          })
-                        )
-                        .then(function () {
-                          i(
-                            a.filter(function (e) {
-                              return !Object(R.d)(
-                                _.a.GetAppLinkInfo(e.recommended_app.appid)
-                              );
-                            })
+          (l.a.useEffect(() => {
+            var e;
+            if (r) {
+              const a = Object(v.a)(r)
+                ? null === (e = r.apps) || void 0 === e
+                  ? void 0
+                  : e.filter((e) => {
+                      var a;
+                      return null == n
+                        ? void 0
+                        : n.has(
+                            null === (a = e.recommended_app) || void 0 === a
+                              ? void 0
+                              : a.appid
                           );
-                        })
-                        .catch(function () {
-                          return i([]);
-                        });
-                    });
-              }
-            },
-            [r, n]
-          ),
+                    })
+                : r.apps;
+              s((null == a ? void 0 : a.length) || 0),
+                E.a
+                  .Get()
+                  .HintLoad()
+                  .then(() => {
+                    _.a
+                      .LoadAppLinkInfo(a.map((e) => e.recommended_app.appid))
+                      .then(() => {
+                        o(
+                          a.filter(
+                            (e) =>
+                              !Object(R.d)(
+                                _.a.GetAppLinkInfo(e.recommended_app.appid)
+                              )
+                          )
+                        );
+                      })
+                      .catch(() => o([]));
+                  });
+            }
+          }, [r, n]),
           !r)
         )
           return null;
-        if (null == o)
+        if (null == c)
           return l.a.createElement(g.a, {
             string: Object(O.f)("#Loading"),
             position: "center",
             size: "medium",
           });
-        var b = 1 == r.list_type;
+        const d = 1 == r.list_type;
         return l.a.createElement(
           l.a.Fragment,
           null,
@@ -185,27 +174,27 @@
                   {
                     className: Object(j.a)(
                       B.a.CuratorList,
-                      b && B.a.CuratorListGrid
+                      d && B.a.CuratorListGrid
                     ),
                     "flow-children": "grid",
                   },
-                  o.map(function (e, a) {
-                    return l.a.createElement(A, {
+                  c.map((e, a) =>
+                    l.a.createElement(A, {
                       key: "rec_" + e.recommended_app.appid,
                       item: e,
                       listDetails: r,
                       bAutoFocus: 0 == a,
-                    });
-                  })
+                    })
+                  )
                 ),
-                Boolean(d > o.length) &&
+                Boolean(i > c.length) &&
                   l.a.createElement(
                     "div",
                     null,
                     l.a.createElement(
                       "span",
                       null,
-                      Object(O.l)("#SteamCurator_Hidden", d - o.length),
+                      Object(O.l)("#SteamCurator_Hidden", i - c.length),
                       " "
                     ),
                     l.a.createElement(
@@ -234,8 +223,8 @@
         );
       }
       function D(e) {
-        var a = e.listDetails,
-          t = Object(p.d)(a),
+        const { listDetails: a } = e,
+          t = Object(v.d)(a),
           r = Object(T.h)("showlisttitle", "application_config"),
           n = Object(T.h)("titleareaheight", "application_config"),
           c =
@@ -245,7 +234,7 @@
           s = O.a.GetWithFallback(a.localized_flat_title, i),
           m = O.a.GetWithFallback(a.localized_flat_blurb, i),
           _ = O.a.GetWithFallback(a.localized_flat_link, i),
-          v =
+          p =
             t &&
             t.GetImageURL(
               Object(I.a)() ? "product_mobile_banner" : "product_banner",
@@ -254,11 +243,11 @@
         return l.a.createElement(
           "div",
           { className: B.a.TopReviewInfo },
-          Boolean(v) &&
+          Boolean(p) &&
             l.a.createElement(
               u.c,
               { href: t.GetSaleURL() },
-              l.a.createElement("img", { className: B.a.SaleBanner, src: v })
+              l.a.createElement("img", { className: B.a.SaleBanner, src: p })
             ),
           r && s && l.a.createElement("div", { className: B.a.Title }, s),
           r && m && l.a.createElement("div", { className: B.a.Blurb }, m),
@@ -282,14 +271,11 @@
           _ && l.a.createElement(Y, { url: _ })
         );
       }
-      var A = Object(r.a)(function (e) {
-        var a,
-          t,
-          r = e.item,
-          n = e.listDetails,
-          c = e.bAutoFocus,
+      const A = Object(r.a)((e) => {
+        var a, t;
+        const { item: r, listDetails: n, bAutoFocus: c } = e,
           o = parseInt(Object(T.h)("curator_account_id", "application_config")),
-          u = Object(p.f)(o);
+          u = Object(v.f)(o);
         if (
           !u ||
           !(null === (a = null == r ? void 0 : r.recommended_app) ||
@@ -298,47 +284,47 @@
             : a.appid)
         )
           return null;
-        var s = r.recommended_app,
-          v = s.appid,
-          b = s.link_url,
-          E = s.blurb,
-          C = s.time_recommended,
-          R = s.recommendation_state,
-          h = _.a.GetAppLinkInfo(v);
-        if (!h) return null;
-        if (!Object(i.b)(h.type)) return null;
-        var g = u.is_creator_home,
-          I =
+        const {
+            appid: s,
+            link_url: p,
+            blurb: b,
+            time_recommended: E,
+            recommendation_state: C,
+          } = r.recommended_app,
+          R = _.a.GetAppLinkInfo(s);
+        if (!R) return null;
+        if (!Object(i.b)(R.type)) return null;
+        const h = u.is_creator_home,
+          g =
             null === (t = n.list_jsondata.app_data) || void 0 === t
               ? void 0
-              : t[v],
-          N = b && Object(d.b)(b),
-          j = E != p.c && E,
-          S = f.a.Get().BHasDemoAppID(v),
-          F = null == I ? void 0 : I.img_url,
-          k =
-            "curator_clanid=" + u.clanAccountID + "&curator_listid=" + n.listid;
+              : t[s],
+          I = p && Object(d.b)(p),
+          N = b != v.c && b,
+          j = f.a.Get().BHasDemoAppID(s),
+          S = null == g ? void 0 : g.img_url,
+          F = `curator_clanid=${u.clanAccountID}&curator_listid=${n.listid}`;
         return l.a.createElement(
           m.a,
           { className: B.a.CuratorReview, autoFocus: c },
           l.a.createElement(
             "div",
             { className: B.a.CapsuleCtn },
-            N
+            I
               ? l.a.createElement(M, {
-                  strVideoID: N.strVideoID,
-                  nStartSeconds: N.nStartSeconds,
-                  appInfo: h,
-                  strImgOverrideUrl: F,
-                  bShowDemoButton: S,
-                  strExtraParams: k,
+                  strVideoID: I.strVideoID,
+                  nStartSeconds: I.nStartSeconds,
+                  appInfo: R,
+                  strImgOverrideUrl: S,
+                  bShowDemoButton: j,
+                  strExtraParams: F,
                 })
               : l.a.createElement(w.b, {
                   imageType: "header",
                   bAutoFocus: c,
-                  capsule: h,
-                  bShowDemoButton: S,
-                  strExtraParams: k,
+                  capsule: R,
+                  bShowDemoButton: j,
+                  strExtraParams: F,
                 })
           ),
           l.a.createElement(
@@ -347,35 +333,37 @@
             l.a.createElement(
               "div",
               { className: B.a.GameTitle },
-              null == h ? void 0 : h.name
+              null == R ? void 0 : R.name
             ),
             l.a.createElement(
               "div",
               { className: B.a.RecommendationTypeAndDate },
-              l.a.createElement(P, { type: R }),
+              l.a.createElement(P, { type: C }),
               l.a.createElement(
                 "div",
                 { className: B.a.ReviewDate },
-                g ? h.release : Object(O.n)(C)
+                h ? R.release : Object(O.n)(E)
               )
             ),
-            Boolean(j) &&
+            Boolean(N) &&
               l.a.createElement(
                 "div",
                 { className: B.a.ReviewBlurb },
-                Object(O.f)("#SteamCurator_ReviewTextQuoted", j)
+                Object(O.f)("#SteamCurator_ReviewTextQuoted", N)
               ),
-            Boolean(b) && l.a.createElement(Y, { url: b })
+            Boolean(p) && l.a.createElement(Y, { url: p })
           )
         );
       });
       function M(e) {
-        var a = e.strVideoID,
-          t = e.nStartSeconds,
-          r = e.appInfo,
-          n = e.strImgOverrideUrl,
-          c = e.bShowDemoButton,
-          o = e.strExtraParams;
+        const {
+          strVideoID: a,
+          nStartSeconds: t,
+          appInfo: r,
+          strImgOverrideUrl: n,
+          bShowDemoButton: c,
+          strExtraParams: o,
+        } = e;
         return l.a.createElement(
           "div",
           { className: B.a.YouTubeCapsule },
@@ -448,14 +436,14 @@
         }
       }
       function Y(e) {
-        var a = Object(v.d)(e.url);
+        let a = Object(p.d)(e.url);
         Object(c.b)(a) &&
           (a =
             (T.d.IN_CLIENT ? "steam://openurl_external/" : "") +
             T.d.COMMUNITY_BASE_URL +
             "linkfilter/?url=" +
             a);
-        var t = Object(S.f)(e.url),
+        const t = Object(S.f)(e.url),
           r = Object(d.a)(e.url);
         return l.a.createElement(
           "div",
@@ -541,19 +529,18 @@
         i = t("opsS"),
         u = t("lkRc");
       function s(e) {
-        var a = e.children,
-          t = e.navTreeRef,
-          n = Object(r.f)(e, ["children", "navTreeRef"]),
+        const { children: a, navTreeRef: t } = e,
+          n = Object(r.c)(e, ["children", "navTreeRef"]),
           s = l.a.useRef(),
           m = Object(i.f)(s, t);
         if (u.d.IN_GAMEPADUI) {
-          var d = window.__nav_tree_root;
+          const e = window.__nav_tree_root;
           return l.a.createElement(
             c.b,
-            Object(r.a)({}, n, {
+            Object.assign({}, n, {
               navTreeRef: m,
               secondary: !0,
-              parentEmbeddedNavTree: d,
+              parentEmbeddedNavTree: e,
             }),
             l.a.createElement(o.a, null, a)
           );

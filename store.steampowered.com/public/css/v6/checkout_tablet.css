@@ -426,16 +426,21 @@
     html.responsive .review_row_label {
         font: var(--gpText-BodyMedium);
         color: var(--gpStoreLighterGrey);
+		max-width: 138px;
+		white-space: nowrap;
+ 		overflow: hidden;
+		text-overflow: ellipsis;
     }
 
     html.responsive .review_row_value {
         font: var(--gpText-BodyMedium);
         color: var(--gpStoreLightestGrey);
+		padding-left: 142px;
     }
 
-    html.responsive .review_row_value {
-        padding-left: 140px;
-    }
+	html.responsive .review_row .review_row_value {
+		min-height: 19px;
+	}
 
     html.responsive .checkout_review_payment_method_area {
         border-bottom: 1px solid var(--gpBackground-LightMedium);

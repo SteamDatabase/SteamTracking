@@ -3,7 +3,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
-    "1wed": function (e, t, r) {
+    "1wed": function (e, t, a) {
       e.exports = {
         EntryError: "tagclustering_EntryError_1UGoD",
         ClusterConfig: "tagclustering_ClusterConfig_3Qp2u",
@@ -13,1755 +13,1383 @@
         SimilarTitle: "tagclustering_SimilarTitle_gRxJT",
       };
     },
-    JO2d: function (e, t, r) {
+    JO2d: function (e, t, a) {
       "use strict";
-      r.r(t),
-        r.d(t, "default", function () {
+      a.r(t),
+        a.d(t, "default", function () {
           return be;
         });
-      var a = r("mrSG"),
-        n = r("1fPh"),
-        i = r("qD+2"),
-        s = r("WBba"),
-        o = r("lkRc"),
-        l = r("2vnA"),
-        p = r("opsS"),
-        c = r("vDqi"),
-        u = r.n(c),
-        d =
-          (r("erV9"),
-          (function () {
-            function e() {
-              this.rgModelNames = [];
+      var s = a("1fPh"),
+        r = a("mrSG"),
+        i = a("qD+2"),
+        n = a("WBba"),
+        l = a("lkRc"),
+        o = a("2vnA"),
+        p = a("opsS"),
+        c = a("vDqi"),
+        d = a.n(c);
+      a("erV9");
+      class m {
+        constructor() {
+          this.rgModelNames = [];
+        }
+        Init() {
+          i.a.Init(new n.a(l.d.WEBAPI_BASE_URL, l.k.webapi_token));
+          const e = `${l.d.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
+          d.a.get(e).then((e) => {
+            if (e.data) {
+              let t = [];
+              for (const a of e.data) "default" != a && t.push(a);
+              t.sort(), (t = ["default", ...t]), (this.rgModelNames = t);
             }
+          });
+        }
+        ComputePathBetweenApps(e, t, a, s, i, n, l) {
+          return Object(r.a)(this, void 0, void 0, function* () {
+            const o = Math.acos(a);
+            let p = new h(
+                (e) =>
+                  Object(r.a)(this, void 0, void 0, function* () {
+                    let t = yield this.GetNeighbors(e),
+                      a = [];
+                    for (let e = 0; e < t.length; e++) {
+                      const r = t[e];
+                      if (
+                        (!s || a.length > s) &&
+                        (r.cost > o || (i && a.length >= i))
+                      )
+                        break;
+                      a.push(r);
+                    }
+                    return a;
+                  }),
+                this.EstimateCosts,
+                (e, t) => e == t,
+                l
+              ),
+              c = yield p.FindPath(e, t, n || 10);
+            if (c.path) {
+              let e = [],
+                t = 0;
+              for (let a = 0; a < c.path.length; a++) {
+                const s = c.path[a],
+                  r = s.cost - t;
+                (t = s.cost),
+                  e.push({ appid: s.node, similarity: Math.cos(r) });
+              }
+              return e;
+            }
+            throw new Error("Unable to compute path.");
+          });
+        }
+        GetNeighbors(e) {
+          return Object(r.a)(this, void 0, void 0, function* () {
+            const t = `${l.d.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`;
+            let a = yield d.a.get(t),
+              s = [];
+            if (a.data && a.data.appid == e)
+              for (let e = 0; e < a.data.similar_appids.length; e++)
+                s.push({
+                  node: a.data.similar_appids[e],
+                  cost: Math.acos(a.data.similarity_scores[e]),
+                });
+            return s;
+          });
+        }
+        EstimateCosts(e, t) {
+          return Object(r.a)(this, void 0, void 0, function* () {
+            const a = `${
+              l.d.STORE_BASE_URL
+            }labs/ajaxgetappsimilarities?appidtarget=${t}&${e
+              .map((e) => "appid[]=" + e.toString())
+              .join("&")}`;
+            let s = yield d.a.get(a);
+            if (s.data && s.data.similarity_scores)
+              return s.data.similarity_scores.map((e) =>
+                Math.acos(parseFloat(e))
+              );
+            throw new Error("Unable to fetch cost estimates");
+          });
+        }
+      }
+      Object(r.b)([o.C], m.prototype, "rgModelNames", void 0),
+        Object(r.b)([p.a], m.prototype, "GetNeighbors", null),
+        Object(r.b)([p.a], m.prototype, "EstimateCosts", null);
+      class u {
+        constructor(e) {
+          (this.m_Heap = []), (this.m_Length = 0), (this.m_fnCompare = e);
+        }
+        get length() {
+          return this.m_Length;
+        }
+        Clear() {
+          (this.m_Heap = []), (this.m_Length = 0);
+        }
+        Peek() {
+          return this.m_Length > 0 ? this.m_Heap[0] : void 0;
+        }
+        Pop() {
+          if (0 != this.m_Length) {
+            const e = this.m_Heap[0];
             return (
-              (e.prototype.Init = function () {
-                var e = this;
-                i.a.Init(new s.a(o.d.WEBAPI_BASE_URL, o.k.webapi_token));
-                var t = o.d.STORE_BASE_URL + "labs/ajaxgetsimilaritymodelnames";
-                u.a.get(t).then(function (t) {
-                  if (t.data) {
-                    for (var r = [], n = 0, i = t.data; n < i.length; n++) {
-                      var s = i[n];
-                      "default" != s && r.push(s);
-                    }
-                    r.sort(),
-                      (r = Object(a.g)(["default"], r)),
-                      (e.rgModelNames = r);
-                  }
-                });
-              }),
-              (e.prototype.ComputePathBetweenApps = function (
-                e,
-                t,
-                r,
-                n,
-                i,
-                s,
-                o
-              ) {
-                return Object(a.b)(this, void 0, void 0, function () {
-                  var l,
-                    p,
-                    c,
-                    u,
-                    d,
-                    m,
-                    f,
-                    _ = this;
-                  return Object(a.e)(this, function (b) {
-                    switch (b.label) {
-                      case 0:
-                        return (
-                          (l = Math.acos(r)),
-                          [
-                            4,
-                            new h(
-                              function (e) {
-                                return Object(a.b)(
-                                  _,
-                                  void 0,
-                                  void 0,
-                                  function () {
-                                    var t, r, s, o;
-                                    return Object(a.e)(this, function (a) {
-                                      switch (a.label) {
-                                        case 0:
-                                          return [4, this.GetNeighbors(e)];
-                                        case 1:
-                                          for (
-                                            t = a.sent(), r = [], s = 0;
-                                            s < t.length &&
-                                            ((o = t[s]),
-                                            (n && !(r.length > n)) ||
-                                              !(
-                                                o.cost > l ||
-                                                (i && r.length >= i)
-                                              ));
-                                            s++
-                                          )
-                                            r.push(o);
-                                          return [2, r];
-                                      }
-                                    });
-                                  }
-                                );
-                              },
-                              this.EstimateCosts,
-                              function (e, t) {
-                                return e == t;
-                              },
-                              o
-                            ).FindPath(e, t, s || 10),
-                          ]
-                        );
-                      case 1:
-                        if ((p = b.sent()).path) {
-                          for (c = [], u = 0, d = 0; d < p.path.length; d++)
-                            (m = p.path[d]),
-                              (f = m.cost - u),
-                              (u = m.cost),
-                              c.push({
-                                appid: m.node,
-                                similarity: Math.cos(f),
-                              });
-                          return [2, c];
-                        }
-                        throw new Error("Unable to compute path.");
-                    }
-                  });
-                });
-              }),
-              (e.prototype.GetNeighbors = function (e) {
-                return Object(a.b)(this, void 0, void 0, function () {
-                  var t, r, n, i;
-                  return Object(a.e)(this, function (a) {
-                    switch (a.label) {
-                      case 0:
-                        return (
-                          (t =
-                            o.d.STORE_BASE_URL +
-                            "labs/ajaxgetsimilarapps?appid=" +
-                            e),
-                          [4, u.a.get(t)]
-                        );
-                      case 1:
-                        if (
-                          ((r = a.sent()),
-                          (n = []),
-                          r.data && r.data.appid == e)
-                        )
-                          for (i = 0; i < r.data.similar_appids.length; i++)
-                            n.push({
-                              node: r.data.similar_appids[i],
-                              cost: Math.acos(r.data.similarity_scores[i]),
-                            });
-                        return [2, n];
-                    }
-                  });
-                });
-              }),
-              (e.prototype.EstimateCosts = function (e, t) {
-                return Object(a.b)(this, void 0, void 0, function () {
-                  var r, n;
-                  return Object(a.e)(this, function (a) {
-                    switch (a.label) {
-                      case 0:
-                        return (
-                          (r =
-                            o.d.STORE_BASE_URL +
-                            "labs/ajaxgetappsimilarities?appidtarget=" +
-                            t +
-                            "&" +
-                            e
-                              .map(function (e) {
-                                return "appid[]=" + e.toString();
-                              })
-                              .join("&")),
-                          [4, u.a.get(r)]
-                        );
-                      case 1:
-                        if ((n = a.sent()).data && n.data.similarity_scores)
-                          return [
-                            2,
-                            n.data.similarity_scores.map(function (e) {
-                              return Math.acos(parseFloat(e));
-                            }),
-                          ];
-                        throw new Error("Unable to fetch cost estimates");
-                    }
-                  });
-                });
-              }),
-              Object(a.c)([l.C], e.prototype, "rgModelNames", void 0),
-              Object(a.c)([p.a], e.prototype, "GetNeighbors", null),
-              Object(a.c)([p.a], e.prototype, "EstimateCosts", null),
+              (this.m_Heap[0] = this.m_Heap[this.m_Length - 1]),
+              this.m_Length--,
+              this.BubbleDown(),
               e
             );
-          })()),
-        m = (function () {
-          function e(e) {
-            (this.m_Heap = []), (this.m_Length = 0), (this.m_fnCompare = e);
           }
-          return (
-            Object.defineProperty(e.prototype, "length", {
-              get: function () {
-                return this.m_Length;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            (e.prototype.Clear = function () {
-              (this.m_Heap = []), (this.m_Length = 0);
-            }),
-            (e.prototype.Peek = function () {
-              return this.m_Length > 0 ? this.m_Heap[0] : void 0;
-            }),
-            (e.prototype.Pop = function () {
-              if (0 != this.m_Length) {
-                var e = this.m_Heap[0];
-                return (
-                  (this.m_Heap[0] = this.m_Heap[this.m_Length - 1]),
-                  this.m_Length--,
-                  this.BubbleDown(),
-                  e
+        }
+        Push(e) {
+          this.m_Heap.length == this.m_Length
+            ? this.m_Heap.push(e)
+            : (this.m_Heap[this.m_Length] = e),
+            this.m_Length++,
+            this.BubbleUp();
+        }
+        FindElement(e) {
+          for (let t = 0; t < this.m_Length; t++)
+            if (e(this.m_Heap[t])) return { index: t, element: this.m_Heap[t] };
+        }
+        LowerPriorityOfElement(e, t) {
+          (this.m_Heap[e] = t), this.BubbleUp(e);
+        }
+        BubbleDown() {
+          let e = 0;
+          do {
+            const t = 2 * e + 1,
+              a = 2 * e + 2;
+            let s = e;
+            if (
+              (t < this.m_Length &&
+                this.m_fnCompare(this.m_Heap[s], this.m_Heap[t]) > 0 &&
+                (s = t),
+              a < this.m_Length &&
+                this.m_fnCompare(this.m_Heap[s], this.m_Heap[a]) > 0 &&
+                (s = a),
+              s == e)
+            )
+              break;
+            {
+              const t = this.m_Heap[e];
+              (this.m_Heap[e] = this.m_Heap[s]), (this.m_Heap[s] = t), (e = s);
+            }
+          } while (e < this.m_Length);
+        }
+        BubbleUp(e) {
+          let t = e || this.m_Length - 1;
+          for (; t > 0; ) {
+            const e = (t - 1) >> 1;
+            if (!(this.m_fnCompare(this.m_Heap[e], this.m_Heap[t]) > 0)) break;
+            {
+              const a = this.m_Heap[e];
+              (this.m_Heap[e] = this.m_Heap[t]), (this.m_Heap[t] = a), (t = e);
+            }
+          }
+        }
+      }
+      class h {
+        constructor(e, t, a, s) {
+          (this.m_fnGetNeighbors = e),
+            (this.m_fnEstimateCosts = t),
+            (this.m_fnEquality = a),
+            (this.m_fnIterationCallback = s);
+        }
+        FindPath(e, t, a) {
+          return Object(r.a)(this, void 0, void 0, function* () {
+            let s = new u((e, t) => e.cost - t.cost),
+              r = new Set();
+            s.Push({ node: e, cost: 0 });
+            let i = new Map(),
+              n = new Map(),
+              l = new Map(),
+              o = (yield this.m_fnEstimateCosts([e], t))[0];
+            i.set(e, o), n.set(e, 0);
+            let p = 0;
+            for (; s.length > 0 && p < a; ) {
+              let e = s.Pop();
+              if (this.m_fnEquality(e.node, t)) {
+                let t = [],
+                  a = e.node;
+                for (; l.has(a); ) t.push(a), (a = l.get(a));
+                let s = [];
+                for (let e = t.length - 1; e >= 0; e--)
+                  s.push({ node: t[e], cost: n.get(t[e]) });
+                return { path: s };
+              }
+              r.add(e.node);
+              let a = yield this.m_fnGetNeighbors(e.node);
+              if (a.length > 0) {
+                let o = yield this.m_fnEstimateCosts(
+                  a.map((e) => e.node),
+                  t
                 );
-              }
-            }),
-            (e.prototype.Push = function (e) {
-              this.m_Heap.length == this.m_Length
-                ? this.m_Heap.push(e)
-                : (this.m_Heap[this.m_Length] = e),
-                this.m_Length++,
-                this.BubbleUp();
-            }),
-            (e.prototype.FindElement = function (e) {
-              for (var t = 0; t < this.m_Length; t++)
-                if (e(this.m_Heap[t]))
-                  return { index: t, element: this.m_Heap[t] };
-            }),
-            (e.prototype.LowerPriorityOfElement = function (e, t) {
-              (this.m_Heap[e] = t), this.BubbleUp(e);
-            }),
-            (e.prototype.BubbleDown = function () {
-              var e = 0;
-              do {
-                var t = 2 * e + 1,
-                  r = 2 * e + 2,
-                  a = e;
-                if (
-                  (t < this.m_Length &&
-                    this.m_fnCompare(this.m_Heap[a], this.m_Heap[t]) > 0 &&
-                    (a = t),
-                  r < this.m_Length &&
-                    this.m_fnCompare(this.m_Heap[a], this.m_Heap[r]) > 0 &&
-                    (a = r),
-                  a == e)
-                )
-                  break;
-                var n = this.m_Heap[e];
-                (this.m_Heap[e] = this.m_Heap[a]),
-                  (this.m_Heap[a] = n),
-                  (e = a);
-              } while (e < this.m_Length);
-            }),
-            (e.prototype.BubbleUp = function (e) {
-              for (var t = e || this.m_Length - 1; t > 0; ) {
-                var r = (t - 1) >> 1;
-                if (!(this.m_fnCompare(this.m_Heap[r], this.m_Heap[t]) > 0))
-                  break;
-                var a = this.m_Heap[r];
-                (this.m_Heap[r] = this.m_Heap[t]),
-                  (this.m_Heap[t] = a),
-                  (t = r);
-              }
-            }),
-            e
-          );
-        })(),
-        h = (function () {
-          function e(e, t, r, a) {
-            (this.m_fnGetNeighbors = e),
-              (this.m_fnEstimateCosts = t),
-              (this.m_fnEquality = r),
-              (this.m_fnIterationCallback = a);
-          }
-          return (
-            (e.prototype.FindPath = function (e, t, r) {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var n, i, s, o, l, p, c, u, d, h, f, _, b, y, g, v;
-                return Object(a.e)(this, function (a) {
-                  switch (a.label) {
-                    case 0:
-                      return (
-                        (n = new m(function (e, t) {
-                          return e.cost - t.cost;
-                        })),
-                        (i = new Set()),
-                        n.Push({ node: e, cost: 0 }),
-                        (s = new Map()),
-                        (o = new Map()),
-                        (l = new Map()),
-                        [4, this.m_fnEstimateCosts([e], t)]
-                      );
-                    case 1:
-                      (p = a.sent()[0]),
-                        s.set(e, p),
-                        o.set(e, 0),
-                        (c = 0),
-                        (a.label = 2);
-                    case 2:
-                      if (!(n.length > 0 && c < r)) return [3, 6];
-                      if (((u = n.Pop()), this.m_fnEquality(u.node, t))) {
-                        for (d = [], h = u.node; l.has(h); )
-                          d.push(h), (h = l.get(h));
-                        for (f = [], v = d.length - 1; v >= 0; v--)
-                          f.push({ node: d[v], cost: o.get(d[v]) });
-                        return [2, { path: f }];
-                      }
-                      return i.add(u.node), [4, this.m_fnGetNeighbors(u.node)];
-                    case 3:
-                      return (_ = a.sent()).length > 0
-                        ? [
-                            4,
-                            this.m_fnEstimateCosts(
-                              _.map(function (e) {
-                                return e.node;
-                              }),
-                              t
-                            ),
-                          ]
-                        : [3, 5];
-                    case 4:
-                      if ((b = a.sent()).length != _.length)
-                        return (
-                          console.warn(
-                            "Failed to fetch expected number of cost estimates. Failing pathfinding."
-                          ),
-                          [2, {}]
-                        );
-                      for (
-                        y = o.get(u.node),
-                          g = function (e) {
-                            var t = _[e],
-                              r = y + t.cost;
-                            if (
-                              (!o.has(t.node) || r < o.get(t.node)) &&
-                              (l.set(t.node, u.node),
-                              o.set(t.node, r),
-                              s.set(t.node, t.cost + b[e]),
-                              !i.has(t.node))
-                            ) {
-                              var a = t.cost + b[e],
-                                p = n.FindElement(function (e) {
-                                  return e.node == t.node;
-                                });
-                              p
-                                ? p.element.cost > a &&
-                                  n.LowerPriorityOfElement(p.index, {
-                                    node: t.node,
-                                    cost: a,
-                                  })
-                                : n.Push({ node: t.node, cost: a });
-                            }
-                          },
-                          v = 0;
-                        v < _.length;
-                        v++
-                      )
-                        g(v);
-                      a.label = 5;
-                    case 5:
-                      return (
-                        c++,
-                        this.m_fnIterationCallback &&
-                          this.m_fnIterationCallback(),
-                        [3, 2]
-                      );
-                    case 6:
-                      throw new Error("No path found.");
-                  }
-                });
-              });
-            }),
-            e
-          );
-        })(),
-        f = new d();
-      window.g_LabsSandbox = f;
-      var _ = r("q1tI"),
-        b = r.n(_),
-        y = r("55Ip"),
-        g = r("EC67"),
-        v = r("PXMQ"),
-        S = r("Mgs7"),
-        O = r("kyHq"),
-        E = r("TyAF"),
-        C = r("exH9"),
-        B = (function (e) {
-          function t(t) {
-            var r = e.call(this, t) || this;
-            return (
-              (r.state = {
-                appid: 0,
-                appinfo: null,
-                mode: "display",
-                strSearch: "",
-                rgSuggestions: [],
-              }),
-              (r.m_currentRequest = 0),
-              r.props.appidInitial &&
-                (i.a
-                  .EnsureAppInfoForAppIDs([r.props.appidInitial])
-                  .then(function () {
-                    i.a.GetAppInfo(r.props.appidInitial);
-                    r.setState({
-                      appid: r.props.appidInitial,
-                      appinfo: i.a.GetAppInfo(r.props.appidInitial),
-                    });
-                  }),
-                (r.state.appid = r.props.appidInitial)),
-              r
-            );
-          }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.OnDisplayClicked = function () {
-              this.setState({ mode: "select" });
-            }),
-            (t.prototype.UpdateAppSuggestions = function (e) {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var t,
-                  r = this;
-                return Object(a.e)(this, function (n) {
+                if (o.length != a.length)
                   return (
-                    null == (t = e.target.value && e.target.value.trim())
-                      ? void 0
-                      : t.length
-                  )
-                    ? (window.clearTimeout(this.m_currentRequest),
-                      (this.m_currentRequest = window.setTimeout(function () {
-                        return Object(a.b)(r, void 0, void 0, function () {
-                          var e,
-                            r,
-                            n,
-                            i,
-                            s,
-                            l = this;
-                          return Object(a.e)(this, function (a) {
-                            switch (a.label) {
-                              case 0:
-                                return (
-                                  (e = {
-                                    cc: o.d.COUNTRY,
-                                    l: o.d.LANGUAGE,
-                                    realm: O.g.k_ESteamRealmGlobal,
-                                    origin: self.origin,
-                                    f: "jsonfull",
-                                    term: t.replace(" ", "+"),
-                                    require_type: "game",
-                                    excluded_tags: [],
-                                    excluded_content_descriptors: [],
-                                  }),
-                                  (r = o.d.STORE_BASE_URL + "search/suggest"),
-                                  [
-                                    4,
-                                    u.a.get(r, {
-                                      params: e,
-                                      withCredentials: !0,
-                                    }),
-                                  ]
-                                );
-                              case 1:
-                                return (
-                                  (n = a.sent()),
-                                  (i = (
-                                    null ===
-                                      (s = null == n ? void 0 : n.data) ||
-                                    void 0 === s
-                                      ? void 0
-                                      : s.length
-                                  )
-                                    ? n.data.map(function (e) {
-                                        return b.a.createElement(
-                                          "div",
-                                          {
-                                            className: v.Suggestion,
-                                            key: "suggestion-" + e.id,
-                                            onClickCapture: function () {
-                                              return l.SetSelectedApp(
-                                                parseInt(e.id)
-                                              );
-                                            },
-                                          },
-                                          b.a.createElement("img", {
-                                            src: e.img,
-                                            className: v.LogoImage,
-                                          }),
-                                          b.a.createElement(
-                                            "div",
-                                            { className: v.AppName },
-                                            e.name +
-                                              (l.props.showAppIds
-                                                ? " (" + e.id + ")"
-                                                : "")
-                                          )
-                                        );
-                                      })
-                                    : []),
-                                  this.setState({
-                                    strSearch: t,
-                                    rgSuggestions: i,
-                                  }),
-                                  [2]
-                                );
-                            }
-                          });
-                        });
-                      }, 250)),
-                      [2])
-                    : (this.setState({ strSearch: "", rgSuggestions: null }),
-                      [2]);
-                });
-              });
-            }),
-            (t.prototype.SetSelectedApp = function (e) {
-              var t = this;
-              e && 0 != e
-                ? i.a.EnsureAppInfoForAppIDs([e]).then(function () {
-                    i.a.GetAppInfo(e);
-                    t.setState({
-                      appid: e,
-                      appinfo: i.a.GetAppInfo(e),
-                      mode: "display",
-                    }),
-                      t.props.fnOnSelection && t.props.fnOnSelection(e, t);
-                  })
-                : this.setState({ appid: 0, appinfo: null, mode: "display" });
-            }),
-            (t.prototype.OnKeyUp = function (e) {
-              27 == e.keyCode && this.setState({ mode: "display" });
-            }),
-            (t.prototype.render = function () {
-              var e,
-                t,
-                r =
-                  null !== (e = this.props.classOverride) && void 0 !== e
-                    ? e
-                    : v.AppSelector,
-                a = null,
-                n = b.a.createElement(S.l, {
-                  type: "text",
-                  onChange: this.UpdateAppSuggestions,
-                });
-              if ("display" == this.state.mode) {
-                var i = this.state.appinfo
-                  ? this.state.appinfo.name +
-                    (this.props.showAppIds ? " (" + this.state.appid + ")" : "")
-                  : null !== (t = this.props.strPrompt) && void 0 !== t
-                  ? t
-                  : "Select game";
-                a = b.a.createElement(
-                  "div",
-                  { className: v.AppDisplay },
-                  this.state.appinfo &&
-                    b.a.createElement("img", {
-                      src: this.state.appinfo.header_image_url,
-                      className: v.LogoImage,
-                    }),
-                  b.a.createElement("div", { className: v.AppName }, i)
-                );
-              } else if ("select" == this.state.mode) {
-                var s = this.state.strSearch.length > 0;
-                a = b.a.createElement(
-                  "div",
-                  { className: v.AppSelect },
-                  n,
-                  s &&
-                    b.a.createElement(
-                      "div",
-                      { className: v.Suggestions },
-                      this.state.rgSuggestions
-                    )
-                );
-              }
-              return b.a.createElement(
-                "div",
-                {
-                  className: r,
-                  onClick: this.OnDisplayClicked,
-                  onKeyUpCapture: this.OnKeyUp,
-                },
-                a
-              );
-            }),
-            Object(a.c)([p.a], t.prototype, "OnDisplayClicked", null),
-            Object(a.c)([p.a], t.prototype, "UpdateAppSuggestions", null),
-            Object(a.c)([p.a], t.prototype, "OnKeyUp", null),
-            t
-          );
-        })(b.a.Component),
-        w = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.render = function () {
-              var e = this;
-              if (0 == this.props.appid)
-                return b.a.createElement("div", { className: v.SimilarApp });
-              var t = i.a.GetAppInfo(this.props.appid);
-              if (!t || !t.is_valid)
-                return b.a.createElement("div", { className: v.SimilarApp });
-              var r = [];
-              if (this.props.score) {
-                r.push(
-                  b.a.createElement("div", {
-                    className: v.Spacer,
-                    key: "score-spacer",
-                  })
-                );
-                var a = Math.round(100 * this.props.score).toString() + "%";
-                r.push(
-                  b.a.createElement(
-                    "div",
-                    { className: v.Score, key: "score-value" },
+                    console.warn(
+                      "Failed to fetch expected number of cost estimates. Failing pathfinding."
+                    ),
+                    {}
+                  );
+                let p = n.get(e.node);
+                for (let t = 0; t < a.length; t++) {
+                  const c = a[t];
+                  let d = p + c.cost;
+                  if (
+                    (!n.has(c.node) || d < n.get(c.node)) &&
+                    (l.set(c.node, e.node),
+                    n.set(c.node, d),
+                    i.set(c.node, c.cost + o[t]),
+                    !r.has(c.node))
+                  ) {
+                    const e = c.cost + o[t];
+                    let a = s.FindElement((e) => e.node == c.node);
                     a
-                  )
-                );
+                      ? a.element.cost > e &&
+                        s.LowerPriorityOfElement(a.index, {
+                          node: c.node,
+                          cost: e,
+                        })
+                      : s.Push({ node: c.node, cost: e });
+                  }
+                }
               }
-              var n = t.name + " (" + this.props.appid.toString() + ")",
-                s = this.props.fnOnSelected
-                  ? this.props.fnOnSelected
-                  : function (e) {};
-              return b.a.createElement(
-                "div",
-                {
-                  className: v.SimilarApp,
-                  onClick: function () {
-                    return s(e.props.appid);
-                  },
-                },
-                b.a.createElement("img", {
-                  src: t.header_image_url,
-                  className: v.LogoImage,
-                }),
-                b.a.createElement("div", { className: v.AppName }, n),
-                r
-              );
+              p++, this.m_fnIterationCallback && this.m_fnIterationCallback();
+            }
+            throw new Error("No path found.");
+          });
+        }
+      }
+      const _ = new m();
+      window.g_LabsSandbox = _;
+      var b = a("q1tI"),
+        g = a.n(b),
+        f = a("55Ip"),
+        y = a("EC67"),
+        S = a("PXMQ"),
+        E = a("Mgs7"),
+        O = a("kyHq"),
+        v = a("TyAF"),
+        C = a("exH9");
+      class B extends g.a.Component {
+        constructor(e) {
+          super(e),
+            (this.state = {
+              appid: 0,
+              appinfo: null,
+              mode: "display",
+              strSearch: "",
+              rgSuggestions: [],
             }),
-            t
-          );
-        })(b.a.Component),
-        A = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (
-              (t.state = {}),
-              (t.ref_app_a = b.a.createRef()),
-              (t.ref_app_b = b.a.createRef()),
-              t
+            (this.m_currentRequest = 0),
+            this.props.appidInitial &&
+              (i.a
+                .EnsureAppInfoForAppIDs([this.props.appidInitial])
+                .then(() => {
+                  i.a.GetAppInfo(this.props.appidInitial);
+                  this.setState({
+                    appid: this.props.appidInitial,
+                    appinfo: i.a.GetAppInfo(this.props.appidInitial),
+                  });
+                }),
+              (this.state.appid = this.props.appidInitial));
+        }
+        OnDisplayClicked() {
+          this.setState({ mode: "select" });
+        }
+        UpdateAppSuggestions(e) {
+          return Object(r.a)(this, void 0, void 0, function* () {
+            const t = e.target.value && e.target.value.trim();
+            (null == t ? void 0 : t.length)
+              ? (window.clearTimeout(this.m_currentRequest),
+                (this.m_currentRequest = window.setTimeout(
+                  () =>
+                    Object(r.a)(this, void 0, void 0, function* () {
+                      var e;
+                      const a = {
+                          cc: l.d.COUNTRY,
+                          l: l.d.LANGUAGE,
+                          realm: O.g.k_ESteamRealmGlobal,
+                          origin: self.origin,
+                          f: "jsonfull",
+                          term: t.replace(" ", "+"),
+                          require_type: "game",
+                          excluded_tags: [],
+                          excluded_content_descriptors: [],
+                        },
+                        s = `${l.d.STORE_BASE_URL}search/suggest`,
+                        r = yield d.a.get(s, {
+                          params: a,
+                          withCredentials: !0,
+                        });
+                      let i;
+                      (i = (
+                        null === (e = null == r ? void 0 : r.data) ||
+                        void 0 === e
+                          ? void 0
+                          : e.length
+                      )
+                        ? r.data.map((e) =>
+                            g.a.createElement(
+                              "div",
+                              {
+                                className: S.Suggestion,
+                                key: `suggestion-${e.id}`,
+                                onClickCapture: () =>
+                                  this.SetSelectedApp(parseInt(e.id)),
+                              },
+                              g.a.createElement("img", {
+                                src: e.img,
+                                className: S.LogoImage,
+                              }),
+                              g.a.createElement(
+                                "div",
+                                { className: S.AppName },
+                                e.name +
+                                  (this.props.showAppIds ? ` (${e.id})` : "")
+                              )
+                            )
+                          )
+                        : []),
+                        this.setState({ strSearch: t, rgSuggestions: i });
+                    }),
+                  250
+                )))
+              : this.setState({ strSearch: "", rgSuggestions: null });
+          });
+        }
+        SetSelectedApp(e) {
+          e && 0 != e
+            ? i.a.EnsureAppInfoForAppIDs([e]).then(() => {
+                i.a.GetAppInfo(e);
+                this.setState({
+                  appid: e,
+                  appinfo: i.a.GetAppInfo(e),
+                  mode: "display",
+                }),
+                  this.props.fnOnSelection && this.props.fnOnSelection(e, this);
+              })
+            : this.setState({ appid: 0, appinfo: null, mode: "display" });
+        }
+        OnKeyUp(e) {
+          27 == e.keyCode && this.setState({ mode: "display" });
+        }
+        render() {
+          var e, t;
+          const a =
+            null !== (e = this.props.classOverride) && void 0 !== e
+              ? e
+              : S.AppSelector;
+          let s = null;
+          const r = g.a.createElement(E.l, {
+            type: "text",
+            onChange: this.UpdateAppSuggestions,
+          });
+          if ("display" == this.state.mode) {
+            const e = this.state.appinfo
+              ? this.state.appinfo.name +
+                (this.props.showAppIds ? ` (${this.state.appid})` : "")
+              : null !== (t = this.props.strPrompt) && void 0 !== t
+              ? t
+              : "Select game";
+            s = g.a.createElement(
+              "div",
+              { className: S.AppDisplay },
+              this.state.appinfo &&
+                g.a.createElement("img", {
+                  src: this.state.appinfo.header_image_url,
+                  className: S.LogoImage,
+                }),
+              g.a.createElement("div", { className: S.AppName }, e)
+            );
+          } else if ("select" == this.state.mode) {
+            const e = this.state.strSearch.length > 0;
+            s = g.a.createElement(
+              "div",
+              { className: S.AppSelect },
+              r,
+              e &&
+                g.a.createElement(
+                  "div",
+                  { className: S.Suggestions },
+                  this.state.rgSuggestions
+                )
             );
           }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.componentDidMount = function () {
-              this.OnAppSelected();
-            }),
-            (t.prototype.OnAppSelected = function () {
-              var e = this;
-              if (
-                this.ref_app_a.current &&
-                this.ref_app_b.current &&
-                this.ref_app_a.current.state.appid &&
-                this.ref_app_b.current.state.appid
-              ) {
-                var t = this.ref_app_a.current.state.appid,
-                  r = this.ref_app_b.current.state.appid,
-                  a =
-                    o.d.STORE_BASE_URL +
-                    "labs/ajaxgetappsimilarities?appidtarget=" +
-                    t +
-                    "&appid[]=" +
-                    r;
-                u.a.get(a).then(function (t) {
-                  t.data && t.data.similarity_scores
-                    ? e.setState({ score: t.data.similarity_scores[0] })
-                    : e.setState({ score: null });
-                });
-              }
-            }),
-            (t.prototype.render = function () {
-              var e = this.state.score
-                ? (100 * this.state.score).toFixed(1) + "%"
-                : "";
-              return b.a.createElement(
-                "div",
-                { className: v.LabsSimilarity },
-                b.a.createElement(B, {
-                  fnOnSelection: this.OnAppSelected,
-                  ref: this.ref_app_a,
-                  showAppIds: !0,
-                  appidInitial: 268500,
-                  key: "similar_app_a",
-                }),
-                b.a.createElement("div", { className: v.HorizontalSpacer }),
-                b.a.createElement("div", { className: v.Score }, e),
-                b.a.createElement("div", { className: v.HorizontalSpacer }),
-                b.a.createElement(B, {
-                  fnOnSelection: this.OnAppSelected,
-                  ref: this.ref_app_b,
-                  showAppIds: !0,
-                  appidInitial: 200510,
-                  key: "similar_app_b",
+          return g.a.createElement(
+            "div",
+            {
+              className: a,
+              onClick: this.OnDisplayClicked,
+              onKeyUpCapture: this.OnKeyUp,
+            },
+            s
+          );
+        }
+      }
+      Object(r.b)([p.a], B.prototype, "OnDisplayClicked", null),
+        Object(r.b)([p.a], B.prototype, "UpdateAppSuggestions", null),
+        Object(r.b)([p.a], B.prototype, "OnKeyUp", null);
+      class w extends g.a.Component {
+        render() {
+          if (0 == this.props.appid)
+            return g.a.createElement("div", { className: S.SimilarApp });
+          {
+            const e = i.a.GetAppInfo(this.props.appid);
+            if (!e || !e.is_valid)
+              return g.a.createElement("div", { className: S.SimilarApp });
+            let t = [];
+            if (this.props.score) {
+              t.push(
+                g.a.createElement("div", {
+                  className: S.Spacer,
+                  key: "score-spacer",
                 })
               );
-            }),
-            Object(a.c)([p.a], t.prototype, "OnAppSelected", null),
-            t
-          );
-        })(b.a.Component),
-        j = (function (e) {
-          function t(t) {
-            var r = e.call(this, t) || this;
-            return (
-              (r.selected_app = 0),
-              (r.similar_apps = []),
-              (r.similarity_scores = []),
-              (r.similarity_model = "default"),
-              (r.app_selector_ref = b.a.createRef()),
-              t.default_app && r.SetSelectedApp(t.default_app),
-              r
-            );
-          }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.componentDidMount = function () {
-              this.app_selector_ref.current &&
-                this.SetSelectedApp(this.app_selector_ref.current.state.appid);
-            }),
-            (t.prototype.OnSelectedApp = function (e) {
-              e && this.SetSelectedApp(e);
-            }),
-            (t.prototype.SetSelectedApp = function (e, t) {
-              var r = this;
-              if (t || e != this.selected_app) {
-                (this.similar_apps = []),
-                  (this.selected_app = e),
-                  this.app_selector_ref.current &&
-                    this.app_selector_ref.current.SetSelectedApp(e);
-                var a =
-                  o.d.STORE_BASE_URL +
-                  "labs/ajaxgetsimilarapps?appid=" +
-                  e +
-                  "&model=" +
-                  this.similarity_model;
-                u.a.get(a).then(function (e) {
-                  if (e.data && e.data.appid == r.selected_app) {
-                    var t = new Set(
-                      e.data.similar_appids.slice(0, r.props.max_similar)
-                    );
-                    t.add(e.data.appid),
-                      i.a.EnsureAppInfoForAppIDs(t).then(function () {
-                        (r.similar_apps = e.data.similar_appids),
-                          (r.similarity_scores = e.data.similarity_scores);
-                      });
-                  }
-                });
-              }
-            }),
-            (t.prototype.OnModelChanged = function (e, t) {
-              (this.similarity_model = e.data),
-                this.SetSelectedApp(this.selected_app, !0);
-            }),
-            (t.prototype.render = function () {
-              var e,
-                t = [],
-                r = Math.min(
-                  this.similar_apps.length,
-                  this.similarity_scores.length,
-                  this.props.max_similar
-                );
-              for (e = 0; e < r; e++) {
-                var a = this.similar_apps[e],
-                  n = this.similarity_scores[e];
-                t.push(
-                  b.a.createElement(w, {
-                    appid: a,
-                    score: n,
-                    key: a,
-                    fnOnSelected: this.SetSelectedApp,
-                  })
-                );
-              }
-              for (var i = [], s = 0, o = f.rgModelNames; s < o.length; s++) {
-                var l = o[s],
-                  p = {
-                    label: b.a.createElement("div", { key: l }, l),
-                    data: l,
-                  };
-                i.push(p);
-              }
-              return b.a.createElement(
-                "div",
-                { className: v.LabsSimilarGames },
-                b.a.createElement(S.h, {
-                  rgOptions: i,
-                  onChange: this.OnModelChanged,
-                  selectedOption: "default",
-                }),
-                b.a.createElement("h1", null, "Games similar to:"),
-                b.a.createElement(B, {
-                  fnOnSelection: this.OnSelectedApp,
-                  ref: this.app_selector_ref,
-                  appidInitial: 268500,
-                  showAppIds: !0,
-                }),
-                b.a.createElement("div", { className: v.SimilarApps }, t)
-              );
-            }),
-            Object(a.c)([l.C], t.prototype, "selected_app", void 0),
-            Object(a.c)([l.C], t.prototype, "similar_apps", void 0),
-            Object(a.c)([l.C], t.prototype, "similarity_scores", void 0),
-            Object(a.c)([l.C], t.prototype, "similarity_model", void 0),
-            Object(a.c)([p.a], t.prototype, "OnSelectedApp", null),
-            Object(a.c)([p.a], t.prototype, "SetSelectedApp", null),
-            Object(a.c)([p.a], t.prototype, "OnModelChanged", null),
-            (t = Object(a.c)([E.a], t))
-          );
-        })(b.a.Component),
-        I = (function (e) {
-          function t(t) {
-            var r = e.call(this, t) || this;
-            return (
-              (r.selected_app = t.app), (r.selected_operator = t.operator), r
-            );
-          }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.OnSelectedApp = function (e) {
-              e &&
-                e != this.selected_app &&
-                ((this.selected_app = e),
-                this.props.fnOnChange && this.props.fnOnChange());
-            }),
-            (t.prototype.OnSelectedOperator = function (e, t) {
-              (this.selected_operator = e.data),
-                this.props.fnOnChange && this.props.fnOnChange();
-            }),
-            (t.prototype.render = function () {
-              var e = [
-                {
-                  label: b.a.createElement("div", { key: "Plus" }, "Plus"),
-                  data: "Plus",
-                },
-                {
-                  label: b.a.createElement("div", { key: "Minus" }, "Minus"),
-                  data: "Minus",
-                },
-              ];
-              return b.a.createElement(
-                "div",
-                { className: v.Operand },
-                b.a.createElement(
+              const e = Math.round(100 * this.props.score).toString() + "%";
+              t.push(
+                g.a.createElement(
                   "div",
-                  { className: v.OperatorSelect },
-                  b.a.createElement(S.h, {
-                    rgOptions: e,
-                    onChange: this.OnSelectedOperator,
-                    selectedOption: "Plus",
-                  })
-                ),
-                b.a.createElement(B, { fnOnSelection: this.OnSelectedApp })
+                  { className: S.Score, key: "score-value" },
+                  e
+                )
               );
-            }),
-            Object(a.c)([l.C], t.prototype, "selected_app", void 0),
-            Object(a.c)([l.C], t.prototype, "selected_operator", void 0),
-            Object(a.c)([p.a], t.prototype, "OnSelectedApp", null),
-            Object(a.c)([p.a], t.prototype, "OnSelectedOperator", null),
-            (t = Object(a.c)([E.a], t))
-          );
-        })(b.a.Component),
-        M = (function (e) {
-          function t(t) {
-            var r = e.call(this, t) || this;
-            (r.operands = []),
-              (r.similarity_model = "default"),
-              (r.similar_apps = []),
-              (r.similarity_scores = []),
-              (r.operand_refs = []);
-            for (var a = 0; a < t.max_operands; a++)
-              r.operand_refs.push(b.a.createRef());
-            return r;
-          }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.OnModelChanged = function (e, t) {
-              (this.similarity_model = e.data), this.RecomputeExpression();
-            }),
-            (t.prototype.OnAddOperand = function () {
-              this.operands.length < this.props.max_operands &&
-                this.operands.push({
-                  app: 0,
-                  operator: this.operands.length > 0 ? "Plus" : void 0,
-                });
-            }),
-            (t.prototype.OnOperandChanged = function () {
-              for (var e = 0; e < this.operands.length; e++) {
-                var t = this.operand_refs[e].current;
-                (this.operands[e].app = t.selected_app),
-                  (this.operands[e].operator = t.selected_operator);
-              }
-              this.RecomputeExpression();
-            }),
-            (t.prototype.RecomputeExpression = function () {
-              var e = this;
-              if (0 != this.operands.length) {
-                var t = this.operands.map(function (e) {
-                    return "appid[]=" + e.app.toString();
-                  }),
-                  r =
-                    o.d.STORE_BASE_URL +
-                    "labs/ajaxgetappvectors?" +
-                    t.join("&") +
-                    "&model=" +
-                    this.similarity_model;
-                u.a.get(r).then(function (t) {
-                  if (
-                    ((e.similar_apps = []),
-                    (e.similarity_scores = []),
-                    t.data && t.data.length == e.operands.length)
-                  ) {
-                    for (
-                      var r = t.data[0].components.map(function (e) {
-                          return parseFloat(e);
-                        }),
-                        a = function (a) {
-                          var n = t.data[a].components.map(function (e) {
-                            return parseFloat(e);
-                          });
-                          "Plus" == e.operands[a].operator
-                            ? (r = r.map(function (e, t) {
-                                return e + n[t];
-                              }))
-                            : "Minus" == e.operands[a].operator
-                            ? (r = r.map(function (e, t) {
-                                return e - n[t];
-                              }))
-                            : console.log(
-                                "Unexpected operator " + e.operands[a].operator
-                              );
-                        },
-                        n = 1;
-                      n < e.operands.length;
-                      n++
-                    )
-                      a(n);
-                    var s = r
-                        .map(function (e) {
-                          return e * e;
-                        })
-                        .reduce(function (e, t) {
-                          return e + t;
-                        }, 0),
-                      l = Math.sqrt(s);
-                    if (l > 1e-4) {
-                      var p = r
-                          .map(function (e) {
-                            return e / l;
-                          })
-                          .map(function (e) {
-                            return "x[]=" + e;
-                          })
-                          .join("&"),
-                        c =
-                          o.d.STORE_BASE_URL +
-                          "labs/ajaxgetmostsimilarappstovector?" +
-                          p +
-                          "&model=" +
-                          e.similarity_model;
-                      u.a.get(c).then(function (t) {
-                        var r = new Set(
-                          t.data.similar_appids.slice(0, e.props.max_similar)
-                        );
-                        i.a.EnsureAppInfoForAppIDs(r).then(function () {
-                          (e.similar_apps = t.data.similar_appids),
-                            (e.similarity_scores = t.data.similarity_scores);
-                        });
-                      });
-                    }
-                  }
-                });
-              }
-            }),
-            (t.prototype.render = function () {
-              for (var e = [], t = 0, r = f.rgModelNames; t < r.length; t++) {
-                var a = r[t],
-                  n = {
-                    label: b.a.createElement("div", { key: a }, a),
-                    data: a,
-                  };
-                e.push(n);
-              }
-              for (
-                var i = [], s = 0, o = 0, l = this.operands;
-                o < l.length;
-                o++
-              ) {
-                var p = l[o];
-                i.push(
-                  b.a.createElement(I, {
-                    app: p.app,
-                    operator: p.operator,
-                    key: s,
-                    fnOnChange: this.OnOperandChanged,
-                    ref: this.operand_refs[s],
-                  })
-                ),
-                  s++;
-              }
-              var c = null;
-              this.operands.length < this.props.max_operands &&
-                (c = b.a.createElement(
-                  "div",
-                  { className: v.AddOperand, onClick: this.OnAddOperand },
-                  "+"
-                ));
-              for (
-                var u = [],
-                  d = Math.min(
-                    this.similar_apps.length,
-                    this.similarity_scores.length,
-                    this.props.max_similar
-                  ),
-                  m = 0;
-                m < d;
-                m++
-              ) {
-                var h = this.similar_apps[m],
-                  _ = this.similarity_scores[m];
-                u.push(b.a.createElement(w, { appid: h, score: _, key: h }));
-              }
-              return b.a.createElement(
-                "div",
-                { className: v.LabsMixer },
-                b.a.createElement(S.h, {
-                  rgOptions: e,
-                  onChange: this.OnModelChanged,
-                  selectedOption: "default",
-                }),
-                b.a.createElement("h1", null, "Mixture"),
-                i,
-                c,
-                b.a.createElement("h1", null, "Games similar to mixture"),
-                b.a.createElement("div", { className: v.SimilarApps }, u)
-              );
-            }),
-            Object(a.c)([l.C], t.prototype, "operands", void 0),
-            Object(a.c)([l.C], t.prototype, "similarity_model", void 0),
-            Object(a.c)([l.C], t.prototype, "similar_apps", void 0),
-            Object(a.c)([l.C], t.prototype, "similarity_scores", void 0),
-            Object(a.c)([p.a], t.prototype, "OnModelChanged", null),
-            Object(a.c)([p.a], t.prototype, "OnAddOperand", null),
-            Object(a.c)([p.a], t.prototype, "OnOperandChanged", null),
-            (t = Object(a.c)([E.a], t))
-          );
-        })(b.a.Component),
-        R = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (
-              (t.app_start = 0),
-              (t.app_end = 0),
-              (t.in_progress = !1),
-              (t.progress_iteration = 0),
-              (t.found_path = void 0),
+            }
+            const a = e.name + " (" + this.props.appid.toString() + ")",
+              s = this.props.fnOnSelected ? this.props.fnOnSelected : (e) => {};
+            return g.a.createElement(
+              "div",
+              { className: S.SimilarApp, onClick: () => s(this.props.appid) },
+              g.a.createElement("img", {
+                src: e.header_image_url,
+                className: S.LogoImage,
+              }),
+              g.a.createElement("div", { className: S.AppName }, a),
               t
             );
           }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.IterationCallback = function () {
-              this.progress_iteration++;
+        }
+      }
+      class A extends g.a.Component {
+        constructor() {
+          super(...arguments),
+            (this.state = {}),
+            (this.ref_app_a = g.a.createRef()),
+            (this.ref_app_b = g.a.createRef());
+        }
+        componentDidMount() {
+          this.OnAppSelected();
+        }
+        OnAppSelected() {
+          if (
+            this.ref_app_a.current &&
+            this.ref_app_b.current &&
+            this.ref_app_a.current.state.appid &&
+            this.ref_app_b.current.state.appid
+          ) {
+            const e = this.ref_app_a.current.state.appid,
+              t = this.ref_app_b.current.state.appid,
+              a = `${l.d.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${t}`;
+            d.a.get(a).then((e) => {
+              e.data && e.data.similarity_scores
+                ? this.setState({ score: e.data.similarity_scores[0] })
+                : this.setState({ score: null });
+            });
+          }
+        }
+        render() {
+          const e = this.state.score
+            ? (100 * this.state.score).toFixed(1) + "%"
+            : "";
+          return g.a.createElement(
+            "div",
+            { className: S.LabsSimilarity },
+            g.a.createElement(B, {
+              fnOnSelection: this.OnAppSelected,
+              ref: this.ref_app_a,
+              showAppIds: !0,
+              appidInitial: 268500,
+              key: "similar_app_a",
             }),
-            (t.prototype.Pathfind = function () {
-              var e = this;
-              this.in_progress ||
-                ((this.in_progress = !0),
-                (this.progress_iteration = 0),
-                (this.found_path = void 0),
-                f
-                  .ComputePathBetweenApps(
-                    this.app_start,
-                    this.app_end,
-                    0.75,
-                    3,
-                    10,
-                    200,
-                    this.IterationCallback
-                  )
-                  .then(function (t) {
-                    (e.in_progress = !1),
-                      i.a
-                        .EnsureAppInfoForAppIDs(
-                          t.map(function (e) {
-                            return e.appid;
-                          })
-                        )
-                        .then(function () {
-                          e.found_path = t;
-                        });
-                  })
-                  .catch(function (t) {
-                    console.warn(
-                      "Caught pathfinding failure because: " + t.toString()
-                    ),
-                      (e.in_progress = !1),
-                      (e.found_path = void 0);
-                  }));
-            }),
-            (t.prototype.OnSelectedStartApp = function (e) {
-              var t = this;
-              i.a.EnsureAppInfoForAppIDs([e]).then(function () {
-                t.app_start = e;
-              });
-            }),
-            (t.prototype.OnSelectedEndApp = function (e) {
-              var t = this;
-              i.a.EnsureAppInfoForAppIDs([e]).then(function () {
-                t.app_end = e;
-              });
-            }),
-            (t.prototype.render = function () {
-              var e =
-                  0 != this.app_start &&
-                  0 != this.app_end &&
-                  !this.in_progress &&
-                  this.app_start != this.app_end,
-                t = e
-                  ? v.ComputeButton
-                  : Object(C.a)(v.ComputeButton, v.Disable),
-                r = null;
-              r = this.in_progress
-                ? b.a.createElement(
-                    "div",
-                    { className: v.ProgressMessage },
-                    "Finding path, step " + this.progress_iteration
-                  )
-                : this.found_path
-                ? b.a.createElement(
-                    "div",
-                    { className: v.ProgressMessage },
-                    "Found path"
-                  )
-                : b.a.createElement(
-                    "div",
-                    { className: v.ProgressMessage },
-                    "No path found"
-                  );
-              var a = [];
-              if (this.found_path)
-                for (var n = 0; n < this.found_path.length; n++) {
-                  var i = this.found_path[n];
-                  a.push(
-                    b.a.createElement(w, {
-                      appid: i.appid,
-                      score: i.similarity,
-                      key: "pathstep" + n,
-                    })
-                  );
-                }
-              return b.a.createElement(
-                "div",
-                { className: v.LabsPathfinder },
-                b.a.createElement(
-                  "div",
-                  { className: v.SelectEndpoints },
-                  b.a.createElement(B, {
-                    fnOnSelection: this.OnSelectedStartApp,
-                    strPrompt: "Select start game",
-                  }),
-                  b.a.createElement(B, {
-                    fnOnSelection: this.OnSelectedEndApp,
-                    strPrompt: "Select end game",
-                  })
-                ),
-                b.a.createElement(
-                  "div",
-                  { className: t, onClick: e ? this.Pathfind : function () {} },
-                  "Pathfind!"
-                ),
-                r,
-                b.a.createElement("div", { className: v.Path }, a)
-              );
-            }),
-            Object(a.c)([l.C], t.prototype, "app_start", void 0),
-            Object(a.c)([l.C], t.prototype, "app_end", void 0),
-            Object(a.c)([l.C], t.prototype, "in_progress", void 0),
-            Object(a.c)([l.C], t.prototype, "progress_iteration", void 0),
-            Object(a.c)([l.C], t.prototype, "found_path", void 0),
-            Object(a.c)([p.a], t.prototype, "IterationCallback", null),
-            Object(a.c)([p.a], t.prototype, "Pathfind", null),
-            Object(a.c)([p.a], t.prototype, "OnSelectedStartApp", null),
-            Object(a.c)([p.a], t.prototype, "OnSelectedEndApp", null),
-            (t = Object(a.c)([E.a], t))
+            g.a.createElement("div", { className: S.HorizontalSpacer }),
+            g.a.createElement("div", { className: S.Score }, e),
+            g.a.createElement("div", { className: S.HorizontalSpacer }),
+            g.a.createElement(B, {
+              fnOnSelection: this.OnAppSelected,
+              ref: this.ref_app_b,
+              showAppIds: !0,
+              appidInitial: 200510,
+              key: "similar_app_b",
+            })
           );
-        })(b.a.Component);
-      function x() {
-        return b.a.createElement(
-          b.a.Fragment,
+        }
+      }
+      Object(r.b)([p.a], A.prototype, "OnAppSelected", null);
+      let I = class extends g.a.Component {
+        constructor(e) {
+          super(e),
+            (this.selected_app = 0),
+            (this.similar_apps = []),
+            (this.similarity_scores = []),
+            (this.similarity_model = "default"),
+            (this.app_selector_ref = g.a.createRef()),
+            e.default_app && this.SetSelectedApp(e.default_app);
+        }
+        componentDidMount() {
+          this.app_selector_ref.current &&
+            this.SetSelectedApp(this.app_selector_ref.current.state.appid);
+        }
+        OnSelectedApp(e) {
+          e && this.SetSelectedApp(e);
+        }
+        SetSelectedApp(e, t) {
+          if (t || e != this.selected_app) {
+            (this.similar_apps = []),
+              (this.selected_app = e),
+              this.app_selector_ref.current &&
+                this.app_selector_ref.current.SetSelectedApp(e);
+            const t = `${l.d.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}&model=${this.similarity_model}`;
+            d.a.get(t).then((e) => {
+              if (e.data && e.data.appid == this.selected_app) {
+                let t = new Set(
+                  e.data.similar_appids.slice(0, this.props.max_similar)
+                );
+                t.add(e.data.appid),
+                  i.a.EnsureAppInfoForAppIDs(t).then(() => {
+                    (this.similar_apps = e.data.similar_appids),
+                      (this.similarity_scores = e.data.similarity_scores);
+                  });
+              }
+            });
+          }
+        }
+        OnModelChanged(e, t) {
+          (this.similarity_model = e.data),
+            this.SetSelectedApp(this.selected_app, !0);
+        }
+        render() {
+          let e,
+            t = [];
+          const a = Math.min(
+            this.similar_apps.length,
+            this.similarity_scores.length,
+            this.props.max_similar
+          );
+          for (e = 0; e < a; e++) {
+            const a = this.similar_apps[e],
+              s = this.similarity_scores[e];
+            t.push(
+              g.a.createElement(w, {
+                appid: a,
+                score: s,
+                key: a,
+                fnOnSelected: this.SetSelectedApp,
+              })
+            );
+          }
+          let s = [];
+          for (const e of _.rgModelNames) {
+            let t = { label: g.a.createElement("div", { key: e }, e), data: e };
+            s.push(t);
+          }
+          return g.a.createElement(
+            "div",
+            { className: S.LabsSimilarGames },
+            g.a.createElement(E.h, {
+              rgOptions: s,
+              onChange: this.OnModelChanged,
+              selectedOption: "default",
+            }),
+            g.a.createElement("h1", null, "Games similar to:"),
+            g.a.createElement(B, {
+              fnOnSelection: this.OnSelectedApp,
+              ref: this.app_selector_ref,
+              appidInitial: 268500,
+              showAppIds: !0,
+            }),
+            g.a.createElement("div", { className: S.SimilarApps }, t)
+          );
+        }
+      };
+      Object(r.b)([o.C], I.prototype, "selected_app", void 0),
+        Object(r.b)([o.C], I.prototype, "similar_apps", void 0),
+        Object(r.b)([o.C], I.prototype, "similarity_scores", void 0),
+        Object(r.b)([o.C], I.prototype, "similarity_model", void 0),
+        Object(r.b)([p.a], I.prototype, "OnSelectedApp", null),
+        Object(r.b)([p.a], I.prototype, "SetSelectedApp", null),
+        Object(r.b)([p.a], I.prototype, "OnModelChanged", null),
+        (I = Object(r.b)([v.a], I));
+      let M = class extends g.a.Component {
+        constructor(e) {
+          super(e),
+            (this.selected_app = e.app),
+            (this.selected_operator = e.operator);
+        }
+        OnSelectedApp(e) {
+          e &&
+            e != this.selected_app &&
+            ((this.selected_app = e),
+            this.props.fnOnChange && this.props.fnOnChange());
+        }
+        OnSelectedOperator(e, t) {
+          (this.selected_operator = e.data),
+            this.props.fnOnChange && this.props.fnOnChange();
+        }
+        render() {
+          let e = [
+            {
+              label: g.a.createElement("div", { key: "Plus" }, "Plus"),
+              data: "Plus",
+            },
+            {
+              label: g.a.createElement("div", { key: "Minus" }, "Minus"),
+              data: "Minus",
+            },
+          ];
+          return g.a.createElement(
+            "div",
+            { className: S.Operand },
+            g.a.createElement(
+              "div",
+              { className: S.OperatorSelect },
+              g.a.createElement(E.h, {
+                rgOptions: e,
+                onChange: this.OnSelectedOperator,
+                selectedOption: "Plus",
+              })
+            ),
+            g.a.createElement(B, { fnOnSelection: this.OnSelectedApp })
+          );
+        }
+      };
+      Object(r.b)([o.C], M.prototype, "selected_app", void 0),
+        Object(r.b)([o.C], M.prototype, "selected_operator", void 0),
+        Object(r.b)([p.a], M.prototype, "OnSelectedApp", null),
+        Object(r.b)([p.a], M.prototype, "OnSelectedOperator", null),
+        (M = Object(r.b)([v.a], M));
+      let x = class extends g.a.Component {
+        constructor(e) {
+          super(e),
+            (this.operands = []),
+            (this.similarity_model = "default"),
+            (this.similar_apps = []),
+            (this.similarity_scores = []),
+            (this.operand_refs = []);
+          for (let t = 0; t < e.max_operands; t++)
+            this.operand_refs.push(g.a.createRef());
+        }
+        OnModelChanged(e, t) {
+          (this.similarity_model = e.data), this.RecomputeExpression();
+        }
+        OnAddOperand() {
+          this.operands.length < this.props.max_operands &&
+            this.operands.push({
+              app: 0,
+              operator: this.operands.length > 0 ? "Plus" : void 0,
+            });
+        }
+        OnOperandChanged() {
+          for (let e = 0; e < this.operands.length; e++) {
+            const t = this.operand_refs[e].current;
+            (this.operands[e].app = t.selected_app),
+              (this.operands[e].operator = t.selected_operator);
+          }
+          this.RecomputeExpression();
+        }
+        RecomputeExpression() {
+          if (0 == this.operands.length) return;
+          const e = this.operands.map((e) => "appid[]=" + e.app.toString()),
+            t = `${l.d.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(
+              "&"
+            )}&model=${this.similarity_model}`;
+          d.a.get(t).then((e) => {
+            if (
+              ((this.similar_apps = []),
+              (this.similarity_scores = []),
+              e.data && e.data.length == this.operands.length)
+            ) {
+              let t = e.data[0].components.map((e) => parseFloat(e));
+              for (let a = 1; a < this.operands.length; a++) {
+                const s = e.data[a].components.map((e) => parseFloat(e));
+                "Plus" == this.operands[a].operator
+                  ? (t = t.map((e, t) => e + s[t]))
+                  : "Minus" == this.operands[a].operator
+                  ? (t = t.map((e, t) => e - s[t]))
+                  : console.log(
+                      "Unexpected operator " + this.operands[a].operator
+                    );
+              }
+              const a = t.map((e) => e * e).reduce((e, t) => e + t, 0),
+                s = Math.sqrt(a);
+              if (s > 1e-4) {
+                const e = t
+                    .map((e) => e / s)
+                    .map((e) => "x[]=" + e)
+                    .join("&"),
+                  a = `${l.d.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${e}&model=${this.similarity_model}`;
+                d.a.get(a).then((e) => {
+                  let t = new Set(
+                    e.data.similar_appids.slice(0, this.props.max_similar)
+                  );
+                  i.a.EnsureAppInfoForAppIDs(t).then(() => {
+                    (this.similar_apps = e.data.similar_appids),
+                      (this.similarity_scores = e.data.similarity_scores);
+                  });
+                });
+              }
+            }
+          });
+        }
+        render() {
+          let e = [];
+          for (const t of _.rgModelNames) {
+            let a = { label: g.a.createElement("div", { key: t }, t), data: t };
+            e.push(a);
+          }
+          let t = [],
+            a = 0;
+          for (const e of this.operands)
+            t.push(
+              g.a.createElement(M, {
+                app: e.app,
+                operator: e.operator,
+                key: a,
+                fnOnChange: this.OnOperandChanged,
+                ref: this.operand_refs[a],
+              })
+            ),
+              a++;
+          let s = null;
+          this.operands.length < this.props.max_operands &&
+            (s = g.a.createElement(
+              "div",
+              { className: S.AddOperand, onClick: this.OnAddOperand },
+              "+"
+            ));
+          let r = [];
+          const i = Math.min(
+            this.similar_apps.length,
+            this.similarity_scores.length,
+            this.props.max_similar
+          );
+          for (let e = 0; e < i; e++) {
+            const t = this.similar_apps[e],
+              a = this.similarity_scores[e];
+            r.push(g.a.createElement(w, { appid: t, score: a, key: t }));
+          }
+          return g.a.createElement(
+            "div",
+            { className: S.LabsMixer },
+            g.a.createElement(E.h, {
+              rgOptions: e,
+              onChange: this.OnModelChanged,
+              selectedOption: "default",
+            }),
+            g.a.createElement("h1", null, "Mixture"),
+            t,
+            s,
+            g.a.createElement("h1", null, "Games similar to mixture"),
+            g.a.createElement("div", { className: S.SimilarApps }, r)
+          );
+        }
+      };
+      Object(r.b)([o.C], x.prototype, "operands", void 0),
+        Object(r.b)([o.C], x.prototype, "similarity_model", void 0),
+        Object(r.b)([o.C], x.prototype, "similar_apps", void 0),
+        Object(r.b)([o.C], x.prototype, "similarity_scores", void 0),
+        Object(r.b)([p.a], x.prototype, "OnModelChanged", null),
+        Object(r.b)([p.a], x.prototype, "OnAddOperand", null),
+        Object(r.b)([p.a], x.prototype, "OnOperandChanged", null),
+        (x = Object(r.b)([v.a], x));
+      let R = class extends g.a.Component {
+        constructor() {
+          super(...arguments),
+            (this.app_start = 0),
+            (this.app_end = 0),
+            (this.in_progress = !1),
+            (this.progress_iteration = 0),
+            (this.found_path = void 0);
+        }
+        IterationCallback() {
+          this.progress_iteration++;
+        }
+        Pathfind() {
+          this.in_progress ||
+            ((this.in_progress = !0),
+            (this.progress_iteration = 0),
+            (this.found_path = void 0),
+            _.ComputePathBetweenApps(
+              this.app_start,
+              this.app_end,
+              0.75,
+              3,
+              10,
+              200,
+              this.IterationCallback
+            )
+              .then((e) => {
+                (this.in_progress = !1),
+                  i.a.EnsureAppInfoForAppIDs(e.map((e) => e.appid)).then(() => {
+                    this.found_path = e;
+                  });
+              })
+              .catch((e) => {
+                console.warn(
+                  "Caught pathfinding failure because: " + e.toString()
+                ),
+                  (this.in_progress = !1),
+                  (this.found_path = void 0);
+              }));
+        }
+        OnSelectedStartApp(e) {
+          i.a.EnsureAppInfoForAppIDs([e]).then(() => {
+            this.app_start = e;
+          });
+        }
+        OnSelectedEndApp(e) {
+          i.a.EnsureAppInfoForAppIDs([e]).then(() => {
+            this.app_end = e;
+          });
+        }
+        render() {
+          const e =
+              0 != this.app_start &&
+              0 != this.app_end &&
+              !this.in_progress &&
+              this.app_start != this.app_end,
+            t = e ? S.ComputeButton : Object(C.a)(S.ComputeButton, S.Disable);
+          let a = null;
+          a = this.in_progress
+            ? g.a.createElement(
+                "div",
+                { className: S.ProgressMessage },
+                "Finding path, step " + this.progress_iteration
+              )
+            : this.found_path
+            ? g.a.createElement(
+                "div",
+                { className: S.ProgressMessage },
+                "Found path"
+              )
+            : g.a.createElement(
+                "div",
+                { className: S.ProgressMessage },
+                "No path found"
+              );
+          let s = [];
+          if (this.found_path)
+            for (let e = 0; e < this.found_path.length; e++) {
+              const t = this.found_path[e];
+              s.push(
+                g.a.createElement(w, {
+                  appid: t.appid,
+                  score: t.similarity,
+                  key: "pathstep" + e,
+                })
+              );
+            }
+          return g.a.createElement(
+            "div",
+            { className: S.LabsPathfinder },
+            g.a.createElement(
+              "div",
+              { className: S.SelectEndpoints },
+              g.a.createElement(B, {
+                fnOnSelection: this.OnSelectedStartApp,
+                strPrompt: "Select start game",
+              }),
+              g.a.createElement(B, {
+                fnOnSelection: this.OnSelectedEndApp,
+                strPrompt: "Select end game",
+              })
+            ),
+            g.a.createElement(
+              "div",
+              { className: t, onClick: e ? this.Pathfind : () => {} },
+              "Pathfind!"
+            ),
+            a,
+            g.a.createElement("div", { className: S.Path }, s)
+          );
+        }
+      };
+      function j() {
+        return g.a.createElement(
+          g.a.Fragment,
           null,
-          b.a.createElement("h1", null, "Similar Games"),
-          b.a.createElement(j, { max_similar: 10 }),
-          b.a.createElement("div", { className: v.Spacer }),
-          b.a.createElement("h1", null, "Similarity"),
-          b.a.createElement(A, null),
-          b.a.createElement("div", { className: v.Spacer }),
-          b.a.createElement("h1", null, "Mixer"),
-          b.a.createElement(M, { max_similar: 10, max_operands: 6 }),
-          b.a.createElement("div", { className: v.Spacer }),
-          b.a.createElement("h1", null, "Pathfinder"),
-          b.a.createElement(R, null)
+          g.a.createElement("h1", null, "Similar Games"),
+          g.a.createElement(I, { max_similar: 10 }),
+          g.a.createElement("div", { className: S.Spacer }),
+          g.a.createElement("h1", null, "Similarity"),
+          g.a.createElement(A, null),
+          g.a.createElement("div", { className: S.Spacer }),
+          g.a.createElement("h1", null, "Mixer"),
+          g.a.createElement(x, { max_similar: 10, max_operands: 6 }),
+          g.a.createElement("div", { className: S.Spacer }),
+          g.a.createElement("h1", null, "Pathfinder"),
+          g.a.createElement(R, null)
         );
       }
-      var N = r("kLLr"),
-        P = (r("E4Op"), r("qiKp")),
-        z = r("bxBv"),
-        k = r("hRO2"),
-        L = r("OS8t"),
-        F = r("sRB7"),
-        T = k.Message;
-      var D,
-        U = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var a = e.call(this) || this;
-            return (
-              t.prototype.items || L.a(t.M()),
-              T.initialize(a, r, 0, -1, [1], null),
-              a
-            );
-          }
+      Object(r.b)([o.C], R.prototype, "app_start", void 0),
+        Object(r.b)([o.C], R.prototype, "app_end", void 0),
+        Object(r.b)([o.C], R.prototype, "in_progress", void 0),
+        Object(r.b)([o.C], R.prototype, "progress_iteration", void 0),
+        Object(r.b)([o.C], R.prototype, "found_path", void 0),
+        Object(r.b)([p.a], R.prototype, "IterationCallback", null),
+        Object(r.b)([p.a], R.prototype, "Pathfind", null),
+        Object(r.b)([p.a], R.prototype, "OnSelectedStartApp", null),
+        Object(r.b)([p.a], R.prototype, "OnSelectedEndApp", null),
+        (R = Object(r.b)([v.a], R));
+      var N = a("kLLr"),
+        P = (a("E4Op"), a("qiKp")),
+        z = a("bxBv"),
+        k = a("hRO2"),
+        L = a("OS8t"),
+        F = a("sRB7");
+      const T = k.Message;
+      class D extends T {
+        constructor(e = null) {
+          super(),
+            D.prototype.items || L.a(D.M()),
+            T.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: { items: { n: 1, c: W, r: !0, q: !0 } },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return L.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return L.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new k.BinaryReader(e),
-                a = new t();
-              return t.deserializeBinaryFromReader(a, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return L.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new k.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              L.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new k.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CStoreAppSimilarity_PrioritizeAppsForUser_Response";
-            }),
-            t
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
+                fields: { items: { n: 1, c: U, r: !0, q: !0 } },
+              }),
+            D.sm_m
           );
-        })(T),
-        W = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var a = e.call(this) || this;
-            return (
-              t.prototype.id || L.a(t.M()),
-              T.initialize(a, r, 0, -1, [50], null),
-              a
-            );
-          }
+        }
+        static MBF() {
+          return D.sm_mbf || (D.sm_mbf = L.e(D.M())), D.sm_mbf;
+        }
+        toObject(e = !1) {
+          return D.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return L.g(D.M(), e, t);
+        }
+        static fromObject(e) {
+          return L.c(D.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new k.BinaryReader(e),
+            a = new D();
+          return D.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return L.b(D.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new k.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          L.f(D.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new k.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreAppSimilarity_PrioritizeAppsForUser_Response";
+        }
+      }
+      class U extends T {
+        constructor(e = null) {
+          super(),
+            U.prototype.id || L.a(U.M()),
+            T.initialize(this, e, 0, -1, [50], null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      id: { n: 1, c: F.f },
-                      already_owned: {
-                        n: 2,
-                        br: L.d.readBool,
-                        bw: L.h.writeBool,
-                      },
-                      weight: { n: 3, br: L.d.readDouble, bw: L.h.writeDouble },
-                      weight_before_dedupe: {
-                        n: 4,
-                        br: L.d.readDouble,
-                        bw: L.h.writeDouble,
-                      },
-                      debug_matches: { n: 50, c: H, r: !0, q: !0 },
-                      debug_popularity: { n: 51, c: G },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return L.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return L.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new k.BinaryReader(e),
-                a = new t();
-              return t.deserializeBinaryFromReader(a, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return L.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new k.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              L.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new k.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem";
-            }),
-            t
+            U.sm_m ||
+              (U.sm_m = {
+                proto: U,
+                fields: {
+                  id: { n: 1, c: F.f },
+                  already_owned: { n: 2, br: L.d.readBool, bw: L.h.writeBool },
+                  weight: { n: 3, br: L.d.readDouble, bw: L.h.writeDouble },
+                  weight_before_dedupe: {
+                    n: 4,
+                    br: L.d.readDouble,
+                    bw: L.h.writeDouble,
+                  },
+                  debug_matches: { n: 50, c: W, r: !0, q: !0 },
+                  debug_popularity: { n: 51, c: H },
+                },
+              }),
+            U.sm_m
           );
-        })(T),
-        H = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var a = e.call(this) || this;
-            return (
-              t.prototype.source_app || L.a(t.M()),
-              T.initialize(a, r, 0, -1, void 0, null),
-              a
-            );
-          }
+        }
+        static MBF() {
+          return U.sm_mbf || (U.sm_mbf = L.e(U.M())), U.sm_mbf;
+        }
+        toObject(e = !1) {
+          return U.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return L.g(U.M(), e, t);
+        }
+        static fromObject(e) {
+          return L.c(U.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new k.BinaryReader(e),
+            a = new U();
+          return U.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return L.b(U.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new k.BinaryWriter();
+          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          L.f(U.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new k.BinaryWriter();
+          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem";
+        }
+      }
+      class W extends T {
+        constructor(e = null) {
+          super(),
+            W.prototype.source_app || L.a(W.M()),
+            T.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      source_app: {
-                        n: 1,
-                        br: L.d.readInt32,
-                        bw: L.h.writeInt32,
-                      },
-                      weight: { n: 2, br: L.d.readDouble, bw: L.h.writeDouble },
-                      similarity: {
-                        n: 3,
-                        br: L.d.readDouble,
-                        bw: L.h.writeDouble,
-                      },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return L.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return L.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new k.BinaryReader(e),
-                a = new t();
-              return t.deserializeBinaryFromReader(a, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return L.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new k.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              L.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new k.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_MatchDebugInfo";
-            }),
-            t
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: {
+                  source_app: { n: 1, br: L.d.readInt32, bw: L.h.writeInt32 },
+                  weight: { n: 2, br: L.d.readDouble, bw: L.h.writeDouble },
+                  similarity: { n: 3, br: L.d.readDouble, bw: L.h.writeDouble },
+                },
+              }),
+            W.sm_m
           );
-        })(T),
-        G = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var a = e.call(this) || this;
-            return (
-              t.prototype.rank || L.a(t.M()),
-              T.initialize(a, r, 0, -1, void 0, null),
-              a
-            );
-          }
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = L.e(W.M())), W.sm_mbf;
+        }
+        toObject(e = !1) {
+          return W.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return L.g(W.M(), e, t);
+        }
+        static fromObject(e) {
+          return L.c(W.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new k.BinaryReader(e),
+            a = new W();
+          return W.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return L.b(W.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new k.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          L.f(W.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new k.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_MatchDebugInfo";
+        }
+      }
+      class H extends T {
+        constructor(e = null) {
+          super(),
+            H.prototype.rank || L.a(H.M()),
+            T.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      rank: { n: 1, br: L.d.readUint32, bw: L.h.writeUint32 },
-                      popularity_factor: {
-                        n: 2,
-                        br: L.d.readDouble,
-                        bw: L.h.writeDouble,
-                      },
-                      weight_before_popularity: {
-                        n: 3,
-                        br: L.d.readDouble,
-                        bw: L.h.writeDouble,
-                      },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return L.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return L.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new k.BinaryReader(e),
-                a = new t();
-              return t.deserializeBinaryFromReader(a, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return L.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new k.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              L.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new k.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_PopularityDebugInfo";
-            }),
-            t
+            H.sm_m ||
+              (H.sm_m = {
+                proto: H,
+                fields: {
+                  rank: { n: 1, br: L.d.readUint32, bw: L.h.writeUint32 },
+                  popularity_factor: {
+                    n: 2,
+                    br: L.d.readDouble,
+                    bw: L.h.writeDouble,
+                  },
+                  weight_before_popularity: {
+                    n: 3,
+                    br: L.d.readDouble,
+                    bw: L.h.writeDouble,
+                  },
+                },
+              }),
+            H.sm_m
           );
-        })(T),
-        q = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var a = e.call(this) || this;
-            return (
-              t.prototype.steamid || L.a(t.M()),
-              T.initialize(a, r, 0, -1, void 0, null),
-              a
-            );
-          }
+        }
+        static MBF() {
+          return H.sm_mbf || (H.sm_mbf = L.e(H.M())), H.sm_mbf;
+        }
+        toObject(e = !1) {
+          return H.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return L.g(H.M(), e, t);
+        }
+        static fromObject(e) {
+          return L.c(H.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new k.BinaryReader(e),
+            a = new H();
+          return H.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return L.b(H.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new k.BinaryWriter();
+          return H.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          L.f(H.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new k.BinaryWriter();
+          return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_PopularityDebugInfo";
+        }
+      }
+      class G extends T {
+        constructor(e = null) {
+          super(),
+            G.prototype.steamid || L.a(G.M()),
+            T.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      steamid: {
-                        n: 1,
-                        br: L.d.readFixed64String,
-                        bw: L.h.writeFixed64String,
-                      },
-                      sort: { n: 2, d: 1, br: L.d.readEnum, bw: L.h.writeEnum },
-                      clusters_to_return: {
-                        n: 3,
-                        br: L.d.readInt32,
-                        bw: L.h.writeInt32,
-                      },
-                      cluster_index: {
-                        n: 4,
-                        br: L.d.readInt32,
-                        bw: L.h.writeInt32,
-                      },
-                      context: { n: 10, c: F.b },
-                      data_request: { n: 11, c: F.c },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return L.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return L.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new k.BinaryReader(e),
-                a = new t();
-              return t.deserializeBinaryFromReader(a, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return L.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new k.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              L.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new k.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request";
-            }),
-            t
+            G.sm_m ||
+              (G.sm_m = {
+                proto: G,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: L.d.readFixed64String,
+                    bw: L.h.writeFixed64String,
+                  },
+                  sort: { n: 2, d: 1, br: L.d.readEnum, bw: L.h.writeEnum },
+                  clusters_to_return: {
+                    n: 3,
+                    br: L.d.readInt32,
+                    bw: L.h.writeInt32,
+                  },
+                  cluster_index: {
+                    n: 4,
+                    br: L.d.readInt32,
+                    bw: L.h.writeInt32,
+                  },
+                  context: { n: 10, c: F.b },
+                  data_request: { n: 11, c: F.c },
+                },
+              }),
+            G.sm_m
           );
-        })(T),
-        K = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var a = e.call(this) || this;
-            return (
-              t.prototype.clusters || L.a(t.M()),
-              T.initialize(a, r, 0, -1, [1], null),
-              a
-            );
-          }
+        }
+        static MBF() {
+          return G.sm_mbf || (G.sm_mbf = L.e(G.M())), G.sm_mbf;
+        }
+        toObject(e = !1) {
+          return G.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return L.g(G.M(), e, t);
+        }
+        static fromObject(e) {
+          return L.c(G.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new k.BinaryReader(e),
+            a = new G();
+          return G.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return L.b(G.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new k.BinaryWriter();
+          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          L.f(G.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new k.BinaryWriter();
+          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request";
+        }
+      }
+      class q extends T {
+        constructor(e = null) {
+          super(),
+            q.prototype.clusters || L.a(q.M()),
+            T.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: { clusters: { n: 1, c: V, r: !0, q: !0 } },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return L.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return L.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new k.BinaryReader(e),
-                a = new t();
-              return t.deserializeBinaryFromReader(a, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return L.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new k.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              L.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new k.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response";
-            }),
-            t
+            q.sm_m ||
+              (q.sm_m = {
+                proto: q,
+                fields: { clusters: { n: 1, c: $, r: !0, q: !0 } },
+              }),
+            q.sm_m
           );
-        })(T),
-        V = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var a = e.call(this) || this;
-            return (
-              t.prototype.cluster_id || L.a(t.M()),
-              T.initialize(a, r, 0, -1, [5, 6, 7], null),
-              a
-            );
-          }
+        }
+        static MBF() {
+          return q.sm_mbf || (q.sm_mbf = L.e(q.M())), q.sm_mbf;
+        }
+        toObject(e = !1) {
+          return q.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return L.g(q.M(), e, t);
+        }
+        static fromObject(e) {
+          return L.c(q.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new k.BinaryReader(e),
+            a = new q();
+          return q.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return L.b(q.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new k.BinaryWriter();
+          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          L.f(q.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new k.BinaryWriter();
+          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response";
+        }
+      }
+      class $ extends T {
+        constructor(e = null) {
+          super(),
+            $.prototype.cluster_id || L.a($.M()),
+            T.initialize(this, e, 0, -1, [5, 6, 7], null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      cluster_id: {
-                        n: 1,
-                        br: L.d.readInt32,
-                        bw: L.h.writeInt32,
-                      },
-                      playtime_forever: {
-                        n: 2,
-                        br: L.d.readInt32,
-                        bw: L.h.writeInt32,
-                      },
-                      playtime_2weeks: {
-                        n: 3,
-                        br: L.d.readInt32,
-                        bw: L.h.writeInt32,
-                      },
-                      last_played: {
-                        n: 4,
-                        br: L.d.readUint32,
-                        bw: L.h.writeUint32,
-                      },
-                      played_appids: {
-                        n: 5,
-                        r: !0,
-                        q: !0,
-                        br: L.d.readInt32,
-                        bw: L.h.writeRepeatedInt32,
-                      },
-                      similar_items_appids: {
-                        n: 6,
-                        r: !0,
-                        q: !0,
-                        br: L.d.readInt32,
-                        bw: L.h.writeRepeatedInt32,
-                      },
-                      similar_items: { n: 7, c: F.e, r: !0, q: !0 },
-                      similar_item_popularity_score: {
-                        n: 8,
-                        br: L.d.readDouble,
-                        bw: L.h.writeDouble,
-                      },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return L.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return L.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new k.BinaryReader(e),
-                a = new t();
-              return t.deserializeBinaryFromReader(a, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return L.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new k.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              L.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new k.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response_Cluster";
-            }),
-            t
+            $.sm_m ||
+              ($.sm_m = {
+                proto: $,
+                fields: {
+                  cluster_id: { n: 1, br: L.d.readInt32, bw: L.h.writeInt32 },
+                  playtime_forever: {
+                    n: 2,
+                    br: L.d.readInt32,
+                    bw: L.h.writeInt32,
+                  },
+                  playtime_2weeks: {
+                    n: 3,
+                    br: L.d.readInt32,
+                    bw: L.h.writeInt32,
+                  },
+                  last_played: {
+                    n: 4,
+                    br: L.d.readUint32,
+                    bw: L.h.writeUint32,
+                  },
+                  played_appids: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: L.d.readInt32,
+                    bw: L.h.writeRepeatedInt32,
+                  },
+                  similar_items_appids: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: L.d.readInt32,
+                    bw: L.h.writeRepeatedInt32,
+                  },
+                  similar_items: { n: 7, c: F.e, r: !0, q: !0 },
+                  similar_item_popularity_score: {
+                    n: 8,
+                    br: L.d.readDouble,
+                    bw: L.h.writeDouble,
+                  },
+                },
+              }),
+            $.sm_m
           );
-        })(T);
+        }
+        static MBF() {
+          return $.sm_mbf || ($.sm_mbf = L.e($.M())), $.sm_mbf;
+        }
+        toObject(e = !1) {
+          return $.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return L.g($.M(), e, t);
+        }
+        static fromObject(e) {
+          return L.c($.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new k.BinaryReader(e),
+            a = new $();
+          return $.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return L.b($.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new k.BinaryWriter();
+          return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          L.f($.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new k.BinaryWriter();
+          return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response_Cluster";
+        }
+      }
+      var K;
       !(function (e) {
         (e.PrioritizeAppsForUser = function (e, t) {
-          return e.SendMsg("StoreAppSimilarity.PrioritizeAppsForUser#1", t, U, {
+          return e.SendMsg("StoreAppSimilarity.PrioritizeAppsForUser#1", t, D, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 2,
@@ -1771,110 +1399,92 @@
             return e.SendMsg(
               "StoreAppSimilarity.IdentifyClustersFromPlaytime#1",
               t,
-              K,
+              q,
               { ePrivilege: 2, eWebAPIKeyRequirement: 2 }
             );
           });
-      })(D || (D = {}));
-      var Q = r("AKiZ"),
-        J = (r("g4bM"), r("C4Nl")),
-        X = (function () {
-          function e(e) {
-            this.m_SteamInterface = e;
-          }
+      })(K || (K = {}));
+      var V = a("AKiZ"),
+        Q = (a("g4bM"), a("C4Nl"));
+      class J {
+        constructor(e) {
+          this.m_SteamInterface = e;
+        }
+        LoadPlaytimeClusters(e, t, a, s) {
+          return new X(this.m_SteamInterface, e, t, a, s);
+        }
+      }
+      class X {
+        constructor(e, t, a, s, r) {
+          this.m_callbacksLoaded = new P.a();
+          const i = z.b.Init(G);
+          Object(V.a)(i),
+            r && Object(V.b)(i, r),
+            i.Body().set_steamid(t || l.k.steamid),
+            s && i.Body().set_clusters_to_return(s),
+            i.Body().set_sort(a),
+            K.IdentifyClustersFromPlaytime(e.GetServiceTransport(), i).then(
+              (e) => {
+                const t = e.Body();
+                this.m_rgClusters = [];
+                for (const e of t.clusters())
+                  this.m_rgClusters.push(this.ReadCluster(e, r));
+                this.m_callbacksLoaded.Dispatch(this.m_rgClusters);
+              }
+            );
+        }
+        ReadCluster(e, t) {
+          let a;
           return (
-            (e.prototype.LoadPlaytimeClusters = function (e, t, r, a) {
-              return new Z(this.m_SteamInterface, e, t, r, a);
-            }),
-            e
+            t && (a = e.similar_items().map((e) => Q.a.Get().ReadItem(e, t))),
+            {
+              nClusterID: e.cluster_id(),
+              nPlaytimeMinutes: e.playtime_forever(),
+              nPlaytimeMinutes2Weeks: e.playtime_2weeks(),
+              rtLastPlayed: e.last_played(),
+              rgAppIDsPlayed: e.played_appids(),
+              rgSimilarItems: a.filter((e) => !!e),
+              rgSimilarAppIDs: e.similar_items_appids(),
+              flPopularityScore: e.similar_item_popularity_score(),
+            }
           );
-        })(),
-        Z = (function () {
-          function e(e, t, r, a, n) {
-            var i = this;
-            this.m_callbacksLoaded = new P.a();
-            var s = z.b.Init(q);
-            Object(Q.a)(s),
-              n && Object(Q.b)(s, n),
-              s.Body().set_steamid(t || o.k.steamid),
-              a && s.Body().set_clusters_to_return(a),
-              s.Body().set_sort(r),
-              D.IdentifyClustersFromPlaytime(e.GetServiceTransport(), s).then(
-                function (e) {
-                  var t = e.Body();
-                  i.m_rgClusters = [];
-                  for (var r = 0, a = t.clusters(); r < a.length; r++) {
-                    var s = a[r];
-                    i.m_rgClusters.push(i.ReadCluster(s, n));
-                  }
-                  i.m_callbacksLoaded.Dispatch(i.m_rgClusters);
-                }
-              );
-          }
+        }
+        RegisterOnReadyCallback(e) {
+          const t = this.m_callbacksLoaded.Register(e);
           return (
-            (e.prototype.ReadCluster = function (e, t) {
-              var r;
-              return (
-                t &&
-                  (r = e.similar_items().map(function (e) {
-                    return J.a.Get().ReadItem(e, t);
-                  })),
-                {
-                  nClusterID: e.cluster_id(),
-                  nPlaytimeMinutes: e.playtime_forever(),
-                  nPlaytimeMinutes2Weeks: e.playtime_2weeks(),
-                  rtLastPlayed: e.last_played(),
-                  rgAppIDsPlayed: e.played_appids(),
-                  rgSimilarItems: r.filter(function (e) {
-                    return !!e;
-                  }),
-                  rgSimilarAppIDs: e.similar_items_appids(),
-                  flPopularityScore: e.similar_item_popularity_score(),
-                }
-              );
-            }),
-            (e.prototype.RegisterOnReadyCallback = function (e) {
-              var t = this,
-                r = this.m_callbacksLoaded.Register(e);
-              return (
-                void 0 !== this.m_rgClusters &&
-                  window.setTimeout(function () {
-                    return e(t.m_rgClusters);
-                  }, 0),
-                r
-              );
-            }),
-            e
+            void 0 !== this.m_rgClusters &&
+              window.setTimeout(() => e(this.m_rgClusters), 0),
+            t
           );
-        })();
-      var Y,
-        $ = r("0OaU"),
-        ee = r("TLQK"),
-        te = r("1wed"),
-        re = r("b3LC"),
-        ae = r("uuth"),
-        ne = r("IjL/");
-      function ie(e) {
-        var t = e.SteamInterface,
-          r = _.useRef();
+        }
+      }
+      var Z = a("0OaU"),
+        Y = a("TLQK"),
+        ee = a("1wed"),
+        te = a("b3LC"),
+        ae = a("uuth"),
+        se = a("IjL/");
+      function re(e) {
+        const { SteamInterface: t } = e,
+          a = b.useRef();
         return (
-          r.current || (r.current = new X(t)),
-          _.createElement(
-            _.Fragment,
+          a.current || (a.current = new J(t)),
+          b.createElement(
+            b.Fragment,
             null,
-            _.createElement(
+            b.createElement(
               "div",
               null,
-              _.createElement(
+              b.createElement(
                 "p",
                 null,
                 "This data is generated by analyzing games based on similar tags, and generating clusters from that.  We then look at your playtime history to see what games are in clusters together, and suggest other popular games in those clusters."
               ),
-              _.createElement(
+              b.createElement(
                 "p",
                 null,
                 "You can also ",
-                _.createElement(
+                b.createElement(
                   "a",
                   {
                     href: "http://store-tc.k.steam.net/graph",
@@ -1885,200 +1495,160 @@
                 " (requires Rack VPN)."
               )
             ),
-            _.createElement(oe, { SimilarityStore: r.current })
+            b.createElement(ne, { SimilarityStore: a.current })
           )
         );
       }
-      var se =
-        (((Y = {})[3] = "Total Playtime"),
-        (Y[2] = "Number of Played Games"),
-        (Y[1] = "Most Recently Played"),
-        Y);
-      function oe(e) {
-        var t = e.SimilarityStore,
-          r = _.useState(o.k.steamid),
-          n = r[0],
-          i = r[1],
-          s = _.useState("10"),
-          l = s[0],
-          p = s[1],
-          c = _.useState(1),
-          u = c[0],
-          d = c[1],
-          m = _.useCallback(
-            function (e) {
-              return i(e.currentTarget.value);
-            },
-            [i]
-          ),
-          h = _.useCallback(
-            function (e) {
-              return p(e.currentTarget.value);
-            },
-            [p]
-          ),
-          f = _.useCallback(
-            function (e) {
-              return d(e.data);
-            },
-            [d]
-          ),
-          b = !1,
-          y = _.useRef(o.k.steamid),
-          g = n && new N.a(n);
-        g &&
-          g.BIsValid() &&
-          g.BIsIndividualAccount() &&
-          ((y.current = g.ConvertTo64BitString()), (b = !0));
-        var v = void 0;
-        l && !isNaN(parseInt(l)) && (v = parseInt(l));
-        var O = _.useMemo(function () {
-            var e = [];
-            for (var t in se) e.push({ data: Number(t), label: se[t] });
+      const ie = {
+        3: "Total Playtime",
+        2: "Number of Played Games",
+        1: "Most Recently Played",
+      };
+      function ne(e) {
+        const { SimilarityStore: t } = e,
+          [a, s] = b.useState(l.k.steamid),
+          [r, i] = b.useState("10"),
+          [n, o] = b.useState(1),
+          p = b.useCallback((e) => s(e.currentTarget.value), [s]),
+          c = b.useCallback((e) => i(e.currentTarget.value), [i]),
+          d = b.useCallback((e) => o(e.data), [o]);
+        let m = !1;
+        const u = b.useRef(l.k.steamid),
+          h = a && new N.a(a);
+        let _;
+        h &&
+          h.BIsValid() &&
+          h.BIsIndividualAccount() &&
+          ((u.current = h.ConvertTo64BitString()), (m = !0)),
+          r && !isNaN(parseInt(r)) && (_ = parseInt(r));
+        const g = b.useMemo(() => {
+            let e = [];
+            for (let t in ie) e.push({ data: Number(t), label: ie[t] });
             return e;
           }, []),
-          E = (function (e, t, r, n, i, s) {
-            void 0 === n && (n = 1),
-              void 0 === i && (i = null),
-              void 0 === s && (s = []);
-            var o = _.useState(null),
-              l = o[0],
-              p = o[1];
+          f = (function (e, t, a, s = 1, r = null, i = []) {
+            const [n, l] = b.useState(null);
             return (
-              _.useEffect(function () {
-                if ((p(null), r))
+              b.useEffect(() => {
+                if ((l(null), a))
                   return e
-                    .LoadPlaytimeClusters(r, n, i, t)
-                    .RegisterOnReadyCallback(p).Unregister;
-              }, Object(a.g)([r, n, i], s)),
-              l
+                    .LoadPlaytimeClusters(a, s, r, t)
+                    .RegisterOnReadyCallback(l).Unregister;
+              }, [a, s, r, ...i]),
+              n
             );
           })(
             t,
             { include_assets: !0, include_basic_info: !0 },
-            y.current,
-            u,
-            v
+            u.current,
+            n,
+            _
           );
-        return _.createElement(
+        return b.createElement(
           "div",
           null,
-          _.createElement(
-            S.b,
-            { className: te.ClusterConfig },
-            _.createElement(S.l, {
+          b.createElement(
+            E.b,
+            { className: ee.ClusterConfig },
+            b.createElement(E.l, {
               label: "SteamID",
               type: "text",
-              value: n,
-              onChange: m,
-              explainer: !b && "Invalid SteamID",
+              value: a,
+              onChange: p,
+              explainer: !m && "Invalid SteamID",
             }),
-            _.createElement(S.l, {
+            b.createElement(E.l, {
               label: "Clusters to return (Set to blank for all clusters)",
               type: "text",
-              value: l,
-              onChange: h,
+              value: r,
+              onChange: c,
             }),
-            _.createElement(S.h, {
+            b.createElement(E.h, {
               label: "Sort clusters by",
-              rgOptions: O,
-              selectedOption: u,
-              onChange: f,
+              rgOptions: g,
+              selectedOption: n,
+              onChange: d,
             })
           ),
-          b && !E && _.createElement($.a, null),
-          E && _.createElement(le, { rgPlaytimeClusters: E })
+          m && !f && b.createElement(Z.a, null),
+          f && b.createElement(le, { rgPlaytimeClusters: f })
         );
       }
       function le(e) {
-        var t = e.rgPlaytimeClusters;
-        return _.createElement(
+        const { rgPlaytimeClusters: t } = e;
+        return b.createElement(
           "div",
           null,
-          t.map(function (e) {
-            return _.createElement(
-              ne.a,
+          t.map((e) =>
+            b.createElement(
+              se.a,
               { key: e.nClusterID },
-              _.createElement(pe, { cluster: e })
-            );
-          })
+              b.createElement(oe, { cluster: e })
+            )
+          )
         );
       }
-      function pe(e) {
-        var t = e.cluster,
-          r = _.useState(!1),
-          a = r[0],
-          n = r[1],
-          i = _.useCallback(
-            function () {
-              return n(!0);
-            },
-            [n]
-          ),
-          s = _.useState(!1),
-          o = s[0],
-          l = s[1],
-          p = _.useCallback(
-            function () {
-              return l(!0);
-            },
-            [l]
-          );
-        return _.createElement(
+      function oe(e) {
+        const { cluster: t } = e,
+          [a, s] = b.useState(!1),
+          r = b.useCallback(() => s(!0), [s]),
+          [i, n] = b.useState(!1),
+          l = b.useCallback(() => n(!0), [n]);
+        return b.createElement(
           ae.a,
-          { onEnter: p },
-          _.createElement(
+          { onEnter: l },
+          b.createElement(
             "div",
-            { className: te.PlaytimeCluster },
-            _.createElement(
+            { className: ee.PlaytimeCluster },
+            b.createElement(
               "div",
-              { className: te.ClusterInfo },
-              _.createElement("h1", null, "Cluster ", t.nClusterID),
-              _.createElement(
-                ne.a,
+              { className: ee.ClusterInfo },
+              b.createElement("h1", null, "Cluster ", t.nClusterID),
+              b.createElement(
+                se.a,
                 null,
-                _.createElement(
+                b.createElement(
                   "div",
-                  { className: te.Overview },
-                  _.createElement(
+                  { className: ee.Overview },
+                  b.createElement(
                     "div",
                     null,
-                    _.createElement("b", null, "Total Playtime:"),
+                    b.createElement("b", null, "Total Playtime:"),
                     " ",
                     Math.floor(t.nPlaytimeMinutes / 6) / 10,
                     "hr"
                   ),
-                  _.createElement(
+                  b.createElement(
                     "div",
                     null,
-                    _.createElement("b", null, "Last Played:"),
+                    b.createElement("b", null, "Last Played:"),
                     " ",
-                    Object(ee.n)(t.rtLastPlayed),
+                    Object(Y.n)(t.rtLastPlayed),
                     " "
                   ),
-                  _.createElement(
+                  b.createElement(
                     "div",
                     null,
-                    _.createElement("b", null, "Games played:"),
+                    b.createElement("b", null, "Games played:"),
                     " ",
-                    o &&
-                      t.rgAppIDsPlayed.map(function (e) {
-                        return _.createElement(
-                          _.Fragment,
+                    i &&
+                      t.rgAppIDsPlayed.map((e) =>
+                        b.createElement(
+                          b.Fragment,
                           { key: e },
-                          _.createElement(ue, { appid: e }),
+                          b.createElement(ce, { appid: e }),
                           ", "
-                        );
-                      })
+                        )
+                      )
                   ),
-                  _.createElement(
+                  b.createElement(
                     "div",
                     null,
-                    _.createElement("b", null, "Popularity Score:"),
+                    b.createElement("b", null, "Popularity Score:"),
                     " ",
                     Math.floor(100 * t.flPopularityScore),
                     "%  ",
-                    _.createElement(
+                    b.createElement(
                       "span",
                       {
                         title:
@@ -2091,31 +1661,31 @@
                 )
               )
             ),
-            _.createElement(
+            b.createElement(
               "div",
-              { className: te.ClusterMembers },
-              _.createElement("h3", null, "Similar titles:"),
-              _.createElement(
-                ne.a,
+              { className: ee.ClusterMembers },
+              b.createElement("h3", null, "Similar titles:"),
+              b.createElement(
+                se.a,
                 null,
-                _.createElement(
+                b.createElement(
                   "ul",
                   null,
-                  t.rgSimilarItems.map(function (e, t) {
-                    return a || t < 4
-                      ? _.createElement(
+                  t.rgSimilarItems.map((e, t) =>
+                    a || t < 4
+                      ? b.createElement(
                           "li",
                           { key: e.GetUniqueID() },
-                          _.createElement(de, { item: e })
+                          b.createElement(de, { item: e })
                         )
-                      : null;
-                  })
+                      : null
+                  )
                 )
               ),
               !a &&
-                _.createElement(
-                  S.d,
-                  { onClick: i },
+                b.createElement(
+                  E.d,
+                  { onClick: r },
                   "Show all ",
                   t.rgSimilarItems.length
                 )
@@ -2123,138 +1693,128 @@
           )
         );
       }
-      var ce = {};
-      function ue(e) {
-        var t = e.appid,
-          r = Object(re.b)(t, ce)[0];
-        return r
-          ? _.createElement(
+      const pe = {};
+      function ce(e) {
+        const { appid: t } = e,
+          [a] = Object(te.b)(t, pe);
+        return a
+          ? b.createElement(
               "a",
-              { className: te.PlayedGame, href: r.GetStorePageURL() },
-              r.GetName()
+              { className: ee.PlayedGame, href: a.GetStorePageURL() },
+              a.GetName()
             )
           : null;
       }
       function de(e) {
-        var t = e.item;
-        return _.createElement(
+        const { item: t } = e;
+        return b.createElement(
           "a",
-          { className: te.SimilarTitle, href: t.GetStorePageURL() },
-          _.createElement("img", {
+          { className: ee.SimilarTitle, href: t.GetStorePageURL() },
+          b.createElement("img", {
             src: t.assets.GetSmallCapsuleURL(),
             loading: "lazy",
           }),
           t.GetName()
         );
       }
-      var me = r("vyDT"),
-        he = [
-          {
-            path: "similarity",
-            render: function () {
-              return b.a.createElement(x, null);
-            },
-            name: "ML Similarity",
-          },
-          {
-            path: "clustering",
-            render: function (e) {
-              return b.a.createElement(ie, {
-                SteamInterface: e.SteamInterface,
-              });
-            },
-            name: "Tag Clustering",
-            requires_login: !0,
-          },
-        ],
-        fe = Object(o.h)("labs", "application_config"),
-        _e = new s.a(o.d.WEBAPI_BASE_URL, fe.webapi_token);
+      var me = a("vyDT");
+      const ue = [
+        {
+          path: "similarity",
+          render: () => g.a.createElement(j, null),
+          name: "ML Similarity",
+        },
+        {
+          path: "clustering",
+          render: (e) =>
+            g.a.createElement(re, { SteamInterface: e.SteamInterface }),
+          name: "Tag Clustering",
+          requires_login: !0,
+        },
+      ];
+      let he = Object(l.h)("labs", "application_config"),
+        _e = new n.a(l.d.WEBAPI_BASE_URL, he.webapi_token);
       function be(e) {
-        var t = b.a.useState(!1),
-          r = t[0],
-          i = t[1],
-          s = !!fe.webapi_token;
+        const [t, a] = g.a.useState(!1),
+          r = !!he.webapi_token;
         if (
-          (Object(_.useEffect)(function () {
-            f.Init(), i(!0);
+          (Object(b.useEffect)(() => {
+            _.Init(), a(!0);
           }, []),
-          !r)
+          !t)
         )
-          return b.a.createElement("div", { className: v.App });
-        var o = { SteamInterface: _e };
-        return b.a.createElement(
+          return g.a.createElement("div", { className: S.App });
+        const i = { SteamInterface: _e };
+        return g.a.createElement(
           "div",
-          { className: v.App },
-          b.a.createElement(
+          { className: S.App },
+          g.a.createElement(
             "div",
-            { className: v.Container },
-            b.a.createElement(
+            { className: S.Container },
+            g.a.createElement(
               "div",
-              { className: v.TopSection },
-              b.a.createElement("div", { className: v.Header }, "Labs Sandbox"),
-              b.a.createElement(
+              { className: S.TopSection },
+              g.a.createElement("div", { className: S.Header }, "Labs Sandbox"),
+              g.a.createElement(
                 "div",
-                { className: v.Body },
+                { className: S.Body },
                 "Internal testbed page for Steam Labs experiments"
               )
             ),
-            b.a.createElement(
+            g.a.createElement(
               "div",
-              { className: v.Tabs },
-              he.map(function (e) {
-                return b.a.createElement(
-                  y.c,
+              { className: S.Tabs },
+              ue.map((e) =>
+                g.a.createElement(
+                  f.c,
                   {
                     key: e.path,
-                    to: n.b.LabsSandbox() + "/" + e.path,
-                    className: v.Tab,
-                    activeClassName: v.Active,
+                    to: `${s.b.LabsSandbox()}/${e.path}`,
+                    className: S.Tab,
+                    activeClassName: S.Active,
                   },
                   e.name
-                );
-              })
+                )
+              )
             ),
-            b.a.createElement(
+            g.a.createElement(
               "div",
-              { className: v.SandboxSection },
-              b.a.createElement(
-                ne.a,
+              { className: S.SandboxSection },
+              g.a.createElement(
+                se.a,
                 null,
-                b.a.createElement(
-                  g.d,
+                g.a.createElement(
+                  y.d,
                   null,
-                  he.map(function (e, t) {
-                    return b.a.createElement(g.b, {
+                  ue.map((e, t) =>
+                    g.a.createElement(y.b, {
                       key: e.path,
-                      path: n.b.LabsSandbox() + "/" + e.path,
-                      render: function (t) {
-                        return !e.requires_login || s
-                          ? e.render(Object(a.a)(Object(a.a)({}, t), o))
-                          : b.a.createElement(ye, null);
-                      },
-                    });
-                  })
+                      path: `${s.b.LabsSandbox()}/${e.path}`,
+                      render: (t) =>
+                        !e.requires_login || r
+                          ? e.render(Object.assign(Object.assign({}, t), i))
+                          : g.a.createElement(ge, null),
+                    })
+                  )
                 )
               )
             )
           )
         );
       }
-      function ye() {
-        return b.a.createElement(
+      function ge() {
+        return g.a.createElement(
           "div",
           null,
-          b.a.createElement("h3", null, "Please login to view this page."),
-          b.a.createElement(me.a, {
-            baseURL: o.d.STORE_BASE_URL,
-            onLoginComplete: function () {
-              return window.location.reload();
-            },
+          g.a.createElement("h3", null, "Please login to view this page."),
+          g.a.createElement(me.a, {
+            baseURL: l.d.STORE_BASE_URL,
+            onLoginComplete: () => window.location.reload(),
           })
         );
       }
     },
-    PXMQ: function (e, t, r) {
+    PXMQ: function (e, t, a) {
       e.exports = {
         AppSelector: "labssandbox_AppSelector_2Fikz",
         AppDisplay: "labssandbox_AppDisplay_3m6Sh",

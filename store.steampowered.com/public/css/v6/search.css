@@ -831,3 +831,8 @@ html[lang=en].responsive .search_labs_banner_actions {
 	background-color: #66bff2;
 	background: url('/public/images//v6/search/new.svg' ) bottom center no-repeat;
 }
+
+.info_link {
+	float: right;
+	margin: 2px;
+}

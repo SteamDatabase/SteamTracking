@@ -9,670 +9,563 @@
         r.d(t, "AccountPreferencesRoutes", function () {
           return W;
         });
-      var n = r("q1tI"),
-        i = r.n(n),
-        o = r("EC67"),
-        a = r("mrSG"),
+      var s = r("q1tI"),
+        i = r.n(s),
+        a = r("EC67"),
+        n = r("mrSG"),
         c = r("vDqi"),
-        s = r.n(c),
+        o = r.n(c),
         l = r("2vnA"),
-        u = (r("mgoM"), r("OS6B"), r("lkRc")),
-        f = r("hRO2"),
-        _ = r("OS8t"),
-        m = f.Message;
-      var p,
-        y = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
-            return (
-              t.prototype.version || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
-            );
-          }
+        _ = (r("mgoM"), r("OS6B"), r("lkRc")),
+        m = r("hRO2"),
+        f = r("OS8t");
+      const u = m.Message;
+      class d extends u {
+        constructor(e = null) {
+          super(),
+            d.prototype.version || f.a(d.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      version: { n: 1, br: _.d.readEnum, bw: _.h.writeEnum },
-                      preference_state: {
-                        n: 2,
-                        br: _.d.readEnum,
-                        bw: _.h.writeEnum,
-                      },
-                      content_customization: { n: 3, c: d },
-                      valve_analytics: { n: 4, c: b },
-                      third_party_analytics: { n: 5, c: h },
-                      third_party_content: { n: 6, c: g },
-                      utm_enabled: {
-                        n: 7,
-                        d: !0,
-                        br: _.d.readBool,
-                        bw: _.h.writeBool,
-                      },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return _.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new f.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new f.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CAccountPrivacyCookiePreferences";
-            }),
-            t
+            d.sm_m ||
+              (d.sm_m = {
+                proto: d,
+                fields: {
+                  version: { n: 1, br: f.d.readEnum, bw: f.h.writeEnum },
+                  preference_state: {
+                    n: 2,
+                    br: f.d.readEnum,
+                    bw: f.h.writeEnum,
+                  },
+                  content_customization: { n: 3, c: y },
+                  valve_analytics: { n: 4, c: b },
+                  third_party_analytics: { n: 5, c: h },
+                  third_party_content: { n: 6, c: g },
+                  utm_enabled: {
+                    n: 7,
+                    d: !0,
+                    br: f.d.readBool,
+                    bw: f.h.writeBool,
+                  },
+                },
+              }),
+            d.sm_m
           );
-        })(m),
-        d = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
-            return (
-              t.prototype.recentapps || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
-            );
-          }
+        }
+        static MBF() {
+          return d.sm_mbf || (d.sm_mbf = f.e(d.M())), d.sm_mbf;
+        }
+        toObject(e = !1) {
+          return d.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.g(d.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.c(d.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new d();
+          return d.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.b(d.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.f(d.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences";
+        }
+      }
+      class y extends u {
+        constructor(e = null) {
+          super(),
+            y.prototype.recentapps || f.a(y.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      recentapps: { n: 1, br: _.d.readBool, bw: _.h.writeBool },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return _.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new f.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new f.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CAccountPrivacyCookiePreferences_ContentCustomization";
-            }),
-            t
+            y.sm_m ||
+              (y.sm_m = {
+                proto: y,
+                fields: {
+                  recentapps: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
+                },
+              }),
+            y.sm_m
           );
-        })(m),
-        b = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
-            return (
-              t.prototype.product_impressions_tracking || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
-            );
-          }
+        }
+        static MBF() {
+          return y.sm_mbf || (y.sm_mbf = f.e(y.M())), y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.g(y.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.c(y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.b(y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.f(y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ContentCustomization";
+        }
+      }
+      class b extends u {
+        constructor(e = null) {
+          super(),
+            b.prototype.product_impressions_tracking || f.a(b.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      product_impressions_tracking: {
-                        n: 1,
-                        br: _.d.readBool,
-                        bw: _.h.writeBool,
-                      },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return _.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new f.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new f.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CAccountPrivacyCookiePreferences_ValveAnalytics";
-            }),
-            t
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
+                fields: {
+                  product_impressions_tracking: {
+                    n: 1,
+                    br: f.d.readBool,
+                    bw: f.h.writeBool,
+                  },
+                },
+              }),
+            b.sm_m
           );
-        })(m),
-        h = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
-            return (
-              t.prototype.google_analytics || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
-            );
-          }
+        }
+        static MBF() {
+          return b.sm_mbf || (b.sm_mbf = f.e(b.M())), b.sm_mbf;
+        }
+        toObject(e = !1) {
+          return b.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.g(b.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.c(b.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new b();
+          return b.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.b(b.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.f(b.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ValveAnalytics";
+        }
+      }
+      class h extends u {
+        constructor(e = null) {
+          super(),
+            h.prototype.google_analytics || f.a(h.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      google_analytics: {
-                        n: 1,
-                        br: _.d.readBool,
-                        bw: _.h.writeBool,
-                      },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return _.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new f.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new f.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
-            }),
-            t
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  google_analytics: {
+                    n: 1,
+                    br: f.d.readBool,
+                    bw: f.h.writeBool,
+                  },
+                },
+              }),
+            h.sm_m
           );
-        })(m),
-        g = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
-            return (
-              t.prototype.youtube || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
-            );
-          }
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = f.e(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.g(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.c(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.b(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.f(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
+        }
+      }
+      class g extends u {
+        constructor(e = null) {
+          super(),
+            g.prototype.youtube || f.a(g.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: {
-                      youtube: { n: 1, br: _.d.readBool, bw: _.h.writeBool },
-                      vimeo: { n: 2, br: _.d.readBool, bw: _.h.writeBool },
-                      sketchfab: { n: 3, br: _.d.readBool, bw: _.h.writeBool },
-                      twitter: { n: 4, br: _.d.readBool, bw: _.h.writeBool },
-                    },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return _.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new f.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new f.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
-            }),
-            t
+            g.sm_m ||
+              (g.sm_m = {
+                proto: g,
+                fields: {
+                  youtube: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
+                  vimeo: { n: 2, br: f.d.readBool, bw: f.h.writeBool },
+                  sketchfab: { n: 3, br: f.d.readBool, bw: f.h.writeBool },
+                  twitter: { n: 4, br: f.d.readBool, bw: f.h.writeBool },
+                },
+              }),
+            g.sm_m
           );
-        })(m),
-        v = (function (e) {
-          function t(r) {
-            void 0 === r && (r = null);
-            var n = e.call(this) || this;
-            return (
-              t.prototype.preferences || _.a(t.M()),
-              m.initialize(n, r, 0, -1, void 0, null),
-              n
-            );
-          }
+        }
+        static MBF() {
+          return g.sm_mbf || (g.sm_mbf = f.e(g.M())), g.sm_mbf;
+        }
+        toObject(e = !1) {
+          return g.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.g(g.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.c(g.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new g();
+          return g.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.b(g.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.f(g.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
+        }
+      }
+      class p extends u {
+        constructor(e = null) {
+          super(),
+            p.prototype.preferences || f.a(p.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
           return (
-            Object(a.d)(t, e),
-            (t.M = function () {
-              return (
-                t.sm_m ||
-                  (t.sm_m = {
-                    proto: t,
-                    fields: { preferences: { n: 1, c: y } },
-                  }),
-                t.sm_m
-              );
-            }),
-            (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = _.e(t.M())), t.sm_mbf;
-            }),
-            (t.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function (e, r) {
-              return _.g(t.M(), e, r);
-            }),
-            (t.fromObject = function (e) {
-              return _.c(t.M(), e);
-            }),
-            (t.deserializeBinary = function (e) {
-              var r = new f.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, r);
-            }),
-            (t.deserializeBinaryFromReader = function (e, r) {
-              return _.b(t.MBF(), e, r);
-            }),
-            (t.prototype.serializeBinary = function () {
-              var e = new f.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function (e, r) {
-              _.f(t.M(), e, r);
-            }),
-            (t.prototype.serializeBase64String = function () {
-              var e = new f.BinaryWriter();
-              return (
-                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
-              );
-            }),
-            (t.prototype.getClassName = function () {
-              return "CAccountPrivacy_GetCookiePreferences_Response";
-            }),
-            t
+            p.sm_m ||
+              (p.sm_m = { proto: p, fields: { preferences: { n: 1, c: d } } }),
+            p.sm_m
           );
-        })(m);
+        }
+        static MBF() {
+          return p.sm_mbf || (p.sm_mbf = f.e(p.M())), p.sm_mbf;
+        }
+        toObject(e = !1) {
+          return p.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.g(p.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.c(p.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new p();
+          return p.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.b(p.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.f(p.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacy_GetCookiePreferences_Response";
+        }
+      }
+      var P;
       !(function (e) {
         e.GetCookiePreferences = function (e, t) {
-          return e.SendMsg("AccountPrivacy.GetCookiePreferences#1", t, v, {
+          return e.SendMsg("AccountPrivacy.GetCookiePreferences#1", t, p, {
             ePrivilege: 1,
           });
         };
-      })(p || (p = {}));
-      var P,
-        k = r("TLQK"),
-        C = (function () {
-          function e(e) {
-            (this.m_Preferences = e),
-              (this.m_Preferences.content_customization &&
-                !Array.isArray(this.m_Preferences.content_customization)) ||
-                (this.m_Preferences.content_customization = {}),
-              (this.m_Preferences.third_party_analytics &&
-                !Array.isArray(this.m_Preferences.third_party_analytics)) ||
-                (this.m_Preferences.third_party_analytics = {}),
-              (this.m_Preferences.third_party_content &&
-                !Array.isArray(this.m_Preferences.third_party_content)) ||
-                (this.m_Preferences.third_party_content = {}),
-              (this.m_Preferences.valve_analytics &&
-                !Array.isArray(this.m_Preferences.valve_analytics)) ||
-                (this.m_Preferences.valve_analytics = {}),
-              (void 0 !== this.m_Preferences.utm_enabled &&
-                null !== this.m_Preferences.utm_enabled) ||
-                (this.m_Preferences.utm_enabled = !0),
-              (0 != this.m_Preferences.preference_state &&
-                1 != this.m_Preferences.preference_state) ||
-                ((this.m_Preferences.valve_analytics.product_impressions_tracking = !0),
-                (this.m_Preferences.content_customization.recentapps = !0),
-                (this.m_Preferences.third_party_analytics.google_analytics = !0),
-                (this.m_Preferences.third_party_content.sketchfab = !0),
-                (this.m_Preferences.third_party_content.twitter = !0),
-                (this.m_Preferences.third_party_content.vimeo = !0),
-                (this.m_Preferences.third_party_content.youtube = !0)),
-              0 == this.m_Preferences.version &&
-                (this.m_Preferences.version = 1);
-          }
+      })(P || (P = {}));
+      var k = r("TLQK");
+      class C {
+        constructor(e) {
+          (this.m_Preferences = e),
+            (this.m_Preferences.content_customization &&
+              !Array.isArray(this.m_Preferences.content_customization)) ||
+              (this.m_Preferences.content_customization = {}),
+            (this.m_Preferences.third_party_analytics &&
+              !Array.isArray(this.m_Preferences.third_party_analytics)) ||
+              (this.m_Preferences.third_party_analytics = {}),
+            (this.m_Preferences.third_party_content &&
+              !Array.isArray(this.m_Preferences.third_party_content)) ||
+              (this.m_Preferences.third_party_content = {}),
+            (this.m_Preferences.valve_analytics &&
+              !Array.isArray(this.m_Preferences.valve_analytics)) ||
+              (this.m_Preferences.valve_analytics = {}),
+            (void 0 !== this.m_Preferences.utm_enabled &&
+              null !== this.m_Preferences.utm_enabled) ||
+              (this.m_Preferences.utm_enabled = !0),
+            (0 != this.m_Preferences.preference_state &&
+              1 != this.m_Preferences.preference_state) ||
+              ((this.m_Preferences.valve_analytics.product_impressions_tracking = !0),
+              (this.m_Preferences.content_customization.recentapps = !0),
+              (this.m_Preferences.third_party_analytics.google_analytics = !0),
+              (this.m_Preferences.third_party_content.sketchfab = !0),
+              (this.m_Preferences.third_party_content.twitter = !0),
+              (this.m_Preferences.third_party_content.vimeo = !0),
+              (this.m_Preferences.third_party_content.youtube = !0)),
+            0 == this.m_Preferences.version && (this.m_Preferences.version = 1);
+        }
+        GetVersion() {
+          return this.m_Preferences.version;
+        }
+        GetPreferenceState() {
+          return this.m_Preferences.preference_state;
+        }
+        BIsAllowAll() {
           return (
-            (e.prototype.GetVersion = function () {
-              return this.m_Preferences.version;
-            }),
-            (e.prototype.GetPreferenceState = function () {
-              return this.m_Preferences.preference_state;
-            }),
-            (e.prototype.BIsAllowAll = function () {
-              return (
-                1 == this.m_Preferences.preference_state ||
-                0 == this.m_Preferences.preference_state
-              );
-            }),
-            (e.prototype.BIsRejectAll = function () {
-              return 2 == this.m_Preferences.preference_state;
-            }),
-            (e.prototype.SetPreferenceState = function (e) {
-              if (this.m_Preferences.preference_state != e) {
-                if (
-                  ((this.m_Preferences.preference_state = e), 1 == e || 2 == e)
-                ) {
-                  var t = 1 == e;
-                  (this.m_Preferences.content_customization.recentapps = t),
-                    (this.m_Preferences.third_party_analytics.google_analytics = t),
-                    (this.m_Preferences.third_party_content.sketchfab = t),
-                    (this.m_Preferences.third_party_content.twitter = t),
-                    (this.m_Preferences.third_party_content.vimeo = t),
-                    (this.m_Preferences.third_party_content.youtube = t),
-                    (this.m_Preferences.valve_analytics.product_impressions_tracking = t);
-                }
-                this.PostCookieSettings();
-              }
-            }),
-            (e.prototype.GetRecentApps = function () {
-              return this.m_Preferences.content_customization.recentapps;
-            }),
-            (e.prototype.ToggleRecentApps = function () {
-              (this.m_Preferences.content_customization.recentapps = !this
-                .m_Preferences.content_customization.recentapps),
-                this.ProcessToggle();
-            }),
-            (e.prototype.GetImpressions = function () {
-              return this.m_Preferences.valve_analytics
-                .product_impressions_tracking;
-            }),
-            (e.prototype.ToggleImpressions = function () {
-              (this.m_Preferences.valve_analytics.product_impressions_tracking = !this
-                .m_Preferences.valve_analytics.product_impressions_tracking),
-                this.ProcessToggle();
-            }),
-            (e.prototype.GetGoogleAnalytics = function () {
-              return this.m_Preferences.third_party_analytics.google_analytics;
-            }),
-            (e.prototype.ToggleGoogleAnalytics = function () {
-              return Object(a.b)(this, void 0, void 0, function () {
-                return Object(a.e)(this, function (e) {
-                  return (
-                    (this.m_Preferences.third_party_analytics.google_analytics = !this
-                      .m_Preferences.third_party_analytics.google_analytics),
-                    this.ProcessToggle(),
-                    [2]
-                  );
-                });
-              });
-            }),
-            (e.prototype.GetSketchfab = function () {
-              return this.m_Preferences.third_party_content.sketchfab;
-            }),
-            (e.prototype.ToggleSketchfab = function () {
-              (this.m_Preferences.third_party_content.sketchfab = !this
-                .m_Preferences.third_party_content.sketchfab),
-                this.ProcessToggle();
-            }),
-            (e.prototype.GetVimeo = function () {
-              return this.m_Preferences.third_party_content.vimeo;
-            }),
-            (e.prototype.ToggleVimeo = function () {
-              (this.m_Preferences.third_party_content.vimeo = !this
-                .m_Preferences.third_party_content.vimeo),
-                this.ProcessToggle();
-            }),
-            (e.prototype.GetYouTube = function () {
-              return this.m_Preferences.third_party_content.youtube;
-            }),
-            (e.prototype.ToggleYouTube = function () {
-              (this.m_Preferences.third_party_content.youtube = !this
-                .m_Preferences.third_party_content.youtube),
-                this.ProcessToggle();
-            }),
-            (e.prototype.GetUTMEnabled = function () {
-              return this.m_Preferences.utm_enabled;
-            }),
-            (e.prototype.ToggleUTMEnabled = function () {
-              (this.m_Preferences.utm_enabled = !this.m_Preferences
-                .utm_enabled),
-                this.PostCookieSettings();
-            }),
-            (e.prototype.ProcessToggle = function () {
-              (this.m_Preferences.preference_state = 3),
-                this.PostCookieSettings();
-            }),
-            (e.prototype.PostCookieSettings = function () {
-              var e, t;
-              return Object(a.b)(this, void 0, void 0, function () {
-                var r, n, i, o, c, l;
-                return Object(a.e)(this, function (a) {
-                  switch (a.label) {
-                    case 0:
-                      (r =
-                        u.d.STORE_BASE_URL +
-                        "account/ajaxsetcookiepreferences"),
-                        (n = new FormData()).set("sessionid", u.d.SESSIONID),
-                        n.append(
-                          "cookiepreferences",
-                          JSON.stringify(this.m_Preferences)
-                        ),
-                        (a.label = 1);
-                    case 1:
-                      return (
-                        a.trys.push([1, 3, , 4]),
-                        [4, s.a.post(r, n, { withCredentials: !0 })]
-                      );
-                    case 2:
-                      return (
-                        200 != (i = a.sent()).status ||
-                        1 !=
-                          (null === (e = null == i ? void 0 : i.data) ||
-                          void 0 === e
-                            ? void 0
-                            : e.success)
-                          ? window.ShowAlertDialog(
-                              Object(k.f)("#CookiePref_Error"),
-                              Object(k.f)("#CookiePref_ErrorNotSaved")
-                            )
-                          : 1 ==
-                              (null === (t = null == i ? void 0 : i.data) ||
-                              void 0 === t
-                                ? void 0
-                                : t.success) &&
-                            ((o = i.data),
-                            (c = o.transfer_urls),
-                            (l = o.transfer_params),
-                            c &&
-                              l &&
-                              this.TransferCookiePreferencesToSites(c, l)),
-                        [3, 4]
-                      );
-                    case 3:
-                      return (
-                        a.sent(),
-                        window.ShowAlertDialog(
-                          Object(k.f)("#CookiePref_Error"),
-                          Object(k.f)("#CookiePref_ErrorNotSaved")
-                        ),
-                        [3, 4]
-                      );
-                    case 4:
-                      return [2];
-                  }
-                });
-              });
-            }),
-            (e.prototype.TransferCookiePreferencesToSites = function (e, t) {
-              var r = new FormData();
-              r.set("transfer_params", t);
-              for (var n = 0, i = e; n < i.length; n++) {
-                var o = i[n];
-                s.a.post(o, r);
-              }
-            }),
-            Object(a.c)([l.C], e.prototype, "m_Preferences", void 0),
-            e
+            1 == this.m_Preferences.preference_state ||
+            0 == this.m_Preferences.preference_state
           );
-        })(),
-        B = r("TyAF"),
-        O = r("Mgs7"),
-        j = r("nNQW"),
-        T = r("exH9"),
-        N = r("qDk6"),
-        E = r("hwrv"),
-        S = r("ykc/"),
-        w = r("av+R");
-      var z = Object(B.a)(function () {
-          var e = (function () {
-              if (!P) {
-                var e = Object(u.h)("cookiepreferences", "application_config");
-                P = new C(e);
+        }
+        BIsRejectAll() {
+          return 2 == this.m_Preferences.preference_state;
+        }
+        SetPreferenceState(e) {
+          if (this.m_Preferences.preference_state != e) {
+            if (((this.m_Preferences.preference_state = e), 1 == e || 2 == e)) {
+              let t = 1 == e;
+              (this.m_Preferences.content_customization.recentapps = t),
+                (this.m_Preferences.third_party_analytics.google_analytics = t),
+                (this.m_Preferences.third_party_content.sketchfab = t),
+                (this.m_Preferences.third_party_content.twitter = t),
+                (this.m_Preferences.third_party_content.vimeo = t),
+                (this.m_Preferences.third_party_content.youtube = t),
+                (this.m_Preferences.valve_analytics.product_impressions_tracking = t);
+            }
+            this.PostCookieSettings();
+          }
+        }
+        GetRecentApps() {
+          return this.m_Preferences.content_customization.recentapps;
+        }
+        ToggleRecentApps() {
+          (this.m_Preferences.content_customization.recentapps = !this
+            .m_Preferences.content_customization.recentapps),
+            this.ProcessToggle();
+        }
+        GetImpressions() {
+          return this.m_Preferences.valve_analytics
+            .product_impressions_tracking;
+        }
+        ToggleImpressions() {
+          (this.m_Preferences.valve_analytics.product_impressions_tracking = !this
+            .m_Preferences.valve_analytics.product_impressions_tracking),
+            this.ProcessToggle();
+        }
+        GetGoogleAnalytics() {
+          return this.m_Preferences.third_party_analytics.google_analytics;
+        }
+        ToggleGoogleAnalytics() {
+          return Object(n.a)(this, void 0, void 0, function* () {
+            (this.m_Preferences.third_party_analytics.google_analytics = !this
+              .m_Preferences.third_party_analytics.google_analytics),
+              this.ProcessToggle();
+          });
+        }
+        GetSketchfab() {
+          return this.m_Preferences.third_party_content.sketchfab;
+        }
+        ToggleSketchfab() {
+          (this.m_Preferences.third_party_content.sketchfab = !this
+            .m_Preferences.third_party_content.sketchfab),
+            this.ProcessToggle();
+        }
+        GetVimeo() {
+          return this.m_Preferences.third_party_content.vimeo;
+        }
+        ToggleVimeo() {
+          (this.m_Preferences.third_party_content.vimeo = !this.m_Preferences
+            .third_party_content.vimeo),
+            this.ProcessToggle();
+        }
+        GetYouTube() {
+          return this.m_Preferences.third_party_content.youtube;
+        }
+        ToggleYouTube() {
+          (this.m_Preferences.third_party_content.youtube = !this.m_Preferences
+            .third_party_content.youtube),
+            this.ProcessToggle();
+        }
+        GetUTMEnabled() {
+          return this.m_Preferences.utm_enabled;
+        }
+        ToggleUTMEnabled() {
+          (this.m_Preferences.utm_enabled = !this.m_Preferences.utm_enabled),
+            this.PostCookieSettings();
+        }
+        ProcessToggle() {
+          (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
+        }
+        PostCookieSettings() {
+          var e, t;
+          return Object(n.a)(this, void 0, void 0, function* () {
+            const r = _.d.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
+              s = new FormData();
+            s.set("sessionid", _.d.SESSIONID),
+              s.append("cookiepreferences", JSON.stringify(this.m_Preferences));
+            try {
+              let i = yield o.a.post(r, s, { withCredentials: !0 });
+              if (
+                200 != i.status ||
+                1 !=
+                  (null === (e = null == i ? void 0 : i.data) || void 0 === e
+                    ? void 0
+                    : e.success)
+              )
+                window.ShowAlertDialog(
+                  Object(k.f)("#CookiePref_Error"),
+                  Object(k.f)("#CookiePref_ErrorNotSaved")
+                );
+              else if (
+                1 ==
+                (null === (t = null == i ? void 0 : i.data) || void 0 === t
+                  ? void 0
+                  : t.success)
+              ) {
+                0;
+                const { transfer_urls: e, transfer_params: t } = i.data;
+                e && t && this.TransferCookiePreferencesToSites(e, t);
               }
-              return P;
-            })(),
-            t = Object(E.a)(),
-            r = Object(n.useCallback)(
-              function () {
-                e.SetPreferenceState(1);
-              },
-              [e]
-            ),
-            o = Object(n.useCallback)(
-              function () {
-                e.SetPreferenceState(2);
-              },
-              [e]
-            );
+            } catch (e) {
+              0,
+                window.ShowAlertDialog(
+                  Object(k.f)("#CookiePref_Error"),
+                  Object(k.f)("#CookiePref_ErrorNotSaved")
+                );
+            }
+          });
+        }
+        TransferCookiePreferencesToSites(e, t) {
+          const r = new FormData();
+          r.set("transfer_params", t);
+          for (const t of e) o.a.post(t, r);
+        }
+      }
+      Object(n.b)([l.C], C.prototype, "m_Preferences", void 0);
+      var v = r("TyAF"),
+        B = r("Mgs7"),
+        O = r("nNQW"),
+        T = r("exH9"),
+        j = r("qDk6"),
+        N = r("hwrv"),
+        E = r("ykc/"),
+        S = r("av+R");
+      let w;
+      const z = Object(v.a)(() => {
+          let e = (function () {
+            if (!w) {
+              let e = Object(_.h)("cookiepreferences", "application_config");
+              w = new C(e);
+            }
+            return w;
+          })();
+          const t = Object(N.a)(),
+            r = Object(s.useCallback)(() => {
+              e.SetPreferenceState(1);
+            }, [e]),
+            a = Object(s.useCallback)(() => {
+              e.SetPreferenceState(2);
+            }, [e]);
           return i.a.createElement(
-            S.a,
+            E.a,
             { navID: "StoreCookiesSettings", NavigationManager: t },
             i.a.createElement(
               "div",
               {
                 className: Object(T.a)(
-                  j.CookieSettingsHeader,
+                  O.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
@@ -686,25 +579,25 @@
               "div",
               { className: "account_settings_container" },
               i.a.createElement(
-                N.a,
-                { "flow-children": "row", className: j.ButtonGroup },
+                j.a,
+                { "flow-children": "row", className: O.ButtonGroup },
                 i.a.createElement(
-                  w.e,
+                  S.e,
                   {
                     className: Object(T.a)(
-                      j.AllButton,
-                      e.BIsRejectAll() ? j.ButtonHighlight : ""
+                      O.AllButton,
+                      e.BIsRejectAll() ? O.ButtonHighlight : ""
                     ),
-                    onClick: o,
+                    onClick: a,
                   },
                   Object(k.f)("#CookiePref_RejectAll")
                 ),
                 i.a.createElement(
-                  w.e,
+                  S.e,
                   {
                     className: Object(T.a)(
-                      j.AllButton,
-                      e.BIsAllowAll() ? j.ButtonHighlight : ""
+                      O.AllButton,
+                      e.BIsAllowAll() ? O.ButtonHighlight : ""
                     ),
                     onClick: r,
                   },
@@ -720,7 +613,7 @@
               "div",
               {
                 className: Object(T.a)(
-                  j.CookieSettingsHeader,
+                  O.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
@@ -740,116 +633,116 @@
               ),
               i.a.createElement(
                 "div",
-                { className: j.CookieGroup },
+                { className: O.CookieGroup },
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: O.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
+                    { className: O.NecessaryTitle },
                     Object(k.f)("#CookiePref_SessionID_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
+                    { className: O.NecessaryDesc },
                     Object(k.f)("#CookiePref_SessionID_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: O.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
+                    { className: O.NecessaryTitle },
                     Object(k.f)("#CookiePref_ShoppingCart_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
+                    { className: O.NecessaryDesc },
                     Object(k.f)("#CookiePref_ShoppingCart_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: O.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
+                    { className: O.NecessaryTitle },
                     Object(k.f)("#CookiePref_SteamCountry_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
+                    { className: O.NecessaryDesc },
                     Object(k.f)("#CookiePref_SteamCountry_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: O.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
+                    { className: O.NecessaryTitle },
                     Object(k.f)("#CookiePref_Timezone_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
+                    { className: O.NecessaryDesc },
                     Object(k.f)("#CookiePref_Timezone_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: O.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
+                    { className: O.NecessaryTitle },
                     Object(k.f)("#CookiePref_BirthTime_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
+                    { className: O.NecessaryDesc },
                     Object(k.f)("#CookiePref_BirthTime_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: O.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
+                    { className: O.NecessaryTitle },
                     Object(k.f)("#CookiePref_Login_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
+                    { className: O.NecessaryDesc },
                     Object(k.f)("#CookiePref_Login_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: O.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
+                    { className: O.NecessaryTitle },
                     Object(k.f)("#CookiePref_Language_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
+                    { className: O.NecessaryDesc },
                     Object(k.f)("#CookiePref_Language_Desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: j.NecessaryGroup },
+                  { className: O.NecessaryGroup },
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryTitle },
+                    { className: O.NecessaryTitle },
                     Object(k.f)("#CookiePref_CookieSettings_Title")
                   ),
                   i.a.createElement(
                     "span",
-                    { className: j.NecessaryDesc },
+                    { className: O.NecessaryDesc },
                     Object(k.f)("#CookiePref_CookieSettings_Desc")
                   )
                 )
@@ -859,7 +752,7 @@
               "div",
               {
                 className: Object(T.a)(
-                  j.CookieSettingsHeader,
+                  O.CookieSettingsHeader,
                   "account_header_line noicon"
                 ),
               },
@@ -877,20 +770,17 @@
             null
           );
         }),
-        M = Object(B.a)(function (e) {
-          var t = e.settings,
-            r = Object(n.useCallback)(
-              function () {
-                t.ToggleRecentApps();
-              },
-              [t]
-            );
+        M = Object(v.a)((e) => {
+          const { settings: t } = e,
+            r = Object(s.useCallback)(() => {
+              t.ToggleRecentApps();
+            }, [t]);
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: O.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: O.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
@@ -898,10 +788,10 @@
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
+                { className: O.SectionDescription },
                 Object(k.f)("#CookiePref_Content_Desc")
               ),
-              i.a.createElement(O.p, {
+              i.a.createElement(B.p, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
@@ -910,20 +800,17 @@
             )
           );
         }),
-        A = Object(B.a)(function (e) {
-          var t = e.settings,
-            r = Object(n.useCallback)(
-              function () {
-                t.ToggleImpressions();
-              },
-              [t]
-            );
+        A = Object(v.a)((e) => {
+          const { settings: t } = e,
+            r = Object(s.useCallback)(() => {
+              t.ToggleImpressions();
+            }, [t]);
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: O.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: O.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
@@ -931,10 +818,10 @@
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
+                { className: O.SectionDescription },
                 Object(k.f)("#CookiePref_ValveAnalytics_Desc")
               ),
-              i.a.createElement(O.p, {
+              i.a.createElement(B.p, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
@@ -945,20 +832,17 @@
             )
           );
         }),
-        G = Object(B.a)(function (e) {
-          var t = e.settings,
-            r = Object(n.useCallback)(
-              function () {
-                t.ToggleGoogleAnalytics();
-              },
-              [t]
-            );
+        G = Object(v.a)((e) => {
+          const { settings: t } = e,
+            r = Object(s.useCallback)(() => {
+              t.ToggleGoogleAnalytics();
+            }, [t]);
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: O.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: O.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
@@ -966,10 +850,10 @@
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
+                { className: O.SectionDescription },
                 Object(k.f)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              i.a.createElement(O.p, {
+              i.a.createElement(B.p, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
@@ -980,32 +864,23 @@
             )
           );
         }),
-        R = Object(B.a)(function (e) {
-          var t = e.settings,
-            r = Object(n.useCallback)(
-              function () {
-                t.ToggleYouTube();
-              },
-              [t]
-            ),
-            o = Object(n.useCallback)(
-              function () {
-                t.ToggleVimeo();
-              },
-              [t]
-            ),
-            a = Object(n.useCallback)(
-              function () {
-                t.ToggleSketchfab();
-              },
-              [t]
-            );
+        R = Object(v.a)((e) => {
+          const { settings: t } = e,
+            r = Object(s.useCallback)(() => {
+              t.ToggleYouTube();
+            }, [t]),
+            a = Object(s.useCallback)(() => {
+              t.ToggleVimeo();
+            }, [t]),
+            n = Object(s.useCallback)(() => {
+              t.ToggleSketchfab();
+            }, [t]);
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: O.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: O.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
@@ -1013,23 +888,23 @@
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
+                { className: O.SectionDescription },
                 Object(k.f)("#CookiePref_ThirdParty_Desc")
               ),
-              i.a.createElement(O.p, {
+              i.a.createElement(B.p, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: Object(k.f)("#CookiePref_YouTube_Desc"),
               }),
-              i.a.createElement(O.p, {
-                onChange: o,
+              i.a.createElement(B.p, {
+                onChange: a,
                 label: Object(k.f)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: Object(k.f)("#CookiePref_Vimeo_Desc"),
               }),
-              i.a.createElement(O.p, {
-                onChange: a,
+              i.a.createElement(B.p, {
+                onChange: n,
                 label: Object(k.f)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
                 description: Object(k.f)("#CookiePref_Sketchfab_Desc"),
@@ -1037,20 +912,17 @@
             )
           );
         }),
-        D = Object(B.a)(function (e) {
-          var t = e.settings,
-            r = Object(n.useCallback)(
-              function () {
-                t.ToggleUTMEnabled();
-              },
-              [t]
-            );
+        D = Object(v.a)((e) => {
+          const { settings: t } = e,
+            r = Object(s.useCallback)(() => {
+              t.ToggleUTMEnabled();
+            }, [t]);
           return i.a.createElement(
             "div",
-            { className: j.CookieGroup },
+            { className: O.CookieGroup },
             i.a.createElement(
               "div",
-              { className: j.CookieSection },
+              { className: O.CookieSection },
               i.a.createElement(
                 "h2",
                 null,
@@ -1058,10 +930,10 @@
               ),
               i.a.createElement(
                 "p",
-                { className: j.SectionDescription },
+                { className: O.SectionDescription },
                 Object(k.f)("#PrivacySettings_Marketing_Desc")
               ),
-              i.a.createElement(O.p, {
+              i.a.createElement(B.p, {
                 onChange: r,
                 label: Object(k.f)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
@@ -1070,20 +942,16 @@
             )
           );
         }),
-        W = {
-          CookieSettings: function () {
-            return "/cookiepreferences";
-          },
-        };
-      t.default = function (e) {
-        var t = e.match.url,
+        W = { CookieSettings: () => "/cookiepreferences" };
+      t.default = (e) => {
+        const t = e.match.url,
           r = W;
         return i.a.createElement(
-          o.d,
+          a.d,
           null,
           i.a.createElement(
-            o.b,
-            { path: "" + t + r.CookieSettings() },
+            a.b,
+            { path: `${t}${r.CookieSettings()}` },
             i.a.createElement(z, null)
           )
         );
@@ -1106,34 +974,33 @@
     "ykc/": function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return u;
+        return _;
       });
-      var n = r("mrSG"),
+      var s = r("mrSG"),
         i = r("q1tI"),
-        o = r.n(i),
-        a = r("av+R"),
+        a = r.n(i),
+        n = r("av+R"),
         c = r("yLGM"),
-        s = r("opsS"),
+        o = r("opsS"),
         l = r("lkRc");
-      function u(e) {
-        var t = e.children,
-          r = e.navTreeRef,
-          i = Object(n.f)(e, ["children", "navTreeRef"]),
-          u = o.a.useRef(),
-          f = Object(s.f)(u, r);
+      function _(e) {
+        const { children: t, navTreeRef: r } = e,
+          i = Object(s.c)(e, ["children", "navTreeRef"]),
+          _ = a.a.useRef(),
+          m = Object(o.f)(_, r);
         if (l.d.IN_GAMEPADUI) {
-          var _ = window.__nav_tree_root;
-          return o.a.createElement(
-            a.b,
-            Object(n.a)({}, i, {
-              navTreeRef: f,
+          const e = window.__nav_tree_root;
+          return a.a.createElement(
+            n.b,
+            Object.assign({}, i, {
+              navTreeRef: m,
               secondary: !0,
-              parentEmbeddedNavTree: _,
+              parentEmbeddedNavTree: e,
             }),
-            o.a.createElement(c.a, null, t)
+            a.a.createElement(c.a, null, t)
           );
         }
-        return o.a.createElement(o.a.Fragment, null, t);
+        return a.a.createElement(a.a.Fragment, null, t);
       }
     },
   },

@@ -76,7 +76,7 @@
 	html.responsive .recommendation_carousel_scroll,
 	html.responsive .home_page_content.gp_contiguous_singles{
 		padding-left: 24px;
-		padding-right: 12px;
+		padding-right: 24px;
 		scroll-padding-left: 24px;
 		scroll-padding-right: 24px;
 		margin-left: -24px;
@@ -366,6 +366,10 @@
 		display: inline-flex;
 		align-items: center;
 		border-radius: 1px;
+	}
+
+	html.responsive .discount_final_price.your_price {
+
 	}
 
 

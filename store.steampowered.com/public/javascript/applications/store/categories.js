@@ -6,344 +6,270 @@
     OVk1: function (e, t, a) {
       "use strict";
       a.r(t);
-      var r = a("mrSG"),
-        n = a("hwrv"),
-        o = a("q1tI"),
-        i = a.n(o),
+      var o = a("hwrv"),
+        r = a("q1tI"),
+        n = a.n(r),
         s = a("av+R"),
-        c = a("ykc/"),
-        u = a("qDk6"),
+        i = a("ykc/"),
+        c = a("qDk6"),
         g = a("Jz9t"),
         m = a("j+5p"),
-        l = (a("kKgT"), a("MnIK")),
-        p = a("0OaU"),
-        f = a("exH9"),
-        y = a("lkRc"),
-        d = a("jIbu"),
-        h = a("vDqi"),
-        v = a.n(h),
-        C = (a("mgoM"), a("kyHq"), a("3+zv"), a("GiuM")),
-        _ = (function () {
-          function e() {
-            (this.m_mapImageForHub = new Map()),
-              (this.m_mapPromiseForHub = new Map()),
-              (this.m_rgSections = Object(y.h)(
-                "categories",
-                "application_config"
+        u = (a("kKgT"), a("MnIK")),
+        l = a("0OaU"),
+        d = a("exH9"),
+        p = a("lkRc"),
+        y = a("jIbu"),
+        h = a("mrSG"),
+        f = a("vDqi"),
+        C = a.n(f),
+        _ = (a("mgoM"), a("kyHq"), a("3+zv"), a("GiuM"));
+      class v {
+        constructor() {
+          (this.m_mapImageForHub = new Map()),
+            (this.m_mapPromiseForHub = new Map()),
+            (this.m_rgSections = Object(p.h)(
+              "categories",
+              "application_config"
+            ));
+          for (const e of this.m_rgSections)
+            for (const t of e.categories)
+              t.image &&
+                this.m_mapImageForHub.set(this.GetCategoryKey(t), {
+                  image: t.image,
+                  appids: t.appids,
+                });
+        }
+        GetSections() {
+          return this.m_rgSections;
+        }
+        BHasCategoryImage(e) {
+          return this.m_mapImageForHub.has(this.GetCategoryKey(e));
+        }
+        GetCategoryImage(e) {
+          var t;
+          return null ===
+            (t = this.m_mapImageForHub.get(this.GetCategoryKey(e))) ||
+            void 0 === t
+            ? void 0
+            : t.image;
+        }
+        LoadCategoryImagesForSection(e, t) {
+          return Object(h.a)(this, void 0, void 0, function* () {
+            const a = this.BShouldDedupeCategoryImages(e.categories);
+            let o = e.categories;
+            (o = o.filter((e) => !this.BHasCategoryImage(e))),
+              (o = o.filter(
+                (e) => !this.m_mapPromiseForHub.has(this.GetCategoryKey(e))
               ));
-            for (var e = 0, t = this.m_rgSections; e < t.length; e++)
-              for (var a = 0, r = t[e].categories; a < r.length; a++) {
-                var n = r[a];
-                n.image &&
-                  this.m_mapImageForHub.set(this.GetCategoryKey(n), {
-                    image: n.image,
-                    appids: n.appids,
-                  });
+            const r = Math.ceil(o.length / 2),
+              n = [];
+            for (let e = 0; e < r; e++) {
+              const e = o.splice(0, 2);
+              n.push(e);
+            }
+            if (a) {
+              let a = Promise.resolve(null);
+              for (const o of n) {
+                const r = a.then(() =>
+                  this.InternalLoadCategoryImage(e.categories, o, t)
+                );
+                for (const e of o)
+                  this.m_mapPromiseForHub.set(this.GetCategoryKey(e), r);
+                a = r;
               }
+            } else
+              for (const a of n) {
+                const o = this.InternalLoadCategoryImage(e.categories, a, t);
+                for (const e of a)
+                  this.m_mapPromiseForHub.set(this.GetCategoryKey(e), o);
+              }
+          });
+        }
+        GetCategoryImagePromise(e) {
+          return this.m_mapPromiseForHub.get(this.GetCategoryKey(e));
+        }
+        InternalLoadCategoryImage(e, t, a) {
+          var o;
+          return Object(h.a)(this, void 0, void 0, function* () {
+            if (!e || 0 === e.length) return;
+            if (!t || 0 === t.length) return;
+            const r = this.BShouldDedupeCategoryImages(e),
+              n = this.GetAppIDsShownOnCategories(e);
+            n.sort();
+            const s = t.map((e) => e.hub),
+              i = p.d.STORE_BASE_URL + "contenthub/ajaxgetcategoryimages",
+              c = {
+                cc: p.d.COUNTRY || "US",
+                l: p.d.LANGUAGE,
+                origin: self.origin,
+                hubs: JSON.stringify(s),
+                dedupe: r,
+                appids_shown: JSON.stringify(n),
+                nocache: !a || void 0,
+              };
+            try {
+              const e = yield C.a.get(i, { params: c, withCredentials: !0 });
+              if (
+                1 ===
+                (null === (o = null == e ? void 0 : e.data) || void 0 === o
+                  ? void 0
+                  : o.success)
+              )
+                for (const t of Object.keys(e.data.images))
+                  this.m_mapImageForHub.set(t, e.data.images[t]);
+              else
+                console.error("ajaxgetcategoryimages failed with error: ", e);
+            } catch (e) {
+              console.error("ajaxgetcategoryimages failed with exception: ", e);
+            }
+          });
+        }
+        BShouldDedupeCategoryImages(e) {
+          return e.some((e) => e.is_toplevel_genre);
+        }
+        GetAppIDsShownOnCategories(e) {
+          const t = new Set();
+          for (const a of e) {
+            const e = this.GetCategoryKey(a);
+            if (this.m_mapImageForHub.has(e))
+              for (const a of this.m_mapImageForHub.get(e).appids)
+                t.add(Number(a));
           }
+          return Array.from(t);
+        }
+        GetCategoryKey(e) {
+          var t, a, o;
           return (
-            (e.prototype.GetSections = function () {
-              return this.m_rgSections;
-            }),
-            (e.prototype.BHasCategoryImage = function (e) {
-              return this.m_mapImageForHub.has(this.GetCategoryKey(e));
-            }),
-            (e.prototype.GetCategoryImage = function (e) {
-              var t;
-              return null ===
-                (t = this.m_mapImageForHub.get(this.GetCategoryKey(e))) ||
-                void 0 === t
-                ? void 0
-                : t.image;
-            }),
-            (e.prototype.LoadCategoryImages = function (e, t) {
-              return Object(r.b)(this, void 0, void 0, function () {
-                var a,
-                  n,
-                  o,
-                  i,
-                  s,
-                  c = this;
-                return Object(r.e)(this, function (r) {
-                  if (
-                    e.some(function (e) {
-                      return !c.BHasCategoryImage(e);
-                    }) &&
-                    e.some(function (e) {
-                      return !c.m_mapPromiseForHub.has(c.GetCategoryKey(e));
-                    })
-                  )
-                    for (
-                      a = e.filter(function (e) {
-                        return !c.BHasCategoryImage(e);
-                      }),
-                        n = this.InternalLoadCategoryImage(a, t),
-                        o = 0,
-                        i = a;
-                      o < i.length;
-                      o++
-                    )
-                      (s = i[o]),
-                        this.m_mapPromiseForHub.set(this.GetCategoryKey(s), n);
-                  return [
-                    2,
-                    Promise.all(
-                      e.map(function (e) {
-                        return c.m_mapPromiseForHub.get(c.GetCategoryKey(e));
-                      })
-                    ),
-                  ];
-                });
-              });
-            }),
-            (e.prototype.InternalLoadCategoryImage = function (e, t) {
-              var a;
-              return Object(r.b)(this, void 0, void 0, function () {
-                var n,
-                  o,
-                  i,
-                  s,
-                  c,
-                  u,
-                  g,
-                  m,
-                  l,
-                  p,
-                  f,
-                  d = this;
-                return Object(r.e)(this, function (r) {
-                  switch (r.label) {
-                    case 0:
-                      if (!e || 0 === e.length) return [2];
-                      if (
-                        ((n = e.filter(function (e) {
-                          return !d.BHasCategoryImage(e);
-                        })),
-                        (o = this.BShouldDedupeCategoryImages(e)),
-                        (i = this.GetAppIDsShownOnCategories(e)),
-                        !n || 0 === n.length)
-                      )
-                        return [2];
-                      (s = n.map(function (e) {
-                        return e.hub;
-                      })),
-                        (c =
-                          y.d.STORE_BASE_URL +
-                          "contenthub/ajaxgetcategoryimages"),
-                        (u = {
-                          hubs: JSON.stringify(s),
-                          dedupe: o,
-                          appids_shown: JSON.stringify(i),
-                          nocache: !t,
-                        }),
-                        (r.label = 1);
-                    case 1:
-                      return (
-                        r.trys.push([1, 3, , 4]),
-                        [4, v.a.get(c, { params: u, withCredentials: !0 })]
-                      );
-                    case 2:
-                      if (
-                        ((g = r.sent()),
-                        1 ===
-                          (null === (a = null == g ? void 0 : g.data) ||
-                          void 0 === a
-                            ? void 0
-                            : a.success))
-                      )
-                        for (
-                          m = 0, l = Object.keys(g.data.images);
-                          m < l.length;
-                          m++
-                        )
-                          (p = l[m]),
-                            this.m_mapImageForHub.set(p, g.data.images[p]);
-                      else
-                        console.error(
-                          "ajaxgetcategoryimages failed with error: ",
-                          g
-                        );
-                      return [3, 4];
-                    case 3:
-                      return (
-                        (f = r.sent()),
-                        console.error(
-                          "ajaxgetcategoryimages failed with exception: ",
-                          f
-                        ),
-                        [3, 4]
-                      );
-                    case 4:
-                      return [2];
-                  }
-                });
-              });
-            }),
-            (e.prototype.BShouldDedupeCategoryImages = function (e) {
-              return e.some(function (e) {
-                return e.is_toplevel_genre;
-              });
-            }),
-            (e.prototype.GetAppIDsShownOnCategories = function (e) {
-              for (var t = new Set(), a = 0, r = e; a < r.length; a++) {
-                var n = r[a];
-                if (n.appids)
-                  for (var o = 0, i = n.appids; o < i.length; o++) {
-                    var s = i[o];
-                    t.add(s);
-                  }
-              }
-              return Array.from(t);
-            }),
-            (e.prototype.GetCategoryKey = function (e) {
-              var t, a, r;
-              return (
-                (null === (t = e.hub) || void 0 === t ? void 0 : t.type) +
-                "_" +
-                ((null === (a = e.hub) || void 0 === a ? void 0 : a.category) ||
-                  "") +
-                "_" +
-                ((null === (r = e.hub) || void 0 === r ? void 0 : r.tagid) ||
-                  "")
-              );
-            }),
-            (e.Get = function () {
-              return e.s_singleton || (e.s_singleton = new e()), e.s_singleton;
-            }),
-            e
+            (null === (t = e.hub) || void 0 === t ? void 0 : t.type) +
+            "_" +
+            ((null === (a = e.hub) || void 0 === a ? void 0 : a.category) ||
+              "") +
+            "_" +
+            ((null === (o = e.hub) || void 0 === o ? void 0 : o.tagid) || "")
           );
-        })();
-      function b(e) {
-        var t = e.section;
-        e.autoFocus,
-          (function (e) {
-            var t = _.Get(),
-              a = Object(C.d)("nocache", !1)[0],
-              r = Object(o.useState)(
-                e.some(function (e) {
-                  return !t.BHasCategoryImage(e);
-                })
-              ),
-              n = r[0],
-              i = r[1];
-            return (
-              Object(o.useEffect)(
-                function () {
-                  n &&
-                    t.LoadCategoryImages(e, !a).then(function () {
-                      i(!1);
-                    });
-                },
-                [n, a, e, t]
-              ),
-              { bLoading: n }
-            );
-          })(t.categories).bLoading;
-        return i.a.createElement(
-          "div",
-          { className: d.CategorySection },
-          i.a.createElement(
-            "span",
-            { className: d.CategorySectionName },
-            t.name
-          ),
-          i.a.createElement(
-            g.a,
-            {
-              className: d.CategoriesCtn,
-              scrollDirection: "x",
-              navEntryPreferPosition: m.c.MAINTAIN_X,
-            },
-            t.categories.map(function (t, a) {
-              return i.a.createElement(I, {
-                key: "category" + t.name,
-                category: t,
-                autoFocus: e.autoFocus && 0 === a,
-              });
-            })
-          )
-        );
+        }
+        static Get() {
+          return v.s_singleton || (v.s_singleton = new v()), v.s_singleton;
+        }
       }
-      function I(e) {
-        var t,
-          a = e.category;
-        return i.a.createElement(
-          u.a,
-          { focusableIfNoChildren: !0, autoFocus: e.autoFocus },
-          i.a.createElement(
-            l.a,
-            {
-              placeholderWidth: "110px",
-              placeholderHeight: "150px",
-              bHorizontal: !0,
-            },
-            i.a.createElement(
-              s.c,
-              {
-                href: y.d.STORE_BASE_URL + a.url,
-                className: Object(f.a)(
-                  ((t = {}),
-                  (t[d.Category] = !0),
-                  (t[d.TopLevelCategory] = a.is_toplevel_genre),
-                  t)
-                ),
-              },
-              i.a.createElement(
+      function b(e) {
+        const { section: t, autoFocus: a } = e;
+        return (
+          (function (e) {
+            const t = v.Get(),
+              [a] = Object(_.d)("nocache", !1);
+            t.LoadCategoryImagesForSection(e, !a);
+          })(t),
+          n.a.createElement(
+            u.a,
+            { placeholderHeight: "150px" },
+            n.a.createElement(
+              "div",
+              { className: y.CategorySection },
+              n.a.createElement(
                 "span",
-                { className: d.CategoryName },
-                i.a.createElement("span", null, a.name)
+                { className: y.CategorySectionName },
+                t.name
               ),
-              i.a.createElement(E, Object(r.a)({}, e))
+              n.a.createElement(
+                g.a,
+                {
+                  className: y.CategoriesCtn,
+                  scrollDirection: "x",
+                  navEntryPreferPosition: m.d.MAINTAIN_X,
+                },
+                t.categories.map((t, a) =>
+                  n.a.createElement(I, {
+                    key: "category" + t.name,
+                    category: t,
+                    autoFocus: e.autoFocus && 0 === a,
+                  })
+                )
+              )
             )
           )
         );
       }
-      function E(e) {
-        var t = e.category;
-        if (!_.Get().BHasCategoryImage(t))
-          return i.a.createElement(p.a, { size: "small", position: "center" });
-        var a = _.Get().GetCategoryImage(t);
+      function I(e) {
+        const { category: t } = e;
+        return n.a.createElement(
+          c.a,
+          { focusableIfNoChildren: !0, autoFocus: e.autoFocus },
+          n.a.createElement(
+            s.c,
+            {
+              href: p.d.STORE_BASE_URL + t.url,
+              className: Object(d.a)({
+                [y.Category]: !0,
+                [y.TopLevelCategory]: t.is_toplevel_genre,
+              }),
+            },
+            n.a.createElement(
+              "span",
+              { className: y.CategoryName },
+              n.a.createElement("span", null, t.name)
+            ),
+            n.a.createElement(G, Object.assign({}, e))
+          )
+        );
+      }
+      function G(e) {
+        let { category: t } = e;
+        const { bLoading: a, strImage: o } = (function (e) {
+          const t = v.Get(),
+            [a, o] = Object(r.useState)(!t.BHasCategoryImage(e)),
+            n = t.GetCategoryImage(e);
+          return (
+            Object(r.useEffect)(() => {
+              t.GetCategoryImagePromise(e).then(() => {
+                o(!1);
+              });
+            }, [e, t]),
+            { bLoading: a, strImage: n }
+          );
+        })(t);
         return a
-          ? i.a.createElement(
+          ? n.a.createElement(l.a, { size: "small", position: "center" })
+          : o
+          ? n.a.createElement(
               "div",
-              { className: d.GridOuter },
-              i.a.createElement(
+              { className: y.GridOuter },
+              n.a.createElement(
                 "div",
-                { className: d.Grid },
-                i.a.createElement("img", { src: "data:image/png;base64," + a })
+                { className: y.Grid },
+                n.a.createElement("img", { src: `data:image/png;base64,${o}` })
               )
             )
           : null;
       }
       t.default = function () {
-        var e = (function () {
-            var e = _.Get(),
-              t = Object(o.useState)(e.GetSections()),
-              a = t[0];
-            return t[1], { sections: a };
-          })().sections,
-          t = Object(n.a)(),
-          a = i.a.useRef();
+        const { sections: e } = (function () {
+            const e = v.Get(),
+              [t, a] = Object(r.useState)(e.GetSections());
+            return { sections: t };
+          })(),
+          t = Object(o.a)(),
+          a = n.a.useRef();
         return (
-          i.a.useEffect(function () {
+          n.a.useEffect(() => {
             var e;
             return null === (e = a.current) || void 0 === e
               ? void 0
               : e.Activate(!0);
           }, []),
-          i.a.createElement(
-            c.a,
+          n.a.createElement(
+            i.a,
             { navID: "CategoriesApp", NavigationManager: t, navTreeRef: a },
-            i.a.createElement(
+            n.a.createElement(
               "div",
-              { className: d.CategorySectionsCtn },
-              e.map(function (e, t) {
-                return i.a.createElement(b, {
+              { className: y.CategorySectionsCtn },
+              e.map((e, t) =>
+                n.a.createElement(b, {
                   key: "section" + e.name,
                   section: e,
                   autoFocus: 0 == t,
-                });
-              })
+                })
+              )
             )
           )
         );
@@ -364,34 +290,33 @@
     "ykc/": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return g;
+        return m;
       });
-      var r = a("mrSG"),
-        n = a("q1tI"),
-        o = a.n(n),
-        i = a("av+R"),
-        s = a("yLGM"),
+      var o = a("mrSG"),
+        r = a("q1tI"),
+        n = a.n(r),
+        s = a("av+R"),
+        i = a("yLGM"),
         c = a("opsS"),
-        u = a("lkRc");
-      function g(e) {
-        var t = e.children,
-          a = e.navTreeRef,
-          n = Object(r.f)(e, ["children", "navTreeRef"]),
-          g = o.a.useRef(),
-          m = Object(c.f)(g, a);
-        if (u.d.IN_GAMEPADUI) {
-          var l = window.__nav_tree_root;
-          return o.a.createElement(
-            i.b,
-            Object(r.a)({}, n, {
-              navTreeRef: m,
+        g = a("lkRc");
+      function m(e) {
+        const { children: t, navTreeRef: a } = e,
+          r = Object(o.c)(e, ["children", "navTreeRef"]),
+          m = n.a.useRef(),
+          u = Object(c.f)(m, a);
+        if (g.d.IN_GAMEPADUI) {
+          const e = window.__nav_tree_root;
+          return n.a.createElement(
+            s.b,
+            Object.assign({}, r, {
+              navTreeRef: u,
               secondary: !0,
-              parentEmbeddedNavTree: l,
+              parentEmbeddedNavTree: e,
             }),
-            o.a.createElement(s.a, null, t)
+            n.a.createElement(i.a, null, t)
           );
         }
-        return o.a.createElement(o.a.Fragment, null, t);
+        return n.a.createElement(n.a.Fragment, null, t);
       }
     },
   },

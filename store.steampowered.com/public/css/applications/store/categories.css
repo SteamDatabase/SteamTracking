@@ -31,6 +31,12 @@
 }
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy::after {
+  content: " ";
+  min-width: 24px;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
   .categoriesapp_CategoriesCtn_3yuPy {
   display: flex;
   flex-direction: row;

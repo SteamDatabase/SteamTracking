@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [101],
+  [43],
   {
     "3xXb": function (e, n, t) {
       e.exports = {
@@ -34,40 +34,40 @@
     f4w8: function (e, n, t) {
       "use strict";
       t.r(n);
-      var r = t("q1tI"),
-        a = t.n(r),
-        l = t("EC67"),
-        i = t("1fPh"),
-        d = (t("OU48"), t("TyAF")),
-        c = t("prdU"),
-        o = t("nXE5"),
+      var l = t("q1tI"),
+        a = t.n(l),
+        r = t("EC67"),
+        d = t("1fPh"),
+        c = (t("OU48"), t("TyAF")),
+        o = t("prdU"),
+        i = t("nXE5"),
         u = t("+j4l"),
         s = t("RV7a"),
         b = t("TLQK"),
         _ = t("2Ido"),
         m = t("+9fn"),
-        f = t("t0PL"),
-        p = t("ehaW"),
+        p = t("t0PL"),
+        f = t("ehaW"),
         O = t("3xXb"),
         w = (t("StxQ"), t("exH9")),
         C = t("cOvF");
-      n.default = Object(d.a)(function (e) {
-        var n = e.match.params.bundleid,
+      n.default = Object(c.a)((e) => {
+        const { bundleid: n } = e.match.params,
           t = parseInt(n),
-          r = a.a.createElement(l.a, { to: i.b.LoyaltyStore() });
-        if (isNaN(t)) return r;
-        var d = c.b.Get().GetRewardDefinitions(t)[0];
-        return d
-          ? 5 !== d.type && 6 !== d.type
-            ? r
-            : a.a.createElement(h, { bundle: d })
+          l = a.a.createElement(r.a, { to: d.b.LoyaltyStore() });
+        if (isNaN(t)) return l;
+        const [c] = o.b.Get().GetRewardDefinitions(t);
+        return c
+          ? 5 !== c.type && 6 !== c.type
+            ? l
+            : a.a.createElement(h, { bundle: c })
           : null;
       });
-      var h = Object(d.a)(function (e) {
-          var n = e.bundle,
-            t = c.b.Get().GetBundleOfferForUser(n);
+      const h = Object(c.a)((e) => {
+          const { bundle: n } = e,
+            t = o.b.Get().GetBundleOfferForUser(n);
           return a.a.createElement(
-            o.e,
+            i.e,
             null,
             a.a.createElement(
               s.a,
@@ -85,62 +85,51 @@
                     discount: t.discount,
                     originalCost: t.original_point_cost,
                     className: O.PrimaryRedeemButton,
-                    onClick: function (e) {
-                      return Object(u.e)(e, n);
-                    },
+                    onClick: (e) => Object(u.e)(e, n),
                   }),
               a.a.createElement(B, { offer: t })
             )
           );
         }),
-        I = Object(d.a)(function (e) {
-          var n = e.bundle,
-            t = e.offer,
-            r = Object(_.b)(n),
-            l = Object(b.f)("#RewardBundle_OfferDescription", t.discount);
+        I = Object(c.a)(({ bundle: e, offer: n }) => {
+          const t = Object(_.b)(e),
+            l = Object(b.f)("#RewardBundle_OfferDescription", n.discount);
           return a.a.createElement(
             s.a,
             { paddingBottom: "xlarge" },
-            a.a.createElement(o.f, { title: r, subtitle: l })
+            a.a.createElement(i.f, { title: t, subtitle: l })
           );
         }),
-        E = function (e) {
-          var n = e.className;
-          return a.a.createElement(
+        E = ({ className: e }) =>
+          a.a.createElement(
             "div",
-            { className: Object(w.a)(n, O.AlreadyOwned) },
+            { className: Object(w.a)(e, O.AlreadyOwned) },
             a.a.createElement(C.j, { className: O.CheckmarkCircle }),
             a.a.createElement(
               "span",
               { className: O.AlreadyOwnedText },
               Object(b.f)("#Redeem_BundleItemOwned")
             )
-          );
-        },
-        B = Object(d.a)(function (e) {
-          var n = e.offer;
+          ),
+        B = Object(c.a)((e) => {
+          const { offer: n } = e;
           return a.a.createElement(
             m.b,
             { title: Object(b.f)("#RewardBundle_BundleContentsSection_Title") },
-            a.a.createElement(f.a, {
-              getItems: function (e, t) {
-                return {
-                  rewards: n.items.slice(e, t),
-                  bLoadingMore: !1,
-                  cTotalMatching: n.items.length,
-                  cMaxToReturn: n.items.length,
-                };
-              },
-              renderItem: function (e) {
-                return a.a.createElement(p.e, {
+            a.a.createElement(p.a, {
+              getItems: (e, t) => ({
+                rewards: n.items.slice(e, t),
+                bLoadingMore: !1,
+                cTotalMatching: n.items.length,
+                cMaxToReturn: n.items.length,
+              }),
+              renderItem: (e) =>
+                a.a.createElement(f.e, {
                   key: e.defid,
                   definition: e,
                   purchaseable: !1,
-                  onClick: function (n) {
-                    return Object(u.b)(n, e);
-                  },
-                });
-              },
+                  onClick: (n) => Object(u.b)(n, e),
+                }),
             })
           );
         });

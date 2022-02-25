@@ -138,8 +138,7 @@
 	html.responsive a.sectionTab.gpfocus,
 	html.responsive .apphub_sectionTab.gpfocus {
 		border-radius: 0px;
-		background-color: var(--gpBackground-LightHard);
-		box-shadow: var(--gpShadow-Medium);
+		background-color: var(--gpBackground-LightMedium);
 	}
 
 	html.responsive .sectionTab.gpfocus > span,
@@ -151,13 +150,20 @@
 	/* Active */
 	html.responsive .sectionTab.active,
 	html.responsive .apphub_sectionTab.active {
-		background: white;
-		color: black;
+		background: unset;
+		/* background: linear-gradient(0deg, rgb(60 94 129) 0%, rgb(67 114 147) 100%); */
+		background-color: var(--gpBackground-LightHard);
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .sectionTab.active.gpfocus,
+	html.responsive .apphub_sectionTab.active.gpfocus {
+
 	}
 
 	html.responsive .sectionTab.active > span,
 	html.responsive .apphub_sectionTab.active > span {
-		color: black;
+		color: white;
 		height: unset;
 		padding: unset;
 		background: none;
@@ -170,6 +176,37 @@
 		display: none;
 	}
 
+
+
+
+	/* PAGINATION */
+	html.responsive.touch .commentthread_pagedropdown,
+	html.responsive .commentthread_pagedropdown {
+		display: none;
+	}
+
+	html.responsive .pagebtn,
+	html.responsive a.pagebtn {
+		padding: 6px 16px;
+		color: white;
+		background-color: #FFFFFF20;
+		border-radius: var(--gpCorner-Medium);
+		transition: all 0.2s ease;
+		font-weight: 700;
+	}
+
+	html.responsive .pagebtn:hover,
+	html.responsive a.pagebtn:hover {
+		color: #FFFFFF;
+		background-color: #ffffff30;
+	}
+
+	html.responsive .pagebtn.gpfocus,
+	html.responsive a.pagebtn.gpfocus {
+		color: black;
+		background-color: white;
+		border-radius: 0px;
+	}
 
 
 

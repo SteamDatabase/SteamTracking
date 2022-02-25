@@ -102,7 +102,7 @@
 	}
 
     html.responsive .purchase_options_content_tablet.isCurrentlySticky {
-        padding-top: 8px;
+        /* padding-top: 8px; */
     }
 
 	html.responsive .purchase_options_content_tablet {
@@ -110,7 +110,7 @@
 		box-sizing: border-box;
 		right: 0;
 		padding: var(--gpSpace-Gutter);
-		padding-top: 8px;
+		padding-top: 0px;
 		overflow-y: auto;
 		position: sticky;
 		z-index: 100;
@@ -120,7 +120,7 @@
 		/* Re-defining here prevents the entire page from padding as we scroll */
 		scroll-snap-type: inline;
 		scroll-padding-bottom: 80px;
-		scroll-padding-top: 80px;
+		scroll-padding-top: 160px;
 
 		width: var(--gpPurchaseOptionsWidth);
 	}
@@ -1465,8 +1465,6 @@
 		right: unset;
 		top: unset;
 		font-size: unset;
-		/* margin-right: 4px; */
-		/* color: var(--gpStoreLightGrey); */
 	}
 
 	html.responsive .game_area_purchase_game .discount_final_price {
@@ -2174,10 +2172,19 @@
 		color: var(--gpColor-Blue);
 	}
 
-	#userReviews_responsive {
+	html.responsive #userReviews_responsive {
 		background: unset;
 		padding: 0px;
 		margin-bottom: var(--gpSpace-Gutter);
+		padding: 8px 8px 6px 12px;
+		transition: background-color 0.2s ease;
+		background-color: var(--gpBackground-LightSofter);
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive #userReviews_responsive.gpfocus {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: 0px;
 	}
 
 	html.responsive #appReviewsAll_responsive, html.responsive #appReviewsRecent_responsive {
@@ -2501,10 +2508,15 @@
 	html.responsive .block_responsive_horizontal_scroll.block_content {
 		scroll-snap-type: x mandatory;
 		margin: 0px calc(0px - var(--gpSpace-Gutter));
-		padding-left: var(--gpSpace-Gutter);
-		scroll-padding: var(--gpSpace-Gutter);
+		padding: 0px var(--gpSpace-Gutter);
+		scroll-padding: 0px var(--gpSpace-Gutter);
 		width: calc(100% + (var(--gpSpace-Gutter) * 2));
 		box-sizing: border-box;
+	}
+
+	html.responsive .block_responsive_horizontal_scroll.block_content::after {
+		content: "\00a0";
+		min-width: var(--gpSpace-Gutter);
 	}
 
 	html.responsive .game_description_column .block .block_content a {
@@ -2953,7 +2965,7 @@
 		display: block;
 		margin-right: unset;
 		background: var(--gpBackground-LightSofter);
-		height: 68px;
+		min-height: 68px;
 		box-shadow: none;
 		transition: all 0.1s ease;
 		margin-bottom: 4px;
@@ -2994,7 +3006,7 @@
 
 	html.responsive  .tablet_list_item .tab_item_cap_img {
 		height: unset;
-		width: 140px;
+		width: 160px;
 	}
 
 	html.responsive  .tablet_list_item .tab_item_discount,
@@ -3005,13 +3017,15 @@
 	html.responsive .tablet_list_item .tab_item_content {
 		font-size: unset;
 		padding-top: 2px;
+		white-space: unset;
 	}
 
 	html.responsive .tablet_list_item .tab_item_name {
 		font: var(--gpText-BodyLarge);
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		white-space: unset;
+		overflow: unset;
+		text-overflow: unset;
+		margin-bottom: 24px;
 	}
 
 	html.responsive .tablet_list_item .tab_item_details {

@@ -3,59 +3,51 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [6],
   {
-    "3rT3": function (t, e, n) {
+    "3rT3": function (e, t, n) {
       "use strict";
-      n.r(e);
-      var r = n("mrSG"),
-        a = n("q1tI"),
-        o = n.n(a),
-        i = n("EC67"),
-        c = (n("r64O"), n("wjMc")),
-        u = n("2l+k"),
-        s = n("IjL/"),
-        l = n("9w6b"),
-        p = (function (t) {
-          function e() {
-            var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.state = { bIsLoading: !0 }), e;
-          }
-          return (
-            Object(r.d)(e, t),
-            (e.prototype.componentDidMount = function () {
-              return Object(r.b)(this, void 0, void 0, function () {
-                return Object(r.e)(this, function (t) {
-                  switch (t.label) {
-                    case 0:
-                      return u.a.Get(), [4, l.a.InitGlobal()];
-                    case 1:
-                      return t.sent(), this.setState({ bIsLoading: !1 }), [2];
-                  }
-                });
-              });
-            }),
-            (e.prototype.render = function () {
-              return this.state.bIsLoading
-                ? null
-                : o.a.createElement(
-                    s.a,
-                    null,
-                    o.a.createElement(
-                      i.d,
-                      null,
-                      o.a.createElement(i.b, {
-                        exact: !0,
-                        path:
-                          "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
-                        component: c.b,
-                      }),
-                      o.a.createElement(i.b, null, !1)
-                    )
-                  );
-            }),
-            e
-          );
-        })(o.a.Component);
-      e.default = p;
+      n.r(t),
+        n.d(t, "default", function () {
+          return d;
+        });
+      var a = n("mrSG"),
+        r = n("q1tI"),
+        o = n.n(r),
+        s = n("EC67"),
+        i = (n("r64O"), n("wjMc")),
+        c = n("2l+k"),
+        l = n("IjL/"),
+        u = n("9w6b");
+      class d extends o.a.Component {
+        constructor() {
+          super(...arguments), (this.state = { bIsLoading: !0 });
+        }
+        componentDidMount() {
+          return Object(a.a)(this, void 0, void 0, function* () {
+            c.a.Get(),
+              yield u.a.InitGlobal(),
+              this.setState({ bIsLoading: !1 });
+          });
+        }
+        render() {
+          return this.state.bIsLoading
+            ? null
+            : o.a.createElement(
+                l.a,
+                null,
+                o.a.createElement(
+                  s.d,
+                  null,
+                  o.a.createElement(s.b, {
+                    exact: !0,
+                    path:
+                      "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
+                    component: i.b,
+                  }),
+                  o.a.createElement(s.b, null, !1)
+                )
+              );
+        }
+      }
     },
   },
 ]);

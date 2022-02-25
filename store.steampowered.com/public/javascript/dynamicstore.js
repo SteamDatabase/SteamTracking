@@ -398,7 +398,7 @@ GDynamicStore = {
 
 	s_oImpressionsTracked: {},
 	AddImpressionFromDynamicItem: function( $Elem )
-	{		
+	{
 		if ( !GDynamicStore.s_bAllowAppImpressions )
 		{
 						return;
@@ -1194,7 +1194,7 @@ GDynamicStore = {
 			var $BundleContentsPosition = $J('<div/>', {'class': 'bundle_contents_preview_position'} );
 			for ( var i = 0; i < rgItemsWithCaps.length; i++ )
 			{
-				var rgLinkParams = { 'class': 'bundle_contents_preview_item ds_collapse_flag' };
+				var rgLinkParams = { 'class': 'bundle_contents_preview_item ds_collapse_flag', 'data-panel': '{"focusable":false}' }
 				var Item = GStoreItemData.GetCapParams( 'bundle_component_preview', null, rgItemsWithCaps[i], null, rgLinkParams );
 				var $Link = $J('<a/>', rgLinkParams );
 
