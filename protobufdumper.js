@@ -270,10 +270,10 @@ function handleFile(file) {
 		protoShortNamesToLongNames[currentModuleName] = {};
 		protoShortNamesAliases[currentModuleName] = {};
 
-		(module.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",\(?function\(\){return ([_a-zA-Z]+)}\)/g) || []).forEach(
+		(module.match(/[a-z]\.[a-z]\([a-z],"([_a-zA-Z$]+)",\(?function\(\){return ([_a-zA-Z$]+)}\)/g) || []).forEach(
 			(alias) => {
 				let [, /*skip*/ aliasName, protoShortName] = alias.match(
-					/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",\(?function\(\){return ([_a-zA-Z]+)}\)/
+					/[a-z]\.[a-z]\([a-z],"([_a-zA-Z$]+)",\(?function\(\){return ([_a-zA-Z$]+)}\)/
 				);
 				protoShortNamesAliases[currentModuleName][aliasName] = protoShortName;
 			}
@@ -323,7 +323,7 @@ function handleFile(file) {
 			// Each message is immediately followed by (x) or (xx) so split on that
 			module.split(new RegExp("(" + protoConstructorMatch + ")[,;\\}]")).forEach((part) => {
 				let match = part.match(
-					/([_a-zA-Z$]{1,2})=function\([a-zA-Z$]{1,2}\){function [a-zA-Z$]\([a-zA-Z$]\){.{1,120}\.initialize.*}$/
+					/([_a-zA-Z$]{1,2})=function\([_a-zA-Z$]{1,2}\){function [_a-zA-Z$]\([_a-zA-Z$]\){.{1,120}\.initialize.*}$/
 				);
 				if (!match) {
 					return;
@@ -334,7 +334,7 @@ function handleFile(file) {
 
 				let func = match[0]
 					.replace(/^[_a-zA-Z$]{1,2}=/, "") // var name
-					.replace(/(Object\()?[_a-zA-Z$]{1,2}\.[a-zA-Z$]\)?\([a-zA-Z$],[a-zA-Z$]\),/g, "") // junk
+					.replace(/(Object\()?[_a-zA-Z$]{1,2}\.[_a-zA-Z$]\)?\([_a-zA-Z$],[_a-zA-Z$]\),/g, "") // junk
 					.replace(/(?<=c:)([_a-zA-Z$]{1,2}(\.[_a-zA-Z$]{1,2})?)(?=,)?/g, '"$1"') // constructor
 					.replace(/(?<=br:|bw:)[^,}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"'); // reader/writer
 
