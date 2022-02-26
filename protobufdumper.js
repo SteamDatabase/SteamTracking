@@ -44,34 +44,34 @@ Promise.all([
 	.catch(console.error);
 
 function Start(knownMessages, knownServices, files) {
-	global.window = {};
+	const filteredServices = [];
+	let bHasUnknownRequest = false;
+	let allProtos;
 
 	files.forEach((file) => {
+		global.window = {};
+
 		try {
 			require(file);
 		} catch (e) {
 			console.error(`Unable to execute "${path.basename(file)}", skipping.`);
 		}
-	});
 
-	const filteredServices = [];
-	let bHasUnknownRequest = false;
+		global.window.webpackJsonp.forEach((file) => {
+			let fileProtos;
+			try {
+				fileProtos = handleFile(file[1]);
+			} catch (e) {
+				console.error(e);
+				return;
+			}
 
-	let allProtos;
-	global.window.webpackJsonp.forEach((file) => {
-		let fileProtos;
-		try {
-			fileProtos = handleFile(file[1]);
-		} catch (e) {
-			console.error(e);
-			return;
-		}
-
-		if (!allProtos) {
-			allProtos = fileProtos;
-		} else {
-			mergeProtos(allProtos, fileProtos);
-		}
+			if (!allProtos) {
+				allProtos = fileProtos;
+			} else {
+				mergeProtos(allProtos, fileProtos);
+			}
+		});
 	});
 
 	const filteredProtos = allProtos.messages.filter((proto) => !knownMessages.has(proto.name));
