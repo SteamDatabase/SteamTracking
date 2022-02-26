@@ -270,34 +270,78 @@ function handleFile(file) {
 			protoShortNamesAliases[currentModuleName][aliasName] = protoShortName;
 		});
 
-		protoConstructorMatch = protoConstructorMatch.map(x => '\\(' + x + '\\)').join('|');
+		let matches;
 
-		// Each message is immediately followed by (x) or (xx) so split on that
-		module.split(new RegExp('(' + protoConstructorMatch + ')[,;\\}]')).forEach((part) => {
-			let match = part.match(/([_a-zA-Z\$]{1,2})=function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,120}\.initialize.*}$/);
-			if (!match) {
-				return;
+		if( /class ([_a-zA-Z\$]{1,2}) extends ([_a-zA-Z\$]{1,2})/.test( module ) )
+		{
+			const classesPattern = new RegExp('class ([_a-zA-Z\$]{1,2}) extends (' + protoConstructorMatch.join('|') + ')\{', 'g');
+			const classes = [];
+
+			while( matches = classesPattern.exec( module ) )
+			{
+				const start = matches.index;
+				let brackets = 0;
+
+				for( let i = start; i < module.length; i++ )
+				{
+					if( module[ i ] === '{' )
+					{
+						brackets++;
+					}
+					else if( module[ i ] === '}' && --brackets === 0 )
+					{
+						classes.push(module.substring(start, i + 1));
+						break;
+					}
+				}
 			}
 
-			// Extract the minified variable name
-			let minVarName = match[1];
+			for( let part of classes )
+			{
+				const names = part.match( /^class (?<className>[_a-zA-Z\$]{1,2}) extends ([_a-zA-Z\$]{1,2})/ );
 
-			let func = match[0]
-				.replace(/^[_a-zA-Z\$]{1,2}=/, '') // var name
-				.replace(/(Object\()?[_a-zA-Z\$]{1,2}\.[a-zA-Z\$]\)?\([a-zA-Z\$],[a-zA-Z\$]\),/g, '') // junk
-				.replace(/(?<=c:)([_a-zA-Z\$]{1,2}(\.[_a-zA-Z\$]{1,2})?)(?=,)?/g, '"$1"') // constructor
-				.replace(/(?<=br:|bw:)[^,\}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"'); // reader/writer
+				part = part
+					.replace( /^class ([_a-zA-Z\$]{1,2}) extends ([_a-zA-Z\$]{1,2}){constructor\(/, 'class $1{__constructor(' ) // remove extends and disable constructor
+					.replace( 'super()', '1') // remove super() call
+					.replace(/(?<=c:)([_a-zA-Z\$]{1,2}(\.[_a-zA-Z\$]{1,2})?)(?=,)?/g, '"$1"') // constructor
+					.replace( /(?<=br:|bw:)[^,\}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"' ); // reader/writer
 
-			eval('func=(' + func + ')');
-			let proto = decodeProtobuf(func(), minVarName);
-			currentModuleProtos.push(proto);
-			messages.push(proto);
-			protoShortNamesToLongNames[currentModuleName][minVarName] = proto.name;
-		});
+				const func = eval( `(${part})` );
+				const proto = decodeProtobuf( func, new func(), names.groups.className );
+				currentModuleProtos.push(proto);
+				messages.push(proto);
+				protoShortNamesToLongNames[currentModuleName][names.groups.className] = proto.name;
+			}
+		}
+		else
+		{
+			protoConstructorMatch = protoConstructorMatch.map(x => '\\(' + x + '\\)').join('|');
+
+			// Each message is immediately followed by (x) or (xx) so split on that
+			module.split(new RegExp('(' + protoConstructorMatch + ')[,;\\}]')).forEach((part) => {
+				let match = part.match(/([_a-zA-Z\$]{1,2})=function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,120}\.initialize.*}$/);
+				if (!match) {
+					return;
+				}
+	
+				// Extract the minified variable name
+				let minVarName = match[1];
+	
+				let func = match[0]
+					.replace(/^[_a-zA-Z\$]{1,2}=/, '') // var name
+					.replace(/(Object\()?[_a-zA-Z\$]{1,2}\.[a-zA-Z\$]\)?\([a-zA-Z\$],[a-zA-Z\$]\),/g, '') // junk
+					.replace(/(?<=c:)([_a-zA-Z\$]{1,2}(\.[_a-zA-Z\$]{1,2})?)(?=,)?/g, '"$1"') // constructor
+					.replace(/(?<=br:|bw:)[^,\}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"'); // reader/writer
+	
+				eval('func=(' + func + ')');
+				let proto = decodeProtobuf(null, func(), minVarName);
+				currentModuleProtos.push(proto);
+				messages.push(proto);
+				protoShortNamesToLongNames[currentModuleName][minVarName] = proto.name;
+			});
+		}
 
 		moduleProtosMap.set(currentModuleName, currentModuleProtos);
-
-		let matches;
 
 		while (matches = svcRex.exec(module)) {
 			let svcName = matches[1],
@@ -369,11 +413,21 @@ function handleFile(file) {
 	return {messages, services};
 }
 
-function decodeProtobuf(proto, minVarName) {
-	let name = proto.prototype.getClassName();
+function decodeProtobuf(staticProto, proto, minVarName) {
+	let name;
+	let protoFields;
 	let fields = [];
 
-	let protoFields = proto.M ? proto.M().fields : {};
+	if( staticProto === null )
+	{
+		name = proto.prototype.getClassName();
+		protoFields = proto.M ? proto.M().fields : {};
+	}
+	else
+	{
+		name = proto.getClassName();
+		protoFields = staticProto.M ? staticProto.M().fields : {};
+	}
 
 	for (let fieldName in protoFields) {
 		let field = protoFields[fieldName];
