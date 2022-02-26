@@ -1,26 +1,26 @@
-const path = require('path');
-const fs = require('fs');
+const path = require("path");
+const fs = require("fs");
 
 const CONFIG = {
 	ProtoFilterEnabled: false,
-	KnownProtoPath: 'Protobufs',
-	InputPath: './.support/original_js/',
-	OutputPath: './../ValveProtobufs/webui/',
-	CommonProtoFileName: 'common.proto',
-	ServiceProtoFileNameTemplate: 'service_%svcname%.proto'
+	KnownProtoPath: "Protobufs",
+	InputPath: "./.support/original_js/",
+	OutputPath: "./../ValveProtobufs/webui/",
+	CommonProtoFileName: "common.proto",
+	ServiceProtoFileNameTemplate: "service_%svcname%.proto",
 };
 
 for (let i = 2; i < process.argv.length; ++i) {
-	if (process.argv[i] === '--filter-known-protos') {
+	if (process.argv[i] === "--filter-known-protos") {
 		CONFIG.ProtoFilterEnabled = true;
-	} else if (process.argv[i].startsWith('--known-protos-dir=')) {
+	} else if (process.argv[i].startsWith("--known-protos-dir=")) {
 		CONFIG.KnownProtoPath = process.argv[i].substring(19);
-	} else if (process.argv[i].startsWith('--input-dir=')) {
+	} else if (process.argv[i].startsWith("--input-dir=")) {
 		CONFIG.InputPath = process.argv[i].substring(12);
-	} else if (process.argv[i].startsWith('--output-dir=')) {
+	} else if (process.argv[i].startsWith("--output-dir=")) {
 		CONFIG.OutputPath = process.argv[i].substring(13);
 	} else {
-		console.log('Unknown argument:', process.argv[i]);
+		console.log("Unknown argument:", process.argv[i]);
 	}
 }
 
@@ -34,12 +34,14 @@ if (!fs.statSync(CONFIG.OutputPath).isDirectory()) {
 
 Promise.all([
 	getKnownProtobufMessages(path.resolve(CONFIG.KnownProtoPath)),
-	getListOfJSFilesToParse(path.resolve(CONFIG.InputPath))
+	getListOfJSFilesToParse(path.resolve(CONFIG.InputPath)),
 ])
-.then(([{knownMessages, knownServices}, files]) => Start(knownMessages, knownServices, files))
-.then(() => { console.log('OK'); process.exit(0); })
-.catch(console.error);
-
+	.then(([{ knownMessages, knownServices }, files]) => Start(knownMessages, knownServices, files))
+	.then(() => {
+		console.log("OK");
+		process.exit(0);
+	})
+	.catch(console.error);
 
 function Start(knownMessages, knownServices, files) {
 	global.window = {};
@@ -47,7 +49,7 @@ function Start(knownMessages, knownServices, files) {
 	files.forEach((file) => {
 		try {
 			require(file);
-		} catch(e) {
+		} catch (e) {
 			console.error(`Unable to execute "${path.basename(file)}", skipping.`);
 		}
 	});
@@ -56,11 +58,11 @@ function Start(knownMessages, knownServices, files) {
 	let bHasUnknownRequest = false;
 
 	let allProtos;
-	window.webpackJsonp.forEach((file) => {
+	global.window.webpackJsonp.forEach((file) => {
 		let fileProtos;
 		try {
 			fileProtos = handleFile(file[1]);
-		} catch(e) {
+		} catch (e) {
 			console.error(e);
 			return;
 		}
@@ -77,8 +79,7 @@ function Start(knownMessages, knownServices, files) {
 	filteredProtos.forEach((proto) => {
 		proto.fields.forEach((field) => {
 			if (field.type[0] === ".") {
-				if (!proto.dependencies)
-					proto.dependencies = new Set();
+				if (!proto.dependencies) proto.dependencies = new Set();
 				proto.dependencies.add(field.type.substr(1)); // message name
 			}
 		});
@@ -94,17 +95,17 @@ function Start(knownMessages, knownServices, files) {
 		if (methods.length > 0) {
 			filteredServices.push({
 				service,
-				methods
+				methods,
 			});
 
 			methods.forEach((method) => {
 				// message not found
 				if (!method.request) {
-					method.request = 'NotImplemented';
+					method.request = "NotImplemented";
 					bHasUnknownRequest = true;
 				}
 				if (!method.response) {
-					method.response = 'NotImplemented';
+					method.response = "NotImplemented";
 					bHasUnknownRequest = true;
 				}
 			});
@@ -112,8 +113,8 @@ function Start(knownMessages, knownServices, files) {
 	});
 
 	if (bHasUnknownRequest) {
-		filteredProtos.push({ "name": "NotImplemented", "fields": [] });
-		knownMessages.set('NotImplemented', CONFIG.CommonProtoFileName);
+		filteredProtos.push({ name: "NotImplemented", fields: [] });
+		knownMessages.set("NotImplemented", CONFIG.CommonProtoFileName);
 	}
 
 	return Dump(CONFIG.OutputPath, filteredProtos, filteredServices, knownMessages);
@@ -168,7 +169,7 @@ function extractDependencies(allProtos, protoName, knownMessages) {
 	} else {
 		let proto = allProtos.find((proto) => proto.name === protoName);
 		if (!proto) {
-			console.error('Could not find dependency:', protoName);
+			console.error("Could not find dependency:", protoName);
 		} else {
 			protos.push(proto);
 			if (proto.dependencies) {
@@ -181,14 +182,15 @@ function extractDependencies(allProtos, protoName, knownMessages) {
 			}
 		}
 	}
-	return {protos, imports};
+	return { protos, imports };
 }
 
 function getListOfJSFilesToParse(dirName) {
-	return fs.promises.readdir(dirName).then((files) =>
-		files.filter((fileName) => fileName.endsWith('js'))
-			.map((fileName) => path.join(dirName, fileName))
-	);
+	return fs.promises
+		.readdir(dirName)
+		.then((files) =>
+			files.filter((fileName) => fileName.endsWith("js")).map((fileName) => path.join(dirName, fileName))
+		);
 }
 
 function getKnownProtobufMessages(dirName) {
@@ -199,45 +201,47 @@ function getKnownProtobufMessages(dirName) {
 	let MsgAndLevel = [];
 
 	if (!CONFIG.ProtoFilterEnabled) {
-		return Promise.resolve({knownMessages, knownServices});
+		return Promise.resolve({ knownMessages, knownServices });
 	}
 
 	return fs.promises.readdir(dirName).then((files) => {
-		files.filter((file) => file.endsWith(".proto")).forEach((fileName) => {
-			let file = fs.readFileSync(path.join(dirName, fileName)).toString();
+		files
+			.filter((file) => file.endsWith(".proto"))
+			.forEach((fileName) => {
+				let file = fs.readFileSync(path.join(dirName, fileName)).toString();
 
-			let matches;
-			while (matches = msgRegex.exec(file)) {
-				let currLevel = matches[1].length;
-				let msgName = matches[2];
+				let matches;
+				while ((matches = msgRegex.exec(file))) {
+					let currLevel = matches[1].length;
+					let msgName = matches[2];
 
-				if (MsgAndLevel[0] && MsgAndLevel[0].level >= currLevel) {
-					let prevMsg;
-					do {
-						prevMsg = MsgAndLevel.shift();
-					} while (prevMsg && prevMsg.level > currLevel);
+					if (MsgAndLevel[0] && MsgAndLevel[0].level >= currLevel) {
+						let prevMsg;
+						do {
+							prevMsg = MsgAndLevel.shift();
+						} while (prevMsg && prevMsg.level > currLevel);
+					}
+					if (MsgAndLevel[0]) {
+						msgName = MsgAndLevel[0].name + "_" + msgName;
+					}
+
+					MsgAndLevel.unshift({ name: msgName, level: currLevel });
+					knownMessages.set(msgName, fileName);
 				}
-				if (MsgAndLevel[0]) {
-					msgName = MsgAndLevel[0].name + '_' + msgName;
+
+				let methods;
+				while ((matches = svcRegex.exec(file))) {
+					if (matches[1]) {
+						// service name
+						knownServices.set(matches[1], (methods = []));
+					} else {
+						// method name
+						methods.push(matches[2]);
+					}
 				}
+			});
 
-				MsgAndLevel.unshift({ "name": msgName, "level": currLevel });
-				knownMessages.set(msgName, fileName);
-			}
-
-			let methods;
-			while (matches = svcRegex.exec(file)) {
-				if (matches[1]) {
-					// service name
-					knownServices.set(matches[1], methods = []);
-				} else {
-					// method name
-					methods.push(matches[2]);
-				}
-			}
-		});
-
-		return {knownMessages, knownServices};
+		return { knownMessages, knownServices };
 	});
 }
 
@@ -247,7 +251,7 @@ function handleFile(file) {
 	let protoShortNamesAliases = {};
 	let messages = [];
 
-	let svcRex = /(?:SendNotification\()?"(\w+)\.(\w+)#1",(?:request:([_a-zA-Z\$]{1,2})|\w[\),]([_a-zA-Z\$]{1,2})?)/g;
+	let svcRex = /(?:SendNotification\()?"(\w+)\.(\w+)#1",(?:request:([_a-zA-Z$]{1,2})|\w[),]([_a-zA-Z$]{1,2})?)/g;
 	const services = new Map();
 
 	let modules = new Map();
@@ -257,83 +261,84 @@ function handleFile(file) {
 
 	// 1-st pass
 	modules.forEach((module, currentModuleName) => {
-		let protoConstructorMatch = module.match(/([_a-zA-Z\$]{1,2})(?==\(?(?:[_a-zA-Z\$]\("[\w\+\/]{4}"\),)*(?:[_a-zA-Z\$]{1,2}\.Message,?)+\)?)/g);
-		if (!protoConstructorMatch)
-			return;
+		let protoConstructorMatch = module.match(
+			/([_a-zA-Z$]{1,2})(?==\(?(?:[_a-zA-Z$]\("[\w+/]{4}"\),)*(?:[_a-zA-Z$]{1,2}\.Message,?)+\)?)/g
+		);
+		if (!protoConstructorMatch) return;
 
 		let currentModuleProtos = [];
 		protoShortNamesToLongNames[currentModuleName] = {};
 		protoShortNamesAliases[currentModuleName] = {};
 
-		(module.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",\(?function\(\){return ([_a-zA-Z]+)}\)/g) || []).forEach((alias) => {
-			let [/*skip*/, aliasName, protoShortName] = alias.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",\(?function\(\){return ([_a-zA-Z]+)}\)/);
-			protoShortNamesAliases[currentModuleName][aliasName] = protoShortName;
-		});
+		(module.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",\(?function\(\){return ([_a-zA-Z]+)}\)/g) || []).forEach(
+			(alias) => {
+				let [, /*skip*/ aliasName, protoShortName] = alias.match(
+					/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",\(?function\(\){return ([_a-zA-Z]+)}\)/
+				);
+				protoShortNamesAliases[currentModuleName][aliasName] = protoShortName;
+			}
+		);
 
 		let matches;
 
-		if( /class ([_a-zA-Z\$]{1,2}) extends ([_a-zA-Z\$]{1,2})/.test( module ) )
-		{
-			const classesPattern = new RegExp('class ([_a-zA-Z\$]{1,2}) extends (' + protoConstructorMatch.join('|') + ')\{', 'g');
+		if (/class ([_a-zA-Z$]{1,2}) extends ([_a-zA-Z$]{1,2})/.test(module)) {
+			const classesPattern = new RegExp(
+				"class ([_a-zA-Z$]{1,2}) extends (" + protoConstructorMatch.join("|") + "){",
+				"g"
+			);
 			const classes = [];
 
-			while( matches = classesPattern.exec( module ) )
-			{
+			while ((matches = classesPattern.exec(module))) {
 				const start = matches.index;
 				let brackets = 0;
 
-				for( let i = start; i < module.length; i++ )
-				{
-					if( module[ i ] === '{' )
-					{
+				for (let i = start; i < module.length; i++) {
+					if (module[i] === "{") {
 						brackets++;
-					}
-					else if( module[ i ] === '}' && --brackets === 0 )
-					{
+					} else if (module[i] === "}" && --brackets === 0) {
 						classes.push(module.substring(start, i + 1));
 						break;
 					}
 				}
 			}
 
-			for( let part of classes )
-			{
-				const names = part.match( /^class (?<className>[_a-zA-Z\$]{1,2}) extends ([_a-zA-Z\$]{1,2})/ );
+			for (let part of classes) {
+				const names = part.match(/^class (?<className>[_a-zA-Z$]{1,2}) extends ([_a-zA-Z$]{1,2})/);
 
 				part = part
-					.replace( /^class ([_a-zA-Z\$]{1,2}) extends ([_a-zA-Z\$]{1,2}){constructor\(/, 'class $1{__constructor(' ) // remove extends and disable constructor
-					.replace( 'super()', '1') // remove super() call
-					.replace(/(?<=c:)([_a-zA-Z\$]{1,2}(\.[_a-zA-Z\$]{1,2})?)(?=,)?/g, '"$1"') // constructor
-					.replace( /(?<=br:|bw:)[^,\}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"' ); // reader/writer
+					.replace(/^class ([_a-zA-Z$]{1,2}) extends ([_a-zA-Z$]{1,2}){constructor\(/, "class $1{__constructor(") // remove extends and disable constructor
+					.replace("super()", "1") // remove super() call
+					.replace(/(?<=c:)([_a-zA-Z$]{1,2}(\.[_a-zA-Z$]{1,2})?)(?=,)?/g, '"$1"') // constructor
+					.replace(/(?<=br:|bw:)[^,}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"'); // reader/writer
 
-				const func = eval( `(${part})` );
-				const proto = decodeProtobuf( func, new func(), names.groups.className );
+				const func = eval(`(${part})`);
+				const proto = decodeProtobuf(func, new func(), names.groups.className);
 				currentModuleProtos.push(proto);
 				messages.push(proto);
 				protoShortNamesToLongNames[currentModuleName][names.groups.className] = proto.name;
 			}
-		}
-		else
-		{
-			protoConstructorMatch = protoConstructorMatch.map(x => '\\(' + x + '\\)').join('|');
+		} else {
+			protoConstructorMatch = protoConstructorMatch.map((x) => "\\(" + x + "\\)").join("|");
 
 			// Each message is immediately followed by (x) or (xx) so split on that
-			module.split(new RegExp('(' + protoConstructorMatch + ')[,;\\}]')).forEach((part) => {
-				let match = part.match(/([_a-zA-Z\$]{1,2})=function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,120}\.initialize.*}$/);
+			module.split(new RegExp("(" + protoConstructorMatch + ")[,;\\}]")).forEach((part) => {
+				let match = part.match(
+					/([_a-zA-Z$]{1,2})=function\([a-zA-Z$]{1,2}\){function [a-zA-Z$]\([a-zA-Z$]\){.{1,120}\.initialize.*}$/
+				);
 				if (!match) {
 					return;
 				}
-	
+
 				// Extract the minified variable name
 				let minVarName = match[1];
-	
+
 				let func = match[0]
-					.replace(/^[_a-zA-Z\$]{1,2}=/, '') // var name
-					.replace(/(Object\()?[_a-zA-Z\$]{1,2}\.[a-zA-Z\$]\)?\([a-zA-Z\$],[a-zA-Z\$]\),/g, '') // junk
-					.replace(/(?<=c:)([_a-zA-Z\$]{1,2}(\.[_a-zA-Z\$]{1,2})?)(?=,)?/g, '"$1"') // constructor
-					.replace(/(?<=br:|bw:)[^,\}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"'); // reader/writer
-	
-				eval('func=(' + func + ')');
+					.replace(/^[_a-zA-Z$]{1,2}=/, "") // var name
+					.replace(/(Object\()?[_a-zA-Z$]{1,2}\.[a-zA-Z$]\)?\([a-zA-Z$],[a-zA-Z$]\),/g, "") // junk
+					.replace(/(?<=c:)([_a-zA-Z$]{1,2}(\.[_a-zA-Z$]{1,2})?)(?=,)?/g, '"$1"') // constructor
+					.replace(/(?<=br:|bw:)[^,}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"'); // reader/writer
+
+				eval("func=(" + func + ")");
 				let proto = decodeProtobuf(null, func(), minVarName);
 				currentModuleProtos.push(proto);
 				messages.push(proto);
@@ -343,22 +348,27 @@ function handleFile(file) {
 
 		moduleProtosMap.set(currentModuleName, currentModuleProtos);
 
-		while (matches = svcRex.exec(module)) {
+		while ((matches = svcRex.exec(module))) {
 			let svcName = matches[1],
 				methodName = matches[2],
-				msgRequestName = null, msgResponseName = null;
-			if (matches[3]) { // S->C notification
+				msgRequestName = null,
+				msgResponseName = null;
+			if (matches[3]) {
+				// S->C notification
 				msgRequestName = protoShortNamesToLongNames[currentModuleName][matches[3]];
-			} else if (matches[4]) { // response
+			} else if (matches[4]) {
+				// response
 				msgResponseName = protoShortNamesToLongNames[currentModuleName][matches[4]];
-			} else { // C->S notification
+			} else {
+				// C->S notification
 				// try to fix it below
 			}
 
 			if (!msgRequestName) {
-				let proto = currentModuleProtos.find((proto) =>
-					(proto.name === "C" + svcName + "_" + methodName + (matches[4] ? "_Request" : "_Notification"))
-						|| !matches[4] && (proto.name === "C" + svcName + "_" + methodName.replace(/^Notify/, "") + "_Notification")
+				let proto = currentModuleProtos.find(
+					(proto) =>
+						proto.name === "C" + svcName + "_" + methodName + (matches[4] ? "_Request" : "_Notification") ||
+						(!matches[4] && proto.name === "C" + svcName + "_" + methodName.replace(/^Notify/, "") + "_Notification")
 				);
 				if (!proto && msgResponseName) {
 					proto = currentModuleProtos.find((proto) => proto.name === msgResponseName.replace(/_Response$/, "_Request"));
@@ -377,32 +387,30 @@ function handleFile(file) {
 			}
 
 			services.get(svcName).push({
-				"name": methodName,
-				"request": msgRequestName,
-				"response": msgResponseName
+				name: methodName,
+				request: msgRequestName,
+				response: msgResponseName,
 			});
 		}
 	});
 
 	// 2-nd pass
 	modules.forEach((module, currentModuleName) => {
-		if (!moduleProtosMap.has(currentModuleName))
-			return;
+		if (!moduleProtosMap.has(currentModuleName)) return;
 
 		moduleProtosMap.get(currentModuleName).forEach((proto) => {
 			proto.fields.forEach((field) => {
 				if (protoShortNamesToLongNames[currentModuleName][field.type]) {
-					field.type = '.' + protoShortNamesToLongNames[currentModuleName][field.type];
-				} else if (field.type.includes('.')) {
-					let [moduleVarName, typeShortNameAlias] = field.type.split('.');
+					field.type = "." + protoShortNamesToLongNames[currentModuleName][field.type];
+				} else if (field.type.includes(".")) {
+					let [moduleVarName, typeShortNameAlias] = field.type.split(".");
 					let match = module.match(new RegExp(moduleVarName + '=[a-z]\\("([\\w\\+\\/]{4})"\\)'));
 					if (match && protoShortNamesToLongNames[match[1]] && protoShortNamesAliases[match[1]]) {
-						field.type = '.' + protoShortNamesToLongNames[match[1]][
-							protoShortNamesAliases[match[1]][typeShortNameAlias]
-						];
+						field.type =
+							"." + protoShortNamesToLongNames[match[1]][protoShortNamesAliases[match[1]][typeShortNameAlias]];
 					} else {
 						// external dependency? will be resolved on merge time
-						field.type = 'UNKNOWN';
+						field.type = "UNKNOWN";
 						field.fixme = true;
 					}
 				}
@@ -410,7 +418,7 @@ function handleFile(file) {
 		});
 	});
 
-	return {messages, services};
+	return { messages, services };
 }
 
 function decodeProtobuf(staticProto, proto, minVarName) {
@@ -418,13 +426,10 @@ function decodeProtobuf(staticProto, proto, minVarName) {
 	let protoFields;
 	let fields = [];
 
-	if( staticProto === null )
-	{
+	if (staticProto === null) {
 		name = proto.prototype.getClassName();
 		protoFields = proto.M ? proto.M().fields : {};
-	}
-	else
-	{
+	} else {
 		name = proto.getClassName();
 		protoFields = staticProto.M ? staticProto.M().fields : {};
 	}
@@ -433,30 +438,31 @@ function decodeProtobuf(staticProto, proto, minVarName) {
 		let field = protoFields[fieldName];
 		let fieldDesc = {
 			id: field.n,
-			flag: field.r ? 'repeated' : 'optional',
+			flag: field.r ? "repeated" : "optional",
 			name: fieldName,
-			type: '?'
+			type: "?",
 		};
 
 		if (field.c) {
 			// It's a nested message of some sort
-			if (field.c === proto.name) { // constructor name, special case for recursive messages
+			if (field.c === proto.name) {
+				// constructor name, special case for recursive messages
 				fieldDesc.type = minVarName;
 			} else {
 				fieldDesc.type = field.c;
 			}
 		} else {
-			fieldDesc.type = field.br.toLowerCase().replace('64string', '64');
-			if (fieldDesc.type === 'enum') {
+			fieldDesc.type = field.br.toLowerCase().replace("64string", "64");
+			if (fieldDesc.type === "enum") {
 				// ToDo: RE enums
-				fieldDesc.type = 'int32';
-				fieldDesc.description = 'enum';
+				fieldDesc.type = "int32";
+				fieldDesc.description = "enum";
 			}
 		}
 
 		// default?
-		if (field.hasOwnProperty('d')) {
-			if (fieldDesc.type === 'string') {
+		if (Object.hasOwn(field, "d")) {
+			if (fieldDesc.type === "string") {
 				fieldDesc.default = JSON.stringify(field.d);
 			} else {
 				fieldDesc.default = field.d;
@@ -466,7 +472,7 @@ function decodeProtobuf(staticProto, proto, minVarName) {
 		fields.push(fieldDesc);
 	}
 
-	return {name, fields};
+	return { name, fields };
 }
 
 function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
@@ -481,7 +487,7 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 		servicesToDump.push(service);
 
 		// dump "Svcname" + "SvcnameClient" + "SvcnameNotifications" together
-		if (service.service.endsWith('Client')) {
+		if (service.service.endsWith("Client")) {
 			nonClientName = service.service.substr(0, service.service.length - 6);
 			index = filteredServices.findIndex((otherService) => otherService.service === nonClientName);
 			if (index !== -1) {
@@ -489,20 +495,25 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 			}
 		}
 		// ToDo: repeat?
-		index = filteredServices.findIndex((otherService) => otherService.service === service.service + 'Client' || otherService.service === service.service + 'Notifications' || (!!nonClientName && otherService.service === nonClientName + 'Notifications'));
+		index = filteredServices.findIndex(
+			(otherService) =>
+				otherService.service === service.service + "Client" ||
+				otherService.service === service.service + "Notifications" ||
+				(!!nonClientName && otherService.service === nonClientName + "Notifications")
+		);
 		if (index !== -1) {
 			servicesToDump.push(filteredServices.splice(index, 1)[0]);
 		}
 
 		let protosToDump = [];
-		let importsToDump = new Set(['steammessages_unified_base.steamclient.proto']); // always include "unified_base" to service proto
+		let importsToDump = new Set(["steammessages_unified_base.steamclient.proto"]); // always include "unified_base" to service proto
 
 		for (service of servicesToDump) {
 			for (const method of service.methods) {
 				let deps = extractDependencies(filteredProtos, method.request, knownMessages);
 				protosToDump.push(...deps.protos);
 				deps.imports.forEach((file) => importsToDump.add(file));
-				if (method.response !== 'NoResponse') {
+				if (method.response !== "NoResponse") {
 					deps = extractDependencies(filteredProtos, method.response, knownMessages);
 					protosToDump.push(...deps.protos);
 					deps.imports.forEach((file) => importsToDump.add(file));
@@ -514,7 +525,7 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 
 		if (CONFIG.ProtoFilterEnabled) {
 			// if/when filtering is enabled, find orphaned messages "CSvcname_*" and add them to dump
-			let proto = filteredProtos.find((proto) => proto.name.startsWith('C' + svcName + '_'));
+			let proto = filteredProtos.find((proto) => proto.name.startsWith("C" + svcName + "_"));
 			if (proto) {
 				let deps = extractDependencies(filteredProtos, proto.name, knownMessages);
 				protosToDump.push(...deps.protos);
@@ -529,19 +540,26 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 			proto.dependentServices.add(svcName);
 		});
 
-		let fileName = CONFIG.ServiceProtoFileNameTemplate.replace('%svcname%', svcName.toLowerCase());
-		AllToDump.add({fileName, importsToDump, protosToDump, servicesToDump});
+		let fileName = CONFIG.ServiceProtoFileNameTemplate.replace("%svcname%", svcName.toLowerCase());
+		AllToDump.add({ fileName, importsToDump, protosToDump, servicesToDump });
 	}
 
-	for (let {fileName, importsToDump, protosToDump, servicesToDump} of AllToDump) {
+	for (let { fileName, importsToDump, protosToDump, servicesToDump } of AllToDump) {
 		fileName = path.join(outputFullPath, fileName);
 		protosToDump = protosToDump.filter((proto, idx) => {
 			if (protosToDump.indexOf(proto) !== idx) {
 				// remove duplicates
 				return false;
 			}
-			if (!proto.dependentServices || proto.dependentServices.size > 1 ||
-			  filteredProtos.some((commonProto) => (!commonProto.dependentServices || commonProto.bCommon) && commonProto.dependencies && commonProto.dependencies.has(proto.name))
+			if (
+				!proto.dependentServices ||
+				proto.dependentServices.size > 1 ||
+				filteredProtos.some(
+					(commonProto) =>
+						(!commonProto.dependentServices || commonProto.bCommon) &&
+						commonProto.dependencies &&
+						commonProto.dependencies.has(proto.name)
+				)
 			) {
 				// several services depend on this proto, move it to "common.proto"
 				importsToDump.add(CONFIG.CommonProtoFileName);
@@ -561,7 +579,7 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 	});
 
 	// dump remaining common protos
-	const imports = new Set(['steammessages_unified_base.steamclient.proto']); // "unified_base" is required for `description` option
+	const imports = new Set(["steammessages_unified_base.steamclient.proto"]); // "unified_base" is required for `description` option
 
 	if (CONFIG.ProtoFilterEnabled) {
 		filteredProtos.forEach((proto) => {
@@ -577,7 +595,7 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 	}
 
 	// sort messages by name to prevent shuffling
-	filteredProtos.sort((a, b) => a.name.localeCompare(b.name, 'en-US'));
+	filteredProtos.sort((a, b) => a.name.localeCompare(b.name, "en-US"));
 
 	let fileName = path.join(outputFullPath, CONFIG.CommonProtoFileName);
 
@@ -614,25 +632,25 @@ function outputProtos(protos, stream = process.stdout) {
 			stream.write(`\t${field.flag} ${field.type} ${field.name} = ${field.id}`);
 
 			let options = [];
-			if (field.hasOwnProperty("default")) {
+			if (Object.hasOwn(field, "default")) {
 				options.push(`default = ${field.default}`);
 			}
-			if (field.hasOwnProperty("description")) {
+			if (Object.hasOwn(field, "description")) {
 				options.push(`(description) = "${field.description}"`);
 			}
 			if (options.length) {
-				stream.write(` [${options.join(', ')}]`);
+				stream.write(` [${options.join(", ")}]`);
 			}
-			stream.write(';\n');
+			stream.write(";\n");
 		});
 		stream.write("}\n\n");
 	});
 }
 
 function outputToFile(fileName, imports, protos, services) {
-	return new Promise( resolve => {
-		let stream = fs.createWriteStream(fileName, { flags: 'w', encoding: 'utf8' });
-		stream.once('close', resolve);
+	return new Promise((resolve) => {
+		let stream = fs.createWriteStream(fileName, { flags: "w", encoding: "utf8" });
+		stream.once("close", resolve);
 
 		outputImports(imports, stream);
 		outputProtos(protos, stream);
