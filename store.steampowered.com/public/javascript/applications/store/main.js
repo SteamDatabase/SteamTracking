@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7117961";
+var CLSTAMP = "7119330";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [41],
   {
@@ -44597,7 +44597,6 @@ var CLSTAMP = "7117961";
         c = (n("AiWL"), n("r64O")),
         d = n("uIWk"),
         u = (n("mgoM"), n("q1tI"));
-      n("3+zv");
       class m {
         constructor() {
           (this.m_mapAppIDToClanInfo = new Map()),
@@ -51136,7 +51135,7 @@ var CLSTAMP = "7117961";
         a = n("uuth"),
         i = (n("kyHq"), n("qiKp")),
         s = n("9w6b"),
-        o = (n("MUT6"), n("TQGK"), n("WF3T")),
+        o = (n("MUT6"), n("3+zv"), n("WF3T")),
         l = n("O0NR");
       class c {
         constructor() {
@@ -97932,6 +97931,7 @@ var CLSTAMP = "7117961";
         }
       }
       Object(r.b)([ee.C], te.prototype, "m_mapClanReposted", void 0);
+      n("3+zv");
       var ne = n("Mgs7"),
         re = n("IjL/");
       const ae = Object(s.a)((e) => {
