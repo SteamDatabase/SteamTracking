@@ -12,27 +12,17 @@ for (const file of files) {
 		const ast = parse(code, { ecmaVersion: latestEcmaVersion });
 
 		traverse(ast, {
-			enter: function(node) {
-				if (node.type === "TemplateLiteral") {
-					let found = false;
-
-					for (const expr of node.expressions) {
-						if (
+			enter: function (node) {
+				if (
+					node.type === "TemplateLiteral" &&
+					node.expressions.some(
+						(expr) =>
 							expr.type === "MemberExpression" &&
 							expr.property.type === "Identifier" &&
 							expr.property.name.endsWith("_BASE_URL")
-						) {
-							found = true;
-							break;
-						}
-					}
-
-					if (!found) {
-						return;
-					}
-
+					)
+				) {
 					allStrings.add(ConstructLiteral(node));
-
 					this.skip();
 				}
 			},
