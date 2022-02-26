@@ -2,11 +2,13 @@
   "private": true,
   "name": "steamtracking",
   "scripts": {
-    "eslint": "eslint ./protobufdumper.js",
-    "format": "prettier --write --use-tabs --print-width 120 ./protobufdumper.js",
+    "eslint": "eslint ./protobufdumper.js ./dump_javascript_urls.mjs",
+    "format": "prettier --write --use-tabs --print-width 120 ./protobufdumper.js ./dump_javascript_urls.mjs",
     "prettier": "prettier --write"
   },
   "dependencies": {
+    "espree": "^9.3.1",
+    "estraverse": "^5.3.0",
     "prettier": "^2.2.1"
   },
   "devDependencies": {
