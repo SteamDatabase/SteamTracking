@@ -49,12 +49,18 @@ function Start(knownMessages, knownServices, files) {
 	let allProtos;
 
 	files.forEach((file) => {
-		global.window = {};
+		global.window = {
+			VALVE_PUBLIC_PATH: "",
+			webpackJsonp: [],
+			requestAnimationFrame: (a) => a(),
+			cancelAnimationFrame: () => {},
+		};
 
 		try {
 			require(file);
 		} catch (e) {
-			console.error(`Unable to execute "${path.basename(file)}", skipping.`);
+			console.error(`Unable to execute "${path.basename(file)}": ${e}`);
+			return;
 		}
 
 		global.window.webpackJsonp.forEach((file) => {
