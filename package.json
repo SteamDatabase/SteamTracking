@@ -3,7 +3,7 @@
   "name": "steamtracking",
   "scripts": {
     "eslint": "eslint ./protobufdumper.js ./dump_javascript_urls.mjs",
-    "format": "prettier --write --use-tabs --print-width 120 ./protobufdumper.js ./dump_javascript_urls.mjs",
+    "format": "prettier --write --use-tabs --print-width 120 ./protobufdumper.js ./dump_javascript_urls.mjs ./dump_javascript_protobufs.mjs",
     "prettier": "prettier --write"
   },
   "dependencies": {
