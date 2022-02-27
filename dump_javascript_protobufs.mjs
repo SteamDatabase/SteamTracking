@@ -10,18 +10,24 @@ for (const file of files) {
 	try {
 		const code = fs.readFileSync(file);
 		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
+		const services = [];
 		const messages = [];
 
 		traverse(ast, {
 			enter: function (node) {
 				if (node.type === Syntax.Property) {
-					messages.push(...TraverseModule(node.value));
+					const result = TraverseModule(node.value);
+
+					services.push(...result.services);
+					messages.push(...result.messages);
+
 					this.skip();
 				}
 			},
 		});
 
 		OutputMessages(messages);
+		OutputServices(services);
 	} catch (e) {
 		console.error(`Unable to parse "${path.basename(file)}":`, e);
 		continue;
@@ -35,7 +41,7 @@ function OutputMessages(messages, stream = process.stdout) {
 		for (const field of message.fields) {
 			stream.write(`\t${field.flag} ${field.type} ${field.name} = ${field.id}`);
 
-			let options = [];
+			const options = [];
 
 			if (Object.hasOwn(field, "default")) {
 				options.push(`default = ${field.default}`);
@@ -46,7 +52,9 @@ function OutputMessages(messages, stream = process.stdout) {
 			}
 
 			if (options.length > 0) {
-				stream.write(` [${options.join(", ")}]`);
+				stream.write(" [");
+				stream.write(options.join(", "));
+				stream.write("]");
 			}
 
 			stream.write(";\n");
@@ -56,12 +64,28 @@ function OutputMessages(messages, stream = process.stdout) {
 	}
 }
 
+function OutputServices(services, stream = process.stdout) {
+	for (const service of services) {
+		stream.write(`\trpc ${service.name}\n`);
+		/*
+		stream.write(`service ${service.service} {\n`);
+
+		for (const method of service.methods) {
+			stream.write(`\trpc ${method.name} (.${method.request}) returns (.${method.response});\n`);
+		}
+
+		stream.write("}\n\n");
+		*/
+	}
+}
+
 function TraverseModule(ast) {
+	const services = [];
 	const messages = [];
 	let messageIdentifier = null;
 
 	traverse(ast, {
-		enter: function (node) {
+		enter: function (node, parent) {
 			if (
 				node.type === Syntax.VariableDeclarator &&
 				node.id.type === Syntax.Identifier &&
@@ -82,10 +106,31 @@ function TraverseModule(ast) {
 				messages.push(TraverseClass(node.body));
 				this.skip();
 			}
+
+			if (
+				node.type === Syntax.ExpressionStatement &&
+				node.expression.type === Syntax.AssignmentExpression &&
+				node.expression.right.type === Syntax.ObjectExpression &&
+				node.expression.right.properties.length === 2 &&
+				node.expression.right.properties[0].key.name === "name" &&
+				node.expression.right.properties[1].key.name === "request"
+			) {
+				services.push({
+					name: node.expression.right.properties[0].value.value,
+				});
+				this.skip();
+			}
+
+			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
+				if (node.property.name === "SendMsg" || node.property.name === "SendNotificaton") {
+					services.push(TraverseSendMsg(parent, node.property.name === "SendNotificaton"));
+					this.skip();
+				}
+			}
 		},
 	});
 
-	return messages;
+	return { services, messages };
 }
 
 function TraverseClass(ast) {
@@ -216,6 +261,23 @@ function GetClassNameLiteral(ast) {
 	});
 
 	return value;
+}
+
+function TraverseSendMsg(node, isNotification) {
+	if (
+		node.type !== Syntax.CallExpression ||
+		node.arguments.length !== 4 ||
+		node.arguments[3].type !== Syntax.ObjectExpression
+	) {
+		throw new Error("Unexpected send msg");
+	}
+
+	const name = node.arguments[0].value;
+
+	return {
+		name: name,
+		isNotification: isNotification,
+	};
 }
 
 function EvaluateConstant(node) {
