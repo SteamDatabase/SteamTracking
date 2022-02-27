@@ -19,7 +19,7 @@ for (const file of files) {
 						(expr) =>
 							expr.type === "MemberExpression" &&
 							expr.property.type === "Identifier" &&
-							expr.property.name.endsWith("_BASE_URL")
+							expr.property.name.endsWith("BASE_URL")
 					)
 				) {
 					allStrings.add(ConstructLiteral(node));

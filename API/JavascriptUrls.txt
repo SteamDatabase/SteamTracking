@@ -1,3 +1,12 @@
+${BASE_URL}app/${}?snr=${LINK_PARAM}
+${BASE_URL}recommender/${STEAM_ID}/cart?snr=${LINK_PARAM}
+${BASE_URL}recommender/${STEAM_ID}/details?appid=${}&sessionid=${SESSION_ID}
+${BASE_URL}recommender/${STEAM_ID}/inputs?sessionid=${SESSION_ID}&steamid=${STEAM_ID}
+${BASE_URL}recommender/${STEAM_ID}/results?sessionid=${SESSION_ID}&steamid=${STEAM_ID}&include_played=${}&algorithm=${}&reinference=${}&model_version=${}${}
+${BASE_URL}recommender/${STEAM_ID}/savesettings
+${BASE_URL}recommender/${STEAM_ID}/stats
+${BASE_URL}recommender/${STEAM_ID}/tags?sessionid=${SESSION_ID}
+${BASE_URL}recommender/${STEAM_ID}/wishlist?snr=${LINK_PARAM}
 ${CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate
 ${CHAT_BASE_URL}broadcast/ajaxupdatechannelmod
 ${CHAT_BASE_URL}broadcast/ajaxupdateusermute
