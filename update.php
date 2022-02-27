@@ -23,7 +23,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		private bool $UseCache = true;
 		private bool $ExtractClientArchives = false;
 		private bool $SyncProtobufs = false;
-		private bool $DumpWebProtobufs = false;
+		private bool $DumpJavascriptFiles = false;
 
 		/** @var array<string, string|array<int, string>> */
 		private array $ETags = [];
@@ -110,13 +110,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			if( $this->ExtractClientArchives )
 			{
 				$this->Log( '{lightblue}Extracting client archives and doing voodoo magic' );
-				$this->DumpWebProtobufs = true;
+				$this->DumpJavascriptFiles = true;
 				$this->SyncProtobufs = true;
 
 				system( 'bash extract_client.sh' );
 			}
 
-			if( $this->DumpWebProtobufs )
+			if( $this->DumpJavascriptFiles )
 			{
 				$this->SyncProtobufs = true;
 
@@ -124,12 +124,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				system( 'node protobufdumper.js' );
 				system( 'node dump_javascript_urls.mjs' );
-				system(
-					'grep \'([A-Z_]+)BASE_URL\+"[0-9a-z\/]+"\' --no-filename --only-matching --extended-regexp --recursive ' .
-					escapeshellarg( __DIR__ . '/.support/original_js/' ) .
-					' | sort --unique > ' .
-					escapeshellarg( __DIR__ . '/API/Javascript.txt' )
-				);
 			}
 
 			if( $this->SyncProtobufs )
@@ -457,7 +451,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				else if( str_ends_with( $File, '.js' ) )
 				{
 					file_put_contents( __DIR__ . '/.support/original_js/' . md5( $OriginalFile ) . '.js', $Data );
-					$this->DumpWebProtobufs = true;
+					$this->DumpJavascriptFiles = true;
 				}
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );

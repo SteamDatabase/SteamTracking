@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs";
 import { parse, latestEcmaVersion } from "espree";
-import { traverse } from "estraverse";
+import { traverse, Syntax } from "estraverse";
 
 const allStrings = new Set();
 const files = await GetListOfFilesToParse("./.support/original_js/");
@@ -13,16 +13,11 @@ for (const file of files) {
 
 		traverse(ast, {
 			enter: function (node) {
-				if (
-					node.type === "TemplateLiteral" &&
-					node.expressions.some(
-						(expr) =>
-							expr.type === "MemberExpression" &&
-							expr.property.type === "Identifier" &&
-							expr.property.name.endsWith("BASE_URL")
-					)
-				) {
+				if (node.type === Syntax.TemplateLiteral && node.expressions.some(IsBaseUrlExpression)) {
 					allStrings.add(ConstructLiteral(node));
+					this.skip();
+				} else if (node.type === Syntax.BinaryExpression && IsLeftSideBaseUrlExpression(node)) {
+					allStrings.add(FormatNode(node, true).join(""));
 					this.skip();
 				}
 			},
@@ -32,6 +27,8 @@ for (const file of files) {
 		continue;
 	}
 }
+
+console.log("Found", allStrings.size, "strings");
 
 const strings = [...allStrings.values()].sort().join("\n") + "\n";
 
@@ -45,53 +42,98 @@ function GetListOfFilesToParse(dirName) {
 		);
 }
 
+function IsLeftSideBaseUrlExpression(node) {
+	return node.left.type === Syntax.BinaryExpression
+		? IsLeftSideBaseUrlExpression(node.left)
+		: IsBaseUrlExpression(node.left);
+}
+
+function IsBaseUrlExpression(node) {
+	return (
+		node.type === Syntax.MemberExpression &&
+		node.property.type === Syntax.Identifier &&
+		node.property.name.endsWith("BASE_URL")
+	);
+}
+
 function IsSafeName(name) {
 	return name.length > 2 || name.toUpperCase() === "ID";
 }
 
 function ConstructLiteral(parent) {
-	const nodes = [...(parent.expressions || []), ...parent.quasis].sort((a, b) => a.start - b.start);
+	const nodes = [...(parent.expressions || []), ...(parent.quasis || [])].sort((a, b) => a.start - b.start);
 	const str = [];
 
 	for (const node of nodes) {
-		if (node.type === "TemplateElement") {
-			str.push(node.value.raw);
-		} else if (
-			node.type === "MemberExpression" &&
-			node.property.type === "Identifier" &&
-			IsSafeName(node.property.name)
-		) {
-			str.push(`\${${node.property.name}}`);
-		} else if (node.type === "Identifier" && IsSafeName(node.name)) {
-			str.push(`\${${node.name}}`);
-		} else if (node.type === "ConditionalExpression") {
-			str.push("${_ ? ");
-
-			if (node.consequent.type === "Literal") {
-				str.push(node.consequent.raw);
-			} else if (node.consequent.type === "TemplateLiteral") {
-				str.push(`\`${ConstructLiteral(node.consequent)}\``);
-			} else {
-				str.push("_");
-			}
-
-			str.push(" : ");
-
-			if (node.alternate.type === "Literal") {
-				str.push(node.alternate.raw);
-			} else if (node.alternate.type === "TemplateLiteral") {
-				str.push(`\`${ConstructLiteral(node.alternate)}\``);
-			} else {
-				str.push("_");
-			}
-
-			str.push("}");
-		} else if (node.type === "TemplateLiteral") {
-			str.push(`\`${ConstructLiteral(node)}\``);
-		} else {
-			str.push("${}");
-		}
+		str.push(...FormatNode(node));
 	}
 
 	return str.join("");
+}
+
+function FormatNode(node, noWrap = false) {
+	const str = [];
+
+	if (node.type === Syntax.TemplateElement) {
+		str.push(node.value.raw);
+	} else if (
+		node.type === Syntax.MemberExpression &&
+		node.property.type === Syntax.Identifier &&
+		IsSafeName(node.property.name)
+	) {
+		str.push(`\${${node.property.name}}`);
+	} else if (node.type === Syntax.Identifier && IsSafeName(node.name)) {
+		str.push(`\${${node.name}}`);
+	} else if (node.type === Syntax.ConditionalExpression) {
+		str.push("${");
+
+		if (
+			node.test.type === Syntax.MemberExpression &&
+			node.test.property.type === Syntax.Identifier &&
+			IsSafeName(node.test.property.name)
+		) {
+			str.push(node.test.property.name);
+		} else if (node.test.type === Syntax.Identifier && IsSafeName(node.test.name)) {
+			str.push(node.test.name);
+		} else {
+			str.push("_");
+		}
+
+		str.push(" ? ");
+
+		if (node.consequent.type === Syntax.Literal) {
+			str.push(node.consequent.raw);
+		} else if (node.consequent.type === Syntax.TemplateLiteral) {
+			str.push(`\`${ConstructLiteral(node.consequent)}\``);
+		} else {
+			str.push("_");
+		}
+
+		str.push(" : ");
+
+		if (node.alternate.type === Syntax.Literal) {
+			str.push(node.alternate.raw);
+		} else if (node.alternate.type === Syntax.TemplateLiteral) {
+			str.push(`\`${ConstructLiteral(node.alternate)}\``);
+		} else {
+			str.push("_");
+		}
+
+		str.push("}");
+	} else if (node.type === Syntax.TemplateLiteral) {
+		if (noWrap) {
+			str.push(ConstructLiteral(node));
+		} else {
+			str.push(`\`${ConstructLiteral(node)}\``);
+		}
+	} else if (node.type === Syntax.Literal) {
+		str.push(node.value);
+	} else if (node.type === Syntax.BinaryExpression) {
+		str.push(...FormatNode(node.left, true));
+		str.push(...FormatNode(node.right, true));
+	} else {
+		str.push("${}");
+	}
+
+	return str;
 }
