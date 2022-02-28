@@ -7,6 +7,9 @@ import { traverse, Syntax } from "estraverse";
 //const files = ["steamcommunity.com\\public\\javascript\\applications\\community\\broadcasts.js"];
 const files = ["steamcommunity.com\\public\\javascript\\webui\\steammessages.js"];
 
+const allServices = [];
+const allMessages = [];
+
 for (const file of files) {
 	try {
 		const code = fs.readFileSync(file);
@@ -48,13 +51,19 @@ for (const file of files) {
 		});
 
 		FixTypesCrossModule(messages, crossModuleExportedMessages);
-		OutputMessages(messages);
-		OutputServices(services);
+
+		allServices.push(...services);
+		allMessages.push(...messages);
 	} catch (e) {
 		console.error(`Unable to parse "${path.basename(file)}":`, e);
 		continue;
 	}
 }
+
+OutputMessages(allMessages);
+
+const properServices = SplitServices(allServices);
+OutputServices(properServices);
 
 function FixTypesCrossModule(messages, crossModuleExportedMessages) {
 	for (const message of messages) {
@@ -139,18 +148,41 @@ function OutputMessages(messages, stream = process.stdout) {
 	}
 }
 
+function SplitServices(services) {
+	const cleanServices = new Map();
+
+	for (const rawMethod of services) {
+		if (!rawMethod.name.endsWith("#1")) {
+			throw new Error("Unexpected service name");
+		}
+
+		const [serviceName, methodName] = rawMethod.name.substring(0, rawMethod.name.length - 2).split(".", 2);
+
+		let service = cleanServices.get(serviceName);
+
+		if (!service) {
+			service = {
+				methods: [],
+			};
+			cleanServices.set(serviceName, service);
+		}
+
+		rawMethod.name = methodName;
+		service.methods.push(rawMethod);
+	}
+
+	return cleanServices;
+}
+
 function OutputServices(services, stream = process.stdout) {
-	for (const service of services) {
-		stream.write(`\trpc ${service.name}\n`);
-		/*
-		stream.write(`service ${service.service} {\n`);
+	for (const [name, service] of services) {
+		stream.write(`service ${name} {\n`);
 
 		for (const method of service.methods) {
 			stream.write(`\trpc ${method.name} (.${method.request}) returns (.${method.response});\n`);
 		}
 
 		stream.write("}\n\n");
-		*/
 	}
 }
 
@@ -291,9 +323,7 @@ function TraverseModule(ast) {
 				node.expression.right.properties[0].key.name === "name" &&
 				node.expression.right.properties[1].key.name === "request"
 			) {
-				services.push({
-					name: node.expression.right.properties[0].value.value,
-				});
+				services.push(GetMsgResponse(node, messages));
 				this.skip();
 				return;
 			}
@@ -304,10 +334,13 @@ function TraverseModule(ast) {
 				});
 			*/
 			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
-				if (node.property.name === "SendMsg" || node.property.name === "SendNotificaton") {
-					services.push(TraverseSendMsg(parent, node.property.name === "SendNotificaton"));
-					this.skip();
+				if (node.property.name === "SendMsg") {
+					services.push(GetMsgRequest(parent, messages, false));
+				} else if (node.property.name === "SendNotificaton") {
+					services.push(GetMsgRequest(parent, messages, true));
 				}
+
+				this.skip();
 			}
 		},
 	});
@@ -458,20 +491,62 @@ function GetClassNameLiteral(ast) {
 	return value;
 }
 
-function TraverseSendMsg(node, isNotification) {
+function GetMsgResponse(node, messages) {
+	if (node.expression.right.properties[0].value.type !== Syntax.Literal) {
+		throw new Error("Unexpected request name");
+	}
+
+	if (node.expression.right.properties[1].value.type !== Syntax.Identifier) {
+		throw new Error("Unexpected request message");
+	}
+
+	const requestToLookup = node.expression.right.properties[1].value.name;
+	const message = messages.find((m) => m.id === requestToLookup);
+
+	if (!message) {
+		throw new Error("Failed to find request message");
+	}
+
+	return {
+		name: node.expression.right.properties[0].value.value,
+		request: message.className,
+		response: "NoResponse",
+	};
+}
+
+function GetMsgRequest(node, messages, isNotification) {
 	if (
 		node.type !== Syntax.CallExpression ||
 		node.arguments.length !== 4 ||
+		node.arguments[2].type !== Syntax.Identifier ||
 		node.arguments[3].type !== Syntax.ObjectExpression
 	) {
 		throw new Error("Unexpected send msg");
 	}
 
 	const name = node.arguments[0].value;
+	const responseToLookup = node.arguments[2].name;
+	const response = messages.find((m) => m.id === responseToLookup);
+
+	if (!response) {
+		throw new Error("Failed to find response message");
+	}
+
+	if (!response.className.endsWith("_Response")) {
+		throw new Error("Unexpected message response");
+	}
+
+	const requestToLookup =
+		response.className.substring(0, response.className.length - "_Response".length) +
+		(isNotification ? "_Notification" : "_Request");
+
+	// TODO: This needs to be looked up across modules
+	const request = messages.find((m) => m.className === requestToLookup) || { className: "NotImplemented" };
 
 	return {
 		name: name,
-		isNotification: isNotification,
+		request: request.className,
+		response: response.className,
 	};
 }
 
