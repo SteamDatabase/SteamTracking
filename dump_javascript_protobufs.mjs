@@ -10,6 +10,7 @@ for (const file of files) {
 	try {
 		const code = fs.readFileSync(file);
 		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
+		const crossModuleExportedMessages = new Map();
 		const services = [];
 		const messages = [];
 
@@ -23,8 +24,18 @@ for (const file of files) {
 						return;
 					}
 
-					const currentModule = node.key.raw; // .value?
 					const result = TraverseModule(node.value);
+					let currentModule;
+
+					if (node.key.type === Syntax.Identifier) {
+						currentModule = node.key.name;
+					} else if (node.key.type === Syntax.Literal) {
+						currentModule = node.key.value;
+					} else {
+						throw new Error("Failed to find key name");
+					}
+
+					crossModuleExportedMessages.set(currentModule, result.exportedIds);
 
 					// Look up field types from other messages in same module
 					FixTypesSameModule(result.messages);
@@ -35,11 +46,45 @@ for (const file of files) {
 			},
 		});
 
+		FixTypesCrossModule(messages, crossModuleExportedMessages);
 		OutputMessages(messages);
 		OutputServices(services);
 	} catch (e) {
 		console.error(`Unable to parse "${path.basename(file)}":`, e);
 		continue;
+	}
+}
+
+function FixTypesCrossModule(messages, crossModuleExportedMessages) {
+	for (const message of messages) {
+		for (const field of message.fields) {
+			if (field.typeToLookup === null) {
+				continue;
+			}
+
+			if (field.typeToLookup.module !== null) {
+				const moduleExported = crossModuleExportedMessages.get(field.typeToLookup.module);
+
+				if (!moduleExported) {
+					// TODO: Cross-file modules
+					//throw new Error("Failed to find module");
+					continue;
+				}
+
+				const className = moduleExported.get(field.typeToLookup.name);
+
+				if (!className) {
+					throw new Error("Failed to exported name");
+				}
+
+				field.type = `.${className}`;
+				field.typeToLookup = null;
+			}
+
+			if (field.typeToLookup !== null) {
+				throw new Error("Failed to find type");
+			}
+		}
 	}
 }
 
@@ -113,6 +158,7 @@ function TraverseModule(ast) {
 	const messages = [];
 	const importedIds = new Map();
 	const exportedIds = new Map();
+	const exportedIdsFlipped = new Map();
 	const webpackRequireName = ast.params[2].name;
 	let messageIdentifier = null;
 
@@ -141,6 +187,7 @@ function TraverseModule(ast) {
 				const localId = node.arguments[2].body.body[0].argument.name;
 
 				exportedIds.set(exportedId, localId);
+				exportedIdsFlipped.set(localId, exportedId);
 
 				this.skip();
 			}
@@ -189,6 +236,13 @@ function TraverseModule(ast) {
 				const message = TraverseClass(node.body, importedIds);
 				message.id = node.id.name;
 				messages.push(message);
+
+				const exportedId = exportedIdsFlipped.get(node.id.name);
+
+				if (exportedId) {
+					exportedIds.set(exportedId, message.className);
+				}
+
 				this.skip();
 			}
 
