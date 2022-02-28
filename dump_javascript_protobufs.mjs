@@ -4,7 +4,8 @@ import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
 
 //const files = await GetListOfFilesToParse("./.support/original_js/");
-const files = ["steamcommunity.com\\public\\javascript\\applications\\community\\broadcasts.js"];
+//const files = ["steamcommunity.com\\public\\javascript\\applications\\community\\broadcasts.js"];
+const files = ["steamcommunity.com\\public\\javascript\\webui\\steammessages.js"];
 
 for (const file of files) {
 	try {
@@ -190,6 +191,12 @@ function TraverseModule(ast) {
 				exportedIdsFlipped.set(localId, exportedId);
 
 				this.skip();
+				return;
+			}
+
+			if (node.type === Syntax.FunctionDeclaration) {
+				this.skip();
+				return;
 			}
 
 			/*
@@ -208,6 +215,28 @@ function TraverseModule(ast) {
 				const importedId = node.init.arguments[0].value;
 
 				importedIds.set(localId, importedId);
+
+				return;
+			}
+
+			/*
+				var a = (r("poSC"), r("fzER"));
+			*/
+			if (node.type === Syntax.VariableDeclarator && node.init?.type === Syntax.SequenceExpression) {
+				const call = node.init.expressions[node.init.expressions.length - 1];
+
+				if (call.type === Syntax.CallExpression && call.callee.name === webpackRequireName) {
+					if (call.arguments.length !== 1) {
+						throw new Error("Unexpected webpack require");
+					}
+
+					const localId = node.id.name;
+					const importedId = call.arguments[0].value;
+
+					importedIds.set(localId, importedId);
+
+					return;
+				}
 			}
 
 			/*
@@ -221,6 +250,7 @@ function TraverseModule(ast) {
 				node.init.property.name === "Message"
 			) {
 				messageIdentifier = node.id.name;
+				return;
 			}
 
 			// TODO: Support legacy non-class functions
@@ -244,6 +274,7 @@ function TraverseModule(ast) {
 				}
 
 				this.skip();
+				return;
 			}
 
 			/*
@@ -264,6 +295,7 @@ function TraverseModule(ast) {
 					name: node.expression.right.properties[0].value.value,
 				});
 				this.skip();
+				return;
 			}
 
 			/*
@@ -294,6 +326,7 @@ function TraverseClass(ast, importedIds) {
 			if (node.type === Syntax.MethodDefinition && node.key.type === Syntax.Identifier && node.key.name === "M") {
 				message.fields = TraverseFields(node.value, importedIds);
 				this.skip();
+				return;
 			}
 
 			if (
