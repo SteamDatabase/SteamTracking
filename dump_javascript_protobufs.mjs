@@ -16,12 +16,18 @@ for (const file of files) {
 		traverse(ast, {
 			enter: function (node) {
 				if (node.type === Syntax.Property) {
+					this.skip();
+
+					if (node.value.type !== Syntax.FunctionExpression || node.value.params.length !== 3) {
+						// (module, module.exports, __webpack_require__)
+						return;
+					}
+
+					const currentModule = node.key.raw; // .value?
 					const result = TraverseModule(node.value);
 
 					services.push(...result.services);
 					messages.push(...result.messages);
-
-					this.skip();
 				}
 			},
 		});
@@ -82,10 +88,43 @@ function OutputServices(services, stream = process.stdout) {
 function TraverseModule(ast) {
 	const services = [];
 	const messages = [];
+	const exportedIds = new Map();
+	const webpackRequireName = ast.params[2].name;
 	let messageIdentifier = null;
 
 	traverse(ast, {
 		enter: function (node, parent) {
+			/*
+				r.d(t, "a", function () {
+					return m;
+				}),
+			*/
+			if (
+				node.type === Syntax.CallExpression &&
+				node.callee.type === Syntax.MemberExpression &&
+				node.callee.object.name === webpackRequireName &&
+				node.callee.property.name === "d"
+			) {
+				const exportedId = node.arguments[1].value;
+
+				if (
+					node.arguments[2].type !== Syntax.FunctionExpression ||
+					node.arguments[2].body.type !== Syntax.BlockStatement ||
+					node.arguments[2].body.body[0].type !== Syntax.ReturnStatement
+				) {
+					throw new Error("Unexpected webpack function");
+				}
+
+				var localId = node.arguments[2].body.body[0].argument.name;
+
+				exportedIds.set(exportedId, localId);
+
+				this.skip();
+			}
+
+			/*
+				const s = a.Message;
+			*/
 			if (
 				node.type === Syntax.VariableDeclarator &&
 				node.id.type === Syntax.Identifier &&
@@ -97,16 +136,27 @@ function TraverseModule(ast) {
 			}
 
 			// TODO: Support legacy non-class functions
+			/*
+				class o extends s {
+			*/
 			if (
 				messageIdentifier !== null &&
 				node.type === Syntax.ClassDeclaration &&
 				node.superClass?.type === Syntax.Identifier &&
 				node.superClass.name === messageIdentifier
 			) {
-				messages.push(TraverseClass(node.body));
+				const message = TraverseClass(node.body);
+				message.id = node.id.name;
+				messages.push(message);
 				this.skip();
 			}
 
+			/*
+				e.NotifyUnlockedH264Handler = {
+					name: "VideoClient.NotifyUnlockedH264#1",
+					request: o,
+				};
+			*/
 			if (
 				node.type === Syntax.ExpressionStatement &&
 				node.expression.type === Syntax.AssignmentExpression &&
@@ -121,6 +171,11 @@ function TraverseModule(ast) {
 				this.skip();
 			}
 
+			/*
+				return e.SendMsg("Video.ClientGetVideoURL#1", t, s, {
+					ePrivilege: 1,
+				});
+			*/
 			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
 				if (node.property.name === "SendMsg" || node.property.name === "SendNotificaton") {
 					services.push(TraverseSendMsg(parent, node.property.name === "SendNotificaton"));
@@ -130,7 +185,7 @@ function TraverseModule(ast) {
 		},
 	});
 
-	return { services, messages };
+	return { services, messages, exportedIds };
 }
 
 function TraverseClass(ast) {
