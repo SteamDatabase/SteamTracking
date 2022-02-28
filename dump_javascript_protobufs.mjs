@@ -26,6 +26,9 @@ for (const file of files) {
 					const currentModule = node.key.raw; // .value?
 					const result = TraverseModule(node.value);
 
+					// Look up field types from other messages in same module
+					FixTypesSameModule(result.messages);
+
 					services.push(...result.services);
 					messages.push(...result.messages);
 				}
@@ -37,6 +40,26 @@ for (const file of files) {
 	} catch (e) {
 		console.error(`Unable to parse "${path.basename(file)}":`, e);
 		continue;
+	}
+}
+
+function FixTypesSameModule(messages) {
+	for (const message of messages) {
+		for (const field of message.fields) {
+			if (field.typeToLookup !== null && field.typeToLookup.module === null) {
+				for (const otherMessage of messages) {
+					if (otherMessage.id === field.typeToLookup.name) {
+						field.type = `.${otherMessage.className}`;
+						field.typeToLookup = null;
+						break;
+					}
+				}
+
+				if (field.typeToLookup !== null) {
+					throw new Error("Failed to find type in current module");
+				}
+			}
+		}
 	}
 }
 
@@ -88,6 +111,7 @@ function OutputServices(services, stream = process.stdout) {
 function TraverseModule(ast) {
 	const services = [];
 	const messages = [];
+	const importedIds = new Map();
 	const exportedIds = new Map();
 	const webpackRequireName = ast.params[2].name;
 	let messageIdentifier = null;
@@ -105,8 +129,6 @@ function TraverseModule(ast) {
 				node.callee.object.name === webpackRequireName &&
 				node.callee.property.name === "d"
 			) {
-				const exportedId = node.arguments[1].value;
-
 				if (
 					node.arguments[2].type !== Syntax.FunctionExpression ||
 					node.arguments[2].body.type !== Syntax.BlockStatement ||
@@ -115,11 +137,30 @@ function TraverseModule(ast) {
 					throw new Error("Unexpected webpack function");
 				}
 
-				var localId = node.arguments[2].body.body[0].argument.name;
+				const exportedId = node.arguments[1].value;
+				const localId = node.arguments[2].body.body[0].argument.name;
 
 				exportedIds.set(exportedId, localId);
 
 				this.skip();
+			}
+
+			/*
+				var a = r("q1tI")
+			*/
+			if (
+				node.type === Syntax.VariableDeclarator &&
+				node.init?.type === Syntax.CallExpression &&
+				node.init.callee.name === webpackRequireName
+			) {
+				if (node.init.arguments.length !== 1) {
+					throw new Error("Unexpected webpack require");
+				}
+
+				const localId = node.id.name;
+				const importedId = node.init.arguments[0].value;
+
+				importedIds.set(localId, importedId);
 			}
 
 			/*
@@ -145,7 +186,7 @@ function TraverseModule(ast) {
 				node.superClass?.type === Syntax.Identifier &&
 				node.superClass.name === messageIdentifier
 			) {
-				const message = TraverseClass(node.body);
+				const message = TraverseClass(node.body, importedIds);
 				message.id = node.id.name;
 				messages.push(message);
 				this.skip();
@@ -188,7 +229,7 @@ function TraverseModule(ast) {
 	return { services, messages, exportedIds };
 }
 
-function TraverseClass(ast) {
+function TraverseClass(ast, importedIds) {
 	const message = {
 		className: null,
 		fields: [],
@@ -197,7 +238,7 @@ function TraverseClass(ast) {
 	traverse(ast, {
 		enter: function (node) {
 			if (node.type === Syntax.MethodDefinition && node.key.type === Syntax.Identifier && node.key.name === "M") {
-				message.fields = TraverseFields(node.value);
+				message.fields = TraverseFields(node.value, importedIds);
 				this.skip();
 			}
 
@@ -219,7 +260,7 @@ function TraverseClass(ast) {
 	return message;
 }
 
-function TraverseFields(ast) {
+function TraverseFields(ast, importedIds) {
 	const fields = [];
 
 	traverse(ast, {
@@ -234,6 +275,7 @@ function TraverseFields(ast) {
 						id: null,
 						name: prop.key.name,
 						type: null,
+						typeToLookup: null,
 						flag: "optional",
 					};
 
@@ -252,10 +294,21 @@ function TraverseFields(ast) {
 							field.default = EvaluateConstant(fieldProp);
 						} else if (fieldProp.key.name === "c") {
 							if (fieldProp.value.type === Syntax.Identifier) {
-								// TODO: Look it up
-								//field.typeToLookup = fieldProp.value.name;
+								field.typeToLookup = {
+									module: null,
+									name: fieldProp.value.name,
+								};
 							} else if (fieldProp.value.type === Syntax.MemberExpression) {
-								// TODO: Looking up proto message from another module
+								const importedModule = importedIds.get(fieldProp.value.object.name);
+
+								if (!importedModule) {
+									throw new Error("Failed to find imported module");
+								}
+
+								field.typeToLookup = {
+									module: importedModule,
+									name: fieldProp.value.property.name,
+								};
 							} else {
 								throw new Error("Unexpected field.c");
 							}
