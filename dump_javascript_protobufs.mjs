@@ -3,9 +3,7 @@ import fs from "fs";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
 
-//const files = await GetListOfFilesToParse("./.support/original_js/");
-//const files = ["steamcommunity.com\\public\\javascript\\applications\\community\\broadcasts.js"];
-const files = ["steamcommunity.com\\public\\javascript\\webui\\steammessages.js"];
+const files = await GetListOfFilesToParse("./.support/original_js/");
 
 const allServices = [];
 const allMessages = [];
@@ -226,7 +224,7 @@ function TraverseModule(ast) {
 				return;
 			}
 
-			if (node.type === Syntax.FunctionDeclaration) {
+			if (node.type === Syntax.FunctionDeclaration || node.type === Syntax.MethodDefinition) {
 				this.skip();
 				return;
 			}
@@ -592,7 +590,7 @@ function GetMsgRequest(node, messages, isNotification) {
 		node.arguments[2].type !== Syntax.Identifier ||
 		node.arguments[3].type !== Syntax.ObjectExpression
 	) {
-		throw new Error("Unexpected send msg");
+		return;
 	}
 
 	const name = node.arguments[0].value;
