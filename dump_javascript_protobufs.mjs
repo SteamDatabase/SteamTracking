@@ -253,6 +253,7 @@ function TraverseModule(ast) {
 
 			/*
 				var a = (r("poSC"), r("fzER"));
+				var s = (n("SvTV"), i.Message);
 			*/
 			if (node.type === Syntax.VariableDeclarator && node.init?.type === Syntax.SequenceExpression) {
 				const call = node.init.expressions[node.init.expressions.length - 1];
@@ -267,6 +268,15 @@ function TraverseModule(ast) {
 
 					importedIds.set(localId, importedId);
 
+					return;
+				}
+
+				if (
+					call.type === Syntax.MemberExpression &&
+					call.property.type === Syntax.Identifier &&
+					call.property.name === "Message"
+				) {
+					messageIdentifier = node.id.name;
 					return;
 				}
 			}
@@ -285,7 +295,6 @@ function TraverseModule(ast) {
 				return;
 			}
 
-			// TODO: Support legacy non-class functions
 			/*
 				class o extends s {
 			*/
@@ -299,7 +308,34 @@ function TraverseModule(ast) {
 				message.id = node.id.name;
 				messages.push(message);
 
-				const exportedId = exportedIdsFlipped.get(node.id.name);
+				const exportedId = exportedIdsFlipped.get(message.id);
+
+				if (exportedId) {
+					exportedIds.set(exportedId, message.className);
+				}
+
+				this.skip();
+				return;
+			}
+
+			/*
+				c = (function (n) {
+
+				})(s);
+			*/
+			if (
+				messageIdentifier !== null &&
+				node.type === Syntax.CallExpression &&
+				parent?.id?.type === Syntax.Identifier &&
+				node.arguments.length === 1 &&
+				node.arguments[0].type === Syntax.Identifier &&
+				node.arguments[0].name === messageIdentifier
+			) {
+				const message = TraverseTranspiledClass(node.callee.body, importedIds);
+				message.id = parent.id.name;
+				messages.push(message);
+
+				const exportedId = exportedIdsFlipped.get(message.id);
 
 				if (exportedId) {
 					exportedIds.set(exportedId, message.className);
@@ -346,6 +382,41 @@ function TraverseModule(ast) {
 	});
 
 	return { services, messages, exportedIds };
+}
+
+function TraverseTranspiledClass(ast, importedIds) {
+	const message = {
+		className: null,
+		fields: [],
+	};
+
+	traverse(ast, {
+		enter: function (node) {
+			if (
+				node.type !== Syntax.AssignmentExpression ||
+				node.left.type !== Syntax.MemberExpression ||
+				node.left.property.type !== Syntax.Identifier ||
+				node.right.type !== Syntax.FunctionExpression
+			) {
+				return;
+			}
+
+			this.skip();
+
+			if (node.left.property.name === "M") {
+				message.fields = TraverseFields(node.right.body, importedIds);
+			}
+			else if (node.left.property.name === "getClassName") {
+				message.className = GetClassNameLiteral(node.right.body);
+			}
+		},
+	});
+
+	if (message.className === null) {
+		throw new Error("Failed to find classname");
+	}
+
+	return message;
 }
 
 function TraverseClass(ast, importedIds) {
