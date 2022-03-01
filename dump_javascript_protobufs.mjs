@@ -100,6 +100,12 @@ function FixTypesSameModule(messages) {
 	for (const message of messages) {
 		for (const field of message.fields) {
 			if (field.typeToLookup !== null && field.typeToLookup.module === null) {
+				if (field.typeToLookup.recursive) {
+					field.type = `.${message.className}`;
+					field.typeToLookup = null;
+					continue;
+				}
+
 				for (const otherMessage of messages) {
 					if (otherMessage.id === field.typeToLookup.name) {
 						field.type = `.${otherMessage.className}`;
@@ -325,6 +331,7 @@ function TraverseModule(ast) {
 				messageIdentifier !== null &&
 				node.type === Syntax.CallExpression &&
 				parent?.id?.type === Syntax.Identifier &&
+				node.callee.type === Syntax.FunctionExpression &&
 				node.arguments.length === 1 &&
 				node.arguments[0].type === Syntax.Identifier &&
 				node.arguments[0].name === messageIdentifier
@@ -368,10 +375,15 @@ function TraverseModule(ast) {
 				});
 			*/
 			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
+				let msg = null;
 				if (node.property.name === "SendMsg") {
-					services.push(GetMsgRequest(parent, messages, false));
+					msg = GetMsgRequest(parent, messages, false);
 				} else if (node.property.name === "SendNotificaton") {
-					services.push(GetMsgRequest(parent, messages, true));
+					msg = GetMsgRequest(parent, messages, true);
+				}
+
+				if (msg !== null) {
+					services.push(msg);
 				}
 
 				this.skip();
@@ -403,8 +415,7 @@ function TraverseTranspiledClass(ast, importedIds) {
 
 			if (node.left.property.name === "M") {
 				message.fields = TraverseFields(node.right.body, importedIds);
-			}
-			else if (node.left.property.name === "getClassName") {
+			} else if (node.left.property.name === "getClassName") {
 				message.className = GetClassNameLiteral(node.right.body);
 			}
 		},
@@ -451,9 +462,18 @@ function TraverseClass(ast, importedIds) {
 
 function TraverseFields(ast, importedIds) {
 	const fields = [];
+	let selfProtoIdentifier = null;
 
 	traverse(ast, {
 		enter: function (node) {
+			if (node.type === Syntax.Property && node.key.type === Syntax.Identifier && node.key.name === "proto") {
+				if (node.value.type !== Syntax.Identifier) {
+					throw new Error("Unexpected property");
+				}
+
+				selfProtoIdentifier = node.value.name;
+			}
+
 			if (node.type === Syntax.Property && node.key.type === Syntax.Identifier && node.key.name === "fields") {
 				for (const prop of node.value.properties) {
 					if (prop.type !== Syntax.Property || prop.value.type !== Syntax.ObjectExpression) {
@@ -483,10 +503,18 @@ function TraverseFields(ast, importedIds) {
 							field.default = EvaluateConstant(fieldProp);
 						} else if (fieldProp.key.name === "c") {
 							if (fieldProp.value.type === Syntax.Identifier) {
-								field.typeToLookup = {
-									module: null,
-									name: fieldProp.value.name,
-								};
+								// Recursive messages
+								if (selfProtoIdentifier === fieldProp.value.name) {
+									field.typeToLookup = {
+										module: null,
+										recursive: true,
+									};
+								} else {
+									field.typeToLookup = {
+										module: null,
+										name: fieldProp.value.name,
+									};
+								}
 							} else if (fieldProp.value.type === Syntax.MemberExpression) {
 								const importedModule = importedIds.get(fieldProp.value.object.name);
 
@@ -590,7 +618,7 @@ function GetMsgRequest(node, messages, isNotification) {
 		node.arguments[2].type !== Syntax.Identifier ||
 		node.arguments[3].type !== Syntax.ObjectExpression
 	) {
-		return;
+		return null;
 	}
 
 	const name = node.arguments[0].value;
