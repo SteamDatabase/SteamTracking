@@ -620,7 +620,7 @@ function GetMsgRequest(node, messages, isNotification) {
 }
 
 function EvaluateConstant(node) {
-	if (node.value.type === Syntax.UnaryExpression && node.value.operator === "!") {
+	if (node.value.type === Syntax.UnaryExpression && ["!", "-"].includes(node.value.operator)) {
 		return node.value.argument.value === 0 ? true : false;
 	} else if (node.value.type === Syntax.Literal) {
 		return node.value.value;
