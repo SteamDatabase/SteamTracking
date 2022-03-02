@@ -63,8 +63,18 @@ for (const file of files) {
 
 OutputMessages(allMessages);
 
-const properServices = SplitServices(allServices);
-OutputServices(properServices);
+const splitServices = SplitServices(allServices);
+const groupedServices = GroupServices(splitServices);
+
+console.log("Found", splitServices.size, "services");
+
+// TODO: Lost rpcs in service_cloud
+// TODO: Wrong request - rpc RedeemPointsForBadgeLevel (.CLoyaltyRewards_RedeemPoints_Request)
+for (const [name, services] of groupedServices) {
+	const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
+
+	await OutputToFile(fileName, services);
+}
 
 function FixTypesCrossModule(messages, crossModuleExportedMessages) {
 	for (const message of messages) {
@@ -99,30 +109,17 @@ function FixTypesCrossModule(messages, crossModuleExportedMessages) {
 	}
 }
 
-function FixTypesSameModule(messages) {
-	for (const message of messages) {
-		for (const field of message.fields) {
-			if (field.typeToLookup !== null && field.typeToLookup.module === null) {
-				if (field.typeToLookup.recursive) {
-					field.type = `.${message.className}`;
-					field.typeToLookup = null;
-					continue;
-				}
+function OutputToFile(fileName, services) {
+	return new Promise((resolve) => {
+		let stream = createWriteStream(fileName, { flags: "w", encoding: "utf8" });
+		stream.once("close", resolve);
 
-				for (const otherMessage of messages) {
-					if (otherMessage.id === field.typeToLookup.name) {
-						field.type = `.${otherMessage.className}`;
-						field.typeToLookup = null;
-						break;
-					}
-				}
+		//outputImports(imports, stream);
+		//outputProtos(protos, stream);
+		OutputServices(services, stream);
 
-				if (field.typeToLookup !== null) {
-					throw new Error("Failed to find type in current module");
-				}
-			}
-		}
-	}
+		stream.end();
+	});
 }
 
 function OutputMessages(messages, stream = process.stdout) {
@@ -155,6 +152,19 @@ function OutputMessages(messages, stream = process.stdout) {
 	}
 }
 
+function OutputServices(services, stream = process.stdout) {
+	for (const { name, methods } of services) {
+		stream.write(`service ${name} {\n`);
+
+		for (const [, method] of methods) {
+			stream.write(`\trpc ${method.name} (.${method.request}) returns (.${method.response});\n`);
+		}
+
+		stream.write("}\n\n");
+	}
+}
+
+// Split rpc strings like "Service.Method#1" into their components and group all the methods
 function SplitServices(services) {
 	const cleanServices = new Map();
 
@@ -169,27 +179,72 @@ function SplitServices(services) {
 
 		if (!service) {
 			service = {
-				methods: [],
+				name: serviceName,
+				methods: new Map(),
 			};
 			cleanServices.set(serviceName, service);
 		}
 
 		rawMethod.name = methodName;
-		service.methods.push(rawMethod);
+
+		// TODO: Some methods may end up with not implemented request/response
+		service.methods.set(methodName, rawMethod);
 	}
 
 	return cleanServices;
 }
 
-function OutputServices(services, stream = process.stdout) {
-	for (const [name, service] of services) {
-		stream.write(`service ${name} {\n`);
+// Group "Client" and "Notifications" services into same dump
+function GroupServices(services) {
+	services = new Map([...services].sort((a, b) => String(a[0]).localeCompare(b[0])));
+	const groupedServices = new Map();
 
-		for (const method of service.methods) {
-			stream.write(`\trpc ${method.name} (.${method.request}) returns (.${method.response});\n`);
+	for (const [name, service] of services) {
+		let cleanName = name;
+
+		if (cleanName.endsWith("Notifications")) {
+			cleanName = cleanName.substring(0, cleanName.length - "Notifications".length);
 		}
 
-		stream.write("}\n\n");
+		if (cleanName.endsWith("Client")) {
+			cleanName = cleanName.substring(0, cleanName.length - "Client".length);
+		}
+
+		const groupedService = groupedServices.get(cleanName);
+
+		if (groupedService) {
+			groupedService.push(service);
+		} else {
+			groupedServices.set(cleanName, [service]);
+		}
+	}
+
+	return groupedServices;
+}
+
+function FixTypesSameModule(messages) {
+	for (const message of messages) {
+		for (const field of message.fields) {
+			if (field.typeToLookup !== null && field.typeToLookup.module === null) {
+				if (field.typeToLookup.recursive) {
+					field.type = `.${message.className}`;
+					field.typeToLookup = null;
+					continue;
+				}
+
+				for (const otherMessage of messages) {
+					if (otherMessage.id === field.typeToLookup.name) {
+						field.type = `.${otherMessage.className}`;
+						field.typeToLookup = null;
+						break;
+					}
+				}
+
+				if (field.typeToLookup !== null) {
+					throw new Error("Failed to find type in current module");
+				}
+			}
+		}
 	}
 }
 
