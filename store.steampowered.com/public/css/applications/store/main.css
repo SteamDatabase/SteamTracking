@@ -10771,13 +10771,7 @@ html.responsive.touch
   margin: 0px -24px;
   padding: 0px 24px;
   scroll-padding: 0px 64px;
-  width: 100vw;
-}
-.BasicUI
-  .partnersaledisplay_SaleSectionTabs_1FPIV
-  .partnersaledisplay_SaleSectionTabContainer_1Svj0::after {
-  content: " ";
-  min-width: 24px;
+  width: 100%;
 }
 .partnersaledisplay_SaleSectionTabs_1FPIV
   .partnersaledisplay_SaleSectionTabsRow_30oGT {
