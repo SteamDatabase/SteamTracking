@@ -14536,7 +14536,7 @@
           let j;
           Object(d.a)(m.d.EREALM)
             ? S.push(a(1880140), a(1846860))
-            : S.push(a(1446780), a(1880140), a(1846860)),
+            : S.push(a(1902490), a(1446780), a(1880140)),
             (j = {
               type: "banner",
               title: Object(s.f)("#FeaturedBanner_ArtistProfiles_Headline"),
