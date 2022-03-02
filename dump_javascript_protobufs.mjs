@@ -360,12 +360,12 @@ function TraverseModule(ast) {
 				};
 			*/
 			if (
-				node.type === Syntax.ExpressionStatement &&
-				node.expression.type === Syntax.AssignmentExpression &&
-				node.expression.right.type === Syntax.ObjectExpression &&
-				node.expression.right.properties.length === 2 &&
-				node.expression.right.properties[0].key.name === "name" &&
-				node.expression.right.properties[1].key.name === "request"
+				node.type === Syntax.AssignmentExpression &&
+				node.left.type === Syntax.MemberExpression &&
+				node.right.type === Syntax.ObjectExpression &&
+				node.right.properties.length === 2 &&
+				node.right.properties[0].key.name === "name" &&
+				node.right.properties[1].key.name === "request"
 			) {
 				services.push(GetMsgResponse(node, messages));
 				this.skip();
@@ -592,15 +592,15 @@ function GetClassNameLiteral(ast) {
 }
 
 function GetMsgResponse(node, messages) {
-	if (node.expression.right.properties[0].value.type !== Syntax.Literal) {
+	if (node.right.properties[0].value.type !== Syntax.Literal) {
 		throw new Error("Unexpected request name");
 	}
 
-	if (node.expression.right.properties[1].value.type !== Syntax.Identifier) {
+	if (node.right.properties[1].value.type !== Syntax.Identifier) {
 		throw new Error("Unexpected request message");
 	}
 
-	const requestToLookup = node.expression.right.properties[1].value.name;
+	const requestToLookup = node.right.properties[1].value.name;
 	const message = messages.find((m) => m.id === requestToLookup);
 
 	if (!message) {
@@ -608,7 +608,7 @@ function GetMsgResponse(node, messages) {
 	}
 
 	return {
-		name: node.expression.right.properties[0].value.value,
+		name: node.right.properties[0].value.value,
 		request: message.className,
 		response: "NoResponse",
 	};
