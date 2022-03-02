@@ -683,6 +683,23 @@ function TraverseModule(ast) {
 
 				this.skip();
 			}
+
+			/*
+				(e[(e.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
+			*/
+			if (
+				node.type === Syntax.SequenceExpression &&
+				node.expressions.every(
+					(e) =>
+						e.type === Syntax.AssignmentExpression &&
+						e.left.type === Syntax.MemberExpression &&
+						e.right.type === Syntax.Literal &&
+						e.left.property.type === Syntax.AssignmentExpression &&
+						e.left.property.left.property.name === e.right.value
+				)
+			) {
+				ParseEnum(node);
+			}
 		},
 	});
 
@@ -991,6 +1008,51 @@ function GetSendNotification(node) {
 			name: `C${serviceName}_${methodName}_Notification`, // Is this even correct?
 		},
 	};
+}
+
+function ParseEnum(node) {
+	const enumValues = [];
+
+	for (const expr of node.expressions) {
+		const name = expr.right.value;
+		const value = expr.left.property.right.value;
+
+		enumValues[name] = value;
+	}
+
+	let allEnumKeys = Object.keys(enumValues);
+	const commonName = allEnumKeys.reduce((str1, str2) => {
+		let i = 0;
+		while (i < str1.length && str1.charAt(i) === str2.charAt(i)) {
+			i++;
+		}
+		return str1.substring(0, i);
+	});
+	let enumName = commonName;
+
+	if (enumName.startsWith("k_")) {
+		enumName = enumName.substring(2);
+	}
+
+	if (enumName.endsWith("_")) {
+		enumName = enumName.substring(0, enumName.length - 1);
+	}
+
+	if (enumName.length < 2) {
+		return;
+	}
+
+	const reSubstrToReplace = new RegExp(`^${commonName}`);
+	allEnumKeys.forEach((keyName) => {
+		let newKeyName = keyName.replace(reSubstrToReplace, "");
+		if ("0123456789".includes(newKeyName.charAt(0))) {
+			newKeyName = "_" + newKeyName;
+		}
+		enumValues[newKeyName] = enumValues[keyName];
+		delete enumValues[keyName];
+	});
+
+	console.log(enumName, enumValues);
 }
 
 function EvaluateConstant(node) {
