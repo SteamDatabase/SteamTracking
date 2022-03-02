@@ -61,14 +61,11 @@ for (const file of files) {
 	}
 }
 
-OutputMessages(allMessages);
-
 const splitServices = SplitServices(allServices);
 const groupedServices = GroupServices(splitServices);
 
 console.log("Found", splitServices.size, "services");
 
-// TODO: Wrong request - rpc RedeemPointsForBadgeLevel (.CLoyaltyRewards_RedeemPoints_Request)
 for (const [name, services] of groupedServices) {
 	const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
 
@@ -718,8 +715,7 @@ function GetSendMsg(node, messages, importedIds) {
 			throw new Error("Unexpected message response");
 		}
 
-		const requestToLookup =
-			response.className.substring(0, response.className.length - "_Response".length) + "_Request";
+		const requestToLookup = "C" + name.replace(".", "_").replace("#1", "_Request");
 
 		// TODO: This needs to be looked up across modules
 		const request = messages.find((m) => m.className === requestToLookup) || { className: "NotImplemented" };
