@@ -83,10 +83,42 @@ console.log("Found", mergedMessages.size, "messages");
 for (const [name, services] of groupedServices) {
 	const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
 
-	// TODO: There may be more than one service in this dump
-	const messages = [...mergedMessages.values()].filter((m) => m.dependants.size === 1 && m.dependants.has(name));
+	// TODO: Implement common.proto
+	const consumedMessages = new Map();
 
-	await OutputToFile(fileName, services, messages);
+	for (const service of services) {
+		FillConsumedMethods(consumedMessages, service.name, mergedMessages);
+	}
+
+	await OutputToFile(fileName, services, consumedMessages);
+}
+
+function FillConsumedMethods(consumedMessages, dependencyName, messages) {
+	for (const [, message] of messages) {
+		if (!message.dependants.has(dependencyName)) {
+			continue;
+		}
+
+		consumedMessages.set(message.className, message);
+
+		// TODO: null field types
+		for (const field of message.fields) {
+			if (field.type === null || field.type[0] !== ".") {
+				continue;
+			}
+
+			const typeName = field.type.substring(1);
+			const method = messages.get(typeName);
+
+			if (!method) {
+				throw new Error("Failed to find field type method");
+			}
+
+			if (dependencyName !== typeName) {
+				FillConsumedMethods(consumedMessages, typeName, messages);
+			}
+		}
+	}
 }
 
 function OutputToFile(fileName, services, messages) {
@@ -103,7 +135,7 @@ function OutputToFile(fileName, services, messages) {
 }
 
 function OutputMessages(messages, stream = process.stdout) {
-	for (const message of messages) {
+	for (const [, message] of messages) {
 		stream.write(`message ${message.className} {\n`);
 
 		for (const field of message.fields) {
@@ -196,14 +228,14 @@ function SplitServices(services) {
 // Mark which services RPCs use a particular message
 // TODO: Mark dependencies in field types
 function MarkMethodDependants(services, messages) {
-	const MarkDependants = (serviceName, messageName) => {
+	const MarkDependants = (dependencyName, messageName) => {
 		const method = messages.get(messageName);
 
 		if (!method) {
 			throw new Error("Failed to find method");
 		}
 
-		method.dependants.add(serviceName);
+		method.dependants.add(dependencyName);
 
 		// TODO: null field types
 		for (const field of method.fields) {
@@ -211,14 +243,18 @@ function MarkMethodDependants(services, messages) {
 				continue;
 			}
 
-			const method = messages.get(field.type.substring(1));
+			const typeName = field.type.substring(1);
+			const method = messages.get(typeName);
 
 			if (!method) {
 				throw new Error("Failed to find field type method");
 			}
 
-			// TODO: Field types need to recurse and mark their dependants too
-			method.dependants.add(serviceName);
+			method.dependants.add(dependencyName);
+
+			if (messageName !== typeName) {
+				MarkDependants(messageName, typeName);
+			}
 		}
 	};
 
