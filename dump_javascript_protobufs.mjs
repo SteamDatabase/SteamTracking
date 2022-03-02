@@ -9,7 +9,18 @@ const outputPath = "./../ValveProtobufs/webui/";
 const files = await GetFilesToParse();
 
 const allServices = [];
-const allMessages = [];
+const allMessages = [
+	{
+		className: "NotImplemented",
+		dependants: new Set(),
+		fields: [],
+	},
+	{
+		className: "NoResponse", // Defined in steammessages_unified_base.steamclient.proto
+		dependants: new Set(),
+		fields: [],
+	},
+];
 
 for (const file of files) {
 	try {
@@ -61,24 +72,30 @@ for (const file of files) {
 	}
 }
 
+const mergedMessages = MergeMessages(allMessages);
 const splitServices = SplitServices(allServices);
+MarkMethodDependants(splitServices, mergedMessages);
 const groupedServices = GroupServices(splitServices);
 
 console.log("Found", splitServices.size, "services");
+console.log("Found", mergedMessages.size, "messages");
 
 for (const [name, services] of groupedServices) {
 	const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
 
-	await OutputToFile(fileName, services);
+	// TODO: There may be more than one service in this dump
+	const messages = [...mergedMessages.values()].filter((m) => m.dependants.size === 1 && m.dependants.has(name));
+
+	await OutputToFile(fileName, services, messages);
 }
 
-function OutputToFile(fileName, services) {
+function OutputToFile(fileName, services, messages) {
 	return new Promise((resolve) => {
 		let stream = createWriteStream(fileName, { flags: "w", encoding: "utf8" });
 		stream.once("close", resolve);
 
 		//outputImports(imports, stream);
-		//outputProtos(protos, stream);
+		OutputMessages(messages, stream);
 		OutputServices(services, stream);
 
 		stream.end();
@@ -176,6 +193,43 @@ function SplitServices(services) {
 	return cleanServices;
 }
 
+// Mark which services RPCs use a particular message
+// TODO: Mark dependencies in field types
+function MarkMethodDependants(services, messages) {
+	const MarkDependants = (serviceName, messageName) => {
+		const method = messages.get(messageName);
+
+		if (!method) {
+			throw new Error("Failed to find method");
+		}
+
+		method.dependants.add(serviceName);
+
+		// TODO: null field types
+		for (const field of method.fields) {
+			if (field.type === null || field.type[0] !== ".") {
+				continue;
+			}
+
+			const method = messages.get(field.type.substring(1));
+
+			if (!method) {
+				throw new Error("Failed to find field type method");
+			}
+
+			// TODO: Field types need to recurse and mark their dependants too
+			method.dependants.add(serviceName);
+		}
+	};
+
+	for (const [serviceName, service] of services) {
+		for (const [, method] of service.methods) {
+			MarkDependants(serviceName, method.request);
+			MarkDependants(serviceName, method.response);
+		}
+	}
+}
+
 // Group "Client" and "Notifications" services into same dump
 function GroupServices(services) {
 	services = new Map([...services].sort((a, b) => String(a[0]).localeCompare(b[0])));
@@ -205,6 +259,30 @@ function GroupServices(services) {
 	}
 
 	return groupedServices;
+}
+
+// Multiple .js files can produce same messages, so de-duplicate them
+function MergeMessages(allMessages) {
+	const keyedMessages = new Map();
+
+	for (const message of allMessages) {
+		const existingMessage = keyedMessages.get(message.className);
+
+		if (existingMessage) {
+			existingMessage.push(message);
+		} else {
+			keyedMessages.set(message.className, [message]);
+		}
+	}
+
+	const cleanMessages = new Map();
+
+	// TODO: Update fields as necessary, some js files may be older than others
+	for (const [className, messages] of keyedMessages) {
+		cleanMessages.set(className, messages[0]);
+	}
+
+	return new Map([...cleanMessages].sort((a, b) => String(a[0]).localeCompare(b[0])));
 }
 
 // TODO: Figure out a way to merge this with FixTypesCrossModule
@@ -542,6 +620,7 @@ function TraverseModule(ast) {
 function TraverseTranspiledClass(ast, importedIds) {
 	const message = {
 		className: null,
+		dependants: new Set(),
 		fields: [],
 	};
 
@@ -576,6 +655,7 @@ function TraverseTranspiledClass(ast, importedIds) {
 function TraverseClass(ast, importedIds) {
 	const message = {
 		className: null,
+		dependants: new Set(),
 		fields: [],
 	};
 
@@ -781,6 +861,8 @@ function GetSendMsg(node, messages, importedIds) {
 
 		const { serviceName, methodName } = SplitRpcString(name);
 
+		// TODO: We technically should be able to find the actual call site of this function
+		// and figure out which object is being constructed and passed into SendMsg()
 		return {
 			name: name,
 			response: response.className,
@@ -825,7 +907,7 @@ function GetSendNotification(node) {
 
 	let { serviceName, methodName } = SplitRpcString(name);
 
-	if(methodName.startsWith("Notify")) {
+	if (methodName.startsWith("Notify")) {
 		methodName = methodName.substring("Notify".length);
 	}
 
