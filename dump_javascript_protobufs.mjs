@@ -95,28 +95,8 @@ for (const [name, services] of groupedServices) {
 
 function FillConsumedMethods(consumedMessages, dependencyName, messages) {
 	for (const [, message] of messages) {
-		if (!message.dependants.has(dependencyName)) {
-			continue;
-		}
-
-		consumedMessages.set(message.className, message);
-
-		// TODO: null field types
-		for (const field of message.fields) {
-			if (field.type === null || field.type[0] !== ".") {
-				continue;
-			}
-
-			const typeName = field.type.substring(1);
-			const method = messages.get(typeName);
-
-			if (!method) {
-				throw new Error("Failed to find field type method");
-			}
-
-			if (dependencyName !== typeName) {
-				FillConsumedMethods(consumedMessages, typeName, messages);
-			}
+		if (message.dependants.has(dependencyName)) {
+			consumedMessages.set(message.className, message);
 		}
 	}
 }
@@ -228,14 +208,14 @@ function SplitServices(services) {
 // Mark which services RPCs use a particular message
 // TODO: Mark dependencies in field types
 function MarkMethodDependants(services, messages) {
-	const MarkDependants = (dependencyName, messageName) => {
+	const MarkDependants = (serviceName, messageName, parentMessageName = null) => {
 		const method = messages.get(messageName);
 
 		if (!method) {
 			throw new Error("Failed to find method");
 		}
 
-		method.dependants.add(dependencyName);
+		method.dependants.add(serviceName);
 
 		// TODO: null field types
 		for (const field of method.fields) {
@@ -250,10 +230,10 @@ function MarkMethodDependants(services, messages) {
 				throw new Error("Failed to find field type method");
 			}
 
-			method.dependants.add(dependencyName);
+			method.dependants.add(serviceName);
 
-			if (messageName !== typeName) {
-				MarkDependants(messageName, typeName);
+			if (parentMessageName !== typeName) {
+				MarkDependants(serviceName, typeName, messageName);
 			}
 		}
 	};
