@@ -276,7 +276,7 @@ function MarkMethodDependants(services, messages) {
 
 		// TODO: null field types
 		for (const field of method.fields) {
-			if (field.type === null || field.type[0] !== ".") {
+			if (field.type[0] !== ".") {
 				continue;
 			}
 
@@ -305,7 +305,7 @@ function MarkMethodDependants(services, messages) {
 
 // Group "Client" and "Notifications" services into same dump
 function GroupServices(services) {
-	services = new Map([...services].sort((a, b) => String(a[0]).localeCompare(b[0])));
+	services = SortMapByKey(services);
 	const groupedServices = new Map();
 
 	for (const [name, service] of services) {
@@ -321,8 +321,7 @@ function GroupServices(services) {
 
 		const groupedService = groupedServices.get(cleanName);
 
-		// TODO: Sort methods - old dumper didn't sort
-		//service.methods = new Map([...service.methods].sort((a, b) => String(a[0]).localeCompare(b[0])));
+		service.methods = SortMapByKey(service.methods);
 
 		if (groupedService) {
 			groupedService.push(service);
@@ -355,7 +354,7 @@ function MergeMessages(allMessages) {
 		cleanMessages.set(className, messages[0]);
 	}
 
-	return new Map([...cleanMessages].sort((a, b) => String(a[0]).localeCompare(b[0])));
+	return SortMapByKey(cleanMessages);
 }
 
 // TODO: Figure out a way to merge this with FixTypesCrossModule
@@ -781,7 +780,7 @@ function TraverseFields(ast, importedIds) {
 					const field = {
 						id: null,
 						name: prop.key.name,
-						type: null,
+						type: "UNKNOWN",
 						flag: "optional",
 					};
 
@@ -1002,4 +1001,8 @@ function EvaluateConstant(node) {
 	}
 
 	throw new Error("Unexpected constant");
+}
+
+function SortMapByKey(map) {
+	return new Map([...map].sort(([a], [b]) => a.localeCompare(b, "en-US")));
 }
