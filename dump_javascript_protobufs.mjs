@@ -73,32 +73,43 @@ for (const file of files) {
 }
 
 const mergedMessages = MergeMessages(allMessages);
-const splitServices = SplitServices(allServices);
-MarkMethodDependants(splitServices, mergedMessages);
-const groupedServices = GroupServices(splitServices);
 
-console.log("Found", splitServices.size, "services");
-console.log("Found", mergedMessages.size, "messages");
+{
+	const splitServices = SplitServices(allServices);
+	MarkMethodDependants(splitServices, mergedMessages);
+	const groupedServices = GroupServices(splitServices);
 
-for (const [name, services] of groupedServices) {
-	const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
+	console.log("Found", splitServices.size, "services");
+	console.log("Found", mergedMessages.size, "messages");
 
-	// TODO: Implement common.proto
-	const consumedMessages = new Map();
+	for (const [name, services] of groupedServices) {
+		const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
 
-	for (const service of services) {
-		FillConsumedMethods(consumedMessages, service.name, mergedMessages);
+		const consumedMessages = new Map();
+
+		for (const service of services) {
+			for (const [, message] of mergedMessages) {
+				if (message.dependants.has(service.name)) {
+					consumedMessages.set(message.className, message);
+				}
+			}
+		}
+
+		await OutputToFile(fileName, services, consumedMessages);
 	}
-
-	await OutputToFile(fileName, services, consumedMessages);
 }
 
-function FillConsumedMethods(consumedMessages, dependencyName, messages) {
-	for (const [, message] of messages) {
-		if (message.dependants.has(dependencyName)) {
-			consumedMessages.set(message.className, message);
+{
+	const commonMessages = new Map();
+
+	for (const [, message] of mergedMessages) {
+		// TODO: Implement messages that are used in multiple files
+		if (message.dependants.size === 0) {
+			commonMessages.set(message.className, message);
 		}
 	}
+
+	await OutputToFile(pathJoin(outputPath, "common.proto"), [], commonMessages);
 }
 
 function OutputToFile(fileName, services, messages) {
