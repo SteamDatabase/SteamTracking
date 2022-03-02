@@ -600,9 +600,6 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 		});
 	}
 
-	// sort messages by name to prevent shuffling
-	filteredProtos.sort((a, b) => a.name.localeCompare(b.name, "en-US"));
-
 	let fileName = path.join(outputFullPath, CONFIG.CommonProtoFileName);
 
 	return outputToFile(fileName, imports, filteredProtos, filteredServices);
@@ -620,6 +617,8 @@ function outputServices(services, stream = process.stdout) {
 	for (const service of services) {
 		stream.write(`service ${service.service} {\n`);
 
+		service.methods.sort((a, b) => a.name.localeCompare(b.name, "en-US"));
+
 		for (const method of service.methods) {
 			stream.write(`\trpc ${method.name} (.${method.request}) returns (.${method.response});\n`);
 		}
@@ -629,6 +628,7 @@ function outputServices(services, stream = process.stdout) {
 }
 
 function outputProtos(protos, stream = process.stdout) {
+	protos.sort((a, b) => a.name.localeCompare(b.name, "en-US"));
 	protos.forEach((proto) => {
 		if (proto.bCommon && proto.dependentServices) {
 			stream.write(`// Used by: ${[...proto.dependentServices]}\n`);
