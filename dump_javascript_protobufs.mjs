@@ -43,7 +43,7 @@ for (const file of files) {
 					crossModuleExportedMessages.set(currentModule, result.exportedIds);
 
 					// Look up field types from other messages in same module
-					FixTypesSameModule(result.messages);
+					FixTypesSameModule(result.services, result.messages);
 
 					services.push(...result.services);
 					messages.push(...result.messages);
@@ -127,16 +127,22 @@ function OutputServices(services, stream = process.stdout) {
 	}
 }
 
+function SplitRpcString(rpc) {
+	if (!rpc.endsWith("#1")) {
+		throw new Error("Unexpected service name");
+	}
+
+	const [serviceName, methodName] = rpc.substring(0, rpc.length - 2).split(".", 2);
+
+	return { serviceName, methodName };
+}
+
 // Split rpc strings like "Service.Method#1" into their components and group all the methods
 function SplitServices(services) {
 	const cleanServices = new Map();
 
 	for (const rawMethod of services) {
-		if (!rawMethod.name.endsWith("#1")) {
-			throw new Error("Unexpected service name");
-		}
-
-		const [serviceName, methodName] = rawMethod.name.substring(0, rawMethod.name.length - 2).split(".", 2);
+		const { serviceName, methodName } = SplitRpcString(rawMethod.name);
 
 		let service = cleanServices.get(serviceName);
 
@@ -150,7 +156,20 @@ function SplitServices(services) {
 
 		rawMethod.name = methodName;
 
-		// TODO: Some methods may end up with not implemented request/response
+		const existingMethod = service.methods.get(methodName);
+
+		if (existingMethod) {
+			if (existingMethod.request === "NotImplemented" && rawMethod.request !== existingMethod.request) {
+				existingMethod.request = rawMethod.request;
+			}
+
+			if (existingMethod.response === "NoResponse" && rawMethod.response !== existingMethod.response) {
+				existingMethod.response = rawMethod.response;
+			}
+
+			continue;
+		}
+
 		service.methods.set(methodName, rawMethod);
 	}
 
@@ -188,7 +207,8 @@ function GroupServices(services) {
 	return groupedServices;
 }
 
-function FixTypesSameModule(messages) {
+// TODO: Figure out a way to merge this with FixTypesCrossModule
+function FixTypesSameModule(services, messages) {
 	for (const message of messages) {
 		for (const field of message.fields) {
 			if (field.typeToLookup && field.typeToLookup.module === null) {
@@ -208,6 +228,30 @@ function FixTypesSameModule(messages) {
 
 				if (field.typeToLookup !== null) {
 					throw new Error("Failed to find type in current module");
+				}
+			}
+		}
+	}
+
+	for (const service of services) {
+		// TODO: service.responseToLookup
+
+		if (service.requestToLookup) {
+			//service.request = "NotImplemented"; // later set in FixTypesCrossModule
+
+			outerLoop: for (const nameType of ["name", "fallbackName"]) {
+				const requestToLookup = service.requestToLookup[nameType];
+
+				if (!requestToLookup) {
+					continue;
+				}
+
+				for (const message of messages) {
+					if (requestToLookup === message.className) {
+						service.request = message.className;
+						service.requestToLookup = null;
+						break outerLoop;
+					}
 				}
 			}
 		}
@@ -257,18 +301,38 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 	}
 
 	for (const service of services) {
-		if (!service.responseToLookup) {
-			continue;
+		if (service.responseToLookup) {
+			const className = GetType(service.responseToLookup);
+
+			if (className === null) {
+				continue;
+			}
+
+			service.response = className;
+			service.responseToLookup = null;
 		}
 
-		const className = GetType(service.responseToLookup);
+		if (service.requestToLookup) {
+			service.request = "NotImplemented";
 
-		if (className === null) {
-			continue;
+			outerLoop: for (const nameType of ["name", "fallbackName"]) {
+				const requestToLookup = service.requestToLookup[nameType];
+
+				if (!requestToLookup) {
+					continue;
+				}
+
+				for (const [, map] of crossModuleExportedMessages) {
+					for (const [, className] of map) {
+						if (requestToLookup === className) {
+							service.request = className;
+							service.requestToLookup = null;
+							break outerLoop;
+						}
+					}
+				}
+			}
 		}
-
-		service.response = className;
-		service.responseToLookup = null;
 	}
 }
 
@@ -715,15 +779,16 @@ function GetSendMsg(node, messages, importedIds) {
 			throw new Error("Unexpected message response");
 		}
 
-		const requestToLookup = "C" + name.replace(".", "_").replace("#1", "_Request");
-
-		// TODO: This needs to be looked up across modules
-		const request = messages.find((m) => m.className === requestToLookup) || { className: "NotImplemented" };
+		const { serviceName, methodName } = SplitRpcString(name);
 
 		return {
 			name: name,
-			request: request.className,
 			response: response.className,
+			requestToLookup: {
+				//module: null, // all modules
+				name: `C${serviceName}_${methodName}_Request`, // Is this even correct?
+				fallbackName: response.className.substring(0, response.className.length - "_Response".length) + "_Request", // TODO: fallback could be same as name
+			},
 		};
 	} else if (node.arguments[2].type === Syntax.MemberExpression) {
 		const importedModule = importedIds.get(node.arguments[2].object.name);
@@ -758,10 +823,19 @@ function GetSendNotification(node) {
 
 	const name = node.arguments[0].value;
 
+	let { serviceName, methodName } = SplitRpcString(name);
+
+	if(methodName.startsWith("Notify")) {
+		methodName = methodName.substring("Notify".length);
+	}
+
 	return {
 		name: name,
-		request: "NotImplemented", // TODO
 		response: "NoResponse",
+		requestToLookup: {
+			//module: null, // all modules
+			name: `C${serviceName}_${methodName}_Notification`, // Is this even correct?
+		},
 	};
 }
 
