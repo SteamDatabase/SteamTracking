@@ -8,15 +8,18 @@ import { GetFilesToParse } from "./dump_javascript_paths.mjs";
 const outputPath = "./../ValveProtobufs/webui/";
 const files = await GetFilesToParse();
 
+const NotImplemented = "NotImplemented";
+const NoResponse = "NoResponse";
+
 const allServices = [];
 const allMessages = [
 	{
-		className: "NotImplemented",
+		className: NotImplemented,
 		dependants: new Set(),
 		fields: [],
 	},
 	{
-		className: "NoResponse", // Defined in steammessages_unified_base.steamclient.proto
+		className: NoResponse,
 		dependants: new Set(),
 		fields: [],
 	},
@@ -74,50 +77,81 @@ for (const file of files) {
 
 const mergedMessages = MergeMessages(allMessages);
 
+console.log("Found", mergedMessages.size, "messages");
+
 {
 	const splitServices = SplitServices(allServices);
 	MarkMethodDependants(splitServices, mergedMessages);
 	const groupedServices = GroupServices(splitServices);
 
 	console.log("Found", splitServices.size, "services");
-	console.log("Found", mergedMessages.size, "messages");
 
 	for (const [name, services] of groupedServices) {
 		const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
 
+		const imports = new Set();
 		const consumedMessages = new Map();
 
-		for (const service of services) {
-			for (const [, message] of mergedMessages) {
-				if (message.dependants.has(service.name)) {
-					consumedMessages.set(message.className, message);
+		// Always include unified base, required for `description` attribute and NoResponse message
+		imports.add("steammessages_unified_base.steamclient.proto");
+
+		for (const [, message] of mergedMessages) {
+			const dependencyCount = GetMatchingDependencyCount(services, message.dependants);
+
+			if (dependencyCount < 1) {
+				continue;
+			}
+
+			if (dependencyCount === message.dependants.size) {
+				if (message.consumed) {
+					throw new Error("Message was already consumed");
 				}
+
+				message.consumed = true;
+				consumedMessages.set(message.className, message);
+			} else {
+				imports.add("common.proto");
 			}
 		}
 
-		await OutputToFile(fileName, services, consumedMessages);
+		await OutputToFile(fileName, imports, services, consumedMessages);
 	}
 }
 
 {
+	const imports = new Set(["steammessages_unified_base.steamclient.proto"]);
+
 	const commonMessages = new Map();
 
 	for (const [, message] of mergedMessages) {
-		// TODO: Implement messages that are used in multiple files
-		if (message.dependants.size === 0) {
+		if (!message.consumed && message.className !== NoResponse) {
 			commonMessages.set(message.className, message);
 		}
 	}
 
-	await OutputToFile(pathJoin(outputPath, "common.proto"), [], commonMessages);
+	console.log("Found", commonMessages.size, "common messages");
+
+	await OutputToFile(pathJoin(outputPath, "common.proto"), imports, [], commonMessages);
 }
 
-function OutputToFile(fileName, services, messages) {
+function GetMatchingDependencyCount(services, dependants) {
+	let dependencyCount = 0;
+
+	for (const { name } of services) {
+		if (dependants.has(name)) {
+			dependencyCount++;
+		}
+	}
+
+	return dependencyCount;
+}
+
+function OutputToFile(fileName, imports, services, messages) {
 	return new Promise((resolve) => {
 		let stream = createWriteStream(fileName, { flags: "w", encoding: "utf8" });
 		stream.once("close", resolve);
 
-		//outputImports(imports, stream);
+		OutputImports(imports, stream);
 		OutputMessages(messages, stream);
 		OutputServices(services, stream);
 
@@ -125,8 +159,20 @@ function OutputToFile(fileName, services, messages) {
 	});
 }
 
+function OutputImports(imports, stream = process.stdout) {
+	for (const importName of imports) {
+		stream.write(`import "${importName}";\n`);
+	}
+
+	stream.write("\n");
+}
+
 function OutputMessages(messages, stream = process.stdout) {
 	for (const [, message] of messages) {
+		if (!message.consumed && message.dependants.size > 0 && message.className !== NotImplemented) {
+			stream.write(`// Used by: ${[...message.dependants.values()]}\n`);
+		}
+
 		stream.write(`message ${message.className} {\n`);
 
 		for (const field of message.fields) {
@@ -199,11 +245,11 @@ function SplitServices(services) {
 		const existingMethod = service.methods.get(methodName);
 
 		if (existingMethod) {
-			if (existingMethod.request === "NotImplemented" && rawMethod.request !== existingMethod.request) {
+			if (existingMethod.request === NotImplemented && rawMethod.request !== existingMethod.request) {
 				existingMethod.request = rawMethod.request;
 			}
 
-			if (existingMethod.response === "NoResponse" && rawMethod.response !== existingMethod.response) {
+			if (existingMethod.response === NoResponse && rawMethod.response !== existingMethod.response) {
 				existingMethod.response = rawMethod.response;
 			}
 
@@ -342,7 +388,7 @@ function FixTypesSameModule(services, messages) {
 		// TODO: service.responseToLookup
 
 		if (service.requestToLookup) {
-			//service.request = "NotImplemented"; // later set in FixTypesCrossModule
+			//service.request = NotImplemented; // later set in FixTypesCrossModule
 
 			outerLoop: for (const nameType of ["name", "fallbackName"]) {
 				const requestToLookup = service.requestToLookup[nameType];
@@ -418,7 +464,7 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 		}
 
 		if (service.requestToLookup) {
-			service.request = "NotImplemented";
+			service.request = NotImplemented;
 
 			outerLoop: for (const nameType of ["name", "fallbackName"]) {
 				const requestToLookup = service.requestToLookup[nameType];
@@ -858,7 +904,7 @@ function GetMsgResponse(node, messages) {
 	return {
 		name: node.right.properties[0].value.value,
 		request: message.className,
-		response: "NoResponse",
+		response: NoResponse,
 	};
 }
 
@@ -908,7 +954,7 @@ function GetSendMsg(node, messages, importedIds) {
 
 		return {
 			name: name,
-			request: "NotImplemented",
+			request: NotImplemented,
 			responseToLookup: {
 				module: importedModule,
 				name: node.arguments[2].property.name,
@@ -940,7 +986,7 @@ function GetSendNotification(node) {
 
 	return {
 		name: name,
-		response: "NoResponse",
+		response: NoResponse,
 		requestToLookup: {
 			//module: null, // all modules
 			name: `C${serviceName}_${methodName}_Notification`, // Is this even correct?
