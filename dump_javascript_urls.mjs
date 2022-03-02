@@ -1,14 +1,14 @@
-import path from "path";
-import fs from "fs";
+import { readFile, writeFile } from "fs/promises";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
+import { GetFilesToParse } from "./dump_javascript_paths.mjs";
 
 const allStrings = new Set();
-const files = await GetListOfFilesToParse("./.support/original_js/");
+const files = await GetFilesToParse();
 
 for (const file of files) {
 	try {
-		const code = fs.readFileSync(file);
+		const code = await readFile(file);
 		const ast = parse(code, { ecmaVersion: latestEcmaVersion });
 
 		traverse(ast, {
@@ -23,7 +23,7 @@ for (const file of files) {
 			},
 		});
 	} catch (e) {
-		console.error(`Unable to parse "${path.basename(file)}": ${e}`);
+		console.error(`Unable to parse "${file}": ${e}`);
 		continue;
 	}
 }
@@ -32,15 +32,7 @@ console.log("Found", allStrings.size, "strings");
 
 const strings = [...allStrings.values()].sort().join("\n") + "\n";
 
-fs.writeFileSync("API/JavascriptUrls.txt", strings);
-
-function GetListOfFilesToParse(dirName) {
-	return fs.promises
-		.readdir(dirName)
-		.then((files) =>
-			files.filter((fileName) => fileName.endsWith("js")).map((fileName) => path.join(dirName, fileName))
-		);
-}
+await writeFile("API/JavascriptUrls.txt", strings);
 
 function IsLeftSideBaseUrlExpression(node) {
 	return node.left.type === Syntax.BinaryExpression

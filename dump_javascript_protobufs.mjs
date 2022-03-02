@@ -1,16 +1,19 @@
-import path from "path";
-import fs from "fs";
+import { join as pathJoin } from "path";
+import { readFile } from "fs/promises";
+import { createWriteStream } from "fs";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
+import { GetFilesToParse } from "./dump_javascript_paths.mjs";
 
-const files = await GetListOfFilesToParse("./.support/original_js/");
+const outputPath = "./../ValveProtobufs/webui/";
+const files = await GetFilesToParse();
 
 const allServices = [];
 const allMessages = [];
 
 for (const file of files) {
 	try {
-		const code = fs.readFileSync(file);
+		const code = await readFile(file);
 		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
 		const crossModuleExportedMessages = new Map();
 		const services = [];
@@ -53,7 +56,7 @@ for (const file of files) {
 		allServices.push(...services);
 		allMessages.push(...messages);
 	} catch (e) {
-		console.error(`Unable to parse "${path.basename(file)}":`, e);
+		console.error(`Unable to parse "${file}":`, e);
 		continue;
 	}
 }
@@ -655,12 +658,4 @@ function EvaluateConstant(node) {
 	}
 
 	throw new Error("Unexpected constant");
-}
-
-function GetListOfFilesToParse(dirName) {
-	return fs.promises
-		.readdir(dirName)
-		.then((files) =>
-			files.filter((fileName) => fileName.endsWith("js")).map((fileName) => path.join(dirName, fileName))
-		);
 }
