@@ -68,7 +68,7 @@ const groupedServices = GroupServices(splitServices);
 
 console.log("Found", splitServices.size, "services");
 
-// TODO: Lost rpcs in service_cloud
+// TODO: PartnerStoreBrowse disappeared
 // TODO: Wrong request - rpc RedeemPointsForBadgeLevel (.CLoyaltyRewards_RedeemPoints_Request)
 for (const [name, services] of groupedServices) {
 	const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
@@ -211,6 +211,9 @@ function GroupServices(services) {
 		}
 
 		const groupedService = groupedServices.get(cleanName);
+
+		// TODO: Sort methods - old dumper didn't sort
+		//service.methods = new Map([...service.methods].sort((a, b) => String(a[0]).localeCompare(b[0])));
 
 		if (groupedService) {
 			groupedService.push(service);
@@ -428,16 +431,15 @@ function TraverseModule(ast) {
 			}
 
 			/*
-				return e.SendMsg("Video.ClientGetVideoURL#1", t, s, {
-					ePrivilege: 1,
-				});
+				return e.SendMsg("Video.ClientGetVideoURL#1", t, s, { ePrivilege: 1 });
+				return e.SendNotification("ClientMetrics.ClientBootstrapReport#1", t, { ePrivilege: 1 });
 			*/
 			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
 				let msg = null;
 				if (node.property.name === "SendMsg") {
-					msg = GetMsgRequest(parent, messages, false);
-				} else if (node.property.name === "SendNotificaton") {
-					msg = GetMsgRequest(parent, messages, true);
+					msg = GetSendMsg(parent, messages);
+				} else if (node.property.name === "SendNotification") {
+					msg = GetSendNotification(parent);
 				}
 
 				if (msg !== null) {
@@ -669,10 +671,11 @@ function GetMsgResponse(node, messages) {
 	};
 }
 
-function GetMsgRequest(node, messages, isNotification) {
+function GetSendMsg(node, messages) {
 	if (
 		node.type !== Syntax.CallExpression ||
 		node.arguments.length !== 4 ||
+		node.arguments[0].type !== Syntax.Literal ||
 		node.arguments[2].type !== Syntax.Identifier ||
 		node.arguments[3].type !== Syntax.ObjectExpression
 	) {
@@ -691,9 +694,7 @@ function GetMsgRequest(node, messages, isNotification) {
 		throw new Error("Unexpected message response");
 	}
 
-	const requestToLookup =
-		response.className.substring(0, response.className.length - "_Response".length) +
-		(isNotification ? "_Notification" : "_Request");
+	const requestToLookup = response.className.substring(0, response.className.length - "_Response".length) + "_Request";
 
 	// TODO: This needs to be looked up across modules
 	const request = messages.find((m) => m.className === requestToLookup) || { className: "NotImplemented" };
@@ -702,6 +703,26 @@ function GetMsgRequest(node, messages, isNotification) {
 		name: name,
 		request: request.className,
 		response: response.className,
+	};
+}
+
+function GetSendNotification(node) {
+	if (
+		node.type !== Syntax.CallExpression ||
+		node.arguments.length !== 3 ||
+		node.arguments[0].type !== Syntax.Literal ||
+		node.arguments[1].type !== Syntax.Identifier ||
+		node.arguments[2].type !== Syntax.ObjectExpression
+	) {
+		return null;
+	}
+
+	const name = node.arguments[0].value;
+
+	return {
+		name: name,
+		request: "NotImplemented", // TODO
+		response: "NoResponse",
 	};
 }
 
