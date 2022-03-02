@@ -51,7 +51,7 @@ for (const file of files) {
 			},
 		});
 
-		FixTypesCrossModule(messages, crossModuleExportedMessages);
+		FixTypesCrossModule(services, messages, crossModuleExportedMessages);
 
 		allServices.push(...services);
 		allMessages.push(...messages);
@@ -68,45 +68,11 @@ const groupedServices = GroupServices(splitServices);
 
 console.log("Found", splitServices.size, "services");
 
-// TODO: PartnerStoreBrowse disappeared
 // TODO: Wrong request - rpc RedeemPointsForBadgeLevel (.CLoyaltyRewards_RedeemPoints_Request)
 for (const [name, services] of groupedServices) {
 	const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
 
 	await OutputToFile(fileName, services);
-}
-
-function FixTypesCrossModule(messages, crossModuleExportedMessages) {
-	for (const message of messages) {
-		for (const field of message.fields) {
-			if (field.typeToLookup === null) {
-				continue;
-			}
-
-			if (field.typeToLookup.module !== null) {
-				const moduleExported = crossModuleExportedMessages.get(field.typeToLookup.module);
-
-				if (!moduleExported) {
-					// TODO: Cross-file modules
-					//throw new Error("Failed to find module");
-					continue;
-				}
-
-				const className = moduleExported.get(field.typeToLookup.name);
-
-				if (!className) {
-					throw new Error("Failed to exported name");
-				}
-
-				field.type = `.${className}`;
-				field.typeToLookup = null;
-			}
-
-			if (field.typeToLookup !== null) {
-				throw new Error("Failed to find type");
-			}
-		}
-	}
 }
 
 function OutputToFile(fileName, services) {
@@ -228,7 +194,7 @@ function GroupServices(services) {
 function FixTypesSameModule(messages) {
 	for (const message of messages) {
 		for (const field of message.fields) {
-			if (field.typeToLookup !== null && field.typeToLookup.module === null) {
+			if (field.typeToLookup && field.typeToLookup.module === null) {
 				if (field.typeToLookup.recursive) {
 					field.type = `.${message.className}`;
 					field.typeToLookup = null;
@@ -248,6 +214,64 @@ function FixTypesSameModule(messages) {
 				}
 			}
 		}
+	}
+}
+
+function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
+	const GetType = ({ module, name }) => {
+		const moduleExported = crossModuleExportedMessages.get(module);
+
+		if (!moduleExported) {
+			// TODO: Cross-file modules
+			//throw new Error("Failed to find module");
+			return null;
+		}
+
+		const className = moduleExported.get(name);
+
+		if (!className) {
+			throw new Error("Failed to exported name");
+		}
+
+		return className;
+	};
+
+	for (const message of messages) {
+		for (const field of message.fields) {
+			if (!field.typeToLookup) {
+				continue;
+			}
+
+			if (field.typeToLookup.module !== null) {
+				const className = GetType(field.typeToLookup);
+
+				if (className === null) {
+					continue;
+				}
+
+				field.type = `.${className}`;
+				field.typeToLookup = null;
+			}
+
+			if (field.typeToLookup !== null) {
+				throw new Error("Failed to find type");
+			}
+		}
+	}
+
+	for (const service of services) {
+		if (!service.responseToLookup) {
+			continue;
+		}
+
+		const className = GetType(service.responseToLookup);
+
+		if (className === null) {
+			continue;
+		}
+
+		service.response = className;
+		service.responseToLookup = null;
 	}
 }
 
@@ -437,7 +461,7 @@ function TraverseModule(ast) {
 			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
 				let msg = null;
 				if (node.property.name === "SendMsg") {
-					msg = GetSendMsg(parent, messages);
+					msg = GetSendMsg(parent, messages, importedIds);
 				} else if (node.property.name === "SendNotification") {
 					msg = GetSendNotification(parent);
 				}
@@ -544,7 +568,6 @@ function TraverseFields(ast, importedIds) {
 						id: null,
 						name: prop.key.name,
 						type: null,
-						typeToLookup: null,
 						flag: "optional",
 					};
 
@@ -671,39 +694,59 @@ function GetMsgResponse(node, messages) {
 	};
 }
 
-function GetSendMsg(node, messages) {
+function GetSendMsg(node, messages, importedIds) {
 	if (
 		node.type !== Syntax.CallExpression ||
 		node.arguments.length !== 4 ||
 		node.arguments[0].type !== Syntax.Literal ||
-		node.arguments[2].type !== Syntax.Identifier ||
 		node.arguments[3].type !== Syntax.ObjectExpression
 	) {
 		return null;
 	}
 
 	const name = node.arguments[0].value;
-	const responseToLookup = node.arguments[2].name;
-	const response = messages.find((m) => m.id === responseToLookup);
 
-	if (!response) {
-		throw new Error("Failed to find response message");
+	if (node.arguments[2].type === Syntax.Identifier) {
+		const responseToLookup = node.arguments[2].name;
+		const response = messages.find((m) => m.id === responseToLookup);
+
+		if (!response) {
+			throw new Error("Failed to find response message");
+		}
+
+		if (!response.className.endsWith("_Response")) {
+			throw new Error("Unexpected message response");
+		}
+
+		const requestToLookup =
+			response.className.substring(0, response.className.length - "_Response".length) + "_Request";
+
+		// TODO: This needs to be looked up across modules
+		const request = messages.find((m) => m.className === requestToLookup) || { className: "NotImplemented" };
+
+		return {
+			name: name,
+			request: request.className,
+			response: response.className,
+		};
+	} else if (node.arguments[2].type === Syntax.MemberExpression) {
+		const importedModule = importedIds.get(node.arguments[2].object.name);
+
+		if (!importedModule) {
+			throw new Error("Failed to find imported module");
+		}
+
+		return {
+			name: name,
+			request: "NotImplemented",
+			responseToLookup: {
+				module: importedModule,
+				name: node.arguments[2].property.name,
+			},
+		};
 	}
 
-	if (!response.className.endsWith("_Response")) {
-		throw new Error("Unexpected message response");
-	}
-
-	const requestToLookup = response.className.substring(0, response.className.length - "_Response".length) + "_Request";
-
-	// TODO: This needs to be looked up across modules
-	const request = messages.find((m) => m.className === requestToLookup) || { className: "NotImplemented" };
-
-	return {
-		name: name,
-		request: request.className,
-		response: response.className,
-	};
+	return null;
 }
 
 function GetSendNotification(node) {
