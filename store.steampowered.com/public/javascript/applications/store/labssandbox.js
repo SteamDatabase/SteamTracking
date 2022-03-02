@@ -1009,7 +1009,7 @@
               (U.sm_m = {
                 proto: U,
                 fields: {
-                  id: { n: 1, c: F.f },
+                  id: { n: 1, c: F.g },
                   already_owned: { n: 2, br: L.d.readBool, bw: L.h.writeBool },
                   weight: { n: 3, br: L.d.readDouble, bw: L.h.writeDouble },
                   weight_before_dedupe: {
@@ -1205,8 +1205,8 @@
                     br: L.d.readInt32,
                     bw: L.h.writeInt32,
                   },
-                  context: { n: 10, c: F.b },
-                  data_request: { n: 11, c: F.c },
+                  context: { n: 10, c: F.c },
+                  data_request: { n: 11, c: F.d },
                 },
               }),
             G.sm_m
@@ -1340,7 +1340,7 @@
                     br: L.d.readInt32,
                     bw: L.h.writeRepeatedInt32,
                   },
-                  similar_items: { n: 7, c: F.e, r: !0, q: !0 },
+                  similar_items: { n: 7, c: F.f, r: !0, q: !0 },
                   similar_item_popularity_score: {
                     n: 8,
                     br: L.d.readDouble,
@@ -1711,7 +1711,7 @@
           "a",
           { className: ee.SimilarTitle, href: t.GetStorePageURL() },
           b.createElement("img", {
-            src: t.assets.GetSmallCapsuleURL(),
+            src: t.GetAssets().GetSmallCapsuleURL(),
             loading: "lazy",
           }),
           t.GetName()

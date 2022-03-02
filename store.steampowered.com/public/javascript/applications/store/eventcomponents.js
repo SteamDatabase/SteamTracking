@@ -1633,7 +1633,7 @@
                       { href: Object(le.h)(e.GetStorePageURL()) },
                       o.a.createElement("img", {
                         className: ie.TileAppInfoImage,
-                        src: e.assets.GetMainCapsuleURL(),
+                        src: e.GetAssets().GetMainCapsuleURL(),
                       })
                     )
                   ),

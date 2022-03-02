@@ -66,6 +66,7 @@
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
 	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+	--gpWidth-1colcap: calc((100vw - (2 * var(--gpSpace-Gutter))));
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -301,7 +302,7 @@
 	}
 
 	html.responsive .carousel_items.store_capsule_container.curator_featured > * {
-		width: 91vw;
+		width: var(--gpWidth-1colcap);
 		margin-top: 0px;
 		background-color: var(--gpBackground-DarkMedium);
 		padding: 16px;

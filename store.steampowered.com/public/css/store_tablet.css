@@ -74,7 +74,7 @@
 	html.responsive .contenthub_specials_grid,
 	html.responsive .marketingmessage_container,
 	html.responsive .recommendation_carousel_scroll,
-	html.responsive .home_page_content.gp_contiguous_singles{
+	html.responsive .home_page_content.gp_contiguous_singles {
 		padding-left: 24px;
 		padding-right: 24px;
 		scroll-padding-left: 24px;
@@ -85,10 +85,29 @@
 		padding-top: 8px;
 	}
 
-	/* Adds margin to end of carousels */
-	html.responsive .responsive_scroll_snap_ctn:after, html.responsive .tab_content:after {
+	/* html.responsive .responsive_scroll_snap_ctn:after,
+	html.responsive .tab_content:after {
 		content: "\00a0";
 		min-width: 24px;
+	} */
+
+	/* Adds margin to end of carousels */
+	html.responsive .tab_content:after,
+	html.responsive .peeking_carousel:after,
+	html.responsive .carousel_container.spotlight .carousel_items:not(.no_paging):after,
+	html.responsive .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_ctn:after,
+	html.responsive .carousel_container .carousel_items:not(.no_paging):after,
+	html.responsive .carousel_container.maincap .carousel_items:not(.no_paging):after,
+	html.responsive .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+	html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+	html.responsive .contenthub_popular_tags_grid:after,
+	html.responsive .contenthub_specials_grid:after,
+	html.responsive .marketingmessage_container:after,
+	html.responsive .recommendation_carousel_scroll:after,
+	html.responsive .home_page_content.gp_contiguous_singles:after {
+		content: "\00a0";
+		min-width: var(--gpSpace-Gutter);
 	}
 
 	/* Turn container into a carousel */

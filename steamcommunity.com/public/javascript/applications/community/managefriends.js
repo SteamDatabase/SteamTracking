@@ -82,6 +82,7 @@
     },
     IASz: function (e, t, n) {
       e.exports = {
+        "duration-app-launch": "800ms",
         Heading: "managefriends_Heading_3kTQI",
         Body: "managefriends_Body_2s393",
         HeaderBlock: "managefriends_HeaderBlock_X9bYN",

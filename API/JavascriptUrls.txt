@@ -212,8 +212,13 @@ ${COMMUNITY_BASE_URL}public/images/events/media_play_icon.png
 ${COMMUNITY_BASE_URL}questions/${VANITY_ID}${}${}
 ${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxanswerquestion/${}
 ${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxaskquestion/${}
+${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxcreateqanda
+${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxdeleteqanda/${}
+${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxgetqandasforgroup
 ${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxmoderatequestion/${}
+${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxrenameqanda/${}
 ${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxvoteforquestion/${}
+${COMMUNITY_BASE_URL}questions/${VANITY_ID}/view/${gidSession}
 ${COMMUNITY_BASE_URL}questions/${VANITY_ID}/view/${globalQandASessionID}
 ${COMMUNITY_BASE_URL}sale/ajaxdiscounteventdetails
 ${COMMUNITY_BASE_URL}sale/ajaxdiscountevents

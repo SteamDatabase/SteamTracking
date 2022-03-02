@@ -131,6 +131,7 @@
     },
     jIbu: function (e, t, a) {
       e.exports = {
+        "duration-app-launch": "800ms",
         CategorySectionsCtn: "categoriesapp_CategorySectionsCtn_YuXds",
         CategorySection: "categoriesapp_CategorySection_2MUQ8",
         CategorySectionName: "categoriesapp_CategorySectionName_2Vnsy",

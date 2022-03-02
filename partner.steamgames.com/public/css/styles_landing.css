@@ -1295,8 +1295,9 @@ div + #landingFooter.nonconfidential {
 	font-family: tahoma, arial, helvetica, trebuchet ms, sans-serif;
 	color: #e1e1e1;
 	font-size: 13px;
-	border: 1px #777777 solid;
+    border: 1px #464b53 solid;
 	padding: 2px 3px !important;
+    border-radius: 3px;
 }
 
 .fancyCurrencyInput input {
@@ -1307,23 +1308,28 @@ div + #landingFooter.nonconfidential {
 	outline: none;
 	text-align: right;
 	width: 75px;
+    box-shadow: none;
 }
 
 .fancyCurrencyInputDisabled
 {
-	background-color: rgb(51, 51, 51) !important;
+    background-color: rgb(51, 51, 51) !important;
 	bordor-color: rgb(84, 84, 84);
 }
 
 .fancyCurrencyInputDisabled .displayCF
 {
 	color: rgb(84, 84, 84) !important;
-	background-color: rgb(51, 51, 51) !important;
+    background-color: rgb(42 45 50) !important;
 }
 
 .fancyCurrencyInput .priceChangedNew
 {
 	color: #82a6d7 !important;
+}
+
+.priceAdminOptions {
+    margin-top: 20px;
 }
 
 .priceInputUnlockLink
@@ -1398,7 +1404,7 @@ div + #landingFooter.nonconfidential {
 	margin-bottom: 10px;
 }
 .pricing_callout {
-	background-color: #333333;
+	background-color: #2a2d32;
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;

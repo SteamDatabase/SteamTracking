@@ -1392,11 +1392,11 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .deckverified_DialogTitle_2WJTd {
   display: flex;
   flex-direction: column;
-  font-size: 30px;
-  color: #dbdbdb;
+  font: var(--gpText-HeadingLarge);
+  color: #fff;
 }
 .deckverified_AppTitleCategory_23sFZ {
-  padding-left: 15px;
+  padding-left: 8px;
 }
 .deckverified_AppTitleCategory_23sFZ .deckverified_CategoryIcon_3qF71 {
   padding-top: 1px;
@@ -1417,18 +1417,28 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   max-height: 85vh;
 }
 .deckverified_CompatibilityDetailsContainerDesktop_2ADsv
-  .deckverified_CompatibilityDetailsInterior_2fGSc,
+  .deckverified_CompatibilityDetailsInterior_NoScroll_3oQPV,
+.deckverified_CompatibilityDetailsContainerDesktop_2ADsv
+  .deckverified_CompatibilityDetailsInterior_Scroll_2uCLc,
 .deckverified_CompatibilityDetailsContainer_1-O8t
-  .deckverified_CompatibilityDetailsInterior_2fGSc {
+  .deckverified_CompatibilityDetailsInterior_NoScroll_3oQPV,
+.deckverified_CompatibilityDetailsContainer_1-O8t
+  .deckverified_CompatibilityDetailsInterior_Scroll_2uCLc {
   overflow-y: scroll;
   overflow-x: hidden;
   flex: 1;
   padding-right: 15px;
 }
 .deckverified_CompatibilityDetailsContainerDesktop_2ADsv
-  .deckverified_CompatibilityDetailsInterior_2fGSc::-webkit-scrollbar,
+  .deckverified_CompatibilityDetailsInterior_NoScroll_3oQPV::-webkit-scrollbar,
 .deckverified_CompatibilityDetailsContainer_1-O8t
-  .deckverified_CompatibilityDetailsInterior_2fGSc::-webkit-scrollbar {
+  .deckverified_CompatibilityDetailsInterior_NoScroll_3oQPV::-webkit-scrollbar {
+  display: none;
+}
+.deckverified_CompatibilityDetailsContainerDesktop_2ADsv
+  .deckverified_CompatibilityDetailsInterior_Scroll_2uCLc::-webkit-scrollbar,
+.deckverified_CompatibilityDetailsContainer_1-O8t
+  .deckverified_CompatibilityDetailsInterior_Scroll_2uCLc::-webkit-scrollbar {
   display: inline;
   padding-left: 20px;
 }
@@ -5994,6 +6004,13 @@ html:not(.client)
   border: 1px solid transparent;
   font-weight: 300;
 }
+.BasicUI .apppartnereventspage_PartnerEvent_1KsYS {
+  border: none;
+  border-radius: 0px;
+  max-width: 640px;
+  margin: 24px auto 40px auto;
+  box-shadow: var(--gpShadow-XLarge);
+}
 .apppartnereventspage_PartnerEvent_1KsYS a {
   text-decoration: none;
 }
@@ -10232,6 +10249,10 @@ html.responsive.touch .ContentHubSalePage {
   grid-gap: 16px;
   padding-bottom: 14px;
 }
+.BasicUI .partnersaledisplay_SaleSectionContainer_W9_WA {
+  grid-gap: 12px;
+  padding-bottom: 12px;
+}
 .partnersaledisplay_ShowContentsContainer_CBMVC {
   display: flex;
   justify-content: center;
@@ -10405,6 +10426,12 @@ html.responsive.touch
   padding: 0px 24px;
   scroll-padding: 0px 64px;
   width: 100vw;
+}
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_1FPIV
+  .partnersaledisplay_SaleSectionTabContainer_1Svj0::after {
+  content: " ";
+  min-width: 24px;
 }
 .partnersaledisplay_SaleSectionTabs_1FPIV
   .partnersaledisplay_SaleSectionTabsRow_30oGT {

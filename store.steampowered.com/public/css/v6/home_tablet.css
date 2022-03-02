@@ -66,6 +66,7 @@
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
 	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+	--gpWidth-1colcap: calc((100vw - (2 * var(--gpSpace-Gutter))));
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -1083,6 +1084,7 @@
 		background: var(--gpStoreDarkestGrey);
 		padding-bottom: 12px;
 		min-height: unset;
+		max-height: 240px;
 	}
 
 	html.responsive .newonsteam_capsules > a > div.info {

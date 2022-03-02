@@ -44,6 +44,7 @@
     },
     "5znp": function (e, t, r) {
       e.exports = {
+        "duration-app-launch": "800ms",
         FriendsListInsetShadowCtn:
           "insetshadow_FriendsListInsetShadowCtn_1qeW3",
         FriendListInsetShadowTop: "insetshadow_FriendListInsetShadowTop_1osHa",
@@ -3694,7 +3695,7 @@
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends());
           }
-          this.m_TextFilterWords = new Pe.l();
+          this.m_TextFilterWords = new Pe.m();
         }
         Init(e = 0, t = null, r = null) {
           return Object(a.a)(this, void 0, void 0, function* () {
@@ -3738,7 +3739,7 @@
               let e = yield this.m_Storage.GetObject(
                 "CTextFilterStore_TextFilterWords"
               );
-              e && (this.m_TextFilterWords = Pe.l.fromObject(e));
+              e && (this.m_TextFilterWords = Pe.m.fromObject(e));
             }
           });
         }
@@ -3780,7 +3781,7 @@
               try {
                 if (this.m_Transport) {
                   let t = _.b.Init(Pe.b);
-                  e = (yield Pe.m.GetCommunityPreferences(this.m_Transport, t))
+                  e = (yield Pe.n.GetCommunityPreferences(this.m_Transport, t))
                     .Body()
                     .preferences();
                 } else {
@@ -3798,12 +3799,12 @@
               e.text_filter_words_revision() !==
                 this.m_TextFilterWords.text_filter_words_revision())
             ) {
-              let t = new Pe.l();
+              let t = new Pe.m();
               if (0 !== e.text_filter_words_revision())
                 try {
                   if (this.m_Transport) {
                     let e = _.b.Init(Pe.f);
-                    t = (yield Pe.m.GetTextFilterWords(this.m_Transport, e))
+                    t = (yield Pe.n.GetTextFilterWords(this.m_Transport, e))
                       .Body()
                       .words();
                   } else {
@@ -3816,7 +3817,7 @@
                         "textfilter/ajaxgettextfiltercustomwords",
                       { params: e, withCredentials: !0 }
                     );
-                    t = Pe.l.fromObject(r.data.words);
+                    t = Pe.m.fromObject(r.data.words);
                   }
                 } catch (e) {}
               this.UpdateTextFilterWords(t);

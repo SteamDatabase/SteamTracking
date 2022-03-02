@@ -484,6 +484,7 @@
     },
     pcg8: function (e, a, t) {
       e.exports = {
+        "duration-app-launch": "800ms",
         CuratorListCtn: "curatorlist_CuratorListCtn_2gWFd",
         CuratorMoreCtn: "curatorlist_CuratorMoreCtn_16t3P",
         TopReviewInfo: "curatorlist_TopReviewInfo_3SZBz",

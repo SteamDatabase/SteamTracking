@@ -805,11 +805,20 @@ a.commentthread_author_officer {
 	visibility: hidden;
 }
 
+.forum_op_header {
+	display: flex;
+	align-items: center;
+}
+
 .forum_comment_actions {
 	margin-top: 6px;
 	float: right;
 	visibility: hidden;
 	line-height: 28px;
+}
+
+.forum_comment_actions_ctn {
+	margin-left: auto;
 }
 
 .commentthread_comment .forum_comment_action_trigger,
@@ -1366,6 +1375,9 @@ input.discussionSearchText:-moz-placeholder {
 	margin-top: 1px;
 	font-size: 12px;
 	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
 }
 
 .forum_pagesize_options.topic_replies {
@@ -1497,7 +1509,7 @@ table.forum_auditlog tr.audit_row_secondary {
 	display: block;
 	margin-bottom: -45px;
 	margin-top: 45px;
-	
+
 }
 .doc_link a {
 	display: inline;

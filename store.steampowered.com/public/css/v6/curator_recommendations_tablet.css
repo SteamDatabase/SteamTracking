@@ -66,6 +66,7 @@
 	/* Game capsule widths */
 	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
 	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+	--gpWidth-1colcap: calc((100vw - (2 * var(--gpSpace-Gutter))));
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -522,7 +523,6 @@
 	html.responsive .browse_content .recommendation .recommendation_desc {
 		font: var(--gpText-BodyMedium);
 		color: var(--gpStoreLightestGrey);
-		line-height: 1.2;
 	}
 
 	html.responsive .curator #RecommendationsRows .store_capsule.price_inline .discount_block {

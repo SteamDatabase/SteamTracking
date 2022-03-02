@@ -2123,11 +2123,11 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .deckverified_DialogTitle_2WJTd {
   display: flex;
   flex-direction: column;
-  font-size: 30px;
-  color: #dbdbdb;
+  font: var(--gpText-HeadingLarge);
+  color: #fff;
 }
 .deckverified_AppTitleCategory_23sFZ {
-  padding-left: 15px;
+  padding-left: 8px;
 }
 .deckverified_AppTitleCategory_23sFZ .deckverified_CategoryIcon_3qF71 {
   padding-top: 1px;
@@ -2148,18 +2148,28 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   max-height: 85vh;
 }
 .deckverified_CompatibilityDetailsContainerDesktop_2ADsv
-  .deckverified_CompatibilityDetailsInterior_2fGSc,
+  .deckverified_CompatibilityDetailsInterior_NoScroll_3oQPV,
+.deckverified_CompatibilityDetailsContainerDesktop_2ADsv
+  .deckverified_CompatibilityDetailsInterior_Scroll_2uCLc,
 .deckverified_CompatibilityDetailsContainer_1-O8t
-  .deckverified_CompatibilityDetailsInterior_2fGSc {
+  .deckverified_CompatibilityDetailsInterior_NoScroll_3oQPV,
+.deckverified_CompatibilityDetailsContainer_1-O8t
+  .deckverified_CompatibilityDetailsInterior_Scroll_2uCLc {
   overflow-y: scroll;
   overflow-x: hidden;
   flex: 1;
   padding-right: 15px;
 }
 .deckverified_CompatibilityDetailsContainerDesktop_2ADsv
-  .deckverified_CompatibilityDetailsInterior_2fGSc::-webkit-scrollbar,
+  .deckverified_CompatibilityDetailsInterior_NoScroll_3oQPV::-webkit-scrollbar,
 .deckverified_CompatibilityDetailsContainer_1-O8t
-  .deckverified_CompatibilityDetailsInterior_2fGSc::-webkit-scrollbar {
+  .deckverified_CompatibilityDetailsInterior_NoScroll_3oQPV::-webkit-scrollbar {
+  display: none;
+}
+.deckverified_CompatibilityDetailsContainerDesktop_2ADsv
+  .deckverified_CompatibilityDetailsInterior_Scroll_2uCLc::-webkit-scrollbar,
+.deckverified_CompatibilityDetailsContainer_1-O8t
+  .deckverified_CompatibilityDetailsInterior_Scroll_2uCLc::-webkit-scrollbar {
   display: inline;
   padding-left: 20px;
 }
@@ -5993,6 +6003,13 @@ html:not(.client)
   pointer-events: initial;
   border: 1px solid transparent;
   font-weight: 300;
+}
+.BasicUI .apppartnereventspage_PartnerEvent_1KsYS {
+  border: none;
+  border-radius: 0px;
+  max-width: 640px;
+  margin: 24px auto 40px auto;
+  box-shadow: var(--gpShadow-XLarge);
 }
 .apppartnereventspage_PartnerEvent_1KsYS a {
   text-decoration: none;
@@ -10232,6 +10249,10 @@ html.responsive.touch .ContentHubSalePage {
   grid-gap: 16px;
   padding-bottom: 14px;
 }
+.BasicUI .partnersaledisplay_SaleSectionContainer_W9_WA {
+  grid-gap: 12px;
+  padding-bottom: 12px;
+}
 .partnersaledisplay_ShowContentsContainer_CBMVC {
   display: flex;
   justify-content: center;
@@ -10405,6 +10426,12 @@ html.responsive.touch
   padding: 0px 24px;
   scroll-padding: 0px 64px;
   width: 100vw;
+}
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_1FPIV
+  .partnersaledisplay_SaleSectionTabContainer_1Svj0::after {
+  content: " ";
+  min-width: 24px;
 }
 .partnersaledisplay_SaleSectionTabs_1FPIV
   .partnersaledisplay_SaleSectionTabsRow_30oGT {
@@ -19984,39 +20011,45 @@ body.qanda {
   background-color: #111113;
 }
 .questions_QAFullPageView_3tZpF {
-  display: flex;
-  justify-content: space-between;
   max-width: 2000px;
   margin: auto;
 }
-.questions_QAFullPageView_3tZpF .questions_QAMainCtn_hHqRc,
-.questions_QAFullPageView_3tZpF .questions_QAModeratorColumn_nfftC {
-  padding: 30px;
+.questions_QAFullPageView_3tZpF .questions_QAName_2mOBp {
+  padding: 10px 30px 4px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
 }
-.questions_QAFullPageView_3tZpF .questions_QAModeratorColumn_nfftC {
+.questions_QAColumns_pBgAb {
+  display: flex;
+  justify-content: space-between;
+}
+.questions_QAColumns_pBgAb .questions_QAMainCtn_hHqRc,
+.questions_QAColumns_pBgAb .questions_QAModeratorColumn_nfftC {
+  padding: 16px 30px;
+}
+.questions_QAColumns_pBgAb .questions_QAModeratorColumn_nfftC {
   border-left: 1px solid gray;
 }
-.questions_QAFullPageView_3tZpF .questions_QASplitColumns_1CRIg {
+.questions_QAColumns_pBgAb .questions_QASplitColumns_1CRIg {
   width: 50%;
   margin: 0;
   box-sizing: border-box;
   max-width: unset;
 }
-.questions_QAFullPageView_3tZpF .questions_ModeratorInstructions_RqtnW,
-.questions_QAFullPageView_3tZpF .questions_AnsweredSectionHeader_3cWpk {
+.questions_QAColumns_pBgAb .questions_ModeratorInstructions_RqtnW,
+.questions_QAColumns_pBgAb .questions_AnsweredSectionHeader_3cWpk {
   background: #2d6586;
   padding: 6px;
   margin-top: 40px;
 }
-.questions_QAFullPageView_3tZpF .questions_ModeratorInstructions_RqtnW div,
-.questions_QAFullPageView_3tZpF .questions_AnsweredSectionHeader_3cWpk div {
+.questions_QAColumns_pBgAb .questions_ModeratorInstructions_RqtnW div,
+.questions_QAColumns_pBgAb .questions_AnsweredSectionHeader_3cWpk div {
   font-size: 16px;
   padding-top: 10px;
 }
-.questions_QAFullPageView_3tZpF
-  .questions_ModeratorInstructions_RqtnW
-  .DialogButton,
-.questions_QAFullPageView_3tZpF
+.questions_QAColumns_pBgAb .questions_ModeratorInstructions_RqtnW .DialogButton,
+.questions_QAColumns_pBgAb
   .questions_AnsweredSectionHeader_3cWpk
   .DialogButton {
   width: 32px;
@@ -20417,6 +20450,141 @@ body.qanda {
 }
 .questions_ToolLabel_3prTN {
   margin-right: 6px;
+}
+.questions_QADashboardCtn_32zJG {
+  padding: 12px;
+}
+.questions_QADashboardCtn_32zJG .questions_DashboardHeader_1R1Em {
+  display: flex;
+  justify-content: space-between;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardHeader_1R1Em
+  .questions_DashboardHeaderTitle_1cRHa {
+  font-size: 24px;
+  margin-right: 8px;
+  color: #fff;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardHeader_1R1Em
+  .questions_DashboardHeaderButtonCtn_uoLDQ {
+  display: flex;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardHeader_1R1Em
+  .questions_DashboardHeaderButtonCtn_uoLDQ
+  button.DialogButton {
+  padding: 6px 30px;
+  box-sizing: border-box;
+  margin-right: 24px;
+  white-space: nowrap;
+}
+.questions_QADashboardCtn_32zJG .questions_DashboardRow_gpraR {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  margin: 4px 0;
+  background-color: #40454f;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_GIDSession_3d_6f,
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QuestionCount_3kZ9S {
+  padding: 4px;
+  width: 20%;
+  box-sizing: border-box;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndADeleteColumn_363My {
+  padding: 0 4px;
+  width: 10%;
+  box-sizing: border-box;
+  text-align: right;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndADeleteColumn_363My
+  svg {
+  height: 20px;
+  width: 20px;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_GIDSession_3d_6f,
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QuestionCount_3kZ9S {
+  text-align: center;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndAName_2-5V8 {
+  padding: 4px 8px;
+  width: 50%;
+  box-sizing: border-box;
+  cursor: text;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndAName_2-5V8
+  .questions_Prompt_2ZFvN {
+  font-style: italic;
+  color: gray;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndAName_2-5V8.questions_Editing_1wUKv {
+  padding: 0px;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndAName_2-5V8.questions_Editing_1wUKv
+  .questions_NameInput_3avr0 {
+  display: flex;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndAName_2-5V8.questions_Editing_1wUKv
+  .questions_InputButton_1z1rt {
+  margin: 0 0 0 8px;
+  line-height: 28px;
+  padding: 0 16px;
+  width: unset;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndAName_2-5V8.questions_Editing_1wUKv
+  .DialogInput_Wrapper {
+  flex: 1;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_QAndAName_2-5V8.questions_Editing_1wUKv
+  .DialogInput_Wrapper
+  .DialogInput {
+  padding: 2px 7px;
+}
+.questions_QADashboardCtn_32zJG
+  .questions_DashboardRow_gpraR
+  .questions_DeleteButton_o8aBa {
+  box-sizing: border-box;
+  padding: 4px;
+  height: 28px;
+  width: 28px;
+  margin: 0 16px 0 auto;
+}
+.questions_QADashboardCtn_32zJG .questions_DashboardColumnHeaders_2WOM0 {
+  background-color: none;
+}
+.questions_CreateQAndADialog_1wBzu .questions_NameInput_3avr0 {
+  margin-top: 12px;
+}
+.questions_DeleteQAndADialog_3valP .questions_DeleteInfo_3EhGH {
+  padding: 8px 12px 0px 12px;
 }
 .faqbbcode_FAQContainer_2PQsW .BB_Header1,
 .faqbbcode_FAQContainer_2PQsW .BB_Header2,

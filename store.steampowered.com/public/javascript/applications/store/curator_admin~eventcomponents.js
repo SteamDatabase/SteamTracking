@@ -1275,6 +1275,7 @@
     },
     "r+ba": function (e, t, r) {
       e.exports = {
+        "duration-app-launch": "800ms",
         Container: "partnereventwebrowembed_Container_2Jd3M",
         StoreHeaderAdjust: "partnereventwebrowembed_StoreHeaderAdjust_3YyCp",
         SectionButtonCtn: "partnereventwebrowembed_SectionButtonCtn_1HP0y",
