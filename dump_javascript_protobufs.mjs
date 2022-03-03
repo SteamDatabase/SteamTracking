@@ -11,6 +11,7 @@ const files = await GetFilesToParse();
 const NotImplemented = "NotImplemented";
 const NoResponse = "NoResponse";
 
+const allEnums = [];
 const allServices = [];
 const allMessages = [
 	{
@@ -32,6 +33,7 @@ for (const file of files) {
 		const crossModuleExportedMessages = new Map();
 		const services = [];
 		const messages = [];
+		const enums = [];
 
 		traverse(ast, {
 			enter: function (node) {
@@ -61,6 +63,7 @@ for (const file of files) {
 
 					services.push(...result.services);
 					messages.push(...result.messages);
+					enums.push(...result.enums);
 				}
 			},
 		});
@@ -69,6 +72,7 @@ for (const file of files) {
 
 		allServices.push(...services);
 		allMessages.push(...messages);
+		allEnums.push(...enums);
 	} catch (e) {
 		console.error(`Unable to parse "${file}":`, e);
 		continue;
@@ -132,6 +136,12 @@ console.log("Found", mergedMessages.size, "messages");
 	console.log("Found", commonMessages.size, "common messages");
 
 	await OutputToFile(pathJoin(outputPath, "common.proto"), imports, [], commonMessages);
+}
+
+{
+	const mergedEnums = MergeEnums(allEnums);
+
+	console.log("Found", mergedEnums.size, "enums");
 }
 
 function GetMatchingDependencyCount(services, dependants) {
@@ -373,6 +383,28 @@ function MergeMessages(allMessages) {
 	return SortMapByKey(cleanMessages);
 }
 
+function MergeEnums(allEnums) {
+	const keyedMessages = new Map();
+
+	for (const message of allEnums) {
+		const existingMessage = keyedMessages.get(message.name);
+
+		if (existingMessage) {
+			existingMessage.push(message);
+		} else {
+			keyedMessages.set(message.name, [message]);
+		}
+	}
+
+	const cleanMessages = new Map();
+
+	for (const [name, messages] of keyedMessages) {
+		cleanMessages.set(name, messages[0]); // TODO: Merge
+	}
+
+	return SortMapByKey(cleanMessages);
+}
+
 // TODO: Figure out a way to merge this with FixTypesCrossModule
 function FixTypesSameModule(services, messages) {
 	for (const message of messages) {
@@ -505,6 +537,7 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 function TraverseModule(ast) {
 	const services = [];
 	const messages = [];
+	const enums = [];
 	const importedIds = new Map();
 	const exportedIds = new Map();
 	const exportedIdsFlipped = new Map();
@@ -714,12 +747,16 @@ function TraverseModule(ast) {
 						e.left.property.left.property.name === e.right.value
 				)
 			) {
-				ParseEnum(node);
+				const enumObj = ParseEnum(node);
+
+				if (enumObj !== null) {
+					enums.push(enumObj);
+				}
 			}
 		},
 	});
 
-	return { services, messages, exportedIds };
+	return { services, messages, enums, exportedIds };
 }
 
 function TraverseTranspiledClass(ast, importedIds) {
@@ -1027,16 +1064,16 @@ function GetSendNotification(node) {
 }
 
 function ParseEnum(node) {
-	const enumValues = [];
+	const enumValues = new Map();
 
 	for (const expr of node.expressions) {
 		const name = expr.right.value;
 		const value = expr.left.property.right.value;
 
-		enumValues[name] = value;
+		enumValues.set(name, value);
 	}
 
-	let allEnumKeys = Object.keys(enumValues);
+	let allEnumKeys = [...enumValues.keys()];
 	const commonName = allEnumKeys.reduce((str1, str2) => {
 		let i = 0;
 		while (i < str1.length && str1.charAt(i) === str2.charAt(i)) {
@@ -1055,7 +1092,7 @@ function ParseEnum(node) {
 	}
 
 	if (enumName.length < 2) {
-		return;
+		return null;
 	}
 
 	const reSubstrToReplace = new RegExp(`^${commonName}`);
@@ -1068,7 +1105,10 @@ function ParseEnum(node) {
 		delete enumValues[keyName];
 	});
 
-	console.log(enumName, enumValues);
+	return {
+		name: enumName,
+		values: enumValues,
+	};
 }
 
 function EvaluateConstant(node) {
