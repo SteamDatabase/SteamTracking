@@ -176,7 +176,13 @@ function OutputMessages(messages, stream = process.stdout) {
 		stream.write(`message ${message.className} {\n`);
 
 		for (const field of message.fields) {
-			stream.write(`\t${field.flag} ${field.type} ${field.name} = ${field.id}`);
+			stream.write("\t");
+
+			if (field.type === "UNKNOWN") {
+				stream.write("//");
+			}
+
+			stream.write(`${field.flag} ${field.type} ${field.name} = ${field.id}`);
 
 			const options = [];
 
@@ -263,7 +269,6 @@ function SplitServices(services) {
 }
 
 // Mark which services RPCs use a particular message
-// TODO: Mark dependencies in field types
 function MarkMethodDependants(services, messages) {
 	const MarkDependants = (serviceName, messageName, parentMessageName = null) => {
 		const method = messages.get(messageName);
@@ -274,7 +279,6 @@ function MarkMethodDependants(services, messages) {
 
 		method.dependants.add(serviceName);
 
-		// TODO: null field types
 		for (const field of method.fields) {
 			if (field.type[0] !== ".") {
 				continue;
