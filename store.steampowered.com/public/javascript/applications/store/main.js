@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7128068";
+var CLSTAMP = "7129409";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [12],
   {
@@ -24874,6 +24874,7 @@ var CLSTAMP = "7128068";
       class h {
         constructor() {
           (this.k_QueueWaitUntilRequestMS = 40),
+            (this.k_nMaxBatchSize = 100),
             (this.m_mapApps = new Map()),
             (this.m_mapPackages = new Map()),
             (this.m_mapBundles = new Map()),
@@ -24999,7 +25000,7 @@ var CLSTAMP = "7128068";
               this.m_setPendingAppInfo.size +
                 this.m_setPendingPackageInfo.size +
                 this.m_setPendingBundleInfo.size >=
-                100 && this.FlushPendingInfo(),
+                this.k_nMaxBatchSize && this.FlushPendingInfo(),
               r
             );
           });
@@ -25066,46 +25067,42 @@ var CLSTAMP = "7128068";
               (this.m_SteamInterface ||
                 (this.m_SteamInterface = new p.a(u.d.WEBAPI_BASE_URL)),
               (e = this.m_SteamInterface));
-            const _ = l.b.Init(i.a);
-            Object(c.a)(_, this.m_bUsePartnerAPI),
-              Object(c.b)(_, s),
-              r.length > 0 &&
-                r.forEach((e) =>
-                  _.Body().add_ids(i.g.fromObject({ appid: e }))
-                ),
-              m.length > 0 &&
-                m.forEach((e) =>
-                  _.Body().add_ids(i.g.fromObject({ packageid: e }))
-                ),
-              h.length > 0 &&
-                h.forEach((e) =>
-                  _.Body().add_ids(i.g.fromObject({ bundleid: e }))
-                );
+            let _ = [];
+            r.forEach((e) => _.push(i.g.fromObject({ appid: e }))),
+              m.forEach((e) => _.push(i.g.fromObject({ packageid: e }))),
+              h.forEach((e) => _.push(i.g.fromObject({ bundleid: e })));
             try {
-              let t;
-              if (
-                ((t = this.m_bUsePartnerAPI
-                  ? yield o.GetItems(e.GetServiceTransport(), _)
-                  : yield i.e.GetItems(e.GetAnonymousServiceTransport(), _)),
-                1 != t.GetEResult())
-              )
-                return (
-                  console.error(
-                    "CStoreItemCache::HintLoadStoreItems failed with eResult: " +
-                      t.GetEResult() +
-                      " msg: " +
-                      t.GetEMsg(),
-                    r,
-                    m,
-                    h
-                  ),
-                  t.GetEResult()
-                );
-              t.Body()
-                .store_items()
-                .forEach((e) => this.ReadItem(e, s));
+              const t = [];
+              for (; _.length > 0; ) {
+                const n = l.b.Init(i.a);
+                Object(c.a)(n, this.m_bUsePartnerAPI), Object(c.b)(n, s);
+                const r = _.splice(0, this.k_nMaxBatchSize);
+                n.Body().set_ids(r),
+                  this.m_bUsePartnerAPI
+                    ? t.push(o.GetItems(e.GetServiceTransport(), n))
+                    : t.push(i.e.GetItems(e.GetAnonymousServiceTransport(), n));
+              }
+              const n = yield Promise.all(t);
+              for (const e of n) {
+                if (1 != e.GetEResult())
+                  return (
+                    console.error(
+                      "CStoreItemCache::HintLoadStoreItems failed with eResult: " +
+                        e.GetEResult() +
+                        " msg: " +
+                        e.GetEMsg(),
+                      r,
+                      m,
+                      h
+                    ),
+                    e.GetEResult()
+                  );
+                e.Body()
+                  .store_items()
+                  .forEach((e) => this.ReadItem(e, s));
+              }
             } catch (e) {
-              let t = Object(d.a)(e);
+              const t = Object(d.a)(e);
               return (
                 console.error(
                   "CStoreItemCache::HintLoadStoreItems failed: " +
@@ -25171,7 +25168,7 @@ var CLSTAMP = "7128068";
         ReadItem(e, t) {
           const n = e.item_type();
           let r = null;
-          switch (n) {
+          switch ((216151 == e.id() && console.log(e.toObject()), n)) {
             case 0:
               r = this.m_mapApps;
               break;
