@@ -109,7 +109,7 @@ console.log("Found", mergedMessages.size, "messages");
 
 				message.consumed = true;
 				consumedMessages.set(message.className, message);
-			} else {
+			} else if (message.className !== NoResponse) {
 				imports.add("common.proto");
 			}
 		}
