@@ -353,9 +353,21 @@ function MergeMessages(allMessages) {
 
 	const cleanMessages = new Map();
 
-	// TODO: Update fields as necessary, some js files may be older than others
 	for (const [className, messages] of keyedMessages) {
-		cleanMessages.set(className, messages[0]);
+		const message = messages[0];
+
+		// TODO: This merges all fields, but doesn't deal with fields themselves being different (e.g. type)
+		for (let i = 1; i < messages.length; i++) {
+			for (const field of messages[i].fields) {
+				if (!message.fields.some((m) => m.name === field.name)) {
+					message.fields.push(field);
+				}
+			}
+		}
+
+		message.fields.sort((a, b) => a.id - b.id);
+
+		cleanMessages.set(className, message);
 	}
 
 	return SortMapByKey(cleanMessages);
