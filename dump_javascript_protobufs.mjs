@@ -185,12 +185,16 @@ function OutputMessages(messages, stream = process.stdout) {
 
 		stream.write(`message ${message.className} {\n`);
 
+		const seenFields = new Set();
+
 		for (const field of message.fields) {
 			stream.write("\t");
 
-			if (field.commentedOut || field.type === "UNKNOWN") {
+			if (seenFields.has(field.id) || field.type === "UNKNOWN") {
 				stream.write("//");
 			}
+
+			seenFields.add(field.id);
 
 			stream.write(`${field.flag} ${field.type} ${field.name} = ${field.id}`);
 
@@ -392,14 +396,24 @@ function MergeMessages(allMessages) {
 					field.type !== "UNKNOWN" &&
 					!existingFields.some((f) => f.type === field.type && f.name === field.name)
 				) {
-					const copiedField = Object.assign({}, field);
-					copiedField.commentedOut = true;
-					message.fields.push(copiedField);
+					message.fields.push(field);
 				}
 			}
 		}
 
-		message.fields.sort((a, b) => a.id - b.id);
+		message.fields.sort((a, b) => {
+			if (a.id === b.id) {
+				const typeCompare = a.type.localeCompare(b.type);
+
+				if (typeCompare === 0) {
+					return a.name.localeCompare(b.name);
+				}
+
+				return typeCompare;
+			}
+
+			return a.id - b.id;
+		});
 
 		cleanMessages.set(className, message);
 	}
