@@ -188,7 +188,7 @@ function OutputMessages(messages, stream = process.stdout) {
 		for (const field of message.fields) {
 			stream.write("\t");
 
-			if (field.type === "UNKNOWN") {
+			if (field.commentedOut || field.type === "UNKNOWN") {
 				stream.write("//");
 			}
 
@@ -379,11 +379,22 @@ function MergeMessages(allMessages) {
 	for (const [className, messages] of keyedMessages) {
 		const message = messages[0];
 
-		// TODO: This merges all fields, but doesn't deal with fields themselves being different (type and name)
 		for (let i = 1; i < messages.length; i++) {
 			for (const field of messages[i].fields) {
-				if (!message.fields.some((m) => m.id === field.id)) {
+				const existingFields = message.fields.filter((f) => f.id === field.id);
+
+				// If field with this id doesn't exist, just push it
+				if (existingFields.length < 1) {
 					message.fields.push(field);
+				}
+				// If there's a conflicting field with different type or name, push it but comment it out during output
+				else if (
+					field.type !== "UNKNOWN" &&
+					!existingFields.some((f) => f.type === field.type && f.name === field.name)
+				) {
+					const copiedField = Object.assign({}, field);
+					copiedField.commentedOut = true;
+					message.fields.push(copiedField);
 				}
 			}
 		}
