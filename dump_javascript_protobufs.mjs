@@ -539,17 +539,23 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 
 			service.response = className;
 			service.responseToLookup = null;
-		}
 
-		/* TODO: This doesnt seem to be needed - are requests guaranteed to be in same module?
-		if (service.requestToLookup) {
-			outerLoop: for (const nameType of ["name", "fallbackName"]) {
-				const requestToLookup = service.requestToLookup[nameType];
-
-				if (!requestToLookup) {
-					continue;
+			if (service.request === NotImplemented) {
+				if (service.requestToLookup) {
+					throw new Error("There is already request to lookup");
 				}
 
+				service.requestToLookup = {
+					//module: null, // all modules
+					names: GenerateRequestNames(service.name, className),
+				};
+			}
+		}
+
+		// This is only needed because of setting requestToLookup above
+		// Otherwise it doesn't find anything new
+		if (service.requestToLookup) {
+			outerLoop: for (const requestToLookup of service.requestToLookup.names) {
 				for (const [, map] of crossModuleExportedMessages) {
 					for (const [, className] of map) {
 						if (requestToLookup === className) {
@@ -561,7 +567,6 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 				}
 			}
 		}
-		*/
 	}
 }
 
@@ -1035,20 +1040,13 @@ function GetSendMsg(node, messages, importedIds) {
 			throw new Error("Unexpected message response");
 		}
 
-		const { serviceName, methodName } = SplitRpcString(name);
-
 		return {
 			name: name,
 			request: NotImplemented,
 			response: response.className,
 			requestToLookup: {
 				//module: null, // all modules
-				names: [
-					...new Set([
-						`C${serviceName}_${methodName}_Request`,
-						response.className.substring(0, response.className.length - "_Response".length) + "_Request",
-					]),
-				],
+				names: GenerateRequestNames(name, response.className),
 			},
 		};
 	} else if (node.arguments[2].type === Syntax.MemberExpression) {
@@ -1061,6 +1059,7 @@ function GetSendMsg(node, messages, importedIds) {
 		return {
 			name: name,
 			request: NotImplemented,
+			response: NoResponse,
 			responseToLookup: {
 				module: importedModule,
 				name: node.arguments[2].property.name,
@@ -1069,6 +1068,17 @@ function GetSendMsg(node, messages, importedIds) {
 	}
 
 	return null;
+}
+
+function GenerateRequestNames(rpc, className) {
+	const { serviceName, methodName } = SplitRpcString(rpc);
+
+	return [
+		...new Set([
+			`C${serviceName}_${methodName}_Request`,
+			className.substring(0, className.length - "_Response".length) + "_Request",
+		]),
+	];
 }
 
 function GetSendNotification(node) {
