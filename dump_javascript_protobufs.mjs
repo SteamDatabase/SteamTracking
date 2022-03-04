@@ -942,6 +942,11 @@ function TraverseFields(ast, importedIds) {
 						}
 					}
 
+					// Strings need to be quoted
+					if (field.type === "string" && Object.hasOwn(field, "default")) {
+						field.default = JSON.stringify(field.default);
+					}
+
 					fields.push(field);
 				}
 
@@ -1125,8 +1130,10 @@ function ParseEnum(node) {
 }
 
 function EvaluateConstant(node) {
-	if (node.value.type === Syntax.UnaryExpression && ["!", "-"].includes(node.value.operator)) {
+	if (node.value.type === Syntax.UnaryExpression && node.value.operator === "!") {
 		return node.value.argument.value === 0 ? true : false;
+	} else if (node.value.type === Syntax.UnaryExpression && node.value.operator === "-") {
+		return -node.value.argument.value;
 	} else if (node.value.type === Syntax.Literal) {
 		return node.value.value;
 	}
