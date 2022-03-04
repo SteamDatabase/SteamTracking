@@ -52,9 +52,6 @@ echo Dumping protobufs
 ~/ProtobufDumper/ProtobufDumper bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
 ~/ProtobufDumper/ProtobufDumper bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
-cp "$DIR/ClientExtracted/steamui/libraryroot.js" "$DIR/.support/original_js/steamui_libraryroot.js"
-cp "$DIR/ClientExtracted/steamui/broadcast.js" "$DIR/.support/original_js/steamui_broadcast.js"
-
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
 ./steamworks_dumper/build/steamworks_dumper "linux_bins/ubuntu12_32/steamclient.so" "$DIR/Structs/"

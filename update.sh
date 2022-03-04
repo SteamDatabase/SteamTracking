@@ -9,7 +9,7 @@ fi
 
 echo $$ > $LOCKFILE
 
-#mkdir -p .support/{archives,bins,linux_archives,linux_bins,original_js}
+#mkdir -p .support/{archives,bins,linux_archives,linux_bins}
 
 php update.php "$1"
 

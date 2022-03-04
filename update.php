@@ -122,7 +122,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
-				system( 'node protobufdumper.js' );
+				system( 'node dump_javascript_protobufs.mjs' );
 				system( 'node dump_javascript_urls.mjs' );
 			}
 
@@ -450,7 +450,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				}
 				else if( str_ends_with( $File, '.js' ) )
 				{
-					file_put_contents( __DIR__ . '/.support/original_js/' . md5( $OriginalFile ) . '.js', $Data );
 					$this->DumpJavascriptFiles = true;
 				}
 
