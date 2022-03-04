@@ -379,10 +379,10 @@ function MergeMessages(allMessages) {
 	for (const [className, messages] of keyedMessages) {
 		const message = messages[0];
 
-		// TODO: This merges all fields, but doesn't deal with fields themselves being different (e.g. type)
+		// TODO: This merges all fields, but doesn't deal with fields themselves being different (type and name)
 		for (let i = 1; i < messages.length; i++) {
 			for (const field of messages[i].fields) {
-				if (!message.fields.some((m) => m.name === field.name)) {
+				if (!message.fields.some((m) => m.id === field.id)) {
 					message.fields.push(field);
 				}
 			}
