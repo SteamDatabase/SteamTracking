@@ -56,6 +56,10 @@ for (const file of files) {
 						throw new Error("Failed to find key name");
 					}
 
+					if (crossModuleExportedMessages.has(currentModule)) {
+						throw new Error("Module already exported");
+					}
+
 					crossModuleExportedMessages.set(currentModule, result.exportedIds);
 
 					// Look up field types from other messages in same module
@@ -443,7 +447,6 @@ function MergeEnums(allEnums) {
 	return SortMapByKey(cleanMessages);
 }
 
-// TODO: Figure out a way to merge this with FixTypesCrossModule
 function FixTypesSameModule(services, messages) {
 	for (const message of messages) {
 		for (const field of message.fields) {
@@ -470,18 +473,8 @@ function FixTypesSameModule(services, messages) {
 	}
 
 	for (const service of services) {
-		// TODO: service.responseToLookup
-
 		if (service.requestToLookup) {
-			//service.request = NotImplemented; // later set in FixTypesCrossModule
-
-			outerLoop: for (const nameType of ["name", "fallbackName"]) {
-				const requestToLookup = service.requestToLookup[nameType];
-
-				if (!requestToLookup) {
-					continue;
-				}
-
+			outerLoop: for (const requestToLookup of service.requestToLookup.names) {
 				for (const message of messages) {
 					if (requestToLookup === message.className) {
 						service.request = message.className;
@@ -548,9 +541,8 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 			service.responseToLookup = null;
 		}
 
+		/* TODO: This doesnt seem to be needed - are requests guaranteed to be in same module?
 		if (service.requestToLookup) {
-			service.request = NotImplemented;
-
 			outerLoop: for (const nameType of ["name", "fallbackName"]) {
 				const requestToLookup = service.requestToLookup[nameType];
 
@@ -569,6 +561,7 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 				}
 			}
 		}
+		*/
 	}
 }
 
@@ -613,23 +606,16 @@ function TraverseModule(ast) {
 				return;
 			}
 
-			if (node.type === Syntax.FunctionDeclaration || node.type === Syntax.MethodDefinition) {
-				this.skip();
-				return;
-			}
-
 			/*
 				var a = r("q1tI")
 			*/
 			if (
 				node.type === Syntax.VariableDeclarator &&
 				node.init?.type === Syntax.CallExpression &&
-				node.init.callee.name === webpackRequireName
+				node.init.callee.type === Syntax.Identifier &&
+				node.init.callee.name === webpackRequireName &&
+				node.init.arguments.length === 1
 			) {
-				if (node.init.arguments.length !== 1) {
-					throw new Error("Unexpected webpack require");
-				}
-
 				const localId = node.id.name;
 				const importedId = node.init.arguments[0].value;
 
@@ -766,9 +752,9 @@ function TraverseModule(ast) {
 
 				if (msg !== null) {
 					services.push(msg);
+					this.skip();
+					return;
 				}
-
-				this.skip();
 			}
 
 			/*
@@ -789,6 +775,8 @@ function TraverseModule(ast) {
 
 				if (enumObj !== null) {
 					enums.push(enumObj);
+					this.skip();
+					return;
 				}
 			}
 		},
@@ -953,7 +941,6 @@ function TraverseFields(ast, importedIds) {
 								}
 
 								if (field.type === "enum") {
-									// TODO: RE enums
 									field.type = "int32";
 									field.description = "enum";
 								}
@@ -998,6 +985,10 @@ function GetClassNameLiteral(ast) {
 }
 
 function GetMsgResponse(node, messages) {
+	if (!node.left.property.name.endsWith("Handler")) {
+		throw new Error("Unexpected handler name");
+	}
+
 	if (node.right.properties[0].value.type !== Syntax.Literal) {
 		throw new Error("Unexpected request name");
 	}
@@ -1046,15 +1037,18 @@ function GetSendMsg(node, messages, importedIds) {
 
 		const { serviceName, methodName } = SplitRpcString(name);
 
-		// TODO: We technically should be able to find the actual call site of this function
-		// and figure out which object is being constructed and passed into SendMsg()
 		return {
 			name: name,
+			request: NotImplemented,
 			response: response.className,
 			requestToLookup: {
 				//module: null, // all modules
-				name: `C${serviceName}_${methodName}_Request`, // Is this even correct?
-				fallbackName: response.className.substring(0, response.className.length - "_Response".length) + "_Request", // TODO: fallback could be same as name
+				names: [
+					...new Set([
+						`C${serviceName}_${methodName}_Request`,
+						response.className.substring(0, response.className.length - "_Response".length) + "_Request",
+					]),
+				],
 			},
 		};
 	} else if (node.arguments[2].type === Syntax.MemberExpression) {
@@ -1098,10 +1092,11 @@ function GetSendNotification(node) {
 
 	return {
 		name: name,
+		request: NotImplemented,
 		response: NoResponse,
 		requestToLookup: {
 			//module: null, // all modules
-			name: `C${serviceName}_${methodName}_Notification`, // Is this even correct?
+			names: [`C${serviceName}_${methodName}_Notification`],
 		},
 	};
 }
