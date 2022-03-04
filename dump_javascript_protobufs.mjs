@@ -281,27 +281,31 @@ function SplitServices(services) {
 // Mark which services RPCs use a particular message
 function MarkMethodDependants(services, messages) {
 	const MarkDependants = (serviceName, messageName, parentMessageName = null) => {
-		const method = messages.get(messageName);
+		const message = messages.get(messageName);
 
-		if (!method) {
+		if (!message) {
 			throw new Error("Failed to find method");
 		}
 
-		method.dependants.add(serviceName);
+		message.dependants.add(serviceName);
 
-		for (const field of method.fields) {
+		MarkDependantsForMessage(message, serviceName, messageName, parentMessageName);
+	};
+
+	const MarkDependantsForMessage = (message, serviceName, messageName, parentMessageName) => {
+		for (const field of message.fields) {
 			if (field.type[0] !== ".") {
 				continue;
 			}
 
 			const typeName = field.type.substring(1);
-			const method = messages.get(typeName);
+			const typeMessage = messages.get(typeName);
 
-			if (!method) {
+			if (!typeMessage) {
 				throw new Error("Failed to find field type method");
 			}
 
-			method.dependants.add(serviceName);
+			typeMessage.dependants.add(serviceName);
 
 			if (parentMessageName !== typeName) {
 				MarkDependants(serviceName, typeName, messageName);
@@ -314,6 +318,15 @@ function MarkMethodDependants(services, messages) {
 			MarkDependants(serviceName, method.request);
 			MarkDependants(serviceName, method.response);
 		}
+	}
+
+	// Unused messages that go into common.proto may have field types that should also stay in common.proto
+	for (const [, message] of messages) {
+		if (message.dependants.size > 0) {
+			continue;
+		}
+
+		MarkDependantsForMessage(message, "common.proto", message.className, null);
 	}
 }
 
