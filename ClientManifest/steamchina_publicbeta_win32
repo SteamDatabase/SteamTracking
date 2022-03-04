@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1646351224"
+	"version"		"1646358979"
 	"steamchina_friendsui_all"
 	{
 		"file"		"steamchina_friendsui_all.zip.8058e169117e8c9e0f5d5703748d7b0672ea93b9"
@@ -11,11 +11,11 @@
 	}
 	"steamchina_steamui_websrc_all"
 	{
-		"file"		"steamchina_steamui_websrc_all.zip.d815f0c2f362f6dc291de806dfbe088a0c5ccdae"
-		"size"		"25991698"
-		"sha2"		"5a06357b1fc6e8e33fd37177e101ad7a3821037115a3c1c0df2b14799bb20569"
-		"zipvz"		"steamchina_steamui_websrc_all.zip.vz.e0cafd99085e4b1eb1389e45ffda83f5e3f11b1c_22677888"
-		"sha2vz"		"4f658d5ba8ce562af46be84630fc2b3173b263da711741e0fc494a3d2e862925"
+		"file"		"steamchina_steamui_websrc_all.zip.c36d01bd1858e10c38adb19a33a6ac836d9d893d"
+		"size"		"25991725"
+		"sha2"		"ec4bbd0d0492f60069cbd453282c9fd7a3fb9851b0fd6838560e1590a4f2e017"
+		"zipvz"		"steamchina_steamui_websrc_all.zip.vz.a8beff230b8ec4fabe70da77de88eb72cb63d7d7_22678419"
+		"sha2vz"		"4e662e4bbfdbc405dc7c33bc4e19ed635e5dbc0bd8d825b779c5fe05775ef6b9"
 	}
 	"steamchina_resources_misc_all"
 	{
@@ -175,11 +175,11 @@
 	}
 	"steamchina_bins_win32"
 	{
-		"file"		"steamchina_bins_win32.zip.82b3b045651028d422a592172fe3317c0d655483"
-		"size"		"52807558"
-		"sha2"		"fd28932db37dacb87806842d7346de9aeecadfe20e6ba4da3b724832a4bd77ac"
-		"zipvz"		"steamchina_bins_win32.zip.vz.9185045ec5228a8f7988f737c9874c9d078bc31d_27498337"
-		"sha2vz"		"ffb0c2247fe53bc4501b51a7752c5c9f5303f2a063fc0205f654f4651f4f30e4"
+		"file"		"steamchina_bins_win32.zip.cbc3e889cfea6a4b6930a10523ae7324aa41aaa5"
+		"size"		"52807552"
+		"sha2"		"712edac48574199b5df7b6b6f19c8cedbd4254300d405288fd0066d854807ed0"
+		"zipvz"		"steamchina_bins_win32.zip.vz.5af7703bfe611a1e20457d6a4ee31fbd0f66fbf5_27496262"
+		"sha2vz"		"732df49414ca95dc7ebb2fa9a8ee092683e61fe4c01b334f836f14637640dcd0"
 	}
 	"steamchina_steam_win32"
 	{
@@ -208,9 +208,9 @@
 }
 "kvsign2"
 {
-	"win32"		"68a50a37ad2eeb4a9bbbeae4e807d1b0f16f0d50a45eb13a180c20d89e04aebe657ca3e47ffd2f6446e46270c39c84f270562598325bee780e5bc0fa2ca2430b"
+	"win32"		"f6836c596415c2e1ecfdf8df043dbf1ee861582bf6475c8f0f87b64cb7456dfd437a5603def8961b6fd799fdbe9353078cfa51536bf85a3c0daa3ce4b1d4ff07"
 }
 "kvsignatures"
 {
-	"win32"		"8b45aecc202b0537944c196d7f8b75171ab2a2264430ab7e02442aa48d9cdbaef7e45a20704565f3883be9bd56154a9ff895d44170797f95d4607923902d4623708697d112717c1f461386a53f24b726a6bf9504d061b0ade55682ed443d7a5ea1f9c91a0b41053b4c4c42d47d47db6812116611d532f9da22b52d74c5020e9b"
+	"win32"		"78f8cb23854fc3136ecd4e40dc73aed6728d3d41761c32c9eb9b0415900ecea5a63dfe2db1f216c88181c6336a386edef8f80c2513730f1f85dfc16310ff94e1f9e3d5da3f17f5d6c7be6e93a2d836e8a11d251c9b82a958bd94fe35661422e199685234b2b1414ba603b4be1915832c43ae748808f20deec89c1d399073aa42"
 }
