@@ -441,7 +441,7 @@
     "DiscountDashboard_SaveDiscountsError": "ERROR: server failure.",
     "DiscountDashboard_SaveDiscountsWarning_Navigation": "You have pending changes that have not been saved. Would you like to save before leaving this page?",
     "DiscountDashboard_SaveDiscountsWarning_DiscountTooLow": "You cannot set a discount below 10%.",
-    "DiscountDashboard_SaveDiscountsWarning_SomeDiscountTooHigh": "You must set a lower discount for some packages. See details below.",
+    "DiscountDashboard_SaveDiscountsWarning_SomeDiscountTooHigh": "You must set a lower discount for some packages, due to the minimum price in at least one currency or region.",
     "DiscountDashboard_SaveDiscountsWarning_DiscountTooHigh": "You cannot set a discount above %1$s% for this package, due to the minimum price in at least one currency or region.",
     "DiscountDashboard_NavigateWithoutSavingButton": "Discard and continue",
     "DiscountDashboard_DiscardChangesTitle": "DISCARD PENDING CHANGES?",

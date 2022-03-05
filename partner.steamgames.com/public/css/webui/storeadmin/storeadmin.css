@@ -23482,6 +23482,28 @@ div.savetoolbar_HoverToolTip_gba9O {
     background-color: #3e424c;
   }
 }
+.discountgridheaders_CurrencyPicker_2Z65K {
+  background-color: #303238;
+  height: 27px;
+  margin-top: 2px;
+}
+.discountgridheaders_CurrencyPicker_2Z65K .DialogInputLabelGroup {
+  margin-bottom: 0px;
+}
+.discountgridheaders_CurrencyPicker_2Z65K .DialogDropDown {
+  padding: 4px;
+}
+.discountgridheaders_CurrencyPicker_2Z65K .DialogDropDown_Arrow {
+  top: 6px;
+  right: 4px;
+}
+.discountgridheaders_CurrencyDropDown_2gGuz ._DialogInputContainer {
+  padding: 6px;
+}
+.discountgridheaders_CurrencyDropDown_2gGuz
+  .discountgridheaders_CurrencyDropDownItem_3wPHx {
+  padding: 4px 0;
+}
 .singleeventdetails_SingleEventDetailsCtn_381ib {
   position: absolute;
   z-index: 1;

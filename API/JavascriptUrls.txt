@@ -74,6 +74,8 @@ ${CHAT_BASE_URL}chat
 ${CHAT_BASE_URL}chat/avatarfileupload/
 ${CHAT_BASE_URL}chat/beginfileupload/
 ${CHAT_BASE_URL}chat/commitfileupload/
+${CHAT_BASE_URL}comment/recommendation/formattinghelp
+${CHAT_BASE_URL}miniprofile/${accountid}/json
 ${CHAT_BASE_URL}miniprofile/${m_accountid}/json/?origin=${}
 ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
@@ -81,11 +83,13 @@ ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CHAT_BASE_URL}public/javascript/webui/noisegate-audio-worklet.js?v=4
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
+${COMMUNITY_BASE_URL}${}
 ${COMMUNITY_BASE_URL}${}/
 ${COMMUNITY_BASE_URL}/actions/ConvertHTMLToBBCode
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/${statecode}
+${COMMUNITY_BASE_URL}/app/${m_unGamePlayedAppID}
 ${COMMUNITY_BASE_URL}/gid/${}
 ${COMMUNITY_BASE_URL}/gid/${}${}
 ${COMMUNITY_BASE_URL}/gid/${}/ajaxcreateupdatedeletepartnerevents/
@@ -198,14 +202,17 @@ ${COMMUNITY_BASE_URL}partnereventdata/ajaxsetprivatedata
 ${COMMUNITY_BASE_URL}profiles/${STEAM_ID}/wishlist
 ${COMMUNITY_BASE_URL}profiles/${_ ? _ : _}?previewprofile=1&appid=${}
 ${COMMUNITY_BASE_URL}profiles/${steamid64}/
+${COMMUNITY_BASE_URL}profiles/${steamid64}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${steamid}
 ${COMMUNITY_BASE_URL}profiles/${steamid}/
 ${COMMUNITY_BASE_URL}profiles/${steamid}/friendscommon
 ${COMMUNITY_BASE_URL}profiles/${steamid}/inventory
+${COMMUNITY_BASE_URL}profiles/${strSteamID}/ajaxsetpersonaname/
 ${COMMUNITY_BASE_URL}profiles/${}
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
 ${COMMUNITY_BASE_URL}profiles/${}/home
 ${COMMUNITY_BASE_URL}profiles/${}/previewsingleshowcase/?customization_type=${}&level=${}
+${COMMUNITY_BASE_URL}profiles/${}/stats/appid/${}/achievements
 ${COMMUNITY_BASE_URL}profiles/${}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${}?previewprofile=1&appid=${}&itemtype=${}
 ${COMMUNITY_BASE_URL}public/images/events/media_play_icon.png
@@ -227,6 +234,7 @@ ${COMMUNITY_BASE_URL}sale/ajaxoptinsummary
 ${COMMUNITY_BASE_URL}search/users
 ${COMMUNITY_BASE_URL}search/users/#text=${}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${sharedFileID}
+${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetcommunitypreferences
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetfriendslist
 ${COMMUNITY_BASE_URL}textfilter/ajaxgettextfiltercustomwords
@@ -234,6 +242,7 @@ ${COMMUNITY_BASE_URL}tradeoffer/${}/
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&for_items[]=${}_${}_${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&token=${}
+${COMMUNITY_BASE_URL}user/
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
@@ -242,6 +251,7 @@ ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
 ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
 ${HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=919
+${HELP_BASE_URL}wizard/HelpWithSteamMobileChat
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
 ${LOGIN_BASE_URL}jwt/finalizelogin
 ${PARTNER_BASE_URL}/admin/store/pagecreate
@@ -334,6 +344,7 @@ ${PARTNER_BASE_URL}store/packagelanding/${packageid}
 ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
 ${PARTNER_BASE_URL}user/ajaxgetusers
+${STATS_BASE_URL}sales/details/?gid=${GID}&clanid=${}
 ${STATS_BASE_URL}sales/details/?gid=${}&clanid=${}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
@@ -378,6 +389,7 @@ ${STORE_BASE_URL}actions/ajaxresolvesubscriptions
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}api/appdetails
+${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,release_date,content_descriptors
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,screenshots,movies,release_date,content_descriptors&client=${IN_CLIENT}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
@@ -458,6 +470,7 @@ ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
 ${STORE_BASE_URL}forgeyourfate${_ ? "#badge" : "#next"}
 ${STORE_BASE_URL}franchise/${m_strVanity}/
+${STORE_BASE_URL}friends/recommendgame
 ${STORE_BASE_URL}greatondeck
 ${STORE_BASE_URL}itemstore/${nAppID}/
 ${STORE_BASE_URL}itemstore/${nAppID}/detail/${nItemDefID}
@@ -473,6 +486,7 @@ ${STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${}&model=${similarity_mode
 ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}
 ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
+${STORE_BASE_URL}labs/contenthub?optout=1
 ${STORE_BASE_URL}labs/trendingreviews/
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
@@ -501,6 +515,7 @@ ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
+${STORE_BASE_URL}remoteplay#anywhere_how
 ${STORE_BASE_URL}reservation/ajaxpreviewoptions
 ${STORE_BASE_URL}reservation/cancelreservation
 ${STORE_BASE_URL}sale/${sale_vanity_id}
@@ -537,12 +552,14 @@ ${STORE_BASE_URL}steamawards/ajaxvoteforgame
 ${STORE_BASE_URL}steamawards/nominations/
 ${STORE_BASE_URL}sub/${id}
 ${STORE_BASE_URL}subscriber_agreement
+${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}?deck_ssa=1
 ${STORE_BASE_URL}tags/${}/${name}
 ${STORE_BASE_URL}updated/ajaxgetmyappsraw
 ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_ICON_BASE_URL}${}
+${WEBAPI_BASE_URL}${}/${}/v000${}
 ${WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/RemoveUserChatText/v0001/?access_token=${m_webApiToken}
