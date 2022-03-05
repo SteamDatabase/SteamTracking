@@ -1,6 +1,17 @@
 import { join as pathJoin, resolve as pathResolve } from "path";
 import { readdir as readDir } from "fs/promises";
 
+const pathsToRecurse = [
+	"./Scripts/",
+	"./ClientExtracted/",
+	"./help.steampowered.com/",
+	"./partner.steamgames.com/",
+	"./steamcommunity.com/",
+	"./store.steampowered.com",
+	"./www.dota2.com",
+	"./www.underlords.com",
+];
+
 // Should this just be a recursive search for all webpack files?
 const paths = [
 	"./Scripts/WebUI/",
@@ -29,4 +40,22 @@ async function GetJavascriptFiles(dirName) {
 export async function GetFilesToParse() {
 	const promises = await Promise.all(paths.map(GetJavascriptFiles));
 	return [].concat(...promises).sort();
+}
+
+async function* GetRecursiveJavascriptFiles(dir) {
+	const dirents = await readDir(dir, { withFileTypes: true });
+	for (const dirent of dirents) {
+		const res = pathResolve(dir, dirent.name);
+		if (dirent.isDirectory()) {
+			yield* GetRecursiveJavascriptFiles(res);
+		} else if (dirent.isFile() && dirent.name.endsWith(".js")) {
+			yield res;
+		}
+	}
+}
+
+export async function* GetRecursiveFilesToParse() {
+	for (const path of pathsToRecurse) {
+		yield* GetRecursiveJavascriptFiles(path);
+	}
 }

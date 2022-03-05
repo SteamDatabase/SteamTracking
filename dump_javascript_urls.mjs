@@ -1,20 +1,26 @@
 import { readFile, writeFile } from "fs/promises";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
-import { GetFilesToParse } from "./dump_javascript_paths.mjs";
+import { GetRecursiveFilesToParse } from "./dump_javascript_paths.mjs";
 
 const allStrings = new Set();
-const files = await GetFilesToParse();
 
-for (const file of files) {
+for await (const file of GetRecursiveFilesToParse()) {
 	try {
 		const code = await readFile(file);
-		const ast = parse(code, { ecmaVersion: latestEcmaVersion });
+		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
 
 		traverse(ast, {
 			enter: function (node) {
 				if (node.type === Syntax.TemplateLiteral && node.expressions.some(IsBaseUrlExpression)) {
 					allStrings.add(ConstructLiteral(node));
+					this.skip();
+				} else if (
+					node.type === Syntax.Literal &&
+					IsBaseUrlExpression(node) &&
+					!file.endsWith("steammobile_android.js")
+				) {
+					allStrings.add(FormatNode(node, true).join(""));
 					this.skip();
 				} else if (node.type === Syntax.BinaryExpression && IsLeftSideBaseUrlExpression(node)) {
 					allStrings.add(FormatNode(node, true).join(""));
@@ -41,6 +47,10 @@ function IsLeftSideBaseUrlExpression(node) {
 }
 
 function IsBaseUrlExpression(node) {
+	if (node.type === Syntax.Literal && typeof node.value === "string" && node.value.startsWith("https://")) {
+		return true;
+	}
+
 	return (
 		node.type === Syntax.MemberExpression &&
 		node.property.type === Syntax.Identifier &&
