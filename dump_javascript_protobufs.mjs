@@ -146,6 +146,12 @@ console.log("Found", mergedMessages.size, "messages");
 	const mergedEnums = MergeEnums(allEnums);
 
 	console.log("Found", mergedEnums.size, "enums");
+
+	/*
+	const stream = createWriteStream("Structs/enums.steamd", { flags: "w", encoding: "utf8" });
+	OutputEnums(mergedEnums, stream);
+	stream.end();
+	*/
 }
 
 function GetMatchingDependencyCount(services, dependants) {
@@ -162,7 +168,7 @@ function GetMatchingDependencyCount(services, dependants) {
 
 function OutputToFile(fileName, imports, services, messages) {
 	return new Promise((resolve) => {
-		let stream = createWriteStream(fileName, { flags: "w", encoding: "utf8" });
+		const stream = createWriteStream(fileName, { flags: "w", encoding: "utf8" });
 		stream.once("close", resolve);
 
 		OutputImports(imports, stream);
@@ -234,6 +240,18 @@ function OutputServices(services, stream = process.stdout) {
 		}
 
 		stream.write("}\n\n");
+	}
+}
+
+function OutputEnums(enums, stream = process.stdout) {
+	for (const [name, values] of enums) {
+		stream.write(`enum ${name}\n{\n`);
+
+		for (const [key, value] of values) {
+			stream.write(`\t${key} = ${value};\n`);
+		}
+
+		stream.write(`}\n\n`);
 	}
 }
 
@@ -1149,8 +1167,8 @@ function ParseEnum(node) {
 		if ("0123456789".includes(newKeyName.charAt(0))) {
 			newKeyName = "_" + newKeyName;
 		}
-		enumValues[newKeyName] = enumValues[keyName];
-		delete enumValues[keyName];
+		enumValues.set(newKeyName, enumValues.get(keyName));
+		enumValues.delete(keyName);
 	});
 
 	return {
