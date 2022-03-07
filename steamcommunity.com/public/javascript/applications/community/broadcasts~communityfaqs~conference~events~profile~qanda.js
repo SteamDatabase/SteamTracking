@@ -344,7 +344,7 @@
         D = r.n(y),
         O = r("0OaU"),
         L = r("lkRc");
-      let w = class extends i.a.Component {
+      let A = class extends i.a.Component {
         constructor(t) {
           super(t),
             (this.m_manager = new _(this.props.baseURL)),
@@ -374,7 +374,7 @@
             i.a.createElement(
               "div",
               { className: D.a.LoginPanelContent },
-              h && i.a.createElement(A, { text: h }),
+              h && i.a.createElement(w, { text: h }),
               l == g.AccountName &&
                 i.a.createElement(N, { manager: this.m_manager }),
               l == g.TwoFactorCode &&
@@ -397,14 +397,14 @@
           );
         }
       };
-      function A(t) {
+      function w(t) {
         return i.a.createElement(
           "div",
           { className: D.a.ErrorMessage },
           t.text
         );
       }
-      w = Object(n.b)([T.a], w);
+      A = Object(n.b)([T.a], A);
       let N = class extends i.a.Component {
         constructor(t) {
           super(t), (this.state = { nNameSize: 0, nPassSize: 0 });
@@ -691,7 +691,7 @@
             : i.a.createElement(
                 "div",
                 null,
-                i.a.createElement(w, {
+                i.a.createElement(A, {
                   baseURL: Object(L.d)(),
                   onLoginComplete: this.OnLoginComplete,
                 })
@@ -830,29 +830,33 @@
     Qcoi: function (t, e, r) {
       "use strict";
       r.d(e, "a", function () {
-        return d;
+        return f;
       }),
         r.d(e, "b", function () {
-          return f;
+          return g;
+        }),
+        r.d(e, "c", function () {
+          return v;
         });
       var n = r("mrSG"),
         a = r("vDqi"),
         i = r.n(a),
         o = r("2vnA"),
         s = r("q1tI"),
-        l = (r("mgoM"), r("kyHq"), r("8H1D")),
-        h = r("kLLr"),
-        c = (r("AiWL"), r("r64O")),
-        u = r("OS6B"),
-        m = r("lkRc");
-      class p {
+        l = r.n(s),
+        h = (r("mgoM"), r("kyHq"), r("8H1D")),
+        c = r("kLLr"),
+        u = (r("AiWL"), r("r64O")),
+        m = r("OS6B"),
+        p = r("lkRc");
+      class d {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map());
         }
         LoadProfiles(t, e) {
           return Object(n.a)(this, void 0, void 0, function* () {
-            Object(c.a)(
+            Object(u.a)(
               t.length <= 500,
               "Check LoadProfiles, requesting too many steam IDs"
             );
@@ -861,7 +865,7 @@
                 !this.m_mapProfiles.has(t) && !this.m_mapProfilesLoading.has(t)
             );
             if (0 == r.length) return this.m_mapProfilesLoading.get(t[0]);
-            let n = m.c.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+            let n = p.c.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
               a = i.a.get(n, {
                 params: { steamids: r.join(",") },
                 withCredentials: !0,
@@ -873,9 +877,9 @@
               200 == o.status &&
               o.data.forEach((t) => {
                 (t.avatar_hash = t.avatar_url),
-                  (t.avatar_url_medium = Object(l.a)(t.avatar_url, "medium")),
-                  (t.avatar_url_full = Object(l.a)(t.avatar_url, "full")),
-                  (t.avatar_url = Object(l.a)(t.avatar_url)),
+                  (t.avatar_url_medium = Object(h.a)(t.avatar_url, "medium")),
+                  (t.avatar_url_full = Object(h.a)(t.avatar_url, "full")),
+                  (t.avatar_url = Object(h.a)(t.avatar_url)),
                   this.m_mapProfiles.set(t.steamid, t),
                   this.m_mapProfilesLoading.delete(t.steamid);
               });
@@ -886,7 +890,7 @@
         }
         GetProfileByAccountID(t) {
           return this.m_mapProfiles.get(
-            h.a.InitFromAccountID(t).ConvertTo64BitString()
+            c.a.InitFromAccountID(t).ConvertTo64BitString()
           );
         }
         GetProfileBySteamID(t) {
@@ -897,7 +901,7 @@
         }
         BHasProfileByAccountID(t) {
           return this.m_mapProfiles.has(
-            h.a.InitFromAccountID(t).ConvertTo64BitString()
+            c.a.InitFromAccountID(t).ConvertTo64BitString()
           );
         }
         BHasProfileBySteamID(t) {
@@ -906,28 +910,31 @@
         GetProfileURLBySteamID(t) {
           const e = this.GetProfileBySteamID(t);
           return e && e.profile_url
-            ? m.c.COMMUNITY_BASE_URL + "id/" + e.profile_url
-            : m.c.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString();
+            ? p.c.COMMUNITY_BASE_URL + "id/" + e.profile_url
+            : p.c.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(t) {
           const e = this.GetProfileBySteamID(t);
           return e && e.persona_name ? e.persona_name : "";
         }
       }
-      Object(n.b)([o.C], p.prototype, "m_mapProfiles", void 0);
-      const d = new p();
-      function f(t) {
-        const e = t ? ("string" == typeof t ? new h.a(t) : t) : null,
-          [r, n] = Object(s.useState)(!!e && !d.BHasProfileBySteamID(e));
+      Object(n.b)([o.C], d.prototype, "m_mapProfiles", void 0);
+      const f = new d();
+      function g(t) {
+        const e = l.a.useMemo(
+            () => (t ? ("string" == typeof t ? new c.a(t) : t) : null),
+            [t]
+          ),
+          [r, n] = Object(s.useState)(!!e && !f.BHasProfileBySteamID(e));
         Object(s.useEffect)(() => {
           const t = i.a.CancelToken.source();
           return (
             e &&
-              !d.BHasProfileBySteamID(e) &&
-              d
+              !f.BHasProfileBySteamID(e) &&
+              f
                 .LoadProfiles([e.ConvertTo64BitString()])
                 .catch((t) => {
-                  const r = Object(u.a)(t);
+                  const r = Object(m.a)(t);
                   console.error(
                     "useUserProfile failed to load profile for " +
                       e.ConvertTo64BitString() +
@@ -942,9 +949,12 @@
             () => t.cancel("unmounting useUserProfile")
           );
         }, [t]);
-        return [r, !!e && d.GetProfileBySteamID(e)];
+        return [r, !!e && f.GetProfileBySteamID(e)];
       }
-      window.g_ProfileStore = d;
+      function v(t) {
+        return g(l.a.useMemo(() => c.a.InitFromAccountID(t), [t]));
+      }
+      window.g_ProfileStore = f;
     },
     YLyR: function (t, e, r) {
       "use strict";
@@ -2542,7 +2552,7 @@
           (this.modulus = new O(t, 16)),
             (this.encryptionExponent = new O(e, 16));
         },
-        w = {
+        A = {
           base64:
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
           encode: function (t) {
@@ -2592,7 +2602,7 @@
             return i;
           },
         },
-        A = {
+        w = {
           hex: "0123456789abcdef",
           encode: function (t) {
             if (!t) return !1;
@@ -2629,7 +2639,7 @@
               !!(t = this.pkcs1pad2(t, (e.modulus.bitLength() + 7) >> 3)) &&
               !!(t = t.modPowInt(e.encryptionExponent, e.modulus)) &&
               (1 == (1 & (t = t.toString(16)).length) && (t = "0" + t),
-              w.encode(A.decode(t)))
+              A.encode(w.decode(t)))
             );
           },
           pkcs1pad2: function (t, e) {

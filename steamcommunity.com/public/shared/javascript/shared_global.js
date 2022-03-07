@@ -3089,9 +3089,30 @@ function UnregisterPopupDismissal( elemIgnore )
 
 function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 {
-	var $Link = $JFromIDOrElement(elemLink);
 	var $Popup = $JFromIDOrElement(elemPopup);
 
+	// If we're in tablet screen mode put the menu content in a modal dialog
+	if ( window.UseTabletScreenMode() )
+	{
+		// detach this element and when the dialog closes re-attach to the document body
+		$Popup.detach();
+		var originalPopupPosition = $Popup.css( 'position' );
+		$Popup.css( 'position', 'static' ); // clear possible absolute positioning
+		$Popup.show();
+
+		ShowDialog( '', $Popup ).always(
+			function() {
+				// save it away again for later
+				$Popup.hide();
+				$Popup.css( 'position', originalPopupPosition ); // restore positioning
+				$J( document.body ).append( $Popup );
+			}
+		);
+
+		return;
+	}
+
+	var $Link = $JFromIDOrElement(elemLink);
 	if ( $Link.hasClass('focus') )
 	{
 		HideMenu( elemLink, elemPopup );
@@ -4660,11 +4681,11 @@ function BindTooltips(selector, rgOptions)
 	// Standard tooltips
 	var $TextTooltips = $J( '[data-tooltip-text]', selector);
 	if ( $TextTooltips.length )
-		$TextTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text', 'replaceExisting': false } );
+		$TextTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text', 'replaceExisting': false, 'responsiveMode': window.UseSmallScreenMode && window.UseSmallScreenMode() } );
 
 	var $HTMLTooltips = $J( '[data-tooltip-html]', selector);
 	if ( $HTMLTooltips.length )
-		$HTMLTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false } );
+		$HTMLTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false, 'responsiveMode': window.UseSmallScreenMode && window.UseSmallScreenMode() } );
 }
 
 /**

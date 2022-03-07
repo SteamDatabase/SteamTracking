@@ -2718,6 +2718,541 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   z-index: 2000;
 }
+:root {
+  --basicui-header-height: 0px;
+}
+html:not(.client)
+  .events_listing
+  .apppartnereventspage_AppPartnerEventsPage_3CJsg
+  .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
+  margin-top: 104px;
+}
+@media screen and (max-width: 910px) {
+  html:not(.client)
+    .events_listing
+    .responsive_page_frame.with_header
+    div.responsive_page_content {
+    padding-top: 0px;
+  }
+}
+@media screen and (max-width: 500px) {
+  html:not(.client)
+    .events_listing
+    .apppartnereventspage_AppPartnerEventsBanner_1HRiM
+    .apppartnereventspage_AppBannerLinks_D1bMm {
+    margin: unset;
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+}
+html:not(.client)
+  .events_listing
+  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
+  margin-top: 160px;
+}
+html:not(.client)
+  .events_listing
+  .apppartnereventspage_AppPartnerEventsBody_1XLRr {
+  margin-top: 0px;
+}
+.events_listing
+  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
+  margin-top: 60px;
+}
+.apppartnereventspage_AppPartnerEventsPage_3CJsg {
+  transition: all 0.32s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 25;
+  outline: none;
+  display: flex;
+  flex-flow: column;
+}
+@media screen and (max-width: 884px) {
+  .apppartnereventspage_AppPartnerEventsPage_3CJsg
+    .apppartnereventspage_AppBannerGroup_qexk- {
+    padding-left: 7px;
+  }
+}
+.apppartnereventspage_AppPartnerEventsBody_1XLRr {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex: 1;
+  outline: none;
+}
+.apppartnereventspage_AppPartnerEventsBody_1XLRr
+  .apppartnereventspage_NoEvents_2xyx9 {
+  padding: 30px;
+  font-size: 2em;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: auto;
+}
+.apppartnereventspage_AppBannerCtn_wavRt {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.apppartnereventspage_AppBannerCtn_wavRt
+  .apppartnereventspage_AppBannerBackground_3RHFo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(60px) brightness(40%);
+  opacity: 0.6;
+  background: center/cover no-repeat;
+  z-index: 1;
+}
+.apppartnereventspage_AppBannerGroup_qexk- {
+  position: relative;
+  z-index: 2;
+  max-width: 866px;
+  margin: 0px auto;
+  width: 100%;
+  height: 100%;
+  padding: 7px 7px;
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 142px 1fr;
+  grid-template-rows: 38px 28px;
+  grid-column-gap: 15px;
+}
+.BasicUI .apppartnereventspage_AppBannerGroup_qexk- {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .apppartnereventspage_AppBannerGroup_qexk- {
+    grid-template-rows: 29px 28px;
+  }
+}
+.apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
+  grid-template-columns: 66px 1fr;
+}
+.apppartnereventspage_TallBanner_KBixg
+  .apppartnereventspage_AppBannerGroup_qexk- {
+  grid-template-columns: 290px 1fr;
+  grid-template-rows: 100px 36px;
+}
+.apppartnereventspage_TallBanner_KBixg
+  .apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
+  grid-template-columns: 136px 1fr;
+}
+.apppartnereventspage_WideBanner_1hl09
+  .apppartnereventspage_AppBannerGroup_qexk- {
+  max-width: 1012px;
+  padding: 7px 16px;
+}
+@media screen and (max-width: 700px) {
+  .apppartnereventspage_WideBanner_1hl09
+    .apppartnereventspage_AppBannerGroup_qexk- {
+    padding: 7px 7px;
+  }
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerTitle_1iqjH {
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: 100;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.apppartnereventspage_TallBanner_KBixg
+  .apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerTitle_1iqjH {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 35px;
+  line-height: 41px;
+  word-break: break-word;
+  white-space: normal;
+}
+@media screen and (max-width: 1024px) {
+  .apppartnereventspage_AppBannerGroup_qexk-
+    .apppartnereventspage_AppBannerTitle_1iqjH {
+    font-size: 27px;
+    line-height: 27px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .apppartnereventspage_AppBannerGroup_qexk-
+    .apppartnereventspage_AppBannerTitle_1iqjH {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .apppartnereventspage_AppBannerGroup_qexk-
+    .apppartnereventspage_AppBannerTitle_1iqjH {
+    font-size: 20px;
+    line-height: 22px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerTitle_1iqjH
+  .apppartnereventspage_NewsHubSubTitle_3tf3b {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 25px;
+  display: none;
+}
+.apppartnereventspage_TallBanner_KBixg
+  .apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerTitle_1iqjH
+  .apppartnereventspage_NewsHubSubTitle_3tf3b {
+  display: block;
+}
+@media screen and (max-width: 700px) {
+  .apppartnereventspage_TallBanner_KBixg
+    .apppartnereventspage_AppBannerGroup_qexk-
+    .apppartnereventspage_AppBannerTitle_1iqjH
+    .apppartnereventspage_NewsHubSubTitle_3tf3b {
+    display: none;
+  }
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerLogoCtn_2EV_W {
+  border-radius: 3px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  box-sizing: border-box;
+  display: block;
+  grid-row-end: span 2;
+}
+@media screen and (max-width: 500px) {
+  .apppartnereventspage_AppBannerGroup_qexk-
+    .apppartnereventspage_AppBannerLogoCtn_2EV_W {
+    display: none;
+  }
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerLogo_dGGTg {
+  height: 100%;
+  margin: 0px;
+  display: block;
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerLinks_D1bMm {
+  display: flex;
+  align-self: end;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+@media screen and (max-width: 500px) {
+  .apppartnereventspage_AppBannerGroup_qexk-
+    .apppartnereventspage_AppBannerLinks_D1bMm {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_HeaderFollowButton_1tnk5 {
+  margin-right: 16px;
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerLink_3Yoms {
+  padding: 2px 16px 2px 0;
+  color: #c5cedf;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerLink_3Yoms
+  svg {
+  width: 18px;
+  height: 18px;
+  fill: #c5cedf;
+  margin-right: 5px;
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerLink_3Yoms:hover {
+  color: #fff;
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerLink_3Yoms:hover
+  svg {
+  fill: #fff;
+}
+.apppartnereventspage_AppBannerGroup_qexk-
+  .apppartnereventspage_AppBannerRSSLink_1HeKH {
+  width: 18px;
+  height: 18px;
+  padding: 2px 12px 2px 0;
+}
+.apppartnereventspage_AppPartnerEventsBanner_1HRiM {
+  width: 100%;
+  background-color: #3d424c;
+  background-image: radial-gradient(
+    ellipse at bottom center,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  display: flex;
+  box-shadow: 0 0 10px #000;
+  z-index: 3;
+}
+.apppartnereventspage_AppPartnerEventsContainer_3GCEy {
+  padding: 0px 20px;
+  margin: 0 auto 80px;
+  pointer-events: none;
+}
+@media screen and (max-width: 910px) {
+  .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
+    padding: 0px 10px 0px 10px;
+  }
+}
+.BasicUI .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
+  margin: unset;
+}
+.apppartnereventspage_PartnerEvent_1KsYS {
+  max-width: 848px;
+  overflow: hidden;
+  margin: 56px auto 16px auto;
+  position: relative;
+  background-color: #25282e;
+  border-radius: 4px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 0 0 32px #000;
+  pointer-events: initial;
+  border: 1px solid transparent;
+  font-weight: 300;
+}
+.BasicUI .apppartnereventspage_PartnerEvent_1KsYS {
+  border: none;
+  border-radius: 0px;
+  max-width: 640px;
+  margin: 24px auto 40px auto;
+  box-shadow: var(--gpShadow-XLarge);
+}
+.apppartnereventspage_PartnerEvent_1KsYS a {
+  text-decoration: none;
+}
+.apppartnereventspage_PartnerEvent_1KsYS
+  .apppartnereventspage_LibraryViewSubtitle_1rbgK {
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+div.apppartnereventspage_EventDetailsBody_3NW5v {
+  min-height: 0;
+}
+.apppartnereventspage_ControlSection_2pA5C {
+  position: fixed;
+  top: 106px;
+  margin-bottom: -196px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1000;
+}
+.apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
+  margin-bottom: -138px;
+}
+.apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoScrollArrows_39hJ8 {
+  top: 136px;
+}
+.BasicUI
+  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoScrollArrows_39hJ8 {
+  display: none;
+}
+.apppartnereventspage_ControlSection_2pA5C
+  .apppartnereventspage_ControlSectionWidth_3yfs7 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 890px;
+  display: flex;
+}
+.apppartnereventspage_ControlSection_2pA5C
+  .apppartnereventspage_ControlSectionWidth_3yfs7
+  .apppartnereventspage_ControlSectionRightSide_2tSyr {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  pointer-events: initial;
+  max-width: 896px;
+}
+.apppartnereventspage_ControlSection_2pA5C
+  .apppartnereventspage_ControlSectionWidth_3yfs7
+  .apppartnereventspage_ControlSectionRightSide_2tSyr
+  .apppartnereventspage_GameArt_2a5oS {
+  width: 48px;
+  height: 48px;
+}
+.apppartnereventspage_ControlSection_2pA5C
+  .apppartnereventspage_ControlSectionWidth_3yfs7
+  .apppartnereventspage_ControlSectionRightSide_2tSyr
+  .apppartnereventspage_GameArt_2a5oS
+  img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: filter 0.1s ease-in-out;
+}
+.apppartnereventspage_ControlSection_2pA5C > *:not(:first-child) {
+  margin-left: 8px;
+}
+@keyframes apppartnereventspage_transitionIn_2jG5N {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.apppartnereventspage_ScrollButton_1t_97 {
+  background-color: #44444b;
+  border: 1px solid #63636d;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  width: 48px;
+  height: 24px;
+  box-shadow: 0 3px 32px #000;
+}
+.apppartnereventspage_ScrollButton_1t_97:hover {
+  background-color: #575761;
+  border: 1px solid #9e9ead;
+}
+.apppartnereventspage_ScrollButton_1t_97:hover svg polygon {
+  fill: #fff;
+}
+.apppartnereventspage_ScrollButton_1t_97:hover.apppartnereventspage_GameArt_2a5oS
+  img {
+  filter: brightness(1.25);
+}
+.apppartnereventspage_ScrollButton_1t_97.apppartnereventspage_Up_3vBD2 {
+  padding-top: 3px;
+}
+.apppartnereventspage_ScrollButton_1t_97.apppartnereventspage_Down_3VePR {
+  padding-bottom: 3px;
+}
+.apppartnereventspage_ScrollButton_1t_97 svg polygon {
+  fill: #9e9ead;
+}
+.apppartnereventspage_CloseButton_1_vCR {
+  background-color: #44444b;
+  border: 1px solid #63636d;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 32px #000;
+}
+.apppartnereventspage_CloseButton_1_vCR:hover {
+  background-color: #575761;
+  border: 1px solid #9e9ead;
+}
+.apppartnereventspage_CloseButton_1_vCR:hover svg line {
+  stroke: #fff;
+}
+.apppartnereventspage_CloseButton_1_vCR svg line {
+  stroke-width: 16px;
+  stroke: #9e9ead;
+}
+.apppartnereventspage_AnimIn_240i5 {
+  animation-name: apppartnereventspage_transitionIn_2jG5N;
+  animation-duration: 0.32s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  transition: all 0.21s ease-out;
+}
+.apppartnereventspage_AnimIn_240i5 svg {
+  transition: all 0.21s ease-out;
+}
+.apppartnereventspage_AnimIn_240i5:active {
+  background-color: #000;
+  transition-duration: 0s;
+  box-shadow: 0 0 12px #181818;
+}
+.apppartnereventspage_AnimIn_240i5:active svg {
+  transform: scale(0.8);
+  transition-duration: 0s;
+}
+.apppartnereventspage_AnimIn_240i5.apppartnereventspage_Down_3VePR:active svg {
+  transform: scale(0.8) rotateZ(180deg);
+  transition-duration: 0s;
+}
+.apppartnereventspage_ClickableBG_308ED {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 100%;
+  margin-bottom: calc(-100vh - 10px);
+}
+.apppartnereventspage_DirectionState_Bv96j {
+  margin: 10px 0px 0px 0px;
+}
+.apppartnereventspage_EventTypeAndTimeRow_3bWTO {
+  display: flex;
+  align-items: center;
+}
+.apppartnereventspage_EventTypeAndTimeRow_3bWTO.apppartnereventspage_WithReminder_1C5Dv {
+  padding: 6px;
+  border-radius: 6px;
+  background-color: rgba(30, 33, 38, 0.5);
+  margin-bottom: 6px;
+}
+@media screen and (max-width: 700px) {
+  .apppartnereventspage_EventTypeAndTimeRow_3bWTO.apppartnereventspage_WithReminder_1C5Dv {
+    flex-direction: column;
+  }
+}
+.apppartnereventspage_EventTypeAndTimeRow_3bWTO
+  .apppartnereventspage_TimeandPostedBy_2WwG2 {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin: 0px 12px 0px 0px;
+  color: #6c767f;
+}
+.apppartnereventspage_EventTypeAndTimeRow_3bWTO
+  .apppartnereventspage_TimeandPostedBy_2WwG2
+  .apppartnereventspage_EventType_Udzrp {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #289cff;
+  margin-right: 6px;
+}
+.apppartnereventspage_EventTypeAndTimeRow_3bWTO
+  .apppartnereventspage_TimeandPostedBy_2WwG2
+  .apppartnereventspage_PostedBy_2VqeQ {
+  margin: 0px 6px;
+  color: #868f98;
+  display: none;
+}
+.apppartnereventspage_EventTypeAndTimeRow_3bWTO
+  .apppartnereventspage_ReminderContainer_3Vf2M {
+  margin-left: auto;
+  flex: none;
+}
+.apppartnereventspage_ReadMoreCnt_1Ymai {
+  padding-top: 20px;
+}
 .discussionwidget_Container_mKmrO {
   display: flex;
   flex-direction: row;
@@ -5683,541 +6218,6 @@ body.v6.partner_events {
   }
 }
 .partnereventdisplay_ReadMoreCnt_1L8Mo {
-  padding-top: 20px;
-}
-:root {
-  --basicui-header-height: 0px;
-}
-html:not(.client)
-  .events_listing
-  .apppartnereventspage_AppPartnerEventsPage_3CJsg
-  .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
-  margin-top: 104px;
-}
-@media screen and (max-width: 910px) {
-  html:not(.client)
-    .events_listing
-    .responsive_page_frame.with_header
-    div.responsive_page_content {
-    padding-top: 0px;
-  }
-}
-@media screen and (max-width: 500px) {
-  html:not(.client)
-    .events_listing
-    .apppartnereventspage_AppPartnerEventsBanner_1HRiM
-    .apppartnereventspage_AppBannerLinks_D1bMm {
-    margin: unset;
-    grid-column-start: 2;
-    grid-column-end: 2;
-  }
-}
-html:not(.client)
-  .events_listing
-  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
-  margin-top: 160px;
-}
-html:not(.client)
-  .events_listing
-  .apppartnereventspage_AppPartnerEventsBody_1XLRr {
-  margin-top: 0px;
-}
-.events_listing
-  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
-  margin-top: 60px;
-}
-.apppartnereventspage_AppPartnerEventsPage_3CJsg {
-  transition: all 0.32s ease-in-out;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 25;
-  outline: none;
-  display: flex;
-  flex-flow: column;
-}
-@media screen and (max-width: 884px) {
-  .apppartnereventspage_AppPartnerEventsPage_3CJsg
-    .apppartnereventspage_AppBannerGroup_qexk- {
-    padding-left: 7px;
-  }
-}
-.apppartnereventspage_AppPartnerEventsBody_1XLRr {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  flex: 1;
-  outline: none;
-}
-.apppartnereventspage_AppPartnerEventsBody_1XLRr
-  .apppartnereventspage_NoEvents_2xyx9 {
-  padding: 30px;
-  font-size: 2em;
-  text-transform: uppercase;
-  width: fit-content;
-  margin: auto;
-}
-.apppartnereventspage_AppBannerCtn_wavRt {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.apppartnereventspage_AppBannerCtn_wavRt
-  .apppartnereventspage_AppBannerBackground_3RHFo {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  filter: blur(60px) brightness(40%);
-  opacity: 0.6;
-  background: center/cover no-repeat;
-  z-index: 1;
-}
-.apppartnereventspage_AppBannerGroup_qexk- {
-  position: relative;
-  z-index: 2;
-  max-width: 866px;
-  margin: 0px auto;
-  width: 100%;
-  height: 100%;
-  padding: 7px 7px;
-  box-sizing: border-box;
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 142px 1fr;
-  grid-template-rows: 38px 28px;
-  grid-column-gap: 15px;
-}
-.BasicUI .apppartnereventspage_AppBannerGroup_qexk- {
-  display: none;
-}
-@media screen and (max-width: 500px) {
-  .apppartnereventspage_AppBannerGroup_qexk- {
-    grid-template-rows: 29px 28px;
-  }
-}
-.apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
-  grid-template-columns: 66px 1fr;
-}
-.apppartnereventspage_TallBanner_KBixg
-  .apppartnereventspage_AppBannerGroup_qexk- {
-  grid-template-columns: 290px 1fr;
-  grid-template-rows: 100px 36px;
-}
-.apppartnereventspage_TallBanner_KBixg
-  .apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
-  grid-template-columns: 136px 1fr;
-}
-.apppartnereventspage_WideBanner_1hl09
-  .apppartnereventspage_AppBannerGroup_qexk- {
-  max-width: 1012px;
-  padding: 7px 16px;
-}
-@media screen and (max-width: 700px) {
-  .apppartnereventspage_WideBanner_1hl09
-    .apppartnereventspage_AppBannerGroup_qexk- {
-    padding: 7px 7px;
-  }
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerTitle_1iqjH {
-  font-size: 26px;
-  line-height: 35px;
-  font-weight: 100;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
-  color: #fff;
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-.apppartnereventspage_TallBanner_KBixg
-  .apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerTitle_1iqjH {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 35px;
-  line-height: 41px;
-  word-break: break-word;
-  white-space: normal;
-}
-@media screen and (max-width: 1024px) {
-  .apppartnereventspage_AppBannerGroup_qexk-
-    .apppartnereventspage_AppBannerTitle_1iqjH {
-    font-size: 27px;
-    line-height: 27px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .apppartnereventspage_AppBannerGroup_qexk-
-    .apppartnereventspage_AppBannerTitle_1iqjH {
-    font-size: 24px;
-    line-height: 24px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .apppartnereventspage_AppBannerGroup_qexk-
-    .apppartnereventspage_AppBannerTitle_1iqjH {
-    font-size: 20px;
-    line-height: 22px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerTitle_1iqjH
-  .apppartnereventspage_NewsHubSubTitle_3tf3b {
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 25px;
-  display: none;
-}
-.apppartnereventspage_TallBanner_KBixg
-  .apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerTitle_1iqjH
-  .apppartnereventspage_NewsHubSubTitle_3tf3b {
-  display: block;
-}
-@media screen and (max-width: 700px) {
-  .apppartnereventspage_TallBanner_KBixg
-    .apppartnereventspage_AppBannerGroup_qexk-
-    .apppartnereventspage_AppBannerTitle_1iqjH
-    .apppartnereventspage_NewsHubSubTitle_3tf3b {
-    display: none;
-  }
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerLogoCtn_2EV_W {
-  border-radius: 3px;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.2);
-  height: 100%;
-  box-sizing: border-box;
-  display: block;
-  grid-row-end: span 2;
-}
-@media screen and (max-width: 500px) {
-  .apppartnereventspage_AppBannerGroup_qexk-
-    .apppartnereventspage_AppBannerLogoCtn_2EV_W {
-    display: none;
-  }
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerLogo_dGGTg {
-  height: 100%;
-  margin: 0px;
-  display: block;
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerLinks_D1bMm {
-  display: flex;
-  align-self: end;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-@media screen and (max-width: 500px) {
-  .apppartnereventspage_AppBannerGroup_qexk-
-    .apppartnereventspage_AppBannerLinks_D1bMm {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_HeaderFollowButton_1tnk5 {
-  margin-right: 16px;
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerLink_3Yoms {
-  padding: 2px 16px 2px 0;
-  color: #c5cedf;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerLink_3Yoms
-  svg {
-  width: 18px;
-  height: 18px;
-  fill: #c5cedf;
-  margin-right: 5px;
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerLink_3Yoms:hover {
-  color: #fff;
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerLink_3Yoms:hover
-  svg {
-  fill: #fff;
-}
-.apppartnereventspage_AppBannerGroup_qexk-
-  .apppartnereventspage_AppBannerRSSLink_1HeKH {
-  width: 18px;
-  height: 18px;
-  padding: 2px 12px 2px 0;
-}
-.apppartnereventspage_AppPartnerEventsBanner_1HRiM {
-  width: 100%;
-  background-color: #3d424c;
-  background-image: radial-gradient(
-    ellipse at bottom center,
-    rgba(255, 255, 255, 0.1) 10%,
-    rgba(255, 255, 255, 0) 80%
-  );
-  display: flex;
-  box-shadow: 0 0 10px #000;
-  z-index: 3;
-}
-.apppartnereventspage_AppPartnerEventsContainer_3GCEy {
-  padding: 0px 20px;
-  margin: 0 auto 80px;
-  pointer-events: none;
-}
-@media screen and (max-width: 910px) {
-  .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
-    padding: 0px 10px 0px 10px;
-  }
-}
-.BasicUI .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
-  margin: unset;
-}
-.apppartnereventspage_PartnerEvent_1KsYS {
-  max-width: 848px;
-  overflow: hidden;
-  margin: 56px auto 16px auto;
-  position: relative;
-  background-color: #25282e;
-  border-radius: 4px;
-  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
-  box-shadow: 0 0 32px #000;
-  pointer-events: initial;
-  border: 1px solid transparent;
-  font-weight: 300;
-}
-.BasicUI .apppartnereventspage_PartnerEvent_1KsYS {
-  border: none;
-  border-radius: 0px;
-  max-width: 640px;
-  margin: 24px auto 40px auto;
-  box-shadow: var(--gpShadow-XLarge);
-}
-.apppartnereventspage_PartnerEvent_1KsYS a {
-  text-decoration: none;
-}
-.apppartnereventspage_PartnerEvent_1KsYS
-  .apppartnereventspage_LibraryViewSubtitle_1rbgK {
-  font-size: 17px;
-  padding-bottom: 10px;
-}
-div.apppartnereventspage_EventDetailsBody_3NW5v {
-  min-height: 0;
-}
-.apppartnereventspage_ControlSection_2pA5C {
-  position: fixed;
-  top: 106px;
-  margin-bottom: -196px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 1000;
-}
-.apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
-  margin-bottom: -138px;
-}
-.apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoScrollArrows_39hJ8 {
-  top: 136px;
-}
-.BasicUI
-  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoScrollArrows_39hJ8 {
-  display: none;
-}
-.apppartnereventspage_ControlSection_2pA5C
-  .apppartnereventspage_ControlSectionWidth_3yfs7 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 890px;
-  display: flex;
-}
-.apppartnereventspage_ControlSection_2pA5C
-  .apppartnereventspage_ControlSectionWidth_3yfs7
-  .apppartnereventspage_ControlSectionRightSide_2tSyr {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  pointer-events: initial;
-  max-width: 896px;
-}
-.apppartnereventspage_ControlSection_2pA5C
-  .apppartnereventspage_ControlSectionWidth_3yfs7
-  .apppartnereventspage_ControlSectionRightSide_2tSyr
-  .apppartnereventspage_GameArt_2a5oS {
-  width: 48px;
-  height: 48px;
-}
-.apppartnereventspage_ControlSection_2pA5C
-  .apppartnereventspage_ControlSectionWidth_3yfs7
-  .apppartnereventspage_ControlSectionRightSide_2tSyr
-  .apppartnereventspage_GameArt_2a5oS
-  img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  padding: 8px;
-  box-sizing: border-box;
-  transition: filter 0.1s ease-in-out;
-}
-.apppartnereventspage_ControlSection_2pA5C > *:not(:first-child) {
-  margin-left: 8px;
-}
-@keyframes apppartnereventspage_transitionIn_2jG5N {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-.apppartnereventspage_ScrollButton_1t_97 {
-  background-color: #44444b;
-  border: 1px solid #63636d;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 8px;
-  width: 48px;
-  height: 24px;
-  box-shadow: 0 3px 32px #000;
-}
-.apppartnereventspage_ScrollButton_1t_97:hover {
-  background-color: #575761;
-  border: 1px solid #9e9ead;
-}
-.apppartnereventspage_ScrollButton_1t_97:hover svg polygon {
-  fill: #fff;
-}
-.apppartnereventspage_ScrollButton_1t_97:hover.apppartnereventspage_GameArt_2a5oS
-  img {
-  filter: brightness(1.25);
-}
-.apppartnereventspage_ScrollButton_1t_97.apppartnereventspage_Up_3vBD2 {
-  padding-top: 3px;
-}
-.apppartnereventspage_ScrollButton_1t_97.apppartnereventspage_Down_3VePR {
-  padding-bottom: 3px;
-}
-.apppartnereventspage_ScrollButton_1t_97 svg polygon {
-  fill: #9e9ead;
-}
-.apppartnereventspage_CloseButton_1_vCR {
-  background-color: #44444b;
-  border: 1px solid #63636d;
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  margin-bottom: 8px;
-  box-shadow: 0 3px 32px #000;
-}
-.apppartnereventspage_CloseButton_1_vCR:hover {
-  background-color: #575761;
-  border: 1px solid #9e9ead;
-}
-.apppartnereventspage_CloseButton_1_vCR:hover svg line {
-  stroke: #fff;
-}
-.apppartnereventspage_CloseButton_1_vCR svg line {
-  stroke-width: 16px;
-  stroke: #9e9ead;
-}
-.apppartnereventspage_AnimIn_240i5 {
-  animation-name: apppartnereventspage_transitionIn_2jG5N;
-  animation-duration: 0.32s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  transition: all 0.21s ease-out;
-}
-.apppartnereventspage_AnimIn_240i5 svg {
-  transition: all 0.21s ease-out;
-}
-.apppartnereventspage_AnimIn_240i5:active {
-  background-color: #000;
-  transition-duration: 0s;
-  box-shadow: 0 0 12px #181818;
-}
-.apppartnereventspage_AnimIn_240i5:active svg {
-  transform: scale(0.8);
-  transition-duration: 0s;
-}
-.apppartnereventspage_AnimIn_240i5.apppartnereventspage_Down_3VePR:active svg {
-  transform: scale(0.8) rotateZ(180deg);
-  transition-duration: 0s;
-}
-.apppartnereventspage_ClickableBG_308ED {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  height: 100%;
-  margin-bottom: calc(-100vh - 10px);
-}
-.apppartnereventspage_DirectionState_Bv96j {
-  margin: 10px 0px 0px 0px;
-}
-.apppartnereventspage_EventTypeAndTimeRow_3bWTO {
-  display: flex;
-  align-items: center;
-}
-.apppartnereventspage_EventTypeAndTimeRow_3bWTO.apppartnereventspage_WithReminder_1C5Dv {
-  padding: 6px;
-  border-radius: 6px;
-  background-color: rgba(30, 33, 38, 0.5);
-  margin-bottom: 6px;
-}
-@media screen and (max-width: 700px) {
-  .apppartnereventspage_EventTypeAndTimeRow_3bWTO.apppartnereventspage_WithReminder_1C5Dv {
-    flex-direction: column;
-  }
-}
-.apppartnereventspage_EventTypeAndTimeRow_3bWTO
-  .apppartnereventspage_TimeandPostedBy_2WwG2 {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 12px;
-  margin: 0px 12px 0px 0px;
-  color: #6c767f;
-}
-.apppartnereventspage_EventTypeAndTimeRow_3bWTO
-  .apppartnereventspage_TimeandPostedBy_2WwG2
-  .apppartnereventspage_EventType_Udzrp {
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #289cff;
-  margin-right: 6px;
-}
-.apppartnereventspage_EventTypeAndTimeRow_3bWTO
-  .apppartnereventspage_TimeandPostedBy_2WwG2
-  .apppartnereventspage_PostedBy_2VqeQ {
-  margin: 0px 6px;
-  color: #868f98;
-  display: none;
-}
-.apppartnereventspage_EventTypeAndTimeRow_3bWTO
-  .apppartnereventspage_ReminderContainer_3Vf2M {
-  margin-left: auto;
-  flex: none;
-}
-.apppartnereventspage_ReadMoreCnt_1Ymai {
   padding-top: 20px;
 }
 .partnereventreferencedapps_ReferencedApps_1bfua {
@@ -10425,13 +10425,7 @@ html.responsive.touch
   margin: 0px -24px;
   padding: 0px 24px;
   scroll-padding: 0px 64px;
-  width: 100vw;
-}
-.BasicUI
-  .partnersaledisplay_SaleSectionTabs_1FPIV
-  .partnersaledisplay_SaleSectionTabContainer_1Svj0::after {
-  content: " ";
-  min-width: 24px;
+  width: 100%;
 }
 .partnersaledisplay_SaleSectionTabs_1FPIV
   .partnersaledisplay_SaleSectionTabsRow_30oGT {

@@ -289,7 +289,8 @@
 	html.responsive .gray_bevel input,
 	html.responsive .gray_bevel textarea,
 	html.responsive .gamepad_input,
-	html.responsive .DialogInputPlaceholder {
+	html.responsive .DialogInputPlaceholder,
+	html.responsive input.discussionSearchText {
 		background-color: var(--gpBackground-LightMedium);
 		border-radius: var(--gpCorner-Medium);
 		font: var(--gpText-BodyLarge);
@@ -300,6 +301,8 @@
 		border: unset;
 		margin: unset;
 		box-sizing: border-box;
+		height: unset;
+		position: unset;
 	}
 
 	html.responsive input.text::placeholder,
@@ -309,7 +312,8 @@
 	html.responsive .gray_bevel input::placeholder,
 	html.responsive .gray_bevel textarea::placeholder,
 	html.responsive .gamepad_input::placeholder,
-	html.responsive .DialogInputPlaceholder::placeholder {
+	html.responsive .DialogInputPlaceholder::placeholder,
+	html.responsive input.discussionSearchText::placeholder {
 		color: rgba(255, 255, 255, 0.5);
 		transition: color 0.2s ease;
 	}
@@ -321,7 +325,8 @@
 	html.responsive .gray_bevel input:hover,
 	html.responsive .gray_bevel textarea:hover,
 	html.responsive .gamepad_input:hover,
-	html.responsive .DialogInputPlaceholder:hover {
+	html.responsive .DialogInputPlaceholder:hover,
+	html.responsive input.discussionSearchText:hover {
 		background-color: var(--gpBackground-LightHard);
 	}
 
@@ -332,7 +337,8 @@
 	html.responsive .gray_bevel input:focus,
 	html.responsive .gray_bevel textarea:focus,
 	html.responsive .gamepad_input:focus,
-	html.responsive .DialogInputPlaceholder:focus {
+	html.responsive .DialogInputPlaceholder:focus,
+	html.responsive input.discussionSearchText:focus {
 		background-color: white;
         color: black;
 	}
@@ -344,7 +350,8 @@
 	html.responsive .gray_bevel input.gpfocus,
 	html.responsive .gray_bevel textarea.gpfocus,
 	html.responsive .gamepad_input.gpfocus,
-	html.responsive .DialogInputPlaceholder.gpfocus {
+	html.responsive .DialogInputPlaceholder.gpfocus,
+	html.responsive input.discussionSearchText.gpfocus {
 		border-radius: 0px;
 	}
 
@@ -355,7 +362,8 @@
 	html.responsive .gray_bevel input.gpfocus::placeholder,
 	html.responsive .gray_bevel textarea.gpfocus::placeholder,
 	html.responsive .gamepad_input.gpfocus::placeholder,
-	html.responsive .DialogInputPlaceholder.gpfocus::placeholder {
+	html.responsive .DialogInputPlaceholder.gpfocus::placeholder,
+	html.responsive input.discussionSearchText.gpfocus::placeholder {
 		color: rgba(0, 0, 0, 0.5);
 	}
 
@@ -688,7 +696,130 @@
 		display: none;
 	}
 
+	html.responsive .responsive_page_menu_ctn .localmenu_content {
+		height: 100vh;
+		overflow-y: scroll;
+		scroll-padding: 120px 0px;
+		box-sizing: border-box;
+	}
 
+
+	/* Panel styling */
+	html.responsive .responsive_page_menu_ctn {
+		box-shadow: var(--gpShadow-XLarge);
+	}
+
+
+	html.responsive .responsive_page_menu_ctn.localmenu .responsive_page_menu {
+		background: var(--gpStoreDarkerGrey);
+	}
+
+	html.responsive .apphub_ResponsiveMenuCtn {
+		display: flex;
+		column-gap: 8px;
+	}
+
+	html.responsive .apphub_ResponsiveMenuCtn a {
+		flex-grow: 1;
+	}
+
+	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea {
+		background: unset;
+		padding: unset;
+	}
+
+	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader,
+	html.responsive .rightbox_content_header,
+	html.responsive .rightSectionTopTitle {
+		font: var(--gpText-BodySmall);
+		font-weight: 700;
+		color: var(--gpStoreLighterGrey);
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+	}
+
+	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader {
+		margin: 20px 0px 4px;
+	}
+
+	html.responsive .rightSectionTopTitle {
+		margin-bottom: 8px;
+	}
+
+	html.responsive .thread .rightcol {
+		margin-top: 16px;
+	}
+
+	html.responsive .thread .rightcol .rightbox {
+		background: none;
+		border: 2px solid var(--gpStoreDarkGrey);
+	}
+
+	html.responsive .thread .rightcol .rightbox .rule {
+		display: none;
+	}
+
+	html.responsive .thread .rightcol .rightbox .content {
+		padding: 12px;
+	}
+
+	html.responsive .thread .rightcol .rightbox .content .topicstats {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .topicstats_label {
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .topicstats_value {
+		color: var(--gpStoreLightestGrey);
+	}
+
+
+	/* Forum topics */
+	html.responsive .forum_topic {
+		background-color: var(--gpBackground-LightSofter);
+		border-radius: var(--gpCorner-Medium);
+		min-height: unset;
+		padding: 8px 12px;
+		margin-bottom: 2px;
+		transition: all 0.2s ease;
+	}
+
+	html.responsive .forum_topic:hover {
+		background-color: var(--gpBackground-LightMedium);
+	}
+
+	html.responsive .forum_topic.gpfocus {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: 0px;
+	}
+
+	html.responsive .forum_topic .forum_topic_name {
+		font: var(--gpText-BodyMedium);
+		padding: unset;
+	}
+
+	html.responsive .forum_topic .forum_topic_details {
+		font: var(--gpText-BodyMedium);
+	}
+
+
+	/* Panel seach */
+	html.responsive .discussionSearchTextContainer {
+		background: none;
+
+		/* TODO: Hiding search until we investigate why search loads a different template */
+		display: none;
+	}
+
+	html.responsive .discussionSearchTextContainer input.discussionSearchText {
+		width: 100%;
+	}
+
+	html.responsive .discussionSearchTextContainer .discussionSearchTextSubmitImg {
+		display: none;
+	}
 
 
 }

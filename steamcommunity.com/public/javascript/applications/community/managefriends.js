@@ -609,29 +609,33 @@
     Qcoi: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return _;
+        return h;
       }),
         n.d(t, "b", function () {
-          return h;
+          return g;
+        }),
+        n.d(t, "c", function () {
+          return p;
         });
       var a = n("mrSG"),
         s = n("vDqi"),
         r = n.n(s),
         i = n("2vnA"),
         o = n("q1tI"),
-        c = (n("mgoM"), n("kyHq"), n("8H1D")),
-        d = n("kLLr"),
-        l = (n("AiWL"), n("r64O")),
-        u = n("OS6B"),
-        m = n("lkRc");
-      class f {
+        c = n.n(o),
+        d = (n("mgoM"), n("kyHq"), n("8H1D")),
+        l = n("kLLr"),
+        u = (n("AiWL"), n("r64O")),
+        m = n("OS6B"),
+        f = n("lkRc");
+      class _ {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map());
         }
         LoadProfiles(e, t) {
           return Object(a.a)(this, void 0, void 0, function* () {
-            Object(l.a)(
+            Object(u.a)(
               e.length <= 500,
               "Check LoadProfiles, requesting too many steam IDs"
             );
@@ -640,7 +644,7 @@
                 !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
             );
             if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
-            let a = m.c.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+            let a = f.c.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
               s = r.a.get(a, {
                 params: { steamids: n.join(",") },
                 withCredentials: !0,
@@ -652,9 +656,9 @@
               200 == i.status &&
               i.data.forEach((e) => {
                 (e.avatar_hash = e.avatar_url),
-                  (e.avatar_url_medium = Object(c.a)(e.avatar_url, "medium")),
-                  (e.avatar_url_full = Object(c.a)(e.avatar_url, "full")),
-                  (e.avatar_url = Object(c.a)(e.avatar_url)),
+                  (e.avatar_url_medium = Object(d.a)(e.avatar_url, "medium")),
+                  (e.avatar_url_full = Object(d.a)(e.avatar_url, "full")),
+                  (e.avatar_url = Object(d.a)(e.avatar_url)),
                   this.m_mapProfiles.set(e.steamid, e),
                   this.m_mapProfilesLoading.delete(e.steamid);
               });
@@ -665,7 +669,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            d.a.InitFromAccountID(e).ConvertTo64BitString()
+            l.a.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         GetProfileBySteamID(e) {
@@ -676,7 +680,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            d.a.InitFromAccountID(e).ConvertTo64BitString()
+            l.a.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         BHasProfileBySteamID(e) {
@@ -685,27 +689,31 @@
         GetProfileURLBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.profile_url
-            ? m.c.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : m.c.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
+            ? f.c.COMMUNITY_BASE_URL + "id/" + t.profile_url
+            : f.c.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.persona_name ? t.persona_name : "";
         }
       }
-      Object(a.b)([i.C], f.prototype, "m_mapProfiles", void 0);
-      const _ = new f();
-      function h(e) {
-        const t = e ? ("string" == typeof e ? new d.a(e) : e) : null,
-          [n, a] = Object(o.useState)(!!t && !_.BHasProfileBySteamID(t));
+      Object(a.b)([i.C], _.prototype, "m_mapProfiles", void 0);
+      const h = new _();
+      function g(e) {
+        const t = c.a.useMemo(
+            () => (e ? ("string" == typeof e ? new l.a(e) : e) : null),
+            [e]
+          ),
+          [n, a] = Object(o.useState)(!!t && !h.BHasProfileBySteamID(t));
         Object(o.useEffect)(() => {
           const e = r.a.CancelToken.source();
           return (
             t &&
-              !_.BHasProfileBySteamID(t) &&
-              _.LoadProfiles([t.ConvertTo64BitString()])
+              !h.BHasProfileBySteamID(t) &&
+              h
+                .LoadProfiles([t.ConvertTo64BitString()])
                 .catch((e) => {
-                  const n = Object(u.a)(e);
+                  const n = Object(m.a)(e);
                   console.error(
                     "useUserProfile failed to load profile for " +
                       t.ConvertTo64BitString() +
@@ -720,9 +728,12 @@
             () => e.cancel("unmounting useUserProfile")
           );
         }, [e]);
-        return [n, !!t && _.GetProfileBySteamID(t)];
+        return [n, !!t && h.GetProfileBySteamID(t)];
       }
-      window.g_ProfileStore = _;
+      function p(e) {
+        return g(c.a.useMemo(() => l.a.InitFromAccountID(e), [e]));
+      }
+      window.g_ProfileStore = h;
     },
     rt5e: function (e, t, n) {
       "use strict";

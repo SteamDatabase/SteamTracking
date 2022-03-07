@@ -290,7 +290,7 @@
             });
         }
         static IsBroadcastAllowed() {
-          return f.c.EREALM != S.f.k_ESteamRealmChina && !f.c.IN_GAMEPADUI;
+          return f.c.EREALM != S.g.k_ESteamRealmChina && !f.c.IN_GAMEPADUI;
         }
         componentDidMount() {
           return Object(a.a)(this, void 0, void 0, function* () {
@@ -458,14 +458,14 @@
               (e = Object.assign(Object.assign({}, e), {
                 left_panel: r.GetImageURL(
                   "broadcast_left",
-                  a || Object(S.j)(f.c.LANGUAGE)
+                  a || Object(S.k)(f.c.LANGUAGE)
                 ),
                 right_panel: r.GetImageURL(
                   "broadcast_right",
-                  a || Object(S.j)(f.c.LANGUAGE)
+                  a || Object(S.k)(f.c.LANGUAGE)
                 ),
                 store_title: r.GetBroadcastTitle(
-                  a || Object(S.j)(f.c.LANGUAGE)
+                  a || Object(S.k)(f.c.LANGUAGE)
                 ),
                 broadcast_chat_visibility: r.GetBroadcastChatVisibility(),
               }));
@@ -2222,7 +2222,7 @@
             (this.m_regexBannedWords = null),
             (this.m_regexCleanWords = null),
             (this.m_bShownFilterTip = !1),
-            (this.m_TextFilterPreferences = new v.k());
+            (this.m_TextFilterPreferences = new v.l());
           {
             let e = new w.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),

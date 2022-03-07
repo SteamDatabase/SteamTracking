@@ -133,20 +133,6 @@
 		padding: 8px 12px;
 	}
 
-	/* Focus */
-	html.responsive .sectionTab.gpfocus,
-	html.responsive a.sectionTab.gpfocus,
-	html.responsive .apphub_sectionTab.gpfocus {
-		border-radius: 0px;
-		background-color: var(--gpBackground-LightMedium);
-	}
-
-	html.responsive .sectionTab.gpfocus > span,
-	html.responsive a.sectionTab.gpfocus > span,
-	html.responsive .apphub_sectionTab.gpfocus > span {
-		color: white;
-	}
-
 	/* Active */
 	html.responsive .sectionTab.active,
 	html.responsive .apphub_sectionTab.active {
@@ -154,6 +140,20 @@
 		/* background: linear-gradient(0deg, rgb(60 94 129) 0%, rgb(67 114 147) 100%); */
 		background-color: var(--gpBackground-LightHard);
 		box-shadow: var(--gpShadow-Medium);
+	}
+
+	/* Focus */
+	html.responsive .sectionTab.gpfocus,
+	html.responsive a.sectionTab.gpfocus,
+	html.responsive .apphub_sectionTab.gpfocus {
+		border-radius: 0px;
+		background-color: white;
+	}
+
+	html.responsive .sectionTab.gpfocus > span,
+	html.responsive a.sectionTab.gpfocus > span,
+	html.responsive .apphub_sectionTab.gpfocus > span {
+		color: black !important;
 	}
 
 	html.responsive .sectionTab.active.gpfocus,

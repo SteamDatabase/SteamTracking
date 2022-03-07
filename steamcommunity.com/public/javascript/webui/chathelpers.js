@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7126140";
+var CLSTAMP = "7132243";
 !(function (e) {
   function t(t) {
     for (
@@ -124,60 +124,60 @@ var CLSTAMP = "7126140";
                 12: "5f7ca26abec71f878f29",
                 13: "707d6d66e16950fd031c",
                 14: "986839a3a349c999cfdb",
-                15: "ba8c0944315aa7d73df3",
-                16: "d0748a63169f0eafa6d0",
+                15: "243a5c4636df12e7da9e",
+                16: "66a2205811670e42f13c",
                 17: "66d76bac251652a64221",
-                18: "29472bc35e994bf18abc",
+                18: "d2d32dee16f067859cde",
                 19: "88a3a9c45b32e5a979fd",
-                20: "524b172e734318cef84b",
-                21: "f3d64d797bc340b97df4",
+                20: "8bb97f05327bf348b9b3",
+                21: "755cebc7d518ea293c3d",
                 22: "2b12762bcf56878ebda4",
                 23: "47d14ad1a51e4ad6e10c",
                 24: "720ac682e32ae4a32005",
-                25: "c97908ddc5f457e8368b",
+                25: "620ec02cc405e5a95a7b",
                 26: "a10b81d75c8030f4b2f3",
-                27: "945ff23052d8ea30e639",
+                27: "e0ff81c2c9e3f3ec1e15",
                 28: "d069fd8de00af296da01",
                 29: "aad40c398c0527d5a0dc",
                 30: "6d7365c7989476aed423",
-                31: "0fa153bb7c4ff786a74a",
-                32: "77c658a7907ceee36bba",
-                33: "0f7b1faa11eb2e6db04f",
+                31: "af43e8b49a1b1eceded7",
+                32: "62d6b71b595d8f5fbe7f",
+                33: "d3fdd5e20fa4fab0e954",
                 34: "464a41e6c1d939ac0b46",
                 35: "c3cb724e1088b4c19480",
                 36: "40b47bf63d864c43506e",
                 37: "52c764a45d55c38d6b5b",
                 38: "35acc3e94a5142b68414",
                 39: "01e61b4c2d0faedc8e45",
-                40: "8ac1bc9e77362338d579",
-                41: "6cc2f9101603851a8746",
-                42: "0a8e844b2294b25d1c3c",
-                43: "f60e4a66cbd9b2983860",
-                44: "205a8047265676691d39",
-                45: "1072f654743fba499f8e",
-                46: "a9b71ff7c403bd79180f",
-                47: "0e871b17780f86bfb8c9",
-                48: "8a4d7567b487ba8d4bfa",
-                49: "696ac6f2d7fe2dfd0e71",
-                50: "894bb6a715291e472a77",
-                51: "b79b678a615f97b3ecd5",
-                52: "6044e94786d8229cd292",
-                53: "de595fa64fa9a96acb97",
-                54: "bff4fea6ea3e98f29b74",
-                55: "d3851da7a427104c0e34",
-                56: "a1bee62747935ab8cc51",
-                57: "e633ededa2ca0a694aa8",
-                58: "c36dd3461ff9dd10269b",
-                59: "68df1770410d316e14e2",
+                40: "d98bc776229876fc4615",
+                41: "671b92a2f40d5bd3ff37",
+                42: "af9e2d8bc1dbfff5db72",
+                43: "0f4263fbc095aaea214e",
+                44: "8b9c97466b7776caf6f0",
+                45: "eee5a8e4004724225eff",
+                46: "bc3d7b6b712cb12d8607",
+                47: "306acf5f6d2273688d1b",
+                48: "7a93ef93df5c5d43db6f",
+                49: "07cd64a01d08541db0a5",
+                50: "dfa9de169c57c53b1e97",
+                51: "daa6daa58663d12ad519",
+                52: "72816cbadc07d91d0d6f",
+                53: "e90969e2fbb20c94b460",
+                54: "a156d3f3ea360522ddea",
+                55: "c7a90c4302ae11c900d7",
+                56: "193ae3e854883bff0889",
+                57: "da30213f9388bc2a0084",
+                58: "acdcd0ff36412c417f5d",
+                59: "fead4faa31e23e0ee5ff",
                 60: "f38c73d28c350eb2f7c9",
-                61: "acaf429eaa0de3b0cf32",
-                62: "da0cf50f05f4cc1d3341",
-                63: "759ed8608ae6fd53600e",
-                64: "2f7db263074a3128bca0",
-                65: "271b1ab88d226c472f00",
-                66: "48e55288ee12f31fff68",
-                67: "e078373ab62696578f72",
-                68: "9f96716f938a8518743f",
+                61: "4f00d2e2e8fd6d3bd527",
+                62: "2e0fc5300a74890300f4",
+                63: "135d0061785665d53afb",
+                64: "ed5cc702b8def63ad08f",
+                65: "21cbdf0c456bd52c8a94",
+                66: "118ce84f06386eda698a",
+                67: "c633bd68b77e11353f08",
+                68: "8de1791d4f8e3dcd4864",
               }[e]
             );
           })(e));
@@ -338,10 +338,10 @@ var CLSTAMP = "7126140";
         return p;
       }),
       n.d(t, "d", function () {
-        return b;
+        return g;
       }),
       n.d(t, "e", function () {
-        return g;
+        return b;
       }),
       n.d(t, "c", function () {
         return E;
@@ -361,7 +361,7 @@ var CLSTAMP = "7126140";
       f = "18446744073709551615",
       m = 0,
       p = 2147483647;
-    function b(e, t = "en") {
+    function g(e, t = "en") {
       switch (e) {
         case 0:
           return "en";
@@ -427,7 +427,7 @@ var CLSTAMP = "7126140";
           return t;
       }
     }
-    const g = (e) => ("koreana" === e ? "korean" : e);
+    const b = (e) => ("koreana" === e ? "korean" : e);
     function E(e, t = "") {
       switch (e) {
         case 0:
@@ -670,7 +670,7 @@ var CLSTAMP = "7126140";
         return p;
       }),
       n.d(t, "f", function () {
-        return b;
+        return g;
       });
     n("mrSG");
     var r = n("/7KC"),
@@ -836,7 +836,7 @@ var CLSTAMP = "7126140";
         ? "https://steamloopback.host"
         : "";
     }
-    function b() {
+    function g() {
       const e = window.location.href;
       return e.startsWith(o.STORE_BASE_URL)
         ? "store"
@@ -1698,8 +1698,8 @@ var CLSTAMP = "7126140";
       return n.getFullYear() == r.getFullYear() ? T(n) : y(n);
     }
     const p = new Map(),
-      b = new Map(),
       g = new Map(),
+      b = new Map(),
       E = new Map(),
       k = new Map();
     function C(e, t = !1, n = !0) {
@@ -1729,24 +1729,24 @@ var CLSTAMP = "7126140";
       );
     }
     function T(e) {
-      let t = b.get(e.getMonth());
+      let t = g.get(e.getMonth());
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           month: "long",
         })),
-        b.set(e.getMonth(), t),
+        g.set(e.getMonth(), t),
         t)
       );
     }
     function v(e) {
-      let t = g.get(e.getFullYear());
+      let t = b.get(e.getFullYear());
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           year: "numeric",
         })),
-        g.set(e.getFullYear(), t),
+        b.set(e.getFullYear(), t),
         t)
       );
     }
@@ -1932,69 +1932,72 @@ var CLSTAMP = "7126140";
   },
   hEDq: function (e, t, n) {
     "use strict";
-    n.d(t, "d", function () {
+    n.d(t, "e", function () {
       return o;
     }),
-      n.d(t, "f", function () {
+      n.d(t, "g", function () {
         return s;
       }),
-      n.d(t, "h", function () {
+      n.d(t, "i", function () {
         return u;
       }),
-      n.d(t, "c", function () {
+      n.d(t, "d", function () {
         return p;
       }),
-      n.d(t, "i", function () {
+      n.d(t, "j", function () {
         return l;
       }),
-      n.d(t, "k", function () {
+      n.d(t, "l", function () {
         return d;
       }),
-      n.d(t, "e", function () {
-        return b;
-      }),
-      n.d(t, "t", function () {
+      n.d(t, "f", function () {
         return g;
       }),
-      n.d(t, "g", function () {
+      n.d(t, "u", function () {
+        return b;
+      }),
+      n.d(t, "h", function () {
         return _;
       }),
-      n.d(t, "b", function () {
+      n.d(t, "a", function () {
         return E;
       }),
-      n.d(t, "j", function () {
-        return h;
-      }),
-      n.d(t, "n", function () {
-        return f;
-      }),
-      n.d(t, "o", function () {
-        return m;
-      }),
-      n.d(t, "a", function () {
+      n.d(t, "c", function () {
         return k;
       }),
-      n.d(t, "q", function () {
-        return v;
+      n.d(t, "k", function () {
+        return h;
+      }),
+      n.d(t, "o", function () {
+        return f;
       }),
       n.d(t, "p", function () {
-        return R;
-      });
-    var r = n("0N1H");
-    n.d(t, "l", function () {
-      return r.c;
-    }),
-      n.d(t, "m", function () {
-        return r.d;
+        return m;
+      }),
+      n.d(t, "b", function () {
+        return C;
       }),
       n.d(t, "r", function () {
-        return r.e;
+        return y;
+      }),
+      n.d(t, "q", function () {
+        return L;
+      });
+    var r = n("0N1H");
+    n.d(t, "m", function () {
+      return r.c;
+    }),
+      n.d(t, "n", function () {
+        return r.d;
       }),
       n.d(t, "s", function () {
+        return r.e;
+      }),
+      n.d(t, "t", function () {
         return r.f;
       });
     var i;
-    n("wd0Q"), n("m5X/"), n("wgly");
+    n("wd0Q"), n("m5X/"), n("wgly"), n("fzER");
     !(function (e) {
       (e[(e.k_EControllerBindingType_None = 0)] =
         "k_EControllerBindingType_None"),
@@ -2114,14 +2117,36 @@ var CLSTAMP = "7126140";
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
       })(d || (d = {}));
-    class b {}
     class g {}
+    class b {}
     !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
         (e[(e.k_ERejected = 2)] = "k_ERejected");
     })(_ || (_ = {}));
     function E(e) {
+      switch (e) {
+        case 0:
+          return "game";
+        case 6:
+          return "software";
+        case 1:
+          return "demo";
+        case 4:
+          return "dlc";
+        case 7:
+        case 3:
+          return "video";
+        case 11:
+          return "music";
+        case 12:
+          return "beta";
+        case 2:
+          return "mod";
+      }
+      return "invalid";
+    }
+    function k(e) {
       return (
         "game" === e ||
         "dlc" === e ||
@@ -2200,7 +2225,7 @@ var CLSTAMP = "7126140";
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(f || (f = {}));
-    function k(e) {
+    function C(e) {
       return e === m.k_ESteamRealmChina;
     }
     !(function (e) {
@@ -2208,7 +2233,7 @@ var CLSTAMP = "7126140";
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(m || (m = {}));
-    var C;
+    var S;
     !(function (e) {
       (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
         "k_BluetoothDeviceType_Invalid"),
@@ -2234,14 +2259,14 @@ var CLSTAMP = "7126140";
           "k_BluetoothDeviceType_Gamepad"),
         (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
           "k_BluetoothDeviceType_Keyboard");
-    })(C || (C = {}));
-    var S, T, v, y, I, R, L;
+    })(S || (S = {}));
+    var T, v, y, I, R, L, A;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless"),
         (e[(e.Virtual = 3)] = "Virtual");
-    })(S || (S = {})),
+    })(T || (T = {})),
       (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -2250,14 +2275,14 @@ var CLSTAMP = "7126140";
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(T || (T = {})),
+      })(v || (v = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
-      })(v || (v = {})),
+      })(y || (y = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -2267,25 +2292,25 @@ var CLSTAMP = "7126140";
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(y || (y = {})),
+      })(I || (I = {})),
       (function (e) {
         (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
           (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
           (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
           (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
             "k_EHTTPProxyMode_Automatic");
-      })(I || (I = {}));
+      })(R || (R = {}));
     !(function (e) {
       (e[(e.SystemKey0 = 0)] = "SystemKey0"),
         (e[(e.SystemKey1 = 1)] = "SystemKey1");
-    })(R || (R = {})),
+    })(L || (L = {})),
       (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque"),
           (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-      })(L || (L = {}));
+      })(A || (A = {}));
   },
   mrSG: function (e, t, n) {
     "use strict";
@@ -2379,10 +2404,10 @@ var CLSTAMP = "7126140";
         return m;
       }),
       n.d(t, "d", function () {
-        return b;
+        return g;
       }),
       n.d(t, "c", function () {
-        return g;
+        return b;
       }),
       n.d(t, "e", function () {
         return E;
@@ -2435,7 +2460,7 @@ var CLSTAMP = "7126140";
       }
       static IsELanguageValidInRealm(e, t) {
         return (
-          t === (29 === e ? o.o.k_ESteamRealmChina : o.o.k_ESteamRealmGlobal)
+          t === (29 === e ? o.p.k_ESteamRealmChina : o.p.k_ESteamRealmGlobal)
         );
       }
       static GetLanguageListForRealms(e) {
@@ -2600,7 +2625,7 @@ var CLSTAMP = "7126140";
         sc_schinese: "zh-cn",
         koreana: "ko",
       },
-      b = {
+      g = {
         "en-US": 0,
         "de-DE": 1,
         "fr-FR": 2,
@@ -2631,7 +2656,7 @@ var CLSTAMP = "7126140";
         "es-419": 27,
         "vi-VN": 28,
       };
-    function g() {
+    function b() {
       return p[s.d.LANGUAGE] || null;
     }
     const E = new l();
@@ -2656,7 +2681,7 @@ var CLSTAMP = "7126140";
     n("RBVV");
     class p extends _.b {
       BIsExpired() {
-        return b.sm_rtTimeCur >= this.m_rtTimeExpires;
+        return g.sm_rtTimeCur >= this.m_rtTimeExpires;
       }
       InitFromPHPInviteLinkInfo(e) {
         this.m_ulChatID = e.chat_id;
@@ -2673,7 +2698,7 @@ var CLSTAMP = "7126140";
       }
     }
     Object(r.b)([l.k], p.prototype, "InitFromPHPInviteLinkInfo", null);
-    class b {
+    class g {
       constructor(e) {
         (this.m_bConnectingToClient = !1),
           (this.m_invite = new p(e.strInviteCode)),
@@ -2755,9 +2780,9 @@ var CLSTAMP = "7126140";
             }));
       }
     }
-    Object(r.b)([l.C], b.prototype, "m_bConnectingToClient", void 0),
-      Object(r.b)([l.C], b.prototype, "m_connectResult", void 0);
-    let g = class extends i.Component {
+    Object(r.b)([l.C], g.prototype, "m_bConnectingToClient", void 0),
+      Object(r.b)([l.C], g.prototype, "m_connectResult", void 0);
+    let b = class extends i.Component {
       render() {
         return i.createElement(
           "div",
@@ -2768,7 +2793,7 @@ var CLSTAMP = "7126140";
         );
       }
     };
-    g = Object(r.b)([d.a], g);
+    b = Object(r.b)([d.a], b);
     let E = class extends i.Component {
       constructor() {
         super(...arguments), (this.m_bTriedToLaunchSteam = !1);
@@ -2990,9 +3015,9 @@ var CLSTAMP = "7126140";
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
       } catch (e) {}
-      b.sm_rtTimeCur = t.rtTimeCur;
-      let n = new b(t);
-      o.render(i.createElement(g, { controller: n }), e);
+      g.sm_rtTimeCur = t.rtTimeCur;
+      let n = new g(t);
+      o.render(i.createElement(b, { controller: n }), e);
     }
     (window.ClientConnectionAPI = S),
       document.addEventListener("DOMContentLoaded", function () {

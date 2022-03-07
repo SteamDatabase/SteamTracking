@@ -63,14 +63,9 @@ function Forum_InitTooltips()
 
 function Forum_InitPostAndCommentControls( container )
 {
-	if ( container )
-	{
-		$J( container ).find('.forum_comment_action_trigger').v_tooltip({'location':'bottom', 'destroyWhenDone': false, 'tooltipClass': 'forum_comment_action_menu', 'offsetY':0, 'offsetX': 1, 'horizontalSnap': 4, /*'tooltipParent': '#global_header .supernav_container',*/ 'correctForScreenSize': true});
-	}
-	else
-	{
-		$J('.forum_comment_action_trigger').v_tooltip({'location':'bottom', 'destroyWhenDone': false, 'tooltipClass': 'forum_comment_action_menu', 'offsetY':0, 'offsetX': 1, 'horizontalSnap': 4, /*'tooltipParent': '#global_header .supernav_container',*/ 'correctForScreenSize': true});
-	}
+	$element = container ? $J( container ).find('.forum_comment_action_trigger') : $J('.forum_comment_action_trigger');
+
+	$element.v_tooltip({'location':'bottom', 'destroyWhenDone': false, 'tooltipClass': 'forum_comment_action_menu', 'offsetY':0, 'offsetX': 1, 'horizontalSnap': 4, /*'tooltipParent': '#global_header .supernav_container',*/ 'correctForScreenSize': true});
 }
 
 var g_rgForums = {};
@@ -867,10 +862,20 @@ function Forum_AuthorMenu( elLink, accountIDTarget, gidComment )
 	var $Parent = $Link.parents('.commentthread_comment, .forum_op');
 	$Parent.css( 'overflow', 'visible' );
 
-
 	$Menu.css('min-width', $Link.width() + 'px' );
 
-	ShowMenu( $Link, $Menu, 'left', 'bottom', 2 );
+	if ( window.UseTabletScreenMode() )
+	{
+		// On tablet open a dialog with a clone of the content in the dialog body, which will be destroyed when the dialog closes
+		var $menuContent = $Menu.clone();
+		$menuContent.css( 'position', 'static' ); // clear possible absolute positioning
+		$menuContent.show();
+		ShowDialog( '', $menuContent);
+	}
+	else
+	{
+		ShowMenu( $Link, $Menu, 'left', 'bottom', 2 );
+	}
 
 	return false;
 }
@@ -2280,4 +2285,22 @@ function IssueCommunityWarning( steamid )
 $J( function($) {
 	Forum_InitPostAndCommentControls();
 });
+
+
+// On Gamepad show the drop-down menu content in a modal dialog
+function GPOpenCommunityForumMenu( menuID )
+{
+	// detach this element and when the menu closes re-attach to the document body
+	var $Content = $J( menuID );
+	$Content.detach();
+	$Content.show();
+
+	ShowDialog( '', $Content ).always(
+		function() {
+			// save it away again for later
+			$Content.hide();
+			$J( document.body ).append( $Content );
+		}
+	);
+}
 

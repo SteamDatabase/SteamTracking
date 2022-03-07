@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7126140";
+var CLSTAMP = "7132243";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -39441,6 +39441,12 @@ var CLSTAMP = "7126140";
     },
     q6PM: function (e, r, t) {
       "use strict";
+      t.d(r, "b", function () {
+        return g;
+      }),
+        t.d(r, "a", function () {
+          return M;
+        });
       var i = t("hRO2"),
         n = t("sQq0");
       const a = i.Message;
@@ -39991,15 +39997,28 @@ var CLSTAMP = "7126140";
       class g extends a {
         constructor(e = null) {
           super(),
-            g.prototype.external_accounts || n.a(g.M()),
-            a.initialize(this, e, 0, -1, [1], null);
+            g.prototype.account_type || n.a(g.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             g.sm_m ||
               (g.sm_m = {
                 proto: g,
-                fields: { external_accounts: { n: 1, c: _, r: !0, q: !0 } },
+                fields: {
+                  account_type: { n: 1, br: n.d.readEnum, bw: n.h.writeEnum },
+                  account_id: {
+                    n: 2,
+                    br: n.d.readUint64String,
+                    bw: n.h.writeUint64String,
+                  },
+                  filter: { n: 3, br: n.d.readEnum, bw: n.h.writeEnum },
+                  return_access_token: {
+                    n: 4,
+                    br: n.d.readBool,
+                    bw: n.h.writeBool,
+                  },
+                },
               }),
             g.sm_m
           );
@@ -40036,49 +40055,21 @@ var CLSTAMP = "7126140";
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountLinking_GetLinkedAccountInfo_Response";
+          return "CAccountLinking_GetLinkedAccountInfo_Request";
         }
       }
       class _ extends a {
         constructor(e = null) {
           super(),
-            _.prototype.external_type || n.a(_.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            _.prototype.external_accounts || n.a(_.M()),
+            a.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             _.sm_m ||
               (_.sm_m = {
                 proto: _,
-                fields: {
-                  external_type: { n: 1, br: n.d.readEnum, bw: n.h.writeEnum },
-                  external_id: {
-                    n: 2,
-                    br: n.d.readString,
-                    bw: n.h.writeString,
-                  },
-                  external_user_name: {
-                    n: 3,
-                    br: n.d.readString,
-                    bw: n.h.writeString,
-                  },
-                  external_url: {
-                    n: 4,
-                    br: n.d.readString,
-                    bw: n.h.writeString,
-                  },
-                  access_token: {
-                    n: 5,
-                    br: n.d.readString,
-                    bw: n.h.writeString,
-                  },
-                  access_token_secret: {
-                    n: 6,
-                    br: n.d.readString,
-                    bw: n.h.writeString,
-                  },
-                  is_valid: { n: 7, br: n.d.readBool, bw: n.h.writeBool },
-                },
+                fields: { external_accounts: { n: 1, c: w, r: !0, q: !0 } },
               }),
             _.sm_m
           );
@@ -40115,13 +40106,13 @@ var CLSTAMP = "7126140";
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response";
+          return "CAccountLinking_GetLinkedAccountInfo_Response";
         }
       }
       class w extends a {
         constructor(e = null) {
           super(),
-            w.prototype.steamid || n.a(w.M()),
+            w.prototype.external_type || n.a(w.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -40130,14 +40121,33 @@ var CLSTAMP = "7126140";
               (w.sm_m = {
                 proto: w,
                 fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.d.readFixed64String,
-                    bw: n.h.writeFixed64String,
+                  external_type: { n: 1, br: n.d.readEnum, bw: n.h.writeEnum },
+                  external_id: {
+                    n: 2,
+                    br: n.d.readString,
+                    bw: n.h.writeString,
                   },
-                  client_token: { n: 2, br: n.d.readBytes, bw: n.h.writeBytes },
-                  expiry: { n: 3, br: n.d.readUint32, bw: n.h.writeUint32 },
-                  deviceid: { n: 4, br: n.d.readUint32, bw: n.h.writeUint32 },
+                  external_user_name: {
+                    n: 3,
+                    br: n.d.readString,
+                    bw: n.h.writeString,
+                  },
+                  external_url: {
+                    n: 4,
+                    br: n.d.readString,
+                    bw: n.h.writeString,
+                  },
+                  access_token: {
+                    n: 5,
+                    br: n.d.readString,
+                    bw: n.h.writeString,
+                  },
+                  access_token_secret: {
+                    n: 6,
+                    br: n.d.readString,
+                    bw: n.h.writeString,
+                  },
+                  is_valid: { n: 7, br: n.d.readBool, bw: n.h.writeBool },
                 },
               }),
             w.sm_m
@@ -40175,13 +40185,13 @@ var CLSTAMP = "7126140";
           return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CEmbeddedClient_Token";
+          return "CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response";
         }
       }
       class f extends a {
         constructor(e = null) {
           super(),
-            f.prototype.result || n.a(f.M()),
+            f.prototype.steamid || n.a(f.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -40190,8 +40200,14 @@ var CLSTAMP = "7126140";
               (f.sm_m = {
                 proto: f,
                 fields: {
-                  result: { n: 1, br: n.d.readUint32, bw: n.h.writeUint32 },
-                  token: { n: 2, c: w },
+                  steamid: {
+                    n: 1,
+                    br: n.d.readFixed64String,
+                    bw: n.h.writeFixed64String,
+                  },
+                  client_token: { n: 2, br: n.d.readBytes, bw: n.h.writeBytes },
+                  expiry: { n: 3, br: n.d.readUint32, bw: n.h.writeUint32 },
+                  deviceid: { n: 4, br: n.d.readUint32, bw: n.h.writeUint32 },
                 },
               }),
             f.sm_m
@@ -40229,10 +40245,64 @@ var CLSTAMP = "7126140";
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CEmbeddedClient_Token";
+        }
+      }
+      class h extends a {
+        constructor(e = null) {
+          super(),
+            h.prototype.result || n.a(h.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  result: { n: 1, br: n.d.readUint32, bw: n.h.writeUint32 },
+                  token: { n: 2, c: f },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = n.e(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.g(h.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.c(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new h();
+          return h.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.b(h.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.f(h.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CEmbeddedClient_AuthorizeDevice_Response";
         }
       }
-      var h, z, M;
+      var z, M, R;
       !(function (e) {
         (e.GetAvailableValveDiscountPromotions = function (e, r) {
           return e.SendMsg(
@@ -40282,23 +40352,23 @@ var CLSTAMP = "7126140";
               ePrivilege: 1,
             });
           });
-      })(h || (h = {})),
+      })(z || (z = {})),
         (function (e) {
           e.GetLinkedAccountInfo = function (e, r) {
-            return e.SendMsg("AccountLinking.GetLinkedAccountInfo#1", r, g, {
+            return e.SendMsg("AccountLinking.GetLinkedAccountInfo#1", r, _, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           };
-        })(z || (z = {})),
+        })(M || (M = {})),
         (function (e) {
           e.AuthorizeCurrentDevice = function (e, r) {
-            return e.SendMsg("EmbeddedClient.AuthorizeCurrentDevice#1", r, f, {
+            return e.SendMsg("EmbeddedClient.AuthorizeCurrentDevice#1", r, h, {
               ePrivilege: 1,
             });
           };
-        })(M || (M = {}));
+        })(R || (R = {}));
     },
     qeMu: function (e, r, t) {
       "use strict";
