@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7132229";
+var CLSTAMP = "7137102";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -6381,7 +6381,7 @@ var CLSTAMP = "7132229";
           return ve;
         }),
         n.d(t, "a", function () {
-          return Ue;
+          return ze;
         });
       var r = n("mrSG"),
         i = n("q1tI"),
@@ -8439,17 +8439,21 @@ var CLSTAMP = "7132229";
         ke = (n("NxAk"), n("d1jy")),
         Le = n("IjL/"),
         Ne = n("zBSo"),
-        je = n.n(Ne);
-      const Fe = "separator";
-      function Ae(e) {
-        return i.createElement("div", Object.assign({}, e));
-      }
+        je = n.n(Ne),
+        Fe = n("j+5p");
+      const Ae = "separator";
       function Pe(e) {
+        return i.createElement(
+          f.a,
+          Object.assign({ navEntryPreferPosition: Fe.d.PREFERRED_CHILD }, e)
+        );
+      }
+      function Ge(e) {
         const { title: t, icon: n, active: o } = e,
           s = Object(r.c)(e, ["title", "icon", "active"]);
         return i.createElement("div", Object.assign({}, s), t);
       }
-      function Ge(e) {
+      function We(e) {
         var t;
         const n =
           null !== (t = e.activePage.padding) && void 0 !== t ? t : "standard";
@@ -8477,15 +8481,15 @@ var CLSTAMP = "7132229";
           s = e.pages,
           a =
             null != e.startingPage
-              ? s.findIndex((t) => t != Fe && t.identifier === e.startingPage)
+              ? s.findIndex((t) => t != Ae && t.identifier === e.startingPage)
               : -1,
           c = null == e.page,
           [u, h] = i.useState(a);
         let m = u;
-        c || (m = s.findIndex((t) => t != Fe && t.identifier === e.page)),
+        c || (m = s.findIndex((t) => t != Ae && t.identifier === e.page)),
           (m < 0 || m >= s.length) && (m = 0);
         let p = null;
-        s[m] != Fe && (p = s[m]);
+        s[m] != Ae && (p = s[m]);
         let g = (function (e) {
           let t = i.useRef(e),
             n = i.useRef("none"),
@@ -8498,7 +8502,7 @@ var CLSTAMP = "7132229";
         const b = i.useRef(),
           _ = i.useCallback(() => b.current.TakeFocus(), [b]),
           v = s.map((t, n) => {
-            if (t === Fe)
+            if (t === Ae)
               return i.createElement(
                 i.Fragment,
                 { key: n },
@@ -8508,7 +8512,7 @@ var CLSTAMP = "7132229";
             const r = t == p;
             return i.createElement(d.f, {
               component: e.renderPageListItem,
-              fallback: Pe,
+              fallback: Ge,
               className: Object(l.a)(
                 o.PagedSettingsDialog_PageListItem,
                 { [o.Active]: r },
@@ -8562,7 +8566,7 @@ var CLSTAMP = "7132229";
               d.f,
               {
                 component: e.renderPageList,
-                fallback: Ae,
+                fallback: Pe,
                 className: o.PagedSettingsDialog_PageList,
               },
               v
@@ -8576,12 +8580,12 @@ var CLSTAMP = "7132229";
               d.f,
               {
                 component: e.renderPageAnimation,
-                fallback: We,
+                fallback: Ue,
                 activePage: p,
                 direction: g,
               },
               p &&
-                i.createElement(Ge, {
+                i.createElement(We, {
                   key: p.identifier,
                   stylesheet: o,
                   hideTitle: y,
@@ -8591,10 +8595,10 @@ var CLSTAMP = "7132229";
           )
         );
       });
-      function We(e) {
+      function Ue(e) {
         return i.createElement(i.Fragment, null, e.children);
       }
-      class Ue extends i.Component {
+      class ze extends i.Component {
         constructor() {
           super(...arguments),
             (this.m_refTextArea = i.createRef()),
@@ -8691,12 +8695,12 @@ var CLSTAMP = "7132229";
           );
         }
       }
-      Object(r.b)([c.a], Ue.prototype, "InternalOnInput", null),
-        Object(r.b)([c.a], Ue.prototype, "OnKeyUp", null),
-        Object(r.b)([c.a], Ue.prototype, "OnBlur", null),
-        Object(r.b)([c.a], Ue.prototype, "OnClick", null),
-        Object(r.b)([c.a], Ue.prototype, "OnPaste", null),
-        Object(r.b)([c.a], Ue.prototype, "OnCut", null);
+      Object(r.b)([c.a], ze.prototype, "InternalOnInput", null),
+        Object(r.b)([c.a], ze.prototype, "OnKeyUp", null),
+        Object(r.b)([c.a], ze.prototype, "OnBlur", null),
+        Object(r.b)([c.a], ze.prototype, "OnClick", null),
+        Object(r.b)([c.a], ze.prototype, "OnPaste", null),
+        Object(r.b)([c.a], ze.prototype, "OnCut", null);
     },
     NtSG: function (e, t, n) {
       "use strict";
@@ -9503,8 +9507,6 @@ var CLSTAMP = "7132229";
                   appid: { n: 1, br: i.d.readUint32, bw: i.h.writeUint32 },
                   name: { n: 2, br: i.d.readString, bw: i.h.writeString },
                   icon: { n: 3, br: i.d.readString, bw: i.h.writeString },
-                  logo: { n: 4, br: i.d.readString, bw: i.h.writeString },
-                  logo_small: { n: 5, br: i.d.readString, bw: i.h.writeString },
                   tool: { n: 6, br: i.d.readBool, bw: i.h.writeBool },
                   demo: { n: 7, br: i.d.readBool, bw: i.h.writeBool },
                   media: { n: 8, br: i.d.readBool, bw: i.h.writeBool },
