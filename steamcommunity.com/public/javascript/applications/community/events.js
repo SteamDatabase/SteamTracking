@@ -79093,7 +79093,11 @@
           return this.m_curModel.GetSummary(e);
         }
         GetAppName() {
-          return f.a.Get().GetApp(this.m_curModel.appid).GetName();
+          var e;
+          return null === (e = f.a.Get().GetApp(this.m_curModel.appid)) ||
+            void 0 === e
+            ? void 0
+            : e.GetName();
         }
         GetCategoryAsString() {
           return this.m_curModel.GetCategoryAsString();
@@ -79980,10 +79984,18 @@
           return this.m_curModel.GetSteamAwardNomineeCategories();
         }
         BIsAppReleased() {
-          return f.a.Get().GetApp(this.m_curModel.appid).BIsReleased();
+          var e;
+          return null === (e = f.a.Get().GetApp(this.m_curModel.appid)) ||
+            void 0 === e
+            ? void 0
+            : e.BIsReleased();
         }
         GetAppReleaseDate() {
-          return f.a.Get().GetApp(this.m_curModel.appid).GetReleaseDateRTime();
+          var e;
+          return null === (e = f.a.Get().GetApp(this.m_curModel.appid)) ||
+            void 0 === e
+            ? void 0
+            : e.GetReleaseDateRTime();
         }
         BDoesSupportLanguage(e) {
           if (this.m_curModel && this.m_curModel.appid) {
