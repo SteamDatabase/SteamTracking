@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7131505";
+var CLSTAMP = "7136917";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -36180,6 +36180,8 @@ var CLSTAMP = "7131505";
               n = 0;
               break;
             case St.e.WINTER_2021_LEAGUE:
+            case St.e.WINTER_2021_LEAGUE_FINALS:
+            case St.e.SPRING_2022_LEAGUE:
               (t = "#39445a"), (a = "#39445a");
           }
           return s.a.createElement(
