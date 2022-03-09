@@ -54,7 +54,7 @@ function IsBaseUrlExpression(node) {
 	return (
 		node.type === Syntax.MemberExpression &&
 		node.property.type === Syntax.Identifier &&
-		node.property.name.endsWith("BASE_URL")
+		node.property.name.endsWith("_URL")
 	);
 }
 
