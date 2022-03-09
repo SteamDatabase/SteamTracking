@@ -45,7 +45,9 @@ var CWishlistController = function()
 		'discount_75': "Discount",
 		'ex_earlyaccess': "Exclude",
 		'ex_prerelease': "Exclude",
-		'ex_vr': "Exclude"	}
+		'ex_vr': "Exclude",
+		'deck_verified': "Deck Compatibility",
+		'deck_playable': "Deck Compatibility"	}
 
 	this.rgValidFilters = [ 
 		'platform', 
@@ -54,7 +56,8 @@ var CWishlistController = function()
 		'term',
 		'price_1', 'price_2', 'price_wallet', 
 		'ex_earlyaccess', 'ex_prerelease', 'ex_vr',
-		'discount_any', 'discount_50', 'discount_75' 
+		'discount_any', 'discount_50', 'discount_75',
+		'deck_verified', 'deck_playable'
 	];
 
 	// Hook up dropdowns
@@ -517,6 +520,11 @@ CWishlistController.prototype.LoadSettings = function()
 	$J('input[name=' + 'ex_earlyaccess' + ']').attr( 'checked', this.rgFilterSettings.ex_earlyaccess );
 	$J('input[name=' + 'ex_prerelease' + ']').attr( 'checked', this.rgFilterSettings.ex_prerelease );
 	$J('input[name=' + 'ex_vr' + ']').attr( 'checked', this.rgFilterSettings.ex_vr );
+
+	// steam deck compatibility checkboxes
+	$J('input[name=' + 'deck_verified' + ']').attr( 'checked', this.rgFilterSettings.deck_verified );
+	$J('input[name=' + 'deck_playable' + ']').attr( 'checked', this.rgFilterSettings.deck_playable );
+
 }
 
 CWishlistController.prototype.SaveSettings = function()
@@ -1051,7 +1059,20 @@ CWishlistController.prototype.BPassesFilters = function( unAppId, rgFilters ) {
 	if ( rgFilters.ex_vr && appInfo.vr_only )
 		return false;
 
-
+	var bDeckVerified = appInfo.deck_compat == 3;
+	var bDeckPlayable = appInfo.deck_compat == 2;
+	if( rgFilters.deck_verified && rgFilters.deck_playable && !bDeckVerified && !bDeckPlayable )
+	{
+		return false;
+	}
+	else if ( rgFilters.deck_verified && !rgFilters.deck_playable && !bDeckVerified )
+	{
+		return false;
+	}
+	else if ( !rgFilters.deck_verified && rgFilters.deck_playable && !bDeckPlayable )
+	{
+		return false;
+	}
 
 	var bPassesPriceFilters = !rgFilters.price_1 && !rgFilters.price_2 && !rgFilters.price_wallet;
 

@@ -20347,55 +20347,6 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .clanlocalizedimage_artworkbar_q0Eu4 {
   width: 1050px;
 }
-.facetedbrowseeditor_FacetValueName_3wruf {
-  color: #fff;
-  padding: 8px;
-  margin-bottom: 8px;
-  background: rgba(1, 1, 1, 0.1);
-  cursor: pointer;
-}
-.facetedbrowseeditor_FacetValueCtn_btRSv {
-  display: flex;
-}
-.facetedbrowseeditor_FacetValueCtn_btRSv div {
-  flex-grow: 1;
-  flex-basis: 100%;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.facetedbrowseeditor_FacetValueFilterDisplayCtn_2Xo5C {
-  flex-grow: 1;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.facetedbrowseeditor_FacetName_39gQo {
-  color: #fff;
-  text-transform: uppercase;
-  padding: 8px;
-  margin-bottom: 8px;
-  background: rgba(1, 1, 1, 0.1);
-  cursor: pointer;
-}
-.facetedbrowseeditor_FacetFilterDisplayCtn_3_YHd {
-  flex-grow: 1;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.collapseablesection_SectionTitleHeader_2g5oN {
-  display: flex;
-}
-.collapseablesection_SectionTitleHeader_2g5oN .DialogButton {
-  width: 36px;
-  height: 30px;
-  margin-left: auto;
-  margin-top: auto;
-}
-.collapseablesection_required_title_3yDPZ {
-  display: flex;
-}
-.collapseablesection_SectionTitleHeader_2g5oN .EventEditorTextTitle {
-  padding-top: 6px;
-}
 .partnereventsale_SaleContainer_3BwSi {
   position: relative;
   max-width: 920px;
@@ -21392,6 +21343,55 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   .partnereventsaletagitems_AppTableRow_X8HXp
   .partnereventsaletagitems_AppName_1AjeX {
   flex-grow: 1;
+}
+.facetedbrowseeditor_FacetValueName_3wruf {
+  color: #fff;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: rgba(1, 1, 1, 0.1);
+  cursor: pointer;
+}
+.facetedbrowseeditor_FacetValueCtn_btRSv {
+  display: flex;
+}
+.facetedbrowseeditor_FacetValueCtn_btRSv div {
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.facetedbrowseeditor_FacetValueFilterDisplayCtn_2Xo5C {
+  flex-grow: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.facetedbrowseeditor_FacetName_39gQo {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: rgba(1, 1, 1, 0.1);
+  cursor: pointer;
+}
+.facetedbrowseeditor_FacetFilterDisplayCtn_3_YHd {
+  flex-grow: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.collapseablesection_SectionTitleHeader_2g5oN {
+  display: flex;
+}
+.collapseablesection_SectionTitleHeader_2g5oN .DialogButton {
+  width: 36px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: auto;
+}
+.collapseablesection_required_title_3yDPZ {
+  display: flex;
+}
+.collapseablesection_SectionTitleHeader_2g5oN .EventEditorTextTitle {
+  padding-top: 6px;
 }
 .partnereventshareddates_EventTimeSection_3HyTV:first-child {
   margin-bottom: 12px;

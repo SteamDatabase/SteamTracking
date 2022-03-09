@@ -3,7 +3,7 @@
   pointer-events: none;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10000;
 }
 .focusring_FocusRing_1sTuv {
   position: absolute;

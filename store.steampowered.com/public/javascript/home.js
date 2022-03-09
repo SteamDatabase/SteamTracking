@@ -745,7 +745,9 @@ GHomepage = {
 		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
 
 		var rgScreenshots = rgItemData.screenshots;
-		if( rgScreenshots && rgScreenshots.length && !window.UseTabletScreenMode() )
+		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+
+		if( rgScreenshots && rgScreenshots.length && !bUseTabletScreenMode )
 		{
 			for ( var i = 0; i < 4 && i < rgScreenshots.length; i++ )
 			{
@@ -1890,7 +1892,8 @@ GHomepage = {
 
 		var itemParams = { 'class' : 'community_recommendation_app responsive_scroll_snap_start' };
 		let $Item = $J( '<div>', itemParams );
-		if ( window.UseTabletScreenMode() )
+		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+		if ( bUseTabletScreenMode )
 		{
 			GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, itemParams );
 			$Item = $J( '<a/>', itemParams );

@@ -308,7 +308,7 @@
                       const a = {
                           cc: l.d.COUNTRY,
                           l: l.d.LANGUAGE,
-                          realm: O.g.k_ESteamRealmGlobal,
+                          realm: O.h.k_ESteamRealmGlobal,
                           origin: self.origin,
                           f: "jsonfull",
                           term: t.replace(" ", "+"),

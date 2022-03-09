@@ -38,12 +38,17 @@
 	--gpBackground-LightSoft: #3b5a7280;
 	--gpBackground-LightMedium: #678BA670;
 	--gpBackground-LightHard: #93B8D480;
-	--gpBackground-LightHarder: #bad5ea80;
+	--gpBackground-LightHarder: #04070880;
 
 	--gpBackground-DarkSofter: #0e141b33;
 	--gpBackground-DarkSoft: #0e141b66;
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
+
+	--gpBackground-Neutral-LightSofter: rgba(235, 246, 255, 0.10);
+	--gpBackground-Neutral-LightSoft: rgba(235, 246, 255, 0.20);
+	--gpBackground-Neutral-LightMedium: rgba(235, 246, 255, 0.30);
+	--gpBackground-Neutral-LightHard: rgba(235, 246, 255, 0.40);
 
 
 	/* Corners */
@@ -1040,13 +1045,10 @@
 
 
 
+
 	/* RECENTLY UPDATED */
 	html.responsive .recently_updated_announcement_link {
 		display: none;
-	}
-
-	html.responsive .recently_updated .store_capsule .ds_steam_deck_compat {
-		top: 124px;
 	}
 
 

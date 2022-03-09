@@ -3092,7 +3092,8 @@ function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	var $Popup = $JFromIDOrElement(elemPopup);
 
 	// If we're in tablet screen mode put the menu content in a modal dialog
-	if ( window.UseTabletScreenMode() )
+	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+	if ( bUseTabletScreenMode )
 	{
 		// detach this element and when the dialog closes re-attach to the document body
 		$Popup.detach();

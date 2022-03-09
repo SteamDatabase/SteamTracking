@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7138579";
+var CLSTAMP = "7140286";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -12869,6 +12869,7 @@ var CLSTAMP = "7138579";
             e.addEventListener("blur", this.Reset);
         }
         OnKeyDown(e) {
+          if ("Tab" == e.code) return void e.preventDefault();
           const t = this.TranslateKey(e);
           t != i.a.INVALID &&
             (e.preventDefault(),
@@ -14190,8 +14191,16 @@ var CLSTAMP = "7138579";
         }
         SetDOMFocusAndScroll(e, t) {
           this.UpdateParentActiveChild(),
-            this.m_Tree.BUseVirtualFocus() ||
-              this.m_element.focus({ preventScroll: !0 }),
+            this.m_Tree.BIsActiveFocus()
+              ? (Object(s.a)(
+                  !this.m_Tree.BUseVirtualFocus(),
+                  "Virtual focus tree should not have browser focus"
+                ),
+                this.m_element.focus({ preventScroll: !0 }))
+              : this.m_Tree.BUseVirtualFocus() ||
+                L(
+                  `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`
+                ),
             (function (e, t) {
               var n, r, i, o;
               const s = e.Element;
@@ -16354,7 +16363,8 @@ var CLSTAMP = "7138579";
           i &&
             ((f.onClick = f.onClick || i), (_.onOKButton = _.onOKButton || i)),
           _.onOKButton && void 0 === b.focusable && (b.focusable = !0),
-          b.focusable && (f.tabIndex = f.tabIndex || 0),
+          (b.focusable || b.focusableIfNoChildren) &&
+            (f.tabIndex = f.tabIndex || 0),
           h && (_.onCancelButton = _.onCancelButton || h),
           (f.className = Object(a.a)(f.className, "Panel", "Focusable"));
         const { ref: y, node: C } = Object(s.h)(

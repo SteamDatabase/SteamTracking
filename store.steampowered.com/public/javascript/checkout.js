@@ -374,7 +374,7 @@ function PopupCVV2Explanation()
 			type = 'amex';
 		}
 
-		 window.open( 'https://store.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
+				window.open( 'https://store.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
 	}
 	catch( e )
 	{

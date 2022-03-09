@@ -6,38 +6,43 @@
 		display: none;
 	}
 
-	/* App hub header */
+
+
+	/* APP HUB HEADER */
 	html.responsive .apphub_HomeHeader {
-		padding-bottom: 0px;
 		margin-bottom: 24px;
+		padding: 24px;
+		padding-bottom: 12px;
 		background-color: var(--gpBackground-DarkHard);
 	}
 
 	html.responsive .apphub_HomeHeaderContent {
-		padding: var(--gpSpace-Gutter);
-		padding-bottom: 0px;
+		/* padding: var(--gpSpace-Gutter); */
+		/* padding-bottom: 0px; */
+		padding: unset;
 		display: flex;
-		align-items: flex-end;
+		flex-direction: column;
 	}
 
 	html.responsive .apphub_HeaderBottomBG_ctn {
 		width: 100%;
 		position: absolute;
 		top: 0px;
+		left: 0px;
 		z-index: -1;
 	}
 
 	html.responsive .apphub_HeaderBottomBG_blur {
 		width: 100%;
 		position: absolute;
-		height: 600px;
-		backdrop-filter: blur(48px);
+		height: 800px;
+		backdrop-filter: blur(24px);
 	}
 
 	html.responsive .apphub_HeaderBottomBG {
 		background-size: cover;
 		background-position: center;
-		height: 600px;
+		height: 800px;
 		position: absolute;
 		-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0) 90%);
 	}
@@ -63,11 +68,6 @@
 		overflow: hidden;
 		box-shadow: var(--gpShadow-Medium);
 	}
-
-	/* html.responsive .apphub_OtherSiteInfo.responsive_hidden {
-		display: block;
-	} */
-
 
 	/* App hub background */
 	html.responsive .apphub_background {
@@ -104,8 +104,139 @@
 	html.responsive .apphub_Content {
 		margin: unset;
 		padding: unset;
-		/* padding-top: 24px; */
-		/* backdrop-filter: blur(48px); */
+	}
+
+	/* Stats */
+	html.responsive .apphub_HeaderBottom {
+		min-height: unset;
+		background-color: unset;
+		height: unset;
+		display: flex;
+		align-items: center;
+		/* padding: 8px 16px; */
+		/* border: 1px solid var(--gpBackground-LightSoft); */
+		margin-top: 4px;
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .apphub_NumInApp {
+		font-weight: 500;
+	}
+
+	html.responsive .apphub_HeaderBottom .apphub_Stats .responsive_hidden {
+		display: unset;
+	}
+
+	html.responsive .apphub_HeaderBottom .apphub_Stats {
+		line-height: unset;
+		font-size: unset;
+	}
+
+	html.responsive .apphub_HeaderBottom .apphub_Stats div.statsselect {
+		margin-top: unset;
+		font-size: unset;
+		height: unset;
+	}
+
+	html.responsive .apphub_HeaderBottom .apphub_Stats .statsselect_text {
+		font-size: unset;
+	}
+
+	html.responsive .apphub_HeaderBottom .apphub_recentFriendsArea {
+		padding-top: unset;
+		display: flex;
+		align-items: center;
+		column-gap: 12px;
+	}
+
+	html.responsive .apphub_friend_block_row {
+		padding-left: unset;
+		display: flex;
+		column-gap: 6px;
+	}
+
+	html.responsive .apphub_friend_block_row .playerAvatar {
+		margin: unset;
+	}
+
+	html.responsive .apphub_friend_block_row .playerAvatar a {
+		display: flex;
+	}
+
+	/* Store info header */
+	html.responsive .apphub_StoreInfoHeader {
+		border: 1px solid var(--gpBackground-LightSoft);
+		border: unset;
+		background-color: unset;
+		padding: 0px;
+		margin: 16px 0px;
+		min-height: unset;
+		padding: 12px;
+		background-color: var(--gpBackground-Neutral-LightSofter);
+	}
+
+	html.responsive .apphub_StoreAppLogo {
+		width: 200px;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .apphub_StoreAppText {
+		color: unset;
+		opacity: 0.8;
+	}
+
+	html.responsive .apphub_StoreAppData {
+		padding-top: 8px;
+	}
+
+	html.responsive .apphub_StoreAppData #app_header_view_store_page_btn {
+		display: none;
+	}
+
+	html.responsive .apphub_StorePrice {
+		border: unset;
+		height: unset;
+	}
+
+	html.responsive .apphub_StorePrice .price {
+		font: var(--gpText-BodyMedium);
+		text-align: unset;
+	}
+
+	html.responsive .apphub_HubDivider {
+		display: none;
+	}
+
+	/* Early access strip */
+	html.responsive .apphub_EarlyAccess {
+		background: none;
+		background-color: var(--gpColor-DustyBlue);
+		height: unset;
+		line-height: unset;
+		padding: 8px 12px;
+	}
+
+	html.responsive .apphub_EarlyAccess .apphub_EarlyAccess_Title {
+		font-size: unset;
+		padding: unset;
+		margin-right: 4px;
+	}
+
+	html.responsive .apphub_EarlyAccess .apphub_EarlyAccess_Desc {
+		font-size: unset;
+		padding: unset;
+		color: unset;
+	}
+
+	html.responsive .apphub_EarlyAccess .apphub_EarlyAccess_Desc a {
+		display: none;
+	}
+
+	/* Description */
+	html.responsive .apphub_AllContentText {
+		color: unset;
+		font: var(--gpText-BodyMedium);
+		opacity: 0.6;
 	}
 
 

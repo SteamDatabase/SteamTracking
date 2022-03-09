@@ -436,52 +436,22 @@
 
 
 
-	/* Tag input field */
-	/* html.responsive .app_tag_form_ctn .gray_bevel.for_text_input input {
-		margin: unset;
-		height: unset;
-		line-height: unset;
-		background-color: unset;
-		color: unset;
-		font-size: unset;
-		width: unset;
-		margin: unset;
+	/* Review score settings */
+	html.responsive .review_events_preferences_radio_btns {
+		padding: 0px;
+		background: none;
+		margin-top: 12px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
 	}
 
-	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input {
-		height: unset;
-		padding: unset;
-		background-color: unset;
-		border-radius: unset;
-		border: unset;
-		box-shadow: unset;
-		color: unset;
-		outline: unset;
-		width: unset;
+	html.responsive .review_event_preference {
+		padding: 8px;
+		background-color: var(--gpSystemDarkerGrey);
+		display: flex;
+		align-items: center;
+		gap: 8px;
 	}
-
-	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input .basic_text_input {
-		background-color: var(--gpBackground-LightMedium);
-		border-radius: var(--gpCorner-Large);
-		font: var(--gpText-BodyLarge);
-		color: white;
-		transition: all 0.1s ease;
-		padding: 8px 10px;
-
-	}
-
-	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input .basic_text_input:focus {
-		background-color: white;
-		color: black;
-	}
-
-	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input .basic_text_input.gpfocus {
-		border-radius: 0px;
-	}
-
-	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input .basic_text_input::placeholder {
-		color: var(--gpStoreLighterGrey);
-		font: var(--gpText-BodyLarge);
-	} */
 
 }

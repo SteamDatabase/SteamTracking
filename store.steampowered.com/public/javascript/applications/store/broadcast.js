@@ -3689,7 +3689,7 @@
             (this.m_regexBannedWords = null),
             (this.m_regexCleanWords = null),
             (this.m_bShownFilterTip = !1),
-            (this.m_TextFilterPreferences = new Ne.l());
+            (this.m_TextFilterPreferences = new Ne.m());
           {
             let e = new Pe.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
@@ -5624,7 +5624,7 @@
             });
         }
         static IsBroadcastAllowed() {
-          return Ce.d.EREALM != Ne.g.k_ESteamRealmChina && !Ce.d.IN_GAMEPADUI;
+          return Ce.d.EREALM != Ne.h.k_ESteamRealmChina && !Ce.d.IN_GAMEPADUI;
         }
         componentDidMount() {
           return Object(a.a)(this, void 0, void 0, function* () {
@@ -5792,14 +5792,14 @@
               (e = Object.assign(Object.assign({}, e), {
                 left_panel: r.GetImageURL(
                   "broadcast_left",
-                  a || Object(Ne.k)(Ce.d.LANGUAGE)
+                  a || Object(Ne.l)(Ce.d.LANGUAGE)
                 ),
                 right_panel: r.GetImageURL(
                   "broadcast_right",
-                  a || Object(Ne.k)(Ce.d.LANGUAGE)
+                  a || Object(Ne.l)(Ce.d.LANGUAGE)
                 ),
                 store_title: r.GetBroadcastTitle(
-                  a || Object(Ne.k)(Ce.d.LANGUAGE)
+                  a || Object(Ne.l)(Ce.d.LANGUAGE)
                 ),
                 broadcast_chat_visibility: r.GetBroadcastChatVisibility(),
               }));

@@ -38,12 +38,17 @@
 	--gpBackground-LightSoft: #3b5a7280;
 	--gpBackground-LightMedium: #678BA670;
 	--gpBackground-LightHard: #93B8D480;
-	--gpBackground-LightHarder: #bad5ea80;
+	--gpBackground-LightHarder: #04070880;
 
 	--gpBackground-DarkSofter: #0e141b33;
 	--gpBackground-DarkSoft: #0e141b66;
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
+
+	--gpBackground-Neutral-LightSofter: rgba(235, 246, 255, 0.10);
+	--gpBackground-Neutral-LightSoft: rgba(235, 246, 255, 0.20);
+	--gpBackground-Neutral-LightMedium: rgba(235, 246, 255, 0.30);
+	--gpBackground-Neutral-LightHard: rgba(235, 246, 255, 0.40);
 
 
 	/* Corners */
@@ -155,6 +160,11 @@
 		background-attachment: fixed !important;
 	}
 
+
+	/* Hide non breaking spaces */
+	html.responsive .non_breaking_space {
+		display: none;
+	}
 
 
 
@@ -414,7 +424,7 @@
 	html.responsive .dropcontainer ul {
 		line-height: unset;
 		box-shadow: var(--gpShadow-Large);
-		max-height: 80vh !important;
+		max-height: 60vh !important;
 		overflow-y: scroll;
 		scroll-snap-type: y mandatory;
 		scroll-padding-top: 40px;
@@ -445,6 +455,68 @@
 		background: white;
 		color: black;
 	}
+
+
+
+
+	/* FORUM POST ACTIONS */
+	html.responsive .forum_comment_action_menu,
+	html.responsive .popup_body {
+		padding: unset;
+		display: flex;
+		flex-direction: column;
+		background-color: unset;
+		border: unset;
+		margin: unset;
+	}
+
+	html.responsive .forum_comment_action_menu a,
+	html.responsive .popup_body .popup_menu_item {
+		padding: 10px 12px !important;
+		margin: unset;
+		display: flex !important;
+		align-items: center;
+		column-gap: 8px;
+		border-radius: unset;
+		font: var(--gpText-BodyLarge) !important;
+		box-sizing: border-box;
+		width: unset;
+		height: unset;
+		background-color: var(--gpSystemDarkestGrey);
+		color: var(--gpStoreLightestGrey);
+		transition: background-color 0.1s ease,
+					color 0.2s ease;
+	}
+
+	html.responsive .forum_comment_action_menu a:hover,
+	html.responsive .popup_body .popup_menu_item:hover {
+		background-color: var(--gpSystemDarkerGrey);
+		color: white;
+	}
+
+	html.responsive .forum_comment_action_menu a.gpfocus,
+	html.responsive .popup_body .popup_menu_item.gpfocus {
+		background-color: white;
+		color: black;
+	}
+
+	html.responsive .popup_block_new {
+		box-shadow: unset;
+	}
+
+	html.responsive .shadow_ul,
+	html.responsive .shadow_ur,
+	html.responsive .shadow_bl,
+	html.responsive .shadow_br,
+	html.responsive .shadow_top,
+	html.responsive .shadow_left,
+	html.responsive .shadow_right,
+	html.responsive .shadow_bottom {
+		display: none;
+	}
+
+
+
 
 
 
@@ -506,7 +578,7 @@
 	}
 
 	html.responsive .newmodal_content {
-		padding: 16px 32px 32px 32px;
+		padding: 32px;
 	}
 
 
@@ -701,124 +773,6 @@
 		overflow-y: scroll;
 		scroll-padding: 120px 0px;
 		box-sizing: border-box;
-	}
-
-
-	/* Panel styling */
-	html.responsive .responsive_page_menu_ctn {
-		box-shadow: var(--gpShadow-XLarge);
-	}
-
-
-	html.responsive .responsive_page_menu_ctn.localmenu .responsive_page_menu {
-		background: var(--gpStoreDarkerGrey);
-	}
-
-	html.responsive .apphub_ResponsiveMenuCtn {
-		display: flex;
-		column-gap: 8px;
-	}
-
-	html.responsive .apphub_ResponsiveMenuCtn a {
-		flex-grow: 1;
-	}
-
-	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea {
-		background: unset;
-		padding: unset;
-	}
-
-	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader,
-	html.responsive .rightbox_content_header,
-	html.responsive .rightSectionTopTitle {
-		font: var(--gpText-BodySmall);
-		font-weight: 700;
-		color: var(--gpStoreLighterGrey);
-		letter-spacing: 0.5px;
-		text-transform: uppercase;
-	}
-
-	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader {
-		margin: 20px 0px 4px;
-	}
-
-	html.responsive .rightSectionTopTitle {
-		margin-bottom: 8px;
-	}
-
-	html.responsive .thread .rightcol {
-		margin-top: 16px;
-	}
-
-	html.responsive .thread .rightcol .rightbox {
-		background: none;
-		border: 2px solid var(--gpStoreDarkGrey);
-	}
-
-	html.responsive .thread .rightcol .rightbox .rule {
-		display: none;
-	}
-
-	html.responsive .thread .rightcol .rightbox .content {
-		padding: 12px;
-	}
-
-	html.responsive .thread .rightcol .rightbox .content .topicstats {
-		font: var(--gpText-BodyMedium);
-	}
-
-	html.responsive .topicstats_label {
-		color: var(--gpStoreLighterGrey);
-	}
-
-	html.responsive .topicstats_value {
-		color: var(--gpStoreLightestGrey);
-	}
-
-
-	/* Forum topics */
-	html.responsive .forum_topic {
-		background-color: var(--gpBackground-LightSofter);
-		border-radius: var(--gpCorner-Medium);
-		min-height: unset;
-		padding: 8px 12px;
-		margin-bottom: 2px;
-		transition: all 0.2s ease;
-	}
-
-	html.responsive .forum_topic:hover {
-		background-color: var(--gpBackground-LightMedium);
-	}
-
-	html.responsive .forum_topic.gpfocus {
-		background-color: var(--gpBackground-LightMedium);
-		border-radius: 0px;
-	}
-
-	html.responsive .forum_topic .forum_topic_name {
-		font: var(--gpText-BodyMedium);
-		padding: unset;
-	}
-
-	html.responsive .forum_topic .forum_topic_details {
-		font: var(--gpText-BodyMedium);
-	}
-
-
-	/* Panel seach */
-	html.responsive .discussionSearchTextContainer {
-		background: none;
-
-		/* TODO: Hiding search until we investigate why search loads a different template */
-		display: none;
-	}
-
-	html.responsive .discussionSearchTextContainer input.discussionSearchText {
-		width: 100%;
-	}
-
-	html.responsive .discussionSearchTextContainer .discussionSearchTextSubmitImg {
-		display: none;
 	}
 
 

@@ -38,12 +38,17 @@
 	--gpBackground-LightSoft: #3b5a7280;
 	--gpBackground-LightMedium: #678BA670;
 	--gpBackground-LightHard: #93B8D480;
-	--gpBackground-LightHarder: #bad5ea80;
+	--gpBackground-LightHarder: #04070880;
 
 	--gpBackground-DarkSofter: #0e141b33;
 	--gpBackground-DarkSoft: #0e141b66;
 	--gpBackground-DarkMedium: #0e141b99;
 	--gpBackground-DarkHard: #0e141bcc;
+
+	--gpBackground-Neutral-LightSofter: rgba(235, 246, 255, 0.10);
+	--gpBackground-Neutral-LightSoft: rgba(235, 246, 255, 0.20);
+	--gpBackground-Neutral-LightMedium: rgba(235, 246, 255, 0.30);
+	--gpBackground-Neutral-LightHard: rgba(235, 246, 255, 0.40);
 
 
 	/* Corners */
@@ -1981,6 +1986,14 @@
 	html.responsive .review_control_didyouenjoy {
 		margin-bottom: 8px;
 	}
+
+	html.responsive .dropcontainer ul#ReviewLanguage_droplist,
+	html.responsive .dropcontainer ul#ReviewVisibility_droplist {
+		right: 0px;
+		left: 0px;
+	}
+
+
 
 
 

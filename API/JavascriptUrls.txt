@@ -330,9 +330,9 @@ ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetpackagediscounts/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxupdatediscountevent
+${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/planning/dashboard
 ${PARTNER_BASE_URL}pub/ajaxfindpublishers
-${PARTNER_BASE_URL}pub/event/
 ${PARTNER_BASE_URL}pub/publisher/${partner_id}
 ${PARTNER_BASE_URL}pub/publisher/${publisherid}/
 ${PARTNER_BASE_URL}pub/publisher/${}
@@ -395,7 +395,6 @@ ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=b
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
-${STORE_BASE_URL}app/${appid}/?beta=1
 ${STORE_BASE_URL}app/${id}
 ${STORE_BASE_URL}app/${m_strAppId}
 ${STORE_BASE_URL}app/${}

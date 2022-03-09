@@ -84,6 +84,9 @@
 		margin: 0px -24px;
 		padding: 12px 24px;
 		scroll-padding: 0px 96px;
+		overflow-x: scroll;
+		width: 100vw;
+		box-sizing: border-box;
 	}
 
 	html.responsive .sectionTabs {
@@ -97,7 +100,7 @@
 
 	html.responsive .apphub_sectionTabs {
 		scroll-snap-align: start;
-		padding-bottom: 16px;
+		/* padding-bottom: 0px; */
 	}
 
 
@@ -108,19 +111,27 @@
 		margin: unset;
 		float: unset;
 		height: unset;
-		padding: 8px 12px;
+		padding: 10px 16px;
 		font: var(--gpText-BodyLarge);
+		font-weight: ;
 		border-radius: var(--gpCorner-Medium);
 		background: none;
 		background-color: var(--gpBackground-LightSofter);
 		transition: all 0.2s ease;
 	}
 
+	html.responsive .apphub_sectionTab {
+		background-color: var(--gpBackground-Neutral-LightSofter);
+	}
+
 	/* Hovers */
 	html.responsive .sectionTab:hover,
-	html.responsive a.sectionTab:hover,
+	html.responsive a.sectionTab:hover {
+		background-color: var(--gpBackground-LightMedium);
+	}
+
 	html.responsive .apphub_sectionTab:hover {
-		background-color: var(--gpBackground-LightSoft);
+		background-color: var(--gpBackground-Neutral-LightSoft);
 	}
 
 	html.responsive .apphub_sectionTab.active > span {
@@ -130,16 +141,18 @@
 	}
 
 	html.responsive .apphub_sectionTab.active:hover {
-		padding: 8px 12px;
+		padding: 10px 16px;
 	}
 
 	/* Active */
-	html.responsive .sectionTab.active,
-	html.responsive .apphub_sectionTab.active {
+	html.responsive .sectionTab.active {
 		background: unset;
-		/* background: linear-gradient(0deg, rgb(60 94 129) 0%, rgb(67 114 147) 100%); */
-		background-color: var(--gpBackground-LightHard);
 		box-shadow: var(--gpShadow-Medium);
+		background-color: var(--gpBackground-LightHard);
+	}
+
+	html.responsive .apphub_sectionTab.active {
+		background-color: var(--gpBackground-Neutral-LightHard);
 	}
 
 	/* Focus */
@@ -211,8 +224,143 @@
 
 
 
+	/* COMMUNITY AGE CHECK */
+	html.responsive .adult_content_age_gate {
+		padding: 48px 48px;
+	}
+
+	html.responsive .adult_content_age_gate_header {
+		box-shadow: var(--gpShadow-Medium);
+		width: 240px;
+	}
+
+	html.responsive .adult_content_age_gate p.descriptor {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+		padding: unset;
+		margin: 16px 0px;
+	}
+
+	html.responsive .adult_content_age_gate_warning_check {
+		font: var(--gpText-BodyLarge);
+		color: var(--gpStoreLightestGrey);
+		display: inline-flex;
+		align-items: center;
+		column-gap: 8px;
+		justify-content: center;
+		margin-bottom: 16px;
+		padding: 10px 16px;
+		transition: background-color 0.2 ease,
+					color 0.2 ease;
+	}
+
+	html.responsive .edit_preferences {
+		margin-top: 40px;
+		border-top: 1px solid var(--gpBackground-LightSoft);
+		padding-bottom: 24px;
+	}
+
+	html.responsive .adult_content_age_gate_warning_check:hover,
+	html.responsive .adult_content_age_gate_warning_check.gpfocus {
+		background-color: var(--gpBackground-LightSoft);
+		color: white;
+	}
+
+	html.responsive .adult_content_age_gate_warning_check #ViewAllForApp {
+		margin: unset;
+	}
 
 
+
+
+	/* RIGHT PANEL */
+	html.responsive .responsive_page_menu_ctn {
+		box-shadow: var(--gpShadow-XLarge);
+	}
+
+
+	html.responsive .responsive_page_menu_ctn.localmenu .responsive_page_menu {
+		background: var(--gpStoreDarkerGrey);
+	}
+
+	html.responsive .apphub_ResponsiveMenuCtn {
+		display: flex;
+		column-gap: 8px;
+	}
+
+	html.responsive .apphub_ResponsiveMenuCtn a {
+		flex-grow: 1;
+	}
+
+	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea {
+		background: unset;
+		padding: unset;
+	}
+
+	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader,
+	html.responsive .rightbox_content_header,
+	html.responsive .rightSectionTopTitle {
+		font: var(--gpText-BodySmall);
+		font-weight: 700;
+		color: var(--gpStoreLighterGrey);
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+	}
+
+	html.responsive .responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader {
+		margin: 20px 0px 4px;
+	}
+
+	html.responsive .rightSectionTopTitle {
+		margin-bottom: 8px;
+	}
+
+	html.responsive .thread .rightcol {
+		margin-top: 16px;
+	}
+
+	html.responsive .thread .rightcol .rightbox {
+		background: none;
+		border: 2px solid var(--gpStoreDarkGrey);
+	}
+
+	html.responsive .thread .rightcol .rightbox .rule {
+		display: none;
+	}
+
+	html.responsive .thread .rightcol .rightbox .content {
+		padding: 12px;
+	}
+
+	html.responsive .thread .rightcol .rightbox .content .topicstats {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .topicstats_label {
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .topicstats_value {
+		color: var(--gpStoreLightestGrey);
+	}
+
+
+
+	/* Panel seach */
+	html.responsive .discussionSearchTextContainer {
+		background: none;
+
+		/* TODO: Hiding search until we investigate why search loads a different template */
+		display: none;
+	}
+
+	html.responsive .discussionSearchTextContainer input.discussionSearchText {
+		width: 100%;
+	}
+
+	html.responsive .discussionSearchTextContainer .discussionSearchTextSubmitImg {
+		display: none;
+	}
 
 
 

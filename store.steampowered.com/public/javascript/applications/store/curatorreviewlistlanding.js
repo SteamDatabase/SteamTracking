@@ -293,7 +293,7 @@
           } = r.recommended_app,
           R = _.a.GetAppLinkInfo(s);
         if (!R) return null;
-        if (!Object(i.b)(R.type)) return null;
+        if (!Object(i.c)(R.type)) return null;
         const h = u.is_creator_home,
           g =
             null === (t = n.list_jsondata.app_data) || void 0 === t

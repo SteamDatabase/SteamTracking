@@ -103,7 +103,7 @@
         d = a("Jqb/"),
         p = a("TLQK"),
         u = a("prdU"),
-        _ = (a("li7h"), a("OU48"), a("0xSo"), a("ka0M")),
+        _ = (a("li7h"), a("OU48"), a("ka0M")),
         f = a("X3Ds"),
         g = a("lkRc"),
         h = a("FwEH"),
@@ -1059,7 +1059,7 @@
           if (1 == this.m_mutableObjDefinition.type) {
             const e = this.m_mutableObjDefinition.rewardDefinition
               .bundle_defids;
-            Object(o.L)(
+            Object(o.M)(
               () =>
                 !e ||
                 0 == e.length ||
@@ -2855,13 +2855,17 @@
             n = this.props.definition.rewardDefinition.community_item_type,
             i = t.items.map((e) => {
               let t = Object(ge.b)(e);
-              const a = u.b.Get().BRewardOwnedByUser(e);
+              const a = u.b.Get().BRewardOwnedByUser(e),
+                n = 8 == e.community_item_class;
               return r.createElement(
                 he.a,
                 {
                   key: e.defid,
                   padding: "xxsmall",
-                  className: m.BundleItemPreview,
+                  className: Object(N.a)(
+                    m.BundleItemPreview,
+                    n && m.ProfileModifier
+                  ),
                 },
                 r.createElement(
                   "div",
@@ -5331,7 +5335,7 @@
         Ge = a("RImk"),
         ze = a("5/sD"),
         Fe = a.n(ze),
-        He = (a("0xSo"), a("cOvF")),
+        He = a("cOvF"),
         Ue = a("Vlb1"),
         Ve = a("Gp1o"),
         Ze = a("CdLH");
@@ -6634,7 +6638,7 @@
         });
       const aa = () => {
           const e = (function () {
-            const e = Object(_t.a)(l.d.EREALM);
+            const e = Object(_t.b)(l.d.EREALM);
             return [
               {
                 question: "#Faq_GetPoints_Q",
@@ -6741,7 +6745,7 @@
                 i.a.createElement(Kt, { dollarConversion: e, numPoints: t }),
                 i.a.createElement($t, null),
                 i.a.createElement(ea, null),
-                !Object(_t.a)(l.d.EREALM) && i.a.createElement(ta, null),
+                !Object(_t.b)(l.d.EREALM) && i.a.createElement(ta, null),
                 i.a.createElement(aa, null)
               )
             )
@@ -6754,7 +6758,7 @@
           super(e), _.b.Get().GetLoyaltyRewardsSummary();
         }
         render() {
-          return Object(_t.a)(l.d.EREALM)
+          return Object(_t.b)(l.d.EREALM)
             ? i.a.createElement(
                 re.e,
                 null,
@@ -7355,7 +7359,7 @@
               to: { pathname: s.b.LoyaltyItemBundles() },
             },
           });
-          const t = Object(_t.a)(l.d.EREALM);
+          const t = Object(_t.b)(l.d.EREALM);
           return (
             t ||
               e[0].items.push({
@@ -11243,7 +11247,7 @@
         s = a("StxQ"),
         l = a("6Y59"),
         c = a("Vlb1"),
-        m = (a("li7h"), a("OU48"), a("0xSo"), a("exH9")),
+        m = (a("li7h"), a("OU48"), a("exH9")),
         d = a("lkRc"),
         p = a("TLQK"),
         u = a("prdU"),
@@ -12388,7 +12392,7 @@
           return i;
         });
       var n = a("lkRc");
-      a("OU48"), a("0xSo");
+      a("OU48"), a("li7h");
       function r(e, t) {
         return `${n.d.MEDIA_CDN_COMMUNITY_URL}images/items/${e}/${t}`;
       }
@@ -12910,6 +12914,7 @@
         BundleChildItemClass: "redeempointsmodal_BundleChildItemClass_3qv_r",
         BundleChildItemOwned: "redeempointsmodal_BundleChildItemOwned_14pUJ",
         OwnedCheckmark: "redeempointsmodal_OwnedCheckmark_RtMC5",
+        ProfileModifier: "redeempointsmodal_ProfileModifier_9j-kM",
         PreviewProfileBundleFrameContainer:
           "redeempointsmodal_PreviewProfileBundleFrameContainer_21Gwk",
         PreviewProfileBundleFrame:
@@ -14071,9 +14076,9 @@
         }
         LoadCouponPromosForUser() {
           return Object(n.a)(this, void 0, void 0, function* () {
-            const e = _.b.Init(b.a);
+            const e = _.b.Init(b.c);
             e.Body().set_country_code(m.k.country_code);
-            const t = yield b.b.GetAvailableValveDiscountPromotions(
+            const t = yield b.d.GetAvailableValveDiscountPromotions(
               this.m_transport,
               e
             );
@@ -14122,29 +14127,27 @@
           return t < this.m_rgProfileCustomizationsConfig.max_slots_per_type;
         }
         GetSortedGamesWithRewards() {
-          return (
-            this.m_bSortedGamesWithRewards ||
-              ((this.m_bSortedGamesWithRewards = !0),
-              Promise.all([
-                this.m_bLoadedEligibleApps
-                  ? this.m_rgEligibleApps
-                  : this.LoadEligibleApps(),
-                this.m_bLoadedRecentlyPlayed
-                  ? this.m_rgRecentlyPlayed
-                  : this.LoadRecentlyPlayedApps(),
-              ]).then(([e, t]) => {
-                (this.m_rgEligibleApps = e),
-                  (this.m_mapEligibleApps = new Map(
-                    this.m_rgEligibleApps.map((e) => [e.appid, e])
-                  ));
-                const a = t.filter((e) => this.m_mapEligibleApps.has(e)),
-                  n = e
-                    .filter((e) => 0 == a.includes(e.appid))
-                    .map((e) => e.appid);
-                this.m_rgSortedAppsWithRewards = a.concat(n);
-              })),
-            this.m_rgSortedAppsWithRewards
-          );
+          if (!this.m_bSortedGamesWithRewards) {
+            this.m_bSortedGamesWithRewards = !0;
+            let e = this.m_bLoadedEligibleApps
+                ? this.m_rgEligibleApps
+                : this.LoadEligibleApps(),
+              t = this.m_bLoadedRecentlyPlayed
+                ? this.m_rgRecentlyPlayed
+                : this.LoadRecentlyPlayedApps();
+            Promise.all([e, t]).then(([e, t]) => {
+              (this.m_rgEligibleApps = e),
+                (this.m_mapEligibleApps = new Map(
+                  this.m_rgEligibleApps.map((e) => [e.appid, e])
+                ));
+              const a = t.filter((e) => this.m_mapEligibleApps.has(e)),
+                n = e
+                  .filter((e) => 0 == a.includes(e.appid))
+                  .map((e) => e.appid);
+              this.m_rgSortedAppsWithRewards = a.concat(n);
+            });
+          }
+          return this.m_rgSortedAppsWithRewards;
         }
         GetMaxProfileShowcaseSlots() {
           return this.m_rgProfileCustomizationsConfig.max_slots_per_type;
@@ -14338,7 +14341,7 @@
             case "custom":
               return console.error("Cannot dynamically build page type"), null;
             default:
-              return console.error(`Unknown page type ${e.type}`), null;
+              return console.error("Unknown page type"), null;
           }
         }
         GetClusterDescriptor(e) {
@@ -14534,7 +14537,7 @@
           w.unshift({ cluster: v, type: 1 });
           const S = [];
           let j;
-          Object(d.a)(m.d.EREALM)
+          Object(d.b)(m.d.EREALM)
             ? S.push(a(1880140), a(1846860))
             : S.push(a(1902490), a(1446780), a(1880140)),
             (j = {
@@ -14649,7 +14652,7 @@
             )
           ),
             this.BIsLoggedIn() &&
-              Object(o.L)(
+              Object(o.M)(
                 () => !!B.Get().GetSortedGamesWithRewards().length
               ).then(() => {
                 const e = new G(
@@ -15445,7 +15448,7 @@
         m = a("TLQK"),
         d = a("ehaW"),
         p = a("RV7a"),
-        u = (a("0xSo"), a("OU48"), a("mw7S")),
+        u = (a("li7h"), a("OU48"), a("mw7S")),
         _ = a("qf3a"),
         f = a("StxQ"),
         g = a("exH9"),

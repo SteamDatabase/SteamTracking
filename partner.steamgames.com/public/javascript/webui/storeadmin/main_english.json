@@ -439,7 +439,6 @@
     "DiscountDashboard_SaveDiscountsTitle_Navigation": "SAVE BEFORE CONTINUING?",
     "DiscountDashboard_SaveDiscountsInProgress": "Saving Pending Discounts",
     "DiscountDashboard_SaveDiscountsError": "ERROR: server failure.",
-    "DiscountDashboard_SaveDiscountsWarning_Navigation": "You have pending changes that have not been saved. Would you like to save before leaving this page?",
     "DiscountDashboard_SaveDiscountsWarning_DiscountTooLow": "You cannot set a discount below 10%.",
     "DiscountDashboard_SaveDiscountsWarning_SomeDiscountTooHigh": "You must set a lower discount for some packages, due to the minimum price in at least one currency or region.",
     "DiscountDashboard_SaveDiscountsWarning_DiscountTooHigh": "You cannot set a discount above %1$s% for this package, due to the minimum price in at least one currency or region.",
@@ -468,5 +467,6 @@
     "DiscountDashboard_DetailView_ShowAllEvents": "Show All Events",
     "DiscountDashboard_Beta": "BETA",
     "DiscountDashboard_Feedback": "Leave us feedback here",
+    "PackageGrid_NavigationWarning": "You have pending changes that have not been saved. Would you like to save before leaving this page?",
     "dummy": "dummy"
 }
