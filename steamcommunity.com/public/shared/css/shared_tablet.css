@@ -459,67 +459,6 @@
 
 
 
-	/* FORUM POST ACTIONS */
-	html.responsive .forum_comment_action_menu,
-	html.responsive .popup_body {
-		padding: unset;
-		display: flex;
-		flex-direction: column;
-		background-color: unset;
-		border: unset;
-		margin: unset;
-	}
-
-	html.responsive .forum_comment_action_menu a,
-	html.responsive .popup_body .popup_menu_item {
-		padding: 10px 12px !important;
-		margin: unset;
-		display: flex !important;
-		align-items: center;
-		column-gap: 8px;
-		border-radius: unset;
-		font: var(--gpText-BodyLarge) !important;
-		box-sizing: border-box;
-		width: unset;
-		height: unset;
-		background-color: var(--gpSystemDarkestGrey);
-		color: var(--gpStoreLightestGrey);
-		transition: background-color 0.1s ease,
-					color 0.2s ease;
-	}
-
-	html.responsive .forum_comment_action_menu a:hover,
-	html.responsive .popup_body .popup_menu_item:hover {
-		background-color: var(--gpSystemDarkerGrey);
-		color: white;
-	}
-
-	html.responsive .forum_comment_action_menu a.gpfocus,
-	html.responsive .popup_body .popup_menu_item.gpfocus {
-		background-color: white;
-		color: black;
-	}
-
-	html.responsive .popup_block_new {
-		box-shadow: unset;
-	}
-
-	html.responsive .shadow_ul,
-	html.responsive .shadow_ur,
-	html.responsive .shadow_bl,
-	html.responsive .shadow_br,
-	html.responsive .shadow_top,
-	html.responsive .shadow_left,
-	html.responsive .shadow_right,
-	html.responsive .shadow_bottom {
-		display: none;
-	}
-
-
-
-
-
-
 	/* DROPDOWN FILTER SELECTS */
 	html.responsive div.filterselect {
 		height: unset;
@@ -549,6 +488,77 @@
 	html.responsive .filterselect_subtext {
 		font-size: unset;
 	}
+
+
+
+
+	/* FORUM POST ACTIONS */
+	html.responsive .forum_comment_action_menu,
+	html.responsive .popup_body,
+	html.responsive div.statsselect_options,
+	html.responsive div.filterselect_options {
+		padding: unset;
+		display: flex;
+		flex-direction: column;
+		background-color: unset;
+		border: unset;
+		margin: unset;
+		width: unset;
+		text-transform: unset;
+	}
+
+	html.responsive .forum_comment_action_menu a,
+	html.responsive .popup_body .popup_menu_item,
+	html.responsive div.statsselect_options div.option,
+	html.responsive div.filterselect_options div.option {
+		padding: 10px 12px !important;
+		margin: unset;
+		display: flex !important;
+		align-items: center;
+		column-gap: 8px;
+		border-radius: unset;
+		font: var(--gpText-BodyLarge) !important;
+		box-sizing: border-box;
+		width: unset;
+		height: unset;
+		background-color: var(--gpSystemDarkestGrey);
+		color: var(--gpStoreLightestGrey);
+		text-transform: unset;
+		transition: background-color 0.1s ease,
+					color 0.2s ease;
+	}
+
+	html.responsive .forum_comment_action_menu a:hover,
+	html.responsive .popup_body .popup_menu_item:hover,
+	html.responsive div.statsselect_options div.option:hover,
+	html.responsive div.filterselect_options div.option:hover {
+		background-color: var(--gpSystemDarkerGrey);
+		color: white;
+	}
+
+	html.responsive .forum_comment_action_menu a.gpfocus,
+	html.responsive .popup_body .popup_menu_item.gpfocus,
+	html.responsive div.statsselect_options div.option.gpfocus,
+	html.responsive div.filterselect_options div.option.gpfocus {
+		background-color: white;
+		color: black;
+	}
+
+	html.responsive .popup_block_new {
+		box-shadow: unset;
+	}
+
+	html.responsive .shadow_ul,
+	html.responsive .shadow_ur,
+	html.responsive .shadow_bl,
+	html.responsive .shadow_br,
+	html.responsive .shadow_top,
+	html.responsive .shadow_left,
+	html.responsive .shadow_right,
+	html.responsive .shadow_bottom {
+		display: none;
+	}
+
 
 
 

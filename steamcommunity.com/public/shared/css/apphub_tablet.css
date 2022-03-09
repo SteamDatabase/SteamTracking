@@ -11,14 +11,11 @@
 	/* APP HUB HEADER */
 	html.responsive .apphub_HomeHeader {
 		margin-bottom: 24px;
-		padding: 24px;
-		padding-bottom: 12px;
+		padding: 24px 24px 12px;
 		background-color: var(--gpBackground-DarkHard);
 	}
 
 	html.responsive .apphub_HomeHeaderContent {
-		/* padding: var(--gpSpace-Gutter); */
-		/* padding-bottom: 0px; */
 		padding: unset;
 		display: flex;
 		flex-direction: column;
@@ -35,14 +32,14 @@
 	html.responsive .apphub_HeaderBottomBG_blur {
 		width: 100%;
 		position: absolute;
-		height: 800px;
+		height: 1000px;
 		backdrop-filter: blur(24px);
 	}
 
 	html.responsive .apphub_HeaderBottomBG {
 		background-size: cover;
 		background-position: center;
-		height: 800px;
+		height: 1000px;
 		position: absolute;
 		-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0) 90%);
 	}
@@ -55,7 +52,7 @@
 		display: inline-flex;
 		gap: 16px;
 		align-items: center;
-		padding-bottom: 8px;
+		padding-bottom: 0px;
 	}
 
 	html.responsive .apphub_AppName {
@@ -78,8 +75,10 @@
 	html.responsive .apphub_SectionFilter {
 		background: none;
 		min-height: unset;
-		margin: 0px var(--gpSpace-Gutter);
-		padding: 24px 0px 0px 0px;
+		margin: 0px;
+		padding: 0px;
+		padding-top: 12px;
+		border-top: 1px solid var(--gpBackground-Neutral-LightSofter);
 	}
 
 	html.responsive .apphub_SectionFilterLabel {
@@ -95,14 +94,24 @@
 		margin-left: auto;
 	}
 
+	/* Dropdowns */
+	html.responsive div.filterselect {
+		width: 160px;
+	}
+
+	html.responsive #filterrating {
+		min-width: 80px;
+		width: 80px;
+	}
+
 	/* Hide (?) on deck */
 	html.responsive .apphub_MostPopularLink {
 		display: none;
 	}
 
 	/* Content */
-	html.responsive .apphub_Content {
-		margin: unset;
+	html.responsive #AppHubContent {
+		margin: 0px 24px;
 		padding: unset;
 	}
 
@@ -117,6 +126,9 @@
 		/* border: 1px solid var(--gpBackground-LightSoft); */
 		margin-top: 4px;
 		font: var(--gpText-BodyLarge);
+		flex-wrap: wrap;
+		column-gap: 12px;
+		row-gap: 8px;
 	}
 
 	html.responsive .apphub_NumInApp {
@@ -147,6 +159,7 @@
 		display: flex;
 		align-items: center;
 		column-gap: 12px;
+		padding: unset;
 	}
 
 	html.responsive .apphub_friend_block_row {
@@ -169,7 +182,7 @@
 		border: unset;
 		background-color: unset;
 		padding: 0px;
-		margin: 16px 0px;
+		margin: 16px 0px 12px;
 		min-height: unset;
 		padding: 12px;
 		background-color: var(--gpBackground-Neutral-LightSofter);
@@ -237,16 +250,15 @@
 		color: unset;
 		font: var(--gpText-BodyMedium);
 		opacity: 0.6;
+		border-top: 1px solid var(--gpBackground-LightSoft);
+		padding-top: 12px;
+		margin-top: 12px;
 	}
 
 
 
 
 	/* FORUMS */
-	html.responsive .apphub_Discussion_Content {
-		margin: 0px 24px;
-	}
-
 	html.responsive .leftcol {
 		max-width: unset;
 		margin: 0px var(--gpSpace-Gutter);
@@ -255,4 +267,64 @@
 	html.responsive .responsive_tab_control {
 		text-align: left;
 	}
+
+
+
+	/* CARDS */
+	html.responsive #AppHubCards {
+
+	}
+
+	html.responsive .apphub_CardRow {
+
+	}
+
+	html.responsive .apphub_CardRow > *:last-child {
+		margin-right: 0px;
+	}
+
+	html.responsive .apphub_Card {
+		margin: unset;
+		/* flex: auto; */
+		background-color: var(--gpStoreDarkestGrey);
+		box-shadow: var(--gpShadow-Medium);
+		border: none;
+		margin-right: 12px;
+		margin-bottom: 12px;
+	}
+
+	html.responsive .apphub_Card.interactable:hover {
+		border: none;
+	}
+
+	html.responsive .apphub_CardContentAuthorBlock {
+		border-top: none;
+	}
+
+	html.responsive .apphub_CardContentDiscussionType {
+		border-top: none;
+	}
+
+	html.responsive .apphub_CardContentPreviewImage {
+		/* height: 100% !important;
+		top: 0px !important; */
+	}
+
+	html.responsive .apphub_CardContentPreviewImageBorder {
+		padding: 8px;
+	}
+
+	html.responsive .apphub_CardContentType {
+		margin: 8px;
+	}
+
+	html.responsive .apphub_CardContentTitle {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .apphub_CardClear {
+		display: none;
+	}
+
 }
