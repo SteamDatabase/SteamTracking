@@ -683,6 +683,7 @@ ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/broadcast
+${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/promo
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
