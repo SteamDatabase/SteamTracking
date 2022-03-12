@@ -419,11 +419,11 @@
       function D(t) {
         return null != t && void 0 !== t.focus;
       }
-      function S(t) {
+      function O(t) {
         let e;
         return t && (e = t.ownerDocument.defaultView), e;
       }
-      function O(t, e) {
+      function S(t, e) {
         let n = t.parentElement;
         for (; n; ) {
           if (!e || "x" == e) {
@@ -1266,7 +1266,7 @@
       }
       class q extends z {
         constructor(t, e, n) {
-          super("ownerDocument" in t ? S(t) : t, n),
+          super("ownerDocument" in t ? O(t) : t, n),
             (this.m_props = {}),
             (this.m_object = t),
             (this.m_propTargets = e);
@@ -1396,8 +1396,8 @@
           a = et(e),
           l = null != o ? o : Number.MAX_VALUE;
         for (; r; ) {
-          let t = O(r);
-          t || (t = S(r));
+          let t = S(r);
+          t || (t = O(r));
           let e = st(r),
             n = rt(t, et(t)),
             c = dt(t),
@@ -1757,6 +1757,12 @@
         }
         get FocusWithinCallbackList() {
           return this.m_FocusWithinCallbackList;
+        }
+        ForceMeasureFocusRing() {
+          var t;
+          null === (t = this.m_FocusRing) ||
+            void 0 === t ||
+            t.OnForceMeasureFocusRing();
         }
         get ActionDescriptionChangedCallbackList() {
           return this.m_ActionDescriptionsChangedCallbackList;
@@ -2657,9 +2663,9 @@
       }
       Object(o.b)([v.a], Dt.prototype, "OnWrappedTreeActivated", null),
         Object(o.b)([v.a], Dt.prototype, "OnWrappedTreeUnhandledButton", null);
-      const St = "VirtualKeyboardMessage";
-      function Ot(t) {
-        return t && t.type === St;
+      const Ot = "VirtualKeyboardMessage";
+      function St(t) {
+        return t && t.type === Ot;
       }
       class It {
         constructor() {
@@ -2672,13 +2678,13 @@
           this.SendMessage({ message: "HideVirtualKeyboard", msDelay: t });
         }
         OnBrowserViewMessage(t, e) {
-          t == St && this.InternalDispatchMessage(JSON.parse(e));
+          t == Ot && this.InternalDispatchMessage(JSON.parse(e));
         }
         OnMessage(t) {
           this.InternalDispatchMessage(t.data);
         }
         InternalDispatchMessage(t) {
-          Ot(t) && t.message;
+          St(t) && t.message;
         }
         SendMessage(t) {
           const e = Object.assign({ type: "VirtualKeyboardMessage" }, t);
@@ -2703,9 +2709,9 @@
             (this.m_refKeyboard = e), t.on("message", this.OnMessage);
           }
           OnMessage(t, e, n) {
-            if (t == St) {
+            if (t == Ot) {
               const t = JSON.parse(e);
-              if (Ot(t))
+              if (St(t))
                 switch (t.message) {
                   case "ShowVirtualKeyboard":
                     this.m_refKeyboard.ShowVirtualKeyboard();
@@ -2737,12 +2743,13 @@
         });
         let i = null,
           o = null,
-          s = 0,
+          s = null,
           a = 0,
           l = 0,
-          c = 0;
+          c = 0,
+          u = 0;
         t.prepend(n);
-        const u = (t) => {
+        const h = (t) => {
             const e = t.GetBoundingRect(),
               i = n[0].getBoundingClientRect();
             return {
@@ -2752,46 +2759,40 @@
               width: e.width,
             };
           },
-          h = (t) => {
-            (s = t.left),
-              (a = t.top),
-              (l = t.height),
-              (c = t.width),
-              i.css({ left: s, top: a, height: l, width: c });
-          },
           d = (t) => {
+            (a = t.left),
+              (l = t.top),
+              (c = t.height),
+              (u = t.width),
+              i.css({ left: a, top: l, height: c, width: u });
+          },
+          m = (t) => {
+            if (t && t.BWantsFocusRing() && i) {
+              let e = h(t);
+              (e.left == a && e.top == l && e.height == c && e.width == u) ||
+                d(e);
+            }
+          },
+          g = (t) => {
             if (
-              (i && (i.remove(), (i = null)),
-              o && (window.clearInterval(o), (o = null)),
+              ((o = t),
+              i && (i.remove(), (i = null)),
+              s && (window.clearInterval(s), (s = null)),
               t && t.BWantsFocusRing())
             ) {
               i = r()("<div/>", {
                 style: "position: absolute; pointer-events: none; ",
                 class: yt.a.FocusRing,
               });
-              let e = u(t);
-              h(e),
-                n.append(i),
-                (o = window.setInterval(
-                  () =>
-                    ((t) => {
-                      if (t && t.BWantsFocusRing() && i) {
-                        let e = u(t);
-                        (e.left == s &&
-                          e.top == a &&
-                          e.height == l &&
-                          e.width == c) ||
-                          h(e);
-                      }
-                    })(t),
-                  200
-                ));
+              let e = h(t);
+              d(e), n.append(i), (s = window.setInterval(() => m(t), 200));
             }
           };
         return {
-          OnBlur: () => d(null),
-          OnFocus: (t, e) => d(e),
-          OnFocusChange: (t, e, n) => d(n),
+          OnBlur: () => g(null),
+          OnFocus: (t, e) => g(e),
+          OnFocusChange: (t, e, n) => g(n),
+          OnForceMeasureFocusRing: () => m(o),
         };
       }
       function Pt(t) {
@@ -2825,7 +2826,7 @@
         this.click(), t.stopPropagation();
       }
       function Ut(t) {
-        r()(this).find("a")[0].click();
+        r()(this).find('a, input[type="checkbox"]')[0].click();
       }
       function xt(t) {
         const e = t.currentTarget;
@@ -3079,8 +3080,8 @@
             enableVirtualKeyboard: w,
             preferredChild: T,
             onOKActionDescription: D,
-            onCancelActionDescription: S,
-            onSecondaryActionDescription: O,
+            onCancelActionDescription: O,
+            onSecondaryActionDescription: S,
             onOptionsActionDescription: I,
             onMenuActionDescription: E,
             actionDescriptionMap: y,
@@ -3176,7 +3177,7 @@
               })(v[0], Y)
             ),
           X &&
-            O &&
+            S &&
             ee(
               v[0],
               (function (t, e) {
@@ -3263,8 +3264,8 @@
             "static" == v.css("position") && v.css("position", "relative"));
         const tt = m({
             onOKActionDescription: D,
-            onCancelActionDescription: S,
-            onSecondaryActionDescription: O,
+            onCancelActionDescription: O,
+            onSecondaryActionDescription: S,
             onOptionsActionDescription: I,
             onMenuActionDescription: E,
             actionDescriptionMap: y,

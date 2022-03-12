@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [73],
+  [44],
   {
     "6xb8": function (e, a) {
       e.exports =
@@ -129,7 +129,7 @@
             });
           });
           return c.a.createElement(
-            n.e,
+            n.f,
             {
               className: I.PageItemsContainer,
               itemClassName: I.PageItemsContainerChildren,
@@ -175,7 +175,7 @@
             })
           );
           return c.a.createElement(
-            n.e,
+            n.f,
             {
               className: I.PageItemsContainer,
               itemClassName: I.PageItemsContainerChildren,
@@ -203,7 +203,7 @@
             r.e,
             null,
             c.a.createElement(
-              n.e,
+              n.f,
               {
                 className: I.PageItemsContainer,
                 itemClassName: I.PageItemsContainerChildren,

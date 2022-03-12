@@ -960,6 +960,18 @@ body.modals_BodyNoScrollDialog_105OB {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1500;
 }
+.modals_GamepadOnlyModalWrapper_1lmXy {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.modals_GamepadOnlyModalWrapper_1lmXy .modals_GamepadOnlyPanelWrapper_3CnZr {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
 .app_Error_2yM3d {
   color: red;
 }
@@ -1747,14 +1759,16 @@ button.DialogButton.GreenPlay {
   background-position: 25%;
   background-size: 330% 100%;
 }
-button.DialogButton.GreenPlay:hover {
+button.DialogButton.GreenPlay:hover,
+button.DialogButton.GreenPlay.gpfocus {
   background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 0%;
   background-size: 330% 100%;
   color: #fff;
 }
 button.DialogButton.GreenPlay:active,
-button.DialogButton.GreenPlay:active:hover {
+button.DialogButton.GreenPlay:active:hover,
+button.DialogButton.GreenPlay:active.gpfocus {
   background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 40%;
   transition-duration: 0.04s;
@@ -1763,24 +1777,28 @@ button.DialogButton.Secondary.Off {
   box-shadow: inset 1px 1px 4px #0003;
 }
 button.DialogButton:enabled:active,
-button.DialogButton:enabled:active:hover {
+button.DialogButton:enabled:active:hover,
+button.DialogButton:enabled:active.gpfocus {
   background: #393f49;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
   transition-duration: 0.04s;
 }
-button.DialogButton.Primary:hover {
+button.DialogButton.Primary:hover,
+button.DialogButton.Primary.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 0%;
   background-size: 330% 100%;
   color: #fff;
 }
 button.DialogButton.Primary:enabled:active,
-button.DialogButton.Primary:enabled:hover:active {
+button.DialogButton.Primary:enabled:hover:active,
+button.DialogButton.Primary:enabled:active.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 40%;
   transition-duration: 0.04s;
 }
-button.DialogButton:hover {
+button.DialogButton:hover,
+button.DialogButton.gpfocus {
   background: #464d58;
   color: #fff;
 }
@@ -1811,10 +1829,12 @@ button.TextButton .SVGIcon_Button {
   transition: all 0.2s ease-in-out;
   margin-right: 2px;
 }
-button.TextButton:hover {
+button.TextButton:hover,
+button.TextButton.gpfocus {
   color: #fff;
 }
-button.TextButton:focus {
+button.TextButton:focus,
+button.TextButton.gpfocus {
   outline: none;
 }
 .DialogButton .SVGIcon_Button {

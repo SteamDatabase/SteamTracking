@@ -22,6 +22,27 @@ function ReportCheckoutJSError( message, e )
 			}
 }
 
+if ( typeof SteamClient != 'undefined' && SteamClient.BrowserView && SteamClient.BrowserView.RegisterForMessageFromParent )
+{
+    SteamClient.BrowserView.RegisterForMessageFromParent( OnMessageFromGamepadUI );
+}
+
+function OnMessageFromGamepadUI( message, arguments )
+{
+    if ( message == 'Checkout' )
+    {
+        var checkoutMessage = JSON.parse( arguments );
+        if ( checkoutMessage.action == 'paypal_success' )
+        {
+            try { OnPayPalSuccess( checkoutMessage.transid ); } catch (e) {}
+        }
+        else if ( checkoutMessage.action == 'paypal_cancel' )
+        {
+            try { OnPayPalCancel( checkoutMessage.transid ); } catch (e) {}
+        }
+    }
+}
+
 function OnLoadCheckoutForm()
 {
 	UpdateStateSelectState();
@@ -1104,6 +1125,9 @@ function OnInitializeTransactionFailure( detail, result )
 
 				case 96:
 					error_text = 'You may not update your Steam account\'s country more than once every 3 months. Please complete this purchase using a payment method from your current region.';
+					break;
+				case 97:
+					error_text = 'Commercial purchases from your region require a VAT ID. Please login to the Steamworks partner site and update your Company Information to include your VAT ID.';
 					break;
 				default:
 					break;

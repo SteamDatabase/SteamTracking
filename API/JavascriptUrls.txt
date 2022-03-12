@@ -755,7 +755,6 @@ ${STATS_BASE_URL}sales/details/?gid=${}&clanid=${}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxrecentsaleevents" : "saleaction/ajaxrecenttaggedsaleevents"}
-${STORE_BASE_URL}${_ ? _ : ""}
 ${STORE_BASE_URL}${image_url}
 ${STORE_BASE_URL}${logged_in ? "reservation/ajaxgetuserstate" : "reservation/ajaxgetdefaultstate"}
 ${STORE_BASE_URL}${m_strStoreURLPath}
@@ -801,10 +800,10 @@ ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${id}
+${STORE_BASE_URL}app/${id}/#app_reviews_hash
 ${STORE_BASE_URL}app/${m_strAppId}
 ${STORE_BASE_URL}app/${}
 ${STORE_BASE_URL}app/${}/
-${STORE_BASE_URL}app/${}/?beta=0
 ${STORE_BASE_URL}app/${}/?beta=1
 ${STORE_BASE_URL}app/${}/?curator_clanid=${}
 ${STORE_BASE_URL}broadcast/ajaxcheckbroadcast

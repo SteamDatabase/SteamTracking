@@ -1,8 +1,25 @@
+:root {
+  --basicui-header-height: 0px;
+}
+.BasicUI .DialogContent_InnerWidth {
+  overflow: visible;
+}
+.BasicUI .DialogContent_InnerWidth > div {
+  overflow: visible;
+}
 .awardmodal_GrantAwardModal_2ilpH {
   font-size: 14px;
   font-family: "Motiva Sans", Sans-serif;
   color: #e4e4e4;
   background-color: #1d3f5f;
+}
+@media screen and (max-width: 910px) {
+  .awardmodal_GrantAwardModal_2ilpH {
+    padding: 16px 12px !important;
+  }
+}
+.BasicUI .awardmodal_GrantAwardModal_2ilpH {
+  padding: 24px !important;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_Header_2_vbZ
@@ -10,6 +27,14 @@
   font-size: 30px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_Header_2_vbZ
+  .awardmodal_Title_2yJ4j {
+  font: var(--gpText-HeadingLarge);
+  letter-spacing: unset;
+  text-transform: unset;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_Header_2_vbZ
@@ -21,31 +46,97 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-height: 485px;
-  overflow-y: auto;
 }
 @media screen and (max-width: 910px) {
   .awardmodal_GrantAwardModal_2ilpH .awardmodal_ButtonContainer_JYQgs {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 16px 0px;
   }
+}
+.BasicUI .awardmodal_GrantAwardModal_2ilpH .awardmodal_ButtonContainer_JYQgs {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: 0px -24px;
+  padding: 24px;
+  scroll-padding: 0px 24px;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_ButtonContainer_JYQgs
   .awardmodal_Button_3M92h {
   padding: 8px;
-  border-radius: 4px;
-  border: 2px solid transparent;
+  border-radius: 2px;
+  border: 3px solid transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  transition: background-color 0.2s ease, border-radius 0.2s ease;
+}
+@media screen and (max-width: 910px) {
+  .awardmodal_GrantAwardModal_2ilpH
+    .awardmodal_ButtonContainer_JYQgs
+    .awardmodal_Button_3M92h {
+    border: 2px solid transparent;
+    padding: 4px 12px;
+    flex-direction: row;
+    column-gap: 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h {
+  padding: 8px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding-bottom: 16px;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_ButtonContainer_JYQgs
   .awardmodal_Button_3M92h:hover,
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_ButtonContainer_JYQgs
-  .awardmodal_Button_3M92h.awardmodal_Selected_Efo_8 {
+  .awardmodal_Button_3M92h.awardmodal_Selected_Efo_8,
+.awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h.gpfocus {
   background-color: rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 910px) {
+  .awardmodal_GrantAwardModal_2ilpH
+    .awardmodal_ButtonContainer_JYQgs
+    .awardmodal_Button_3M92h:hover,
+  .awardmodal_GrantAwardModal_2ilpH
+    .awardmodal_ButtonContainer_JYQgs
+    .awardmodal_Button_3M92h.awardmodal_Selected_Efo_8,
+  .awardmodal_GrantAwardModal_2ilpH
+    .awardmodal_ButtonContainer_JYQgs
+    .awardmodal_Button_3M92h.gpfocus {
+    background-color: rgba(255, 255, 255, 0.16);
+  }
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h:hover,
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h.awardmodal_Selected_Efo_8,
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h.gpfocus {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h.gpfocus {
+  border-radius: 0px;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_ButtonContainer_JYQgs
@@ -60,8 +151,59 @@
   .awardmodal_Button_3M92h.awardmodal_Disabled_3k_Tn {
   background-color: unset;
   cursor: unset;
+  border-color: rgba(255, 255, 255, 0.08);
 }
 .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h
+  .awardmodal_LabelCtn_3jka4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 910px) {
+  .awardmodal_GrantAwardModal_2ilpH
+    .awardmodal_ButtonContainer_JYQgs
+    .awardmodal_Button_3M92h
+    .awardmodal_LabelCtn_3jka4 {
+    align-items: flex-start;
+    row-gap: 4px;
+  }
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h
+  .awardmodal_LabelCtn_3jka4 {
+  align-items: center;
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h
+  .awardmodal_IconCtn_1fdGE {
+  margin: 16px;
+}
+.awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h
+  .awardmodal_IconCtn_1fdGE
+  img {
+  width: 80px;
+  height: 80px;
+}
+@media screen and (max-width: 910px) {
+  .awardmodal_GrantAwardModal_2ilpH
+    .awardmodal_ButtonContainer_JYQgs
+    .awardmodal_Button_3M92h
+    .awardmodal_IconCtn_1fdGE
+    img {
+    width: 48px;
+    height: 48px;
+  }
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_ButtonContainer_JYQgs
   .awardmodal_Button_3M92h
   .awardmodal_IconCtn_1fdGE
@@ -76,6 +218,13 @@
   color: #66c0f4;
   letter-spacing: 0.05em;
 }
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h
+  .awardmodal_Label_2iEkq {
+  letter-spacing: unset;
+}
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_ButtonContainer_JYQgs
   .awardmodal_Button_3M92h
@@ -83,6 +232,14 @@
   font-weight: 500;
   font-size: 12px;
   letter-spacing: 0.1em;
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs
+  .awardmodal_Button_3M92h
+  .awardmodal_Points_3k_jx {
+  margin-top: auto;
+  padding-top: 8px;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_ButtonContainer_JYQgs
@@ -103,10 +260,27 @@
   .awardmodal_ButtonContainer_JYQgs
   .awardmodal_Button_3M92h
   .awardmodal_IconCheckMark_38WUB {
-  left: 0px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
   width: 16px;
   height: 16px;
   color: #5b7e0f;
+}
+@media screen and (max-width: 910px) {
+  .awardmodal_GrantAwardModal_2ilpH
+    .awardmodal_ButtonContainer_JYQgs
+    .awardmodal_Button_3M92h
+    .awardmodal_IconCheckMark_38WUB {
+    left: unset;
+    right: 8px;
+  }
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_ButtonContainer_JYQgs::after {
+  content: " ";
+  min-width: 24px;
 }
 .awardmodal_GrantAwardModal_2ilpH .awardmodal_Footer_164mm {
   display: flex;
@@ -118,6 +292,9 @@
   .awardmodal_GrantAwardModal_2ilpH .awardmodal_Footer_164mm {
     display: block;
   }
+}
+.BasicUI .awardmodal_GrantAwardModal_2ilpH .awardmodal_Footer_164mm {
+  display: flex;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_Footer_164mm
@@ -132,7 +309,7 @@
   .awardmodal_BalanceIcon_3VvvB {
   width: 32px;
   height: 32px;
-  padding-right: 4px;
+  padding-right: 8px;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_Footer_164mm
@@ -175,6 +352,14 @@
     align-items: center;
   }
 }
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_Footer_164mm
+  .awardmodal_Right_1hgRC {
+  flex-direction: row-reverse;
+  column-gap: 8px;
+  padding-top: unset;
+}
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_Footer_164mm
   .awardmodal_Right_1hgRC
@@ -182,6 +367,24 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+@media screen and (max-width: 910px) {
+  .awardmodal_GrantAwardModal_2ilpH
+    .awardmodal_Footer_164mm
+    .awardmodal_Right_1hgRC
+    .awardmodal_Actions_1-AT2 {
+    width: -webkit-fill-available;
+    gap: 4px;
+    flex-direction: column-reverse;
+  }
+}
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_Footer_164mm
+  .awardmodal_Right_1hgRC
+  .awardmodal_Actions_1-AT2 {
+  flex-direction: row;
+  gap: 8px;
 }
 .awardmodal_GrantAwardModal_2ilpH
   .awardmodal_Footer_164mm
@@ -198,6 +401,9 @@
     .awardmodal_Actions_1-AT2
     .awardmodal_Action_1Beae {
     min-width: 100px;
+    flex: auto;
+    padding-left: unset;
+    width: -webkit-fill-available;
   }
 }
 .awardmodal_GrantAwardModal_2ilpH
@@ -207,33 +413,64 @@
   font-size: 12px;
   color: #189ad3;
 }
+.BasicUI
+  .awardmodal_GrantAwardModal_2ilpH
+  .awardmodal_Footer_164mm
+  .awardmodal_FooterLink_KId8d {
+  padding-top: unset;
+  white-space: nowrap;
+}
 .awardmodal_Divider_105py {
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: rgba(255, 255, 255, 0.1);
-  margin: 20px 0;
+  margin: 12px 0;
+}
+.BasicUI .awardmodal_Divider_105py {
+  display: none;
+}
+@media screen and (max-width: 910px) {
+  .awardmodal_Divider_105py {
+    display: none;
+  }
 }
 .awardmodal_ConfirmContainer_3rAoe {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  column-gap: 24px;
   padding: 10px;
   position: relative;
   transition: opacity 0.2s ease-out;
   opacity: 0;
 }
+@media screen and (max-width: 910px) {
+  .awardmodal_ConfirmContainer_3rAoe {
+    flex-direction: column;
+    margin-bottom: 12px;
+    padding: 0px 0px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+.BasicUI .awardmodal_ConfirmContainer_3rAoe {
+  flex-direction: row;
+}
 .awardmodal_ConfirmContainer_3rAoe .awardmodal_ConfirmAwardImage_1ARgx {
-  height: 220px;
+  height: 200px;
 }
 @media screen and (max-width: 910px) {
   .awardmodal_ConfirmContainer_3rAoe .awardmodal_ConfirmAwardImage_1ARgx {
     height: 200px;
   }
 }
+.awardmodal_ConfirmContainer_3rAoe .awardmodal_ConfirmTextCtn_j0Jt4 {
+  display: flex;
+  flex-direction: column;
+}
 .awardmodal_ConfirmContainer_3rAoe .awardmodal_ConfirmText_1uA9Q {
-  padding-top: 26px;
+  padding-top: 12px;
   max-width: 360px;
-  text-align: center;
+  text-align: left;
 }
 .awardmodal_ConfirmContainer_3rAoe
   .awardmodal_ConfirmText_1uA9Q
@@ -271,8 +508,8 @@
 }
 .awardmodal_LoadingContainer_1hKG3 .awardmodal_SuccessText_1kQzN,
 .awardmodal_SuccessContainer_Uz_0u .awardmodal_SuccessText_1kQzN {
-  font-size: 16;
-  padding-top: 24px;
+  font-size: 16px;
+  padding-top: 8px;
 }
 .awardmodal_InitialLoading_1ZKr7 {
   position: relative;
@@ -298,7 +535,7 @@
 .awardmodal_PointsAmount_1WCEA .awardmodal_PointsAmountIcon_3-jpV {
   width: 16px;
   height: 16px;
-  padding-right: 2px;
+  padding-right: 6px;
   margin-top: -2px;
   vertical-align: middle;
 }

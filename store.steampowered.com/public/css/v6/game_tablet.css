@@ -2709,10 +2709,6 @@
 		background: none;
 	}
 
-	html.responsive .review_box .review_award_ctn {
-		margin-top: 12px;
-	}
-
 	html.responsive .review_box.short .shortcol {
 		padding-left: unset;
 	}
@@ -2810,6 +2806,20 @@
 
 	html.responsive .review_box .review_content_summary:focus-within .review_control_ctn {
 		display: block;
+	}
+
+	html.responsive .review_award_ctn {
+		display: flex;
+		column-gap: 8px;
+		flex-wrap: wrap;
+	}
+
+	html.responsive .review_box .review_award_ctn {
+		margin-top: 12px;
+	}
+
+	html.responsive .review_award_ctn .review_award {
+		margin: unset;
 	}
 
 
@@ -3004,11 +3014,15 @@
 		display: block;
 		margin-right: unset;
 		background: var(--gpBackground-LightSofter);
-		min-height: 68px;
+		min-height: 76px;
 		box-shadow: none;
 		transition: all 0.1s ease;
 		margin-bottom: 4px;
 		width: 100%;
+	}
+
+	html.responsive .tablet_list_item .tab_item_cap {
+		box-shadow: var(--gpShadow-Medium);
 	}
 
 	html.responsive .tab_item .ds_steam_deck_compat {
@@ -3029,7 +3043,8 @@
 		display: none;
 	}
 
-	html.responsive  .tablet_list_item:hover {
+	html.responsive .tablet_list_item:hover,
+	html.responsive .tablet_list_item:focus-within {
 		background: var(--gpBackground-LightMedium);
 	}
 
