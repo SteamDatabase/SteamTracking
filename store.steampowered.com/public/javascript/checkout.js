@@ -22,27 +22,6 @@ function ReportCheckoutJSError( message, e )
 			}
 }
 
-if ( typeof SteamClient != 'undefined' && SteamClient.BrowserView && SteamClient.BrowserView.RegisterForMessageFromParent )
-{
-    SteamClient.BrowserView.RegisterForMessageFromParent( OnMessageFromGamepadUI );
-}
-
-function OnMessageFromGamepadUI( message, arguments )
-{
-    if ( message == 'Checkout' )
-    {
-        var checkoutMessage = JSON.parse( arguments );
-        if ( checkoutMessage.action == 'paypal_success' )
-        {
-            try { OnPayPalSuccess( checkoutMessage.transid ); } catch (e) {}
-        }
-        else if ( checkoutMessage.action == 'paypal_cancel' )
-        {
-            try { OnPayPalCancel( checkoutMessage.transid ); } catch (e) {}
-        }
-    }
-}
-
 function OnLoadCheckoutForm()
 {
 	UpdateStateSelectState();

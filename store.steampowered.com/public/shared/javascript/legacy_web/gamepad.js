@@ -444,8 +444,8 @@
           i = "x" === e ? n.overflowX : n.overflowY;
         return "auto" === i || "scroll" === i;
       }
-      const E = new F("FocusNavigation").Debug,
-        y = new F("GamepadEvents").Debug;
+      const y = new F("FocusNavigation").Debug,
+        E = new F("GamepadEvents").Debug;
       class L {
         constructor(t, e) {
           (this.m_onActivateCallbacks = new _.a()),
@@ -555,7 +555,7 @@
             );
           })(t);
           return (
-            y(
+            E(
               `Logical gamepad Event fired: ${
                 a.a[t.detail.button]
               }, had logical event: ${n}, was handled: ${!e}`
@@ -578,7 +578,7 @@
             (this.m_bWasActiveForLastFocusChange || !this.BIsActive())
           )
             return;
-          E(
+          y(
             `Transfer focus in ${this.id}, source: ${i[t]}, from/to:`,
             null == o ? void 0 : o.m_element,
             null == e ? void 0 : e.m_element
@@ -2537,6 +2537,16 @@
           if (t == Ct) {
             const t = JSON.parse(e);
             this.m_fnCallback(t);
+          } else if ("Checkout" == t) {
+            var n = JSON.parse(e);
+            if ("paypal_success" == n.action)
+              try {
+                window.OnPayPalSuccess(n.transid);
+              } catch (t) {}
+            else if ("paypal_cancel" == n.action)
+              try {
+                window.OnPayPalCancel(n.transid);
+              } catch (t) {}
           }
         }
       }
@@ -2725,8 +2735,8 @@
         "OnMessage",
         null
       );
-      var Et = n("8+ko"),
-        yt = n.n(Et);
+      var yt = n("8+ko"),
+        Et = n.n(yt);
       function Lt(t) {
         let e = 0;
         t.children().each(function () {
@@ -2782,7 +2792,7 @@
             ) {
               i = r()("<div/>", {
                 style: "position: absolute; pointer-events: none; ",
-                class: yt.a.FocusRing,
+                class: Et.a.FocusRing,
               });
               let e = h(t);
               d(e), n.append(i), (s = window.setInterval(() => m(t), 200));
@@ -3083,8 +3093,8 @@
             onCancelActionDescription: O,
             onSecondaryActionDescription: S,
             onOptionsActionDescription: I,
-            onMenuActionDescription: E,
-            actionDescriptionMap: y,
+            onMenuActionDescription: y,
+            actionDescriptionMap: E,
             onOKButton: L,
             onCancelButton: P,
             onSecondaryButton: M,
@@ -3193,7 +3203,7 @@
               })(v[0], z)
             ),
           J &&
-            E &&
+            y &&
             ee(
               v[0],
               (function (t, e) {
@@ -3267,8 +3277,8 @@
             onCancelActionDescription: O,
             onSecondaryActionDescription: S,
             onOptionsActionDescription: I,
-            onMenuActionDescription: E,
-            actionDescriptionMap: y,
+            onMenuActionDescription: y,
+            actionDescriptionMap: E,
           }),
           et = Object.assign(
             Object.assign({ fnCanTakeFocus: re, actionDescriptionMap: tt }, Q),
