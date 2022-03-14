@@ -61093,6 +61093,7 @@
       function _(e, t, r) {
         return Object(a.a)(this, void 0, void 0, function* () {
           if (!e || 0 == e.length) return [];
+          yield b(e, r);
           const a = e.filter((e) => Object(n.c)(e.type)).map((e) => e.id),
             i = e.filter((e) => "sub" === e.type).map((e) => e.id),
             s = e.filter((e) => "bundle" === e.type).map((e) => e.id);
