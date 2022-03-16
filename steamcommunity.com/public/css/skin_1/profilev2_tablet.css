@@ -87,9 +87,9 @@
 	/* HEADER */
 	html.responsive .profile_header_content {
 		padding-right: unset;
-		padding: 24px 0px;
+		padding: 24px 0px 0px;
 		width: 100%;
-		min-height: 160px;
+		min-height: 190px;
 	}
 
 	html.responsive .profile_summary_footer {
@@ -151,12 +151,21 @@
 		color: black;
 	}
 
+	html.responsive .header_real_name_spacer {
+		height: 28px;
+	}
+
 	html.responsive .profile_header .profile_summary {
 		height: unset;
-		display: -webkit-box;
-		-webkit-line-clamp: 5;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
+		/* display: -webkit-box; */
+		/* -webkit-line-clamp: 5; */
+		/* -webkit-box-orient: vertical; */
+		overflow: scroll;
+		max-height: 140px;
+		margin: unset;
+		padding: 8px 0px;
+		-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 1.0) 8px, rgba(0, 0, 0, 1.0) calc(100% - 8px), rgba(0, 0, 0, 0) 100%);
+		scroll-padding: 16px 0px;
 	}
 
 	/* TODO: Re-enable after solving the header panel direction */
