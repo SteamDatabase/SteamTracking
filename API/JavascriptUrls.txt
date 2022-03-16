@@ -899,6 +899,7 @@ ${STORE_BASE_URL}mobile?show=steamapp
 ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
+${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}newshub/${appid ? _ : _}/view/${GID}
 ${STORE_BASE_URL}newshub/group/${clanAccountID}
 ${STORE_BASE_URL}newshub/group/${}/view
@@ -2086,7 +2087,6 @@ https://www.valvesoftware.com/en/about
 https://www.wanmei.com/
 https://www.youtube.com/
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
-https://www.youtube.com/embed/${previewyoutube}
 https://www.youtube.com/embed/${}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}${bAutoPlay ? "&autoplay=1" : ""}${nStartSeconds ? _ : ""}
