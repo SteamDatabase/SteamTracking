@@ -882,7 +882,7 @@
                 .filter(Boolean);
               A.a
                 .Get()
-                .HintLoadStoreApps(e, { include_assets: !0 })
+                .QueueMultipleAppRequests(e, { include_assets: !0 })
                 .then(() => {
                   if (n.current) {
                     let e = 0;

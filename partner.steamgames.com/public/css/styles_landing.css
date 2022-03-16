@@ -347,6 +347,16 @@ span.motd {
         padding-top: 15px;
         margin: 0px;
     }
+    .two_column_page .left .ctn {
+        margin-bottom: 30px;
+        background-color: #2C2E35;
+        padding: 16px;
+
+    }
+    .two_column_page .left .ctn p {
+        color: #dfe3e6;
+        font-size: 14px;
+    }
     .two_column_page .right {
         width: 100%;
         max-width: 430px;
@@ -358,6 +368,27 @@ span.motd {
         font-size: 14px;
         font-weight: 300;
     }
+
+.pub_users_filter_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.pub_users_filter_row .filterText {
+    max-width: 50%;
+}
+
+.pub_users_filter_row label {
+    width: 100%;
+    text-align: right;
+    padding-right: 8px;
+}
+.pub_users_key_ctn {
+    margin-top: 20px;
+    margin-left: 6px;
+}
 
 .landingLeftCol {
 	margin-right: 320px;
@@ -1554,10 +1585,6 @@ a.btn_download:hover {
 	margin-top: 10px;
 	list-style-type: disc;
 	
-}
-
-.invite_user_ctn {
-    float: right;
 }
 
 #addPartnerOptions

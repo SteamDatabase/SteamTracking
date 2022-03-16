@@ -9,16 +9,25 @@
 	text-align: left;
 }
 
-.apphub_Guides .subtitle
-{
-	font-size: 14px;
-	color: #c6d4df;
-	padding-top: 16px;
-	padding-left: 16px;
-	padding-bottom: 16px;
+.apphub_Guides .subtitle_ctn {
 	background: rgba( 0, 0, 0, 0.4 );
+	padding: 16px;
+	display: flex;
+	align-items: top;
+	gap: 24px;
 	margin-top: -10px;
 	margin-bottom: 8px;
+}
+
+.apphub_Guides .subtitle {
+	font-size: 14px;
+	color: #c6d4df;
+}
+
+.apphub_Guides #create_guide_btn {
+	margin-left: auto;
+	white-space: nowrap;
+	height: fit-content;
 }
 
 .apphub_Guides .subtitle a

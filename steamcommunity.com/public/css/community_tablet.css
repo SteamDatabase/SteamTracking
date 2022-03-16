@@ -16,6 +16,7 @@
 
 
 
+
 	/* PAGE */
 	html.responsive .responsive_page_content {
 		min-height: 100vh;
@@ -27,6 +28,8 @@
 		max-width: 820px;
 		margin: auto;
 	}
+
+
 
 
 
@@ -43,6 +46,7 @@
 		background: none;
 		height: unset;
 		margin: unset;
+		background-color: var(--gpBackground-DarkMedium);
 	}
 
 	html.responsive .profile_small_header_text {
@@ -52,7 +56,60 @@
 
 	html.responsive .profile_small_header_texture {
 		background: none;
+		height: unset;
+		display: flex;
+		flex-direction: row;
+		padding: 24px;
+		gap: 16px;
+		align-items: center;
 	}
+
+	html.responsive .profile_small_header_text {
+		position: unset;
+		padding: unset;
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+		column-gap: 6px;
+	}
+
+	html.responsive .profile_small_header_avatar {
+		position: unset;
+		left: unset;
+	}
+
+	html.responsive .profile_small_header_avatar .playerAvatar.medium {
+		width: 44px;
+		height: 44px;
+	}
+
+	html.responsive .profile_small_header_avatar .playerAvatar.medium img {
+		width: 42px;
+		height: 42px;
+	}
+
+	html.responsive .profile_small_header_additional {
+		position: unset;
+		margin: -16px 0px -16px auto;
+	}
+
+	html.responsive .profile_small_header_additional .gameLogo {
+		padding: unset;
+		box-shadow: var(--gpShadow-Medium);
+		margin: unset;
+	}
+
+	html.responsive .profile_small_header_arrow {
+		/* display: none; */
+	}
+
+	html.responsive .profile_small_header_location {
+		/* font: var(--gpText-HeadingLarge); */
+		/* color: var(--gpBackground-LightHarder); */
+		/* letter-spacing: -0.5px; */
+	}
+
+
 
 
 
@@ -61,10 +118,18 @@
 	/* MAIN CONTAINER */
 	html.responsive body.migrated_profile_page #BG_bottom.maincontent,
 	html.responsive .maincontent {
-		margin: 0px;
+		margin: 0px 24px;
 		padding: 0px;
 		padding-bottom: 24px;
 		background: none;
+	}
+
+	html.responsive .pagecontent {
+		/* margin: 0px 24px; */
+	}
+
+	html.responsive #mainContents {
+		/* margin: 0px 24px; */
 	}
 
 
@@ -82,7 +147,7 @@
 		margin: unset;
 		font-size: unset;
 		margin: 0px -24px;
-		padding: 12px 24px;
+		padding: 24px;
 		scroll-padding: 0px 96px;
 		overflow-x: scroll;
 		width: 100vw;
@@ -91,6 +156,12 @@
 
 	html.responsive .sectionTabs {
 		background: var(--gpBackground-DarkMedium);
+		/* padding-bottom: 24px; */
+		padding-top: 0px;
+	}
+
+	html.responsive .apphub_sectionTabs {
+		padding-top: 20px;
 	}
 
 	html.responsive .sectionTabs:after,
@@ -118,6 +189,10 @@
 		transition: all 0.2s ease;
 	}
 
+	html.responsive a.sectionTab span {
+		white-space: nowrap;
+	}
+
 	html.responsive .apphub_sectionTab {
 		background-color: var(--gpBackground-Neutral-LightSofter);
 	}
@@ -138,10 +213,6 @@
 		background: unset;
 	}
 
-	html.responsive .apphub_sectionTab.active:hover {
-		padding: 10px 16px;
-	}
-
 	/* Active */
 	html.responsive .sectionTab.active {
 		background: unset;
@@ -151,6 +222,12 @@
 
 	html.responsive .apphub_sectionTab.active {
 		background-color: var(--gpBackground-Neutral-LightHard);
+	}
+
+	html.responsive .apphub_sectionTab.active:hover {
+		padding: 10px 16px;
+		background: unset;
+		background-color: var(--gpBackground-Neutral-LightHarder);
 	}
 
 	/* Focus */
@@ -197,13 +274,25 @@
 	}
 
 	html.responsive .pagebtn,
-	html.responsive a.pagebtn {
+	html.responsive a.pagebtn,
+	html.responsive a.pagelink {
+		font: var(--gpText-BodyMedium) !important;
 		padding: 6px 16px;
 		color: white;
 		background-color: #FFFFFF20;
 		border-radius: var(--gpCorner-Medium);
 		transition: all 0.2s ease;
 		font-weight: 700;
+		display: inline-block;
+	}
+
+	html.responsive .pagination_space {
+		display: none;
+	}
+
+	html.responsive a.pagelink {
+		padding: 6px 12px;
+		font-weight: 400;
 	}
 
 	html.responsive .pagebtn:hover,
@@ -267,6 +356,51 @@
 	html.responsive .adult_content_age_gate_warning_check #ViewAllForApp {
 		margin: unset;
 	}
+
+
+
+
+	/* CARDS */
+	html.responsive .apphub_Card {
+		margin: unset;
+		background-color: var(--gpStoreDarkestGrey);
+		box-shadow: var(--gpShadow-Medium);
+		border: none;
+		flex: auto;
+		margin-right: 6px;
+		margin-left: 6px;
+		margin-bottom: 12px;
+	}
+
+	html.responsive .apphub_Card.interactable:hover {
+		border: none;
+	}
+
+	html.responsive .apphub_CardContentAuthorBlock {
+		border-top: none;
+	}
+
+	html.responsive .apphub_CardContentDiscussionType {
+		border-top: none;
+	}
+
+	html.responsive .apphub_CardContentPreviewImageBorder {
+		padding: 8px;
+	}
+
+	html.responsive .apphub_CardContentType {
+		margin: 8px;
+	}
+
+	html.responsive .apphub_CardContentTitle {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .apphub_CardClear {
+		display: none;
+	}
+
 
 
 

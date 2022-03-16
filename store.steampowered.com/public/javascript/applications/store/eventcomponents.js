@@ -103,8 +103,8 @@
         E = n("EC67"),
         h = n("Cs6D"),
         _ = n("kyHq"),
-        g = n("3+zv"),
-        b = n("kLLr"),
+        b = n("3+zv"),
+        g = n("kLLr"),
         S = n("U+Q5"),
         f = n("TQGK"),
         A = n("N0Ye");
@@ -489,7 +489,7 @@
         x = n("zrk3");
       function z(e) {
         const { accountID: t, locToken: n } = e,
-          o = a.useMemo(() => b.a.InitFromAccountID(t), [t]),
+          o = a.useMemo(() => g.a.InitFromAccountID(t), [t]),
           [l, i] = Object(F.b)(o);
         let r =
           "https://steamsupport.valvesoftware.com/account/overview/" +
@@ -949,7 +949,7 @@
             a = _.e
               .map((e) => ({ value: e, label: Object(A.b)(e) }))
               .sort((e, t) => e.label.localeCompare(t.label)),
-            l = g.a
+            l = b.a
               .map((e) => ({ value: e, label: e }))
               .sort((e, t) => e.label.localeCompare(t.label)),
             i = {
@@ -1080,7 +1080,7 @@
             i = ie.EventModerateClearReview,
             r = !1;
           return (
-            Object(g.g)(n) ||
+            Object(b.g)(n) ||
               ((l = Object(U.f)("#EventModTile_Moderate_MarkReviewed")),
               (i = ie.EventModerateMarkReview),
               (r = !0)),
@@ -1125,7 +1125,7 @@
         constructor() {
           super(...arguments),
             (this.state = {
-              bLoadingEvent: !L.c.BHasClanEventModel(
+              bLoadingEvent: !L.b.BHasClanEventModel(
                 this.props.solrData.unique_id
               ),
               bShowAsModal: !1,
@@ -1136,9 +1136,9 @@
         componentDidMount() {
           const { solrData: e } = this.props,
             t = e.unique_id;
-          L.c.BHasClanEventModel(t) ||
-            L.c
-              .LoadHiddenPartnerEvent(new b.a(e.clan_steamid), t)
+          L.b.BHasClanEventModel(t) ||
+            L.b
+              .LoadHiddenPartnerEvent(new g.a(e.clan_steamid), t)
               .then(() => this.setState({ bLoadingEvent: !1 }))
               .catch((e) => {
                 const t = Object(M.a)(e);
@@ -1156,7 +1156,7 @@
           const { solrData: t } = this.props,
             n = t.unique_id;
           !this.state.bLoadingEvent &&
-            L.c.BHasClanEventModel(n) &&
+            L.b.BHasClanEventModel(n) &&
             this.setState({ bShowAsModal: !0 }),
             e.preventDefault(),
             e.stopPropagation();
@@ -1168,7 +1168,7 @@
           if (this.state.bSavingModeration) return;
           const { solrData: t } = this.props,
             n = t.unique_id,
-            a = L.c.GetClanEventModel(n);
+            a = L.b.GetClanEventModel(n);
           if (!a) return;
           if (e === a.BHasTag("adult_only_content")) return;
           const o = new Array(),
@@ -1181,9 +1181,9 @@
           if (this.state.bSavingModeration) return;
           const { solrData: t } = this.props,
             n = t.unique_id,
-            a = L.c.GetClanEventModel(n);
+            a = L.b.GetClanEventModel(n);
           if (!a) return;
-          if (e === Object(g.g)(a)) return;
+          if (e === Object(b.g)(a)) return;
           const o = new Array(),
             l = new Array();
           let i = new w().SetReviewAction(e);
@@ -1198,7 +1198,7 @@
           this.state.bSavingModeration ||
             this.setState({ bSavingModeration: !0 }, () =>
               Object(i.a)(this, void 0, void 0, function* () {
-                let o = L.c.GetClanEventModel(e);
+                let o = L.b.GetClanEventModel(e);
                 try {
                   let e = yield G.Get().UpdateTagsOnPartnerEvent(
                     this.m_cancelSignal,
@@ -1219,15 +1219,15 @@
         }
         OnChangeCategory(e) {
           const { solrData: t } = this.props;
-          let n = L.c.GetClanEventModel(t.unique_id);
+          let n = L.b.GetClanEventModel(t.unique_id);
           Object(X.d)(
-            o.a.createElement(be, { eventModel: n }),
+            o.a.createElement(ge, { eventModel: n }),
             Object(ae.o)(e)
           );
         }
         OnUpdateSeasonalTag(e) {
           const { solrData: t } = this.props;
-          let n = L.c.GetClanEventModel(t.unique_id);
+          let n = L.b.GetClanEventModel(t.unique_id);
           Object(X.d)(
             o.a.createElement(Se, { eventModel: n }),
             Object(ae.o)(e)
@@ -1239,7 +1239,7 @@
             n = Number(e.appid);
           let a,
             l = Object(_.l)(I.d.LANGUAGE),
-            i = L.c.GetClanEventModel(t),
+            i = L.b.GetClanEventModel(t),
             r = null;
           if (i) {
             this.state.bShowAsModal &&
@@ -1284,7 +1284,7 @@
               ? Date.parse(e.last_modified_date) / 1e3
               : 0,
             c = i ? i.type : Number(e.event_type),
-            d = new b.a(e.clan_steamid),
+            d = new g.a(e.clan_steamid),
             m = n ? `app/${n}` : `group/${d.GetAccountID()}`,
             u = `${I.d.STORE_BASE_URL}news/${m}/view/${e.announcement_gid}`,
             v = Boolean(i && i.BHasTag("adult_only_content"));
@@ -1345,7 +1345,7 @@
                     { className: ie.ChannelInfo },
                     o.a.createElement(_e, {
                       appid: n,
-                      clanSteamID: new b.a(e.clan_steamid),
+                      clanSteamID: new g.a(e.clan_steamid),
                     })
                   )
                 ),
@@ -1412,7 +1412,7 @@
                       })
                   ),
                   i &&
-                    o.a.createElement(ge, {
+                    o.a.createElement(be, {
                       event: i,
                       hidden: e.hidden,
                       published: e.published,
@@ -1450,7 +1450,7 @@
         }
         componentDidMount() {
           const { event: e } = this.props;
-          L.c
+          L.b
             .LoadClanEventLocalizationFromAnnouncementGID(
               e.clanSteamID,
               e.AnnouncementGID
@@ -1594,6 +1594,7 @@
                         .QueueAppRequest(t, {
                           include_assets: !0,
                           include_release: !0,
+                          include_screenshots: !0,
                         }),
                       a ? f.a.LoadClanInfoForClanSteamID(a) : void 0,
                     ]);
@@ -1682,7 +1683,7 @@
         }
         return null;
       });
-      let ge = class extends o.a.Component {
+      let be = class extends o.a.Component {
         render() {
           const { event: e, hidden: t, published: n } = this.props,
             a = t
@@ -1690,9 +1691,9 @@
                 ? Object(U.f)("#EVentModTile_State_Staged")
                 : Object(U.f)("#EVentModTile_State_Draft")
               : Object(U.f)("#EVentModTile_State_Published"),
-            l = Object(g.c)(e),
-            i = Object(g.b)(e),
-            r = Object(g.d)(e);
+            l = Object(b.c)(e),
+            i = Object(b.b)(e),
+            r = Object(b.d)(e);
           let s = r && !e.BHasTag("hide_store") && !e.BHasTag("mod_hide_store"),
             c =
               l &&
@@ -1781,8 +1782,8 @@
           );
         }
       };
-      ge = Object(i.b)([d.a], ge);
-      let be = class extends o.a.Component {
+      be = Object(i.b)([d.a], be);
+      let ge = class extends o.a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -1811,7 +1812,7 @@
                 e.GID,
                 a
               );
-              const o = g.p,
+              const o = b.p,
                 l = [];
               n.value.tags &&
                 n.value.tags.forEach((e) => {
@@ -1942,9 +1943,9 @@
           );
         }
       };
-      Object(i.b)([oe.a], be.prototype, "ChangeCategoryForEvent", null),
-        Object(i.b)([oe.a], be.prototype, "OnChangeSelection", null),
-        (be = Object(i.b)([d.a], be));
+      Object(i.b)([oe.a], ge.prototype, "ChangeCategoryForEvent", null),
+        Object(i.b)([oe.a], ge.prototype, "OnChangeSelection", null),
+        (ge = Object(i.b)([d.a], ge));
       class Se extends o.a.Component {
         constructor() {
           super(...arguments),
@@ -2079,10 +2080,10 @@
             const { clanEventGID: e, clanAccountID: t } = this.props;
             if (
               (console.log(e, t, typeof e, typeof t),
-              e && !L.c.BHasClanEventModel(e))
+              e && !L.b.BHasClanEventModel(e))
             ) {
-              let n = b.a.InitFromClanID(Number.parseInt(t)),
-                a = yield L.c.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+              let n = g.a.InitFromClanID(Number.parseInt(t)),
+                a = yield L.b.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   n,
                   e,
                   0
@@ -2115,13 +2116,13 @@
                   include_screenshots: !0,
                   include_release: !0,
                 };
-                yield R.a.Get().HintLoadStoreApps(o, t),
+                yield R.a.Get().QueueMultipleAppRequests(o, t),
                   this.setState({
                     rgAppIDs: o,
                     rgUnknownTypeAppIDs: l,
                     bLoadingApps: !1,
                   }),
-                  yield R.a.Get().HintLoadStoreApps(o, t),
+                  yield R.a.Get().QueueMultipleAppRequests(o, t),
                   this.setState({ bLoadingAssociatedDemoInfo: !1 }),
                   yield fe.a.Get().LoadAppIDsBatch(o, this.m_cancelSignal);
                 let n = new Array();
@@ -2129,7 +2130,7 @@
                   .Get()
                   .GetAllDemoInfo()
                   .forEach((e) => n.push(e.demo_appid)),
-                  yield R.a.Get().HintLoadStoreApps(n, t),
+                  yield R.a.Get().QueueMultipleAppRequests(n, t),
                   this.setState({ bLoadingDemos: !1, rgDemoIDs: n });
               } else this.setState({ bLoadingEvent: !1, rgAppIDs: o });
             } else this.setState({ bLoadingEvent: !1 });
@@ -2537,7 +2538,7 @@
               if (e[l] && e[l].length > 0) {
                 let i = e[l],
                   r = S.a.GetExtensionTypeFromURL(i);
-                const s = new b.a(t.clan_steamid);
+                const s = new g.a(t.clan_steamid);
                 if (r) {
                   let e = yield this.GetImageInfo(s, i).catch(
                     (e) => (
@@ -2632,7 +2633,7 @@
                   continue;
                 }
                 if (
-                  (yield L.c
+                  (yield L.b
                     .LoadPartnerEventFromAnnoucementGID(
                       Number(n.appid),
                       n.announcement_gid,
@@ -2649,7 +2650,7 @@
                   a.bFailed)
                 )
                   continue;
-                let o = L.c.GetClanEventFromAnnouncementGID(n.announcement_gid);
+                let o = L.b.GetClanEventFromAnnouncementGID(n.announcement_gid);
                 if (o)
                   if (a.bSucceeded || a.bFailed || a.bAlreadyProcessed)
                     (a.bAlreadyProcessed = !0),
@@ -2745,7 +2746,7 @@
               Te.GetBackfillGIDs().forEach((t) => {
                 let n = Te.GetEventBackfillProgress().get(t);
                 if (n && n.bFailed) {
-                  let o = L.c.GetClanEventModel(t);
+                  let o = L.b.GetClanEventModel(t);
                   o &&
                     e.push(
                       a.createElement(
@@ -2954,7 +2955,7 @@
             const e = s.a.CancelToken.source();
             return (
               Object(i.a)(void 0, void 0, void 0, function* () {
-                const t = b.a.InitFromClanID(l),
+                const t = g.a.InitFromClanID(l),
                   a = yield De.a.Get().LoadSingleAppEventPermissions(t),
                   o = yield Ue.Get().HintLoadAppApprovalPriviledge();
                 e.token.reason ||
@@ -2963,7 +2964,7 @@
               () => e.cancel("SteamChinaAdminPanel is unmounting")
             );
           }, [l]);
-          const r = b.a.InitFromClanID(l);
+          const r = g.a.InitFromClanID(l);
           return I.k.is_support ||
             De.a.Get().GetPartnerEventPermissions(r).can_edit
             ? a.createElement(we.a, {
@@ -3298,7 +3299,7 @@
             (this.state.last_update_event = t.last_update_event),
             (this.state.events = []),
             this.state.announcementGIDList.forEach((e) => {
-              const t = L.c.GetClanEventFromAnnouncementGID(e);
+              const t = L.b.GetClanEventFromAnnouncementGID(e);
               t && this.state.events.push(t);
             }));
         }
@@ -3532,7 +3533,7 @@
       }
       function dt(e) {
         const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
-          l = n ? L.c.GetClanEventFromAnnouncementGID(n) : null,
+          l = n ? L.b.GetClanEventFromAnnouncementGID(n) : null,
           i = (e) => {
             null == a || a(), e.stopPropagation(), e.preventDefault();
           };
@@ -3660,7 +3661,7 @@
         ht = n("WGPV"),
         _t = n.n(ht);
       n("uobO");
-      const gt = Object(E.j)((e) => {
+      const bt = Object(E.j)((e) => {
           const [t, n] = Object(a.useState)(!0);
           if (
             (Object(a.useEffect)(() => {
@@ -3687,7 +3688,7 @@
                 null,
                 Object(U.f)("#RSSModeration_Title")
               ),
-              o.a.createElement(bt, null),
+              o.a.createElement(gt, null),
               o.a.createElement(Tt, {
                 rgClanIDs: ut
                   .Get()
@@ -3705,7 +3706,7 @@
             )
           );
         }),
-        bt = Object(d.a)((e) => {
+        gt = Object(d.a)((e) => {
           const [t, n] = Object(a.useState)(!1),
             [l, r] = Object(a.useState)(void 0);
           return t
@@ -3795,7 +3796,7 @@
             {
               onEnter: () =>
                 Object(i.a)(void 0, void 0, void 0, function* () {
-                  const e = b.a.InitFromClanID(t);
+                  const e = g.a.InitFromClanID(t);
                   yield Promise.all([
                     f.a.LoadClanInfoForClanSteamID(e),
                     mt.a.Get().QueueCuratorAdminInfoLoad(t),
@@ -3823,7 +3824,7 @@
             c = I.d.COMMUNITY_BASE_URL + "group/" + t.clanAccountID,
             d =
               "https://steamsupport.valvesoftware.com/clan/overview/" +
-              b.a.InitFromClanID(t.clanAccountID).ConvertTo64BitString(),
+              g.a.InitFromClanID(t.clanAccountID).ConvertTo64BitString(),
             m = mt.a.Get().GetRSSAdminStats(t.clanAccountID);
           return o.a.createElement(
             "div",
@@ -4087,7 +4088,7 @@
         };
       var yt = n("4spj"),
         jt = n("iO5U");
-      Ye.a.Init(new Ke.a(I.d.WEBAPI_BASE_URL)), L.c.Init();
+      Ye.a.Init(new Ke.a(I.d.WEBAPI_BASE_URL)), L.b.Init();
       const Mt = ({ children: e }) => {
         const [t, n] = Object(a.useState)(De.a.IsInitialized());
         return t
@@ -4120,11 +4121,11 @@
           });
         }),
         Bt = It(Ae),
-        Pt = It(gt),
+        Pt = It(bt),
         Nt = It(function (e) {
           const { promotionName: t, language: n } = e,
             [a, l] = o.a.useState(
-              L.c.GetClanEventFromAnnouncementGID(I.e.ANNOUNCEMENT_GID)
+              L.b.GetClanEventFromAnnouncementGID(I.e.ANNOUNCEMENT_GID)
             ),
             i = Object(tt.a)();
           if (
@@ -4132,8 +4133,8 @@
               if (
                 (null == a ? void 0 : a.AnnouncementGID) != I.e.ANNOUNCEMENT_GID
               ) {
-                const e = new b.a(I.c.CLANSTEAMID);
-                L.c
+                const e = new g.a(I.c.CLANSTEAMID);
+                L.b
                   .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                     e,
                     I.e.ANNOUNCEMENT_GID,
@@ -4153,7 +4154,7 @@
                 string: Object(U.f)("#Loading"),
               })
             );
-          const r = a.visibility_state !== g.j.k_EEventStateVisible;
+          const r = a.visibility_state !== b.j.k_EEventStateVisible;
           return o.a.createElement(
             $e.a,
             { navID: "StoreSalePageRoot", NavigationManager: i },

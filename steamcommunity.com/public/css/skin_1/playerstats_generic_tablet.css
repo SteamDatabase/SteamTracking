@@ -7,8 +7,10 @@
 		color: var(--gpStoreLightestGrey);
 		min-height: unset;
 		padding: 16px;
-		background: var(--gpBackground-DarkMedium);
+		background: unset;
+		border: 1px solid var(--gpBackground-LightMedium);
 		color: var(--gpStoreLighterGrey);
+		margin: 24px 0px 12px;
 	}
 
 	html.responsive #topSummaryLeft br {

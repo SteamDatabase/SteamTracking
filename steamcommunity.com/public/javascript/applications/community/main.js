@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7150577";
+var CLSTAMP = "7154014";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [99],
   {
@@ -5909,16 +5909,20 @@ var CLSTAMP = "7150577";
         return (
           Object(b.d)(t.ModalUpdatedCallback, i),
           o.createElement(
-            r,
-            {
-              className: Object(p.a)(
-                "ModalOverlayContent",
-                n ? "active" : "inactive"
-              ),
-              active: n,
-              modalKey: t.key,
-            },
-            t.element
+            u.a,
+            null,
+            o.createElement(
+              r,
+              {
+                className: Object(p.a)(
+                  "ModalOverlayContent",
+                  n ? "active" : "inactive"
+                ),
+                active: n,
+                modalKey: t.key,
+              },
+              t.element
+            )
           )
         );
       }
@@ -12188,7 +12192,9 @@ var CLSTAMP = "7150577";
               t = e.charCodeAt(n) + ((t << 5) - t);
             return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
           })(r).map((e, t) =>
-            Math.max(0, Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15)))
+            Math.round(
+              Math.max(0, Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15)))
+            )
           ),
           s = (299 * (a = o)[0] + 587 * a[1] + 114 * a[2]) / 1e3 >= 128;
         var a;
@@ -12908,10 +12914,20 @@ var CLSTAMP = "7150577";
         TranslateKey(e) {
           const t = e.code,
             n = e.ctrlKey,
-            r =
+            r = e.shiftKey,
+            o =
               m.q(e.target) &&
               ("INPUT" === e.target.nodeName ||
                 "TEXTAREA" === e.target.nodeName);
+          if (n && r)
+            switch (t) {
+              case "Digit4":
+                return i.a.TRIGGER_LEFT;
+              case "Digit5":
+                return i.a.TRIGGER_RIGHT;
+              default:
+                return i.a.INVALID;
+            }
           if (n)
             switch (t) {
               case "Digit1":
@@ -12939,9 +12955,9 @@ var CLSTAMP = "7150577";
             case "Escape":
               return i.a.CANCEL;
             case "Enter":
-              return r ? i.a.INVALID : i.a.OK;
+              return o ? i.a.INVALID : i.a.OK;
             case "Backspace":
-              return r ? i.a.INVALID : i.a.SECONDARY;
+              return o ? i.a.INVALID : i.a.SECONDARY;
             case "ArrowUp":
               return i.a.DIR_UP;
             case "ArrowDown":
@@ -13666,7 +13682,14 @@ var CLSTAMP = "7150577";
             )
               ? e.SetRetainFocusParent(this)
               : this.m_RetainFocusParent &&
-                e.SetRetainFocusParent(this.m_RetainFocusParent);
+                e.SetRetainFocusParent(this.m_RetainFocusParent),
+            this.m_bMounted &&
+              e.BFocusWithin() &&
+              (Object(s.a)(
+                -1 == this.m_iActiveChild && this.BFocusWithin(),
+                "Invalid focus state in AddChild"
+              ),
+              (this.m_iActiveChild = this.m_rgChildren.length - 1));
         }
         OnMount(e) {
           (this.m_element = e),
@@ -14109,7 +14132,13 @@ var CLSTAMP = "7150577";
             o = this.GetLastFocusElement();
           if (!o || o == this.m_element)
             return (
-              Object(s.a)(!1, "No active child for grid navigation"),
+              Object(s.a)(
+                !1,
+                "No active child for grid navigation",
+                this.m_iActiveChild,
+                this.m_rgChildren.length,
+                o
+              ),
               this.FindFocusableDescendant(n)
             );
           const a = this.GetActiveDescendant().GetBoundingRect();

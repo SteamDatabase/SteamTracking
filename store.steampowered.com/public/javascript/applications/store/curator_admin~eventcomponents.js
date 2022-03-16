@@ -247,7 +247,7 @@
                     };
                     this.m_mapURLToPosted.set(e.post.url, t);
                   }),
-                  u.c.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                  u.b.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                     this.m_clanSteamID,
                     n.Body().clan_event_gid(),
                     0
@@ -1600,8 +1600,8 @@
             (r = r.sort((t, r) => {
               let a = e.MapArticleURLToClanEventGID(t.post.url),
                 n = e.MapArticleURLToClanEventGID(r.post.url),
-                s = a ? p.c.GetClanEventModel(a) : null,
-                i = n ? p.c.GetClanEventModel(n) : null;
+                s = a ? p.b.GetClanEventModel(a) : null,
+                i = n ? p.b.GetClanEventModel(n) : null;
               return s && i
                 ? i.postTime - s.postTime
                 : s
@@ -1663,7 +1663,7 @@
                             a.push(r.post.appids[0]);
                       }),
                       t.length > 0 &&
-                        (yield p.c.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                        (yield p.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                           t,
                           null,
                           this.m_cancelSignal
@@ -1899,9 +1899,9 @@
           return Object(a.a)(this, void 0, void 0, function* () {
             if (this.state.clan_event_gid) {
               let e = this.props.admin.GetClanSteamID(),
-                t = p.c.GetClanEventModel(this.state.clan_event_gid);
+                t = p.b.GetClanEventModel(this.state.clan_event_gid);
               t ||
-                (t = yield p.c.LoadHiddenPartnerEvent(
+                (t = yield p.b.LoadHiddenPartnerEvent(
                   e,
                   this.state.clan_event_gid
                 )),
@@ -1951,7 +1951,7 @@
             this.ShowModalEvent(a);
         }
         OnViewEvent() {
-          this.ShowModalEvent(p.c.GetClanEventModel(this.state.clan_event_gid));
+          this.ShowModalEvent(p.b.GetClanEventModel(this.state.clan_event_gid));
         }
         ShowModalEvent(e) {
           let t = document.getElementById("curator_header_area_ctn_id");

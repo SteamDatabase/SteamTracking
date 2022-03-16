@@ -1769,69 +1769,33 @@
           return "CSteamTV_ChatModerator";
         }
       }
-      class X extends f {
+      class Q extends f {
         constructor(e = null) {
           super(),
-            X.prototype.results || y.a(X.M()),
+            Q.prototype.results || y.a(Q.M()),
             f.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
+            Q.sm_m ||
+              (Q.sm_m = {
+                proto: Q,
                 fields: { results: { n: 1, c: J, r: !0, q: !0 } },
               }),
-            X.sm_m
+            Q.sm_m
           );
         }
         static MBF() {
-          return X.sm_mbf || (X.sm_mbf = y.e(X.M())), X.sm_mbf;
-        }
-        toObject(e = !1) {
-          return X.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return y.g(X.M(), e, t);
-        }
-        static fromObject(e) {
-          return y.c(X.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new g.BinaryReader(e),
-            r = new X();
-          return X.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return y.b(X.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new g.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          y.f(X.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new g.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetChatModerators_Response";
-        }
-      }
-      class Q extends f {
-        constructor(e = null) {
-          super(), f.initialize(this, e, 0, -1, void 0, null);
+          return Q.sm_mbf || (Q.sm_mbf = y.e(Q.M())), Q.sm_mbf;
         }
         toObject(e = !1) {
           return Q.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return y.g(Q.M(), e, t);
         }
         static fromObject(e) {
-          return new Q();
+          return y.c(Q.M(), e);
         }
         static deserializeBinary(e) {
           let t = new g.BinaryReader(e),
@@ -1839,16 +1803,52 @@
           return Q.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return y.b(Q.MBF(), e, t);
         }
         serializeBinary() {
           var e = new g.BinaryWriter();
           return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          y.f(Q.M(), e, t);
+        }
         serializeBase64String() {
           var e = new g.BinaryWriter();
           return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_GetChatModerators_Response";
+        }
+      }
+      class X extends f {
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return X.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new X();
+        }
+        static deserializeBinary(e) {
+          let t = new g.BinaryReader(e),
+            r = new X();
+          return X.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new g.BinaryWriter();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new g.BinaryWriter();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_AddWordBan_Response";
@@ -3181,13 +3181,13 @@
             });
           }),
           (e.GetChatModerators = function (e, t) {
-            return e.SendMsg("SteamTV.GetChatModerators#1", t, X, {
+            return e.SendMsg("SteamTV.GetChatModerators#1", t, Q, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           }),
           (e.AddWordBan = function (e, t) {
-            return e.SendMsg("SteamTV.AddWordBan#1", t, Q, {
+            return e.SendMsg("SteamTV.AddWordBan#1", t, X, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
@@ -4712,8 +4712,8 @@
         Ke = r("y+6m"),
         Ye = r("Mgs7"),
         Je = r("Gorr"),
-        Xe = r("0QoN"),
-        Qe = r("BFsE"),
+        Qe = r("0QoN"),
+        Xe = r("BFsE"),
         Ze = r("gPCo"),
         et = r("5znp"),
         tt = r.n(et);
@@ -5306,7 +5306,7 @@
               l.createElement(
                 "div",
                 { className: $e.a.chatEntryActionsGroup },
-                l.createElement(Xe.a, {
+                l.createElement(Qe.a, {
                   disabled: !1,
                   OnEmoticonSelected: o,
                   rtLastAckedNewEmoticons: Number.MAX_VALUE,
@@ -5328,7 +5328,7 @@
           void 0 === t
             ? void 0
             : t.length)
-          ? l.createElement(Xe.a, {
+          ? l.createElement(Qe.a, {
               disabled: !1,
               OnEmoticonSelected: (e) => {
                 r.UpdateChatMessageFlair(e),
@@ -5385,7 +5385,7 @@
           !Ce.k.logged_in &&
             l.createElement(
               Ye.d,
-              { onClick: Qe.a, className: Object(st.a)(lt.a.SignInButton) },
+              { onClick: Xe.a, className: Object(st.a)(lt.a.SignInButton) },
               Object(we.f)("#Login_SignIn")
             )
         );
@@ -6219,7 +6219,7 @@
                 .filter(Boolean);
               Lt.a
                 .Get()
-                .HintLoadStoreApps(e, { include_assets: !0 })
+                .QueueMultipleAppRequests(e, { include_assets: !0 })
                 .then(() => {
                   if (n.current) {
                     let e = 0;
@@ -6245,7 +6245,7 @@
             },
             o.map((e) => {
               var a;
-              return c.a.createElement(Xt, {
+              return c.a.createElement(Qt, {
                 key: null !== (a = e.accountid) && void 0 !== a ? a : e.steamid,
                 stream: e,
                 bSelected: t.accountid == e.accountid,
@@ -6256,7 +6256,7 @@
           )
         );
       }
-      function Xt(e) {
+      function Qt(e) {
         var t;
         const {
             onStreamSelect: r,
@@ -6296,7 +6296,7 @@
                 onClick: () => r && r(i),
                 rootMargin: "100px 0px 100px 0px",
               },
-              c.a.createElement(Qt, {
+              c.a.createElement(Xt, {
                 strThumbnail: i.thumbnail_http_address,
                 bSelected: a,
                 strCapsuleArtURL: d,
@@ -6322,7 +6322,7 @@
           )
         );
       }
-      function Qt(e) {
+      function Xt(e) {
         const { strCapsuleArtURL: t, strThumbnail: r, bSelected: a } = e,
           i = a ? Dt.a.stream_icon_selected : Dt.a.stream_icon;
         if (t) {

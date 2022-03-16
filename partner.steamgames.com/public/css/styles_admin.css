@@ -3328,18 +3328,37 @@ h2.giveawayFilter_titleArea {
 }
 
 .advisory_header {
-	background: #c6d4df;
+    width: 100%;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient( top, #c6d4df 5%, #e5ebf0 95%);
+	background: linear-gradient( to bottom, #c6d4df 5%, #e5ebf0 95%);
 	padding: 16px;
-	color: #bb4c16;
+	color: #db6a00;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.25);
+    border-radius: 2px;
+    border: 1px solid #bb4c16;
 }
 .advisory_header h2 {
-	color: #bb4c16;
+	color: #db6a00;
+    font-weight: 500;
 }
 .advisory_header p {
 	color: #444;
 }
 .advisory_header p.notice {
-	color: #bb4c16;
+	color: #db6a00;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.advisory_header p.notice a {
+    color: #db6a00;
+}
+.advisory_header.with_icon {
+    display: flex;
+    flex-direction: row;
+}
+.advisory_header.with_icon .icon_ctn {
+    margin-right: 8px;
 }
 
 span.new {

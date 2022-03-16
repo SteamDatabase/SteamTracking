@@ -38,7 +38,7 @@
 	--gpBackground-LightSoft: #3b5a7280;
 	--gpBackground-LightMedium: #678BA670;
 	--gpBackground-LightHard: #93B8D480;
-	--gpBackground-LightHarder: #04070880;
+	--gpBackground-LightHarder: #aacce6a6;
 
 	--gpBackground-DarkSofter: #0e141b33;
 	--gpBackground-DarkSoft: #0e141b66;
@@ -49,6 +49,7 @@
 	--gpBackground-Neutral-LightSoft: rgba(235, 246, 255, 0.20);
 	--gpBackground-Neutral-LightMedium: rgba(235, 246, 255, 0.30);
 	--gpBackground-Neutral-LightHard: rgba(235, 246, 255, 0.40);
+	--gpBackground-Neutral-LightHarder: rgba(235, 246, 255, 0.50);
 
 
 	/* Corners */
@@ -69,9 +70,11 @@
 	--gpGiftingPanelWidth: 280px;
 
 	/* Game capsule widths */
-	--gpWidth-3colcap: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
-	--gpWidth-2colcap: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
-	--gpWidth-1colcap: calc((100vw - (2 * var(--gpSpace-Gutter))));
+	--screen-width: 100vw;
+	--gpWidth-4colcap: calc((var(--screen-width) - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
+	--gpWidth-3colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((var(--screen-width) - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+	--gpWidth-1colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gutter))));
 
     /* Fixed heights */
     --gpStoreMenuHeight: 58px;
@@ -638,7 +641,7 @@
 	/* BREADCRUMBS */
 	html.responsive .breadcrumbs {
 		font: var(--gpText-BodyMedium);
-		margin-bottom: 16px;
+		margin-bottom: 12px;
 		color: var(--gpStoreLightGrey);
 		padding-top: var(--gpSpace-Gutter);
 		display: flex;
@@ -747,7 +750,7 @@
 		height: unset;
 		top: unset;
 
-		top: 20px;
+		top: 24px;
 		right: 16px;
 		box-shadow: unset;
 		background-color: var(--gpBackground-DarkSoft);
@@ -765,7 +768,7 @@
 			no-repeat 40px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/Rows.svg');
 
 		/* TODO - Reconsider how we display on screen glyphs */
-		display: none;
+		/* display: none; */
 	}
 
 	/* Setting responsive_page_menu_ctn display to none to exlude hidden elements from focus navigation */

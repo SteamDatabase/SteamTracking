@@ -616,7 +616,6 @@ ${LOGIN_BASE_URL}jwt/finalizelogin
 ${MEDIA_CDN_COMMUNITY_URL}/images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/${}
-${MEDIA_CDN_COMMUNITY_URL}images/app/${}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}.jpg
