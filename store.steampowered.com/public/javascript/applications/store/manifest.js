@@ -1,27 +1,27 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7158778";
+var CLSTAMP = "7158968";
 !(function (e) {
   function a(a) {
     for (
-      var s, d, b = a[0], f = a[1], r = a[2], i = 0, _ = [];
-      i < b.length;
+      var s, d, f = a[0], b = a[1], r = a[2], i = 0, _ = [];
+      i < f.length;
       i++
     )
-      (d = b[i]),
+      (d = f[i]),
         Object.prototype.hasOwnProperty.call(n, d) && n[d] && _.push(n[d][0]),
         (n[d] = 0);
-    for (s in f) Object.prototype.hasOwnProperty.call(f, s) && (e[s] = f[s]);
+    for (s in b) Object.prototype.hasOwnProperty.call(b, s) && (e[s] = b[s]);
     for (t && t(a); _.length; ) _.shift()();
     return o.push.apply(o, r || []), c();
   }
   function c() {
     for (var e, a = 0; a < o.length; a++) {
       for (var c = o[a], s = !0, d = 1; d < c.length; d++) {
-        var f = c[d];
-        0 !== n[f] && (s = !1);
+        var b = c[d];
+        0 !== n[b] && (s = !1);
       }
-      s && (o.splice(a--, 1), (e = b((b.s = c[0]))));
+      s && (o.splice(a--, 1), (e = f((f.s = c[0]))));
     }
     return e;
   }
@@ -29,12 +29,12 @@ var CLSTAMP = "7158778";
     d = { 42: 0 },
     n = { 42: 0 },
     o = [];
-  function b(a) {
+  function f(a) {
     if (s[a]) return s[a].exports;
     var c = (s[a] = { i: a, l: !1, exports: {} });
-    return e[a].call(c.exports, c, c.exports, b), (c.l = !0), c.exports;
+    return e[a].call(c.exports, c, c.exports, f), (c.l = !0), c.exports;
   }
-  (b.e = function (e) {
+  (f.e = function (e) {
     var a = [];
     d[e]
       ? a.push(d[e])
@@ -177,7 +177,7 @@ var CLSTAMP = "7158778";
                     8: "c2a2eb2b5c696d444cef",
                     9: "d5eccc31ab8ab28a9bf0",
                     10: "6ed8717442afc34f5595",
-                    11: "156ad58bac9898b388fa",
+                    11: "7226c650f1ed622be3cf",
                     13: "31d6cfe0d16ae931b73c",
                     14: "31d6cfe0d16ae931b73c",
                     15: "31d6cfe0d16ae931b73c",
@@ -300,20 +300,20 @@ var CLSTAMP = "7158778";
                     133: "31d6cfe0d16ae931b73c",
                     134: "31d6cfe0d16ae931b73c",
                   }[e],
-                n = b.p + s,
+                n = f.p + s,
                 o = document.getElementsByTagName("link"),
-                f = 0;
-              f < o.length;
-              f++
+                b = 0;
+              b < o.length;
+              b++
             ) {
               var r =
-                (t = o[f]).getAttribute("data-href") || t.getAttribute("href");
+                (t = o[b]).getAttribute("data-href") || t.getAttribute("href");
               if ("stylesheet" === t.rel && (r === s || r === n)) return a();
             }
             var i = document.getElementsByTagName("style");
-            for (f = 0; f < i.length; f++) {
+            for (b = 0; b < i.length; b++) {
               var t;
-              if ((r = (t = i[f]).getAttribute("data-href")) === s || r === n)
+              if ((r = (t = i[b]).getAttribute("data-href")) === s || r === n)
                 return a();
             }
             var _ = document.createElement("link");
@@ -346,13 +346,13 @@ var CLSTAMP = "7158778";
         });
         a.push((c[2] = s));
         var o,
-          f = document.createElement("script");
-        (f.charset = "utf-8"),
-          (f.timeout = 120),
-          b.nc && f.setAttribute("nonce", b.nc),
-          (f.src = (function (e) {
+          b = document.createElement("script");
+        (b.charset = "utf-8"),
+          (b.timeout = 120),
+          f.nc && b.setAttribute("nonce", f.nc),
+          (b.src = (function (e) {
             return (
-              b.p +
+              f.p +
               "javascript/applications/store/" +
               ({
                 1: "curator_admin~eventcomponents",
@@ -598,7 +598,7 @@ var CLSTAMP = "7158778";
           })(e));
         var r = new Error();
         o = function (a) {
-          (f.onerror = f.onload = null), clearTimeout(i);
+          (b.onerror = b.onload = null), clearTimeout(i);
           var c = n[e];
           if (0 !== c) {
             if (c) {
@@ -615,34 +615,34 @@ var CLSTAMP = "7158778";
           }
         };
         var i = setTimeout(function () {
-          o({ type: "timeout", target: f });
+          o({ type: "timeout", target: b });
         }, 12e4);
-        (f.onerror = f.onload = o), document.head.appendChild(f);
+        (b.onerror = b.onload = o), document.head.appendChild(b);
       }
     return Promise.all(a);
   }),
-    (b.m = e),
-    (b.c = s),
-    (b.d = function (e, a, c) {
-      b.o(e, a) || Object.defineProperty(e, a, { enumerable: !0, get: c });
+    (f.m = e),
+    (f.c = s),
+    (f.d = function (e, a, c) {
+      f.o(e, a) || Object.defineProperty(e, a, { enumerable: !0, get: c });
     }),
-    (b.r = function (e) {
+    (f.r = function (e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (b.t = function (e, a) {
-      if ((1 & a && (e = b(e)), 8 & a)) return e;
+    (f.t = function (e, a) {
+      if ((1 & a && (e = f(e)), 8 & a)) return e;
       if (4 & a && "object" == typeof e && e && e.__esModule) return e;
       var c = Object.create(null);
       if (
-        (b.r(c),
+        (f.r(c),
         Object.defineProperty(c, "default", { enumerable: !0, value: e }),
         2 & a && "string" != typeof e)
       )
         for (var s in e)
-          b.d(
+          f.d(
             c,
             s,
             function (a) {
@@ -651,7 +651,7 @@ var CLSTAMP = "7158778";
           );
       return c;
     }),
-    (b.n = function (e) {
+    (f.n = function (e) {
       var a =
         e && e.__esModule
           ? function () {
@@ -660,19 +660,19 @@ var CLSTAMP = "7158778";
           : function () {
               return e;
             };
-      return b.d(a, "a", a), a;
+      return f.d(a, "a", a), a;
     }),
-    (b.o = function (e, a) {
+    (f.o = function (e, a) {
       return Object.prototype.hasOwnProperty.call(e, a);
     }),
-    (b.p = ""),
-    (b.oe = function (e) {
+    (f.p = ""),
+    (f.oe = function (e) {
       throw (console.error(e), e);
     });
-  var f = (window.webpackJsonp = window.webpackJsonp || []),
-    r = f.push.bind(f);
-  (f.push = a), (f = f.slice());
-  for (var i = 0; i < f.length; i++) a(f[i]);
+  var b = (window.webpackJsonp = window.webpackJsonp || []),
+    r = b.push.bind(b);
+  (b.push = a), (b = b.slice());
+  for (var i = 0; i < b.length; i++) a(b[i]);
   var t = r;
   c();
 })([]);
