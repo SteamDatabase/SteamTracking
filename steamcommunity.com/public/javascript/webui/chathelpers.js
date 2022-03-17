@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7156818";
+var CLSTAMP = "7158365";
 !(function (e) {
   function t(t) {
     for (
@@ -154,7 +154,7 @@ var CLSTAMP = "7156818";
                 42: "e942198bfadcf0a85c20",
                 43: "663b0adae31b851dac51",
                 44: "84d94d550ee9cee7ec6b",
-                45: "315dde5a80479d6eff79",
+                45: "4bb5cf702b738242933b",
                 46: "b99f8f06ca75026085a3",
                 47: "77f2561d33ab854ae098",
                 48: "a9e908af99dfec40654c",
@@ -338,10 +338,10 @@ var CLSTAMP = "7156818";
         return p;
       }),
       n.d(t, "d", function () {
-        return g;
+        return b;
       }),
       n.d(t, "e", function () {
-        return b;
+        return g;
       }),
       n.d(t, "c", function () {
         return E;
@@ -361,7 +361,7 @@ var CLSTAMP = "7156818";
       f = "18446744073709551615",
       m = 0,
       p = 2147483647;
-    function g(e, t = "en") {
+    function b(e, t = "en") {
       switch (e) {
         case 0:
           return "en";
@@ -427,7 +427,7 @@ var CLSTAMP = "7156818";
           return t;
       }
     }
-    const b = (e) => ("koreana" === e ? "korean" : e);
+    const g = (e) => ("koreana" === e ? "korean" : e);
     function E(e, t = "") {
       switch (e) {
         case 0:
@@ -670,7 +670,7 @@ var CLSTAMP = "7156818";
         return p;
       }),
       n.d(t, "f", function () {
-        return g;
+        return b;
       });
     n("mrSG");
     var r = n("/7KC"),
@@ -836,7 +836,7 @@ var CLSTAMP = "7156818";
         ? "https://steamloopback.host"
         : "";
     }
-    function g() {
+    function b() {
       const e = window.location.href;
       return e.startsWith(o.STORE_BASE_URL)
         ? "store"
@@ -1698,8 +1698,8 @@ var CLSTAMP = "7156818";
       return n.getFullYear() == r.getFullYear() ? T(n) : y(n);
     }
     const p = new Map(),
-      g = new Map(),
       b = new Map(),
+      g = new Map(),
       E = new Map(),
       k = new Map();
     function C(e, t = !1, n = !0) {
@@ -1729,24 +1729,24 @@ var CLSTAMP = "7156818";
       );
     }
     function T(e) {
-      let t = g.get(e.getMonth());
+      let t = b.get(e.getMonth());
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           month: "long",
         })),
-        g.set(e.getMonth(), t),
+        b.set(e.getMonth(), t),
         t)
       );
     }
     function v(e) {
-      let t = b.get(e.getFullYear());
+      let t = g.get(e.getFullYear());
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           year: "numeric",
         })),
-        b.set(e.getFullYear(), t),
+        g.set(e.getFullYear(), t),
         t)
       );
     }
@@ -1951,10 +1951,10 @@ var CLSTAMP = "7156818";
         return d;
       }),
       n.d(t, "f", function () {
-        return g;
+        return b;
       }),
       n.d(t, "u", function () {
-        return b;
+        return g;
       }),
       n.d(t, "h", function () {
         return _;
@@ -2117,8 +2117,8 @@ var CLSTAMP = "7156818";
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
       })(d || (d = {}));
-    class g {}
     class b {}
+    class g {}
     !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
@@ -2404,10 +2404,10 @@ var CLSTAMP = "7156818";
         return m;
       }),
       n.d(t, "d", function () {
-        return g;
+        return b;
       }),
       n.d(t, "c", function () {
-        return b;
+        return g;
       }),
       n.d(t, "e", function () {
         return E;
@@ -2625,7 +2625,7 @@ var CLSTAMP = "7156818";
         sc_schinese: "zh-cn",
         koreana: "ko",
       },
-      g = {
+      b = {
         "en-US": 0,
         "de-DE": 1,
         "fr-FR": 2,
@@ -2656,7 +2656,7 @@ var CLSTAMP = "7156818";
         "es-419": 27,
         "vi-VN": 28,
       };
-    function b() {
+    function g() {
       return p[s.d.LANGUAGE] || null;
     }
     const E = new l();
@@ -2681,7 +2681,7 @@ var CLSTAMP = "7156818";
     n("RBVV");
     class p extends _.b {
       BIsExpired() {
-        return g.sm_rtTimeCur >= this.m_rtTimeExpires;
+        return b.sm_rtTimeCur >= this.m_rtTimeExpires;
       }
       InitFromPHPInviteLinkInfo(e) {
         this.m_ulChatID = e.chat_id;
@@ -2698,7 +2698,7 @@ var CLSTAMP = "7156818";
       }
     }
     Object(r.b)([l.k], p.prototype, "InitFromPHPInviteLinkInfo", null);
-    class g {
+    class b {
       constructor(e) {
         (this.m_bConnectingToClient = !1),
           (this.m_invite = new p(e.strInviteCode)),
@@ -2780,9 +2780,9 @@ var CLSTAMP = "7156818";
             }));
       }
     }
-    Object(r.b)([l.C], g.prototype, "m_bConnectingToClient", void 0),
-      Object(r.b)([l.C], g.prototype, "m_connectResult", void 0);
-    let b = class extends i.Component {
+    Object(r.b)([l.C], b.prototype, "m_bConnectingToClient", void 0),
+      Object(r.b)([l.C], b.prototype, "m_connectResult", void 0);
+    let g = class extends i.Component {
       render() {
         return i.createElement(
           "div",
@@ -2793,7 +2793,7 @@ var CLSTAMP = "7156818";
         );
       }
     };
-    b = Object(r.b)([d.a], b);
+    g = Object(r.b)([d.a], g);
     let E = class extends i.Component {
       constructor() {
         super(...arguments), (this.m_bTriedToLaunchSteam = !1);
@@ -3015,9 +3015,9 @@ var CLSTAMP = "7156818";
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
       } catch (e) {}
-      g.sm_rtTimeCur = t.rtTimeCur;
-      let n = new g(t);
-      o.render(i.createElement(b, { controller: n }), e);
+      b.sm_rtTimeCur = t.rtTimeCur;
+      let n = new b(t);
+      o.render(i.createElement(g, { controller: n }), e);
     }
     (window.ClientConnectionAPI = S),
       document.addEventListener("DOMContentLoaded", function () {
