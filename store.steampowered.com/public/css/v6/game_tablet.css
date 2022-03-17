@@ -1060,6 +1060,8 @@
         html.responsive .app_header_grid_container .grid_content.grid_date {
             display: inline-block;
             color: var(--gpStoreLightGrey);
+            max-height: 30px;
+            overflow: hidden;
         }
 
 	/* new section for responsive UX called Links and Info
@@ -1829,6 +1831,7 @@
 		font: var(--gpText-HeadingSmall);
 		line-height: 1.2;
 		margin-top: 4px;
+        max-height: 42px;
 	}
 
 

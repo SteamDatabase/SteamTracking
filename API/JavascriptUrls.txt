@@ -144,6 +144,7 @@ ${COMMUNITY_BASE_URL}faqs/${VANITY_ID}/ajaxpullfromcrowdin/${}
 ${COMMUNITY_BASE_URL}faqs/${VANITY_ID}/ajaxpushtocrowdin/${}
 ${COMMUNITY_BASE_URL}forum/${}/${}/deletetopic/
 ${COMMUNITY_BASE_URL}friends/add
+${COMMUNITY_BASE_URL}games/${_ ? _ : _}/partnerevents/
 ${COMMUNITY_BASE_URL}games/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}gid/${broadcast_item_drops_details_clan_accountid}/partnerevents/view/${broadcast_item_drops_details_event_gid}
 ${COMMUNITY_BASE_URL}gid/${}
@@ -169,7 +170,9 @@ ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale#SalePageEdit_Sal
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${clanEventGID}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${clan_event_gid}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${eventGID}
+${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${gid_clan_event}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${sale_clan_event_gid}?tab=sale
+${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${}?tab=sale
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/preview/${}
 ${COMMUNITY_BASE_URL}gid/${}/showclanimage/?image_hash_and_ext=${}
@@ -187,6 +190,10 @@ ${COMMUNITY_BASE_URL}invites/ajaxgetall
 ${COMMUNITY_BASE_URL}linkfilter/?url=${}
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
+${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
+${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
+${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
+${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}my
 ${COMMUNITY_BASE_URL}my/ajaxgetappagegatesbypassed/
 ${COMMUNITY_BASE_URL}my/ajaxgetcommunitypreference/
@@ -825,6 +832,7 @@ ${STORE_BASE_URL}curator/${}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}curator/${}/
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetlistdetails
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetrecbyapps
+${STORE_BASE_URL}curator/${}/admin/manage_rss/
 ${STORE_BASE_URL}curator/${}/ajaxgetcreatorhomeinfo
 ${STORE_BASE_URL}curator/${}/sale/${sale_vanity_id}
 ${STORE_BASE_URL}curator/${}/sale/${}
@@ -918,6 +926,7 @@ ${STORE_BASE_URL}reservation/ajaxpreviewoptions
 ${STORE_BASE_URL}reservation/cancelreservation
 ${STORE_BASE_URL}sale/${sale_vanity_id}
 ${STORE_BASE_URL}sale/${strVanity}
+${STORE_BASE_URL}sale/${vanity}
 ${STORE_BASE_URL}sale/${}
 ${STORE_BASE_URL}saleaction/ajaxforceupdatefeaturedapptags
 ${STORE_BASE_URL}saleaction/ajaxgetallitemsforsale

@@ -261,6 +261,11 @@ body.v6 .game_area_purchase h2.package_group {
 	color: #8f98a0;
 }
 
+.glance_ctn .release_date .date {
+    max-height: 30px;
+    overflow: hidden;
+}
+
 .glance_ctn .release_date  {
 	padding-top: 9px;
 	padding-bottom: 13px;
@@ -501,6 +506,8 @@ img.game_header_image_full {
     font-weight: normal;
     color: #d5d6d8;
     line-height: 26px;
+    max-height: 54px;
+    overflow: hidden;
 }
 .game_area_comingsoon .not_yet {
     color: #90aabb;

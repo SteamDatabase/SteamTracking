@@ -1,0 +1,15 @@
+.scrollpanel_ScrollPanel_1Ecbh {
+  position: relative;
+}
+.scrollpanel_ScrollY_3yFwd,
+.scrollpanel_ScrollBoth_7h7DE {
+  overflow-y: auto;
+  scroll-padding-top: 20px;
+  scroll-padding-bottom: 20px;
+}
+.scrollpanel_ScrollX_3TJWg,
+.scrollpanel_ScrollBoth_7h7DE {
+  overflow-x: auto;
+  scroll-padding-left: 20px;
+  scroll-padding-right: 20px;
+}

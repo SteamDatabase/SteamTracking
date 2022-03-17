@@ -30,8 +30,8 @@
         h = a("0OaU"),
         w = a("3Gzo"),
         g = a("j54C"),
-        j = a("exH9"),
-        O = a("TLQK"),
+        O = a("exH9"),
+        j = a("TLQK"),
         N = a("IzPI"),
         I = a("lkRc"),
         S = a("pcg8"),
@@ -79,7 +79,7 @@
                 n.a.createElement(
                   i.c,
                   { className: "pageheader curator_name", href: a },
-                  Object(O.f)("#SteamCurator_List_Header_List", t.group_name)
+                  Object(j.f)("#SteamCurator_List_Header_List", t.group_name)
                 )
               )
             )
@@ -133,12 +133,12 @@
                     const e = t.map((e) => e.recommended_app.appid);
                     B.a
                       .Get()
-                      .QueueMultipleAppRequests(e, E.j)
+                      .QueueMultipleAppRequests(e, E.h)
                       .then(() => {
                         o(
                           t.filter(
                             (e) =>
-                              !Object(E.d)(
+                              !Object(E.e)(
                                 B.a.Get().GetApp(e.recommended_app.appid)
                               )
                           )
@@ -153,7 +153,7 @@
           return null;
         if (null == c)
           return n.a.createElement(h.a, {
-            string: Object(O.f)("#Loading"),
+            string: Object(j.f)("#Loading"),
             position: "center",
             size: "medium",
           });
@@ -175,7 +175,7 @@
                 n.a.createElement(
                   u.a,
                   {
-                    className: Object(j.a)(
+                    className: Object(O.a)(
                       T.a.CuratorList,
                       d && T.a.CuratorListGrid
                     ),
@@ -197,13 +197,13 @@
                     n.a.createElement(
                       "span",
                       null,
-                      Object(O.l)("#SteamCurator_Hidden", s - c.length),
+                      Object(j.l)("#SteamCurator_Hidden", s - c.length),
                       " "
                     ),
                     n.a.createElement(
                       i.c,
                       { href: I.d.STORE_BASE_URL + "account/preferences/" },
-                      Object(O.f)("#SteamCurator_Setting")
+                      Object(j.f)("#SteamCurator_Setting")
                     )
                   ),
                 n.a.createElement(
@@ -212,12 +212,12 @@
                   n.a.createElement(
                     "h2",
                     null,
-                    Object(O.f)("#SteamCurator_ExploreMoreTitle")
+                    Object(j.f)("#SteamCurator_ExploreMoreTitle")
                   ),
                   n.a.createElement(
                     i.c,
                     { href: a.vanity_url },
-                    Object(O.m)("#SteamCurator_MoreReviews", a.group_name)
+                    Object(j.m)("#SteamCurator_MoreReviews", a.group_name)
                   )
                 )
               )
@@ -234,9 +234,9 @@
             t.list_jsondata.youtube_link &&
             Object(m.b)(t.list_jsondata.youtube_link),
           s = Object(o.g)(I.d.LANGUAGE),
-          u = O.a.GetWithFallback(t.localized_flat_title, s),
-          d = O.a.GetWithFallback(t.localized_flat_blurb, s),
-          p = O.a.GetWithFallback(t.localized_flat_link, s),
+          u = j.a.GetWithFallback(t.localized_flat_title, s),
+          d = j.a.GetWithFallback(t.localized_flat_blurb, s),
+          p = j.a.GetWithFallback(t.localized_flat_link, s),
           v =
             a &&
             a.GetImageURL(
@@ -309,7 +309,7 @@
             null === (a = c.list_jsondata.app_data) || void 0 === a
               ? void 0
               : a[b],
-          j = f && Object(m.b)(f),
+          O = f && Object(m.b)(f),
           N = E != _.c && E,
           S = v.a.Get().BHasDemoAppID(b),
           G = null == g ? void 0 : g.img_url,
@@ -320,10 +320,10 @@
           n.a.createElement(
             "div",
             { className: T.a.CapsuleCtn },
-            j
+            O
               ? n.a.createElement(P, {
-                  strVideoID: j.strVideoID,
-                  nStartSeconds: j.nStartSeconds,
+                  strVideoID: O.strVideoID,
+                  nStartSeconds: O.nStartSeconds,
                   info: p,
                   strImgOverrideUrl: G,
                   bShowDemoButton: S,
@@ -348,14 +348,14 @@
               n.a.createElement(
                 "div",
                 { className: T.a.ReviewDate },
-                w ? d.GetFormattedSteamReleaseDate() : Object(O.n)(C)
+                w ? d.GetFormattedSteamReleaseDate() : Object(j.n)(C)
               )
             ),
             Boolean(N) &&
               n.a.createElement(
                 "div",
                 { className: T.a.ReviewBlurb },
-                Object(O.f)("#SteamCurator_ReviewTextQuoted", N)
+                Object(j.f)("#SteamCurator_ReviewTextQuoted", N)
               ),
             Boolean(f) && n.a.createElement(x, { url: f })
           )
@@ -425,19 +425,19 @@
             return n.a.createElement(
               "div",
               { className: T.a.Recommended },
-              Object(O.f)("#SteamCurator_Recommended")
+              Object(j.f)("#SteamCurator_Recommended")
             );
           case 1:
             return n.a.createElement(
               "div",
               { className: T.a.NotRecommended },
-              Object(O.f)("#SteamCurator_NotRecommended")
+              Object(j.f)("#SteamCurator_NotRecommended")
             );
           case 2:
             return n.a.createElement(
               "div",
               { className: T.a.Informational },
-              Object(O.f)("#SteamCurator_Informational")
+              Object(j.f)("#SteamCurator_Informational")
             );
           default:
             return null;
@@ -465,7 +465,7 @@
               preferredFocus: !1,
               autoFocus: !1,
             },
-            Object(O.f)(
+            Object(j.f)(
               r
                 ? "#SteamCurator_WatchFullReview"
                 : "#SteamCurator_ReadFullReview"
@@ -474,7 +474,7 @@
           n.a.createElement(
             "div",
             { className: T.a.FullReviewDomain },
-            Object(O.f)("#SteamCurator_ReviewLinkHostnameBracketed", a)
+            Object(j.f)("#SteamCurator_ReviewLinkHostnameBracketed", a)
           )
         );
       }

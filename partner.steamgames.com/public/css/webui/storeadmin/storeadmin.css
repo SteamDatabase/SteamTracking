@@ -23407,6 +23407,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   .tabulator-cell.tabulator-cell.pricinggrid_PricingGridDataColumn_OVDCt {
   border-right: 1px solid #303238;
 }
+div.pricinggrid_HoverToolTip_1OS2v {
+  z-index: 2000;
+}
 .pricinggridcell_PriceCell_1sKIc {
   display: flex;
   align-items: center;
@@ -23455,6 +23458,117 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 }
 .pricinggridcell_ResetButtonCtn_1-Jx5:hover {
   background: gray;
+}
+.saveprices_ToolbarCtn_3lAEz {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: #9297a5;
+  transform: translateY(94px);
+  transition: transform 0.3s ease-in;
+}
+.saveprices_ToolbarCtn_3lAEz.saveprices_Visible_CLKT9 {
+  transform: translateY(0);
+}
+.saveprices_ToolbarInfo_1bPMN {
+  padding: 8px 24px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #303238;
+  border: 1px dashed;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.saveprices_ChangeCount_1fN8w {
+  color: #cfbf61;
+  padding: 4px 12px;
+}
+.saveprices_Buttons_1krNh {
+  display: flex;
+  padding: 4px 12px;
+}
+.saveprices_Buttons_1krNh .saveprices_Button_2Jjzu {
+  margin-left: 24px;
+  padding: 0 20px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.saveprices_Buttons_1krNh .saveprices_Button_2Jjzu.saveprices_SaveButton_16sHr {
+  background-color: #789805;
+}
+.saveprices_NavigationWarning_3lm-H {
+  margin-bottom: 8px;
+}
+.saveprices_SeeDetailsSection_36-JC {
+  margin-top: 12px;
+  width: 600px;
+}
+.saveprices_SeeDetailsButton_4aHIW {
+  padding: 0 18px;
+}
+.saveprices_PriceOverrideSummaryList_3Y8X4 {
+  padding: 8px;
+  border-radius: 4px;
+  background: #3f454f;
+}
+.saveprices_PriceOverrideSummary_30js1 {
+  display: flex;
+  font-size: 12px;
+  width: 100%;
+}
+.saveprices_PriceOverrideSummary_30js1 .saveprices_PackageName_IcOXT,
+.saveprices_PriceOverrideSummary_30js1 .saveprices_OldPrice_1lyzs,
+.saveprices_PriceOverrideSummary_30js1 .saveprices_NewPrice_nEEX4,
+.saveprices_PriceOverrideSummary_30js1 .saveprices_Currency_3EgiM,
+.saveprices_PriceOverrideSummary_30js1 .saveprices_PricePrefix_2suSE,
+.saveprices_PriceOverrideSummary_30js1 .saveprices_PriceSuffix_3uRmh {
+  padding: 0 8px;
+  flex: none;
+  box-sizing: border-box;
+}
+.saveprices_PriceOverrideSummary_30js1 .saveprices_Currency_3EgiM {
+  width: 72px;
+}
+.saveprices_PriceOverrideSummary_30js1 .saveprices_PackageName_IcOXT {
+  width: 50%;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.saveprices_PriceOverrideSummary_30js1 .saveprices_OldPrice_1lyzs,
+.saveprices_PriceOverrideSummary_30js1 .saveprices_NewPrice_nEEX4 {
+  padding: 0;
+  width: 50px;
+  text-align: right;
+  white-space: nowrap;
+}
+.saveprices_PriceOverrideSummary_30js1 .saveprices_NewPrice_nEEX4 {
+  color: #fff;
+}
+.saveprices_PriceOverrideSummary_30js1 .saveprices_ChangeArrow_3Pb94 {
+  flex: none;
+  height: 15px;
+  width: 15px;
+}
+.saveprices_PriceOverrideSummary_30js1 .saveprices_PricePrefix_2suSE {
+  padding: 0 4px;
+  width: 40px;
+  text-align: right;
+}
+.saveprices_PriceOverrideSummary_30js1 .saveprices_PriceSuffix_3uRmh {
+  padding: 0 4px;
+  width: 32px;
+  text-align: left;
+}
+div.saveprices_HoverToolTip_1yXHp {
+  z-index: 2000;
 }
 .discountcustomdialog_CreateCustomDiscountCtn_2T8Dy {
   position: relative;

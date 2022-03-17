@@ -10488,7 +10488,7 @@
               strSearchQuery: d,
               facetFilterState: m,
             } = this.state;
-            yield C.a.Get().HintLoad(),
+            yield Promise.all([C.a.Get().HintLoad(), Object(O.g)(o, n.e)]),
               i.enable_faceted_browsing && Object(w.G)(() => m.PruneFacets());
             let u = !0,
               p = Math.max(l, e + 1);
@@ -10498,8 +10498,8 @@
               o.length <= e && u;
 
             ) {
-              const l = this.m_nHighestSentRequestID;
-              let _, g;
+              const n = this.m_nHighestSentRequestID;
+              let l, _;
               try {
                 const e = {
                     strSectionFilter: Object(h.u)(i),
@@ -10522,8 +10522,8 @@
                       0,
                       this.m_cancelSignal
                     );
-                (_ = n.appids),
-                  (g = n.rgStoreItemKeys),
+                (l = n.appids),
+                  (_ = n.rgStoreItemKeys),
                   (u = n.bHasPossibleMoreResults),
                   (null == i ? void 0 : i.enable_faceted_browsing) &&
                     (m.SetFacetCounts(n.facetCounts),
@@ -10541,29 +10541,28 @@
                   }))
                 );
               }
-              if (this.m_nHighestReceivedRequestID > l) return;
-              (this.m_nHighestReceivedRequestID = l),
-                (o = g
-                  ? g.map((e) => {
+              if (this.m_nHighestReceivedRequestID > n) return;
+              (this.m_nHighestReceivedRequestID = n),
+                (o = _
+                  ? _.map((e) => {
                       const t = e.split("_"),
                         r = "app" === t[0] ? "game" : t[0];
                       return { id: Number(t[1]), type: r };
                     })
-                  : _.map((e) => ({ id: e, type: "game" }))),
+                  : l.map((e) => ({ id: e, type: "game" }))),
                 this.state.strSearchQuery ||
                   t.BUsesContentHubForItemSource() ||
                   (o = o.filter((e) => !a || a.ShouldShowCapsule(e))),
                 (null == i ? void 0 : i.enable_faceted_browsing) &&
-                  (o = m.ApplyOptInFilters(o)),
-                yield Object(O.g)(o, n.e);
-              let b = new Array();
+                  (o = m.ApplyOptInFilters(o));
+              let g = new Array();
               if (null == i ? void 0 : i.enable_faceted_browsing) {
-                o = yield m.ApplyUserPreferenceFilters(o, !1, b);
+                o = yield m.ApplyUserPreferenceFilters(o, !1, g);
                 const e = u;
                 m.UpdateMatchCount(e, o.length);
               }
-              (o = yield Object(O.a)(o, !1, b)),
-                (c = b.length),
+              (o = yield Object(O.a)(o, !1, g)),
+                (c = g.length),
                 o.length <= e && (p += 8);
             }
             if (this.m_cancelSignal.token.reason) return;
@@ -17036,6 +17035,9 @@
         include_platforms: !0,
         include_tag_count: 20,
         include_basic_info: !0,
+        include_trailers: !0,
+        include_reviews: !0,
+        include_screenshots: !0,
       };
       function c() {
         return { width: 231, height: 87 };

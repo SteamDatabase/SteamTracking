@@ -5475,7 +5475,7 @@
               i.GetFormattedSteamReleaseDate()
             ),
             Boolean(m) &&
-              c.a.createElement(Mt.d, {
+              c.a.createElement(Mt.c, {
                 info: { id: t, type: "game" },
                 bShowDemoButton: !0,
               })
