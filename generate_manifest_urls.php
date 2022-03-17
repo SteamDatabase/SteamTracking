@@ -77,6 +77,8 @@ $KnownUrls = ParseUrls();
 
 echo PHP_EOL . 'New urls to add:' . PHP_EOL;
 
+natsort( $Urls );
+
 foreach( $Urls as $Url )
 {
 	if( !isset( $KnownUrls[ $Url ] ) )
