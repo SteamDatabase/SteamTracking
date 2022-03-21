@@ -3411,6 +3411,7 @@ CUsabilityTracker.prototype.PostStats = function()
 
 		this.m_stats.windowWidth = window.innerWidth;
 	this.m_stats.windowHeight = window.innerHeight;
+	this.m_stats.rgExcludedDescIDs = GDynamicStore.s_rgExcludedDescIDs;
 
 	var strStats = JSON.stringify( this.m_stats );
 	var strURL = "https:\/\/store.steampowered.com\/default\/usabilitytracking\/";
