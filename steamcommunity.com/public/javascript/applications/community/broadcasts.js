@@ -33388,11 +33388,15 @@
             avatar_medium_url: e.avatar_medium_url,
             group_name: e.group_name,
             creator_page_bg_url: e.creator_page_bg_url,
+            partner_events_enabled: e.partner_events_enabled,
           };
           0 != e.appid && this.m_mapAppIDToClanInfo.set(e.appid, t),
             e.vanity_url &&
               e.vanity_url.length > 0 &&
-              this.m_mapVanityToClanInfo.set(e.vanity_url, t),
+              this.m_mapVanityToClanInfo.set(
+                e.vanity_url.toLocaleLowerCase(),
+                t
+              ),
             this.m_mapClanAccountIDToClanInfo.set(e.clanAccountID, t);
         }
         GetRequestParam() {
@@ -33435,9 +33439,17 @@
         }
         LoadOGGClanInfoForIdentifier(e) {
           return Object(a.a)(this, void 0, void 0, function* () {
-            if ((this.LazyInit(), this.m_mapVanityToClanInfo.has(e)))
-              return this.m_mapVanityToClanInfo.get(e);
-            let t = "storevanity_" + e;
+            if (
+              (this.LazyInit(),
+              this.m_mapVanityToClanInfo.has(
+                null == e ? void 0 : e.toLocaleLowerCase()
+              ))
+            )
+              return this.m_mapVanityToClanInfo.get(
+                null == e ? void 0 : e.toLocaleLowerCase()
+              );
+            let t =
+              "storevanity_" + (null == e ? void 0 : e.toLocaleLowerCase());
             return (
               this.m_mapPromisesLoading.has(t) ||
                 this.m_mapPromisesLoading.set(
@@ -33457,20 +33469,32 @@
               "/ajaxgetvanityandclanid/";
             let r = yield i.a.get(t, { params: this.GetRequestParam() });
             return (
-              this.InternalSetupValue(r.data), this.m_mapVanityToClanInfo.get(e)
+              this.InternalSetupValue(r.data),
+              this.m_mapVanityToClanInfo.get(
+                null == e ? void 0 : e.toLocaleLowerCase()
+              )
             );
           });
         }
         LoadOGGClanInfoForGroupVanity(e) {
           return Object(a.a)(this, void 0, void 0, function* () {
-            if ((this.LazyInit(), this.m_mapVanityToClanInfo.has(e)))
-              return this.m_mapVanityToClanInfo.get(e);
+            if (
+              (this.LazyInit(),
+              this.m_mapVanityToClanInfo.has(
+                null == e ? void 0 : e.toLocaleLowerCase()
+              ))
+            )
+              return this.m_mapVanityToClanInfo.get(
+                null == e ? void 0 : e.toLocaleLowerCase()
+              );
             let t = "community_name_" + e;
             return (
               this.m_mapPromisesLoading.has(t) ||
                 this.m_mapPromisesLoading.set(
                   t,
-                  this.InternalLoadOGGClanInfoForGroupVanity(e)
+                  this.InternalLoadOGGClanInfoForGroupVanity(
+                    null == e ? void 0 : e.toLocaleLowerCase()
+                  )
                 ),
               this.m_mapPromisesLoading.get(t)
             );
@@ -33485,7 +33509,10 @@
               "/ajaxgetvanityandclanid/";
             let r = yield i.a.get(t, { params: this.GetRequestParam() });
             return (
-              this.InternalSetupValue(r.data), this.m_mapVanityToClanInfo.get(e)
+              this.InternalSetupValue(r.data),
+              this.m_mapVanityToClanInfo.get(
+                null == e ? void 0 : e.toLocaleLowerCase()
+              )
             );
           });
         }
@@ -33529,7 +33556,9 @@
         }
         GetOGGClanInfo(e) {
           return "string" == typeof e
-            ? this.m_mapVanityToClanInfo.get(e)
+            ? this.m_mapVanityToClanInfo.get(
+                null == e ? void 0 : e.toLocaleLowerCase()
+              )
             : this.m_mapAppIDToClanInfo.get(e);
         }
         GetClanSteamIDForAppID(e) {

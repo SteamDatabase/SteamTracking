@@ -3,6 +3,66 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [134],
   {
+    "0OaU": function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return l;
+      });
+      var s = n("q1tI"),
+        a = n.n(s),
+        o = n("6Y59"),
+        i = n("2i24"),
+        r = n.n(i);
+      class l extends a.a.PureComponent {
+        constructor(e) {
+          super(e);
+        }
+        AddSizeClass(e) {
+          "small" == this.props.size
+            ? e.push(r.a.throbber_small)
+            : "medium" == this.props.size
+            ? e.push(r.a.throbber_medium)
+            : "xlarge" == this.props.size
+            ? e.push(r.a.throbber_xlarge)
+            : "xxlarge" == this.props.size
+            ? e.push(r.a.throbber_xxlarge)
+            : e.push(r.a.throbber_large);
+        }
+        render() {
+          let e = [r.a.LoadingWrapper, "SteamLogoThrobber"];
+          this.AddSizeClass(e),
+            void 0 === this.props.string && e.push(r.a.noString),
+            this.props.className && e.push(this.props.className),
+            this.props.static && e.push(r.a.Static);
+          let t = a.a.createElement(
+            "div",
+            { className: e.join(" ") },
+            a.a.createElement(
+              "div",
+              { className: r.a.Throbber },
+              a.a.createElement(o.nb, { className: r.a.base }),
+              a.a.createElement(o.nb, { className: r.a.blur })
+            )
+          );
+          return a.a.createElement(
+            "div",
+            {
+              className:
+                "center" == this.props.position
+                  ? r.a.throbber_center_wrapper
+                  : "",
+            },
+            t,
+            Boolean(this.props.string) &&
+              a.a.createElement(
+                "div",
+                { className: r.a.ThrobberText },
+                this.props.string
+              )
+          );
+        }
+      }
+    },
     "3USw": function (e, t, n) {
       e.exports = {
         SectionTitleHeader: "collapseablesection_SectionTitleHeader_2g5oN",
@@ -171,11 +231,11 @@
       }
       Object(s.b)([l.a], _.prototype, "ResetFidgetTimer", null);
       var b = n("Qcoi"),
-        v = n("vDqi"),
-        Q = n.n(v),
-        p = (n("mgoM"), n("X2UP")),
-        g = (n("AiWL"), n("OS6B"));
-      class h {
+        p = n("vDqi"),
+        v = n.n(p),
+        Q = (n("mgoM"), n("X2UP")),
+        h = (n("AiWL"), n("OS6B"));
+      class g {
         constructor() {
           (this.m_mapQAndASessions = new Map()),
             (this.m_mapQAndAChangeCallbackList = new Map()),
@@ -186,7 +246,7 @@
             "dev" == u.c.WEB_UNIVERSE && (window.g_QAndAStore = this);
         }
         static Get() {
-          return h.s_Singleton || (h.s_Singleton = new h()), h.s_Singleton;
+          return g.s_Singleton || (g.s_Singleton = new g()), g.s_Singleton;
         }
         GetQAndACallbackList(e) {
           return (
@@ -238,7 +298,7 @@
               i = {};
             let r = null;
             try {
-              const n = yield Q.a.get(s, {
+              const n = yield v.a.get(s, {
                 params: i,
                 cancelToken: null == e ? void 0 : e.token,
               });
@@ -262,7 +322,7 @@
             } catch (e) {
               r = e;
             }
-            const l = Object(g.a)(r);
+            const l = Object(h.a)(r);
             return (
               console.error(
                 "Could not load question and answer sessions for group",
@@ -297,7 +357,7 @@
             r.append("sessionid", u.c.SESSIONID), r.append("name", e);
             let l = null;
             try {
-              const e = yield Q.a.post(s, r, {
+              const e = yield v.a.post(s, r, {
                 withCredentials: !0,
                 cancelToken: null == t ? void 0 : t.token,
               });
@@ -321,7 +381,7 @@
             } catch (e) {
               l = e;
             }
-            const c = Object(g.a)(l);
+            const c = Object(h.a)(l);
             return (
               console.error("Could not create Q&A", e, c.strErrorMsg, c),
               null !==
@@ -353,7 +413,7 @@
             l.append("sessionid", u.c.SESSIONID), l.append("name", t);
             let c = null;
             try {
-              const o = yield Q.a.post(s, l, {
+              const o = yield v.a.post(s, l, {
                 withCredentials: !0,
                 cancelToken: null == n ? void 0 : n.token,
               });
@@ -374,7 +434,7 @@
             } catch (e) {
               c = e;
             }
-            const d = Object(g.a)(c);
+            const d = Object(h.a)(c);
             return (
               console.error("Could not rename Q&A", e, t, d.strErrorMsg, d),
               null !==
@@ -406,7 +466,7 @@
             r.append("sessionid", u.c.SESSIONID);
             let l = null;
             try {
-              const a = yield Q.a.post(s, r, {
+              const a = yield v.a.post(s, r, {
                 withCredentials: !0,
                 cancelToken: null == t ? void 0 : t.token,
               });
@@ -424,7 +484,7 @@
             } catch (e) {
               l = e;
             }
-            const c = Object(g.a)(l);
+            const c = Object(h.a)(l);
             return (
               console.error("Could not delete Q&A", e, c.strErrorMsg, c),
               null !==
@@ -454,11 +514,11 @@
                   ? "/ajaxgetqandasessionforuser/"
                   : "/ajaxgetqandasession/",
               b = u.c.COMMUNITY_BASE_URL + "questions/" + u.b.VANITY_ID + s + e,
-              v = {};
-            let p = null;
+              p = {};
+            let Q = null;
             try {
-              const t = yield Q.a.get(b, {
-                params: v,
+              const t = yield v.a.get(b, {
+                params: p,
                 cancelToken: null == n ? void 0 : n.token,
               });
               if (
@@ -517,18 +577,18 @@
                   1
                 );
               }
-              p = { response: t };
+              Q = { response: t };
             } catch (e) {
-              p = e;
+              Q = e;
             }
-            const h = Object(g.a)(p);
+            const g = Object(h.a)(Q);
             return (
-              console.error("Could not load Q&A", e, h.strErrorMsg, h),
+              console.error("Could not load Q&A", e, g.strErrorMsg, g),
               null !==
                 (A =
                   null ===
                     (_ =
-                      null === (m = null == p ? void 0 : p.response) ||
+                      null === (m = null == Q ? void 0 : Q.response) ||
                       void 0 === m
                         ? void 0
                         : m.data) || void 0 === _
@@ -581,7 +641,7 @@
             c.append("sessionid", u.c.SESSIONID), c.append("question", t);
             let d = null;
             try {
-              const t = yield Q.a.post(s, c, {
+              const t = yield v.a.post(s, c, {
                 withCredentials: !0,
                 cancelToken: null == n ? void 0 : n.token,
               });
@@ -598,7 +658,7 @@
             } catch (e) {
               d = e;
             }
-            const m = Object(g.a)(d);
+            const m = Object(h.a)(d);
             return (
               console.error(
                 "Could not upload question",
@@ -647,7 +707,7 @@
               d.append("action", 1 == n ? "show" : "hide");
             let m = null;
             try {
-              const t = yield Q.a.post(s, d, {
+              const t = yield v.a.post(s, d, {
                 withCredentials: !0,
                 cancelToken: null == a ? void 0 : a.token,
               });
@@ -663,7 +723,7 @@
             } catch (e) {
               m = e;
             }
-            const _ = Object(g.a)(m);
+            const _ = Object(h.a)(m);
             return (
               console.error(
                 "Could not moderate question",
@@ -711,7 +771,7 @@
               d.append("answer", n);
             let m = null;
             try {
-              const t = yield Q.a.post(s, d, {
+              const t = yield v.a.post(s, d, {
                 withCredentials: !0,
                 cancelToken: null == a ? void 0 : a.token,
               });
@@ -727,7 +787,7 @@
             } catch (e) {
               m = e;
             }
-            const _ = Object(g.a)(m);
+            const _ = Object(h.a)(m);
             return (
               console.error(
                 "Could not upload answer",
@@ -785,7 +845,7 @@
               A.append("up", n ? "1" : "0");
             let b = null;
             try {
-              const e = yield Q.a.post(_, A, {
+              const e = yield v.a.post(_, A, {
                 withCredentials: !0,
                 cancelToken: null == a ? void 0 : a.token,
               });
@@ -805,9 +865,9 @@
             })),
               this.m_mapQuestions.set(t, s),
               this.GetQuestionCallbackList(t).Dispatch(s);
-            const v = Object(g.a)(b);
+            const p = Object(h.a)(b);
             return (
-              console.error("Could not upload vote", e, t, n, v.strErrorMsg, v),
+              console.error("Could not upload vote", e, t, n, p.strErrorMsg, p),
               null !==
                 (c =
                   null ===
@@ -825,16 +885,16 @@
         }
       }
       function C(e) {
-        const t = Object(p.a)("useQAndASession"),
+        const t = Object(Q.a)("useQAndASession"),
           n = o.a.useCallback(
             (n) =>
               Object(s.a)(this, void 0, void 0, function* () {
                 var s;
                 return (
-                  (null === (s = h.Get().GetSession(e)) || void 0 === s
+                  (null === (s = g.Get().GetSession(e)) || void 0 === s
                     ? void 0
                     : s.bUserCanAskQuestions) &&
-                  (yield h.Get().AskNewQuestion(e, n, t))
+                  (yield g.Get().AskNewQuestion(e, n, t))
                 );
               }),
             [e, t]
@@ -843,10 +903,10 @@
             (n, s) => {
               var a;
               return (
-                (null === (a = h.Get().GetSession(e)) || void 0 === a
+                (null === (a = g.Get().GetSession(e)) || void 0 === a
                   ? void 0
                   : a.bUserCanAskQuestions) &&
-                h.Get().VoteOnQuestion(e, n, s, t)
+                g.Get().VoteOnQuestion(e, n, s, t)
               );
             },
             [e, t]
@@ -866,7 +926,7 @@
                 (t = null == e ? void 0 : e.rgQuestionGIDs) && void 0 !== t
                 ? t
                 : []) {
-                const e = h.Get().GetQuestion(n);
+                const e = g.Get().GetQuestion(n);
                 switch (null == e ? void 0 : e.eState) {
                   case 1:
                     l.push(n);
@@ -884,23 +944,23 @@
               return (
                 l.sort(
                   (e, t) =>
-                    h.Get().GetQuestion(t).nVoteCount -
-                    h.Get().GetQuestion(e).nVoteCount
+                    g.Get().GetQuestion(t).nVoteCount -
+                    g.Get().GetQuestion(e).nVoteCount
                 ),
                 c.sort(
                   (e, t) =>
-                    h.Get().GetQuestion(t).rtAnswerTime -
-                    h.Get().GetQuestion(e).rtAnswerTime
+                    g.Get().GetQuestion(t).rtAnswerTime -
+                    g.Get().GetQuestion(e).rtAnswerTime
                 ),
                 d.sort(
                   (e, t) =>
-                    h.Get().GetQuestion(t).rtPostTime -
-                    h.Get().GetQuestion(e).rtPostTime
+                    g.Get().GetQuestion(t).rtPostTime -
+                    g.Get().GetQuestion(e).rtPostTime
                 ),
                 u.sort(
                   (e, t) =>
-                    h.Get().GetQuestion(t).rtPostTime -
-                    h.Get().GetQuestion(e).rtPostTime
+                    g.Get().GetQuestion(t).rtPostTime -
+                    g.Get().GetQuestion(e).rtPostTime
                 ),
                 {
                   bIsLoaded: s,
@@ -918,23 +978,23 @@
             },
             [n, a]
           ),
-          [r, l] = o.a.useState(() => i(h.Get().GetSession(e))),
+          [r, l] = o.a.useState(() => i(g.Get().GetSession(e))),
           c = o.a.useCallback((e) => l(i(e)), [i]);
         return (
-          Object(d.d)(h.Get().GetQAndACallbackList(e), c),
+          Object(d.d)(g.Get().GetQAndACallbackList(e), c),
           o.a.useEffect(() => {
-            r.bIsLoaded || h.Get().LoadSession(e);
+            r.bIsLoaded || g.Get().LoadSession(e);
           }, [r.bIsLoaded, e]),
           r
         );
       }
       let f = null;
-      function S(e) {
-        const t = Object(p.a)("useReloadFunction"),
+      function E(e) {
+        const t = Object(Q.a)("useReloadFunction"),
           [n, s] = o.a.useState(!1),
           a = o.a.useCallback(() => {
             s(!0);
-            const n = h.Get().LoadSession(e, !1, t);
+            const n = g.Get().LoadSession(e, !1, t);
             return n.then(() => s(!1)), n;
           }, [e, t]),
           i = (function (e) {
@@ -967,15 +1027,15 @@
           o.a.useMemo(() => ({ fnReload: a, bIsReloading: n }), [a, n])
         );
       }
-      function E(e) {
-        const t = Object(p.a)("useQuestionModeratorActions"),
+      function S(e) {
+        const t = Object(Q.a)("useQuestionModeratorActions"),
           n = o.a.useCallback(
             (n, s) => {
               var a;
               return (
-                (null === (a = h.Get().GetSession(e)) || void 0 === a
+                (null === (a = g.Get().GetSession(e)) || void 0 === a
                   ? void 0
-                  : a.bUserCanModerate) && h.Get().AnswerQuestion(e, n, s, t)
+                  : a.bUserCanModerate) && g.Get().AnswerQuestion(e, n, s, t)
               );
             },
             [e, t]
@@ -984,9 +1044,9 @@
             (n, s) => {
               var a;
               return (
-                (null === (a = h.Get().GetSession(e)) || void 0 === a
+                (null === (a = g.Get().GetSession(e)) || void 0 === a
                   ? void 0
-                  : a.bUserCanModerate) && h.Get().ModerateQuestion(e, n, s, t)
+                  : a.bUserCanModerate) && g.Get().ModerateQuestion(e, n, s, t)
               );
             },
             [e, t]
@@ -1013,11 +1073,11 @@
         B = n.n(V);
       function R(e) {
         const t = (function () {
-          const [e, t] = o.a.useState(h.Get().GetAllSessions());
+          const [e, t] = o.a.useState(g.Get().GetAllSessions());
           return (
-            Object(d.d)(h.Get().GetDashboardCallbackList(), t),
+            Object(d.d)(g.Get().GetDashboardCallbackList(), t),
             o.a.useEffect(() => {
-              0 == e.length && h.Get().LoadAllSessions();
+              0 == e.length && g.Get().LoadAllSessions();
             }, [e.length]),
             e
           );
@@ -1087,8 +1147,8 @@
       }
       function H(e) {
         const t = (function () {
-            const e = Object(p.a)("useCreateQAndAFn");
-            return o.a.useCallback((t) => h.Get().CreateNewSession(t, e), [e]);
+            const e = Object(Q.a)("useCreateQAndAFn");
+            return o.a.useCallback((t) => g.Get().CreateNewSession(t, e), [e]);
           })(),
           [n, s] = o.a.useState("");
         return o.a.createElement(
@@ -1125,7 +1185,7 @@
             (e) => {
               e.stopPropagation(),
                 e.preventDefault(),
-                Object(D.b)(o.a.createElement(x, { qanda: t }), window, {
+                Object(D.b)(o.a.createElement(F, { qanda: t }), window, {
                   strTitle: Object(G.f)("#QAndA_CreateQAndA_Title"),
                 });
             },
@@ -1134,7 +1194,7 @@
         return o.a.createElement(
           "a",
           { className: B.a.DashboardRow, href: n },
-          o.a.createElement(F, { qanda: t }),
+          o.a.createElement(x, { qanda: t }),
           o.a.createElement("div", { className: B.a.GIDSession }, t.gidSession),
           o.a.createElement(
             "div",
@@ -1152,13 +1212,13 @@
           )
         );
       }
-      function F(e) {
+      function x(e) {
         const { qanda: t } = e,
           [n, s] = o.a.useState(!1),
           [a, i] = o.a.useState(t.strName),
           r = (function () {
-            const e = Object(p.a)("useRenameQAndAFn");
-            return o.a.useCallback((t, n) => h.Get().RenameSession(t, n, e), [
+            const e = Object(Q.a)("useRenameQAndAFn");
+            return o.a.useCallback((t, n) => g.Get().RenameSession(t, n, e), [
               e,
             ]);
           })(),
@@ -1208,11 +1268,11 @@
           n ? c : l
         );
       }
-      function x(e) {
+      function F(e) {
         const { qanda: t } = e,
           n = (function () {
-            const e = Object(p.a)("useDeleteQAndAFn");
-            return o.a.useCallback((t) => h.Get().DeleteSession(t, e), [e]);
+            const e = Object(Q.a)("useDeleteQAndAFn");
+            return o.a.useCallback((t) => g.Get().DeleteSession(t, e), [e]);
           })();
         return o.a.createElement(
           w.e,
@@ -1237,7 +1297,7 @@
           )
         );
       }
-      function Y(e) {
+      function z(e) {
         const {
             gidSession: t,
             gidQuestion: n,
@@ -1247,8 +1307,8 @@
             rtNow: r,
           } = e,
           [l, c] = (function (e) {
-            const [t, n] = o.a.useState(h.Get().GetQuestion(e));
-            Object(d.d)(h.Get().GetQuestionCallbackList(e), n);
+            const [t, n] = o.a.useState(g.Get().GetQuestion(e));
+            Object(d.d)(g.Get().GetQuestionCallbackList(e), n);
             const [s, a] = o.a.useState(!!t);
             return [t, !!t || s];
           })(n);
@@ -1326,7 +1386,7 @@
               )
             )
           ),
-          l.rtAnswerTime && o.a.createElement(z, { question: l, rtNow: r }),
+          l.rtAnswerTime && o.a.createElement(Y, { question: l, rtNow: r }),
           s &&
             o.a.createElement(W, {
               gidSession: t,
@@ -1335,7 +1395,7 @@
             })
         );
       }
-      function z(e) {
+      function Y(e) {
         const { question: t, rtNow: n } = e,
           s = t.rtAnswerTime && n - t.rtAnswerTime,
           a =
@@ -1408,7 +1468,7 @@
       }
       function W(e) {
         const { gidSession: t, gidQuestion: n, eState: s } = e,
-          { fnAnswerQuestion: a, fnModerateQuestion: i } = E(t),
+          { fnAnswerQuestion: a, fnModerateQuestion: i } = S(t),
           r = 0 == s || 3 == s,
           l = 3 != s,
           c = 1 == s;
@@ -1522,7 +1582,7 @@
                   "div",
                   { className: B.a.QuestionList },
                   s.map((e) =>
-                    o.a.createElement(Y, {
+                    o.a.createElement(z, {
                       key: e,
                       gidSession: t,
                       gidQuestion: e,
@@ -1544,7 +1604,7 @@
                   "div",
                   { className: B.a.QuestionList },
                   a.map((e) =>
-                    o.a.createElement(Y, {
+                    o.a.createElement(z, {
                       key: e,
                       gidSession: t,
                       gidQuestion: e,
@@ -1571,16 +1631,16 @@
             rgAnsweredQuestionGIDs: m,
             rgNewQuestionGIDs: _,
           } = C(t),
-          { fnReload: b, bIsReloading: v } = S(t),
-          Q = Object(r.c)(10),
-          p = l && n,
-          { fnModerateQuestion: g } = E(t);
+          { fnReload: b, bIsReloading: p } = E(t),
+          v = Object(r.c)(10),
+          Q = l && n,
+          { fnModerateQuestion: h } = S(t);
         return o.a.createElement(
           "div",
           { className: Object(M.a)(B.a.QAMainCtn, n && B.a.QASplitColumns) },
           o.a.createElement(
             "div",
-            { className: Object(M.a)(B.a.QAHeader, p && B.a.ModerationHeader) },
+            { className: Object(M.a)(B.a.QAHeader, Q && B.a.ModerationHeader) },
             o.a.createElement(
               N.d,
               {
@@ -1589,7 +1649,7 @@
                 className: Object(M.a)(
                   B.a.InputButton,
                   B.a.Reload,
-                  v && B.a.Reloading
+                  p && B.a.Reloading
                 ),
               },
               o.a.createElement(
@@ -1598,7 +1658,7 @@
                 o.a.createElement(q.X, null)
               )
             ),
-            p
+            Q
               ? o.a.createElement(
                   o.a.Fragment,
                   null,
@@ -1616,7 +1676,7 @@
                         onClick: () =>
                           Object(s.a)(this, void 0, void 0, function* () {
                             for (const e of [_, u, m])
-                              for (const t of e) yield g(t, 3);
+                              for (const t of e) yield h(t, 3);
                           }),
                         className: B.a.InputButton,
                       },
@@ -1647,14 +1707,14 @@
                   { className: B.a.QuestionList },
                   a
                     ? u.map((e) =>
-                        o.a.createElement(Y, {
+                        o.a.createElement(z, {
                           key: e,
                           gidSession: t,
                           gidQuestion: e,
-                          bUserCanModerate: p,
+                          bUserCanModerate: Q,
                           bUserCanVote: i,
                           fnVoteOnQuestion: d,
-                          rtNow: Q,
+                          rtNow: v,
                         })
                       )
                     : o.a.createElement(T.a, { position: "center" })
@@ -1672,14 +1732,14 @@
                       "div",
                       { className: B.a.QuestionList },
                       m.map((e) =>
-                        o.a.createElement(Y, {
+                        o.a.createElement(z, {
                           key: e,
                           gidSession: t,
                           gidQuestion: e,
-                          bUserCanModerate: p,
+                          bUserCanModerate: Q,
                           bUserCanVote: i,
                           fnVoteOnQuestion: d,
-                          rtNow: Q,
+                          rtNow: v,
                         })
                       )
                     )
@@ -1689,7 +1749,7 @@
       }
       function $(e) {
         const [t, n] = o.a.useState(!1),
-          a = Object(p.a)("QuestionBox");
+          a = Object(Q.a)("QuestionBox");
         return o.a.createElement(
           o.a.Fragment,
           null,

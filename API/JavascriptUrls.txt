@@ -177,6 +177,7 @@ ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${}?tab=sale
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/preview/${}
 ${COMMUNITY_BASE_URL}gid/${}/showclanimage/?image_hash_and_ext=${}
 ${COMMUNITY_BASE_URL}group/${clanAccountID}
+${COMMUNITY_BASE_URL}groups
 ${COMMUNITY_BASE_URL}groups/${VANITY_ID}
 ${COMMUNITY_BASE_URL}groups/${vanity_url}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
