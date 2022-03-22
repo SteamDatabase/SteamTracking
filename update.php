@@ -411,7 +411,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				{
 					$Data = stripcslashes( $Matches[ 1 ] );
 					$Data = json_decode( $Data, true );
-					$Data = json_encode( $Data, JSON_PRETTY_PRINT );
+					$Data = json_encode( $Data, JSON_PRETTY_PRINT ) . PHP_EOL;
 
 					file_put_contents( str_replace( '-json.js', '.json', $File ), $Data );
 

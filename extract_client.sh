@@ -14,6 +14,7 @@ echo Deleting existing files
 
 # Scary!
 rm -rf "$DIR"/ClientExtracted/*
+rm -rf "$DIR"/ClientDeckExtracted/*
 rm -rf bins/*
 rm -f "$DIR"/BuildbotPaths/*
 rm -rf "$DIR"/Protobufs/*
@@ -42,6 +43,9 @@ do
 	fi
 done
 
+unzip -q -o "steampal_archives/friendsui_all.zip" -d "$DIR/ClientDeckExtracted/"
+unzip -q -o "steampal_archives/steamui_websrc_all.zip" -d "$DIR/ClientDeckExtracted/"
+
 #
 # PROTOBUF DUMP
 #
@@ -62,8 +66,6 @@ echo Dumping structs
 #
 
 echo Dumping buildbot paths
-
-#find ubuntu/ | sort > "$DIR/BuildbotPaths/ubuntu_binaries.txt"
 
 while IFS= read -r -d '' file
 do
@@ -87,39 +89,50 @@ strings bins/steamui.dylib | grep "/api/" | sort > "$DIR/API/Storefront.txt"
 # Jump to extracted folder
 #
 
+ProcessClientFolder()
+{
+	#
+	# PRETTIFY JAVASCRIPT
+	#
+
+	echo Prettifying javascript
+
+	while IFS= read -r -d '' file
+	do
+		if [[ "$file" == *.js ]]
+		then
+			php "$DIR/extract_json_from_webpack.php" "$(pwd)/$file"
+			if [ $? -eq 200 ]
+			then
+				echo "Extracted json from $file"
+				continue
+			fi
+		fi
+
+		echo "Prettifying $file"
+
+		npm run prettier "$(pwd)/$file"
+	done <   <(find steamui/ clientui/ \( -name '*.js' -o -name '*.css' \) -print0)
+
+	#
+	# CHANGE CRAPPY ENCODINGS TO UTF-8
+	#
+
+	echo Fixing encodings
+
+	while IFS= read -r -d '' file
+	do
+		encoding=$(file -bi "$file" | sed -e 's/.*[ ]charset=//');
+
+		if [ "$encoding" != "utf-8" ] && [ "$encoding" != "binary" ];
+		then
+			iconv -f "$encoding" -t UTF-8 "$file" -o "$file.tmp" && mv "$file.tmp" "$file"
+		fi
+	done <   <(find . \( -name '*.txt' -o -name '*.xml' -o -name '*.cfg' -o -name '*.res' \) -print0)
+}
+
 cd "$DIR/ClientExtracted/" || exit 1
+ProcessClientFolder
 
-#
-# PRETTIFY JAVASCRIPT
-#
-
-echo Prettifying javascript
-
-while IFS= read -r -d '' file
-do
-	if [[ "$file" == steamui/localization/* ]]
-	then
-		continue
-	fi
-
-	echo "Prettifying $file"
-
-	npm run prettier "$(pwd)/$file"
-done <   <(find steamui/ clientui/ \( -name '*.js' -o -name '*.css' \) -print0)
-
-#
-# CHANGE CRAPPY ENCODINGS TO UTF-8
-#
-
-echo Fixing encodings
-
-while IFS= read -r -d '' file
-do
-	encoding=$(file -bi "$file" | sed -e 's/.*[ ]charset=//');
-
-	if [ "$encoding" != "utf-8" ] && [ "$encoding" != "binary" ];
-	then
-		iconv -f "$encoding" -t UTF-8 "$file" -o "$file.tmp" && mv "$file.tmp" "$file"
-	fi
-done <   <(find . \( -name '*.txt' -o -name '*.xml' -o -name '*.cfg' -o -name '*.res' \) -print0)
-
+cd "$DIR/ClientDeckExtracted/" || exit 1
+ProcessClientFolder

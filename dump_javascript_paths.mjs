@@ -17,6 +17,8 @@ const paths = [
 	"./Scripts/WebUI/",
 	"./ClientExtracted/clientui/",
 	"./ClientExtracted/steamui/",
+	"./ClientDeckExtracted/clientui/",
+	"./ClientDeckExtracted/steamui/",
 	"./help.steampowered.com/public/javascript/applications/help/",
 	"./partner.steamgames.com/public/javascript/webui/storeadmin/",
 	"./steamcommunity.com/public/javascript/applications/community/",
