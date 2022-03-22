@@ -589,15 +589,16 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						}
 					}
 
+					curl_multi_remove_handle( $Master, $Handle );
+
 					if( !empty( $URLs ) )
 					{
 						$URL = array_shift( $URLs );
 
 						$this->CreateHandle( $Master, $URL );
-					}
 
-					curl_multi_remove_handle( $Master, $Handle );
-					curl_close( $Handle );
+						$Running = true;
+					}
 
 					unset( $Request, $Handle );
 				}
