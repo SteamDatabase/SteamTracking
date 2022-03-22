@@ -190,7 +190,10 @@ function OutputImports(imports, stream = process.stdout) {
 function OutputMessages(messages, stream = process.stdout) {
 	for (const [, message] of messages) {
 		if (!message.consumed && message.dependants.size > 0 && message.className !== NotImplemented) {
-			stream.write(`// Used by: ${[...message.dependants.values()]}\n`);
+			const dependants = [...message.dependants.values()];
+			dependants.sort();
+
+			stream.write(`// Used by: ${dependants.join(', ')}\n`);
 		}
 
 		stream.write(`message ${message.className} {\n`);
