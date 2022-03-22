@@ -25,6 +25,19 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		private bool $SyncProtobufs = false;
 		private bool $DumpJavascriptFiles = false;
 
+		/** @var array<string, string> */
+		private array $ClientArchiveFolder =
+		[
+			'ClientManifest/steam_client_publicbeta_osx'      => 'archives',
+			'ClientManifest/steam_cmd_publicbeta_osx'         => 'archives',
+			'ClientManifest/steam_client_publicbeta_ubuntu12' => 'linux_archives',
+			'ClientManifest/steam_cmd_publicbeta_linux'       => 'linux_archives',
+			'ClientManifest/steampal'                         => 'steampal_archives',
+		];
+
+		/** @var array<string, string> */
+		private array $ClientArchiveHashes = [];
+
 		/** @var array<string, string|array<int, string>> */
 		private array $ETags = [];
 
@@ -109,7 +122,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			if( $this->ExtractClientArchives )
 			{
-				$this->Log( '{lightblue}Extracting client archives and doing voodoo magic' );
+				$this->Log( '{lightblue}Extracting client archives' );
 				$this->DumpJavascriptFiles = true;
 				$this->SyncProtobufs = true;
 
@@ -130,7 +143,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			{
 				$this->Log( '{lightblue}Syncing protobufs' );
 
-				system( '../ValveProtobufs/update.sh' );
+				system( 'bash ../ValveProtobufs/update.sh' );
 			}
 
 			$this->Log( '{lightblue}Done' );
@@ -170,22 +183,27 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				return true;
 			}
-			// Get archives from beta manifest
-			else if( $File === 'ClientManifest/steam_client_publicbeta_osx' || $File === 'ClientManifest/steam_cmd_publicbeta_osx' )
+			// Get archives from client manifest
+			else if( isset( $this->ClientArchiveFolder[ $File ] ) )
 			{
 				if( preg_match_all( '/"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/', $Data, $Test ) > 0 )
 				{
 					foreach( $Test[ 1 ] as $Index => $Archive )
 					{
 						$Hash = $Test[ 2 ][ $Index ];
-						$Path = '.support/archives/' . $Archive;
+						$Path = '.support/' . $this->ClientArchiveFolder[ $File ] . '/' . $Archive;
 
-						if( ( $this->ETags[ 'hash_for_' . $Path ] ?? null ) !== $Hash )
+						if( isset( $this->ClientArchiveHashes[ $Path ] ) )
+						{
+							$this->Log( 'Matched {lightblue}' . $Path . '{normal}, but it is already queued' );
+							continue;
+						}
+
+						if( !file_exists( $Path ) || hash_file( 'sha1', $Path ) !== $Hash )
 						{
 							$this->Log( 'Downloading {lightblue}' . $Path . '{normal} - checksum: ' . $Hash );
 
-							// Separate prefix so it doesn't get hit in the downloader as an actual etag
-							$this->ETags[ 'hash_for_' . $Path ] = $Hash;
+							$this->ClientArchiveHashes[ $Path ] = $Hash;
 
 							$this->URLsToFetch[ ] =
 							[
@@ -196,42 +214,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						else
 						{
 							$this->Log( 'Matched {lightblue}' . $Path . '{normal}, but we already have it cached' );
-						}
-					}
-				}
-				else
-				{
-					$this->Log( '{yellow}Failed to find any archives' );
-				}
-
-				unset( $Test, $Archive, $Hash, $Index );
-			}
-			// Get archives from beta manifest
-			else if( $File === 'ClientManifest/steam_client_publicbeta_ubuntu12' || $File === 'ClientManifest/steam_cmd_publicbeta_linux' )
-			{
-				if( preg_match_all( '/"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/', $Data, $Test ) > 0 )
-				{
-					foreach( $Test[ 1 ] as $Index => $Archive )
-					{
-						$Hash = $Test[ 2 ][ $Index ];
-						$Path = '.support/linux_archives/' . $Archive;
-
-						if( ( $this->ETags[ 'hash_for_' . $Path ] ?? null ) !== $Hash )
-						{
-							$this->Log( 'Downloading {lightblue}' . $Path . '{normal} - checksum: ' . $Hash );
-
-							// Separate prefix so it doesn't get hit in the downloader as an actual etag
-							$this->ETags[ 'hash_for_' . $Path ] = $Hash;
-
-							$this->URLsToFetch[ ] =
-							[
-								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Hash,
-								'File' => $Path,
-							];
-						}
-						else
-						{
-							$this->Log( 'Matched {lightblue}' . $Archive . '{normal}, but we already have it cached' );
 						}
 					}
 				}
@@ -303,7 +285,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			// Unzip it
 			else if( str_ends_with( $File, '.zip' ) )
 			{
-				if( hash( 'sha1', $Data ) !== $this->ETags[ 'hash_for_' . $File ] )
+				if( hash( 'sha1', $Data ) !== $this->ClientArchiveHashes[ $File ] )
 				{
 					$this->Log( '{lightred}Checksum mismatch for ' . $File );
 
