@@ -201,6 +201,11 @@ function OutputMessages(messages, stream = process.stdout) {
 		const seenFields = new Set();
 
 		for (const field of message.fields) {
+			if (seenFields.has(field.id) && field.type === "UNKNOWN") {
+				// Skip this field if already printed and this one is only here because it has unknown type
+				continue;
+			}
+
 			stream.write("\t");
 
 			if (seenFields.has(field.id) || field.type === "UNKNOWN") {
