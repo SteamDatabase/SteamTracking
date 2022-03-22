@@ -303,7 +303,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			// Unzip it
 			else if( str_ends_with( $File, '.zip' ) )
 			{
-				if( sha1_file( $File ) !== $this->ETags[ 'hash_for_' . $File ] )
+				if( hash( 'sha1', $Data ) !== $this->ETags[ 'hash_for_' . $File ] )
 				{
 					$this->Log( '{lightred}Checksum mismatch for ' . $File );
 

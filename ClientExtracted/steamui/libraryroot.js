@@ -1769,7 +1769,7 @@
                   this.GetAllStateThatShouldTriggerGameListAutoScroll,
                   function (t) {
                     var n = -1;
-                    g.a.BRouteMatch([
+                    Object(i.g)(g.a.m_history.location.pathname, [
                       je.e.Library.App(),
                       je.e.Library.Collection(),
                     ]) && (n = e.GetCurrentSelectedIndex()),
@@ -3309,8 +3309,8 @@
                       className: bt.a.GameIconAndName,
                       nDelayShowMS: 320,
                       toolTipContent: "#Generic_ViewGameDetails",
-                      onClick: function () {
-                        g.a.NavigateToApp(t.appid);
+                      onClick: function (e) {
+                        g.a.NavigateToApp(t.appid), e.stopPropagation();
                       },
                     },
                     o,

@@ -28116,15 +28116,20 @@
               Object(_.a)(
                 t.bIsDeletable,
                 "Collection '" + t.displayName + "' should be deletable."
-              ),
-                Object(h.d)(
-                  i.a.createElement(O, {
-                    strDisplayName: this.props.strDisplayName,
-                    strCollectionId: this.props.strCollectionId,
-                  }),
-                  Object(v.p)(e),
-                  { strTitle: Object(b.f)("#CollectionAction_DeleteDialog") }
-                );
+              );
+              var n = !!Object(o.g)(
+                c.a.m_history.location.pathname,
+                C.e.Library.Collection()
+              );
+              Object(h.d)(
+                i.a.createElement(O, {
+                  strDisplayName: this.props.strDisplayName,
+                  strCollectionId: this.props.strCollectionId,
+                  bViewingCollection: n,
+                }),
+                Object(v.p)(e),
+                { strTitle: Object(b.f)("#CollectionAction_DeleteDialog") }
+              );
             }),
             (t.prototype.render = function () {
               var e = c.a.IsCollapsed(this.props.strCollectionId)
@@ -28212,17 +28217,17 @@
       var O = Object(s.a)(function (e) {
         var t = e.closeModal,
           n = e.strCollectionId,
-          s = e.strDisplayName,
+          o = e.strDisplayName,
+          s = e.bViewingCollection,
           p = Object(r.useState)(""),
           h = p[0],
-          v = p[1],
-          g = Object(o.k)(C.e.Library.Collection());
+          v = p[1];
         if (h)
           return i.a.createElement(m.f, { strDescription: h, closeModal: t });
-        var S = i.a.createElement(
+        var g = i.a.createElement(
           "span",
           { style: { color: "white", textTransform: "uppercase" } },
-          s
+          o
         );
         return i.a.createElement(
           m.e,
@@ -28241,7 +28246,7 @@
                         c.a.currentCollectionID == n &&
                           (10 == c.a.selectedGameListView &&
                             c.a.SelectGameListView(1),
-                          g && c.a.NavigateToHome()),
+                          s && c.a.NavigateToHome()),
                         (e = l.a.GetCollection(n)),
                         Object(_.a)(
                           e.bIsDeletable,
@@ -28256,7 +28261,7 @@
                     case 2:
                       return (
                         a.sent(),
-                        v(Object(b.f)("#CollectionAction_DeleteFailed", s)),
+                        v(Object(b.f)("#CollectionAction_DeleteFailed", o)),
                         [3, 3]
                       );
                     case 3:
@@ -28298,7 +28303,7 @@
               i.a.createElement(
                 d.d,
                 null,
-                Object(b.p)("#CollectionAction_ConfirmDelete", S)
+                Object(b.p)("#CollectionAction_ConfirmDelete", g)
               ),
               i.a.createElement(
                 d.r,
@@ -52824,7 +52829,7 @@
                   case 0:
                     return [
                       4,
-                      l.b.LoadAdjacentPartnerEventsByAnnouncement(
+                      l.b.LoadAdjacentPartnerEvents(
                         this.props.initialEventID,
                         null,
                         this.props.appid,
@@ -65509,7 +65514,7 @@
                 function () {
                   ve.a.ClearSelection(),
                     P.a.SetGameListSelection(t, e),
-                    t || P.a.UpdateGameListSelection();
+                    P.a.UpdateGameListSelection();
                 },
                 [e, t]
               );

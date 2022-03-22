@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+0X
+0X
 __stubs
 __TEXT
 __stub_helper
@@ -10,7 +12,6 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-$"
 __objc_methname
 __TEXT
 __unwind_info
@@ -50,6 +51,7 @@ __LINKEDIT
 @loader_path/steamconsole.dylib
 "
 P
+J
 
 *
 8
@@ -717,23 +719,22 @@ Transcode upload complete ( AppID: %u, BucketID: %llu ) ulTranscodedSizeBytes %l
 SteamSwarm
 G7:VulkanPipelinesV%u%%
 GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu GPUDesc: %s DriverDesc: %s
-%s/incoming_content/app_%u/bucket_%llu
-%s/incoming_content/app_%u/%llu.shaderdepotmanifestcache
 _
 Using compat tool hash: %s
-shader_depot_manifest_cache
-Updating depot from %llu to %llu .
+Download depot version %llu .
 DownloadDepot ERROR %s!
 DownloadDepot success: %s
+%s/outgoing/%u/%llu
 stale_gpu_desc
 stale_driver_desc
 compat_tool_hash
 Failed to load file to buffer %s
 Failed to parse KV %s
 Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...
-%s/outgoing_content/%u/%llu
 WritePrecompiledCache returned result '%s'. foz file missing from depot or no full pipelines in it.
-WritePrecompiledCache success for GPU: '%s' Driver: '%s' CacheType: %d
+WritePrecompiledCache success for GPU(s): '%s' Driver(s): '%s' CacheType: %d
+,
+/%s/%s
 %s_
 %s%d:VP%d_%sprecomp_%s
 W
@@ -742,15 +743,16 @@ GetBucketManifest ERROR %s (this is normal if it's the first time built)
 GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
 %s/depot_build_output
 StartDepotBuild success. manifest: %llu size: %llu
-Shader upload complete ( AppID: %u, BucketID: %llu ) bHasPrecompiledCache %d
+Shader upload complete ( AppID: %u, BucketID: %llu Manifest: %llu ) Dest: %s / %s Src: %s / %s
+Mark updated with no data ( AppID: %u, BucketID: %llu Manifest: %llu ) Src: %s / %s
 ERROR. Shader processing failed!
 ERROR! Shader conversion failed!
 ERROR! Failed to write swarm_tc_download.vdf
+Current downloaded manifest matches, skipping download.
 ERROR! Invalid stale bucket!
 Done. No more bucket to transcode
 Using no baseline manifest for upload
 ERROR! Failed to write swarm_shader_download.vdf
-Current downloaded manifest matches, skipping download.
 got empty manifest from GetStaleBucket!
 Done. No more shader bucket to compile
 CompileShaders ERROR!
@@ -974,6 +976,7 @@ nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 CUtlString::SetValue
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
+CUtlString::VAppendFormat
 CUtlString::ReplaceInternal
 pstrNew + nNewLength == pstrDestination + 1
 cActualReplacements == cReplacements
@@ -1296,8 +1299,8 @@ j
 @
 @
 0
-0
 Ic
+0
 
 =
 @
@@ -1311,6 +1314,7 @@ Ic
 @
 @
 @
+0
 0
 0
 0

@@ -245,6 +245,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuibrowsercontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuicontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuicurrentusercontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuidownloadscontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiinputcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuisurveycontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiupdatecontroller.cpp

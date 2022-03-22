@@ -8956,6 +8956,48 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .borrowgamedialog_ResultDescription_1JJeL {
   margin: 10px 24px 0px 24px;
 }
+.GenericConfirmDialog.durationcontroldialog_DurationControlDialogBackground_2iwqV {
+  background: linear-gradient(to bottom right, #6383b1, #273f65);
+}
+.durationcontroldialog_DurationControlDialog_3iEiQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.durationcontroldialog_TimerContainer_2j4TN {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+.durationcontroldialog_TimerDisplay_2M3Zm {
+  height: 2em;
+  width: 2em;
+  align-items: center;
+  border-radius: 50%;
+}
+.durationcontroldialog_TimerText_25RpV {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.25em;
+}
+.durationcontroldialog_InfoContainer_1rF2O {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.durationcontroldialog_InfoContent_2hVYi div {
+  color: #fff;
+  text-align: center;
+  font-size: 2vw;
+  line-height: 4vw;
+  user-select: none;
+}
 .appdetailshover_AppDetailsHover_38FqI {
   box-sizing: border-box;
   padding: 10px;
@@ -10697,10 +10739,10 @@ div.UltraRightPanel
   z-index: 4;
 }
 .LibraryDisplaySizeMedium .appportrait_RecentGameFooter_2d1hS {
-  height: 75px;
+  height: 76px;
 }
 .LibraryDisplaySizeSmall .appportrait_RecentGameFooter_2d1hS {
-  height: 55px;
+  height: 57px;
 }
 .appportrait_CarouselItemLabel_1Cmux {
   width: max-content;
@@ -10814,9 +10856,6 @@ div.UltraRightPanel
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-.appportrait_PortraitMessage_3gwMk.appportrait_Message_3CRLA.appportrait_Short_yGeS6 {
-  display: none;
 }
 .appportrait_PortraitMessage_3gwMk.appportrait_SubMessage_3DR9f {
   color: rgba(255, 255, 255, 0.51);
@@ -13748,6 +13787,7 @@ div.LowPerfMode
     #23262e 90%
   );
   box-sizing: border-box;
+  z-index: 1;
 }
 .downloads_DownloadsPage_1bq4x .Focusable {
   outline: none;
@@ -15599,6 +15639,7 @@ div.ShortWindow
   display: flex;
   flex-direction: row;
   align-items: center;
+  overflow-y: hidden;
 }
 .marquee_Marquee_2yQMJ .marquee_Content_2ADpT {
   animation-name: marquee_scroll_EGDyl;
@@ -16322,48 +16363,6 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
 .sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW
   svg.sortingdropdowncontrolbutton_SortIcon_jewgw {
   margin-left: 13px;
-}
-.GenericConfirmDialog.durationcontroldialog_DurationControlDialogBackground_2iwqV {
-  background: linear-gradient(to bottom right, #6383b1, #273f65);
-}
-.durationcontroldialog_DurationControlDialog_3iEiQ {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-}
-.durationcontroldialog_TimerContainer_2j4TN {
-  position: absolute;
-  top: 1em;
-  left: 1em;
-}
-.durationcontroldialog_TimerDisplay_2M3Zm {
-  height: 2em;
-  width: 2em;
-  align-items: center;
-  border-radius: 50%;
-}
-.durationcontroldialog_TimerText_25RpV {
-  vertical-align: middle;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  padding-top: 0.25em;
-}
-.durationcontroldialog_InfoContainer_1rF2O {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-.durationcontroldialog_InfoContent_2hVYi div {
-  color: #fff;
-  text-align: center;
-  font-size: 2vw;
-  line-height: 4vw;
-  user-select: none;
 }
 .resetcollectionsdialog_AfterResetSummary_2F0Ch {
   padding-top: 12px;

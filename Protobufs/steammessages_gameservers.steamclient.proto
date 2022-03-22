@@ -85,6 +85,7 @@ message CMsgGameServerPingQueryData {
 	optional bool dedicated = 18;
 	optional string version = 19;
 	optional fixed32 sdr_popid = 20;
+	optional string sdr_location_string = 21;
 }
 
 message CMsgGameServerPlayersQueryData {
