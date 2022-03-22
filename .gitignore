@@ -5,17 +5,18 @@
 /vendor/
 /composer.lock
 
-*.gz
 *.asi
-*.flt
-*.mix
-*.dylib
-*.wav
-*.mp3
 *.dic
-*.tmp
-*.webm
+*.dylib
+*.flt
+*.gz
+*.mix
+*.mp3
 *.swp
+*.tmp
+*.uifont
+*.wav
+*.webm
 
 /ClientExtracted/steamcmd
 /ClientExtracted/steam_osx

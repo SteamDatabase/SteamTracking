@@ -23,7 +23,7 @@ echo 'Saving to "' . $NewFilename . '"' . PHP_EOL;
 
 $Data = stripcslashes( $Matches[ 1 ] );
 $Data = json_decode( $Data, true, 512, JSON_THROW_ON_ERROR );
-$Data = json_encode( $Data, JSON_PRETTY_PRINT ) . PHP_EOL;
+$Data = json_encode( $Data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
 
 if( file_put_contents( $NewFilename, $Data ) === false )
 {

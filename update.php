@@ -118,7 +118,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			unset( $ETags );
 
-			file_put_contents( $ETagsPath, json_encode( $this->ETags, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );
+			file_put_contents( $ETagsPath, json_encode( $this->ETags, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) );
 
 			if( $this->ExtractClientArchives )
 			{
@@ -173,7 +173,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				{
 					$File = __DIR__ . '/API/' . $Interface[ 'name' ] . '.json';
 
-					$Interface = json_encode( $Interface, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES ) . PHP_EOL;
+					$Interface = json_encode( $Interface, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
 
 					if( !file_exists( $File ) || $Interface !== file_get_contents( $File ) )
 					{
@@ -240,13 +240,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				sort( $Data );
 
-				$Data = json_encode( $Data, JSON_PRETTY_PRINT );
+				$Data = json_encode( $Data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT );
 			}
 			// Prettify
 			else if( $File === 'Random/Jobs.json' )
 			{
 				$Data = json_decode( $Data, true );
-				$Data = json_encode( $Data, JSON_PRETTY_PRINT );
+				$Data = json_encode( $Data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT );
 			}
 			else if( $File === 'Random/SteamMobileApks.txt' )
 			{
@@ -365,7 +365,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 					if( !empty( $People ) )
 					{
-						file_put_contents( __DIR__ . '/Random/People.json', json_encode( $People, JSON_PRETTY_PRINT ) );
+						file_put_contents( __DIR__ . '/Random/People.json', json_encode( $People, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) );
 					}
 				}
 			}
@@ -411,7 +411,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				{
 					$Data = stripcslashes( $Matches[ 1 ] );
 					$Data = json_decode( $Data, true );
-					$Data = json_encode( $Data, JSON_PRETTY_PRINT ) . PHP_EOL;
+					$Data = json_encode( $Data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
 
 					file_put_contents( str_replace( '-json.js', '.json', $File ), $Data );
 
