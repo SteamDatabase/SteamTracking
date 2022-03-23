@@ -37690,7 +37690,7 @@
                 }
                 if (e.BHasSaleEnabled()) {
                   e.GetSaleSections().forEach((t, s) => {
-                    var o, l;
+                    var o, l, c;
                     if (
                       ((n !== "sale_section_label_" + s &&
                         n !== j + t.unique_id) ||
@@ -37708,7 +37708,13 @@
                           (r || e.BHasSaleSectionTabName(a, s)) &&
                           e.SetSaleSectionTabName(a, s, r) &&
                           (i = !0);
-                    "text_section" === t.section_type &&
+                    ("text_section" === t.section_type ||
+                      ("vo_internal" === t.section_type &&
+                        "reservation_widget" ===
+                          (null === (o = t.internal_section_data) ||
+                          void 0 === o
+                            ? void 0
+                            : o.internal_type))) &&
                       n === D + t.unique_id &&
                       (r || e.BHasSaleSectionTextLocalization(a, s)) &&
                       e.SetSaleSectionTextLocalization(a, s, r) &&
@@ -37748,15 +37754,15 @@
                         }),
                       "vo_internal" == t.section_type &&
                         "reservation_widget" ==
-                          (null === (o = t.internal_section_data) ||
-                          void 0 === o
+                          (null === (l = t.internal_section_data) ||
+                          void 0 === l
                             ? void 0
-                            : o.internal_type) &&
+                            : l.internal_type) &&
                         (null ===
-                          (l = t.internal_section_data.reservation_options) ||
-                        void 0 === l
+                          (c = t.internal_section_data.reservation_options) ||
+                        void 0 === c
                           ? void 0
-                          : l.length) > 0 &&
+                          : c.length) > 0 &&
                         t.internal_section_data.reservation_options.forEach(
                           (s) => {
                             if (
@@ -76258,21 +76264,33 @@
               (e.show_as_carousel = !0)));
         }
         BHasSaleSectionTextLocalization(e, t) {
-          const a = this.GetSaleSections()[t];
+          var a;
+          const n = this.GetSaleSections()[t];
           return Boolean(
-            "text_section" === a.section_type &&
-              a.text_section_contents &&
-              a.text_section_contents.length > e &&
-              a.text_section_contents[e]
+            ("text_section" === n.section_type ||
+              ("vo_internal" == n.section_type &&
+                "reservation_widget" ==
+                  (null === (a = n.internal_section_data) || void 0 === a
+                    ? void 0
+                    : a.internal_type))) &&
+              n.text_section_contents &&
+              n.text_section_contents.length > e &&
+              n.text_section_contents[e]
           );
         }
         SetSaleSectionTextLocalization(e, t, a) {
-          let n = this.GetSaleSections()[t];
+          var n;
+          let r = this.GetSaleSections()[t];
           return (
-            "text_section" === n.section_type &&
-            E.a.Get(n.text_section_contents, e) != a &&
-            ((n.text_section_contents = E.a.Set(
-              n.text_section_contents || [],
+            ("text_section" === r.section_type ||
+              ("vo_internal" == r.section_type &&
+                "reservation_widget" ==
+                  (null === (n = r.internal_section_data) || void 0 === n
+                    ? void 0
+                    : n.internal_type))) &&
+            E.a.Get(r.text_section_contents, e) != a &&
+            ((r.text_section_contents = E.a.Set(
+              r.text_section_contents || [],
               e,
               a
             )),
