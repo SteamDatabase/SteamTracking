@@ -17395,7 +17395,7 @@
         const [t, r] = n.a.useState(!0);
         return (
           Object(a.useEffect)(() => {
-            t && (Object(he.b)(null), pe.a.InitGlobal().then(() => r(!1)));
+            t && (Object(he.a)(null), pe.a.InitGlobal().then(() => r(!1)));
           }, [t]),
           t
             ? n.a.createElement(se.a, {
@@ -59603,39 +59603,14 @@
     hKFG: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return c;
-      }),
-        r.d(t, "b", function () {
-          return d;
-        });
-      var a = r("mrSG"),
-        n = r("iO5U"),
-        i = (r("q1tI"), r("WBba")),
-        s = r("C4Nl"),
-        o = (r("X2UP"), r("r64O")),
-        l = r("lkRc");
-      function c(e = !1) {
-        return Object(a.a)(this, void 0, void 0, function* () {
-          if (e && s.a.BIsInitialized()) return;
-          const t = Object(l.f)(
-            "partnerbrowse_webapi_token",
-            "application_config"
-          );
-          Object(o.a)(Boolean(t), "require partnerbrowse_webapi_token");
-          const r = new i.a(l.c.WEBAPI_BASE_URL, t);
-          return (
-            ("dev" != l.c.WEB_UNIVERSE && "beta" != l.c.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                t
-              ),
-            d(t),
-            s.a.Initialize(r, l.h.is_partner_member)
-          );
-        });
-      }
-      function d(e) {
-        n.a.BIsInitialized() || n.a.Initialize(new i.a(l.c.WEBAPI_BASE_URL, e));
+        return s;
+      });
+      r("mrSG");
+      var a = r("iO5U"),
+        n = (r("q1tI"), r("WBba")),
+        i = (r("C4Nl"), r("X2UP"), r("r64O"), r("lkRc"));
+      function s(e) {
+        a.a.BIsInitialized() || a.a.Initialize(new n.a(i.c.WEBAPI_BASE_URL, e));
       }
     },
     hmtA: function (e, t, r) {},

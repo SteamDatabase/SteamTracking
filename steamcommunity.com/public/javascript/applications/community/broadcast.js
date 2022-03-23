@@ -173,16 +173,16 @@
         I = r("TLQK"),
         E = r("opsS"),
         x = (r("pKbv"), r("kLLr")),
-        N = (r("3+zv"), r("uIWk")),
-        P = r("rKv1"),
-        U = r.n(P);
+        P = (r("3+zv"), r("uIWk")),
+        N = r("rKv1"),
+        U = r.n(N);
       const D = Object(n.a)((e) => {
         const { event: t } = e,
           r = t.clanSteamID.GetAccountID(),
           i = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
           n = Object(l.useRef)(null),
           [o, d] = Object(l.useState)(
-            t ? N.a.GetCreatorHome(t.clanSteamID) : null
+            t ? P.a.GetCreatorHome(t.clanSteamID) : null
           );
         if (
           (Object(l.useEffect)(() => {
@@ -191,7 +191,7 @@
             return (
               Object(a.a)(void 0, void 0, void 0, function* () {
                 const t = x.a.InitFromClanID(r),
-                  a = yield N.a.LoadCreatorHome(t, e);
+                  a = yield P.a.LoadCreatorHome(t, e);
                 e.token.reason || d(a);
               }),
               () => {
@@ -295,7 +295,7 @@
         componentDidMount() {
           return Object(a.a)(this, void 0, void 0, function* () {
             G.IsBroadcastAllowed() &&
-              (Object(L.b)(null),
+              (Object(L.a)(null),
               yield R.a
                 .Get()
                 .LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
@@ -1074,7 +1074,7 @@
     eN6m: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return N;
+        return P;
       });
       var a = r("mrSG"),
         i = r("2vnA"),
@@ -1219,7 +1219,7 @@
               return null;
           }
         };
-      let N = class extends n.Component {
+      let P = class extends n.Component {
         constructor() {
           super(...arguments),
             (this.m_chat = null),
@@ -1580,7 +1580,7 @@
             },
             r &&
               !!this.m_chat &&
-              n.createElement(P, {
+              n.createElement(N, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -1601,7 +1601,7 @@
             n.createElement(M, null),
             !r &&
               !!this.m_chat &&
-              n.createElement(P, {
+              n.createElement(N, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -1609,7 +1609,7 @@
           );
         }
       };
-      function P(e) {
+      function N(e) {
         const { oChat: t, emoticonStore: r, bPartnerMemberOnlyChat: a } = e;
         return !a ||
           ((null === O.h || void 0 === O.h ? void 0 : O.h.logged_in) &&
@@ -1720,12 +1720,12 @@
             })
           : null;
       }
-      Object(a.b)([i.C], N.prototype, "m_chat", void 0),
-        Object(a.b)([R.a], N.prototype, "StartChat", null),
-        Object(a.b)([R.a], N.prototype, "HandleScroll", null),
-        Object(a.b)([R.a], N.prototype, "OnContextMenu", null),
-        Object(a.b)([R.a], N.prototype, "RenderUserChatLine", null),
-        (N = Object(a.b)([s.a], N));
+      Object(a.b)([i.C], P.prototype, "m_chat", void 0),
+        Object(a.b)([R.a], P.prototype, "StartChat", null),
+        Object(a.b)([R.a], P.prototype, "HandleScroll", null),
+        Object(a.b)([R.a], P.prototype, "OnContextMenu", null),
+        Object(a.b)([R.a], P.prototype, "RenderUserChatLine", null),
+        (P = Object(a.b)([s.a], P));
       class G extends n.Component {
         render() {
           return n.createElement(
@@ -3733,61 +3733,10 @@
           return "CSteamTV_GetGames_Response";
         }
       }
-      class N extends b {
-        constructor(e = null) {
-          super(),
-            N.prototype.results || h.a(N.M()),
-            b.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            N.sm_m ||
-              (N.sm_m = {
-                proto: N,
-                fields: { results: { n: 1, c: R, r: !0, q: !0 } },
-              }),
-            N.sm_m
-          );
-        }
-        static MBF() {
-          return N.sm_mbf || (N.sm_mbf = h.e(N.M())), N.sm_mbf;
-        }
-        toObject(e = !1) {
-          return N.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return h.g(N.M(), e, t);
-        }
-        static fromObject(e) {
-          return h.c(N.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new _.BinaryReader(e),
-            r = new N();
-          return N.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return h.b(N.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new _.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          h.f(N.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new _.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetChannels_Response";
-        }
-      }
       class P extends b {
         constructor(e = null) {
           super(),
-            P.prototype.broadcasters || h.a(P.M()),
+            P.prototype.results || h.a(P.M()),
             b.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -3795,7 +3744,7 @@
             P.sm_m ||
               (P.sm_m = {
                 proto: P,
-                fields: { broadcasters: { n: 1, c: U, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: R, r: !0, q: !0 } },
               }),
             P.sm_m
           );
@@ -3830,6 +3779,57 @@
         serializeBase64String() {
           var e = new _.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_GetChannels_Response";
+        }
+      }
+      class N extends b {
+        constructor(e = null) {
+          super(),
+            N.prototype.broadcasters || h.a(N.M()),
+            b.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            N.sm_m ||
+              (N.sm_m = {
+                proto: N,
+                fields: { broadcasters: { n: 1, c: U, r: !0, q: !0 } },
+              }),
+            N.sm_m
+          );
+        }
+        static MBF() {
+          return N.sm_mbf || (N.sm_mbf = h.e(N.M())), N.sm_mbf;
+        }
+        toObject(e = !1) {
+          return N.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return h.g(N.M(), e, t);
+        }
+        static fromObject(e) {
+          return h.c(N.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new _.BinaryReader(e),
+            r = new N();
+          return N.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return h.b(N.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new _.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          h.f(N.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new _.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetBroadcastChannelBroadcasters_Response";
@@ -5585,7 +5585,7 @@
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelBroadcasters#1",
               t,
-              P,
+              N,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
             );
           }),
@@ -5648,7 +5648,7 @@
             });
           }),
           (e.GetChannels = function (e, t) {
-            return e.SendMsg("SteamTV.GetChannels#1", t, N, {
+            return e.SendMsg("SteamTV.GetChannels#1", t, P, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -6433,39 +6433,14 @@
     hKFG: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return c;
-      }),
-        r.d(t, "b", function () {
-          return d;
-        });
-      var a = r("mrSG"),
-        i = r("iO5U"),
-        s = (r("q1tI"), r("WBba")),
-        n = r("C4Nl"),
-        o = (r("X2UP"), r("r64O")),
-        l = r("lkRc");
-      function c(e = !1) {
-        return Object(a.a)(this, void 0, void 0, function* () {
-          if (e && n.a.BIsInitialized()) return;
-          const t = Object(l.f)(
-            "partnerbrowse_webapi_token",
-            "application_config"
-          );
-          Object(o.a)(Boolean(t), "require partnerbrowse_webapi_token");
-          const r = new s.a(l.c.WEBAPI_BASE_URL, t);
-          return (
-            ("dev" != l.c.WEB_UNIVERSE && "beta" != l.c.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                t
-              ),
-            d(t),
-            n.a.Initialize(r, l.h.is_partner_member)
-          );
-        });
-      }
-      function d(e) {
-        i.a.BIsInitialized() || i.a.Initialize(new s.a(l.c.WEBAPI_BASE_URL, e));
+        return n;
+      });
+      r("mrSG");
+      var a = r("iO5U"),
+        i = (r("q1tI"), r("WBba")),
+        s = (r("C4Nl"), r("X2UP"), r("r64O"), r("lkRc"));
+      function n(e) {
+        a.a.BIsInitialized() || a.a.Initialize(new i.a(s.c.WEBAPI_BASE_URL, e));
       }
     },
     rKv1: function (e, t, r) {
