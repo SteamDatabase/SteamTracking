@@ -4087,13 +4087,13 @@
           );
         };
       var yt = n("4spj"),
-        jt = n("iO5U");
+        jt = n("hKFG");
       Ye.a.Init(new Ke.a(I.d.WEBAPI_BASE_URL)), L.b.Init();
       const Mt = ({ children: e }) => {
         const [t, n] = Object(a.useState)(De.a.IsInitialized());
         return t
           ? o.a.createElement(o.a.Fragment, null, e)
-          : (De.a.InitGlobal().then(() => n(!0)), null);
+          : (De.a.InitGlobal().then(() => n(!0)), Object(jt.a)(null), null);
       };
       function It(e) {
         return (t) => o.a.createElement(Mt, null, o.a.createElement(e, t));
@@ -4142,7 +4142,7 @@
                   )
                   .then(l);
               }
-              Object(jt.b)(null);
+              Object(jt.a)(null);
             }, [a]),
             !a)
           )

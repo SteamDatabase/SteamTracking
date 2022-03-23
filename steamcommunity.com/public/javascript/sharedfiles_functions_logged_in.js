@@ -778,74 +778,27 @@ function ShowAddToCollection( id, appID )
 	$dialogContents.hide();
 	$J('#AddToCollectionDialogLoading').show();
 
-	// show dialog
-	$( 'AddToCollectionDialog' ).show();
-	var dialog = ShowConfirmDialog( 'Add to Collection', $( 'AddToCollectionDialog' ) );
-	dialog.SetRemoveContentOnDismissal( false );
-
-	// we want to check what was in the array for sending diffs
-	var set_parent_collections = new Array();
-
-	// function for when the user clicks OK
-	dialog.done( function() {
-		var params = {
-			'sessionID' : g_sessionID,
-			'publishedfileid' : id
-		};
-
-		var inputs = $J( '.add_to_collection_dialog_checkbox' );
-		for ( var i = 0; i < inputs.length; ++i )
-		{
-			var input = inputs[i];
-			var publishedFileID = input.id;
-			if ( set_parent_collections[publishedFileID] === "in_collection" )
-			{
-				if ( !input.checked )
-				{
-					params['collections[' + publishedFileID + '][remove]'] = true;
-					params['collections[' + publishedFileID + '][title]'] = $J( input ).data( 'title' );
-				}
-			}
-			else
-			{
-				if ( input.checked )
-				{
-					params['collections[' + publishedFileID + '][add]'] = true;
-					params['collections[' + publishedFileID + '][title]'] = $J( input ).data( 'title' );
-				}
-			}
-		}
-
-		$J.post( 'https://steamcommunity.com/sharedfiles/ajaxaddtocollections',
-			params
-		).done( function( data ){
-			dialog.Dismiss();
-		}).fail( function( jqxhr ) {
-			dialog.Dismiss();
-			var errorText = 'There was a problem adding this item to the following collections:<br><br>';
-			for ( var i = 0; i < jqxhr.responseJSON.results.length; ++i )
-			{
-				var title = jqxhr.responseJSON.results[i].error;
-				errorText += title + '<br>';
-			}
-			ShowAlertDialog( 'Add to Collection', errorText );
-		});
-	} );
+	var waitDialog = ShowBlockingWaitDialog( 'Add to Collection', $J( '#AddToCollectionDialogLoading' ) );
+	waitDialog.SetRemoveContentOnDismissal( false );
 
 	// ajax request to get the user's collections
-	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetmycollections', {
-		'appid' : appID,
-		'publishedfileid' : id,
-		'sessionid' : g_sessionID
-		}
-	).done( function( json ) {
-		$J('#AddToCollectionDialogLoading').hide();
-
-		if ( json['success'] != 1 )
+	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetmycollections',
 		{
-			alert( 'Failure: ' + json['success'] );
-			return;
+			'appid' : appID,
+			'publishedfileid' : id,
+			'sessionid' : g_sessionID
 		}
+	).always( function() {
+		waitDialog.Dismiss();
+		$J( '#AddToCollectionDialogLoading' ).hide();
+	}
+	).done( function( json ) {
+		// show dialog
+		$( 'AddToCollectionDialog' ).show();
+		var dialog = ShowConfirmDialog( 'Add to Collection', $( 'AddToCollectionDialog' ) );
+		dialog.SetRemoveContentOnDismissal( false );	// we want to check what was in the array for sending diffs
+
+		var set_parent_collections = new Array();
 
 		var numAdded = 0;
 		$dialogContents.empty();
@@ -898,6 +851,52 @@ function ShowAddToCollection( id, appID )
 		{
 			ShowWithFade( 'AddToCollectionDialogContents' );
 		}
+
+		// function for when the user clicks OK
+		dialog.done( function() {
+			var params = {
+				'sessionID' : g_sessionID,
+				'publishedfileid' : id
+			};
+
+			var inputs = $J( '.add_to_collection_dialog_checkbox' );
+			for ( var i = 0; i < inputs.length; ++i )
+			{
+				var input = inputs[i];
+				var publishedFileID = input.id;
+				if ( set_parent_collections[publishedFileID] === "in_collection" )
+				{
+					if ( !input.checked )
+					{
+						params['collections[' + publishedFileID + '][remove]'] = true;
+						params['collections[' + publishedFileID + '][title]'] = $J( input ).data( 'title' );
+					}
+				}
+				else
+				{
+					if ( input.checked )
+					{
+						params['collections[' + publishedFileID + '][add]'] = true;
+						params['collections[' + publishedFileID + '][title]'] = $J( input ).data( 'title' );
+					}
+				}
+			}
+
+			$J.post( 'https://steamcommunity.com/sharedfiles/ajaxaddtocollections',
+				params
+		).done( function( data ){
+				dialog.Dismiss();
+			}).fail( function( jqxhr ) {
+				dialog.Dismiss();
+				var errorText = 'There was a problem adding this item to the following collections:<br><br>';
+				for ( var i = 0; i < jqxhr.responseJSON.results.length; ++i )
+				{
+					var title = jqxhr.responseJSON.results[i].error;
+					errorText += title + '<br>';
+				}
+				ShowAlertDialog( 'Add to Collection', errorText );
+			});
+		} );
 	} );
 }
 

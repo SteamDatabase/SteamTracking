@@ -428,20 +428,20 @@
       }
       var b = r("yLGM"),
         g = r("qDk6"),
-        C = r("ZAxP"),
+        C = (r("NxAk"), r("ZAxP")),
         p = r.n(C);
       const S = s.a.forwardRef(function (e, t) {
           const {
               scrollDirection: r,
               scrollPaddingTop: i,
               scrollPaddingRight: a,
-              scrollPaddingBottom: c,
-              scrollPaddingLeft: l,
-              className: d,
-              children: m,
-              style: h,
+              scrollPaddingBottom: l,
+              scrollPaddingLeft: d,
+              className: m,
+              children: h,
+              style: u,
             } = e,
-            u = Object(n.c)(e, [
+            _ = Object(n.c)(e, [
               "scrollDirection",
               "scrollPaddingTop",
               "scrollPaddingRight",
@@ -451,33 +451,53 @@
               "children",
               "style",
             ]);
-          let _;
+          let C;
           switch (r) {
             case "x":
-              _ = p.a.ScrollX;
+              C = p.a.ScrollX;
               break;
             case "both":
-              _ = p.a.ScrollBoth;
+              C = p.a.ScrollBoth;
               break;
             case "y":
             default:
-              _ = p.a.ScrollY;
+              C = p.a.ScrollY;
           }
-          let C = Object.assign({}, h);
-          return (
-            (i || 0 === i) && (C.scrollPaddingTop = i),
-            (a || 0 === a) && (C.scrollPaddingRight = a),
-            (c || 0 === c) && (C.scrollPaddingBottom = c),
-            (l || 0 === l) && (C.scrollPaddingLeft = l),
-            s.a.createElement(
-              g.a,
-              Object.assign({}, u, {
-                style: C,
-                className: Object(o.a)(d, p.a.ScrollPanel, _),
-                ref: t,
-              }),
-              s.a.createElement(b.a, null, m)
-            )
+          let S = Object.assign({}, u);
+          (i || 0 === i) && (S.scrollPaddingTop = i),
+            (a || 0 === a) && (S.scrollPaddingRight = a),
+            (l || 0 === l) && (S.scrollPaddingBottom = l),
+            (d || 0 === d) && (S.scrollPaddingLeft = d);
+          const w = s.a.useRef(),
+            f = s.a.useCallback(
+              (e) => {
+                window.requestAnimationFrame(() => {
+                  var e, t, r;
+                  (null === (e = w.current) || void 0 === e
+                    ? void 0
+                    : e.BFocusWithin()) &&
+                    (null ===
+                      (r =
+                        null === (t = w.current.Node()) || void 0 === t
+                          ? void 0
+                          : t.GetLastFocusElement()) ||
+                      void 0 === r ||
+                      r.scrollIntoView({ behavior: "auto", block: "nearest" }));
+                });
+              },
+              [w]
+            ),
+            M = Object(c.h)(f),
+            B = Object(c.f)(t, M);
+          return s.a.createElement(
+            g.a,
+            Object.assign({}, _, {
+              style: S,
+              className: Object(o.a)(m, p.a.ScrollPanel, C),
+              ref: B,
+              navRef: w,
+            }),
+            s.a.createElement(b.a, null, h)
           );
         }),
         w = s.a.forwardRef(function (e, t) {
@@ -1610,7 +1630,7 @@
         j = r("vDqi"),
         D = r.n(j);
       r("75qM");
-      class E {
+      class F {
         constructor() {
           this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
         }
@@ -1677,7 +1697,7 @@
         GetCMListFromWebAPI() {
           return Object(n.a)(this, void 0, void 0, function* () {
             try {
-              const r = yield ((e = z),
+              const r = yield ((e = E),
                 (t = 1e4),
                 () =>
                   new Promise((r, n) => {
@@ -1716,7 +1736,7 @@
             t = [];
           const r = {};
           for (const n of this.m_CMList.rgCMList) {
-            const i = F(n),
+            const i = z(n),
               s = !i || n.rtLastCheck < e;
             s && t.length < 20 && t.push(n),
               (s && !o.c.IN_MOBILE) || (i && i < 1e4 && (r[n.strHost] = n));
@@ -1734,7 +1754,7 @@
                 ) {
                   const r = Object.keys(t)
                     .map((e) => t[e])
-                    .sort((e, t) => F(e) - F(t));
+                    .sort((e, t) => z(e) - z(t));
                   if (
                     (r.length,
                     r.length && r[0].strHost,
@@ -1844,7 +1864,7 @@
           });
         }
       }
-      function z() {
+      function E() {
         return Object(n.a)(this, void 0, void 0, function* () {
           const e =
               o.c.WEBAPI_BASE_URL + "ISteamDirectory/GetCMList/v1/?cellid=0",
@@ -1853,7 +1873,7 @@
           return r.length, r.map((e, t) => ({ strHost: e, nPriority: t }));
         });
       }
-      function F(e) {
+      function z(e) {
         return (e.msPing || 0) + (e.nCMLoad || 0);
       }
       Object(n.b)(
@@ -1871,7 +1891,7 @@
               (this.m_bLoadingCMList = !1),
               (this.m_iCallSeq = 1),
               (this.m_mapWaitingCallbacks = new Map()),
-              (this.m_CMList = new E()),
+              (this.m_CMList = new F()),
               (this.LogOnResponseHandler = Object(i.a)(751, f, (e) => {
                 let t = e.Body().eresult();
                 (this.m_Session.m_bWaitingForLogonResponse = !1),

@@ -585,10 +585,18 @@
 .voting_queue_link div {
 	padding: 20px;
 }
-a.queue_area:hover .voting_queue_border {
+a.queue_area {
+	display: flex;
+}
+a.queue_area .voting_queue_border {
+	flex-grow: 1;
+}
+a.queue_area:hover .voting_queue_border,
+a.queue_area.gpfocus .voting_queue_border {
 	background: #66c0f4;
 }
-a.queue_area:hover .voting_queue_link {
+a.queue_area:hover .voting_queue_link,
+a.queue_area.gpfocus .voting_queue_link{
 	background: url( https://community.cloudflare.steamstatic.com/public/images/workshop/vote_queue_arrow.png );
 	background-position: 0px 67px;
 	color: #ffffff;

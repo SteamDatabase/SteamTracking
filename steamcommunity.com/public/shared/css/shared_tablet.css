@@ -19,6 +19,7 @@
 
 	/* Gradients */
 	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
 
 	/* Colours */
 	--gpColor-Blue: #1A9FFF;
@@ -96,14 +97,10 @@
 	/* Animation TODO: REMOVE THESE */
 	--gpTransition-Short: all 0.2s ease;
 	--gpTransition-Shorter: all 0.1s ease;
-}
-@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
-
-
-	/* PAGE SETUP */
+}	/* PAGE SETUP */
 
 	/* Required to pad scroll on up and down navigation bringing entire element plus a visual queue of the content above or below */
-	html.responsive {
+	html.tablet {
 		height: 100%;
 		scroll-padding-bottom: 80px;
 		scroll-padding-top: 80px;
@@ -111,61 +108,61 @@
 
 
 	/* Margin at top of page */
-	html.responsive .responsive_page_template_content {
+	html.tablet .responsive_page_template_content {
 		padding-bottom: unset !important;
 	}
 
 
 	/* Page body and framework */
-	html.responsive body.v6 .page_content {
+	html.tablet body.v6 .page_content {
 		margin: 0px var(--gpSpace-Gutter);
 	}
 
 
 	/* Hide top spacer */
-	html.responsive .responsive_store_nav_ctn_spacer {
+	html.tablet .responsive_store_nav_ctn_spacer {
 		display: none;
 	}
 
 
 	/* Hide webkit scrollbar */
-	html.responsive ::-webkit-scrollbar {
+	html.tablet ::-webkit-scrollbar {
 		display: none;
 	}
 
 
 	/* Hide outline */
-	html.responsive * :focus {
+	html.tablet * :focus {
 		outline: none;
 	}
 
 
 	/* Hide global game hover */
-	html.responsive #global_hover {
+	html.tablet #global_hover {
 		display: none !important;
 	}
 
 
 	/* TEMP Temporarily hide performance links while styling */
-	html.responsive .perf_timing_area {
+	html.tablet .perf_timing_area {
 		display: none;
 	}
 
 
 	/* Background */
-	html.responsive body.v6:not( .sale_page_background ) {
+	html.tablet body.v6:not( .sale_page_background ) {
 		background: var(--gpGradient-StoreBackground);
 		background-attachment: fixed;
 	}
 
-	html.responsive body.login {
+	html.tablet body.login {
 		background: var(--gpGradient-StoreBackground) !important;
 		background-attachment: fixed !important;
 	}
 
 
 	/* Hide non breaking spaces */
-	html.responsive .non_breaking_space {
+	html.tablet .non_breaking_space {
 		display: none;
 	}
 
@@ -175,7 +172,7 @@
 
 	/* TEXT */
 
-	html.responsive body.v6 h2.pageheader {
+	html.tablet body.v6 h2.pageheader {
 		font: var(--gpText-HeadingLarge);
 		font-weight: 700;
 		text-shadow: unset;
@@ -184,14 +181,14 @@
 		padding: unset;
 	}
 
-	html.responsive body.v6 h2 {
+	html.tablet body.v6 h2 {
 		font: var(--gpText-BodySmall);
 		font-weight: 700;
 		letter-spacing: 0.5px;
 		margin-bottom: 4px;
 	}
 
-	html.responsive body.v6 {
+	html.tablet body.v6 {
 		font: var(--gpText-BodyLarge);
 		font-weight: 400;
 		color: var(--gpStoreLightestGrey);
@@ -204,7 +201,7 @@
 
 	/* PILL TAB MENU */
 
-	html.responsive .pill_tab_menu_ctn {
+	html.tablet .pill_tab_menu_ctn {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
 		overflow-x: scroll;
@@ -218,14 +215,14 @@
 		-webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
 	}
 
-    html.responsive .tablet_header_menu_ctn {
+    html.tablet .tablet_header_menu_ctn {
         height: var( --gpStoreMenuHeight );
         display: flex;
 		justify-content: space-between;
 		align-items: center;
     }
 
-	html.responsive .pill_tab_menu_item {
+	html.tablet .pill_tab_menu_item {
 		padding: 8px 16px;
 		font: var(--gpText-BodySmall);
 		color: var(--gpStoreLightestGrey);
@@ -237,20 +234,20 @@
 		display: inline-block;
 	}
 
-    html.responsive .tablet_header_glyph {
+    html.tablet .tablet_header_glyph {
         width: 32px;
 		margin: 0 24px;
     }
 
-	html.responsive .pill_tab_menu_item:hover,
-	html.responsive .pill_tab_menu_item:active,
-	html.responsive .pill_tab_menu_item.active{
+	html.tablet .pill_tab_menu_item:hover,
+	html.tablet .pill_tab_menu_item:active,
+	html.tablet .pill_tab_menu_item.active{
 		background-color: var(--gpBackground-LightMedium);
 		color: white;
 	}
 
-	html.responsive .pill_tab_menu_item:focus,
-	html.responsive .pill_tab_menu_item.gpfocus {
+	html.tablet .pill_tab_menu_item:focus,
+	html.tablet .pill_tab_menu_item.gpfocus {
 		background-color: white;
 		color: var(--gpSystemDarkestGrey);
 		box-shadow: var(--gpShadow-Medium);
@@ -258,19 +255,19 @@
 	}
 
 	/* Cart menu item */
-	html.responsive #cart_pill_tab_menu_item {
+	html.tablet #cart_pill_tab_menu_item {
 		padding-right: 6px;
 	}
 
 	/* Badging */
-	html.responsive #cart_pill_tab_menu_item b {
+	html.tablet #cart_pill_tab_menu_item b {
 		background-color: var(--gpColor-Green);
 		border-radius: 16px;
 		padding: 4px 12px;
 		color: white;
 	}
 
-	html.responsive .pill_tab_menu_item .pill_tab_menu_item_count {
+	html.tablet .pill_tab_menu_item .pill_tab_menu_item_count {
 		opacity: 0.6;
 	}
 
@@ -279,10 +276,10 @@
 	/* INPUT FIELDS */
 
 	/* Wrappers */
-	html.responsive input.gray_bevel,
-	html.responsive textarea.gray_bevel,
-	html.responsive .gray_bevel,
-	html.responsive .commentthread_comment_edit_textarea_ctn {
+	html.tablet input.gray_bevel,
+	html.tablet textarea.gray_bevel,
+	html.tablet .gray_bevel,
+	html.tablet .commentthread_comment_edit_textarea_ctn {
 		background-color: unset;
 		border-radius: unset;
 		border: unset;
@@ -295,15 +292,15 @@
 	}
 
 	/* Inputs and textareas */
-    html.responsive input.text,
-	html.responsive .wallet_code_input_ctn .redeem_input_box_text,
-	html.responsive textarea,
-	html.responsive #review_create .input_box,
-	html.responsive .gray_bevel input,
-	html.responsive .gray_bevel textarea,
-	html.responsive .gamepad_input,
-	html.responsive .DialogInputPlaceholder,
-	html.responsive input.discussionSearchText {
+    html.tablet input.text,
+	html.tablet .wallet_code_input_ctn .redeem_input_box_text,
+	html.tablet textarea,
+	html.tablet #review_create .input_box,
+	html.tablet .gray_bevel input,
+	html.tablet .gray_bevel textarea,
+	html.tablet .gamepad_input,
+	html.tablet .DialogInputPlaceholder,
+	html.tablet input.discussionSearchText {
 		background-color: var(--gpBackground-LightMedium);
 		border-radius: var(--gpCorner-Medium);
 		font: var(--gpText-BodyLarge);
@@ -318,65 +315,65 @@
 		position: unset;
 	}
 
-	html.responsive input.text::placeholder,
-	html.responsive .wallet_code_input_ctn .redeem_input_box_text::placeholder,
-	html.responsive textarea::placeholder,
-	html.responsive #review_create .input_box::placeholder,
-	html.responsive .gray_bevel input::placeholder,
-	html.responsive .gray_bevel textarea::placeholder,
-	html.responsive .gamepad_input::placeholder,
-	html.responsive .DialogInputPlaceholder::placeholder,
-	html.responsive input.discussionSearchText::placeholder {
+	html.tablet input.text::placeholder,
+	html.tablet .wallet_code_input_ctn .redeem_input_box_text::placeholder,
+	html.tablet textarea::placeholder,
+	html.tablet #review_create .input_box::placeholder,
+	html.tablet .gray_bevel input::placeholder,
+	html.tablet .gray_bevel textarea::placeholder,
+	html.tablet .gamepad_input::placeholder,
+	html.tablet .DialogInputPlaceholder::placeholder,
+	html.tablet input.discussionSearchText::placeholder {
 		color: rgba(255, 255, 255, 0.5);
 		transition: color 0.2s ease;
 	}
 
-    html.responsive input.text:hover,
-	html.responsive .wallet_code_input_ctn .redeem_input_box_text:hover,
-	html.responsive textarea:hover,
-	html.responsive #review_create .input_box:hover,
-	html.responsive .gray_bevel input:hover,
-	html.responsive .gray_bevel textarea:hover,
-	html.responsive .gamepad_input:hover,
-	html.responsive .DialogInputPlaceholder:hover,
-	html.responsive input.discussionSearchText:hover {
+    html.tablet input.text:hover,
+	html.tablet .wallet_code_input_ctn .redeem_input_box_text:hover,
+	html.tablet textarea:hover,
+	html.tablet #review_create .input_box:hover,
+	html.tablet .gray_bevel input:hover,
+	html.tablet .gray_bevel textarea:hover,
+	html.tablet .gamepad_input:hover,
+	html.tablet .DialogInputPlaceholder:hover,
+	html.tablet input.discussionSearchText:hover {
 		background-color: var(--gpBackground-LightHard);
 	}
 
-    html.responsive input.text:focus,
-	html.responsive .wallet_code_input_ctn .redeem_input_box_text:focus,
-	html.responsive textarea:focus,
-	html.responsive #review_create .input_box:focus,
-	html.responsive .gray_bevel input:focus,
-	html.responsive .gray_bevel textarea:focus,
-	html.responsive .gamepad_input:focus,
-	html.responsive .DialogInputPlaceholder:focus,
-	html.responsive input.discussionSearchText:focus {
+    html.tablet input.text:focus,
+	html.tablet .wallet_code_input_ctn .redeem_input_box_text:focus,
+	html.tablet textarea:focus,
+	html.tablet #review_create .input_box:focus,
+	html.tablet .gray_bevel input:focus,
+	html.tablet .gray_bevel textarea:focus,
+	html.tablet .gamepad_input:focus,
+	html.tablet .DialogInputPlaceholder:focus,
+	html.tablet input.discussionSearchText:focus {
 		background-color: white;
         color: black;
 	}
 
-	html.responsive input.text.gpfocus,
-	html.responsive .wallet_code_input_ctn .redeem_input_box_text.gpfocus,
-	html.responsive textarea.gpfocus,
-	html.responsive #review_create .input_box.gpfocus,
-	html.responsive .gray_bevel input.gpfocus,
-	html.responsive .gray_bevel textarea.gpfocus,
-	html.responsive .gamepad_input.gpfocus,
-	html.responsive .DialogInputPlaceholder.gpfocus,
-	html.responsive input.discussionSearchText.gpfocus {
+	html.tablet input.text.gpfocus,
+	html.tablet .wallet_code_input_ctn .redeem_input_box_text.gpfocus,
+	html.tablet textarea.gpfocus,
+	html.tablet #review_create .input_box.gpfocus,
+	html.tablet .gray_bevel input.gpfocus,
+	html.tablet .gray_bevel textarea.gpfocus,
+	html.tablet .gamepad_input.gpfocus,
+	html.tablet .DialogInputPlaceholder.gpfocus,
+	html.tablet input.discussionSearchText.gpfocus {
 		border-radius: 0px;
 	}
 
-	html.responsive input.text.gpfocus::placeholder,
-	html.responsive .wallet_code_input_ctn .redeem_input_box_text.gpfocus::placeholder,
-	html.responsive textarea.gpfocus::placeholder,
-	html.responsive #review_create .input_box.gpfocus::placeholder,
-	html.responsive .gray_bevel input.gpfocus::placeholder,
-	html.responsive .gray_bevel textarea.gpfocus::placeholder,
-	html.responsive .gamepad_input.gpfocus::placeholder,
-	html.responsive .DialogInputPlaceholder.gpfocus::placeholder,
-	html.responsive input.discussionSearchText.gpfocus::placeholder {
+	html.tablet input.text.gpfocus::placeholder,
+	html.tablet .wallet_code_input_ctn .redeem_input_box_text.gpfocus::placeholder,
+	html.tablet textarea.gpfocus::placeholder,
+	html.tablet #review_create .input_box.gpfocus::placeholder,
+	html.tablet .gray_bevel input.gpfocus::placeholder,
+	html.tablet .gray_bevel textarea.gpfocus::placeholder,
+	html.tablet .gamepad_input.gpfocus::placeholder,
+	html.tablet .DialogInputPlaceholder.gpfocus::placeholder,
+	html.tablet input.discussionSearchText.gpfocus::placeholder {
 		color: rgba(0, 0, 0, 0.5);
 	}
 
@@ -388,8 +385,8 @@
 	/* DROPDOWN DSELECTS */
 
 	/* Style dselect container */
-	html.responsive .dselect_container a.trigger,
-	html.responsive .dselect_container a.activetrigger {
+	html.tablet .dselect_container a.trigger,
+	html.tablet .dselect_container a.activetrigger {
 		border-radius: var(--gpCorner-Medium);
 		font: var(--gpText-BodyLarge);
 		transition: all 0.1s ease;
@@ -398,33 +395,33 @@
 		box-shadow: unset;
 	}
 
-	html.responsive .dselect_container a.trigger {
+	html.tablet .dselect_container a.trigger {
         background: var(--gpBackground-LightMedium);
 		color: white;
     }
 
-	html.responsive .dselect_container a.trigger:hover {
+	html.tablet .dselect_container a.trigger:hover {
         background: var(--gpBackground-LightHard);
     }
 
-	html.responsive .dselect_container a.trigger.gpfocus {
+	html.tablet .dselect_container a.trigger.gpfocus {
 		background: var(--gpBackground-LightHard);
 		border-radius: 0px;
 	}
 
-	html.responsive .dselect_container a.trigger:active,
-	html.responsive .dselect_container a.trigger.activetrigger {
+	html.tablet .dselect_container a.trigger:active,
+	html.tablet .dselect_container a.trigger.activetrigger {
         background: white;
 		color: black;
 		border-radius: 0px;
     }
 
 	/* Style drop container */
-	html.responsive .dropcontainer {
+	html.tablet .dropcontainer {
 		font: var(--gpText-BodyLarge);
 	}
 
-	html.responsive .dropcontainer ul {
+	html.tablet .dropcontainer ul {
 		line-height: unset;
 		box-shadow: var(--gpShadow-Large);
 		max-height: 60vh !important;
@@ -435,26 +432,26 @@
 	}
 
 	/* Wrap all list content text */
-	html.responsive .dropcontainer li > * {
+	html.tablet .dropcontainer li > * {
 		white-space: normal;
 	}
 
-	html.responsive .inactive_selection,
-	html.responsive .highlighted_selection {
+	html.tablet .inactive_selection,
+	html.tablet .highlighted_selection {
 		padding: 10px 12px;
 	}
 
-	html.responsive .dselect_container .dropcontainer a.inactive_selection {
+	html.tablet .dselect_container .dropcontainer a.inactive_selection {
 		background: var(--gpStoreDarkGrey);
 		color: white;
 	}
 
-	html.responsive .dselect_container .dropcontainer a.highlighted_selection {
+	html.tablet .dselect_container .dropcontainer a.highlighted_selection {
 		background: #44627a;
 		color: white;
 	}
 
-	html.responsive .dselect_container .dropcontainer a.gpfocus {
+	html.tablet .dselect_container .dropcontainer a.gpfocus {
 		background: white;
 		color: black;
 	}
@@ -463,7 +460,7 @@
 
 
 	/* DROPDOWN FILTER SELECTS */
-	html.responsive div.filterselect {
+	html.tablet div.filterselect {
 		height: unset;
 		margin: unset;
 		padding: 6px 12px;
@@ -472,15 +469,15 @@
 		background: var(--gpBackground-LightMedium);
 	}
 
-	html.responsive div.filterselect .filterselect_arrow,
-	html.responsive div.filterselect #filterselect_arrow {
+	html.tablet div.filterselect .filterselect_arrow,
+	html.tablet div.filterselect #filterselect_arrow {
 		top: 50%;
 		transform: translateY(-50%);
 		right: 8px;
 	}
 
-	html.responsive div.filterselect div.option,
-	html.responsive div.filterselect_options div.option {
+	html.tablet div.filterselect div.option,
+	html.tablet div.filterselect_options div.option {
 		font: var(--gpText-BodyMedium);
 		text-transform: unset;
 		padding: unset;
@@ -488,7 +485,7 @@
 		color: white;
 	}
 
-	html.responsive .filterselect_subtext {
+	html.tablet .filterselect_subtext {
 		font-size: unset;
 	}
 
@@ -496,69 +493,93 @@
 
 
 	/* FORUM POST ACTIONS */
-	html.responsive .forum_comment_action_menu,
-	html.responsive .popup_body,
-	html.responsive div.statsselect_options,
-	html.responsive div.filterselect_options {
+	html.tablet .forum_comment_action_menu,
+	html.tablet .popup_body,
+	html.tablet div.statsselect_options,
+	html.tablet div.filterselect_options,
+	html.tablet .navContent,
+	html.tablet .popup_block .shadow_content {
 		padding: unset;
-		display: flex;
-		flex-direction: column;
-		background-color: unset;
 		border: unset;
 		margin: unset;
-		width: unset;
+		width: unset !important;
+		max-width: unset !important;
 		text-transform: unset;
+		border: unset;
+
+		display: flex;
+		flex-direction: column;
+		background-color: unset !important;
+		max-height: 80vh;
+		overflow-y: scroll;
 	}
 
-	html.responsive .forum_comment_action_menu a,
-	html.responsive .popup_body .popup_menu_item,
-	html.responsive div.statsselect_options div.option,
-	html.responsive div.filterselect_options div.option {
-		padding: 10px 12px !important;
+	html.tablet .navContent > hr {
+		background-color: var(--gpSystemDarkerGrey);
+		height: 2px;
+	}
+
+	html.tablet .forum_comment_action_menu a,
+	html.tablet .popup_body .popup_menu_item,
+	html.tablet div.statsselect_options div.option,
+	html.tablet div.filterselect_options div.option,
+	html.tablet .navContent a,
+	html.tablet .popup_block .option {
 		margin: unset;
+		border-radius: unset;
+		width: unset;
+		height: unset;
+		text-transform: unset;
+		border: unset;
+
+		padding: 10px 12px !important;
 		display: flex !important;
 		align-items: center;
 		column-gap: 8px;
-		border-radius: unset;
 		font: var(--gpText-BodyLarge) !important;
 		box-sizing: border-box;
-		width: unset;
-		height: unset;
 		background-color: var(--gpSystemDarkestGrey);
 		color: var(--gpStoreLightestGrey);
-		text-transform: unset;
 		transition: background-color 0.1s ease,
 					color 0.2s ease;
 	}
 
-	html.responsive .forum_comment_action_menu a:hover,
-	html.responsive .popup_body .popup_menu_item:hover,
-	html.responsive div.statsselect_options div.option:hover,
-	html.responsive div.filterselect_options div.option:hover {
+	html.tablet #sharedfiles_filterselect_app_filterable {
+		border: none;
+	}
+
+	html.tablet .forum_comment_action_menu a:hover,
+	html.tablet .popup_body .popup_menu_item:hover,
+	html.tablet div.statsselect_options div.option:hover,
+	html.tablet div.filterselect_options div.option:hover,
+	html.tablet .navContent a:hover,
+	html.tablet .popup_block .option:hover {
 		background-color: var(--gpSystemDarkerGrey);
 		color: white;
 	}
 
-	html.responsive .forum_comment_action_menu a.gpfocus,
-	html.responsive .popup_body .popup_menu_item.gpfocus,
-	html.responsive div.statsselect_options div.option.gpfocus,
-	html.responsive div.filterselect_options div.option.gpfocus {
+	html.tablet .forum_comment_action_menu a.gpfocus,
+	html.tablet .popup_body .popup_menu_item.gpfocus,
+	html.tablet div.statsselect_options div.option.gpfocus,
+	html.tablet div.filterselect_options div.option.gpfocus,
+	html.tablet .navContent a.gpfocus,
+	html.tablet .popup_block .option.gpfocus {
 		background-color: white;
 		color: black;
 	}
 
-	html.responsive .popup_block_new {
+	html.tablet .popup_block_new {
 		box-shadow: unset;
 	}
 
-	html.responsive .shadow_ul,
-	html.responsive .shadow_ur,
-	html.responsive .shadow_bl,
-	html.responsive .shadow_br,
-	html.responsive .shadow_top,
-	html.responsive .shadow_left,
-	html.responsive .shadow_right,
-	html.responsive .shadow_bottom {
+	html.tablet .shadow_ul,
+	html.tablet .shadow_ur,
+	html.tablet .shadow_bl,
+	html.tablet .shadow_br,
+	html.tablet .shadow_top,
+	html.tablet .shadow_left,
+	html.tablet .shadow_right,
+	html.tablet .shadow_bottom {
 		display: none;
 	}
 
@@ -567,7 +588,7 @@
 
 
 	/* MODAL */
-	html.responsive .newmodal {
+	html.tablet .newmodal {
 		min-width: 64vw !important;
 		box-shadow: var(--gpShadow-XLarge);
 		max-width: 600px;
@@ -575,22 +596,22 @@
 		border: 2px solid var(--gpSystemDarkerGrey);
 	}
 
-	html.responsive .modal_top_bar {
+	html.tablet .modal_top_bar {
 		display: none;
 	}
 
-	html.responsive .newmodal_header {
+	html.tablet .newmodal_header {
 		font: var(--gpText-HeadingMedium);
 		text-transform: unset;
 		letter-spacing: unset;
 		font-weight: 500;
 	}
 
-	html.responsive .newmodal_header .title_text {
+	html.tablet .newmodal_header .title_text {
 		padding: 32px 32px 0px 32px;
 	}
 
-	html.responsive .newmodal_content {
+	html.tablet .newmodal_content {
 		padding: 32px;
 	}
 
@@ -598,15 +619,15 @@
 
 
 	/* OVERLAY */
-	html.responsive .responsive_page_content_overlay {
+	html.tablet .responsive_page_content_overlay {
 		background: rgba( 0, 0, 0, 0.8);
 	}
 
-	html.responsive .newmodal_background {
+	html.tablet .newmodal_background {
 		background: rgba( 0, 0, 0, 0.8);
 	}
 
-    html.responsive .dselect_overlay {
+    html.tablet .dselect_overlay {
         position: fixed;
         z-index: 400;
         background: rgba( 0, 0, 0, 0.8);
@@ -616,7 +637,7 @@
         left: 0;
     }
 
-    html.responsive .dselect_scroll_disable {
+    html.tablet .dselect_scroll_disable {
         height: 100%;
         overflow: hidden;
     }
@@ -625,7 +646,7 @@
 
 
 	/* LIVE CONTENT */
-	html.responsive body.v6 .broadcast_live_stream_icon {
+	html.tablet body.v6 .broadcast_live_stream_icon {
 		height: unset;
 		box-shadow: unset;
 		font-size: 11px;
@@ -639,7 +660,7 @@
 
 
 	/* BREADCRUMBS */
-	html.responsive .breadcrumbs {
+	html.tablet .breadcrumbs {
 		font: var(--gpText-BodyMedium);
 		margin-bottom: 12px;
 		color: var(--gpStoreLightGrey);
@@ -649,7 +670,7 @@
 		gap: 4px;
 	}
 
-	html.responsive .breadcrumbs a {
+	html.tablet .breadcrumbs a {
 		background-color: var(--gpBackground-LightMedium);
 		font: var(--gpText-BodyMedium);
 		color: var(--gpStoreLightestGrey);
@@ -660,26 +681,26 @@
 		transition: all 0.1s ease;
 	}
 
-	html.responsive .breadcrumbs a:first-child {
+	html.tablet .breadcrumbs a:first-child {
 		clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%);
 	}
 
-	html.responsive .breadcrumbs a:hover {
+	html.tablet .breadcrumbs a:hover {
 		background-color: var(--gpBackground-LightHard);
 		color: white;
 	}
 
-	html.responsive .breadcrumbs a.gpfocus {
+	html.tablet .breadcrumbs a.gpfocus {
 		background-color: white;
 		color: black;
 		box-shadow: var(--gpShadow-Medium);
 	}
 
-	html.responsive .breadcrumb_separator {
+	html.tablet .breadcrumb_separator {
 		display: none;
 	}
 
-	html.responsive .breadcrumb_current_page {
+	html.tablet .breadcrumb_current_page {
 		margin-left: 8px;
 		color: var(--gpStoreLighterGrey);
 		font: var(--gpText-BodyMedium);
@@ -689,20 +710,20 @@
 
 
 	/* SLIDERS */
-	html.responsive .tab_controls {
+	html.tablet .tab_controls {
 		padding: 8px 12px;
 		margin-bottom: unset;
 		align-items: center;
 	}
 
-	html.responsive .tab_control {
+	html.tablet .tab_control {
 		padding: 0px;
 		align-items: center;
 		border-radius: var(--gpCorner-Medium);
 		gap: 12px;
 	}
 
-	html.responsive .range_container {
+	html.tablet .range_container {
 		align-items: center;
 		gap: 12px;
 		padding: 4px 8px;
@@ -710,33 +731,33 @@
 		border-radius: var(--gpCorner-Medium);
 	}
 
-	html.responsive .range_container:hover {
+	html.tablet .range_container:hover {
 		background-color: var(--gpBackground-LightSoft);
 	}
 
-	html.responsive .range_container.gpfocus {
+	html.tablet .range_container.gpfocus {
 		background-color: var(--gpBackground-LightSoft);
 		border-radius: 0px;
 	}
 
-	html.responsive .range_container > div {
+	html.tablet .range_container > div {
 		margin-left: unset;
 	}
 
-	html.responsive .range_display {
+	html.tablet .range_display {
 		min-width: unset;
 	}
 
-	html.responsive .range_input {
+	html.tablet .range_input {
 		padding: 8px 4px;
 		margin: unset;
 	}
 
-	html.responsive .tab_check_control input[type=checkbox] {
+	html.tablet .tab_check_control input[type=checkbox] {
 		vertical-align: unset;
 	}
 
-	html.responsive .GenericConfirmDialog .DialogBodyText {
+	html.tablet .GenericConfirmDialog .DialogBodyText {
 		margin-bottom: unset;
 	}
 
@@ -744,14 +765,14 @@
 
 
 	/* RIGHT THIRD PANEL */
-	html.responsive .responsive_local_menu_tab.active {
+	html.tablet .responsive_local_menu_tab.active {
 		background: unset;
 		width: unset;
 		height: unset;
 		top: unset;
 
 		top: 24px;
-		right: 16px;
+		right: 24px;
 		box-shadow: unset;
 		background-color: var(--gpBackground-DarkSoft);
 		backdrop-filter: blur(32px);
@@ -763,33 +784,28 @@
 		text-transform: uppercase;
 		padding: 18px 40px 18px 40px;
 
+		/* TODO - Reconsider how we display on screen glyphs */
 		background:
 			no-repeat 8px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/shared_button_y.svg'),
 			no-repeat 40px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/Rows.svg');
-
-		/* TODO - Reconsider how we display on screen glyphs */
-		/* display: none; */
 	}
 
 	/* Setting responsive_page_menu_ctn display to none to exlude hidden elements from focus navigation */
-	html.responsive .responsive_page_frame.no_header.localmenu_active .responsive_page_menu_ctn {
+	html.tablet .responsive_page_frame.no_header.localmenu_active .responsive_page_menu_ctn {
 		display: block;
 		width: var(--gpSidePanelWidth);
 	}
 
-	html.responsive .responsive_page_frame.no_header .responsive_page_menu_ctn {
+	html.tablet .responsive_page_frame.no_header .responsive_page_menu_ctn {
 		display: none;
 	}
 
-	html.responsive .responsive_page_menu_ctn .localmenu_content {
+	html.tablet .responsive_page_menu_ctn .localmenu_content {
 		height: 100vh;
 		overflow-y: scroll;
 		scroll-padding: 120px 0px;
 		box-sizing: border-box;
 	}
-
-
-}
 
 
 

@@ -19,6 +19,7 @@
 
 	/* Gradients */
 	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
 
 	/* Colours */
 	--gpColor-Blue: #1A9FFF;

@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "Complete purchase by:",
     "Sale_Reservation_CancelAuto": "If you do not complete the purchase before the expiration time noted above, then we will cancel your reservation and refund your deposit.",
     "Sale_Reservation_Expired": "Reservation expired.",
+    "Sale_Reservation_ExpectedDate": "Expected order availability:",
+    "Sale_Reservation_YourExpectedDate": "Your expected order availability:",
     "Sale_BrowserSortOption_TopWishlisted": "Most Wishlisted Upcoming Games",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Upcoming games sorted by total (all-time) wishlist counts. Only includes games not yet released on Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Popular Upcoming",

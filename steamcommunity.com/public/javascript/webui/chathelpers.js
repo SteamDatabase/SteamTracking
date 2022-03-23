@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7167835";
+var CLSTAMP = "7167947";
 !(function (e) {
   function t(t) {
     for (
@@ -119,7 +119,7 @@ var CLSTAMP = "7167835";
               ".js?contenthash=" +
               {
                 9: "51d9833326b9684fcced",
-                10: "0f449735566fcbe36cee",
+                10: "e24e6c354278115987df",
                 11: "202bbb75b8e5a6891b60",
                 12: "f2c732408680b2bd0347",
                 13: "21b2d9f7968287b12398",
@@ -131,7 +131,7 @@ var CLSTAMP = "7167835";
                 19: "a3d1030475b8c40c3ea2",
                 20: "8bb97f05327bf348b9b3",
                 21: "755cebc7d518ea293c3d",
-                22: "206b1fa8738e7f72aa00",
+                22: "88d093d7d2ae7619112c",
                 23: "3f7184433d1a24872d9a",
                 24: "0743cc5c3c7ffbd9ede5",
                 25: "620ec02cc405e5a95a7b",
@@ -149,35 +149,35 @@ var CLSTAMP = "7167835";
                 37: "576cacd96fc49edc9437",
                 38: "f36c12ca8cb415b8a86a",
                 39: "01e61b4c2d0faedc8e45",
-                40: "0d3eb81c6fe9c13eb41d",
-                41: "4cbc1a9c029c2d3ea7e0",
-                42: "e942198bfadcf0a85c20",
-                43: "663b0adae31b851dac51",
-                44: "84d94d550ee9cee7ec6b",
-                45: "4bb5cf702b738242933b",
-                46: "b99f8f06ca75026085a3",
-                47: "77f2561d33ab854ae098",
-                48: "a9e908af99dfec40654c",
-                49: "1b11b43039fb5f0408cd",
-                50: "4911b56d8e6fd4654a9a",
-                51: "41cd09806c4a7c325434",
-                52: "27430224135af9f57c23",
-                53: "8d1d6d80e79f02d35e0d",
-                54: "71cd5e13c4e0ec22d283",
-                55: "6ba8ce125a6a2da030cd",
-                56: "8b18af396f14a0d2aac8",
-                57: "e99e47535ae7c446ab4f",
-                58: "dc5bc9867eb9d1899456",
-                59: "fa2f62edc3c59d488202",
+                40: "a97fcf0977746c9be125",
+                41: "748c9f25e4a492f24581",
+                42: "f10639a094d3098f42a4",
+                43: "08f403af6f7e42ce6c95",
+                44: "32eb2098f67f1c594c7b",
+                45: "e59b609eb4610d3c50d6",
+                46: "f6e109ee4c172d740c76",
+                47: "2a559a2cec32689d9986",
+                48: "920189347f9666d63036",
+                49: "f24ae61691c7b07e2f5c",
+                50: "f7ea45f7cb0aa5791a9d",
+                51: "de35d7d270f69da63f1f",
+                52: "1adf1ecfd880ebba03fd",
+                53: "45d182f7a39fe6b4c039",
+                54: "30d79ab87b69282d67bf",
+                55: "bf3b1566b4e5c374d271",
+                56: "dccae10432b4a3adb61c",
+                57: "bd73e2c7f15589117804",
+                58: "114275ba65bdb4922458",
+                59: "110471dc70390ffb1879",
                 60: "e5f1020db42793001cd8",
-                61: "53b3ae3d83f82345b8f7",
-                62: "536d0e2f3a2e6221c984",
-                63: "d18949e040640c3fc766",
-                64: "ab85a7f50b1446630fa1",
-                65: "b79d31e0abe668c7f41e",
-                66: "13652bdb7a6e3e532533",
-                67: "a57bc46a4ba37d779092",
-                68: "d281435b10d7705240da",
+                61: "f1b931b5390a2858de63",
+                62: "cf7df73364560e571eeb",
+                63: "66988faa68aeefb41dd5",
+                64: "6fef3b27a3d604ea34d9",
+                65: "0f998c3704330275e316",
+                66: "47b8715328ffea6e693e",
+                67: "cf1df967f16613a9c500",
+                68: "745978c82d36ef6f164a",
               }[e]
             );
           })(e));
@@ -960,7 +960,7 @@ var CLSTAMP = "7167835";
       n.d(t, "d", function () {
         return r.b;
       }),
-      n.d(t, "h", function () {
+      n.d(t, "i", function () {
         return r.d;
       }),
       n.d(t, "c", function () {
@@ -972,8 +972,11 @@ var CLSTAMP = "7167835";
       n.d(t, "g", function () {
         return a;
       }),
+      n.d(t, "h", function () {
+        return u;
+      }),
       n.d(t, "a", function () {
-        return c.a;
+        return l.a;
       });
     var r = n("61mD"),
       i = n("cDcd");
@@ -992,7 +995,26 @@ var CLSTAMP = "7167835";
         n.current && n.current(), (n.current = e(t));
       }, t);
     }
-    var c = n("y3Ls");
+    function c(e, t) {
+      const [n, r] = i.useState();
+      return (
+        i.useEffect(() => {
+          if (!n) return;
+          const r = t((t) => {
+            e(t[0]);
+          });
+          return r.observe(n), () => r.unobserve(n);
+        }, [n, e, t]),
+        i.useCallback((e) => r(e), [])
+      );
+    }
+    function u(e) {
+      return c(
+        e,
+        i.useCallback((e) => new ResizeObserver(e), [])
+      );
+    }
+    var l = n("y3Ls");
   },
   "9Lmx": function (e, t, n) {
     var r = {

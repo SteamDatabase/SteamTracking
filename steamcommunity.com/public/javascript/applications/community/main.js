@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7167835";
+var CLSTAMP = "7167947";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [101],
   {
@@ -6040,7 +6040,7 @@ var CLSTAMP = "7167835";
           i = o.createRef(),
           c = Object(y.a)(),
           l = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return _.c.IN_GAMEPADUI
+        return _.c.IN_GAMEPADUI && !_.c.IN_LIBRARY
           ? o.createElement(
               s.b,
               {
@@ -11103,12 +11103,22 @@ var CLSTAMP = "7167835";
         let n = e.parentElement;
         for (; n; ) {
           if (!t || "x" == t) {
-            let e = window.getComputedStyle(n).overflowX;
-            if ("scroll" == e || "auto" == e) break;
+            let e = window.getComputedStyle(n);
+            if (
+              "scroll" == e.overflowX ||
+              "auto" == e.overflowX ||
+              "fixed" == e.position
+            )
+              break;
           }
           if (!t || "y" == t) {
-            let e = window.getComputedStyle(n).overflowY;
-            if ("scroll" == e || "auto" == e) break;
+            let e = window.getComputedStyle(n);
+            if (
+              "scroll" == e.overflowY ||
+              "auto" == e.overflowY ||
+              "fixed" == e.position
+            )
+              break;
           }
           n = n.parentElement;
         }
@@ -12020,6 +12030,7 @@ var CLSTAMP = "7167835";
         "AudioPlaybackManager",
         "LaunchStates",
         "Haptics",
+        "ControllerConfigurator",
       ];
       var c;
       !(function (e) {
@@ -12212,29 +12223,33 @@ var CLSTAMP = "7167835";
             })(e) +
             " " +
             l);
-        const u = [
-          `%c${l}%c:`,
-          `color: ${s ? "black" : "white"}; background: rgb(${o.join(
-            ","
-          )}); padding: 0 1ch`,
-          "color: transparent; margin-right: -1ch",
-          ...i,
-        ];
+        const u =
+            i.length >= 1 && "string" == typeof i[0] && i[0].includes("%c"),
+          d = u && i.shift(),
+          m = [
+            `%c${l}%c:${u ? " %c" + d : ""}`,
+            `color: ${s ? "black" : "white"}; background: rgb(${o.join(
+              ","
+            )}); padding: 0 1ch`,
+            "color: transparent; margin-right: -1ch",
+            ...(u ? [""] : []),
+            ...i,
+          ];
         if (t)
-          console.groupCollapsed(...u),
+          console.groupCollapsed(...m),
             console.trace("Callstack"),
             console.groupEnd();
         else
           switch (e) {
             case c.Debug:
             case c.Info:
-              console.log(...u);
+              console.log(...m);
               break;
             case c.Warning:
-              console.warn(...u);
+              console.warn(...m);
               break;
             case c.Error:
-              console.error(...u);
+              console.error(...m);
           }
       }
       (u.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
@@ -13330,6 +13345,7 @@ var CLSTAMP = "7167835";
           )
             break;
           if (!("ownerDocument" in e)) break;
+          if ("fixed" === window.getComputedStyle(e).position) break;
           (s = e),
             (a = {
               top: a.top - u.top,
@@ -16355,7 +16371,7 @@ var CLSTAMP = "7167835";
         n.d(t, "d", function () {
           return r.b;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "i", function () {
           return r.d;
         }),
         n.d(t, "c", function () {
@@ -16367,8 +16383,11 @@ var CLSTAMP = "7167835";
         n.d(t, "g", function () {
           return a;
         }),
+        n.d(t, "h", function () {
+          return l;
+        }),
         n.d(t, "a", function () {
-          return c.a;
+          return u.a;
         });
       var r = n("SRyh"),
         i = n("q1tI");
@@ -16387,7 +16406,26 @@ var CLSTAMP = "7167835";
           n.current && n.current(), (n.current = e(t));
         }, t);
       }
-      var c = n("XxJJ");
+      function c(e, t) {
+        const [n, r] = i.useState();
+        return (
+          i.useEffect(() => {
+            if (!n) return;
+            const r = t((t) => {
+              e(t[0]);
+            });
+            return r.observe(n), () => r.unobserve(n);
+          }, [n, e, t]),
+          i.useCallback((e) => r(e), [])
+        );
+      }
+      function l(e) {
+        return c(
+          e,
+          i.useCallback((e) => new ResizeObserver(e), [])
+        );
+      }
+      var u = n("XxJJ");
     },
     qDk6: function (e, t, n) {
       "use strict";
@@ -20082,7 +20120,7 @@ var CLSTAMP = "7167835";
             navTarget: null,
             prevTarget: null,
           }),
-          g = Object(u.h)(null == c ? void 0 : c.GetShowDebugFocusRing()),
+          g = Object(u.i)(null == c ? void 0 : c.GetShowDebugFocusRing()),
           f = i.a.useRef(),
           b = i.a.useMemo(
             () => ({

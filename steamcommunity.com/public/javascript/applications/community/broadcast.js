@@ -56,7 +56,7 @@
       "use strict";
       r.r(t),
         r.d(t, "BroadcastEmbeddablePopoutHeader", function () {
-          return $;
+          return K;
         });
       var a = r("mrSG"),
         i = r("vDqi"),
@@ -239,8 +239,9 @@
         );
       });
       var G,
-        A = r("C4Nl");
-      const L = {
+        A = r("C4Nl"),
+        L = r("hKFG");
+      const k = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
           { appid: 386360, url: "https://steam.tv/smite" },
@@ -267,7 +268,7 @@
           },
         ],
       };
-      let k = (G = class extends c.a.Component {
+      let V = (G = class extends c.a.Component {
         constructor() {
           super(...arguments),
             (this.m_cancelSignal = s.a.CancelToken.source()),
@@ -294,7 +295,8 @@
         componentDidMount() {
           return Object(a.a)(this, void 0, void 0, function* () {
             G.IsBroadcastAllowed() &&
-              (yield R.a
+              (Object(L.b)(null),
+              yield R.a
                 .Get()
                 .LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
               this.m_cancelSignal.token.reason ||
@@ -399,9 +401,9 @@
             s = c.a.createElement(
               "div",
               { className: U.a.rightPanel },
-              c.a.createElement(H, { key: "right" + i, ImgUrl: e.right_panel })
+              c.a.createElement($, { key: "right" + i, ImgUrl: e.right_panel })
             ),
-            n = c.a.createElement(H, { key: "left" + i, ImgUrl: e.left_panel });
+            n = c.a.createElement($, { key: "left" + i, ImgUrl: e.left_panel });
           if (i < 11) {
             const t = v.b.GetAppIDListForBroadcasterSteamID(e.steamid);
             t && 1 === t.length && (i = t[0]);
@@ -422,7 +424,7 @@
               })),
               (r.bRightPanelArtworkOrEmpty = !1)),
             a && !t
-              ? ((r.leftPanel = c.a.createElement(Y, {
+              ? ((r.leftPanel = c.a.createElement(J, {
                   broadcastEmbedContext: this.props,
                   key: "selector" + i,
                   curStream: e,
@@ -433,7 +435,7 @@
                 (r.rightPanel = s))
               : t
               ? ((r.leftPanel = c.a.createElement("div", null)),
-                (r.rightPanel = c.a.createElement(X, {
+                (r.rightPanel = c.a.createElement(Z, {
                   stream: e,
                   orientation: "rightside",
                 })),
@@ -555,7 +557,7 @@
                         onTransitionEnd: this.OnShrinkTransitionEnd,
                       },
                       s.leftPanel,
-                      c.a.createElement(V, {
+                      c.a.createElement(q, {
                         stream: e,
                         bStartMuted: this.state.bStartMuted,
                         fnRenderBroadcastContext: i,
@@ -564,7 +566,7 @@
                       }),
                       s.rightPanel,
                       this.state.bExpanded &&
-                        c.a.createElement(q, { stream: e, bMultistream: o })
+                        c.a.createElement(H, { stream: e, bMultistream: o })
                     )
                 ),
                 Boolean(
@@ -574,7 +576,7 @@
                   c.a.createElement(
                     "div",
                     { className: `${r ? U.a.Event : ""}` },
-                    c.a.createElement(q, { stream: e, bMultistream: o })
+                    c.a.createElement(H, { stream: e, bMultistream: o })
                   ),
                 c.a.createElement("div", { className: U.a.clear_div })
               )
@@ -585,13 +587,13 @@
           });
         }
       });
-      Object(a.b)([E.a], k.prototype, "ToggleBroadcastExpandShrink", null),
-        Object(a.b)([E.a], k.prototype, "OnShrinkTransitionEnd", null),
-        Object(a.b)([E.a], k.prototype, "onStreamSelect", null),
-        Object(a.b)([E.a], k.prototype, "PlayTopNonVOD", null),
-        (k = G = Object(a.b)([n.a], k));
-      t.default = k;
-      class V extends c.a.Component {
+      Object(a.b)([E.a], V.prototype, "ToggleBroadcastExpandShrink", null),
+        Object(a.b)([E.a], V.prototype, "OnShrinkTransitionEnd", null),
+        Object(a.b)([E.a], V.prototype, "onStreamSelect", null),
+        Object(a.b)([E.a], V.prototype, "PlayTopNonVOD", null),
+        (V = G = Object(a.b)([n.a], V));
+      t.default = V;
+      class q extends c.a.Component {
         constructor(e) {
           super(e),
             (this.m_iVideoContainerRef = c.a.createRef()),
@@ -641,7 +643,7 @@
                       : U.a.video_container,
                   },
                   this.state.bPopout &&
-                    c.a.createElement($, {
+                    c.a.createElement(K, {
                       steamIDBroadcast: this.props.stream.steamid,
                       OnPreventPopup: this.CloseBroadcastPopup,
                     }),
@@ -664,15 +666,15 @@
           );
         }
       }
-      Object(a.b)([E.a], V.prototype, "CloseBroadcastPopup", null),
-        Object(a.b)([E.a], V.prototype, "OnEnter", null),
-        Object(a.b)([E.a], V.prototype, "OnLeave", null);
-      let q = class extends c.a.Component {
+      Object(a.b)([E.a], q.prototype, "CloseBroadcastPopup", null),
+        Object(a.b)([E.a], q.prototype, "OnEnter", null),
+        Object(a.b)([E.a], q.prototype, "OnLeave", null);
+      let H = class extends c.a.Component {
         ConstructBroadcastLink() {
           let e = this.props.stream;
           const t = z.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
             .m_nAppID;
-          let r = L.list.find(
+          let r = k.list.find(
             (r) =>
               r.appid == t &&
               (!r.broadcasterAccountID || r.broadcasterAccountID == e.accountid)
@@ -798,10 +800,10 @@
           );
         }
       };
-      Object(a.b)([E.a], q.prototype, "OnToggleChat", null),
-        Object(a.b)([E.a], q.prototype, "onWatchBroadcastPage", null),
-        (q = Object(a.b)([n.a], q));
-      class H extends c.a.Component {
+      Object(a.b)([E.a], H.prototype, "OnToggleChat", null),
+        Object(a.b)([E.a], H.prototype, "onWatchBroadcastPage", null),
+        (H = Object(a.b)([n.a], H));
+      class $ extends c.a.Component {
         render() {
           let e = this.props.ImgUrl;
           return c.a.createElement(
@@ -816,7 +818,7 @@
           );
         }
       }
-      const $ = Object(n.a)((e) => {
+      const K = Object(n.a)((e) => {
         const { steamIDBroadcast: t } = e,
           r = z.a.GetOrCreateBroadcastInfo(t).m_nAppID,
           [a] = Object(_.b)(r, {});
@@ -847,7 +849,7 @@
           )
         );
       });
-      function K(e, t) {
+      function Y(e, t) {
         var r;
         const a = z.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
           i = A.a.Get().GetApp(a);
@@ -858,7 +860,7 @@
           ? parseInt(U.a.strStreamIconCapsuleArtHeight)
           : parseInt(U.a.strStreamIconScreenshotArtHeight);
       }
-      function Y(e) {
+      function J(e) {
         const {
             curStream: t,
             onStreamSelect: r,
@@ -888,7 +890,7 @@
                     let e = 0;
                     for (const r of o) {
                       if (t.accountid == r.accountid) break;
-                      e += K(i, r);
+                      e += Y(i, r);
                     }
                     n.current.scrollTop = e;
                   }
@@ -908,7 +910,7 @@
             },
             o.map((e) => {
               var a;
-              return c.a.createElement(J, {
+              return c.a.createElement(Q, {
                 key: null !== (a = e.accountid) && void 0 !== a ? a : e.steamid,
                 stream: e,
                 bSelected: t.accountid == e.accountid,
@@ -919,7 +921,7 @@
           )
         );
       }
-      function J(e) {
+      function Q(e) {
         var t;
         const {
             onStreamSelect: r,
@@ -959,7 +961,7 @@
                 onClick: () => r && r(i),
                 rootMargin: "100px 0px 100px 0px",
               },
-              c.a.createElement(Q, {
+              c.a.createElement(X, {
                 strThumbnail: i.thumbnail_http_address,
                 bSelected: a,
                 strCapsuleArtURL: d,
@@ -983,7 +985,7 @@
           )
         );
       }
-      function Q(e) {
+      function X(e) {
         const { strCapsuleArtURL: t, strThumbnail: r, bSelected: a } = e,
           i = a ? U.a.stream_icon_selected : U.a.stream_icon;
         if (t) {
@@ -1003,7 +1005,7 @@
         }
         return c.a.createElement("img", { className: i, src: r });
       }
-      function X(e) {
+      function Z(e) {
         const { stream: t, orientation: r } = e,
           a = "below" == r,
           i = Object(o.d)(() => z.a.GetBroadcast(t.steamid));
@@ -6427,6 +6429,44 @@
         Object(a.b)([ge.a], we.prototype, "MuteUserForSession", null);
       const Me = new Se();
       window.g_BroadcastChatStore = Me;
+    },
+    hKFG: function (e, t, r) {
+      "use strict";
+      r.d(t, "a", function () {
+        return c;
+      }),
+        r.d(t, "b", function () {
+          return d;
+        });
+      var a = r("mrSG"),
+        i = r("iO5U"),
+        s = (r("q1tI"), r("WBba")),
+        n = r("C4Nl"),
+        o = (r("X2UP"), r("r64O")),
+        l = r("lkRc");
+      function c(e = !1) {
+        return Object(a.a)(this, void 0, void 0, function* () {
+          if (e && n.a.BIsInitialized()) return;
+          const t = Object(l.f)(
+            "partnerbrowse_webapi_token",
+            "application_config"
+          );
+          Object(o.a)(Boolean(t), "require partnerbrowse_webapi_token");
+          const r = new s.a(l.c.WEBAPI_BASE_URL, t);
+          return (
+            ("dev" != l.c.WEB_UNIVERSE && "beta" != l.c.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                t
+              ),
+            d(t),
+            n.a.Initialize(r, !0)
+          );
+        });
+      }
+      function d(e) {
+        i.a.BIsInitialized() || i.a.Initialize(new s.a(l.c.WEBAPI_BASE_URL, e));
+      }
     },
     rKv1: function (e, t, r) {
       e.exports = {

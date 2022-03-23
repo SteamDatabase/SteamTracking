@@ -9,10 +9,6 @@
 
 
 	/* APP HUB HEADER */
-	html.responsive .apphub_HomeHeader {
-
-	}
-
 	html.responsive .apphub_HomeHeaderContent {
 		padding: unset;
 		display: flex;
@@ -130,10 +126,6 @@
 		margin: 0px !important;
 	}
 
-	/* html.responsive #AppHubContent.apphub_Discussion_Content {
-		margin: 0px 24px;
-	} */
-
 	/* Stats */
 	html.responsive .apphub_HeaderBottom {
 		min-height: unset;
@@ -245,6 +237,7 @@
 		height: unset;
 		line-height: unset;
 		padding: 8px 12px;
+		margin: 0px var(--gpSpace-Gutter);
 	}
 
 	html.responsive .apphub_EarlyAccess .apphub_EarlyAccess_Title {
@@ -268,7 +261,7 @@
 		color: unset;
 		font: var(--gpText-BodyMedium);
 		opacity: 0.6;
-		border-top: 1px solid var(--gpBackground-LightSoft);
+		border-top: 1px solid var(--gpBackground-Neutral-LightSoft);
 		padding-top: 12px;
 		margin: 12px 24px 0px;
 	}

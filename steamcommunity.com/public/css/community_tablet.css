@@ -6,13 +6,17 @@
 		color: var(--gpStoreLightestGrey);
 	}
 
+	html.responsive .community_space_clear {
+		display: none;
+	}
+
+
 
 
 	/* MINI PROFILE */
 	html.responsive .miniprofile_hover {
 		display: none !important;
 	}
-
 
 
 
@@ -24,9 +28,18 @@
 		background-attachment: fixed;
 	}
 
-	html.responsive .leftcol {
-		max-width: 820px;
-		margin: auto;
+	html.responsive #profileBlock {
+		width: unset;
+		float: unset;
+		max-width: unset;
+	}
+
+
+
+	/* BREADCRUMBS */
+	html.responsive .breadcrumbs {
+		margin: 0px var(--gpSpace-Gutter);
+		padding: unset;
 	}
 
 
@@ -46,7 +59,7 @@
 		background: none;
 		height: unset;
 		margin: unset;
-		background-color: var(--gpBackground-DarkMedium);
+		background-color: var(--gpStoreDarkerGrey);
 	}
 
 	html.responsive .profile_small_header_text {
@@ -59,7 +72,7 @@
 		height: unset;
 		display: flex;
 		flex-direction: row;
-		padding: 24px;
+		padding: var(--gpSpace-Gutter);
 		gap: 16px;
 		align-items: center;
 	}
@@ -99,18 +112,6 @@
 		margin: unset;
 	}
 
-	html.responsive .profile_small_header_arrow {
-		/* display: none; */
-	}
-
-	html.responsive .profile_small_header_location {
-		/* font: var(--gpText-HeadingLarge); */
-		/* color: var(--gpBackground-LightHarder); */
-		/* letter-spacing: -0.5px; */
-	}
-
-
-
 
 
 
@@ -122,14 +123,6 @@
 		padding: 0px;
 		padding-bottom: 24px;
 		background: none;
-	}
-
-	html.responsive .pagecontent {
-		/* margin: 0px 24px; */
-	}
-
-	html.responsive #mainContents {
-		/* margin: 0px 24px; */
 	}
 
 
@@ -146,7 +139,7 @@
 		padding: unset;
 		margin: unset;
 		font-size: unset;
-		margin: 0px -24px;
+		margin: 0px calc(0px - var(--gpSpace-Gutter));
 		padding: 24px;
 		scroll-padding: 0px 96px;
 		overflow-x: scroll;
@@ -155,9 +148,9 @@
 	}
 
 	html.responsive .sectionTabs {
-		background: var(--gpBackground-DarkMedium);
-		/* padding-bottom: 24px; */
-		padding-top: 0px;
+		background: var(--gpStoreDarkerGrey);
+		padding-top: 12px;
+		margin-top: -12px;
 	}
 
 	html.responsive .apphub_sectionTabs {
@@ -244,11 +237,6 @@
 		color: black !important;
 	}
 
-	html.responsive .sectionTab.active.gpfocus,
-	html.responsive .apphub_sectionTab.active.gpfocus {
-
-	}
-
 	html.responsive .sectionTab.active > span,
 	html.responsive .apphub_sectionTab.active > span {
 		color: white;
@@ -305,6 +293,52 @@
 	html.responsive a.pagebtn.gpfocus {
 		color: black;
 		background-color: white;
+		border-radius: 0px;
+	}
+
+
+	/* Items per page */
+	html.responsive .commentthread_pagination_ctn {
+		float: unset !important;
+	}
+
+	html.responsive .forum_pagesize_options {
+		float: unset !important;
+		display: flex;
+		justify-content: center;
+		padding: 16px;
+		margin-top: 16px;
+		border-top: 1px solid var(--gpBackground-LightSoft);
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyMedium);
+		margin: unset;
+	}
+
+	html.responsive .commentthread_pagination_link {
+		padding: 8px 16px;
+		background-color: #FFFFFF40;
+		display: inline-flex;
+		border-radius: var(--gpCorner-Medium);
+		transition: all 0.2s ease;
+		background-color: var(--gpBackground-LightHard);
+		color: white;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive a.commentthread_pagination_link {
+		background-color: var(--gpBackground-LightSoft);
+		box-shadow: unset;
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive a.commentthread_pagination_link:hover {
+		color: white;
+		background-color: var(--gpBackground-LightMedium);
+	}
+
+	html.responsive a.commentthread_pagination_link.gpfocus {
+		background-color: white;
+		color: black;
 		border-radius: 0px;
 	}
 
@@ -492,6 +526,248 @@
 
 	html.responsive .discussionSearchTextContainer .discussionSearchTextSubmitImg {
 		display: none;
+	}
+
+
+
+
+	/* PAGINATION */
+	html.responsive .workshopBrowsePagingWithBG {
+		background: unset;
+		padding: unset;
+		align-items: center;
+		margin: 0px 0px 8px;
+	}
+
+	html.responsive .workshopBrowsePagingInfo {
+		color: white;
+		opacity: 0.6;
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .workshopBrowsePagingControls {
+		display: flex;
+		column-gap: 4px;
+		align-items: center;
+	}
+
+
+
+
+	/* SEARCH TERMS */
+	html.responsive .searchedForTerm {
+		color: white;
+		background-color: var(--gpColor-Green);
+		border: unset;
+		padding: 6px 8px;
+		transition: background-color 0.2s ease, border-radius 0.2s ease;
+	}
+
+	html.responsive .searchedForTerm:hover {
+		background-color: var(--gpColor-GreenHi);
+	}
+
+	html.responsive .searchedForTerm.gpfocus {
+		background-color: var(--gpColor-GreenHi);
+		border-radius: 0px;
+	}
+
+
+
+
+	/* COMMENTS */
+	html.responsive .profile_comment_area {
+		margin-top: 48px;
+	}
+
+	html.responsive .profile_comment_area .commentthread_header {
+		background: none;
+		background-color: rgba(0, 0, 0, 0.3);
+		padding: 12px 16px;
+		border-radius: 0px;
+	}
+
+	html.responsive .commentthread_comment_container {
+		margin-top: 6px;
+	}
+
+	html.responsive .profile_comment_area .commentthread_header .commentthread_count {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	html.responsive .commentthread_header_label {
+		font-weight: 500;
+		color: white;
+	}
+
+	html.responsive .commentthread_count_label {
+		margin-right: unset;
+	}
+
+	html.responsive .commentthread_user_avatar a {
+		display: flex;
+	}
+
+	html.responsive .commentthread_comment_avatar a {
+		display: flex;
+	}
+
+	html.responsive .commentthread_entry_quotebox {
+		border: unset;
+		border-radius: unset;
+		background: none;
+		box-shadow: unset;
+		padding: unset;
+		margin: unset;
+	}
+
+	html.responsive .commentthread_area .commentthread_header {
+		/* background: unset; */
+	}
+
+
+	/* Comment items */
+	html.responsive .profile_comment_area .commentthread_comment_container {
+		border: none;
+	}
+
+	html.responsive .commentthread_comments {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		backdrop-filter: blur(8px);
+	}
+
+	html.responsive .commentthread_comment {
+		transition: background-color 0.1s ease;
+		background-color: #ffffff10;
+		margin: unset;
+		display: flex;
+		padding: 16px;
+		min-height: unset;
+		gap: 16px;
+	}
+
+	html.responsive .commentthread_comment_avatar {
+		position: unset;
+	}
+
+	html.responsive .commentthread_comment_content {
+		flex: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	html.responsive .commentthread_comment.gpfocus {
+		background-color: #ffffff20;
+	}
+
+	html.responsive .commentthread_comment_author {
+		margin: unset;
+		line-height: unset;
+		font: var(--gpText-BodyMedium);
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	html.responsive .commentthread_comment_author a {
+		font-size: unset;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	html.responsive .commentthread_comment_timestamp {
+		font-size: unset;
+		color: unset;
+		margin: unset;
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	html.responsive .commentthread_comment_text {
+		font-size: unset;
+		color: unset;
+		color: rgba(255, 255, 255, 0.9);
+		line-height: unset;
+	}
+
+
+	/* Comment box */
+	html.responsive .commentthread_entry_quotebox textarea {
+		background-color: #FFFFFF20;
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 8px 10px;
+		box-shadow: unset;
+		border: unset;
+        margin: unset;
+		box-sizing: border-box;
+		text-shadow: unset;
+		height: unset !important;
+	}
+
+	html.responsive .commentthread_entry_quotebox textarea::placeholder {
+		color: unset;
+		opacity: 0.5;
+	}
+
+	html.responsive .commentthread_entry_quotebox textarea:hover {
+		background-color: #ffffff30;
+	}
+
+	html.responsive .commentthread_entry_quotebox textarea:focus {
+		background-color: white;
+        color: black;
+		height: 80px !important;
+	}
+
+	html.responsive .commentthread_entry_quotebox textarea.gpfocus {
+		border-radius: 0px;
+	}
+
+	html.responsive .commentthread_footer {
+		border: none;
+	}
+
+	html.responsive .profile_comment_area .commentthread_header .commentthread_allcommentslink {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .profile_comment_area .commentthread_subscribe_checkbox {
+		width: 20px;
+		height: 20px;
+		border: none;
+		background-color: var(--gpBackground-LightSoft);
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive .commentthread_subscribe_hint {
+		display: none;
+	}
+
+	html.responsive .commentthread_entry {
+		background-color: unset;
+	}
+
+
+	/* Subscribe link */
+	html.responsive .commentthread_subscribe_ctn {
+		display: inline-flex;
+		align-items: center;
+		padding: 4px 12px 4px 4px;
+		gap: 4px;
+		border-radius: var(--gpCorner-Medium);
+		transition: background-color 0.2s ease;
+	}
+
+	html.responsive .commentthread_subscribe_ctn:hover {
+		background-color: #FFFFFF20;
+	}
+
+	html.responsive .commentthread_subscribe_ctn {
+		font: var(--gpText-BodyMedium);
 	}
 
 

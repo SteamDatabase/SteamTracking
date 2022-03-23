@@ -1401,3 +1401,100 @@ var ServiceProviderRevenueSlider = Class.create( {
 	}
 } );
 
+
+// enable seeking via dpad
+function GamepadYouTubeVideoOnDirection( event /* GamepadEvent */, ytplayer )
+{
+	// only handle the navigation if we're in fullscreen
+	if ( ytplayer && ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement ) )
+	{
+		const nPositionStep = 10;
+		if ( event.detail.button == 11 && video.currentTime > 0 ) // left
+			ytplayer.seekTo( Math.max( ytplayer.getCurrentTime() - nPositionStep, 0 ) );
+		else if ( event.detail.button == 12 && ytplayer.getCurrentTime() < ytplayer.getDuration() ) // right
+			ytplayer.seekTo( Math.min( ytplayer.getCurrentTime() + nPositionStep, ytplayer.getDuration() ) );
+
+		return true; // return true for moveup, movedown to prevent dpad navigation out of the video
+	}
+
+	return false; // allow event to propogate
+}
+
+function GamepadYouTubeVideoOnCancel( ytplayer )
+{
+	// if we're in fullscreen pause the video and exit fullscreen
+	if ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement )
+	{
+		GamepadYouTubeVideoPause( ytplayer );
+		GamepadYouTubeVideoSetFullscreen( ytplayer, false );
+		return true;
+	}
+
+	return false; // allow event to propagate
+}
+
+function GamepadYouTubeVideoSetFullscreen( ytplayer, bFullscreen )
+{
+	var videoIFrame = ytplayer.getIframe();
+
+	if ( bFullscreen )
+	{
+		if ( !document.webkitFullscreenElement && !document.fullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement )
+		{
+			if ( videoIFrame.requestFullscreen ) {
+				videoIFrame.requestFullscreen().catch( ( e ) => { console.error( "requestFullscreen exception:", e ); } );
+			} else if ( videoIFrame.webkitRequestFullscreen ) {
+				videoIFrame.webkitRequestFullscreen().catch( ( e ) => { console.error( "webkitRequestFullscreen exception", e ); } );
+			} else if ( video.mozRequestFullScreen ) {
+				videoIFrame.mozRequestFullScreen().catch( ( e ) => { console.error( "mozRequestFullScreen exception", e ); } );
+			} else if ( video.msRequestFullscreen ) {
+				videoIFrame.msRequestFullscreen().catch( ( e ) => { console.error( "msRequestFullscreen exception", e ); } );
+			}
+		}
+	}
+	else if ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement )
+	{
+		if ( document.exitFullscreen ) {
+			document.exitFullscreen().catch( ( e ) => { console.error( "exitFullscreen exception:", e ); } );
+		} else if ( document.webkitExitFullscreen ) {
+			document.webkitExitFullscreen().catch( ( e ) => { console.error( "webkitExitFullscreen exception", e ); } );
+		} else if ( document.mozCancelFullScreen ) {
+			document.mozCancelFullScreen().catch( ( e ) => { console.error( "mozCancelFullScreen exception", e ); } );
+		} else if ( document.msExitFullscreen ) {
+			document.msExitFullscreen().catch( ( e ) => { console.error( "msRequestFullscreen exception", e ); } );
+		}
+
+		// make sure we scroll to the currently selected video
+		setTimeout( function () { videoIFrame.scrollIntoView() }, 0 );
+	}
+}
+
+function GamepadYouTubeVideoPause( ytplayer )
+{
+	ytplayer.pauseVideo();
+}
+
+function GamepadYouTubeVideoTogglePlay( ytplayer )
+{
+	if ( ytplayer.getPlayerState() != 1 )
+	{
+		ytplayer.playVideo();
+		GamepadYouTubeVideoSetFullscreen( ytplayer, true );
+	}
+	else
+	{
+		ytplayer.pauseVideo();
+	}
+}
+function GamepadYouTubeVideoToggleMute( ytplayer )
+{
+	if ( ytplayer.isMuted() )
+	{
+		ytplayer.unmute();
+	}
+	else
+	{
+		ytplayer.mute();
+	}
+}
+

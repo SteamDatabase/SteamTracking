@@ -247,7 +247,6 @@ a.dropdown.hover, a.dropdown:hover
 {
 	color: #e5e5e5;
 	border-right: none;
-	height: 38px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }

@@ -19,6 +19,7 @@
 
 	/* Gradients */
 	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
 
 	/* Colours */
 	--gpColor-Blue: #1A9FFF;
@@ -98,20 +99,18 @@
 	--gpTransition-Shorter: all 0.1s ease;
 }
 
-@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
-
 	/* Wrapper */
-	.home_page_body_ctn {
+	html.tablet .home_page_body_ctn {
 		padding-bottom: 12px;
 	}
 
-	html.responsive .responsive_page_template_content {
+	html.tablet .responsive_page_template_content {
 		padding-top: unset;
 	}
 
 
 	/* Text */
-	html.responsive .home_page_content h2 {
+	html.tablet .home_page_content h2 {
 		margin-bottom: 8px;
 		font-weight: 700;
 		font-size: 12px;
@@ -121,17 +120,17 @@
 
 
 	/* 3 col game tiles */
-	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items > *,
-	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items .community_recommendation_app {
+	html.tablet .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items > *,
+	html.tablet .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items .community_recommendation_app {
 		width: var(--gpWidth-3colcap);
 	}
 
 	/* 2 col game tiles */
-	html.responsive .carousel_container.maincap .carousel_items > * {
+	html.tablet .carousel_container.maincap .carousel_items > * {
 		width: var(--gpWidth-2colcap);
 	}
 
-	html.responsive .home_ctn {
+	html.tablet .home_ctn {
 		padding: 8px var(--gpSpace-Gutter);
 		overflow: visible;
 	}
@@ -140,35 +139,35 @@
 
 
 	/* Trending among friends */
-	html.responsive .friends_recently_purchased {
+	html.tablet .friends_recently_purchased {
 		margin: unset;
 	}
 
-	html.responsive .friends_recently_purchased .carousel_items {
+	html.tablet .friends_recently_purchased .carousel_items {
 		height: unset;
 	}
 
-	html.responsive .friends_recently_purchased .store_capsule {
+	html.tablet .friends_recently_purchased .store_capsule {
 		height: 148px;
 	}
 
-	html.responsive .friends_recently_purchased .friends_container {
+	html.tablet .friends_recently_purchased .friends_container {
 		border-top: unset;
 		background: unset;
 		padding: 0px 0px 0px 8px;
 		top: -37px;
 	}
 
-	html.responsive .friends_recently_purchased .friends_container .avatars a img {
+	html.tablet .friends_recently_purchased .friends_container .avatars a img {
 		border-radius: var(--gpCorner-Medium);
 		overflow: hidden;
 	}
 
-	html.responsive img.nonresponsive_hidden {
+	html.tablet img.nonresponsive_hidden {
 		display: none !important;
 	}
 
-	html.responsive .responsive_content_dive {
+	html.tablet .responsive_content_dive {
 		opacity: unset;
 		font: var(--gpText-BodyMedium);
 	}
@@ -177,11 +176,11 @@
 
 
 	/* Carousel "more" buttons */
-	html.responsive .home_page_content h2 span.right,
-	html.responsive .recommendation_section h2 span.right,
-	html.responsive .recommendation_mainsection h2 span.right,
-	html.responsive .user_reviews_header span.right,
-	html.responsive .bucket h2 span.right {
+	html.tablet .home_page_content h2 span.right,
+	html.tablet .recommendation_section h2 span.right,
+	html.tablet .recommendation_mainsection h2 span.right,
+	html.tablet .user_reviews_header span.right,
+	html.tablet .bucket h2 span.right {
 		position: absolute;
 		top: -12px;
 		right: 0px;
@@ -191,14 +190,14 @@
 
 
 	/* Sign in module */
-	html.responsive .home_page_sign_in_ctn {
+	html.tablet .home_page_sign_in_ctn {
 		height: unset;
 		padding: unset;
 		background-color: unset;
 		color: var(--gpStoreLighterGrey)
 	}
 
-	html.responsive .page_content_ctn.dark:last-child {
+	html.tablet .page_content_ctn.dark:last-child {
 		margin-bottom: unset;
 	}
 
@@ -206,17 +205,17 @@
 
 
 	/* Featured and recommended */
-	html.responsive .carousel_container.maincap {
+	html.tablet .carousel_container.maincap {
 		margin: unset;
 		max-width: unset;
 	}
 
-	html.responsive .carousel_container.maincap .carousel_items {
+	html.tablet .carousel_container.maincap .carousel_items {
 		box-shadow: unset;
 		margin: 0px;
 	}
 
-	html.responsive .carousel_container.maincap .info {
+	html.tablet .carousel_container.maincap .info {
 		background: var( --gpStoreDarkestGrey );
 		padding: 4px 8px;
 		height: 56px;
@@ -224,7 +223,7 @@
 		min-height: unset;
 	}
 
-	html.responsive .store_main_capsule .app_name > div {
+	html.tablet .store_main_capsule .app_name > div {
 		font: var(--gpText-HeadingSmall);
 		font-weight: 500;
 	}
@@ -238,22 +237,22 @@
 		outline: unset;
 	}
 
-	html.responsive .carousel_container.maincap .discount_block {
+	html.tablet .carousel_container.maincap .discount_block {
 		padding-top: 0px;
 		text-align: right;
 		display: flex;
 		max-height: 24px;
 	}
 
-	html.responsive .store_main_capsule .app_name > div {
+	html.tablet .store_main_capsule .app_name > div {
 		padding-bottom: 0px;
 	}
 
-	html.responsive .store_main_capsule.no_screenshots .app_name {
+	html.tablet .store_main_capsule.no_screenshots .app_name {
 		width: unset;
 	}
 
-	html.responsive .store_main_capsule.no_screenshots .app_name > div {
+	html.tablet .store_main_capsule.no_screenshots .app_name > div {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -263,31 +262,31 @@
 
 
 	/* Takeunder */
-	html.responsive #home_takeunder_ctn {
+	html.tablet #home_takeunder_ctn {
 		padding-bottom: 16px;
 	}
 
-	html.responsive .home_page_content.takeunder {
+	html.tablet .home_page_content.takeunder {
 		margin: unset;
 	}
 
-	html.responsive .home_page_content.takeunder a {
+	html.tablet .home_page_content.takeunder a {
 		box-shadow: var(--gpShadow-Medium);
 	}
 
-	html.responsive .home_page_content.takeunder a:hover {
+	html.tablet .home_page_content.takeunder a:hover {
 		box-shadow: var(--gpShadow-Medium);
 	}
 
-	html.responsive .spotlight_weeklong_ctn {
+	html.tablet .spotlight_weeklong_ctn {
 		height: 32vw;
 		/* border: none; */
 	}
-	html.responsive .spotlight_weeklong_ctn .spotlight_text_overlay {
+	html.tablet .spotlight_weeklong_ctn .spotlight_text_overlay {
 		background-size: contain;
 		width: 100%;
 	}
-	html.responsive .spotlight_weeklong_ctn .spotlight_count {
+	html.tablet .spotlight_weeklong_ctn .spotlight_count {
 		margin-top: 22vw;
 	}
 
@@ -295,19 +294,19 @@
 
 
 	/* Browse Steam */
-	html.responsive .big_buttons .button_container {
+	html.tablet .big_buttons .button_container {
 		grid-template-columns: repeat( 4, 1fr );
 	}
 
-	html.responsive .big_buttons .button_container {
+	html.tablet .big_buttons .button_container {
 		gap: var(--gpSpace-Gap);
 	}
 
-	html.responsive .big_buttons h2.home_page_content_title {
+	html.tablet .big_buttons h2.home_page_content_title {
 		margin-bottom: 12px;
 	}
 
-	html.responsive .big_button {
+	html.tablet .big_button {
 		text-transform: unset;
 		font: var(--gpText-BodyLarge);
 		font-weight: 500;
@@ -317,11 +316,11 @@
 		transition: all 0.1s ease;
 	}
 
-	html.responsive .big_button:hover {
+	html.tablet .big_button:hover {
 		background: var(--gpColor-BlueHi);
 	}
 
-	html.responsive .big_button.gpfocus {
+	html.tablet .big_button.gpfocus {
 		background: white;
 		color: black;
 		outline: none;
@@ -337,39 +336,39 @@
 		height: unset;
 	}
 
-	html.responsive .carousel_container.spotlight .carousel_items:not(.no_paging),
-	html.responsive .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+	html.tablet .carousel_container.spotlight .carousel_items:not(.no_paging),
+	html.tablet .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
 		padding-bottom: unset;
 	}
 
-	html.responsive #module_special_offers {
+	html.tablet #module_special_offers {
 		padding-top: 4px;
 		overflow: unset;
 	}
 
-	html.responsive #spotlight_carousel .home_special_offers_group {
+	html.tablet #spotlight_carousel .home_special_offers_group {
 		margin-right: 0px;
 	}
 
-	html.responsive #spotlight_carousel .dailydeal_countdown.ttip {
+	html.tablet #spotlight_carousel .dailydeal_countdown.ttip {
 		display: none;
 	}
 
-	html.responsive .store_capsule .discount_block.discount_block_large .discount_prices {
+	html.tablet .store_capsule .discount_block.discount_block_large .discount_prices {
 		padding: 4px 6px;
 	}
 
-	html.responsive .dailydeal_desc {
+	html.tablet .dailydeal_desc {
 		padding-right: unset;
 	}
 
-	html.responsive .carousel_container.spotlight .carousel_items > * > div {
+	html.tablet .carousel_container.spotlight .carousel_items > * > div {
 		/* display: flex; */
 		/* flex-direction: column; */
 		/* gap: var(--gpSpace-Gap); */
 	}
 
-	html.responsive .specials_target:first-child {
+	html.tablet .specials_target:first-child {
 		margin-bottom: 12px;
 	}
 
@@ -386,11 +385,11 @@
 		margin-bottom: 0px;
 	}
 
-	html.responsive .spotlight_col > *:not(:last-child) {
+	html.tablet .spotlight_col > *:not(:last-child) {
 		justify-content: space-between;
 	}
 
-	html.responsive .spotlight_col {
+	html.tablet .spotlight_col {
 		display: grid;
 		grid-gap: var(--gpSpace-Gap);
 	}
@@ -418,29 +417,29 @@
 		margin-top: -15px;
 	}
 
-	html.responsive .spotlight_content {
+	html.tablet .spotlight_content {
 		padding: 8px;
 		box-sizing: border-box;
 		width: 100%;
 	}
 
-	html.responsive .home_area_spotlight.ds_flagged .ds_steam_deck_compat {
+	html.tablet .home_area_spotlight.ds_flagged .ds_steam_deck_compat {
 		top: 35px;
 	}
 
-	html.responsive .home_area_spotlight .discount_block {
+	html.tablet .home_area_spotlight .discount_block {
 		text-align: right;
 	}
 
-	html.responsive .spotlight_content .bundle_base_discount {
+	html.tablet .spotlight_content .bundle_base_discount {
 		display: none;
 	}
 
-	html.responsive body.v6 .spotlight_content h2 {
+	html.tablet body.v6 .spotlight_content h2 {
 		margin-bottom: 2px;
 	}
 
-	html.responsive .spotlight_content .spotlight_price {
+	html.tablet .spotlight_content .spotlight_price {
 		margin-top: 8px;
 	}
 
@@ -461,7 +460,7 @@
 		margin-top: -10px;
 	}
 
-	html.responsive .live_streams_ctn {
+	html.tablet .live_streams_ctn {
 		overflow: visible;
 	}
 
@@ -469,11 +468,11 @@
 
 
 	/* Recommendations */
-	html.responsive body.v6 .page_content_ctn.dark {
+	html.tablet body.v6 .page_content_ctn.dark {
 		background-color: unset;
 	}
 
-	html.responsive .home_ctn.home_content_ctn {
+	html.tablet .home_ctn.home_content_ctn {
 		padding: var(--gpSpace-Gutter);
 	}
 
@@ -481,16 +480,16 @@
 		margin-bottom: unset;
 	}
 
-	html.responsive body.v6 .home_content_ctn .page_content_ctn.dark {
+	html.tablet body.v6 .home_content_ctn .page_content_ctn.dark {
 		padding: unset;
 	}
 
-	html.responsive .page_content_ctn.dark .home_content {
+	html.tablet .page_content_ctn.dark .home_content {
 		padding: unset;
 		margin-bottom: calc(var(--gpSpace-Gutter));
 	}
 
-	html.responsive #content_more .home_content h2 {
+	html.tablet #content_more .home_content h2 {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -498,13 +497,13 @@
 		margin-bottom: 12px;
 	}
 
-	html.responsive #content_more .home_content h2 span {
+	html.tablet #content_more .home_content h2 span {
 		margin-left: 0px;
 		font: var(--gpText-BodyMedium);
 		color: var(--gpStoreLightestGrey);
 	}
 
-	html.responsive #content_more .home_content h2 a {
+	html.tablet #content_more .home_content h2 a {
 		width: fit-content;
 		padding: 8px 16px;
 		border-radius: var(--gpCorner-Medium);
@@ -512,44 +511,44 @@
 		transition: all 0.1s ease;
 	}
 
-	html.responsive #content_more .home_content h2 a:hover,
-	html.responsive #content_more .home_content h2 a.gpfocus {
+	html.tablet #content_more .home_content h2 a:hover,
+	html.tablet #content_more .home_content h2 a.gpfocus {
 		background-color: var(--gpBackground-LightMedium);
 		color: white;
 	}
 
-	html.responsive #content_more .home_content h2 a.gpfocus {
+	html.tablet #content_more .home_content h2 a.gpfocus {
 		border-radius: 0px;
 	}
 
-	html.responsive .gp_contiguous_singles {
+	html.tablet .gp_contiguous_singles {
 		margin-bottom: 24px;
 	}
 
-	html.responsive .home_content_items {
+	html.tablet .home_content_items {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 12px;
 	}
 
-	html.responsive .home_content a.home_content_item .home_content_item_info {
+	html.tablet .home_content a.home_content_item .home_content_item_info {
 		padding: 8px 12px;
 	}
 
-	html.responsive .home_content a.home_content_item {
+	html.tablet .home_content a.home_content_item {
 		margin: unset !important;
 		width: var(--gpWidth-2colcap) !important;
 		background-color: var(--gpBackground-DarkMedium);
 	}
 
-	html.responsive .home_content.single {
+	html.tablet .home_content.single {
 		width: var(--gpWidth-3colcap);
 		box-sizing: border-box;
 		background-color: var(--gpBackground-DarkMedium);
 		padding: 12px;
 	}
 
-	html.responsive .home_content.single .capsule {
+	html.tablet .home_content.single .capsule {
 		box-shadow: var(--gpShadow-Medium);
 	}
 
@@ -557,22 +556,22 @@
 
 
 	/* Hardware banners */
-	html.responsive .home_hardware_banner {
+	html.tablet .home_hardware_banner {
 		padding: 0px var(--gpSpace-Gutter);
 		margin: 8px 0px 16px;
 	}
 
-	html.responsive .home_hardware_banner > a {
+	html.tablet .home_hardware_banner > a {
 		height: 5.9vw;
 		background-size: cover;
 		box-shadow: var(--gpShadow-Medium);
 	}
 
-	html.responsive .hardware_index_banner {
+	html.tablet .hardware_index_banner {
 		margin-left: 12px;
 	}
 
-	html.responsive .home_hardware_banner > a:hover {
+	html.tablet .home_hardware_banner > a:hover {
 		box-shadow: var(--gpShadow-Medium);
 	}
 
@@ -592,18 +591,18 @@
 		overflow: hidden;
 	}
 
-	html.responsive .page_background_holder,
-	html.responsive .home_page_body_ctn.has_takeover .home_page_takeover_sizer,
-	html.responsive .home_page_body_ctn.has_takeover .home_page_takeover_sizer img,
-	html.responsive .home_page_body_ctn.has_takeover .fullscreen-bg__video,
-	html.responsive .home_page_body_ctn.has_takeover a.home_page_takeover_sizer,
-	html.responsive body.responsive_page .home_page_body_ctn.has_takeover a.home_page_takeover_sizer,
-	html.responsive .fullscreen-bg a {
+	html.tablet .page_background_holder,
+	html.tablet .home_page_body_ctn.has_takeover .home_page_takeover_sizer,
+	html.tablet .home_page_body_ctn.has_takeover .home_page_takeover_sizer img,
+	html.tablet .home_page_body_ctn.has_takeover .fullscreen-bg__video,
+	html.tablet .home_page_body_ctn.has_takeover a.home_page_takeover_sizer,
+	html.tablet body.responsive_page .home_page_body_ctn.has_takeover a.home_page_takeover_sizer,
+	html.tablet .fullscreen-bg a {
 		height: 32vw !important;
 	}
 
-	html.responsive .page_background_holder,
-	html.responsive .fullscreen-bg {
+	html.tablet .page_background_holder,
+	html.tablet .fullscreen-bg {
 		margin-top: var( --gpStoreMenuHeight );
 	}
 
@@ -616,7 +615,7 @@
 		background: unset;
 	}
 
-	html.responsive .community_recommendation_app > .right_col {
+	html.tablet .community_recommendation_app > .right_col {
 		background: unset;
 		height: 160px;
 		border-radius: 0px;
@@ -628,15 +627,15 @@
 		display: none;
 	}
 
-	html.responsive .community_recommendation_app .community_recommendations_block {
+	html.tablet .community_recommendation_app .community_recommendations_block {
 		height: 100%;
 	}
 
-	html.responsive .community_recommendations_block > .review_box {
+	html.tablet .community_recommendations_block > .review_box {
 		padding: 40px var(--gpSpace-Gap) var(--gpSpace-Gap);
 	}
 
-	html.responsive .community_recommendation_app .review_box .content {
+	html.tablet .community_recommendation_app .review_box .content {
 		height: unset;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -646,11 +645,11 @@
 		padding-right: 8px;
 	}
 
-	html.responsive .community_recommendation_app .ds_steam_deck_compat {
+	html.tablet .community_recommendation_app .ds_steam_deck_compat {
 		bottom: -34px;
 	}
 
-	html.responsive .community_recommendation_app .discount_block {
+	html.tablet .community_recommendation_app .discount_block {
 		bottom: -30px;
 		right: 8px;
 	}
@@ -659,7 +658,7 @@
 		height: 17.4vw;
 	}
 
-	html.responsive .community_recommendation_app {
+	html.tablet .community_recommendation_app {
 		background-color: var(--gpStoreDarkestGrey);
 	}
 
@@ -678,11 +677,11 @@
 
 
 	/* Under $10 */
-	html.responsive .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
+	html.tablet .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
 		padding: unset;
 	}
 
-	html.responsive .home_page_content > *[data-content-dive=true] {
+	html.tablet .home_page_content > *[data-content-dive=true] {
 		display: flex;
 		justify-content: center;
 		gap: 12px;
@@ -691,26 +690,26 @@
 
 
 	/* Updates and offers marketing messages */
-	html.responsive .marketingmessage_container {
+	html.tablet .marketingmessage_container {
 		display: inline-flex;
 	}
 
-	html.responsive .home_marketing_message .discount_block {
+	html.tablet .home_marketing_message .discount_block {
 		padding: 6px;
 		height: unset;
 	}
 
-	html.responsive .home_marketing_message .ds_steam_deck_compat {
+	html.tablet .home_marketing_message .ds_steam_deck_compat {
 		/* bottom: 2px; */
 	}
 
 
 
 	/* Inline more buttons */
-	html.responsive h2.home_page_content_title span.right,
-	html.responsive h2.home_page_content_title a,
-	html.responsive h2.giant_curator_title span.right,
-	html.responsive .home_right_btn {
+	html.tablet h2.home_page_content_title span.right,
+	html.tablet h2.home_page_content_title a,
+	html.tablet h2.giant_curator_title span.right,
+	html.tablet .home_right_btn {
 		display: none;
 	}
 
@@ -726,22 +725,22 @@
 
 
 	/* Tabs container */
-	html.responsive .home_tabs_row_ctn {
+	html.tablet .home_tabs_row_ctn {
 		display: none;
 	}
 
-	html.responsive .tab_content#tab_topgrossing_content {
+	html.tablet .tab_content#tab_topgrossing_content {
 		/* display: none !important; */
 	}
 
-	html.responsive .home_leftcol.home_tab_col {
+	html.tablet .home_leftcol.home_tab_col {
 		margin-bottom: unset;
 	}
 
 
 
 	/* Top grossing tab container */
-	html.responsive #tab_topgrossing_content {
+	html.tablet #tab_topgrossing_content {
 		flex-direction: column;
 	}
 
@@ -750,22 +749,22 @@
 
 
 	/* Top new releases */
-	html.responsive #module_top_new_releases {
+	html.tablet #module_top_new_releases {
 		margin: unset;
 	}
 
-	html.responsive .top_new_releases {
+	html.tablet .top_new_releases {
 		margin: unset;
 	}
 
-	html.responsive .top_new_releases_banner_ctn .title {
+	html.tablet .top_new_releases_banner_ctn .title {
 		font: var(--gpText-HeadingLarge);
 		text-transform: unset;
 		letter-spacing: unset;
 		text-shadow: unset;
 	}
 
-	html.responsive .top_new_releases_banner_ctn .dateline {
+	html.tablet .top_new_releases_banner_ctn .dateline {
 		font: var(--gpText-BodyMedium);
 		text-transform: unset;
 		letter-spacing: unset;
@@ -774,12 +773,12 @@
 		opacity: 0.8;
 	}
 
-	html.responsive .top_new_releases_banner_ctn .title,
-	html.responsive .top_new_releases_banner_ctn .dateline {
+	html.tablet .top_new_releases_banner_ctn .title,
+	html.tablet .top_new_releases_banner_ctn .dateline {
 		text-shadow: 0px 8px 40px black;
 	}
 
-	html.responsive .top_new_releases_banner_ctn a {
+	html.tablet .top_new_releases_banner_ctn a {
         background: rgba(0,0,0,0.4);
 		box-shadow: unset;
 		height: unset;
@@ -787,14 +786,14 @@
 		border-radius: 0px;
 	}
 
-	html.responsive .top_new_releases_background {
+	html.tablet .top_new_releases_background {
 		-webkit-mask-image: linear-gradient( 0deg, transparent 10%, black 50%, black 100%, transparent 0%);
 		top: -18px;
 		width: 150%;
 		background-size: cover;
 	}
 
-	html.responsive .top_new_releases_carousel .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+	html.tablet .top_new_releases_carousel .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
 		padding-bottom: var(--gpSpace-Gap);
 	}
 
@@ -825,7 +824,7 @@
 
 
 	/* More Curator Recommnends */
-	html.responsive body.v6 h2.giant_curator_title {
+	html.tablet body.v6 h2.giant_curator_title {
 		margin-bottom: 14px;
 	}
 
@@ -833,27 +832,27 @@
 		height: auto;
 	}
 
-	html.responsive div.carousel_container.paging_capsules.more_apps_by_curators_capsule {
+	html.tablet div.carousel_container.paging_capsules.more_apps_by_curators_capsule {
 		margin-top: var(--gpSpace-Gutter);
 	}
 
-	html.responsive .apps_recommended_by_curators_ctn .store_capsule_frame {
+	html.tablet .apps_recommended_by_curators_ctn .store_capsule_frame {
 		margin: unset;
 		padding: unset;
 	}
 
-	html.responsive .more_apps_by_curators_capsule .apps_recommended_by_curators_v2 .curated_app_curators {
+	html.tablet .more_apps_by_curators_capsule .apps_recommended_by_curators_v2 .curated_app_curators {
 		top: 113px;
 		left: 6px;
 	}
 
-	/* html.responsive .steam_curator_for_app {
+	/* html.tablet .steam_curator_for_app {
 		width: 24px;
 		height: 24px;
 		display: flex;
 	} */
 
-	html.responsive .more_apps_by_curators_capsule .ds_steam_deck_compat {
+	html.tablet .more_apps_by_curators_capsule .ds_steam_deck_compat {
 		/* bottom: unset;
 		top: 122px;
 		left: 38px; */
@@ -864,36 +863,36 @@
 
 
 	/* Developers and publishers */
-	html.responsive .recommended_creators_ctn .store_capsule {
+	html.tablet .recommended_creators_ctn .store_capsule {
 		padding-bottom: unset;
 		height: 150px;
 	}
 
-	html.responsive .recommended_creators_ctn {
+	html.tablet .recommended_creators_ctn {
 		margin: unset;
 	}
 
-	html.responsive .recommended_creators_ctn .recommended_creators_container {
+	html.tablet .recommended_creators_ctn .recommended_creators_container {
 		background: none;
 		border: none;
 		bottom: 45px;
 	}
 
-	html.responsive .recommended_creators_ctn .recommended_creators_container .avatars {
+	html.tablet .recommended_creators_ctn .recommended_creators_container .avatars {
 		top: 0px;
 	}
 
-	html.responsive .recommended_creators_ctn .recommended_creators_container .avatars > .actions {
+	html.tablet .recommended_creators_ctn .recommended_creators_container .avatars > .actions {
 		display: none;
 	}
 
-	html.responsive .recommended_creators_ctn .ds_steam_deck_compat {
+	html.tablet .recommended_creators_ctn .ds_steam_deck_compat {
 		/* bottom: unset;
 		top: 122px;
 		left: 38px; */
 	}
 
-	html.responsive .recommended_creators_ctn .recommended_creators_container .avatars > a img {
+	html.tablet .recommended_creators_ctn .recommended_creators_container .avatars > a img {
 		width: 32px;
 		height: 32px;
 		box-shadow: unset;
@@ -909,11 +908,11 @@
 		 margin-bottom: unset;
 	}
 
-	html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+	html.tablet .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
 		padding-bottom: unset;
 	}
 
-	html.responsive .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+	html.tablet .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
 		padding-bottom: unset;
 	}
 
@@ -921,11 +920,11 @@
 		display: none;
 	}
 
-	html.responsive .recommended_by_steam_labs_ctn {
+	html.tablet .recommended_by_steam_labs_ctn {
 		margin-bottom: 0px !important; /* overriding inline style */
 	}
 
-	html.responsive body.v6 .header_inline_reason {
+	html.tablet body.v6 .header_inline_reason {
 		display: inline;
 		float: unset;
 		text-transform: none;
@@ -947,27 +946,27 @@
 
 
 	/* Discovery queue */
-	html.responsive #module_discovery_queue {
+	html.tablet #module_discovery_queue {
 		margin-bottom: 12px;
 	}
 
-	html.responsive .discovery_queue_static {
+	html.tablet .discovery_queue_static {
 		margin-top: 12px;
 	}
 
-	html.responsive #discovery_queue .dq_item {
+	html.tablet #discovery_queue .dq_item {
 		box-shadow: var(--gpShadow-Medium);
 	}
 
-	html.responsive #module_discovery_queue .right {
+	html.tablet #module_discovery_queue .right {
 		display: none;
 	}
 
-	html.responsive #module_discovery_queue .begin_exploring {
+	html.tablet #module_discovery_queue .begin_exploring {
 		font-weight: 400;
 	}
 
-	html.responsive body.newonsteam .discovery_queue_ctn {
+	html.tablet body.newonsteam .discovery_queue_ctn {
 		display: none !important;
 	}
 
@@ -980,7 +979,7 @@
 		color: unset;
 	}
 
-	html.responsive .gp_contiguous_singles {
+	html.tablet .gp_contiguous_singles {
 		overflow-x: scroll;
 		overflow-y: hidden;
 		box-sizing: content-box;
@@ -988,11 +987,11 @@
 		flex-wrap: nowrap;
 	}
 
-	html.responsive .responsive_app_menu {
+	html.tablet .responsive_app_menu {
 		display: none;
 	}
 
-	html.responsive .home_content.single {
+	html.tablet .home_content.single {
 		margin-right: var(--gpSpace-Gap);
 		margin-top: 0;
 		width: 262px;
@@ -1002,19 +1001,19 @@
         overflow: visible;
 	}
 
-	html.responsive .home_content.single .screenshots {
+	html.tablet .home_content.single .screenshots {
 		display: flex;
 	}
 
-	html.responsive .home_content.single .review {
+	html.tablet .home_content.single .review {
 		display: none;
 	}
 
-	html.responsive .home_content.single .ds_steam_deck_compat  {
+	html.tablet .home_content.single .ds_steam_deck_compat  {
 		bottom: 35px;
 	}
-	html.responsive .home_content.twowide .ds_steam_deck_compat,
-	html.responsive .home_content.fourwide .ds_steam_deck_compat{
+	html.tablet .home_content.twowide .ds_steam_deck_compat,
+	html.tablet .home_content.fourwide .ds_steam_deck_compat{
 		/* bottom: unset;
 		top: 160px; */
 	}
@@ -1022,19 +1021,19 @@
 
 
 	/* Keep scrolling for more content */
-	html.responsive .home_page_content .more_content_title {
+	html.tablet .home_page_content .more_content_title {
 		font: var(--gpText-HeadingSmall);
 		color: white;
 		margin-bottom: 4px;
 		font-weight: 500;
 	}
 
-	html.responsive .home_page_content .more_content_desc {
+	html.tablet .home_page_content .more_content_desc {
 		font: var(--gpText-BodyMedium);
 		color: var(--gpStoreLighterGrey);
 	}
 
-	html.responsive #content_callout {
+	html.tablet #content_callout {
 		padding: 64px 0px 48px 0px;
 		background-image: url( '/public/images/v6/home/logo_steam_logo.svg' );
 		background-size: 48px;
@@ -1042,7 +1041,7 @@
 		border-bottom: 1px solid var(--gpBackground-LightSoft);
 	}
 
-	html.responsive #content_callout .home_page_content {
+	html.tablet #content_callout .home_page_content {
 		padding: 0px 20%;
 	}
 
@@ -1050,7 +1049,7 @@
 
 
 	/* RECENTLY UPDATED */
-	html.responsive .recently_updated_announcement_link {
+	html.tablet .recently_updated_announcement_link {
 		display: none;
 	}
 
@@ -1058,41 +1057,41 @@
 
 
 	/* NEW RELEASES */
-	html.responsive .newonsteam_headercaps {
+	html.tablet .newonsteam_headercaps {
 		overflow: visible;
 	}
 
 	/* Hide breadcrumbs */
-	html.responsive .breadcrumbs {
+	html.tablet .breadcrumbs {
 		display: none;
 	}
 
 
 	/* Page header */
-	html.responsive body.v6.newonsteam .page_header_ctn {
+	html.tablet body.v6.newonsteam .page_header_ctn {
 		margin-bottom: -56px;
 	}
 
 
 	/* Remove background */
-	html.responsive .game_page_background {
+	html.tablet .game_page_background {
 		background-image: unset !important;
 	}
 
 
 	/* Header caps */
-	html.responsive body.v6.newonsteam .top_capsules.page_ctn {
+	html.tablet body.v6.newonsteam .top_capsules.page_ctn {
 		margin-bottom: 0px;
 	}
 
-	html.responsive body.v6.newonsteam .newonsteam_headercaps > a {
+	html.tablet body.v6.newonsteam .newonsteam_headercaps > a {
 		background: var(--gpStoreDarkestGrey);
 		padding-bottom: 12px;
 		min-height: unset;
 		max-height: 240px;
 	}
 
-	html.responsive .newonsteam_capsules > a > div.info {
+	html.tablet .newonsteam_capsules > a > div.info {
 		padding: 4px 12px;
 		font: var(--gpText-HeadingSmall);
 		font-weight: 500;
@@ -1101,39 +1100,39 @@
 
 
 	/* Bucket containers */
-	html.responsive .newonsteam_buckets {
+	html.tablet .newonsteam_buckets {
 		display: flex;
 		flex-direction: column;
 	}
 
-	html.responsive .bucket {
+	html.tablet .bucket {
 		margin: 8px 0px;
 	}
 
-	html.responsive body.v6 h2 {
+	html.tablet body.v6 h2 {
 		padding: 0px;
 	}
 
-	html.responsive body.v6 h2 span.header_inline {
+	html.tablet body.v6 h2 span.header_inline {
 		margin-left: 4px;
 	}
 
-	html.responsive body.v6 h2 .header_inline {
+	html.tablet body.v6 h2 .header_inline {
 		color: var(--gpStoreLighterGrey);
 		font: var(--gpText-BodyLarge);
 	}
 
 
 	/* Bucket carousels */
-	html.responsive .store_autoslider {
+	html.tablet .store_autoslider {
 		display: none !important; /*overriding inline style*/
 	}
 
-	html.responsive .bucket .store_capsule {
+	html.tablet .bucket .store_capsule {
 		height: unset;
 	}
 
-	html.responsive .store_horizontal_autoslider_ctn {
+	html.tablet .store_horizontal_autoslider_ctn {
 		overflow: unset;
 		margin-bottom: unset;
 		height: unset !important;
@@ -1141,14 +1140,13 @@
 
 
 	/* Tab containers */
-	html.responsive .home_tab_bg {
+	html.tablet .home_tab_bg {
 		display: none;
 	}
 
 
 	/* broadcast carousel */
-	html.responsive .live_streams_ctn .broadcast_capsule .ds_steam_deck_compat {
+	html.tablet .live_streams_ctn .broadcast_capsule .ds_steam_deck_compat {
 		bottom: 40px;
 	}
 
-}

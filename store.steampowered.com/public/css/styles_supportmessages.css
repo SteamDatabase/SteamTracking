@@ -23,6 +23,10 @@
 	border: 3px solid #bb9d2f;
 }
 
+.support_message.Support_SteamDeckReservationExpiring {
+	border: 3px solid #1A9FFF;
+}
+
 .support_message_header {
 	padding: 6px;
 	background: #95423a;
@@ -31,6 +35,11 @@
 
 .ack_message_header {
 	background: #bb9d2f;
+}
+
+.support_message_header.Support_SteamDeckReservationExpiring {
+	background: #1A9FFF;
+	border: 3px solid #1A9FFF;
 }
 
 .support_message_header .accountname {
@@ -189,4 +198,39 @@ a.btn_contact_support > span {
 	background-color: rgba( 0, 0, 0, .2);
 	padding: 15px;
 	margin: 10px 20px 15px 20px;
+}
+
+.steam_deck_reservation_message {
+	color: #FFFFFF;
+}
+
+.steam_deck_reservation_message .title {
+	font-weight: bold;
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+
+.steam_deck_reservation_message .subtitle {
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+.steam_deck_reservations {
+	background-color: #000000;
+	padding: 10px;
+}
+
+.steam_deck_reservation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.steam_deck_purchase_btn {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.steam_deck_support_callout {
+	margin-top: 60px;
 }

@@ -1,80 +1,78 @@
 
-@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
-
 	/* GAMES AND CAROUSELS */
-	html.responsive .featured_items .carousel_items {
+	html.tablet .featured_items .carousel_items {
 		height: unset;
 	}
 
-	html.responsive .recommended_creators_ctn {
+	html.tablet .recommended_creators_ctn {
 		margin: unset;
 	}
 
 	/* 3 col game tiles */
-	html.responsive .store_capsule,
-	html.responsive .spotlight_img,
-	html.responsive .carousel_container.spotlight .carousel_items > * .store_capsule,
-	html.responsive .spotlight_img img,
-	html.responsive #live_streams_carousel .carousel_items .store_capsule,
-	html.responsive .recommended_creators_ctn .store_capsule,
-	html.responsive .carousel_container.spotlight .carousel_items > * > div,
-	html.responsive .spotlight_weeklong_ctn,
-	html.responsive .home_marketing_message,
-	html.responsive .recommendation_carousel_item .carousel_cap,
-	html.responsive .tab_item {
+	html.tablet .store_capsule,
+	html.tablet .spotlight_img,
+	html.tablet .carousel_container.spotlight .carousel_items > * .store_capsule,
+	html.tablet .spotlight_img img,
+	html.tablet #live_streams_carousel .carousel_items .store_capsule,
+	html.tablet .recommended_creators_ctn .store_capsule,
+	html.tablet .carousel_container.spotlight .carousel_items > * > div,
+	html.tablet .spotlight_weeklong_ctn,
+	html.tablet .home_marketing_message,
+	html.tablet .recommendation_carousel_item .carousel_cap,
+	html.tablet .tab_item {
 		width: var(--gpWidth-3colcap);
 		min-width: var(--gpWidth-3colcap);
 	}
 
 	/* 2 col game tiles */
-	html.responsive .quadscreenshot_carousel.carousel_container .carousel_items:not(.no_paging) > *,
-	html.responsive body.v6 .newonsteam_capsules > a,
-	html.responsive .dailydeal_ctn {
+	html.tablet .quadscreenshot_carousel.carousel_container .carousel_items:not(.no_paging) > *,
+	html.tablet body.v6 .newonsteam_capsules > a,
+	html.tablet .dailydeal_ctn {
 		width: var(--gpWidth-2colcap);
     }
 
 	/* Set shadows */
-	html.responsive .store_capsule,
-	html.responsive .big_button,
-	html.responsive .home_area_spotlight,
-	html.responsive .store_main_capsule,
-	html.responsive .home_marketing_message,
-	html.responsive .carousel_container.spotlight .carousel_items > * .store_capsule,
-	html.responsive .home_page_takeover_link,
-	html.responsive .community_recommendation_app,
-	html.responsive .recommended_creators_ctn .store_capsule,
-	html.responsive body.v6 .newonsteam_capsules > a,
-	html.responsive .dailydeal_ctn,
-	html.responsive .recommendation_carousel_item .carousel_cap {
+	html.tablet .store_capsule,
+	html.tablet .big_button,
+	html.tablet .home_area_spotlight,
+	html.tablet .store_main_capsule,
+	html.tablet .home_marketing_message,
+	html.tablet .carousel_container.spotlight .carousel_items > * .store_capsule,
+	html.tablet .home_page_takeover_link,
+	html.tablet .community_recommendation_app,
+	html.tablet .recommended_creators_ctn .store_capsule,
+	html.tablet body.v6 .newonsteam_capsules > a,
+	html.tablet .dailydeal_ctn,
+	html.tablet .recommendation_carousel_item .carousel_cap {
 		box-shadow: var( --gpShadow-Medium );
 		scroll-snap-align: start;
 	}
 
 	/* Set consistent gap between tiles */
-	html.responsive .carousel_container .carousel_items > *,
-	html.responsive .carousel_container.spotlight .carousel_items > * > div,
-	html.responsive #live_streams_carousel .carousel_items .store_capsule,
-	html.responsive .carousel_container.paging_capsules .carousel_items > * > *:not(:last-child),
-	html.responsive .contenthub_specials_grid_cell,
-	html.responsive body.v6.newonsteam .newonsteam_headercaps a:first-child,
-	html.responsive .store_capsule:not(:last-child) {
+	html.tablet .carousel_container .carousel_items > *,
+	html.tablet .carousel_container.spotlight .carousel_items > * > div,
+	html.tablet #live_streams_carousel .carousel_items .store_capsule,
+	html.tablet .carousel_container.paging_capsules .carousel_items > * > *:not(:last-child),
+	html.tablet .contenthub_specials_grid_cell,
+	html.tablet body.v6.newonsteam .newonsteam_headercaps a:first-child,
+	html.tablet .store_capsule:not(:last-child) {
 		margin-right: var(--gpSpace-Gap);
 	}
 
 	/* Make carousels peek left and right */
-	html.responsive .peeking_carousel,
-	html.responsive .carousel_container.spotlight .carousel_items:not(.no_paging),
-	html.responsive .carousel_container.paging_capsules .carousel_items:not(.no_paging),
-	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_ctn,
-	html.responsive .carousel_container .carousel_items:not(.no_paging),
-	html.responsive .carousel_container.maincap .carousel_items:not(.no_paging),
-	html.responsive .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging),
-	html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging),
-	html.responsive .contenthub_popular_tags_grid,
-	html.responsive .contenthub_specials_grid,
-	html.responsive .marketingmessage_container,
-	html.responsive .recommendation_carousel_scroll,
-	html.responsive .home_page_content.gp_contiguous_singles {
+	html.tablet .peeking_carousel,
+	html.tablet .carousel_container.spotlight .carousel_items:not(.no_paging),
+	html.tablet .carousel_container.paging_capsules .carousel_items:not(.no_paging),
+	html.tablet:not(.legacy_mobile) .responsive_scroll_snap_ctn,
+	html.tablet .carousel_container .carousel_items:not(.no_paging),
+	html.tablet .carousel_container.maincap .carousel_items:not(.no_paging),
+	html.tablet .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging),
+	html.tablet .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging),
+	html.tablet .contenthub_popular_tags_grid,
+	html.tablet .contenthub_specials_grid,
+	html.tablet .marketingmessage_container,
+	html.tablet .recommendation_carousel_scroll,
+	html.tablet .home_page_content.gp_contiguous_singles {
 		padding-left: 24px;
 		padding-right: 24px;
 		scroll-padding-left: 24px;
@@ -85,38 +83,38 @@
 		padding-top: 8px;
 	}
 
-	/* html.responsive .responsive_scroll_snap_ctn:after,
-	html.responsive .tab_content:after {
+	/* html.tablet .responsive_scroll_snap_ctn:after,
+	html.tablet .tab_content:after {
 		content: "\00a0";
 		min-width: 24px;
 	} */
 
 	/* Adds margin to end of carousels */
-	html.responsive .tab_content:after,
-	html.responsive .peeking_carousel:after,
-	html.responsive .carousel_container.spotlight .carousel_items:not(.no_paging):after,
-	html.responsive .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
-	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_ctn:after,
-	html.responsive .carousel_container .carousel_items:not(.no_paging):after,
-	html.responsive .carousel_container.maincap .carousel_items:not(.no_paging):after,
-	html.responsive .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
-	html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
-	html.responsive .contenthub_popular_tags_grid:after,
-	html.responsive .contenthub_specials_grid:after,
-	html.responsive .marketingmessage_container:after,
-	html.responsive .recommendation_carousel_scroll:after,
-	html.responsive .home_page_content.gp_contiguous_singles:after {
+	html.tablet .tab_content:after,
+	html.tablet .peeking_carousel:after,
+	html.tablet .carousel_container.spotlight .carousel_items:not(.no_paging):after,
+	html.tablet .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+	html.tablet:not(.legacy_mobile) .responsive_scroll_snap_ctn:after,
+	html.tablet .carousel_container .carousel_items:not(.no_paging):after,
+	html.tablet .carousel_container.maincap .carousel_items:not(.no_paging):after,
+	html.tablet .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+	html.tablet .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+	html.tablet .contenthub_popular_tags_grid:after,
+	html.tablet .contenthub_specials_grid:after,
+	html.tablet .marketingmessage_container:after,
+	html.tablet .recommendation_carousel_scroll:after,
+	html.tablet .home_page_content.gp_contiguous_singles:after {
 		content: "\00a0";
 		min-width: var(--gpSpace-Gutter);
 	}
 
 	/* Turn container into a carousel */
-	html.responsive .peeking_carousel,
-	html.responsive .contenthub_popular_tags_grid,
-	html.responsive .contenthub_specials_grid,
-	html.responsive .newonsteam_headercaps,
-	html.responsive .marketingmessage_container,
-	html.responsive .recommendation_carousel_scroll {
+	html.tablet .peeking_carousel,
+	html.tablet .contenthub_popular_tags_grid,
+	html.tablet .contenthub_specials_grid,
+	html.tablet .newonsteam_headercaps,
+	html.tablet .marketingmessage_container,
+	html.tablet .recommendation_carousel_scroll {
 		display: inline-flex;
 		overflow-x: scroll;
 		overflow-y: hidden;
@@ -128,63 +126,63 @@
 
 
 	/* EARLY ACCESS */
-	html.responsive .early_access_tablet_banner {
+	html.tablet .early_access_tablet_banner {
 		display: inline-block;
 		width: 100%;
 		padding-bottom: 12px;
 	}
-	html.responsive #earlyAccessHeader {
+	html.tablet #earlyAccessHeader {
 		display: none;
 	}
-	html.responsive .early_access_tablet_banner .header {
+	html.tablet .early_access_tablet_banner .header {
 		background: var(--gpBackground-LightSoft);
 	}
-	html.responsive .early_access_tablet_content {
+	html.tablet .early_access_tablet_content {
 		display: none;
 		max-height: 55vh;
 		overflow-y: scroll;
 		scroll-behavior: smooth;
 	}
-	html.responsive .early_access_tablet_content::-webkit-scrollbar {
+	html.tablet .early_access_tablet_content::-webkit-scrollbar {
 		display: inline;
 		padding-left: 20px;
 	}
-	html.responsive #devnotes_expander {
+	html.tablet #devnotes_expander {
 		max-height: none;
 	}
-	html.responsive #devnotes_more {
+	html.tablet #devnotes_more {
 		display: none;
 	}
-	html.responsive .devs_say {
+	html.tablet .devs_say {
 		padding-top: 10px;
 		font: var(--gpText-HeadingMedium) !important;
 		color: #ffffff !important;
 	}
-	html.responsive .early_access_tablet_warn {
+	html.tablet .early_access_tablet_warn {
 		font: var(--gpText-BodyMedium);
 		color: var(--gpStoreLighterGrey);
 	}
-	html.responsive .early_access_header .heading {
+	html.tablet .early_access_header .heading {
 		font: var(--gpText-BodySmall);
 		color: var(--gpStoreLightestGrey);
 	}
-	html.responsive .early_access_tablet_banner .btnv6_blue_hoverfade {
+	html.tablet .early_access_tablet_banner .btnv6_blue_hoverfade {
 		background: var(--gpBackground-LightHard) !important;
 	}
 
 
 
 	/* TAB CONTAINER */
-	html.responsive .tab_container {
+	html.tablet .tab_container {
 		background: unset;
 	}
 
-	html.responsive .home_tabs_row {
+	html.tablet .home_tabs_row {
 		display: none;
 	}
 
-	html.responsive .tab_content,
-	html.responsive .tab_content_items {
+	html.tablet .tab_content,
+	html.tablet .tab_content_items {
 		display: flex !important;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -198,21 +196,21 @@
 
 	}
 
-	html.responsive .tab_content:not(:last-child) {
+	html.tablet .tab_content:not(:last-child) {
 		margin-bottom: var(--gpSpace-Gap);
 	}
 
-	html.responsive .tab_see_more, .tab_controls {
+	html.tablet .tab_see_more, .tab_controls {
 		display: none;
 	}
 
-	html.responsive .tab_content#tab_topgrossing_content {
+	html.tablet .tab_content#tab_topgrossing_content {
 		margin-bottom: 0px;
 	}
 
 
 	/* Tab item tiles */
-	html.responsive .tab_item {
+	html.tablet .tab_item {
 		display: flex;
 		flex-direction: column;
 		background: var( --gpStoreDarkestGrey );
@@ -226,49 +224,49 @@
 		max-height: 196px;
 	}
 
-	html.responsive .tab_item .tab_item_content_clear_ctn {
+	html.tablet .tab_item .tab_item_content_clear_ctn {
 		display: none;
 	}
 
-	html.responsive .tab_item .discount_block.empty {
+	html.tablet .tab_item .discount_block.empty {
 		height: 0;
 	}
 
-	html.responsive .tab_item .platform_img {
+	html.tablet .tab_item .platform_img {
 		display: none;
 	}
 
-	html.responsive .tab_item.focus {
+	html.tablet .tab_item.focus {
 		background: var( --gpStoreDarkestGrey );
 	}
 
-	html.responsive .tab_item.focus .tab_item_name {
+	html.tablet .tab_item.focus .tab_item_name {
 		color: white;
 	}
 
-	html.responsive .tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_content .tab_item_name {
+	html.tablet .tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_content .tab_item_name {
 		color: white;
 	}
 
-	html.responsive .tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_cap {
+	html.tablet .tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_cap {
 		opacity: 1;
 	}
 
-	html.responsive .tab_item.focus .discount_block .discount_final_price {
+	html.tablet .tab_item.focus .discount_block .discount_final_price {
 		color: var( --gpStoreLightestGrey );
 	}
 
-	html.responsive .tab_item .tab_item_name {
+	html.tablet .tab_item .tab_item_name {
 		font: var(--gpText-BodyMedium);
 		color: white;
 	}
 
-	html.responsive .tab_item .tab_item_top_tags {
+	html.tablet .tab_item .tab_item_top_tags {
 		font: var(--gpText-BodySmall);
 		color: var(--gpStoreLighterGrey);
 	}
 
-	html.responsive .tab_item_cap {
+	html.tablet .tab_item_cap {
 		max-width: unset;
 		margin-right: unset;
 		float: unset;
@@ -279,36 +277,36 @@
 		top: unset;
 	}
 
-	html.responsive .tab_item .tab_item_discount,
-	html.responsive .tab_item .tab_item_discount.no_discount {
+	html.tablet .tab_item .tab_item_discount,
+	html.tablet .tab_item .tab_item_discount.no_discount {
 		width: 100%;
 		margin-right: unset;
 		margin-top: 4px;
 		font: var(--gpText-BodySmall);
 	}
 
-	html.responsive .home_tabs_content .tab_item_content {
+	html.tablet .home_tabs_content .tab_item_content {
 		padding-top: 2px;
 	}
 
-	html.responsive .tab_item .discount_original_price {
+	html.tablet .tab_item .discount_original_price {
 		margin-right: 4px;
 	}
 
-	html.responsive .tab_item_discount .discount_pct {
+	html.tablet .tab_item_discount .discount_pct {
 		display: inline-block;
 		float: unset;
 		margin-right: 4px;
 		margin-top: unset;
 	}
 
-	html.responsive .tab_item_top_tags {
+	html.tablet .tab_item_top_tags {
 		height: auto;
 		margin-top: 2px;
 		text-overflow: ellipsis;
 	}
 
-	html.responsive .home_ctn.tab_container {
+	html.tablet .home_ctn.tab_container {
 		margin-top: 32px;
 	}
 
@@ -316,21 +314,21 @@
 		margin-top: unset;
 	}
 
-	html.responsive .home_leftcol.home_tab_col {
+	html.tablet .home_leftcol.home_tab_col {
 		margin-bottom: unset;
 	}
 
-	html.responsive .home_tabs_content h2.tab_content_title {
+	html.tablet .home_tabs_content h2.tab_content_title {
 		display: block;
 	}
 
-	html.responsive .tab_item .ds_steam_deck_compat {
+	html.tablet .tab_item .ds_steam_deck_compat {
 		top: 12px;
 		right: 12px;
 	}
 
-	html.responsive .vr_required,
-	html.responsive .vr_supported {
+	html.tablet .vr_required,
+	html.tablet .vr_supported {
 		display: none;
 	}
 
@@ -339,46 +337,46 @@
 
 
 	/* PRICING */
-	html.responsive .discount_block .discount_pct,
-	html.responsive .discount_block .discount_original_price,
-	html.responsive .discount_block .discount_final_price,
-	html.responsive .store_capsule .discount_block:not(.discount_block_large) .discount_pct,
-	html.responsive .price {
+	html.tablet .discount_block .discount_pct,
+	html.tablet .discount_block .discount_original_price,
+	html.tablet .discount_block .discount_final_price,
+	html.tablet .store_capsule .discount_block:not(.discount_block_large) .discount_pct,
+	html.tablet .price {
 		font: var(--gpText-BodyMedium);
 		padding: 0px;
 		margin: 0px;
 	}
 
-	html.responsive .discount_block .discount_original_price,
-	html.responsive .discount_block .discount_final_price {
+	html.tablet .discount_block .discount_original_price,
+	html.tablet .discount_block .discount_final_price {
 		color: var(--gpStoreLightestGrey);
 	}
 
-	html.responsive .discount_block .discount_original_price {
+	html.tablet .discount_block .discount_original_price {
 		opacity: 0.6;
 	}
 
-	html.responsive .discount_block .discount_prices,
-	html.responsive .discount_block,
-	html.responsive .carousel_container.maincap .discount_block {
+	html.tablet .discount_block .discount_prices,
+	html.tablet .discount_block,
+	html.tablet .carousel_container.maincap .discount_block {
 		background: none;
 		display: flex;
 		justify-content: flex-end;
 		gap: 6px;
 	}
 
-	html.responsive .discount_block.no_discount.main_cap_discount {
+	html.tablet .discount_block.no_discount.main_cap_discount {
 		background: none;
 	}
 
-	html.responsive .discount_block_inline .discount_prices,
-	html.responsive .store_capsule .discount_block.no_discount .discount_final_price {
+	html.tablet .discount_block_inline .discount_prices,
+	html.tablet .store_capsule .discount_block.no_discount .discount_final_price {
 		padding: unset;
 	}
 
-	html.responsive .discount_block .discount_pct,
-	html.responsive .discount_pct,
-	html.responsive .store_capsule .discount_block:not(.discount_block_large) .discount_pct {
+	html.tablet .discount_block .discount_pct,
+	html.tablet .discount_pct,
+	html.tablet .store_capsule .discount_block:not(.discount_block_large) .discount_pct {
 		background: var(--gpColor-Green);
 		color: white;
 		padding: 0px 4px;
@@ -387,28 +385,28 @@
 		border-radius: 1px;
 	}
 
-	html.responsive .discount_final_price.your_price {
+	html.tablet .discount_final_price.your_price {
 
 	}
 
 
 	/* Discount block large */
-	html.responsive .discount_block_large,
-	html.responsive .discount_block_large .discount_block {
+	html.tablet .discount_block_large,
+	html.tablet .discount_block_large .discount_block {
 		gap: 0px;
 	}
 
-	html.responsive .discount_block_large .discount_prices {
+	html.tablet .discount_block_large .discount_prices {
 		padding: 4px 6px;
 		display: block;
 		background: var(--gpStoreDarkGrey);
 	}
 
-	html.responsive .discount_block_large .discount_original_price, {
+	html.tablet .discount_block_large .discount_original_price, {
 		font: var(--gpText-BodySmall);
 	}
 
-	html.responsive .discount_block_large .discount_pct {
+	html.tablet .discount_block_large .discount_pct {
 		font: var(--gpText-HeadingLarge);
 		font-weight: 400;
 		padding: 3px 6px;
@@ -416,44 +414,44 @@
 		line-height: 1.1;
 	}
 
-	html.responsive .discount_block_large .discount_final_price,
-	html.responsive .discount_block_large .discount_original_price {
+	html.tablet .discount_block_large .discount_final_price,
+	html.tablet .discount_block_large .discount_original_price {
 		line-height: 1;
 	}
 
 
 	/* Discount block large (NOT CURATORS OR DAILY DEALS) */
-	html.responsive .community_recommendation_capsule .discount_block_large .discount_prices,
-	html.responsive #spotlight_carousel .discount_block_large .discount_prices {
+	html.tablet .community_recommendation_capsule .discount_block_large .discount_prices,
+	html.tablet #spotlight_carousel .discount_block_large .discount_prices {
 		display: inline-flex;
 	}
 
-	html.responsive .community_recommendation_capsule .discount_block_large .discount_pct,
-	html.responsive #spotlight_carousel .discount_block_large .discount_pct {
+	html.tablet .community_recommendation_capsule .discount_block_large .discount_pct,
+	html.tablet #spotlight_carousel .discount_block_large .discount_pct {
 		font: var(--gpText-BodyMedium);
 		padding: 0px 4px;
 		border-radius: 1px;
 	}
 
-	html.responsive .community_recommendation_capsule .discount_block_large .discount_prices {
+	html.tablet .community_recommendation_capsule .discount_block_large .discount_prices {
 		background: unset;
 	}
 
 
 	/* Regular prices */
-	html.responsive .similar_grid_price {
+	html.tablet .similar_grid_price {
 		display: flex;
 		justify-content: flex-end;
 	}
 
-	html.responsive .discount_block.empty {
+	html.tablet .discount_block.empty {
 		height: 0;
 	}
 
 
 
 	/* TOOLTIPS */
-	html.responsive .store_tooltip {
+	html.tablet .store_tooltip {
 		padding: 12px 16px;
 		font: var(--gpText-BodyMedium);
 		box-shadow: var(--gpShadow-Large);
@@ -462,7 +460,7 @@
 		border-radius: var(--gpCorner-Large);
 	}
 
-	html.responsive .tooltip_q_ctn {
+	html.tablet .tooltip_q_ctn {
 		background: unset;
 		background-color: var(--gpBackground-LightHard);
 		font: var(--gpText-BodyMedium);
@@ -475,7 +473,7 @@
 		transition: outline-color background-color color 0.2s ease;
 	}
 
-	html.responsive .tooltip_q_ctn.gpfocus {
+	html.tablet .tooltip_q_ctn.gpfocus {
 		background-color: white;
 		color: black;
 		box-shadow: var(--gpShadow-Medium);
@@ -489,18 +487,18 @@
 
 
 	/* MATURE CONTENT */
-	html.responsive .mature_content_filtered {
+	html.tablet .mature_content_filtered {
 		padding: 16px;
 		background-color: var(--gpBackground-DarkSoft);
 		font: var(--gpText-BodyLarge);
 		margin-bottom: var(--gpSpace-Gutter);
 	}
 
-	html.responsive .mature_content_filtered:focus-within {
+	html.tablet .mature_content_filtered:focus-within {
 		background-color: var(--gpBackground-DarkMedium);
 	}
 
-	html.responsive .mature_content_filtered a {
+	html.tablet .mature_content_filtered a {
 		color: white;
 		display: inline-block;
 		background-color: var(--gpBackground-LightSoft);
@@ -511,8 +509,8 @@
 		transition: all 0.2s ease;
 	}
 
-	html.responsive .mature_content_filtered a:hover,
-	html.responsive .mature_content_filtered a.gpfocus {
+	html.tablet .mature_content_filtered a:hover,
+	html.tablet .mature_content_filtered a.gpfocus {
 		background-color: var(--gpBackground-LightMedium);
 	}
 
@@ -520,19 +518,19 @@
 
 
 	/* MORE LIKE THIS */
-	html.responsive body.v6 h2.morelike_section_divider {
+	html.tablet body.v6 h2.morelike_section_divider {
 		border-bottom: none;
 		margin-top: 0px;
 	}
 
-	html.responsive .similar_grid_flex {
+	html.tablet .similar_grid_flex {
 		margin: unset;
 		gap: 12px;
 		padding-bottom: 16px;
 		margin-bottom: 24px;
 	}
 
-	html.responsive .similar_grid_item {
+	html.tablet .similar_grid_item {
 		margin: unset;
 		max-width: unset;
 		min-width: calc(100vw / 3);
@@ -542,15 +540,15 @@
 		padding-bottom: 48px;
 	}
 
-	html.responsive .similar_grid_item .buttons {
+	html.tablet .similar_grid_item .buttons {
 		visibility: visible;
 	}
 
-	html.responsive .similar_grid_item .buttons .wishlist {
+	html.tablet .similar_grid_item .buttons .wishlist {
 		display: none;
 	}
 
-	html.responsive .similar_grid_item .similar_grid_capsule {
+	html.tablet .similar_grid_item .similar_grid_capsule {
 		border: none;
 		box-shadow: var(--gpShadow-Medium);
 		transition: all 0.2s ease;
@@ -558,45 +556,45 @@
 		margin-bottom: 8px;
 	}
 
-	html.responsive .similar_grid_item .similar_grid_capsule.gpfocus {
+	html.tablet .similar_grid_item .similar_grid_capsule.gpfocus {
 		box-shadow: var(--gpShadow-Large);
 	}
 
-	html.responsive .similar_grid_item .similar_grid_price {
+	html.tablet .similar_grid_item .similar_grid_price {
 		margin-bottom: 8px;
 	}
 
-	html.responsive .recommendation_btn {
+	html.tablet .recommendation_btn {
 		padding: 10px 20px;
 		background: var(--gpBackground-LightSoft);
 		border-radius: var(--gpCorner-Medium);
 		transition: all 0.2s ease;
 	}
 
-	html.responsive .similar_grid_item:focus-within .recommendation_btn {
+	html.tablet .similar_grid_item:focus-within .recommendation_btn {
 		background: var(--gpBackground-LightMedium);
 	}
 
-	html.responsive .recommendation_btn:hover {
+	html.tablet .recommendation_btn:hover {
 		background: var(--gpBackground-LightHard) !important;
 		color: white;
 	}
 
-	html.responsive .recommendation_btn.gpfocus {
+	html.tablet .recommendation_btn.gpfocus {
 		background: white !important;
 		color: black;
 		border-radius: 0px;
 	}
 
-	html.responsive .app_page_morelike .similar_grid_item > * {
+	html.tablet .app_page_morelike .similar_grid_item > * {
 		width: unset;
 	}
 
-	html.responsive .similar_grid_item .buttons {
+	html.tablet .similar_grid_item .buttons {
 		padding-top: 8px;
 	}
 
-	html.responsive .similar_grid_capsule .ds_steam_deck_compat {
+	html.tablet .similar_grid_capsule .ds_steam_deck_compat {
 		background-color: var(--gpBackground-DarkMedium);
 		backdrop-filter: blur(24px);
 	}
@@ -608,11 +606,11 @@
 	/* SUGGESTED CURATORS */
 
 	/* Global */
-	html.responsive body.v6 .store_capsule_frame.curator_spotlight h2 span.right {
+	html.tablet body.v6 .store_capsule_frame.curator_spotlight h2 span.right {
 		display: none;
 	}
 
-	html.responsive .carousel_container.paging_capsules .carousel_items .curator_page {
+	html.tablet .carousel_container.paging_capsules .carousel_items .curator_page {
 		width: calc(100vw - (2 * var(--gpSpace-Gutter)));
 		padding: 16px;
 		min-height: unset;
@@ -627,33 +625,33 @@
 		scroll-snap-align: start;
 	}
 
-	html.responsive .carousel_container.paging_capsules .carousel_items .curator_page:focus-within {
+	html.tablet .carousel_container.paging_capsules .carousel_items .curator_page:focus-within {
 		background-color: var(--gpBackground-LightMedium);
 	}
 
-	html.responsive .carousel_container .carousel_thumbs {
+	html.tablet .carousel_container .carousel_thumbs {
 		display: none;
 	}
 
 	/* Profiles */
-	html.responsive .curator_recommendation_capsule .carousel_container.paging_capsules .curator_page .profile {
+	html.tablet .curator_recommendation_capsule .carousel_container.paging_capsules .curator_page .profile {
 		background: none;
 		margin: unset;
 		padding: unset;
 		gap: 12px;
 	}
 
-	html.responsive .curator_page .name span {
+	html.tablet .curator_page .name span {
 		color: white;
 	}
 
-	html.responsive .curator_page .avatar {
+	html.tablet .curator_page .avatar {
 		margin-right: unset;
 		width: 100%;
 		height: 100%;
 	}
 
-	html.responsive .curator_page .profile_avatar {
+	html.tablet .curator_page .profile_avatar {
 		display: flex;
 		border-radius: var(--gpCorner-Large);
 		overflow: hidden;
@@ -663,26 +661,26 @@
 		height: 70px;
 	}
 
-	html.responsive .curator_page .profile_avatar.gpfocus {
+	html.tablet .curator_page .profile_avatar.gpfocus {
 		border-radius: 0px;
 		box-shadow: var(--gpShadow-Medium);
 	}
 
-	html.responsive .curator_page .actions {
+	html.tablet .curator_page .actions {
 		align-items: center;
 		gap: 12px;
 		padding: unset;
 		background: none;
 	}
 
-	html.responsive .curator_page .socialmedia {
+	html.tablet .curator_page .socialmedia {
 		font-size: unset;
 		padding: unset;
 		margin: unset;
 		column-gap: 12px;
 	}
 
-	html.responsive .curator_page .socialmedia > div {
+	html.tablet .curator_page .socialmedia > div {
 		margin-left: unset;
 		display: flex;
 		align-items: center;
@@ -691,18 +689,18 @@
 		border-left: 1px solid var(--gpBackground-LightMedium);
 	}
 
-	html.responsive .curator_page .socialmedia > div:first-child {
+	html.tablet .curator_page .socialmedia > div:first-child {
 		border-left: none;
 		padding-left: 0px;
 	}
 
-	html.responsive .curator_page .name {
+	html.tablet .curator_page .name {
 		font-size: unset;
 		font-weight: unset;
 		color: unset;
 	}
 
-	html.responsive .curator_page .ignore_button_area a {
+	html.tablet .curator_page .ignore_button_area a {
 		text-decoration: unset;
 		padding: 8px 12px;
 		background: var(--gpBackground-LightMedium);
@@ -711,17 +709,17 @@
 		transition: var(--gpTransition-Short);
 	}
 
-	html.responsive .curator_page .ignore_button_area a:hover {
+	html.tablet .curator_page .ignore_button_area a:hover {
 		background: var(--gpBackground-LightHard);
 	}
 
-	html.responsive .curator_page .ignore_button_area a.gpfocus {
+	html.tablet .curator_page .ignore_button_area a.gpfocus {
 		background: white;
 		color: black;
 		border-radius: 0px;
 	}
 
-	html.responsive .curator_recommendation_capsule .curator_page .followers {
+	html.tablet .curator_recommendation_capsule .curator_page .followers {
 		font: var(--gpText-BodyLarge);
 		color: var(--gpStoreLighterGrey);
 		display: flex;
@@ -729,18 +727,18 @@
 		margin: unset;
 	}
 
-	html.responsive .curator_page .followers span {
+	html.tablet .curator_page .followers span {
 		display: unset;
 		font-size: unset;
 	}
 
 	/* Carousel items */
-	html.responsive .carousel_container.paging_capsules .carousel_items {
+	html.tablet .carousel_container.paging_capsules .carousel_items {
 		padding-top: 0px;
 		scroll-snap-type: x mandatory;
 	}
 
-	html.responsive .carousel_container.paging_capsules .carousel_items .curator_page .curations {
+	html.tablet .carousel_container.paging_capsules .carousel_items .curator_page .curations {
 		margin-right: unset;
 		gap: 12px;
 		overflow: hidden;
@@ -749,7 +747,7 @@
 		border-top: 1px solid var(--gpBackground-LightMedium);
 	}
 
-	html.responsive .carousel_container.paging_capsules .carousel_items .curator_page .curations > div {
+	html.tablet .carousel_container.paging_capsules .carousel_items .curator_page .curations > div {
 		flex-basis: unset;
 		max-width: unset;
 		margin: unset;
@@ -761,40 +759,37 @@
 		gap: 4px;
 	}
 
-	html.responsive .carousel_container.paging_capsules .carousel_items .curator_page .curations > div:last-child {
+	html.tablet .carousel_container.paging_capsules .carousel_items .curator_page .curations > div:last-child {
 		display: none;
 	}
 
-	html.responsive .carousel_container.paging_capsules .carousel_items .curator_page .curations .store_capsule {
+	html.tablet .carousel_container.paging_capsules .carousel_items .curator_page .curations .store_capsule {
 		box-shadow: var( --gpShadow-Medium );
 		overflow: hidden;
 		width: 100%;
 		min-width: 100%;
 	}
 
-	html.responsive .carousel_container.paging_capsules .carousel_items .curator_page .curations .store_capsule .ds_steam_deck_compat {
+	html.tablet .carousel_container.paging_capsules .carousel_items .curator_page .curations .store_capsule .ds_steam_deck_compat {
 		background-color: var(--gpBackground-DarkMedium);
 		backdrop-filter: blur(24px);
 	}
 
-	html.responsive .curator_page .text {
+	html.tablet .curator_page .text {
 		font: var(--gpText-BodyMedium);
 		line-height: 1.2;
 		color: var(--gpStoreLightestGrey);
 		padding-right: unset;
 	}
 
-	html.responsive .curator_page .review_direction {
+	html.tablet .curator_page .review_direction {
 		font: var(--gpText-BodySmall);
 		font-weight: 500;
 		padding-top: 4px;
 	}
 
-	html.responsive .SliderBody ul
+	html.tablet .SliderBody ul
 	{
 		gap: var(--gpSpace-Gap);
 	}
 
-
-
-}

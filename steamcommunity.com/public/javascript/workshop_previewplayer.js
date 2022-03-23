@@ -115,6 +115,7 @@ var HighlightPlayer = Class.create( {
 		this.m_elemStrip.select( '.highlight_strip_item' ).each(
 				function(elemThumb) {
 					Event.observe( elemThumb, 'click', thisClosure.HighlightItem.bind( thisClosure, elemThumb ) );
+					Event.observe( elemThumb, 'focus', thisClosure.HighlightItem.bind( thisClosure, elemThumb ) );
 				}
 		);
 
@@ -145,6 +146,8 @@ var HighlightPlayer = Class.create( {
 		this.m_elemContainer = $(args.elemContainer) || this.m_elemPlayerArea.up('.highlight_ctn');
 		this.m_elemContainer.observe( 'mouseover', this.mouseOver.bindAsEventListener( this ) );
 		this.m_elemContainer.observe( 'mouseout', this.mouseOut.bindAsEventListener( this ) );
+		this.m_elemContainer.observe( 'focusin', this.mouseOver.bindAsEventListener( this ) );
+		this.m_elemContainer.observe( 'focusout', this.mouseOut.bindAsEventListener( this ) );
 
 		var firstItem = $(args.firstItem) || this.m_elemPlayerArea.down( '.highlight_player_item' );
 

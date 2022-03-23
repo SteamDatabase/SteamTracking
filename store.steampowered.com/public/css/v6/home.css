@@ -1955,7 +1955,223 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		background-position-y: 20px;
 		height: 29vw;
 	}
+
 }
+
+	html.responsive.tablet .home_page_body_ctn {
+		width: auto;
+		min-width: 0;
+	}
+
+	html.responsive.tablet .home_page_content {
+		width: auto;
+		padding: 0;
+	}
+
+	html.responsive.tablet .home_page_content > *[data-content-dive=true] {
+		margin-top: 10px;
+		float: none;
+		display: block;
+		text-align: center;
+	}
+
+	html.responsive.tablet .home_page_content > *[data-content-dive=true] .btn_small > span,
+	html.responsive.tablet .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
+		padding: 5px 30px;
+		border-color: #FFFFFF;
+	}
+
+	html.responsive.tablet .home_ctn {
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-bottom: 50px;
+	}
+
+	html.responsive.tablet .page_background_holder {
+		background-size: 200% auto;
+	}
+
+	html.responsive.tablet .home_leftcol, html.responsive.tablet .home_rightcol {
+		width: auto;
+		float: none;
+	}
+
+	html.responsive.tablet .home_smallcaps,
+	html.responsive.tablet .home_headercaps,
+	html.responsive.tablet .apps_recommended_by_curators,
+	html.responsive.tablet .underten .home_specials_grid {
+		white-space: nowrap;
+		overflow-x: auto;
+	}
+
+	html.responsive.tablet .home_smallcaps a.home_smallcap,
+	html.responsive.tablet .home_headercaps a.home_headercap,
+	html.responsive.tablet .curated_app_item,
+	html.responsive.tablet .underten .home_specials_grid .special {
+		float: none;
+		display: inline-block;
+		white-space: normal;	/* override the nowrap we set above */
+	}
+
+	html.responsive.tablet .home_headercaps a.home_headercap {
+		vertical-align: top;
+	}
+
+	html.responsive.tablet .home_leftcol.home_tab_col {
+		margin-bottom: 16px;
+	}
+
+	html.responsive.tablet .dailydeal_specials_ctn {
+		margin: 0 auto 16px auto;
+		width: 624px;
+	}
+
+	html.responsive.tablet .dailydeal_specials_ctn .dailydeal_ctn {
+		float: left;
+		max-width: 276px;
+		margin-right: 8px;
+	}
+
+	html.responsive.tablet .dailydeal_specials_ctn .home_specials_grid {
+		float: left;
+		max-width: 308px;
+		padding-top: 14px;
+	}
+
+	html.responsive.tablet .dailydeal_specials_ctn .home_block_footer {
+		clear: left;
+	}
+
+	html.responsive.tablet .dailydeal_cap,
+	html.responsive.tablet .dailydeal_cap img {
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive.tablet .home_specials_ctn {
+		margin-bottom: 16px;
+	}
+
+	html.responsive.tablet .underten .home_specials_grid .special {
+		margin-right: 2px;
+		margin-bottom: 0;
+	}
+
+	/* not logged in */
+	html.responsive.tablet .home_recommended_spotlight {
+		height: auto;
+	}
+
+	html.responsive.tablet .home_page_sign_in_ctn,
+	html.responsive.tablet .steam_curators_empty {
+		width: auto;
+	}
+
+	/* recommendations */
+
+	html.responsive.tablet .home_ctn.home_content_ctn {
+		margin: 0;
+		padding: 0;
+	}
+
+	html.responsive.tablet body.v6 .home_content_ctn .page_content_ctn.dark {
+		padding: 0 2%;
+	}
+
+	html.responsive.tablet .home_content.twowide a.home_content_item {
+		width: calc( 50% - 5px);
+		padding: 0;
+		margin-right: 10px;
+	}
+
+	html.responsive.tablet .home_content.fourwide a.home_content_item {
+		width: calc( 50% - 5px );
+		padding: 0;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	html.responsive.tablet .home_content.fourwide a.home_content_item:nth-child( 2n ),
+	html.responsive.tablet .home_content.twowide a.home_content_item:nth-child( 2n ) {
+		margin-right: 0;
+	}
+
+	html.responsive.tablet .home_content.single {
+		margin-top: 50px;
+	}
+
+	html.responsive.tablet .home_content.single .capsule {
+		height: auto;
+		width: 100%;
+		max-width: 292px;
+		display: block;
+	}
+
+	html.responsive.tablet .home_content.single .gamelink {
+		max-width: 100%;
+	}
+
+	html.responsive.tablet .home_content.single .screenshots {
+		display: block;
+		white-space: nowrap;
+	}
+
+	html.responsive.tablet .home_content.single .screenshots .screenshot {
+		margin: 0;
+		display: inline-block;
+		margin-right: 2px;
+	}
+
+	html.responsive.tablet .home_content.single a.screenshot:hover img {
+		transform: none;
+		box-shadow: none;
+	}
+
+	html.responsive.tablet .home_content.single .review_text {
+		width: auto;
+	}
+
+	html.responsive.tablet .home_content.single .discount_block_ctn {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 10px;
+	}
+
+
+	html.responsive.tablet .hardware_content {
+		font-size: 17px;
+	}
+
+	html.responsive.tablet .responsive_spotlight_block.nonresponsive_hidden,
+	html.responsive.tablet .home_rightcol.recommended {
+		max-width: 308px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	html.responsive.tablet .responsive_spotlight_block {
+		margin-right: 16px;
+	}
+
+	html.responsive.tablet .responsive_home_spotlight_recommended {
+		text-align: center;
+	}
+
+	html.responsive.tablet .spotlight_col {
+		display: flex;
+		flex-direction: column;
+	}
+
+	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn {
+		margin-top: 0;
+	}
+	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn .home_header_textimage {
+		background-size: 45vw;
+		background-position-y: 20px;
+		height: 29vw;
+	}
 
 @media screen and (max-width: 700px)
 {

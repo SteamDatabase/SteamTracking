@@ -2903,6 +2903,130 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 span.suggestdialog_mentionSearchMatch_1t0Xl {
   color: #dfe3e6;
 }
+.addonpicker_Picker_3JFhJ {
+  border-radius: 6px;
+  max-width: min(364px, 100vw);
+  max-width: 364px;
+  min-width: min(364px, 100vw);
+  min-width: 364px;
+  max-height: min(364px, 100vh);
+  max-height: 364px;
+  min-height: min(364px, 100vh);
+  min-height: 364px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.addonpicker_Tabs_1KrWp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #2b2c2f;
+}
+.addonpicker_Tab_EDF4t {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+  padding: 2px 2px;
+  cursor: pointer;
+}
+.addonpicker_Tab_EDF4t.addonpicker_Focus_PNj6F .addonpicker_TabContent_3vjgj {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.addonpicker_Tab_EDF4t.addonpicker_Active_1QhnQ {
+  border-bottom: 4px solid #4297f8;
+  cursor: default;
+}
+.addonpicker_Tab_EDF4t .addonpicker_TabContent_3vjgj {
+  border-radius: 4px;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.8;
+}
+.addonpicker_Tab_EDF4t
+  .addonpicker_TabContent_3vjgj:hover:not(.addonpicker_Active_1QhnQ) {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.addonpicker_Tab_EDF4t .addonpicker_TabContent_3vjgj.addonpicker_Active_1QhnQ {
+  padding: 2px;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+}
+.addonpicker_Content_2Kmzi {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px;
+}
+.addonpicker_ItemList_17ttb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX {
+  padding: 3px;
+  margin: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX:hover,
+.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX.addonpicker_Focus_PNj6F {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.addonpicker_SectionedPageTitle_1KNxZ,
+.addonpicker_SectionTitle_2a1Mv {
+  text-transform: uppercase;
+  color: gray;
+  padding: 8px 0;
+  letter-spacing: 1.5px;
+  width: 100%;
+}
+.addonpicker_SectionTitle_2a1Mv {
+  font-size: 14px;
+}
+.addonpicker_SectionedPageTitle_1KNxZ {
+  font-size: 16px;
+}
+.addonpicker_FilterInputContainer_3yi7o {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+}
+.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf {
+  box-sizing: border-box;
+  height: 28px;
+  background-color: #2b2c2f;
+}
+.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:hover,
+.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:focus {
+  background-color: #2b2c2f !important;
+}
+.addonpicker_AddonPickerMessage_gd4kh {
+  font-size: 13px;
+  font-style: italic;
+  padding-bottom: 4px;
+}
+.addonpicker_AddonPickerMessage_gd4kh a {
+  color: #4297f8;
+  text-decoration: none;
+}
 .emoticon_NewEmoticonIndicator_1C57N {
   background: radial-gradient(
     ellipse farthest-corner at 50% 50%,
@@ -3136,130 +3260,6 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   align-items: center;
   position: relative;
 }
-.addonpicker_Picker_3JFhJ {
-  border-radius: 6px;
-  max-width: min(364px, 100vw);
-  max-width: 364px;
-  min-width: min(364px, 100vw);
-  min-width: 364px;
-  max-height: min(364px, 100vh);
-  max-height: 364px;
-  min-height: min(364px, 100vh);
-  min-height: 364px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.addonpicker_Tabs_1KrWp {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  border-bottom: 2px solid #2b2c2f;
-}
-.addonpicker_Tab_EDF4t {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-bottom: 4px solid transparent;
-  padding: 2px 2px;
-  cursor: pointer;
-}
-.addonpicker_Tab_EDF4t.addonpicker_Focus_PNj6F .addonpicker_TabContent_3vjgj {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.addonpicker_Tab_EDF4t.addonpicker_Active_1QhnQ {
-  border-bottom: 4px solid #4297f8;
-  cursor: default;
-}
-.addonpicker_Tab_EDF4t .addonpicker_TabContent_3vjgj {
-  border-radius: 4px;
-  padding: 4px;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0.8;
-}
-.addonpicker_Tab_EDF4t
-  .addonpicker_TabContent_3vjgj:hover:not(.addonpicker_Active_1QhnQ) {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.addonpicker_Tab_EDF4t .addonpicker_TabContent_3vjgj.addonpicker_Active_1QhnQ {
-  padding: 2px;
-  width: 28px;
-  height: 28px;
-  opacity: 1;
-}
-.addonpicker_Content_2Kmzi {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  overflow-y: auto;
-  padding: 0 12px;
-}
-.addonpicker_ItemList_17ttb {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX {
-  padding: 3px;
-  margin: 1px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX:hover,
-.addonpicker_ItemList_17ttb .addonpicker_Item_1-iNX.addonpicker_Focus_PNj6F {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.addonpicker_SectionedPageTitle_1KNxZ,
-.addonpicker_SectionTitle_2a1Mv {
-  text-transform: uppercase;
-  color: gray;
-  padding: 8px 0;
-  letter-spacing: 1.5px;
-  width: 100%;
-}
-.addonpicker_SectionTitle_2a1Mv {
-  font-size: 14px;
-}
-.addonpicker_SectionedPageTitle_1KNxZ {
-  font-size: 16px;
-}
-.addonpicker_FilterInputContainer_3yi7o {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 6px;
-}
-.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf {
-  box-sizing: border-box;
-  height: 28px;
-  background-color: #2b2c2f;
-}
-.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:hover,
-.addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:focus {
-  background-color: #2b2c2f !important;
-}
-.addonpicker_AddonPickerMessage_gd4kh {
-  font-size: 13px;
-  font-style: italic;
-  padding-bottom: 4px;
-}
-.addonpicker_AddonPickerMessage_gd4kh a {
-  color: #4297f8;
-  text-decoration: none;
-}
 .emoticonsuggestion_Emoticon_Toggle_2ipvk {
   margin-right: 8px;
   border-radius: 3px;
@@ -3338,7 +3338,6 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   box-shadow: #000 0px 0px 4px inset;
   background-color: #1b1c20;
   margin-left: 8px;
-  min-height: 46px;
 }
 .chatentry_chatEntryActionsContainer_39fOa,
 .chatentry_chatEntryActionsGroup_resTe {
@@ -5282,64 +5281,331 @@ a.bbcodes_LinkButton_14_Fn:hover {
   color: #fff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
-.packagepricewidget_StoreSalePriceWidget_3NUFg {
-  margin-left: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.gamehover_HoverContentTransition_28V2p {
+  height: 100%;
+  transition: transform 0.15s ease-out;
+  transform: scale(0.95);
+  outline: none;
 }
-.packagepricewidget_StoreSaleDiscountedPriceCtn_14IVg {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 5px;
+.gamehover_HoverContentTransition_28V2p.gamehover_Opening_1l-0j,
+.gamehover_HoverContentTransition_28V2p.gamehover_Open_1ayoA {
+  transform: scale(1);
 }
-.packagepricewidget_StoreSaleDiscountedPriceCtn_14IVg
-  .packagepricewidget_StoreSalePriceBox_1RMFX {
-  padding: 0px;
-  line-height: 16px;
-}
-.packagepricewidget_StoreSaleDiscountedPriceCtn_14IVg
-  .packagepricewidget_StoreSaleReservationPriceBox_35nMS {
-  background: none;
-  color: #fff;
-  font-size: 0.7em;
-  font-weight: 600;
-  padding: 0px;
-}
-.packagepricewidget_StoreSaleDiscountBox_3NtOh {
+.gamehover_GameHoverCapsuleCtn_1xj08 {
   height: 100%;
   box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 3px 5px;
-  background-color: #4c6b22;
-  color: #a4d007;
+  background: linear-gradient(360deg, #5c6770 0%, black 15%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   display: flex;
-  align-items: center;
-  margin-right: 3px;
+  flex-direction: column;
+  justify-content: space-between;
+  outline: none;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
-.packagepricewidget_StoreOrignalPrice_3b2t6 {
-  text-decoration: line-through;
-  color: #626366;
-  font-size: 11px;
-  line-height: 11px;
-  margin-top: 2px;
-}
-.packagepricewidget_StoreSalePriceBox_1RMFX {
-  background: #000;
-  font-size: 14px;
-  padding: 5px;
-  background-color: #000;
-  align-items: center;
-  display: flex;
-}
-.packagepricewidget_StoreSaleReservationPriceBox_35nMS {
-  background: none;
+.gamehover_GameHoverCapsuleCtn_1xj08:hover {
   color: #fff;
-  font-size: 0.7em;
-  font-weight: 600;
-  padding: 0px;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08.gamehover_UseHidingBottomHalf_3gpwq {
+  overflow: hidden;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_TrailerAnchorStoreLink_3ez7t {
+  position: relative;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_TrailerCtn_1HPr0 {
+  position: relative;
+  width: 100%;
+  padding: 56.25% 0 0 0;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08
+  .gamehover_TrailerCtn_1HPr0
+  .gamehover_FullDivImage_L1LBy {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  background: #000;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08
+  .gamehover_TrailerCtn_1HPr0
+  .gamehover_FullDivImage_L1LBy.gamehover_Transparent_7QvTi {
+  opacity: 0;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_Midline_ZAUt4 {
+  display: flex;
+  justify-content: space-between;
+  flex: none;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08
+  .gamehover_Midline_ZAUt4
+  .gamehover_Price_xCwmG {
+  max-width: 50%;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_CapsuleImageAnchorPoint_34JHj {
+  position: relative;
+  width: 50%;
+  height: 0;
+  padding: 11.6847826087% 0 0 0;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08
+  .gamehover_CapsuleImageAnchorPoint_34JHj
+  .gamehover_CapsuleImageCtn_3Y_gL {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  padding: 46.7391304348% 0 0 0;
+  z-index: 1;
+  bottom: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.gamehover_GameHoverCapsuleCtn_1xj08
+  .gamehover_CapsuleImageAnchorPoint_34JHj
+  .gamehover_CapsuleImageCtn_3Y_gL
+  img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  height: auto;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_WithCornerShine_2eMgs {
+  overflow: hidden;
+}
+.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_WithCornerShine_2eMgs:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.65);
+  -webkit-mask-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 15%,
+    rgba(0, 0, 0, 0.7) 20%,
+    transparent 33%
+  );
+  mask-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 15%,
+    rgba(0, 0, 0, 0.7) 20%,
+    transparent 33%
+  );
+  transition: transform 0.35s ease-out;
+  transform: translateX(-30px);
+}
+.gamehover_Opening_1l-0j
+  .gamehover_GameHoverCapsuleCtn_1xj08
+  .gamehover_WithCornerShine_2eMgs:after,
+.gamehover_Open_1ayoA
+  .gamehover_GameHoverCapsuleCtn_1xj08
+  .gamehover_WithCornerShine_2eMgs:after {
+  transform: translateX(0px);
+}
+.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_DemoButton_1E2kZ {
+  margin: 4px 0;
+  background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
+}
+.gamehover_WishlistButton_1lp6v {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  border-radius: 2px;
+  background: radial-gradient(ellipse at top right, #0673c6, #03628b);
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+}
+.gamehover_WishlistButton_1lp6v svg {
+  padding: 4px;
+  display: block;
+}
+.gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ {
+  color: transparent;
+  width: 0;
+  height: 0;
+  padding: 7px 0;
+  transition: padding-right 0.2s ease-out;
+  font-size: 13px;
+}
+.gamehover_WishlistButton_1lp6v
+  .gamehover_WishlistButtonText_3SsXJ.gamehover_WishlistLoadingText_3IPtL {
+  filter: opacity(50%);
+}
+html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
+.gamehover_WishlistButton_1lp6v:hover .gamehover_WishlistButtonText_3SsXJ {
+  color: #fff;
+  width: auto;
+  height: auto;
+  padding-right: 8px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+.gamehover_WishlistButtonNotTop_vZlYI {
+  top: unset;
+}
+.gamehover_BottomShelf_vQZp_ {
+  background: linear-gradient(
+    359.91deg,
+    #2b333a 30%,
+    rgba(103, 113, 122, 0.3) 85%
+  );
+  mix-blend-mode: normal;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.25s ease-in-out;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.gamehover_UseHidingBottomHalf_3gpwq .gamehover_BottomShelf_vQZp_ {
+  max-height: 85%;
+  transform: translateY(-50%);
+}
+.gamehover_Open_1ayoA
+  .gamehover_UseHidingBottomHalf_3gpwq
+  .gamehover_BottomShelf_vQZp_ {
+  transform: translateY(0);
+}
+.gamehover_BottomShelf_vQZp_ .gamehover_BottomShelfOffScreen_39gjl {
+  flex: 1;
+  overflow-y: auto;
+}
+.gamehover_BottomShelf_vQZp_ a:hover {
+  color: #fff;
+}
+.gamehover_BottomShelf_vQZp_ .gamehover_TextContent_UXVbQ {
+  padding: 4px;
+}
+.gamehover_BottomShelf_vQZp_
+  .gamehover_TextContent_UXVbQ
+  .gamehover_GameTitle_2NhGd {
+  font-size: 2em;
+  padding: 0px 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-height: 27px;
+}
+.gamehover_BottomShelf_vQZp_
+  .gamehover_TextContent_UXVbQ
+  .gamehover_TagRow_1C_vt {
+  color: #8ac;
+  display: flex;
+  padding: 8px 0px 4px;
+  max-height: 20px;
+}
+.gamehover_BottomShelf_vQZp_
+  .gamehover_TextContent_UXVbQ
+  .gamehover_TagRow_1C_vt
+  .gamehover_Tags_1g1Rl {
+  overflow: hidden;
+  max-height: 40px;
+  padding-right: 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gamehover_BottomShelf_vQZp_
+  .gamehover_TextContent_UXVbQ
+  .gamehover_TagRow_1C_vt
+  .gamehover_Tags_1g1Rl
+  .gamehover_Tag_3OWC2 {
+  padding: 0px 6px;
+  margin-bottom: 4px;
+  line-height: 17px;
+  border-radius: 2px;
+  background-color: rgba(112, 129, 137, 0.25);
+  color: rgba(255, 255, 255, 0.65);
+  margin-left: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+}
+.gamehover_BottomShelf_vQZp_
+  .gamehover_TextContent_UXVbQ
+  .gamehover_PlatformDisplay_2ltsM {
+  padding-left: 8px;
+  margin-bottom: 4px;
+  opacity: 0.4;
+}
+.gamehover_BottomShelf_vQZp_
+  .gamehover_TextContent_UXVbQ
+  .gamehover_ReviewsAndRelease_2Q5ow {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 1.4em;
+  margin-left: -4px;
+}
+.gamehover_BottomShelf_vQZp_
+  .gamehover_TextContent_UXVbQ
+  .gamehover_ReviewsAndRelease_2Q5ow
+  .gamehover_ReleaseDate_2Jm0t {
+  padding: 4px;
+  font-size: 1.2em;
+  color: #6b8aaa;
+}
+.gamehover_BottomShelf_vQZp_
+  .gamehover_TextContent_UXVbQ
+  .gamehover_ReviewsAndRelease_2Q5ow
+  .gamehover_ReleaseDate_2Jm0t
+  .gamehover_ReleasePrefix_2dc5p {
+  margin-right: 4px;
+}
+.gamehover_ReviewScore_FiMyk {
+  font-size: 1.2em;
+  display: flex;
+  padding: 0 0 4px 4px;
+}
+.gamehover_ReviewScore_FiMyk .gamehover_ReviewScoreHeader_3UAIA,
+.gamehover_ReviewScore_FiMyk .gamehover_ReviewScoreCount_3P8a7 {
+  color: #6b8aaa;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.gamehover_ReviewScore_FiMyk .gamehover_ReviewScoreValue_2LZyW {
+  display: flex;
+}
+.gamehover_ReviewScore_FiMyk
+  .gamehover_ReviewScoreValue_2LZyW.gamehover_ReviewScoreLow_3uFQK {
+  color: gray;
+}
+.gamehover_ReviewScore_FiMyk
+  .gamehover_ReviewScoreValue_2LZyW.gamehover_ReviewScoreMixed_1MLZa {
+  color: #d8d81e;
+}
+.gamehover_ReviewScore_FiMyk
+  .gamehover_ReviewScoreValue_2LZyW.gamehover_ReviewScoreHigh_3VcW- {
+  color: #32ad32;
+}
+.gamehover_ReviewScore_FiMyk
+  .gamehover_ReviewScoreValue_2LZyW
+  .gamehover_ReviewScorePercentage_1Upk4 {
+  margin-right: 4px;
+}
+.gamehover_GameHoverCreatorFollowButtonCtn_2yA0d {
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+  justify-content: center;
+}
+.gamehover_GameHoverCreatorFollowButtonCtn_2yA0d img {
+  margin-right: 8px;
 }
 .deckverified_BannerContainer_zoxHi {
   padding: 12px 0px;
@@ -6145,6 +6411,10 @@ div.creatorhomeembed_SocialContainer_25404 {
   flex-direction: row;
   width: fit-content;
 }
+.salepreviewwidgets_Bundle_3JlLI
+  .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
+  display: none;
+}
 .AppSummaryWidgetCtn .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
   flex-direction: column;
   justify-content: flex-start;
@@ -6153,6 +6423,7 @@ div.creatorhomeembed_SocialContainer_25404 {
   display: flex;
   flex-direction: row;
   width: fit-content;
+  justify-content: end;
   align-items: center;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
@@ -6274,6 +6545,13 @@ div.creatorhomeembed_SocialContainer_25404 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-height: 43px;
+  overflow: hidden;
+}
+.salepreviewwidgets_StoreSaleWidgetCenter_s1Qf5
+  .salepreviewwidgets_SaleTagBlockCtn_136qJ
+  .salepreviewwidgets_TagBox_On4kw {
+  max-height: 79px;
 }
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_R6Co5
   .salepreviewwidgets_SaleTagBlockCtn_136qJ
@@ -7781,7 +8059,8 @@ html.touch
 }
 .salepreviewwidgets_BundleContentPreview_kR3MM
   .salepreviewwidgets_ContentsCount_1rG6L {
-  margin-bottom: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 .salepreviewwidgets_BundleContentPreview_kR3MM
   .salepreviewwidgets_PreviewCtn_2H1MK {
@@ -7795,6 +8074,7 @@ html.touch
   padding: 6px;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 @media screen and (min-width: 560px) and (max-width: 620px) {
   .salepreviewwidgets_BundleContentPreview_kR3MM
@@ -8176,338 +8456,14 @@ html.touch
 }
 .demobutton_DemoButton_3tcqz.demobutton_DisabledButton_3Y_aA,
 .demobutton_DemoButton_3tcqz.demobutton_DisabledButton_3Y_aA:hover {
-  color: #a6b4bf;
+  color: #fff;
+  opacity: 0.2;
+  filter: saturate(0);
 }
 .demobutton_DemoButton_3tcqz:not(.demobutton_DisabledButton_3Y_aA):hover {
   background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-.gamehover_HoverContentTransition_28V2p {
-  height: 100%;
-  transition: transform 0.15s ease-out;
-  transform: scale(0.95);
-  outline: none;
-}
-.gamehover_HoverContentTransition_28V2p.gamehover_Opening_1l-0j,
-.gamehover_HoverContentTransition_28V2p.gamehover_Open_1ayoA {
-  transform: scale(1);
-}
-.gamehover_GameHoverCapsuleCtn_1xj08 {
-  height: 100%;
-  box-sizing: border-box;
-  background: linear-gradient(360deg, #5c6770 0%, black 15%);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  outline: none;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08:hover {
-  color: #fff;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08.gamehover_UseHidingBottomHalf_3gpwq {
-  overflow: hidden;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_TrailerAnchorStoreLink_3ez7t {
-  position: relative;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_TrailerCtn_1HPr0 {
-  position: relative;
-  width: 100%;
-  padding: 56.25% 0 0 0;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08
-  .gamehover_TrailerCtn_1HPr0
-  .gamehover_FullDivImage_L1LBy {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  display: block;
-  pointer-events: none;
-  background: #000;
-  opacity: 1;
-  transition: opacity 0.5s;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08
-  .gamehover_TrailerCtn_1HPr0
-  .gamehover_FullDivImage_L1LBy.gamehover_Transparent_7QvTi {
-  opacity: 0;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_Midline_ZAUt4 {
-  display: flex;
-  justify-content: space-between;
-  flex: none;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08
-  .gamehover_Midline_ZAUt4
-  .gamehover_Price_xCwmG {
-  max-width: 50%;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_CapsuleImageAnchorPoint_34JHj {
-  position: relative;
-  width: 50%;
-  height: 0;
-  padding: 11.6847826087% 0 0 0;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08
-  .gamehover_CapsuleImageAnchorPoint_34JHj
-  .gamehover_CapsuleImageCtn_3Y_gL {
-  position: absolute;
-  width: 100%;
-  height: 0;
-  padding: 46.7391304348% 0 0 0;
-  z-index: 1;
-  bottom: 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-.gamehover_GameHoverCapsuleCtn_1xj08
-  .gamehover_CapsuleImageAnchorPoint_34JHj
-  .gamehover_CapsuleImageCtn_3Y_gL
-  img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-width: 100%;
-  height: auto;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_WithCornerShine_2eMgs {
-  overflow: hidden;
-}
-.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_WithCornerShine_2eMgs:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -30px;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.65);
-  -webkit-mask-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(0, 0, 0, 0.8) 15%,
-    rgba(0, 0, 0, 0.7) 20%,
-    transparent 33%
-  );
-  mask-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(0, 0, 0, 0.8) 15%,
-    rgba(0, 0, 0, 0.7) 20%,
-    transparent 33%
-  );
-  transition: transform 0.35s ease-out;
-  transform: translateX(-30px);
-}
-.gamehover_Opening_1l-0j
-  .gamehover_GameHoverCapsuleCtn_1xj08
-  .gamehover_WithCornerShine_2eMgs:after,
-.gamehover_Open_1ayoA
-  .gamehover_GameHoverCapsuleCtn_1xj08
-  .gamehover_WithCornerShine_2eMgs:after {
-  transform: translateX(0px);
-}
-.gamehover_GameHoverCapsuleCtn_1xj08 .gamehover_DemoButton_1E2kZ {
-  margin: 4px 0;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.gamehover_WishlistButton_1lp6v {
-  position: absolute;
-  z-index: 2;
-  top: 8px;
-  right: 8px;
-  border-radius: 2px;
-  background: radial-gradient(ellipse at top right, #0673c6, #03628b);
-  display: flex;
-  overflow: hidden;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
-}
-.gamehover_WishlistButton_1lp6v svg {
-  padding: 4px;
-  display: block;
-}
-.gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ {
-  color: transparent;
-  width: 0;
-  height: 0;
-  padding: 7px 0;
-  transition: padding-right 0.2s ease-out;
-  font-size: 13px;
-}
-.gamehover_WishlistButton_1lp6v
-  .gamehover_WishlistButtonText_3SsXJ.gamehover_WishlistLoadingText_3IPtL {
-  filter: opacity(50%);
-}
-html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
-.gamehover_WishlistButton_1lp6v:hover .gamehover_WishlistButtonText_3SsXJ {
-  color: #fff;
-  width: auto;
-  height: auto;
-  padding-right: 8px;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
-  cursor: pointer;
-}
-.gamehover_WishlistButtonNotTop_vZlYI {
-  top: unset;
-}
-.gamehover_BottomShelf_vQZp_ {
-  background: linear-gradient(
-    359.91deg,
-    #2b333a 30%,
-    rgba(103, 113, 122, 0.3) 85%
-  );
-  mix-blend-mode: normal;
-  backdrop-filter: blur(10px);
-  position: relative;
-  z-index: 1;
-  transition: transform 0.25s ease-in-out;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-.gamehover_UseHidingBottomHalf_3gpwq .gamehover_BottomShelf_vQZp_ {
-  max-height: 85%;
-  transform: translateY(-50%);
-}
-.gamehover_Open_1ayoA
-  .gamehover_UseHidingBottomHalf_3gpwq
-  .gamehover_BottomShelf_vQZp_ {
-  transform: translateY(0);
-}
-.gamehover_BottomShelf_vQZp_ .gamehover_BottomShelfOffScreen_39gjl {
-  flex: 1;
-  overflow-y: auto;
-}
-.gamehover_BottomShelf_vQZp_ a:hover {
-  color: #fff;
-}
-.gamehover_BottomShelf_vQZp_ .gamehover_TextContent_UXVbQ {
-  padding: 4px;
-}
-.gamehover_BottomShelf_vQZp_
-  .gamehover_TextContent_UXVbQ
-  .gamehover_GameTitle_2NhGd {
-  font-size: 2em;
-  padding: 0px 4px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  max-height: 27px;
-}
-.gamehover_BottomShelf_vQZp_
-  .gamehover_TextContent_UXVbQ
-  .gamehover_TagRow_1C_vt {
-  color: #8ac;
-  display: flex;
-  padding: 8px 0px 4px;
-  max-height: 20px;
-}
-.gamehover_BottomShelf_vQZp_
-  .gamehover_TextContent_UXVbQ
-  .gamehover_TagRow_1C_vt
-  .gamehover_Tags_1g1Rl {
-  overflow: hidden;
-  max-height: 40px;
-  padding-right: 12px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.gamehover_BottomShelf_vQZp_
-  .gamehover_TextContent_UXVbQ
-  .gamehover_TagRow_1C_vt
-  .gamehover_Tags_1g1Rl
-  .gamehover_Tag_3OWC2 {
-  padding: 0px 6px;
-  margin-bottom: 4px;
-  line-height: 17px;
-  border-radius: 2px;
-  background-color: rgba(112, 129, 137, 0.25);
-  color: rgba(255, 255, 255, 0.65);
-  margin-left: 4px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  position: relative;
-}
-.gamehover_BottomShelf_vQZp_
-  .gamehover_TextContent_UXVbQ
-  .gamehover_PlatformDisplay_2ltsM {
-  padding-left: 8px;
-  margin-bottom: 4px;
-  opacity: 0.4;
-}
-.gamehover_BottomShelf_vQZp_
-  .gamehover_TextContent_UXVbQ
-  .gamehover_ReviewsAndRelease_2Q5ow {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  font-size: 1.4em;
-  margin-left: -4px;
-}
-.gamehover_BottomShelf_vQZp_
-  .gamehover_TextContent_UXVbQ
-  .gamehover_ReviewsAndRelease_2Q5ow
-  .gamehover_ReleaseDate_2Jm0t {
-  padding: 4px;
-  font-size: 1.2em;
-  color: #6b8aaa;
-}
-.gamehover_BottomShelf_vQZp_
-  .gamehover_TextContent_UXVbQ
-  .gamehover_ReviewsAndRelease_2Q5ow
-  .gamehover_ReleaseDate_2Jm0t
-  .gamehover_ReleasePrefix_2dc5p {
-  margin-right: 4px;
-}
-.gamehover_ReviewScore_FiMyk {
-  font-size: 1.2em;
-  display: flex;
-  padding: 0 0 4px 4px;
-}
-.gamehover_ReviewScore_FiMyk .gamehover_ReviewScoreHeader_3UAIA,
-.gamehover_ReviewScore_FiMyk .gamehover_ReviewScoreCount_3P8a7 {
-  color: #6b8aaa;
-  margin-right: 4px;
-  margin-left: 4px;
-}
-.gamehover_ReviewScore_FiMyk .gamehover_ReviewScoreValue_2LZyW {
-  display: flex;
-}
-.gamehover_ReviewScore_FiMyk
-  .gamehover_ReviewScoreValue_2LZyW.gamehover_ReviewScoreLow_3uFQK {
-  color: gray;
-}
-.gamehover_ReviewScore_FiMyk
-  .gamehover_ReviewScoreValue_2LZyW.gamehover_ReviewScoreMixed_1MLZa {
-  color: #d8d81e;
-}
-.gamehover_ReviewScore_FiMyk
-  .gamehover_ReviewScoreValue_2LZyW.gamehover_ReviewScoreHigh_3VcW- {
-  color: #32ad32;
-}
-.gamehover_ReviewScore_FiMyk
-  .gamehover_ReviewScoreValue_2LZyW
-  .gamehover_ReviewScorePercentage_1Upk4 {
-  margin-right: 4px;
-}
-.gamehover_GameHoverCreatorFollowButtonCtn_2yA0d {
-  display: flex;
-  flex-direction: row;
-  height: 24px;
-  justify-content: center;
-}
-.gamehover_GameHoverCreatorFollowButtonCtn_2yA0d img {
-  margin-right: 8px;
 }
 .eventrow_OtherEventsCtn_2t60e {
   margin-top: 8vw;
@@ -18825,6 +18781,65 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .animated_featured_capsule_DeckCompatIconOverride_3GTgt {
   top: 45px;
 }
+.packagepricewidget_StoreSalePriceWidget_3NUFg {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.packagepricewidget_StoreSaleDiscountedPriceCtn_14IVg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 5px;
+}
+.packagepricewidget_StoreSaleDiscountedPriceCtn_14IVg
+  .packagepricewidget_StoreSalePriceBox_1RMFX {
+  padding: 0px;
+  line-height: 16px;
+}
+.packagepricewidget_StoreSaleDiscountedPriceCtn_14IVg
+  .packagepricewidget_StoreSaleReservationPriceBox_35nMS {
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0px;
+}
+.packagepricewidget_StoreSaleDiscountBox_3NtOh {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3px 5px;
+  background-color: #4c6b22;
+  color: #a4d007;
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+}
+.packagepricewidget_StoreOrignalPrice_3b2t6 {
+  text-decoration: line-through;
+  color: #626366;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 2px;
+}
+.packagepricewidget_StoreSalePriceBox_1RMFX {
+  background: #000;
+  font-size: 14px;
+  padding: 5px;
+  background-color: #000;
+  align-items: center;
+  display: flex;
+}
+.packagepricewidget_StoreSaleReservationPriceBox_35nMS {
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0px;
+}
 .saleitemdefdisplay_QuanityAndPrice_2Sie8 {
   display: flex;
   flex-direction: row-reverse;
@@ -23667,7 +23682,7 @@ div.saveprices_HoverToolTip_1yXHp {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 40px;
+  padding: 20px 40px;
   box-sizing: border-box;
   position: relative;
 }
@@ -23716,40 +23731,6 @@ div.saveprices_HoverToolTip_1yXHp {
   color: red;
   text-align: center;
 }
-.discountdashboard_PageToolsCtn_y6a8w {
-  display: flex;
-  flex-direction: row;
-  margin-top: 8px;
-  width: 100%;
-}
-.discountdashboard_PageToolsCtn_y6a8w .discountdashboard_ToolCtn_3DFqW {
-  display: flex;
-  flex-direction: column;
-  background: #23262b;
-  margin-right: 8px;
-  padding: 16px;
-  box-sizing: border-box;
-  flex-grow: 1;
-  min-width: 230px;
-}
-.discountdashboard_PageToolsCtn_y6a8w
-  .discountdashboard_ToolCtn_3DFqW:last-child {
-  margin-right: 0px;
-}
-.discountdashboard_PageToolsCtn_y6a8w .discountdashboard_ToolCtn_3DFqW h3 {
-  font-size: 15px;
-  color: #fff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-.discountdashboard_PageToolsCtn_y6a8w .discountdashboard_ToolCtn_3DFqW p {
-  font-size: 14px;
-  color: #c5ccd4;
-}
-.discountdashboard_PageToolsCtn_y6a8w .discountdashboard_ToolsNotes_3_Bu_ {
-  flex-grow: 3;
-}
 .discountdashboard_ButtonGroup_2peTi {
   display: flex;
   flex-direction: row;
@@ -23764,8 +23745,8 @@ div.saveprices_HoverToolTip_1yXHp {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
-  max-height: 90vh;
+  margin-top: 16px;
+  max-height: 80vh;
 }
 .discountgrid_DiscountGridCtn_3THze .discountgrid_Title_ieZ0L {
   font-size: 18px;
@@ -23900,6 +23881,23 @@ div.saveprices_HoverToolTip_1yXHp {
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb.discountgrid_NeedsOptIn_Wp6D3
+  .discountgrid_RegistrationLink_2pjYa
+  a {
+  background: #3d4450;
+  padding: 3px 10px 4px;
+  color: #fff;
+  font-size: 12px;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb.discountgrid_NeedsOptIn_Wp6D3
+  .discountgrid_RegistrationLink_2pjYa
+  a:hover {
+  color: #fff;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
   .discountgrid_DataCell_3V8Jb
   .discountgrid_CellPct_xbyPg,
 .discountgrid_DiscountGridCtn_3THze
@@ -23961,11 +23959,11 @@ div.saveprices_HoverToolTip_1yXHp {
   .discountgrid_DiscountGrid_39Ize
   .discountgrid_DataCell_3V8Jb
   .discountgrid_IneligibleNoApp_UrglO {
-  color: #a15212;
+  color: #7d5636;
   width: 100%;
   text-align: center;
   justify-content: center;
-  background-color: #2f2318;
+  background-color: #29241e;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
@@ -23978,7 +23976,7 @@ div.saveprices_HoverToolTip_1yXHp {
   .discountgrid_IneligibleNoApp_UrglO
   svg {
   height: 14px;
-  fill: #fff;
+  fill: #7d5636;
   margin-left: 8px;
 }
 .discountgrid_DiscountGridCtn_3THze
@@ -24342,9 +24340,32 @@ div.savetoolbar_HoverToolTip_gba9O {
   margin-top: 8px;
 }
 .tabulator.tabulator
+  .tabulator-header
+  .tabulator-headers
+  .tabulator-col.discountgridheaders_RelatedDiscount_12zwK
+  .tabulator-col-content,
+.tabulator.tabulator
+  .tabulator-header
+  .tabulator-headers
+  .tabulator-col.discountgridheaders_RelatedDiscount_12zwK
+  .tabulator-col-title-holder,
+.tabulator.tabulator
+  .tabulator-header
+  .tabulator-headers
+  .tabulator-col.discountgridheaders_RelatedDiscount_12zwK
+  .tabulator-col-title,
+.tabulator.tabulator
+  .tabulator-header
+  .tabulator-headers
+  .tabulator-col.discountgridheaders_RelatedDiscount_12zwK
+  .formatterCell {
+  height: 100%;
+  padding: 0px;
+}
+.tabulator.tabulator
   .tabulator-cell.tabulator-cell.discountgridheaders_BasePrice_1a_Lw,
 .tabulator.tabulator
-  .tabulator-cell.tabulator-cell.discountgridheaders_DeepestDiscount_2ogAh,
+  .tabulator-cell.tabulator-cell.discountgridheaders_RelatedDiscount_12zwK,
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.discountgridheaders_DiscountGridDataColumn_1yW70 {
   color: #bbb;
@@ -24353,19 +24374,18 @@ div.savetoolbar_HoverToolTip_gba9O {
   .tabulator-cell.tabulator-cell.discountgridheaders_BasePrice_1a_Lw
   a,
 .tabulator.tabulator
-  .tabulator-cell.tabulator-cell.discountgridheaders_DeepestDiscount_2ogAh
+  .tabulator-cell.tabulator-cell.discountgridheaders_RelatedDiscount_12zwK
   a,
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.discountgridheaders_DiscountGridDataColumn_1yW70
   a {
-  color: inherit;
   text-decoration: none;
 }
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.discountgridheaders_BasePrice_1a_Lw
   a:hover,
 .tabulator.tabulator
-  .tabulator-cell.tabulator-cell.discountgridheaders_DeepestDiscount_2ogAh
+  .tabulator-cell.tabulator-cell.discountgridheaders_RelatedDiscount_12zwK
   a:hover,
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.discountgridheaders_DiscountGridDataColumn_1yW70
@@ -24375,7 +24395,7 @@ div.savetoolbar_HoverToolTip_gba9O {
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.discountgridheaders_BasePrice_1a_Lw,
 .tabulator.tabulator
-  .tabulator-cell.tabulator-cell.discountgridheaders_DeepestDiscount_2ogAh {
+  .tabulator-cell.tabulator-cell.discountgridheaders_RelatedDiscount_12zwK {
   justify-content: end;
   padding-right: 8px;
 }
@@ -24396,26 +24416,51 @@ div.savetoolbar_HoverToolTip_gba9O {
   height: 24px;
   width: 24px;
 }
-.discountgridheaders_CurrencyPicker_2Z65K {
+.discountgridheaders_CurrencyPicker_2Z65K,
+.discountgridheaders_RelatedInfoPicker_O-95g {
   background-color: #303238;
   height: 27px;
   margin-top: 2px;
 }
-.discountgridheaders_CurrencyPicker_2Z65K .DialogInputLabelGroup {
+.discountgridheaders_CurrencyPicker_2Z65K .DialogInputLabelGroup,
+.discountgridheaders_RelatedInfoPicker_O-95g .DialogInputLabelGroup {
   margin-bottom: 0px;
 }
-.discountgridheaders_CurrencyPicker_2Z65K .DialogDropDown {
+.discountgridheaders_CurrencyPicker_2Z65K .DialogDropDown,
+.discountgridheaders_RelatedInfoPicker_O-95g .DialogDropDown {
   padding: 4px;
 }
-.discountgridheaders_CurrencyPicker_2Z65K .DialogDropDown_Arrow {
+.discountgridheaders_CurrencyPicker_2Z65K .DialogDropDown_Arrow,
+.discountgridheaders_RelatedInfoPicker_O-95g .DialogDropDown_Arrow {
   top: 6px;
   right: 4px;
 }
-.discountgridheaders_CurrencyDropDown_2gGuz ._DialogInputContainer {
+.discountgridheaders_RelatedInfoPickerCtn_2nnB1 {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.discountgridheaders_RelatedInfoPicker_O-95g {
+  height: fit-content;
+}
+.discountgridheaders_RelatedInfoPicker_O-95g .DialogDropDown {
+  padding-right: 20px;
+}
+.discountgridheaders_CurrencyDropDown_2gGuz ._DialogInputContainer,
+.discountgridheaders_RelatedInfoDropDown_1jj2u ._DialogInputContainer {
   padding: 6px;
 }
 .discountgridheaders_CurrencyDropDown_2gGuz
-  .discountgridheaders_CurrencyDropDownItem_3wPHx {
+  .discountgridheaders_CurrencyDropDownItem_3wPHx,
+.discountgridheaders_CurrencyDropDown_2gGuz
+  .discountgridheaders_RelatedInfoDropDownItem_1ORam,
+.discountgridheaders_RelatedInfoDropDown_1jj2u
+  .discountgridheaders_CurrencyDropDownItem_3wPHx,
+.discountgridheaders_RelatedInfoDropDown_1jj2u
+  .discountgridheaders_RelatedInfoDropDownItem_1ORam {
   padding: 4px 0;
 }
 .singleeventdetails_SingleEventDetailsCtn_381ib {

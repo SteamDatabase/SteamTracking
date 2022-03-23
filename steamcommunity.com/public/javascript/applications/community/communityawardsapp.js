@@ -2388,7 +2388,7 @@
             i,
             n.map((e, t) =>
               e.flRandom > 0.5
-                ? l.a.createElement(G, { key: t, style: e })
+                ? l.a.createElement(x, { key: t, style: e })
                 : l.a.createElement(N, { key: t, style: e })
             )
           );
@@ -2398,8 +2398,8 @@
             style: Object.assign(Object.assign({}, T), e),
           }),
         A = ({ style: e }) => {
-          const [t] = Object(o.useState)(Math.floor(Math.random() * x.length)),
-            r = x[t];
+          const [t] = Object(o.useState)(Math.floor(Math.random() * G.length)),
+            r = G[t];
           return l.a.createElement(r, {
             style: Object.assign(Object.assign(Object.assign({}, L), e), {
               backgroundColor: void 0,
@@ -2432,7 +2432,7 @@
               fill: e.fill,
             })
           ),
-        G = ({ style: e }) =>
+        x = ({ style: e }) =>
           l.a.createElement(
             v.animated.svg,
             {
@@ -2449,7 +2449,7 @@
               fill: e.fill,
             })
           ),
-        x = [
+        G = [
           ({ style: e }) =>
             l.a.createElement(
               v.animated.svg,
@@ -2679,6 +2679,7 @@
         $,
         K,
         Q = r("Jz9t");
+      r("NxAk");
       !(function (e) {
         (e[(e.SELECTING = 0)] = "SELECTING"),
           (e[(e.CONFIRM = 1)] = "CONFIRM"),
@@ -3011,7 +3012,7 @@
                             )
                           ),
                           o.createElement(
-                            "a",
+                            q.c,
                             {
                               key: "button",
                               href: `${w.c.STORE_BASE_URL}points/howitworks`,

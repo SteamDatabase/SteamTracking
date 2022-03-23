@@ -289,7 +289,7 @@ html.responsive #profileBlock {
 	line-height: 19px;
 }
 
-.detailBox ul, .detailBox ol 
+.detailBox ul, .detailBox ol
 {
 	font-size: 14px;
 	line-height: 19px;
@@ -434,6 +434,10 @@ a.general_btn:hover {
 	text-align:left;
 	padding-right:0px;
 	position: relative;
+}
+
+.about_workshop_content_ctn {
+	display: flex;
 }
 
 #rightContents
@@ -1016,11 +1020,13 @@ h3 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.browseOption.notSelected:hover {
+.browseOption.notSelected:hover,
+.browseOption.notSelected.gpfocus {
 	cursor: pointer;
 	background-color: rgba(27,43,59,1);
 }
-.browseOption.notSelected:hover a {
+.browseOption.notSelected:hover a,
+.browseOption.notSelected.gpfocus a {
 	color: #67c1f5;
 }
 
@@ -1062,7 +1068,7 @@ div.appselect
 	color: black;
 	font-size: 12px;
 	cursor: pointer;
-	
+
 	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_appselect_background.png' );
 	background-repeat: no-repeat;
 
@@ -2791,7 +2797,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .creatorsBlock
 {
-	
+
 }
 
 .creatorsBlock .friendBlock_offline, .creatorsBlock .friendBlock_online, .creatorsBlock .friendBlock_in-game, .creatorsBlock .friendBlock_ignored
@@ -3286,7 +3292,7 @@ div.hover {
 .hover_box {
 	background-color: #417A9B;
 	width: 300px;
-	
+
 	color: #C6D4DF;
 	font-size: 12px;
 }
@@ -4110,7 +4116,7 @@ html.responsive #ig_bottom {
 		font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 		margin-top: -5px;
 	}
-	
+
 	.detailPanel > .smallText {
 		font-size: 11px;
 		margin-top: 5px;
@@ -4124,7 +4130,7 @@ html.responsive #ig_bottom {
 	.detailPanel > .descriptorText > a {
 		color: #a9cded;
 	}
-	
+
 .detailPanelHighlight {
 	border-right: 1px solid #000000;
 	border-left: 1px solid #213147;
@@ -4142,21 +4148,21 @@ html.responsive #ig_bottom {
 		font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 		margin-top: -5px;
 	}
-	
+
 	.detailPanelHighlight > .smallText {
 		font-size: 11px;
 		color: #396c99;
 	}
-	
+
 	.detailPanelHighlight > .descriptorText {
 		font-size: 12px;
 		color: #6d8499;
 	}
-	
+
 	.detailPanelHighlight > .descriptorText > a {
 		color: #a9cded;
 	}
-	
+
 
 #ig_bottom .sidebar h2, #ig_item .sidebar h2 {
 	font-size: 11px;

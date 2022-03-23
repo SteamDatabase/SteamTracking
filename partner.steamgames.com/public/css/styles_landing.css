@@ -3054,7 +3054,7 @@ div .cdkey_request_details_row
 .cdkey_request_details_row .package_details
 {
 	float: left;
-	width: 200px;
+	width: 230px;
 	clear: left;
 	padding: 12px;
 }
@@ -3062,7 +3062,7 @@ div .cdkey_request_details_row
 .cdkey_request_details_row .request_history
 {
 	float: left;
-	width: calc( 100% - 78px - 12px - 500px - 24px );
+	width: 290px;
 	clear: none;
 	padding: 12px;
 }
@@ -3070,7 +3070,7 @@ div .cdkey_request_details_row
 .cdkey_request_details_row .partner_details
 {
 	float: left;
-	width: calc( 100% - 78px - 12px - 560px - 24px );
+	width: 320px;
 	clear: none;
 	padding: 12px;
 }
@@ -3093,6 +3093,11 @@ div .cdkey_request_details_row
 	margin: 4px 0 4px 0;
 }
 
+.cdkey_request_details_row .small_header_row ~ .small_header_row
+{
+	margin-top: 12px;
+}
+
 .cdkey_request_details_row .header_row .title
 {
 	float: left;
@@ -3111,7 +3116,7 @@ div .cdkey_request_details_row
 
 .cdkey_request_details_row .header_row .narrow
 {
-	width: 100px;
+	width: 120px;
 }
 
 .cdkey_request_details_row .title.dim

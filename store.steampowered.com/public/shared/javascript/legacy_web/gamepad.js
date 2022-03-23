@@ -137,6 +137,7 @@
         "AudioPlaybackManager",
         "LaunchStates",
         "Haptics",
+        "ControllerConfigurator",
       ];
       var C;
       !(function (t) {
@@ -329,29 +330,33 @@
             })(t) +
             " " +
             l);
-        const c = [
-          `%c${l}%c:`,
-          `color: ${r ? "black" : "white"}; background: rgb(${s.join(
-            ","
-          )}); padding: 0 1ch`,
-          "color: transparent; margin-right: -1ch",
-          ...o,
-        ];
+        const c =
+            o.length >= 1 && "string" == typeof o[0] && o[0].includes("%c"),
+          u = c && o.shift(),
+          h = [
+            `%c${l}%c:${c ? " %c" + u : ""}`,
+            `color: ${r ? "black" : "white"}; background: rgb(${s.join(
+              ","
+            )}); padding: 0 1ch`,
+            "color: transparent; margin-right: -1ch",
+            ...(c ? [""] : []),
+            ...o,
+          ];
         if (e)
-          console.groupCollapsed(...c),
+          console.groupCollapsed(...h),
             console.trace("Callstack"),
             console.groupEnd();
         else
           switch (t) {
             case C.Debug:
             case C.Info:
-              console.log(...c);
+              console.log(...h);
               break;
             case C.Warning:
-              console.warn(...c);
+              console.warn(...h);
               break;
             case C.Error:
-              console.error(...c);
+              console.error(...h);
           }
       }
       (N.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
@@ -429,12 +434,22 @@
         let n = t.parentElement;
         for (; n; ) {
           if (!e || "x" == e) {
-            let t = window.getComputedStyle(n).overflowX;
-            if ("scroll" == t || "auto" == t) break;
+            let t = window.getComputedStyle(n);
+            if (
+              "scroll" == t.overflowX ||
+              "auto" == t.overflowX ||
+              "fixed" == t.position
+            )
+              break;
           }
           if (!e || "y" == e) {
-            let t = window.getComputedStyle(n).overflowY;
-            if ("scroll" == t || "auto" == t) break;
+            let t = window.getComputedStyle(n);
+            if (
+              "scroll" == t.overflowY ||
+              "auto" == t.overflowY ||
+              "fixed" == t.position
+            )
+              break;
           }
           n = n.parentElement;
         }
@@ -446,8 +461,8 @@
           i = "x" === e ? n.overflowX : n.overflowY;
         return "auto" === i || "scroll" === i;
       }
-      const E = new F("FocusNavigation").Debug,
-        y = new F("GamepadEvents").Debug;
+      const y = new F("FocusNavigation").Debug,
+        E = new F("GamepadEvents").Debug;
       class L {
         constructor(t, e) {
           (this.m_onActivateCallbacks = new v.a()),
@@ -557,7 +572,7 @@
             );
           })(t);
           return (
-            y(
+            E(
               `Logical gamepad Event fired: ${
                 a.a[t.detail.button]
               }, had logical event: ${n}, was handled: ${!e}`
@@ -580,7 +595,7 @@
             (this.m_bWasActiveForLastFocusChange || !this.BIsActive())
           )
             return;
-          E(
+          y(
             `Transfer focus in ${this.id}, source: ${i[t]}, from/to:`,
             null == o ? void 0 : o.m_element,
             null == e ? void 0 : e.m_element
@@ -1008,7 +1023,7 @@
           ? e.y + e.height > n.y && e.y < n.y + n.height
           : (Object(p.a)(!1, `Invalid axis ${t}`), !1);
       }
-      function U(t, e, n) {
+      function x(t, e, n) {
         let i;
         return (
           "x" == t
@@ -1020,7 +1035,7 @@
           i < 0 ? 0 : i
         );
       }
-      function x(t, e, n) {
+      function U(t, e, n) {
         const i = e[t],
           o = (function (t, e) {
             return "x" == t
@@ -1441,6 +1456,7 @@
           )
             break;
           if (!("ownerDocument" in t)) break;
+          if ("fixed" === window.getComputedStyle(t).position) break;
           (r = t),
             (a = {
               top: a.top - u.top,
@@ -2308,7 +2324,7 @@
             const n = e.GetBoundingRect();
             return (
               !(!s || W(g[t], s, n)) ||
-              (r.push({ child: e, overlap: U(t, i, n), dist: x(t, a, n) }), !1)
+              (r.push({ child: e, overlap: x(t, i, n), dist: U(t, a, n) }), !1)
             );
           }),
             e == ft.BACKWARD && r.reverse(),
@@ -2760,8 +2776,8 @@
         "OnMessage",
         null
       );
-      var Et = n("8+ko"),
-        yt = n.n(Et);
+      var yt = n("8+ko"),
+        Et = n.n(yt);
       function Lt(t) {
         let e = 0;
         t.children().each(function () {
@@ -2817,7 +2833,7 @@
             ) {
               i = r()("<div/>", {
                 style: "position: absolute; pointer-events: none; ",
-                class: yt.a.FocusRing,
+                class: Et.a.FocusRing,
               });
               let e = h(t);
               d(e), n.append(i), (s = window.setInterval(() => m(t), 200));
@@ -2860,10 +2876,10 @@
       function Wt(t) {
         this.click(), t.stopPropagation();
       }
-      function Ut(t) {
+      function xt(t) {
         r()(this).find('a, input[type="checkbox"]')[0].click();
       }
-      function xt(t) {
+      function Ut(t) {
         const e = t.currentTarget;
         if (!D(e)) return !1;
         const n = t.detail.is_repeat ? 4.5 : 3.33,
@@ -2936,7 +2952,7 @@
               r()(document.body).on("vgp_onbuttondown", function (t) {
                 n.HandleButtonDownEventAsLogicalEvent(t.originalEvent);
               }),
-              u(document.body, xt);
+              u(document.body, Ut);
             new MutationObserver(Jt).observe(document.body, {
               childList: !0,
               subtree: !0,
@@ -3118,8 +3134,8 @@
             onCancelActionDescription: O,
             onSecondaryActionDescription: S,
             onOptionsActionDescription: I,
-            onMenuActionDescription: E,
-            actionDescriptionMap: y,
+            onMenuActionDescription: y,
+            actionDescriptionMap: E,
             onOKButton: L,
             onCancelButton: P,
             onSecondaryButton: M,
@@ -3127,8 +3143,8 @@
             onMenuButton: G,
             onMoveUp: k,
             onMoveRight: W,
-            onMoveDown: U,
-            onMoveLeft: x,
+            onMoveDown: x,
+            onMoveLeft: U,
             onGamepadDirection: V,
             bFocusRingRoot: H,
             type: K,
@@ -3228,7 +3244,7 @@
               })(_[0], z)
             ),
           J &&
-            E &&
+            y &&
             ee(
               _[0],
               (function (t, e) {
@@ -3245,7 +3261,7 @@
               i && (o.onMoveLeft = kt(i)),
               o
             );
-          })(k, W, U, x),
+          })(k, W, x, U),
           Z = F
             ? (function (t) {
                 switch (t) {
@@ -3272,7 +3288,7 @@
             : T && (j.navEntryPreferPosition = _t.PREFERRED_CHILD),
           N &&
             (!1 !== j.focusable && (j.focusable = !0),
-            _.on("vgp_onok", "firstChild" === N ? Ut : Wt),
+            _.on("vgp_onok", "firstChild" === N ? xt : Wt),
             ee(t, () => {
               _.off("vgp_onok");
             })),
@@ -3302,8 +3318,8 @@
             onCancelActionDescription: O,
             onSecondaryActionDescription: S,
             onOptionsActionDescription: I,
-            onMenuActionDescription: E,
-            actionDescriptionMap: y,
+            onMenuActionDescription: y,
+            actionDescriptionMap: E,
           }),
           et = Object.assign(
             Object.assign({ fnCanTakeFocus: re, actionDescriptionMap: tt }, Q),

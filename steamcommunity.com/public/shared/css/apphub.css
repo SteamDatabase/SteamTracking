@@ -46,8 +46,11 @@ center
 
 .apphub_HeaderTop.workshop
 {
-
 	background-image:url('https://community.cloudflare.steamstatic.com/public/shared/images/apphubs/bg_workshop_header.png?v=3');
+}
+.BasicUI.gpnav_active .apphub_HeaderTop.workshop
+{
+	background-image: none;
 }
 
 .apphub_HeaderStandardTop

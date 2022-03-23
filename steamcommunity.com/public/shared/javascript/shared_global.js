@@ -648,6 +648,7 @@ CModal.prototype.AdjustSizing = function( duration )
 		return;
 
 	var bResponsiveScreen = window.UseTouchFriendlyMode && UseTouchFriendlyMode();
+	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
 
 	var nViewportWidth = document.compatMode === 'BackCompat' ? document.body.clientWidth : $J(window).width();
 	var nViewportHeight = document.compatMode === 'BackCompat' ? document.body.clientHeight : $J(window).height();
@@ -692,7 +693,8 @@ CModal.prototype.AdjustSizing = function( duration )
 	var nLeft = Math.max( Math.floor( ( nViewportWidth - nContentWidth ) / 2 ), 12 );
 	var nTop = Math.max( Math.floor( ( nViewportHeight - nContentHeight ) / 2 ), 12 );
 
-	if ( bResponsiveScreen )
+	// only use absolute position on mobile screens
+	if ( bResponsiveScreen && !bUseTabletScreenMode )
 	{
 		nLeft += this.m_nInitialOffsetLeft;
 		nTop += this.m_nInitialOffsetTop;
@@ -4687,6 +4689,26 @@ function BindTooltips(selector, rgOptions)
 	var $HTMLTooltips = $J( '[data-tooltip-html]', selector);
 	if ( $HTMLTooltips.length )
 		$HTMLTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false, 'responsiveMode': window.UseSmallScreenMode && window.UseSmallScreenMode() } );
+}
+
+function ShowTooltipMenuAsPopup( toolDiv )
+{
+	var $Popup = $J( toolDiv );
+	// detach this element and when the dialog closes re-attach to the document body
+	$Popup.detach();
+	var originalPopupPosition = $Popup.css( 'position' );
+	$Popup.css( 'position', 'static' ); // clear possible absolute positioning
+	$Popup.show();
+
+	var dialog = ShowDialog( '', $Popup ).always(
+		function() {
+			// save it away again for later
+			$Popup.hide();
+			$Popup.css( 'position', originalPopupPosition ); // restore positioning
+			$J( document.body ).append( $Popup );
+		}
+	);
+	return dialog;
 }
 
 /**

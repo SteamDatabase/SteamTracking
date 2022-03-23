@@ -16,6 +16,9 @@ ol {
 	margin-top: 2px;
 }
 
+h3 {
+    font-size: 14px;
+}
 
 h4 {
 	margin-bottom: 3px;
@@ -127,6 +130,7 @@ body.ban_keys #landingNav > a.active {
 	padding-bottom: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+    color: white;
 	border: 1px solid #e1de37;
 	background-color: #656311;
 }
@@ -140,6 +144,10 @@ body.ban_keys #landingNav > a.active {
 	color: #fff;
 	border: 1px solid #67c1f5;
 	background-color: #003f57;
+}
+
+.compactmsg {
+    display: inline-block;
 }
 
 .breadcrumb {
@@ -3874,4 +3882,23 @@ img.category_icon {
 .featureNote strong {
     font-size: 16px;
     color: orange;
+}
+
+table.root_path_table {
+    width: 100%;
+    border-spacing: 1px 1px;
+}
+
+.root_path_table .root_path_num {
+    border-bottom: 10px solid #1b1e22;
+}
+.root_path_table .root_path_preview {
+    border-bottom: 10px solid #1b1e22;
+}
+.crossPlatform_yes {
+    color: #67c1f5;
+}
+
+.crossPlatform_no {
+    color: #fff03a;
 }

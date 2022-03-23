@@ -115,7 +115,20 @@ function CSlideShow( $TopLevelContainer, $Container, rgParams )
 
 		var _this = this;
 		this.m_$TopLevelContainer.on( 'mouseover', function( event ) { _this.OnMouseOver( event ); } );
+		this.m_$TopLevelContainer.on( 'focusin', function( event ) { _this.OnMouseOver( event ); } );
 		this.m_$TopLevelContainer.on( 'mouseout', function( event ) { _this.OnMouseOut( event ); } );
+		this.m_$TopLevelContainer.on( 'focusout', function( event ) { _this.OnMouseOut( event ); } );
+
+		for ( var i = 0; i < this.m_children.length; ++i )
+		{
+			var elem = $J( this.m_children[i] );
+			elem.on( 'focusin',
+				function( event )
+				{
+					_this.HighlightItem( $J( this ), 0 );
+				}
+			);
+		}
 
 		if ( this.m_elemScrollLeftBtn && this.m_elemScrollRightBtn )
 		{
@@ -272,6 +285,11 @@ CSlideShow.prototype.ScrollRight = function()
 
 CSlideShow.prototype.StartTimer = function()
 {
+	// disabled in table mode
+	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+	if ( bUseTabletScreenMode )
+		return;
+
 	this.ClearInterval();
 	this.m_interval = window.setTimeout( this.Transition.bind( this ), 5000 );
 }
