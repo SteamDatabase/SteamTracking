@@ -1409,7 +1409,7 @@ function GamepadYouTubeVideoOnDirection( event /* GamepadEvent */, ytplayer )
 	if ( ytplayer && ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement ) )
 	{
 		const nPositionStep = 10;
-		if ( event.detail.button == 11 && video.currentTime > 0 ) // left
+		if ( event.detail.button == 11 && ytplayer.getCurrentTime() > 0 ) // left
 			ytplayer.seekTo( Math.max( ytplayer.getCurrentTime() - nPositionStep, 0 ) );
 		else if ( event.detail.button == 12 && ytplayer.getCurrentTime() < ytplayer.getDuration() ) // right
 			ytplayer.seekTo( Math.min( ytplayer.getCurrentTime() + nPositionStep, ytplayer.getDuration() ) );
@@ -1490,7 +1490,7 @@ function GamepadYouTubeVideoToggleMute( ytplayer )
 {
 	if ( ytplayer.isMuted() )
 	{
-		ytplayer.unmute();
+		ytplayer.unMute();
 	}
 	else
 	{
