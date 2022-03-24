@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-0X
-0X
+X
+X
 __stubs
 __TEXT
 __stub_helper
@@ -51,7 +51,6 @@ __LINKEDIT
 @loader_path/steamconsole.dylib
 "
 P
-J
 
 *
 8
@@ -724,7 +723,6 @@ Using compat tool hash: %s
 Download depot version %llu .
 DownloadDepot ERROR %s!
 DownloadDepot success: %s
-%s/outgoing/%u/%llu
 stale_gpu_desc
 stale_driver_desc
 compat_tool_hash
@@ -822,7 +820,6 @@ Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do
 m_vecCallbacks.Count() == 0
 %d
 %llu
-%lf
 pDefaultValue
 Attempted to change replicated CVar when you are not the GM
 ConCommand '%s' not currently supported in config file
@@ -842,8 +839,8 @@ flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
 written == count
 fsync %s failed, errno = %d
-%s%c%s
 %lld
+%lf
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
@@ -854,6 +851,7 @@ Unbuffered read should be called with cubData length that is aligned to system p
 Seeking to a position which is not sector aligned will break unbuffered io
 cubData < INT32_MAX
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+%s%c%s
 ..
 cbActual < (uint32)nBufSizeWithTerminator
 CFileWriterThread
@@ -1133,6 +1131,8 @@ Signature check failed
 Failed to parse input
 No verified phone number
 Insufficient battery charge
+Charger required
+Cached credential is invalid
 Invalid
 Public
 Beta
@@ -1299,8 +1299,8 @@ j
 @
 @
 0
-Ic
 0
+Ic
 
 =
 @
@@ -1319,6 +1319,7 @@ Ic
 0
 0
 0
-F
+u
+Z
 0
 0

@@ -1,19 +1,19 @@
 "osx"
 {
-	"version"		"1647893121"
+	"version"		"1648077083"
 	"steamcmd_public_all"
 	{
-		"file"		"steamcmd_public_all.zip.2d2f199752a2914b5f17225d5583453f053a4778"
-		"size"		"49911"
-		"sha2"		"9dce2101687870fd61df6e3b3a7a122cb0e925233d53d17936a94555ff11f144"
+		"file"		"steamcmd_public_all.zip.254b6485717e0b1ef037eae2c43eea66fd52c07b"
+		"size"		"49920"
+		"sha2"		"a1461ab48446e0ce228107ce17a56801b02e1aecc62df2f275336667d0f0fa18"
 	}
 	"steamcmd_bins_osx"
 	{
-		"file"		"steamcmd_bins_osx.zip.1fae8e5632d89a5ac3af1dab6fbd0b75cd2737f5"
-		"size"		"26401549"
-		"sha2"		"52de6fc8a151a9632cdd0c1ea1063b3511cad6e1378b89ce9e93cec9ecc006f5"
-		"zipvz"		"steamcmd_bins_osx.zip.vz.91fa3b3bc8abe5ae943e31de9e4f69690434694d_17513728"
-		"sha2vz"		"d02fd2d41ec5d38ef4adca17221ba33cfbcb9cfaedfd7c92bbea6c60901352a9"
+		"file"		"steamcmd_bins_osx.zip.7e7d5a54a4f8b58c695a61da0736ebf68918a214"
+		"size"		"26628815"
+		"sha2"		"abfde1cd4db6a35edcdd642a08fde66d662161ddaa38c5f626705dc8124b8ab3"
+		"zipvz"		"steamcmd_bins_osx.zip.vz.a4a8a00e50954be77f8654723f8e856b38d4ef11_17668445"
+		"sha2vz"		"ca7c164b0f2cdc69f120dd268fa4e704af527c434455fd7f94b400990ffff826"
 	}
 	"steamcmd_breakpad_osx"
 	{
@@ -25,19 +25,19 @@
 	}
 	"steamcmd_osx"
 	{
-		"file"		"steamcmd_osx.zip.f5ba6585b310a90c8a278416d82a8f836b1b7614"
-		"size"		"2049244"
-		"sha2"		"f9ad4826d51997165742c6ac5a40c4e945bdb31316ebb902502c30ca317946b8"
-		"zipvz"		"steamcmd_osx.zip.vz.a5c04b23e8843c5e581d2776d318fa6716873114_1687723"
-		"sha2vz"		"324a8de4d63788ea613c5c053abda7ed43818927e2556a952d0961c219841c86"
+		"file"		"steamcmd_osx.zip.8a0c7ac0fcbf95bdff7e0516a20123266480b561"
+		"size"		"2049997"
+		"sha2"		"14a76d53abeb7401e6c2ff535d7fc8fbdf5d76644fbafa99c5d1b0aa24c1a99e"
+		"zipvz"		"steamcmd_osx.zip.vz.ce6f739fd84f33e0dacea06e229acbbcac353921_1689171"
+		"sha2vz"		"cb0362102357bea02db6ced7df29fc20434702319a351f4e787977b780b7a149"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsign2"
 {
-	"osx"		"fb7d1558b378b6780f4ab6f0e476461e5ee5dc741d5209e22d852692606c9609650d68637c760b635498ff86b66c4974410ad835cdb81eab56b871033879f501"
+	"osx"		"a98e57804cf2e023cb7fc1f885ed872812d8130ab524df726ce806bcd67b679430ebf1527327bd83072d8008909127a92bb87b5f5c218276344723b95e1aaf03"
 }
 "kvsignatures"
 {
-	"osx"		"4e113e1b511605c5c7bb4d9d416bc140fb1cec46669e75d7c0324cebd9e28b77293095bf4bd9c6a8e70bec6eef3c7762efd813952d19b0ecafd46aecff701960cd4cfa6c29111eb57729aa7d1452ef4363ade7080e044c8eb3a9c1ed2267fd29e22ed5588ea54136d43a2af7ecc34008898e8fba536d6fef3312e53a22f21377"
+	"osx"		"9bc439856ca870aa14a2ca8bf42ba075e9435d5b51c8ad3c4278d26adbe13a681bfbb8dc00a9c1841872a63c10d4df3b7da1dbeab5f4432ee39569858e6b1064b412ade64ba0d5a48215553140ee140f0cad4c0d1e899dec01096011b58fe1567717fe456c6c97da1b3e8cae825df12a7c3168a33005db59de1e9a7f3fa668b8"
 }
