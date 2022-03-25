@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7174898";
+var CLSTAMP = "7175533";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -18137,13 +18137,11 @@ var CLSTAMP = "7174898";
         var r = o.e.apply(void 0, Object(n.g)([e], t));
         return (r = (r = (r = (r = (r = r
           .replace(/<b>/g, "[b]")
-          .replace(/<\/b>/g, "[/b]")).replace(/<br>/g, "[br]"))
+          .replace(/<\/b>/g, "[/b]")).replace(/<br>/g, "\n"))
           .replace(/<font color='\#(\w+)'>/g, "[color=#$1]")
           .replace(/<\/font>/g, "[/color]"))
           .replace(/<font color="\#(\w+)">/g, "[color=#$1]")
-          .replace(/<\/font>/g, "[/color]"))
-          .replace(/\n/g, "")
-          .replace(/\[br\]/g, "\n"));
+          .replace(/<\/font>/g, "[/color]")).replace(/\[br\]/g, "\n"));
       }
     },
     eV45: function (e, t, a) {
@@ -34046,7 +34044,7 @@ var CLSTAMP = "7174898";
                 src: h.a.IMG_URL + "arrow_left.png",
                 className: ce.a.BackArrow,
               }),
-              "Back to Blog"
+              Object(M.k)("#back_to_news")
             ),
             c.a.createElement("div", { className: ce.a.Title }, v),
             c.a.createElement("div", { className: ce.a.Date }, l),
@@ -44092,6 +44090,7 @@ var CLSTAMP = "7174898";
             case 2:
               s = "ranged";
           }
+          var l = t.bio_loc.replace(/\n/g, "");
           return c.a.createElement(
             "div",
             { className: Ao.a.HeroSummary },
@@ -44122,7 +44121,7 @@ var CLSTAMP = "7174898";
                 {
                   className: Object(v.a)(Ao.a.BioContainer, !n && Ao.a.Hidden),
                 },
-                Object(M.k)(t.bio_loc),
+                Object(M.k)(l),
                 c.a.createElement(
                   "div",
                   {
