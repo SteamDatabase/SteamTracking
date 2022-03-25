@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7165516";
+var CLSTAMP = "7174810";
 !(function (e) {
   function t(t) {
     for (
@@ -9452,6 +9452,7 @@ var CLSTAMP = "7165516";
           (this.update_bytes_staged = 0),
           (this.update_bytes_to_process = 0),
           (this.update_bytes_processed = 0),
+          (this.update_is_install = !1),
           (this.update_is_workshop = !1),
           (this.update_is_shader = !1),
           (this.update_is_prefetch_estimate = !1),
@@ -9480,7 +9481,7 @@ var CLSTAMP = "7165516";
           "k_EControllerBindingType_ControllerAction");
     })(i || (i = {}));
     const s = -1;
-    class o {}
+    class o extends class {} {}
     class c {}
     class l {}
     function u() {
@@ -9912,6 +9913,7 @@ var CLSTAMP = "7165516";
         IN_GAMEPADUI: !1,
         ON_DECK: !1,
         IN_LOGIN: !1,
+        IN_STANDALONE_KEYBOARD: !1,
       },
       s = {
         logged_in: !1,
@@ -12717,6 +12719,7 @@ var CLSTAMP = "7165516";
         n.Fragment,
         null,
         t &&
+          !h.c.IN_STANDALONE_KEYBOARD &&
           n.createElement(u.a, {
             strOverrideStartupMovie: m.a,
             onVideoComplete: i,
@@ -12724,7 +12727,10 @@ var CLSTAMP = "7165516";
         n.createElement(
           n.Suspense,
           { fallback: null },
-          n.createElement(p, { cm: e.cm, bPlayingStartupMovie: t })
+          n.createElement(p, {
+            cm: e.cm,
+            bPlayingStartupMovie: t && !h.c.IN_STANDALONE_KEYBOARD,
+          })
         )
       );
     }

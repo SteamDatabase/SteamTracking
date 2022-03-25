@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "購入完了期限：",
     "Sale_Reservation_CancelAuto": "上記の有効期限内に購入を完了しなかった場合は、予約はキャンセルされ、デポジットは返金されます。",
     "Sale_Reservation_Expired": "予約の有効期限が切れました。",
+    "Sale_Reservation_ExpectedDate": "注文受付開始予定：",
+    "Sale_Reservation_YourExpectedDate": "お客様の注文受付開始予定：",
     "Sale_BrowserSortOption_TopWishlisted": "ウィッシュリストで最も人気の近日登場ゲーム",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "合計（累積総計）ウィッシュリスト数で並べ替えた近日登場ゲーム。Steamでまだリリースされていないゲームのみが含まれます。",
     "Sale_BrowserSortOption_TrendingWishlisted": "人気の近日登場",

@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Completa a compra antes de:",
 	"Sale_Reservation_CancelAuto": "Se não completares a compra antes da data mencionada acima, iremos cancelar a tua reserva e reembolsar o valor de entrada depositado.",
 	"Sale_Reservation_Expired": "A reserva expirou.",
+	"Sale_Reservation_ExpectedDate": "Disponibilidade prevista de compra:",
+	"Sale_Reservation_YourExpectedDate": "Disponibilidade prevista da tua compra:",
 	"Sale_BrowserSortOption_TopWishlisted": "Próximos jogos mais desejados",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Jogos com lançamento no futuro, ordenados pelo total de presenças em listas de desejos (desde o início). Apenas inclui jogos que ainda não foram lançados no Steam.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Mais antecipados",

@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Hoàn tất mua hàng trước:",
 	"Sale_Reservation_CancelAuto": "Nếu bạn không hoàn tất mua hàng trước thời hạn nêu trên, chúng tôi sẽ hủy đơn đặt trước và hoàn trả tiền cọc.",
 	"Sale_Reservation_Expired": "Đặt trước hết hạn.",
+	"Sale_Reservation_ExpectedDate": "Dự kiến có hàng:",
+	"Sale_Reservation_YourExpectedDate": "Dự kiến có hàng cho bạn:",
 	"Sale_BrowserSortOption_TopWishlisted": "Trò chơi sắp ra mắt được ao ước nhất",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Trò chơi sắp ra mắt, sắp xếp theo tổng số lượt thêm vào danh sách ước (từ trước đến nay). Chỉ bao gồm những trò chưa phát hành trên Steam.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Phổ biến và Sắp ra mắt",

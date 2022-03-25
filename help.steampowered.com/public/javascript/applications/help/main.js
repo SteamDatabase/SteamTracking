@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7167948";
+var CLSTAMP = "7174932";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [61],
   {
@@ -33604,7 +33604,7 @@ var CLSTAMP = "7167948";
         }
       }
       function ve(e) {
-        var { category: t, appName: r } = e;
+        var { category: t, appName: r, descriptionToken: e } = e;
         if (0 == t)
           return h.a.createElement(
             "div",
@@ -33631,24 +33631,24 @@ var CLSTAMP = "7167948";
             (n = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (a = S.a.Unsupported);
         }
-        (e = h.a.createElement("span", { className: a }, Object(f.f)(Se(t)))),
-          (t = h.a.createElement(
+        (t = h.a.createElement("span", { className: a }, Object(f.f)(Se(t)))),
+          (e = h.a.createElement(
             "span",
             { className: S.a.CompatibilityDetailRatingSummary },
-            Object(f.f)(n)
+            Object(f.f)(e || n)
           )),
-          (t = r
+          (e = r
             ? Object(f.m)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
                 h.a.createElement("b", null, Object(B.b)(r)),
-                e,
-                t
+                t,
+                e
               )
-            : Object(f.m)("#SteamDeckVerified_DescriptionHeader", e, t));
+            : Object(f.m)("#SteamDeckVerified_DescriptionHeader", t, e));
         return h.a.createElement(
           "div",
           { className: S.a.CompatibilityDetailRatingSummary },
-          t
+          e
         );
       }
       function Se(e) {

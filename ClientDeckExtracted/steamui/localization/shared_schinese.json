@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "在以下时间之前完成购买：",
     "Sale_Reservation_CancelAuto": "如果您未在上述失效时间前完成购买，我们将取消您的预订并退回您的订金。",
     "Sale_Reservation_Expired": "预订已失效。",
+    "Sale_Reservation_ExpectedDate": "预计可下单时间： ",
+    "Sale_Reservation_YourExpectedDate": "您的预计可下单时间：",
     "Sale_BrowserSortOption_TopWishlisted": "即将推出的最热愿望单游戏",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "按加入愿望单总数（迄今为止）排序的即将推出游戏。仅包括尚未在 Steam 上发行的游戏。",
     "Sale_BrowserSortOption_TrendingWishlisted": "热门即将推出",

@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "구매 완료 기한:",
     "Sale_Reservation_CancelAuto": "위에 명시된 기한 내에 구매를 완료하지 않으면, 예약 구매를 취소하고 보증금을 환불해드립니다.",
     "Sale_Reservation_Expired": "예약 구매가 만료되었습니다.",
+    "Sale_Reservation_ExpectedDate": "예상 구매 가능 시기:",
+    "Sale_Reservation_YourExpectedDate": "귀하의 예상 구매 가능 시기:",
     "Sale_BrowserSortOption_TopWishlisted": "가장 많이 찜한 출시 예정 게임",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "역대 총 찜 목록 개수를 기준으로 정렬된 출시 예정 게임입니다. Steam에 아직 출시되지 않은 게임만 포함됩니다.",
     "Sale_BrowserSortOption_TrendingWishlisted": "인기 출시 예정 게임",

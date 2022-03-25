@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "於此時限前完成購買：",
     "Sale_Reservation_CancelAuto": "如您無法在上述時限內完成購買，我們將取消您的預約並退還您的訂金。",
     "Sale_Reservation_Expired": "預訂已過期",
+    "Sale_Reservation_ExpectedDate": "預計可下單時間：",
+    "Sale_Reservation_YourExpectedDate": "您的預計可下單時間：",
     "Sale_BrowserSortOption_TopWishlisted": "即將推出的最熱門願望清單遊戲",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "依（至今）加入願望清單總數排序的即將推出的遊戲。僅包含尚未在 Steam 上發行的遊戲。",
     "Sale_BrowserSortOption_TrendingWishlisted": "熱門即將發行",

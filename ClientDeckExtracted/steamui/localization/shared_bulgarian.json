@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "Срок на завършване на покупката:",
     "Sale_Reservation_CancelAuto": "Ако не завършите покупката преди горепосочения срок, ние ще откажем Вашата резервация и ще възстановим сумата по депозита Ви.",
     "Sale_Reservation_Expired": "Срокът на резервацията изтече.",
+    "Sale_Reservation_ExpectedDate": "Очаквана наличност на поръчката:",
+    "Sale_Reservation_YourExpectedDate": "Очаквана наличност на Вашата поръчка:",
     "Sale_BrowserSortOption_TopWishlisted": "Най-популярни предстоящи игри от списъците с желания",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Предстоящи игри, сортирани по общия им брой (за целия период) позиции в списъците с желания. Включва само игри, които все още не са пуснати в Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Популярни предстоящи",

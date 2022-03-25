@@ -846,7 +846,7 @@
       /*!****************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes.ts ***!
   \****************************************************************************************/
-      /*! exports provided: BIsEFriendRelationshipFriend, BIsEFriendRelationshipBlocked, k_unSteamUserDesktopInstance, k_unSteamUserConsoleInstance, k_unSteamUserWebInstance, k_nGameIDWinUI, k_nGameIDServiceAppFirst, k_nGameIDSteamBackpack, k_nGameIDSteamEconomy, k_nGameIDServiceAppLast, k_nGameIDControllerConfigs, k_nGameIDSteamVR, k_nGameIDSteamVRMain, k_nGameIDSteamVRMonitorMain, k_nGameIDSteamVRMonitor, k_nGameIDControllerConfigs_Desktop, k_nGameIDControllerConfigs_BigPicture, k_nGameIDControllerConfigs_GuideChord, k_GIDNil, k_RTime32Nil, k_RTime32Infinite, ELanguagePchWebLanguageCode, MapKoreanaToKorean, ELanguagePchLanguage, PchLanguageToELanguage, EClanEventTypeArray, BIsChinaLauncher, BIsReducedUILauncher, EConnectivityTestResult, ENetFakeLocalSystemState, ESuspendResumeProgressState, EFloatingGamepadTextInputMode, EAppUpdateContentType, EOverlayToStoreFlag, EActivateGameOverlayToWebPageMode, DownloadItemUpdateTypeInfo, DownloadItem, DownloadOverview, ValidateProgress, MoveContentProgress, NotificationCounts, CurrentUser, AppTag, LoginUser, EControllerBindingType, ControllerState, ControllerVisualizationState, AppDetailsBeta, k_nSteamClientBetaNone, AppDetailsDLC, AppDetailsMusicAlbum, AppDetailsAchievementsHighlight, AppDetailsAchievements, AppLegacyCDKey, AppLibraryAssets, AppDetails, GameActionDetails, WorkshopItem, MusicAlbumTrack, MusicPlaybackState, TradingCardDetails, ESocialDropTypes, DragDropPosition, FriendState, BroadcastStatus, SettingsKeyBinding, SettingsDownloadRegion, FamilySharingUser, SettingsState, FamilySettings, RemotePlaySettings, FriendsSettings, DefaultFriendsSettings, InstalledAppInfo, InstallFolderInfo, UGCScreenShot, SystemInfo, IterateFolderItem, IterateDrivesItem, MarketingMessage, SurveyEntry, SurveySection, GameLaunchOption, ShortcutScanData, ShortcutScanResults, InstallAppAndCreateShortcutData, FlatpakApp, AppLifetimeNotification, ScreenshotNotification, AchievementNotification, BatteryState_t, FormatStorageProgress_t, InvalidStorageManagerDriveId, ToStorageManagerDriveId, InvalidStorageManagerBlockDeviceId, ToStorageManagerBlockDeviceId, InvalidAudioDeviceId, EAudioDirection, EAudioChannel, AudioDevice, AudioDevices, EBrowserType, BOpenVROverlayBrowser, OverlayChatBrowserInfo, PushToTalkInfo, EClientUINotificationType, EComputerActiveState, CommunityPreferences, TextFilterPreferences, EBroadcastViewRequestState, ContentDescriptorPreferences, StorePreferences, AppTypeForEProtoAppType, AppTypeForEStoreAppType, BIsSaleItemType, BDoesSaleItemTypeHaveParent, RemoteClientInputSettings, EClientUsedInputType, ERemoteClientLaunchResult, CallbackHandleDisposer, ESteamRealm, BIsChinaRealm, InvalidBluetoothAdapterId, InvalidBluetoothDeviceId, EBluetoothDeviceType, BluetoothAdapter_t, BluetoothDevice_t, BluetoothState_t, CustomNetworkDeviceWapId, InvalidNetworkDeviceWapId, ENetworkDeviceType, ENetworkDeviceState, EWirelessEndpointStrength, EWirelessSecurityFlags, EHTTPProxyMode, ConfiguredProxyInfo, ESystemUISystemKey, EUIComposition */
+      /*! exports provided: BIsEFriendRelationshipFriend, BIsEFriendRelationshipBlocked, k_unSteamUserDesktopInstance, k_unSteamUserConsoleInstance, k_unSteamUserWebInstance, k_nGameIDWinUI, k_nGameIDServiceAppFirst, k_nGameIDSteamBackpack, k_nGameIDSteamEconomy, k_nGameIDServiceAppLast, k_nGameIDControllerConfigs, k_nGameIDSteamVR, k_nGameIDSteamVRMain, k_nGameIDSteamVRMonitorMain, k_nGameIDSteamVRMonitor, k_nGameIDControllerConfigs_Desktop, k_nGameIDControllerConfigs_BigPicture, k_nGameIDControllerConfigs_GuideChord, k_GIDNil, k_RTime32Nil, k_RTime32Infinite, ELanguagePchWebLanguageCode, MapKoreanaToKorean, ELanguagePchLanguage, PchLanguageToELanguage, EClanEventTypeArray, BIsChinaLauncher, BIsReducedUILauncher, EConnectivityTestResult, ENetFakeLocalSystemState, ESuspendResumeProgressState, EFloatingGamepadTextInputMode, EAppUpdateContentType, EOverlayToStoreFlag, EActivateGameOverlayToWebPageMode, DownloadItemUpdateTypeInfo, DownloadItem, DownloadOverview, ValidateProgress, MoveContentProgress, NotificationCounts, CurrentUser, AppTag, LoginUser, EControllerBindingType, ControllerState, ControllerVisualizationState, AppDetailsBeta, k_nSteamClientBetaNone, AppDetailsDLC, AppDetailsMusicAlbum, UserAchievementInfo, AppDetailsAchievementsHighlight, AppDetailsAchievements, AppLegacyCDKey, AppLibraryAssets, AppDetails, GameActionDetails, WorkshopItem, MusicAlbumTrack, MusicPlaybackState, TradingCardDetails, ESocialDropTypes, DragDropPosition, FriendState, BroadcastStatus, SettingsKeyBinding, SettingsDownloadRegion, FamilySharingUser, SettingsState, FamilySettings, RemotePlaySettings, FriendsSettings, DefaultFriendsSettings, InstalledAppInfo, InstallFolderInfo, UGCScreenShot, SystemInfo, IterateFolderItem, IterateDrivesItem, MarketingMessage, SurveyEntry, SurveySection, GameLaunchOption, ShortcutScanData, ShortcutScanResults, InstallAppAndCreateShortcutData, FlatpakApp, AppLifetimeNotification, ScreenshotNotification, AchievementNotification, BatteryState_t, FormatStorageProgress_t, InvalidStorageManagerDriveId, ToStorageManagerDriveId, InvalidStorageManagerBlockDeviceId, ToStorageManagerBlockDeviceId, InvalidAudioDeviceId, EAudioDirection, EAudioChannel, AudioDevice, AudioDevices, EBrowserType, BOpenVROverlayBrowser, OverlayChatBrowserInfo, PushToTalkInfo, EClientUINotificationType, EComputerActiveState, CommunityPreferences, TextFilterPreferences, EBroadcastViewRequestState, ContentDescriptorPreferences, StorePreferences, AppTypeForEProtoAppType, AppTypeForEStoreAppType, BIsSaleItemType, BDoesSaleItemTypeHaveParent, RemoteClientInputSettings, EClientUsedInputType, ERemoteClientLaunchResult, CallbackHandleDisposer, ESteamRealm, BIsChinaRealm, InvalidBluetoothAdapterId, InvalidBluetoothDeviceId, EBluetoothDeviceType, BluetoothAdapter_t, BluetoothDevice_t, BluetoothState_t, CustomNetworkDeviceWapId, InvalidNetworkDeviceWapId, ENetworkDeviceType, ENetworkDeviceState, EWirelessEndpointStrength, EWirelessSecurityFlags, EHTTPProxyMode, ConfiguredProxyInfo, ESystemUISystemKey, EUIComposition */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -960,6 +960,13 @@
           "AppDetailsMusicAlbum",
           function () {
             return AppDetailsMusicAlbum;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "UserAchievementInfo",
+          function () {
+            return UserAchievementInfo;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -2000,6 +2007,8 @@
             this.update_bytes_to_process = 0;
             /** Bytes already processed in current phase - resets to zero when update stage changes */
             this.update_bytes_processed = 0;
+            /** True if the current update is an initial install */
+            this.update_is_install = false;
             /** True if the current update is for workshop content */
             this.update_is_workshop = false;
             /** True if the current update is for shader update */
@@ -2098,7 +2107,8 @@
         const k_nSteamClientBetaNone = -1; // No Steam client beta selected
         class AppDetailsDLC {}
         class AppDetailsMusicAlbum {}
-        class AppDetailsAchievementsHighlight {}
+        class UserAchievementInfo {}
+        class AppDetailsAchievementsHighlight extends UserAchievementInfo {}
         class AppDetailsAchievements {}
         class AppLegacyCDKey {}
         class AppLibraryAssets {}
@@ -5334,6 +5344,8 @@
                 return "k_EDisplayStatusCloudError";
               case 35:
                 return "k_EDisplayStatusCloudOutOfDate";
+              case 36:
+                return "k_EDisplayStatusTerminating";
             }
           }
           return "unknown EDisplayStatus ( " + eDisplayStatus + " )";
@@ -7283,20 +7295,22 @@
               case 40:
                 return "k_EControllerAction_Empty_Sub_Command";
               case 41:
-                return "k_EControllerAction_System_Key_0";
+                return "k_EControllerAction_Change_TouchscreenMode_None";
               case 42:
-                return "k_EControllerAction_System_Key_1";
+                return "k_EControllerAction_System_Key_0";
               case 43:
-                return "k_EControllerAction_Notify_ActionSet_Change";
+                return "k_EControllerAction_System_Key_1";
               case 44:
-                return "k_EControllerAction_Notify_ActionSetLayer_Change";
+                return "k_EControllerAction_Notify_ActionSet_Change";
               case 45:
-                return "k_EControllerAction_Notify_Close_Touch_Menu";
+                return "k_EControllerAction_Notify_ActionSetLayer_Change";
               case 46:
-                return "k_EControllerAction_Chord_Hint_Display";
+                return "k_EControllerAction_Notify_Close_Touch_Menu";
               case 47:
-                return "k_EControllerAction_Chord_Hint_Dismiss";
+                return "k_EControllerAction_Chord_Hint_Display";
               case 48:
+                return "k_EControllerAction_Chord_Hint_Dismiss";
+              case 49:
                 return "k_EControllerAction_Count";
             }
           }
@@ -27187,6 +27201,7 @@ function TestLocalizeCalendarTime()
           IN_GAMEPADUI: false,
           ON_DECK: false,
           IN_LOGIN: false,
+          IN_STANDALONE_KEYBOARD: false,
         };
         /** User info, mostly populated by GetWebUICurrentUserInfo and GetWebUICurrentUserInfoForStore */
         const UserConfig = {

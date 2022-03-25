@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Completa l'acquisto entro:",
 	"Sale_Reservation_CancelAuto": "Se non completi l'acquisto entro il tempo di scadenza indicato sopra, annulleremo la tua prenotazione e ti rimborseremo il tuo deposito.",
 	"Sale_Reservation_Expired": "Prenotazione scaduta.",
+	"Sale_Reservation_ExpectedDate": "Disponibilità prevista dell’ordine:",
+	"Sale_Reservation_YourExpectedDate": "Disponibilità prevista del tuo ordine:",
 	"Sale_BrowserSortOption_TopWishlisted": "Giochi in arrivo più desiderati",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Giochi in arrivo ordinati per numero totale di aggiunte alla Lista dei desideri (di tutti i tempi). Include solo i giochi non ancora rilasciati su Steam.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Popolari in arrivo",

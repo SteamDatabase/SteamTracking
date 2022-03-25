@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Завершите покупку до:",
 	"Sale_Reservation_CancelAuto": "Если вы не завершите покупку до указанного выше времени, мы отменим ваше бронирование и вернём вам потраченные средства.",
 	"Sale_Reservation_Expired": "Срок бронирования истёк.",
+	"Sale_Reservation_ExpectedDate": "Ожидаемое время исполнения заказа:",
+	"Sale_Reservation_YourExpectedDate": "Ожидаемое время исполнения вашего заказа:",
 	"Sale_BrowserSortOption_TopWishlisted": "Самые желаемые предстоящие новинки",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Предстоящие новинки, отсортированные по числу добавлений в список желаемого за всё время. Включены только игры, ещё не выпущенные в Steam.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Популярные будущие продукты",

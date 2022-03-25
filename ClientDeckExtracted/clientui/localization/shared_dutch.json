@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Rond de aankoop af voor:",
 	"Sale_Reservation_CancelAuto": "Als je de aankoop niet afrondt vóór bovenstaande vervaldatum, dan zullen we je reservering annuleren en de aanbetaling aan je terugbetalen.",
 	"Sale_Reservation_Expired": "Reservering is verlopen.",
+	"Sale_Reservation_ExpectedDate": "Geschatte beschikbaarheid:",
+	"Sale_Reservation_YourExpectedDate": "Geschatte beschikbaarheid voor je bestelling:",
 	"Sale_BrowserSortOption_TopWishlisted": "Meest op verlanglijst geplaatste aankomende spellen",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Aankomende spellen gesorteerd op het totale aantal keer dat ze (ooit) op een verlanglijst zijn gezet. Dit omvat enkel spellen die nog niet op Steam zijn uitgegeven.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Populair aankomend",

@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Finaliser l'achat avant le :",
 	"Sale_Reservation_CancelAuto": "Si vous ne finalisez pas l'achat avant la date d'expiration indiquée ci-dessus, nous annulerons votre réservation et vous rembourserons votre acompte.",
 	"Sale_Reservation_Expired": "Réservation expirée.",
+	"Sale_Reservation_ExpectedDate": "Commande possible à partir du :",
+	"Sale_Reservation_YourExpectedDate": "Commande possible à partir du :",
 	"Sale_BrowserSortOption_TopWishlisted": "Prochaines sorties les plus souhaitées",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Voici les prochaines sorties, classées selon le nombre total d'ajouts aux listes de souhaits. N'inclut que les jeux qui n'ont pas encore été publiés sur Steam.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Sorties attendues",

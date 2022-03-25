@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "เสร็จสิ้นการสั่งซื้อโดย:",
 	"Sale_Reservation_CancelAuto": "หากคุณไม่สั่งซื้อให้เสร็จสมบูรณ์ก่อนเวลาหมดอายุข้างต้น เราจะยกเลิกการสั่งจองของคุณและคืนเงินมัดจำให้",
 	"Sale_Reservation_Expired": "การสั่งจองหมดอายุแล้ว",
+	"Sale_Reservation_ExpectedDate": "คาดว่าจะพร้อมให้สั่งซื้อได้:",
+	"Sale_Reservation_YourExpectedDate": "คาดว่าจะพร้อมให้คุณสั่งซื้อได้:",
 	"Sale_BrowserSortOption_TopWishlisted": "เกมใกล้วางจำหน่ายที่อยู่ในสิ่งที่อยากได้มากที่สุด",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "เกมใกล้วางจำหน่ายที่เรียงลำดับตามจำนวนสิ่งที่อยากได้ทั้งหมด (ตลอดกาล) รวมเฉพาะเกมที่ยังไม่วางจำหน่ายบน Steam เท่านั้น",
 	"Sale_BrowserSortOption_TrendingWishlisted": "ใกล้วางจำหน่ายยอดนิยม",

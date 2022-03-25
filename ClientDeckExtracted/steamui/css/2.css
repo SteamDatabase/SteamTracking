@@ -49522,6 +49522,12 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_Touched_3UFQq.gpfocus {
   background: #b4b4b4;
 }
+.virtualkeyboard_VirtualKeyboardStandaloneContainer_L1a9i {
+  position: relative;
+  z-index: 6000;
+  flex-shrink: 0;
+  overflow: hidden;
+}
 .virtualkeyboard_VirtualKeyboardContainer_33MO2 {
   position: relative;
   z-index: 6000;
@@ -50125,7 +50131,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-61px, 110vh) rotate(-9deg);
+    transform: translate(-145px, 110vh) rotate(-189deg);
   }
 }
 .chatroomeffects_Snowflake-1_2b67l {
@@ -50136,7 +50142,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-157px, 110vh) rotate(-82deg);
+    transform: translate(49px, 110vh) rotate(325deg);
   }
 }
 .chatroomeffects_Snowflake-2_2_NWs {
@@ -50147,7 +50153,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(62px, 110vh) rotate(-349deg);
+    transform: translate(-32px, 110vh) rotate(139deg);
   }
 }
 .chatroomeffects_Snowflake-3_cBxtQ {
@@ -50158,7 +50164,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-85px, 110vh) rotate(78deg);
+    transform: translate(-59px, 110vh) rotate(-447deg);
   }
 }
 .chatroomeffects_Snowflake-4_1JQNl {
@@ -50169,7 +50175,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-67px, 110vh) rotate(-157deg);
+    transform: translate(151px, 110vh) rotate(-166deg);
   }
 }
 .chatroomeffects_Snowflake-5_cUP1f {
@@ -50180,7 +50186,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(162px, 110vh) rotate(271deg);
+    transform: translate(58px, 110vh) rotate(295deg);
   }
 }
 .chatroomeffects_Snowflake-6_2F8cs {
@@ -50191,7 +50197,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-134px, 110vh) rotate(-42deg);
+    transform: translate(-78px, 110vh) rotate(12deg);
   }
 }
 .chatroomeffects_Snowflake-7_zJ9BE {
@@ -50202,7 +50208,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(187px, 110vh) rotate(-27deg);
+    transform: translate(-62px, 110vh) rotate(177deg);
   }
 }
 .chatroomeffects_Snowflake-8_3BAdG {
@@ -50213,7 +50219,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-95px, 110vh) rotate(-152deg);
+    transform: translate(36px, 110vh) rotate(283deg);
   }
 }
 .chatroomeffects_Snowflake-9_2DNE8 {
@@ -50224,7 +50230,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(77px, 110vh) rotate(-226deg);
+    transform: translate(-109px, 110vh) rotate(-433deg);
   }
 }
 .chatroomeffects_Snowflake-10_19m8q {
@@ -50235,7 +50241,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-8px, 110vh) rotate(310deg);
+    transform: translate(98px, 110vh) rotate(238deg);
   }
 }
 .chatroomeffects_Snowflake-11_ijWSF {
@@ -50246,7 +50252,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(5px, 110vh) rotate(-400deg);
+    transform: translate(114px, 110vh) rotate(-246deg);
   }
 }
 .chatroomeffects_Snowflake-12_Ripsa {
@@ -50257,7 +50263,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(71px, 110vh) rotate(-395deg);
+    transform: translate(-156px, 110vh) rotate(-57deg);
   }
 }
 .chatroomeffects_Snowflake-13__5IUE {
@@ -50268,7 +50274,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-143px, 110vh) rotate(-5deg);
+    transform: translate(95px, 110vh) rotate(-60deg);
   }
 }
 .chatroomeffects_Snowflake-14_pmIdk {
@@ -50279,7 +50285,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(66px, 110vh) rotate(393deg);
+    transform: translate(-35px, 110vh) rotate(-194deg);
   }
 }
 .chatroomeffects_Snowflake-15_2nQdH {
@@ -50290,7 +50296,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(170px, 110vh) rotate(300deg);
+    transform: translate(78px, 110vh) rotate(19deg);
   }
 }
 .chatroomeffects_Snowflake-16_lJyG7 {
@@ -50301,7 +50307,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-126px, 110vh) rotate(331deg);
+    transform: translate(-3px, 110vh) rotate(-67deg);
   }
 }
 .chatroomeffects_Snowflake-17_1L0AZ {
@@ -50312,7 +50318,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(6px, 110vh) rotate(260deg);
+    transform: translate(-189px, 110vh) rotate(102deg);
   }
 }
 .chatroomeffects_Snowflake-18_1ozac {
@@ -50323,7 +50329,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(172px, 110vh) rotate(408deg);
+    transform: translate(180px, 110vh) rotate(-271deg);
   }
 }
 .chatroomeffects_Snowflake-19_FOXzc {
@@ -50334,7 +50340,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(-155px, 110vh) rotate(437deg);
+    transform: translate(127px, 110vh) rotate(100deg);
   }
 }
 .chatroomeffects_Snowflake-20_Qt7pR {
@@ -50345,23 +50351,23 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     transform: translate(0, 0) rotate(0deg);
   }
   to {
-    transform: translate(34px, 110vh) rotate(-118deg);
+    transform: translate(-174px, 110vh) rotate(149deg);
   }
 }
 .chatroomeffects_confetti_VelNh {
   position: absolute;
 }
 .chatroomeffects_confetti-0_tlO-i {
-  width: 7px;
-  height: 2.8px;
-  background-color: #ffbf00;
+  width: 18px;
+  height: 7.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 22%;
-  opacity: 1.1902021419;
-  transform: rotate(88.517449307deg);
+  left: 54%;
+  opacity: 1.012698603;
+  transform: rotate(359.7298193106deg);
   animation: chatroomeffects_drop-0__37zJ;
-  animation-duration: 5.5347300267s;
-  animation-delay: 0.6081816411s;
+  animation-duration: 4.2039800646s;
+  animation-delay: 0.2662239829s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-0__37zJ {
@@ -50374,20 +50380,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 28%;
+    left: 58%;
   }
 }
 .chatroomeffects_confetti-1_3OuSs {
-  width: 6px;
-  height: 2.4px;
+  width: 20px;
+  height: 8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 53%;
-  opacity: 0.7123455233;
-  transform: rotate(145.0792798335deg);
+  left: 95%;
+  opacity: 0.8083194905;
+  transform: rotate(84.1764772913deg);
   animation: chatroomeffects_drop-1_x-HP7;
-  animation-duration: 5.3204798628s;
-  animation-delay: 0.9991528028s;
+  animation-duration: 5.5427076074s;
+  animation-delay: 0.2166423545s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-1_x-HP7 {
@@ -50400,20 +50406,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 61%;
+    left: 102%;
   }
 }
 .chatroomeffects_confetti-2_1mdZ0 {
-  width: 3px;
-  height: 1.2px;
+  width: 16px;
+  height: 6.4px;
   background-color: #ffbf00;
   top: -10%;
-  left: 45%;
-  opacity: 1.3272467873;
-  transform: rotate(193.8212321922deg);
+  left: 90%;
+  opacity: 1.0282474461;
+  transform: rotate(171.703458443deg);
   animation: chatroomeffects_drop-2_3XfWb;
-  animation-duration: 5.9860128501s;
-  animation-delay: 0.6127267979s;
+  animation-duration: 5.4518094705s;
+  animation-delay: 0.4917986086s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-2_3XfWb {
@@ -50426,20 +50432,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 50%;
+    left: 101%;
   }
 }
 .chatroomeffects_confetti-3_36OCs {
-  width: 13px;
-  height: 5.2px;
+  width: 14px;
+  height: 5.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 80%;
-  opacity: 1.4711684463;
-  transform: rotate(35.8112361156deg);
+  left: 65%;
+  opacity: 1.0170506894;
+  transform: rotate(349.0545661774deg);
   animation: chatroomeffects_drop-3_OTZKZ;
-  animation-duration: 5.2000812222s;
-  animation-delay: 0.4398174214s;
+  animation-duration: 5.0296103951s;
+  animation-delay: 0.2482117733s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-3_OTZKZ {
@@ -50452,20 +50458,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 83%;
+    left: 79%;
   }
 }
 .chatroomeffects_confetti-4_3NbOc {
-  width: 5px;
-  height: 2px;
-  background-color: #263672;
+  width: 11px;
+  height: 4.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 14%;
-  opacity: 1.0435475115;
-  transform: rotate(124.0567344286deg);
+  left: 80%;
+  opacity: 0.569171907;
+  transform: rotate(296.4693569612deg);
   animation: chatroomeffects_drop-4_1CAil;
-  animation-duration: 5.3856907806s;
-  animation-delay: 0.9159284844s;
+  animation-duration: 4.9074453843s;
+  animation-delay: 0.659547574s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-4_1CAil {
@@ -50478,20 +50484,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 23%;
+    left: 92%;
   }
 }
 .chatroomeffects_confetti-5_VnTYG {
-  width: 4px;
-  height: 1.6px;
+  width: 1px;
+  height: 0.4px;
   background-color: #ffbf00;
   top: -10%;
-  left: 65%;
-  opacity: 1.1975830094;
-  transform: rotate(243.5126274894deg);
+  left: 32%;
+  opacity: 1.0875021442;
+  transform: rotate(353.2907870293deg);
   animation: chatroomeffects_drop-5_1pPPC;
-  animation-duration: 5.7778239215s;
-  animation-delay: 0.8822656495s;
+  animation-duration: 5.453406296s;
+  animation-delay: 0.0874209811s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-5_1pPPC {
@@ -50504,20 +50510,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 67%;
+    left: 46%;
   }
 }
 .chatroomeffects_confetti-6_3KEfm {
-  width: 6px;
-  height: 2.4px;
-  background-color: #ffbf00;
+  width: 12px;
+  height: 4.8px;
+  background-color: #263672;
   top: -10%;
-  left: 6%;
-  opacity: 1.1806262115;
-  transform: rotate(159.4416394084deg);
+  left: 100%;
+  opacity: 0.9575793296;
+  transform: rotate(27.5335630472deg);
   animation: chatroomeffects_drop-6_4Wj8s;
-  animation-duration: 4.8171421809s;
-  animation-delay: 0.1038891093s;
+  animation-duration: 5.2593535851s;
+  animation-delay: 0.4029122393s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-6_4Wj8s {
@@ -50530,7 +50536,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 19%;
+    left: 114%;
   }
 }
 .chatroomeffects_confetti-7_1C-Ak {
@@ -50538,12 +50544,12 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   height: 7.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 65%;
-  opacity: 0.8328418376;
-  transform: rotate(223.8673077501deg);
+  left: 85%;
+  opacity: 0.5688288935;
+  transform: rotate(326.6508028041deg);
   animation: chatroomeffects_drop-7_oHsjU;
-  animation-duration: 4.6051408122s;
-  animation-delay: 0.8665214849s;
+  animation-duration: 5.9677064438s;
+  animation-delay: 0.5001320334s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-7_oHsjU {
@@ -50556,20 +50562,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 80%;
+    left: 98%;
   }
 }
 .chatroomeffects_confetti-8_4oJYN {
-  width: 20px;
-  height: 8px;
-  background-color: #263672;
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 13%;
-  opacity: 1.4173894427;
-  transform: rotate(328.6674104833deg);
+  left: 61%;
+  opacity: 0.6333503745;
+  transform: rotate(58.0574006297deg);
   animation: chatroomeffects_drop-8_2y189;
-  animation-duration: 4.7240751682s;
-  animation-delay: 0.538888602s;
+  animation-duration: 5.2234510406s;
+  animation-delay: 0.2821724405s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-8_2y189 {
@@ -50582,20 +50588,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 23%;
+    left: 66%;
   }
 }
 .chatroomeffects_confetti-9_1bEjR {
-  width: 1px;
-  height: 0.4px;
-  background-color: #ffbf00;
+  width: 18px;
+  height: 7.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 61%;
-  opacity: 1.0259463792;
-  transform: rotate(114.1330770299deg);
+  left: 67%;
+  opacity: 1.1888538197;
+  transform: rotate(90.399572096deg);
   animation: chatroomeffects_drop-9_5c9w0;
-  animation-duration: 5.5552754557s;
-  animation-delay: 0.9168696984s;
+  animation-duration: 4.798801562s;
+  animation-delay: 0.8103235853s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-9_5c9w0 {
@@ -50608,20 +50614,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 71%;
+    left: 80%;
   }
 }
 .chatroomeffects_confetti-10_1oRBM {
-  width: 8px;
-  height: 3.2px;
+  width: 18px;
+  height: 7.2px;
   background-color: #d13447;
   top: -10%;
-  left: 21%;
-  opacity: 0.7347255186;
-  transform: rotate(344.3654152353deg);
+  left: 65%;
+  opacity: 0.809401806;
+  transform: rotate(43.8298902947deg);
   animation: chatroomeffects_drop-10_1L13_;
-  animation-duration: 5.114985293s;
-  animation-delay: 0.8481645153s;
+  animation-duration: 5.5942780041s;
+  animation-delay: 0.0317423172s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-10_1L13_ {
@@ -50634,20 +50640,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 22%;
+    left: 71%;
   }
 }
 .chatroomeffects_confetti-11_3W9ZL {
-  width: 1px;
-  height: 0.4px;
-  background-color: #d13447;
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 28%;
-  opacity: 1.4130851853;
-  transform: rotate(173.8128403422deg);
+  left: 80%;
+  opacity: 0.5338870418;
+  transform: rotate(55.0304618518deg);
   animation: chatroomeffects_drop-11_vYvGB;
-  animation-duration: 5.8864763708s;
-  animation-delay: 0.7735537649s;
+  animation-duration: 5.7956273056s;
+  animation-delay: 0.3626119635s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-11_vYvGB {
@@ -50660,20 +50666,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 40%;
+    left: 90%;
   }
 }
 .chatroomeffects_confetti-12_2TwZ0 {
-  width: 14px;
-  height: 5.6px;
+  width: 10px;
+  height: 4px;
   background-color: #d13447;
   top: -10%;
-  left: 10%;
-  opacity: 1.0631957351;
-  transform: rotate(69.1031775824deg);
+  left: 14%;
+  opacity: 0.8933703264;
+  transform: rotate(138.9739286042deg);
   animation: chatroomeffects_drop-12_3b2Dc;
-  animation-duration: 4.1758317574s;
-  animation-delay: 0.5642849599s;
+  animation-duration: 4.592631174s;
+  animation-delay: 0.4550848443s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-12_3b2Dc {
@@ -50686,20 +50692,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 20%;
+    left: 16%;
   }
 }
 .chatroomeffects_confetti-13_1m8Vr {
-  width: 9px;
-  height: 3.6px;
+  width: 3px;
+  height: 1.2px;
   background-color: #263672;
   top: -10%;
-  left: 53%;
-  opacity: 0.5781837334;
-  transform: rotate(194.8065440525deg);
+  left: 21%;
+  opacity: 0.8675343748;
+  transform: rotate(262.4340681476deg);
   animation: chatroomeffects_drop-13_2n4ZP;
-  animation-duration: 4.9692842686s;
-  animation-delay: 0.0580215418s;
+  animation-duration: 4.9915479667s;
+  animation-delay: 0.7401062814s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-13_2n4ZP {
@@ -50712,20 +50718,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 54%;
+    left: 23%;
   }
 }
 .chatroomeffects_confetti-14_1YV6p {
-  width: 18px;
-  height: 7.2px;
-  background-color: #d13447;
+  width: 13px;
+  height: 5.2px;
+  background-color: #263672;
   top: -10%;
-  left: 71%;
-  opacity: 0.5976143585;
-  transform: rotate(185.3978787651deg);
+  left: 40%;
+  opacity: 1.2541998602;
+  transform: rotate(297.6015589161deg);
   animation: chatroomeffects_drop-14_xQzPb;
-  animation-duration: 4.0532180349s;
-  animation-delay: 0.2519539323s;
+  animation-duration: 5.8825778685s;
+  animation-delay: 0.2535888421s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-14_xQzPb {
@@ -50738,20 +50744,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 78%;
+    left: 52%;
   }
 }
 .chatroomeffects_confetti-15_2D2LH {
-  width: 13px;
-  height: 5.2px;
-  background-color: #263672;
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 63%;
-  opacity: 1.1040843661;
-  transform: rotate(66.3704464579deg);
+  left: 87%;
+  opacity: 0.834380268;
+  transform: rotate(177.7880699771deg);
   animation: chatroomeffects_drop-15_oKVqM;
-  animation-duration: 4.5254857455s;
-  animation-delay: 0.3666458361s;
+  animation-duration: 4.3118631953s;
+  animation-delay: 0.8739075094s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-15_oKVqM {
@@ -50764,20 +50770,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 64%;
+    left: 97%;
   }
 }
 .chatroomeffects_confetti-16_pvt2J {
-  width: 10px;
-  height: 4px;
+  width: 18px;
+  height: 7.2px;
   background-color: #263672;
   top: -10%;
-  left: 68%;
-  opacity: 0.6923750754;
-  transform: rotate(120.6819621439deg);
+  left: 35%;
+  opacity: 0.8530513827;
+  transform: rotate(219.9770630447deg);
   animation: chatroomeffects_drop-16_T5UBd;
-  animation-duration: 5.0577311251s;
-  animation-delay: 0.7294422873s;
+  animation-duration: 5.6996038253s;
+  animation-delay: 0.8496207727s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-16_T5UBd {
@@ -50790,20 +50796,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 72%;
+    left: 41%;
   }
 }
 .chatroomeffects_confetti-17_2NCF0 {
-  width: 20px;
-  height: 8px;
-  background-color: #d13447;
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 20%;
-  opacity: 1.3916749955;
-  transform: rotate(90.3985067986deg);
+  left: 81%;
+  opacity: 0.7200956295;
+  transform: rotate(120.565849274deg);
   animation: chatroomeffects_drop-17_1d8Dj;
-  animation-duration: 5.5628996901s;
-  animation-delay: 0.5602824721s;
+  animation-duration: 4.2796805633s;
+  animation-delay: 0.4778678474s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-17_1d8Dj {
@@ -50816,20 +50822,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 30%;
+    left: 87%;
   }
 }
 .chatroomeffects_confetti-18_o_Hf7 {
-  width: 15px;
-  height: 6px;
-  background-color: #ffbf00;
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 28%;
-  opacity: 0.5941018542;
-  transform: rotate(139.6566999077deg);
+  left: 22%;
+  opacity: 0.7927685746;
+  transform: rotate(355.4959304543deg);
   animation: chatroomeffects_drop-18_1zoqm;
-  animation-duration: 4.3704274485s;
-  animation-delay: 0.1448413623s;
+  animation-duration: 5.0865572069s;
+  animation-delay: 0.8342271607s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-18_1zoqm {
@@ -50842,20 +50848,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 30%;
+    left: 26%;
   }
 }
 .chatroomeffects_confetti-19_28L_3 {
-  width: 15px;
-  height: 6px;
+  width: 3px;
+  height: 1.2px;
   background-color: #d13447;
   top: -10%;
-  left: 74%;
-  opacity: 1.488872335;
-  transform: rotate(112.8985800456deg);
+  left: 7%;
+  opacity: 0.5152646174;
+  transform: rotate(125.8702052645deg);
   animation: chatroomeffects_drop-19_1zkpz;
-  animation-duration: 5.884606209s;
-  animation-delay: 0.7565108989s;
+  animation-duration: 5.3454401403s;
+  animation-delay: 0.458610237s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-19_1zkpz {
@@ -50868,20 +50874,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 77%;
+    left: 19%;
   }
 }
 .chatroomeffects_confetti-20_P-SKX {
-  width: 19px;
-  height: 7.6px;
-  background-color: #263672;
+  width: 4px;
+  height: 1.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 84%;
-  opacity: 0.9664329259;
-  transform: rotate(325.1256302104deg);
+  left: 98%;
+  opacity: 1.164540847;
+  transform: rotate(122.0570187449deg);
   animation: chatroomeffects_drop-20_2HmVc;
-  animation-duration: 5.9426265741s;
-  animation-delay: 0.0571035226s;
+  animation-duration: 4.0096113663s;
+  animation-delay: 0.1496477657s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-20_2HmVc {
@@ -50894,20 +50900,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 98%;
+    left: 100%;
   }
 }
 .chatroomeffects_confetti-21_27GkO {
-  width: 18px;
-  height: 7.2px;
-  background-color: #263672;
+  width: 15px;
+  height: 6px;
+  background-color: #d13447;
   top: -10%;
-  left: 45%;
-  opacity: 1.4121699685;
-  transform: rotate(2.3933975696deg);
+  left: 47%;
+  opacity: 1.3842076004;
+  transform: rotate(73.3779788212deg);
   animation: chatroomeffects_drop-21_1T4Mt;
-  animation-duration: 5.544475121s;
-  animation-delay: 0.6910538026s;
+  animation-duration: 4.1326968135s;
+  animation-delay: 0.4208815468s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-21_1T4Mt {
@@ -50920,20 +50926,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 52%;
+    left: 55%;
   }
 }
 .chatroomeffects_confetti-22_1sCDh {
-  width: 7px;
-  height: 2.8px;
-  background-color: #d13447;
+  width: 10px;
+  height: 4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 86%;
-  opacity: 0.5983100258;
-  transform: rotate(118.28530676deg);
+  left: 93%;
+  opacity: 1.3555163377;
+  transform: rotate(45.2944657883deg);
   animation: chatroomeffects_drop-22_2svz8;
-  animation-duration: 4.9529665008s;
-  animation-delay: 0.6523224763s;
+  animation-duration: 5.9601218717s;
+  animation-delay: 0.5574108755s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-22_2svz8 {
@@ -50946,20 +50952,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 94%;
+    left: 107%;
   }
 }
 .chatroomeffects_confetti-23_9SZ_A {
-  width: 6px;
-  height: 2.4px;
-  background-color: #263672;
+  width: 11px;
+  height: 4.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 91%;
-  opacity: 1.0000530561;
-  transform: rotate(161.3202930006deg);
+  left: 95%;
+  opacity: 1.4442253167;
+  transform: rotate(141.323909408deg);
   animation: chatroomeffects_drop-23_3vAxI;
-  animation-duration: 5.8266687648s;
-  animation-delay: 0.5020352732s;
+  animation-duration: 5.2144012588s;
+  animation-delay: 0.6715191003s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-23_3vAxI {
@@ -50972,20 +50978,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 93%;
+    left: 109%;
   }
 }
 .chatroomeffects_confetti-24_1Am3e {
-  width: 3px;
-  height: 1.2px;
-  background-color: #ffbf00;
+  width: 9px;
+  height: 3.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 52%;
-  opacity: 0.7606539664;
-  transform: rotate(52.0264409393deg);
+  left: 71%;
+  opacity: 0.9874859964;
+  transform: rotate(132.4389085355deg);
   animation: chatroomeffects_drop-24_RhAjb;
-  animation-duration: 4.8116934315s;
-  animation-delay: 0.4439863203s;
+  animation-duration: 4.8172660568s;
+  animation-delay: 0.286701858s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-24_RhAjb {
@@ -50998,20 +51004,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 64%;
+    left: 86%;
   }
 }
 .chatroomeffects_confetti-25_1Ja7L {
-  width: 15px;
-  height: 6px;
-  background-color: #263672;
+  width: 14px;
+  height: 5.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 46%;
-  opacity: 0.8805640291;
-  transform: rotate(308.4187946076deg);
+  left: 72%;
+  opacity: 1.4043663903;
+  transform: rotate(131.1133687073deg);
   animation: chatroomeffects_drop-25_201NA;
-  animation-duration: 4.0087701633s;
-  animation-delay: 0.9456734845s;
+  animation-duration: 5.8910687647s;
+  animation-delay: 0.9417739353s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-25_201NA {
@@ -51024,20 +51030,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 56%;
+    left: 73%;
   }
 }
 .chatroomeffects_confetti-26_2jMUO {
-  width: 15px;
-  height: 6px;
-  background-color: #ffbf00;
+  width: 11px;
+  height: 4.4px;
+  background-color: #263672;
   top: -10%;
-  left: 23%;
-  opacity: 0.6258328931;
-  transform: rotate(149.7627871506deg);
+  left: 28%;
+  opacity: 0.7252281705;
+  transform: rotate(317.929376976deg);
   animation: chatroomeffects_drop-26_29n7q;
-  animation-duration: 5.0114867195s;
-  animation-delay: 0.8237792523s;
+  animation-duration: 4.5328198965s;
+  animation-delay: 0.624499944s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-26_29n7q {
@@ -51050,20 +51056,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 28%;
+    left: 29%;
   }
 }
 .chatroomeffects_confetti-27_2yQQd {
-  width: 11px;
-  height: 4.4px;
-  background-color: #d13447;
+  width: 18px;
+  height: 7.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 59%;
-  opacity: 0.5274078203;
-  transform: rotate(304.8736054391deg);
+  left: 49%;
+  opacity: 0.6141659962;
+  transform: rotate(201.4450979313deg);
   animation: chatroomeffects_drop-27_2m3A7;
-  animation-duration: 5.9381399526s;
-  animation-delay: 0.0874440925s;
+  animation-duration: 5.8248079974s;
+  animation-delay: 0.154640705s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-27_2m3A7 {
@@ -51076,20 +51082,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 70%;
+    left: 58%;
   }
 }
 .chatroomeffects_confetti-28_1Qlxx {
-  width: 19px;
-  height: 7.6px;
-  background-color: #d13447;
+  width: 20px;
+  height: 8px;
+  background-color: #263672;
   top: -10%;
-  left: 29%;
-  opacity: 1.1492819654;
-  transform: rotate(358.9065222377deg);
+  left: 50%;
+  opacity: 0.8013120948;
+  transform: rotate(202.2300245455deg);
   animation: chatroomeffects_drop-28_18frj;
-  animation-duration: 4.9245825255s;
-  animation-delay: 0.4036173738s;
+  animation-duration: 4.1720387534s;
+  animation-delay: 0.1690384981s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-28_18frj {
@@ -51102,20 +51108,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 33%;
+    left: 53%;
   }
 }
 .chatroomeffects_confetti-29_1b2l6 {
-  width: 14px;
-  height: 5.6px;
-  background-color: #263672;
+  width: 18px;
+  height: 7.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 67%;
-  opacity: 1.1820735864;
-  transform: rotate(238.7300267834deg);
+  left: 35%;
+  opacity: 0.5660262511;
+  transform: rotate(103.7378055301deg);
   animation: chatroomeffects_drop-29_2Q2T3;
-  animation-duration: 5.0891329164s;
-  animation-delay: 0.4189924346s;
+  animation-duration: 5.0614821603s;
+  animation-delay: 0.6551785961s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-29_2Q2T3 {
@@ -51128,20 +51134,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 69%;
+    left: 41%;
   }
 }
 .chatroomeffects_confetti-30_1JH00 {
-  width: 2px;
-  height: 0.8px;
+  width: 3px;
+  height: 1.2px;
   background-color: #d13447;
   top: -10%;
-  left: 38%;
-  opacity: 0.5706085382;
-  transform: rotate(176.9852560874deg);
+  left: 29%;
+  opacity: 1.4645916803;
+  transform: rotate(351.9529588256deg);
   animation: chatroomeffects_drop-30_35aPE;
-  animation-duration: 4.5723874928s;
-  animation-delay: 0.9206714477s;
+  animation-duration: 5.7143723591s;
+  animation-delay: 0.4241174821s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-30_35aPE {
@@ -51154,20 +51160,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 43%;
+    left: 33%;
   }
 }
 .chatroomeffects_confetti-31_Osdxn {
-  width: 2px;
-  height: 0.8px;
-  background-color: #ffbf00;
+  width: 19px;
+  height: 7.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 14%;
-  opacity: 1.0690547451;
-  transform: rotate(181.0195151361deg);
+  left: 87%;
+  opacity: 0.893021406;
+  transform: rotate(235.4352036619deg);
   animation: chatroomeffects_drop-31_3xx2U;
-  animation-duration: 5.7601764056s;
-  animation-delay: 0.3069554788s;
+  animation-duration: 5.0878341876s;
+  animation-delay: 0.4236563743s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-31_3xx2U {
@@ -51180,20 +51186,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 15%;
+    left: 88%;
   }
 }
 .chatroomeffects_confetti-32_f1SYA {
-  width: 6px;
-  height: 2.4px;
-  background-color: #ffbf00;
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
   top: -10%;
-  left: 58%;
-  opacity: 0.6055693662;
-  transform: rotate(124.8037478096deg);
+  left: 76%;
+  opacity: 1.3510427839;
+  transform: rotate(251.1933240822deg);
   animation: chatroomeffects_drop-32_215c3;
-  animation-duration: 4.4154256495s;
-  animation-delay: 0.8977226653s;
+  animation-duration: 4.2585993506s;
+  animation-delay: 0.9034654447s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-32_215c3 {
@@ -51206,20 +51212,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 61%;
+    left: 89%;
   }
 }
 .chatroomeffects_confetti-33_g65ei {
-  width: 17px;
-  height: 6.8px;
+  width: 3px;
+  height: 1.2px;
   background-color: #263672;
   top: -10%;
-  left: 78%;
-  opacity: 1.001358459;
-  transform: rotate(298.2728691068deg);
+  left: 18%;
+  opacity: 0.5776830939;
+  transform: rotate(279.2283953325deg);
   animation: chatroomeffects_drop-33_2oegr;
-  animation-duration: 4.6715743558s;
-  animation-delay: 0.737420945s;
+  animation-duration: 4.8271374076s;
+  animation-delay: 0.8569365089s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-33_2oegr {
@@ -51232,20 +51238,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 85%;
+    left: 21%;
   }
 }
 .chatroomeffects_confetti-34_2yCKI {
-  width: 5px;
-  height: 2px;
-  background-color: #263672;
+  width: 20px;
+  height: 8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 10%;
-  opacity: 0.6238825135;
-  transform: rotate(348.3799459205deg);
+  left: 71%;
+  opacity: 1.2078138731;
+  transform: rotate(121.9886878818deg);
   animation: chatroomeffects_drop-34_3K9VA;
-  animation-duration: 4.1554360352s;
-  animation-delay: 0.1380642387s;
+  animation-duration: 4.5444466232s;
+  animation-delay: 0.3138873891s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-34_3K9VA {
@@ -51258,20 +51264,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 12%;
+    left: 76%;
   }
 }
 .chatroomeffects_confetti-35_3JsiR {
-  width: 7px;
-  height: 2.8px;
-  background-color: #263672;
+  width: 17px;
+  height: 6.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 96%;
-  opacity: 0.7265728398;
-  transform: rotate(86.796829018deg);
+  left: 37%;
+  opacity: 1.2469797234;
+  transform: rotate(82.1789280844deg);
   animation: chatroomeffects_drop-35_5jMlo;
-  animation-duration: 5.2049185312s;
-  animation-delay: 0.6654912298s;
+  animation-duration: 5.2630336628s;
+  animation-delay: 0.736144442s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-35_5jMlo {
@@ -51284,20 +51290,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 98%;
+    left: 39%;
   }
 }
 .chatroomeffects_confetti-36_R14L0 {
-  width: 19px;
-  height: 7.6px;
-  background-color: #d13447;
+  width: 11px;
+  height: 4.4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 94%;
-  opacity: 1.1024572099;
-  transform: rotate(249.4059156743deg);
+  left: 34%;
+  opacity: 1.1805226354;
+  transform: rotate(152.5567558673deg);
   animation: chatroomeffects_drop-36_13yR4;
-  animation-duration: 5.7015335436s;
-  animation-delay: 0.6831283301s;
+  animation-duration: 5.5470019399s;
+  animation-delay: 0.0988723874s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-36_13yR4 {
@@ -51310,20 +51316,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 108%;
+    left: 42%;
   }
 }
 .chatroomeffects_confetti-37_24ZmD {
-  width: 16px;
-  height: 6.4px;
+  width: 3px;
+  height: 1.2px;
   background-color: #d13447;
   top: -10%;
-  left: 39%;
-  opacity: 0.8539004765;
-  transform: rotate(182.6393617777deg);
+  left: 55%;
+  opacity: 0.5739015914;
+  transform: rotate(70.3813430522deg);
   animation: chatroomeffects_drop-37_2uYeL;
-  animation-duration: 4.7391666229s;
-  animation-delay: 0.5243426977s;
+  animation-duration: 5.2982605759s;
+  animation-delay: 0.8886830172s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-37_2uYeL {
@@ -51336,20 +51342,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 46%;
+    left: 68%;
   }
 }
 .chatroomeffects_confetti-38_25jbU {
-  width: 2px;
-  height: 0.8px;
+  width: 19px;
+  height: 7.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 39%;
-  opacity: 0.6985617394;
-  transform: rotate(145.0439516296deg);
+  left: 99%;
+  opacity: 0.7093770631;
+  transform: rotate(214.6134542582deg);
   animation: chatroomeffects_drop-38_3BJYZ;
-  animation-duration: 4.2559803624s;
-  animation-delay: 0.78601212s;
+  animation-duration: 4.0616346997s;
+  animation-delay: 0.5118342771s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-38_3BJYZ {
@@ -51362,20 +51368,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 48%;
+    left: 104%;
   }
 }
 .chatroomeffects_confetti-39_8zwxi {
-  width: 15px;
-  height: 6px;
-  background-color: #263672;
+  width: 4px;
+  height: 1.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 71%;
-  opacity: 1.2432493831;
-  transform: rotate(298.5689816485deg);
+  left: 72%;
+  opacity: 1.1734552824;
+  transform: rotate(263.7231830923deg);
   animation: chatroomeffects_drop-39_2zKzQ;
-  animation-duration: 4.8033197045s;
-  animation-delay: 0.8817630202s;
+  animation-duration: 4.9193581066s;
+  animation-delay: 0.5196701638s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-39_2zKzQ {
@@ -51388,20 +51394,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 75%;
+    left: 73%;
   }
 }
 .chatroomeffects_confetti-40_Du-Wg {
-  width: 2px;
-  height: 0.8px;
+  width: 10px;
+  height: 4px;
   background-color: #ffbf00;
   top: -10%;
-  left: 2%;
-  opacity: 1.4400253112;
-  transform: rotate(37.50280559deg);
+  left: 96%;
+  opacity: 1.1059205874;
+  transform: rotate(218.047697189deg);
   animation: chatroomeffects_drop-40_3DiQ2;
-  animation-duration: 4.9563082609s;
-  animation-delay: 0.1879977365s;
+  animation-duration: 5.7231576112s;
+  animation-delay: 0.9033154997s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-40_3DiQ2 {
@@ -51414,20 +51420,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 16%;
+    left: 105%;
   }
 }
 .chatroomeffects_confetti-41_3LjK4 {
-  width: 19px;
-  height: 7.6px;
-  background-color: #d13447;
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
   top: -10%;
-  left: 85%;
-  opacity: 1.3248237144;
-  transform: rotate(150.3587459331deg);
+  left: 4%;
+  opacity: 1.474972066;
+  transform: rotate(337.2875577537deg);
   animation: chatroomeffects_drop-41_10ZGR;
-  animation-duration: 5.0907617084s;
-  animation-delay: 0.1272346684s;
+  animation-duration: 4.301586435s;
+  animation-delay: 0.0353653134s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-41_10ZGR {
@@ -51440,20 +51446,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 96%;
+    left: 11%;
   }
 }
 .chatroomeffects_confetti-42_3u0x8 {
-  width: 3px;
-  height: 1.2px;
+  width: 14px;
+  height: 5.6px;
   background-color: #d13447;
   top: -10%;
-  left: 36%;
-  opacity: 0.6787611564;
-  transform: rotate(109.2817057461deg);
+  left: 17%;
+  opacity: 1.4461960084;
+  transform: rotate(82.8999926096deg);
   animation: chatroomeffects_drop-42_2GaWP;
-  animation-duration: 5.51745859s;
-  animation-delay: 0.6197053274s;
+  animation-duration: 4.630674981s;
+  animation-delay: 0.759148676s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-42_2GaWP {
@@ -51466,20 +51472,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 51%;
+    left: 27%;
   }
 }
 .chatroomeffects_confetti-43_2Iip- {
-  width: 2px;
-  height: 0.8px;
-  background-color: #d13447;
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 38%;
-  opacity: 1.4546550964;
-  transform: rotate(251.9993025176deg);
+  left: 4%;
+  opacity: 0.9146262401;
+  transform: rotate(13.9596758758deg);
   animation: chatroomeffects_drop-43_3zDFZ;
-  animation-duration: 5.8969332479s;
-  animation-delay: 0.4474259855s;
+  animation-duration: 4.703119809s;
+  animation-delay: 0.0497159197s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-43_3zDFZ {
@@ -51492,20 +51498,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 48%;
+    left: 9%;
   }
 }
 .chatroomeffects_confetti-44_2qI_Q {
-  width: 9px;
-  height: 3.6px;
-  background-color: #263672;
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
   top: -10%;
-  left: 65%;
-  opacity: 0.6833932862;
-  transform: rotate(67.0651713386deg);
+  left: 100%;
+  opacity: 0.5233663109;
+  transform: rotate(231.501712759deg);
   animation: chatroomeffects_drop-44_3G_AJ;
-  animation-duration: 5.9287548493s;
-  animation-delay: 0.6621007649s;
+  animation-duration: 5.959367599s;
+  animation-delay: 0.3766494087s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-44_3G_AJ {
@@ -51518,20 +51524,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 70%;
+    left: 110%;
   }
 }
 .chatroomeffects_confetti-45_3FUIw {
-  width: 9px;
-  height: 3.6px;
+  width: 4px;
+  height: 1.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 25%;
-  opacity: 0.9442372123;
-  transform: rotate(248.9450592304deg);
+  left: 92%;
+  opacity: 1.065350208;
+  transform: rotate(0.5034803091deg);
   animation: chatroomeffects_drop-45_1BAsF;
-  animation-duration: 5.6218042515s;
-  animation-delay: 0.7658077155s;
+  animation-duration: 4.3116382873s;
+  animation-delay: 0.2800572366s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-45_1BAsF {
@@ -51544,20 +51550,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 36%;
+    left: 105%;
   }
 }
 .chatroomeffects_confetti-46_2wAK3 {
-  width: 14px;
-  height: 5.6px;
-  background-color: #263672;
+  width: 17px;
+  height: 6.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 28%;
-  opacity: 1.3938561266;
-  transform: rotate(97.8418392618deg);
+  left: 38%;
+  opacity: 1.4040428759;
+  transform: rotate(161.3735815447deg);
   animation: chatroomeffects_drop-46_1LOgZ;
-  animation-duration: 5.261999131s;
-  animation-delay: 0.1642291313s;
+  animation-duration: 4.1087113845s;
+  animation-delay: 0.4402552916s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-46_1LOgZ {
@@ -51570,20 +51576,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 42%;
+    left: 52%;
   }
 }
 .chatroomeffects_confetti-47_2dO3B {
-  width: 3px;
-  height: 1.2px;
+  width: 4px;
+  height: 1.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 68%;
-  opacity: 0.7888903207;
-  transform: rotate(135.8805220077deg);
+  left: 63%;
+  opacity: 0.6690968845;
+  transform: rotate(233.2936070632deg);
   animation: chatroomeffects_drop-47_l_1GZ;
-  animation-duration: 4.6644712653s;
-  animation-delay: 0.730423398s;
+  animation-duration: 4.4870454529s;
+  animation-delay: 0.6408176719s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-47_l_1GZ {
@@ -51596,7 +51602,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 76%;
+    left: 75%;
   }
 }
 .chatroomeffects_confetti-48_2ud75 {
@@ -51604,12 +51610,12 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   height: 4.8px;
   background-color: #d13447;
   top: -10%;
-  left: 98%;
-  opacity: 0.7577333302;
-  transform: rotate(59.8728883763deg);
+  left: 60%;
+  opacity: 1.2974012397;
+  transform: rotate(245.6379944605deg);
   animation: chatroomeffects_drop-48_cnRU6;
-  animation-duration: 5.3011910449s;
-  animation-delay: 0.5551989089s;
+  animation-duration: 5.5198933184s;
+  animation-delay: 0.9126792576s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-48_cnRU6 {
@@ -51622,20 +51628,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 113%;
+    left: 72%;
   }
 }
 .chatroomeffects_confetti-49_EX-pu {
-  width: 12px;
-  height: 4.8px;
-  background-color: #263672;
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 53%;
-  opacity: 0.9419509147;
-  transform: rotate(199.0933018969deg);
+  left: 10%;
+  opacity: 1.40079288;
+  transform: rotate(81.2071496818deg);
   animation: chatroomeffects_drop-49_3ElNG;
-  animation-duration: 4.0887169763s;
-  animation-delay: 0.1840912895s;
+  animation-duration: 4.2089991028s;
+  animation-delay: 0.9486957573s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-49_3ElNG {
@@ -51648,20 +51654,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 58%;
+    left: 22%;
   }
 }
 .chatroomeffects_confetti-50_8qyUx {
   width: 5px;
   height: 2px;
-  background-color: #263672;
+  background-color: #d13447;
   top: -10%;
-  left: 53%;
-  opacity: 0.9076708364;
-  transform: rotate(285.0198764763deg);
+  left: 78%;
+  opacity: 1.2650567956;
+  transform: rotate(74.6675890619deg);
   animation: chatroomeffects_drop-50_IlkNs;
-  animation-duration: 4.874562216s;
-  animation-delay: 0.6044605076s;
+  animation-duration: 5.7941587152s;
+  animation-delay: 0.8530695489s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-50_IlkNs {
@@ -51674,20 +51680,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 57%;
+    left: 85%;
   }
 }
 .chatroomeffects_confetti-51_AtKXb {
-  width: 4px;
-  height: 1.6px;
-  background-color: #d13447;
+  width: 13px;
+  height: 5.2px;
+  background-color: #263672;
   top: -10%;
-  left: 76%;
-  opacity: 1.4854542539;
-  transform: rotate(247.308608862deg);
+  left: 49%;
+  opacity: 1.0783594508;
+  transform: rotate(161.4237144281deg);
   animation: chatroomeffects_drop-51_2msFB;
-  animation-duration: 4.133266511s;
-  animation-delay: 0.912659805s;
+  animation-duration: 4.1402156271s;
+  animation-delay: 0.5964732149s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-51_2msFB {
@@ -51700,20 +51706,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 77%;
+    left: 56%;
   }
 }
 .chatroomeffects_confetti-52_1my5Z {
-  width: 11px;
-  height: 4.4px;
-  background-color: #ffbf00;
+  width: 15px;
+  height: 6px;
+  background-color: #263672;
   top: -10%;
-  left: 81%;
-  opacity: 0.8702465604;
-  transform: rotate(9.8355540589deg);
+  left: 92%;
+  opacity: 1.0996994334;
+  transform: rotate(74.1180297918deg);
   animation: chatroomeffects_drop-52_1QnRe;
-  animation-duration: 4.1598139519s;
-  animation-delay: 0.4546232703s;
+  animation-duration: 5.2345126152s;
+  animation-delay: 0.6588968048s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-52_1QnRe {
@@ -51726,20 +51732,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 91%;
+    left: 104%;
   }
 }
 .chatroomeffects_confetti-53_2Cb1i {
-  width: 20px;
-  height: 8px;
+  width: 17px;
+  height: 6.8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 12%;
-  opacity: 0.7522248041;
-  transform: rotate(248.3308190752deg);
+  left: 15%;
+  opacity: 1.2101410013;
+  transform: rotate(283.1840599571deg);
   animation: chatroomeffects_drop-53_1CQh7;
-  animation-duration: 4.3246883988s;
-  animation-delay: 0.3042859831s;
+  animation-duration: 4.6894262178s;
+  animation-delay: 0.952117966s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-53_1CQh7 {
@@ -51752,20 +51758,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 22%;
+    left: 23%;
   }
 }
 .chatroomeffects_confetti-54_2VhA6 {
-  width: 19px;
-  height: 7.6px;
-  background-color: #ffbf00;
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
   top: -10%;
-  left: 58%;
-  opacity: 0.6734708308;
-  transform: rotate(5.3299381655deg);
+  left: 10%;
+  opacity: 0.9052534087;
+  transform: rotate(1.3859758753deg);
   animation: chatroomeffects_drop-54_3hZKt;
-  animation-duration: 4.5163985321s;
-  animation-delay: 0.3007013859s;
+  animation-duration: 5.0432624545s;
+  animation-delay: 0.732309728s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-54_3hZKt {
@@ -51778,20 +51784,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 69%;
+    left: 19%;
   }
 }
 .chatroomeffects_confetti-55_yL87g {
-  width: 20px;
-  height: 8px;
+  width: 18px;
+  height: 7.2px;
   background-color: #d13447;
   top: -10%;
-  left: 83%;
-  opacity: 1.1535704068;
-  transform: rotate(206.3970300861deg);
+  left: 33%;
+  opacity: 0.8638501389;
+  transform: rotate(109.9693703758deg);
   animation: chatroomeffects_drop-55_3dM49;
-  animation-duration: 5.3349677617s;
-  animation-delay: 0.0844730351s;
+  animation-duration: 4.2903781442s;
+  animation-delay: 0.0904597104s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-55_3dM49 {
@@ -51804,20 +51810,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 85%;
+    left: 44%;
   }
 }
 .chatroomeffects_confetti-56_1xqgg {
-  width: 17px;
-  height: 6.8px;
+  width: 5px;
+  height: 2px;
   background-color: #d13447;
   top: -10%;
-  left: 88%;
-  opacity: 0.7612240722;
-  transform: rotate(234.4362103918deg);
+  left: 14%;
+  opacity: 1.4823400661;
+  transform: rotate(239.1527277388deg);
   animation: chatroomeffects_drop-56_3SnEp;
-  animation-duration: 5.3282459512s;
-  animation-delay: 0.0432417428s;
+  animation-duration: 5.780899691s;
+  animation-delay: 0.099476971s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-56_3SnEp {
@@ -51830,20 +51836,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 96%;
+    left: 17%;
   }
 }
 .chatroomeffects_confetti-57_f9kuG {
-  width: 14px;
-  height: 5.6px;
+  width: 19px;
+  height: 7.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 10%;
-  opacity: 0.7699844701;
-  transform: rotate(344.5731879849deg);
+  left: 66%;
+  opacity: 0.7494240051;
+  transform: rotate(1.5896819468deg);
   animation: chatroomeffects_drop-57_3DCDa;
-  animation-duration: 4.7088651458s;
-  animation-delay: 0.6096701863s;
+  animation-duration: 4.7963732137s;
+  animation-delay: 0.2956214172s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-57_3DCDa {
@@ -51856,20 +51862,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 16%;
+    left: 77%;
   }
 }
 .chatroomeffects_confetti-58_1O4Ku {
-  width: 8px;
-  height: 3.2px;
+  width: 12px;
+  height: 4.8px;
   background-color: #263672;
   top: -10%;
-  left: 38%;
-  opacity: 1.4074871808;
-  transform: rotate(273.104443903deg);
+  left: 75%;
+  opacity: 1.0195027604;
+  transform: rotate(172.805030954deg);
   animation: chatroomeffects_drop-58_3d1_1;
-  animation-duration: 4.0081184315s;
-  animation-delay: 0.0788414288s;
+  animation-duration: 5.9968209281s;
+  animation-delay: 0.0635002354s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-58_3d1_1 {
@@ -51882,20 +51888,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 50%;
+    left: 87%;
   }
 }
 .chatroomeffects_confetti-59_XOFkR {
-  width: 3px;
-  height: 1.2px;
-  background-color: #ffbf00;
+  width: 13px;
+  height: 5.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 73%;
-  opacity: 1.1755154325;
-  transform: rotate(112.0212906712deg);
+  left: 10%;
+  opacity: 1.4105862676;
+  transform: rotate(24.8360448026deg);
   animation: chatroomeffects_drop-59_1ZKa_;
-  animation-duration: 5.0133698908s;
-  animation-delay: 0.1514234435s;
+  animation-duration: 4.4540576364s;
+  animation-delay: 0.5266497943s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-59_1ZKa_ {
@@ -51908,20 +51914,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 79%;
+    left: 25%;
   }
 }
 .chatroomeffects_confetti-60_2iInd {
-  width: 7px;
-  height: 2.8px;
-  background-color: #263672;
+  width: 10px;
+  height: 4px;
+  background-color: #d13447;
   top: -10%;
-  left: 9%;
-  opacity: 1.2003703013;
-  transform: rotate(182.1080005762deg);
+  left: 81%;
+  opacity: 0.6751180698;
+  transform: rotate(42.5587386078deg);
   animation: chatroomeffects_drop-60_3stXq;
-  animation-duration: 5.088112527s;
-  animation-delay: 0.305641802s;
+  animation-duration: 4.1372614233s;
+  animation-delay: 0.9343451117s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-60_3stXq {
@@ -51934,20 +51940,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 23%;
+    left: 93%;
   }
 }
 .chatroomeffects_confetti-61_4hvgI {
-  width: 10px;
-  height: 4px;
-  background-color: #d13447;
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 6%;
-  opacity: 0.6081673076;
-  transform: rotate(76.9521475963deg);
+  left: 18%;
+  opacity: 1.4933341755;
+  transform: rotate(97.6040889264deg);
   animation: chatroomeffects_drop-61_ENSW2;
-  animation-duration: 5.9037909197s;
-  animation-delay: 0.044609762s;
+  animation-duration: 5.1291339804s;
+  animation-delay: 0.8871459025s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-61_ENSW2 {
@@ -51960,20 +51966,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 17%;
+    left: 25%;
   }
 }
 .chatroomeffects_confetti-62_1vcmC {
-  width: 1px;
-  height: 0.4px;
-  background-color: #ffbf00;
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
   top: -10%;
   left: 85%;
-  opacity: 1.0849715452;
-  transform: rotate(8.5739256521deg);
+  opacity: 1.4834407252;
+  transform: rotate(215.2092870688deg);
   animation: chatroomeffects_drop-62_3gyQe;
-  animation-duration: 4.4414269136s;
-  animation-delay: 0.3545879593s;
+  animation-duration: 5.0029966558s;
+  animation-delay: 0.2865617649s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-62_3gyQe {
@@ -51986,20 +51992,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 99%;
+    left: 100%;
   }
 }
 .chatroomeffects_confetti-63_3dgPj {
-  width: 10px;
-  height: 4px;
-  background-color: #263672;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 84%;
-  opacity: 1.0303367314;
-  transform: rotate(161.8073371779deg);
+  left: 60%;
+  opacity: 0.5784828398;
+  transform: rotate(263.6980057941deg);
   animation: chatroomeffects_drop-63_2047M;
-  animation-duration: 4.232836702s;
-  animation-delay: 0.8598996042s;
+  animation-duration: 4.0956100558s;
+  animation-delay: 0.7562907292s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-63_2047M {
@@ -52012,20 +52018,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 92%;
+    left: 74%;
   }
 }
 .chatroomeffects_confetti-64_Cewk5 {
-  width: 14px;
-  height: 5.6px;
-  background-color: #263672;
+  width: 15px;
+  height: 6px;
+  background-color: #d13447;
   top: -10%;
-  left: 94%;
-  opacity: 0.5570074412;
-  transform: rotate(164.6537549031deg);
+  left: 28%;
+  opacity: 0.5399620003;
+  transform: rotate(102.7658340728deg);
   animation: chatroomeffects_drop-64_2YCRK;
-  animation-duration: 5.2640215999s;
-  animation-delay: 0.6114759782s;
+  animation-duration: 5.8301967768s;
+  animation-delay: 0.0563627096s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-64_2YCRK {
@@ -52038,20 +52044,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 98%;
+    left: 41%;
   }
 }
 .chatroomeffects_confetti-65_ciQUm {
-  width: 12px;
-  height: 4.8px;
+  width: 18px;
+  height: 7.2px;
   background-color: #d13447;
   top: -10%;
-  left: 16%;
-  opacity: 1.347032722;
-  transform: rotate(235.0787312716deg);
+  left: 23%;
+  opacity: 1.216865337;
+  transform: rotate(297.5092650259deg);
   animation: chatroomeffects_drop-65_3kUQk;
-  animation-duration: 4.9456763332s;
-  animation-delay: 0.4368415708s;
+  animation-duration: 4.2609151056s;
+  animation-delay: 0.0330475544s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-65_3kUQk {
@@ -52064,20 +52070,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 23%;
+    left: 33%;
   }
 }
 .chatroomeffects_confetti-66_3a3mu {
-  width: 15px;
-  height: 6px;
+  width: 18px;
+  height: 7.2px;
   background-color: #263672;
   top: -10%;
-  left: 17%;
-  opacity: 1.4347940782;
-  transform: rotate(285.8734813297deg);
+  left: 59%;
+  opacity: 0.8268404347;
+  transform: rotate(135.0385280307deg);
   animation: chatroomeffects_drop-66_3DoHw;
-  animation-duration: 5.6806886077s;
-  animation-delay: 0.9519350454s;
+  animation-duration: 5.6469082547s;
+  animation-delay: 0.2972754235s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-66_3DoHw {
@@ -52090,20 +52096,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 22%;
+    left: 74%;
   }
 }
 .chatroomeffects_confetti-67_39YTy {
-  width: 17px;
-  height: 6.8px;
-  background-color: #ffbf00;
+  width: 9px;
+  height: 3.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 59%;
-  opacity: 1.0662880172;
-  transform: rotate(181.9213881505deg);
+  left: 20%;
+  opacity: 0.5899841507;
+  transform: rotate(128.3966705748deg);
   animation: chatroomeffects_drop-67_Qb0h2;
-  animation-duration: 4.033246776s;
-  animation-delay: 0.099774672s;
+  animation-duration: 4.0912578776s;
+  animation-delay: 0.360441333s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-67_Qb0h2 {
@@ -52116,20 +52122,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 60%;
+    left: 31%;
   }
 }
 .chatroomeffects_confetti-68_2zcwH {
-  width: 1px;
-  height: 0.4px;
-  background-color: #ffbf00;
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 71%;
-  opacity: 1.0252253763;
-  transform: rotate(157.2823982016deg);
+  left: 80%;
+  opacity: 0.8672787735;
+  transform: rotate(72.0263555443deg);
   animation: chatroomeffects_drop-68_zRaTb;
-  animation-duration: 4.0632805542s;
-  animation-delay: 0.8985206493s;
+  animation-duration: 4.9346034806s;
+  animation-delay: 0.1342959883s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-68_zRaTb {
@@ -52142,20 +52148,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 73%;
+    left: 93%;
   }
 }
 .chatroomeffects_confetti-69_1O9Qn {
-  width: 11px;
-  height: 4.4px;
-  background-color: #263672;
+  width: 18px;
+  height: 7.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 79%;
-  opacity: 0.8504622608;
-  transform: rotate(193.093047675deg);
+  left: 90%;
+  opacity: 0.9021456535;
+  transform: rotate(202.3195670689deg);
   animation: chatroomeffects_drop-69_oogaf;
-  animation-duration: 4.3055539056s;
-  animation-delay: 0.436352224s;
+  animation-duration: 4.5351750084s;
+  animation-delay: 0.5935408309s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-69_oogaf {
@@ -52168,20 +52174,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 90%;
+    left: 97%;
   }
 }
 .chatroomeffects_confetti-70_3wL25 {
-  width: 14px;
-  height: 5.6px;
+  width: 17px;
+  height: 6.8px;
   background-color: #d13447;
   top: -10%;
-  left: 18%;
-  opacity: 0.9619592491;
-  transform: rotate(88.0151391238deg);
+  left: 3%;
+  opacity: 1.4884371191;
+  transform: rotate(279.7799401899deg);
   animation: chatroomeffects_drop-70_ouiMF;
-  animation-duration: 5.7065371449s;
-  animation-delay: 0.8894909654s;
+  animation-duration: 5.6002905286s;
+  animation-delay: 0.9496864049s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-70_ouiMF {
@@ -52194,20 +52200,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 33%;
+    left: 5%;
   }
 }
 .chatroomeffects_confetti-71_2FN6I {
-  width: 16px;
-  height: 6.4px;
-  background-color: #d13447;
+  width: 18px;
+  height: 7.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 66%;
-  opacity: 1.2815348539;
-  transform: rotate(51.4652718638deg);
+  left: 2%;
+  opacity: 1.4916320936;
+  transform: rotate(287.3827880371deg);
   animation: chatroomeffects_drop-71_y2t-j;
-  animation-duration: 5.7873830872s;
-  animation-delay: 0.3036744063s;
+  animation-duration: 5.6202599992s;
+  animation-delay: 0.042340164s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-71_y2t-j {
@@ -52220,20 +52226,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 77%;
+    left: 6%;
   }
 }
 .chatroomeffects_confetti-72_2tgnG {
-  width: 2px;
-  height: 0.8px;
-  background-color: #263672;
+  width: 12px;
+  height: 4.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 88%;
-  opacity: 0.5024354707;
-  transform: rotate(354.434879697deg);
+  left: 75%;
+  opacity: 1.3218481708;
+  transform: rotate(185.5244943263deg);
   animation: chatroomeffects_drop-72_3hLQt;
-  animation-duration: 4.2108714342s;
-  animation-delay: 0.1051362735s;
+  animation-duration: 5.9570388003s;
+  animation-delay: 0.2266824559s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-72_3hLQt {
@@ -52246,20 +52252,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 92%;
+    left: 78%;
   }
 }
 .chatroomeffects_confetti-73_-0y9h {
-  width: 12px;
-  height: 4.8px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #263672;
   top: -10%;
-  left: 62%;
-  opacity: 1.3780124455;
-  transform: rotate(103.1716102063deg);
+  left: 40%;
+  opacity: 0.6984226361;
+  transform: rotate(90.0384783314deg);
   animation: chatroomeffects_drop-73_-Wx7W;
-  animation-duration: 4.5499129146s;
-  animation-delay: 0.3672432086s;
+  animation-duration: 4.0592433115s;
+  animation-delay: 0.7756507997s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-73_-Wx7W {
@@ -52272,20 +52278,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 68%;
+    left: 51%;
   }
 }
 .chatroomeffects_confetti-74_1_vWA {
-  width: 15px;
-  height: 6px;
-  background-color: #263672;
+  width: 4px;
+  height: 1.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 77%;
-  opacity: 0.9745299202;
-  transform: rotate(19.7208668473deg);
+  left: 15%;
+  opacity: 1.3671574606;
+  transform: rotate(105.3355224501deg);
   animation: chatroomeffects_drop-74_2L0XL;
-  animation-duration: 4.6641548001s;
-  animation-delay: 0.7051207943s;
+  animation-duration: 4.4747578314s;
+  animation-delay: 0.3435903945s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-74_2L0XL {
@@ -52298,20 +52304,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 87%;
+    left: 27%;
   }
 }
 .chatroomeffects_confetti-75_qNiwF {
-  width: 16px;
-  height: 6.4px;
-  background-color: #263672;
+  width: 19px;
+  height: 7.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 76%;
-  opacity: 0.5622057594;
-  transform: rotate(204.0566421034deg);
+  left: 54%;
+  opacity: 0.5273881097;
+  transform: rotate(61.8802115815deg);
   animation: chatroomeffects_drop-75_2iJw_;
-  animation-duration: 4.1730371796s;
-  animation-delay: 0.2193112071s;
+  animation-duration: 4.8288403164s;
+  animation-delay: 0.9859019194s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-75_2iJw_ {
@@ -52324,20 +52330,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 85%;
+    left: 56%;
   }
 }
 .chatroomeffects_confetti-76_2Isn6 {
-  width: 11px;
-  height: 4.4px;
+  width: 12px;
+  height: 4.8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 97%;
-  opacity: 1.2293631277;
-  transform: rotate(258.9010417363deg);
+  left: 12%;
+  opacity: 1.3411786459;
+  transform: rotate(202.3063997423deg);
   animation: chatroomeffects_drop-76_3MdvI;
-  animation-duration: 4.7477520211s;
-  animation-delay: 0.1131251026s;
+  animation-duration: 5.1136881914s;
+  animation-delay: 0.5742089244s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-76_3MdvI {
@@ -52350,20 +52356,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 101%;
+    left: 16%;
   }
 }
 .chatroomeffects_confetti-77_2bgtx {
-  width: 4px;
-  height: 1.6px;
-  background-color: #d13447;
+  width: 12px;
+  height: 4.8px;
+  background-color: #263672;
   top: -10%;
-  left: 32%;
-  opacity: 1.4117563688;
-  transform: rotate(334.7852753778deg);
+  left: 59%;
+  opacity: 0.56165767;
+  transform: rotate(14.1226555961deg);
   animation: chatroomeffects_drop-77_2ItPx;
-  animation-duration: 5.4625863399s;
-  animation-delay: 0.6164215547s;
+  animation-duration: 5.8069827282s;
+  animation-delay: 0.6594837036s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-77_2ItPx {
@@ -52376,20 +52382,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 45%;
+    left: 69%;
   }
 }
 .chatroomeffects_confetti-78_veCdx {
-  width: 3px;
-  height: 1.2px;
+  width: 16px;
+  height: 6.4px;
   background-color: #263672;
   top: -10%;
-  left: 21%;
-  opacity: 0.8705540605;
-  transform: rotate(328.4530344385deg);
+  left: 36%;
+  opacity: 0.8677957648;
+  transform: rotate(261.3698107361deg);
   animation: chatroomeffects_drop-78_3D9KT;
-  animation-duration: 4.3416501553s;
-  animation-delay: 0.6894895372s;
+  animation-duration: 5.525264059s;
+  animation-delay: 0.9092727388s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-78_3D9KT {
@@ -52402,20 +52408,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 36%;
+    left: 43%;
   }
 }
 .chatroomeffects_confetti-79_5cczs {
-  width: 12px;
-  height: 4.8px;
+  width: 7px;
+  height: 2.8px;
   background-color: #d13447;
   top: -10%;
-  left: 18%;
-  opacity: 0.9390338737;
-  transform: rotate(197.6255839584deg);
+  left: 61%;
+  opacity: 1.3607458427;
+  transform: rotate(266.5308662235deg);
   animation: chatroomeffects_drop-79_1x9H7;
-  animation-duration: 5.2436502909s;
-  animation-delay: 0.3602252377s;
+  animation-duration: 4.1445659281s;
+  animation-delay: 0.8765515459s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-79_1x9H7 {
@@ -52428,20 +52434,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 23%;
+    left: 67%;
   }
 }
 .chatroomeffects_confetti-80_hz59y {
-  width: 11px;
-  height: 4.4px;
-  background-color: #d13447;
+  width: 16px;
+  height: 6.4px;
+  background-color: #263672;
   top: -10%;
-  left: 1%;
-  opacity: 1.3645708561;
-  transform: rotate(62.2079367669deg);
+  left: 22%;
+  opacity: 0.8103588062;
+  transform: rotate(21.9245337377deg);
   animation: chatroomeffects_drop-80_2ZjKF;
-  animation-duration: 5.1005090454s;
-  animation-delay: 0.7034385302s;
+  animation-duration: 5.5470584695s;
+  animation-delay: 0.5867792813s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-80_2ZjKF {
@@ -52454,20 +52460,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 12%;
+    left: 31%;
   }
 }
 .chatroomeffects_confetti-81_1rhSJ {
-  width: 18px;
-  height: 7.2px;
+  width: 5px;
+  height: 2px;
   background-color: #263672;
   top: -10%;
-  left: 17%;
-  opacity: 1.2370517394;
-  transform: rotate(185.6583823418deg);
+  left: 53%;
+  opacity: 1.2765855163;
+  transform: rotate(177.184808453deg);
   animation: chatroomeffects_drop-81_tGBBf;
-  animation-duration: 4.4049310791s;
-  animation-delay: 0.0632032938s;
+  animation-duration: 4.0236160087s;
+  animation-delay: 0.0537804902s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-81_tGBBf {
@@ -52480,7 +52486,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 25%;
+    left: 58%;
   }
 }
 .chatroomeffects_confetti-82_1jWl7 {
@@ -52488,12 +52494,12 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   height: 4px;
   background-color: #ffbf00;
   top: -10%;
-  left: 48%;
-  opacity: 1.042231312;
-  transform: rotate(99.4491586889deg);
+  left: 69%;
+  opacity: 0.8247671203;
+  transform: rotate(181.0994174934deg);
   animation: chatroomeffects_drop-82_26Ftm;
-  animation-duration: 5.1703279854s;
-  animation-delay: 0.1271548215s;
+  animation-duration: 4.9330166918s;
+  animation-delay: 0.3236282642s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-82_26Ftm {
@@ -52506,20 +52512,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 54%;
+    left: 77%;
   }
 }
 .chatroomeffects_confetti-83_1Veaf {
-  width: 15px;
-  height: 6px;
+  width: 18px;
+  height: 7.2px;
   background-color: #d13447;
   top: -10%;
-  left: 29%;
-  opacity: 0.5989599628;
-  transform: rotate(191.1521787679deg);
+  left: 58%;
+  opacity: 1.1741427756;
+  transform: rotate(152.8070756839deg);
   animation: chatroomeffects_drop-83_2VByP;
-  animation-duration: 4.1573356489s;
-  animation-delay: 0.2818814348s;
+  animation-duration: 4.7152689953s;
+  animation-delay: 0.5463183806s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-83_2VByP {
@@ -52532,20 +52538,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 36%;
+    left: 63%;
   }
 }
 .chatroomeffects_confetti-84_3_bdr {
-  width: 15px;
-  height: 6px;
+  width: 12px;
+  height: 4.8px;
   background-color: #d13447;
   top: -10%;
-  left: 53%;
-  opacity: 1.3620160184;
-  transform: rotate(10.7618753488deg);
+  left: 46%;
+  opacity: 1.301865939;
+  transform: rotate(292.3709636973deg);
   animation: chatroomeffects_drop-84_m6um-;
-  animation-duration: 5.254711743s;
-  animation-delay: 0.8583427055s;
+  animation-duration: 4.9050284489s;
+  animation-delay: 0.9681792613s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-84_m6um- {
@@ -52558,20 +52564,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 58%;
+    left: 48%;
   }
 }
 .chatroomeffects_confetti-85_9Zttw {
-  width: 7px;
-  height: 2.8px;
+  width: 2px;
+  height: 0.8px;
   background-color: #263672;
   top: -10%;
-  left: 97%;
-  opacity: 1.4099270865;
-  transform: rotate(231.102971773deg);
+  left: 53%;
+  opacity: 0.9718108052;
+  transform: rotate(47.8330513002deg);
   animation: chatroomeffects_drop-85_2xtS5;
-  animation-duration: 4.5270731596s;
-  animation-delay: 0.6940159009s;
+  animation-duration: 5.0394506154s;
+  animation-delay: 0.6100001611s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-85_2xtS5 {
@@ -52584,20 +52590,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 104%;
+    left: 54%;
   }
 }
 .chatroomeffects_confetti-86_2EJMi {
-  width: 7px;
-  height: 2.8px;
+  width: 3px;
+  height: 1.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 99%;
-  opacity: 0.5915141458;
-  transform: rotate(170.613555416deg);
+  left: 34%;
+  opacity: 0.6199906036;
+  transform: rotate(205.3786829015deg);
   animation: chatroomeffects_drop-86_2dudW;
-  animation-duration: 5.5846039401s;
-  animation-delay: 0.8993305367s;
+  animation-duration: 5.6971278987s;
+  animation-delay: 0.4533149298s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-86_2dudW {
@@ -52610,20 +52616,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 107%;
+    left: 37%;
   }
 }
 .chatroomeffects_confetti-87_uys-9 {
-  width: 16px;
-  height: 6.4px;
-  background-color: #263672;
+  width: 20px;
+  height: 8px;
+  background-color: #d13447;
   top: -10%;
-  left: 12%;
-  opacity: 0.6002507473;
-  transform: rotate(254.0564026588deg);
+  left: 25%;
+  opacity: 0.9445427116;
+  transform: rotate(190.3031947562deg);
   animation: chatroomeffects_drop-87_1PZvt;
-  animation-duration: 5.0414793867s;
-  animation-delay: 0.5359862711s;
+  animation-duration: 4.0926525567s;
+  animation-delay: 0.695610451s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-87_1PZvt {
@@ -52636,20 +52642,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 20%;
+    left: 35%;
   }
 }
 .chatroomeffects_confetti-88_24exN {
-  width: 9px;
-  height: 3.6px;
+  width: 16px;
+  height: 6.4px;
   background-color: #263672;
   top: -10%;
-  left: 57%;
-  opacity: 0.645044422;
-  transform: rotate(11.176098414deg);
+  left: 43%;
+  opacity: 0.6857321919;
+  transform: rotate(37.9793881625deg);
   animation: chatroomeffects_drop-88_5ZbRz;
-  animation-duration: 4.6465746016s;
-  animation-delay: 0.1467458534s;
+  animation-duration: 4.6273177609s;
+  animation-delay: 0.1177391212s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-88_5ZbRz {
@@ -52662,20 +52668,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 72%;
+    left: 55%;
   }
 }
 .chatroomeffects_confetti-89_2yKbS {
   width: 14px;
   height: 5.6px;
-  background-color: #ffbf00;
+  background-color: #263672;
   top: -10%;
-  left: 80%;
-  opacity: 0.5524621384;
-  transform: rotate(74.6415402241deg);
+  left: 74%;
+  opacity: 0.8674562375;
+  transform: rotate(228.061372209deg);
   animation: chatroomeffects_drop-89_1s66w;
-  animation-duration: 4.5001381566s;
-  animation-delay: 0.2065670797s;
+  animation-duration: 5.7502649093s;
+  animation-delay: 0.7974880403s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-89_1s66w {
@@ -52688,20 +52694,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 94%;
+    left: 87%;
   }
 }
 .chatroomeffects_confetti-90_2tEzr {
-  width: 8px;
-  height: 3.2px;
+  width: 6px;
+  height: 2.4px;
   background-color: #263672;
   top: -10%;
-  left: 51%;
-  opacity: 0.5642616833;
-  transform: rotate(213.4738594332deg);
+  left: 69%;
+  opacity: 0.6201570019;
+  transform: rotate(44.1067913128deg);
   animation: chatroomeffects_drop-90_1dLha;
-  animation-duration: 5.7459545962s;
-  animation-delay: 0.4014922597s;
+  animation-duration: 5.8093700167s;
+  animation-delay: 0.576718142s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-90_1dLha {
@@ -52714,20 +52720,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 64%;
+    left: 79%;
   }
 }
 .chatroomeffects_confetti-91_3T4UL {
-  width: 5px;
-  height: 2px;
+  width: 14px;
+  height: 5.6px;
   background-color: #263672;
   top: -10%;
-  left: 41%;
-  opacity: 0.5465146676;
-  transform: rotate(201.3635294036deg);
+  left: 18%;
+  opacity: 0.5794022508;
+  transform: rotate(327.8895405523deg);
   animation: chatroomeffects_drop-91_P_MRR;
-  animation-duration: 4.6585256612s;
-  animation-delay: 0.5555820862s;
+  animation-duration: 5.1959219914s;
+  animation-delay: 0.1187966384s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-91_P_MRR {
@@ -52740,20 +52746,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 44%;
+    left: 28%;
   }
 }
 .chatroomeffects_confetti-92_7p5vh {
-  width: 13px;
-  height: 5.2px;
-  background-color: #ffbf00;
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
   top: -10%;
-  left: 100%;
-  opacity: 1.0795037332;
-  transform: rotate(217.6544145229deg);
+  left: 23%;
+  opacity: 0.8526962878;
+  transform: rotate(214.0601075775deg);
   animation: chatroomeffects_drop-92_1Mwkv;
-  animation-duration: 4.9951928724s;
-  animation-delay: 0.6710352071s;
+  animation-duration: 5.3745788164s;
+  animation-delay: 0.1028999303s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-92_1Mwkv {
@@ -52766,20 +52772,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 109%;
+    left: 36%;
   }
 }
 .chatroomeffects_confetti-93_2BaTW {
-  width: 9px;
-  height: 3.6px;
-  background-color: #d13447;
+  width: 19px;
+  height: 7.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 95%;
-  opacity: 0.5521537414;
-  transform: rotate(55.9486531049deg);
+  left: 75%;
+  opacity: 0.8069371133;
+  transform: rotate(88.1473435163deg);
   animation: chatroomeffects_drop-93_3NCsF;
-  animation-duration: 5.9313296952s;
-  animation-delay: 0.4968149289s;
+  animation-duration: 4.18962846s;
+  animation-delay: 0.5296421803s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-93_3NCsF {
@@ -52792,20 +52798,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 102%;
+    left: 89%;
   }
 }
 .chatroomeffects_confetti-94_3DVf7 {
-  width: 19px;
-  height: 7.6px;
+  width: 15px;
+  height: 6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 4%;
-  opacity: 1.4358496172;
-  transform: rotate(52.7522590589deg);
+  left: 31%;
+  opacity: 0.7270892014;
+  transform: rotate(359.75953409deg);
   animation: chatroomeffects_drop-94_fZgnW;
-  animation-duration: 4.0535292149s;
-  animation-delay: 0.5993461284s;
+  animation-duration: 4.6519595594s;
+  animation-delay: 0.0887230309s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-94_fZgnW {
@@ -52818,7 +52824,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 14%;
+    left: 42%;
   }
 }
 .chatroomeffects_confetti-95_23jtb {
@@ -52826,12 +52832,12 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   height: 4.8px;
   background-color: #263672;
   top: -10%;
-  left: 6%;
-  opacity: 1.3115063116;
-  transform: rotate(315.6928468811deg);
+  left: 9%;
+  opacity: 1.3621218761;
+  transform: rotate(171.569258359deg);
   animation: chatroomeffects_drop-95_1tw1t;
-  animation-duration: 5.6058308802s;
-  animation-delay: 0.2802924412s;
+  animation-duration: 5.3946638295s;
+  animation-delay: 0.4729016654s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-95_1tw1t {
@@ -52852,12 +52858,12 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   height: 3.6px;
   background-color: #d13447;
   top: -10%;
-  left: 4%;
-  opacity: 0.5385310117;
-  transform: rotate(37.7279091648deg);
+  left: 9%;
+  opacity: 1.4736210404;
+  transform: rotate(132.6629111781deg);
   animation: chatroomeffects_drop-96_37GFJ;
-  animation-duration: 5.0542985406s;
-  animation-delay: 0.1111615302s;
+  animation-duration: 4.0048486367s;
+  animation-delay: 0.2208991527s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-96_37GFJ {
@@ -52870,20 +52876,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 8%;
+    left: 21%;
   }
 }
 .chatroomeffects_confetti-97_qoLlt {
-  width: 8px;
-  height: 3.2px;
-  background-color: #ffbf00;
+  width: 13px;
+  height: 5.2px;
+  background-color: #263672;
   top: -10%;
-  left: 2%;
-  opacity: 0.9963250519;
-  transform: rotate(93.8238590427deg);
+  left: 69%;
+  opacity: 1.482427582;
+  transform: rotate(137.1416251274deg);
   animation: chatroomeffects_drop-97_v1bhd;
-  animation-duration: 5.4019891161s;
-  animation-delay: 0.9649363788s;
+  animation-duration: 4.1860405336s;
+  animation-delay: 0.5081859773s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-97_v1bhd {
@@ -52896,20 +52902,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 6%;
+    left: 82%;
   }
 }
 .chatroomeffects_confetti-98_3Po3_ {
-  width: 19px;
-  height: 7.6px;
-  background-color: #d13447;
+  width: 12px;
+  height: 4.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 88%;
-  opacity: 0.9473326042;
-  transform: rotate(189.8469609687deg);
+  left: 11%;
+  opacity: 1.0014194034;
+  transform: rotate(341.7280622469deg);
   animation: chatroomeffects_drop-98_1TcCu;
-  animation-duration: 5.0554748649s;
-  animation-delay: 0.9010906102s;
+  animation-duration: 5.9328848163s;
+  animation-delay: 0.0214934358s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-98_1TcCu {
@@ -52922,20 +52928,20 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 94%;
+    left: 20%;
   }
 }
 .chatroomeffects_confetti-99_2-vdA {
-  width: 14px;
-  height: 5.6px;
-  background-color: #ffbf00;
+  width: 17px;
+  height: 6.8px;
+  background-color: #263672;
   top: -10%;
-  left: 76%;
-  opacity: 1.2255551079;
-  transform: rotate(138.1077293092deg);
+  left: 19%;
+  opacity: 0.6692543404;
+  transform: rotate(247.5980364442deg);
   animation: chatroomeffects_drop-99_3lQGo;
-  animation-duration: 5.9803533917s;
-  animation-delay: 0.2742641985s;
+  animation-duration: 5.3073437773s;
+  animation-delay: 0.3962629373s;
   animation-iteration-count: 1;
 }
 @keyframes chatroomeffects_drop-99_3lQGo {
@@ -52948,7 +52954,7 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   }
   100% {
     top: 110%;
-    left: 86%;
+    left: 22%;
   }
 }
 .chatroomeffects_cracker_k_Aq7 {
@@ -53544,32 +53550,32 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
 }
 @keyframes chatroomeffects_bang_3GL2k {
   to {
-    box-shadow: -193px 47.3333333333px #ff5100, -237px -287.6666666667px #f09,
-      83px -307.6666666667px #ffd900, 150px -167.6666666667px #00d0ff,
-      192px -331.6666666667px #e600ff, -20px -256.6666666667px #00fff2,
-      24px -374.6666666667px #ff0080, -183px -163.6666666667px #ffc800,
-      -238px -316.6666666667px #ff2600, 239px -78.6666666667px #ff00f2,
-      -187px -164.6666666667px #00e1ff, -227px -79.6666666667px #f20,
-      -31px -322.6666666667px #0bf, -94px -164.6666666667px #0009ff,
-      244px -99.6666666667px #e1ff00, -39px -301.6666666667px #b7ff00,
-      53px 43.3333333333px #ff0037, -193px -214.6666666667px #2fff00,
-      -127px -40.6666666667px #0f7, -195px -222.6666666667px #70f,
-      80px 19.3333333333px #91ff00, 58px -47.6666666667px #ffd900,
-      -153px 43.3333333333px #f0b, 112px -138.6666666667px #6200ff,
-      -154px -98.6666666667px #ef0, 141px -46.6666666667px #ff00a2,
-      -44px -225.6666666667px #af0, 96px -32.6666666667px #ff7300,
-      242px 26.3333333333px #ff00d9, -58px -243.6666666667px #40ff00,
-      -61px -113.6666666667px #0026ff, -153px -370.6666666667px #c8ff00,
-      188px -13.6666666667px blue, -23px -355.6666666667px #ff00b3,
-      199px -125.6666666667px #ff0040, 235px -113.6666666667px #2f00ff,
-      -75px -200.6666666667px #0fd, -124px -4.6666666667px #5eff00,
-      135px -220.6666666667px #1e00ff, 229px -199.6666666667px #ff00c4,
-      -204px -109.6666666667px #f70, -93px 74.3333333333px #7b00ff,
-      43px -324.6666666667px #00ff8c, -181px -128.6666666667px #f70,
-      -43px -377.6666666667px #fff200, 30px -138.6666666667px #0f6,
-      77px -392.6666666667px #d000ff, 77px -117.6666666667px #8f0,
-      -56px -74.6666666667px #c8ff00, 241px 10.3333333333px #ffa200,
-      217px -20.6666666667px #00ff6f;
+    box-shadow: -18px 73.3333333333px #00e1ff, -134px -3.6666666667px #8f0,
+      96px -347.6666666667px #0026ff, 170px -213.6666666667px blue,
+      64px -298.6666666667px #ff0062, 21px -90.6666666667px #00ffe1,
+      201px 40.3333333333px #0dff00, -99px -130.6666666667px #08f,
+      83px -209.6666666667px #0037ff, 208px -11.6666666667px #ff6a00,
+      -234px 27.3333333333px #1500ff, 137px -163.6666666667px #ea00ff,
+      -237px -55.6666666667px #6fff00, -143px -263.6666666667px #f06,
+      -8px -210.6666666667px #ffb300, 241px -333.6666666667px #f30,
+      99px -328.6666666667px #0f6, -63px -286.6666666667px #00ffe1,
+      -170px -143.6666666667px #ff00bf, -42px 1.3333333333px #00d9ff,
+      218px -131.6666666667px #1eff00, 21px -308.6666666667px #f80,
+      31px -276.6666666667px #fe0, 212px -380.6666666667px #2f0,
+      95px 33.3333333333px #ff8400, -149px -410.6666666667px #80f,
+      -156px -123.6666666667px #00ff37, -169px -66.6666666667px #00c8ff,
+      190px -273.6666666667px #00ffe1, 73px -36.6666666667px #ff5100,
+      64px 69.3333333333px #f30, -216px -292.6666666667px #0051ff,
+      -180px 34.3333333333px #ff4800, 170px -275.6666666667px #00f2ff,
+      19px -30.6666666667px #51ff00, 200px -70.6666666667px #00ff62,
+      -78px -178.6666666667px #00d0ff, -58px 6.3333333333px #6aff00,
+      233px -183.6666666667px #ff8c00, -48px 23.3333333333px #04f,
+      -87px -129.6666666667px #50f, -230px -279.6666666667px #ff0062,
+      231px -282.6666666667px #5eff00, -235px 28.3333333333px #f10,
+      -229px -410.6666666667px #00eaff, -25px -192.6666666667px #fb00ff,
+      -76px -296.6666666667px #0ef, -117px -172.6666666667px #ff002f,
+      248px -73.6666666667px #ff3c00, 45px -209.6666666667px #eaff00,
+      -204px 53.3333333333px #fc0;
   }
 }
 @keyframes chatroomeffects_gravity_S4aDc {
@@ -66144,6 +66150,309 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   flex-wrap: wrap;
   flex-direction: column;
 }
+@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-darkerGrey-nocolor_-A6lV {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-darkerGrey_qCQDn {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-darkGrey_2MjaV {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-grey_omfFn {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnimBorder-darkGrey_NZJpi {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-green_1KMZn {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes controllerconfiguratorchooseconfiguration_focusAnimation_1wehH {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes controllerconfiguratorchooseconfiguration_hoverAnimation_3lmQy {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.controllerconfiguratorchooseconfiguration_TabbedPageContainer_1E6nP {
+  width: 100%;
+}
+.controllerconfiguratorchooseconfiguration_PageContainer_1Z4eN {
+  display: flex;
+  flex-direction: row;
+}
+.controllerconfiguratorchooseconfiguration_OuterColumn_1Udh1 {
+  margin: auto;
+  width: 564px;
+}
+.controllerconfiguratorchooseconfiguration_OuterColumn_1Udh1 h1 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.controllerconfiguratorchooseconfiguration_OuterColumn_1Udh1 p {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 0px;
+  color: #b8bcbf;
+}
+.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN {
+  background: #23262e;
+  text-align: left;
+  margin-bottom: 6px;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+}
+.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.gpfocus {
+  background: #fff;
+  color: #000;
+}
+.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.controllerconfiguratorchooseconfiguration_Recommended_2v9eL {
+  border-left: 2px solid #8b929a;
+  background: linear-gradient(90deg, #ffffff20 0%, #23262e 20%);
+  color: #fff;
+}
+.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.controllerconfiguratorchooseconfiguration_Recommended_2v9eL.gpfocus {
+  background: #fff;
+  color: #000;
+}
+.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.controllerconfiguratorchooseconfiguration_Selected_Gp6XG {
+  color: #fff;
+  border-left: 2px solid #1a9fff;
+  background: linear-gradient(90deg, #ffffff20 0%, #23262e 20%);
+}
+.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.controllerconfiguratorchooseconfiguration_Selected_Gp6XG.gpfocus {
+  background: #fff;
+  color: #000;
+}
+.controllerconfiguratorchooseconfiguration_IconContainer_2kPo6 {
+  width: 56px;
+  display: flex;
+  flex-shrink: 0;
+  align-self: center;
+}
+.controllerconfiguratorchooseconfiguration_IconContainer_2kPo6 svg {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+.controllerconfiguratorchooseconfiguration_TextRows_OzYkd {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-bottom: 2px;
+}
+.controllerconfiguratorchooseconfiguration_TextRow_T3fXp {
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.controllerconfiguratorchooseconfiguration_Stretch_3KQJ7 {
+  flex-grow: 1;
+  min-width: 0;
+}
+.controllerconfiguratorchooseconfiguration_Author_1dzOH {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  color: #b8bcbf;
+  align-self: flex-end;
+  line-height: auto;
+}
+.gpfocus .controllerconfiguratorchooseconfiguration_Author_1dzOH {
+  color: #23262e;
+}
+.controllerconfiguratorchooseconfiguration_InfoSection_25G91 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  height: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  font-weight: normal;
+  color: #8b929a;
+  line-height: auto;
+}
+.gpfocus .controllerconfiguratorchooseconfiguration_InfoSection_25G91 {
+  color: #000;
+}
+.controllerconfiguratorchooseconfiguration_InfoSection_25G91 > span {
+  margin: auto 0;
+}
+.controllerconfiguratorchooseconfiguration_InfoSection_25G91
+  + .controllerconfiguratorchooseconfiguration_InfoSection_25G91 {
+  margin-left: 16px;
+}
+.controllerconfiguratorchooseconfiguration_InfoSection_25G91 svg {
+  width: 18px;
+  height: 18px;
+  margin: 0 4px;
+}
+.controllerconfiguratorchooseconfiguration_Title_EI1IQ {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  padding-bottom: 3px;
+}
+.gpfocus .controllerconfiguratorchooseconfiguration_Title_EI1IQ {
+  color: #000;
+}
+.controllerconfiguratorchooseconfiguration_Description_3XAvq {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #b8bcbf;
+}
+.gpfocus .controllerconfiguratorchooseconfiguration_Description_3XAvq {
+  color: #23262e;
+}
+.controllerconfiguratorchooseconfiguration_ReviewIconThumbsUpColor_16AAl {
+  color: #61b6e8;
+}
 @keyframes allcollections_ItemFocusAnim-darkerGrey-nocolor_17xL2 {
   from {
     background: #3d4450;
@@ -66815,7 +67124,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 .cssgrid_Animate_1IbFa {
   transition: height 0.3s ease-in-out;
 }
-@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-darkerGrey-nocolor_-A6lV {
+@keyframes quickaccesscontrollerorder_ItemFocusAnim-darkerGrey-nocolor_3kJuO {
   from {
     background: #3d4450;
   }
@@ -66823,7 +67132,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
     background: #23262e;
   }
 }
-@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-darkerGrey_qCQDn {
+@keyframes quickaccesscontrollerorder_ItemFocusAnim-darkerGrey_1oiqI {
   from {
     background: #3d4450;
     color: #8b929a;
@@ -66833,7 +67142,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
     color: #fff;
   }
 }
-@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-darkGrey_2MjaV {
+@keyframes quickaccesscontrollerorder_ItemFocusAnim-darkGrey_1OiaH {
   from {
     background: #67707b;
     color: #8b929a;
@@ -66843,7 +67152,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
     color: #fff;
   }
 }
-@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-grey_omfFn {
+@keyframes quickaccesscontrollerorder_ItemFocusAnim-grey_4HlOJ {
   from {
     background: #8b929a;
     color: #fff;
@@ -66853,7 +67162,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
     color: #fff;
   }
 }
-@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnimBorder-darkGrey_NZJpi {
+@keyframes quickaccesscontrollerorder_ItemFocusAnimBorder-darkGrey_2f-jV {
   from {
     border-color: #67707b;
   }
@@ -66861,7 +67170,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
     border-color: #3d4450;
   }
 }
-@keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-green_1KMZn {
+@keyframes quickaccesscontrollerorder_ItemFocusAnim-green_1aydt {
   from {
     background: #c9ffc9;
     color: #8b929a;
@@ -66871,7 +67180,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
     color: #fff;
   }
 }
-@keyframes controllerconfiguratorchooseconfiguration_focusAnimation_1wehH {
+@keyframes quickaccesscontrollerorder_focusAnimation_1hjDN {
   0% {
     background-position: 0% 0%;
     opacity: 1;
@@ -66881,7 +67190,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
     opacity: 0.8;
   }
 }
-@keyframes controllerconfiguratorchooseconfiguration_hoverAnimation_3lmQy {
+@keyframes quickaccesscontrollerorder_hoverAnimation_3eyYS {
   0% {
     background-position: 0% 0%;
   }
@@ -66889,153 +67198,60 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
-.controllerconfiguratorchooseconfiguration_TabbedPageContainer_1E6nP {
+.quickaccesscontrollerorder_ReorderControllersDialog_1NDca {
+  background: #0e141b;
+  padding: 24px;
   width: 100%;
+  max-width: 500px;
+  border: 2px solid #23262e;
 }
-.controllerconfiguratorchooseconfiguration_PageContainer_1Z4eN {
+.quickaccesscontrollerorder_ModalHeader_3HnTg {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
-.controllerconfiguratorchooseconfiguration_OuterColumn_1Udh1 {
-  margin: auto;
-  width: 564px;
-}
-.controllerconfiguratorchooseconfiguration_OuterColumn_1Udh1 h1 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.controllerconfiguratorchooseconfiguration_OuterColumn_1Udh1 p {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  margin-top: 0px;
+.quickaccesscontrollerorder_ModalHeader_3HnTg
+  .quickaccesscontrollerorder_CloseButtonContainer_2A-UN {
   color: #b8bcbf;
-}
-.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN {
-  background: #23262e;
-  text-align: left;
-  margin-bottom: 6px;
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  padding: 8px;
+  height: 28px;
+  width: 28px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   border-radius: 2px;
 }
-.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.gpfocus {
-  background: #fff;
-  color: #000;
+.quickaccesscontrollerorder_ModalHeader_3HnTg
+  .quickaccesscontrollerorder_CloseButtonContainer_2A-UN
+  svg {
+  height: 20px;
+  width: 20px;
 }
-.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.controllerconfiguratorchooseconfiguration_Recommended_2v9eL {
-  border-left: 2px solid #8b929a;
-  background: linear-gradient(90deg, #ffffff20 0%, #23262e 20%);
+.gpfocus
+  .quickaccesscontrollerorder_ModalHeader_3HnTg
+  .quickaccesscontrollerorder_CloseButtonContainer_2A-UN,
+.quickaccesscontrollerorder_ModalHeader_3HnTg
+  .quickaccesscontrollerorder_CloseButtonContainer_2A-UN.gpfocus {
+  color: #0e141b;
+  background: #fff;
+}
+.quickaccesscontrollerorder_ModalHeader_3HnTg
+  .quickaccesscontrollerorder_CloseButtonContainer_2A-UN:hover {
+  background: #3d4450;
   color: #fff;
 }
-.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.controllerconfiguratorchooseconfiguration_Recommended_2v9eL.gpfocus {
+.quickaccesscontrollerorder_ControllerIndexIconCtr_2Nxxq {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+  height: 36px;
+}
+.quickaccesscontrollerorder_ControllerIndexIconCtr_2Nxxq
+  .quickaccesscontrollerorder_ControllerXInputIndex_1x8Nv {
   background: #fff;
-  color: #000;
-}
-.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.controllerconfiguratorchooseconfiguration_Selected_Gp6XG {
-  color: #fff;
-  border-left: 2px solid #1a9fff;
-  background: linear-gradient(90deg, #ffffff20 0%, #23262e 20%);
-}
-.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN.controllerconfiguratorchooseconfiguration_Selected_Gp6XG.gpfocus {
-  background: #fff;
-  color: #000;
-}
-.controllerconfiguratorchooseconfiguration_IconContainer_2kPo6 {
-  width: 56px;
-  display: flex;
-  flex-shrink: 0;
-  align-self: center;
-}
-.controllerconfiguratorchooseconfiguration_IconContainer_2kPo6 svg {
-  width: 24px;
-  height: 24px;
-  margin: auto;
-}
-.controllerconfiguratorchooseconfiguration_TextRows_OzYkd {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  margin-bottom: 2px;
-}
-.controllerconfiguratorchooseconfiguration_TextRow_T3fXp {
-  display: flex;
-  flex-direction: row;
-  min-width: 0;
-}
-.controllerconfiguratorchooseconfiguration_Stretch_3KQJ7 {
-  flex-grow: 1;
-  min-width: 0;
-}
-.controllerconfiguratorchooseconfiguration_Author_1dzOH {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  min-width: 0;
-  color: #b8bcbf;
-  align-self: flex-end;
-  line-height: auto;
-}
-.gpfocus .controllerconfiguratorchooseconfiguration_Author_1dzOH {
-  color: #23262e;
-}
-.controllerconfiguratorchooseconfiguration_InfoSection_25G91 {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -67049,35 +67265,25 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
+  line-height: 22px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  height: 20px;
-  white-space: nowrap;
-  flex-shrink: 0;
   display: flex;
-  flex-direction: row;
-  min-width: 0;
-  font-weight: normal;
-  color: #8b929a;
-  line-height: auto;
+  align-items: center;
+  justify-content: center;
+  color: #0e141b;
+  text-align: center;
+  padding-left: 2px;
+  box-sizing: border-box;
 }
-.gpfocus .controllerconfiguratorchooseconfiguration_InfoSection_25G91 {
-  color: #000;
+.quickaccesscontrollerorder_Selected_KaTUo
+  .quickaccesscontrollerorder_ControllerIndexIconCtr_2Nxxq
+  .quickaccesscontrollerorder_ControllerXInputIndex_1x8Nv {
+  background: #0e141b;
+  color: #fff;
 }
-.controllerconfiguratorchooseconfiguration_InfoSection_25G91 > span {
-  margin: auto 0;
-}
-.controllerconfiguratorchooseconfiguration_InfoSection_25G91
-  + .controllerconfiguratorchooseconfiguration_InfoSection_25G91 {
-  margin-left: 16px;
-}
-.controllerconfiguratorchooseconfiguration_InfoSection_25G91 svg {
-  width: 18px;
-  height: 18px;
-  margin: 0 4px;
-}
-.controllerconfiguratorchooseconfiguration_Title_EI1IQ {
+.quickaccesscontrollerorder_ControllerName_gCjuO {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -67090,33 +67296,50 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  padding-bottom: 3px;
+  color: #b8bcbf;
+  height: 36px;
+  display: flex;
+  align-items: center;
 }
-.gpfocus .controllerconfiguratorchooseconfiguration_Title_EI1IQ {
-  color: #000;
+.quickaccesscontrollerorder_ReorderControllerItem_1TWAD {
+  display: flex;
+  height: 20px;
+  border-bottom: 1px solid #3d4450;
+  align-items: center;
+  margin: 0 -24px;
+  padding: 0 24px;
 }
-.controllerconfiguratorchooseconfiguration_Description_3XAvq {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
+.quickaccesscontrollerorder_ReorderControllerItem_1TWAD
+  .quickaccesscontrollerorder_ControllerIcon_3hAp8 {
+  height: 24px;
+  margin-right: 16px;
   color: #b8bcbf;
 }
-.gpfocus .controllerconfiguratorchooseconfiguration_Description_3XAvq {
-  color: #23262e;
+.gpfocus .quickaccesscontrollerorder_ReorderControllerItem_1TWAD,
+.quickaccesscontrollerorder_ReorderControllerItem_1TWAD.gpfocus {
+  background: #3d4450;
 }
-.controllerconfiguratorchooseconfiguration_ReviewIconThumbsUpColor_16AAl {
-  color: #61b6e8;
+.quickaccesscontrollerorder_ReorderIndicator_L7IXa {
+  color: #23262e;
+  margin-right: 16px;
+}
+.quickaccesscontrollerorder_ReorderIndicator_L7IXa svg {
+  height: 36px;
+  width: 20px;
+}
+.quickaccesscontrollerorder_Selected_KaTUo {
+  background: #fff;
+}
+.quickaccesscontrollerorder_Selected_KaTUo
+  .quickaccesscontrollerorder_ControllerIcon_3hAp8 {
+  color: #3d4450;
+}
+.quickaccesscontrollerorder_Selected_KaTUo
+  .quickaccesscontrollerorder_ControllerName_gCjuO {
+  color: #3d4450;
+}
+.quickaccesscontrollerorder_OptedOut_3NMs0 {
+  color: #ffc82c;
 }
 .eaaccessdialog_DialogContainer_24vXJ {
   width: 680px;
@@ -67469,6 +67692,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   justify-content: center;
   align-items: center;
   padding: 2px;
+}
+.appgrid_CompatFooterIcons_3wP0R.appgrid_Advanced_1ENSK {
+  padding: 0px 8px;
 }
 .appgrid_CompatFooterDescription_CipKz {
   display: flex;
@@ -68327,39 +68553,46 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
 :root {
   --basicui-header-height: 0px;
 }
+.steamdeckcompatfilter_DialogWrapper_143i9 {
+  width: 75%;
+  margin: auto;
+  scroll-padding-top: 80px;
+  scroll-padding-bottom: 60px;
+  overflow-x: hidden;
+  position: relative;
+}
 .steamdeckcompatfilter_CompatFilterDialog_21qvB {
   background-color: #0e141b;
   border: 2px solid #23262e;
   padding: 24px;
-  animation-name: steamdeckcompatfilter_slideInAnimation_2VBd6;
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
-  animation-fill-mode: both;
+  box-sizing: border-box;
 }
-@keyframes steamdeckcompatfilter_slideInAnimation_2VBd6 {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.steamdeckcompatfilter_DialogBody_1bEx1 {
+  overflow: visible;
+}
+.steamdeckcompatfilter_CompatFilterOptions_SELCh {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .steamdeckcompatfilter_CompatFilterDialogRow_O7cW3 {
+  box-sizing: border-box;
+  overflow: hidden;
   display: flex;
   align-items: center;
   flex-direction: row;
   width: 100%;
   padding: 8px;
   text-align: left;
+  background-color: #23262e;
 }
-.steamdeckcompatfilter_CompatFilterDialogButton_1NWxz.steamdeckcompatfilter_CompatFilterDialogButton_1NWxz {
-  padding: 4px;
+.steamdeckcompatfilter_CompatFilterDialogRow_O7cW3.gpfocus {
+  background-color: #fff;
+  color: #0e141b;
 }
-.steamdeckcompatfilter_CompatFilterDialogRow_O7cW3.steamdeckcompatfilter_LastSelected_3mrGK
-  .steamdeckcompatfilter_CompatFilterDescription_1Fjvh {
-  max-height: 900px;
+.steamdeckcompatfilter_CompatFilterDialogRow_O7cW3.steamdeckcompatfilter_Center_4C_zT {
+  flex-direction: column;
+  justify-items: center;
 }
 .steamdeckcompatfilter_CompatFilterLabel_1qhp8 {
   font-size: 20px;
@@ -68370,8 +68603,15 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
   max-height: 0px;
   overflow: hidden;
 }
+.steamdeckcompatfilter_CompatFilterDialogRow_O7cW3.steamdeckcompatfilter_LastFocused_16qJV
+  .steamdeckcompatfilter_CompatFilterDescription_1Fjvh {
+  max-height: 900px;
+}
 .steamdeckcompatfilter_CompatFilterDialogDescription_1yY7h {
   padding-bottom: 12px;
+}
+.steamdeckcompatfilter_CompatFilterDialogDescription_1yY7h svg {
+  transform: translateY(3px);
 }
 .steamdeckcompatfilter_CompatFilterDialogIcons_3DRfx {
   display: flex;
@@ -68387,6 +68627,609 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
 }
 .gpfocus .steamdeckcompatfilter_InvertFocusedIcon_1oHHJ {
   color: inherit;
+}
+.steamdeckcompatfilter_RadioButton_10D3Y {
+  padding: 6px;
+  margin-right: 6px;
+  background-color: #0e141b;
+  border-radius: 6px;
+}
+.steamdeckcompatfilter_Active_2wFsa .steamdeckcompatfilter_RadioButton_10D3Y,
+.steamdeckcompatfilter_Active_2wFsa
+  .steamdeckcompatfilter_RadioButton_10D3Y:hover {
+  background-color: #1a9fff;
+}
+.steamdeckcompatfilter_FilterSummary_2Kzn6 {
+  height: 45px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  overflow: hidden;
+}
+.steamdeckcompatfilter_FilterSummary_2Kzn6
+  .steamdeckcompatfilter_SelectedFilterOption_3E2nI {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 4px 4px;
+  font-size: 14px;
+}
+.steamdeckcompatfilter_FilterSummary_2Kzn6
+  .steamdeckcompatfilter_SelectedFilterOption_3E2nI
+  svg {
+  height: 14px;
+  width: 14px;
+  margin-right: 4px;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+@keyframes appfilterpane_ItemFocusAnim-darkerGrey-nocolor_3tLJi {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes appfilterpane_ItemFocusAnim-darkerGrey_3jhL- {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes appfilterpane_ItemFocusAnim-darkGrey_T8qyu {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes appfilterpane_ItemFocusAnim-grey_3AQVu {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes appfilterpane_ItemFocusAnimBorder-darkGrey_U-opP {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes appfilterpane_ItemFocusAnim-green_TmoLi {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes appfilterpane_focusAnimation_1BZTz {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes appfilterpane_hoverAnimation_24dWK {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.appfilterpane_Container_170Np {
+  flex: auto;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.BasicUI .appfilterpane_Container_170Np {
+  padding: 0px 0px;
+  gap: 8px;
+}
+.appfilterpane_Container_170Np .appfilterpane_FilterArea_1ennW {
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 5fr 5fr 3fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px 24px;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW.appfilterpane_WideFormat_3BoPG {
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: row dense;
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 0px 24px;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW.appfilterpane_WideFormat_3BoPG
+  .appfilterpane_FilterBucket_1axoi.appfilterpane_ExtraTall_1001p {
+  grid-row-end: span 2;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW.appfilterpane_WideFormat_3BoPG
+  .appfilterpane_FilterBucket_1axoi.appfilterpane_ExtraTall_1001p
+  .appfilterpane_FilterBucketBoxes_32e6r {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-auto-flow: column;
+  grid-column-gap: 24px;
+}
+.BasicUI .appfilterpane_Container_170Np .appfilterpane_FilterArea_1ennW {
+  display: flex;
+  flex-direction: column;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi.appfilterpane_ExtraTall_1001p {
+  grid-row-end: span 3;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi.appfilterpane_DoubleWide_23rzp {
+  grid-column-end: span 2;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketLabel_3iV2v {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #26b7ff;
+  font-weight: 500;
+}
+.BasicUI
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketLabel_3iV2v {
+  color: #fff;
+  font-size: 22px;
+  text-transform: none;
+  font-weight: 400;
+  background-color: #23262e;
+  padding-top: 8px;
+  padding-left: 8px;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r {
+  box-sizing: border-box;
+  padding: 4px 8px 4px 0px;
+  outline: none;
+}
+.BasicUI
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P {
+  display: flex;
+}
+.BasicUI
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P {
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  font-size: 20px;
+  background-color: #23262e;
+}
+.BasicUI
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P.gpfocuswithin {
+  background-color: #fff;
+  color: #0e141b;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Description_3VddN {
+  color: #8b929a;
+  font-size: 14px;
+  max-height: 0px;
+  overflow: hidden;
+}
+.BasicUI
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P.gpfocuswithin.appfilterpane_NotMoving_2Ft5j
+  .appfilterpane_Description_3VddN {
+  max-height: 160px;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Checkbox_2AOkQ {
+  flex: none;
+  display: flex;
+  font-size: 12px;
+  padding: 2px 8px 2px 0px;
+}
+.BasicUI
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Checkbox_2AOkQ {
+  font-size: 20px;
+  align-items: center;
+}
+.BasicUI
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Checkbox_2AOkQ
+  svg {
+  display: block;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Checkbox_2AOkQ:hover {
+  color: #fff;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Checkbox_2AOkQ
+  svg {
+  width: 14px;
+  height: 14px;
+  margin-left: 1px;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Checkbox_2AOkQ.DialogCheckbox_Container {
+  margin-bottom: 0px;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Checkbox_2AOkQ
+  .DialogCheckbox {
+  width: 16px;
+  height: 16px;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .appfilterpane_FilterBucketBoxes_32e6r
+  .appfilterpane_Row_1J53P
+  .appfilterpane_Checkbox_2AOkQ
+  .DialogToggle_Label {
+  white-space: nowrap;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi.appfilterpane_SearchResultsBox_MIMuV
+  .appfilterpane_FilterBucketBoxes_32e6r {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  min-width: 100%;
+  z-index: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #636874;
+  box-shadow: 0px 2px 8px 1px #000;
+  opacity: 0;
+  pointer-events: none;
+}
+div.ShortWindow
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi.appfilterpane_SearchResultsBox_MIMuV
+  .appfilterpane_FilterBucketBoxes_32e6r {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi.appfilterpane_SearchResultsBox_MIMuV:focus-within
+  .appfilterpane_FilterBucketBoxes_32e6r {
+  opacity: 1;
+  pointer-events: all;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .DialogInput_Wrapper {
+  margin-top: 6px;
+  border-radius: 3px;
+  outline: none;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .DialogInput_Wrapper
+  .DialogTextInputBase {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: rgba(0, 0, 0, 0.25);
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .DialogInput_Wrapper
+  .DialogTextInputBase:hover {
+  background: #1e1f23;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .DialogInput_Wrapper
+  .DialogTextInputBase.Focusable:focus {
+  outline: none;
+  background-color: #fff;
+  color: #0e141b;
+}
+.appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi
+  .DialogInput_ClearAction {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  cursor: pointer;
+}
+.appfilterpane_Container_170Np .appfilterpane_SaveButton_1bqGA {
+  width: fit-content;
+  max-width: 100%;
+  margin: 4px auto;
+  padding: 0 12px;
+}
+.appfilterpane_Container_170Np .appfilterpane_SaveButton_1bqGA:disabled,
+.appfilterpane_Container_170Np .appfilterpane_SaveButton_1bqGA:disabled:hover {
+  color: gray;
+  background: rgba(61, 67, 77, 0.5);
+  pointer-events: none;
+}
+.appfilterpane_SearchOptionsWrapper_1AiIv {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.appfilterpane_SearchOptions_31H9U {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 12px;
+  overflow-y: visible;
+  overflow-x: scroll;
+  padding: 0px 24px;
+  scroll-padding: 0px 24px;
+}
+.appfilterpane_FilterStoreTag_1xPZw {
+  background: #3d4450;
+  padding: 4px 4px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.appfilterpane_FilterStoreTag_1xPZw.appfilterpane_Selected_1w0iw {
+  background: #1a9fff;
+}
+.appfilterpane_FilterBucket_1axoi.appfilterpane_Player_N2yUr {
+  order: 1;
+}
+.appfilterpane_FilterBucket_1axoi.appfilterpane_PlayState_3t6IT {
+  order: 2;
+}
+.appfilterpane_FilterBucket_1axoi.appfilterpane_Genre_2-jBK {
+  order: 3;
+}
+.appfilterpane_FilterBucket_1axoi.appfilterpane_Hardware_1FCvB {
+  order: 4;
+}
+.appfilterpane_FilterBucket_1axoi.appfilterpane_Feature_NuUzx {
+  order: 5;
+}
+.appfilterpane_FilterBucket_1axoi.appfilterpane_StoreTag_L_Z0s {
+  order: 6;
+}
+.BasicUI .appfilterpane_FilterBucket_1axoi.appfilterpane_FilterBucket_1axoi {
+  order: unset;
+}
+.appfilterpane_CompatDropDownOption_3dgdA {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+}
+.appfilterpane_CompatDropDownOption_3dgdA svg {
+  height: 16px;
+  width: 16px;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb {
+  order: 1000;
+  margin-right: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: flex-start;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb .appfilterpane_Default_ixnYx {
+  font-style: italic;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb
+  .DialogDropDown_CurrentDisplay
+  .appfilterpane_CompatLabel_6w9p4 {
+  display: none;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb ._DialogInputContainer {
+  box-sizing: border-box;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  max-width: 230px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: #ccc;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb
+  ._DialogInputContainer.DialogDropDown:hover {
+  box-shadow: none;
+  color: #fff;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb
+  ._DialogInputContainer.DialogDropDown.Disabled:hover {
+  color: #ccc;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb
+  ._DialogInputContainer
+  .DialogDropDown_CurrentDisplay {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 1px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-grow: 0;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb
+  ._DialogInputContainer
+  .DialogDropDown_Arrow {
+  width: 14px;
+  position: relative;
+  top: initial;
+  right: initial;
+  padding-left: 0px;
+  padding-top: 2px;
+  padding-right: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  flex-shrink: 0;
+}
+.appfilterpane_SteamDeckCompatDropDown_1SFpb
+  ._DialogInputContainer
+  .DialogDropDown_Arrow
+  svg {
+  fill: #969696;
+}
+.appfilterpane_DropDownContainer_1g2o2 {
+  min-width: fit-content;
+}
+.appfilterpane_DropDownContainer_1g2o2 > div {
+  box-sizing: border-box;
+  padding: 8px 0;
+  box-shadow: 1px 8px 32px 1px #0009 !important;
+  border: 0.5px solid #6e6e6e;
+  border-radius: 0;
+  background: #75767c !important;
+  color: #fff;
+  border-left: 1px solid #fff;
+}
+.appfilterpane_DropDownContainer_1g2o2 .appfilterpane_DropDownItems_HHtHx {
+  box-sizing: border-box;
+  padding: 3px 12px;
+  line-height: initial;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-left: 1px;
+}
+.appfilterpane_DropDownContainer_1g2o2
+  .appfilterpane_DropDownItems_HHtHx.Focusable:focus {
+  outline: none;
+  background-color: #fff;
+  color: #0e141b;
+}
+.appfilterpane_DropDownContainer_1g2o2
+  .appfilterpane_DropDownItems_HHtHx:hover {
+  background-color: #9899a1;
+}
+.appfilterpane_Buttons_2GVYK {
+  display: flex;
+  gap: 8px;
+}
+.appfilterpane_Buttons_2GVYK .appfilterpane_ClearButton_1IWRe {
+  width: fit-content;
+  min-width: 0px;
 }
 @keyframes fastscrolloverlay_ItemFocusAnim-darkerGrey-nocolor_E10Yo {
   from {

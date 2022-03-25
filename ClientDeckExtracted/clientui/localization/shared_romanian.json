@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Finalizează achiziția înainte de:",
 	"Sale_Reservation_CancelAuto": "Dacă nu finalizezi achiziția înainte de data de expirare menționată mai sus, vom anula rezervarea și îți vom rambursa avansul.",
 	"Sale_Reservation_Expired": "Rezervarea a expirat.",
+	"Sale_Reservation_ExpectedDate": "Disponibilitatea preconizată a comenzii:",
+	"Sale_Reservation_YourExpectedDate": "Disponibilitatea preconizată a comenzii tale:",
 	"Sale_BrowserSortOption_TopWishlisted": "Cele mai dorite jocuri viitoare",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Jocuri viitoare ordonate în funcție de numărul total de adăugări în lista de dorințe (dintotdeauna). Include doar titlurile care nu au fost lansate încă pe Steam.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Viitoare populare",

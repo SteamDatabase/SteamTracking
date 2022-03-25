@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Ολοκλήρωση αγοράς έως:",
 	"Sale_Reservation_CancelAuto": "Εάν δεν ολοκληρώσετε την αγορά πριν από τη λήξη της προθεσμίας που αναφέρεται παραπάνω, τότε θα ακυρώσουμε την κράτησή σας και θα σας επιστρέψουμε την προκαταβολή σας.",
 	"Sale_Reservation_Expired": "Η κράτηση έληξε.",
+	"Sale_Reservation_ExpectedDate": "Αναμενόμενη διαθεσιμότητα παραγγελίας:",
+	"Sale_Reservation_YourExpectedDate": "Αναμενόμενη διαθεσιμότητα της παραγγελίας σας:",
 	"Sale_BrowserSortOption_TopWishlisted": "Πιο επιθυμητά επερχόμενα παιχνίδια",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Επερχόμενα παιχνίδια ταξινομημένα ανά συνολικές (διαχρονικά) καταχωρήσεις σε Λίστες Επιθυμιών. Περιλαμβάνει μόνο παιχνίδια που δεν έχουν κυκλοφορήσει ακόμα στο Steam.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Δημοφιλή επερχόμενα",

@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "Dokončete nákup do:",
     "Sale_Reservation_CancelAuto": "Pokud svůj nákup nedokončíte před datem uvedeným výše, Vaše rezervace bude zrušena a vrátíme Vám zálohu.",
     "Sale_Reservation_Expired": "Rezervace vypršela.",
+    "Sale_Reservation_ExpectedDate": "Očekávané zahájení objednávek:",
+    "Sale_Reservation_YourExpectedDate": "Očekávané zahájení objednávek:",
     "Sale_BrowserSortOption_TopWishlisted": "Vysněné nadcházející hry",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Nadcházející hry seřazené dle počtu přidání do seznamu přání (za celou dobu). Jsou zahrnuty pouze hry, které ještě nebyly vydány.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Populární nadcházející",

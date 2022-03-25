@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "Viimeistele ostos ennen:",
     "Sale_Reservation_CancelAuto": "Jos et viimeistele ostostasi ennen yllä mainittua aikaa, perumme varauksesi ja palautamme varausmaksusi.",
     "Sale_Reservation_Expired": "Varaus vanhentunut.",
+    "Sale_Reservation_ExpectedDate": "Arvioitu tilausaikataulu:",
+    "Sale_Reservation_YourExpectedDate": "Tilauksesi arvioitu aikataulu:",
     "Sale_BrowserSortOption_TopWishlisted": "Eniten toivelistoille lisätyt tulevat pelit",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Kaikkien toivelistalisäysten mukaan lajitellut tulevat pelit. Sisältää vain pelit, joita ei ole vielä julkaistu Steamissä.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Suositut tulevat julkaisut",

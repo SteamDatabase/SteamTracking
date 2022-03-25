@@ -1461,6 +1461,8 @@
 	"Sale_Reservation_CompleteBy": "Şu tarihe kadar satın alımı tamamlayın:",
 	"Sale_Reservation_CancelAuto": "Yukarıda gösterilen tarihten önce satın alımı tamamlamazsanız ayırttığınız ürün iptal edilecek ve depozitonuz iade edilecektir.",
 	"Sale_Reservation_Expired": "Ayırtma süreniz sona erdi.",
+	"Sale_Reservation_ExpectedDate": "Tahminî sipariş zamanı:",
+	"Sale_Reservation_YourExpectedDate": "Tahminî sipariş zamanınız:",
 	"Sale_BrowserSortOption_TopWishlisted": "En Çok İstenen Henüz Çıkmamış Oyunlar",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "İstek listelerine (tüm zamanlarda) toplam eklenme sayısına göre sıralanmış, henüz çıkmamış oyunlar. Yalnızca gelecekte Steam'de çıkacak oyunları içerir.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Popüler ve Yakında",

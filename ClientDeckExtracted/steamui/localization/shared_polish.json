@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "Sfinalizuj zakup do:",
     "Sale_Reservation_CancelAuto": "Jeśli nie sfinalizujesz zakupu przed upływem terminu podanego powyżej, anulujemy twoją rezerwację i zwrócimy zaliczkę.",
     "Sale_Reservation_Expired": "Rezerwacja wygasła.",
+    "Sale_Reservation_ExpectedDate": "Oczekiwana data możliwości złożenia zamówienia:",
+    "Sale_Reservation_YourExpectedDate": "Oczekiwana data możliwości złożenia twojego zamówienia:",
     "Sale_BrowserSortOption_TopWishlisted": "Nadchodzące gry najczęściej na listach życzeń",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Nadchodzące gry posortowane według całkowitej liczby dodań do list życzeń. Zawiera tylko gry jeszcze niewydane na Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Popularne nadchodzące",

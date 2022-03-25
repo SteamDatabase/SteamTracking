@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7167948";
-!(function (d) {
+var CLSTAMP = "7174932";
+!(function (t) {
   function a(a) {
     for (
       var e, n, o = a[0], i = a[1], c = a[2], l = 0, s = [];
@@ -11,11 +11,11 @@ var CLSTAMP = "7167948";
       (n = o[l]),
         Object.prototype.hasOwnProperty.call(b, n) && b[n] && s.push(b[n][0]),
         (b[n] = 0);
-    for (e in i) Object.prototype.hasOwnProperty.call(i, e) && (d[e] = i[e]);
+    for (e in i) Object.prototype.hasOwnProperty.call(i, e) && (t[e] = i[e]);
     for (j && j(a); s.length; ) s.shift()();
-    return r.push.apply(r, c || []), t();
+    return r.push.apply(r, c || []), d();
   }
-  function t() {
+  function d() {
     for (var a, e = 0; e < r.length; e++) {
       for (var n = r[e], o = !0, i = 1; i < n.length; i++) {
         var c = n[i];
@@ -32,7 +32,7 @@ var CLSTAMP = "7167948";
   function h(a) {
     if (n[a]) return n[a].exports;
     var e = (n[a] = { i: a, l: !1, exports: {} });
-    return d[a].call(e.exports, e, e.exports, h), (e.l = !0), e.exports;
+    return t[a].call(e.exports, e, e.exports, h), (e.l = !0), e.exports;
   }
   (h.e = function (r) {
     var a = [];
@@ -181,17 +181,17 @@ var CLSTAMP = "7167948";
               if ("stylesheet" === s.rel && (l === e || l === o)) return a();
             }
             for (
-              var s, d = document.getElementsByTagName("style"), c = 0;
-              c < d.length;
+              var s, t = document.getElementsByTagName("style"), c = 0;
+              c < t.length;
               c++
             )
-              if ((l = (s = d[c]).getAttribute("data-href")) === e || l === o)
+              if ((l = (s = t[c]).getAttribute("data-href")) === e || l === o)
                 return a();
-            var t = document.createElement("link");
-            (t.rel = "stylesheet"),
-              (t.type = "text/css"),
-              (t.onload = a),
-              (t.onerror = function (a) {
+            var d = document.createElement("link");
+            (d.rel = "stylesheet"),
+              (d.type = "text/css"),
+              (d.onload = a),
+              (d.onerror = function (a) {
                 var e = (a && a.target && a.target.src) || o,
                   a = new Error(
                     "Loading CSS chunk " + r + " failed.\n(" + e + ")"
@@ -199,11 +199,11 @@ var CLSTAMP = "7167948";
                 (a.code = "CSS_CHUNK_LOAD_FAILED"),
                   (a.request = e),
                   delete f[r],
-                  t.parentNode.removeChild(t),
+                  d.parentNode.removeChild(d),
                   n(a);
               }),
-              (t.href = o),
-              document.getElementsByTagName("head")[0].appendChild(t);
+              (d.href = o),
+              document.getElementsByTagName("head")[0].appendChild(d);
           }).then(function () {
             f[r] = 0;
           }))
@@ -328,7 +328,7 @@ var CLSTAMP = "7167948";
                 34: "e8ed010a1e1fb72fef56",
                 35: "81f1639dfadb6bc44898",
                 36: "af1c47802e5eda8a61e7",
-                37: "0af0c92d39ce5d0c9536",
+                37: "9e8e0e928cffa29815b7",
                 38: "3a4f35c4bb55619cd002",
                 39: "9877cbdfe2c886b38146",
                 40: "e42336e7246753513f01",
@@ -378,7 +378,7 @@ var CLSTAMP = "7167948";
       Promise.all(a)
     );
   }),
-    (h.m = d),
+    (h.m = t),
     (h.c = n),
     (h.d = function (a, e, n) {
       h.o(a, e) || Object.defineProperty(a, e, { enumerable: !0, get: n });
@@ -430,5 +430,5 @@ var CLSTAMP = "7167948";
   o.push = a;
   for (var o = o.slice(), i = 0; i < o.length; i++) a(o[i]);
   var j = e;
-  t();
+  d();
 })([]);

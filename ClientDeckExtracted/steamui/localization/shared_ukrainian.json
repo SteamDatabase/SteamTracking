@@ -1465,6 +1465,8 @@
     "Sale_Reservation_CompleteBy": "Завершити придбання до:",
     "Sale_Reservation_CancelAuto": "Якщо ви не завершите придбання до вказаної вище дати, ми скасуємо ваше замовлення і повернемо кошти за резервування.",
     "Sale_Reservation_Expired": "Термін резервування закінчився.",
+    "Sale_Reservation_ExpectedDate": "Очікувана дата обробки замовлення:",
+    "Sale_Reservation_YourExpectedDate": "Очікувана дата обробки вашого замовлення:",
     "Sale_BrowserSortOption_TopWishlisted": "Найбажаніші майбутні ігри",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Майбутні ігри, відсортовані за кількістю додавань до списку бажаного (за весь час). Включено лише ігри, які ще не вийшли в Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Популярні майбутні релізи",

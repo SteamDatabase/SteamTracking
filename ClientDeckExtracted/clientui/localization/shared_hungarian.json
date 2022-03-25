@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Vásárlás befejezendő eddig:",
 	"Sale_Reservation_CancelAuto": "Ha nem fejezed be a vásárlást a fent jelzett lejárati idő előtt, törölni fogjuk foglalásod, és visszatérítjük foglalási díjad.",
 	"Sale_Reservation_Expired": "A foglalás lejárt.",
+	"Sale_Reservation_ExpectedDate": "Rendelés várható elérhetősége:",
+	"Sale_Reservation_YourExpectedDate": "Rendelésed várható elérhetősége:",
 	"Sale_BrowserSortOption_TopWishlisted": "Legtöbbet kívánságlistázott közelgő játékok",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Közelgő játékok összes (minden idők) kívánságlistázás-száma alapján rendezve. Csak a Steamen még meg nem jelent játékokat tartalmaz.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Népszerű közelgők",

@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Kauf abschließen bis:",
 	"Sale_Reservation_CancelAuto": "Wenn Sie Ihren Kauf nicht vor dem oben angegebenen Datum abschließen, stornieren wir Ihre Reservierung und erstatten Ihnen die Anzahlung.",
 	"Sale_Reservation_Expired": "Reservierung abgelaufen",
+	"Sale_Reservation_ExpectedDate": "Voraussichtlich bestellbar:",
+	"Sale_Reservation_YourExpectedDate": "Voraussichtlich bestellbar:",
 	"Sale_BrowserSortOption_TopWishlisted": "Meistgewünschte bevorstehende Spiele",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Bevorstehende Steam-Titel sortiert nach der Gesamtzahl ihrer Wunschlisteneinträge. (Ohne zeitliche Einschränkung, nur unveröffentlichte Spiele)",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Beliebt und bald verfügbar",

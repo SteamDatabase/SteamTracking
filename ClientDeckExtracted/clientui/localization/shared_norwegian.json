@@ -1465,6 +1465,8 @@
 	"Sale_Reservation_CompleteBy": "Fullfør kjøp innen:",
 	"Sale_Reservation_CancelAuto": "Hvis du ikke fullfører kjøpet innen utløpet av fristen ovenfor, avbryter vi reservasjonen din og refunderer depositumet.",
 	"Sale_Reservation_Expired": "Reservasjonen er utløpt.",
+	"Sale_Reservation_ExpectedDate": "Forventet tilgjengelighet:",
+	"Sale_Reservation_YourExpectedDate": "Forventet tilgjengelighet for deg:",
 	"Sale_BrowserSortOption_TopWishlisted": "Mest ønskede kommende spill",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Kommende spill sortert etter totalt antall ganger det er blitt lagt til på ønskelister. Inkluderer kun spill som ikke er utgitt på Steam enda.",
 	"Sale_BrowserSortOption_TrendingWishlisted": "Populære kommende",
