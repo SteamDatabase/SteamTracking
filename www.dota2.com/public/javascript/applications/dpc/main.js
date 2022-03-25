@@ -12388,6 +12388,7 @@
         IN_GAMEPADUI: !1,
         ON_DECK: !1,
         IN_LOGIN: !1,
+        IN_STANDALONE_KEYBOARD: !1,
       };
     function l() {
       var e = (function () {
