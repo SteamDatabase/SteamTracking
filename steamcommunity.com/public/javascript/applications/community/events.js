@@ -83493,7 +83493,8 @@
                       r.append("sessionid", x.c.SESSIONID),
                         r.append("clan_accountid", "" + n.GetAccountID()),
                         r.append("gid_announcement", e.announcement_gid),
-                        r.append("add_tags", s);
+                        r.append("add_tags", s),
+                        r.append("authwgtoken", x.h.authwgtoken);
                       const o = yield i.a.post(a, r, { withCredentials: !0 }),
                         l = Boolean(
                           200 == (null == o ? void 0 : o.status) &&
