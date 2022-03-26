@@ -51,11 +51,19 @@ function IsBaseUrlExpression(node) {
 		return true;
 	}
 
+	if (node.type === Syntax.Identifier && IsUrlVariable(node.name)) {
+		return true;
+	}
+
 	return (
 		node.type === Syntax.MemberExpression &&
 		node.property.type === Syntax.Identifier &&
-		node.property.name.endsWith("_URL")
+		IsUrlVariable(node.property.name)
 	);
+}
+
+function IsUrlVariable(name) {
+	return name.toUpperCase().endsWith("URL");
 }
 
 function IsSafeName(name) {

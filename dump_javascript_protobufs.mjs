@@ -168,7 +168,10 @@ function GetMatchingDependencyCount(services, dependants) {
 
 function OutputToFile(fileName, imports, services, messages) {
 	return new Promise((resolve) => {
-		const stream = createWriteStream(fileName, { flags: "w", encoding: "utf8" });
+		const stream = createWriteStream(fileName, {
+			flags: "w",
+			encoding: "utf8",
+		});
 		stream.once("close", resolve);
 
 		OutputImports(imports, stream);
@@ -193,7 +196,7 @@ function OutputMessages(messages, stream = process.stdout) {
 			const dependants = [...message.dependants.values()];
 			dependants.sort();
 
-			stream.write(`// Used by: ${dependants.join(', ')}\n`);
+			stream.write(`// Used by: ${dependants.join(", ")}\n`);
 		}
 
 		stream.write(`message ${message.className} {\n`);
