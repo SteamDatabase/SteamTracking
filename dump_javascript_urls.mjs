@@ -13,17 +13,17 @@ for await (const file of GetRecursiveFilesToParse()) {
 		traverse(ast, {
 			enter: function (node) {
 				if (node.type === Syntax.TemplateLiteral && node.expressions.some(IsBaseUrlExpression)) {
-					allStrings.add(ConstructLiteral(node));
+					allStrings.add(FormatFinalUrl(ConstructLiteral(node)));
 					this.skip();
 				} else if (
 					node.type === Syntax.Literal &&
 					IsBaseUrlExpression(node) &&
 					!file.endsWith("steammobile_android.js")
 				) {
-					allStrings.add(FormatNode(node, true).join(""));
+					allStrings.add(FormatFinalUrl(FormatNode(node, true).join("")));
 					this.skip();
 				} else if (node.type === Syntax.BinaryExpression && IsLeftSideBaseUrlExpression(node)) {
-					allStrings.add(FormatNode(node, true).join(""));
+					allStrings.add(FormatFinalUrl(FormatNode(node, true).join("")));
 					this.skip();
 				}
 			},
@@ -138,4 +138,8 @@ function FormatNode(node, noWrap = false) {
 	}
 
 	return str;
+}
+
+function FormatFinalUrl(str) {
+	return str.trim().replace(/\/$/, "").replace(/\/\#/, "#").replace(/\/\?/, "?");
 }
