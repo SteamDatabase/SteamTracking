@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-f
-f
 __stubs
 __TEXT
 __stub_helper
@@ -36,7 +34,6 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
-q7
 __thread_vars
 __DATA
 0
@@ -47,9 +44,9 @@ __thread_bss
 __DATA
 __bss
 __DATA
+".
 __common
 __DATA
-87'
 H
 __LINKEDIT
 @'
@@ -58,8 +55,7 @@ __LINKEDIT
 @loader_path/serverbrowser.dylib
 "
 @'
-X
-@!
+Q'
 P
 
 
@@ -90,7 +86,6 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-P3
 )
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
@@ -394,6 +389,7 @@ $
 (
 5
 4
+,
 )
 ,
 0
@@ -542,6 +538,7 @@ X
 0
 8
 8
+0
 (
 8
 0
@@ -610,6 +607,8 @@ H
 (
 (
 8
+(
+(
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -658,6 +657,7 @@ H
 14CMsgURLChanged
 13CHistoryEntry
 18CMsgHistoryChanged
+13CMsgLoadError
 11CHTMLHeader
 21CHTMLPageSecurityInfo
 19CMsgFinishedRequest
@@ -772,6 +772,8 @@ H
 17CMsgStartDownload
 16CMsgSetTopWindow
 41CMsgBrowserViewPostMessageToParentRequest
+18CMsgBlockedRequest
+24CMsgSetProtocolBlockList
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 25CPanelAnimationDictionary
@@ -2369,6 +2371,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -2450,6 +2454,7 @@ Set the help/support URL
 /
 http://
 https://
+HOME
 ://
 steam://
 steamlink://
@@ -3850,7 +3855,6 @@ j
 j
 j
 j
-%
 0
 0
 AT=
@@ -3895,8 +3899,8 @@ IcE
 V
 =
 =
+"
 @
-c
 @
 M9e
 @
@@ -3918,6 +3922,7 @@ M9e
 ?
 @
 @
+>
 
 
 
@@ -3966,7 +3971,6 @@ d
 &
 &
 d
-Y
 0
 A+4$A+u
 ~m=
@@ -4169,7 +4173,7 @@ d
 @
 @
 @
-I
+A
 @
 @
 @

@@ -57,7 +57,9 @@
     "Image_Error_suggestion": "您始终可以上传图片至蒸汽平台，免费进行内容托管。",
     "Hover_SteamLevel": "蒸汽平台等级",
     "PersonaStateInNonSteamGame": "非蒸汽平台游戏中",
+    "PersonaStateOfflineModeDescriptor": "不连接至蒸汽平台服务器",
     "User_LimitedAccount_UrlInfo": "访问蒸汽平台客服",
+    "Broadcast_PartnerChat_Login": "用您的蒸汽平台合作伙伴帐户登录以开始聊天",
     "PartnerEvent_SteamAwardNominations": "蒸汽平台大奖提名请求",
     "PartnerEvent_SteamAwardVoteRequest": "蒸汽平台大奖投票请求",
     "PartnerEvent_SteamGameFestival_ArtistState": "蒸汽平台新品节艺术家说明",
@@ -120,5 +122,7 @@
     "FAQViewer_SideBar_CommunityHelp_Desc": "在蒸汽平台讨论区发布问题，或搜索问题的答案。",
     "FAQViewer_SideBar_CommunityHelp_Link": "访问蒸汽平台讨论区",
     "StreamLaunch_Broadcasting": "远程计算机目前正在使用蒸汽平台实况直播，因此无法开始远程畅玩会话。",
-    "StreamLaunch_InstallDrivers": "流式传输需要安装额外的驱动程序。\n\n请按照远程计算机上的蒸汽平台提示进行操作。"
+    "StreamLaunch_InstallDrivers": "流式传输需要安装额外的驱动程序。\n\n请按照远程计算机上的蒸汽平台提示进行操作。",
+    "SteamDeckVerified_SeeAll": "查看蒸汽平台上所有“通过验证”的游戏",
+    "SteamDeckVerified_TestResult_GameOrLauncherDoesntExitCleanly": "此游戏不能彻底退出，可能需要您通过蒸汽平台界面手动退出。"
 }

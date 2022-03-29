@@ -60,7 +60,6 @@ message CPlayer_GetOwnedGames_Response {
 		optional int32 playtime_2weeks = 3;
 		optional int32 playtime_forever = 4;
 		optional string img_icon_url = 5;
-		optional string img_logo_url = 6;
 		optional bool has_community_visible_stats = 7;
 		optional int32 playtime_windows_forever = 8;
 		optional int32 playtime_mac_forever = 9;
@@ -204,8 +203,25 @@ message CPlayer_SetAnimatedAvatar_Request {
 message CPlayer_SetAnimatedAvatar_Response {
 }
 
+message CPlayer_GetSteamDeckKeyboardSkin_Request {
+	optional fixed64 steamid = 1 [(description) = "The player we're asking about"];
+	optional string language = 2;
+}
+
+message CPlayer_GetSteamDeckKeyboardSkin_Response {
+	optional .ProfileItem steam_deck_keyboard_skin = 1;
+}
+
+message CPlayer_SetSteamDeckKeyboardSkin_Request {
+	optional uint64 communityitemid = 1;
+}
+
+message CPlayer_SetSteamDeckKeyboardSkin_Response {
+}
+
 message CPlayer_GetProfileItemsOwned_Request {
 	optional string language = 1;
+	repeated .ECommunityItemClass filters = 2;
 }
 
 message CPlayer_GetProfileItemsOwned_Response {
@@ -214,6 +230,7 @@ message CPlayer_GetProfileItemsOwned_Response {
 	repeated .ProfileItem avatar_frames = 3;
 	repeated .ProfileItem animated_avatars = 4;
 	repeated .ProfileItem profile_modifiers = 5;
+	repeated .ProfileItem steam_deck_keyboard_skins = 6;
 }
 
 message CPlayer_GetProfileItemsEquipped_Request {
@@ -227,6 +244,7 @@ message CPlayer_GetProfileItemsEquipped_Response {
 	optional .ProfileItem avatar_frame = 3;
 	optional .ProfileItem animated_avatar = 4;
 	optional .ProfileItem profile_modifier = 5;
+	optional .ProfileItem steam_deck_keyboard_skin = 6;
 }
 
 message CPlayer_SetEquippedProfileItemFlags_Request {
@@ -717,6 +735,14 @@ service Player {
 
 	rpc SetAnimatedAvatar (.CPlayer_SetAnimatedAvatar_Request) returns (.CPlayer_SetAnimatedAvatar_Response) {
 		option (method_description) = "Sets the user's animated avatar for their profile";
+	}
+
+	rpc GetSteamDeckKeyboardSkin (.CPlayer_GetSteamDeckKeyboardSkin_Request) returns (.CPlayer_GetSteamDeckKeyboardSkin_Response) {
+		option (method_description) = "Gets which Steam Deck keyboard skin is active for a specific user";
+	}
+
+	rpc SetSteamDeckKeyboardSkin (.CPlayer_SetSteamDeckKeyboardSkin_Request) returns (.CPlayer_SetSteamDeckKeyboardSkin_Response) {
+		option (method_description) = "Sets the user's current Steam Deck keyboard skin";
 	}
 
 	rpc GetProfileItemsOwned (.CPlayer_GetProfileItemsOwned_Request) returns (.CPlayer_GetProfileItemsOwned_Response) {

@@ -217,7 +217,6 @@ ${COMMUNITY_BASE_URL}profiles/${steamid}
 ${COMMUNITY_BASE_URL}profiles/${steamid}/
 ${COMMUNITY_BASE_URL}profiles/${steamid}/friendscommon
 ${COMMUNITY_BASE_URL}profiles/${steamid}/inventory
-${COMMUNITY_BASE_URL}profiles/${strSteamID}/ajaxsetpersonaname/
 ${COMMUNITY_BASE_URL}profiles/${}
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
 ${COMMUNITY_BASE_URL}profiles/${}/home
@@ -621,8 +620,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/
-${MEDIA_CDN_COMMUNITY_URL}images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg
-${MEDIA_CDN_COMMUNITY_URL}images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/${}_${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/
@@ -977,14 +974,11 @@ ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
-${STORE_CDN_URL}public/shared/images/ico/ico-deck-playable.svg
-${STORE_CDN_URL}public/shared/images/ico/ico-deck-unknown.svg
-${STORE_CDN_URL}public/shared/images/ico/ico-deck-unsupported.svg
-${STORE_CDN_URL}public/shared/images/ico/ico-deck-verified.svg
 ${STORE_ICON_BASE_URL}${}
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
 ${STORE_URL}app/570/Dota_2/
 ${URL}${URL}
+${URL}${_ ? _ : _}
 ${VIDEO_URL}abilities/${}/${name}.jpg
 ${VIDEO_URL}abilities/${}/${name}.mp4
 ${VIDEO_URL}abilities/${}/${name}.webm
@@ -1256,6 +1250,7 @@ ${strSearchBaseURL}Home
 ${strURL}${_ ? '&' : '?'}insideModal=1
 ${strURL}&l=${key}
 ${strURL}&l=english
+${strURL}?json=1&origin=${}
 ${strWidgetURL}?t=${}
 ${strWizardBaseURL}${strQueryParam}
 ${survey_link_url}${}
@@ -1280,6 +1275,8 @@ ${url}voteup/${}/${}/
 ${wiki_doc_url}${}
 ${wizard_url}
 ${wizard_url}Home
+${}\n\n${COMMUNITY_BASE_URL}/sharedfiles/filedetails/?id=${}
+Navigating to ${}, which maps to ${m_strWebURL}
 https://
 https://${}
 https://${}/
@@ -2114,7 +2111,6 @@ https://steamloopback.host/
 https://steamloopback.host/${strUrl}
 https://steamloopback.host/${}
 https://steamloopback.host/friendsui/
-https://steamloopback.host/localization/${}_${}.json
 https://steamsupport.valvesoftware.com/account/overview/${}
 https://steamsupport.valvesoftware.com/account_support.php?steamID=${strSteamID}
 https://steamsupport.valvesoftware.com/clan/overview/${}
@@ -2369,3 +2365,4 @@ https://youtu.be/
 url( '${thumb_url}' )
 url(${avatar_full_url})
 url(${dataUrl})
+url(${url})

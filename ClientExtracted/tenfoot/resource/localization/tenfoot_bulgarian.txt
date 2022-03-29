@@ -2258,7 +2258,7 @@
 	"Library_Details_FieldLabel_DoubleTapBeep"		"Пиукане при двойно почукване"
 	"Library_Details_FieldLabel_MouseTriggerClamp"	"Потискане на мишката при натискане на спусъка"
 	"Library_Details_FieldLabel_MouseTriggerClampAmount"	"Количество за потискане на мишката чрез спусъка"
-	"Library_Details_FieldLabel_EdgeSpinRadius"		"Ръб на радиуса за завъртане"
+	"Library_Details_FieldLabel_EdgeSpinRadius"		"Ръб на радиуса за превъртане"
 	"Library_Details_FieldLabel_EdgeSpinVelocity"		"Скорост на ръба за превъртане"
 	"Library_Details_FieldLabel_InvertX"			"Обръщане на хоризонталната ос"
 	"Library_Details_FieldLabel_InvertY"			"Обръщане на вертикалната ос"

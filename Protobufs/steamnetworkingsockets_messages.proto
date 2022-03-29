@@ -125,17 +125,17 @@ message CMsgSteamDatagramConnectionQuality {
 	optional .CMsgSteamDatagramLinkLifetimeStats lifetime = 2;
 }
 
+message CMsgICECandidate {
+	optional string candidate = 3;
+}
+
 message CMsgICERendezvous {
 	message Auth {
 		optional string pwd_frag = 1;
 	}
 
-	message Candidate {
-		optional string candidate = 3;
-	}
-
 	optional .CMsgICERendezvous.Auth auth = 2;
-	optional .CMsgICERendezvous.Candidate add_candidate = 1;
+	optional .CMsgICECandidate add_candidate = 1;
 }
 
 message CMsgSteamNetworkingP2PRendezvous {

@@ -1126,7 +1126,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"SettingController_HapticSound_11"					"Scoperta"
 	"SettingController_HapticSound_12"					"Trionfo"
 	"SettingController_HapticSound_13"					"Il Mann"
-	"Controller_Registration_Rumble"					"Preferenze per la vibrazione:"
+	"Controller_Registration_Rumble"					"Vibrazione:"
 	"Controller_Registration_RumbleSC"					"[Sperimentale] Emulazione della vibrazione:"
 	"Controller_Registration_Haptics"					"Preferenze per la risposta aptica:"
 
@@ -2811,7 +2811,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 
 	"Library_Details_EditSteamPlayOptions" "Seleziona le opzioni di Steam Play..."
 	"Library_EditSteamPlayOptions_Title"	"Steam Play"
-	"Library_EditSteamPlayOptions_SteamPlayOverrideTool"	"Imponi l'uso di uno specifico strumento di compatibilità Steam Play"
+	"Library_EditSteamPlayOptions_SteamPlayOverrideTool"	"Forza l'utilizzo di uno strumento specifico di compatibilità per Steam Play"
 
 	"Library_AppAllowDownloadsDuringGameplay_DefaultEnable" "Segui le mie impostazioni globali (permetti download in background)"
 	"Library_AppAllowDownloadsDuringGameplay_DefaultDisable" "Segui le mie impostazioni globali (arresta download in background)"
@@ -3055,7 +3055,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Steam_AppUpdateError_18"		"non installata"
 	"Steam_AppUpdateError_19"		"aggiornamento richiesto"
 	"Steam_AppUpdateError_20"		"occupato"
-	"Steam_AppUpdateError_21"		"server dei contenuti non raggiungibili"
+	"Steam_AppUpdateError_21"		"server dei contenuti non raggiungibile"
 	"Steam_AppUpdateError_22"		"configurazione dell'applicazione non valida"
 	"Steam_AppUpdateError_23"		"configurazione del depot non valida"
 	"Steam_AppUpdateError_24"		"contenuto del manifest mancante"

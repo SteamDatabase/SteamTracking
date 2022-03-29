@@ -1005,11 +1005,6 @@ RedeemWalletVoucher
 	method		"internal"
 	filter		"store"
 }
-SupportMessages
-{
-	url		"%store%/account/supportmessages/"
-	method		"internal"
-}
 RedeemWalletVoucherCode
 {
 	url		"%store%/account/redeemwalletcode/?code=%p1%"
@@ -1282,6 +1277,12 @@ TextFilterSettings
 WorkshopEula
 {
 	url			"%store%/workshopeula/%p1%/"
+	method		"internal"
+	filter		"store"
+}
+StoreGreatOnDeck
+{
+	url			"%store%/greatondeck"
 	method		"internal"
 	filter		"store"
 }

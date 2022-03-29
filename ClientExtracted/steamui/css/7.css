@@ -1,282 +1,3 @@
-@keyframes appfilterpane_ItemFocusAnim-darkerGrey-nocolor_3tLJi {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes appfilterpane_ItemFocusAnim-darkerGrey_3jhL- {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes appfilterpane_ItemFocusAnim-darkGrey_T8qyu {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes appfilterpane_ItemFocusAnim-green_TmoLi {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes appfilterpane_focusAnimation_1BZTz {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes appfilterpane_hoverAnimation_24dWK {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.appfilterpane_Container_170Np {
-  flex: auto;
-  box-sizing: border-box;
-  padding: 12px 24px;
-  display: flex;
-  flex-direction: column;
-}
-.appfilterpane_Container_170Np .appfilterpane_FilterArea_1ennW {
-  box-sizing: border-box;
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: 5fr 5fr 3fr;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 8px 24px;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW.appfilterpane_WideFormat_3BoPG {
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-flow: row dense;
-  grid-template-rows: 2fr 1fr;
-  grid-gap: 0px 24px;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW.appfilterpane_WideFormat_3BoPG
-  .appfilterpane_FilterBucket_1axoi.appfilterpane_ExtraTall_1001p {
-  grid-row-end: span 2;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW.appfilterpane_WideFormat_3BoPG
-  .appfilterpane_FilterBucket_1axoi.appfilterpane_ExtraTall_1001p
-  .appfilterpane_FilterBucketBoxes_32e6r {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  grid-auto-flow: column;
-  grid-column-gap: 24px;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi.appfilterpane_ExtraTall_1001p {
-  grid-row-end: span 3;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi.appfilterpane_DoubleWide_23rzp {
-  grid-column-end: span 2;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketLabel_3iV2v {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #26b7ff;
-  font-weight: 500;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketBoxes_32e6r {
-  box-sizing: border-box;
-  padding: 4px 8px 4px 0px;
-  outline: none;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketBoxes_32e6r
-  .appfilterpane_Row_1J53P {
-  display: flex;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketBoxes_32e6r
-  .appfilterpane_Row_1J53P
-  .appfilterpane_Checkbox_2AOkQ {
-  flex: none;
-  display: flex;
-  font-size: 12px;
-  padding: 2px 8px 2px 0px;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketBoxes_32e6r
-  .appfilterpane_Row_1J53P
-  .appfilterpane_Checkbox_2AOkQ:hover {
-  color: #fff;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketBoxes_32e6r
-  .appfilterpane_Row_1J53P
-  .appfilterpane_Checkbox_2AOkQ
-  svg {
-  width: 14px;
-  height: 14px;
-  margin-left: 1px;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketBoxes_32e6r
-  .appfilterpane_Row_1J53P
-  .appfilterpane_Checkbox_2AOkQ.DialogCheckbox_Container {
-  margin-bottom: 0px;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketBoxes_32e6r
-  .appfilterpane_Row_1J53P
-  .appfilterpane_Checkbox_2AOkQ
-  .DialogCheckbox {
-  width: 16px;
-  height: 16px;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .appfilterpane_FilterBucketBoxes_32e6r
-  .appfilterpane_Row_1J53P
-  .appfilterpane_Checkbox_2AOkQ
-  .DialogToggle_Label {
-  white-space: nowrap;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi.appfilterpane_SearchResultsBox_MIMuV
-  .appfilterpane_FilterBucketBoxes_32e6r {
-  position: absolute;
-  top: 47px;
-  left: 0;
-  min-width: 100%;
-  z-index: 1;
-  padding: 4px 8px;
-  border-radius: 4px;
-  background-color: #636874;
-  box-shadow: 0px 2px 8px 1px #000;
-  opacity: 0;
-  pointer-events: none;
-}
-div.ShortWindow
-  .appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi.appfilterpane_SearchResultsBox_MIMuV
-  .appfilterpane_FilterBucketBoxes_32e6r {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi.appfilterpane_SearchResultsBox_MIMuV:focus-within
-  .appfilterpane_FilterBucketBoxes_32e6r {
-  opacity: 1;
-  pointer-events: all;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .DialogInput_Wrapper {
-  margin-top: 6px;
-  border-radius: 3px;
-  outline: none;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .DialogInput_Wrapper
-  .DialogTextInputBase {
-  font-size: 12px;
-  padding: 2px 8px;
-  background: rgba(0, 0, 0, 0.25);
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .DialogInput_Wrapper
-  .DialogTextInputBase:hover {
-  background: #1e1f23;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .DialogInput_Wrapper
-  .DialogTextInputBase.Focusable:focus {
-  outline: none;
-  background-color: #fff;
-  color: #0e141b;
-}
-.appfilterpane_Container_170Np
-  .appfilterpane_FilterArea_1ennW
-  .appfilterpane_FilterBucket_1axoi
-  .DialogInput_ClearAction {
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  right: 6px;
-  top: 5px;
-  cursor: pointer;
-}
-.appfilterpane_Container_170Np .appfilterpane_SaveButton_1bqGA {
-  width: fit-content;
-  max-width: 100%;
-  margin: 4px auto;
-  padding: 0 12px;
-}
-.appfilterpane_Container_170Np .appfilterpane_SaveButton_1bqGA:disabled,
-.appfilterpane_Container_170Np .appfilterpane_SaveButton_1bqGA:disabled:hover {
-  color: gray;
-  background: rgba(61, 67, 77, 0.5);
-  pointer-events: none;
-}
 .collapseicon_Container_3SFRZ {
   height: 16px;
   padding: 0px 0px 0px 4px;
@@ -449,6 +170,24 @@ div.ShortWindow
   to {
     background: #3d4450;
     color: #fff;
+  }
+}
+@keyframes collectionview_ItemFocusAnim-grey_1B17a {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes collectionview_ItemFocusAnimBorder-darkGrey_Dd-kj {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
   }
 }
 @keyframes collectionview_ItemFocusAnim-green_2ahAf {
@@ -839,6 +578,10 @@ div.ShortWindow
   font-weight: 300;
 }
 .gamelistentry_Container_2-O4Z.gamelistentry_CloudError_cMb2t {
+  color: #26b7ff;
+  font-weight: 300;
+}
+.gamelistentry_Container_2-O4Z.gamelistentry_CloudOutOfDate_26PT_ {
   color: #26b7ff;
   font-weight: 300;
 }
@@ -3876,4 +3619,4 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   margin: 6px 4px;
 }
 
-/*# sourceMappingURL=6.css.map*/
+/*# sourceMappingURL=7.css.map*/

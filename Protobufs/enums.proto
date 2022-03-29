@@ -141,6 +141,7 @@ enum EGraphicsPerfOverlayLevel {
 	k_EGraphicsPerfOverlayLevel_Basic = 1;
 	k_EGraphicsPerfOverlayLevel_Medium = 2;
 	k_EGraphicsPerfOverlayLevel_Full = 3;
+	k_EGraphicsPerfOverlayLevel_Minimal = 4;
 }
 
 enum EGPUPerformanceLevel {
@@ -150,6 +151,14 @@ enum EGPUPerformanceLevel {
 	k_EGPUPerformanceLevel_Low = 3;
 	k_EGPUPerformanceLevel_High = 4;
 	k_EGPUPerformanceLevel_Profiling = 5;
+}
+
+enum EScalingFilter {
+	k_EScalingFilter_Invalid = 0;
+	k_EScalingFilter_FSR = 1;
+	k_EScalingFilter_Nearest = 2;
+	k_EScalingFilter_Integer = 3;
+	k_EScalingFilter_Linear = 4;
 }
 
 enum ECPUGovernor {
@@ -172,7 +181,6 @@ enum EUpdaterType {
 
 enum EUpdaterState {
 	k_EUpdaterState_Invalid = 0;
-	k_EUpdaterState_Error = 1;
 	k_EUpdaterState_UpToDate = 2;
 	k_EUpdaterState_Checking = 3;
 	k_EUpdaterState_Available = 4;
@@ -209,4 +217,47 @@ enum ESteamDeckCompatibilityResultDisplayType {
 	k_ESteamDeckCompatibilityResultDisplayType_Unsupported = 2;
 	k_ESteamDeckCompatibilityResultDisplayType_Playable = 3;
 	k_ESteamDeckCompatibilityResultDisplayType_Verified = 4;
+}
+
+enum EACState {
+	k_EACState_Unknown = 0;
+	k_EACState_Disconnected = 1;
+	k_EACState_Connected = 2;
+	k_EACState_ConnectedSlow = 3;
+}
+
+enum EBatteryState {
+	k_EBatteryState_Unknown = 0;
+	k_EBatteryState_Discharging = 1;
+	k_EBatteryState_Charging = 2;
+	k_EBatteryState_Full = 3;
+}
+
+enum EOSBranch {
+	k_EOSBranch_Unknown = 0;
+	k_EOSBranch_Release = 1;
+	k_EOSBranch_ReleaseCandidate = 2;
+	k_EOSBranch_Beta = 3;
+	k_EOSBranch_BetaCandidate = 4;
+	k_EOSBranch_Main = 5;
+}
+
+enum ECommunityItemClass {
+	k_ECommunityItemClass_Invalid = 0;
+	k_ECommunityItemClass_Badge = 1;
+	k_ECommunityItemClass_GameCard = 2;
+	k_ECommunityItemClass_ProfileBackground = 3;
+	k_ECommunityItemClass_Emoticon = 4;
+	k_ECommunityItemClass_BoosterPack = 5;
+	k_ECommunityItemClass_Consumable = 6;
+	k_ECommunityItemClass_GameGoo = 7;
+	k_ECommunityItemClass_ProfileModifier = 8;
+	k_ECommunityItemClass_Scene = 9;
+	k_ECommunityItemClass_SalienItem = 10;
+	k_ECommunityItemClass_Sticker = 11;
+	k_ECommunityItemClass_ChatEffect = 12;
+	k_ECommunityItemClass_MiniProfileBackground = 13;
+	k_ECommunityItemClass_AvatarFrame = 14;
+	k_ECommunityItemClass_AnimatedAvatar = 15;
+	k_ECommunityItemClass_SteamDeckKeyboardSkin = 16;
 }

@@ -526,6 +526,7 @@ SelectMousePosition
 .EditAlwaysOnButton.controller_ps5  #BackgroundController,
 .EditAlwaysOnButton.controller_ps4  #BackgroundController,
 .EditAlwaysOnButton.controller_ps3  #BackgroundController,
+.EditAlwaysOnButton.controller_neptune  #BackgroundController,
 .EditAlwaysOnButton.controller_xboxone  #BackgroundController,
 .EditAlwaysOnButton.controller_xboxelite  #BackgroundController,
 .EditAlwaysOnButton.controller_xbox360  #BackgroundController,
@@ -653,6 +654,13 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_controller.png");
 }
 
+.controller_neptune #BackgroundController {
+	background-position: 500px 95px;
+	background-size: 725px 293px;
+	background-image: url("file://{images}/library/controller/controller_config_controller_steam_deck.png");
+	wash-color: #102f4b72;
+}
+
 .controller_ps4 #BackgroundController
 {
 	background-position: 500px 95px;
@@ -751,6 +759,7 @@ SelectMousePosition
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+.controller_neptune #BackgroundBaseLinesLeft,
 .controller_ps4 #BackgroundBaseLinesLeft,
 .controller_ps3 #BackgroundBaseLinesLeft,
 .controller_xboxone #BackgroundBaseLinesLeft,
@@ -777,7 +786,7 @@ SelectMousePosition
     background-position: 140px -84px;
 }
 
-
+.controller_neptune #BackgroundBaseLinesRight,
 .controller_ps4 #BackgroundBaseLinesRight,
 .controller_ps3 #BackgroundBaseLinesRight,
 .controller_xboxone #BackgroundBaseLinesRight,
@@ -788,9 +797,9 @@ SelectMousePosition
 .controller_android #BackgroundBaseLinesRight,
 .controller_apple #BackgroundBaseLinesRight,
 {
-    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
-    background-position: 190px -70px;
-    transform: scalex( -1 );
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
+	background-position: 190px -70px;
+	transform: scalex( -1 );
 }
 
 .controller_ps5 #BackgroundBaseLinesRight,
@@ -831,6 +840,7 @@ SelectMousePosition
      background-position: -125px -45px;
 }
 
+.controller_neptune #BackgroundLines.LeftTriggerSelected,
 .controller_ps4 #BackgroundLines.LeftTriggerSelected,
 .controller_ps3 #BackgroundLines.LeftTriggerSelected,
 .controller_xboxone #BackgroundLines.LeftTriggerSelected,
@@ -859,6 +869,7 @@ SelectMousePosition
     background-position: -125px -45px;
 }
 
+.controller_neptune #BackgroundLines.LeftBumperSelected,
 .controller_ps4 #BackgroundLines.LeftBumperSelected,
 .controller_ps3 #BackgroundLines.LeftBumperSelected,
 .controller_xboxone #BackgroundLines.LeftBumperSelected,
@@ -877,6 +888,7 @@ SelectMousePosition
     background-position: -230px -72px;
 }
 
+.controller_neptune #BackgroundLines.LeftGripSelected, 
 .controller_ps5 #BackgroundLines.LeftGripSelected, 
 .controller_ps4 #BackgroundLines.LeftGripSelected, 
 .controller_ps3 #BackgroundLines.LeftGripSelected,
@@ -892,6 +904,7 @@ SelectMousePosition
     visibility: collapse;
 }
 
+.controller_neptune #BackgroundLines.RightGripSelected,
 .controller_ps5 #BackgroundLines.RightGripSelected,
 .controller_ps4 #BackgroundLines.RightGripSelected,
 .controller_ps3 #BackgroundLines.RightGripSelected,
@@ -951,6 +964,7 @@ SelectMousePosition
         background-position: -62px -43px;
 }
 
+.controller_neptune #BackgroundLines.RightTriggerSelected,
 .controller_ps4 #BackgroundLines.RightTriggerSelected,
 .controller_ps3 #BackgroundLines.RightTriggerSelected,
 .controller_xboxone #BackgroundLines.RightTriggerSelected,
@@ -980,6 +994,7 @@ SelectMousePosition
     background-position: -62px -45px;
 }
 
+.controller_neptune #BackgroundLines.RightBumperSelected,
 .controller_ps4 #BackgroundLines.RightBumperSelected,
 .controller_ps3 #BackgroundLines.RightBumperSelected,
 .controller_xboxone #BackgroundLines.RightBumperSelected,
@@ -1050,6 +1065,7 @@ SelectMousePosition
     background-position: -118px -60px;
 }
 
+.controller_neptune #BackgroundLines.DPadSelected,
 .controller_ps4 #BackgroundLines.DPadSelected,
 .controller_ps3 #BackgroundLines.DPadSelected,
 .controller_xboxone #BackgroundLines.LeftJoystickSelected,
@@ -1061,7 +1077,7 @@ SelectMousePosition
 .controller_apple #BackgroundLines.DPadSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
-    background-position: -120px -73px;
+	background-position: -120px -73px;
 }
 
 .controller_mobile_touch #BackgroundLines.DPadSelected
@@ -1086,6 +1102,7 @@ SelectMousePosition
     background-position: -120px -70px;
 }
 
+.controller_neptune #BackgroundLines.LeftJoystickSelected,
 .controller_ps4 #BackgroundLines.LeftJoystickSelected,
 .controller_ps3 #BackgroundLines.LeftJoystickSelected,
 .controller_xboxone #BackgroundLines.DPadSelected,
@@ -1094,7 +1111,8 @@ SelectMousePosition
 .controller_generic #BackgroundLines.DPadSelected,
 .controller_switch_pro #BackgroundLines.DPadSelected,
 .controller_android #BackgroundLines.LeftJoystickSelected,
-.controller_apple #BackgroundLines.LeftJoystickSelected {
+.controller_apple #BackgroundLines.LeftJoystickSelected 
+{
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
     background-position: -120px -73px;
 }
@@ -1115,6 +1133,7 @@ SelectMousePosition
     background-position: -60px -65px;
 }
 
+.controller_neptune #BackgroundLines.SlotThreeSelected,
 .controller_ps4 #BackgroundLines.SlotThreeSelected,
 .controller_ps3 #BackgroundLines.SlotThreeSelected,
 .controller_xboxone #BackgroundLines.SlotThreeSelected,
@@ -1138,6 +1157,7 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_10.png");
 }
 
+.controller_neptune #BackgroundLines.SlotABXYSelected,
 .controller_ps4 #BackgroundLines.SlotABXYSelected,
 .controller_ps3 #BackgroundLines.SlotABXYSelected,
 .controller_xboxone #BackgroundLines.SlotABXYSelected,
@@ -1169,6 +1189,7 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
 }
 
+.controller_neptune #BackgroundLines.SlotFourSelected,
 .controller_ps5 #BackgroundLines.SlotFourSelected,
 .controller_ps4 #BackgroundLines.SlotFourSelected,
 .controller_ps3 #BackgroundLines.SlotFourSelected,
@@ -1209,6 +1230,7 @@ SelectMousePosition
     background-position: -83px -12px;
 }
 
+.controller_neptune #BackgroundLines.BackButtonSelected
 .controller_ps4 #BackgroundLines.BackButtonSelected
 {
     background-position: -175px -130px;
@@ -1265,6 +1287,7 @@ SelectMousePosition
     background-position: -88px -12px;
 }
 
+.controller_neptune #BackgroundLines.StartButtonSelected,
 .controller_ps4 #BackgroundLines.StartButtonSelected
 {
     background-position: -7px -130px;
@@ -1375,6 +1398,7 @@ SelectMousePosition
     z-index: 1000;
 }
 
+.controller_neptune #PS4TrackpadContainer,
 .controller_ps5 #PS4TrackpadContainer,
 .controller_ps4 #PS4TrackpadContainer,
 .controller_mobile_touch #PS4TrackpadContainer
@@ -1612,6 +1636,8 @@ SelectMousePosition
 	visibility: visible;
 }
 
+.controller_neptune .ModeWrapper.SteamController,
+.controller_neptune .ModeWrapper.LJoyLeft,
 .controller_ps5 .ModeWrapper.SteamController,
 .controller_ps4 .ModeWrapper.SteamController,
 .controller_ps3 .ModeWrapper.SteamController,
@@ -1635,9 +1661,11 @@ SelectMousePosition
 .controller_apple .ModeWrapper.LJoyLeft,
 .controller_mobile_touch .ModeWrapper.LJoyLeft,
 {
-    visibility: collapse;
+	visibility: collapse;
 }
 
+.controller_neptune .ModeWrapper.TraditionalController,
+.controller_neptune .ModeWrapper.LJoyCenter,
 .controller_ps5 .ModeWrapper.TraditionalController,
 .controller_ps5 .ModeWrapper.LJoyCenter,
 .controller_ps4 .ModeWrapper.TraditionalController,
@@ -1661,7 +1689,7 @@ SelectMousePosition
 .controller_mobile_touch .ModeWrapper.TraditionalController,
 .controller_mobile_touch .ModeWrapper.LJoyCenter,
 {
-    visibility: visible;
+	visibility: visible;
 }
 
 .ModeWrapper.TraditionalController,
@@ -2378,6 +2406,7 @@ ControllerPropertiesMode, ControllerPropertiesActivator
     visibility: collapse;
 }
 
+.controller_neptune #GyroModeContainer,
 .controller_ps5 #GyroModeContainer,
 .controller_ps4 #GyroModeContainer,
 .controller_mobile_touch #GyroModeContainer 
@@ -2515,7 +2544,6 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-bottom: 4px;
 }
 
-
 .controller_ps5 #ModeContainer #ABXYButtonA,
 .controller_ps4 #ModeContainer #ABXYButtonA,
 .controller_ps3 #ModeContainer #ABXYButtonA {
@@ -2530,6 +2558,7 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 }
 
 #ModeContainer #ABXYButtonA,
+.controller_neptune.UpperGrips #ModeContainer #ABXYButtonA,
 .controller_ps5.UpperGrips #ModeContainer #ABXYButtonA,
 .controller_ps4.UpperGrips #ModeContainer #ABXYButtonA
 {
@@ -2537,6 +2566,7 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 }
 
 #ModeContainer #ABXYButtonA Label,
+.controller_neptune.UpperGrips #ModeContainer #ABXYButtonA Label,
 .controller_ps5.UpperGrips #ModeContainer #ABXYButtonA Label,
 .controller_ps4.UpperGrips #ModeContainer #ABXYButtonA Label
 {
@@ -2544,6 +2574,7 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-left: 65px;
 }
 
+.controller_neptune #ModeContainer #ABXYButtonA Label,
 .controller_ps5 #ModeContainer #ABXYButtonA Label,
 .controller_ps3 #ModeContainer #ABXYButtonA Label,
 .controller_ps4 #ModeContainer #ABXYButtonA Label
@@ -2566,6 +2597,7 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 }
 
 #ModeContainer #ABXYButtonB,
+.controller_neptune.UpperGrips #ModeContainer #ABXYButtonB,
 .controller_ps5.UpperGrips #ModeContainer #ABXYButtonB,
 .controller_ps4.UpperGrips #ModeContainer #ABXYButtonB
 {
@@ -2573,13 +2605,15 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 }
 
 #ModeContainer #ABXYButtonB Label,
+.controller_neptune.UpperGrips #ModeContainer #ABXYButtonB Label,
 .controller_ps5.UpperGrips #ModeContainer #ABXYButtonB Label,
-.controller_ps4.UpperGrips #ModeContainer #ABXYButtonB Label,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonB Label
 {
 	color: #ff0000;
 	margin-left: 65px;
 }
 
+.controller_neptune #ModeContainer #ABXYButtonB Label,
 .controller_ps5 #ModeContainer #ABXYButtonB Label,
 .controller_ps3 #ModeContainer #ABXYButtonB Label,
 .controller_ps4 #ModeContainer #ABXYButtonB Label
@@ -2645,6 +2679,7 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 }
 
 #ModeContainer #ABXYButtonY Label,
+.controller_neptune.UpperGrips #ModeContainer #ABXYButtonY Label,
 .controller_ps5.UpperGrips #ModeContainer #ABXYButtonY Label,
 .controller_ps4.UpperGrips #ModeContainer #ABXYButtonY Label
 {

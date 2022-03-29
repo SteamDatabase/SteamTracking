@@ -137,7 +137,7 @@ message CStore_GetStorePreferences_Request {
 }
 
 message CStore_UserPreferences {
-	optional uint32 primary_language = 1;
+	optional int32 primary_language = 1;
 	optional uint32 secondary_languages = 2;
 	optional bool platform_windows = 3;
 	optional bool platform_mac = 4;

@@ -1,3 +1,4 @@
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/../common/hiddevicesdl.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/ClientJobRemoteStorageSync.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/appdatacache.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/appdatacache.h
@@ -14,6 +15,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientdfsconnection.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientdrm.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientgamestats.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clienthttp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientinventory.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientjob.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientjob.h
@@ -98,6 +100,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/steamp2pvoice.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/streamingfeature.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/subscribedfilelistcache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemlogcollector.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/ugcmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/unified_messages_client.cpp
@@ -292,12 +295,14 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p_ice.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p_webrtc.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_client.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_common.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_common.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_p2p.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_snp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_snp.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_stun.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_udp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_network_config.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_network_config.h

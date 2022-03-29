@@ -3,9 +3,9 @@
  CFRelease
  CFStringGetCStringPtr
  CVProfile_ExitScope
- CValidator::ClaimArrayMemory(void*)
- CValidator::ClaimMemory(void*)
- CValidator::IsClaimed(void*)
+ CValidator::ClaimArrayMemory(void const*)
+ CValidator::ClaimMemory(void const*)
+ CValidator::IsClaimed(void const*) const
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  FSPathMakeRef

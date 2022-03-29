@@ -304,6 +304,13 @@ message CMsgHistoryChanged {
 	repeated .CHistoryEntry entries = 3;
 }
 
+message CMsgLoadError {
+	optional uint32 browser_handle = 1;
+	optional int32 error_code = 2;
+	optional string url = 3;
+	optional string error_description = 4;
+}
+
 message CHTMLHeader {
 	optional string key = 1;
 	optional string value = 2;
@@ -973,4 +980,14 @@ message CMsgBrowserViewPostMessageToParentRequest {
 	optional string message = 2;
 	optional string args = 3;
 	optional string requesting_url = 4;
+}
+
+message CMsgBlockedRequest {
+	optional uint32 browser_handle = 1;
+	optional string url = 2;
+}
+
+message CMsgSetProtocolBlockList {
+	optional uint32 browser_handle = 1;
+	optional string list = 2;
 }

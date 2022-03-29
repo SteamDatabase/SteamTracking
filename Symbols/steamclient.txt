@@ -84,13 +84,13 @@
  CGMainDisplayID
  CUniformRandomStream::CUniformRandomStream()
  CVProfile_ExitScope
- CValidator::ClaimArrayMemory(void*)
+ CValidator::ClaimArrayMemory(void const*)
  CValidator::ClaimConnection(unsigned int)
- CValidator::ClaimMemory(void*)
- CValidator::ClaimMemory_Aligned(void*)
+ CValidator::ClaimMemory(void const*)
+ CValidator::ClaimMemory_Aligned(void const*)
  CValidator::ClaimSocket(int)
  CValidator::ClaimUntrackedMemory(unsigned long)
- CValidator::IsClaimed(void*)
+ CValidator::IsClaimed(void const*) const
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  CatchAndWriteMiniDumpForVoidPtrFn
@@ -199,6 +199,7 @@
  Plat_GetExecutablePathUTF8
  Plat_IsChromeOS
  Plat_IsGamepadUI
+ Plat_IsGamescope
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
  Plat_IsSteamDeck
@@ -630,6 +631,7 @@
  g_VProfProfilesRunningCount
  g_VProfile
  g_pMemAllocSteam
+ gai_strerror
  getaddrinfo
  getcontext
  getcwd
@@ -938,6 +940,7 @@
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::append(wchar_t const*, unsigned long)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::basic_string(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::basic_string(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&, unsigned long, unsigned long, std::__1::allocator<wchar_t> const&)
+ std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::operator=(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::push_back(wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::resize(unsigned long, wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_string()

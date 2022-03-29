@@ -151,15 +151,28 @@
 			{
 				"activators"
 				{
-					"Full_Press"
+					"Start_Press"
 					{
 						"bindings"
 						{
-							"binding"		"key_press NEXT_TRACK"
+							"binding"		"controller_action brightness_up"
 						}
 						"settings"
 						{
 							"haptic_intensity"		"1"
+						}
+					}
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action brightness_up"
+						}
+						"settings"
+						{
+							"hold_repeats"		"1"
+							"repeat_rate" "20"
+							"haptic_intensity"		"0"
 						}
 					}
 				}
@@ -168,15 +181,28 @@
 			{
 				"activators"
 				{
-					"Full_Press"
+					"Start_Press"
 					{
 						"bindings"
 						{
-							"binding"		"key_press PREV_TRACK"
+							"binding"		"controller_action brightness_down"
 						}
 						"settings"
 						{
 							"haptic_intensity"		"1"
+						}
+					}
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action brightness_down"
+						}
+						"settings"
+						{
+							"hold_repeats"		"1"
+							"repeat_rate" "20"
+							"haptic_intensity"		"0"
 						}
 					}
 				}
@@ -186,7 +212,7 @@
 		{
 			"requires_click"		"0"
 			"layout"		"3"
-			"deadzone"		"29659"
+			"deadzone"		"12000"
 		}
 	}
 	"group"

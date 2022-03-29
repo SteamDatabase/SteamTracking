@@ -14,11 +14,14 @@
  CFStringCompare
  CFStringCreateWithCString
  CFStringGetCString
+ CFStringGetFileSystemRepresentation
  CFStringGetTypeID
+ CFURLCopyFileSystemPath
+ CFURLCreateFromFSRef
  CVProfile_ExitScope
- CValidator::ClaimArrayMemory(void*)
- CValidator::ClaimMemory(void*)
- CValidator::IsClaimed(void*)
+ CValidator::ClaimArrayMemory(void const*)
+ CValidator::ClaimMemory(void const*)
+ CValidator::IsClaimed(void const*) const
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  CanBreakBetween
@@ -33,6 +36,7 @@
  FSEventStreamScheduleWithRunLoop
  FSEventStreamStart
  FSEventStreamStop
+ FSGetVolumeInfo
  GetOSType
  KeyValuesSystemSteam
  Msg
@@ -195,6 +199,7 @@
  g_pMemAllocSteam
  getaddrinfo
  getcwd
+ getenv
  getpid
  gettimeofday
  glBegin
@@ -217,6 +222,7 @@
  glTexParameteri
  glVertex2f
  kCFAbsoluteTimeIntervalSince1970
+ kCFAllocatorDefault
  kCFPreferencesAnyApplication
  kCFPreferencesAnyHost
  kCFPreferencesCurrentUser
@@ -258,6 +264,7 @@
  snprintf
  sscanf
  stat$INODE64
+ statfs$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__call_once(unsigned long volatile&, void*, void (*)(void*))
  std::__1::__next_prime(unsigned long)

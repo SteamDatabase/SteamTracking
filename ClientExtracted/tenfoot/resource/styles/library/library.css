@@ -6092,6 +6092,11 @@ ParentalButton #ParentalLockImageLocked
 	background-image: url( "file://{images}/controller_icon_steamcontroller.png" );
 }
 
+.ControllerOrderImage.controller_neptune
+{
+	background-image: url( "file://{images}/controller_icon_neptune.png" );
+}
+
 .ControllerOrderImage.controller_ps5
 {
     background-image: url( "file://{images}/controller_icon_ps5.png" );
@@ -6229,6 +6234,11 @@ ControllerConfigSelectController #ButtonCancel
 #SelectControllerButton.Button.controller_steamcontroller_gordon
 {
 	background-image: url( "file://{images}/controller_icon_steamcontroller.png" );
+}
+
+#SelectControllerButton.Button.controller_neptune
+{
+	background-image: url( "file://{images}/controller_icon_neptune.png" );
 }
 
 #SelectControllerButton.Button.controller_ps5

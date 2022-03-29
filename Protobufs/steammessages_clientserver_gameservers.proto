@@ -48,7 +48,6 @@ message CMsgGameServerData {
 	}
 
 	optional uint32 revision = 24;
-	optional fixed64 steam_id_gs = 1;
 	optional uint32 query_port = 3;
 	optional uint32 game_port = 4;
 	optional uint32 spectator_port = 5;

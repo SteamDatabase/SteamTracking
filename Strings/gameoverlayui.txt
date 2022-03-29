@@ -4,7 +4,7 @@ __TEXT
 .
 __text
 __TEXT
-)=&
+yX&
 __stubs
 __TEXT
 __stub_helper
@@ -37,34 +37,32 @@ __DATA
 .
 __la_symbol_ptr
 __DATA
-8
+@
 __mod_init_func
 __DATA
 __const
 __DATA
 __cfstring
 __DATA
-@jB
-@jB
 __objc_classlist__DATA
+PmB
+PmB
 __objc_imageinfo__DATA
+XmB
+XmB
 __objc_const
 __DATA
+`mB
+`mB
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
-xnB
-xnB
 __objc_superrefs__DATA
 __objc_ivar
 __DATA
-oB
-oB
 __objc_data
 __DATA
-(oB
 P
-(oB
 __data
 __DATA
 __thread_vars
@@ -77,17 +75,16 @@ __thread_bss
 __DATA
 __bss
 __DATA
-I=
+y^
 __common
 __DATA
 H
 __LINKEDIT
-@C
 
 @
 @loader_path/gameoverlayui.dylib
 "
-+C
+p+C
 P
 k
 l
@@ -137,6 +134,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+x;C
+(G
 )
 C
 23IClientParentalSettings
@@ -373,7 +372,7 @@ N10CBasePanel31CCallback_OnMicroTxnAuthRequestE
 13CCallbackImplILi16EE
 N10CBasePanel40CCallback_OnGameOverlayActivateRequestedE
 9CCallbackI10CBasePanelK30GameOverlayActivateRequested_tLb0EE
-13CCallbackImplILi8472EE
+13CCallbackImplILi8476EE
 N10CBasePanel22CCallback_OnLowBatteryE
 9CCallbackI10CBasePanel17LowBatteryPower_tLb0EE
 13CCallbackImplILi1EE
@@ -7123,6 +7122,7 @@ $
 (
 5
 4
+,
 )
 ,
 0
@@ -7271,6 +7271,7 @@ X
 0
 8
 8
+0
 (
 8
 0
@@ -7339,6 +7340,8 @@ H
 (
 (
 8
+(
+(
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -7387,6 +7390,7 @@ H
 14CMsgURLChanged
 13CHistoryEntry
 18CMsgHistoryChanged
+13CMsgLoadError
 11CHTMLHeader
 21CHTMLPageSecurityInfo
 19CMsgFinishedRequest
@@ -7501,6 +7505,8 @@ H
 17CMsgStartDownload
 16CMsgSetTopWindow
 41CMsgBrowserViewPostMessageToParentRequest
+18CMsgBlockedRequest
+24CMsgSetProtocolBlockList
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
@@ -8427,16 +8433,12 @@ resource/layout/subpaneloptionsbrowser.layout
 GameOverlayHomePage
 about:blank
 GameOverlaySettingsChanged
-ClearWebCache
-#Steam_Settings_Browser_ClearWebCacheTitle
-#Steam_Settings_Browser_ClearWebCacheMsg
+ClearAllBrowserData
+#Steam_SettingsBrowserDeleteAllData
+#Steam_SettingsBrowserDeleteAllDataMsg
 Command
 command
-ReallyClearWebCache
-ClearCookies
-#Steam_Settings_Browser_DeleteTitle
-#Steam_Settings_Browser_DeleteMsg
-ReallyClearCookies
+ReallyClearAllBrowserData
 CSettingsSubBrowser
 Software\Valve\Steam\ClientBrowserAuth
 JoinGameNotifyCheck
@@ -8720,11 +8722,6 @@ paypal_success
 try { OnPayPalSuccess( %llu ); } catch (e) {}
 paypal_cancel
 try { OnPayPalCancel( %llu ); } catch (e) {}
-clickandbuy_success
-'
-try { OnClickAndBuySuccess( '%s', '%s', '%s', '%s' ); } catch(e) {}
-clickandbuy_cancel
-try { OnClickAndBuyCancel(); } catch(e) {}
 LoadTGA: Only type 2 and 10 targa RGB images supported
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
 -quicklogin
@@ -9839,8 +9836,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Mar 14 2022
-12:50:19
+Mar 28 2022
+09:05:29
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10773,6 +10770,8 @@ google.protobuf.SourceCodeInfo.Location.trailing_comments
 google.protobuf.SourceCodeInfo.Location.leading_detached_comments
 google.protobuf.GeneratedCodeInfo.Annotation.source_file
 CHECK failed: GetArena() == nullptr:
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 _InternalSerialize
 ./google/protobuf/extension_set.h
 !is_large()
@@ -13175,7 +13174,6 @@ ConVar::InternalSetValue: called with NULL
 Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.Did you mean to do `%s %s` instead?
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 m_vecCallbacks.Count() == 0
-%lf
 pDefaultValue
 console
 Attempted to change replicated CVar when you are not the GM
@@ -13195,6 +13193,7 @@ fcntl failed to set F_NOCACHE
 *
 rb
 %lld
+%lf
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 BIsOpen()
 cubBytesToRead < INT32_MAX
@@ -13317,6 +13316,7 @@ v
 b
 \
 ?
+'
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
@@ -13365,6 +13365,7 @@ NIL
 %04u%02u%02u%02u%02u%02u
 %04u-%02u-%02u %02u:%02u:%02u
 %s %s
+FormatCurrencyUTF8
 $
 CHF
 R$
@@ -13396,6 +13397,8 @@ lei
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.cpp
 Unknown currency code %d
 %s%s
+GetLocStream
+GetLocStream - Init Stream
 stream::imbue() failed with locale: '%s'
 C
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
@@ -13538,6 +13541,8 @@ Signature check failed
 Failed to parse input
 No verified phone number
 Insufficient battery charge
+Charger required
+Cached credential is invalid
 Invalid
 Public
 Beta
@@ -13668,6 +13673,7 @@ controller_front_panel_board
 controller_keyboard_generic
 controller_mouse_generic
 controller_switch_pro_generic
+controller_neptune
 controller_ps5
 controller_xboxelite
 optional
@@ -13807,46 +13813,18 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
+X&
 0
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-&
+&%
 Ic
-%
-%
-%
-%
-%
-%
-%
 p
 0
--
 0
 p
 0
-d%
-"%
+7A
+A
+>%
 j
 j
 j
@@ -13856,88 +13834,89 @@ j
 j
 j
 j
+s%
+.$
+A
+A
+A
 %
-%
-%
-%
-L%
 0
+%
+%
+A%
+A%
+5%
 p
 0
+.
+#%
+j
+j
+j
+j
+j
+j
+8.
 %
 %
 %
-j
-j
-j
-j
-j
-j
-w$
-j
-j
-m$
-$
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
 j
 j
 #
-m"
-F$
+#
 j
 j
 j
 j
-/"
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 $
 $
 $
 $
+$
 j
 j
 j
@@ -13957,18 +13936,25 @@ j
 j
 j
 j
-p#
-?
-?
-?
-L#
+j
+j
+j
+j
+.
+.
+$
+$
+$
+l#
 0
+K#
+&#
 A9]
-#
-#
-#
-K.
 d
+#
+#
+#
+#
 j
 j
 j
@@ -13981,27 +13967,24 @@ j
 j
 j
 j
-O#
-2#
-w>
+*
+n>
+V#
+T#
+?
+?
+?
+?
 
 
 
 
 
+4#
 @
 
 0
-s"
-n"
-#
-#
-#
-#
-#
-#
-#
-#
+a>
 p
 0
 p
@@ -14023,78 +14006,79 @@ p
 p
 p
 p
->
->
+6&
+e0
+$>
 @
 =
+"
 
+"
+w"
+`
 0
 0
 \
+/
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+v!
+j
+j
 !"
-h!
 j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-=
-j
-=
-=
-j
-=
-=
-j
+.
+.
 =
 =
 =
 =
-j
-j
-j
-j
-j
-j
-j
-j
+=
+=
+=
+=
+=
+b
 "
-j
-j
-j
 "
-j
-j
-j
-j
 "
-j
-!
-!
-!
-!
-!
+"
+=!
 !
 Hi
-}<
-}<
-j
-j
-j
-j
-j
-!
-o
-F
 !
 !
-!
-!
+'(
+j
+j
+j
+j
+j
+C!
 j
 j
 j
@@ -14108,14 +14092,21 @@ j
 j
 j
 j
+<
+<
+<
+<
+<
+<
 0
 p
 0
-*
+!
+1
 #
 #
+'
 #
-P;
 j
 j
 j
@@ -14150,7 +14141,6 @@ AT=
 D
 @
 @
-#
 @
 Hc
 Hc
@@ -14182,13 +14172,14 @@ IcE
 IcE
 @
 @
-%
 V
 =
 =
-K,
+#
+,
 @
-c
+*
+)
 @
 M9e
 @
@@ -14384,30 +14375,31 @@ P
 |
 @
 @
-!
-!
-1(
+/!
+[
+{(
 d
 
 
 
-'
-'
+
+
+
+p
+o
+
 A+M
-M
-t7f93'
-
-
-
+4
 j
 j
 j
 j
 j
 j
+f
 =
 0
-
+5
 j
 j
 j
@@ -14421,6 +14413,11 @@ j
 j
 
 
+
+&
+
+
+
 j
 j
 j
@@ -14439,11 +14436,12 @@ j
 j
 j
 
-l%
+e%
 d
 &
 &
 d
+x%
 0
 A+4$A+u
 ~m=
@@ -14571,6 +14569,7 @@ j
 j
 j
 j
+L
 @
 @
 &
@@ -14637,6 +14636,7 @@ j
 j
 .
 d
+
 =
 
 =

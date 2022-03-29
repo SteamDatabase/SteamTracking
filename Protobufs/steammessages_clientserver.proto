@@ -112,11 +112,16 @@ message CMsgClientGamesPlayed {
 		optional .CMsgIPAddress game_ip_address = 23;
 		optional uint32 controller_connection_type = 24 [default = 0];
 		optional int32 game_os_platform = 25;
+		optional uint32 game_build_id = 26;
+		optional uint32 compat_tool_id = 27 [default = 0];
+		optional string compat_tool_cmd = 28;
+		optional uint32 compat_tool_build_id = 29;
 	}
 
 	repeated .CMsgClientGamesPlayed.GamePlayed games_played = 1;
 	optional uint32 client_os_type = 2;
 	optional uint32 cloud_gaming_platform = 3;
+	optional bool recent_reauthentication = 4;
 }
 
 message CMsgGSApprove {

@@ -1,6 +1,6 @@
 /* Third-party software licenses can be found at licenses.txt */
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [2],
+  [3],
   {
     Jbdm: function (n, t, o) {
       n.exports = {
@@ -16,75 +16,53 @@
       "use strict";
       o.r(t),
         o.d(t, "AwardIcon", function () {
-          return m;
+          return u;
         }),
         o.d(t, "AwardIconList", function () {
           return I;
         });
-      var e = o("mrSG"),
-        a = o("q1tI"),
-        r = o.n(a),
+      var e = o("q1tI"),
+        a = o.n(e),
         c = (o("+z9g"), o("ascj")),
-        i = o("5E+2"),
-        s = o("Jbdm"),
-        p = o.n(s),
-        u = o("TLQK"),
-        d = o("exH9"),
-        m = (function (n) {
-          function t() {
-            return (null !== n && n.apply(this, arguments)) || this;
-          }
-          return (
-            Object(e.d)(t, n),
-            (t.prototype.render = function () {
-              var n = Object(u.n)(
-                "#RewardsReaction_Tooltip",
-                this.props.reaction.count || 0,
-                Object(c.a)(this.props.reaction.reaction_type)
-              );
-              return r.a.createElement(
-                i.d,
-                {
-                  className: Object(d.a)(p.a.InfoContainer, p.a.IconContainer),
-                  toolTipContent: n,
-                },
-                r.a.createElement("img", {
-                  className: p.a.IconImg,
-                  src: Object(c.b)(this.props.reaction.reaction_type, !1),
-                }),
-                this.props.reaction.count &&
-                  r.a.createElement(
-                    "div",
-                    { className: p.a.ReactionCount },
-                    this.props.reaction.count
-                  )
-              );
-            }),
-            t
+        r = o("5E+2"),
+        i = o("Jbdm"),
+        s = o.n(i),
+        p = o("TLQK"),
+        d = o("exH9");
+      class u extends a.a.PureComponent {
+        render() {
+          const n = Object(p.o)(
+            "#RewardsReaction_Tooltip",
+            this.props.reaction.count || 0,
+            Object(c.a)(this.props.reaction.reaction_type)
           );
-        })(r.a.PureComponent),
-        I = (function (n) {
-          function t() {
-            return (null !== n && n.apply(this, arguments)) || this;
-          }
-          return (
-            Object(e.d)(t, n),
-            (t.prototype.render = function () {
-              for (
-                var n = [], t = 0, o = this.props.reactions;
-                t < o.length;
-                t++
-              ) {
-                var e = o[t];
-                n.push(
-                  r.a.createElement(m, { key: e.reaction_type, reaction: e })
-                );
-              }
-              return r.a.createElement("div", { className: p.a.IconList }, n);
+          return a.a.createElement(
+            r.d,
+            {
+              className: Object(d.a)(s.a.InfoContainer, s.a.IconContainer),
+              toolTipContent: n,
+            },
+            a.a.createElement("img", {
+              className: s.a.IconImg,
+              src: Object(c.b)(this.props.reaction.reaction_type, !1),
             }),
-            t
+            this.props.reaction.count &&
+              a.a.createElement(
+                "div",
+                { className: s.a.ReactionCount },
+                this.props.reaction.count
+              )
           );
-        })(r.a.PureComponent);
+        }
+      }
+      class I extends a.a.PureComponent {
+        render() {
+          let n = [];
+          for (const t of this.props.reactions)
+            n.push(a.a.createElement(u, { key: t.reaction_type, reaction: t }));
+          return a.a.createElement("div", { className: s.a.IconList }, n);
+        }
+      }
     },
   },
 ]);

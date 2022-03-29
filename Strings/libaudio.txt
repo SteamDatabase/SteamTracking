@@ -40,6 +40,8 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/libaudio.dylib
+a.3b
+p)a4
 @loader_path/libtier0_s.dylib
 @loader_path/libvstdlib_s.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -65,6 +67,8 @@ QVWR
  ^_]
  ^_]
 QPRW
+^_[]
+(^_[]
 ^_[]
 ^_[]
 ,^_[]
@@ -125,7 +129,6 @@ VRQP
 ^_[]
 <^_[]
 ^_[]
-(^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -423,15 +426,15 @@ RARARARA
 @_V_strnicmp
 @__Unwind_Resume
 @__Z9V_stristrPKcS0_
-@__ZN10CValidator11ClaimMemoryEPv
-@__ZN10CValidator16ClaimArrayMemoryEPv
+@__ZN10CValidator11ClaimMemoryEPKv
+@__ZN10CValidator16ClaimArrayMemoryEPKv
 @__ZN10CValidator3PopEv
 @__ZN10CValidator4PushEPKcPvS1_
-@__ZN10CValidator9IsClaimedEPv
 @__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
 @__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
 @__ZN16SteamThreadTools12CThreadMutexC1Ev
 @__ZN16SteamThreadTools12CThreadMutexD1Ev
+@__ZNK10CValidator9IsClaimedEPKv
 @__ZSt9terminatev
 @___bzero
 @___cxa_atexit
@@ -474,12 +477,13 @@ SoundAudioDevice
 MusicAudioDevice
 VoiceAudioDevice
 Qttt_
+<888
 dvz@
 H2":Ht
 J 4&>
 (B0J
 	Z:NF
-J:JN
+J:RB*b
 _AudioSinkList
 _CreateInterface
 _CreateMilesMusicAudioDevice
@@ -507,15 +511,15 @@ _V_strncpy
 _V_strnicmp
 __Unwind_Resume
 __Z9V_stristrPKcS0_
-__ZN10CValidator11ClaimMemoryEPv
-__ZN10CValidator16ClaimArrayMemoryEPv
+__ZN10CValidator11ClaimMemoryEPKv
+__ZN10CValidator16ClaimArrayMemoryEPKv
 __ZN10CValidator3PopEv
 __ZN10CValidator4PushEPKcPvS1_
-__ZN10CValidator9IsClaimedEPv
 __ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
 __ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
 __ZN16SteamThreadTools12CThreadMutexC1Ev
 __ZN16SteamThreadTools12CThreadMutexD1Ev
+__ZNK10CValidator9IsClaimedEPKv
 __ZSt9terminatev
 __ZTVN10__cxxabiv117__class_type_infoE
 __ZTVN10__cxxabiv120__si_class_type_infoE
@@ -564,20 +568,21 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-"Tu'F
-:VZ"
-j4QVU
-wak^g
+MUxB
+*Etu
+) 	L
 DXLX
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-ppon~
-hxPq
-#Jf@
-@lFt
-Oj|>
+e!P/W
+1}ma
+OLG!
+cN?{K
+Nrk~z
+&)4Mwq
+sO&z0
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -633,7 +638,11 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220314194913Z0/
+220328160415Z0/
+=>DX
+jxS0-
+h1u3&
+F.@+
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -641,35 +650,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		+AWaijF+iFEdXiWqm2d13ggnp8s=
+		ph/IXj0kqpk0e4CF7Cs4gQ1qeFM=
 		</data>
 		<data>
-		T9FypOtMZZ68liatRsjH7Hwplco=
+		s2gxdTMmFDYfGkYuQCuZXKQA/L4=
 		</data>
 	</array>
 </dict>
 </plist>
-ZD]b
-<BKP#	
-b8KB
-.LGT
-20220314194934Z0
+)*Hs
+.krJ	
+dsu@
+U8^	
+20220328160438Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220215170002Z
-220329170001Z0B1
-Timestamp Signer NWK21
+220315170503Z
+220426170502Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-&UjR
-- E}qQ
-[y5T
+)d0\X
+_DaM
+_oSgo[
+5Xg_Y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-Jw-_
+DLtu
+xO'4
+^h((
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -708,12 +720,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220314194934Z0#
-^%[:N
-MBVC#.
-*8!*
-xQHO
-nW]a
+220328160438Z0#
+=bE0
+*=j]
+sb0i[XZ^r~P
 __TEXT
 __text
 __TEXT
@@ -799,10 +809,21 @@ AWAVATSA
 [A\A^A_]
 AVSI
 [A^]
-AWAVATSH
+AWAVAUATSI
+Hc:H
+uxHcz
+tbA97
+.IcW
+Ic0H
+&IcP
+%IcP
+D9*u
+[A\A]A^A_]
+AWAVAUATSPH
+~0E1
 IcD$
-[A\A^A_]
-AWAVSPH
+[A\A]A^A_]
+AWAVSPI
 [A^A_]
 [A^A_]
 AWAVAUATSH
@@ -908,16 +929,6 @@ AWAVAUATSH
 [A\A]A^A_]
 AVSH
 [A^]
-AWAVAUATSI
-Hc:H
-uxHcz
-tbA97
-.IcW
-Ic0H
-&IcP
-%IcP
-D9*u
-[A\A]A^A_]
 AVSH
 [A^]
 AWAVSPI
@@ -1255,15 +1266,15 @@ RARARA`
 @_V_strnicmp
 @__Unwind_Resume
 @__Z9V_stristrPKcS0_
-@__ZN10CValidator11ClaimMemoryEPv
-@__ZN10CValidator16ClaimArrayMemoryEPv
+@__ZN10CValidator11ClaimMemoryEPKv
+@__ZN10CValidator16ClaimArrayMemoryEPKv
 @__ZN10CValidator3PopEv
 @__ZN10CValidator4PushEPKcPvS1_
-@__ZN10CValidator9IsClaimedEPv
 @__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
 @__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
 @__ZN16SteamThreadTools12CThreadMutexC1Ev
 @__ZN16SteamThreadTools12CThreadMutexD1Ev
+@__ZNK10CValidator9IsClaimedEPKv
 @__ZSt9terminatev
 @___bzero
 @___cxa_atexit
@@ -1312,6 +1323,7 @@ L 0&>
 tR**lw
  @.H
 G/PR
+;BT6
 _AudioSinkList
 _CreateInterface
 _CreateMilesMusicAudioDevice
@@ -1339,15 +1351,15 @@ _V_strncpy
 _V_strnicmp
 __Unwind_Resume
 __Z9V_stristrPKcS0_
-__ZN10CValidator11ClaimMemoryEPv
-__ZN10CValidator16ClaimArrayMemoryEPv
+__ZN10CValidator11ClaimMemoryEPKv
+__ZN10CValidator16ClaimArrayMemoryEPKv
 __ZN10CValidator3PopEv
 __ZN10CValidator4PushEPKcPvS1_
-__ZN10CValidator9IsClaimedEPv
 __ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
 __ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
 __ZN16SteamThreadTools12CThreadMutexC1Ev
 __ZN16SteamThreadTools12CThreadMutexD1Ev
+__ZNK10CValidator9IsClaimedEPKv
 __ZSt9terminatev
 __ZTVN10__cxxabiv117__class_type_infoE
 __ZTVN10__cxxabiv120__si_class_type_infoE
@@ -1396,16 +1408,23 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-7l=*H1
-o=z4
+iz{/
+5rB>t
+>8p{
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-;53e
-w`j#t
-tQkz
-i01P
+.XOargFB
+b!"9
+_:pQ
+[x^{
+P!h@
+vz\^
+1"`;:
+dFI4t
+!&_(h
+oHsz
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1461,7 +1480,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220314194913Z0/
+220328160415Z0/
+V1M#7Xy
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1469,36 +1489,34 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		5qkkrWB95jGGy+IiG4lUu1ihkIU=
+		969WMU0jN1h5DidhjiAnZuCnyLU=
 		</data>
 		<data>
-		4OTWB55GvDRyHRKajixh5CLQSb4=
+		F89Kpsk2gD3R4hoX/EYtAXq7xpM=
 		</data>
 	</array>
 </dict>
 </plist>
-Bxu=
-:dK3
-qCeRf#
-20220314194934Z0
+p:+'
+LYrC
+20220328160438Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220215171002Z
-220329171001Z0B1
-Timestamp Signer NWK11
+220315165502Z
+220426165501Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-%rWz
-|*;Q
-{&S*X
+s+#Hd
+k&t]g
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-jcrpNN6E
-F'5T
-|LZ0
+?z/.
+HCpo
+{I'6
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1537,16 +1555,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220314194934Z0#
-z!Wy
-<#M`
-Ug&Ty
-_WR3
-DQ,a4l 
-&]7W
-=u^H;
-51ECw
-0gz!
+220328160438Z0#
+/0Ep{
+m/;EQ
+"a{U1
+{2w~
 __TEXT
 __text
 __TEXT
@@ -1587,6 +1600,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libaudio.dylib
+`pjg2
 @loader_path/libtier0_s.dylib
 @loader_path/libvstdlib_s.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -1896,15 +1910,15 @@ D`6ERA
 @_V_strnicmp
 @__Unwind_Resume
 @__Z9V_stristrPKcS0_
-@__ZN10CValidator11ClaimMemoryEPv
-@__ZN10CValidator16ClaimArrayMemoryEPv
+@__ZN10CValidator11ClaimMemoryEPKv
+@__ZN10CValidator16ClaimArrayMemoryEPKv
 @__ZN10CValidator3PopEv
 @__ZN10CValidator4PushEPKcPvS1_
-@__ZN10CValidator9IsClaimedEPv
 @__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
 @__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
 @__ZN16SteamThreadTools12CThreadMutexC1Ev
 @__ZN16SteamThreadTools12CThreadMutexD1Ev
+@__ZNK10CValidator9IsClaimedEPKv
 @__ZSt9terminatev
 @___cxa_atexit
 @___cxa_bad_typeid
@@ -1975,15 +1989,15 @@ _V_strncpy
 _V_strnicmp
 __Unwind_Resume
 __Z9V_stristrPKcS0_
-__ZN10CValidator11ClaimMemoryEPv
-__ZN10CValidator16ClaimArrayMemoryEPv
+__ZN10CValidator11ClaimMemoryEPKv
+__ZN10CValidator16ClaimArrayMemoryEPKv
 __ZN10CValidator3PopEv
 __ZN10CValidator4PushEPKcPvS1_
-__ZN10CValidator9IsClaimedEPv
 __ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
 __ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
 __ZN16SteamThreadTools12CThreadMutexC1Ev
 __ZN16SteamThreadTools12CThreadMutexD1Ev
+__ZNK10CValidator9IsClaimedEPKv
 __ZSt9terminatev
 __ZTVN10__cxxabiv117__class_type_infoE
 __ZTVN10__cxxabiv120__si_class_type_infoE
@@ -2031,22 +2045,21 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-^p9]
-i)uD8\
-.2buy
-tJs)
-dsFx
+/d|j
+Wfn#
+bt`E
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Nz<o
-6)@g
-$@T3AO
-FegP
-}Z!1?
+H_AE	j%j>
+z"T 
+4QD[
+!AN|
+xXw 
 %K9.
 !F^.
+ZV\l
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2102,7 +2115,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220314194913Z0/
+220328160415Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2110,34 +2123,34 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		8IRyilvE6tuteVn4TEup64hLn4I=
+		4OsFaas4zImJG2JovT58HvI8k6M=
 		</data>
 		<data>
-		TkGseUqM8Orii/HEXoday0CAKHY=
+		rLUhkcAn2RyPHlk1PuroCzgbioI=
 		</data>
 	</array>
 </dict>
 </plist>
-M15/
-Z=#~
-~Y]3L
-20220314194934Z0
+20220328160438Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220215170002Z
-220329170001Z0B1
-Timestamp Signer NWK21
+220315170503Z
+220426170502Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-&UjR
-- E}qQ
-[y5T
+)d0\X
+_DaM
+_oSgo[
+5Xg_Y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-Jw-_
+DLtu
+xO'4
+^h((
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2176,7 +2189,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220314194934Z0#
-sa	IV
-?twjJ
-1{n>eM
+220328160438Z0#
+=bE0
+Ae|^
+bLmy
+Jw`x3
+[] _
+i,q8	1yM5c}

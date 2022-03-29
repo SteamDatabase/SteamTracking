@@ -129,8 +129,6 @@ message CCDDBAppDetailCommon {
 	optional uint32 appid = 1;
 	optional string name = 2;
 	optional string icon = 3;
-	optional string logo = 4;
-	optional string logo_small = 5;
 	optional bool tool = 6;
 	optional bool demo = 7;
 	optional bool media = 8;

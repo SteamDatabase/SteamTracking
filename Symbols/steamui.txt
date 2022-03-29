@@ -477,7 +477,6 @@
  SteamStdLib::CCommandLineParam::~CCommandLineParam()
  SteamStdLib::CommandLine()
  SteamThreadTools::CThread::CThread()
- SteamThreadTools::CThread::GetPriority() const
  SteamThreadTools::CThread::GetThreadProc()
  SteamThreadTools::CThread::Init()
  SteamThreadTools::CThread::IsAlive() const
@@ -486,7 +485,6 @@
  SteamThreadTools::CThread::OnExit()
  SteamThreadTools::CThread::Resume()
  SteamThreadTools::CThread::SetName(char const*)
- SteamThreadTools::CThread::SetPriority(int)
  SteamThreadTools::CThread::Start(unsigned long)
  SteamThreadTools::CThread::Suspend()
  SteamThreadTools::CThread::Terminate(int)
@@ -1624,6 +1622,7 @@
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
+ std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::operator=(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::push_back(wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::resize(unsigned long, wchar_t)
  std::__1::ios_base::getloc() const
@@ -1676,7 +1675,6 @@
  thread_policy
  thread_policy_set
  time
- timegm
  truncf
  typeinfo for SteamThreadTools::CThread
  typeinfo for bool

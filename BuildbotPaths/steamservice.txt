@@ -18,7 +18,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keypair.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/pipes.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp

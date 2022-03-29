@@ -111,7 +111,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-0
+(
 )
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
 7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
@@ -1387,8 +1387,6 @@ Valve Steam Client
 Valve Steam Client/%s
 -nofasthtml
 Disables new fast child hwnd direct in vgui hwnd rendering path
--linuxfasthtml
-Enable fast child html for Linux
 ReparentChildPlatformWindow - not implemented
 SetPlatformWindowVisibility - not implemented
 CBaseSurface
@@ -2288,7 +2286,6 @@ P
 @
 @
 @
-R
 0
 @
 @

@@ -7,8 +7,8 @@
  AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
  AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  CVProfile_ExitScope
- CValidator::ClaimArrayMemory(void*)
- CValidator::ClaimMemory(void*)
+ CValidator::ClaimArrayMemory(void const*)
+ CValidator::ClaimMemory(void const*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  D typeinfo for CUniformRandomStream

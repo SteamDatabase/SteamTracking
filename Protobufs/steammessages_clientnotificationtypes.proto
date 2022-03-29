@@ -19,6 +19,8 @@ enum EClientNotificationType {
 	k_EClientNotificationType_Screenshot = 14;
 	k_EClientNotificationType_CloudSyncFailure = 15;
 	k_EClientNotificationType_CloudSyncConflict = 16;
+	k_EClientNotificationType_IncomingVoiceChat = 17;
+	k_EClientNotificationType_ClaimSteamDeckRewards = 18;
 }
 
 enum ESystemUpdateNotificationType {
@@ -117,4 +119,11 @@ message CClientNotificationFamilySharingStopPlaying {
 
 message CClientNotificationFamilySharingLibraryAvailable {
 	optional uint32 accountid_owner = 1;
+}
+
+message CClientNotificationIncomingVoiceChat {
+	optional fixed64 steamid = 1;
+}
+
+message CClientNotificationClaimSteamDeckRewards {
 }

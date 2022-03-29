@@ -17,7 +17,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/sdlhelpers.cpp

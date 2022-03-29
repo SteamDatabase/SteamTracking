@@ -2209,6 +2209,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"CHANGE PLAYER NUMBER"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"CHANGE PLAYER NUMBER TO"
 	"Library_Details_ControllerAction_MouseDelta"	"MOUSE DELTA"
+	"Library_Details_ControllerAction_BrightnessUp"	"SCREEN BRIGHTNESS UP"
+	"Library_Details_ControllerAction_BrightnessDown"	"SCREEN BRIGHTNESS DOWN"
 	"Controller_SetMouseDelta_Title"				"SET MOUSE DELTA BINDING"
 	"Controller_SetMouseDelta_Description"			"Select the values for this binding"
 	"ControllerConfig_MouseDeltaX"					"X Axis"

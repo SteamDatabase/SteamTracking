@@ -6,9 +6,9 @@
  AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
  AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  CVProfile_ExitScope
- CValidator::ClaimArrayMemory(void*)
- CValidator::ClaimMemory(void*)
- CValidator::IsClaimed(void*)
+ CValidator::ClaimArrayMemory(void const*)
+ CValidator::ClaimMemory(void const*)
+ CValidator::IsClaimed(void const*) const
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  Log

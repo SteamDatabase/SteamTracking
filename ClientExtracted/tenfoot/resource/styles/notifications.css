@@ -511,6 +511,12 @@
     background-image: url( "file://{images}/controller_icon_steamcontroller.png" );
 }
 
+#ControllerConfigImage.controller_neptune,
+#ControllerImage.controller_neptune
+{
+    background-image: url( "file://{images}/controller_icon_neptune.png" );
+}
+
 #ControllerConfigImage.controller_ps5,
 #ControllerImage.controller_ps5
 {

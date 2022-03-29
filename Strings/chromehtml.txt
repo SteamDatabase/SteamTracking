@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-c
-c
 __stubs
 __TEXT
 __stub_helper
@@ -48,7 +46,6 @@ __DATA
 P
 __data
 __DATA
-&
 __thread_vars
 __DATA
 __thread_data
@@ -64,6 +61,7 @@ __LINKEDIT
 8
 @loader_path/chromehtml.dylib
 "
+(
 P
 
 
@@ -164,6 +162,7 @@ $
 (
 5
 4
+,
 )
 ,
 0
@@ -312,6 +311,7 @@ X
 0
 8
 8
+0
 (
 8
 0
@@ -380,6 +380,8 @@ H
 (
 (
 8
+(
+(
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -428,6 +430,7 @@ H
 14CMsgURLChanged
 13CHistoryEntry
 18CMsgHistoryChanged
+13CMsgLoadError
 11CHTMLHeader
 21CHTMLPageSecurityInfo
 19CMsgFinishedRequest
@@ -542,6 +545,8 @@ H
 17CMsgStartDownload
 16CMsgSetTopWindow
 41CMsgBrowserViewPostMessageToParentRequest
+18CMsgBlockedRequest
+24CMsgSetProtocolBlockList
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 15CHTMLController
 21IHTMLChromeController
@@ -1040,6 +1045,12 @@ disables GPU and renderer hang timeouts
 enables Chromium remote debugging, defaulting to localhost:8080
 -cef-disable-occlusion
 disables Chromium window occlusion testing on Windows
+-cef-ignore-certificate-errors
+allow self-signed certificates
+-cef-no-linux-angle
+Don't use ANGLE for rendering backend on Linux
+-cef-enable-gpu-debugging
+Enable GPU debugging in Chromium, costs a glGetError() call after every command
 -store
 -community
 -clientui
@@ -1092,6 +1103,7 @@ clientui
 --disable-smooth-scrolling
 --disable-gpu-compositing --disable-gpu
 --disable-accelerated-video-decode
+--enable-gpu-debugging
 --disablehighdpi --force-device-scale-factor=1 --device-scale-factor=1
 1.5
 -gamepaduiscale
@@ -1961,6 +1973,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2296,18 +2310,16 @@ sc_schinese
 
 @
 
+1
 @
 @
 
-
+b
 @
-i
+r
+n
+Ic
 E
-
-
-
-
-
 0
 0
 Hi
@@ -2318,9 +2330,6 @@ AT=
 AT5
 AT5
 AT=
-
-
-
 ?
 D
 @
@@ -2357,16 +2366,15 @@ IcE
 @
 @
 V
+H;5Rw
+]
 =
 =
 @
-c
 @
 M9e
 @
 @
-v
-i
 ?
 ?
 ?
@@ -2383,8 +2391,6 @@ i
 ?
 ?
 
-:
-Ic
 @
 @
 @

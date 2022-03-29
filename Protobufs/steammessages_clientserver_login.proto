@@ -78,6 +78,7 @@ message CMsgClientLogon {
 	optional int32 priority_reason = 104;
 	optional .CMsgClientSecret embedded_client_secret = 105;
 	optional bool disable_partner_autogrants = 106;
+	optional bool is_steam_deck = 107;
 }
 
 message CMsgClientLogonResponse {

@@ -95,9 +95,9 @@
  CTFontCreateWithName
  CTFontGetPlatformFont
  CVProfile_ExitScope
- CValidator::ClaimArrayMemory(void*)
- CValidator::ClaimMemory(void*)
- CValidator::IsClaimed(void*)
+ CValidator::ClaimArrayMemory(void const*)
+ CValidator::ClaimMemory(void const*)
+ CValidator::IsClaimed(void const*) const
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  D typeinfo for std::__1::bad_function_call
@@ -176,6 +176,7 @@
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath
+ Plat_IsChromeOS
  Plat_MSTime
  Plat_localtime
  R typeinfo name for std::__1::bad_function_call

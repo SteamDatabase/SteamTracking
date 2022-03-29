@@ -38,6 +38,8 @@ enum EDisplayStatus {
 	k_EDisplayStatusUnavailable = 32;
 	k_EDisplayStatusNotLaunchable = 33;
 	k_EDisplayStatusCloudError = 34;
+	k_EDisplayStatusCloudOutOfDate = 35;
+	k_EDisplayStatusTerminating = 36;
 }
 
 enum EAppCloudStatus {
@@ -51,6 +53,7 @@ enum EAppCloudStatus {
 	k_EAppCloudStatusDownloading = 7;
 	k_EAppCloudStatusSyncFailed = 8;
 	k_EAppCloudStatusConflict = 9;
+	k_EAppCloudStatusPendingElsewhere = 10;
 }
 
 enum EProtoAppType {
@@ -89,6 +92,13 @@ enum EAppControllerSupportLevel {
 	k_EAppControllerSupportLevelFull = 2;
 }
 
+enum EAppGamepadGyroTrackpadSupportLevel {
+	k_EAppGamepadGyroTrackpadSupportLevelUnknown = -1;
+	k_EAppGamepadGyroTrackpadSupportLevelNoGamepad = 0;
+	k_EAppGamepadGyroTrackpadSupportLevelGamepad = 1;
+	k_EAppGamepadGyroTrackpadSupportLevelSimultaneous = 2;
+}
+
 message CAppOverview_AppAssociation {
 	optional .EAppAssociationType type = 1 [default = k_EAppAssociationTypeInvalid];
 	optional string name = 2;
@@ -110,12 +120,6 @@ message CAppOverview_PerClientData {
 	optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];
 }
 
-message CSteamDeckCompatTestResult {
-	optional int32 test = 1;
-	optional int32 test_result = 2;
-	optional string test_loc_token = 3;
-}
-
 message CAppOverview {
 	optional uint32 appid = 1;
 	optional string display_name = 2;
@@ -133,7 +137,6 @@ message CAppOverview {
 	optional uint32 rt_original_release_date = 25 [default = 0];
 	optional uint32 rt_steam_release_date = 26 [default = 0];
 	optional string icon_hash = 27;
-	optional string logo_hash = 30;
 	optional .EAppControllerSupportLevel controller_support = 31 [default = k_EAppControllerSupportLevelNone];
 	optional bool vr_supported = 32;
 	optional uint32 metacritic_score = 36;
@@ -161,13 +164,11 @@ message CAppOverview {
 	optional bool vr_only = 58;
 	optional uint32 mastersub_appid = 59;
 	optional string mastersub_includedwith_logo = 60;
-	optional uint32 compat_allowlist_setting = 61 [default = 0];
 	optional string site_license_site_name = 62;
 	optional uint32 shortcut_override_appid = 63;
 	optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];
 	optional uint32 rt_last_time_locally_played = 65;
 	optional uint32 rt_purchased_time = 66;
-	repeated .CSteamDeckCompatTestResult steam_deck_compat_test_results = 67;
 }
 
 message CAppOverview_Change {

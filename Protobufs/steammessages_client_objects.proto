@@ -206,6 +206,10 @@ message CMsgSystemPerfDiagnosticInfo {
 }
 
 message CMsgSystemPerfSettings {
+	optional int32 cpu_governor_manual_min_mhz = 20;
+	optional int32 cpu_governor_manual_max_mhz = 21;
+	optional int32 fsr_sharpness_min = 22;
+	optional int32 fsr_sharpness_max = 23;
 	optional float diagnostic_update_rate = 1;
 	optional .ESystemServiceState system_trace_service_state = 2 [default = k_ESystemServiceState_Unavailable];
 	optional .ESystemServiceState graphics_profiling_service_state = 3 [default = k_ESystemServiceState_Unavailable];
@@ -223,12 +227,13 @@ message CMsgSystemPerfSettings {
 	optional int32 tdp_limit = 15;
 	optional .ECPUGovernor cpu_governor = 16 [default = k_ECPUGovernor_Invalid];
 	optional int32 cpu_governor_manual_mhz = 17;
-	optional bool is_fsr_enabled = 18;
+	optional int32 scaling_filter = 18;
 	optional int32 fsr_sharpness = 19;
-	optional int32 cpu_governor_manual_min_mhz = 20;
-	optional int32 cpu_governor_manual_max_mhz = 21;
-	optional int32 fsr_sharpness_min = 22;
-	optional int32 fsr_sharpness_max = 23;
+	optional bool is_fps_limit_enabled = 24;
+	optional bool is_tdp_limit_enabled = 25;
+	optional bool is_show_perf_overlay_over_steam_enabled = 26;
+	optional bool is_low_latency_mode_enabled = 27;
+	optional bool is_fps_limit_dynamic = 28;
 }
 
 message CMsgSystemManagerSettings {
@@ -237,23 +242,57 @@ message CMsgSystemManagerSettings {
 	optional float idle_suspend_battery_seconds = 3;
 	optional float idle_suspend_ac_seconds = 4;
 	optional bool idle_suspend_supressed = 5;
-	optional bool automatic_display_brightness_enabled = 6;
+	optional bool display_adaptive_brightness_enabled = 6;
 	optional float als_lux_latest = 7;
 	optional float als_lux_median = 8;
 	optional float display_brightness_linear = 9;
+	optional float display_brightness_adaptivemin = 10;
+	optional float display_brightness_adaptivemax = 11;
+	optional bool display_nightmode_enabled = 12;
+	optional float display_nightmode_tintstrength = 13;
+	optional float display_nightmode_maxhue = 14;
+	optional float display_nightmode_maxsat = 15;
+	optional float display_nightmode_uiexp = 16;
+	optional float display_nightmode_blend = 17;
+	optional bool display_nightmode_reset = 18;
+	optional bool display_diagnostics_enabled = 19;
+	optional bool is_wifi_powersave_enabled = 20;
 }
 
-message CMsgUpdaterProgress {
+message CMsgSelectOSBranchParams {
+	optional .EOSBranch branch = 1 [default = k_EOSBranch_Unknown];
+}
+
+message CMsgSystemUpdateProgress {
 	optional float stage_progress = 1;
 	optional int64 stage_size_bytes = 2;
 	optional fixed32 rtime_estimated_completion = 3;
 }
 
-message CMsgUpdaterInfo {
+message CMsgSystemUpdateCheckResult {
+	optional .EUpdaterType type = 1 [default = k_EUpdaterType_Invalid];
+	optional uint32 eresult = 2 [default = 2];
+	optional fixed32 rtime_checked = 3;
+	optional bool available = 4;
+	optional string version = 5;
+}
+
+message CMsgSystemUpdateApplyParams {
+	repeated .EUpdaterType apply_types = 1;
+}
+
+message CMsgSystemUpdateApplyResult {
+	optional .EUpdaterType type = 1 [default = k_EUpdaterType_Invalid];
+	optional uint32 eresult = 2 [default = 2];
+	optional bool requires_client_restart = 3 [default = false];
+	optional bool requires_system_restart = 4 [default = false];
+}
+
+message CMsgSystemUpdateState {
 	optional .EUpdaterState state = 1 [default = k_EUpdaterState_Invalid];
-	optional .EUpdaterState previous_state = 2 [default = k_EUpdaterState_Invalid];
-	optional int32 eresult_previous_state = 3 [default = 2];
-	optional .CMsgUpdaterProgress progress = 4;
+	optional .CMsgSystemUpdateProgress progress = 2;
+	repeated .CMsgSystemUpdateCheckResult update_check_results = 3;
+	repeated .CMsgSystemUpdateApplyResult update_apply_results = 4;
 }
 
 message CMsgCellList {

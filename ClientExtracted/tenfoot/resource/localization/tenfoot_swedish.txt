@@ -1401,7 +1401,7 @@
 	"Checkout_PaymentStep_ShippingInfo"	"Leveransinformation"
 	"Checkout_PaymentStep_Method"	"BETALNINGSINFORMATION"
 	"Checkout_PaymentStep_Review"	"Kontrollera och köp"
-	"Checkout_PaymentStep_GiftDelivery"	"Presentleverans"
+	"Checkout_PaymentStep_GiftDelivery"	"Gåvoleverans"
 	"Checkout_PaymentStep_GiftNote"	"Gåvomeddelande"
 
 	"Checkout_Continue"							"Fortsätt"
@@ -1411,7 +1411,7 @@
 	"Checkout_YourWallet"						"Din plånbok"
 	"Checkout_WalletCredit"						"Ska läggas till i din plånbok"
 
-	"Checkout_GiftRecipient_Title"				"Presentleverans"
+	"Checkout_GiftRecipient_Title"				"Gåvoleverans"
 	"Checkout_GiftRecipient_HowToSend"			"Hur vill du skicka din gåva?"
 	"Checkout_GiftRecipient_EmailGift"			"E-posta min gåva"
 	"Checkout_GiftRecipient_EmailGiftAddress"			"E-postadress"
@@ -2097,8 +2097,8 @@
 	"Library_Details_SourceMode_MouseRegion_Title"		"MUS-REGION"
 	"Library_Details_SourceMode_RadialMenu_Title"		"RADIALMENY"
 	"Library_Details_SourceMode_SingleButton_Title"		"ENSKILD KNAPP"
-	"Library_Details_SourceMode_FlickStick_Title"		"SPAKSNÄRTNING"
-	"Library_Details_SourceMode_FlickStick_Acton_Title"	"SS: {s:action}"
+	"Library_Details_SourceMode_FlickStick_Title"		"FLICK STICK"
+	"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
 	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"MS: {s:action}"
 	"Library_Details_Source_Title_none"			"OTILLDELAD"
 	"Library_Details_Source_Title_left_trackpad"		"Vänster platta"
@@ -2397,7 +2397,7 @@
 	"Library_Details_SourceMode_Title_MouseRegion"		"Mus-region"
 	"Library_Details_SourceMode_Title_RadialMenu"		"Radialmeny"
 	"Library_Details_SourceMode_Title_SingleButton"		"Enskild knapp"
-	"Library_Details_SourceMode_Title_FlickStick"		"Spaksnärtning"
+	"Library_Details_SourceMode_Title_FlickStick"		"Flick Stick"
 	"Library_Details_SourceMode_Title_2DScroll"		"Riktningssvep"
 	"Library_Details_SourceMode_Title_Hotbar"		"Snabbvalsmeny"
 	"Library_Details_SourceMode_Title_LayerInherit"			"Ärv från handlingsset"
@@ -2936,7 +2936,7 @@
 	"Friends_GroupEvent_NewEventScheduled"	"har schemalagt ett evenemang"
 	"Friends_GroupEvent_NewAccouncement"	"har lagt upp ett meddelande"
 
-	"Friends_Header_Recent"		"Senaste chatter"
+	"Friends_Header_Recent"		"Senaste chattar"
 	"Friends_Header_Online"		"Online"
 	"Friends_Header_Offline"		"Offline"
 
@@ -7366,12 +7366,12 @@ Justera detta värde uppåt tills långsamma rörelser varken stannar av eller �
 	"friends_menu_chat"		"Chatt"
 	"friends_menu_manage"	"Hantera"
 
-	"friends_list_recent_container_title"	"Senaste chatter"
+	"friends_list_recent_container_title"	"Senaste chattar"
 	"friends_list_igname_container_title"	"Spelar"
 	"friends_list_online_container_title"	"Online"
 	"friends_list_offline_container_title"	"Offline"
 
-	"friends_groups_recent_container_title"	"Senaste gruppchatter"
+	"friends_groups_recent_container_title"	"Senaste gruppchattar"
 	"friends_groups_container_title"		"Grupper"
 
 	"friends_show_profile_options"		"Lokala profilalternativ"
@@ -7649,7 +7649,7 @@ Justera detta värde uppåt tills långsamma rörelser varken stannar av eller �
 	"ControllerBinding_SoftPress_RepeatRate" "Upprepningshastighet"
 	"ControllerBinding_SoftPress_RepeatRate_Description" "Med detta reglage fastställs upprepningshastigheten i Turbo-läget."
 
-	"ControllerBinding_ModeDropDown_FlickStick" "Inmatningstyp: Spaksnärtning"
+	"ControllerBinding_ModeDropDown_FlickStick" "Inmatningstyp: Flick Stick"
 	"ControllerBinding_ModeDropDown_FlickStick_Description" "Detta, som är baserat på det kontrollschema som utvecklats av youtubern Jibb Smart, använder den första böjningen av joysticken för att ”snärta” kameran baserat på styrspakens position. Är spaken uppe, förblir den orörlig. Är spaken nere, vänder den 180 grader i spelet. Efter inledningsskedet kommer varje ytterligare rotation av styrspaken att vrida kameran 1-1. Det här är avsett att kombineras med gyroskop för vertikal musrörelse."
 	"ControllerBinding_FlickStickClick" "Klickbindning"
 	"ControllerBinding_FlickStickClick_Description"	"Denna åtgärd utförs när du klickar med styrspaken."
