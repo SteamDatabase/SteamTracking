@@ -18033,6 +18033,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .salesectioneventschedule_SaleSchedDetailCtn_oor63
   .salesectioneventschedule_StatementAndHighlights_8qjgU {
   display: flex;
+  margin-top: 8px;
 }
 .salesectioneventschedule_SaleSchedDetailCtn_oor63
   .salesectioneventschedule_StatementAndHighlights_8qjgU
@@ -18120,7 +18121,8 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   min-width: 55px;
   margin-right: 4px;
   word-break: keep-all;
-  font-size: 13px;
+  font-size: 11px;
+  padding-top: 1px;
 }
 .salesectioneventschedule_SaleSchedRow_14OaN.salesectioneventschedule_LiveNow_3exy5
   .salesectioneventschedule_Time_F7Yw5 {
@@ -23587,6 +23589,9 @@ div.saveprices_HoverToolTip_1yXHp {
 }
 .discountcustomdialog_CreateCustomDiscountCtn_2T8Dy {
   position: relative;
+  min-height: 520px;
+  min-width: 600px;
+  padding-bottom: 16px;
 }
 .discountcustomdialog_CreateCustomDiscountCtn_2T8Dy
   .discountcustomdialog_TimezoneNotice_3b_Fw {
@@ -23599,12 +23604,128 @@ div.saveprices_HoverToolTip_1yXHp {
   margin-top: 25px;
 }
 .discountcustomdialog_CreateCustomDiscountCtn_2T8Dy
+  .discountcustomdialog_InstructionsCtn_FnFwd {
+  padding-top: 16px;
+  border-top: 1px solid #393e47;
+}
+.discountcustomdialog_CreateCustomDiscountCtn_2T8Dy
+  .discountcustomdialog_Warning_2RAeX {
+  padding-top: 16px;
+  color: #a00;
+}
+.discountcustomdialog_CreateCustomDiscountCtn_2T8Dy
   .discountcustomdialog_RequiredFieldWarning_1Jnjb {
   position: absolute;
   top: 0;
   right: 0;
   font-size: 12px;
   color: #a00;
+}
+.discountcustomdialog_CreateCustomDiscountCtn_2T8Dy input:disabled {
+  background-color: transparent;
+  border: 1px solid rgba(59, 63, 72, 0.5);
+  padding: 10px;
+  font-size: 14px;
+}
+.discountcustomdialog_CustomInstructionsCtn_2tqOE {
+  margin-top: 12px;
+}
+.discountcustomdialog_DiscountCtn_1fE6J {
+  display: flex;
+  flex-direction: row;
+}
+.discountcustomdialog_DiscountHelperCtn_3B4DZ {
+  background: rgba(59, 63, 72, 0.5);
+  padding: 4px 12px;
+  border-radius: 3px;
+  margin-top: 25px;
+  margin-left: 22px;
+  position: relative;
+}
+.discountcustomdialog_DiscountHelperCtn_3B4DZ:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(59, 63, 72, 0);
+  border-right-color: rgba(59, 63, 72, 0.5);
+  border-width: 10px;
+  margin-top: -10px;
+}
+.discountcustomdialog_DiscountHelperCtn_3B4DZ
+  .discountcustomdialog_HistoryLine_ZmVYL {
+  margin-top: 4px;
+  font-size: 13px;
+}
+.discountcustomdialog_AvailableRange_trSI7,
+.discountcustomdialog_DiscountedRange_2ysY6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(59, 63, 72, 0.5);
+  padding: 6px 12px;
+  border-bottom: 2px solid #25282e;
+  font-size: 14px;
+}
+.discountcustomdialog_DiscountedRange_2ysY6 .discountcustomdialog_Dates_6Z2m0,
+.discountcustomdialog_SelectedEvent_13wZt .discountcustomdialog_Dates_6Z2m0 {
+  flex-basis: 35%;
+}
+.discountcustomdialog_DiscountedRange_2ysY6
+  .discountcustomdialog_DiscountName_3UxnE,
+.discountcustomdialog_SelectedEvent_13wZt
+  .discountcustomdialog_DiscountName_3UxnE {
+  flex-basis: 50%;
+}
+.discountcustomdialog_DiscountedRange_2ysY6
+  .discountcustomdialog_DiscountPercentage_IAC4v,
+.discountcustomdialog_SelectedEvent_13wZt
+  .discountcustomdialog_DiscountPercentage_IAC4v {
+  flex-basis: 15%;
+  text-align: right;
+}
+.discountcustomdialog_SelectedEvent_13wZt
+  .discountcustomdialog_DiscountRange_mddbO {
+  display: contents;
+}
+.discountcustomdialog_SelectedEvent_13wZt
+  .discountcustomdialog_DiscountName_3UxnE {
+  color: #fff;
+  flex-basis: unset;
+  font-size: 14px;
+}
+.discountcustomdialog_SelectedEvent_13wZt .discountcustomdialog_Dates_6Z2m0 {
+  font-size: 14px;
+}
+.discountcustomdialog_AvailableRange_trSI7 {
+  color: #fff;
+}
+.discountcustomdialog_AvailableRange_trSI7 .discountcustomdialog_Dates_6Z2m0 {
+  flex-basis: 35%;
+}
+.discountcustomdialog_AvailableRange_trSI7
+  .discountcustomdialog_AvailableLabel_VN_up {
+  flex-basis: 20%;
+}
+.discountcustomdialog_AvailableRange_trSI7
+  .discountcustomdialog_DiscountEventSelectDropDown_1TuVi {
+  flex-basis: 45%;
+}
+.discountcustomdialog_AvailableRange_trSI7
+  .discountcustomdialog_DiscountEventSelectDropDown_1TuVi
+  .DialogInputLabelGroup {
+  margin-bottom: 0px;
+}
+.discountcustomdialog_DiscountPctHistory_PO8Y8 {
+  display: flex;
+  justify-content: space-around;
+}
+.discountcustomdialog_DropDownScroll_3jSyZ {
+  overflow: hidden scroll;
 }
 .discountcustomdialog_DateCtn_3ylap {
   display: flex;
@@ -23618,10 +23739,23 @@ div.saveprices_HoverToolTip_1yXHp {
 .discountcustomdialog_SelectedPackage_3BWNE {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background: rgba(59, 63, 72, 0.5);
+  padding: 4px 12px;
+  border-radius: 3px;
+}
+.discountcustomdialog_SelectedPackage_3BWNE
+  .discountcustomdialog_OnePackageResult_1HqM3 {
+  background: unset;
+}
+.discountcustomdialog_SelectedPackage_3BWNE
+  .discountcustomdialog_OnePackageResult_1HqM3
+  .discountcustomdialog_PackageName_3xE_Q {
+  padding-left: 0px;
 }
 .discountcustomdialog_ClearSelectedPackage_27zzr {
-  max-height: 20px;
-  max-width: 20px;
+  height: 20px;
+  width: 20px;
   margin-right: 8px;
 }
 .discountcustomdialog_ClearSelectedPackage_27zzr svg {
@@ -23673,7 +23807,8 @@ div.saveprices_HoverToolTip_1yXHp {
   font-weight: 400;
 }
 .discountcustomdialog_DiscountLengthCtn_U9VTO {
-  margin-left: 35px;
+  margin-left: 10px;
+  margin-right: 15px;
 }
 .discountcustomdialog_DiscountPercentCtn_2YPdF {
   width: 200px;
@@ -23686,7 +23821,7 @@ div.saveprices_HoverToolTip_1yXHp {
   box-sizing: border-box;
   position: relative;
 }
-.discountdashboard_DashTitle_1FK58 {
+.discountdashboard_DashTitleBar_2m-_V {
   font-size: 32px;
   color: #fff;
   font-weight: 200;
@@ -23695,19 +23830,7 @@ div.saveprices_HoverToolTip_1yXHp {
   flex-direction: row;
   align-items: center;
 }
-.discountdashboard_BetaTag_2aM9N {
-  text-transform: uppercase;
-  background: #0bf;
-  border-radius: 2px;
-  padding: 3px 6px;
-  display: inline-block;
-  font-size: 18px;
-  margin-left: 8px;
-}
-.discountdashboard_FeedbackLink_2sPPE {
-  margin-left: 12px;
-  font-size: 16px;
-  display: flex;
+.discountdashboard_DashTitle_1FK58 {
   flex-grow: 1;
 }
 .discountdashboard_ConfidentialBanner_2H9Kz {
@@ -23881,20 +24004,36 @@ div.saveprices_HoverToolTip_1yXHp {
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_NeedsOptIn_Wp6D3
-  .discountgrid_RegistrationLink_2pjYa
-  a {
-  background: #3d4450;
-  padding: 3px 10px 4px;
-  color: #fff;
-  font-size: 12px;
+  .discountgrid_DataCell_3V8Jb.discountgrid_NeedsOptIn_Wp6D3 {
+  align-items: center;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
   .discountgrid_DataCell_3V8Jb.discountgrid_NeedsOptIn_Wp6D3
   .discountgrid_RegistrationLink_2pjYa
-  a:hover {
+  a,
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb.discountgrid_NeedsOptIn_Wp6D3
+  .discountgrid_RegistrationLink_2pjYa.discountgrid_TheLinkItself_3ku7C {
+  cursor: pointer;
+  background: #3d4450;
+  padding: 3px 10px 4px;
   color: #fff;
+  font-size: 12px;
+  height: fit-content;
+}
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb.discountgrid_NeedsOptIn_Wp6D3
+  .discountgrid_RegistrationLink_2pjYa
+  a:hover,
+.discountgrid_DiscountGridCtn_3THze
+  .discountgrid_DiscountGrid_39Ize
+  .discountgrid_DataCell_3V8Jb.discountgrid_NeedsOptIn_Wp6D3
+  .discountgrid_RegistrationLink_2pjYa.discountgrid_TheLinkItself_3ku7C:hover {
+  color: #fff;
+  background: #4b5462;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
@@ -24039,6 +24178,18 @@ div.saveprices_HoverToolTip_1yXHp {
 .discountgrid_ConflictToolTip_1nSci .discountgrid_ConflictDetailText_2OS_F {
   margin-top: 6px;
   color: #a15212;
+}
+.discountgrid_EventTitle_3FDJP {
+  font-size: 32px;
+  line-height: 35px;
+  color: #fff;
+  font-weight: 500;
+}
+.discountgrid_EventDates_vmimx {
+  font-size: 21px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: 500;
 }
 .savetoolbar_ToolbarCtn_Kfoep {
   position: fixed;
@@ -24315,33 +24466,6 @@ div.savetoolbar_HoverToolTip_gba9O {
 .tabulator.tabulator
   .tabulator-header
   .tabulator-headers
-  .tabulator-col.discountgridheaders_NewCooldownRuleLaunchDate_3UA6S {
-  background-color: #2d686c;
-  padding: 7px;
-}
-.tabulator.tabulator
-  .tabulator-header
-  .tabulator-headers
-  .tabulator-col.discountgridheaders_NewCooldownRuleLaunchDate_3UA6S
-  .discountgridheaders_NewCooldownRuleHeaderText_2_-Y6 {
-  text-align: center;
-  color: #c8eef1;
-}
-.tabulator.tabulator
-  .tabulator-header
-  .tabulator-headers
-  .tabulator-col.discountgridheaders_NewCooldownRuleLaunchDate_3UA6S
-  .discountgridheaders_NewCooldownRuleDetailsLink_2835e {
-  font-weight: 300;
-  font-size: 12px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  margin-top: 8px;
-}
-.tabulator.tabulator
-  .tabulator-header
-  .tabulator-headers
   .tabulator-col.discountgridheaders_RelatedDiscount_12zwK
   .tabulator-col-content,
 .tabulator.tabulator
@@ -24407,10 +24531,6 @@ div.savetoolbar_HoverToolTip_gba9O {
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.discountgridheaders_DiscountGridDataColumn_1yW70.discountgridheaders_CollisionFreeDiscountEvent_15fBc {
   background-color: inherit;
-}
-.tabulator.tabulator
-  .tabulator-cell.tabulator-cell.discountgridheaders_NewCooldownRuleLaunchDate_3UA6S {
-  background-color: #1e4548;
 }
 .discountgridheaders_GridRowLoadingThrobber_r2FLR {
   height: 24px;
@@ -25716,6 +25836,37 @@ ul li {
 }
 .promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_LinkCtn_2s6vN a {
   text-decoration: none;
+}
+.spotlightrow_RowCtn_2Gu6b {
+  margin-top: 10px;
+}
+.spotlightrow_Row_nFHGQ {
+  display: flex;
+  flex-direction: row;
+}
+.spotlightrow_Col_PK7WN {
+  padding: 5px;
+}
+.spotlightrow_Public_2MK3U {
+  color: red;
+}
+.marketingmessagerow_RowCtn_2y_9V {
+  margin-top: 10px;
+}
+.marketingmessagerow_Row_3j1RD {
+  display: flex;
+  flex-direction: row;
+}
+.marketingmessagerow_Col_28Zbb {
+  padding: 5px;
+}
+.marketingmessagerow_Public_sfmNc {
+  color: red;
+}
+.marketingmessagerow_CapsulePlatform_1Vs5L img,
+.marketingmessagerow_CapsulePlatform_1Vs5L svg {
+  height: 20px;
+  width: 20px;
 }
 .community_event_Container_2BtrR {
   padding: 10px 10px 0 10px;

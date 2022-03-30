@@ -204,6 +204,9 @@ div.jqplot-table-legend-swatch-outline {
 .stat_activation {
     color: #c135b0;
 }
+.stat_suspect {
+	color: #e35e1c;
+}
 .stat_change {
 	padding-bottom: 10px;
 }

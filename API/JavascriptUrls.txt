@@ -674,7 +674,6 @@ ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
 ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
 ${PARTNER_BASE_URL}doc/${}
-${PARTNER_BASE_URL}doc/marketing/discount_rule_changes
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
@@ -694,11 +693,13 @@ ${PARTNER_BASE_URL}optin/ajaxbatchgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxcreatedemopackage
 ${PARTNER_BASE_URL}optin/ajaxgetinvitedpartners
 ${PARTNER_BASE_URL}optin/ajaxgetoptinappwithdemoid
+${PARTNER_BASE_URL}optin/ajaxgetoptinpublicdefinition
 ${PARTNER_BASE_URL}optin/ajaxgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxgetoptinstats
 ${PARTNER_BASE_URL}optin/ajaxinvitepartnersorapps
 ${PARTNER_BASE_URL}optin/ajaxpruneapp
 ${PARTNER_BASE_URL}optin/ajaxrefreshoptinstats
+${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/appreview/${}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
@@ -1761,6 +1762,7 @@ https://partner.steamgames.com/doc/resources/Sales_Feature_Beta
 https://partner.steamgames.com/doc/sitelicense/licensees/gettingstarted/licensemodelpc
 https://partner.steamgames.com/doc/sitelicense/licensees/signup
 https://partner.steamgames.com/doc/store/assets/eventassets
+https://partner.steamgames.com/doc/store/assets/promos
 https://partner.steamgames.com/doc/store/creator_homepage
 https://partner.steamgames.com/doc/store/localization#supported_languages
 https://partner.steamgames.com/doc/store/news/rss
