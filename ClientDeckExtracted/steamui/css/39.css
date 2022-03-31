@@ -8107,7 +8107,7 @@ div.LowPerfMode
 }
 .gamepadlibrary_AppGridFilterHeader_eGFYo:before,
 .gamepadlibrary_AppGridFilterHeader_eGFYo:after {
-  background-color: rgba(139, 146, 154, 0.84);
+  background-color: rgba(139, 146, 154, 0.4);
   content: "";
   display: inline-block;
   height: 1px;
@@ -8582,10 +8582,12 @@ div.LowPerfMode
   color: #fff;
   padding: 8px 0px 0px;
 }
+.basicappdetailssectionstyler_PlaySection_3scbH {
+  padding: 16px 24px;
+}
 .basicappdetailssectionstyler_ActionRow_2Gj21 {
   display: flex;
   flex-flow: row;
-  padding: 16px 24px;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
@@ -9148,97 +9150,6 @@ div.LowPerfMode
   filter: brightness(1);
   transform: scale(1.04);
 }
-.lockscreen_Container_3rFFU {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  flex: 1;
-}
-.lockscreen_NumericButtonInput_2wl_h {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-}
-.lockscreen_NumericButtonOption_2c4Hz {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  font-size: 48px;
-  font-weight: 300;
-  color: #fff;
-}
-.lockscreen_DigitIndicator_3eHNj {
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #67707b;
-  background-color: transparent;
-}
-.lockscreen_DigitIndicator_3eHNj.lockscreen_Filled_i68Yl {
-  background-color: #fff;
-  border-color: #fff;
-}
-.lockscreen_Details_aLaNw {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-}
-.lockscreen_Details_aLaNw .lockscreen_DetailsGroup_1Ewy7 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-.lockscreen_Details_aLaNw .lockscreen_Prompt_3aUT8 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 22px;
-  line-height: 28px;
-}
-.lockscreen_Details_aLaNw .lockscreen_Directions_vNjDQ {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  color: #b8bcbf;
-}
-.lockscreen_Details_aLaNw .lockscreen_Indicators_3fJq6 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-}
-.lockscreen_Details_aLaNw .lockscreen_IncorrectPIN_OmybP {
-  color: #ffc82c;
-}
 .installrequest_FolderSelector_vaNI8 {
   padding: 20px 0;
 }
@@ -9725,12 +9636,15 @@ div.LowPerfMode
 }
 .controllersettings_devicecalibration_VisualizationMainContainer_2FmQV {
   position: relative;
-  margin-left: 100px;
+  margin-left: 120px;
   width: 350px;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.controllersettings_devicecalibration_VisualizationMainContainer_2FmQV.controllersettings_devicecalibration_LeftStick_2zyIb {
+  margin-left: 60px;
 }
 .controllersettings_devicecalibration_VizElement_20Hcl {
   position: absolute;
@@ -9839,6 +9753,22 @@ div.LowPerfMode
 .controllersettings_devicecalibration_HapticsWarning_36tHw {
   color: #e35e1c;
 }
+.controllersettings_devicecalibration_InlineGlyph_1Sira {
+  margin-top: -4px;
+  margin-left: 2px;
+}
+.controllersettings_devicecalibration_StartTestPrompt_3Ipg_ {
+  position: absolute;
+  top: 0;
+  margin-top: 160px;
+  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 120px;
+}
+.controllersettings_devicecalibration_StartTestPrompt_3Ipg_.controllersettings_devicecalibration_LeftStick_2zyIb {
+  margin-left: 360px;
+}
 .supportalerts_BrowserWrapper_14nHy {
   display: flex;
   flex-direction: column;
@@ -9939,6 +9869,25 @@ div.LowPerfMode
 .achievementslist_HiddenAchievementContent_3_7WU {
   justify-content: center;
 }
+.achievementslist_FriendAchievementFooter_3XozI {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.achievementslist_FriendAchievementFooter_3XozI
+  .achievementslist_GlobalPercentage_1nrpc {
+  padding-left: 72px;
+}
+.achievementslist_FriendAchievementFooter_3XozI
+  .achievementslist_UserUnlockDateTime_YnSJk {
+  color: #8b929a;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
 .achievementsheader_Container_2iGYY {
   display: flex;
   flex-direction: row;
@@ -9952,10 +9901,16 @@ div.LowPerfMode
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 14px;
 }
 .achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl {
   color: #fff;
   font-size: 22px;
+  font-weight: 400;
+}
+.achievementsheader_Container_2iGYY .achievementsheader_Subtitle_DiANf {
+  color: #dcdedf;
+  font-size: 16px;
   font-weight: 400;
 }
 .achievementsheader_StatsBlock__gDkI {
@@ -11070,8 +11025,9 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0px;
+  padding-top: 6px;
+  padding-left: 16px;
   margin: 0px;
-  margin-left: 16px;
   text-align: left;
   display: flex;
   gap: 10px;
@@ -11091,6 +11047,9 @@ body {
   font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  background: #0e141b;
+  z-index: 5;
+  box-shadow: 0 0 7px 12px #0e141b;
 }
 .quickaccessmenu_Container_3DHXr {
   zoom: 1;
@@ -11309,6 +11268,7 @@ body {
 .quickaccessmenu_TabGroupPanel_1QO7b {
   flex: 1 1 1px;
   min-height: 1px;
+  scroll-padding: 48px 0px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11317,6 +11277,9 @@ body {
 }
 .quickaccessmenu_TabGroupPanel_1QO7b::-webkit-scrollbar {
   display: none;
+}
+.quickaccessmenu_Title_34nl5 + .quickaccessmenu_TabGroupPanel_1QO7b {
+  padding-top: 16px;
 }
 .quickaccessmenu_FooterBoxShadow_ISUYE {
   position: fixed;
