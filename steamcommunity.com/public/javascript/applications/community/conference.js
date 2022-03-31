@@ -2688,13 +2688,17 @@
         }
         GetLastReferencedSaleDayFromCapsules(e, t) {
           let r = t;
-          for (const t of e)
-            void 0 !== t.visibility_index &&
-              (r =
-                void 0 === r
-                  ? t.visibility_index
-                  : Math.max(r, t.visibility_index));
-          return r;
+          return (
+            null == e ||
+              e.forEach((e) => {
+                void 0 !== e.visibility_index &&
+                  (r =
+                    void 0 === r
+                      ? e.visibility_index
+                      : Math.max(r, e.visibility_index));
+              }),
+            r
+          );
         }
         GetLastReferencedSaleDay() {
           let e;
@@ -8647,6 +8651,7 @@
                 ? t.event_schedule_rtime_end
                 : e.endTime,
               count: t.smart_section_max_apps,
+              show_recent_first: Boolean(t.event_schedule_show_recent_first),
               tags: (t.smart_section_event_tags || []).join(","),
             };
             return this.InternalEventForSalePageSection(
@@ -25726,7 +25731,7 @@
         }
       }
       function Ce(e) {
-        const { category: t, appName: r } = e;
+        const { category: t, appName: r, descriptionToken: a } = e;
         if (0 == t)
           return n.a.createElement(
             "div",
@@ -25738,43 +25743,43 @@
                 )
               : Object(g.f)("#SteamDeckVerified_DescriptionHeader_Unknown")
           );
-        let a = "",
-          i = null;
+        let i = "",
+          s = null;
         switch (t) {
           case 3:
-            (a = "#SteamDeckVerified_DescriptionHeader_Verified"),
-              (i = S.a.Verified);
+            (i = "#SteamDeckVerified_DescriptionHeader_Verified"),
+              (s = S.a.Verified);
             break;
           case 2:
-            (a = "#SteamDeckVerified_DescriptionHeader_Playable"),
-              (i = S.a.Playable);
+            (i = "#SteamDeckVerified_DescriptionHeader_Playable"),
+              (s = S.a.Playable);
             break;
           case 1:
-            (a = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
-              (i = S.a.Unsupported);
+            (i = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
+              (s = S.a.Unsupported);
         }
-        const s = n.a.createElement(
+        const o = n.a.createElement(
             "span",
-            { className: i },
+            { className: s },
             Object(g.f)(Be(t))
           ),
-          o = n.a.createElement(
+          l = n.a.createElement(
             "span",
             { className: S.a.CompatibilityDetailRatingSummary },
-            Object(g.f)(a)
+            Object(g.f)(a || i)
           ),
-          l = r
+          c = r
             ? Object(g.m)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
                 n.a.createElement("b", null, Object(E.b)(r)),
-                s,
-                o
+                o,
+                l
               )
-            : Object(g.m)("#SteamDeckVerified_DescriptionHeader", s, o);
+            : Object(g.m)("#SteamDeckVerified_DescriptionHeader", o, l);
         return n.a.createElement(
           "div",
           { className: S.a.CompatibilityDetailRatingSummary },
-          l
+          c
         );
       }
       function Be(e) {
@@ -41230,9 +41235,6 @@
     },
     Xhj9: function (e, t, r) {
       "use strict";
-      r.d(t, "a", function () {
-        return o;
-      });
       var a = r("mrSG"),
         n = r("2vnA"),
         i = (r("mgoM"), r("kyHq"), r("li7h"), r("cxFF"), r("ee7K"), r("IzPI")),
@@ -66285,9 +66287,15 @@
           );
         }
         Init() {
-          let e = Object(G.f)("localizedstoretag", "application_config");
-          this.ValidateStoreDefault(e) &&
-            e.forEach((e) => this.m_mapTagID.set(e.tagid, e));
+          if (
+            !Object({ NODE_ENV: "production", STEAM_BUILD: "buildbot" })
+              .MOBILE_BUILD &&
+            document.getElementById("application_config")
+          ) {
+            let e = Object(G.f)("localizedstoretag", "application_config");
+            this.ValidateStoreDefault(e) &&
+              e.forEach((e) => this.m_mapTagID.set(e.tagid, e));
+          }
         }
         ValidateStoreDefault(e) {
           const t = e;
@@ -78562,7 +78570,6 @@
                     p.Fragment,
                     null,
                     p.createElement(Ge, { storeItem: n, bShowDemoButton: r }),
-                    p.createElement(Ne, { storeItem: n }),
                     p.createElement(Fe, { storeItem: n })
                   )
                 : p.createElement(Le, { event: a }),
@@ -78682,6 +78689,7 @@
           p.createElement(
             "div",
             { className: ce.a.StatementCtn },
+            p.createElement(Ne, { storeItem: t }),
             p.createElement(
               "div",
               null,
@@ -86226,98 +86234,94 @@
     "zjj+": function (e, t, r) {
       "use strict";
       r.d(t, "c", function () {
-        return S;
+        return v;
       }),
         r.d(t, "b", function () {
-          return C;
+          return y;
         }),
         r.d(t, "a", function () {
-          return B;
+          return C;
         });
       var a = r("q1tI"),
         n = r.n(a),
         i = r("pQ8y"),
         s = r("kyHq"),
-        o = r("Xhj9"),
-        l = (r("sRB7"), r("gOcu")),
-        c = (r("g4bM"), r("35zc")),
-        d = r("b3LC"),
-        m = r("HKTa"),
-        u = r("g8lE"),
-        p = r("PHKo"),
-        _ = r("5L1o"),
-        h = r("NKJh"),
-        b = r.n(h),
-        g = r("VbCH"),
-        f = r("exH9"),
-        v = r("TLQK");
-      function S(e) {
+        o = (r("Xhj9"), r("sRB7"), r("gOcu")),
+        l = (r("g4bM"), r("35zc")),
+        c = r("b3LC"),
+        d = r("HKTa"),
+        m = r("g8lE"),
+        u = r("PHKo"),
+        p = r("5L1o"),
+        _ = r("NKJh"),
+        h = r.n(_),
+        b = r("VbCH"),
+        g = r("exH9"),
+        f = r("TLQK");
+      function v(e) {
         const {
             info: t,
             bShowDemoButton: r,
             bShowPurchaseOptionsButton: i,
-            fnOnPurchaseOptionsClick: _,
-            bHidePrice: h,
-            bHideWishlistButton: f,
-            bShowDeckCompatibilityDialog: v,
+            fnOnPurchaseOptionsClick: p,
+            bHidePrice: _,
+            bHideWishlistButton: g,
+            bShowDeckCompatibilityDialog: f,
           } = e,
-          S = Object(a.useRef)({ include_release: !0 }),
-          [C] = Object(d.a)(t.id, Object(c.d)(t.type), S.current),
-          E = Object(s.c)(t.type),
-          [w, O] = n.a.useState(r && E && l.a.Get().BHasDemoAppID(t.id));
+          v = Object(a.useRef)({ include_release: !0 }),
+          [y] = Object(c.a)(t.id, Object(l.d)(t.type), v.current),
+          B = Object(s.c)(t.type),
+          [E, w] = n.a.useState(r && B && o.a.Get().BHasDemoAppID(t.id));
         return (
           n.a.useEffect(() => {
             r &&
-              E &&
-              l.a
+              B &&
+              o.a
                 .Get()
                 .LoadAppIDsBatch([t.id])
-                .then(() => O(l.a.Get().BHasDemoAppID(t.id)));
-          }, [r, E, t.id]),
-          C
+                .then(() => w(o.a.Get().BHasDemoAppID(t.id)));
+          }, [r, B, t.id]),
+          y
             ? n.a.createElement(
                 "div",
-                { className: b.a.StoreActionWidgetContainer },
+                { className: h.a.StoreActionWidgetContainer },
                 n.a.createElement(
                   "div",
-                  { className: b.a.StoreSalePriceActionWidgetContainer },
-                  Boolean(!f && Object(s.c)(t.type)) &&
-                    n.a.createElement(g.a, {
+                  { className: h.a.StoreSalePriceActionWidgetContainer },
+                  Boolean(!g && Object(s.c)(t.type)) &&
+                    n.a.createElement(b.a, {
                       appid: t.id,
-                      bIsFree: C.BIsFree(),
-                      bIsComingSoon: C.BIsComingSoon(),
+                      bIsFree: y.BIsFree(),
+                      bIsComingSoon: y.BIsComingSoon(),
                       className: "WishlistBtn",
                     }),
-                  Boolean(w)
-                    ? n.a.createElement(p.a, { info: t, className: b.a.Action })
-                    : Boolean(!h) &&
-                        (Boolean(!!i)
-                          ? n.a.createElement(y, {
-                              fnOnPurchaseOptionsClick: _,
-                            })
-                          : n.a.createElement(u.a, {
-                              info: t,
-                              className: "CartBtn",
-                            })),
-                  Boolean(!h) && n.a.createElement(B, { info: t }),
-                  Boolean(v && t instanceof o.a) &&
-                    n.a.createElement(m.a, { nAppID: t.id })
+                  Boolean(E) &&
+                    n.a.createElement(u.a, { info: t, className: h.a.Action }),
+                  Boolean(!_) &&
+                    (Boolean(i)
+                      ? n.a.createElement(S, { fnOnPurchaseOptionsClick: p })
+                      : n.a.createElement(m.a, {
+                          info: t,
+                          className: "CartBtn",
+                        })),
+                  Boolean(!_) && n.a.createElement(C, { info: t }),
+                  Boolean(f) && n.a.createElement(d.a, { nAppID: t.id })
                 )
               )
             : null
         );
       }
-      const y = (e) =>
+      const S = (e) =>
         n.a.createElement(
           "div",
-          { className: b.a.Action, onClick: e.fnOnPurchaseOptionsClick },
+          { className: h.a.Action, onClick: e.fnOnPurchaseOptionsClick },
           n.a.createElement(
             "span",
             null,
-            Object(v.f)("#EventDisplay_CallToAction_ShowPurchaseOptions_Button")
+            Object(f.f)("#EventDisplay_CallToAction_ShowPurchaseOptions_Button")
           )
         );
-      function C(e) {
+      function y(e) {
         const {
             storeItem: t,
             bPurchaseOptionsExpanded: r,
@@ -86332,18 +86336,18 @@
             unmountOnExit: !0,
             timeout: 2e3,
             classNames: {
-              enterActive: b.a.Expanding,
-              enterDone: b.a.Expanded,
-              exit: b.a.Expanded,
-              exitActive: b.a.Collapsing,
+              enterActive: h.a.Expanding,
+              enterDone: h.a.Expanded,
+              exit: h.a.Expanded,
+              exitActive: h.a.Collapsing,
             },
           },
           n.a.createElement(
             "div",
-            { className: b.a.BundleContentsCtnTransition },
+            { className: h.a.BundleContentsCtnTransition },
             n.a.createElement(
               "div",
-              { className: b.a.BundleContentsCtn },
+              { className: h.a.BundleContentsCtn },
               null == s
                 ? void 0
                 : s.map((e) =>
@@ -86355,9 +86359,9 @@
                           (null == t ? void 0 : t.GetID()) +
                           "_" +
                           e.packageid,
-                        className: b.a.BundleContentItem,
+                        className: h.a.BundleContentItem,
                       },
-                      n.a.createElement(_.j, {
+                      n.a.createElement(p.j, {
                         id: e.packageid,
                         type: "sub",
                         bForceSmallCapsuleArt: !0,
@@ -86367,27 +86371,27 @@
             ),
             n.a.createElement(
               "div",
-              { onClick: a, className: b.a.BundleShowButton },
+              { onClick: a, className: h.a.BundleShowButton },
               n.a.createElement(
                 "button",
-                { className: b.a.ShowContentsButton },
-                Object(v.f)("#Button_Close")
+                { className: h.a.ShowContentsButton },
+                Object(f.f)("#Button_Close")
               )
             )
           )
         );
       }
-      function B(e) {
+      function C(e) {
         var t, r;
         const { info: i } = e,
           s = Object(a.useRef)({ include_release: !0 }),
-          [o] = Object(d.a)(
+          [o] = Object(c.a)(
             null == i ? void 0 : i.id,
-            Object(c.d)(null == i ? void 0 : i.type),
+            Object(l.d)(null == i ? void 0 : i.type),
             s.current
           );
         if (!o) return null;
-        const l =
+        const d =
           2 == o.GetStoreItemType() &&
           (null === (t = o.GetBestPurchaseOption()) || void 0 === t
             ? void 0
@@ -86395,11 +86399,11 @@
         if (e.bShowInLibrary)
           return n.a.createElement(
             "div",
-            { className: b.a.StoreSalePriceWidgetContainer },
+            { className: h.a.StoreSalePriceWidgetContainer },
             n.a.createElement(
               "div",
-              { className: b.a.StoreSalePriceBox },
-              Object(v.f)("#EventDisplay_CallToAction_InLibrary")
+              { className: h.a.StoreSalePriceBox },
+              Object(f.f)("#EventDisplay_CallToAction_InLibrary")
             )
           );
         if (
@@ -86410,11 +86414,11 @@
         )
           return n.a.createElement(
             "div",
-            { className: b.a.StoreSalePriceWidgetContainer },
+            { className: h.a.StoreSalePriceWidgetContainer },
             n.a.createElement(
               "div",
-              { className: b.a.StoreSalePriceBox },
-              Object(v.f)("#EventDisplay_CallToAction_ComingSoon")
+              { className: h.a.StoreSalePriceBox },
+              Object(f.f)("#EventDisplay_CallToAction_ComingSoon")
             )
           );
         if (o.BIsFree())
@@ -86424,76 +86428,76 @@
             o.GetParentAppID()
             ? n.a.createElement(
                 "div",
-                { className: b.a.StoreSalePriceWidgetContainer },
+                { className: h.a.StoreSalePriceWidgetContainer },
                 n.a.createElement(
                   "div",
-                  { className: b.a.StoreSalePriceBox },
-                  Object(v.f)("#EventDisplay_CallToAction_FreeDemo")
+                  { className: h.a.StoreSalePriceBox },
+                  Object(f.f)("#EventDisplay_CallToAction_FreeDemo")
                 )
               )
             : n.a.createElement(
                 "div",
-                { className: b.a.StoreSalePriceWidgetContainer },
+                { className: h.a.StoreSalePriceWidgetContainer },
                 n.a.createElement(
                   "div",
-                  { className: b.a.StoreSalePriceBox },
-                  Object(v.f)("#EventDisplay_CallToAction_FreeToPlay")
+                  { className: h.a.StoreSalePriceBox },
+                  Object(f.f)("#EventDisplay_CallToAction_FreeToPlay")
                 )
               );
         if (!o.GetBestPurchasePriceFormatted() || !o.GetBestPurchaseOption())
           return null;
-        const m = o.GetBestPurchaseOption().discount_pct || l,
-          u = m && l && m > l && l,
+        const m = o.GetBestPurchaseOption().discount_pct || d,
+          u = m && d && m > d && d,
           p = o.GetBestPurchaseOption().packageid;
         return n.a.createElement(
           "div",
           {
-            className: Object(f.a)(
-              b.a.StoreSalePriceWidgetContainer,
-              m && b.a.Discounted
+            className: Object(g.a)(
+              h.a.StoreSalePriceWidgetContainer,
+              m && h.a.Discounted
             ),
           },
           Boolean(o.BIsComingSoon() && !!p) &&
             n.a.createElement(
               "div",
               {
-                className: Object(f.a)(
-                  b.a.StoreSalePriceBox,
-                  b.a.StoreSalePrepurchaseLabel
+                className: Object(g.a)(
+                  h.a.StoreSalePriceBox,
+                  h.a.StoreSalePrepurchaseLabel
                 ),
               },
-              Object(v.f)("#EventDisplay_CallToAction_Prepurchase_Short")
+              Object(f.f)("#EventDisplay_CallToAction_Prepurchase_Short")
             ),
           Boolean(u) &&
             n.a.createElement(
               "span",
-              { className: Object(f.a)(b.a.BaseDiscount) },
+              { className: Object(g.a)(h.a.BaseDiscount) },
               `-${u}%`
             ),
           Boolean(m) &&
             n.a.createElement(
               "div",
-              { className: b.a.StoreSaleDiscountBox },
+              { className: h.a.StoreSaleDiscountBox },
               `-${m}%`
             ),
           m && o.GetBestPurchaseOriginalPriceFormatted()
             ? n.a.createElement(
                 "div",
-                { className: b.a.StoreSaleDiscountedPriceCtn },
+                { className: h.a.StoreSaleDiscountedPriceCtn },
                 n.a.createElement(
                   "div",
-                  { className: b.a.StoreOriginalPrice },
+                  { className: h.a.StoreOriginalPrice },
                   o.GetBestPurchaseOriginalPriceFormatted()
                 ),
                 n.a.createElement(
                   "div",
-                  { className: b.a.StoreSalePriceBox },
+                  { className: h.a.StoreSalePriceBox },
                   o.GetBestPurchasePriceFormatted()
                 )
               )
             : n.a.createElement(
                 "div",
-                { className: b.a.StoreSalePriceBox },
+                { className: h.a.StoreSalePriceBox },
                 o.GetBestPurchasePriceFormatted()
               )
         );

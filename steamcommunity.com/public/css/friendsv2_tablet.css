@@ -20,7 +20,6 @@
 
 	html.responsive .friends_nav {
 		min-width: unset;
-		/* padding: 12px 0px 24px 0px; */
 		padding: 0px 0px 24px 0px;
 	}
 
@@ -40,8 +39,6 @@
 
 
 
-
-
 	/* HEADER */
 	html.responsive .friends_header_bg {
 		height: unset;
@@ -56,17 +53,9 @@
 		background-color: var(--gpBackground-LightSoft);
 	}
 
-	/* html.responsive .friends_header_bg.gpfocus {
-		background-color: white;
-	} */
-
 	html.responsive .friends_header_name a {
 		transition: color 0.1s ease;
 	}
-
-	/* html.responsive .friends_header_bg.gpfocus .friends_header_name a {
-		color: black;
-	} */
 
 	html.responsive .friends_header_ctn {
 		margin: unset;
@@ -118,7 +107,7 @@
 
 	html.responsive #search_text_box,
 	html.responsive #search_text_box_sent {
-		background-image: url(../../../shared/public/images/ico_gamepad/search.svg);
+		background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico_gamepad/search.svg');
 		background-size: 24px 24px;
 		background-repeat: no-repeat;
 		background-position: 8px;
@@ -149,7 +138,6 @@
 		font-weight: 700;
 		margin: 8px 16px;
 		padding: 8px 0px 0px;
-		/* border-top: 1px solid var(--gpBackground-LightMedium); */
 	}
 
 	html.responsive .friends_nav h4:first-child {
@@ -497,7 +485,7 @@
 	html.responsive .invite_row .invite_row_content {
 		padding: unset;
 		gap: 12px;
-        flex: 0;
+        /* flex: 0; */
 	}
 
 	html.responsive .invite_row_left {
@@ -543,6 +531,7 @@
 	html.responsive .groupTitle {
 		font: var(--gpText-HeadingSmall);
 		font-weight: 500;
+		margin-bottom: 4px;
 	}
 
 	html.responsive #primaryGroupBreak {
@@ -556,16 +545,11 @@
 		column-gap: 4px;
 	}
 
-	html.responsive .memberRow > * {
-		/* border-right: 1px solid var(--gpBackground-LightMedium); */
-	}
-
 	html.responsive .group_block_medium {
 		margin: unset;
 	}
 
 	html.responsive .infoBreak {
-		/* display: none; */
 		color: var(--gpBackground-LightHard);
 	}
 

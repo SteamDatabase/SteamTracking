@@ -87,7 +87,8 @@
 
 
 	/* GAME LIST */
-	html.responsive #games_list_rows {
+	html.responsive #games_list_rows,
+	html.responsive .games_list_rows {
 		display: flex;
 		flex-direction: column;
 		gap: 6px;
@@ -103,10 +104,6 @@
 		padding: 10px 12px;
 		overflow: unset;
 		padding-right: 24px;
-	}
-
-	html.responsive .gameListRow.gpfocus {
-		/* background-color: var(--gpBackground-DarkMedium); */
 	}
 
 	html.responsive .gameListRowLogo {

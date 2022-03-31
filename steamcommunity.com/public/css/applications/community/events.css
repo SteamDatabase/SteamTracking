@@ -17777,6 +17777,7 @@ a.storywidget_BadgeFooter_3Yte6:hover {
 .salesectioneventschedule_SaleSchedDetailCtn_31c5z
   .salesectioneventschedule_StatementAndHighlights_28vOL {
   display: flex;
+  margin-top: 8px;
 }
 .salesectioneventschedule_SaleSchedDetailCtn_31c5z
   .salesectioneventschedule_StatementAndHighlights_28vOL
@@ -17864,7 +17865,8 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   min-width: 55px;
   margin-right: 4px;
   word-break: keep-all;
-  font-size: 13px;
+  font-size: 11px;
+  padding-top: 1px;
 }
 .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_LiveNow_3vE3k
   .salesectioneventschedule_Time_3qoMb {

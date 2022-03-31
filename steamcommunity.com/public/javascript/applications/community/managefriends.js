@@ -555,12 +555,13 @@
     OS6B: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return r;
+        return i;
       });
       n("mgoM");
       var a = n("vDqi"),
-        s = n.n(a);
-      function r(e) {
+        s = n.n(a),
+        r = n("bxBv");
+      function i(e) {
         if (s.a.isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
@@ -590,13 +591,20 @@
             return { strErrorMsg: e.message, errorCode: e.success };
           if (void 0 !== e.success && void 0 !== e.err_msg)
             return { strErrorMsg: e.err_msg, errorCode: e.success };
-          "string" == typeof e && e.length > 1024
-            ? (console.groupCollapsed(
-                "GetMsgAndErrorCodeFromResponse cannot parse: "
-              ),
+          if ("string" == typeof e && e.length > 1024)
+            console.groupCollapsed(
+              "GetMsgAndErrorCodeFromResponse cannot parse: "
+            ),
               console.error(e),
-              console.groupEnd())
-            : console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+              console.groupEnd();
+          else {
+            if ("object" == typeof e && e instanceof r.b)
+              return {
+                strErrorMsg: "" + e.GetEResult(),
+                errorCode: e.GetEResult(),
+              };
+            console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+          }
         }
         return "object" == typeof e && "status" in e
           ? {

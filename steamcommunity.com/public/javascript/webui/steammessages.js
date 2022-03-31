@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7169054";
+var CLSTAMP = "7180649";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -34831,6 +34831,12 @@ var CLSTAMP = "7169054";
               r,
               { ePrivilege: 1 }
             );
+          }),
+          (e.ReportReactUsage = function (e, r) {
+            return e.SendNotification("ClientMetrics.ReportReactUsage#1", r, {
+              ePrivilege: 2,
+              eWebAPIKeyRequirement: 1,
+            });
           }),
           (e.ReportClientError = function (e, r) {
             return e.SendNotification("ClientMetrics.ReportClientError#1", r, {

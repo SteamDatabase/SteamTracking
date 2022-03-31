@@ -2606,8 +2606,10 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 
 function GetAvatarURL( strHash, strSize )
 {
-	return "https:\/\/cdn.cloudflare.steamstatic.com\/steamcommunity\/public\/images\/avatars\/" + strHash.substring( 0, 2 ) + '/' + strHash + strSize + '.jpg';
-}
+	
+	return "https:\/\/avatars.cloudflare.steamstatic.com\/" + strHash + strSize + '.jpg';
+
+	}
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {

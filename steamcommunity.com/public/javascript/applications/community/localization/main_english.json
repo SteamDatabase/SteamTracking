@@ -881,7 +881,7 @@
     "EventSchedule_DeletePrompt_Title": "Delete Track",
     "EventSchedule_DeletePrompt_Body": "Are you sure that you want to delete this track?",
     "EventSchedule_Unlabled_Track": "Unlabeled Track %1$s",
-    "EventSchedule_EventValidDesc": "Below will appear events added specifically for this track. They are only valid if they are published, start and end within the schedule time range and match the category of event permitted for the schedule.",
+    "EventSchedule_EventValidDesc": "Add events specifically for this track. They are only valid if they are published, start and end within the schedule time range and match the type of event permitted for the schedule.",
     "EventSaleGuideLines_title": "Sale Event Agreements",
     "EventSaleGuidelines_desc": "Before you can use the sale editor tools, you’ll need to agree to the following requirements:",
     "EventSaleGuidelines_rule_1": "I understand that the sale page must clearly describe the group or individuals responsible for organizing the sale or event.",

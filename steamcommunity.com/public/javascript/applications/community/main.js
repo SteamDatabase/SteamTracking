@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7174844";
+var CLSTAMP = "7180649";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [101],
   {
@@ -6661,9 +6661,10 @@ var CLSTAMP = "7174844";
           super(e), (this.state = { checked: e.checked, disabled: e.disabled });
         }
         componentDidUpdate(e) {
-          e.checked != this.props.checked &&
-            this.props.checked != this.state.checked &&
-            this.setState({ checked: this.props.checked }),
+          this.props.controlled ||
+            (e.checked != this.props.checked &&
+              this.props.checked != this.state.checked &&
+              this.setState({ checked: this.props.checked })),
             e.disabled != this.props.disabled &&
               this.props.disabled != this.state.disabled &&
               this.setState({ disabled: this.props.disabled });
@@ -6673,14 +6674,17 @@ var CLSTAMP = "7174844";
             e.label != this.props.label ||
             e.description != this.props.description ||
             e.onChange != this.props.onChange ||
+            e.controlled != this.props.controlled ||
             e.disabled != this.props.disabled ||
             t.disabled != this.state.disabled ||
-            e.checked != this.state.checked ||
+            e.checked != this.checked ||
             t.checked != this.state.checked
           );
         }
         get checked() {
-          return this.state.checked;
+          return this.props.controlled
+            ? this.props.checked
+            : this.state.checked;
         }
         GetPanelElementProps() {
           return {
@@ -6691,8 +6695,8 @@ var CLSTAMP = "7174844";
         }
         Toggle() {
           if (this.props.disabled) return;
-          let e = !this.state.checked;
-          this.setState({ checked: e }),
+          let e = !this.checked;
+          this.props.controlled || this.setState({ checked: e }),
             this.props.onChange && this.props.onChange(e);
         }
         KeyDown(e) {
@@ -6709,7 +6713,7 @@ var CLSTAMP = "7174844";
         Object(r.b)([c.a], F.prototype, "SetChecked", null);
       class A extends F {
         render() {
-          let e = "DialogCheckbox" + (this.state.checked ? " Active" : "");
+          let e = "DialogCheckbox" + (this.checked ? " Active" : "");
           return (
             1 == this.state.disabled && (e += " Disabled"),
             this.props.label
@@ -6769,7 +6773,7 @@ var CLSTAMP = "7174844";
       P.contextType = u.a;
       class G extends F {
         render() {
-          let e = this.state.checked ? " Active" : "";
+          let e = this.checked ? " Active" : "";
           return i.createElement(
             f.a,
             Object.assign(
@@ -6824,13 +6828,13 @@ var CLSTAMP = "7174844";
       });
       class U extends F {
         OnOffKeyDown(e) {
-          (37 == e.keyCode && this.state.checked) ||
-          (39 == e.keyCode && !this.state.checked)
+          (37 == e.keyCode && this.checked) ||
+          (39 == e.keyCode && !this.checked)
             ? (this.Toggle(), e.preventDefault(), e.stopPropagation())
             : this.KeyDown(e);
         }
         OnNewUIToggle(e) {
-          e !== this.state.checked && this.Toggle();
+          e !== this.checked && this.Toggle();
         }
         render() {
           let e =
@@ -6873,7 +6877,7 @@ var CLSTAMP = "7174844";
                     { className: "DialogOnOffToggle_NewUIContainer" },
                     i.createElement(p, {
                       onChange: this.OnNewUIToggle,
-                      value: this.state.checked,
+                      value: this.checked,
                     })
                   )
                 : i.createElement(
@@ -6893,7 +6897,7 @@ var CLSTAMP = "7174844";
                         {
                           className:
                             "DialogOnOffToggle_Option Off" +
-                            (this.state.checked ? "" : " Active"),
+                            (this.checked ? "" : " Active"),
                         },
                         Object(a.f)("#Dialog_Off")
                       ),
@@ -6902,7 +6906,7 @@ var CLSTAMP = "7174844";
                         {
                           className:
                             "DialogOnOffToggle_Option On" +
-                            (this.state.checked ? " Active" : ""),
+                            (this.checked ? " Active" : ""),
                         },
                         Object(a.f)("#Dialog_On")
                       )
@@ -10299,6 +10303,12 @@ var CLSTAMP = "7174844";
               { ePrivilege: 1 }
             );
           }),
+          (e.ReportReactUsage = function (e, t) {
+            return e.SendNotification("ClientMetrics.ReportReactUsage#1", t, {
+              ePrivilege: 2,
+              eWebAPIKeyRequirement: 1,
+            });
+          }),
           (e.ReportClientError = function (e, t) {
             return e.SendNotification("ClientMetrics.ReportClientError#1", t, {
               ePrivilege: 2,
@@ -12885,7 +12895,7 @@ var CLSTAMP = "7174844";
                   n.activeButtons[e] &&
                   ((n.activeButtons[e] = !1),
                   this.OnButtonUp(e, t.nController));
-            }
+            } else t.strActionName;
           }
         }
       }
@@ -15373,6 +15383,7 @@ var CLSTAMP = "7174844";
           IN_GAMEPADUI: !1,
           ON_DECK: !1,
           IN_LOGIN: !1,
+          IN_STANDALONE_KEYBOARD: !1,
         },
         s = {
           logged_in: !1,

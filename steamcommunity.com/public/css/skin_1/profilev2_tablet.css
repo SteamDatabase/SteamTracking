@@ -157,9 +157,6 @@
 
 	html.responsive .profile_header .profile_summary {
 		height: unset;
-		/* display: -webkit-box; */
-		/* -webkit-line-clamp: 5; */
-		/* -webkit-box-orient: vertical; */
 		overflow: scroll;
 		max-height: 140px;
 		margin: unset;
@@ -560,6 +557,10 @@
 		font-weight: 400;
 		color: var(--gpStoreLightestGrey);
 		width: 90%;
+	}
+
+	html.responsive #BatchScreenshotManagement {
+		padding-bottom: 24px;
 	}
 
 

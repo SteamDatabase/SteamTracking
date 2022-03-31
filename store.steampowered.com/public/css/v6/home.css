@@ -1764,7 +1764,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		border-color: #FFFFFF;
 	}
 
-	html.responsive .home_ctn {
+	.home_ctn {
 		padding-left: 2%;
 		padding-right: 2%;
 		padding-bottom: 50px;
@@ -1981,7 +1981,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		border-color: #FFFFFF;
 	}
 
-	html.responsive.tablet .home_ctn {
+	.home_ctn {
 		padding-left: 2%;
 		padding-right: 2%;
 		padding-bottom: 50px;

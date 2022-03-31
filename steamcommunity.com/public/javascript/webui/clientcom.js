@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7169054";
+var CLSTAMP = "7180649";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -356,7 +356,7 @@ var CLSTAMP = "7169054";
           return t;
       }
     }
-    var C, R, k, T, b, N, O;
+    var C, R, T, k, b, N, O;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -400,7 +400,7 @@ var CLSTAMP = "7169054";
             "k_ESuspendResumeProgressState_WaitingForApp"),
           (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
             "k_ESuspendResumeProgressState_Working");
-      })(k || (k = {})),
+      })(T || (T = {})),
       (function (e) {
         (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
           "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -410,7 +410,7 @@ var CLSTAMP = "7169054";
             "k_EFloatingGamepadTextInputModeModeEmail"),
           (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
             "k_EFloatingGamepadTextInputModeModeNumeric");
-      })(T || (T = {})),
+      })(k || (k = {})),
       (function (e) {
         (e[(e.k_EAppUpdateContentType_Content = 0)] =
           "k_EAppUpdateContentType_Content"),
@@ -524,6 +524,7 @@ var CLSTAMP = "7169054";
         IN_GAMEPADUI: !1,
         ON_DECK: !1,
         IN_LOGIN: !1,
+        IN_STANDALONE_KEYBOARD: !1,
       },
       i = {
         logged_in: !1,

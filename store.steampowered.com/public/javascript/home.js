@@ -2404,8 +2404,10 @@ CHomeSettings.prototype.DismissPopup = function()
 
 function GetAvatarURL( strAvatarHash, sizeStr )
 {
-	return 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/' + strAvatarHash.substr( 0 , 2 ) + '/' + strAvatarHash + ( sizeStr || '' ) + '.jpg';
-}
+	
+    return 'https://avatars.cloudflare.steamstatic.com/' + strAvatarHash + ( sizeStr || '' ) + '.jpg';
+
+	}
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {

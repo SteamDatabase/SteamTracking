@@ -854,7 +854,8 @@
         padding: 6px 12px;
     }
 
-    .btn_medium {
+    .btn_medium,
+	.gl_btn_huge {
         padding: 10px 20px;
     }
 
@@ -868,7 +869,9 @@
 
     .btn_medium span,
     .btn_border_2px span,
-    .btn_medium span {
+    .btn_medium span,
+	.gl_btn_huge span,
+	.gl_btn_huge.gl_big_text > span {
         font: var(--gpText-BodyLarge);
     }
 
@@ -878,7 +881,8 @@
     .btn_medium span,
     .btn_border_2px span,
     .btn_medium span,
-	.btn_small_tall span {
+	.btn_small_tall span,
+	.gl_btn_huge span {
         text-transform: unset;
         padding: unset;
         background: unset !important;
@@ -886,12 +890,15 @@
         text-shadow: none !important;
         border: unset !important;
         text-align: center;
-		/* transition: all 1s ease; */
     }
 
     .inner_bevel {
         box-shadow: unset;
     }
+
+	.gl_btn_multiline br {
+		display: none;
+	}
 
 
 

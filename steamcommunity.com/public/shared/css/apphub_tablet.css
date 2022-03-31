@@ -219,6 +219,35 @@
 	html.responsive .apphub_StorePrice {
 		border: unset;
 		height: unset;
+		display: flex;
+		align-items: center;
+		column-gap: 6px;
+	}
+
+	html.responsive .apphub_StorePrice .discount_pct {
+		position: unset;
+		font: var(--gpText-BodyMedium);
+		background-color: var(--gpColor-Green);
+		padding: 1px 4px;
+		border-radius: var(--gpCorner-Small);
+	}
+
+	html.responsive .apphub_StorePrice .discount_prices {
+		display: flex;
+		align-items: center;
+		column-gap: 6px;
+	}
+
+	html.responsive .apphub_StorePrice .discount_original_price {
+		font: var(--gpText-BodyMedium);
+		color: white;
+		opacity: 0.5;
+	}
+
+	html.responsive .apphub_StorePrice .discount_final_price {
+		font: var(--gpText-BodyMedium);
+		color: white;
+		top: unset;
 	}
 
 	html.responsive .apphub_StorePrice .price {

@@ -488,14 +488,15 @@
               [w]
             ),
             M = Object(c.h)(f),
-            B = Object(c.f)(t, M);
+            B = Object(c.f)(w, _.navRef),
+            y = Object(c.f)(t, M);
           return s.a.createElement(
             g.a,
             Object.assign({}, _, {
               style: S,
               className: Object(o.a)(m, p.a.ScrollPanel, C),
-              ref: B,
-              navRef: w,
+              ref: y,
+              navRef: B,
             }),
             s.a.createElement(b.a, null, h)
           );

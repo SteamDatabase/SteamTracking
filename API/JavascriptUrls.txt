@@ -1291,6 +1291,8 @@ https://about.steamchina.com/infringement_report.html
 https://about.steamchina.com/parentguardianship_agreement.html
 https://apps.apple.com/app/id1465996312
 https://avatars.cloudflare.steamstatic.com/${hash}
+https://avatars.cloudflare.steamstatic.com/${strAvatarHash}${}.jpg
+https://avatars.cloudflare.steamstatic.com/${strHash}${strSize}.jpg
 https://calendar.google.com/calendar/r/eventedit?text=
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/${filename}
@@ -1514,8 +1516,6 @@ https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/t
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/${hat_image}
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/${shirt_image}
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/${}/${hash}
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/${}/${strAvatarHash}${}.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/${}/${strHash}${strSize}.jpg
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars//${}/${avatar}.jpg
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/309cb650beb92e00ae352710387832aea78433ef.jpg
