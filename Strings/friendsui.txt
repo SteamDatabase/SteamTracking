@@ -5,8 +5,8 @@ __text
 __TEXT
 __stubs
 __TEXT
-:j:
-:j:
+l:
+l:
 __stub_helper
 __TEXT
 __cstring
@@ -106,8 +106,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+a
 )
-%\
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -12396,6 +12396,7 @@ MP4 Media File (*.mp4)
 .ogv
 Ogg Media File (*.ogv)
 *%s
+All files
 findcount
 findactive
 DismissJSDialog
@@ -13771,12 +13772,15 @@ D
 
 x
 C
+*8
+
 L
 @
 B
 B
 B
 B
+7
 7
 7
 x
@@ -13789,41 +13793,17 @@ p
 p
 0
 A
-z6
-6
-6
-6
-6
-6
-6
-b6
-U6
-/6
+u6
+W6
+5
 '
 6
 6
+5
 6
-P
-p
-0
-p
-0
-p
-0
-o
-]
-m
-A
-A
-A
-^
-p
-0
-p
-0
-@
-@
-@
+6
+}@
+6
 p
 0
 p
@@ -13831,22 +13811,29 @@ p
 p
 0
 H5
-A5
+o
+]
+m
+^
+p
+0
+p
+0
+@
+@
+p
+0
+p
+0
+p
+0
+"5
 E8u
 E8u
-5
-5
-/5
-S@
-5
-5
+-5
 5
 0
-64
-74
 H=
-4
-64
 j
 p
 0
@@ -13855,29 +13842,17 @@ p
 j
 j
 AWj
-4
-4
-4
-@
-@
-@
-4
 @
 @
 @
 @
 @
-4
-4
-4
-4
-4
-4
+@
+@
+@
 
 
 
-A)
-3
 
 0
 0
@@ -13890,7 +13865,6 @@ p
 0
 p
 0
-#>
 p
 0
 p
@@ -13903,20 +13877,19 @@ p
 p
 0
 p
+>
 
 
 
 
 p
 0
-1T
+2.
 p
 0
 p
 0
-G3
 
-+3
 n
 j
 j
@@ -13982,7 +13955,6 @@ j
 j
 j
 j
-W3
 j
 j
 j
@@ -14018,19 +13990,22 @@ j
 j
 j
 j
+j
+N3
 j
 j
 j
 j
 j
 .
-.
-.
-.
 j
 j
 j
-j
+S
+S
+S
+S
+S
 S
 S
 S
@@ -14042,12 +14017,9 @@ S
 S
 p
 AWj
-3
-3
-3
-3
-B
-a2
+rS
+(2
+R2
 p
 0
 p
@@ -14055,7 +14027,7 @@ p
 p
 0
 I
-0
+.
 p
 0
 p
@@ -14065,7 +14037,7 @@ p
 p
 0
 0
-?1
+2
 p
 0
 0
@@ -14075,7 +14047,6 @@ p
 0
 0
 0
-92
 p
 0
 p
@@ -14087,8 +14058,6 @@ p
 p
 0
 0
-L'
-O2
 j
 j
 j
@@ -14118,14 +14087,13 @@ j
 j
 j
 j
-'<
 p
 0
 p
 0
 <
-<
-1
+2
+B
 B
 p
 0
@@ -14135,6 +14103,11 @@ p
 0
 p
 0
+m,
+,1
+pQ
+,
+,
 p
 p
 p
@@ -14152,7 +14125,6 @@ p
 0
 p
 0
-x1
 p
 0
 p
@@ -14163,26 +14135,30 @@ p
 0
 p
 0
+-
 E
-~0
-11
+O+
+x0
 p
 0
++
++
 p
 1
-1
 
-=0
+?0
 
 0
-6
 B
+/1
 p
 +
+O:
+N:
+k0
 E8}
-#/
-A0
-{/
+*0
+t/
 p
 0
 p
@@ -14193,14 +14169,14 @@ p
 0
 p
 p
-R/
-C/
+D/
 p
+0
 0
 0
 0
 *
-0
+c0
 0
 0
 AT=
@@ -14211,7 +14187,11 @@ AT=
 D
 @
 @
-0
+/
+/
+/
+/
+r9
 5
 @
 Hc
@@ -14246,54 +14226,53 @@ IcE
 @
 /
 /
-/
-/
-/
 .
 .
-m.
+.
+r.
 V
 -
 -
 =
-~-
--
 =
-@
-+
-+
+,
+,
+,
 ,
 @
+/+
++
+*
+@
 >
 >
 >
+u*
 )
-)
-/
-/
-`)
+W)
 (
 (
-.
+v<
 )
 )
 )
 )
-)
-)
+{'
+LH
 (
 '
 '
 '
-A*
+g*
+(
+(
+=1
 @
 M9e
 @
 @
 '
 '
-&
-W0
 ?
 ?
 ?
@@ -14310,15 +14289,18 @@ W0
 ?
 ?
 
+,
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-.+
++
+%
 Pj
 ARj
 j
+l%
 0
 0
 =
@@ -14326,8 +14308,8 @@ j
 @
 =
 9
-9)
 =
+"
 %
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -14620,7 +14602,7 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-d!
+Z!
 =
 @
 
@@ -14628,20 +14610,22 @@ d!
 @
 @
 0
-"!
-k+
-g+
 H=
+2"
 Ic]
 j
 j
 j
 j
+"
+"
 j
 j
 
-Q
 t$I;M
+#
+%
+%
 e
 W
 ,7~5d
@@ -14804,35 +14788,26 @@ P
 @
 #
 "
-!
 
 `"
 d
+m
 fD9-c$,
 fD9-O#,
 A+M
 
+
+
 j
 j
 j
 j
 j
 j
+
 =
 0
 
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-
 
 j
 j
@@ -14845,6 +14820,19 @@ j
 j
 j
 j
+e"
+
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 j
 j
 j
@@ -14852,7 +14840,8 @@ j
 j
 j
 
-*
+#
+o*
 d
 &
 &
@@ -14875,7 +14864,6 @@ j
 j
 j
 j
-"
 j
 j
 j
@@ -14892,7 +14880,6 @@ j
 j
 j
 j
-_(
 j
 j
 j
@@ -14915,13 +14902,11 @@ j
 j
 j
 =
+c
+z
 
+>"
 
-"
-"
-W
-k"
-C
 
 j
 j
@@ -14949,7 +14934,6 @@ j
 j
 j
 j
-B&
 j
 j
 j
@@ -14980,7 +14964,6 @@ j
 j
 j
 j
-y%
 j
 j
 j
@@ -14995,6 +14978,7 @@ j
 j
 j
 j
+C%
 j
 j
 j
@@ -15011,13 +14995,13 @@ j
 j
 j
 j
-!
 %
 %
 %
 %
 %
 %
+
 @
 @
 &
@@ -15040,8 +15024,7 @@ j
 j
 j
 j
-"
-"
+6$
 0
 @
 @
@@ -15064,7 +15047,6 @@ j
 @
 @
 
-
 j
 j
 j
@@ -15085,12 +15067,14 @@ j
 j
 j
 j
+"#
 .
+#
+#
+#
 d
-x#
 =
-e"
-Hc;c"
+Lc%{c"
 
 =
 @
@@ -15101,6 +15085,7 @@ g
 u
 @
 @
+"
 @
 @
 @
@@ -15110,7 +15095,6 @@ u
 @
 @
 0
-m
 0
 0
 0

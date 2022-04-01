@@ -39,7 +39,9 @@ __DATA
 0
 __thread_data
 __DATA
+@H'
 @
+@H'
 __thread_bss
 __DATA
 __bss
@@ -49,13 +51,10 @@ __common
 __DATA
 H
 __LINKEDIT
-@'
 
 @
 @loader_path/serverbrowser.dylib
 "
-@'
-Q'
 P
 
 
@@ -87,6 +86,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+>(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -2906,6 +2906,7 @@ MP4 Media File (*.mp4)
 .ogv
 Ogg Media File (*.ogv)
 *%s
+All files
 findcount
 findactive
 OnCloseWindow
@@ -3771,6 +3772,7 @@ about to perform blocking dns call from the main thread.  consider refactoring.
 BResolveHostString - unexpected DNS lookup flag '%d'
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
+CUtlBuffer::GetStringFast: binary buffers only
 Expected %lld but got %lld!
 pConv && pConv->GetDelimiterLength() > 0
 nSize >= 0
@@ -3899,7 +3901,6 @@ IcE
 V
 =
 =
-"
 @
 @
 M9e
@@ -3922,11 +3923,10 @@ M9e
 ?
 @
 @
->
-
 
 
 d
+&
 A+M
 j
 j
@@ -4173,7 +4173,6 @@ d
 @
 @
 @
-A
 @
 @
 @
