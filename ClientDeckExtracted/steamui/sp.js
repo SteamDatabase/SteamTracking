@@ -7301,9 +7301,9 @@
             Object({
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Mar 30 2022 : 18:06:28",
-              BUILD_TIME_UTC: "Mar 31 2022 : 01:06:28",
-              BUILD_RTIME_UTC: 1648688788,
+              BUILD_TIME_LOCAL: "Mar 31 2022 : 16:34:35",
+              BUILD_TIME_UTC: "Mar 31 2022 : 23:34:35",
+              BUILD_RTIME_UTC: 1648769675,
             }).MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -15197,7 +15197,7 @@
         if (!A) return null;
         const c = !0,
           l = A.nSteamVersion > 0 ? A.nSteamVersion.toString() : "local",
-          s = parseInt(1648688788),
+          s = parseInt(1648769675),
           B = s && Mc(s, e, i),
           E = A.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           C = Object(_e.a)(1024 * A.nSystemRAMSizeMB * 1024),
@@ -15782,9 +15782,9 @@
           o.b,
           null,
           n.createElement(Tc, null),
+          n.createElement(jc, null),
           n.createElement(Lc, null),
           n.createElement(Yc, null),
-          n.createElement(jc, null),
           n.createElement(kc, null)
         );
       }
@@ -21867,9 +21867,9 @@
           null
         );
       var xB = t("q3mK"),
-        WB = t("bEDl");
-      t("2lL1");
-      const XB = {
+        WB = t("bEDl"),
+        XB = (t("2lL1"), t("w2vD"));
+      const JB = {
         0: "#Settings_ControllerDeviceSupport_TestingLeftTrigger",
         1: "#Settings_ControllerDeviceSupport_TestingRightTrigger",
         2: "#Settings_ControllerDeviceSupport_TestingLeftTrackpad",
@@ -21884,30 +21884,42 @@
         11: "#Settings_ControllerDeviceSupport_TestingComplete",
         12: "#Settings_ControllerDeviceSupport_TestingStarted",
       };
-      function JB(A) {
-        var e;
-        const t = Object(IA.b)(),
-          a =
-            null ===
-              (e = IA.a
-                .Get()
-                .GetController(null == t ? void 0 : t.controllerIdx)) ||
-            void 0 === e
-              ? void 0
-              : e.nLStickDeadzone,
-          g = Math.sqrt(
-            (null == t ? void 0 : t.LeftJoystickX) *
-              (null == t ? void 0 : t.LeftJoystickX) +
-              (null == t ? void 0 : t.LeftJoystickY) *
-                (null == t ? void 0 : t.LeftJoystickY)
+      function KB(A) {
+        var e, t;
+        const a = Object(IA.b)();
+        let g =
+          null ===
+            (e = IA.a
+              .Get()
+              .GetController(null == a ? void 0 : a.controllerIdx)) ||
+          void 0 === e
+            ? void 0
+            : e.nLStickDeadzone;
+        g =
+          g < 0
+            ? Object(XB.x)(
+                null ===
+                  (t = IA.a
+                    .Get()
+                    .GetController(null == a ? void 0 : a.controllerIdx)) ||
+                  void 0 === t
+                  ? void 0
+                  : t.eControllerType
+              )
+            : g;
+        const i = Math.sqrt(
+            (null == a ? void 0 : a.LeftJoystickX) *
+              (null == a ? void 0 : a.LeftJoystickX) +
+              (null == a ? void 0 : a.LeftJoystickY) *
+                (null == a ? void 0 : a.LeftJoystickY)
           ),
-          i = g >= a ? (null == t ? void 0 : t.LeftJoystickX) : 0,
-          c = g >= a ? (null == t ? void 0 : t.LeftJoystickY) : 0,
-          l =
-            (null == t ? void 0 : t.LeftTrigger) > 100
-              ? null == t
+          c = i >= g ? (null == a ? void 0 : a.LeftJoystickX) : 0,
+          l = i >= g ? (null == a ? void 0 : a.LeftJoystickY) : 0,
+          s =
+            (null == a ? void 0 : a.LeftTrigger) > 100
+              ? null == a
                 ? void 0
-                : t.LeftTrigger
+                : a.LeftTrigger
               : 0;
         return n.createElement(
           "div",
@@ -21924,7 +21936,7 @@
                   "#Settings_ControllerDeviceSupport_LeftTrigger"
                 ),
               },
-              String(l)
+              String(s)
             ),
             n.createElement(
               r.h,
@@ -21935,9 +21947,9 @@
                   "#Settings_ControllerDeviceSupport_LeftTrackpad"
                 ),
               },
-              String(null == t ? void 0 : t.LeftTrackpadX) +
+              String(null == a ? void 0 : a.LeftTrackpadX) +
                 ", " +
-                String(null == t ? void 0 : t.LeftTrackpadY)
+                String(null == a ? void 0 : a.LeftTrackpadY)
             ),
             n.createElement(
               r.h,
@@ -21948,7 +21960,7 @@
                   "#Settings_ControllerDeviceSupport_LeftTrackpad_Pressure"
                 ),
               },
-              String(null == t ? void 0 : t.LeftTrackpadPressure)
+              String(null == a ? void 0 : a.LeftTrackpadPressure)
             ),
             n.createElement(
               r.h,
@@ -21960,12 +21972,12 @@
                   "#Settings_ControllerDeviceSupport_LeftJoystick"
                 ),
               },
-              String(i) + ", " + String(c)
+              String(c) + ", " + String(l)
             )
           )
         );
       }
-      function KB(A) {
+      function qB(A) {
         n.useEffect(
           () => (
             Y.b.DisableHomeAndQuickAccessButtons(),
@@ -22022,30 +22034,42 @@
           )
         );
       }
-      function qB(A) {
-        var e;
-        const t = Object(IA.b)(),
-          a =
-            null ===
-              (e = IA.a
-                .Get()
-                .GetController(null == t ? void 0 : t.controllerIdx)) ||
-            void 0 === e
-              ? void 0
-              : e.nRStickDeadzone,
-          g = Math.sqrt(
-            (null == t ? void 0 : t.RightJoystickX) *
-              (null == t ? void 0 : t.RightJoystickX) +
-              (null == t ? void 0 : t.RightJoystickY) *
-                (null == t ? void 0 : t.RightJoystickY)
+      function _B(A) {
+        var e, t;
+        const a = Object(IA.b)();
+        let g =
+          null ===
+            (e = IA.a
+              .Get()
+              .GetController(null == a ? void 0 : a.controllerIdx)) ||
+          void 0 === e
+            ? void 0
+            : e.nRStickDeadzone;
+        g =
+          g < 0
+            ? Object(XB.x)(
+                null ===
+                  (t = IA.a
+                    .Get()
+                    .GetController(null == a ? void 0 : a.controllerIdx)) ||
+                  void 0 === t
+                  ? void 0
+                  : t.eControllerType
+              )
+            : g;
+        const i = Math.sqrt(
+            (null == a ? void 0 : a.RightJoystickX) *
+              (null == a ? void 0 : a.RightJoystickX) +
+              (null == a ? void 0 : a.RightJoystickY) *
+                (null == a ? void 0 : a.RightJoystickY)
           ),
-          i = g >= a ? (null == t ? void 0 : t.RightJoystickX) : 0,
-          c = g >= a ? (null == t ? void 0 : t.RightJoystickY) : 0,
-          l =
-            (null == t ? void 0 : t.RightTrigger) > 100
-              ? null == t
+          c = i >= g ? (null == a ? void 0 : a.RightJoystickX) : 0,
+          l = i >= g ? (null == a ? void 0 : a.RightJoystickY) : 0,
+          s =
+            (null == a ? void 0 : a.RightTrigger) > 100
+              ? null == a
                 ? void 0
-                : t.RightTrigger
+                : a.RightTrigger
               : 0;
         return n.createElement(
           "div",
@@ -22062,7 +22086,7 @@
                   "#Settings_ControllerDeviceSupport_RightTrigger"
                 ),
               },
-              String(l)
+              String(s)
             ),
             n.createElement(
               r.h,
@@ -22073,9 +22097,9 @@
                   "#Settings_ControllerDeviceSupport_RightTrackpad"
                 ),
               },
-              String(null == t ? void 0 : t.RightTrackpadX) +
+              String(null == a ? void 0 : a.RightTrackpadX) +
                 ", " +
-                String(null == t ? void 0 : t.RightTrackpadY)
+                String(null == a ? void 0 : a.RightTrackpadY)
             ),
             n.createElement(
               r.h,
@@ -22086,7 +22110,7 @@
                   "#Settings_ControllerDeviceSupport_RightTrackpad_Pressure"
                 ),
               },
-              String(null == t ? void 0 : t.RightTrackpadPressure)
+              String(null == a ? void 0 : a.RightTrackpadPressure)
             ),
             n.createElement(
               r.h,
@@ -22098,12 +22122,12 @@
                   "#Settings_ControllerDeviceSupport_RightJoystick"
                 ),
               },
-              String(i) + ", " + String(c)
+              String(c) + ", " + String(l)
             )
           )
         );
       }
-      function _B(A) {
+      function $B(A) {
         var e;
         const t = Object(i.n)();
         n.useEffect(() => {
@@ -22127,7 +22151,7 @@
         );
         const g = Object(IA.b)();
         return n.createElement(
-          KB,
+          qB,
           null,
           n.createElement(c.Xb, {
             className: WB.ControllerOutline,
@@ -22163,7 +22187,7 @@
             { className: WB.TestStepLabel },
             " ",
             Object(u.g)(
-              XB[
+              JB[
                 null !== (e = null == g ? void 0 : g.currentTestStep) &&
                 void 0 !== e
                   ? e
@@ -22175,14 +22199,13 @@
           n.createElement(
             "div",
             { className: WB.Row },
-            n.createElement(JB, null),
-            n.createElement(qB, null)
+            n.createElement(KB, null),
+            n.createElement(_B, null)
           )
         );
       }
-      var $B = t("bOV+"),
-        AE = t("5OTy"),
-        eE = t("w2vD"),
+      var AE = t("bOV+"),
+        eE = t("5OTy"),
         tE = t("ujHi"),
         nE = t.n(tE),
         aE = t("oHKB"),
@@ -22333,7 +22356,7 @@
           if (!B) return n.createElement(n.Fragment, null);
           let d = 0,
             Q = !1;
-          const b = Object(eE.x)(c.eControllerType);
+          const b = Object(XB.x)(c.eControllerType);
           s
             ? ((d = -1 == c.nLStickDeadzone ? b : c.nLStickDeadzone),
               (Q =
@@ -22364,7 +22387,7 @@
               fill: "#3D4450",
               strokeWidth: 3,
               showInKey: !0,
-              style: $B.VizElement,
+              style: AE.VizElement,
             },
             v = {
               id: "DeadZoneInner",
@@ -22372,7 +22395,7 @@
               fill: Q ? "#5B7E90" : "#ff0000",
               strokeWidth: 3,
               showInKey: !0,
-              style: $B.VizElement,
+              style: AE.VizElement,
             },
             h = C
               ? s
@@ -22398,7 +22421,7 @@
               : 0;
           return n.createElement(
             AA.a,
-            { className: Object(G.a)($B.JoystickPageContainer) },
+            { className: Object(G.a)(AE.JoystickPageContainer) },
             n.createElement(
               o.i,
               null,
@@ -22426,36 +22449,36 @@
                 },
                 n.createElement(
                   AA.a,
-                  { "flow-children": "row", className: $B.JoystickContainer },
+                  { "flow-children": "row", className: AE.JoystickContainer },
                   n.createElement(
                     "div",
                     {
                       className: Object(G.a)(
-                        $B.VisualizationMainContainer,
-                        s && $B.LeftStick
+                        AE.VisualizationMainContainer,
+                        s && AE.LeftStick
                       ),
                     },
                     n.createElement("img", {
                       className: Object(G.a)(
-                        s ? $B.DeckDeviceLeftImage : $B.DeckDeviceRightImage
+                        s ? AE.DeckDeviceLeftImage : AE.DeckDeviceRightImage
                       ),
                       src: s ? gE.a : nE.a,
                     }),
-                    n.createElement(AE.a, {
+                    n.createElement(eE.a, {
                       centerX: 165,
                       centerY: 95,
                       data: w,
                       radius: 90,
                       showCenter: !0,
                     }),
-                    n.createElement(AE.a, {
+                    n.createElement(eE.a, {
                       centerX: 165,
                       centerY: 95,
                       data: v,
                       radius: (d / 32767) * 90,
                       showCenter: !0,
                     }),
-                    n.createElement(AE.c, {
+                    n.createElement(eE.c, {
                       LiveX: h,
                       LiveY: N,
                       centerX: 165,
@@ -22469,8 +22492,8 @@
                   "div",
                   {
                     className: Object(G.a)(
-                      $B.StartTestPrompt,
-                      s && $B.LeftStick
+                      AE.StartTestPrompt,
+                      s && AE.LeftStick
                     ),
                   },
                   " ",
@@ -22478,7 +22501,7 @@
                     "#Settings_ControllerCalibration_StartTestPrompt",
                     n.createElement(iE.b, {
                       button: Object(JA.d)(WA.a.OPTIONS),
-                      className: Object(G.a)($B.InlineGlyph),
+                      className: Object(G.a)(AE.InlineGlyph),
                     })
                   ),
                   " "
@@ -22486,7 +22509,7 @@
                 n.createElement(
                   AA.a,
                   {
-                    className: Object(G.a)($B.SliderContainer),
+                    className: Object(G.a)(AE.SliderContainer),
                     autoFocus: !0,
                     onMoveUp: D,
                     onMoveDown: D,
@@ -22494,7 +22517,7 @@
                     onMoveRight: D,
                   },
                   n.createElement(r.l, {
-                    classname: $B.JoystickSlider,
+                    classname: AE.JoystickSlider,
                     bottomSeparator: !1,
                     showValue: !0,
                     value: d,
@@ -22502,11 +22525,11 @@
                       let e = c;
                       s
                         ? (e.nLStickDeadzone =
-                            Object(eE.x)(c.eControllerType) == A
+                            Object(XB.x)(c.eControllerType) == A
                               ? -1
                               : Math.round(A))
                         : (e.nRStickDeadzone =
-                            Object(eE.x)(c.eControllerType) == A
+                            Object(XB.x)(c.eControllerType) == A
                               ? -1
                               : Math.round(A)),
                         l(e);
@@ -22623,7 +22646,7 @@
                 n.createElement(
                   o.e,
                   {
-                    className: $B.CalibrationButton,
+                    className: AE.CalibrationButton,
                     onClick: () => {
                       s(!1);
                     },
@@ -22789,8 +22812,8 @@
                     AA.a,
                     {
                       className: Object(G.a)(
-                        $B.HapticsDesc,
-                        C && $B.HapticsWarning
+                        AE.HapticsDesc,
+                        C && AE.HapticsWarning
                       ),
                     },
                     Object(u.g)(
@@ -23580,7 +23603,7 @@
               n.createElement(
                 i.h,
                 { path: i.e.GamepadUI.ControllerDeviceSupport() },
-                n.createElement(_B, null)
+                n.createElement($B, null)
               ),
               n.createElement(
                 i.h,
@@ -25218,7 +25241,7 @@
                   null == o ? void 0 : o.layers
                 );
               let c =
-                null == r ? void 0 : r.find((e) => Object(eE.b)(A, e.data));
+                null == r ? void 0 : r.find((e) => Object(XB.b)(A, e.data));
               if (c) {
                 if (
                   (null === (g = A.key_binding_data) || void 0 === g
@@ -25256,7 +25279,7 @@
           1 != e.activation &&
             2 != e.activation &&
             3 != e.activation &&
-            (a = Object(eE.z)(eE.i[e.activation].id)),
+            (a = Object(XB.z)(XB.i[e.activation].id)),
           n.createElement(
             "div",
             { className: Bm.ChordControl },
@@ -25437,7 +25460,7 @@
                         n.createElement(
                           "span",
                           { style: { maxWidth: "400px" } },
-                          Object(eE.F)(eE.o[s].id)
+                          Object(XB.F)(XB.o[s].id)
                         )
                       )
                     )
@@ -25870,7 +25893,7 @@
           );
         }),
         Mm = Object($.a)(function () {
-          const A = Object(G.a)(lC.a.BasicHome, lC.a.OpaqueBackground),
+          const A = Object(G.a)(lC.a.BasicHome, lC.a.TransparentBackground),
             e = Object(KA.b)("root"),
             t = a.a.useCallback((A) => {
               Object(xn.c)(A) ||
@@ -25886,7 +25909,7 @@
             }, []);
           return (
             Object(Xn.c)(Y.b.VirtualKeyboardManager, i),
-            Y.b.VirtualKeyboardManager.SetDismissOnEnterKey(!0),
+            Y.b.VirtualKeyboardManager.SetDismissOnEnterKey(!1),
             a.a.useLayoutEffect(
               () => (
                 g.ShowVirtualKeyboard(),
