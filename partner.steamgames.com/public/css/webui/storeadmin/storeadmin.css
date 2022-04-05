@@ -5604,7 +5604,8 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   height: 24px;
   justify-content: center;
 }
-.gamehover_GameHoverCreatorFollowButtonCtn_2yA0d img {
+.gamehover_GameHoverCreatorFollowButtonCtn_2yA0d a > img {
+  height: 24px;
   margin-right: 8px;
 }
 .deckverified_BannerContainer_zoxHi {
@@ -7805,9 +7806,9 @@ html.touch
     height: 160px;
     position: absolute;
     left: -15px;
-    top: -40px;
+    top: -20px;
     right: -15px;
-    bottom: -40px;
+    bottom: -60px;
     grid-template-columns: 285px auto 25% 25%;
     box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.45);
   }
@@ -23863,6 +23864,9 @@ div.saveprices_HoverToolTip_1yXHp {
 .discountdashboard_ButtonGroup_2peTi button.DialogButton {
   margin-left: 4px;
 }
+.responsive_footer_ctn {
+  display: none;
+}
 .discountgrid_DiscountGridCtn_3THze {
   width: 100%;
   position: relative;
@@ -24342,6 +24346,9 @@ div.savetoolbar_HoverToolTip_gba9O {
 .discountgridheaders_EventDetails_3LMXj.discountgridheaders_Active_2BLec:hover {
   cursor: pointer;
   border: 1px solid #fff;
+}
+.discountgridheaders_EventDetails_3LMXj.discountgridheaders_RestrictedEligibility_2lxTi {
+  background-color: #404a62;
 }
 .discountgridheaders_CollisionFreeDiscountEvent_15fBc
   .discountgridheaders_EventDetails_3LMXj {
@@ -25278,36 +25285,10 @@ div.savetoolbar_HoverToolTip_gba9O {
 .dailydealdiscounts_MissingDiscount_1gz3F {
   color: #e3d49b;
 }
-.dailydealeditor_PageTitle_2bGMg {
-  font-size: 24px;
-  color: #fff;
-  margin-top: 20px;
-}
-.dailydealeditor_AppCtn_2dVit {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.dailydealeditor_AppCtn_2dVit .dailydealeditor_AppInfoCtn_qvpYb {
-  margin-left: 12px;
-  flex-grow: 1;
-}
-.dailydealeditor_AppCtn_2dVit
-  .dailydealeditor_AppInfoCtn_qvpYb
-  .dailydealeditor_AppName_8WOz4 {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 500;
-}
-.dailydealeditor_AppCtn_2dVit .dailydealeditor_AppCapsule_3Dt-8 {
-  max-height: 100px;
-  width: auto;
-}
-.dailydealeditor_AppCtn_2dVit .dailydealeditor_UpdateBtnCtn_aMJT0 {
-  width: 200px;
-  height: 40px;
-  flex-shrink: 0;
+.dailydealeditor_PromoTitle_1rgqM {
+  font-size: 30px;
+  color: #dfe3e6;
+  font-weight: 300;
 }
 .dailydealeditor_DiscountEventLinks_1LKk1 {
   display: flex;
