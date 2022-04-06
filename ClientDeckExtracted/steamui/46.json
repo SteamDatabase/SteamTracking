@@ -5814,5 +5814,6 @@
     "FriendsList_VersionMismatch": "Friends List Incompatible",
     "FriendsList_VersionMismatch_Detail": "Your version of the Steam client is not compatible with this version of the Friends List.",
     "FriendsList_StatusChange_Hint": "Tip: You can change your friend status here from the account page",
+    "SteamInputAPI_LogoText": "INPUT",
     "Browser_InputSupportLevel_None": "Use touch"
 }

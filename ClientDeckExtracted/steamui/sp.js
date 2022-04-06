@@ -3788,8 +3788,8 @@
       }
       function OA(A) {
         return A.location == F.Toast
-          ? n.createElement(c.Zb, { className: X.a.ShortNotificationSteamLogo })
-          : n.createElement(c.Zb, null);
+          ? n.createElement(c.ac, { className: X.a.ShortNotificationSteamLogo })
+          : n.createElement(c.ac, null);
       }
       function MA(A) {
         return A ? A.display_name : "Unknown";
@@ -4034,7 +4034,7 @@
               ? Object(u.g)("#Notification_SystemUpdateRestart_Title")
               : Object(u.g)("#Notification_SystemUpdateAvailable_Title"),
             i = n.createElement(OA, { location: A.location }),
-            o = n.createElement(c.bc, { className: X.a.SystemUpdateIcon }),
+            o = n.createElement(c.cc, { className: X.a.SystemUpdateIcon }),
             r = Object(oA.h)(),
             l = n.useCallback(() => {
               r.push(g.e.GamepadUI.Settings.System()), Y.b.CloseSideMenus();
@@ -7317,9 +7317,9 @@
             Object({
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Apr 5 2022 : 16:34:09",
-              BUILD_TIME_UTC: "Apr 5 2022 : 23:34:09",
-              BUILD_RTIME_UTC: 1649201649,
+              BUILD_TIME_LOCAL: "Apr 5 2022 : 19:43:10",
+              BUILD_TIME_UTC: "Apr 6 2022 : 02:43:10",
+              BUILD_RTIME_UTC: 1649212990,
             }).MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -7643,7 +7643,7 @@
       function Da(A) {
         let { item: e } = A,
           t = a.a.createElement(va, { item: e }),
-          n = a.a.createElement(c.lc, null),
+          n = a.a.createElement(c.mc, null),
           i = e.displayName;
         return a.a.createElement(ua, {
           image: t,
@@ -10030,7 +10030,7 @@
         return 0 == p(e).length
           ? n.createElement(r.g, {
               disabled: !0,
-              icon: n.createElement(c.oc, null),
+              icon: n.createElement(c.pc, null),
               label: Object(u.g)("#Audio_No_Output_Devices_Detected"),
             })
           : n.createElement(
@@ -10051,7 +10051,7 @@
         return 0 == p(e).length
           ? n.createElement(r.g, {
               disabled: !0,
-              icon: n.createElement(c.oc, null),
+              icon: n.createElement(c.pc, null),
               label: Object(u.g)("#Audio_No_Input_Devices_Detected"),
             })
           : n.createElement(
@@ -10505,7 +10505,7 @@
             return n.createElement(c.eb, null);
           case l.o.k_BluetoothDeviceType_Speakers:
           case l.o.k_BluetoothDeviceType_OtherAudio:
-            return n.createElement(c.nc, null);
+            return n.createElement(c.oc, null);
           case l.o.k_BluetoothDeviceType_Gamepad:
             return n.createElement(c.D, null);
           case l.o.k_BluetoothDeviceType_Phone:
@@ -12933,23 +12933,23 @@
                 "div",
                 { className: Ko.a.ConnectingProgressIcons },
                 n.createElement(or, {
-                  icon: n.createElement(c.ac, { className: Ko.a.SteamPalIcon }),
+                  icon: n.createElement(c.bc, { className: Ko.a.SteamPalIcon }),
                 }),
                 n.createElement(rr, { state: i ? 1 : t ? 2 : 3 }),
                 n.createElement(or, {
                   failed: a,
                   icon: e
-                    ? n.createElement(c.wc, {
+                    ? n.createElement(c.xc, {
                         className: Ko.a.ProgressNetworkIcon,
                       })
-                    : n.createElement(c.sc, {
+                    : n.createElement(c.tc, {
                         className: Ko.a.ProgressNetworkIcon,
                       }),
                 }),
                 n.createElement(rr, { state: d }),
                 n.createElement(or, {
                   failed: C,
-                  icon: n.createElement(c.sc, {
+                  icon: n.createElement(c.tc, {
                     className: Ko.a.ProgressNetworkIcon,
                   }),
                 })
@@ -14210,7 +14210,7 @@
                   className: Object(G.a)(Zr.a.LockIcon, Zr.a.LargerIcon),
                 }),
               i
-                ? n.createElement(c.wc, {
+                ? n.createElement(c.xc, {
                     className: Zr.a.LargerIcon,
                     strength:
                       null === (e = null == t ? void 0 : t.wirelessAPInfo) ||
@@ -14218,7 +14218,7 @@
                         ? void 0
                         : e.estrength,
                   })
-                : n.createElement(c.sc, { className: Zr.a.LargerIcon })
+                : n.createElement(c.tc, { className: Zr.a.LargerIcon })
             )
           : null;
       }
@@ -15216,7 +15216,7 @@
         if (!A) return null;
         const c = !0,
           l = A.nSteamVersion > 0 ? A.nSteamVersion.toString() : "local",
-          s = parseInt(1649201649),
+          s = parseInt(1649212990),
           B = s && Yc(s, e, g),
           E = A.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           C = Object(_e.a)(1024 * A.nSystemRAMSizeMB * 1024),
@@ -16222,7 +16222,7 @@
               {
                 visible: e,
                 title: Object(u.g)("#Settings_Page_Internet"),
-                icon: n.createElement(c.wc, null),
+                icon: n.createElement(c.xc, null),
                 route: g.e.GamepadUI.Settings.Internet(),
                 content: n.createElement(gc, null),
               },
@@ -16334,7 +16334,7 @@
               {
                 visible: i && t,
                 title: Object(u.g)("#Settings_Page_Internal"),
-                icon: n.createElement(c.Zb, null),
+                icon: n.createElement(c.ac, null),
                 route: g.e.GamepadUI.Settings.Internal(),
                 content: i ? n.createElement(Pr, null) : null,
               },
@@ -16842,14 +16842,14 @@
               null,
               C && n.createElement(c.rb, { locked: !0 }),
               g
-                ? n.createElement(c.wc, {
+                ? n.createElement(c.xc, {
                     strength:
                       null === (e = null == t ? void 0 : t.wirelessAPInfo) ||
                       void 0 === e
                         ? void 0
                         : e.estrength,
                   })
-                : n.createElement(c.sc, null)
+                : n.createElement(c.tc, null)
             ),
           }),
           n.createElement(hl.a, null, m)
@@ -16902,7 +16902,7 @@
               { className: sl.UserAvatar },
               e
                 ? n.createElement("img", { src: A.avatarUrl })
-                : n.createElement(c.lc, null)
+                : n.createElement(c.mc, null)
             ),
             n.createElement(
               "div",
@@ -17160,7 +17160,7 @@
                     { className: sl.LoginCachedAvatarImage },
                     t
                       ? n.createElement("img", { src: A.avatarUrl })
-                      : n.createElement(c.lc, null)
+                      : n.createElement(c.mc, null)
                   )
                 )
               );
@@ -18305,7 +18305,7 @@
                   },
                   n.createElement(cs, {
                     onClick: I,
-                    icon: n.createElement(c.pc, null),
+                    icon: n.createElement(c.qc, null),
                     label: Object(u.g)("#UserManagement_AddFunds"),
                     details: m,
                   }),
@@ -24596,7 +24596,7 @@
                 label: Object(u.g)("#MainTabsStore"),
                 onFocus: I,
               },
-              a.a.createElement(c.cc, null)
+              a.a.createElement(c.dc, null)
             ),
           e &&
             a.a.createElement(
@@ -24636,7 +24636,7 @@
                 label: Object(u.g)("#MainTabsSettings"),
                 onFocus: I,
               },
-              r ? a.a.createElement(c.bc, null) : a.a.createElement(c.Pb, null)
+              r ? a.a.createElement(c.cc, null) : a.a.createElement(c.Pb, null)
             ),
           l &&
             a.a.createElement(
@@ -24944,7 +24944,7 @@
                 label: Object(u.g)(
                   "#QuickAccess_Tab_Settings_Section_Shortcuts_Wifi"
                 ),
-                icon: n.createElement(c.rc, null),
+                icon: n.createElement(c.sc, null),
                 padding: "compact",
               })
             ),
@@ -25068,7 +25068,7 @@
           Q = [
             ((s && u) || d) && {
               key: Y.c.VoiceChat,
-              tab: a.a.createElement(c.mc, null),
+              tab: a.a.createElement(c.nc, null),
               title: a.a.createElement(a.a.Fragment, null),
               panel: a.a.createElement(KC, null),
               className: tm.a.VoiceTab,
