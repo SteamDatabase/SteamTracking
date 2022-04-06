@@ -2645,7 +2645,6 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 }
 .BasicUI .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3wryh {
   flex-direction: column;
-  row-gap: 4px;
 }
 .AppSummaryWidgetCtn .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3wryh {
   flex-direction: column;
@@ -2687,7 +2686,6 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .BasicUI .salepreviewwidgets_StoreSaleWidgetTags_2bkP- {
   height: unset;
   display: flex;
-  gap: 4px;
   margin-bottom: 4px;
   flex-wrap: wrap;
 }
@@ -2714,7 +2712,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 }
 .BasicUI .salepreviewwidgets_AppTag_3FJnZ {
   font: var(--gpText-BodySmall);
-  margin: unset;
+  margin: 0px 4px 4px 0px;
   padding: 2px 6px;
 }
 .salepreviewwidgets_AppTag_3FJnZ:hover {
@@ -2934,7 +2932,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .BasicUI .salepreviewwidgets_StoreSalePriceWidgetContainer_2s-O5 {
   min-height: unset;
   margin: unset;
-  gap: 6px;
+  column-gap: 6px;
   padding-right: 8px;
 }
 .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
@@ -4272,9 +4270,9 @@ html.touch
     height: 160px;
     position: absolute;
     left: -15px;
-    top: -40px;
+    top: -20px;
     right: -15px;
-    bottom: -40px;
+    bottom: -60px;
     grid-template-columns: 285px auto 25% 25%;
     box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.45);
   }
@@ -5273,7 +5271,8 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   height: 24px;
   justify-content: center;
 }
-.gamehover_GameHoverCreatorFollowButtonCtn_1mQuB img {
+.gamehover_GameHoverCreatorFollowButtonCtn_1mQuB a > img {
+  height: 24px;
   margin-right: 8px;
 }
 :root {

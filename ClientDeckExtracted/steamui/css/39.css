@@ -245,9 +245,19 @@
   flex-direction: row;
   height: 44px;
   position: relative;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
 }
 .notificationcontent_StandardTemplate_1B_uv.gpfocus {
   background-color: #3d4450;
+  animation-name: notificationcontent_ItemFocusAnim-darkerGrey_3_1qy;
+  z-index: 1;
 }
 .notificationcontent_StandardTemplate_1B_uv:not(:focus)
   + .notificationcontent_StandardTemplate_1B_uv:not(:focus):before {
@@ -5807,6 +5817,24 @@ button.keyboardsettings_ShowKeyboardButton_3vbFn svg {
   text-align: center;
   white-space: pre-wrap;
 }
+.loginpanel_LeftColText_Lysv9 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #b8bcbf;
+  text-align: center;
+}
 .loginpanel_SubHeader_1oQc7 {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -9781,7 +9809,7 @@ div.LowPerfMode
   gap: 8px;
   background-color: #0e141b;
 }
-.achievementslist_AchievementList_1UXC2 .achievementslist_Title_3LS_N {
+.achievementslist_AchievementList_1UXC2 .achievementslist_ListTitle_IM0uE {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -9888,6 +9916,103 @@ div.LowPerfMode
   align-items: center;
   gap: 8px;
 }
+.achievementslist_GlobalAchievementsListHeader_2q8Mm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.achievementslist_GlobalAchievementsListHeader_2q8Mm
+  .achievementslist_HeaderText_OAV6Q {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.achievementslist_GlobalAchievementListItem_316Uo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #23262e;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_UnlockContainer_1vd1p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  padding: 10px;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_UnlockContainer_1vd1p
+  svg {
+  width: 20px;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  align-self: stretch;
+  padding: 10px;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_ImageContainer_SGyFw {
+  width: 64px;
+  height: 64px;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_Info_Zoy4C {
+  flex: 1;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_Info_Zoy4C
+  .achievementslist_Title_3LS_N {
+  color: #dcdedf;
+  font-size: 16px;
+  font-weight: 500;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_Info_Zoy4C
+  .achievementslist_Description_231ll {
+  font-size: 12px;
+  color: #b8bcbf;
+  font-weight: 400;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_Percent_17WmA {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_ImageContainer_SGyFw,
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_Info_Zoy4C,
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_Percent_17WmA {
+  z-index: 1;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_ProgressFill_2lgHV {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(103, 112, 123, 0.2);
+}
 .achievementsheader_Container_2iGYY {
   display: flex;
   flex-direction: row;
@@ -9947,6 +10072,9 @@ div.LowPerfMode
 .achievementsheader_Progress_3CaVU {
   margin-top: 7px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .achievementspage_Page_3FQHg {
   flex: 1;
   padding: 24px;
@@ -9975,6 +10103,10 @@ div.LowPerfMode
   .achievementspage_Nav_15Sq7
   .achievementspage_GlobalButton_W4rDw {
   flex-grow: 0;
+}
+.achievementspage_AchievementTabs_gxNvE {
+  min-height: calc(100vh - 40px - 40px);
+  height: 454px;
 }
 .achievementspage_Background_ODpLj {
   position: absolute;
@@ -11095,6 +11227,7 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   flex-grow: 1;
+  height: 100%;
 }
 .quickaccessmenu_HeaderAndFooterVisible_2m0zl
   .quickaccessmenu_Menu_1gJzx::before {
@@ -11124,17 +11257,15 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: stretch;
-  overflow: hidden;
-  padding: 8px 0;
+  overflow-y: auto;
+  margin: auto 0;
 }
 .quickaccessmenu_Tabs_3Ag1w {
   z-index: 10;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding-bottom: 6px;
 }
 .quickaccessmenu_Tabs_3Ag1w::after {
   content: "";
@@ -11150,8 +11281,11 @@ body {
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  height: 100%;
   width: 48px;
+  height: 64px;
+  min-height: 48px;
+  scroll-margin: 64px;
+  overflow: hidden;
   color: #8b929a;
   background-color: #0e141b;
   outline: none;
@@ -11173,7 +11307,6 @@ body {
 .quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu {
   background-color: #3d4450;
   animation-name: quickaccessmenu_ItemFocusAnim-darkerGrey_36sGv;
-  transform: scale(1.1);
   z-index: 1;
   animation-name: quickaccessmenu_ItemFocusAnim-darkerGrey-nocolor_2YeD3;
   color: #8b929a;
@@ -11198,14 +11331,26 @@ body {
 .quickaccessmenu_Tab_1S76C.quickaccessmenu_Blocked_8BbyF {
   color: #3d4450;
 }
-.quickaccessmenu_Tab_1S76C svg {
-  width: 24px;
-  height: 24px;
-  padding: 20px 0;
-}
 .quickaccessmenu_Tab_1S76C.quickaccessmenu_VoiceTab_5lc3T {
   background-color: #59bf40;
   color: #236c39;
+}
+.quickaccessmenu_Tab_1S76C svg {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(1deg);
+  transform-origin: center;
+}
+.quickaccessmenu_Tab_1S76C.gpfocus svg {
+  transform: scale(1.1);
 }
 .quickaccessmenu_TabPanelHidden_vjLhN {
   display: none;
@@ -11374,6 +11519,7 @@ body {
   height: 38px;
   border: 1px solid #23262e;
   box-sizing: border-box;
+  margin: 6px 0;
   margin-left: -1px;
   display: flex;
   justify-content: center;

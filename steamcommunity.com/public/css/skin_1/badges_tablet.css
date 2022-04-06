@@ -6,18 +6,119 @@
 		display: none;
 	}
 
+	html.responsive .maincontent {
+		margin: 24px !important;
+	}
+
+
+	/* LIST */
+
+
+	/* Title */
+	html.responsive .profile_badges_header_title {
+		font: var(--gpText-HeadingMedium);
+		color: white;
+	}
+
+	/* Row items */
+	html.responsive .badges_sheet .badge_row {
+		margin: unset;
+		border: none;
+		background: none;
+		padding: unset;
+		border-radius: unset;
+		background-color: var(--gpBackground-DarkSoft);
+		margin-bottom: 12px;
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner {
+		border-radius: unset;
+		background: none;
+		padding: 16px 16px;
+	}
+
+	html.responsive .badges_sheet .badge_row.is_link:hover {
+		border: none;
+	}
+
+	html.responsive .badges_sheet .badge_row.is_link:hover,
+	html.responsive .badges_sheet .badge_row.depressed {
+		background: none;
+		background-color: var(--gpBackground-DarkMedium);
+		box-shadow: unset;
+	}
+
+	html.responsive .badges_sheet .badge_row:focus-within {
+		background-color: var(--gpBackground-DarkMedium);
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner .badge_content {
+		padding: unset;
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner .badge_title {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner .badge_current {
+		margin-right: 12px;
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner .how_to_get_card_drops_ctn {
+		display: none;
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner .badge_title_stats_content {
+		display: flex;
+		flex-direction: row-reverse;
+		column-gap: 8px;
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner .badge_progress_card.owned,
+	html.responsive .badges_sheet .badge_row .badge_row_inner .badge_progress_card.unowned {
+		display: flex;
+		margin: unset;
+		border: none;
+		padding: unset;
+		border-radius: 2px;
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner .badge_progress_card.owned {
+		box-shadow: var(--gpShadow-Small);
+	}
+
+	html.responsive .badges_sheet .badge_row .badge_row_inner .badge_progress_card.unowned {
+		border: dashed 1px rgba(255,255,255, 0.3);
+		background-color: var(--gpBackground-DarkHard);
+	}
+
+	/* xp block */
+	html.responsive .profile_xp_block {
+		border-radius: unset;
+		background: none;
+		border: 2px solid var(--gpBackground-LightMedium);
+		margin: 0px 0px 12px;
+		padding: 16px;
+	}
+
+	html.responsive .profile_xp_block_remaining_bar {
+		background-color: var(--gpBackground-DarkMedium);
+	}
+
+	html.responsive .profile_xp_block_remaining_bar_progress {
+		background: var(--gpColor-Blue);
+	}
+
 
 
 	/* CONTAINER */
 	html.responsive .badge_row.depressed {
 		box-shadow: unset;
 		border-radius: unset;
-		background: var(--gpBackground-DarkMedium);
-		padding: 16px;
+		background: unset;
+		padding: unset;
 		border: none;
-
-		/* padding: 0px; */
-		/* background: none; */
 	}
 
 
@@ -56,7 +157,8 @@
 		padding: unset;
 	}
 
-	html.responsive .gamecard_details .badge_info {
+	html.responsive .gamecard_details .badge_info,
+	html.responsive .badges_sheet .badge_empty {
 		border: 2px solid var(--gpBackground-LightMedium);
 		border-radius: unset;
 		max-width: unset;
@@ -79,6 +181,7 @@
 
 	html.responsive .badge_empty_name {
 		color: var(--gpStoreLightGrey);
+		font: var(--gpText-BodyMedium);
 	}
 
 
@@ -146,8 +249,6 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 12px;
-		/* padding-top: 16px; */
-		/* border-top: 1px solid var(--gpBackground-LightSoft); */
 	}
 
 
@@ -172,10 +273,6 @@
 		row-gap: 6px;
 		padding-top: 16px;
 		border-top: 1px solid var(--gpBackground-LightSoft);
-		/* padding: 16px; */
-		/* background: var(--gpBackground-DarkSoft); */
-		/* margin-left: calc( 0px - var(--gpSpace-Gutter) ); */
-		/* margin-right: calc( 0px - var(--gpSpace-Gutter) ); */
 	}
 
 	html.responsive .gamecards_inventorylink {
@@ -244,5 +341,16 @@
 		color: white;
 	}
 
+
+
+	/* NEW MODAL FOR TRADING CARDS */
+	html.tablet .newmodal_content a {
+		display: flex;
+	}
+
+	html.tablet .newmodal_content a img {
+		max-width: 80vw;
+		max-height: 74vh;
+	}
 
 }

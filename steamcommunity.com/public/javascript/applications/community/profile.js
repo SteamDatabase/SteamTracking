@@ -9425,7 +9425,10 @@
                 let n = [];
                 if (e)
                   for (const t of e)
-                    n.push({ type: "spotlight", item: t }), a.push(n), (n = []);
+                    t.is_weeklong_deals ||
+                      (n.push({ type: "spotlight", item: t }),
+                      a.push(n),
+                      (n = []));
                 if (t)
                   for (const e of t)
                     n.push({ type: "dailydeal", item: e }),
@@ -19268,16 +19271,16 @@
     Fmfl: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return V;
+        return q;
       }),
         r.d(t, "b", function () {
-          return Y;
-        }),
-        r.d(t, "c", function () {
           return Z;
         }),
+        r.d(t, "c", function () {
+          return J;
+        }),
         r.d(t, "d", function () {
-          return ee;
+          return te;
         });
       var a = r("mrSG"),
         n = r("vDqi"),
@@ -19292,61 +19295,62 @@
         p = r("8H1D"),
         h = r("VQ2A"),
         _ = (r("sRB7"), r("TQGK")),
-        g = r("ee7K"),
-        b = r("C4Nl"),
-        f = r("35zc"),
-        v = r("b3LC"),
-        S = r("HKTa"),
-        y = r("IjL/"),
-        C = r("2aEQ"),
-        E = r("zjj+"),
-        B = r("/41d"),
-        w = r("ed1b"),
-        O = r("6Y59"),
-        I = (r("5E+2"), r("r64O")),
-        A = r("qiKp"),
-        R = r("exH9"),
-        T = r("X3Ds"),
-        j = r("TLQK"),
-        D = r("opsS"),
-        M = r("lkRc"),
-        k = r("dfs5"),
-        G = r("PHKo"),
-        L = r("XTKY"),
-        P = r.n(L),
-        N = r("BFsE"),
-        F = r("5L1o"),
-        z = r("NKJh"),
-        x = r.n(z),
-        U = r("onkS"),
-        H = r("RQmk");
-      const W = "DEBUG_UseNewGameHover";
-      function V() {
-        return "none" !== q();
-      }
+        g = r("uIWk"),
+        b = r("ee7K"),
+        f = r("C4Nl"),
+        v = r("35zc"),
+        S = r("b3LC"),
+        y = r("HKTa"),
+        C = r("IjL/"),
+        E = r("2aEQ"),
+        B = r("zjj+"),
+        w = r("/41d"),
+        O = r("ed1b"),
+        I = r("6Y59"),
+        A = (r("5E+2"), r("r64O")),
+        R = r("qiKp"),
+        T = r("exH9"),
+        j = r("X3Ds"),
+        D = r("TLQK"),
+        M = r("opsS"),
+        k = r("lkRc"),
+        G = r("dfs5"),
+        L = r("PHKo"),
+        P = r("XTKY"),
+        N = r.n(P),
+        F = r("BFsE"),
+        z = r("5L1o"),
+        x = r("NKJh"),
+        U = r.n(x),
+        H = r("onkS"),
+        W = r("RQmk");
+      const V = "DEBUG_UseNewGameHover";
       function q() {
+        return "none" !== K();
+      }
+      function K() {
         var e;
         return (
           (null === (e = window.sessionStorage) || void 0 === e
             ? void 0
-            : e.getItem(W)) || "default"
+            : e.getItem(V)) || "default"
         );
       }
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(W, e);
+        window.sessionStorage.setItem(V, e);
       };
-      function K(e) {
+      function Q(e) {
         const { info: t } = e,
           r = Object(l.useRef)({
             include_assets: !0,
             include_trailers: !0,
             include_screenshots: !0,
           }),
-          [a] = Object(v.a)(t.id, Object(f.d)(t.type), r.current),
+          [a] = Object(S.a)(t.id, Object(v.d)(t.type), r.current),
           [n, i] = Object(l.useState)([]),
           o = Object(l.useRef)(0),
-          d = Object(D.e)(),
-          [m] = c.a.useState(new A.b()),
+          d = Object(M.e)(),
+          [m] = c.a.useState(new R.b()),
           u = Object(l.useCallback)(() => {
             if ((null == n ? void 0 : n.length) > 0) {
               const e = n[o.current].nDurationMs;
@@ -19362,10 +19366,10 @@
               var r;
               const a = [];
               if (1 == e.length) {
-                const t = b.a.Get().GetApp(e[0]);
+                const t = f.a.Get().GetApp(e[0]);
                 t.GetMicroTrailer() &&
                   a.push({
-                    rctImage: c.a.createElement(F.a, {
+                    rctImage: c.a.createElement(z.a, {
                       appInfo: { id: t.GetID(), type: "game" },
                     }),
                     nDurationMs: 5500,
@@ -19377,7 +19381,7 @@
                       a.push({
                         rctImage: c.a.createElement("img", {
                           key: e,
-                          className: P.a.FullDivImage,
+                          className: N.a.FullDivImage,
                           loading: "lazy",
                           src: e,
                           alt: "screenshot " + (t + 1),
@@ -19388,7 +19392,7 @@
               }
               if (0 == a.length)
                 for (const t of e) {
-                  const e = b.a.Get().GetApp(t),
+                  const e = f.a.Get().GetApp(t),
                     n =
                       null === (r = null == e ? void 0 : e.GetAssets()) ||
                       void 0 === r
@@ -19398,7 +19402,7 @@
                     a.push({
                       rctImage: c.a.createElement("img", {
                         key: "fallback",
-                        className: P.a.FullDivImage,
+                        className: N.a.FullDivImage,
                         loading: "lazy",
                         src: n,
                         alt: e.GetName(),
@@ -19408,7 +19412,7 @@
                 }
               a.length > 0
                 ? (i(a), (o.current = 0), u())
-                : ("dev" != M.c.WEB_UNIVERSE && "beta" != M.c.WEB_UNIVERSE) ||
+                : ("dev" != k.c.WEB_UNIVERSE && "beta" != k.c.WEB_UNIVERSE) ||
                   console.error(
                     "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
                     Object(s.I)(e),
@@ -19423,14 +19427,14 @@
               !a || (n && 0 != n.length)
                 ? (null == n ? void 0 : n.length) && u()
                 : 2 == a.GetStoreItemType() || 1 == a.GetStoreItemType()
-                ? (Object(I.a)(
+                ? (Object(A.a)(
                     a.GetIncludedAppIDs().length > 0,
                     "expected included apps " +
                       a.GetID() +
                       " " +
                       a.GetStoreItemType()
                   ),
-                  b.a
+                  f.a
                     .Get()
                     .QueueMultipleAppRequests(a.GetIncludedAppIDs(), {
                       include_assets: !0,
@@ -19443,7 +19447,7 @@
           ),
           c.a.createElement(
             "div",
-            { className: P.a.TrailerCtn },
+            { className: N.a.TrailerCtn },
             null == n
               ? void 0
               : n.map((e, r) =>
@@ -19451,9 +19455,9 @@
                     "div",
                     {
                       key: "e-" + r + "-" + t.id + "_" + t.type,
-                      className: Object(R.a)(
-                        P.a.FullDivImage,
-                        r != o.current && P.a.Transparent
+                      className: Object(T.a)(
+                        N.a.FullDivImage,
+                        r != o.current && N.a.Transparent
                       ),
                     },
                     e.rctImage
@@ -19462,74 +19466,74 @@
           )
         );
       }
-      function Q(e) {
+      function Y(e) {
         const { rgTagIDs: t } = e;
         return c.a.createElement(
           "div",
-          { className: P.a.TagRow },
+          { className: N.a.TagRow },
           c.a.createElement(
             "div",
-            { className: P.a.Tags },
+            { className: N.a.Tags },
             t.map((e) =>
-              c.a.createElement(B.a, {
+              c.a.createElement(w.a, {
                 key: "tag_" + e,
                 tagid: e,
-                className: P.a.Tag,
+                className: N.a.Tag,
               })
             )
           )
         );
       }
-      function Y(e) {
+      function Z(e) {
         const { appInfo: t } = e,
-          [r] = Object(v.a)(
+          [r] = Object(S.a)(
             null == t ? void 0 : t.id,
-            Object(f.d)(null == t ? void 0 : t.type),
+            Object(v.d)(null == t ? void 0 : t.type),
             { include_reviews: !0 }
           );
         if (!r) return null;
-        const a = g.a.Get().BShowFilteredUserReviewScores()
+        const a = b.a.Get().BShowFilteredUserReviewScores()
           ? r.GetFilteredReviewSummary()
           : r.GetUnfilteredReviewSummary();
         if (!a || 0 == a.review_score) return null;
         const n =
             a.review_score < 5
-              ? P.a.ReviewScoreLow
+              ? N.a.ReviewScoreLow
               : 5 == a.review_score
-              ? P.a.ReviewScoreMixed
-              : P.a.ReviewScoreHigh,
-          i = `${M.c.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`;
+              ? N.a.ReviewScoreMixed
+              : N.a.ReviewScoreHigh,
+          i = `${k.c.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`;
         return c.a.createElement(
-          w.a,
-          { url: i, className: Object(R.a)(P.a.ReviewScore, "ReviewScore") },
+          O.a,
+          { url: i, className: Object(T.a)(N.a.ReviewScore, "ReviewScore") },
           c.a.createElement(
             "div",
-            { className: Object(R.a)(P.a.ReviewScoreValue, n) },
+            { className: Object(T.a)(N.a.ReviewScoreValue, n) },
             c.a.createElement(
               "div",
-              { className: P.a.ReviewScoreLabel },
+              { className: N.a.ReviewScoreLabel },
               a.review_score_label
             ),
             c.a.createElement(
               "div",
-              { className: P.a.ReviewScoreCount },
-              Object(j.f)(
+              { className: N.a.ReviewScoreCount },
+              Object(D.f)(
                 "#GameHover_UserReviewCount",
                 a.review_count.toLocaleString()
               )
             ),
             c.a.createElement(
               "div",
-              { className: P.a.ReviewScoreHeader },
-              Object(j.f)("#GameHover_UserReviewsHeader")
+              { className: N.a.ReviewScoreHeader },
+              Object(D.f)("#GameHover_UserReviewsHeader")
             )
           )
         );
       }
-      const Z = Object(o.a)((e) => {
+      const J = Object(o.a)((e) => {
           const { appID: t, snr: r, classOverride: n } = e,
-            s = t && g.a.Get().BIsGameWishlisted(t),
-            o = t && g.a.Get().BOwnsApp(t),
+            s = t && b.a.Get().BIsGameWishlisted(t),
+            o = t && b.a.Get().BOwnsApp(t),
             [d, m] = Object(l.useState)(!1),
             u = c.a.useRef(i.a.CancelToken.source());
           if (
@@ -19548,46 +19552,51 @@
           return c.a.createElement(
             "div",
             {
-              className: Object(R.a)(P.a.WishlistButton, n),
+              className: Object(T.a)(N.a.WishlistButton, n),
               onClick: (e) =>
                 Object(a.a)(void 0, void 0, void 0, function* () {
                   e.preventDefault(),
                     e.stopPropagation(),
-                    M.h.logged_in
+                    k.h.logged_in
                       ? (m(!0),
-                        yield g.a.Get().UpdateGameWishlist(t, !s, r),
+                        yield b.a.Get().UpdateGameWishlist(t, !s, r),
                         u.current.token.reason || m(!1))
-                      : Object(N.a)();
+                      : Object(F.a)();
                 }),
             },
-            c.a.createElement(O.yb, null),
+            c.a.createElement(I.yb, null),
             c.a.createElement(
               "div",
               {
-                className: Object(R.a)(
-                  P.a.WishlistButtonText,
-                  d && P.a.WishlistLoadingText
+                className: Object(T.a)(
+                  N.a.WishlistButtonText,
+                  d && N.a.WishlistLoadingText
                 ),
               },
-              Object(j.f)(
+              Object(D.f)(
                 s ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
               )
             )
           );
         }),
-        J = (e) => {
+        X = (e) => {
           const { nCreatorAccountID: t } = e,
-            [r, a] = Object(_.b)(t);
+            [r, a] = Object(_.b)(t),
+            n = Object(g.b)(t);
           return c.a.createElement(
             "div",
-            { className: P.a.GameHoverCreatorFollowButtonCtn },
-            c.a.createElement("img", {
-              src: r ? Object(p.a)(null, "medium") : a.avatar_medium_url,
-            }),
-            c.a.createElement(C.b, { clanAccountID: t })
+            { className: N.a.GameHoverCreatorFollowButtonCtn },
+            c.a.createElement(
+              "a",
+              { href: null == n ? void 0 : n.GetCreatorHomeURL("developer") },
+              c.a.createElement("img", {
+                src: r ? Object(p.a)(null, "medium") : a.avatar_medium_url,
+              })
+            ),
+            c.a.createElement(E.b, { clanAccountID: t })
           );
         },
-        X = Object(o.a)((e) => {
+        $ = Object(o.a)((e) => {
           const {
               info: t,
               strStoreUrl: r,
@@ -19601,18 +19610,18 @@
             } = e,
             [u, p] = Object(l.useState)(!1),
             [h, _] = Object(l.useState)(""),
-            [g] = Object(v.a)(t.id, Object(f.d)(t.type), {
+            [g] = Object(S.a)(t.id, Object(v.d)(t.type), {
               include_assets: !0,
               include_release: !0,
               include_platforms: !0,
               include_tag_count: 20,
             }),
             b = !d && !n && !a,
-            y = 0 == (null == g ? void 0 : g.GetStoreItemType());
+            f = 0 == (null == g ? void 0 : g.GetStoreItemType());
           return c.a.createElement(
             "div",
             {
-              className: P.a.BottomShelf,
+              className: N.a.BottomShelf,
               style: { transform: i && u ? h : "" },
               onMouseEnter: () => p(!0),
               onFocus: () => p(!0),
@@ -19623,18 +19632,18 @@
               "a",
               {
                 href: r,
-                target: M.c.IN_CLIENT ? void 0 : "_blank",
-                className: P.a.Midline,
+                target: k.c.IN_CLIENT ? void 0 : "_blank",
+                className: N.a.Midline,
               },
               c.a.createElement(
                 "div",
-                { className: P.a.CapsuleImageAnchorPoint },
+                { className: N.a.CapsuleImageAnchorPoint },
                 c.a.createElement(
                   "div",
                   {
-                    className: Object(R.a)(
-                      P.a.CapsuleImageCtn,
-                      P.a.WithCornerShine
+                    className: Object(T.a)(
+                      N.a.CapsuleImageCtn,
+                      N.a.WithCornerShine
                     ),
                   },
                   c.a.createElement("img", {
@@ -19647,14 +19656,14 @@
               Boolean(!s && !d) &&
                 c.a.createElement(
                   "div",
-                  { className: P.a.Price },
-                  c.a.createElement(E.a, { info: t })
+                  { className: N.a.Price },
+                  c.a.createElement(B.a, { info: t })
                 )
             ),
             c.a.createElement(
               "div",
               {
-                className: P.a.BottomShelfOffScreen,
+                className: N.a.BottomShelfOffScreen,
                 ref: (e) =>
                   _(
                     `translateY( -${
@@ -19664,52 +19673,52 @@
               },
               c.a.createElement(
                 "div",
-                { className: P.a.TextContent },
+                { className: N.a.TextContent },
                 c.a.createElement(
                   "a",
-                  { href: r, target: M.c.IN_CLIENT ? void 0 : "_blank" },
+                  { href: r, target: k.c.IN_CLIENT ? void 0 : "_blank" },
                   c.a.createElement(
                     "div",
-                    { className: P.a.GameTitle },
+                    { className: N.a.GameTitle },
                     null == g ? void 0 : g.GetName()
                   )
                 ),
-                Boolean(g) && c.a.createElement(Q, { rgTagIDs: g.GetTagIDs() }),
-                Boolean(!o && g) && c.a.createElement(Y, { appInfo: t }),
+                Boolean(g) && c.a.createElement(Y, { rgTagIDs: g.GetTagIDs() }),
+                Boolean(!o && g) && c.a.createElement(Z, { appInfo: t }),
                 Boolean(!o && b) &&
                   c.a.createElement(
                     "div",
-                    { className: P.a.ReviewsAndRelease },
-                    c.a.createElement(F.i, {
+                    { className: N.a.ReviewsAndRelease },
+                    c.a.createElement(z.i, {
                       item: t,
-                      strClassName: P.a.PlatformDisplay,
+                      strClassName: N.a.PlatformDisplay,
                     }),
                     Boolean(
                       null == g ? void 0 : g.GetFormattedSteamReleaseDate()
                     ) &&
                       c.a.createElement(
                         "div",
-                        { className: P.a.ReleaseDate },
+                        { className: N.a.ReleaseDate },
                         null == g ? void 0 : g.GetFormattedSteamReleaseDate()
                       )
                   ),
                 n &&
-                  c.a.createElement(G.a, {
+                  c.a.createElement(L.a, {
                     info: t,
-                    className: P.a.DemoButton,
+                    className: N.a.DemoButton,
                   }),
-                Boolean(o && y) && c.a.createElement(S.a, { nAppID: t.id }),
-                a && c.a.createElement(U.a, { item: a, bMiniMode: !0 }),
-                Boolean(d && y) &&
-                  c.a.createElement(F.e, { appid: t.id, bIsMuted: !1 }),
-                m && c.a.createElement(J, { nCreatorAccountID: m })
+                Boolean(o && f) && c.a.createElement(y.a, { nAppID: t.id }),
+                a && c.a.createElement(H.a, { item: a, bMiniMode: !0 }),
+                Boolean(d && f) &&
+                  c.a.createElement(z.e, { appid: t.id, bIsMuted: !1 }),
+                m && c.a.createElement(X, { nCreatorAccountID: m })
               )
             )
           );
         }),
-        $ = Object(o.a)((e) => {
+        ee = Object(o.a)((e) => {
           c.a.useEffect(() => {
-            g.a.Get().HintLoad();
+            b.a.Get().HintLoad();
           }, []);
           const {
             info: t,
@@ -19720,37 +19729,37 @@
           return c.a.createElement(
             "div",
             {
-              className: Object(R.a)(
-                P.a.GameHoverCapsuleCtn,
-                x.a.InGameHover,
-                a && P.a.UseHidingBottomHalf
+              className: Object(T.a)(
+                N.a.GameHoverCapsuleCtn,
+                U.a.InGameHover,
+                a && N.a.UseHidingBottomHalf
               ),
             },
             c.a.createElement(
               "a",
               {
                 href: r,
-                target: M.c.IN_CLIENT ? void 0 : "_blank",
-                className: P.a.TrailerAnchorStoreLink,
+                target: k.c.IN_CLIENT ? void 0 : "_blank",
+                className: N.a.TrailerAnchorStoreLink,
               },
               Boolean(!n) &&
-                c.a.createElement(Z, { appID: t.id, snr: e.strSNR }),
-              c.a.createElement(K, { info: t })
+                c.a.createElement(J, { appID: t.id, snr: e.strSNR }),
+              c.a.createElement(Q, { info: t })
             ),
-            c.a.createElement(X, Object.assign({}, e))
+            c.a.createElement($, Object.assign({}, e))
           );
         });
-      function ee(e) {
+      function te(e) {
         const { item: t } = e,
-          [r] = Object(v.a)(t.id, Object(f.d)(t.type), {});
+          [r] = Object(S.a)(t.id, Object(v.d)(t.type), {});
         if (!r) return null;
         if (1 == r.GetStoreItemType() && 1 == r.GetIncludedAppIDs().length) {
           const t = { id: r.GetIncludedAppIDs()[0], type: "game" };
-          return c.a.createElement(te, Object.assign({}, e, { item: t }));
+          return c.a.createElement(re, Object.assign({}, e, { item: t }));
         }
-        return c.a.createElement(te, Object.assign({}, e));
+        return c.a.createElement(re, Object.assign({}, e));
       }
-      function te(e) {
+      function re(e) {
         const {
             item: t,
             eventToShow: r,
@@ -19773,17 +19782,17 @@
             "nCreatorAccountID",
             "bShowDeckCompatibilityDialog",
           ]),
-          [p] = Object(v.a)(t.id, Object(f.d)(t.type), {}),
-          _ = Object(k.c)(),
+          [p] = Object(S.a)(t.id, Object(v.d)(t.type), {}),
+          _ = Object(G.c)(),
           g = Object(h.c)(_);
         if (!p) return null;
-        if (M.c.IN_GAMEPADUI)
+        if (k.c.IN_GAMEPADUI)
           return c.a.createElement(c.a.Fragment, null, e.children);
-        if (!V())
+        if (!q())
           return c.a.createElement(
-            H.a,
+            W.a,
             {
-              type: Object(f.b)(p.GetStoreItemType()),
+              type: Object(v.b)(p.GetStoreItemType()),
               id: t.id,
               fnHoverState: l,
               hoverClassName: e.className,
@@ -19791,15 +19800,15 @@
             },
             e.children
           );
-        const b = "hiding" == q(),
-          S = Object(h.b)(`${p.GetStorePageURL()}${o ? `?${o}` : ""}`, _),
+        const b = "hiding" == K(),
+          f = Object(h.b)(`${p.GetStorePageURL()}${o ? `?${o}` : ""}`, _),
           y = c.a.createElement(
-            $,
+            ee,
             Object.assign(
               {},
               {
                 info: t,
-                strStoreUrl: S,
+                strStoreUrl: f,
                 eventToShow: r,
                 bShowDemoButton: n,
                 bShowDeckCompatibilityDialog: m,
@@ -19812,12 +19821,12 @@
             )
           );
         return c.a.createElement(
-          ae,
-          Object.assign({ hoverContent: y, strClickUrl: S }, u),
+          ne,
+          Object.assign({ hoverContent: y, strClickUrl: f }, u),
           e.children
         );
       }
-      const re = (e) => {
+      const ae = (e) => {
         const { fnClose: t, hoverProps: r } = e;
         return c.a.createElement(
           u.a,
@@ -19828,17 +19837,17 @@
               timeout: 500,
               in: !0,
               appear: !0,
-              classNames: { appearActive: P.a.Opening, enterDone: P.a.Open },
+              classNames: { appearActive: N.a.Opening, enterDone: N.a.Open },
             },
             c.a.createElement(
               "div",
               {
                 ref: (e) => (null == e ? void 0 : e.focus()),
-                className: P.a.HoverContentTransition,
+                className: N.a.HoverContentTransition,
                 tabIndex: -1,
                 onMouseLeave: t,
                 onBlur: (e) => {
-                  (e.relatedTarget && T.e(e.currentTarget, e.relatedTarget)) ||
+                  (e.relatedTarget && j.e(e.currentTarget, e.relatedTarget)) ||
                     t();
                 },
                 onKeyDown: (e) => {
@@ -19851,7 +19860,7 @@
           )
         );
       };
-      class ae extends c.a.Component {
+      class ne extends c.a.Component {
         constructor() {
           super(...arguments),
             (this.m_refHoverSourceDiv = c.a.createRef()),
@@ -19907,9 +19916,9 @@
                       zIndex: 98,
                       width: 1.15 * o.clientWidth,
                       fontSize: l,
-                      minHeight: "hiding" == q() ? void 0 : 300,
+                      minHeight: "hiding" == K() ? void 0 : 300,
                       height:
-                        "hiding" == q()
+                        "hiding" == K()
                           ? 1.15 * o.clientWidth * (125 / 184)
                           : void 0,
                     },
@@ -19920,18 +19929,18 @@
               ),
               m = "game-hover-" + Math.floor(1e8 * Math.random());
             (this.m_fnHidePopup = () =>
-              ae.sm_embeddedElements.HideElement(o.ownerDocument, m)),
+              ne.sm_embeddedElements.HideElement(o.ownerDocument, m)),
               (this.m_nScrollYAtHoverStart = window.scrollY),
               window.addEventListener("scroll", this.OnScroll);
             const u = null != n ? n : 150;
             (this.m_bPopupShowPending = !0),
-              yield ae.sm_embeddedElements.ShowElementDelayed(
+              yield ne.sm_embeddedElements.ShowElementDelayed(
                 o.ownerDocument,
                 u,
                 c.a.createElement(
-                  re,
+                  ae,
                   { hoverProps: d, fnClose: this.ClosePopup },
-                  c.a.createElement(y.a, null, t)
+                  c.a.createElement(C.a, null, t)
                 ),
                 m
               ),
@@ -19959,7 +19968,7 @@
             (l = (e) => {
               (this.m_bHoversEnabled = !1), (window.location.href = i);
             });
-          const d = !!M.c.IN_GAMEPADUI;
+          const d = !!k.c.IN_GAMEPADUI;
           return c.a.createElement(
             "div",
             Object.assign({ ref: this.m_refHoverSourceDiv }, o, {
@@ -19972,15 +19981,15 @@
                 this.m_bHoversEnabled = !1;
               },
             }),
-            c.a.createElement(y.a, null, s)
+            c.a.createElement(C.a, null, s)
           );
         }
       }
-      (ae.sm_embeddedElements = new m.a("item-hover-source-elements")),
-        Object(a.b)([D.a], ae.prototype, "ClosePopup", null),
-        Object(a.b)([D.a], ae.prototype, "OnUnhover", null),
-        Object(a.b)([D.a], ae.prototype, "OnScroll", null),
-        Object(a.b)([D.a], ae.prototype, "OnHover", null);
+      (ne.sm_embeddedElements = new m.a("item-hover-source-elements")),
+        Object(a.b)([M.a], ne.prototype, "ClosePopup", null),
+        Object(a.b)([M.a], ne.prototype, "OnUnhover", null),
+        Object(a.b)([M.a], ne.prototype, "OnScroll", null),
+        Object(a.b)([M.a], ne.prototype, "OnHover", null);
     },
     FnYY: function (e, t, r) {
       "use strict";
@@ -28504,6 +28513,9 @@
             this.NotifyUpdate(e);
           });
         }
+        IsDefaultAction(e) {
+          return this.GetActionDescription(e) === this.m_defaultActions.get(e);
+        }
         SetDefaultAction(e, t) {
           void 0 === t
             ? this.m_defaultActions.delete(e)
@@ -28533,13 +28545,6 @@
           }
           this.NotifyUpdate(e);
         }
-        ClearAction(e) {
-          this.m_boundActions.get(e.button) === e
-            ? (j.Log("Clearing action", e),
-              this.m_boundActions.delete(e.button),
-              this.NotifyUpdate(e.button))
-            : console.error("Clearing unbound action");
-        }
         SubscribeToActionFunction(e, t) {
           this.m_actionSubscriptions.has(e) ||
             this.m_actionSubscriptions.set(e, []),
@@ -28568,9 +28573,8 @@
       function D(e) {
         const t = {};
         for (const r in e) {
-          const a = parseInt(r),
-            n = T(a);
-          t[n] = { button: n, description: e[a] };
+          const a = parseInt(r);
+          t[T(a)] = e[a];
         }
         j.Instance().SetActionsFromMap(t);
       }
@@ -41098,10 +41102,12 @@
               const a =
                 d.c.STORE_BASE_URL + "saleaction/ajaxgetsaletagsrecommendation";
               let l = {
+                origin: self.origin,
                 cc: d.c.COUNTRY,
                 l: d.c.LANGUAGE,
-                clanAccountID: e.clanSteamID.GetAccountID(),
-                clanAnnouncementGID: e.AnnouncementGID,
+                clanAccountID:
+                  null == e ? void 0 : e.clanSteamID.GetAccountID(),
+                clanAnnouncementGID: null == e ? void 0 : e.AnnouncementGID,
                 count: t,
                 nocache: r,
                 hubtype: null == n ? void 0 : n.type,
@@ -47761,7 +47767,14 @@
           !e)
         )
           return 2;
-        if (!e.every((e) => o.a.Get().BHasStoreItem(e, t, r))) return 1;
+        if (
+          !e.every(
+            (e) =>
+              o.a.Get().BHasStoreItem(e, t, r) ||
+              o.a.Get().BIsStoreItemMissing(e, t)
+          )
+        )
+          return 1;
         return e.every((e) => {
           var r;
           return null === (r = o.a.Get().GetStoreItem(e, t)) || void 0 === r
@@ -52600,7 +52613,7 @@
           return h;
         });
       var a = r("q1tI"),
-        n = r("BBEf"),
+        n = (r("kyHq"), r("BBEf")),
         i = (r("3+zv"), r("8KAw")),
         s = r("TTph"),
         o = r("C4Nl"),
@@ -62824,6 +62837,16 @@
                 proto: T,
                 fields: {
                   prompt: { n: 1, br: c.d.readBool, bw: c.h.writeBool },
+                  feedback_eligible: {
+                    n: 2,
+                    br: c.d.readBool,
+                    bw: c.h.writeBool,
+                  },
+                  existing_feedback: {
+                    n: 3,
+                    br: c.d.readEnum,
+                    bw: c.h.writeEnum,
+                  },
                 },
               }),
             T.sm_m

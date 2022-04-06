@@ -1,39 +1,39 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7180648";
+var CLSTAMP = "7189600";
 /* Third-party software licenses can be found at licenses.txt */
 !(function (t) {
   function e(e) {
-    for (var n, r, i = e[0], o = e[1], s = 0, c = []; s < i.length; s++)
-      (r = i[s]),
-        Object.prototype.hasOwnProperty.call(a, r) && a[r] && c.push(a[r][0]),
-        (a[r] = 0);
+    for (var n, a, i = e[0], o = e[1], s = 0, c = []; s < i.length; s++)
+      (a = i[s]),
+        Object.prototype.hasOwnProperty.call(r, a) && r[a] && c.push(r[a][0]),
+        (r[a] = 0);
     for (n in o) Object.prototype.hasOwnProperty.call(o, n) && (t[n] = o[n]);
     for (u && u(e); c.length; ) c.shift()();
   }
   var n = {},
-    r = { 1: 0 },
-    a = { 1: 0 };
+    a = { 1: 0 },
+    r = { 1: 0 };
   function i(e) {
     if (n[e]) return n[e].exports;
-    var r = (n[e] = { i: e, l: !1, exports: {} });
-    return t[e].call(r.exports, r, r.exports, i), (r.l = !0), r.exports;
+    var a = (n[e] = { i: e, l: !1, exports: {} });
+    return t[e].call(a.exports, a, a.exports, i), (a.l = !0), a.exports;
   }
   (i.e = function (t) {
     var e = [];
-    r[t]
-      ? e.push(r[t])
-      : 0 !== r[t] &&
+    a[t]
+      ? e.push(a[t])
+      : 0 !== a[t] &&
         { 0: 1 }[t] &&
         e.push(
-          (r[t] = new Promise(function (e, n) {
+          (a[t] = new Promise(function (e, n) {
             for (
-              var a =
+              var r =
                   "css/legacy_web/" +
                   ({ 0: "gamepad" }[t] || t) +
                   ".css?contenthash=" +
                   { 0: "525a0e2145f53af70526" }[t],
-                o = i.p + a,
+                o = i.p + r,
                 s = document.getElementsByTagName("link"),
                 c = 0;
               c < s.length;
@@ -41,12 +41,12 @@ var CLSTAMP = "7180648";
             ) {
               var u =
                 (d = s[c]).getAttribute("data-href") || d.getAttribute("href");
-              if ("stylesheet" === d.rel && (u === a || u === o)) return e();
+              if ("stylesheet" === d.rel && (u === r || u === o)) return e();
             }
             var l = document.getElementsByTagName("style");
             for (c = 0; c < l.length; c++) {
               var d;
-              if ((u = (d = l[c]).getAttribute("data-href")) === a || u === o)
+              if ((u = (d = l[c]).getAttribute("data-href")) === r || u === o)
                 return e();
             }
             var p = document.createElement("link");
@@ -54,28 +54,28 @@ var CLSTAMP = "7180648";
               (p.type = "text/css"),
               (p.onload = e),
               (p.onerror = function (e) {
-                var a = (e && e.target && e.target.src) || o,
+                var r = (e && e.target && e.target.src) || o,
                   i = new Error(
-                    "Loading CSS chunk " + t + " failed.\n(" + a + ")"
+                    "Loading CSS chunk " + t + " failed.\n(" + r + ")"
                   );
                 (i.code = "CSS_CHUNK_LOAD_FAILED"),
-                  (i.request = a),
-                  delete r[t],
+                  (i.request = r),
+                  delete a[t],
                   p.parentNode.removeChild(p),
                   n(i);
               }),
               (p.href = o),
               document.getElementsByTagName("head")[0].appendChild(p);
           }).then(function () {
-            r[t] = 0;
+            a[t] = 0;
           }))
         );
-    var n = a[t];
+    var n = r[t];
     if (0 !== n)
       if (n) e.push(n[2]);
       else {
-        var o = new Promise(function (e, r) {
-          n = a[t] = [e, r];
+        var o = new Promise(function (e, a) {
+          n = r[t] = [e, a];
         });
         e.push((n[2] = o));
         var s,
@@ -89,25 +89,25 @@ var CLSTAMP = "7180648";
               "javascript/legacy_web/" +
               ({ 0: "gamepad" }[t] || t) +
               ".js?contenthash=" +
-              { 0: "36452da1c85ea82c3d9e" }[t]
+              { 0: "d13c119130cce1167747" }[t]
             );
           })(t));
         var u = new Error();
         s = function (e) {
           (c.onerror = c.onload = null), clearTimeout(l);
-          var n = a[t];
+          var n = r[t];
           if (0 !== n) {
             if (n) {
-              var r = e && ("load" === e.type ? "missing" : e.type),
+              var a = e && ("load" === e.type ? "missing" : e.type),
                 i = e && e.target && e.target.src;
               (u.message =
-                "Loading chunk " + t + " failed.\n(" + r + ": " + i + ")"),
+                "Loading chunk " + t + " failed.\n(" + a + ": " + i + ")"),
                 (u.name = "ChunkLoadError"),
-                (u.type = r),
+                (u.type = a),
                 (u.request = i),
                 n[1](u);
             }
-            a[t] = void 0;
+            r[t] = void 0;
           }
         };
         var l = setTimeout(function () {
@@ -137,13 +137,13 @@ var CLSTAMP = "7180648";
         Object.defineProperty(n, "default", { enumerable: !0, value: t }),
         2 & e && "string" != typeof t)
       )
-        for (var r in t)
+        for (var a in t)
           i.d(
             n,
-            r,
+            a,
             function (e) {
               return t[e];
-            }.bind(null, r)
+            }.bind(null, a)
           );
       return n;
     }),
@@ -175,16 +175,16 @@ var CLSTAMP = "7180648";
   Kw0F: function (t, e, n) {
     "use strict";
     n.d(e, "a", function () {
-      return r;
+      return a;
     }),
       n.d(e, "b", function () {
-        return a;
+        return r;
       });
     n("r64O");
-    function r(t, e) {
-      return a(t, (t) => e == t);
-    }
     function a(t, e) {
+      return r(t, (t) => e == t);
+    }
+    function r(t, e) {
       let n = t.findIndex(e);
       return n >= 0 && (t.splice(n, 1), !0);
     }
@@ -194,34 +194,34 @@ var CLSTAMP = "7180648";
     n.d(e, "a", function () {
       return s;
     });
-    var r = n("mrSG"),
-      a = n("rHSA"),
+    var a = n("mrSG"),
+      r = n("rHSA"),
       i = n("XxJJ");
     let o = [
-      { index: 0, type: a.a.OK, category: "action" },
-      { index: 1, type: a.a.CANCEL, category: "action" },
-      { index: 2, type: a.a.SECONDARY, category: "action" },
-      { index: 3, type: a.a.OPTIONS, category: "action" },
-      { index: 4, type: a.a.BUMPER_LEFT, category: "action" },
-      { index: 5, type: a.a.BUMPER_RIGHT, category: "action" },
-      { index: 6, type: a.a.TRIGGER_LEFT, category: "action" },
-      { index: 7, type: a.a.TRIGGER_RIGHT, category: "action" },
-      { index: 8, type: a.a.SELECT, category: "action" },
-      { index: 9, type: a.a.START, category: "action" },
-      { index: 10, type: a.a.LSTICK_CLICK, category: "action" },
-      { index: 11, type: a.a.RSTICK_CLICK, category: "action" },
-      { index: 12, type: a.a.DIR_UP, category: "navigation" },
-      { index: 13, type: a.a.DIR_DOWN, category: "navigation" },
-      { index: 14, type: a.a.DIR_LEFT, category: "navigation" },
-      { index: 15, type: a.a.DIR_RIGHT, category: "navigation" },
-      { index: 16, type: a.a.STEAM_GUIDE, category: "action" },
-      { index: 17, type: a.a.SELECT, category: "action" },
+      { index: 0, type: r.a.OK, category: "action" },
+      { index: 1, type: r.a.CANCEL, category: "action" },
+      { index: 2, type: r.a.SECONDARY, category: "action" },
+      { index: 3, type: r.a.OPTIONS, category: "action" },
+      { index: 4, type: r.a.BUMPER_LEFT, category: "action" },
+      { index: 5, type: r.a.BUMPER_RIGHT, category: "action" },
+      { index: 6, type: r.a.TRIGGER_LEFT, category: "action" },
+      { index: 7, type: r.a.TRIGGER_RIGHT, category: "action" },
+      { index: 8, type: r.a.SELECT, category: "action" },
+      { index: 9, type: r.a.START, category: "action" },
+      { index: 10, type: r.a.LSTICK_CLICK, category: "action" },
+      { index: 11, type: r.a.RSTICK_CLICK, category: "action" },
+      { index: 12, type: r.a.DIR_UP, category: "navigation" },
+      { index: 13, type: r.a.DIR_DOWN, category: "navigation" },
+      { index: 14, type: r.a.DIR_LEFT, category: "navigation" },
+      { index: 15, type: r.a.DIR_RIGHT, category: "navigation" },
+      { index: 16, type: r.a.STEAM_GUIDE, category: "action" },
+      { index: 17, type: r.a.SELECT, category: "action" },
     ];
-    class s extends a.c {
+    class s extends r.c {
       constructor() {
         super(),
           (this.m_rgGamepadStatus = []),
-          this.SetSourceType(a.b.GAMEPAD),
+          this.SetSourceType(r.b.GAMEPAD),
           window.addEventListener("gamepadconnected", (t) => {
             this.m_bGamepadDetected ||
               (this.OnGamepadDetected(), this.PollGamepads());
@@ -231,21 +231,21 @@ var CLSTAMP = "7180648";
         let t = navigator.getGamepads(),
           e = !1;
         for (let n = 0; n < t.length; n++) {
-          let r = t[n];
-          if (!r) continue;
+          let a = t[n];
+          if (!a) continue;
           this.m_rgGamepadStatus[n] ||
             (this.m_rgGamepadStatus[n] = { buttons: [] });
-          let a = this.m_rgGamepadStatus[n];
+          let r = this.m_rgGamepadStatus[n];
           for (let t = 0; t < o.length; t++) {
             let n = o[t],
               i = n.index;
-            r.buttons[i] &&
-              (r.buttons[i].pressed
+            a.buttons[i] &&
+              (a.buttons[i].pressed
                 ? ((e = !0),
-                  a.buttons[i] ||
-                    ((a.buttons[i] = !0), this.OnButtonDown(n.type)))
-                : a.buttons[i] &&
-                  (this.OnButtonUp(n.type), (a.buttons[i] = !1)));
+                  r.buttons[i] ||
+                    ((r.buttons[i] = !0), this.OnButtonDown(n.type)))
+                : r.buttons[i] &&
+                  (this.OnButtonUp(n.type), (r.buttons[i] = !1)));
           }
         }
         document.hasFocus() || e
@@ -258,8 +258,8 @@ var CLSTAMP = "7180648";
           this.PollGamepads();
       }
     }
-    Object(r.b)([i.a], s.prototype, "PollGamepads", null),
-      Object(r.b)([i.a], s.prototype, "OnWindowRegainedFocus", null);
+    Object(a.b)([i.a], s.prototype, "PollGamepads", null),
+      Object(a.b)([i.a], s.prototype, "OnWindowRegainedFocus", null);
   },
   SQr7: function (t, e, n) {
     "use strict";
@@ -275,7 +275,7 @@ var CLSTAMP = "7180648";
   },
   XxJJ: function (t, e, n) {
     "use strict";
-    function r(t, e, n) {
+    function a(t, e, n) {
       return {
         get() {
           let t = n.value.bind(this);
@@ -288,18 +288,18 @@ var CLSTAMP = "7180648";
       };
     }
     n.d(e, "a", function () {
-      return r;
+      return a;
     });
   },
   gfbn: function (t, e, n) {
     "use strict";
     n.r(e);
-    var r = n("mrSG"),
-      a = (n("SQr7"), n("xeH2")),
-      i = n.n(a),
+    var a = n("mrSG"),
+      r = (n("SQr7"), n("xeH2")),
+      i = n.n(r),
       o = n("SHRt");
     function s(t) {
-      return Object(r.a)(this, void 0, void 0, function* () {
+      return Object(a.a)(this, void 0, void 0, function* () {
         const { InitializeGamepadNavigation: e } = yield n
           .e(0)
           .then(n.bind(null, "biHH"));
@@ -319,58 +319,58 @@ var CLSTAMP = "7180648";
   mrSG: function (t, e, n) {
     "use strict";
     n.d(e, "c", function () {
-      return r;
+      return a;
     }),
       n.d(e, "b", function () {
-        return a;
+        return r;
       }),
       n.d(e, "a", function () {
         return i;
       });
-    function r(t, e) {
+    function a(t, e) {
       var n = {};
-      for (var r in t)
-        Object.prototype.hasOwnProperty.call(t, r) &&
-          e.indexOf(r) < 0 &&
-          (n[r] = t[r]);
+      for (var a in t)
+        Object.prototype.hasOwnProperty.call(t, a) &&
+          e.indexOf(a) < 0 &&
+          (n[a] = t[a]);
       if (null != t && "function" == typeof Object.getOwnPropertySymbols) {
-        var a = 0;
-        for (r = Object.getOwnPropertySymbols(t); a < r.length; a++)
-          e.indexOf(r[a]) < 0 &&
-            Object.prototype.propertyIsEnumerable.call(t, r[a]) &&
-            (n[r[a]] = t[r[a]]);
+        var r = 0;
+        for (a = Object.getOwnPropertySymbols(t); r < a.length; r++)
+          e.indexOf(a[r]) < 0 &&
+            Object.prototype.propertyIsEnumerable.call(t, a[r]) &&
+            (n[a[r]] = t[a[r]]);
       }
       return n;
     }
-    function a(t, e, n, r) {
-      var a,
+    function r(t, e, n, a) {
+      var r,
         i = arguments.length,
         o =
           i < 3
             ? e
-            : null === r
-            ? (r = Object.getOwnPropertyDescriptor(e, n))
-            : r;
+            : null === a
+            ? (a = Object.getOwnPropertyDescriptor(e, n))
+            : a;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-        o = Reflect.decorate(t, e, n, r);
+        o = Reflect.decorate(t, e, n, a);
       else
         for (var s = t.length - 1; s >= 0; s--)
-          (a = t[s]) &&
-            (o = (i < 3 ? a(o) : i > 3 ? a(e, n, o) : a(e, n)) || o);
+          (r = t[s]) &&
+            (o = (i < 3 ? r(o) : i > 3 ? r(e, n, o) : r(e, n)) || o);
       return i > 3 && o && Object.defineProperty(e, n, o), o;
     }
-    function i(t, e, n, r) {
-      return new (n || (n = Promise))(function (a, i) {
+    function i(t, e, n, a) {
+      return new (n || (n = Promise))(function (r, i) {
         function o(t) {
           try {
-            c(r.next(t));
+            c(a.next(t));
           } catch (t) {
             i(t);
           }
         }
         function s(t) {
           try {
-            c(r.throw(t));
+            c(a.throw(t));
           } catch (t) {
             i(t);
           }
@@ -378,7 +378,7 @@ var CLSTAMP = "7180648";
         function c(t) {
           var e;
           t.done
-            ? a(t.value)
+            ? r(t.value)
             : ((e = t.value),
               e instanceof n
                 ? e
@@ -386,7 +386,7 @@ var CLSTAMP = "7180648";
                     t(e);
                   })).then(o, s);
         }
-        c((r = r.apply(t, e || [])).next());
+        c((a = a.apply(t, e || [])).next());
       });
     }
     Object.create;
@@ -400,8 +400,8 @@ var CLSTAMP = "7180648";
       n.d(e, "b", function () {
         return c;
       });
-    var r = n("mrSG"),
-      a = n("Kw0F"),
+    var a = n("mrSG"),
+      r = n("Kw0F"),
       i = n("XxJJ");
     class o {
       constructor() {
@@ -411,7 +411,7 @@ var CLSTAMP = "7180648";
         this.m_vecCallbacks.push(t);
         return {
           Unregister: () => {
-            a.a(this.m_vecCallbacks, t);
+            r.a(this.m_vecCallbacks, t);
           },
         };
       }
@@ -442,7 +442,7 @@ var CLSTAMP = "7180648";
     function c(t) {
       return new s(t);
     }
-    Object(r.b)(
+    Object(a.b)(
       [i.a],
       class {
         Schedule(t, e) {
@@ -469,7 +469,7 @@ var CLSTAMP = "7180648";
   },
   r64O: function (t, e, n) {
     "use strict";
-    function r(t, e, ...n) {
+    function a(t, e, ...n) {
       console.assert
         ? 0 == n.length
           ? console.assert(!!t, e)
@@ -477,22 +477,22 @@ var CLSTAMP = "7180648";
         : t || console.warn(e, ...n);
     }
     n.d(e, "a", function () {
-      return r;
+      return a;
     });
   },
   rHSA: function (t, e, n) {
     "use strict";
     n.d(e, "a", function () {
-      return r;
+      return a;
     }),
       n.d(e, "b", function () {
-        return a;
+        return r;
       }),
       n.d(e, "c", function () {
         return c;
       });
-    var r,
-      a,
+    var a,
+      r,
       i = n("qiKp");
     class o {
       constructor(t) {
@@ -568,27 +568,28 @@ var CLSTAMP = "7180648";
         (t[(t.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
         (t[(t.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
         (t[(t.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
-    })(r || (r = {})),
+    })(a || (a = {})),
       (function (t) {
         (t[(t.UNKNOWN = 0)] = "UNKNOWN"),
           (t[(t.GAMEPAD = 1)] = "GAMEPAD"),
           (t[(t.KEYBOARD = 2)] = "KEYBOARD"),
           (t[(t.MOUSE = 3)] = "MOUSE"),
           (t[(t.TOUCH = 4)] = "TOUCH");
-      })(a || (a = {}));
+      })(r || (r = {}));
     class c {
       constructor() {
         (this.m_OnGamepadDetectedCallbacks = new i.a()),
           (this.m_ButtonDownCallbacks = new i.a()),
           (this.m_ButtonUpCallbacks = new i.a()),
+          (this.m_AnalogCallbacks = new i.a()),
           (this.m_NavigationTypeChangeCallbacks = new i.a()),
           (this.m_nLastActiveControllerIndex = -1),
           (this.m_ButtonRepeatHandler = new s({
             inputsThatRepeat: new Set([
-              r.DIR_UP,
-              r.DIR_DOWN,
-              r.DIR_LEFT,
-              r.DIR_RIGHT,
+              a.DIR_UP,
+              a.DIR_DOWN,
+              a.DIR_LEFT,
+              a.DIR_RIGHT,
             ]),
             firstRepeatInterval_ms: 500,
             repeatInterval_ms: 125,
@@ -603,6 +604,9 @@ var CLSTAMP = "7180648";
       }
       RegisterForGamepadButtonUp(t) {
         return this.m_ButtonUpCallbacks.Register(t);
+      }
+      RegisterForAnalog(t) {
+        return this.m_AnalogCallbacks.Register(t);
       }
       RegisterForNavigationTypeChange(t) {
         return this.m_NavigationTypeChangeCallbacks.Register(t);
@@ -653,6 +657,16 @@ var CLSTAMP = "7180648";
           this.m_nLastActiveControllerIndex,
           e
         );
+      }
+      OnAnalogPad(t, e, n, a) {
+        void 0 === a && (a = -1),
+          this.SetControllerActive(a),
+          this.m_AnalogCallbacks.Dispatch(
+            t,
+            this.m_nLastActiveControllerIndex,
+            e,
+            n
+          );
       }
       OnNavigationTypeChanged(t) {
         this.m_NavigationTypeChangeCallbacks.Dispatch(t);

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7180652";
+var CLSTAMP = "7189601";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [61],
   {
@@ -1956,7 +1956,7 @@ var CLSTAMP = "7180652";
           },
         });
       });
-      function E(e) {
+      function O(e) {
         e ||
           (Object(a.a)() &&
             (Object(
@@ -1967,7 +1967,7 @@ var CLSTAMP = "7180652";
               ) ||
               Object(g.d)(o.createElement(B, null), window)));
       }
-      function O() {
+      function E() {
         if (u.a.Get().BIsUserLoggedIn()) return 1;
         Object(g.d)(
           o.createElement(b.e, {
@@ -1990,12 +1990,12 @@ var CLSTAMP = "7180652";
       function A(r) {
         return Object(n.a)(this, void 0, void 0, function* () {
           var e, t;
-          O() &&
+          E() &&
             w(r) &&
             ((e = l.a.InitFromClanID(r)),
             (t = d.a.Get().BIsFollowingCurator(e)),
             yield d.a.Get().UpdateFollowOrIgnoreCurator(e, !0, !t),
-            E(t));
+            O(t));
         });
       }
       const T = (e) => {
@@ -2053,7 +2053,7 @@ var CLSTAMP = "7180652";
             bApplyingFollowing: e,
             onFollowClick: () => {
               var e = i["clanAccountID"];
-              O() &&
+              E() &&
                 w(e) &&
                 (s(!0),
                 (() => {
@@ -2072,7 +2072,7 @@ var CLSTAMP = "7180652";
                       s(!1);
                     })
                     .then(() => {
-                      E(n);
+                      O(n);
                     })
                     .catch((e) => {
                       s(!1);
@@ -2098,7 +2098,7 @@ var CLSTAMP = "7180652";
             bApplyingFollowing: e,
             onFollowClick: () => {
               var e, t, r;
-              O() &&
+              E() &&
                 (a(!0),
                 (e = n.appid),
                 (t = d.a.Get().BFollowsApp(e)),
@@ -2212,10 +2212,10 @@ var CLSTAMP = "7180652";
           return B;
         }),
         r.d(t, "g", function () {
-          return E;
+          return O;
         }),
         r.d(t, "h", function () {
-          return O;
+          return E;
         }),
         r.d(t, "f", function () {
           return w;
@@ -2301,7 +2301,7 @@ var CLSTAMP = "7180652";
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const M = 593110;
       const y = [M, 766, 221410];
-      var C, B, E, O, w;
+      var C, B, O, E, w;
       function A(e) {
         var t = 60 * S.e.PerDay;
         return (
@@ -2473,13 +2473,13 @@ var CLSTAMP = "7180652";
           "k_EStoreFilterClauseTypePrice"),
         (r[(r.k_EStoreFilterClauseTypeAppType = 7)] =
           "k_EStoreFilterClauseTypeAppType"),
-        ((r = E = E || {})[(r.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
+        ((r = O = O || {})[(r.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
         (r[(r.k_ELanguage = 1)] = "k_ELanguage"),
         (r[(r.k_EContentDescriptor = 2)] = "k_EContentDescriptor"),
         (r[(r.k_EUserPreference = 3)] = "k_EUserPreference"),
         (r[(r.k_EPrice = 4)] = "k_EPrice"),
         (r[(r.k_EAppType = 5)] = "k_EAppType"),
-        ((r = O = O || {})[(r.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
+        ((r = E = E || {})[(r.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
         (r[(r.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
         (r[(r.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems"),
         ((r = w = w || {})[(r.k_ESortFacetsByName = 0)] =
@@ -3674,7 +3674,7 @@ var CLSTAMP = "7180652";
         u = r.n(C),
         a = (r("mgoM"), r("AiWL"), r("OS6B")),
         B = r("lkRc");
-      class E {
+      class O {
         constructor() {
           this.m_rgFriendsList = null;
         }
@@ -3720,16 +3720,16 @@ var CLSTAMP = "7180652";
         }
         static Get() {
           return (
-            E.s_Singleton ||
-              ((E.s_Singleton = new E()),
+            O.s_Singleton ||
+              ((O.s_Singleton = new O()),
               ("dev" != B.c.WEB_UNIVERSE && "beta" != B.c.WEB_UNIVERSE) ||
-                (window.g_DynamicRevealStore = E.s_Singleton)),
-            E.s_Singleton
+                (window.g_DynamicRevealStore = O.s_Singleton)),
+            O.s_Singleton
           );
         }
       }
       var i = r("TyAF"),
-        O = r("ZeAL"),
+        E = r("ZeAL"),
         w = r("TtDX"),
         s = r("+VX6"),
         A = r("kLLr"),
@@ -4874,7 +4874,7 @@ var CLSTAMP = "7180652";
               0 < e.length &&
               ((t = B.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/"),
               e.startsWith(t) &&
-                ((t = "[img]" + O.e + "/" + e.substr(t.length) + "[/img]"),
+                ((t = "[img]" + E.e + "/" + e.substr(t.length) + "[/img]"),
                 ce.replaceSelection(this.GetTextAreaRef().current, t)));
           }
         }
@@ -4892,7 +4892,7 @@ var CLSTAMP = "7180652";
                 B.c.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
               fnTextareaRef: this.GetTextAreaRef,
               emoticonStore: this.props.emoticonStore,
-              supportBBCodes: this.props.limitBBCode || O.f,
+              supportBBCodes: this.props.limitBBCode || E.f,
               bSupportHTMLImport: this.props.bSupportHTMLImport,
               showFormatHelp: this.props.showFormatHelp,
               bEmbeddedInDialog: this.props.bEmbeddedInDialog,
@@ -4922,7 +4922,7 @@ var CLSTAMP = "7180652";
                 onDrop: this.OnTextAreaDropListener,
                 emoticonStore: this.props.emoticonStore,
                 fnSetText: this.props.fnSetText,
-                supportBBCodes: this.props.limitBBCode || O.f,
+                supportBBCodes: this.props.limitBBCode || E.f,
               })
             )
           );
@@ -5776,7 +5776,7 @@ var CLSTAMP = "7180652";
             Object(M.a)(void 0, void 0, void 0, function* () {
               var e = y.a.CancelToken.source();
               n.current = e.cancel;
-              const t = yield E.Get().LoadFriendList();
+              const t = yield O.Get().LoadFriendList();
               !e.token.reason &&
                 t &&
                 (_(t),
@@ -5827,7 +5827,7 @@ var CLSTAMP = "7180652";
                 0 < o.trim().length && (e += ` company="${o}"`),
                 u &&
                   ((t =
-                    O.e + "/" + u.clanAccountID + "/" + T.a.GetHashAndExt(u)),
+                    E.e + "/" + u.clanAccountID + "/" + T.a.GetHashAndExt(u)),
                   (e += ` photo="${t}"`)),
                 m && (e += ` steamid="${m.ConvertTo64BitString()}"`),
                 (e += `]${c}[/speaker]`),
@@ -6224,9 +6224,9 @@ var CLSTAMP = "7180652";
         C = (r("sRB7"), r("ee7K")),
         o = r("C4Nl"),
         B = r("35zc"),
-        E = r("b3LC"),
+        O = r("b3LC"),
         h = r("XsxU"),
-        O = r("Fmfl"),
+        E = r("Fmfl"),
         w = r("5L1o"),
         t = r("NKJh"),
         _ = r.n(t),
@@ -6249,8 +6249,8 @@ var CLSTAMP = "7180652";
             bAutoFocus: i,
           } = e,
           [s, o] = S.a.useState(!1);
-        const [l] = Object(E.a)(t.id, Object(B.d)(t.type), u.e),
-          [c] = Object(E.b)(
+        const [l] = Object(O.a)(t.id, Object(B.d)(t.type), u.e),
+          [c] = Object(O.b)(
             r && (null === l || void 0 === l ? void 0 : l.GetParentAppID()),
             u.e
           );
@@ -6271,7 +6271,7 @@ var CLSTAMP = "7180652";
             A.a,
             { appid: l.GetAppID() },
             S.a.createElement(
-              O.d,
+              E.d,
               {
                 className: _.a.CapsuleContainer,
                 item: t,
@@ -6396,7 +6396,7 @@ var CLSTAMP = "7180652";
           creatorAccountID: u,
           bIsHovered: m,
         } = e;
-        const [p] = Object(E.a)(t.id, Object(B.d)(t.type), {
+        const [p] = Object(O.a)(t.id, Object(B.d)(t.type), {
           include_platforms: !0,
         });
         var h = Object(I.c)();
@@ -6446,7 +6446,7 @@ var CLSTAMP = "7180652";
                   ? void 0
                   : i.steam_deck_compat_category,
             }),
-            Boolean(m && !Object(O.a)()) &&
+            Boolean(m && !Object(E.a)()) &&
               S.a.createElement(w.a, { appInfo: t }),
             f
           )
@@ -6456,7 +6456,7 @@ var CLSTAMP = "7180652";
     "4sqd": function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return E;
+        return O;
       }),
         r.d(t, "b", function () {
           return A;
@@ -6542,7 +6542,7 @@ var CLSTAMP = "7180652";
           return null;
         });
       }
-      let E = class extends c.Component {
+      let O = class extends c.Component {
         constructor() {
           super(...arguments),
             (this.state = { eCategoryLoaded: null, nomineeAppID: null }),
@@ -6633,7 +6633,7 @@ var CLSTAMP = "7180652";
         }
         HandleConflict(e) {
           Object(g.d)(
-            c.createElement(O, {
+            c.createElement(E, {
               strLocTokenInfix: "Nomination",
               strNewGameTitle: this.props.event.GetGameTitle(this.props.lang),
               fnGetOldGameTitle: () => this.m_strPreviousNomineeTitle,
@@ -6842,12 +6842,12 @@ var CLSTAMP = "7180652";
           );
         }
       };
-      Object(o.b)([a.C], E.prototype, "m_strPreviousNomineeTitle", void 0),
-        Object(o.b)([a.C], E.prototype, "m_nominationEventDetails", void 0),
-        Object(o.b)([n.a], E.prototype, "OnNominateClick", null),
-        Object(o.b)([n.a], E.prototype, "SaveNomination", null),
-        (E = Object(o.b)([i.a], E));
-      let O = class extends c.Component {
+      Object(o.b)([a.C], O.prototype, "m_strPreviousNomineeTitle", void 0),
+        Object(o.b)([a.C], O.prototype, "m_nominationEventDetails", void 0),
+        Object(o.b)([n.a], O.prototype, "OnNominateClick", null),
+        Object(o.b)([n.a], O.prototype, "SaveNomination", null),
+        (O = Object(o.b)([i.a], O));
+      let E = class extends c.Component {
         OnConfirm() {
           this.props.fnOnConfirm(), this.props.closeModal();
         }
@@ -6888,9 +6888,9 @@ var CLSTAMP = "7180652";
           });
         }
       };
-      Object(o.b)([n.a], O.prototype, "OnConfirm", null),
-        Object(o.b)([n.a], O.prototype, "OnCancel", null),
-        (O = Object(o.b)([i.a], O));
+      Object(o.b)([n.a], E.prototype, "OnConfirm", null),
+        Object(o.b)([n.a], E.prototype, "OnCancel", null),
+        (E = Object(o.b)([i.a], E));
       let w = class extends c.Component {
         constructor() {
           super(...arguments),
@@ -6970,7 +6970,7 @@ var CLSTAMP = "7180652";
         HandleConflict(e) {
           const t = s.a.Get().GetApp(this.props.appID);
           Object(g.d)(
-            c.createElement(O, {
+            c.createElement(E, {
               strLocTokenInfix: "Vote",
               strNewGameTitle:
                 null === t || void 0 === t ? void 0 : t.GetName(),
@@ -7380,10 +7380,10 @@ var CLSTAMP = "7180652";
         y = r.n(S),
         C = (r("mgoM"), r("kyHq"), r("av+R")),
         B = r("qDk6"),
-        E = r("j+5p"),
+        O = r("j+5p"),
         a = (r("3+zv"), r("SG7E")),
         i = r("8H1D"),
-        O = r("VQ2A"),
+        E = r("VQ2A"),
         s = (r("sRB7"), r("nWbB")),
         o = r("TQGK"),
         l = r("ee7K"),
@@ -7468,8 +7468,8 @@ var CLSTAMP = "7180652";
               : d.GetAssets().GetPageBackgroundURL())),
           (f =
             f || (null === d || void 0 === d ? void 0 : d.GetMicroTrailer())));
-        var g = Object(O.b)(c.GetStorePageURL(), _),
-          v = Object(O.c)(_),
+        var g = Object(E.b)(c.GetStorePageURL(), _),
+          v = Object(E.c)(_),
           _ = 0 == c.GetStoreItemType();
         return y.a.createElement(
           D.a,
@@ -7662,7 +7662,7 @@ var CLSTAMP = "7180652";
             (v = g
               ? Object(j.f)("#Sale_BundleSave_WithDiscount", g, f)
               : Object(j.f)("#Sale_BundleSave", f));
-          var S = Object(O.c)(_),
+          var S = Object(E.c)(_),
             g = n.GetStorePageURL(),
             u = Boolean(!u && 0 < f);
           const M = n.BHasTags()
@@ -7681,7 +7681,7 @@ var CLSTAMP = "7180652";
                 onMouseEnter: () => r(!0),
                 onMouseLeave: () => r(!1),
                 "flow-children": "grid",
-                navEntryPreferPosition: E.d.PREFERRED_CHILD,
+                navEntryPreferPosition: O.d.PREFERRED_CHILD,
                 autoFocus: h,
               },
               y.a.createElement(
@@ -7702,7 +7702,7 @@ var CLSTAMP = "7180652";
                   y.a.createElement(
                     "a",
                     {
-                      href: Object(O.b)(g, _),
+                      href: Object(E.b)(g, _),
                       target: k.c.IN_CLIENT ? void 0 : "_blank",
                     },
                     y.a.createElement(
@@ -7743,7 +7743,7 @@ var CLSTAMP = "7180652";
                     y.a.createElement(
                       "a",
                       {
-                        href: Object(O.b)(g, _),
+                        href: Object(E.b)(g, _),
                         target: k.c.IN_CLIENT ? void 0 : "_blank",
                       },
                       y.a.createElement(
@@ -7852,7 +7852,7 @@ var CLSTAMP = "7180652";
               [a]
             );
           if (!a) return null;
-          var b = Object(O.c)(h),
+          var b = Object(E.c)(h),
             g = a.GetStorePageURL(),
             e = 0 == a.GetStoreItemType();
           return y.a.createElement(
@@ -7907,7 +7907,7 @@ var CLSTAMP = "7180652";
                     y.a.createElement(
                       "a",
                       {
-                        href: Object(O.b)(g, h),
+                        href: Object(E.b)(g, h),
                         target: k.c.IN_CLIENT ? void 0 : "_blank",
                       },
                       y.a.createElement(
@@ -8587,10 +8587,10 @@ var CLSTAMP = "7180652";
         return vn;
       }),
         r.d(t, "a", function () {
-          return En;
+          return On;
         }),
         r.d(t, "f", function () {
-          return On;
+          return En;
         }),
         r.d(t, "h", function () {
           return Tn;
@@ -8631,13 +8631,13 @@ var CLSTAMP = "7180652";
         i = r("vDqi"),
         v = r.n(i),
         S = r("2vnA"),
-        E = r("gyoR"),
+        O = r("gyoR"),
         y = (r("AiWL"), r("r64O")),
         u = r("OS6B"),
         t = r("XxJJ"),
         l = r("qiKp"),
         D = r("lkRc"),
-        O = r("6oCP");
+        E = r("6oCP");
       class w {
         constructor() {
           (this.m_mapSectionToExistingCapsules = new Map()),
@@ -8708,7 +8708,7 @@ var CLSTAMP = "7180652";
           null != t &&
             t.forEach((t) => {
               r.findIndex((e) => t.id == e.id && t.type == e.type) < 0 &&
-                !Object(E.d)(t) &&
+                !Object(O.d)(t) &&
                 r.push(t);
             }),
             this.m_mapSectionToExistingCapsules.has(e) ||
@@ -8720,7 +8720,7 @@ var CLSTAMP = "7180652";
             : [];
           null != t &&
             t.forEach((e) => {
-              !r.includes(e) && O.b.BHasClanEventModel(e) && r.push(e);
+              !r.includes(e) && E.b.BHasClanEventModel(e) && r.push(e);
             }),
             this.m_mapSectionToExistingClanEventGIDs.has(e) ||
               this.m_mapSectionToExistingClanEventGIDs.set(e, r);
@@ -8773,7 +8773,7 @@ var CLSTAMP = "7180652";
                     var n = r.events
                       .filter((e) => !a.includes(e.event_gid))
                       .map((e) => e.event_gid);
-                    O.b
+                    E.b
                       .LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                         n,
                         null
@@ -8783,12 +8783,12 @@ var CLSTAMP = "7180652";
                           .map((e) => e.appid)
                           .filter((e) => Boolean(e))
                           .map((e) => ({ id: e, type: "game" }));
-                        Object(E.g)(e, C.e).then(() => {
+                        Object(O.g)(e, C.e).then(() => {
                           var e = t
                             .filter(
                               (e) =>
                                 Boolean(e.appid) &&
-                                !Object(E.d)({ id: e.appid, type: "game" })
+                                !Object(O.d)({ id: e.appid, type: "game" })
                             )
                             .map((e) => e.GID);
                           this.m_mapSectionToNewEvents.set(r.unique_id, e);
@@ -8810,7 +8810,7 @@ var CLSTAMP = "7180652";
                           ? void 0
                           : t.length))
                   ) {
-                    const i = Object(E.f)(r.appids, r.packageids, r.bundledid),
+                    const i = Object(O.f)(r.appids, r.packageids, r.bundledid),
                       s =
                         this.m_mapSectionToExistingCapsules.get(r.unique_id) ||
                         [],
@@ -8819,10 +8819,10 @@ var CLSTAMP = "7180652";
                           s.findIndex((e) => e.id == t.id && e.type == t.type) <
                           0
                       );
-                    Object(E.g)(o, C.e).then(() => {
+                    Object(O.g)(o, C.e).then(() => {
                       const t = new Array();
                       o.forEach((e) => {
-                        Object(E.d)(e) || t.push(e);
+                        Object(O.d)(e) || t.push(e);
                       }),
                         this.m_mapSectionToNewCapsules.set(r.unique_id, t);
                     });
@@ -9013,7 +9013,7 @@ var CLSTAMP = "7180652";
                       (this.AddAllRecentEvents(n, r.data.recent_events),
                       r.data.partnerevents)
                     ) {
-                      O.b.RegisterClanEvents(r.data.partnerevents);
+                      E.b.RegisterClanEvents(r.data.partnerevents);
                       const e = r.data.partnerevents
                         .map((e) => e.appid)
                         .filter(Boolean);
@@ -9174,9 +9174,9 @@ var CLSTAMP = "7180652";
             for (const t of c) r.set(t.appid, t);
             const e = c.filter((e) => e.hub_popular),
               n = e.map((e) => ({ type: "game", id: e.appid }));
-            Object(E.g)(n, C.e, !0).then(() => {
+            Object(O.g)(n, C.e, !0).then(() => {
               const t = [];
-              Object(E.a)(n, !0, t).then((e) => {
+              Object(O.a)(n, !0, t).then((e) => {
                 e = e.map((e) => r.get(e.id));
                 u(
                   (function (t, e) {
@@ -9813,7 +9813,10 @@ var CLSTAMP = "7180652";
                 let a = [];
                 if (e)
                   for (const i of e)
-                    a.push({ type: "spotlight", item: i }), n.push(a), (a = []);
+                    i.is_weeklong_deals ||
+                      (a.push({ type: "spotlight", item: i }),
+                      n.push(a),
+                      (a = []));
                 if (t)
                   for (const s of t)
                     a.push({ type: "dailydeal", item: s }),
@@ -9861,7 +9864,7 @@ var CLSTAMP = "7180652";
                     bLazyRenderChildren: !0,
                   },
                   m.map((e) =>
-                    B.a.createElement(Ee, {
+                    B.a.createElement(Oe, {
                       key: (function (e) {
                         return e.map(Le).reduce((e, t) => e + t);
                       })(e),
@@ -9871,7 +9874,7 @@ var CLSTAMP = "7180652";
                 )
               );
         },
-        Ee = (e) => {
+        Oe = (e) => {
           const t = e["column"];
           return B.a.createElement(
             "div",
@@ -9883,7 +9886,7 @@ var CLSTAMP = "7180652";
               }
               if ("dailydeal" === e.type) {
                 var r = e.item;
-                return B.a.createElement(Oe, { key: Le(e), dailyDeal: r });
+                return B.a.createElement(Ee, { key: Le(e), dailyDeal: r });
               }
               if ("capsule" !== e.type) return null;
               r = e.item;
@@ -9895,7 +9898,7 @@ var CLSTAMP = "7180652";
             })
           );
         },
-        Oe = (e) => {
+        Ee = (e) => {
           var t = e["dailyDeal"],
             e = Object(K.c)();
           return B.a.createElement(
@@ -10657,7 +10660,7 @@ var CLSTAMP = "7180652";
               d.forEach((e) => {
                 s.has(e.id) || o.push(e);
               }),
-              yield Object(E.g)(o, {});
+              yield Object(O.g)(o, {});
             const l = [];
             u.forEach((t) => {
               if (!i.has(t.id)) {
@@ -11627,8 +11630,8 @@ var CLSTAMP = "7180652";
         }
       };
       Bt = Object(A.b)([n.a], Bt);
-      var Et = r("VbCH"),
-        Ot = r("IzPI"),
+      var Ot = r("VbCH"),
+        Et = r("IzPI"),
         wt = r("ZCZY"),
         At = r("55Ip");
       function Tt(e) {
@@ -11839,7 +11842,7 @@ var CLSTAMP = "7180652";
                       Ce.a,
                       {
                         className: Object(Y.a)(ce.a.Button),
-                        href: Object(Ot.f)(t.GetSaleURL()),
+                        href: Object(Et.f)(t.GetSaleURL()),
                       },
                       Object(me.f)("#Event_Button_VisitSalePage")
                     )
@@ -12097,7 +12100,7 @@ var CLSTAMP = "7180652";
             "div",
             { className: Object(Y.a)(zt.a.GameActions) },
             r
-              ? M.createElement(Et.a, {
+              ? M.createElement(Ot.a, {
                   appid: t,
                   bIsFree: r.BIsFree(),
                   bIsComingSoon: r.BIsComingSoon(),
@@ -12121,7 +12124,7 @@ var CLSTAMP = "7180652";
               ),
               M.createElement(
                 It.a,
-                { href: Object(Ot.f)(Fe.a.GetCreatorStoreURL(t)) },
+                { href: Object(Et.f)(Fe.a.GetCreatorStoreURL(t)) },
                 M.createElement("div", {
                   className: zt.a.EventDetailsAvatar,
                   style: { backgroundImage: `url(${e.avatar_full_url})` },
@@ -13239,7 +13242,7 @@ var CLSTAMP = "7180652";
                 M.createElement(
                   x.a,
                   {
-                    hideArrows: !En(),
+                    hideArrows: !On(),
                     visibleElements: 1,
                     useTestScrollbar: !0,
                     bLazyRenderChildren: !0,
@@ -13565,8 +13568,8 @@ var CLSTAMP = "7180652";
         Cr = r.n(t),
         t = r("26EA"),
         Br = r.n(t),
-        Er = r("YyVH");
-      let Or = class extends M.Component {
+        Or = r("YyVH");
+      let Er = class extends M.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -13619,7 +13622,7 @@ var CLSTAMP = "7180652";
             );
           e !== this.state.rowDelta &&
             ((t = this.state.index + this.state.rowDelta),
-            (r = Er.a(this.state.index + e, 0, this.props.items.length - 1)),
+            (r = Or.a(this.state.index + e, 0, this.props.items.length - 1)),
             this.m_cancelSignal.token.reason ||
               (this.props.onMove
                 ? this.props.onMove(t, r)
@@ -13682,10 +13685,10 @@ var CLSTAMP = "7180652";
           );
         }
       };
-      Object(A.b)([nt.a], Or.prototype, "OnWhitelistGrab", null),
-        Object(A.b)([nt.a], Or.prototype, "OnWhitelistRelease", null),
-        Object(A.b)([nt.a], Or.prototype, "OnWhitelistMove", null),
-        (Or = Object(A.b)([n.a], Or));
+      Object(A.b)([nt.a], Er.prototype, "OnWhitelistGrab", null),
+        Object(A.b)([nt.a], Er.prototype, "OnWhitelistRelease", null),
+        Object(A.b)([nt.a], Er.prototype, "OnWhitelistMove", null),
+        (Er = Object(A.b)([n.a], Er));
       var wr = r("4P4B"),
         Ar = r("Qd4c");
       function Tr(t, e) {
@@ -13747,7 +13750,7 @@ var CLSTAMP = "7180652";
             { onClick: () => Tr(i, s) },
             Object(me.f)("#Sale_ReserveEditor_EditTitle")
           ),
-          B.a.createElement(Or, {
+          B.a.createElement(Er, {
             items:
               null !==
                 (e =
@@ -13862,7 +13865,7 @@ var CLSTAMP = "7180652";
             ),
           B.a.createElement(dt.a, {
             text: e,
-            partnerEventStore: O.b,
+            partnerEventStore: E.b,
             showErrorInfo: !0,
             event: n,
             languageOverride: a,
@@ -14060,7 +14063,7 @@ var CLSTAMP = "7180652";
                       { className: Ar.description },
                       B.a.createElement(dt.a, {
                         text: e,
-                        partnerEventStore: O.b,
+                        partnerEventStore: E.b,
                         showErrorInfo: a,
                         event: n,
                         languageOverride: r,
@@ -14097,7 +14100,7 @@ var CLSTAMP = "7180652";
                       { className: Ar.description2 },
                       B.a.createElement(dt.a, {
                         text: c,
-                        partnerEventStore: O.b,
+                        partnerEventStore: E.b,
                         showErrorInfo: a,
                         event: n,
                         languageOverride: r,
@@ -14171,7 +14174,7 @@ var CLSTAMP = "7180652";
               { className: Ar.reservecopy },
               B.a.createElement(dt.a, {
                 text: c,
-                partnerEventStore: O.b,
+                partnerEventStore: E.b,
                 showErrorInfo: a,
                 event: n,
                 languageOverride: r,
@@ -14479,7 +14482,7 @@ var CLSTAMP = "7180652";
               strSearchQuery: c,
               facetFilterState: d,
             } = this.state;
-            yield Promise.all([R.a.Get().HintLoad(), Object(E.g)(o, C.e)]),
+            yield Promise.all([R.a.Get().HintLoad(), Object(O.g)(o, C.e)]),
               i.enable_faceted_browsing && Object(S.G)(() => d.PruneFacets());
             let u = !0,
               m = Math.max(e, g + 1);
@@ -14560,7 +14563,7 @@ var CLSTAMP = "7180652";
                 ((o = yield d.ApplyUserPreferenceFilters(o, !1, b)),
                 (p = u),
                 d.UpdateMatchCount(p, o.length)),
-                (o = yield Object(E.a)(o, !1, b)),
+                (o = yield Object(O.a)(o, !1, b)),
                 (l = b.length),
                 o.length <= g && (m += 8);
             }
@@ -16329,7 +16332,7 @@ var CLSTAMP = "7180652";
       t = class extends M.Component {
         constructor() {
           super(...arguments),
-            (this.state = { bIsScreenWide: En() }),
+            (this.state = { bIsScreenWide: On() }),
             (this.m_refTabSection = M.createRef()),
             (this.m_refItemBrowserSection = M.createRef()),
             (this.m_AppVisibilityTracker = new ue());
@@ -16366,7 +16369,7 @@ var CLSTAMP = "7180652";
           window.removeEventListener("resize", this.OnResize);
         }
         OnResize() {
-          this.setState({ bIsScreenWide: En() });
+          this.setState({ bIsScreenWide: On() });
         }
         GetTabSelectionsFromURL() {
           let a = new Map();
@@ -16878,7 +16881,7 @@ var CLSTAMP = "7180652";
               },
               M.createElement(dt.a, {
                 text: r.GetDescriptionWithFallback(n),
-                partnerEventStore: O.b,
+                partnerEventStore: E.b,
                 showErrorInfo: a,
                 event: r,
                 languageOverride: n,
@@ -16919,7 +16922,7 @@ var CLSTAMP = "7180652";
                   },
                   M.createElement(dt.a, {
                     text: i,
-                    partnerEventStore: O.b,
+                    partnerEventStore: E.b,
                     showErrorInfo: a,
                     event: r,
                     languageOverride: n,
@@ -16990,12 +16993,12 @@ var CLSTAMP = "7180652";
           )
         );
       });
-      function En() {
+      function On() {
         return 940 <= window.innerWidth;
       }
-      function On(e) {
+      function En(e) {
         e = Object(T.p)(e);
-        return En()
+        return On()
           ? e.nMaxItemsPerRow
           : Math.min(
               Math.max(Math.floor(window.innerWidth / e.nItemMinimumWidth), 1),
@@ -17014,8 +17017,8 @@ var CLSTAMP = "7180652";
               capsules: [],
               events: [],
               facetFilterState: null,
-              bScreenIsWide: En(),
-              nMaxCapsulesPerRow: On("items"),
+              bScreenIsWide: On(),
+              nMaxCapsulesPerRow: En("items"),
             }),
             e.section.enable_faceted_browsing &&
               ((t = e.section.min_capsule_matches_for_facet_values || 1),
@@ -17036,7 +17039,7 @@ var CLSTAMP = "7180652";
           let e = !1;
           this.props.section.enable_faceted_browsing && (e = !0),
             this.setState(
-              { nMaxCapsulesPerRow: On(this.props.section.section_type) },
+              { nMaxCapsulesPerRow: En(this.props.section.section_type) },
               () => this.LoadCapsules(0, e)
             );
         }
@@ -17077,7 +17080,7 @@ var CLSTAMP = "7180652";
                   bInitialLoadComplete: !1,
                   nShowAdditionalRows: 0,
                   strFacetUrlParam: a,
-                  nMaxCapsulesPerRow: On(this.props.section.section_type),
+                  nMaxCapsulesPerRow: En(this.props.section.section_type),
                 },
                 () => this.LoadCapsules(0, i)
               ))
@@ -17225,7 +17228,7 @@ var CLSTAMP = "7180652";
                 e = !1,
                 r = this.state.facetFilterState;
               i.smart_section
-                ? ((p = yield (function (S, M, y, C, B, E, O) {
+                ? ((p = yield (function (S, M, y, C, B, O, E) {
                     var w;
                     return Object(A.a)(this, void 0, void 0, function* () {
                       var {
@@ -17289,7 +17292,7 @@ var CLSTAMP = "7180652";
                           .GetAllDiscounted(
                             B,
                             i,
-                            E,
+                            O,
                             null === (w = null == M ? void 0 : M.GetTab()) ||
                               void 0 === w
                               ? void 0
@@ -17312,10 +17315,10 @@ var CLSTAMP = "7180652";
                                 null == M ? void 0 : M.GetActiveTabUniqueID(),
                               strTabFilter:
                                 null == M ? void 0 : M.GetStoreFilter(),
-                              facetFilter: E,
+                              facetFilter: O,
                               contentHub: y.GetContentHub(),
                               bContentHubDiscountedOnly: y.BContentHubDiscountedOnly(),
-                              bPrioritizeDiscounts: O,
+                              bPrioritizeDiscounts: E,
                               nSectionUniqueID:
                                 "items" === C.section_type
                                   ? C.unique_id
@@ -17355,7 +17358,7 @@ var CLSTAMP = "7180652";
                               .GetWishlistedInContentHub(
                                 y.GetContentHub(),
                                 M,
-                                O
+                                E
                               );
                             return {
                               capsules: g.map((e) => ({ id: e, type: "game" })),
@@ -17458,7 +17461,7 @@ var CLSTAMP = "7180652";
                                     S,
                                     y.GetContentHub(),
                                     null == M ? void 0 : M.GetStoreFilter(),
-                                    O
+                                    E
                                   ));
                               break;
                             case "ir_subscription":
@@ -17569,7 +17572,7 @@ var CLSTAMP = "7180652";
                   t.length > e && (t = t.slice(0, e));
               }
               var h = Object(gr.a)(i);
-              yield Object(E.g)(t, C.e, h);
+              yield Object(O.g)(t, C.e, h);
               var _,
                 u = new Array();
               let a;
@@ -17578,12 +17581,12 @@ var CLSTAMP = "7180652";
                 (t = yield r.ApplyUserPreferenceFilters(t, h, u)),
                 (_ = n || e),
                 r.UpdateMatchCount(_, t.length)),
-                (a = yield Object(E.a)(t, h, u));
+                (a = yield Object(O.a)(t, h, u));
               u = u.length;
               if (i.prioritize_discounts) {
                 const f = [],
                   v = [];
-                for (const S of a) (Object(E.c)(S) ? f : v).push(S);
+                for (const S of a) (Object(O.c)(S) ? f : v).push(S);
                 a = f.concat(v);
               }
               (i.smart_section || i.sale_tag_filter) &&
@@ -17635,7 +17638,7 @@ var CLSTAMP = "7180652";
                 ("recent_events" !== i.smart_section_type &&
                   "recent_tagged_events" !== i.smart_section_type)
               )
-                e = yield O.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                e = yield E.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                   null,
                   i.events
                     .filter((e) => Boolean(e))
@@ -17654,14 +17657,14 @@ var CLSTAMP = "7180652";
                             : c.GetActiveTabUniqueID()
                         )
                     : yield j.Get().GetRecentTaggedEventsForSalesPage(s, i);
-                e = yield O.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                e = yield E.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                   M.map((e) => e.gid),
                   void 0
                 );
               }
               let t = e.map((e) => e.GID);
               (t = this.GetCachedRandomizedOrder("events2", t, tt.f)),
-                (e = t.map((e) => O.b.GetClanEventModel(e)));
+                (e = t.map((e) => E.b.GetClanEventModel(e)));
               let r = e.filter((e) => !!e && c.ShouldShowEvent(e));
               yield N.a
                 .Get()
@@ -17672,7 +17675,7 @@ var CLSTAMP = "7180652";
               u = e.map((e) => ({ type: "game", id: e.appid }));
               yield R.a.Get().HintLoad();
               const n = [];
-              yield Object(E.a)(u, Object(gr.a)(i), n);
+              yield Object(O.a)(u, Object(gr.a)(i), n);
               const a = new Set(n.map((e) => e.id));
               (r = r.filter((e) => !a.has(e.appid))),
                 this.setState({ events: r, bInitialLoadComplete: !0 }),
@@ -17708,8 +17711,8 @@ var CLSTAMP = "7180652";
         }
         OnResize() {
           this.setState({
-            bScreenIsWide: En(),
-            nMaxCapsulesPerRow: On(this.props.section.section_type),
+            bScreenIsWide: On(),
+            nMaxCapsulesPerRow: En(this.props.section.section_type),
           });
         }
         EstimateComponentHeight(e) {
@@ -17795,7 +17798,7 @@ var CLSTAMP = "7180652";
             if (0 < (null === r || void 0 === r ? void 0 : r.length))
               return [
                 ...r
-                  .map((e) => O.b.GetClanEventModel(e))
+                  .map((e) => E.b.GetClanEventModel(e))
                   .filter(
                     (t) =>
                       Boolean(t) &&
@@ -18257,10 +18260,10 @@ var CLSTAMP = "7180652";
           return B;
         }),
         r.d(t, "G", function () {
-          return E;
+          return O;
         }),
         r.d(t, "hb", function () {
-          return O;
+          return E;
         }),
         r.d(t, "d", function () {
           return w;
@@ -18419,10 +18422,10 @@ var CLSTAMP = "7180652";
           return Be;
         }),
         r.d(t, "cb", function () {
-          return Ee;
+          return Oe;
         }),
         r.d(t, "bb", function () {
-          return Oe;
+          return Ee;
         });
       var n = r("mrSG"),
         a = r("q1tI"),
@@ -18973,7 +18976,7 @@ var CLSTAMP = "7180652";
           })
         );
       }
-      function E() {
+      function O() {
         return a.createElement(
           "svg",
           {
@@ -19003,7 +19006,7 @@ var CLSTAMP = "7180652";
           })
         );
       }
-      function O(e) {
+      function E(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -20779,7 +20782,7 @@ var CLSTAMP = "7180652";
           })
         );
       }
-      function Ee(e) {
+      function Oe(e) {
         var t = e["className"],
           e = Object(n.c)(e, ["className"]);
         return a.createElement(
@@ -20808,7 +20811,7 @@ var CLSTAMP = "7180652";
           })
         );
       }
-      function Oe(e) {
+      function Ee(e) {
         var t = e["className"],
           e = Object(n.c)(e, ["className"]);
         return a.createElement(
@@ -23533,47 +23536,47 @@ var CLSTAMP = "7180652";
       }
       (class extends v {});
       (class extends v {});
-      const E = s.Message;
-      (class extends E {});
       const O = s.Message;
       (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      class w extends O {
+      const E = s.Message;
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      class w extends E {
         constructor(e = null) {
           super(),
             w.prototype.server_types_available || g.a(w.M()),
-            O.initialize(this, e, 0, -1, [1], null);
+            E.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -23627,11 +23630,11 @@ var CLSTAMP = "7180652";
           return "CMsgClientServersAvailable";
         }
       }
-      class A extends O {
+      class A extends E {
         constructor(e = null) {
           super(),
             A.prototype.server || g.a(A.M()),
-            O.initialize(this, e, 0, -1, void 0, null);
+            E.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -23681,22 +23684,22 @@ var CLSTAMP = "7180652";
           return "CMsgClientServersAvailable_Server_Types_Available";
         }
       }
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
-      (class extends O {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
+      (class extends E {});
       var T = r("qiKp"),
         I = r("r64O");
       r("E4Op");
@@ -25637,7 +25640,7 @@ var CLSTAMP = "7180652";
           return M;
         }),
         r.d(t, "a", function () {
-          return O;
+          return E;
         }),
         r.d(t, "b", function () {
           return y;
@@ -25651,18 +25654,18 @@ var CLSTAMP = "7180652";
         r.d(t, "f", function () {
           return A;
         });
-      var E = r("mrSG"),
+      var O = r("mrSG"),
         d = r("q1tI"),
-        u = r.n(d),
+        p = r.n(d),
         t = r("gQFo"),
-        m = (r("z7tf"), r("Jqb/"), r("exH9")),
-        p = r("opsS"),
+        h = (r("z7tf"), r("Jqb/"), r("exH9")),
+        _ = r("opsS"),
         f = r("BaVA"),
         n = r("NxAk"),
         a = (r("j+5p"), r("av+R")),
-        h = (r("yLGM"), r("8sdS"));
+        u = (r("yLGM"), r("8sdS"));
       r("kyHq");
-      var _ = r("X3Ds");
+      var m = r("X3Ds");
       class i {
         SetFactory(e) {
           this.m_factory = e;
@@ -25683,10 +25686,10 @@ var CLSTAMP = "7180652";
       const l = Object(t.a)("VirtualKeyboardRefFactory", () => new i());
       function s(e, t) {
         var r = e["onTextEntered"],
-          n = Object(E.c)(e, ["onTextEntered"]);
-        const a = u.a.useRef();
+          n = Object(O.c)(e, ["onTextEntered"]);
+        const a = p.a.useRef();
         var i,
-          e = u.a.useRef({ onTextEntered: () => null });
+          e = p.a.useRef({ onTextEntered: () => null });
         Object.assign(
           e.current,
           Object.assign(Object.assign({}, n), {
@@ -25743,7 +25746,7 @@ var CLSTAMP = "7180652";
                             ? 1
                             : 0;
                         })(n.selectionDirection),
-                        t = _.t(n);
+                        t = m.t(n);
                       if (1 === a.length || ("Enter" === a && t)) {
                         var o = "Enter" === a ? "\n" : a;
                         const l = n.value,
@@ -25796,11 +25799,11 @@ var CLSTAMP = "7180652";
           })
         );
         const s = (function (e) {
-            const t = u.a.useRef();
+            const t = p.a.useRef();
             t.current || (t.current = l.CreateVirtualKeyboardRef(e));
             return t.current;
           })(e.current),
-          o = u.a.useCallback(
+          o = p.a.useCallback(
             (e) => {
               (!document.hasFocus() && document.activeElement == a.current) ||
                 (e.currentTarget == a.current
@@ -25811,7 +25814,7 @@ var CLSTAMP = "7180652";
             },
             [s]
           );
-        e = Object(p.g)(
+        e = Object(_.g)(
           (e) => {
             a.current = e;
             const t = [];
@@ -25839,9 +25842,9 @@ var CLSTAMP = "7180652";
           [o, s]
         );
         return (
-          u.a.useLayoutEffect(
+          p.a.useLayoutEffect(
             () => (
-              Object(p.c)(t, {
+              Object(_.c)(t, {
                 TakeFocusAndShowKeyboard: () => {
                   const e = a.current;
                   e &&
@@ -25849,7 +25852,7 @@ var CLSTAMP = "7180652";
                     s.ShowVirtualKeyboard());
                 },
               }),
-              () => Object(p.c)(t, null)
+              () => Object(_.c)(t, null)
             ),
             [s, t]
           ),
@@ -25877,22 +25880,22 @@ var CLSTAMP = "7180652";
       r("lkRc");
       var v = r("d1jy");
       const S = Object(t.a)("GamepadNavigationContext", () =>
-          u.a.createContext(null)
+          p.a.createContext(null)
         ),
         o = Object(t.a)("FocusRingNavigationContext", () =>
-          u.a.createContext(n.h)
+          p.a.createContext(n.h)
         );
-      u.a.forwardRef(function (e, t) {
-        return u.a.createElement(a.f, Object.assign({}, e, { ref: t }));
+      p.a.forwardRef(function (e, t) {
+        return p.a.createElement(a.f, Object.assign({}, e, { ref: t }));
       });
       function M(e) {
         const t = e["navRef"],
-          r = Object(E.c)(e, ["navRef"]),
-          n = u.a.useRef(),
+          r = Object(O.c)(e, ["navRef"]),
+          n = p.a.useRef(),
           a = Object(d.useContext)(S);
         e = Object(d.useContext)(o);
         const i = (function (e, t) {
-          let r = u.a.useRef(null);
+          let r = p.a.useRef(null);
           return (
             !e ||
               (r.current && r.current.m_Parent == e) ||
@@ -25901,10 +25904,10 @@ var CLSTAMP = "7180652";
           );
         })(a, e);
         return (
-          u.a.useLayoutEffect(() => {
+          p.a.useLayoutEffect(() => {
             i && i.SetProperties(r);
           }),
-          u.a.useLayoutEffect(() => {
+          p.a.useLayoutEffect(() => {
             if (a) {
               const e = a.Tree.RegisterNavigationItem(i, n.current);
               return () => {
@@ -25912,16 +25915,16 @@ var CLSTAMP = "7180652";
               };
             }
           }, [a, i, n]),
-          u.a.useLayoutEffect(() => {
+          p.a.useLayoutEffect(() => {
             if (i && t)
               return (
-                Object(p.c)(t, i.CreateHandle()), () => Object(p.c)(t, null)
+                Object(_.c)(t, i.CreateHandle()), () => Object(_.c)(t, null)
               );
           }, [i, t]),
           { ref: n, node: i }
         );
       }
-      function O(e) {
+      function E(e) {
         var {
             onButtonDown: t,
             onButtonUp: r,
@@ -25940,7 +25943,7 @@ var CLSTAMP = "7180652";
             onMenuActionDescription: _,
             actionDescriptionMap: b,
           } = e,
-          e = Object(E.c)(e, [
+          e = Object(O.c)(e, [
             "onButtonDown",
             "onButtonUp",
             "onOKButton",
@@ -26004,8 +26007,8 @@ var CLSTAMP = "7180652";
             scrollIntoViewType: M,
             resetNavOnEntry: y,
           } = e,
-          { gamepadEvents: C, actionDescriptions: B, props: e } = O(
-            Object(E.c)(e, [
+          { gamepadEvents: C, actionDescriptions: B, props: e } = E(
+            Object(O.c)(e, [
               "autoFocus",
               "preferredFocus",
               "disableNavSounds",
@@ -26059,7 +26062,7 @@ var CLSTAMP = "7180652";
           gamepadEvents: C,
         };
       }
-      function c(d) {
+      function c(m) {
         return function (e) {
           const {
               focusClassName: t,
@@ -26067,28 +26070,33 @@ var CLSTAMP = "7180652";
               className: n,
               divRef: a,
               node: i,
-              children: s,
+              tabIndex: s,
+              children: o,
             } = e,
-            o = Object(E.c)(e, [
+            l = Object(O.c)(e, [
               "focusClassName",
               "focusWithinClassName",
               "className",
               "divRef",
               "node",
+              "tabIndex",
               "children",
             ]);
-          var [l, c] = u.a.useState(i.BHasFocus());
-          Object(p.d)(i.FocusCallbackList, c);
-          var [e, c] = u.a.useState(i.BFocusWithin());
+          var [c, d] = p.a.useState(i.BHasFocus());
+          Object(_.d)(i.FocusCallbackList, d);
+          var [u, e] = p.a.useState(i.BFocusWithin());
+          Object(_.d)(i.FocusWithinCallbackList, e);
+          var [d, e] = p.a.useState(i.Tree.BIsActive());
           return (
-            Object(p.d)(i.FocusWithinCallbackList, c),
-            u.a.createElement(
-              d,
-              Object.assign(Object.assign({}, o), {
-                className: Object(m.a)(n, l && t, e && r),
+            Object(_.d)(i.Tree.OnActiveStateChangedCallbacks, e),
+            p.a.createElement(
+              m,
+              Object.assign(Object.assign({}, l), {
+                className: Object(h.a)(n, c && d && t, u && d && r),
+                tabIndex: d ? s : -1,
                 ref: a,
               }),
-              s
+              o
             )
           );
         };
@@ -26106,32 +26114,32 @@ var CLSTAMP = "7180652";
           ((a.onClick || ("button" == e && "submit" == a.type) || "a" == e) &&
             (s.onOKButton = c)),
           i.focusable && (a.tabIndex = a.tabIndex || 0),
-          Object(h.a)(s, o);
-        (r = Object(p.f)(n, o)), (c = a.children);
+          Object(u.a)(s, o);
+        (r = Object(_.f)(n, o)), (c = a.children);
         delete a.children;
         n = a.focusClassName;
         return (
           delete a.focusClassName,
-          u.a.createElement(
+          p.a.createElement(
             S.Provider,
             { value: l },
             l
-              ? u.a.createElement(
+              ? p.a.createElement(
                   t,
                   Object.assign(Object.assign({}, a), {
                     divRef: r,
                     node: l,
-                    focusClassName: Object(m.a)(n, "gpfocus"),
+                    focusClassName: Object(h.a)(n, "gpfocus"),
                     focusWithinClassName: "gpfocuswithin",
-                    className: Object(m.a)(a.className, "Focusable"),
+                    className: Object(h.a)(a.className, "Focusable"),
                   }),
                   c
                 )
-              : u.a.createElement(
+              : p.a.createElement(
                   e,
                   Object.assign(Object.assign({}, a), {
                     ref: r,
-                    className: Object(m.a)(a.className, "Focusable"),
+                    className: Object(h.a)(a.className, "Focusable"),
                   }),
                   c
                 )
@@ -26140,13 +26148,13 @@ var CLSTAMP = "7180652";
       }
       function w(r) {
         const n = c(r);
-        return u.a.forwardRef(function (e, t) {
+        return p.a.forwardRef(function (e, t) {
           return B(r, n, e, t);
         });
       }
       function A(a) {
         const i = c(a);
-        return u.a.forwardRef(function (e, t) {
+        return p.a.forwardRef(function (e, t) {
           var r = (function (e) {
               var {
                 onEnterKeyPress: t,
@@ -26167,7 +26175,7 @@ var CLSTAMP = "7180652";
                   onTextEntered: s,
                   BIsElementValidForInput: o,
                 },
-                props: Object(E.c)(e, [
+                props: Object(O.c)(e, [
                   "onEnterKeyPress",
                   "strEnterKeyLabel",
                   "onKeyboardNavOut",
@@ -26181,9 +26189,9 @@ var CLSTAMP = "7180652";
             n = r["virtualKeyboardProps"],
             e = r.props,
             r = e["refKeyboardHandle"],
-            e = Object(E.c)(e, ["refKeyboardHandle"]),
+            e = Object(O.c)(e, ["refKeyboardHandle"]),
             r = s(n, r),
-            r = Object(p.f)(t, r);
+            r = Object(_.f)(t, r);
           return B(a, i, e, r);
         });
       }
@@ -26534,9 +26542,9 @@ var CLSTAMP = "7180652";
             s.a.createElement(
               "div",
               { className: M.a.LoginPanelContent },
-              t && s.a.createElement(E, { text: t }),
+              t && s.a.createElement(O, { text: t }),
               e == h.AccountName &&
-                s.a.createElement(O, { manager: this.m_manager }),
+                s.a.createElement(E, { manager: this.m_manager }),
               e == h.TwoFactorCode &&
                 s.a.createElement(A, {
                   manager: this.m_manager,
@@ -26557,7 +26565,7 @@ var CLSTAMP = "7180652";
           );
         }
       };
-      function E(e) {
+      function O(e) {
         return s.a.createElement(
           "div",
           { className: M.a.ErrorMessage },
@@ -26565,7 +26573,7 @@ var CLSTAMP = "7180652";
         );
       }
       B = Object(c.b)([n.a], B);
-      let O = class extends s.a.Component {
+      let E = class extends s.a.Component {
         constructor(e) {
           super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
         }
@@ -26684,11 +26692,11 @@ var CLSTAMP = "7180652";
           );
         }
       };
-      Object(c.b)([i.a], O.prototype, "OnSubmit", null),
-        Object(c.b)([i.a], O.prototype, "OnChangeName", null),
-        Object(c.b)([i.a], O.prototype, "OnChangePassword", null),
-        Object(c.b)([i.a], O.prototype, "OnChangeRememberPass", null),
-        (O = Object(c.b)([n.a], O));
+      Object(c.b)([i.a], E.prototype, "OnSubmit", null),
+        Object(c.b)([i.a], E.prototype, "OnChangeName", null),
+        Object(c.b)([i.a], E.prototype, "OnChangePassword", null),
+        Object(c.b)([i.a], E.prototype, "OnChangeRememberPass", null),
+        (E = Object(c.b)([n.a], E));
       let w = class extends s.a.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
@@ -26899,8 +26907,8 @@ var CLSTAMP = "7180652";
         C = r("ee7K"),
         i = r("b3LC"),
         B = r("ezQG"),
-        E = r("X2UP"),
-        O = r("r64O"),
+        O = r("X2UP"),
+        E = r("r64O"),
         w = r("OS6B"),
         A = r("exH9"),
         T = r("TLQK"),
@@ -26938,14 +26946,14 @@ var CLSTAMP = "7180652";
               t.clan_account_id
           ),
           [u, m] = Object(f.useState)(null),
-          p = Object(E.a)("CreatorHomeEmbed");
+          p = Object(O.a)("CreatorHomeEmbed");
         if (
           (Object(f.useEffect)(() => {
             var e;
             return (
               c != t.clan_account_id &&
                 (l(!0),
-                Object(O.a)(
+                Object(E.a)(
                   t.clan_account_id,
                   "CreatorHomeEmbed clan account id missing"
                 ),
@@ -29172,16 +29180,16 @@ var CLSTAMP = "7180652";
     Fmfl: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return W;
+        return U;
       }),
         r.d(t, "b", function () {
-          return V;
-        }),
-        r.d(t, "c", function () {
           return X;
         }),
+        r.d(t, "c", function () {
+          return K;
+        }),
         r.d(t, "d", function () {
-          return Z;
+          return J;
         });
       var h = r("mrSG"),
         n = r("vDqi"),
@@ -29197,50 +29205,51 @@ var CLSTAMP = "7180652";
         o = r("8H1D"),
         _ = r("VQ2A"),
         c = (r("sRB7"), r("TQGK")),
-        u = r("ee7K"),
-        m = r("C4Nl"),
+        u = r("uIWk"),
+        m = r("ee7K"),
+        p = r("C4Nl"),
         f = r("35zc"),
         v = r("b3LC"),
         S = r("HKTa"),
-        p = r("IjL/"),
-        M = r("2aEQ"),
-        y = r("zjj+"),
-        C = r("/41d"),
-        B = r("ed1b"),
+        M = r("IjL/"),
+        y = r("2aEQ"),
+        C = r("zjj+"),
+        B = r("/41d"),
+        O = r("ed1b"),
         E = r("6Y59"),
-        O = (r("5E+2"), r("r64O")),
-        w = r("qiKp"),
-        A = r("exH9"),
-        T = r("X3Ds"),
-        I = r("TLQK"),
-        L = r("opsS"),
-        R = r("lkRc"),
-        D = r("dfs5"),
-        N = r("PHKo"),
+        w = (r("5E+2"), r("r64O")),
+        A = r("qiKp"),
+        T = r("exH9"),
+        I = r("X3Ds"),
+        L = r("TLQK"),
+        R = r("opsS"),
+        D = r("lkRc"),
+        N = r("dfs5"),
+        z = r("PHKo"),
         t = r("XTKY"),
-        z = r.n(t),
-        j = r("BFsE"),
-        k = r("5L1o"),
+        j = r.n(t),
+        k = r("BFsE"),
+        G = r("5L1o"),
         t = r("NKJh"),
-        G = r.n(t),
-        F = r("onkS"),
-        P = r("RQmk");
-      const x = "DEBUG_UseNewGameHover";
-      function W() {
-        return "none" !== U();
-      }
+        F = r.n(t),
+        P = r("onkS"),
+        x = r("RQmk");
+      const W = "DEBUG_UseNewGameHover";
       function U() {
+        return "none" !== H();
+      }
+      function H() {
         var e;
         return (
           (null === (e = window.sessionStorage) || void 0 === e
             ? void 0
-            : e.getItem(x)) || "default"
+            : e.getItem(W)) || "default"
         );
       }
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(x, e);
+        window.sessionStorage.setItem(W, e);
       };
-      function H(e) {
+      function q(e) {
         const s = e["info"];
         e = Object(b.useRef)({
           include_assets: !0,
@@ -29250,8 +29259,8 @@ var CLSTAMP = "7180652";
         const [t] = Object(v.a)(s.id, Object(f.d)(s.type), e.current),
           [r, o] = Object(b.useState)([]),
           l = Object(b.useRef)(0),
-          n = Object(L.e)(),
-          [a] = g.a.useState(new w.b()),
+          n = Object(R.e)(),
+          [a] = g.a.useState(new A.b()),
           c = Object(b.useCallback)(() => {
             var e;
             0 < (null === r || void 0 === r ? void 0 : r.length) &&
@@ -29266,10 +29275,10 @@ var CLSTAMP = "7180652";
             (e) => {
               const r = [];
               if (1 == e.length) {
-                const n = m.a.Get().GetApp(e[0]);
+                const n = p.a.Get().GetApp(e[0]);
                 n.GetMicroTrailer() &&
                   r.push({
-                    rctImage: g.a.createElement(k.a, {
+                    rctImage: g.a.createElement(G.a, {
                       appInfo: { id: n.GetID(), type: "game" },
                     }),
                     nDurationMs: 5500,
@@ -29281,7 +29290,7 @@ var CLSTAMP = "7180652";
                       r.push({
                         rctImage: g.a.createElement("img", {
                           key: e,
-                          className: z.a.FullDivImage,
+                          className: j.a.FullDivImage,
                           loading: "lazy",
                           src: e,
                           alt: "screenshot " + (t + 1),
@@ -29292,7 +29301,7 @@ var CLSTAMP = "7180652";
               }
               if (0 == r.length)
                 for (const a of e) {
-                  const i = m.a.Get().GetApp(a);
+                  const i = p.a.Get().GetApp(a);
                   var t =
                     null ===
                       (t =
@@ -29304,7 +29313,7 @@ var CLSTAMP = "7180652";
                     r.push({
                       rctImage: g.a.createElement("img", {
                         key: "fallback",
-                        className: z.a.FullDivImage,
+                        className: j.a.FullDivImage,
                         loading: "lazy",
                         src: t,
                         alt: i.GetName(),
@@ -29314,7 +29323,7 @@ var CLSTAMP = "7180652";
                 }
               0 < r.length
                 ? (o(r), (l.current = 0), c())
-                : ("dev" != R.c.WEB_UNIVERSE && "beta" != R.c.WEB_UNIVERSE) ||
+                : ("dev" != D.c.WEB_UNIVERSE && "beta" != D.c.WEB_UNIVERSE) ||
                   console.error(
                     "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
                     Object(d.I)(e),
@@ -29329,14 +29338,14 @@ var CLSTAMP = "7180652";
               !t || (r && 0 != r.length)
                 ? null !== r && void 0 !== r && r.length && c()
                 : 2 == t.GetStoreItemType() || 1 == t.GetStoreItemType()
-                ? (Object(O.a)(
+                ? (Object(w.a)(
                     0 < t.GetIncludedAppIDs().length,
                     "expected included apps " +
                       t.GetID() +
                       " " +
                       t.GetStoreItemType()
                   ),
-                  m.a
+                  p.a
                     .Get()
                     .QueueMultipleAppRequests(t.GetIncludedAppIDs(), {
                       include_assets: !0,
@@ -29349,7 +29358,7 @@ var CLSTAMP = "7180652";
           ),
           g.a.createElement(
             "div",
-            { className: z.a.TrailerCtn },
+            { className: j.a.TrailerCtn },
             null === r || void 0 === r
               ? void 0
               : r.map((e, t) =>
@@ -29357,9 +29366,9 @@ var CLSTAMP = "7180652";
                     "div",
                     {
                       key: "e-" + t + "-" + s.id + "_" + s.type,
-                      className: Object(A.a)(
-                        z.a.FullDivImage,
-                        t != l.current && z.a.Transparent
+                      className: Object(T.a)(
+                        j.a.FullDivImage,
+                        t != l.current && j.a.Transparent
                       ),
                     },
                     e.rctImage
@@ -29368,25 +29377,25 @@ var CLSTAMP = "7180652";
           )
         );
       }
-      function q(e) {
+      function V(e) {
         const t = e["rgTagIDs"];
         return g.a.createElement(
           "div",
-          { className: z.a.TagRow },
+          { className: j.a.TagRow },
           g.a.createElement(
             "div",
-            { className: z.a.Tags },
+            { className: j.a.Tags },
             t.map((e) =>
-              g.a.createElement(C.a, {
+              g.a.createElement(B.a, {
                 key: "tag_" + e,
                 tagid: e,
-                className: z.a.Tag,
+                className: j.a.Tag,
               })
             )
           )
         );
       }
-      function V(e) {
+      function X(e) {
         var t = e["appInfo"];
         const [r] = Object(v.a)(
           null == t ? void 0 : t.id,
@@ -29394,48 +29403,48 @@ var CLSTAMP = "7180652";
           { include_reviews: !0 }
         );
         if (!r) return null;
-        const n = u.a.Get().BShowFilteredUserReviewScores()
+        const n = m.a.Get().BShowFilteredUserReviewScores()
           ? r.GetFilteredReviewSummary()
           : r.GetUnfilteredReviewSummary();
         if (!n || 0 == n.review_score) return null;
         (e =
           n.review_score < 5
-            ? z.a.ReviewScoreLow
+            ? j.a.ReviewScoreLow
             : 5 == n.review_score
-            ? z.a.ReviewScoreMixed
-            : z.a.ReviewScoreHigh),
-          (t = `${R.c.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`);
+            ? j.a.ReviewScoreMixed
+            : j.a.ReviewScoreHigh),
+          (t = `${D.c.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`);
         return g.a.createElement(
-          B.a,
-          { url: t, className: Object(A.a)(z.a.ReviewScore, "ReviewScore") },
+          O.a,
+          { url: t, className: Object(T.a)(j.a.ReviewScore, "ReviewScore") },
           g.a.createElement(
             "div",
-            { className: Object(A.a)(z.a.ReviewScoreValue, e) },
+            { className: Object(T.a)(j.a.ReviewScoreValue, e) },
             g.a.createElement(
               "div",
-              { className: z.a.ReviewScoreLabel },
+              { className: j.a.ReviewScoreLabel },
               n.review_score_label
             ),
             g.a.createElement(
               "div",
-              { className: z.a.ReviewScoreCount },
-              Object(I.f)(
+              { className: j.a.ReviewScoreCount },
+              Object(L.f)(
                 "#GameHover_UserReviewCount",
                 n.review_count.toLocaleString()
               )
             ),
             g.a.createElement(
               "div",
-              { className: z.a.ReviewScoreHeader },
-              Object(I.f)("#GameHover_UserReviewsHeader")
+              { className: j.a.ReviewScoreHeader },
+              Object(L.f)("#GameHover_UserReviewsHeader")
             )
           )
         );
       }
-      const X = Object(a.a)((e) => {
+      const K = Object(a.a)((e) => {
           const { appID: t, snr: r, classOverride: n } = e,
-            a = t && u.a.Get().BIsGameWishlisted(t);
-          e = t && u.a.Get().BOwnsApp(t);
+            a = t && m.a.Get().BIsGameWishlisted(t);
+          e = t && m.a.Get().BOwnsApp(t);
           const [i, s] = Object(b.useState)(!1),
             o = g.a.useRef(l.a.CancelToken.source());
           if (
@@ -29454,46 +29463,56 @@ var CLSTAMP = "7180652";
           return g.a.createElement(
             "div",
             {
-              className: Object(A.a)(z.a.WishlistButton, n),
+              className: Object(T.a)(j.a.WishlistButton, n),
               onClick: (e) =>
                 Object(h.a)(void 0, void 0, void 0, function* () {
                   e.preventDefault(),
                     e.stopPropagation(),
-                    R.h.logged_in
+                    D.h.logged_in
                       ? (s(!0),
-                        yield u.a.Get().UpdateGameWishlist(t, !a, r),
+                        yield m.a.Get().UpdateGameWishlist(t, !a, r),
                         o.current.token.reason || s(!1))
-                      : Object(j.a)();
+                      : Object(k.a)();
                 }),
             },
             g.a.createElement(E.rb, null),
             g.a.createElement(
               "div",
               {
-                className: Object(A.a)(
-                  z.a.WishlistButtonText,
-                  i && z.a.WishlistLoadingText
+                className: Object(T.a)(
+                  j.a.WishlistButtonText,
+                  i && j.a.WishlistLoadingText
                 ),
               },
-              Object(I.f)(
+              Object(L.f)(
                 a ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
               )
             )
           );
         }),
-        K = (e) => {
+        Q = (e) => {
           var t = e["nCreatorAccountID"],
             [r, e] = Object(c.b)(t);
+          const n = Object(u.b)(t);
           return g.a.createElement(
             "div",
-            { className: z.a.GameHoverCreatorFollowButtonCtn },
-            g.a.createElement("img", {
-              src: r ? Object(o.a)(null, "medium") : e.avatar_medium_url,
-            }),
-            g.a.createElement(M.b, { clanAccountID: t })
+            { className: j.a.GameHoverCreatorFollowButtonCtn },
+            g.a.createElement(
+              "a",
+              {
+                href:
+                  null === n || void 0 === n
+                    ? void 0
+                    : n.GetCreatorHomeURL("developer"),
+              },
+              g.a.createElement("img", {
+                src: r ? Object(o.a)(null, "medium") : e.avatar_medium_url,
+              })
+            ),
+            g.a.createElement(y.b, { clanAccountID: t })
           );
         },
-        Q = Object(a.a)((e) => {
+        Y = Object(a.a)((e) => {
           var {
             info: t,
             strStoreUrl: r,
@@ -29519,7 +29538,7 @@ var CLSTAMP = "7180652";
           return g.a.createElement(
             "div",
             {
-              className: z.a.BottomShelf,
+              className: j.a.BottomShelf,
               style: { transform: i && d ? m : "" },
               onMouseEnter: () => u(!0),
               onFocus: () => u(!0),
@@ -29530,18 +29549,18 @@ var CLSTAMP = "7180652";
               "a",
               {
                 href: r,
-                target: R.c.IN_CLIENT ? void 0 : "_blank",
-                className: z.a.Midline,
+                target: D.c.IN_CLIENT ? void 0 : "_blank",
+                className: j.a.Midline,
               },
               g.a.createElement(
                 "div",
-                { className: z.a.CapsuleImageAnchorPoint },
+                { className: j.a.CapsuleImageAnchorPoint },
                 g.a.createElement(
                   "div",
                   {
-                    className: Object(A.a)(
-                      z.a.CapsuleImageCtn,
-                      z.a.WithCornerShine
+                    className: Object(T.a)(
+                      j.a.CapsuleImageCtn,
+                      j.a.WithCornerShine
                     ),
                   },
                   g.a.createElement("img", {
@@ -29557,14 +29576,14 @@ var CLSTAMP = "7180652";
               Boolean(!s && !l) &&
                 g.a.createElement(
                   "div",
-                  { className: z.a.Price },
-                  g.a.createElement(y.a, { info: t })
+                  { className: j.a.Price },
+                  g.a.createElement(C.a, { info: t })
                 )
             ),
             g.a.createElement(
               "div",
               {
-                className: z.a.BottomShelfOffScreen,
+                className: j.a.BottomShelfOffScreen,
                 ref: (e) =>
                   p(
                     `translateY( -${
@@ -29574,25 +29593,25 @@ var CLSTAMP = "7180652";
               },
               g.a.createElement(
                 "div",
-                { className: z.a.TextContent },
+                { className: j.a.TextContent },
                 g.a.createElement(
                   "a",
-                  { href: r, target: R.c.IN_CLIENT ? void 0 : "_blank" },
+                  { href: r, target: D.c.IN_CLIENT ? void 0 : "_blank" },
                   g.a.createElement(
                     "div",
-                    { className: z.a.GameTitle },
+                    { className: j.a.GameTitle },
                     null === h || void 0 === h ? void 0 : h.GetName()
                   )
                 ),
-                Boolean(h) && g.a.createElement(q, { rgTagIDs: h.GetTagIDs() }),
-                Boolean(!o && h) && g.a.createElement(V, { appInfo: t }),
+                Boolean(h) && g.a.createElement(V, { rgTagIDs: h.GetTagIDs() }),
+                Boolean(!o && h) && g.a.createElement(X, { appInfo: t }),
                 Boolean(!o && _) &&
                   g.a.createElement(
                     "div",
-                    { className: z.a.ReviewsAndRelease },
-                    g.a.createElement(k.i, {
+                    { className: j.a.ReviewsAndRelease },
+                    g.a.createElement(G.i, {
                       item: t,
-                      strClassName: z.a.PlatformDisplay,
+                      strClassName: j.a.PlatformDisplay,
                     }),
                     Boolean(
                       null === h || void 0 === h
@@ -29601,29 +29620,29 @@ var CLSTAMP = "7180652";
                     ) &&
                       g.a.createElement(
                         "div",
-                        { className: z.a.ReleaseDate },
+                        { className: j.a.ReleaseDate },
                         null === h || void 0 === h
                           ? void 0
                           : h.GetFormattedSteamReleaseDate()
                       )
                   ),
                 a &&
-                  g.a.createElement(N.a, {
+                  g.a.createElement(z.a, {
                     info: t,
-                    className: z.a.DemoButton,
+                    className: j.a.DemoButton,
                   }),
                 Boolean(o && e) && g.a.createElement(S.a, { nAppID: t.id }),
-                n && g.a.createElement(F.a, { item: n, bMiniMode: !0 }),
+                n && g.a.createElement(P.a, { item: n, bMiniMode: !0 }),
                 Boolean(l && e) &&
-                  g.a.createElement(k.e, { appid: t.id, bIsMuted: !1 }),
-                c && g.a.createElement(K, { nCreatorAccountID: c })
+                  g.a.createElement(G.e, { appid: t.id, bIsMuted: !1 }),
+                c && g.a.createElement(Q, { nCreatorAccountID: c })
               )
             )
           );
         }),
-        Y = Object(a.a)((e) => {
+        Z = Object(a.a)((e) => {
           g.a.useEffect(() => {
-            u.a.Get().HintLoad();
+            m.a.Get().HintLoad();
           }, []);
           var {
             info: t,
@@ -29634,36 +29653,36 @@ var CLSTAMP = "7180652";
           return g.a.createElement(
             "div",
             {
-              className: Object(A.a)(
-                z.a.GameHoverCapsuleCtn,
-                G.a.InGameHover,
-                n && z.a.UseHidingBottomHalf
+              className: Object(T.a)(
+                j.a.GameHoverCapsuleCtn,
+                F.a.InGameHover,
+                n && j.a.UseHidingBottomHalf
               ),
             },
             g.a.createElement(
               "a",
               {
                 href: r,
-                target: R.c.IN_CLIENT ? void 0 : "_blank",
-                className: z.a.TrailerAnchorStoreLink,
+                target: D.c.IN_CLIENT ? void 0 : "_blank",
+                className: j.a.TrailerAnchorStoreLink,
               },
               Boolean(!a) &&
-                g.a.createElement(X, { appID: t.id, snr: e.strSNR }),
-              g.a.createElement(H, { info: t })
+                g.a.createElement(K, { appID: t.id, snr: e.strSNR }),
+              g.a.createElement(q, { info: t })
             ),
-            g.a.createElement(Q, Object.assign({}, e))
+            g.a.createElement(Y, Object.assign({}, e))
           );
         });
-      function Z(e) {
+      function J(e) {
         var t = e["item"];
         const [r] = Object(v.a)(t.id, Object(f.d)(t.type), {});
         if (!r) return null;
         if (1 != r.GetStoreItemType() || 1 != r.GetIncludedAppIDs().length)
-          return g.a.createElement(J, Object.assign({}, e));
+          return g.a.createElement($, Object.assign({}, e));
         t = { id: r.GetIncludedAppIDs()[0], type: "game" };
-        return g.a.createElement(J, Object.assign({}, e, { item: t }));
+        return g.a.createElement($, Object.assign({}, e, { item: t }));
       }
-      function J(e) {
+      function $(e) {
         var {
             item: t,
             eventToShow: r,
@@ -29687,14 +29706,14 @@ var CLSTAMP = "7180652";
             "bShowDeckCompatibilityDialog",
           ]);
         const [u] = Object(v.a)(t.id, Object(f.d)(t.type), {});
-        var m = Object(D.c)(),
+        var m = Object(N.c)(),
           p = Object(_.c)(m);
         if (!u) return null;
-        if (R.c.IN_GAMEPADUI)
+        if (D.c.IN_GAMEPADUI)
           return g.a.createElement(g.a.Fragment, null, e.children);
-        if (!W())
+        if (!U())
           return g.a.createElement(
-            P.a,
+            x.a,
             {
               type: Object(f.b)(u.GetStoreItemType()),
               id: t.id,
@@ -29704,10 +29723,10 @@ var CLSTAMP = "7180652";
             },
             e.children
           );
-        (o = "hiding" == U()),
+        (o = "hiding" == H()),
           (m = Object(_.b)(`${u.GetStorePageURL()}${s ? `?${s}` : ""}`, m)),
           (l = g.a.createElement(
-            Y,
+            Z,
             Object.assign(
               {},
               {
@@ -29725,12 +29744,12 @@ var CLSTAMP = "7180652";
             )
           ));
         return g.a.createElement(
-          ee,
+          te,
           Object.assign({ hoverContent: l, strClickUrl: m }, d),
           e.children
         );
       }
-      const $ = (e) => {
+      const ee = (e) => {
         const { fnClose: t, hoverProps: r } = e;
         return g.a.createElement(
           s.a,
@@ -29741,17 +29760,17 @@ var CLSTAMP = "7180652";
               timeout: 500,
               in: !0,
               appear: !0,
-              classNames: { appearActive: z.a.Opening, enterDone: z.a.Open },
+              classNames: { appearActive: j.a.Opening, enterDone: j.a.Open },
             },
             g.a.createElement(
               "div",
               {
                 ref: (e) => (null == e ? void 0 : e.focus()),
-                className: z.a.HoverContentTransition,
+                className: j.a.HoverContentTransition,
                 tabIndex: -1,
                 onMouseLeave: t,
                 onBlur: (e) => {
-                  (e.relatedTarget && T.e(e.currentTarget, e.relatedTarget)) ||
+                  (e.relatedTarget && I.e(e.currentTarget, e.relatedTarget)) ||
                     t();
                 },
                 onKeyDown: (e) => {
@@ -29764,7 +29783,7 @@ var CLSTAMP = "7180652";
           )
         );
       };
-      class ee extends g.a.Component {
+      class te extends g.a.Component {
         constructor() {
           super(...arguments),
             (this.m_refHoverSourceDiv = g.a.createRef()),
@@ -29813,9 +29832,9 @@ var CLSTAMP = "7180652";
                         zIndex: 98,
                         width: 1.15 * a.clientWidth,
                         fontSize: e,
-                        minHeight: "hiding" == U() ? void 0 : 300,
+                        minHeight: "hiding" == H() ? void 0 : 300,
                         height:
-                          "hiding" == U()
+                          "hiding" == H()
                             ? 1.15 * a.clientWidth * (125 / 184)
                             : void 0,
                       },
@@ -29826,18 +29845,18 @@ var CLSTAMP = "7180652";
                 ));
               const i = "game-hover-" + Math.floor(1e8 * Math.random());
               (this.m_fnHidePopup = () =>
-                ee.sm_embeddedElements.HideElement(a.ownerDocument, i)),
+                te.sm_embeddedElements.HideElement(a.ownerDocument, i)),
                 (this.m_nScrollYAtHoverStart = window.scrollY),
                 window.addEventListener("scroll", this.OnScroll);
               n = null != n ? n : 150;
               (this.m_bPopupShowPending = !0),
-                yield ee.sm_embeddedElements.ShowElementDelayed(
+                yield te.sm_embeddedElements.ShowElementDelayed(
                   a.ownerDocument,
                   n,
                   g.a.createElement(
-                    $,
+                    ee,
                     { hoverProps: r, fnClose: this.ClosePopup },
-                    g.a.createElement(p.a, null, t)
+                    g.a.createElement(M.a, null, t)
                   ),
                   i
                 ),
@@ -29860,7 +29879,7 @@ var CLSTAMP = "7180652";
             (a = (e) => {
               (this.m_bHoversEnabled = !1), (window.location.href = t);
             });
-          var i = !!R.c.IN_GAMEPADUI;
+          var i = !!D.c.IN_GAMEPADUI;
           return g.a.createElement(
             "div",
             Object.assign({ ref: this.m_refHoverSourceDiv }, n, {
@@ -29873,15 +29892,15 @@ var CLSTAMP = "7180652";
                 this.m_bHoversEnabled = !1;
               },
             }),
-            g.a.createElement(p.a, null, r)
+            g.a.createElement(M.a, null, r)
           );
         }
       }
-      (ee.sm_embeddedElements = new n.a("item-hover-source-elements")),
-        Object(h.b)([L.a], ee.prototype, "ClosePopup", null),
-        Object(h.b)([L.a], ee.prototype, "OnUnhover", null),
-        Object(h.b)([L.a], ee.prototype, "OnScroll", null),
-        Object(h.b)([L.a], ee.prototype, "OnHover", null);
+      (te.sm_embeddedElements = new n.a("item-hover-source-elements")),
+        Object(h.b)([R.a], te.prototype, "ClosePopup", null),
+        Object(h.b)([R.a], te.prototype, "OnUnhover", null),
+        Object(h.b)([R.a], te.prototype, "OnScroll", null),
+        Object(h.b)([R.a], te.prototype, "OnHover", null);
     },
     G24H: function (e, t, r) {
       e.exports = {
@@ -30095,7 +30114,7 @@ var CLSTAMP = "7180652";
           return this.props.config.map(({ renderTab: e }, t) => {
             var r = this.state.activeIndex === t;
             return u.a.createElement(
-              O,
+              E,
               {
                 key: t,
                 active: r,
@@ -30113,10 +30132,10 @@ var CLSTAMP = "7180652";
           e.children
         );
       }
-      function E(e) {
+      function O(e) {
         return u.a.createElement("div", { className: y.Content }, e.children);
       }
-      function O(e) {
+      function E(e) {
         var { active: t, children: r, onClick: e } = e;
         return u.a.createElement(
           S.a,
@@ -30169,7 +30188,7 @@ var CLSTAMP = "7180652";
           u.a.Fragment,
           null,
           u.a.createElement(
-            E,
+            O,
             null,
             u.a.createElement(
               I,
@@ -30186,7 +30205,7 @@ var CLSTAMP = "7180652";
           u.a.Fragment,
           null,
           u.a.createElement(
-            E,
+            O,
             null,
             a &&
               u.a.createElement("div", { className: y.SectionedPageTitle }, a),
@@ -31441,8 +31460,8 @@ var CLSTAMP = "7180652";
         y = r("X3Ds"),
         C = r("Jz9t"),
         B = r("bS9Q"),
-        E = r("Mgs7"),
-        O = r("0OaU"),
+        O = r("Mgs7"),
+        E = r("0OaU"),
         w = r("6Y59"),
         A = r("rHSA"),
         l = (r("NxAk"), r("j+5p"), r("bDQf"));
@@ -31538,6 +31557,9 @@ var CLSTAMP = "7180652";
             this.NotifyUpdate(e);
           });
         }
+        IsDefaultAction(e) {
+          return this.GetActionDescription(e) === this.m_defaultActions.get(e);
+        }
         SetDefaultAction(e, t) {
           void 0 === t
             ? this.m_defaultActions.delete(e)
@@ -31567,13 +31589,6 @@ var CLSTAMP = "7180652";
             this.m_boundActions.set(e, t);
           }
           this.NotifyUpdate(e);
-        }
-        ClearAction(e) {
-          this.m_boundActions.get(e.button) === e
-            ? (T.Log("Clearing action", e),
-              this.m_boundActions.delete(e.button),
-              this.NotifyUpdate(e.button))
-            : console.error("Clearing unbound action");
         }
         SubscribeToActionFunction(r, n) {
           this.m_actionSubscriptions.has(r) ||
@@ -31642,7 +31657,7 @@ var CLSTAMP = "7180652";
                   return null;
               }
             })(r);
-          t[n] = { button: n, description: e[r] };
+          t[n] = e[r];
         }
         T.Instance().SetActionsFromMap(t);
       }
@@ -33520,14 +33535,14 @@ var CLSTAMP = "7180652";
             onCancel: e,
           },
           h.a.createElement(
-            E.b,
+            O.b,
             null,
             h.a.createElement(
               v.a,
               { focusable: !1, "flow-children": "column" },
               Boolean(t)
                 ? h.a.createElement(pe, { results: t })
-                : h.a.createElement(O.a, {
+                : h.a.createElement(E.a, {
                     size: "medium",
                     position: "center",
                     string: Object(f.f)("#Loading"),
@@ -35543,37 +35558,37 @@ var CLSTAMP = "7180652";
     "Jqb/": function (e, t, r) {
       "use strict";
       r.d(t, "j", function () {
-        return D;
+        return N;
       }),
         r.d(t, "b", function () {
-          return j;
-        }),
-        r.d(t, "i", function () {
           return k;
         }),
-        r.d(t, "a", function () {
+        r.d(t, "i", function () {
           return G;
         }),
-        r.d(t, "k", function () {
+        r.d(t, "a", function () {
           return F;
         }),
-        r.d(t, "e", function () {
+        r.d(t, "k", function () {
           return P;
         }),
-        r.d(t, "f", function () {
+        r.d(t, "e", function () {
           return x;
         }),
-        r.d(t, "g", function () {
+        r.d(t, "f", function () {
           return W;
         }),
-        r.d(t, "c", function () {
+        r.d(t, "g", function () {
           return U;
         }),
+        r.d(t, "c", function () {
+          return H;
+        }),
         r.d(t, "h", function () {
-          return Y;
+          return Z;
         }),
         r.d(t, "d", function () {
-          return Z;
+          return J;
         });
       var m = r("mrSG"),
         n = r("TyAF"),
@@ -35616,7 +35631,7 @@ var CLSTAMP = "7180652";
         { index: 16, type: y.a.STEAM_GUIDE, category: "action" },
         { index: 17, type: y.a.SELECT, category: "action" },
       ];
-      class E extends y.c {
+      class O extends y.c {
         constructor() {
           super(),
             (this.m_rgGamepadStatus = []),
@@ -35658,10 +35673,10 @@ var CLSTAMP = "7180652";
             this.PollGamepads();
         }
       }
-      Object(m.b)([C.a], E.prototype, "PollGamepads", null),
-        Object(m.b)([C.a], E.prototype, "OnWindowRegainedFocus", null);
+      Object(m.b)([C.a], O.prototype, "PollGamepads", null),
+        Object(m.b)([C.a], O.prototype, "OnWindowRegainedFocus", null);
       t = r("kyHq");
-      const O = {
+      const E = {
           A: y.a.OK,
           B: y.a.CANCEL,
           X: y.a.SECONDARY,
@@ -35722,17 +35737,22 @@ var CLSTAMP = "7180652";
         }
         HandleControllerInputMessages(e) {
           for (const r of e) {
-            var t = O[r.strActionName];
-            if (null != t) {
-              const n = this.GetController(r.nController);
-              r.bState && !n.activeButtons[t]
+            var t = E[r.strActionName];
+            const n = this.GetController(r.nController);
+            null != t
+              ? r.bState && !n.activeButtons[t]
                 ? ((n.activeButtons[t] = !0),
                   this.OnButtonDown(t, r.nController))
                 : !r.bState &&
                   n.activeButtons[t] &&
-                  ((n.activeButtons[t] = !1),
-                  this.OnButtonUp(t, r.nController));
-            } else r.strActionName;
+                  ((n.activeButtons[t] = !1), this.OnButtonUp(t, r.nController))
+              : "Scroll" == r.strActionName ||
+                ("LEFTPAD_ANALOG" == r.strActionName
+                  ? n.activeButtons[y.a.LPAD_TOUCH] &&
+                    this.OnAnalogPad(y.a.LPAD_TOUCH, r.x, r.y, r.nController)
+                  : "RIGHTPAD_ANALOG" == r.strActionName &&
+                    n.activeButtons[y.a.RPAD_TOUCH] &&
+                    this.OnAnalogPad(y.a.RPAD_TOUCH, r.x, r.y, r.nController));
           }
         }
       }
@@ -35748,15 +35768,13 @@ var CLSTAMP = "7180652";
             e.addEventListener("blur", this.Reset);
         }
         OnKeyDown(e) {
-          var t;
-          "Tab" != e.code
-            ? (t = this.TranslateKey(e)) != y.a.INVALID &&
-              (e.preventDefault(),
-              t != this.m_lastButtonDown &&
-                (this.Reset(),
-                this.OnButtonDown(t),
-                (this.m_lastButtonDown = t)))
-            : e.preventDefault();
+          var t = this.TranslateKey(e);
+          t != y.a.INVALID &&
+            (e.preventDefault(),
+            t != this.m_lastButtonDown &&
+              (this.Reset(),
+              this.OnButtonDown(t),
+              (this.m_lastButtonDown = t)));
         }
         OnKeyUp(e) {
           var t = this.TranslateKey(e);
@@ -35868,12 +35886,13 @@ var CLSTAMP = "7180652";
       Object(m.b)([C.a], I.prototype, "OnMouseDown", null),
         Object(m.b)([C.a], I.prototype, "OnMouseMove", null),
         Object(m.b)([C.a], I.prototype, "Reset", null);
-      class L {
+      var L = r("i8i4");
+      class R {
         constructor() {
           (this.m_GamepadNavigationController = new a.c()),
             v.c.IN_GAMEPADUI &&
               (this.m_GamepadNavigationController.RegisterInputSource(new A()),
-              this.m_GamepadNavigationController.RegisterInputSource(new E())),
+              this.m_GamepadNavigationController.RegisterInputSource(new O())),
             "dev" == v.c.WEB_UNIVERSE &&
               (this.m_GamepadNavigationController.RegisterInputSource(
                 new T(window)
@@ -35887,26 +35906,26 @@ var CLSTAMP = "7180652";
         }
         static Get() {
           return (
-            L.s_Singleton ||
-              ((L.s_Singleton = new L()),
+            R.s_Singleton ||
+              ((R.s_Singleton = new R()),
               "dev" == v.c.WEB_UNIVERSE &&
-                (window.g_StoreWebNavStore = L.s_Singleton)),
-            L.s_Singleton
+                (window.g_StoreWebNavStore = R.s_Singleton)),
+            R.s_Singleton
           );
         }
       }
-      var R = r("yLGM");
-      const D = Object(s.a)("ModalPresentationContext", () =>
+      var D = r("yLGM");
+      const N = Object(s.a)("ModalPresentationContext", () =>
           p.createContext({})
         ),
-        N = () => p.useContext(D);
-      function z(e) {
+        z = () => p.useContext(N);
+      function j(e) {
         const { active: t, children: r } = e,
           n = p.useRef();
         return (
           p.useLayoutEffect(
             () => (
-              t && !n.current && (n.current = Y(window).ShowModal(r)),
+              t && !n.current && (n.current = Z(window).ShowModal(r)),
               () => {
                 n.current && (n.current.Close(), (n.current = null));
               }
@@ -35919,7 +35938,7 @@ var CLSTAMP = "7180652";
           null
         );
       }
-      const j = ({
+      const k = ({
         active: e,
         onDismiss: t,
         className: r,
@@ -35927,22 +35946,22 @@ var CLSTAMP = "7180652";
         children: a,
       }) =>
         p.createElement(
-          z,
+          j,
           { active: e },
           p.createElement(
-            k,
+            G,
             { onEscKeypress: t, className: n },
             p.createElement(_.f, { className: r }, a)
           )
         );
-      function k(e) {
-        var t = N();
+      function G(e) {
+        var t = z();
         return p.createElement(
           S.d,
-          Object.assign({ component: t.ModalPosition, fallback: G }, e)
+          Object.assign({ component: t.ModalPosition, fallback: F }, e)
         );
       }
-      function G(t) {
+      function F(t) {
         let e = {},
           r;
         t.onEscKeypress &&
@@ -35988,15 +36007,15 @@ var CLSTAMP = "7180652";
           a({ className: "ModalPosition_Content", children: i })
         );
       }
-      function F(e) {
+      function P(e) {
         var { className: t, children: e } = e;
         return p.createElement(
-          z,
+          j,
           { active: !0 },
           p.createElement("div", { className: t }, e)
         );
       }
-      let P = class extends p.Component {
+      let x = class extends p.Component {
         Cancel() {
           this.props.onCancel && this.props.onCancel(),
             this.props.closeModal && this.props.closeModal();
@@ -36046,7 +36065,7 @@ var CLSTAMP = "7180652";
                   bUpdateDisabled: this.props.bMiddleDisabled,
                 })),
             p.createElement(
-              x,
+              W,
               Object.assign({}, c),
               p.createElement(
                 h.a,
@@ -36069,9 +36088,9 @@ var CLSTAMP = "7180652";
           );
         }
       };
-      Object(m.b)([f.a], P.prototype, "Cancel", null),
-        (P = Object(m.b)([n.a], P));
-      let x = class extends p.Component {
+      Object(m.b)([f.a], x.prototype, "Cancel", null),
+        (x = Object(m.b)([n.a], x));
+      let W = class extends p.Component {
         Cancel() {
           this.props.onCancel && this.props.onCancel(),
             this.props.closeModal && this.props.closeModal();
@@ -36085,7 +36104,7 @@ var CLSTAMP = "7180652";
         }
         render() {
           return p.createElement(
-            k,
+            G,
             {
               onEscKeypress: this.Cancel,
               className: this.props.modalClassName,
@@ -36109,10 +36128,10 @@ var CLSTAMP = "7180652";
           );
         }
       };
-      Object(m.b)([f.a], x.prototype, "Cancel", null),
-        Object(m.b)([f.a], x.prototype, "OK", null),
-        (x = Object(m.b)([n.a], x));
-      let W = class extends p.Component {
+      Object(m.b)([f.a], W.prototype, "Cancel", null),
+        Object(m.b)([f.a], W.prototype, "OK", null),
+        (W = Object(m.b)([n.a], W));
+      let U = class extends p.Component {
         render() {
           var e = Object.assign(
             {
@@ -36125,10 +36144,10 @@ var CLSTAMP = "7180652";
             },
             this.props
           );
-          return p.createElement(P, Object.assign({}, e));
+          return p.createElement(x, Object.assign({}, e));
         }
       };
-      function U(e) {
+      function H(e) {
         const { ModalManager: t, DialogWrapper: r } = e,
           n = Object(m.c)(e, ["ModalManager", "DialogWrapper"]),
           a = t.modals;
@@ -36155,11 +36174,11 @@ var CLSTAMP = "7180652";
         )
           return null;
         e = a.map((e) =>
-          p.createElement(H, {
+          p.createElement(q, {
             key: e.key,
             modal: e,
             active: e == s,
-            Component: null !== r && void 0 !== r ? r : q,
+            Component: null !== r && void 0 !== r ? r : V,
           })
         );
         return p.createElement(
@@ -36173,7 +36192,7 @@ var CLSTAMP = "7180652";
           e
         );
       }
-      function H(e) {
+      function q(e) {
         var { modal: t, active: r, Component: n } = e,
           e = Object(f.e)();
         return (
@@ -36196,7 +36215,7 @@ var CLSTAMP = "7180652";
           )
         );
       }
-      function q(e) {
+      function V(e) {
         const { className: t, active: r, children: n } = e,
           a = p.useRef();
         return (
@@ -36210,19 +36229,19 @@ var CLSTAMP = "7180652";
           p.createElement("div", { ref: a, className: t, tabIndex: -1 }, n)
         );
       }
-      W = Object(m.b)([n.a], W);
-      class V {
+      U = Object(m.b)([n.a], U);
+      class X {
         constructor(e) {
           (this.ModalUpdatedCallback = new d.a()),
-            (this.key = `Modal_${V.sm_lastKey++}`),
+            (this.key = `Modal_${X.sm_lastKey++}`),
             (this.element = e);
         }
         UpdateModal(e) {
           (this.element = e), this.ModalUpdatedCallback.Dispatch();
         }
       }
-      V.sm_lastKey = 0;
-      class X {
+      X.sm_lastKey = 0;
+      class K {
         constructor() {
           (this.m_bUsePopups = !0),
             (this.m_rgModals = []),
@@ -36268,7 +36287,7 @@ var CLSTAMP = "7180652";
           return this.ShowModalInternal(e);
         }
         ShowModalInternal(e) {
-          const t = new V(e);
+          const t = new X(e);
           return (
             this.m_rgModals.push(t),
             this.ForceUpdate(),
@@ -36295,25 +36314,30 @@ var CLSTAMP = "7180652";
           return this.m_bUsePopups;
         }
       }
-      class K {
+      class Q {
         constructor() {
           this.m_mapModalManager = new WeakMap();
         }
         GetModalManager(e) {
           let t = this.m_mapModalManager.get(e);
-          return t || ((t = new X()), this.m_mapModalManager.set(e, t)), t;
+          return t || ((t = new K()), this.m_mapModalManager.set(e, t)), t;
         }
       }
-      const Q = Object(s.a)("ModalManagerFactory", () => new K());
-      function Y(e) {
-        return Q.GetModalManager(e);
-      }
+      const Y = Object(s.a)("ModalManagerFactory", () => new Q());
       function Z(e) {
+        return Y.GetModalManager(e);
+      }
+      function J(e) {
         var { children: t, navID: r, closeModal: n } = e,
           a = p.createRef(),
-          e =
-            window.legacyWebFocusNavController ||
-            L.Get().GetNavigationController();
+          e = (function () {
+            let e = window.legacyWebFocusNavController;
+            return (
+              (e = e || R.Get().GetNavigationController()),
+              e.SetGamepadEventUpdateBatcher(L.unstable_batchedUpdates),
+              e
+            );
+          })();
         return v.c.IN_GAMEPADUI && !v.c.IN_LIBRARY
           ? p.createElement(
               i.b,
@@ -36325,7 +36349,7 @@ var CLSTAMP = "7180652";
                 className: M.GamepadOnlyModalWrapper,
               },
               p.createElement(
-                R.a,
+                D.a,
                 null,
                 p.createElement(
                   h.a,
@@ -38645,77 +38669,18 @@ var CLSTAMP = "7180652";
         }
       }
       (class extends o {});
-      class E extends o {
-        constructor(e = null) {
-          super(),
-            E.prototype.avatars || i.a(E.M()),
-            o.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
-                fields: { avatars: { n: 1, c: O, r: !0, q: !0 } },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = i.e(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.g(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.c(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          var t = new a.BinaryReader(e),
-            e = new E();
-          return E.deserializeBinaryFromReader(e, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.b(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.f(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetAvatarHistory_Response";
-        }
-      }
       class O extends o {
         constructor(e = null) {
           super(),
-            O.prototype.avatar_sha1 || i.a(O.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            O.prototype.avatars || i.a(O.M()),
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             O.sm_m ||
               (O.sm_m = {
                 proto: O,
-                fields: {
-                  avatar_sha1: {
-                    n: 1,
-                    br: i.d.readString,
-                    bw: i.h.writeString,
-                  },
-                  user_uploaded: { n: 2, br: i.d.readBool, bw: i.h.writeBool },
-                  timestamp: { n: 3, br: i.d.readUint32, bw: i.h.writeUint32 },
-                },
+                fields: { avatars: { n: 1, c: E, r: !0, q: !0 } },
               }),
             O.sm_m
           );
@@ -38750,6 +38715,65 @@ var CLSTAMP = "7180652";
         serializeBase64String() {
           var e = new a.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetAvatarHistory_Response";
+        }
+      }
+      class E extends o {
+        constructor(e = null) {
+          super(),
+            E.prototype.avatar_sha1 || i.a(E.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: {
+                  avatar_sha1: {
+                    n: 1,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  user_uploaded: { n: 2, br: i.d.readBool, bw: i.h.writeBool },
+                  timestamp: { n: 3, br: i.d.readUint32, bw: i.h.writeUint32 },
+                },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = i.e(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.g(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.c(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          var t = new a.BinaryReader(e),
+            e = new E();
+          return E.deserializeBinaryFromReader(e, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.b(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.f(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_GetAvatarHistory_Response_AvatarData";
@@ -39512,7 +39536,7 @@ var CLSTAMP = "7180652";
           });
         }),
         (r.GetAvatarHistory = function (e, t) {
-          return e.SendMsg("Community.GetAvatarHistory#1", t, E, {
+          return e.SendMsg("Community.GetAvatarHistory#1", t, O, {
             ePrivilege: 1,
           });
         }),
@@ -39597,7 +39621,7 @@ var CLSTAMP = "7180652";
           return C;
         }),
         r.d(t, "f", function () {
-          return O;
+          return E;
         }),
         r.d(t, "g", function () {
           return T;
@@ -39701,10 +39725,10 @@ var CLSTAMP = "7180652";
         Object(v.b)("DialogControlsSection"),
         Object(v.b)("DialogControlsSectionHeader");
       let B = d("DialogTwoColLayout _DialogColLayout"),
-        E = d("DialogThreeColLayout _DialogColLayout");
+        O = d("DialogThreeColLayout _DialogColLayout");
       d("DialogTwoThirdColLayout _DialogColLayout"),
         Object(v.b)("DialogColumn _DialogLayout");
-      function O(e) {
+      function E(e) {
         var t = Object(i.b)();
         return g.createElement(
           v.d,
@@ -39761,7 +39785,7 @@ var CLSTAMP = "7180652";
         var { classNameContent: t, bCenterVertically: r } = e,
           e = Object(p.c)(e, ["classNameContent", "bCenterVertically"]);
         return g.createElement(
-          O,
+          E,
           { className: t, bCenterVertically: r },
           g.createElement(A, Object.assign({}, e))
         );
@@ -39878,7 +39902,7 @@ var CLSTAMP = "7180652";
       }
       function N(e) {
         return g.createElement(
-          E,
+          O,
           null,
           g.createElement(
             L,
@@ -39928,11 +39952,27 @@ var CLSTAMP = "7180652";
           return (this.props.controlled ? this.props : this.state).checked;
         }
         GetPanelElementProps() {
-          return {
-            tabIndex: this.props.tabIndex || 0,
+          var e = this.props,
+            t = e["tabIndex"],
+            e = Object(p.c)(e, [
+              "onChange",
+              "checked",
+              "label",
+              "description",
+              "tabIndex",
+              "disabled",
+              "classname",
+              "tooltip",
+              "color",
+              "highlightColor",
+              "bottomSeparator",
+              "controlled",
+            ]);
+          return Object.assign(Object.assign({}, e), {
+            tabIndex: t || 0,
             onActivate: this.Toggle,
             onKeyDown: this.KeyDown,
-          };
+          });
         }
         Toggle() {
           var e;
@@ -41625,8 +41665,8 @@ var CLSTAMP = "7180652";
           );
         }
       }
-      var Ee = r("rHSA"),
-        Oe = (r("NxAk"), r("d1jy")),
+      var Oe = r("rHSA"),
+        Ee = (r("NxAk"), r("d1jy")),
         we = r("IjL/"),
         t = r("zBSo"),
         Ae = r.n(t),
@@ -41647,7 +41687,7 @@ var CLSTAMP = "7180652";
         var t =
           null !== (t = e.activePage.padding) && void 0 !== t ? t : "standard";
         return g.createElement(
-          O,
+          E,
           {
             className: Object(f.a)(
               e.stylesheet.PagedSettingsDialog_PageContent,
@@ -41708,7 +41748,7 @@ var CLSTAMP = "7180652";
               ),
               key: e.title,
               onClick: () => {
-                Oe.a.PlayNavSound(Oe.b.PagedNavigation),
+                Ee.a.PlayNavSound(Ee.b.PagedNavigation),
                   n.onPageRequested && n.onPageRequested(e.identifier),
                   e.click ? e.click() : i && t != s && o(t);
               },
@@ -41737,7 +41777,7 @@ var CLSTAMP = "7180652";
               navRef: u,
               onButtonDown: (e) => {
                 var t;
-                e.detail.button == Ee.a.OK &&
+                e.detail.button == Oe.a.OK &&
                   null !== (t = h.current) &&
                   void 0 !== t &&
                   t.TakeFocus(e.detail.button);
@@ -45148,9 +45188,9 @@ var CLSTAMP = "7180652";
       var y = r("a7S1"),
         C = r("ZC8J"),
         B = r("6oCP"),
-        E = r("iwen"),
-        O = r("6tCl"),
-        w = r.n(O),
+        O = r("iwen"),
+        E = r("6tCl"),
+        w = r.n(E),
         t = r("TyAF"),
         A = r("TLQK"),
         n = r("2vnA"),
@@ -45380,7 +45420,7 @@ var CLSTAMP = "7180652";
         H = r("6Y59"),
         q = r("+d9t"),
         V = r("exH9"),
-        O = r("opsS"),
+        E = r("opsS"),
         X = r("IzPI"),
         K = r("U+Q5"),
         Q = r("TQGK"),
@@ -45637,7 +45677,7 @@ var CLSTAMP = "7180652";
               );
         }
       };
-      Object(l.b)([O.a], ee.prototype, "OnSketchFabClick", null),
+      Object(l.b)([E.a], ee.prototype, "OnSketchFabClick", null),
         (ee = Object(l.b)([t.a], ee));
       class te {
         BIsValid() {
@@ -45865,11 +45905,11 @@ var CLSTAMP = "7180652";
           );
         }
       };
-      Object(l.b)([O.a], ie.prototype, "SetupRefreshDataInterval", null),
-        Object(l.b)([O.a], ie.prototype, "ClearRefreshInterval", null),
-        Object(l.b)([O.a], ie.prototype, "RefreshData", null),
-        Object(l.b)([O.a], ie.prototype, "SetupCountDown", null),
-        Object(l.b)([O.a], ie.prototype, "UpdateTimer", null),
+      Object(l.b)([E.a], ie.prototype, "SetupRefreshDataInterval", null),
+        Object(l.b)([E.a], ie.prototype, "ClearRefreshInterval", null),
+        Object(l.b)([E.a], ie.prototype, "RefreshData", null),
+        Object(l.b)([E.a], ie.prototype, "SetupCountDown", null),
+        Object(l.b)([E.a], ie.prototype, "UpdateTimer", null),
         (ie = Object(l.b)([t.a], ie));
       var t = r("l2mU"),
         se = r("gPCo"),
@@ -45933,14 +45973,14 @@ var CLSTAMP = "7180652";
                       urlRegExp: new RegExp(
                         /community.+sharedfiles\/filedetails\/\?id=\d+/i
                       ),
-                      fnBBComponent: Oe,
+                      fnBBComponent: Ee,
                     },
                     { urlRegExp: new RegExp(le), fnBBComponent: Ae },
                     { urlRegExp: new RegExp(de), fnBBComponent: Le },
                     { urlRegExp: new RegExp(ue), fnBBComponent: Ie },
                     { urlRegExp: new RegExp(ce), fnBBComponent: Te },
                     { urlRegExp: new RegExp(me), fnBBComponent: Be },
-                    { urlRegExp: new RegExp(pe), fnBBComponent: Ee },
+                    { urlRegExp: new RegExp(pe), fnBBComponent: Oe },
                     { urlRegExp: new RegExp(he), fnBBComponent: Ne },
                     { urlRegExp: new RegExp(_e), fnBBComponent: ze },
                     { urlRegExp: new RegExp(be), fnBBComponent: je },
@@ -46268,7 +46308,7 @@ var CLSTAMP = "7180652";
         ],
       ])),
         (ve.sm_InternalBBCodeURLComponent = null),
-        Object(l.b)([O.a], ve.prototype, "ElementAccumulator", null);
+        Object(l.b)([E.a], ve.prototype, "ElementAccumulator", null);
       const Me = (e) => {
         const { url: t, event: r, className: n } = e;
         let a = Object(b.d)(t);
@@ -46304,7 +46344,7 @@ var CLSTAMP = "7180652";
         if (S.c.EREALM === u.g.k_ESteamRealmChina) return null;
         var r = Object(h.b)(e);
         return void 0 !== (null == r ? void 0 : r.strVideoID)
-          ? m.createElement(E.a, {
+          ? m.createElement(O.a, {
               videoID: r.strVideoID,
               nStartSeconds: r.nStartSeconds,
               classNameAlign: "",
@@ -46334,7 +46374,7 @@ var CLSTAMP = "7180652";
         }
         return ye(e, null == t ? void 0 : t.event);
       }
-      function Ee(e, t) {
+      function Oe(e, t) {
         var r = new RegExp(pe).exec(e);
         if (r && 1 < r.length) {
           r = r[1];
@@ -46342,7 +46382,7 @@ var CLSTAMP = "7180652";
         }
         return ye(e, null == t ? void 0 : t.event);
       }
-      function Oe(e, t) {
+      function Ee(e, t) {
         var r = e.split("?");
         let n = void 0;
         if (2 == r.length) {
@@ -46930,7 +46970,7 @@ var CLSTAMP = "7180652";
       r.d(t, "a", function () {
         return n;
       });
-      var O = r("mrSG"),
+      var E = r("mrSG"),
         t = r("vDqi"),
         w = r.n(t),
         A = (r("mgoM"), r("kyHq"), r("BBEf")),
@@ -46953,7 +46993,7 @@ var CLSTAMP = "7180652";
             (this.m_mapMyWishlistInContentHub = new Map());
         }
         GetDiscounts(n) {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             try {
               var t = "discount";
               (t += n.tagid ? "_tag" + n.tagid : ""),
@@ -46983,7 +47023,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetTopN(t, r) {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             if (
               !this.m_rgTopN &&
               ((this.m_rgTopN = Object(I.f)("top_n", "application_config")),
@@ -47000,7 +47040,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetAllDiscounted(r, n, a = null, i = null) {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             var e = (null == a ? void 0 : a.GetQuery()) || "";
             if (
               !(
@@ -47032,7 +47072,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetWishlistOnSale() {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             var e;
             return (
               this.m_rgMyWishlistOnSale ||
@@ -47051,7 +47091,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetDLCForGamesInMyLibraryOnSale() {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             var e;
             return (
               this.m_rgMyDLCForGamesInLibraryOnSale ||
@@ -47070,7 +47110,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetSoundtracksForGamesInMyLibraryOnSale() {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             var e;
             return (
               this.m_rgMySoundtracksForGamesInLibraryOnSale ||
@@ -47090,7 +47130,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetInteractiveRecommendationsOnSale() {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             var e;
             return (
               this.m_rgMyInteractiveRecOnSale ||
@@ -47109,7 +47149,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetSaleTags() {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             var e;
             return (
               this.m_rgMySaleTags ||
@@ -47128,7 +47168,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetTagRecommendorForThisSale(r, n, a, i, s, o) {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             var e, t;
             return (
               this.m_rgMyTagRecommendation ||
@@ -47143,10 +47183,12 @@ var CLSTAMP = "7180652";
                     I.c.STORE_BASE_URL +
                     "saleaction/ajaxgetsaletagsrecommendation"),
                   (t = {
+                    origin: self.origin,
                     cc: I.c.COUNTRY,
                     l: I.c.LANGUAGE,
-                    clanAccountID: r.clanSteamID.GetAccountID(),
-                    clanAnnouncementGID: r.AnnouncementGID,
+                    clanAccountID:
+                      null == r ? void 0 : r.clanSteamID.GetAccountID(),
+                    clanAnnouncementGID: null == r ? void 0 : r.AnnouncementGID,
                     count: n,
                     nocache: a,
                     hubtype: null == i ? void 0 : i.type,
@@ -47220,8 +47262,8 @@ var CLSTAMP = "7180652";
           y,
           C
         ) {
-          var B, E;
-          return Object(O.a)(this, void 0, void 0, function* () {
+          var B, O;
+          return Object(E.a)(this, void 0, void 0, function* () {
             let e = this.m_mapSaleGameListsByFlavor.get(s);
             e ||
               ((t = this.GetJSONDataKey(u, M, c, m, _)),
@@ -47285,9 +47327,9 @@ var CLSTAMP = "7180652";
                     ? void 0
                     : n.status) ||
                 1 !=
-                  (null === (E = n.data) || void 0 === E
+                  (null === (O = n.data) || void 0 === O
                     ? void 0
-                    : E.success) ||
+                    : O.success) ||
                 null === (B = n.data) ||
                 void 0 === B ||
                 !B.appids
@@ -47296,9 +47338,9 @@ var CLSTAMP = "7180652";
                   "query failed, status=" +
                     (null == n ? void 0 : n.status) +
                     " success: " +
-                    (null === (E = null == n ? void 0 : n.data) || void 0 === E
+                    (null === (O = null == n ? void 0 : n.data) || void 0 === O
                       ? void 0
-                      : E.success)
+                      : O.success)
                 );
               for (const a of n.data.appids)
                 e.setAppIDs.has(a) || (e.appids.push(a), e.setAppIDs.add(a));
@@ -47327,7 +47369,7 @@ var CLSTAMP = "7180652";
           });
         }
         GetSaleGamesByFlavor(p, h, _, b, g, f = 0, v) {
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             let {
               strSectionFilter: e,
               nTabUniqueID: t,
@@ -47382,7 +47424,7 @@ var CLSTAMP = "7180652";
             );
             this.m_mapPromisesByFlavor.set(u, m);
             return (
-              Object(O.a)(this, void 0, void 0, function* () {
+              Object(E.a)(this, void 0, void 0, function* () {
                 try {
                   yield m;
                 } catch (e) {
@@ -47396,7 +47438,7 @@ var CLSTAMP = "7180652";
         }
         GetWishlistedInContentHub(d, u, m, p) {
           var h;
-          return Object(O.a)(this, void 0, void 0, function* () {
+          return Object(E.a)(this, void 0, void 0, function* () {
             var t,
               r,
               n,
@@ -48910,15 +48952,15 @@ var CLSTAMP = "7180652";
         y = r("0OaU"),
         C = r("OS6B"),
         B = r("exH9"),
-        E = r("TLQK"),
-        O = r("lkRc");
+        O = r("TLQK"),
+        E = r("lkRc");
       function w(e) {
         Object(a.d)(
           h.a.createElement(
             n.g,
             {
-              strTitle: Object(E.f)("#Wishlist_Error"),
-              strDescription: Object(E.f)("#Wishlist_Error_Desc"),
+              strTitle: Object(O.f)("#Wishlist_Error"),
+              strDescription: Object(O.f)("#Wishlist_Error_Desc"),
             },
             h.a.createElement("br", null),
             h.a.createElement("br", null),
@@ -48949,7 +48991,7 @@ var CLSTAMP = "7180652";
                 className: Object(B.a)(g.a.WishList, f.a.FlexRowContainer, c),
                 onClick: () =>
                   Object(m.a)(this, void 0, void 0, function* () {
-                    if (O.h.logged_in) {
+                    if (E.h.logged_in) {
                       if (!r) {
                         n(!0);
                         var e = !d;
@@ -48965,7 +49007,7 @@ var CLSTAMP = "7180652";
                       }
                     } else Object(v.a)();
                   }),
-                "data-tooltip-text": Object(E.f)("#AddToWishlist_ttip"),
+                "data-tooltip-text": Object(O.f)("#AddToWishlist_ttip"),
               },
               h.a.createElement(
                 "span",
@@ -48976,7 +49018,7 @@ var CLSTAMP = "7180652";
               h.a.createElement(
                 "span",
                 null,
-                Object(E.f)(
+                Object(O.f)(
                   r
                     ? "#Updating"
                     : t
@@ -49311,7 +49353,7 @@ var CLSTAMP = "7180652";
           const r = this.m_currentView.get();
           r && r.dispose();
           var n = this.BIsSingleSourceMuted(),
-            n = new E(
+            n = new O(
               () => this.m_rgSortedCalendarEvents,
               this.LoadAdditionalEvents,
               this.BHitEventHorizon,
@@ -49787,7 +49829,7 @@ var CLSTAMP = "7180652";
           "UpdateEventBlockFromCalendarEvent",
           null
         );
-      class E {
+      class O {
         constructor(e, t, r, n, a, i) {
           (this.m_rgLoadedEventsBox = s.C.box([])),
             (this.m_lastLoadLatch = null),
@@ -49914,14 +49956,14 @@ var CLSTAMP = "7180652";
             });
         }
       }
-      Object(c.b)([s.n.struct], E.prototype, "viewFilteredEvents", null),
+      Object(c.b)([s.n.struct], O.prototype, "viewFilteredEvents", null),
         Object(c.b)(
           [s.n.struct],
-          E.prototype,
+          O.prototype,
           "filteredAndCheckedEvents",
           null
         );
-      const O = s.C.box(null),
+      const E = s.C.box(null),
         w = new Map();
       function A(e) {
         let t = "";
@@ -49939,15 +49981,15 @@ var CLSTAMP = "7180652";
           e.rgTags &&
             0 < e.rgTags.length &&
             (t += "_tags:" + e.rgTags.sort().join(",")),
-          O.get() !== t && (O.set(t), w.has(t) || w.set(t, new B(e))),
+          E.get() !== t && (E.set(t), w.has(t) || w.set(t, new B(e))),
           t
         );
       }
       function T() {
-        return null == O.get() && A({}), w.get(O.get());
+        return null == E.get() && A({}), w.get(E.get());
       }
       function I() {
-        return null !== O;
+        return null !== E;
       }
       window.g_EventCalendarMap = w;
     },
@@ -50366,9 +50408,9 @@ var CLSTAMP = "7180652";
         })(document);
       }
       function B(e, t) {
-        E(e.document, t, !0);
+        O(e.document, t, !0);
       }
-      function E(e, t, r) {
+      function O(e, t, r) {
         const n = Object.assign({}, t),
           a = e.getElementsByTagName("head")[0];
         var i,
@@ -51885,7 +51927,7 @@ var CLSTAMP = "7180652";
           if (!t.bGranularFutureTime)
             return (
               c.b(r.getTime() - n.getTime()),
-              (r.getFullYear() == n.getFullYear() ? C : E)(r)
+              (r.getFullYear() == n.getFullYear() ? C : O)(r)
             );
           c.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
           let e = new Date();
@@ -51937,7 +51979,7 @@ var CLSTAMP = "7180652";
             ? Object(l.f)("#TimeSince_1Week")
             : Object(l.f)("#TimeSince_XWeeks", t);
         }
-        return (r.getFullYear() == n.getFullYear() ? C : E)(r);
+        return (r.getFullYear() == n.getFullYear() ? C : O)(r);
       }
       const b = new Map(),
         g = new Map(),
@@ -51992,7 +52034,7 @@ var CLSTAMP = "7180652";
           t)
         );
       }
-      function E(e) {
+      function O(e) {
         var t = e.getMonth() + 12 * e.getFullYear();
         let r = v.get(t);
         return (
@@ -52561,9 +52603,9 @@ var CLSTAMP = "7180652";
               n && this.m_rgGamepadNavigationTrees.push(n),
               e &&
                 (this.m_rgGamepadNavigationTrees.push(e),
-                e.OnActivate(!r && t)),
-              n && n.OnDeactivateCallbacks.Dispatch(n, e),
-              e && e.OnActivateCallbacks.Dispatch(e, n);
+                !r && t && e.TakeFocus(d.c.APPLICATION)),
+              n && n != this.m_LastActiveFocusNavTree && n.OnDeactivate(e),
+              e && !r && e.OnActivate(n);
           }
         }
         BindGlobalEventHandlers() {
@@ -53534,7 +53576,11 @@ var CLSTAMP = "7180652";
             }
           }, [a, i, s, o, l, c, d, u, m, p, h, _, b, g]),
           a
-            ? a.every((e) => S.a.Get().BHasStoreItem(e, i, t))
+            ? a.every(
+                (e) =>
+                  S.a.Get().BHasStoreItem(e, i, t) ||
+                  S.a.Get().BIsStoreItemMissing(e, i)
+              )
               ? a.every((e) => {
                   return null === (e = S.a.Get().GetStoreItem(e, i)) ||
                     void 0 === e
@@ -53584,6 +53630,7 @@ var CLSTAMP = "7180652";
         "LaunchStates",
         "Haptics",
         "ControllerConfigurator",
+        "FriendsUI/RemotePlay",
       ];
       ((r = d = d || {})[(r.Debug = 0)] = "Debug"),
         (r[(r.Info = 1)] = "Info"),
@@ -53925,7 +53972,7 @@ var CLSTAMP = "7180652";
         t = new Date(t);
         return "[object Date]" === Object.prototype.toString.call(t) ? t : null;
       }
-      function E(e, t) {
+      function O(e, t) {
         let r = e.getAttribute(t);
         if (!r) return null;
         let n = 0,
@@ -53939,7 +53986,7 @@ var CLSTAMP = "7180652";
           n
         );
       }
-      function O(e, t) {
+      function E(e, t) {
         t = e.getAttribute(t);
         return t ? parseInt(t) : null;
       }
@@ -54079,23 +54126,23 @@ var CLSTAMP = "7180652";
             strID: w(e, "id"),
             strMimeType: w(e, "mimeType"),
             strCodecs: w(e, "codecs"),
-            nBandwidth: O(e, "bandwidth"),
+            nBandwidth: E(e, "bandwidth"),
           };
           if (t.bContainsVideo) {
             if (
-              ((r.nWidth = O(e, "width")),
-              (r.nHeight = O(e, "height")),
-              (r.nFrameRate = O(e, "frameRate")),
+              ((r.nWidth = E(e, "width")),
+              (r.nHeight = E(e, "height")),
+              (r.nFrameRate = E(e, "frameRate")),
               !(r.strID && r.strMimeType && r.strCodecs && r.nBandwidth))
             )
               return (
                 Object(M.c)("MPD - Representation Video Data Missing"), null
               );
           } else if (t.bContainsAudio) {
-            r.nAudioSamplingRate = O(e, "audioSamplingRate");
+            r.nAudioSamplingRate = E(e, "audioSamplingRate");
             e = C(e, "AudioChannelConfiguration");
             if (
-              (e && (r.nAudioChannels = O(e, "value")),
+              (e && (r.nAudioChannels = E(e, "value")),
               r.nAudioChannels || (r.nAudioChannels = 2),
               !(
                 r.strID &&
@@ -54118,14 +54165,14 @@ var CLSTAMP = "7180652";
           if (!n) return !1;
           e = n.getAttribute("type");
           if (
-            ((this.m_nMinBufferTime = E(n, "minBufferTime")), "dynamic" == e)
+            ((this.m_nMinBufferTime = O(n, "minBufferTime")), "dynamic" == e)
           ) {
             if (
               ((this.m_strType = "dynamic"),
               (this.m_dtAvailabilityStartTime = B(n, "availabilityStartTime")),
               (this.m_dtPublishTime = B(n, "publishTime")),
-              (this.m_nMinimumUpdatePeriod = E(n, "minimumUpdatePeriod")),
-              (this.m_nTimeShiftBufferDepth = E(n, "timeShiftBufferDepth")),
+              (this.m_nMinimumUpdatePeriod = O(n, "minimumUpdatePeriod")),
+              (this.m_nTimeShiftBufferDepth = O(n, "timeShiftBufferDepth")),
               !(
                 this.m_dtAvailabilityStartTime &&
                 this.m_dtPublishTime &&
@@ -54164,8 +54211,8 @@ var CLSTAMP = "7180652";
           let a = e[0],
             i = {
               strID: w(a, "id"),
-              nStart: E(a, "start"),
-              nDuration: E(a, "duration"),
+              nStart: O(a, "start"),
+              nDuration: O(a, "duration"),
               rgAdaptationSets: [],
             };
           if (!i.strID || null === i.nStart)
@@ -54209,7 +54256,7 @@ var CLSTAMP = "7180652";
                 var m = u[t];
                 let e = {
                   strID: w(m, "id"),
-                  nBandwidth: O(m, "bandwidth"),
+                  nBandwidth: E(m, "bandwidth"),
                   strClosedCaptionFile: "",
                 };
                 (m = C(m, "BaseURL")), (m = m ? m.textContent : "");
@@ -54240,8 +54287,8 @@ var CLSTAMP = "7180652";
               }
               !r.bContainsVideo ||
                 ((o = C(t, "Thumbnails")) &&
-                  ((l = O(o, "sheet")),
-                  (g = O(o, "period")),
+                  ((l = E(o, "sheet")),
+                  (g = E(o, "period")),
                   (r.thumbnails = {
                     nPeriod: g,
                     strTemplate: w(o, "template"),
@@ -54258,9 +54305,9 @@ var CLSTAMP = "7180652";
                 return Object(M.c)("MPD - Segment Template Missing"), !1;
               g = g[0];
               r.segmentTemplate = {
-                nTimeScale: O(g, "timescale"),
-                nDuration: O(g, "duration"),
-                nStartNumber: O(g, "startNumber"),
+                nTimeScale: E(g, "timescale"),
+                nDuration: E(g, "duration"),
+                nStartNumber: E(g, "startNumber"),
                 strMedia: w(g, "media"),
                 strInitialization: "",
               };
@@ -54344,7 +54391,7 @@ var CLSTAMP = "7180652";
         return I;
       }),
         r.d(t, "b", function () {
-          return O;
+          return E;
         }),
         r.d(t, "c", function () {
           return w;
@@ -55591,7 +55638,7 @@ var CLSTAMP = "7180652";
         Object(o.b)([t.a], B.prototype, "GameDataEventTrigger", null),
         Object(o.b)([t.a], B.prototype, "ReportPlayerStats", null),
         Object(o.b)([s.k.bound], B.prototype, "CaptureStatsForDisplay", null);
-      class E {
+      class O {
         constructor(e) {
           (this.m_elVideo = null),
             (this.m_peerConnection = null),
@@ -55901,17 +55948,17 @@ var CLSTAMP = "7180652";
           return "";
         }
       }
-      Object(o.b)([t.a], E.prototype, "PlayWebRTC", null),
-        Object(o.b)([s.k.bound], E.prototype, "CaptureStatsForDisplay", null),
-        Object(o.b)([t.a], E.prototype, "OnVideoPause", null),
-        Object(o.b)([t.a], E.prototype, "OnVideoResize", null);
+      Object(o.b)([t.a], O.prototype, "PlayWebRTC", null),
+        Object(o.b)([s.k.bound], O.prototype, "CaptureStatsForDisplay", null),
+        Object(o.b)([t.a], O.prototype, "OnVideoPause", null),
+        Object(o.b)([t.a], O.prototype, "OnVideoResize", null);
       r("kyHq"), r("kdZy");
-      var O,
+      var E,
         w,
         A = r("OS6B"),
         T = r("TQQK");
       const I = 7;
-      ((r = O = O || {})[(r.None = 0)] = "None"),
+      ((r = E = E || {})[(r.None = 0)] = "None"),
         (r[(r.Loading = 1)] = "Loading"),
         (r[(r.Ready = 2)] = "Ready"),
         (r[(r.Error = 3)] = "Error");
@@ -55922,7 +55969,7 @@ var CLSTAMP = "7180652";
             (this.m_ulViewerToken = ""),
             (this.m_strCDNAuthUrlParameters = void 0),
             (this.m_bWebRTC = !1),
-            (this.m_eWatchState = O.None),
+            (this.m_eWatchState = E.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []),
             (this.m_schManifestTimeout = new _.b()),
@@ -55931,7 +55978,7 @@ var CLSTAMP = "7180652";
         SetState(e, t = "") {
           (this.m_eWatchState = e),
             (this.m_strStateDescription = t),
-            e == O.Error && console.log(this.m_strStateDescription);
+            e == E.Error && console.log(this.m_strStateDescription);
         }
       }
       Object(o.b)([s.C], L.prototype, "m_ulBroadcastID", void 0),
@@ -55962,14 +56009,14 @@ var CLSTAMP = "7180652";
         Object(o.b)([s.C], R.prototype, "m_bIsOnline", void 0);
       class D {
         constructor() {
-          (this.m_eWatchState = O.None),
+          (this.m_eWatchState = E.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []);
         }
         SetState(e, t = "") {
           (this.m_eWatchState = e),
             (this.m_strStateDescription = t),
-            e == O.Error && console.log(this.m_strStateDescription);
+            e == E.Error && console.log(this.m_strStateDescription);
         }
       }
       Object(o.b)([s.C], D.prototype, "m_eWatchState", void 0),
@@ -55995,14 +56042,14 @@ var CLSTAMP = "7180652";
         GetBroadcastState(e) {
           if (e.IsBroadcastClip()) {
             var t = this.m_mapClips.get(e.GetBroadcastClipID());
-            return t ? t.m_eWatchState : O.None;
+            return t ? t.m_eWatchState : E.None;
           }
           if (e.IsBroadcastVOD()) {
             t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
-            return t ? t.m_eWatchState : O.None;
+            return t ? t.m_eWatchState : E.None;
           }
           e = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-          return e ? e.m_eWatchState : O.None;
+          return e ? e.m_eWatchState : E.None;
         }
         GetBroadcastStateDescription(e) {
           if (e.IsBroadcastClip()) {
@@ -56026,7 +56073,7 @@ var CLSTAMP = "7180652";
             (a.m_bWebRTC = n),
             Object(u.a)() ||
               Object(u.b)() ||
-              a.SetState(O.Error, Object(b.f)("#BroadcastWatch_MinBrowser")),
+              a.SetState(E.Error, Object(b.f)("#BroadcastWatch_MinBrowser")),
             o
           );
         }
@@ -56039,7 +56086,7 @@ var CLSTAMP = "7180652";
             n.m_rgVideos.push(s),
             Object(u.a)() ||
               Object(u.b)() ||
-              n.SetState(O.Error, Object(b.f)("#BroadcastWatch_MinBrowser")),
+              n.SetState(E.Error, Object(b.f)("#BroadcastWatch_MinBrowser")),
             s
           );
         }
@@ -56052,7 +56099,7 @@ var CLSTAMP = "7180652";
             n.m_rgVideos.push(s),
             Object(u.a)() ||
               Object(u.b)() ||
-              n.SetState(O.Error, Object(b.f)("#BroadcastWatch_MinBrowser")),
+              n.SetState(E.Error, Object(b.f)("#BroadcastWatch_MinBrowser")),
             s
           );
         }
@@ -56062,21 +56109,21 @@ var CLSTAMP = "7180652";
             ? (console.log(`Starting clip for ${e.GetBroadcastClipID()}`),
               (t = this.m_mapClips.get(e.GetBroadcastClipID())) &&
                 (this.SetActiveVideo(e),
-                t.m_eWatchState == O.None
+                t.m_eWatchState == E.None
                   ? this.GetClipManifest(t, e.GetWatchLocation())
-                  : t.m_eWatchState == O.Ready && e.StartClip(t)))
+                  : t.m_eWatchState == E.Ready && e.StartClip(t)))
             : e.IsBroadcastVOD()
             ? (console.log(`Starting VOD for ${e.GetBroadcastAppIDVOD()}`),
               (r = this.m_mapVODs.get(e.GetBroadcastAppIDVOD())) &&
                 (this.SetActiveVideo(e),
-                r.m_eWatchState == O.None
+                r.m_eWatchState == E.None
                   ? this.GetVODManifest(r, e.GetWatchLocation())
-                  : r.m_eWatchState == O.Ready && e.StartVOD(r)))
+                  : r.m_eWatchState == E.Ready && e.StartVOD(r)))
             : (r = this.m_mapBroadcasts.get(e.GetBroadcastSteamID())) &&
               (this.SetActiveVideo(e),
-              r.m_eWatchState == O.None
+              r.m_eWatchState == E.None
                 ? this.GetBroadcastManifest(r, e.GetWatchLocation())
-                : r.m_eWatchState == O.Ready && e.StartBroadcast(r));
+                : r.m_eWatchState == E.Ready && e.StartBroadcast(r));
         }
         SetActiveVideo(r) {
           this.m_mapBroadcasts.forEach((e) => {
@@ -56147,7 +56194,7 @@ var CLSTAMP = "7180652";
             t ||
             ((t = new L()),
             (t.m_steamIDBroadcast = e),
-            (t.m_eWatchState = O.None),
+            (t.m_eWatchState = E.None),
             this.m_mapBroadcasts.set(e, t),
             t)
           );
@@ -56173,7 +56220,7 @@ var CLSTAMP = "7180652";
             t ||
             ((t = new N()),
             (t.m_clipID = e),
-            (t.m_eWatchState = O.None),
+            (t.m_eWatchState = E.None),
             this.m_mapClips.set(e, t),
             t)
           );
@@ -56184,7 +56231,7 @@ var CLSTAMP = "7180652";
             t ||
             ((t = new z()),
             (t.m_nAppIDVOD = e),
-            (t.m_eWatchState = O.None),
+            (t.m_eWatchState = E.None),
             this.m_mapVODs.set(e, t),
             t)
           );
@@ -56236,7 +56283,7 @@ var CLSTAMP = "7180652";
         }
         GetBroadcastManifest(a, i, s = Date.now()) {
           return Object(o.a)(this, void 0, void 0, function* () {
-            a.SetState(O.Loading, "");
+            a.SetState(E.Loading, "");
             var e,
               t = {
                 steamid: a.m_steamIDBroadcast,
@@ -56262,7 +56309,7 @@ var CLSTAMP = "7180652";
             r && 200 == r.status
               ? ((e = r.data).viewertoken && this.SetViewerToken(e.viewertoken),
                 "ready" == (t = e.success)
-                  ? (a.SetState(O.Ready),
+                  ? (a.SetState(E.Ready),
                     (a.m_ulBroadcastID = e.broadcastid),
                     (a.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
                     (a.m_strCDNAuthUrlParameters = e.cdn_auth_url_parameters),
@@ -56277,12 +56324,12 @@ var CLSTAMP = "7180652";
                     }, 3e4 * Math.random()))
                   : "waiting" == t
                   ? (a.SetState(
-                      O.Loading,
+                      E.Loading,
                       Object(b.f)("#BroadcastWatch_WaitingForResponse")
                     ),
                     6e4 < (n = Date.now() - s)
                       ? a.SetState(
-                          O.Error,
+                          E.Error,
                           Object(b.f)("#BroadcastWatch_NotAvailable")
                         )
                       : ((n = 3e4 < n ? e.retry : 5e3),
@@ -56291,7 +56338,7 @@ var CLSTAMP = "7180652";
                         )))
                   : "waiting_for_start" == t
                   ? (a.SetState(
-                      O.Loading,
+                      E.Loading,
                       Object(b.f)("#BroadcastWatch_WaitingForStart")
                     ),
                     a.m_schManifestTimeout.Schedule(e.retry, () =>
@@ -56299,7 +56346,7 @@ var CLSTAMP = "7180652";
                     ))
                   : "waiting_for_reconnect" == t
                   ? (a.SetState(
-                      O.Loading,
+                      E.Loading,
                       Object(b.f)("#BroadcastWatch_WaitingForReconnect")
                     ),
                     a.m_schManifestTimeout.Schedule(e.retry, () =>
@@ -56307,47 +56354,47 @@ var CLSTAMP = "7180652";
                     ))
                   : "end" == t
                   ? a.SetState(
-                      O.Error,
+                      E.Error,
                       Object(b.f)("#BroadcastWatch_NotAvailable")
                     )
                   : "noservers" == t
                   ? a.SetState(
-                      O.Error,
+                      E.Error,
                       Object(b.f)("#BroadcastWatch_ServerLoad")
                     )
                   : "system_not_supported" == t
                   ? a.SetState(
-                      O.Error,
+                      E.Error,
                       Object(b.f)("#BroadcastWatch_SystemNotSupported")
                     )
                   : "user_restricted" == t
                   ? a.SetState(
-                      O.Error,
+                      E.Error,
                       Object(b.f)("#BroadcastWatch_UserRestricted")
                     )
                   : "poor_upload_quality" == t
                   ? a.SetState(
-                      O.Error,
+                      E.Error,
                       Object(b.f)("#BroadcastWatch_PoorUploadQuality")
                     )
                   : "request_failed" == t
                   ? a.SetState(
-                      O.Error,
+                      E.Error,
                       Object(b.f)("#BroadcastWatch_RequestFailed")
                     )
                   : a.SetState(
-                      O.Error,
+                      E.Error,
                       Object(b.f)("#BroadcastWatch_NotAvailable")
                     ))
               : a.SetState(
-                  O.Error,
+                  E.Error,
                   Object(b.f)("#BroadcastWatch_RequestFailed")
                 );
           });
         }
         GetClipManifest(r, n) {
           return Object(o.a)(this, void 0, void 0, function* () {
-            r.SetState(O.Loading, "");
+            r.SetState(E.Loading, "");
             var e = {
               clipid: r.m_clipID,
               watchlocation: n,
@@ -56363,23 +56410,23 @@ var CLSTAMP = "7180652";
               console.error(e), console.log("Failed to get clip manifest!");
             }
             t && 200 == t.status && 1 == (e = t.data).success
-              ? (r.SetState(O.Ready), (r.m_data = e), this.LoadClip(r))
+              ? (r.SetState(E.Ready), (r.m_data = e), this.LoadClip(r))
               : r.SetState(
-                  O.Error,
+                  E.Error,
                   Object(b.f)("#BroadcastWatch_RequestFailed")
                 );
           });
         }
         GetVODManifest(t, e) {
           return Object(o.a)(this, void 0, void 0, function* () {
-            t.SetState(O.Loading, "");
+            t.SetState(E.Loading, "");
             var e = yield T.a.Get().LoadVODForAppID(t.m_nAppIDVOD);
             e
-              ? (t.SetState(O.Ready),
+              ? (t.SetState(E.Ready),
                 (t.m_manifestURL = e.video_url),
                 this.LoadVOD(t))
               : t.SetState(
-                  O.Error,
+                  E.Error,
                   Object(b.f)("#BroadcastWatch_RequestFailed")
                 );
           });
@@ -56413,7 +56460,7 @@ var CLSTAMP = "7180652";
           e.Stop();
           let r = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
           r &&
-            r.m_eWatchState != O.Loading &&
+            r.m_eWatchState != E.Loading &&
             (r.m_bWebRTC && t && (r.m_bWebRTC = !1),
             this.GetBroadcastManifest(r, e.GetWatchLocation()));
         }
@@ -56673,7 +56720,7 @@ var CLSTAMP = "7180652";
                   e.m_strCDNAuthUrlParameters,
                   e.m_data.hls_url
                 ))
-              : ((this.m_player = new E(this.m_elVideo)),
+              : ((this.m_player = new O(this.m_elVideo)),
                 this.m_player.PlayWebRTC(
                   this.m_steamIDBroadcast,
                   e.m_ulViewerToken,
@@ -56726,9 +56773,9 @@ var CLSTAMP = "7180652";
         }
         Play() {
           var e = this.GetBroadcastState();
-          e == O.None || this.IsBroadcastClip()
+          e == E.None || this.IsBroadcastClip()
             ? G.StartVideo(this)
-            : e == O.Ready &&
+            : e == E.Ready &&
               (G.SetActiveVideo(this),
               this.m_player
                 ? this.m_player.Play()
@@ -57189,8 +57236,8 @@ var CLSTAMP = "7180652";
       var y = r("+jbA"),
         C = r("Mgs7"),
         B = r("YLyR"),
-        E = r("Jqb/"),
-        O = r("ka0M"),
+        O = r("Jqb/"),
+        E = r("ka0M"),
         w = r("6Y59"),
         A = r("0OaU"),
         T = r("5E+2"),
@@ -57251,8 +57298,8 @@ var CLSTAMP = "7180652";
               this.state.bIsOpen ? this.HideMenu() : this.ShowMenu(),
               e.stopPropagation(),
               e.preventDefault())
-            : Object(O.d)(
-                c.createElement(E.e, {
+            : Object(E.d)(
+                c.createElement(O.e, {
                   strTitle: Object(R.f)("#EventDisplay_Share_NotLoggedIn"),
                   strDescription: Object(R.f)(
                     "#EventDisplay_Share_NotLoggedIn_Description"
@@ -57420,9 +57467,9 @@ var CLSTAMP = "7180652";
                       : a === _.b.k_ENotifyFlagByPush &&
                         this.TrackEventAction(p.a.k_eReminder_MobilePush));
               } catch (e) {
-                Object(O.c)(
+                Object(E.c)(
                   c.createElement(
-                    E.g,
+                    O.g,
                     {
                       strTitle: Object(R.f)(
                         n
@@ -58775,8 +58822,8 @@ var CLSTAMP = "7180652";
           return l;
         });
       var B = r("q1tI"),
-        p = r("BBEf"),
-        E = (r("3+zv"), r("8KAw")),
+        p = (r("kyHq"), r("BBEf")),
+        O = (r("3+zv"), r("8KAw")),
         h = r("TTph"),
         a = r("C4Nl"),
         i = r("35zc"),
@@ -58805,8 +58852,8 @@ var CLSTAMP = "7180652";
         );
       }
       function s(e, t, r, n) {
-        const a = E.b.Get(),
-          i = Object(E.e)(e, t, r),
+        const a = O.b.Get(),
+          i = Object(O.e)(e, t, r),
           [s, o] = Object(B.useState)(!a.BHasContentHubData(i)),
           [l, c] = Object(B.useState)(a.GetTitle(i)),
           [d, u] = Object(B.useState)(a.GetMainCapsuleList(i)),
@@ -59295,10 +59342,10 @@ var CLSTAMP = "7180652";
         h = r("gyoR"),
         C = r("6Y59"),
         B = r("TLQK"),
-        E = r("lkRc"),
+        O = r("lkRc"),
         _ = r("55Ip"),
         b = r("TQGK"),
-        O = r("WF3T"),
+        E = r("WF3T"),
         g = r("KEpR"),
         w = r("TAM5"),
         A = r("5izx"),
@@ -59350,9 +59397,9 @@ var CLSTAMP = "7180652";
         }
         Init() {
           return Object(d.a)(this, void 0, void 0, function* () {
-            const e = B.b.GetLanguageListForRealms([E.c.EREALM]);
+            const e = B.b.GetLanguageListForRealms([O.c.EREALM]);
             e.forEach((e) => this.m_mapLangToNewsCurators.set(e, []));
-            var t = E.c.STORE_BASE_URL + "events/ajaxgetnewscurators",
+            var t = O.c.STORE_BASE_URL + "events/ajaxgetnewscurators",
               r = { origin: self.origin };
             const n = yield o.a.get(t, { params: r });
             Object(f.G)(() => {
@@ -59477,8 +59524,8 @@ var CLSTAMP = "7180652";
               0 <= this.props.rgCorporaToSearch.indexOf("dlc") &&
                 (e.push("dlc"), e.push("music"));
             var r = {
-                cc: E.c.COUNTRY,
-                l: E.c.LANGUAGE,
+                cc: O.c.COUNTRY,
+                l: O.c.LANGUAGE,
                 realm: c.g.k_ESteamRealmGlobal,
                 origin: self.origin,
                 f: "jsonfull",
@@ -59489,7 +59536,7 @@ var CLSTAMP = "7180652";
                   .Get()
                   .GetExcludedContentDescriptor(),
               },
-              n = `${E.c.STORE_BASE_URL}search/suggest`;
+              n = `${O.c.STORE_BASE_URL}search/suggest`;
             const a = yield o.a.get(n, { params: r, withCredentials: !0 });
             if (
               !(t < this.m_mapHighestReceivedRequestIDFromBackEnd.get("apps"))
@@ -59921,13 +59968,13 @@ var CLSTAMP = "7180652";
                     r
                   ),
                   onOK: () =>
-                    Object(O.b)().UpdateEventBlockFromCalendarEvent(t, !1),
+                    Object(E.b)().UpdateEventBlockFromCalendarEvent(t, !1),
                 },
                 S.createElement(
                   "a",
                   {
-                    href: E.c.STORE_BASE_URL + "account/emailoptout/app",
-                    target: E.c.IN_CLIENT ? void 0 : "_blank",
+                    href: O.c.STORE_BASE_URL + "account/emailoptout/app",
+                    target: O.c.IN_CLIENT ? void 0 : "_blank",
                   },
                   Object(B.f)("#EventCalendar_ManageMutedSources")
                 )
@@ -59937,7 +59984,7 @@ var CLSTAMP = "7180652";
           }
           OnUnMuteButton() {
             var e = this.props["calendarEvent"];
-            Object(O.b)().UpdateEventBlockFromCalendarEvent(e, !0);
+            Object(E.b)().UpdateEventBlockFromCalendarEvent(e, !0);
           }
           HideAllEventsOfMyType() {
             const e = this.props["eventModel"];
@@ -59947,7 +59994,7 @@ var CLSTAMP = "7180652";
             this.GetVisibilityStore().SetEventTypeGroupAllowed(t, !1);
           }
           GetVisibilityStore() {
-            return Object(O.b)().m_visibilityStore;
+            return Object(E.b)().m_visibilityStore;
           }
           AddContextMenuForSource(e, t, r, n = !0) {
             this.GetVisibilityStore().BIsGameSourceAllowed(t) &&
@@ -59991,8 +60038,8 @@ var CLSTAMP = "7180652";
             let n = [];
             var a = r.GetSource(),
               i = r.unique_id,
-              s = E.c.EREALM === c.g.k_ESteamRealmChina;
-            const o = Object(O.b)();
+              s = O.c.EREALM === c.g.k_ESteamRealmChina;
+            const o = Object(E.b)();
             o.BIsGlobalCalendar() &&
               (a &&
                 a & ae.a.k_eLibrary &&
@@ -60054,7 +60101,7 @@ var CLSTAMP = "7180652";
                   )
                 )
               ),
-              E.h.logged_in &&
+              O.h.logged_in &&
                 (T.a.Get().BIsEventBlocked(r)
                   ? n.push(
                       S.createElement(
@@ -60145,7 +60192,7 @@ var CLSTAMP = "7180652";
                       key: t.GID + "goto",
                       onSelected: () =>
                         (window.location.href = Object(pe.f)(
-                          E.c.STORE_BASE_URL + "app/" + t.appid
+                          O.c.STORE_BASE_URL + "app/" + t.appid
                         )),
                     },
                     Object(B.f)("#EventDisplay_ViewStorePage")
@@ -60184,8 +60231,8 @@ var CLSTAMP = "7180652";
         (t[(t.Loading = 1)] = "Loading"),
         (t[(t.Loaded = 2)] = "Loaded");
       let Be = be.NotLoaded,
-        Ee = [];
-      function Oe(t) {
+        Oe = [];
+      function Ee(t) {
         if (Be != be.Loaded) {
           if (Be == be.NotLoaded) {
             let e = document.createElement("script");
@@ -60194,13 +60241,13 @@ var CLSTAMP = "7180652";
             t.parentNode.insertBefore(e, t),
               (window.onYouTubeIframeAPIReady = we);
           }
-          Ee.findIndex((e) => t == e) < 0 && Ee.push(t);
+          Oe.findIndex((e) => t == e) < 0 && Oe.push(t);
         } else t();
       }
       function we() {
         Be = be.Loaded;
-        for (var e of Ee) e();
-        Ee = [];
+        for (var e of Oe) e();
+        Oe = [];
       }
       class Ae extends S.Component {
         constructor(e) {
@@ -60214,7 +60261,7 @@ var CLSTAMP = "7180652";
         }
         componentWillUnmount() {
           var e;
-          this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), Ce.b(Ee, e);
+          this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), Ce.b(Oe, e);
         }
         shouldComponentUpdate(e, t) {
           if (!this.m_player) return !1;
@@ -60251,7 +60298,7 @@ var CLSTAMP = "7180652";
           this.m_playerContainer != e &&
             ((this.m_playerContainer = e),
             this.DestroyPlayer(),
-            this.m_playerContainer && Oe(this.OnYoutubeScriptsReady));
+            this.m_playerContainer && Ee(this.OnYoutubeScriptsReady));
         }
         OnYoutubeScriptsReady() {
           this.CreatePlayer(this.props);
@@ -60400,7 +60447,7 @@ var CLSTAMP = "7180652";
           const [e, r] = S.useState(!1);
           if (
             (S.useEffect(() => {
-              t.preloadYoutubeScripts && Oe(() => {});
+              t.preloadYoutubeScripts && Ee(() => {});
             }, [t.preloadYoutubeScripts]),
             e)
           )
@@ -60473,7 +60520,7 @@ var CLSTAMP = "7180652";
           if (!t) return null;
           if (12 === this.props.eventModel.type) return null;
           if ("youtube" !== e) return null;
-          var r = Object(v.d)(E.c.LANGUAGE),
+          var r = Object(v.d)(O.c.LANGUAGE),
             e =
               Object(Me.a)() && 14 == this.props.eventModel.GetEventType()
                 ? se.c.full
@@ -60524,7 +60571,7 @@ var CLSTAMP = "7180652";
             } = this.props,
             a = oe.a.Get();
           var i = t.GetGameCapsule(),
-            s = Object(v.d)(E.c.LANGUAGE),
+            s = Object(v.d)(O.c.LANGUAGE),
             o = e.has_live_stream,
             l = e.has_live_stream,
             c =
@@ -60784,7 +60831,7 @@ var CLSTAMP = "7180652";
         ze = Object(a.a)((e) => {
           const { eventModel: t, calendarEvent: r, className: n } = e;
           var a =
-              Object(O.b)().GetStoreInitializationTimestamp().getTime() / 1e3,
+              Object(E.b)().GetStoreInitializationTimestamp().getTime() / 1e3,
             i = t ? t.GetStartTimeAndDateUnixSeconds() : r.start_time,
             s = t && Object(Re.a)(t.type) && t.GetEndTimeAndDateUnixSeconds();
           if (s && i < a && a < s) {
@@ -60841,7 +60888,7 @@ var CLSTAMP = "7180652";
         je = Object(a.a)((n) => {
           var e = n.calendarEvent.GetSource();
           const a = [],
-            t = Object(O.b)().m_visibilityStore;
+            t = Object(E.b)().m_visibilityStore;
           e & ae.a.k_eLibrary && t.BIsGameSourceAllowed(g.c.k_ELibrary)
             ? a.push({
                 id: ae.a.k_eLibrary,
@@ -60927,7 +60974,7 @@ var CLSTAMP = "7180652";
               ((a = e),
               (i = n),
               a.BIsUserLoggedIn()
-                ? E.h.is_limited
+                ? O.h.is_limited
                   ? he.a.Vote_LimitedUser
                   : !0 === i
                   ? he.a.Vote_Positive
@@ -60936,7 +60983,7 @@ var CLSTAMP = "7180652";
                   : he.a.Vote_Ready
                 : he.a.Vote_NotLoggedIn),
             a = t.GetForumTopicURL(),
-            i = E.c.EREALM !== c.g.k_ESteamRealmChina && a;
+            i = O.c.EREALM !== c.g.k_ESteamRealmChina && a;
           const s =
             0 < t.live_stream_viewer_count
               ? t.live_stream_viewer_count
@@ -61336,7 +61383,7 @@ var CLSTAMP = "7180652";
                   )
                 )
               : null;
-          var a = Boolean(0 === n.appid && E.h.accountid);
+          var a = Boolean(0 === n.appid && O.h.accountid);
           return S.createElement(
             "div",
             { className: tt.a.EventTileCarouselTitleContainer },
@@ -61445,9 +61492,9 @@ var CLSTAMP = "7180652";
           var t;
           let r = new Array();
           return (
-            null !== (t = E.c.SUPPORTED_LANGUAGES) && void 0 !== t && t.length
-              ? (r = E.c.SUPPORTED_LANGUAGES.map((e) => e.localizedName))
-              : r.push(Object(B.f)("#Language_" + E.c.LANGUAGE)),
+            null !== (t = O.c.SUPPORTED_LANGUAGES) && void 0 !== t && t.length
+              ? (r = O.c.SUPPORTED_LANGUAGES.map((e) => e.localizedName))
+              : r.push(Object(B.f)("#Language_" + O.c.LANGUAGE)),
             l.a.createElement(
               "div",
               { className: it.a.LanguageList },
@@ -61462,8 +61509,8 @@ var CLSTAMP = "7180652";
             (r = JSON.parse(localStorage.getItem(t))) && r.bDismissed
           );
           if (n) return null;
-          if (E.c.EREALM === c.g.k_ESteamRealmChina) return null;
-          var i = E.c.STORE_BASE_URL + "account/languagepreferences/";
+          if (O.c.EREALM === c.g.k_ESteamRealmChina) return null;
+          var i = O.c.STORE_BASE_URL + "account/languagepreferences/";
           return l.a.createElement(
             "div",
             { className: it.a.LanguageFeedNoteBucket },
@@ -61549,7 +61596,7 @@ var CLSTAMP = "7180652";
         constructor() {
           super(...arguments),
             (this.state = {
-              bUserIsLoggedIn: E.h.logged_in,
+              bUserIsLoggedIn: O.h.logged_in,
               nVisibleHeight: 0,
               nScrollTop: 0,
               bControlBarIsCollapsed: ht(),
@@ -61616,21 +61663,21 @@ var CLSTAMP = "7180652";
         GetCurrentHubBannerHeight(e) {
           var t,
             r = e && !Object(Me.a)();
-          return Object(O.b)().GetCollectionID()
+          return Object(E.b)().GetCollectionID()
             ? (function (t, e) {
                 if (!t) return 0;
                 var r = Je().find((e) => e.collection === t);
                 return r ? (e ? r.largeHeight : r.smallHeight) : 0;
-              })(Object(O.b)().GetCollectionID(), r)
-            : Object(O.b)().BIsSaleCalendar()
-            ? ((t = Object(O.b)().GetSaleID()),
+              })(Object(E.b)().GetCollectionID(), r)
+            : Object(E.b)().BIsSaleCalendar()
+            ? ((t = Object(E.b)().GetSaleID()),
               (e = r),
               t && H.b.GetClanEventModel(t)
                 ? e
                   ? Number(Ke.a.simpleTitleLargeHeight)
                   : Number(Ke.a.simpleTitleSmallHeight)
                 : 0)
-            : Object(O.b)().BIsSingleSourceCalendar()
+            : Object(E.b)().BIsSingleSourceCalendar()
             ? parseInt(
                 r
                   ? Xe.a.strJumboHubBannerHeight
@@ -61640,7 +61687,7 @@ var CLSTAMP = "7180652";
         }
         BShowLogInBanner() {
           return Boolean(
-            !this.state.bUserIsLoggedIn && Object(O.b)().BIsGlobalCalendar()
+            !this.state.bUserIsLoggedIn && Object(E.b)().BIsGlobalCalendar()
           );
         }
         GetCurrentHeaderHeights(e) {
@@ -61733,7 +61780,7 @@ var CLSTAMP = "7180652";
         UpdateDocumentUI() {
           var e, t;
           let r, n;
-          const a = Object(O.b)();
+          const a = Object(E.b)();
           if (a.BIsGlobalCalendar()) {
             var i = Object(w.b)(
               this.BShowFutureView() ? w.a.Upcoming : w.a.Default
@@ -61778,7 +61825,7 @@ var CLSTAMP = "7180652";
                         ? void 0
                         : t.GetAccountID()) &&
                     b.a.GetClanInfoByClanAccountID(t)) && t.group_name),
-              (n = c && c.GetNameWithFallback(Object(v.d)(E.c.LANGUAGE))));
+              (n = c && c.GetNameWithFallback(Object(v.d)(O.c.LANGUAGE))));
           }
           let l = Object(B.f)("#EventCalendar_TabTitle_Global");
           r &&
@@ -61847,12 +61894,12 @@ var CLSTAMP = "7180652";
                 saleid: this.props.filter_to_saleid,
                 bSectionByDay: this.props.section_by_day,
               },
-              t = Object(O.c)(e);
-            const r = Object(O.b)();
+              t = Object(E.c)(e);
+            const r = Object(E.b)();
             T.a.Get();
-            var n = Boolean(this.state.bUserIsLoggedIn && E.h.accountid),
+            var n = Boolean(this.state.bUserIsLoggedIn && O.h.accountid),
               e = r.BIsGlobalCalendar() && n ? "local" : "session",
-              t = r.BIsGlobalCalendar() ? "U" + E.h.accountid : t;
+              t = r.BIsGlobalCalendar() ? "U" + O.h.accountid : t;
             r.m_visibilityStore.Init(
               n,
               this.BShowUpdatesOnly(),
@@ -61866,13 +61913,13 @@ var CLSTAMP = "7180652";
               e
             ),
               lt.m_bInitialLoad &&
-                ((a = Object(E.f)("metadatainfo", "application_config")),
+                ((a = Object(O.f)("metadatainfo", "application_config")),
                 r.SetCollectionMetaData(
                   r.ValidateCollectionMetadata(a) ? a : null
                 ));
             var a =
               lt.m_bInitialLoad &&
-              Object(E.f)("initialEvents", "application_config");
+              Object(O.f)("initialEvents", "application_config");
             a
               ? (yield r.RegisterCalendarEventsAndModels(a),
                 (lt.m_bInitialLoad = !1))
@@ -61962,7 +62009,7 @@ var CLSTAMP = "7180652";
         }
         ResetAllFilters() {
           Object(at.b)(this.props.history, "updates", void 0),
-            Object(O.b)().m_visibilityStore.InitDefaultCheckboxes(
+            Object(E.b)().m_visibilityStore.InitDefaultCheckboxes(
               this.state.bUserIsLoggedIn,
               !1
             );
@@ -61984,7 +62031,7 @@ var CLSTAMP = "7180652";
               : this.state.nDisappearingHeaderTop +
                 this.state.nSteamNavHeaderHeight,
             a = a ? 0 : this.state.nDisappearingHeaderTop + e,
-            e = Object(O.b)().m_visibilityStore.BAreAnyEventsFiltered(
+            e = Object(E.b)().m_visibilityStore.BAreAnyEventsFiltered(
               this.state.bUserIsLoggedIn
             )
               ? this.ResetAllFilters
@@ -62072,7 +62119,7 @@ var CLSTAMP = "7180652";
                       nScrollTop: this.state.nScrollTop,
                       nDisappearingHeaderVisibleHeight: a,
                       bUserIsLoggedIn: Boolean(
-                        this.state.bUserIsLoggedIn && E.h.accountid
+                        this.state.bUserIsLoggedIn && O.h.accountid
                       ),
                     })
                   )
@@ -62095,7 +62142,7 @@ var CLSTAMP = "7180652";
         t = (lt = Object(d.b)([a.a], t));
       Object(n.i)(t);
       const bt = Object(a.a)((r) => {
-        const n = Object(O.b)(),
+        const n = Object(E.b)(),
           a = n.BHasCollectionMetaData(),
           [i, s] = S.useState(!1);
         if (
@@ -62127,7 +62174,7 @@ var CLSTAMP = "7180652";
             c &&
               ((e = c.GetImageURLWithFallback(
                 "capsule",
-                Object(v.d)(E.c.LANGUAGE),
+                Object(v.d)(O.c.LANGUAGE),
                 se.c.capsule_main
               )),
               (t = c.GetSaleURL()));
@@ -62153,7 +62200,7 @@ var CLSTAMP = "7180652";
             if (!e) return null;
             let r = H.b.GetClanEventModel(e);
             return r
-              ? ((e = Object(v.d)(E.c.LANGUAGE)),
+              ? ((e = Object(v.d)(O.c.LANGUAGE)),
                 S.createElement(Qe, {
                   largeHeader: t,
                   titleToken: r.GetNameWithFallback(e),
@@ -62200,7 +62247,7 @@ var CLSTAMP = "7180652";
       let gt = class extends S.Component {
         GetCurrentSectionLayout() {
           let n = 0;
-          return Object(O.b)()
+          return Object(E.b)()
             .GetCalendarSections(this.props.bShowFutureViewOnly)
             .map((e) => {
               var t = Math.max(n, e.nTopOffset),
@@ -62209,7 +62256,7 @@ var CLSTAMP = "7180652";
             });
         }
         GetMergeEventsType() {
-          const e = Object(O.b)();
+          const e = Object(E.b)();
           var t = e.GetCollectionID();
           return e.BIsSingleSourceCalendar() || t === w.a.Steam
             ? "none"
@@ -62218,7 +62265,7 @@ var CLSTAMP = "7180652";
             : "full";
         }
         GetCuratorSuggestionSettings(e) {
-          if (E.h.accountid && A.a.bIsCuratorsEnabled)
+          if (O.h.accountid && A.a.bIsCuratorsEnabled)
             if (e.BIsGlobalCalendar() && !this.props.bShowFutureViewOnly) {
               if (e.m_visibilityStore.BIsGameSourceAllowed(g.c.k_ECurator))
                 return {
@@ -62239,7 +62286,7 @@ var CLSTAMP = "7180652";
           };
         }
         render() {
-          const e = Object(O.b)(),
+          const e = Object(E.b)(),
             {
               bShowFutureViewOnly: u,
               bShowUpdatesOnly: t,
@@ -62318,8 +62365,8 @@ var CLSTAMP = "7180652";
             e.GetCollectionID() === w.a.Press &&
               o.splice(0, 0, S.createElement(ot, { key: "LanguageFeedRow" }));
           var l = i[0].rtSectionStart,
-            i = Object(O.b)().GetCurrentlyLoadedEventCount(0, l),
-            l = Object(O.b)().GetCurrentlyLoadedEventCount(l);
+            i = Object(E.b)().GetCurrentlyLoadedEventCount(0, l),
+            l = Object(E.b)().GetCurrentlyLoadedEventCount(l);
           let c =
               i &&
               (i.nCount
@@ -62422,7 +62469,7 @@ var CLSTAMP = "7180652";
       let ft = class extends S.Component {
         render() {
           var e = this.props.rgCalendarItems[0].start_time,
-            e = Object(O.b)().GetCurrentlyLoadedEventCount(e);
+            e = Object(E.b)().GetCurrentlyLoadedEventCount(e);
           return this.props.rgCalendarItems.length <= 1
             ? null
             : S.createElement(
@@ -62474,8 +62521,8 @@ var CLSTAMP = "7180652";
                         bSuppressHoverEffects: n,
                         mode: 1 < t.length ? "upcoming" : "wide",
                         bHideGameTitle:
-                          Object(O.b)().BIsSingleSourceCalendar() &&
-                          Object(O.b)().BEventMatchCalendarSingleSource(e),
+                          Object(E.b)().BIsSingleSourceCalendar() &&
+                          Object(E.b)().BEventMatchCalendarSingleSource(e),
                       })
                     )
                   ),
@@ -62526,7 +62573,7 @@ var CLSTAMP = "7180652";
             });
         }
         get cachedCalendarItems() {
-          return Object(O.b)().GetCalendarItemsInTimeRange(
+          return Object(E.b)().GetCalendarItemsInTimeRange(
             Object(ne.a)(() => this.props.rtSectionStart),
             Object(ne.a)(() => this.props.rtSectionEnd)
           );
@@ -62560,7 +62607,7 @@ var CLSTAMP = "7180652";
             bSuppressHoverEffects: r,
             strMergeEvents: n,
           } = this.props;
-          const a = Object(O.b)();
+          const a = Object(E.b)();
           let i = null;
           if ("none" !== n) {
             i = new Map();
@@ -62738,7 +62785,7 @@ var CLSTAMP = "7180652";
       Object(d.b)([f.n], Mt.prototype, "cachedCalendarItems", null),
         (Mt = ct = Object(d.b)([a.a], Mt));
       const yt = (e) => {
-          e = Object(O.b)().GetTimeEdgeForDirection(
+          e = Object(E.b)().GetTimeEdgeForDirection(
             e.bShowEarliestFirst ? "forward" : "backward",
             void 0
           );
@@ -62755,7 +62802,7 @@ var CLSTAMP = "7180652";
                   { className: Xe.a.LoadingProgress },
                   Object(B.f)(
                     "#EventCalendar_LoadEventsProgress",
-                    Number(Object(O.b)().GetNumEventsLoaded()).toLocaleString(),
+                    Number(Object(E.b)().GetNumEventsLoaded()).toLocaleString(),
                     Object(B.g)(e)
                   )
                 ),
@@ -62799,7 +62846,7 @@ var CLSTAMP = "7180652";
           );
       var t = r("wd/R"),
         Bt = r.n(t);
-      class Et {
+      class Ot {
         constructor() {
           this.m_dateLoadTime = A.a.GetTimeNowWithOverrideAsDate();
         }
@@ -62857,13 +62904,13 @@ var CLSTAMP = "7180652";
           return e.filter((e) => this.IsCurrentlyVisible(e));
         }
       }
-      const Ot = new Et();
+      const Et = new Ot();
       class wt extends S.Component {
         render() {
           var e = this.props["specialEvent"],
-            t = window.location.href === E.c.STORE_BASE_URL + e.newshubUrl,
-            r = Et.IsCurrentlyActive(e),
-            n = Et.LocalizeDateString(e);
+            t = window.location.href === O.c.STORE_BASE_URL + e.newshubUrl,
+            r = Ot.IsCurrentlyActive(e),
+            n = Ot.LocalizeDateString(e);
           return S.createElement(
             _.b,
             { to: "/" + e.newshubUrl },
@@ -62889,7 +62936,7 @@ var CLSTAMP = "7180652";
       }
       class At extends S.Component {
         render() {
-          const e = Ot.GetVisibleSpecialEvents();
+          const e = Et.GetVisibleSpecialEvents();
           return 0 === e.length
             ? null
             : S.createElement(
@@ -62917,7 +62964,7 @@ var CLSTAMP = "7180652";
         return Object(B.j)(new Date());
       }
       const Rt = (e) => {
-          var t = E.c.PUBLIC_SHARED_URL + "images/";
+          var t = O.c.PUBLIC_SHARED_URL + "images/";
           return S.createElement(
             "div",
             { className: It.a.LegalFooter },
@@ -62926,26 +62973,26 @@ var CLSTAMP = "7180652";
               { className: It.a.mainmenu_links_china },
               S.createElement(
                 "a",
-                { href: E.c.STORE_BASE_URL + "about" },
+                { href: O.c.STORE_BASE_URL + "about" },
                 "关于蒸汽平台"
               ),
               "  |  ",
               S.createElement(
                 "a",
-                { href: E.c.STORE_BASE_URL + "steam_refunds" },
+                { href: O.c.STORE_BASE_URL + "steam_refunds" },
                 "退款政策"
               ),
               "  |  ",
               S.createElement(
                 "a",
-                { href: E.c.STORE_BASE_URL + "subscriber_agreement" },
+                { href: O.c.STORE_BASE_URL + "subscriber_agreement" },
                 "软件许可服务协议"
               ),
               "  |  ",
               S.createElement("br", null),
               S.createElement(
                 "a",
-                { href: E.c.STORE_BASE_URL + "privacy_agreement" },
+                { href: O.c.STORE_BASE_URL + "privacy_agreement" },
                 "个人信息保护政策"
               ),
               "  |  ",
@@ -63034,7 +63081,7 @@ var CLSTAMP = "7180652";
             "div",
             { className: It.a.LegalFooter },
             S.createElement("img", {
-              src: E.c.STORE_CDN_URL + "public/images/footerLogo_valve_new.png",
+              src: O.c.STORE_CDN_URL + "public/images/footerLogo_valve_new.png",
             }),
             S.createElement(
               "div",
@@ -63043,7 +63090,7 @@ var CLSTAMP = "7180652";
             )
           ),
         Nt = (e) =>
-          E.c.EREALM === c.g.k_ESteamRealmChina
+          O.c.EREALM === c.g.k_ESteamRealmChina
             ? S.createElement(Rt, null)
             : S.createElement(Dt, null);
       class zt {
@@ -63094,7 +63141,7 @@ var CLSTAMP = "7180652";
       Object(d.b)([f.C], zt.prototype, "m_curDisplay", void 0);
       let jt = class extends S.Component {
         GetVisibilityStore() {
-          return Object(O.b)().m_visibilityStore;
+          return Object(E.b)().m_visibilityStore;
         }
         OnEventTypeChange(e, t) {
           this.GetVisibilityStore().SetEventTypeGroupAllowed(e, t),
@@ -63161,7 +63208,7 @@ var CLSTAMP = "7180652";
         }
         render() {
           var e = this.props["bUserIsLoggedIn"];
-          const t = Object(O.b)();
+          const t = Object(E.b)();
           let r = !0;
           t.BIsSingleGroupCalendar()
             ? (a = b.a.GetClanInfoByClanAccountID(t.GetSingleGroupID())) &&
@@ -63273,7 +63320,7 @@ var CLSTAMP = "7180652";
                   i.a,
                   {
                     className: Xe.a.MutedSourcesGroup,
-                    href: E.c.STORE_BASE_URL + "account/emailoptout/app",
+                    href: O.c.STORE_BASE_URL + "account/emailoptout/app",
                     bDisableContextMenu: !0,
                   },
                   S.createElement(
@@ -63287,7 +63334,7 @@ var CLSTAMP = "7180652";
               S.createElement(
                 i.a,
                 {
-                  href: E.c.STORE_BASE_URL + "account/preferences",
+                  href: O.c.STORE_BASE_URL + "account/preferences",
                   bDisableContextMenu: !0,
                 },
                 S.createElement(
@@ -63372,7 +63419,7 @@ var CLSTAMP = "7180652";
                 ),
             o = "desktop_navigation" != zt.Get().GetDisplay() ? o : l,
             l = r ? null : { top: `${t}px` };
-          Object(O.b)();
+          Object(E.b)();
           let c;
           switch (zt.Get().GetDisplay()) {
             case "event_filter":
@@ -63517,7 +63564,7 @@ var CLSTAMP = "7180652";
       Pt = Object(d.b)([a.a], Pt);
       const xt = (e) => {
         var { strLabNumber: t, strForumURL: r } = e,
-          e = E.c.STORE_BASE_URL + "labs";
+          e = O.c.STORE_BASE_URL + "labs";
         return S.createElement(
           "div",
           { className: Xe.a.SideSteamLabsBannerCtn },
@@ -63529,7 +63576,7 @@ var CLSTAMP = "7180652";
               {
                 className: Xe.a.SteamLabsName,
                 href: e,
-                target: E.c.IN_CLIENT ? void 0 : "_blank",
+                target: O.c.IN_CLIENT ? void 0 : "_blank",
               },
               Object(B.f)("#SteamLabs")
             ),
@@ -63544,7 +63591,7 @@ var CLSTAMP = "7180652";
             {
               className: Xe.a.SteamLabsButton,
               href: r,
-              target: E.c.IN_CLIENT ? void 0 : "_blank",
+              target: O.c.IN_CLIENT ? void 0 : "_blank",
             },
             S.createElement(C.j, null)
           )
@@ -63553,23 +63600,23 @@ var CLSTAMP = "7180652";
       function Wt(e, t) {
         var r = Object(w.b)(e);
         if ((Object(s.a)(!!r, "Must define collection " + e), !r)) return null;
-        let n = Object(O.b)().GetCollectionID() == e,
+        let n = Object(E.b)().GetCollectionID() == e,
           a = void 0;
         switch (e) {
           case w.a.Default:
-            n = Object(O.b)().BIsGlobalCalendar() && !t;
+            n = Object(E.b)().BIsGlobalCalendar() && !t;
             break;
           case w.a.Upcoming:
-            (n = Object(O.b)().BIsGlobalCalendar() && t),
+            (n = Object(E.b)().BIsGlobalCalendar() && t),
               (a = (function () {
-                if (Object(O.b)().BIsGlobalCalendar() && E.h.logged_in) {
+                if (Object(E.b)().BIsGlobalCalendar() && O.h.logged_in) {
                   var e =
-                      Object(O.b)()
+                      Object(E.b)()
                         .GetStoreInitializationTimestamp()
                         .getTime() / 1e3,
-                    e = Object(O.b)().GetCurrentlyLoadedEventCount(e);
+                    e = Object(E.b)().GetCurrentlyLoadedEventCount(e);
                   if (e)
-                    return Object(O.b)().BHitEventHorizon("forward")
+                    return Object(E.b)().BHitEventHorizon("forward")
                       ? String(e.nCount)
                       : e.nCount + "+";
                 }
@@ -63601,10 +63648,10 @@ var CLSTAMP = "7180652";
         );
       }
       function qt(e, t) {
-        Object(O.b)().BIsCollectionCalendar(), Object(_e.f)();
+        Object(E.b)().BIsCollectionCalendar(), Object(_e.f)();
         const r = new Array();
         if ((A.a.bIsCuratorsEnabled && r.push(Wt(w.a.Press, e)), t))
-          for (const n of Ot.GetVisibleSpecialEvents())
+          for (const n of Et.GetVisibleSpecialEvents())
             r.push({
               name: Object(B.f)(n.sLocToken),
               url: n.newshubUrl,
@@ -63612,7 +63659,7 @@ var CLSTAMP = "7180652";
               key: "event_" + n.sLocToken,
             });
         return (
-          E.h.is_support &&
+          O.h.is_support &&
             (r.push(Wt(w.a.Dev_All, e)),
             r.push(Wt(w.a.Dev_Sales, e)),
             r.push(Wt(w.a.Dev_AssociatedPress, e))),
@@ -63628,7 +63675,7 @@ var CLSTAMP = "7180652";
           count: i,
           bValveOnly: e,
         } = e.element;
-        return !E.h.is_support && e
+        return !O.h.is_support && e
           ? null
           : S.createElement(
               _.b,
@@ -63728,7 +63775,7 @@ var CLSTAMP = "7180652";
           bValveOnly: s,
           icon: e,
         } = e.element;
-        return !E.h.is_support && s
+        return !O.h.is_support && s
           ? null
           : S.createElement(
               _.b,
@@ -64226,7 +64273,7 @@ var CLSTAMP = "7180652";
                         .GetSecondaryLanguages()
                         .has(e.facetValue.language)))
                 : e.facetValue.type !== M.g.k_EUserPreference ||
-                  (E.h.logged_in && u.a.Get().BIsLoaded())
+                  (O.h.logged_in && u.a.Get().BIsLoaded())
             );
           }),
             (this.m_prunedFacets = this.m_prunedFacets.filter(
@@ -64479,10 +64526,10 @@ var CLSTAMP = "7180652";
         LoadPriceStops() {
           var r, n, a;
           return Object(d.a)(this, void 0, void 0, function* () {
-            var e = Object(E.f)("pricestops", "application_config");
+            var e = Object(O.f)("pricestops", "application_config");
             if (e) this.m_priceStopInfo = e;
             else {
-              e = E.c.STORE_BASE_URL + "saleaction/ajaxgetpricestops";
+              e = O.c.STORE_BASE_URL + "saleaction/ajaxgetpricestops";
               let t;
               try {
                 if (
@@ -64784,7 +64831,7 @@ var CLSTAMP = "7180652";
               S.createElement(xt, {
                 strLabNumber: "012",
                 strForumURL:
-                  E.c.COMMUNITY_BASE_URL + "groups/SteamLabs/discussions/14/",
+                  O.c.COMMUNITY_BASE_URL + "groups/SteamLabs/discussions/14/",
               })
             )
           );
@@ -67469,17 +67516,17 @@ var CLSTAMP = "7180652";
           return "CClanFAQContent";
         }
       }
-      class E extends M {
+      class O extends M {
         constructor(e = null) {
           super(),
-            E.prototype.steamid || S.a(E.M()),
+            O.prototype.steamid || S.a(O.M()),
             M.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   steamid: {
                     n: 1,
@@ -67492,63 +67539,6 @@ var CLSTAMP = "7180652";
                     bw: S.h.writeString,
                   },
                   json_data: { n: 3, br: S.d.readString, bw: S.h.writeString },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = S.e(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return S.g(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return S.c(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          var t = new v.BinaryReader(e),
-            e = new E();
-          return E.deserializeBinaryFromReader(e, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return S.b(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new v.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          S.f(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new v.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClanFAQS_Create_Request";
-        }
-      }
-      class O extends M {
-        constructor(e = null) {
-          super(),
-            O.prototype.faq_id || S.a(O.M()),
-            M.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  faq_id: {
-                    n: 1,
-                    br: S.d.readUint64String,
-                    bw: S.h.writeUint64String,
-                  },
                 },
               }),
             O.sm_m
@@ -67584,6 +67574,63 @@ var CLSTAMP = "7180652";
         serializeBase64String() {
           var e = new v.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQS_Create_Request";
+        }
+      }
+      class E extends M {
+        constructor(e = null) {
+          super(),
+            E.prototype.faq_id || S.a(E.M()),
+            M.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: {
+                  faq_id: {
+                    n: 1,
+                    br: S.d.readUint64String,
+                    bw: S.h.writeUint64String,
+                  },
+                },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = S.e(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return S.g(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return S.c(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          var t = new v.BinaryReader(e),
+            e = new E();
+          return E.deserializeBinaryFromReader(e, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return S.b(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new v.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          S.f(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new v.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClanFAQS_Create_Response";
@@ -68845,7 +68892,7 @@ var CLSTAMP = "7180652";
         }
       }
       ((t = c = c || {}).Create = function (e, t) {
-        return e.SendMsg("ClanFAQS.Create#1", t, O, { ePrivilege: 1 });
+        return e.SendMsg("ClanFAQS.Create#1", t, E, { ePrivilege: 1 });
       }),
         (t.Delete = function (e, t) {
           return e.SendMsg("ClanFAQS.Delete#1", t, A, { ePrivilege: 1 });
@@ -69228,7 +69275,7 @@ var CLSTAMP = "7180652";
         }
         CreateFAQ(i) {
           return Object(r.a)(this, void 0, void 0, function* () {
-            const e = f.b.Init(E);
+            const e = f.b.Init(O);
             e.Body().set_steamid(u.b.CLANSTEAMID),
               e.Body().set_internal_name(i);
             let t = 2,
@@ -69917,12 +69964,12 @@ var CLSTAMP = "7180652";
           l.a.createElement("div", { className: Se.FAQViewPage }, e.children);
       var Ce = s("fpVW"),
         Be = s("kLLr"),
-        Ee = s("Qcoi"),
-        Oe = s("ZiC6");
+        Oe = s("Qcoi"),
+        Ee = s("ZiC6");
       function we(e) {
         const t = e["accountID"],
           r = l.a.useMemo(() => Be.a.InitFromAccountID(t), [t]);
-        var [n, e] = Object(Ee.b)(r.ConvertTo64BitString());
+        var [n, e] = Object(Oe.b)(r.ConvertTo64BitString());
         return l.a.createElement(
           l.a.Fragment,
           null,
@@ -69932,7 +69979,7 @@ var CLSTAMP = "7180652";
                 l.a.Fragment,
                 null,
                 l.a.createElement("img", {
-                  className: Oe.SmallAvatar,
+                  className: Ee.SmallAvatar,
                   src: e.avatar_url,
                   "data-miniprofile": "s" + r.ConvertTo64BitString(),
                 }),
@@ -72219,7 +72266,7 @@ var CLSTAMP = "7180652";
               (B.sm_m = {
                 proto: B,
                 fields: {
-                  content_descriptors_to_exclude: { n: 1, c: E, r: !0, q: !0 },
+                  content_descriptors_to_exclude: { n: 1, c: O, r: !0, q: !0 },
                 },
               }),
             B.sm_m
@@ -72260,17 +72307,17 @@ var CLSTAMP = "7180652";
           return "CStore_UserContentDescriptorPreferences";
         }
       }
-      class E extends d {
+      class O extends d {
         constructor(e = null) {
           super(),
-            E.prototype.content_descriptorid || o.a(E.M()),
+            O.prototype.content_descriptorid || o.a(O.M()),
             d.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   content_descriptorid: {
                     n: 1,
@@ -72282,62 +72329,6 @@ var CLSTAMP = "7180652";
                     br: o.d.readUint32,
                     bw: o.h.writeUint32,
                   },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = o.e(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return o.g(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return o.c(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          var t = new a.BinaryReader(e),
-            e = new E();
-          return E.deserializeBinaryFromReader(e, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return o.b(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          o.f(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_UserContentDescriptorPreferences_ContentDescriptor";
-        }
-      }
-      (class extends d {});
-      class O extends d {
-        constructor(e = null) {
-          super(),
-            O.prototype.preferences || o.a(O.M()),
-            d.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  preferences: { n: 1, c: M },
-                  tag_preferences: { n: 2, c: y },
-                  content_descriptor_preferences: { n: 3, c: B },
                 },
               }),
             O.sm_m
@@ -72373,6 +72364,62 @@ var CLSTAMP = "7180652";
         serializeBase64String() {
           var e = new a.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStore_UserContentDescriptorPreferences_ContentDescriptor";
+        }
+      }
+      (class extends d {});
+      class E extends d {
+        constructor(e = null) {
+          super(),
+            E.prototype.preferences || o.a(E.M()),
+            d.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: {
+                  preferences: { n: 1, c: M },
+                  tag_preferences: { n: 2, c: y },
+                  content_descriptor_preferences: { n: 3, c: B },
+                },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = o.e(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return o.g(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return o.c(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          var t = new a.BinaryReader(e),
+            e = new E();
+          return E.deserializeBinaryFromReader(e, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return o.b(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          o.f(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStore_GetStorePreferences_Response";
@@ -72544,6 +72591,16 @@ var CLSTAMP = "7180652";
                 proto: I,
                 fields: {
                   prompt: { n: 1, br: o.d.readBool, bw: o.h.writeBool },
+                  feedback_eligible: {
+                    n: 2,
+                    br: o.d.readBool,
+                    bw: o.h.writeBool,
+                  },
+                  existing_feedback: {
+                    n: 3,
+                    br: o.d.readEnum,
+                    bw: o.h.writeEnum,
+                  },
                 },
               }),
             I.sm_m
@@ -72663,7 +72720,7 @@ var CLSTAMP = "7180652";
           });
         }),
         (t.GetStorePreferences = function (e, t) {
-          return e.SendMsg("Store.GetStorePreferences#1", t, O, {
+          return e.SendMsg("Store.GetStorePreferences#1", t, E, {
             ePrivilege: 1,
           });
         }),
@@ -73195,7 +73252,7 @@ var CLSTAMP = "7180652";
       const y = new t.a("ScrollSnap").Debug;
       let C = !1;
       let B;
-      function E(e) {
+      function O(e) {
         if (!e) return { left: 0, top: 0, right: 0, bottom: 0 };
         if (!("ownerDocument" in e))
           return {
@@ -73230,15 +73287,15 @@ var CLSTAMP = "7180652";
           bottom: t + e.offsetHeight,
         };
       }
-      function O(e, t) {
+      function E(e, t) {
         return "x" == t
           ? [e.left, e.right, e.right - e.left]
           : [e.top, e.bottom, e.bottom - e.top];
       }
       function w(e, t, r, n) {
-        var [a, i, s] = O(e, n),
-          [o, e, t] = O(t, n),
-          [r, n] = O(r, n);
+        var [a, i, s] = E(e, n),
+          [o, e, t] = E(t, n),
+          [r, n] = E(r, n);
         return a < o && e < i
           ? 0
           : (a < o && s <= t) || (e < i && t < s)
@@ -73289,7 +73346,7 @@ var CLSTAMP = "7180652";
           y("Scrolling Into View:", t);
         let i = [],
           s = t,
-          o = E(t),
+          o = O(t),
           l = null != a ? a : Number.MAX_VALUE;
         for (; s; ) {
           let e = Object(_.m)(s);
@@ -73306,7 +73363,7 @@ var CLSTAMP = "7180652";
                     bottom: A(d.scrollMarginBottom),
                   }
                 : { left: 0, right: 0, top: 0, bottom: 0 },
-            d = E(e),
+            d = O(e),
             d = T(e, d);
           let t = N(e),
             r = { element: e, left: 0, top: 0 };
@@ -73522,7 +73579,7 @@ var CLSTAMP = "7180652";
       class j {
         constructor(e, t, r) {
           (this.m_rgChildren = []),
-            (this.m_iActiveChild = -1),
+            (this.m_iLastActiveChildIndex = -1),
             (this.m_bChildrenSorted = !1),
             (this.m_bAutoFocusChild = !1),
             (this.m_bMounted = !1),
@@ -73686,10 +73743,10 @@ var CLSTAMP = "7180652";
             this.m_bMounted &&
               e.BFocusWithin() &&
               (Object(m.a)(
-                -1 == this.m_iActiveChild && this.BFocusWithin(),
+                !this.m_ActiveChild && this.BFocusWithin(),
                 "Invalid focus state in AddChild"
               ),
-              (this.m_iActiveChild = this.m_rgChildren.length - 1));
+              this.SetActiveChild(this.m_rgChildren.length - 1));
         }
         OnMount(t) {
           (this.m_element = t),
@@ -73710,7 +73767,7 @@ var CLSTAMP = "7180652";
               (this.EnsureChildrenSorted(),
               (e = this.m_rgChildren.findIndex((e) => e.BWantsAutoFocus()))),
               (this.m_Properties.autoFocus || t || -1 !== e) &&
-                ((this.m_iActiveChild = e),
+                (this.SetActiveChild(e),
                 !this.m_Parent || this.m_Parent.m_element
                   ? this.BTakeFocus(o.c.APPLICATION)
                   : (this.m_Parent.m_bAutoFocusChild = !0));
@@ -73718,7 +73775,7 @@ var CLSTAMP = "7180652";
             !this.m_rgChildren.length ||
               (-1 !=
                 (t = this.m_rgChildren.findIndex((e) => e.BFocusWithin())) &&
-                ((this.m_iActiveChild = t),
+                (this.SetActiveChild(t),
                 Object(m.a)(
                   this.m_bFocusWithin,
                   "Child has focus, we should be m_bFocusWithin"
@@ -73772,11 +73829,11 @@ var CLSTAMP = "7180652";
               }));
         }
         RemoveChild(e) {
-          e = this.m_rgChildren.indexOf(e);
-          Object(m.a)(-1 !== e, "Child was not found to remove"),
-            -1 !== e &&
-              (e <= this.m_iActiveChild && this.m_iActiveChild--,
-              this.m_rgChildren.splice(e, 1));
+          var t = this.m_rgChildren.indexOf(e);
+          Object(m.a)(-1 !== t, "Child was not found to remove"),
+            -1 !== t &&
+              (this.m_ActiveChild == e && (this.m_ActiveChild = void 0),
+              this.m_rgChildren.splice(t, 1));
         }
         UnregisterDOMEvents() {
           this.m_rgNavigationHandlers.forEach((e) => e()),
@@ -73788,35 +73845,51 @@ var CLSTAMP = "7180652";
           const e = this.GetActiveChild();
           return e ? e.GetActiveDescendant() : this;
         }
+        IsValidChildIndex(e) {
+          return 0 <= e && e < this.m_rgChildren.length;
+        }
         GetActiveChild() {
           return (
-            this.EnsureChildrenSorted(),
-            0 <= this.m_iActiveChild &&
-            this.m_iActiveChild < this.m_rgChildren.length
-              ? this.m_rgChildren[this.m_iActiveChild]
-              : null
+            this.m_ActiveChild ||
+            (this.EnsureChildrenSorted(),
+            this.IsValidChildIndex(this.m_iLastActiveChildIndex)
+              ? this.m_rgChildren[this.m_iLastActiveChildIndex]
+              : null)
           );
         }
-        EnsureChildrenSorted(e = !1) {
-          if (!this.m_bChildrenSorted || e) {
-            let e;
-            -1 != this.m_iActiveChild &&
-              (e = this.m_rgChildren[this.m_iActiveChild]),
-              this.m_rgChildren.sort((e, t) => {
-                const r = e.m_element,
-                  n = t.m_element;
-                if (!r) return n ? 1 : 0;
-                if (!n) return -1;
-                t = r.compareDocumentPosition(n);
-                return t & Node.DOCUMENT_POSITION_PRECEDING
-                  ? 1
-                  : t & Node.DOCUMENT_POSITION_FOLLOWING
-                  ? -1
-                  : 0;
-              }),
-              e && (this.m_iActiveChild = this.m_rgChildren.indexOf(e)),
-              (this.m_bChildrenSorted = !0);
+        GetActiveChildIndex() {
+          if (this.m_ActiveChild) {
+            if (
+              this.IsValidChildIndex(this.m_iLastActiveChildIndex) &&
+              this.m_rgChildren[this.m_iLastActiveChildIndex] ==
+                this.m_ActiveChild
+            )
+              return this.m_iLastActiveChildIndex;
+            this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(
+              this.m_ActiveChild
+            );
           }
+          return this.m_iLastActiveChildIndex;
+        }
+        EnsureChildrenSorted(e = !1) {
+          (this.m_bChildrenSorted && !e) ||
+            (this.m_rgChildren.sort((e, t) => {
+              const r = e.m_element,
+                n = t.m_element;
+              if (!r) return n ? 1 : 0;
+              if (!n) return -1;
+              t = r.compareDocumentPosition(n);
+              return t & Node.DOCUMENT_POSITION_PRECEDING
+                ? 1
+                : t & Node.DOCUMENT_POSITION_FOLLOWING
+                ? -1
+                : 0;
+            }),
+            this.m_ActiveChild &&
+              (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(
+                this.m_ActiveChild
+              )),
+            (this.m_bChildrenSorted = !0));
         }
         GetLastFocusElement() {
           const e = this.GetActiveChild();
@@ -73826,7 +73899,9 @@ var CLSTAMP = "7180652";
           this.m_bFocused || this.m_Tree.TransferFocus(o.c.BROWSER, this);
         }
         OnDOMBlur(e) {
-          this.m_bFocused && this.m_Tree.TransferFocus(o.c.BROWSER, null);
+          this.m_bFocused &&
+            this.m_element.ownerDocument.hasFocus() &&
+            this.m_Tree.TransferFocus(o.c.BROWSER, null);
         }
         UpdateParentActiveChild() {
           this.m_Parent &&
@@ -73895,14 +73970,17 @@ var CLSTAMP = "7180652";
               navEntryPreferPosition: o,
               resetNavOnEntry: s,
             } = this.m_Properties;
-            let e = this.m_iActiveChild;
+            let e = this.GetActiveChildIndex();
             s && void 0 !== n && (e = -1),
-              (e < 0 || e >= this.m_rgChildren.length) &&
-                ((e = 0),
-                ((l = this.GetLayout()) != h.ROW_REVERSE &&
-                  l != h.COLUMN_REVERSE &&
-                  o != v.LAST) ||
-                  (e = this.m_rgChildren.length - 1));
+              this.IsValidChildIndex(e) ||
+                ((l = this.GetLayout()),
+                (e =
+                  e >= this.m_rgChildren.length ||
+                  l == h.ROW_REVERSE ||
+                  l == h.COLUMN_REVERSE ||
+                  o == v.LAST
+                    ? this.m_rgChildren.length - 1
+                    : 0));
             let r;
             if ((o == v.MAINTAIN_X || o == v.MAINTAIN_Y || a) && i) {
               let e;
@@ -74022,10 +74100,15 @@ var CLSTAMP = "7180652";
           this.EnsureChildrenSorted(!0);
           let a;
           if (r == h.GRID)
-            a = this.FindNextFocusableChildInGrid(this.m_iActiveChild, n, t);
+            a = this.FindNextFocusableChildInGrid(
+              this.GetActiveChildIndex(),
+              n,
+              t
+            );
           else {
-            let e = this.m_iActiveChild;
-            -1 == e && (e = n == S.FORWARD ? -1 : this.m_rgChildren.length),
+            let e = this.GetActiveChildIndex();
+            this.IsValidChildIndex(e) ||
+              (e = n == S.FORWARD ? -1 : this.m_rgChildren.length),
               (a = this.FindNextFocusableChildInDirection(e, n, t));
           }
           if (a) {
@@ -74034,7 +74117,7 @@ var CLSTAMP = "7180652";
               (t =
                 ("y" == n ? window.innerHeight : window.innerWidth) /
                 (e ? 4.5 : 3.33)),
-                (e = E(a.Element));
+                (e = O(a.Element));
               if (
                 (e.top > window.innerHeight &&
                   e.bottom > window.innerHeight + t) ||
@@ -74129,7 +74212,7 @@ var CLSTAMP = "7180652";
               Object(m.a)(
                 !1,
                 "No active child for grid navigation",
-                this.m_iActiveChild,
+                this.m_iLastActiveChildIndex,
                 this.m_rgChildren.length,
                 a
               ),
@@ -74208,16 +74291,17 @@ var CLSTAMP = "7180652";
         GetChildren() {
           return (
             this.EnsureChildrenSorted(),
-            [this.m_rgChildren, this.m_iActiveChild]
+            [this.m_rgChildren, this.m_iLastActiveChildIndex]
           );
         }
         SetActiveChild(e) {
-          let t;
-          (t =
-            e instanceof j
-              ? (this.EnsureChildrenSorted(), this.m_rgChildren.indexOf(e))
-              : e),
-            (this.m_iActiveChild = t);
+          e instanceof j
+            ? (this.EnsureChildrenSorted(),
+              (this.m_ActiveChild = e),
+              (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(e)))
+            : (this.IsValidChildIndex(e) &&
+                (this.m_ActiveChild = this.m_rgChildren[e]),
+              (this.m_iLastActiveChildIndex = e));
         }
         GetDepth() {
           return this.m_nDepth;
@@ -74276,7 +74360,7 @@ var CLSTAMP = "7180652";
                 const l = a.m_element;
                 var s = i == c.NoTransform || i == c.NoTransformSparseContent;
                 if (n) {
-                  var o = s ? E(l) : l.getBoundingClientRect();
+                  var o = s ? O(l) : l.getBoundingClientRect();
                   let e = !1;
                   n = Math.max(1.4 * (o.bottom - o.top), 40);
                   ((B && performance.now() - B < 500) ||
@@ -74682,6 +74766,7 @@ var CLSTAMP = "7180652";
         constructor(e, t) {
           (this.m_onActivateCallbacks = new a.a()),
             (this.m_onDeactivateCallbacks = new a.a()),
+            (this.m_onActiveFocusStateChangedCallbacks = new a.a()),
             (this.m_lastFocusNodeXMovement = new d()),
             (this.m_lastFocusNodeYMovement = new d()),
             (this.m_Controller = e),
@@ -74731,8 +74816,16 @@ var CLSTAMP = "7180652";
         get OnDeactivateCallbacks() {
           return this.m_onDeactivateCallbacks;
         }
-        OnActivate(e = !0) {
-          e && this.TakeFocus(o.c.APPLICATION);
+        get OnActiveStateChangedCallbacks() {
+          return this.m_onActiveFocusStateChangedCallbacks;
+        }
+        OnActivate(e) {
+          this.m_onActivateCallbacks.Dispatch(this, e),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(!0, this);
+        }
+        OnDeactivate(e) {
+          this.m_onDeactivateCallbacks.Dispatch(this, e),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this);
         }
         IsActiveFocusNavTree() {
           return this.m_Controller.IsActiveFocusNavTree(this);
@@ -75312,7 +75405,7 @@ var CLSTAMP = "7180652";
     kdZy: function (e, t, r) {
       "use strict";
       r.d(t, "c", function () {
-        return O;
+        return E;
       }),
         r.d(t, "e", function () {
           return A;
@@ -76479,17 +76572,17 @@ var CLSTAMP = "7180652";
       }
       (class extends o {});
       (class extends o {});
-      class E extends o {
+      class O extends o {
         constructor(e = null) {
           super(),
-            E.prototype.chat_id || s.a(E.M()),
+            O.prototype.chat_id || s.a(O.M()),
             o.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   chat_id: {
                     n: 1,
@@ -76507,80 +76600,6 @@ var CLSTAMP = "7180652";
                     q: !0,
                     br: s.d.readUint32,
                     bw: s.h.writeRepeatedUint32,
-                  },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = s.e(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.g(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.c(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          var t = new i.BinaryReader(e),
-            e = new E();
-          return E.deserializeBinaryFromReader(e, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.b(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.f(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_GetBroadcastChatInfo_Response";
-        }
-      }
-      class O extends o {
-        constructor(e = null) {
-          super(),
-            O.prototype.chat_id || s.a(O.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  chat_id: {
-                    n: 1,
-                    br: s.d.readFixed64String,
-                    bw: s.h.writeFixed64String,
-                  },
-                  message: { n: 2, br: s.d.readString, bw: s.h.writeString },
-                  instance_id: {
-                    n: 3,
-                    br: s.d.readUint32,
-                    bw: s.h.writeUint32,
-                  },
-                  language: {
-                    n: 4,
-                    d: 0,
-                    br: s.d.readUint32,
-                    bw: s.h.writeUint32,
-                  },
-                  country_code: {
-                    n: 5,
-                    br: s.d.readString,
-                    bw: s.h.writeString,
                   },
                 },
               }),
@@ -76617,6 +76636,80 @@ var CLSTAMP = "7180652";
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_GetBroadcastChatInfo_Response";
+        }
+      }
+      class E extends o {
+        constructor(e = null) {
+          super(),
+            E.prototype.chat_id || s.a(E.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: {
+                  chat_id: {
+                    n: 1,
+                    br: s.d.readFixed64String,
+                    bw: s.h.writeFixed64String,
+                  },
+                  message: { n: 2, br: s.d.readString, bw: s.h.writeString },
+                  instance_id: {
+                    n: 3,
+                    br: s.d.readUint32,
+                    bw: s.h.writeUint32,
+                  },
+                  language: {
+                    n: 4,
+                    d: 0,
+                    br: s.d.readUint32,
+                    bw: s.h.writeUint32,
+                  },
+                  country_code: {
+                    n: 5,
+                    br: s.d.readString,
+                    bw: s.h.writeString,
+                  },
+                },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = s.e(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.g(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.c(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          var t = new i.BinaryReader(e),
+            e = new E();
+          return E.deserializeBinaryFromReader(e, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.b(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.f(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_PostChatMessage_Request";
@@ -78500,7 +78593,7 @@ var CLSTAMP = "7180652";
           );
         }),
         (r.GetBroadcastChatInfo = function (e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, E, {
+          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, O, {
             ePrivilege: 2,
           });
         }),
@@ -78908,7 +79001,7 @@ var CLSTAMP = "7180652";
           "k_BluetoothDeviceType_Gamepad"),
         (f[(f.k_BluetoothDeviceType_Keyboard = 11)] =
           "k_BluetoothDeviceType_Keyboard");
-      var v, S, M, y, C, B, E;
+      var v, S, M, y, C, B, O;
       ((v = v = v || {})[(v.Unknown = 0)] = "Unknown"),
         (v[(v.Wired = 1)] = "Wired"),
         (v[(v.Wireless = 2)] = "Wireless"),
@@ -78940,11 +79033,11 @@ var CLSTAMP = "7180652";
         (B[(B.k_EHTTPProxyMode_Automatic = 3)] = "k_EHTTPProxyMode_Automatic");
       ((B = C = C || {})[(B.SystemKey0 = 0)] = "SystemKey0"),
         (B[(B.SystemKey1 = 1)] = "SystemKey1"),
-        ((E = E = E || {})[(E.Hidden = 0)] = "Hidden"),
-        (E[(E.Notification = 1)] = "Notification"),
-        (E[(E.Overlay = 2)] = "Overlay"),
-        (E[(E.Opaque = 3)] = "Opaque"),
-        (E[(E.OverlayKeyboard = 4)] = "OverlayKeyboard");
+        ((O = O = O || {})[(O.Hidden = 0)] = "Hidden"),
+        (O[(O.Notification = 1)] = "Notification"),
+        (O[(O.Overlay = 2)] = "Overlay"),
+        (O[(O.Opaque = 3)] = "Opaque"),
+        (O[(O.OverlayKeyboard = 4)] = "OverlayKeyboard");
     },
     l2mU: function (e, t, r) {
       "use strict";
@@ -80773,9 +80866,9 @@ var CLSTAMP = "7180652";
       var B = r("q1tI"),
         h = r.n(B),
         _ = r("mgoM"),
-        E = r("qDk6"),
+        O = r("qDk6"),
         b = r("j+5p"),
-        O = r("3+zv"),
+        E = r("3+zv"),
         g = (r("MUT6"), r("9w6b")),
         w = r("xVl9"),
         n = r("XsxU"),
@@ -80936,7 +81029,7 @@ var CLSTAMP = "7180652";
                   )
             ),
             h.a.createElement(
-              E.a,
+              O.a,
               {
                 className: f.a.OtherEvents,
                 "flow-children": "column",
@@ -80979,7 +81072,7 @@ var CLSTAMP = "7180652";
               r.GetNameWithFallback(e) || "",
               r.GetCategoryAsString(),
               r.GetSummaryWithFallback(e),
-              Object(O.q)(t),
+              Object(E.q)(t),
               r.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
@@ -81084,7 +81177,7 @@ var CLSTAMP = "7180652";
         if (!r) return null;
         e = r.GetBestPurchaseOption();
         return h.a.createElement(
-          E.a,
+          O.a,
           Object.assign(
             { className: Object(A.a)(f.a.AppCapsuleCtn, "AppCapsuleCtn") },
             Object(a.a)(r, n)
@@ -81130,7 +81223,7 @@ var CLSTAMP = "7180652";
       }
       function K(e, t) {
         if (e.show_as_carousel) return 0;
-        e = Object(O.l)(e);
+        e = Object(E.l)(e);
         return e <= 0 ? 0 : e + t;
       }
       function Q(n) {
@@ -81156,7 +81249,7 @@ var CLSTAMP = "7180652";
       }
       function Y(e, t) {
         var r = Q(e),
-          n = e.show_as_carousel ? Object(O.m)(e) : K(e, t);
+          n = e.show_as_carousel ? Object(E.m)(e) : K(e, t);
         let a = 0;
         for (let e = 0; e < n; e++) a += r[e % r.length];
         return a;
@@ -81177,7 +81270,7 @@ var CLSTAMP = "7180652";
                     (function (t, e) {
                       e = e.section;
                       return B.createElement(
-                        E.a,
+                        O.a,
                         {
                           key: e.unique_id + "_" + t.GID,
                           style: {},
@@ -81255,7 +81348,7 @@ var CLSTAMP = "7180652";
                               a.show_deck_compability_details,
                             bAutoFocus: Boolean(0 == n),
                           })
-                        : ((o = a.single_item_style || O.r),
+                        : ((o = a.single_item_style || E.r),
                           B.createElement(
                             "div",
                             {
@@ -81336,7 +81429,7 @@ var CLSTAMP = "7180652";
           b = t ? [1] : Q(c);
         let g = Z(c);
         t && (1 < s || "tall" == g[0]) && (g = ["fullrow"]);
-        var f = Object(O.m)(c),
+        var f = Object(E.m)(c),
           v = c.show_as_carousel && f <= 1,
           e = $(0, g),
           t = Math.min(b[0], ee(e, s));
@@ -81409,7 +81502,7 @@ var CLSTAMP = "7180652";
             0 == n.length
               ? ((_ = m.length > i),
                 B.createElement(
-                  E.a,
+                  O.a,
                   { "flow-children": "grid", focusable: !1 },
                   a
                 ))
@@ -82601,68 +82694,18 @@ var CLSTAMP = "7180652";
         }
       }
       (class extends o {});
-      class E extends o {
-        constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new E();
-        }
-        static deserializeBinary(e) {
-          var t = new i.BinaryReader(e),
-            e = new E();
-          return E.deserializeBinaryFromReader(e, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlayer_SetAnimatedAvatar_Response";
-        }
-      }
-      (class extends o {});
       class O extends o {
         constructor(e = null) {
-          super(),
-            O.prototype.steam_deck_keyboard_skin || s.a(O.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: { steam_deck_keyboard_skin: { n: 1, c: g } },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = s.e(O.M())), O.sm_mbf;
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return O.toObject(e, this);
         }
         static toObject(e, t) {
-          return s.g(O.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return s.c(O.M(), e);
+          return new O();
         }
         static deserializeBinary(e) {
           var t = new i.BinaryReader(e),
@@ -82670,18 +82713,68 @@ var CLSTAMP = "7180652";
           return O.deserializeBinaryFromReader(e, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return s.b(O.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          s.f(O.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_SetAnimatedAvatar_Response";
+        }
+      }
+      (class extends o {});
+      class E extends o {
+        constructor(e = null) {
+          super(),
+            E.prototype.steam_deck_keyboard_skin || s.a(E.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: { steam_deck_keyboard_skin: { n: 1, c: g } },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = s.e(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.g(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.c(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          var t = new i.BinaryReader(e),
+            e = new E();
+          return E.deserializeBinaryFromReader(e, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.b(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.f(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPlayer_GetSteamDeckKeyboardSkin_Response";
@@ -85584,17 +85677,17 @@ var CLSTAMP = "7180652";
         }
       }
       (class extends o {});
-      class Ee extends o {
+      class Oe extends o {
         constructor(e = null) {
           super(),
-            Ee.prototype.is_enabled || s.a(Ee.M()),
+            Oe.prototype.is_enabled || s.a(Oe.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Ee.sm_m ||
-              (Ee.sm_m = {
-                proto: Ee,
+            Oe.sm_m ||
+              (Oe.sm_m = {
+                proto: Oe,
                 fields: {
                   is_enabled: { n: 1, br: s.d.readBool, bw: s.h.writeBool },
                   seconds: { n: 2, br: s.d.readInt32, bw: s.h.writeInt32 },
@@ -85625,57 +85718,6 @@ var CLSTAMP = "7180652";
                   },
                   block_minors: { n: 8, br: s.d.readBool, bw: s.h.writeBool },
                 },
-              }),
-            Ee.sm_m
-          );
-        }
-        static MBF() {
-          return Ee.sm_mbf || (Ee.sm_mbf = s.e(Ee.M())), Ee.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ee.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.g(Ee.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.c(Ee.M(), e);
-        }
-        static deserializeBinary(e) {
-          var t = new i.BinaryReader(e),
-            e = new Ee();
-          return Ee.deserializeBinaryFromReader(e, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.b(Ee.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Ee.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.f(Ee.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlayer_GetDurationControl_Response";
-        }
-      }
-      class Oe extends o {
-        constructor(e = null) {
-          super(),
-            Oe.prototype.games || s.a(Oe.M()),
-            o.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Oe.sm_m ||
-              (Oe.sm_m = {
-                proto: Oe,
-                fields: { games: { n: 1, c: c, r: !0, q: !0 } },
               }),
             Oe.sm_m
           );
@@ -85710,6 +85752,57 @@ var CLSTAMP = "7180652";
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetDurationControl_Response";
+        }
+      }
+      class Ee extends o {
+        constructor(e = null) {
+          super(),
+            Ee.prototype.games || s.a(Ee.M()),
+            o.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            Ee.sm_m ||
+              (Ee.sm_m = {
+                proto: Ee,
+                fields: { games: { n: 1, c: c, r: !0, q: !0 } },
+              }),
+            Ee.sm_m
+          );
+        }
+        static MBF() {
+          return Ee.sm_mbf || (Ee.sm_mbf = s.e(Ee.M())), Ee.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ee.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.g(Ee.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.c(Ee.M(), e);
+        }
+        static deserializeBinary(e) {
+          var t = new i.BinaryReader(e),
+            e = new Ee();
+          return Ee.deserializeBinaryFromReader(e, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.b(Ee.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Ee.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.f(Ee.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPlayer_LastPlayedTimes_Notification";
@@ -86189,12 +86282,12 @@ var CLSTAMP = "7180652";
           });
         }),
         (r.SetAnimatedAvatar = function (e, t) {
-          return e.SendMsg("Player.SetAnimatedAvatar#1", t, E, {
+          return e.SendMsg("Player.SetAnimatedAvatar#1", t, O, {
             ePrivilege: 1,
           });
         }),
         (r.GetSteamDeckKeyboardSkin = function (e, t) {
-          return e.SendMsg("Player.GetSteamDeckKeyboardSkin#1", t, O, {
+          return e.SendMsg("Player.GetSteamDeckKeyboardSkin#1", t, E, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
@@ -86372,13 +86465,13 @@ var CLSTAMP = "7180652";
           });
         }),
         (r.GetDurationControl = function (e, t) {
-          return e.SendMsg("Player.GetDurationControl#1", t, Ee, {
+          return e.SendMsg("Player.GetDurationControl#1", t, Oe, {
             ePrivilege: 1,
           });
         }),
         ((a = a = a || {}).NotifyLastPlayedTimesHandler = {
           name: "PlayerClient.NotifyLastPlayedTimes#1",
-          request: Oe,
+          request: Ee,
         }),
         (a.NotifyFriendNicknameChangedHandler = {
           name: "PlayerClient.NotifyFriendNicknameChanged#1",
@@ -86529,8 +86622,8 @@ var CLSTAMP = "7180652";
         y = r("nWbB"),
         C = (r("Bniq"), r("U+Q5")),
         B = r("TQGK"),
-        E = r("ee7K"),
-        O = r("TLQK"),
+        O = r("ee7K"),
+        E = r("TLQK"),
         w = r("lkRc");
       class A {
         constructor() {
@@ -86561,7 +86654,7 @@ var CLSTAMP = "7180652";
           var t = this.GetScheduleTrackByEvent(e);
           if (t && t.localized_track_image) {
             var r = Object(g.d)(w.c.LANGUAGE),
-              r = O.a.GetWithFallback(t.localized_track_image, r),
+              r = E.a.GetWithFallback(t.localized_track_image, r),
               e = this.m_mapAnnounceGIDToSaleClanID.get(e.AnnouncementGID);
             return w.c.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${r}`;
           }
@@ -86621,7 +86714,7 @@ var CLSTAMP = "7180652";
           var t = Object(g.d)(w.c.LANGUAGE),
             r = A.Get().GetScheduleTrackByEvent(e.event),
             n = A.Get().GetBrandingImageURLByEvent(e.event),
-            a = r ? O.a.GetWithFallback(r.localized_name || [], t) : "",
+            a = r ? E.a.GetWithFallback(r.localized_name || [], t) : "",
             i = null == r ? void 0 : r.background_gradient_left,
             t = null == r ? void 0 : r.background_gradient_right;
           return h.a.createElement(
@@ -86940,7 +87033,7 @@ var CLSTAMP = "7180652";
           if (!this.state.bLoaded)
             return p.createElement(q.a, {
               position: "center",
-              string: Object(O.f)("#Sale_EventSchedule"),
+              string: Object(E.f)("#Sale_EventSchedule"),
             });
           var a = this.GetScheduleCalendarStore(),
             i = me(a);
@@ -86970,13 +87063,13 @@ var CLSTAMP = "7180652";
               p.createElement(
                 "div",
                 { className: ae.a.ScheduleSectionHeader },
-                Object(O.f)("#Sale_BroadcastSchedule")
+                Object(E.f)("#Sale_BroadcastSchedule")
               ),
               i &&
                 p.createElement(
                   "div",
                   { className: $.a.preview_placeholder_section },
-                  Object(O.f)(
+                  Object(E.f)(
                     this.props.activeTab
                       ? "#Sale_EventSchedulePlaceHolder_Tab"
                       : "#Sale_EventSchedulePlaceHolder"
@@ -86992,7 +87085,7 @@ var CLSTAMP = "7180652";
                   fnVisibleEventsChanged: this.VisibleEventsChanged,
                 }),
                 Boolean(ve.BIsSomeEventSelected())
-                  ? p.createElement(Oe, {
+                  ? p.createElement(Ee, {
                       eventGID: ve.GetClanEventGID(),
                       bShowDemoButton: e.show_as_demos,
                       broadcastEmbedContext: this.props.broadcastEmbedContext,
@@ -87063,7 +87156,7 @@ var CLSTAMP = "7180652";
             t.length,
             null
           );
-          var n = Object(O.f)("#Time_Now"),
+          var n = Object(E.f)("#Time_Now"),
             a = I.a.GetTimeNowWithOverride();
           r.push(
             p.createElement(
@@ -87124,7 +87217,7 @@ var CLSTAMP = "7180652";
                 p.createElement(
                   "div",
                   { className: ae.a.NoEventsYet },
-                  Object(O.f)("#Sale_EventSchedule_NoEventsScheduled")
+                  Object(E.f)("#Sale_EventSchedule_NoEventsScheduled")
                 ),
               r
             ),
@@ -87135,7 +87228,7 @@ var CLSTAMP = "7180652";
                 bDisableContextMenu: !0,
                 href: a,
               },
-              Object(O.f)("#Sale_SeeAllUpcomingEvents")
+              Object(E.f)("#Sale_SeeAllUpcomingEvents")
             )
           );
         }
@@ -87224,7 +87317,7 @@ var CLSTAMP = "7180652";
                     { style: { height: 100 } },
                     p.createElement(q.a, {
                       size: "small",
-                      string: Object(O.f)("#Loading"),
+                      string: Object(E.f)("#Loading"),
                     })
                   )
               );
@@ -87471,7 +87564,7 @@ var CLSTAMP = "7180652";
                   eventToShow: r,
                 });
               }
-              return p.createElement(Ee, {
+              return p.createElement(Oe, {
                 key: "schedule_grid_" + t,
                 event: e,
                 eventCalendarItem: r,
@@ -87479,7 +87572,7 @@ var CLSTAMP = "7180652";
             })
           );
         }),
-        Ee = (e) => {
+        Oe = (e) => {
           const { event: t, eventCalendarItem: r } = e;
           (e = Object(g.d)(w.c.LANGUAGE)),
             (e = t.GetImageURLWithFallback("capsule", e, C.c.capsule_main));
@@ -87493,7 +87586,7 @@ var CLSTAMP = "7180652";
             p.createElement(Me, { item: r, bMiniMode: !0 })
           );
         };
-      const Oe = (e) => {
+      const Ee = (e) => {
         var { eventGID: t, bShowDemoButton: r } = e;
         if (!t || !L.b.BHasClanEventModel(t)) return null;
         const n = L.b.GetClanEventModel(t);
@@ -87594,14 +87687,14 @@ var CLSTAMP = "7180652";
             "div",
             { className: ae.a.GameButtons },
             Boolean(
-              E.a
+              O.a
                 .Get()
                 .BOwnsApp(null === t || void 0 === t ? void 0 : t.GetAppID())
             )
               ? p.createElement(
                   D.d,
                   { disabled: !0 },
-                  Object(O.f)("#Sale_InLibrary")
+                  Object(E.f)("#Sale_InLibrary")
                 )
               : p.createElement(
                   "div",
@@ -87688,7 +87781,7 @@ var CLSTAMP = "7180652";
           p.createElement(
             "div",
             { className: ae.a.Title },
-            Object(O.f)("#Sale_EventSchedule")
+            Object(E.f)("#Sale_EventSchedule")
           ),
           p.createElement(
             "div",
@@ -87726,8 +87819,8 @@ var CLSTAMP = "7180652";
                         bForce24HourClock: n.bForce24HourClock,
                       }) +
                         " " +
-                        Object(O.o)(e.startTime)
-                    : Object(O.p)(Date.now() / 1e3 - e.startTime)
+                        Object(E.o)(e.startTime)
+                    : Object(E.p)(Date.now() / 1e3 - e.startTime)
                 )
               )
             ),
@@ -87761,7 +87854,7 @@ var CLSTAMP = "7180652";
                       }),
                   },
                   p.createElement(de.h, null),
-                  Object(O.f)("#Sale_WatchNow")
+                  Object(E.f)("#Sale_WatchNow")
                 ),
               p.createElement(
                 Y.c,
@@ -87774,7 +87867,7 @@ var CLSTAMP = "7180652";
                       Object(X.a)(n.event, P.o(e)), e.preventDefault();
                     },
                   },
-                  Object(O.f)("#Sale_SeeEventDetails")
+                  Object(E.f)("#Sale_SeeEventDetails")
                 )
               ),
               r && p.createElement(Z.b, { eventModel: e, lang: a })
@@ -88244,16 +88337,16 @@ var CLSTAMP = "7180652";
       r.d(t, "a", function () {
         return n;
       });
-      var u = r("mrSG"),
+      var p = r("mrSG"),
         t = r("q1tI"),
-        m = r.n(t),
-        p = r("BC0X"),
-        h = r("exH9"),
-        _ = r("opsS"),
-        b = r("j+5p"),
-        g = r("8sdS"),
-        f = r("7Whv");
-      const n = m.a.forwardRef(function (e, t) {
+        h = r.n(t),
+        _ = r("BC0X"),
+        b = r("exH9"),
+        g = r("opsS"),
+        f = r("j+5p"),
+        v = r("8sdS"),
+        S = r("7Whv");
+      const n = h.a.forwardRef(function (e, t) {
         var {
             "flow-children": r,
             onActivate: n,
@@ -88261,45 +88354,48 @@ var CLSTAMP = "7180652";
             focusClassName: i,
             focusWithinClassName: s,
           } = e,
-          e = Object(u.c)(e, [
+          e = Object(p.c)(e, [
             "flow-children",
             "onActivate",
             "onCancel",
             "focusClassName",
             "focusWithinClassName",
           ]);
-        const { elemProps: o, navOptions: l, gamepadEvents: c } = Object(p.b)(
+        const { elemProps: o, navOptions: l, gamepadEvents: c } = Object(_.b)(
           e
         );
         let d = {};
-        r = Object(f.a)(r);
-        r != b.c.NONE && (d.layout = r),
+        r = Object(S.a)(r);
+        r != f.c.NONE && (d.layout = r),
           n &&
             ((o.onClick = o.onClick || n), (c.onOKButton = c.onOKButton || n)),
           c.onOKButton && void 0 === l.focusable && (l.focusable = !0),
-          (l.focusable || l.focusableIfNoChildren) &&
-            (o.tabIndex = o.tabIndex || 0),
           a && (c.onCancelButton = c.onCancelButton || a),
-          (o.className = Object(h.a)(o.className, "Panel", "Focusable"));
-        var { ref: n, node: a } = Object(p.h)(
+          (o.className = Object(b.a)(o.className, "Panel", "Focusable"));
+        const { ref: u, node: m } = Object(_.h)(
           Object.assign(Object.assign({}, d), l)
         );
-        Object(g.a)(c, n);
-        t = Object(_.f)(n, t);
-        return m.a.createElement(
-          p.g.Provider,
-          { value: a },
-          a
-            ? m.a.createElement(
-                p.c,
-                Object.assign({}, o, {
-                  divRef: t,
-                  node: a,
-                  focusClassName: Object(h.a)(i, "gpfocus"),
-                  focusWithinClassName: Object(h.a)(s, "gpfocuswithin"),
-                })
-              )
-            : m.a.createElement("div", Object.assign({}, o, { ref: t }))
+        Object(v.a)(c, u);
+        t = Object(g.f)(u, t);
+        return (
+          (!l.focusable && !l.focusableIfNoChildren) ||
+            (m && m.Tree.BUseVirtualFocus()) ||
+            (o.tabIndex = o.tabIndex || 0),
+          h.a.createElement(
+            _.g.Provider,
+            { value: m },
+            m
+              ? h.a.createElement(
+                  _.c,
+                  Object.assign({}, o, {
+                    divRef: t,
+                    node: m,
+                    focusClassName: Object(b.a)(i, "gpfocus"),
+                    focusWithinClassName: Object(b.a)(s, "gpfocuswithin"),
+                  })
+                )
+              : h.a.createElement("div", Object.assign({}, o, { ref: t }))
+          )
         );
       });
     },
@@ -89496,10 +89592,10 @@ var CLSTAMP = "7180652";
           return r.millerRabin(e);
         });
       function B(e, t) {
-        (this.modulus = new E(e, 16)), (this.encryptionExponent = new E(t, 16));
+        (this.modulus = new O(e, 16)), (this.encryptionExponent = new O(t, 16));
       }
-      var E = g,
-        O = {
+      var O = g,
+        E = {
           base64:
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
           encode: function (e) {
@@ -89578,7 +89674,7 @@ var CLSTAMP = "7180652";
               !!(e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)) &&
               !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
               (1 == (1 & (e = e.toString(16)).length) && (e = "0" + e),
-              O.encode(w.decode(e)))
+              E.encode(w.decode(e)))
             );
           },
           pkcs1pad2: function (e, t) {
@@ -89587,7 +89683,7 @@ var CLSTAMP = "7180652";
               r[--t] = e.charCodeAt(n--);
             for (r[--t] = 0; 2 < t; )
               r[--t] = Math.floor(254 * Math.random()) + 1;
-            return (r[--t] = 2), (r[--t] = 0), new E(r);
+            return (r[--t] = 2), (r[--t] = 0), new O(r);
           },
         };
       t.default = r;
@@ -89908,6 +90004,7 @@ var CLSTAMP = "7180652";
           (this.m_OnGamepadDetectedCallbacks = new i.a()),
             (this.m_ButtonDownCallbacks = new i.a()),
             (this.m_ButtonUpCallbacks = new i.a()),
+            (this.m_AnalogCallbacks = new i.a()),
             (this.m_NavigationTypeChangeCallbacks = new i.a()),
             (this.m_nLastActiveControllerIndex = -1),
             (this.m_ButtonRepeatHandler = new o({
@@ -89930,6 +90027,9 @@ var CLSTAMP = "7180652";
         }
         RegisterForGamepadButtonUp(e) {
           return this.m_ButtonUpCallbacks.Register(e);
+        }
+        RegisterForAnalog(e) {
+          return this.m_AnalogCallbacks.Register(e);
         }
         RegisterForNavigationTypeChange(e) {
           return this.m_NavigationTypeChangeCallbacks.Register(e);
@@ -89979,6 +90079,15 @@ var CLSTAMP = "7180652";
             t
           );
         }
+        OnAnalogPad(e, t, r, n) {
+          this.SetControllerActive((n = void 0 === n ? -1 : n)),
+            this.m_AnalogCallbacks.Dispatch(
+              e,
+              this.m_nLastActiveControllerIndex,
+              t,
+              r
+            );
+        }
         OnNavigationTypeChanged(e) {
           this.m_NavigationTypeChangeCallbacks.Dispatch(e);
         }
@@ -90025,10 +90134,10 @@ var CLSTAMP = "7180652";
           return B;
         }),
         r.d(t, "d", function () {
-          return E;
+          return O;
         }),
         r.d(t, "b", function () {
-          return O;
+          return E;
         }),
         r.d(t, "f", function () {
           return w;
@@ -90457,7 +90566,7 @@ var CLSTAMP = "7180652";
           ["video", { Constructor: W, autocloses: !1 }],
           ["previewyoutube", { Constructor: G, autocloses: !1 }],
         ]);
-      function E(e, t, r = 0) {
+      function O(e, t, r = 0) {
         var n = S.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
         if (void 0 !== e && e.startsWith(M.e))
           return n + e.substr(M.e.length + 1);
@@ -90480,7 +90589,7 @@ var CLSTAMP = "7180652";
         }
         return e;
       }
-      function O(e, t) {
+      function E(e, t) {
         if (e.startsWith("steam://")) return !1;
         if (e.startsWith("/")) return !1;
         const r = Object(v.d)(e).toLowerCase();
@@ -90538,7 +90647,7 @@ var CLSTAMP = "7180652";
         var n = Object(b.c)();
         let a = Object(d.d)(t, n),
           i;
-        O(a) &&
+        E(a) &&
           ((a =
             (S.c.IN_CLIENT ? "steam://openurl_external/" : "") +
             S.c.COMMUNITY_BASE_URL +
@@ -92092,8 +92201,8 @@ var CLSTAMP = "7180652";
               (B.sm_m = {
                 proto: B,
                 fields: {
-                  highlights: { n: 1, c: O, r: !0, q: !0 },
-                  other_trailers: { n: 2, c: O, r: !0, q: !0 },
+                  highlights: { n: 1, c: E, r: !0, q: !0 },
+                  other_trailers: { n: 2, c: E, r: !0, q: !0 },
                 },
               }),
             B.sm_m
@@ -92134,65 +92243,11 @@ var CLSTAMP = "7180652";
           return "StoreItem_Trailers";
         }
       }
-      class E extends s {
-        constructor(e = null) {
-          super(),
-            E.prototype.filename || i.a(E.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
-                fields: {
-                  filename: { n: 1, br: i.d.readString, bw: i.h.writeString },
-                  type: { n: 2, br: i.d.readString, bw: i.h.writeString },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = i.e(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.g(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.c(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          var t = new a.BinaryReader(e),
-            e = new E();
-          return E.deserializeBinaryFromReader(e, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.b(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.f(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_Trailers_VideoSource";
-        }
-      }
       class O extends s {
         constructor(e = null) {
           super(),
-            O.prototype.trailer_name || i.a(O.M()),
-            s.initialize(this, e, 0, -1, [3, 4, 5], null);
+            O.prototype.filename || i.a(O.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -92200,34 +92255,8 @@ var CLSTAMP = "7180652";
               (O.sm_m = {
                 proto: O,
                 fields: {
-                  trailer_name: {
-                    n: 1,
-                    br: i.d.readString,
-                    bw: i.h.writeString,
-                  },
-                  trailer_url_format: {
-                    n: 2,
-                    br: i.d.readString,
-                    bw: i.h.writeString,
-                  },
-                  trailer_480p: { n: 3, c: E, r: !0, q: !0 },
-                  trailer_max: { n: 4, c: E, r: !0, q: !0 },
-                  microtrailer: { n: 5, c: E, r: !0, q: !0 },
-                  screenshot_medium: {
-                    n: 10,
-                    br: i.d.readString,
-                    bw: i.h.writeString,
-                  },
-                  screenshot_full: {
-                    n: 11,
-                    br: i.d.readString,
-                    bw: i.h.writeString,
-                  },
-                  trailer_base_id: {
-                    n: 12,
-                    br: i.d.readInt32,
-                    bw: i.h.writeInt32,
-                  },
+                  filename: { n: 1, br: i.d.readString, bw: i.h.writeString },
+                  type: { n: 2, br: i.d.readString, bw: i.h.writeString },
                 },
               }),
             O.sm_m
@@ -92263,6 +92292,86 @@ var CLSTAMP = "7180652";
         serializeBase64String() {
           var e = new a.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Trailers_VideoSource";
+        }
+      }
+      class E extends s {
+        constructor(e = null) {
+          super(),
+            E.prototype.trailer_name || i.a(E.M()),
+            s.initialize(this, e, 0, -1, [3, 4, 5], null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: {
+                  trailer_name: {
+                    n: 1,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  trailer_url_format: {
+                    n: 2,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  trailer_480p: { n: 3, c: O, r: !0, q: !0 },
+                  trailer_max: { n: 4, c: O, r: !0, q: !0 },
+                  microtrailer: { n: 5, c: O, r: !0, q: !0 },
+                  screenshot_medium: {
+                    n: 10,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  screenshot_full: {
+                    n: 11,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  trailer_base_id: {
+                    n: 12,
+                    br: i.d.readInt32,
+                    bw: i.h.writeInt32,
+                  },
+                },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = i.e(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.g(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.c(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          var t = new a.BinaryReader(e),
+            e = new E();
+          return E.deserializeBinaryFromReader(e, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.b(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.f(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_Trailers_Trailer";
@@ -92897,8 +93006,8 @@ var CLSTAMP = "7180652";
         y = r("ee7K"),
         C = r("9w6b"),
         B = r("C4Nl"),
-        E = r("6Y59"),
-        O = r("X2UP"),
+        O = r("6Y59"),
+        E = r("X2UP"),
         w = r("exH9"),
         A = r("TLQK"),
         T = r("IzPI"),
@@ -92922,7 +93031,7 @@ var CLSTAMP = "7180652";
           } = (function (n, a) {
             var e;
             const [t, i] = Object(b.useState)({}),
-              s = Object(O.a)("useEventHeaderData");
+              s = Object(E.a)("useEventHeaderData");
             return (
               Object(b.useEffect)(() => {
                 if (n)
@@ -93106,7 +93215,7 @@ var CLSTAMP = "7180652";
                       href: Object(T.f)(_),
                       target: I.c.IN_CLIENT ? void 0 : "_blank",
                     },
-                    g.a.createElement(E.R, null),
+                    g.a.createElement(O.R, null),
                     Object(A.f)("#EventDisplay_RSSFeed_ExtraShort")
                   ),
                 p &&
@@ -93255,8 +93364,8 @@ var CLSTAMP = "7180652";
       }
       var C = r("5L1o"),
         B = r("XOvi"),
-        E = r("6Y59"),
-        O = r("+d9t"),
+        O = r("6Y59"),
+        E = r("+d9t"),
         w = r("X3Ds"),
         A = r("TLQK"),
         T = r("YyVH"),
@@ -93315,7 +93424,7 @@ var CLSTAMP = "7180652";
               className: "BroadcastVideoUserInputNeeded",
               onClick: this.OnClick,
             },
-            b.createElement(E.Q, null),
+            b.createElement(O.Q, null),
             b.createElement(
               "span",
               null,
@@ -93341,7 +93450,7 @@ var CLSTAMP = "7180652";
             b.createElement(
               "button",
               { className: "dash_stat_close_button", onClick: this.HideStats },
-              b.createElement(E.tb, null)
+              b.createElement(O.tb, null)
             ),
             b.createElement(
               "div",
@@ -94060,7 +94169,7 @@ var CLSTAMP = "7180652";
                   className: "STV_BroadcastClose",
                   onClick: this.props.onClick,
                 },
-                b.createElement(E.tb, null)
+                b.createElement(O.tb, null)
               )
             : null;
         }
@@ -94086,7 +94195,7 @@ var CLSTAMP = "7180652";
                   className: "videoControlButton videoControlJump controlFlip",
                   onClick: this.OnJumpBackward,
                 },
-                b.createElement(E.J, {
+                b.createElement(O.J, {
                   bHidePostArrow: !0,
                   bHidePreArrow: !0,
                   bShowJumpAheadBox: !0,
@@ -94102,7 +94211,7 @@ var CLSTAMP = "7180652";
                   className: "videoControlButton videoControlJump",
                   onClick: this.OnJumpForward,
                 },
-                b.createElement(E.J, {
+                b.createElement(O.J, {
                   bHidePostArrow: !0,
                   bHidePreArrow: !0,
                   bShowJumpAheadBox: !0,
@@ -94134,7 +94243,7 @@ var CLSTAMP = "7180652";
                     t.video.JumpToLiveEdge();
                   },
             },
-            b.createElement(E.J, {
+            b.createElement(O.J, {
               bHidePreArrow: !0,
               bHidePostArrow: !0,
               bFlipHorizontal: !1,
@@ -94162,7 +94271,7 @@ var CLSTAMP = "7180652";
               className: "videoControlButton buttonPlayPause",
               onClick: this.OnTogglePlayPause,
             },
-            t ? b.createElement(E.Q, null) : b.createElement(E.P, null)
+            t ? b.createElement(O.Q, null) : b.createElement(O.P, null)
           );
         }
       };
@@ -94195,7 +94304,7 @@ var CLSTAMP = "7180652";
                 (this.has_previous_marker ? "" : " noMarkersInDirection"),
               onClick: this.OnJumpToPreviousMarkerClicked,
             },
-            b.createElement(E.J, { bHidePostArrow: !0, bFlipHorizontal: !0 })
+            b.createElement(O.J, { bHidePostArrow: !0, bFlipHorizontal: !0 })
           );
         }
       };
@@ -94229,7 +94338,7 @@ var CLSTAMP = "7180652";
                 (this.has_next_marker ? "" : " noMarkersInDirection"),
               onClick: this.OnJumpToNextMarkerClicked,
             },
-            b.createElement(E.J, { bHidePostArrow: !0, bFlipHorizontal: !1 })
+            b.createElement(O.J, { bHidePostArrow: !0, bFlipHorizontal: !1 })
           );
         }
       };
@@ -94388,7 +94497,7 @@ var CLSTAMP = "7180652";
                     onClick: this.OnSubtitlesClick,
                     ref: this.m_elSubtitlesButton,
                   },
-                  b.createElement(E.l, null)
+                  b.createElement(O.l, null)
                 )
               : null,
             b.createElement(
@@ -94400,7 +94509,7 @@ var CLSTAMP = "7180652";
                 onClick: this.OnVideoControlClick,
                 ref: this.bindSettingsButton,
               },
-              b.createElement(E.W, null)
+              b.createElement(O.W, null)
             ),
             b.createElement(K, { video: r }),
             n &&
@@ -94525,7 +94634,7 @@ var CLSTAMP = "7180652";
                 b.createElement(
                   "div",
                   { className: n, onClick: this.ToggleMute },
-                  b.createElement(E.pb, null)
+                  b.createElement(O.pb, null)
                 ),
                 b.createElement(Q, { video: e, onDrag: this.OnChildDrag })
               )
@@ -94634,7 +94743,7 @@ var CLSTAMP = "7180652";
           b.createElement(
             "div",
             { className: "timelineMarkerIcon" },
-            b.createElement(E.V, null)
+            b.createElement(O.V, null)
           )
         );
       };
@@ -94947,7 +95056,7 @@ var CLSTAMP = "7180652";
                       b.createElement(
                         "div",
                         { className: "STV_timelineGrabberArrow" },
-                        b.createElement(E.U, null)
+                        b.createElement(O.U, null)
                       )
                     )
                   )
@@ -95044,7 +95153,7 @@ var CLSTAMP = "7180652";
                     b.createElement(
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
-                      b.createElement(E.ob, null),
+                      b.createElement(O.ob, null),
                       Object(A.l)("#Broadcast_ViewerCount", t)
                     )
                 ),
@@ -95098,7 +95207,7 @@ var CLSTAMP = "7180652";
             b.createElement(
               "div",
               { className: "ContextMenuButton" },
-              b.createElement(E.q, null)
+              b.createElement(O.q, null)
             )
           );
         }
@@ -95188,7 +95297,7 @@ var CLSTAMP = "7180652";
                 ? this.props.linkRegions.map((e) => {
                     var t = Object(o.b)(e.url);
                     return b.createElement(
-                      O.a,
+                      E.a,
                       {
                         key: e.link_index,
                         href: e.url,
@@ -96611,7 +96720,7 @@ var CLSTAMP = "7180652";
     "y+6m": function (e, t, r) {
       "use strict";
       r.d(t, "c", function () {
-        return O;
+        return E;
       }),
         r.d(t, "d", function () {
           return w;
@@ -96662,10 +96771,10 @@ var CLSTAMP = "7180652";
         C = r("lkRc"),
         t = r("+jbA"),
         B = r.n(t);
-      const E = Object(_.a)("ContextMenuInstanceContext", () =>
+      const O = Object(_.a)("ContextMenuInstanceContext", () =>
         d.createContext(null)
       );
-      let O = class extends d.Component {
+      let E = class extends d.Component {
         constructor() {
           super(...arguments), (this.m_navRef = Object(s.a)());
         }
@@ -96783,10 +96892,10 @@ var CLSTAMP = "7180652";
           );
         }
       };
-      (O.contextType = E),
-        Object(c.b)([y.a], O.prototype, "HideIfSubmenu", null),
-        Object(c.b)([y.a], O.prototype, "HideMenu", null),
-        (O = Object(c.b)([n.a], O));
+      (E.contextType = O),
+        Object(c.b)([y.a], E.prototype, "HideIfSubmenu", null),
+        Object(c.b)([y.a], E.prototype, "HideMenu", null),
+        (E = Object(c.b)([n.a], E));
       class w extends d.PureComponent {
         constructor() {
           super(...arguments),
@@ -96889,7 +96998,7 @@ var CLSTAMP = "7180652";
           );
         }
       }
-      (w.contextType = E),
+      (w.contextType = O),
         Object(c.b)([y.a], w.prototype, "OnClick", null),
         Object(c.b)([y.a], w.prototype, "OnOKButton", null),
         Object(c.b)([y.a], w.prototype, "OnMouseEnter", null),
@@ -96910,7 +97019,7 @@ var CLSTAMP = "7180652";
         }
       }
       function T(e) {
-        var t = d.useContext(E),
+        var t = d.useContext(O),
           t =
             null !== (t = null == t ? void 0 : t.styles) && void 0 !== t
               ? t
@@ -96949,7 +97058,7 @@ var CLSTAMP = "7180652";
         }
         RenderSubMenu() {
           return d.createElement(
-            O,
+            E,
             { onMouseEnter: this.OnSubMenuMouseEnter, label: this.props.label },
             this.props.children
           );
@@ -97009,7 +97118,7 @@ var CLSTAMP = "7180652";
           );
         }
       }
-      (I.contextType = E),
+      (I.contextType = O),
         Object(c.b)([y.a], I.prototype, "OnSubMenuMouseEnter", null),
         Object(c.b)([y.a], I.prototype, "OnSubMenuHidden", null),
         Object(c.b)([y.a], I.prototype, "ShowSubMenu", null),
@@ -97255,7 +97364,7 @@ var CLSTAMP = "7180652";
               (t += " visible"),
             (t += " " + B.a.ContextMenuFocusContainer),
             d.createElement(
-              E.Provider,
+              O.Provider,
               { value: this.props.instance },
               d.createElement(
                 "div",
@@ -97446,7 +97555,7 @@ var CLSTAMP = "7180652";
               )
             ),
           n.length
-            ? Object(o.a)(d.createElement(O, null, n), e)
+            ? Object(o.a)(d.createElement(E, null, n), e)
             : e.shiftKey || (e.preventDefault(), e.stopPropagation());
       }
       R.sm_iContextMenuInstance = 0;
@@ -97474,8 +97583,8 @@ var CLSTAMP = "7180652";
         C = r("TQGK"),
         B = (r("wUwH"), r("5izx")),
         o = r("9w6b"),
-        E = (r("6oCP"), r("C4Nl")),
-        O = r("y+6m"),
+        O = (r("6oCP"), r("C4Nl")),
+        E = r("y+6m"),
         l = r("tWGu"),
         w = r("ylkE"),
         A = r("TOXn"),
@@ -97722,7 +97831,7 @@ var CLSTAMP = "7180652";
           let d = "";
           if (this.props.onAppIconClick)
             if (s) {
-              const m = E.a.Get().GetApp(s);
+              const m = O.a.Get().GetApp(s);
               d =
                 (null ===
                   (e = null === m || void 0 === m ? void 0 : m.GetAssets()) ||
@@ -97892,7 +98001,7 @@ var CLSTAMP = "7180652";
             (this.m_sendReadInfo = new _.b()),
             (this.m_bSentRead = !1),
             this.props.event.appid &&
-              E.a
+              O.a
                 .Get()
                 .QueueAppRequest(this.props.event.appid, {
                   include_assets: !0,
@@ -97902,7 +98011,7 @@ var CLSTAMP = "7180652";
         }
         componentDidUpdate(e, t, r) {
           this.props.event.appid &&
-            E.a
+            O.a
               .Get()
               .QueueAppRequest(this.props.event.appid, {
                 include_assets: !0,
@@ -97950,7 +98059,7 @@ var CLSTAMP = "7180652";
             _ = e.BImageNeedScreenshotFallback("background", c);
           let b = "";
           if (e.appid) {
-            const f = E.a.Get().GetApp(e.appid);
+            const f = O.a.Get().GetApp(e.appid);
             b = (null === f || void 0 === f ? void 0 : f.GetName()) || "";
           } else
             e.clanSteamID &&
@@ -98095,7 +98204,7 @@ var CLSTAMP = "7180652";
                       I.a.EventDetailsBody,
                       F.a.EventDetailsBody
                     ),
-                    onContextMenu: G.c.IN_CLIENT ? O.g : void 0,
+                    onContextMenu: G.c.IN_CLIENT ? E.g : void 0,
                   },
                   v.createElement(A.a, {
                     text: d,
@@ -98522,15 +98631,15 @@ var CLSTAMP = "7180652";
         p = r("xQfs"),
         h = (r("FVDh"), r("MUT6")),
         _ = r("r64O"),
-        E = r("qiKp");
-      class O {
+        O = r("qiKp");
+      class E {
         constructor() {
           (this.m_mapAppInfo = d.C.map()),
             (this.m_mapRichPresenceLoc = d.C.map()),
             (this.m_cAppInfoRequestsInFlight = 0),
             (this.m_setPendingAppInfo = new Set()),
             (this.m_CacheStorage = null),
-            (this.m_fnCallbackOnAppInfoLoaded = new E.a());
+            (this.m_fnCallbackOnAppInfoLoaded = new O.a());
         }
         Init(e) {
           this.m_CMInterface = e;
@@ -98808,9 +98917,9 @@ var CLSTAMP = "7180652";
           );
         }
       }
-      Object(g.b)([d.k], O.prototype, "OnGetAppsResponse", null),
-        Object(g.b)([d.k], O.prototype, "OnRichPresenceLocUpdate", null);
-      const w = new O();
+      Object(g.b)([d.k], E.prototype, "OnGetAppsResponse", null),
+        Object(g.b)([d.k], E.prototype, "OnRichPresenceLocUpdate", null);
+      const w = new E();
       var A = r("kLLr"),
         T = r("oFam"),
         I = (r("wUwH"), r("Qcoi")),

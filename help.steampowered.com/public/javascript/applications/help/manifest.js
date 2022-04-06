@@ -1,18 +1,18 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7180652";
-!(function (s) {
+var CLSTAMP = "7189601";
+!(function (d) {
   function a(a) {
     for (
-      var e, n, o = a[0], i = a[1], c = a[2], l = 0, d = [];
+      var e, n, o = a[0], i = a[1], c = a[2], l = 0, s = [];
       l < o.length;
       l++
     )
       (n = o[l]),
-        Object.prototype.hasOwnProperty.call(h, n) && h[n] && d.push(h[n][0]),
+        Object.prototype.hasOwnProperty.call(h, n) && h[n] && s.push(h[n][0]),
         (h[n] = 0);
-    for (e in i) Object.prototype.hasOwnProperty.call(i, e) && (s[e] = i[e]);
-    for (j && j(a); d.length; ) d.shift()();
+    for (e in i) Object.prototype.hasOwnProperty.call(i, e) && (d[e] = i[e]);
+    for (j && j(a); s.length; ) s.shift()();
     return r.push.apply(r, c || []), t();
   }
   function t() {
@@ -32,7 +32,7 @@ var CLSTAMP = "7180652";
   function b(a) {
     if (n[a]) return n[a].exports;
     var e = (n[a] = { i: a, l: !1, exports: {} });
-    return s[a].call(e.exports, e, e.exports, b), (e.l = !0), e.exports;
+    return d[a].call(e.exports, e, e.exports, b), (e.l = !0), e.exports;
   }
   (b.e = function (r) {
     var a = [];
@@ -177,15 +177,15 @@ var CLSTAMP = "7180652";
               c++
             ) {
               var l =
-                (d = i[c]).getAttribute("data-href") || d.getAttribute("href");
-              if ("stylesheet" === d.rel && (l === e || l === o)) return a();
+                (s = i[c]).getAttribute("data-href") || s.getAttribute("href");
+              if ("stylesheet" === s.rel && (l === e || l === o)) return a();
             }
             for (
-              var d, s = document.getElementsByTagName("style"), c = 0;
-              c < s.length;
+              var s, d = document.getElementsByTagName("style"), c = 0;
+              c < d.length;
               c++
             )
-              if ((l = (d = s[c]).getAttribute("data-href")) === e || l === o)
+              if ((l = (s = d[c]).getAttribute("data-href")) === e || l === o)
                 return a();
             var t = document.createElement("link");
             (t.rel = "stylesheet"),
@@ -329,7 +329,7 @@ var CLSTAMP = "7180652";
                 35: "b5b540d8074646707e7d",
                 36: "cd9dbad652f7e2b0f3ec",
                 37: "9e8e0e928cffa29815b7",
-                38: "984c8aee3d246c7c2912",
+                38: "1518f7e5631e1c9c24bf",
                 39: "5031de862862b688bfd4",
                 40: "39d1465c8883e4388d95",
                 41: "bd0fa300efc89866067a",
@@ -342,16 +342,16 @@ var CLSTAMP = "7180652";
                 48: "70fa644c209d68e116e7",
                 49: "4c9215875083aa063aed",
                 50: "0b14d09d732d29433381",
-                51: "2c41e016a972cd75cfb0",
+                51: "f79fe78f688468e124cc",
                 52: "97bf8fe0c0b9b27aa801",
                 53: "2dfa2fa3e3aeed3f8e72",
-                54: "7199a563fedf7fd71503",
+                54: "bb2e6f94fc910eae6e94",
                 55: "30d9fe0dea7335525a87",
                 56: "dc19acf2d8139aa994dc",
                 57: "0de9b818af587417c662",
-                58: "957c0c64878d2b7f3aa6",
+                58: "2bad724f9c6500867dde",
                 59: "99c7f288403377abf63d",
-                60: "3e02ad2dd480dc14a8dd",
+                60: "7561a9586c885454615d",
               }[n]),
             (i = new Error()),
             (e = function (a) {
@@ -378,7 +378,7 @@ var CLSTAMP = "7180652";
       Promise.all(a)
     );
   }),
-    (b.m = s),
+    (b.m = d),
     (b.c = n),
     (b.d = function (a, e, n) {
       b.o(a, e) || Object.defineProperty(a, e, { enumerable: !0, get: n });

@@ -2848,7 +2848,7 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   text-decoration: underline;
 }
 .deckverified_CategoryIcon_3qF71 {
-  padding-right: 6px;
+  padding-right: 8px;
   vertical-align: middle;
 }
 .deckverified_LearnMoreCtn_2IcEu {
@@ -3029,6 +3029,38 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .deckverified_DeveloperBlogYButton_3avWD {
   padding-left: 10px;
   display: inline-block;
+}
+.deckverified_Divider_1ikdM {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 1px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.deckverified_DeveloperComments_Anchor__JTh9 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  cursor: pointer;
+}
+.deckverified_DeveloperComments_Icon_2R6eC {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMiA0VjIwVjI0TDcgMjBIMjRWNEgyWk0zNCAxMlYzMkwyOSAyOEgxMlYyNEgyOFYxMkgzNFoiIGZpbGw9IndoaXRlIi8+DQo8L3N2Zz4NCg==);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  opacity: 0.8;
+}
+.deckverified_DeveloperComments_LinkNoIcon_1zjwW {
+  vertical-align: middle;
+}
+.deckverified_DeveloperComments_LinkIcon_3OZNU {
+  vertical-align: middle;
+  color: var(--gpStoreLightestGrey);
+  font-size: 14px;
+  line-height: 20px;
 }
 .footericons_Dark_2UAf_ .footericons_Background_yjs9m {
   color: #0e141b;
@@ -3418,7 +3450,6 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 }
 .BasicUI .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3wryh {
   flex-direction: column;
-  row-gap: 4px;
 }
 .AppSummaryWidgetCtn .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3wryh {
   flex-direction: column;
@@ -3460,7 +3491,6 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .BasicUI .salepreviewwidgets_StoreSaleWidgetTags_2bkP- {
   height: unset;
   display: flex;
-  gap: 4px;
   margin-bottom: 4px;
   flex-wrap: wrap;
 }
@@ -3487,7 +3517,7 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 }
 .BasicUI .salepreviewwidgets_AppTag_3FJnZ {
   font: var(--gpText-BodySmall);
-  margin: unset;
+  margin: 0px 4px 4px 0px;
   padding: 2px 6px;
 }
 .salepreviewwidgets_AppTag_3FJnZ:hover {
@@ -3707,7 +3737,7 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .BasicUI .salepreviewwidgets_StoreSalePriceWidgetContainer_2s-O5 {
   min-height: unset;
   margin: unset;
-  gap: 6px;
+  column-gap: 6px;
   padding-right: 8px;
 }
 .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
@@ -5045,9 +5075,9 @@ html.touch
     height: 160px;
     position: absolute;
     left: -15px;
-    top: -40px;
+    top: -20px;
     right: -15px;
-    bottom: -40px;
+    bottom: -60px;
     grid-template-columns: 285px auto 25% 25%;
     box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.45);
   }
@@ -6046,7 +6076,8 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   height: 24px;
   justify-content: center;
 }
-.gamehover_GameHoverCreatorFollowButtonCtn_1mQuB img {
+.gamehover_GameHoverCreatorFollowButtonCtn_1mQuB a > img {
+  height: 24px;
   margin-right: 8px;
 }
 :root {

@@ -1928,7 +1928,7 @@
 	"SteamDeckVerified_Feedback_Disagree": "Нет",
 	"SteamDeckVerified_Feedback_Ignore": "Скрыть",
 	"SteamDeckVerified_Feedback_Confirmation": "Спасибо за обратную связь.",
-	"SteamDeckVerified_Feedback_Confirmation_Ignore": "Хорошо. Мы не будем больше задавать вам вопросы про %1$s.",
+	"SteamDeckVerified_Feedback_Confirmation_Ignore": "Хорошо! Мы не будем больше задавать вам вопросы про %1$s.",
 	"SteamDeckFeedback_UserPrefence_Question": "Можно ли периодически запрашивать у вас обратную связь? Ваши ответы помогут улучшить Steam Deck.",
 	"SteamDeckFeedback_UserPrefence_Yes": "Да",
 	"SteamDeckFeedback_UserPrefence_No": "Нет, спасибо",
