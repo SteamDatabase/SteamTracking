@@ -2471,6 +2471,10 @@
     "Settings_Keyboard_CannotSetTheme_NoNetworkConnection": "Billentyűzetkülsőd megváltoztatásához internetkapcsolatra van szükséged.",
     "Settings_Keyboard_CannotSetTheme_ClaimThemes": "Menj a fiókprofilodba, hogy megszerezd az ingyenes billentyűzetkülsőidet!",
     "Settings_Keyboard_CannotSetTheme_NoThemes": "Nem található több billentyűzetkülső a Steam Raktáradban.",
+    "Settings_Keyboard_TrackpadingTyping_Section": "Trackpades gépelés",
+    "Settings_Keyboard_TrackpadingTyping_InputScale": "Trackpad érzékenység",
+    "Settings_Keyboard_TrackpadingTyping_InputScale_Desc": "Kurzorsebesség és -érzékenység állítása a két trackpades gépelés használatakor.",
+    "Settings_Keyboard_TrackpadingTyping_TriggerAsClick": "Ravaszkattintás bekapcsolása",
     "Settings_DeckRewards_Title": "Steam Deck jutalmak",
     "Settings_DeckRewards_Desc": "Steam Decked modelljétől függően különféle jutalmakat vehetsz fel, például Steam Közösségi profilcsomagot vagy virtuális billentyűzet-témát.",
     "Settings_DeckRewards_Disclaimer": "A jutalmakat Steam Deckenként egyszer lehet beváltani.",
@@ -5803,5 +5807,6 @@
     "FriendsList_VersionMismatch": "Nem kompatibilis barátlista",
     "FriendsList_VersionMismatch_Detail": "A Steam kliens verziód nem kompatibilis a Barátlista e verziójával.",
     "FriendsList_StatusChange_Hint": "Tipp: itt megváltoztathatod barátállapotodat a fiókoldalról.",
+    "SteamInputAPI_LogoText": "BEVITEL",
     "Browser_InputSupportLevel_None": "Használj érintést"
 }

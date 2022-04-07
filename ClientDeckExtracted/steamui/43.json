@@ -1543,7 +1543,7 @@
     "FriendSettings_SignInToFriends": "Automaticky přihlásit do funkce Přátelé po zapnutí zařízení",
     "FriendSettings_AnimatedAvatars": "Povolit animované avatary a rámečky",
     "FriendSettings_DisableEmbedInlining": "Skrývat v konverzacích obrázky a další média",
-    "FriendSettings_AlwaysUse24HourClock": "Použít v konverzacích 24hodinový formát času",
+    "FriendSettings_AlwaysUse24HourClock": "Používat v konverzacích 24hodinový formát času",
     "FriendSettings_DisableRoomEffects": "Zakázat animované efekty",
     "NotificationsSettings_Heading_Notifications": "Upozornění",
     "NotificationsSettings_DisableAll": "Zakázat neurgentní upozornění",
@@ -2471,6 +2471,11 @@
     "Settings_Keyboard_CannotSetTheme_NoNetworkConnection": "Pro změnu motivu klávesnice musíte být připojeni k internetu.",
     "Settings_Keyboard_CannotSetTheme_ClaimThemes": "Přejděte na svůj profil a vyzvedněte si získané motivy klávesnice!",
     "Settings_Keyboard_CannotSetTheme_NoThemes": "Ve Vašem inventáři nebyly nalezeny žádné další motivy klávesnice.",
+    "Settings_Keyboard_TrackpadingTyping_Section": "Psaní pomocí trackpadů",
+    "Settings_Keyboard_TrackpadingTyping_InputScale": "Citlivost trackpadů",
+    "Settings_Keyboard_TrackpadingTyping_InputScale_Desc": "Určuje rychlost a citlivost kurzorů při psaní pomocí obou trackpadů.",
+    "Settings_Keyboard_TrackpadingTyping_TriggerAsClick": "Povolit vybírání spouštěmi",
+    "Settings_Keyboard_TrackpadingTyping_TriggerAsClick_Desc": "Klávesy zvýrazněné kurzory budou vybírány stiskem spouští. Levá spoušť pro levý kurzor a naopak.",
     "Settings_DeckRewards_Title": "Odměny zařízení Steam Deck",
     "Settings_DeckRewards_Desc": "V závislosti na Vašem modelu zařízení Steam Deck si můžete vyzvednout různé odměny, například profilový balíček do komunity služby Steam nebo motiv virtuální klávesnice.",
     "Settings_DeckRewards_Disclaimer": "Z každého zařízení Steam Deck lze odměny vyzvednout pouze jednou.",
@@ -5803,5 +5808,6 @@
     "FriendsList_VersionMismatch": "Seznam přátel není kompatibilní",
     "FriendsList_VersionMismatch_Detail": "Vaše verze klienta služby Steam není kompatibilní s touto verzí seznamu přátel.",
     "FriendsList_StatusChange_Hint": "Tip: Svůj stav můžete změnit ze stránky s nastavením účtu.",
+    "SteamInputAPI_LogoText": "INPUT",
     "Browser_InputSupportLevel_None": "Ovládat dotekem"
 }

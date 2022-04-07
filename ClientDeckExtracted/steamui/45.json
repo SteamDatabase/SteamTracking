@@ -5803,5 +5803,6 @@
     "FriendsList_VersionMismatch": "Vriendenlijst is niet compatibel",
     "FriendsList_VersionMismatch_Detail": "Je versie van de Steam-client is niet compatibel met deze versie van de vriendenlijst.",
     "FriendsList_StatusChange_Hint": "Tip: Je kunt je vriendenstatus hier wijzigen vanaf de accountpagina",
+    "SteamInputAPI_LogoText": "INPUT",
     "Browser_InputSupportLevel_None": "Aanraakbesturing"
 }

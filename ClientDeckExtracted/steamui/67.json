@@ -5803,5 +5803,6 @@
     "FriendsList_VersionMismatch": "Arkadaş Listesi Uyumsuz",
     "FriendsList_VersionMismatch_Detail": "Steam istemcisi sürümünüz arkadaş listesinin bu sürümüyle uyumlu değil.",
     "FriendsList_StatusChange_Hint": "İpucu: Buradaki arkadaş durumunuzu hesap sayfasından değiştirebilirsiniz.",
+    "SteamInputAPI_LogoText": "GİRDİ",
     "Browser_InputSupportLevel_None": "Dokunmatik kullanın"
 }

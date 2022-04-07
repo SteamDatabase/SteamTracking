@@ -5804,5 +5804,6 @@
     "FriendsList_VersionMismatch": "Liste de contacts non compatible",
     "FriendsList_VersionMismatch_Detail": "Votre version du client Steam n'est pas compatible avec cette version de la liste de contacts.",
     "FriendsList_StatusChange_Hint": "Astuce : vous pouvez modifier votre statut depuis la page de votre compte.",
+    "SteamInputAPI_LogoText": "ENTRÉE",
     "Browser_InputSupportLevel_None": "Fonction tactile"
 }

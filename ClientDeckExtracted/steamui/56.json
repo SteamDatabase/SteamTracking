@@ -2471,6 +2471,11 @@
     "Settings_Keyboard_CannotSetTheme_NoNetworkConnection": "Du må være koblet til internett for å endre tastaturtema.",
     "Settings_Keyboard_CannotSetTheme_ClaimThemes": "Gå til kontoprofilen din for å løse inn gratis tastaturtemaer!",
     "Settings_Keyboard_CannotSetTheme_NoThemes": "Ingen ytterligere tastaturtemaer funnet i Steam-lageret ditt.",
+    "Settings_Keyboard_TrackpadingTyping_Section": "Styreplate – skriving",
+    "Settings_Keyboard_TrackpadingTyping_InputScale": "Styreplate – følsomhet",
+    "Settings_Keyboard_TrackpadingTyping_InputScale_Desc": "Juster markørhastighet og følsomhet ved skriving med begge styreplater.",
+    "Settings_Keyboard_TrackpadingTyping_TriggerAsClick": "Slå på trykk med avtrekker",
+    "Settings_Keyboard_TrackpadingTyping_TriggerAsClick_Desc": "Bruk venstre og høyre avtrekkere for å velge fremhevede taster under venstre og høyre markører.",
     "Settings_DeckRewards_Title": "Steam Deck-belønninger",
     "Settings_DeckRewards_Desc": "Avhengig av hvilken modell av Steam Deck du har, kan du motta ulike belønninger, slik som en profilbunt for Steam-samfunnet eller et virtuelt tastaturtema.",
     "Settings_DeckRewards_Disclaimer": "Belønninger kan løses inn én gang per Steam Deck-enhet.",
@@ -5803,5 +5808,6 @@
     "FriendsList_VersionMismatch": "Venneliste er inkompatibel",
     "FriendsList_VersionMismatch_Detail": "Steam-klientens versjon er ikke kompatibel med denne versjonen av vennelisten.",
     "FriendsList_StatusChange_Hint": "Tips: Du kan endre vennestatusen her fra kontosiden.",
+    "SteamInputAPI_LogoText": "INPUT",
     "Browser_InputSupportLevel_None": "Bruk berøring"
 }

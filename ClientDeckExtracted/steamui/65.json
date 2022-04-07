@@ -5801,5 +5801,6 @@
     "FriendsList_VersionMismatch": "好友名單不相容",
     "FriendsList_VersionMismatch_Detail": "您的 Steam 用戶端版本與此版本的好友名單不相容。",
     "FriendsList_StatusChange_Hint": "秘訣：您可以在這裡從帳戶頁面變更您的好友狀態",
+    "SteamInputAPI_LogoText": "輸入",
     "Browser_InputSupportLevel_None": "使用觸控"
 }

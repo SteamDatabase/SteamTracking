@@ -2471,6 +2471,11 @@
     "Settings_Keyboard_CannotSetTheme_NoNetworkConnection": "Precisas de ter uma ligação à internet para poderes mudar o tema do teu teclado.",
     "Settings_Keyboard_CannotSetTheme_ClaimThemes": "Vai ao perfil da tua conta para reclamares os teus temas de teclado gratuitos!",
     "Settings_Keyboard_CannotSetTheme_NoThemes": "Não foram encontrados mais temas de teclado no teu Inventário Steam.",
+    "Settings_Keyboard_TrackpadingTyping_Section": "Usar teclado com trackpads",
+    "Settings_Keyboard_TrackpadingTyping_InputScale": "Sensibilidade dos trackpads",
+    "Settings_Keyboard_TrackpadingTyping_InputScale_Desc": "Ajusta a sensibilidade e a velocidade dos cursores ao usar o teclado com ambos os trackpads.",
+    "Settings_Keyboard_TrackpadingTyping_TriggerAsClick": "Clicar com gatilhos",
+    "Settings_Keyboard_TrackpadingTyping_TriggerAsClick_Desc": "Usa os gatilhos esquerdo e direito para selecionares as teclas por baixo dos cursores.",
     "Settings_DeckRewards_Title": "Recompensas do Steam Deck",
     "Settings_DeckRewards_Desc": "Dependendo do modelo do teu Steam Deck, podes reclamar recompensas diferentes, tais como um pacote de perfil da Comunidade Steam ou um tema para o teclado virtual.",
     "Settings_DeckRewards_Disclaimer": "Recompensas só podem ser reclamadas uma vez por Steam Deck.",
@@ -5803,5 +5808,6 @@
     "FriendsList_VersionMismatch": "Lista de amigos incompatível",
     "FriendsList_VersionMismatch_Detail": "A tua versão da aplicação Steam não é compatível com esta versão da lista de amigos.",
     "FriendsList_StatusChange_Hint": "Dica: podes mudar o teu estado na lista de amigos a partir da página da conta.",
+    "SteamInputAPI_LogoText": "INPUT",
     "Browser_InputSupportLevel_None": "Usar toque"
 }

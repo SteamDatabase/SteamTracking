@@ -5802,5 +5802,6 @@
     "FriendsList_VersionMismatch": "Список друзів не сумісний",
     "FriendsList_VersionMismatch_Detail": "Ваша версія клієнта Steam не сумісна з цією версією списку друзів.",
     "FriendsList_StatusChange_Hint": "Підказка: змінити свій стан для друзів можна тут, на сторінці акаунта",
+    "SteamInputAPI_LogoText": "ВВЕДЕННЯ",
     "Browser_InputSupportLevel_None": "Сенсорна навігація"
 }

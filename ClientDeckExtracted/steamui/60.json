@@ -3147,8 +3147,8 @@
     "ControllerBinding_AcitvatorDropDown_SoftPress": "Порог слабого нажатия",
     "ControllerBinding_AcitvatorDropDown_SoftPress_Description": "Этот активатор сработает, когда связанный с этой командой аналоговый источник будет выше порога",
     "Library_ActionSetLayerDropdown_CodeLabel": "Доступные слои набора действий",
-    "ControllerBinding_Analog_AnalogStart": "Внешняя мёртвая зона аналога",
-    "ControllerBinding_Analog_AnalogEnd": "Внутренняя мёртвая зона аналога",
+    "ControllerBinding_Analog_AnalogStart": "Внешняя мёртвая зона",
+    "ControllerBinding_Analog_AnalogEnd": "Внутренняя мёртвая зона",
     "ControllerBinding_Analog_HapticIntensity": "Уровень тактильной отдачи",
     "ControllerBinding_Analog_AnalogOutputAxis": "Ось вывода",
     "ControllerBinding_ModeDropDown_Dpad": "Способ ввода — крестовина",
@@ -5803,5 +5803,6 @@
     "FriendsList_VersionMismatch": "Несовместимость списка друзей",
     "FriendsList_VersionMismatch_Detail": "Ваша версия клиента Steam несовместима с этой версией списка друзей.",
     "FriendsList_StatusChange_Hint": "Совет: на странице аккаунта можно изменить ваш статус для друзей.",
+    "SteamInputAPI_LogoText": "СИСТЕМА ВВОДА",
     "Browser_InputSupportLevel_None": "Используйте сенсорный экран"
 }
