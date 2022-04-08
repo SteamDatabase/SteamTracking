@@ -750,6 +750,7 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 			var length = 0;
 			var bIsFullscreen = false;
 			var bIsHD = false;
+			var bHasPlayed = false;
 
 			var bIsDraggingVolume = false;
 
@@ -771,7 +772,8 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 					},
 					'timeupdate': function() { timeUpdate(); },
 					'playing': function() { eventPlay(); },
-					'click': function() { playPause(); }
+					'click': function() { playPause(); },
+					'waiting': function() { eventWaiting() }
 				});
 				overlay.bind({
 					'mouseleave': function(event) {
@@ -891,7 +893,23 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 			{
 				$('.play_button',overlay).removeClass('play');
 				$('.play_button',overlay).addClass('pause');
+				bHasPlayed = true;
+
 				updateVolume();
+			}
+
+			function eventWaiting()
+			{
+				if ( typeof GetUsabilityTracker !== 'undefined' && bHasPlayed && !isSeeking() )
+					GetUsabilityTracker().IncrementStat( 'Video_WaitingEvent', 1 );
+			}
+
+			function isSeeking()
+			{
+				if ( video.length > 0 )
+					return video[0].seeking;
+
+				return false;
 			}
 
 			// Control functions

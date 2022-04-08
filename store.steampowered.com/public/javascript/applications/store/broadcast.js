@@ -56,7 +56,7 @@
       "use strict";
       r.r(t),
         r.d(t, "BroadcastEmbeddablePopoutHeader", function () {
-          return Yt;
+          return Jt;
         });
       var a = r("mrSG"),
         i = r("vDqi"),
@@ -5574,8 +5574,10 @@
       });
       var At,
         Lt = r("C4Nl"),
-        kt = r("hKFG");
-      const Vt = {
+        kt = r("hKFG"),
+        Vt = r("S6U1");
+      r("3u1e");
+      const qt = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
           { appid: 386360, url: "https://steam.tv/smite" },
@@ -5602,10 +5604,11 @@
           },
         ],
       };
-      let qt = (At = class extends c.a.Component {
+      let Ht = (At = class extends c.a.Component {
         constructor() {
           super(...arguments),
             (this.m_cancelSignal = s.a.CancelToken.source()),
+            (this.m_bMarkedUsabilitySeen = !1),
             (this.state = {
               bShowPopoutHeader: !1,
               bExpanded: !1,
@@ -5673,20 +5676,21 @@
         }
         ToggleBroadcastExpandShrink() {
           let e = jt.a.Get().GetPlayReadyStream(this.props);
-          const t = Tt.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
-          Object(jt.e)(t, this.state.bExpanded ? 2 : 3, e.snr);
-          const r = this.state.bExpanded;
-          window.setTimeout(
-            () =>
-              this.setState({
-                innerStyle: Object.assign(
-                  Object.assign({}, this.state.innerStyle),
-                  { maxHeight: r ? "0vh" : "100vh" }
-                ),
-              }),
-            10
-          ),
-            r ||
+          const t = this.state.bExpanded,
+            r = Tt.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
+          Object(jt.e)(r, t ? 2 : 3, e.snr),
+            t && Object(Vt.a)() && Object(Vt.a)().AddEvent(1005),
+            window.setTimeout(
+              () =>
+                this.setState({
+                  innerStyle: Object.assign(
+                    Object.assign({}, this.state.innerStyle),
+                    { maxHeight: t ? "0vh" : "100vh" }
+                  ),
+                }),
+              10
+            ),
+            t ||
               this.setState({ bExpanded: !this.state.bExpanded }, () =>
                 jt.a.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded)
               );
@@ -5735,9 +5739,9 @@
             s = c.a.createElement(
               "div",
               { className: Dt.a.rightPanel },
-              c.a.createElement(Kt, { key: "right" + i, ImgUrl: e.right_panel })
+              c.a.createElement(Yt, { key: "right" + i, ImgUrl: e.right_panel })
             ),
-            n = c.a.createElement(Kt, {
+            n = c.a.createElement(Yt, {
               key: "left" + i,
               ImgUrl: e.left_panel,
             });
@@ -5761,7 +5765,7 @@
               })),
               (r.bRightPanelArtworkOrEmpty = !1)),
             a && !t
-              ? ((r.leftPanel = c.a.createElement(Qt, {
+              ? ((r.leftPanel = c.a.createElement(Xt, {
                   broadcastEmbedContext: this.props,
                   key: "selector" + i,
                   curStream: e,
@@ -5772,7 +5776,7 @@
                 (r.rightPanel = s))
               : t
               ? ((r.leftPanel = c.a.createElement("div", null)),
-                (r.rightPanel = c.a.createElement(er, {
+                (r.rightPanel = c.a.createElement(tr, {
                   stream: e,
                   orientation: "rightside",
                 })),
@@ -5781,11 +5785,17 @@
             r
           );
         }
+        MarkBroadcastSeen() {
+          this.m_bMarkedUsabilitySeen ||
+            ((this.m_bMarkedUsabilitySeen = !0),
+            Object(Vt.a)() && Object(Vt.a)().AddEvent(1004));
+        }
         render() {
           if (!At.IsBroadcastAllowed() || this.state.bLoadingPreference)
             return null;
           let e = jt.a.Get().GetPlayReadyStream(this.props);
           if (e) {
+            this.MarkBroadcastSeen();
             let t = "show" === jt.a.Get().GetChatVisibility();
             const {
               event: r,
@@ -5894,7 +5904,7 @@
                         onTransitionEnd: this.OnShrinkTransitionEnd,
                       },
                       s.leftPanel,
-                      c.a.createElement(Ht, {
+                      c.a.createElement($t, {
                         stream: e,
                         bStartMuted: this.state.bStartMuted,
                         fnRenderBroadcastContext: i,
@@ -5903,7 +5913,7 @@
                       }),
                       s.rightPanel,
                       this.state.bExpanded &&
-                        c.a.createElement($t, { stream: e, bMultistream: o })
+                        c.a.createElement(Kt, { stream: e, bMultistream: o })
                     )
                 ),
                 Boolean(
@@ -5913,7 +5923,7 @@
                   c.a.createElement(
                     "div",
                     { className: `${r ? Dt.a.Event : ""}` },
-                    c.a.createElement($t, { stream: e, bMultistream: o })
+                    c.a.createElement(Kt, { stream: e, bMultistream: o })
                   ),
                 c.a.createElement("div", { className: Dt.a.clear_div })
               )
@@ -5924,13 +5934,13 @@
           });
         }
       });
-      Object(a.b)([nt.a], qt.prototype, "ToggleBroadcastExpandShrink", null),
-        Object(a.b)([nt.a], qt.prototype, "OnShrinkTransitionEnd", null),
-        Object(a.b)([nt.a], qt.prototype, "onStreamSelect", null),
-        Object(a.b)([nt.a], qt.prototype, "PlayTopNonVOD", null),
-        (qt = At = Object(a.b)([n.a], qt));
-      t.default = qt;
-      class Ht extends c.a.Component {
+      Object(a.b)([nt.a], Ht.prototype, "ToggleBroadcastExpandShrink", null),
+        Object(a.b)([nt.a], Ht.prototype, "OnShrinkTransitionEnd", null),
+        Object(a.b)([nt.a], Ht.prototype, "onStreamSelect", null),
+        Object(a.b)([nt.a], Ht.prototype, "PlayTopNonVOD", null),
+        (Ht = At = Object(a.b)([n.a], Ht));
+      t.default = Ht;
+      class $t extends c.a.Component {
         constructor(e) {
           super(e),
             (this.m_iVideoContainerRef = c.a.createRef()),
@@ -5943,6 +5953,7 @@
           const e = Tt.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
             .m_nAppID;
           Object(jt.e)(e, 7, this.props.stream.snr),
+            Object(Vt.a)() && Object(Vt.a)().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
         }
         OnEnter() {
@@ -5980,7 +5991,7 @@
                       : Dt.a.video_container,
                   },
                   this.state.bPopout &&
-                    c.a.createElement(Yt, {
+                    c.a.createElement(Jt, {
                       steamIDBroadcast: this.props.stream.steamid,
                       OnPreventPopup: this.CloseBroadcastPopup,
                     }),
@@ -6003,15 +6014,15 @@
           );
         }
       }
-      Object(a.b)([nt.a], Ht.prototype, "CloseBroadcastPopup", null),
-        Object(a.b)([nt.a], Ht.prototype, "OnEnter", null),
-        Object(a.b)([nt.a], Ht.prototype, "OnLeave", null);
-      let $t = class extends c.a.Component {
+      Object(a.b)([nt.a], $t.prototype, "CloseBroadcastPopup", null),
+        Object(a.b)([nt.a], $t.prototype, "OnEnter", null),
+        Object(a.b)([nt.a], $t.prototype, "OnLeave", null);
+      let Kt = class extends c.a.Component {
         ConstructBroadcastLink() {
           let e = this.props.stream;
           const t = Tt.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
             .m_nAppID;
-          let r = Vt.list.find(
+          let r = qt.list.find(
             (r) =>
               r.appid == t &&
               (!r.broadcasterAccountID || r.broadcasterAccountID == e.accountid)
@@ -6137,10 +6148,10 @@
           );
         }
       };
-      Object(a.b)([nt.a], $t.prototype, "OnToggleChat", null),
-        Object(a.b)([nt.a], $t.prototype, "onWatchBroadcastPage", null),
-        ($t = Object(a.b)([n.a], $t));
-      class Kt extends c.a.Component {
+      Object(a.b)([nt.a], Kt.prototype, "OnToggleChat", null),
+        Object(a.b)([nt.a], Kt.prototype, "onWatchBroadcastPage", null),
+        (Kt = Object(a.b)([n.a], Kt));
+      class Yt extends c.a.Component {
         render() {
           let e = this.props.ImgUrl;
           return c.a.createElement(
@@ -6155,7 +6166,7 @@
           );
         }
       }
-      const Yt = Object(n.a)((e) => {
+      const Jt = Object(n.a)((e) => {
         const { steamIDBroadcast: t } = e,
           r = Tt.a.GetOrCreateBroadcastInfo(t).m_nAppID,
           [a] = Object(St.b)(r, {});
@@ -6186,7 +6197,7 @@
           )
         );
       });
-      function Jt(e, t) {
+      function Qt(e, t) {
         var r;
         const a = Tt.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
           i = Lt.a.Get().GetApp(a);
@@ -6197,7 +6208,7 @@
           ? parseInt(Dt.a.strStreamIconCapsuleArtHeight)
           : parseInt(Dt.a.strStreamIconScreenshotArtHeight);
       }
-      function Qt(e) {
+      function Xt(e) {
         const {
             curStream: t,
             onStreamSelect: r,
@@ -6227,7 +6238,7 @@
                     let e = 0;
                     for (const r of o) {
                       if (t.accountid == r.accountid) break;
-                      e += Jt(i, r);
+                      e += Qt(i, r);
                     }
                     n.current.scrollTop = e;
                   }
@@ -6247,7 +6258,7 @@
             },
             o.map((e) => {
               var a;
-              return c.a.createElement(Xt, {
+              return c.a.createElement(Zt, {
                 key: null !== (a = e.accountid) && void 0 !== a ? a : e.steamid,
                 stream: e,
                 bSelected: t.accountid == e.accountid,
@@ -6258,7 +6269,7 @@
           )
         );
       }
-      function Xt(e) {
+      function Zt(e) {
         var t;
         const {
             onStreamSelect: r,
@@ -6298,7 +6309,7 @@
                 onClick: () => r && r(i),
                 rootMargin: "100px 0px 100px 0px",
               },
-              c.a.createElement(Zt, {
+              c.a.createElement(er, {
                 strThumbnail: i.thumbnail_http_address,
                 bSelected: a,
                 strCapsuleArtURL: d,
@@ -6324,7 +6335,7 @@
           )
         );
       }
-      function Zt(e) {
+      function er(e) {
         const { strCapsuleArtURL: t, strThumbnail: r, bSelected: a } = e,
           i = a ? Dt.a.stream_icon_selected : Dt.a.stream_icon;
         if (t) {
@@ -6344,7 +6355,7 @@
         }
         return c.a.createElement("img", { className: i, src: r });
       }
-      function er(e) {
+      function tr(e) {
         const { stream: t, orientation: r } = e,
           a = "below" == r,
           i = Object(o.d)(() => Tt.a.GetBroadcast(t.steamid));

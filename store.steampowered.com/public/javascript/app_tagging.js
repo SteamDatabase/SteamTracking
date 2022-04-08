@@ -556,6 +556,8 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 	window.ShowAppTagModal = function( appid )
 	{
+		if ( typeof GetUsabilityTracker !== 'undefined' )
+			GetUsabilityTracker().AddEvent( 1001 );
 
 		$AppTagModal.show();
 		var Modal = ShowAlertDialog( 'View and edit tags for this product', $AppTagModal, 'Close' );
