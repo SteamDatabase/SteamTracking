@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [40],
+  [11],
   {
     "++az": function (e, t, a) {
       e.exports =
@@ -1461,11 +1461,11 @@
           );
         }
       };
-      Object(n.b)([c.a], ve.prototype, "ShowGenericError", null),
-        Object(n.b)([c.a], ve.prototype, "ShowError", null),
-        Object(n.b)([c.a], ve.prototype, "RedeemPoints", null),
-        Object(n.b)([c.a], ve.prototype, "EquipItem", null),
-        Object(n.b)([c.a], ve.prototype, "CloseModal", null),
+      Object(n.b)([c.b], ve.prototype, "ShowGenericError", null),
+        Object(n.b)([c.b], ve.prototype, "ShowError", null),
+        Object(n.b)([c.b], ve.prototype, "RedeemPoints", null),
+        Object(n.b)([c.b], ve.prototype, "EquipItem", null),
+        Object(n.b)([c.b], ve.prototype, "CloseModal", null),
         (ve = Object(n.b)([l.a], ve));
       const Se = (e) => {
           const { definition: t, closeModal: a } = e,
@@ -4081,35 +4081,35 @@
     },
     Aqke: function (e, t, a) {
       var n = {
-        "./loyalty_brazilian.json": ["jJTi", 11],
-        "./loyalty_bulgarian.json": ["YXmX", 12],
-        "./loyalty_czech.json": ["Yw6T", 13],
-        "./loyalty_danish.json": ["LeJ7", 14],
-        "./loyalty_dutch.json": ["3s9e", 15],
-        "./loyalty_english.json": ["nz6u", 16],
-        "./loyalty_finnish.json": ["cCRj", 17],
-        "./loyalty_french.json": ["WjZg", 18],
-        "./loyalty_german.json": ["2HFY", 19],
-        "./loyalty_greek.json": ["puzw", 20],
-        "./loyalty_hungarian.json": ["h+vV", 21],
-        "./loyalty_italian.json": ["1xjJ", 22],
-        "./loyalty_japanese.json": ["KhFN", 23],
-        "./loyalty_koreana.json": ["0T2E", 24],
-        "./loyalty_latam.json": ["SFVQ", 25],
-        "./loyalty_norwegian.json": ["6qpk", 26],
-        "./loyalty_polish.json": ["c9AW", 27],
-        "./loyalty_portuguese.json": ["H3eu", 28],
-        "./loyalty_romanian.json": ["gt0D", 29],
-        "./loyalty_russian.json": ["4nQk", 30],
-        "./loyalty_sc_schinese.json": ["0Z0/", 31],
-        "./loyalty_schinese.json": ["svug", 32],
-        "./loyalty_spanish.json": ["x/nm", 33],
-        "./loyalty_swedish.json": ["d/hP", 34],
-        "./loyalty_tchinese.json": ["EWje", 35],
-        "./loyalty_thai.json": ["SnkP", 36],
-        "./loyalty_turkish.json": ["cD82", 37],
-        "./loyalty_ukrainian.json": ["jV8j", 38],
-        "./loyalty_vietnamese.json": ["TxFk", 39],
+        "./loyalty_brazilian.json": ["jJTi", 106],
+        "./loyalty_bulgarian.json": ["YXmX", 107],
+        "./loyalty_czech.json": ["Yw6T", 108],
+        "./loyalty_danish.json": ["LeJ7", 109],
+        "./loyalty_dutch.json": ["3s9e", 110],
+        "./loyalty_english.json": ["nz6u", 111],
+        "./loyalty_finnish.json": ["cCRj", 112],
+        "./loyalty_french.json": ["WjZg", 113],
+        "./loyalty_german.json": ["2HFY", 114],
+        "./loyalty_greek.json": ["puzw", 115],
+        "./loyalty_hungarian.json": ["h+vV", 116],
+        "./loyalty_italian.json": ["1xjJ", 117],
+        "./loyalty_japanese.json": ["KhFN", 118],
+        "./loyalty_koreana.json": ["0T2E", 119],
+        "./loyalty_latam.json": ["SFVQ", 120],
+        "./loyalty_norwegian.json": ["6qpk", 121],
+        "./loyalty_polish.json": ["c9AW", 122],
+        "./loyalty_portuguese.json": ["H3eu", 123],
+        "./loyalty_romanian.json": ["gt0D", 124],
+        "./loyalty_russian.json": ["4nQk", 125],
+        "./loyalty_sc_schinese.json": ["0Z0/", 126],
+        "./loyalty_schinese.json": ["svug", 127],
+        "./loyalty_spanish.json": ["x/nm", 128],
+        "./loyalty_swedish.json": ["d/hP", 129],
+        "./loyalty_tchinese.json": ["EWje", 130],
+        "./loyalty_thai.json": ["SnkP", 131],
+        "./loyalty_turkish.json": ["cD82", 132],
+        "./loyalty_ukrainian.json": ["jV8j", 133],
+        "./loyalty_vietnamese.json": ["TxFk", 134],
       };
       function r(e) {
         if (!a.o(n, e))
@@ -5590,8 +5590,8 @@
           );
         }),
         tt = (e) => e.toString().padStart(2, "0"),
-        at = i.a.lazy(() => a.e(73).then(a.bind(null, "yDev"))),
-        nt = i.a.lazy(() => a.e(72).then(a.bind(null, "f4w8")));
+        at = i.a.lazy(() => a.e(44).then(a.bind(null, "yDev"))),
+        nt = i.a.lazy(() => a.e(43).then(a.bind(null, "f4w8")));
       let rt = class extends i.a.Component {
         render() {
           return i.a.createElement(
@@ -7053,7 +7053,7 @@
                       Object(g.m)(
                         "#LunarSale2022_Rules_4_Desc_China",
                         i.a.createElement(
-                          _a.a,
+                          _a.b,
                           { href: l.d.STORE_BASE_URL + "privacy_agreement" },
                           Object(g.f)("#LunarSale2022_Rules_ClickHere")
                         )
@@ -7232,7 +7232,7 @@
                       Object(g.m)(
                         "#LunarSale2022_Rules_4_Desc",
                         i.a.createElement(
-                          _a.a,
+                          _a.b,
                           { href: l.d.STORE_BASE_URL + "privacy_agreement" },
                           Object(g.f)("#LunarSale2022_Rules_ClickHere")
                         )
@@ -7245,11 +7245,10 @@
       };
       fa = Object(n.b)([m.a], fa);
       var ga = a("ykc/"),
-        ha = (a("kKgT"), a("opsS")),
-        ba = a("tt0l");
-      a("NxAk");
-      const Ca = "FocusNavHistoryID";
-      function Ia(e) {
+        ha = (a("kKgT"), a("opsS"));
+      a("tt0l"), a("NxAk");
+      const ba = "FocusNavHistoryID";
+      function Ca(e) {
         const { children: t } = e,
           a = Object(n.c)(e, ["children"]),
           i = (function () {
@@ -7257,45 +7256,32 @@
               t = r.useRef(),
               a = Object(o.h)(),
               n = a.state && a.state.FocusNavHistoryID,
-              i = r.useRef(),
-              s = r.useRef();
+              i = r.useRef();
             return (
               r.useLayoutEffect(() => {
-                if (t.current)
-                  return (
-                    s.current || (s.current = new ba.b(t.current.Node())),
-                    t.current
-                      .Node()
-                      .Tree.Controller.FocusChangedCallbacks.Register(
-                        (t, a, n) => {
-                          const r = e.location;
-                          let o = r.state && r.state.FocusNavHistoryID;
-                          o ||
-                            ((o = `State_${r.key}`),
-                            (i.current = o),
-                            e.replace(
-                              r.pathname,
-                              Object.assign(Object.assign({}, r.state), {
-                                [Ca]: o,
-                              })
-                            )),
-                            i.current == o && s.current.SaveState(o);
-                        }
-                      ).Unregister
-                  );
+                if (!t.current) return;
+                const a = t.current;
+                return a
+                  .Node()
+                  .Tree.Controller.FocusChangedCallbacks.Register((t, n, r) => {
+                    const o = e.location;
+                    let s = o.state && o.state.FocusNavHistoryID;
+                    s ||
+                      ((s = `State_${o.key}`),
+                      (i.current = s),
+                      e.replace(
+                        o.pathname,
+                        Object.assign(Object.assign({}, o.state), { [ba]: s })
+                      )),
+                      i.current == s && a.SaveState(s);
+                  }).Unregister;
               }, [e]),
               r.useEffect(() => {
                 if (t.current && i.current != n) {
-                  const e = t.current.NavTree().Controller,
-                    a = window.setTimeout(
-                      () =>
-                        e.RestoreHistoryTransaction(() => {
-                          s.current.RestoreState(n) && t.current.TakeFocus(),
-                            (i.current = n);
-                        }),
-                      10
-                    );
-                  return () => window.clearTimeout(a);
+                  const e = window.setTimeout(() => {
+                    t.current.RestoreState(n, 1), (i.current = n);
+                  }, 10);
+                  return () => window.clearTimeout(e);
                 }
               }, [n, e]),
               t
@@ -7307,46 +7293,46 @@
           t
         );
       }
-      var ya = a("hwrv"),
-        wa = a("1Gs6"),
-        Ma = a("y+6m"),
-        Ea = a("TtDX"),
-        Na = a("1U4k");
-      const va = (e) => {
+      var Ia = a("hwrv"),
+        ya = a("1Gs6"),
+        wa = a("y+6m"),
+        Ma = a("TtDX"),
+        Ea = a("1U4k");
+      const Na = (e) => {
           const { appid: t } = e,
             a = oe.a.GetAppInfo(t);
           return r.createElement(
             "div",
             {
-              className: Na.CurrentAppFilter,
+              className: Ea.CurrentAppFilter,
               onClick: () => {
                 _.b.Get().RemoveAppIDFilter(t);
               },
             },
             r.createElement("div", null, a.name),
-            r.createElement(Ye.d, { className: Na.AppFilterClearIcon })
+            r.createElement(Ye.d, { className: Ea.AppFilterClearIcon })
           );
         },
-        Sa = (e) => {
+        va = (e) => {
           const { appid: t } = e,
             a = oe.a.GetAppInfo(t);
           return r.createElement(
             "div",
             {
-              className: Na.SuggestedAppFilter,
+              className: Ea.SuggestedAppFilter,
               onClick: () => {
                 _.b.Get().AddAppIDFilter(t);
               },
             },
-            r.createElement(Ye.a, { className: Na.AddGameToFilterIcon }),
+            r.createElement(Ye.a, { className: Ea.AddGameToFilterIcon }),
             r.createElement(
               "div",
-              { className: Na.SuggestedAppFilterName },
+              { className: Ea.SuggestedAppFilterName },
               a.name
             )
           );
         };
-      let ja = class extends r.Component {
+      let Sa = class extends r.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -7402,36 +7388,36 @@
               0 == i.length &&
               (o = r.createElement(
                 "div",
-                { className: Na.AppFilterNoMatches },
+                { className: Ea.AppFilterNoMatches },
                 Object(g.f)("#AppFilter_NoMatches")
               )),
             r.createElement(
               "div",
-              { className: Na.ManageAppFiltersPopup },
+              { className: Ea.ManageAppFiltersPopup },
               r.createElement(
                 "div",
-                { className: Na.HeaderContainer },
+                { className: Ea.HeaderContainer },
                 r.createElement(
                   "div",
-                  { className: Na.Header },
+                  { className: Ea.Header },
                   Object(g.f)("#AppFilter_Label")
                 )
               ),
               0 != t.size &&
                 r.createElement(
                   "div",
-                  { className: Na.CurrentAppFiltersContainer },
+                  { className: Ea.CurrentAppFiltersContainer },
                   Array.from(t.keys()).map((e) =>
                     oe.a.GetAppInfo(e).is_valid
-                      ? r.createElement(va, { key: e, appid: e })
+                      ? r.createElement(Na, { key: e, appid: e })
                       : null
                   )
                 ),
               r.createElement(
                 "div",
-                { className: Na.AppInputFilterContainer },
+                { className: Ea.AppInputFilterContainer },
                 r.createElement("input", {
-                  className: Na.AppInputFilter,
+                  className: Ea.AppInputFilter,
                   type: "text",
                   onChange: this.OnFilterByText,
                   value: e,
@@ -7439,39 +7425,39 @@
                 r.createElement(
                   "div",
                   {
-                    className: Na.AppFilterClearButton,
+                    className: Ea.AppFilterClearButton,
                     onClick: this.ClearAppFilterString,
                   },
-                  r.createElement(Ye.d, { className: Na.AppFilterClearIcon })
+                  r.createElement(Ye.d, { className: Ea.AppFilterClearIcon })
                 )
               ),
               o,
               r.createElement(
                 "div",
-                { className: Na.AppCheckboxesContainer },
+                { className: Ea.AppCheckboxesContainer },
                 i.map((e) =>
                   oe.a.GetAppInfo(e).is_valid
-                    ? r.createElement(Sa, { key: e, appid: e })
+                    ? r.createElement(va, { key: e, appid: e })
                     : null
                 )
               ),
               0 != n.length &&
                 r.createElement(
                   "div",
-                  { className: Na.HeaderContainer },
+                  { className: Ea.HeaderContainer },
                   r.createElement(
                     "div",
-                    { className: Na.Header },
+                    { className: Ea.Header },
                     Object(g.f)("#AppFilter_FilterByRecentlyPlayed")
                   )
                 ),
               0 != n.length &&
                 r.createElement(
                   "div",
-                  { className: Na.AppCheckboxesContainer },
+                  { className: Ea.AppCheckboxesContainer },
                   n.map((e) =>
                     oe.a.GetAppInfo(e).is_valid
-                      ? r.createElement(Sa, { key: e, appid: e })
+                      ? r.createElement(va, { key: e, appid: e })
                       : null
                   )
                 )
@@ -7479,29 +7465,29 @@
           );
         }
       };
-      (ja.defaultProps = {
+      (Sa.defaultProps = {
         maxGamesToDisplay: 3,
         minCharactersForNameFilter: 3,
       }),
-        Object(n.b)([ha.a], ja.prototype, "CloseModal", null),
-        Object(n.b)([ha.a], ja.prototype, "OnChangeAppFilterCheckbox", null),
-        Object(n.b)([ha.a], ja.prototype, "OnFilterByText", null),
-        Object(n.b)([ha.a], ja.prototype, "ClearAppFilterString", null),
-        (ja = Object(n.b)([m.a], ja));
-      let Aa = "",
+        Object(n.b)([ha.b], Sa.prototype, "CloseModal", null),
+        Object(n.b)([ha.b], Sa.prototype, "OnChangeAppFilterCheckbox", null),
+        Object(n.b)([ha.b], Sa.prototype, "OnFilterByText", null),
+        Object(n.b)([ha.b], Sa.prototype, "ClearAppFilterString", null),
+        (Sa = Object(n.b)([m.a], Sa));
+      let ja = "",
+        Aa = null,
         Oa = null,
-        Da = null,
-        xa = null;
+        Da = null;
+      function xa() {
+        (ja = ""),
+          null !== Aa && Aa.disconnect(),
+          null !== Oa && (window.clearTimeout(Oa), (Oa = null));
+      }
       function Pa() {
-        (Aa = ""),
-          null !== Oa && Oa.disconnect(),
-          null !== Da && (window.clearTimeout(Da), (Da = null));
+        const e = document.getElementById(ja);
+        return null !== e && (Da(e), xa(), !0);
       }
-      function Ba() {
-        const e = document.getElementById(Aa);
-        return null !== e && (xa(e), Pa(), !0);
-      }
-      function La(e) {
+      function Ba(e) {
         return i.a.forwardRef((t, a) => {
           const { scroll: r, smooth: o } = t,
             s = Object(n.c)(t, ["scroll", "smooth"]);
@@ -7509,30 +7495,30 @@
             e,
             Object.assign({}, s, {
               onClick: (e) => {
-                Pa(),
+                xa(),
                   t.onClick && t.onClick(e),
                   "string" == typeof t.to
-                    ? (Aa = t.to.split("#").slice(1).join("#"))
+                    ? (ja = t.to.split("#").slice(1).join("#"))
                     : "object" == typeof t.to &&
                       "string" == typeof t.to.hash &&
-                      (Aa = t.to.hash.replace("#", "")),
-                  "" !== Aa &&
-                    ((xa =
+                      (ja = t.to.hash.replace("#", "")),
+                  "" !== ja &&
+                    ((Da =
                       t.scroll ||
                       ((e) =>
                         t.smooth
                           ? e.scrollIntoView({ behavior: "smooth" })
                           : e.scrollIntoView())),
                     window.setTimeout(() => {
-                      !1 === Ba() &&
-                        (null === Oa && (Oa = new MutationObserver(Ba)),
-                        Oa.observe(document, {
+                      !1 === Pa() &&
+                        (null === Aa && (Aa = new MutationObserver(Pa)),
+                        Aa.observe(document, {
                           attributes: !0,
                           childList: !0,
                           subtree: !0,
                         }),
-                        (Da = window.setTimeout(() => {
-                          Pa();
+                        (Oa = window.setTimeout(() => {
+                          xa();
                         }, 1e4)));
                     }, 0));
               },
@@ -7542,14 +7528,14 @@
           );
         });
       }
-      La(function (e) {
+      Ba(function (e) {
         return i.a.createElement(d.b, Object.assign({ component: ae }, e));
       });
-      const Ra = La(ne);
-      var ka = a("1xRl"),
-        Ta = a("rKGf");
-      const Ga = i.a.createContext(() => {}),
-        za = (e) => {
+      const La = Ba(ne);
+      var Ra = a("1xRl"),
+        ka = a("rKGf");
+      const Ta = i.a.createContext(() => {}),
+        Ga = (e) => {
           var { children: t, className: a } = e,
             r = Object(n.c)(e, ["children", "className"]);
           const [o, s] = i.a.useState(null),
@@ -7603,25 +7589,25 @@
               }
             }, [_]),
             i.a.createElement(
-              Ga.Provider,
+              Ta.Provider,
               { value: u },
               i.a.createElement(
                 w.a,
                 Object.assign({ "flow-children": "row" }, r, {
-                  className: Object(b.a)(Ta.ItemContainer, a),
+                  className: Object(b.a)(ka.ItemContainer, a),
                   ref: m,
                   fnScrollIntoViewHandler: () => !0,
                 }),
                 t,
-                i.a.createElement("div", { className: Ta.Accent, style: p })
+                i.a.createElement("div", { className: ka.Accent, style: p })
               )
             )
           );
         },
-        Fa = (e) => {
+        za = (e) => {
           var { children: t, active: a, className: r } = e,
             o = Object(n.c)(e, ["children", "active", "className"]);
-          const s = i.a.useContext(Ga),
+          const s = i.a.useContext(Ta),
             [l, c] = i.a.useState(null),
             m = i.a.useCallback((e) => c(e), []);
           return (
@@ -7631,19 +7617,19 @@
             i.a.createElement(
               "div",
               Object.assign(
-                { className: Object(b.a)(Ta.Item, a && Ta.Active, r), ref: m },
+                { className: Object(b.a)(ka.Item, a && ka.Active, r), ref: m },
                 o
               ),
               t
             )
           );
         };
-      const Ha = "#CommunityAwards",
-        Ua = (e) => (t, a) => {
+      const Fa = "#CommunityAwards",
+        Ha = (e) => (t, a) => {
           if (!t) return !1;
-          return (a.hash === Ha) === e;
+          return (a.hash === Fa) === e;
         },
-        Va = () => {
+        Ua = () => {
           const e = [
             {
               items: [
@@ -7652,7 +7638,7 @@
                     iconComponent: Ye.o,
                     children: Object(g.f)("#HowItWorksLink"),
                     to: { pathname: s.b.LoyaltyHowItWorks(), hash: "#Title" },
-                    isActive: Ua(!1),
+                    isActive: Ha(!1),
                   },
                 },
                 {
@@ -7744,7 +7730,7 @@
                     pathname: s.b.LoyaltyHowItWorks(),
                     hash: "#CommunityAwards",
                   },
-                  isActive: Ua(!0),
+                  isActive: Ha(!0),
                 },
               }),
             t ||
@@ -7795,13 +7781,13 @@
             e
           );
         },
-        Za = () => {
-          const e = Va();
+        Va = () => {
+          const e = Ua();
           return i.a.createElement(
             f.a,
             {
               padding: "none",
-              className: ka.PrimaryNav,
+              className: Ra.PrimaryNav,
               "flow-children": "column",
             },
             i.a.createElement(
@@ -7814,30 +7800,30 @@
                   t.label &&
                     i.a.createElement(
                       "div",
-                      { className: ka.NavItem },
+                      { className: Ra.NavItem },
                       t.label
                     ),
                   t.items.map((e) =>
                     e.external
                       ? i.a.createElement(
-                          Qa,
+                          Wa,
                           Object.assign({}, e.props, { key: e.props.href })
                         )
                       : i.a.createElement(
-                          Wa,
+                          Za,
                           Object.assign({}, e.props, {
                             key: JSON.stringify(e.props.to),
                           })
                         )
                   ),
                   a < e.length - 1 &&
-                    i.a.createElement("div", { className: ka.Line })
+                    i.a.createElement("div", { className: Ra.Line })
                 )
               )
             )
           );
         },
-        Wa = (e) => {
+        Za = (e) => {
           const {
               iconComponent: t,
               className: a,
@@ -7852,22 +7838,22 @@
             ]),
             l = t,
             c = o,
-            m = "object" == typeof s.to && s.to.hash ? Ra : ne;
+            m = "object" == typeof s.to && s.to.hash ? La : ne;
           return i.a.createElement(
             m,
             Object.assign(
               {
-                className: Object(b.a)(ka.SecondaryNavItem, a),
-                activeClassName: ka.Selected,
+                className: Object(b.a)(Ra.SecondaryNavItem, a),
+                activeClassName: Ra.Selected,
               },
               s
             ),
-            i.a.createElement(l, { className: ka.Icon }),
-            i.a.createElement("div", { className: ka.Label }, r),
-            c && i.a.createElement(c, { className: ka.Callout })
+            i.a.createElement(l, { className: Ra.Icon }),
+            i.a.createElement("div", { className: Ra.Label }, r),
+            c && i.a.createElement(c, { className: Ra.Callout })
           );
         },
-        Qa = (e) => {
+        Wa = (e) => {
           const {
               iconComponent: t,
               className: a,
@@ -7885,28 +7871,28 @@
           return i.a.createElement(
             "a",
             Object.assign(
-              { className: Object(b.a)(ka.SecondaryNavItem, a) },
+              { className: Object(b.a)(Ra.SecondaryNavItem, a) },
               s
             ),
-            i.a.createElement(l, { className: ka.Icon }),
-            i.a.createElement("div", { className: ka.Label }, r),
-            c && i.a.createElement(c, { className: ka.Callout })
+            i.a.createElement(l, { className: Ra.Icon }),
+            i.a.createElement("div", { className: Ra.Label }, r),
+            c && i.a.createElement(c, { className: Ra.Callout })
           );
         };
-      function Ya(e) {
+      function Qa(e) {
         const t = "string" == typeof e.to ? e.to : e.to.pathname,
           a = Object(o.i)(t);
         return i.a.createElement(
-          Fa,
+          za,
           {
             active: !!a && (!e.exact || a.isExact),
-            className: ka.ScrollableTabItem,
+            className: Ra.ScrollableTabItem,
           },
           e.children
         );
       }
-      const qa = () => {
-        const e = Va(),
+      const Ya = () => {
+        const e = Ua(),
           t = [];
         return (
           e.forEach((e) => {
@@ -7920,12 +7906,12 @@
                     te.c,
                     Object.assign({}, s, {
                       key: e.props.href,
-                      focusClassName: ka.Focused,
+                      focusClassName: Ra.Focused,
                       noFocusRing: !0,
                     }),
                     i.a.createElement(
-                      Fa,
-                      { className: ka.ScrollableTabItem },
+                      za,
+                      { className: Ra.ScrollableTabItem },
                       e.props.children
                     )
                   )
@@ -7940,21 +7926,21 @@
                     ne,
                     Object.assign({}, s, {
                       key: l,
-                      focusClassName: ka.Focused,
+                      focusClassName: Ra.Focused,
                       noFocusRing: !0,
                     }),
-                    i.a.createElement(Ya, Object.assign({}, a), a.children)
+                    i.a.createElement(Qa, Object.assign({}, a), a.children)
                   )
                 );
               }
             });
           }),
-          i.a.createElement(za, { className: ka.ScrollableTabs }, t)
+          i.a.createElement(Ga, { className: Ra.ScrollableTabs }, t)
         );
       };
-      function Ja(e) {
+      function qa(e) {
         const { children: t } = e,
-          a = Object(ya.a)(),
+          a = Object(Ia.a)(),
           n = i.a.useRef();
         i.a.useEffect(() => {
           var e;
@@ -7970,23 +7956,23 @@
             ga.a,
             { navID: "LoyaltyShell", NavigationManager: a, navTreeRef: n },
             i.a.createElement(
-              Ia,
-              { className: Object(b.a)(wa.Shell) },
-              i.a.createElement(Xa, null),
-              r && i.a.createElement(qa, null),
+              Ca,
+              { className: Object(b.a)(ya.Shell) },
+              i.a.createElement(Ja, null),
+              r && i.a.createElement(Ya, null),
               i.a.createElement(
                 f.a,
                 {
                   display: "flex",
                   flexDirection: "row",
-                  className: wa.ShellScrollParent,
+                  className: ya.ShellScrollParent,
                 },
-                !r && i.a.createElement(Za, null),
+                !r && i.a.createElement(Va, null),
                 i.a.createElement(
                   f.a,
                   {
                     flex: "1",
-                    className: wa.ShellScroll,
+                    className: ya.ShellScroll,
                     "flow-children": "column",
                   },
                   t
@@ -7996,7 +7982,7 @@
           )
         );
       }
-      const Xa = Object(m.a)(() => {
+      const Ja = Object(m.a)(() => {
         let e = null;
         _.b.Get().BIsLoggedIn() &&
           (e = i.a.createElement(
@@ -8005,9 +7991,9 @@
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
-              className: wa.PointsContainer,
+              className: ya.PointsContainer,
             },
-            i.a.createElement(Ce.O, { className: wa.Icon }),
+            i.a.createElement(Ce.O, { className: ya.Icon }),
             i.a.createElement(
               f.a,
               {
@@ -8019,14 +8005,14 @@
               i.a.createElement(
                 "a",
                 {
-                  className: wa.YourBalanceLabel,
+                  className: ya.YourBalanceLabel,
                   href: l.d.STORE_BASE_URL + "pointssummary/",
                 },
                 Object(g.f)("#YourBalance")
               ),
               i.a.createElement(
                 "div",
-                { className: wa.RewardsPointsCount },
+                { className: ya.RewardsPointsCount },
                 _.b
                   .Get()
                   .GetPointsAvailable()
@@ -8043,38 +8029,38 @@
             {
               display: "flex",
               flexDirection: "row",
-              className: wa.AppFilterContainer,
+              className: ya.AppFilterContainer,
             },
-            i.a.createElement(Ye.n, { className: wa.HeaderVerticalDivider }),
+            i.a.createElement(Ye.n, { className: ya.HeaderVerticalDivider }),
             i.a.createElement(
               "div",
-              { className: wa.AppFilterLabel },
+              { className: ya.AppFilterLabel },
               Object(g.f)("#AppFilter_Label")
             ),
             i.a.createElement(
               "div",
-              { className: wa.AppFilterIconContainer },
+              { className: ya.AppFilterIconContainer },
               i.a.createElement(Ye.e, {
-                className: Object(b.a)(wa.AppFilterIcon),
+                className: Object(b.a)(ya.AppFilterIcon),
                 onClick: (e) =>
                   (function (e) {
                     const t = {
                       bOverlapHorizontal: !0,
                       bUseWebStyles: !1,
-                      strClassName: Na.ManageAppFiltersPopupContextMenu,
+                      strClassName: Ea.ManageAppFiltersPopupContextMenu,
                     };
-                    Object(Ea.a)(
+                    Object(Ma.a)(
                       r.createElement(
-                        Ma.c,
+                        wa.c,
                         null,
-                        r.createElement(ja, { maxGamesToDisplay: 14 })
+                        r.createElement(Sa, { maxGamesToDisplay: 14 })
                       ),
                       e,
                       t
                     );
                   })(e),
               }),
-              e && i.a.createElement("div", { className: wa.FilterInUse })
+              e && i.a.createElement("div", { className: ya.FilterInUse })
             )
           );
         }
@@ -8085,14 +8071,14 @@
             paddingX: ["xsmall", "medium"],
             display: "flex",
             flexDirection: "row",
-            className: wa.ShellHeader,
+            className: ya.ShellHeader,
           },
           i.a.createElement(
             d.c,
-            { to: s.b.LoyaltyStore(), className: wa.ShellHeaderBrandLink },
+            { to: s.b.LoyaltyStore(), className: ya.ShellHeaderBrandLink },
             i.a.createElement(
               "div",
-              { className: wa.ShellHeaderBrandName },
+              { className: ya.ShellHeaderBrandName },
               " ",
               Object(g.f)("#ShopLink"),
               " "
@@ -8102,15 +8088,103 @@
           e
         );
       });
-      var Ka = a("bxBv"),
-        $a = (a("E4Op"), a("hRO2")),
-        en = a("OS8t");
-      const tn = $a.Message;
-      class an extends tn {
+      var Xa = a("bxBv"),
+        Ka = (a("E4Op"), a("hRO2")),
+        $a = a("OS8t");
+      const en = Ka.Message;
+      class tn extends en {
         constructor(e = null) {
           super(),
-            an.prototype.accountid || en.a(an.M()),
-            tn.initialize(this, e, 0, -1, void 0, null);
+            tn.prototype.accountid || $a.a(tn.M()),
+            en.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            tn.sm_m ||
+              (tn.sm_m = {
+                proto: tn,
+                fields: {
+                  accountid: {
+                    n: 1,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeUint32,
+                  },
+                  auctiondescriptionid: {
+                    n: 2,
+                    br: $a.d.readUint64String,
+                    bw: $a.h.writeUint64String,
+                  },
+                  state: { n: 3, br: $a.d.readEnum, bw: $a.h.writeEnum },
+                  time_created: {
+                    n: 4,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeUint32,
+                  },
+                  time_updated: {
+                    n: 5,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeUint32,
+                  },
+                  amount_bid: {
+                    n: 6,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
+                  },
+                  amount_paid: {
+                    n: 7,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
+                  },
+                  auctionbidid: {
+                    n: 8,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
+                  },
+                },
+              }),
+            tn.sm_m
+          );
+        }
+        static MBF() {
+          return tn.sm_mbf || (tn.sm_mbf = $a.e(tn.M())), tn.sm_mbf;
+        }
+        toObject(e = !1) {
+          return tn.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return $a.g(tn.M(), e, t);
+        }
+        static fromObject(e) {
+          return $a.c(tn.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new Ka.BinaryReader(e),
+            a = new tn();
+          return tn.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return $a.b(tn.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new Ka.BinaryWriter();
+          return tn.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          $a.f(tn.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new Ka.BinaryWriter();
+          return tn.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuction_Bid";
+        }
+      }
+      class an extends en {
+        constructor(e = null) {
+          super(),
+            an.prototype.auctiondescriptionid || $a.a(an.M()),
+            en.initialize(this, e, 0, -1, [12], null);
         }
         static M() {
           return (
@@ -8118,41 +8192,63 @@
               (an.sm_m = {
                 proto: an,
                 fields: {
-                  accountid: {
-                    n: 1,
-                    br: en.d.readUint32,
-                    bw: en.h.writeUint32,
-                  },
                   auctiondescriptionid: {
+                    n: 1,
+                    br: $a.d.readUint64String,
+                    bw: $a.h.writeUint64String,
+                  },
+                  time_start: {
                     n: 2,
-                    br: en.d.readUint64String,
-                    bw: en.h.writeUint64String,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeUint32,
                   },
-                  state: { n: 3, br: en.d.readEnum, bw: en.h.writeEnum },
-                  time_created: {
-                    n: 4,
-                    br: en.d.readUint32,
-                    bw: en.h.writeUint32,
-                  },
-                  time_updated: {
+                  time_end: { n: 3, br: $a.d.readUint32, bw: $a.h.writeUint32 },
+                  amount_total: {
                     n: 5,
-                    br: en.d.readUint32,
-                    bw: en.h.writeUint32,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
                   },
-                  amount_bid: {
+                  amount_remaining: {
                     n: 6,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
                   },
-                  amount_paid: {
+                  highest_amount: {
                     n: 7,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
                   },
-                  auctionbidid: {
+                  highest_bidder_accountid: {
                     n: 8,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeUint32,
+                  },
+                  community_item_appid: {
+                    n: 9,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeUint32,
+                  },
+                  community_item_type: {
+                    n: 10,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeUint32,
+                  },
+                  store_appid: {
+                    n: 11,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeUint32,
+                  },
+                  store_packageids: {
+                    n: 12,
+                    r: !0,
+                    q: !0,
+                    br: $a.d.readUint32,
+                    bw: $a.h.writeRepeatedUint32,
+                  },
+                  reserve_price: {
+                    n: 13,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
                   },
                 },
               }),
@@ -8160,45 +8256,45 @@
           );
         }
         static MBF() {
-          return an.sm_mbf || (an.sm_mbf = en.e(an.M())), an.sm_mbf;
+          return an.sm_mbf || (an.sm_mbf = $a.e(an.M())), an.sm_mbf;
         }
         toObject(e = !1) {
           return an.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(an.M(), e, t);
+          return $a.g(an.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(an.M(), e);
+          return $a.c(an.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
+          let t = new Ka.BinaryReader(e),
             a = new an();
           return an.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(an.MBF(), e, t);
+          return $a.b(an.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return an.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(an.M(), e, t);
+          $a.f(an.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return an.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_Bid";
+          return "CAuction_Item";
         }
       }
-      class nn extends tn {
+      class nn extends en {
         constructor(e = null) {
           super(),
-            nn.prototype.auctiondescriptionid || en.a(nn.M()),
-            tn.initialize(this, e, 0, -1, [12], null);
+            nn.prototype.auctiondescriptionid || $a.a(nn.M()),
+            en.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -8208,61 +8304,18 @@
                 fields: {
                   auctiondescriptionid: {
                     n: 1,
-                    br: en.d.readUint64String,
-                    bw: en.h.writeUint64String,
+                    br: $a.d.readUint64String,
+                    bw: $a.h.writeUint64String,
                   },
-                  time_start: {
+                  amount_bid: {
                     n: 2,
-                    br: en.d.readUint32,
-                    bw: en.h.writeUint32,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
                   },
-                  time_end: { n: 3, br: en.d.readUint32, bw: en.h.writeUint32 },
-                  amount_total: {
-                    n: 5,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
-                  },
-                  amount_remaining: {
-                    n: 6,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
-                  },
-                  highest_amount: {
-                    n: 7,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
-                  },
-                  highest_bidder_accountid: {
-                    n: 8,
-                    br: en.d.readUint32,
-                    bw: en.h.writeUint32,
-                  },
-                  community_item_appid: {
-                    n: 9,
-                    br: en.d.readUint32,
-                    bw: en.h.writeUint32,
-                  },
-                  community_item_type: {
-                    n: 10,
-                    br: en.d.readUint32,
-                    bw: en.h.writeUint32,
-                  },
-                  store_appid: {
-                    n: 11,
-                    br: en.d.readUint32,
-                    bw: en.h.writeUint32,
-                  },
-                  store_packageids: {
-                    n: 12,
-                    r: !0,
-                    q: !0,
-                    br: en.d.readUint32,
-                    bw: en.h.writeRepeatedUint32,
-                  },
-                  reserve_price: {
-                    n: 13,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
+                  expected_amount_remaining: {
+                    n: 3,
+                    br: $a.d.readInt32,
+                    bw: $a.h.writeInt32,
                   },
                 },
               }),
@@ -8270,146 +8323,136 @@
           );
         }
         static MBF() {
-          return nn.sm_mbf || (nn.sm_mbf = en.e(nn.M())), nn.sm_mbf;
+          return nn.sm_mbf || (nn.sm_mbf = $a.e(nn.M())), nn.sm_mbf;
         }
         toObject(e = !1) {
           return nn.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(nn.M(), e, t);
+          return $a.g(nn.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(nn.M(), e);
+          return $a.c(nn.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
+          let t = new Ka.BinaryReader(e),
             a = new nn();
           return nn.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(nn.MBF(), e, t);
+          return $a.b(nn.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return nn.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(nn.M(), e, t);
+          $a.f(nn.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return nn.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuction_Item";
-        }
-      }
-      class rn extends tn {
-        constructor(e = null) {
-          super(),
-            rn.prototype.auctiondescriptionid || en.a(rn.M()),
-            tn.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            rn.sm_m ||
-              (rn.sm_m = {
-                proto: rn,
-                fields: {
-                  auctiondescriptionid: {
-                    n: 1,
-                    br: en.d.readUint64String,
-                    bw: en.h.writeUint64String,
-                  },
-                  amount_bid: {
-                    n: 2,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
-                  },
-                  expected_amount_remaining: {
-                    n: 3,
-                    br: en.d.readInt32,
-                    bw: en.h.writeInt32,
-                  },
-                },
-              }),
-            rn.sm_m
-          );
-        }
-        static MBF() {
-          return rn.sm_mbf || (rn.sm_mbf = en.e(rn.M())), rn.sm_mbf;
-        }
-        toObject(e = !1) {
-          return rn.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return en.g(rn.M(), e, t);
-        }
-        static fromObject(e) {
-          return en.c(rn.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
-            a = new rn();
-          return rn.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return en.b(rn.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new $a.BinaryWriter();
-          return rn.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          en.f(rn.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new $a.BinaryWriter();
-          return rn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuction_PlaceBid_Request";
         }
       }
-      class on extends tn {
+      class rn extends en {
         constructor(e = null) {
-          super(), tn.initialize(this, e, 0, -1, void 0, null);
+          super(), en.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return on.toObject(e, this);
+          return rn.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new on();
+          return new rn();
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
-            a = new on();
-          return on.deserializeBinaryFromReader(a, t);
+          let t = new Ka.BinaryReader(e),
+            a = new rn();
+          return rn.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
-          return on.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ka.BinaryWriter();
+          return rn.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
-          return on.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ka.BinaryWriter();
+          return rn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuction_PlaceBid_Response";
         }
       }
-      class sn extends tn {
+      class on extends en {
         constructor(e = null) {
           super(),
-            sn.prototype.auctiondescriptionid || en.a(sn.M()),
-            tn.initialize(this, e, 0, -1, void 0, null);
+            on.prototype.auctiondescriptionid || $a.a(on.M()),
+            en.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            on.sm_m ||
+              (on.sm_m = {
+                proto: on,
+                fields: {
+                  auctiondescriptionid: {
+                    n: 1,
+                    br: $a.d.readUint64String,
+                    bw: $a.h.writeUint64String,
+                  },
+                },
+              }),
+            on.sm_m
+          );
+        }
+        static MBF() {
+          return on.sm_mbf || (on.sm_mbf = $a.e(on.M())), on.sm_mbf;
+        }
+        toObject(e = !1) {
+          return on.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return $a.g(on.M(), e, t);
+        }
+        static fromObject(e) {
+          return $a.c(on.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new Ka.BinaryReader(e),
+            a = new on();
+          return on.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return $a.b(on.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new Ka.BinaryWriter();
+          return on.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          $a.f(on.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new Ka.BinaryWriter();
+          return on.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuction_CancelBid_Request";
+        }
+      }
+      class sn extends en {
+        constructor(e = null) {
+          super(),
+            sn.prototype.amount_returned || $a.a(sn.M()),
+            en.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -8417,10 +8460,10 @@
               (sn.sm_m = {
                 proto: sn,
                 fields: {
-                  auctiondescriptionid: {
+                  amount_returned: {
                     n: 1,
-                    br: en.d.readUint64String,
-                    bw: en.h.writeUint64String,
+                    br: $a.d.readInt64String,
+                    bw: $a.h.writeInt64String,
                   },
                 },
               }),
@@ -8428,45 +8471,45 @@
           );
         }
         static MBF() {
-          return sn.sm_mbf || (sn.sm_mbf = en.e(sn.M())), sn.sm_mbf;
+          return sn.sm_mbf || (sn.sm_mbf = $a.e(sn.M())), sn.sm_mbf;
         }
         toObject(e = !1) {
           return sn.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(sn.M(), e, t);
+          return $a.g(sn.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(sn.M(), e);
+          return $a.c(sn.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
+          let t = new Ka.BinaryReader(e),
             a = new sn();
           return sn.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(sn.MBF(), e, t);
+          return $a.b(sn.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return sn.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(sn.M(), e, t);
+          $a.f(sn.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return sn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_CancelBid_Request";
+          return "CAuction_CancelBid_Response";
         }
       }
-      class ln extends tn {
+      class ln extends en {
         constructor(e = null) {
           super(),
-            ln.prototype.amount_returned || en.a(ln.M()),
-            tn.initialize(this, e, 0, -1, void 0, null);
+            ln.prototype.steamid || $a.a(ln.M()),
+            en.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -8474,10 +8517,10 @@
               (ln.sm_m = {
                 proto: ln,
                 fields: {
-                  amount_returned: {
+                  steamid: {
                     n: 1,
-                    br: en.d.readInt64String,
-                    bw: en.h.writeInt64String,
+                    br: $a.d.readFixed64String,
+                    bw: $a.h.writeFixed64String,
                   },
                 },
               }),
@@ -8485,153 +8528,160 @@
           );
         }
         static MBF() {
-          return ln.sm_mbf || (ln.sm_mbf = en.e(ln.M())), ln.sm_mbf;
+          return ln.sm_mbf || (ln.sm_mbf = $a.e(ln.M())), ln.sm_mbf;
         }
         toObject(e = !1) {
           return ln.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(ln.M(), e, t);
+          return $a.g(ln.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(ln.M(), e);
+          return $a.c(ln.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
+          let t = new Ka.BinaryReader(e),
             a = new ln();
           return ln.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(ln.MBF(), e, t);
+          return $a.b(ln.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return ln.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(ln.M(), e, t);
+          $a.f(ln.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return ln.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_CancelBid_Response";
+          return "CAuction_GetBidsForUser_Request";
         }
       }
-      class cn extends tn {
+      class cn extends en {
         constructor(e = null) {
           super(),
-            cn.prototype.steamid || en.a(cn.M()),
-            tn.initialize(this, e, 0, -1, void 0, null);
+            cn.prototype.bids || $a.a(cn.M()),
+            en.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             cn.sm_m ||
               (cn.sm_m = {
                 proto: cn,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: en.d.readFixed64String,
-                    bw: en.h.writeFixed64String,
-                  },
-                },
+                fields: { bids: { n: 1, c: tn, r: !0, q: !0 } },
               }),
             cn.sm_m
           );
         }
         static MBF() {
-          return cn.sm_mbf || (cn.sm_mbf = en.e(cn.M())), cn.sm_mbf;
+          return cn.sm_mbf || (cn.sm_mbf = $a.e(cn.M())), cn.sm_mbf;
         }
         toObject(e = !1) {
           return cn.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(cn.M(), e, t);
+          return $a.g(cn.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(cn.M(), e);
+          return $a.c(cn.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
+          let t = new Ka.BinaryReader(e),
             a = new cn();
           return cn.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(cn.MBF(), e, t);
+          return $a.b(cn.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return cn.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(cn.M(), e, t);
+          $a.f(cn.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return cn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_GetBidsForUser_Request";
+          return "CAuction_GetBidsForUser_Response";
         }
       }
-      class mn extends tn {
+      class mn extends en {
         constructor(e = null) {
           super(),
-            mn.prototype.bids || en.a(mn.M()),
-            tn.initialize(this, e, 0, -1, [1], null);
+            mn.prototype.item || $a.a(mn.M()),
+            en.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
             mn.sm_m ||
               (mn.sm_m = {
                 proto: mn,
-                fields: { bids: { n: 1, c: an, r: !0, q: !0 } },
+                fields: {
+                  item: { n: 1, c: an },
+                  count_total: {
+                    n: 2,
+                    br: $a.d.readInt32,
+                    bw: $a.h.writeInt32,
+                  },
+                  current_user_position: {
+                    n: 3,
+                    br: $a.d.readInt32,
+                    bw: $a.h.writeInt32,
+                  },
+                  winning_bids: { n: 4, c: tn, r: !0, q: !0 },
+                },
               }),
             mn.sm_m
           );
         }
         static MBF() {
-          return mn.sm_mbf || (mn.sm_mbf = en.e(mn.M())), mn.sm_mbf;
+          return mn.sm_mbf || (mn.sm_mbf = $a.e(mn.M())), mn.sm_mbf;
         }
         toObject(e = !1) {
           return mn.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(mn.M(), e, t);
+          return $a.g(mn.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(mn.M(), e);
+          return $a.c(mn.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
+          let t = new Ka.BinaryReader(e),
             a = new mn();
           return mn.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(mn.MBF(), e, t);
+          return $a.b(mn.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return mn.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(mn.M(), e, t);
+          $a.f(mn.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return mn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_GetBidsForUser_Response";
+          return "CAuction_GetBidsForItem_Response";
         }
       }
-      class dn extends tn {
+      class dn extends en {
         constructor(e = null) {
           super(),
-            dn.prototype.item || en.a(dn.M()),
-            tn.initialize(this, e, 0, -1, [4], null);
+            dn.prototype.auctiondescriptionid || $a.a(dn.M()),
+            en.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -8639,348 +8689,284 @@
               (dn.sm_m = {
                 proto: dn,
                 fields: {
-                  item: { n: 1, c: nn },
-                  count_total: {
-                    n: 2,
-                    br: en.d.readInt32,
-                    bw: en.h.writeInt32,
+                  auctiondescriptionid: {
+                    n: 1,
+                    br: $a.d.readUint64String,
+                    bw: $a.h.writeUint64String,
                   },
-                  current_user_position: {
-                    n: 3,
-                    br: en.d.readInt32,
-                    bw: en.h.writeInt32,
-                  },
-                  winning_bids: { n: 4, c: an, r: !0, q: !0 },
                 },
               }),
             dn.sm_m
           );
         }
         static MBF() {
-          return dn.sm_mbf || (dn.sm_mbf = en.e(dn.M())), dn.sm_mbf;
+          return dn.sm_mbf || (dn.sm_mbf = $a.e(dn.M())), dn.sm_mbf;
         }
         toObject(e = !1) {
           return dn.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(dn.M(), e, t);
+          return $a.g(dn.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(dn.M(), e);
+          return $a.c(dn.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
+          let t = new Ka.BinaryReader(e),
             a = new dn();
           return dn.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(dn.MBF(), e, t);
+          return $a.b(dn.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return dn.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(dn.M(), e, t);
+          $a.f(dn.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
+          var e = new Ka.BinaryWriter();
           return dn.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuction_GetBidsForItem_Response";
-        }
-      }
-      class pn extends tn {
-        constructor(e = null) {
-          super(),
-            pn.prototype.auctiondescriptionid || en.a(pn.M()),
-            tn.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            pn.sm_m ||
-              (pn.sm_m = {
-                proto: pn,
-                fields: {
-                  auctiondescriptionid: {
-                    n: 1,
-                    br: en.d.readUint64String,
-                    bw: en.h.writeUint64String,
-                  },
-                },
-              }),
-            pn.sm_m
-          );
-        }
-        static MBF() {
-          return pn.sm_mbf || (pn.sm_mbf = en.e(pn.M())), pn.sm_mbf;
-        }
-        toObject(e = !1) {
-          return pn.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return en.g(pn.M(), e, t);
-        }
-        static fromObject(e) {
-          return en.c(pn.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
-            a = new pn();
-          return pn.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return en.b(pn.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new $a.BinaryWriter();
-          return pn.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          en.f(pn.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new $a.BinaryWriter();
-          return pn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuction_GetUserBidForItem_Request";
         }
       }
-      class un extends tn {
+      class pn extends en {
         constructor(e = null) {
           super(),
-            un.prototype.bid || en.a(un.M()),
-            tn.initialize(this, e, 0, -1, void 0, null);
+            pn.prototype.bid || $a.a(pn.M()),
+            en.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            un.sm_m ||
-              (un.sm_m = { proto: un, fields: { bid: { n: 1, c: an } } }),
-            un.sm_m
+            pn.sm_m ||
+              (pn.sm_m = { proto: pn, fields: { bid: { n: 1, c: tn } } }),
+            pn.sm_m
           );
         }
         static MBF() {
-          return un.sm_mbf || (un.sm_mbf = en.e(un.M())), un.sm_mbf;
+          return pn.sm_mbf || (pn.sm_mbf = $a.e(pn.M())), pn.sm_mbf;
         }
         toObject(e = !1) {
-          return un.toObject(e, this);
+          return pn.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(un.M(), e, t);
+          return $a.g(pn.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(un.M(), e);
+          return $a.c(pn.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
-            a = new un();
-          return un.deserializeBinaryFromReader(a, t);
+          let t = new Ka.BinaryReader(e),
+            a = new pn();
+          return pn.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(un.MBF(), e, t);
+          return $a.b(pn.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
-          return un.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ka.BinaryWriter();
+          return pn.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(un.M(), e, t);
+          $a.f(pn.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
-          return un.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ka.BinaryWriter();
+          return pn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuction_GetUserBidForItem_Response";
         }
       }
-      class _n extends tn {
+      class un extends en {
         constructor(e = null) {
           super(),
-            _n.prototype.item || en.a(_n.M()),
-            tn.initialize(this, e, 0, -1, void 0, null);
+            un.prototype.item || $a.a(un.M()),
+            en.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            _n.sm_m ||
-              (_n.sm_m = { proto: _n, fields: { item: { n: 1, c: nn } } }),
-            _n.sm_m
+            un.sm_m ||
+              (un.sm_m = { proto: un, fields: { item: { n: 1, c: an } } }),
+            un.sm_m
           );
         }
         static MBF() {
-          return _n.sm_mbf || (_n.sm_mbf = en.e(_n.M())), _n.sm_mbf;
+          return un.sm_mbf || (un.sm_mbf = $a.e(un.M())), un.sm_mbf;
         }
         toObject(e = !1) {
-          return _n.toObject(e, this);
+          return un.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(_n.M(), e, t);
+          return $a.g(un.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(_n.M(), e);
+          return $a.c(un.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
-            a = new _n();
-          return _n.deserializeBinaryFromReader(a, t);
+          let t = new Ka.BinaryReader(e),
+            a = new un();
+          return un.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(_n.MBF(), e, t);
+          return $a.b(un.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
-          return _n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ka.BinaryWriter();
+          return un.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(_n.M(), e, t);
+          $a.f(un.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
-          return _n.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ka.BinaryWriter();
+          return un.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuction_GetItemDetails_Response";
         }
       }
-      class fn extends tn {
+      class _n extends en {
         constructor(e = null) {
-          super(), tn.initialize(this, e, 0, -1, void 0, null);
+          super(), en.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return fn.toObject(e, this);
+          return _n.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new fn();
+          return new _n();
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
-            a = new fn();
-          return fn.deserializeBinaryFromReader(a, t);
+          let t = new Ka.BinaryReader(e),
+            a = new _n();
+          return _n.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
-          return fn.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ka.BinaryWriter();
+          return _n.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
-          return fn.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ka.BinaryWriter();
+          return _n.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuction_GetAllItems_Request";
         }
       }
-      class gn extends tn {
+      class fn extends en {
         constructor(e = null) {
           super(),
-            gn.prototype.items || en.a(gn.M()),
-            tn.initialize(this, e, 0, -1, [1], null);
+            fn.prototype.items || $a.a(fn.M()),
+            en.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            gn.sm_m ||
-              (gn.sm_m = {
-                proto: gn,
-                fields: { items: { n: 1, c: nn, r: !0, q: !0 } },
+            fn.sm_m ||
+              (fn.sm_m = {
+                proto: fn,
+                fields: { items: { n: 1, c: an, r: !0, q: !0 } },
               }),
-            gn.sm_m
+            fn.sm_m
           );
         }
         static MBF() {
-          return gn.sm_mbf || (gn.sm_mbf = en.e(gn.M())), gn.sm_mbf;
+          return fn.sm_mbf || (fn.sm_mbf = $a.e(fn.M())), fn.sm_mbf;
         }
         toObject(e = !1) {
-          return gn.toObject(e, this);
+          return fn.toObject(e, this);
         }
         static toObject(e, t) {
-          return en.g(gn.M(), e, t);
+          return $a.g(fn.M(), e, t);
         }
         static fromObject(e) {
-          return en.c(gn.M(), e);
+          return $a.c(fn.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new $a.BinaryReader(e),
-            a = new gn();
-          return gn.deserializeBinaryFromReader(a, t);
+          let t = new Ka.BinaryReader(e),
+            a = new fn();
+          return fn.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return en.b(gn.MBF(), e, t);
+          return $a.b(fn.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new $a.BinaryWriter();
-          return gn.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ka.BinaryWriter();
+          return fn.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          en.f(gn.M(), e, t);
+          $a.f(fn.M(), e, t);
         }
         serializeBase64String() {
-          var e = new $a.BinaryWriter();
-          return gn.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ka.BinaryWriter();
+          return fn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuction_GetAllItems_Response";
         }
       }
-      var hn;
+      var gn;
       !(function (e) {
         (e.PlaceBid = function (e, t) {
-          return e.SendMsg("Auction.PlaceBid#1", t, on, { ePrivilege: 3 });
+          return e.SendMsg("Auction.PlaceBid#1", t, rn, { ePrivilege: 3 });
         }),
           (e.CancelBid = function (e, t) {
-            return e.SendMsg("Auction.CancelBid#1", t, ln, { ePrivilege: 1 });
+            return e.SendMsg("Auction.CancelBid#1", t, sn, { ePrivilege: 1 });
           }),
           (e.GetBidsForUser = function (e, t) {
-            return e.SendMsg("Auction.GetBidsForUser#1", t, mn, {
+            return e.SendMsg("Auction.GetBidsForUser#1", t, cn, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
           (e.GetBidsForItem = function (e, t) {
-            return e.SendMsg("Auction.GetBidsForItem#1", t, dn, {
+            return e.SendMsg("Auction.GetBidsForItem#1", t, mn, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetUserBidForItem = function (e, t) {
-            return e.SendMsg("Auction.GetUserBidForItem#1", t, un, {
+            return e.SendMsg("Auction.GetUserBidForItem#1", t, pn, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
           (e.GetItemDetails = function (e, t) {
-            return e.SendMsg("Auction.GetItemDetails#1", t, _n, {
+            return e.SendMsg("Auction.GetItemDetails#1", t, un, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetAllItems = function (e, t) {
-            return e.SendMsg("Auction.GetAllItems#1", t, gn, {
+            return e.SendMsg("Auction.GetAllItems#1", t, fn, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           });
-      })(hn || (hn = {}));
-      var bn = a("2vnA");
-      class Cn {
+      })(gn || (gn = {}));
+      var hn = a("2vnA");
+      class bn {
         constructor() {
           (this.m_bLoadedCurrentUserBids = !1),
-            (this.m_rgCurrentUserBids = bn.C.array([], { deep: !0 })),
+            (this.m_rgCurrentUserBids = hn.C.array([], { deep: !0 })),
             (this.m_bLoadedAllItems = !1),
             (this.m_mapAuctionItems = new Map());
         }
         static Get() {
           return (
-            this.s_Singleton || (this.s_Singleton = new Cn()), this.s_Singleton
+            this.s_Singleton || (this.s_Singleton = new bn()), this.s_Singleton
           );
         }
         Init(e) {
@@ -8990,9 +8976,9 @@
         LoadCurrentUserBids() {
           return Object(n.a)(this, void 0, void 0, function* () {
             if (!_.b.Get().BIsLoggedIn()) return [];
-            const e = Ka.b.Init(cn);
+            const e = Xa.b.Init(ln);
             e.SetBodyFields({ steamid: l.k.steamid });
-            let t = yield hn.GetBidsForUser(this.m_transport, e);
+            let t = yield gn.GetBidsForUser(this.m_transport, e);
             return 1 == t.GetEResult()
               ? t.Body().toObject().bids
               : (console.error(
@@ -9014,8 +9000,8 @@
         }
         LoadAllItems() {
           return Object(n.a)(this, void 0, void 0, function* () {
-            const e = Ka.b.Init(fn);
-            let t = yield hn.GetAllItems(this.m_anonymousTransport, e);
+            const e = Xa.b.Init(_n);
+            let t = yield gn.GetAllItems(this.m_anonymousTransport, e);
             return 1 == t.GetEResult()
               ? t.Body().toObject().items
               : (console.error(
@@ -9040,8 +9026,8 @@
         }
         GetUserBidForItem(e) {
           return Object(n.a)(this, void 0, void 0, function* () {
-            const e = Ka.b.Init(pn);
-            let t = yield hn.GetUserBidForItem(this.m_transport, e);
+            const e = Xa.b.Init(dn);
+            let t = yield gn.GetUserBidForItem(this.m_transport, e);
             return 1 == t.GetEResult()
               ? t.Body().toObject().bid
               : (console.error(
@@ -9055,13 +9041,13 @@
             let n = { eResult: 2, strMessage: "" };
             if (!_.b.Get().BIsLoggedIn())
               return (n = { eResult: 21, strMessage: "Not logged on" }), n;
-            const r = Ka.b.Init(rn);
+            const r = Xa.b.Init(nn);
             r.SetBodyFields({
               auctiondescriptionid: e,
               amount_bid: t,
               expected_amount_remaining: a,
             });
-            const i = yield hn.PlaceBid(this.m_transport, r);
+            const i = yield gn.PlaceBid(this.m_transport, r);
             return (
               (n.eResult = i.GetEResult()),
               1 == i.GetEResult()
@@ -9079,9 +9065,9 @@
             let t = { eResult: 2, strMessage: "" };
             if (!_.b.Get().BIsLoggedIn())
               return (t = { eResult: 21, strMessage: "Not logged on" }), t;
-            const a = Ka.b.Init(sn);
+            const a = Xa.b.Init(on);
             a.SetBodyFields({ auctiondescriptionid: e });
-            const n = yield hn.CancelBid(this.m_transport, a);
+            const n = yield gn.CancelBid(this.m_transport, a);
             return (
               (t.eResult = n.GetEResult()),
               1 == n.GetEResult()
@@ -9095,20 +9081,20 @@
           });
         }
       }
-      Object(n.b)([bn.C], Cn.prototype, "m_rgCurrentUserBids", void 0),
-        Object(n.b)([bn.C], Cn.prototype, "m_mapAuctionItems", void 0);
-      var In = a("ee7K");
-      class yn extends i.a.Component {
+      Object(n.b)([hn.C], bn.prototype, "m_rgCurrentUserBids", void 0),
+        Object(n.b)([hn.C], bn.prototype, "m_mapAuctionItems", void 0);
+      var Cn = a("ee7K");
+      class In extends i.a.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
         }
         componentDidMount() {
-          wn.then(() => this.setState({ bReady: !0 }));
+          yn.then(() => this.setState({ bReady: !0 }));
         }
         render() {
           return this.state.bReady
             ? i.a.createElement(
-                Ja,
+                qa,
                 null,
                 i.a.createElement(
                   o.d,
@@ -9143,7 +9129,7 @@
             : i.a.createElement(I, null);
         }
       }
-      const wn = (function () {
+      const yn = (function () {
         return Object(n.a)(this, void 0, void 0, function* () {
           let e = Object(l.h)("loyaltystore", "application_config");
           const t = new c.a(l.d.WEBAPI_BASE_URL, e.webapi_token);
@@ -9160,11 +9146,11 @@
                 g.e.AddTokens(r.default, i ? i.default : void 0);
               });
             })(),
-            yield In.a.Get().HintLoad(),
+            yield Cn.a.Get().HintLoad(),
             _.b.Get().Init(t, e);
         });
       })();
-      t.default = yn;
+      t.default = In;
     },
     CeOW: function (e, t, a) {
       e.exports =
@@ -15060,7 +15046,7 @@
         Object(n.b)([o.C], P.prototype, "m_rgPurchasedCustomizations", void 0),
         Object(n.b)([o.C], P.prototype, "m_rgUpgradedCustomizations", void 0),
         Object(n.b)([o.C], P.prototype, "m_unAwardPointsTransferred", void 0),
-        Object(n.b)([u.a], P.prototype, "ShowLoginDialog", null);
+        Object(n.b)([u.b], P.prototype, "ShowLoginDialog", null);
       class G {
         constructor(e, t, a = {}) {
           (this.m_filter = a),
@@ -15082,7 +15068,7 @@
           return P.Get().QueryRewardDefinitions(n, e, t);
         }
       }
-      Object(n.b)([u.a], G.prototype, "GetRewards", null);
+      Object(n.b)([u.b], G.prototype, "GetRewards", null);
       class z {
         constructor(e, t, a) {
           (this.m_appid = e),
@@ -15108,7 +15094,7 @@
           return P.Get().QueryRewardDefinitions(n, e, t);
         }
       }
-      Object(n.b)([u.a], z.prototype, "GetRewards", null);
+      Object(n.b)([u.b], z.prototype, "GetRewards", null);
       class F {
         constructor(e, t = "") {
           (this.m_appid = e),
@@ -16042,7 +16028,7 @@
         const { children: t, navTreeRef: a } = e,
           r = Object(n.c)(e, ["children", "navTreeRef"]),
           m = i.a.useRef(),
-          d = Object(l.f)(m, a);
+          d = Object(l.g)(m, a);
         if (c.d.IN_GAMEPADUI) {
           const e = window.__nav_tree_root;
           return i.a.createElement(

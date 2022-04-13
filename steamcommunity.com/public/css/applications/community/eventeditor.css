@@ -2075,7 +2075,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   text-decoration: underline;
 }
 .deckverified_CategoryIcon_3qF71 {
-  padding-right: 6px;
+  padding-right: 8px;
   vertical-align: middle;
 }
 .deckverified_LearnMoreCtn_2IcEu {
@@ -2256,6 +2256,38 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .deckverified_DeveloperBlogYButton_3avWD {
   padding-left: 10px;
   display: inline-block;
+}
+.deckverified_Divider_1ikdM {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 1px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.deckverified_DeveloperComments_Anchor__JTh9 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  cursor: pointer;
+}
+.deckverified_DeveloperComments_Icon_2R6eC {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMiA0VjIwVjI0TDcgMjBIMjRWNEgyWk0zNCAxMlYzMkwyOSAyOEgxMlYyNEgyOFYxMkgzNFoiIGZpbGw9IndoaXRlIi8+DQo8L3N2Zz4NCg==);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  opacity: 0.8;
+}
+.deckverified_DeveloperComments_LinkNoIcon_1zjwW {
+  vertical-align: middle;
+}
+.deckverified_DeveloperComments_LinkIcon_3OZNU {
+  vertical-align: middle;
+  color: var(--gpStoreLightestGrey);
+  font-size: 14px;
+  line-height: 20px;
 }
 .footericons_Dark_2UAf_ .footericons_Background_yjs9m {
   color: #0e141b;
@@ -6795,8 +6827,6 @@ html.responsive.touch
   }
 }
 .BasicUI .partnersaledisplay_SaleSectionTabs_1FPIV {
-  background: none !important;
-  backdrop-filter: none !important;
   margin: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -7400,7 +7430,6 @@ Body.v6.tag_page.contenthub_page {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-content: space-between;
 }
 .contenthubshared_BroadcastCtn_1D6il {
@@ -7410,6 +7439,14 @@ Body.v6.tag_page.contenthub_page {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.contenthubshared_BroadcastCtn_1D6il:first-child {
+  margin-left: 0;
+}
+.contenthubshared_BroadcastCtn_1D6il:last-child {
+  margin-right: 0;
 }
 .contenthubshared_BroadcastCtn_1D6il .contenthubshared_BroadcastImageCtn_cIETZ {
   height: 136px;
@@ -12174,123 +12211,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   color: #74c069;
   background-color: #0000;
 }
-@keyframes gamepadui_svg_library_SpinnerSpokeFade_2Wg5d {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
-.gamepadui_svg_library_Spinner_3m_2l > path {
-  animation: gamepadui_svg_library_SpinnerSpokeFade_2Wg5d 0.6s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(1) {
-  animation-delay: -0.925s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(2) {
-  animation-delay: -0.85s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(3) {
-  animation-delay: -0.775s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(4) {
-  animation-delay: -0.7s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(5) {
-  animation-delay: -0.625s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(6) {
-  animation-delay: -0.55s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(7) {
-  animation-delay: -0.475s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(8) {
-  animation-delay: -0.4s;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8- > path {
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8-
-  .gamepadui_svg_library_WifiBar1_1o6HA {
-  animation-name: gamepadui_svg_library_WifiBar1Anim_1PDAZ;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8-
-  .gamepadui_svg_library_WifiBar2_1q8-n {
-  animation-name: gamepadui_svg_library_WifiBar2Anim_QyijT;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8-
-  .gamepadui_svg_library_WifiBar3_23ih_ {
-  animation-name: gamepadui_svg_library_WifiBar3Anim_2wGDz;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8-
-  .gamepadui_svg_library_WifiBar4_2DSRH {
-  animation-name: gamepadui_svg_library_WifiBar4Anim_3jrA8;
-}
-@keyframes gamepadui_svg_library_WifiBar1Anim_1PDAZ {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar2Anim_QyijT {
-  0% {
-    opacity: 0.25;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar3Anim_2wGDz {
-  0% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar4Anim_3jrA8 {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.gamepadui_svg_library_GenericGamepadHighlight_3-ZZD {
-  fill: green;
-}
 .reorderablelist_WhitelistNumber_IY3dF {
   width: 30px;
   height: 30px;
@@ -13288,6 +13208,11 @@ body.v6.partner_events {
   .partnereventdisplay_EventDetailTitle_TqEPC {
   font-size: 24px;
   margin-top: 12px;
+}
+.partnereventdisplay_InLibraryView_3_SEi
+  .partnereventdisplay_EventDetailTitle_TqEPC:hover {
+  cursor: pointer;
+  color: #fff;
 }
 .BasicUI .partnereventdisplay_EventDetailTitle_TqEPC {
   font-weight: 500;

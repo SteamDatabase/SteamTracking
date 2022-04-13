@@ -437,8 +437,17 @@ function RenderMoreDLCFromBaseGameBlock( rgMoreDLCsFromBaseGameAppIDs )
 
 function ShowEULA( elLink )
 {
-	var win = window.open( elLink.href,'eula','height=584,width=475,resize=yes,scrollbars=yes');
-	win.focus();
+	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode(); 
+	if ( bSupportTabletMode )
+	{
+		// it's a better user experience on Deck if we navigate to the EULA instead of opening a new window
+		window.location = elLink.href;
+	}
+	else 
+	{
+		var win = window.open( elLink.href,'eula','height=584,width=475,resize=yes,scrollbars=yes');
+		win?.focus();
+	}
 }
 
 

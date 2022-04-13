@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7194523";
+var CLSTAMP = "7197132";
 /* Third-party software licenses can be found at licenses.txt */
 !(function (t) {
   function e(e) {
@@ -89,7 +89,7 @@ var CLSTAMP = "7194523";
               "javascript/legacy_web/" +
               ({ 0: "gamepad" }[t] || t) +
               ".js?contenthash=" +
-              { 0: "d13c119130cce1167747" }[t]
+              { 0: "94df17f446641a677684" }[t]
             );
           })(t));
         var u = new Error();
@@ -574,7 +574,9 @@ var CLSTAMP = "7194523";
           (t[(t.GAMEPAD = 1)] = "GAMEPAD"),
           (t[(t.KEYBOARD = 2)] = "KEYBOARD"),
           (t[(t.MOUSE = 3)] = "MOUSE"),
-          (t[(t.TOUCH = 4)] = "TOUCH");
+          (t[(t.TOUCH = 4)] = "TOUCH"),
+          (t[(t.LPAD = 5)] = "LPAD"),
+          (t[(t.RPAD = 6)] = "RPAD");
       })(r || (r = {}));
     class c {
       constructor() {

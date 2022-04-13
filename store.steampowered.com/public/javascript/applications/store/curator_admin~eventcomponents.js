@@ -19,9 +19,9 @@
         m = (r("mgoM"), r("kyHq"), r("kLLr")),
         u = (r("AiWL"), r("6oCP")),
         _ = r("NtSG"),
-        h = r("r64O"),
-        p = r("OS6B");
-      class b {
+        b = r("r64O"),
+        h = r("OS6B");
+      class p {
         constructor(e) {
           (this.m_mapURLToPosted = new Map()),
             (this.m_clanAccountID = e.clanid),
@@ -257,13 +257,13 @@
           });
         }
       }
-      Object(a.b)([i.C], b.prototype, "m_strRSSFeedURL", void 0),
-        Object(a.b)([i.C], b.prototype, "m_strRSSGID", void 0),
-        Object(a.b)([i.C], b.prototype, "m_rtimeRSSLastChecked", void 0),
-        Object(a.b)([i.C], b.prototype, "m_nPollIntervalSeconds", void 0),
-        Object(a.b)([i.C], b.prototype, "m_eRSSFeedLanguage", void 0),
-        Object(a.b)([i.C], b.prototype, "m_eCuratorLanguage", void 0),
-        Object(a.b)([i.C], b.prototype, "m_mapURLToPosted", void 0);
+      Object(a.b)([i.C], p.prototype, "m_strRSSFeedURL", void 0),
+        Object(a.b)([i.C], p.prototype, "m_strRSSGID", void 0),
+        Object(a.b)([i.C], p.prototype, "m_rtimeRSSLastChecked", void 0),
+        Object(a.b)([i.C], p.prototype, "m_nPollIntervalSeconds", void 0),
+        Object(a.b)([i.C], p.prototype, "m_eRSSFeedLanguage", void 0),
+        Object(a.b)([i.C], p.prototype, "m_eCuratorLanguage", void 0),
+        Object(a.b)([i.C], p.prototype, "m_mapURLToPosted", void 0);
       class S {
         constructor() {
           (this.m_mapClanAccountToAdmin = new Map()),
@@ -274,7 +274,7 @@
         }
         GetCuratorTransport() {
           return (
-            Object(h.a)(
+            Object(b.a)(
               this.m_transport,
               "Expects Transpoate to be initialized but it is now"
             ),
@@ -300,7 +300,7 @@
         Init() {
           let e = Object(o.h)("curatoradmin", "application_config");
           this.ValidateStoreDefault(e) &&
-            ((this.m_defaultAdmin = new b(e)),
+            ((this.m_defaultAdmin = new p(e)),
             this.m_mapClanAccountToAdmin.set(e.clanid, this.m_defaultAdmin)),
             this.ValidateWebAPI(e) &&
               (this.m_transport = new l.a(
@@ -344,7 +344,7 @@
                     window.setTimeout(() => this.FlushPendingClanInfo(), 25)),
                   this.m_setPendingClanInfo.add(e),
                   this.m_PendingClanInfoPromise)
-              : (Object(h.a)(
+              : (Object(b.a)(
                   !e,
                   "unexpected clanid of zero or undefined: " + e
                 ),
@@ -397,21 +397,21 @@
                 )
                   Object(i.G)(() => {
                     a.data.rss_admin_infos.forEach((e) => {
-                      this.m_mapClanAccountToAdmin.set(e.clanid, new b(e));
+                      this.m_mapClanAccountToAdmin.set(e.clanid, new p(e));
                     }),
                       a.data.rss_event_stats.forEach((e) => {
                         this.m_mapClanToEventRSSStats.set(e.clan_account_id, e);
                       });
                   });
                 else {
-                  const e = Object(p.a)(a.data || {});
+                  const e = Object(h.a)(a.data || {});
                   console.error(
                     "LoadBatchedClanRSSAdminInfo error:" + e.strErrorMsg,
                     e
                   );
                 }
               } catch (e) {
-                const t = Object(p.a)(e);
+                const t = Object(h.a)(e);
                 console.error(
                   "LoadBatchedClanRSSAdminInfo catched error:" + t.strErrorMsg,
                   t
@@ -474,7 +474,7 @@
           return _;
         }),
         r.d(t, "b", function () {
-          return p;
+          return h;
         }),
         r.d(t, "e", function () {
           return S;
@@ -1025,142 +1025,11 @@
           return "CNews_PublishPartnerEvent_Request";
         }
       }
-      class h extends s {
-        constructor(e = null) {
-          super(),
-            h.prototype.clan_event_gid || n.a(h.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: {
-                  clan_event_gid: {
-                    n: 1,
-                    br: n.d.readFixed64String,
-                    bw: n.h.writeFixed64String,
-                  },
-                  news_post_gid: {
-                    n: 2,
-                    br: n.d.readFixed64String,
-                    bw: n.h.writeFixed64String,
-                  },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = n.e(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.g(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.c(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new a.BinaryReader(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.b(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.f(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CNews_PublishPartnerEvent_Response";
-        }
-      }
-      class p extends s {
-        constructor(e = null) {
-          super(),
-            p.prototype.news_feed_gid || n.a(p.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  news_feed_gid: {
-                    n: 1,
-                    br: n.d.readFixed64String,
-                    bw: n.h.writeFixed64String,
-                  },
-                  start_index: {
-                    n: 2,
-                    d: 0,
-                    br: n.d.readUint32,
-                    bw: n.h.writeUint32,
-                  },
-                  amount: {
-                    n: 3,
-                    d: 100,
-                    br: n.d.readUint32,
-                    bw: n.h.writeUint32,
-                  },
-                },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = n.e(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.g(p.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.c(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new a.BinaryReader(e),
-            r = new p();
-          return p.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.b(p.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.f(p.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CNews_GetBatchPublishedPartnerEvent_Request";
-        }
-      }
       class b extends s {
         constructor(e = null) {
           super(),
-            b.prototype.clan_account_id || n.a(b.M()),
-            s.initialize(this, e, 0, -1, [3, 4, 5], null);
+            b.prototype.clan_event_gid || n.a(b.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1168,36 +1037,15 @@
               (b.sm_m = {
                 proto: b,
                 fields: {
-                  clan_account_id: {
+                  clan_event_gid: {
                     n: 1,
-                    br: n.d.readUint32,
-                    bw: n.h.writeUint32,
-                  },
-                  news_feed_gid: {
-                    n: 2,
                     br: n.d.readFixed64String,
                     bw: n.h.writeFixed64String,
                   },
-                  clan_event_gid: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: n.d.readFixed64String,
-                    bw: n.h.writeRepeatedFixed64String,
-                  },
                   news_post_gid: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
+                    n: 2,
                     br: n.d.readFixed64String,
-                    bw: n.h.writeRepeatedFixed64String,
-                  },
-                  news_url: {
-                    n: 5,
-                    r: !0,
-                    q: !0,
-                    br: n.d.readString,
-                    bw: n.h.writeRepeatedString,
+                    bw: n.h.writeFixed64String,
                   },
                 },
               }),
@@ -1236,6 +1084,158 @@
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CNews_PublishPartnerEvent_Response";
+        }
+      }
+      class h extends s {
+        constructor(e = null) {
+          super(),
+            h.prototype.news_feed_gid || n.a(h.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  news_feed_gid: {
+                    n: 1,
+                    br: n.d.readFixed64String,
+                    bw: n.h.writeFixed64String,
+                  },
+                  start_index: {
+                    n: 2,
+                    d: 0,
+                    br: n.d.readUint32,
+                    bw: n.h.writeUint32,
+                  },
+                  amount: {
+                    n: 3,
+                    d: 100,
+                    br: n.d.readUint32,
+                    bw: n.h.writeUint32,
+                  },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = n.e(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.g(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.c(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new a.BinaryReader(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.b(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.f(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_GetBatchPublishedPartnerEvent_Request";
+        }
+      }
+      class p extends s {
+        constructor(e = null) {
+          super(),
+            p.prototype.clan_account_id || n.a(p.M()),
+            s.initialize(this, e, 0, -1, [3, 4, 5], null);
+        }
+        static M() {
+          return (
+            p.sm_m ||
+              (p.sm_m = {
+                proto: p,
+                fields: {
+                  clan_account_id: {
+                    n: 1,
+                    br: n.d.readUint32,
+                    bw: n.h.writeUint32,
+                  },
+                  news_feed_gid: {
+                    n: 2,
+                    br: n.d.readFixed64String,
+                    bw: n.h.writeFixed64String,
+                  },
+                  clan_event_gid: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: n.d.readFixed64String,
+                    bw: n.h.writeRepeatedFixed64String,
+                  },
+                  news_post_gid: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: n.d.readFixed64String,
+                    bw: n.h.writeRepeatedFixed64String,
+                  },
+                  news_url: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: n.d.readString,
+                    bw: n.h.writeRepeatedString,
+                  },
+                },
+              }),
+            p.sm_m
+          );
+        }
+        static MBF() {
+          return p.sm_mbf || (p.sm_mbf = n.e(p.M())), p.sm_mbf;
+        }
+        toObject(e = !1) {
+          return p.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.g(p.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.c(p.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new a.BinaryReader(e),
+            r = new p();
+          return p.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.b(p.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.f(p.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CNews_GetBatchPublishedPartnerEvent_Response";
         }
       }
@@ -1261,12 +1261,12 @@
             });
           }),
           (e.PublishPartnerEvent = function (e, t) {
-            return e.SendMsg("News.PublishPartnerEvent#1", t, h, {
+            return e.SendMsg("News.PublishPartnerEvent#1", t, b, {
               ePrivilege: 1,
             });
           }),
           (e.GetBatchPublishedPartnerEvent = function (e, t) {
-            return e.SendMsg("News.GetBatchPublishedPartnerEvent#1", t, b, {
+            return e.SendMsg("News.GetBatchPublishedPartnerEvent#1", t, p, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -1363,9 +1363,9 @@
         m = r("q1tI"),
         u = r.n(m),
         _ = r("mgoM"),
-        h = r("3+zv"),
-        p = (r("hJ1w"), r("6oCP")),
-        b = r("Mgs7"),
+        b = r("3+zv"),
+        h = (r("hJ1w"), r("6oCP")),
+        p = r("Mgs7"),
         S = r("T27q"),
         g = r("fpVW"),
         v = r.n(g),
@@ -1377,13 +1377,13 @@
         E = r("exH9"),
         O = r("X3Ds"),
         P = r("TLQK"),
-        j = r("OS6B"),
-        y = r("opsS"),
+        y = r("OS6B"),
+        j = r("opsS"),
         M = r("A2AY"),
         F = (r("sOw0"), r("bxBv"), r("Kw0F")),
         L = r("bS9Q"),
-        A = r("qP7j"),
-        D = r.n(A),
+        D = r("qP7j"),
+        A = r.n(D),
         I = r("IzPI"),
         U = r("Z1oF");
       let G = class extends u.a.Component {
@@ -1454,7 +1454,7 @@
                 "p",
                 { className: M.DashboardBtn },
                 u.a.createElement(
-                  C.a,
+                  C.b,
                   {
                     href:
                       o.d.COMMUNITY_BASE_URL +
@@ -1502,7 +1502,7 @@
                   {
                     className: Object(E.a)(
                       M.LanguageRow,
-                      D.a.WarningIconLayout
+                      A.a.WarningIconLayout
                     ),
                   },
                   u.a.createElement(
@@ -1523,7 +1523,7 @@
                 {
                   className: Object(E.a)(v.a.FlexRowContainer, M.UrlSettingCtn),
                 },
-                u.a.createElement(b.l, {
+                u.a.createElement(p.z, {
                   className: M.RssInpu,
                   type: "text",
                   name: "link_url",
@@ -1566,9 +1566,9 @@
           );
         }
       };
-      Object(a.b)([y.a], G.prototype, "OnChangeActualRSSURL", null),
-        Object(a.b)([y.a], G.prototype, "OnCreateOrSaveFeed", null),
-        Object(a.b)([y.a], G.prototype, "OnRevert", null),
+      Object(a.b)([j.b], G.prototype, "OnChangeActualRSSURL", null),
+        Object(a.b)([j.b], G.prototype, "OnCreateOrSaveFeed", null),
+        Object(a.b)([j.b], G.prototype, "OnRevert", null),
         (G = Object(a.b)([c.a], G));
       t.b = G;
       let T = class extends u.a.Component {
@@ -1600,8 +1600,8 @@
             (r = r.sort((t, r) => {
               let a = e.MapArticleURLToClanEventGID(t.post.url),
                 n = e.MapArticleURLToClanEventGID(r.post.url),
-                s = a ? p.b.GetClanEventModel(a) : null,
-                i = n ? p.b.GetClanEventModel(n) : null;
+                s = a ? h.b.GetClanEventModel(a) : null,
+                i = n ? h.b.GetClanEventModel(n) : null;
               return s && i
                 ? i.postTime - s.postTime
                 : s
@@ -1663,7 +1663,7 @@
                             a.push(r.post.appids[0]);
                       }),
                       t.length > 0 &&
-                        (yield p.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                        (yield h.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                           t,
                           null,
                           this.m_cancelSignal
@@ -1704,9 +1704,9 @@
                 "div",
                 { className: M.PreviewListBtn },
                 u.a.createElement(
-                  b.d,
+                  p.j,
                   {
-                    disabled: !b.l.validateUrl(this.props.strRssURL),
+                    disabled: !p.z.validateUrl(this.props.strRssURL),
                     onClick: this.OnLoadPreview,
                   },
                   Object(P.f)("#CuratorAdmin_RSSFeed_preview")
@@ -1741,7 +1741,7 @@
                   "p",
                   { className: M.DashboardBtn },
                   u.a.createElement(
-                    C.a,
+                    C.b,
                     {
                       href:
                         o.d.COMMUNITY_BASE_URL +
@@ -1757,8 +1757,8 @@
           );
         }
       };
-      Object(a.b)([y.a], T.prototype, "GetRSSPreviewURL", null),
-        Object(a.b)([y.a], T.prototype, "OnLoadPreview", null),
+      Object(a.b)([j.b], T.prototype, "GetRSSPreviewURL", null),
+        Object(a.b)([j.b], T.prototype, "OnLoadPreview", null),
         (T = Object(a.b)([c.a], T));
       let z = class extends u.a.Component {
         constructor() {
@@ -1819,7 +1819,7 @@
                   Object(f.d)(
                     u.a.createElement(R.g, {
                       strTitle: Object(P.f)("#CuratorAdmin_RSSFeed_scannow"),
-                      strDescription: Object(j.a)(t),
+                      strDescription: Object(y.a)(t),
                     }),
                     Object(O.o)(e)
                   )
@@ -1843,7 +1843,7 @@
                     { className: M.Error },
                     this.state.strErrorMessage
                   ),
-                u.a.createElement(b.p, {
+                u.a.createElement(p.J, {
                   onChange: this.OnToggleChannelAutomation,
                   label: Object(P.f)("#RSSManager_Status_Automation_Desc"),
                   checked: this.props.admin.BIsAutomationEnabled(),
@@ -1875,8 +1875,8 @@
             : null;
         }
       };
-      Object(a.b)([y.a], z.prototype, "OnToggleChannelAutomation", null),
-        Object(a.b)([y.a], z.prototype, "OnQueueScan", null),
+      Object(a.b)([j.b], z.prototype, "OnToggleChannelAutomation", null),
+        Object(a.b)([j.b], z.prototype, "OnQueueScan", null),
         (z = Object(a.b)([c.a], z));
       let N = class extends u.a.Component {
         constructor() {
@@ -1899,9 +1899,9 @@
           return Object(a.a)(this, void 0, void 0, function* () {
             if (this.state.clan_event_gid) {
               let e = this.props.admin.GetClanSteamID(),
-                t = p.b.GetClanEventModel(this.state.clan_event_gid);
+                t = h.b.GetClanEventModel(this.state.clan_event_gid);
               t ||
-                (t = yield p.b.LoadHiddenPartnerEvent(
+                (t = yield h.b.LoadHiddenPartnerEvent(
                   e,
                   this.state.clan_event_gid
                 )),
@@ -1914,7 +1914,7 @@
         }
         OnOpenPreviewAsPartnerEvent(e) {
           const { newsData: t, clanSteamID: r } = this.props;
-          let a = new h.q();
+          let a = new b.q();
           (a.GID = "PreviewPartnerEventRow_0"),
             (a.clanSteamID = r),
             (a.postTime = Date.now() / 1e3),
@@ -1951,7 +1951,7 @@
             this.ShowModalEvent(a);
         }
         OnViewEvent() {
-          this.ShowModalEvent(p.b.GetClanEventModel(this.state.clan_event_gid));
+          this.ShowModalEvent(h.b.GetClanEventModel(this.state.clan_event_gid));
         }
         ShowModalEvent(e) {
           let t = document.getElementById("curator_header_area_ctn_id");
@@ -2089,7 +2089,7 @@
             Boolean(!e.valid_post && e.post_error_msg) &&
               u.a.createElement(
                 "div",
-                { className: D.a.ErrorStylesBackground },
+                { className: A.a.ErrorStylesBackground },
                 Object(P.f)("#Error_Generic_Label"),
                 " ",
                 Object(P.f)(e.post_error_msg)
@@ -2195,14 +2195,14 @@
           );
         }
       };
-      Object(a.b)([y.a], N.prototype, "DoPartnerEventLoad", null),
-        Object(a.b)([y.a], N.prototype, "OnOpenPreviewAsPartnerEvent", null),
-        Object(a.b)([y.a], N.prototype, "OnViewEvent", null),
-        Object(a.b)([y.a], N.prototype, "OnPostNewsEvent", null),
-        Object(a.b)([y.a], N.prototype, "OnUpdateNewsEvent", null),
-        Object(a.b)([y.a], N.prototype, "HideModalEvent", null),
-        Object(a.b)([y.a], N.prototype, "OnClanEventCreateSuccess", null),
-        Object(a.b)([y.a], N.prototype, "OnShowRawRSS", null),
+      Object(a.b)([j.b], N.prototype, "DoPartnerEventLoad", null),
+        Object(a.b)([j.b], N.prototype, "OnOpenPreviewAsPartnerEvent", null),
+        Object(a.b)([j.b], N.prototype, "OnViewEvent", null),
+        Object(a.b)([j.b], N.prototype, "OnPostNewsEvent", null),
+        Object(a.b)([j.b], N.prototype, "OnUpdateNewsEvent", null),
+        Object(a.b)([j.b], N.prototype, "HideModalEvent", null),
+        Object(a.b)([j.b], N.prototype, "OnClanEventCreateSuccess", null),
+        Object(a.b)([j.b], N.prototype, "OnShowRawRSS", null),
         (N = Object(a.b)([c.a], N));
       class W extends u.a.Component {
         constructor() {
@@ -2304,12 +2304,12 @@
               return u.a.createElement(
                 R.f,
                 null,
-                u.a.createElement(b.k, null, " ", this.GetStrTitle(), " "),
+                u.a.createElement(p.y, null, " ", this.GetStrTitle(), " "),
                 u.a.createElement(
-                  b.b,
+                  p.h,
                   null,
                   u.a.createElement(
-                    b.c,
+                    p.i,
                     null,
                     this.props.newsData &&
                       u.a.createElement(
@@ -2333,7 +2333,7 @@
                     u.a.createElement(
                       "div",
                       null,
-                      u.a.createElement(b.e, {
+                      u.a.createElement(p.k, {
                         label: Object(P.f)(
                           "#RSSManager_CreateFeed_Permissions_v1"
                         ),
@@ -2344,22 +2344,22 @@
                     u.a.createElement(
                       "div",
                       null,
-                      u.a.createElement(b.e, {
+                      u.a.createElement(p.k, {
                         label: Object(P.f)("#RSSManager_CreateFeed_Conduct_v1"),
                         onChange: this.OnChangeConductCreateFeed,
                         checked: Boolean(this.state.bConduct),
                       }),
                       u.a.createElement(
-                        C.a,
+                        C.b,
                         { href: o.d.STORE_BASE_URL + "online_conduct/" },
                         Object(P.f)("#RSSManager_CreateFeed_Conduct_Link")
                       )
                     )
                   ),
                   u.a.createElement(
-                    b.j,
+                    p.u,
                     null,
-                    u.a.createElement(b.n, {
+                    u.a.createElement(p.D, {
                       bOKDisabled: !Boolean(
                         this.state.bPermissions && this.state.bConduct
                       ),
@@ -2401,12 +2401,12 @@
               return u.a.createElement(
                 R.f,
                 null,
-                u.a.createElement(b.k, null, " ", this.GetStrTitle(), " "),
+                u.a.createElement(p.y, null, " ", this.GetStrTitle(), " "),
                 u.a.createElement(
-                  b.b,
+                  p.h,
                   null,
                   u.a.createElement(
-                    b.c,
+                    p.i,
                     null,
                     u.a.createElement(
                       "div",
@@ -2425,7 +2425,7 @@
                       u.a.createElement(
                         "div",
                         null,
-                        u.a.createElement(b.e, {
+                        u.a.createElement(p.k, {
                           label: Object(P.f)(
                             "#RSSManager_PostEvent_CreatePost_Draft"
                           ),
@@ -2436,9 +2436,9 @@
                     )
                   ),
                   u.a.createElement(
-                    b.j,
+                    p.u,
                     null,
-                    u.a.createElement(b.n, {
+                    u.a.createElement(p.D, {
                       onOK: this.OnCreatePost,
                       onCancel: this.props.closeModal,
                     })
@@ -2449,12 +2449,12 @@
               return u.a.createElement(
                 R.f,
                 null,
-                u.a.createElement(b.k, null, " ", this.GetStrTitle(), " "),
+                u.a.createElement(p.y, null, " ", this.GetStrTitle(), " "),
                 u.a.createElement(
-                  b.b,
+                  p.h,
                   null,
                   u.a.createElement(
-                    b.c,
+                    p.i,
                     null,
                     u.a.createElement(
                       "div",
@@ -2474,9 +2474,9 @@
                     )
                   ),
                   u.a.createElement(
-                    b.j,
+                    p.u,
                     null,
-                    u.a.createElement(b.n, {
+                    u.a.createElement(p.D, {
                       onOK: this.OnCreatePost,
                       onCancel: this.props.closeModal,
                     })
@@ -2515,14 +2515,14 @@
           }
         }
       }
-      Object(a.b)([y.a], W.prototype, "OnCreateNewsFeed", null),
-        Object(a.b)([y.a], W.prototype, "DoCreateNewsFeed", null),
-        Object(a.b)([y.a], W.prototype, "OnCreatePost", null),
-        Object(a.b)([y.a], W.prototype, "DoCreatePost", null),
-        Object(a.b)([y.a], W.prototype, "OnChangeDraftMode", null),
-        Object(a.b)([y.a], W.prototype, "OnChangePermissionsCreateFeed", null),
-        Object(a.b)([y.a], W.prototype, "OnChangeConductCreateFeed", null),
-        Object(a.b)([y.a], W.prototype, "GetStrTitle", null);
+      Object(a.b)([j.b], W.prototype, "OnCreateNewsFeed", null),
+        Object(a.b)([j.b], W.prototype, "DoCreateNewsFeed", null),
+        Object(a.b)([j.b], W.prototype, "OnCreatePost", null),
+        Object(a.b)([j.b], W.prototype, "DoCreatePost", null),
+        Object(a.b)([j.b], W.prototype, "OnChangeDraftMode", null),
+        Object(a.b)([j.b], W.prototype, "OnChangePermissionsCreateFeed", null),
+        Object(a.b)([j.b], W.prototype, "OnChangeConductCreateFeed", null),
+        Object(a.b)([j.b], W.prototype, "GetStrTitle", null);
     },
   },
 ]);

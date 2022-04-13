@@ -343,8 +343,8 @@
         y = r("N6Aq"),
         D = r.n(y),
         O = r("0OaU"),
-        L = r("lkRc");
-      let A = class extends i.a.Component {
+        A = r("lkRc");
+      let L = class extends i.a.Component {
         constructor(t) {
           super(t),
             (this.m_manager = new _(this.props.baseURL)),
@@ -404,7 +404,7 @@
           t.text
         );
       }
-      A = Object(n.b)([T.a], A);
+      L = Object(n.b)([T.a], L);
       let N = class extends i.a.Component {
         constructor(t) {
           super(t), (this.state = { nNameSize: 0, nPassSize: 0 });
@@ -462,7 +462,7 @@
               i.a.createElement(
                 "form",
                 { className: D.a.AccountPasswordForm, onSubmit: this.OnSubmit },
-                i.a.createElement(E.m, {
+                i.a.createElement(E.A, {
                   className: Object(S.a)(D.a.AccountNameLabel, t),
                   label: Object(f.f)("#Login_AccountName"),
                   type: "text",
@@ -471,7 +471,7 @@
                   maxLength: 64,
                   onChange: this.OnChangeName,
                 }),
-                i.a.createElement(E.m, {
+                i.a.createElement(E.A, {
                   bIsPassword: !0,
                   className: Object(S.a)(D.a.PasswordDots, e),
                   label: Object(f.f)("#Login_Password"),
@@ -482,8 +482,8 @@
                   value: r.GetPassword(),
                   onChange: this.OnChangePassword,
                 }),
-                i.a.createElement(E.e, {
-                  classname: D.a.RememberMeCheck,
+                i.a.createElement(E.k, {
+                  className: D.a.RememberMeCheck,
                   label: Object(f.f)("#Login_RememberMe"),
                   disabled: !1,
                   onChange: () => this.OnChangeRememberPass,
@@ -491,14 +491,14 @@
                 }),
                 r.GetCaptchaURL() && i.a.createElement(B, { manager: r }),
                 i.a.createElement(
-                  E.r,
+                  E.G,
                   { disabled: this.props.manager.IsRequestInFlight() },
                   Object(f.f)("#Login_SignIn").toLocaleUpperCase()
                 )
               ),
               i.a.createElement(
                 "a",
-                { className: D.a.NeedHelpLink, href: L.c.HELP_BASE_URL },
+                { className: D.a.NeedHelpLink, href: A.c.HELP_BASE_URL },
                 Object(f.f)("#Login_ForgotPassword")
               ),
               i.a.createElement("div", { className: D.a.LoginCreateSeperator }),
@@ -515,7 +515,7 @@
                   { className: D.a.CreateAccountLink },
                   i.a.createElement(
                     "a",
-                    { href: `${L.c.STORE_BASE_URL}join/` },
+                    { href: `${A.c.STORE_BASE_URL}join/` },
                     Object(f.f)("#Login_CreateAccount")
                   )
                 )
@@ -524,10 +524,10 @@
           );
         }
       };
-      Object(n.b)([C.a], N.prototype, "OnSubmit", null),
-        Object(n.b)([C.a], N.prototype, "OnChangeName", null),
-        Object(n.b)([C.a], N.prototype, "OnChangePassword", null),
-        Object(n.b)([C.a], N.prototype, "OnChangeRememberPass", null),
+      Object(n.b)([C.b], N.prototype, "OnSubmit", null),
+        Object(n.b)([C.b], N.prototype, "OnChangeName", null),
+        Object(n.b)([C.b], N.prototype, "OnChangePassword", null),
+        Object(n.b)([C.b], N.prototype, "OnChangeRememberPass", null),
         (N = Object(n.b)([T.a], N));
       let B = class extends i.a.Component {
         OnCaptchaText(t) {
@@ -555,7 +555,7 @@
                     src: t.GetCaptchaURL(),
                   })
                 ),
-                i.a.createElement(E.m, {
+                i.a.createElement(E.A, {
                   className: D.a.CaptchaInput,
                   type: "text",
                   autoComplete: "off",
@@ -585,8 +585,8 @@
           );
         }
       };
-      Object(n.b)([C.a], B.prototype, "OnCaptchaText", null),
-        Object(n.b)([C.a], B.prototype, "RefreshCaptcha", null),
+      Object(n.b)([C.b], B.prototype, "OnCaptchaText", null),
+        Object(n.b)([C.b], B.prototype, "RefreshCaptcha", null),
         (B = Object(n.b)([T.a], B));
       let R = class extends i.a.Component {
         OnSubmit(t) {
@@ -628,13 +628,13 @@
           return i.a.createElement(
             "div",
             { className: D.a.AuthenticationPanel },
-            i.a.createElement(E.n, null, Object(f.f)("#Login_SigningIn")),
+            i.a.createElement(E.D, null, Object(f.f)("#Login_SigningIn")),
             i.a.createElement(
               "div",
               { className: D.a.SigningInAccountName },
               e.GetUserName()
             ),
-            i.a.createElement(E.c, null, n),
+            i.a.createElement(E.i, null, n),
             i.a.createElement(
               "div",
               { className: D.a.AuthenticatorInputcontainer },
@@ -642,7 +642,7 @@
               i.a.createElement(
                 "form",
                 { className: D.a.AccountPasswordForm, onSubmit: this.OnSubmit },
-                i.a.createElement(E.m, {
+                i.a.createElement(E.A, {
                   className: Object(S.a)(D.a.AccountName),
                   label: "Steam Guard Code",
                   type: "text",
@@ -653,7 +653,7 @@
                   onChange: this.OnChangeAuthCode,
                 }),
                 i.a.createElement(
-                  E.r,
+                  E.G,
                   { disabled: this.props.manager.IsRequestInFlight() },
                   Object(f.f)("#Login_SteamguardSubmit").toLocaleUpperCase()
                 )
@@ -673,32 +673,32 @@
           );
         }
       };
-      Object(n.b)([C.a], R.prototype, "OnSubmit", null),
-        Object(n.b)([C.a], R.prototype, "OnChangeAuthCode", null),
+      Object(n.b)([C.b], R.prototype, "OnSubmit", null),
+        Object(n.b)([C.b], R.prototype, "OnChangeAuthCode", null),
         (R = Object(n.b)([T.a], R));
       var P = r("ka0M");
       class I extends i.a.Component {
         OnLoginComplete(t) {
           window.location.href =
             this.props.redirectURL &&
-            this.props.redirectURL !== Object(L.d)() + "login"
+            this.props.redirectURL !== Object(A.d)() + "login"
               ? this.props.redirectURL
-              : L.c.COMMUNITY_BASE_URL;
+              : A.c.COMMUNITY_BASE_URL;
         }
         render() {
-          return L.h && L.h.logged_in
+          return A.h && A.h.logged_in
             ? (this.OnLoginComplete(), null)
             : i.a.createElement(
                 "div",
                 null,
-                i.a.createElement(A, {
-                  baseURL: Object(L.d)(),
+                i.a.createElement(L, {
+                  baseURL: Object(A.d)(),
                   onLoginComplete: this.OnLoginComplete,
                 })
               );
         }
       }
-      Object(n.b)([C.a], I.prototype, "OnLoginComplete", null);
+      Object(n.b)([C.b], I.prototype, "OnLoginComplete", null);
       class x extends i.a.Component {
         render() {
           return i.a.createElement(
@@ -2556,11 +2556,11 @@
           return r.millerRabin(t);
         });
       var O = a,
-        L = function (t, e) {
+        A = function (t, e) {
           (this.modulus = new O(t, 16)),
             (this.encryptionExponent = new O(e, 16));
         },
-        A = {
+        L = {
           base64:
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
           encode: function (t) {
@@ -2639,7 +2639,7 @@
         },
         N = {
           getPublicKey: function (t, e) {
-            return new L(t, e);
+            return new A(t, e);
           },
           encrypt: function (t, e) {
             return (
@@ -2647,7 +2647,7 @@
               !!(t = this.pkcs1pad2(t, (e.modulus.bitLength() + 7) >> 3)) &&
               !!(t = t.modPowInt(e.encryptionExponent, e.modulus)) &&
               (1 == (1 & (t = t.toString(16)).length) && (t = "0" + t),
-              A.encode(w.decode(t)))
+              L.encode(w.decode(t)))
             );
           },
           pkcs1pad2: function (t, e) {

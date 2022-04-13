@@ -647,7 +647,6 @@ ${MEDIA_CDN_URL}store/promo/autumn2021/trophy.png?v=2
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
-${PARTNER_BASE_URL}/promotion/planning/ajaxupdateplanentry
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${id}

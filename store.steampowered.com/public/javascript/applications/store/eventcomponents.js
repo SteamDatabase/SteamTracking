@@ -876,17 +876,17 @@
           );
         }
       };
-      Object(i.b)([oe.a], ce.prototype, "HandleError", null),
-        Object(i.b)([oe.a], ce.prototype, "LoadMorePublicEventWithDelay", null),
-        Object(i.b)([oe.a], ce.prototype, "LoadMoreModerationEvents", null),
+      Object(i.b)([oe.b], ce.prototype, "HandleError", null),
+        Object(i.b)([oe.b], ce.prototype, "LoadMorePublicEventWithDelay", null),
+        Object(i.b)([oe.b], ce.prototype, "LoadMoreModerationEvents", null),
         Object(i.b)(
-          [oe.a],
+          [oe.b],
           ce.prototype,
           "UpdateQueryParametersAndLoadMoreEvents",
           null
         ),
-        Object(i.b)([oe.a], ce.prototype, "OnScroll", null),
-        Object(i.b)([oe.a], ce.prototype, "RefetchAllEventTiles", null),
+        Object(i.b)([oe.b], ce.prototype, "OnScroll", null),
+        Object(i.b)([oe.b], ce.prototype, "RefetchAllEventTiles", null),
         (ce = Object(i.b)([d.a], ce));
       const de = Object(E.j)(ce),
         me = Object(d.a)((e) => {
@@ -905,7 +905,7 @@
                     "#EventModeration_ShowCustomFilter_ttip"
                   ),
                 },
-                o.a.createElement(B.e, {
+                o.a.createElement(B.k, {
                   label: Object(U.f)("#EventModeration_ShowCustomFilter"),
                   checked: t.bUseCustomQuery,
                   onChange: (e) => {
@@ -1423,12 +1423,12 @@
           );
         }
       };
-      Object(i.b)([oe.a], Ee.prototype, "ShowModalEvent", null),
-        Object(i.b)([oe.a], Ee.prototype, "HideModalEvent", null),
-        Object(i.b)([oe.a], Ee.prototype, "SetAdultContentState", null),
-        Object(i.b)([oe.a], Ee.prototype, "SetModeratedState", null),
-        Object(i.b)([oe.a], Ee.prototype, "OnChangeCategory", null),
-        Object(i.b)([oe.a], Ee.prototype, "OnUpdateSeasonalTag", null),
+      Object(i.b)([oe.b], Ee.prototype, "ShowModalEvent", null),
+        Object(i.b)([oe.b], Ee.prototype, "HideModalEvent", null),
+        Object(i.b)([oe.b], Ee.prototype, "SetAdultContentState", null),
+        Object(i.b)([oe.b], Ee.prototype, "SetModeratedState", null),
+        Object(i.b)([oe.b], Ee.prototype, "OnChangeCategory", null),
+        Object(i.b)([oe.b], Ee.prototype, "OnUpdateSeasonalTag", null),
         (Ee = Object(i.b)([d.a], Ee));
       let he = class extends o.a.Component {
         constructor() {
@@ -1630,7 +1630,7 @@
                     Y.b,
                     { type: "app", id: e.GetAppID() },
                     o.a.createElement(
-                      te.a,
+                      te.b,
                       { href: Object(le.h)(e.GetStorePageURL()) },
                       o.a.createElement("img", {
                         className: ie.TileAppInfoImage,
@@ -1642,7 +1642,7 @@
                     Y.b,
                     { type: "app", id: e.GetAppID() },
                     o.a.createElement(
-                      te.a,
+                      te.b,
                       { href: Object(le.h)(e.GetStorePageURL()) },
                       o.a.createElement("div", null, e.GetName())
                     )
@@ -1662,7 +1662,7 @@
                 "div",
                 { className: ie.TileAppInfoTitle },
                 o.a.createElement(
-                  te.a,
+                  te.b,
                   {
                     href: Object(le.h)(
                       I.d.STORE_BASE_URL + "/curator/" + e + "/"
@@ -1943,8 +1943,8 @@
           );
         }
       };
-      Object(i.b)([oe.a], ge.prototype, "ChangeCategoryForEvent", null),
-        Object(i.b)([oe.a], ge.prototype, "OnChangeSelection", null),
+      Object(i.b)([oe.b], ge.prototype, "ChangeCategoryForEvent", null),
+        Object(i.b)([oe.b], ge.prototype, "OnChangeSelection", null),
         (ge = Object(i.b)([d.a], ge));
       class Se extends o.a.Component {
         constructor() {
@@ -2060,10 +2060,10 @@
           );
         }
       }
-      Object(i.b)([oe.a], Se.prototype, "ChangeAcceptance", null),
-        Object(i.b)([oe.a], Se.prototype, "ChangeHorror", null),
-        Object(i.b)([oe.a], Se.prototype, "ChangeCute", null),
-        Object(i.b)([oe.a], Se.prototype, "ApplyAction", null);
+      Object(i.b)([oe.b], Se.prototype, "ChangeAcceptance", null),
+        Object(i.b)([oe.b], Se.prototype, "ChangeHorror", null),
+        Object(i.b)([oe.b], Se.prototype, "ChangeCute", null),
+        Object(i.b)([oe.b], Se.prototype, "ApplyAction", null);
       n("sRB7");
       var fe = n("gOcu");
       let Ae = class extends a.Component {
@@ -2864,8 +2864,8 @@
           );
         }
       };
-      Object(i.b)([oe.a], Me.prototype, "OnArtworkResizeBackfill", null),
-        Object(i.b)([oe.a], Me.prototype, "BeginArtworkResize", null),
+      Object(i.b)([oe.b], Me.prototype, "OnArtworkResizeBackfill", null),
+        Object(i.b)([oe.b], Me.prototype, "BeginArtworkResize", null),
         (Me = Object(i.b)([d.a], Me));
       var Ie = n("6AJf"),
         De = n("9w6b"),
@@ -3123,6 +3123,7 @@
             include_assets: !0,
             include_release: !0,
             include_platforms: !0,
+            include_screenshots: !0,
           }),
           [u, v] = Object(a.useState)(!1),
           p = (e, t) => {
@@ -3502,7 +3503,7 @@
           closeModal: r,
         } = e;
         return o.a.createElement(Ge.a, {
-          classname: I.d.IN_GAMEPADUI ? void 0 : it.StoreHeaderAdjust,
+          className: I.d.IN_GAMEPADUI ? void 0 : it.StoreHeaderAdjust,
           eventClassName: I.d.IN_GAMEPADUI ? it.GamePadUIWidthAdjust : void 0,
           appid: t,
           trackingLocation: a,
@@ -3566,9 +3567,9 @@
             )
         );
       }
-      Object(i.b)([oe.a], rt.prototype, "ShowModal", null),
-        Object(i.b)([oe.a], rt.prototype, "ShowLatestUpdateModal", null),
-        Object(i.b)([oe.a], rt.prototype, "CloseModal", null);
+      Object(i.b)([oe.b], rt.prototype, "ShowModal", null),
+        Object(i.b)([oe.b], rt.prototype, "ShowLatestUpdateModal", null),
+        Object(i.b)([oe.b], rt.prototype, "CloseModal", null);
       var mt = n("2l+k");
       class ut {
         constructor() {
@@ -3726,7 +3727,7 @@
                   Object(U.f)("#RSSModreation_AllAutomationEnabled")
                 )
             : o.a.createElement(
-                B.d,
+                B.j,
                 {
                   onClick: () =>
                     Object(i.a)(void 0, void 0, void 0, function* () {
@@ -3761,7 +3762,7 @@
                 n,
                 o.a.createElement("span", null, " "),
                 o.a.createElement(
-                  B.d,
+                  B.j,
                   { className: _t.a.ResizeButton, onClick: () => i(!l) },
                   l
                     ? o.a.createElement(lt.Q, null)
@@ -3770,7 +3771,7 @@
               ),
               l &&
                 o.a.createElement(
-                  B.d,
+                  B.j,
                   { onClick: () => i(!1) },
                   Object(U.f)("#Sale_ShowContents")
                 ),
@@ -3875,7 +3876,7 @@
                     )
                   ),
                 o.a.createElement(
-                  B.d,
+                  B.j,
                   { onClick: () => i(!l) },
                   Object(U.f)(
                     l
@@ -3973,7 +3974,7 @@
               ),
             },
             o.a.createElement(
-              B.d,
+              B.j,
               {
                 onClick: (t) => {
                   Object(X.d)(
@@ -3994,20 +3995,20 @@
             J.i,
             { onEscKeypress: d },
             o.a.createElement(
-              B.f,
+              B.l,
               null,
               o.a.createElement(
-                B.k,
+                B.y,
                 null,
                 " ",
                 Object(U.f)("#RSSModeration_ReindexAndReload"),
                 " "
               ),
               o.a.createElement(
-                B.b,
+                B.h,
                 null,
                 o.a.createElement(
-                  B.c,
+                  B.i,
                   null,
                   void 0 === t
                     ? o.a.createElement(
@@ -4022,7 +4023,7 @@
                           )
                         ),
                         o.a.createElement(
-                          B.q,
+                          B.F,
                           {
                             onClick: () =>
                               Object(i.a)(void 0, void 0, void 0, function* () {
@@ -4074,10 +4075,10 @@
                   Boolean(s) && o.a.createElement("span", null, s, " ")
                 ),
                 o.a.createElement(
-                  B.j,
+                  B.u,
                   null,
                   o.a.createElement(
-                    B.d,
+                    B.j,
                     { onClick: d },
                     Object(U.f)(l ? "#Button_OK" : "#Button_Cancel")
                   )
@@ -4186,7 +4187,7 @@
         const { children: t, navTreeRef: n } = e,
           o = Object(a.c)(e, ["children", "navTreeRef"]),
           d = l.a.useRef(),
-          m = Object(s.f)(d, n);
+          m = Object(s.g)(d, n);
         if (c.d.IN_GAMEPADUI) {
           const e = window.__nav_tree_root;
           return l.a.createElement(

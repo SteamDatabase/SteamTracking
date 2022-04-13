@@ -113,8 +113,8 @@
         }
       }
       Object(r.b)([o.C], m.prototype, "rgModelNames", void 0),
-        Object(r.b)([p.a], m.prototype, "GetNeighbors", null),
-        Object(r.b)([p.a], m.prototype, "EstimateCosts", null);
+        Object(r.b)([p.b], m.prototype, "GetNeighbors", null),
+        Object(r.b)([p.b], m.prototype, "EstimateCosts", null);
       class u {
         constructor(e) {
           (this.m_Heap = []), (this.m_Length = 0), (this.m_fnCompare = e);
@@ -380,7 +380,7 @@
               ? e
               : S.AppSelector;
           let s = null;
-          const r = g.a.createElement(E.l, {
+          const r = g.a.createElement(E.z, {
             type: "text",
             onChange: this.UpdateAppSuggestions,
           });
@@ -426,9 +426,9 @@
           );
         }
       }
-      Object(r.b)([p.a], B.prototype, "OnDisplayClicked", null),
-        Object(r.b)([p.a], B.prototype, "UpdateAppSuggestions", null),
-        Object(r.b)([p.a], B.prototype, "OnKeyUp", null);
+      Object(r.b)([p.b], B.prototype, "OnDisplayClicked", null),
+        Object(r.b)([p.b], B.prototype, "UpdateAppSuggestions", null),
+        Object(r.b)([p.b], B.prototype, "OnKeyUp", null);
       class w extends g.a.Component {
         render() {
           if (0 == this.props.appid)
@@ -523,7 +523,7 @@
           );
         }
       }
-      Object(r.b)([p.a], A.prototype, "OnAppSelected", null);
+      Object(r.b)([p.b], A.prototype, "OnAppSelected", null);
       let I = class extends g.a.Component {
         constructor(e) {
           super(e),
@@ -594,7 +594,7 @@
           return g.a.createElement(
             "div",
             { className: S.LabsSimilarGames },
-            g.a.createElement(E.h, {
+            g.a.createElement(E.r, {
               rgOptions: s,
               onChange: this.OnModelChanged,
               selectedOption: "default",
@@ -614,9 +614,9 @@
         Object(r.b)([o.C], I.prototype, "similar_apps", void 0),
         Object(r.b)([o.C], I.prototype, "similarity_scores", void 0),
         Object(r.b)([o.C], I.prototype, "similarity_model", void 0),
-        Object(r.b)([p.a], I.prototype, "OnSelectedApp", null),
-        Object(r.b)([p.a], I.prototype, "SetSelectedApp", null),
-        Object(r.b)([p.a], I.prototype, "OnModelChanged", null),
+        Object(r.b)([p.b], I.prototype, "OnSelectedApp", null),
+        Object(r.b)([p.b], I.prototype, "SetSelectedApp", null),
+        Object(r.b)([p.b], I.prototype, "OnModelChanged", null),
         (I = Object(r.b)([v.a], I));
       let M = class extends g.a.Component {
         constructor(e) {
@@ -651,7 +651,7 @@
             g.a.createElement(
               "div",
               { className: S.OperatorSelect },
-              g.a.createElement(E.h, {
+              g.a.createElement(E.r, {
                 rgOptions: e,
                 onChange: this.OnSelectedOperator,
                 selectedOption: "Plus",
@@ -663,8 +663,8 @@
       };
       Object(r.b)([o.C], M.prototype, "selected_app", void 0),
         Object(r.b)([o.C], M.prototype, "selected_operator", void 0),
-        Object(r.b)([p.a], M.prototype, "OnSelectedApp", null),
-        Object(r.b)([p.a], M.prototype, "OnSelectedOperator", null),
+        Object(r.b)([p.b], M.prototype, "OnSelectedApp", null),
+        Object(r.b)([p.b], M.prototype, "OnSelectedOperator", null),
         (M = Object(r.b)([v.a], M));
       let x = class extends g.a.Component {
         constructor(e) {
@@ -779,7 +779,7 @@
           return g.a.createElement(
             "div",
             { className: S.LabsMixer },
-            g.a.createElement(E.h, {
+            g.a.createElement(E.r, {
               rgOptions: e,
               onChange: this.OnModelChanged,
               selectedOption: "default",
@@ -796,9 +796,9 @@
         Object(r.b)([o.C], x.prototype, "similarity_model", void 0),
         Object(r.b)([o.C], x.prototype, "similar_apps", void 0),
         Object(r.b)([o.C], x.prototype, "similarity_scores", void 0),
-        Object(r.b)([p.a], x.prototype, "OnModelChanged", null),
-        Object(r.b)([p.a], x.prototype, "OnAddOperand", null),
-        Object(r.b)([p.a], x.prototype, "OnOperandChanged", null),
+        Object(r.b)([p.b], x.prototype, "OnModelChanged", null),
+        Object(r.b)([p.b], x.prototype, "OnAddOperand", null),
+        Object(r.b)([p.b], x.prototype, "OnOperandChanged", null),
         (x = Object(r.b)([v.a], x));
       let R = class extends g.a.Component {
         constructor() {
@@ -934,10 +934,10 @@
         Object(r.b)([o.C], R.prototype, "in_progress", void 0),
         Object(r.b)([o.C], R.prototype, "progress_iteration", void 0),
         Object(r.b)([o.C], R.prototype, "found_path", void 0),
-        Object(r.b)([p.a], R.prototype, "IterationCallback", null),
-        Object(r.b)([p.a], R.prototype, "Pathfind", null),
-        Object(r.b)([p.a], R.prototype, "OnSelectedStartApp", null),
-        Object(r.b)([p.a], R.prototype, "OnSelectedEndApp", null),
+        Object(r.b)([p.b], R.prototype, "IterationCallback", null),
+        Object(r.b)([p.b], R.prototype, "Pathfind", null),
+        Object(r.b)([p.b], R.prototype, "OnSelectedStartApp", null),
+        Object(r.b)([p.b], R.prototype, "OnSelectedEndApp", null),
         (R = Object(r.b)([v.a], R));
       var N = a("kLLr"),
         P = (a("E4Op"), a("qiKp")),
@@ -1548,22 +1548,22 @@
           "div",
           null,
           b.createElement(
-            E.b,
+            E.h,
             { className: ee.ClusterConfig },
-            b.createElement(E.l, {
+            b.createElement(E.z, {
               label: "SteamID",
               type: "text",
               value: a,
               onChange: p,
-              explainer: !m && "Invalid SteamID",
+              description: !m && "Invalid SteamID",
             }),
-            b.createElement(E.l, {
+            b.createElement(E.z, {
               label: "Clusters to return (Set to blank for all clusters)",
               type: "text",
               value: r,
               onChange: c,
             }),
-            b.createElement(E.h, {
+            b.createElement(E.r, {
               label: "Sort clusters by",
               rgOptions: g,
               selectedOption: n,
@@ -1684,7 +1684,7 @@
               ),
               !a &&
                 b.createElement(
-                  E.d,
+                  E.j,
                   { onClick: r },
                   "Show all ",
                   t.rgSimilarItems.length

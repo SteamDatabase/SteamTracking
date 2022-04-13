@@ -158,7 +158,7 @@
         const { children: t, navTreeRef: a } = e,
           r = Object(n.c)(e, ["children", "navTreeRef"]),
           l = c.a.useRef(),
-          g = Object(i.f)(l, a);
+          g = Object(i.g)(l, a);
         if (u.d.IN_GAMEPADUI) {
           const e = window.__nav_tree_root;
           return c.a.createElement(

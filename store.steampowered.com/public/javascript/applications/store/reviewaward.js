@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [74],
+  [45],
   {
     ARGL: function (e, t, a) {
       e.exports = {
@@ -254,8 +254,8 @@
           });
         }
       }
-      Object(n.b)([O.a], M.prototype, "handleMouseOver", null),
-        Object(n.b)([O.a], M.prototype, "handleMouseOut", null);
+      Object(n.b)([O.b], M.prototype, "handleMouseOver", null),
+        Object(n.b)([O.b], M.prototype, "handleMouseOut", null);
       let B = (S = class extends i.Component {
         constructor(e) {
           super(e),
@@ -328,7 +328,7 @@
                 onDismiss: () => this.setState({ bShowModal: !1 }),
               },
               i.createElement(D, null),
-              i.createElement(F, null),
+              i.createElement(x, null),
               i.createElement(
                 "div",
                 { className: C.InitialLoading },
@@ -460,7 +460,7 @@
                 const e = 0 === o || c.get(o),
                   t = !m || m.greaterThanOrEqual(b),
                   a = i.createElement(
-                    h.q,
+                    h.F,
                     {
                       onClick: () => this.setState({ ePhase: N.CONFIRM }),
                       disabled: e,
@@ -479,7 +479,7 @@
                   i.Fragment,
                   null,
                   i.createElement(D, { description: f }),
-                  i.createElement(F, null),
+                  i.createElement(x, null),
                   0 === u.length &&
                     i.createElement(
                       "div",
@@ -516,9 +516,9 @@
                       })
                     )
                   ),
-                  i.createElement(F, null),
+                  i.createElement(x, null),
                   i.createElement(
-                    x,
+                    F,
                     { store: n },
                     e || t
                       ? a
@@ -538,7 +538,7 @@
                               href: `${E.d.STORE_BASE_URL}points/howitworks`,
                             },
                             i.createElement(
-                              h.d,
+                              h.j,
                               { key: "button" },
                               Object(A.f)("#GrantAward_HowToGetPoints")
                             )
@@ -555,7 +555,7 @@
                 i.Fragment,
                 null,
                 i.createElement(D, { description: f }),
-                i.createElement(F, null),
+                i.createElement(x, null),
                 i.createElement(
                   "div",
                   { style: { position: "relative" } },
@@ -631,12 +631,12 @@
                     )
                   )
                 ),
-                i.createElement(F, null),
+                i.createElement(x, null),
                 i.createElement(
-                  x,
+                  F,
                   { store: n },
                   i.createElement(
-                    h.d,
+                    h.j,
                     {
                       onClick: () => this.setState({ ePhase: N.SELECTING }),
                       disabled: s !== N.CONFIRM,
@@ -644,7 +644,7 @@
                     Object(A.f)("#GrantAward_Back")
                   ),
                   i.createElement(
-                    h.q,
+                    h.F,
                     {
                       onClick: this.GrantAward,
                       title: Object(A.f)("#GrantAward_SubmitTooltip"),
@@ -686,7 +686,7 @@
                 i.Fragment,
                 null,
                 i.createElement(D, { description: f }),
-                i.createElement(F, null),
+                i.createElement(x, null),
                 i.createElement(
                   "div",
                   { style: { position: "relative" } },
@@ -696,12 +696,12 @@
                     i.createElement("div", { className: C.ErrorText }, e)
                   )
                 ),
-                i.createElement(F, null),
+                i.createElement(x, null),
                 i.createElement(
-                  x,
+                  F,
                   { store: n },
                   i.createElement(
-                    h.d,
+                    h.j,
                     { onClick: () => this.setState({ ePhase: N.SELECTING }) },
                     Object(A.f)("#GrantAward_Back")
                   )
@@ -737,7 +737,7 @@
             }));
         }
       };
-      Object(n.b)([O.a], P.prototype, "GrantAward", null),
+      Object(n.b)([O.b], P.prototype, "GrantAward", null),
         (P = Object(n.b)([s.a], P));
       const D = ({ description: e }) =>
           i.createElement(
@@ -750,7 +750,7 @@
             ),
             i.createElement("div", { className: C.Description }, e)
           ),
-        x = Object(s.a)(({ store: e, children: t }) => {
+        F = Object(s.a)(({ store: e, children: t }) => {
           const a = e.GetUserPointBalance(),
             n = a && a.toNumber().toLocaleString();
           return i.createElement(
@@ -792,7 +792,7 @@
             )
           );
         }),
-        F = () => i.createElement("div", { className: C.Divider });
+        x = () => i.createElement("div", { className: C.Divider });
       class U extends i.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
@@ -854,8 +854,8 @@
           );
         }
       }
-      Object(n.b)([O.a], U.prototype, "handleMouseOver", null),
-        Object(n.b)([O.a], U.prototype, "handleMouseOut", null);
+      Object(n.b)([O.b], U.prototype, "handleMouseOver", null),
+        Object(n.b)([O.b], U.prototype, "handleMouseOut", null);
       const H = () =>
           i.createElement(f.a, { size: "large", className: C.Loading }),
         $ = (e) => {

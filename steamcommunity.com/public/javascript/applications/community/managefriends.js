@@ -230,7 +230,7 @@
                 { className: m.a.CopyContainer },
                 r.a.createElement("h1", { className: m.a.Text }, f.h.accountid),
                 r.a.createElement(
-                  d.r,
+                  d.G,
                   {
                     autoFocus: !0,
                     className: m.a.Button,
@@ -279,7 +279,7 @@
                 Boolean(this.state.invite_token) &&
                   r.a.createElement("div", { className: m.a.Link }, e),
                 r.a.createElement(
-                  d.r,
+                  d.G,
                   {
                     className: m.a.Button,
                     onClick: () => this.OnCopy("invite", e),
@@ -290,7 +290,7 @@
                 )
               ),
               r.a.createElement(
-                d.d,
+                d.j,
                 {
                   className: m.a.GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,
@@ -320,7 +320,7 @@
                 r.a.createElement(
                   "div",
                   { style: { width: "100%" } },
-                  r.a.createElement(d.m, {
+                  r.a.createElement(d.A, {
                     className: m.a.Input,
                     onKeyDown: this.OnSearchKeyDown,
                     value: this.state.input_search,
@@ -346,12 +346,12 @@
           );
         }
       }
-      Object(a.b)([i.a], v.prototype, "OnCreateInviteLink", null),
-        Object(a.b)([i.a], v.prototype, "OnCopy", null),
-        Object(a.b)([i.a], v.prototype, "OnAddFriend", null),
-        Object(a.b)([i.a], v.prototype, "OnSearchChange", null),
-        Object(a.b)([i.a], v.prototype, "OnSearchKeyDown", null),
-        Object(a.b)([i.a], v.prototype, "OnSearchSubmit", null);
+      Object(a.b)([i.b], v.prototype, "OnCreateInviteLink", null),
+        Object(a.b)([i.b], v.prototype, "OnCopy", null),
+        Object(a.b)([i.b], v.prototype, "OnAddFriend", null),
+        Object(a.b)([i.b], v.prototype, "OnSearchChange", null),
+        Object(a.b)([i.b], v.prototype, "OnSearchKeyDown", null),
+        Object(a.b)([i.b], v.prototype, "OnSearchSubmit", null);
       class b extends r.a.Component {
         constructor() {
           super(...arguments),
@@ -415,7 +415,7 @@
           return r.a.createElement(
             "div",
             null,
-            r.a.createElement(d.m, {
+            r.a.createElement(d.A, {
               className: m.a.Input,
               value: this.state.input_friend_code,
               onChange: this.OnFriendCodeChange,
@@ -475,7 +475,7 @@
                     )
                   ),
                   r.a.createElement(
-                    d.r,
+                    d.G,
                     {
                       onClick: () =>
                         this.OnActionClick(this.state.searchResult.steamid),
@@ -548,9 +548,9 @@
           );
         }
       }
-      Object(a.b)([i.a], b.prototype, "OnFriendCodeChange", null),
-        Object(a.b)([i.a], b.prototype, "LoadProfile", null),
-        Object(a.b)([i.a], b.prototype, "OnActionClick", null);
+      Object(a.b)([i.b], b.prototype, "OnFriendCodeChange", null),
+        Object(a.b)([i.b], b.prototype, "LoadProfile", null),
+        Object(a.b)([i.b], b.prototype, "OnActionClick", null);
     },
     OS6B: function (e, t, n) {
       "use strict";

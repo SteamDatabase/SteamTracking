@@ -2388,7 +2388,7 @@
             i,
             n.map((e, t) =>
               e.flRandom > 0.5
-                ? l.a.createElement(x, { key: t, style: e })
+                ? l.a.createElement(G, { key: t, style: e })
                 : l.a.createElement(N, { key: t, style: e })
             )
           );
@@ -2398,8 +2398,8 @@
             style: Object.assign(Object.assign({}, T), e),
           }),
         A = ({ style: e }) => {
-          const [t] = Object(o.useState)(Math.floor(Math.random() * G.length)),
-            r = G[t];
+          const [t] = Object(o.useState)(Math.floor(Math.random() * x.length)),
+            r = x[t];
           return l.a.createElement(r, {
             style: Object.assign(Object.assign(Object.assign({}, L), e), {
               backgroundColor: void 0,
@@ -2432,7 +2432,7 @@
               fill: e.fill,
             })
           ),
-        x = ({ style: e }) =>
+        G = ({ style: e }) =>
           l.a.createElement(
             v.animated.svg,
             {
@@ -2449,7 +2449,7 @@
               fill: e.fill,
             })
           ),
-        G = [
+        x = [
           ({ style: e }) =>
             l.a.createElement(
               v.animated.svg,
@@ -2734,8 +2734,8 @@
           });
         }
       }
-      Object(i.b)([C.a], Y.prototype, "handleMouseOver", null),
-        Object(i.b)([C.a], Y.prototype, "handleMouseOut", null);
+      Object(i.b)([C.b], Y.prototype, "handleMouseOver", null),
+        Object(i.b)([C.b], Y.prototype, "handleMouseOut", null);
       let J = (H = class extends o.Component {
         constructor(e) {
           super(e),
@@ -2940,7 +2940,7 @@
                 const e = 0 === n || c.get(n),
                   t = !m || m.greaterThanOrEqual(y),
                   r = o.createElement(
-                    h.r,
+                    h.G,
                     {
                       onClick: () => this.setState({ ePhase: K.CONFIRM }),
                       disabled: e,
@@ -3018,7 +3018,7 @@
                               href: `${w.c.STORE_BASE_URL}points/howitworks`,
                             },
                             o.createElement(
-                              h.d,
+                              h.j,
                               { key: "button" },
                               Object(M.f)("#GrantAward_HowToGetPoints")
                             )
@@ -3116,7 +3116,7 @@
                   re,
                   { store: i },
                   o.createElement(
-                    h.d,
+                    h.j,
                     {
                       onClick: () => this.setState({ ePhase: K.SELECTING }),
                       disabled: s !== K.CONFIRM,
@@ -3124,7 +3124,7 @@
                     Object(M.f)("#GrantAward_Back")
                   ),
                   o.createElement(
-                    h.r,
+                    h.G,
                     {
                       onClick: this.GrantAward,
                       title: Object(M.f)("#GrantAward_SubmitTooltip"),
@@ -3181,7 +3181,7 @@
                   re,
                   { store: i },
                   o.createElement(
-                    h.d,
+                    h.j,
                     { onClick: () => this.setState({ ePhase: K.SELECTING }) },
                     Object(M.f)("#GrantAward_Back")
                   )
@@ -3217,7 +3217,7 @@
             }));
         }
       };
-      Object(i.b)([C.a], ee.prototype, "GrantAward", null),
+      Object(i.b)([C.b], ee.prototype, "GrantAward", null),
         (ee = Object(i.b)([s.a], ee));
       const te = ({ description: e }) =>
           o.createElement(
@@ -3334,8 +3334,8 @@
           );
         }
       }
-      Object(i.b)([C.a], ae.prototype, "handleMouseOver", null),
-        Object(i.b)([C.a], ae.prototype, "handleMouseOut", null);
+      Object(i.b)([C.b], ae.prototype, "handleMouseOver", null),
+        Object(i.b)([C.b], ae.prototype, "handleMouseOut", null);
       const ne = () =>
           o.createElement(p.a, { size: "large", className: U.Loading }),
         se = (e) => {

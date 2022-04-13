@@ -40,8 +40,8 @@
                   },
                   content_customization: { n: 3, c: y },
                   valve_analytics: { n: 4, c: b },
-                  third_party_analytics: { n: 5, c: h },
-                  third_party_content: { n: 6, c: g },
+                  third_party_analytics: { n: 5, c: g },
+                  third_party_content: { n: 6, c: h },
                   utm_enabled: {
                     n: 7,
                     d: !0,
@@ -198,67 +198,10 @@
           return "CAccountPrivacyCookiePreferences_ValveAnalytics";
         }
       }
-      class h extends u {
-        constructor(e = null) {
-          super(),
-            h.prototype.google_analytics || f.a(h.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: {
-                  google_analytics: {
-                    n: 1,
-                    br: f.d.readBool,
-                    bw: f.h.writeBool,
-                  },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = f.e(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return f.g(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return f.c(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return f.b(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          f.f(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
-        }
-      }
       class g extends u {
         constructor(e = null) {
           super(),
-            g.prototype.youtube || f.a(g.M()),
+            g.prototype.google_analytics || f.a(g.M()),
             u.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -267,10 +210,11 @@
               (g.sm_m = {
                 proto: g,
                 fields: {
-                  youtube: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
-                  vimeo: { n: 2, br: f.d.readBool, bw: f.h.writeBool },
-                  sketchfab: { n: 3, br: f.d.readBool, bw: f.h.writeBool },
-                  twitter: { n: 4, br: f.d.readBool, bw: f.h.writeBool },
+                  google_analytics: {
+                    n: 1,
+                    br: f.d.readBool,
+                    bw: f.h.writeBool,
+                  },
                 },
               }),
             g.sm_m
@@ -306,6 +250,62 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
+        }
+      }
+      class h extends u {
+        constructor(e = null) {
+          super(),
+            h.prototype.youtube || f.a(h.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  youtube: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
+                  vimeo: { n: 2, br: f.d.readBool, bw: f.h.writeBool },
+                  sketchfab: { n: 3, br: f.d.readBool, bw: f.h.writeBool },
+                  twitter: { n: 4, br: f.d.readBool, bw: f.h.writeBool },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = f.e(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.g(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.c(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.b(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.f(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
@@ -791,7 +791,7 @@
                 { className: O.SectionDescription },
                 Object(k.f)("#CookiePref_Content_Desc")
               ),
-              i.a.createElement(B.p, {
+              i.a.createElement(B.J, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
@@ -821,7 +821,7 @@
                 { className: O.SectionDescription },
                 Object(k.f)("#CookiePref_ValveAnalytics_Desc")
               ),
-              i.a.createElement(B.p, {
+              i.a.createElement(B.J, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
@@ -853,7 +853,7 @@
                 { className: O.SectionDescription },
                 Object(k.f)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              i.a.createElement(B.p, {
+              i.a.createElement(B.J, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
@@ -891,19 +891,19 @@
                 { className: O.SectionDescription },
                 Object(k.f)("#CookiePref_ThirdParty_Desc")
               ),
-              i.a.createElement(B.p, {
+              i.a.createElement(B.J, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: Object(k.f)("#CookiePref_YouTube_Desc"),
               }),
-              i.a.createElement(B.p, {
+              i.a.createElement(B.J, {
                 onChange: a,
                 label: Object(k.f)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: Object(k.f)("#CookiePref_Vimeo_Desc"),
               }),
-              i.a.createElement(B.p, {
+              i.a.createElement(B.J, {
                 onChange: n,
                 label: Object(k.f)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
@@ -933,7 +933,7 @@
                 { className: O.SectionDescription },
                 Object(k.f)("#PrivacySettings_Marketing_Desc")
               ),
-              i.a.createElement(B.p, {
+              i.a.createElement(B.J, {
                 onChange: r,
                 label: Object(k.f)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
@@ -987,7 +987,7 @@
         const { children: t, navTreeRef: r } = e,
           i = Object(s.c)(e, ["children", "navTreeRef"]),
           _ = a.a.useRef(),
-          m = Object(o.f)(_, r);
+          m = Object(o.g)(_, r);
         if (l.d.IN_GAMEPADUI) {
           const e = window.__nav_tree_root;
           return a.a.createElement(

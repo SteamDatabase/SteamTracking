@@ -1,3 +1,6 @@
+:root {
+  --basicui-header-height: 0px;
+}
 .sharedappdetailsheader_TopCapsule_10kdV {
   --header-height: 24vw;
   height: var(--header-height);
@@ -41,6 +44,11 @@
   .sharedappdetailsheader_BoxSizerValidRegion_2Ag_3 {
   height: 100%;
 }
+.BasicUI
+  .sharedappdetailsheader_TopCapsule_10kdV
+  .sharedappdetailsheader_BoxSizerValidRegion_2Ag_3 {
+  height: 85%;
+}
 .sharedappdetailsheader_TopCapsule_10kdV:hover
   .sharedappdetailsheader_BoxSizerEdge_1vXVD {
   opacity: 1;
@@ -50,6 +58,10 @@
   max-height: 320px;
   display: flex;
   justify-content: center;
+}
+.BasicUI
+  .sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_TopCapsule_10kdV {
+  max-height: unset;
 }
 .sharedappdetailsheader_TopCapsule_10kdV
   .sharedappdetailsheader_Background_3QUeU {
@@ -154,6 +166,10 @@
   position: relative;
   -moz-transform: scale(1);
 }
+.BasicUI .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
+  width: 100%;
+  max-height: unset;
+}
 div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   transform-origin: 0 0;
   transform: translateZ(-1px) scale(2);
@@ -181,6 +197,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   display: flex;
   justify-content: center;
 }
+.BasicUI .sharedappdetailsheader_ImgContainer_1j1_D {
+  height: 100%;
+}
 .sharedappdetailsheader_ImgSrc_t63_T {
   width: calc(100% + 128px);
   height: 100%;
@@ -193,6 +212,12 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   mask-image: url(../../../images/webui/storeadmin/test_hero_image_mask.png?v=valveisgoodatcaching);
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
+}
+.BasicUI .sharedappdetailsheader_ImgSrc_t63_T {
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: unset;
+  mask-image: unset;
 }
 .sharedappdetailsheader_ImgSrc_t63_T.sharedappdetailsheader_ImgBlurBackdrop_V7fVC,
 .sharedappdetailsheader_ImgSrc_t63_T.sharedappdetailsheader_ImgBlur_2ndNJ {
@@ -214,6 +239,12 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   );
   mask-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
 }
+.BasicUI
+  .sharedappdetailsheader_ImgSrc_t63_T.sharedappdetailsheader_ImgBlurBackdrop_V7fVC,
+.BasicUI
+  .sharedappdetailsheader_ImgSrc_t63_T.sharedappdetailsheader_ImgBlur_2ndNJ {
+  height: 100%;
+}
 .sharedappdetailsheader_ImgSrc_t63_T.sharedappdetailsheader_ImgBlurBackdrop_V7fVC {
   height: 200%;
   opacity: 0.2;
@@ -222,6 +253,13 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   filter: saturate(2);
   -webkit-mask-image: linear-gradient(to top, black 80%, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+.BasicUI
+  .sharedappdetailsheader_ImgSrc_t63_T.sharedappdetailsheader_ImgBlurBackdrop_V7fVC {
+  width: 200%;
+  height: 200%;
+  margin-left: -50%;
+  filter: saturate(1);
 }
 .sharedappdetailsheader_PinBox_3S0Af {
   width: 18px;
@@ -547,6 +585,11 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   padding-right: 20px;
   align-items: center;
 }
+.BasicUI
+  .sharedappdetailsheader_TitleSection_2oAYX
+  .sharedappdetailsheader_Features_G4h2S {
+  display: none;
+}
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenEnterStart_16mex:not(.sharedappdetailsheader_FullscreenEnterActive_AGgaM),
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenExitActive_2vwQM,
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenExitDone_2pkrZ,
@@ -584,7 +627,38 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   text-shadow: 1px 1px 10px #000, 0px 0px 22px #0008;
   letter-spacing: 1px;
 }
-
+.BasicUI .sharedappdetailsheader_SVGTitle_gqzkc text {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 17px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  fill: #fff;
+}
+.BasicUI .sharedappdetailsheader_TopGradient_1SGwp {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  height: 75px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+}
+:root {
+  --basicui-header-height: 0px;
+}
 .throbber_LoadingWrapper_chtlD {
   display: flex;
   flex-direction: column;
@@ -1022,18 +1096,18 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 .shared_svg_library_SteamDeckCompatUnknown_2b1JZ {
   color: #dcdedf;
 }
-.toggle_Toggle_1rqtP {
+.toggle_Toggle_10LNB {
   width: 40px;
   height: 16px;
   position: relative;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
 }
-.toggle_Toggle_1rqtP.toggle_Disabled_nZbOp {
+.toggle_Toggle_10LNB.toggle_Disabled_dVUuX {
   cursor: default;
   opacity: 0.6;
 }
-.toggle_Toggle_1rqtP .toggle_ToggleRail_Yef-_ {
+.toggle_Toggle_10LNB .toggle_ToggleRail_3gngp {
   height: 10.6666666667px;
   width: 36px;
   border-radius: 5.3333333333px;
@@ -1043,19 +1117,19 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   top: 2.6666666667px;
   background-color: #26292e;
 }
-.toggle_Toggle_1rqtP .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl {
+.toggle_Toggle_10LNB .toggle_ToggleRail_3gngp.toggle_Highlight_1X2-V {
   background-color: #2d5a81;
   transition: width 0.2s ease-in-out;
 }
-.toggle_Toggle_1rqtP
-  .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl.toggle_On_2VSKd {
+.toggle_Toggle_10LNB
+  .toggle_ToggleRail_3gngp.toggle_Highlight_1X2-V.toggle_On_2ma00 {
   width: 36px;
 }
-.toggle_Toggle_1rqtP
-  .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl.toggle_Off_33SSs {
+.toggle_Toggle_10LNB
+  .toggle_ToggleRail_3gngp.toggle_Highlight_1X2-V.toggle_Off_1sqAs {
   width: 0;
 }
-.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O {
+.toggle_Toggle_10LNB .toggle_ToggleSwitch_1mv6S {
   width: 16px;
   height: 16px;
   border-radius: 8px;
@@ -1064,15 +1138,15 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   left: 0;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O.toggle_On_2VSKd {
+.toggle_Toggle_10LNB .toggle_ToggleSwitch_1mv6S.toggle_On_2ma00 {
   background-color: #16a1e1;
   background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
   transform: translateX(25.3333333333px);
 }
-.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O.toggle_Off_33SSs {
+.toggle_Toggle_10LNB .toggle_ToggleSwitch_1mv6S.toggle_Off_1sqAs {
   background-color: #4b525d;
 }
-.toggle_ToggleRow_3gte5 {
+.toggle_ToggleRow_2IcZR {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1081,13 +1155,49 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   border-radius: 3px;
   background-color: rgba(59, 63, 72, 0.5);
 }
-.toggle_ToggleRow_3gte5 .toggle_Label_2mzt3 {
+.toggle_ToggleRow_2IcZR .toggle_Label_1cff4 {
   color: #dfe3e6;
   font-size: 14px;
   font-weight: 300;
 }
-.toggle_ToggleRow_3gte5 .toggle_Label_2mzt3.toggle_Disabled_nZbOp {
+.toggle_ToggleRow_2IcZR .toggle_Label_1cff4.toggle_Disabled_dVUuX {
   opacity: 0.3;
+}
+.radio_Group_1x1SX {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #202226;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  border-radius: 2px;
+  color: #dfe3e6;
+  box-shadow: inset 0 1px 1px 0px #000a;
+}
+.radio_Button_YWN38 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6px;
+  margin-right: 6px;
+  transition: background-color 0.18s ease-in-out;
+  background-color: #202226;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.radio_Button_YWN38.radio_Active_giqX0,
+.radio_Button_YWN38.radio_Active_giqX0:hover {
+  background-color: #1f8dff;
+  cursor: default;
+}
+.radio_Button_YWN38:hover {
+  background-color: #33363e;
 }
 .dropdown_DialogDropDownMenu_Item_3HD54 {
   padding: 10px 15px;
@@ -1294,34 +1404,1364 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   color: #fff;
   cursor: default;
 }
-body.modals_BodyNoScroll_1JTaq {
-  overflow-y: hidden;
-  height: 100vh;
+:root {
+  --basicui-header-height: 0px;
 }
-body.modals_BodyNoScrollDialog_t0EzL {
-  overflow-y: hidden;
-  height: 100vh;
+@keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_IT9mg {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
 }
-.modals_OverlayModal_1GJbF {
-  position: fixed;
-  top: 0;
-  right: 0;
+@keyframes gamepaddialog_ItemFocusAnim-darkerGrey_1SQEV {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-darkGrey_3liXd {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-grey_2zufd {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnimBorder-darkGrey_3arwo {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-green_3e65F {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_focusAnimation_3ZUTX {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes gamepaddialog_hoverAnimation_1DVq- {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_IT9mg {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-darkerGrey_1SQEV {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-darkGrey_3liXd {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-grey_2zufd {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnimBorder-darkGrey_3arwo {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-green_3e65F {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+:root {
+  --indent-level: 0;
+  --field-negative-horizontal-margin: 0px;
+  --field-row-children-spacing: 0px;
+}
+.gamepaddialog_BasicDialogContent_3joVj .DialogHeader {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 10px;
+  text-align: left;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+}
+.gamepaddialog_BasicDialogContent_3joVj .DialogSubHeader {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.BasicUI .gamepaddialog_BasicDialogContent_3joVj .DialogSubHeader {
+  letter-spacing: 0.5px;
+  color: #8b929a;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+.gamepaddialog_BasicDialogContent_3joVj .DialogFooter > ._DialogColLayout {
+  min-width: 300px;
+}
+.gamepaddialog_BasicDialogContent_3joVj {
+  background: none;
+  padding: 24px 24px;
+}
+.gamepaddialog_BasicDialogContent_3joVj
+  .DialogControlsSection:not(:first-child),
+.gamepaddialog_BasicDialogContent_3joVj
+  .DialogControlsSectionHeader:not(:first-child),
+.gamepaddialog_BasicDialogContent_3joVj .DialogHeader:not(:first-child),
+.gamepaddialog_BasicDialogContent_3joVj .DialogSubHeader:not(:first-child) {
+  margin-top: 24px;
+}
+.gamepaddialog_BasicDialogContent_3joVj .DialogControlsSectionHeader {
+  color: #fff;
+  padding: 12px 0;
+  border-bottom: solid 1px #23262e;
+  font-weight: 500;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.BasicUI .gamepaddialog_BasicDialogContent_3joVj .DialogControlsSectionHeader {
+  letter-spacing: 0.5px;
+  color: #8b929a;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+.gamepaddialog_BasicDialogContent_3joVj
+  .DialogControlsSectionHeader:first-child {
+  margin-top: 0;
+}
+.gamepaddialog_BasicDialogContent_3joVj .DialogBody,
+.gamepaddialog_BasicDialogContent_InnerWidth_F3kjM.DialogContent_InnerWidth {
+  overflow: initial;
+  min-width: 50vw;
+}
+.gamepaddialog_ModalPosition_1A0Q4
+  > .gamepaddialog_BasicDialogContent_3joVj
+  .DialogBody,
+.gamepaddialog_ModalPosition_1A0Q4
+  > .gamepaddialog_BasicDialogContent_InnerWidth_F3kjM.DialogContent_InnerWidth {
+  min-height: 0;
+}
+.gamepaddialog_BasicDialogContent_3joVj
+  .DialogBody
+  .gamepaddialog_Field_BBGW4:first-child,
+.gamepaddialog_BasicDialogContent_InnerWidth_F3kjM.DialogContent_InnerWidth
+  .gamepaddialog_Field_BBGW4:first-child {
+  scroll-margin-top: 80px;
+}
+.gamepaddialog_BasicDialogContent_InnerWidth_F3kjM.DialogContent_InnerWidth {
+  max-width: 100%;
+}
+.gamepaddialog_BasicDialogContent_3joVj ._DialogInputContainer {
+  border-radius: 0;
+}
+.gamepaddialog_BasicDialogContent_3joVj ._DialogInputContainer.gpfocus {
+  background-color: #fff;
+  color: #0e141b;
+}
+.gamepaddialog_BasicDialogContent_3joVj .DialogBodyText {
+  max-width: 75ch;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #dcdedf;
+  margin-bottom: 10px;
+}
+button.gamepaddialog_Button_32WBl.DialogButton {
+  margin: 0;
+  padding: 10px 24px;
+  min-width: 160px;
+}
+button.gamepaddialog_Button_32WBl.DialogButton.gamepaddialog_NoMinWidth_1Gs-J {
+  min-width: 0;
+}
+button.gamepaddialog_Button_32WBl.DialogButton,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled,
+button.gamepaddialog_Button_32WBl.DialogButton:active,
+button.gamepaddialog_Button_32WBl.DialogButton:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover {
+  color: #dcdedf;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 2px;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: none;
+  position: relative;
+}
+button.gamepaddialog_Button_32WBl.DialogButton,
+button.gamepaddialog_Button_32WBl.DialogButton.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:active,
+button.gamepaddialog_Button_32WBl.DialogButton:active.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:hover.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Primary {
+  background: #23262e;
+}
+button.gamepaddialog_Button_32WBl.DialogButton.gamepaddialog_ActiveAndUnfocused_vSuyp,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled.gamepaddialog_ActiveAndUnfocused_vSuyp,
+button.gamepaddialog_Button_32WBl.DialogButton:active.gamepaddialog_ActiveAndUnfocused_vSuyp,
+button.gamepaddialog_Button_32WBl.DialogButton:hover.gamepaddialog_ActiveAndUnfocused_vSuyp,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gamepaddialog_ActiveAndUnfocused_vSuyp {
+  background: #0e141b;
+}
+button.gamepaddialog_Button_32WBl.DialogButton.gpfocus,
+button.gamepaddialog_Button_32WBl.DialogButton:active,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled.gpfocus,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active,
+button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus,
+button.gamepaddialog_Button_32WBl.DialogButton:active:active,
+button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus,
+button.gamepaddialog_Button_32WBl.DialogButton:hover:active,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:active {
+  background: #fff;
+  color: #23262e;
+  outline: none;
+}
+button.gamepaddialog_Button_32WBl.DialogButton.gpfocus.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:active.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled.gpfocus.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:active:active.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:hover:active.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus.Primary,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:active.Primary {
+  background: #1a9fff;
+  color: #fff;
+}
+button.gamepaddialog_Button_32WBl.DialogButton.gpfocus.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:active.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled.gpfocus.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:active:active.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:hover:active.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus.Destructive,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:active.Destructive {
+  background: #de3618;
+  color: #fff;
+}
+.gamepaddialog_Field_BBGW4
+  button.gamepaddialog_Button_32WBl.DialogButton.gpfocus,
+.gamepaddialog_Field_BBGW4
+  button.gamepaddialog_Button_32WBl.DialogButton:enabled.gpfocus,
+.gamepaddialog_Field_BBGW4
+  button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus,
+.gamepaddialog_Field_BBGW4
+  button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus,
+.gamepaddialog_Field_BBGW4
+  button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+button.gamepaddialog_Button_32WBl.DialogButton.Disabled,
+button.gamepaddialog_Button_32WBl.DialogButton[disabled],
+button.gamepaddialog_Button_32WBl.DialogButton:enabled.Disabled,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled[disabled],
+button.gamepaddialog_Button_32WBl.DialogButton:active.Disabled,
+button.gamepaddialog_Button_32WBl.DialogButton:active[disabled],
+button.gamepaddialog_Button_32WBl.DialogButton:hover.Disabled,
+button.gamepaddialog_Button_32WBl.DialogButton:hover[disabled],
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Disabled,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover[disabled] {
+  opacity: 0.4;
+  background: #23262e;
+  color: #fff;
+  pointer-events: none;
+}
+button.gamepaddialog_Button_32WBl.DialogButton:before,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:before,
+button.gamepaddialog_Button_32WBl.DialogButton:active:before,
+button.gamepaddialog_Button_32WBl.DialogButton:hover:before,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
+  content: none;
+}
+.gamepaddialog_StandaloneFieldSeparator_cuCR0 {
+  height: 1px;
+  background: #23262e;
+  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
+  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
+}
+.gamepaddialog_Field_BBGW4 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  position: relative;
+  background: none;
+  border-radius: 0;
+  padding-left: calc(
+    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
+  );
+  padding-right: var(--field-negative-horizontal-margin);
+  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
+  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_StandardPadding_1274I {
+  --field-row-children-spacing: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_CompactPadding_1QOVw {
+  padding: 8px 0;
+  --field-row-children-spacing: 8px;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithDescription_3IwtA {
+  padding-bottom: 10px;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparator_1K_Du::after {
+  content: "";
+  position: absolute;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1500;
+  right: 0;
+  height: 1px;
+  background: #23262e;
 }
-.modals_GamepadOnlyModalWrapper_YHje2 {
+.gamepaddialog_BasicDialogContent_3joVj .gamepaddialog_Field_BBGW4 {
+  --field-negative-horizontal-margin: 24px;
+}
+.gamepaddialog_BasicDialogContent_3joVj .gamepaddialog_Field_BBGW4::after {
+  left: 24px;
+  right: 24px;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin {
+  outline: none;
+  background: #3d4450;
+  color: #fff;
+  animation-name: gamepaddialog_ItemFocusAnim-darkerGrey_1SQEV;
+  z-index: 1;
+  animation-name: gamepaddialog_ItemFocusAnim-darkGrey_3liXd;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparator_1K_Du
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
+.gamepaddialog_StandaloneFieldSeparator_cuCR0
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
+.gamepaddialog_BasicDialogContent_3joVj
+  .DialogControlsSectionHeader
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparator_1K_Du
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin,
+.gamepaddialog_StandaloneFieldSeparator_cuCR0
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin,
+.gamepaddialog_BasicDialogContent_3joVj
+  .DialogControlsSectionHeader
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin {
+  margin-top: -1px;
+  border-top: solid 1px transparent;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus::after,
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin::after {
+  display: none;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_Disabled_kT2gh {
+  cursor: default;
+  color: #67707b;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(.gamepaddialog_Disabled_kT2gh) {
+  cursor: pointer;
+}
+.gamepaddialog_Field_BBGW4 .Focusable {
+  scroll-margin: 20px 0 55px 0;
+}
+.gamepaddialog_FieldClickTarget_3HsGH {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background: red;
+  opacity: 0.1;
+}
+.gamepaddialog_FieldChildren_2T9M5 > svg {
+  height: 1em;
+  width: auto;
+}
+.gamepaddialog_FieldChildren_2T9M5 > svg:not(:first-child) {
+  margin-left: 16px;
+}
+.gamepaddialog_FieldChildren_2T9M5 .DialogInputLabelGroup {
+  margin-bottom: 0px;
+}
+.gamepaddialog_FieldLeadIcon_2Tcti {
+  margin-right: 16px;
+}
+.gamepaddialog_FieldLeadIcon_2Tcti svg {
+  height: 20px;
+}
+.gamepaddialog_FieldLabelRow_1aLsN {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--field-row-children-spacing);
+  justify-content: flex-end;
+  align-items: center;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_InlineWrapShiftsChildrenBelow_3bpNt
+  .gamepaddialog_FieldLabelRow_1aLsN {
+  flex-wrap: wrap;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_ExtraPaddingOnChildrenBelow_3jQEm
+  .gamepaddialog_FieldLabelRow_1aLsN {
+  row-gap: var(--field-row-children-spacing);
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_ChildrenWidthFixed_27hhE
+  .gamepaddialog_FieldChildren_2T9M5 {
+  min-width: 250px;
+}
+#QuickAccess-Menu
+  .gamepaddialog_Field_BBGW4.gamepaddialog_ChildrenWidthFixed_27hhE
+  .gamepaddialog_FieldChildren_2T9M5 {
+  min-width: 270px;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_ChildrenWidthGrow_2ulAJ
+  .gamepaddialog_FieldChildren_2T9M5 {
+  flex-grow: 1;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithFirstRow_m6tAB.gamepaddialog_WithChildrenBelow_3swGA.gamepaddialog_ExtraPaddingOnChildrenBelow_3jQEm
+  .gamepaddialog_FieldChildren_2T9M5 {
+  padding-top: var(--field-row-children-spacing);
+}
+.gamepaddialog_FieldLabel_s3mAa {
+  font-size: 16px;
+  line-height: 20px;
+  color: #dcdedf;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  word-break: break-word;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_InlineWrapShiftsChildrenBelow_3bpNt
+  .gamepaddialog_FieldLabel_s3mAa {
+  flex-shrink: 0;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_ChildrenWidthGrow_2ulAJ
+  .gamepaddialog_FieldLabel_s3mAa {
+  flex-grow: 0;
+}
+.gamepaddialog_FieldLabel_s3mAa .gamepaddialog_FieldLabelValue_2L-70 {
+  align-self: flex-end;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_Disabled_kT2gh
+  .gamepaddialog_FieldLabel_s3mAa {
+  color: #67707b;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus
+  .gamepaddialog_FieldLabel_s3mAa,
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin
+  .gamepaddialog_FieldLabel_s3mAa {
+  color: #fff;
+}
+.gamepaddialog_FieldLabel_s3mAa > svg {
+  position: relative;
+  top: 2px;
+  margin-right: 12px;
+}
+.gamepaddialog_FieldDescription_kxDRY {
+  font-size: 12px;
+  line-height: 16px;
+  color: #b8bcbf;
+  margin-top: 8px;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithChildrenBelow_3swGA
+  .gamepaddialog_FieldChildren_2T9M5
+  + .gamepaddialog_FieldDescription_kxDRY {
+  margin-top: 6px;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus
+  .gamepaddialog_FieldDescription_kxDRY,
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin
+  .gamepaddialog_FieldDescription_kxDRY {
+  color: #dcdedf;
+}
+.gamepaddialog_ModalPosition_1A0Q4 {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--basicui-header-height);
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+.gamepaddialog_ModalPosition_1A0Q4.gamepaddialog_WithStandardPadding_3KUsh {
+  padding: 24px;
+}
+.gamepaddialog_ModalPosition_1A0Q4.gpfocus {
+  outline: none;
+}
+.gamepaddialog_ModalPosition_1A0Q4 > .gamepaddialog_BasicDialogContent_3joVj {
+  margin: auto;
+  background-color: #0e141b;
+  border: 2px solid #23262e;
+  padding: 24px;
+  animation-name: gamepaddialog_slideInAnimation_3qcui;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  animation-fill-mode: both;
+}
+@keyframes gamepaddialog_slideInAnimation_3qcui {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.gamepaddialog_ModalPosition_1A0Q4 .DialogContentTransition {
+  max-width: 613px;
+}
+.gamepaddialog_BasicTextInput_3jspG {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-style: italic;
+  color: #b8bcbf;
+  border-radius: 0;
+  color: #8b929a;
+  transition: none;
+  font-style: normal;
+}
+.gamepaddialog_BasicTextInput_3jspG,
+.gamepaddialog_BasicTextInput_3jspG:not(.disabled):not(.gpfocus):hover {
+  background: #23262e;
+}
+.gamepaddialog_BasicTextInput_3jspG,
+.gamepaddialog_BasicTextInput_3jspG.gpfocus {
+  padding: 10px 16px;
+}
+.gamepaddialog_BasicTextInput_3jspG.gpfocus,
+.gamepaddialog_BasicTextInput_3jspG.gpfocus:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: none;
+}
+.gamepaddialog_BasicTextInput_3jspG::placeholder {
+  font-style: italic;
+  color: #67707b;
+}
+.gamepaddialog_Toggle_3JiNt {
+  width: 38px;
+  height: 22px;
+  position: relative;
+}
+.gamepaddialog_Toggle_3JiNt.gpfocus {
+  outline: none;
+}
+.gamepaddialog_Toggle_3JiNt.gpfocus:after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  top: -15%;
+  width: 120%;
+  height: 132%;
+  border-radius: 16px;
+  background-color: #8b929a;
+  z-index: -1;
+}
+.gamepaddialog_Toggle_3JiNt:not(.gamepaddialog_Disabled_kT2gh) {
+  cursor: pointer;
+}
+.gamepaddialog_ToggleRail_2QwKd {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #3d4450;
+  border-radius: 9001px;
+  overflow: hidden;
+}
+.gamepaddialog_Field_BBGW4.gpfocuswithin .gamepaddialog_ToggleRail_2QwKd {
+  background: #23262e;
+}
+.gamepaddialog_Toggle_3JiNt.gamepaddialog_Disabled_kT2gh
+  .gamepaddialog_ToggleRail_2QwKd {
+  background: #67707b;
+}
+.gamepaddialog_ToggleRail_2QwKd::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #1a9fff;
+  transform: translateX(-27px);
+  transition: transform 0.2s ease-out;
+}
+.gamepaddialog_Toggle_3JiNt.gamepaddialog_Disabled_kT2gh
+  .gamepaddialog_ToggleRail_2QwKd::before {
+  opacity: 0;
+}
+.gamepaddialog_Toggle_3JiNt.gamepaddialog_On_3cF-A
+  .gamepaddialog_ToggleRail_2QwKd::before {
+  transform: translateX(-11px);
+}
+.gamepaddialog_ToggleSwitch_3MvdQ {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 22px;
+  background: #fff;
+  border-radius: 9001px;
+  transition: transform 0.2s cubic-bezier(0.1, 0.12, 0.53, 1.72);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+}
+.gamepaddialog_Toggle_3JiNt.gamepaddialog_Disabled_kT2gh
+  .gamepaddialog_ToggleSwitch_3MvdQ {
+  background: #8b929a;
+}
+.gamepaddialog_Toggle_3JiNt.gpfocus:not(.gamepaddialog_Disabled_kT2gh)
+  .gamepaddialog_ToggleSwitch_3MvdQ {
+  border: solid 2px #67707b;
+  margin: -2px;
+}
+.gamepaddialog_Toggle_3JiNt.gamepaddialog_On_3cF-A
+  .gamepaddialog_ToggleSwitch_3MvdQ {
+  transform: translateX(16px);
+}
+.gamepaddialog_LabelFieldValue_1tI2h {
+  color: #8b929a;
+  word-break: break-word;
+}
+.gamepaddialog_Field_BBGW4.gpfocuswithin .gamepaddialog_LabelFieldValue_1tI2h {
+  color: #b8bcbf;
+}
+.gamepaddialog_DropDownControlButtonContents_3Tc9l {
+  display: flex;
+}
+.gamepaddialog_DropDownControlButtonContents_3Tc9l .gamepaddialog_Spacer_zXCsm {
+  flex-grow: 1;
+  min-width: 1ch;
+}
+.gamepaddialog_DropDownControlButtonContents_3Tc9l > svg {
+  height: 1em;
+  margin: auto;
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po {
+  --controls-list-spacing: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: calc(-1 * var(--controls-list-spacing));
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_StandardSpacing_1lK_L {
+  --controls-list-spacing: 10px;
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_ExtraSpacing_1GNX9 {
+  --controls-list-spacing: 16px;
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_AlignRight_8c09x {
+  margin-right: calc(-1 * var(--controls-list-spacing));
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_AlignLeft_3nfmw {
+  margin-left: calc(-1 * var(--controls-list-spacing));
+  justify-content: start;
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_AlignCenter_2KB4B {
+  margin-left: calc(-0.5 * var(--controls-list-spacing));
+  margin-right: calc(-0.5 * var(--controls-list-spacing));
+  justify-content: center;
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po
+  .gamepaddialog_ControlsListChild_3uFQq {
+  max-width: 250px;
+  flex-grow: 1;
+  margin-bottom: var(--controls-list-spacing);
+}
+#gamepaddialog_QuickAccess-Menu_1Nj5h
+  .gamepaddialog_ControlsListOuterPanel_YU3Po
+  .gamepaddialog_ControlsListChild_3uFQq {
+  max-width: 270px;
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_AlignLeft_3nfmw
+  .gamepaddialog_ControlsListChild_3uFQq {
+  margin-left: var(--controls-list-spacing);
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_AlignRight_8c09x
+  .gamepaddialog_ControlsListChild_3uFQq {
+  margin-right: var(--controls-list-spacing);
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_AlignRight_8c09x
+  .gamepaddialog_ControlsListChild_3uFQq:last-child {
+  margin-left: auto;
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_AlignCenter_2KB4B
+  .gamepaddialog_ControlsListChild_3uFQq {
+  margin-left: calc(0.5 * var(--controls-list-spacing));
+  margin-right: calc(0.5 * var(--controls-list-spacing));
+}
+.gamepaddialog_BigButtons_2XTQO {
+  max-width: 250px;
+  flex-grow: 1;
+  margin-bottom: var(--controls-list-spacing);
+}
+.gamepaddialog_BottomButtons_2MJWF.gamepaddialog_StandardPadding_1274I {
+  padding-top: 40px;
+}
+.gamepaddialog_BottomButtons_2MJWF.gamepaddialog_CompactPadding_1QOVw {
+  padding-top: 16px;
+}
+.gamepaddialog_BasicDialogContent_3joVj
+  .DialogBody
+  .DialogControlsSection
+  .Focusable {
+  scroll-margin-top: 80px;
+}
+@keyframes gamepadui_svg_library_SpinnerSpokeFade_OIpeq {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.gamepadui_svg_library_Spinner_qznu9 > path {
+  animation: gamepadui_svg_library_SpinnerSpokeFade_OIpeq 0.6s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(1) {
+  animation-delay: -0.925s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(2) {
+  animation-delay: -0.85s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(3) {
+  animation-delay: -0.775s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(4) {
+  animation-delay: -0.7s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(5) {
+  animation-delay: -0.625s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(6) {
+  animation-delay: -0.55s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(7) {
+  animation-delay: -0.475s;
+}
+.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(8) {
+  animation-delay: -0.4s;
+}
+.gamepadui_svg_library_WirelessConnectingActive_21lCz > path {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.gamepadui_svg_library_WirelessConnectingActive_21lCz
+  .gamepadui_svg_library_WifiBar1_2YaK5 {
+  animation-name: gamepadui_svg_library_WifiBar1Anim_GI8SY;
+}
+.gamepadui_svg_library_WirelessConnectingActive_21lCz
+  .gamepadui_svg_library_WifiBar2_3eO2b {
+  animation-name: gamepadui_svg_library_WifiBar2Anim_1bkP1;
+}
+.gamepadui_svg_library_WirelessConnectingActive_21lCz
+  .gamepadui_svg_library_WifiBar3_2ct6J {
+  animation-name: gamepadui_svg_library_WifiBar3Anim_3JocZ;
+}
+.gamepadui_svg_library_WirelessConnectingActive_21lCz
+  .gamepadui_svg_library_WifiBar4_9LNC6 {
+  animation-name: gamepadui_svg_library_WifiBar4Anim_ZdAy2;
+}
+@keyframes gamepadui_svg_library_WifiBar1Anim_GI8SY {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar2Anim_1bkP1 {
+  0% {
+    opacity: 0.25;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar3Anim_3JocZ {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar4Anim_ZdAy2 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gamepadui_svg_library_GenericGamepadHighlight_1iSNJ {
+  fill: green;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+button.gamepaddropdown_DropDownControlButton_2Mewn.DialogButton {
+  padding: 10px 16px;
+  min-width: initial;
+}
+button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw-.DialogButton,
+button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw-.DialogButton:enabled,
+button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw-.DialogButton:active,
+button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw-.DialogButton:hover,
+button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw-.DialogButton:enabled:active:hover {
+  min-width: revert;
+  width: auto;
+  display: flex;
+  align-self: stretch;
+  padding: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
+  height: 20px;
+  margin: auto;
+}
+.gamepadinput_Digits_KKca5 {
+  display: flex;
+  gap: 10px;
+}
+.gamepadslider_SliderControlPanelGroup_2FiKP {
+  flex-grow: 1;
+}
+.gamepadslider_SliderControlAndNotches_tyDyU {
   display: flex;
   flex-direction: column;
-  min-height: 0;
-  max-height: 100vh;
-  overflow-y: scroll;
 }
-.modals_GamepadOnlyModalWrapper_YHje2 .modals_GamepadOnlyPanelWrapper_3ruPb {
+.gamepadslider_SliderControlAndNotches_tyDyU.gamepadslider_WithDefaultValue_3zNZ9 {
+  padding-top: 4px;
+}
+.gamepadslider_SliderControl_3RYrN {
+  --inverse-normalized-value: calc(1 - var(--normalized-slider-value));
+  --inverse-normalized-default-value: calc(
+    1 - var(--normalized-slider-default-value)
+  );
+  position: relative;
+  display: flex;
+  height: 24px;
+  min-width: 100px;
+}
+.gamepadslider_SliderControl_3RYrN:not(.gamepadslider_Disabled_DE-u8) {
+  cursor: pointer;
+}
+.gamepadslider_SliderTrack_2htJF {
+  background: #23262e;
+  margin: auto;
+  width: 100%;
+  height: 6px;
+  position: relative;
+  overflow: hidden;
+  --left-track-color: #1a9fff;
+}
+.gamepadslider_SliderTrack_2htJF.gamepadslider_SliderHasNotches_1_uHC {
+  width: calc(100% - 20px);
+}
+.gamepadslider_SliderTrack_2htJF::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--left-track-color);
+  transform: translateX(calc(-100% * var(--inverse-normalized-value)));
+}
+.gamepadslider_SliderControlAndNotches_tyDyU.gamepadslider_Disabled_DE-u8
+  .gamepadslider_SliderTrack_2htJF::before {
+  background: #67707b;
+}
+.gamepadslider_SliderTrackDark_1GcWd {
+  background: #000;
+}
+.gamepadslider_SliderHandleContainer_2u5M0 {
+  pointer-events: none;
+  contain: layout;
+  margin: auto 0;
+  width: 100%;
+  position: absolute;
+  transform: translateX(
+    calc(
+      -100% * var(--inverse-normalized-value) + 24px * var(--inverse-normalized-value)
+    )
+  );
+}
+.gamepadslider_VerticalLineSliderHandleContainer_3yrYJ {
+  pointer-events: all;
+  contain: layout;
+  margin: auto 0;
+  width: 100%;
+  position: absolute;
+  transform: translateX(calc(-100% * var(--inverse-normalized-value)));
+}
+.gamepadslider_ParenSliderHandleContainer_2HSG5 {
+  pointer-events: all;
+  contain: layout;
+  margin: auto 0;
+  width: 100%;
+  position: absolute;
+  transform: translateX(calc(-100% * var(--inverse-normalized-value)));
+}
+@keyframes gamepadslider_SliderHandleFocusPop_u42Ju {
+  from {
+    transform: scale(1.4);
+  }
+}
+.gamepadslider_SliderHandle_55Klw {
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+  border-radius: 1337px;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 0;
+  box-sizing: content-box;
+  pointer-events: none;
+}
+.gamepadslider_SliderControlAndNotches_tyDyU:not(.gamepadslider_Disabled_DE-u8).gpfocus
+  .gamepadslider_SliderHandle_55Klw {
+  border: solid 3px #0e141b;
+  margin: -3px;
+  animation: gamepadslider_SliderHandleFocusPop_u42Ju 200ms ease-out;
+}
+.gamepadslider_SliderControlAndNotches_tyDyU.gamepadslider_Disabled_DE-u8
+  .gamepadslider_SliderHandle_55Klw {
+  background: #8b929a;
+}
+.gamepadslider_VerticalLineSliderHandle_102f1 {
+  background: #fff;
+  height: 24px;
+  width: 3px;
+  position: absolute;
+  right: 0;
+  box-sizing: content-box;
+  pointer-events: all;
+}
+.gamepadslider_ParenSliderHandle_3uwod {
+  height: 24px;
+  width: 0px;
+  position: absolute;
+  box-sizing: content-box;
+  pointer-events: all;
+  right: 0;
+}
+.gamepadslider_ParenSliderHandle_3uwod.gamepadslider_Left_1gID_ svg {
+  position: relative;
+  right: 5px;
+}
+.gamepadslider_SliderControlWithIcon_1KisM {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.gamepadslider_SliderControlWithIcon_1KisM.gpfocuswithin {
+  color: #fff;
+}
+.gamepadslider_SliderControlWithIcon_1KisM .gamepadslider_SliderControl_3RYrN {
+  flex-grow: 1;
+}
+.gamepadslider_SliderControlWithIcon_1KisM .gamepadslider_Icon_1OZbC {
+  height: 24px;
+  width: 24px;
+  margin: auto 0;
+  margin-right: 12px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.gamepadslider_SliderControlWithIcon_1KisM .gamepadslider_Icon_1OZbC svg {
+  width: 100%;
+  height: 100%;
+}
+.gamepadslider_SliderNotchContainer_1s6G7 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.gamepadslider_SliderNotch_3Lp8H {
   display: flex;
   flex-direction: column;
-  min-height: 0;
+  flex-basis: 0;
+  align-items: center;
+  min-width: 24px;
+}
+.gamepadslider_SliderNotchLabel_1O0FK {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding-top: 5px;
+  width: fit-content;
+  text-align: center;
+}
+.gamepadslider_SliderNotchTick_1j-G1 {
+  width: 4px;
+  height: 12px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: #23262e;
+}
+.gamepadslider_SliderNotchTick_1j-G1.gamepadslider_TickActive_11vJ- {
+  background-color: #1a9fff;
+}
+.gamepadslider_LabelText_3E4NA {
+  flex-grow: 1;
+  align-self: center;
+}
+.gamepadslider_DescriptionValue_1Z1gH {
+  text-align: center;
+  margin-left: 0.7ch;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-end;
+}
+.gamepadslider_EditableValue_1jD_v,
+.gamepadslider_FakeEditableValue_ZQ0Hf {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  background: #23262e;
+  color: #8b929a;
+  width: 0;
+  min-width: 4em;
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  cursor: text;
+}
+.gamepadslider_EditableValue_1jD_v.gpfocus,
+.gamepadslider_FakeEditableValue_ZQ0Hf.gpfocus {
+  background: #fff;
+  color: #000;
+}
+.gamepadslider_DescriptionValue_1Z1gH.gamepadslider_RedBorder_376Wv
+  .gamepadslider_EditableValue_1jD_v,
+.gamepadslider_DescriptionValue_1Z1gH.gamepadslider_RedBorder_376Wv
+  .gamepadslider_FakeEditableValue_ZQ0Hf {
+  outline: solid 2px #de3618;
+}
+.gamepadslider_EditableValue_1jD_v::placeholder,
+.gamepadslider_FakeEditableValue_ZQ0Hf::placeholder {
+  opacity: 0.5;
+}
+.gamepadslider_FakeEditableValue_ZQ0Hf {
+  width: fit-content;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}
+.gamepadslider_EditableValueSuffix_1lSH8 {
+  margin-left: 1ch;
+}
+@keyframes gamepadslider_error-shake_OOvXe {
+  0% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(-4px);
+  }
+  15% {
+    transform: translateX(4px);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  35% {
+    transform: translateX(4px);
+  }
+  45% {
+    transform: translateX(-4px);
+  }
+  55% {
+    transform: translateX(4px);
+  }
+  65% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  85% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.gamepadslider_ErrorShake_2ve0H {
+  animation: gamepadslider_error-shake_OOvXe 500ms ease-out;
+}
+.gamepadslider_CompoundSlider_32YoA {
+  height: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.gamepadslider_CompoundSliderSubSlider_2o_DG {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocus
+  .gamepadslider_VerticalLineSliderHandleContainer_3yrYJ::before,
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocuswithin
+  .gamepadslider_VerticalLineSliderHandleContainer_3yrYJ::before {
+  content: "";
+  background: #99d4ff;
+  height: 28px;
+  top: -2px;
+  width: 11px;
+  right: -4px;
+  position: absolute;
+  box-sizing: content-box;
+}
+.gamepadslider_CompoundSliderSubSliderLabelContainer_bOIXu {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  top: -30px;
+  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
+  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
+  padding-left: calc(
+    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
+  );
+  padding-right: var(--field-negative-horizontal-margin);
+}
+.gamepadslider_CompoundSliderSubSliderLabelPositioner__FRNU {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: calc(100% * var(--normalized-slider-value));
+}
+.gamepadslider_CompoundSliderSubSliderLabel_3MipV {
+  font-size: 14px;
+  position: absolute;
+  width: fit-content;
+  top: 20px;
+}
+.gamepadslider_CompoundSliderSubSliderLabelInternal_375SK {
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #fff;
+  color: #99d4ff99;
+  border-radius: 7px;
+  padding: 2px 5px 2px 5px;
+}
+.gamepadslider_DefaultValueTickContainer_2Brdj {
+  pointer-events: none;
+  contain: layout;
+  margin: auto 0;
+  width: 100%;
+  position: absolute;
+  transform: translateX(
+    calc(
+      -100% * var(--inverse-normalized-default-value) + 24px * var(--inverse-normalized-default-value)
+    )
+  );
+}
+.gamepadslider_DefaultValueTick_2xwn6 {
+  position: absolute;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.gamepadslider_DefaultValueTick_2xwn6 > svg {
+  color: #8b929a;
+  width: 16px;
+  margin-top: -12px;
 }
 .focusring_FocusRingRoot_2BQL2 {
   position: absolute;
@@ -1375,6 +2815,380 @@ body.modals_BodyNoScrollDialog_t0EzL {
   50% {
     opacity: 0.4;
   }
+}
+.scrollpanel_ScrollPanel_3ozfo {
+  position: relative;
+}
+.scrollpanel_ScrollY_3MFgE,
+.scrollpanel_ScrollBoth_Ffrn- {
+  overflow-y: auto;
+  scroll-padding-top: 20px;
+  scroll-padding-bottom: 20px;
+}
+.scrollpanel_ScrollX_m0VVu,
+.scrollpanel_ScrollBoth_Ffrn- {
+  overflow-x: auto;
+  scroll-padding-left: 20px;
+  scroll-padding-right: 20px;
+}
+.overlappingtransition_TransitionGroup_woWQ7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  will-change: transform;
+}
+.overlappingtransition_ContentWrapper_221Xt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_2fKE6 {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey_GpvlZ {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-darkGrey_2bogt {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-grey_2FB9p {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnimBorder-darkGrey_2srJq {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-green_2Jedu {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_2fKE6 {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey_GpvlZ {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-darkGrey_2bogt {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-grey_2FB9p {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnimBorder-darkGrey_2srJq {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-green_2Jedu {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_focusAnimation_2C5Uw {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes gamepadpagedsettings_hoverAnimation_3sbAz {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.gamepadpagedsettings_PagedSettingsDialog_1T6t4 {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.DialogContent.gamepadpagedsettings_PagedSettingsDialog_PageContent_2Jsay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-padding-top: calc(var(--basicui-header-height) + 20px);
+  scroll-padding-bottom: 20px;
+  flex-direction: column;
+  padding-top: calc(24px + var(--basicui-header-height));
+}
+.DialogContent.gamepadpagedsettings_PagedSettingsDialog_PageContent_2Jsay.gamepadpagedsettings_NoPadding_13dbi {
+  padding: 0;
+  padding-top: calc(0px + var(--basicui-header-height));
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageListColumn_3Xe9v {
+  background: #23262e;
+  flex: 1;
+  min-width: 240px;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-right: 1px solid #0e141b;
+  padding-top: calc(0px + var(--basicui-header-height));
+}
+.gamepadpagedsettings_PagedSettingsDialog_Title_1wHaQ {
+  color: #67707b;
+  text-transform: uppercase;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageList_1zky_ {
+  line-height: 16px;
+  white-space: nowrap;
+  overflow-y: auto;
+  padding-top: 16px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 16px;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  padding: 10px 24px;
+  color: #b8bcbf;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  transform: scale(1) rotateX(1deg);
+  line-height: 22px;
+  scroll-margin: 2.5em 0;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(1deg);
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_DisabledItem_1DIL_,
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_DisabledItem_1DIL_:hover,
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_DisabledItem_1DIL_:not(.gamepadpagedsettings_Active_3Qg3h):hover {
+  color: #414141;
+  cursor: default;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_Active_3Qg3h {
+  color: #fff;
+  cursor: default;
+  background: #3d4450;
+  transform: scale(1.1) rotateX(1deg);
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih:focus {
+  outline: none;
+  background: #3d4450;
+  color: #fff;
+  animation-name: gamepadpagedsettings_ItemFocusAnim-darkerGrey_GpvlZ;
+  transform: scale(1.1);
+  z-index: 1;
+  animation-name: gamepadpagedsettings_ItemFocusAnim-darkGrey_2bogt;
+}
+.gamepadpagedsettings_PageListItem_Icon_1d7b6 {
+  height: 20px;
+  width: 20px;
+  margin: auto 0;
+  margin-right: 16px;
+}
+.gamepadpagedsettings_PageListItem_Icon_1d7b6 svg {
+  width: 100%;
+  height: 100%;
+}
+.gamepadpagedsettings_PageListItem_Title_IT_TZ {
+  flex-grow: 1;
+  margin: auto 0;
+}
+.gamepadpagedsettings_Separator_1JhNo {
+  height: 1px;
+  background: #3d4450;
+  margin: 8px 24px;
+}
+.gamepadpagedsettings_PagedSettingDialog_ContentColumn_3nGJH {
+  background: #0e141b;
+}
+.gamepadpagedsettings_Up_2QzBg
+  > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_Enter_2jEMo {
+  transform: translateY(-12%);
+  opacity: 0;
+}
+.gamepadpagedsettings_Up_2QzBg
+  > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_EnterActive_GwNxQ {
+  transform: translateY(0);
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.1, 1);
+  transition-delay: 80ms;
+}
+.gamepadpagedsettings_Up_2QzBg
+  > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_Exit_25tBd {
+  transform: translateY(0);
+  opacity: 1;
+}
+.gamepadpagedsettings_Up_2QzBg
+  > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_ExitActive_tZVuk {
+  transform: translateY(8%);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 80ms;
+  transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+}
+.gamepadpagedsettings_Down_3gXsY
+  > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_Enter_2jEMo {
+  transform: translateY(12%);
+  opacity: 0;
+}
+.gamepadpagedsettings_Down_3gXsY
+  > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_EnterActive_GwNxQ {
+  transform: translateY(0);
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.1, 1);
+  transition-delay: 80ms;
+}
+.gamepadpagedsettings_Down_3gXsY
+  > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_Exit_25tBd {
+  transform: translateY(0);
+  opacity: 1;
+}
+.gamepadpagedsettings_Down_3gXsY
+  > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_ExitActive_tZVuk {
+  transform: translateY(-8%);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 80ms;
+  transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+}
+body.modals_BodyNoScroll_1JTaq {
+  overflow-y: hidden;
+  height: 100vh;
+}
+body.modals_BodyNoScrollDialog_t0EzL {
+  overflow-y: hidden;
+  height: 100vh;
+}
+.modals_OverlayModal_1GJbF {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1500;
+}
+.modals_GamepadOnlyModalWrapper_YHje2 {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.modals_GamepadOnlyModalWrapper_YHje2 .modals_GamepadOnlyPanelWrapper_3ruPb {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 .contextmenu_ContextMenuMouseOverlay_3EgM8 {
   position: fixed;
@@ -2168,20 +3982,8 @@ html {
 .apps_App_1zK68.apps_App_1zK68.apps_App_1zK68 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
-.scrollpanel_ScrollPanel_3ozfo {
-  position: relative;
-}
-.scrollpanel_ScrollY_3MFgE,
-.scrollpanel_ScrollBoth_Ffrn- {
-  overflow-y: auto;
-  scroll-padding-top: 20px;
-  scroll-padding-bottom: 20px;
-}
-.scrollpanel_ScrollX_m0VVu,
-.scrollpanel_ScrollBoth_Ffrn- {
-  overflow-x: auto;
-  scroll-padding-left: 20px;
-  scroll-padding-right: 20px;
+:root {
+  --basicui-header-height: 0px;
 }
 .partnereventshared_PartnerEventFont_jl62C {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -2750,8 +4552,19 @@ span.partnereventshared_tooltip_Ctn_RQL5G {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+.BasicUI .partnereventshared_SaleSectionHeader_3QqpI {
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
+  text-transform: unset;
+  letter-spacing: unset;
+  text-shadow: unset;
+  margin-bottom: 8px;
+}
 .ContentHubSalePage .partnereventshared_SaleSectionHeader_3QqpI {
   padding-left: 8px;
+}
+.BasicUI .ContentHubSalePage .partnereventshared_SaleSectionHeader_3QqpI {
+  padding-left: 0px;
 }
 .partnereventshared_SaleSectionHeader_3QqpI img {
   max-width: 100%;
@@ -2817,15 +4630,24 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .rdt .rdtPicker td {
   color: #fff;
 }
-.rdt .rdtPicker td:hover {
+.rdt .rdtPicker td.rdtDay:hover {
+  color: #000;
+}
+.rdt .rdtPicker td .rdtCounter .rdtBtn:hover {
   color: #000;
 }
 .rdt .rdtPicker td.rdtNew {
   color: #fff;
 }
+.rdt .rdtPicker td.rdtNew:hover {
+  color: #000;
+}
 .partnereventshared_GamepadOnlyScrollPanel_Cpk7n {
   height: 100vh;
   overflow-y: scroll;
+}
+:root {
+  --basicui-header-height: 0px;
 }
 .suggestdialog_mentionDialogPosition_1z636 {
   position: absolute;
@@ -2903,6 +4725,9 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 span.suggestdialog_mentionSearchMatch_1t0Xl {
   color: #dfe3e6;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .addonpicker_Picker_3JFhJ {
   border-radius: 6px;
   max-width: min(364px, 100vw);
@@ -2916,6 +4741,10 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+.BasicUIContextMenu .addonpicker_Picker_3JFhJ {
+  background-color: #23262e;
+  border-radius: 0;
 }
 .addonpicker_Tabs_1KrWp {
   display: flex;
@@ -3017,6 +4846,9 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
 .addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:hover,
 .addonpicker_FilterInputContainer_3yi7o .addonpicker_FilterInput_pyLFf:focus {
   background-color: #2b2c2f !important;
+}
+.BasicUIContextMenu .addonpicker_FilterInputContainer_3yi7o {
+  display: none;
 }
 .addonpicker_AddonPickerMessage_gd4kh {
   font-size: 13px;
@@ -3289,6 +5121,9 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   display: inline-block;
   margin-right: 8px;
   padding: 0 4px;
+}
+:root {
+  --basicui-header-height: 0px;
 }
 .chatentry_chatEntryControls_SZTCn {
   position: relative;
@@ -3852,123 +5687,6 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   text-align: center;
   color: #74c069;
   background-color: #0000;
-}
-@keyframes gamepadui_svg_library_SpinnerSpokeFade_OIpeq {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
-.gamepadui_svg_library_Spinner_qznu9 > path {
-  animation: gamepadui_svg_library_SpinnerSpokeFade_OIpeq 0.6s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(1) {
-  animation-delay: -0.925s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(2) {
-  animation-delay: -0.85s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(3) {
-  animation-delay: -0.775s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(4) {
-  animation-delay: -0.7s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(5) {
-  animation-delay: -0.625s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(6) {
-  animation-delay: -0.55s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(7) {
-  animation-delay: -0.475s;
-}
-.gamepadui_svg_library_Spinner_qznu9 > path:nth-child(8) {
-  animation-delay: -0.4s;
-}
-.gamepadui_svg_library_WirelessConnectingActive_21lCz > path {
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.gamepadui_svg_library_WirelessConnectingActive_21lCz
-  .gamepadui_svg_library_WifiBar1_2YaK5 {
-  animation-name: gamepadui_svg_library_WifiBar1Anim_GI8SY;
-}
-.gamepadui_svg_library_WirelessConnectingActive_21lCz
-  .gamepadui_svg_library_WifiBar2_3eO2b {
-  animation-name: gamepadui_svg_library_WifiBar2Anim_1bkP1;
-}
-.gamepadui_svg_library_WirelessConnectingActive_21lCz
-  .gamepadui_svg_library_WifiBar3_2ct6J {
-  animation-name: gamepadui_svg_library_WifiBar3Anim_3JocZ;
-}
-.gamepadui_svg_library_WirelessConnectingActive_21lCz
-  .gamepadui_svg_library_WifiBar4_9LNC6 {
-  animation-name: gamepadui_svg_library_WifiBar4Anim_ZdAy2;
-}
-@keyframes gamepadui_svg_library_WifiBar1Anim_GI8SY {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar2Anim_1bkP1 {
-  0% {
-    opacity: 0.25;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar3Anim_3JocZ {
-  0% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar4Anim_ZdAy2 {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.gamepadui_svg_library_GenericGamepadHighlight_1iSNJ {
-  fill: green;
 }
 .reorderablelist_WhitelistNumber_2-g5s {
   width: 30px;
@@ -5281,6 +6999,9 @@ a.bbcodes_LinkButton_14_Fn:hover {
   color: #fff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .gamehover_HoverContentTransition_28V2p {
   height: 100%;
   transition: transform 0.15s ease-out;
@@ -5428,6 +7149,9 @@ a.bbcodes_LinkButton_14_Fn:hover {
   overflow: hidden;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
 }
+.BasicUI .gamehover_WishlistButton_1lp6v {
+  display: none;
+}
 .gamehover_WishlistButton_1lp6v svg {
   padding: 4px;
   display: block;
@@ -5572,6 +7296,11 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   display: flex;
   padding: 0 0 4px 4px;
 }
+.BasicUI .gamehover_ReviewScore_FiMyk {
+  font: var(--gpText-BodyLarge);
+  font-weight: 500;
+  padding: 4px 0px;
+}
 .gamehover_ReviewScore_FiMyk .gamehover_ReviewScoreHeader_3UAIA,
 .gamehover_ReviewScore_FiMyk .gamehover_ReviewScoreCount_3P8a7 {
   color: #6b8aaa;
@@ -5607,6 +7336,9 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 .gamehover_GameHoverCreatorFollowButtonCtn_2yA0d a > img {
   height: 24px;
   margin-right: 8px;
+}
+:root {
+  --basicui-header-height: 0px;
 }
 .deckverified_BannerContainer_zoxHi {
   padding: 12px 0px;
@@ -5650,7 +7382,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   text-decoration: underline;
 }
 .deckverified_CategoryIcon_2L6Br {
-  padding-right: 6px;
+  padding-right: 8px;
   vertical-align: middle;
 }
 .deckverified_LearnMoreCtn_trFCC {
@@ -5831,6 +7563,38 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 .deckverified_DeveloperBlogYButton_-d0ty {
   padding-left: 10px;
   display: inline-block;
+}
+.deckverified_Divider_7VhJG {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 1px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.deckverified_DeveloperComments_Anchor_3TheI {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  cursor: pointer;
+}
+.deckverified_DeveloperComments_Icon_1szzw {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMiA0VjIwVjI0TDcgMjBIMjRWNEgyWk0zNCAxMlYzMkwyOSAyOEgxMlYyNEgyOFYxMkgzNFoiIGZpbGw9IndoaXRlIi8+DQo8L3N2Zz4NCg==);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  opacity: 0.8;
+}
+.deckverified_DeveloperComments_LinkNoIcon_1M-Eq {
+  vertical-align: middle;
+}
+.deckverified_DeveloperComments_LinkIcon_1xcX8 {
+  vertical-align: middle;
+  color: var(--gpStoreLightestGrey);
+  font-size: 14px;
+  line-height: 20px;
 }
 .footericons_Dark_37xwx .footericons_Background_2fMyS {
   color: #0e141b;
@@ -6089,6 +7853,9 @@ div.creatorhomeembed_SocialContainer_25404 {
 .creatorhomeembed_MembersListLink_2YoZQ {
   font-size: 13px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO {
   display: flex;
   flex-direction: row;
@@ -6107,6 +7874,11 @@ div.creatorhomeembed_SocialContainer_25404 {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   margin: 8px;
 }
+.BasicUI
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO.salepreviewwidgets_LibraryAssetExpandedDisplay_2oeoi {
+  box-shadow: var(--gpShadow-Medium);
+  border-radius: unset;
+}
 .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO.salepreviewwidgets_SaleItemDefaultCapsuleDisplay_1aVmE {
   display: grid;
   grid-template-columns: 227px auto 25% 25%;
@@ -6124,6 +7896,11 @@ div.creatorhomeembed_SocialContainer_25404 {
     grid-template-areas: "left left left left" "right right right right";
   }
 }
+.BasicUI
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO.salepreviewwidgets_SaleItemDefaultCapsuleDisplay_1aVmE {
+  box-shadow: var(--gpShadow-Medium);
+  border-radius: unset;
+}
 .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
   .salepreviewwidgets_StoreSaleWidgetHalfLeft_1A66D {
   grid-area: left;
@@ -6137,6 +7914,14 @@ div.creatorhomeembed_SocialContainer_25404 {
   font-size: 25px;
   padding: 1px 5px;
   height: 100%;
+}
+.BasicUI
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleDiscountBox_39MVk {
+  font-size: unset;
+  line-height: unset;
+  padding: 0px 4px;
+  text-shadow: unset;
 }
 .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO .WishlistButton {
   display: none;
@@ -6186,6 +7971,11 @@ div.creatorhomeembed_SocialContainer_25404 {
     line-height: 19px;
   }
 }
+.BasicUI .salepreviewwidgets_StoreSaleWidgetTitle_wEN2h {
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
+  color: var(--gpStore-LightestGrey);
+}
 .salepreviewwidgets_StoreSaleWidgetTitle_wEN2h:hover {
   color: #fff;
   text-decoration: underline;
@@ -6218,6 +8008,9 @@ div.creatorhomeembed_SocialContainer_25404 {
   width: 16px;
   height: 16px;
   margin-top: -2px;
+}
+.BasicUI .salepreviewwidgets_CapsulePlatform_2WmOV {
+  display: none !important;
 }
 .salepreviewwidgets_StoreSaleWidgetContents_3rjbq {
   flex-grow: 1;
@@ -6416,6 +8209,9 @@ div.creatorhomeembed_SocialContainer_25404 {
   .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
   display: none;
 }
+.BasicUI .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
+  flex-direction: column;
+}
 .AppSummaryWidgetCtn .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
   flex-direction: column;
   justify-content: flex-start;
@@ -6453,6 +8249,12 @@ div.creatorhomeembed_SocialContainer_25404 {
   margin-top: 4px;
   text-align: left;
 }
+.BasicUI .salepreviewwidgets_StoreSaleWidgetTags_1Z-HK {
+  height: unset;
+  display: flex;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
 @media screen and (max-width: 560px) {
   .salepreviewwidgets_StoreSaleWidgetTags_1Z-HK {
     display: none;
@@ -6473,6 +8275,11 @@ div.creatorhomeembed_SocialContainer_25404 {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 10px;
+}
+.BasicUI .salepreviewwidgets_AppTag_2gNUy {
+  font: var(--gpText-BodySmall);
+  margin: 0px 4px 4px 0px;
+  padding: 2px 6px;
 }
 .salepreviewwidgets_AppTag_2gNUy:hover {
   text-decoration: none;
@@ -6542,6 +8349,11 @@ div.creatorhomeembed_SocialContainer_25404 {
   letter-spacing: 0.07em;
   white-space: nowrap;
 }
+.BasicUI
+  .salepreviewwidgets_SaleTagBlockCtn_136qJ
+  .salepreviewwidgets_TagTitle_1jnaD {
+  display: none;
+}
 .salepreviewwidgets_SaleTagBlockCtn_136qJ .salepreviewwidgets_TagBox_On4kw {
   display: flex;
   flex-direction: row;
@@ -6559,6 +8371,12 @@ div.creatorhomeembed_SocialContainer_25404 {
   .salepreviewwidgets_TagBox_On4kw {
   max-height: 40px;
   overflow: hidden;
+}
+.BasicUI
+  .salepreviewwidgets_SaleItemFullCapsuleDisplay_R6Co5
+  .salepreviewwidgets_SaleTagBlockCtn_136qJ
+  .salepreviewwidgets_TagBox_On4kw {
+  max-height: 19px;
 }
 .salepreviewwidgets_SaleTagBlockCtn_136qJ
   .salepreviewwidgets_TagBox_On4kw
@@ -6579,6 +8397,9 @@ div.creatorhomeembed_SocialContainer_25404 {
   display: flex;
   flex-direction: column;
   flex-basis: 67%;
+}
+.BasicUI .salepreviewwidgets_StoreSaleWidgetRight_2e3GD {
+  padding: 12px 16px;
 }
 .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
   .salepreviewwidgets_TitleCtn_OPaZY {
@@ -6674,6 +8495,12 @@ div.creatorhomeembed_SocialContainer_25404 {
   margin-top: 6px;
   min-height: 38px;
 }
+.BasicUI .salepreviewwidgets_StoreSalePriceWidgetContainer_1M5Z_ {
+  min-height: unset;
+  margin: unset;
+  column-gap: 6px;
+  padding-right: 8px;
+}
 .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn {
   position: absolute;
   right: 7px;
@@ -6682,6 +8509,11 @@ div.creatorhomeembed_SocialContainer_25404 {
   flex-wrap: wrap;
   justify-content: flex-end;
   min-height: 44px;
+}
+.BasicUI .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn {
+  right: 12px;
+  bottom: 8px;
+  min-height: unset;
 }
 .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
   .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8 {
@@ -6736,6 +8568,11 @@ div.creatorhomeembed_SocialContainer_25404 {
   padding-right: 5px;
   padding-left: 5px;
 }
+.BasicUI .salepreviewwidgets_StoreSaleDiscountedPriceCtn_1ifrw {
+  padding: unset;
+  flex-direction: row;
+  gap: 4px;
+}
 .salepreviewwidgets_StoreSaleDiscountedPriceCtn_1ifrw
   .salepreviewwidgets_StoreSalePriceBox_37Uyz {
   padding: 0px;
@@ -6743,6 +8580,14 @@ div.creatorhomeembed_SocialContainer_25404 {
   font-size: 15px;
   color: #cbf240;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.BasicUI
+  .salepreviewwidgets_StoreSaleDiscountedPriceCtn_1ifrw
+  .salepreviewwidgets_StoreSalePriceBox_37Uyz {
+  font-size: unset;
+  line-height: unset;
+  text-shadow: unset;
+  color: #fff;
 }
 .salepreviewwidgets_StoreSaleDiscountBox_39MVk {
   font-size: 15px;
@@ -6754,6 +8599,17 @@ div.creatorhomeembed_SocialContainer_25404 {
   align-items: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
+.BasicUI .salepreviewwidgets_StoreSaleDiscountBox_39MVk {
+  font-weight: 400;
+  font-size: unset;
+  line-height: unset;
+  padding: unset;
+  text-shadow: unset;
+  color: #fff;
+  background-color: var(--gpColor-Green);
+  padding: 0px 4px;
+  border-radius: 1px;
+}
 .salepreviewwidgets_StoreOriginalPrice_1eYuV {
   color: #b2b5bb;
   font-size: 10px;
@@ -6761,6 +8617,15 @@ div.creatorhomeembed_SocialContainer_25404 {
   line-height: 11px;
   margin-top: 2px;
   position: relative;
+}
+.BasicUI .salepreviewwidgets_StoreOriginalPrice_1eYuV {
+  font-size: unset;
+  letter-spacing: unset;
+  line-height: unset;
+  margin-top: unset;
+  color: var(--gpStore-LightestGrey);
+  opacity: 0.6;
+  text-decoration: line-through;
 }
 .salepreviewwidgets_StoreOriginalPrice_1eYuV::before {
   content: "";
@@ -6771,6 +8636,9 @@ div.creatorhomeembed_SocialContainer_25404 {
   border-bottom: 1px solid darkred;
   transform: skewY(-15deg);
 }
+.BasicUI .salepreviewwidgets_StoreOriginalPrice_1eYuV::before {
+  content: unset;
+}
 .salepreviewwidgets_StoreSalePriceBox_37Uyz {
   font-size: 14px;
   padding: 5px 8px;
@@ -6780,8 +8648,14 @@ div.creatorhomeembed_SocialContainer_25404 {
   border-bottom-left-radius: 3px;
   white-space: nowrap;
 }
+.BasicUI .salepreviewwidgets_StoreSalePriceBox_37Uyz {
+  padding: unset;
+}
 .salepreviewwidgets_StoreSalePrepurchaseLabel_AF28s {
   color: #a3cf06;
+}
+.BasicUI .salepreviewwidgets_StoreSalePrepurchaseLabel_AF28s {
+  color: var(--gpColor-GreenHi);
 }
 .salepreviewwidgets_Discounted_2eiid {
   margin: 0 6px 0 0;
@@ -6793,6 +8667,15 @@ div.creatorhomeembed_SocialContainer_25404 {
   font-size: 18px;
   position: relative;
 }
+.BasicUI
+  .salepreviewwidgets_Discounted_2eiid
+  .salepreviewwidgets_BaseDiscount_HLfF2 {
+  padding: unset;
+  color: var(--gpColor-GreenHi);
+  font-size: unset;
+  font-weight: 500;
+  text-decoration: line-through;
+}
 .salepreviewwidgets_Discounted_2eiid
   .salepreviewwidgets_BaseDiscount_HLfF2::before {
   content: "";
@@ -6802,6 +8685,11 @@ div.creatorhomeembed_SocialContainer_25404 {
   top: 50%;
   border-bottom: 1.5px solid darkred;
   transform: skewY(-25deg);
+}
+.BasicUI
+  .salepreviewwidgets_Discounted_2eiid
+  .salepreviewwidgets_BaseDiscount_HLfF2::before {
+  content: unset;
 }
 .salepreviewwidgets_Discounted_2eiid
   .salepreviewwidgets_StoreSalePriceBox_37Uyz {
@@ -6830,6 +8718,12 @@ div.creatorhomeembed_SocialContainer_25404 {
 }
 .salepreviewwidgets_OuterCapsuleContainer_1emnN {
   position: relative;
+}
+.BasicUI .salepreviewwidgets_OuterCapsuleContainer_1emnN div a {
+  box-shadow: var(--gpShadow-Medium);
+}
+.BasicUI .salepreviewwidgets_OuterCapsuleContainer_1emnN a {
+  box-shadow: var(--gpShadow-Medium);
 }
 .salepreviewwidgets_CapsuleContainer_1uut8 {
   display: flex;
@@ -7034,6 +8928,10 @@ div.creatorhomeembed_SocialContainer_25404 {
   white-space: nowrap;
   overflow: hidden;
   align-self: center;
+}
+.BasicUI .salepreviewwidgets_WishList_dgq7f,
+.BasicUI .salepreviewwidgets_Action_213r2 {
+  display: none;
 }
 .salepreviewwidgets_WishList_dgq7f:hover,
 .salepreviewwidgets_Action_213r2:hover {
@@ -7359,10 +9257,18 @@ html.touch
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5 {
   margin-bottom: 4px;
 }
+.BasicUI .salepreviewwidgets_SaleItemBrowserRow_11Ka5 {
+  margin-bottom: unset;
+}
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_ {
   height: 110px;
   position: relative;
+}
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_ {
+  height: unset;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7385,6 +9291,18 @@ html.touch
   overflow: hidden;
   transition: all 0.2s ease;
 }
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO {
+  background: unset;
+  box-shadow: unset;
+  border-radius: 0px;
+  background-color: var(--gpBackground-DarkSoft);
+  display: flex;
+  height: unset;
+  position: unset;
+}
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:hover {
@@ -7395,11 +9313,26 @@ html.touch
   );
   background: radial-gradient(ellipse at top left, #42454cff, #25282eff);
 }
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:hover {
+  background: unset;
+  background-color: var(--gpBackground-DarkMedium);
+}
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
   .salepreviewwidgets_StoreSaleWidgetHalfLeft_1A66D {
   padding: 4px;
+}
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetHalfLeft_1A66D {
+  padding: unset;
+  width: 300px;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7409,6 +9342,15 @@ html.touch
   height: 110px;
   transition: height 0.23s ease-in-out;
 }
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetHalfLeft_1A66D
+  .salepreviewwidgets_CapsuleMicroTrailer_hTVgJ {
+  height: 120%;
+  top: -10%;
+}
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
@@ -7417,6 +9359,16 @@ html.touch
   img {
   height: 102px;
   width: 219px;
+}
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetHalfLeft_1A66D
+  .salepreviewwidgets_HeaderCapsuleImageContainer_38USo
+  img {
+  width: unset;
+  height: unset;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7445,6 +9397,20 @@ html.touch
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_TitleCtn_OPaZY
+  .salepreviewwidgets_StoreSaleWidgetTitle_wEN2h {
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
+  color: var(--gpStore-LightestGrey);
+  text-transform: unset;
+  letter-spacing: unset;
+  margin: unset;
+}
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
@@ -7459,6 +9425,14 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
   flex-direction: column;
 }
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN {
+  width: 100%;
+}
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
@@ -7468,6 +9442,17 @@ html.touch
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN
+  .salepreviewwidgets_StoreSaleWidgetRelease_2tGoS {
+  font: var(--gpText-BodySmall);
+  letter-spacing: unset;
+  text-transform: unset;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7486,6 +9471,15 @@ html.touch
   margin-top: 4px;
   margin-bottom: 4px;
 }
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN
+  .salepreviewwidgets_StoreSaleWidgetTags_1Z-HK {
+  flex-wrap: nowrap;
+}
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
@@ -7495,6 +9489,15 @@ html.touch
   font-size: 12px;
   padding-left: 0;
   padding-top: 4px;
+}
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_2ofsN
+  .ReviewScore {
+  padding-top: 0px;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -7735,6 +9738,18 @@ html.touch
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
+  .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8
+  .salepreviewwidgets_StoreSalePriceWidgetContainer_1M5Z_
+  .salepreviewwidgets_StoreSalePriceBox_37Uyz {
+  margin: unset;
+  background: unset;
+}
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
@@ -7749,6 +9764,21 @@ html.touch
   border-radius: 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+.BasicUI
+  .salepreviewwidgets_SaleItemBrowserRow_11Ka5
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
+  .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8
+  .salepreviewwidgets_Discounted_2eiid {
+  margin: unset;
+  gap: 4px;
+  align-items: center;
+  padding-right: 8px;
+  background: unset;
+  border-radius: unset;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -8368,6 +10398,13 @@ html.touch
   font-size: 14px;
   padding: 8px;
 }
+.BasicUI .salepreviewwidgets_RecommendationReason_2ox6m {
+  background: unset;
+  font: var(--gpText-BodyMedium);
+  color: #fff;
+  opacity: 0.6;
+  padding: 8px 0px 0px 0px;
+}
 .gameactions_GotSteamDialog_2WQOE .gameactions_DownloadSteamUrl_3xLwV {
   color: #fff;
 }
@@ -8466,6 +10503,9 @@ html.touch
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .eventrow_OtherEventsCtn_2t60e {
   margin-top: 8vw;
 }
@@ -8512,8 +10552,17 @@ html.touch
   .eventrow_OtherEvents_MainImage_22YMK {
   transform: scale(1.1);
 }
+.BasicUI .eventrow_OtherEvents_EventCtn_plQje {
+  margin: unset;
+  border-radius: unset;
+  box-shadow: var(--gpShadow-Medium);
+  min-width: 180px;
+}
 .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_plQje {
   margin: 0px 8px 0px 8px;
+}
+.BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_plQje {
+  margin: unset;
 }
 .eventrow_OtherEvents_BGImage_srFw- {
   width: 100%;
@@ -8553,6 +10602,10 @@ html.touch
   text-align: left;
   color: rgba(255, 255, 255, 0.5);
   font-size: 13px;
+}
+.BasicUI .eventrow_OtherEvents_TextCtn_363HF {
+  padding: 12px 16px;
+  padding-bottom: 48px;
 }
 .eventrow_OtherEvents_TextCtn_363HF.eventrow_OtherEvents_TextCtn_363HF {
   box-sizing: content-box;
@@ -8711,6 +10764,10 @@ html.touch
   width: 120px;
   box-shadow: 2px 2px 10px #000;
 }
+.BasicUI
+  .eventrow_AppCapsuleImage_1Vvcd.eventrow_AppCapsuleImage_1Vvcd.eventrow_AppCapsuleImage_1Vvcd {
+  box-shadow: var(--gpShadow-Medium);
+}
 .eventrow_AppCapsuleCtn_1eL0b {
   display: flex;
   align-items: center;
@@ -8720,10 +10777,24 @@ html.touch
   left: 10px;
   width: calc(100% - 20px);
 }
+.BasicUI .eventrow_AppCapsuleCtn_1eL0b {
+  top: -20px;
+  left: 12px;
+  width: unset;
+  justify-content: unset;
+  column-gap: 12px;
+  align-items: baseline;
+}
 .eventrow_AppCapsuleImageHover_3CgUV {
   flex-shrink: 0;
   margin-right: -2px;
   z-index: 1;
+}
+.BasicUI .eventrow_AppCapsuleImageHover_3CgUV {
+  margin-right: unset;
+}
+.BasicUI .eventrow_AppCapsuleImageHover_3CgUV a {
+  display: flex;
 }
 .eventrow_AppCapsulePrice_1d-9u {
   background: #000;
@@ -8733,17 +10804,35 @@ html.touch
   margin: 0;
   flex-shrink: 1;
 }
+.BasicUI .eventrow_AppCapsulePrice_1d-9u {
+  background: unset;
+  flex-direction: row;
+  column-gap: 4px;
+}
 .eventrow_AppCapsulePrice_1d-9u span {
   font-size: 12px;
   line-height: 17px;
   padding: 0px 8px;
 }
+.BasicUI .eventrow_AppCapsulePrice_1d-9u span {
+  font-size: unset;
+  line-height: unset;
+}
 .eventrow_AppCapsulePrice_1d-9u span:first-child {
   padding-top: 6px;
+}
+.BasicUI .eventrow_AppCapsulePrice_1d-9u span:first-child {
+  padding-top: unset;
 }
 .eventrow_AppCapsulePrice_1d-9u span:last-child {
   padding-bottom: 6px;
   color: #fff;
+}
+.BasicUI .eventrow_AppCapsulePrice_1d-9u span:last-child {
+  padding-bottom: unset;
+}
+:root {
+  --basicui-header-height: 0px;
 }
 html:not(.client)
   .events_listing
@@ -8844,6 +10933,9 @@ html:not(.client)
   grid-template-columns: 142px 1fr;
   grid-template-rows: 38px 28px;
   grid-column-gap: 15px;
+}
+.BasicUI .apppartnereventspage_AppBannerGroup_262ls {
+  display: none;
 }
 @media screen and (max-width: 500px) {
   .apppartnereventspage_AppBannerGroup_262ls {
@@ -9042,6 +11134,9 @@ html:not(.client)
     padding: 0px 10px 0px 10px;
   }
 }
+.BasicUI .apppartnereventspage_AppPartnerEventsContainer_27K47 {
+  margin: unset;
+}
 .apppartnereventspage_PartnerEvent_3nxUy {
   max-width: 848px;
   overflow: hidden;
@@ -9054,6 +11149,13 @@ html:not(.client)
   pointer-events: initial;
   border: 1px solid transparent;
   font-weight: 300;
+}
+.BasicUI .apppartnereventspage_PartnerEvent_3nxUy {
+  border: none;
+  border-radius: 0px;
+  max-width: 640px;
+  margin: 24px auto 40px auto;
+  box-shadow: var(--gpShadow-XLarge);
 }
 .apppartnereventspage_PartnerEvent_3nxUy a {
   text-decoration: none;
@@ -9081,6 +11183,10 @@ div.apppartnereventspage_EventDetailsBody_1Rakv {
 }
 .apppartnereventspage_ControlSection_2KJrY.apppartnereventspage_NoScrollArrows_3rPRb {
   top: 136px;
+}
+.BasicUI
+  .apppartnereventspage_ControlSection_2KJrY.apppartnereventspage_NoScrollArrows_3rPRb {
+  display: none;
 }
 .apppartnereventspage_ControlSection_2KJrY
   .apppartnereventspage_ControlSectionWidth_2tqTr {
@@ -9869,6 +11975,9 @@ div.apppartnereventspage_EventDetailsBody_1Rakv {
   .nominationandvote_SteamAwardCategoryTitle_1D2VY {
   padding-left: 8px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 body.v6.partner_events {
   background: #24282e;
 }
@@ -10198,6 +12307,16 @@ body.v6.partner_events {
   .partnereventdisplay_EventDetailTitle_3tRR7 {
   font-size: 24px;
   margin-top: 12px;
+}
+.partnereventdisplay_InLibraryView_1wfkI
+  .partnereventdisplay_EventDetailTitle_3tRR7:hover {
+  cursor: pointer;
+  color: #fff;
+}
+.BasicUI .partnereventdisplay_EventDetailTitle_3tRR7 {
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 8px;
 }
 .partnereventdisplay_InLibraryView_1wfkI.partnereventdisplay_InEditor_3D4ki
   .partnereventdisplay_EventDetailTitle_3tRR7 {
@@ -14557,6 +16676,9 @@ html:not(.touch)
   margin: 0px;
   display: block;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .carousel_carouselNavButton_2aDk- {
   border: none;
   background-color: transparent;
@@ -14601,6 +16723,9 @@ html:not(.touch)
   width: 50px;
   height: 50px;
 }
+.BasicUI .carousel_carouselBtnCtn_2pHZR {
+  display: none;
+}
 .carousel_carouselBody_Ddtl_ {
   display: flex;
   flex-direction: column;
@@ -14621,6 +16746,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
     margin: 0;
   }
 }
+.BasicUI .SaleSectionCarousel .carousel__slider {
+  padding: unset;
+}
+.BasicUI .carousel_slideTrayCustomize_1nAWw {
+  column-gap: 12px;
+}
 .carousel_breadcrumbContainer_7T5ex {
   display: flex;
   justify-content: center;
@@ -14635,6 +16766,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   flex-direction: row;
   height: 35px;
   margin: 2px 10px 0px 10px;
+}
+.BasicUI .carousel_pipScrollerContainer_lZK0K {
+  display: none;
 }
 .contenthubmaincarousel .carousel_pipScrollerContainer_lZK0K {
   max-width: 940px;
@@ -14915,6 +17049,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .legalfooter_mainmenu_footer_spacer_1MxXF.legalfooter_china_spacer_3QSE3 {
   height: 330px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 @media only screen and (max-width: 768px) {
   .facetedbrowse_FacetedBrowseInnerCtn_1cvmb {
     display: grid;
@@ -15076,11 +17213,19 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
     flex-basis: 100%;
   }
 }
+.BasicUI .facetedbrowse_FacetedBrowseItems_34Tgy {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
 .facetedbrowse_FacetedBrowsePopupCtn_1we8N {
   height: 24px;
   margin-bottom: 16px;
   display: flex;
   cursor: pointer;
+}
+.BasicUI .facetedbrowse_FacetedBrowsePopupCtn_1we8N {
+  display: none;
 }
 .facetedbrowse_FacetedBrowsePopupLabel_2Qd4Q {
   margin-right: 8px;
@@ -15143,6 +17288,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   padding: 4px 10px;
   margin: 8px 0;
 }
+:root {
+  --basicui-header-height: 0px;
+}
+.BasicUI .salepg_storenav {
+  z-index: 5;
+}
 @media screen and (max-width: 940px) {
   .sale_page_n_section .responsive_page_frame {
     width: 100vw;
@@ -15159,6 +17310,13 @@ html.responsive.touch .ContentHubSalePage {
     width: auto;
     position: relative;
   }
+}
+.BasicUI
+  .SaleSectionCtn.animated
+  .partnersaledisplay_SaleSection_254Kr.partnersaledisplay_CarouselDisplay_1uPrQ
+  .SliderBody
+  ul {
+  gap: 12px;
 }
 .partnersaledisplay_SaleHeaderContainer_3ieq7 {
   display: flex;
@@ -15186,8 +17344,41 @@ html.responsive.touch .ContentHubSalePage {
     padding: 16px 4px;
   }
 }
+.BasicUI .partnersaledisplay_SaleSection_254Kr {
+  padding: 16px 24px;
+  margin: unset;
+}
 .partnersaledisplay_SaleSection_254Kr.partnersaledisplay_CarouselDisplay_1uPrQ {
   max-width: 940px;
+}
+.BasicUI
+  .partnersaledisplay_SaleSection_254Kr.partnersaledisplay_CarouselDisplay_1uPrQ
+  .carousel__slider {
+  overflow: visible;
+}
+.BasicUI
+  .partnersaledisplay_SaleSection_254Kr.partnersaledisplay_CarouselDisplay_1uPrQ
+  .carousel__slider-tray-wrapper {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 0px -24px;
+  padding: 0px 24px 8px;
+  scroll-padding-left: 24px;
+  scroll-padding-right: 24px;
+}
+.BasicUI
+  .partnersaledisplay_SaleSection_254Kr.partnersaledisplay_CarouselDisplay_1uPrQ
+  .carousel__slider-tray-wrapper
+  > *
+  li {
+  scroll-snap-align: start;
+}
+.BasicUI
+  .partnersaledisplay_SaleSection_254Kr.partnersaledisplay_CarouselDisplay_1uPrQ
+  .carousel__slider-tray:after {
+  content: " ";
+  min-width: 24px;
 }
 .partnersaledisplay_SaleSection_254Kr .partnersaledisplay_SaleViewAll_2P7Ot {
   display: flex;
@@ -15248,6 +17439,10 @@ html.responsive.touch .ContentHubSalePage {
   flex-basis: 0;
   padding: 8px;
 }
+.BasicUI .partnersaledisplay_AppSummaryWidgetCtn_3r-U2 {
+  flex-grow: 0;
+  padding: 0;
+}
 .carousel .partnersaledisplay_AppSummaryWidgetCtn_3r-U2 {
   height: 100%;
 }
@@ -15258,9 +17453,21 @@ html.responsive.touch .ContentHubSalePage {
   margin: 0 auto;
   max-width: 940px;
 }
+.BasicUI .partnersaledisplay_SaleBroadcastCtn_2wJlO {
+  display: none;
+}
 .partnersaledisplay_SaleOuterContainer_3ZZvZ {
   display: flex;
   flex-direction: column;
+}
+.BasicUI
+  .SaleBackgroundCtn:not(.ContentHubSalePage)
+  .partnersaledisplay_SaleOuterContainer_3ZZvZ {
+  padding: 0px;
+  background: var(--gpGradient-StoreBackground);
+}
+.BasicUI .partnersaledisplay_SaleOuterContainer_3ZZvZ {
+  padding: 0px 0px var(--gpSpace-Gutter) 0px;
 }
 @media screen and (max-width: 1110px) {
   .partnersaledisplay_SaleOuterContainer_3ZZvZ.partnersaledisplay_CustomStyle_together_2cTK9 {
@@ -15274,6 +17481,9 @@ html.responsive.touch .ContentHubSalePage {
   }
   .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3ZZvZ {
     margin-top: 2vw !important;
+  }
+  .BasicUI .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3ZZvZ {
+    margin-top: 58px !important;
   }
 }
 .partnersaledisplay_SaleBackground_1COsa {
@@ -15295,6 +17505,10 @@ html.responsive.touch .ContentHubSalePage {
   .partnersaledisplay_SaleBackground_1COsa {
     background-size: var(--background-scale, 166%);
   }
+}
+.BasicUI .partnersaledisplay_SaleBackground_1COsa {
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.4) 0px, black 80px);
+  padding-bottom: unset;
 }
 .partnersaledisplay_SaleSectionTitleCtn_34bN1 {
   position: relative;
@@ -15323,6 +17537,10 @@ html.responsive.touch .ContentHubSalePage {
   grid-gap: 16px;
   padding-bottom: 14px;
 }
+.BasicUI .partnersaledisplay_SaleSectionContainer_16rV6 {
+  grid-gap: 12px;
+  padding-bottom: 12px;
+}
 .partnersaledisplay_ShowContentsContainer_39lsr {
   display: flex;
   justify-content: center;
@@ -15338,11 +17556,36 @@ html.responsive.touch .ContentHubSalePage {
   color: #222;
   background: rgba(255, 255, 255, 0.7);
 }
+.BasicUI
+  .partnersaledisplay_ShowContentsContainer_39lsr
+  .partnersaledisplay_ShowContentsButton_1licp {
+  background: unset;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.2s ease;
+  font: var(--gpText-BodyLarge);
+  padding: 10px 20px;
+  min-width: 32%;
+}
+.BasicUI
+  .partnersaledisplay_ShowContentsContainer_39lsr
+  .partnersaledisplay_ShowContentsButton_1licp.gpfocus {
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+}
 .partnersaledisplay_ShowContentsContainer_39lsr
   .partnersaledisplay_ShowContentsButton_1licp:hover {
   color: #222;
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.BasicUI
+  .partnersaledisplay_ShowContentsContainer_39lsr
+  .partnersaledisplay_ShowContentsButton_1licp:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: unset;
 }
 span.partnersaledisplay_vr_supported_25W9s,
 span.partnersaledisplay_vr_required_fQ_ZQ {
@@ -15436,6 +17679,11 @@ html.responsive.touch
     top: 0px;
   }
 }
+.BasicUI .partnersaledisplay_SaleSectionTabs_QhcTn {
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .partnersaledisplay_SaleSectionTabs_QhcTn
   .partnersaledisplay_SaleSectionTabsTab_6P59P {
   background-color: #000;
@@ -15454,11 +17702,34 @@ html.responsive.touch
   overflow-y: hidden;
   overflow-x: auto;
 }
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_QhcTn
+  .partnersaledisplay_SaleSectionTabContainer_2ejtb {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 0px -24px;
+  padding: 0px 24px;
+  scroll-padding: 0px 64px;
+  width: 100%;
+}
 .partnersaledisplay_SaleSectionTabs_QhcTn
   .partnersaledisplay_SaleSectionTabsRow_1cPXZ {
   margin: 0px auto;
   display: flex;
   flex-direction: row;
+}
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_QhcTn
+  .partnersaledisplay_SaleSectionTabsRow_1cPXZ {
+  gap: 6px;
+  padding: 16px 0px 16px;
+}
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_QhcTn
+  .partnersaledisplay_SaleSectionTabsRow_1cPXZ::after {
+  content: " ";
+  min-width: 24px;
 }
 .partnersaledisplay_SaleSectionTabs_QhcTn .partnersaledisplay_SaleTab_3vO5a {
   display: flex;
@@ -15467,10 +17738,32 @@ html.responsive.touch
   height: 40px;
   margin: 0px;
 }
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_QhcTn
+  .partnersaledisplay_SaleTab_3vO5a {
+  margin: unset;
+  height: unset;
+  border-radius: var(--gpCorner-Medium);
+  padding: 12px 16px;
+  scroll-snap-align: start;
+  transition: filter 0.2s ease;
+}
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_QhcTn
+  .partnersaledisplay_SaleTab_3vO5a.gpfocus {
+  border-radius: 0px;
+  filter: brightness(1.3) saturate(1.1);
+}
 .partnersaledisplay_SaleSectionTabs_QhcTn
   .partnersaledisplay_SaleTab_3vO5a:hover
   .partnersaledisplay_SaleTabLabel_3m92q {
   text-decoration: underline;
+}
+.BasicUI
+  .partnersaledisplay_SaleSectionTabs_QhcTn
+  .partnersaledisplay_SaleTab_3vO5a:hover
+  .partnersaledisplay_SaleTabLabel_3m92q {
+  text-decoration: unset;
 }
 .partnersaledisplay_SaleSectionTabs_QhcTn
   .partnersaledisplay_SaleTabLabel_3m92q {
@@ -15523,6 +17816,9 @@ html.responsive.touch
   right: 16px;
   white-space: nowrap;
   pointer-events: none;
+}
+.BasicUI .partnersaledisplay_MobileTabSelector_2LM5J {
+  display: none !important;
 }
 @media screen and (max-width: 910px) {
   .partnersaledisplay_SaleBackground_1COsa
@@ -15628,18 +17924,35 @@ html.responsive.touch
   background: #7a5a6c;
   border-color: #fff;
 }
+.BasicUI .partnersaledisplay_DefaultCreatorCtn_23ZCI {
+  display: none;
+}
+.BasicUI .SaleSectionCtn.curator {
+  display: none;
+}
 .partnersaledisplay_SalePageLogoCtn_33BfR {
   max-width: 940px;
   margin: 0 auto;
   margin-bottom: 32px;
 }
+.BasicUI .partnersaledisplay_SalePageLogoCtn_33BfR {
+  max-height: 230px;
+  margin-bottom: 0px;
+}
 .partnersaledisplay_SalePageLogoCtn_33BfR img {
   width: 100%;
+}
+.BasicUI .partnersaledisplay_SalePageLogoCtn_33BfR img {
+  max-height: 230px;
+  width: auto;
 }
 @media screen and (max-width: 768px) {
   .partnersaledisplay_SalePageLogoCtn_33BfR {
     margin-bottom: 0px;
   }
+}
+:root {
+  --basicui-header-height: 0px;
 }
 Body.v6.tag_page.contenthub_page {
   background-color: #202327;
@@ -15709,6 +18022,17 @@ Body.v6.tag_page.contenthub_page {
   margin-right: 8px;
   padding-left: 8px;
 }
+.BasicUI
+  .contenthubshared_StoreSection_11oXN
+  .contenthubshared_SectionTitle_1tHGa {
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
+  text-transform: unset;
+  letter-spacing: unset;
+  text-shadow: unset;
+  margin-bottom: 8px;
+  padding: unset;
+}
 .contenthubshared_SectionDescription_2tLKH {
   font-size: 16px;
   opacity: 50%;
@@ -15722,14 +18046,63 @@ Body.v6.tag_page.contenthub_page {
     padding-left: 8px;
   }
 }
+.BasicUI .contenthubshared_SectionDescription_2tLKH {
+  font: var(--gpText-BodyMedium);
+  letter-spacing: unset;
+  padding: unset;
+  margin-left: unset;
+}
 .contenthubshared_SectionTitleCtn_1IGcJ {
   margin-top: 30px;
   font-weight: 300;
   margin-bottom: 8px;
 }
+.BasicUI .contenthubshared_SectionTitleCtn_1IGcJ {
+  font: var(--gpText-BodyMedium);
+  letter-spacing: unset;
+  padding: unset;
+  margin-top: 12px;
+  padding: 0px var(--gpSpace-Gutter);
+}
+.BasicUI .contenthubsections {
+  padding-bottom: 16px;
+}
 .ContentHubSalePage .contenthubshared_MainCarousel_vpAQS {
   max-width: 940px;
   margin: 0px auto 20px auto;
+}
+.BasicUI .ContentHubSalePage .contenthubshared_MainCarousel_vpAQS {
+  margin-bottom: 0px;
+  padding-bottom: 8px;
+}
+.BasicUI .ContentHubSalePage .contenthubmaincarousel {
+  max-width: 100vw;
+  width: 100vw;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-padding-left: 24px;
+  scroll-padding-right: 24px;
+}
+.BasicUI .ContentHubSalePage .contenthubmaincarousel .SliderBody ul {
+  gap: 12px;
+}
+.BasicUI .ContentHubSalePage .contenthubmaincarousel .SliderBody ul li {
+  width: calc(100vw - 2 * var(--gpSpace-Gutter)) !important;
+  max-width: calc(100vw - 2 * var(--gpSpace-Gutter)) !important;
+  overflow: hidden;
+}
+.BasicUI .ContentHubSalePage .carousel__slider-tray-wrapper {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: unset;
+  padding: 0px 24px 8px 24px;
+  scroll-padding-left: 24px;
+  scroll-padding-right: 24px;
+}
+.BasicUI .ContentHubSalePage .carousel__slider-tray:after {
+  content: " ";
+  min-width: 24px;
 }
 .ContentHubSalePage
   .contenthubmaincarousel.expanded
@@ -15910,7 +18283,6 @@ Body.v6.tag_page.contenthub_page {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-content: space-between;
 }
 .contenthubshared_BroadcastCtn_6noJq {
@@ -15920,6 +18292,14 @@ Body.v6.tag_page.contenthub_page {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.contenthubshared_BroadcastCtn_6noJq:first-child {
+  margin-left: 0;
+}
+.contenthubshared_BroadcastCtn_6noJq:last-child {
+  margin-right: 0;
 }
 .contenthubshared_BroadcastCtn_6noJq .contenthubshared_BroadcastImageCtn_1WTAa {
   height: 136px;
@@ -16068,6 +18448,11 @@ Body.v6.tag_page.contenthub_page {
   .contenthubshared_FinalPrice_fctkc {
   color: #acdbf5;
 }
+.BasicUI .contenthubshared_ContentHubTakeoverCtn_3_C-j {
+  height: unset !important;
+  margin: 0px var(--gpSpace-Gutter) 16px;
+  box-shadow: var(--gpShadow-Medium);
+}
 .contenthubshared_ContentHubTakeoverCtn_3_C-j a {
   display: flex;
   justify-content: center;
@@ -16076,8 +18461,17 @@ Body.v6.tag_page.contenthub_page {
   width: 100%;
   z-index: 1;
 }
+.BasicUI .contenthubshared_ContentHubTakeoverCtn_3_C-j a {
+  position: unset;
+  height: 32vw;
+  overflow: hidden;
+}
 .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   margin: 0 auto;
+}
+.BasicUI .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
+  margin: auto;
+  height: inherit;
 }
 .contenthubshared_TweaksMenu_1DTXi {
   position: absolute;
@@ -16192,6 +18586,9 @@ Body.v6.tag_page.contenthub_page {
   right: 40px;
   float: right;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .contenthubmaincarousel_ContentHubTitleCtn_16cIW {
   max-width: 940px;
   margin-left: auto;
@@ -16199,6 +18596,10 @@ Body.v6.tag_page.contenthub_page {
   margin-bottom: 36px;
   position: relative;
   z-index: 1;
+}
+.BasicUI .contenthubmaincarousel_ContentHubTitleCtn_16cIW {
+  margin-bottom: 20px !important;
+  padding: 0px var(--gpSpace-Gutter);
 }
 html.responsive.touch .contenthubmaincarousel_ContentHubTitleCtn_16cIW {
   margin-bottom: 8px;
@@ -16235,12 +18636,28 @@ html.responsive.touch .contenthubmaincarousel_ContentHubTitle_3Xj5I {
     padding-left: 0px;
   }
 }
+.BasicUI
+  .contenthubmaincarousel_ContentHubTitle_3Xj5I.contenthubmaincarousel_ContentHubTitle_3Xj5I.contenthubmaincarousel_ContentHubTitle_3Xj5I {
+  font: var(--gpText-HeadingLarge);
+  padding: 0px;
+  color: #fff;
+  text-shadow: unset;
+}
 .contenthubmaincarousel_ContentHubSubtitle_t1mzq {
   font-size: 18px;
   font-weight: 300;
   opacity: 75%;
   margin-left: 8px;
   margin-top: 16px;
+}
+.BasicUI .contenthubmaincarousel_ContentHubSubtitle_t1mzq {
+  font: var(--gpText-HeadingSmall);
+  padding: 0px;
+  color: #fff;
+  text-shadow: unset;
+  opacity: 0.7;
+  margin: unset;
+  font-weight: 400;
 }
 .contenthubmaincarousel_ContentHubSubtitle_t1mzq.contenthubmaincarousel_AONotice_6dj45 {
   font-size: 14px;
@@ -16665,6 +19082,9 @@ html.responsive.touch
   > form {
   padding-right: 8px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .salecuratorrecommendations_CuratorCtn_cE4dP {
   position: relative;
   background: #1f2225;
@@ -16675,6 +19095,9 @@ html.responsive.touch
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+.BasicUI .salecuratorrecommendations_CuratorCtn_cE4dP {
+  height: 250px;
 }
 .salecuratorrecommendations_CuratorCtn_cE4dP
   .salecuratorrecommendations_CuratorBackgroundCtn_23Pa4 {
@@ -16765,6 +19188,11 @@ html.responsive.touch
     .salecuratorrecommendations_CuratorFollowCtn_2CwHZ {
     display: none;
   }
+}
+.BasicUI
+  .salecuratorrecommendations_CuratorCtn_cE4dP
+  .salecuratorrecommendations_CuratorFollowCtn_2CwHZ {
+  display: none;
 }
 .salecuratorrecommendations_CuratorCtn_cE4dP
   .salecuratorrecommendations_CuratorMiddleCtn_2C9pN {
@@ -17027,6 +19455,9 @@ html.responsive.touch
     padding-right: 1em;
   }
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .saleitembrowser_SaleItemBrowserContainer_3KuFX {
   display: flex;
   flex-direction: column;
@@ -17090,6 +19521,12 @@ html.responsive.touch
     flex-wrap: nowrap;
   }
 }
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff {
+  column-gap: 6px;
+}
 .saleitembrowser_SaleItemBrowserContainer_3KuFX
   .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
   .saleitembrowser_SaleItemBrowserHeader_yupff
@@ -17118,11 +19555,27 @@ html.responsive.touch
   color: #fff;
   border-bottom: 2px solid #fff;
 }
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc.saleitembrowser_SelectedFlavor_iGDdY {
+  border-bottom: unset;
+  background-color: rgba(255, 255, 255, 0.32);
+  box-shadow: var(--gpShadow-Medium);
+}
 .saleitembrowser_SaleItemBrowserContainer_3KuFX
   .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
   .saleitembrowser_SaleItemBrowserHeader_yupff
   .saleitembrowser_FlavorLabel_1qNQc:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc:hover {
+  background-color: rgba(255, 255, 255, 0.24);
 }
 html.responsive.touch
   .saleitembrowser_SaleItemBrowserContainer_3KuFX
@@ -17143,6 +19596,29 @@ html.responsive.touch
     letter-spacing: 0;
     text-transform: initial;
   }
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc {
+  font: var(--gpText-BodyLarge);
+  color: #fff;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: var(--gpCorner-Medium);
+  margin: unset;
+  height: fit-content;
+  transition: all 0.2s ease;
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc.gpfocus {
+  color: #000;
+  background-color: #fff;
+  box-shadow: var(--gpShadow-Medium);
 }
 .saleitembrowser_SaleItemBrowserContainer_3KuFX
   .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
@@ -17179,10 +19655,37 @@ html.responsive.touch
   padding: 0 10px;
   background-color: rgba(255, 255, 255, 0.2);
 }
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2
+  .saleitembrowser_ShowContentsButton_15fEf {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: unset;
+  border-radius: var(--gpCorner-Medium);
+  transition: background-color 0.2s ease;
+  font: var(--gpText-BodyLarge);
+  padding: 10px 20px;
+  min-width: 32%;
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2
+  .saleitembrowser_ShowContentsButton_15fEf.gpfocus {
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+}
 .saleitembrowser_SaleItemBrowserContainer_3KuFX
   .saleitembrowser_ShowContentsContainer_3J8f2
   .saleitembrowser_ShowContentsButton_15fEf:hover {
   background-color: rgba(255, 255, 255, 0.4);
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2
+  .saleitembrowser_ShowContentsButton_15fEf:hover {
+  background-color: rgba(255, 255, 255, 0.24);
 }
 .saleitembrowser_SuggestContainer_M0w-C {
   display: flex;
@@ -17198,6 +19701,9 @@ html.responsive.touch
   width: 30px;
   height: 30px;
   margin: 8px;
+}
+.BasicUI .saleitembrowser_SuggestContainer_M0w-C {
+  display: none;
 }
 .salesectionsubscription_MainBlock_33wZe {
   margin-left: auto;
@@ -17734,6 +20240,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
     opacity: 1;
   }
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .salehilightplayerembed_MediaContainer_3RMgw {
   flex: 1;
   min-width: 284px;
@@ -17747,6 +20256,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 4px;
+}
+.BasicUI .salehilightplayerembed_MainMediaCtn_kqSqX {
+  display: none;
 }
 .salehilightplayerembed_MainMediaCtn_kqSqX > img {
   border-radius: 2px;
@@ -18411,6 +20923,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   color: #fff;
   margin-bottom: 32px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .animated_featured_capsule_FeatureCtn_16rVm {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
@@ -18422,11 +20937,24 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   height: 500px;
   margin: 0 auto;
 }
+.BasicUI .animated_featured_capsule_FeatureCtn_16rVm {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  gap: 20px;
+  box-shadow: var(--gpShadow-Large);
+}
 .animated_featured_capsule_SuperCapsuleCtn_1yW5j {
   width: 100%;
   height: 478px;
   position: relative;
   background: #000;
+}
+.BasicUI .animated_featured_capsule_SuperCapsuleCtn_1yW5j {
+  height: 300px;
 }
 .ContentHubSalePage
   .SaleSectionCtn.contenthubmaincarousel.expanded
@@ -18522,6 +21050,17 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   mask-composite: source-in;
   z-index: 2;
 }
+.BasicUI .animated_featured_capsule_BGGradient_2avQX {
+  -webkit-mask: unset;
+  mask: unset;
+  -webkit-mask-composite: unset;
+  mask-composite: unset;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 0.5) 80%
+  );
+}
 .contenthubmaincarousel.expanded .animated_featured_capsule_BGGradient_2avQX {
   width: 100vw;
 }
@@ -18581,6 +21120,19 @@ a.storywidget_BadgeFooter_24Cq8:hover {
     margin-left: 0px;
   }
 }
+.BasicUI .animated_featured_capsule_Artwork_1FF93 {
+  margin: unset;
+  height: auto;
+  width: 180px;
+  box-shadow: var(--gpShadow-Medium);
+}
+.BasicUI .animated_featured_capsule_Artwork_1FF93 .CapsuleBottomBar {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  justify-content: flex-end;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+}
 .animated_featured_capsule_Info_1cMHE {
   display: flex;
   flex-direction: column;
@@ -18589,7 +21141,15 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   padding-left: 30px;
   z-index: 1;
 }
+.BasicUI .animated_featured_capsule_Info_1cMHE {
+  height: -webkit-fill-available;
+  padding: unset;
+  flex: auto;
+}
 .animated_featured_capsule_Info_1cMHE .WidgetTagTitle {
+  display: none;
+}
+.BasicUI .animated_featured_capsule_Info_1cMHE .SaleTagBlockCtn {
   display: none;
 }
 .animated_featured_capsule_Info_1cMHE .SaleTagBlockCtn .TagBox .WidgetTag {
@@ -18604,11 +21164,26 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .animated_featured_capsule_StoreSaleItemRelease_3sroE {
   text-shadow: 0px 0px 8px #000;
 }
+.BasicUI
+  .animated_featured_capsule_Info_1cMHE
+  .animated_featured_capsule_StoreSaleItemRelease_3sroE {
+  font: var(--gpText-BodyMedium);
+  color: #fff;
+  opacity: 0.8;
+  text-shadow: 0px 4px 12px #000;
+}
 .animated_featured_capsule_Info_1cMHE
   .animated_featured_capsule_StoreSaleItemReview_1Xu5C {
   margin-top: 4px;
   margin-left: -4px;
   text-shadow: 0px 0px 8px #000;
+}
+.BasicUI
+  .animated_featured_capsule_Info_1cMHE
+  .animated_featured_capsule_StoreSaleItemReview_1Xu5C {
+  font: var(--gpText-BodyLarge);
+  text-shadow: 0px 4px 12px #000;
+  margin: unset;
 }
 .animated_featured_capsule_Info_1cMHE
   .animated_featured_capsule_animated_featured_capsule_Title_2IRwL {
@@ -18622,10 +21197,21 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   color: #fff;
   text-shadow: 0px 4px 8px #000;
 }
+.BasicUI .animated_featured_capsule_Title_M9DU4 {
+  margin: unset;
+  font: var(--gpText-HeadingMedium);
+  text-shadow: 0px 8px 24px #000;
+}
 .animated_featured_capsule_Reason_9ddd6 {
   font-size: 20px;
   font-weight: 200;
   text-shadow: 1px 1px 0px #000;
+}
+.BasicUI .animated_featured_capsule_Reason_9ddd6 {
+  font: var(--gpText-BodyMedium);
+  color: #fff;
+  opacity: 0.8;
+  text-shadow: 0px 4px 12px #000;
 }
 .SaleSectionCarousel .carousel__slider {
   margin: -10px 0px 0px 0px;
@@ -22329,6 +24915,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 .partnereventshareddates_DateErrorCtn_2QQj5 img {
   margin-right: 4px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .managefriends_Heading_N0Bd3 {
   font-size: 17px;
   font-weight: normal;
@@ -22336,6 +24925,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   color: #f5f5f5;
   margin-bottom: -7px;
   max-width: 620px;
+}
+.BasicUI .managefriends_Heading_N0Bd3 {
+  letter-spacing: unset;
+  text-transform: unset;
+  margin: unset;
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
 }
 .managefriends_Body_38FZa {
   margin-top: 10px;
@@ -22347,6 +24943,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   letter-spacing: 0.02em;
   max-width: 620px;
 }
+.BasicUI .managefriends_Body_38FZa {
+  letter-spacing: unset;
+  text-transform: unset;
+  margin: 8px 0px;
+  font: var(--gpText-BodyMedium);
+  color: var(--gpStoreLightestGrey);
+}
 .managefriends_HeaderBlock_2vDHa {
   font-weight: normal;
   font-size: 14px;
@@ -22357,13 +24960,29 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   background-color: #015e80;
   padding: 10px 20px 10px 20px;
 }
+.BasicUI .managefriends_HeaderBlock_2vDHa {
+  letter-spacing: unset;
+  background-color: unset;
+  padding: unset;
+  text-transform: unset;
+  font: var(--gpText-HeadingLarge);
+}
 .managefriends_Background_opxDL {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px 20px 20px 20px;
 }
+.BasicUI .managefriends_Background_opxDL {
+  background-color: unset;
+  padding: 16px 0px;
+}
 .managefriends_DimBackground_3gBQF {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+.BasicUI .managefriends_DimBackground_3gBQF {
+  background-color: unset;
+  padding: 16px 0px;
+  border-top: 1px solid var(--gpBackground-LightMedium);
 }
 .managefriends_Input_2NRAE {
   max-width: 598px;
@@ -22378,6 +24997,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   min-width: 320px;
   max-width: 620px;
 }
+.BasicUI .managefriends_CopyContainer_133bn {
+  background-color: var(--gpBackground-DarkSoft);
+  border-radius: unset;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+}
 .managefriends_CopyContainer_133bn .managefriends_Text_3r5lq {
   font-size: 32px;
   line-height: 30px;
@@ -22385,6 +25011,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   color: #f5f5f5;
   letter-spacing: 0.02em;
   padding: 14px;
+}
+.BasicUI .managefriends_CopyContainer_133bn .managefriends_Text_3r5lq {
+  padding: unset;
 }
 .managefriends_CopyContainer_133bn .managefriends_Link_2kERL {
   font-size: 14px;
@@ -22395,6 +25024,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   padding: 14px;
   overflow-wrap: break-word;
   overflow: hidden;
+}
+.BasicUI .managefriends_CopyContainer_133bn .managefriends_Link_2kERL {
+  padding: unset;
 }
 .managefriends_CopyContainer_133bn .managefriends_Button_385V6 {
   background-color: rgba(144, 144, 144, 0.2);
@@ -22409,9 +25041,48 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   text-transform: uppercase;
   width: fit-content;
 }
+.BasicUI .managefriends_CopyContainer_133bn .managefriends_Button_385V6 {
+  font: var(--gpText-BodyLarge);
+  background: var(--gpColor-Blue);
+  border-radius: var(--gpCorner-Medium);
+  letter-spacing: unset;
+  text-transform: unset;
+  padding: 10px 24px;
+  box-shadow: var(--gpShadow-Medium);
+  margin: unset;
+  color: #fff;
+}
+.BasicUI .managefriends_CopyContainer_133bn .managefriends_Button_385V6:hover {
+  background: var(--gpColor-BlueHi);
+}
+.BasicUI .managefriends_CopyContainer_133bn .managefriends_Button_385V6:active {
+  background: var(--gpColor-Blue) !important;
+  color: #fff !important;
+}
+.BasicUI
+  .managefriends_CopyContainer_133bn
+  .managefriends_Button_385V6.gpfocus {
+  color: #000;
+  background: #fff;
+  border-radius: unset;
+}
 .managefriends_GenerateLinkButton_2xJDX {
   width: fit-content !important;
   padding: 0px 16px !important;
+}
+.BasicUI .managefriends_GenerateLinkButton_2xJDX {
+  background: var(--gpBackground-LightSoft);
+  box-shadow: unset;
+}
+.BasicUI .managefriends_GenerateLinkButton_2xJDX:hover {
+  background: var(--gpBackground-LightMedium);
+  box-shadow: unset;
+}
+.BasicUI .managefriends_GenerateLinkButton_2xJDX.gpfocus {
+  color: #000;
+  background: #fff;
+  border-radius: unset;
+  box-shadow: var(--gpShadow-Medium);
 }
 .managefriends_ProfileCard_3Zjo5 {
   background: #2c3842;
@@ -22867,7 +25538,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 }
 .optin_admin_email_dashboard_EmailsCtn_30DZ2
   .optin_admin_email_dashboard_Selected_UaNa5 {
-  background: hotpink;
+  border: 1px solid;
 }
 .adminshared_AdminPageCtn_2mzFW {
   width: 100%;
@@ -22885,6 +25556,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   color: #fff;
   font-weight: 200;
   margin-bottom: 8px;
+}
+.adminshared_PageTitle_1hHXX span {
+  color: #969696;
 }
 .adminshared_PageSubTitle_6iRgJ {
   font-size: 16px;
@@ -22921,41 +25595,25 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   background: #17181c;
   padding: 24px;
 }
-.radio_Group_2Rrc0 {
+.adminshared_DashLink_1VYQv {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: stretch;
-  background-color: #202226;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 6px;
-  border-radius: 2px;
-  color: #dfe3e6;
-  box-shadow: inset 0 1px 1px 0px #000a;
-}
-.radio_Button_2HcqT {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 6px;
-  margin-right: 6px;
-  transition: background-color 0.18s ease-in-out;
-  background-color: #202226;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 14px;
+  margin-bottom: 18px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 200;
+  width: fit-content;
+  padding: 2px 16px 2px 2px;
+  border-radius: 3px;
 }
-.radio_Button_2HcqT.radio_Active_2gdCr,
-.radio_Button_2HcqT.radio_Active_2gdCr:hover {
-  background-color: #1f8dff;
-  cursor: default;
+.adminshared_DashLink_1VYQv:hover {
+  background: rgba(67, 73, 83, 0.6);
 }
-.radio_Button_2HcqT:hover {
-  background-color: #33363e;
+.adminshared_DashLink_1VYQv svg {
+  height: 34px;
+  width: 53px;
 }
 .optin_display_dynamic_sections_DynamicSection_-H4oQ {
   margin-top: 30px;
@@ -23489,6 +26147,12 @@ div.pricinggrid_HoverToolTip_1OS2v {
 }
 .saveprices_ToolbarCtn_3lAEz.saveprices_Visible_CLKT9 {
   transform: translateY(0);
+}
+.saveprices_ToolbarPlaceHolder_OUjJM {
+  height: 0px;
+}
+.saveprices_ToolbarPlaceHolder_OUjJM.saveprices_Visible_CLKT9 {
+  height: 70px;
 }
 .saveprices_ToolbarInfo_1bPMN {
   padding: 8px 24px;
@@ -24207,6 +26871,12 @@ div.saveprices_HoverToolTip_1yXHp {
 }
 .savetoolbar_ToolbarCtn_Kfoep.savetoolbar_Visible_3O9re {
   transform: translateY(0);
+}
+.savetoolbar_ToolbarPlaceHolder_1Z5kE {
+  height: 0px;
+}
+.savetoolbar_ToolbarPlaceHolder_1Z5kE.savetoolbar_Visible_3O9re {
+  height: 70px;
 }
 .savetoolbar_ToolbarInfo_5a6kg {
   padding: 8px 24px;
@@ -25289,6 +27959,7 @@ div.savetoolbar_HoverToolTip_gba9O {
   font-size: 30px;
   color: #dfe3e6;
   font-weight: 300;
+  margin-bottom: 16px;
 }
 .dailydealeditor_DiscountEventLinks_1LKk1 {
   display: flex;
@@ -25705,6 +28376,11 @@ ul li {
   z-index: 2;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
+.rbc-toolbar .rbc-toolbar-label {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 200;
+}
 .rbc-toolbar .rbc-btn-group {
   position: relative;
 }
@@ -25724,6 +28400,10 @@ ul li {
 .rbc-toolbar .rbc-btn-group button:hover {
   background-color: #5f6472;
   border-color: #1b1e22;
+}
+.planningdashboard_FilterRow_2qhMY
+  .planningdashboard_VisibilityFilterCtn_hPops {
+  width: 15%;
 }
 .promotioncreatedialog_DateCtn_13RGK {
   min-height: 200px;
@@ -25796,13 +28476,13 @@ ul li {
   height: 123px;
 }
 .promotionplaneditor_FeatureSelectBtn_KdmlA {
-  width: 30%;
+  width: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: end;
 }
-.promotionplaneditor_FeatureSelectBtn_KdmlA button {
-  width: 30%;
+.promotionplaneditor_FeatureSelectBtn_KdmlA button.DialogButton {
+  padding: 0px 12px;
 }
 .promotionplaneditor_LinksCtn_2SJfi {
   display: flex;
@@ -25818,36 +28498,93 @@ ul li {
 .promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_LinkCtn_2s6vN a {
   text-decoration: none;
 }
-.spotlightrow_RowCtn_2Gu6b {
+.promoagendarow_RowCtn_1Cq0N {
   margin-top: 10px;
+  background: #2c2e35;
+  padding: 12px;
+  border-left: 20px solid #2a2a2d;
+  position: relative;
 }
-.spotlightrow_Row_nFHGQ {
+.promoagendarow_RowCtn_1Cq0N::before {
+  letter-spacing: 1px;
+  position: absolute;
+  left: -37px;
+  width: 55px;
+  transform: rotate(-90deg);
+  top: 34%;
+  text-align: center;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN {
+  background: #4f525f;
+  border-left: 20px solid #84d0fb;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN::before {
+  content: "LIVE";
+  color: #078cda;
+}
+.promoagendarow_RowCtn_1Cq0N:hover {
+  cursor: pointer;
+  background: #5d606f;
+}
+.promoagendarow_Row_2KUhB {
   display: flex;
   flex-direction: row;
 }
-.spotlightrow_Col_PK7WN {
-  padding: 5px;
+.promoagendarow_Row_2KUhB.promoagendarow_Primary_2tQk8 {
+  color: #fff;
+  font-size: 14px;
+  justify-content: space-between;
 }
-.spotlightrow_Public_2MK3U {
-  color: red;
+.promoagendarow_Row_2KUhB:not(.promoagendarow_Primary_2tQk8) {
+  margin-top: 8px;
 }
-.marketingmessagerow_RowCtn_2y_9V {
-  margin-top: 10px;
+.promoagendarow_Col_2x28W {
+  line-height: 17px;
 }
-.marketingmessagerow_Row_3j1RD {
+.promoagendarow_Col_2x28W.promoagendarow_ItemName_K3sWB {
+  font-size: 14px;
+  flex-grow: 1;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl {
+  width: 20%;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Date_17dLA {
+  width: 30%;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Creator_3VjL- {
+  width: 175px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Visibility_wvE-j {
+  width: 75px;
+}
+.promoagendarow_CountryList_17dzI {
+  max-width: 50%;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  padding: 0px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.promoagendarow_OwnerLimit_LDwRn {
+  padding: 0px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.promoagendarow_CapsulePlatform_2OJsE {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-right: 8px;
 }
-.marketingmessagerow_Col_28Zbb {
-  padding: 5px;
+.promoagendarow_CapsulePlatform_2OJsE span {
+  margin-left: 8px;
 }
-.marketingmessagerow_Public_sfmNc {
-  color: red;
-}
-.marketingmessagerow_CapsulePlatform_1Vs5L img,
-.marketingmessagerow_CapsulePlatform_1Vs5L svg {
-  height: 20px;
-  width: 20px;
+.promoagendarow_CapsulePlatform_2OJsE img,
+.promoagendarow_CapsulePlatform_2OJsE svg {
+  height: 14px;
+  width: 14px;
 }
 .community_event_Container_2BtrR {
   padding: 10px 10px 0 10px;
@@ -26421,13 +29158,13 @@ button.DialogButton::-moz-focus-inner {
 ._DialogInputContainer:focus {
   outline: none;
 }
-.DialogOnOffToggle._DialogInputContainer {
+.DialogToggleField._DialogInputContainer {
   display: flex;
   justify-content: space-between;
   padding: 6px;
   padding-left: 12px;
 }
-.DialogOnOffToggle.Disabled .DialogToggle_Label {
+.DialogToggleField.Disabled .DialogToggle_Label {
   color: #555;
 }
 .DialogDropDown._DialogInputContainer.Active {
@@ -26629,13 +29366,13 @@ button.TextButton.gpfocus {
 .DialogButton.Disabled .SVGIcon_Button {
   opacity: 0.1;
 }
-.DialogOnOffToggle_NewUIContainer {
+.DialogToggleField_NewUIContainer {
   height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.DialogOnOffToggle_Control {
+.DialogToggleField_Control {
   float: right;
   position: relative;
   line-height: 30px;
@@ -26652,10 +29389,10 @@ button.TextButton.gpfocus {
   flex-shrink: 0;
   margin-left: 6px;
 }
-.DialogOnOffToggle_OptionPanel {
+.DialogToggleField_OptionPanel {
   display: flex;
 }
-.DialogOnOffToggle_Option {
+.DialogToggleField_Option {
   text-transform: uppercase;
   width: 66px;
   text-align: center;
@@ -26663,17 +29400,17 @@ button.TextButton.gpfocus {
   transition-property: color, background;
   transition-duration: 250ms;
 }
-.DialogOnOffToggle_Option:hover:not(.Active) {
+.DialogToggleField_Option:hover:not(.Active) {
   background: #464d58;
 }
-.Disabled .DialogOnOffToggle_Option:hover:not(.Active),
-.Disabled .DialogOnOffToggle_Option.Active,
-.Disabled .DialogOnOffToggle_Option {
+.Disabled .DialogToggleField_Option:hover:not(.Active),
+.Disabled .DialogToggleField_Option.Active,
+.Disabled .DialogToggleField_Option {
   background-color: transparent;
   color: #555;
   cursor: default;
 }
-.Disabled .DialogOnOffToggle_Option.Active {
+.Disabled .DialogToggleField_Option.Active {
   color: #666;
   background-color: #434953;
 }
@@ -26684,15 +29421,15 @@ button.TextButton.gpfocus {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding-top: 8px;
 }
-.DialogOnOffToggle_Option.Active {
+.DialogToggleField_Option.Active {
   color: #dfe3e6;
   background: #2d73ff;
 }
-.DialogOnOffToggle_Option.Off.Active {
+.DialogToggleField_Option.Off.Active {
   color: #dfe3e6;
   background: #5f6875;
 }
-.DialogOnOffToggle_Option:hover {
+.DialogToggleField_Option:hover {
   color: #fff;
 }
 .DialogMenuPosition {
@@ -26971,12 +29708,12 @@ button.TextButton.gpfocus {
   margin: 0;
   padding: 0;
 }
-.DialogRoundCheckbox {
+.DialogRoundCheckboxField {
   width: 24px;
   height: 24px;
   border-radius: 50%;
 }
-.DialogRoundCheckbox_Control {
+.DialogRoundCheckboxField_Control {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -26984,7 +29721,7 @@ button.TextButton.gpfocus {
   padding: 0;
   background-color: #24262b;
 }
-.DialogRoundCheckbox_OuterCircle {
+.DialogRoundCheckboxField_OuterCircle {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -26995,23 +29732,24 @@ button.TextButton.gpfocus {
   justify-content: center;
   transition: background-color 0.08s ease-in-out;
 }
-.DialogRoundCheckbox_Container {
+.DialogRoundCheckboxField_Container {
   cursor: pointer;
 }
-.DialogRoundCheckbox_Container:focus {
+.DialogRoundCheckboxField_Container:focus {
   outline: none;
 }
-.DialogRoundCheckbox_Container:hover .DialogRoundCheckbox_OuterCircle {
+.DialogRoundCheckboxField_Container:hover
+  .DialogRoundCheckboxField_OuterCircle {
   background-color: #1e1f23;
 }
-.DialogRoundCheckbox_Container.WithLabel .DialogRoundCheckbox {
+.DialogRoundCheckboxField_Container.WithLabel .DialogRoundCheckboxField {
   float: left;
   margin-right: 6px;
 }
-.DialogRoundCheckbox_Container .DialogToggle_Label {
+.DialogRoundCheckboxField_Container .DialogToggle_Label {
   overflow: hidden;
 }
-.DialogRoundCheckbox_Control .DialogRoundCheckbox_InnerCircle {
+.DialogRoundCheckboxField_Control .DialogRoundCheckboxField_InnerCircle {
   width: 50%;
   height: 50%;
   border-radius: 50%;
@@ -27022,7 +29760,7 @@ button.TextButton.gpfocus {
   opacity: 0;
   transition: all 0.1s ease-in-out;
 }
-.DialogRoundCheckbox_Control.Active .DialogRoundCheckbox_InnerCircle {
+.DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   transform: scale(1);
   opacity: 1;

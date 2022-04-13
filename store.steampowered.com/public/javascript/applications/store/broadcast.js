@@ -5344,10 +5344,10 @@
           : null;
       }
       Object(a.b)([d.C], _t.prototype, "m_chat", void 0),
-        Object(a.b)([nt.a], _t.prototype, "StartChat", null),
-        Object(a.b)([nt.a], _t.prototype, "HandleScroll", null),
-        Object(a.b)([nt.a], _t.prototype, "OnContextMenu", null),
-        Object(a.b)([nt.a], _t.prototype, "RenderUserChatLine", null),
+        Object(a.b)([nt.b], _t.prototype, "StartChat", null),
+        Object(a.b)([nt.b], _t.prototype, "HandleScroll", null),
+        Object(a.b)([nt.b], _t.prototype, "OnContextMenu", null),
+        Object(a.b)([nt.b], _t.prototype, "RenderUserChatLine", null),
         (_t = Object(a.b)([n.a], _t));
       class pt extends l.Component {
         render() {
@@ -5384,7 +5384,7 @@
           ),
           !Ce.k.logged_in &&
             l.createElement(
-              Ye.d,
+              Ye.j,
               { onClick: Xe.a, className: Object(st.a)(lt.a.SignInButton) },
               Object(we.f)("#Login_SignIn")
             )
@@ -5934,10 +5934,10 @@
           });
         }
       });
-      Object(a.b)([nt.a], Ht.prototype, "ToggleBroadcastExpandShrink", null),
-        Object(a.b)([nt.a], Ht.prototype, "OnShrinkTransitionEnd", null),
-        Object(a.b)([nt.a], Ht.prototype, "onStreamSelect", null),
-        Object(a.b)([nt.a], Ht.prototype, "PlayTopNonVOD", null),
+      Object(a.b)([nt.b], Ht.prototype, "ToggleBroadcastExpandShrink", null),
+        Object(a.b)([nt.b], Ht.prototype, "OnShrinkTransitionEnd", null),
+        Object(a.b)([nt.b], Ht.prototype, "onStreamSelect", null),
+        Object(a.b)([nt.b], Ht.prototype, "PlayTopNonVOD", null),
         (Ht = At = Object(a.b)([n.a], Ht));
       t.default = Ht;
       class $t extends c.a.Component {
@@ -6014,9 +6014,9 @@
           );
         }
       }
-      Object(a.b)([nt.a], $t.prototype, "CloseBroadcastPopup", null),
-        Object(a.b)([nt.a], $t.prototype, "OnEnter", null),
-        Object(a.b)([nt.a], $t.prototype, "OnLeave", null);
+      Object(a.b)([nt.b], $t.prototype, "CloseBroadcastPopup", null),
+        Object(a.b)([nt.b], $t.prototype, "OnEnter", null),
+        Object(a.b)([nt.b], $t.prototype, "OnLeave", null);
       let Kt = class extends c.a.Component {
         ConstructBroadcastLink() {
           let e = this.props.stream;
@@ -6148,8 +6148,8 @@
           );
         }
       };
-      Object(a.b)([nt.a], Kt.prototype, "OnToggleChat", null),
-        Object(a.b)([nt.a], Kt.prototype, "onWatchBroadcastPage", null),
+      Object(a.b)([nt.b], Kt.prototype, "OnToggleChat", null),
+        Object(a.b)([nt.b], Kt.prototype, "onWatchBroadcastPage", null),
         (Kt = Object(a.b)([n.a], Kt));
       class Yt extends c.a.Component {
         render() {

@@ -27,9 +27,9 @@
         E = a("gyoR"),
         C = a("5L1o"),
         R = a("4pOC"),
-        h = a("0OaU"),
-        w = a("3Gzo"),
-        g = a("j54C"),
+        g = a("0OaU"),
+        h = a("3Gzo"),
+        w = a("j54C"),
         O = a("exH9"),
         j = a("TLQK"),
         N = a("IzPI"),
@@ -152,7 +152,7 @@
         )
           return null;
         if (null == c)
-          return n.a.createElement(h.a, {
+          return n.a.createElement(g.a, {
             string: Object(j.f)("#Loading"),
             position: "center",
             size: "medium",
@@ -240,7 +240,7 @@
           v =
             a &&
             a.GetImageURL(
-              Object(w.a)() ? "product_mobile_banner" : "product_banner",
+              Object(h.a)() ? "product_mobile_banner" : "product_banner",
               s
             );
         return n.a.createElement(
@@ -259,7 +259,7 @@
             n.a.createElement(
               "div",
               { className: T.a.VideoReviewCtn },
-              n.a.createElement(g.b, {
+              n.a.createElement(w.b, {
                 video: c.strVideoID,
                 startSeconds: c.nStartSeconds,
                 autoplay: !0,
@@ -302,17 +302,17 @@
             link_url: f,
             blurb: E,
             time_recommended: C,
-            recommendation_state: h,
+            recommendation_state: g,
           } = r.recommended_app,
-          w = s.is_creator_home,
-          g =
+          h = s.is_creator_home && !s.is_ogg,
+          w =
             null === (a = c.list_jsondata.app_data) || void 0 === a
               ? void 0
               : a[b],
           O = f && Object(m.b)(f),
           N = E != _.c && E,
           S = v.a.Get().BHasDemoAppID(b),
-          G = null == g ? void 0 : g.img_url,
+          G = null == w ? void 0 : w.img_url,
           F = `curator_clanid=${s.clanAccountID}&curator_listid=${c.listid}`;
         return n.a.createElement(
           u.a,
@@ -344,11 +344,11 @@
             n.a.createElement(
               "div",
               { className: T.a.RecommendationTypeAndDate },
-              n.a.createElement(Y, { type: h }),
+              n.a.createElement(Y, { type: g }),
               n.a.createElement(
                 "div",
                 { className: T.a.ReviewDate },
-                w ? d.GetFormattedSteamReleaseDate() : Object(j.n)(C)
+                h ? d.GetFormattedSteamReleaseDate() : Object(j.n)(C)
               )
             ),
             Boolean(N) &&
@@ -377,7 +377,7 @@
           n.a.createElement(
             "div",
             { className: T.a.YouTubeCtn },
-            n.a.createElement(g.b, {
+            n.a.createElement(w.b, {
               video: t,
               startSeconds: a,
               autoplay: !0,
@@ -541,7 +541,7 @@
         const { children: t, navTreeRef: a } = e,
           l = Object(r.c)(e, ["children", "navTreeRef"]),
           u = n.a.useRef(),
-          m = Object(i.f)(u, a);
+          m = Object(i.g)(u, a);
         if (s.d.IN_GAMEPADUI) {
           const e = window.__nav_tree_root;
           return n.a.createElement(
