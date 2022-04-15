@@ -730,6 +730,7 @@
  mktime$UNIX2003
  mmap
  mmap$UNIX2003
+ modf
  munmap
  munmap$UNIX2003
  non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()

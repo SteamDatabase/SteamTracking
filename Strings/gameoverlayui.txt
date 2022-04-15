@@ -9837,8 +9837,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Mar 31 2022
-16:13:19
+Apr 15 2022
+13:37:18
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13815,10 +13815,10 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-^&
 0
 %B
 "B
+0&
 i-
 Ic
 &
@@ -13826,14 +13826,15 @@ Ic
 &
 &
 &
-&
 p
 0
 0
 p
 0
+"
 zA
 LA
+G
 6-
 A
 A
@@ -13850,7 +13851,7 @@ j
 j
 j
 j
-z%
+O$
 &
 %
 0
@@ -13865,14 +13866,10 @@ j
 j
 j
 j
-%
-%
-%
+m#
 j
 j
-w#
-E$
-#
+;#
 j
 j
 j
@@ -13921,15 +13918,12 @@ j
 j
 j
 j
-]$
-`$
 j
 j
 j
 j
 +
 +
-l"
 j
 j
 j
@@ -13957,8 +13951,7 @@ $
 $
 $
 $
-$
-h#
+r#
 0
 +
 A9]
@@ -14008,7 +14001,7 @@ p
 p
 #
 #
-#
+K"
 @
 =
 "
@@ -14038,6 +14031,7 @@ j
 j
 j
 j
+"
 j
 j
 j
@@ -14053,7 +14047,6 @@ j
 "
 "
 "
-1!
 S(
 Hi
 !
@@ -14067,10 +14060,7 @@ j
 j
 j
 j
-m!
 !
-f
-c
 |0
 j
 j
@@ -14128,9 +14118,8 @@ AT=
 D
 @
 @
-e#
-C
 1
+#
 @
 Hc
 Hc
@@ -14367,6 +14356,7 @@ P
 @
 
 d
+"
 
 
 
@@ -14379,6 +14369,7 @@ A+M
 
 
 
+7
 t7f9wi'
 t7f9Za'
 j
@@ -14401,6 +14392,7 @@ j
 j
 j
 j
+
 
 
 &
@@ -14497,6 +14489,9 @@ j
 j
 j
 j
+c!
+f!
+7!
 j
 j
 j
@@ -14557,6 +14552,7 @@ j
 j
 j
 j
+O
 @
 @
 &
@@ -14601,7 +14597,6 @@ j
 @
 @
 @
-2
 j
 j
 j

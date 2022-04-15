@@ -115,19 +115,15 @@ h
 (_@
 O?
 0
+A(
 (
-(
-(
-(
-^1
+[1
 9
-L1
 0
 @
 @
 k@
 T6
-,
 ;
 D6
 @
@@ -142,8 +138,6 @@ $
 Hi
 Hi
 Hi
-(
-(
 6
 &
 6
@@ -152,6 +146,8 @@ Hi
 6
 6
 6
+.
+v0
 H
 15CBaseFileSystem
 11IFileSystem
@@ -2204,7 +2200,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Mar 31 2022 16:12:53
+Startup - updater built Apr 15 2022 13:37:05
 Shutdown
 no hosts found
 Failed to load cached hosts file (%s), using defaults
@@ -2489,8 +2485,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Mar 31 2022
-16:12:54
+Apr 15 2022
+13:37:06
 crashhandler003
 steam
 Steam Executable Crash
@@ -2587,7 +2583,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-16:12:49
+13:37:04
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10343,7 +10339,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-16:10:06
+13:34:51
 Jan
 Feb
 Mar
@@ -12709,19 +12705,15 @@ b)7
 0
 O?
 0
+A(
 (
-(
-(
-(
-^1
+[1
 9
-L1
 0
 @
 @
 k@
 T6
-,
 ;
 D6
 @
@@ -12736,8 +12728,6 @@ $
 Hi
 Hi
 Hi
-(
-(
 6
 &
 6
@@ -12746,22 +12736,26 @@ Hi
 6
 6
 6
+.
+v0
+G0
 
 %
+'
+'
 '
 &
 :
 &
 0
-A(
+~&
 &
-&
-'
 
 0
 5
-&
 N9
+&
+&
 
 /
 /
@@ -12824,22 +12818,19 @@ V
 -
 d2
 =
+y,
 2
-K,
-G,
+_,
+E,
 ,
 ,
 =
-P+
 1
 1
-;+
 +
-F*
+E*
 @
-"
 P/
-p)
 @
 w6
 3
@@ -12847,12 +12838,13 @@ c
 )
 3
 *
+S(
 .
 .
 (
 '
 '
-r&
+s&
 @
 &
 &
@@ -13539,7 +13531,9 @@ E
 @
 0
 0
-h
+
+
+.
 Hc
 0
 
@@ -13560,8 +13554,9 @@ P
 ?
 @
 @
-y
 0
+a
+9
 =a
 0
 Hi

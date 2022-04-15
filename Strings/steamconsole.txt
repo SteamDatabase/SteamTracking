@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-X
-X
+0X
+0X
 __stubs
 __TEXT
 __stub_helper
@@ -1319,7 +1319,6 @@ Ic
 0
 0
 0
-u
-Z
+^
 0
 0
