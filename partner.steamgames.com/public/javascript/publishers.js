@@ -486,7 +486,7 @@ function LoadCurrentPackageBatch( rgPackages )
 					if( price )
 					{
 
-						if ( target.data('imported_price') > price )
+						if ( nImportedPrice > price )
 						{
 							var ele = $J('<span class="price_difference price_increase ttip" data-tooltip-text="' + strTooltipText + '" >▲</span>');
 							g_bHasRaisedPrices = true;
