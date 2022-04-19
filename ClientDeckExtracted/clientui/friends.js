@@ -4176,10 +4176,7 @@
           }
         );
 
-        /* harmony import */ var shared_steammessages_steammessages_controllerconfiguration_enums_pb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-          /*! shared/steammessages/steammessages_controllerconfiguration_enums_pb */ "../../../web_src/shared/js/steammessages/steammessages_controllerconfiguration_enums_pb.ts"
-        );
-        /* harmony import */ var _steammessages_enums_pb__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+        /* harmony import */ var _steammessages_enums_pb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
           /*! ./steammessages/enums_pb */ "../../../web_src/shared/js/steammessages/enums_pb.ts"
         );
         //
@@ -26743,27 +26740,31 @@ function TestLocalizeCalendarTime()
         /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/ __webpack_require__.n(
           react__WEBPACK_IMPORTED_MODULE_0__
         );
-        /* harmony import */ var _reactutils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+        /* harmony import */ var _assert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ../assert */ "../../../web_src/shared/js/utils/assert.ts"
+        );
+        /* harmony import */ var _reactutils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
           /*! ./reactutils */ "../../../web_src/shared/js/utils/reactutils/reactutils.ts"
+        );
+        /* harmony import */ var _refutils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+          /*! ./refutils */ "../../../web_src/shared/js/utils/reactutils/refutils.ts"
         );
 
         function useHTMLObserver(callback, fnNewObserver) {
-          const [elem, setElem] = react__WEBPACK_IMPORTED_MODULE_0__[
-            "useState"
-          ]();
-          react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-            if (!elem) return undefined;
-            // Even though the browser API returns multiple elements, we're just going to tell
-            // our callback about the first entry.
-            const observer = fnNewObserver((entryList) => {
-              callback(entryList[0]);
-            });
-            observer.observe(elem);
-            return () => observer.unobserve(elem);
-          }, [elem, callback, fnNewObserver]);
-          return react__WEBPACK_IMPORTED_MODULE_0__["useCallback"](
-            (elem) => setElem(elem),
-            []
+          return Object(
+            _refutils__WEBPACK_IMPORTED_MODULE_3__["useRefCallbackWithCleanup"]
+          )(
+            (elem) => {
+              if (!elem) return undefined;
+              // Even though the browser API returns multiple elements, we're just going to tell
+              // our callback about the first entry.
+              const observer = fnNewObserver((entryList) => {
+                callback(entryList[0]);
+              });
+              observer.observe(elem);
+              return () => observer.unobserve(elem);
+            },
+            [callback, fnNewObserver]
           );
         }
         /**
@@ -26779,7 +26780,21 @@ function TestLocalizeCalendarTime()
           const fnNewObserver = react__WEBPACK_IMPORTED_MODULE_0__[
             "useCallback"
           ]((fnCallback) => {
-            return new ResizeObserver(fnCallback);
+            if (typeof ResizeObserver != "undefined") {
+              return new ResizeObserver(fnCallback);
+            } else {
+              // legacy browsers- functionality is not available, but return a ResizeObserver-shaped thing so code will still run
+              // Mostly iOS devices - iPhone 6 and original iPad Air or earlier cannot update to an iOS with ResizeObserver
+              Object(_assert__WEBPACK_IMPORTED_MODULE_1__["AssertMsg"])(
+                false,
+                "ResizeObserver is not available"
+              );
+              return {
+                observe: () => {},
+                unobserve: () => {},
+                disconnect: () => {},
+              };
+            }
           }, []);
           return useHTMLObserver(callback, fnNewObserver);
         }
@@ -26801,7 +26816,7 @@ function TestLocalizeCalendarTime()
          */
         function useForceUpdateOnResizeObserved() {
           const forceUpdate = Object(
-            _reactutils__WEBPACK_IMPORTED_MODULE_1__["useForceUpdate"]
+            _reactutils__WEBPACK_IMPORTED_MODULE_2__["useForceUpdate"]
           )();
           return useResizeObserver(forceUpdate);
         }

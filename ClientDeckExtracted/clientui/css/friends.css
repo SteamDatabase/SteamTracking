@@ -1136,7 +1136,7 @@ button.DialogButton::-moz-focus-inner {
   outline: none;
 }
 
-.DialogOnOffToggle._DialogInputContainer {
+.DialogToggleField._DialogInputContainer {
   /* stylelint-disable-line selector-class-pattern */
   display: flex;
   justify-content: space-between;
@@ -1144,7 +1144,7 @@ button.DialogButton::-moz-focus-inner {
   padding-left: 12px;
 }
 
-.DialogOnOffToggle.Disabled .DialogToggle_Label {
+.DialogToggleField.Disabled .DialogToggle_Label {
   color: #555;
 }
 
@@ -1392,14 +1392,14 @@ button.TextButton.gpfocus {
   opacity: 0.1;
 }
 
-.DialogOnOffToggle_NewUIContainer {
+.DialogToggleField_NewUIContainer {
   height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.DialogOnOffToggle_Control {
+.DialogToggleField_Control {
   float: right;
   position: relative;
   line-height: 30px;
@@ -1417,11 +1417,11 @@ button.TextButton.gpfocus {
   margin-left: 6px;
 }
 
-.DialogOnOffToggle_OptionPanel {
+.DialogToggleField_OptionPanel {
   display: flex;
 }
 
-.DialogOnOffToggle_Option {
+.DialogToggleField_Option {
   text-transform: uppercase;
   width: 66px;
   text-align: center;
@@ -1430,19 +1430,19 @@ button.TextButton.gpfocus {
   transition-duration: 250ms;
 }
 
-.DialogOnOffToggle_Option:hover:not(.Active) {
+.DialogToggleField_Option:hover:not(.Active) {
   background: #464d58;
 }
 
-.Disabled .DialogOnOffToggle_Option:hover:not(.Active),
-.Disabled .DialogOnOffToggle_Option.Active,
-.Disabled .DialogOnOffToggle_Option {
+.Disabled .DialogToggleField_Option:hover:not(.Active),
+.Disabled .DialogToggleField_Option.Active,
+.Disabled .DialogToggleField_Option {
   background-color: transparent;
   color: #555;
   cursor: default;
 }
 
-.Disabled .DialogOnOffToggle_Option.Active {
+.Disabled .DialogToggleField_Option.Active {
   color: #666;
   background-color: #434953;
 }
@@ -1455,17 +1455,17 @@ button.TextButton.gpfocus {
   padding-top: 8px;
 }
 
-.DialogOnOffToggle_Option.Active {
+.DialogToggleField_Option.Active {
   color: #dfe3e6;
   background: #2d73ff;
 }
 
-.DialogOnOffToggle_Option.Off.Active {
+.DialogToggleField_Option.Off.Active {
   color: #dfe3e6;
   background: #5f6875;
 }
 
-.DialogOnOffToggle_Option:hover {
+.DialogToggleField_Option:hover {
   color: white;
 }
 
@@ -1808,13 +1808,13 @@ button.TextButton.gpfocus {
   padding: 0;
 }
 
-.DialogRoundCheckbox {
+.DialogRoundCheckboxField {
   width: 24px;
   height: 24px;
   border-radius: 50%;
 }
 
-.DialogRoundCheckbox_Control {
+.DialogRoundCheckboxField_Control {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -1823,7 +1823,7 @@ button.TextButton.gpfocus {
   background-color: #24262b;
 }
 
-.DialogRoundCheckbox_OuterCircle {
+.DialogRoundCheckboxField_OuterCircle {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -1835,28 +1835,29 @@ button.TextButton.gpfocus {
   transition: background-color 0.08s ease-in-out;
 }
 
-.DialogRoundCheckbox_Container {
+.DialogRoundCheckboxField_Container {
   cursor: pointer;
 }
 
-.DialogRoundCheckbox_Container:focus {
+.DialogRoundCheckboxField_Container:focus {
   outline: none;
 }
 
-.DialogRoundCheckbox_Container:hover .DialogRoundCheckbox_OuterCircle {
+.DialogRoundCheckboxField_Container:hover
+  .DialogRoundCheckboxField_OuterCircle {
   background-color: #1e1f23;
 }
 
-.DialogRoundCheckbox_Container.WithLabel .DialogRoundCheckbox {
+.DialogRoundCheckboxField_Container.WithLabel .DialogRoundCheckboxField {
   float: left;
   margin-right: 6px;
 }
 
-.DialogRoundCheckbox_Container .DialogToggle_Label {
+.DialogRoundCheckboxField_Container .DialogToggle_Label {
   overflow: hidden;
 }
 
-.DialogRoundCheckbox_Control .DialogRoundCheckbox_InnerCircle {
+.DialogRoundCheckboxField_Control .DialogRoundCheckboxField_InnerCircle {
   width: 50%;
   height: 50%;
   border-radius: 50%;
@@ -1868,7 +1869,7 @@ button.TextButton.gpfocus {
   transition: all 0.1s ease-in-out;
 }
 
-.DialogRoundCheckbox_Control.Active .DialogRoundCheckbox_InnerCircle {
+.DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   transform: scale(1);
   opacity: 1;

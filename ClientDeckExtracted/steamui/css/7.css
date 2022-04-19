@@ -242,7 +242,7 @@
   min-height: 100%;
 }
 .BasicUI .collectionview_Container_2q70u {
-  padding-top: calc((24px / 1) + var(--basicui-header-height));
+  padding-top: calc(24px + var(--basicui-header-height));
 }
 .collectionview_Container_2q70u .collectionview_Header_2rqTS {
   box-sizing: border-box;

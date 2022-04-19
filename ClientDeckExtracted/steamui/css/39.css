@@ -829,7 +829,6 @@
   display: flex;
   flex-direction: column;
   z-index: 5100;
-  zoom: 1;
 }
 .basiccontextmenu_BasicContextMenuModal_1UaeK::before,
 .basiccontextmenu_BasicContextMenuModal_1UaeK::after {
@@ -1978,6 +1977,9 @@
   background-color: #3c5d84;
   justify-content: space-between;
 }
+.gamecapsule_IgnoredApp_2Ubdj {
+  opacity: 0.5;
+}
 .gamecapsule_PriceWrapper_2DRyA {
   flex-grow: 0;
   display: flex;
@@ -2155,6 +2157,12 @@
   margin-bottom: 12px;
   font-weight: 500;
   color: #fff;
+}
+.homestorecarousel_StoreCarouselCtn_3zVCV
+  .homestorecarousel_Header_xpRXv
+  .homestorecarousel_SubHeader_1NGCb {
+  font-size: 14px;
+  opacity: 50%;
 }
 @keyframes marketingmessages_ItemFocusAnim-darkerGrey-nocolor_3Pmz_ {
   from {
@@ -3682,7 +3690,7 @@
   --basicui-header-height: 0px;
 }
 .gamepadsearch_GamepadSearch_P_AlE {
-  padding-top: calc((0px / 1) + var(--basicui-header-height));
+  padding-top: calc(0px + var(--basicui-header-height));
   height: 100%;
   background: radial-gradient(
     farthest-corner at 0px 0px,
@@ -7676,7 +7684,7 @@ div.LowPerfMode
   color: #0e141b;
 }
 .basiclibrary_SettingsPanel_3bKcR {
-  padding-top: calc((2em / 1) + var(--basicui-header-height));
+  padding-top: calc(2em + var(--basicui-header-height));
   margin: 0 24px;
 }
 .basiclibrary_MainBrowser_2RXjS {
@@ -8036,7 +8044,7 @@ div.LowPerfMode
   --basicui-header-height: 0px;
 }
 .gamepadlibrary_GamepadLibrary_ZBBhe {
-  padding-top: calc((0px / 1) + var(--basicui-header-height));
+  padding-top: calc(0px + var(--basicui-header-height));
   height: 100%;
   background: radial-gradient(
     farthest-corner at 0px 0px,
@@ -9674,6 +9682,11 @@ div.LowPerfMode
 .controllersettings_devicecalibration_VisualizationMainContainer_2FmQV.controllersettings_devicecalibration_LeftStick_2zyIb {
   margin-left: 60px;
 }
+.controllersettings_devicecalibration_VisualizationMainContainer_2FmQV.controllersettings_devicecalibration_Trackpads_35yMV {
+  margin-left: 0px;
+  height: 180px;
+  width: 550px;
+}
 .controllersettings_devicecalibration_VizElement_20Hcl {
   position: absolute;
   width: 100%;
@@ -9772,6 +9785,12 @@ div.LowPerfMode
   -webkit-mask: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0) 65%);
   transform: scale(0.666);
 }
+.controllersettings_devicecalibration_DeckDeviceFullImage_TWSoF {
+  margin-left: 32px;
+  margin-top: 64px;
+  -webkit-mask: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0) 65%);
+  transform: scale(0.9);
+}
 .controllersettings_devicecalibration_SliderContainer_KkqhN {
   margin-top: 24px;
 }
@@ -9797,6 +9816,39 @@ div.LowPerfMode
 .controllersettings_devicecalibration_StartTestPrompt_3Ipg_.controllersettings_devicecalibration_LeftStick_2zyIb {
   margin-left: 360px;
 }
+.controllersettings_devicecalibration_StartTestPrompt_3Ipg_.controllersettings_devicecalibration_Trackpads_35yMV {
+  margin-top: 100px;
+  margin-left: 60px;
+  max-width: 800px;
+}
+.controllersettings_devicecalibration_PressureGraphLabel_2Hl8W {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #b8bcbf;
+  position: absolute;
+  text-align: center;
+  margin-left: 18px;
+  margin-top: 80px;
+}
+.controllersettings_devicecalibration_PressureGraphLabel_2Hl8W.controllersettings_devicecalibration_Vertical_G2e89 {
+  transform: rotate(270deg);
+  margin-left: 18px;
+  margin-top: 18px;
+}
 .supportalerts_BrowserWrapper_14nHy {
   display: flex;
   flex-direction: column;
@@ -9809,7 +9861,7 @@ div.LowPerfMode
   gap: 8px;
   background-color: #0e141b;
 }
-.achievementslist_AchievementList_1UXC2 .achievementslist_ListTitle_IM0uE {
+.achievementslist_ListTitle_IM0uE {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -9885,6 +9937,10 @@ div.LowPerfMode
 }
 .achievementslist_AlignEnd_33MZ9 {
   align-items: flex-end;
+}
+.achievementslist_ProgressBar_sBzFs {
+  margin-top: 4px;
+  width: 200px;
 }
 .achievementslist_ProgressCount_2LZ4v {
   font-size: 12px;
@@ -9968,6 +10024,7 @@ div.LowPerfMode
 .achievementslist_GlobalAchievementListItem_316Uo
   .achievementslist_Content_UWkKt
   .achievementslist_Info_Zoy4C {
+  padding-left: 10px;
   flex: 1;
 }
 .achievementslist_GlobalAchievementListItem_316Uo
@@ -10031,11 +10088,6 @@ div.LowPerfMode
 .achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl {
   color: #fff;
   font-size: 22px;
-  font-weight: 400;
-}
-.achievementsheader_Container_2iGYY .achievementsheader_Subtitle_DiANf {
-  color: #dcdedf;
-  font-size: 16px;
   font-weight: 400;
 }
 .achievementsheader_StatsBlock__gDkI {
@@ -10104,6 +10156,17 @@ div.LowPerfMode
   .achievementspage_GlobalButton_W4rDw {
   flex-grow: 0;
 }
+.achievementspage_UserContext_1SAWa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.achievementspage_UserContext_1SAWa .achievementspage_Text_1q1w8 {
+  color: #dcdedf;
+  font-size: 16px;
+  font-weight: 400;
+}
 .achievementspage_AchievementTabs_gxNvE {
   min-height: calc(100vh - 40px - 40px);
   height: 454px;
@@ -10133,6 +10196,24 @@ div.LowPerfMode
 }
 .achievementspage_List_2kMZ9 {
   flex: 1;
+}
+.achievementspage_FriendAchievementsListHeader_39fNy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.achievementspage_FriendAchievementsListHeader_39fNy
+  .achievementspage_ToggleContainer_128zl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.achievementspage_FriendAchievementsListHeader_39fNy
+  .achievementspage_NotOwnedMessage_1PNTI {
+  color: #67707b;
+  font-size: 12px;
 }
 @keyframes gamepadui_ItemFocusAnim-darkerGrey-nocolor_2K5n7 {
   from {
@@ -10226,7 +10307,6 @@ body {
 .gamepadui_BasicUiRoot_gbo6E {
   width: 100%;
   height: 100%;
-  zoom: 1;
   overflow: hidden;
   position: absolute;
   -webkit-tap-highlight-color: transparent;
@@ -11184,7 +11264,6 @@ body {
   box-shadow: 0 0 7px 12px #0e141b;
 }
 .quickaccessmenu_Container_3DHXr {
-  zoom: 1;
   position: absolute;
   top: 0;
   right: 0;
