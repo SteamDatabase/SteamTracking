@@ -1977,8 +1977,12 @@
   background-color: #3c5d84;
   justify-content: space-between;
 }
+.gamecapsule_PriceCtn_2E-mS {
+  margin-left: auto;
+  color: #fff;
+}
 .gamecapsule_IgnoredApp_2Ubdj {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .gamecapsule_PriceWrapper_2DRyA {
   flex-grow: 0;
