@@ -1989,6 +1989,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadslider_ParenSliderHandleContainer_VKqgk {
   pointer-events: all;
   contain: layout;
+  opacity: 0.5;
   margin: auto 0;
   width: 100%;
   position: absolute;
@@ -2021,13 +2022,16 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   background: #8b929a;
 }
 .gamepadslider_VerticalLineSliderHandle_3zRgr {
-  background: #fff;
+  background: #ffffff60;
+  background: #ffd55f90;
   height: 24px;
+  padding-bottom: 4px;
   width: 3px;
   position: absolute;
   right: 0;
   box-sizing: content-box;
   pointer-events: all;
+  border-radius: 1px;
 }
 .gamepadslider_ParenSliderHandle_2Yg4- {
   height: 24px;
@@ -2224,6 +2228,40 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: absolute;
   box-sizing: content-box;
 }
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_VKqgk::before,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_VKqgk::before {
+  content: "";
+  background: #ffffff70;
+  height: 27px;
+  top: -4px;
+  width: 11px;
+  right: -3px;
+  position: absolute;
+  box-sizing: content-box;
+  border-radius: 5px 0px 0px 5px;
+  opacity: 1;
+  -webkit-filter: drop-shadow(0px 0px 3px #199fff);
+  filter: drop-shadow(0px 0px 3px #199fff);
+}
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocus.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_VKqgk,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocus.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_VKqgk,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_VKqgk,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_VKqgk {
+  opacity: 1;
+}
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_VKqgk.gamepadslider_Right_3GOpB::before,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_VKqgk.gamepadslider_Right_3GOpB::before {
+  right: -8px;
+  border-radius: 0px 5px 5px 0px;
+}
 .gamepadslider_CompoundSliderSubSliderLabelContainer_2iD1m {
   position: absolute;
   width: 100%;
@@ -2253,10 +2291,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #fff;
-  color: #99d4ff99;
-  border-radius: 7px;
-  padding: 2px 5px 2px 5px;
+  background-color: #ffffffee;
+  color: #1a9fff;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 12px;
 }
 .gamepadslider_DefaultValueTickContainer_2aCoH {
   pointer-events: none;

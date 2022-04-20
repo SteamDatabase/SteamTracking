@@ -13405,6 +13405,102 @@ html.responsive.touch
     margin-bottom: 0px;
   }
 }
+@font-face {
+  font-family: "Jolly Lodger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Jolly Lodger"), local("JollyLodger"),
+    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Jolly Lodger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Jolly Lodger"), local("JollyLodger"),
+    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "New Rocker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"),
+    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "New Rocker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"),
+    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Chonburi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Chonburi"), local("Chonburi-Regular"),
+    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
+      format("woff2");
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "Chonburi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Chonburi"), local("Chonburi-Regular"),
+    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -13611,26 +13707,39 @@ Body.v6.tag_page.contenthub_page {
   padding-bottom: 25px;
 }
 .contenthubshared_SpotlightsColumn_2Y2C1 {
-  height: 395px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 8px 0px;
-}
-.contenthubshared_SpotlightsColumn_2Y2C1 > div {
-  max-width: 306px;
+  margin: 8px;
 }
 .contenthubshared_SpotlightsColumn_2Y2C1 .CapsuleBottomBar {
-  height: 53px;
+  height: 54px;
+}
+.contenthubshared_SpotlightsColumn_2Y2C1
+  .contenthubshared_SpecialsItem_1txjw:last-child {
+  margin-top: 16px;
+}
+.contenthubshared_SpotlightsColumn_2Y2C1
+  .contenthubshared_SpecialsItem_1txjw:only-child {
+  margin-top: 0;
 }
 .contenthubshared_SpotlightCtn_10ZMM {
-  height: 395px;
-  width: 306px;
   position: relative;
-  overflow: hidden;
   border-radius: 3px;
-  margin: 0px 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+.contenthubshared_SpotlightCtn_10ZMM .contenthubshared_SpotlightImageCtn_1bl_5 {
+  position: relative;
+  padding-top: calc(93.4782608696% + 54px + 54px + 20px);
+}
+.contenthubshared_SpotlightCtn_10ZMM
+  .contenthubshared_SpotlightImageCtn_1bl_5
+  img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
 }
 .contenthubshared_SpotlightCtn_10ZMM .contenthubshared_CapsuleDecorators_2kI35 {
   margin-left: 4px;
@@ -13638,11 +13747,9 @@ Body.v6.tag_page.contenthub_page {
 .contenthubshared_SpotlightCtn_10ZMM .contenthubshared_SpotlightTextCtn_1clRj {
   position: absolute;
   bottom: 0;
-  width: 306px;
+  width: 100%;
   height: 95px;
   background-color: #000f18;
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg)
-    bottom center no-repeat;
 }
 .contenthubshared_SpotlightCtn_10ZMM
   .contenthubshared_SpotlightTextCtn_1clRj
@@ -13741,19 +13848,12 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubshared_BroadcastCtn_1D6il {
   height: 190px;
-  width: 297px;
   margin-bottom: 9px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.contenthubshared_BroadcastCtn_1D6il:first-child {
-  margin-left: 0;
-}
-.contenthubshared_BroadcastCtn_1D6il:last-child {
-  margin-right: 0;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 .contenthubshared_BroadcastCtn_1D6il .contenthubshared_BroadcastImageCtn_cIETZ {
   height: 136px;
@@ -13767,6 +13867,7 @@ Body.v6.tag_page.contenthub_page {
   height: 100%;
   position: absolute;
   top: 0;
+  object-fit: cover;
 }
 .contenthubshared_BroadcastCtn_1D6il
   .contenthubshared_BroadcastImageCtn_cIETZ
@@ -13799,8 +13900,7 @@ Body.v6.tag_page.contenthub_page {
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8));
 }
 .contenthubshared_BroadcastCtn_1D6il .contenthubshared_BroadcastTextCtn_14UDZ {
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/spotlight_background.jpg?v=1)
-    bottom center no-repeat;
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   flex-grow: 1;
 }
@@ -13820,16 +13920,22 @@ Body.v6.tag_page.contenthub_page {
   padding-top: 0;
 }
 .contenthubshared_DailyDealCtn_3pSAN {
-  height: 190px;
-  width: 297px;
-  margin-left: 8px;
   position: relative;
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
-.contenthubshared_DailyDealCtn_3pSAN .contenthubshared_DailyDealTextCtn_1tG1_ {
+.contenthubshared_DailyDealCtn_3pSAN .contenthubshared_DailyDealImageCtn_pNmm6 {
+  padding: 46.7391304348% 0 0 0;
+}
+.contenthubshared_DailyDealCtn_3pSAN
+  .contenthubshared_DailyDealImageCtn_pNmm6
+  img {
   position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.contenthubshared_DailyDealCtn_3pSAN .contenthubshared_DailyDealTextCtn_1tG1_ {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -14387,102 +14493,6 @@ html.responsive.touch
 .breadcrumbs_BreadContainer_3jswb a:hover {
   color: #fff;
   text-decoration: none;
-}
-@font-face {
-  font-family: "Jolly Lodger";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
-    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Jolly Lodger";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
-    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "New Rocker";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
-    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "New Rocker";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
-    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Chonburi";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
-    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
-      format("woff2");
-  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
-}
-@font-face {
-  font-family: "Chonburi";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
-    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
-      format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
-      format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
 }
 .partnereventdialog_ErrorStyles_2Sg7W,
 .partnereventdialog_ErrorStylesWithIcon_Lc2PK {

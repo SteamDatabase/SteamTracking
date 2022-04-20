@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7197141";
+var CLSTAMP = "7206059";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [101],
   {
@@ -10278,7 +10278,10 @@ var CLSTAMP = "7197141";
                   ut.a.ParenSliderHandle,
                   "leftparen" == this.props.handleType ? ut.a.Left : ut.a.Right
                 )),
-                (h = ut.a.ParenSliderHandleContainer)),
+                (h = Object(c.a)(
+                  ut.a.ParenSliderHandleContainer,
+                  "leftparen" == this.props.handleType ? ut.a.Left : ut.a.Right
+                ))),
             i.createElement(
               mt,
               {
@@ -11754,6 +11757,12 @@ var CLSTAMP = "7197141";
                     d: 0,
                     br: i.d.readUint32,
                     bw: i.h.writeUint32,
+                  },
+                  timeout_ms: {
+                    n: 33,
+                    d: -1,
+                    br: i.d.readInt32,
+                    bw: i.h.writeInt32,
                   },
                 },
               }),
@@ -17874,6 +17883,7 @@ var CLSTAMP = "7197141";
           LANGUAGE: "english",
           SUPPORTED_LANGUAGES: [],
           COUNTRY: "",
+          AVATAR_BASE_URL: "",
           MEDIA_CDN_COMMUNITY_URL: "",
           MEDIA_CDN_URL: "",
           COMMUNITY_CDN_URL: "",
@@ -18086,6 +18096,7 @@ var CLSTAMP = "7197141";
         "error-shake": "gamepadslider_error-shake_1LFde",
         CompoundSlider: "gamepadslider_CompoundSlider_2hwF2",
         CompoundSliderSubSlider: "gamepadslider_CompoundSliderSubSlider_uOFmz",
+        Right: "gamepadslider_Right_3GOpB",
         CompoundSliderSubSliderLabelContainer:
           "gamepadslider_CompoundSliderSubSliderLabelContainer_2iD1m",
         CompoundSliderSubSliderLabelPositioner:
@@ -18502,7 +18513,7 @@ var CLSTAMP = "7197141";
         m = n("6TF7"),
         p = n.n(m);
       const g = i.a.lazy(() =>
-          Promise.all([n.e(0), n.e(3), n.e(1), n.e(2), n.e(133)]).then(
+          Promise.all([n.e(0), n.e(3), n.e(1), n.e(2), n.e(104)]).then(
             n.bind(null, "GEPe")
           )
         ),
@@ -18541,7 +18552,7 @@ var CLSTAMP = "7197141";
           )
         ),
         E = i.a.lazy(() =>
-          Promise.all([n.e(0), n.e(3), n.e(2), n.e(134)]).then(
+          Promise.all([n.e(0), n.e(3), n.e(2), n.e(105)]).then(
             n.bind(null, "KVeB")
           )
         ),
@@ -22930,5 +22941,5 @@ var CLSTAMP = "7197141";
       };
     },
   },
-  [["gfbn", 132, 0]],
+  [["gfbn", 103, 0]],
 ]);

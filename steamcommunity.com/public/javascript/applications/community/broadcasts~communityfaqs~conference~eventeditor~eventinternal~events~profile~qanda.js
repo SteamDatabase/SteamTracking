@@ -17,9 +17,12 @@
         let r = ".jpg";
         (t && "0000000000000000000000000000000000000000" !== t) || (t = a),
           44 == t.length && ((r = t.substr(-4)), (t = t.substr(0, 40)));
-        let i = n.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
+        let i = n.c.AVATAR_BASE_URL;
         return (
-          (i += t.substr(0, 2) + "/" + t),
+          i ||
+            ((i = n.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (i += t.substr(0, 2) + "/")),
+          (i += t),
           e && "small" != e && (i += "_" + e),
           (i += r),
           i

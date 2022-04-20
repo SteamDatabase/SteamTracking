@@ -2467,6 +2467,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadslider_ParenSliderHandleContainer_2HSG5 {
   pointer-events: all;
   contain: layout;
+  opacity: 0.5;
   margin: auto 0;
   width: 100%;
   position: absolute;
@@ -2499,13 +2500,16 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   background: #8b929a;
 }
 .gamepadslider_VerticalLineSliderHandle_102f1 {
-  background: #fff;
+  background: #ffffff60;
+  background: #ffd55f90;
   height: 24px;
+  padding-bottom: 4px;
   width: 3px;
   position: absolute;
   right: 0;
   box-sizing: content-box;
   pointer-events: all;
+  border-radius: 1px;
 }
 .gamepadslider_ParenSliderHandle_3uwod {
   height: 24px;
@@ -2702,6 +2706,40 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   position: absolute;
   box-sizing: content-box;
 }
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_2HSG5::before,
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_2HSG5::before {
+  content: "";
+  background: #ffffff70;
+  height: 27px;
+  top: -4px;
+  width: 11px;
+  right: -3px;
+  position: absolute;
+  box-sizing: content-box;
+  border-radius: 5px 0px 0px 5px;
+  opacity: 1;
+  -webkit-filter: drop-shadow(0px 0px 3px #199fff);
+  filter: drop-shadow(0px 0px 3px #199fff);
+}
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocus.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_2HSG5,
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocus.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_2HSG5,
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocuswithin.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_2HSG5,
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocuswithin.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_2HSG5 {
+  opacity: 1;
+}
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_2HSG5.gamepadslider_Right_1Btfw::before,
+.gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_2HSG5.gamepadslider_Right_1Btfw::before {
+  right: -8px;
+  border-radius: 0px 5px 5px 0px;
+}
 .gamepadslider_CompoundSliderSubSliderLabelContainer_bOIXu {
   position: absolute;
   width: 100%;
@@ -2731,10 +2769,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #fff;
-  color: #99d4ff99;
-  border-radius: 7px;
-  padding: 2px 5px 2px 5px;
+  background-color: #ffffffee;
+  color: #1a9fff;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 12px;
 }
 .gamepadslider_DefaultValueTickContainer_2Brdj {
   pointer-events: none;
@@ -17951,6 +17991,102 @@ html.responsive.touch
     margin-bottom: 0px;
   }
 }
+@font-face {
+  font-family: "Jolly Lodger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Jolly Lodger"), local("JollyLodger"),
+    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Jolly Lodger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Jolly Lodger"), local("JollyLodger"),
+    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "New Rocker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"),
+    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "New Rocker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"),
+    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Chonburi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Chonburi"), local("Chonburi-Regular"),
+    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
+      format("woff2");
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "Chonburi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Chonburi"), local("Chonburi-Regular"),
+    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -18157,26 +18293,39 @@ Body.v6.tag_page.contenthub_page {
   padding-bottom: 25px;
 }
 .contenthubshared_SpotlightsColumn_26HGQ {
-  height: 395px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 8px 0px;
-}
-.contenthubshared_SpotlightsColumn_26HGQ > div {
-  max-width: 306px;
+  margin: 8px;
 }
 .contenthubshared_SpotlightsColumn_26HGQ .CapsuleBottomBar {
-  height: 53px;
+  height: 54px;
+}
+.contenthubshared_SpotlightsColumn_26HGQ
+  .contenthubshared_SpecialsItem_RJzRc:last-child {
+  margin-top: 16px;
+}
+.contenthubshared_SpotlightsColumn_26HGQ
+  .contenthubshared_SpecialsItem_RJzRc:only-child {
+  margin-top: 0;
 }
 .contenthubshared_SpotlightCtn_3oEys {
-  height: 395px;
-  width: 306px;
   position: relative;
-  overflow: hidden;
   border-radius: 3px;
-  margin: 0px 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+.contenthubshared_SpotlightCtn_3oEys .contenthubshared_SpotlightImageCtn_23t7z {
+  position: relative;
+  padding-top: calc(93.4782608696% + 54px + 54px + 20px);
+}
+.contenthubshared_SpotlightCtn_3oEys
+  .contenthubshared_SpotlightImageCtn_23t7z
+  img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
 }
 .contenthubshared_SpotlightCtn_3oEys .contenthubshared_CapsuleDecorators_2w3tt {
   margin-left: 4px;
@@ -18184,11 +18333,9 @@ Body.v6.tag_page.contenthub_page {
 .contenthubshared_SpotlightCtn_3oEys .contenthubshared_SpotlightTextCtn_16_tS {
   position: absolute;
   bottom: 0;
-  width: 306px;
+  width: 100%;
   height: 95px;
   background-color: #000f18;
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg)
-    bottom center no-repeat;
 }
 .contenthubshared_SpotlightCtn_3oEys
   .contenthubshared_SpotlightTextCtn_16_tS
@@ -18287,19 +18434,12 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubshared_BroadcastCtn_6noJq {
   height: 190px;
-  width: 297px;
   margin-bottom: 9px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.contenthubshared_BroadcastCtn_6noJq:first-child {
-  margin-left: 0;
-}
-.contenthubshared_BroadcastCtn_6noJq:last-child {
-  margin-right: 0;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 .contenthubshared_BroadcastCtn_6noJq .contenthubshared_BroadcastImageCtn_1WTAa {
   height: 136px;
@@ -18313,6 +18453,7 @@ Body.v6.tag_page.contenthub_page {
   height: 100%;
   position: absolute;
   top: 0;
+  object-fit: cover;
 }
 .contenthubshared_BroadcastCtn_6noJq
   .contenthubshared_BroadcastImageCtn_1WTAa
@@ -18345,8 +18486,7 @@ Body.v6.tag_page.contenthub_page {
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8));
 }
 .contenthubshared_BroadcastCtn_6noJq .contenthubshared_BroadcastTextCtn_23kCa {
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/spotlight_background.jpg?v=1)
-    bottom center no-repeat;
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   flex-grow: 1;
 }
@@ -18366,16 +18506,22 @@ Body.v6.tag_page.contenthub_page {
   padding-top: 0;
 }
 .contenthubshared_DailyDealCtn_1cIEx {
-  height: 190px;
-  width: 297px;
-  margin-left: 8px;
   position: relative;
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
-.contenthubshared_DailyDealCtn_1cIEx .contenthubshared_DailyDealTextCtn_2A0Nh {
+.contenthubshared_DailyDealCtn_1cIEx .contenthubshared_DailyDealImageCtn_1oKSh {
+  padding: 46.7391304348% 0 0 0;
+}
+.contenthubshared_DailyDealCtn_1cIEx
+  .contenthubshared_DailyDealImageCtn_1oKSh
+  img {
   position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.contenthubshared_DailyDealCtn_1cIEx .contenthubshared_DailyDealTextCtn_2A0Nh {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -18933,102 +19079,6 @@ html.responsive.touch
 .breadcrumbs_BreadContainer_2qLmr a:hover {
   color: #fff;
   text-decoration: none;
-}
-@font-face {
-  font-family: "Jolly Lodger";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
-    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Jolly Lodger";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
-    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "New Rocker";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
-    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "New Rocker";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
-    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Chonburi";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
-    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
-      format("woff2");
-  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
-}
-@font-face {
-  font-family: "Chonburi";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
-    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
-      format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
-      format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
 }
 .partnereventdialog_ErrorStyles_3Hw9h,
 .partnereventdialog_ErrorStylesWithIcon_jEJTF {
@@ -24650,6 +24700,11 @@ hr.VO {
   text-decoration: none;
 }
 .optin_admin_dashboard_OptInAdminRow_39siH
+  .optin_admin_dashboard_ButtonCtn_2oOF5 {
+  display: flex;
+  flex-direction: column;
+}
+.optin_admin_dashboard_OptInAdminRow_39siH
   .optin_admin_dashboard_StatRefresh_2EDoV {
   font-size: 13px;
   color: #969696;
@@ -25670,6 +25725,21 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   border: 1px solid #464c58;
   border-radius: 4px;
 }
+.collapseablesection_SectionTitleHeader_2Yd_W {
+  display: flex;
+}
+.collapseablesection_SectionTitleHeader_2Yd_W .DialogButton {
+  width: 36px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: auto;
+}
+.collapseablesection_required_title_CKeWA {
+  display: flex;
+}
+.collapseablesection_SectionTitleHeader_2Yd_W .EventEditorTextTitle {
+  padding-top: 6px;
+}
 .optin_app_review_SectionTitle_VM14U {
   background: #233e4e;
   padding: 7px 12px 0px 12px;
@@ -25727,6 +25797,10 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   position: absolute;
   bottom: 8px;
   right: 8px;
+}
+.optin_app_review_FilterTagCnt_-HWZK {
+  display: flex;
+  flex-direction: row;
 }
 .pricingdashboard_DashboardPage_fIACD {
   display: flex;
@@ -26089,20 +26163,23 @@ div.pricinggrid_HoverToolTip_1OS2v {
 .pricinggridcell_PriceCell_1sKIc {
   display: flex;
   align-items: center;
-  padding: 0 4px;
+  padding: 0 24px 0 48px;
   height: 100%;
   font-size: 13px;
   color: #fff;
+  box-sizing: border-box;
+  border: 1px solid transparent;
 }
 .pricinggridcell_PriceCell_1sKIc .pricinggridcell_PricePrefix_gPcNw,
 .pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceSuffix_3AEJb {
   color: gray;
-  padding: 11px;
+  padding: 11px 4px;
 }
 .pricinggridcell_PriceCell_1sKIc .pricinggridcell_EditablePrice_pm5xM {
   display: flex;
   align-items: center;
   flex: 1;
+  width: 80px;
 }
 .pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceInput_1PcwX {
   width: 100%;
@@ -26112,6 +26189,57 @@ div.pricinggrid_HoverToolTip_1OS2v {
   color: inherit;
   font-size: 13px;
 }
+.pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceChange_w-K7q {
+  position: absolute;
+  left: 4px;
+  font-size: 11px;
+  z-index: 1;
+  display: flex;
+}
+.pricinggridcell_PriceCell_1sKIc
+  .pricinggridcell_PriceChange_w-K7q
+  .pricinggridcell_PriceChangeArrow_1z0l2 {
+  height: 14px;
+}
+.pricinggridcell_PriceCell_1sKIc
+  .pricinggridcell_PriceChange_w-K7q
+  .pricinggridcell_PriceChangeArrow_1z0l2
+  svg {
+  height: 14px;
+  width: 12px;
+}
+.pricinggridcell_PriceCell_1sKIc
+  .pricinggridcell_PriceChange_w-K7q
+  .pricinggridcell_PriceChangeArrow_1z0l2
+  svg
+  polyline {
+  stroke: green;
+  stroke-width: 40px;
+}
+.pricinggridcell_PriceCell_1sKIc
+  .pricinggridcell_PriceChange_w-K7q
+  .pricinggridcell_PriceChangeArrow_1z0l2.pricinggridcell_PriceIncrease_2jQyP
+  svg
+  polyline {
+  stroke: #c22d00;
+}
+.pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceAlert_2eadU {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+}
+.pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceAlert_2eadU svg {
+  height: 18px;
+  fill: #e5af37;
+}
+.pricinggridcell_PriceCell_1sKIc.pricinggridcell_ChangedLocally_5mvGW {
+  border: 1px dashed #1b97ff;
+  color: #1b97ff;
+}
+.pricinggridcell_PriceCell_1sKIc.pricinggridcell_BadPrice_18aiu {
+  border: 1px dashed #e5af37;
+  color: #e5af37;
+}
 .pricinggridcell_PricePopout_1Aoyz {
   box-sizing: border-box;
   font-size: 13px;
@@ -26120,20 +26248,40 @@ div.pricinggrid_HoverToolTip_1OS2v {
   color: #e0e1e6;
   padding: 6px 8px;
   box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
-  max-width: 300px;
   user-select: none;
 }
-.pricinggridcell_ResetButtonCtn_1-Jx5 {
-  display: block;
-  width: 24px;
-  height: 24px;
+.pricinggridcell_DetailRow_3P_fJ {
+  display: flex;
+  align-items: center;
+  margin: 2px 0;
+}
+.pricinggridcell_DetailRow_3P_fJ .pricinggridcell_DetailLabel_3RXb3 {
+  flex: 1;
+  white-space: nowrap;
+}
+.pricinggridcell_DetailRow_3P_fJ .pricinggridcell_DetailPrice_2k3CV {
+  flex: none;
+  min-width: 100px;
+  width: fit-content;
+  text-align: right;
+}
+.pricinggridcell_DetailRow_3P_fJ .pricinggridcell_DetailButton_3ILP7 {
   border-radius: 3px;
-  padding: 4px;
+  padding: 2px 8px;
+  margin-left: 6px;
   box-sizing: border-box;
   flex: none;
+  background-color: #505050;
+  width: fit-content;
 }
-.pricinggridcell_ResetButtonCtn_1-Jx5:hover {
-  background: gray;
+.pricinggridcell_DetailRow_3P_fJ
+  .pricinggridcell_DetailButton_3ILP7.pricinggridcell_Disabled_3mZHs {
+  background-color: rgba(80, 80, 80, 0.5);
+  color: #646464;
+}
+.pricinggridcell_DetailRow_3P_fJ
+  .pricinggridcell_DetailButton_3ILP7:not(.pricinggridcell_Disabled_3mZHs):hover {
+  background-color: #888;
 }
 .saveprices_ToolbarCtn_3lAEz {
   position: fixed;
@@ -27754,21 +27902,6 @@ div.savetoolbar_HoverToolTip_gba9O {
   .valveaccesslogs_Timestamp_3EUlY {
   margin-left: 4px;
 }
-.collapseablesection_SectionTitleHeader_2Yd_W {
-  display: flex;
-}
-.collapseablesection_SectionTitleHeader_2Yd_W .DialogButton {
-  width: 36px;
-  height: 30px;
-  margin-left: auto;
-  margin-top: auto;
-}
-.collapseablesection_required_title_CKeWA {
-  display: flex;
-}
-.collapseablesection_SectionTitleHeader_2Yd_W .EventEditorTextTitle {
-  padding-top: 6px;
-}
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
   overflow-y: auto;
@@ -28405,17 +28538,6 @@ ul li {
   .planningdashboard_VisibilityFilterCtn_hPops {
   width: 15%;
 }
-.promotioncreatedialog_DateCtn_13RGK {
-  min-height: 200px;
-}
-.eventsearch_SearchResults_A8sXK {
-  overflow: scroll;
-  max-height: 300px;
-}
-.eventsearch_SmallText_jXP1g {
-  color: gray;
-  font-size: 10px;
-}
 .promotionplaneditor_ButtonRow_3KhKT {
   display: flex;
   flex-direction: row;
@@ -28497,6 +28619,20 @@ ul li {
 }
 .promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_LinkCtn_2s6vN a {
   text-decoration: none;
+}
+.spotlightpromotionlink_ButtonRow_3yFse {
+  display: flex;
+}
+.promotioncreatedialog_DateCtn_13RGK {
+  min-height: 200px;
+}
+.eventsearch_SearchResults_A8sXK {
+  overflow: scroll;
+  max-height: 300px;
+}
+.eventsearch_SmallText_jXP1g {
+  color: gray;
+  font-size: 10px;
 }
 .promoagendarow_RowCtn_1Cq0N {
   margin-top: 10px;

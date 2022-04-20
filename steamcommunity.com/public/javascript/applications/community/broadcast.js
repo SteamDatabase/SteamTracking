@@ -319,7 +319,9 @@
                     }
                   ),
                 }),
-              yield this.props.bIsPreview && this.props.accountIDs
+              yield this.props.bIsPreview &&
+              this.props.accountIDs &&
+              !this.props.event.BUsesContentHubForItemSource()
                 ? R.a.Get().HintLoadEmbeddablePreviewStreams(this.props)
                 : R.a.Get().HintLoadEmbeddableStreams(this.props),
               this.props.nAppIDVOD &&

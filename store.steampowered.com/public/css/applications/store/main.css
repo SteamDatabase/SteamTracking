@@ -2032,6 +2032,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadslider_ParenSliderHandleContainer_VKqgk {
   pointer-events: all;
   contain: layout;
+  opacity: 0.5;
   margin: auto 0;
   width: 100%;
   position: absolute;
@@ -2064,13 +2065,16 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   background: #8b929a;
 }
 .gamepadslider_VerticalLineSliderHandle_3zRgr {
-  background: #fff;
+  background: #ffffff60;
+  background: #ffd55f90;
   height: 24px;
+  padding-bottom: 4px;
   width: 3px;
   position: absolute;
   right: 0;
   box-sizing: content-box;
   pointer-events: all;
+  border-radius: 1px;
 }
 .gamepadslider_ParenSliderHandle_2Yg4- {
   height: 24px;
@@ -2267,6 +2271,40 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: absolute;
   box-sizing: content-box;
 }
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_VKqgk::before,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_VKqgk::before {
+  content: "";
+  background: #ffffff70;
+  height: 27px;
+  top: -4px;
+  width: 11px;
+  right: -3px;
+  position: absolute;
+  box-sizing: content-box;
+  border-radius: 5px 0px 0px 5px;
+  opacity: 1;
+  -webkit-filter: drop-shadow(0px 0px 3px #199fff);
+  filter: drop-shadow(0px 0px 3px #199fff);
+}
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocus.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_VKqgk,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocus.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_VKqgk,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_VKqgk,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_VKqgk {
+  opacity: 1;
+}
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocus
+  .gamepadslider_ParenSliderHandleContainer_VKqgk.gamepadslider_Right_3GOpB::before,
+.gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin
+  .gamepadslider_ParenSliderHandleContainer_VKqgk.gamepadslider_Right_3GOpB::before {
+  right: -8px;
+  border-radius: 0px 5px 5px 0px;
+}
 .gamepadslider_CompoundSliderSubSliderLabelContainer_2iD1m {
   position: absolute;
   width: 100%;
@@ -2296,10 +2334,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #fff;
-  color: #99d4ff99;
-  border-radius: 7px;
-  padding: 2px 5px 2px 5px;
+  background-color: #ffffffee;
+  color: #1a9fff;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 12px;
 }
 .gamepadslider_DefaultValueTickContainer_2aCoH {
   pointer-events: none;
@@ -18425,26 +18465,39 @@ Body.v6.tag_page.contenthub_page {
   padding-bottom: 25px;
 }
 .contenthubshared_SpotlightsColumn_2Y2C1 {
-  height: 395px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 8px 0px;
-}
-.contenthubshared_SpotlightsColumn_2Y2C1 > div {
-  max-width: 306px;
+  margin: 8px;
 }
 .contenthubshared_SpotlightsColumn_2Y2C1 .CapsuleBottomBar {
-  height: 53px;
+  height: 54px;
+}
+.contenthubshared_SpotlightsColumn_2Y2C1
+  .contenthubshared_SpecialsItem_1txjw:last-child {
+  margin-top: 16px;
+}
+.contenthubshared_SpotlightsColumn_2Y2C1
+  .contenthubshared_SpecialsItem_1txjw:only-child {
+  margin-top: 0;
 }
 .contenthubshared_SpotlightCtn_10ZMM {
-  height: 395px;
-  width: 306px;
   position: relative;
-  overflow: hidden;
   border-radius: 3px;
-  margin: 0px 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+.contenthubshared_SpotlightCtn_10ZMM .contenthubshared_SpotlightImageCtn_1bl_5 {
+  position: relative;
+  padding-top: calc(93.4782608696% + 54px + 54px + 20px);
+}
+.contenthubshared_SpotlightCtn_10ZMM
+  .contenthubshared_SpotlightImageCtn_1bl_5
+  img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
 }
 .contenthubshared_SpotlightCtn_10ZMM .contenthubshared_CapsuleDecorators_2kI35 {
   margin-left: 4px;
@@ -18452,11 +18505,9 @@ Body.v6.tag_page.contenthub_page {
 .contenthubshared_SpotlightCtn_10ZMM .contenthubshared_SpotlightTextCtn_1clRj {
   position: absolute;
   bottom: 0;
-  width: 306px;
+  width: 100%;
   height: 95px;
   background-color: #000f18;
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg)
-    bottom center no-repeat;
 }
 .contenthubshared_SpotlightCtn_10ZMM
   .contenthubshared_SpotlightTextCtn_1clRj
@@ -18555,19 +18606,12 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubshared_BroadcastCtn_1D6il {
   height: 190px;
-  width: 297px;
   margin-bottom: 9px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.contenthubshared_BroadcastCtn_1D6il:first-child {
-  margin-left: 0;
-}
-.contenthubshared_BroadcastCtn_1D6il:last-child {
-  margin-right: 0;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 .contenthubshared_BroadcastCtn_1D6il .contenthubshared_BroadcastImageCtn_cIETZ {
   height: 136px;
@@ -18581,6 +18625,7 @@ Body.v6.tag_page.contenthub_page {
   height: 100%;
   position: absolute;
   top: 0;
+  object-fit: cover;
 }
 .contenthubshared_BroadcastCtn_1D6il
   .contenthubshared_BroadcastImageCtn_cIETZ
@@ -18613,8 +18658,7 @@ Body.v6.tag_page.contenthub_page {
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8));
 }
 .contenthubshared_BroadcastCtn_1D6il .contenthubshared_BroadcastTextCtn_14UDZ {
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/spotlight_background.jpg?v=1)
-    bottom center no-repeat;
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   flex-grow: 1;
 }
@@ -18634,16 +18678,22 @@ Body.v6.tag_page.contenthub_page {
   padding-top: 0;
 }
 .contenthubshared_DailyDealCtn_3pSAN {
-  height: 190px;
-  width: 297px;
-  margin-left: 8px;
   position: relative;
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
-.contenthubshared_DailyDealCtn_3pSAN .contenthubshared_DailyDealTextCtn_1tG1_ {
+.contenthubshared_DailyDealCtn_3pSAN .contenthubshared_DailyDealImageCtn_pNmm6 {
+  padding: 46.7391304348% 0 0 0;
+}
+.contenthubshared_DailyDealCtn_3pSAN
+  .contenthubshared_DailyDealImageCtn_pNmm6
+  img {
   position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.contenthubshared_DailyDealCtn_3pSAN .contenthubshared_DailyDealTextCtn_1tG1_ {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
