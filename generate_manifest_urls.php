@@ -27,8 +27,17 @@ $Manifests =
 			[ 'Prepend' => 'https://help.steampowered.com/public/css/applications/help/', 'Append' => '.css?__TIME__&_cdn=cloudflare' ],
 		],
 	],
+	[
+		'Manifest' => __DIR__ . '/partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js',
+		'Paths' =>
+		[
+			[ 'Prepend' => 'https://partner.steamgames.com/public/javascript/webui/storeadmin/', 'Append' => '.js?__TIME__&l=english&_cdn=cloudflare' ],
+			[ 'Prepend' => 'https://partner.steamgames.com/public/css/webui/storeadmin/', 'Append' => '.css?__TIME__&_cdn=cloudflare' ],
+		],
+	],
 ];
 
+/** @var string[] $Urls */
 $Urls = [];
 $Time = (string)time();
 
@@ -87,6 +96,7 @@ foreach( $Urls as $Url )
 	}
 }
 
+/** @return array<string, bool> */
 function ParseUrls() : array
 {
 	$Data = file_get_contents( __DIR__ . '/urls.txt' );

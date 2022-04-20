@@ -299,8 +299,9 @@ https://partner.steamgames.com/public/javascript/publishers.js?__TIME__&l=englis
 https://partner.steamgames.com/public/javascript/storeadmin.js?__TIME__&l=english&_cdn=cloudflare
 https://partner.steamgames.com/public/javascript/taxonomy_survey.js?__TIME__&l=english&_cdn=cloudflare
 https://partner.steamgames.com/public/javascript/useradmin.js?__TIME__&l=english&_cdn=cloudflare
-https://partner.steamgames.com/public/javascript/webui/storeadmin/main_english-json.js?__TIME__&l=english&_cdn=cloudflare
 https://partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js?__TIME__&l=english&_cdn=cloudflare
+https://partner.steamgames.com/public/javascript/webui/storeadmin/marketing_english-json.js?__TIME__&l=english&_cdn=cloudflare
+https://partner.steamgames.com/public/javascript/webui/storeadmin/main_english-json.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/apphub_home.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/apphub_workshop.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/applications/community/avatarcrop.js?__TIME__&l=english&_cdn=cloudflare
