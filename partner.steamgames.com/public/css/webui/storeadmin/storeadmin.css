@@ -25725,21 +25725,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   border: 1px solid #464c58;
   border-radius: 4px;
 }
-.collapseablesection_SectionTitleHeader_2Yd_W {
-  display: flex;
-}
-.collapseablesection_SectionTitleHeader_2Yd_W .DialogButton {
-  width: 36px;
-  height: 30px;
-  margin-left: auto;
-  margin-top: auto;
-}
-.collapseablesection_required_title_CKeWA {
-  display: flex;
-}
-.collapseablesection_SectionTitleHeader_2Yd_W .EventEditorTextTitle {
-  padding-top: 6px;
-}
 .optin_app_review_SectionTitle_VM14U {
   background: #233e4e;
   padding: 7px 12px 0px 12px;
@@ -27901,6 +27886,21 @@ div.savetoolbar_HoverToolTip_gba9O {
   .valveaccesslogs_AccessLogEntry_2e3po
   .valveaccesslogs_Timestamp_3EUlY {
   margin-left: 4px;
+}
+.collapseablesection_SectionTitleHeader_2Yd_W {
+  display: flex;
+}
+.collapseablesection_SectionTitleHeader_2Yd_W .DialogButton {
+  width: 36px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: auto;
+}
+.collapseablesection_required_title_CKeWA {
+  display: flex;
+}
+.collapseablesection_SectionTitleHeader_2Yd_W .EventEditorTextTitle {
+  padding-top: 6px;
 }
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
