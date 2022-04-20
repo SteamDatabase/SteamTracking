@@ -684,6 +684,7 @@ ${PARTNER_BASE_URL}doc/store/promo
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
+${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}?tab=manage
 ${PARTNER_BASE_URL}optin/admin/edit/${}
