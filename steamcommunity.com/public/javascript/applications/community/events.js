@@ -56754,6 +56754,7 @@
           },
         ],
         ["video", { Constructor: d.p, autocloses: !1 }],
+        ["youtubeorvideo", { Constructor: d.q, autocloses: !1 }],
         ["price", { Constructor: me.a, autocloses: !1 }],
         ["pricesavings", { Constructor: me.b, autocloses: !1 }],
         ["wishlist", { Constructor: me.d, autocloses: !1 }],
@@ -104170,7 +104171,7 @@
         a.d(t, "n", function () {
           return P;
         }),
-        a.d(t, "q", function () {
+        a.d(t, "r", function () {
           return x;
         }),
         a.d(t, "l", function () {
@@ -104178,9 +104179,12 @@
         }),
         a.d(t, "p", function () {
           return H;
+        }),
+        a.d(t, "q", function () {
+          return V;
         });
       var n = a("mrSG"),
-        r = a("q1tI"),
+        r = (a("2vnA"), a("q1tI")),
         i = a("mgoM"),
         s = a("kyHq"),
         o = a("av+R"),
@@ -104562,6 +104566,7 @@
         w = new Map([
           ["looping_media", { Constructor: U, autocloses: !1 }],
           ["video", { Constructor: H, autocloses: !1 }],
+          ["youtubeorvideo", { Constructor: V, autocloses: !1 }],
           ["previewyoutube", { Constructor: P, autocloses: !1 }],
         ]);
       function B(e, t, a = 0) {
@@ -104774,6 +104779,7 @@
         const t = z(e),
           a = e.children ? e.children.toString() : void 0;
         a &&
+          a.startsWith("http") &&
           t.rgVideoSources.push({
             sURL: Object(f.h)(a),
             sFormat: "video/webm",
@@ -104787,6 +104793,25 @@
           bAutoPlay: i,
           bControls: o,
           bLoop: i,
+        });
+      }
+      function V(e) {
+        if (
+          S.c.EREALM === s.g.k_ESteamRealmChina ||
+          "CN" == S.c.COUNTRY.toLocaleUpperCase()
+        )
+          return H(e);
+        const t = T(e.args, "youtubeid"),
+          a = T(e.args, "size"),
+          n = T(e.args, "seconds");
+        let i = "full" == a ? u.sizeFull : u.sizeThumb,
+          o = "full" == a ? "" : "leftthumb" == a ? u.floatLeft : u.floatRight;
+        return r.createElement(m.a, {
+          videoID: t,
+          nStartSeconds: n ? Number.parseInt(n) : void 0,
+          classNameAlign: o,
+          classNameSize: i,
+          bShowVideoImmediately: !0,
         });
       }
     },

@@ -41988,6 +41988,7 @@
           },
         ],
         ["video", { Constructor: d.p, autocloses: !1 }],
+        ["youtubeorvideo", { Constructor: d.q, autocloses: !1 }],
         ["price", { Constructor: me.a, autocloses: !1 }],
         ["pricesavings", { Constructor: me.b, autocloses: !1 }],
         ["wishlist", { Constructor: me.d, autocloses: !1 }],
@@ -77130,7 +77131,7 @@
         r.d(t, "n", function () {
           return F;
         }),
-        r.d(t, "q", function () {
+        r.d(t, "r", function () {
           return z;
         }),
         r.d(t, "l", function () {
@@ -77138,9 +77139,12 @@
         }),
         r.d(t, "p", function () {
           return H;
+        }),
+        r.d(t, "q", function () {
+          return W;
         });
       var a = r("mrSG"),
-        n = r("q1tI"),
+        n = (r("2vnA"), r("q1tI")),
         i = r("mgoM"),
         s = r("kyHq"),
         o = r("av+R"),
@@ -77522,6 +77526,7 @@
         w = new Map([
           ["looping_media", { Constructor: U, autocloses: !1 }],
           ["video", { Constructor: H, autocloses: !1 }],
+          ["youtubeorvideo", { Constructor: W, autocloses: !1 }],
           ["previewyoutube", { Constructor: F, autocloses: !1 }],
         ]);
       function O(e, t, r = 0) {
@@ -77734,6 +77739,7 @@
         const t = x(e),
           r = e.children ? e.children.toString() : void 0;
         r &&
+          r.startsWith("http") &&
           t.rgVideoSources.push({
             sURL: Object(v.h)(r),
             sFormat: "video/webm",
@@ -77747,6 +77753,25 @@
           bAutoPlay: i,
           bControls: o,
           bLoop: i,
+        });
+      }
+      function W(e) {
+        if (
+          S.c.EREALM === s.g.k_ESteamRealmChina ||
+          "CN" == S.c.COUNTRY.toLocaleUpperCase()
+        )
+          return H(e);
+        const t = A(e.args, "youtubeid"),
+          r = A(e.args, "size"),
+          a = A(e.args, "seconds");
+        let i = "full" == r ? u.sizeFull : u.sizeThumb,
+          o = "full" == r ? "" : "leftthumb" == r ? u.floatLeft : u.floatRight;
+        return n.createElement(m.a, {
+          videoID: t,
+          nStartSeconds: a ? Number.parseInt(a) : void 0,
+          classNameAlign: o,
+          classNameSize: i,
+          bShowVideoImmediately: !0,
         });
       }
     },
