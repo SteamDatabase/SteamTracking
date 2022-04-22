@@ -93322,7 +93322,7 @@
                       return null;
                   }
                 else if (
-                  s.b.IsELanguageValidInRealm(a, i.g.k_ESteamRealmGlobal)
+                  !s.b.IsELanguageValidInRealm(a, i.g.k_ESteamRealmGlobal)
                 )
                   return null;
                 return n.createElement("track", {
