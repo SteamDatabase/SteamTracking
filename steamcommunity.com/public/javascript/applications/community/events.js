@@ -38589,10 +38589,10 @@
     McqU: function (e, t, a) {
       "use strict";
       a.d(t, "b", function () {
-        return v;
+        return f;
       }),
         a.d(t, "a", function () {
-          return f;
+          return S;
         });
       var n = a("mrSG"),
         r = a("q1tI"),
@@ -38608,9 +38608,9 @@
         _ = a("kLLr"),
         h = a("X3Ds"),
         g = a("Qcoi"),
-        b = (a("mgoM"), a("6Y59"));
-      a("5h11");
-      class v extends i.a.Component {
+        b = (a("mgoM"), a("6Y59")),
+        v = (a("5h11"), a("av+R"));
+      class f extends i.a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -38730,7 +38730,7 @@
                 { className: u.a.Body },
                 Object(d.f)("#ManageFriends_EnterFriendCode")
               ),
-              i.a.createElement(f, {
+              i.a.createElement(S, {
                 onButtonClick: this.OnAddFriend,
                 buttonText: Object(d.f)("#ManageFriends_SendInvite"),
                 bDisableForSelf: !0,
@@ -38829,13 +38829,13 @@
           );
         }
       }
-      Object(n.b)([s.b], v.prototype, "OnCreateInviteLink", null),
-        Object(n.b)([s.b], v.prototype, "OnCopy", null),
-        Object(n.b)([s.b], v.prototype, "OnAddFriend", null),
-        Object(n.b)([s.b], v.prototype, "OnSearchChange", null),
-        Object(n.b)([s.b], v.prototype, "OnSearchKeyDown", null),
-        Object(n.b)([s.b], v.prototype, "OnSearchSubmit", null);
-      class f extends i.a.Component {
+      Object(n.b)([s.b], f.prototype, "OnCreateInviteLink", null),
+        Object(n.b)([s.b], f.prototype, "OnCopy", null),
+        Object(n.b)([s.b], f.prototype, "OnAddFriend", null),
+        Object(n.b)([s.b], f.prototype, "OnSearchChange", null),
+        Object(n.b)([s.b], f.prototype, "OnSearchKeyDown", null),
+        Object(n.b)([s.b], f.prototype, "OnSearchSubmit", null);
+      class S extends i.a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -38906,134 +38906,142 @@
                 "#ManageFriends_EnterFriendCodePlaceholder"
               ),
             }),
-            Boolean(this.state.searchResult) &&
+            i.a.createElement(
+              E,
+              {
+                searchResult: this.state.searchResult,
+                invite_status: this.state.invite_status,
+                bShowStatus: this.props.bShowStatus,
+              },
               i.a.createElement(
-                "div",
-                { className: u.a.ProfileCard },
-                i.a.createElement(
-                  "div",
-                  { className: u.a.UserContainer },
-                  i.a.createElement(
-                    "div",
-                    { className: u.a.Image },
-                    i.a.createElement("img", {
-                      style: { width: "100%", height: "100%" },
-                      src: this.state.searchResult.avatar_url_full,
-                    })
-                  ),
-                  i.a.createElement(
-                    "div",
-                    { className: u.a.ProfileContent },
-                    i.a.createElement(
-                      "h1",
-                      { className: u.a.Heading },
-                      this.state.searchResult.persona_name
-                    ),
-                    i.a.createElement(
-                      "div",
-                      { className: u.a.ProfileLink },
-                      i.a.createElement(
-                        "a",
-                        {
-                          target: "_blank",
-                          href:
-                            p.c.COMMUNITY_BASE_URL +
-                            "profiles/" +
-                            this.state.searchResult.steamid,
-                        },
-                        Object(d.f)("#ManageFriends_ProfileLink")
-                      ),
-                      i.a.createElement("br", null),
-                      i.a.createElement(
-                        "span",
-                        { className: u.a.Body },
-                        this.state.searchResult.real_name,
-                        i.a.createElement("br", null),
-                        `${this.state.searchResult.city}${
-                          this.state.searchResult.city ? "," : ""
-                        } ${this.state.searchResult.state}${
-                          this.state.searchResult.state ? "," : ""
-                        } ${this.state.searchResult.country}`
-                      )
-                    )
-                  ),
-                  i.a.createElement(
-                    c.G,
-                    {
-                      onClick: () =>
-                        this.OnActionClick(this.state.searchResult.steamid),
-                      disabled: this.state.disable_send_invite,
-                      style: {
-                        width: "fit-content",
-                        height: "fit-content",
-                        padding: "0px 20px 0px 20px",
-                        margin: "0 0 0 auto",
-                      },
-                    },
-                    this.props.buttonText
-                  )
-                ),
-                i.a.createElement(
-                  "div",
-                  { className: u.a.ProfileLink },
-                  this.state.searchResult.is_friend
-                    ? i.a.createElement(
-                        "div",
-                        null,
-                        Object(d.f)("#ManageFriends_IsFriend")
-                      )
-                    : null,
-                  this.state.searchResult.friends_in_common
-                    ? i.a.createElement(
-                        "div",
-                        null,
-                        i.a.createElement(
-                          "a",
-                          {
-                            target: "_blank",
-                            href:
-                              p.c.COMMUNITY_BASE_URL +
-                              "profiles/" +
-                              this.state.searchResult.steamid +
-                              "/friendscommon",
-                          },
-                          1 === this.state.searchResult.friends_in_common
-                            ? Object(d.f)(
-                                "#ManageFriends_FriendsInCommonSingular",
-                                this.state.searchResult.friends_in_common
-                              )
-                            : Object(d.f)(
-                                "#ManageFriends_FriendsInCommon",
-                                this.state.searchResult.friends_in_common
-                              )
-                        )
-                      )
-                    : null,
-                  this.props.bShowStatus &&
-                    "failure" === this.state.invite_status &&
-                    i.a.createElement(
-                      "div",
-                      { className: u.a.Failure },
-                      Object(d.f)("#ManageFriends_InviteFailure")
-                    ),
-                  this.props.bShowStatus &&
-                    "success" === this.state.invite_status &&
-                    i.a.createElement(
-                      "div",
-                      { className: u.a.Success },
-                      Object(d.f)(
-                        "#ManageFriends_InviteSuccess",
-                        this.state.searchResult.persona_name
-                      )
-                    )
-                )
+                c.G,
+                {
+                  onClick: () =>
+                    this.OnActionClick(this.state.searchResult.steamid),
+                  disabled: this.state.disable_send_invite,
+                  style: {
+                    width: "fit-content",
+                    height: "fit-content",
+                    padding: "0px 20px 0px 20px",
+                    margin: "0 0 0 auto",
+                  },
+                },
+                this.props.buttonText
               )
+            )
           );
         }
       }
-      Object(n.b)([s.b], f.prototype, "OnFriendCodeChange", null),
-        Object(n.b)([s.b], f.prototype, "LoadProfile", null),
-        Object(n.b)([s.b], f.prototype, "OnActionClick", null);
+      Object(n.b)([s.b], S.prototype, "OnFriendCodeChange", null),
+        Object(n.b)([s.b], S.prototype, "LoadProfile", null),
+        Object(n.b)([s.b], S.prototype, "OnActionClick", null);
+      const E = (e) => {
+        const {
+          searchResult: t,
+          invite_status: a,
+          bShowStatus: n,
+          children: r,
+        } = e;
+        return Boolean(t)
+          ? i.a.createElement(
+              "div",
+              { className: u.a.ProfileCard },
+              i.a.createElement(
+                "div",
+                { className: u.a.UserContainer },
+                i.a.createElement(
+                  "div",
+                  { className: u.a.Image },
+                  i.a.createElement("img", {
+                    style: { width: "100%", height: "100%" },
+                    src: t.avatar_url_full,
+                  })
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: u.a.ProfileContent },
+                  i.a.createElement(
+                    "h1",
+                    { className: u.a.Heading },
+                    t.persona_name
+                  ),
+                  i.a.createElement(
+                    "div",
+                    { className: u.a.ProfileLink },
+                    i.a.createElement(
+                      v.c,
+                      {
+                        target: p.c.IN_GAMEPADUI ? void 0 : "_blank",
+                        href: p.c.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
+                      },
+                      Object(d.f)("#ManageFriends_ProfileLink")
+                    ),
+                    i.a.createElement("br", null),
+                    i.a.createElement(
+                      "span",
+                      { className: u.a.Body },
+                      t.real_name,
+                      i.a.createElement("br", null),
+                      `${t.city}${t.city ? "," : ""} ${t.state}${
+                        t.state ? "," : ""
+                      } ${t.country}`
+                    )
+                  )
+                ),
+                r
+              ),
+              i.a.createElement(
+                "div",
+                { className: u.a.ProfileLink },
+                t.is_friend &&
+                  i.a.createElement(
+                    "div",
+                    null,
+                    Object(d.f)("#ManageFriends_IsFriend")
+                  ),
+                0 != t.friends_in_common &&
+                  i.a.createElement(
+                    "div",
+                    null,
+                    i.a.createElement(
+                      v.c,
+                      {
+                        target: p.c.IN_GAMEPADUI ? void 0 : "_blank",
+                        href:
+                          p.c.COMMUNITY_BASE_URL +
+                          "profiles/" +
+                          t.steamid +
+                          "/friendscommon",
+                      },
+                      1 === t.friends_in_common
+                        ? Object(d.f)(
+                            "#ManageFriends_FriendsInCommonSingular",
+                            t.friends_in_common
+                          )
+                        : Object(d.f)(
+                            "#ManageFriends_FriendsInCommon",
+                            t.friends_in_common
+                          )
+                    )
+                  ),
+                n &&
+                  "failure" === a &&
+                  i.a.createElement(
+                    "div",
+                    { className: u.a.Failure },
+                    Object(d.f)("#ManageFriends_InviteFailure")
+                  ),
+                n &&
+                  "success" === a &&
+                  i.a.createElement(
+                    "div",
+                    { className: u.a.Success },
+                    Object(d.f)("#ManageFriends_InviteSuccess", t.persona_name)
+                  )
+              )
+            )
+          : null;
+      };
     },
     MnIK: function (e, t, a) {
       "use strict";
