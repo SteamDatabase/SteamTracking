@@ -57,7 +57,7 @@
 "Friends_InShortcut"		"非 Steam 遊戲中"
 "Friends_Blocked"		"已封鎖"
 
-"Friends_AddFriend"		"新增好友..."
+"Friends_AddFriend"		"新增好友…"
 "Friends_Edit_Profile"	"編輯個人檔案…"
 
 "Friends_FriendList_CurrentGame"	"目前遊戲"
@@ -65,22 +65,22 @@
 "Friends_FriendList_Online"		"線上"
 "Friends_FriendList_Offline"		"離線"
 
-"Friends_SendInstantMessage"		"傳送訊息..."
-"Friends_Ignore"			"封鎖所有通訊..."
+"Friends_SendInstantMessage"		"傳送訊息…"
+"Friends_Ignore"			"封鎖所有通訊…"
 "Friends_UnIgnore"			"解除封鎖"
 "Friends_InviteFriendToGame"		"邀請至遊戲"
 "Friends_JoinGame"				"加入遊戲"
 "Friends_LaunchGame"				"啟動遊戲"
 "Friends_ViewGameInfo"			"看遊戲資訊"
 "Friends_UserDetails"				"看玩家資訊"
-"Friends_RemoveUser"				"移除此好友..."
+"Friends_RemoveUser"				"移除此好友…"
 
 "Friends_RemoveFriend_Title"			"好友 - 移除玩家"
 "Friends_RemoveFriend_Info"				"您確定要從好友名單移除 %friend% 嗎？\n\n（您日後還是可以用「新增好友」按鈕把他加回來）\n"
 "Friends_RemoveFriend_Button"			"移除 %friend%"
 
 "Friends_HideFriend_Title"				"好友 - 忽略使用者"
-"Friends_HideFriend_Info"				"您確定您要從推薦好友清單忽略並移除 %friend%？\n\n（您可以稍後使用「新增好友...」按鈕重新加入他們。）\n"
+"Friends_HideFriend_Info"				"您確定您要從推薦好友清單忽略並移除 %friend%？\n\n（您可以稍後使用「新增好友…」按鈕重新加入他們。）\n"
 "Friends_HideFriend_Button"				"忽略 %friend%"
 "Friends_HideFriend_Failed"				"無法忽略好友 %friend%"
 
@@ -93,7 +93,7 @@
 
 
 "Friends_EnterAccountNameOrEmailAddress"	"請輸入欲加入好友名單的玩家的 Steam 帳戶名稱或電子信箱。"
-"Friends_SearchingForFriend"				"正在搜尋 %search%..."
+"Friends_SearchingForFriend"				"正在搜尋 %search%…"
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% 已加入您的好友名單，顯示名稱為「%friend%」。"
 "Friends_FriendHasBeenAddedToYourList"		"%friend% 已加入您的好友名單。"
 "Friends_UnableToFindFriendByThatName"		"找不到 %search%。若要重新搜尋請按「上一頁」。"
@@ -103,10 +103,10 @@
 "Friends_ConnectedButOffline"					"您目前設定讓所有好友認為您已離線。"
 "Friends_NoFriendsInList"						"您還沒有在好友名單加入任何人。"
 "Friends_GoOnline"							"登入"
-"Friends_SignIn_RefreshPassword"				"登入..."
-"Friends_SignIn_ActivateFriends"				"加入好友測試..."
+"Friends_SignIn_RefreshPassword"				"登入…"
+"Friends_SignIn_ActivateFriends"				"加入好友測試…"
 "Friends_ConnectingToFriendsNetwork"			"正在連線好友網路…"
-"Friends_ScanningForFriends"					"下載好友名單..."
+"Friends_ScanningForFriends"					"下載好友名單…"
 
 "Friends_NotConnectedToFriendsNetwork"		"無法建立連線到好友網路。 Steam 將自動重試連線，直到服務可以使用。"
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"您必須再登入 Steam 才能使用好友功能。"
@@ -154,7 +154,7 @@
 "Friends_BetaHomePage"				"好友測試資訊網頁"
 
 "Friends_PleaseSetFriendsName"		"您的好友名稱尚未設定。"
-"Friends_SetFriendsName"				"設定個人名稱..."
+"Friends_SetFriendsName"				"設定個人名稱…"
 
 "Friends_TargetBlocked"				"此使用者個人檔案的設定目前不允許您連絡對方。"
 "Friends_TargetIgnored"				"%search% 目前不理會您的訊息。"
@@ -162,7 +162,7 @@
 "Friends_TargetHasTooManyFriends"		"%search% 的好友名單已滿。"
 "Friends_DefaultAddError"	 			"新增 %search% 到您的好友名單時發生問題。"
 "Friends_UnableToFindFriendByThatNameInvitePrompt"		"找不到電子郵件地址是 %search% 的 Steam 使用者。\n\n若您要邀請 %search% 加入 Steam、並加入當您的好友名單中，請按一下「下一步」，或按「上一步」重新搜尋。"
-"Friends_InvitingFriend"				"正在傳送邀請給 %search%..."
+"Friends_InvitingFriend"				"正在傳送邀請給 %search%…"
 "Friends_InvitationPending"			"最近已邀請 %search% 加入 Steam，他們回應後就會被加入您的好友名單。\n"
 "Friends_InvitationSent"				"已傳送電子郵件邀請給 %search%，他們回應後就會被加入您的好友名單。\n"
 "Friends_DefaultInviteError"			"傳送邀請給 %search% 時發生問題。" 
@@ -202,7 +202,7 @@
 "Friends_menu_view_showsteamids"		"顯示帳戶 ID"
 "Friends_menu_view_sortbyname"			"依名稱排序"
 "Friends_menu_view_onlineonly"			"只顯示線上的使用者"
-"Friends_menu_view_settings"			"設定..."
+"Friends_menu_view_settings"			"設定…"
 "Friends_menu_players_current"			"玩家清單 - 目前遊戲"
 "Friends_menu_players_recent"			"玩家清單 - 近期遊戲"
 
@@ -305,7 +305,7 @@
 "Friends_MsgNotification_Sender"		"%name% 說："
 "Friends_MsgNotification_Body"		"%message%"
 
-"Friends_AddUser"				"新增到好友名單內..."
+"Friends_AddUser"				"新增到好友名單內…"
 "Friends_HideUser"				"忽略使用者…"
 
 "Friends_Voice_Call"				"開始語音交談"
@@ -317,7 +317,7 @@
 "Friends_Voice_AudioSettings"		"音效設定"
 "Friends_Voice_Answer"			"接聽"
 "Friends_Voice_IncomingStatus"	"%friend% 想要使用語音交談。"
-"Friends_Voice_OutgoingStatus"	"正在撥電話給 %friend%..."
+"Friends_Voice_OutgoingStatus"	"正在撥電話給 %friend%…"
 "Friends_Voice_Resume"			"繼續"
 "Friends_Voice_ResumeStatusLocalHold"		"保留"
 "Friends_Voice_ResumeStatusRemoteHold"	"%friend% 已將此語音通話保留"
@@ -332,14 +332,14 @@
 "Friends_Voice_UsersChatting"			"%UsersChatting% 使用者正在進行語音交談"
 "Friends_Voice_UsersChattingPlural"	"%UsersChatting% 位使用者正在進行語音交談"
 "Friends_Voice_NoOtherUsersChatting"	"無其他使用者正在進行語音交談"
-"Friends_Voice_AllSlotsFull"			"%UsersChatting% 位使用者正在進行語音交談 (額滿)"
+"Friends_Voice_AllSlotsFull"			"%UsersChatting% 位使用者正在進行語音聊天（額滿）"
 
 "Friends_Chat_StartVoiceChatting"		"開始語音交談"
 "Friends_Chat_EndVoiceChatting"		"結束語音交談"
-"Friends_Chat_ActionResultStartVoiceSpeak" "在 %chat% 交談中開始語音交談。"
-"Friends_Chat_ActionResultEndVoiceSpeak"	"在 %chat% 交談中結束語音交談。"
-"Friends_Chat_VoiceSpeakDenied"		"無法在 %chat% 中開始語音交談，可用談話空間不足。"
-"Friends_Chat_ActionResultVoiceSlotsFull" "無法在 %chat% 中開始語音交談，可用談話空間不足。"
+"Friends_Chat_ActionResultStartVoiceSpeak" "在 %chat% 聊天室中開始語音聊天。"
+"Friends_Chat_ActionResultEndVoiceSpeak"	"在 %chat% 聊天室中結束語音聊天。"
+"Friends_Chat_VoiceSpeakDenied"		"無法在 %chat% 中開始語音聊天，談話空位不足。"
+"Friends_Chat_ActionResultVoiceSlotsFull" "無法在 %chat% 中開始語音聊天，談話空位不足。"
 "Friends_Chat_VoiceStatus"		"%availslots% 個空間可用 [共 %maxslots% 個]。"
 
 "Friends_GroupSectionInfo_Online"					"%online% 位在線上"
@@ -355,7 +355,7 @@
 "Friends_LeaveThisGroup"				"離開此群組"
 
 "Friends_SteamIDLink"					"檢視簡介"
-"Friends_EditAlias"						"編輯別名..."
+"Friends_EditAlias"						"編輯別名…"
 "Friends_UnsetAlias"					"重設"
 "Friends_ViewAliases"					"檢視別名"
 "Friends_NotificationOptions"			"通知選項"
@@ -508,7 +508,7 @@
 "Friends_ChatIntro_WarningInfo" "提醒：Steam 客服絕對不會藉任何原因要求您提供密碼。 請勿理會任何向您索取密碼的要求。"
 
 "Friends_Voice_MicrophoneDeviceLabel"	"錄音 (音訊輸入) 裝置"
-"Friends_Voice_ChangeDevice"			"變更裝置..."
+"Friends_Voice_ChangeDevice"			"變更裝置…"
 "Friends_Voice_ChangeDeviceNote"		"(會開啟 Windows 音效控制面板)"
 "Friends_Voice_ChangingDevice_Title"	"Steam - 變更錄音裝置"
 "Friends_Voice_ChangingDevice_Info"		"Windows 音效控制面板已開啟。 設定變更完畢後，請按「確定」。"
@@ -603,7 +603,7 @@
 "friends_trade_invite_action"		"按此交易"
 
 "friends_trade_invite_sent"	"交易要求已經傳送給 %friend%"
-"friends_trade_invite_sent_waiting"	"等待回應..."
+"friends_trade_invite_sent_waiting"	"等待回應…"
 
 "friends_trade_generic_failure"		"您無法與 %friend% 進行交易。"
 "friends_trade_declined"		"%friend% 已經拒絕您的交易要求。"
@@ -650,7 +650,7 @@
 
 "friends_voice_usedbygame"			"麥克風已被遊戲使用"
 
-"friends_group_tag_as"			"標籤為..."
+"friends_group_tag_as"			"標籤為…"
 "friends_group_edit_categories" 	"指定標籤給好友，以更快速尋找他們。被標籤的好友將會在您的好友清單中以群組方式顯示。"
 "friends_group_addtag"			"新增標籤"
 "friends_group_edittags_title"		"%friend% - 標籤"
@@ -686,7 +686,7 @@
 "Friends_BroadcastApprove_Ignore" "拒絕"
 
 "Broadcast_FirstTime_Header" "歡迎來到 Steam 實況直播！您現在可以觀看其他玩家和實況直播您自己擁有的遊戲。"
-"Broadcast_FirstTime_PermissionHeader" "請您花幾分鐘進行設定..."
+"Broadcast_FirstTime_PermissionHeader" "請您花幾分鐘進行設定…"
 "Broadcast_FirstTime_DesktopOnly" "在 Steam 實況直播的預設設定中您的遊戲過程將可供他人點選觀看，且不會一併錄製您在遊戲之外的畫面。"
 "Broadcast_FirstTime_FAQ" "閱讀 Steam 實況直播問題集"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
@@ -789,12 +789,8 @@
 
 "Steam_Settings_Browser"	"網頁瀏覽器"
 "Overlay_SettingsBrowserDesc" "以下設定將套用於 Steam 用戶端和遊戲內嵌介面中的網頁瀏覽器。"
-"Steam_SettingsBrowserClearWebCache"	"刪除網頁瀏覽器快取"
-"Steam_SettingsBrowserClearAllCookies"	"刪除瀏覽器全部的 Cookie"
-"Steam_Settings_Browser_DeleteTitle"	"刪除 Cookie"
-"Steam_Settings_Browser_DeleteMsg"	"清除 Steam 瀏覽器的所有 Cookie 資料？"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"清除瀏覽器快取"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"刪除內建瀏覽器的所有快取檔案？"
+"Steam_SettingsBrowserDeleteAllData"	"刪除網頁瀏覽器資料"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"要刪除所有 Steam 瀏覽器快取檔案、Cookies 和歷史記錄嗎？"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "遠端同樂"
 "RemotePlayTogether_Notification_AvailableToInvite" "用連結邀請好友名單中任何人一起遊戲。"

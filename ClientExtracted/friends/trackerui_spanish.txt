@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Navegador web"
 "Overlay_SettingsBrowserDesc" "Los siguientes ajustes se aplican al navegador web que se utiliza tanto en el cliente como en la interfaz en la partida de Steam."
-"Steam_SettingsBrowserClearWebCache"	"Borrar caché del navegador web"
-"Steam_SettingsBrowserClearAllCookies"	"Borrar todas las cookies"
-"Steam_Settings_Browser_DeleteTitle"	"Borrar cookies"
-"Steam_Settings_Browser_DeleteMsg"	"¿Borrar toda la información de cookies del navegador de Steam?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Borrar caché del navegador"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"¿Borrar todos los archivos de la caché del navegador web integrado?"
+"Steam_SettingsBrowserDeleteAllData"	"Borrar datos del navegador web"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"¿Quieres borrar el historial y todos los archivos y cookies en caché del navegador relacionados con Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Invita a jugar, con un enlace, a quien quieras de tu lista de amigos."

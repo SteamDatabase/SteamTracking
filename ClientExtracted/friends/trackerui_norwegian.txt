@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Nettleser"
 "Overlay_SettingsBrowserDesc" "Følgende innstillinger gjelder for nettleseren tilgjengelig i Steam-klienten og -overlegget."
-"Steam_SettingsBrowserClearWebCache"	"Slett nettleserbuffer"
-"Steam_SettingsBrowserClearAllCookies"	"Slett alle informasjonskapsler"
-"Steam_Settings_Browser_DeleteTitle"	"Slett informasjonskapsler"
-"Steam_Settings_Browser_DeleteMsg"	"Tøm Steam-nettleseren for informasjonskapsler?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Tøm nettleserbuffer"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Slett alle filene i bufferen til den innebygde nettleseren?"
+"Steam_SettingsBrowserDeleteAllData"	"Slett nettleserdata"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Slett alle bufrede filer, informasjonskapsler og all historikk i Steams nettleser?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Inviter hvem som helst til å spille med en lenke fra vennelisten."

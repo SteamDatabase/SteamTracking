@@ -402,9 +402,9 @@
 "Friends_ChatNoTextNotification_Info"		"Vám poslal zprávu"
 "Friends_BroadcastChannelLive"		"právě streamuje na SteamTV"
 
-"Friends_OnlineNotification_Hotkey"		"Stiskněte klávesu %hotkey% pro zobrazení"
-"Friends_InviteNotification_Hotkey"		"Stiskněte klávesu %hotkey% pro zobrazení"
-"Friends_ChatNotification_Hotkey"			"Stiskněte klávesu %hotkey% pro odpověď"
+"Friends_OnlineNotification_Hotkey"		"Stiskněte %hotkey% pro zobrazení"
+"Friends_InviteNotification_Hotkey"		"Stiskněte %hotkey% pro zobrazení"
+"Friends_ChatNotification_Hotkey"			"Stiskněte %hotkey% pro odpověď"
 
 "Friends_PlayersDialog_Title"				"Hráči"
 "Friends_CurrentPlayers_TabTitle"			"Aktuální hra"
@@ -684,7 +684,7 @@
 "Friends_BroadcastApprove_Or" "nebo"
 "Friends_BroadcastApprove_Ignore" "ODMÍTNOUT"
 
-"Broadcast_FirstTime_Header" "Vítejte v přenosech ve službě Steam! Nyní můžete ve službě Steam sledovat, jak hrají ostatní hráči, nebo vytvářet přenosy vlastních her."
+"Broadcast_FirstTime_Header" "Vítejte v přenosech ve službě Steam! Sledujte při hraní ostatní nebo sami vysílejte přenosy ze svých her."
 "Broadcast_FirstTime_PermissionHeader" "Věnujte chvíli nastavení svých předvoleb..."
 "Broadcast_FirstTime_DesktopOnly" "Ve výchozím nastavení lze sledovat pouze Vaši hru. Vaše plocha nebude vysílána."
 "Broadcast_FirstTime_FAQ" "Přečtěte si časté dotazy k přenosům ve službě Steam"
@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Internetový prohlížeč"
 "Overlay_SettingsBrowserDesc" "Následující nastavení se vztahují k internetovému prohlížeči používanému v klientu služby Steam a ve hrách (resp. v překrytí služby Steam)."
-"Steam_SettingsBrowserClearWebCache"	"Vymazat cache prohlížeče"
-"Steam_SettingsBrowserClearAllCookies"	"Vymazat všechny soubory cookie"
-"Steam_Settings_Browser_DeleteTitle"	"Vymazat cookies"
-"Steam_Settings_Browser_DeleteMsg"	"Opravdu chcete v prohlížeči vymazat všechny soubory cookie?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Vymazat cache"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Opravdu chcete ve svém prohlížeči vymazat celou paměť cache?"
+"Steam_SettingsBrowserDeleteAllData"	"Vymazat data prohlížeče"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Vymazat v prohlížeči všechny soubory z mezipaměti, cookies a historii?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Pozvěte kohokoli – stačí odkaz z Vašeho seznamu přátel."

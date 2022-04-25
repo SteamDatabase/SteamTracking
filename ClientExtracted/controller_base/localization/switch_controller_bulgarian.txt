@@ -13,7 +13,7 @@
 	"origin_switch_trigger_r_pull"				"Десен спусък (ZR)"
 	"origin_switch_trigger_r_click"				"Пълно издърпване на десния спусък (ZR)"
 	"origin_switch_stick_l_move"				"Движение на левия стик"
-	"origin_switch_stick_l_click"				"Клик с ляв стик"
+	"origin_switch_stick_l_click"				"Кликване с ляв стик"
 	"origin_switch_stick_l_dpad_n"				"Ляв стик движение нагоре"
 	"origin_switch_stick_l_dpad_s"				"Ляв стик движение надолу"
 	"origin_switch_stick_l_dpad_w"				"Ляв стик движение наляво"

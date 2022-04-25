@@ -27,7 +27,7 @@
 	"origin_xboxone_shoulder_l"						"Gâchette haute gauche"
 	"origin_xboxone_shoulder_r"						"Gâchette haute droite"
 	"origin_xboxone_button_menu"					"Touche Menu"
-	"origin_xboxone_button_view"					"Touche Affichage"
+	"origin_xboxone_button_view"					"Bouton Affichage"
 	"origin_xboxone_button_dpad_move"				"D-pad : mouvement"
 	"origin_xboxone_button_paddle_1"				"Palette P1"
 	"origin_xboxone_button_paddle_2"				"Palette P2"

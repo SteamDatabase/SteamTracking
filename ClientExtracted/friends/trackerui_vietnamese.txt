@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Trình duyệt web"
 "Overlay_SettingsBrowserDesc" "Những tùy chỉnh sau áp dụng cho trình duyệt web có trong ứng dụng Steam và lớp phủ Steam trong trò chơi."
-"Steam_SettingsBrowserClearWebCache"	"Xóa cache trình duyệt web"
-"Steam_SettingsBrowserClearAllCookies"	"Xóa tất cả cookie của trình duyệt"
-"Steam_Settings_Browser_DeleteTitle"	"Xóa cookies"
-"Steam_Settings_Browser_DeleteMsg"	"Xóa tất cả dữ liệu cookie của trình duyệt Steam?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Xóa cache trình duyệt"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Bạn có muốn xóa mọi tệp cache của trình duyệt web cài sẵn của Steam?"
+"Steam_SettingsBrowserDeleteAllData"	"Xóa dữ liệu trình duyệt web"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Xóa tất cả file cache, cookie và lịch sử của trình duyệt Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Mời bất kì ai chơi cùng chỉ với một liên kết lấy từ danh sách bạn bè."

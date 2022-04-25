@@ -378,7 +378,7 @@
 "Friends_WhenReceiveMessage"			"메시지를 받은 경우"
 "Friends_WhenGroupEventsOrAnnouncementsHappen"	"단체 행사 및 알림용"
 "Friends_DisplayNotification"			"알림 표시"
-"Friends_PlayASound"					"소리로 알림"
+"Friends_PlayASound"					"알림 소리"
 "Friends_FlashWindow"			"메시지를 받으면 창 깜박임"
 "Friends_FlashWindowAlways"		"항상"
 "Friends_FlashWindowMinimized"		"최소화한 경우에만"
@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"웹 브라우저"
 "Overlay_SettingsBrowserDesc" "본 설정은 Steam 클라이언트와 게임 내 Steam 오버레이에 쓰이는 웹 브라우저에 적용됩니다."
-"Steam_SettingsBrowserClearWebCache"	"웹 브라우저 캐시 삭제"
-"Steam_SettingsBrowserClearAllCookies"	"모든 브라우저의 쿠키 삭제"
-"Steam_Settings_Browser_DeleteTitle"	"쿠키 삭제"
-"Steam_Settings_Browser_DeleteMsg"	"모든 Steam 브라우저 쿠키 정보를 삭제하시겠습니까?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"브라우저 캐시 삭제"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"내장 웹 브라우저 캐시를 모두 삭제하시겠습니까?"
+"Steam_SettingsBrowserDeleteAllData"	"웹 브라우저 데이터 삭제"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"모든 Steam 브라우저 캐시 파일, 쿠키 및 기록을 삭제하시겠습니까?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "친구 목록에 있는 링크를 통해 누구든지 초대하여 플레이할 수 있습니다."

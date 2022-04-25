@@ -99,6 +99,7 @@ message CMsgProtoBufHeader {
 	optional uint32 cm_sysid = 28;
 	optional uint32 launcher_type = 31 [default = 0];
 	optional uint32 realm = 32 [default = 0];
+	optional int32 timeout_ms = 33 [default = -1];
 
 	oneof ip_addr {
 		uint32 ip = 15;

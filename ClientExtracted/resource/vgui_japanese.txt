@@ -7,7 +7,7 @@
 "TextEntry_Copy"		"コピー"
 "TextEntry_Paste"		"貼り付け"
 "TextEntry_SelectAll"		"すべて選択"
-"TextEntry_CopyAllToClipboard"	"全てをクリップボードにコピー"
+"TextEntry_CopyAllToClipboard"	"すべてをクリップボードにコピー"
 "FileOpenDialog_Open"		"開く"
 "FileOpenDialog_Cancel"		"キャンセル"
 "FileOpenDialog_Look_in"	"場所："

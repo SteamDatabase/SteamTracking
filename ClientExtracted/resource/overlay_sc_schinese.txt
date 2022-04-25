@@ -17,7 +17,7 @@
 		"Overlay_CDKeyNotification_Message_MultipleKeyApp" "此蒸汽平台应用程序需要多个产品序列号。当程序向您索要它们时，您可以按 %hotkey% 查看您的产品序列号。"
 		"Overlay_MicroTxnAuth_Title" "蒸汽平台交易"
 		"Overlay_MicroTxnAuth_PayWithWallet" "使用蒸汽平台钱包续订"
-		"Overlay_MicroTxnAuth_SubscriptionText" "蒸汽平台会在您的订阅更新时，自动使用您保存的支付方式结算。如果您没有存档的账单信息，蒸汽平台会尝试从您钱包的资金中扣款。"
+		"Overlay_MicroTxnAuth_SubscriptionText" "蒸汽平台会在您的订阅续期时自动使用您保存的支付方式付款。如果您没有账单信息存档，蒸汽平台会尝试使用您的钱包中可用的资金。"
 		"Overlay_MicroTxnAuth_RefundPeriod" "在购买后的 48 小时内，蒸汽平台可以在您未消耗、修改或转让这些物品的情况下提供退款。<a href=http://store.steamchina.com/steam_refunds>了解更多</a>"
 		"Overlay_MicroTxnAuth_NotRefundable" "这些物品不符合退款要求。<a href=http://store.steamchina.com/steam_refunds>了解更多</a>"
 		"Overlay_MicroTxnAuth_ConnectionError_Info" "由于和蒸汽平台通信时出现问题，您的交易无法完成。"

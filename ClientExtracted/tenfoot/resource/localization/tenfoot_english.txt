@@ -7609,8 +7609,6 @@
 	"SteamUI_ProcessShader_Description"	"The Shader Cache processing is taking a while, would you like to skip?"
 	"Steam_WaitingForShaderCache"	"Shaders being processed, currently at {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "This game will launch with Steam Play, using a platform compatibility tool."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Scroll Wheel Mode"
 	"Library_Details_FieldLabel_Invert"			"Invert"
 	"ControllerBinding_SoftPress_Invert"	"Threshold Invert"

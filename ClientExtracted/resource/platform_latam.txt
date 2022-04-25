@@ -33,7 +33,7 @@
 "Steam_AccountAlreadyLoggedInNeedShutdown"		"Tu cuenta '%account%' se está usando en otro equipo en este momento.\nTendrás que cerrar Steam en el otro equipo para poder iniciar sesión en éste."
 "Steam_AccountAlreadyLoggedInNeedPassword"		"Se ha iniciado sesión con esta cuenta en otro equipo.\nVuelve a introducir tu contraseña para iniciar sesión en este equipo."
 "Steam_AccountOfflineMissingConfig"				"Error al descargar los datos de configuración de la plataforma."
-"Steam_NeverConnectedNoConnection"				"Es la primera vez que conectas con la cuenta '%account%' desde este ordenador y no ha sido posible contactar con los servidores de Steam.\nAlgunos servicios no estarán disponibles. Steam tratará de reconectar, los servicios no estarán disponibles hasta que se restablezca la conexión."
+"Steam_NeverConnectedNoConnection"				"Es la primera vez que conectas con la cuenta '%account%' desde este equipo y no ha sido posible contactar con los servidores de Steam.\nAlgunos servicios no estarán disponibles. Steam tratará de reconectar, los servicios no estarán disponibles hasta que se restablezca la conexión."
 "Steam_RefreshEnterTwoFactorCode"				"Por favor, introduce el código actual de tu autenticador de Steam Guard"
 "Steam_RefreshLogin_RateLimited"		"Se han realizado demasiados intentos de inicio de sesión fallidos desde tu red en un corto espacio de tiempo. Por favor, inténtalo de nuevo más tarde."
 "Steam_RefreshLogin_Title"			"Steam - Volver a iniciar sesión"
@@ -58,12 +58,12 @@
 "Steam_ErrorLoginBadTwoFactor" "Ese código de doble factor no era válido.\nPor favor, introduce tu código de autenticación de Steam Guard actual."
 
 "SteamGuardBanner"				"Steam Guard con la Tecnología de Protección de Identidad de Intel®"
-"LoginIPTNotDetected"			"Procesador Intel® Core™ de 2ª Generación no detectado.\nNo puedes usar esta cuenta en este ordenador."
+"LoginIPTNotDetected"			"Procesador Intel® Core™ de 2ª Generación no detectado.\nNo puedes usar esta cuenta en este equipo."
 "LoginIPTDetected"				"Procesador Intel® Core™ de\n2ª Generación detectado..."
 "LoginIPTNotEnabledOnAccount"	"IPT no habilitado para esta cuenta..."
 "LoginIPTAuthenticatingWithSteam" "Autenticando IPT con Steam..."
 "LoginIPTConfirmed"				"Autenticación confirmada, iniciando sesión..."
-"LoginIPTNotConfirmed"			"IPT no pudo verficarse. Esta cuenta\nno puede ser utilizada en este ordenador."
+"LoginIPTNotConfirmed"			"IPT no pudo verficarse. Esta cuenta\nno puede ser utilizada en este equipo."
 "LoginIPTConnectFailed"		"No se ha podido contactar con los servidores de Steam.\nPor favor, inténtalo de nuevo más tarde."
 
 

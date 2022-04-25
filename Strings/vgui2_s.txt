@@ -8,7 +8,6 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-L6
 __const
 __TEXT
 __objc_methname
@@ -1387,6 +1386,8 @@ Valve Steam Client
 Valve Steam Client/%s
 -nofasthtml
 Disables new fast child hwnd direct in vgui hwnd rendering path
+-fasthtml
+Enable fast child html for any platform
 ReparentChildPlatformWindow - not implemented
 SetPlatformWindowVisibility - not implemented
 CBaseSurface
@@ -2284,6 +2285,7 @@ P
 
 =
 @
+2
 @
 @
 0

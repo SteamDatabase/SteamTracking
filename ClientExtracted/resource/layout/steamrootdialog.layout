@@ -543,7 +543,8 @@
 			render_bg {}
 			image="graphics/win32_win_min"
 			inset="0 0 4 0"
-			inset="0 0 4 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			image="graphics/osx_win_dis"[$OSX]
 			image="graphics/osx_win_dis_new_dark"[$OSX1010]
 		}
@@ -553,7 +554,8 @@
 			render_bg {}
 			bgcolor="none"
 			inset="0 0 4 0"
-			inset="0 0 4 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			image="graphics/win32_win_min_hover"
 			image="graphics/osx_min_hov" [$OSX]
 			image="graphics/osx_min_hov_new" [$OSX1010]
@@ -562,7 +564,7 @@
 		FrameMinimizeButton:framefocus [$OSX]
 		{
 			render_bg {}
-			inset="0 0 4 -8"
+			inset="-6 0 -2 -8"
 			image="graphics/osx_min_def"
 			image="graphics/osx_min_def_new" [$OSX1010]
 		}
@@ -570,7 +572,7 @@
 		FrameMinimizeButton:framefocus:hover [$OSX]
 		{
 			render_bg {}
-			inset="0 0 4 -8"
+			inset="-6 0 -2 -8"
 			image="graphics/osx_min_hov"
 			image="graphics/osx_min_hov_new" [$OSX1010]
 		}
@@ -578,7 +580,7 @@
 		FrameMinimizeButton:active [$OSX]
 		{
 			render_bg {}
-			inset="0 0 4 -8"
+			inset="-6 0 -2 -8"
 			image="graphics/osx_min_down"
 			image="graphics/osx_min_down_new" [$OSX1010]
 		}
@@ -589,7 +591,8 @@
 		{
 			render_bg {}
 			inset="0 0 4 0"
-			inset="0 0 -2 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			image="graphics/win32_win_max"
 			image="graphics/osx_win_dis" [$OSX]
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
@@ -599,7 +602,8 @@
 		{
 			render_bg {}
 			inset="0 0 4 0"
-			inset="0 0 -2 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_max_hover"
 			image="graphics/osx_max_hov" [$OSX]
@@ -610,7 +614,8 @@
 		{
 			render_bg {}
 			inset="0 0 4 0"
-			inset="0 0 -2 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_max"
 			image="graphics/osx_max_def" [$OSX]
@@ -621,7 +626,8 @@
 		{
 			render_bg {}
 			inset="0 0 4 0"
-			inset="0 0 -2 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_max_hover"
 			image="graphics/osx_max_hov" [$OSX]
@@ -632,7 +638,8 @@
 		{
 			render_bg {}
 			inset="0 0 4 0"
-			inset="0 0 -2 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_max_hover"
 			image="graphics/osx_max_down" [$OSX]
@@ -645,6 +652,7 @@
 			render_bg {}
 			inset="0 0 4 0"
 			inset="0 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			image="graphics/win32_win_restore"
 			image="graphics/osx_win_dis" [$OSX]
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
@@ -655,6 +663,7 @@
 			render_bg {}
 			inset="0 0 4 0"
 			inset="0 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_restore_hover"
 			image="graphics/osx_max_hov" [$OSX]
@@ -666,6 +675,7 @@
 			render_bg {}
 			inset="0 0 4 0"
 			inset="0 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_restore"
 			image="graphics/osx_max_def" [$OSX]
@@ -677,6 +687,7 @@
 			render_bg {}
 			inset="0 0 4 0"
 			inset="0 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_restore_hover"
 			image="graphics/osx_max_hov" [$OSX]
@@ -688,6 +699,7 @@
 			render_bg {}
 			inset="0 0 4 0"
 			inset="0 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_restore_hover"
 			image="graphics/osx_max_down" [$OSX]
@@ -698,7 +710,9 @@
 		{
 			render_bg {}
 			inset="0 0 4 0"
-			inset="-7 0 4 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
+			padding-right=9 [!$OSX]
 			image="graphics/win32_win_close"
 			image="graphics/osx_win_dis" [$OSX]
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
@@ -708,7 +722,9 @@
 		{
 			render_bg {}
 			inset="0 0 4 0"
-			inset="-7 0 4 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
+			padding-top=13 [!$OSX]
+			padding-right=9 [!$OSX]
 			image="graphics/win32_win_close_hover"
 			image="graphics/osx_close_hov" [$OSX]
 			image="graphics/osx_close_hov_new" [$OSX1010]
@@ -717,7 +733,7 @@
 		FrameCloseButton:framefocus [$OSX]
 		{
 			render_bg {}
-			inset="-7 0 4 -8"
+			inset="-6 0 -2 -8"
 			bgcolor="none"
 			image="graphics/osx_close_def"
 			image="graphics/osx_close_def_new" [$OSX1010]
@@ -726,7 +742,7 @@
 		FrameCloseButton:framefocus:hover [$OSX]
 		{
 			render_bg {}
-			inset="-7 0 4 -8"
+			inset="-6 0 -2 -8"
 			bgcolor="none"
 			image="graphics/osx_close_hov"
 			image="graphics/osx_close_hov_new" [$OSX1010]
@@ -735,7 +751,7 @@
 		FrameCloseButton:active [$OSX]
 		{
 			render_bg {}
-			inset="-7 0 4 -8"
+			inset="-6 0 -2 -8"
 			bgcolor="none"
 			image="graphics/osx_close_down"
 			image="graphics/osx_close_down_new" [$OSX1010]
@@ -745,7 +761,7 @@
 		{
 			render_bg {}
 			inset="0 0 4 0"
-			inset="-7 0 4 -8" [$OSX]
+			inset="-6 0 -2 -8" [$OSX]
 			bgcolor="none"
 			image="graphics/win32_win_close_disabled"
 			image="graphics/osx_win_dis" [$OSX]
@@ -784,8 +800,8 @@
 
 		// controls from left to right, otherwise depencencies are broken using end-right
 
-		place [!$OSX] { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=13 margin-right=9 spacing=-5 }
-		place [$OSX]  { control="frame_close,frame_minimize,frame_maximize" align=left margin-top=13 margin-left=11 spacing=-7 }
+		place [!$OSX] { control="frame_minimize,frame_maximize,frame_close" align=right spacing=-5 }
+		place [$OSX]  { control="frame_close,frame_minimize,frame_maximize" align=left margin-top=13 margin-left=11 spacing=4 }
 
 		place [$OSX]  { control="universe_label, EOLAlert, SupportAlert" spacing=8 start="frame_maximize" align=left margin-top=-4 margin-left=13 height=24 }
 

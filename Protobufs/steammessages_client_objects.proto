@@ -13,14 +13,39 @@ enum ECloudPendingRemoteOperation {
 
 enum ESteamDeckKeyboardLayout {
 	k_ESteamDeckKeyboardLayout_QWERTY = 0;
-	k_ESteamDeckKeyboardLayout_German = 1;
-	k_ESteamDeckKeyboardLayout_French = 2;
+	k_ESteamDeckKeyboardLayout_Bulgarian = 1;
+	k_ESteamDeckKeyboardLayout_Chinese_Simplified = 2;
+	k_ESteamDeckKeyboardLayout_Chinese_Traditional = 3;
+	k_ESteamDeckKeyboardLayout_Czech = 4;
+	k_ESteamDeckKeyboardLayout_Danish = 5;
+	k_ESteamDeckKeyboardLayout_Finnish = 6;
+	k_ESteamDeckKeyboardLayout_French = 7;
+	k_ESteamDeckKeyboardLayout_German = 8;
+	k_ESteamDeckKeyboardLayout_Greek = 9;
+	k_ESteamDeckKeyboardLayout_Hungarian = 10;
+	k_ESteamDeckKeyboardLayout_Italian = 11;
+	k_ESteamDeckKeyboardLayout_Japanese = 12;
+	k_ESteamDeckKeyboardLayout_Korean = 13;
+	k_ESteamDeckKeyboardLayout_Norwegian = 14;
+	k_ESteamDeckKeyboardLayout_Polish = 15;
+	k_ESteamDeckKeyboardLayout_Portuguese = 16;
+	k_ESteamDeckKeyboardLayout_Romanian = 17;
+	k_ESteamDeckKeyboardLayout_Russian = 18;
+	k_ESteamDeckKeyboardLayout_Spanish = 19;
+	k_ESteamDeckKeyboardLayout_Swedish = 20;
+	k_ESteamDeckKeyboardLayout_Thai = 21;
+	k_ESteamDeckKeyboardLayout_Turkish_F = 22;
+	k_ESteamDeckKeyboardLayout_Turkish_Q = 23;
+	k_ESteamDeckKeyboardLayout_Ukrainian = 24;
+	k_ESteamDeckKeyboardLayout_Vietnamese = 25;
+	k_ESteamDeckKeyboardLayout_QWERTY_International = 26;
 }
 
 message SteamMessagesClientIClientForcedEnumDependencies {
 	optional .EBluetoothDeviceType a = 1 [default = k_BluetoothDeviceType_Invalid];
 	optional .EStorageBlockContentType b = 2 [default = k_EStorageBlockContentType_Invalid];
 	optional .EStorageBlockFileSystemType c = 3 [default = k_EStorageBlockFileSystemType_Invalid];
+	optional .ESDCardFormatStage d = 4 [default = k_ESDCardFormatStage_Invalid];
 }
 
 message CMsgNetworkDeviceIP4Address {
@@ -234,6 +259,12 @@ message CMsgSystemPerfSettings {
 	optional bool is_show_perf_overlay_over_steam_enabled = 26;
 	optional bool is_low_latency_mode_enabled = 27;
 	optional bool is_fps_limit_dynamic = 28;
+	optional bool is_dynamic_vrs_available = 29;
+	optional bool is_manual_display_refresh_rate_available = 30;
+	optional int32 display_refresh_manual_hz = 31;
+	optional int32 display_refresh_manual_hz_min = 32;
+	optional int32 display_refresh_manual_hz_max = 33;
+	repeated int32 fps_limit_options = 34;
 }
 
 message CMsgSystemManagerSettings {

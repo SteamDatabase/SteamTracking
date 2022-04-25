@@ -2206,6 +2206,8 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Library_Details_ControllerAction_Change_Player_Number"	"OYUNCU NUMARASINI DEĞİŞTİR"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"OYUNCU NUMARASINI ŞUNUNLA DEĞİŞTİR:"
 	"Library_Details_ControllerAction_MouseDelta"	"FARE DELTASI"
+	"Library_Details_ControllerAction_BrightnessUp"	"EKRAN PARLAKLIĞINI ARTIR"
+	"Library_Details_ControllerAction_BrightnessDown"	"EKRAN PARLAKLIĞINI AZALT"
 	"Controller_SetMouseDelta_Title"				"FARENİN DELTA ATAMASINI AYARLA"
 	"Controller_SetMouseDelta_Description"			"Bu atamaya ait değerleri seçin"
 	"ControllerConfig_MouseDeltaX"					"X Ekseni"

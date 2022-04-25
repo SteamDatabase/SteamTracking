@@ -427,7 +427,7 @@
           { eStatus: s, strChallengeURL: m, strError: u, reset: d } = Object(
             h.a
           )({ transport: t, onComplete: n, ePlatformType: l });
-        Object(o.useEffect)(() => a && a(s), [s]);
+        Object(o.useEffect)(() => a && a(s), [a, s]);
         const g = 2 === s ? m : i.c.STORE_BASE_URL,
           C = 0 === s || 1 === s,
           _ = 4 === s,

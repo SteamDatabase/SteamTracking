@@ -636,7 +636,7 @@ H
 13CMsgGoForward
 10CMsgGoBack
 13CMsgWasHidden
-25CMsgBrowserViewSetVisible
+23CMsgSetWindowVisibility
 16CMsgClearHistory
 24CMsgClearAllBrowsingData
 8CMsgCopy
@@ -1000,6 +1000,7 @@ N4vgui12ListViewItemE
 14CUtlLinkedListIPN4vgui12ListViewItemEiE
 N4vgui4MenuE
 N4vgui13MenuSeparatorE
+11KeyValuesAD
 10CUtlVectorIi10CUtlMemoryIiEE
 14CUtlLinkedListIPN4vgui8MenuItemEiE
 10CUtlVectorIPN4vgui13MenuSeparatorE10CUtlMemoryIS2_EE
@@ -3190,6 +3191,7 @@ VPanel
 CursorExitedMenuItem
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
 m_bCheckable
+m_pkv
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
@@ -3900,9 +3902,7 @@ IcE
 @
 V
 =
-#
 =
-"
 @
 @
 M9e
@@ -3925,16 +3925,14 @@ M9e
 ?
 @
 @
+c
+1
 
 
-
-@
 
 
 d
 A+M
-
-
 j
 j
 j
@@ -4032,7 +4030,6 @@ j
 j
 j
 E
-[
 j
 j
 j
@@ -4178,7 +4175,6 @@ d
 =*.*
 =
 @
-L
 @
 @
 @

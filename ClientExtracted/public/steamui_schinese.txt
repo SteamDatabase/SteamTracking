@@ -192,6 +192,7 @@
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - 错误"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"启动"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"开始游戏"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"开始游戏"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"稍后更新"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"运行试玩游戏"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"启动工具"
@@ -212,6 +213,7 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"当应用程序就绪时启动"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"当游戏就绪时启动"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"当游戏就绪时启动"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"当试用版就绪时启动"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"当工具就绪时启动"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"当原声音轨就绪时播放"
@@ -296,7 +298,7 @@
 "Steam_CloudPendingSessions_UploadNotStarted"	"上传未开始"
 "Steam_CloudPendingSessions_GameActive"	"正在运行"
 "Steam_CloudPendingSessions_UploadInProgress"	"正在上传"
-"Steam_CloudPendingSessions_GameSuspended"	"已暂停"
+"Steam_CloudPendingSessions_GameSuspended"	"已挂起"
 
 "CloudFiles_RemoveFile_Title"	"Steam 云 - 移除文件"
 "CloudFiles_RemoveFile_Info"				"您确定要从您的 Steam 云中移除 %filename% 吗？这将完全删除您的本地副本文件。\n\n（该操作不可逆。）\n"
@@ -1311,7 +1313,7 @@
 
 "Steam_UpdateNewsButton"		"查看更新"
 
-"SteamUI_GamesDialog_JustReleased"	"最新发布"
+"SteamUI_GamesDialog_JustReleased"	"最新发行"
 
 "Steam_PurchaseInfo"			"本游戏包包含下列项目。"
 "Steam_PurchaseInfo_Preorder"		"您正在预订此礼包；在礼包官方发布可供玩家游戏之前，不会向您收取费用。"
@@ -2589,7 +2591,7 @@
 "Steam_Country_IT"		"意大利"
 "Steam_Country_JM"		"牙买加"
 "Steam_Country_JP"		"日本"
-"Steam_Country_JE"		"泽西"
+"Steam_Country_JE"		"泽西岛"
 "Steam_Country_JO"		"约旦"
 "Steam_Country_KZ"		"哈萨克斯坦"
 "Steam_Country_KE"		"肯尼亚"
@@ -4546,7 +4548,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "Steam_Settings_StreamingTitle" "远程畅玩"
 
-"Steam_Settings_Streaming_Description" "将您电脑上的游戏流式传输至其他设备。只需在另一台电脑上登录同一 Steam 帐户，或在您的 Steam 流式设备上选择“其他电脑”即可轻松连接。"
+"Steam_Settings_Streaming_Description" "在本台计算机和另一台设备之间流式传输游戏。只需在另一台计算机上登录同一 Steam 帐户，或在您的 Steam 流式应用上选择“其他计算机”即可轻松连接。"
 "Steam_Settings_Streaming_DeviceName" "设备名称"
 "Steam_Settings_Streaming_Status" "状态"
 "Steam_Settings_Streaming_EnableStreaming" "启用远程畅玩"

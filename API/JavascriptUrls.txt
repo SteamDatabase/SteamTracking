@@ -819,7 +819,6 @@ ${STORE_BASE_URL}app/${}/?curator_clanid=${}
 ${STORE_BASE_URL}broadcast/ajaxcheckbroadcast
 ${STORE_BASE_URL}broadcast/ajaxgetappinfoforcap
 ${STORE_BASE_URL}broadcast/ajaxgetbatchappcapsuleinfo
-${STORE_BASE_URL}broadcast/ajaxgetpopularpartnerbroadcasts
 ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpage
 ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpreview
 ${STORE_BASE_URL}broadcast/ajaxgettopntagsforappbatch

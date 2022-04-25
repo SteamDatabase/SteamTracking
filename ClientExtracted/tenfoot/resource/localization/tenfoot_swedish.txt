@@ -2205,6 +2205,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"ÄNDRA SPELARNUMMER"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"ÄNDRA SPELARNUMMER TILL"
 	"Library_Details_ControllerAction_MouseDelta"	"DELTAINPUT FÖR MUS"
+	"Library_Details_ControllerAction_BrightnessUp"	"SKÄRMLJUSSTYRKA UPP"
+	"Library_Details_ControllerAction_BrightnessDown"	"SKÄRMLJUSSTYRKA NED"
 	"Controller_SetMouseDelta_Title"				"ANGE DELTABINDNING FÖR MUS"
 	"Controller_SetMouseDelta_Description"			"Välj värden för denna bindning"
 	"ControllerConfig_MouseDeltaX"					"X-axel"

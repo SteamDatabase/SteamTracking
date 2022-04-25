@@ -24,8 +24,8 @@
 "Friends_Chat_Send"					"Enviar"
 "Friends_Chat_InviteToChat"			"Convidar para conversa"
 "Friends_Chat_ReJoin"					"Reentrar"
-"Friends_Chat_CannotSendFriendOffline" "Não é possível enviar a mensagem porque %friend% está offline no momento.\n"
-"Friends_Chat_SendOfflineMessage" "%friend% está atualmente offline e receberá a sua mensagem na próxima vez que iniciar a sessão.\n"
+"Friends_Chat_CannotSendFriendOffline" "Não é possível enviar a mensagem porque %friend% está off-line no momento.\n"
+"Friends_Chat_SendOfflineMessage" "%friend% está atualmente off-line e receberá a sua mensagem na próxima vez que iniciar a sessão.\n"
 "Friends_Chat_InvitedToGame"			"%friend% convidou você para jogar %game%."
 "Friends_Chat_FriendHasChangedGame"	"%friend% iniciou %game%. "
 "Friends_Chat_FriendHasChangedApp"	"%friend% está agora em %game%. "
@@ -55,15 +55,15 @@
 "Friends_InApp"			"Em aplicativo"
 "Friends_InMod"			"Em mod"
 "Friends_InShortcut"		"Em jogo não Steam"
-"Friends_Blocked"		"Bloqueado"
+"Friends_Blocked"		"Bloqueado(a)"
 
 "Friends_AddFriend"		"Adicionar um amigo..."
 "Friends_Edit_Profile"	"Editar perfil..."
 
 "Friends_FriendList_CurrentGame"	"JOGO ATUAL"
 "Friends_FriendList_InGame"		"EM JOGO"
-"Friends_FriendList_Online"		"ONLINE"
-"Friends_FriendList_Offline"		"OFFLINE"
+"Friends_FriendList_Online"		"ON-LINE"
+"Friends_FriendList_Offline"		"OFF-LINE"
 
 "Friends_SendInstantMessage"		"Enviar mensagem..."
 "Friends_Ignore"			"Bloquear comunicação..."
@@ -100,7 +100,7 @@
 "Friends_CannotAddSelfToList"				"Você não pode se adicionar à sua lista de amigos!"
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% já está na sua lista de amigos, com o nome \"%friend%\"."
 
-"Friends_ConnectedButOffline"					"Você está definido no momento para aparecer offline para todos os seus amigos."
+"Friends_ConnectedButOffline"					"Você está definido no momento para aparecer off-line para todos os seus amigos."
 "Friends_NoFriendsInList"						"Por que não convidar alguém para ser seu Amigo?"
 "Friends_GoOnline"							"Iniciar sessão"
 "Friends_SignIn_RefreshPassword"				"Entrar..."
@@ -114,13 +114,13 @@
 "Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Esta versão do Steam é muito antiga para se conectar ao Amigos. Reinicie o Steam para receber a última atualização."
 "Friends_NotConnectedToFriendsNetwork_ServersBusy"		"Os servidores do Steam estão no momento fora do ar para manutenção de rotina. O serviço de Amigos tentará se conectar automaticamente até que o serviço esteja disponível."
 "Friends_NotConnectedToFriendsNetwork_NoConnection"		"Não foi possível se conectar aos servidores Steam. O Steam tentará se conectar automaticamente até que o serviço esteja disponível."
-"Friends_NotAvailableInOfflineMode"			"O serviço Amigos não está disponível no modo offline."
+"Friends_NotAvailableInOfflineMode"			"O serviço Amigos não está disponível no modo off-line."
 
 
 "Friends_UserRequestingFriendship_Title"		"Amigos — %friend%"
 "Friends_UserRequestingFriendship_Info"		"%friend% lhe adicionou à lista de amigos."
-"Friends_AllowUserToSeeMeOnline"				"Permitir que %friend% veja quando você estiver online e possa conversar com você."
-"Friends_BlockUserFromSeeingMeOnline"			"Impedir esta pessoa de ver quando você está online e de conversar com você."
+"Friends_AllowUserToSeeMeOnline"				"Permitir que %friend% veja quando você estiver on-line e possa conversar com você."
+"Friends_BlockUserFromSeeingMeOnline"			"Impedir esta pessoa de ver quando você está on-line e de conversar com você."
 
 "Friends_AddFriend_Title"			"Adicionar um amigo"
 
@@ -131,19 +131,19 @@
 "Friends_RecentlyUsedNames"			"Nomes usados recentemente:"
 
 "Friends_PlaySoundWhenFriendJoins"			"Tocar um som quando qualquer amigo se juntar a uma partida"
-"Friends_PlaySoundWhenFriendComesOnline"		"Tocar um som quando qualquer amigo ficar online"
+"Friends_PlaySoundWhenFriendComesOnline"		"Tocar um som quando qualquer amigo ficar on-line"
 "Friends_PlaySoundWhenReceiveAMessage"		"Tocar um som quando você receber uma mensagem"
-"Friends_NotifyMeWhenUserComesOnline"			"Notifique-me quando este usuário estiver online"
-"Friends_PlaySoundWhenUserComesOnline"		"Sempre tocar um som quando este usuário ficar online"
+"Friends_NotifyMeWhenUserComesOnline"			"Notifique-me quando este usuário estiver on-line"
+"Friends_PlaySoundWhenUserComesOnline"		"Sempre tocar um som quando este usuário ficar on-line"
 "Friends_PlaySoundWhenUserJoinsGame"			"Sempre tocar um som quando este usuário iniciar um jogo"
 
-"Friends_RemoveUserExplanation"	"Se você remover este amigo da sua lista, ele(a) não será capaz de ver quando você estiver online ou de lhe enviar mensagens."
+"Friends_RemoveUserExplanation"	"Se você remover este amigo da sua lista, ele(a) não será capaz de ver quando você estiver on-line ou de lhe enviar mensagens."
 
 "Friends_FriendInvitedToGame_Title"	"Convite — %friend%"
 "Friends_FriendInvitedToGame_Info"	"Um convite para entrar na sua partida foi enviado para %friend%."
 
-"Friends_NotifyFriendOnline_Title"	"%friend% - Notificação quando amigo ficar online"
-"Friends_NotifyFriendOnline_Info"		"Seu amigo %friend% está online."
+"Friends_NotifyFriendOnline_Title"	"%friend% - Notificação quando amigo ficar on-line"
+"Friends_NotifyFriendOnline_Info"		"Seu amigo %friend% está on-line."
 
 "Friends_RefreshLogin_Title"			"Steam — Atualizar sessão"
 "Friends_RefreshLogin"				"Informe as credenciais da sua conta Steam novamente para conectar-se à rede de Amigos."
@@ -201,7 +201,7 @@
 "Friends_menu_view_showavatars"			"Exibir avatares"
 "Friends_menu_view_showsteamids"		"Exibir IDs de conta"
 "Friends_menu_view_sortbyname"			"Ordenar por nome"
-"Friends_menu_view_onlineonly"			"Exibir somente usuários online"
+"Friends_menu_view_onlineonly"			"Exibir somente usuários on-line"
 "Friends_menu_view_settings"			"Configurações..."
 "Friends_menu_players_current"			"Lista de jogadores - Partida atual"
 "Friends_menu_players_recent"			"Lista de jogadores - Partidas recentes"
@@ -271,7 +271,7 @@
 "Friends_Chat_ActionResultNotAllowedOnSelf"           "A ação não é permitida em você mesmo."
 "Friends_Chat_ActionResultChatDoesntExist"			"A conversa foi fechada."
 "Friends_Chat_ActionResultChatFull  "					"A conversa está cheia."
-"Friends_Chat_ActionResultNotOnline"                  "A ação não é possível enquanto não estiver online."
+"Friends_Chat_ActionResultNotOnline"                  "A ação não é possível enquanto não estiver on-line."
 
 
 "Friends_Chat_Kicked_Title"           "Expulso da conversa"
@@ -286,8 +286,8 @@
 "Friends_Chat_Closed_Info"            "A conversa %chat% foi fechada."
 "Friends_Chat_Closed_Entry"           "A conversa foi fechada.\n"
 
-"Friends_Chat_Offline_Entry"           "O seu status está definido como Offline.\n"
-"Friends_Chat_Offline_Rejoin_Entry"    "Agora online e de volta à conversa.\n"
+"Friends_Chat_Offline_Entry"           "O seu status está definido como Off-line.\n"
+"Friends_Chat_Offline_Rejoin_Entry"    "Agora on-line e de volta à conversa.\n"
 
 "Friends_Chat_FailedRejoin_Entry"			"Falha ao voltar à conversa.\n"
 "Friends_Chat_FailedRejoin_Rejoin_Entry"	"Você voltou à conversa.\n"
@@ -342,10 +342,10 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Não é possível iniciar conversa por voz em %chat%, não há vagas de voz suficientes."
 "Friends_Chat_VoiceStatus"		"%availslots% vagas disponíveis [%maxslots% no total]."
 
-"Friends_GroupSectionInfo_Online"					"%online% ONLINE"
-"Friends_GroupSectionInfo_OnlineInGame"			"%ingame% EM JOGO, %online% ONLINE"
-"Friends_GroupSectionInfo_OnlineChatting"			"%inchat% NA CONVERSA, %online% ONLINE"
-"Friends_GroupSectionInfo_OnlineInGameChatting"	"%inchat% NA CONVERSA, %ingame% EM JOGO, %online% ONLINE"
+"Friends_GroupSectionInfo_Online"					"%online% ON-LINE"
+"Friends_GroupSectionInfo_OnlineInGame"			"%ingame% EM JOGO, %online% ON-LINE"
+"Friends_GroupSectionInfo_OnlineChatting"			"%inchat% NA CONVERSA, %online% ON-LINE"
+"Friends_GroupSectionInfo_OnlineInGameChatting"	"%inchat% NA CONVERSA, %ingame% EM JOGO, %online% ON-LINE"
 
 "Friends_GroupSectionInfo_PublicGroup"	"%groupname% (grupo público)"
 
@@ -374,7 +374,7 @@
 "Friends_AlwaysNewChatCheck" "Abrir novas conversas em janelas em vez de abas"
 "Friends_NotificationsAndSounds"		"Notificações e sons"
 "Friends_WhenFriendJoinsGame"			"Quando qualquer amigo iniciar um jogo"
-"Friends_WhenFriendComesOnline"		"Quando qualquer amigo ficar online"
+"Friends_WhenFriendComesOnline"		"Quando qualquer amigo ficar on-line"
 "Friends_WhenReceiveMessage"			"Quando eu receber uma mensagem"
 "Friends_WhenGroupEventsOrAnnouncementsHappen"	"Quando um grupo publicar um evento ou anúncio"
 "Friends_DisplayNotification"			"Exibir uma notificação"
@@ -391,7 +391,7 @@
 "Friends_NameChangeFailed_Info"		"Falha ao mudar nome do perfil. Tente novamente em alguns minutos."
 "Friends_NameChangeThrottled_Info"		"Mudanças muito frequentes no nome do perfil não são permitidas. Tente novamente em alguns minutos."
 
-"Friends_OnlineNotification_Info"			"está online"
+"Friends_OnlineNotification_Info"			"está on-line"
 "Friends_InGameNotification_Info"			"iniciou"
 "Friends_InAppNotification_Info"			"iniciou"
 "Friends_ChatInvitation_Info"				"convidou você para conversar com"
@@ -435,11 +435,11 @@
 "Friends_NotificationOptions_Title"		"Opções de notificação - %FriendName%"
 
 "Friends_WhenThisFriendJoinsGame"				"Quando %FriendName% iniciar um jogo"
-"Friends_WhenThisFriendComesOnline"			"Quando %FriendName% ficar online"
+"Friends_WhenThisFriendComesOnline"			"Quando %FriendName% ficar on-line"
 "Friends_WhenReceiveMessageFromThisFriend"	"Quando eu receber uma mensagem de %FriendName%"
 "Friends_InviteInfo_HasAdded"					"lhe enviou um"
 "Friends_InviteInfo_FriendsList"				"pedido de amizade"
-"Friends_InviteInfo_BeenInvited"				"Você foi convidado"
+"Friends_InviteInfo_BeenInvited"				"Você recebeu um convite"
 "Friends_InviteInfo_JoinGroup"				"para entrar no grupo Steam"
 "Friends_GroupEvent_NewEventScheduled"		"agendou um novo evento"
 "Friends_GroupEvent_NowStarting"				"Evento começando"
@@ -664,10 +664,10 @@
 "friends_setnickname_title"		"Amigos — %friend%"
 "friends_setnickname_info"		"Adicione um apelido persistente a este jogador para que você sempre saiba quem é."
 "friends_managefriends"			"Gerenciar amigos"
-"Friends_WebStatus_Tooltip"		"Online pela web"
-"Friends_MobileStatus_Tooltip"	"Online por um dispositivo móvel"
-"Friends_BigPictureStatus_Tooltip"	"Online pelo Big Picture"
-"Friends_VRStatusStatus_Tooltip" "Online em realidade virtual"
+"Friends_WebStatus_Tooltip"		"On-line pela web"
+"Friends_MobileStatus_Tooltip"	"On-line por um dispositivo móvel"
+"Friends_BigPictureStatus_Tooltip"	"On-line pelo Big Picture"
+"Friends_VRStatusStatus_Tooltip" "On-line em realidade virtual"
 
 "friends_newturn_info" "1 novo turno à sua espera"
 "friends_newturns_info" "%turns% novos turnos à sua espera"
@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Navegador web"
 "Overlay_SettingsBrowserDesc" "As seguintes configurações se aplicam ao navegador web integrado ao cliente Steam e usado no painel Steam."
-"Steam_SettingsBrowserClearWebCache"	"Excluir cache do navegador"
-"Steam_SettingsBrowserClearAllCookies"	"Excluir cookies do navegador"
-"Steam_Settings_Browser_DeleteTitle"	"Excluir cookies"
-"Steam_Settings_Browser_DeleteMsg"	"Excluir todos os dados de cookies do navegador do Steam?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Limpar cache do navegador"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Excluir todos os arquivos em cache do navegador integrado?"
+"Steam_SettingsBrowserDeleteAllData"	"Excluir dados do navegador"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Excluir todos os cookies, histórico e cache do navegador do Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Convide quem você quiser para jogar com um link da lista de amigos."

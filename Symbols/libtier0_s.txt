@@ -119,7 +119,6 @@
  T Plat_GetProcessArgv
  T Plat_GetStackBackTrace
  T Plat_IsChromeOS
- T Plat_IsGamepadUI
  T Plat_IsGamescope
  T Plat_IsInDebugSession
  T Plat_IsSteamConsoleMode

@@ -2205,6 +2205,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"ZMIEŃ NUMER GRACZA"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"ZMIEŃ NUMER GRACZA NA"
 	"Library_Details_ControllerAction_MouseDelta"	"DELTA MYSZY"
+	"Library_Details_ControllerAction_BrightnessUp"	"ZWIĘKSZ JASNOŚĆ EKRANU"
+	"Library_Details_ControllerAction_BrightnessDown"	"ZMNIEJSZ JASNOŚĆ EKRANU"
 	"Controller_SetMouseDelta_Title"				"USTAW PRZYPISANIE DLA DELTY MYSZY"
 	"Controller_SetMouseDelta_Description"			"Wybierz wartości dla tego przypisania"
 	"ControllerConfig_MouseDeltaX"					"Oś X"

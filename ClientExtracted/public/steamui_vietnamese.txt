@@ -190,6 +190,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Lỗi"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Khởi động"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Chơi trò chơi"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Chơi trò chơi"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Cập nhật sau"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Chơi demo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Khởi chạy công cụ"
@@ -210,6 +211,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Chạy ứng dụng ngay khi nó sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Chạy trò chơi ngay khi sẵn sàng"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Chạy trò chơi ngay khi sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Chạy demo ngay khi nó sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Chạy công cụ ngay khi nó sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Phát nhạc ngay khi sẵn sàng"
@@ -238,7 +240,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_JoinDialog_Connecting_Text" "Đang kết nối đến Steam..."
 
 "SteamUI_SetCustomImage_Title" "%gamename% - Đặt ảnh tự chọn"
-"SteamUI_SetCustomImage_ChooseImage" "Chọn một hình ảnh đại diện cho %gamename% trong chế độ hiển thị lưới của Steam."
+"SteamUI_SetCustomImage_ChooseImage" "Chọn ảnh đại diện cho %gamename% trong chế độ xem dạng lưới của Steam."
 "SteamUI_SetCustomImage_ImagePrescription" "Ảnh nên có định dạng là JPEG, PNG hoặc TGA và có kích thước khoảng 460x215 pixel."
 "SteamUI_SetCustomImage_ThisFile" "Tùy chỉnh tập tin hình ảnh:"
 "SteamUI_SetCustomImage_Browse" "Duyệt..."
@@ -1284,7 +1286,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_PreloadAppStatus3"	"Đang chuẩn bị cài %s1..."
 
 "Steam_PreallocateAppStatus"	"Đang xác định chỗ trống trên ổ cứng cho %s1 ..."
-"Steam_ValidateAppStatus"	"Đang khám phá các tệp đã tồn tại cho %s1 ..."
+"Steam_ValidateAppStatus"	"Đang khám phá các file đã tồn tại cho %s1..."
 
 "Steam_CDKeyCafe"			"Bạn không thể đăng ký mã sản phẩm trên tài khoản này."
 
@@ -1359,7 +1361,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_PurchaseFraudWarning" "Gian lận thẻ tín dụng là một tội ác, và Valve hợp tác với đội hành pháp để truy tố các hoạt động bất hợp pháp."
 
 "Steam_CacheValidation_Title"		"Xác nhận các tệp Steam - hoàn thành %progress%%%"
-"Steam_ValidatingSteamCaches"		"Đang xác thực tệp %cache_name%  (%cache_number% trên %cache_total%)"
+"Steam_ValidatingSteamCaches"		"Đang kiểm tra file: %cache_name% (%cache_number% trên %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Đang xác thực các tệp cache Steam (%cache_number% trên %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Đang giải mã các tệp Steam  - hoàn thành %progress%%%"
@@ -2159,9 +2161,9 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_ValidatingSteamCaches_Label$appType=music"	"Xin vui lòng đợi trong khi Steam xác thực các tệp nhạc."
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"Xin vui lòng đợi trong khi Steam xác thực các tệp công cụ."
 
-"Steam_ValidationResults_NoFailures"	"Tất cả các tệp đã được xác thực thành công."
-"Steam_ValidationResults_OneFailure"	"Không thể xác thực 1 tập tin. Tập tin này sẽ được tải lại."
-"Steam_ValidationResults_Failures"		"Không thể xác thực %num% tệp. Những tệp này sẽ được tải lại."
+"Steam_ValidationResults_NoFailures"	"Tất cả các file được xác thực thành công."
+"Steam_ValidationResults_OneFailure"	"1 file xác thực thất bại và sẽ được tải lại."
+"Steam_ValidationResults_Failures"		"%num% file xác thực thất bại và sẽ được tải lại."
 
 "steam_mymedia"		"Media"
 "Steam_minigamescolumn_media"			"MEDIA"
@@ -3403,7 +3405,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Download_SteamChina"							"Tải Steam China"
 "Steam_Get_SteamChina"								"Cài đặt Steam China ngay"
 
-"Steam_ValidateGame_GameRunning"	"Xin vui lòng thoát bất kỳ trò chơi hoặc công cụ nào đang chạy trước khi thử xác thực các tệp lưu trên máy."
+"Steam_ValidateGame_GameRunning"	"Xin vui lòng thoát bất kỳ trò chơi hoặc công cụ nào đang chạy trước khi thử xác thực các file lưu trên máy."
 
 "Steam_RegionLabel"	"Khu vực tải xuống"
 "Steam_RegionInfo"	"Steam tự động chọn địa điểm tải xuống gần nhất, nhưng điều này có thể được chỉ định lại"
@@ -4549,7 +4551,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Truyền trực tiếp quá trình chơi của bạn từ máy tính của bạn đến các thiết bị khác. Để kết nối, chỉ cần đăng nhập vào cùng tài khoản Steam này trên một máy tính khác, hoặc chọn \"Máy tính khác\" trên Steam Link."
+"Steam_Settings_Streaming_Description" "Truyền phát quá trình chơi giữa máy tính này và các thiết bị khác. Để kết nối, chỉ cần đăng nhập vào cùng tài khoản Steam trên máy tính khác, hoặc chọn \"Máy tính khác\" trên Steam Link."
 "Steam_Settings_Streaming_DeviceName" "Tên thiết bị"
 "Steam_Settings_Streaming_Status" "TRẠNG THÁI"
 "Steam_Settings_Streaming_EnableStreaming" "Bật Remote Play"

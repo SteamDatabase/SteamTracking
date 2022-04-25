@@ -59,10 +59,10 @@
 
 "SteamGuardBanner"				"Steam Guard mit Intel® Identitätsschutz-Technik (IPT)"
 "LoginIPTNotDetected"			"Intel® Core™ Prozessor der zweiten Generation nicht erkannt.\nDieser Account darf an diesem Computer nicht verwendet werden."
-"LoginIPTDetected"				"Intel® Core™ Prozessor der\nzweiten Generation erkannt..."
-"LoginIPTNotEnabledOnAccount"	"IPT ist auf diesem Account nicht aktiviert..."
-"LoginIPTAuthenticatingWithSteam" "Authentifiziere IPT mit Steam..."
-"LoginIPTConfirmed"				"Authentifizierung bestätigt, Sie werden angemeldet..."
+"LoginIPTDetected"				"Intel® Core™ Prozessor der\nzweiten Generation erkannt …"
+"LoginIPTNotEnabledOnAccount"	"IPT ist auf diesem Account nicht aktiviert …"
+"LoginIPTAuthenticatingWithSteam" "Authentifiziere IPT mit Steam …"
+"LoginIPTConfirmed"				"Authentifizierung bestätigt, Sie werden angemeldet …"
 "LoginIPTNotConfirmed"			"IPT konnte nicht überprüft werden. Dieser Account\ndarf an diesem Computer nicht verwendet werden."
 "LoginIPTConnectFailed"		"Steam-Server nicht erreichbar.\nBitte versuchen Sie es später erneut."
 

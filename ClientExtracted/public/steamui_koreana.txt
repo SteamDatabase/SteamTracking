@@ -193,6 +193,7 @@
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - 오류"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"시작"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"게임 플레이"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"게임 플레이"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"나중에 업데이트"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"체험판 플레이"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"도구 시작"
@@ -213,6 +214,7 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"준비되는 대로 애플리케이션 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"게임이 준비되면 바로 시작"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"게임이 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"체험판이 준비되는 대로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"도구가 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"준비되면 사운드트랙 재생하기"
@@ -1529,14 +1531,14 @@
 "Steam_ComplianceRequired_Title"	"Steam - 주의"
 "Steam_ComplianceRequired_Info"		"계속 진행하려면 Steam 이용 약관의 모든 조항에 동의해야 합니다."
 
-"Steam_Legal_UnreleasedProduct"	"* 본 제품은 아직 출시가 되지 않았으며, 출시가 되면 제품을 구매한 모든 분들께 제공될 것입니다. 이 제품의 출시 날짜는 아직 확정되지 않았습니다. 따라서, 비공식적인 출처를 통한 출시 예정 날짜에 의존하지 마십시오."
+"Steam_Legal_UnreleasedProduct"	"* 본 제품은 아직 출시가 되지 않았으며, 출시가 되면 제품을 구매한 모든 분들께 제공될 것입니다. 이 제품의 출시일은 아직 확정되지 않았습니다. 따라서, 비공식적인 출처를 통한 출시 예정 날짜에 의존하지 마십시오."
 "Steam_Legal_TimeToShipGoods"	"**  Half-Life 2 골드 패키지와 함께 제공되는 사은품에는 6-8주의 배송 기간이 있습니다."
 "Steam_Legal_SSACheckbox"	"Steam 이용 약관 및 여기서 설명된 묶음의 조건은 본 구매 항목에 적용된다는 것에 동의합니다."
 "Steam_Legal_SSANext"	"동의"
 "Steam_Legal_SSADisagree"	"동의하지 않음"
 "SteamUI_HardwarePromoWizard_Title" "프로모션 행사에 등록하십시오."
 "Steam_HardwarePromo_Intro" "축하합니다! 행사 대상 자격을 갖추셨군요. 제공되는 혜택은 단 하나의 Steam 계정에만 사용할 수 있으며, 어느 컴퓨터에서든 Steam 계정에 로그인하기만 하면 해당 게임을 플레이할 수 있습니다."
-"Steam_Legal_HardwarePromo_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시 날짜는 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. 추가 약관을 보려면 '다음'을 누르십시오."
+"Steam_Legal_HardwarePromo_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시일은 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. 추가 약관을 보려면 '다음'을 누르십시오."
 "Steam_Working_HardwarePromo" "등록 요청..."
 "SteamUI_OEMTicketWizard_Title" "OEM 라이선스 등록"
 
@@ -2504,7 +2506,7 @@
 "Steam_Country_BH"		"바레인"
 "Steam_Country_BD"		"방글라데시"
 "Steam_Country_BB"		"바베이도스"
-"Steam_Country_BY"		"베라루스"
+"Steam_Country_BY"		"벨라루스"
 "Steam_Country_BE"		"벨기에"
 "Steam_Country_BZ"		"벨리즈"
 "Steam_Country_BJ"		"베냉"
@@ -2835,7 +2837,7 @@
 "Steam_GuestPassRedeemed_LinkURLLimitExceeded"	"steam://store"
 
 "Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"이 게임을 이미 가지고 있습니다"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"정품 게임을 이미 가지고 있기 때문에 %package%의 게스트 패스를 받을 수 없습니다! 정품 게임을 플레이하려면 게임을 설치한 후 게임 라이브러리에서 실행하십시오."
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"정식 게임을 이미 가지고 있기 때문에 %package%의 게스트 패스를 받을 수 없습니다! 정식 게임을 플레이하려면 게임을 설치한 후 게임 라이브러리에서 실행하십시오."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=guestpass"	"이 게스트 패스는 추가적인 필요 사항이 있습니다."
 "Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"%package%의 게스트 패스를 등록하기 위해서는, 계정 내에 %appname%을 가지고 있어야 합니다. 먼저 구매하신 뒤 게스트 패스를 다시 등록해보세요."
@@ -3251,8 +3253,8 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Purchase_PlusTax"			"구매 과정에서 세금을 포함한 합계액이 계산됩니다."
 "Steam_Purchase_PlusTaxAndShipping"	"구매 과정에서 세금, 배송 및 취급 수수료를 포함한 합계액이 계산됩니다."
 
-"Steam_Legal_PackageDetails_Unreleased_Shipping" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시 날짜는 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. %subscription% 패키지에 포함된 사은품은 배송에 6-8주 정도 걸립니다."
-"Steam_Legal_PackageDetails_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시 날짜는 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다."
+"Steam_Legal_PackageDetails_Unreleased_Shipping" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시일은 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. %subscription% 패키지에 포함된 사은품은 배송에 6-8주 정도 걸립니다."
+"Steam_Legal_PackageDetails_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시일은 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다."
 "Steam_Legal_PackageDetails_Shipping" "%subscription% 패키지에 포함된 사은품은 배송에 6-8주 정도 걸립니다."
 
 "Steam_ForcedGiftPurchase_Next"	"이 품목을 선물로 구매하려면 \"다음\"을 클릭하여 계속하십시오."
@@ -3300,7 +3302,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_ExternalSignupPropertiesButton" "%game% 계정 웹사이트 방문"
 
 "Steam_GameAlreadyInAccount" "계정에 있는 게임"
-"Steam_FullGameAlreadyInAccount" "계정에 있는 정품 게임"
+"Steam_FullGameAlreadyInAccount" "계정에 있는 정식 게임"
 "Steam_AlreadyInAccountInfo" "이미 이 곳에 있는 모든 게임을 소유하고 있으며 Steam 게임 라이브러리에서 게임을 이용할 수 있습니다."
 "SteamUI_OldClient_Title" "Steam이 구버전입니다."
 "SteamUI_OldClient" "게임을 플레이하려면 클라이언트를 업데이트하세요."
@@ -4550,7 +4552,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "컴퓨터에서 다른 기기로 게임 플레이를 스트리밍하세요. 연결하려면, 다른 컴퓨터에서 동일한 Steam 계정에 로그인하거나, Steam Link에서 '다른 컴퓨터'를 선택하세요."
+"Steam_Settings_Streaming_Description" "이 컴퓨터와 다른 기기 간에 게임플레이를 스트리밍하세요. 연결하려면, 다른 컴퓨터에서 동일한 Steam 계정에 로그인하거나, Steam Link에서 '다른 컴퓨터'를 선택하세요."
 "Steam_Settings_Streaming_DeviceName" "장비명"
 "Steam_Settings_Streaming_Status" "상태"
 "Steam_Settings_Streaming_EnableStreaming" "Remote Play 활성화"
@@ -4579,7 +4581,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_Streaming_EnableHardwareEncodingAMD" "AMD GPU에서 하드웨어 인코딩 활성화하기"
 "Steam_Settings_Streaming_EnableHardwareEncodingIntel" "Intel iGPU에서 하드웨어 인코딩 활성화하기"
 "Steam_Settings_Streaming_EnableHardwareDecoding" "하드웨어 디코딩 활성화"
-"Steam_Settings_Streaming_EnableTrafficPriority_Description" "신형 또는 고급 라우터를 사용하시는 경우, 네트워크 트래픽 우선순위조정을 사용하실 수도 있습니다."
+"Steam_Settings_Streaming_EnableTrafficPriority_Description" "신형 또는 고급 공유기를 사용하시는 경우, 네트워크 트래픽 우선순위조정을 사용하실 수도 있습니다."
 "Steam_Settings_Streaming_EnableTrafficPriority" "네트워크 트래픽 우선순위 조정"
 "Steam_Settings_Streaming_PerformanceOverlay" "성능 오버레이"
 "Steam_Settings_Streaming_PerformanceOverlayDisabled" "사용 안 함"
@@ -4867,7 +4869,7 @@ Windows에 관리자로 로그인해야 합니다.
 "DownloadRegion_cambodia"       "캄보디아"
 "DownloadRegion_vietnam"        "베트남"
 "DownloadRegion_my_kualalumpur" "말레이시아 - 쿠알라룸푸르"
-"DownloadRegion_ua_kiev"        "우크라이나 - 키이브"
+"DownloadRegion_ua_kiev"        "우크라이나 - 키이우"
 "DownloadRegion_us_sandiego"    "미국 - 샌디에이고"
 "DownloadRegion_us_sacramento"  "미국 - 새크라멘토"
 "DownloadRegion_us_minneapolis" "미국 - 미니애폴리스"
@@ -4963,8 +4965,8 @@ Windows에 관리자로 로그인해야 합니다.
 "DownloadRegion_tr_ankara"      "터키 - 앙카라"
 "DownloadRegion_tr_izmir"       "터키 - 이즈미르"
 "DownloadRegion_ua_odessa"      "우크라이나 - 오데사"
-"DownloadRegion_ua_lviv"        "우크라이나 - 리비우"
-"DownloadRegion_ua_kharkiv"     "우크라이나 - 하르키프"
+"DownloadRegion_ua_lviv"        "우크라이나 - 르비우"
+"DownloadRegion_ua_kharkiv"     "우크라이나 - 하르키우"
 "DownloadRegion_bulgaria"       "불가리아"
 "DownloadRegion_croatia"        "크로아티아"
 "DownloadRegion_lithuania"      "리투아니아"

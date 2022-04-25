@@ -162,7 +162,7 @@
 "VAC_ConnectionIssuesSupportSite"	"Haz clic aquí para consultar el sitio de soporte de Steam."
 "VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/?l=spanish"
 "VAC_LoggedInElsewhere_Title"		"Cuenta utilizada en otro sitio"
-"VAC_LoggedInElsewhereReason"		"Esta cuenta de Steam se ha utilizado para conectarse desde otro ordenador. Para continuar utilizando Steam, debes conectarte de nuevo."
+"VAC_LoggedInElsewhereReason"		"Esta cuenta de Steam se ha utilizado para conectarse desde otro equipo. Para continuar utilizando Steam, debes conectarte de nuevo."
 
 "ServerBrowser_FriendNotInGameServer"	"%friend% no está jugando en ningún servidor de juegos."
 "ServerBrowser_NotInGame"				"[ ninguno ]"

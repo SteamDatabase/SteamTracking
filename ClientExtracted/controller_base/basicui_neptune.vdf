@@ -23,6 +23,11 @@
 					"input_mode"		"absolute_mouse"
 					"os_mouse"		"1"
 				}
+				"Scroll"
+				{
+					"title"		"#Action_Scroll"
+					"input_mode"		"absolute_mouse"
+				}
 			}
 			"Button"
 			{
@@ -161,8 +166,19 @@
 				"LEFTSTICK_DOWN"		"#Action_Down"
 				"LEFTSTICK_LEFT"		"#Action_Left"
 				"LEFTSTICK_RIGHT"		"#Action_Right"
+				"LEFTSTICK_CLICK"		"#Action_LeftStickClick"
 				"LBACK"		"#Action_Shift"
 				"RBACK"		"#Action_Alt"
+				"LeftStick"				"#Action_LeftStick"
+				"RightStick"			"#Action_RightStick"
+				"LeftTrackpad"			"#Action_LeftTrackpad"
+				"LeftTrackpadClick"		"#Action_LeftTrackpadClick"
+				"RightTrackpad"			"#Action_RightTrackpad"
+				"RightTrackpadClick"	"#Action_RightTrackpadClick"
+				"RearLeftUpper"			"#Action_RearLeftUpper"
+				"RearLeftLower"			"#Action_RearLeftLower"
+				"RearRightUpper"		"#Action_RearRightUpper"
+				"RearRightLower"		"#Action_RearRightLower"
 			}
 		}
 	}
@@ -2407,6 +2423,29 @@
 		"mode"		"absolute_mouse"
 		"inputs"
 		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RightTrackpadClick"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"sensitivity"		"124"
+			"haptic_intensity"		"0"
+		}
+		"gameactions"
+		{
+			"Default"		"Scroll"
 		}
 	}
 	"group"
@@ -2494,56 +2533,6 @@
 	}
 	"group"
 	{
-		"id"		"25"
-		"mode"		"joystick_move"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Soft_Press"
-					{
-						"bindings"
-						{
-							"binding"		"game_action Keyboard RTRIGGER, Press Right Key"
-						}
-					}
-				}
-			}
-		}
-		"settings"
-		{
-			"virtual_mode"		"1"
-		}
-	}
-	"group"
-	{
-		"id"		"26"
-		"mode"		"joystick_move"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Soft_Press"
-					{
-						"bindings"
-						{
-							"binding"		"game_action Keyboard LTRIGGER, Press Left Key"
-						}
-					}
-				}
-			}
-		}
-		"settings"
-		{
-			"virtual_mode"		"1"
-		}
-	}
-	"group"
-	{
 		"id"		"27"
 		"mode"		"joystick_move"
 		"inputs"
@@ -2556,7 +2545,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Keyboard LTRIGGER, Press Left Key"
+							"binding"		"game_action Keyboard LeftTrackpadClick"
+						}
+					}
+				}
+			}
+			"touch"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LeftTrackpad"
 						}
 					}
 				}
@@ -2588,7 +2590,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Keyboard RTRIGGER, Press Right Key"
+							"binding"		"game_action Keyboard RightTrackpadClick"
+						}
+					}
+				}
+			}
+			"touch"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard RightTrackpad"
 						}
 					}
 				}
@@ -2619,7 +2634,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press UP_ARROW"
+							"binding"		"game_action Keyboard LEFTSTICK_UP"
 						}
 						"settings"
 						{
@@ -2636,7 +2651,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press DOWN_ARROW"
+							"binding"		"game_action Keyboard LEFTSTICK_DOWN"
 						}
 						"settings"
 						{
@@ -2653,7 +2668,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press RIGHT_ARROW"
+							"binding"		"game_action Keyboard LEFTSTICK_RIGHT"
 						}
 						"settings"
 						{
@@ -2670,11 +2685,24 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press LEFT_ARROW"
+							"binding"		"game_action Keyboard LEFTSTICK_LEFT"
 						}
 						"settings"
 						{
 							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LEFTSTICK_CLICK"
 						}
 					}
 				}
@@ -2751,14 +2779,6 @@
 					}
 				}
 			}
-		}
-	}
-	"group"
-	{
-		"id"		"33"
-		"mode"		"four_buttons"
-		"inputs"
-		{
 		}
 	}
 	"group"
@@ -3180,6 +3200,23 @@
 						"bindings"
 						{
 							"binding"		"game_action Default LEFTSTICK_LEFT, Move Left"
+						}
+					}
+				}
+			}
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action empty_binding"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
 						}
 					}
 				}
@@ -3944,6 +3981,19 @@
 					}
 				}
 			}
+			"always_on_action"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action ts_n"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -4078,8 +4128,12 @@
 		}
 		"settings"
 		{
-			"output_joystick"		"2"
+			"virtual_mode"		"1"
 			"sensitivity"		"200"
+		}
+		"gameactions"
+		{
+			"Default"		"Scroll"
 		}
 	}
 	"preset"
@@ -4089,7 +4143,7 @@
 		"group_source_bindings"
 		{
 			"15"		"switch active"
-			"19"		"right_trackpad inactive"
+			"19"		"right_trackpad active"
 			"10"		"button_diamond active"
 			"4"		"left_trigger active"
 			"5"		"right_trigger active"
@@ -4102,7 +4156,7 @@
 			"52"		"dpad inactive"
 			"53"		"dpad inactive"
 			"54"		"dpad active"
-			"33"		"right_joystick inactive"
+			"33"		"right_joystick active"
 		}
 	}
 	"preset"
@@ -4145,7 +4199,6 @@
 		"group_source_bindings"
 		{
 			"20"		"switch active"
-			"25"		"right_trackpad inactive"
 			"28"		"right_trackpad active"
 			"61"		"right_joystick inactive"
 			"30"		"button_diamond inactive"
@@ -4153,7 +4206,6 @@
 			"21"		"left_trigger active"
 			"22"		"right_trigger active"
 			"29"		"joystick active"
-			"26"		"left_trackpad inactive"
 			"27"		"left_trackpad active"
 			"56"		"dpad active"
 		}

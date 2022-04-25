@@ -101,7 +101,7 @@
 "Overlay_Achievement_Title"		"成就 / %percent%%"
 "Overlay_Achievement_Progress"	"您達成了 %total% 項成就中的 %earned% 項"
 "Overlay_Achievement_Recent"	"最近項目"
-"Overlay_Achievement_Soon"		"離目標不遠了..."
+"Overlay_Achievement_Soon"		"離目標不遠了…"
 
 "Overlay_WebBrowser_Back"		"上一頁"
 "Overlay_WebBrowser_Forward"	"下一頁"
@@ -115,7 +115,7 @@
 "steam_menu_friends_hideoffline"	 "只顯示在線上的好友"
 "steam_menu_friends_players"			 "玩家"
 "steam_menu_friends_tools"         "工具"
-"steam_menu_friends_add"					 "新增好友..."
+"steam_menu_friends_add"					 "新增好友…"
 "steam_menu_friends_settings"      "設定"
 
 "friends_searchOnline"				 "搜尋 Steam 社群的成員"

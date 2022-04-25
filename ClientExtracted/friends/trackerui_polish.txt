@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Przeglądarka"
 "Overlay_SettingsBrowserDesc" "Poniższe ustawienia są stosowane dla przeglądarki internetowej wbudowanej w klienta Steam oraz nakładkę Steam wewnątrz gry."
-"Steam_SettingsBrowserClearWebCache"	"Usuń pamięć podręczną przeglądarki"
-"Steam_SettingsBrowserClearAllCookies"	"Usuń ciasteczka z przeglądarki"
-"Steam_Settings_Browser_DeleteTitle"	"Usuń ciasteczka"
-"Steam_Settings_Browser_DeleteMsg"	"Usunąć wszystkie ciasteczka z przeglądarki Steam?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Wyczyść pamięć podręczną przeglądarki"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Usunąć wszystkie pliki z pamięci podręcznej wbudowanej przeglądarki internetowej?"
+"Steam_SettingsBrowserDeleteAllData"	"Usuń dane przeglądarki"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Usunąć wszystkie pliki pamięci podręcznej przeglądarki, pliki cookies i historię Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Zaproś kogokolwiek do gry linkiem z twojej listy znajomych."

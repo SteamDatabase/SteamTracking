@@ -59,10 +59,10 @@
 
 "SteamGuardBanner"				"Steam Guard 配備 Intel® 身分辨識保護技術"
 "LoginIPTNotDetected"			"未偵測到第二代的 Intel® Core™ 處理器。\n此帳戶可能無法在這台電腦上使用。"
-"LoginIPTDetected"				"已偵測到二代 Intel® Core™\n處理器 ..."
-"LoginIPTNotEnabledOnAccount"	"IPT 在此帳戶上尚未啟用..."
-"LoginIPTAuthenticatingWithSteam" "使用 Steam 認證 IPT..."
-"LoginIPTConfirmed"				"認證已確認，正在登入..."
+"LoginIPTDetected"				"已偵測到二代 Intel® Core™\n處理器…"
+"LoginIPTNotEnabledOnAccount"	"IPT 在此帳戶上尚未啟用…"
+"LoginIPTAuthenticatingWithSteam" "使用 Steam 認證 IPT…"
+"LoginIPTConfirmed"				"認證已確認，正在登入…"
 "LoginIPTNotConfirmed"			"IPT 無法被驗證。此帳戶\n可能無法在這台電腦上使用。"
 "LoginIPTConnectFailed"		"無法連線至 Steam 處理器。\n請稍後再試。"
 

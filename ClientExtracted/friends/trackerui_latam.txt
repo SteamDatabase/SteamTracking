@@ -4,7 +4,7 @@
 "Tokens" 
 { 
 "TrackerUI_ConnectionSpeed"				"Velocidad de conexión a Internet"
-"TrackerUI_FavoriteWindowLabel_Windows"	"Selecciona qué ventana de Steam aparecerá cuando se inicie el programa y cuando hagas doble clic en el icono de la Bandeja de Notificación."
+"TrackerUI_FavoriteWindowLabel_Windows"	"Selecciona qué ventana de Steam aparecerá cuando se inicie el programa y cuando hagas doble clic en el ícono de la Bandeja de Notificación."
 "TrackerUI_FavoriteWindowLabel"			"Selecciona la ventana de Steam que aparecerá cuando se inicie el programa."
 "TrackerUI_FavoriteWindow"			"Ventana favorita"
 
@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Navegador web"
 "Overlay_SettingsBrowserDesc" "Los siguientes ajustes se aplican al navegador web que se utiliza tanto en el cliente como en la interfaz en la partida de Steam."
-"Steam_SettingsBrowserClearWebCache"	"Borrar caché del navegador web"
-"Steam_SettingsBrowserClearAllCookies"	"Borrar todas las cookies"
-"Steam_Settings_Browser_DeleteTitle"	"Borrar cookies"
-"Steam_Settings_Browser_DeleteMsg"	"¿Borrar toda la información de cookies del navegador de Steam?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Borrar caché del navegador"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"¿Borrar todos los archivos de la caché del navegador web integrado?"
+"Steam_SettingsBrowserDeleteAllData"	"Eliminar datos del navegador web"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"¿Quieres eliminar todos los archivos, cookies y el historial en caché del navegador relacionados con Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Invita, con un enlace, a quien quieras de tu lista de amigos a jugar."

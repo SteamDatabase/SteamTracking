@@ -1,5 +1,6 @@
 import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
+import "enums.proto";
 
 option cc_generic_services = true;
 
@@ -148,6 +149,7 @@ message CStore_UserPreferences {
 	optional bool hide_store_broadcast = 9;
 	optional .EUserReviewScorePreference review_score_preference = 10 [default = k_EUserReviewScorePreference_Unset];
 	optional int32 timestamp_content_descriptor_preferences_updated = 11;
+	optional .EProvideDeckFeedbackPreference provide_deck_feedback = 12 [default = k_EProvideDeckFeedbackPreference_Unset];
 }
 
 message CStore_UserTagPreferences {
@@ -190,6 +192,24 @@ message CStore_GetTrendingAppsAmongFriends_Response {
 	repeated .CStore_GetTrendingAppsAmongFriends_Response.TrendingAppData trending_apps = 1;
 }
 
+message CSteamDeckCompatibility_SetFeedback_Request {
+	optional uint32 appid = 1;
+	optional .ESteamDeckCompatibilityFeedback feedback = 2 [default = k_ESteamDeckCompatibilityFeedback_Unset];
+}
+
+message CSteamDeckCompatibility_SetFeedback_Response {
+}
+
+message CSteamDeckCompatibility_ShouldPrompt_Request {
+	optional uint32 appid = 1;
+}
+
+message CSteamDeckCompatibility_ShouldPrompt_Response {
+	optional bool prompt = 1;
+	optional bool feedback_eligible = 2;
+	optional .ESteamDeckCompatibilityFeedback existing_feedback = 3 [default = k_ESteamDeckCompatibilityFeedback_Unset];
+}
+
 message CStore_StorePreferencesChanged_Notification {
 	optional .CStore_UserPreferences preferences = 1;
 	optional .CStore_UserTagPreferences tag_preferences = 2;
@@ -221,6 +241,14 @@ service Store {
 
 	rpc GetTrendingAppsAmongFriends (.CStore_GetTrendingAppsAmongFriends_Request) returns (.CStore_GetTrendingAppsAmongFriends_Response) {
 		option (method_description) = "Get trending apps among friends";
+	}
+
+	rpc SetCompatibilityFeedback (.CSteamDeckCompatibility_SetFeedback_Request) returns (.CSteamDeckCompatibility_SetFeedback_Response) {
+		option (method_description) = "Upserts user feedback regarding the published Steam Deck Compatibility rating for a game";
+	}
+
+	rpc ShouldPromptForCompatibilityFeedback (.CSteamDeckCompatibility_ShouldPrompt_Request) returns (.CSteamDeckCompatibility_ShouldPrompt_Response) {
+		option (method_description) = "Returns whether we should ask the user if the compatibility rating is correct";
 	}
 }
 

@@ -166,6 +166,10 @@ message CCloud_ExternalStorageTransferReport_Notification {
 	optional bool proxied = 10;
 	optional bool ipv6_local = 11;
 	optional bool ipv6_remote = 12;
+	optional uint32 time_to_connect_ms = 13;
+	optional uint32 time_to_send_req_ms = 14;
+	optional uint32 time_to_first_byte_ms = 15;
+	optional uint32 time_to_last_byte_ms = 16;
 }
 
 message CCloud_BeginAppUploadBatch_Request {

@@ -397,6 +397,7 @@ message CNegotiatedConfig {
 	repeated .CStreamVideoMode available_video_modes = 4;
 	optional bool enable_remote_hid = 5;
 	optional bool enable_touch_input = 6;
+	optional bool disable_client_cursor = 7;
 }
 
 message CNegotiationInitMsg {

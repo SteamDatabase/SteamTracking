@@ -65,7 +65,7 @@
 "ServerBrowser_InternetTab"			"อินเทอร์เน็ต"
 "ServerBrowser_FavoritesTab"			"ชื่นชอบ"
 "ServerBrowser_SpectateTab"			"สังเกตการณ์"
-"ServerBrowser_LanTab"				"แลน"
+"ServerBrowser_LanTab"				"LAN"
 "ServerBrowser_FriendsTab"			"เพื่อน"
 "ServerBrowser_HistoryTab"			"ประวัติ"
 "ServerBrowser_GameInfoTitle"			"รายละเอียดเกม"

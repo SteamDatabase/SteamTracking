@@ -196,6 +196,7 @@ This should take less than a minute."
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Error"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Launch"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Play game"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Play game"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Update later"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Play demo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Launch tool"
@@ -216,6 +217,7 @@ This should take less than a minute."
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Launch application as soon as it's ready"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Launch game as soon as it's ready"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Launch game as soon as it's ready"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Launch demo as soon as it's ready"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Launch tool as soon as it's ready"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Play soundtrack as soon as it's ready"
@@ -734,8 +736,12 @@ This should take less than a minute."
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Enable saving account credentials"
 
 "SteamUI_OfflineMode_Title" "Steam - Offline Mode"
-"SteamUI_OfflineMode_GoOfflineDesc" "Offline Mode is used when you're about to unplug your laptop,\nor are otherwise expecting to not be connected to the Internet.\n\nMany features, such as Friends and the Server Browser, will not\nbe available while offline. Only games that are fully up-to-date\nwill be available."
-"SteamUI_OfflineMode_GoOnlineDesc" "Do you want to go back online?\n\nThis will require Steam to restart.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "Offline Mode is used when you're about to unplug your laptop,\nor are otherwise expecting to not be connected to the Internet.\n\nMany features, such as Friends and Family Sharing, will not\nbe available while offline. Only games that are fully up-to-date\nwill be available."
+"SteamUI_OfflineMode_GoOnlineDesc" "Do you want to go back online?"
+"SteamUI_OfflineMode_MustCloseGames" "All running games must be closed before entering Offline Mode"
+"SteamUI_OfflineMode_EnterOfflineMode" "Enter Offline Mode"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Leave Offline Mode"
+
 "SteamUI_GameProperties_Status"	"Status"
 "SteamUI_GameProperties_UpdateNews"	"Update news"
 "SteamUI_GamePropertiesContent_OfflineMode" "Offline Mode:"
@@ -1367,7 +1373,7 @@ This should take less than a minute."
 "Steam_PurchaseFraudWarning" "Credit card fraud is a crime, and Valve cooperates with law enforcement to prosecute illegal activity."
 
 "Steam_CacheValidation_Title"		"Validating Steam files - %progress%%% complete"
-"Steam_ValidatingSteamCaches"		"Validating %cache_name% file (%cache_number% of %cache_total%)"
+"Steam_ValidatingSteamCaches"		"Validating %cache_name% files (%cache_number% of %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Validating Steam cache files (%cache_number% of %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Decrypting Steam files - %progress%%% complete"
@@ -3584,7 +3590,7 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles\n(Requires a 1GB download)"
 
-"Steam_CannotInstallInOfflineMode"		"Games cannot be installed when Steam is in Offline Mode.\nExit and restart Steam, and choose 'Go Online'.\n"
+"Steam_CannotInstallInOfflineMode"		"Games cannot be installed when Steam is in Offline Mode.\nTo leave Offline mode choose 'Go Online' in the Steam menu.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - Downloads Disabled"
 "Steam_CannotInstallDownloadsDisabled"	"Games cannot be installed when downloads are disabled.\n"
@@ -4539,11 +4545,6 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Allow background processing of Vulkan shaders"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Processing %shaderapp%... (%shaderpercent%%)"
 
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "This game will launch with Steam Play, using a platform compatibility tool.\n\nPlease review the FAQ for information on how to get the best experience on your system."
-"SteamPlay_FAQ"                             "Steam Play FAQ"
-
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Steam Play Settings"
 "Steam_Settings_Compat_Info"			    "Steam Play will automatically install compatibility tools that allow you to play games from your library that were built for other operating systems."
@@ -4566,7 +4567,7 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Stream gameplay from your computer to other devices. To connect, simply log into this same Steam account on another computer, or choose \"Other Computer\" on your Steam Link."
+"Steam_Settings_Streaming_Description" "Stream gameplay between this computer and other devices. To connect, simply log into this same Steam account on another computer, or choose \"Other Computer\" on your Steam Link."
 "Steam_Settings_Streaming_DeviceName" "DEVICE NAME"
 "Steam_Settings_Streaming_Status" "STATUS"
 "Steam_Settings_Streaming_EnableStreaming" "Enable Remote Play"

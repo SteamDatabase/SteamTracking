@@ -33,6 +33,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+2&3O
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -420,8 +421,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Apr 20 2022
-12:05:27
+Apr 25 2022
+12:27:53
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -434,7 +435,6 @@ IVALIDATE001
 -steamos3
 -holo
 -chromeos
--gamepadui
 -steamdeck
 GAMESCOPE_WAYLAND_DISPLAY
 /System/Library/CoreServices/SystemVersion.plist
@@ -841,7 +841,7 @@ OutputDebugString
 InDebugSession
 Steam
 ChromeOS
-Game
+Gamescope
 OutputFunc
 ChangeIfStillDefault
 WrittenMiniDumps
@@ -938,8 +938,6 @@ Exists
 Value
 ConsoleMode
 Deck
-padUI
-scope
 UTF8
 hread
 Thread_Yield
@@ -961,7 +959,7 @@ MicroSleepPOSIX
 Terminate
 !OpenProcess
 !CloseProcess
-"ResumeProcess
+!ResumeProcess
 "WaitForProcessExit
 "FindProcessByName
 leep
@@ -1002,7 +1000,7 @@ NoWindow
 2CloseSemaphoreInternalEibPKc
 &3CreateSemaphoreInternalEPKclbPb
 '1OpenSemaphoreInternalEPKcb
-(9EnsureSemaphorePostedInternalEi
+'9EnsureSemaphorePostedInternalEi
 (7IsSemaphoreOrphanedInternalEii
 6SteamThreadTools
 %7CThread
@@ -1014,14 +1012,14 @@ AcquireSemaphoreInternalEj
 &ReleaseSemaphoreInternalEil
 Event
 &Mutex
-'3SetEv
+&3SetEv
 'PKcbb
 3CreateAnonymousSyncObjectInternalEbb
 'PKcbb
 SignalThreadSyncObjectInternalEv
 (EnsureSemaphoreClearedInternalEi
 ResetEv
-)CheckEv
+(CheckEv
 Semaphore
 )FullMutex
 )LocalBase
@@ -1034,11 +1032,11 @@ Semaphore
 FullMutex9IsCreatorEv
 *LocalBase
 +3SetEPv
-+1Ev
+*1Ev
 +1Ev
 3GetEv
 +8BIsValidEv
-,Pointer
++Pointer
 Pointer
 ,1Ev
 -1Ev
@@ -1046,7 +1044,7 @@ Pointer
 WaitForReadEv
 -UnlockWriteEv
 	C2Ev
-29TerminateEi
+19TerminateEi
 .1Ev
 00Ev
 .9GetResultEv
@@ -1057,7 +1055,7 @@ WaitForReadEv
 GetNameEv
 7GetCurrentCThreadEv
 01SetPriorityEi
-23GetThreadProcEv
+13GetThreadProcEv
 20ThreadProcEPv
 JoinEj
 0StopEi
@@ -1109,7 +1107,7 @@ MemoryEPKv
 9SocketEi
 :OsFileEi
 TrackedKeyEP11CTrackItemsPvPm
-:ConnectionEj
+9ConnectionEj
 FinalizeEv
 :ValidateERS_PKc
 ;9CVProfile
@@ -1122,7 +1120,7 @@ L8ValidateER10CValidatorPKc
 <2Ev
 GetProfileForCurrentThread
 <EnterScopeCurrentThread
-E6ResumeEv
+D6ResumeEv
 =2Ev
 9AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
 >8BIsProfilePtrValidEPNS_9CVProfileE
@@ -1139,7 +1137,7 @@ GDumpNodesEPNS_10CVProfNodeEib
 C6ResumeEv
 C8ValidateER10CValidatorPKc
 2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
-B1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+A1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
 ResetEv
 BPauseEv
 B1Ev
@@ -1153,7 +1151,7 @@ CResetPeakEv
 D2GetCurTimeLessChildrenEv
 D3GetPrevTimeLessChildrenEv
 StartEv
-EPauseEv
+DPauseEv
 GResetEv
 StopEv
 FDumpEPKcz
@@ -1185,7 +1183,7 @@ N0GetAllThreadProfilesEPNS_14CVProfileArrayE
 CleanupUnusedProfilesEv
 MDumpAllThreadProfilesEi
 DeleteProfileEv
-NStopProfilingEv
+MStopProfilingEv
 1EPNS_9CVProfileEjP17_opaque_pthread_t
 O2EPNS_9CVProfileEjP17_opaque_pthread_t
 OVN16SteamThreadTools7CThreadE
@@ -1193,7 +1191,7 @@ PIN16SteamThreadTools7CThreadE
 6SteamThreadTools7CThreadE
 P0SteamVProf13CVProfManagerE
 ClockSpeed
-QpMemAllocSteam
+PpMemAllocSteam
 QbInException
 QVProf
 QSecondsMultiplier
@@ -1211,7 +1209,7 @@ Dzll
 789>>8'
 RO""@@F
 			BA"
-Y@@@E88
+Y@@E88
 ]W m(
 iF=+
 E5'$u	
@@ -1293,7 +1291,6 @@ _Plat_GetPackageName
 _Plat_GetProcessArgv
 _Plat_GetStackBackTrace
 _Plat_IsChromeOS
-_Plat_IsGamepadUI
 _Plat_IsGamescope
 _Plat_IsInDebugSession
 _Plat_IsSteamConsoleMode
@@ -1785,32 +1782,30 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-&)Qz
-l%O)*1
-UY /
-9x!gq
-j~ly
-9h~}
-|gzO
+ <Da
+.e<w
+cdE-T/9
+%vmJ1
+ID0O
+s_{=>Y
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-8+iV
-&8FR
-?[WI
-Vre,
-o|za
-~Blknp
-Eg_;
-!jnZs
-%UD|
-2Lg>
-cM I
-zq{~
-\5R4
-Ine	
-Wb+n
+2sH\
+:v3DH
+}#ArE9
+_8t?4
+3{Z"
+8`MHv
+([~~
+g&O5Vq
+NNo6
+gN#	8
+@kp!s
+Kf]cT#
+"d,7
+JgTWn
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1866,9 +1861,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220420190530Z0/
-PA>c)
-U$aq0[
+220425192755Z0/
+gRNMy0[
+ -'n]
+7:9=
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1876,41 +1872,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		6ToXaU/u4gnkXGg3F+bjD7+k9TY=
+		ObhY/vwKRrYtkEuUnw1GJo3QtF0=
 		</data>
 		<data>
-		R/N+Ycsw4Rwm+w1X2h7D+Jv3CEI=
+		LSduXQ4tft1hiMwauFxo0l2fNzo=
 		</data>
 	</array>
 </dict>
 </plist>
-Py]5
-)cg\5
-eau}
-/.Cc
-20220420190608Z0
-eW9=
+2&`d
+b!^4
+20220425192822Z0
+pAyp
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220412165002Z
-220524165001Z0B1
-Timestamp Signer NWK21
+220412170002Z
+220524170001Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-,BAF
-=ONo
-K8dR
-iId&
++a4+
+Ya5]
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-~WZx
-1R&}
-Js,m`;@
-d/fY
-Fz'H&
+\O<t
+T(rY
+CB9&!-
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1949,11 +1939,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220420190608Z0#
-?]9@
-^=S4@s
-M\B=
-C81J
+220425192822Z0#
+:Pfj
+8=_7R
+0b0e
 __TEXT
 __text
 __TEXT
@@ -1989,7 +1978,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-DGR$
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -2033,7 +2021,6 @@ AWAVAUATSPE
 [A\A]A^A_]
 AVSH
 [A^]
-9=+G
 AVSH
 [A^]
 AVSH
@@ -2679,8 +2666,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Apr 20 2022
-12:05:27
+Apr 25 2022
+12:27:53
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -2693,7 +2680,6 @@ IVALIDATE001
 -steamos3
 -holo
 -chromeos
--gamepadui
 -steamdeck
 GAMESCOPE_WAYLAND_DISPLAY
 /System/Library/CoreServices/SystemVersion.plist
@@ -3096,7 +3082,7 @@ OutputDebugString
 InDebugSession
 Steam
 ChromeOS
-Game
+Gamescope
 OutputFunc
 ChangeIfStillDefault
 WrittenMiniDumps
@@ -3193,8 +3179,6 @@ Exists
 Value
 ConsoleMode
 Deck
-padUI
-scope
 UTF8
 hread
 Thread_Yield
@@ -3209,14 +3193,14 @@ inished
 7CThread
 8CreateSimpleThreadEPFjPvES0_Pjj
 7CThreadSyncObject
-#2CThread
+"2CThread
 &6CThread
 )3CThreadRWLock1
 MicroSleepPOSIX
 Terminate
 !OpenProcess
 !CloseProcess
-"ResumeProcess
+!ResumeProcess
 "WaitForProcessExit
 "FindProcessByName
 leep
@@ -3258,7 +3242,7 @@ NoWindow
 2CloseSemaphoreInternalEibPKc
 &3CreateSemaphoreInternalEPKclbPb
 '1OpenSemaphoreInternalEPKcb
-(9EnsureSemaphorePostedInternalEi
+'9EnsureSemaphorePostedInternalEi
 (7IsSemaphoreOrphanedInternalEii
 6SteamThreadTools
 %7CThread
@@ -3270,31 +3254,31 @@ AcquireSemaphoreInternalEj
 &ReleaseSemaphoreInternalEil
 Event
 &Mutex
-'3SetEv
+&3SetEv
 'PKcbb
 3CreateAnonymousSyncObjectInternalEbb
 'PKcbb
 SignalThreadSyncObjectInternalEv
 (EnsureSemaphoreClearedInternalEi
 ResetEv
-)CheckEv
+(CheckEv
 Semaphore
 )FullMutex
 )LocalBase
 )7ReleaseEl
 2Ell
 )1Ell
-*7ReleaseEv
+)7ReleaseEv
 2EbPKcbb
 *1EbPKcbb
 FullMutex9IsCreatorEv
 *LocalBase
 +3SetEPv
-+1Ev
+*1Ev
 +1Ev
 3GetEv
 +8BIsValidEv
-,Pointer
++Pointer
 Pointer
 ,1Ev
 -1Ev
@@ -3302,7 +3286,7 @@ Pointer
 WaitForReadEv
 -UnlockWriteEv
 	C2Ev
-29TerminateEi
+19TerminateEi
 .1Ev
 00Ev
 .9GetResultEv
@@ -3313,14 +3297,14 @@ WaitForReadEv
 GetNameEv
 7GetCurrentCThreadEv
 01SetPriorityEi
-23GetThreadProcEv
+13GetThreadProcEv
 20ThreadProcEPv
 JoinEj
 0StopEi
 1InitEv
 etNameEPKc
 0uspendEv
-1YieldEv
+0YieldEv
 tartEm
 1leepEj
 1WaitForCreateCompleteEPNS_12CThreadEventE
@@ -3348,7 +3332,7 @@ CValidator
 1UnlockValidationLocksEv
 60ClaimUntrackedMemoryEm
 8SetAllocSizeFilterEi
-99ClaimMemory_AlignedEPKv
+89ClaimMemory_AlignedEPKv
 96ClaimArrayMemoryEPKv
 95Claim
 93RenderObjectsEm
@@ -3378,7 +3362,7 @@ L8ValidateER10CValidatorPKc
 <2Ev
 GetProfileForCurrentThread
 <EnterScopeCurrentThread
-E6ResumeEv
+D6ResumeEv
 =2Ev
 9AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
 >8BIsProfilePtrValidEPNS_9CVProfileE
@@ -3395,7 +3379,7 @@ GDumpNodesEPNS_10CVProfNodeEib
 C6ResumeEv
 C8ValidateER10CValidatorPKc
 2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
-B1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+A1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
 ResetEv
 BPauseEv
 B1Ev
@@ -3409,7 +3393,7 @@ CResetPeakEv
 D2GetCurTimeLessChildrenEv
 D3GetPrevTimeLessChildrenEv
 StartEv
-EPauseEv
+DPauseEv
 GResetEv
 StopEv
 FDumpEPKcz
@@ -3441,15 +3425,15 @@ N0GetAllThreadProfilesEPNS_14CVProfileArrayE
 CleanupUnusedProfilesEv
 MDumpAllThreadProfilesEi
 DeleteProfileEv
-NStopProfilingEv
+MStopProfilingEv
 1EPNS_9CVProfileEjP17_opaque_pthread_t
 O2EPNS_9CVProfileEjP17_opaque_pthread_t
-PVN16SteamThreadTools7CThreadE
+OVN16SteamThreadTools7CThreadE
 PIN16SteamThreadTools7CThreadE
 6SteamThreadTools7CThreadE
 P0SteamVProf13CVProfManagerE
 ClockSpeed
-QpMemAllocSteam
+PpMemAllocSteam
 QbInException
 QVProf
 QSecondsMultiplier
@@ -3463,7 +3447,7 @@ Bvvh
 LAA~{
 23.5/+
 GG>.1i1
-qJ33398:
+qJ3398:
 UHD!
 **v8
 ,*,3D	EP
@@ -3541,7 +3525,6 @@ _Plat_GetPackageName
 _Plat_GetProcessArgv
 _Plat_GetStackBackTrace
 _Plat_IsChromeOS
-_Plat_IsGamepadUI
 _Plat_IsGamescope
 _Plat_IsInDebugSession
 _Plat_IsSteamConsoleMode
@@ -4031,30 +4014,31 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-NZ']O^
-gGA,
-(u@gMGG!
-a)s^
-2_~7j
-v *lJ?e
-&gqj
-TTj-3
-r{ o
-%!Y`
-`8a^
-qh|J9
-]=uT
+q	2o
+zD"G
+@Ye'
+37ak[
+'-zu
+P#"`Z
+*M)f:
+i~nx
+FgH^
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-F4Ix
-eQY-p
-Gj[Ss
-lMfE
-rX.H
-+og&
-{ljp
+6s,P
+2$-;
+N7Evs
+|YY?
+C=r|
+!qL4
+0pQKP
+QQ^Z
+=j79^a
+e00;
+G+I&$
+R'1p
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4110,9 +4094,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220420190530Z0/
-ywLO
-F-73y
+220425192755Z0/
+;,0-
+ y@_
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4120,17 +4104,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		jNOTeXdMTxXNPdv8Ri03M3nspVg=
+		8FwJizoS31yZIpZoCCG5TUHhOyw=
 		</data>
 		<data>
-		8NmfnAHZG7Pw1xKsz8ispWSueQg=
+		eUBfEVeINs7jnutLLS8EjZO1fw0=
 		</data>
 	</array>
 </dict>
 </plist>
-If|20
-20220420190608Z0
-6hSt>
+x	0%	
+~(Hw
+iv3v
+k+%~:`D
+20220425192822Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4186,10 +4172,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220420190608Z0#
-V@0+
-'Y70
-WDxQ*9
+220425192822Z0#
 __TEXT
 __text
 __TEXT
@@ -4226,7 +4209,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-%)>r9
+t71!
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -4244,10 +4227,9 @@ kjh8k
 i+8,
 (a@9
 5(	@
-A		\!
-~	X)
-u	X)
-k	X)
+	|	X)
+r	X)
+h	X)
 QY9h
 Th^@
 Th^@
@@ -4267,27 +4249,27 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-p	Xh
+(n	Xh
 @9?q
 @9_q
-hS	XH
-hR	XH
- R	X
 P	XH
-P	Xi
-N	XH
-HN	Xi
+O	XH
+`O	X
+(N	XH
+M	Xi
 K	XH
-K	\ 
-D	\ 
-	B	X
+K	Xi
+(I	XH
+I	\ 
+AF	\
+!B	\ 
+I?	X
 jt8 
 h"H9
 h*H9
 h2H9
 h:H9
 hBH9
-hJH9
 bH9h
 hbP9(
 C9uR
@@ -4336,8 +4318,8 @@ T		@
 `@9(
 hf@9
 hj@9
+a^)v
 4aJ@
-a^w(
 o( `
 3IYi
 SHYh
@@ -4412,8 +4394,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Apr 20 2022
-12:05:28
+Apr 25 2022
+12:27:53
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4426,7 +4408,6 @@ IVALIDATE001
 -steamos3
 -holo
 -chromeos
--gamepadui
 -steamdeck
 GAMESCOPE_WAYLAND_DISPLAY
 /System/Library/CoreServices/SystemVersion.plist
@@ -4828,7 +4809,7 @@ OutputDebugString
 InDebugSession
 Steam
 ChromeOS
-Game
+Gamescope
 OutputFunc
 ChangeIfStillDefault
 WrittenMiniDumps
@@ -4925,8 +4906,6 @@ Exists
 Value
 ConsoleMode
 Deck
-padUI
-scope
 UTF8
 hread
 Thread_Yield
@@ -4941,7 +4920,7 @@ inished
 7CThread
 8CreateSimpleThreadEPFjPvES0_Pjj
 7CThreadSyncObject
-#2CThread
+"2CThread
 &6CThread
 )3CThreadRWLock1
 MicroSleepPOSIX
@@ -5002,31 +4981,31 @@ AcquireSemaphoreInternalEj
 &ReleaseSemaphoreInternalEil
 Event
 &Mutex
-'3SetEv
+&3SetEv
 'PKcbb
 3CreateAnonymousSyncObjectInternalEbb
 'PKcbb
 SignalThreadSyncObjectInternalEv
 (EnsureSemaphoreClearedInternalEi
 ResetEv
-)CheckEv
+(CheckEv
 Semaphore
 )FullMutex
 )LocalBase
 )7ReleaseEl
 2Ell
 )1Ell
-*7ReleaseEv
+)7ReleaseEv
 2EbPKcbb
 *1EbPKcbb
 FullMutex9IsCreatorEv
 *LocalBase
-+3SetEPv
-+1Ev
+*3SetEPv
+*1Ev
 +1Ev
 3GetEv
 +8BIsValidEv
-,Pointer
++Pointer
 Pointer
 ,1Ev
 -1Ev
@@ -5034,7 +5013,7 @@ Pointer
 WaitForReadEv
 -UnlockWriteEv
 	C2Ev
-29TerminateEi
+19TerminateEi
 .1Ev
 00Ev
 .9GetResultEv
@@ -5045,7 +5024,7 @@ WaitForReadEv
 GetNameEv
 7GetCurrentCThreadEv
 01SetPriorityEi
-23GetThreadProcEv
+13GetThreadProcEv
 20ThreadProcEPv
 JoinEj
 0StopEi
@@ -5110,7 +5089,7 @@ L8ValidateER10CValidatorPKc
 <2Ev
 GetProfileForCurrentThread
 <EnterScopeCurrentThread
-E6ResumeEv
+D6ResumeEv
 =2Ev
 9AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
 >8BIsProfilePtrValidEPNS_9CVProfileE
@@ -5127,7 +5106,7 @@ GDumpNodesEPNS_10CVProfNodeEib
 C6ResumeEv
 C8ValidateER10CValidatorPKc
 2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
-B1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+A1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
 ResetEv
 BPauseEv
 B1Ev
@@ -5141,7 +5120,7 @@ CResetPeakEv
 D2GetCurTimeLessChildrenEv
 D3GetPrevTimeLessChildrenEv
 StartEv
-EPauseEv
+DPauseEv
 GResetEv
 StopEv
 FDumpEPKcz
@@ -5173,7 +5152,7 @@ N0GetAllThreadProfilesEPNS_14CVProfileArrayE
 CleanupUnusedProfilesEv
 MDumpAllThreadProfilesEi
 DeleteProfileEv
-NStopProfilingEv
+MStopProfilingEv
 1EPNS_9CVProfileEjP17_opaque_pthread_t
 O2EPNS_9CVProfileEjP17_opaque_pthread_t
 SN16SteamThreadTools7CThreadE
@@ -5193,7 +5172,7 @@ Qile
 (DD@D@4
 ,TDX
  (LPTDHHH
-dLLLTLL
+dLLTLL
 PH(x0
 `T\8
 8H( 
@@ -5273,7 +5252,6 @@ _Plat_GetPackageName
 _Plat_GetProcessArgv
 _Plat_GetStackBackTrace
 _Plat_IsChromeOS
-_Plat_IsGamepadUI
 _Plat_IsGamescope
 _Plat_IsInDebugSession
 _Plat_IsSteamConsoleMode
@@ -5761,37 +5739,33 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-.LIe
->g;R6
-z+)n'XX
-rI5#
-=-bt
-S>@u[
-	*Gv
-h~	V
-%}l%g 
-q}wi
-R	i[
-=:aIs=
-6JGD
-|}'F
+vGUW
+Ux$/
+\+{V2
+!;Cb
+lbTc>o
+R0KR
+I/h 
+9j{8
+[MMEk
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-?4|oPbA:LK
-Zn"s~G;
->wl(
-v\8[
-\\>kq
-3e%M{k
-z0X9
-Xe)S
-ee)`j
-Q8g!'
-XhDJ
-z	BJ
-dg<T
+ad`m
+SR=>w
+N]\"~
+: r4
+ld/`{
+a3z`!
+2]Ct9
+3RZ/
+/4b&H
+#,wi
+!FfU
+-/}%
+1>69
+kyYg~k
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -5847,8 +5821,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220420190531Z0/
-3j:swqo
+220425192755Z0/
+ouE0
+!)j3o
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5856,45 +5831,34 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		u69c3bkLKo1podiCWAR+0FNmw+4=
+		BdO728xX5YchKWozb94uY0bZFS0=
 		</data>
 		<data>
-		iQhTiKpJg3ppAlALF8szajpzd3E=
+		xoFBIMIxdCm612NYt/QwJk/ntBQ=
 		</data>
 	</array>
 </dict>
 </plist>
-/	b^Q
-O$]F
-e+)]
-%{cw
-e }W
-)x#R]
-6VT*
-S_/l
-;kl	
-20220420190608Z0
+`vD3E
+%SEJ5
+20220425192823Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220412165002Z
-220524165001Z0B1
-Timestamp Signer NWK21
+220412170002Z
+220524170001Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-,BAF
-=ONo
-K8dR
-iId&
++a4+
+Ya5]
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-~WZx
-1R&}
-Js,m`;@
-d/fY
-Fz'H&
+\O<t
+T(rY
+CB9&!-
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5933,4 +5897,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220420190608Z0#
+220425192823Z0#
+bFp0+
+aV]K
+vp5P_

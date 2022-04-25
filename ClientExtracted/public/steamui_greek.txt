@@ -188,6 +188,7 @@
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Σφάλμα"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Εκκίνηση"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"ΕΚΚΙΝΗΣΗ"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Εκκίνηση παιχνιδιού"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Ενημέρωση αργότερα"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Εκκίνηση demo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"ΕΚΤΕΛΕΣΗ ΕΡΓΑΛΕΙΟΥ"
@@ -208,6 +209,7 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Εκκίνηση εφαρμογής μόλις είναι έτοιμη"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Εκκίνηση παιχνιδιού μόλις είναι έτοιμο"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Εκκίνηση παιχνιδιού μόλις είναι έτοιμο"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Εκκίνηση demo μόλις είναι έτοιμο"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Εκτέλεση εργαλείου μόλις είναι έτοιμο"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Αναπαραγωγή soundtrack μόλις είναι έτοιμο"
@@ -1357,7 +1359,7 @@
 "Steam_PurchaseFraudWarning" "Η απάτη πιστωτικής κάρτας είναι έγκλημα, και η Valve συνεργάζεται με υπηρεσίες επιβολής του νόμου για να διώξει κάθε παράνομη δραστηριότητα."
 
 "Steam_CacheValidation_Title"		"Επικύρωση αρχείων του Steam - %progress%%% ολοκληρώθηκε"
-"Steam_ValidatingSteamCaches"		"Επικύρωση αρχείου %cache_name% (%cache_number% από %cache_total%)"
+"Steam_ValidatingSteamCaches"		"Επικύρωση αρχείων %cache_name% (%cache_number% από %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Επικύρωση αρχείων Steam (%cache_number% από %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Αποκρυπτογράφηση αρχείων Steam- %progress%%% ολοκληρώθηκε"
@@ -4049,7 +4051,7 @@
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Ο προεπιλεγμένος φάκελος εγκατάστασης Steam δεν μπορεί να αφαιρεθεί."
 "SteamUI_ContentMgr_RemoveFailedUsedFolder" "Αυτός ο φάκελος συλλογής Steam χρησιμοποιείται αυτή τη στιγμή από το «%game%» και δεν μπορεί να αφαιρεθεί."
 "SteamUI_ContentMgr_FlushDownloadConfig" "ΕΚΚΑΘΑΡΙΣΗ ΜΝΗΜΗΣ ΛΗΨΕΩΝ"
-"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Η εκκαθάριση της μνήμης λήψεων μπορεί να επιλύσει προβλήματα για τη λήψη ή την εκκίνηση εφαρμογών"
+"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Η εκκαθάριση της μνήμης λήψεων μπορεί να επιλύσει προβλήματα λήψης ή εκκίνησης εφαρμογών"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Αυτό δε θα επηρεάσει τα ήδη εγκατεστημένα ή αποθηκευμένα παιχνίδια σας"
 
 "SteamUI_ContentMgr_Repair_Title" "Επιδιόρθωση συλλογής Steam"
@@ -4233,8 +4235,8 @@
 
 "Steam_Settings_Family_Sharing_AuthorizeError" "Αποτυχία εξουσιοδότησης υπολογιστή (%reason%)"
 "Steam_Settings_Family_Sharing_DeauthorizeError" "Αποτυχία άρσης εξουσιοδότησης (%reason%)"
-"Steam_Settings_Family_Sharing_UpdateBorrowers" "Ενημέρωση δανειστών"
-"Steam_Settings_Family_Sharing_BorrowerError" "Αποτυχία ενημέρωσης δανειστή (%reason%)"
+"Steam_Settings_Family_Sharing_UpdateBorrowers" "Ενημέρωση δανειζόμενων"
+"Steam_Settings_Family_Sharing_BorrowerError" "Αποτυχία ενημέρωσης δανειζόμενου (%reason%)"
 "Steam_Settings_Family_Sharing_No_SteamGuard" "Απαιτείται το Steam Guard για την ενεργοποίηση της κοινής χρήσης συλλογών"
 "Steam_Settings_Family_Sharing_TooManyBorrowers" "Μπορείτε να εξουσιοδοτήσετε έως %maxborrowers% λογαριασμούς ταυτόχρονα."
 "Steam_Settings_Family_Sharing_Accounts" "ΕΠΙΛΕΞΙΜΟΙ ΛΟΓΑΡΙΑΣΜΟΙ"
@@ -4543,7 +4545,7 @@
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Μεταδόστε παιχνίδια από τον υπολογιστή σας σε άλλες συσκευές. Για μετάδοση, απλά συνδεθείτε με τον ίδιο λογαριασμό Steam στον άλλο υπολογιστή ή επιλέξετε «Άλλος υπολογιστής» στο Steam Link σας."
+"Steam_Settings_Streaming_Description" "Μεταδώστε παιχνίδια μεταξύ αυτού του υπολογιστή και άλλων συσκευών. Για μετάδοση, απλά συνδεθείτε με τον ίδιο λογαριασμό Steam σε έναν άλλο υπολογιστή ή επιλέξτε «Άλλος υπολογιστής» στο Steam Link σας."
 "Steam_Settings_Streaming_DeviceName" "ΟΝΟΜΑ ΣΥΣΚΕΥΗΣ"
 "Steam_Settings_Streaming_Status" "ΚΑΤΑΣΤΑΣΗ"
 "Steam_Settings_Streaming_EnableStreaming" "Ενεργοποίηση Remote Play"

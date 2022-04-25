@@ -2205,6 +2205,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"ЗМІНИТИ НОМЕР ГРАВЦЯ"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"ЗМІНИТИ НОМЕР ГРАВЦЯ НА"
 	"Library_Details_ControllerAction_MouseDelta"	"ДЕЛЬТА МИШІ"
+	"Library_Details_ControllerAction_BrightnessUp"	"ЗБІЛЬШИТИ ЯСКРАВІСТЬ ЕКРАНА"
+	"Library_Details_ControllerAction_BrightnessDown"	"ЗМЕНШИТИ ЯСКРАВІСТЬ ЕКРАНА"
 	"Controller_SetMouseDelta_Title"				"УСТАНОВИТИ ПРИЗНАЧЕННЯ ДЕЛЬТИ МИШІ"
 	"Controller_SetMouseDelta_Description"			"Виберіть значення для цього призначення"
 	"ControllerConfig_MouseDeltaX"					"Вісь X"

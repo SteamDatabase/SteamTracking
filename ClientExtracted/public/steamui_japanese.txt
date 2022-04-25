@@ -194,6 +194,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - エラー"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"起動"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"ゲームをプレイ"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"ゲームをプレイ"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"後でアップデートする"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"デモをプレイ"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"ツールを起動"
@@ -214,6 +215,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"アプリケーションの準備完了次第起動"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"準備ができ次第ゲームを開始"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"準備ができ次第ゲームを開始"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"準備ができ次第デモを開始"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"準備ができ次第ツールを起動"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"準備ができたらすぐにサウンドトラックを再生"
@@ -455,7 +457,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_PurchasingProgress_Title"		"Steam - 作業中"
 
 "Steam_DPIScaling_Option_Windows"		"モニター設定に合うようにテキストとアイコンの大きさを微調整する (再起動が必要)"
-"Steam_DPIScaling_Option"				"モニターのサイズを基にテキストとアイコンを大きくする (再起動が必要)"
+"Steam_DPIScaling_Option"				"モニターのサイズを基にテキストとアイコンを大きくする（再起動が必要）"
 "Steam_LaunchSteamOnStartup_Option"		"コンピューターの起動時にSteamを実行する"
 "Steam_BPMOnStartup_Option"				"Big Picture モードで Steam を起動"
 "Steam_ShowUrlBar_Option"				"可能な場合はWebアドレスバーを表示する"
@@ -547,7 +549,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_ChangeBeta_Title"		"Steam - ベータへの参加"
 "Steam_ChangeBeta_Text"			"Steamベータプログラムへの参加を希望しますか？\nベータクライアントの受け取りにはSteamの再起動が必要です。"
-"Steam_RemoveBeta_Text"			"全てのベータプログラムを辞めますか?\n通常のクライアントに戻すには Steam の再起動が必要です。"
+"Steam_RemoveBeta_Text"			"すべてのベータプログラムを辞めますか？\n通常のクライアントに戻すにはSteamの再起動が必要です。"
 "Steam_ChangeBeta_Button"		"ベータを変更"
 
 "Steam_CSConnectionLost_Title"	"Steam - 切断されました"
@@ -4517,7 +4519,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_SteamInputDisableNotifications"		"デスクトップクライアントのコントローラ接続通知を無効にする。"
 
 "Steam_Settings_ShaderCache"			"シェーダープリキャッシュ"
-"Steam_Settings_ShaderCache_Info"		"シェーダーのプリキャッシュ機能を使用すると、Steam はシステム構成に対応したプリコンパイル済み GPU シェーダをダウンロードできます。 これにより、Vulkan および OpenGL ゲームの読み込み速度が向上し、ゲームプレイ中のフレームレートの安定性が向上します。\n\nこの機能を有効にすると、Steam は必要に応じてシステムからシェーダーを収集します。 この機能を有効にすると、ディスクと帯域幅の使用量にわずかな増加が見られる場合があります。"
+"Steam_Settings_ShaderCache_Info"		"シェーダーのプリキャッシュ機能を使用すると、Steamはシステム構成に対応したプリコンパイル済みGPUシェーダーをダウンロードできます。 これにより、VulkanおよびOpenGLゲームの読み込み速度が向上し、ゲームプレイ中のフレームレートの安定性が向上します。\n\nこの機能を有効にすると、Steamは必要に応じてシステムからシェーダーを収集します。この機能を有効にすると、ディスクと帯域幅の使用量にわずかな増加が見られる場合があります。"
 "Steam_Settings_ShaderCache_Enable"		"シェーダープリキャッシュを有効化 (%shaderdiskusagemb% MB プリキャッシュ容量)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"バックグラウンドでのVulkanシェーダー処理を許可する"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"%shaderapp%の処理中...（%shaderpercent%%）"
@@ -4549,7 +4551,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "コンピューターから、他のデバイスにゲームプレイをストリーミングしよう。接続するには、コンピューターでログイン中の同一のSteamアカウントにログインするか、またはSteamリンクで「他のコンピューター」を選択してください。"
+"Steam_Settings_Streaming_Description" "このコンピューターと他のデバイス間でゲームプレイをストリーミングしよう。接続するには、コンピューターでログイン中の同一のSteamアカウントにログインするか、またはSteamリンクで「他のコンピューター」を選択してください。"
 "Steam_Settings_Streaming_DeviceName" "デバイス名"
 "Steam_Settings_Streaming_Status" "ステータス"
 "Steam_Settings_Streaming_EnableStreaming" "Remote Playを有効にする"
@@ -4867,7 +4869,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "DownloadRegion_cambodia"       "カンボジア"
 "DownloadRegion_vietnam"        "ベトナム"
 "DownloadRegion_my_kualalumpur" "マレーシア－クアラルンプール"
-"DownloadRegion_ua_kiev"        "ウクライナ－キエフ"
+"DownloadRegion_ua_kiev"        "ウクライナ－キーウ"
 "DownloadRegion_us_sandiego"    "アメリカ－サンディエゴ"
 "DownloadRegion_us_sacramento"  "アメリカ－サクラメント"
 "DownloadRegion_us_minneapolis" "アメリカ－ミネアポリス"

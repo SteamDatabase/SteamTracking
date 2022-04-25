@@ -61,7 +61,6 @@ __LINKEDIT
 8
 @loader_path/chromehtml.dylib
 "
-(
 P
 
 
@@ -409,7 +408,7 @@ H
 13CMsgGoForward
 10CMsgGoBack
 13CMsgWasHidden
-25CMsgBrowserViewSetVisible
+23CMsgSetWindowVisibility
 16CMsgClearHistory
 24CMsgClearAllBrowsingData
 8CMsgCopy
@@ -1016,6 +1015,8 @@ m_Memory
 -no-cef-sandbox
 disables sandboxing in CEF
 -cef-disable-sandbox
+-cef-disable-seccomp-sandbox
+disables CEF seccomp-bpf sandbox on Linux
 -cef-force-sandbox
 force sandboxing in CEF
 -disable-winh264
@@ -2312,16 +2313,10 @@ sc_schinese
 
 @
 @
-i
-.
 
-b
 @
-r
-n
-9
-Q
-#
+Ic
+F
 0
 0
 Hi
@@ -2336,7 +2331,6 @@ AT=
 D
 @
 @
-u
 @
 Hc
 Hc
@@ -2392,8 +2386,8 @@ M9e
 ?
 ?
 ?
+@
 
-Ic
 @
 @
 @

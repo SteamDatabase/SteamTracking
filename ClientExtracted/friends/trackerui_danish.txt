@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Webbrowser"
 "Overlay_SettingsBrowserDesc" "Følgende indstillinger er til webbrowseren i Steam-klienten og overlay-vinduet i spil."
-"Steam_SettingsBrowserClearWebCache"	"Slet webbrowser-cachen"
-"Steam_SettingsBrowserClearAllCookies"	"Slet alle browser-cookies"
-"Steam_Settings_Browser_DeleteTitle"	"Slet cookies"
-"Steam_Settings_Browser_DeleteMsg"	"Ryd al data for Steam-browser-cookies?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Ryd browser-cache"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Slet alle filer i den indbyggede webbrowser-cache?"
+"Steam_SettingsBrowserDeleteAllData"	"Slet webbrowserdata"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Slet alle Steam-browserens cachelagrede filer, cookies og historik?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Inviter andre til at spille med et link fra din venneliste."

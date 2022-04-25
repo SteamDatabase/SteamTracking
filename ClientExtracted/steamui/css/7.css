@@ -218,6 +218,9 @@
     background-position: 50% 0%;
   }
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .collectionview_OuterContainer_2sNr7 {
   min-height: 100%;
   background: radial-gradient(100% 100% at 33% 45%, #313d53 0%, #101314 100%);
@@ -237,6 +240,9 @@
   color: #d3d3d3;
   border-radius: 10px;
   min-height: 100%;
+}
+.BasicUI .collectionview_Container_2q70u {
+  padding-top: calc(24px + var(--basicui-header-height));
 }
 .collectionview_Container_2q70u .collectionview_Header_2rqTS {
   box-sizing: border-box;
@@ -513,6 +519,28 @@
   margin-top: 1px;
   align-self: flex-start;
   cursor: pointer;
+}
+.BasicUI .collectionview_Container_2q70u .collectionview_EditButton_12pDi {
+  padding: 8px;
+}
+.BasicUI
+  .collectionview_Container_2q70u
+  .collectionview_EditButton_12pDi.Focusable:focus {
+  outline: none;
+  background-color: #fff;
+  color: #0e141b;
+}
+.BasicUI
+  .collectionview_Container_2q70u
+  .collectionview_EditButton_12pDi.Focusable:focus
+  svg {
+  fill: #0e141b;
+}
+.BasicUI
+  .collectionview_Container_2q70u
+  .collectionview_EditButton_12pDi.Focusable:focus
+  svg:hover {
+  fill: #23262e;
 }
 .collectionview_Container_2q70u .collectionview_EditButton_12pDi svg {
   fill: #a9a9a9;

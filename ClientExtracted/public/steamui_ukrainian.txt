@@ -192,6 +192,7 @@
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam — Помилка"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Запустити"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Розпочати гру"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Грати"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Оновити пізніше"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Запустити демоверсію"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Запустити інструмент"
@@ -212,6 +213,7 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Запустити програму, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Запустити гру, щойно вона буде готова"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Запустити гру, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Запустити демоверсію, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Запустити інструмент, щойно він буде готовий"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Відтворити саундтрек за готовності"
@@ -1361,7 +1363,7 @@
 "Steam_PurchaseFraudWarning" "Шахрайство з кредитними картками є злочином і Valve  співпрацює з правоохоронними органами для протидії незаконній діяльності."
 
 "Steam_CacheValidation_Title"		"Перевірка файлів Steam — Виконано %progress%%%"
-"Steam_ValidatingSteamCaches"		"Перевірка файлу %cache_name% (%cache_number% з %cache_total%)"
+"Steam_ValidatingSteamCaches"		"Перевірка файлів %cache_name% (%cache_number% з %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Перевірка файлів кешу Steam (%cache_number% з %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Розшифровка файлів Steam - Виконано %progress%%%"
@@ -1576,7 +1578,7 @@
 "Steam_BackupFileName"			"Назва файлу резервної копії"
 "Steam_SelectBackupDirectory_Title"	"Оберіть папку для резервної копії"
 "Steam_DisksRequiredApprox"		"Приблизна кількість стиснутих файлів,\nщо будуть записані:"
-"Steam_BackupWizard_OpenFolder"	"Відкрити папку з копією"
+"Steam_BackupWizard_OpenFolder"	"Відкрити теку з копією"
 
 "Steam_BackupComplete_Info"	"Резервне копіювання завершено. Якщо ви маєте дисковод CD-R чи DVD-R, ви можете скористатись ним для збереження ваших файлів резервного копіювання.\n\nВикористовуйте майстер резервного копіювання та відновлення Steam для відновлення ігор, що були збережені за допомогою резервного копіювання."
 "Steam_BackupComplete_Error"	"Резервне копіювання не вдалося. Будь ласка, перевірте локальні файли гри."
@@ -3253,7 +3255,7 @@
 "Steam_ForcedGiftPurchase_Next"	"Щоби придбати цей товар як дарунок, клацніть «Далі»."
 
 "Steam_Gift_Sentiment_BestWishes"	"З найкращими побажаннями"
-"Steam_Gift_Sentiment_BuckleUp"		"Пристебнися"
+"Steam_Gift_Sentiment_BuckleUp"		"До роботи"
 "Steam_Gift_Sentiment_Enjoy"		"Насолоджуйся"
 "Steam_Gift_Sentiment_GameOn"		"Грай досхочу"
 "Steam_Gift_Sentiment_HaveFun"		"Розважайся"
@@ -4205,7 +4207,7 @@
 "Steam_DeviceAuth_Purchase_Locked" "Придбати"
 
 "Steam_DeviceAuth_ChooseDialog_Title" "Бажаєте зіграти цю гру?"
-"Steam_DeviceAuth_ChooseDialog_Text" "Власником цієї гри є %owner%. Чи бажаєте ви попросити доступу цьому пристрою до його ігор?"
+"Steam_DeviceAuth_ChooseDialog_Text" "Власником цієї гри є %owner%. Бажаєте надіслати запит на отримання доступу до ігор %owner% на цьому пристрої?"
 "Steam_DeviceAuth_ChooseDialog_Purchase" "Я б краще це купив…"
 "Steam_DeviceAuth_ChooseDialog_Request" "Запитати доступ…"
 "Steam_DeviceAuth_ChooseDialog_Cancel" "Скасувати"
@@ -4545,7 +4547,7 @@
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Виявлено підтримку транслювання ігор із вашого комп’ютера на інші пристрої. Для підключення до пристрою просто ввійдіть на ньому до цього ж акаунта Steam або оберіть «Інший комп’ютер» у Steam Link."
+"Steam_Settings_Streaming_Description" "Транслюйте ігри з цього комп’ютера на інші пристрої. Для підключення до пристрою просто ввійдіть на ньому до цього ж акаунта Steam або оберіть «Інший комп’ютер» у Steam Link."
 "Steam_Settings_Streaming_DeviceName" "НАЗВА ПРИСТРОЮ"
 "Steam_Settings_Streaming_Status" "СТАН"
 "Steam_Settings_Streaming_EnableStreaming" "Увімкнути Remote Play"

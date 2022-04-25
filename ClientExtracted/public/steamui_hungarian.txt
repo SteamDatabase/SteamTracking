@@ -187,6 +187,7 @@
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Hiba"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Indítás"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Játék indítása"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Játék indítása"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Frissítés később"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Demó indítása"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Kellék indítása"
@@ -207,6 +208,7 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Alkalmazás indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Játék indítása, amint készen van"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Játék indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Demó indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Kellék indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Zenei anyag lejátszása, amint készen van"
@@ -1356,7 +1358,7 @@
 "Steam_PurchaseFraudWarning" "A bankkártyacsalás bűncselekmény és a Valve együttműködik a bűnüldöző szervekkel az illegális tevékenységek felderítésében."
 
 "Steam_CacheValidation_Title"		"Steam fájlok ellenőrzése - %progress%%% kész"
-"Steam_ValidatingSteamCaches"		"%cache_name% fájl ellenőrzése (%cache_number% / %cache_total%)"
+"Steam_ValidatingSteamCaches"		"%cache_name% fájlok ellenőrzése (%cache_number% / %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Steam fájlok ellenőrzése (%cache_number% / %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Steam fájlok dekódolása - %progress%%% kész"
@@ -4525,7 +4527,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Továbbíts játékot számítógépedről más eszközökre. A csatlakozáshoz egyszerűen jelentkezz be ugyanebbe a Steam fiókba egy másik számítógépen, vagy válaszd a „Másik számítógép” lehetőséget a Steam Linkeden."
+"Steam_Settings_Streaming_Description" "Továbbíts játékot e számítógép és más eszközök között. A csatlakozáshoz egyszerűen jelentkezz be ugyanebbe a Steam fiókba egy másik számítógépen, vagy válaszd a „Másik számítógép” lehetőséget a Steam Linkeden."
 "Steam_Settings_Streaming_DeviceName" "ESZKÖZ NEVE"
 "Steam_Settings_Streaming_Status" "ÁLLAPOT"
 "Steam_Settings_Streaming_EnableStreaming" "Remote Play engedélyezése"

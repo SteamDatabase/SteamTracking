@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"เว็บเบราว์เซอร์"
 "Overlay_SettingsBrowserDesc" "การตั้งค่าต่อไปนี้นำไปใช้กับเว็บเบราว์เซอร์ที่ใช้ภายในไคลเอนต์ Steam และโอเวอร์เลย์ในเกมของ Steam"
-"Steam_SettingsBrowserClearWebCache"	"ลบแคชของเว็บเบราว์เซอร์"
-"Steam_SettingsBrowserClearAllCookies"	"ลบคุกกี้ทั้งหมดของเบราว์เซอร์"
-"Steam_Settings_Browser_DeleteTitle"	"ลบคุกกี้"
-"Steam_Settings_Browser_DeleteMsg"	"เคลียร์ข้อมูลคุกกี้ทั้งหมดของเบราว์เซอร์ Steam หรือไม่?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"ล้างแคชของเบราว์เซอร์"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"ลบไฟล์ทั้งหมดจากแคชในตัวของเว็บเบราว์เซอร์หรือไม่?"
+"Steam_SettingsBrowserDeleteAllData"	"ลบข้อมูลของเว็บเบราว์เซอร์"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"ลบไฟล์แคช คุกกี้ และประวัติทั้งหมดของเบราว์เซอร์ Steam ใช่หรือไม่?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "เชิญใครก็ได้มาร่วมเล่นด้วยลิงก์จากรายชื่อเพื่อนของคุณ"

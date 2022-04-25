@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Περιηγητής Web"
 "Overlay_SettingsBrowserDesc" "Οι ακόλουθες ρυθμίσεις εφαρμόζονται στον περιηγητή που χρησιμοποιείται εντός της εφαρμογής Steam και στην επικάλυψη εντός παιχνιδιού."
-"Steam_SettingsBrowserClearWebCache"	"ΔΙΑΓΡΑΦΗ ΜΝΗΜΗΣ ΠΕΡΙΗΓΗΤΗ"
-"Steam_SettingsBrowserClearAllCookies"	"ΔΙΑΓΡΑΦΗ ΟΛΩΝ ΤΩΝ COOKIES"
-"Steam_Settings_Browser_DeleteTitle"	"Διαγραφή Cookies"
-"Steam_Settings_Browser_DeleteMsg"	"Εκκαθάριση όλων των δεδομένων Cookies του περιηγητή Steam;"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"ΔΙΑΓΡΑΦΗ ΜΝΗΜΗΣ ΠΕΡΙΗΓΗΤΗ"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Διαγραφή όλων των αρχείων στη μνήμη του περιηγητή;"
+"Steam_SettingsBrowserDeleteAllData"	"Διαγραφή δεδομένων περιηγητή ιστού"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Διαγραφή όλων των αποθηκευμένων αρχείων, των cookie και του ιστορικού του περιηγητή Steam;"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Προσκαλέστε οποιονδήποτε να παίξει με έναν σύνδεσμο από τη λίστα φίλων σας."

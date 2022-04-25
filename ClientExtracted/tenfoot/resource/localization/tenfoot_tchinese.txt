@@ -2211,6 +2211,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"變更玩家編號"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"變更玩家編號為"
 	"Library_Details_ControllerAction_MouseDelta"	"滑鼠差值"
+	"Library_Details_ControllerAction_BrightnessUp"	"提高螢幕亮度"
+	"Library_Details_ControllerAction_BrightnessDown"	"降低螢幕亮度"
 	"Controller_SetMouseDelta_Title"				"設定滑鼠差值按鍵配置"
 	"Controller_SetMouseDelta_Description"			"選擇此按鍵配置的值"
 	"ControllerConfig_MouseDeltaX"					"X 軸"

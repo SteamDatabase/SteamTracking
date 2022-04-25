@@ -3,7 +3,7 @@
 	"Language" "sc_schinese"
 	"Tokens"
 	{
-		"ServerBrowser_OfflineMode" "蒸汽平台目前处于离线状态。在连接到网络并重启蒸汽平台前，联网游戏将不可使用。"
+		"ServerBrowser_OfflineMode" "蒸汽平台目前处于离线模式。在连接到网络并重启蒸汽平台前，联网游戏将不可使用。"
 		"VAC_AccountBanned" "蒸汽平台帐户被封禁"
 		"VAC_YourAccountBanned" "由于作弊违规，您的蒸汽平台帐户 \'%account%\' 已被安全服务器封禁。"
 		"VAC_ConnectionRefusedDetail" "您无法连接至选定的服务器，因为该服务器运行于 VAC（Valve 反作弊）安全模式下。\n\n由于作弊违规，该蒸汽平台帐户已被安全服务器封禁。"

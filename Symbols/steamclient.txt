@@ -198,7 +198,6 @@
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsChromeOS
- Plat_IsGamepadUI
  Plat_IsGamescope
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
@@ -886,7 +885,6 @@
  std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)
  std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::~sentry()
  std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
- std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::operator<<(double)
  std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::basic_streambuf()
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&)
@@ -941,7 +939,6 @@
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::append(wchar_t const*, unsigned long)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::basic_string(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::basic_string(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&, unsigned long, unsigned long, std::__1::allocator<wchar_t> const&)
- std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::operator=(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::push_back(wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::resize(unsigned long, wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_string()
@@ -954,11 +951,7 @@
  std::__1::ios_base::__set_badbit_and_consider_rethrow()
  std::__1::ios_base::clear(unsigned int)
  std::__1::ios_base::getloc() const
- std::__1::ios_base::imbue(std::__1::locale const&)
  std::__1::ios_base::init(void*)
- std::__1::locale::locale(char const*)
- std::__1::locale::locale(std::__1::locale const&)
- std::__1::locale::operator=(std::__1::locale const&)
  std::__1::locale::use_facet(std::__1::locale::id&) const
  std::__1::locale::~locale()
  std::__1::mutex::lock()

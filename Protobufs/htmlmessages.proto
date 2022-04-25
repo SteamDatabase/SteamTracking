@@ -192,7 +192,7 @@ message CMsgWasHidden {
 	optional bool hidden = 2;
 }
 
-message CMsgBrowserViewSetVisible {
+message CMsgSetWindowVisibility {
 	optional uint32 browser_handle = 1;
 	optional bool visible = 2;
 }

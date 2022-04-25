@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Browser da Web"
 "Overlay_SettingsBrowserDesc" "As seguintes definições aplicam-se ao browser da web utilizado dentro do Steam e no Painel Steam durante um jogo."
-"Steam_SettingsBrowserClearWebCache"	"Eliminar cache do browser"
-"Steam_SettingsBrowserClearAllCookies"	"Eliminar todos os cookies do browser"
-"Steam_Settings_Browser_DeleteTitle"	"Eliminar cookies"
-"Steam_Settings_Browser_DeleteMsg"	"Eliminar todos os cookies do browser do Steam?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Limpar cache do browser"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Eliminar todos os ficheiros na cache do browser do Steam?"
+"Steam_SettingsBrowserDeleteAllData"	"Eliminar dados do browser"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Eliminar todos os cookies, ficheiros em cache e histórico do browser do Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Usa um link da tua lista de amigos para convidares quem quiseres para jogar."

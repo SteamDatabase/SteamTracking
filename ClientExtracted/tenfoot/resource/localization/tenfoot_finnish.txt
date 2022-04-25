@@ -2207,6 +2207,8 @@ Peli tarvitsee vähintään {s:requiredwidth}m x {s:requireddepth}m kokoisen pel
 	"Library_Details_ControllerAction_Change_Player_Number"	"VAIHDA PELAAJANUMERO"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"VAIHDA PELAAJAN NUMERO NUMEROON"
 	"Library_Details_ControllerAction_MouseDelta"	"HIIREN MUUTOS"
+	"Library_Details_ControllerAction_BrightnessUp"	"LISÄÄ NÄYTÖN KIRKKAUTTA"
+	"Library_Details_ControllerAction_BrightnessDown"	"VÄHENNÄ NÄYTÖN KIRKKAUTTA"
 	"Controller_SetMouseDelta_Title"				"ASETA HIIREN MUUTOKSEN MÄÄRITYS"
 	"Controller_SetMouseDelta_Description"			"Aseta määrityksen arvot"
 	"ControllerConfig_MouseDeltaX"					"x-akseli"

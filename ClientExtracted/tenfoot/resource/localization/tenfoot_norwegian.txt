@@ -1330,7 +1330,7 @@
 	"Store_BrowseByCategory_Genre"				"Sjanger"
 	"Store_BrowseByCategory_LoadingError"		"Steam kunne ikke laste de forespurte butikkdataene. Vennligst prøv igjen."
 
-	"Store_Cart_Title"							"Din handlevogn"
+	"Store_Cart_Title"							"Handlevogn"
 	"Store_Cart_ItemsInCart"					"{i:cart_item_count} vare"
 	"Store_Cart_ItemsInCartMultiple"			"{i:cart_item_count} varer"
 	"Store_Cart_CouponTotal"					"Besparelser fra kuponger"
@@ -2205,6 +2205,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"ENDRE SPILLERNUMMER"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"ENDRE SPILLERNUMMER TIL"
 	"Library_Details_ControllerAction_MouseDelta"	"MUSEDELTA"
+	"Library_Details_ControllerAction_BrightnessUp"	"SKJERMLYSSTYRKE OPP"
+	"Library_Details_ControllerAction_BrightnessDown"	"SKJERMLYSSTYRKE NED"
 	"Controller_SetMouseDelta_Title"				"ANGI BINDING FOR MUSEDELTA"
 	"Controller_SetMouseDelta_Description"			"Velg verdiene til denne bindingen"
 	"ControllerConfig_MouseDeltaX"					"X-akse"

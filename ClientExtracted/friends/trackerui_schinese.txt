@@ -241,7 +241,7 @@
 "Friends_Chat_DeniedChat_Full"        "%chat% 聊天已满."
 "Friends_Chat_DeniedChat_Error"       "尝试加入 %chat% 聊天时发生错误."
 "Friends_Chat_DeniedChat_Banned"       "您无法进入 %chat% 聊天，可能是因为您已被从聊天中禁止."
-"Friends_Chat_DeniedChat_UserLocked"       "你可能无法进入 %chat% 聊天室，因为你的聊天权限已被暂时禁止。"
+"Friends_Chat_DeniedChat_UserLocked"       "你可能无法进入 %chat% 聊天室，因为你的聊天权限已被暂时禁用。"
 "Friends_Chat_DeniedChat_ClanLocked"       "您可能无法进入 %chat% 聊天室，因为它已经被管理员关闭了。"
 
 "Friends_Chat_ActionResultTitleSuccess"   "操作成功"
@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"网页浏览器"
 "Overlay_SettingsBrowserDesc" "下列设置适用于 Steam 客户端中使用的网页浏览器和 Steam 游戏中界面。"
-"Steam_SettingsBrowserClearWebCache"	"删除网页浏览器缓存"
-"Steam_SettingsBrowserClearAllCookies"	"删除所有浏览器 Cookie"
-"Steam_Settings_Browser_DeleteTitle"	"删除 Cookie"
-"Steam_Settings_Browser_DeleteMsg"	"清除所有 Steam 浏览器 Cookie 数据？"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"清除浏览器缓存"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"是否删除内置网页浏览器中的所有缓存文件？"
+"Steam_SettingsBrowserDeleteAllData"	"删除网页浏览器数据"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"是否删除 Steam 浏览器的所有缓存文件、Cookie 和历史记录？"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "远程同乐"
 "RemotePlayTogether_Notification_AvailableToInvite" "用您好友列表中的链接邀请任何人畅玩。"

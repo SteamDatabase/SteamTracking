@@ -187,6 +187,7 @@
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Erro"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Iniciar"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Jogar"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Jogar"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Atualizar mais tarde"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jogar demonstração"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Iniciar ferramenta"
@@ -207,6 +208,7 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Iniciar aplicação assim que estiver pronta"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Iniciar jogo assim que estiver pronto"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Iniciar jogo assim que estiver pronto"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Iniciar demonstração assim que estiver pronta"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Iniciar ferramenta assim que estiver pronta"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Reproduzir banda sonora assim que estiver pronta"
@@ -1356,7 +1358,7 @@
 "Steam_PurchaseFraudWarning" "A fraude de cartão de crédito é crime, e a Valve coopera com as forças da autoridade para combater atividades ilegais."
 
 "Steam_CacheValidation_Title"		"A validar ficheiros Steam - %progress%%% concluído"
-"Steam_ValidatingSteamCaches"		"A validar ficheiro de \"%cache_name%\" (%cache_number% de %cache_total%)"
+"Steam_ValidatingSteamCaches"		"A validar ficheiros de \"%cache_name%\" (%cache_number% de %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"A validar ficheiros da cache do Steam (%cache_number% de %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"A descodificar ficheiros Steam - %progress%%% concluído"
@@ -1900,7 +1902,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 
 
 
-"Steam_Game_FreeWeekend"			"Fim de Semana Gratuito"
+"Steam_Game_FreeWeekend"			"Fim de semana grátis"
 "Steam_Game_Retail"						"Revendedor"
 "Steam_Game_AuthorizeDevice"		"Dispositivo Autorizado"
 "Steam_Game_Complimentary"		"Grátis"
@@ -2072,7 +2074,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"Usar definições globais ou preferência do developer"
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOn" "Manter ativo"
 
-"Steam_GameProperties_SteamPlaySettings_Override" "Forçar o uso de uma ferramenta de compatibilidade Steam Play específica"
+"Steam_GameProperties_SteamPlaySettings_Override" "Forçar uso de ferramenta de compatibilidade do Steam Play específica"
 
 "Steam_Controller_Support_PS4" "PS"
 "Steam_Controller_Support_XBox" "Xbox"
@@ -3149,8 +3151,8 @@ O programa Beta terminou - reinicia o Steam para regressares ao lançamento atua
 "Steam_Root_Title" 	"Steam"
 "Steam_Root_Title_Internal" 	"Steam"
 
-"Steam_CDKeyDisplayReason" "Este é o teu código de ativação para %game%. Vais precisar de introduzir este código depois da aplicação iniciar. Anota o código ou clica agora no botão 'Copiar p/ Área de Transferência'."
-"Steam_CDKeyDisplayReasonNoCopy" "Este é o teu código de ativação para %game%. Vais precisar de introduzir este código depois da aplicação ter iniciado. Anota o código para que o possas introduzir mais tarde."
+"Steam_CDKeyDisplayReason" "Este é o teu código de ativação de %game%. Vais precisar de introduzir este código depois de iniciares a aplicação. Anota o código ou clica agora no botão \"Copiar p/ Área de Transferência\"."
+"Steam_CDKeyDisplayReasonNoCopy" "Este é o teu código de ativação de %game%. Vais precisar de introduzir este código depois de iniciares a aplicação. Anota o código para que o possas introduzir mais tarde."
 
 "Steam_RequestingLegacyKey" "A pedir chave..."
 "Steam_LegacyCDKey_Title" "Código de produto (CD Key) de %game%"
@@ -4540,7 +4542,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Transmite jogos do teu computador para outros dispositivos. Para te conectares, inicia a sessão com esta conta Steam noutro computador, ou seleciona \"Outro computador\" no teu Steam Link."
+"Steam_Settings_Streaming_Description" "Transmite jogos deste computador para outros dispositivos. Para te conectares, inicia a sessão com esta conta Steam noutro computador ou seleciona \"Outro computador\" no teu Steam Link."
 "Steam_Settings_Streaming_DeviceName" "NOME DO DISPOSITIVO"
 "Steam_Settings_Streaming_Status" "ESTADO"
 "Steam_Settings_Streaming_EnableStreaming" "Ativar Remote Play"
@@ -4775,9 +4777,9 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "Steam_ViewSSAInBrowser" "Tens de ler e concordar com o Acordo de Subscrição Steam.\n<a href=\"%url%\">Clica aqui</a> para abrires o acordo no teu browser. Volta a esta janela para continuar."
 
 "Steam_VR2DGameWarning_Title" "Aviso"
-"Steam_VR2DGameWarning_Desc" "%launching_app% será iniciado no teu visor de R.V. e no ambiente de trabalho.\nO desempenho poderá não ser aceitável neste modo. Fecha o SteamVR antes de iniciares o jogo se quiseres jogá-lo só no ambiente de trabalho."
-"Steam_VR2DGameWarning_Desc_Old" "%launching_app% não é compatível com Realidade Virtual. Será apresentado no teu ambiente de trabalho e poderá afetar o desempenho de RV."
-"Steam_VR2DGameWarning_Desc_VRGame" "%launching_app% é compatível com RV nativamente mas escolheste a versão para o ambiente de trabalho. Pretendes continuar?"
+"Steam_VR2DGameWarning_Desc" "%launching_app% será iniciado no teu visor de R.V. e no teu computador.\nO desempenho poderá não ser aceitável neste modo. Fecha o SteamVR antes de iniciares o jogo se quiseres jogá-lo só no computador."
+"Steam_VR2DGameWarning_Desc_Old" "%launching_app% não é compatível com Realidade Virtual. Será apresentado no teu computador e poderá afetar o desempenho da R.V."
+"Steam_VR2DGameWarning_Desc_VRGame" "%launching_app% é compatível com R.V. nativamente mas escolheste a versão para computadores. Pretendes continuar?"
 
 "Steam_OculusOnlyGameWarning_Title" "Aviso"
 "Steam_OculusOnlyGameWarning_Desc" "%launching_app% irá iniciar-se fora do ambiente do SteamVR. Talvez precises de remover o teu headset para voltares ao Steam."

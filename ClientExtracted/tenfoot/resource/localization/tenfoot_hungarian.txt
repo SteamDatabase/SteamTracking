@@ -2205,6 +2205,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"JÁTÉKOSSZÁM MEGVÁLTOZTATÁSA"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"JÁTÉKOSSZÁM MEGVÁLTOZTATÁSA ERRE:"
 	"Library_Details_ControllerAction_MouseDelta"	"EGÉR DELTA"
+	"Library_Details_ControllerAction_BrightnessUp"	"KIJELZŐFÉNYERŐ NÖVELÉSE"
+	"Library_Details_ControllerAction_BrightnessDown"	"KIJELZŐFÉNYERŐ CSÖKKENTÉSE"
 	"Controller_SetMouseDelta_Title"				"EGÉR DELTA KIOSZTÁS BEÁLLÍTÁSA"
 	"Controller_SetMouseDelta_Description"			"Válassz értékeket e kiosztáshoz"
 	"ControllerConfig_MouseDeltaX"					"X tengely"

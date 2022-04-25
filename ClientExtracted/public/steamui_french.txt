@@ -192,6 +192,7 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Erreur"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Lancement"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Jouer au jeu"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Jouer au jeu"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Mettre à jour plus tard"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jouer à la démo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Lancer l'outil"
@@ -212,6 +213,7 @@ Cela devrait prendre moins d'une minute."
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Lancer l'application dès qu'elle sera prête"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Lancer le jeu dès qu'il sera prêt"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Lancer le jeu dès qu'il sera prêt"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Lancer la démo dès qu'elle sera prête"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Lancer l'outil dès qu'il sera prêt"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Écouter la bande-son dès qu'elle sera prête"
@@ -303,7 +305,7 @@ Cela devrait prendre moins d'une minute."
 "CloudFiles_RemoveFile_Button"			"Supprimer"
 
 
-"SteamUI_NotifyTrayHintDialog_DontShow"	"Ne plus afficher cette boîte de dialogue"
+"SteamUI_NotifyTrayHintDialog_DontShow"	"Ne plus afficher cette boite de dialogue"
 "SteamUI_NotifyTrayHintDialog_Close"	"Fermer"
 
 "SteamUI_SpecialOffersDialog_Close"	"Fermer"
@@ -1184,7 +1186,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_SubscriptionSuccess_ComingSoonOnly" "Le code d'activation de votre produit a bien été activé. Ce contenu est désormais associé de façon permanente à votre compte Steam et sera disponible une fois le jeu sorti sur Steam. Vous devez vous connecter à ce compte pour accéder aux articles que vous venez d'activer sur Steam."
 
 "Steam_Subscription_Rejected_Cdkey_Headline" "Code produit dupliqué"
-"Steam_Subscription_Rejected_Cdkey" "Le code produit que vous avez saisi est associé à un compte Steam différent et ne peut donc pas être utilisé de nouveau. Veuillez contacter directement le revendeur vous ayant vendu ce code pour obtenir de l'aide."
+"Steam_Subscription_Rejected_Cdkey" "Le code produit que vous avez saisi est associé à un compte Steam différent et ne peut donc pas être utilisé de nouveau. Veuillez contacter directement l'organisme revendeur vous ayant vendu ce code pour obtenir de l'aide."
 
 "Steam_Subscription_RateLimitedCDKey_Headline" "Trop de tentatives d'activation"
 "Steam_Subscription_RateLimitedCDKey" "Trop de tentatives d'activation récentes depuis ce compte ou cette adresse Internet ont été effectuées. Veuillez patienter et réessayer d'activer votre code produit plus tard."
@@ -1361,7 +1363,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_PurchaseFraudWarning" "La fraude par carte bancaire constitue un crime, et Valve coopère avec les autorités chargées de la répression des fraudes pour poursuivre toute activité illégale."
 
 "Steam_CacheValidation_Title"		"Validation des fichiers Steam - Progression : %progress%%%"
-"Steam_ValidatingSteamCaches"		"Validation des fichiers de %cache_name% (%cache_number% sur %cache_total%)"
+"Steam_ValidatingSteamCaches"		"Validation des fichiers de %cache_name% (%cache_number% sur %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Validation des fichiers de cache Steam (%cache_number% sur %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Décryptage des fichiers Steam - %progress%%% terminé"
@@ -1779,7 +1781,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_ThirdPartyGameReady"	"Mod prêt"
 "Steam_GamePreloading"	"Préchargement :"
 "Steam_GameUpdating"	"Mise à jour"
-"Steam_GameDownloading"	"Téléchargement :"
+"Steam_GameDownloading"	"Téléchargement :"
 "Steam_GameDownloadStarting"	"Pré-allocation"
 "Steam_GameDownloadStopping"	"Arrêt du téléchargement..."
 "steam_gamecalculating" "Calcul..."
@@ -3445,7 +3447,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "SteamUI_ValidateEmailDescriptionAlt" "Votre adresse e-mail n'est pas vérifiée.\nCliquez sur « Suivant » pour vérifier votre adresse e-mail utilisée par Steam.\nL'adresse, une fois vérifiée, servira à confirmer tout changement aux informations d'identification de votre compte, pour que vous seul puissiez changer votre question secrète ou votre mot de passe."
 "SteamUI_ValidateEmailDescription" "Cliquez sur « Suivant » pour vérifier votre adresse e-mail sur Steam. Une fois vérifiée, votre adresse vous permettra de confirmer les modifications apportées aux identifiants de connexion de votre compte Steam. Vous serez ainsi la seule personne à pouvoir changer votre question secrète ou mot de passe."
-"SteamUI_ValidateEmailSent" "Un message a été envoyé à : %s1.\nVeuillez vérifier votre boîte de réception et cliquer sur le lien du message afin de finaliser la vérification de votre adresse e-mail auprès de Steam."
+"SteamUI_ValidateEmailSent" "Un message a été envoyé à : %s1.\nVeuillez vérifier votre boite de réception et cliquer sur le lien du message afin de finaliser la vérification de votre adresse e-mail auprès de Steam."
 "SteamUI_ValidateEmailNotReceived" "Vous n'avez pas reçu notre e-mail ?"
 "SteamUI_VisitSteamSupport" "Visitez le centre de Support Steam pour obtenir de l'assistance"
 "SteamUI_ValidateEmailWorking" "Connexion aux serveurs Steam afin d'envoyer l'e-mail."
@@ -3471,7 +3473,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "SteamUI_ManageSecurity_ChooseName" "Choisissez un nom familier pour cette machine :"
 
-"SteamUI_ManageSecurity_DoNothing" "Quel choix judicieux ! Vous devez certes avoir accès à votre boîte e-mail pour vous connecter sur Steam depuis un autre ordinateur, mais votre compte est plus sécurisé lorsque Steam Guard est activé."
+"SteamUI_ManageSecurity_DoNothing" "Quel choix judicieux ! Vous devez certes avoir accès à votre boite e-mail pour vous connecter sur Steam depuis un autre ordinateur, mais votre compte est plus sécurisé lorsque Steam Guard est activé."
 "SteamUI_ManageSecurity_DoNothing2" "Pour votre sécurité, nous vous recommandons d'utiliser un mot de passe différent pour votre compte Steam et votre adresse e-mail."
 
 "SteamUI_ManageSecurity_UnlockAccount_Success" "Vous pouvez maintenant accéder à votre compte à partir de n'importe quel ordinateur ou navigateur à la condition de fournir l'identifiant et le mot de passe de ce compte"
@@ -3543,7 +3545,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_RecoverLocked_WrongCodeDetails" "Revenez en arrière pour entrer votre code si vous l'avez trouvé, ou cliquez sur Suivant pour recevoir l'aide nécessaire afin de vous connecter à votre compte Steam depuis cet ordinateur."
 "Steam_RecoverLocked_ExpiredCodeDetails" "Vérifiez votre boite de courrier électronique pour un e-mail plus récent et cliquez sur retour pour réessayer, ou cliquez sur le bouton suivant pour demander un nouvel e-mail avec un nouveau code."
 "Steam_RecoverLocked_NoEmail" "Avez-vous vérifié dans votre dossier de spam ?"
-"Steam_RecoverLocked_NoEmailDetails" "Si vous ne voyez pas de message récent du Support Steam dans votre boîte, essayez de regarder dans le dossier de spam de votre compte e-mail."
+"Steam_RecoverLocked_NoEmailDetails" "Si vous ne voyez pas de message récent du Support Steam dans votre boite, essayez de regarder dans le dossier de spam de votre compte e-mail."
 "Steam_RecoverLocked_NoEmailDetails2" "Revenez en arrière pour entrer votre code si vous l'avez trouvé, ou cliquez sur Suivant pour recevoir l'aide nécessaire afin de vous connecter à votre compte Steam depuis cet ordinateur."
 "Steam_RecoverLocked_StartRecovery" "Nous sommes là pour vous aider !"
 "Steam_RecoverLocked_StartRecovery2" "Nous savons combien votre compte Steam est important pour vous, et nous faisons tout notre possible pour vous aider à en garder le contrôle."
@@ -4550,7 +4552,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Streamez depuis votre ordinateur vers d'autres appareils. Pour vous connecter, enregistrez-vous avec ce compte Steam sur un autre ordinateur, ou sélectionnez l'option « Autre ordinateur » sur Steam Link."
+"Steam_Settings_Streaming_Description" "Streamez depuis votre ordinateur vers d'autres appareils. Pour vous connecter, enregistrez-vous avec ce compte Steam sur un autre ordinateur, ou sélectionnez l'option « Autre ordinateur » sur Steam Link."
 "Steam_Settings_Streaming_DeviceName" "NOM DE L'APPAREIL"
 "Steam_Settings_Streaming_Status" "ÉTAT"
 "Steam_Settings_Streaming_EnableStreaming" "Activer Remote Play"

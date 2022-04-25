@@ -2205,6 +2205,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"ĐỔI MÃ SỐ NGƯỜI CHƠI"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"ĐỔI MÃ SỐ NGƯỜI CHƠI THÀNH"
 	"Library_Details_ControllerAction_MouseDelta"	"DELTA CHUỘT"
+	"Library_Details_ControllerAction_BrightnessUp"	"ĐỘ SÁNG MÀN HÌNH - TĂNG"
+	"Library_Details_ControllerAction_BrightnessDown"	"ĐỘ SÁNG MÀN HÌNH - GIẢM"
 	"Controller_SetMouseDelta_Title"				"THIẾT LẬP GÁN DELTA CHUỘT"
 	"Controller_SetMouseDelta_Description"			"Chọn giá trị cho việc gán"
 	"ControllerConfig_MouseDeltaX"					"Trục X"

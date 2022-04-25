@@ -48,8 +48,8 @@
 "TextEntry_SentenceMode"	"Chế độ câu"
 
 "IME_English"			"Tiếng Anh"
-"IME_Chinese"			"Trung Quốc"
-"IME_Korean"			"Hàn Quốc"
+"IME_Chinese"			"Tiếng Trung"
+"IME_Korean"			"Tiếng Hàn"
 "IME_Hiragana"			"Hiragana"
 "IME_FullWidthKatakana"		"Katakana toàn giác"
 "IME_FullWidthAlphanumeric"	"Chữ và số toàn giác"
@@ -64,8 +64,8 @@
 "IME_0404"			"Tiếng Trung (Đài Loan)"
 "IME_0804"			"Tiếng Trung (Trung Quốc)"
 "IME_0409"			"Tiếng Anh (Hoa Kỳ)"
-"IME_0411"			"Nhật Bản"
-"IME_0412"			"Hàn Quốc"
+"IME_0411"			"Tiếng Nhật"
+"IME_0412"			"Tiếng Hàn"
 "IME_0419"			"Tiếng Nga"
 "IME_041e"			"Tiếng Thái"
 

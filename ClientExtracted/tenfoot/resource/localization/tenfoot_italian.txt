@@ -2206,6 +2206,8 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Library_Details_ControllerAction_Change_Player_Number"	"CAMBIA NUMERO GIOCATORE"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"CAMBIA NUMERO GIOCATORE A"
 	"Library_Details_ControllerAction_MouseDelta"	"DELTA DEL MOUSE"
+	"Library_Details_ControllerAction_BrightnessUp"	"AUMENTA LUMOSITÀ SCHERMO"
+	"Library_Details_ControllerAction_BrightnessDown"	"RIDUCI LUMOSITÀ SCHERMO"
 	"Controller_SetMouseDelta_Title"				"IMPOSTA ASSOCIAZIONE DELTA DEL MOUSE"
 	"Controller_SetMouseDelta_Description"			"Seleziona i valori per questa associazione"
 	"ControllerConfig_MouseDeltaX"					"Asse X"

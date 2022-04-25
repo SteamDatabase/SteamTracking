@@ -88,7 +88,7 @@
 "ServerBrowser_NoFavoriteServers"		"Você não tem nenhum servidor favorito selecionado."
 "ServerBrowser_NoFriendsServers"		"Nenhum dos seus amigos está em uma partida no momento."
 "ServerBrowser_NoInternetGames"			"Não existem servidores que passem a sua configuração de filtro."
-"ServerBrowser_NoInternetGamesResponded"	"Nenhum jogo online respondeu à busca."
+"ServerBrowser_NoInternetGamesResponded"	"Nenhum jogo on-line respondeu à busca."
 "ServerBrowser_MasterServerNotResponsive"	"Não foi possível contatar o servidor principal para obter a lista de servidores."
 "ServerBrowser_MasterServerHasNoServersListed"	"Não há partidas pela internet listadas no servidor mestre que correspondam ao(s) filtro(s) selecionado(s)."
 "ServerBrowser_Refresh"				"Atualizar"
@@ -103,7 +103,7 @@
 "ServerBrowser_ServersCount"			"Servidores (%s1)"
 "ServerBrowser_UnableToQueryMasters"		"Não foi possível determinar o endereço do servidor mestre. O navegador de servidores não funcionará corretamente."
 
-"ServerBrowser_ESRBNotice"			"Nota da ESRB: A experiência no jogo pode mudar durante partidas online"
+"ServerBrowser_ESRBNotice"			"Nota da ESRB: A experiência no jogo pode mudar durante partidas on-line"
 "ServerBrowser_Password"			"Senha"
 "ServerBrowser_Bots"				"Bots"
 "ServerBrowser_Secure"				"Protegido"
@@ -118,7 +118,7 @@
 "ServerBrowser_RemoveServerFromHistory"		"Remover servidores do histórico"
 "ServerBrowser_LastPlayed"			"Última sessão"
 
-"ServerBrowser_OfflineMode" 			"O Steam está no modo offline. Partidas pela internet não estarão disponíveis até que você saia do\nmodo offline do Steam."
+"ServerBrowser_OfflineMode" 			"O Steam está no modo off-line. Partidas pela internet não estarão disponíveis até que você saia do\nmodo off-line do Steam."
 
 "ServerBrowser_ConnectToServer"		"Conectar-se ao servidor"
 "ServerBrowser_ViewServerInfo"		"Ver informações do servidor"

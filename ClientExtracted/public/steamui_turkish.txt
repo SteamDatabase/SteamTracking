@@ -193,6 +193,7 @@ Bu işlem bir dakikadan az sürer."
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Hata"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Başlat"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Oyunu oyna"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Oyunu başlat"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Sonra güncelle"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Demoyu oyna"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Aracı başlat"
@@ -213,6 +214,7 @@ Bu işlem bir dakikadan az sürer."
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Hazır olduğunda uygulamayı başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Hazır olduğunda oyunu başlat"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Hazır olduğunda oyunu başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Hazır olduğunda demoyu başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Hazır olduğunda aracı başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Hazır olduğunda albümü yürüt"
@@ -1363,7 +1365,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_PurchaseFraudWarning" "Kredi kartı dolandırıcılığı bir suçtur ve Valve yasal olmayan etkinliklere yasalar kapsamında dava açar."
 
 "Steam_CacheValidation_Title"		"Steam dosyaları doğrulanıyor - %%%progress% tamamlandı"
-"Steam_ValidatingSteamCaches"		"%cache_name% dosyası doğrulanıyor (%cache_number% / %cache_total%)"
+"Steam_ValidatingSteamCaches"		"%cache_name% dosyası doğrulanıyor (%cache_number%/%cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Steam program dosyaları doğrulanıyor (%cache_number% / %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Steam dosyaları çözülüyor - %progress%%% tamamlandı"
@@ -4551,7 +4553,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Bilgisayarınızdan diğer aygıtlara oyun yayını yapın. Bağlanmak için bu Steam hesabına başka bir bilgisayardan giriş yapın veya Steam Link'ten \"Başka Bilgisayar\"ı seçin."
+"Steam_Settings_Streaming_Description" "Bu bilgisayardan diğer aygıtlara oyun yayını yapın. Bağlanmak için bu Steam hesabına başka bir bilgisayardan giriş yapın veya Steam Link'ten \"Başka Bilgisayar\"ı seçin."
 "Steam_Settings_Streaming_DeviceName" "AYGIT ADI"
 "Steam_Settings_Streaming_Status" "DURUM"
 "Steam_Settings_Streaming_EnableStreaming" "Remote Play'i etkinleştir"

@@ -153,9 +153,6 @@ message CAppOverview {
 	optional uint32 rt_custom_image_mtime = 47;
 	optional uint32 optional_parent_app_id = 48;
 	optional uint32 owner_account_id = 49;
-	optional bool compat_mapping_enabled = 50;
-	optional uint32 compat_mapping_priority = 51;
-	optional string compat_mapping_tool_name = 52;
 	optional uint32 review_score_with_bombs = 53;
 	optional uint32 review_percentage_with_bombs = 54;
 	optional uint32 review_score_without_bombs = 55;

@@ -222,7 +222,7 @@
 "Overlay_Taskbar_GameHub"		"コミュニティハブ"
 
 "Overlay_Guides_Panel_Title" "ガイド"
-"Overlay_View_Guides" "全てのガイドを表示"
+"Overlay_View_Guides" "すべてのガイドを表示"
 "Overlay_Guides_Panel_NumGuides" "%num_guides% 件閲覧可能"
 
 "Overlay_CommunityHub_Panel_Title" "コミュニティハブ"

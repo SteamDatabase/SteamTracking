@@ -4,7 +4,6 @@ __TEXT
 __text
 __TEXT
 P
-8T"
 P
 __stubs
 __TEXT
@@ -13,6 +12,8 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
+@z#
+@z#
 __cstring
 __TEXT
 __objc_methname
@@ -48,7 +49,7 @@ __objc_classrefs__DATA
 __data
 __DATA
 f,
-8S
+@S
 f,
 __thread_vars
 __DATA
@@ -69,8 +70,9 @@ __LINKEDIT
 8
 @loader_path/steamservice.dylib
 "
-H:-
+P:-
 P
+U-
 
 *
 `
@@ -96,24 +98,21 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-@5-
+H5-
 +gl,
 Hc5Me,
 0
 0
-#
-#
 Hi
 H=
 "
 "
 "
-"
-,&
+g(
 Hc
 Hc
 Hc
-y+
+H!
 0
 0
 AT=
@@ -1285,7 +1284,6 @@ Logger
 @
 @
 D
-x
 (
 `
 0
@@ -1301,6 +1299,7 @@ e
 l
 p
 t
+x
 
 
 <
@@ -1393,17 +1392,17 @@ $
 4
 8
 (
-0
-I
-P
-(
+1
+K
 R
-X
-Y
-e
+(
+T
+Z
+[
+g
 @
-l
-}
+n
+
 H
 0
 `
@@ -1738,6 +1737,8 @@ CHECK failed: size > chunk_size:
 CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
 CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
 CHECK failed: (size) > (0):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 ./google/protobuf/repeated_field.h
 CHECK failed: (index) >= (0):
@@ -8244,8 +8245,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Apr 20 2022
-12:05:05
+Apr 25 2022
+12:27:29
 Jan
 Feb
 Mar
@@ -8549,6 +8550,9 @@ undefined
 this != g_pJobCur
 (unspecified)
 wait details: [%s] - %s
+CJob::Heartbeat
+@cMinimumJobTimeoutsToCheckPerFrame
+100
 CJobMgr::BFrameFuncRun
 CJobMgr::BFrameFuncRunUntilCompleted
 CJobMgr::BFrameFuncDispatchCompletedWorkItems
@@ -8562,8 +8566,10 @@ CJobMgr -- Dispatch completed work items
 m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
 m_MapJob[iJob]->GetPauseReason() == k_EJobPauseReasonYield
+CJobMgr::BResumeSleepingJobs
 Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs. Job %s Yield Info %s
-CJobMgr::CheckForJobTimeouts
+CJobMgr::BCheckForJobTimeouts
+CJobMgr::TimeoutJob
 name
 :
 @bEnableSpewThrottle
@@ -8637,10 +8643,12 @@ Comma separated list of tag names known to cause cardinality problems for Influx
 CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
 Comma separated list of Operation names that predate preaggregated job metrics.
 @bMsgErrorDump
+@nCallerDeadlineHopLatencyMS
+10
+When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
 @nSpewThrottlePeriodMs
 1000
 @nSpewThrottleTriggerThreshold
-10
 @nSpewThrottleResumeThreshold
 3
 @nSpewThrottleUnconditionalTriggerCount
@@ -8803,19 +8811,16 @@ m_cCurrentDepth > 0
 Hc5Me,
 0
 0
-#
-#
 Hi
 H=
 "
 "
 "
-"
-,&
+g(
 Hc
 Hc
 Hc
-y+
+H!
 0
 0
 AT=
@@ -8826,8 +8831,11 @@ AT=
 D
 @
 @
-!
-L%
+g%
+C%
+.%
+%
+%
 %
 @
 Hc
@@ -8860,16 +8868,16 @@ IcE
 IcE
 @
 @
-0'
+P
+K
 V
 =
 =
+"
 @
-!
-@
-#
 c
-&!
+#
+H!
 !
 @
 M9e
@@ -8900,10 +8908,10 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 
 
 
-
 Pj
 ARj
 j
+M
 0
 0
 =
@@ -9211,6 +9219,7 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
+(
 H=
 Ic]
 j
@@ -9261,6 +9270,7 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
+m
 $
 $
 
@@ -9272,10 +9282,10 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 0
 H=
+Ic
 
 =
 @
-i
 =*.*
 @
 @
@@ -9289,10 +9299,10 @@ i
 0
 0
 0
-
 0
 
 0
+
 0
 0
 0
@@ -9313,14 +9323,17 @@ E
 0
 Hc
 Hc
+Hc
+G
 0
 0
 0
-Ic
-?
+
 @
-?
-?
+@
+@
+
+
 @
 ?
 ?

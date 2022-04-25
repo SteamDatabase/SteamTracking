@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Браузер"
 "Overlay_SettingsBrowserDesc" "Ці налаштування браузера використовуються у клієнті Steam та у внутрішньоігровому оверлеї."
-"Steam_SettingsBrowserClearWebCache"	"Очистити кеш браузера"
-"Steam_SettingsBrowserClearAllCookies"	"Видалити з браузера всі куки"
-"Steam_Settings_Browser_DeleteTitle"	"Видалити куки"
-"Steam_Settings_Browser_DeleteMsg"	"Видалити з браузера Steam всі дані куки?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Очистити кеш браузера"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Вилучити всі файли у вбудованому кеші браузера?"
+"Steam_SettingsBrowserDeleteAllData"	"Видалити дані браузера"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Видалити з браузера всі файли кешу, файли cookie та історію Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Запросіть будь-кого зіграти, надіславши посилання зі списку друзів."

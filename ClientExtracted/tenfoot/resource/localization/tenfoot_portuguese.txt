@@ -2206,6 +2206,8 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Library_Details_ControllerAction_Change_Player_Number"	"MUDAR N.º DE JOGADOR"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"MUDAR N.º DE JOGADOR PARA"
 	"Library_Details_ControllerAction_MouseDelta"	"DELTA DO RATO"
+	"Library_Details_ControllerAction_BrightnessUp"	"AUMENTAR BRILHO DO ECRÃ"
+	"Library_Details_ControllerAction_BrightnessDown"	"DIMINUIR BRILHO DO ECRÃ"
 	"Controller_SetMouseDelta_Title"				"DEFINIR DESIGNAÇÃO DO DELTA DO RATO"
 	"Controller_SetMouseDelta_Description"			"Seleciona os valores para esta designação"
 	"ControllerConfig_MouseDeltaX"					"Eixo X"

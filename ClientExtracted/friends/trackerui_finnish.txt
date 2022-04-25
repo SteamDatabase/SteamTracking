@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Verkkoselain"
 "Overlay_SettingsBrowserDesc" "Nämä asetukset koskevat Steam-asiakasohjelman sisäistä verkkoselainta ja pelissä olevaa Steam-yhteisönäkymää."
-"Steam_SettingsBrowserClearWebCache"	"Poista verkkoselaimen välimuisti"
-"Steam_SettingsBrowserClearAllCookies"	"Poista kaikki selaimen evästeet"
-"Steam_Settings_Browser_DeleteTitle"	"Poista evästeet"
-"Steam_Settings_Browser_DeleteMsg"	"Tyhjennetäänko Steam-selaimen kaikki evästetiedot?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Tyhjennä selaimen välimuisti"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Poista kaikki tiedostot Steamin verkkoselaimen välimuistista?"
+"Steam_SettingsBrowserDeleteAllData"	"Poista verkkoselaimen tiedot"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Poistetaanko Steamin selainhistoria, evästeet ja välimuistin tiedostot?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Kutsu kuka tahansa kaverilistaltasi pelaamaan linkillä."

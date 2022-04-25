@@ -192,6 +192,7 @@ Tämä kestää alle minuutin."
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Virhe"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Käynnistä"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Pelaa peliä"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Pelaa peliä"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Päivitä myöhemmin"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Pelaa demoa"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Käynnistä työkalu"
@@ -211,7 +212,8 @@ Tämä kestää alle minuutin."
 "SteamUI_JoinDialog_UpdateAvailable_WaitForUpdate"			"Lataa päivitys"
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Käynnistä sovellus heti, kun se on valmis"
-"SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Käynnistä latauksen valmistuttua"
+"SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Käynnistä peli heti, kun se on valmis"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Käynnistä peli heti, kun se on valmis"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Käynnistä demo heti, kun se on valmis"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Käynnistä työkalu heti, kun se on valmis"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Toista ääniraita heti, kun se on valmis"
@@ -543,7 +545,7 @@ Tämä kestää alle minuutin."
 "Steam_MustRestart_Button"		"Käynnistä uudelleen"
 "Steam_MustRestart_Language"		"Muuta kieliasetuksia käynnistämällä Steam uudelleen."
 
-"Steam_ChangeBeta_Title"		"Steam — Betaan osallistuminen"
+"Steam_ChangeBeta_Title"		"Steam: Beta-osallistuminen"
 "Steam_ChangeBeta_Text"			"Haluatko ottaa osaa Steamin betaohjelmaan?\nSteam-ohjelma käynnistyy uudelleen betaversion käyttöönottamiseksi."
 "Steam_RemoveBeta_Text"			"Haluatko poistua kaikista betaohjelmista?\nSteam käynnistyy uudelleen, jotta voit palauttaa sovelluksen tavallisen version."
 "Steam_ChangeBeta_Button"		"Vaihda betaan"
@@ -1361,7 +1363,7 @@ Tämä kestää alle minuutin."
 "Steam_PurchaseFraudWarning" "Luottokorttipetos on rikos. Valve toimii yhteistyössä viranomaisten kanssa ja nostaa syytteen rikoksista."
 
 "Steam_CacheValidation_Title"		"Tarkistetaan Steam-tiedostoja - %progress% %% valmis"
-"Steam_ValidatingSteamCaches"		"Tarkistetaan %cache_name% -tiedostoa (%cache_number% / %cache_total%)"
+"Steam_ValidatingSteamCaches"		"Tarkistetaan tiedostot %cache_name% (%cache_number% / %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Tarkistetaan Steam-välimuistitiedostoja (%cache_number% / %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Puretaan Steam-tiedostojen salausta - %progress% %% valmis"
@@ -1649,7 +1651,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 
 "SteamUI_SSA_Agree"				"Lue sopimus kokonaan. Sinun on hyväksyttävä Steam-tilaussopimuksen ehdot jatkaaksesi."
 "SteamUI_SSA_CybercafeAgree"		"Olen lisensoitu Cybercafe-käyttäjä ja hyväksyn sopimuksen ehdot"
-"SteamUI_SSA_ActivateProduct"		"Rekisteröidäksesi tuotteen Steamissä ja lisätäksesi sen kirjastoosi, anna CD- tai DVD-levyn mukana tullut tuotetunnus tai muu Steam-tuotetunnus. Jatka valitsemalla Seuraava."
+"SteamUI_SSA_ActivateProduct"		"Rekisteröi tuote Steamiin ja lisää se Steam-kirjastoon syöttämällä CD- tai DVD-levyn mukana tullut tuotetunnus tai muu Steam-tuotetunnus. Jatka valitsemalla Seuraava."
 "SteamUI_ActivateProductLockedDown"		"Tilisi on lukittu käyttäjän tai Steamin tuen toimesta. Et voi aktivoida uusia tuotteita tällä tilillä ennen lukituksen poistoa."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Näytä Steamin tuen aktiiviset ilmoitukset"
 
@@ -3114,13 +3116,13 @@ Jos jatkat, pelin aikana voi ilmetä ongelmia."
 
 Voit jatkaa tämän pelin pelaamista joko päivittämällä järjestelmän tai käyttämällä eri tietokonetta."
 
-"Steam_AccountPage_BetaParticipation"	"Betaversioihin osallistuminen:"
+"Steam_AccountPage_BetaParticipation"	"Beta-osallistuminen:"
 "Steam_NoBetaAvailable"	"(Ei yhtään saatavilla tällä hetkellä)"
 "Steam_NoBetaChosen"	"Ei osallistu\n(%numbetas% saatavilla tällä hetkellä)"
-"Steam_NoBetaChosenNonAdmin"	"%numbetas% saatavilla\n(Vain se käyttäjä, joka asensi Steamin, voi osallistua Betaan.)"
-"Steam_UserCantSetBeta" "%electedbeta%\n(Vain se käyttäjä, joka asensi Steamin, voi muuttaa betaan osallistumista)"
+"Steam_NoBetaChosenNonAdmin"	"%numbetas% saatavilla\n(Vain Steamin asentanut käyttäjä voi vaihtaa beta-osallistumistilan.)"
+"Steam_UserCantSetBeta" "%electedbeta%\n(Vain Steamin asentanut käyttäjä voi vaihtaa beta-osallistumistilan.)"
 "Steam_BetaReportBug"	"Ilmoita viasta"
-"Steam_ChooseBetaDlgTitle" "Betaversioihin osallistuminen - Steam"
+"Steam_ChooseBetaDlgTitle" "Beta-osallistuminen – Steam"
 "Steam_ChooseBetaExplanation"	"Steam tarjoaa usein tilaisuuden kokeilla pelien päivityksiä tai Steam-päivityksiä ennen niiden virallista julkaisua.
 
 Voit osallistua haluamaasi betaohjelmaan valitsemalla sen alta ja valitsemalla sitten OK. (Voit poistaa itsesi kaikista betaohjelmista valitsemalla EI MITÄÄN.)"
@@ -4353,7 +4355,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_SystemRequirementWarning_Link" "Näytä järjestelmävaatimukset"
 
 "Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% valmiina lähettämään"
+"Notification_RemoteClientConnected"	"%machine% valmiina suoratoistoon"
 "Notification_RemoteClientDisconnected"	"%machine% ei yhteydessä"
 
 "Notification_StreamingTitle"	"Steam Remote Play"
@@ -4549,7 +4551,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Suoratoista peliä tietokoneeltasi toisella laitteella. Kirjaudu samalle Steam-tilille eri koneelta tai valitse \"toinen tietokone\" Steam Linkistä."
+"Steam_Settings_Streaming_Description" "Suoratoista peliä tämän tietokoneen ja muiden laitteiden välillä. Kirjaudu samalle Steam-tilille eri koneelta tai valitse \"toinen tietokone\" Steam Linkistä."
 "Steam_Settings_Streaming_DeviceName" "LAITE"
 "Steam_Settings_Streaming_Status" "TILA"
 "Steam_Settings_Streaming_EnableStreaming" "Ota Remote Play käyttöön"

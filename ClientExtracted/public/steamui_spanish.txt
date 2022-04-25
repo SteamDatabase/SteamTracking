@@ -187,6 +187,7 @@
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Error"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Iniciar"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Jugar"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Jugar"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Actualizar más tarde"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jugar a la demo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Iniciar herramienta"
@@ -207,6 +208,7 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Iniciar la aplicación en cuanto esté lista"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Iniciar el juego en cuanto esté listo"
+"SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Iniciar el juego en cuanto esté listo"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Iniciar la demo en cuanto esté lista"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Iniciar la herramienta en cuanto esté lista"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Reproducir la banda sonora en cuanto esté lista"
@@ -1356,7 +1358,7 @@
 "Steam_PurchaseFraudWarning" "El fraude en el uso de las tarjetas de crédito es un delito, y Valve coopera con la aplicación de la ley para actuar contra esta actividad ilegal."
 
 "Steam_CacheValidation_Title"		"Validando archivos de Steam - %progress%%% completado"
-"Steam_ValidatingSteamCaches"		"Validando archivo de %cache_name% (%cache_number% de %cache_total%)"
+"Steam_ValidatingSteamCaches"		"Validando archivos de %cache_name% (%cache_number% de %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Validando archivos de caché de Steam (%cache_number% de %cache_total%)"
 
 "Steam_CacheDecryption_Title"		"Descifrando archivos de Steam - %progress%%% completado"
@@ -2875,7 +2877,7 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "SteamUI_ValveSurvey_ControllerCradleLabel"		"¿Utilizas la base del extensor inalámbrico para mejorar la conexión inalámbrica de tu Steam Controller (como se muestra abajo)?"
 "SteamUI_ValveSurvey_ControllerCradleDontHave"	"No tengo un extensor inalámbrico."
 "SteamUI_ValveSurvey_ControllerCradleYes"		"Sí, uso el extensor inalámbrico como se muestra."
-"SteamUI_ValveSurvey_ControllerCradleNo"		"No, conecto el receptor inalámbrico directamente en un puerto USB."
+"SteamUI_ValveSurvey_ControllerCradleNo"		"No, conecto el receptor inalámbrico en un puerto USB."
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"No hay receptor inalámbrico."
 "SteamUI_ValveSurvey_Summary_ControllerCradle"	"Cable y base del Steam Controller: %s1"
 
@@ -3704,7 +3706,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_purchased_space"		"Nuevo "
 "Steam_SizeOnDiskColumn"	"Tamaño en disco"
 
-"steam_details_lastplayedheader" "ÚItima sesión"
+"steam_details_lastplayedheader" "Última sesión"
 "steam_details_lastlaunchedheader" "Iniciado por última vez"
 "steam_details_lastpurchased$apptype=game"	"Fecha de adquisición:"
 "steam_details_lastpurchased$apptype=application"	"Fecha de adquisición:"
@@ -4544,7 +4546,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Retransmite juegos desde tu ordenador a otros dispositivos. Para conectarte, inicia sesión en esta cuenta de Steam en otro ordenador o elige «Otro ordenador» en tu Steam Link."
+"Steam_Settings_Streaming_Description" "Retransmite juegos entre este ordenador y otros dispositivos. Para conectarte, inicia sesión en esta cuenta de Steam en otro ordenador o elige «Otro ordenador» en tu Steam Link."
 "Steam_Settings_Streaming_DeviceName" "NOMBRE DEL DISPOSITIVO"
 "Steam_Settings_Streaming_Status" "ESTADO"
 "Steam_Settings_Streaming_EnableStreaming" "Activar Remote Play"
@@ -4861,7 +4863,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "DownloadRegion_cambodia"       "Camboya"
 "DownloadRegion_vietnam"        "Vietnam"
 "DownloadRegion_my_kualalumpur" "Malasia - Kuala Lumpur"
-"DownloadRegion_ua_kiev"        "Ucrania - Kiev"
+"DownloadRegion_ua_kiev"        "Ucrania - Kyiv"
 "DownloadRegion_us_sandiego"    "EE. UU. - San Diego"
 "DownloadRegion_us_sacramento"  "EE. UU. - Sacramento"
 "DownloadRegion_us_minneapolis" "EE. UU. - Minneapolis"

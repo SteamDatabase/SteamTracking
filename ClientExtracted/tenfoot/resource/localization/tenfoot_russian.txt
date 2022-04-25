@@ -2207,6 +2207,8 @@
 	"Library_Details_ControllerAction_Change_Player_Number"	"ИЗМЕНИТЬ НОМЕР ИГРОКА"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"СМЕНИТЬ НОМЕР ИГРОКА НА"
 	"Library_Details_ControllerAction_MouseDelta"	"ДЕЛЬТА МЫШИ"
+	"Library_Details_ControllerAction_BrightnessUp"	"ПОВЫСИТЬ ЯРКОСТЬ ЭКРАНА"
+	"Library_Details_ControllerAction_BrightnessDown"	"ПОНИЗИТЬ ЯРКОСТЬ ЭКРАНА"
 	"Controller_SetMouseDelta_Title"				"ЗАДАТЬ ДЕЙСТВИЕ ДЛЯ ДЕЛЬТЫ МЫШИ"
 	"Controller_SetMouseDelta_Description"			"Выберите значения для этого действия"
 	"ControllerConfig_MouseDeltaX"					"Ось x"

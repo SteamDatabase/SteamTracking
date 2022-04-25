@@ -2206,6 +2206,8 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 	"Library_Details_ControllerAction_Change_Player_Number"	"ALTERAR NÚMERO DO JOGADOR"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"ALTERAR NÚMERO DO JOGADOR PARA"
 	"Library_Details_ControllerAction_MouseDelta"	"DESLOC. DO MOUSE"
+	"Library_Details_ControllerAction_BrightnessUp"	"AUMENTAR BRILHO DA TELA"
+	"Library_Details_ControllerAction_BrightnessDown"	"DIMINUIR BRILHO DA TELA"
 	"Controller_SetMouseDelta_Title"				"DEFINIR COMANDO DE DESLOCAMENTO DO MOUSE"
 	"Controller_SetMouseDelta_Description"			"Selecione os valores para este comando"
 	"ControllerConfig_MouseDeltaX"					"Eixo X"

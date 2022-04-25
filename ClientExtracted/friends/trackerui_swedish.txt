@@ -788,12 +788,8 @@
 
 "Steam_Settings_Browser"	"Webbläsare"
 "Overlay_SettingsBrowserDesc" "Följande inställningar gäller för webbläsaren som används i Steam-klienten och i Steams överlägg i spel."
-"Steam_SettingsBrowserClearWebCache"	"Rensa webbläsarens cache"
-"Steam_SettingsBrowserClearAllCookies"	"Ta bort alla cookies"
-"Steam_Settings_Browser_DeleteTitle"	"Ta bort cookies"
-"Steam_Settings_Browser_DeleteMsg"	"Ta bort alla cookies i Steam?"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"Rensa webbläsarcache"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"Rensa cache i den inbyggda webbläsaren?"
+"Steam_SettingsBrowserDeleteAllData"	"Radera webbläsarens data"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Radera Steam-webbläsarens alla cachelagrade filer, cookies samt historik?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Bjud in andra till att spela via en länk från din vänlista."

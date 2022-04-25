@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-0X
-0X
 __stubs
 __TEXT
 __stub_helper
@@ -1307,6 +1305,7 @@ Ic
 =*.*
 @
 @
+D
 0
 @
 @

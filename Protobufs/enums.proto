@@ -115,6 +115,15 @@ enum ECloudStoragePersistState {
 	k_ECloudStoragePersistStateDeleted = 2;
 }
 
+enum ESDCardFormatStage {
+	k_ESDCardFormatStage_Invalid = 0;
+	k_ESDCardFormatStage_Starting = 1;
+	k_ESDCardFormatStage_Testing = 2;
+	k_ESDCardFormatStage_Rescuing = 3;
+	k_ESDCardFormatStage_Formatting = 4;
+	k_ESDCardFormatStage_Finalizing = 5;
+}
+
 enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Invalid = 0;
 	k_BluetoothDeviceType_Unknown = 1;
@@ -260,4 +269,17 @@ enum ECommunityItemClass {
 	k_ECommunityItemClass_AvatarFrame = 14;
 	k_ECommunityItemClass_AnimatedAvatar = 15;
 	k_ECommunityItemClass_SteamDeckKeyboardSkin = 16;
+}
+
+enum ESteamDeckCompatibilityFeedback {
+	k_ESteamDeckCompatibilityFeedback_Unset = 0;
+	k_ESteamDeckCompatibilityFeedback_Agree = 1;
+	k_ESteamDeckCompatibilityFeedback_Disagree = 2;
+	k_ESteamDeckCompatibilityFeedback_Ignore = 3;
+}
+
+enum EProvideDeckFeedbackPreference {
+	k_EProvideDeckFeedbackPreference_Unset = 0;
+	k_EProvideDeckFeedbackPreference_Yes = 1;
+	k_EProvideDeckFeedbackPreference_No = 2;
 }
