@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7202543";
+var CLSTAMP = "7204992";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -35332,6 +35332,7 @@ var CLSTAMP = "7202543";
                     )
                   ),
                 !t.is_event_completed &&
+                  !t.is_event_upcoming &&
                   c.a.createElement(
                     "div",
                     { className: ka.a.MatchesContainer, ref: b },
@@ -43310,59 +43311,148 @@ var CLSTAMP = "7202543";
                 )
               );
         }),
-        mo = Object(d.a)(function () {
-          return ro() != Ia.e.SPRING_2022_LEAGUE
-            ? null
-            : c.a.createElement(
-                "div",
-                { className: dn.a.DPCHeaderGenericLeague },
-                c.a.createElement(
+        mo =
+          (Object(d.a)(function () {
+            return ro() != Ia.e.SPRING_2022_LEAGUE
+              ? null
+              : c.a.createElement(
                   "div",
-                  { className: dn.a.TextContainer },
+                  { className: dn.a.DPCHeaderGenericLeague },
                   c.a.createElement(
                     "div",
-                    { className: dn.a.EventTitle },
-                    Object(M.k)("#dpc_event_league")
-                  ),
-                  c.a.createElement(
-                    "div",
-                    { className: dn.a.EventSegment },
-                    Object(M.k)("#dpc_event_spring")
-                  ),
-                  c.a.createElement(
-                    "div",
-                    { className: dn.a.EventSubTitle },
-                    Object(M.k)("#dpc_event_2021season")
-                  ),
-                  c.a.createElement(
-                    "div",
-                    { className: dn.a.EventStartTitle },
-                    Object(M.k)("#dpc_event_league_start")
-                  ),
-                  c.a.createElement(
-                    "div",
-                    { className: dn.a.EventStartTime },
-                    c.a.createElement(Ga.a, {
-                      date: 16472412e5,
-                      format: "DD MMMM YYYY",
-                    })
-                  ),
-                  c.a.createElement(
-                    "div",
-                    { className: dn.a.EventEndTitle },
-                    Object(M.k)("#dpc_event_league_end")
-                  ),
-                  c.a.createElement(
-                    "div",
-                    { className: dn.a.EventEndTime },
-                    c.a.createElement(Ga.a, {
-                      date: 16507836e5,
-                      format: "DD MMMM YYYY",
-                    })
+                    { className: dn.a.TextContainer },
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventTitle },
+                      Object(M.k)("#dpc_event_league")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventSegment },
+                      Object(M.k)("#dpc_event_spring")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventSubTitle },
+                      Object(M.k)("#dpc_event_2021season")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventStartTitle },
+                      Object(M.k)("#dpc_event_league_start")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventStartTime },
+                      c.a.createElement(Ga.a, {
+                        date: 16472412e5,
+                        format: "DD MMMM YYYY",
+                      })
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventEndTitle },
+                      Object(M.k)("#dpc_event_league_end")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventEndTime },
+                      c.a.createElement(Ga.a, {
+                        date: 16507836e5,
+                        format: "DD MMMM YYYY",
+                      })
+                    )
                   )
-                )
-              );
-        }),
+                );
+          }),
+          Object(d.a)(function () {
+            return ro() != Ia.e.SPRING_2022_MAJOR
+              ? null
+              : c.a.createElement(
+                  "div",
+                  { className: dn.a.DPCHeaderSpring2021Major },
+                  c.a.createElement(
+                    "div",
+                    { className: dn.a.TextContainer },
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventTitle },
+                      Object(M.k)("#dpc_event_springmajor22")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventPresented },
+                      Object(M.k)("#dpc_event_springmajor22_presented")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventSegment },
+                      Object(M.k)("#dpc_event_spring")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.EventSubTitle },
+                      Object(M.k)("#dpc_event_2021season")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      {
+                        className: Object(v.a)(
+                          dn.a.EventPhaseTitle,
+                          dn.a.EventPhaseGroup
+                        ),
+                      },
+                      Object(M.k)("#dpc_group_stage")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      {
+                        className: Object(v.a)(
+                          dn.a.EventPhaseTime,
+                          dn.a.EventPhaseGroupTime
+                        ),
+                      },
+                      c.a.createElement(Ga.a, {
+                        date: 16522704e5,
+                        format: "DD MMMM YYYY",
+                      })
+                    ),
+                    c.a.createElement(
+                      "div",
+                      {
+                        className: Object(v.a)(
+                          dn.a.EventPhaseTitle,
+                          dn.a.EventPhasePlayoffs
+                        ),
+                      },
+                      Object(M.k)("#dpc_playoff")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      {
+                        className: Object(v.a)(
+                          dn.a.EventPhaseTime,
+                          dn.a.EventPhasePlayoffsTime
+                        ),
+                      },
+                      c.a.createElement(Ga.a, {
+                        date: 16527888e5,
+                        format: "DD MMMM YYYY",
+                      })
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.PrizePoolTitle },
+                      Object(M.k)("#dpc_prizepool")
+                    ),
+                    c.a.createElement(
+                      "div",
+                      { className: dn.a.PrizePoolValue },
+                      "$500,000 USD"
+                    )
+                  )
+                );
+          })),
         _o = Object(d.a)(function () {
           var e = ro(),
             t = "#212026",
@@ -43387,6 +43477,7 @@ var CLSTAMP = "7202543";
               (t = "#39445a"), (a = "#39445a");
               break;
             case Ia.e.SPRING_2022_LEAGUE:
+            case Ia.e.SPRING_2022_MAJOR:
               (t = "#456462"), (a = "#42605e");
           }
           return c.a.createElement(
@@ -58264,6 +58355,8 @@ var CLSTAMP = "7202543";
             return i.e.WINTER_2021_LEAGUE_FINALS;
           case "spring22":
             return i.e.SPRING_2022_LEAGUE;
+          case "springmajor22":
+            return i.e.SPRING_2022_MAJOR;
           case "ti11":
             return i.e.INTERNATIONAL_2022;
         }
@@ -58285,6 +58378,8 @@ var CLSTAMP = "7202543";
             return "winter21finals";
           case i.e.SPRING_2022_LEAGUE:
             return "spring22";
+          case i.e.SPRING_2022_MAJOR:
+            return "springmajor22";
           case i.e.INTERNATIONAL_2022:
             return "ti11";
         }
