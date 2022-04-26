@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "Presentatör",
 	"BroadcastChat_Role_Broadcaster_ttip": "Sändare",
 	"BroadcastChat_Role_Moderatorr_ttip": "Moderator",
-	"BroadcastChat_Blocked": "Endast ägare av spelet kan skicka chattmeddelanden under denna sändning.",
+	"BroadcastChat_Blocked": "Endast spelägare kan skicka chattmeddelanden under denna sändning.",
 	"BroadcastChat_half_Mute": "Dämpa användare i 12h",
 	"BroadcastChat_day_Mute": "Dämpa användare i ett dygn",
 	"BroadcastChat_week_Mute": "Dämpa användare i en vecka",

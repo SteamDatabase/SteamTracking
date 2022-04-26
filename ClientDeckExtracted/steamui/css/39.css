@@ -9816,6 +9816,8 @@ div.LowPerfMode
   display: flex;
   flex-wrap: wrap;
   max-width: 120px;
+  opacity: 0;
+  transition: opacity 0.1s;
 }
 .controllersettings_devicecalibration_StartTestPrompt_3Ipg_.controllersettings_devicecalibration_LeftStick_2zyIb {
   margin-left: 360px;
@@ -9824,6 +9826,10 @@ div.LowPerfMode
   margin-top: 100px;
   margin-left: 60px;
   max-width: 800px;
+}
+.controllersettings_devicecalibration_StartTestPrompt_3Ipg_.controllersettings_devicecalibration_ShowTestPrompt_3OvVM {
+  opacity: 100%;
+  transition: opacity 0.5s;
 }
 .controllersettings_devicecalibration_PressureGraphLabel_2Hl8W {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -9852,6 +9858,18 @@ div.LowPerfMode
   transform: rotate(270deg);
   margin-left: 18px;
   margin-top: 18px;
+}
+.controllersettings_devicecalibration_PressureGraphLabel_2Hl8W.controllersettings_devicecalibration_DefaultClickLeft_1Eie4 {
+  transform: scale(0.75);
+  color: #67707b;
+  margin-left: -45px;
+  margin-top: 48px;
+}
+.controllersettings_devicecalibration_PressureGraphLabel_2Hl8W.controllersettings_devicecalibration_DefaultClickRight_3HRZn {
+  transform: scale(0.75);
+  color: #67707b;
+  margin-left: 82px;
+  margin-top: 48px;
 }
 .supportalerts_BrowserWrapper_14nHy {
   display: flex;
@@ -10074,6 +10092,47 @@ div.LowPerfMode
   bottom: 0;
   background-color: rgba(103, 112, 123, 0.2);
 }
+.achievementslist_ComparisonAchieverColumn_3eXGQ {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.achievementslist_ComparisonAchieverInfo_3wXF0 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.achievementslist_ComparisonAchieverInfo_3wXF0
+  .achievementslist_ProgressContainer_1tFpG {
+  width: 100px;
+}
+.achievementslist_ComparisonAchieverInfo_3wXF0
+  .achievementslist_UnlockDate_2fFW2,
+.achievementslist_ComparisonAchieverInfo_3wXF0
+  .achievementslist_ProgressLabel_3Y63d {
+  font-size: 12px;
+  color: #b8bcbf;
+}
+.achievementslist_ComparisonAchieverInfo_3wXF0
+  .achievementslist_ProgressLabel_3Y63d {
+  min-width: 50px;
+  text-align: right;
+}
+.achievementslist_ComparisonAchieverInfo_3wXF0.achievementslist_Secondary_3AWMZ
+  .achievementslist_UnlockDate_2fFW2 {
+  color: #ffc82c;
+}
+.achievementslist_ComparisonAchieverInfo_3wXF0
+  .achievementslist_AvatarContainer_Mn8BN
+  .avatar {
+  box-shadow: none;
+}
+.achievementslist_ComparisonAchieverInfo_3wXF0.achievementslist_Unachieved_opxyr
+  .achievementslist_AvatarContainer_Mn8BN {
+  opacity: 0.2;
+}
 .achievementsheader_Container_2iGYY {
   display: flex;
   flex-direction: row;
@@ -10089,6 +10148,11 @@ div.LowPerfMode
   flex-direction: column;
   gap: 14px;
 }
+.achievementsheader_Container_2iGYY
+  .achievementsheader_Content_Pr0VC
+  .achievementsheader_LeaderboardsButton_3_7wz {
+  align-self: flex-end;
+}
 .achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl {
   color: #fff;
   font-size: 22px;
@@ -10103,22 +10167,34 @@ div.LowPerfMode
 }
 .achievementsheader_Stat_28omE {
   display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+.achievementsheader_Stat_28omE .achievementsheader_StatLabelAndValue_C17Op {
+  flex: 1;
+  display: flex;
   flex-direction: column;
 }
-.achievementsheader_Stat_28omE .achievementsheader_Label_17zZl {
+.achievementsheader_Stat_28omE
+  .achievementsheader_StatLabelAndValue_C17Op
+  .achievementsheader_Label_17zZl {
   color: #dcdedf;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-.achievementsheader_Stat_28omE .achievementsheader_TextValue_3SUIg {
+.achievementsheader_Stat_28omE
+  .achievementsheader_StatLabelAndValue_C17Op
+  .achievementsheader_TextValue_3SUIg {
   color: #fff;
   font-weight: 500;
   font-size: 16px;
 }
 .achievementsheader_BigStat_p8Yjz {
   flex: 1;
+  align-items: flex-start;
 }
 .achievementsheader_ProgressLabel_27CS0 {
   display: flex;
@@ -10126,20 +10202,30 @@ div.LowPerfMode
   justify-content: space-between;
 }
 .achievementsheader_Progress_3CaVU {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 7px;
+}
+.achievementsheader_Ribbon_BhQwn {
+  width: 30px;
+  height: 30px;
 }
 :root {
   --basicui-header-height: 0px;
 }
 .achievementspage_Page_3FQHg {
+  position: relative;
   flex: 1;
-  padding: 24px;
   background-color: #0e141b;
+  display: flex;
+  min-height: 0;
 }
 .achievementspage_Page_3FQHg .achievementspage_Container_11Z-t {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-top: 64px;
   z-index: 1;
 }
 .achievementspage_Page_3FQHg .achievementspage_Nav_15Sq7 {
@@ -10218,6 +10304,44 @@ div.LowPerfMode
   .achievementspage_NotOwnedMessage_1PNTI {
   color: #67707b;
   font-size: 12px;
+}
+.achievementspage_MyAchievementsHeader_2UpV2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.achievementspage_MyAchievementsHeader_2UpV2 .achievementspage_Label_2LSKt {
+  color: #dcdedf;
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+}
+.achievementspage_HeaderContainer_36Dp_ {
+  padding-left: 24px;
+  padding-right: 24px;
+  scroll-margin-top: 68px;
+}
+.achievementspage_LoadingContainer_2lhAp {
+  padding: 24px;
+}
+.achievementspage_LoadingContainer_2lhAp .achievementspage_Throbber_N--B2 {
+  background: none;
+}
+.achievementspage_ErrorContainer_1tJLL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+}
+.achievementspage_ErrorContainer_1tJLL .achievementspage_ErrorTitle_2zwFG {
+  text-align: center;
+}
+.achievementspage_ErrorContainer_1tJLL .achievementspage_ErrorButtons_JPkl1 {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 @keyframes gamepadui_ItemFocusAnim-darkerGrey-nocolor_2K5n7 {
   from {
@@ -10370,18 +10494,18 @@ body {
   flex-shrink: 0;
   flex-grow: 0;
 }
-.gamepadui_BasicDialogOverlay_26wVc.FullModalOverlay,
-.gamepadui_BasicDialogOverlay_26wVc .ModalOverlayContent {
+.gamepadui_GamepadDialogOverlay_34Euf.FullModalOverlay,
+.gamepadui_GamepadDialogOverlay_34Euf .ModalOverlayContent {
   position: absolute;
 }
-.gamepadui_BasicDialogOverlay_26wVc .ModalOverlayBackground {
+.gamepadui_GamepadDialogOverlay_34Euf .ModalOverlayBackground {
   background: rgba(14, 20, 27, 0.85);
   backdrop-filter: blur(3px);
 }
-.gamepadui_BasicDialogOverlay_26wVc .ModalPosition_Content {
+.gamepadui_GamepadDialogOverlay_34Euf .ModalPosition_Content {
   box-shadow: none;
 }
-.gamepadui_BasicDialogOverlay_26wVc .ModalPosition_TopBar {
+.gamepadui_GamepadDialogOverlay_34Euf .ModalPosition_TopBar {
   display: none;
 }
 .ErrorBoundary {
@@ -11109,8 +11233,8 @@ body {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(1deg);
+  position: relative;
   color: #dcdedf;
-  background-color: #23262e;
   background-color: transparent;
   padding: 10px 18px;
   margin: 0 -2px;
@@ -11122,9 +11246,55 @@ body {
   mix-blend-mode: screen;
   color: #fff;
 }
+.mainmenuapprunning_NavigationMenuItem_1G0K4.mainmenuapprunning_Active_1jG8i {
+  transform: scale(1.1);
+  color: #fff;
+  z-index: 2;
+}
 .mainmenuapprunning_NavigationMenuItem_1G0K4.mainmenuapprunning_Disabled_2x8Va {
   color: #67707b;
   cursor: default;
+}
+.mainmenuapprunning_NavigationMenuItem_1G0K4.mainmenuapprunning_SwitchAppsTitle_1WlX2 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #8b929a;
+  cursor: default;
+}
+.mainmenuapprunning_NavigationMenuItem_1G0K4.mainmenuapprunning_SelectableAppWindow_1kETF {
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mainmenuapprunning_NavigationMenuItem_1G0K4
+  .mainmenuapprunning_ActiveDot_13YbV {
+  position: absolute;
+  left: -1px;
+  background: #1a9fff;
+  border-radius: 6px;
+  width: 10px;
+  height: 50%;
+}
+.mainmenuapprunning_NavigationMenuItemSeparator_l7dF3 {
+  height: 1px;
+  background: #3d4450;
+  margin: 8px 16px;
 }
 .mainmenuapprunning_AppColumn_3FAI9 {
   flex-shrink: 0;
@@ -11225,6 +11395,254 @@ body {
 :root {
   --basicui-header-height: 0px;
 }
+@keyframes quickaccessmenu_ItemFocusAnim-darkerGrey-nocolor_2YeD3 {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes quickaccessmenu_ItemFocusAnim-darkerGrey_36sGv {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes quickaccessmenu_ItemFocusAnim-darkGrey_3H1ff {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes quickaccessmenu_ItemFocusAnim-grey_2T0Dt {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes quickaccessmenu_ItemFocusAnimBorder-darkGrey_2XnPb {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes quickaccessmenu_ItemFocusAnim-green_1XTtk {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes quickaccessmenu_focusAnimation_kLIk2 {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes quickaccessmenu_hoverAnimation_3bjAu {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.quickaccessmenu_PanelSection_ljJSM {
+  padding: 0px 16px;
+  margin: 0px 0px 24px;
+}
+.quickaccessmenu_PanelSection_ljJSM:first-of-type {
+  margin: 0px 0px 24px;
+}
+.quickaccessmenu_PanelSectionTitle_1JWa5 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #8b929a;
+  padding: 0px 0px 8px;
+  display: flex;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+.quickaccessmenu_PanelSectionTitle_1JWa5 .quickaccessmenu_Text_2B2VB {
+  flex-grow: 1;
+}
+.quickaccessmenu_PanelSectionTitle_1JWa5 > svg {
+  height: 18px;
+}
+.quickaccessmenu_PanelSectionRow_1TJv6 > :first-child {
+  --field-negative-horizontal-margin: 16px;
+  padding: 8px 16px;
+}
+.quickaccessmenu_Label_Ks1OT svg {
+  padding-right: 16px;
+  width: 22px;
+  height: 22px;
+  color: inherit;
+}
+.quickaccessmenu_Label_Ks1OT {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: inherit;
+}
+.quickaccessmenu_ComingSoon_17NMm {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-style: italic;
+  color: #b8bcbf;
+  margin: 20px 15px 0px 15px;
+  font-size: 14px;
+}
+.quickaccessmenu_LowBattery_AtwmU {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background-color: #ffc82c;
+  color: #000;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.quickaccessmenu_LowBattery_AtwmU.quickaccessmenu_ReallyLow_2vxcv {
+  background-color: #de3618;
+  color: #fff;
+}
+.quickaccessmenu_LowBattery_AtwmU .quickaccessmenu_LowBatteryGauge_-nQfk {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.quickaccessmenu_LowBattery_AtwmU .quickaccessmenu_Text_2B2VB {
+  flex-shrink: 0;
+}
+.quickaccessmenu_LowBattery_AtwmU .quickaccessmenu_Remaining_2D6Sj {
+  flex-grow: 1;
+  text-align: right;
+}
+.quickaccessmenu_EmptyNotifications_2pgiB {
+  margin-top: 40px;
+  text-align: center;
+}
+.quickaccessmenu_BatterySectionContainer_3N-ap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.quickaccessmenu_BatteryIcon_3KqVu {
+  height: fit-content;
+  margin-right: 6px;
+}
+.quickaccessmenu_BatteryIcon_3KqVu svg {
+  width: 24px;
+  height: 40px;
+}
+.quickaccessmenu_BatteryPercentageLabel_209R3 {
+  font-size: 36px;
+  color: #fff;
+  align-self: flex-end;
+  line-height: 30px;
+}
+.quickaccessmenu_BatteryDetailsLabels_m0o-N {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: fit-content;
+  align-self: flex-end;
+}
+.quickaccessmenu_BatteryDetailsLabels_m0o-N
+  .quickaccessmenu_BatteryProjectedValue_1Yq4s {
+  font-size: unset;
+  text-transform: unset;
+  color: #fff;
+}
+.quickaccessmenu_BatteryDetailsLabels_m0o-N
+  .quickaccessmenu_BatteryProjectedLabel_1Lj_u {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 10px;
+}
 .quickaccessmenu_ViewPlaceholder_2orc8 {
   position: absolute;
   top: 0;
@@ -11266,6 +11684,7 @@ body {
   background: #0e141b;
   z-index: 5;
   box-shadow: 0 0 7px 12px #0e141b;
+  position: relative;
 }
 .quickaccessmenu_Container_3DHXr {
   position: absolute;

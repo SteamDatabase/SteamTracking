@@ -3252,7 +3252,7 @@
         ve = r("JnZK"),
         Oe = r("oFam"),
         Re = r("2ErG"),
-        ze = (r("75qM"), r("kyHq")),
+        ze = (r("75qM"), r("65aj")),
         Te = r("uobO");
       class Fe {
         constructor() {
@@ -4959,7 +4959,7 @@
           ),
           !Me.g.logged_in &&
             l.createElement(
-              Ae.p,
+              Ae.j,
               { onClick: Le.a, className: Object(Ye.a)(Xe.a.SignInButton) },
               Object(we.g)("#Login_SignIn")
             )
@@ -5971,7 +5971,7 @@
       var a = r("mrSG"),
         i = r("q1tI"),
         s = r("6Y59"),
-        n = (r("kyHq"), r("TyAF")),
+        n = (r("65aj"), r("TyAF")),
         o = r("2vnA"),
         l = r("ionH"),
         c = r("TLQK"),

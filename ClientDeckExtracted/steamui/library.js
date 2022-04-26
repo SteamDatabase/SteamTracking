@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7204920";
+var CLSTAMP = "7216497";
 !(function (e) {
   function t(t) {
     for (
@@ -1260,6 +1260,519 @@ var CLSTAMP = "7204920";
   },
   "5LhG": function (e, t) {
     e.exports = "/movies/deck_startup.webm";
+  },
+  "65aj": function (e, t, r) {
+    "use strict";
+    r.d(t, "P", function () {
+      return n.q;
+    }),
+      r.d(t, "O", function () {
+        return n.p;
+      }),
+      r.d(t, "u", function () {
+        return n.i;
+      }),
+      r.d(t, "G", function () {
+        return n.m;
+      }),
+      r.d(t, "t", function () {
+        return n.h;
+      }),
+      r.d(t, "H", function () {
+        return n.n;
+      }),
+      r.d(t, "e", function () {
+        return n.a;
+      }),
+      r.d(t, "q", function () {
+        return n.g;
+      }),
+      r.d(t, "v", function () {
+        return n.j;
+      }),
+      r.d(t, "A", function () {
+        return n.l;
+      }),
+      r.d(t, "l", function () {
+        return n.f;
+      }),
+      r.d(t, "F", function () {
+        return i;
+      }),
+      r.d(t, "n", function () {
+        return a;
+      }),
+      r.d(t, "m", function () {
+        return s;
+      }),
+      r.d(t, "z", function () {
+        return o;
+      }),
+      r.d(t, "f", function () {
+        return c;
+      }),
+      r.d(t, "h", function () {
+        return l;
+      }),
+      r.d(t, "o", function () {
+        return u;
+      }),
+      r.d(t, "Q", function () {
+        return d;
+      }),
+      r.d(t, "p", function () {
+        return m;
+      }),
+      r.d(t, "B", function () {
+        return h;
+      }),
+      r.d(t, "C", function () {
+        return _;
+      }),
+      r.d(t, "N", function () {
+        return b;
+      }),
+      r.d(t, "K", function () {
+        return g;
+      }),
+      r.d(t, "r", function () {
+        return p;
+      }),
+      r.d(t, "k", function () {
+        return B;
+      }),
+      r.d(t, "y", function () {
+        return w;
+      }),
+      r.d(t, "b", function () {
+        return M;
+      }),
+      r.d(t, "x", function () {
+        return C;
+      }),
+      r.d(t, "w", function () {
+        return k;
+      }),
+      r.d(t, "D", function () {
+        return E;
+      }),
+      r.d(t, "E", function () {
+        return x;
+      }),
+      r.d(t, "s", function () {
+        return z;
+      }),
+      r.d(t, "J", function () {
+        return S;
+      }),
+      r.d(t, "a", function () {
+        return v;
+      }),
+      r.d(t, "I", function () {
+        return R;
+      }),
+      r.d(t, "j", function () {
+        return L;
+      }),
+      r.d(t, "i", function () {
+        return O;
+      }),
+      r.d(t, "c", function () {
+        return T;
+      }),
+      r.d(t, "d", function () {
+        return F;
+      }),
+      r.d(t, "g", function () {
+        return I;
+      }),
+      r.d(t, "M", function () {
+        return W;
+      }),
+      r.d(t, "L", function () {
+        return U;
+      });
+    var n = r("mgoM");
+    const i = 4294967295;
+    var a, s, o;
+    !(function (e) {
+      (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
+    })(a || (a = {})),
+      (function (e) {
+        (e[(e.Input = 0)] = "Input"),
+          (e[(e.AllOutput = 1)] = "AllOutput"),
+          (e[(e.Left = 2)] = "Left"),
+          (e[(e.Right = 3)] = "Right"),
+          (e[(e.Sub = 4)] = "Sub"),
+          (e[(e.BackLeft = 5)] = "BackLeft"),
+          (e[(e.BackRight = 6)] = "BackRight");
+      })(s || (s = {}));
+    function c(e) {
+      return e === o.k_ESteamRealmChina;
+    }
+    !(function (e) {
+      (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+        (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+        (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+    })(o || (o = {}));
+    class l {
+      constructor() {
+        this.m_rgHandles = [];
+      }
+      Add(e) {
+        e && this.m_rgHandles.push(e);
+      }
+      Unregister() {
+        let e = this.m_rgHandles;
+        this.m_rgHandles = [];
+        for (let t of e) t && t.unregister();
+      }
+    }
+    var u;
+    !(function (e) {
+      (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
+        "k_BluetoothDeviceType_Invalid"),
+        (e[(e.k_BluetoothDeviceType_Unknown = 1)] =
+          "k_BluetoothDeviceType_Unknown"),
+        (e[(e.k_BluetoothDeviceType_Phone = 2)] =
+          "k_BluetoothDeviceType_Phone"),
+        (e[(e.k_BluetoothDeviceType_Computer = 3)] =
+          "k_BluetoothDeviceType_Computer"),
+        (e[(e.k_BluetoothDeviceType_Headset = 4)] =
+          "k_BluetoothDeviceType_Headset"),
+        (e[(e.k_BluetoothDeviceType_Headphones = 5)] =
+          "k_BluetoothDeviceType_Headphones"),
+        (e[(e.k_BluetoothDeviceType_Speakers = 6)] =
+          "k_BluetoothDeviceType_Speakers"),
+        (e[(e.k_BluetoothDeviceType_OtherAudio = 7)] =
+          "k_BluetoothDeviceType_OtherAudio"),
+        (e[(e.k_BluetoothDeviceType_Mouse = 8)] =
+          "k_BluetoothDeviceType_Mouse"),
+        (e[(e.k_BluetoothDeviceType_Joystick = 9)] =
+          "k_BluetoothDeviceType_Joystick"),
+        (e[(e.k_BluetoothDeviceType_Gamepad = 10)] =
+          "k_BluetoothDeviceType_Gamepad"),
+        (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
+          "k_BluetoothDeviceType_Keyboard");
+    })(u || (u = {}));
+    const d = -1;
+    var m, h, _;
+    !(function (e) {
+      (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
+        (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
+        (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+          "EBrowserType_OpenVROverlay_Dashboard"),
+        (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+        (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
+          "EBrowserType_DirectHWND_Borderless"),
+        (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
+          "EBrowserType_DirectHWND_Hidden"),
+        (e[(e.EBrowserType_ChildHWNDNative = 6)] =
+          "EBrowserType_ChildHWNDNative"),
+        (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
+          "EBrowserType_Transparent_Toplevel"),
+        (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
+          "EBrowserType_OffScreen_SharedTexture"),
+        (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
+          "EBrowserType_OffScreen_GameOverlay"),
+        (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+          "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+        (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
+          "EBrowserType_Offscreen_FriendsUI"),
+        (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+    })(m || (m = {})),
+      (function (e) {
+        (e[(e.SystemKey0 = 0)] = "SystemKey0"),
+          (e[(e.SystemKey1 = 1)] = "SystemKey1");
+      })(h || (h = {})),
+      (function (e) {
+        (e[(e.Hidden = 0)] = "Hidden"),
+          (e[(e.Notification = 1)] = "Notification"),
+          (e[(e.Overlay = 2)] = "Overlay"),
+          (e[(e.Opaque = 3)] = "Opaque"),
+          (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
+      })(_ || (_ = {}));
+    class b {}
+    class g {}
+    var f;
+    !(function (e) {
+      (e[(e.k_EPending = 0)] = "k_EPending"),
+        (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
+        (e[(e.k_ERejected = 2)] = "k_ERejected");
+    })(f || (f = {}));
+    var p, w, y;
+    r("2lL1");
+    !(function (e) {
+      (e[(e.k_EControllerBindingType_None = 0)] =
+        "k_EControllerBindingType_None"),
+        (e[(e.k_EControllerBindingType_Key = 1)] =
+          "k_EControllerBindingType_Key"),
+        (e[(e.k_EControllerBindingType_MouseButton = 2)] =
+          "k_EControllerBindingType_MouseButton"),
+        (e[(e.k_EControllerBindingType_Gamepad = 3)] =
+          "k_EControllerBindingType_Gamepad"),
+        (e[(e.k_EControllerBindingType_Mousewheel = 4)] =
+          "k_EControllerBindingType_Mousewheel"),
+        (e[(e.k_EControllerBindingType_Modeshift = 5)] =
+          "k_EControllerBindingType_Modeshift"),
+        (e[(e.k_EControllerBindingType_GameAction = 6)] =
+          "k_EControllerBindingType_GameAction"),
+        (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
+          "k_EControllerBindingType_ControllerAction");
+    })(p || (p = {}));
+    class B {
+      constructor() {
+        (this.paused = !1),
+          (this.update_appid = 0),
+          (this.update_start_time = 0),
+          (this.update_state = "None"),
+          (this.update_seconds_remaining = 0),
+          (this.update_bytes_to_download = 0),
+          (this.update_bytes_downloaded = 0),
+          (this.update_bytes_to_stage = 0),
+          (this.update_bytes_staged = 0),
+          (this.update_bytes_to_process = 0),
+          (this.update_bytes_processed = 0),
+          (this.update_is_install = !1),
+          (this.update_is_workshop = !1),
+          (this.update_is_shader = !1),
+          (this.update_is_prefetch_estimate = !1),
+          (this.update_network_bytes_per_second = 0),
+          (this.update_peak_network_bytes_per_second = 0),
+          (this.update_disc_bytes_per_second = 0),
+          (this.throttling_suspended = !1);
+      }
+    }
+    !(function (e) {
+      (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
+        (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
+        (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
+          "k_ERemoteClientLaunchRequiresUI"),
+        (e[(e.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
+          "k_ERemoteClientLaunchRequiresLaunchOption"),
+        (e[(e.k_ERemoteClientLaunchRequiresEULA = 5)] =
+          "k_ERemoteClientLaunchRequiresEULA"),
+        (e[(e.k_ERemoteClientLaunchTimeout = 6)] =
+          "k_ERemoteClientLaunchTimeout"),
+        (e[(e.k_ERemoteClientLaunchStreamTimeout = 7)] =
+          "k_ERemoteClientLaunchStreamTimeout"),
+        (e[(e.k_ERemoteClientLaunchStreamClientFail = 8)] =
+          "k_ERemoteClientLaunchStreamClientFail"),
+        (e[(e.k_ERemoteClientLaunchOtherGameRunning = 9)] =
+          "k_ERemoteClientLaunchOtherGameRunning"),
+        (e[(e.k_ERemoteClientLaunchDownloadStarted = 10)] =
+          "k_ERemoteClientLaunchDownloadStarted"),
+        (e[(e.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
+          "k_ERemoteClientLaunchDownloadNoSpace"),
+        (e[(e.k_ERemoteClientLaunchDownloadFiltered = 12)] =
+          "k_ERemoteClientLaunchDownloadFiltered"),
+        (e[(e.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
+          "k_ERemoteClientLaunchDownloadRequiresUI"),
+        (e[(e.k_ERemoteClientLaunchAccessDenied = 14)] =
+          "k_ERemoteClientLaunchAccessDenied"),
+        (e[(e.k_ERemoteClientLaunchNetworkError = 15)] =
+          "k_ERemoteClientLaunchNetworkError"),
+        (e[(e.k_ERemoteClientLaunchProgress = 16)] =
+          "k_ERemoteClientLaunchProgress"),
+        (e[(e.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
+          "k_ERemoteClientLaunchParentalUnlockFailed"),
+        (e[(e.k_ERemoteClientLaunchScreenLocked = 18)] =
+          "k_ERemoteClientLaunchScreenLocked"),
+        (e[(e.k_ERemoteClientLaunchUnsupported = 19)] =
+          "k_ERemoteClientLaunchUnsupported"),
+        (e[(e.k_ERemoteClientLaunchDisabledLocal = 20)] =
+          "k_ERemoteClientLaunchDisabledLocal"),
+        (e[(e.k_ERemoteClientLaunchDisabledRemote = 21)] =
+          "k_ERemoteClientLaunchDisabledRemote"),
+        (e[(e.k_ERemoteClientLaunchBroadcasting = 22)] =
+          "k_ERemoteClientLaunchBroadcasting"),
+        (e[(e.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
+        (e[(e.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
+          "k_ERemoteClientLaunchDriversNotInstalled"),
+        (e[(e.k_ERemoteClientLaunchTransportUnavailable = 25)] =
+          "k_ERemoteClientLaunchTransportUnavailable"),
+        (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
+          "k_ERemoteClientLaunchCanceled"),
+        (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
+          "k_ERemoteClientLaunchInvisible"),
+        (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+          "k_ERemoteClientLaunchRestrictedCountry");
+    })(w || (w = {}));
+    class M extends class {} {}
+    class S {}
+    class v {}
+    !(function (e) {
+      (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
+        "k_EClientUINotificationGroupChatMessage"),
+        (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
+          "k_EClientUINotificationFriendChatMessage"),
+        (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
+          "k_EClientUINotificationFriendPersonaState");
+    })(y || (y = {}));
+    var C, k, E, x, z;
+    !(function (e) {
+      (e[(e.Unknown = 0)] = "Unknown"),
+        (e[(e.Wired = 1)] = "Wired"),
+        (e[(e.Wireless = 2)] = "Wireless"),
+        (e[(e.Virtual = 3)] = "Virtual");
+    })(C || (C = {})),
+      (function (e) {
+        (e[(e.NotPresent = 0)] = "NotPresent"),
+          (e[(e.Failed = 1)] = "Failed"),
+          (e[(e.Disconnected = 2)] = "Disconnected"),
+          (e[(e.Disconnecting = 3)] = "Disconnecting"),
+          (e[(e.Connecting = 4)] = "Connecting"),
+          (e[(e.Connected = 5)] = "Connected"),
+          (e[(e.Retrying = 6)] = "Retrying");
+      })(k || (k = {})),
+      (function (e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.Weak = 1)] = "Weak"),
+          (e[(e.Ok = 2)] = "Ok"),
+          (e[(e.Good = 3)] = "Good"),
+          (e[(e.Excellent = 4)] = "Excellent");
+      })(E || (E = {})),
+      (function (e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.StaticWep = 1)] = "StaticWep"),
+          (e[(e.DynamicWep = 2)] = "DynamicWep"),
+          (e[(e.Wpa = 4)] = "Wpa"),
+          (e[(e.WpaEnterprise = 8)] = "WpaEnterprise"),
+          (e[(e.Wpa2 = 16)] = "Wpa2"),
+          (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
+          (e[(e.Unsupported = 32768)] = "Unsupported");
+      })(x || (x = {})),
+      (function (e) {
+        (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
+          (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
+          (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
+          (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
+            "k_EHTTPProxyMode_Automatic");
+      })(z || (z = {}));
+    class R {}
+    function L() {
+      return {
+        bNotifications_ShowIngame: !0,
+        bNotifications_ShowOnline: !1,
+        bNotifications_ShowMessage: !0,
+        bNotifications_EventsAndAnnouncements: !0,
+        bSounds_PlayIngame: !1,
+        bSounds_PlayOnline: !1,
+        bSounds_PlayMessage: !0,
+        bSounds_EventsAndAnnouncements: !1,
+        bAlwaysNewChatWindow: !1,
+        bForceAlphabeticFriendSorting: !1,
+        nChatFlashMode: 0,
+        bRememberOpenChats: !0,
+        bCompactQuickAccess: !1,
+        bCompactFriendsList: !1,
+        bNotifications_ShowChatRoomNotification: !0,
+        bSounds_PlayChatRoomNotification: !0,
+        bHideOfflineFriendsInTagGroups: !1,
+        bHideCategorizedFriends: !1,
+        bCategorizeInGameFriendsByGame: !0,
+        nChatFontSize: 2,
+        b24HourClock: !1,
+        bDoNotDisturbMode: !1,
+        bDisableEmbedInlining: !1,
+        bSignIntoFriends: !0,
+        bDisableSpellcheck: !1,
+        bDisableRoomEffects: !1,
+        bAnimatedAvatars: !0,
+        featuresEnabled: {},
+      };
+    }
+    r("FVDh"), r("sRB7");
+    class O {
+      constructor() {
+        this.content_descriptors_to_exclude = [];
+      }
+    }
+    function T(e) {
+      switch (e) {
+        case 1:
+          return "game";
+        case 2:
+          return "software";
+        case 4:
+          return "tool";
+        case 8:
+          return "demo";
+        case 32:
+          return "dlc";
+        case 128:
+          return "driver";
+        case 256:
+          return "config";
+        case 2048:
+          return "video";
+        case 8192:
+          return "music";
+        case 65536:
+          return "beta";
+      }
+      return "invalid";
+    }
+    function F(e) {
+      switch (e) {
+        case 0:
+          return "game";
+        case 6:
+          return "software";
+        case 1:
+          return "demo";
+        case 4:
+          return "dlc";
+        case 7:
+        case 3:
+          return "video";
+        case 11:
+          return "music";
+        case 12:
+          return "beta";
+        case 2:
+          return "mod";
+      }
+      return "invalid";
+    }
+    function I(e) {
+      return (
+        "game" === e ||
+        "dlc" === e ||
+        "software" === e ||
+        "music" === e ||
+        "application" === e ||
+        "demo" === e ||
+        "hardware" === e ||
+        "mod" === e ||
+        "video" == e ||
+        "beta" === e ||
+        "advertising" === e
+      );
+    }
+    function W(e) {
+      return e;
+    }
+    function U(e) {
+      return e;
+    }
+    var j, N;
+    !(function (e) {
+      (e[(e.k_EComputerActiveStateInvalid = 0)] =
+        "k_EComputerActiveStateInvalid"),
+        (e[(e.k_EComputerActiveStateActive = 1)] =
+          "k_EComputerActiveStateActive"),
+        (e[(e.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
+    })(j || (j = {})),
+      (function (e) {
+        (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
+          "k_EClientUsedInputTypeKeyboard"),
+          (e[(e.k_EClientUsedInputTypeMouse = 1)] =
+            "k_EClientUsedInputTypeMouse"),
+          (e[(e.k_EClientUsedInputTypeController = 2)] =
+            "k_EClientUsedInputTypeController"),
+          (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
+      })(N || (N = {}));
   },
   "6NF1": function (e, t, r) {},
   "6Y59": function (e, t, r) {
@@ -5014,7 +5527,7 @@ var CLSTAMP = "7204920";
     });
     var n = r("q1tI"),
       i = r("CZLW"),
-      a = (r("kyHq"), r("UKyN")),
+      a = (r("65aj"), r("UKyN")),
       s = r.n(a),
       o = r("QeIi"),
       c = r.n(o),
@@ -6340,6 +6853,12 @@ var CLSTAMP = "7204920";
                   bw: i.h.writeUint32,
                 },
                 realm: { n: 32, d: 0, br: i.d.readUint32, bw: i.h.writeUint32 },
+                timeout_ms: {
+                  n: 33,
+                  d: -1,
+                  br: i.d.readInt32,
+                  bw: i.h.writeInt32,
+                },
               },
             }),
           o.sm_m
@@ -6772,7 +7291,7 @@ var CLSTAMP = "7204920";
       });
     var n = r("q1tI"),
       i = r("mgoM"),
-      a = r("kyHq"),
+      a = r("65aj"),
       s = r("lkRc"),
       o = r("Kw0F"),
       c = (r("r64O"), r("6NF1"), r("qiKp")),
@@ -7064,7 +7583,7 @@ var CLSTAMP = "7204920";
       m = r("2ErG"),
       h = r("2vnA"),
       _ = r("mgoM"),
-      b = (r("kyHq"), r("OS8t")),
+      b = (r("65aj"), r("OS8t")),
       g = r("RD/U");
     const f = s.Message;
     class p extends f {
@@ -9001,7 +9520,7 @@ var CLSTAMP = "7204920";
       r.d(t, "b", function () {
         return o;
       });
-    r("kyHq");
+    r("65aj");
     var n = r("mC9v"),
       i = r("hRO2"),
       a = (r("NtSG"), r("RD/U"));
@@ -9305,516 +9824,6 @@ var CLSTAMP = "7204920";
       }
     }
   },
-  kyHq: function (e, t, r) {
-    "use strict";
-    r.d(t, "k", function () {
-      return a;
-    }),
-      r.d(t, "r", function () {
-        return i;
-      }),
-      r.d(t, "Q", function () {
-        return s;
-      }),
-      r.d(t, "b", function () {
-        return o;
-      }),
-      r.d(t, "N", function () {
-        return c;
-      }),
-      r.d(t, "I", function () {
-        return l;
-      }),
-      r.d(t, "j", function () {
-        return u;
-      }),
-      r.d(t, "J", function () {
-        return d;
-      }),
-      r.d(t, "a", function () {
-        return m;
-      }),
-      r.d(t, "M", function () {
-        return h;
-      }),
-      r.d(t, "L", function () {
-        return _;
-      }),
-      r.d(t, "F", function () {
-        return b;
-      }),
-      r.d(t, "n", function () {
-        return g;
-      }),
-      r.d(t, "m", function () {
-        return f;
-      }),
-      r.d(t, "p", function () {
-        return p;
-      }),
-      r.d(t, "K", function () {
-        return C;
-      }),
-      r.d(t, "i", function () {
-        return k;
-      }),
-      r.d(t, "c", function () {
-        return E;
-      }),
-      r.d(t, "d", function () {
-        return x;
-      }),
-      r.d(t, "g", function () {
-        return z;
-      }),
-      r.d(t, "y", function () {
-        return S;
-      }),
-      r.d(t, "h", function () {
-        return R;
-      }),
-      r.d(t, "z", function () {
-        return v;
-      }),
-      r.d(t, "f", function () {
-        return L;
-      }),
-      r.d(t, "o", function () {
-        return O;
-      }),
-      r.d(t, "x", function () {
-        return T;
-      }),
-      r.d(t, "w", function () {
-        return F;
-      }),
-      r.d(t, "D", function () {
-        return I;
-      }),
-      r.d(t, "E", function () {
-        return W;
-      }),
-      r.d(t, "s", function () {
-        return U;
-      }),
-      r.d(t, "B", function () {
-        return j;
-      }),
-      r.d(t, "C", function () {
-        return N;
-      });
-    var n = r("mgoM");
-    r.d(t, "e", function () {
-      return n.a;
-    }),
-      r.d(t, "l", function () {
-        return n.f;
-      }),
-      r.d(t, "q", function () {
-        return n.g;
-      }),
-      r.d(t, "t", function () {
-        return n.h;
-      }),
-      r.d(t, "u", function () {
-        return n.i;
-      }),
-      r.d(t, "v", function () {
-        return n.j;
-      }),
-      r.d(t, "A", function () {
-        return n.l;
-      }),
-      r.d(t, "G", function () {
-        return n.m;
-      }),
-      r.d(t, "H", function () {
-        return n.n;
-      }),
-      r.d(t, "O", function () {
-        return n.p;
-      }),
-      r.d(t, "P", function () {
-        return n.q;
-      });
-    var i;
-    r("FVDh"), r("2lL1"), r("li7h"), r("sRB7");
-    class a {
-      constructor() {
-        (this.paused = !1),
-          (this.update_appid = 0),
-          (this.update_start_time = 0),
-          (this.update_state = "None"),
-          (this.update_seconds_remaining = 0),
-          (this.update_bytes_to_download = 0),
-          (this.update_bytes_downloaded = 0),
-          (this.update_bytes_to_stage = 0),
-          (this.update_bytes_staged = 0),
-          (this.update_bytes_to_process = 0),
-          (this.update_bytes_processed = 0),
-          (this.update_is_install = !1),
-          (this.update_is_workshop = !1),
-          (this.update_is_shader = !1),
-          (this.update_is_prefetch_estimate = !1),
-          (this.update_network_bytes_per_second = 0),
-          (this.update_peak_network_bytes_per_second = 0),
-          (this.update_disc_bytes_per_second = 0),
-          (this.throttling_suspended = !1);
-      }
-    }
-    !(function (e) {
-      (e[(e.k_EControllerBindingType_None = 0)] =
-        "k_EControllerBindingType_None"),
-        (e[(e.k_EControllerBindingType_Key = 1)] =
-          "k_EControllerBindingType_Key"),
-        (e[(e.k_EControllerBindingType_MouseButton = 2)] =
-          "k_EControllerBindingType_MouseButton"),
-        (e[(e.k_EControllerBindingType_Gamepad = 3)] =
-          "k_EControllerBindingType_Gamepad"),
-        (e[(e.k_EControllerBindingType_Mousewheel = 4)] =
-          "k_EControllerBindingType_Mousewheel"),
-        (e[(e.k_EControllerBindingType_Modeshift = 5)] =
-          "k_EControllerBindingType_Modeshift"),
-        (e[(e.k_EControllerBindingType_GameAction = 6)] =
-          "k_EControllerBindingType_GameAction"),
-        (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
-          "k_EControllerBindingType_ControllerAction");
-    })(i || (i = {}));
-    const s = -1;
-    class o extends class {} {}
-    class c {}
-    class l {}
-    function u() {
-      return {
-        bNotifications_ShowIngame: !0,
-        bNotifications_ShowOnline: !1,
-        bNotifications_ShowMessage: !0,
-        bNotifications_EventsAndAnnouncements: !0,
-        bSounds_PlayIngame: !1,
-        bSounds_PlayOnline: !1,
-        bSounds_PlayMessage: !0,
-        bSounds_EventsAndAnnouncements: !1,
-        bAlwaysNewChatWindow: !1,
-        bForceAlphabeticFriendSorting: !1,
-        nChatFlashMode: 0,
-        bRememberOpenChats: !0,
-        bCompactQuickAccess: !1,
-        bCompactFriendsList: !1,
-        bNotifications_ShowChatRoomNotification: !0,
-        bSounds_PlayChatRoomNotification: !0,
-        bHideOfflineFriendsInTagGroups: !1,
-        bHideCategorizedFriends: !1,
-        bCategorizeInGameFriendsByGame: !0,
-        nChatFontSize: 2,
-        b24HourClock: !1,
-        bDoNotDisturbMode: !1,
-        bDisableEmbedInlining: !1,
-        bSignIntoFriends: !0,
-        bDisableSpellcheck: !1,
-        bDisableRoomEffects: !1,
-        bAnimatedAvatars: !0,
-        featuresEnabled: {},
-      };
-    }
-    class d {}
-    class m {}
-    function h(e) {
-      return e;
-    }
-    function _(e) {
-      return e;
-    }
-    const b = 4294967295;
-    var g, f, p, w, y, B, M, S, v;
-    !(function (e) {
-      (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-    })(g || (g = {})),
-      (function (e) {
-        (e[(e.Input = 0)] = "Input"),
-          (e[(e.AllOutput = 1)] = "AllOutput"),
-          (e[(e.Left = 2)] = "Left"),
-          (e[(e.Right = 3)] = "Right"),
-          (e[(e.Sub = 4)] = "Sub"),
-          (e[(e.BackLeft = 5)] = "BackLeft"),
-          (e[(e.BackRight = 6)] = "BackRight");
-      })(f || (f = {}));
-    !(function (e) {
-      (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
-        (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
-        (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
-          "EBrowserType_OpenVROverlay_Dashboard"),
-        (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-        (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
-          "EBrowserType_DirectHWND_Borderless"),
-        (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
-          "EBrowserType_DirectHWND_Hidden"),
-        (e[(e.EBrowserType_ChildHWNDNative = 6)] =
-          "EBrowserType_ChildHWNDNative"),
-        (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
-          "EBrowserType_Transparent_Toplevel"),
-        (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
-          "EBrowserType_OffScreen_SharedTexture"),
-        (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
-          "EBrowserType_OffScreen_GameOverlay"),
-        (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-          "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-        (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
-          "EBrowserType_Offscreen_FriendsUI"),
-        (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-    })(p || (p = {}));
-    !(function (e) {
-      (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
-        "k_EClientUINotificationGroupChatMessage"),
-        (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
-          "k_EClientUINotificationFriendChatMessage"),
-        (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
-          "k_EClientUINotificationFriendPersonaState");
-    })(w || (w = {})),
-      (function (e) {
-        (e[(e.k_EComputerActiveStateInvalid = 0)] =
-          "k_EComputerActiveStateInvalid"),
-          (e[(e.k_EComputerActiveStateActive = 1)] =
-            "k_EComputerActiveStateActive"),
-          (e[(e.k_EComputerActiveStateIdle = 2)] =
-            "k_EComputerActiveStateIdle");
-      })(y || (y = {}));
-    class C {}
-    !(function (e) {
-      (e[(e.k_EPending = 0)] = "k_EPending"),
-        (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
-        (e[(e.k_ERejected = 2)] = "k_ERejected");
-    })(B || (B = {}));
-    class k {
-      constructor() {
-        this.content_descriptors_to_exclude = [];
-      }
-    }
-    function E(e) {
-      switch (e) {
-        case 1:
-          return "game";
-        case 2:
-          return "software";
-        case 4:
-          return "tool";
-        case 8:
-          return "demo";
-        case 32:
-          return "dlc";
-        case 128:
-          return "driver";
-        case 256:
-          return "config";
-        case 2048:
-          return "video";
-        case 8192:
-          return "music";
-        case 65536:
-          return "beta";
-      }
-      return "invalid";
-    }
-    function x(e) {
-      switch (e) {
-        case 0:
-          return "game";
-        case 6:
-          return "software";
-        case 1:
-          return "demo";
-        case 4:
-          return "dlc";
-        case 7:
-        case 3:
-          return "video";
-        case 11:
-          return "music";
-        case 12:
-          return "beta";
-        case 2:
-          return "mod";
-      }
-      return "invalid";
-    }
-    function z(e) {
-      return (
-        "game" === e ||
-        "dlc" === e ||
-        "software" === e ||
-        "music" === e ||
-        "application" === e ||
-        "demo" === e ||
-        "hardware" === e ||
-        "mod" === e ||
-        "video" == e ||
-        "beta" === e ||
-        "advertising" === e
-      );
-    }
-    !(function (e) {
-      (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
-        "k_EClientUsedInputTypeKeyboard"),
-        (e[(e.k_EClientUsedInputTypeMouse = 1)] =
-          "k_EClientUsedInputTypeMouse"),
-        (e[(e.k_EClientUsedInputTypeController = 2)] =
-          "k_EClientUsedInputTypeController"),
-        (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-    })(M || (M = {})),
-      (function (e) {
-        (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
-          (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
-          (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
-            "k_ERemoteClientLaunchRequiresUI"),
-          (e[(e.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
-            "k_ERemoteClientLaunchRequiresLaunchOption"),
-          (e[(e.k_ERemoteClientLaunchRequiresEULA = 5)] =
-            "k_ERemoteClientLaunchRequiresEULA"),
-          (e[(e.k_ERemoteClientLaunchTimeout = 6)] =
-            "k_ERemoteClientLaunchTimeout"),
-          (e[(e.k_ERemoteClientLaunchStreamTimeout = 7)] =
-            "k_ERemoteClientLaunchStreamTimeout"),
-          (e[(e.k_ERemoteClientLaunchStreamClientFail = 8)] =
-            "k_ERemoteClientLaunchStreamClientFail"),
-          (e[(e.k_ERemoteClientLaunchOtherGameRunning = 9)] =
-            "k_ERemoteClientLaunchOtherGameRunning"),
-          (e[(e.k_ERemoteClientLaunchDownloadStarted = 10)] =
-            "k_ERemoteClientLaunchDownloadStarted"),
-          (e[(e.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
-            "k_ERemoteClientLaunchDownloadNoSpace"),
-          (e[(e.k_ERemoteClientLaunchDownloadFiltered = 12)] =
-            "k_ERemoteClientLaunchDownloadFiltered"),
-          (e[(e.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
-            "k_ERemoteClientLaunchDownloadRequiresUI"),
-          (e[(e.k_ERemoteClientLaunchAccessDenied = 14)] =
-            "k_ERemoteClientLaunchAccessDenied"),
-          (e[(e.k_ERemoteClientLaunchNetworkError = 15)] =
-            "k_ERemoteClientLaunchNetworkError"),
-          (e[(e.k_ERemoteClientLaunchProgress = 16)] =
-            "k_ERemoteClientLaunchProgress"),
-          (e[(e.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
-            "k_ERemoteClientLaunchParentalUnlockFailed"),
-          (e[(e.k_ERemoteClientLaunchScreenLocked = 18)] =
-            "k_ERemoteClientLaunchScreenLocked"),
-          (e[(e.k_ERemoteClientLaunchUnsupported = 19)] =
-            "k_ERemoteClientLaunchUnsupported"),
-          (e[(e.k_ERemoteClientLaunchDisabledLocal = 20)] =
-            "k_ERemoteClientLaunchDisabledLocal"),
-          (e[(e.k_ERemoteClientLaunchDisabledRemote = 21)] =
-            "k_ERemoteClientLaunchDisabledRemote"),
-          (e[(e.k_ERemoteClientLaunchBroadcasting = 22)] =
-            "k_ERemoteClientLaunchBroadcasting"),
-          (e[(e.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
-          (e[(e.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
-            "k_ERemoteClientLaunchDriversNotInstalled"),
-          (e[(e.k_ERemoteClientLaunchTransportUnavailable = 25)] =
-            "k_ERemoteClientLaunchTransportUnavailable"),
-          (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
-            "k_ERemoteClientLaunchCanceled"),
-          (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
-            "k_ERemoteClientLaunchInvisible"),
-          (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
-            "k_ERemoteClientLaunchRestrictedCountry");
-      })(S || (S = {}));
-    class R {
-      constructor() {
-        this.m_rgHandles = [];
-      }
-      Add(e) {
-        e && this.m_rgHandles.push(e);
-      }
-      Unregister() {
-        let e = this.m_rgHandles;
-        this.m_rgHandles = [];
-        for (let t of e) t && t.unregister();
-      }
-    }
-    function L(e) {
-      return e === v.k_ESteamRealmChina;
-    }
-    !(function (e) {
-      (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-        (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-        (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    })(v || (v = {}));
-    var O;
-    !(function (e) {
-      (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
-        "k_BluetoothDeviceType_Invalid"),
-        (e[(e.k_BluetoothDeviceType_Unknown = 1)] =
-          "k_BluetoothDeviceType_Unknown"),
-        (e[(e.k_BluetoothDeviceType_Phone = 2)] =
-          "k_BluetoothDeviceType_Phone"),
-        (e[(e.k_BluetoothDeviceType_Computer = 3)] =
-          "k_BluetoothDeviceType_Computer"),
-        (e[(e.k_BluetoothDeviceType_Headset = 4)] =
-          "k_BluetoothDeviceType_Headset"),
-        (e[(e.k_BluetoothDeviceType_Headphones = 5)] =
-          "k_BluetoothDeviceType_Headphones"),
-        (e[(e.k_BluetoothDeviceType_Speakers = 6)] =
-          "k_BluetoothDeviceType_Speakers"),
-        (e[(e.k_BluetoothDeviceType_OtherAudio = 7)] =
-          "k_BluetoothDeviceType_OtherAudio"),
-        (e[(e.k_BluetoothDeviceType_Mouse = 8)] =
-          "k_BluetoothDeviceType_Mouse"),
-        (e[(e.k_BluetoothDeviceType_Joystick = 9)] =
-          "k_BluetoothDeviceType_Joystick"),
-        (e[(e.k_BluetoothDeviceType_Gamepad = 10)] =
-          "k_BluetoothDeviceType_Gamepad"),
-        (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
-          "k_BluetoothDeviceType_Keyboard");
-    })(O || (O = {}));
-    var T, F, I, W, U, j, N;
-    !(function (e) {
-      (e[(e.Unknown = 0)] = "Unknown"),
-        (e[(e.Wired = 1)] = "Wired"),
-        (e[(e.Wireless = 2)] = "Wireless"),
-        (e[(e.Virtual = 3)] = "Virtual");
-    })(T || (T = {})),
-      (function (e) {
-        (e[(e.NotPresent = 0)] = "NotPresent"),
-          (e[(e.Failed = 1)] = "Failed"),
-          (e[(e.Disconnected = 2)] = "Disconnected"),
-          (e[(e.Disconnecting = 3)] = "Disconnecting"),
-          (e[(e.Connecting = 4)] = "Connecting"),
-          (e[(e.Connected = 5)] = "Connected"),
-          (e[(e.Retrying = 6)] = "Retrying");
-      })(F || (F = {})),
-      (function (e) {
-        (e[(e.None = 0)] = "None"),
-          (e[(e.Weak = 1)] = "Weak"),
-          (e[(e.Ok = 2)] = "Ok"),
-          (e[(e.Good = 3)] = "Good"),
-          (e[(e.Excellent = 4)] = "Excellent");
-      })(I || (I = {})),
-      (function (e) {
-        (e[(e.None = 0)] = "None"),
-          (e[(e.StaticWep = 1)] = "StaticWep"),
-          (e[(e.DynamicWep = 2)] = "DynamicWep"),
-          (e[(e.Wpa = 4)] = "Wpa"),
-          (e[(e.WpaEnterprise = 8)] = "WpaEnterprise"),
-          (e[(e.Wpa2 = 16)] = "Wpa2"),
-          (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
-          (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(W || (W = {})),
-      (function (e) {
-        (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
-          (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
-          (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
-          (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
-            "k_EHTTPProxyMode_Automatic");
-      })(U || (U = {}));
-    !(function (e) {
-      (e[(e.SystemKey0 = 0)] = "SystemKey0"),
-        (e[(e.SystemKey1 = 1)] = "SystemKey1");
-    })(j || (j = {})),
-      (function (e) {
-        (e[(e.Hidden = 0)] = "Hidden"),
-          (e[(e.Notification = 1)] = "Notification"),
-          (e[(e.Overlay = 2)] = "Overlay"),
-          (e[(e.Opaque = 3)] = "Opaque"),
-          (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-      })(N || (N = {}));
-  },
   li7h: function (e, t, r) {
     "use strict";
     r.d(t, "a", function () {
@@ -9866,6 +9875,7 @@ var CLSTAMP = "7204920";
         LANGUAGE: "english",
         SUPPORTED_LANGUAGES: [],
         COUNTRY: "",
+        AVATAR_BASE_URL: "",
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
@@ -10555,7 +10565,7 @@ var CLSTAMP = "7204920";
       i = r.n(n),
       a = r("lkRc"),
       s = r("TLQK"),
-      o = r("kyHq");
+      o = r("65aj");
     const c = "steam-dev-configparams";
     function l() {
       let e = "";

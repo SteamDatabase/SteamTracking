@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "발표자",
 	"BroadcastChat_Role_Broadcaster_ttip": "중계자",
 	"BroadcastChat_Role_Moderatorr_ttip": "진행자",
-	"BroadcastChat_Blocked": "이 방송에서는 게임을 보유하고 있는 사람만 채팅 메시지를 전송할 수 있습니다.",
+	"BroadcastChat_Blocked": "해당 게임을 소유한 사용자만 이 방송 중에 채팅 메시지를 보낼 수 있습니다.",
 	"BroadcastChat_half_Mute": "12시간 동안 음소거",
 	"BroadcastChat_day_Mute": "하루 동안 음소거",
 	"BroadcastChat_week_Mute": "일주일 동안 음소거",

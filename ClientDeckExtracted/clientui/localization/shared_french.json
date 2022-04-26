@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "Présentation",
 	"BroadcastChat_Role_Broadcaster_ttip": "Diffusion",
 	"BroadcastChat_Role_Moderatorr_ttip": "Modération",
-	"BroadcastChat_Blocked": "Vous devez posséder le jeu pour envoyer des messages.",
+	"BroadcastChat_Blocked": "Pour pouvoir envoyer des messages lors de cette diffusion, il faut être propriétaire du jeu.",
 	"BroadcastChat_half_Mute": "Bloquer pendant 12 heures",
 	"BroadcastChat_day_Mute": "Bloquer pendant 24 heures",
 	"BroadcastChat_week_Mute": "Bloquer pendant une semaine",

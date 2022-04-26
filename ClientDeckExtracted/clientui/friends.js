@@ -842,96 +842,19 @@
         /***/
       },
 
-    /***/ "../../../web_src/shared/js/clienttypes.ts":
-      /*!****************************************************************************************!*\
-  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes.ts ***!
-  \****************************************************************************************/
-      /*! exports provided: BIsEFriendRelationshipFriend, BIsEFriendRelationshipBlocked, k_unSteamUserDesktopInstance, k_unSteamUserConsoleInstance, k_unSteamUserWebInstance, k_nGameIDWinUI, k_nGameIDServiceAppFirst, k_nGameIDSteamBackpack, k_nGameIDSteamEconomy, k_nGameIDServiceAppLast, k_nGameIDControllerConfigs, k_nGameIDSteamVR, k_nGameIDSteamVRMain, k_nGameIDSteamVRMonitorMain, k_nGameIDSteamVRMonitor, k_nGameIDControllerConfigs_Desktop, k_nGameIDControllerConfigs_BigPicture, k_nGameIDControllerConfigs_GuideChord, k_GIDNil, k_RTime32Nil, k_RTime32Infinite, ELanguagePchWebLanguageCode, MapKoreanaToKorean, ELanguagePchLanguage, PchLanguageToELanguage, EClanEventTypeArray, BIsChinaLauncher, BIsReducedUILauncher, EConnectivityTestResult, ENetFakeLocalSystemState, ESuspendResumeProgressState, EFloatingGamepadTextInputMode, EAppUpdateContentType, EOverlayToStoreFlag, EActivateGameOverlayToWebPageMode, DownloadItemUpdateTypeInfo, DownloadItem, DownloadOverview, ValidateProgress, MoveContentProgress, NotificationCounts, CurrentUser, AppTag, LoginUser, EControllerBindingType, ControllerState, ControllerVisualizationState, AppDetailsBeta, k_nSteamClientBetaNone, AppDetailsDLC, AppDetailsMusicAlbum, UserAchievementInfo, AppDetailsAchievementsHighlight, AppDetailsAchievements, AppLegacyCDKey, AppLibraryAssets, AppDetails, GameActionDetails, WorkshopItem, MusicAlbumTrack, MusicPlaybackState, TradingCardDetails, ESocialDropTypes, DragDropPosition, FriendState, BroadcastStatus, SettingsKeyBinding, SettingsDownloadRegion, FamilySharingUser, SettingsState, FamilySettings, RemotePlaySettings, FriendsSettings, DefaultFriendsSettings, InstalledAppInfo, InstallFolderInfo, UGCScreenShot, SystemInfo, IterateFolderItem, IterateDrivesItem, MarketingMessage, SurveyEntry, SurveySection, GameLaunchOption, ShortcutScanData, ShortcutScanResults, InstallAppAndCreateShortcutData, FlatpakApp, AppLifetimeNotification, ScreenshotNotification, AchievementNotification, BatteryState_t, FormatStorageProgress_t, InvalidStorageManagerDriveId, ToStorageManagerDriveId, InvalidStorageManagerBlockDeviceId, ToStorageManagerBlockDeviceId, InvalidAudioDeviceId, EAudioDirection, EAudioChannel, AudioDevice, AudioDevices, EBrowserType, BOpenVROverlayBrowser, OverlayChatBrowserInfo, PushToTalkInfo, EClientUINotificationType, EComputerActiveState, CommunityPreferences, TextFilterPreferences, EBroadcastViewRequestState, ContentDescriptorPreferences, StorePreferences, AppTypeForEProtoAppType, AppTypeForEStoreAppType, BIsSaleItemType, BDoesSaleItemTypeHaveParent, RemoteClientInputSettings, EClientUsedInputType, ERemoteClientLaunchResult, CallbackHandleDisposer, ESteamRealm, BIsChinaRealm, InvalidBluetoothAdapterId, InvalidBluetoothDeviceId, EBluetoothDeviceType, BluetoothAdapter_t, BluetoothDevice_t, BluetoothState_t, CustomNetworkDeviceWapId, InvalidNetworkDeviceWapId, ENetworkDeviceType, ENetworkDeviceState, EWirelessEndpointStrength, EWirelessSecurityFlags, EHTTPProxyMode, ConfiguredProxyInfo, ESystemUISystemKey, EUIComposition */
+    /***/ "../../../web_src/shared/js/clienttypes/appdetailstypes.ts":
+      /*!********************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/appdetailstypes.ts ***!
+  \********************************************************************************************************/
+      /*! exports provided: AppTag, AppDetailsBeta, AppDetailsDLC, AppLegacyCDKey, AppLibraryAssets, AppDetails */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
-          "DownloadItemUpdateTypeInfo",
-          function () {
-            return DownloadItemUpdateTypeInfo;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "DownloadItem",
-          function () {
-            return DownloadItem;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "DownloadOverview",
-          function () {
-            return DownloadOverview;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ValidateProgress",
-          function () {
-            return ValidateProgress;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "MoveContentProgress",
-          function () {
-            return MoveContentProgress;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "NotificationCounts",
-          function () {
-            return NotificationCounts;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "CurrentUser",
-          function () {
-            return CurrentUser;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
           "AppTag",
           function () {
             return AppTag;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "LoginUser",
-          function () {
-            return LoginUser;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EControllerBindingType",
-          function () {
-            return EControllerBindingType;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ControllerState",
-          function () {
-            return ControllerState;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ControllerVisualizationState",
-          function () {
-            return ControllerVisualizationState;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -943,44 +866,9 @@
         );
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
-          "k_nSteamClientBetaNone",
-          function () {
-            return k_nSteamClientBetaNone;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
           "AppDetailsDLC",
           function () {
             return AppDetailsDLC;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "AppDetailsMusicAlbum",
-          function () {
-            return AppDetailsMusicAlbum;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "UserAchievementInfo",
-          function () {
-            return UserAchievementInfo;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "AppDetailsAchievementsHighlight",
-          function () {
-            return AppDetailsAchievementsHighlight;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "AppDetailsAchievements",
-          function () {
-            return AppDetailsAchievements;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -1004,286 +892,29 @@
             return AppDetails;
           }
         );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "GameActionDetails",
-          function () {
-            return GameActionDetails;
+        class AppTag {
+          constructor() {
+            this.tagName = "";
+            this.vecTagIds = [];
           }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "WorkshopItem",
-          function () {
-            return WorkshopItem;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "MusicAlbumTrack",
-          function () {
-            return MusicAlbumTrack;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "MusicPlaybackState",
-          function () {
-            return MusicPlaybackState;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "TradingCardDetails",
-          function () {
-            return TradingCardDetails;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ESocialDropTypes",
-          function () {
-            return ESocialDropTypes;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "DragDropPosition",
-          function () {
-            return DragDropPosition;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "FriendState",
-          function () {
-            return FriendState;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "BroadcastStatus",
-          function () {
-            return BroadcastStatus;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "SettingsKeyBinding",
-          function () {
-            return SettingsKeyBinding;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "SettingsDownloadRegion",
-          function () {
-            return SettingsDownloadRegion;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "FamilySharingUser",
-          function () {
-            return FamilySharingUser;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "SettingsState",
-          function () {
-            return SettingsState;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "FamilySettings",
-          function () {
-            return FamilySettings;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "RemotePlaySettings",
-          function () {
-            return RemotePlaySettings;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "FriendsSettings",
-          function () {
-            return FriendsSettings;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "DefaultFriendsSettings",
-          function () {
-            return DefaultFriendsSettings;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "InstalledAppInfo",
-          function () {
-            return InstalledAppInfo;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "InstallFolderInfo",
-          function () {
-            return InstallFolderInfo;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "UGCScreenShot",
-          function () {
-            return UGCScreenShot;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "SystemInfo",
-          function () {
-            return SystemInfo;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "IterateFolderItem",
-          function () {
-            return IterateFolderItem;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "IterateDrivesItem",
-          function () {
-            return IterateDrivesItem;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "MarketingMessage",
-          function () {
-            return MarketingMessage;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "SurveyEntry",
-          function () {
-            return SurveyEntry;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "SurveySection",
-          function () {
-            return SurveySection;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "GameLaunchOption",
-          function () {
-            return GameLaunchOption;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ShortcutScanData",
-          function () {
-            return ShortcutScanData;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ShortcutScanResults",
-          function () {
-            return ShortcutScanResults;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "InstallAppAndCreateShortcutData",
-          function () {
-            return InstallAppAndCreateShortcutData;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "FlatpakApp",
-          function () {
-            return FlatpakApp;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "AppLifetimeNotification",
-          function () {
-            return AppLifetimeNotification;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ScreenshotNotification",
-          function () {
-            return ScreenshotNotification;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "AchievementNotification",
-          function () {
-            return AchievementNotification;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "BatteryState_t",
-          function () {
-            return BatteryState_t;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "FormatStorageProgress_t",
-          function () {
-            return FormatStorageProgress_t;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "InvalidStorageManagerDriveId",
-          function () {
-            return InvalidStorageManagerDriveId;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ToStorageManagerDriveId",
-          function () {
-            return ToStorageManagerDriveId;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "InvalidStorageManagerBlockDeviceId",
-          function () {
-            return InvalidStorageManagerBlockDeviceId;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ToStorageManagerBlockDeviceId",
-          function () {
-            return ToStorageManagerBlockDeviceId;
-          }
-        );
+        }
+        class AppDetailsBeta {}
+        class AppDetailsDLC {}
+        class AppLegacyCDKey {}
+        class AppLibraryAssets {}
+        class AppDetails {}
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/audiotypes.ts":
+      /*!***************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/audiotypes.ts ***!
+  \***************************************************************************************************/
+      /*! exports provided: InvalidAudioDeviceId, EAudioDirection, EAudioChannel, AudioDevice, AudioDevices */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
           "InvalidAudioDeviceId",
@@ -1319,139 +950,36 @@
             return AudioDevices;
           }
         );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EBrowserType",
-          function () {
-            return EBrowserType;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "BOpenVROverlayBrowser",
-          function () {
-            return BOpenVROverlayBrowser;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "OverlayChatBrowserInfo",
-          function () {
-            return OverlayChatBrowserInfo;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "PushToTalkInfo",
-          function () {
-            return PushToTalkInfo;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EClientUINotificationType",
-          function () {
-            return EClientUINotificationType;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EComputerActiveState",
-          function () {
-            return EComputerActiveState;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "CommunityPreferences",
-          function () {
-            return CommunityPreferences;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "TextFilterPreferences",
-          function () {
-            return TextFilterPreferences;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EBroadcastViewRequestState",
-          function () {
-            return EBroadcastViewRequestState;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ContentDescriptorPreferences",
-          function () {
-            return ContentDescriptorPreferences;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "StorePreferences",
-          function () {
-            return StorePreferences;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "AppTypeForEProtoAppType",
-          function () {
-            return AppTypeForEProtoAppType;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "AppTypeForEStoreAppType",
-          function () {
-            return AppTypeForEStoreAppType;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "BIsSaleItemType",
-          function () {
-            return BIsSaleItemType;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "BDoesSaleItemTypeHaveParent",
-          function () {
-            return BDoesSaleItemTypeHaveParent;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "RemoteClientInputSettings",
-          function () {
-            return RemoteClientInputSettings;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EClientUsedInputType",
-          function () {
-            return EClientUsedInputType;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ERemoteClientLaunchResult",
-          function () {
-            return ERemoteClientLaunchResult;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "CallbackHandleDisposer",
-          function () {
-            return CallbackHandleDisposer;
-          }
-        );
+        const InvalidAudioDeviceId = 0xffffffff;
+        var EAudioDirection;
+        (function (EAudioDirection) {
+          EAudioDirection[(EAudioDirection["Input"] = 0)] = "Input";
+          EAudioDirection[(EAudioDirection["Output"] = 1)] = "Output";
+        })(EAudioDirection || (EAudioDirection = {}));
+        var EAudioChannel;
+        (function (EAudioChannel) {
+          EAudioChannel[(EAudioChannel["Input"] = 0)] = "Input";
+          EAudioChannel[(EAudioChannel["AllOutput"] = 1)] = "AllOutput";
+          EAudioChannel[(EAudioChannel["Left"] = 2)] = "Left";
+          EAudioChannel[(EAudioChannel["Right"] = 3)] = "Right";
+          EAudioChannel[(EAudioChannel["Sub"] = 4)] = "Sub";
+          EAudioChannel[(EAudioChannel["BackLeft"] = 5)] = "BackLeft";
+          EAudioChannel[(EAudioChannel["BackRight"] = 6)] = "BackRight";
+        })(EAudioChannel || (EAudioChannel = {}));
+        class AudioDevice {}
+        class AudioDevices {}
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/basetypes.ts":
+      /*!**************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/basetypes.ts ***!
+  \**************************************************************************************************/
+      /*! exports provided: ESteamRealm, BIsChinaRealm, DragDropPosition, CallbackHandleDisposer */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
           "ESteamRealm",
@@ -1466,6 +994,71 @@
             return BIsChinaRealm;
           }
         );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DragDropPosition",
+          function () {
+            return DragDropPosition;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "CallbackHandleDisposer",
+          function () {
+            return CallbackHandleDisposer;
+          }
+        );
+        // Client Realm - from clientenums.h
+        var ESteamRealm;
+        (function (ESteamRealm) {
+          ESteamRealm[(ESteamRealm["k_ESteamRealmUnknown"] = 0)] =
+            "k_ESteamRealmUnknown";
+          ESteamRealm[(ESteamRealm["k_ESteamRealmGlobal"] = 1)] =
+            "k_ESteamRealmGlobal";
+          ESteamRealm[(ESteamRealm["k_ESteamRealmChina"] = 2)] =
+            "k_ESteamRealmChina";
+        })(ESteamRealm || (ESteamRealm = {}));
+        function BIsChinaRealm(eRealm) {
+          return eRealm === ESteamRealm.k_ESteamRealmChina;
+        }
+        class DragDropPosition {
+          constructor() {
+            this.x = 0;
+            this.y = 0;
+            this.height = 0;
+            this.width = 0;
+          }
+        }
+        /**
+         * Helper to hold an array of handles and dispose all at once
+         */
+        class CallbackHandleDisposer {
+          constructor() {
+            this.m_rgHandles = [];
+          }
+          Add(handle) {
+            if (handle) this.m_rgHandles.push(handle);
+          }
+          Unregister() {
+            let rgHandles = this.m_rgHandles;
+            this.m_rgHandles = [];
+            for (let handle of rgHandles) {
+              if (handle) handle.unregister();
+            }
+          }
+        }
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/bluetoothtypes.ts":
+      /*!*******************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/bluetoothtypes.ts ***!
+  \*******************************************************************************************************/
+      /*! exports provided: InvalidBluetoothAdapterId, InvalidBluetoothDeviceId, EBluetoothDeviceType, BluetoothAdapter_t, BluetoothDevice_t, BluetoothState_t */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
           "InvalidBluetoothAdapterId",
@@ -1508,60 +1101,114 @@
             return BluetoothState_t;
           }
         );
+        const InvalidBluetoothAdapterId = 0x0;
+        const InvalidBluetoothDeviceId = 0x0;
+        // TODO(andresr): re-do enum generation from windows
+        var EBluetoothDeviceType;
+        (function (EBluetoothDeviceType) {
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Invalid"] = 0)
+          ] = "k_BluetoothDeviceType_Invalid";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Unknown"] = 1)
+          ] = "k_BluetoothDeviceType_Unknown";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Phone"] = 2)
+          ] = "k_BluetoothDeviceType_Phone";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Computer"] = 3)
+          ] = "k_BluetoothDeviceType_Computer";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Headset"] = 4)
+          ] = "k_BluetoothDeviceType_Headset";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Headphones"] = 5)
+          ] = "k_BluetoothDeviceType_Headphones";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Speakers"] = 6)
+          ] = "k_BluetoothDeviceType_Speakers";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_OtherAudio"] = 7)
+          ] = "k_BluetoothDeviceType_OtherAudio";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Mouse"] = 8)
+          ] = "k_BluetoothDeviceType_Mouse";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Joystick"] = 9)
+          ] = "k_BluetoothDeviceType_Joystick";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Gamepad"] = 10)
+          ] = "k_BluetoothDeviceType_Gamepad";
+          EBluetoothDeviceType[
+            (EBluetoothDeviceType["k_BluetoothDeviceType_Keyboard"] = 11)
+          ] = "k_BluetoothDeviceType_Keyboard";
+        })(EBluetoothDeviceType || (EBluetoothDeviceType = {}));
+        class BluetoothAdapter_t {}
+        class BluetoothDevice_t {}
+        class BluetoothState_t {}
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/chattypes.ts":
+      /*!**************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/chattypes.ts ***!
+  \**************************************************************************************************/
+      /*! exports provided: OverlayChatBrowserInfo, PushToTalkInfo */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
-          "CustomNetworkDeviceWapId",
+          "OverlayChatBrowserInfo",
           function () {
-            return CustomNetworkDeviceWapId;
+            return OverlayChatBrowserInfo;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
-          "InvalidNetworkDeviceWapId",
+          "PushToTalkInfo",
           function () {
-            return InvalidNetworkDeviceWapId;
+            return PushToTalkInfo;
+          }
+        );
+        /* harmony import */ var _clientuitypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! ./clientuitypes */ "../../../web_src/shared/js/clienttypes/clientuitypes.ts"
+        );
+
+        class OverlayChatBrowserInfo {}
+        class PushToTalkInfo {}
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/clientuitypes.ts":
+      /*!******************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/clientuitypes.ts ***!
+  \******************************************************************************************************/
+      /*! exports provided: k_nSteamClientBetaNone, EBrowserType, BOpenVROverlayBrowser, ESystemUISystemKey, EUIComposition */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "k_nSteamClientBetaNone",
+          function () {
+            return k_nSteamClientBetaNone;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
-          "ENetworkDeviceType",
+          "EBrowserType",
           function () {
-            return ENetworkDeviceType;
+            return EBrowserType;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
-          "ENetworkDeviceState",
+          "BOpenVROverlayBrowser",
           function () {
-            return ENetworkDeviceState;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EWirelessEndpointStrength",
-          function () {
-            return EWirelessEndpointStrength;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EWirelessSecurityFlags",
-          function () {
-            return EWirelessSecurityFlags;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EHTTPProxyMode",
-          function () {
-            return EHTTPProxyMode;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "ConfiguredProxyInfo",
-          function () {
-            return ConfiguredProxyInfo;
+            return BOpenVROverlayBrowser;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -1578,8 +1225,630 @@
             return EUIComposition;
           }
         );
+        const k_nSteamClientBetaNone = -1; // No Steam client beta selected
+        var EBrowserType;
+        (function (EBrowserType) {
+          EBrowserType[(EBrowserType["EBrowserType_OffScreen"] = 0)] =
+            "EBrowserType_OffScreen";
+          EBrowserType[(EBrowserType["EBrowserType_OpenVROverlay"] = 1)] =
+            "EBrowserType_OpenVROverlay";
+          EBrowserType[
+            (EBrowserType["EBrowserType_OpenVROverlay_Dashboard"] = 2)
+          ] = "EBrowserType_OpenVROverlay_Dashboard";
+          EBrowserType[(EBrowserType["EBrowserType_DirectHWND"] = 3)] =
+            "EBrowserType_DirectHWND";
+          EBrowserType[
+            (EBrowserType["EBrowserType_DirectHWND_Borderless"] = 4)
+          ] = "EBrowserType_DirectHWND_Borderless";
+          EBrowserType[(EBrowserType["EBrowserType_DirectHWND_Hidden"] = 5)] =
+            "EBrowserType_DirectHWND_Hidden";
+          EBrowserType[(EBrowserType["EBrowserType_ChildHWNDNative"] = 6)] =
+            "EBrowserType_ChildHWNDNative";
+          EBrowserType[
+            (EBrowserType["EBrowserType_Transparent_Toplevel"] = 7)
+          ] = "EBrowserType_Transparent_Toplevel";
+          EBrowserType[
+            (EBrowserType["EBrowserType_OffScreen_SharedTexture"] = 8)
+          ] = "EBrowserType_OffScreen_SharedTexture";
+          EBrowserType[
+            (EBrowserType["EBrowserType_OffScreen_GameOverlay"] = 9)
+          ] = "EBrowserType_OffScreen_GameOverlay";
+          EBrowserType[
+            (EBrowserType[
+              "EBrowserType_OffScreen_GameOverlay_SharedTexture"
+            ] = 10)
+          ] = "EBrowserType_OffScreen_GameOverlay_SharedTexture";
+          EBrowserType[
+            (EBrowserType["EBrowserType_Offscreen_FriendsUI"] = 11)
+          ] = "EBrowserType_Offscreen_FriendsUI";
+          EBrowserType[(EBrowserType["EBrowserType_MAX"] = 12)] =
+            "EBrowserType_MAX";
+        })(EBrowserType || (EBrowserType = {}));
+        function BOpenVROverlayBrowser(eType) {
+          return (
+            eType == EBrowserType.EBrowserType_OpenVROverlay ||
+            eType == EBrowserType.EBrowserType_OpenVROverlay_Dashboard
+          );
+        }
+        /**
+         * System keys the UI can be notified of.
+         */
+        var ESystemUISystemKey;
+        (function (ESystemUISystemKey) {
+          ESystemUISystemKey[(ESystemUISystemKey["SystemKey0"] = 0)] =
+            "SystemKey0";
+          ESystemUISystemKey[(ESystemUISystemKey["SystemKey1"] = 1)] =
+            "SystemKey1";
+        })(ESystemUISystemKey || (ESystemUISystemKey = {}));
+        /**
+         * Controls how Gamescope renders the GamepadUI window when a game is running.
+         */
+        var EUIComposition;
+        (function (EUIComposition) {
+          /** Steam is not rendered on the screen. */
+          EUIComposition[(EUIComposition["Hidden"] = 0)] = "Hidden";
+          /**
+           * Transparent divs will allow pixels from the app behind Steam to penetrate.
+           * Input goes to **the app.**
+           */
+          EUIComposition[(EUIComposition["Notification"] = 1)] = "Notification";
+          /**
+           * Transparent divs will allow pixels from the app behind Steam to penetrate.
+           * Input goes to **Steam.**
+           */
+          EUIComposition[(EUIComposition["Overlay"] = 2)] = "Overlay";
+          /** Take all of the pixels on the screen, nothing "behind" Steam is shown. */
+          EUIComposition[(EUIComposition["Opaque"] = 3)] = "Opaque";
+          /**
+           * Special composition mode that matches Overlay, but forwards synthetic keyboard
+           * events to the Gamescope foreground app (game) instead of Steam.
+           */
+          EUIComposition[(EUIComposition["OverlayKeyboard"] = 4)] =
+            "OverlayKeyboard";
+        })(EUIComposition || (EUIComposition = {}));
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/communitytypes.ts":
+      /*!*******************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/communitytypes.ts ***!
+  \*******************************************************************************************************/
+      /*! exports provided: WorkshopItem, FriendState, BroadcastStatus, ESocialDropTypes, TradingCardDetails, CommunityPreferences, TextFilterPreferences, EBroadcastViewRequestState */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "WorkshopItem",
+          function () {
+            return WorkshopItem;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FriendState",
+          function () {
+            return FriendState;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BroadcastStatus",
+          function () {
+            return BroadcastStatus;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ESocialDropTypes",
+          function () {
+            return ESocialDropTypes;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "TradingCardDetails",
+          function () {
+            return TradingCardDetails;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "CommunityPreferences",
+          function () {
+            return CommunityPreferences;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "TextFilterPreferences",
+          function () {
+            return TextFilterPreferences;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EBroadcastViewRequestState",
+          function () {
+            return EBroadcastViewRequestState;
+          }
+        );
+        class WorkshopItem {}
+        class FriendState {}
+        class BroadcastStatus {
+          constructor() {
+            this.broadcastid = "0";
+            this.nViewers = 0;
+            this.nRequests = 0;
+            this.bIsBroadcasting = false;
+            this.bIsRecordingDesktop = false;
+            this.bBroadcastCapable = false;
+          }
+        }
+        const ESocialDropTypes = {
+          k_eDropTypeAnnouncement: "annoucement",
+          k_eDropTypeScreenshot: "screenshot",
+          k_eDropTypeCommunity: "community",
+          k_eDropTypeApp: "app",
+          k_eDropTypeBroadcast: "broadcast",
+          k_eDropTypeAppNews: "appnews",
+        };
+        // all data necessary to draw a trading card
+        class TradingCardDetails {}
+        class CommunityPreferences {}
+        class TextFilterPreferences {}
+        var EBroadcastViewRequestState;
+        (function (EBroadcastViewRequestState) {
+          EBroadcastViewRequestState[
+            (EBroadcastViewRequestState["k_EPending"] = 0)
+          ] = "k_EPending";
+          EBroadcastViewRequestState[
+            (EBroadcastViewRequestState["k_EAccepted"] = 1)
+          ] = "k_EAccepted";
+          EBroadcastViewRequestState[
+            (EBroadcastViewRequestState["k_ERejected"] = 2)
+          ] = "k_ERejected";
+        })(EBroadcastViewRequestState || (EBroadcastViewRequestState = {}));
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/controllertypes.ts":
+      /*!********************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/controllertypes.ts ***!
+  \********************************************************************************************************/
+      /*! exports provided: EControllerBindingType, ControllerState, ControllerVisualizationState */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EControllerBindingType",
+          function () {
+            return EControllerBindingType;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ControllerState",
+          function () {
+            return ControllerState;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ControllerVisualizationState",
+          function () {
+            return ControllerVisualizationState;
+          }
+        );
+        /* harmony import */ var shared_steammessages_steammessages_controllerconfiguration_enums_pb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! shared/steammessages/steammessages_controllerconfiguration_enums_pb */ "../../../web_src/shared/js/steammessages/steammessages_controllerconfiguration_enums_pb.ts"
+        );
+
+        var EControllerBindingType;
+        (function (EControllerBindingType) {
+          EControllerBindingType[
+            (EControllerBindingType["k_EControllerBindingType_None"] = 0)
+          ] = "k_EControllerBindingType_None";
+          EControllerBindingType[
+            (EControllerBindingType["k_EControllerBindingType_Key"] = 1)
+          ] = "k_EControllerBindingType_Key";
+          EControllerBindingType[
+            (EControllerBindingType["k_EControllerBindingType_MouseButton"] = 2)
+          ] = "k_EControllerBindingType_MouseButton";
+          EControllerBindingType[
+            (EControllerBindingType["k_EControllerBindingType_Gamepad"] = 3)
+          ] = "k_EControllerBindingType_Gamepad";
+          EControllerBindingType[
+            (EControllerBindingType["k_EControllerBindingType_Mousewheel"] = 4)
+          ] = "k_EControllerBindingType_Mousewheel";
+          EControllerBindingType[
+            (EControllerBindingType["k_EControllerBindingType_Modeshift"] = 5)
+          ] = "k_EControllerBindingType_Modeshift";
+          EControllerBindingType[
+            (EControllerBindingType["k_EControllerBindingType_GameAction"] = 6)
+          ] = "k_EControllerBindingType_GameAction";
+          EControllerBindingType[
+            (EControllerBindingType[
+              "k_EControllerBindingType_ControllerAction"
+            ] = 7)
+          ] = "k_EControllerBindingType_ControllerAction";
+        })(EControllerBindingType || (EControllerBindingType = {}));
+        class ControllerState {}
+        class ControllerVisualizationState {}
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/downloadtypes.ts":
+      /*!******************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/downloadtypes.ts ***!
+  \******************************************************************************************************/
+      /*! exports provided: DownloadItemUpdateTypeInfo, DownloadItem, DownloadOverview, ValidateProgress, MoveContentProgress */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DownloadItemUpdateTypeInfo",
+          function () {
+            return DownloadItemUpdateTypeInfo;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DownloadItem",
+          function () {
+            return DownloadItem;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DownloadOverview",
+          function () {
+            return DownloadOverview;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ValidateProgress",
+          function () {
+            return ValidateProgress;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "MoveContentProgress",
+          function () {
+            return MoveContentProgress;
+          }
+        );
         /* harmony import */ var _clientenums__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-          /*! ./clientenums */ "../../../web_src/shared/js/clientenums.ts"
+          /*! ../clientenums */ "../../../web_src/shared/js/clientenums.ts"
+        );
+
+        class DownloadItemUpdateTypeInfo {
+          constructor() {
+            /** True if this content type has or had an update */
+            this.has_update = false;
+            /** True if this content type had an update and it has completed */
+            this.completed = false;
+            /** Total bytes to download for this content type */
+            this.total_bytes = 0;
+            /** Bytes already downloaded for this content type */
+            this.downloaded_bytes = 0;
+          }
+        }
+        class DownloadItem {
+          constructor() {
+            /** Appid of app */
+            this.appid = 0;
+            /** Current build ID for the installed app, zero if the app isn't installed yet */
+            this.buildid = 0;
+            /** Build ID that this download is moving towards. This can be the same as buildid.*/
+            this.target_buildid = 0;
+            /** Total bytes to download, sum across all content types */
+            this.total_bytes = 0;
+            /** Bytes already downloaded, sum across all content types */
+            this.downloaded_bytes = 0;
+            /** True if this app is currently downloading */
+            this.active = false;
+            /** True if this app has been paused by the user or the system */
+            this.paused = false;
+            /** True if this update has been completed */
+            this.completed = false;
+            /** Update result, from EAppUpdateError enum */
+            this.update_result = 0;
+            /** Update error description, when paused and there has been an error. Unlocalized and shouldn't be displayed to the user. */
+            this.update_error = "";
+            /** Queue index, -1 if the item is unqueued */
+            this.queue_index = 0;
+            /** Scheduled time to start for a scheduled download, 0 if unscheduled */
+            this.deferred_time = 0;
+            /** For completed downloads, time of completion, 0 if not completed */
+            this.completed_time = 0;
+            /** If true, game will launch when its download completes successfully */
+            this.launch_on_completion = false;
+          }
+        }
+        class DownloadOverview {
+          constructor() {
+            /** True if all downloads are paused */
+            this.paused = false;
+            /** Appid of currently updating app */
+            this.update_appid = 0;
+            /** Time current update started */
+            this.update_start_time = 0;
+            this.update_state = "None";
+            /** Estimate of remaining time (in seconds) until download completes (not including staging) */
+            this.update_seconds_remaining = 0;
+            /** Total bytes to download */
+            this.update_bytes_to_download = 0;
+            /** Bytes already downloaded */
+            this.update_bytes_downloaded = 0;
+            /** Total bytes to be staged */
+            this.update_bytes_to_stage = 0;
+            /** Bytes already staged */
+            this.update_bytes_staged = 0;
+            /** Total bytes to process in current phase - resets to zero when update stage changes */
+            this.update_bytes_to_process = 0;
+            /** Bytes already processed in current phase - resets to zero when update stage changes */
+            this.update_bytes_processed = 0;
+            /** True if the current update is an initial install */
+            this.update_is_install = false;
+            /** True if the current update is for workshop content */
+            this.update_is_workshop = false;
+            /** True if the current update is for shader update */
+            this.update_is_shader = false;
+            /** True if download and staging sizes are prefetch estimates */
+            this.update_is_prefetch_estimate = false;
+            /** Current bandwidth estimate for download */
+            this.update_network_bytes_per_second = 0;
+            /** Peak bandwidth estimate for download */
+            this.update_peak_network_bytes_per_second = 0;
+            /** Current disk throughput estimate */
+            this.update_disc_bytes_per_second = 0;
+            /** True if download throttling has been temporarily suspended for the current download */
+            this.throttling_suspended = false;
+          }
+        }
+        class ValidateProgress {}
+        class MoveContentProgress {
+          constructor() {
+            this.appid = 0;
+            this.eError = 0 /* k_EAppErrorNone */;
+            this.flProgress = 0;
+            this.strBytesMoved = "";
+            this.strTotalBytesToMove = "";
+            this.nFilesMoved = 0;
+          }
+        }
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/gameactiontypes.ts":
+      /*!********************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/gameactiontypes.ts ***!
+  \********************************************************************************************************/
+      /*! exports provided: GameActionDetails, InstalledAppInfo, InstallFolderInfo, RemoteClientInputSettings, ERemoteClientLaunchResult */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "GameActionDetails",
+          function () {
+            return GameActionDetails;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InstalledAppInfo",
+          function () {
+            return InstalledAppInfo;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InstallFolderInfo",
+          function () {
+            return InstallFolderInfo;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "RemoteClientInputSettings",
+          function () {
+            return RemoteClientInputSettings;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ERemoteClientLaunchResult",
+          function () {
+            return ERemoteClientLaunchResult;
+          }
+        );
+        class GameActionDetails {}
+        class InstalledAppInfo {}
+        class InstallFolderInfo {}
+        class RemoteClientInputSettings {}
+        var ERemoteClientLaunchResult;
+        (function (ERemoteClientLaunchResult) {
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchOK"] = 1)
+          ] = "k_ERemoteClientLaunchOK";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchFail"] = 2)
+          ] = "k_ERemoteClientLaunchFail";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchRequiresUI"] = 3)
+          ] = "k_ERemoteClientLaunchRequiresUI";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchRequiresLaunchOption"
+            ] = 4)
+          ] = "k_ERemoteClientLaunchRequiresLaunchOption";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchRequiresEULA"] = 5)
+          ] = "k_ERemoteClientLaunchRequiresEULA";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchTimeout"] = 6)
+          ] = "k_ERemoteClientLaunchTimeout";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchStreamTimeout"
+            ] = 7)
+          ] = "k_ERemoteClientLaunchStreamTimeout";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchStreamClientFail"
+            ] = 8)
+          ] = "k_ERemoteClientLaunchStreamClientFail";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchOtherGameRunning"
+            ] = 9)
+          ] = "k_ERemoteClientLaunchOtherGameRunning";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchDownloadStarted"
+            ] = 10)
+          ] = "k_ERemoteClientLaunchDownloadStarted";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchDownloadNoSpace"
+            ] = 11)
+          ] = "k_ERemoteClientLaunchDownloadNoSpace";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchDownloadFiltered"
+            ] = 12)
+          ] = "k_ERemoteClientLaunchDownloadFiltered";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchDownloadRequiresUI"
+            ] = 13)
+          ] = "k_ERemoteClientLaunchDownloadRequiresUI";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchAccessDenied"
+            ] = 14)
+          ] = "k_ERemoteClientLaunchAccessDenied";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchNetworkError"
+            ] = 15)
+          ] = "k_ERemoteClientLaunchNetworkError";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchProgress"] = 16)
+          ] = "k_ERemoteClientLaunchProgress";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchParentalUnlockFailed"
+            ] = 17)
+          ] = "k_ERemoteClientLaunchParentalUnlockFailed";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchScreenLocked"
+            ] = 18)
+          ] = "k_ERemoteClientLaunchScreenLocked";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchUnsupported"] = 19)
+          ] = "k_ERemoteClientLaunchUnsupported";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchDisabledLocal"
+            ] = 20)
+          ] = "k_ERemoteClientLaunchDisabledLocal";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchDisabledRemote"
+            ] = 21)
+          ] = "k_ERemoteClientLaunchDisabledRemote";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchBroadcasting"
+            ] = 22)
+          ] = "k_ERemoteClientLaunchBroadcasting";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchBusy"] = 23)
+          ] = "k_ERemoteClientLaunchBusy";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchDriversNotInstalled"
+            ] = 24)
+          ] = "k_ERemoteClientLaunchDriversNotInstalled";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchTransportUnavailable"
+            ] = 25)
+          ] = "k_ERemoteClientLaunchTransportUnavailable";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchCanceled"] = 26)
+          ] = "k_ERemoteClientLaunchCanceled";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult["k_ERemoteClientLaunchInvisible"] = 27)
+          ] = "k_ERemoteClientLaunchInvisible";
+          ERemoteClientLaunchResult[
+            (ERemoteClientLaunchResult[
+              "k_ERemoteClientLaunchRestrictedCountry"
+            ] = 28)
+          ] = "k_ERemoteClientLaunchRestrictedCountry";
+        })(ERemoteClientLaunchResult || (ERemoteClientLaunchResult = {}));
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/gamestatstypes.ts":
+      /*!*******************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/gamestatstypes.ts ***!
+  \*******************************************************************************************************/
+      /*! exports provided: UserAchievementInfo, AppDetailsAchievementsHighlight, AppDetailsAchievements */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "UserAchievementInfo",
+          function () {
+            return UserAchievementInfo;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetailsAchievementsHighlight",
+          function () {
+            return AppDetailsAchievementsHighlight;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetailsAchievements",
+          function () {
+            return AppDetailsAchievements;
+          }
+        );
+        class UserAchievementInfo {}
+        class AppDetailsAchievementsHighlight extends UserAchievementInfo {}
+        class AppDetailsAchievements {}
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/index.ts":
+      /*!**********************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/index.ts ***!
+  \**********************************************************************************************/
+      /*! no static exports found */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony import */ var _clientenums__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! ../clientenums */ "../../../web_src/shared/js/clientenums.ts"
         );
         /* harmony reexport (safe) */ __webpack_require__.d(
           __webpack_exports__,
@@ -1925,137 +2194,1219 @@
           }
         );
 
-        /* harmony import */ var shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-          /*! shared/steammessages/steammessages_appoverview_pb */ "../../../web_src/shared/js/steammessages/steammessages_appoverview_pb.ts"
+        /* harmony import */ var _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ./appdetailstypes */ "../../../web_src/shared/js/clienttypes/appdetailstypes.ts"
         );
-        /* harmony import */ var shared_steammessages_steammessages_controllerconfiguration_enums_pb__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-          /*! shared/steammessages/steammessages_controllerconfiguration_enums_pb */ "../../../web_src/shared/js/steammessages/steammessages_controllerconfiguration_enums_pb.ts"
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppTag",
+          function () {
+            return _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__["AppTag"];
+          }
         );
-        /* harmony import */ var _steammessages_enums_pb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-          /*! ./steammessages/enums_pb */ "../../../web_src/shared/js/steammessages/enums_pb.ts"
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetailsBeta",
+          function () {
+            return _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__[
+              "AppDetailsBeta"
+            ];
+          }
         );
-        /* harmony import */ var shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-          /*! shared/steammessages/steammessages_storebrowse_pb */ "../../../web_src/shared/js/steammessages/steammessages_storebrowse_pb.ts"
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetailsDLC",
+          function () {
+            return _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__[
+              "AppDetailsDLC"
+            ];
+          }
         );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppLegacyCDKey",
+          function () {
+            return _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__[
+              "AppLegacyCDKey"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppLibraryAssets",
+          function () {
+            return _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__[
+              "AppLibraryAssets"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetails",
+          function () {
+            return _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__["AppDetails"];
+          }
+        );
+
+        /* harmony import */ var _audiotypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+          /*! ./audiotypes */ "../../../web_src/shared/js/clienttypes/audiotypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidAudioDeviceId",
+          function () {
+            return _audiotypes__WEBPACK_IMPORTED_MODULE_2__[
+              "InvalidAudioDeviceId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EAudioDirection",
+          function () {
+            return _audiotypes__WEBPACK_IMPORTED_MODULE_2__["EAudioDirection"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EAudioChannel",
+          function () {
+            return _audiotypes__WEBPACK_IMPORTED_MODULE_2__["EAudioChannel"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AudioDevice",
+          function () {
+            return _audiotypes__WEBPACK_IMPORTED_MODULE_2__["AudioDevice"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AudioDevices",
+          function () {
+            return _audiotypes__WEBPACK_IMPORTED_MODULE_2__["AudioDevices"];
+          }
+        );
+
+        /* harmony import */ var _basetypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+          /*! ./basetypes */ "../../../web_src/shared/js/clienttypes/basetypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ESteamRealm",
+          function () {
+            return _basetypes__WEBPACK_IMPORTED_MODULE_3__["ESteamRealm"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BIsChinaRealm",
+          function () {
+            return _basetypes__WEBPACK_IMPORTED_MODULE_3__["BIsChinaRealm"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DragDropPosition",
+          function () {
+            return _basetypes__WEBPACK_IMPORTED_MODULE_3__["DragDropPosition"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "CallbackHandleDisposer",
+          function () {
+            return _basetypes__WEBPACK_IMPORTED_MODULE_3__[
+              "CallbackHandleDisposer"
+            ];
+          }
+        );
+
+        /* harmony import */ var _bluetoothtypes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+          /*! ./bluetoothtypes */ "../../../web_src/shared/js/clienttypes/bluetoothtypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidBluetoothAdapterId",
+          function () {
+            return _bluetoothtypes__WEBPACK_IMPORTED_MODULE_4__[
+              "InvalidBluetoothAdapterId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidBluetoothDeviceId",
+          function () {
+            return _bluetoothtypes__WEBPACK_IMPORTED_MODULE_4__[
+              "InvalidBluetoothDeviceId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EBluetoothDeviceType",
+          function () {
+            return _bluetoothtypes__WEBPACK_IMPORTED_MODULE_4__[
+              "EBluetoothDeviceType"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BluetoothAdapter_t",
+          function () {
+            return _bluetoothtypes__WEBPACK_IMPORTED_MODULE_4__[
+              "BluetoothAdapter_t"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BluetoothDevice_t",
+          function () {
+            return _bluetoothtypes__WEBPACK_IMPORTED_MODULE_4__[
+              "BluetoothDevice_t"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BluetoothState_t",
+          function () {
+            return _bluetoothtypes__WEBPACK_IMPORTED_MODULE_4__[
+              "BluetoothState_t"
+            ];
+          }
+        );
+
+        /* harmony import */ var _chattypes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+          /*! ./chattypes */ "../../../web_src/shared/js/clienttypes/chattypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "OverlayChatBrowserInfo",
+          function () {
+            return _chattypes__WEBPACK_IMPORTED_MODULE_5__[
+              "OverlayChatBrowserInfo"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "PushToTalkInfo",
+          function () {
+            return _chattypes__WEBPACK_IMPORTED_MODULE_5__["PushToTalkInfo"];
+          }
+        );
+
+        /* harmony import */ var _clientuitypes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+          /*! ./clientuitypes */ "../../../web_src/shared/js/clienttypes/clientuitypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "k_nSteamClientBetaNone",
+          function () {
+            return _clientuitypes__WEBPACK_IMPORTED_MODULE_6__[
+              "k_nSteamClientBetaNone"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EBrowserType",
+          function () {
+            return _clientuitypes__WEBPACK_IMPORTED_MODULE_6__["EBrowserType"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BOpenVROverlayBrowser",
+          function () {
+            return _clientuitypes__WEBPACK_IMPORTED_MODULE_6__[
+              "BOpenVROverlayBrowser"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ESystemUISystemKey",
+          function () {
+            return _clientuitypes__WEBPACK_IMPORTED_MODULE_6__[
+              "ESystemUISystemKey"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EUIComposition",
+          function () {
+            return _clientuitypes__WEBPACK_IMPORTED_MODULE_6__[
+              "EUIComposition"
+            ];
+          }
+        );
+
+        /* harmony import */ var _communitytypes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+          /*! ./communitytypes */ "../../../web_src/shared/js/clienttypes/communitytypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "WorkshopItem",
+          function () {
+            return _communitytypes__WEBPACK_IMPORTED_MODULE_7__["WorkshopItem"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FriendState",
+          function () {
+            return _communitytypes__WEBPACK_IMPORTED_MODULE_7__["FriendState"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BroadcastStatus",
+          function () {
+            return _communitytypes__WEBPACK_IMPORTED_MODULE_7__[
+              "BroadcastStatus"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ESocialDropTypes",
+          function () {
+            return _communitytypes__WEBPACK_IMPORTED_MODULE_7__[
+              "ESocialDropTypes"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "TradingCardDetails",
+          function () {
+            return _communitytypes__WEBPACK_IMPORTED_MODULE_7__[
+              "TradingCardDetails"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "CommunityPreferences",
+          function () {
+            return _communitytypes__WEBPACK_IMPORTED_MODULE_7__[
+              "CommunityPreferences"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "TextFilterPreferences",
+          function () {
+            return _communitytypes__WEBPACK_IMPORTED_MODULE_7__[
+              "TextFilterPreferences"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EBroadcastViewRequestState",
+          function () {
+            return _communitytypes__WEBPACK_IMPORTED_MODULE_7__[
+              "EBroadcastViewRequestState"
+            ];
+          }
+        );
+
+        /* harmony import */ var _controllertypes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+          /*! ./controllertypes */ "../../../web_src/shared/js/clienttypes/controllertypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EControllerBindingType",
+          function () {
+            return _controllertypes__WEBPACK_IMPORTED_MODULE_8__[
+              "EControllerBindingType"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ControllerState",
+          function () {
+            return _controllertypes__WEBPACK_IMPORTED_MODULE_8__[
+              "ControllerState"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ControllerVisualizationState",
+          function () {
+            return _controllertypes__WEBPACK_IMPORTED_MODULE_8__[
+              "ControllerVisualizationState"
+            ];
+          }
+        );
+
+        /* harmony import */ var _downloadtypes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+          /*! ./downloadtypes */ "../../../web_src/shared/js/clienttypes/downloadtypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DownloadItemUpdateTypeInfo",
+          function () {
+            return _downloadtypes__WEBPACK_IMPORTED_MODULE_9__[
+              "DownloadItemUpdateTypeInfo"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DownloadItem",
+          function () {
+            return _downloadtypes__WEBPACK_IMPORTED_MODULE_9__["DownloadItem"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DownloadOverview",
+          function () {
+            return _downloadtypes__WEBPACK_IMPORTED_MODULE_9__[
+              "DownloadOverview"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ValidateProgress",
+          function () {
+            return _downloadtypes__WEBPACK_IMPORTED_MODULE_9__[
+              "ValidateProgress"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "MoveContentProgress",
+          function () {
+            return _downloadtypes__WEBPACK_IMPORTED_MODULE_9__[
+              "MoveContentProgress"
+            ];
+          }
+        );
+
+        /* harmony import */ var _gameactiontypes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+          /*! ./gameactiontypes */ "../../../web_src/shared/js/clienttypes/gameactiontypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "GameActionDetails",
+          function () {
+            return _gameactiontypes__WEBPACK_IMPORTED_MODULE_10__[
+              "GameActionDetails"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InstalledAppInfo",
+          function () {
+            return _gameactiontypes__WEBPACK_IMPORTED_MODULE_10__[
+              "InstalledAppInfo"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InstallFolderInfo",
+          function () {
+            return _gameactiontypes__WEBPACK_IMPORTED_MODULE_10__[
+              "InstallFolderInfo"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "RemoteClientInputSettings",
+          function () {
+            return _gameactiontypes__WEBPACK_IMPORTED_MODULE_10__[
+              "RemoteClientInputSettings"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ERemoteClientLaunchResult",
+          function () {
+            return _gameactiontypes__WEBPACK_IMPORTED_MODULE_10__[
+              "ERemoteClientLaunchResult"
+            ];
+          }
+        );
+
+        /* harmony import */ var _gamestatstypes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+          /*! ./gamestatstypes */ "../../../web_src/shared/js/clienttypes/gamestatstypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "UserAchievementInfo",
+          function () {
+            return _gamestatstypes__WEBPACK_IMPORTED_MODULE_11__[
+              "UserAchievementInfo"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetailsAchievementsHighlight",
+          function () {
+            return _gamestatstypes__WEBPACK_IMPORTED_MODULE_11__[
+              "AppDetailsAchievementsHighlight"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetailsAchievements",
+          function () {
+            return _gamestatstypes__WEBPACK_IMPORTED_MODULE_11__[
+              "AppDetailsAchievements"
+            ];
+          }
+        );
+
+        /* harmony import */ var _logintypes__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+          /*! ./logintypes */ "../../../web_src/shared/js/clienttypes/logintypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "CurrentUser",
+          function () {
+            return _logintypes__WEBPACK_IMPORTED_MODULE_12__["CurrentUser"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "LoginUser",
+          function () {
+            return _logintypes__WEBPACK_IMPORTED_MODULE_12__["LoginUser"];
+          }
+        );
+
+        /* harmony import */ var _musictypes__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+          /*! ./musictypes */ "../../../web_src/shared/js/clienttypes/musictypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetailsMusicAlbum",
+          function () {
+            return _musictypes__WEBPACK_IMPORTED_MODULE_13__[
+              "AppDetailsMusicAlbum"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "MusicAlbumTrack",
+          function () {
+            return _musictypes__WEBPACK_IMPORTED_MODULE_13__["MusicAlbumTrack"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "MusicPlaybackState",
+          function () {
+            return _musictypes__WEBPACK_IMPORTED_MODULE_13__[
+              "MusicPlaybackState"
+            ];
+          }
+        );
+
+        /* harmony import */ var _networktypes__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+          /*! ./networktypes */ "../../../web_src/shared/js/clienttypes/networktypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "CustomNetworkDeviceWapId",
+          function () {
+            return _networktypes__WEBPACK_IMPORTED_MODULE_14__[
+              "CustomNetworkDeviceWapId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidNetworkDeviceWapId",
+          function () {
+            return _networktypes__WEBPACK_IMPORTED_MODULE_14__[
+              "InvalidNetworkDeviceWapId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ENetworkDeviceType",
+          function () {
+            return _networktypes__WEBPACK_IMPORTED_MODULE_14__[
+              "ENetworkDeviceType"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ENetworkDeviceState",
+          function () {
+            return _networktypes__WEBPACK_IMPORTED_MODULE_14__[
+              "ENetworkDeviceState"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EWirelessEndpointStrength",
+          function () {
+            return _networktypes__WEBPACK_IMPORTED_MODULE_14__[
+              "EWirelessEndpointStrength"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EWirelessSecurityFlags",
+          function () {
+            return _networktypes__WEBPACK_IMPORTED_MODULE_14__[
+              "EWirelessSecurityFlags"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EHTTPProxyMode",
+          function () {
+            return _networktypes__WEBPACK_IMPORTED_MODULE_14__[
+              "EHTTPProxyMode"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ConfiguredProxyInfo",
+          function () {
+            return _networktypes__WEBPACK_IMPORTED_MODULE_14__[
+              "ConfiguredProxyInfo"
+            ];
+          }
+        );
+
+        /* harmony import */ var _notificationtypes__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+          /*! ./notificationtypes */ "../../../web_src/shared/js/clienttypes/notificationtypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "NotificationCounts",
+          function () {
+            return _notificationtypes__WEBPACK_IMPORTED_MODULE_15__[
+              "NotificationCounts"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppLifetimeNotification",
+          function () {
+            return _notificationtypes__WEBPACK_IMPORTED_MODULE_15__[
+              "AppLifetimeNotification"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ScreenshotNotification",
+          function () {
+            return _notificationtypes__WEBPACK_IMPORTED_MODULE_15__[
+              "ScreenshotNotification"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AchievementNotification",
+          function () {
+            return _notificationtypes__WEBPACK_IMPORTED_MODULE_15__[
+              "AchievementNotification"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EClientUINotificationType",
+          function () {
+            return _notificationtypes__WEBPACK_IMPORTED_MODULE_15__[
+              "EClientUINotificationType"
+            ];
+          }
+        );
+
+        /* harmony import */ var _parentaltypes__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+          /*! ./parentaltypes */ "../../../web_src/shared/js/clienttypes/parentaltypes.ts"
+        );
+        /* harmony import */ var _parentaltypes__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/ __webpack_require__.n(
+          _parentaltypes__WEBPACK_IMPORTED_MODULE_16__
+        );
+        /* harmony reexport (unknown) */ for (var __WEBPACK_IMPORT_KEY__ in _parentaltypes__WEBPACK_IMPORTED_MODULE_16__)
+          if (
+            [
+              "default",
+              "BIsEFriendRelationshipFriend",
+              "BIsEFriendRelationshipBlocked",
+              "k_unSteamUserDesktopInstance",
+              "k_unSteamUserConsoleInstance",
+              "k_unSteamUserWebInstance",
+              "k_nGameIDWinUI",
+              "k_nGameIDServiceAppFirst",
+              "k_nGameIDSteamBackpack",
+              "k_nGameIDSteamEconomy",
+              "k_nGameIDServiceAppLast",
+              "k_nGameIDControllerConfigs",
+              "k_nGameIDSteamVR",
+              "k_nGameIDSteamVRMain",
+              "k_nGameIDSteamVRMonitorMain",
+              "k_nGameIDSteamVRMonitor",
+              "k_nGameIDControllerConfigs_Desktop",
+              "k_nGameIDControllerConfigs_BigPicture",
+              "k_nGameIDControllerConfigs_GuideChord",
+              "k_GIDNil",
+              "k_RTime32Nil",
+              "k_RTime32Infinite",
+              "ELanguagePchWebLanguageCode",
+              "MapKoreanaToKorean",
+              "ELanguagePchLanguage",
+              "PchLanguageToELanguage",
+              "EClanEventTypeArray",
+              "BIsChinaLauncher",
+              "BIsReducedUILauncher",
+              "EConnectivityTestResult",
+              "ENetFakeLocalSystemState",
+              "ESuspendResumeProgressState",
+              "EFloatingGamepadTextInputMode",
+              "EAppUpdateContentType",
+              "EOverlayToStoreFlag",
+              "EActivateGameOverlayToWebPageMode",
+              "AppTag",
+              "AppDetailsBeta",
+              "AppDetailsDLC",
+              "AppLegacyCDKey",
+              "AppLibraryAssets",
+              "AppDetails",
+              "InvalidAudioDeviceId",
+              "EAudioDirection",
+              "EAudioChannel",
+              "AudioDevice",
+              "AudioDevices",
+              "ESteamRealm",
+              "BIsChinaRealm",
+              "DragDropPosition",
+              "CallbackHandleDisposer",
+              "InvalidBluetoothAdapterId",
+              "InvalidBluetoothDeviceId",
+              "EBluetoothDeviceType",
+              "BluetoothAdapter_t",
+              "BluetoothDevice_t",
+              "BluetoothState_t",
+              "OverlayChatBrowserInfo",
+              "PushToTalkInfo",
+              "k_nSteamClientBetaNone",
+              "EBrowserType",
+              "BOpenVROverlayBrowser",
+              "ESystemUISystemKey",
+              "EUIComposition",
+              "WorkshopItem",
+              "FriendState",
+              "BroadcastStatus",
+              "ESocialDropTypes",
+              "TradingCardDetails",
+              "CommunityPreferences",
+              "TextFilterPreferences",
+              "EBroadcastViewRequestState",
+              "EControllerBindingType",
+              "ControllerState",
+              "ControllerVisualizationState",
+              "DownloadItemUpdateTypeInfo",
+              "DownloadItem",
+              "DownloadOverview",
+              "ValidateProgress",
+              "MoveContentProgress",
+              "GameActionDetails",
+              "InstalledAppInfo",
+              "InstallFolderInfo",
+              "RemoteClientInputSettings",
+              "ERemoteClientLaunchResult",
+              "UserAchievementInfo",
+              "AppDetailsAchievementsHighlight",
+              "AppDetailsAchievements",
+              "CurrentUser",
+              "LoginUser",
+              "AppDetailsMusicAlbum",
+              "MusicAlbumTrack",
+              "MusicPlaybackState",
+              "CustomNetworkDeviceWapId",
+              "InvalidNetworkDeviceWapId",
+              "ENetworkDeviceType",
+              "ENetworkDeviceState",
+              "EWirelessEndpointStrength",
+              "EWirelessSecurityFlags",
+              "EHTTPProxyMode",
+              "ConfiguredProxyInfo",
+              "NotificationCounts",
+              "AppLifetimeNotification",
+              "ScreenshotNotification",
+              "AchievementNotification",
+              "EClientUINotificationType",
+            ].indexOf(__WEBPACK_IMPORT_KEY__) < 0
+          )
+            (function (key) {
+              __webpack_require__.d(__webpack_exports__, key, function () {
+                return _parentaltypes__WEBPACK_IMPORTED_MODULE_16__[key];
+              });
+            })(__WEBPACK_IMPORT_KEY__);
+        /* harmony import */ var _screenshottypes__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+          /*! ./screenshottypes */ "../../../web_src/shared/js/clienttypes/screenshottypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "UGCScreenShot",
+          function () {
+            return _screenshottypes__WEBPACK_IMPORTED_MODULE_17__[
+              "UGCScreenShot"
+            ];
+          }
+        );
+
+        /* harmony import */ var _settingstypes__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+          /*! ./settingstypes */ "../../../web_src/shared/js/clienttypes/settingstypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SettingsKeyBinding",
+          function () {
+            return _settingstypes__WEBPACK_IMPORTED_MODULE_18__[
+              "SettingsKeyBinding"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SettingsDownloadRegion",
+          function () {
+            return _settingstypes__WEBPACK_IMPORTED_MODULE_18__[
+              "SettingsDownloadRegion"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FamilySharingUser",
+          function () {
+            return _settingstypes__WEBPACK_IMPORTED_MODULE_18__[
+              "FamilySharingUser"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SettingsState",
+          function () {
+            return _settingstypes__WEBPACK_IMPORTED_MODULE_18__[
+              "SettingsState"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FamilySettings",
+          function () {
+            return _settingstypes__WEBPACK_IMPORTED_MODULE_18__[
+              "FamilySettings"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "RemotePlaySettings",
+          function () {
+            return _settingstypes__WEBPACK_IMPORTED_MODULE_18__[
+              "RemotePlaySettings"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FriendsSettings",
+          function () {
+            return _settingstypes__WEBPACK_IMPORTED_MODULE_18__[
+              "FriendsSettings"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DefaultFriendsSettings",
+          function () {
+            return _settingstypes__WEBPACK_IMPORTED_MODULE_18__[
+              "DefaultFriendsSettings"
+            ];
+          }
+        );
+
+        /* harmony import */ var _storetypes__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+          /*! ./storetypes */ "../../../web_src/shared/js/clienttypes/storetypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "MarketingMessage",
+          function () {
+            return _storetypes__WEBPACK_IMPORTED_MODULE_19__[
+              "MarketingMessage"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ContentDescriptorPreferences",
+          function () {
+            return _storetypes__WEBPACK_IMPORTED_MODULE_19__[
+              "ContentDescriptorPreferences"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "StorePreferences",
+          function () {
+            return _storetypes__WEBPACK_IMPORTED_MODULE_19__[
+              "StorePreferences"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppTypeForEProtoAppType",
+          function () {
+            return _storetypes__WEBPACK_IMPORTED_MODULE_19__[
+              "AppTypeForEProtoAppType"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppTypeForEStoreAppType",
+          function () {
+            return _storetypes__WEBPACK_IMPORTED_MODULE_19__[
+              "AppTypeForEStoreAppType"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BIsSaleItemType",
+          function () {
+            return _storetypes__WEBPACK_IMPORTED_MODULE_19__["BIsSaleItemType"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BDoesSaleItemTypeHaveParent",
+          function () {
+            return _storetypes__WEBPACK_IMPORTED_MODULE_19__[
+              "BDoesSaleItemTypeHaveParent"
+            ];
+          }
+        );
+
+        /* harmony import */ var _systemtypes__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+          /*! ./systemtypes */ "../../../web_src/shared/js/clienttypes/systemtypes.ts"
+        );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SystemInfo",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__["SystemInfo"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "IterateFolderItem",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "IterateFolderItem"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "IterateDrivesItem",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "IterateDrivesItem"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SurveyEntry",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__["SurveyEntry"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SurveySection",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__["SurveySection"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "GameLaunchOption",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "GameLaunchOption"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ShortcutScanData",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "ShortcutScanData"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ShortcutScanResults",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "ShortcutScanResults"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InstallAppAndCreateShortcutData",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "InstallAppAndCreateShortcutData"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FlatpakApp",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__["FlatpakApp"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BatteryState_t",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__["BatteryState_t"];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FormatStorageProgress_t",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "FormatStorageProgress_t"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidStorageManagerDriveId",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "InvalidStorageManagerDriveId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ToStorageManagerDriveId",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "ToStorageManagerDriveId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidStorageManagerBlockDeviceId",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "InvalidStorageManagerBlockDeviceId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ToStorageManagerBlockDeviceId",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "ToStorageManagerBlockDeviceId"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EComputerActiveState",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "EComputerActiveState"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EClientUsedInputType",
+          function () {
+            return _systemtypes__WEBPACK_IMPORTED_MODULE_20__[
+              "EClientUsedInputType"
+            ];
+          }
+        );
+
         // re-export to higher namespace
 
-        // any data returned from c++ calls should be defined as an interface in the ClientTypes namespace
-        class DownloadItemUpdateTypeInfo {
-          constructor() {
-            /** True if this content type has or had an update */
-            this.has_update = false;
-            /** True if this content type had an update and it has completed */
-            this.completed = false;
-            /** Total bytes to download for this content type */
-            this.total_bytes = 0;
-            /** Bytes already downloaded for this content type */
-            this.downloaded_bytes = 0;
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/logintypes.ts":
+      /*!***************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/logintypes.ts ***!
+  \***************************************************************************************************/
+      /*! exports provided: CurrentUser, LoginUser */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "CurrentUser",
+          function () {
+            return CurrentUser;
           }
-        }
-        class DownloadItem {
-          constructor() {
-            /** Appid of app */
-            this.appid = 0;
-            /** Current build ID for the installed app, zero if the app isn't installed yet */
-            this.buildid = 0;
-            /** Build ID that this download is moving towards. This can be the same as buildid.*/
-            this.target_buildid = 0;
-            /** Total bytes to download, sum across all content types */
-            this.total_bytes = 0;
-            /** Bytes already downloaded, sum across all content types */
-            this.downloaded_bytes = 0;
-            /** True if this app is currently downloading */
-            this.active = false;
-            /** True if this app has been paused by the user or the system */
-            this.paused = false;
-            /** True if this update has been completed */
-            this.completed = false;
-            /** Update result, from EAppUpdateError enum */
-            this.update_result = 0;
-            /** Update error description, when paused and there has been an error. Unlocalized and shouldn't be displayed to the user. */
-            this.update_error = "";
-            /** Queue index, -1 if the item is unqueued */
-            this.queue_index = 0;
-            /** Scheduled time to start for a scheduled download, 0 if unscheduled */
-            this.deferred_time = 0;
-            /** For completed downloads, time of completion, 0 if not completed */
-            this.completed_time = 0;
-            /** If true, game will launch when its download completes successfully */
-            this.launch_on_completion = false;
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "LoginUser",
+          function () {
+            return LoginUser;
           }
-        }
-        class DownloadOverview {
-          constructor() {
-            /** True if all downloads are paused */
-            this.paused = false;
-            /** Appid of currently updating app */
-            this.update_appid = 0;
-            /** Time current update started */
-            this.update_start_time = 0;
-            this.update_state = "None";
-            /** Estimate of remaining time (in seconds) until download completes (not including staging) */
-            this.update_seconds_remaining = 0;
-            /** Total bytes to download */
-            this.update_bytes_to_download = 0;
-            /** Bytes already downloaded */
-            this.update_bytes_downloaded = 0;
-            /** Total bytes to be staged */
-            this.update_bytes_to_stage = 0;
-            /** Bytes already staged */
-            this.update_bytes_staged = 0;
-            /** Total bytes to process in current phase - resets to zero when update stage changes */
-            this.update_bytes_to_process = 0;
-            /** Bytes already processed in current phase - resets to zero when update stage changes */
-            this.update_bytes_processed = 0;
-            /** True if the current update is an initial install */
-            this.update_is_install = false;
-            /** True if the current update is for workshop content */
-            this.update_is_workshop = false;
-            /** True if the current update is for shader update */
-            this.update_is_shader = false;
-            /** True if download and staging sizes are prefetch estimates */
-            this.update_is_prefetch_estimate = false;
-            /** Current bandwidth estimate for download */
-            this.update_network_bytes_per_second = 0;
-            /** Peak bandwidth estimate for download */
-            this.update_peak_network_bytes_per_second = 0;
-            /** Current disk throughput estimate */
-            this.update_disc_bytes_per_second = 0;
-            /** True if download throttling has been temporarily suspended for the current download */
-            this.throttling_suspended = false;
-          }
-        }
-        class ValidateProgress {}
-        class MoveContentProgress {
-          constructor() {
-            this.appid = 0;
-            this.eError = 0 /* k_EAppErrorNone */;
-            this.flProgress = 0;
-            this.strBytesMoved = "";
-            this.strTotalBytesToMove = "";
-            this.nFilesMoved = 0;
-          }
-        }
-        class NotificationCounts {
-          constructor() {
-            this.comments = 0;
-            this.inventory_items = 0;
-            this.invites = 0;
-            this.gifts = 0;
-            this.offline_messages = 0;
-            this.trade_offers = 0;
-            this.async_game_updates = 0;
-            this.moderator_messages = 0;
-            this.help_request_replies = 0;
-          }
-        }
+        );
+        /* harmony import */ var _notificationtypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! ./notificationtypes */ "../../../web_src/shared/js/clienttypes/notificationtypes.ts"
+        );
+
         class CurrentUser {
           constructor() {
             this.strSteamID = "";
             this.strAccountName = "";
             this.strAccountBalance = "";
             this.strAccountBalancePending = "";
-            this.NotificationCounts = new NotificationCounts();
+            this.NotificationCounts = new _notificationtypes__WEBPACK_IMPORTED_MODULE_0__[
+              "NotificationCounts"
+            ]();
             this.bSupportAlertActive = false;
             this.bSupportAckOnlyMessages = false;
             this.bSupportPopupMessage = false;
@@ -2065,56 +3416,41 @@
             this.bIsOfflineMode = true;
           }
         }
-        class AppTag {
-          constructor() {
-            this.tagName = "";
-            this.vecTagIds = [];
-          }
-        }
         class LoginUser {}
-        var EControllerBindingType;
-        (function (EControllerBindingType) {
-          EControllerBindingType[
-            (EControllerBindingType["k_EControllerBindingType_None"] = 0)
-          ] = "k_EControllerBindingType_None";
-          EControllerBindingType[
-            (EControllerBindingType["k_EControllerBindingType_Key"] = 1)
-          ] = "k_EControllerBindingType_Key";
-          EControllerBindingType[
-            (EControllerBindingType["k_EControllerBindingType_MouseButton"] = 2)
-          ] = "k_EControllerBindingType_MouseButton";
-          EControllerBindingType[
-            (EControllerBindingType["k_EControllerBindingType_Gamepad"] = 3)
-          ] = "k_EControllerBindingType_Gamepad";
-          EControllerBindingType[
-            (EControllerBindingType["k_EControllerBindingType_Mousewheel"] = 4)
-          ] = "k_EControllerBindingType_Mousewheel";
-          EControllerBindingType[
-            (EControllerBindingType["k_EControllerBindingType_Modeshift"] = 5)
-          ] = "k_EControllerBindingType_Modeshift";
-          EControllerBindingType[
-            (EControllerBindingType["k_EControllerBindingType_GameAction"] = 6)
-          ] = "k_EControllerBindingType_GameAction";
-          EControllerBindingType[
-            (EControllerBindingType[
-              "k_EControllerBindingType_ControllerAction"
-            ] = 7)
-          ] = "k_EControllerBindingType_ControllerAction";
-        })(EControllerBindingType || (EControllerBindingType = {}));
-        class ControllerState {}
-        class ControllerVisualizationState {}
-        class AppDetailsBeta {}
-        const k_nSteamClientBetaNone = -1; // No Steam client beta selected
-        class AppDetailsDLC {}
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/musictypes.ts":
+      /*!***************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/musictypes.ts ***!
+  \***************************************************************************************************/
+      /*! exports provided: AppDetailsMusicAlbum, MusicAlbumTrack, MusicPlaybackState */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppDetailsMusicAlbum",
+          function () {
+            return AppDetailsMusicAlbum;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "MusicAlbumTrack",
+          function () {
+            return MusicAlbumTrack;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "MusicPlaybackState",
+          function () {
+            return MusicPlaybackState;
+          }
+        );
         class AppDetailsMusicAlbum {}
-        class UserAchievementInfo {}
-        class AppDetailsAchievementsHighlight extends UserAchievementInfo {}
-        class AppDetailsAchievements {}
-        class AppLegacyCDKey {}
-        class AppLibraryAssets {}
-        class AppDetails {}
-        class GameActionDetails {}
-        class WorkshopItem {}
         class MusicAlbumTrack {
           constructor() {
             this.strTrackName = "";
@@ -2135,545 +3471,78 @@
             this.nActiveTrack = 0;
           }
         }
-        // all data necessary to draw a trading card
-        class TradingCardDetails {}
-        const ESocialDropTypes = {
-          k_eDropTypeAnnouncement: "annoucement",
-          k_eDropTypeScreenshot: "screenshot",
-          k_eDropTypeCommunity: "community",
-          k_eDropTypeApp: "app",
-          k_eDropTypeBroadcast: "broadcast",
-          k_eDropTypeAppNews: "appnews",
-        };
-        class DragDropPosition {
-          constructor() {
-            this.x = 0;
-            this.y = 0;
-            this.height = 0;
-            this.width = 0;
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/networktypes.ts":
+      /*!*****************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/networktypes.ts ***!
+  \*****************************************************************************************************/
+      /*! exports provided: CustomNetworkDeviceWapId, InvalidNetworkDeviceWapId, ENetworkDeviceType, ENetworkDeviceState, EWirelessEndpointStrength, EWirelessSecurityFlags, EHTTPProxyMode, ConfiguredProxyInfo */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "CustomNetworkDeviceWapId",
+          function () {
+            return CustomNetworkDeviceWapId;
           }
-        }
-        class FriendState {}
-        class BroadcastStatus {
-          constructor() {
-            this.broadcastid = "0";
-            this.nViewers = 0;
-            this.nRequests = 0;
-            this.bIsBroadcasting = false;
-            this.bIsRecordingDesktop = false;
-            this.bBroadcastCapable = false;
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidNetworkDeviceWapId",
+          function () {
+            return InvalidNetworkDeviceWapId;
           }
-        }
-        class SettingsKeyBinding {
-          constructor() {
-            this.nKeyCode = 0;
-            this.bAltKey = false;
-            this.bShiftKey = false;
-            this.bCtrlKey = false;
-            this.bMetaKey = false;
-            this.strDisplayString = "";
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ENetworkDeviceType",
+          function () {
+            return ENetworkDeviceType;
           }
-        }
-        class SettingsDownloadRegion {
-          constructor() {
-            this.strRegionName = "";
-            this.nRegionID = 0;
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ENetworkDeviceState",
+          function () {
+            return ENetworkDeviceState;
           }
-        }
-        class FamilySharingUser {}
-        class SettingsState {
-          constructor() {
-            this.InGameOverlayScreenshotHotKey = new SettingsKeyBinding();
-            this.InGameOverlayShortcutKey = new SettingsKeyBinding();
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EWirelessEndpointStrength",
+          function () {
+            return EWirelessEndpointStrength;
           }
-        }
-        class FamilySettings {}
-        class RemotePlaySettings {}
-        class FriendsSettings {}
-        function DefaultFriendsSettings() {
-          return {
-            bNotifications_ShowIngame: true,
-            bNotifications_ShowOnline: false,
-            bNotifications_ShowMessage: true,
-            bNotifications_EventsAndAnnouncements: true,
-            bSounds_PlayIngame: false,
-            bSounds_PlayOnline: false,
-            bSounds_PlayMessage: true,
-            bSounds_EventsAndAnnouncements: false,
-            bAlwaysNewChatWindow: false,
-            bForceAlphabeticFriendSorting: false,
-            nChatFlashMode: 0 /* EChatFlashMode_Always */,
-            bRememberOpenChats: true,
-            bCompactQuickAccess: false,
-            bCompactFriendsList: false,
-            bNotifications_ShowChatRoomNotification: true,
-            bSounds_PlayChatRoomNotification: true,
-            bHideOfflineFriendsInTagGroups: false,
-            bHideCategorizedFriends: false,
-            bCategorizeInGameFriendsByGame: true,
-            nChatFontSize: 2,
-            b24HourClock: false,
-            bDoNotDisturbMode: false,
-            bDisableEmbedInlining: false,
-            bSignIntoFriends: true,
-            bDisableSpellcheck: false,
-            bDisableRoomEffects: false,
-            bAnimatedAvatars: true,
-            featuresEnabled: {},
-          };
-        }
-        class InstalledAppInfo {}
-        class InstallFolderInfo {}
-        class UGCScreenShot {
-          constructor() {
-            this.nType = 0;
-            this.nCreatorappid = 0;
-            this.nConsumerappid = 0;
-            this.rTimeCreated = 0;
-            this.rTimeUpdated = 0;
-            this.eVisiblity = 0;
-            this.nIimageWidth = 0;
-            this.nImageHeight = 0;
-            this.nVotesUp = 0;
-            this.nVotesDown = 0;
-            this.nScore = 0;
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EWirelessSecurityFlags",
+          function () {
+            return EWirelessSecurityFlags;
           }
-        }
-        class SystemInfo {}
-        class IterateFolderItem {}
-        class IterateDrivesItem {}
-        class MarketingMessage {
-          constructor() {
-            this.unAppID = 0;
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EHTTPProxyMode",
+          function () {
+            return EHTTPProxyMode;
           }
-        }
-        class SurveyEntry {}
-        class SurveySection {}
-        class GameLaunchOption {}
-        class ShortcutScanData {}
-        class ShortcutScanResults {}
-        class InstallAppAndCreateShortcutData {}
-        class FlatpakApp {}
-        class AppLifetimeNotification {}
-        class ScreenshotNotification {}
-        class AchievementNotification {}
-        class BatteryState_t {}
-        class FormatStorageProgress_t {}
-        const InvalidStorageManagerDriveId = 0x0;
-        function ToStorageManagerDriveId(nId) {
-          return nId;
-        }
-        const InvalidStorageManagerBlockDeviceId = 0x0;
-        function ToStorageManagerBlockDeviceId(nId) {
-          return nId;
-        }
-        const InvalidAudioDeviceId = 0xffffffff;
-        var EAudioDirection;
-        (function (EAudioDirection) {
-          EAudioDirection[(EAudioDirection["Input"] = 0)] = "Input";
-          EAudioDirection[(EAudioDirection["Output"] = 1)] = "Output";
-        })(EAudioDirection || (EAudioDirection = {}));
-        var EAudioChannel;
-        (function (EAudioChannel) {
-          EAudioChannel[(EAudioChannel["Input"] = 0)] = "Input";
-          EAudioChannel[(EAudioChannel["AllOutput"] = 1)] = "AllOutput";
-          EAudioChannel[(EAudioChannel["Left"] = 2)] = "Left";
-          EAudioChannel[(EAudioChannel["Right"] = 3)] = "Right";
-          EAudioChannel[(EAudioChannel["Sub"] = 4)] = "Sub";
-          EAudioChannel[(EAudioChannel["BackLeft"] = 5)] = "BackLeft";
-          EAudioChannel[(EAudioChannel["BackRight"] = 6)] = "BackRight";
-        })(EAudioChannel || (EAudioChannel = {}));
-        class AudioDevice {}
-        class AudioDevices {}
-        var EBrowserType;
-        (function (EBrowserType) {
-          EBrowserType[(EBrowserType["EBrowserType_OffScreen"] = 0)] =
-            "EBrowserType_OffScreen";
-          EBrowserType[(EBrowserType["EBrowserType_OpenVROverlay"] = 1)] =
-            "EBrowserType_OpenVROverlay";
-          EBrowserType[
-            (EBrowserType["EBrowserType_OpenVROverlay_Dashboard"] = 2)
-          ] = "EBrowserType_OpenVROverlay_Dashboard";
-          EBrowserType[(EBrowserType["EBrowserType_DirectHWND"] = 3)] =
-            "EBrowserType_DirectHWND";
-          EBrowserType[
-            (EBrowserType["EBrowserType_DirectHWND_Borderless"] = 4)
-          ] = "EBrowserType_DirectHWND_Borderless";
-          EBrowserType[(EBrowserType["EBrowserType_DirectHWND_Hidden"] = 5)] =
-            "EBrowserType_DirectHWND_Hidden";
-          EBrowserType[(EBrowserType["EBrowserType_ChildHWNDNative"] = 6)] =
-            "EBrowserType_ChildHWNDNative";
-          EBrowserType[
-            (EBrowserType["EBrowserType_Transparent_Toplevel"] = 7)
-          ] = "EBrowserType_Transparent_Toplevel";
-          EBrowserType[
-            (EBrowserType["EBrowserType_OffScreen_SharedTexture"] = 8)
-          ] = "EBrowserType_OffScreen_SharedTexture";
-          EBrowserType[
-            (EBrowserType["EBrowserType_OffScreen_GameOverlay"] = 9)
-          ] = "EBrowserType_OffScreen_GameOverlay";
-          EBrowserType[
-            (EBrowserType[
-              "EBrowserType_OffScreen_GameOverlay_SharedTexture"
-            ] = 10)
-          ] = "EBrowserType_OffScreen_GameOverlay_SharedTexture";
-          EBrowserType[
-            (EBrowserType["EBrowserType_Offscreen_FriendsUI"] = 11)
-          ] = "EBrowserType_Offscreen_FriendsUI";
-          EBrowserType[(EBrowserType["EBrowserType_MAX"] = 12)] =
-            "EBrowserType_MAX";
-        })(EBrowserType || (EBrowserType = {}));
-        function BOpenVROverlayBrowser(eType) {
-          return (
-            eType == EBrowserType.EBrowserType_OpenVROverlay ||
-            eType == EBrowserType.EBrowserType_OpenVROverlay_Dashboard
-          );
-        }
-        class OverlayChatBrowserInfo {}
-        class PushToTalkInfo {}
-        var EClientUINotificationType;
-        (function (EClientUINotificationType) {
-          EClientUINotificationType[
-            (EClientUINotificationType[
-              "k_EClientUINotificationGroupChatMessage"
-            ] = 1)
-          ] = "k_EClientUINotificationGroupChatMessage";
-          EClientUINotificationType[
-            (EClientUINotificationType[
-              "k_EClientUINotificationFriendChatMessage"
-            ] = 2)
-          ] = "k_EClientUINotificationFriendChatMessage";
-          EClientUINotificationType[
-            (EClientUINotificationType[
-              "k_EClientUINotificationFriendPersonaState"
-            ] = 3)
-          ] = "k_EClientUINotificationFriendPersonaState";
-        })(EClientUINotificationType || (EClientUINotificationType = {}));
-        var EComputerActiveState;
-        (function (EComputerActiveState) {
-          EComputerActiveState[
-            (EComputerActiveState["k_EComputerActiveStateInvalid"] = 0)
-          ] = "k_EComputerActiveStateInvalid";
-          EComputerActiveState[
-            (EComputerActiveState["k_EComputerActiveStateActive"] = 1)
-          ] = "k_EComputerActiveStateActive";
-          EComputerActiveState[
-            (EComputerActiveState["k_EComputerActiveStateIdle"] = 2)
-          ] = "k_EComputerActiveStateIdle";
-        })(EComputerActiveState || (EComputerActiveState = {}));
-        class CommunityPreferences {}
-        class TextFilterPreferences {}
-        var EBroadcastViewRequestState;
-        (function (EBroadcastViewRequestState) {
-          EBroadcastViewRequestState[
-            (EBroadcastViewRequestState["k_EPending"] = 0)
-          ] = "k_EPending";
-          EBroadcastViewRequestState[
-            (EBroadcastViewRequestState["k_EAccepted"] = 1)
-          ] = "k_EAccepted";
-          EBroadcastViewRequestState[
-            (EBroadcastViewRequestState["k_ERejected"] = 2)
-          ] = "k_ERejected";
-        })(EBroadcastViewRequestState || (EBroadcastViewRequestState = {}));
-        class ContentDescriptorPreferences {
-          constructor() {
-            this.content_descriptors_to_exclude = [];
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ConfiguredProxyInfo",
+          function () {
+            return ConfiguredProxyInfo;
           }
-        }
-        class StorePreferences {}
-        function AppTypeForEProtoAppType(eProtoAppType) {
-          switch (eProtoAppType) {
-            case 1 /* k_EAppTypeGame */:
-              return "game";
-            case 2 /* k_EAppTypeApplication */:
-              return "software";
-            case 4 /* k_EAppTypeTool */:
-              return "tool";
-            case 8 /* k_EAppTypeDemo */:
-              return "demo";
-            case 32 /* k_EAppTypeDLC */:
-              return "dlc";
-            case 128 /* k_EAppTypeDriver */:
-              return "driver";
-            case 256 /* k_EAppTypeConfig */:
-              return "config";
-            case 2048 /* k_EAppTypeVideo */:
-              return "video";
-            case 8192 /* k_EAppTypeMusicAlbum */:
-              return "music";
-            case 65536 /* k_EAppTypeBeta */:
-              return "beta";
-          }
-          // Expected unhandled cases that we don't expect to be live as of this writing:
-          //		k_EAppTypeDeprected
-          //		k_EAppTypeGuide
-          //		k_EAppTypeHardware
-          //		k_EAppTypeFranchise
-          //		k_EAppTypePlugin
-          //		k_EAppTypeSeries
-          //		k_EAppTypeComic
-          //
-          // Tragically, AssertMsg() is not available in all projects that include clienttypes, currently.
-          //AssertMsg( eProtoAppType == EProtoAppType.k_EAppTypeInvalid, `Unhandled EProtoAppType ${eProtoAppType} for AppType conversion.` );
-          return "invalid";
-        }
-        function AppTypeForEStoreAppType(eStoreAppType) {
-          switch (eStoreAppType) {
-            case 0 /* k_EStoreAppType_Game */:
-              return "game";
-            case 6 /* k_EStoreAppType_Software */:
-              return "software";
-            case 1 /* k_EStoreAppType_Demo */:
-              return "demo";
-            case 4 /* k_EStoreAppType_DLC */:
-              return "dlc";
-            case 7 /* k_EStoreAppType_Video */:
-              return "video";
-            case 3 /* k_EStoreAppType_Movie */:
-              return "video";
-            case 11 /* k_EStoreAppType_Music */:
-              return "music";
-            case 12 /* k_EStoreAppType_Beta */:
-              return "beta";
-            case 2 /* k_EStoreAppType_Mod */:
-              return "mod";
-          }
-          return "invalid";
-        }
-        // If we ever change this, make sure to update the server code -> YldExtractAppsPackagesAndBundlesFromCapsule
-        function BIsSaleItemType(input) {
-          return (
-            input === "game" ||
-            input === "dlc" ||
-            input === "software" ||
-            input === "music" ||
-            input === "application" ||
-            input === "demo" ||
-            input === "hardware" ||
-            input === "mod" ||
-            input == "video" ||
-            input === "beta" ||
-            input === "advertising"
-          );
-        }
-        function BDoesSaleItemTypeHaveParent(input) {
-          return input === "music" || input === "dlc";
-        }
-        class RemoteClientInputSettings {}
-        var EClientUsedInputType;
-        (function (EClientUsedInputType) {
-          EClientUsedInputType[
-            (EClientUsedInputType["k_EClientUsedInputTypeKeyboard"] = 0)
-          ] = "k_EClientUsedInputTypeKeyboard";
-          EClientUsedInputType[
-            (EClientUsedInputType["k_EClientUsedInputTypeMouse"] = 1)
-          ] = "k_EClientUsedInputTypeMouse";
-          EClientUsedInputType[
-            (EClientUsedInputType["k_EClientUsedInputTypeController"] = 2)
-          ] = "k_EClientUsedInputTypeController";
-          EClientUsedInputType[
-            (EClientUsedInputType["k_EClientUsedInputTypeMax"] = 3)
-          ] = "k_EClientUsedInputTypeMax";
-        })(EClientUsedInputType || (EClientUsedInputType = {}));
-        var ERemoteClientLaunchResult;
-        (function (ERemoteClientLaunchResult) {
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchOK"] = 1)
-          ] = "k_ERemoteClientLaunchOK";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchFail"] = 2)
-          ] = "k_ERemoteClientLaunchFail";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchRequiresUI"] = 3)
-          ] = "k_ERemoteClientLaunchRequiresUI";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchRequiresLaunchOption"
-            ] = 4)
-          ] = "k_ERemoteClientLaunchRequiresLaunchOption";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchRequiresEULA"] = 5)
-          ] = "k_ERemoteClientLaunchRequiresEULA";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchTimeout"] = 6)
-          ] = "k_ERemoteClientLaunchTimeout";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchStreamTimeout"
-            ] = 7)
-          ] = "k_ERemoteClientLaunchStreamTimeout";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchStreamClientFail"
-            ] = 8)
-          ] = "k_ERemoteClientLaunchStreamClientFail";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchOtherGameRunning"
-            ] = 9)
-          ] = "k_ERemoteClientLaunchOtherGameRunning";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchDownloadStarted"
-            ] = 10)
-          ] = "k_ERemoteClientLaunchDownloadStarted";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchDownloadNoSpace"
-            ] = 11)
-          ] = "k_ERemoteClientLaunchDownloadNoSpace";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchDownloadFiltered"
-            ] = 12)
-          ] = "k_ERemoteClientLaunchDownloadFiltered";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchDownloadRequiresUI"
-            ] = 13)
-          ] = "k_ERemoteClientLaunchDownloadRequiresUI";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchAccessDenied"
-            ] = 14)
-          ] = "k_ERemoteClientLaunchAccessDenied";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchNetworkError"
-            ] = 15)
-          ] = "k_ERemoteClientLaunchNetworkError";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchProgress"] = 16)
-          ] = "k_ERemoteClientLaunchProgress";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchParentalUnlockFailed"
-            ] = 17)
-          ] = "k_ERemoteClientLaunchParentalUnlockFailed";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchScreenLocked"
-            ] = 18)
-          ] = "k_ERemoteClientLaunchScreenLocked";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchUnsupported"] = 19)
-          ] = "k_ERemoteClientLaunchUnsupported";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchDisabledLocal"
-            ] = 20)
-          ] = "k_ERemoteClientLaunchDisabledLocal";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchDisabledRemote"
-            ] = 21)
-          ] = "k_ERemoteClientLaunchDisabledRemote";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchBroadcasting"
-            ] = 22)
-          ] = "k_ERemoteClientLaunchBroadcasting";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchBusy"] = 23)
-          ] = "k_ERemoteClientLaunchBusy";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchDriversNotInstalled"
-            ] = 24)
-          ] = "k_ERemoteClientLaunchDriversNotInstalled";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchTransportUnavailable"
-            ] = 25)
-          ] = "k_ERemoteClientLaunchTransportUnavailable";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchCanceled"] = 26)
-          ] = "k_ERemoteClientLaunchCanceled";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult["k_ERemoteClientLaunchInvisible"] = 27)
-          ] = "k_ERemoteClientLaunchInvisible";
-          ERemoteClientLaunchResult[
-            (ERemoteClientLaunchResult[
-              "k_ERemoteClientLaunchRestrictedCountry"
-            ] = 28)
-          ] = "k_ERemoteClientLaunchRestrictedCountry";
-        })(ERemoteClientLaunchResult || (ERemoteClientLaunchResult = {}));
-        /**
-         * Helper to hold an array of handles and dispose all at once
-         */
-        class CallbackHandleDisposer {
-          constructor() {
-            this.m_rgHandles = [];
-          }
-          Add(handle) {
-            if (handle) this.m_rgHandles.push(handle);
-          }
-          Unregister() {
-            let rgHandles = this.m_rgHandles;
-            this.m_rgHandles = [];
-            for (let handle of rgHandles) {
-              if (handle) handle.unregister();
-            }
-          }
-        }
-        // Client Realm - from clientenums.h
-        var ESteamRealm;
-        (function (ESteamRealm) {
-          ESteamRealm[(ESteamRealm["k_ESteamRealmUnknown"] = 0)] =
-            "k_ESteamRealmUnknown";
-          ESteamRealm[(ESteamRealm["k_ESteamRealmGlobal"] = 1)] =
-            "k_ESteamRealmGlobal";
-          ESteamRealm[(ESteamRealm["k_ESteamRealmChina"] = 2)] =
-            "k_ESteamRealmChina";
-        })(ESteamRealm || (ESteamRealm = {}));
-        function BIsChinaRealm(eRealm) {
-          return eRealm === ESteamRealm.k_ESteamRealmChina;
-        }
-        const InvalidBluetoothAdapterId = 0x0;
-        const InvalidBluetoothDeviceId = 0x0;
-        // TODO(andresr): re-do enum generation from windows
-        var EBluetoothDeviceType;
-        (function (EBluetoothDeviceType) {
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Invalid"] = 0)
-          ] = "k_BluetoothDeviceType_Invalid";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Unknown"] = 1)
-          ] = "k_BluetoothDeviceType_Unknown";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Phone"] = 2)
-          ] = "k_BluetoothDeviceType_Phone";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Computer"] = 3)
-          ] = "k_BluetoothDeviceType_Computer";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Headset"] = 4)
-          ] = "k_BluetoothDeviceType_Headset";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Headphones"] = 5)
-          ] = "k_BluetoothDeviceType_Headphones";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Speakers"] = 6)
-          ] = "k_BluetoothDeviceType_Speakers";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_OtherAudio"] = 7)
-          ] = "k_BluetoothDeviceType_OtherAudio";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Mouse"] = 8)
-          ] = "k_BluetoothDeviceType_Mouse";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Joystick"] = 9)
-          ] = "k_BluetoothDeviceType_Joystick";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Gamepad"] = 10)
-          ] = "k_BluetoothDeviceType_Gamepad";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Keyboard"] = 11)
-          ] = "k_BluetoothDeviceType_Keyboard";
-        })(EBluetoothDeviceType || (EBluetoothDeviceType = {}));
-        class BluetoothAdapter_t {}
-        class BluetoothDevice_t {}
-        class BluetoothState_t {}
+        );
+        /* harmony import */ var shared_clientenums__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
+        );
+
         const CustomNetworkDeviceWapId = 0xa955a2c5;
         const InvalidNetworkDeviceWapId = 0x0;
         /**
@@ -2761,42 +3630,598 @@
             "k_EHTTPProxyMode_Automatic";
         })(EHTTPProxyMode || (EHTTPProxyMode = {}));
         class ConfiguredProxyInfo {}
-        /**
-         * System keys the UI can be notified of.
-         */
-        var ESystemUISystemKey;
-        (function (ESystemUISystemKey) {
-          ESystemUISystemKey[(ESystemUISystemKey["SystemKey0"] = 0)] =
-            "SystemKey0";
-          ESystemUISystemKey[(ESystemUISystemKey["SystemKey1"] = 1)] =
-            "SystemKey1";
-        })(ESystemUISystemKey || (ESystemUISystemKey = {}));
-        /**
-         * Controls how Gamescope renders the GamepadUI window when a game is running.
-         */
-        var EUIComposition;
-        (function (EUIComposition) {
-          /** Steam is not rendered on the screen. */
-          EUIComposition[(EUIComposition["Hidden"] = 0)] = "Hidden";
-          /**
-           * Transparent divs will allow pixels from the app behind Steam to penetrate.
-           * Input goes to **the app.**
-           */
-          EUIComposition[(EUIComposition["Notification"] = 1)] = "Notification";
-          /**
-           * Transparent divs will allow pixels from the app behind Steam to penetrate.
-           * Input goes to **Steam.**
-           */
-          EUIComposition[(EUIComposition["Overlay"] = 2)] = "Overlay";
-          /** Take all of the pixels on the screen, nothing "behind" Steam is shown. */
-          EUIComposition[(EUIComposition["Opaque"] = 3)] = "Opaque";
-          /**
-           * Special composition mode that matches Overlay, but forwards synthetic keyboard
-           * events to the Gamescope foreground app (game) instead of Steam.
-           */
-          EUIComposition[(EUIComposition["OverlayKeyboard"] = 4)] =
-            "OverlayKeyboard";
-        })(EUIComposition || (EUIComposition = {}));
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/notificationtypes.ts":
+      /*!**********************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/notificationtypes.ts ***!
+  \**********************************************************************************************************/
+      /*! exports provided: NotificationCounts, AppLifetimeNotification, ScreenshotNotification, AchievementNotification, EClientUINotificationType */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "NotificationCounts",
+          function () {
+            return NotificationCounts;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppLifetimeNotification",
+          function () {
+            return AppLifetimeNotification;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ScreenshotNotification",
+          function () {
+            return ScreenshotNotification;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AchievementNotification",
+          function () {
+            return AchievementNotification;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EClientUINotificationType",
+          function () {
+            return EClientUINotificationType;
+          }
+        );
+        class NotificationCounts {
+          constructor() {
+            this.comments = 0;
+            this.inventory_items = 0;
+            this.invites = 0;
+            this.gifts = 0;
+            this.offline_messages = 0;
+            this.trade_offers = 0;
+            this.async_game_updates = 0;
+            this.moderator_messages = 0;
+            this.help_request_replies = 0;
+          }
+        }
+        class AppLifetimeNotification {}
+        class ScreenshotNotification {}
+        class AchievementNotification {}
+        var EClientUINotificationType;
+        (function (EClientUINotificationType) {
+          EClientUINotificationType[
+            (EClientUINotificationType[
+              "k_EClientUINotificationGroupChatMessage"
+            ] = 1)
+          ] = "k_EClientUINotificationGroupChatMessage";
+          EClientUINotificationType[
+            (EClientUINotificationType[
+              "k_EClientUINotificationFriendChatMessage"
+            ] = 2)
+          ] = "k_EClientUINotificationFriendChatMessage";
+          EClientUINotificationType[
+            (EClientUINotificationType[
+              "k_EClientUINotificationFriendPersonaState"
+            ] = 3)
+          ] = "k_EClientUINotificationFriendPersonaState";
+        })(EClientUINotificationType || (EClientUINotificationType = {}));
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/parentaltypes.ts":
+      /*!******************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/parentaltypes.ts ***!
+  \******************************************************************************************************/
+      /*! no static exports found */
+      /***/ function (module, exports) {
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/screenshottypes.ts":
+      /*!********************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/screenshottypes.ts ***!
+  \********************************************************************************************************/
+      /*! exports provided: UGCScreenShot */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "UGCScreenShot",
+          function () {
+            return UGCScreenShot;
+          }
+        );
+        class UGCScreenShot {
+          constructor() {
+            this.nType = 0;
+            this.nCreatorappid = 0;
+            this.nConsumerappid = 0;
+            this.rTimeCreated = 0;
+            this.rTimeUpdated = 0;
+            this.eVisiblity = 0;
+            this.nIimageWidth = 0;
+            this.nImageHeight = 0;
+            this.nVotesUp = 0;
+            this.nVotesDown = 0;
+            this.nScore = 0;
+          }
+        }
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/settingstypes.ts":
+      /*!******************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/settingstypes.ts ***!
+  \******************************************************************************************************/
+      /*! exports provided: SettingsKeyBinding, SettingsDownloadRegion, FamilySharingUser, SettingsState, FamilySettings, RemotePlaySettings, FriendsSettings, DefaultFriendsSettings */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SettingsKeyBinding",
+          function () {
+            return SettingsKeyBinding;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SettingsDownloadRegion",
+          function () {
+            return SettingsDownloadRegion;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FamilySharingUser",
+          function () {
+            return FamilySharingUser;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SettingsState",
+          function () {
+            return SettingsState;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FamilySettings",
+          function () {
+            return FamilySettings;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "RemotePlaySettings",
+          function () {
+            return RemotePlaySettings;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FriendsSettings",
+          function () {
+            return FriendsSettings;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "DefaultFriendsSettings",
+          function () {
+            return DefaultFriendsSettings;
+          }
+        );
+        class SettingsKeyBinding {
+          constructor() {
+            this.nKeyCode = 0;
+            this.bAltKey = false;
+            this.bShiftKey = false;
+            this.bCtrlKey = false;
+            this.bMetaKey = false;
+            this.strDisplayString = "";
+          }
+        }
+        class SettingsDownloadRegion {
+          constructor() {
+            this.strRegionName = "";
+            this.nRegionID = 0;
+          }
+        }
+        class FamilySharingUser {}
+        class SettingsState {
+          constructor() {
+            this.InGameOverlayScreenshotHotKey = new SettingsKeyBinding();
+            this.InGameOverlayShortcutKey = new SettingsKeyBinding();
+          }
+        }
+        class FamilySettings {}
+        class RemotePlaySettings {}
+        class FriendsSettings {}
+        function DefaultFriendsSettings() {
+          return {
+            bNotifications_ShowIngame: true,
+            bNotifications_ShowOnline: false,
+            bNotifications_ShowMessage: true,
+            bNotifications_EventsAndAnnouncements: true,
+            bSounds_PlayIngame: false,
+            bSounds_PlayOnline: false,
+            bSounds_PlayMessage: true,
+            bSounds_EventsAndAnnouncements: false,
+            bAlwaysNewChatWindow: false,
+            bForceAlphabeticFriendSorting: false,
+            nChatFlashMode: 0 /* EChatFlashMode_Always */,
+            bRememberOpenChats: true,
+            bCompactQuickAccess: false,
+            bCompactFriendsList: false,
+            bNotifications_ShowChatRoomNotification: true,
+            bSounds_PlayChatRoomNotification: true,
+            bHideOfflineFriendsInTagGroups: false,
+            bHideCategorizedFriends: false,
+            bCategorizeInGameFriendsByGame: true,
+            nChatFontSize: 2,
+            b24HourClock: false,
+            bDoNotDisturbMode: false,
+            bDisableEmbedInlining: false,
+            bSignIntoFriends: true,
+            bDisableSpellcheck: false,
+            bDisableRoomEffects: false,
+            bAnimatedAvatars: true,
+            featuresEnabled: {},
+          };
+        }
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/storetypes.ts":
+      /*!***************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/storetypes.ts ***!
+  \***************************************************************************************************/
+      /*! exports provided: MarketingMessage, ContentDescriptorPreferences, StorePreferences, AppTypeForEProtoAppType, AppTypeForEStoreAppType, BIsSaleItemType, BDoesSaleItemTypeHaveParent */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "MarketingMessage",
+          function () {
+            return MarketingMessage;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ContentDescriptorPreferences",
+          function () {
+            return ContentDescriptorPreferences;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "StorePreferences",
+          function () {
+            return StorePreferences;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppTypeForEProtoAppType",
+          function () {
+            return AppTypeForEProtoAppType;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "AppTypeForEStoreAppType",
+          function () {
+            return AppTypeForEStoreAppType;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BIsSaleItemType",
+          function () {
+            return BIsSaleItemType;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BDoesSaleItemTypeHaveParent",
+          function () {
+            return BDoesSaleItemTypeHaveParent;
+          }
+        );
+        /* harmony import */ var shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! shared/steammessages/steammessages_appoverview_pb */ "../../../web_src/shared/js/steammessages/steammessages_appoverview_pb.ts"
+        );
+        /* harmony import */ var shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! shared/steammessages/steammessages_storebrowse_pb */ "../../../web_src/shared/js/steammessages/steammessages_storebrowse_pb.ts"
+        );
+
+        class MarketingMessage {
+          constructor() {
+            this.unAppID = 0;
+          }
+        }
+        class ContentDescriptorPreferences {
+          constructor() {
+            this.content_descriptors_to_exclude = [];
+          }
+        }
+        class StorePreferences {}
+        function AppTypeForEProtoAppType(eProtoAppType) {
+          switch (eProtoAppType) {
+            case 1 /* k_EAppTypeGame */:
+              return "game";
+            case 2 /* k_EAppTypeApplication */:
+              return "software";
+            case 4 /* k_EAppTypeTool */:
+              return "tool";
+            case 8 /* k_EAppTypeDemo */:
+              return "demo";
+            case 32 /* k_EAppTypeDLC */:
+              return "dlc";
+            case 128 /* k_EAppTypeDriver */:
+              return "driver";
+            case 256 /* k_EAppTypeConfig */:
+              return "config";
+            case 2048 /* k_EAppTypeVideo */:
+              return "video";
+            case 8192 /* k_EAppTypeMusicAlbum */:
+              return "music";
+            case 65536 /* k_EAppTypeBeta */:
+              return "beta";
+          }
+          // Expected unhandled cases that we don't expect to be live as of this writing:
+          //		k_EAppTypeDeprected
+          //		k_EAppTypeGuide
+          //		k_EAppTypeHardware
+          //		k_EAppTypeFranchise
+          //		k_EAppTypePlugin
+          //		k_EAppTypeSeries
+          //		k_EAppTypeComic
+          //
+          // Tragically, AssertMsg() is not available in all projects that include clienttypes, currently.
+          //AssertMsg( eProtoAppType == EProtoAppType.k_EAppTypeInvalid, `Unhandled EProtoAppType ${eProtoAppType} for AppType conversion.` );
+          return "invalid";
+        }
+        function AppTypeForEStoreAppType(eStoreAppType) {
+          switch (eStoreAppType) {
+            case 0 /* k_EStoreAppType_Game */:
+              return "game";
+            case 6 /* k_EStoreAppType_Software */:
+              return "software";
+            case 1 /* k_EStoreAppType_Demo */:
+              return "demo";
+            case 4 /* k_EStoreAppType_DLC */:
+              return "dlc";
+            case 7 /* k_EStoreAppType_Video */:
+              return "video";
+            case 3 /* k_EStoreAppType_Movie */:
+              return "video";
+            case 11 /* k_EStoreAppType_Music */:
+              return "music";
+            case 12 /* k_EStoreAppType_Beta */:
+              return "beta";
+            case 2 /* k_EStoreAppType_Mod */:
+              return "mod";
+          }
+          return "invalid";
+        }
+        // If we ever change this, make sure to update the server code -> YldExtractAppsPackagesAndBundlesFromCapsule
+        function BIsSaleItemType(input) {
+          return (
+            input === "game" ||
+            input === "dlc" ||
+            input === "software" ||
+            input === "music" ||
+            input === "application" ||
+            input === "demo" ||
+            input === "hardware" ||
+            input === "mod" ||
+            input == "video" ||
+            input === "beta" ||
+            input === "advertising"
+          );
+        }
+        function BDoesSaleItemTypeHaveParent(input) {
+          return input === "music" || input === "dlc";
+        }
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/systemtypes.ts":
+      /*!****************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clienttypes/systemtypes.ts ***!
+  \****************************************************************************************************/
+      /*! exports provided: SystemInfo, IterateFolderItem, IterateDrivesItem, SurveyEntry, SurveySection, GameLaunchOption, ShortcutScanData, ShortcutScanResults, InstallAppAndCreateShortcutData, FlatpakApp, BatteryState_t, FormatStorageProgress_t, InvalidStorageManagerDriveId, ToStorageManagerDriveId, InvalidStorageManagerBlockDeviceId, ToStorageManagerBlockDeviceId, EComputerActiveState, EClientUsedInputType */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SystemInfo",
+          function () {
+            return SystemInfo;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "IterateFolderItem",
+          function () {
+            return IterateFolderItem;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "IterateDrivesItem",
+          function () {
+            return IterateDrivesItem;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SurveyEntry",
+          function () {
+            return SurveyEntry;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "SurveySection",
+          function () {
+            return SurveySection;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "GameLaunchOption",
+          function () {
+            return GameLaunchOption;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ShortcutScanData",
+          function () {
+            return ShortcutScanData;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ShortcutScanResults",
+          function () {
+            return ShortcutScanResults;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InstallAppAndCreateShortcutData",
+          function () {
+            return InstallAppAndCreateShortcutData;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FlatpakApp",
+          function () {
+            return FlatpakApp;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "BatteryState_t",
+          function () {
+            return BatteryState_t;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "FormatStorageProgress_t",
+          function () {
+            return FormatStorageProgress_t;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidStorageManagerDriveId",
+          function () {
+            return InvalidStorageManagerDriveId;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ToStorageManagerDriveId",
+          function () {
+            return ToStorageManagerDriveId;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "InvalidStorageManagerBlockDeviceId",
+          function () {
+            return InvalidStorageManagerBlockDeviceId;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ToStorageManagerBlockDeviceId",
+          function () {
+            return ToStorageManagerBlockDeviceId;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EComputerActiveState",
+          function () {
+            return EComputerActiveState;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EClientUsedInputType",
+          function () {
+            return EClientUsedInputType;
+          }
+        );
+        class SystemInfo {}
+        class IterateFolderItem {}
+        class IterateDrivesItem {}
+        class SurveyEntry {}
+        class SurveySection {}
+        class GameLaunchOption {}
+        class ShortcutScanData {}
+        class ShortcutScanResults {}
+        class InstallAppAndCreateShortcutData {}
+        class FlatpakApp {}
+        class BatteryState_t {}
+        class FormatStorageProgress_t {}
+        const InvalidStorageManagerDriveId = 0x0;
+        function ToStorageManagerDriveId(nId) {
+          return nId;
+        }
+        const InvalidStorageManagerBlockDeviceId = 0x0;
+        function ToStorageManagerBlockDeviceId(nId) {
+          return nId;
+        }
+        var EComputerActiveState;
+        (function (EComputerActiveState) {
+          EComputerActiveState[
+            (EComputerActiveState["k_EComputerActiveStateInvalid"] = 0)
+          ] = "k_EComputerActiveStateInvalid";
+          EComputerActiveState[
+            (EComputerActiveState["k_EComputerActiveStateActive"] = 1)
+          ] = "k_EComputerActiveStateActive";
+          EComputerActiveState[
+            (EComputerActiveState["k_EComputerActiveStateIdle"] = 2)
+          ] = "k_EComputerActiveStateIdle";
+        })(EComputerActiveState || (EComputerActiveState = {}));
+        var EClientUsedInputType;
+        (function (EClientUsedInputType) {
+          EClientUsedInputType[
+            (EClientUsedInputType["k_EClientUsedInputTypeKeyboard"] = 0)
+          ] = "k_EClientUsedInputTypeKeyboard";
+          EClientUsedInputType[
+            (EClientUsedInputType["k_EClientUsedInputTypeMouse"] = 1)
+          ] = "k_EClientUsedInputTypeMouse";
+          EClientUsedInputType[
+            (EClientUsedInputType["k_EClientUsedInputTypeController"] = 2)
+          ] = "k_EClientUsedInputTypeController";
+          EClientUsedInputType[
+            (EClientUsedInputType["k_EClientUsedInputTypeMax"] = 3)
+          ] = "k_EClientUsedInputTypeMax";
+        })(EClientUsedInputType || (EClientUsedInputType = {}));
 
         /***/
       },
@@ -3299,7 +4724,7 @@
           /*! ../utils/bind */ "../../../web_src/shared/js/utils/bind.ts"
         );
         /* harmony import */ var shared_clienttypes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-          /*! shared/clienttypes */ "../../../web_src/shared/js/clienttypes.ts"
+          /*! shared/clienttypes */ "../../../web_src/shared/js/clienttypes/index.ts"
         );
         /* harmony import */ var shared_utils_localization__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
           /*! shared/utils/localization */ "../../../web_src/shared/js/utils/localization.ts"
@@ -4147,20 +5572,14 @@
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
-        /* harmony import */ var _clientenums__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-          /*! ./clientenums */ "../../../web_src/shared/js/clientenums.ts"
-        );
-        /* harmony import */ var _clienttypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-          /*! ./clienttypes */ "../../../web_src/shared/js/clienttypes.ts"
-        );
-        /* harmony import */ var _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+        /* harmony import */ var _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
           /*! ./steamclient/clientinterfacehelpers */ "../../../web_src/shared/js/steamclient/clientinterfacehelpers.ts"
         );
         /* harmony reexport (safe) */ __webpack_require__.d(
           __webpack_exports__,
           "BSteamClientHasInterface",
           function () {
-            return _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_2__[
+            return _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__[
               "BSteamClientHasInterface"
             ];
           }
@@ -4170,15 +5589,12 @@
           __webpack_exports__,
           "BSteamClientHasMethod",
           function () {
-            return _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_2__[
+            return _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__[
               "BSteamClientHasMethod"
             ];
           }
         );
 
-        /* harmony import */ var _steammessages_enums_pb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-          /*! ./steammessages/enums_pb */ "../../../web_src/shared/js/steammessages/enums_pb.ts"
-        );
         //
         // contains definitions for all methods and objects exposed from C++ Steam Client
         //
@@ -4251,7 +5667,7 @@
       /*!***************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/steammessages/enums_pb.ts ***!
   \***************************************************************************************************/
-      /*! exports provided: EPublishedFileQueryTypeToString, EPublishedFileInappropriateProviderToString, EPublishedFileInappropriateResultToString, EPersonaStateFlagToString, EContentCheckProviderToString, EBanContentCheckResultToString, EProfileCustomizationTypeToString, EPublishedFileStorageSystemToString, ECloudStoragePersistStateToString, EBluetoothDeviceTypeToString, ESystemServiceStateToString, EGraphicsPerfOverlayLevelToString, EGPUPerformanceLevelToString, EScalingFilterToString, ECPUGovernorToString, EUpdaterTypeToString, EUpdaterStateToString, EStorageBlockContentTypeToString, EStorageBlockFileSystemTypeToString, ESteamDeckCompatibilityCategoryToString, ESteamDeckCompatibilityResultDisplayTypeToString, EACStateToString, EBatteryStateToString, EOSBranchToString, ECommunityItemClassToString, ESteamDeckCompatibilityFeedbackToString, EProvideDeckFeedbackPreferenceToString */
+      /*! exports provided: EPublishedFileQueryTypeToString, EPublishedFileInappropriateProviderToString, EPublishedFileInappropriateResultToString, EPersonaStateFlagToString, EContentCheckProviderToString, EBanContentCheckResultToString, EProfileCustomizationTypeToString, EPublishedFileStorageSystemToString, ECloudStoragePersistStateToString, ESDCardFormatStageToString, EBluetoothDeviceTypeToString, ESystemServiceStateToString, EGraphicsPerfOverlayLevelToString, EGPUPerformanceLevelToString, EScalingFilterToString, ECPUGovernorToString, EUpdaterTypeToString, EUpdaterStateToString, EStorageBlockContentTypeToString, EStorageBlockFileSystemTypeToString, ESteamDeckCompatibilityCategoryToString, ESteamDeckCompatibilityResultDisplayTypeToString, EACStateToString, EBatteryStateToString, EOSBranchToString, ECommunityItemClassToString, ESteamDeckCompatibilityFeedbackToString, EProvideDeckFeedbackPreferenceToString */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -4316,6 +5732,13 @@
           "ECloudStoragePersistStateToString",
           function () {
             return ECloudStoragePersistStateToString;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ESDCardFormatStageToString",
+          function () {
+            return ESDCardFormatStageToString;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -4722,6 +6145,25 @@
             eCloudStoragePersistState +
             " )"
           );
+        }
+        function ESDCardFormatStageToString(eSDCardFormatStage) {
+          if (true) {
+            switch (eSDCardFormatStage) {
+              case 0:
+                return "k_ESDCardFormatStage_Invalid";
+              case 1:
+                return "k_ESDCardFormatStage_Starting";
+              case 2:
+                return "k_ESDCardFormatStage_Testing";
+              case 3:
+                return "k_ESDCardFormatStage_Rescuing";
+              case 4:
+                return "k_ESDCardFormatStage_Formatting";
+              case 5:
+                return "k_ESDCardFormatStage_Finalizing";
+            }
+          }
+          return "unknown ESDCardFormatStage ( " + eSDCardFormatStage + " )";
         }
         function EBluetoothDeviceTypeToString(eBluetoothDeviceType) {
           if (true) {
@@ -24020,7 +25462,7 @@
           /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
         );
         /* harmony import */ var shared_clienttypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-          /*! shared/clienttypes */ "../../../web_src/shared/js/clienttypes.ts"
+          /*! shared/clienttypes */ "../../../web_src/shared/js/clienttypes/index.ts"
         );
         /* harmony import */ var shared_webui_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
           /*! shared/webui/config */ "../../../web_src/shared/js/webui/config.ts"
@@ -27169,6 +28611,7 @@ function TestLocalizeCalendarTime()
           LANGUAGE: "english",
           SUPPORTED_LANGUAGES: [],
           COUNTRY: "",
+          AVATAR_BASE_URL: "",
           MEDIA_CDN_COMMUNITY_URL: "",
           MEDIA_CDN_URL: "",
           COMMUNITY_CDN_URL: "",
@@ -92104,7 +93547,7 @@ PERFORMANCE OF THIS SOFTWARE.
           /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
         );
         /* harmony import */ var shared_clienttypes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-          /*! shared/clienttypes */ "../../../web_src/shared/js/clienttypes.ts"
+          /*! shared/clienttypes */ "../../../web_src/shared/js/clienttypes/index.ts"
         );
         /* harmony import */ var shared_steamclient__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
           /*! shared/steamclient */ "../../../web_src/shared/js/steamclient.ts"

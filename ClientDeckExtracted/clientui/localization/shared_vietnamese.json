@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "Người dẫn",
 	"BroadcastChat_Role_Broadcaster_ttip": "Người phát sóng",
 	"BroadcastChat_Role_Moderatorr_ttip": "Điều hành viên",
-	"BroadcastChat_Blocked": "Chỉ có người sở hữu trò chơi mới được phép gửi tin nhắn trong buổi phát sóng này.",
+	"BroadcastChat_Blocked": "Chỉ chủ sở hữu trò chơi mới có thể gửi tin nhắn trong buổi phát sóng này.",
 	"BroadcastChat_half_Mute": "Chặn trò chuyện người dùng 12 giờ",
 	"BroadcastChat_day_Mute": "Chặn trò chuyện người dùng một ngày",
 	"BroadcastChat_week_Mute": "Chặn trò chuyện người dùng một tuần",

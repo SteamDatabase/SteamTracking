@@ -1143,7 +1143,7 @@
     "BroadcastChat_Role_Presenter_ttip": "พรีเซนเตอร์",
     "BroadcastChat_Role_Broadcaster_ttip": "ผู้ถ่ายทอดสด",
     "BroadcastChat_Role_Moderatorr_ttip": "ผู้ช่วยดูแล",
-    "BroadcastChat_Blocked": "ผู้เป็นเจ้าของเกมเท่านั้นที่ได้รับอนุญาตให้ส่งข้อความแช็ตในระหว่างการถ่ายทอดสดนี้ได้",
+    "BroadcastChat_Blocked": "ผู้เป็นเจ้าของเกมเท่านั้นที่จะสามารถส่งข้อความแช็ตในระหว่างการถ่ายทอดสดนี้ได้",
     "BroadcastChat_half_Mute": "ปิดเสียงผู้ใช้เป็นเวลา 12 ชั่วโมง",
     "BroadcastChat_day_Mute": "ปิดเสียงผู้ใช้เป็นเวลา 1 วัน",
     "BroadcastChat_week_Mute": "ปิดเสียงผู้ใช้เป็นเวลา 1 สัปดาห์",

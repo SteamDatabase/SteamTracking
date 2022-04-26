@@ -1143,7 +1143,7 @@
     "BroadcastChat_Role_Presenter_ttip": "Sprecher",
     "BroadcastChat_Role_Broadcaster_ttip": "Übertragender",
     "BroadcastChat_Role_Moderatorr_ttip": "Moderator",
-    "BroadcastChat_Blocked": "Während dieser Übertragung können nur Spielbesitzer Chatnachrichten senden.",
+    "BroadcastChat_Blocked": "Ausschließlich Besitzer des Spiels können während dieser Übertragung Chatnachrichten verfassen.",
     "BroadcastChat_half_Mute": "Nutzer für 12 Stunden stummschalten",
     "BroadcastChat_day_Mute": "Nutzer für einen Tag stummschalten",
     "BroadcastChat_week_Mute": "Nutzer für eine Woche stummschalten",

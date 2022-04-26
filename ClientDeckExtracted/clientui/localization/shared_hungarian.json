@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "Előadó",
 	"BroadcastChat_Role_Broadcaster_ttip": "Közvetítő",
 	"BroadcastChat_Role_Moderatorr_ttip": "Moderátor",
-	"BroadcastChat_Blocked": "E közvetítés során csak játéktulajdonosoknak engedélyezett csevegésüzenetek küldése.",
+	"BroadcastChat_Blocked": "E közvetítés során csak játéktulajdonosok tudnak csevegésüzeneteket küldeni.",
 	"BroadcastChat_half_Mute": "Felhasználó némítása 12 órára",
 	"BroadcastChat_day_Mute": "Felhasználó némítása egy napra",
 	"BroadcastChat_week_Mute": "Felhasználó némítása egy hétre",

@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "Prezentator",
 	"BroadcastChat_Role_Broadcaster_ttip": "Comentator",
 	"BroadcastChat_Role_Moderatorr_ttip": "Moderator",
-	"BroadcastChat_Blocked": "Numai deținătorii jocului au permisiunea de a trimite mesaje în timpul acestei difuzări.",
+	"BroadcastChat_Blocked": "Numai deținătorii jocului pot trimite mesaje în chat pe durata acestei difuzări.",
 	"BroadcastChat_half_Mute": "Amuțește utilizatorul timp de 12 ore",
 	"BroadcastChat_day_Mute": "Amuțește utilizatorul timp de o zi",
 	"BroadcastChat_week_Mute": "Amuțește utilizatorul timp de o săptămână",

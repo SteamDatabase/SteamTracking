@@ -360,7 +360,7 @@
       var W = a("COEz"),
         z = a("smcO"),
         V = a.n(z);
-      let q = class extends r.Component {
+      let K = class extends r.Component {
         static GetClassnameForParent() {
           return V.a.CollapseIconParent;
         }
@@ -378,8 +378,8 @@
           );
         }
       };
-      q = Object(n.b)([c.a], q);
-      var K = q,
+      K = Object(n.b)([c.a], K);
+      var q = K,
         Y = a("TtDX"),
         X = a("JeWh"),
         Q = a("FhZQ"),
@@ -438,7 +438,7 @@
           const t = Object(N.a)(
             J.a.Container,
             this.props.bInHover && J.a.HoverOverlay,
-            K.GetClassnameForParent(),
+            q.GetClassnameForParent(),
             this.isSelected && J.a.Selected,
             this.state.bContextMenuIsOpen && J.a.HasContextMenuOpen,
             (e || 0 == this.props.nFilteredCount) && J.a.SingleLine
@@ -481,7 +481,7 @@
                 strTargetedClassName: J.a.DropTarget,
                 onDoubleClick: this.onCollapseExpandClick,
               },
-              r.createElement(K, {
+              r.createElement(q, {
                 isCollapsed: e,
                 onClick: this.onCollapseExpandClick,
               }),
@@ -962,7 +962,7 @@
         (ce = Object(n.b)([c.a], ce));
       var de = a("aoTL"),
         pe = a("c7k8"),
-        me = a("kyHq"),
+        me = a("65aj"),
         he = a("sTQL"),
         ue = a("JgjZ");
       let be = class extends r.Component {
@@ -2042,7 +2042,7 @@
                         `(${n})`
                       )
                     );
-                    return r.createElement(R.q, {
+                    return r.createElement(R.l, {
                       key: "checkbox-eAppType-" + e,
                       className: Object(N.a)(Le.a.Row, Le.a.Checkbox),
                       label: i,
@@ -2066,7 +2066,7 @@
                     bDisabled: !t,
                     toolTipContent: "#GameList_View_GroupingDisabled_ToolTip",
                   },
-                  r.createElement(R.q, {
+                  r.createElement(R.l, {
                     key: "checkbox-grouping-collections",
                     className: Object(N.a)(
                       Le.a.Row,
@@ -2086,7 +2086,7 @@
                     },
                   }),
                   a &&
-                    r.createElement(R.q, {
+                    r.createElement(R.l, {
                       key: "checkbox-grouping-shared-libraries",
                       className: Object(N.a)(
                         Le.a.Row,
@@ -2142,7 +2142,7 @@
           )
         );
       }
-      function qe() {
+      function Ke() {
         return r.createElement(
           "div",
           { className: ze.a.CollectionBar },
@@ -2164,7 +2164,7 @@
           )
         );
       }
-      var Ke = a("IjL/"),
+      var qe = a("IjL/"),
         Ye = a("AbGu"),
         Xe = a.n(Ye);
       const Qe = Object(r.forwardRef)((e, t) => {
@@ -2222,13 +2222,13 @@
             i.a.createElement(
               "div",
               { className: Xe.a.HomeBox },
-              i.a.createElement(Ke.a, null, i.a.createElement(Ve, null))
+              i.a.createElement(qe.a, null, i.a.createElement(Ve, null))
             ),
             i.a.createElement(
               "div",
               { className: Xe.a.CollectionsButton },
               i.a.createElement(
-                Ke.a,
+                qe.a,
                 null,
                 i.a.createElement(
                   C.d,
@@ -2237,19 +2237,19 @@
                     nDelayShowMS: 240,
                     toolTipContent: Object(L.g)("#GameList_View_Collections"),
                   },
-                  i.a.createElement(qe, null)
+                  i.a.createElement(Ke, null)
                 )
               )
             )
           ),
           i.a.createElement(
-            Ke.a,
+            qe.a,
             null,
             i.a.createElement(Ge, { gamelistref: n, bScrolledTop: l })
           ),
-          i.a.createElement(Ke.a, null, i.a.createElement(H, { ref: s })),
+          i.a.createElement(qe.a, null, i.a.createElement(H, { ref: s })),
           i.a.createElement(
-            Ke.a,
+            qe.a,
             null,
             10 == d &&
               i.a.createElement(
@@ -2262,7 +2262,7 @@
               )
           ),
           i.a.createElement(
-            Ke.a,
+            qe.a,
             null,
             i.a.createElement(je, {
               ref: n,
@@ -2377,7 +2377,7 @@
               )
             );
           return r.createElement(
-            Ke.a,
+            qe.a,
             null,
             r.createElement(
               "div",
@@ -2783,7 +2783,7 @@
               { className: bt.a.WhatsNewSettingsContent },
               r.createElement(R.P, null, Object(L.g)("#WhatsNew")),
               r.createElement(
-                R.I,
+                R.D,
                 {
                   className: bt.a.WhatsNewSettings,
                   onContextMenu: this.onContextMenu,
@@ -3122,7 +3122,7 @@
               i
             ),
             r.createElement(
-              Ke.a,
+              qe.a,
               null,
               r.createElement(
                 _t.a,
@@ -3238,7 +3238,7 @@
           "div",
           { className: Object(N.a)(Ot.a.ButtonContainer, Ot.a.BottomSection) },
           r.createElement(
-            R.p,
+            R.j,
             {
               className: Ot.a.BottomButton,
               onClick: () => Re.c.NavigateToSteamURL("RegisterKeyNoParams"),
@@ -3246,7 +3246,7 @@
             Object(L.g)("#Library_Recent_NoRecentGames_ActivateProduct")
           ),
           r.createElement(
-            R.p,
+            R.j,
             {
               className: Ot.a.BottomButton,
               onClick: () => Re.c.NavigateToSteamURL("RedeemWalletVoucher"),
@@ -3460,8 +3460,8 @@
         (Wt = Object(n.b)([c.a], Wt));
       var zt = a("BrPP"),
         Vt = a("5/eS"),
-        qt = a("Sj1W"),
-        Kt = a.n(qt);
+        Kt = a("Sj1W"),
+        qt = a.n(Kt);
       const Yt = Object(c.a)(function (e) {
         const {
             appid: t,
@@ -3489,10 +3489,10 @@
             : {};
         return r.createElement(
           re.a,
-          Object.assign({ className: Kt.a.PlayNextSuggestion }, p, l),
+          Object.assign({ className: qt.a.PlayNextSuggestion }, p, l),
           r.createElement(
             "div",
-            { className: Kt.a.PlayNextSuggestionMediaContainer, style: d },
+            { className: qt.a.PlayNextSuggestionMediaContainer, style: d },
             r.createElement(Tt.a, {
               app: c,
               bFeatured: a,
@@ -3538,7 +3538,7 @@
         render() {
           const e = this.CalculateChildSizes(window),
             t = e.bShortLayout,
-            a = parseInt(Kt.a.CarouselExtraHeight, 10),
+            a = parseInt(qt.a.CarouselExtraHeight, 10),
             { apps: n, bLoading: i, bFresh: o } = zt.a.GetSuggestionsToShow(
               Vt.a.GetToggle(13)
             ),
@@ -3556,12 +3556,12 @@
             return r.createElement(
               "div",
               {
-                className: Kt.a.PlayNextNoResultsContainer,
+                className: qt.a.PlayNextNoResultsContainer,
                 style: { height: `${e.nItemHeight + a}px` },
               },
               r.createElement(
                 "div",
-                { className: Kt.a.Message },
+                { className: qt.a.Message },
                 Object(L.g)("#LibraryHome_PlayNextNoResults")
               )
             );
@@ -3573,7 +3573,7 @@
             null,
             r.createElement(
               "div",
-              { className: Kt.a.PlayNextSubHead },
+              { className: qt.a.PlayNextSubHead },
               Object(L.g)("#LibraryHome_PlayNextSubHead")
             ),
             r.createElement(
@@ -3591,8 +3591,8 @@
                   {
                     ref: i,
                     className: Object(N.a)(
-                      Kt.a.PlayNextSuggestions,
-                      t && Kt.a.Short
+                      qt.a.PlayNextSuggestions,
+                      t && qt.a.Short
                     ),
                     fnUpdateArrows: o,
                     style: { height: `${e.nItemHeight + a}px` },
@@ -3678,7 +3678,7 @@
         return r.createElement(
           "div",
           { className: $t.a.CollectionDropDown, tabIndex: -1 },
-          r.createElement(R.B, {
+          r.createElement(R.w, {
             rgOptions: t,
             onChange: (t) => e.onChange && e.onChange(t.data),
             selectedOption: e.initialValue,
@@ -4110,7 +4110,7 @@
                 a &&
                   e.push(
                     r.createElement(
-                      Ke.a,
+                      qe.a,
                       { key: "collection_list_" + a.id },
                       r.createElement(d.c, {
                         key: a.id,
@@ -4153,7 +4153,7 @@
                 Object(me.e)(I.c.LAUNCHER_TYPE) ||
                 (e.push(
                   r.createElement(
-                    Ke.a,
+                    qe.a,
                     { key: "collection_header" },
                     r.createElement(Lt, { strCollectionId: t.id })
                   )
@@ -4171,7 +4171,7 @@
                 i &&
                   e.push(
                     r.createElement(
-                      Ke.a,
+                      qe.a,
                       { key: "app_list_" + i.appid },
                       r.createElement(Tt.a, {
                         app: i,
@@ -4719,14 +4719,14 @@
             r.createElement(
               "div",
               { className: $e.a.WhatsNewContainer },
-              r.createElement(Ke.a, null, r.createElement(Ct, null))
+              r.createElement(qe.a, null, r.createElement(Ct, null))
             ),
             r.createElement(ft, null),
             r.createElement(
               "div",
               { className: $e.a.LibraryHome },
               r.createElement(
-                Ke.a,
+                qe.a,
                 null,
                 r.createElement(ra, { scrollElement: this.state.elHome })
               )
@@ -4894,7 +4894,7 @@
                       bShowStreamingSelector: !0,
                     }),
                   r.createElement(
-                    R.p,
+                    R.j,
                     { className: $e.a.PrePurchaseActions },
                     Object(L.g)("#Button_Dismiss")
                   )
@@ -6415,7 +6415,7 @@
       function Va() {
         return za || (za = new Ha()), za;
       }
-      const qa = Object(c.a)(() => {
+      const Ka = Object(c.a)(() => {
         r.useEffect(() => {
           const e = SteamClient.System.Network.RegisterForConnectionStateUpdate(
             (e) => {
@@ -6448,10 +6448,10 @@
             )
           ),
           r.createElement(
-            R.l,
+            R.f,
             null,
             r.createElement(
-              R.n,
+              R.h,
               { className: Wa.NetworkDialog },
               e.length > 0
                 ? r.createElement(
@@ -6518,11 +6518,11 @@
                   )
                 : ""
             ),
-            r.createElement(R.H, null)
+            r.createElement(R.C, null)
           )
         );
       });
-      function Ka(e, t) {
+      function qa(e, t) {
         return (
           null == t && (t = 0),
           e.toLocaleString(void 0, {
@@ -6538,16 +6538,16 @@
         return e ? "[" + e + "]" : "[???]";
       }
       function Qa(e) {
-        return null == e ? "" : Ka(e, 0) + " KB/s";
+        return null == e ? "" : qa(e, 0) + " KB/s";
       }
       function Ja(e) {
-        return null == e ? "" : Ka(e, 1) + " pkts/s";
+        return null == e ? "" : qa(e, 1) + " pkts/s";
       }
       function Za(e) {
-        return null == e ? "" : Ka(e, 0) + "KB";
+        return null == e ? "" : qa(e, 0) + "KB";
       }
       function $a(e) {
-        return e ? Ka(e) : "";
+        return e ? qa(e) : "";
       }
       function en(e) {
         return e < 10 ? "0" + e : "" + e;
@@ -6696,7 +6696,7 @@
               className: Wa.Bar,
               style: { width: 90 * n + 1 + "px" },
             }),
-            r.createElement("span", { className: Wa.Num }, Ka(t))
+            r.createElement("span", { className: Wa.Num }, qa(t))
           )
         );
       }
@@ -6791,8 +6791,8 @@
         for (let e = 0; e < d.length; ++e) p += d[e][1];
         const m = sn(d, p);
         if (!a && !c && !m) return null;
-        const h = Ka(o) + " samples",
-          u = Ka(p) + " samples";
+        const h = qa(o) + " samples",
+          u = qa(p) + " samples";
         return r.createElement(
           "div",
           { className: Wa.PingBreakdown },
@@ -6929,7 +6929,7 @@
               "tr",
               { key: e },
               r.createElement("td", { className: Wa.PktOutcomeLabel }, e),
-              r.createElement("td", { className: Wa.Num }, Ka(t)),
+              r.createElement("td", { className: Wa.Num }, qa(t)),
               r.createElement("td", { className: Wa.Pct }, a)
             );
         let p = r.createElement(
@@ -6966,7 +6966,7 @@
             [5, b(t.quality_ntile_5th())],
             [2, b(t.quality_ntile_2nd())],
           ]),
-          g = Ka(h) + " measurement intervals";
+          g = qa(h) + " measurement intervals";
         return r.createElement(
           "div",
           { className: Wa.LifetimeQualityStats },
@@ -7374,7 +7374,7 @@
                 (!e.ctrlKey && !e.metaKey) ||
                 ((t = window),
                 Object(k.b)(
-                  r.createElement(qa, null),
+                  r.createElement(Ka, null),
                   t || document.defaultView,
                   { bForcePopOut: !0, strTitle: "Network Connections" }
                 ),
@@ -7517,10 +7517,10 @@
                 o.c,
                 { path: xe.e.Library.Root() },
                 i.a.createElement(
-                  Ke.a,
+                  qe.a,
                   null,
                   i.a.createElement(
-                    Ke.a,
+                    qe.a,
                     null,
                     i.a.createElement(
                       "div",
@@ -7530,11 +7530,11 @@
                         style: t,
                       },
                       i.a.createElement(Qe, { ref: this.m_gameListBarRef }),
-                      i.a.createElement(Ke.a, null, i.a.createElement(ha, null))
+                      i.a.createElement(qe.a, null, i.a.createElement(ha, null))
                     )
                   ),
                   i.a.createElement(
-                    Ke.a,
+                    qe.a,
                     null,
                     i.a.createElement("div", {
                       className: Object(N.a)(
@@ -7593,7 +7593,7 @@
               )
             ),
             i.a.createElement(
-              Ke.a,
+              qe.a,
               null,
               i.a.createElement(T.c, { ModalManager: Object(T.h)(window) })
             )

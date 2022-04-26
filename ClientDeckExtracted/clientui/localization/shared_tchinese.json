@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "主講人",
 	"BroadcastChat_Role_Broadcaster_ttip": "實況主播",
 	"BroadcastChat_Role_Moderatorr_ttip": "管理員",
-	"BroadcastChat_Blocked": "僅限遊戲擁有者在實況直播期間發送聊天訊息。",
+	"BroadcastChat_Blocked": "只有遊戲擁有者可在實況直播期間發送聊天訊息。",
 	"BroadcastChat_half_Mute": "禁言使用者 12 小時",
 	"BroadcastChat_day_Mute": "禁言使用者一天",
 	"BroadcastChat_week_Mute": "禁言使用者一週",

@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "Præsentationsvært",
 	"BroadcastChat_Role_Broadcaster_ttip": "Broadcaster",
 	"BroadcastChat_Role_Moderatorr_ttip": "Moderator",
-	"BroadcastChat_Blocked": "Kun spilejere har tilladelse til at sende chatbeskeder under denne broadcast.",
+	"BroadcastChat_Blocked": "Kun spilejere kan sende chatbeskeder under denne broadcast.",
 	"BroadcastChat_half_Mute": "Dæmp bruger i 12 timer",
 	"BroadcastChat_day_Mute": "Dæmp bruger i en dag",
 	"BroadcastChat_week_Mute": "Dæmp bruger i en uge",

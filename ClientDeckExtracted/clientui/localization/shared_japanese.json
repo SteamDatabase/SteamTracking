@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "プレゼンター",
 	"BroadcastChat_Role_Broadcaster_ttip": "配信者",
 	"BroadcastChat_Role_Moderatorr_ttip": "モデレーター",
-	"BroadcastChat_Blocked": "ゲームの所有者のみがこの配信中にチャットメッセージを送信できます。",
+	"BroadcastChat_Blocked": "この配信中にチャットメッセージを送信できるのはゲームの所有者のみです。",
 	"BroadcastChat_half_Mute": "ユーザーを12時間ミュート",
 	"BroadcastChat_day_Mute": "ユーザーを1日ミュート",
 	"BroadcastChat_week_Mute": "ユーザーを 1 週間ミュート",

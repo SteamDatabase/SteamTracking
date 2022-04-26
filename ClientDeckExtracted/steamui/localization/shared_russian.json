@@ -1143,7 +1143,7 @@
     "BroadcastChat_Role_Presenter_ttip": "Ведущий",
     "BroadcastChat_Role_Broadcaster_ttip": "Автор трансляции",
     "BroadcastChat_Role_Moderatorr_ttip": "Модератор",
-    "BroadcastChat_Blocked": "Во время этой трансляции могут отправлять сообщения только владельцы игры.",
+    "BroadcastChat_Blocked": "Только владельцы игры могут отправлять сообщения во время этой трансляции.",
     "BroadcastChat_half_Mute": "Заглушить на 12 часов",
     "BroadcastChat_day_Mute": "Заглушить на сутки",
     "BroadcastChat_week_Mute": "Заглушить на неделю",

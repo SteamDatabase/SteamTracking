@@ -1143,7 +1143,7 @@
     "BroadcastChat_Role_Presenter_ttip": "Водещ",
     "BroadcastChat_Role_Broadcaster_ttip": "Предаващ",
     "BroadcastChat_Role_Moderatorr_ttip": "Модератор",
-    "BroadcastChat_Blocked": "Само притежаващите играта имат право да изпращат съобщения в чата по време на това предаване.",
+    "BroadcastChat_Blocked": "Само притежатели на играта могат да изпращат съобщения в чата по време на предаването.",
     "BroadcastChat_half_Mute": "Заглушаване на потребител за 12 часа",
     "BroadcastChat_day_Mute": "Заглушаване на потребител за ден",
     "BroadcastChat_week_Mute": "Заглушаване на потребител за седмица",

@@ -1143,7 +1143,7 @@
     "BroadcastChat_Role_Presenter_ttip": "Presenter",
     "BroadcastChat_Role_Broadcaster_ttip": "Broadcaster",
     "BroadcastChat_Role_Moderatorr_ttip": "Moderator",
-    "BroadcastChat_Blocked": "Only game owners are allowed to send chat messages during this broadcast.",
+    "BroadcastChat_Blocked": "Only game owners can send chat messages during this broadcast.",
     "BroadcastChat_half_Mute": "Mute user for 12 hours",
     "BroadcastChat_day_Mute": "Mute user for a day",
     "BroadcastChat_week_Mute": "Mute user for a week",

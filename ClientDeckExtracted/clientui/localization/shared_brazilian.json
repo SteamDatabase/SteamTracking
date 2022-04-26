@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "Palestrante",
 	"BroadcastChat_Role_Broadcaster_ttip": "Transmissor",
 	"BroadcastChat_Role_Moderatorr_ttip": "Moderador",
-	"BroadcastChat_Blocked": "Só quem possui o jogo tem permissão para participar da conversa durante esta transmissão.",
+	"BroadcastChat_Blocked": "Apenas as contas que possuem o jogo podem enviar mensagens durante esta transmissão.",
 	"BroadcastChat_half_Mute": "Silenciar usuário por 12 horas",
 	"BroadcastChat_day_Mute": "Silenciar usuário por um dia",
 	"BroadcastChat_week_Mute": "Silenciar usuário por uma semana",

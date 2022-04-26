@@ -806,8 +806,8 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
 }
 .broadcast_embeddable_broadcast_floating_2WNxa {
   position: fixed;
-  bottom: 190px;
-  right: 50px;
+  bottom: 20px;
+  right: 20px;
   height: 213px;
   width: 325px;
   z-index: 100;

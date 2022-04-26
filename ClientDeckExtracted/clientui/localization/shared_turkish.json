@@ -1143,7 +1143,7 @@
 	"BroadcastChat_Role_Presenter_ttip": "Sunucu",
 	"BroadcastChat_Role_Broadcaster_ttip": "Yayıncı",
 	"BroadcastChat_Role_Moderatorr_ttip": "Moderatör",
-	"BroadcastChat_Blocked": "Yayın esnasında sadece oyun sahipleri mesaj gönderebilir.",
+	"BroadcastChat_Blocked": "Bu yayın esnasında sadece oyun sahipleri sohbete mesaj gönderebilir.",
 	"BroadcastChat_half_Mute": "Kullanıcıyı 12 saatliğine sustur",
 	"BroadcastChat_day_Mute": "Kullanıcıyı bir günlüğüne sustur",
 	"BroadcastChat_week_Mute": "Kullanıcıyı bir haftalığına sustur",
