@@ -731,9 +731,6 @@ WritePrecompiledCache returned result '%s'. foz file missing from depot or no fu
 WritePrecompiledCache success for GPU(s): '%s' Driver(s): '%s' CacheType: %d
 ,
 /%s/%s
-%s_
-%s%d:VP%d_%sprecomp_%s
-W
 Building depot for %s / %s
 GetBucketManifest ERROR %s (this is normal if it's the first time built)
 GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
@@ -741,6 +738,9 @@ GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
 StartDepotBuild success. manifest: %llu size: %llu
 Shader upload complete ( AppID: %u, BucketID: %llu Manifest: %llu ) Dest: %s / %s Src: %s / %s
 Mark updated with no data ( AppID: %u, BucketID: %llu Manifest: %llu ) Src: %s / %s
+%s_
+%s%d:VP%d_%sprecomp_%s
+W
 ERROR. Shader processing failed!
 ERROR! Shader conversion failed!
 ERROR! Failed to write swarm_tc_download.vdf
@@ -1290,6 +1290,7 @@ E
 0
 @
 =
+?
 0
 0
 0
