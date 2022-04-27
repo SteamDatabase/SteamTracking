@@ -520,6 +520,7 @@
     "PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip": "Highlighted prices are new, submitted by %1$s on %2$s. You can publish these changes after review.",
     "PricingDashboard_PriceProposal_Approved": "Ready to publish",
     "PricingDashboard_PriceProposal_Approved_ttip": "You can publish these prices now.",
+    "PricingDashboard_GuidelinesPickerDescription": "Select a price below to set that price for USD and apply suggested prices to all other currencies.",
     "PricingDashboard_PriceTooLow": "Price must be at least %1$s.",
     "PricingDashboard_PriceMuchHigherThanGuidelines": "This price is more than twice the recommended price (%1$s).",
     "PricingDashboard_PriceMuchLowerThanGuidelines": "This price is less than half the recommended price (%1$s).",

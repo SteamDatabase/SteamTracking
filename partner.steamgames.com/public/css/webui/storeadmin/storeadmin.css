@@ -26196,6 +26196,43 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 div.pricinggrid_HoverToolTip_1OS2v {
   z-index: 2000;
 }
+.guidelinespicker_PriceGuidelinesPicker_4Xo2k {
+  background-color: gray;
+  height: 26px;
+  width: 22px;
+  box-sizing: border-box;
+  padding: 4px;
+}
+.guidelinespicker_PriceGuidelinesPicker_4Xo2k:hover {
+  background-color: #d3d3d3;
+}
+.guidelinespicker_GuidelinesPanel_1vwM_ {
+  background-color: #333;
+  width: 350px;
+}
+.guidelinespicker_GuidelinesDescription_1tfKP {
+  padding: 8px 16px;
+}
+.guidelinespicker_GuidelinesGrid_3fwDv {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 4px;
+  gap: 4px;
+}
+.guidelinespicker_GridElement_2x-S8 {
+  box-sizing: border-box;
+  padding: 3px 6px;
+  width: 100%;
+  text-align: right;
+  background-color: #444;
+}
+.guidelinespicker_GridElement_2x-S8.guidelinespicker_CurrentPrice_2Addn {
+  color: #fff;
+  background-color: #222;
+}
+.guidelinespicker_GridElement_2x-S8:hover {
+  background-color: #222;
+}
 .pricinggridcell_PriceCell_1sKIc {
   display: flex;
   align-items: center;
@@ -26267,6 +26304,13 @@ div.pricinggrid_HoverToolTip_1OS2v {
 .pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceAlert_2eadU svg {
   height: 18px;
   fill: #e5af37;
+}
+.pricinggridcell_PriceCell_1sKIc.pricinggridcell_USD_1C7qR {
+  padding: 0 8px 0 48px;
+}
+.pricinggridcell_PriceCell_1sKIc.pricinggridcell_USD_1C7qR
+  .pricinggridcell_EditablePrice_pm5xM {
+  border: 1px solid gray;
 }
 .pricinggridcell_PriceCell_1sKIc.pricinggridcell_ProposedPrice_rVkmD {
   border: 1px solid #1b97ff;
