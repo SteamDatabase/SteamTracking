@@ -1,0 +1,166 @@
+:root {
+  --basicui-header-height: 0px;
+}
+.categoriesapp_CategorySectionsCtn_YuXds {
+  margin: 0px 24px 0px 24px;
+  padding-bottom: 24px;
+}
+.categoriesapp_CategorySectionsCtn_YuXds .categoriesapp_CategorySection_2MUQ8 {
+  margin-bottom: 12px;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategorySectionName_2Vnsy {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy::after {
+  content: " ";
+  min-width: 24px;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  flex-wrap: nowrap;
+  padding: 8px 24px 12px 24px;
+  margin-left: -24px;
+  margin-right: -24px;
+  scroll-padding-left: 24px;
+  scroll-padding-right: 24px;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  .categoriesapp_Category_1uwcZ {
+  display: block;
+  position: relative;
+  width: calc((100vw - 24px - 24px - 36px) / 4);
+  height: 272px;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  .categoriesapp_Category_1uwcZ
+  .categoriesapp_GridOuter_3Q4XM
+  .categoriesapp_Grid_3anY0 {
+  position: relative;
+  width: 240px;
+  height: 233px;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  .categoriesapp_Category_1uwcZ
+  .categoriesapp_CategoryName_3VNsE {
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0), #0b1621 72%);
+  width: 100%;
+  height: 100%;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  .categoriesapp_Category_1uwcZ
+  .categoriesapp_CategoryName_3VNsE
+  span {
+  position: absolute;
+  bottom: 28px;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  width: 100%;
+  padding: 0px 10%;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  div:first-child
+  div
+  a.categoriesapp_Category_1uwcZ {
+  width: calc((100vw - 24px - 24px - 24px) / 3);
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  div:first-child
+  div
+  a.categoriesapp_Category_1uwcZ
+  .categoriesapp_GridOuter_3Q4XM {
+  top: -60px;
+  left: -30px;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  div:first-child
+  div
+  a.categoriesapp_Category_1uwcZ
+  .categoriesapp_GridOuter_3Q4XM
+  .categoriesapp_Grid_3anY0 {
+  transform: scaleX(2.2) scaleY(1.4) rotateZ(-45deg) translate(5px, 46px);
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  div:first-child
+  div
+  a.categoriesapp_Category_1uwcZ
+  .categoriesapp_CategoryName_3VNsE
+  span {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 700;
+}
