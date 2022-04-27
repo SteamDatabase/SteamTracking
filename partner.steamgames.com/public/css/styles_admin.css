@@ -1486,6 +1486,21 @@ div.image_hover_preview {
 	border: 0px;
 	height: 40px;
 }
+
+a.detailrow {
+	display: block;
+	font-style: normal;
+}
+
+a.detailrow:link {
+	text-decoration: none;
+}
+
+a.detailrow:hover {
+	text-decoration: none;
+}
+
+
 .newformrow.spotlight_body {
 }
 

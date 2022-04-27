@@ -11,7 +11,7 @@
 	white-space: normal;	/* override the nowrap we set above */
 }
 
-.recommended_creators_ctn {
+.recommended_creators_ctn:not( .home_ctn ) {
 	 margin: 20px auto 25px auto;
  }
 

@@ -18,7 +18,6 @@
 	--gpStoreDarkestGrey: #000F18;
 
 	/* Gradients */
-	/* --gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%); */
 	--gpGradient-StoreBackground: linear-gradient(180deg, var(--gpStoreDarkGrey) 0%, var(--gpStoreDarkerGrey) 80%);
 	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
 
@@ -65,14 +64,20 @@
 
 	/* Fixed widths */
 	--gpNavWidth: 240px;
-	--gpPaymentsNavWidth: 40vw;
-	--gpPurchaseOptionsWidth: 270px;
-	--gpDselectWidth: 320px;
-	--gpSidePanelWidth: 348px;
+	--gpPaymentsNavWidth: 340px;
+	--gpDselectWidth: 340px;
+	--gpSidePanelWidth: 340px;
 	--gpGiftingPanelWidth: 280px;
+	--gpCommunityRightPanelWidth: 320px;
+	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
+	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
+	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
+	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
+	--gpWidth-6colcap: calc((var(--screen-width) - (5 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 6);
+	--gpWidth-5colcap: calc((var(--screen-width) - (4 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 5);
 	--gpWidth-4colcap: calc((var(--screen-width) - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
 	--gpWidth-3colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
 	--gpWidth-2colcap: calc((var(--screen-width) - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
@@ -94,96 +99,110 @@
 	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
-
-	/* Animation TODO: REMOVE THESE */
-	--gpTransition-Short: all 0.2s ease;
-	--gpTransition-Shorter: all 0.1s ease;
 }
-@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
 
-	/* Page setup */
-	html.responsive .responsive_page {
-		padding-bottom: 24px;
+@media screen and (min-width:  1280px) {
+	:root {
+		--gpSpace-Gutter: calc(24px + 2vw);
 	}
+}
 
-	html.responsive .cart_tabs_ctn {
-		display: none;
+/* Page setup */
+html.tablet .responsive_page {
+	padding-bottom: 24px;
+}
+
+html.tablet .cart_tabs_ctn {
+	display: none;
+}
+
+html.tablet .giftcard_description {
+	margin-bottom: 8px;
+	font: var(--gpText-BodyLarge);
+}
+
+html.tablet .giftcard_selectamount {
+	margin-bottom: 16px;
+	display: inline-block;
+	font: var(--gpText-BodyLarge);
+}
+
+html.tablet .giftcard_amounts {
+	padding: unset;
+	background: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 24px;
+}
+
+html.tablet .giftcard_border {
+	border: none;
+	display: unset;
+	border-radius: unset;
+	width: 100%;
+}
+
+html.tablet .steamlogo_overlay {
+	transform: translate(-50%, -50%);
+    left: 50%;
+    top: 56%;
+	width: 60%;
+	height: 60%;
+}
+
+@media screen and (max-width: 1080px ) {
+	html.tablet .giftcard_amounts {
+		grid-template-columns: 1fr 1fr;
 	}
+}
 
-	html.responsive .giftcard_description {
-		margin-bottom: 8px;
-		font: var(--gpText-BodyLarge);
-	}
+html.tablet .giftcard_selection {
+	margin: unset;
+	padding: unset;
+}
 
-	html.responsive .giftcard_selectamount {
-		margin-bottom: 16px;
-		display: inline-block;
-		font: var(--gpText-BodyLarge);
-	}
+html.tablet .giftcard_selection a {
+	display: flex;
+	box-shadow: var(--gpShadow-Medium);
+	outline: var(--gpUnfocus);
+	transition: var(--gpTransition-Short);
+}
 
-	html.responsive .giftcard_amounts {
-		padding: unset;
-		background: none;
-		display: grid;
-		grid-template-columns: repeat(2,calc(50% - var(--gpSpace-Gap)));
-		gap: var(--gpSpace-Gutter);
-	}
+html.tablet .giftcard_topseller {
+	width: 100%;
+	height: unset;
+}
 
-	html.responsive .giftcard_border {
-		border: none;
-		display: unset;
-		border-radius: unset;
-		width: 100%;
-	}
+html.tablet .giftcard_cont {
+	width: 100%;
+	/* height: 21.6vw; */
+	max-width: unset;
+	max-height: 300px;
+}
 
-	html.responsive .steamlogo_overlay {
-		width: 80%;
-		left: 10%;
-		top: 10%;
-	}
+html.tablet .giftcard_cont .giftcard_text {
+	right: 2%;
+}
 
-	html.responsive .giftcard_selection {
-		margin: unset;
-		padding: unset;
-	}
+html.tablet .giftcard_style {
+	color: white !important;
+	font: var(--gpText-BodyLarge);
+	padding: 8px 12px;
+	background: rgba(34,72,130,1);
+	transition: var(--gpTransition-Short);
+}
 
-	html.responsive .giftcard_selection a {
-		display: flex;
-		box-shadow: var(--gpShadow-Medium);
-		outline: var(--gpUnfocus);
-		transition: var(--gpTransition-Short);
-	}
+html.tablet .giftcard_border:hover .giftcard_style {
+	background: var(--gpBackground-LightMedium);
+	color: white !important;
+}
 
-	html.responsive .giftcard_topseller {
-		width: 100%;
-		height: unset;
-	}
+html.tablet .giftcard_selection a.gpfocus .giftcard_style {
+	background: var(--gpColor-Blue);
+	color: white !important;
+}
 
-	html.responsive .giftcard_cont {
-		width: 100%;
-		height: 21.6vw;
-	}
-
-	html.responsive .giftcard_cont .giftcard_text {
-		right: 2%;
-	}
-
-	html.responsive .giftcard_style {
-		color: var(--gpColor-Blue) !important;
-		font: var(--gpText-BodyLarge);
-		padding: 8px 12px;
-		background: var(--gpBackground-LightSoft);
-		transition: var(--gpTransition-Short);
-	}
-
-	html.responsive .giftcard_border:hover .giftcard_style {
-		background: var(--gpBackground-LightMedium);
-		color: white !important;
-	}
-
-	html.responsive .giftcard_selection a.gpfocus .giftcard_style {
-		background: var(--gpColor-Blue);
-		color: white !important;
-	}
-
+html.tablet #giftcard_faq h1 {
+	font: var(--gpText-HeadingMedium);
+	color: white;
 }

@@ -4672,6 +4672,35 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 
 @media screen and (max-width: 910px)
 {
+
+	html.responsive .game_description_snippet {
+		overflow: hidden;
+		padding-right: 0;
+	}
+
+	html.responsive #game_highlights,
+	html.responsive #game_highlights .rightcol {
+		width: auto;
+		height: auto;
+	}
+
+
+}
+
+	html.responsive.tablet .game_description_snippet {
+		overflow: hidden;
+		padding-right: 0;
+	}
+
+	html.responsive.tablet #game_highlights,
+	html.responsive.tablet #game_highlights .rightcol {
+		width: auto;
+		height: auto;
+	}
+
+
+@media screen and (max-width: 910px)
+{
 	html.responsive .game_area_play_stats {
 		width: auto;
 		margin: 0 2%;
@@ -4680,12 +4709,6 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 
 @media screen and (max-width: 910px )
 {
-
-	html.responsive #game_highlights,
-	html.responsive #game_highlights .rightcol {
-		width: auto;
-		height: auto;
-	}
 
 	html.responsive #game_highlights a:not(.app_tag) {
 		height: 100%;
@@ -4705,11 +4728,6 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 		float: left;
 		width: 50%;
 		margin-right: 8px;
-	}
-
-	html.responsive .game_description_snippet {
-		overflow: hidden;
-		padding-right: 0;
 	}
 
 	html.responsive .game_header_image_ctn img.game_header_image_full {

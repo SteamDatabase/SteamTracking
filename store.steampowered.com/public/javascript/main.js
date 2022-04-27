@@ -1985,7 +1985,7 @@ function GamePurchaseDropdownSelectOption( dropdownName, subId, inCart )
 		}
 	}
 
-	if ( window.SupportTabletScreenMode() )
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
 	{
 		CModal.DismissActiveModal();
 	}
@@ -2015,7 +2015,7 @@ function ShowGamePurchaseDropdown( elemLink, elemPopup )
 	var nWidth = $Link.outerWidth();
 	$Popup.css( 'min-width', nWidth );
 
-	if ( window.SupportTabletScreenMode() )
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
 	{
 		var $Content = $Popup.clone();
 		$Content.attr('data-panel', '{"maintainY":true,"autoFocus":true}' );

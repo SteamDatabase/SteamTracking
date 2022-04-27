@@ -304,7 +304,7 @@ function ExecuteSearch( rgParameters )
 		return;
 
 	// On tablet hide the virtual keyboard
-	if ( window.SupportTabletScreenMode && window.SupportTabletScreenMode() ) 
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() ) 
 	{
 		GPShowVirtualKeyboard( false );
 	}

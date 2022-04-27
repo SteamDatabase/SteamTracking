@@ -1542,7 +1542,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   --field-negative-horizontal-margin: 0px;
   --field-row-children-spacing: 0px;
 }
-.gamepaddialog_BasicDialogContent_3joVj .DialogHeader {
+.gamepaddialog_GamepadDialogContent_Gn6rC .DialogHeader {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0px;
@@ -1568,7 +1568,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   font-size: 22px;
   line-height: 28px;
 }
-.gamepaddialog_BasicDialogContent_3joVj .DialogSubHeader {
+.gamepaddialog_GamepadDialogContent_Gn6rC .DialogSubHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1585,29 +1585,29 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   font-size: 18px;
   line-height: 22px;
 }
-.BasicUI .gamepaddialog_BasicDialogContent_3joVj .DialogSubHeader {
+.BasicUI .gamepaddialog_GamepadDialogContent_Gn6rC .DialogSubHeader {
   letter-spacing: 0.5px;
   color: #8b929a;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
 }
-.gamepaddialog_BasicDialogContent_3joVj .DialogFooter > ._DialogColLayout {
+.gamepaddialog_GamepadDialogContent_Gn6rC .DialogFooter > ._DialogColLayout {
   min-width: 300px;
 }
-.gamepaddialog_BasicDialogContent_3joVj {
+.gamepaddialog_GamepadDialogContent_Gn6rC {
   background: none;
   padding: 24px 24px;
 }
-.gamepaddialog_BasicDialogContent_3joVj
+.gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogControlsSection:not(:first-child),
-.gamepaddialog_BasicDialogContent_3joVj
+.gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogControlsSectionHeader:not(:first-child),
-.gamepaddialog_BasicDialogContent_3joVj .DialogHeader:not(:first-child),
-.gamepaddialog_BasicDialogContent_3joVj .DialogSubHeader:not(:first-child) {
+.gamepaddialog_GamepadDialogContent_Gn6rC .DialogHeader:not(:first-child),
+.gamepaddialog_GamepadDialogContent_Gn6rC .DialogSubHeader:not(:first-child) {
   margin-top: 24px;
 }
-.gamepaddialog_BasicDialogContent_3joVj .DialogControlsSectionHeader {
+.gamepaddialog_GamepadDialogContent_Gn6rC .DialogControlsSectionHeader {
   color: #fff;
   padding: 12px 0;
   border-bottom: solid 1px #23262e;
@@ -1628,47 +1628,49 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   font-size: 18px;
   line-height: 22px;
 }
-.BasicUI .gamepaddialog_BasicDialogContent_3joVj .DialogControlsSectionHeader {
+.BasicUI
+  .gamepaddialog_GamepadDialogContent_Gn6rC
+  .DialogControlsSectionHeader {
   letter-spacing: 0.5px;
   color: #8b929a;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
 }
-.gamepaddialog_BasicDialogContent_3joVj
+.gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogControlsSectionHeader:first-child {
   margin-top: 0;
 }
-.gamepaddialog_BasicDialogContent_3joVj .DialogBody,
-.gamepaddialog_BasicDialogContent_InnerWidth_F3kjM.DialogContent_InnerWidth {
+.gamepaddialog_GamepadDialogContent_Gn6rC .DialogBody,
+.gamepaddialog_GamepadDialogContent_InnerWidth_2XvVd.DialogContent_InnerWidth {
   overflow: initial;
   min-width: 50vw;
 }
 .gamepaddialog_ModalPosition_1A0Q4
-  > .gamepaddialog_BasicDialogContent_3joVj
+  > .gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogBody,
 .gamepaddialog_ModalPosition_1A0Q4
-  > .gamepaddialog_BasicDialogContent_InnerWidth_F3kjM.DialogContent_InnerWidth {
+  > .gamepaddialog_GamepadDialogContent_InnerWidth_2XvVd.DialogContent_InnerWidth {
   min-height: 0;
 }
-.gamepaddialog_BasicDialogContent_3joVj
+.gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogBody
   .gamepaddialog_Field_BBGW4:first-child,
-.gamepaddialog_BasicDialogContent_InnerWidth_F3kjM.DialogContent_InnerWidth
+.gamepaddialog_GamepadDialogContent_InnerWidth_2XvVd.DialogContent_InnerWidth
   .gamepaddialog_Field_BBGW4:first-child {
   scroll-margin-top: 80px;
 }
-.gamepaddialog_BasicDialogContent_InnerWidth_F3kjM.DialogContent_InnerWidth {
+.gamepaddialog_GamepadDialogContent_InnerWidth_2XvVd.DialogContent_InnerWidth {
   max-width: 100%;
 }
-.gamepaddialog_BasicDialogContent_3joVj ._DialogInputContainer {
+.gamepaddialog_GamepadDialogContent_Gn6rC ._DialogInputContainer {
   border-radius: 0;
 }
-.gamepaddialog_BasicDialogContent_3joVj ._DialogInputContainer.gpfocus {
+.gamepaddialog_GamepadDialogContent_Gn6rC ._DialogInputContainer.gpfocus {
   background-color: #fff;
   color: #0e141b;
 }
-.gamepaddialog_BasicDialogContent_3joVj .DialogBodyText {
+.gamepaddialog_GamepadDialogContent_Gn6rC .DialogBodyText {
   max-width: 75ch;
   font-style: normal;
   font-weight: normal;
@@ -1841,10 +1843,10 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   height: 1px;
   background: #23262e;
 }
-.gamepaddialog_BasicDialogContent_3joVj .gamepaddialog_Field_BBGW4 {
+.gamepaddialog_GamepadDialogContent_Gn6rC .gamepaddialog_Field_BBGW4 {
   --field-negative-horizontal-margin: 24px;
 }
-.gamepaddialog_BasicDialogContent_3joVj .gamepaddialog_Field_BBGW4::after {
+.gamepaddialog_GamepadDialogContent_Gn6rC .gamepaddialog_Field_BBGW4::after {
   left: 24px;
   right: 24px;
 }
@@ -1861,14 +1863,14 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
 .gamepaddialog_StandaloneFieldSeparator_cuCR0
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
-.gamepaddialog_BasicDialogContent_3joVj
+.gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogControlsSectionHeader
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
 .gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparator_1K_Du
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin,
 .gamepaddialog_StandaloneFieldSeparator_cuCR0
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin,
-.gamepaddialog_BasicDialogContent_3joVj
+.gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogControlsSectionHeader
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin {
   margin-top: -1px;
@@ -2016,7 +2018,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
 .gamepaddialog_ModalPosition_1A0Q4.gpfocus {
   outline: none;
 }
-.gamepaddialog_ModalPosition_1A0Q4 > .gamepaddialog_BasicDialogContent_3joVj {
+.gamepaddialog_ModalPosition_1A0Q4 > .gamepaddialog_GamepadDialogContent_Gn6rC {
   margin: auto;
   background-color: #0e141b;
   border: 2px solid #23262e;
@@ -2241,7 +2243,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
 .gamepaddialog_BottomButtons_2MJWF.gamepaddialog_CompactPadding_1QOVw {
   padding-top: 16px;
 }
-.gamepaddialog_BasicDialogContent_3joVj
+.gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogBody
   .DialogControlsSection
   .Focusable {
@@ -8643,7 +8645,6 @@ div.creatorhomeembed_SocialContainer_25404 {
   font-weight: 400;
   font-size: unset;
   line-height: unset;
-  padding: unset;
   text-shadow: unset;
   color: #fff;
   background-color: var(--gpColor-Green);
@@ -8791,14 +8792,15 @@ div.creatorhomeembed_SocialContainer_25404 {
   display: flex;
   align-items: center;
   color: #fff;
-  height: 56px;
+  height: 32px;
   box-sizing: border-box;
   z-index: 2;
   cursor: pointer;
   font-size: 12px;
 }
-.salepreviewwidgets_BottomCreatorRow_2SWQX img {
-  height: 48px;
+.salepreviewwidgets_BottomCreatorRow_2SWQX
+  .salepreviewwidgets_CreatorLogo_1z46W {
+  height: 32px;
   padding: 4px;
 }
 .salepreviewwidgets_BottomCreatorRow_2SWQX
@@ -8917,8 +8919,20 @@ div.creatorhomeembed_SocialContainer_25404 {
 }
 .salepreviewwidgets_CapsuleParentInfo_34Y-W {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+}
+.salepreviewwidgets_CapsuleParentInfo_34Y-W .ImpressionTrackedElement {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  background: #000;
+  padding: 0px 5px 0px 12px;
+}
+.salepreviewwidgets_CapsuleParentInfo_34Y-W
+  .ImpressionTrackedElement
+  .salepreviewwidgets_ParentType_1T_p3 {
+  margin-right: 10px;
 }
 .salepreviewwidgets_Action_213r2 {
   background-image: radial-gradient(
@@ -18196,7 +18210,6 @@ Body.v6.tag_page.contenthub_page {
 .BasicUI .contenthubshared_SectionTitleCtn_1IGcJ {
   font: var(--gpText-BodyMedium);
   letter-spacing: unset;
-  padding: unset;
   margin-top: 12px;
   padding: 0px var(--gpSpace-Gutter);
 }
@@ -19556,6 +19569,7 @@ html.responsive.touch
   width: 100%;
   box-sizing: border-box;
   flex-wrap: wrap;
+  align-items: center;
 }
 html.responsive.touch
   .saleitembrowser_SaleItemBrowserContainer_3KuFX
@@ -19581,10 +19595,11 @@ html.responsive.touch
   .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
   .saleitembrowser_SaleItemBrowserHeader_yupff
   .saleitembrowser_FlavorLabel_1qNQc {
-  margin: 0 16px 8px;
-  padding: 6px;
+  margin: 0 8px 4px;
+  padding: 4px;
   white-space: nowrap;
   cursor: pointer;
+  font-size: 13px;
 }
 .saleitembrowser_SaleItemBrowserContainer_3KuFX
   .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
@@ -19673,9 +19688,45 @@ html.responsive.touch
 .saleitembrowser_SaleItemBrowserContainer_3KuFX
   .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
   .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_SuggestContainer_M0w-C {
+  height: 24px;
+  margin-left: auto;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_SuggestContainer_M0w-C
+  svg {
+  height: 24px;
+  margin: 0;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_SuggestContainer_M0w-C
+  .DialogInput {
+  padding: 2px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
   .saleitembrowser_Debug_nMmPS {
   text-align: right;
-  flex-grow: 1;
+  margin-left: auto;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_Debug_nMmPS
+  svg {
+  height: 22px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_SuggestContainer_M0w-C
+  + .saleitembrowser_Debug_nMmPS {
+  margin-left: 8px;
 }
 .saleitembrowser_SaleItemBrowserContainer_3KuFX
   .saleitembrowser_EmptyResults_5dSsV {
@@ -26217,6 +26268,9 @@ div.pricinggrid_HoverToolTip_1OS2v {
   height: 18px;
   fill: #e5af37;
 }
+.pricinggridcell_PriceCell_1sKIc.pricinggridcell_ProposedPrice_rVkmD {
+  border: 1px solid #1b97ff;
+}
 .pricinggridcell_PriceCell_1sKIc.pricinggridcell_ChangedLocally_5mvGW {
   border: 1px dashed #1b97ff;
   color: #1b97ff;
@@ -26267,6 +26321,9 @@ div.pricinggrid_HoverToolTip_1OS2v {
 .pricinggridcell_DetailRow_3P_fJ
   .pricinggridcell_DetailButton_3ILP7:not(.pricinggridcell_Disabled_3mZHs):hover {
   background-color: #888;
+}
+div.pricinggridcell_HoverToolTip_36qS7 {
+  z-index: 2000;
 }
 .saveprices_ToolbarCtn_3lAEz {
   position: fixed;
@@ -28623,6 +28680,19 @@ ul li {
 }
 .promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_LinkCtn_2s6vN a {
   text-decoration: none;
+}
+.promotionplaneditor_ReviewedCtn_11pA1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #232730;
+  padding: 4px 10px;
+}
+.promotionplaneditor_ReviewedCtn_11pA1 svg {
+  width: 20px;
+  height: 20px;
+  color: #47bfff;
+  margin-right: 8px;
 }
 .spotlightpromotionlink_ButtonRow_3yFse {
   display: flex;

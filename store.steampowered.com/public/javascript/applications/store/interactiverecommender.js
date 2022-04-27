@@ -1,22 +1,22 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [9],
+  [21],
   {
     "3WEt": function (e, t, a) {
       "use strict";
       a.r(t);
       var i,
-        n = a("mrSG"),
-        s = a("lkRc"),
+        s = a("mrSG"),
+        n = a("lkRc"),
         o = a("TyAF"),
         r = a("2vnA"),
         c = a("q1tI"),
         l = a.n(c),
         d = a("Ophz"),
         m = a("6Y59"),
-        _ = a("exH9"),
-        p = a("TLQK"),
+        p = a("exH9"),
+        _ = a("TLQK"),
         u = a("opsS"),
         h = a("Asqs"),
         g = a("1h/R"),
@@ -35,17 +35,17 @@
           (this.eState = i.Unrequested), (this.nExpirationTime = 0);
         }
         getData(e, t, a) {
-          const n = this.eState == i.Pending || this.eState == i.Rerequest;
+          const s = this.eState == i.Pending || this.eState == i.Rerequest;
           return (
             this.isExpired() &&
-              !n &&
+              !s &&
               ((this.eState = i.Pending),
               t()
-                .then((n) => {
+                .then((s) => {
                   if (this.eState == i.Rerequest)
                     return this.expireData(), void this.getData(e, t, a);
-                  (this.data = a ? a(n) : n),
-                    n
+                  (this.data = a ? a(s) : s),
+                    s
                       ? (this.delayNewData(e), (this.eState = i.Valid))
                       : (this.eState = i.Failed);
                 })
@@ -90,9 +90,9 @@
           return this.data;
         }
       }
-      Object(n.b)([r.C], S.prototype, "data", void 0),
-        Object(n.b)([r.C], S.prototype, "nExpirationTime", void 0);
-      Object(n.b)(
+      Object(s.b)([r.C], S.prototype, "data", void 0),
+        Object(s.b)([r.C], S.prototype, "nExpirationTime", void 0);
+      Object(s.b)(
         [r.C],
         class {
           constructor() {
@@ -167,13 +167,13 @@
         EXCLUDE_WISHLIST: !1,
         USE_MICROTRAILERS: !1,
       };
-      var y;
+      var R;
       !(function (e) {
         (e[(e.ClickThrough = 1)] = "ClickThrough"),
           (e[(e.AddToWishlist = 2)] = "AddToWishlist"),
           (e[(e.AddToCart = 3)] = "AddToCart");
-      })(y || (y = {}));
-      class f {
+      })(R || (R = {}));
+      class y {
         constructor() {
           (this.m_rgFilterTags = []),
             (this.m_rgExcludeTags = []),
@@ -239,7 +239,7 @@
             this.m_mapAppDetailsCache.get(e).getData(
               60,
               () =>
-                Object(n.a)(this, void 0, void 0, function* () {
+                Object(s.a)(this, void 0, void 0, function* () {
                   return yield v.a.get(
                     `${T.BASE_URL}recommender/${T.STEAM_ID}/details?appid=${e}&sessionid=${T.SESSION_ID}`
                   );
@@ -249,7 +249,7 @@
           );
         }
         getResults(e, t, a, i) {
-          const s = e ? "1" : "0",
+          const n = e ? "1" : "0",
             o = t ? `${t}` : "0",
             r = a ? "1" : "0",
             c = i ? `${i}` : "0";
@@ -265,9 +265,9 @@
             this.m_ResultDataCache.getData(
               9999999,
               () =>
-                Object(n.a)(this, void 0, void 0, function* () {
+                Object(s.a)(this, void 0, void 0, function* () {
                   return yield v.a.get(
-                    `${T.BASE_URL}recommender/${T.STEAM_ID}/results?sessionid=${T.SESSION_ID}&steamid=${T.STEAM_ID}&include_played=${s}&algorithm=${o}&reinference=${r}&model_version=${c}${l}`
+                    `${T.BASE_URL}recommender/${T.STEAM_ID}/results?sessionid=${T.SESSION_ID}&steamid=${T.STEAM_ID}&include_played=${n}&algorithm=${o}&reinference=${r}&model_version=${c}${l}`
                   );
                 }),
               (e) => e.data
@@ -278,7 +278,7 @@
           return this.m_ResultDataCache.isExpired();
         }
         getRecommendations() {
-          const e = R.getResults(
+          const e = f.getResults(
             T.INCLUDE_PLAYED,
             T.ALGORITHM,
             T.REINFERENCE,
@@ -290,7 +290,7 @@
           return this.m_InputAppsCache.getData(
             9999999,
             () =>
-              Object(n.a)(this, void 0, void 0, function* () {
+              Object(s.a)(this, void 0, void 0, function* () {
                 return yield v.a.get(
                   `${T.BASE_URL}recommender/${T.STEAM_ID}/inputs?sessionid=${T.SESSION_ID}&steamid=${T.STEAM_ID}`
                 );
@@ -299,7 +299,7 @@
           );
         }
         getAppInfo() {
-          const e = R.getResults(
+          const e = f.getResults(
             T.INCLUDE_PLAYED,
             T.ALGORITHM,
             T.REINFERENCE,
@@ -311,7 +311,7 @@
           return this.m_TagsCache.getData(
             9999999,
             () =>
-              Object(n.a)(this, void 0, void 0, function* () {
+              Object(s.a)(this, void 0, void 0, function* () {
                 return yield v.a.get(
                   `${T.BASE_URL}recommender/${T.STEAM_ID}/tags?sessionid=${T.SESSION_ID}`
                 );
@@ -375,7 +375,7 @@
             (this.m_bStateUpdated = !0);
         }
         onSaveUserSettings(e) {
-          return Object(n.a)(this, void 0, void 0, function* () {
+          return Object(s.a)(this, void 0, void 0, function* () {
             let e = [];
             const t = this.getInputApps();
             for (let a of t) (a.i || a.ip) && e.push(a.a);
@@ -416,7 +416,7 @@
           });
         }
         onToggleIgnore(e) {
-          return Object(n.a)(this, void 0, void 0, function* () {
+          return Object(s.a)(this, void 0, void 0, function* () {
             const t = this.getInputApps();
             for (let a of t)
               if (a.a == e) {
@@ -430,13 +430,13 @@
           this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
         }
         onAppClicked(e, t) {
-          return Object(n.a)(this, void 0, void 0, function* () {
+          return Object(s.a)(this, void 0, void 0, function* () {
             let a = {
               account_id: T.ACCOUNT_ID,
               session_id: T.SESSION_ID,
               app_id: e,
               app_rank: t,
-              action: y.ClickThrough,
+              action: R.ClickThrough,
               algorithm: 1,
               setting_1: 100 * this.m_fPopularityValue,
               setting_2: 100 * this.m_fRecencyValue,
@@ -445,25 +445,25 @@
           });
         }
         onAddToWishlist(e, t) {
-          return Object(n.a)(this, void 0, void 0, function* () {
-            R.getAppInfo()[e].w = !0;
+          return Object(s.a)(this, void 0, void 0, function* () {
+            f.getAppInfo()[e].w = !0;
             let a = { sessionid: T.SESSION_ID, appid: e };
             const i = yield v.a.post(
               `${T.BASE_URL}recommender/${T.STEAM_ID}/wishlist?snr=${T.LINK_PARAM}`,
               a
             );
-            let n = {
+            let s = {
               account_id: T.ACCOUNT_ID,
               session_id: T.SESSION_ID,
               app_id: e,
               app_rank: t,
-              action: y.AddToWishlist,
+              action: R.AddToWishlist,
               algorithm: 1,
               setting_1: 100 * this.m_fPopularityValue,
               setting_2: 100 * this.m_fRecencyValue,
             };
             return (
-              yield v.a.post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, n),
+              yield v.a.post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, s),
               i
             );
           });
@@ -472,7 +472,7 @@
           window.location.href = `${T.COMMUNITY_BASE_URL}profiles/${T.STEAM_ID}/wishlist`;
         }
         onAddToCart(e, t) {
-          return Object(n.a)(this, void 0, void 0, function* () {
+          return Object(s.a)(this, void 0, void 0, function* () {
             let a = { sessionid: T.SESSION_ID, appid: e };
             yield v.a.post(
               `${T.BASE_URL}recommender/${T.STEAM_ID}/cart?snr=${T.LINK_PARAM}`,
@@ -483,13 +483,13 @@
               session_id: T.SESSION_ID,
               app_id: e,
               app_rank: t,
-              action: y.AddToCart,
+              action: R.AddToCart,
               algorithm: 1,
               setting_1: 100 * this.m_fPopularityValue,
               setting_2: 100 * this.m_fRecencyValue,
             };
             yield v.a.post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, i),
-              (window.location.href = `${s.d.STORE_BASE_URL}cart`);
+              (window.location.href = `${n.d.STORE_BASE_URL}cart`);
           });
         }
         onMuteClicked() {
@@ -505,46 +505,46 @@
           return this.m_bUseMicrotrailers;
         }
       }
-      Object(n.b)([r.C], f.prototype, "m_fPopularityValue", void 0),
-        Object(n.b)([r.C], f.prototype, "m_fRecencyValue", void 0),
-        Object(n.b)([r.C], f.prototype, "m_rgFilterTags", void 0),
-        Object(n.b)([r.C], f.prototype, "m_rgExcludeTags", void 0),
-        Object(n.b)([r.C], f.prototype, "m_fQueuedPopularityValue", void 0),
-        Object(n.b)([r.C], f.prototype, "m_fQueuedRecencyValue", void 0),
-        Object(n.b)([r.C], f.prototype, "m_bExcludeWishlisted", void 0),
-        Object(n.b)([r.C], f.prototype, "m_bShouldMute", void 0),
-        Object(n.b)([r.C], f.prototype, "m_bUseMicrotrailers", void 0),
-        Object(n.b)([r.C], f.prototype, "m_bIgnoredEdited", void 0),
-        Object(n.b)([u.b], f.prototype, "getTagHeight", null),
-        Object(n.b)([u.b], f.prototype, "onPopularityChanged", null),
-        Object(n.b)([u.b], f.prototype, "onRecencyChanged", null),
-        Object(n.b)([u.b], f.prototype, "onTagFilterAdd", null),
-        Object(n.b)([u.b], f.prototype, "onTagFilterRemove", null),
-        Object(n.b)([u.b], f.prototype, "onTagExcludeAdd", null),
-        Object(n.b)([u.b], f.prototype, "onTagExcludeRemove", null),
-        Object(n.b)([u.b], f.prototype, "doTagsPassFilter", null),
-        Object(n.b)([u.b], f.prototype, "doTagsFailExclusion", null),
-        Object(n.b)([u.b], f.prototype, "onExcludeWishlistedToggled", null),
-        Object(n.b)([u.b], f.prototype, "onSaveUserSettings", null),
-        Object(n.b)([u.b], f.prototype, "onToggleIgnore", null),
-        Object(n.b)([u.b], f.prototype, "onUpdateWithIgnored", null),
-        Object(n.b)([u.b], f.prototype, "onAppClicked", null),
-        Object(n.b)([u.b], f.prototype, "onAddToWishlist", null),
-        Object(n.b)([u.b], f.prototype, "onGoToWishlist", null),
-        Object(n.b)([u.b], f.prototype, "onAddToCart", null),
-        Object(n.b)([u.b], f.prototype, "onMuteClicked", null),
-        Object(n.b)([u.b], f.prototype, "onUnMuteClicked", null),
-        Object(n.b)([u.b], f.prototype, "shouldMute", null),
-        Object(n.b)([u.b], f.prototype, "shouldUseMicrotrailers", null);
-      const R = new f();
-      window.g_InteractiveRecommender = R;
+      Object(s.b)([r.C], y.prototype, "m_fPopularityValue", void 0),
+        Object(s.b)([r.C], y.prototype, "m_fRecencyValue", void 0),
+        Object(s.b)([r.C], y.prototype, "m_rgFilterTags", void 0),
+        Object(s.b)([r.C], y.prototype, "m_rgExcludeTags", void 0),
+        Object(s.b)([r.C], y.prototype, "m_fQueuedPopularityValue", void 0),
+        Object(s.b)([r.C], y.prototype, "m_fQueuedRecencyValue", void 0),
+        Object(s.b)([r.C], y.prototype, "m_bExcludeWishlisted", void 0),
+        Object(s.b)([r.C], y.prototype, "m_bShouldMute", void 0),
+        Object(s.b)([r.C], y.prototype, "m_bUseMicrotrailers", void 0),
+        Object(s.b)([r.C], y.prototype, "m_bIgnoredEdited", void 0),
+        Object(s.b)([u.b], y.prototype, "getTagHeight", null),
+        Object(s.b)([u.b], y.prototype, "onPopularityChanged", null),
+        Object(s.b)([u.b], y.prototype, "onRecencyChanged", null),
+        Object(s.b)([u.b], y.prototype, "onTagFilterAdd", null),
+        Object(s.b)([u.b], y.prototype, "onTagFilterRemove", null),
+        Object(s.b)([u.b], y.prototype, "onTagExcludeAdd", null),
+        Object(s.b)([u.b], y.prototype, "onTagExcludeRemove", null),
+        Object(s.b)([u.b], y.prototype, "doTagsPassFilter", null),
+        Object(s.b)([u.b], y.prototype, "doTagsFailExclusion", null),
+        Object(s.b)([u.b], y.prototype, "onExcludeWishlistedToggled", null),
+        Object(s.b)([u.b], y.prototype, "onSaveUserSettings", null),
+        Object(s.b)([u.b], y.prototype, "onToggleIgnore", null),
+        Object(s.b)([u.b], y.prototype, "onUpdateWithIgnored", null),
+        Object(s.b)([u.b], y.prototype, "onAppClicked", null),
+        Object(s.b)([u.b], y.prototype, "onAddToWishlist", null),
+        Object(s.b)([u.b], y.prototype, "onGoToWishlist", null),
+        Object(s.b)([u.b], y.prototype, "onAddToCart", null),
+        Object(s.b)([u.b], y.prototype, "onMuteClicked", null),
+        Object(s.b)([u.b], y.prototype, "onUnMuteClicked", null),
+        Object(s.b)([u.b], y.prototype, "shouldMute", null),
+        Object(s.b)([u.b], y.prototype, "shouldUseMicrotrailers", null);
+      const f = new y();
+      window.g_InteractiveRecommender = f;
       var O = a("BFsE");
       !(function () {
-        let e = Object(s.h)("ir_config", "application_config");
-        e && (Object.assign(T, e), R.Init());
+        let e = Object(n.h)("ir_config", "application_config");
+        e && (Object.assign(T, e), f.Init());
       })();
-      const N = ({ accountID: e }) => {
-          const t = R.getInputApps(),
+      const A = ({ accountID: e }) => {
+          const t = f.getInputApps(),
             a = Object.keys(t).length;
           let i = 0;
           return (
@@ -569,37 +569,37 @@
                 l.a.createElement(
                   "div",
                   { className: h.GameCount },
-                  Object(p.f)("#PlaytimeList_RecentGames", a)
+                  Object(_.f)("#PlaytimeList_RecentGames", a)
                 ),
                 l.a.createElement(
                   "div",
                   { className: h.TotalTime },
-                  Object(p.f)("#PlaytimeList_HoursTotal", i)
+                  Object(_.f)("#PlaytimeList_HoursTotal", i)
                 )
               )
             )
           );
         },
-        A = ({ appID: e, name: t, hours: a, lastPlayed: i, ignored: n }) => {
-          const s = `${T.CDN_URL}apps/${e}/header.jpg`,
+        I = ({ appID: e, name: t, hours: a, lastPlayed: i, ignored: s }) => {
+          const n = `${T.CDN_URL}apps/${e}/header.jpg`,
             o = Date.now() / 1e3 - i;
           let r = "",
             c = "";
           return (
             i <= 86400
-              ? (c = Object(p.f)("#PlaytimeList_LastPlayedMax"))
+              ? (c = Object(_.f)("#PlaytimeList_LastPlayedMax"))
               : o > 31449600
-              ? ((r = Object(p.n)(i)),
-                (c = Object(p.f)("#PlaytimeList_LastPlayed", r)))
-              : ((r = Object(p.p)(o)),
-                (c = Object(p.f)("#PlaytimeList_LastPlayed", r))),
+              ? ((r = Object(_.n)(i)),
+                (c = Object(_.f)("#PlaytimeList_LastPlayed", r)))
+              : ((r = Object(_.p)(o)),
+                (c = Object(_.f)("#PlaytimeList_LastPlayed", r))),
             l.a.createElement(
               "div",
-              { className: Object(_.a)(h.PlayedGame, n && h.Ignored) },
+              { className: Object(p.a)(h.PlayedGame, s && h.Ignored) },
               l.a.createElement(
                 "a",
                 { href: `${T.BASE_URL}app/${e}?snr=${T.LINK_PARAM}` },
-                l.a.createElement("img", { className: h.Logo, src: s })
+                l.a.createElement("img", { className: h.Logo, src: n })
               ),
               l.a.createElement(
                 "div",
@@ -607,7 +607,7 @@
                 l.a.createElement(
                   "div",
                   { className: h.HoursPlayed },
-                  Object(p.f)("#PlaytimeList_Hours", a)
+                  Object(_.f)("#PlaytimeList_Hours", a)
                 ),
                 l.a.createElement("div", { className: h.Title }, t),
                 l.a.createElement("div", { className: h.LastPlayed }, c),
@@ -615,22 +615,22 @@
                   "div",
                   {
                     className: h.IgnoreToggle,
-                    onClick: () => R.onToggleIgnore(e),
+                    onClick: () => f.onToggleIgnore(e),
                   },
-                  Object(p.f)(
-                    n ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore"
+                  Object(_.f)(
+                    s ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore"
                   )
                 )
               )
             )
           );
         };
-      let C = class extends l.a.Component {
+      let N = class extends l.a.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
         render() {
-          const e = R.getInputApps();
+          const e = f.getInputApps();
           let t = [];
           if (!e)
             return l.a.createElement(
@@ -639,17 +639,17 @@
               l.a.createElement(
                 "div",
                 { className: h.Header },
-                Object(p.f)("#PlaytimeList_Header")
+                Object(_.f)("#PlaytimeList_Header")
               ),
               l.a.createElement("div", { className: h.Loading })
             );
-          R.getAppInfo();
+          f.getAppInfo();
           const a = e.slice().sort((e, t) => t.l - e.l);
           return (
             Object.keys(a).map((e) => {
               const i = a[e];
               t.push(
-                l.a.createElement(A, {
+                l.a.createElement(I, {
                   key: "PlayedGame_" + i.a,
                   appID: i.a,
                   name: i.t,
@@ -665,27 +665,27 @@
               l.a.createElement(
                 "div",
                 { className: h.Header },
-                Object(p.f)("#PlaytimeList_Header")
+                Object(_.f)("#PlaytimeList_Header")
               ),
-              l.a.createElement(N, { accountID: this.props.accountID }),
+              l.a.createElement(A, { accountID: this.props.accountID }),
               l.a.createElement("div", { className: h.List }, t)
             )
           );
         }
       };
-      C = Object(n.b)([o.a], C);
-      const L = ({
+      N = Object(s.b)([o.a], N);
+      const C = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: a,
           minValue: i,
-          maxValue: n,
-          value: s,
+          maxValue: s,
+          value: n,
           onChange: o,
           sliderLabels: r,
         }) => {
           const c = r
-              ? Math.round((r.length - 1) * ((s - i) / (n - i)))
+              ? Math.round((r.length - 1) * ((n - i) / (s - i)))
               : void 0,
             d = r ? r[c] : "";
           return l.a.createElement(
@@ -701,18 +701,18 @@
             l.a.createElement("input", {
               type: "range",
               min: i,
-              max: n,
-              step: (n - i) / 100,
-              value: s,
+              max: s,
+              step: (s - i) / 100,
+              value: n,
               onChange: o,
             }),
             l.a.createElement("div", { className: h.OptionalLabel }, d)
           );
         },
-        I = ({ className: e, titleLabel: t, checked: a, onChange: i }) =>
+        L = ({ className: e, titleLabel: t, checked: a, onChange: i }) =>
           l.a.createElement(
             "label",
-            { className: Object(_.a)(h.OptionCheckbox, e && e) },
+            { className: Object(p.a)(h.OptionCheckbox, e && e) },
             l.a.createElement("input", {
               type: "checkbox",
               className: h.Checkbox,
@@ -730,7 +730,7 @@
             (this.state = { value: "", suggestions: [] });
         }
         componentDidMount() {
-          const e = R.getTags();
+          const e = f.getTags();
           if (e)
             for (const t of e)
               this.rgTags.push({ id: parseInt(t.tagid), name: t.name });
@@ -783,14 +783,14 @@
         }
         render() {
           const e = {
-            placeholder: Object(p.f)("#TagSelect"),
+            placeholder: Object(_.f)("#TagSelect"),
             value: this.state.value,
             onChange: this.onChange,
             onKeyDown: this.onKeyDown,
           };
           let t = [];
           for (const e of this.selectedtags) {
-            let a = R.m_TagNameMap.get(e);
+            let a = f.m_TagNameMap.get(e);
             t.push(
               l.a.createElement(
                 "div",
@@ -828,100 +828,100 @@
           );
         }
       };
-      Object(n.b)([r.C], D.prototype, "selectedtags", void 0),
-        Object(n.b)([u.b], D.prototype, "onFetchRequested", null),
-        Object(n.b)([u.b], D.prototype, "onClearRequested", null),
-        Object(n.b)([u.b], D.prototype, "onChange", null),
-        Object(n.b)([u.b], D.prototype, "onKeyDown", null),
-        Object(n.b)([u.b], D.prototype, "shouldRenderSuggestions", null),
-        Object(n.b)([u.b], D.prototype, "onSuggestionSelected", null),
-        Object(n.b)([u.b], D.prototype, "onRemoveSelectedTag", null),
-        (D = Object(n.b)([o.a], D));
-      const P = Object(o.a)(() => {
-        const e = R.getTags();
+      Object(s.b)([r.C], D.prototype, "selectedtags", void 0),
+        Object(s.b)([u.b], D.prototype, "onFetchRequested", null),
+        Object(s.b)([u.b], D.prototype, "onClearRequested", null),
+        Object(s.b)([u.b], D.prototype, "onChange", null),
+        Object(s.b)([u.b], D.prototype, "onKeyDown", null),
+        Object(s.b)([u.b], D.prototype, "shouldRenderSuggestions", null),
+        Object(s.b)([u.b], D.prototype, "onSuggestionSelected", null),
+        Object(s.b)([u.b], D.prototype, "onRemoveSelectedTag", null),
+        (D = Object(s.b)([o.a], D));
+      const j = Object(o.a)(() => {
+        const e = f.getTags();
         let t = [];
         if (e)
           for (const a of e) t.push({ id: parseInt(a.tagid), name: a.name });
         const a = [
-          Object(p.f)("#FilterAge_120"),
-          Object(p.f)("#FilterAge_60"),
-          Object(p.f)("#FilterAge_36"),
-          Object(p.f)("#FilterAge_24"),
-          Object(p.f)("#FilterAge_12"),
-          Object(p.f)("#FilterAge_6"),
+          Object(_.f)("#FilterAge_120"),
+          Object(_.f)("#FilterAge_60"),
+          Object(_.f)("#FilterAge_36"),
+          Object(_.f)("#FilterAge_24"),
+          Object(_.f)("#FilterAge_12"),
+          Object(_.f)("#FilterAge_6"),
         ];
-        let i = R.m_rgSavedExcludeTags,
-          n = R.m_rgSavedFilterTags;
+        let i = f.m_rgSavedExcludeTags,
+          s = f.m_rgSavedFilterTags;
         return l.a.createElement(
           "div",
           { className: h.RecommendationOptions },
           l.a.createElement(
             "div",
-            { className: Object(_.a)(h.Row, h.FirstRow) },
-            l.a.createElement(L, {
-              minLabel: Object(p.f)("#Popularity_Popular"),
-              titleLabel: Object(p.f)("#Popularity_Title"),
-              maxLabel: Object(p.f)("#Popularity_Niche"),
+            { className: Object(p.a)(h.Row, h.FirstRow) },
+            l.a.createElement(C, {
+              minLabel: Object(_.f)("#Popularity_Popular"),
+              titleLabel: Object(_.f)("#Popularity_Title"),
+              maxLabel: Object(_.f)("#Popularity_Niche"),
               minValue: 0,
               maxValue: 1,
-              value: R.m_fQueuedPopularityValue,
-              onChange: R.onPopularityChanged,
+              value: f.m_fQueuedPopularityValue,
+              onChange: f.onPopularityChanged,
             }),
-            l.a.createElement(L, {
-              minLabel: Object(p.f)("#Recency_Older"),
-              titleLabel: Object(p.f)("#Recency_Title"),
-              maxLabel: Object(p.f)("#Recency_Newer"),
+            l.a.createElement(C, {
+              minLabel: Object(_.f)("#Recency_Older"),
+              titleLabel: Object(_.f)("#Recency_Title"),
+              maxLabel: Object(_.f)("#Recency_Newer"),
               minValue: 0,
               maxValue: 1,
-              value: R.m_fQueuedRecencyValue,
-              onChange: R.onRecencyChanged,
+              value: f.m_fQueuedRecencyValue,
+              onChange: f.onRecencyChanged,
               sliderLabels: a,
             })
           ),
           l.a.createElement(
             "div",
-            { className: Object(_.a)(h.Row, h.SecondRow) },
+            { className: Object(p.a)(h.Row, h.SecondRow) },
             l.a.createElement(D, {
-              title: Object(p.f)("#TagFilterMultiple_Title"),
+              title: Object(_.f)("#TagFilterMultiple_Title"),
               tagoptions: t,
-              selectedtags: n,
-              key: "Filter" + n.toString(),
-              onAddTag: R.onTagFilterAdd,
-              onRemoveTag: R.onTagFilterRemove,
+              selectedtags: s,
+              key: "Filter" + s.toString(),
+              onAddTag: f.onTagFilterAdd,
+              onRemoveTag: f.onTagFilterRemove,
             }),
             l.a.createElement(D, {
-              title: Object(p.f)("#TagExcludeMultiple_Title"),
+              title: Object(_.f)("#TagExcludeMultiple_Title"),
               tagoptions: t,
               selectedtags: i,
               key: "Exclude" + i.toString(),
-              onAddTag: R.onTagExcludeAdd,
-              onRemoveTag: R.onTagExcludeRemove,
+              onAddTag: f.onTagExcludeAdd,
+              onRemoveTag: f.onTagExcludeRemove,
             }),
-            l.a.createElement(I, {
+            l.a.createElement(L, {
               className: h.WishlistCheckbox,
-              titleLabel: Object(p.f)("#ExcludeWishlisted"),
-              checked: R.m_bExcludeWishlisted,
-              onChange: R.onExcludeWishlistedToggled,
+              titleLabel: Object(_.f)("#ExcludeWishlisted"),
+              checked: f.m_bExcludeWishlisted,
+              onChange: f.onExcludeWishlistedToggled,
             }),
             l.a.createElement(
               "button",
               {
                 className: h.SaveUserSettingsButton,
-                onClick: R.onSaveUserSettings,
-                title: Object(p.f)("#SaveUserSettingsTooltip"),
+                onClick: f.onSaveUserSettings,
+                title: Object(_.f)("#SaveUserSettingsTooltip"),
               },
-              Object(p.f)("#SaveUserSettings")
+              Object(_.f)("#SaveUserSettings")
             )
           )
         );
       });
-      let j = class extends l.a.Component {
+      let P = class extends l.a.Component {
         constructor(e) {
           super(e),
             (this.m_videoRef = l.a.createRef()),
             (this.state = {
               hovered: !1,
-              wishlisted: R.getAppInfo()[e.appID].w,
+              wishlisted: f.getAppInfo()[e.appID].w,
             });
         }
         componentDidMount() {
@@ -953,12 +953,12 @@
               this.m_videoRef.current.pause());
         }
         onMuteToggle(e) {
-          R.shouldMute()
-            ? (R.onUnMuteClicked(),
+          f.shouldMute()
+            ? (f.onUnMuteClicked(),
               this.m_videoRef &&
                 this.m_videoRef.current &&
                 (this.m_videoRef.current.muted = !1))
-            : (R.onMuteClicked(),
+            : (f.onMuteClicked(),
               this.m_videoRef &&
                 this.m_videoRef.current &&
                 (this.m_videoRef.current.muted = !0)),
@@ -966,40 +966,40 @@
             e.stopPropagation();
         }
         onAddToWishlist(e) {
-          R.onAddToWishlist(this.props.appID, this.props.rank),
+          f.onAddToWishlist(this.props.appID, this.props.rank),
             this.setState({ wishlisted: !0 }),
             e.preventDefault(),
             e.stopPropagation();
         }
         onGoToWishlist(e) {
-          R.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
+          f.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
         }
         onAddToCart(e) {
-          R.onAddToCart(this.props.appID, this.props.rank),
+          f.onAddToCart(this.props.appID, this.props.rank),
             e.preventDefault(),
             e.stopPropagation();
         }
         render() {
           const { appID: e, score: t, rank: a, width: i } = this.props,
-            n =
+            s =
               "https://steamcdn-a.akamaihd.net/steam/apps/" + e + "/header.jpg",
-            s = R.getAppInfo()[e];
-          if (!s) return l.a.createElement("div", null);
-          const o = s.n,
+            n = f.getAppInfo()[e];
+          if (!n) return l.a.createElement("div", null);
+          const o = n.n,
             r =
-              s.r > 0
-                ? Object(p.f)("#Recommendation_ReleasedOn", Object(p.n)(s.r))
+              n.r > 0
+                ? Object(_.f)("#Recommendation_ReleasedOn", Object(_.n)(n.r))
                 : "";
           let c = [];
-          if (s.t) {
+          if (n.t) {
             let t = 0;
-            for (const a of s.t)
+            for (const a of n.t)
               if (
                 (c.push(
                   l.a.createElement(
                     "div",
                     { key: `${e}_${a}`, className: h.Tag },
-                    R.getTagName(a)
+                    f.getTagName(a)
                   )
                 ),
                 t++,
@@ -1015,38 +1015,38 @@
           const v = b && this.state.hovered,
             S = Math.min(Number(t) / 10, 1e3);
           Math.max(1, t);
-          let y = !1,
-            f = !1,
+          let R = !1,
+            y = !1,
             O = !0,
-            N = "",
             A = "",
-            C = "",
-            L = "";
-          let I = "",
+            I = "",
+            N = "",
+            C = "";
+          let L = "",
             D = !1,
-            P = !0;
+            j = !0;
           if (v) {
-            const e = R.getDetails(this.props.appID);
+            const e = f.getDetails(this.props.appID);
             e &&
-              ((y = !0),
-              (f = e.discount_pct > 0),
+              ((R = !0),
+              (y = e.discount_pct > 0),
               (O = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
                 .canPlayType('video/webm; codecs="vp8, vorbis"')
-                ? R.shouldUseMicrotrailers() && e.microtrailer_webm
-                  ? ((I = e.microtrailer_webm), (D = !0), (P = !1))
-                  : (I = e.video_webm)
-                : R.shouldUseMicrotrailers() && e.microtrailer_mp4
-                ? ((I = e.microtrailer_mp4), (D = !0), (P = !1))
-                : (I = e.video_mp4),
-              (N = `-${e.discount_pct}%`),
-              (A = e.base_price),
-              (C = O ? Object(p.f)("#FreeToPlay") : e.discount_price),
-              (L = e.description));
+                ? f.shouldUseMicrotrailers() && e.microtrailer_webm
+                  ? ((L = e.microtrailer_webm), (D = !0), (j = !1))
+                  : (L = e.video_webm)
+                : f.shouldUseMicrotrailers() && e.microtrailer_mp4
+                ? ((L = e.microtrailer_mp4), (D = !0), (j = !1))
+                : (L = e.video_mp4),
+              (A = `-${e.discount_pct}%`),
+              (I = e.base_price),
+              (N = O ? Object(_.f)("#FreeToPlay") : e.discount_price),
+              (C = e.description));
           }
-          const j = I && I.length > 0;
+          const P = L && L.length > 0;
           return l.a.createElement(
             d.a,
             { appID: e, snr: T.LINK_PARAM },
@@ -1054,8 +1054,8 @@
               "a",
               {
                 href: `${T.BASE_URL}app/${e}?snr=${T.LINK_PARAM}`,
-                onClick: () => R.onAppClicked(e, a),
-                className: Object(_.a)(
+                onClick: () => f.onAppClicked(e, a),
+                className: Object(p.a)(
                   h.RecommendationEntry,
                   "ds_flagged",
                   "ds_wishlist",
@@ -1073,43 +1073,43 @@
                   "div",
                   { className: h.LeftSection },
                   l.a.createElement("img", {
-                    className: Object(_.a)(h.Logo, (!j || !v) && h.Revealed),
-                    src: n,
+                    className: Object(p.a)(h.Logo, (!P || !v) && h.Revealed),
+                    src: s,
                   }),
                   l.a.createElement("video", {
                     ref: this.m_videoRef,
-                    className: Object(_.a)(
+                    className: Object(p.a)(
                       "highlight_player_item",
                       "highlight_movie",
                       h.Video,
-                      j && v && h.Revealed
+                      P && v && h.Revealed
                     ),
                     playsInline: !0,
                     autoPlay: !0,
-                    muted: P && R.shouldMute(),
-                    src: I,
+                    muted: j && f.shouldMute(),
+                    src: L,
                     loop: D,
                   }),
-                  P &&
+                  j &&
                     l.a.createElement(
                       "div",
                       {
-                        className: Object(_.a)(h.UnMute, j && h.Revealed),
+                        className: Object(p.a)(h.UnMute, P && h.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
-                      l.a.createElement(m.Ab, { muted: R.shouldMute() })
+                      l.a.createElement(m.Ab, { muted: f.shouldMute() })
                     ),
                   this.state.wishlisted &&
                     l.a.createElement(
                       "div",
                       {
-                        className: Object(_.a)(
+                        className: Object(p.a)(
                           "ds_flag",
                           "ds_wishlist_flag",
                           h.WishlistFlag
                         ),
                       },
-                      Object(p.f)("#Recommendation_OnWishlist") + "  "
+                      Object(_.f)("#Recommendation_OnWishlist") + "  "
                     )
                 ),
                 l.a.createElement(
@@ -1122,7 +1122,7 @@
                     l.a.createElement(
                       "div",
                       {
-                        className: Object(_.a)(
+                        className: Object(p.a)(
                           h.CenterOption,
                           h.CenterDefault,
                           v && h.Hidden
@@ -1142,23 +1142,23 @@
                     l.a.createElement(
                       "div",
                       {
-                        className: Object(_.a)(
+                        className: Object(p.a)(
                           h.CenterOption,
                           h.CenterHovered,
                           !v && h.Hidden
                         ),
                       },
-                      L
+                      C
                     )
                   ),
-                  y &&
+                  R &&
                     l.a.createElement(
                       "div",
                       { className: h.BottomEntrySection },
                       l.a.createElement(
                         "div",
                         {
-                          className: Object(_.a)(
+                          className: Object(p.a)(
                             "game_purchase_action",
                             h.PurchaseSection
                           ),
@@ -1166,12 +1166,12 @@
                         l.a.createElement(
                           "div",
                           {
-                            className: Object(_.a)(
+                            className: Object(p.a)(
                               "game_purchase_action_bg",
                               h.PurchaseBG
                             ),
                           },
-                          f &&
+                          y &&
                             l.a.createElement(
                               "div",
                               {
@@ -1181,7 +1181,7 @@
                               l.a.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                N
+                                A
                               ),
                               l.a.createElement(
                                 "div",
@@ -1189,26 +1189,26 @@
                                 l.a.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  A
+                                  I
                                 ),
                                 l.a.createElement(
                                   "div",
                                   { className: "discount_final_price" },
-                                  C
+                                  N
                                 )
                               )
                             ),
-                          !f &&
+                          !y &&
                             l.a.createElement(
                               "div",
                               {
-                                className: Object(_.a)(
+                                className: Object(p.a)(
                                   "game_purchase_price",
                                   "price",
                                   h.Price
                                 ),
                               },
-                              C
+                              N
                             ),
                           !O &&
                             l.a.createElement(
@@ -1226,7 +1226,7 @@
                                 l.a.createElement(
                                   "span",
                                   null,
-                                  Object(p.f)("#btn_add_to_cart")
+                                  Object(_.f)("#btn_add_to_cart")
                                 )
                               )
                             )
@@ -1247,7 +1247,7 @@
                             l.a.createElement(
                               "span",
                               null,
-                              Object(p.f)("#wishlist_add_to_wishlist")
+                              Object(_.f)("#wishlist_add_to_wishlist")
                             )
                           )
                         ),
@@ -1256,13 +1256,13 @@
                         l.a.createElement(
                           "div",
                           {
-                            className: Object(_.a)(
+                            className: Object(p.a)(
                               "btnv6_blue_hoverfade btn_medium",
                               "queue_btn_active",
                               h.Wishlisted,
                               h.WishlistSection
                             ),
-                            "data-tooltip-text": Object(p.f)(
+                            "data-tooltip-text": Object(_.f)(
                               "#OnWishlistTooltip"
                             ),
                             onClick: (e) => this.onGoToWishlist(e),
@@ -1273,7 +1273,7 @@
                             l.a.createElement("img", {
                               src: `${T.IMG_URL_BASE}/v6/ico/ico_selected.png`,
                             }),
-                            "  " + Object(p.f)("#OnWishlist")
+                            "  " + Object(_.f)("#OnWishlist")
                           )
                         )
                     )
@@ -1283,37 +1283,37 @@
           );
         }
       };
-      Object(n.b)([u.b], j.prototype, "OnHover", null),
-        Object(n.b)([u.b], j.prototype, "OnUnHover", null),
-        Object(n.b)([u.b], j.prototype, "onMuteToggle", null),
-        Object(n.b)([u.b], j.prototype, "onAddToWishlist", null),
-        Object(n.b)([u.b], j.prototype, "onGoToWishlist", null),
-        Object(n.b)([u.b], j.prototype, "onAddToCart", null),
-        (j = Object(n.b)([o.a], j));
+      Object(s.b)([u.b], P.prototype, "OnHover", null),
+        Object(s.b)([u.b], P.prototype, "OnUnHover", null),
+        Object(s.b)([u.b], P.prototype, "onMuteToggle", null),
+        Object(s.b)([u.b], P.prototype, "onAddToWishlist", null),
+        Object(s.b)([u.b], P.prototype, "onGoToWishlist", null),
+        Object(s.b)([u.b], P.prototype, "onAddToCart", null),
+        (P = Object(s.b)([o.a], P));
       let U = class extends l.a.Component {
         constructor(e) {
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
         render() {
-          const e = R.m_fRecencyValue * (T.NUM_RECENCY_STEPS - 1 - 0.001),
+          const e = f.m_fRecencyValue * (T.NUM_RECENCY_STEPS - 1 - 0.001),
             t = Math.floor(e),
             a = t + 1,
             i = 1 - (e - t),
-            n = 1 - i,
-            s = R.m_fPopularityValue * (T.NUM_POPULARITY_STEPS - 1 - 0.001),
-            o = Math.floor(s),
+            s = 1 - i,
+            n = f.m_fPopularityValue * (T.NUM_POPULARITY_STEPS - 1 - 0.001),
+            o = Math.floor(n),
             r = o + 1,
-            c = 1 - (s - o),
+            c = 1 - (n - o),
             d = 1 - c;
           let m = [];
           m.push({ index: o * T.NUM_RECENCY_STEPS + t, weight: c * i }),
             m.push({ index: r * T.NUM_RECENCY_STEPS + t, weight: d * i }),
-            m.push({ index: o * T.NUM_RECENCY_STEPS + a, weight: c * n }),
-            m.push({ index: r * T.NUM_RECENCY_STEPS + a, weight: d * n });
+            m.push({ index: o * T.NUM_RECENCY_STEPS + a, weight: c * s }),
+            m.push({ index: r * T.NUM_RECENCY_STEPS + a, weight: d * s });
           let u = new Map(),
             g = 0;
-          const E = R.getRecommendations(),
-            b = R.getAppInfo();
+          const E = f.getRecommendations(),
+            b = f.getAppInfo();
           let v = [];
           if (E) {
             for (const e of m) {
@@ -1326,22 +1326,22 @@
                     b[i].o ||
                     b[i].i ||
                     b[i].ti ||
-                    (b[i].w && R.m_bExcludeWishlisted)
+                    (b[i].w && f.m_bExcludeWishlisted)
                   )
                     continue;
-                  const n =
+                  const s =
                     (u.get(i) || 0) + t.scores[a] * e.weight * t.score_scale;
-                  u.set(i, n);
+                  u.set(i, s);
                 }
             }
             u.forEach((e, t) => u.set(t, e / g));
             let e = [];
             u.forEach((t, a) => e.push({ appid: a, score: t })),
               (e = e.filter(
-                (e) => b[e.appid].t && R.doTagsPassFilter(b[e.appid].t)
+                (e) => b[e.appid].t && f.doTagsPassFilter(b[e.appid].t)
               )),
               (e = e.filter(
-                (e) => b[e.appid].t && !R.doTagsFailExclusion(b[e.appid].t)
+                (e) => b[e.appid].t && !f.doTagsFailExclusion(b[e.appid].t)
               )),
               (e = e.filter((e) => e.score > 0));
             let t = e.sort((e, t) => t.score - e.score);
@@ -1351,7 +1351,7 @@
               for (let a of t) (a.rank = e), e++;
               for (const e of t)
                 v.push(
-                  l.a.createElement(j, {
+                  l.a.createElement(P, {
                     key: e.appid,
                     appID: e.appid,
                     score: e.score,
@@ -1367,7 +1367,7 @@
                     key: "no_recommedations_due_to_filter",
                     className: h.NoRecommendationsMessage,
                   },
-                  Object(p.f)("#NoRecommendationsDueToFilter")
+                  Object(_.f)("#NoRecommendationsDueToFilter")
                 )
               );
           } else
@@ -1383,15 +1383,15 @@
             l.a.createElement(
               "div",
               { className: h.Header },
-              Object(p.f)("#Recommendations_Header")
+              Object(_.f)("#Recommendations_Header")
             ),
-            l.a.createElement(P, null),
+            l.a.createElement(j, null),
             l.a.createElement(
               "div",
               {
-                className: Object(_.a)(
+                className: Object(p.a)(
                   h.List,
-                  R.areResultsExpired() && h.Updating
+                  f.areResultsExpired() && h.Updating
                 ),
               },
               v
@@ -1399,8 +1399,8 @@
           );
         }
       };
-      U = Object(n.b)([o.a], U);
-      let x = class extends l.a.Component {
+      U = Object(s.b)([o.a], U);
+      let w = class extends l.a.Component {
         constructor() {
           super(...arguments), (this.state = { width: window.innerWidth });
         }
@@ -1414,12 +1414,12 @@
           Object(O.a)();
         }
         render() {
-          return s.k.logged_in
+          return n.k.logged_in
             ? l.a.createElement(
                 "div",
                 {
                   className: h.App,
-                  style: { height: 3840 + 26 * R.getTagHeight() },
+                  style: { height: 3840 + 26 * f.getTagHeight() },
                 },
                 l.a.createElement(
                   "div",
@@ -1430,18 +1430,18 @@
                     l.a.createElement(
                       "div",
                       { className: h.Header },
-                      Object(p.f)("#HeaderTitle")
+                      Object(_.f)("#HeaderTitle")
                     ),
                     l.a.createElement(
                       "div",
                       { className: h.Body },
-                      Object(p.f)("#HeaderBody1")
+                      Object(_.f)("#HeaderBody1")
                     )
                   ),
                   l.a.createElement(
                     "div",
                     { className: h.BottomSection },
-                    l.a.createElement(C, { accountID: s.k.accountid }),
+                    l.a.createElement(N, { accountID: n.k.accountid }),
                     l.a.createElement("div", { className: h.VerticalBar }),
                     l.a.createElement(U, { width: this.state.width })
                   )
@@ -1456,27 +1456,27 @@
                   l.a.createElement(
                     "div",
                     { className: h.Text },
-                    Object(p.f)("#LoginText")
+                    Object(_.f)("#LoginText")
                   ),
                   l.a.createElement(
                     "div",
                     {
-                      className: Object(_.a)(
+                      className: Object(p.a)(
                         "btn_green_white_innerfade",
                         " btn_medium"
                       ),
                       onClick: this.ShowLoginDialog,
                     },
-                    l.a.createElement("span", null, Object(p.f)("#LoginButton"))
+                    l.a.createElement("span", null, Object(_.f)("#LoginButton"))
                   )
                 )
               );
         }
       };
-      Object(n.b)([u.b], x.prototype, "updateDimensions", null),
-        Object(n.b)([u.b], x.prototype, "ShowLoginDialog", null),
-        (x = Object(n.b)([o.a], x));
-      t.default = x;
+      Object(s.b)([u.b], w.prototype, "updateDimensions", null),
+        Object(s.b)([u.b], w.prototype, "ShowLoginDialog", null),
+        (w = Object(s.b)([o.a], w));
+      t.default = w;
     },
     Asqs: function (e, t, a) {
       e.exports = {
@@ -1567,6 +1567,64 @@
         SuggestionsList: "interactiverecommender_SuggestionsList_2zgal",
         OptionSuggestion: "interactiverecommender_OptionSuggestion_3VKY5",
       };
+    },
+    Ophz: function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return u;
+      });
+      var i = a("mrSG"),
+        s = a("q1tI"),
+        n = a.n(s),
+        o = a("ee7K"),
+        r = a("lkRc"),
+        c = a("Jnrd"),
+        l = a("D4wO");
+      class d {
+        constructor() {
+          (this.m_mapAppToSNRs = new Map()), (this.m_rgImpressionsToAdd = []);
+        }
+        AddImpression(e, t) {
+          let a = !1;
+          o.a.Get().BAppImpressionsAllowed()
+            ? (this.m_mapAppToSNRs.has(e)
+                ? -1 == this.m_mapAppToSNRs.get(e).indexOf(t) &&
+                  (this.m_mapAppToSNRs.get(e).push(t), (a = !0))
+                : (this.m_mapAppToSNRs.set(e, [t]), (a = !0)),
+              a &&
+                (this.m_rgImpressionsToAdd.push(`${e}@${t}`),
+                this.UpdateCookie()))
+            : "dev" === r.d.WEB_UNIVERSE &&
+              console.log("Cookie Prefs: Not allowing App Impressions");
+        }
+        UpdateCookie() {
+          const e = [
+            Object(c.b)("app_impressions") || "",
+            ...this.m_rgImpressionsToAdd,
+          ].join("|");
+          this.m_rgImpressionsToAdd = [];
+          encodeURIComponent(e).length <= 3200 &&
+            Object(c.c)("app_impressions", e);
+        }
+      }
+      Object(i.b)([Object(l.a)(1e3)], d.prototype, "UpdateCookie", null);
+      const m = new d();
+      window.g_ImpressionTracker = m;
+      var p = a("uuth"),
+        _ = a("opsS");
+      class u extends n.a.Component {
+        OnEnter() {
+          m.AddImpression(this.props.appID, this.props.snr);
+        }
+        render() {
+          return n.a.createElement(
+            p.a,
+            { onEnter: this.OnEnter },
+            this.props.children
+          );
+        }
+      }
+      Object(i.b)([_.b], u.prototype, "OnEnter", null);
     },
   },
 ]);

@@ -119,6 +119,13 @@ html.responsive .fullscreen-bg__video_mobile {
 	overflow: hidden;
 }
 
+/* These sections have black backgrounds that we want to bleed to the edges */
+.home_ctn.content_more,
+.home_ctn.bottom_content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .home_page_gutter {
 	position: absolute;
 	left: 0;
@@ -1189,21 +1196,12 @@ a.home_headercap:hover {
 	white-space: nowrap;
 }
 
-.apps_recommended_by_curators_ctn
-{
-	margin-bottom: 50px;
-}
-
 .apps_recommended_by_curators_ctn h2
 {
 	margin-bottom: 7px;
 }
 
 @media screen and (max-width: 910px) {
-	.apps_recommended_by_curators_ctn.home_ctn {
-		margin-bottom: 0;
-	}
-
 	div.carousel_container.paging_capsules.more_apps_by_curators_capsule {
 		margin-top: 50px;
 	}
@@ -1406,7 +1404,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 
 .home_page_sign_in_ctn.small {
 	height: 130px;
-	padding-bottom: 36px;
 }
 
 .home_page_sign_in_ctn.small p {
@@ -1738,12 +1735,31 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	background-position-x: 49vw;
 }
 
+.home_ctn {
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 50px;
+}
+
+body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn {
+	margin-top: 0;
+}
+body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn .home_header_textimage {
+	background-size: 45vw;
+	background-position-y: 20px;
+	height: 29vw;
+}
+
 @media screen and (max-width: 910px)
 {
 
 	html.responsive .home_page_body_ctn {
 		width: auto;
 		min-width: 0;
+	}
+
+	html.responsive .home_page_content.special_offers {
+		margin-bottom: 0;
 	}
 
 	html.responsive .home_page_content {
@@ -1762,12 +1778,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	html.responsive .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
 		padding: 5px 30px;
 		border-color: #FFFFFF;
-	}
-
-	.home_ctn {
-		padding-left: 2%;
-		padding-right: 2%;
-		padding-bottom: 50px;
 	}
 
 	html.responsive .page_background_holder {
@@ -1947,20 +1957,142 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		flex-direction: column;
 	}
 
-	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn {
+	html.responsive .carousel_container .carousel_items:not(.no_paging),
+	html.responsive .carousel_container.maincap .carousel_items:not(.no_paging) {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing:content-box;
+		padding-bottom: 20px;
+
+		display: -webkit-box; /* Very Old webkit */
+		display: -ms-flexbox; /* IE 10 */
+		display: -webkit-flex; /* Old webkit */
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	html.responsive .recommended_by_steam_labs_ctn .lower_left_block {
+		padding-top: 0;
+	}
+
+	html.responsive .carousel_container.spotlight .carousel_items:not(.no_paging),
+	html.responsive .carousel_container.paging_capsules .carousel_items:not(.no_paging){
+		padding-bottom: 0px;
+	}
+
+	html.responsive .carousel_container .carousel_items:not(.no_paging) > * {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	html.responsive .carousel_container.maincap .carousel_items > * {
+		display: inline-block;
+		height: auto;
+	}
+
+	html.responsive .carousel_container.maincap .capsule {
+		padding-top: 57.30519480519481%;
+		height: 0;
+		width: 100%;
+        overflow: hidden;
+	}
+
+	html.responsive .carousel_container.maincap {
+		height: auto;
+	}
+
+	html.responsive .store_main_capsule .capsule {
+		box-shadow: none;
+	}
+
+	html.responsive .carousel_container.maincap .screenshots,
+	html.responsive .carousel_container.maincap .reason,
+	html.responsive .carousel_container.maincap .platforms {
+		display: none;
+	}
+
+	html.responsive .carousel_container.maincap .app_name {
+		display: block;
+		height: auto;
+	}
+
+	html.responsive .store_main_capsule,
+	html.responsive .store_main_capsule:hover {
+		background-image: none;
+	}
+
+	html.responsive .carousel_container.maincap .discount_block {
+		position: relative;
+		bottom: initial;
+		left: initial;
+
+		font-size: 14px;
+		line-height: 21px;
+		padding: 6px;
+	}
+
+	html.responsive .carousel_container.maincap .carousel_items {
+		height: auto;
+	}
+
+	html.responsive .community_recommendation_app .community_recommendations_block {
+		width: auto;
+	}
+
+	html.responsive .community_recommendation_app {
+		display: flex;
+		flex-direction: column;
+	}
+
+	html.responsive .community_recommendation_app .review_box .content {
+		font-size: 12px;
+	}
+
+	html.responsive .community_recommendation_app > .right_col {
+		background: linear-gradient(180deg, #0A141D 0%, rgba(10, 20, 29, 0.2) 100%);
+	}
+
+	/* Nav buttons */
+	html.responsive .big_buttons {
 		margin-top: 0;
+		margin-bottom: 0;
 	}
-	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn .home_header_textimage {
-		background-size: 45vw;
-		background-position-y: 20px;
-		height: 29vw;
+
+	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
+
+	html.responsive .home_rightcol{
+		display: none;
+	}
+
+	html.responsive .apps_recommended_by_curators_ctn.home_ctn {
+		margin-bottom: 0;
+	}
+
+	html.responsive .home_marketing_message > span {
+		width: 100%;
+		height: 0;
+		padding-top: 105%; /* Maintain aspect ratio as grid items resize */
+	}
+
+	html.responsive .home_marketing_message {
+		margin: 0;
+		margin-left: 0;
+		display: block;
+	}
+
 
 }
 
 	html.responsive.tablet .home_page_body_ctn {
 		width: auto;
 		min-width: 0;
+	}
+
+	html.responsive.tablet .home_page_content.special_offers {
+		margin-bottom: 0;
 	}
 
 	html.responsive.tablet .home_page_content {
@@ -1979,12 +2111,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	html.responsive.tablet .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
 		padding: 5px 30px;
 		border-color: #FFFFFF;
-	}
-
-	.home_ctn {
-		padding-left: 2%;
-		padding-right: 2%;
-		padding-bottom: 50px;
 	}
 
 	html.responsive.tablet .page_background_holder {
@@ -2164,14 +2290,132 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		flex-direction: column;
 	}
 
-	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn {
+	html.responsive.tablet .carousel_container .carousel_items:not(.no_paging),
+	html.responsive.tablet .carousel_container.maincap .carousel_items:not(.no_paging) {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing:content-box;
+		padding-bottom: 20px;
+
+		display: -webkit-box; /* Very Old webkit */
+		display: -ms-flexbox; /* IE 10 */
+		display: -webkit-flex; /* Old webkit */
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	html.responsive.tablet .recommended_by_steam_labs_ctn .lower_left_block {
+		padding-top: 0;
+	}
+
+	html.responsive.tablet .carousel_container.spotlight .carousel_items:not(.no_paging),
+	html.responsive.tablet .carousel_container.paging_capsules .carousel_items:not(.no_paging){
+		padding-bottom: 0px;
+	}
+
+	html.responsive.tablet .carousel_container .carousel_items:not(.no_paging) > * {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	html.responsive.tablet .carousel_container.maincap .carousel_items > * {
+		display: inline-block;
+		height: auto;
+	}
+
+	html.responsive.tablet .carousel_container.maincap .capsule {
+		padding-top: 57.30519480519481%;
+		height: 0;
+		width: 100%;
+        overflow: hidden;
+	}
+
+	html.responsive.tablet .carousel_container.maincap {
+		height: auto;
+	}
+
+	html.responsive.tablet .store_main_capsule .capsule {
+		box-shadow: none;
+	}
+
+	html.responsive.tablet .carousel_container.maincap .screenshots,
+	html.responsive.tablet .carousel_container.maincap .reason,
+	html.responsive.tablet .carousel_container.maincap .platforms {
+		display: none;
+	}
+
+	html.responsive.tablet .carousel_container.maincap .app_name {
+		display: block;
+		height: auto;
+	}
+
+	html.responsive.tablet .store_main_capsule,
+	html.responsive.tablet .store_main_capsule:hover {
+		background-image: none;
+	}
+
+	html.responsive.tablet .carousel_container.maincap .discount_block {
+		position: relative;
+		bottom: initial;
+		left: initial;
+
+		font-size: 14px;
+		line-height: 21px;
+		padding: 6px;
+	}
+
+	html.responsive.tablet .carousel_container.maincap .carousel_items {
+		height: auto;
+	}
+
+	html.responsive.tablet .community_recommendation_app .community_recommendations_block {
+		width: auto;
+	}
+
+	html.responsive.tablet .community_recommendation_app {
+		display: flex;
+		flex-direction: column;
+	}
+
+	html.responsive.tablet .community_recommendation_app .review_box .content {
+		font-size: 12px;
+	}
+
+	html.responsive.tablet .community_recommendation_app > .right_col {
+		background: linear-gradient(180deg, #0A141D 0%, rgba(10, 20, 29, 0.2) 100%);
+	}
+
+	/* Nav buttons */
+	html.responsive.tablet .big_buttons {
 		margin-top: 0;
+		margin-bottom: 0;
 	}
-	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn .home_header_textimage {
-		background-size: 45vw;
-		background-position-y: 20px;
-		height: 29vw;
+
+	html.responsive.tablet .community_recommendations_by_steam_labs_ctn .carousel_container {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
+
+	html.responsive.tablet .home_rightcol{
+		display: none;
+	}
+
+	html.responsive.tablet .apps_recommended_by_curators_ctn.home_ctn {
+		margin-bottom: 0;
+	}
+
+	html.responsive.tablet .home_marketing_message > span {
+		width: 100%;
+		height: 0;
+		padding-top: 105%; /* Maintain aspect ratio as grid items resize */
+	}
+
+	html.responsive.tablet .home_marketing_message {
+		margin: 0;
+		margin-left: 0;
+		display: block;
+	}
+
 
 @media screen and (max-width: 700px)
 {
@@ -2635,6 +2879,7 @@ background: -webkit-linear-gradient( left, #bce2f7 5%,#b9e1f7 95%);
 	padding: 8px;
 	height: 100%;
 	display: table;
+    box-sizing: border-box;
 }
 
 .curator_giant_capsule .curator_block .blurb > span, .curator_giant_capsule .curator_block .blurb > span:hover {
@@ -2675,6 +2920,9 @@ background: -webkit-linear-gradient( left, #bce2f7 5%,#b9e1f7 95%);
 	font-size: 11px;
 	cursor: pointer;
 }
+.giant_curator_controls > span:hover {
+    color: white;
+}
 
 .carousel_container.paging_capsules.more_apps_by_curators_capsule {
 	margin-top: 40px;
@@ -2689,10 +2937,6 @@ body.v6 .apps_recommended_by_curators_ctn .store_capsule_frame {
 	background: none;
 	border: none;
 	border-image: none;
-}
-
-.apps_recommended_by_curators_ctn {
-	margin-bottom: 20px;
 }
 
 .steam_curators_ctn {
@@ -2897,7 +3141,6 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 
 
 .recommended_by_steam_labs_ctn .lower_left_block {
-    padding-top: 20px;
 	flex-grow: 1;
 }
 
@@ -2967,8 +3210,8 @@ body.v6 .recommended_by_deep_dive_method {
 }
 
 @media screen and (max-width: 910px) {
-	html.responsive .recommended_by_steam_labs_ctn .lower_left_block {
-		padding-top: 0;
+	html.responsive .carousel_container.maincap .discount_block {
+		display: block;
 	}
 }
 
@@ -2983,14 +3226,9 @@ body.v6 .recommended_by_deep_dive_method {
 	}
 }
 
-.recommended_by_steam_labs_ctn .lower_pad_block {
-
-}
-
 .recommended_by_steam_labs_ctn .lower_right_block {
     width: auto;
 	justify-content: right;
-	padding-top: 19px;
 }
 
 .recommended_by_steam_labs_ctn .flex-container
@@ -3503,8 +3741,7 @@ body.v6 .home_page_content.deep_dive_block h2 {
 /* Discovery queue widget */
 
 .home_ctn.discovery_queue_ctn {
-	background-color: none;
-	padding: 20px 0;
+	background-color: transparent;
 }
 
 .discovery_queue_ctn .begin_exploring {
@@ -3635,8 +3872,6 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 
 .big_buttons {
 	min-height: 95px;
-	margin-top: 40px;
-	margin-bottom: 25px;
 }
 .big_button {
 	display: flex;
@@ -3769,18 +4004,6 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 		grid-template-columns: repeat( auto-fill, minmax( 173px, 1fr ) );
 		gap: 10px;
 	}
-
-	html.responsive .home_marketing_message > span {
-		width: 100%;
-		height: 0;
-		padding-top: 105%; /* Maintain aspect ratio as grid items resize */
-	}
-
-	html.responsive .home_marketing_message {
-		margin: 0;
-		margin-left: 0;
-		display: block;
-	}
 }
 
 /* Misc */
@@ -3823,12 +4046,6 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	background: linear-gradient( to bottom, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);
 	padding-top: 1px; /* Crappy hack to turn off margin collapsing */
 	margin-top: 60px;
-}
-
-
-.home_ctn.apps_recommended_by_curators_ctn  {
-
-	padding-top: 1px; /* Crappy hack to turn off margin collapsing */
 }
 
 .home_page_content.home_logged_in .home_logged_in_bg {
@@ -4363,11 +4580,6 @@ background: -webkit-linear-gradient( left, #c6e6f8 5%,#95bcd3 95%);
 	color: #10161b;
 }
 
-.specials_under10_content {
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-
 /* generic paging capsules */
 .carousel_container.paging_capsules {
 }
@@ -4411,6 +4623,7 @@ background: -webkit-linear-gradient( left, #c6e6f8 5%,#95bcd3 95%);
 	width: 306px;
 	margin-bottom: 15px;
 	box-shadow: 0 0 5px #000000;
+	background-size: cover;
 }
 
 .carousel_container.spotlight .carousel_items > * .store_capsule.daily_deal {
@@ -4465,17 +4678,13 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	background-position-x: 23px;
 }
 
-.best_selling_vr_ctn {
-	margin-bottom: 32px;
-}
-
 .best_selling_vr_ctn .carousel_container .arrow.left,
 .best_selling_vr_ctn .carousel_container .arrow.right {
-	transform: translateY(-14px);
+	transform: translateY(-28px);
 }
 
 .basic_caps_carousel.carousel_container .arrow {
-	transform: translateY(-34px);
+	transform: translateY(-44px);
 }
 
 /* Specific capsule heights */
@@ -4572,6 +4781,7 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 .main_cap_desc {
 	background-image: url( '/public/images/v6/home/background_maincap.jpg' );
 	background-color: rgba( 102, 192, 244, 0.2 );
+	background-size: cover;
 }
 .main_cap_status {
 	color: #abdaf4;
@@ -4585,6 +4795,7 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 	box-shadow: 0 0 3px 0 #000000;
 	margin-top: 6px;
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-size: cover;
 }
 
 body.v6 h2 .header_inline {
@@ -4596,6 +4807,7 @@ body.v6 h2 .header_inline {
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 	margin: 0px;
 	min-height: 23px;
+	background-size: cover;
 }
 
 .spotlight_block .spotlight_content>h2, .spotlight_body {
@@ -4856,10 +5068,6 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		margin-top: 0;
 	}
 
-	html.responsive .home_rightcol{
-		display: none;
-	}
-
     html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
         padding-bottom: 20px;
     }
@@ -4888,33 +5096,21 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		font-size: 10px;
 	}
 
-	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-
 	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items > *,
 	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items .community_recommendation_app {
 		width: 100%;
 	}
-	html.responsive .community_recommendation_app {
-		display: flex;
-		flex-direction: column;
-	}
+
 	html.responsive .community_recommendation_app .community_recommendations_block {
-		width: auto;
 		height: 170px;
 	}
+
 	html.responsive .community_recommendation_app .review_box .content {
-		font-size: 12px;
 		height: 80px;
 	}
+
 	html.response .community_recommendations_block > .review_box {
 		padding: 5px;
-	}
-	html.responsive .community_recommendation_app > .right_col {
-		height: 215px;
-		background: linear-gradient(180deg, #0A141D 0%, rgba(10, 20, 29, 0.2) 100%);
 	}
 
 	html.responsive .home_page_content h2 {
@@ -4936,51 +5132,9 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		flex-shrink: 0;
 	}
 
-	html.responsive .store_main_capsule,
-	html.responsive .store_main_capsule:hover {
-		background-image: none;
-	}
-
-	html.responsive .carousel_container .carousel_items:not(.no_paging),
-	html.responsive .carousel_container.maincap .carousel_items:not(.no_paging) {
-		overflow-x: scroll;
-		overflow-y: hidden;
-		box-sizing:content-box;
-		padding-bottom: 20px;
-
-		display: -webkit-box; /* Very Old webkit */
-		display: -ms-flexbox; /* IE 10 */
-		display: -webkit-flex; /* Old webkit */
-		display: flex;
-		flex-wrap: nowrap;
-	}
-
-	html.responsive .carousel_container.maincap .screenshots,
-	html.responsive .carousel_container.maincap .reason,
-	html.responsive .carousel_container.maincap .platforms {
-		display: none;
-	}
-
 	html.responsive .carousel_container.maincap .info {
 		background: linear-gradient(180deg, #0A141D 0%, rgba(10, 20, 29, 0.2) 100%);
 		min-height: 70px;
-	}
-
-	html.responsive .carousel_container.maincap .app_name {
-		display: block;
-		height: auto;
-	}
-
-	html.responsive .carousel_container.maincap .discount_block {
-		display: block;
-
-		position: relative;
-		bottom: initial;
-		left: initial;
-
-		font-size: 14px;
-		line-height: 21px;
-		padding: 6px;
 	}
 
 	html.responsive .carousel_container.maincap .responsive_app_menu_ctn {
@@ -4993,29 +5147,11 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	html.responsive .carousel_container.maincap .carousel_items {
 		display: block;
 		white-space: nowrap;
-		height: auto;
+		/* height: auto; */
 	}
 
 	html.responsive .carousel_container.maincap .carousel_items > * {
-		display: inline-block;
 		width: 100%;
-		height: auto;
-	}
-
-	html.responsive .carousel_container.maincap .capsule {
-		padding-top: 57.30519480519481%;
-		height: 0;
-		width: 100%;
-        overflow: hidden;
-	}
-
-	html.responsive .carousel_container.maincap {
-		height: auto;
-	}
-
-	html.responsive .carousel_container.spotlight .carousel_items:not(.no_paging),
-	html.responsive .carousel_container.paging_capsules .carousel_items:not(.no_paging){
-		padding-bottom: 0px;
 	}
 
 	html.responsive .top_new_releases_carousel .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
@@ -5024,10 +5160,6 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 
 	html.responsive .home_ctn.tab_container {
 		margin-top: 30px;
-	}
-
-	html.responsive .home_page_content.special_offers {
-		margin-bottom: 0;
 	}
 
 	/* hardware callouts */
@@ -5042,12 +5174,6 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		width: 100%;
 		max-width: 483px;
 		height: auto;
-	}
-
-	/* Nav buttons */
-	html.responsive .big_buttons {
-		margin-top: 0;
-		margin-bottom: 0;
 	}
 
 	html.responsive .steam_curators_ctn {
@@ -5071,17 +5197,8 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	}
 
 	/* Main cap */
-	html.responsive .carousel_container .carousel_items:not(.no_paging) > * {
-		opacity: 1;
-		pointer-events: auto;
-	}
-
 	html.responsive .store_main_capsule {
 		overflow: hidden;
-	}
-
-	html.responsive .store_main_capsule .capsule {
-		box-shadow: none;
 	}
 
 	/* takeover BG color in responsive mode */

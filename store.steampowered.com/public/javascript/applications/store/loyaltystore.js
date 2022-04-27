@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [40],
+  [56],
   {
     "++az": function (e, t, a) {
       e.exports =
@@ -78,45 +78,188 @@
     "+j4l": function (e, t, a) {
       "use strict";
       a.d(t, "e", function () {
-        return Ie;
+        return De;
       }),
         a.d(t, "c", function () {
-          return ye;
+          return xe;
         }),
         a.d(t, "d", function () {
-          return we;
+          return Pe;
         }),
         a.d(t, "b", function () {
-          return Me;
+          return Be;
         }),
         a.d(t, "a", function () {
-          return Xe;
+          return lt;
         });
-      var n = a("mrSG"),
-        r = a("q1tI"),
-        i = a.n(r),
-        o = a("qDk6"),
-        s = a("2vnA"),
-        l = a("TyAF"),
-        c = a("opsS"),
-        m = a("55Ip"),
-        d = a("oydz"),
-        p = a("Jqb/"),
-        u = a("TLQK"),
-        _ = a("prdU"),
-        f = (a("li7h"), a("OU48"), a("ka0M")),
-        g = a("X3Ds"),
-        h = a("lkRc"),
-        b = a("FwEH"),
-        C = a("pQ8y"),
-        I = a("r64O"),
-        y = a("StxQ"),
-        w = a("n4wG"),
-        M = a("1fPh"),
-        E = (a("mgoM"), a("6Y59")),
-        N = a("exH9");
-      let v = { success: !0, result: 1 };
-      class S {
+      var n,
+        r,
+        i = a("mrSG"),
+        o = a("q1tI"),
+        s = a.n(o),
+        l = a("qDk6"),
+        c = a("2vnA"),
+        m = a("TyAF"),
+        d = a("opsS"),
+        p = a("55Ip"),
+        u = a("oydz"),
+        _ = a("Jqb/"),
+        f = a("TLQK"),
+        g = a("prdU"),
+        h = (a("li7h"), a("OU48"), a("ka0M")),
+        b = a("X3Ds"),
+        C = a("lkRc"),
+        I = a("dI71"),
+        y = (a("17x9"), a("dRu9")),
+        w = a("0PSK");
+      var M = "out-in",
+        E = "in-out",
+        N = function (e, t, a) {
+          return function () {
+            var n;
+            e.props[t] && (n = e.props)[t].apply(n, arguments), a();
+          };
+        },
+        v =
+          (((n = {})[M] = function (e) {
+            var t = e.current,
+              a = e.changeState;
+            return s.a.cloneElement(t, {
+              in: !1,
+              onExited: N(t, "onExited", function () {
+                a(y.b, null);
+              }),
+            });
+          }),
+          (n[E] = function (e) {
+            var t = e.current,
+              a = e.changeState,
+              n = e.children;
+            return [
+              t,
+              s.a.cloneElement(n, {
+                in: !0,
+                onEntered: N(n, "onEntered", function () {
+                  a(y.b);
+                }),
+              }),
+            ];
+          }),
+          n),
+        S =
+          (((r = {})[M] = function (e) {
+            var t = e.children,
+              a = e.changeState;
+            return s.a.cloneElement(t, {
+              in: !0,
+              onEntered: N(t, "onEntered", function () {
+                a(y.a, s.a.cloneElement(t, { in: !0 }));
+              }),
+            });
+          }),
+          (r[E] = function (e) {
+            var t = e.current,
+              a = e.children,
+              n = e.changeState;
+            return [
+              s.a.cloneElement(t, {
+                in: !1,
+                onExited: N(t, "onExited", function () {
+                  n(y.a, s.a.cloneElement(a, { in: !0 }));
+                }),
+              }),
+              s.a.cloneElement(a, { in: !0 }),
+            ];
+          }),
+          r),
+        j = (function (e) {
+          function t() {
+            for (
+              var t, a = arguments.length, n = new Array(a), r = 0;
+              r < a;
+              r++
+            )
+              n[r] = arguments[r];
+            return (
+              ((t = e.call.apply(e, [this].concat(n)) || this).state = {
+                status: y.a,
+                current: null,
+              }),
+              (t.appeared = !1),
+              (t.changeState = function (e, a) {
+                void 0 === a && (a = t.state.current),
+                  t.setState({ status: e, current: a });
+              }),
+              t
+            );
+          }
+          Object(I.a)(t, e);
+          var a = t.prototype;
+          return (
+            (a.componentDidMount = function () {
+              this.appeared = !0;
+            }),
+            (t.getDerivedStateFromProps = function (e, t) {
+              return null == e.children
+                ? { current: null }
+                : t.status === y.b && e.mode === E
+                ? { status: y.b }
+                : !t.current ||
+                  ((a = t.current),
+                  (n = e.children),
+                  a === n ||
+                    (s.a.isValidElement(a) &&
+                      s.a.isValidElement(n) &&
+                      null != a.key &&
+                      a.key === n.key))
+                ? { current: s.a.cloneElement(e.children, { in: !0 }) }
+                : { status: y.c };
+              var a, n;
+            }),
+            (a.render = function () {
+              var e,
+                t = this.props,
+                a = t.children,
+                n = t.mode,
+                r = this.state,
+                i = r.status,
+                o = r.current,
+                l = {
+                  children: a,
+                  current: o,
+                  changeState: this.changeState,
+                  status: i,
+                };
+              switch (i) {
+                case y.b:
+                  e = S[n](l);
+                  break;
+                case y.c:
+                  e = v[n](l);
+                  break;
+                case y.a:
+                  e = o;
+              }
+              return s.a.createElement(
+                w.a.Provider,
+                { value: { isMounting: !this.appeared } },
+                e
+              );
+            }),
+            t
+          );
+        })(s.a.Component);
+      (j.propTypes = {}), (j.defaultProps = { mode: M });
+      var A = j,
+        O = a("pQ8y"),
+        D = a("r64O"),
+        x = a("StxQ"),
+        P = a("n4wG"),
+        B = a("1fPh"),
+        L = (a("mgoM"), a("6Y59")),
+        R = a("exH9");
+      let k = { success: !0, result: 1 };
+      class T {
         constructor() {
           (this.m_mapWaitingCallbacks = new Map()),
             (this.m_iCallSeq = 1),
@@ -158,8 +301,8 @@
           if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
             return !1;
           let a = Object.assign({}, e, {
-            universe: h.d.EUNIVERSE,
-            accountid: h.k.accountid,
+            universe: C.d.EUNIVERSE,
+            accountid: C.k.accountid,
           });
           void 0 !== t && (a.sequenceid = t);
           try {
@@ -229,9 +372,9 @@
           );
         }
       }
-      let j = new (class {
+      let G = new (class {
         constructor() {
-          (this.m_connection = new S()),
+          (this.m_connection = new T()),
             (this.m_bAllowAccountMismatch = !1),
             (this.m_mapCacheSubscribedApp = new Map());
         }
@@ -253,7 +396,7 @@
         }
         BClientConnected() {
           return this.m_connection.Connect().then(
-            () => v,
+            () => k,
             () => this.FailureResult()
           );
         }
@@ -300,8 +443,8 @@
         }
         BClientAccountMatches() {
           return (
-            !h.k.logged_in ||
-            h.k.accountid == this.m_connection.ClientInfo.unAccountID
+            !C.k.logged_in ||
+            C.k.accountid == this.m_connection.ClientInfo.unAccountID
           );
         }
         GenericEResultCall(e) {
@@ -312,50 +455,50 @@
                 ? this.m_connection
                     .SendMsgAndAwaitResponse(e)
                     .then((e) =>
-                      1 === e.success ? v : this.FailureResult(e.success)
+                      1 === e.success ? k : this.FailureResult(e.success)
                     )
                 : { success: !1, result: 19, account_mismatch: !0 }
             )
             .catch(() => this.FailureResult());
         }
       })();
-      window.ClientConnectionAPI = j;
-      var A = a("Uy/A"),
-        O = a.n(A),
-        D = a("bS9Q"),
-        x = a("YgaH"),
-        P = a("POwH"),
-        B = a.n(P),
-        L = a("YyVH");
-      function R(e, t, a) {
-        return h.d.COMMUNITY_CDN_ASSET_URL + e + "/roomeffects/" + t + "/" + a;
+      window.ClientConnectionAPI = G;
+      var z = a("Uy/A"),
+        F = a.n(z),
+        H = a("bS9Q"),
+        U = a("YgaH"),
+        V = a("POwH"),
+        Z = a.n(V),
+        W = a("YyVH");
+      function Q(e, t, a) {
+        return C.d.COMMUNITY_CDN_ASSET_URL + e + "/roomeffects/" + t + "/" + a;
       }
-      class k extends r.Component {
+      class Y extends o.Component {
         constructor(e) {
           super(e), (this.m_strSaleId = this.props.sale);
         }
         getAsset(e) {
-          return R(this.m_strSaleId, this.props.effect.name, e);
+          return Q(this.m_strSaleId, this.props.effect.name, e);
         }
       }
-      function T(e, t) {
+      function q(e, t) {
         !(function (e) {
-          const t = Object(r.useRef)({ bSet: !1 });
+          const t = Object(o.useRef)({ bSet: !1 });
           t.current.bSet || (t.current = { bSet: !0, value: e() }),
             t.current.value;
         })(() => setTimeout(e, t));
       }
-      const G = ({ msDelay: e, children: t }) =>
+      const J = ({ msDelay: e, children: t }) =>
         (function (e) {
-          const [t, a] = Object(r.useState)(!1);
-          return T(() => a(!0), e), t;
+          const [t, a] = Object(o.useState)(!1);
+          return q(() => a(!0), e), t;
         })(e)
-          ? i.a.createElement(i.a.Fragment, null, t)
+          ? s.a.createElement(s.a.Fragment, null, t)
           : null;
-      class z extends i.a.Component {
+      class X extends s.a.Component {
         constructor(e) {
           super(e),
-            (this.m_refContainer = i.a.createRef()),
+            (this.m_refContainer = s.a.createRef()),
             (this.m_rgFireworks = []),
             (this.m_nCurrentDelay = 0),
             (this.state = { bReady: !1 });
@@ -381,7 +524,7 @@
             this.AddCluster(e);
         }
         TestRender(e) {
-          Object(L.b)(0, 70), Object(L.b)(0, 70);
+          Object(W.b)(0, 70), Object(W.b)(0, 70);
           for (let t = 0; t < 1; t++)
             this.m_rgFireworks.push({
               x: "20%",
@@ -389,7 +532,7 @@
               nHueRotation: 0,
               nDelay: this.m_nCurrentDelay,
               flScale: e,
-              burst: F,
+              burst: K,
             }),
               (this.m_nCurrentDelay += 500);
           this.m_rgFireworks.push({
@@ -398,7 +541,7 @@
             nHueRotation: 0,
             nDelay: this.m_nCurrentDelay,
             flScale: e,
-            burst: H,
+            burst: $,
           }),
             this.m_rgFireworks.push({
               x: "30%",
@@ -406,17 +549,17 @@
               nHueRotation: 0,
               nDelay: this.m_nCurrentDelay,
               flScale: e,
-              burst: U,
+              burst: ee,
             });
         }
         CalcHueRotation() {
           return "lny2020" == this.props.sale
-            ? 360 + Object(L.b)(-30, 10)
-            : Object(L.b)(0, 360);
+            ? 360 + Object(W.b)(-30, 10)
+            : Object(W.b)(0, 360);
         }
         AddCluster(e) {
-          let t = Object(L.b)(-5, 50),
-            a = Object(L.b)(-10, 50),
+          let t = Object(W.b)(-5, 50),
+            a = Object(W.b)(-10, 50),
             n = this.CalcHueRotation();
           this.m_rgFireworks.push({
             x: `${t}%`,
@@ -424,7 +567,7 @@
             nHueRotation: n,
             nDelay: this.m_nCurrentDelay,
             flScale: e,
-            burst: H,
+            burst: $,
           });
           let r = Math.random() * Math.PI * 2;
           const i = Math.floor(64 * e),
@@ -442,14 +585,14 @@
                 nHueRotation: n,
                 nDelay: this.m_nCurrentDelay,
                 flScale: e,
-                burst: U,
+                burst: ee,
               }),
               (l += 2.09);
           }
         }
         RenderLong(e) {
-          const t = Object(L.b)(20, 60),
-            a = Object(L.b)(-5, 50),
+          const t = Object(W.b)(20, 60),
+            a = Object(W.b)(-5, 50),
             n = this.CalcHueRotation();
           this.m_rgFireworks.push({
             x: `${t}%`,
@@ -457,7 +600,7 @@
             nHueRotation: n,
             nDelay: this.m_nCurrentDelay,
             flScale: e,
-            burst: F,
+            burst: K,
           });
         }
         componentDidMount() {
@@ -466,8 +609,8 @@
           let e = this.m_refContainer.current,
             t = e.offsetWidth,
             a = e.offsetHeight,
-            n = Object(L.c)(t, 400, 1080, 0.5, 2);
-          (n = Object(L.a)(n, 0.5, 2)),
+            n = Object(W.c)(t, 400, 1080, 0.5, 2);
+          (n = Object(W.a)(n, 0.5, 2)),
             console.log(t, a, n),
             this.CreateFireworks(n),
             this.setState({ bReady: !0 });
@@ -484,7 +627,7 @@
                     filter: `hue-rotate(${t.nHueRotation}deg)`,
                   };
                 e.push(
-                  i.a.createElement(t.burst, {
+                  s.a.createElement(t.burst, {
                     key: n,
                     style: r,
                     msDelay: t.nDelay,
@@ -493,132 +636,132 @@
                   })
                 );
               }),
-            i.a.createElement(
+            s.a.createElement(
               "div",
-              { ref: this.m_refContainer, className: B.a.FireworkContainer },
+              { ref: this.m_refContainer, className: Z.a.FireworkContainer },
               e
             )
           );
         }
       }
-      function F(e) {
-        const t = R(e.sale, "fireworks", "long_sheet.png");
+      function K(e) {
+        const t = Q(e.sale, "fireworks", "long_sheet.png");
         let a = e.style;
         return (
           (a.backgroundImage = `url(${t})`),
           (a.width = 256),
           (a.height = 256),
-          (a.animation = `${B.a.fireworkLongX} 0.2s steps(9) 10, ${B.a.fireworkLongY} 2.0s steps(10) forwards`),
+          (a.animation = `${Z.a.fireworkLongX} 0.2s steps(9) 10, ${Z.a.fireworkLongY} 2.0s steps(10) forwards`),
           (a.transformOrigin = "0 0"),
           (a.transform = `scale( ${e.scale} )`),
-          i.a.createElement(
-            G,
+          s.a.createElement(
+            J,
             { msDelay: e.msDelay },
-            i.a.createElement("div", {
+            s.a.createElement("div", {
               style: e.style,
-              className: B.a.FireworkPNG,
+              className: Z.a.FireworkPNG,
             })
           )
         );
       }
-      function H(e) {
-        const t = R(e.sale, "fireworks", "big_sheet.png");
+      function $(e) {
+        const t = Q(e.sale, "fireworks", "big_sheet.png");
         let a = e.style;
         return (
           (a.backgroundImage = `url(${t})`),
           (a.width = 256),
           (a.height = 256),
-          (a.animation = `${B.a.fireworkBigX} 0.2s steps(9) 4, ${B.a.fireworkBigY} 0.8s steps(4) forwards`),
+          (a.animation = `${Z.a.fireworkBigX} 0.2s steps(9) 4, ${Z.a.fireworkBigY} 0.8s steps(4) forwards`),
           (a.transformOrigin = "0 0"),
           (a.transform = `scale( ${e.scale} )`),
-          i.a.createElement(
-            G,
+          s.a.createElement(
+            J,
             { msDelay: e.msDelay },
-            i.a.createElement("div", {
+            s.a.createElement("div", {
               style: e.style,
-              className: B.a.FireworkPNG,
+              className: Z.a.FireworkPNG,
             })
           )
         );
       }
-      function U(e) {
-        const t = R(e.sale, "fireworks", "small_sheet.png");
+      function ee(e) {
+        const t = Q(e.sale, "fireworks", "small_sheet.png");
         let a = e.style;
         return (
           (a.backgroundImage = `url(${t})`),
           (a.width = 256),
           (a.height = 256),
-          (a.animation = `${B.a.fireworkSmallX} 0.15s steps(10) 6, ${B.a.fireworkSmallY} 0.9s steps(6) forwards`),
+          (a.animation = `${Z.a.fireworkSmallX} 0.15s steps(10) 6, ${Z.a.fireworkSmallY} 0.9s steps(6) forwards`),
           (a.transformOrigin = "0 0"),
           (a.transform = `scale( ${e.scale / 2} )`),
-          i.a.createElement(
-            G,
+          s.a.createElement(
+            J,
             { msDelay: e.msDelay },
-            i.a.createElement("div", {
+            s.a.createElement("div", {
               style: e.style,
-              className: B.a.FireworkPNG,
+              className: Z.a.FireworkPNG,
             })
           )
         );
       }
-      var V = a("oet2");
-      class Z extends k {
+      var te = a("oet2");
+      class ae extends Y {
         constructor(e) {
           super(e),
-            (this.m_x = L.b(0, 70) + "%"),
-            (this.m_y = L.b(0, 70) + "%"),
+            (this.m_x = W.b(0, 70) + "%"),
+            (this.m_y = W.b(0, 70) + "%"),
             (this.m_nRotate = Math.floor(90 * Math.random()) - 45),
             (this.m_splatRots = [
               360 * Math.random(),
               360 * Math.random(),
               360 * Math.random(),
             ]),
-            (this.m_nPathAnimation = L.b(1, 6)),
-            (this.m_nKeyID = Z.sm_nUnique++),
+            (this.m_nPathAnimation = W.b(1, 6)),
+            (this.m_nKeyID = ae.sm_nUnique++),
             (this.m_strSaleId = "winter2019");
         }
         fragment(e, ...t) {
-          let a = t.map((e) => B.a[e]);
+          let a = t.map((e) => Z.a[e]);
           return (
-            a.push(B.a.snowball_fragment),
-            r.createElement("img", {
+            a.push(Z.a.snowball_fragment),
+            o.createElement("img", {
               src: this.getAsset(e),
               className: a.join(" "),
             })
           );
         }
         Snowball(e, t, ...a) {
-          let n = e < 0 ? B.a.SnowballImageCW : B.a.SnowballImageCCW;
+          let n = e < 0 ? Z.a.SnowballImageCW : Z.a.SnowballImageCCW;
           e > -5 && e < 5 && (n = "");
-          let i = a.map((e) => B.a[e]);
+          let r = a.map((e) => Z.a[e]);
           return (
-            i.push(B.a.snowball_fragment),
-            r.createElement(
+            r.push(Z.a.snowball_fragment),
+            o.createElement(
               "div",
-              { style: { display: "inline-block" }, className: i.join(" ") },
-              r.createElement("img", {
+              { style: { display: "inline-block" }, className: r.join(" ") },
+              o.createElement("img", {
                 style: { transform: "rotation( 360deg )" },
-                className: `${B.a.SnowballImage} ${n}`,
+                className: `${Z.a.SnowballImage} ${n}`,
                 src: this.getAsset(t),
               })
             )
           );
         }
         residue() {
-          return r.createElement(
-            r.Fragment,
+          return o.createElement(
+            o.Fragment,
             null,
-            r.createElement(
+            o.createElement(
               "div",
               { style: { transform: `rotate(${this.m_splatRots[0]}deg)` } },
               this.fragment("splat1.png", "snowball-residue")
             ),
-            r.createElement(
+            o.createElement(
               "div",
               { style: { transform: `rotate(${this.m_splatRots[1]}deg)` } },
               this.fragment("splat2.png", "snowball-residue")
             ),
-            r.createElement(
+            o.createElement(
               "div",
               { style: { transform: `rotate(${this.m_splatRots[2]}deg)` } },
               this.fragment("splat3.png", "snowball-residue")
@@ -627,17 +770,17 @@
         }
         render() {
           let e = `snowball-path-${this.m_nPathAnimation}`,
-            t = { animationName: B.a[e] };
-          return r.createElement(
-            r.Fragment,
+            t = { animationName: Z.a[e] };
+          return o.createElement(
+            o.Fragment,
             { key: `${this.m_nKeyID}` },
-            r.createElement(
+            o.createElement(
               "div",
-              { className: B.a["snowball-path"], style: t },
-              r.createElement(
+              { className: Z.a["snowball-path"], style: t },
+              o.createElement(
                 "div",
                 {
-                  className: B.a["snowball-container"],
+                  className: Z.a["snowball-container"],
                   style: {
                     left: this.m_x,
                     top: this.m_y,
@@ -674,39 +817,39 @@
           );
         }
       }
-      Z.sm_nUnique = 0;
-      var W = a("Kw0F");
-      function Q(e) {
+      ae.sm_nUnique = 0;
+      var ne = a("Kw0F");
+      function re(e) {
         const t = e.data,
-          a = R(e.sale, e.effect.name, `${t.strImage}.png`);
+          a = Q(e.sale, e.effect.name, `${t.strImage}.png`);
         let n = null;
         if (t.SOverlay) {
           const a = t.SOverlay
-              ? R(e.sale, e.effect.name, `${t.SOverlay.strImage}.png`)
+              ? Q(e.sale, e.effect.name, `${t.SOverlay.strImage}.png`)
               : null,
-            i = { animationDuration: `${t.SOverlay.nDuration}s` };
-          n = r.createElement("img", {
+            r = { animationDuration: `${t.SOverlay.nDuration}s` };
+          n = o.createElement("img", {
             src: a,
-            className: B.a[t.SOverlay.strClass],
-            style: i,
+            className: Z.a[t.SOverlay.strClass],
+            style: r,
           });
         }
-        let i = {
+        let r = {
           animationDuration: `${t.nDuration}s`,
-          animationName: B.a[t.strAnimation],
+          animationName: Z.a[t.strAnimation],
           marginLeft: `${t.nOffset}%`,
         };
-        return r.createElement(
+        return o.createElement(
           "div",
-          { style: i, className: B.a.balloons },
-          r.createElement("img", {
+          { style: r, className: Z.a.balloons },
+          o.createElement("img", {
             src: a,
             style: { maxWidth: "100%", position: "absolute" },
           }),
           n
         );
       }
-      class Y extends k {
+      class ie extends Y {
         constructor(e) {
           switch (
             (super(e),
@@ -727,7 +870,7 @@
                 "balloon_yellow",
               ];
           }
-          W.f(this.m_rgImages), this.GenerateBalloons();
+          ne.f(this.m_rgImages), this.GenerateBalloons();
         }
         GetNextImage() {
           let e = this.m_rgImages[this.m_nNextImage % this.m_rgImages.length];
@@ -735,8 +878,8 @@
         }
         GenerateDuration() {
           return (
-            parseFloat(B.a.balloonsDurationS) +
-            parseFloat(B.a.balloonsDurationJitterS) * Math.random()
+            parseFloat(Z.a.balloonsDurationS) +
+            parseFloat(Z.a.balloonsDurationJitterS) * Math.random()
           );
         }
         GenerateBalloons() {
@@ -744,19 +887,19 @@
             t = ["balloon_big_1", "balloon_big_2"];
           this.m_rgBalloons = [];
           for (let t of e) {
-            let e = L.b(-10, 10);
+            let e = W.b(-10, 10);
             this.m_rgBalloons.push(this.GenerateSingleBalloon(t, e));
           }
           let a = [70, 20];
-          W.f(a);
+          ne.f(a);
           let n = 20 == a[1];
           for (let e of t) {
-            let t = L.b(-10, 10) + a.pop();
+            let t = W.b(-10, 10) + a.pop();
             this.m_rgBalloons.push(this.GenerateSingleBalloon(e, t));
           }
-          let r = ["balloon_move_left", "balloon_move_right"][L.b(0, 1)];
+          let r = ["balloon_move_left", "balloon_move_right"][W.b(0, 1)];
           n && (r = "balloon_move_left");
-          let i = L.b(-10, 10);
+          let i = W.b(-10, 10);
           this.m_rgBalloons.push(this.GenerateSingleBalloon(r, i));
         }
         GenerateSingleBalloon(e, t) {
@@ -778,11 +921,11 @@
           );
         }
         render() {
-          return r.createElement(
-            r.Fragment,
+          return o.createElement(
+            o.Fragment,
             null,
             this.m_rgBalloons.map((e, t) =>
-              r.createElement(Q, {
+              o.createElement(re, {
                 key: `${t}`,
                 data: e,
                 effect: this.props.effect,
@@ -792,7 +935,7 @@
           );
         }
       }
-      class q {
+      class oe {
         constructor(e) {
           this.m_seed = e;
         }
@@ -801,179 +944,179 @@
           return e - Math.floor(e);
         }
       }
-      function J(e) {
-        const t = new q(e);
+      function se(e) {
+        const t = new oe(e);
         let a = 0.8 * t.next() + 0.5;
         const n = 10 * (t.next() + e) + 10 + "px",
-          i = {
+          r = {
             opacity: a,
             width: n,
             height: n,
             margin: 30 * t.next() + 15 + "px",
             filter: `hue-rotate(${90 * t.next() - 30}deg) saturate(100%)`,
           },
-          o = 1 + Math.floor(5 * t.next()),
+          i = 1 + Math.floor(5 * t.next()),
           s =
-            h.d.COMMUNITY_CDN_ASSET_URL +
-            `winter2019/roomeffects/96px/flake_${o}.png`;
-        return r.createElement("img", { style: i, src: s });
+            C.d.COMMUNITY_CDN_ASSET_URL +
+            `winter2019/roomeffects/96px/flake_${i}.png`;
+        return o.createElement("img", { style: r, src: s });
       }
-      const X = parseInt(B.a.balloonsDurationMaxMs),
-        K = parseInt(B.a.snowballDurationMs);
-      function $(e, t) {
+      const le = parseInt(Z.a.balloonsDurationMaxMs),
+        ce = parseInt(Z.a.snowballDurationMs);
+      function me(e, t) {
         return () => {
           const a =
-            h.d.COMMUNITY_CDN_ASSET_URL + t + "/roomeffects/96px/" + e + ".png";
-          return r.createElement("img", { style: { width: "100%" }, src: a });
+            C.d.COMMUNITY_CDN_ASSET_URL + t + "/roomeffects/96px/" + e + ".png";
+          return o.createElement("img", { style: { width: "100%" }, src: a });
         };
       }
-      function ee(e, t, a, n) {
+      function de(e, t, a, n) {
         return {
           timeout: a,
-          renderButton: $(e, t),
-          renderEffectIcon: $(e, t),
-          buttonToken: "#ChatEntryButton_Send" + D.e(e),
-          locToken: "#ChatRoom_RoomEffect" + D.e(e),
+          renderButton: me(e, t),
+          renderEffectIcon: me(e, t),
+          buttonToken: "#ChatEntryButton_Send" + H.e(e),
+          locToken: "#ChatRoom_RoomEffect" + H.e(e),
           render: n,
         };
       }
-      function te(e, t, a) {
-        return ee(e, "winter2019", t, a);
+      function pe(e, t, a) {
+        return de(e, "winter2019", t, a);
       }
-      const ae = {
-        lny2020_lanterns: ee("lny2020_lanterns", "lny2020", X, (e) =>
-          r.createElement(Y, { effect: e, sale: "lny2020" })
+      const ue = {
+        lny2020_lanterns: de("lny2020_lanterns", "lny2020", le, (e) =>
+          o.createElement(ie, { effect: e, sale: "lny2020" })
         ),
-        lny2020_firework: ee("lny2020_firework", "lny2020", 7e3, () =>
-          r.createElement(z, { sale: "lny2020" })
+        lny2020_firework: de("lny2020_firework", "lny2020", 7e3, () =>
+          o.createElement(X, { sale: "lny2020" })
         ),
-        lny2020_confetti: ee("lny2020_confetti", "lny2020", V.c, () =>
-          r.createElement(V.a, { eType: V.b.LNY2020 })
+        lny2020_confetti: de("lny2020_confetti", "lny2020", te.c, () =>
+          o.createElement(te.a, { eType: te.b.LNY2020 })
         ),
-        snowball: te("snowball", K, (e) =>
-          r.createElement(Z, { effect: e, sale: "winter2019" })
+        snowball: pe("snowball", ce, (e) =>
+          o.createElement(ae, { effect: e, sale: "winter2019" })
         ),
-        balloons: te("balloons", X, (e) =>
-          r.createElement(Y, { effect: e, sale: "winter2019" })
+        balloons: pe("balloons", le, (e) =>
+          o.createElement(ie, { effect: e, sale: "winter2019" })
         ),
-        confetti: te("confetti", V.c, () =>
-          r.createElement(V.a, { eType: V.b.Default })
+        confetti: pe("confetti", te.c, () =>
+          o.createElement(te.a, { eType: te.b.Default })
         ),
-        goldfetti: te("goldfetti", V.c, () =>
-          r.createElement(V.a, { eType: V.b.Gold })
+        goldfetti: pe("goldfetti", te.c, () =>
+          o.createElement(te.a, { eType: te.b.Gold })
         ),
-        firework: te("firework", 7e3, () =>
-          r.createElement(z, { sale: "winter2019" })
+        firework: pe("firework", 7e3, () =>
+          o.createElement(X, { sale: "winter2019" })
         ),
-        snow: te("snow", 1e4, function (e) {
+        snow: pe("snow", 1e4, function (e) {
           const t = [],
-            a = new q(e.timestamp);
+            a = new oe(e.timestamp);
           for (let n = 0; n < 150; n++) {
-            const i = a.next(),
-              o = {
+            const r = a.next(),
+              i = {
                 left: 100 * a.next() + "%",
-                animationDuration: 3 * (1 - i) + 4 + "s",
-                animationDelay: `${i + 4 * a.next()}s`,
+                animationDuration: 3 * (1 - r) + 4 + "s",
+                animationDelay: `${r + 4 * a.next()}s`,
               };
             t.push(
-              r.createElement(
+              o.createElement(
                 "div",
                 {
                   key: e.timestamp + "_" + n,
-                  style: o,
-                  className: Object(N.a)(
-                    B.a.Snowflake,
-                    B.a["Snowflake-" + (n % 20)]
+                  style: i,
+                  className: Object(R.a)(
+                    Z.a.Snowflake,
+                    Z.a["Snowflake-" + (n % 20)]
                   ),
                 },
-                J(i),
-                J(i + 1)
+                se(r),
+                se(r + 1)
               )
             );
           }
-          return r.createElement(r.Fragment, null, " ", t, " ");
+          return o.createElement(o.Fragment, null, " ", t, " ");
         }),
       };
-      let ne = class extends r.Component {
+      let _e = class extends o.Component {
         render() {
-          return r.createElement(
+          return o.createElement(
             "div",
-            { className: B.a["animation-container"] },
+            { className: Z.a["animation-container"] },
             this.props.effectManager.m_rgRunningEffects.map((e) =>
-              r.createElement(r.Fragment, { key: e.timestamp }, e.render())
+              o.createElement(o.Fragment, { key: e.timestamp }, e.render())
             )
           );
         }
       };
-      ne = Object(n.b)([l.a], ne);
-      var re = a("cOvF"),
-        ie = a("Gpul"),
-        oe = (a("jUCX"), a("oFam"), a("qD+2")),
-        se = a("0OaU"),
-        le = a("ehaW"),
-        ce = a("9+KW");
-      function me(e) {
+      _e = Object(i.b)([m.a], _e);
+      var fe = a("cOvF"),
+        ge = a("Gpul"),
+        he = (a("jUCX"), a("oFam"), a("qD+2")),
+        be = a("0OaU"),
+        Ce = a("ehaW"),
+        Ie = a("9+KW");
+      function ye(e) {
         const { link: t, className: a } = e,
-          r = Object(n.c)(e, ["link", "className"]),
-          [o, s] = i.a.useState(!1);
-        return i.a.createElement(
+          n = Object(i.c)(e, ["link", "className"]),
+          [r, o] = s.a.useState(!1);
+        return s.a.createElement(
           "div",
           {
-            title: Object(u.f)("#ToolTip_CopyLinkToClipboard"),
-            className: Object(N.a)(ce.Button, a),
+            title: Object(f.f)("#ToolTip_CopyLinkToClipboard"),
+            className: Object(R.a)(Ie.Button, a),
             onClick: () =>
               (() => {
                 const e = document.createElement("input");
                 (e.value = t),
-                  (e.className = ce.HiddenInput),
+                  (e.className = Ie.HiddenInput),
                   document.body.appendChild(e),
                   e.select(),
                   e.ownerDocument.execCommand("copy"),
                   document.body.removeChild(e),
-                  s(!0);
+                  o(!0);
               })(),
           },
-          i.a.createElement(
-            re.t,
-            Object.assign({}, r, {
-              className: Object(N.a)(ce.Icon),
-              "data-flash": o ? 1 : 0,
-              onAnimationEnd: () => s(!1),
+          s.a.createElement(
+            fe.t,
+            Object.assign({}, n, {
+              className: Object(R.a)(Ie.Icon),
+              "data-flash": r ? 1 : 0,
+              onAnimationEnd: () => o(!1),
             })
           )
         );
       }
-      var de = a("qbgq"),
-        pe = a("26vX");
-      function ue(e) {
+      var we = a("qbgq"),
+        Me = a("26vX");
+      function Ee(e) {
         return (t) => {
           var { className: a } = t,
-            r = Object(n.c)(t, ["className"]);
-          return i.a.createElement(
-            de.a,
-            Object.assign({ className: Object(N.a)(e, a) }, r)
+            n = Object(i.c)(t, ["className"]);
+          return s.a.createElement(
+            we.a,
+            Object.assign({ className: Object(R.a)(e, a) }, n)
           );
         };
       }
-      const _e = ue(pe.GrayButton),
-        fe = ue(pe.BlueButton),
-        ge = ue(pe.GreenButton);
-      var he = a("mw7S"),
-        be = a("RV7a"),
-        Ce = (a("sOw0"), a("Jz9t"));
-      function Ie(e, t, a, n) {
+      const Ne = Ee(Me.GrayButton),
+        ve = Ee(Me.BlueButton),
+        Se = Ee(Me.GreenButton);
+      var je = a("mw7S"),
+        Ae = a("RV7a"),
+        Oe = (a("sOw0"), a("Jz9t"));
+      function De(e, t, a, n) {
         const r = {
           type: 1,
           rewardDefinition: t,
           itemLevel: a,
           desiredItemLevel: a,
         };
-        Object(f.b)(
-          i.a.createElement(ve, { definition: r, saleitem: n }),
-          e ? Object(g.o)(e) : window
+        Object(h.b)(
+          s.a.createElement(ke, { definition: r, saleitem: n }),
+          e ? Object(b.o)(e) : window
         );
       }
-      function ye(e, t, a, n) {
+      function xe(e, t, a, n) {
         const r = {
           type: 3,
           profileCustomizationType: t,
@@ -981,43 +1124,43 @@
           itemLevel: n,
           desiredItemLevel: n,
         };
-        Object(f.b)(
-          i.a.createElement(ve, { definition: r }),
-          e ? Object(g.o)(e) : window
+        Object(h.b)(
+          s.a.createElement(ke, { definition: r }),
+          e ? Object(b.o)(e) : window
         );
       }
-      function we(e, t, a, n) {
+      function Pe(e, t, a, n) {
         const r = {
           type: 2,
           profileCustomizationType: t,
           itemLevel: a,
           desiredItemLevel: n,
         };
-        Object(f.b)(
-          i.a.createElement(ve, { definition: r }),
-          e ? Object(g.o)(e) : window
+        Object(h.b)(
+          s.a.createElement(ke, { definition: r }),
+          e ? Object(b.o)(e) : window
         );
       }
-      function Me(e, t) {
+      function Be(e, t) {
         const a = { type: 1, rewardDefinition: t };
-        Object(f.b)(
-          i.a.createElement(Se, { definition: a }),
-          e ? Object(g.o)(e) : window
+        Object(h.b)(
+          s.a.createElement(Te, { definition: a }),
+          e ? Object(b.o)(e) : window
         );
       }
-      function Ee(e) {
+      function Le(e) {
         switch (e.type) {
           case 1:
-            return _.b.Get().BCanRedeemPointsForItem(e.rewardDefinition);
+            return g.b.Get().BCanRedeemPointsForItem(e.rewardDefinition);
           case 2:
-            return _.b
+            return g.b
               .Get()
               .BCanRedeemPointsForProfileShowcaseUpgrade(
                 e.profileCustomizationType,
                 e.itemLevel
               );
           case 3:
-            return _.b
+            return g.b
               .Get()
               .BCanRedeemPointsForProfileShowcaseSlot(
                 e.profileCustomizationType,
@@ -1026,24 +1169,24 @@
         }
         return !1;
       }
-      function Ne(e) {
+      function Re(e) {
         switch (e.type) {
           case 1:
             if (1 == e.rewardDefinition.community_item_class)
-              return _.b.Get().GetCostToLevelSeasonalBadge(e.itemLevel || 0);
+              return g.b.Get().GetCostToLevelSeasonalBadge(e.itemLevel || 0);
             if (5 == e.rewardDefinition.type || 6 == e.rewardDefinition.type) {
-              return _.b.Get().GetBundleOfferForUser(e.rewardDefinition)
+              return g.b.Get().GetBundleOfferForUser(e.rewardDefinition)
                 .point_cost;
             }
             return parseInt(e.rewardDefinition.point_cost);
           case 2:
-            return _.b.Get().GetUpgradableProfileShowcaseCost();
+            return g.b.Get().GetUpgradableProfileShowcaseCost();
           case 3:
-            return _.b.Get().GetPurchasableProfileShowcaseSlotCost();
+            return g.b.Get().GetPurchasableProfileShowcaseSlotCost();
         }
         return 0;
       }
-      let ve = class extends i.a.Component {
+      let ke = class extends s.a.Component {
         constructor(e) {
           super(e),
             (this.m_bShowTransitions = !1),
@@ -1060,16 +1203,16 @@
           if (1 == this.m_mutableObjDefinition.type) {
             const e = this.m_mutableObjDefinition.rewardDefinition
               .bundle_defids;
-            Object(s.M)(
+            Object(c.M)(
               () =>
                 !e ||
                 0 == e.length ||
-                _.b.Get().GetRewardDefinitions(...e).length > 0
+                g.b.Get().GetRewardDefinitions(...e).length > 0
             )
               .then(() => {
                 let t = [];
                 if (0 != (null == e ? void 0 : e.length)) {
-                  t = _.b
+                  t = g.b
                     .Get()
                     .GetRewardDefinitions(...e)
                     .map((e) => e.appid);
@@ -1077,7 +1220,7 @@
                   t.push(this.m_mutableObjDefinition.rewardDefinition.appid);
                 let a = Array.from(new Set(t));
                 return Promise.all(
-                  a.map((e) => _.b.Get().EnsureCommunityItemInventoryLoaded(e))
+                  a.map((e) => g.b.Get().EnsureCommunityItemInventoryLoaded(e))
                 );
               })
               .then(() => this.SetInitialState());
@@ -1094,7 +1237,7 @@
               : this.BSkipToEquip()
               ? (this.setState({ step: "equip" }),
                 (this.m_bShowTransitions = !1))
-              : _.b.Get().BIsLoggedIn() && !this.BCanRedeemPointsForItem()
+              : g.b.Get().BIsLoggedIn() && !this.BCanRedeemPointsForItem()
               ? (this.setState({ step: "cantredeemforapp" }),
                 this.ShowError(),
                 (this.m_bShowTransitions = !1))
@@ -1107,38 +1250,38 @@
               : this.setState({ step: "redeem" }));
         }
         BIsFreeSaleRewardItem() {
-          return this.props.saleitem && _.b.Get().BIsSaleActive();
+          return this.props.saleitem && g.b.Get().BIsSaleActive();
         }
         BCanRedeemPointsForItem() {
-          return Ee(this.props.definition);
+          return Le(this.props.definition);
         }
         BSkipToCantAfford() {
           if (
             2 == this.props.definition.type ||
             3 == this.props.definition.type
           )
-            return _.b.Get().BIsLoggedIn() && !this.BCanAffordItem();
+            return g.b.Get().BIsLoggedIn() && !this.BCanAffordItem();
           const e =
-            _.b
+            g.b
               .Get()
               .BRewardOwnedByUser(this.props.definition.rewardDefinition) &&
             2 != this.props.definition.rewardDefinition.type;
-          return _.b.Get().BIsLoggedIn() && !e && !this.BCanAffordItem();
+          return g.b.Get().BIsLoggedIn() && !e && !this.BCanAffordItem();
         }
         BAlreadyEquipped() {
           return (function (e) {
             switch (e.type) {
               case 1:
-                return _.b.Get().BRewardEquippedByUser(e.rewardDefinition);
+                return g.b.Get().BRewardEquippedByUser(e.rewardDefinition);
               case 2:
-                return !_.b
+                return !g.b
                   .Get()
                   .BCanRedeemPointsForProfileShowcaseUpgrade(
                     e.profileCustomizationType,
                     e.itemLevel
                   );
               case 3:
-                return !_.b
+                return !g.b
                   .Get()
                   .BCanRedeemPointsForProfileShowcaseSlot(
                     e.profileCustomizationType,
@@ -1153,12 +1296,12 @@
             2 != this.props.definition.type &&
             3 != this.props.definition.type &&
             !(
-              !_.b
+              !g.b
                 .Get()
                 .BRewardOwnedByUser(this.props.definition.rewardDefinition) ||
               !(
                 (2 == this.props.definition.rewardDefinition.type &&
-                  _.b.Get().GetUserSeasonalBadgeLevel() >=
+                  g.b.Get().GetUserSeasonalBadgeLevel() >=
                     this.props.definition.itemLevel) ||
                 1 == this.props.definition.rewardDefinition.type ||
                 5 == this.props.definition.rewardDefinition.type ||
@@ -1168,21 +1311,21 @@
           );
         }
         GetPointCost() {
-          return Ne(this.props.definition);
+          return Re(this.props.definition);
         }
         BCanAffordItem() {
           return (
-            _.b.Get().GetPointsAvailable().getLowBits() >= this.GetPointCost()
+            g.b.Get().GetPointsAvailable().getLowBits() >= this.GetPointCost()
           );
         }
         ShowGenericError() {
           this.ShowError(
-            Object(u.m)(
+            Object(f.m)(
               "#Redeem_Error_Generic",
-              i.a.createElement(
+              s.a.createElement(
                 "a",
-                { href: h.d.HELP_BASE_URL },
-                Object(u.f)("#Redeem_Error_SteamSupport")
+                { href: C.d.HELP_BASE_URL },
+                Object(f.f)("#Redeem_Error_SteamSupport")
               )
             )
           );
@@ -1193,10 +1336,10 @@
         }
         RedeemPoints() {
           if (!this.state.requestInProgress) {
-            if (!_.b.Get().BIsLoggedIn())
+            if (!g.b.Get().BIsLoggedIn())
               return (
                 this.CloseModal(),
-                void _.b
+                void g.b
                   .Get()
                   .ShowLoginDialog(
                     this.props.definition.rewardDefinition
@@ -1214,13 +1357,13 @@
                   case 5:
                   case 6:
                     this.BIsFreeSaleRewardItem()
-                      ? _.c
+                      ? g.c
                           .Get()
                           .ClaimFreeSaleItem()
                           .then((e) => {
                             var t;
                             1 == e.eResult
-                              ? ((this.m_mutableObjDefinition.rewardDefinition = _.c
+                              ? ((this.m_mutableObjDefinition.rewardDefinition = g.c
                                   .Get()
                                   .GetClaimedSaleRewardItemDef()),
                                 this.setState({
@@ -1236,7 +1379,7 @@
                               : this.ShowGenericError();
                           })
                           .catch(this.ShowGenericError)
-                      : _.b
+                      : g.b
                           .Get()
                           .RedeemPointsForItem(
                             this.props.definition.rewardDefinition.defid,
@@ -1255,7 +1398,7 @@
                           .catch(this.ShowGenericError);
                     break;
                   case 4:
-                    _.b
+                    g.b
                       .Get()
                       .RedeemPointsForCoupon(
                         this.props.definition.rewardDefinition.defid
@@ -1273,10 +1416,10 @@
                   case 2: {
                     let e = Math.max(
                       this.props.definition.itemLevel -
-                        _.b.Get().GetUserSeasonalBadgeLevel(),
+                        g.b.Get().GetUserSeasonalBadgeLevel(),
                       1
                     );
-                    _.b
+                    g.b
                       .Get()
                       .RedeemPointsForBadge(
                         this.props.definition.rewardDefinition.defid,
@@ -1297,7 +1440,7 @@
                 }
                 break;
               case 2:
-                _.b
+                g.b
                   .Get()
                   .RedeemPointsForProfileShowcaseUpgrade(
                     this.props.definition.profileCustomizationType,
@@ -1314,7 +1457,7 @@
                   .catch(this.ShowGenericError);
                 break;
               case 3:
-                _.b
+                g.b
                   .Get()
                   .RedeemPointsForProfileShowcase(
                     this.props.definition.profileCustomizationType
@@ -1336,43 +1479,43 @@
           let e = null;
           switch (this.props.definition.rewardDefinition.community_item_class) {
             case 3:
-              e = _.b
+              e = g.b
                 .Get()
                 .SetProfileBackground(this.props.definition.rewardDefinition);
               break;
             case 14:
-              e = _.b
+              e = g.b
                 .Get()
                 .SetAvatarFrame(this.props.definition.rewardDefinition);
               break;
             case 15:
-              e = _.b
+              e = g.b
                 .Get()
                 .SetAnimatedAvatar(this.props.definition.rewardDefinition);
               break;
             case 13:
-              e = _.b
+              e = g.b
                 .Get()
                 .SetMiniProfileBackground(
                   this.props.definition.rewardDefinition
                 );
               break;
             case 8:
-              e = _.b
+              e = g.b
                 .Get()
                 .ActivateProfileModifier(
                   this.props.definition.rewardDefinition
                 );
               break;
             case 16:
-              e = _.b
+              e = g.b
                 .Get()
                 .SetSteamDeckKeyboardSkin(
                   this.props.definition.rewardDefinition
                 );
               break;
             default:
-              return void Object(I.a)(
+              return void Object(D.a)(
                 !1,
                 `Missing equip handler for item class ${this.props.definition.rewardDefinition.community_item_class}`
               );
@@ -1389,18 +1532,18 @@
         render() {
           var e;
           let t = {
-            enter: d.RedeemModalEnter,
-            enterActive: d.RedeemModalEnterActive,
-            exit: d.RedeemModalExit,
-            exitActive: d.RedeemModalExitActive,
+            enter: u.RedeemModalEnter,
+            enterActive: u.RedeemModalEnterActive,
+            exit: u.RedeemModalExit,
+            exitActive: u.RedeemModalExitActive,
           };
           if ("loading" == this.state.step) return null;
-          const a = Ae(this.props.definition),
-            n = De(this.props.definition),
+          const a = ze(this.props.definition),
+            n = He(this.props.definition),
             r = this.props.definition.rewardDefinition
-              ? oe.a.GetAppInfo(this.props.definition.rewardDefinition.appid)
+              ? he.a.GetAppInfo(this.props.definition.rewardDefinition.appid)
               : null,
-            o = [1, 5, 6].includes(
+            i = [1, 5, 6].includes(
               null === (e = this.props.definition.rewardDefinition) ||
                 void 0 === e
                 ? void 0
@@ -1408,36 +1551,36 @@
             )
               ? `${document.location}/reward/${this.props.definition.rewardDefinition.defid}`
               : null;
-          return i.a.createElement(
-            ct,
+          return s.a.createElement(
+            It,
             { onEscKeypress: this.CloseModal, destructive: this.state.error },
-            i.a.createElement(
-              p.d,
+            s.a.createElement(
+              _.d,
               { navID: "RedeemPoints", closeModal: this.CloseModal },
-              i.a.createElement(
-                Ce.b,
+              s.a.createElement(
+                Oe.b,
                 null,
-                i.a.createElement(
-                  mt,
+                s.a.createElement(
+                  yt,
                   null,
-                  i.a.createElement(je, {
+                  s.a.createElement(Ge, {
                     itemName: a,
                     itemClassName: n,
-                    itemLink: o,
+                    itemLink: i,
                     appInfo: r,
                     onRequestClose: this.CloseModal,
                   }),
                   this.m_strError &&
-                    i.a.createElement(
+                    s.a.createElement(
                       "div",
-                      { className: d.ErrorContainer },
+                      { className: u.ErrorContainer },
                       this.m_strError
                     ),
-                  i.a.createElement(
-                    b.a,
+                  s.a.createElement(
+                    A,
                     null,
-                    i.a.createElement(
-                      C.a,
+                    s.a.createElement(
+                      O.a,
                       {
                         key: this.state.step,
                         enter: this.m_bShowTransitions,
@@ -1445,7 +1588,7 @@
                         classNames: t,
                         timeout: 500,
                       },
-                      i.a.createElement(Ye, {
+                      s.a.createElement(it, {
                         definition: this.m_mutableObjDefinition,
                         closeModal: this.CloseModal,
                         redeemPoints: this.RedeemPoints,
@@ -1461,40 +1604,40 @@
           );
         }
       };
-      Object(n.b)([c.b], ve.prototype, "ShowGenericError", null),
-        Object(n.b)([c.b], ve.prototype, "ShowError", null),
-        Object(n.b)([c.b], ve.prototype, "RedeemPoints", null),
-        Object(n.b)([c.b], ve.prototype, "EquipItem", null),
-        Object(n.b)([c.b], ve.prototype, "CloseModal", null),
-        (ve = Object(n.b)([l.a], ve));
-      const Se = (e) => {
+      Object(i.b)([d.b], ke.prototype, "ShowGenericError", null),
+        Object(i.b)([d.b], ke.prototype, "ShowError", null),
+        Object(i.b)([d.b], ke.prototype, "RedeemPoints", null),
+        Object(i.b)([d.b], ke.prototype, "EquipItem", null),
+        Object(i.b)([d.b], ke.prototype, "CloseModal", null),
+        (ke = Object(i.b)([m.a], ke));
+      const Te = (e) => {
           const { definition: t, closeModal: a } = e,
             n = () => {},
             r = t.rewardDefinition
-              ? oe.a.GetAppInfo(t.rewardDefinition.appid)
+              ? he.a.GetAppInfo(t.rewardDefinition.appid)
               : null;
-          return i.a.createElement(
-            ct,
+          return s.a.createElement(
+            It,
             { onEscKeypress: a },
-            i.a.createElement(
-              p.d,
+            s.a.createElement(
+              _.d,
               { navID: "RedeemPointsPreview", closeModal: a },
-              i.a.createElement(
-                Ce.b,
+              s.a.createElement(
+                Oe.b,
                 null,
-                i.a.createElement(
+                s.a.createElement(
                   "div",
                   null,
-                  i.a.createElement(
-                    mt,
+                  s.a.createElement(
+                    yt,
                     null,
-                    i.a.createElement(je, {
-                      itemName: Ae(t),
-                      itemClassName: De(t),
+                    s.a.createElement(Ge, {
+                      itemName: ze(t),
+                      itemClassName: He(t),
                       appInfo: r,
                       onRequestClose: a,
                     }),
-                    i.a.createElement(Ye, {
+                    s.a.createElement(it, {
                       definition: t,
                       closeModal: a,
                       redeemPoints: n,
@@ -1508,8 +1651,8 @@
             )
           );
         },
-        je = Object(
-          l.a
+        Ge = Object(
+          m.a
         )(
           ({
             itemName: e,
@@ -1518,37 +1661,37 @@
             appInfo: n,
             onRequestClose: r,
           }) =>
-            i.a.createElement(
+            s.a.createElement(
               "div",
-              { className: d.HeaderContainer },
-              i.a.createElement(
+              { className: u.HeaderContainer },
+              s.a.createElement(
                 "div",
-                { className: d.Left },
-                i.a.createElement(
+                { className: u.Left },
+                s.a.createElement(
                   "div",
-                  { className: d.Header },
+                  { className: u.Header },
                   e,
                   a &&
-                    i.a.createElement(me, {
+                    s.a.createElement(ye, {
                       link: a,
                       style: { marginLeft: "8px" },
                     })
                 ),
-                i.a.createElement("div", { className: d.SubHeader }, t),
+                s.a.createElement("div", { className: u.SubHeader }, t),
                 n &&
-                  i.a.createElement(
-                    m.b,
-                    { to: `${M.b.LoyaltyStore()}/app/` + n.appid, onClick: r },
-                    i.a.createElement(
+                  s.a.createElement(
+                    p.b,
+                    { to: `${B.b.LoyaltyStore()}/app/` + n.appid, onClick: r },
+                    s.a.createElement(
                       "div",
-                      { className: d.SubHeaderAppContainer },
-                      i.a.createElement("img", {
-                        className: d.AppIcon,
+                      { className: u.SubHeaderAppContainer },
+                      s.a.createElement("img", {
+                        className: u.AppIcon,
                         src: n.icon_url,
                       }),
-                      i.a.createElement(
+                      s.a.createElement(
                         "div",
-                        { className: d.SubHeader },
+                        { className: u.SubHeader },
                         " ",
                         n.name,
                         " "
@@ -1556,59 +1699,59 @@
                     )
                   )
               ),
-              _.b.Get().BIsLoggedIn() &&
-                i.a.createElement(
+              g.b.Get().BIsLoggedIn() &&
+                s.a.createElement(
                   "div",
-                  { className: d.PointsContainer },
-                  i.a.createElement(E.O, { className: d.Icon }),
-                  i.a.createElement(
+                  { className: u.PointsContainer },
+                  s.a.createElement(L.O, { className: u.Icon }),
+                  s.a.createElement(
                     "div",
-                    { className: d.BalanceColumn },
-                    i.a.createElement(
+                    { className: u.BalanceColumn },
+                    s.a.createElement(
                       "div",
-                      { className: d.Balance },
-                      Object(u.f)("#YourBalance")
+                      { className: u.Balance },
+                      Object(f.f)("#YourBalance")
                     ),
-                    i.a.createElement(
+                    s.a.createElement(
                       "div",
-                      { className: d.CurrentPoints },
-                      _.b
+                      { className: u.CurrentPoints },
+                      g.b
                         .Get()
                         .GetPointsAvailable()
                         .getLowBits()
-                        .toLocaleString(u.e.GetPreferredLocales())
+                        .toLocaleString(f.e.GetPreferredLocales())
                     )
                   )
                 )
             )
         ),
-        Ae = (e) =>
+        ze = (e) =>
           2 == e.type || 3 == e.type
-            ? Object(u.f)(
+            ? Object(f.f)(
                 "#ProfileShowcases_ShowcaseName",
-                Object(u.f)(
+                Object(f.f)(
                   "#ProfileShowcases_Type_" + e.profileCustomizationType
                 )
               )
-            : Oe(e.rewardDefinition),
-        Oe = (e) => {
+            : Fe(e.rewardDefinition),
+        Fe = (e) => {
           if (1 == e.type)
             return (
-              Object(I.a)(
+              Object(D.a)(
                 e.community_item_data,
                 `Missing community item data for virtual item ${e.defid}`
               ),
               e.community_item_data.item_title
             );
-          if (2 == e.type) return Object(u.f)("#Redeem_Badge_PrestigeBadge");
+          if (2 == e.type) return Object(f.f)("#Redeem_Badge_PrestigeBadge");
           if (5 == e.type) return e.community_item_data.item_title;
           if (6 == e.type) {
-            const t = oe.a.GetAppInfo(e.appid).name || "";
-            return Object(u.f)("#RewardBundle_AutoGeneratedBundleName", t);
+            const t = he.a.GetAppInfo(e.appid).name || "";
+            return Object(f.f)("#RewardBundle_AutoGeneratedBundleName", t);
           }
           return "Unknown";
         },
-        De = (e) => {
+        He = (e) => {
           var t;
           const {
             type: a,
@@ -1618,86 +1761,86 @@
           } = e;
           switch (a) {
             case 2:
-              return Ee(e)
-                ? Object(u.f)("#ProfileShowcases_UpgradeLevel", n, r)
-                : Object(u.f)("#ProfileShowcases_UpgradeAtMaxLevel", n);
+              return Le(e)
+                ? Object(f.f)("#ProfileShowcases_UpgradeLevel", n, r)
+                : Object(f.f)("#ProfileShowcases_UpgradeAtMaxLevel", n);
             case 3:
-              return Object(u.f)("#ProfileShowcases_AdditionalSlot");
+              return Object(f.f)("#ProfileShowcases_AdditionalSlot");
             case 1:
               if (1 == i.type || 2 == i.type)
-                return i.appid != _.b.Get().GetCurrentSeasonalAppID() &&
+                return i.appid != g.b.Get().GetCurrentSeasonalAppID() &&
                   8 == i.community_item_class &&
                   0 !=
                     (null === (t = i.bundle_defids) || void 0 === t
                       ? void 0
                       : t.length)
-                  ? Object(u.f)("#RewardItemType_ProfileBundle")
-                  : Object(_.d)(i.community_item_class);
+                  ? Object(f.f)("#RewardItemType_ProfileBundle")
+                  : Object(g.d)(i.community_item_class);
               if (5 == i.type || 6 == i.type)
-                return Object(u.f)("#RewardItemType_Bundle");
+                return Object(f.f)("#RewardItemType_Bundle");
           }
           return "";
         },
-        xe =
-          (Object(l.a)((e) => {
+        Ue =
+          (Object(m.a)((e) => {
             const { animatedAvatar: t, persona: a, strClassName: n } = e,
               r = {
                 size: "FillArea",
                 statusPosition: "none",
-                className: Object(N.a)(n, d.playerAvatar),
+                className: Object(R.a)(n, u.playerAvatar),
               };
-            return i.a.createElement(
-              ie.c,
+            return s.a.createElement(
+              ge.c,
               Object.assign({ persona: a, animatedAvatar: t }, r)
             );
           }),
-          Object(l.a)((e) => {
+          Object(m.a)((e) => {
             const {
                 animatedAvatar: t,
                 avatarFrame: a,
                 persona: n,
                 className: r,
-                strAnimatedAvatarClassName: o,
+                strAnimatedAvatarClassName: i,
               } = e,
-              s = {
+              o = {
                 size: "FillArea",
                 statusPosition: "none",
-                className: Object(N.a)(o, d.playerAvatar),
+                className: Object(R.a)(i, u.playerAvatar),
               };
-            return i.a.createElement(
+            return s.a.createElement(
               "div",
               { className: r },
-              i.a.createElement(
-                ie.c,
-                Object.assign({ persona: n, animatedAvatar: t }, s),
-                i.a.createElement(ie.b, { profileItem: a })
+              s.a.createElement(
+                ge.c,
+                Object.assign({ persona: n, animatedAvatar: t }, o),
+                s.a.createElement(ge.b, { profileItem: a })
               )
             );
           }));
-      class Pe extends i.a.Component {
+      class Ve extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_Chat")
+            ? Object(f.f)("#Redeem_Equip_Chat")
             : "saleitem" == this.props.step
-            ? i.a.createElement(
+            ? s.a.createElement(
                 "div",
                 null,
-                Object(u.f)("#LunarSale2022_Redeem_Desc1"),
-                i.a.createElement("br", null),
-                i.a.createElement("br", null),
-                Object(u.f)("#LunarSale2022_Redeem_Desc2")
+                Object(f.f)("#LunarSale2022_Redeem_Desc1"),
+                s.a.createElement("br", null),
+                s.a.createElement("br", null),
+                Object(f.f)("#LunarSale2022_Redeem_Desc2")
               )
-            : Object(u.f)("#Redeem_UsePoints_Sticker");
+            : Object(f.f)("#Redeem_UsePoints_Sticker");
         }
         GetModalPreview() {
           if ("saleitem" == this.props.step)
-            return i.a.createElement(
-              rt,
-              { className: d.PreviewSummerSaleCtn, step: this.props.step },
-              i.a.createElement("img", {
-                className: d.SaleRewardImg,
+            return s.a.createElement(
+              ft,
+              { className: u.PreviewSummerSaleCtn, step: this.props.step },
+              s.a.createElement("img", {
+                className: u.SaleRewardImg,
                 alt: "Free Sale Item",
-                src: O.a,
+                src: F.a,
               })
             );
           {
@@ -1705,7 +1848,7 @@
             let t = {
                 backgroundImage:
                   "url(" +
-                  h.d.MEDIA_CDN_COMMUNITY_URL +
+                  C.d.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   e.appid +
                   "/" +
@@ -1713,36 +1856,36 @@
                   ")",
               },
               a =
-                h.d.MEDIA_CDN_COMMUNITY_URL +
+                C.d.MEDIA_CDN_COMMUNITY_URL +
                 "images/items/" +
                 e.appid +
                 "/" +
                 e.community_item_data.item_image_large;
-            return i.a.createElement(
-              rt,
-              { className: d.PreviewChat, step: this.props.step },
-              i.a.createElement("div", { className: d.LargePreview, style: t }),
-              i.a.createElement(it, { icon: a })
+            return s.a.createElement(
+              ft,
+              { className: u.PreviewChat, step: this.props.step },
+              s.a.createElement("div", { className: u.LargePreview, style: t }),
+              s.a.createElement(gt, { icon: a })
             );
           }
         }
         render() {
-          return i.a.createElement(
-            lt,
+          return s.a.createElement(
+            Ct,
             {
-              className: Object(N.a)(
-                d.StickerPreviewContainer,
-                d.ChatPreviewContainer
+              className: Object(R.a)(
+                u.StickerPreviewContainer,
+                u.ChatPreviewContainer
               ),
             },
             this.GetModalPreview(),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -1750,22 +1893,22 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              i.a.createElement(Ke, { closeModal: this.props.closeModal })
+              s.a.createElement(ct, { closeModal: this.props.closeModal })
             )
           );
         }
       }
-      class Be extends i.a.Component {
+      class Ze extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_Profile")
+            ? Object(f.f)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-            ? i.a.createElement(
+            ? s.a.createElement(
                 "div",
-                { className: d.EquippedDesc },
-                Object(u.m)(
+                { className: u.EquippedDesc },
+                Object(f.m)(
                   "#Redeem_Equipped_Background",
-                  i.a.createElement(
+                  s.a.createElement(
                     "span",
                     null,
                     this.props.definition.rewardDefinition.community_item_data
@@ -1773,49 +1916,49 @@
                   )
                 )
               )
-            : Object(u.f)("#Redeem_UsePoints_Background");
+            : Object(f.f)("#Redeem_UsePoints_Background");
         }
         GetPreview() {
           const e = this.props.definition.rewardDefinition;
           let t = {
               backgroundImage:
                 "url(" +
-                h.d.MEDIA_CDN_COMMUNITY_URL +
+                C.d.MEDIA_CDN_COMMUNITY_URL +
                 "images/items/" +
                 e.appid +
                 "/" +
                 e.community_item_data.item_image_large +
                 ")",
             },
-            a = i.a.createElement("div", {
-              className: d.LargePreview,
+            a = s.a.createElement("div", {
+              className: u.LargePreview,
               style: t,
             });
           if (e.community_item_data.animated) {
             let t = e.community_item_data.item_movie_webm,
               n = e.community_item_data.item_movie_mp4;
-            a = i.a.createElement(
+            a = s.a.createElement(
               "video",
               {
-                className: d.VideoPreview,
+                className: u.VideoPreview,
                 playsInline: !0,
                 loop: !0,
                 muted: !0,
                 autoPlay: !0,
                 controls: !1,
               },
-              i.a.createElement("source", {
+              s.a.createElement("source", {
                 src:
-                  h.d.MEDIA_CDN_COMMUNITY_URL +
+                  C.d.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   e.appid +
                   "/" +
                   t,
                 type: "video/webm",
               }),
-              i.a.createElement("source", {
+              s.a.createElement("source", {
                 src:
-                  h.d.MEDIA_CDN_COMMUNITY_URL +
+                  C.d.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   e.appid +
                   "/" +
@@ -1828,34 +1971,34 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement($e, {
+            ? s.a.createElement(mt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
-          return i.a.createElement(
-            lt,
-            { className: d.BackgroundPreviewContainer },
-            i.a.createElement(
-              rt,
+          return s.a.createElement(
+            Ct,
+            { className: u.BackgroundPreviewContainer },
+            s.a.createElement(
+              ft,
               {
-                className: d.PreviewBackgroundContainer,
+                className: u.PreviewBackgroundContainer,
                 step: this.props.step,
               },
-              i.a.createElement("div", { className: d.PreviewBackground }),
+              s.a.createElement("div", { className: u.PreviewBackground }),
               this.GetPreview()
             ),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -1868,16 +2011,16 @@
           );
         }
       }
-      class Le extends i.a.Component {
+      class We extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_Chat")
-            : Object(u.f)("#Redeem_UsePoints_Emoticon");
+            ? Object(f.f)("#Redeem_Equip_Chat")
+            : Object(f.f)("#Redeem_UsePoints_Emoticon");
         }
         render() {
           const e = this.props.definition.rewardDefinition;
           let t =
-              h.d.MEDIA_CDN_COMMUNITY_URL +
+              C.d.MEDIA_CDN_COMMUNITY_URL +
               "images/items/" +
               e.appid +
               "/" +
@@ -1885,49 +2028,49 @@
             a = {
               backgroundImage:
                 "url(" +
-                h.d.MEDIA_CDN_COMMUNITY_URL +
+                C.d.MEDIA_CDN_COMMUNITY_URL +
                 "images/items/" +
                 e.appid +
                 "/" +
                 e.community_item_data.item_image_large +
                 ")",
             };
-          return i.a.createElement(
-            lt,
+          return s.a.createElement(
+            Ct,
             {
-              className: Object(N.a)(
-                d.EmoticonPreviewContainer,
-                d.ChatPreviewContainer
+              className: Object(R.a)(
+                u.EmoticonPreviewContainer,
+                u.ChatPreviewContainer
               ),
             },
-            i.a.createElement(
-              rt,
-              { className: d.PreviewChat, step: this.props.step },
-              i.a.createElement(
+            s.a.createElement(
+              ft,
+              { className: u.PreviewChat, step: this.props.step },
+              s.a.createElement(
                 "div",
-                { className: d.LargePreviewContainer },
-                i.a.createElement("div", {
-                  className: d.LargePreview,
+                { className: u.LargePreviewContainer },
+                s.a.createElement("div", {
+                  className: u.LargePreview,
                   style: a,
                 }),
-                i.a.createElement("div", {
-                  className: d.LargePreview,
+                s.a.createElement("div", {
+                  className: u.LargePreview,
                   style: a,
                 }),
-                i.a.createElement("div", {
-                  className: d.LargePreview,
+                s.a.createElement("div", {
+                  className: u.LargePreview,
                   style: a,
                 })
               ),
-              i.a.createElement(it, { icon: t })
+              s.a.createElement(gt, { icon: t })
             ),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -1935,20 +2078,20 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              i.a.createElement(Ke, { closeModal: this.props.closeModal })
+              s.a.createElement(ct, { closeModal: this.props.closeModal })
             )
           );
         }
       }
-      let Re = class extends i.a.Component {
+      let Qe = class extends s.a.Component {
         constructor() {
-          super(...arguments), (this.m_manager = new x.a(ae));
+          super(...arguments), (this.m_manager = new U.a(ue));
         }
         GetEffectTypeForDefinition() {
           return this.props.definition.rewardDefinition.internal_description;
         }
         GetEffectConfig() {
-          return ae[this.GetEffectTypeForDefinition()];
+          return ue[this.GetEffectTypeForDefinition()];
         }
         componentDidMount() {
           const e = this.GetEffectTypeForDefinition();
@@ -1963,35 +2106,35 @@
         }
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_Chat")
-            : Object(u.f)("#Redeem_UsePoints_ChatEffect");
+            ? Object(f.f)("#Redeem_Equip_Chat")
+            : Object(f.f)("#Redeem_UsePoints_ChatEffect");
         }
         render() {
-          return i.a.createElement(
-            lt,
+          return s.a.createElement(
+            Ct,
             {
-              className: Object(N.a)(
-                d.EmoticonPreviewContainer,
-                d.ChatPreviewContainer
+              className: Object(R.a)(
+                u.EmoticonPreviewContainer,
+                u.ChatPreviewContainer
               ),
             },
-            i.a.createElement(
-              rt,
-              { className: d.PreviewChat, step: this.props.step },
-              i.a.createElement(
+            s.a.createElement(
+              ft,
+              { className: u.PreviewChat, step: this.props.step },
+              s.a.createElement(
                 "div",
-                { className: d.PreviewEffectContainer },
-                i.a.createElement(ne, { effectManager: this.m_manager })
+                { className: u.PreviewEffectContainer },
+                s.a.createElement(_e, { effectManager: this.m_manager })
               ),
-              i.a.createElement(it, null, this.GetEffectConfig().renderButton())
+              s.a.createElement(gt, null, this.GetEffectConfig().renderButton())
             ),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -1999,23 +2142,23 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              i.a.createElement(Ke, { closeModal: this.props.closeModal })
+              s.a.createElement(ct, { closeModal: this.props.closeModal })
             )
           );
         }
       };
-      Re = Object(n.b)([l.a], Re);
-      class ke extends i.a.Component {
+      Qe = Object(i.b)([m.a], Qe);
+      class Ye extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_Profile")
+            ? Object(f.f)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-            ? i.a.createElement(
+            ? s.a.createElement(
                 "div",
-                { className: d.EquippedDesc },
-                Object(u.m)(
+                { className: u.EquippedDesc },
+                Object(f.m)(
                   "#Redeem_Equipped_MiniProfile",
-                  i.a.createElement(
+                  s.a.createElement(
                     "span",
                     null,
                     this.props.definition.rewardDefinition.community_item_data
@@ -2023,45 +2166,45 @@
                   )
                 )
               )
-            : Object(u.f)("#Redeem_UsePoints_MiniProfile");
+            : Object(f.f)("#Redeem_UsePoints_MiniProfile");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement($e, {
+            ? s.a.createElement(mt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? i.a.createElement(
-                _e,
+            ? s.a.createElement(
+                Ne,
                 { onClick: this.props.closeModal },
-                Object(u.f)("#Button_Close")
+                Object(f.f)("#Button_Close")
               )
             : null;
         }
         render() {
           const e = this.props.definition.rewardDefinition;
-          let t = _.b.Get().GetEquippedItems(),
-            a = _.b.Get().GetPersonaState(),
-            n = i.a.createElement(xe, {
+          let t = g.b.Get().GetEquippedItems(),
+            a = g.b.Get().GetPersonaState(),
+            n = s.a.createElement(Ue, {
               animatedAvatar: t.animated_avatar,
               persona: a,
               avatarFrame: t.avatar_frame,
-              className: d.CurrentAvatar,
+              className: u.CurrentAvatar,
             });
-          return i.a.createElement(
-            lt,
-            { className: d.MiniProfilePreviewContainer },
-            i.a.createElement(
-              rt,
+          return s.a.createElement(
+            Ct,
+            { className: u.MiniProfilePreviewContainer },
+            s.a.createElement(
+              ft,
               {
-                className: d.PreviewBackgroundContainer,
+                className: u.PreviewBackgroundContainer,
                 step: this.props.step,
               },
-              i.a.createElement(
+              s.a.createElement(
                 "div",
-                { className: d.ProfileContainer },
-                i.a.createElement(
+                { className: u.ProfileContainer },
+                s.a.createElement(
                   "video",
                   {
                     width: "100%",
@@ -2071,18 +2214,18 @@
                     autoPlay: !0,
                     controls: !1,
                   },
-                  i.a.createElement("source", {
+                  s.a.createElement("source", {
                     src:
-                      h.d.MEDIA_CDN_COMMUNITY_URL +
+                      C.d.MEDIA_CDN_COMMUNITY_URL +
                       "images/items/" +
                       e.appid +
                       "/" +
                       e.community_item_data.item_movie_webm,
                     type: "video/webm",
                   }),
-                  i.a.createElement("source", {
+                  s.a.createElement("source", {
                     src:
-                      h.d.MEDIA_CDN_COMMUNITY_URL +
+                      C.d.MEDIA_CDN_COMMUNITY_URL +
                       "images/items/" +
                       e.appid +
                       "/" +
@@ -2090,26 +2233,26 @@
                     type: "video/mp4",
                   })
                 ),
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: d.ProfileImage },
-                  _.b.Get().BIsLoggedIn() && n
+                  { className: u.ProfileImage },
+                  g.b.Get().BIsLoggedIn() && n
                 ),
-                i.a.createElement("div", {
-                  className: Object(N.a)(
-                    d.ImageBlur,
+                s.a.createElement("div", {
+                  className: Object(R.a)(
+                    u.ImageBlur,
                     "miniprofile_backdropblur"
                   ),
                 })
               )
             ),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -2122,17 +2265,17 @@
           );
         }
       }
-      class Te extends i.a.Component {
+      class qe extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_Profile")
+            ? Object(f.f)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-            ? i.a.createElement(
+            ? s.a.createElement(
                 "div",
-                { className: d.EquippedDesc },
-                Object(u.m)(
+                { className: u.EquippedDesc },
+                Object(f.m)(
                   "#Redeem_Equipped_AvatarFrame",
-                  i.a.createElement(
+                  s.a.createElement(
                     "span",
                     null,
                     this.props.definition.rewardDefinition.community_item_data
@@ -2140,22 +2283,22 @@
                   )
                 )
               )
-            : Object(u.f)("#Redeem_UsePoints_AvatarFrame");
+            : Object(f.f)("#Redeem_UsePoints_AvatarFrame");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement($e, {
+            ? s.a.createElement(mt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
           const e = this.props.definition.rewardDefinition;
-          let t = _.b.Get().GetEquippedItems(),
-            a = _.b.Get().GetPersonaState(),
+          let t = g.b.Get().GetEquippedItems(),
+            a = g.b.Get().GetPersonaState(),
             n = {
               appid: e.appid,
               image_small:
@@ -2164,60 +2307,60 @@
                 "/" +
                 e.community_item_data.item_image_small,
             },
-            r = i.a.createElement(xe, {
+            r = s.a.createElement(Ue, {
               animatedAvatar: t.animated_avatar,
               persona: a,
               avatarFrame: n,
-              strAnimatedAvatarClassName: d.CurrentAvatar,
+              strAnimatedAvatarClassName: u.CurrentAvatar,
             }),
-            o = null;
+            i = null;
           return (
             "equipped" != this.props.step &&
-              _.b.Get().BIsLoggedIn() &&
-              (o = i.a.createElement(
+              g.b.Get().BIsLoggedIn() &&
+              (i = s.a.createElement(
                 "div",
-                { className: d.CurrentlyEquippedAvatarAndFrame },
-                i.a.createElement(xe, {
-                  className: d.PreviewCurrentAvatar,
+                { className: u.CurrentlyEquippedAvatarAndFrame },
+                s.a.createElement(Ue, {
+                  className: u.PreviewCurrentAvatar,
                   animatedAvatar: t.animated_avatar,
                   persona: a,
                   avatarFrame: t.avatar_frame,
-                  strAnimatedAvatarClassName: d.CurrentAvatar,
+                  strAnimatedAvatarClassName: u.CurrentAvatar,
                 }),
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: d.CurrentlyEquippedAvatarAndFrameDesc },
-                  Object(u.f)("#Redeem_Equipped_CurrentAvatarFrame")
+                  { className: u.CurrentlyEquippedAvatarAndFrameDesc },
+                  Object(f.f)("#Redeem_Equipped_CurrentAvatarFrame")
                 )
               )),
-            i.a.createElement(
-              lt,
-              { className: d.AvatarPreviewContainer },
-              i.a.createElement(
-                rt,
+            s.a.createElement(
+              Ct,
+              { className: u.AvatarPreviewContainer },
+              s.a.createElement(
+                ft,
                 {
-                  className: Object(N.a)(d.PreviewBackgroundContainer, d.Frame),
+                  className: Object(R.a)(u.PreviewBackgroundContainer, u.Frame),
                   step: this.props.step,
                 },
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: Object(N.a)(d.ItemPreview, d.TopAvatar) },
+                  { className: Object(R.a)(u.ItemPreview, u.TopAvatar) },
                   r
                 ),
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: Object(N.a)(d.ItemPreview, d.BottomAvatar) },
+                  { className: Object(R.a)(u.ItemPreview, u.BottomAvatar) },
                   r
                 )
               ),
-              o,
-              i.a.createElement(st, {
+              i,
+              s.a.createElement(bt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              i.a.createElement(
-                nt,
+              s.a.createElement(
+                _t,
                 {
                   bRequestInProgress: this.props.bRequestInProgress,
                   definition: this.props.definition,
@@ -2231,17 +2374,17 @@
           );
         }
       }
-      class Ge extends i.a.Component {
+      class Je extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_AnimatedAvatar")
+            ? Object(f.f)("#Redeem_Equip_AnimatedAvatar")
             : "equipped" == this.props.step
-            ? i.a.createElement(
+            ? s.a.createElement(
                 "div",
-                { className: d.EquippedDesc },
-                Object(u.m)(
+                { className: u.EquippedDesc },
+                Object(f.m)(
                   "#Redeem_Equipped_AnimatedAvatar",
-                  i.a.createElement(
+                  s.a.createElement(
                     "span",
                     null,
                     this.props.definition.rewardDefinition.community_item_data
@@ -2249,22 +2392,22 @@
                   )
                 )
               )
-            : Object(u.f)("#Redeem_UsePoints_AnimatedAvatar");
+            : Object(f.f)("#Redeem_UsePoints_AnimatedAvatar");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement($e, {
+            ? s.a.createElement(mt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
           const e = this.props.definition.rewardDefinition;
-          let t = _.b.Get().GetEquippedItems(),
-            a = _.b.Get().GetPersonaState(),
+          let t = g.b.Get().GetEquippedItems(),
+            a = g.b.Get().GetPersonaState(),
             n = {
               appid: e.appid,
               image_small:
@@ -2273,63 +2416,63 @@
                 "/" +
                 e.community_item_data.item_image_small,
             },
-            r = i.a.createElement(xe, {
+            r = s.a.createElement(Ue, {
               animatedAvatar: n,
               persona: a,
               avatarFrame: t.avatar_frame,
-              strAnimatedAvatarClassName: d.CurrentAvatar,
+              strAnimatedAvatarClassName: u.CurrentAvatar,
             }),
-            o = null;
+            i = null;
           return (
             "equipped" != this.props.step &&
-              _.b.Get().BIsLoggedIn() &&
-              (o = i.a.createElement(
+              g.b.Get().BIsLoggedIn() &&
+              (i = s.a.createElement(
                 "div",
-                { className: d.CurrentlyEquippedAvatarAndFrame },
-                i.a.createElement(xe, {
-                  className: d.PreviewCurrentAvatar,
+                { className: u.CurrentlyEquippedAvatarAndFrame },
+                s.a.createElement(Ue, {
+                  className: u.PreviewCurrentAvatar,
                   animatedAvatar: t.animated_avatar,
                   persona: a,
                   avatarFrame: t.avatar_frame,
-                  strAnimatedAvatarClassName: d.CurrentAvatar,
+                  strAnimatedAvatarClassName: u.CurrentAvatar,
                 }),
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: d.CurrentlyEquippedAvatarAndFrameDesc },
-                  Object(u.f)("#Redeem_Equipped_CurrentAvatar")
+                  { className: u.CurrentlyEquippedAvatarAndFrameDesc },
+                  Object(f.f)("#Redeem_Equipped_CurrentAvatar")
                 )
               )),
-            i.a.createElement(
-              lt,
-              { className: d.AvatarPreviewContainer },
-              i.a.createElement(
-                rt,
+            s.a.createElement(
+              Ct,
+              { className: u.AvatarPreviewContainer },
+              s.a.createElement(
+                ft,
                 {
-                  className: Object(N.a)(
-                    d.PreviewBackgroundContainer,
-                    d.Animated
+                  className: Object(R.a)(
+                    u.PreviewBackgroundContainer,
+                    u.Animated
                   ),
                   step: this.props.step,
                 },
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: Object(N.a)(d.ItemPreview, d.TopAvatar) },
+                  { className: Object(R.a)(u.ItemPreview, u.TopAvatar) },
                   r
                 ),
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: Object(N.a)(d.ItemPreview, d.BottomAvatar) },
+                  { className: Object(R.a)(u.ItemPreview, u.BottomAvatar) },
                   r
                 )
               ),
-              o,
-              i.a.createElement(st, {
+              i,
+              s.a.createElement(bt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              i.a.createElement(
-                nt,
+              s.a.createElement(
+                _t,
                 {
                   bRequestInProgress: this.props.bRequestInProgress,
                   definition: this.props.definition,
@@ -2343,15 +2486,15 @@
           );
         }
       }
-      class ze extends i.a.Component {
+      class Xe extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_SteamDeckKeyboardSkin")
-            : Object(u.f)("#Redeem_UsePoints_SteamDeckKeyboardSkin");
+            ? Object(f.f)("#Redeem_Equip_SteamDeckKeyboardSkin")
+            : Object(f.f)("#Redeem_UsePoints_SteamDeckKeyboardSkin");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement($e, {
+            ? s.a.createElement(mt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
@@ -2360,29 +2503,29 @@
         render() {
           const e = this.props.definition.rewardDefinition;
           let t =
-            h.d.MEDIA_CDN_COMMUNITY_URL +
+            C.d.MEDIA_CDN_COMMUNITY_URL +
             "images/items/" +
             e.appid +
             "/" +
             e.community_item_data.item_image_large;
-          return i.a.createElement(
-            lt,
-            { className: Object(N.a)(d.KeyboardSkinPreviewContainer) },
-            i.a.createElement(
-              rt,
-              { className: d.LargePreview, step: this.props.step },
-              i.a.createElement("img", {
-                className: d.KeyboardPreviewImg,
+          return s.a.createElement(
+            Ct,
+            { className: Object(R.a)(u.KeyboardSkinPreviewContainer) },
+            s.a.createElement(
+              ft,
+              { className: u.LargePreview, step: this.props.step },
+              s.a.createElement("img", {
+                className: u.KeyboardPreviewImg,
                 src: t,
               })
             ),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -2395,67 +2538,67 @@
           );
         }
       }
-      let Fe = class extends i.a.Component {
+      let Ke = class extends s.a.Component {
         GetDescription() {
-          return Object(u.f)("#Redeem_UsePoints_Badge");
+          return Object(f.f)("#Redeem_UsePoints_Badge");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         GetPreviewForLevel() {
-          let e = _.b.Get().GetUserSeasonalBadgeLevel();
+          let e = g.b.Get().GetUserSeasonalBadgeLevel();
           return "equip" == this.props.step
-            ? i.a.createElement(ot, {
+            ? s.a.createElement(ht, {
                 definition: this.props.definition.rewardDefinition,
                 badgeLevel: e,
-                title: Object(u.f)("#Redeem_Badge_CurrentLevel"),
+                title: Object(f.f)("#Redeem_Badge_CurrentLevel"),
               })
             : 0 == e
-            ? i.a.createElement(ot, {
+            ? s.a.createElement(ht, {
                 definition: this.props.definition.rewardDefinition,
                 badgeLevel: this.props.definition.itemLevel,
-                title: Object(u.f)("#Redeem_Badge_AfterPoints"),
+                title: Object(f.f)("#Redeem_Badge_AfterPoints"),
               })
-            : i.a.createElement(
-                i.a.Fragment,
+            : s.a.createElement(
+                s.a.Fragment,
                 null,
-                i.a.createElement(ot, {
+                s.a.createElement(ht, {
                   definition: this.props.definition.rewardDefinition,
                   badgeLevel: e,
-                  title: Object(u.f)("#Redeem_Badge_CurrentLevel"),
+                  title: Object(f.f)("#Redeem_Badge_CurrentLevel"),
                 }),
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: Object(N.a)(d.BadgeColumn, d.ArrowColumn) },
-                  i.a.createElement("div", { className: d.BlueArrow })
+                  { className: Object(R.a)(u.BadgeColumn, u.ArrowColumn) },
+                  s.a.createElement("div", { className: u.BlueArrow })
                 ),
-                i.a.createElement(ot, {
+                s.a.createElement(ht, {
                   definition: this.props.definition.rewardDefinition,
                   badgeLevel: this.props.definition.itemLevel,
-                  title: Object(u.f)("#Redeem_Badge_AfterPoints"),
+                  title: Object(f.f)("#Redeem_Badge_AfterPoints"),
                 })
               );
         }
         render() {
           return this.props.definition.rewardDefinition.community_item_data
             .badge_data[this.props.definition.itemLevel - 1]
-            ? i.a.createElement(
-                lt,
-                { className: d.BadgeItemContainer },
-                i.a.createElement(
-                  rt,
-                  { className: d.BadgePreviewContainer },
+            ? s.a.createElement(
+                Ct,
+                { className: u.BadgeItemContainer },
+                s.a.createElement(
+                  ft,
+                  { className: u.BadgePreviewContainer },
                   this.GetPreviewForLevel()
                 ),
-                i.a.createElement(st, {
+                s.a.createElement(bt, {
                   definition: this.props.definition,
                   step: this.props.step,
                   description: this.GetDescription(),
                 }),
-                i.a.createElement(
-                  nt,
+                s.a.createElement(
+                  _t,
                   {
                     bRequestInProgress: this.props.bRequestInProgress,
                     definition: this.props.definition,
@@ -2472,38 +2615,38 @@
               null);
         }
       };
-      Fe = Object(n.b)([l.a], Fe);
-      class He extends i.a.Component {
+      Ke = Object(i.b)([m.a], Ke);
+      class $e extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_Coupon")
-            : Object(u.f)("#Redeem_UsePoints_Coupon");
+            ? Object(f.f)("#Redeem_Equip_Coupon")
+            : Object(f.f)("#Redeem_UsePoints_Coupon");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement($e, {
+            ? s.a.createElement(mt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
-          return i.a.createElement(
-            lt,
-            { className: d.CouponPreviewContainer },
-            i.a.createElement(rt, {
-              className: d.PreviewBackgroundContainer,
+          return s.a.createElement(
+            Ct,
+            { className: u.CouponPreviewContainer },
+            s.a.createElement(ft, {
+              className: u.PreviewBackgroundContainer,
               step: this.props.step,
             }),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -2516,30 +2659,30 @@
           );
         }
       }
-      class Ue extends i.a.Component {
+      class et extends s.a.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_GoldenProfile")
+            ? Object(f.f)("#Redeem_Equip_GoldenProfile")
             : "equipped" == this.props.step
-            ? Object(u.f)("#Redeem_Equipped_GoldenProfile")
-            : Object(u.f)("#Redeem_UsePoints_GoldenProfile");
+            ? Object(f.f)("#Redeem_Equipped_GoldenProfile")
+            : Object(f.f)("#Redeem_UsePoints_GoldenProfile");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement($e, {
+            ? s.a.createElement(mt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
           var e;
           const { definition: t } = this.props;
-          let a = _.b.Get().GetPersonaState(),
-            n = _.b.Get().GetEquippedItems(),
-            r = _.b
+          let a = g.b.Get().GetPersonaState(),
+            n = g.b.Get().GetEquippedItems(),
+            r = g.b
               .Get()
               .GetGoldenProfileConfigForApp(t.rewardDefinition.appid);
           if (
@@ -2552,7 +2695,7 @@
             return null;
           if (!r) {
             r = { appid: t.rewardDefinition.appid, frame: "" };
-            let e = _.b
+            let e = g.b
               .Get()
               .GetRewardDefinitions(...t.rewardDefinition.bundle_defids)
               .filter((e) => 14 == e.community_item_class);
@@ -2563,43 +2706,43 @@
                 "/" +
                 e[0].community_item_data.item_image_small);
           }
-          let o = { image_small: r.frame };
-          return i.a.createElement(
-            lt,
-            { className: d.GoldenProfileContainer },
-            i.a.createElement(
-              rt,
+          let i = { image_small: r.frame };
+          return s.a.createElement(
+            Ct,
+            { className: u.GoldenProfileContainer },
+            s.a.createElement(
+              ft,
               {
-                className: d.GoldenProfilePreviewContainer,
+                className: u.GoldenProfilePreviewContainer,
                 step: this.props.step,
               },
-              i.a.createElement(
+              s.a.createElement(
                 "div",
-                { className: d.AvatarContainer },
-                i.a.createElement(ie.a, {
+                { className: u.AvatarContainer },
+                s.a.createElement(ge.a, {
                   size: "FillArea",
-                  className: d.CurrentAvatar,
+                  className: u.CurrentAvatar,
                   persona: a,
                   animatedAvatar: n.animated_avatar,
-                  avatarFrame: o,
+                  avatarFrame: i,
                 })
               )
             ),
-            i.a.createElement(
-              st,
+            s.a.createElement(
+              bt,
               {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               },
-              i.a.createElement(
-                qe,
+              s.a.createElement(
+                ot,
                 null,
-                Object(u.f)("#Redeem_GoldenProfile_Expiration")
+                Object(f.f)("#Redeem_GoldenProfile_Expiration")
               )
             ),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -2612,7 +2755,7 @@
           );
         }
       }
-      class Ve extends i.a.Component {
+      class tt extends s.a.Component {
         constructor(e) {
           super(e),
             (this.OnProfileFrameResized = (e) => {
@@ -2632,93 +2775,93 @@
           this.setState({ bLoadedIFrame: !0 });
         }
         GetDescription() {
-          const e = Object(u.f)(
+          const e = Object(f.f)(
             "#ProfileShowcases_Type_" +
               this.props.definition.profileCustomizationType
           );
           if ("equipped" == this.props.step)
             return 2 == this.props.definition.type
-              ? Object(u.f)(
+              ? Object(f.f)(
                   "#Redeem_Equipped_ProfileShowcaseUpgraded",
                   e,
                   this.props.definition.itemLevel
                 )
-              : Object(u.f)("#Redeem_Equipped_ProfileShowcaseSlotPurchased", e);
+              : Object(f.f)("#Redeem_Equipped_ProfileShowcaseSlotPurchased", e);
           if (2 == this.props.definition.type)
-            return Object(u.f)(
+            return Object(f.f)(
               "#Redeem_UsePoints_ProfileShowcaseUpgrade",
               this.props.definition.desiredItemLevel
             );
-          const t = _.b.Get().GetMaxProfileShowcaseSlots();
-          return Object(u.f)("#Redeem_UsePoints_ProfileShowcaseSlot", e, t + 1);
+          const t = g.b.Get().GetMaxProfileShowcaseSlots();
+          return Object(f.f)("#Redeem_UsePoints_ProfileShowcaseSlot", e, t + 1);
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? i.a.createElement($e, {
+            ? s.a.createElement(mt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         GetProfileSteamID() {
-          return _.b.Get().BIsLoggedIn()
-            ? h.k.steamid
-            : 2 == h.d.EUNIVERSE
+          return g.b.Get().BIsLoggedIn()
+            ? C.k.steamid
+            : 2 == C.d.EUNIVERSE
             ? "148618792083695825"
             : "76561197960266962";
         }
         render() {
           const e = this.state.bLoadedIFrame;
-          let t = Object(le.b)(this.props.definition.profileCustomizationType);
+          let t = Object(Ce.b)(this.props.definition.profileCustomizationType);
           const a = this.props.definition.profileCustomizationType,
             n = Math.min(
               this.props.definition.desiredItemLevel
                 ? this.props.definition.desiredItemLevel
                 : this.props.definition.itemLevel,
-              _.b.Get().GetMaxProfileShowcaseUpgradeLevel()
+              g.b.Get().GetMaxProfileShowcaseUpgradeLevel()
             ),
             r = 0.5 * this.state.iframeHeight;
-          return i.a.createElement(
-            lt,
-            { className: d.ProfileShowcaseContainer },
-            i.a.createElement(
-              rt,
+          return s.a.createElement(
+            Ct,
+            { className: u.ProfileShowcaseContainer },
+            s.a.createElement(
+              ft,
               {
-                className: Object(N.a)(
-                  d.ProfileShowcasePreviewContainer,
-                  e ? d.LoadedPreview : d.LoadingPreview
+                className: Object(R.a)(
+                  u.ProfileShowcasePreviewContainer,
+                  e ? u.LoadedPreview : u.LoadingPreview
                 ),
                 step: this.props.step,
               },
-              i.a.createElement("img", {
-                className: d.ProfileShowcaseIcon,
+              s.a.createElement("img", {
+                className: u.ProfileShowcaseIcon,
                 src: t,
               }),
               !e &&
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: d.ProfileThrobber },
-                  i.a.createElement(se.a, {
+                  { className: u.ProfileThrobber },
+                  s.a.createElement(be.a, {
                     position: "center",
                     size: "xlarge",
-                    string: Object(u.f)(
+                    string: Object(f.f)(
                       "#ProfileShowcases_LoadingPreview",
-                      Object(u.f)("#ProfileShowcases_Type_" + a)
+                      Object(f.f)("#ProfileShowcases_Type_" + a)
                     ),
                   })
                 ),
-              i.a.createElement(
+              s.a.createElement(
                 "div",
                 {
-                  className: d.PreviewShowcasePreviewFrameContainer,
+                  className: u.PreviewShowcasePreviewFrameContainer,
                   style: { height: 0 != r ? r + "px" : "1px" },
                 },
-                i.a.createElement("iframe", {
-                  className: d.PreviewShowcasePreviewFrame,
+                s.a.createElement("iframe", {
+                  className: u.PreviewShowcasePreviewFrame,
                   src:
-                    h.d.COMMUNITY_BASE_URL +
+                    C.d.COMMUNITY_BASE_URL +
                     "profiles/" +
                     this.GetProfileSteamID() +
                     `/previewsingleshowcase/?customization_type=${a}&level=${n}`,
@@ -2730,13 +2873,13 @@
                 })
               )
             ),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -2749,87 +2892,87 @@
           );
         }
       }
-      class Ze extends i.a.Component {
+      class at extends s.a.Component {
         constructor(e) {
           super(e);
         }
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_Bundle")
-            : Object(u.f)("#Redeem_UsePoints_Bundle");
+            ? Object(f.f)("#Redeem_Equip_Bundle")
+            : Object(f.f)("#Redeem_UsePoints_Bundle");
         }
         GetButtons() {
           return "equip" == this.props.step || "equipped" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
-          const e = _.b
+          const e = g.b
             .Get()
             .GetBundleOfferForUser(this.props.definition.rewardDefinition)
             .items.map((e) => {
               const t = e.community_item_data.item_image_large;
-              let a = Object(he.a)(e.appid, t);
+              let a = Object(je.a)(e.appid, t);
               3 == e.community_item_class &&
                 (a =
-                  h.d.COMMUNITY_BASE_URL +
+                  C.d.COMMUNITY_BASE_URL +
                   "economy/profilebackground/items/" +
                   e.appid +
                   "/" +
                   e.community_item_data.item_image_large +
                   "?size=320x200");
-              const n = _.b.Get().BRewardOwnedByUser(e);
-              return i.a.createElement(
-                be.a,
+              const n = g.b.Get().BRewardOwnedByUser(e);
+              return s.a.createElement(
+                Ae.a,
                 {
                   key: e.defid,
                   padding: "xxsmall",
-                  className: d.BundleItemPreview,
+                  className: u.BundleItemPreview,
                 },
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: d.BundleItemPreviewImage },
-                  i.a.createElement("img", { src: a })
+                  { className: u.BundleItemPreviewImage },
+                  s.a.createElement("img", { src: a })
                 ),
-                i.a.createElement(
+                s.a.createElement(
                   "div",
                   null,
-                  i.a.createElement(
+                  s.a.createElement(
                     "div",
-                    { className: d.BundleChildItemName },
+                    { className: u.BundleChildItemName },
                     e.community_item_data.item_title
                   ),
-                  i.a.createElement(
+                  s.a.createElement(
                     "div",
-                    { className: d.BundleChildItemClass },
-                    Object(_.d)(e.community_item_class)
+                    { className: u.BundleChildItemClass },
+                    Object(g.d)(e.community_item_class)
                   )
                 ),
                 n &&
-                  i.a.createElement(
+                  s.a.createElement(
                     "div",
-                    { className: d.BundleChildItemOwned },
-                    i.a.createElement(re.j, { className: d.OwnedCheckmark }),
+                    { className: u.BundleChildItemOwned },
+                    s.a.createElement(fe.j, { className: u.OwnedCheckmark }),
                     "redeem" == this.props.step &&
-                      Object(u.f)("#Redeem_BundleItemOwned")
+                      Object(f.f)("#Redeem_BundleItemOwned")
                   )
               );
             });
-          return i.a.createElement(
-            lt,
-            { className: d.BundleItemContainer },
-            i.a.createElement(
+          return s.a.createElement(
+            Ct,
+            { className: u.BundleItemContainer },
+            s.a.createElement(
               "div",
-              { className: d.BundleItemPreviewContainer },
+              { className: u.BundleItemPreviewContainer },
               e
             ),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -2842,7 +2985,7 @@
           );
         }
       }
-      class We extends i.a.Component {
+      class nt extends s.a.Component {
         constructor(e) {
           super(e), (this.state = { bLoadedIFrame: !1 });
         }
@@ -2850,107 +2993,107 @@
           this.setState({ bLoadedIFrame: !0 });
         }
         GetProfileSteamID() {
-          return _.b.Get().BIsLoggedIn()
-            ? h.k.steamid
-            : 2 == h.d.EUNIVERSE
+          return g.b.Get().BIsLoggedIn()
+            ? C.k.steamid
+            : 2 == C.d.EUNIVERSE
             ? "148618792083695825"
             : "76561197960266962";
         }
         GetDescription() {
           return "equip" == this.props.step
-            ? Object(u.f)("#Redeem_Equip_ProfileBundle")
-            : Object(u.f)("#Redeem_UsePoints_ProfileBundle");
+            ? Object(f.f)("#Redeem_Equip_ProfileBundle")
+            : Object(f.f)("#Redeem_UsePoints_ProfileBundle");
         }
         GetButtons() {
           return "equip" == this.props.step || "equipped" == this.props.step
-            ? i.a.createElement(et, { closeModal: this.props.closeModal })
+            ? s.a.createElement(dt, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
           const { bLoadedIFrame: e } = this.state,
-            t = _.b
+            t = g.b
               .Get()
               .GetBundleOfferForUser(this.props.definition.rewardDefinition),
             a = this.props.definition.rewardDefinition.appid,
             n = this.props.definition.rewardDefinition.community_item_type,
             r = t.items.map((e) => {
-              let t = Object(he.b)(e);
-              const a = _.b.Get().BRewardOwnedByUser(e),
+              let t = Object(je.b)(e);
+              const a = g.b.Get().BRewardOwnedByUser(e),
                 n = 8 == e.community_item_class;
-              return i.a.createElement(
-                be.a,
+              return s.a.createElement(
+                Ae.a,
                 {
                   key: e.defid,
                   padding: "xxsmall",
-                  className: Object(N.a)(
-                    d.BundleItemPreview,
-                    n && d.ProfileModifier
+                  className: Object(R.a)(
+                    u.BundleItemPreview,
+                    n && u.ProfileModifier
                   ),
                 },
-                i.a.createElement(
+                s.a.createElement(
                   "div",
-                  { className: d.BundleItemPreviewImage },
-                  i.a.createElement("img", { src: t })
+                  { className: u.BundleItemPreviewImage },
+                  s.a.createElement("img", { src: t })
                 ),
-                i.a.createElement(
+                s.a.createElement(
                   "div",
                   null,
-                  i.a.createElement(
+                  s.a.createElement(
                     "div",
-                    { className: d.BundleChildItemName },
+                    { className: u.BundleChildItemName },
                     e.community_item_data.item_title
                   ),
-                  i.a.createElement(
+                  s.a.createElement(
                     "div",
-                    { className: d.BundleChildItemClass },
-                    Object(_.d)(e.community_item_class)
+                    { className: u.BundleChildItemClass },
+                    Object(g.d)(e.community_item_class)
                   )
                 ),
                 a &&
-                  i.a.createElement(
+                  s.a.createElement(
                     "div",
-                    { className: d.BundleChildItemOwned },
-                    i.a.createElement(re.j, { className: d.OwnedCheckmark }),
+                    { className: u.BundleChildItemOwned },
+                    s.a.createElement(fe.j, { className: u.OwnedCheckmark }),
                     "redeem" == this.props.step &&
-                      Object(u.f)("#Redeem_ProfileBundleItemOwned")
+                      Object(f.f)("#Redeem_ProfileBundleItemOwned")
                   )
               );
             }),
-            o =
-              h.d.COMMUNITY_BASE_URL +
+            i =
+              C.d.COMMUNITY_BASE_URL +
               "profiles/" +
               this.GetProfileSteamID() +
               "?previewprofile=1&appid=" +
               a +
               "&itemtype=" +
               n;
-          return i.a.createElement(
-            lt,
+          return s.a.createElement(
+            Ct,
             {
-              className: Object(N.a)(
-                d.BundleItemContainer,
-                e ? d.LoadedPreview : d.LoadingPreview
+              className: Object(R.a)(
+                u.BundleItemContainer,
+                e ? u.LoadedPreview : u.LoadingPreview
               ),
             },
             !e &&
-              i.a.createElement(
+              s.a.createElement(
                 "div",
-                { className: d.ProfileThrobber },
-                i.a.createElement(se.a, {
+                { className: u.ProfileThrobber },
+                s.a.createElement(be.a, {
                   position: "center",
                   size: "xlarge",
-                  string: Object(u.f)(
+                  string: Object(f.f)(
                     "#ProfileBundle_LoadingPreview",
-                    Oe(this.props.definition.rewardDefinition)
+                    Fe(this.props.definition.rewardDefinition)
                   ),
                 })
               ),
-            i.a.createElement(
+            s.a.createElement(
               "div",
-              { className: d.PreviewProfileBundleFrameContainer },
-              i.a.createElement("iframe", {
-                className: d.PreviewProfileBundleFrame,
-                src: o,
+              { className: u.PreviewProfileBundleFrameContainer },
+              s.a.createElement("iframe", {
+                className: u.PreviewProfileBundleFrame,
+                src: i,
                 frameBorder: 0,
                 scrolling: "no",
                 onLoad: () => {
@@ -2958,27 +3101,27 @@
                 },
               })
             ),
-            i.a.createElement(
+            s.a.createElement(
               "div",
-              { className: d.PreviewLinkContainer },
-              i.a.createElement(
+              { className: u.PreviewLinkContainer },
+              s.a.createElement(
                 "a",
-                { href: o, target: "_blank", className: d.PreviewLink },
-                Object(u.f)("#ProfileModifier_PreviewLinkText")
+                { href: i, target: "_blank", className: u.PreviewLink },
+                Object(f.f)("#ProfileModifier_PreviewLinkText")
               )
             ),
-            i.a.createElement(
+            s.a.createElement(
               "div",
-              { className: d.BundleItemPreviewContainer },
+              { className: u.BundleItemPreviewContainer },
               r
             ),
-            i.a.createElement(st, {
+            s.a.createElement(bt, {
               definition: this.props.definition,
               step: this.props.step,
               description: this.GetDescription(),
             }),
-            i.a.createElement(
-              nt,
+            s.a.createElement(
+              _t,
               {
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -2991,31 +3134,31 @@
           );
         }
       }
-      const Qe = {
-          11: Pe,
-          3: Be,
-          4: Le,
-          13: ke,
-          14: Te,
-          15: Ge,
-          1: Fe,
-          12: Re,
-          8: Ue,
-          16: ze,
+      const rt = {
+          11: Ve,
+          3: Ze,
+          4: We,
+          13: Ye,
+          14: qe,
+          15: Je,
+          1: Ke,
+          12: Qe,
+          8: et,
+          16: Xe,
         },
-        Ye = Object(l.a)((e) => {
+        it = Object(m.a)((e) => {
           var t;
           let a = null;
           switch (e.definition.type) {
             case 3:
             case 2:
-              a = Ve;
+              a = tt;
               break;
             case 1:
               a =
                 5 == e.definition.rewardDefinition.type ||
                 6 == e.definition.rewardDefinition.type
-                  ? Ze
+                  ? at
                   : 8 == e.definition.rewardDefinition.community_item_class &&
                     0 !=
                       (null ===
@@ -3023,231 +3166,230 @@
                       void 0 === t
                         ? void 0
                         : t.length)
-                  ? We
-                  : Qe[e.definition.rewardDefinition.community_item_class];
+                  ? nt
+                  : rt[e.definition.rewardDefinition.community_item_class];
           }
           return a
-            ? i.a.createElement(a, Object.assign({}, e))
+            ? s.a.createElement(a, Object.assign({}, e))
             : 4 == e.definition.rewardDefinition.type
-            ? i.a.createElement(He, Object.assign({}, e))
+            ? s.a.createElement($e, Object.assign({}, e))
             : null;
         }),
-        qe = (e) => {
+        ot = (e) => {
           const { className: t } = e,
-            a = Object(n.c)(e, ["className"]);
-          return i.a.createElement(
+            a = Object(i.c)(e, ["className"]);
+          return s.a.createElement(
             "div",
             Object.assign(
-              { className: Object(N.a)(d.WarningTextContainer, e.className) },
+              { className: Object(R.a)(u.WarningTextContainer, e.className) },
               a
             ),
-            i.a.createElement(E.sb, { className: d.TimeWarning }),
+            s.a.createElement(L.sb, { className: u.TimeWarning }),
             e.children
           );
         },
-        Je = (e) => {
+        st = (e) => {
           const {
             cost: t,
             discount: a,
             originalCost: n,
             redeemPoints: r,
-            closeModal: o,
+            closeModal: i,
           } = e;
-          return i.a.createElement(
-            i.a.Fragment,
+          return s.a.createElement(
+            s.a.Fragment,
             null,
-            i.a.createElement(Xe, {
+            s.a.createElement(lt, {
               cost: t,
               discount: a,
               originalCost: n,
               onClick: r,
             }),
-            i.a.createElement(_e, { onClick: o }, Object(u.f)("#Button_Cancel"))
+            s.a.createElement(Ne, { onClick: i }, Object(f.f)("#Button_Cancel"))
           );
         },
-        Xe = (e) => {
+        lt = (e) => {
           const {
             cost: t,
             discount: a,
             originalCost: n,
             onClick: r,
-            className: s,
+            className: i,
           } = e;
           if (a) {
-            const e = a ? n.toLocaleString(u.e.GetPreferredLocales()) : "",
-              l = _.b.Get().BIsLoggedIn()
-                ? i.a.createElement(
-                    i.a.Fragment,
+            const e = a ? n.toLocaleString(f.e.GetPreferredLocales()) : "",
+              o = g.b.Get().BIsLoggedIn()
+                ? s.a.createElement(
+                    s.a.Fragment,
                     null,
-                    i.a.createElement(
+                    s.a.createElement(
                       "div",
-                      { className: d.OriginalCost },
+                      { className: u.OriginalCost },
                       " ",
                       e,
                       " ",
-                      Object(u.f)("#Rewards_Points"),
+                      Object(f.f)("#Rewards_Points"),
                       " "
                     ),
-                    i.a.createElement(
-                      y.a,
+                    s.a.createElement(
+                      x.a,
                       { amount: t },
                       " ",
-                      t > 0 && Object(u.f)("#Rewards_Points")
+                      t > 0 && Object(f.f)("#Rewards_Points")
                     )
                   )
-                : i.a.createElement("span", null, Object(u.f)("#Button_Login"));
-            return i.a.createElement(
-              o.a,
-              { className: Object(N.a)(d.RedeemButton, s), onActivate: r },
-              i.a.createElement(
+                : s.a.createElement("span", null, Object(f.f)("#Button_Login"));
+            return s.a.createElement(
+              l.a,
+              { className: Object(R.a)(u.RedeemButton, i), onActivate: r },
+              s.a.createElement(
                 "div",
-                { className: d.DiscountContainer },
+                { className: u.DiscountContainer },
                 "-",
                 a,
                 "%"
               ),
-              i.a.createElement("div", { className: d.CostContainer }, l)
+              s.a.createElement("div", { className: u.CostContainer }, o)
             );
           }
-          const l = _.b.Get().BIsLoggedIn()
-            ? i.a.createElement(
-                y.a,
+          const o = g.b.Get().BIsLoggedIn()
+            ? s.a.createElement(
+                x.a,
                 { size: 1.125, amount: t },
                 " ",
-                t > 0 && Object(u.f)("#Rewards_Points")
+                t > 0 && Object(f.f)("#Rewards_Points")
               )
-            : i.a.createElement("span", null, Object(u.f)("#Button_Login"));
-          return i.a.createElement(
-            o.a,
-            { className: Object(N.a)(d.RedeemButton, s), onActivate: r },
-            i.a.createElement("div", { className: d.CostContainer }, l)
+            : s.a.createElement("span", null, Object(f.f)("#Button_Login"));
+          return s.a.createElement(
+            l.a,
+            { className: Object(R.a)(u.RedeemButton, i), onActivate: r },
+            s.a.createElement("div", { className: u.CostContainer }, o)
           );
         },
-        Ke = (e) => {
+        ct = (e) => {
           const { closeModal: t } = e,
             a = () => {
               (window.location.href = "steam://open/friends"), t();
             },
             n = () => {
               window.open(
-                h.d.CHAT_BASE_URL + "chat",
+                C.d.CHAT_BASE_URL + "chat",
                 "height=790,width=1015,resize=yes,scrollbars=yes"
               ),
                 t();
             },
             r = () => {
-              j.BClientSupportsMessage("OpenFriendsDialog")
-                ? j
-                    .OpenFriendsDialog()
+              G.BClientSupportsMessage("OpenFriendsDialog")
+                ? G.OpenFriendsDialog()
                     .then((e) => {
                       e.success || a();
                     })
                     .catch(a)
                 : a();
             };
-          return h.d.IN_CLIENT
-            ? i.a.createElement(
-                i.a.Fragment,
+          return C.d.IN_CLIENT
+            ? s.a.createElement(
+                s.a.Fragment,
                 null,
-                i.a.createElement(
-                  ge,
+                s.a.createElement(
+                  Se,
                   { onClick: a },
-                  Object(u.f)("#Button_Goto_Chat")
+                  Object(f.f)("#Button_Goto_Chat")
                 ),
-                i.a.createElement(
-                  _e,
+                s.a.createElement(
+                  Ne,
                   { onClick: t },
-                  Object(u.f)("#Button_Later")
+                  Object(f.f)("#Button_Later")
                 )
               )
-            : i.a.createElement(
-                i.a.Fragment,
+            : s.a.createElement(
+                s.a.Fragment,
                 null,
-                i.a.createElement(
-                  ge,
+                s.a.createElement(
+                  Se,
                   { onClick: n },
-                  Object(u.f)("#Button_Goto_WebChat")
+                  Object(f.f)("#Button_Goto_WebChat")
                 ),
-                i.a.createElement(
-                  fe,
+                s.a.createElement(
+                  ve,
                   { onClick: r },
-                  Object(u.f)("#Button_Goto_ClientChat")
+                  Object(f.f)("#Button_Goto_ClientChat")
                 ),
-                i.a.createElement(
-                  _e,
+                s.a.createElement(
+                  Ne,
                   { onClick: t },
-                  Object(u.f)("#Button_Later")
+                  Object(f.f)("#Button_Later")
                 )
               );
         },
-        $e = (e) => {
+        mt = (e) => {
           const { equipItem: t, closeModal: a } = e;
-          return i.a.createElement(
-            i.a.Fragment,
+          return s.a.createElement(
+            s.a.Fragment,
             null,
-            i.a.createElement(ge, { onClick: t }, Object(u.f)("#Button_Equip")),
-            i.a.createElement(_e, { onClick: a }, Object(u.f)("#Button_Later"))
+            s.a.createElement(Se, { onClick: t }, Object(f.f)("#Button_Equip")),
+            s.a.createElement(Ne, { onClick: a }, Object(f.f)("#Button_Later"))
           );
         },
-        et = (e) => {
+        dt = (e) => {
           const { closeModal: t } = e;
-          return i.a.createElement(
-            i.a.Fragment,
+          return s.a.createElement(
+            s.a.Fragment,
             null,
-            i.a.createElement(
-              fe,
+            s.a.createElement(
+              ve,
               {
                 onClick: () =>
-                  (window.location.href = h.d.COMMUNITY_BASE_URL + "my"),
+                  (window.location.href = C.d.COMMUNITY_BASE_URL + "my"),
               },
-              Object(u.f)("#Button_Goto_Profile")
+              Object(f.f)("#Button_Goto_Profile")
             ),
-            i.a.createElement(_e, { onClick: t }, Object(u.f)("#Button_Close"))
+            s.a.createElement(Ne, { onClick: t }, Object(f.f)("#Button_Close"))
           );
         },
-        tt = (e) => {
+        pt = (e) => {
           const { closeModal: t } = e;
-          return i.a.createElement(
-            i.a.Fragment,
+          return s.a.createElement(
+            s.a.Fragment,
             null,
-            i.a.createElement(
-              fe,
+            s.a.createElement(
+              ve,
               { onClick: t },
-              i.a.createElement(
-                m.b,
-                { to: M.b.LoyaltyHowItWorks() },
-                Object(u.f)("#Redeem_NeedToOwnApp")
+              s.a.createElement(
+                p.b,
+                { to: B.b.LoyaltyHowItWorks() },
+                Object(f.f)("#Redeem_NeedToOwnApp")
               )
             ),
-            i.a.createElement(_e, { onClick: t }, Object(u.f)("#Button_Cancel"))
+            s.a.createElement(Ne, { onClick: t }, Object(f.f)("#Button_Cancel"))
           );
         },
-        at = (e) => {
+        ut = (e) => {
           const { closeModal: t } = e;
-          return i.a.createElement(
-            i.a.Fragment,
+          return s.a.createElement(
+            s.a.Fragment,
             null,
-            i.a.createElement(
-              fe,
+            s.a.createElement(
+              ve,
               { onClick: t },
-              i.a.createElement(
-                m.b,
-                { to: M.b.LoyaltyHowItWorks() },
-                Object(u.f)("#Redeem_HowToGetPoints")
+              s.a.createElement(
+                p.b,
+                { to: B.b.LoyaltyHowItWorks() },
+                Object(f.f)("#Redeem_HowToGetPoints")
               )
             ),
-            i.a.createElement(_e, { onClick: t }, Object(u.f)("#Button_Cancel"))
+            s.a.createElement(Ne, { onClick: t }, Object(f.f)("#Button_Cancel"))
           );
         },
-        nt = (e) => {
+        _t = (e) => {
           const {
               step: t,
               definition: a,
-              closeModal: r,
-              redeemPoints: s,
-              bRequestInProgress: l,
+              closeModal: n,
+              redeemPoints: r,
+              bRequestInProgress: o,
             } = e,
-            c = Object(n.c)(e, [
+            c = Object(i.c)(e, [
               "step",
               "definition",
               "closeModal",
@@ -3255,20 +3397,20 @@
               "bRequestInProgress",
             ]);
           let m = e.children;
-          if (l)
-            m = i.a.createElement(se.a, {
-              className: d.RedeemThrobber,
+          if (o)
+            m = s.a.createElement(be.a, {
+              className: u.RedeemThrobber,
               size: "medium",
             });
           else if ("preview" == t)
-            m = i.a.createElement(
-              _e,
-              { onClick: r },
-              Object(u.f)("#Button_Close")
+            m = s.a.createElement(
+              Ne,
+              { onClick: n },
+              Object(f.f)("#Button_Close")
             );
           else if ("redeem" == t) {
-            const e = Ne(a),
-              { discount: t, originalCost: n } = (function (e) {
+            const e = Re(a),
+              { discount: t, originalCost: i } = (function (e) {
                 switch (e.type) {
                   case 1:
                     if (
@@ -3278,7 +3420,7 @@
                       const {
                         discount: t,
                         original_point_cost: a,
-                      } = _.b.Get().GetBundleOfferForUser(e.rewardDefinition);
+                      } = g.b.Get().GetBundleOfferForUser(e.rewardDefinition);
                       return { discount: t, originalCost: a };
                     }
                     return {
@@ -3288,14 +3430,14 @@
                   case 2:
                     return {
                       discount: 0,
-                      originalCost: _.b
+                      originalCost: g.b
                         .Get()
                         .GetUpgradableProfileShowcaseCost(),
                     };
                   case 3:
                     return {
                       discount: 0,
-                      originalCost: _.b
+                      originalCost: g.b
                         .Get()
                         .GetPurchasableProfileShowcaseSlotCost(),
                     };
@@ -3305,119 +3447,119 @@
                   originalCost: parseInt(e.rewardDefinition.point_cost),
                 };
               })(a);
-            m = i.a.createElement(Je, {
+            m = s.a.createElement(st, {
               cost: e,
               discount: t,
-              originalCost: n,
-              redeemPoints: s,
-              closeModal: r,
+              originalCost: i,
+              redeemPoints: r,
+              closeModal: n,
             });
           } else
             "cantredeemforapp" == t
-              ? (m = i.a.createElement(tt, { closeModal: r }))
+              ? (m = s.a.createElement(pt, { closeModal: n }))
               : "cantafford" == t
-              ? (m = i.a.createElement(at, { closeModal: r }))
+              ? (m = s.a.createElement(ut, { closeModal: n }))
               : "saleitem" == t &&
-                (m = i.a.createElement(
-                  i.a.Fragment,
+                (m = s.a.createElement(
+                  s.a.Fragment,
                   null,
-                  i.a.createElement(
-                    fe,
-                    { onClick: s },
-                    Object(u.f)("#SummerSale_Redeem_Btn")
-                  ),
-                  i.a.createElement(
-                    _e,
+                  s.a.createElement(
+                    ve,
                     { onClick: r },
-                    Object(u.f)("#Button_Cancel")
+                    Object(f.f)("#SummerSale_Redeem_Btn")
+                  ),
+                  s.a.createElement(
+                    Ne,
+                    { onClick: n },
+                    Object(f.f)("#Button_Cancel")
                   )
                 ));
-          return i.a.createElement(
-            o.a,
+          return s.a.createElement(
+            l.a,
             Object.assign(
-              { "flow-children": "row", className: d.ItemButtonsContainer },
+              { "flow-children": "row", className: u.ItemButtonsContainer },
               c
             ),
             m
           );
         },
-        rt = (e) => {
+        ft = (e) => {
           const { step: t, className: a } = e,
-            r = Object(n.c)(e, ["step", "className"]);
-          let o = null;
+            n = Object(i.c)(e, ["step", "className"]);
+          let r = null;
           return (
             "equip" == e.step
-              ? (o = i.a.createElement("div", {
-                  className: Object(N.a)(d.GreenCheck, d.PurchasedCheck),
+              ? (r = s.a.createElement("div", {
+                  className: Object(R.a)(u.GreenCheck, u.PurchasedCheck),
                 }))
               : "equipped" == e.step &&
-                (o = i.a.createElement(re.j, {
-                  className: Object(N.a)(d.GreenCheck, d.EquippedCheck),
+                (r = s.a.createElement(fe.j, {
+                  className: Object(R.a)(u.GreenCheck, u.EquippedCheck),
                 })),
-            i.a.createElement(
+            s.a.createElement(
               "div",
               Object.assign(
-                { className: Object(N.a)(a, d.ItemPreviewContainer) },
-                r
+                { className: Object(R.a)(a, u.ItemPreviewContainer) },
+                n
               ),
-              o,
+              r,
               e.children
             )
           );
         },
-        it = (e) => {
+        gt = (e) => {
           const { icon: t } = e,
-            a = Object(n.c)(e, ["icon"]);
-          return i.a.createElement(
+            a = Object(i.c)(e, ["icon"]);
+          return s.a.createElement(
             "div",
-            Object.assign({ className: d.ChatPickerContainer }, a),
-            i.a.createElement(
+            Object.assign({ className: u.ChatPickerContainer }, a),
+            s.a.createElement(
               "div",
               {
-                className: d.IconPreview,
+                className: u.IconPreview,
                 style: t && { backgroundImage: `url( ${t} )` },
               },
               e.children
             )
           );
         },
-        ot = (e) => {
+        ht = (e) => {
           const { definition: t, badgeLevel: a, title: n } = e;
           let r = t.community_item_data.badge_data[a - 1].image || "",
-            o = d.NextLevel;
+            i = u.NextLevel;
           return (
-            _.b.Get().GetUserSeasonalBadgeLevel() == a && (o = d.CurrentLevel),
-            i.a.createElement(
+            g.b.Get().GetUserSeasonalBadgeLevel() == a && (i = u.CurrentLevel),
+            s.a.createElement(
               "div",
-              { className: d.BadgeColumn },
-              i.a.createElement("div", { className: d.BadgeTitle }, n),
-              i.a.createElement(
+              { className: u.BadgeColumn },
+              s.a.createElement("div", { className: u.BadgeTitle }, n),
+              s.a.createElement(
                 "div",
-                { className: d.BadgeDetailsContainer },
-                i.a.createElement(
+                { className: u.BadgeDetailsContainer },
+                s.a.createElement(
                   "div",
-                  { className: d.BadgeImgContainer },
-                  i.a.createElement("div", {
-                    className: d.BadgeImage,
+                  { className: u.BadgeImgContainer },
+                  s.a.createElement("div", {
+                    className: u.BadgeImage,
                     style: {
-                      backgroundImage: `url( ${Object(w.a)(t.appid, r)} )`,
+                      backgroundImage: `url( ${Object(P.a)(t.appid, r)} )`,
                     },
                   })
                 ),
-                i.a.createElement("div", { className: d.BadgeLine }),
-                i.a.createElement(
+                s.a.createElement("div", { className: u.BadgeLine }),
+                s.a.createElement(
                   "div",
-                  { className: Object(N.a)(d.BadgeLevelContainer, o) },
-                  i.a.createElement("div", { className: d.BadgeLevelText }, a)
+                  { className: Object(R.a)(u.BadgeLevelContainer, i) },
+                  s.a.createElement("div", { className: u.BadgeLevelText }, a)
                 )
               )
             )
           );
         },
-        st = (e) => {
-          const { definition: t, step: a, description: r } = e,
-            o = Object(n.c)(e, ["definition", "step", "description"]);
-          let s,
+        bt = (e) => {
+          const { definition: t, step: a, description: n } = e,
+            r = Object(i.c)(e, ["definition", "step", "description"]);
+          let o,
             l = null;
           if (
             ("equip" != a && "equipped" != a) ||
@@ -3425,58 +3567,58 @@
             1 != t.rewardDefinition.type
           ) {
             if ("cantredeemforapp" == a) {
-              let e = i.a.createElement(
+              let e = s.a.createElement(
                 "span",
-                { className: d.NeedAppOwnership },
-                oe.a.GetAppInfo(t.rewardDefinition.appid).name || ""
+                { className: u.NeedAppOwnership },
+                he.a.GetAppInfo(t.rewardDefinition.appid).name || ""
               );
-              l = i.a.createElement(
+              l = s.a.createElement(
                 "div",
-                { className: Object(N.a)(d.Bold, d.Opacity) },
-                Object(u.m)("#Redeem_CantRedeemItemForApp", e)
+                { className: Object(R.a)(u.Bold, u.Opacity) },
+                Object(f.m)("#Redeem_CantRedeemItemForApp", e)
               );
             } else if ("cantafford" == a) {
-              let e = Ne(t) - _.b.Get().GetPointsAvailable().getLowBits();
-              l = i.a.createElement(
+              let e = Re(t) - g.b.Get().GetPointsAvailable().getLowBits();
+              l = s.a.createElement(
                 "div",
-                { className: Object(N.a)(d.Bold, d.Opacity) },
-                Object(u.f)("#Redeem_CantAfford", e.toLocaleString())
+                { className: Object(R.a)(u.Bold, u.Opacity) },
+                Object(f.f)("#Redeem_CantAfford", e.toLocaleString())
               );
             }
           } else
-            s = i.a.createElement(
+            o = s.a.createElement(
               "div",
-              { className: d.Bold },
-              Object(u.f)("#Redeem_YoursToOwn", Oe(t.rewardDefinition))
+              { className: u.Bold },
+              Object(f.f)("#Redeem_YoursToOwn", Fe(t.rewardDefinition))
             );
-          return i.a.createElement(
+          return s.a.createElement(
             "div",
-            Object.assign({ className: d.ItemDescription }, o),
-            s,
-            i.a.createElement("div", null, r),
+            Object.assign({ className: u.ItemDescription }, r),
+            o,
+            s.a.createElement("div", null, n),
             e.children,
             l,
-            i.a.createElement(
+            s.a.createElement(
               "div",
-              { className: d.Small },
-              Object(u.f)("#Redeem_RefundWarning")
+              { className: u.Small },
+              Object(f.f)("#Redeem_RefundWarning")
             )
           );
         },
-        lt = (e) => {
+        Ct = (e) => {
           const { className: t } = e,
-            a = Object(n.c)(e, ["className"]);
-          return i.a.createElement(
+            a = Object(i.c)(e, ["className"]);
+          return s.a.createElement(
             "div",
-            Object.assign({ className: Object(N.a)(d.ItemWrapper, t) }, a),
+            Object.assign({ className: Object(R.a)(u.ItemWrapper, t) }, a),
             e.children
           );
         };
-      function ct(e) {
+      function It(e) {
         const { children: t, destructive: a, onEscKeypress: n } = e;
-        return "desktop" === Object(be.g)()
-          ? i.a.createElement(
-              p.i,
+        return "desktop" === Object(Ae.g)()
+          ? s.a.createElement(
+              _.i,
               {
                 onEscKeypress: n,
                 bHideCloseIcon: !0,
@@ -3485,14 +3627,14 @@
               },
               t
             )
-          : i.a.createElement(p.l, { active: !0 }, t);
+          : s.a.createElement(_.l, { active: !0 }, t);
       }
-      function mt(e) {
-        const t = "desktop" !== Object(be.g)();
-        return i.a.createElement(
+      function yt(e) {
+        const t = "desktop" !== Object(Ae.g)();
+        return s.a.createElement(
           "div",
           Object.assign(
-            { className: Object(N.a)(d.ModalContainer, t && d.Responsive) },
+            { className: Object(R.a)(u.ModalContainer, t && u.Responsive) },
             e
           )
         );
@@ -4081,35 +4223,35 @@
     },
     Aqke: function (e, t, a) {
       var n = {
-        "./loyalty_brazilian.json": ["jJTi", 11],
-        "./loyalty_bulgarian.json": ["YXmX", 12],
-        "./loyalty_czech.json": ["Yw6T", 13],
-        "./loyalty_danish.json": ["LeJ7", 14],
-        "./loyalty_dutch.json": ["3s9e", 15],
-        "./loyalty_english.json": ["nz6u", 16],
-        "./loyalty_finnish.json": ["cCRj", 17],
-        "./loyalty_french.json": ["WjZg", 18],
-        "./loyalty_german.json": ["2HFY", 19],
-        "./loyalty_greek.json": ["puzw", 20],
-        "./loyalty_hungarian.json": ["h+vV", 21],
-        "./loyalty_italian.json": ["1xjJ", 22],
-        "./loyalty_japanese.json": ["KhFN", 23],
-        "./loyalty_koreana.json": ["0T2E", 24],
-        "./loyalty_latam.json": ["SFVQ", 25],
-        "./loyalty_norwegian.json": ["6qpk", 26],
-        "./loyalty_polish.json": ["c9AW", 27],
-        "./loyalty_portuguese.json": ["H3eu", 28],
-        "./loyalty_romanian.json": ["gt0D", 29],
-        "./loyalty_russian.json": ["4nQk", 30],
-        "./loyalty_sc_schinese.json": ["0Z0/", 31],
-        "./loyalty_schinese.json": ["svug", 32],
-        "./loyalty_spanish.json": ["x/nm", 33],
-        "./loyalty_swedish.json": ["d/hP", 34],
-        "./loyalty_tchinese.json": ["EWje", 35],
-        "./loyalty_thai.json": ["SnkP", 36],
-        "./loyalty_turkish.json": ["cD82", 37],
-        "./loyalty_ukrainian.json": ["jV8j", 38],
-        "./loyalty_vietnamese.json": ["TxFk", 39],
+        "./loyalty_brazilian.json": ["jJTi", 27],
+        "./loyalty_bulgarian.json": ["YXmX", 28],
+        "./loyalty_czech.json": ["Yw6T", 29],
+        "./loyalty_danish.json": ["LeJ7", 30],
+        "./loyalty_dutch.json": ["3s9e", 31],
+        "./loyalty_english.json": ["nz6u", 32],
+        "./loyalty_finnish.json": ["cCRj", 33],
+        "./loyalty_french.json": ["WjZg", 34],
+        "./loyalty_german.json": ["2HFY", 35],
+        "./loyalty_greek.json": ["puzw", 36],
+        "./loyalty_hungarian.json": ["h+vV", 37],
+        "./loyalty_italian.json": ["1xjJ", 38],
+        "./loyalty_japanese.json": ["KhFN", 39],
+        "./loyalty_koreana.json": ["0T2E", 40],
+        "./loyalty_latam.json": ["SFVQ", 41],
+        "./loyalty_norwegian.json": ["6qpk", 42],
+        "./loyalty_polish.json": ["c9AW", 43],
+        "./loyalty_portuguese.json": ["H3eu", 44],
+        "./loyalty_romanian.json": ["gt0D", 45],
+        "./loyalty_russian.json": ["4nQk", 46],
+        "./loyalty_sc_schinese.json": ["0Z0/", 47],
+        "./loyalty_schinese.json": ["svug", 48],
+        "./loyalty_spanish.json": ["x/nm", 49],
+        "./loyalty_swedish.json": ["d/hP", 50],
+        "./loyalty_tchinese.json": ["EWje", 51],
+        "./loyalty_thai.json": ["SnkP", 52],
+        "./loyalty_turkish.json": ["cD82", 53],
+        "./loyalty_ukrainian.json": ["jV8j", 54],
+        "./loyalty_vietnamese.json": ["TxFk", 55],
       };
       function r(e) {
         if (!a.o(n, e))
@@ -5590,8 +5732,8 @@
           );
         }),
         tt = (e) => e.toString().padStart(2, "0"),
-        at = i.a.lazy(() => a.e(73).then(a.bind(null, "yDev"))),
-        nt = i.a.lazy(() => a.e(72).then(a.bind(null, "f4w8")));
+        at = i.a.lazy(() => a.e(89).then(a.bind(null, "yDev"))),
+        nt = i.a.lazy(() => a.e(88).then(a.bind(null, "f4w8")));
       let rt = class extends i.a.Component {
         render() {
           return i.a.createElement(
@@ -6157,7 +6299,7 @@
             )
           );
         };
-      var It = a("kyHq");
+      var It = a("65aj");
       a("6Mq3");
       a("F8+w");
       var yt = a("gxgZ"),
@@ -12262,7 +12404,7 @@
         i = a("Gp1o"),
         o = a("qD+2"),
         s = a("TLQK"),
-        l = (a("kyHq"), a("li7h"), a("lkRc")),
+        l = (a("65aj"), a("li7h"), a("lkRc")),
         c = (a("kLLr"), a("8H1D"));
       function m(e) {
         let t = "offline";
@@ -13215,7 +13357,7 @@
         l = a("vDqi"),
         c = a.n(l),
         m = a("lkRc"),
-        d = a("kyHq"),
+        d = a("65aj"),
         p = a("OS6B"),
         u = a("opsS"),
         _ = a("bxBv"),

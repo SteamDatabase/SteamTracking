@@ -3589,6 +3589,169 @@ a.pulldown_mobile {
 
 @media screen and (max-width: 910px)
 {
+
+	html.responsive .leftcol,
+	html.responsive .rightcol {
+		float: none;
+		width: auto;
+		margin-left: 0;
+	}
+
+	html.responsive .tab_item_cap_img {
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
+
+	html.responsive .carousel_container .arrow {
+		bottom: 0px;
+		top: auto;
+		height: 0px;
+		width: 0;
+		padding: 0px;
+
+		background: none;
+	}
+
+	html.responsive .carousel_container .arrow > div {
+		width: 13px;
+		height: 20px;
+		background-size: cover;
+		display: none;
+		margin: 0 10px;
+	}
+
+	html.responsive .carousel_container .arrow.left {
+		left: 0;
+	}
+
+	html.responsive .carousel_container .arrow.left > div {
+		background-position-x: 13px;
+	}
+
+	html.responsive .carousel_container .arrow.right {
+		right: 0;
+		text-align: right;
+	}
+
+	html.responsive .carousel_container .carousel_items > * {
+		position: relative;
+		top: auto;
+		left: auto;
+		opacity: 1;
+	}
+
+	html.responsive .specials_under10_content,
+	html.responsive .live_streams_ctn {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	html.responsive .carousel_container .carousel_items:not(.no_paging),
+	html.responsive .carousel_container.maincap .carousel_items:not(.no_paging) {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing:content-box;
+
+
+		display: -webkit-box; /* Very Old webkit */
+		display: -ms-flexbox; /* IE 10 */
+		display: -webkit-flex; /* Old webkit */
+		display: flex;
+		flex-wrap: nowrap;
+
+		padding-bottom: 21px;
+	}
+
+	html.responsive .carousel_container .carousel_items > * {
+		pointer-events: auto;
+		flex-shrink: 0;
+	}
+
+
+}
+
+	html.responsive.tablet .leftcol,
+	html.responsive.tablet .rightcol {
+		float: none;
+		width: auto;
+		margin-left: 0;
+	}
+
+	html.responsive.tablet .tab_item_cap_img {
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
+
+	html.responsive.tablet .carousel_container .arrow {
+		bottom: 0px;
+		top: auto;
+		height: 0px;
+		width: 0;
+		padding: 0px;
+
+		background: none;
+	}
+
+	html.responsive.tablet .carousel_container .arrow > div {
+		width: 13px;
+		height: 20px;
+		background-size: cover;
+		display: none;
+		margin: 0 10px;
+	}
+
+	html.responsive.tablet .carousel_container .arrow.left {
+		left: 0;
+	}
+
+	html.responsive.tablet .carousel_container .arrow.left > div {
+		background-position-x: 13px;
+	}
+
+	html.responsive.tablet .carousel_container .arrow.right {
+		right: 0;
+		text-align: right;
+	}
+
+	html.responsive.tablet .carousel_container .carousel_items > * {
+		position: relative;
+		top: auto;
+		left: auto;
+		opacity: 1;
+	}
+
+	html.responsive.tablet .specials_under10_content,
+	html.responsive.tablet .live_streams_ctn {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	html.responsive.tablet .carousel_container .carousel_items:not(.no_paging),
+	html.responsive.tablet .carousel_container.maincap .carousel_items:not(.no_paging) {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing:content-box;
+
+
+		display: -webkit-box; /* Very Old webkit */
+		display: -ms-flexbox; /* IE 10 */
+		display: -webkit-flex; /* Old webkit */
+		display: flex;
+		flex-wrap: nowrap;
+
+		padding-bottom: 21px;
+	}
+
+	html.responsive.tablet .carousel_container .carousel_items > * {
+		pointer-events: auto;
+		flex-shrink: 0;
+	}
+
+
+@media screen and (max-width: 910px)
+{
 	html.responsive body.v6 .page_content {
 		max-width: 940px;
 		width: auto;
@@ -3598,13 +3761,6 @@ a.pulldown_mobile {
 	html.responsive body.v6 h2.pageheader {
 		font-size: 30px;
 		word-wrap: break-word;
-	}
-
-	html.responsive .leftcol,
-	html.responsive .rightcol {
-		float: none;
-		width: auto;
-		margin-left: 0;
 	}
 
 	html.responsive div#store_header,
@@ -3736,12 +3892,6 @@ a.pulldown_mobile {
 		float: left;
 		max-width: 33%;
 		margin-right: 3%;
-	}
-
-	html.responsive .tab_item_cap_img {
-		width: 100%;
-		height: auto;
-		vertical-align: middle;
 	}
 
 	html.responsive a.pulldown_desktop {
@@ -4092,10 +4242,6 @@ a.cluster_capsule:hover {
 	margin-top: 27px;
 }
 
-.live_streams_ctn {
-	margin-top: 50px;
-}
-
 .autumn2016_home .live_streams_ctn {
 	margin-top: 10px;
 	margin-bottom: 50px;
@@ -4296,12 +4442,6 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 
 	html.responsive .main_cluster_ctn.large_cluster_responsive {
 		max-width: 462px;
-	}
-
-	html.responsive .specials_under10_content,
-	html.responsive .live_streams_ctn {
-		margin-top: 0;
-		margin-bottom: 0;
 	}
 
 	html.responsive *:hover > .ds_options,
@@ -5278,28 +5418,6 @@ body.v6 .quadscreenshot_carousel h2 {
 		text-align: center;
 	}
 
-	html.responsive .carousel_container .carousel_items > * {
-		pointer-events: auto;
-		flex-shrink: 0;
-	}
-
-
-	html.responsive .carousel_container .carousel_items:not(.no_paging),
-	html.responsive .carousel_container.maincap .carousel_items:not(.no_paging) {
-		overflow-x: scroll;
-		overflow-y: hidden;
-		box-sizing:content-box;
-
-
-		display: -webkit-box; /* Very Old webkit */
-		display: -ms-flexbox; /* IE 10 */
-		display: -webkit-flex; /* Old webkit */
-		display: flex;
-		flex-wrap: nowrap;
-
-		padding-bottom: 21px;
-	}
-
 	html.responsive .carousel_container .carousel_thumbs {
 		margin-top: -1px;
 		height: 25px;
@@ -5332,44 +5450,6 @@ body.v6 .quadscreenshot_carousel h2 {
 		background-color: hsla(202,60%,100%,0.7);
 	}
 
-	html.responsive .carousel_container .arrow {
-		bottom: 0px;
-		top: auto;
-		height: 0px;
-		width: 0;
-		padding: 0px;
-
-		background: none;
-	}
-
-	html.responsive .carousel_container .arrow > div {
-		width: 13px;
-		height: 20px;
-		background-size: cover;
-		display: none;
-		margin: 0 10px;
-	}
-
-	html.responsive .carousel_container .arrow.left {
-		left: 0;
-	}
-
-	html.responsive .carousel_container .arrow.left > div {
-		background-position-x: 13px;
-	}
-
-	html.responsive .carousel_container .arrow.right {
-		right: 0;
-		text-align: right;
-	}
-
-	html.responsive .carousel_container .carousel_items > * {
-		position: relative;
-		top: auto;
-		left: auto;
-		opacity: 1;
-		margin-right: 11px;
-	}
 }
 
 .carousel_container .carousel_items > *.focus {

@@ -301,9 +301,9 @@ GHomepage = {
 
 	OnHomeDataReady: function()
 	{
-		var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
+		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
 		// Deck: Hide discovery queue shenanigans for now
-		if( !bSupportTabletMode )
+		if( !bUseTabletScreenMode )
 		{
 			try {
 				if ( g_AccountID != 0 )
@@ -1620,10 +1620,10 @@ GHomepage = {
 	{
 		var $elCapsuleTarget = $J('.carousel_items', $elTarget);
 		var $elThumbTarget = $J('.carousel_thumbs', $elTarget);
-		var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
+		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
 		var strViewAllLink = "";
 
-				if ( bSupportTabletMode )
+				if ( bUseTabletScreenMode )
 		{
 			var $elAnchor = $J('a.deck_view_all_action_link', $elTarget);
 			if ( $elAnchor && $elAnchor.attr('href') !== undefined )
@@ -1658,7 +1658,7 @@ GHomepage = {
 				if( !$CapCtn )
 					continue;
 
-								if ( bSupportTabletMode && strViewAllLink !== "" )
+								if ( bUseTabletScreenMode && strViewAllLink !== "" )
 				{
 					const panelString = '{"onOptionsActionDescription":"View all","onOptionsButton":"window.location=\'%1$s\'"}';
 					$CapCtn.attr( 'data-panel', panelString.replace( '%1$s', strViewAllLink ) );
@@ -2752,8 +2752,8 @@ GSteamCurators = {
 		// if we rendered recommended apps above, there's no need to render recommended curators
 		//
 		// On deck, we want to suppress the suggested curators.
-		var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
-		if ( !GSteamCurators.bNeedRecommendedCurators || bSupportTabletMode )
+		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+		if ( !GSteamCurators.bNeedRecommendedCurators || bUseTabletScreenMode )
 		{
 			return;
 		}

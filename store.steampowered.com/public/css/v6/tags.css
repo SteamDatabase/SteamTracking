@@ -506,14 +506,30 @@ body.tag_page.tag_announce_page h3 {
 	height: 250px;
 }
 
+@media screen and (max-width: 910px)
+{
+
+	html.responsive .browse_tag_game_cap img {
+		width: 100%;
+	}
+
+
+}
+
+	html.responsive.tablet .browse_tag_game_cap img {
+		width: 100%;
+	}
+
+
 
 /* 910px fallback responsive */
 @media screen and (max-width: 910px)
 {
-	html.responsive .browse_tag_games, .browse_tag_game_total {
+	html.responsive .browse_tag_games,
+	html.responsive .browse_tag_game_total {
 		width: auto;
-
 	}
+
 	html.responsive .sticky .browse_tag_games {
 		padding-bottom: 0px;
 		height: calc(100vh - 124px);
@@ -531,9 +547,7 @@ body.tag_page.tag_announce_page h3 {
 		height: auto;
 		width: auto;
 	}
-	.browse_tag_game_cap img {
-		width: 100%;
-	}
+
 	html.responsive .browse_tag_game_name {
 		display: none;
 	}

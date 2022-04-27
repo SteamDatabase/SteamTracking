@@ -18,7 +18,6 @@
 	--gpStoreDarkestGrey: #000F18;
 
 	/* Gradients */
-	/* --gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%); */
 	--gpGradient-StoreBackground: linear-gradient(180deg, var(--gpStoreDarkGrey) 0%, var(--gpStoreDarkerGrey) 80%);
 	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
 
@@ -65,14 +64,20 @@
 
 	/* Fixed widths */
 	--gpNavWidth: 240px;
-	--gpPaymentsNavWidth: 40vw;
-	--gpPurchaseOptionsWidth: 270px;
-	--gpDselectWidth: 320px;
-	--gpSidePanelWidth: 348px;
+	--gpPaymentsNavWidth: 340px;
+	--gpDselectWidth: 340px;
+	--gpSidePanelWidth: 340px;
 	--gpGiftingPanelWidth: 280px;
+	--gpCommunityRightPanelWidth: 320px;
+	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
+	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
+	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
+	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
+	--gpWidth-6colcap: calc((var(--screen-width) - (5 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 6);
+	--gpWidth-5colcap: calc((var(--screen-width) - (4 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 5);
 	--gpWidth-4colcap: calc((var(--screen-width) - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
 	--gpWidth-3colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
 	--gpWidth-2colcap: calc((var(--screen-width) - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
@@ -94,11 +99,14 @@
 	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
-
-	/* Animation TODO: REMOVE THESE */
-	--gpTransition-Short: all 0.2s ease;
-	--gpTransition-Shorter: all 0.1s ease;
 }
+
+@media screen and (min-width:  1280px) {
+	:root {
+		--gpSpace-Gutter: calc(24px + 2vw);
+	}
+}
+
 
 	/* Wrapper */
 	html.tablet .home_page_body_ctn {
@@ -107,6 +115,24 @@
 
 	html.tablet .responsive_page_template_content {
 		padding-top: unset;
+	}
+
+	html.tablet .home_ctn {
+		overflow: visible;
+	}
+
+	html.tablet .home_ctn,
+	html.tablet .recently_updated_block {
+		padding: calc( 8px + var(--gpVerticalResponsivePadding-Small) ) var(--gpSpace-Gutter);
+	}
+
+	html.tablet body.v6 .page_content {
+		max-width: unset !important;
+		padding: 0px var(--gpSpace-Gutter);
+	}
+
+	html.tablet body.v6 .home_ctn .page_content {
+		/* padding: unset; */
 	}
 
 
@@ -119,21 +145,44 @@
 	}
 
 
-
 	/* 3 col game tiles */
 	html.tablet .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items > *,
 	html.tablet .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items .community_recommendation_app {
 		width: var(--gpWidth-3colcap);
 	}
 
+	@media screen and (min-width:  1280px) {
+		/* Show 4 */
+		html.tablet .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items > *,
+		html.tablet .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items .community_recommendation_app {
+			width: var(--gpWidth-4colcap);
+		}
+	}
+
+	@media screen and (min-width: 1920px) {
+		/* Show 4 */
+		html.tablet .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items > *,
+		html.tablet .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items .community_recommendation_app {
+			width: var(--gpWidth-5colcap);
+		}
+	}
+
+
+
+
+
 	/* 2 col game tiles */
 	html.tablet .carousel_container.maincap .carousel_items > * {
 		width: var(--gpWidth-2colcap);
+		min-width: var(--gpWidth-2colcap);
 	}
 
-	html.tablet .home_ctn {
-		padding: 8px var(--gpSpace-Gutter);
-		overflow: visible;
+	@media screen and (min-width: 1920px) {
+		/* Show 3 */
+		html.tablet .carousel_container.maincap .carousel_items > * {
+			width: var(--gpWidth-3colcap);
+			min-width: var(--gpWidth-3colcap);
+		}
 	}
 
 
@@ -149,14 +198,16 @@
 	}
 
 	html.tablet .friends_recently_purchased .store_capsule {
-		height: 148px;
+		/* height: 148px; */
+		background-size: cover;
 	}
 
 	html.tablet .friends_recently_purchased .friends_container {
 		border-top: unset;
 		background: unset;
 		padding: 0px 0px 0px 8px;
-		top: -37px;
+		position: absolute;
+		bottom: 1px;
 	}
 
 	html.tablet .friends_recently_purchased .friends_container .avatars a img {
@@ -363,14 +414,12 @@
 		padding-right: unset;
 	}
 
-	html.tablet .carousel_container.spotlight .carousel_items > * > div {
-		/* display: flex; */
-		/* flex-direction: column; */
-		/* gap: var(--gpSpace-Gap); */
-	}
-
 	html.tablet .specials_target:first-child {
 		margin-bottom: 12px;
+	}
+
+	html.tablet .spotlight_img a {
+		display: flex;
 	}
 
 
@@ -599,12 +648,24 @@
 	html.tablet .home_page_body_ctn.has_takeover a.home_page_takeover_sizer,
 	html.tablet body.responsive_page .home_page_body_ctn.has_takeover a.home_page_takeover_sizer,
 	html.tablet .fullscreen-bg a {
-		height: 32vw !important;
+		height: calc( 32vw - ((100vw - 854px) / 10) ) !important;
 	}
 
 	html.tablet .page_background_holder,
 	html.tablet .fullscreen-bg {
 		margin-top: var( --gpStoreMenuHeight );
+	}
+
+	html.tablet body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
+		right: 0px;
+	}
+
+	html.tablet .store_bg_overlay {
+		display: none;
+	}
+
+	html.tablet .page_background_holder {
+		background-size: cover;
 	}
 
 
@@ -656,7 +717,8 @@
 	}
 
 	.community_recommendation_app > .community_recommendation_capsule > .capsule {
-		height: 17.4vw;
+		height: auto;
+		display: flex;
 	}
 
 	html.tablet .community_recommendation_app {
@@ -780,7 +842,7 @@
 	}
 
 	html.tablet .top_new_releases_banner_ctn a {
-        background: rgba(0,0,0,0.4);
+		background :unset;
 		box-shadow: unset;
 		height: unset;
 		padding: var(--gpSpace-Gutter) 0px var(--gpSpace-Gap) 0px;
@@ -843,22 +905,14 @@
 	}
 
 	html.tablet .more_apps_by_curators_capsule .apps_recommended_by_curators_v2 .curated_app_curators {
-		top: 113px;
 		left: 6px;
+		top: unset;
+		bottom: 5px;
 	}
 
-	/* html.tablet .steam_curator_for_app {
-		width: 24px;
-		height: 24px;
-		display: flex;
-	} */
-
-	html.tablet .more_apps_by_curators_capsule .ds_steam_deck_compat {
-		/* bottom: unset;
-		top: 122px;
-		left: 38px; */
+	html.tablet .steam_curator_for_app {
+		box-shadow: var(--gpShadow-Small);
 	}
-
 
 
 
@@ -866,7 +920,7 @@
 	/* Developers and publishers */
 	html.tablet .recommended_creators_ctn .store_capsule {
 		padding-bottom: unset;
-		height: 150px;
+		background-size: cover;
 	}
 
 	html.tablet .recommended_creators_ctn {
@@ -876,7 +930,9 @@
 	html.tablet .recommended_creators_ctn .recommended_creators_container {
 		background: none;
 		border: none;
-		bottom: 45px;
+		bottom: -4px;
+		height: unset;
+		position: absolute;
 	}
 
 	html.tablet .recommended_creators_ctn .recommended_creators_container .avatars {
@@ -885,12 +941,6 @@
 
 	html.tablet .recommended_creators_ctn .recommended_creators_container .avatars > .actions {
 		display: none;
-	}
-
-	html.tablet .recommended_creators_ctn .ds_steam_deck_compat {
-		/* bottom: unset;
-		top: 122px;
-		left: 38px; */
 	}
 
 	html.tablet .recommended_creators_ctn .recommended_creators_container .avatars > a img {
@@ -1040,6 +1090,7 @@
 		background-size: 48px;
 		background-position-y: 0px;
 		border-bottom: 1px solid var(--gpBackground-LightSoft);
+		margin: var(--gpSpace-Gutter);
 	}
 
 	html.tablet #content_callout .home_page_content {
@@ -1048,10 +1099,33 @@
 
 
 
+	/* Marketing messaging area */
+	html.tablet .marketingmessage_area {
+		margin: unset;
+	}
+
+	html.tablet .marketingmessage_container {
+		gap: var(--gpSpace-Gap);
+	}
+
+
+
 
 	/* RECENTLY UPDATED */
+	html.tablet .recently_updated_apps .carousel_items {
+		height: unset;
+	}
+
 	html.tablet .recently_updated_announcement_link {
 		display: none;
+	}
+
+	html.tablet .recently_updated .store_capsule {
+		background-size: cover;
+	}
+
+	html.tablet .recently_updated .store_capsule .recently_updated_desc {
+		border: none;
 	}
 
 
@@ -1089,7 +1163,6 @@
 		background: var(--gpStoreDarkestGrey);
 		padding-bottom: 12px;
 		min-height: unset;
-		max-height: 240px;
 	}
 
 	html.tablet .newonsteam_capsules > a > div.info {

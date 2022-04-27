@@ -18,7 +18,6 @@
 	--gpStoreDarkestGrey: #000F18;
 
 	/* Gradients */
-	/* --gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%); */
 	--gpGradient-StoreBackground: linear-gradient(180deg, var(--gpStoreDarkGrey) 0%, var(--gpStoreDarkerGrey) 80%);
 	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
 
@@ -65,14 +64,20 @@
 
 	/* Fixed widths */
 	--gpNavWidth: 240px;
-	--gpPaymentsNavWidth: 40vw;
-	--gpPurchaseOptionsWidth: 270px;
-	--gpDselectWidth: 320px;
-	--gpSidePanelWidth: 348px;
+	--gpPaymentsNavWidth: 340px;
+	--gpDselectWidth: 340px;
+	--gpSidePanelWidth: 340px;
 	--gpGiftingPanelWidth: 280px;
+	--gpCommunityRightPanelWidth: 320px;
+	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
+	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
+	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
+	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
+	--gpWidth-6colcap: calc((var(--screen-width) - (5 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 6);
+	--gpWidth-5colcap: calc((var(--screen-width) - (4 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 5);
 	--gpWidth-4colcap: calc((var(--screen-width) - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
 	--gpWidth-3colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
 	--gpWidth-2colcap: calc((var(--screen-width) - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
@@ -94,515 +99,552 @@
 	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
-
-	/* Animation TODO: REMOVE THESE */
-	--gpTransition-Short: all 0.2s ease;
-	--gpTransition-Shorter: all 0.1s ease;
 }
 
-@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
-
-    /* Hide breadcrumbs */
-    html.responsive .breadcrumbs {
-        display: none;
-    }
-
-    /* Hide Steam Labs banner */
-    html.responsive .search_labs_banner {
-        display: none;
-    }
-
-    /* Remove and space */
-    html.responsive .page_header_ctn {
-        background: unset;
-        padding-bottom: unset;
-        margin-bottom: 12px;
-    }
-
-    html.responsive .page_header_ctn.search {
-        background: unset;
-        padding-bottom: unset;
-    }
-
-    /* Page title */
-    html.responsive .pagesubheader {
-		font: var(--gpText-HeadingLarge);
-		font-weight: 700;
-		text-shadow: unset;
-		text-transform: unset;
-		padding: unset;
-        color: white;
+@media screen and (min-width:  1280px) {
+	:root {
+		--gpSpace-Gutter: calc(24px + 2vw);
 	}
-
-    html.responsive h2.pageheader {
-        display: none;
-    }
-
-
-
-
-    /* SEARCH AND SORT */
-
-    /* Search bar */
-    html.responsive .searchbar {
-        margin-bottom: 12px;
-        background: unset;
-        padding: unset;
-    }
-
-    html.responsive .searchbar_left {
-        padding-bottom: unset;
-        overflow: unset;
-    }
-
-    html.responsive .searchbar .sortbox {
-        margin-top: unset;
-    }
-
-    /* Seach input */
-	html.responsive #term {
-		background-color: var(--gpBackground-LightMedium);
-		border-radius: var(--gpCorner-Medium);
-		font: var(--gpText-BodyLarge);
-		color: white;
-		transition: all 0.1s ease;
-		padding: 10px 10px;
-
-		box-shadow: unset;
-		border: unset;
-	}
-
-	html.responsive #term.gpfocus {
-		border-radius: 0px;
-	}
-
-	html.responsive #term:focus {
-		background-color: white;
-		color: black;
-	}
-
-	html.responsive #term::placeholder {
-		color: var(--gpStoreLighterGrey);
-		font: var(--gpText-BodyLarge);
-	}
-
-    /* Search button */
-    html.responsive .searchbar_left > button {
-        height: unset;
-    }
-
-    html.responsive .btn_small {
-        padding: 10px 20px;
-    }
-
-    html.responsive .btn_small span {
-        font: var(--gpText-BodyLarge);
-    }
-
-	html.responsive .btnv6_blue_hoverfade {
-		background: var(--gpColor-Blue);
-		box-shadow: var(--gpShadow-Medium);
-	}
-
-	html.responsive .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-		background: var(--gpColor-BlueHi) !important;
-	}
-
-
-	/* Autocomplete */
-	html.responsive #term_options {
-		display: none;
-	}
-
-
-    /* Sort dropdown */
-    html.responsive .sortbox {
-        display: flex;
-        align-items: center;
-    }
-
-    html.responsive .sortbox .dselect_container {
-        width: 200px;
-    }
-
-    html.responsive .sortbox .label {
-        font: var(--gpText-BodyLarge);
-        color: var(--gpStoreLightestGrey);
-        margin-right: 8px;
-    }
-
-    /* Results counter */
-    html.responsive .search_results_count {
-        padding: 8px 0px 8px 0px;
-        background-color: unset;
-        /* border-top: 1px solid var(--gpBackground-LightSoft); */
-        color: var(--gpStoreLighterGrey);
-    }
-
-
-
-
-
-    /* SEARCH RESULTS */
-
-    /* Results container */
-    html.responsive #search_result_container {
-        max-width: unset;
-    }
-
-    /* Results items */
-    html.responsive .search_result_row {
-        height: unset;
-        border: unset;
-        color: unset;
-        margin-bottom: 6px;
-        background: var(--gpBackground-DarkSoft);
-        font: var(--gpText-BodyMedium);
-        font-weight: 400;
-        display: flex;
-        transition: all 0.1s ease;
-    }
-
-    html.responsive .search_result_row:hover,
-    html.responsive .search_result_row.gpfocus {
-        background: var(--gpBackground-LightSoft);
-    }
-
-    html.responsive .search_result_row .col {
-        height: unset;
-    }
-
-
-    /* Flex all search item info */
-    html.responsive .responsive_search_name_combined {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0px 12px;
-        align-items: center;
-    }
-
-    html.responsive .search_result_row .title {
-        margin-top: unset;
-        color: white;
-        font: var(--gpText-BodyLarge);
-		max-width: 30ch;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-    }
-
-    html.responsive .search_result_row .col.search_released {
-        color: var(--gpStoreLightGrey);
-        font: var(--gpText-BodyMedium);
-		width: 100px;
-    }
-
-    html.responsive .search_result_row .search_capsule {
-        width: unset;
-    }
-
-    html.responsive .search_result_row .search_capsule img {
-        width: 160px;
-        display: block;
-    }
-
-    html.responsive .search_result_row .col {
-        vertical-align: unset;
-    }
-
-
-    /* Split title and platform icons into single row */
-    html.responsive .search_result_row .col.search_name {
-        width: 52%;
-        margin-left: unset;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-		flex-direction: column;
-    }
-
-
-	/* Steam Deck Verified */
-	html.responsive .search_result_row .ds_steam_deck_compat {
-		bottom: 2px;
-        left: 2px;
-	}
-
-
-	/* Hide other platform icons */
-	html.responsive .search_result_row span.platform_img {
-		display: none;
-	}
-
-
-	/* Pricing */
-    html.responsive .search_price_discount_combined {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 120px;
-    }
-
-    html.responsive .col.search_discount {
-        width: unset;
-    }
-
-    html.responsive .col.search_price.discounted {
-        padding-top: unset;
-    }
-
-    html.responsive .col.search_discount span {
-        font-size: unset;
-        margin-top: unset;
-        color: black;
-        background-color: var(--gpColor-Green);
-        font-weight: 700;
-        padding: 2px 4px;
-    }
-
-
-    /* Horizontally align platform icons and labels */
-    html.responsive .search_result_row .col.search_name > div {
-        display: flex;
-        align-items: center;
-    }
-
-    html.responsive .search_result_row .vr_required,
-    html.responsive .search_result_row .vr_supported {
-        top: unset;
-    }
-
-    /* Already in library */
-    html.responsive .search_result_row.ds_flagged:not(.ds_wishlist) .col.search_name {
-        color: var(--gpStoreLightGrey);
-    }
-
-
-
-
-    /* FILTER PANEL */
-
-    /* Toggle filter visibility */
-    /* html.responsive .responsive_local_menu_tab.active {
-        border-radius: unset;
-        width: unset;
-        height: unset;
-        background: unset;
-        box-shadow: unset;
-        top: unset;
-        right: var(--gpSpace-Gutter);
-        bottom: var(--gpSpace-Gutter);
-    } */
-
-    html.responsive .gamepad_filter_toggle {
-        background: white;
-        font: var(--gpText-BodySmall);
-		font-weight: 700;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        color: black;
-        padding: 8px 16px;
-        box-shadow: var(--gpShadow-Large);
-        border-radius: 32px;
-    }
-
-
-    /* Container */
-    html.responsive .responsive_page_frame.localmenu_active .responsive_page_menu_ctn.localmenu {
-        box-shadow: unset;
-    }
-
-    html.responsive .responsive_page_menu_ctn.localmenu .responsive_page_menu {
-        background: var(--gpStoreDarkerGrey);
-		scroll-padding: 64px 0px;
-    }
-
-    html.responsive .localmenu_content {
-        padding: 8px;
-    }
-
-    /* Blocks */
-    html.responsive .block {
-        margin-bottom: 8px;
-    }
-
-    /* Block headers */
-    html.responsive .block .block_header {
-        font: var(--gpText-BodyMedium);
-		font-weight: 500;
-        color: white;
-        padding: 10px 12px;
-        background: var(--gpBackground-LightSoft);
-		transition: all 0.1s ease;
-    }
-
-	html.responsive .block .block_header.gpfocus {
-		background: var(--gpBackground-LightMedium);
-	}
-
-    /* Hide new badges on deck */
-    html.responsive .labs_new {
-        display: none;
-    }
-
-    /* Block content */
-    html.responsive .block_content {
-        border: unset;
-		border-radius: unset;
-    }
-
-    html.responsive .block_content_inner {
-        padding: unset;
-		display: flex;
-		flex-direction: column;
-		row-gap: 6px;
-    }
-
-    /* Filter items */
-    html.responsive .tab_filter_control,
-    html.responsive .range_display {
-        padding: 8px 12px;
-        color: var(--gpStoreLightestGrey);
-        line-height: unset;
-		font-size: unset;
-    }
-
-	html.responsive .range_display {
-		padding: 8px 0px 0px 0px;
-	}
-
-	html.responsive .tab_filter_control {
-		margin-bottom: unset;
-	}
-
-	html.responsive .tab_filter_control_row.checked {
-		background: var(--gpColor-Blue);
-	}
-
-	.responsive_page_frame:not(.in_menu_drag) .responsive_page_menu_ctn {
-		transition: left 0.3s ease, right 0.3s ease !important;
-	}
-
-	/* Range display */
-	html.responsive .range_display {
-		font: var(--gpText-HeadingSmall);
-		font-weight: 500;
-		color: white;
-	}
-
-	html.responsive .range_container {
-		padding: unset;
-	}
-
-	/* Hiding on Deck */
-	html.responsive #TagSuggest {
-		display: none;
-	}
-
-
-
-
-	/* STEAM DECK FILTERS */
-	html.responsive #deck_compatibility_search_filter {
-		border-bottom: 1px solid var(--gpBackground-LightSoft);
-		border-top: 1px solid var(--gpBackground-LightSoft);
-		padding: 8px 0px;
-		display: flex;
-		align-items: center;
-		font: var(--gpText-BodyLarge);
-		color: var(--gpStoreLightestGrey);
-		column-gap: 12px;
-		margin-bottom: 12px;
-	}
-
-	html.responsive #deck_compatibility_search_filter .block_header {
-		font: unset;
-		font-weight: unset;
-		color: unset;
-		padding: unset;
-		background: unset;
-		transition: unset;
-	}
-
-	html.responsive #narrow_deck_compatibility {
-		display: inline-flex;
-		align-items: center;
-		column-gap: 8px;
-		flex: auto;
-		flex-direction: row;
-	}
-
-	/* Learn more button */
-	html.responsive #deck_compat_learn_more_btn {
-		margin-left: auto;
-		color: var(--gpStoreLightGrey);
-		padding: 6px 12px;
-		transition: all 0.2s ease;
-		border-radius: var(--gpCorner-Medium);
-	}
-
-	html.responsive #deck_compat_learn_more_btn:hover {
-		background-color: var(--gpBackground-LightSoft);
-		color: var(--gpStoreLighterGrey);
-	}
-
-	html.responsive #deck_compat_learn_more_btn.gpfocus {
-		background-color: white;
-		color: black;
-		border-radius: 0px;
-	}
-
-	/* Deck check controlls */
-	html.responsive #narrow_deck_compatibility .tab_filter_control {
-		padding: 6px 8px;
-	}
-
-	html.responsive #narrow_deck_compatibility .tab_filter_control_row {
-		border-radius: var(--gpCorner-Medium);
-		transition: background-color 0.2s ease;
-	}
-
-	html.responsive #narrow_deck_compatibility .tab_filter_control_row.checked {
-		background-color: var(--gpBackground-LightMedium);
-	}
-
-	html.responsive #narrow_deck_compatibility .tab_filter_control_row:hover,
-	html.responsive #narrow_deck_compatibility .tab_filter_control.gpfocus {
-		background-color: var(--gpBackground-LightSoft);
-	}
-
-	html.responsive #narrow_deck_compatibility .tab_filter_control span {
-		display: flex;
-		align-items: center;
-	}
-
-	/* Explicitly assign background image icon for Verified and Payable */
-	html.responsive #narrow_deck_compatibility .tab_filter_control_label {
-		background-repeat: no-repeat;
-		padding-right: 26px;
-		display: flex;
-		align-items: center;
-		background-position: right center;
-	}
-
-	html.responsive #narrow_deck_compatibility .tab_filter_control_row:nth-child(2) .tab_filter_control_label {
-		background-image: url('/public/shared/images/ico/ico-deck-verified.svg');
-	}
-
-	html.responsive #narrow_deck_compatibility .tab_filter_control_row:nth-child(3) .tab_filter_control_label {
-		background-image: url('/public/shared/images/ico/ico-deck-playable.svg');
-	}
-
-
-
-
-	/* Hide button to open the right panel */
-	html.responsive .responsive_local_menu_tab.active {
-		top: 60px;
-		display: none;
-	}
-
-
-
 }
+
+
+/* Hide breadcrumbs */
+html.tablet .breadcrumbs {
+	display: none;
+}
+
+/* Hide Steam Labs banner */
+html.tablet .search_labs_banner {
+	display: none;
+}
+
+/* Remove and space */
+html.tablet .page_header_ctn {
+	background: unset;
+	padding-bottom: unset;
+	margin-bottom: 12px;
+}
+
+html.tablet .page_header_ctn.search {
+	background: unset;
+	padding-bottom: unset;
+}
+
+/* Page title */
+html.tablet .pagesubheader {
+	font: var(--gpText-HeadingLarge);
+	font-weight: 700;
+	text-shadow: unset;
+	text-transform: unset;
+	padding: unset;
+	color: white;
+}
+
+html.tablet h2.pageheader {
+	display: none;
+}
+
+
+
+
+/* SEARCH AND SORT */
+
+/* Search bar */
+html.tablet .searchbar {
+	margin-bottom: 12px;
+	background: unset;
+	padding: unset;
+}
+
+html.tablet .searchbar_left {
+	padding-bottom: unset;
+	overflow: unset;
+}
+
+html.tablet .searchbar .sortbox {
+	margin-top: unset;
+}
+
+/* Seach input */
+html.tablet #term {
+	background-color: var(--gpBackground-LightMedium);
+	border-radius: var(--gpCorner-Medium);
+	font: var(--gpText-BodyLarge);
+	color: white;
+	transition: all 0.1s ease;
+	padding: 10px 10px;
+
+	box-shadow: unset;
+	border: unset;
+}
+
+html.tablet #term.gpfocus {
+	border-radius: 0px;
+}
+
+html.tablet #term:focus {
+	background-color: white;
+	color: black;
+}
+
+html.tablet #term::placeholder {
+	color: var(--gpStoreLighterGrey);
+	font: var(--gpText-BodyLarge);
+}
+
+/* Search button */
+html.tablet .searchbar_left > button {
+	height: unset;
+}
+
+html.tablet .btn_small {
+	padding: 10px 20px;
+}
+
+html.tablet .btn_small span {
+	font: var(--gpText-BodyLarge);
+}
+
+html.tablet .btnv6_blue_hoverfade {
+	background: var(--gpColor-Blue);
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.tablet .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	background: var(--gpColor-BlueHi) !important;
+}
+
+
+/* Autocomplete */
+html.tablet #term_options {
+	display: none;
+}
+
+
+/* Sort dropdown */
+html.tablet .sortbox {
+	display: flex;
+	align-items: center;
+}
+
+html.tablet .sortbox .dselect_container {
+	width: 200px;
+}
+
+html.tablet .sortbox .label {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+	margin-right: 8px;
+}
+
+/* Results counter */
+html.tablet .search_results_count {
+	padding: 8px 0px 8px 0px;
+	background-color: unset;
+	/* border-top: 1px solid var(--gpBackground-LightSoft); */
+	color: var(--gpStoreLighterGrey);
+}
+
+
+
+
+
+/* SEARCH RESULTS */
+
+/* Results container */
+html.tablet #search_result_container {
+	max-width: unset;
+}
+
+/* Results items */
+html.tablet .search_result_row {
+	height: unset;
+	border: unset;
+	color: unset;
+	margin-bottom: 6px;
+	background: var(--gpBackground-DarkSoft);
+	font: var(--gpText-BodyMedium);
+	font-weight: 400;
+	display: flex;
+	transition: all 0.1s ease;
+}
+
+html.tablet .search_result_row:hover,
+html.tablet .search_result_row.gpfocus {
+	background: var(--gpBackground-LightSoft);
+}
+
+html.tablet .search_result_row .col {
+	height: unset;
+}
+
+
+/* Flex all search item info */
+html.tablet .responsive_search_name_combined {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 12px;
+	align-items: center;
+}
+
+html.tablet .search_result_row .title {
+	margin-top: unset;
+	color: white;
+	font: var(--gpText-BodyLarge);
+	max-width: 30ch;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+html.tablet .search_result_row .col.search_released {
+	color: var(--gpStoreLightGrey);
+	font: var(--gpText-BodyMedium);
+	width: 100px;
+}
+
+html.tablet .search_result_row .search_capsule {
+	width: unset;
+}
+
+html.tablet .search_result_row .search_capsule img {
+	width: 160px;
+	display: block;
+}
+
+html.tablet .search_result_row .col {
+	vertical-align: unset;
+}
+
+
+/* Split title and platform icons into single row */
+html.tablet .search_result_row .col.search_name {
+	width: 52%;
+	margin-left: unset;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+
+/* Steam Deck Verified */
+html.tablet .search_result_row .ds_steam_deck_compat {
+	bottom: 2px;
+	left: 2px;
+}
+
+
+/* Hide other platform icons */
+html.tablet .search_result_row span.platform_img {
+	display: none;
+}
+
+
+/* Pricing */
+html.tablet .search_price_discount_combined {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 120px;
+}
+
+html.tablet .col.search_discount {
+	width: unset;
+}
+
+html.tablet .col.search_price.discounted {
+	padding-top: unset;
+}
+
+html.tablet .col.search_discount span {
+	font-size: unset;
+	margin-top: unset;
+	color: black;
+	background-color: var(--gpColor-Green);
+	font-weight: 700;
+	padding: 2px 4px;
+}
+
+
+/* Horizontally align platform icons and labels */
+html.tablet .search_result_row .col.search_name > div {
+	display: flex;
+	align-items: center;
+}
+
+html.tablet .search_result_row .vr_required,
+html.tablet .search_result_row .vr_supported {
+	top: unset;
+}
+
+/* Already in library */
+html.tablet .search_result_row.ds_flagged:not(.ds_wishlist) .col.search_name {
+	color: var(--gpStoreLightGrey);
+}
+
+
+
+
+/* FILTER PANEL */
+
+/* Toggle filter visibility */
+/* html.tablet .responsive_local_menu_tab.active {
+	border-radius: unset;
+	width: unset;
+	height: unset;
+	background: unset;
+	box-shadow: unset;
+	top: unset;
+	right: var(--gpSpace-Gutter);
+	bottom: var(--gpSpace-Gutter);
+} */
+
+html.tablet .gamepad_filter_toggle {
+	background: white;
+	font: var(--gpText-BodySmall);
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: black;
+	padding: 8px 16px;
+	box-shadow: var(--gpShadow-Large);
+	border-radius: 32px;
+}
+
+
+/* Container */
+html.tablet .responsive_page_frame.localmenu_active .responsive_page_menu_ctn.localmenu {
+	box-shadow: unset;
+}
+
+html.tablet .responsive_page_menu_ctn.localmenu .responsive_page_menu {
+	background: var(--gpStoreDarkerGrey);
+	scroll-padding: 64px 0px;
+}
+
+html.tablet .localmenu_content {
+	padding: 8px;
+}
+
+/* Blocks */
+html.tablet .block {
+	margin-bottom: 8px;
+}
+
+/* Block headers */
+html.tablet .block .block_header {
+	font: var(--gpText-BodyMedium);
+	font-weight: 500;
+	color: white;
+	padding: 10px 12px;
+	background: var(--gpBackground-LightSoft);
+	transition: all 0.1s ease;
+	position: sticky;
+	top: -8px;
+	backdrop-filter: blur(12px);
+}
+
+html.tablet .block .block_header.gpfocus {
+	background: var(--gpBackground-LightMedium);
+}
+
+/* Hide new badges on deck */
+html.tablet .labs_new {
+	display: none;
+}
+
+/* Block content */
+html.tablet .block_content {
+	border: unset;
+	border-radius: unset;
+}
+
+html.tablet .block_content_inner {
+	padding: unset;
+	display: flex;
+	flex-direction: column;
+	row-gap: 6px;
+}
+
+/* Filter items */
+html.tablet .tab_filter_control,
+html.tablet .range_display {
+	padding: 8px 12px;
+	color: var(--gpStoreLightestGrey);
+	line-height: unset;
+	font-size: unset;
+}
+
+html.tablet .range_display {
+	padding: 8px 0px 0px 0px;
+}
+
+html.tablet .tab_filter_control {
+	margin-bottom: unset;
+}
+
+html.tablet .tab_filter_control_row.checked {
+	background: var(--gpColor-Blue);
+	background: unset;
+}
+
+.responsive_page_frame:not(.in_menu_drag) .responsive_page_menu_ctn {
+	transition: left 0.3s ease, right 0.3s ease !important;
+}
+
+/* Range display */
+html.tablet .range_display {
+	color: white;
+}
+
+html.tablet .range_container {
+	padding: unset;
+}
+
+/* Hiding on Deck */
+html.tablet #TagSuggest {
+	display: none;
+}
+
+
+
+
+/* STEAM DECK FILTERS */
+html.tablet #deck_compatibility_search_filter {
+	border-bottom: 1px solid var(--gpBackground-LightSoft);
+	border-top: 1px solid var(--gpBackground-LightSoft);
+	padding: 8px 0px;
+	display: flex;
+	align-items: center;
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+	column-gap: 12px;
+	margin-bottom: 12px;
+}
+
+html.tablet #deck_compatibility_search_filter .block_header {
+	font: unset;
+	font-weight: unset;
+	color: unset;
+	padding: unset;
+	background: unset;
+	transition: unset;
+}
+
+html.tablet #narrow_deck_compatibility {
+	display: inline-flex;
+	align-items: center;
+	column-gap: 8px;
+	flex: auto;
+	flex-direction: row;
+}
+
+/* Learn more button */
+html.tablet #deck_compat_learn_more_btn {
+	margin-left: auto;
+	color: var(--gpStoreLightGrey);
+	padding: 6px 12px;
+	transition: all 0.2s ease;
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.tablet #deck_compat_learn_more_btn:hover {
+	background-color: var(--gpBackground-LightSoft);
+	color: var(--gpStoreLighterGrey);
+}
+
+html.tablet #deck_compat_learn_more_btn.gpfocus {
+	background-color: white;
+	color: black;
+	border-radius: 0px;
+}
+
+/* Deck check controlls */
+html.tablet #narrow_deck_compatibility .tab_filter_control {
+	padding: 6px 8px;
+}
+
+html.tablet #narrow_deck_compatibility .tab_filter_control_row {
+	border-radius: var(--gpCorner-Medium);
+	transition: background-color 0.2s ease;
+}
+
+html.tablet #narrow_deck_compatibility .tab_filter_control_row.checked {
+	background-color: var(--gpBackground-LightMedium);
+}
+
+html.tablet #narrow_deck_compatibility .tab_filter_control_row:hover,
+html.tablet #narrow_deck_compatibility .tab_filter_control.gpfocus {
+	background-color: var(--gpBackground-LightSoft);
+}
+
+html.tablet #narrow_deck_compatibility .tab_filter_control span {
+	display: flex;
+	align-items: center;
+}
+
+/* Explicitly assign background image icon for Verified and Payable */
+html.tablet #narrow_deck_compatibility .tab_filter_control_label {
+	background-repeat: no-repeat;
+	padding-right: 26px;
+	display: flex;
+	align-items: center;
+	background-position: right center;
+}
+
+html.tablet #narrow_deck_compatibility .tab_filter_control_row:nth-child(2) .tab_filter_control_label {
+	background-image: url('/public/shared/images/ico/ico-deck-verified.svg');
+}
+
+html.tablet #narrow_deck_compatibility .tab_filter_control_row:nth-child(3) .tab_filter_control_label {
+	background-image: url('/public/shared/images/ico/ico-deck-playable.svg');
+}
+
+
+
+
+/* Hide button to open the right panel */
+html.tablet .responsive_local_menu_tab.active {
+	top: 60px;
+	display: none;
+}
+
+
+
+
+/* RESPONSIVE */
+html.tablet body.v6 .page_content {
+	display: flex;
+	column-gap: 24px;
+}
+
+html.tablet div.leftcol.large {
+	width: 100%;
+	min-width: 0px;
+}
+
+html.tablet div.rightcol.small {
+	width: unset;
+	min-width: 32%;
+	margin: unset;
+	position: sticky;
+	top: 0px;
+	max-height: 100vh;
+	overflow-y: auto;
+	scroll-padding: 80px 0px;
+	padding: 8px;
+	margin: -8px;
+}
+
+
+
+@media screen and ( max-width: 910px ) {
+	html.tablet body.v6 .page_content {
+		column-gap: 0px;
+	}
+}
+
+
+

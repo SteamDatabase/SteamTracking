@@ -305,10 +305,10 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 {
 	var rgRecommendationsToShow = [];
 	var fnScore = fnRecScore || DefaultRecScoreFactory( 3 );
-	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode(); 
+	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode(); 
 	var strViewAllLink = "";
 
-	if ( bSupportTabletMode ) 
+	if ( bUseTabletScreenMode ) 
 	{
 		var $elBlock = elTarget.closest( 'div.block' );
 		var $elAnchor = $elBlock ? $J( 'a.deck_view_all_action_link', $elBlock ) : null;
@@ -342,7 +342,7 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 			'href': GStoreItemData.GetAppURL( unAppID, strAppURL )
 		};
 
-				if ( bSupportTabletMode && strViewAllLink !== "" ) 
+				if ( bUseTabletScreenMode && strViewAllLink !== "" ) 
 		{
 			const panelString = '{"onOptionsActionDescription":"View all","onOptionsButton":"window.location=\'%1$s\'"}';
 			params['data-panel'] = panelString.replace( '%1$s', strViewAllLink );
@@ -437,8 +437,7 @@ function RenderMoreDLCFromBaseGameBlock( rgMoreDLCsFromBaseGameAppIDs )
 
 function ShowEULA( elLink )
 {
-	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode(); 
-	if ( bSupportTabletMode )
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
 	{
 		// it's a better user experience on Deck if we navigate to the EULA instead of opening a new window
 		window.location = elLink.href;
@@ -1900,8 +1899,8 @@ function ToggleBannerContentVisibility( divContentID, divIconID )
 // which requires some section moves here, and formatting changes in .css 
 function ReparentReviewsForSmallScreens()
 {
-	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode(); 
-	var fn_reparent = bSupportTabletMode ? Responsive_ReparentItemsInResponsiveMode : Responsive_ReparentItemsInMobileMode;
+	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode(); 
+	var fn_reparent = bUseTabletScreenMode ? Responsive_ReparentItemsInTabletMode : Responsive_ReparentItemsInMobileMode;
 
 	var $MoveReviewSections = $J('.user_reviews_container');
 	$MoveReviewSections.each( function() {
@@ -2000,14 +1999,14 @@ function ReparentAppLandingPageForSmallScreens()
 		$J('#shareImg').attr('src', 'https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.svg' );
 	}
 
-	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
+	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
 
 	ReparentPurchaseOptionsForTablet( '#purchaseOptionsContent' );
 
-		var fn_reparent = bSupportTabletMode ? Responsive_ReparentItemsInResponsiveMode : Responsive_ReparentItemsInMobileMode;
+		var fn_reparent = bUseTabletScreenMode ? Responsive_ReparentItemsInTabletMode : Responsive_ReparentItemsInMobileMode;
 
 	// move early access content into the purchase options parent
-	if ( bSupportTabletMode )
+	if ( bUseTabletScreenMode )
 	{
 		// on tablet we provide a learn more link which opens a dialog containing early access details
 		fn_reparent( $J('#earlyAccessBody'), $J('#earlyAccessTabletDialogContent') );
@@ -2038,7 +2037,7 @@ function ReparentAppLandingPageForSmallScreens()
 	fn_reparent( '#bannerCommunity', $J( '#appLinksAndInfo' ) );
 
 	// on tablet these go into a dropdown
-	fn_reparent( '#appDetailsUnderlinedLinks', bSupportTabletMode ? $J( '#appLinksAndInfo_TabletDropdownContent' ) : $J( '#appLinksAndInfo' ) );
+	fn_reparent( '#appDetailsUnderlinedLinks', bUseTabletScreenMode ? $J( '#appLinksAndInfo_TabletDropdownContent' ) : $J( '#appLinksAndInfo' ) );
 
 	// place the active review filter list in the review details section
 	fn_reparent( '#reviews_active_filters', $J('.reviews_info_ctn') );
@@ -2057,10 +2056,10 @@ function ReparentAppLandingPageForSmallScreens()
 	var defaultReportFlex = $J('#reportBtn').css('flex-grow');
 	var defaultLanguageTableDisplay = $J('#languageTable').css('display');
 
-	var msgWatch = bSupportTabletMode ? 'Responsive_SmallScreenModeToggled' : 'Responsive_MobileScreenModeToggled';
+	var msgWatch = bUseTabletScreenMode ? 'Responsive_SmallScreenModeToggled' : 'Responsive_MobileScreenModeToggled';
 	$J(window).on( msgWatch, function() {
 
-		var bUseNewUX = ( bSupportTabletMode && window.UseSmallScreenMode && window.UseSmallScreenMode() ) || 
+		var bUseNewUX = ( bUseTabletScreenMode && window.UseSmallScreenMode && window.UseSmallScreenMode() ) || 
 			( window.UseMobileScreenMode && window.UseMobileScreenMode() );
 
 		// if one of the wishlist buttons are visible make the action buttons flex grow so the two rows of buttons match width.
@@ -2104,7 +2103,7 @@ function ReparentAppLandingPageForSmallScreens()
 function ReparentPurchaseOptionsForTablet( idPurchaseOptions )
 {
 	// tablet mode has its own purchase options container (shown on right side of screen)
-	if ( window.SupportTabletScreenMode && window.SupportTabletScreenMode() )
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
 	{
 		Responsive_ReparentItemsInTabletMode( idPurchaseOptions, $J('#purchaseOptionsContentTablet') );
 

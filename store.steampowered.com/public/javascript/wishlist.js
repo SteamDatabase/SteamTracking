@@ -822,7 +822,10 @@ CWishlistController.prototype.Update = function( bForceSort )
 			});
 		else if( this.rgFilterSettings.sort == 'reviewscore' )
 			this.rgAllApps.sort( function(a, b ) {
-				return g_rgAppInfo[b].review_score - g_rgAppInfo[a].review_score;
+				if ( g_rgAppInfo[b].review_score != g_rgAppInfo[a].review_score )
+					return g_rgAppInfo[b].review_score - g_rgAppInfo[a].review_score;
+
+				return g_rgAppInfo[b].reviews_percent - g_rgAppInfo[a].reviews_percent;
 			});
 		else if( this.rgFilterSettings.sort == 'releasedate' )
 			this.rgAllApps.sort( function(a, b ) {
