@@ -243,7 +243,7 @@
                 )
               ),
               i.a.createElement(
-                l.j,
+                l.f,
                 {
                   className: m.a.GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,
@@ -592,7 +592,7 @@
         s = n("2vnA"),
         o = n("q1tI"),
         c = n.n(o),
-        l = (n("mgoM"), n("kyHq"), n("8H1D")),
+        l = (n("mgoM"), n("65aj"), n("8H1D")),
         d = n("kLLr"),
         u = (n("AiWL"), n("r64O")),
         m = n("OS6B"),

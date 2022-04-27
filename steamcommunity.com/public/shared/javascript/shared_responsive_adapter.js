@@ -15,11 +15,8 @@ jQuery( function($) {
 	window.UseMobileScreenMode = function() {
 		return $HTML.hasClass( 'responsive' ) && mqMobileMode.matches;
 	};
-	window.SupportTabletScreenMode = function() {
-		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'tablet' );
-	}
 	window.UseTabletScreenMode = function() {
-		return window.SupportTabletScreenMode() && !mqMobileMode.matches && mqQueryMenuMode.matches;
+		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'tablet' );
 	};
 
 	// main menu
@@ -248,7 +245,7 @@ jQuery( function($) {
 
 	Responsive_InitJQPlotHooks( $ );
 
-	if ( window.SupportTabletScreenMode && window.SupportTabletScreenMode() )
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
 		Responsive_InitForTablet( $ );
 });
 
@@ -672,7 +669,7 @@ function Responsive_ReparentItemsInMobileMode( strItemSelector, $CtnOrFn )
 	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseMobileScreenMode && window.UseMobileScreenMode(); }, 'Responsive_MobileScreenModeToggled' );
 }
 
-/* reparent element when screen width is greater than MOBILE_RESPONSIVE_CSS_MAXWIDTH and up to RESPONSIVE_CSS_MAXWIDTH */
+/* reparent element when we're rendering in the tablet layout (which could be any screen size given docked tablet scenarios) */
 function Responsive_ReparentItemsInTabletMode( strItemSelector, $CtnOrFn )
 {
 	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseTabletScreenMode && window.UseTabletScreenMode(); }, 'Responsive_TabletScreenModeToggled' );

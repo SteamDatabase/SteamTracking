@@ -136,7 +136,7 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 		_chat.m_ulChatID = rgResult.chat_id;
 
 		if( rgResult.blocked ) 		{
-			$J('#chatmessage').attr( 'placeholder', 'Only game owners are allowed to send chat messages during this broadcast.' );
+			$J('#chatmessage').attr( 'placeholder', 'Only game owners can send chat messages during this broadcast.' );
 			$J('#chatmessage').prop( 'disabled', true );
 			$J('#ChatSendButton').prop( 'disabled', true );
 		}
@@ -528,7 +528,7 @@ CBroadcastChat.prototype.ChatSubmit = function()
 			else if( response.result == 84 )
                 strError = 'You are sending messages too fast, try again in %s seconds.'.replace( /%s/, response.cooldown_time_seconds );
 			else if( response.result == 40 ) // Note: The UI should block you from this point, but it is a safety net incase something changes during the broadcast
-				strError = 'Only game owners are allowed to send chat messages during this broadcast.';
+				strError = 'Only game owners can send chat messages during this broadcast.';
 			else
 				strError = 'Failed to send chat message: %s'.replace( /%s/, strMessage );
 

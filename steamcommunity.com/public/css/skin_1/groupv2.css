@@ -2117,3 +2117,27 @@ div.rule {
 	background: #495665;
 	color: #97a5b4;
 }
+
+.profile_text_content_check {
+	margin-bottom: 12px;
+	padding: 14px 11px;
+	margin-top: 4px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+}
+.profile_text_content_check > .profile_text_content_check_controls {
+	margin-left: 20px;
+	float: right;
+}
+.profile_text_content_check > .profile_text_content_check_controls > span {
+	cursor: pointer;
+}
+.profile_text_content_check > img {
+	width: 12px;
+}
+.profile_text_content_check .hidden_content_title {
+	padding-top: 10px;
+}
+.profile_text_content_check .hidden_content {
+	padding: 20px;
+	font-style: italic;
+}

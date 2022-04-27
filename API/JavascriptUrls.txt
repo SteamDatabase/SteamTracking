@@ -178,7 +178,6 @@ ${COMMUNITY_BASE_URL}gid/${}/partnerevents/preview/${}
 ${COMMUNITY_BASE_URL}gid/${}/showclanimage/?image_hash_and_ext=${}
 ${COMMUNITY_BASE_URL}group/${clanAccountID}
 ${COMMUNITY_BASE_URL}groups
-${COMMUNITY_BASE_URL}groups/${VANITY_ID}
 ${COMMUNITY_BASE_URL}groups/${vanity_url}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
@@ -203,6 +202,7 @@ ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${appid}/announcements/ajaxgetmyvote/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappbranches
+${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappvisibilityrounds
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxisvisibleinsc
 ${COMMUNITY_BASE_URL}ogg/${}/partnerevents/create/
@@ -762,7 +762,6 @@ ${ROOT_URL}/puzzleleaderboarddata
 ${ROOT_URL}/submitfeedback
 ${ROOT_URL}/updatesdata
 ${STATS_BASE_URL}sales/details/?gid=${GID}&clanid=${}
-${STATS_BASE_URL}sales/details/?gid=${}&clanid=${}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxrecentsaleevents" : "saleaction/ajaxrecenttaggedsaleevents"}

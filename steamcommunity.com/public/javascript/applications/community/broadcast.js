@@ -76,7 +76,7 @@
         g = r("0OaU"),
         y = r("exH9"),
         f = r("lkRc"),
-        S = r("kyHq"),
+        S = r("65aj"),
         w = r("dLk7"),
         M = r.n(w);
       const C = Object(n.a)((e) => {
@@ -239,8 +239,8 @@
         );
       });
       var G,
-        A = r("C4Nl"),
-        L = r("hKFG"),
+        L = r("C4Nl"),
+        A = r("hKFG"),
         k = r("S6U1");
       r("3u1e");
       const V = {
@@ -293,12 +293,14 @@
             });
         }
         static IsBroadcastAllowed() {
-          return f.c.EREALM != S.g.k_ESteamRealmChina && !f.c.IN_GAMEPADUI;
+          return (
+            f.c.EREALM != S.ESteamRealm.k_ESteamRealmChina && !f.c.IN_GAMEPADUI
+          );
         }
         componentDidMount() {
           return Object(a.a)(this, void 0, void 0, function* () {
             G.IsBroadcastAllowed() &&
-              (Object(L.a)(null),
+              (Object(A.a)(null),
               yield R.a
                 .Get()
                 .LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
@@ -471,14 +473,14 @@
               (e = Object.assign(Object.assign({}, e), {
                 left_panel: r.GetImageURL(
                   "broadcast_left",
-                  a || Object(S.k)(f.c.LANGUAGE)
+                  a || Object(S.PchLanguageToELanguage)(f.c.LANGUAGE)
                 ),
                 right_panel: r.GetImageURL(
                   "broadcast_right",
-                  a || Object(S.k)(f.c.LANGUAGE)
+                  a || Object(S.PchLanguageToELanguage)(f.c.LANGUAGE)
                 ),
                 store_title: r.GetBroadcastTitle(
-                  a || Object(S.k)(f.c.LANGUAGE)
+                  a || Object(S.PchLanguageToELanguage)(f.c.LANGUAGE)
                 ),
                 broadcast_chat_visibility: r.GetBroadcastChatVisibility(),
               }));
@@ -865,7 +867,7 @@
       function J(e, t) {
         var r;
         const a = z.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
-          i = A.a.Get().GetApp(a);
+          i = L.a.Get().GetApp(a);
         return e &&
           (null === (r = null == i ? void 0 : i.GetAssets()) || void 0 === r
             ? void 0
@@ -895,7 +897,7 @@
               const e = o
                 .map((e) => z.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID)
                 .filter(Boolean);
-              A.a
+              L.a
                 .Get()
                 .QueueMultipleAppRequests(e, { include_assets: !0 })
                 .then(() => {
@@ -1630,7 +1632,7 @@
           ? (null === O.h || void 0 === O.h ? void 0 : O.h.logged_in)
             ? n.createElement(U, { oChat: t, emoticonStore: r })
             : null
-          : n.createElement(A, null);
+          : n.createElement(L, null);
       }
       function U(e) {
         const { oChat: t, emoticonStore: r } = e,
@@ -1763,7 +1765,7 @@
           );
         }
       }
-      function A(e) {
+      function L(e) {
         return n.createElement(
           "div",
           { className: T.a.Description },
@@ -1774,7 +1776,7 @@
           ),
           !O.h.logged_in &&
             n.createElement(
-              b.j,
+              b.f,
               { onClick: g.a, className: Object(v.a)(T.a.SignInButton) },
               Object(z.f)("#Login_SignIn")
             )
@@ -1784,7 +1786,7 @@
     gJzY: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return R;
+        return F;
       });
       var a = r("mrSG"),
         i = r("2vnA"),
@@ -1792,14 +1794,82 @@
         n = r.n(s),
         o = r("bxBv"),
         l = r("hRO2"),
-        c = r("OS8t"),
-        d = r("2ErG");
-      const m = l.Message;
-      class u extends m {
+        c = r("OS8t");
+      const d = l.Message;
+      class m extends d {
         constructor(e = null) {
           super(),
-            u.prototype.groupid || c.a(u.M()),
-            m.initialize(this, e, 0, -1, [3], null);
+            m.prototype.bincremental || c.a(m.M()),
+            d.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            m.sm_m ||
+              (m.sm_m = {
+                proto: m,
+                fields: {
+                  bincremental: { n: 1, br: c.d.readBool, bw: c.h.writeBool },
+                  friends: { n: 2, c: u, r: !0, q: !0 },
+                  max_friend_count: {
+                    n: 3,
+                    br: c.d.readUint32,
+                    bw: c.h.writeUint32,
+                  },
+                  active_friend_count: {
+                    n: 4,
+                    br: c.d.readUint32,
+                    bw: c.h.writeUint32,
+                  },
+                  friends_limit_hit: {
+                    n: 5,
+                    br: c.d.readBool,
+                    bw: c.h.writeBool,
+                  },
+                },
+              }),
+            m.sm_m
+          );
+        }
+        static MBF() {
+          return m.sm_mbf || (m.sm_mbf = c.e(m.M())), m.sm_mbf;
+        }
+        toObject(e = !1) {
+          return m.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return c.g(m.M(), e, t);
+        }
+        static fromObject(e) {
+          return c.c(m.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new m();
+          return m.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return c.b(m.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          c.f(m.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgClientFriendsList";
+        }
+      }
+      class u extends d {
+        constructor(e = null) {
+          super(),
+            u.prototype.ulfriendid || c.a(u.M()),
+            d.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1807,14 +1877,15 @@
               (u.sm_m = {
                 proto: u,
                 fields: {
-                  groupid: { n: 1, br: c.d.readUint32, bw: c.h.writeUint32 },
-                  name: { n: 2, br: c.d.readString, bw: c.h.writeString },
-                  accountid_members: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
+                  ulfriendid: {
+                    n: 1,
+                    br: c.d.readFixed64String,
+                    bw: c.h.writeFixed64String,
+                  },
+                  efriendrelationship: {
+                    n: 2,
                     br: c.d.readUint32,
-                    bw: c.h.writeRepeatedUint32,
+                    bw: c.h.writeUint32,
                   },
                 },
               }),
@@ -1853,65 +1924,15 @@
           return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsListCategory";
+          return "CMsgClientFriendsList_Friend";
         }
       }
-      class _ extends m {
+      const _ = l.Message;
+      class h extends _ {
         constructor(e = null) {
           super(),
-            _.prototype.categories || c.a(_.M()),
-            m.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: { categories: { n: 1, c: u, r: !0, q: !0 } },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = c.e(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return c.g(_.M(), e, t);
-        }
-        static fromObject(e) {
-          return c.c(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new l.BinaryReader(e),
-            r = new _();
-          return _.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return c.b(_.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new l.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          c.f(_.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new l.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetCategories_Response";
-        }
-      }
-      class h extends m {
-        constructor(e = null) {
-          super(),
-            h.prototype.accountid || c.a(h.M()),
-            m.initialize(this, e, 0, -1, void 0, null);
+            h.prototype.groupid || c.a(h.M()),
+            _.initialize(this, e, 0, -1, [3], null);
         }
         static M() {
           return (
@@ -1919,12 +1940,14 @@
               (h.sm_m = {
                 proto: h,
                 fields: {
-                  accountid: { n: 1, br: c.d.readUint32, bw: c.h.writeUint32 },
-                  clanid: { n: 2, br: c.d.readUint32, bw: c.h.writeUint32 },
-                  chat_group_id: {
+                  groupid: { n: 1, br: c.d.readUint32, bw: c.h.writeUint32 },
+                  name: { n: 2, br: c.d.readString, bw: c.h.writeString },
+                  accountid_members: {
                     n: 3,
-                    br: c.d.readUint64String,
-                    bw: c.h.writeUint64String,
+                    r: !0,
+                    q: !0,
+                    br: c.d.readUint32,
+                    bw: c.h.writeRepeatedUint32,
                   },
                 },
               }),
@@ -1963,21 +1986,21 @@
           return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsListFavoriteEntry";
+          return "CFriendsListCategory";
         }
       }
-      class b extends m {
+      class b extends _ {
         constructor(e = null) {
           super(),
-            b.prototype.favorites || c.a(b.M()),
-            m.initialize(this, e, 0, -1, [1], null);
+            b.prototype.categories || c.a(b.M()),
+            _.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             b.sm_m ||
               (b.sm_m = {
                 proto: b,
-                fields: { favorites: { n: 1, c: h, r: !0, q: !0 } },
+                fields: { categories: { n: 1, c: h, r: !0, q: !0 } },
               }),
             b.sm_m
           );
@@ -2014,21 +2037,44 @@
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsList_GetFavorites_Response";
+          return "CFriendsList_GetCategories_Response";
         }
       }
-      class B extends m {
+      class B extends _ {
         constructor(e = null) {
-          super(), m.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            B.prototype.accountid || c.a(B.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
+                fields: {
+                  accountid: { n: 1, br: c.d.readUint32, bw: c.h.writeUint32 },
+                  clanid: { n: 2, br: c.d.readUint32, bw: c.h.writeUint32 },
+                  chat_group_id: {
+                    n: 3,
+                    br: c.d.readUint64String,
+                    bw: c.h.writeUint64String,
+                  },
+                },
+              }),
+            B.sm_m
+          );
+        }
+        static MBF() {
+          return B.sm_mbf || (B.sm_mbf = c.e(B.M())), B.sm_mbf;
         }
         toObject(e = !1) {
           return B.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return c.g(B.M(), e, t);
         }
         static fromObject(e) {
-          return new B();
+          return c.c(B.M(), e);
         }
         static deserializeBinary(e) {
           let t = new l.BinaryReader(e),
@@ -2036,33 +2082,35 @@
           return B.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return c.b(B.MBF(), e, t);
         }
         serializeBinary() {
           var e = new l.BinaryWriter();
           return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          c.f(B.M(), e, t);
+        }
         serializeBase64String() {
           var e = new l.BinaryWriter();
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsList_SetFavorites_Response";
+          return "CFriendsListFavoriteEntry";
         }
       }
-      class p extends m {
+      class p extends _ {
         constructor(e = null) {
           super(),
             p.prototype.favorites || c.a(p.M()),
-            m.initialize(this, e, 0, -1, [1], null);
+            _.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             p.sm_m ||
               (p.sm_m = {
                 proto: p,
-                fields: { favorites: { n: 1, c: h, r: !0, q: !0 } },
+                fields: { favorites: { n: 1, c: B, r: !0, q: !0 } },
               }),
             p.sm_m
           );
@@ -2099,12 +2147,12 @@
           return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsList_FavoritesChanged_Notification";
+          return "CFriendsList_GetFavorites_Response";
         }
       }
-      class g extends m {
+      class g extends _ {
         constructor(e = null) {
-          super(), m.initialize(this, e, 0, -1, void 0, null);
+          super(), _.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return g.toObject(e, this);
@@ -2133,21 +2181,21 @@
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsList_GetFriendsList_Request";
+          return "CFriendsList_SetFavorites_Response";
         }
       }
-      class y extends m {
+      class y extends _ {
         constructor(e = null) {
           super(),
-            y.prototype.friendslist || c.a(y.M()),
-            m.initialize(this, e, 0, -1, void 0, null);
+            y.prototype.favorites || c.a(y.M()),
+            _.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             y.sm_m ||
               (y.sm_m = {
                 proto: y,
-                fields: { friendslist: { n: 1, c: d.b } },
+                fields: { favorites: { n: 1, c: B, r: !0, q: !0 } },
               }),
             y.sm_m
           );
@@ -2184,48 +2232,130 @@
           return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CFriendsList_FavoritesChanged_Notification";
+        }
+      }
+      class f extends _ {
+        constructor(e = null) {
+          super(), _.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return f.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new f();
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new f();
+          return f.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFriendsList_Request";
+        }
+      }
+      class S extends _ {
+        constructor(e = null) {
+          super(),
+            S.prototype.friendslist || c.a(S.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            S.sm_m ||
+              (S.sm_m = { proto: S, fields: { friendslist: { n: 1, c: m } } }),
+            S.sm_m
+          );
+        }
+        static MBF() {
+          return S.sm_mbf || (S.sm_mbf = c.e(S.M())), S.sm_mbf;
+        }
+        toObject(e = !1) {
+          return S.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return c.g(S.M(), e, t);
+        }
+        static fromObject(e) {
+          return c.c(S.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new S();
+          return S.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return c.b(S.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          c.f(S.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CFriendsList_GetFriendsList_Response";
         }
       }
-      var f, S;
+      var w, M;
       !(function (e) {
         (e.GetCategories = function (e, t) {
-          return e.SendMsg("FriendsList.GetCategories#1", t, _, {
+          return e.SendMsg("FriendsList.GetCategories#1", t, b, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
         }),
           (e.GetFriendsList = function (e, t) {
-            return e.SendMsg("FriendsList.GetFriendsList#1", t, y, {
+            return e.SendMsg("FriendsList.GetFriendsList#1", t, S, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
           (e.GetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.GetFavorites#1", t, b, {
+            return e.SendMsg("FriendsList.GetFavorites#1", t, p, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
           (e.SetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.SetFavorites#1", t, B, {
+            return e.SendMsg("FriendsList.SetFavorites#1", t, g, {
               ePrivilege: 1,
             });
           });
-      })(f || (f = {})),
+      })(w || (w = {})),
         (function (e) {
           e.FavoritesChangedHandler = {
             name: "FriendsListClient.FavoritesChanged#1",
-            request: p,
+            request: y,
           };
-        })(S || (S = {}));
-      var w = r("oFam"),
-        M = r("kLLr"),
-        C = r("lkRc"),
-        v = (r("mgoM"), r("75qM"), r("kyHq")),
-        z = r("uobO");
+        })(M || (M = {}));
+      var C = r("oFam"),
+        v = r("kLLr"),
+        z = r("lkRc"),
+        R = (r("mgoM"), r("75qM"), r("65aj")),
+        O = r("uobO");
       r("AiWL");
-      class R {
+      class F {
         constructor() {
           (this.m_mapPlayerCache = new Map()),
             (this.m_strBannedWords = ""),
@@ -2236,13 +2366,13 @@
             (this.m_regexBannedWords = null),
             (this.m_regexCleanWords = null),
             (this.m_bShownFilterTip = !1),
-            (this.m_TextFilterPreferences = new v.l());
+            (this.m_TextFilterPreferences = new R.TextFilterPreferences());
           {
-            let e = new w.a();
+            let e = new C.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends());
           }
-          this.m_TextFilterWords = new w.n();
+          this.m_TextFilterWords = new C.n();
         }
         Init(e = 0, t = null, r = null) {
           return Object(a.a)(this, void 0, void 0, function* () {
@@ -2257,8 +2387,8 @@
               yield this.LoadTextFilterWords(),
               yield this.RequestUpdatedSettings(),
               yield this.RequestFriendsList(),
-              yield this.LoadLanguage(C.c.LANGUAGE),
-              "english" !== C.c.LANGUAGE &&
+              yield this.LoadLanguage(z.c.LANGUAGE),
+              "english" !== z.c.LANGUAGE &&
                 (yield this.LoadLanguage("english")),
               this.OnFilterDataChanged();
           });
@@ -2286,7 +2416,7 @@
               let e = yield this.m_Storage.GetObject(
                 "CTextFilterStore_TextFilterWords"
               );
-              e && (this.m_TextFilterWords = w.n.fromObject(e));
+              e && (this.m_TextFilterWords = C.n.fromObject(e));
             }
           });
         }
@@ -2323,22 +2453,22 @@
         }
         RequestUpdatedSettings() {
           return Object(a.a)(this, void 0, void 0, function* () {
-            let e = new w.a();
+            let e = new C.a();
             if (0 !== this.m_unAccountID)
               try {
                 if (this.m_Transport) {
-                  let t = o.b.Init(w.b);
-                  e = (yield w.o.GetCommunityPreferences(this.m_Transport, t))
+                  let t = o.b.Init(C.b);
+                  e = (yield C.o.GetCommunityPreferences(this.m_Transport, t))
                     .Body()
                     .preferences();
                 } else {
-                  let t = { sessionid: C.c.SESSIONID, origin: Object(C.d)() };
+                  let t = { sessionid: z.c.SESSIONID, origin: Object(z.d)() };
                   const r = yield n.a.get(
-                    C.c.COMMUNITY_BASE_URL +
+                    z.c.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgetcommunitypreferences",
                     { params: t, withCredentials: !0 }
                   );
-                  e = w.a.fromObject(r.data.preferences);
+                  e = C.a.fromObject(r.data.preferences);
                 }
               } catch (e) {}
             if (
@@ -2346,22 +2476,22 @@
               e.text_filter_words_revision() !==
                 this.m_TextFilterWords.text_filter_words_revision())
             ) {
-              let t = new w.n();
+              let t = new C.n();
               if (0 !== e.text_filter_words_revision())
                 try {
                   if (this.m_Transport) {
-                    let e = o.b.Init(w.e);
-                    t = (yield w.o.GetTextFilterWords(this.m_Transport, e))
+                    let e = o.b.Init(C.e);
+                    t = (yield C.o.GetTextFilterWords(this.m_Transport, e))
                       .Body()
                       .words();
                   } else {
-                    let e = { sessionid: C.c.SESSIONID, origin: Object(C.d)() };
+                    let e = { sessionid: z.c.SESSIONID, origin: Object(z.d)() };
                     const r = yield n.a.get(
-                      C.c.COMMUNITY_BASE_URL +
+                      z.c.COMMUNITY_BASE_URL +
                         "textfilter/ajaxgettextfiltercustomwords",
                       { params: e, withCredentials: !0 }
                     );
-                    t = w.n.fromObject(r.data.words);
+                    t = C.n.fromObject(r.data.words);
                   }
                 } catch (e) {}
               this.UpdateTextFilterWords(t);
@@ -2388,21 +2518,21 @@
         }
         RequestFriendsList() {
           return Object(a.a)(this, void 0, void 0, function* () {
-            let e = new d.b();
+            let e = new m();
             if (0 !== this.m_unAccountID)
               try {
                 if (this.m_Transport) {
-                  let t = o.b.Init(g);
-                  e = (yield f.GetFriendsList(this.m_Transport, t))
+                  let t = o.b.Init(f);
+                  e = (yield w.GetFriendsList(this.m_Transport, t))
                     .Body()
                     .friendslist();
                 } else {
-                  let t = { sessionid: C.c.SESSIONID, origin: Object(C.d)() };
+                  let t = { sessionid: z.c.SESSIONID, origin: Object(z.d)() };
                   const r = yield n.a.get(
-                    C.c.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist",
+                    z.c.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist",
                     { params: t, withCredentials: !0 }
                   );
-                  e = d.b.fromObject(r.data.friendslist);
+                  e = m.fromObject(r.data.friendslist);
                 }
               } catch (e) {}
             this.SetFriendsList(e);
@@ -2411,7 +2541,7 @@
         SetFriendsList(e) {
           e.bincremental() || this.m_mapPlayerCache.clear();
           for (let t of e.friends()) {
-            let e = new M.a(t.ulfriendid());
+            let e = new v.a(t.ulfriendid());
             if (e.BIsIndividualAccount()) {
               let r = t.efriendrelationship();
               this.m_mapPlayerCache.set(e.GetAccountID(), r);
@@ -2426,9 +2556,9 @@
         LoadLanguage(e) {
           return Object(a.a)(this, void 0, void 0, function* () {
             let t = `${
-              C.c.COMMUNITY_CDN_URL
+              z.c.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${Object(
-              C.d
+              z.d
             )()}`;
             try {
               const e = yield n.a.get(t);
@@ -2437,9 +2567,9 @@
               console.error("Failed to load filter dictionary " + t, e);
             }
             t = `${
-              C.c.COMMUNITY_CDN_URL
+              z.c.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${Object(
-              C.d
+              z.d
             )()}`;
             try {
               const e = yield n.a.get(t);
@@ -2448,9 +2578,9 @@
               console.error("Failed to load filter dictionary " + t, e);
             }
             t = `${
-              C.c.COMMUNITY_CDN_URL
+              z.c.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${Object(
-              C.d
+              z.d
             )()}`;
             try {
               const e = yield n.a.get(t);
@@ -2506,7 +2636,7 @@
               this.m_regexBannedWords = new RegExp(e, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter bannedwords regex"),
-                Object(z.a)().ReportError(
+                Object(O.a)().ReportError(
                   new Error(
                     `Couldn't compile textfilter bannedwords regex: ${e}`
                   )
@@ -2517,7 +2647,7 @@
               this.m_regexCleanWords = new RegExp(t, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter cleanwords regex"),
-                Object(z.a)().ReportError(
+                Object(O.a)().ReportError(
                   new Error(
                     `Couldn't compile textfilter cleanwords regex: ${e}`
                   )
@@ -2543,7 +2673,7 @@
           if (!this.m_regexBannedWords) return t;
           let r = 0;
           if ("string" == typeof e && "" !== e) {
-            r = new M.a(e).GetAccountID();
+            r = new v.a(e).GetAccountID();
           } else "number" == typeof e && (r = e);
           return !t ||
             r == this.m_unAccountID ||
@@ -2556,13 +2686,13 @@
               );
         }
       }
-      Object(a.b)([i.C], R.prototype, "m_TextFilterPreferences", void 0),
-        Object(a.b)([i.C], R.prototype, "m_mapPlayerCache", void 0),
-        Object(a.b)([i.C], R.prototype, "m_regexBannedWords", void 0),
-        Object(a.b)([i.C], R.prototype, "m_regexCleanWords", void 0),
-        Object(a.b)([i.k], R.prototype, "UpdateCommunityPreferences", null),
-        Object(a.b)([i.k], R.prototype, "SetFriendsList", null),
-        Object(a.b)([i.k], R.prototype, "BRebuildFilter", null);
+      Object(a.b)([i.C], F.prototype, "m_TextFilterPreferences", void 0),
+        Object(a.b)([i.C], F.prototype, "m_mapPlayerCache", void 0),
+        Object(a.b)([i.C], F.prototype, "m_regexBannedWords", void 0),
+        Object(a.b)([i.C], F.prototype, "m_regexCleanWords", void 0),
+        Object(a.b)([i.k], F.prototype, "UpdateCommunityPreferences", null),
+        Object(a.b)([i.k], F.prototype, "SetFriendsList", null),
+        Object(a.b)([i.k], F.prototype, "BRebuildFilter", null);
     },
     gfUn: function (e, t, r) {
       "use strict";
@@ -4041,67 +4171,18 @@
           return "CSteamTV_AddChatBan_Request";
         }
       }
-      class A extends b {
-        constructor(e = null) {
-          super(), b.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return A.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new A();
-        }
-        static deserializeBinary(e) {
-          let t = new _.BinaryReader(e),
-            r = new A();
-          return A.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new _.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new _.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_AddChatBan_Response";
-        }
-      }
       class L extends b {
         constructor(e = null) {
-          super(),
-            L.prototype.results || h.a(L.M()),
-            b.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
-                fields: { results: { n: 1, c: D, r: !0, q: !0 } },
-              }),
-            L.sm_m
-          );
-        }
-        static MBF() {
-          return L.sm_mbf || (L.sm_mbf = h.e(L.M())), L.sm_mbf;
+          super(), b.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return L.toObject(e, this);
         }
         static toObject(e, t) {
-          return h.g(L.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return h.c(L.M(), e);
+          return new L();
         }
         static deserializeBinary(e) {
           let t = new _.BinaryReader(e),
@@ -4109,18 +4190,67 @@
           return L.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return h.b(L.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new _.BinaryWriter();
           return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          h.f(L.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new _.BinaryWriter();
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_AddChatBan_Response";
+        }
+      }
+      class A extends b {
+        constructor(e = null) {
+          super(),
+            A.prototype.results || h.a(A.M()),
+            b.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
+                fields: { results: { n: 1, c: D, r: !0, q: !0 } },
+              }),
+            A.sm_m
+          );
+        }
+        static MBF() {
+          return A.sm_mbf || (A.sm_mbf = h.e(A.M())), A.sm_mbf;
+        }
+        toObject(e = !1) {
+          return A.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return h.g(A.M(), e, t);
+        }
+        static fromObject(e) {
+          return h.c(A.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new _.BinaryReader(e),
+            r = new A();
+          return A.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return h.b(A.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new _.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          h.f(A.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new _.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetChatBans_Response";
@@ -5668,13 +5798,13 @@
             });
           }),
           (e.AddChatBan = function (e, t) {
-            return e.SendMsg("SteamTV.AddChatBan#1", t, A, {
+            return e.SendMsg("SteamTV.AddChatBan#1", t, L, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetChatBans = function (e, t) {
-            return e.SendMsg("SteamTV.GetChatBans#1", t, L, {
+            return e.SendMsg("SteamTV.GetChatBans#1", t, A, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,

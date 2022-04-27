@@ -1409,6 +1409,10 @@ img.emoticon {
 	color: #cccccc;
 }
 
+.tagrow .tagexample ul {
+    list-style-position: outside;
+}
+
 .tagsyntax {
 	float: left;
 	width: 57%;

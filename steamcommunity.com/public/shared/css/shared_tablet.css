@@ -18,7 +18,6 @@
 	--gpStoreDarkestGrey: #000F18;
 
 	/* Gradients */
-	/* --gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%); */
 	--gpGradient-StoreBackground: linear-gradient(180deg, var(--gpStoreDarkGrey) 0%, var(--gpStoreDarkerGrey) 80%);
 	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
 
@@ -65,14 +64,20 @@
 
 	/* Fixed widths */
 	--gpNavWidth: 240px;
-	--gpPaymentsNavWidth: 40vw;
-	--gpPurchaseOptionsWidth: 270px;
-	--gpDselectWidth: 320px;
-	--gpSidePanelWidth: 348px;
+	--gpPaymentsNavWidth: 340px;
+	--gpDselectWidth: 340px;
+	--gpSidePanelWidth: 340px;
 	--gpGiftingPanelWidth: 280px;
+	--gpCommunityRightPanelWidth: 320px;
+	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
+	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
+	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
+	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
+	--gpWidth-6colcap: calc((var(--screen-width) - (5 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 6);
+	--gpWidth-5colcap: calc((var(--screen-width) - (4 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 5);
 	--gpWidth-4colcap: calc((var(--screen-width) - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
 	--gpWidth-3colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
 	--gpWidth-2colcap: calc((var(--screen-width) - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
@@ -94,726 +99,745 @@
 	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+}
 
-	/* Animation TODO: REMOVE THESE */
-	--gpTransition-Short: all 0.2s ease;
-	--gpTransition-Shorter: all 0.1s ease;
-}	/* PAGE SETUP */
-
-	/* Required to pad scroll on up and down navigation bringing entire element plus a visual queue of the content above or below */
-	html.tablet {
-		height: 100%;
-		scroll-padding-bottom: 80px;
-		scroll-padding-top: 80px;
+@media screen and (min-width:  1280px) {
+	:root {
+		--gpSpace-Gutter: calc(24px + 2vw);
 	}
+}
+/* PAGE SETUP */
+
+/* Required to pad scroll on up and down navigation bringing entire element plus a visual queue of the content above or below */
+html.tablet {
+	height: 100%;
+	scroll-padding: 20vh 0px;
+}
 
 
-	/* Margin at top of page */
-	html.tablet .responsive_page_template_content {
-		padding-bottom: unset !important;
-	}
+/* Margin at top of page */
+html.tablet .responsive_page_template_content {
+	padding-bottom: unset !important;
+}
 
 
-	/* Page body and framework */
-	html.tablet body.v6 .page_content {
-		margin: 0px var(--gpSpace-Gutter);
-	}
+/* Page body and framework */
+html.tablet body.v6 .page_content {
+	padding: 0px var(--gpSpace-Gutter);
+	margin: 0px auto;
+	width: unset;
+	max-width: var(--gpMaxBrowserWidth);
+}
+
+html.tablet .clear_ctn {
+	display: none;
+}
 
 
-	/* Hide top spacer */
-	html.tablet .responsive_store_nav_ctn_spacer {
-		display: none;
-	}
+/* Hide top spacer */
+html.tablet .responsive_store_nav_ctn_spacer {
+	display: none;
+}
 
 
-	/* Hide webkit scrollbar */
-	html.tablet ::-webkit-scrollbar {
-		display: none;
-	}
+/* Hide webkit scrollbar */
+html.tablet ::-webkit-scrollbar {
+	display: none;
+}
 
 
-	/* Hide outline */
-	html.tablet * :focus {
-		outline: none;
-	}
+/* Hide outline */
+html.tablet * :focus {
+	outline: none;
+}
 
 
-	/* Hide global game hover */
-	html.tablet #global_hover {
-		display: none !important;
-	}
+/* Hide global game hover */
+html.tablet #global_hover {
+	display: none !important;
+}
 
 
-	/* TEMP Temporarily hide performance links while styling */
-	html.tablet .perf_timing_area {
-		display: none;
-	}
+/* TEMP Temporarily hide performance links while styling */
+html.tablet .perf_timing_area {
+	display: none;
+}
 
 
-	/* Background */
-	html.tablet body.v6:not( .sale_page_background ) {
-		background: var(--gpGradient-StoreBackground);
+/* Background */
+html.tablet body.v6:not( .sale_page_background ) {
+	background: var(--gpGradient-StoreBackground);
+	background-attachment: fixed;
+}
+
+html.tablet body.login {
+	background: var(--gpGradient-StoreBackground) !important;
+	background-attachment: fixed;
+}
+
+/* @media screen and (max-width: 1080px) {
+	html.tablet body.v6:not( .sale_page_background ),
+	html.tablet body.login {
 		background-attachment: fixed;
 	}
+} */
+
+
+/* Hide non breaking spaces */
+html.tablet .non_breaking_space {
+	display: none;
+}
+
+
+
+
+
+/* TEXT */
+
+html.tablet body.v6 h2.pageheader {
+	font: var(--gpText-HeadingLarge);
+	font-weight: 700;
+	text-shadow: unset;
+	text-transform: unset;
+	margin-top: 0px !important; /* !important - Overriding important fromt contenthub css* */
+	padding: unset;
+}
 
-	html.tablet body.login {
-		background: var(--gpGradient-StoreBackground) !important;
-		background-attachment: fixed !important;
-	}
-
-
-	/* Hide non breaking spaces */
-	html.tablet .non_breaking_space {
-		display: none;
-	}
-
-
-
-
-
-	/* TEXT */
-
-	html.tablet body.v6 h2.pageheader {
-		font: var(--gpText-HeadingLarge);
-		font-weight: 700;
-		text-shadow: unset;
-		text-transform: unset;
-		margin-top: 0px !important; /* !important - Overriding important fromt contenthub css* */
-		padding: unset;
-	}
-
-	html.tablet body.v6 h2 {
-		font: var(--gpText-BodySmall);
-		font-weight: 700;
-		letter-spacing: 0.5px;
-		margin-bottom: 4px;
-	}
-
-	html.tablet body.v6 {
-		font: var(--gpText-BodyLarge);
-		font-weight: 400;
-		color: var(--gpStoreLightestGrey);
-	}
-
-
-
-
-
-
-	/* PILL TAB MENU */
-
-	html.tablet .pill_tab_menu_ctn {
-		scroll-snap-type: x mandatory;
-		-webkit-overflow-scrolling: touch;
-		overflow-x: scroll;
-		overflow-y: hidden;
-		box-sizing: content-box;
-		flex-wrap: nowrap;
-		white-space: nowrap;
-		scroll-padding: 0 48px;
-		padding: 12px 16px;
-		margin: 0 auto;
-		-webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
-	}
-
-    html.tablet .tablet_header_menu_ctn {
-        height: var( --gpStoreMenuHeight );
-        display: flex;
-		justify-content: space-between;
-		align-items: center;
-    }
-
-	html.tablet .pill_tab_menu_item {
-		padding: 8px 16px;
-		font: var(--gpText-BodySmall);
-		color: var(--gpStoreLightestGrey);
-		text-transform: uppercase;
-		font-weight: 700;
-		letter-spacing: 0.5px;
-		border-radius: 80px;
-		transition: all 0.2s ease;
-		display: inline-block;
-	}
-
-    html.tablet .tablet_header_glyph {
-        width: 32px;
-		margin: 0 24px;
-    }
-
-	html.tablet .pill_tab_menu_item:hover,
-	html.tablet .pill_tab_menu_item:active,
-	html.tablet .pill_tab_menu_item.active{
-		background-color: var(--gpBackground-LightMedium);
-		color: white;
-	}
-
-	html.tablet .pill_tab_menu_item:focus,
-	html.tablet .pill_tab_menu_item.gpfocus {
-		background-color: white;
-		color: var(--gpSystemDarkestGrey);
-		box-shadow: var(--gpShadow-Medium);
-		outline: none;
-	}
-
-	/* Cart menu item */
-	html.tablet #cart_pill_tab_menu_item {
-		padding-right: 6px;
-	}
-
-	/* Badging */
-	html.tablet #cart_pill_tab_menu_item b {
-		background-color: var(--gpColor-Green);
-		border-radius: 16px;
-		padding: 4px 12px;
-		color: white;
-	}
-
-	html.tablet .pill_tab_menu_item .pill_tab_menu_item_count {
-		opacity: 0.6;
-	}
-
-
-
-
-
-	/* INPUT FIELDS */
-
-	/* Wrappers */
-	html.tablet input.gray_bevel,
-	html.tablet textarea.gray_bevel,
-	html.tablet .gray_bevel,
-	html.tablet .commentthread_comment_edit_textarea_ctn {
-		background-color: unset;
-		border-radius: unset;
-		border: unset;
-		box-shadow: unset;
-		color: unset;
-		margin: unset;
-		outline: unset;
-		padding: unset;
-		height: unset;
-	}
-
-	/* Inputs and textareas */
-    html.tablet input.text,
-	html.tablet .wallet_code_input_ctn .redeem_input_box_text,
-	html.tablet textarea,
-	html.tablet #review_create .input_box,
-	html.tablet .gray_bevel input,
-	html.tablet .gray_bevel textarea,
-	html.tablet .gamepad_input,
-	html.tablet .DialogInputPlaceholder,
-	html.tablet input.discussionSearchText {
-		background-color: var(--gpBackground-LightMedium);
-		border-radius: var(--gpCorner-Medium);
-		font: var(--gpText-BodyLarge);
-		color: white;
-		transition: all 0.1s ease;
-		padding: 8px 10px;
-		box-shadow: unset;
-		border: unset;
-		margin: unset;
-		box-sizing: border-box;
-		height: unset;
-		position: unset;
-	}
-
-	html.tablet input.text::placeholder,
-	html.tablet .wallet_code_input_ctn .redeem_input_box_text::placeholder,
-	html.tablet textarea::placeholder,
-	html.tablet #review_create .input_box::placeholder,
-	html.tablet .gray_bevel input::placeholder,
-	html.tablet .gray_bevel textarea::placeholder,
-	html.tablet .gamepad_input::placeholder,
-	html.tablet .DialogInputPlaceholder::placeholder,
-	html.tablet input.discussionSearchText::placeholder {
-		color: rgba(255, 255, 255, 0.5);
-		transition: color 0.2s ease;
-	}
-
-    html.tablet input.text:hover,
-	html.tablet .wallet_code_input_ctn .redeem_input_box_text:hover,
-	html.tablet textarea:hover,
-	html.tablet #review_create .input_box:hover,
-	html.tablet .gray_bevel input:hover,
-	html.tablet .gray_bevel textarea:hover,
-	html.tablet .gamepad_input:hover,
-	html.tablet .DialogInputPlaceholder:hover,
-	html.tablet input.discussionSearchText:hover {
-		background-color: var(--gpBackground-LightHard);
-	}
-
-    html.tablet input.text:focus,
-	html.tablet .wallet_code_input_ctn .redeem_input_box_text:focus,
-	html.tablet textarea:focus,
-	html.tablet #review_create .input_box:focus,
-	html.tablet .gray_bevel input:focus,
-	html.tablet .gray_bevel textarea:focus,
-	html.tablet .gamepad_input:focus,
-	html.tablet .DialogInputPlaceholder:focus,
-	html.tablet input.discussionSearchText:focus {
-		background-color: white;
-        color: black;
-	}
-
-	html.tablet input.text.gpfocus,
-	html.tablet .wallet_code_input_ctn .redeem_input_box_text.gpfocus,
-	html.tablet textarea.gpfocus,
-	html.tablet #review_create .input_box.gpfocus,
-	html.tablet .gray_bevel input.gpfocus,
-	html.tablet .gray_bevel textarea.gpfocus,
-	html.tablet .gamepad_input.gpfocus,
-	html.tablet .DialogInputPlaceholder.gpfocus,
-	html.tablet input.discussionSearchText.gpfocus {
-		border-radius: 0px;
-	}
-
-	html.tablet input.text.gpfocus::placeholder,
-	html.tablet .wallet_code_input_ctn .redeem_input_box_text.gpfocus::placeholder,
-	html.tablet textarea.gpfocus::placeholder,
-	html.tablet #review_create .input_box.gpfocus::placeholder,
-	html.tablet .gray_bevel input.gpfocus::placeholder,
-	html.tablet .gray_bevel textarea.gpfocus::placeholder,
-	html.tablet .gamepad_input.gpfocus::placeholder,
-	html.tablet .DialogInputPlaceholder.gpfocus::placeholder,
-	html.tablet input.discussionSearchText.gpfocus::placeholder {
-		color: rgba(0, 0, 0, 0.5);
-	}
-
-	/* TODO: unify input styling */
-
-
-
-
-	/* DROPDOWN DSELECTS */
-
-	/* Style dselect container */
-	html.tablet .dselect_container a.trigger,
-	html.tablet .dselect_container a.activetrigger {
-		border-radius: var(--gpCorner-Medium);
-		font: var(--gpText-BodyLarge);
-		transition: all 0.1s ease;
-		padding: 10px 12px;
-		border: unset;
-		box-shadow: unset;
-	}
-
-	html.tablet .dselect_container a.trigger {
-        background: var(--gpBackground-LightMedium);
-		color: white;
-    }
-
-	html.tablet .dselect_container a.trigger:hover {
-        background: var(--gpBackground-LightHard);
-    }
-
-	html.tablet .dselect_container a.trigger.gpfocus {
-		background: var(--gpBackground-LightHard);
-		border-radius: 0px;
-	}
-
-	html.tablet .dselect_container a.trigger:active,
-	html.tablet .dselect_container a.trigger.activetrigger {
-        background: white;
-		color: black;
-		border-radius: 0px;
-    }
-
-	/* Style drop container */
-	html.tablet .dropcontainer {
-		font: var(--gpText-BodyLarge);
-	}
-
-	html.tablet .dropcontainer ul {
-		line-height: unset;
-		box-shadow: var(--gpShadow-Large);
-		max-height: 90vh !important;
-		overflow-y: scroll;
-		scroll-snap-type: y mandatory;
-		scroll-padding-top: 40px;
-		scroll-padding-bottom: 40px;
-	}
-
-	/* Wrap all list content text */
-	html.tablet .dropcontainer li > * {
-		white-space: normal;
-	}
-
-	html.tablet .inactive_selection,
-	html.tablet .highlighted_selection {
-		padding: 10px 12px;
-	}
-
-	html.tablet .dselect_container .dropcontainer a.inactive_selection {
-		background: var(--gpStoreDarkGrey);
-		color: white;
-	}
-
-	html.tablet .dselect_container .dropcontainer a.highlighted_selection {
-		background: #44627a;
-		color: white;
-	}
-
-	html.tablet .dselect_container .dropcontainer a.gpfocus {
-		background: white;
-		color: black;
-	}
-
-
-
-
-	/* DROPDOWN FILTER SELECTS */
-	html.tablet div.filterselect {
-		height: unset;
-		margin: unset;
-		padding: 6px 12px;
-		font: var(--gpText-BodyMedium);
-		text-transform: unset;
-		background: var(--gpBackground-LightMedium);
-	}
-
-	html.tablet div.filterselect .filterselect_arrow,
-	html.tablet div.filterselect #filterselect_arrow {
-		top: 50%;
-		transform: translateY(-50%);
-		right: 8px;
-	}
-
-	html.tablet div.filterselect div.option,
-	html.tablet div.filterselect_options div.option {
-		font: var(--gpText-BodyMedium);
-		text-transform: unset;
-		padding: unset;
-		height: unset;
-		color: white;
-	}
-
-	html.tablet .filterselect_subtext {
-		font-size: unset;
-	}
-
-
-
-
-	/* FORUM POST ACTIONS */
-	html.tablet .forum_comment_action_menu,
-	html.tablet .popup_body,
-	html.tablet div.statsselect_options,
-	html.tablet div.filterselect_options,
-	html.tablet .navContent,
-	html.tablet .popup_block .shadow_content {
-		padding: unset;
-		border: unset;
-		margin: unset;
-		width: unset !important;
-		max-width: unset !important;
-		text-transform: unset;
-		border: unset;
-
-		display: flex;
-		flex-direction: column;
-		background-color: unset !important;
-		max-height: 80vh;
-		overflow-y: scroll;
-	}
-
-	html.tablet .navContent > hr {
-		background-color: var(--gpSystemDarkerGrey);
-		height: 2px;
-	}
-
-	html.tablet .forum_comment_action_menu a,
-	html.tablet .popup_body .popup_menu_item,
-	html.tablet div.statsselect_options div.option,
-	html.tablet div.filterselect_options div.option,
-	html.tablet .navContent a,
-	html.tablet .popup_block .option {
-		margin: unset;
-		border-radius: unset;
-		width: unset;
-		height: unset;
-		text-transform: unset;
-		border: unset;
-
-		padding: 10px 12px !important;
-		display: flex !important;
-		align-items: center;
-		column-gap: 8px;
-		font: var(--gpText-BodyLarge) !important;
-		box-sizing: border-box;
-		background-color: var(--gpSystemDarkestGrey);
-		color: var(--gpStoreLightestGrey);
-		transition: background-color 0.1s ease,
-					color 0.2s ease;
-	}
-
-	html.tablet #sharedfiles_filterselect_app_filterable {
-		border: none;
-	}
-
-	html.tablet .forum_comment_action_menu a:hover,
-	html.tablet .popup_body .popup_menu_item:hover,
-	html.tablet div.statsselect_options div.option:hover,
-	html.tablet div.filterselect_options div.option:hover,
-	html.tablet .navContent a:hover,
-	html.tablet .popup_block .option:hover {
-		background-color: var(--gpSystemDarkerGrey);
-		color: white;
-	}
-
-	html.tablet .forum_comment_action_menu a.gpfocus,
-	html.tablet .popup_body .popup_menu_item.gpfocus,
-	html.tablet div.statsselect_options div.option.gpfocus,
-	html.tablet div.filterselect_options div.option.gpfocus,
-	html.tablet .navContent a.gpfocus,
-	html.tablet .popup_block .option.gpfocus {
-		background-color: white;
-		color: black;
-	}
-
-	html.tablet .popup_block_new {
-		box-shadow: unset;
-	}
-
-	html.tablet .shadow_ul,
-	html.tablet .shadow_ur,
-	html.tablet .shadow_bl,
-	html.tablet .shadow_br,
-	html.tablet .shadow_top,
-	html.tablet .shadow_left,
-	html.tablet .shadow_right,
-	html.tablet .shadow_bottom {
-		display: none;
-	}
-
-
-
-
-
-	/* MODAL */
-	html.tablet .newmodal {
-		min-width: 64vw !important;
-		box-shadow: var(--gpShadow-XLarge);
-		max-width: 600px;
-		background: var(--gpSystemDarkestGrey);
-		border: 2px solid var(--gpSystemDarkerGrey);
-	}
-
-	html.tablet .modal_top_bar {
-		display: none;
-	}
-
-	html.tablet .newmodal_header {
-		font: var(--gpText-HeadingMedium);
-		text-transform: unset;
-		letter-spacing: unset;
-		font-weight: 500;
-	}
-
-	html.tablet .newmodal_header .title_text {
-		padding: 32px 32px 0px 32px;
-	}
-
-	html.tablet .newmodal_content {
-		padding: 32px;
-	}
-
-
-
-
-	/* OVERLAY */
-	html.tablet .responsive_page_content_overlay {
-		background: rgba( 0, 0, 0, 0.8);
-	}
-
-	html.tablet .newmodal_background {
-		background: rgba( 0, 0, 0, 0.8);
-	}
-
-    html.tablet .dselect_overlay {
-        position: fixed;
-        z-index: 400;
-        background: rgba( 0, 0, 0, 0.8);
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-
-    html.tablet .dselect_scroll_disable {
-        height: 100%;
-        overflow: hidden;
-    }
-
-
-
-
-	/* LIVE CONTENT */
-	html.tablet body.v6 .broadcast_live_stream_icon {
-		height: unset;
-		box-shadow: unset;
-		font-size: 11px;
-		font-weight: 700;
-		border-radius: var(--gpCorner-Medium);
-		opacity: 0.9;
-		color: #FFFFFFdd;
-	}
-
-
-
-
-	/* BREADCRUMBS */
-	html.tablet .breadcrumbs {
-		font: var(--gpText-BodyMedium);
-		margin-bottom: 12px;
-		color: var(--gpStoreLightGrey);
-		padding-top: var(--gpSpace-Gutter);
-		display: flex;
-		align-items: center;
-		gap: 4px;
-	}
-
-	html.tablet .breadcrumbs a {
-		background-color: var(--gpBackground-LightMedium);
-		font: var(--gpText-BodyMedium);
-		color: var(--gpStoreLightestGrey);
-		padding: 4px 10px 4px 10px;
-		clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%, 4px 50%);
-		margin: unset;
-		margin-right: -6px;
-		transition: all 0.1s ease;
-	}
-
-	html.tablet .breadcrumbs a:first-child {
-		clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%);
-	}
-
-	html.tablet .breadcrumbs a:hover {
-		background-color: var(--gpBackground-LightHard);
-		color: white;
-	}
-
-	html.tablet .breadcrumbs a.gpfocus {
-		background-color: white;
-		color: black;
-		box-shadow: var(--gpShadow-Medium);
-	}
-
-	html.tablet .breadcrumb_separator {
-		display: none;
-	}
-
-	html.tablet .breadcrumb_current_page {
-		margin-left: 8px;
-		color: var(--gpStoreLighterGrey);
-		font: var(--gpText-BodyMedium);
-	}
-
-
-
-
-	/* SLIDERS */
-	html.tablet .tab_controls {
-		padding: 8px 12px;
-		margin-bottom: unset;
-		align-items: center;
-	}
-
-	html.tablet .tab_control {
-		padding: 0px;
-		align-items: center;
-		border-radius: var(--gpCorner-Medium);
-		gap: 12px;
-	}
-
-	html.tablet .range_container {
-		align-items: center;
-		gap: 12px;
-		padding: 4px 8px;
-		transition: background-color 0.2s ease;
-		border-radius: var(--gpCorner-Medium);
-	}
-
-	html.tablet .range_container:hover {
-		background-color: var(--gpBackground-LightSoft);
-	}
-
-	html.tablet .range_container.gpfocus {
-		background-color: var(--gpBackground-LightSoft);
-		border-radius: 0px;
-	}
-
-	html.tablet .range_container > div {
-		margin-left: unset;
-	}
-
-	html.tablet .range_display {
-		min-width: unset;
-	}
-
-	html.tablet .range_input {
-		padding: 8px 4px;
-		margin: unset;
-	}
-
-	html.tablet .tab_check_control input[type=checkbox] {
-		vertical-align: unset;
-	}
-
-	html.tablet .GenericConfirmDialog .DialogBodyText {
-		margin-bottom: unset;
-	}
-
-
-
-
-	/* RIGHT THIRD PANEL */
-	html.tablet .responsive_local_menu_tab.active {
-		background: unset;
-		width: unset;
-		height: unset;
-		top: unset;
-
-		top: 24px;
-		right: 24px;
-		box-shadow: unset;
-		background-color: var(--gpBackground-DarkSoft);
-		backdrop-filter: blur(32px);
-		border-radius: 40px;
-		color: var(--gpStoreLightestGrey);
-		font: var(--gpText-BodySmall);
-		font-weight: 700;
-		letter-spacing: 0.5px;
-		text-transform: uppercase;
-		padding: 18px 40px 18px 40px;
-
-		/* TODO - Reconsider how we display on screen glyphs */
-		background:
-			no-repeat 8px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/shared_button_y.svg'),
-			no-repeat 40px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/Rows.svg');
-	}
-
-	/* Setting responsive_page_menu_ctn display to none to exlude hidden elements from focus navigation */
-	html.tablet .responsive_page_frame.no_header.localmenu_active .responsive_page_menu_ctn {
-		display: block;
-		width: var(--gpSidePanelWidth);
-	}
-
-	html.tablet .responsive_page_frame.no_header .responsive_page_menu_ctn {
-		display: none;
-	}
-
-	html.tablet .responsive_page_menu_ctn .localmenu_content {
-		height: 100vh;
-		overflow-y: scroll;
-		scroll-padding: 120px 0px;
-		box-sizing: border-box;
-	}
-
-
-
-
-@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+html.tablet body.v6 h2 {
+	font: var(--gpText-BodySmall);
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-bottom: 4px;
+}
+
+html.tablet body.v6 {
+	font: var(--gpText-BodyLarge);
+	font-weight: 400;
+	color: var(--gpStoreLightestGrey);
+}
+
+
+
+
+
+
+/* PILL TAB MENU */
+
+html.tablet .pill_tab_menu_ctn {
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	box-sizing: content-box;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	scroll-padding: 0 48px;
+	padding: 12px 16px;
+	margin: 0 auto;
+	-webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+}
+
+html.tablet .tablet_header_menu_ctn {
+	height: var( --gpStoreMenuHeight );
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+html.tablet .pill_tab_menu_item {
+	padding: 8px 16px;
+	font: var(--gpText-BodySmall);
+	color: var(--gpStoreLightestGrey);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	border-radius: 80px;
+	transition: all 0.2s ease;
+	display: inline-block;
+}
+
+html.tablet .tablet_header_glyph {
+	width: 32px;
+	margin: 0 24px;
+}
+
+html.tablet .pill_tab_menu_item:hover,
+html.tablet .pill_tab_menu_item:active,
+html.tablet .pill_tab_menu_item.active{
+	background-color: var(--gpBackground-LightMedium);
+	color: white;
+}
+
+html.tablet .pill_tab_menu_item:focus,
+html.tablet .pill_tab_menu_item.gpfocus {
+	background-color: white;
+	color: var(--gpSystemDarkestGrey);
+	box-shadow: var(--gpShadow-Medium);
+	outline: none;
+}
+
+/* Cart menu item */
+html.tablet #cart_pill_tab_menu_item {
+	padding-right: 6px;
+}
+
+/* Badging */
+html.tablet #cart_pill_tab_menu_item b {
+	background-color: var(--gpColor-Green);
+	border-radius: 16px;
+	padding: 4px 12px;
+	color: white;
+	margin-left: 4px;
+}
+
+html.tablet .pill_tab_menu_item .pill_tab_menu_item_count {
+	opacity: 0.6;
+}
+
+
+
+
+
+/* INPUT FIELDS */
+
+/* Wrappers */
+html.tablet input.gray_bevel,
+html.tablet textarea.gray_bevel,
+html.tablet .gray_bevel,
+html.tablet .commentthread_comment_edit_textarea_ctn {
+	background-color: unset;
+	border-radius: unset;
+	border: unset;
+	box-shadow: unset;
+	color: unset;
+	margin: unset;
+	outline: unset;
+	padding: unset;
+	height: unset;
+}
+
+/* Inputs and textareas */
+html.tablet input.text,
+html.tablet .wallet_code_input_ctn .redeem_input_box_text,
+html.tablet textarea,
+html.tablet #review_create .input_box,
+html.tablet .gray_bevel input,
+html.tablet .gray_bevel textarea,
+html.tablet .gamepad_input,
+html.tablet .DialogInputPlaceholder,
+html.tablet input.discussionSearchText {
+	background-color: var(--gpBackground-LightMedium);
+	border-radius: var(--gpCorner-Medium);
+	font: var(--gpText-BodyLarge);
+	color: white;
+	transition: all 0.1s ease;
+	padding: 8px 10px;
+	box-shadow: unset;
+	border: unset;
+	margin: unset;
+	box-sizing: border-box;
+	height: unset;
+	position: unset;
+}
+
+html.tablet input.text::placeholder,
+html.tablet .wallet_code_input_ctn .redeem_input_box_text::placeholder,
+html.tablet textarea::placeholder,
+html.tablet #review_create .input_box::placeholder,
+html.tablet .gray_bevel input::placeholder,
+html.tablet .gray_bevel textarea::placeholder,
+html.tablet .gamepad_input::placeholder,
+html.tablet .DialogInputPlaceholder::placeholder,
+html.tablet input.discussionSearchText::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+	transition: color 0.2s ease;
+}
+
+html.tablet input.text:hover,
+html.tablet .wallet_code_input_ctn .redeem_input_box_text:hover,
+html.tablet textarea:hover,
+html.tablet #review_create .input_box:hover,
+html.tablet .gray_bevel input:hover,
+html.tablet .gray_bevel textarea:hover,
+html.tablet .gamepad_input:hover,
+html.tablet .DialogInputPlaceholder:hover,
+html.tablet input.discussionSearchText:hover {
+	background-color: var(--gpBackground-LightHard);
+}
+
+html.tablet input.text:focus,
+html.tablet .wallet_code_input_ctn .redeem_input_box_text:focus,
+html.tablet textarea:focus,
+html.tablet #review_create .input_box:focus,
+html.tablet .gray_bevel input:focus,
+html.tablet .gray_bevel textarea:focus,
+html.tablet .gamepad_input:focus,
+html.tablet .DialogInputPlaceholder:focus,
+html.tablet input.discussionSearchText:focus {
+	background-color: white;
+	color: black;
+}
+
+html.tablet input.text.gpfocus,
+html.tablet .wallet_code_input_ctn .redeem_input_box_text.gpfocus,
+html.tablet textarea.gpfocus,
+html.tablet #review_create .input_box.gpfocus,
+html.tablet .gray_bevel input.gpfocus,
+html.tablet .gray_bevel textarea.gpfocus,
+html.tablet .gamepad_input.gpfocus,
+html.tablet .DialogInputPlaceholder.gpfocus,
+html.tablet input.discussionSearchText.gpfocus {
+	border-radius: 0px;
+}
+
+html.tablet input.text.gpfocus::placeholder,
+html.tablet .wallet_code_input_ctn .redeem_input_box_text.gpfocus::placeholder,
+html.tablet textarea.gpfocus::placeholder,
+html.tablet #review_create .input_box.gpfocus::placeholder,
+html.tablet .gray_bevel input.gpfocus::placeholder,
+html.tablet .gray_bevel textarea.gpfocus::placeholder,
+html.tablet .gamepad_input.gpfocus::placeholder,
+html.tablet .DialogInputPlaceholder.gpfocus::placeholder,
+html.tablet input.discussionSearchText.gpfocus::placeholder {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* TODO: unify input styling */
+
+
+
+
+/* DROPDOWN DSELECTS */
+
+/* Style dselect container */
+html.tablet .dselect_container a.trigger,
+html.tablet .dselect_container a.activetrigger {
+	border-radius: var(--gpCorner-Medium);
+	font: var(--gpText-BodyLarge);
+	transition: all 0.1s ease;
+	padding: 10px 12px;
+	border: unset;
+	box-shadow: unset;
+}
+
+html.tablet .dselect_container a.trigger {
+	background: var(--gpBackground-LightMedium);
+	color: white;
+}
+
+html.tablet .dselect_container a.trigger:hover {
+	background: var(--gpBackground-LightHard);
+}
+
+html.tablet .dselect_container a.trigger.gpfocus {
+	background: var(--gpBackground-LightHard);
+	border-radius: 0px;
+}
+
+html.tablet .dselect_container a.trigger:active,
+html.tablet .dselect_container a.trigger.activetrigger {
+	background: white;
+	color: black;
+	border-radius: 0px;
+}
+
+/* Style drop container */
+html.tablet .dropcontainer {
+	font: var(--gpText-BodyLarge);
+}
+
+html.tablet .dropcontainer ul {
+	line-height: unset;
+	box-shadow: var(--gpShadow-Large);
+	max-height: 90vh !important;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	scroll-padding: 14vh 0px;
+}
+
+/* Wrap all list content text */
+html.tablet .dropcontainer li > * {
+	white-space: normal;
+}
+
+html.tablet .inactive_selection,
+html.tablet .highlighted_selection {
+	padding: 10px 12px;
+}
+
+html.tablet .dselect_container .dropcontainer a.inactive_selection {
+	background: var(--gpStoreDarkGrey);
+	color: white;
+}
+
+html.tablet .dselect_container .dropcontainer a.highlighted_selection {
+	background: #44627a;
+	color: white;
+}
+
+html.tablet .dselect_container .dropcontainer a.gpfocus {
+	background: white;
+	color: black;
+}
+
+
+
+
+/* DROPDOWN FILTER SELECTS */
+html.tablet div.filterselect {
+	height: unset;
+	margin: unset;
+	padding: 6px 12px;
+	font: var(--gpText-BodyMedium);
+	text-transform: unset;
+	background: var(--gpBackground-LightMedium);
+}
+
+html.tablet div.filterselect .filterselect_arrow,
+html.tablet div.filterselect #filterselect_arrow {
+	top: 50%;
+	transform: translateY(-50%);
+	right: 8px;
+}
+
+html.tablet div.filterselect div.option,
+html.tablet div.filterselect_options div.option {
+	font: var(--gpText-BodyMedium);
+	text-transform: unset;
+	padding: unset;
+	height: unset;
+	color: white;
+}
+
+html.tablet .filterselect_subtext {
+	font-size: unset;
+}
+
+
+
+
+/* FORUM POST ACTIONS */
+html.tablet .forum_comment_action_menu,
+html.tablet .popup_body,
+html.tablet div.statsselect_options,
+html.tablet div.filterselect_options,
+html.tablet .navContent,
+html.tablet .popup_block .shadow_content {
+	padding: unset;
+	border: unset;
+	margin: unset;
+	width: unset !important;
+	max-width: unset !important;
+	text-transform: unset;
+	border: unset;
+
+	display: flex;
+	flex-direction: column;
+	background-color: unset !important;
+	max-height: 80vh;
+	overflow-y: scroll;
+}
+
+html.tablet .navContent > hr {
+	background-color: var(--gpSystemDarkerGrey);
+	height: 2px;
+}
+
+html.tablet .forum_comment_action_menu a,
+html.tablet .popup_body .popup_menu_item,
+html.tablet div.statsselect_options div.option,
+html.tablet div.filterselect_options div.option,
+html.tablet .navContent a,
+html.tablet .popup_block .option {
+	margin: unset;
+	border-radius: unset;
+	width: unset;
+	height: unset;
+	text-transform: unset;
+	border: unset;
+
+	padding: 10px 12px !important;
+	display: flex !important;
+	align-items: center;
+	column-gap: 8px;
+	font: var(--gpText-BodyLarge) !important;
+	box-sizing: border-box;
+	background-color: var(--gpSystemDarkestGrey);
+	color: var(--gpStoreLightestGrey);
+	transition: background-color 0.1s ease,
+				color 0.2s ease;
+}
+
+html.tablet #sharedfiles_filterselect_app_filterable {
+	border: none;
+}
+
+html.tablet .forum_comment_action_menu a:hover,
+html.tablet .popup_body .popup_menu_item:hover,
+html.tablet div.statsselect_options div.option:hover,
+html.tablet div.filterselect_options div.option:hover,
+html.tablet .navContent a:hover,
+html.tablet .popup_block .option:hover {
+	background-color: var(--gpSystemDarkerGrey);
+	color: white;
+}
+
+html.tablet .forum_comment_action_menu a.gpfocus,
+html.tablet .popup_body .popup_menu_item.gpfocus,
+html.tablet div.statsselect_options div.option.gpfocus,
+html.tablet div.filterselect_options div.option.gpfocus,
+html.tablet .navContent a.gpfocus,
+html.tablet .popup_block .option.gpfocus {
+	background-color: white;
+	color: black;
+}
+
+html.tablet .popup_block_new {
+	box-shadow: unset;
+}
+
+html.tablet .shadow_ul,
+html.tablet .shadow_ur,
+html.tablet .shadow_bl,
+html.tablet .shadow_br,
+html.tablet .shadow_top,
+html.tablet .shadow_left,
+html.tablet .shadow_right,
+html.tablet .shadow_bottom {
+	display: none;
+}
+
+
+
+
+
+/* MODAL */
+html.tablet .newmodal {
+	box-shadow: var(--gpShadow-XLarge);
+	max-width: 720px;
+	background: var(--gpSystemDarkestGrey);
+	border: 2px solid var(--gpSystemDarkerGrey);
+}
+
+html.tablet .modal_top_bar {
+	display: none;
+}
+
+html.tablet .newmodal_header {
+	font: var(--gpText-HeadingMedium);
+	text-transform: unset;
+	letter-spacing: unset;
+	font-weight: 500;
+}
+
+html.tablet .newmodal_header .title_text {
+	padding: 32px 32px 0px 32px;
+}
+
+html.tablet .newmodal_content {
+	padding: 32px;
+}
+
+
+
+
+/* OVERLAY */
+html.tablet .responsive_page_content_overlay {
+	background: rgba( 0, 0, 0, 0.8);
+}
+
+html.tablet .newmodal_background {
+	background: rgba( 0, 0, 0, 0.8);
+}
+
+html.tablet .dselect_overlay {
+	position: fixed;
+	z-index: 400;
+	background: rgba( 0, 0, 0, 0.8);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+html.tablet .dselect_scroll_disable {
+	height: 100%;
+	overflow: hidden;
+}
+
+
+
+
+/* LIVE CONTENT */
+html.tablet body.v6 .broadcast_live_stream_icon {
+	height: unset;
+	box-shadow: unset;
+	font-size: 11px;
+	font-weight: 700;
+	border-radius: var(--gpCorner-Medium);
+	opacity: 0.9;
+	color: #FFFFFFdd;
+}
+
+
+
+
+/* BREADCRUMBS */
+html.tablet .breadcrumbs {
+	font: var(--gpText-BodyMedium);
+	margin-bottom: 12px;
+	color: var(--gpStoreLightGrey);
+	padding-top: var(--gpSpace-Gutter);
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+html.tablet .breadcrumbs a {
+	background-color: var(--gpBackground-LightMedium);
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLightestGrey);
+	padding: 4px 10px 4px 10px;
+	clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%, 4px 50%);
+	margin: unset;
+	margin-right: -6px;
+	transition: all 0.1s ease;
+}
+
+html.tablet .breadcrumbs a:first-child {
+	clip-path: polygon(0px 0px, calc(100% - 4px) 0px, 100% 50%, calc(100% - 4px) 100%, 0px 100%, 0px 100%);
+}
+
+html.tablet .breadcrumbs a:hover {
+	background-color: var(--gpBackground-LightHard);
+	color: white;
+}
+
+html.tablet .breadcrumbs a.gpfocus {
+	background-color: white;
+	color: black;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.tablet .breadcrumb_separator {
+	display: none;
+}
+
+html.tablet .breadcrumb_current_page {
+	margin-left: 8px;
+	color: var(--gpStoreLighterGrey);
+	font: var(--gpText-BodyMedium);
+}
+
+
+
+
+/* SLIDERS */
+html.tablet .tab_controls {
+	padding: 8px 12px;
+	margin-bottom: unset;
+	align-items: center;
+}
+
+html.tablet .tab_control {
+	padding: 0px;
+	align-items: center;
+	border-radius: var(--gpCorner-Medium);
+	gap: 12px;
+}
+
+html.tablet .range_container {
+	align-items: center;
+	gap: 12px;
+	padding: 4px 8px;
+	transition: background-color 0.2s ease;
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.tablet .range_container:hover {
+	background-color: var(--gpBackground-LightSoft);
+}
+
+html.tablet .range_container.gpfocus {
+	background-color: var(--gpBackground-LightSoft);
+	border-radius: 0px;
+}
+
+html.tablet .range_container > div {
+	margin-left: unset;
+}
+
+html.tablet .range_display {
+	min-width: unset;
+}
+
+html.tablet .range_input {
+	padding: 8px 4px;
+	margin: unset;
+}
+
+html.tablet .tab_check_control input[type=checkbox] {
+	vertical-align: unset;
+}
+
+html.tablet .GenericConfirmDialog .DialogBodyText {
+	margin-bottom: unset;
+}
+
+
+
+
+/* RIGHT THIRD PANEL */
+html.tablet .responsive_local_menu_tab.active {
+	background: unset;
+	width: unset;
+	height: unset;
+	top: unset;
+
+	top: 24px;
+	right: 24px;
+	box-shadow: unset;
+	background-color: var(--gpBackground-DarkSoft);
+	backdrop-filter: blur(32px);
+	border-radius: 40px;
+	color: var(--gpStoreLightestGrey);
+	font: var(--gpText-BodySmall);
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	padding: 18px 40px 18px 40px;
+
+	/* TODO - Reconsider how we display on screen glyphs */
+	background:
+		no-repeat 8px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/shared_button_y.svg'),
+		no-repeat 40px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/Rows.svg');
+}
+
+/* Setting responsive_page_menu_ctn display to none to exlude hidden elements from focus navigation */
+html.tablet .responsive_page_frame.no_header.localmenu_active .responsive_page_menu_ctn {
+	display: block;
+	width: var(--gpSidePanelWidth);
+}
+
+html.tablet .responsive_page_frame.no_header .responsive_page_menu_ctn {
+	display: none;
+}
+
+html.tablet .responsive_page_menu_ctn .localmenu_content {
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-padding: 120px 0px;
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+/* @media screen and ( min-width: 501px ) and ( max-width: 910px ) { */
 
     .btn_green_white_innerfade,
     .btn_blue_white_innerfade,
@@ -901,6 +925,11 @@
 
 	.gl_btn_multiline br {
 		display: none;
+	}
+
+	.gl_btn_ico_up div.ico {
+		width: 16px;
+		height: 16px;
 	}
 
 
@@ -1076,4 +1105,4 @@
 		color: black;
     }
 
-}
+/* } */

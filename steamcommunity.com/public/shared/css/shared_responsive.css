@@ -547,6 +547,18 @@ html.responsive body {
 		z-index: 30;
 	}
 
+	html.responsive .responsive_hidden {
+		display: none;
+	}
+
+	html.responsive h2.nonresponsive_hidden {
+		display: block;
+	}
+
+	html.responsive div.nonresponsive_hidden {
+		display: block;
+	}
+
 
 }
 
@@ -583,6 +595,18 @@ html.responsive body {
 		z-index: 30;
 	}
 
+	html.responsive.touch .responsive_hidden {
+		display: none;
+	}
+
+	html.responsive.touch h2.nonresponsive_hidden {
+		display: block;
+	}
+
+	html.responsive.touch div.nonresponsive_hidden {
+		display: block;
+	}
+
 
 .perf_timing_area {
 	/*display: none;*/
@@ -603,10 +627,6 @@ html.responsive body {
 
 @media screen and (max-width: 910px)
 {
-	html.responsive div.nonresponsive_hidden {
-		display: block;
-	}
-
 	html.responsive span.nonresponsive_hidden {
 		display: inline;
 	}
@@ -618,18 +638,6 @@ html.responsive body {
 	html.responsive a.nonresponsive_hidden {
 		display: block;
 	}
-
-	html.responsive h2.nonresponsive_hidden {
-		display: block;
-	}
-
-	html.responsive .responsive_hidden {
-		display: none;
-	}
-
-    html.responsive div.responsive_tab_baseline {
-        display: none;
-    }
 }
 
 .responsive_tab_control select {
@@ -746,13 +754,42 @@ html.force_desktop body #footer_responsive_optin_spacer {
 
 @media screen and (max-width: 910px)
 {
-	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_ctn {
-		scroll-snap-type: x mandatory;
-		-webkit-overflow-scrolling: touch;
-	}
 
 	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_start {
 		scroll-snap-align: start;
 		overflow: visible;
 	}
+
+	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_ctn {
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	html.responsive div.responsive_tab_baseline {
+        display: none;
+    }
+
+
+}
+
+	html.responsive.tablet:not(.legacy_mobile) .responsive_scroll_snap_start {
+		scroll-snap-align: start;
+		overflow: visible;
+	}
+
+	html.responsive.tablet:not(.legacy_mobile) .responsive_scroll_snap_ctn {
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	html.responsive.tablet div.responsive_tab_baseline {
+        display: none;
+    }
+
+
+@media screen and (max-width: 910px)
+{
+
+
+
 }
