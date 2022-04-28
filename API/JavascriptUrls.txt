@@ -655,6 +655,7 @@ ${PARTNER_BASE_URL}admin/game/edit/${}?activetab=tab_graphicalassets
 ${PARTNER_BASE_URL}admin/store/dailydeal/${id}
 ${PARTNER_BASE_URL}admin/store/page/${}?activetab=tab_publish
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/${cluster_name}/${id}?activetab=tab_capsules
+${PARTNER_BASE_URL}admin/store/pageclusteredit/${}
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/frontpage/${}
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/frontpage/${}?activetab=tab_capsules
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/frontpage_china/${}
