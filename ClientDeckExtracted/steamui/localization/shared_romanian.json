@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "Ești deja prieten cu acest utilizator",
     "ManageFriends_FriendsInCommon": "Aveți %1$s prieteni în comun",
     "ManageFriends_FriendsInCommonSingular": "Aveți %1$s prieten în comun",
-    "ManageFriends_ProfileLink": "Link către profil"
+    "ManageFriends_ProfileLink": "Link către profil",
+    "ResetToDefault": "Resetează la valorile implicite",
+    "ActionButtonLabelMenu": "Meniu",
+    "ActionButtonLabelSelect": "Selectează",
+    "ActionButtonLabelBack": "Înapoi",
+    "ActionButtonLabelDismiss": "Ignoră",
+    "ActionButtonLabelContextMenu": "Opțiuni",
+    "ActionButtonLabelSearch": "Caută",
+    "ActionButtonLabelSort": "Sortează",
+    "ActionButtonLabelAdjust": "Ajustează",
+    "ActionButtonLabelCancel": "Anulează",
+    "ActionButtonLabelDone": "Gata",
+    "Slider_AdjustSlider": "Ajustează glisorul",
+    "Slider_EditValue": "Editează valoarea"
 }

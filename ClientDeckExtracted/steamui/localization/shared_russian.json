@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "Этот пользователь уже у вас в друзьях",
     "ManageFriends_FriendsInCommon": "Общих друзей: %1$s",
     "ManageFriends_FriendsInCommonSingular": "%1$s общий друг",
-    "ManageFriends_ProfileLink": "Ссылка на профиль"
+    "ManageFriends_ProfileLink": "Ссылка на профиль",
+    "ResetToDefault": "Сбросить настройки",
+    "ActionButtonLabelMenu": "Меню",
+    "ActionButtonLabelSelect": "Выбрать",
+    "ActionButtonLabelBack": "Назад",
+    "ActionButtonLabelDismiss": "Скрыть",
+    "ActionButtonLabelContextMenu": "Опции",
+    "ActionButtonLabelSearch": "Поиск",
+    "ActionButtonLabelSort": "Сортировка",
+    "ActionButtonLabelAdjust": "Изменить",
+    "ActionButtonLabelCancel": "Отменить",
+    "ActionButtonLabelDone": "Готово",
+    "Slider_AdjustSlider": "Изменить положение ползунка",
+    "Slider_EditValue": "Изменить значение"
 }

@@ -1971,5 +1971,18 @@
 	"ManageFriends_IsFriend": "Ten użytkownik jest już na twojej liście znajomych",
 	"ManageFriends_FriendsInCommon": "Macie %1$s wspólnych znajomych",
 	"ManageFriends_FriendsInCommonSingular": "Macie %1$s wspólnego znajomego",
-	"ManageFriends_ProfileLink": "Link do profilu"
+	"ManageFriends_ProfileLink": "Link do profilu",
+	"ResetToDefault": "Przywróć domyślne",
+	"ActionButtonLabelMenu": "Menu",
+	"ActionButtonLabelSelect": "Wybierz",
+	"ActionButtonLabelBack": "Wstecz",
+	"ActionButtonLabelDismiss": "Zamknij",
+	"ActionButtonLabelContextMenu": "Opcje",
+	"ActionButtonLabelSearch": "Szukaj",
+	"ActionButtonLabelSort": "Sortuj",
+	"ActionButtonLabelAdjust": "Dostosuj",
+	"ActionButtonLabelCancel": "Anuluj",
+	"ActionButtonLabelDone": "Gotowe",
+	"Slider_AdjustSlider": "Dostosuj suwak",
+	"Slider_EditValue": "Edytuj wartość"
 }

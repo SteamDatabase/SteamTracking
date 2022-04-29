@@ -1971,5 +1971,18 @@
 	"ManageFriends_IsFriend": "您與這位使用者已經是好友了",
 	"ManageFriends_FriendsInCommon": "你們有 %1$s 位共同好友",
 	"ManageFriends_FriendsInCommonSingular": "你們有 %1$s 位共同好友",
-	"ManageFriends_ProfileLink": "個人檔案連結"
+	"ManageFriends_ProfileLink": "個人檔案連結",
+	"ResetToDefault": "還原為預設值",
+	"ActionButtonLabelMenu": "選單",
+	"ActionButtonLabelSelect": "選擇",
+	"ActionButtonLabelBack": "返回",
+	"ActionButtonLabelDismiss": "關閉",
+	"ActionButtonLabelContextMenu": "選項",
+	"ActionButtonLabelSearch": "搜尋",
+	"ActionButtonLabelSort": "分類",
+	"ActionButtonLabelAdjust": "調整",
+	"ActionButtonLabelCancel": "取消",
+	"ActionButtonLabelDone": "完成",
+	"Slider_AdjustSlider": "調整滑桿",
+	"Slider_EditValue": "編輯值"
 }

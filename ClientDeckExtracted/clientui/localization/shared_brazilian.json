@@ -1971,5 +1971,18 @@
 	"ManageFriends_IsFriend": "Vocês já são amigos",
 	"ManageFriends_FriendsInCommon": "%1$s amigos em comum",
 	"ManageFriends_FriendsInCommonSingular": "%1$s amigo em comum",
-	"ManageFriends_ProfileLink": "Link do perfil"
+	"ManageFriends_ProfileLink": "Link do perfil",
+	"ResetToDefault": "Restaurar padrões",
+	"ActionButtonLabelMenu": "Menu",
+	"ActionButtonLabelSelect": "Selecionar",
+	"ActionButtonLabelBack": "Voltar",
+	"ActionButtonLabelDismiss": "Fechar",
+	"ActionButtonLabelContextMenu": "Opções",
+	"ActionButtonLabelSearch": "Buscar",
+	"ActionButtonLabelSort": "Ordenar",
+	"ActionButtonLabelAdjust": "Ajustar",
+	"ActionButtonLabelCancel": "Cancelar",
+	"ActionButtonLabelDone": "OK",
+	"Slider_AdjustSlider": "Ajustar controle deslizante",
+	"Slider_EditValue": "Editar valor"
 }

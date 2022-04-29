@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "Cette personne est déjà dans votre liste de contacts.",
     "ManageFriends_FriendsInCommon": "Vous avez %1$s contacts en commun.",
     "ManageFriends_FriendsInCommonSingular": "Vous avez %1$s contact en commun.",
-    "ManageFriends_ProfileLink": "Lien du profil"
+    "ManageFriends_ProfileLink": "Lien du profil",
+    "ResetToDefault": "Réinitialiser",
+    "ActionButtonLabelMenu": "Menu",
+    "ActionButtonLabelSelect": "Sélectionner",
+    "ActionButtonLabelBack": "Retour",
+    "ActionButtonLabelDismiss": "Ignorer",
+    "ActionButtonLabelContextMenu": "Options",
+    "ActionButtonLabelSearch": "Rechercher",
+    "ActionButtonLabelSort": "Trier",
+    "ActionButtonLabelAdjust": "Ajuster",
+    "ActionButtonLabelCancel": "Annuler",
+    "ActionButtonLabelDone": "Terminé",
+    "Slider_AdjustSlider": "Ajuster le curseur",
+    "Slider_EditValue": "Éditer la valeur"
 }

@@ -874,7 +874,7 @@
 	"PersonaStateLookingToTrade": "Quer trocar",
 	"PersonaStateLookingToPlay": "Quer jogar",
 	"PersonaStateLastSeen": "Últ. vez online: %1$s",
-	"PersonaStateLastSeen_JustNow": "Últ. vez online agora mesmo",
+	"PersonaStateLastSeen_JustNow": "Últ. vez online agora",
 	"PersonaStateRemotePlayTogether": "Remote Play Together",
 	"PersonaStateInvisibleDescriptor": "Aparecer offline mas com acesso ao chat",
 	"PersonaStateSignedOutDescriptor": "Desconectar da lista de amigos e chat",
@@ -1971,5 +1971,18 @@
 	"ManageFriends_IsFriend": "Vocês já são amigos",
 	"ManageFriends_FriendsInCommon": "Vocês têm %1$s amigos em comum",
 	"ManageFriends_FriendsInCommonSingular": "Vocês têm %1$s amigo em comum",
-	"ManageFriends_ProfileLink": "Link do perfil"
+	"ManageFriends_ProfileLink": "Link do perfil",
+	"ResetToDefault": "Usar predefinições",
+	"ActionButtonLabelMenu": "Menu",
+	"ActionButtonLabelSelect": "Selecionar",
+	"ActionButtonLabelBack": "Voltar",
+	"ActionButtonLabelDismiss": "Fechar",
+	"ActionButtonLabelContextMenu": "Opções",
+	"ActionButtonLabelSearch": "Procurar",
+	"ActionButtonLabelSort": "Ordenar",
+	"ActionButtonLabelAdjust": "Ajustar",
+	"ActionButtonLabelCancel": "Cancelar",
+	"ActionButtonLabelDone": "OK",
+	"Slider_AdjustSlider": "Ajustar",
+	"Slider_EditValue": "Editar valor"
 }

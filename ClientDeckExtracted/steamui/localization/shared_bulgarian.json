@@ -1972,5 +1972,18 @@
     "ManageFriends_FriendsInCommon": "Имате %1$s общи приятели",
     "ManageFriends_FriendsInCommonSingular": "Имате %1$s общ приятел",
     "ManageFriends_ProfileLink": "Профилната връзка",
+    "ResetToDefault": "Нулиране до настройки по подразбиране",
+    "ActionButtonLabelMenu": "Меню",
+    "ActionButtonLabelSelect": "Избиране",
+    "ActionButtonLabelBack": "Назад",
+    "ActionButtonLabelDismiss": "Отхвърляне",
+    "ActionButtonLabelContextMenu": "Опции",
+    "ActionButtonLabelSearch": "Търсене",
+    "ActionButtonLabelSort": "Сортиране",
+    "ActionButtonLabelAdjust": "Настройване",
+    "ActionButtonLabelCancel": "Отказ",
+    "ActionButtonLabelDone": "Готово",
+    "Slider_AdjustSlider": "Коригиране на плъзгача",
+    "Slider_EditValue": "Редактиране на стойност",
     "shared_dummy": "dont translate"
 }

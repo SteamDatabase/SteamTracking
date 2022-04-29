@@ -1972,5 +1972,18 @@
 	"ManageFriends_FriendsInCommon": "Ni har %1$s gemensamma vänner",
 	"ManageFriends_FriendsInCommonSingular": "Ni har %1$s gemensam vän",
 	"ManageFriends_ProfileLink": "Profillänk",
+	"ResetToDefault": "Återställ till standard",
+	"ActionButtonLabelMenu": "Meny",
+	"ActionButtonLabelSelect": "Välj",
+	"ActionButtonLabelBack": "Tillbaka",
+	"ActionButtonLabelDismiss": "Avfärda",
+	"ActionButtonLabelContextMenu": "Alternativ",
+	"ActionButtonLabelSearch": "Sök",
+	"ActionButtonLabelSort": "Sortera",
+	"ActionButtonLabelAdjust": "Justera",
+	"ActionButtonLabelCancel": "Avbryt",
+	"ActionButtonLabelDone": "Klar",
+	"Slider_AdjustSlider": "Justera reglage",
+	"Slider_EditValue": "Ändra värde",
 	"shared_dummy": "dont translate"
 }

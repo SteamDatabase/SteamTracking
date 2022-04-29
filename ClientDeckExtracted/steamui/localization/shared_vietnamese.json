@@ -869,7 +869,7 @@
     "PersonaStateInvisible": "Vô hình",
     "PersonaStateInNonSteamGame": "Trong trò chơi ngoài Steam",
     "PersonaStateSignedOut": "Đã đăng xuất",
-    "PersonaStateOfflineMode": "Chế độ rời mạng",
+    "PersonaStateOfflineMode": "Chế độ ngắt mạng",
     "PersonaStateWatchingBroadcast": "Xem phát sóng:",
     "PersonaStateLookingToTrade": "Đang muốn trao đổi",
     "PersonaStateLookingToPlay": "Tìm người cùng chơi",
@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "Bạn đã là bạn bè với người dùng này",
     "ManageFriends_FriendsInCommon": "Bạn có %1$s bạn chung",
     "ManageFriends_FriendsInCommonSingular": "Bạn có %1$s bạn chung",
-    "ManageFriends_ProfileLink": "Liên kết hồ sơ"
+    "ManageFriends_ProfileLink": "Liên kết hồ sơ",
+    "ResetToDefault": "Khôi phục mặc định",
+    "ActionButtonLabelMenu": "Menu",
+    "ActionButtonLabelSelect": "Chọn",
+    "ActionButtonLabelBack": "Trước",
+    "ActionButtonLabelDismiss": "Hủy",
+    "ActionButtonLabelContextMenu": "Tùy chọn",
+    "ActionButtonLabelSearch": "Tìm kiếm",
+    "ActionButtonLabelSort": "Sắp xếp",
+    "ActionButtonLabelAdjust": "Điều chỉnh",
+    "ActionButtonLabelCancel": "Hủy",
+    "ActionButtonLabelDone": "Hoàn tất",
+    "Slider_AdjustSlider": "Điều chỉnh thanh trượt",
+    "Slider_EditValue": "Sửa giá trị"
 }

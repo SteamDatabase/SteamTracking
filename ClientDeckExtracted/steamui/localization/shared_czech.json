@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "S tímto uživatelem jste již přátelé",
     "ManageFriends_FriendsInCommon": "Máte %1$s společných přátel",
     "ManageFriends_FriendsInCommonSingular": "Máte %1$s společného přítele",
-    "ManageFriends_ProfileLink": "Odkaz na profil"
+    "ManageFriends_ProfileLink": "Odkaz na profil",
+    "ResetToDefault": "Nastavit na výchozí",
+    "ActionButtonLabelMenu": "Nabídka",
+    "ActionButtonLabelSelect": "Vybrat",
+    "ActionButtonLabelBack": "Zpět",
+    "ActionButtonLabelDismiss": "Skrýt",
+    "ActionButtonLabelContextMenu": "Možnosti",
+    "ActionButtonLabelSearch": "Hledat",
+    "ActionButtonLabelSort": "Třídit",
+    "ActionButtonLabelAdjust": "Upravit",
+    "ActionButtonLabelCancel": "Zrušit",
+    "ActionButtonLabelDone": "OK",
+    "Slider_AdjustSlider": "Upravit posuvník",
+    "Slider_EditValue": "Upravit hodnotu"
 }

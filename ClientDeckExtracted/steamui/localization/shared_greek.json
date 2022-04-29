@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "Είστε ήδη φίλοι με αυτόν τον χρήστη",
     "ManageFriends_FriendsInCommon": "Έχετε %1$s κοινούς φίλους",
     "ManageFriends_FriendsInCommonSingular": "Έχετε %1$s κοινό φίλο",
-    "ManageFriends_ProfileLink": "Σύνδεσμος προφίλ"
+    "ManageFriends_ProfileLink": "Σύνδεσμος προφίλ",
+    "ResetToDefault": "Επαναφορά σε προεπιλογή",
+    "ActionButtonLabelMenu": "Μενού",
+    "ActionButtonLabelSelect": "Επιλογή",
+    "ActionButtonLabelBack": "Πίσω",
+    "ActionButtonLabelDismiss": "Απόρριψη",
+    "ActionButtonLabelContextMenu": "Επιλογές",
+    "ActionButtonLabelSearch": "Αναζήτηση",
+    "ActionButtonLabelSort": "Ταξινόμηση",
+    "ActionButtonLabelAdjust": "Προσαρμογή",
+    "ActionButtonLabelCancel": "Ακύρωση",
+    "ActionButtonLabelDone": "Τέλος",
+    "Slider_AdjustSlider": "Προσαρμογή ρυθμιστικού",
+    "Slider_EditValue": "Επεξεργασία τιμής"
 }

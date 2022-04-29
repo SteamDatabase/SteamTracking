@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "Du er allerede venn med denne brukeren",
     "ManageFriends_FriendsInCommon": "Dere har %1$s venner til felles",
     "ManageFriends_FriendsInCommonSingular": "Dere har %1$s venn til felles",
-    "ManageFriends_ProfileLink": "Profillenke"
+    "ManageFriends_ProfileLink": "Profillenke",
+    "ResetToDefault": "Tilbakestill til standard",
+    "ActionButtonLabelMenu": "Meny",
+    "ActionButtonLabelSelect": "Velg",
+    "ActionButtonLabelBack": "Tilbake",
+    "ActionButtonLabelDismiss": "Avvis",
+    "ActionButtonLabelContextMenu": "Innstillinger",
+    "ActionButtonLabelSearch": "Søk",
+    "ActionButtonLabelSort": "Sorter",
+    "ActionButtonLabelAdjust": "Juster",
+    "ActionButtonLabelCancel": "Avbryt",
+    "ActionButtonLabelDone": "Ferdig",
+    "Slider_AdjustSlider": "Juster glidebryter",
+    "Slider_EditValue": "Rediger verdi"
 }

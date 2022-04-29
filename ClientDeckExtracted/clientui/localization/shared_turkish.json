@@ -1971,5 +1971,18 @@
 	"ManageFriends_IsFriend": "Bu kullanıcıyla zaten arkadaşsınız",
 	"ManageFriends_FriendsInCommon": "%1$s ortak arkadaşınız var",
 	"ManageFriends_FriendsInCommonSingular": "%1$s ortak arkadaşınız var",
-	"ManageFriends_ProfileLink": "Profil Bağlantısı"
+	"ManageFriends_ProfileLink": "Profil Bağlantısı",
+	"ResetToDefault": "Varsayılana Sıfırla",
+	"ActionButtonLabelMenu": "Menü",
+	"ActionButtonLabelSelect": "Seç",
+	"ActionButtonLabelBack": "Geri",
+	"ActionButtonLabelDismiss": "Kapat",
+	"ActionButtonLabelContextMenu": "Seçenekler",
+	"ActionButtonLabelSearch": "Ara",
+	"ActionButtonLabelSort": "Sırala",
+	"ActionButtonLabelAdjust": "Ayarla",
+	"ActionButtonLabelCancel": "İptal Et",
+	"ActionButtonLabelDone": "Tamam",
+	"Slider_AdjustSlider": "Kaydırıcıyı Ayarla",
+	"Slider_EditValue": "Değeri Düzenle"
 }

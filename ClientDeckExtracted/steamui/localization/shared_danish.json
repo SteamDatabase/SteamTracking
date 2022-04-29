@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "Du er allerede venner med denne bruger",
     "ManageFriends_FriendsInCommon": "I har %1$s venner til fælles",
     "ManageFriends_FriendsInCommonSingular": "I har %1$s ven til fælles",
-    "ManageFriends_ProfileLink": "Profillink"
+    "ManageFriends_ProfileLink": "Profillink",
+    "ResetToDefault": "Nulstil til standard",
+    "ActionButtonLabelMenu": "Menu",
+    "ActionButtonLabelSelect": "Vælg",
+    "ActionButtonLabelBack": "Tilbage",
+    "ActionButtonLabelDismiss": "Luk",
+    "ActionButtonLabelContextMenu": "Indstillinger",
+    "ActionButtonLabelSearch": "Søg",
+    "ActionButtonLabelSort": "Sorter",
+    "ActionButtonLabelAdjust": "Juster",
+    "ActionButtonLabelCancel": "Annuller",
+    "ActionButtonLabelDone": "Færdig",
+    "Slider_AdjustSlider": "Juster skyder",
+    "Slider_EditValue": "Rediger værdi"
 }

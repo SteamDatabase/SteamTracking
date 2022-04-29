@@ -1972,5 +1972,18 @@
     "ManageFriends_FriendsInCommon": "Teillä on %1$s yhteistä kaveria",
     "ManageFriends_FriendsInCommonSingular": "Teillä on %1$s yhteinen kaveri",
     "ManageFriends_ProfileLink": "Profiililinkki",
+    "ResetToDefault": "Palauta oletusarvoon",
+    "ActionButtonLabelMenu": "Valikko",
+    "ActionButtonLabelSelect": "Valitse",
+    "ActionButtonLabelBack": "Takaisin",
+    "ActionButtonLabelDismiss": "Sulje",
+    "ActionButtonLabelContextMenu": "Asetukset",
+    "ActionButtonLabelSearch": "Haku",
+    "ActionButtonLabelSort": "Lajittele",
+    "ActionButtonLabelAdjust": "Säädä",
+    "ActionButtonLabelCancel": "Peruuta",
+    "ActionButtonLabelDone": "Valmis",
+    "Slider_AdjustSlider": "Säädä liukusäädintä",
+    "Slider_EditValue": "Muokkaa arvoa",
     "shared_dummy": "dont translate"
 }

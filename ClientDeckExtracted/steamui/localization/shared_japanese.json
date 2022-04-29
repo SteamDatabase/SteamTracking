@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "このユーザーとすでにフレンドです",
     "ManageFriends_FriendsInCommon": "共通のフレンドが%1$s人います",
     "ManageFriends_FriendsInCommonSingular": "共通のフレンドが%1$s人います",
-    "ManageFriends_ProfileLink": "プロフィールのリンク"
+    "ManageFriends_ProfileLink": "プロフィールのリンク",
+    "ResetToDefault": "初期設定に戻す",
+    "ActionButtonLabelMenu": "メニュー",
+    "ActionButtonLabelSelect": "選択",
+    "ActionButtonLabelBack": "戻る",
+    "ActionButtonLabelDismiss": "閉じる",
+    "ActionButtonLabelContextMenu": "オプション",
+    "ActionButtonLabelSearch": "検索",
+    "ActionButtonLabelSort": "並べ替え",
+    "ActionButtonLabelAdjust": "調整",
+    "ActionButtonLabelCancel": "キャンセル",
+    "ActionButtonLabelDone": "完了",
+    "Slider_AdjustSlider": "スライダーを調整",
+    "Slider_EditValue": "値を編集"
 }

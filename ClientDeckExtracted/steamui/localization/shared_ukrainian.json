@@ -1971,5 +1971,18 @@
     "ManageFriends_IsFriend": "Цей користувач уже ваш друг",
     "ManageFriends_FriendsInCommon": "Спільних друзів: %1$s",
     "ManageFriends_FriendsInCommonSingular": "Спільних друзів: %1$s",
-    "ManageFriends_ProfileLink": "Посилання на профіль"
+    "ManageFriends_ProfileLink": "Посилання на профіль",
+    "ResetToDefault": "Скинути до стандартних",
+    "ActionButtonLabelMenu": "Меню",
+    "ActionButtonLabelSelect": "Обрати",
+    "ActionButtonLabelBack": "Назад",
+    "ActionButtonLabelDismiss": "Закрити",
+    "ActionButtonLabelContextMenu": "Параметри",
+    "ActionButtonLabelSearch": "Пошук",
+    "ActionButtonLabelSort": "Сортувати",
+    "ActionButtonLabelAdjust": "Змінити",
+    "ActionButtonLabelCancel": "Скасувати",
+    "ActionButtonLabelDone": "Готово",
+    "Slider_AdjustSlider": "Відкоригувати повзунок",
+    "Slider_EditValue": "Редагувати значення"
 }

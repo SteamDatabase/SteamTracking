@@ -1971,5 +1971,18 @@
 	"ManageFriends_IsFriend": "คุณเป็นเพื่อนกับผู้ใช้รายนี้อยู่แล้ว",
 	"ManageFriends_FriendsInCommon": "คุณมีเพื่อนร่วมกัน %1$s คน",
 	"ManageFriends_FriendsInCommonSingular": "คุณมีเพื่อนร่วมกัน %1$s คน",
-	"ManageFriends_ProfileLink": "ลิงก์โปรไฟล์"
+	"ManageFriends_ProfileLink": "ลิงก์โปรไฟล์",
+	"ResetToDefault": "รีเซ็ตเป็นค่าเริ่มต้น",
+	"ActionButtonLabelMenu": "เมนู",
+	"ActionButtonLabelSelect": "เลือก",
+	"ActionButtonLabelBack": "ย้อนกลับ",
+	"ActionButtonLabelDismiss": "ไม่สนใจ",
+	"ActionButtonLabelContextMenu": "ตัวเลือก",
+	"ActionButtonLabelSearch": "ค้นหา",
+	"ActionButtonLabelSort": "จัดเรียง",
+	"ActionButtonLabelAdjust": "ปรับ",
+	"ActionButtonLabelCancel": "ยกเลิก",
+	"ActionButtonLabelDone": "เสร็จสิ้น",
+	"Slider_AdjustSlider": "ปรับแถบตัวเลื่อน",
+	"Slider_EditValue": "แก้ไขค่า"
 }

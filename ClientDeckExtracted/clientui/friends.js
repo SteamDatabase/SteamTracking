@@ -27569,9 +27569,20 @@ function TestLocalizeCalendarTime()
             return () => clearInterval(handle);
           }, [ms, ...deps]); // eslint-disable-line react-hooks/exhaustive-deps
         }
-        /** Simple timer hook that updates when the timer completes.
-         * Changing the countdown duration resets the countdown. */
-        function useTimer(nCountdownMs) {
+        /**
+         * Simple timer hook that updates when the timer completes.
+         * Changing the countdown duration resets the countdown.
+         *
+         * Takes an optional callback for when the timer is complete, but also
+         * returns state indicating the completeness that you can use.
+         * Changing the `fnOnComplete` callback value doesn't reset the timer; when
+         * the timer is complete it'll call the latest callback provided.
+         */
+        function useTimer(nCountdownMs, fnOnComplete) {
+          const refOnCompleteHandle = react__WEBPACK_IMPORTED_MODULE_0__[
+            "useRef"
+          ](fnOnComplete);
+          refOnCompleteHandle.current = fnOnComplete; // Always use latest function without resetting the timer.
           const [
             bTimerCompleted,
             setTimerCompleted,
@@ -27579,6 +27590,12 @@ function TestLocalizeCalendarTime()
           const refTimeoutHandle = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](
             0
           );
+          const fnOnTimeout = react__WEBPACK_IMPORTED_MODULE_0__[
+            "useCallback"
+          ](() => {
+            setTimerCompleted(true);
+            refOnCompleteHandle.current && refOnCompleteHandle.current();
+          }, []);
           const fnStopTimer = react__WEBPACK_IMPORTED_MODULE_0__[
             "useCallback"
           ](() => {
@@ -27590,10 +27607,10 @@ function TestLocalizeCalendarTime()
             setTimerCompleted(false);
             fnStopTimer();
             refTimeoutHandle.current = window.setTimeout(
-              () => setTimerCompleted(true),
+              fnOnTimeout,
               nCountdownMs
             );
-          }, [fnStopTimer, nCountdownMs]);
+          }, [fnStopTimer, nCountdownMs, fnOnComplete]);
           react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](fnRestartTimer, [
             nCountdownMs,
             fnRestartTimer,

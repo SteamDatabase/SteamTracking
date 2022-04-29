@@ -1971,5 +1971,18 @@
 	"ManageFriends_IsFriend": "Már barátok vagytok ezzel a felhasználóval",
 	"ManageFriends_FriendsInCommon": "%1$s közös barátotok van",
 	"ManageFriends_FriendsInCommonSingular": "%1$s közös barátotok van",
-	"ManageFriends_ProfileLink": "Profilhivatkozás"
+	"ManageFriends_ProfileLink": "Profilhivatkozás",
+	"ResetToDefault": "Vissza alapértékekre",
+	"ActionButtonLabelMenu": "Menü",
+	"ActionButtonLabelSelect": "Kiválaszt",
+	"ActionButtonLabelBack": "Vissza",
+	"ActionButtonLabelDismiss": "Bezár",
+	"ActionButtonLabelContextMenu": "Beállítások",
+	"ActionButtonLabelSearch": "Keresés",
+	"ActionButtonLabelSort": "Rendezés",
+	"ActionButtonLabelAdjust": "Állítás",
+	"ActionButtonLabelCancel": "Mégse",
+	"ActionButtonLabelDone": "Kész",
+	"Slider_AdjustSlider": "Csúszka állítása",
+	"Slider_EditValue": "Érték szerkesztése"
 }

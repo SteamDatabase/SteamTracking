@@ -2129,5 +2129,21 @@
 	"ManageFriends_FriendsInCommonSingular": "You have %1$s friend in common",
 	"ManageFriends_ProfileLink": "Profile Link",
 
+	"ResetToDefault": "Reset to Default",
+
+	"ActionButtonLabelMenu": "Menu",
+	"ActionButtonLabelSelect": "Select",
+	"ActionButtonLabelBack": "Back",
+	"ActionButtonLabelDismiss": "Dismiss",
+	"ActionButtonLabelContextMenu": "Options",
+	"ActionButtonLabelSearch": "Search",
+	"ActionButtonLabelSort": "Sort",
+	"ActionButtonLabelAdjust": "Adjust",
+	"ActionButtonLabelCancel": "Cancel",
+	"ActionButtonLabelDone": "Done",
+
+	"Slider_AdjustSlider": "Adjust Slider",
+	"Slider_EditValue": "Edit Value",
+
 	"shared_dummy": "dont translate"
 }

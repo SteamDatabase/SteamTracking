@@ -239,7 +239,8 @@
 :root {
   --basicui-header-height: 0px;
 }
-.notificationcontent_StandardTemplate_1B_uv {
+.notificationcontent_StandardTemplate_1B_uv,
+.notificationcontent_PinnedTemplate_H_NPi {
   padding: 13px 13px;
   display: flex;
   flex-direction: row;
@@ -254,13 +255,20 @@
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-.notificationcontent_StandardTemplate_1B_uv.gpfocus {
+.notificationcontent_StandardTemplate_1B_uv.gpfocus,
+.notificationcontent_PinnedTemplate_H_NPi.gpfocus {
   background-color: #3d4450;
   animation-name: notificationcontent_ItemFocusAnim-darkerGrey_3_1qy;
   z-index: 1;
 }
 .notificationcontent_StandardTemplate_1B_uv:not(:focus)
-  + .notificationcontent_StandardTemplate_1B_uv:not(:focus):before {
+  + .notificationcontent_StandardTemplate_1B_uv:not(:focus):before,
+.notificationcontent_StandardTemplate_1B_uv:not(:focus)
+  + .notificationcontent_PinnedTemplate_H_NPi:not(:focus):before,
+.notificationcontent_PinnedTemplate_H_NPi:not(:focus)
+  + .notificationcontent_StandardTemplate_1B_uv:not(:focus):before,
+.notificationcontent_PinnedTemplate_H_NPi:not(:focus)
+  + .notificationcontent_PinnedTemplate_H_NPi:not(:focus):before {
   content: "";
   position: absolute;
   top: 0;
@@ -270,22 +278,27 @@
   border-bottom: 1px solid #3d4450;
 }
 .notificationcontent_StandardTemplate_1B_uv
+  .notificationcontent_StandardLogoDimensions_2PHgs,
+.notificationcontent_PinnedTemplate_H_NPi
   .notificationcontent_StandardLogoDimensions_2PHgs {
   height: 44px;
   width: 44px;
   flex-shrink: 0;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Content_22NY9 {
+.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Content_22NY9,
+.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Content_22NY9 {
   margin-left: 12px;
   min-width: 0;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Header__Gv0f {
+.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Header__Gv0f,
+.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Header__Gv0f {
   display: flex;
   flex-direction: row;
   height: 14px;
   line-height: 14px;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Icon_2eliP {
+.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Icon_2eliP,
+.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Icon_2eliP {
   width: 13px;
   height: 13px;
   margin-right: 8px;
@@ -293,11 +306,15 @@
 }
 .notificationcontent_StandardTemplate_1B_uv
   .notificationcontent_Icon_2eliP
+  > svg,
+.notificationcontent_PinnedTemplate_H_NPi
+  .notificationcontent_Icon_2eliP
   > svg {
   width: 13px;
   height: 13px;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Title_3CsWl {
+.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Title_3CsWl,
+.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Title_3CsWl {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -308,12 +325,17 @@
   text-overflow: ellipsis;
   color: #fff;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Body_1F3-u {
+.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Body_1F3-u,
+.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Body_1F3-u {
   overflow: hidden;
 }
 .notificationcontent_StandardTemplate_1B_uv
   .notificationcontent_StandardNotificationDescription_kVqEa,
 .notificationcontent_StandardTemplate_1B_uv
+  .notificationcontent_StandardNotificationSubText_3iYf4,
+.notificationcontent_PinnedTemplate_H_NPi
+  .notificationcontent_StandardNotificationDescription_kVqEa,
+.notificationcontent_PinnedTemplate_H_NPi
   .notificationcontent_StandardNotificationSubText_3iYf4 {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -333,6 +355,10 @@
 .notificationcontent_StandardTemplate_1B_uv
   .notificationcontent_StandardNotificationDescription_kVqEa:not(.notificationcontent_Multiline_3ddJI),
 .notificationcontent_StandardTemplate_1B_uv
+  .notificationcontent_StandardNotificationSubText_3iYf4:not(.notificationcontent_Multiline_3ddJI),
+.notificationcontent_PinnedTemplate_H_NPi
+  .notificationcontent_StandardNotificationDescription_kVqEa:not(.notificationcontent_Multiline_3ddJI),
+.notificationcontent_PinnedTemplate_H_NPi
   .notificationcontent_StandardNotificationSubText_3iYf4:not(.notificationcontent_Multiline_3ddJI) {
   white-space: nowrap;
   overflow: hidden;
@@ -341,6 +367,10 @@
 .notificationcontent_StandardTemplate_1B_uv
   .notificationcontent_StandardNotificationDescription_kVqEa.notificationcontent_Multiline_3ddJI,
 .notificationcontent_StandardTemplate_1B_uv
+  .notificationcontent_StandardNotificationSubText_3iYf4.notificationcontent_Multiline_3ddJI,
+.notificationcontent_PinnedTemplate_H_NPi
+  .notificationcontent_StandardNotificationDescription_kVqEa.notificationcontent_Multiline_3ddJI,
+.notificationcontent_PinnedTemplate_H_NPi
   .notificationcontent_StandardNotificationSubText_3iYf4.notificationcontent_Multiline_3ddJI {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -348,14 +378,19 @@
   overflow: hidden;
 }
 .notificationcontent_StandardTemplate_1B_uv
+  .notificationcontent_StandardNotificationDescription_kVqEa,
+.notificationcontent_PinnedTemplate_H_NPi
   .notificationcontent_StandardNotificationDescription_kVqEa {
   color: #b8bcbf;
 }
 .notificationcontent_StandardTemplate_1B_uv
+  .notificationcontent_StandardNotificationSubText_3iYf4,
+.notificationcontent_PinnedTemplate_H_NPi
   .notificationcontent_StandardNotificationSubText_3iYf4 {
   color: #67707b;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Count_1qsxM {
+.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Count_1qsxM,
+.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Count_1qsxM {
   background-color: #1a9fff;
   color: #fff;
   border-radius: 26px;
@@ -368,7 +403,8 @@
   margin-right: -8px;
 }
 .notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_Timestamp_1dWDB {
+  .notificationcontent_Timestamp_1dWDB,
+.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Timestamp_1dWDB {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -382,8 +418,37 @@
   margin-left: 0.5em;
 }
 .notificationcontent_StandardTemplate_1B_uv.gpfocus
+  .notificationcontent_Timestamp_1dWDB,
+.notificationcontent_PinnedTemplate_H_NPi.gpfocus
   .notificationcontent_Timestamp_1dWDB {
   color: #67707b;
+}
+.notificationcontent_PinnedTemplate_H_NPi {
+  height: 16px;
+}
+.notificationcontent_PinnedTemplate_H_NPi
+  .notificationcontent_PinnedBody_3DeeK {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .notificationcontent_ShortTemplate_2w-Eq {
   padding: 0;
@@ -1966,6 +2031,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
 }
 .gamecapsule_GameCapsule_fXdhj .gamecapsule_BottomBar_3-GyQ {
   display: flex;
@@ -1976,6 +2042,15 @@
   align-items: center;
   background-color: #3c5d84;
   justify-content: space-between;
+}
+.gamecapsule_GameCapsule_fXdhj .gamecapsule_DeckCompat_Tl-6l {
+  display: none;
+  top: 2%;
+  position: absolute;
+  right: 2%;
+}
+.gamecapsule_GameCapsule_fXdhj.gpfocus .gamecapsule_DeckCompat_Tl-6l {
+  display: flex;
 }
 .gamecapsule_PriceCtn_2E-mS {
   margin-left: auto;
@@ -10601,9 +10676,12 @@ body {
 .footer_BasicFooter_3T1iF .footer_FooterLegend_2JJDH {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 3px 0;
+  gap: 3px 16px;
   align-items: center;
+  overflow: hidden;
   flex: 1;
 }
 .footer_BasicFooter_3T1iF:not(.footer_WithKeyboard_1fMXT) {
@@ -10615,12 +10693,12 @@ body {
 .footer_BasicFooter_3T1iF.footer_QuickAccessFooter_VdbQ_ {
   position: relative;
   background-color: transparent;
+  padding: 0 10px;
 }
 .footer_Item_wesFG {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
-  margin-right: 16px;
 }
 .footer_Item_wesFG:last-child {
   margin: 0;
@@ -11822,7 +11900,7 @@ body {
   animation-name: quickaccessmenu_ItemFocusAnim-green_1XTtk;
   animation-fill-mode: unset;
   background-color: #59bf40;
-  color: #9bd98c;
+  color: rgba(255, 255, 255, 0.7);
 }
 .quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu.gpfocus {
   color: #fff;

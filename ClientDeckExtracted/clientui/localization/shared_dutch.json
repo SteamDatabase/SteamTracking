@@ -1971,5 +1971,18 @@
 	"ManageFriends_IsFriend": "Je bent al bevriend met deze gebruiker",
 	"ManageFriends_FriendsInCommon": "Jullie hebben %1$s vrienden gemeen",
 	"ManageFriends_FriendsInCommonSingular": "Jullie hebben %1$s vriend gemeen",
-	"ManageFriends_ProfileLink": "Profiellink"
+	"ManageFriends_ProfileLink": "Profiellink",
+	"ResetToDefault": "Standaardinstellingen herstellen",
+	"ActionButtonLabelMenu": "Menu",
+	"ActionButtonLabelSelect": "Selecteren",
+	"ActionButtonLabelBack": "Terug",
+	"ActionButtonLabelDismiss": "Sluiten",
+	"ActionButtonLabelContextMenu": "Opties",
+	"ActionButtonLabelSearch": "Zoeken",
+	"ActionButtonLabelSort": "Sorteren",
+	"ActionButtonLabelAdjust": "Aanpassen",
+	"ActionButtonLabelCancel": "Annuleren",
+	"ActionButtonLabelDone": "Gereed",
+	"Slider_AdjustSlider": "Schuifregelaar aanpassen",
+	"Slider_EditValue": "Waarde bewerken"
 }

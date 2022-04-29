@@ -1972,5 +1972,18 @@
     "ManageFriends_FriendsInCommon": "%1$s명의 친구를 같이 알고 있습니다.",
     "ManageFriends_FriendsInCommonSingular": "%1$s명의 친구를 같이 알고 있습니다.",
     "ManageFriends_ProfileLink": "프로필 링크",
+    "ResetToDefault": "설정 초기화",
+    "ActionButtonLabelMenu": "메뉴",
+    "ActionButtonLabelSelect": "선택",
+    "ActionButtonLabelBack": "뒤로",
+    "ActionButtonLabelDismiss": "닫기",
+    "ActionButtonLabelContextMenu": "옵션",
+    "ActionButtonLabelSearch": "검색",
+    "ActionButtonLabelSort": "정렬",
+    "ActionButtonLabelAdjust": "변경",
+    "ActionButtonLabelCancel": "취소",
+    "ActionButtonLabelDone": "완료",
+    "Slider_AdjustSlider": "슬라이더 조정",
+    "Slider_EditValue": "슬라이더 값 편집",
     "shared_dummy": "dont translate"
 }
