@@ -103,6 +103,7 @@ enum EStreamControlMessage {
 	k_EStreamControlSetInputTemporarilyDisabled = 133;
 	k_EStreamControlSetQualityOverride = 134;
 	k_EStreamControlSetBitrateOverride = 135;
+	k_EStreamControlShowOnScreenKeyboard = 136;
 }
 
 enum EStreamVersion {
@@ -355,6 +356,7 @@ message CStreamingClientCaps {
 	optional bool disable_amd_hardware_encoding = 9;
 	optional bool disable_nvidia_hardware_encoding = 10;
 	optional int32 form_factor = 11;
+	optional bool has_on_screen_keyboard = 12;
 }
 
 message CStreamingClientConfig {
@@ -764,6 +766,9 @@ message CSetQualityOverrideMsg {
 
 message CSetBitrateOverrideMsg {
 	optional int32 value = 1;
+}
+
+message CShowOnScreenKeyboardMsg {
 }
 
 message CStreamDataLostMsg {
