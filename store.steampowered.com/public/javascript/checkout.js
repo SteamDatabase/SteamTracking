@@ -2489,7 +2489,7 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'cafefunded' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'This in person transaction will be authorized by $1%s. Click the button to open a new window to initiate the transaction.'.replace( '$1%s', sSiteName );
+					$('purchase_bottom_note_paypalgc').innerHTML = 'This in person transaction will be authorized by %1$s. Click the button to open a new window to initiate the transaction.'.replace( '$1%s', sSiteName );
 					$('purchase_button_bottom_text').innerHTML = 'Continue Transaction';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{

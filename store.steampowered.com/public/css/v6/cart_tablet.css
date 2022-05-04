@@ -72,7 +72,6 @@
 	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
 	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
 	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
-	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
@@ -152,15 +151,22 @@ html.tablet .cart_row {
 	margin: unset;
 }
 
+html.tablet .cart_item_img img {
+	width: 100%;
+	height: auto;
+}
+
 html.tablet .cart_item_img {
+	width: 140px;
+	height: auto;
 	margin-top: unset;
 	margin-right: 12px;
 }
 
-html.tablet .cart_item_img img,
-html.tablet .cart_item_img {
-	width: 140px;
-	height: 54px;
+@media screen and (min-width:  1280px ) {
+	html.tablet .cart_item_img {
+		width: calc(140px + 2vw);
+	}
 }
 
 html.tablet .cart_item_img a {
@@ -610,8 +616,8 @@ html.tablet .rightcol.cart_rightcol {
 
 :root {
 	/* Used to set width of content to browser width when inside parent container*/
-	--fullScreenContentInsideContainerMargin: calc(0px - ( (100vw -  var(--gpMaxBrowserWidth)) / 2 ));
-	--fullScreenContentInsideContainerPadding: calc( (100vw -  var(--gpMaxBrowserWidth)) / 2 );
+	--fullScreenContentInsideContainerMargin: calc(0px - ( (100vw -  1120px) / 2 ));
+	--fullScreenContentInsideContainerPadding: calc( (100vw -  1120px) / 2 );
 }
 
 html.tablet body.v6 .page_background {
@@ -633,7 +639,7 @@ html.tablet .rightcol.cart_rightcol {
 	margin-top: calc( 24px + var(--gpVerticalResponsivePadding-Large) );
 }
 
-@media screen and (max-width: 1080px ) {
+@media screen and (max-width: 1120px ) {
 	html.tablet .rightcol.cart_rightcol {
 		margin-left: calc(0px - var(--gpSpace-Gutter));
 		margin-right: calc(0px - var(--gpSpace-Gutter));

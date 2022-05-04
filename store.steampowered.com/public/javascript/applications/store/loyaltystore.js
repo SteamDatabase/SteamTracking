@@ -22,8 +22,8 @@
       var n = a("mrSG"),
         r = a("q1tI"),
         i = a.n(r),
-        o = a("exH9"),
-        s = a("qbgq"),
+        o = a("GbHM"),
+        s = a("Rbfr"),
         l = a("qX6Y");
       const c = (e) => {
           const {
@@ -97,18 +97,18 @@
         i = a("mrSG"),
         o = a("q1tI"),
         s = a.n(o),
-        l = a("qDk6"),
+        l = a("Lsvi"),
         c = a("2vnA"),
         m = a("TyAF"),
-        d = a("opsS"),
+        d = a("hCpY"),
         p = a("55Ip"),
         u = a("oydz"),
-        _ = a("Jqb/"),
-        f = a("TLQK"),
+        _ = a("jrcU"),
+        f = a("GXif"),
         g = a("prdU"),
-        h = (a("li7h"), a("OU48"), a("ka0M")),
-        b = a("X3Ds"),
-        C = a("lkRc"),
+        h = (a("Nr4G"), a("1udA"), a("jIgc")),
+        b = a("rSrx"),
+        C = a("/Q1a"),
         I = a("dI71"),
         y = (a("17x9"), a("dRu9")),
         w = a("0PSK");
@@ -252,12 +252,12 @@
       (j.propTypes = {}), (j.defaultProps = { mode: M });
       var A = j,
         O = a("pQ8y"),
-        D = a("r64O"),
+        D = a("f5iL"),
         x = a("StxQ"),
         P = a("n4wG"),
         B = a("1fPh"),
-        L = (a("mgoM"), a("6Y59")),
-        R = a("exH9");
+        L = (a("msu0"), a("e356")),
+        R = a("GbHM");
       let k = { success: !0, result: 1 };
       class T {
         constructor() {
@@ -465,11 +465,11 @@
       window.ClientConnectionAPI = G;
       var z = a("Uy/A"),
         F = a.n(z),
-        H = a("bS9Q"),
-        U = a("YgaH"),
-        V = a("POwH"),
+        H = a("3idx"),
+        U = a("3y2B"),
+        V = a("CHWB"),
         Z = a.n(V),
-        W = a("YyVH");
+        W = a("7VqR");
       function Q(e, t, a) {
         return C.d.COMMUNITY_CDN_ASSET_URL + e + "/roomeffects/" + t + "/" + a;
       }
@@ -704,7 +704,7 @@
           )
         );
       }
-      var te = a("oet2");
+      var te = a("gMmH");
       class ae extends Y {
         constructor(e) {
           super(e),
@@ -818,7 +818,7 @@
         }
       }
       ae.sm_nUnique = 0;
-      var ne = a("Kw0F");
+      var ne = a("ApMK");
       function re(e) {
         const t = e.data,
           a = Q(e.sale, e.effect.name, `${t.strImage}.png`);
@@ -975,8 +975,8 @@
           timeout: a,
           renderButton: me(e, t),
           renderEffectIcon: me(e, t),
-          buttonToken: "#ChatEntryButton_Send" + H.e(e),
-          locToken: "#ChatRoom_RoomEffect" + H.e(e),
+          buttonToken: "#ChatEntryButton_Send" + H.f(e),
+          locToken: "#ChatRoom_RoomEffect" + H.f(e),
           render: n,
         };
       }
@@ -1050,9 +1050,9 @@
       };
       _e = Object(i.b)([m.a], _e);
       var fe = a("cOvF"),
-        ge = a("Gpul"),
-        he = (a("jUCX"), a("oFam"), a("qD+2")),
-        be = a("0OaU"),
+        ge = a("FA79"),
+        he = (a("kMdN"), a("ztGc"), a("FKEV")),
+        be = a("kWcV"),
         Ce = a("ehaW"),
         Ie = a("9+KW");
       function ye(e) {
@@ -1086,7 +1086,7 @@
           )
         );
       }
-      var we = a("qbgq"),
+      var we = a("Rbfr"),
         Me = a("26vX");
       function Ee(e) {
         return (t) => {
@@ -1103,7 +1103,7 @@
         Se = Ee(Me.GreenButton);
       var je = a("mw7S"),
         Ae = a("RV7a"),
-        Oe = (a("sOw0"), a("Jz9t"));
+        Oe = (a("d4Nf"), a("jWvk"));
       function De(e, t, a, n) {
         const r = {
           type: 1,
@@ -3645,6 +3645,62 @@
         a.p +
         "images/applications/store/csgoChat_128_hugs.png?v=valveisgoodatcaching";
     },
+    "/69T": function (e, t, a) {
+      "use strict";
+      a.d(t, "b", function () {
+        return o;
+      }),
+        a.d(t, "a", function () {
+          return s;
+        }),
+        a.d(t, "c", function () {
+          return d;
+        });
+      var n = a("q1tI"),
+        r = a.n(n);
+      const i = Object(n.createContext)(null);
+      function o(e) {
+        const { spacing: t, children: a } = e;
+        return r.a.createElement(i.Provider, { value: c(t) }, a);
+      }
+      function s(e) {
+        const t = l();
+        return r.a.createElement(
+          "div",
+          { style: m(t) },
+          r.a.createElement(i.Provider, { value: null }, e.children)
+        );
+      }
+      function l() {
+        return Object(n.useContext)(i);
+      }
+      function c(e) {
+        return {
+          top: e.vertical || e.top || 0,
+          bottom: e.vertical || e.bottom || 0,
+          left: e.horizontal || e.left || 0,
+          right: e.horizontal || e.right || 0,
+        };
+      }
+      function m(e) {
+        if (!e) return;
+        const { top: t, bottom: a, left: n, right: r } = e,
+          i = {};
+        return (
+          t && (i.marginTop = `-${t}px`),
+          a && (i.marginBottom = `-${a}px`),
+          n && (i.marginLeft = `-${n}px`),
+          r && (i.marginRight = `-${r}px`),
+          i
+        );
+      }
+      function d() {
+        const e = l();
+        if (!e) return;
+        const t = `${e.top}px ${e.right}px ${e.bottom}px ${e.left}px`;
+        return { padding: t, scrollPadding: t };
+      }
+    },
     "/SGo": function (e, t, a) {
       e.exports =
         a.p +
@@ -3803,13 +3859,13 @@
         i = a.n(r),
         o = a("TyAF"),
         s = a("aoTL"),
-        l = a("qD+2"),
+        l = a("FKEV"),
         c = a("prdU"),
-        m = a("TLQK"),
+        m = a("GXif"),
         d = a("RV7a"),
-        p = (a("OU48"), a("mw7S")),
+        p = (a("1udA"), a("mw7S")),
         u = a("o8B4"),
-        _ = a("exH9"),
+        _ = a("GbHM"),
         f = a("YpyZ");
       const g = (e) => {
         var { value: t, className: a } = e,
@@ -3824,7 +3880,7 @@
       };
       var h = a("StxQ"),
         b = a("cOvF");
-      a("qDk6");
+      a("Lsvi");
       const C = Object(o.a)((e) =>
           i.a.createElement(
             I,
@@ -4045,10 +4101,54 @@
         }
       }
     },
+    "2cJF": function (e, t, a) {
+      e.exports = {
+        avatarHolder: "steamavatar_avatarHolder_1YGAH",
+        avatarStatus: "steamavatar_avatarStatus_1yIzy",
+        avatar: "steamavatar_avatar_1p_Qr",
+        avatarFrame: "steamavatar_avatarFrame_3atbN",
+        avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
+      };
+    },
     "2y1i": function (e, t, a) {
       e.exports =
         a.p +
         "images/applications/store/dota_shocked_crystal_maiden.png?v=valveisgoodatcaching";
+    },
+    "4DCj": function (e, t, a) {
+      e.exports = {
+        DefaultTheme: "profilethemecolors_DefaultTheme_1qSTn",
+        CosmicTheme: "profilethemecolors_CosmicTheme_1H27L",
+        SummerTheme: "profilethemecolors_SummerTheme_32CpR",
+        MidnightTheme: "profilethemecolors_MidnightTheme_7whka",
+        DarkModeTheme: "profilethemecolors_DarkModeTheme_2aNG2",
+        SteelTheme: "profilethemecolors_SteelTheme_jkvk6",
+        PinkTealTheme: "profilethemecolors_PinkTealTheme_3P6mR",
+        MutedRedTheme: "profilethemecolors_MutedRedTheme_2Ryfg",
+        SteamGreenTheme: "profilethemecolors_SteamGreenTheme_1jCpm",
+        BlueRedTheme: "profilethemecolors_BlueRedTheme_1LdKY",
+        GoldBurgundyTheme: "profilethemecolors_GoldBurgundyTheme_aWHVY",
+        VibrantBlueTheme: "profilethemecolors_VibrantBlueTheme_33swB",
+        GoldenProfileDebutTheme:
+          "profilethemecolors_GoldenProfileDebutTheme_5Y4d9",
+        WinterProfile2020Theme:
+          "profilethemecolors_WinterProfile2020Theme_ovNdJ",
+        GoldenWeekProfile2021Theme:
+          "profilethemecolors_GoldenWeekProfile2021Theme_ST1Up",
+        Summer2021Theme: "profilethemecolors_Summer2021Theme_1zoKw",
+        MutedBlueTheme: "profilethemecolors_MutedBlueTheme_vdApL",
+        GoldTheme: "profilethemecolors_GoldTheme_HRAv0",
+        BurntOrangeTheme: "profilethemecolors_BurntOrangeTheme_F_Nlh",
+        FlatGreyTheme: "profilethemecolors_FlatGreyTheme_MXG8G",
+        PurpleTheme: "profilethemecolors_PurpleTheme_2Atoc",
+        GreenSlimeTheme: "profilethemecolors_GreenSlimeTheme_SAoY_",
+        GhostTheme: "profilethemecolors_GhostTheme_3Oo5G",
+        ColorNightmareTheme: "profilethemecolors_ColorNightmareTheme_35rNh",
+        MurugiahTheme: "profilethemecolors_MurugiahTheme_Z9Gwt",
+        Winter2021Theme: "profilethemecolors_Winter2021Theme_21p3Y",
+        Lunar2022Theme: "profilethemecolors_Lunar2022Theme_1SPgb",
+        SteamDeckTheme: "profilethemecolors_SteamDeckTheme_3TBj7",
+      };
     },
     "5/sD": function (e, t, a) {
       e.exports =
@@ -4115,41 +4215,6 @@
       e.exports = {
         ItemHover: "cluster_ItemHover_1hyVD",
         MobileHeroAction: "cluster_MobileHeroAction_nHPO7",
-      };
-    },
-    "8Uds": function (e, t, a) {
-      e.exports = {
-        DefaultTheme: "profilethemecolors_DefaultTheme_tedMf",
-        CosmicTheme: "profilethemecolors_CosmicTheme_17vHy",
-        SummerTheme: "profilethemecolors_SummerTheme_2skFv",
-        MidnightTheme: "profilethemecolors_MidnightTheme_M8Pf4",
-        DarkModeTheme: "profilethemecolors_DarkModeTheme_2p-_x",
-        SteelTheme: "profilethemecolors_SteelTheme_xdD8L",
-        PinkTealTheme: "profilethemecolors_PinkTealTheme_3M7cl",
-        MutedRedTheme: "profilethemecolors_MutedRedTheme_3lp4R",
-        SteamGreenTheme: "profilethemecolors_SteamGreenTheme_335yQ",
-        BlueRedTheme: "profilethemecolors_BlueRedTheme_2wH82",
-        GoldBurgundyTheme: "profilethemecolors_GoldBurgundyTheme_YGKfX",
-        VibrantBlueTheme: "profilethemecolors_VibrantBlueTheme_3DOwB",
-        GoldenProfileDebutTheme:
-          "profilethemecolors_GoldenProfileDebutTheme_3BHT2",
-        WinterProfile2020Theme:
-          "profilethemecolors_WinterProfile2020Theme_3jPiA",
-        GoldenWeekProfile2021Theme:
-          "profilethemecolors_GoldenWeekProfile2021Theme_24NEV",
-        Summer2021Theme: "profilethemecolors_Summer2021Theme_2bB_m",
-        MutedBlueTheme: "profilethemecolors_MutedBlueTheme_3-7Wk",
-        GoldTheme: "profilethemecolors_GoldTheme_l3sX-",
-        BurntOrangeTheme: "profilethemecolors_BurntOrangeTheme_37pNJ",
-        FlatGreyTheme: "profilethemecolors_FlatGreyTheme_2AFCa",
-        PurpleTheme: "profilethemecolors_PurpleTheme_KM8jQ",
-        GreenSlimeTheme: "profilethemecolors_GreenSlimeTheme_FdC8c",
-        GhostTheme: "profilethemecolors_GhostTheme_1JZpe",
-        ColorNightmareTheme: "profilethemecolors_ColorNightmareTheme_2LNsd",
-        MurugiahTheme: "profilethemecolors_MurugiahTheme_22BXC",
-        Winter2021Theme: "profilethemecolors_Winter2021Theme_X0_g8",
-        Lunar2022Theme: "profilethemecolors_Lunar2022Theme_1NSMH",
-        SteamDeckTheme: "profilethemecolors_SteamDeckTheme_2aDQK",
       };
     },
     "8j16": function (e, t, a) {
@@ -4221,6 +4286,11 @@
         a.p +
         "images/applications/store/fancyPants_apng.png?v=valveisgoodatcaching";
     },
+    "A/m1": function (e, t, a) {
+      e.exports =
+        a.p +
+        "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
+    },
     Aqke: function (e, t, a) {
       var n = {
         "./loyalty_brazilian.json": ["jJTi", 123],
@@ -4290,6 +4360,31 @@
         a.p +
         "images/applications/store/heart_warming_anim0000.png?v=valveisgoodatcaching";
     },
+    CG4B: function (e, t, a) {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        statusAndName: "personanameandstatus_statusAndName_3n8q8",
+        threeLines: "personanameandstatus_threeLines_3ms2P",
+        blocked: "personanameandstatus_blocked_3_oRk",
+        richPresenceLabel: "personanameandstatus_richPresenceLabel_1k82N",
+        playerName: "personanameandstatus_playerName_r62qz",
+        playerNickname: "personanameandstatus_playerNickname_3T-9P",
+        playerNicknameBracket:
+          "personanameandstatus_playerNicknameBracket_2aXev",
+        richPresenceContainer:
+          "personanameandstatus_richPresenceContainer_2nrSd",
+        gameName: "personanameandstatus_gameName_2wpap",
+        NoMask: "personanameandstatus_NoMask_2J0IS",
+        twoLine: "personanameandstatus_twoLine_27M2G",
+        DNDContainer: "personanameandstatus_DNDContainer_12iWK",
+        partyBeaconJoin: "personanameandstatus_partyBeaconJoin_1K_OI",
+        hidePersona: "personanameandstatus_hidePersona_3meBu",
+        compactView: "personanameandstatus_compactView_34CCB",
+        noContextMenu: "personanameandstatus_noContextMenu_2317W",
+        gameIsPrivateIcon: "personanameandstatus_gameIsPrivateIcon_1FPaN",
+        PendingPersona: "personanameandstatus_PendingPersona_ifetn",
+      };
+    },
     CGeh: function (e, t, a) {
       "use strict";
       a.r(t);
@@ -4298,17 +4393,17 @@
         i = a.n(r),
         o = a("EC67"),
         s = a("1fPh"),
-        l = a("lkRc"),
-        c = a("WBba"),
+        l = a("/Q1a"),
+        c = a("rmVU"),
         m = a("TyAF"),
         d = a("55Ip"),
-        p = a("qbgq"),
+        p = a("Rbfr"),
         u = a("li8c"),
         _ = a("prdU"),
-        f = (a("OU48"), a("RV7a")),
-        g = a("TLQK"),
+        f = (a("1udA"), a("RV7a")),
+        g = a("GXif"),
         h = a("/maY"),
-        b = a("exH9"),
+        b = a("GbHM"),
         C = a("UpHR");
       function I(e) {
         const { size: t } = e;
@@ -4321,8 +4416,8 @@
           ),
         });
       }
-      var y = a("lypr"),
-        w = a("qDk6");
+      var y = a("y0CV"),
+        w = a("Lsvi");
       const M = "none";
       function E(e, t, a = {}) {
         const {
@@ -4636,7 +4731,7 @@
       var z = a("+j4l"),
         F = a("7R2k"),
         H = a("vN/p"),
-        U = a("t3iX");
+        U = a("/69T");
       function V(e) {
         return Math.max(0, e.cTotalMatchingUnfiltered - e.cTotalMatching);
       }
@@ -4980,7 +5075,7 @@
             theme: a,
           });
         };
-      var te = a("av+R");
+      var te = a("fsrB");
       function ae(e) {
         const { navigate: t, onClick: a } = e,
           r = Object(n.c)(e, ["navigate", "onClick"]),
@@ -5038,17 +5133,17 @@
           )
         );
       }
-      var oe = a("qD+2"),
+      var oe = a("FKEV"),
         se = a("n4wG"),
         le = a("Matr"),
         ce = a("StxQ"),
         me = a("nXE5"),
-        de = a("0OaU"),
+        de = a("kWcV"),
         pe = (a("kqfX"), a("6c1j")),
         ue = a.n(pe),
-        _e = a("mgoM"),
-        fe = a("jUCX"),
-        ge = a("WonJ"),
+        _e = a("msu0"),
+        fe = a("kMdN"),
+        ge = a("Jxx8"),
         he = a.n(ge);
       let be = class extends r.Component {
         static get hoverClass() {
@@ -5113,11 +5208,11 @@
         }
       };
       be = Object(n.b)([m.a], be);
-      a("li7h");
-      var Ce = a("6Y59"),
-        Ie = a("Xfd2"),
+      a("Nr4G");
+      var Ce = a("e356"),
+        Ie = a("iyod"),
         ye = a.n(Ie),
-        we = a("kkPE");
+        we = a("AYtk");
       const Me = Object(m.a)((e) => {
         const { persona: t, className: a } = e,
           i = Object(n.c)(e, ["persona", "className"]);
@@ -5182,7 +5277,7 @@
             )
         );
       });
-      var Ee = a("ksWZ"),
+      var Ee = a("CG4B"),
         Ne = a.n(Ee);
       function ve(e) {
         return r.createElement(
@@ -5422,7 +5517,7 @@
           )
         );
       });
-      var je = a("Gpul");
+      var je = a("FA79");
       Object(m.a)(() => {
         const e = Object(r.useRef)(null),
           t = Object(r.useRef)(null);
@@ -5584,7 +5679,7 @@
         Ye = a("cOvF"),
         qe = a("Vlb1"),
         Je = a("Gp1o"),
-        Xe = a("CdLH");
+        Xe = a("Nt3m");
       const Ke = Object(m.a)((e) => {
           const t = {
               item_name: "Free Item",
@@ -6299,7 +6394,7 @@
             )
           );
         };
-      var It = a("65aj");
+      var It = a("Zdsb");
       a("6Mq3");
       a("F8+w");
       var yt = a("gxgZ"),
@@ -7018,7 +7113,7 @@
           );
         };
       var ua = a("8j16"),
-        _a = a("+d9t");
+        _a = a("tQrp");
       let fa = class extends i.a.Component {
         constructor(e) {
           super(e), _.b.Get().GetLoyaltyRewardsSummary();
@@ -7386,9 +7481,9 @@
         }
       };
       fa = Object(n.b)([m.a], fa);
-      var ga = a("ykc/"),
-        ha = (a("kKgT"), a("opsS"));
-      a("tt0l"), a("NxAk");
+      var ga = a("lo3/"),
+        ha = (a("ROh0"), a("hCpY"));
+      a("4CF9"), a("hane");
       const ba = "FocusNavHistoryID";
       function Ca(e) {
         const { children: t } = e,
@@ -7435,10 +7530,10 @@
           t
         );
       }
-      var Ia = a("hwrv"),
+      var Ia = a("Sn0s"),
         ya = a("1Gs6"),
-        wa = a("y+6m"),
-        Ma = a("TtDX"),
+        wa = a("SS8s"),
+        Ma = a("pC2t"),
         Ea = a("1U4k");
       const Na = (e) => {
           const { appid: t } = e,
@@ -8230,9 +8325,9 @@
           e
         );
       });
-      var Xa = a("bxBv"),
-        Ka = (a("E4Op"), a("hRO2")),
-        $a = a("OS8t");
+      var Xa = a("9XWO"),
+        Ka = (a("XThB"), a("hRO2")),
+        $a = a("3dpo");
       const en = Ka.Message;
       class tn extends en {
         constructor(e = null) {
@@ -9225,7 +9320,7 @@
       }
       Object(n.b)([hn.C], bn.prototype, "m_rgCurrentUserBids", void 0),
         Object(n.b)([hn.C], bn.prototype, "m_mapAuctionItems", void 0);
-      var Cn = a("ee7K");
+      var Cn = a("FmLm");
       class In extends i.a.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
@@ -9294,6 +9389,332 @@
       })();
       t.default = In;
     },
+    CHWB: function (e, t, a) {
+      e.exports = {
+        confettiDurationMs: "7000s/s",
+        goldfettiDurationMs: "7000s/s",
+        goldfettiColorsNum: "3",
+        goldfettiEmojiNum: "4",
+        crackerDurationMs: "300s/s",
+        balloonsDurationMs: "4000s/s",
+        balloonsDurationS: "4s/s",
+        balloonsDurationJitterS: "1s/s",
+        balloonsDurationMaxMs: "5000s/s",
+        snowballDurationMs: "3010s/s",
+        snowballSpeed: "1s",
+        "animation-container": "chatroomeffects_animation-container_3tul6",
+        Snowflake: "chatroomeffects_Snowflake_3kdo_",
+        "Snowflake-0": "chatroomeffects_Snowflake-0_33yRI",
+        "snowflake-0": "chatroomeffects_snowflake-0_wWgzj",
+        "Snowflake-1": "chatroomeffects_Snowflake-1_J0tao",
+        "snowflake-1": "chatroomeffects_snowflake-1_KWT2p",
+        "Snowflake-2": "chatroomeffects_Snowflake-2_FDGY2",
+        "snowflake-2": "chatroomeffects_snowflake-2_1CIBC",
+        "Snowflake-3": "chatroomeffects_Snowflake-3_1tKC_",
+        "snowflake-3": "chatroomeffects_snowflake-3_2j2Xi",
+        "Snowflake-4": "chatroomeffects_Snowflake-4_1TvTl",
+        "snowflake-4": "chatroomeffects_snowflake-4_3PSrO",
+        "Snowflake-5": "chatroomeffects_Snowflake-5_1MrkH",
+        "snowflake-5": "chatroomeffects_snowflake-5__yiVm",
+        "Snowflake-6": "chatroomeffects_Snowflake-6_LlTh9",
+        "snowflake-6": "chatroomeffects_snowflake-6_1UZLN",
+        "Snowflake-7": "chatroomeffects_Snowflake-7_2k902",
+        "snowflake-7": "chatroomeffects_snowflake-7_23CN9",
+        "Snowflake-8": "chatroomeffects_Snowflake-8_2uHPX",
+        "snowflake-8": "chatroomeffects_snowflake-8_31dNO",
+        "Snowflake-9": "chatroomeffects_Snowflake-9_3cXPP",
+        "snowflake-9": "chatroomeffects_snowflake-9_3im9t",
+        "Snowflake-10": "chatroomeffects_Snowflake-10_1fDcw",
+        "snowflake-10": "chatroomeffects_snowflake-10_1H1sa",
+        "Snowflake-11": "chatroomeffects_Snowflake-11_2jwvh",
+        "snowflake-11": "chatroomeffects_snowflake-11_3Spd6",
+        "Snowflake-12": "chatroomeffects_Snowflake-12_20DDi",
+        "snowflake-12": "chatroomeffects_snowflake-12_HHauz",
+        "Snowflake-13": "chatroomeffects_Snowflake-13_15ZQ5",
+        "snowflake-13": "chatroomeffects_snowflake-13_hHAXR",
+        "Snowflake-14": "chatroomeffects_Snowflake-14_1E8xv",
+        "snowflake-14": "chatroomeffects_snowflake-14_QWgNQ",
+        "Snowflake-15": "chatroomeffects_Snowflake-15_gVWaw",
+        "snowflake-15": "chatroomeffects_snowflake-15_TYWZj",
+        "Snowflake-16": "chatroomeffects_Snowflake-16_1CyAo",
+        "snowflake-16": "chatroomeffects_snowflake-16_34FW0",
+        "Snowflake-17": "chatroomeffects_Snowflake-17_2WiNW",
+        "snowflake-17": "chatroomeffects_snowflake-17_1vM0H",
+        "Snowflake-18": "chatroomeffects_Snowflake-18_1uooE",
+        "snowflake-18": "chatroomeffects_snowflake-18_1LZ1T",
+        "Snowflake-19": "chatroomeffects_Snowflake-19_KwheS",
+        "snowflake-19": "chatroomeffects_snowflake-19_25730",
+        "Snowflake-20": "chatroomeffects_Snowflake-20_WltUV",
+        "snowflake-20": "chatroomeffects_snowflake-20_1JbI9",
+        confetti: "chatroomeffects_confetti_1oqL-",
+        "confetti-0": "chatroomeffects_confetti-0_38RtO",
+        "drop-0": "chatroomeffects_drop-0_V9wSn",
+        "confetti-1": "chatroomeffects_confetti-1_3HQXc",
+        "drop-1": "chatroomeffects_drop-1_1QIkN",
+        "confetti-2": "chatroomeffects_confetti-2_2Dfkq",
+        "drop-2": "chatroomeffects_drop-2_3Da2Q",
+        "confetti-3": "chatroomeffects_confetti-3_2BLfq",
+        "drop-3": "chatroomeffects_drop-3_1uaos",
+        "confetti-4": "chatroomeffects_confetti-4_x4aKR",
+        "drop-4": "chatroomeffects_drop-4_2pnFU",
+        "confetti-5": "chatroomeffects_confetti-5_t35Q0",
+        "drop-5": "chatroomeffects_drop-5_2gR59",
+        "confetti-6": "chatroomeffects_confetti-6_2zfYZ",
+        "drop-6": "chatroomeffects_drop-6_2ilaX",
+        "confetti-7": "chatroomeffects_confetti-7_f_Kll",
+        "drop-7": "chatroomeffects_drop-7_2auR8",
+        "confetti-8": "chatroomeffects_confetti-8_12zRC",
+        "drop-8": "chatroomeffects_drop-8_1q83P",
+        "confetti-9": "chatroomeffects_confetti-9_2kaax",
+        "drop-9": "chatroomeffects_drop-9_215F1",
+        "confetti-10": "chatroomeffects_confetti-10_L3U2I",
+        "drop-10": "chatroomeffects_drop-10_G9UV-",
+        "confetti-11": "chatroomeffects_confetti-11_3TNZr",
+        "drop-11": "chatroomeffects_drop-11_2ViwG",
+        "confetti-12": "chatroomeffects_confetti-12_3OWee",
+        "drop-12": "chatroomeffects_drop-12_fCGL7",
+        "confetti-13": "chatroomeffects_confetti-13_5Tf4y",
+        "drop-13": "chatroomeffects_drop-13_32QeJ",
+        "confetti-14": "chatroomeffects_confetti-14_3WVUH",
+        "drop-14": "chatroomeffects_drop-14_2UWh6",
+        "confetti-15": "chatroomeffects_confetti-15_1CP_v",
+        "drop-15": "chatroomeffects_drop-15_26cdL",
+        "confetti-16": "chatroomeffects_confetti-16_36UFR",
+        "drop-16": "chatroomeffects_drop-16_3Sa39",
+        "confetti-17": "chatroomeffects_confetti-17_2IAKy",
+        "drop-17": "chatroomeffects_drop-17_2BlPO",
+        "confetti-18": "chatroomeffects_confetti-18_30mcd",
+        "drop-18": "chatroomeffects_drop-18_3Ivek",
+        "confetti-19": "chatroomeffects_confetti-19_1PVSs",
+        "drop-19": "chatroomeffects_drop-19_3sCUl",
+        "confetti-20": "chatroomeffects_confetti-20_3FLx8",
+        "drop-20": "chatroomeffects_drop-20_1KjEQ",
+        "confetti-21": "chatroomeffects_confetti-21_xBNgH",
+        "drop-21": "chatroomeffects_drop-21_1fIaW",
+        "confetti-22": "chatroomeffects_confetti-22_145bi",
+        "drop-22": "chatroomeffects_drop-22_38tin",
+        "confetti-23": "chatroomeffects_confetti-23_1YVax",
+        "drop-23": "chatroomeffects_drop-23_2iPVQ",
+        "confetti-24": "chatroomeffects_confetti-24_2PTSN",
+        "drop-24": "chatroomeffects_drop-24_224oJ",
+        "confetti-25": "chatroomeffects_confetti-25_1JDDD",
+        "drop-25": "chatroomeffects_drop-25_1Bfku",
+        "confetti-26": "chatroomeffects_confetti-26_tyedn",
+        "drop-26": "chatroomeffects_drop-26_3aMdT",
+        "confetti-27": "chatroomeffects_confetti-27_1gca4",
+        "drop-27": "chatroomeffects_drop-27_5nkdv",
+        "confetti-28": "chatroomeffects_confetti-28_1kVB7",
+        "drop-28": "chatroomeffects_drop-28_mwSwy",
+        "confetti-29": "chatroomeffects_confetti-29_1bILI",
+        "drop-29": "chatroomeffects_drop-29_1rirB",
+        "confetti-30": "chatroomeffects_confetti-30_2HUOq",
+        "drop-30": "chatroomeffects_drop-30_1mVd8",
+        "confetti-31": "chatroomeffects_confetti-31_pd00p",
+        "drop-31": "chatroomeffects_drop-31_2MU00",
+        "confetti-32": "chatroomeffects_confetti-32_3vLff",
+        "drop-32": "chatroomeffects_drop-32_-4xdl",
+        "confetti-33": "chatroomeffects_confetti-33_1CYnx",
+        "drop-33": "chatroomeffects_drop-33_1Ius4",
+        "confetti-34": "chatroomeffects_confetti-34_2pYeT",
+        "drop-34": "chatroomeffects_drop-34_1IURZ",
+        "confetti-35": "chatroomeffects_confetti-35_2RCN_",
+        "drop-35": "chatroomeffects_drop-35_1G43e",
+        "confetti-36": "chatroomeffects_confetti-36_3NYfl",
+        "drop-36": "chatroomeffects_drop-36_xSlF_",
+        "confetti-37": "chatroomeffects_confetti-37_YMcid",
+        "drop-37": "chatroomeffects_drop-37_3gpE4",
+        "confetti-38": "chatroomeffects_confetti-38_1GbO5",
+        "drop-38": "chatroomeffects_drop-38_Rjdv-",
+        "confetti-39": "chatroomeffects_confetti-39_3UY2A",
+        "drop-39": "chatroomeffects_drop-39_MIyWo",
+        "confetti-40": "chatroomeffects_confetti-40_2Pboq",
+        "drop-40": "chatroomeffects_drop-40_1ifeX",
+        "confetti-41": "chatroomeffects_confetti-41_28A5U",
+        "drop-41": "chatroomeffects_drop-41_1Bdss",
+        "confetti-42": "chatroomeffects_confetti-42_1g2y6",
+        "drop-42": "chatroomeffects_drop-42_2z-wq",
+        "confetti-43": "chatroomeffects_confetti-43_3T8Gt",
+        "drop-43": "chatroomeffects_drop-43_3M-ku",
+        "confetti-44": "chatroomeffects_confetti-44_3ofiA",
+        "drop-44": "chatroomeffects_drop-44_UPf-C",
+        "confetti-45": "chatroomeffects_confetti-45_2qEc7",
+        "drop-45": "chatroomeffects_drop-45_2XFNG",
+        "confetti-46": "chatroomeffects_confetti-46_3ZUoV",
+        "drop-46": "chatroomeffects_drop-46_KfGYT",
+        "confetti-47": "chatroomeffects_confetti-47_1yHUI",
+        "drop-47": "chatroomeffects_drop-47_39Qir",
+        "confetti-48": "chatroomeffects_confetti-48_1AyF2",
+        "drop-48": "chatroomeffects_drop-48_QkatW",
+        "confetti-49": "chatroomeffects_confetti-49_3OJy_",
+        "drop-49": "chatroomeffects_drop-49_1kzrw",
+        "confetti-50": "chatroomeffects_confetti-50_qfGs7",
+        "drop-50": "chatroomeffects_drop-50_1FpRb",
+        "confetti-51": "chatroomeffects_confetti-51_WFLgF",
+        "drop-51": "chatroomeffects_drop-51_F8rU_",
+        "confetti-52": "chatroomeffects_confetti-52_1RaCb",
+        "drop-52": "chatroomeffects_drop-52_1JhWG",
+        "confetti-53": "chatroomeffects_confetti-53_y8n0i",
+        "drop-53": "chatroomeffects_drop-53_2Ir1N",
+        "confetti-54": "chatroomeffects_confetti-54_2-Eit",
+        "drop-54": "chatroomeffects_drop-54_1ewOT",
+        "confetti-55": "chatroomeffects_confetti-55_qIltU",
+        "drop-55": "chatroomeffects_drop-55_1Heog",
+        "confetti-56": "chatroomeffects_confetti-56_3D3QO",
+        "drop-56": "chatroomeffects_drop-56_3fXZd",
+        "confetti-57": "chatroomeffects_confetti-57_2Uxg6",
+        "drop-57": "chatroomeffects_drop-57_2qaGW",
+        "confetti-58": "chatroomeffects_confetti-58_zMfIJ",
+        "drop-58": "chatroomeffects_drop-58_2bIe0",
+        "confetti-59": "chatroomeffects_confetti-59_2PrpY",
+        "drop-59": "chatroomeffects_drop-59_1tdsz",
+        "confetti-60": "chatroomeffects_confetti-60_3DBwD",
+        "drop-60": "chatroomeffects_drop-60_1CT3i",
+        "confetti-61": "chatroomeffects_confetti-61_J7d85",
+        "drop-61": "chatroomeffects_drop-61_1xuNl",
+        "confetti-62": "chatroomeffects_confetti-62_1DOrn",
+        "drop-62": "chatroomeffects_drop-62_XwFmL",
+        "confetti-63": "chatroomeffects_confetti-63_1VdB2",
+        "drop-63": "chatroomeffects_drop-63_1hZi1",
+        "confetti-64": "chatroomeffects_confetti-64_1Pvr7",
+        "drop-64": "chatroomeffects_drop-64_2WYk_",
+        "confetti-65": "chatroomeffects_confetti-65_3Vb7V",
+        "drop-65": "chatroomeffects_drop-65_1IJjN",
+        "confetti-66": "chatroomeffects_confetti-66_3HHYd",
+        "drop-66": "chatroomeffects_drop-66_3P48b",
+        "confetti-67": "chatroomeffects_confetti-67_3NLub",
+        "drop-67": "chatroomeffects_drop-67_394wr",
+        "confetti-68": "chatroomeffects_confetti-68_3F7hZ",
+        "drop-68": "chatroomeffects_drop-68_aIMib",
+        "confetti-69": "chatroomeffects_confetti-69_33pt-",
+        "drop-69": "chatroomeffects_drop-69_2FTUD",
+        "confetti-70": "chatroomeffects_confetti-70_2bQyM",
+        "drop-70": "chatroomeffects_drop-70_31mha",
+        "confetti-71": "chatroomeffects_confetti-71_2XmoC",
+        "drop-71": "chatroomeffects_drop-71_3Iir7",
+        "confetti-72": "chatroomeffects_confetti-72_LwgT1",
+        "drop-72": "chatroomeffects_drop-72_MIXuq",
+        "confetti-73": "chatroomeffects_confetti-73_1ZvsH",
+        "drop-73": "chatroomeffects_drop-73_1jiew",
+        "confetti-74": "chatroomeffects_confetti-74_1h6HD",
+        "drop-74": "chatroomeffects_drop-74_1N6di",
+        "confetti-75": "chatroomeffects_confetti-75_3Mbsq",
+        "drop-75": "chatroomeffects_drop-75_103s9",
+        "confetti-76": "chatroomeffects_confetti-76_22QWY",
+        "drop-76": "chatroomeffects_drop-76_Z0QQm",
+        "confetti-77": "chatroomeffects_confetti-77_3RJpO",
+        "drop-77": "chatroomeffects_drop-77_38Ups",
+        "confetti-78": "chatroomeffects_confetti-78_piPv3",
+        "drop-78": "chatroomeffects_drop-78_2PpFG",
+        "confetti-79": "chatroomeffects_confetti-79_2q09K",
+        "drop-79": "chatroomeffects_drop-79_IjS2-",
+        "confetti-80": "chatroomeffects_confetti-80_38Jcp",
+        "drop-80": "chatroomeffects_drop-80_2KA9M",
+        "confetti-81": "chatroomeffects_confetti-81_3JG_s",
+        "drop-81": "chatroomeffects_drop-81_1OgYN",
+        "confetti-82": "chatroomeffects_confetti-82_6NUaK",
+        "drop-82": "chatroomeffects_drop-82_mZ2yU",
+        "confetti-83": "chatroomeffects_confetti-83_eVOnL",
+        "drop-83": "chatroomeffects_drop-83_2INoi",
+        "confetti-84": "chatroomeffects_confetti-84_1bJze",
+        "drop-84": "chatroomeffects_drop-84_K1CNI",
+        "confetti-85": "chatroomeffects_confetti-85_1FOBC",
+        "drop-85": "chatroomeffects_drop-85_3uiwJ",
+        "confetti-86": "chatroomeffects_confetti-86_27UOz",
+        "drop-86": "chatroomeffects_drop-86_3NAZo",
+        "confetti-87": "chatroomeffects_confetti-87_2ZtxX",
+        "drop-87": "chatroomeffects_drop-87_OK4Y1",
+        "confetti-88": "chatroomeffects_confetti-88_2ug4D",
+        "drop-88": "chatroomeffects_drop-88_1IPoI",
+        "confetti-89": "chatroomeffects_confetti-89_2r03P",
+        "drop-89": "chatroomeffects_drop-89_2bL-f",
+        "confetti-90": "chatroomeffects_confetti-90_2gVGP",
+        "drop-90": "chatroomeffects_drop-90_2WAHg",
+        "confetti-91": "chatroomeffects_confetti-91_26DKs",
+        "drop-91": "chatroomeffects_drop-91_3tB5z",
+        "confetti-92": "chatroomeffects_confetti-92_tp_nd",
+        "drop-92": "chatroomeffects_drop-92_1hAJk",
+        "confetti-93": "chatroomeffects_confetti-93_1ose0",
+        "drop-93": "chatroomeffects_drop-93_DXim1",
+        "confetti-94": "chatroomeffects_confetti-94_3QxRe",
+        "drop-94": "chatroomeffects_drop-94_11cw2",
+        "confetti-95": "chatroomeffects_confetti-95_5Rwri",
+        "drop-95": "chatroomeffects_drop-95_3ewWm",
+        "confetti-96": "chatroomeffects_confetti-96_1XugV",
+        "drop-96": "chatroomeffects_drop-96_1WGWQ",
+        "confetti-97": "chatroomeffects_confetti-97_3qBv-",
+        "drop-97": "chatroomeffects_drop-97_sft1x",
+        "confetti-98": "chatroomeffects_confetti-98_16EOq",
+        "drop-98": "chatroomeffects_drop-98_1ctqh",
+        "confetti-99": "chatroomeffects_confetti-99_1ix_V",
+        "drop-99": "chatroomeffects_drop-99_SfB4s",
+        cracker: "chatroomeffects_cracker_kpkoz",
+        "cracker-left": "chatroomeffects_cracker-left_1ZDI2",
+        "cracker-right": "chatroomeffects_cracker-right_2wRGI",
+        goldfetti: "chatroomeffects_goldfetti_2BT6x",
+        "goldfetti-fragment": "chatroomeffects_goldfetti-fragment_1S_uM",
+        "goldfetti-color-1": "chatroomeffects_goldfetti-color-1_Exr1M",
+        "goldfetti-color-2": "chatroomeffects_goldfetti-color-2_1wn6f",
+        "goldfetti-color-3": "chatroomeffects_goldfetti-color-3_13trD",
+        "goldfetti-emoji-1": "chatroomeffects_goldfetti-emoji-1_1b2Sg",
+        "goldfetti-emoji-2": "chatroomeffects_goldfetti-emoji-2_2UByW",
+        "goldfetti-emoji-3": "chatroomeffects_goldfetti-emoji-3_1ykxX",
+        "goldfetti-emoji-4": "chatroomeffects_goldfetti-emoji-4_Q_odu",
+        balloons: "chatroomeffects_balloons_3h5D9",
+        lantern_glow: "chatroomeffects_lantern_glow_24Vz6",
+        snowball_fragment: "chatroomeffects_snowball_fragment_22pb_",
+        "snowball-container": "chatroomeffects_snowball-container_2wasl",
+        snowball: "chatroomeffects_snowball_1_4_3",
+        SnowballImage: "chatroomeffects_SnowballImage_3qp1B",
+        SnowballImageCW: "chatroomeffects_SnowballImageCW_uRhee",
+        "snowball-rotate-cw": "chatroomeffects_snowball-rotate-cw_RzUI3",
+        SnowballImageCCW: "chatroomeffects_SnowballImageCCW_2r4QQ",
+        "snowball-rotate-ccw": "chatroomeffects_snowball-rotate-ccw_tsqco",
+        "snowball-path": "chatroomeffects_snowball-path_EQID5",
+        "snowball-residue": "chatroomeffects_snowball-residue_NS5Lc",
+        "snowball-chunk": "chatroomeffects_snowball-chunk_2jhfZ",
+        "snowball-chunk-1": "chatroomeffects_snowball-chunk-1_1l036",
+        "snowball-chunk-2": "chatroomeffects_snowball-chunk-2_3LN56",
+        "snowball-chunk-3": "chatroomeffects_snowball-chunk-3_17SFK",
+        "snowball-chunk-4": "chatroomeffects_snowball-chunk-4_1k9T7",
+        "slide-out-tl": "chatroomeffects_slide-out-tl_3rt8O",
+        "slide-out-tr": "chatroomeffects_slide-out-tr_1h5rw",
+        "slide-out-bottom": "chatroomeffects_slide-out-bottom_2FcnC",
+        pyro: "chatroomeffects_pyro_27tLV",
+        before: "chatroomeffects_before_3VKLV",
+        after: "chatroomeffects_after_ni2zH",
+        bang: "chatroomeffects_bang_11uU_",
+        gravity: "chatroomeffects_gravity_2r9Nj",
+        position: "chatroomeffects_position_1oxcH",
+        pyroBodyShake: "chatroomeffects_pyroBodyShake_gzA5a",
+        "pyro-body-shake": "chatroomeffects_pyro-body-shake_2pJtk",
+        pyroBodyShake2: "chatroomeffects_pyroBodyShake2_3xiDY",
+        "pyro-body-shake2": "chatroomeffects_pyro-body-shake2_2mhGb",
+        FireworkPath: "chatroomeffects_FireworkPath_2nF6a",
+        "firework-path-animation":
+          "chatroomeffects_firework-path-animation_orJWb",
+        FireworkContainer: "chatroomeffects_FireworkContainer_3u9FD",
+        FireworkPNG: "chatroomeffects_FireworkPNG_X0jkP",
+        balloon_small_1: "chatroomeffects_balloon_small_1_1A-H3",
+        balloon_move_right: "chatroomeffects_balloon_move_right_3h2xD",
+        balloon_move_left: "chatroomeffects_balloon_move_left_T3p_k",
+        balloon_big_1: "chatroomeffects_balloon_big_1_cAorK",
+        balloon_big_2: "chatroomeffects_balloon_big_2_2tanI",
+        balloon_small_2: "chatroomeffects_balloon_small_2_WvqYj",
+        balloon_small_3: "chatroomeffects_balloon_small_3_1dwyF",
+        "snowball-path-1": "chatroomeffects_snowball-path-1_1WJur",
+        "snowball-path-2": "chatroomeffects_snowball-path-2_3Cy2B",
+        "snowball-path-3": "chatroomeffects_snowball-path-3_3cQVn",
+        "snowball-path-4": "chatroomeffects_snowball-path-4_1UJqQ",
+        "snowball-path-5": "chatroomeffects_snowball-path-5_1fMTs",
+        "snowball-path-6": "chatroomeffects_snowball-path-6_2EVk-",
+        fireworkBigX: "chatroomeffects_fireworkBigX_9TN1P",
+        fireworkBigY: "chatroomeffects_fireworkBigY_z5EHL",
+        fireworkSmallX: "chatroomeffects_fireworkSmallX_1juxQ",
+        fireworkSmallY: "chatroomeffects_fireworkSmallY_yB0na",
+        fireworkLongX: "chatroomeffects_fireworkLongX_2JkXj",
+        fireworkLongY: "chatroomeffects_fireworkLongY_IJAtr",
+      };
+    },
     CeOW: function (e, t, a) {
       e.exports =
         a.p +
@@ -9340,30 +9761,7 @@
         a.p +
         "images/applications/store/lava_lamps_bg.png?v=valveisgoodatcaching";
     },
-    FDY8: function (e, t) {
-      e.exports =
-        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
-    },
-    FYLW: function (e, t, a) {
-      e.exports =
-        a.p +
-        "images/applications/store/portal_effect_anim.png?v=valveisgoodatcaching";
-    },
-    FfFA: function (e, t, a) {
-      e.exports =
-        a.p +
-        "images/applications/store/extra_helpful_anim000.png?v=valveisgoodatcaching";
-    },
-    "Fw/J": function (e, t, a) {
-      e.exports =
-        a.p +
-        "images/applications/store/icon_showcase_12.svg?v=valveisgoodatcaching";
-    },
-    GFoz: function (e, t) {
-      e.exports =
-        "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAyIiBoZWlnaHQ9Ijc2IiB2aWV3Qm94PSIwIDAgMjAyIDc2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01IDBDMi4yMzgyOCAwIDAgMi4yMzg1MyAwIDVWNzFDMCA3My43NjE1IDIuMjM4MjggNzYgNSA3NkgxOTdDMTk5Ljc2MiA3NiAyMDIgNzMuNzYxNSAyMDIgNzFWNUMyMDIgMi4yMzg1MyAxOTkuNzYyIDAgMTk3IDBINVpNMjcgMTguMTQxNEgxOFYxM0g0MC40MzQ2VjE4LjE0MTRIMzJWNTUuODU4Nkg0MC40MzU1VjYxSDMySDI3SDE4VjU1Ljg1ODZIMjdWMTguMTQxNFoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiIGZpbGwtb3BhY2l0eT0iMC44NSIvPg0KPGRlZnM+DQo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIxMDEiIHkxPSIwIiB4Mj0iMTAxIiB5Mj0iNzYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8L2RlZnM+DQo8L3N2Zz4NCg==";
-    },
-    Gpul: function (e, t, a) {
+    FA79: function (e, t, a) {
       "use strict";
       a.d(t, "c", function () {
         return C;
@@ -9377,17 +9775,17 @@
       var n = a("mrSG"),
         r = a("q1tI"),
         i = a("TyAF"),
-        o = a("jUCX"),
-        s = a("exH9"),
-        l = (a("oFam"), a("lkRc")),
-        c = a("UxvL"),
-        m = a("XxJu"),
+        o = a("kMdN"),
+        s = a("GbHM"),
+        l = (a("ztGc"), a("/Q1a")),
+        c = a("Gcny"),
+        m = a("icLO"),
         d = a.n(m),
-        p = a("FDY8"),
+        p = a("y66k"),
         u = a.n(p),
-        _ = a("dFOy"),
+        _ = a("A/m1"),
         f = a.n(_),
-        g = a("WeG9"),
+        g = a("2cJF"),
         h = a.n(g);
       class b extends r.Component {
         render() {
@@ -9584,6 +9982,25 @@
       };
       y = Object(n.b)([i.a], y);
     },
+    FYLW: function (e, t, a) {
+      e.exports =
+        a.p +
+        "images/applications/store/portal_effect_anim.png?v=valveisgoodatcaching";
+    },
+    FfFA: function (e, t, a) {
+      e.exports =
+        a.p +
+        "images/applications/store/extra_helpful_anim000.png?v=valveisgoodatcaching";
+    },
+    "Fw/J": function (e, t, a) {
+      e.exports =
+        a.p +
+        "images/applications/store/icon_showcase_12.svg?v=valveisgoodatcaching";
+    },
+    GFoz: function (e, t) {
+      e.exports =
+        "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAyIiBoZWlnaHQ9Ijc2IiB2aWV3Qm94PSIwIDAgMjAyIDc2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01IDBDMi4yMzgyOCAwIDAgMi4yMzg1MyAwIDVWNzFDMCA3My43NjE1IDIuMjM4MjggNzYgNSA3NkgxOTdDMTk5Ljc2MiA3NiAyMDIgNzMuNzYxNSAyMDIgNzFWNUMyMDIgMi4yMzg1MyAxOTkuNzYyIDAgMTk3IDBINVpNMjcgMTguMTQxNEgxOFYxM0g0MC40MzQ2VjE4LjE0MTRIMzJWNTUuODU4Nkg0MC40MzU1VjYxSDMySDI3SDE4VjU1Ljg1ODZIMjdWMTguMTQxNFoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiIGZpbGwtb3BhY2l0eT0iMC44NSIvPg0KPGRlZnM+DQo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIxMDEiIHkxPSIwIiB4Mj0iMTAxIiB5Mj0iNzYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8L2RlZnM+DQo8L3N2Zz4NCg==";
+    },
     HJR3: function (e, t, a) {
       e.exports =
         a.p + "images/applications/store/happy.png?v=valveisgoodatcaching";
@@ -9652,6 +10069,22 @@
         (e.exports = r),
         (r.id = "JeMz");
     },
+    Jxx8: function (e, t, a) {
+      e.exports = {
+        SnoozeContainer: "friendsnooze_SnoozeContainer_3EzTy",
+        SnoozeZ: "friendsnooze_SnoozeZ_1DArl",
+        none: "friendsnooze_none_2k961",
+        Medium: "friendsnooze_Medium_3Gk3l",
+        Large: "friendsnooze_Large_dTohL",
+        Dim: "friendsnooze_Dim_2TzRZ",
+        Z1: "friendsnooze_Z1_1OyrT",
+        Z2: "friendsnooze_Z2_1mx4k",
+        Z3: "friendsnooze_Z3_1ltvK",
+        hoverParent: "friendsnooze_hoverParent_3ID9R",
+        animating: "friendsnooze_animating_3CzX5",
+        Snoring: "friendsnooze_Snoring_YuCwj",
+      };
+    },
     Lvue: function (e, t, a) {
       e.exports =
         a.p +
@@ -9692,332 +10125,6 @@
       e.exports =
         a.p +
         "images/applications/store/icon_showcase_9.svg?v=valveisgoodatcaching";
-    },
-    POwH: function (e, t, a) {
-      e.exports = {
-        confettiDurationMs: "7000s/s",
-        goldfettiDurationMs: "7000s/s",
-        goldfettiColorsNum: "3",
-        goldfettiEmojiNum: "4",
-        crackerDurationMs: "300s/s",
-        balloonsDurationMs: "4000s/s",
-        balloonsDurationS: "4s/s",
-        balloonsDurationJitterS: "1s/s",
-        balloonsDurationMaxMs: "5000s/s",
-        snowballDurationMs: "3010s/s",
-        snowballSpeed: "1s",
-        "animation-container": "chatroomeffects_animation-container_3ZR8Q",
-        Snowflake: "chatroomeffects_Snowflake_cZ5Au",
-        "Snowflake-0": "chatroomeffects_Snowflake-0_2-hBh",
-        "snowflake-0": "chatroomeffects_snowflake-0_U-YAV",
-        "Snowflake-1": "chatroomeffects_Snowflake-1_2b67l",
-        "snowflake-1": "chatroomeffects_snowflake-1_2Rb7w",
-        "Snowflake-2": "chatroomeffects_Snowflake-2_2_NWs",
-        "snowflake-2": "chatroomeffects_snowflake-2_1Y4tS",
-        "Snowflake-3": "chatroomeffects_Snowflake-3_cBxtQ",
-        "snowflake-3": "chatroomeffects_snowflake-3_3t5Lt",
-        "Snowflake-4": "chatroomeffects_Snowflake-4_1JQNl",
-        "snowflake-4": "chatroomeffects_snowflake-4_1vyLw",
-        "Snowflake-5": "chatroomeffects_Snowflake-5_cUP1f",
-        "snowflake-5": "chatroomeffects_snowflake-5_3louc",
-        "Snowflake-6": "chatroomeffects_Snowflake-6_2F8cs",
-        "snowflake-6": "chatroomeffects_snowflake-6_3Hfej",
-        "Snowflake-7": "chatroomeffects_Snowflake-7_zJ9BE",
-        "snowflake-7": "chatroomeffects_snowflake-7_nX1rZ",
-        "Snowflake-8": "chatroomeffects_Snowflake-8_3BAdG",
-        "snowflake-8": "chatroomeffects_snowflake-8_WFJba",
-        "Snowflake-9": "chatroomeffects_Snowflake-9_2DNE8",
-        "snowflake-9": "chatroomeffects_snowflake-9_1m6q0",
-        "Snowflake-10": "chatroomeffects_Snowflake-10_19m8q",
-        "snowflake-10": "chatroomeffects_snowflake-10_3HhrW",
-        "Snowflake-11": "chatroomeffects_Snowflake-11_ijWSF",
-        "snowflake-11": "chatroomeffects_snowflake-11_vukho",
-        "Snowflake-12": "chatroomeffects_Snowflake-12_Ripsa",
-        "snowflake-12": "chatroomeffects_snowflake-12_2KXNx",
-        "Snowflake-13": "chatroomeffects_Snowflake-13__5IUE",
-        "snowflake-13": "chatroomeffects_snowflake-13_35I49",
-        "Snowflake-14": "chatroomeffects_Snowflake-14_pmIdk",
-        "snowflake-14": "chatroomeffects_snowflake-14_1MH-J",
-        "Snowflake-15": "chatroomeffects_Snowflake-15_2nQdH",
-        "snowflake-15": "chatroomeffects_snowflake-15_ek7ku",
-        "Snowflake-16": "chatroomeffects_Snowflake-16_lJyG7",
-        "snowflake-16": "chatroomeffects_snowflake-16_20hUR",
-        "Snowflake-17": "chatroomeffects_Snowflake-17_1L0AZ",
-        "snowflake-17": "chatroomeffects_snowflake-17_3CfBV",
-        "Snowflake-18": "chatroomeffects_Snowflake-18_1ozac",
-        "snowflake-18": "chatroomeffects_snowflake-18_HP-ye",
-        "Snowflake-19": "chatroomeffects_Snowflake-19_FOXzc",
-        "snowflake-19": "chatroomeffects_snowflake-19_1d9D9",
-        "Snowflake-20": "chatroomeffects_Snowflake-20_Qt7pR",
-        "snowflake-20": "chatroomeffects_snowflake-20_2N-xe",
-        confetti: "chatroomeffects_confetti_VelNh",
-        "confetti-0": "chatroomeffects_confetti-0_tlO-i",
-        "drop-0": "chatroomeffects_drop-0__37zJ",
-        "confetti-1": "chatroomeffects_confetti-1_3OuSs",
-        "drop-1": "chatroomeffects_drop-1_x-HP7",
-        "confetti-2": "chatroomeffects_confetti-2_1mdZ0",
-        "drop-2": "chatroomeffects_drop-2_3XfWb",
-        "confetti-3": "chatroomeffects_confetti-3_36OCs",
-        "drop-3": "chatroomeffects_drop-3_OTZKZ",
-        "confetti-4": "chatroomeffects_confetti-4_3NbOc",
-        "drop-4": "chatroomeffects_drop-4_1CAil",
-        "confetti-5": "chatroomeffects_confetti-5_VnTYG",
-        "drop-5": "chatroomeffects_drop-5_1pPPC",
-        "confetti-6": "chatroomeffects_confetti-6_3KEfm",
-        "drop-6": "chatroomeffects_drop-6_4Wj8s",
-        "confetti-7": "chatroomeffects_confetti-7_1C-Ak",
-        "drop-7": "chatroomeffects_drop-7_oHsjU",
-        "confetti-8": "chatroomeffects_confetti-8_4oJYN",
-        "drop-8": "chatroomeffects_drop-8_2y189",
-        "confetti-9": "chatroomeffects_confetti-9_1bEjR",
-        "drop-9": "chatroomeffects_drop-9_5c9w0",
-        "confetti-10": "chatroomeffects_confetti-10_1oRBM",
-        "drop-10": "chatroomeffects_drop-10_1L13_",
-        "confetti-11": "chatroomeffects_confetti-11_3W9ZL",
-        "drop-11": "chatroomeffects_drop-11_vYvGB",
-        "confetti-12": "chatroomeffects_confetti-12_2TwZ0",
-        "drop-12": "chatroomeffects_drop-12_3b2Dc",
-        "confetti-13": "chatroomeffects_confetti-13_1m8Vr",
-        "drop-13": "chatroomeffects_drop-13_2n4ZP",
-        "confetti-14": "chatroomeffects_confetti-14_1YV6p",
-        "drop-14": "chatroomeffects_drop-14_xQzPb",
-        "confetti-15": "chatroomeffects_confetti-15_2D2LH",
-        "drop-15": "chatroomeffects_drop-15_oKVqM",
-        "confetti-16": "chatroomeffects_confetti-16_pvt2J",
-        "drop-16": "chatroomeffects_drop-16_T5UBd",
-        "confetti-17": "chatroomeffects_confetti-17_2NCF0",
-        "drop-17": "chatroomeffects_drop-17_1d8Dj",
-        "confetti-18": "chatroomeffects_confetti-18_o_Hf7",
-        "drop-18": "chatroomeffects_drop-18_1zoqm",
-        "confetti-19": "chatroomeffects_confetti-19_28L_3",
-        "drop-19": "chatroomeffects_drop-19_1zkpz",
-        "confetti-20": "chatroomeffects_confetti-20_P-SKX",
-        "drop-20": "chatroomeffects_drop-20_2HmVc",
-        "confetti-21": "chatroomeffects_confetti-21_27GkO",
-        "drop-21": "chatroomeffects_drop-21_1T4Mt",
-        "confetti-22": "chatroomeffects_confetti-22_1sCDh",
-        "drop-22": "chatroomeffects_drop-22_2svz8",
-        "confetti-23": "chatroomeffects_confetti-23_9SZ_A",
-        "drop-23": "chatroomeffects_drop-23_3vAxI",
-        "confetti-24": "chatroomeffects_confetti-24_1Am3e",
-        "drop-24": "chatroomeffects_drop-24_RhAjb",
-        "confetti-25": "chatroomeffects_confetti-25_1Ja7L",
-        "drop-25": "chatroomeffects_drop-25_201NA",
-        "confetti-26": "chatroomeffects_confetti-26_2jMUO",
-        "drop-26": "chatroomeffects_drop-26_29n7q",
-        "confetti-27": "chatroomeffects_confetti-27_2yQQd",
-        "drop-27": "chatroomeffects_drop-27_2m3A7",
-        "confetti-28": "chatroomeffects_confetti-28_1Qlxx",
-        "drop-28": "chatroomeffects_drop-28_18frj",
-        "confetti-29": "chatroomeffects_confetti-29_1b2l6",
-        "drop-29": "chatroomeffects_drop-29_2Q2T3",
-        "confetti-30": "chatroomeffects_confetti-30_1JH00",
-        "drop-30": "chatroomeffects_drop-30_35aPE",
-        "confetti-31": "chatroomeffects_confetti-31_Osdxn",
-        "drop-31": "chatroomeffects_drop-31_3xx2U",
-        "confetti-32": "chatroomeffects_confetti-32_f1SYA",
-        "drop-32": "chatroomeffects_drop-32_215c3",
-        "confetti-33": "chatroomeffects_confetti-33_g65ei",
-        "drop-33": "chatroomeffects_drop-33_2oegr",
-        "confetti-34": "chatroomeffects_confetti-34_2yCKI",
-        "drop-34": "chatroomeffects_drop-34_3K9VA",
-        "confetti-35": "chatroomeffects_confetti-35_3JsiR",
-        "drop-35": "chatroomeffects_drop-35_5jMlo",
-        "confetti-36": "chatroomeffects_confetti-36_R14L0",
-        "drop-36": "chatroomeffects_drop-36_13yR4",
-        "confetti-37": "chatroomeffects_confetti-37_24ZmD",
-        "drop-37": "chatroomeffects_drop-37_2uYeL",
-        "confetti-38": "chatroomeffects_confetti-38_25jbU",
-        "drop-38": "chatroomeffects_drop-38_3BJYZ",
-        "confetti-39": "chatroomeffects_confetti-39_8zwxi",
-        "drop-39": "chatroomeffects_drop-39_2zKzQ",
-        "confetti-40": "chatroomeffects_confetti-40_Du-Wg",
-        "drop-40": "chatroomeffects_drop-40_3DiQ2",
-        "confetti-41": "chatroomeffects_confetti-41_3LjK4",
-        "drop-41": "chatroomeffects_drop-41_10ZGR",
-        "confetti-42": "chatroomeffects_confetti-42_3u0x8",
-        "drop-42": "chatroomeffects_drop-42_2GaWP",
-        "confetti-43": "chatroomeffects_confetti-43_2Iip-",
-        "drop-43": "chatroomeffects_drop-43_3zDFZ",
-        "confetti-44": "chatroomeffects_confetti-44_2qI_Q",
-        "drop-44": "chatroomeffects_drop-44_3G_AJ",
-        "confetti-45": "chatroomeffects_confetti-45_3FUIw",
-        "drop-45": "chatroomeffects_drop-45_1BAsF",
-        "confetti-46": "chatroomeffects_confetti-46_2wAK3",
-        "drop-46": "chatroomeffects_drop-46_1LOgZ",
-        "confetti-47": "chatroomeffects_confetti-47_2dO3B",
-        "drop-47": "chatroomeffects_drop-47_l_1GZ",
-        "confetti-48": "chatroomeffects_confetti-48_2ud75",
-        "drop-48": "chatroomeffects_drop-48_cnRU6",
-        "confetti-49": "chatroomeffects_confetti-49_EX-pu",
-        "drop-49": "chatroomeffects_drop-49_3ElNG",
-        "confetti-50": "chatroomeffects_confetti-50_8qyUx",
-        "drop-50": "chatroomeffects_drop-50_IlkNs",
-        "confetti-51": "chatroomeffects_confetti-51_AtKXb",
-        "drop-51": "chatroomeffects_drop-51_2msFB",
-        "confetti-52": "chatroomeffects_confetti-52_1my5Z",
-        "drop-52": "chatroomeffects_drop-52_1QnRe",
-        "confetti-53": "chatroomeffects_confetti-53_2Cb1i",
-        "drop-53": "chatroomeffects_drop-53_1CQh7",
-        "confetti-54": "chatroomeffects_confetti-54_2VhA6",
-        "drop-54": "chatroomeffects_drop-54_3hZKt",
-        "confetti-55": "chatroomeffects_confetti-55_yL87g",
-        "drop-55": "chatroomeffects_drop-55_3dM49",
-        "confetti-56": "chatroomeffects_confetti-56_1xqgg",
-        "drop-56": "chatroomeffects_drop-56_3SnEp",
-        "confetti-57": "chatroomeffects_confetti-57_f9kuG",
-        "drop-57": "chatroomeffects_drop-57_3DCDa",
-        "confetti-58": "chatroomeffects_confetti-58_1O4Ku",
-        "drop-58": "chatroomeffects_drop-58_3d1_1",
-        "confetti-59": "chatroomeffects_confetti-59_XOFkR",
-        "drop-59": "chatroomeffects_drop-59_1ZKa_",
-        "confetti-60": "chatroomeffects_confetti-60_2iInd",
-        "drop-60": "chatroomeffects_drop-60_3stXq",
-        "confetti-61": "chatroomeffects_confetti-61_4hvgI",
-        "drop-61": "chatroomeffects_drop-61_ENSW2",
-        "confetti-62": "chatroomeffects_confetti-62_1vcmC",
-        "drop-62": "chatroomeffects_drop-62_3gyQe",
-        "confetti-63": "chatroomeffects_confetti-63_3dgPj",
-        "drop-63": "chatroomeffects_drop-63_2047M",
-        "confetti-64": "chatroomeffects_confetti-64_Cewk5",
-        "drop-64": "chatroomeffects_drop-64_2YCRK",
-        "confetti-65": "chatroomeffects_confetti-65_ciQUm",
-        "drop-65": "chatroomeffects_drop-65_3kUQk",
-        "confetti-66": "chatroomeffects_confetti-66_3a3mu",
-        "drop-66": "chatroomeffects_drop-66_3DoHw",
-        "confetti-67": "chatroomeffects_confetti-67_39YTy",
-        "drop-67": "chatroomeffects_drop-67_Qb0h2",
-        "confetti-68": "chatroomeffects_confetti-68_2zcwH",
-        "drop-68": "chatroomeffects_drop-68_zRaTb",
-        "confetti-69": "chatroomeffects_confetti-69_1O9Qn",
-        "drop-69": "chatroomeffects_drop-69_oogaf",
-        "confetti-70": "chatroomeffects_confetti-70_3wL25",
-        "drop-70": "chatroomeffects_drop-70_ouiMF",
-        "confetti-71": "chatroomeffects_confetti-71_2FN6I",
-        "drop-71": "chatroomeffects_drop-71_y2t-j",
-        "confetti-72": "chatroomeffects_confetti-72_2tgnG",
-        "drop-72": "chatroomeffects_drop-72_3hLQt",
-        "confetti-73": "chatroomeffects_confetti-73_-0y9h",
-        "drop-73": "chatroomeffects_drop-73_-Wx7W",
-        "confetti-74": "chatroomeffects_confetti-74_1_vWA",
-        "drop-74": "chatroomeffects_drop-74_2L0XL",
-        "confetti-75": "chatroomeffects_confetti-75_qNiwF",
-        "drop-75": "chatroomeffects_drop-75_2iJw_",
-        "confetti-76": "chatroomeffects_confetti-76_2Isn6",
-        "drop-76": "chatroomeffects_drop-76_3MdvI",
-        "confetti-77": "chatroomeffects_confetti-77_2bgtx",
-        "drop-77": "chatroomeffects_drop-77_2ItPx",
-        "confetti-78": "chatroomeffects_confetti-78_veCdx",
-        "drop-78": "chatroomeffects_drop-78_3D9KT",
-        "confetti-79": "chatroomeffects_confetti-79_5cczs",
-        "drop-79": "chatroomeffects_drop-79_1x9H7",
-        "confetti-80": "chatroomeffects_confetti-80_hz59y",
-        "drop-80": "chatroomeffects_drop-80_2ZjKF",
-        "confetti-81": "chatroomeffects_confetti-81_1rhSJ",
-        "drop-81": "chatroomeffects_drop-81_tGBBf",
-        "confetti-82": "chatroomeffects_confetti-82_1jWl7",
-        "drop-82": "chatroomeffects_drop-82_26Ftm",
-        "confetti-83": "chatroomeffects_confetti-83_1Veaf",
-        "drop-83": "chatroomeffects_drop-83_2VByP",
-        "confetti-84": "chatroomeffects_confetti-84_3_bdr",
-        "drop-84": "chatroomeffects_drop-84_m6um-",
-        "confetti-85": "chatroomeffects_confetti-85_9Zttw",
-        "drop-85": "chatroomeffects_drop-85_2xtS5",
-        "confetti-86": "chatroomeffects_confetti-86_2EJMi",
-        "drop-86": "chatroomeffects_drop-86_2dudW",
-        "confetti-87": "chatroomeffects_confetti-87_uys-9",
-        "drop-87": "chatroomeffects_drop-87_1PZvt",
-        "confetti-88": "chatroomeffects_confetti-88_24exN",
-        "drop-88": "chatroomeffects_drop-88_5ZbRz",
-        "confetti-89": "chatroomeffects_confetti-89_2yKbS",
-        "drop-89": "chatroomeffects_drop-89_1s66w",
-        "confetti-90": "chatroomeffects_confetti-90_2tEzr",
-        "drop-90": "chatroomeffects_drop-90_1dLha",
-        "confetti-91": "chatroomeffects_confetti-91_3T4UL",
-        "drop-91": "chatroomeffects_drop-91_P_MRR",
-        "confetti-92": "chatroomeffects_confetti-92_7p5vh",
-        "drop-92": "chatroomeffects_drop-92_1Mwkv",
-        "confetti-93": "chatroomeffects_confetti-93_2BaTW",
-        "drop-93": "chatroomeffects_drop-93_3NCsF",
-        "confetti-94": "chatroomeffects_confetti-94_3DVf7",
-        "drop-94": "chatroomeffects_drop-94_fZgnW",
-        "confetti-95": "chatroomeffects_confetti-95_23jtb",
-        "drop-95": "chatroomeffects_drop-95_1tw1t",
-        "confetti-96": "chatroomeffects_confetti-96_2CxeZ",
-        "drop-96": "chatroomeffects_drop-96_37GFJ",
-        "confetti-97": "chatroomeffects_confetti-97_qoLlt",
-        "drop-97": "chatroomeffects_drop-97_v1bhd",
-        "confetti-98": "chatroomeffects_confetti-98_3Po3_",
-        "drop-98": "chatroomeffects_drop-98_1TcCu",
-        "confetti-99": "chatroomeffects_confetti-99_2-vdA",
-        "drop-99": "chatroomeffects_drop-99_3lQGo",
-        cracker: "chatroomeffects_cracker_k_Aq7",
-        "cracker-left": "chatroomeffects_cracker-left_IBSjh",
-        "cracker-right": "chatroomeffects_cracker-right_3M0en",
-        goldfetti: "chatroomeffects_goldfetti_2oOnq",
-        "goldfetti-fragment": "chatroomeffects_goldfetti-fragment_oRJxW",
-        "goldfetti-color-1": "chatroomeffects_goldfetti-color-1_2zN8S",
-        "goldfetti-color-2": "chatroomeffects_goldfetti-color-2_1fchb",
-        "goldfetti-color-3": "chatroomeffects_goldfetti-color-3_2pBYi",
-        "goldfetti-emoji-1": "chatroomeffects_goldfetti-emoji-1_33y_B",
-        "goldfetti-emoji-2": "chatroomeffects_goldfetti-emoji-2_oOIEt",
-        "goldfetti-emoji-3": "chatroomeffects_goldfetti-emoji-3_1oNfH",
-        "goldfetti-emoji-4": "chatroomeffects_goldfetti-emoji-4_YFAWN",
-        balloons: "chatroomeffects_balloons_2_1pf",
-        lantern_glow: "chatroomeffects_lantern_glow_v2QAm",
-        snowball_fragment: "chatroomeffects_snowball_fragment_VMzCI",
-        "snowball-container": "chatroomeffects_snowball-container_UvZyS",
-        snowball: "chatroomeffects_snowball_2buSf",
-        SnowballImage: "chatroomeffects_SnowballImage_2_42e",
-        SnowballImageCW: "chatroomeffects_SnowballImageCW_1Tf0O",
-        "snowball-rotate-cw": "chatroomeffects_snowball-rotate-cw_1x1_6",
-        SnowballImageCCW: "chatroomeffects_SnowballImageCCW_3NMkR",
-        "snowball-rotate-ccw": "chatroomeffects_snowball-rotate-ccw_2U4NC",
-        "snowball-path": "chatroomeffects_snowball-path_3gxEb",
-        "snowball-residue": "chatroomeffects_snowball-residue_1aw_2",
-        "snowball-chunk": "chatroomeffects_snowball-chunk_379oU",
-        "snowball-chunk-1": "chatroomeffects_snowball-chunk-1_7DFP9",
-        "snowball-chunk-2": "chatroomeffects_snowball-chunk-2_2TZ3i",
-        "snowball-chunk-3": "chatroomeffects_snowball-chunk-3_2dgXy",
-        "snowball-chunk-4": "chatroomeffects_snowball-chunk-4_9zq4T",
-        "slide-out-tl": "chatroomeffects_slide-out-tl_2vxAr",
-        "slide-out-tr": "chatroomeffects_slide-out-tr_1UxlH",
-        "slide-out-bottom": "chatroomeffects_slide-out-bottom_2bNZV",
-        pyro: "chatroomeffects_pyro_1uf8l",
-        before: "chatroomeffects_before_35CE-",
-        after: "chatroomeffects_after_1tbcr",
-        bang: "chatroomeffects_bang_3GL2k",
-        gravity: "chatroomeffects_gravity_S4aDc",
-        position: "chatroomeffects_position_15NGb",
-        pyroBodyShake: "chatroomeffects_pyroBodyShake_3E298",
-        "pyro-body-shake": "chatroomeffects_pyro-body-shake_38sc5",
-        pyroBodyShake2: "chatroomeffects_pyroBodyShake2_1Ti3z",
-        "pyro-body-shake2": "chatroomeffects_pyro-body-shake2_3qwwM",
-        FireworkPath: "chatroomeffects_FireworkPath_1Bk7_",
-        "firework-path-animation":
-          "chatroomeffects_firework-path-animation_Mm8cl",
-        FireworkContainer: "chatroomeffects_FireworkContainer_1aN3b",
-        FireworkPNG: "chatroomeffects_FireworkPNG_EHDSM",
-        balloon_small_1: "chatroomeffects_balloon_small_1_h2Q7G",
-        balloon_move_right: "chatroomeffects_balloon_move_right_8PLpZ",
-        balloon_move_left: "chatroomeffects_balloon_move_left_tgIbt",
-        balloon_big_1: "chatroomeffects_balloon_big_1_1TGq_",
-        balloon_big_2: "chatroomeffects_balloon_big_2_1dSX8",
-        balloon_small_2: "chatroomeffects_balloon_small_2_2SLtS",
-        balloon_small_3: "chatroomeffects_balloon_small_3_3-4lC",
-        "snowball-path-1": "chatroomeffects_snowball-path-1_2XM4v",
-        "snowball-path-2": "chatroomeffects_snowball-path-2_1rYsb",
-        "snowball-path-3": "chatroomeffects_snowball-path-3_3EhG3",
-        "snowball-path-4": "chatroomeffects_snowball-path-4_oIEK7",
-        "snowball-path-5": "chatroomeffects_snowball-path-5_1nGpu",
-        "snowball-path-6": "chatroomeffects_snowball-path-6_2bquC",
-        fireworkBigX: "chatroomeffects_fireworkBigX_3EASz",
-        fireworkBigY: "chatroomeffects_fireworkBigY_3HtJy",
-        fireworkSmallX: "chatroomeffects_fireworkSmallX_xZrme",
-        fireworkSmallY: "chatroomeffects_fireworkSmallY_Vy4av",
-        fireworkLongX: "chatroomeffects_fireworkLongX_1h91p",
-        fireworkLongY: "chatroomeffects_fireworkLongY_3f3gs",
-      };
     },
     Qpv1: function (e, t, a) {
       e.exports = {
@@ -10108,8 +10215,8 @@
         r = a("q1tI"),
         i = a.n(r),
         o = a("qY0t"),
-        s = a("exH9"),
-        l = a("qDk6");
+        s = a("GbHM"),
+        l = a("Lsvi");
       const c = Object(r.forwardRef)(function (e, t) {
           const {
               component: a,
@@ -10413,10 +10520,10 @@
       var n = a("mrSG"),
         r = a("q1tI"),
         i = a.n(r),
-        o = a("exH9"),
+        o = a("GbHM"),
         s = a("9Dmu"),
-        l = a("6Y59"),
-        c = a("TLQK");
+        l = a("e356"),
+        c = a("GXif");
       const m = (e) => {
         const { amount: t, className: a, size: r } = e,
           m = Object(n.c)(e, ["amount", "className", "size"]),
@@ -10573,15 +10680,6 @@
         a.p +
         "images/applications/store/icon_showcase_13.svg?v=valveisgoodatcaching";
     },
-    WeG9: function (e, t, a) {
-      e.exports = {
-        avatarHolder: "steamavatar_avatarHolder_nibod",
-        avatarStatus: "steamavatar_avatarStatus_3xUpb",
-        avatar: "steamavatar_avatar_3h-QR",
-        avatarFrame: "steamavatar_avatarFrame_X_mJE",
-        avatarFrameImg: "steamavatar_avatarFrameImg_3fM0F",
-      };
-    },
     Wilf: function (e, t, a) {
       e.exports = {
         Badge: "seasonalbadge_Badge_1-t5y",
@@ -10599,33 +10697,6 @@
       e.exports =
         a.p +
         "images/applications/store/header_image.png?v=valveisgoodatcaching";
-    },
-    WonJ: function (e, t, a) {
-      e.exports = {
-        SnoozeContainer: "friendsnooze_SnoozeContainer_1Dsum",
-        SnoozeZ: "friendsnooze_SnoozeZ_2n0Ei",
-        none: "friendsnooze_none_T3Fb5",
-        Medium: "friendsnooze_Medium_1iYPl",
-        Large: "friendsnooze_Large_3BESV",
-        Dim: "friendsnooze_Dim_rpZ9b",
-        Z1: "friendsnooze_Z1_2hnF3",
-        Z2: "friendsnooze_Z2_VmQTO",
-        Z3: "friendsnooze_Z3_29mta",
-        hoverParent: "friendsnooze_hoverParent_3-8cB",
-        animating: "friendsnooze_animating_2rXc7",
-        Snoring: "friendsnooze_Snoring_38wIV",
-      };
-    },
-    Xfd2: function (e, t, a) {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        PersonaStatusIcon: "personastatusicons_PersonaStatusIcon_KxAI_",
-        MobilePhoneIcon: "personastatusicons_MobilePhoneIcon_1iRFj",
-      };
-    },
-    XxJu: function (e, t) {
-      e.exports =
-        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
     },
     YpyZ: function (e, t, a) {
       e.exports = { Discount: "discount_Discount_2dE0f" };
@@ -10668,8 +10739,8 @@
         r = a("q1tI"),
         i = a.n(r),
         o = a("VFGZ"),
-        s = a("exH9"),
-        l = a("qDk6");
+        s = a("GbHM"),
+        l = a("Lsvi");
       const c = (e) => {
           const { className: t, children: a, onClick: r } = e,
             c = Object(n.c)(e, ["className", "children", "onClick"]);
@@ -10826,7 +10897,7 @@
       var n = a("mrSG"),
         r = a("q1tI"),
         i = a.n(r),
-        o = a("exH9");
+        o = a("GbHM");
       const s = (e) =>
           i.a.createElement(
             "svg",
@@ -11590,11 +11661,6 @@
         );
       }
     },
-    dFOy: function (e, t, a) {
-      e.exports =
-        a.p +
-        "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-    },
     eOCM: function (e, t, a) {
       e.exports =
         a.p + "images/applications/store/bored.png?v=valveisgoodatcaching";
@@ -11634,17 +11700,17 @@
         i = a.n(r),
         o = a("TyAF"),
         s = a("StxQ"),
-        l = a("6Y59"),
+        l = a("e356"),
         c = a("Vlb1"),
-        m = (a("li7h"), a("OU48"), a("exH9")),
-        d = a("lkRc"),
-        p = a("TLQK"),
+        m = (a("Nr4G"), a("1udA"), a("GbHM")),
+        d = a("/Q1a"),
+        p = a("GXif"),
         u = a("prdU"),
         _ = a("cJ7F"),
         f = a("cOvF"),
-        g = a("IjL/"),
-        h = a("qD+2"),
-        b = a("lypr"),
+        g = a("+aRA"),
+        h = a("FKEV"),
+        b = a("y0CV"),
         C = a("MLaC");
       function I(e) {
         const { className: t } = e,
@@ -12391,7 +12457,22 @@
       e.exports =
         "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTE5IiBoZWlnaHQ9IjEzNiIgdmlld0JveD0iMCAwIDExOSAxMzYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNNjIuNDA4IDM0LjA4MTdDNjIuNDA4IDI5Ljc2ODUgNTguODkzNiAyNi4yNTQxIDU0LjU4MDQgMjYuMjU0MUgzMy4zMzQxQzMxLjczNjcgMjYuMjU0MSAzMC40NTg3IDI0LjY1NjYgMzAuNzc4MiAyMy4wNTkyQzMwLjc3ODIgMjMuMDU5MiAzNy4zMjc4IDcuMDg0NTIgMzcuMzI3OCA1LjAwNzgxQzM3LjMyNzggMi45MzExIDM2LjUyOTEgMS40OTMzOSAzNC45MzE2IDEuMTczODlDMzMuMzM0MSAwLjg1NDM5OSAyOS44MTk3IDAuMDU1NjY2OCAyOS44MTk3IDAuMDU1NjY2OEMyOC4yMjIzIC0wLjEwNDA4IDI3LjEwNCAwLjA1NTY2NjcgMjYuMzA1MyAwLjg1NDRMMi41MDMwNSAyNC42NTY2QzEuMDY1MzQgMjYuMDk0NCAwLjI2NjYwMiAyOC4wMTEzIDAuMjY2NjAyIDMwLjA4OFY3My44NTg2QzAuMjY2NjAyIDc1LjQ1NjEgMS43MDQzMiA3Ni44OTM4IDMuMzAxNzkgNzYuODkzOEg0My4wNzg3QzQ2LjI3MzYgNzYuODkzOCA0OC41MTAxIDc0LjY1NzMgNTAuMjY3MyA3Mi4xMDE0TDYwLjk3MDMgNTcuODgzOUM2MS42MDkzIDU3LjA4NTIgNjIuNTY3OCA1NS4xNjgyIDYyLjU2NzggNTMuNTcwOFYzNC40MDEyTDYyLjQwOCAzNC4wODE3WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+DQo8cGF0aCBkPSJNNTYuMTc3NyAxMDEuOTE4QzU2LjE3NzcgMTA2LjIzMSA1OS42OTIyIDEwOS43NDYgNjQuMDA1MyAxMDkuNzQ2SDg1LjI1MTZDODYuODQ5MSAxMDkuNzQ2IDg4LjEyNzEgMTExLjM0MyA4Ny44MDc2IDExMi45NDFDODcuODA3NiAxMTIuOTQxIDgxLjI1NzkgMTI4LjkxNSA4MS4yNTc5IDEzMC45OTJDODEuMjU3OSAxMzMuMDY5IDgyLjA1NjcgMTM0LjUwNyA4My42NTQxIDEzNC44MjZDODUuMjUxNiAxMzUuMTQ2IDg4Ljc2NiAxMzUuOTQ0IDg4Ljc2NiAxMzUuOTQ0QzkwLjM2MzUgMTM2LjEwNCA5MS40ODE3IDEzNS45NDQgOTIuMjgwNSAxMzUuMTQ2TDExNS45MjMgMTExLjM0M0MxMTcuMzYxIDEwOS45MDYgMTE4LjE1OSAxMDcuOTg5IDExOC4xNTkgMTA1LjkxMlY2Mi4xNDE0QzExOC4xNTkgNjAuNTQzOSAxMTYuNzIyIDU5LjEwNjIgMTE1LjEyNCA1OS4xMDYySDc1LjY2NjhDNzIuNDcxOSA1OS4xMDYyIDcwLjIzNTQgNjEuMzQyNyA2OC40NzgyIDYzLjg5ODZMNTcuNzc1MiA3OC4xMTZDNTcuMTM2MiA3OC45MTQ4IDU2LjE3NzcgODAuODMxNyA1Ni4xNzc3IDgyLjQyOTJWMTAxLjQzOVYxMDEuOTE4WiIgZmlsbD0idXJsKCNwYWludDFfbGluZWFyKSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+DQo8ZGVmcz4NCjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjMxLjQxNzIiIHkxPSIwIiB4Mj0iMzEuNDE3MiIgeTI9Ijc2Ljg5MzgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXIiIHgxPSI4Ny4xNjg2IiB5MT0iNTkuMTA2MiIgeDI9Ijg3LjE2ODYiIHkyPSIxMzYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8L2RlZnM+DQo8L3N2Zz4NCg==";
     },
-    jUCX: function (e, t, a) {
+    icLO: function (e, t) {
+      e.exports =
+        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
+    },
+    iyod: function (e, t, a) {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        PersonaStatusIcon: "personastatusicons_PersonaStatusIcon_1YsWj",
+        MobilePhoneIcon: "personastatusicons_MobilePhoneIcon_3pGV8",
+      };
+    },
+    kJAG: function (e, t, a) {
+      e.exports =
+        a.p + "images/applications/store/Sunglasses.gif?v=valveisgoodatcaching";
+    },
+    kMdN: function (e, t, a) {
       "use strict";
       a.d(t, "b", function () {
         return m;
@@ -12402,10 +12483,10 @@
       var n = a("mrSG"),
         r = a("2vnA"),
         i = a("Gp1o"),
-        o = a("qD+2"),
-        s = a("TLQK"),
-        l = (a("65aj"), a("li7h"), a("lkRc")),
-        c = (a("kLLr"), a("8H1D"));
+        o = a("FKEV"),
+        s = a("GXif"),
+        l = (a("Zdsb"), a("Nr4G"), a("/Q1a")),
+        c = (a("oleE"), a("xH93"));
       function m(e) {
         let t = "offline";
         return (
@@ -12667,39 +12748,10 @@
         Object(n.b)([r.C], d.prototype, "m_strBroadcastTitle", void 0),
         Object(n.b)([r.C], d.prototype, "m_bCommunityBanned", void 0);
     },
-    kJAG: function (e, t, a) {
-      e.exports =
-        a.p + "images/applications/store/Sunglasses.gif?v=valveisgoodatcaching";
-    },
     kqfX: function (e, t, a) {
       e.exports =
         a.p +
         "images/applications/store/golden_pagebg.png?v=valveisgoodatcaching";
-    },
-    ksWZ: function (e, t, a) {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        statusAndName: "personanameandstatus_statusAndName_4ZTzG",
-        threeLines: "personanameandstatus_threeLines_1oYSX",
-        blocked: "personanameandstatus_blocked_VTxPk",
-        richPresenceLabel: "personanameandstatus_richPresenceLabel_2Ri00",
-        playerName: "personanameandstatus_playerName_nOdcT",
-        playerNickname: "personanameandstatus_playerNickname_2saJT",
-        playerNicknameBracket:
-          "personanameandstatus_playerNicknameBracket_3XEmW",
-        richPresenceContainer:
-          "personanameandstatus_richPresenceContainer_3sxE7",
-        gameName: "personanameandstatus_gameName_1cB0q",
-        NoMask: "personanameandstatus_NoMask_2dAj6",
-        twoLine: "personanameandstatus_twoLine_1BbOe",
-        DNDContainer: "personanameandstatus_DNDContainer_3IswZ",
-        partyBeaconJoin: "personanameandstatus_partyBeaconJoin_3BnDs",
-        hidePersona: "personanameandstatus_hidePersona_3ZJkO",
-        compactView: "personanameandstatus_compactView_3bbRZ",
-        noContextMenu: "personanameandstatus_noContextMenu_1JE5G",
-        gameIsPrivateIcon: "personanameandstatus_gameIsPrivateIcon_2gBKQ",
-        PendingPersona: "personanameandstatus_PendingPersona_2sxXn",
-      };
     },
     li8c: function (e, t, a) {
       e.exports = {
@@ -12759,6 +12811,38 @@
         PageHomeHowItWorks: "styles_PageHomeHowItWorks_2bWxo",
       };
     },
+    "lo3/": function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return m;
+      });
+      var n = a("mrSG"),
+        r = a("q1tI"),
+        i = a.n(r),
+        o = a("fsrB"),
+        s = a("ez+p"),
+        l = a("hCpY"),
+        c = a("/Q1a");
+      function m(e) {
+        const { children: t, navTreeRef: a } = e,
+          r = Object(n.c)(e, ["children", "navTreeRef"]),
+          m = i.a.useRef(),
+          d = Object(l.g)(m, a);
+        if (c.d.IN_GAMEPADUI) {
+          const e = window.__nav_tree_root;
+          return i.a.createElement(
+            o.b,
+            Object.assign({}, r, {
+              navTreeRef: d,
+              secondary: !0,
+              parentEmbeddedNavTree: e,
+            }),
+            i.a.createElement(s.a, null, t)
+          );
+        }
+        return i.a.createElement(i.a.Fragment, null, t);
+      }
+    },
     mpVu: function (e, t, a) {
       e.exports =
         a.p +
@@ -12776,8 +12860,8 @@
         a.d(t, "b", function () {
           return i;
         });
-      var n = a("lkRc");
-      a("OU48"), a("li7h");
+      var n = a("/Q1a");
+      a("1udA"), a("Nr4G");
       function r(e, t) {
         return `${n.d.MEDIA_CDN_COMMUNITY_URL}images/items/${e}/${t}`;
       }
@@ -12806,16 +12890,16 @@
         r = a("q1tI"),
         i = a.n(r),
         o = a("TyAF"),
-        s = a("TLQK"),
+        s = a("GXif"),
         l = a("+9fn"),
         c = a("cJ7F"),
         m = a("Wilf"),
         d = a("StxQ"),
-        p = a("exH9"),
+        p = a("GbHM"),
         u = a("nXE5"),
         _ = a("cOvF"),
         f = a("prdU"),
-        g = a("lkRc"),
+        g = a("/Q1a"),
         h = a("+j4l"),
         b = a("RV7a");
       const C = (e, t) =>
@@ -12980,15 +13064,15 @@
         }
       }
       const d = Object(c.j)(m);
-      var p = a("exH9"),
-        u = a("t3iX"),
+      var p = a("GbHM"),
+        u = a("/69T"),
         _ = a("cCsu"),
         f = a.n(_),
         g = a("TJrv"),
         h = a.n(g),
         b = a("f+AQ"),
         C = a.n(b),
-        I = a("IzPI");
+        I = a("pSt8");
       const y = (e) => {
           var { className: t } = e,
             a = Object(n.c)(e, ["className"]);
@@ -13353,29 +13437,29 @@
         r = (a("q1tI"), a("2lpH")),
         i = a.n(r),
         o = a("2vnA"),
-        s = a("TLQK"),
+        s = a("GXif"),
         l = a("vDqi"),
         c = a.n(l),
-        m = a("lkRc"),
-        d = a("65aj"),
-        p = a("OS6B"),
-        u = a("opsS"),
-        _ = a("bxBv"),
-        f = (a("li7h"), a("OU48")),
-        g = a("0xSo"),
-        h = a("oFam"),
-        b = a("cxFF"),
-        C = a("BFsE"),
-        I = (a("SvTV"), a("jUCX")),
-        y = a("kLLr"),
+        m = a("/Q1a"),
+        d = a("Zdsb"),
+        p = a("TqgT"),
+        u = a("hCpY"),
+        _ = a("9XWO"),
+        f = (a("Nr4G"), a("1udA")),
+        g = a("BaLb"),
+        h = a("ztGc"),
+        b = a("Zj3+"),
+        C = a("tXj3"),
+        I = (a("Qhkv"), a("kMdN")),
+        y = a("oleE"),
         w = (a("RhBb"), a("bEwK")),
         M = a.n(w),
         E = (a("cMk+"), a("cOvF")),
         N = a("1fPh"),
-        v = a("r64O"),
-        S = a("qD+2"),
-        j = (a("sOw0"), a("E4Op"), a("ee7K")),
-        A = a("CdLH");
+        v = a("f5iL"),
+        S = a("FKEV"),
+        j = (a("d4Nf"), a("XThB"), a("FmLm")),
+        A = a("Nt3m");
       function O(e, t = !1) {
         const a = (e) => Object(s.f)(t ? `${e}_Plural` : e);
         switch (e) {
@@ -15640,7 +15724,7 @@
         });
       var n = a("q1tI"),
         r = a.n(n),
-        i = a("exH9"),
+        i = a("GbHM"),
         o = a("cMO7");
       const s = ({ src: e }) =>
           r.a.createElement(
@@ -15684,7 +15768,7 @@
         i = a.n(r),
         o = a("TyAF"),
         s = a("RV7a"),
-        l = (a("OU48"), a("lypr"));
+        l = (a("1udA"), a("y0CV"));
       a("prdU");
       const c = Object(o.a)(function (e) {
         const {
@@ -15732,62 +15816,6 @@
           )
         );
       });
-    },
-    t3iX: function (e, t, a) {
-      "use strict";
-      a.d(t, "b", function () {
-        return o;
-      }),
-        a.d(t, "a", function () {
-          return s;
-        }),
-        a.d(t, "c", function () {
-          return d;
-        });
-      var n = a("q1tI"),
-        r = a.n(n);
-      const i = Object(n.createContext)(null);
-      function o(e) {
-        const { spacing: t, children: a } = e;
-        return r.a.createElement(i.Provider, { value: c(t) }, a);
-      }
-      function s(e) {
-        const t = l();
-        return r.a.createElement(
-          "div",
-          { style: m(t) },
-          r.a.createElement(i.Provider, { value: null }, e.children)
-        );
-      }
-      function l() {
-        return Object(n.useContext)(i);
-      }
-      function c(e) {
-        return {
-          top: e.vertical || e.top || 0,
-          bottom: e.vertical || e.bottom || 0,
-          left: e.horizontal || e.left || 0,
-          right: e.horizontal || e.right || 0,
-        };
-      }
-      function m(e) {
-        if (!e) return;
-        const { top: t, bottom: a, left: n, right: r } = e,
-          i = {};
-        return (
-          t && (i.marginTop = `-${t}px`),
-          a && (i.marginBottom = `-${a}px`),
-          n && (i.marginLeft = `-${n}px`),
-          r && (i.marginRight = `-${r}px`),
-          i
-        );
-      }
-      function d() {
-        const e = l();
-        if (!e) return;
-        const t = `${e.top}px ${e.right}px ${e.bottom}px ${e.left}px`;
-        return { padding: t, scrollPadding: t };
-      }
     },
     tHRV: function (e, t, a) {
       e.exports =
@@ -15900,19 +15928,19 @@
         r = a("q1tI"),
         i = a.n(r),
         o = a("TyAF"),
-        s = a("qD+2"),
+        s = a("FKEV"),
         l = a("prdU"),
-        c = a("lkRc"),
-        m = a("TLQK"),
+        c = a("/Q1a"),
+        m = a("GXif"),
         d = a("ehaW"),
         p = a("RV7a"),
-        u = (a("li7h"), a("OU48"), a("mw7S")),
+        u = (a("Nr4G"), a("1udA"), a("mw7S")),
         _ = a("qf3a"),
         f = a("StxQ"),
-        g = a("exH9"),
+        g = a("GbHM"),
         h = a("cOvF"),
         b = a("reUc"),
-        C = a("8Uds");
+        C = a("4DCj");
       const I = i.a.createContext(!1);
       function y(e) {
         return i.a.createElement(I.Provider, { value: !0 }, e.children);
@@ -16149,42 +16177,14 @@
           );
         });
     },
+    y66k: function (e, t) {
+      e.exports =
+        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
+    },
     "y8q+": function (e, t, a) {
       e.exports =
         a.p +
         "images/applications/store/collection_icon_64x64.png?v=valveisgoodatcaching";
-    },
-    "ykc/": function (e, t, a) {
-      "use strict";
-      a.d(t, "a", function () {
-        return m;
-      });
-      var n = a("mrSG"),
-        r = a("q1tI"),
-        i = a.n(r),
-        o = a("av+R"),
-        s = a("yLGM"),
-        l = a("opsS"),
-        c = a("lkRc");
-      function m(e) {
-        const { children: t, navTreeRef: a } = e,
-          r = Object(n.c)(e, ["children", "navTreeRef"]),
-          m = i.a.useRef(),
-          d = Object(l.g)(m, a);
-        if (c.d.IN_GAMEPADUI) {
-          const e = window.__nav_tree_root;
-          return i.a.createElement(
-            o.b,
-            Object.assign({}, r, {
-              navTreeRef: d,
-              secondary: !0,
-              parentEmbeddedNavTree: e,
-            }),
-            i.a.createElement(s.a, null, t)
-          );
-        }
-        return i.a.createElement(i.a.Fragment, null, t);
-      }
     },
     ywEf: function (e, t, a) {
       e.exports =

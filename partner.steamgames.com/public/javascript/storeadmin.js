@@ -804,3 +804,87 @@ function IsDigitOrEditKeypress( e )
 	return false;
 }
 
+//Helper method to grab a value of the messageform, including radio button handling
+function GetFormValueInternal( sFormName, inputName )
+{
+	var input = $( sFormName )[ inputName ];
+	if ( input && input.length && input.length > 0  && input[0].type=='radio' )
+	{
+		//radio buttons
+		input = $A(input).find( function ( r ) { return r.checked; } );
+	}
+	if ( input )
+		return $F( input );
+	else
+		return null;
+}
+
+
+function GetSuffixForAssociationType( sAssociationType )
+{
+	switch ( sAssociationType )
+	{
+		case "application": return "[appid]";
+		case "package": return "[packageid]";
+		case "bundle": return "[bundleid]";
+	}
+
+	return null;
+}
+
+
+// User has changed associated app/package, request restrictions/etc from server
+function OnAssociationChangeInternal( sFormName, sInputPrefix )
+{
+	var sAssociationType = GetFormValueInternal( sFormName, sInputPrefix + '[association_type]' );
+	var sAssociation = '';
+	var sSuffix = GetSuffixForAssociationType( sAssociationType );
+	if ( sSuffix )
+	{
+		sAssociation = GetFormValueInternal( sFormName, sInputPrefix + '[association]' + sSuffix );
+	}
+
+	var hashParams = { 
+			associationType: 	sAssociationType,
+			association:  		sAssociation,
+	};
+	new Ajax.Request( g_szBaseUrl + '/store/fetchassociationdefaults', {
+		method: 'get',
+		requestHeaders: { 'Accept': 'application/json' },
+		parameters: hashParams,
+		onSuccess: ( transport ) =>
+		{
+			var results = transport.responseJSON;
+			if ( results )
+			{
+				ReadAssociationValuesInternal( results, sFormName, sInputPrefix );
+			}
+		}
+	});
+}
+
+function OnSpotlightAssociationChange()
+{
+	OnAssociationChangeInternal( "spotlightform", "spotlight" );
+}
+
+function OnClusterAssociationChange()
+{
+	OnAssociationChangeInternal( "clusterform", "cluster" );
+}
+
+//server has replied with restrictions for the new association
+function ReadAssociationValuesInternal( json, sFormName, sInputPrefix )
+{
+	var hash = $H(json);
+
+	hash.each( ( entry ) => 
+	{
+		input = $( sFormName )[ sInputPrefix + entry.key];
+		if ( input ) 
+		{
+			input.value = entry.value; 
+		}
+	} );
+}
+

@@ -84,6 +84,8 @@ function HighlightPlayer( args )
 	this.m_bSupportsWebM = BCanPlayWebm();
 	this.m_bSupportsMPEG4 = BCanPlayMPEG4();
 
+	this.ListenForDashBundle();
+
 	//make all the strip items clickable
 	var thisClosure = this;
 	this.m_elemStrip.find( '.highlight_strip_item' ).each(
@@ -175,6 +177,37 @@ function HighlightPlayer( args )
 	});
 }
 
+HighlightPlayer.prototype.ListenForDashBundle = function()
+{
+	this.m_bWaitingForDash = true;
+	this.m_waitingDashStates = {};
+	var _this = this;
+	window.addEventListener( 'valve_gamehighlighttrailers_ready', function()
+	{
+		for ( var strKey in _this.m_waitingDashStates )
+		{
+			if ( _this.m_waitingDashStates.hasOwnProperty( strKey ) )
+			{
+				window.GameHighlightTrailers.SetTrailerState( strKey, _this.m_waitingDashStates[strKey] );
+			}
+		}
+
+		_this.m_waitingDashStates = {};
+		_this.m_bWaitingForDash = false;
+	});
+}
+
+HighlightPlayer.prototype.SendDashTrailerState = function( strID, bState )
+{
+	if ( !this.m_bWaitingForDash )
+	{
+		window.GameHighlightTrailers.SetTrailerState( strID, bState );
+		return;
+	}
+
+	this.m_waitingDashStates[ strID ] = bState;
+}
+
 HighlightPlayer.prototype.HighlightItem = function( elem, bUserAction )
 {
 	var $Elem = $JFromIDOrElement( elem );
@@ -215,9 +248,15 @@ HighlightPlayer.prototype.HighlightScreenshot = function( id, bSkipAnimation )
 HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 {
 	var id = this.GetMovieId( $Container );
+
+		if ( $Container.data( 'dash-player' ) )
+	{
+		this.SendDashTrailerState( 'highlight_movie_' + id, true );
+		return;
+	}
+
 	var strTarget = 'movie_' + id;
 	var $Target = $JFromIDOrElement(strTarget);
-
 	if ( $Target.length )
 	{
 		$Target.trigger('play');
@@ -305,7 +344,25 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 		$Target.html( '<p>' + strMessage + '</p>' );
 		$Container.append( $Target );
 	}
- }
+}
+
+HighlightPlayer.prototype.PauseMovie = function( $Container )
+{
+	var strID = this.GetMovieId( $Container );
+	if ( $Container.data( 'dash-player' ) )
+	{
+		this.SendDashTrailerState( 'highlight_movie_' + strID , false );
+		return;
+	}
+
+		var $Container = $JFromIDOrElement('highlight_movie_' + strID );
+
+	// html5 video
+	$J('video#movie_' + strID ).trigger('pause');
+
+	//flash
+	$Container.find('.flash_ctn').remove();
+}
 
 HighlightPlayer.prototype.LoadScreenshot = function( id )
 {
@@ -332,16 +389,7 @@ HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation, bUserAc
 	{
 		if ( this.BIsMovie( this.m_activeItem ) )
 		{
-			//stop movies
-			var movieid = this.GetMovieId( this.m_activeItem );
-			var $Container = $JFromIDOrElement('highlight_movie_' + movieid);
-
-			// html5 video
-			$J('video#movie_' + movieid).trigger('pause');
-
-			//flash
-			$Container.find('.flash_ctn').remove();
-
+			this.PauseMovie( this.m_activeItem );
 		}
 
 		this.m_activeItem.stop();

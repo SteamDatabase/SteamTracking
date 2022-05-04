@@ -177,14 +177,14 @@ html.tablet .page_header_ctn {
 
 html.tablet body.v6 .page_content {
 	width: calc(100vw - var(--gpNavWidth));
-	max-width: calc( var(--gpMaxBrowserWidth) - var(--gpNavWidth) );
+	max-width: calc( 1120px - var(--gpNavWidth) );
 	margin: unset;
-	margin-left: calc( var(--gpNavWidth) + ((100vw - var(--gpMaxBrowserWidth)) / 2) );
+	margin-left: calc( var(--gpNavWidth) + ((100vw - 1120px) / 2) );
 	box-sizing: border-box;
 	float: unset;
 }
 
-@media screen and (max-width: 1080px ) {
+@media screen and (max-width: 1120px ) {
 	html.tablet body.v6 .page_content {
 		float: right;
 		margin: unset;

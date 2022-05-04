@@ -4996,6 +4996,10 @@ div.agegate_text_container > h2 {
 	margin-top: 2%;
 }
 
+.agegate_text_container .agegate_ao_txt {
+    margin-bottom: 4px;
+}
+
 #app_agegate {
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */

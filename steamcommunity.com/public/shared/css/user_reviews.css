@@ -36,7 +36,7 @@ select {
 		border: 1px solid #1f1f20;
 		box-shadow: 1px 1px 0 0 #39393a;
 	}
-	
+
 	#rightContents .panel.owner {
 		border-color: #81a313;
 	}
@@ -48,15 +48,15 @@ select {
 	#rightContents .panel.admin .title {
 		color: #a55b13;
 	}
-	
+
 	#rightContents .panel.admin .smallText {
 		font-size: 12px;
 	}
-	
+
 	.general_btn.panel_btn {
 		color: #EBEBEB;
 	}
-	
+
 	.friendBlock {
 		background-color: rgba( 84, 133, 183, 0.2);
 	}
@@ -360,7 +360,7 @@ select {
 	display: inline-block;
 	line-height: 30px;
 	float: right;
-	
+
 }
 
 .notification
@@ -431,10 +431,24 @@ select {
 
 @media screen and (max-width: 910px)
 {
+
 	html.responsive .gameLogoHolder_default img {
 		width: 100%;
 		padding: 0;
 	}
+
+
+}
+
+	html.responsive.tablet .gameLogoHolder_default img {
+		width: 100%;
+		padding: 0;
+	}
+
+
+@media screen and (max-width: 910px)
+{
+
 }
 
 .responsive_review_gameinfo {

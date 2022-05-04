@@ -72,7 +72,6 @@
 	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
 	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
 	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
-	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
@@ -2769,6 +2768,22 @@ body.v6 #footer_nav .popup_menu .hr{
 	html.responsive.touch .newmodal_background {
 		position: absolute;
 	}
+
+@media screen and (max-width: 910px)
+{
+
+	html.responsive .newmodal {
+		min-width: 500px;
+	}
+
+
+}
+
+	html.responsive.tablet .newmodal {
+		min-width: 500px;
+	}
+
+
 
 @media screen and (max-width: 910px)
 {

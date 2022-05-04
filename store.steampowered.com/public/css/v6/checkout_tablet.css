@@ -72,7 +72,6 @@
 	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
 	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
 	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
-	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
@@ -223,7 +222,7 @@ html.tablet #checkout_header .content {
 	padding: 0px var(--gpSpace-Gutter);
 	margin: 0px auto;
 	width: unset;
-	max-width: var(--gpMaxBrowserWidth);
+	max-width: 1120px;
 }
 
 html.tablet #checkout_pipeline {
@@ -284,7 +283,7 @@ html.tablet .cart_tab_off {
 html.tablet body.v6 .page_content {
 	padding-bottom: 2px;
 	margin-right: var(--gpPaymentsNavWidth);
-	max-width: calc( var(--gpMaxBrowserWidth) - var(--gpPaymentsNavWidth) );
+	max-width: calc( 1120px - var(--gpPaymentsNavWidth) );
 }
 
 /* Columns */
@@ -1273,7 +1272,7 @@ html.tablet body.checkout_microtxn #main {
 	width: unset;
 	padding: 0px var(--gpSpace-Gutter);
 	margin: 24px auto;
-	max-width: var(--gpMaxBrowserWidth);
+	max-width: 1120px;
 }
 
 html.tablet body.checkout_microtxn h2.approvetxn_header {
@@ -1446,9 +1445,9 @@ iframe.paypal-checkout-sandbox-iframe {
 
 
 /* RESPONSIVE */
-@media screen and (min-width: 1080px ) {
+@media screen and (min-width: 1120px ) {
 	html.tablet body.v6 .page_content {
-		margin-right: calc(  var(--gpPaymentsNavWidth) + ((100vw - (var(--gpSpace-Gutter) * 2) - var(--gpMaxBrowserWidth)) / 2)  );
+		margin-right: calc(  var(--gpPaymentsNavWidth) + ((100vw - (var(--gpSpace-Gutter) * 2) - 1120px) / 2)  );
 	}
 
 	html.tablet .tablet_checkout_right_column,

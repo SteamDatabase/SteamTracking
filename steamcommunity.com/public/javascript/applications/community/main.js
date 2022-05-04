@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7230433";
+var CLSTAMP = "7231845";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [101],
   {
@@ -4054,6 +4054,7 @@ var CLSTAMP = "7230433";
         FieldChildren: "gamepaddialog_FieldChildren_2rhav",
         FieldLeadIcon: "gamepaddialog_FieldLeadIcon_3CGpa",
         FieldLabelRow: "gamepaddialog_FieldLabelRow_2VcTl",
+        VerticalAlignCenter: "gamepaddialog_VerticalAlignCenter_16vVn",
         InlineWrapShiftsChildrenBelow:
           "gamepaddialog_InlineWrapShiftsChildrenBelow_3LCXh",
         ExtraPaddingOnChildrenBelow:
@@ -9507,8 +9508,9 @@ var CLSTAMP = "7230433";
             className: b,
             highlightOnFocus: v,
             indentLevel: w,
+            verticalAlignment: C,
           } = e,
-          C = Object(r.c)(e, [
+          S = Object(r.c)(e, [
             "label",
             "description",
             "icon",
@@ -9523,65 +9525,68 @@ var CLSTAMP = "7230433";
             "className",
             "highlightOnFocus",
             "indentLevel",
+            "verticalAlignment",
           ]),
-          S = null != u ? u : "inline",
-          y = "inline" == S && !!a,
-          E = "below" == S && !!a,
-          O = null != d ? d : "shift-children-below",
-          D = !!(C.onClick || C.onActivate || C.focusable),
-          M = null != s || null != n || (y && null != a),
-          B = null != h ? h : "min",
-          R = null != m ? m : "standard",
-          T = null != g ? g : "standard",
-          I = null == v || v,
-          x = null != w ? w : 0,
-          L = i.useRef(),
-          k = Object(l.g)(L, e.navRef),
-          N = i.useCallback(
+          y = null != u ? u : "inline",
+          E = "inline" == y && !!a,
+          O = "below" == y && !!a,
+          D = null != d ? d : "shift-children-below",
+          M = !!(S.onClick || S.onActivate || S.focusable),
+          B = null != s || null != n || (E && null != a),
+          R = null != h ? h : "min",
+          T = null != m ? m : "standard",
+          I = null != g ? g : "standard",
+          x = null == v || v,
+          L = null != w ? w : 0,
+          k = null != C ? C : "center",
+          N = i.useRef(),
+          F = Object(l.g)(N, e.navRef),
+          A = i.useCallback(
             (e) => {
               var t;
-              null === (t = L.current) || void 0 === t || t.TakeFocus(),
+              null === (t = N.current) || void 0 === t || t.TakeFocus(),
                 e.preventDefault();
             },
-            [L]
+            [N]
           );
         return i.createElement(
           p.a,
           Object.assign(
             {
-              focusable: D,
+              focusable: M,
               noFocusRing: !0,
               scrollIntoViewWhenChildFocused: !0,
-              onActivate: C.onClick,
+              onActivate: S.onClick,
               ref: t,
-              onMouseDown: D ? void 0 : N,
+              onMouseDown: M ? void 0 : A,
             },
-            C,
+            S,
             {
-              navRef: k,
+              navRef: F,
               className: Object(c.a)(
                 b,
                 Xe.a.Field,
                 f && Xe.a.Disabled,
-                M && Xe.a.WithFirstRow,
-                y && Xe.a.WithChildrenInline,
-                E && Xe.a.WithChildrenBelow,
-                "shift-children-below" == O &&
+                B && Xe.a.WithFirstRow,
+                E && Xe.a.WithChildrenInline,
+                O && Xe.a.WithChildrenBelow,
+                "center" == k && Xe.a.VerticalAlignCenter,
+                "shift-children-below" == D &&
                   Xe.a.InlineWrapShiftsChildrenBelow,
                 !!o && Xe.a.WithDescription,
                 (null == _ || _) && Xe.a.WithBottomSeparator,
-                "fixed" == B && Xe.a.ChildrenWidthFixed,
-                "max" == B && Xe.a.ChildrenWidthGrow,
-                "standard" == R && Xe.a.ExtraPaddingOnChildrenBelow,
-                "standard" == T && Xe.a.StandardPadding,
-                "compact" == T && Xe.a.CompactPadding,
-                D && Xe.a.Clickable,
-                I && Xe.a.HighlightOnFocus
+                "fixed" == R && Xe.a.ChildrenWidthFixed,
+                "max" == R && Xe.a.ChildrenWidthGrow,
+                "standard" == T && Xe.a.ExtraPaddingOnChildrenBelow,
+                "standard" == I && Xe.a.StandardPadding,
+                "compact" == I && Xe.a.CompactPadding,
+                M && Xe.a.Clickable,
+                x && Xe.a.HighlightOnFocus
               ),
-              style: { "--indent-level": x },
+              style: { "--indent-level": L },
             }
           ),
-          M &&
+          B &&
             i.createElement(
               "div",
               { className: Xe.a.FieldLabelRow },
@@ -9592,9 +9597,9 @@ var CLSTAMP = "7230433";
                   i.createElement("div", { className: Xe.a.FieldLeadIcon }, s),
                 n
               ),
-              y && i.createElement("div", { className: Xe.a.FieldChildren }, a)
+              E && i.createElement("div", { className: Xe.a.FieldChildren }, a)
             ),
-          E && i.createElement("div", { className: Xe.a.FieldChildren }, a),
+          O && i.createElement("div", { className: Xe.a.FieldChildren }, a),
           o && i.createElement("div", { className: Xe.a.FieldDescription }, o)
         );
       });

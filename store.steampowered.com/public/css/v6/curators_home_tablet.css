@@ -72,7 +72,6 @@
 	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
 	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
 	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
-	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
@@ -226,7 +225,7 @@ html.tablet .highlighted_app_curator_image a img {
 	width: 32px;
 }
 
-@media screen and (min-width: 1080px ) {
+@media screen and (min-width: 1120px ) {
 
 	html.tablet .highlighted_app_curator_blurb {
 		font: var(--gpText-BodyLarge);

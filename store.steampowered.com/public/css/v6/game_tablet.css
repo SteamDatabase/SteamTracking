@@ -72,7 +72,6 @@
 	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
 	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
 	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
-	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
@@ -533,7 +532,7 @@ html.tablet .responsive_apppage_details_right.recommendation_reasons {
 	margin: 0px;
 }
 html.tablet .responsive_apppage_details_right.recommendation_reasons {
-	margin-bottom: 10px;
+	margin-bottom: 16px;
 }
 html.tablet .responsive_apppage_details_right.recommendation_noinfo {
 	margin: 0px 10px 20px 10px;
@@ -658,7 +657,7 @@ html.tablet .game_area_purchase_game:focus-within {
 	transition: all 0.3s ease;
 }
 
-@media screen and (min-width: 1080px ) {
+@media screen and (min-width: 1120px ) {
 	html.tablet .game_area_purchase_game,
 	html.tablet .game_area_offsite_purchase {
 		padding: 24px;
@@ -792,6 +791,7 @@ html.tablet #shareBtn,
 html.tablet #reportBtn {
 	display: flex !important;
 	margin-right: 4px;
+	flex-grow: 1 !important;
 }
 
 html.tablet #queue_btn_ignore_menu {
@@ -2205,6 +2205,7 @@ html.tablet .glance_tags_ctn .glance_tags .app_tag.gpfocus {
 /* Features */
 html.tablet #category_block {
 	margin-top: 4px;
+	margin-bottom: 12px;
 }
 
 html.tablet .game_area_details_specs_ctn {
@@ -2660,7 +2661,7 @@ html.tablet .similar_recent_apps_container {
 	margin: 6px 0px
 }
 
-html.tablet #responsive_apppage_details_right_ctn .recommendation_reasons {
+html.tablet .recommendation_reasons {
 	border: 1px solid var(--gpBackground-LightSoft);
 	border-radius: var(--gpCorner-Large);
 	margin: unset;
@@ -2668,11 +2669,11 @@ html.tablet #responsive_apppage_details_right_ctn .recommendation_reasons {
 	padding: 16px 0px 8px 32px !important;
 }
 
-html.tablet #responsive_apppage_details_right_ctn .responsive_apppage_details_right.heading {
+html.tablet .responsive_apppage_details_right.heading {
 	margin-bottom: 12px;
 }
 
-html.tablet #responsive_apppage_details_right_ctn .friend_blocks_grid {
+html.tablet .friend_blocks_grid {
 	margin-bottom: unset;
 }
 
@@ -3350,6 +3351,37 @@ html.tablet .agegate_text_container.btns {
 	justify-content: center;
 	gap: 12px;
 	max-width: 50%;
+	flex-direction: column;
+}
+
+html.tablet .agegate_tags {
+	width: unset;
+	margin: 8px 0px;
+	display: flex;
+	column-gap: 4px;
+	justify-content: center;
+}
+
+html.tablet .agegate_tags .app_tag {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+	border-bottom: unset;
+	background-color: var(--gpBackground-DarkSoft);
+	padding: 2px 10px;
+	border-radius: var(--gpCorner-Medium);
+	margin: unset;
+	transition: all 0.1s ease;
+}
+
+html.tablet .agegate_tags .app_tag:hover {
+	color: white;
+	background: none;
+	background-color: var(--gpBackground-LightSoft);
+}
+
+html.tablet .agegate_text_container .agegate_btn_ctn {
+	display: flex;
+	column-gap: 12px;
 }
 
 html.tablet .agegate_text_container.btns a {

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7230433";
+var CLSTAMP = "7231845";
 !(function (e) {
   function t(t) {
     for (
@@ -28,7 +28,7 @@ var CLSTAMP = "7230433";
     return e;
   }
   var r = {},
-    i = { 5: 0 },
+    i = { 6: 0 },
     o = [];
   function s(t) {
     if (r[t]) return r[t].exports;
@@ -55,129 +55,129 @@ var CLSTAMP = "7230433";
               s.p +
               "javascript/webui/" +
               ({
-                9: "friendsui_arabic-json",
-                10: "friendsui_brazilian-json",
-                11: "friendsui_bulgarian-json",
-                12: "friendsui_czech-json",
-                13: "friendsui_danish-json",
-                14: "friendsui_dutch-json",
-                15: "friendsui_english-json",
-                16: "friendsui_finnish-json",
-                17: "friendsui_french-json",
-                18: "friendsui_german-json",
-                19: "friendsui_greek-json",
-                20: "friendsui_hungarian-json",
-                21: "friendsui_italian-json",
-                22: "friendsui_japanese-json",
-                23: "friendsui_koreana-json",
-                24: "friendsui_latam-json",
-                25: "friendsui_norwegian-json",
-                26: "friendsui_polish-json",
-                27: "friendsui_portuguese-json",
-                28: "friendsui_romanian-json",
-                29: "friendsui_russian-json",
-                30: "friendsui_sc_schinese-json",
-                31: "friendsui_schinese-json",
-                32: "friendsui_spanish-json",
-                33: "friendsui_swedish-json",
-                34: "friendsui_tchinese-json",
-                35: "friendsui_thai-json",
-                36: "friendsui_turkish-json",
-                37: "friendsui_ukrainian-json",
-                38: "friendsui_vietnamese-json",
-                39: "shared_arabic-json",
-                40: "shared_brazilian-json",
-                41: "shared_bulgarian-json",
-                42: "shared_czech-json",
-                43: "shared_danish-json",
-                44: "shared_dutch-json",
-                45: "shared_english-json",
-                46: "shared_finnish-json",
-                47: "shared_french-json",
-                48: "shared_german-json",
-                49: "shared_greek-json",
-                50: "shared_hungarian-json",
-                51: "shared_italian-json",
-                52: "shared_japanese-json",
-                53: "shared_koreana-json",
-                54: "shared_latam-json",
-                55: "shared_norwegian-json",
-                56: "shared_polish-json",
-                57: "shared_portuguese-json",
-                58: "shared_romanian-json",
-                59: "shared_russian-json",
-                60: "shared_sc_schinese-json",
-                61: "shared_schinese-json",
-                62: "shared_spanish-json",
-                63: "shared_swedish-json",
-                64: "shared_tchinese-json",
-                65: "shared_thai-json",
-                66: "shared_turkish-json",
-                67: "shared_ukrainian-json",
-                68: "shared_vietnamese-json",
+                10: "friendsui_arabic-json",
+                11: "friendsui_brazilian-json",
+                12: "friendsui_bulgarian-json",
+                13: "friendsui_czech-json",
+                14: "friendsui_danish-json",
+                15: "friendsui_dutch-json",
+                16: "friendsui_english-json",
+                17: "friendsui_finnish-json",
+                18: "friendsui_french-json",
+                19: "friendsui_german-json",
+                20: "friendsui_greek-json",
+                21: "friendsui_hungarian-json",
+                22: "friendsui_italian-json",
+                23: "friendsui_japanese-json",
+                24: "friendsui_koreana-json",
+                25: "friendsui_latam-json",
+                26: "friendsui_norwegian-json",
+                27: "friendsui_polish-json",
+                28: "friendsui_portuguese-json",
+                29: "friendsui_romanian-json",
+                30: "friendsui_russian-json",
+                31: "friendsui_sc_schinese-json",
+                32: "friendsui_schinese-json",
+                33: "friendsui_spanish-json",
+                34: "friendsui_swedish-json",
+                35: "friendsui_tchinese-json",
+                36: "friendsui_thai-json",
+                37: "friendsui_turkish-json",
+                38: "friendsui_ukrainian-json",
+                39: "friendsui_vietnamese-json",
+                40: "shared_arabic-json",
+                41: "shared_brazilian-json",
+                42: "shared_bulgarian-json",
+                43: "shared_czech-json",
+                44: "shared_danish-json",
+                45: "shared_dutch-json",
+                46: "shared_english-json",
+                47: "shared_finnish-json",
+                48: "shared_french-json",
+                49: "shared_german-json",
+                50: "shared_greek-json",
+                51: "shared_hungarian-json",
+                52: "shared_italian-json",
+                53: "shared_japanese-json",
+                54: "shared_koreana-json",
+                55: "shared_latam-json",
+                56: "shared_norwegian-json",
+                57: "shared_polish-json",
+                58: "shared_portuguese-json",
+                59: "shared_romanian-json",
+                60: "shared_russian-json",
+                61: "shared_sc_schinese-json",
+                62: "shared_schinese-json",
+                63: "shared_spanish-json",
+                64: "shared_swedish-json",
+                65: "shared_tchinese-json",
+                66: "shared_thai-json",
+                67: "shared_turkish-json",
+                68: "shared_ukrainian-json",
+                69: "shared_vietnamese-json",
               }[e] || e) +
               ".js?contenthash=" +
               {
-                9: "51d9833326b9684fcced",
-                10: "351bcab5fe300ef215e1",
-                11: "8b1c96cacd00d994afe8",
-                12: "26ec62c089df0e2e7ec5",
-                13: "f01dbff6b8b610617dfd",
-                14: "37da594d29d1c29807f9",
-                15: "c43b77fa00cde39f3983",
-                16: "8fca8712a1b0d3e75a3e",
-                17: "75fba6f019defd00f1c1",
-                18: "06f007d2469b84476c98",
-                19: "d777d516a3294d541642",
-                20: "f690106148cf32090d3e",
-                21: "2bc3cd70a6a6038786fb",
-                22: "b1a29cae2677d7439f58",
-                23: "b3a4fc832d78275463ad",
-                24: "ee2e8b8d8eed476ee852",
-                25: "b6300b3334b373874a18",
-                26: "fe5322a10e888b22299d",
-                27: "cde6db7b3b8d1a685ac9",
-                28: "3611b6480e240cfe4ccc",
-                29: "995eda4a66cf9b7323da",
-                30: "6d7365c7989476aed423",
-                31: "04debebf0c97d1791b07",
-                32: "185d8c7512e5f414b420",
-                33: "ee4823eada33e7d5a146",
-                34: "720a957d7c8d51a3badd",
-                35: "6d5e81d8f641e695cfdf",
-                36: "55a372fd8fde26f77dcc",
-                37: "84e2d05a8707224d616f",
-                38: "942694d4293e1d604687",
-                39: "01e61b4c2d0faedc8e45",
-                40: "637c1ea930f02bdab52a",
-                41: "24ed702183a456f08c55",
-                42: "d3fe372041524a1b8bd6",
-                43: "70834d1b5ab19bd69cf4",
-                44: "43dafcfb06e199b2c7ac",
-                45: "f24c56f52159833e36b2",
-                46: "bcc8d8f5e07a0104f155",
-                47: "83d46ec9c0d049d1779f",
-                48: "8b4e1fd15e94f544b4f9",
-                49: "4279e847e4326403c98b",
-                50: "0fd65117026e6074ce81",
-                51: "b9fd069e25ee0235c2f6",
-                52: "4c0603b1db5471ae14ef",
-                53: "685786805de286c56f10",
-                54: "1677dceff35dae3b6a86",
-                55: "c6ac889b5fde4996d0df",
-                56: "06a060760d1a0b901615",
-                57: "7cfd5fefd77337af011d",
-                58: "6d40d851e350d70c2254",
-                59: "412257907ae4688ff730",
-                60: "e5f1020db42793001cd8",
-                61: "bec71a7c0ccbe44b3adc",
-                62: "50d56a8a6314be605e48",
-                63: "75e722f83320a966f707",
-                64: "5b58ee58fa4580a698c1",
-                65: "1863ddd8b536e4e4993c",
-                66: "9ea2b0f249342015a3e6",
-                67: "33d062d1d79a16c29065",
-                68: "1d909c2311001bed11d1",
+                10: "cd110369657f6c0ac944",
+                11: "eadce05034831d80d3ba",
+                12: "b8ec89efc032f373e56e",
+                13: "62f88682f5cfb627331c",
+                14: "f787a24b7ddb942bfbb2",
+                15: "ea45d011bc1131570945",
+                16: "97ca51f19d82b7604a7a",
+                17: "f4b5ea06c25e4ba111dc",
+                18: "bac4a1700eee59e4f55d",
+                19: "a3ad64a0b0dd920170fa",
+                20: "7c77001a26767a85065b",
+                21: "7e074dc012d98a5021da",
+                22: "f1ea1abf548a3686bc02",
+                23: "181c49b454a9f367878c",
+                24: "d3c5e22fc764de559d6f",
+                25: "b370b6efaea69aaae94a",
+                26: "0b4b919fae08d1ee2d32",
+                27: "3741a9a890f4f78d3974",
+                28: "000f7c7c284d44b04e9a",
+                29: "c109cb1ea5c0071de736",
+                30: "62c3f10d409c653ba23d",
+                31: "ae10fffee43d1bfd6407",
+                32: "70183a41ac1d1fee9afc",
+                33: "31b96c2b334de43264af",
+                34: "3137c022b9bdbf458083",
+                35: "0edce7c2775385a887cd",
+                36: "f0938d0772409a4e6d9c",
+                37: "e41a91d926d7d1e558c9",
+                38: "c197d0164a34d8c164a0",
+                39: "d4fc7e347e606cb04f24",
+                40: "1cae2b880a684fc1b071",
+                41: "55de591c3efdd068ce93",
+                42: "5c4164324a50a0b4ddc8",
+                43: "a0224a498d23e90c53b3",
+                44: "b4807fb20c455dc0fb53",
+                45: "98b40197b8771b8083dc",
+                46: "1b4de8bc733b244b9d9f",
+                47: "1d7ec1bfb5e2a26fbdf3",
+                48: "d538268edeca13f99f3f",
+                49: "6fe3faeb7ebb69195fe6",
+                50: "5b4af3aafe98a8275f44",
+                51: "c0a46cdbd2bd48d46a4c",
+                52: "107cafd96203ee8b9114",
+                53: "8566ee966087c1dc6229",
+                54: "e20a88701e14398d8284",
+                55: "2818469ca470f3398f86",
+                56: "76ff73ad50b98443e8e6",
+                57: "726b4d5ae61dec2b3120",
+                58: "f9978dc98aae3596778d",
+                59: "ad4cb33849a50203d0be",
+                60: "7c282db5c753737bb2a8",
+                61: "7ac614ba799f658bbea4",
+                62: "24c5eec45b826f678aaa",
+                63: "2bf59067cdaaeb80e494",
+                64: "62833637e15385ca6b6e",
+                65: "2a60cfb28aa2dac18dfd",
+                66: "99b05ff65c230c60252f",
+                67: "d1a7656603d66b86c564",
+                68: "5d5eb243d40086c1f8db",
+                69: "3bbf782feeb6679131d8",
               }[e]
             );
           })(e));
@@ -398,10 +398,10 @@ var CLSTAMP = "7230433";
         return p;
       }),
       n.d(t, "d", function () {
-        return g;
+        return b;
       }),
       n.d(t, "e", function () {
-        return b;
+        return g;
       }),
       n.d(t, "c", function () {
         return E;
@@ -421,7 +421,7 @@ var CLSTAMP = "7230433";
       h = "18446744073709551615",
       m = 0,
       p = 2147483647;
-    function g(e, t = "en") {
+    function b(e, t = "en") {
       switch (e) {
         case 0:
           return "en";
@@ -487,7 +487,7 @@ var CLSTAMP = "7230433";
           return t;
       }
     }
-    const b = (e) => ("koreana" === e ? "korean" : e);
+    const g = (e) => ("koreana" === e ? "korean" : e);
     function E(e, t = "") {
       switch (e) {
         case 0:
@@ -730,7 +730,7 @@ var CLSTAMP = "7230433";
         return p;
       }),
       n.d(t, "f", function () {
-        return g;
+        return b;
       });
     n("mrSG");
     var r = n("/7KC"),
@@ -898,7 +898,7 @@ var CLSTAMP = "7230433";
         ? "https://steamloopback.host"
         : "";
     }
-    function g() {
+    function b() {
       const e = window.location.href;
       return e.startsWith(o.STORE_BASE_URL)
         ? "store"
@@ -962,36 +962,36 @@ var CLSTAMP = "7230433";
   },
   "79S0": function (e, t, n) {
     var r = {
-      "./friendsui_arabic.json": ["C1RR", 9],
-      "./friendsui_brazilian.json": ["s2l5", 10],
-      "./friendsui_bulgarian.json": ["sXfD", 11],
-      "./friendsui_czech.json": ["TcQ7", 12],
-      "./friendsui_danish.json": ["lvoG", 13],
-      "./friendsui_dutch.json": ["6ght", 14],
-      "./friendsui_english.json": ["n/Sq", 15],
-      "./friendsui_finnish.json": ["A6os", 16],
-      "./friendsui_french.json": ["qtmt", 17],
-      "./friendsui_german.json": ["a23T", 18],
-      "./friendsui_greek.json": ["N3te", 19],
-      "./friendsui_hungarian.json": ["kOaF", 20],
-      "./friendsui_italian.json": ["5jaL", 21],
-      "./friendsui_japanese.json": ["MoM5", 22],
-      "./friendsui_koreana.json": ["omEY", 23],
-      "./friendsui_latam.json": ["uDNJ", 24],
-      "./friendsui_norwegian.json": ["oQbv", 25],
-      "./friendsui_polish.json": ["EhcC", 26],
-      "./friendsui_portuguese.json": ["bXmq", 27],
-      "./friendsui_romanian.json": ["EFxq", 28],
-      "./friendsui_russian.json": ["7jnr", 29],
-      "./friendsui_sc_schinese.json": ["tKeK", 30],
-      "./friendsui_schinese.json": ["gEsF", 31],
-      "./friendsui_spanish.json": ["yMyD", 32],
-      "./friendsui_swedish.json": ["w8HU", 33],
-      "./friendsui_tchinese.json": ["tgEv", 34],
-      "./friendsui_thai.json": ["5Ip8", 35],
-      "./friendsui_turkish.json": ["1E74", 36],
-      "./friendsui_ukrainian.json": ["JXOb", 37],
-      "./friendsui_vietnamese.json": ["bFjG", 38],
+      "./friendsui_arabic.json": ["C1RR", 10],
+      "./friendsui_brazilian.json": ["s2l5", 11],
+      "./friendsui_bulgarian.json": ["sXfD", 12],
+      "./friendsui_czech.json": ["TcQ7", 13],
+      "./friendsui_danish.json": ["lvoG", 14],
+      "./friendsui_dutch.json": ["6ght", 15],
+      "./friendsui_english.json": ["n/Sq", 16],
+      "./friendsui_finnish.json": ["A6os", 17],
+      "./friendsui_french.json": ["qtmt", 18],
+      "./friendsui_german.json": ["a23T", 19],
+      "./friendsui_greek.json": ["N3te", 20],
+      "./friendsui_hungarian.json": ["kOaF", 21],
+      "./friendsui_italian.json": ["5jaL", 22],
+      "./friendsui_japanese.json": ["MoM5", 23],
+      "./friendsui_koreana.json": ["omEY", 24],
+      "./friendsui_latam.json": ["uDNJ", 25],
+      "./friendsui_norwegian.json": ["oQbv", 26],
+      "./friendsui_polish.json": ["EhcC", 27],
+      "./friendsui_portuguese.json": ["bXmq", 28],
+      "./friendsui_romanian.json": ["EFxq", 29],
+      "./friendsui_russian.json": ["7jnr", 30],
+      "./friendsui_sc_schinese.json": ["tKeK", 31],
+      "./friendsui_schinese.json": ["gEsF", 32],
+      "./friendsui_spanish.json": ["yMyD", 33],
+      "./friendsui_swedish.json": ["w8HU", 34],
+      "./friendsui_tchinese.json": ["tgEv", 35],
+      "./friendsui_thai.json": ["5Ip8", 36],
+      "./friendsui_turkish.json": ["1E74", 37],
+      "./friendsui_ukrainian.json": ["JXOb", 38],
+      "./friendsui_vietnamese.json": ["bFjG", 39],
     };
     function i(e) {
       if (!n.o(r, e))
@@ -1110,36 +1110,36 @@ var CLSTAMP = "7230433";
   },
   "9Lmx": function (e, t, n) {
     var r = {
-      "./shared_arabic.json": ["nqme", 39],
-      "./shared_brazilian.json": ["f72x", 40],
-      "./shared_bulgarian.json": ["+RpC", 41],
-      "./shared_czech.json": ["R6Nw", 42],
-      "./shared_danish.json": ["GK4l", 43],
-      "./shared_dutch.json": ["7VLV", 44],
-      "./shared_english.json": ["qlTB", 45],
-      "./shared_finnish.json": ["t0Wk", 46],
-      "./shared_french.json": ["KB2W", 47],
-      "./shared_german.json": ["SP05", 48],
-      "./shared_greek.json": ["m6XH", 49],
-      "./shared_hungarian.json": ["cNDp", 50],
-      "./shared_italian.json": ["82/m", 51],
-      "./shared_japanese.json": ["i10C", 52],
-      "./shared_koreana.json": ["+pE0", 53],
-      "./shared_latam.json": ["/6Od", 54],
-      "./shared_norwegian.json": ["wpCC", 55],
-      "./shared_polish.json": ["dmUA", 56],
-      "./shared_portuguese.json": ["AM9g", 57],
-      "./shared_romanian.json": ["rCBS", 58],
-      "./shared_russian.json": ["ur1L", 59],
-      "./shared_sc_schinese.json": ["TcHa", 60],
-      "./shared_schinese.json": ["25it", 61],
-      "./shared_spanish.json": ["2NJD", 62],
-      "./shared_swedish.json": ["YZF4", 63],
-      "./shared_tchinese.json": ["TBOT", 64],
-      "./shared_thai.json": ["4+X1", 65],
-      "./shared_turkish.json": ["w87n", 66],
-      "./shared_ukrainian.json": ["6eLe", 67],
-      "./shared_vietnamese.json": ["AKAV", 68],
+      "./shared_arabic.json": ["nqme", 40],
+      "./shared_brazilian.json": ["f72x", 41],
+      "./shared_bulgarian.json": ["+RpC", 42],
+      "./shared_czech.json": ["R6Nw", 43],
+      "./shared_danish.json": ["GK4l", 44],
+      "./shared_dutch.json": ["7VLV", 45],
+      "./shared_english.json": ["qlTB", 46],
+      "./shared_finnish.json": ["t0Wk", 47],
+      "./shared_french.json": ["KB2W", 48],
+      "./shared_german.json": ["SP05", 49],
+      "./shared_greek.json": ["m6XH", 50],
+      "./shared_hungarian.json": ["cNDp", 51],
+      "./shared_italian.json": ["82/m", 52],
+      "./shared_japanese.json": ["i10C", 53],
+      "./shared_koreana.json": ["+pE0", 54],
+      "./shared_latam.json": ["/6Od", 55],
+      "./shared_norwegian.json": ["wpCC", 56],
+      "./shared_polish.json": ["dmUA", 57],
+      "./shared_portuguese.json": ["AM9g", 58],
+      "./shared_romanian.json": ["rCBS", 59],
+      "./shared_russian.json": ["ur1L", 60],
+      "./shared_sc_schinese.json": ["TcHa", 61],
+      "./shared_schinese.json": ["25it", 62],
+      "./shared_spanish.json": ["2NJD", 63],
+      "./shared_swedish.json": ["YZF4", 64],
+      "./shared_tchinese.json": ["TBOT", 65],
+      "./shared_thai.json": ["4+X1", 66],
+      "./shared_turkish.json": ["w87n", 67],
+      "./shared_ukrainian.json": ["6eLe", 68],
+      "./shared_vietnamese.json": ["AKAV", 69],
     };
     function i(e) {
       if (!n.o(r, e))
@@ -1929,8 +1929,8 @@ var CLSTAMP = "7230433";
       return n.getFullYear() == r.getFullYear() ? v(n) : y(n);
     }
     const p = new Map(),
-      g = new Map(),
       b = new Map(),
+      g = new Map(),
       E = new Map(),
       k = new Map();
     function S(e, t = !1, n = !0) {
@@ -1960,24 +1960,24 @@ var CLSTAMP = "7230433";
       );
     }
     function v(e) {
-      let t = g.get(e.getMonth());
+      let t = b.get(e.getMonth());
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           month: "long",
         })),
-        g.set(e.getMonth(), t),
+        b.set(e.getMonth(), t),
         t)
       );
     }
     function T(e) {
-      let t = b.get(e.getFullYear());
+      let t = g.get(e.getFullYear());
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           year: "numeric",
         })),
-        b.set(e.getFullYear(), t),
+        g.set(e.getFullYear(), t),
         t)
       );
     }
@@ -2628,10 +2628,10 @@ var CLSTAMP = "7230433";
         return m;
       }),
       n.d(t, "d", function () {
-        return g;
+        return b;
       }),
       n.d(t, "c", function () {
-        return b;
+        return g;
       }),
       n.d(t, "e", function () {
         return E;
@@ -2852,7 +2852,7 @@ var CLSTAMP = "7230433";
         sc_schinese: "zh-cn",
         koreana: "ko",
       },
-      g = {
+      b = {
         "en-US": 0,
         "de-DE": 1,
         "fr-FR": 2,
@@ -2883,7 +2883,7 @@ var CLSTAMP = "7230433";
         "es-419": 27,
         "vi-VN": 28,
       };
-    function b() {
+    function g() {
       return p[s.d.LANGUAGE] || null;
     }
     const E = new l();
@@ -2908,7 +2908,7 @@ var CLSTAMP = "7230433";
     n("RBVV");
     class p extends f.b {
       BIsExpired() {
-        return g.sm_rtTimeCur >= this.m_rtTimeExpires;
+        return b.sm_rtTimeCur >= this.m_rtTimeExpires;
       }
       InitFromPHPInviteLinkInfo(e) {
         this.m_ulChatID = e.chat_id;
@@ -2925,7 +2925,7 @@ var CLSTAMP = "7230433";
       }
     }
     Object(r.b)([l.k], p.prototype, "InitFromPHPInviteLinkInfo", null);
-    class g {
+    class b {
       constructor(e) {
         (this.m_bConnectingToClient = !1),
           (this.m_invite = new p(e.strInviteCode)),
@@ -3007,9 +3007,9 @@ var CLSTAMP = "7230433";
             }));
       }
     }
-    Object(r.b)([l.C], g.prototype, "m_bConnectingToClient", void 0),
-      Object(r.b)([l.C], g.prototype, "m_connectResult", void 0);
-    let b = class extends i.Component {
+    Object(r.b)([l.C], b.prototype, "m_bConnectingToClient", void 0),
+      Object(r.b)([l.C], b.prototype, "m_connectResult", void 0);
+    let g = class extends i.Component {
       render() {
         return i.createElement(
           "div",
@@ -3020,7 +3020,7 @@ var CLSTAMP = "7230433";
         );
       }
     };
-    b = Object(r.b)([d.a], b);
+    g = Object(r.b)([d.a], g);
     let E = class extends i.Component {
       constructor() {
         super(...arguments), (this.m_bTriedToLaunchSteam = !1);
@@ -3242,9 +3242,9 @@ var CLSTAMP = "7230433";
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
       } catch (e) {}
-      g.sm_rtTimeCur = t.rtTimeCur;
-      let n = new g(t);
-      o.render(i.createElement(b, { controller: n }), e);
+      b.sm_rtTimeCur = t.rtTimeCur;
+      let n = new b(t);
+      o.render(i.createElement(g, { controller: n }), e);
     }
     (window.ClientConnectionAPI = C),
       document.addEventListener("DOMContentLoaded", function () {

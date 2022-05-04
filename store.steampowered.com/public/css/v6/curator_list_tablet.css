@@ -72,7 +72,6 @@
 	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
 	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
 	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
-	--gpMaxBrowserWidth: 1080px;
 
 	/* Game capsule widths */
 	--screen-width: 100vw;
@@ -108,18 +107,18 @@
 }
 
 
-@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+/* @media screen and ( min-width: 501px ) and ( max-width: 910px ) { */
 
 	/* PAGE BACKGROUND */
-	html.responsive #page_background_container {
+	html.tablet #page_background_container {
 		background: none !important;
 	}
 
-	html.responsive .page_content_ctn.grayscale {
+	html.tablet .page_content_ctn.grayscale {
 		background: none;
 	}
 
-	html.responsive #deck_background_ctn {
+	html.tablet #deck_background_ctn {
 		position: absolute;
 		width: 100vw;
 		height: 100vh;
@@ -129,32 +128,32 @@
 
 
 	/* LIST HEADER AREA */
-	html.responsive .list_header_area {
+	html.tablet .list_header_area {
 		align-items: center;
 		gap: 12px;
 		padding-bottom: 12px;
 		border-bottom: 1px solid #FFFFFF1a;
 	}
 
-	html.responsive .curator_avatar_image a {
+	html.tablet .curator_avatar_image a {
 		display: flex;
 	}
 
-	html.responsive .list_header_area .curator_avatar_image img {
+	html.tablet .list_header_area .curator_avatar_image img {
 		margin-right: unset;
 		border-radius: var(--gpCorner-Medium);
 	}
 
-	html.responsive .list_header_area .pageheader.curator_name {
+	html.tablet .list_header_area .pageheader.curator_name {
 		font: var(--gpText-HeadingSmall);
 		text-shadow: unset;
 		font-weight: 500;
 	}
 
-	html.responsive .list_header_area a.pageheader.curator_name:hover {
+	html.tablet .list_header_area a.pageheader.curator_name:hover {
 		color: white;
 	}
 
 
 
-}
+/* } */

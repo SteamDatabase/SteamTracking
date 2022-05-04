@@ -675,10 +675,10 @@ function Responsive_ReparentItemsInTabletMode( strItemSelector, $CtnOrFn )
 	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseTabletScreenMode && window.UseTabletScreenMode(); }, 'Responsive_TabletScreenModeToggled' );
 }
 
-/* reparent element when screen width is up to RESPONSIVE_CSS_MAXWIDTH */
+/* reparent element when screen width is up to RESPONSIVE_CSS_MAXWIDTH, or we're in TabletScreenMode */
 function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn )
 {
-	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseSmallScreenMode && window.UseSmallScreenMode(); }, 'Responsive_SmallScreenModeToggled' );
+	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return ( ( window.UseSmallScreenMode && window.UseSmallScreenMode() ) || ( window.UseTabletScreenMode && window.UseTabletScreenMode() ) ); }, 'Responsive_SmallScreenModeToggled' );
 }
 
 function _Responsive_ReparentItems( strItemSelector, $CtnOrFn, fnShouldReparent, bEvent )

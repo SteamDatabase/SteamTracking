@@ -368,6 +368,1821 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
   padding: 0 16px;
   margin: auto;
 }
+.crossfade {
+  position: relative;
+  overflow: hidden;
+}
+.crossfade-anim-exit {
+  opacity: 1;
+  transition-timing-function: linear;
+  transition-property: opacity;
+}
+.crossfade-anim-exit-active {
+  opacity: 0.01;
+}
+.crossfade-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+}
+.BroadcastView {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+.broadcastHeader {
+  height: 96px;
+  background-color: #393947;
+  border-bottom: 1px solid #000;
+}
+.broadcastMainView {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.leftContainer {
+  display: flex;
+  flex: 1 0;
+  align-items: center;
+  flex-direction: column;
+}
+.rightContainer {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #000;
+}
+.broadcastChatContainer {
+  background-color: #393947;
+  flex: 1;
+  width: 100%;
+}
+.videoFooter {
+  display: none;
+}
+.videoContainer .videoBlur {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+.videoControls {
+  z-index: 31;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  transition-duration: 0.3s;
+  user-select: none;
+  pointer-events: none;
+}
+.videoContainer.HidePlayerControls .videoControls,
+.videoContainer.HidePlayerControls .STV_BroadcastClose {
+  opacity: 0;
+  bottom: -24px;
+  transition-duration: 0.3s;
+  pointer-events: none;
+}
+.videoContainer:hover.HidePlayerControls .videoControls,
+.videoContainer:hover.HidePlayerControls .STV_BroadcastClose {
+  transition-duration: 0.8s;
+}
+.videoControls .videoControlsBottom {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  pointer-events: all;
+}
+.STV_BroadcastClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  margin: 10px;
+  background-color: #0002;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.75;
+  z-index: 55;
+}
+.ChatRoomGroup_Main_Content.chatHidden .STV_BroadcastClose {
+  margin-right: 40px;
+}
+.STV_BroadcastClose:hover {
+  background-color: #000a;
+  opacity: 1;
+}
+.STV_ReplayBanner {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  border-radius: 3px;
+  padding: 0px 8px;
+  z-index: 46;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  background-image: url(../../../images/applications/community/d43887a328119e4ee2a994bc99df2eeb.png);
+  box-shadow: 0 0 10px #000;
+}
+.videoContainer.fullscreenVideo .STV_ReplayBanner {
+  font-size: 1.5vh;
+  line-height: 2vh;
+}
+.videoContainer.HidePlayerControls video {
+  cursor: none;
+}
+.BroadcastVideoWatchState,
+.BroadcastVideoUserInputNeeded {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: default;
+  z-index: 45;
+}
+.BroadcastVideoWatchState_Text {
+  text-align: center;
+  margin: 0px 10%;
+}
+.BroadcastVideoUserInputNeeded {
+  cursor: pointer;
+}
+.BroadcastVideoUserInputNeeded:hover {
+  color: #fff;
+}
+.BroadcastVideoUserInputNeeded .SVGIcon_Play {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 4px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid #fff1;
+}
+.BroadcastVideoUserInputNeeded .SVGIcon_Play path {
+  fill: #fff4;
+  stroke: #fff;
+  stroke-width: 6px;
+  stroke-dasharray: 0 576;
+  stroke-linecap: butt;
+  transition: all 0.12s ease-in-out;
+  transform: translateX(20px);
+}
+.BroadcastVideoUserInputNeeded:hover .SVGIcon_Play path {
+  stroke-dasharray: 512 0;
+  fill: #fffc;
+}
+.videoTimelineMain {
+  width: 92%;
+  margin-left: 4%;
+  margin-top: 48px;
+  position: relative;
+  outline: none;
+}
+.videoTimelineMain .STV_timelineContainer {
+  padding-top: 0px;
+  padding-bottom: 6px;
+}
+.videoTimelineMain .STV_timelineContainer:focus {
+  outline: none;
+}
+.videoTimelineMain ._DialogInputContainer {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+}
+.SliderContainer {
+  height: 22px;
+  padding-top: 6px;
+  cursor: pointer;
+}
+.VideoTimelineSlider {
+  border: none;
+  height: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  background-color: #405358;
+  box-shadow: 0px 1px 8px 2px #000, 1px 2px 28px #000;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.videoTimelineMain .STV_timelineGhostValue,
+.videoTimelineMain .STV_timelineValue,
+.videoTimelineMain .STV_timelineNoVideo {
+  border-radius: 2px;
+  background: #368fa7;
+  background: linear-gradient(
+    to right,
+    rgba(54, 143, 167, 0.45) 0px,
+    rgba(54, 143, 167, 0.5) calc(100% - 64px),
+    #5dc3ff 100%
+  );
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.videoTimelineMain .STV_timelineValue {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-x;
+  -webkit-mask-size: 4px 15px;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-x;
+  mask-size: 5px 5px;
+}
+.videoTimelineMain .STV_timelineGhostValue {
+  background: linear-gradient(
+    to right,
+    #368fa7 0%,
+    #5dc3ff calc(100% - 4px),
+    #dcf2ff calc(100% - 1px),
+    #dcf2ff 100%
+  );
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: width 0.2s linear;
+}
+.videoTimelineMain .STV_timelineNoVideo {
+  background: #3a3e46;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: width 0.2s linear;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGimlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDAwOjI2OjEwLTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE4LTA4LTE2VDAwOjQzLTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0xNlQwMDo0My0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzRkNjE4Y2MtMzc1Ny1iMjRmLTlmN2UtOGJlODkwNDczZGJmIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVjZTVmNjQwLTdhMDktYjY0YS1iNzQ0LTk5MTA1ZWVjMThmOSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjVjZTVmNjQwLTdhMDktYjY0YS1iNzQ0LTk5MTA1ZWVjMThmOSIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NWNlNWY2NDAtN2EwOS1iNjRhLWI3NDQtOTkxMDVlZWMxOGY5IiBzdEV2dDp3aGVuPSIyMDE4LTA4LTE2VDAwOjI2OjEwLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjFiNTYxMGI3LTgzZjYtY2I0YS04MjkwLThmMzQ2ZDc1OTQ5MSIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0xNlQwMDo0MjoyNy0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDozNGQ2MThjYy0zNzU3LWIyNGYtOWY3ZS04YmU4OTA0NzNkYmYiIHN0RXZ0OndoZW49IjIwMTgtMDgtMTZUMDA6NDMtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6q0R0kAAAAoElEQVRIibXNuQ2AMBBEUeoiIERQCYS0ALREU3SBLXEaH3vMShNM9H5VN63RumGetr0y1ftxNQncuvv4wFvHBwIdHPjryEBUhwVSOiaQ0QGBvK4NFHVVgKLLA0RdGKDrkgBLZwe4Oi8g0BkBmU4NiHVSQKOXA0q9ENDrucClLxo9GUDp8QBQjwSwehiA65+Ahf4EjPQzYKf7gKnuA6a62wFthz4cxE3MuQAAAABJRU5ErkJggg==);
+  background-size: 8px;
+}
+.STV_timelineContainer.minimapActive .STV_timelineGhostValue {
+  transition: none;
+}
+.STV_BroadcastSettings,
+.videoControlsButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.videoControlsButtons.LeftSpacer {
+  width: calc(50% - 85px);
+  flex-shrink: 1;
+}
+.videoControlsButtons.PlayControls {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.videoControlsButtons.GoLive {
+  text-align: left;
+  justify-content: flex-start;
+  width: 110px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.STV_BroadcastSettings {
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.videoControlButton {
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.12s ease-in-out;
+}
+.videoControlButton:hover {
+  filter: brightness(1.3);
+}
+.STV_BroadcastSettings .videoControlButton {
+  width: 18px;
+  height: 18px;
+}
+.STV_BroadcastSettings .videoControlButton .SVGIcon_Settings path {
+  fill: transparent;
+  stroke: #fff;
+  stroke: #7e7e7e;
+  stroke-width: 10px;
+}
+.STV_BroadcastSettingsPanel {
+  padding: 8px;
+  text-align: right;
+  border: 1px solid #333e;
+  background: #000c;
+  position: absolute;
+  margin-top: -156px;
+  margin-left: -64px;
+  z-index: 7;
+}
+.STV_BroadcastSettingsPanel.SubtitlesMenu {
+  overflow: hidden scroll;
+  padding-right: 0px;
+}
+.STV_BroadcastContextMenuPanel {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #333e;
+  background: #000c;
+  position: absolute;
+  z-index: 44;
+}
+.STV_BroadcastSettingsMenuItems {
+  background: #234e;
+  font-size: 12px;
+}
+.STV_BroadcastSettingsMenuItems .contextMenuItem {
+  cursor: pointer;
+  padding: 2px 12px;
+}
+.STV_BroadcastSettingsMenuItems .contextMenuItem:hover {
+  color: #fff;
+  background-color: #3d5b79;
+}
+.STV_BroadcastSettingsMenuItems .contextMenuItem.menuChecked {
+  font-weight: bold;
+  position: relative;
+}
+.STV_BroadcastSettingsMenuItems .menuChecked .contextMenuCheckMark {
+  right: 4px;
+  top: 9px;
+  left: initial;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+}
+.settingsMenuSeparator {
+  width: calc(100% - 8px);
+  height: 1px;
+  background-color: #536d84;
+  margin: 4px;
+}
+.videoControlButton .SVGIcon_Button {
+  margin-left: 6px;
+}
+.videoControlButton.controlFlip .SVGIcon_Button {
+  margin-left: -6px;
+}
+.videoControlButton.videoControlJump {
+  display: flex;
+  align-items: center;
+}
+.videoControlButton .SVGIcon_Button polyline,
+.videoControlButton .SVGIcon_Button path {
+  fill: #7e7e7e;
+  transition: fill 0.12s ease-in-out;
+}
+.videoControlButton:hover .SVGIcon_Button polyline,
+.videoControlButton:hover .SVGIcon_Button path,
+.BroadcastVolumeControl:hover .SVGIcon_Button polyline,
+.BroadcastVolumeControl:hover .SVGIcon_Button path {
+  fill: #dadada;
+}
+.STV_BroadcastSettings
+  .videoControlButton.VideoSettingsOpen
+  .SVGIcon_Button
+  polyline,
+.STV_BroadcastSettings
+  .videoControlButton.VideoSettingsOpen
+  .SVGIcon_Button
+  path {
+  fill: #6dcff6;
+  stroke: #6dcff6;
+}
+.videoControlButton.jumpToMarker .Arrow,
+.videoControlButton.jumpToMarker .preArrowBox {
+  fill: #b29a7c;
+}
+.videoControlButton.jumpToMarker:not(.noMarkersInDirection):hover .Arrow,
+.videoControlButton.jumpToMarker:not(.noMarkersInDirection):hover .preArrowBox {
+  fill: #ffead1;
+}
+.videoControlButton.jumpToMarker.noMarkersOrSegments {
+  visibility: hidden;
+  display: none;
+}
+.videoControlButton.jumpToMarker.noMarkersInDirection {
+  cursor: default;
+}
+.videoControlButton.jumpToMarker.noMarkersInDirection .Arrow,
+.videoControlButton.jumpToMarker.noMarkersInDirection .preArrowBox {
+  fill: #66635e;
+}
+.videoControlButton.videoControlGoLive {
+  display: flex;
+  width: fit-content;
+}
+.videoControlButton.videoControlGoLive .SVGIcon_Button {
+  width: 32px;
+}
+.videoControlButton.videoControlGoLive .Arrow {
+  fill: #216c91;
+}
+.videoControlButton.videoControlGoLive:hover .Arrow {
+  fill: #3da5da;
+}
+.videoControlButton.videoControlGoLive .jumpGoLive {
+  color: #fff;
+  font-size: 12px;
+  background-color: #216c91;
+  line-height: 15px;
+  height: 17.5px;
+  margin-top: 7px;
+  padding: 0 6px;
+  padding-top: 1px;
+  text-align: center;
+  border-radius: 2px;
+  margin-left: -6px;
+  transition: all 0.12s ease-in-out;
+  margin-right: -60px;
+  text-transform: uppercase;
+}
+.videoControlButton.videoControlGoLive:hover .jumpGoLive {
+  background-color: #3da5da;
+}
+.videoControlButton.videoControlGoLive.isLiveEdge:hover .jumpGoLive,
+.videoControlButton.videoControlGoLive.isLiveEdge .jumpGoLive {
+  background-color: transparent;
+  color: #3da5da;
+}
+.videoControlButton.videoControlGoLive.isLiveEdge svg {
+  display: none;
+}
+.videoControlButton.videoControlGoLive.isLiveEdge {
+  cursor: default;
+}
+.videoControlButton .jumpAheadValue {
+  position: absolute;
+  left: 9px;
+  color: #141823;
+  font-size: 12px;
+}
+.videoControlButton.buttonPlayPause {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(126, 126, 126, 0.5);
+  border-radius: 50%;
+  background-color: rgba(126, 126, 126, 0.1);
+}
+.videoControlButton.buttonPlayPause .SVGIcon_Play {
+  width: 80%;
+  height: 80%;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.videoControlButton.buttonPlayPause .SVGIcon_Pause {
+  width: 75%;
+  height: 75%;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+.videoControlButton.buttonPlayPause .SVGIcon_Button path {
+  fill: #fff;
+}
+.videoControlButton.buttonPlayPause:hover {
+  border: 1px solid #7e7e7e;
+  background-color: #7e7e7e;
+}
+.videoControlButton .SVGIcon_Button.SVGIcon_ClosedCaption {
+  width: 24px;
+  height: 24px;
+  margin-top: -2px;
+  margin-left: -2px;
+}
+.videoControlButton .SVGIcon_Button.SVGIcon_ClosedCaption path.CCBox {
+  fill: transparent;
+  stroke: #7e7e7e;
+}
+.videoControlButton.ClosedCaptionsActive
+  .SVGIcon_Button.SVGIcon_ClosedCaption
+  path.CCBox {
+  fill: #ccc;
+  stroke: #000;
+}
+.videoControlButton.ClosedCaptionsActive
+  .SVGIcon_Button.SVGIcon_ClosedCaption
+  path.C1 {
+  fill: #000;
+  stroke: #7e7e7e;
+}
+.BroadcastVolumeControl {
+  width: 34px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+}
+.BroadcastVolumeControl.ShowVolumeSlider {
+  width: 99px;
+}
+.BroadcastVolumeControl_FixedLayout {
+  width: 99px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.BroadcastVolumeControl .videoControlButton {
+  margin-right: 16px;
+}
+.BroadcastVolumeControl.muted .SVGIcon_Volume .SoundWaves {
+  display: none;
+}
+.BroadcastVolumeControl.muted .SVGIcon_Volume .SoundX line {
+  stroke: #7e7e7e;
+  stroke-width: 10px;
+}
+.BroadcastVolumeControl.muted:hover .SVGIcon_Volume .SoundX line {
+  stroke: #dadada;
+}
+.BroadcastVolumeControl .videoControlButton .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton .SoundWavesMed {
+  transition: all 0.32s ease-in-out;
+}
+.BroadcastVolumeControl .videoControlButton.HighVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.MedVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.MedVolume .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesMed {
+  opacity: 0;
+}
+.BroadcastVolumeSlider {
+  position: relative;
+  width: 50px;
+  height: 22px;
+  cursor: pointer;
+}
+.BroadcastVolumeSlider_Track {
+  background-color: #7e7e7e;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  bottom: 10px;
+}
+.BroadcastVolumeSlider_Fill {
+  background-color: #dadada;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+}
+.BroadcastVolumeSlider_Thumb {
+  background-color: #dadada;
+  position: absolute;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  left: 100%;
+  margin-left: -6px;
+  top: 50%;
+  margin-top: -6px;
+}
+.STV_timelineGrabber_Wrapper {
+  position: absolute;
+  top: -25px;
+  bottom: -3px;
+  height: 54px;
+  width: 24px;
+  z-index: 6;
+  margin-left: -14px;
+  display: flex;
+  align-items: center;
+}
+.videoTimelineMain .STV_timelineGrabber {
+  margin-left: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-app-region: no-drag;
+  transition: transform 0s ease-in-out;
+  pointer-events: none;
+}
+.STV_timelineContainer .STV_timelineGrabber .rightarrow,
+.STV_timelineContainer .STV_timelineGrabber .leftarrow {
+  transform: scaleX(0);
+  transform-origin: 50% 50%;
+}
+.STV_timelineContainer:not(.grabberDown)
+  .STV_timelineGrabber.grabberOffScreenRight
+  .rightarrow,
+.STV_timelineContainer:not(.grabberDown)
+  .STV_timelineGrabber.grabberOffScreenLeft
+  .leftarrow {
+  opacity: 1;
+  transform: scaleX(1);
+  fill: #5dc2fe;
+  stroke: #000;
+  stroke-width: 10px;
+  transition: all 0.16s ease-in-out;
+}
+.STV_timelineContainer:not(.grabberDown)
+  .STV_timelineGrabber.grabberOffScreenRight
+  .grabber,
+.STV_timelineContainer:not(.grabberDown)
+  .STV_timelineGrabber.grabberOffScreenLeft
+  .grabber {
+  opacity: 1;
+  transform: scale(1);
+  fill: #5dc2fe;
+  stroke: #000;
+  stroke-width: 10px;
+  transition: all 0.16s ease-in-out;
+}
+.STV_timelineGrabberArrow {
+  width: 24px;
+  height: 44px;
+  margin-top: -6px;
+  margin-left: 26px;
+  pointer-events: all;
+}
+.STV_timelineGrabberArrow .SVGIcon_STVTimelineGrabber .grabber {
+  transform: scale(2, 1.25);
+  transform-origin: 50% 50%;
+  fill: #5dc2fe;
+  stroke: #000;
+  stroke-width: 6px;
+  vector-effect: non-scaling-stroke;
+}
+.STV_timelineGrabberArrow:hover .SVGIcon_STVTimelineGrabber .grabber {
+  fill: #fff;
+}
+.STV_timelineMinimapContainer .STV_timelineMapCurTime {
+  display: none;
+  width: 2px;
+  height: 6px;
+  background-color: #fff;
+  position: absolute;
+  top: 6px;
+  margin-left: -1px;
+}
+.STV_timelineGrabberValue {
+  width: fit-content;
+  padding: 0 3px;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(to bottom, #5dc3ff 0%, #5dc3ff 80%);
+  box-shadow: 0px -4px 5px 2px rgba(0, 0, 0, 0.2);
+  font-size: 10px;
+  color: #fff;
+  flex: 0 1;
+  z-index: 2;
+  border-radius: 2px;
+}
+.timelineMarker {
+  width: 8px;
+  height: 32px;
+  z-index: 1;
+  position: absolute;
+  top: -8px;
+  left: 10%;
+}
+.timelineMarkerIcon {
+  width: 24px;
+  height: 32px;
+  margin-left: -8px;
+  pointer-events: none;
+}
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker {
+  fill: #b29a7c;
+  stroke: #000;
+  stroke-width: 6px;
+}
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer {
+  fill: #886b48;
+  transform: scale(0.6) translateY(26px);
+  transform-origin: 50% 50%;
+  transition: all 0.16s ease-in-out;
+}
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer {
+  transform: scale(1) translateY(0px);
+}
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker .line {
+  transform: scale(2, 1);
+  transform-origin: 50% 50%;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 0.5px;
+}
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker {
+  cursor: pointer;
+}
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .line {
+  fill: #ffe9cd;
+}
+.STV_timelineSegmentsContainer {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 16px;
+  width: 100%;
+  position: relative;
+}
+.noSegments .STV_timelineSegmentsContainer {
+  display: none;
+}
+.STV_timelineSegment {
+  margin-right: 2px;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  height: 16px;
+  transition: opacity 0.1s linear;
+}
+.STV_timelineSegment:hover {
+  z-index: 5;
+  text-shadow: 0px 0px 2px #000, 1px 1px 3px #000;
+}
+.STV_timelineSegment:hover .STV_timelineSegmentBackFill,
+.STV_timelineSegment:hover .STV_timelineSegmentFrontFill {
+  opacity: 1;
+}
+.STV_timelineSegment:hover div {
+  border-color: #cacaca;
+}
+.STV_timelineSegmentFrontFill {
+  width: 8px;
+  height: 100%;
+  border: 1px solid gray;
+  border-bottom: 0px solid transparent;
+  border-right: 0px solid transparent;
+  margin-top: 6px;
+  margin-right: 4px;
+  opacity: 0.3;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in-out;
+}
+.STV_timelineSegment.hideFront .STV_timelineSegmentFrontFill {
+  border-left: 0px solid transparent;
+  border-top-style: dotted;
+}
+.STV_timelineSegmentLabel {
+  flex-shrink: 0;
+  transition: color 0.1s ease-in-out;
+}
+.STV_timelineSegment:hover .STV_timelineSegmentLabel {
+  color: #fff !important;
+}
+.STV_timelineSegmentBackFill {
+  flex: 1;
+  height: 100%;
+  border: 1px solid gray;
+  border-bottom: 0px solid transparent;
+  border-left: 0px solid transparent;
+  margin-top: 6px;
+  margin-left: 4px;
+  opacity: 0.3;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in-out;
+}
+.STV_timelineMinimapContainer {
+  height: 22px;
+  flex: 1;
+  position: relative;
+  margin-top: 72px;
+  margin-right: 32px;
+}
+.STV_timelineMinimap {
+  width: 100%;
+  height: 6px;
+  padding: 6px 0;
+  padding-top: 7px;
+}
+.STV_timelineMinimapLine {
+  width: 100%;
+  height: 3px;
+  background-color: #405358;
+}
+.STV_timelineMinimapLine.Played {
+  background: linear-gradient(
+    to right,
+    #368fa7 0px,
+    #368fa7 calc(100% - 6px),
+    #5dc3ff 100%
+  );
+  background-color: #216c91;
+  position: absolute;
+  top: 7px;
+  transition: all 0.2s ease-in-out;
+}
+.STV_timelineMapWindow {
+  height: 100%;
+  border: 0px solid #fff0;
+  border-top: 1px dashed #fff2;
+  border-bottom: 1px dashed #fff2;
+  position: absolute;
+  top: -2px;
+  backdrop-filter: brightness(160%);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: flex;
+}
+.STV_timelineMapWindowCenter {
+  flex: 1;
+  background-color: #06f1;
+  cursor: pointer;
+}
+.STV_timelineMapWindowCenter:hover {
+  background-color: rgba(148, 191, 255, 0.144);
+}
+.STV_timelineMapWindowEdge {
+  width: 4px;
+  height: 100%;
+  background-color: rgba(213, 228, 255, 0.5);
+  flex-shrink: 0;
+  cursor: ew-resize;
+}
+.STV_timelineMapWindowEdge:hover {
+  background-color: #fff;
+  cursor: ew-resize;
+}
+.STV_BroadcastController {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 64px;
+}
+.STV_BroadcastTooltip {
+  position: absolute;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 4px;
+  border-radius: 4px;
+  user-select: none;
+  background-color: #216c91;
+  box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.5),
+    2px 3px 32px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+.dash_video_stats {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: block;
+  background: rgba(40, 60, 82, 0.65);
+  padding: 8px;
+  color: #cfdae4;
+  font: 14px Sans-Serif;
+  backdrop-filter: blur(8px);
+  margin: 6px;
+  border: 1px solid #000;
+  z-index: 40;
+}
+.dash_video_stats .videoStatsValue {
+  color: #fff;
+}
+.dash_video_stats .dash_stat_close_button {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  background-color: #0005;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 0;
+  cursor: pointer;
+}
+.dash_video_stats .dash_stat_close_button:focus,
+.dash_video_stats .dash_stat_close_button:active {
+  outline: none;
+}
+.dash_video_stats .dash_stat_close_button svg {
+  width: 100%;
+  height: 100%;
+}
+.dash_video_stats .dash_stat_close_button svg line {
+  stroke: #c9d3df;
+  stroke-width: 24px;
+}
+.dash_video_stats .dash_stat_close_button:hover svg line {
+  stroke: #fff;
+}
+.dash_stat_close_button {
+  float: right;
+}
+.BroadcastTab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.ToggleBroadcastChat {
+  padding: 7px;
+  border-radius: 2px;
+  margin: 8px 8px 8px 0px;
+  align-self: center;
+  background-color: #7a6ebe;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.ToggleBroadcastChat .SVGIcon_DoubleArrow {
+  transform: rotateZ(180deg);
+  transition: all 0.16s ease-in-out;
+}
+.ChatCollapsed .ToggleBroadcastChat .SVGIcon_DoubleArrow {
+  transform: rotateZ(0deg);
+}
+.BroadcastTabHeaderContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.TheaterMode .BroadcastTabHeaderContainer {
+  display: none;
+}
+.BroadcastTab_OverBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.BroadcastTab_HeaderRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  width: 356px;
+}
+.BroadcastContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+  padding: 18px 16px;
+  padding-top: 0px;
+  flex-grow: 1;
+  min-height: 0;
+}
+.multiChatDialog .BroadcastContainer {
+  padding: 0;
+  padding-right: 2px;
+}
+.TheaterMode .BroadcastContainer {
+  padding: 0;
+  height: 100%;
+}
+.BroadcastChat {
+  max-width: 340px;
+  min-width: 340px;
+  flex: 1;
+  background-color: #22252b;
+  font-size: 0;
+  position: relative;
+}
+.BroadcastChat iframe {
+  border: 0px;
+  height: 100%;
+  width: 100%;
+}
+.BroadcastSection,
+.BroadcastContainerSection {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  flex-basis: content;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.BroadcastSection {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  max-height: calc(100% - 50px);
+}
+.BroadcastContainerSection {
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+.BroadcastDetailsSection {
+  flex: 1;
+  display: flex;
+  user-select: none;
+  min-height: 195px;
+}
+.TheaterMode .BroadcastSection {
+  max-height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.TheaterMode .BroadcastDetailsSection {
+  display: none;
+}
+.BroadcastDetailsSection .BroadcastDetails {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  padding: 0px 8px;
+}
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
+  height: 60px;
+  font-size: 16px;
+  padding: 8px 8px;
+  box-sizing: border-box;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.BroadcastDetailsHeader_ViewerCount {
+  margin-top: 6px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  pointer-events: none;
+  text-decoration: none;
+}
+.BroadcastDetailsHeader_ViewerCount .SVGIcon_Viewers {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  margin-bottom: -3px;
+}
+.BroadcastButton.WatchWithFriends .SVGIcon_Viewers .backGuy {
+  fill: #fff;
+}
+.BroadcastButton.WatchWithFriends .SVGIcon_Viewers .frontGuy {
+  fill: #b6c3f8;
+}
+.videoContainer .BroadcastDetailsHeader_ViewerCount {
+  margin-left: 0px;
+}
+.videoContainer .videoBackground,
+.BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur {
+  width: 100%;
+  opacity: 0.6;
+  user-select: none;
+  filter: blur(24px) saturate(2) brightness(1.21);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) -25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) -25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 100%;
+  max-height: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.videoContainer .videoBackground {
+  opacity: 0.4;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+.BroadcastDetails .BroadcastDetailsHeader .AppTitle {
+  color: #c1c6cf;
+  flex-shrink: 0;
+}
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastTitle {
+  color: #777;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLink {
+  color: #778494;
+  cursor: pointer;
+  font-size: 14px;
+  width: fit-content;
+}
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLink:hover {
+  color: #aaa;
+}
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLanguage {
+  color: #8277b1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .Info {
+  display: flex;
+  align-items: center;
+}
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .Actions {
+  margin-left: 40px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.BroadcastDetailsSection
+  .BroadcastDetails
+  .BroadcastDetailsHeader
+  .ContextMenuButton {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  padding-top: 4px;
+}
+.BroadcastDetailsSection
+  .BroadcastDetails
+  .BroadcastDetailsHeader
+  .ContextMenuButton
+  .SVGIcon_DownArrowContextMenu {
+  fill: #8277b1;
+  width: 16px;
+  height: 16px;
+  stroke-width: 8px;
+  stroke: #8277b1;
+  margin-left: 4px;
+}
+.BroadcastChatDivider {
+  background-color: #333741;
+  border: 0.5px solid #121216;
+  z-index: 1;
+}
+.TheaterMode .BroadcastChatDivider {
+  background-color: #121314;
+}
+.TheaterMode .BroadcastChatDivider:hover,
+.BroadcastChatDivider:hover {
+  background-color: #40464f;
+}
+.BroadcastTheaterToggle,
+.BroadcastChatPositionToggle,
+.BroadcastFullscreenToggle {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+.BroadcastChatPositionToggle.bottom {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHTGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0yMlQxNzozNDo0OS0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wOC0yMlQxNzozNDo0OS0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxN2I3ZmQ2Yi00MTRjLWZkNGQtYWVhZC1lYjJlZmZhMTRhODIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N2E2ZWVhNjAtMWY4OS1kMTQ0LWFjMzQtM2IwNjJjZWFhMjYxIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6N2E2ZWVhNjAtMWY4OS1kMTQ0LWFjMzQtM2IwNjJjZWFhMjYxIj4gPHBob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHJkZjpCYWc+IDxyZGY6bGk+eG1wLmRpZDo3YTZlZWE2MC0xZjg5LWQxNDQtYWMzNC0zYjA2MmNlYWEyNjE8L3JkZjpsaT4gPC9yZGY6QmFnPiA8L3Bob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo3YTZlZWE2MC0xZjg5LWQxNDQtYWMzNC0zYjA2MmNlYWEyNjEiIHN0RXZ0OndoZW49IjIwMTgtMDgtMTZUMjI6MDg6NTYtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NjIyZDNkMTEtZGVmMy0yNjRmLTg4MGItNGQzMzczMDEyNDBkIiBzdEV2dDp3aGVuPSIyMDE4LTA4LTIyVDAxOjAwOjU3LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjE3YjdmZDZiLTQxNGMtZmQ0ZC1hZWFkLWViMmVmZmExNGE4MiIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0yMlQxNzozNDo0OS0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjO+occAAACqSURBVDiNtdS9DUIhFIbhM4MjOIKDOIojQCAWLEFlTUdi5QAmFHYmJlYmRm5HSwH3oNhj7mfxJFQvfwESQlQ06gNaSkpJ1lqCRhul1HD0xg5sNRgfir7YxK5sh4o+enTqE5zYBhn9uqCjZ7ZdGn322J3tUWfaYke2Rt7+rz5RrTU+igbbfnuizjncmRpjyHtPMUZMtP1MIQRKKVEpBRNtq8s5U6317W8XNQP/4a/7D5RmRwAAAABJRU5ErkJggg==);
+  margin-right: 4px;
+}
+.BroadcastChatPositionToggle.right {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHTGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0yMlQxNzozNToxNC0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wOC0yMlQxNzozNToxNC0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MDM4ZGMxNy1jZTZhLWM1NDMtOThlYy0zNjYwNmMyMGNmOGUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzE3ZmE4NTQtODAzYS00YzQ2LThhZmUtYTI5ZTMwNmQyMDZlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MzE3ZmE4NTQtODAzYS00YzQ2LThhZmUtYTI5ZTMwNmQyMDZlIj4gPHBob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHJkZjpCYWc+IDxyZGY6bGk+eG1wLmRpZDo3YTZlZWE2MC0xZjg5LWQxNDQtYWMzNC0zYjA2MmNlYWEyNjE8L3JkZjpsaT4gPC9yZGY6QmFnPiA8L3Bob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDozMTdmYTg1NC04MDNhLTRjNDYtOGFmZS1hMjllMzA2ZDIwNmUiIHN0RXZ0OndoZW49IjIwMTgtMDgtMTZUMjI6MDg6NTYtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjJjZDM5MWYtMDUzMy0zMzRjLTg2MjEtOGQyMzYyODc1NzA0IiBzdEV2dDp3aGVuPSIyMDE4LTA4LTIyVDAxOjEyOjU5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjcwMzhkYzE3LWNlNmEtYzU0My05OGVjLTM2NjA2YzIwY2Y4ZSIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0yMlQxNzozNToxNC0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrfvlEsAAAB7SURBVEgNY6irq/s/EJgBymAgF////x8FA8UeoothUTNqMW4DicVUsxjIvgXEi4FYiBiHUdPiF0D8CoivA3EePS1+DLX4FdQRe4HYiN4Ww/CFgbD4JBD70cPiZ1AL7wJxCz3jGGThdiBWomuqHrB8THeLRysJWllMdwwAdG8ZdE1QFTUAAAAASUVORK5CYII=);
+  margin-right: 4px;
+}
+.BroadcastFullscreenToggle {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHZWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0yMlQxNzozODo1NC0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wOC0yMlQxNzozODo1NC0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0YmQzZGNhYS0xMmJlLTljNGQtYTg4Zi00NGJhOGU5NWI1MWYiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDoyNzVmZDViNS1jZTMyLWVjNDYtYTNjYi0yMWRkOTdlYjdhZjQiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4YWRmNjY1MC00NzZmLWMyNDItYWVhZi05OWJhNTYzZWYwZTkiPiA8cGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPiA8cmRmOkJhZz4gPHJkZjpsaT5hZG9iZTpkb2NpZDpwaG90b3Nob3A6Mjc1ZmQ1YjUtY2UzMi1lYzQ2LWEzY2ItMjFkZDk3ZWI3YWY0PC9yZGY6bGk+IDwvcmRmOkJhZz4gPC9waG90b3Nob3A6RG9jdW1lbnRBbmNlc3RvcnM+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6OGFkZjY2NTAtNDc2Zi1jMjQyLWFlYWYtOTliYTU2M2VmMGU5IiBzdEV2dDp3aGVuPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRmZmExZDcwLTJjZTYtMmY0ZC04ZWRjLWE3ZmMxMjI4ODE5YyIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0yMlQwMTo0OS0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0YmQzZGNhYS0xMmJlLTljNGQtYTg4Zi00NGJhOGU5NWI1MWYiIHN0RXZ0OndoZW49IjIwMTgtMDgtMjJUMTc6Mzg6NTQtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7EAK6YAAAAhElEQVRIDWP4//8/AwzX1dX9R8fI8qRgQmZhU/waiO3ItRCLA+ygZhK02B6q0J6KljoQtBhKwyxXpMBSBWQPEGUxlC1HBR/jNIOBWnFJKh61eNTiUYtpYzEtCxBii0w7KhSZisgVDjGVBLxgp4KPYWW+HbHVogMVq0V7YqtFihsBxDQEADgnFf6e0sUmAAAAAElFTkSuQmCC);
+  margin-left: 4px;
+}
+.BroadcastTheaterToggle {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF+mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0yMlQwMTo0NTo1NS0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wOC0yMlQwMTo0NTo1NS0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3YTg2NzRiMS00YTZlLWI1NDYtYWZlZi1lNzg0NGRjMDM0OTUiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDoyNzVmZDViNS1jZTMyLWVjNDYtYTNjYi0yMWRkOTdlYjdhZjQiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiNGJkNTdkNC0yZjMxLWQzNDUtYTE2My1hOGM0ODdiNGI1NzQiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmI0YmQ1N2Q0LTJmMzEtZDM0NS1hMTYzLWE4YzQ4N2I0YjU3NCIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0xNlQyMjowODo1Ni0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo3YTg2NzRiMS00YTZlLWI1NDYtYWZlZi1lNzg0NGRjMDM0OTUiIHN0RXZ0OndoZW49IjIwMTgtMDgtMjJUMDE6NDU6NTUtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6X//lCAAAALklEQVRIiWOoq6v7PxCYAcpgIBf///+fZDxq8ajFoxaPWjxq8ajFoxZjtZjuGAA6L7Opo1B2PwAAAABJRU5ErkJggg==);
+}
+.BroadcastChatDivider.horizontal {
+  min-width: 6px;
+  width: 6px;
+  height: 100%;
+  cursor: ew-resize;
+}
+.BroadcastChatDivider.vertical {
+  width: 100%;
+  min-height: 6px;
+  height: 6px;
+  cursor: ns-resize;
+}
+.chatWindow.broadcastVisible .chatBody {
+  min-height: 200px;
+  flex: 1;
+  flex-shrink: 0;
+}
+.videoContainer {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.videoContainer .BroadcastDetails {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  height: 64px;
+  padding: 8px 16px;
+  font-size: 20px;
+  text-shadow: 0px 0px 2px #000, 1px 1px 3px 4px #000, 1px 1px 8px 6px #000;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+.videoContainer.HidePlayerControls .BroadcastDetails {
+  transform: translateY(-24px);
+}
+.TheaterMode .videoContainer .BroadcastDetails,
+.videoContainer.fullscreenVideo .BroadcastDetails {
+  display: block;
+}
+.videoContainer .BroadcastDetails .BroadcastDetailsHeader .BroadcastTitle {
+  color: #ccc;
+}
+.videoContainer .BroadcastDetails .BroadcastDetailsHeader .AppTitle {
+  color: #eceff5;
+}
+.videoContainerSizer {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.videoSrc {
+  transition: all 0.06s ease-in-out;
+  z-index: 2;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #18191d;
+}
+.videoContainer.VideoPaused .videoSrc {
+  filter: saturate(0.5) brightness(0.96);
+}
+iframe.steamTVLogin {
+  border: none;
+  width: 800px;
+  max-width: 100%;
+  height: 60vh;
+  max-height: 500px;
+}
+.DialogContent.SteamTVLoginDialog {
+  width: 800px;
+  padding: 0;
+  max-width: 100%;
+}
+.DialogContent.SteamTVLoginDialog > .DialogContent_InnerWidth {
+  max-width: 800px;
+}
+.FullpageBroadcastBackdrop {
+  filter: blur(50px);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+}
+.StandalonePlayer .FullpageBroadcastBackdrop {
+  z-index: -100;
+}
+.BroadcastButton {
+  background: linear-gradient(to right, #3366ff, #7d6ebc);
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  user-select: none;
+}
+.StandalonePlayerHeader {
+  background-color: rgba(23, 26, 33, 0.3);
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+      to right,
+      rgba(51, 102, 122, 0.5),
+      rgba(0, 203, 255, 0.5)
+    )
+    100% 1;
+  height: 71px;
+  display: flex;
+  justify-content: space-between;
+}
+.StandalonePlayer.TheaterMode .StandalonePlayerHeader {
+  display: none;
+}
+.StandalonePlayerHeader .Logo {
+  margin: 12px 0 0 20px;
+  width: 154px;
+  height: 46px;
+  display: inline-block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAAAuCAYAAADQpAB0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAGEdJREFUeNrsXQlcFdX+n+1u3Mu+iKAiLmzhruAeKEruWuIabpVmpq/ee2W96m/vafVSy9JKTTMVN8i1FHFJkdRccQNUQEFBEEGWe7mXu83M/8wwczn3OBdI6/N52Z3P5zhzZ84+3/P9bWcQZ1kWcx7O448+cOcUOI8/8hCJjPodwYo7AC+LnNFr5/EXOKgnAJeYCOQ3DoENBhmDnPlnQ16tYrnL+kIslMBvvD6b3T2730LCMSSfg/y4/TOssfxCXkyqXxjcL7ifDXkxyWvMlg/D4boazrbndvf+d4/FK+N+d6DBjEUIiQyL3x3o5t97GEGpogmCCiVwIgjMvAZkInGM0bMMXYIx5tssbTxrNpSmn0uJugTK0QLgmCNrPPm3NPTVSifLOXU0O/YiVZ4RsoiRaWNIheccklT0AyuPwLBHV+ijjMDlshYwZu26e9nfbbh17j81MOi4vM+9WsE6Ge3pYTRRR8ObCUQeYBwDdpmYE6NwbftfgpR1wh6Z+KaBhokvkGUqaVPlRxf2PrdOX51nhgDHDnu1nHUC7ekCGtEMFuMAJvMNneHeY2bVl0r3kP04wYHsCakUJ7xkSu/Pek84ebTb8JT2XBtCW/jBNb5Oa/gpO4jmgKztwHWt2g5YfYiUub78e7tECEIe5d160C99J5zqL4CN0xuJVCfYnnqgwSCjAMBa+YQkHsAJebc/TFEE7KbxCtvXb+LpITCzHVjt5wTbUw407j7lGz7bwyd0ZjIQlSFP6rezmqpv12kLjtXV3Dpsriu/yLKMGWlWpfbomBQ1el83gdUEsLVwgu0p9KOJbMbdl7eKXrqinskeXyk1agsyCs4t2lh+a9c92Iem9gxVPhP7zTg3366JOI4rBGZz9fSP2tSu24LY25dWlgtV0JjTwftUMZqdXvZMQtYoUu428UlY7OGd1FXntkcuBiArAL8NPkHDlP4hk91Imcasr7qpPbd78OaCzOXzWMZSbesEIWvXruuCf3NAF1lt/2p/J6s9ZYzG62Vq315qpXvHxU9ScW3FlV3ZaQm7waU5Im5zT5+g5+aTlKoDMOuZcOYrraE6d9vFvUOTbp3/5Lpc5bOodcTML0RDQ6ZwT+w1ImXz+QMTLmBIJKGx44dv2joE5Iuv5drKb/o6/A8F7j/mn3LY109XPcu3/c6C9CbHs3hlHJ/3gwVHHzuveP9xjua022w9HNXLQFJGTsqfrXRrt7QhA/voGccwR340hjZWZiZ3nWLU3anuPCotzrNl33f1ldnLbp1euFdbnml8Jm59lHer2EW0ueZGxqaQRRy2nk3MXqJU+w8WfU+0pTb18HfBieBZHUgWToSOnlvKor6y3atb4wgjE4hlzCIJzos3YkWzDgAuVY6Vauuf80+yy1f1bywWbKv/vQXH2I9WDnKU11Y//PIFEDnK66jPeDPGKhmXFttGwIs3VgZ12Nr0MpBcur9k/IUg5aGPCzRDVc6uzJQen7m37I93HpV6UFd27u3L++IOwR0IjJjpGzZgedrDO4c+uJw25Vxk7NcDA0MnfQ45Rpk7Wet6Zp/8Vz7IbgLJCoDGwCDbs7oVPHmkb2Bvee+4LwbL5ZreBI5pwCh1tNVwvbLsyrH01NkPxfbHTN7f3sXFuzvL0qAaGpdy4hIEzhI4wZqM1de2bxl7g3syfcaBaBmlbANMGxwYM7idExrHWZKgGIO+/OymrVMLISYWVRRi1pRNbdxcfaO5MmaLoeDrDeOlGJvP+/dXdvenSKold+PoybV7M7MOmJE6bXnnTdvUWu3i2Zu7UWfUZq7a+OItIS/fu4VzfxoPzt7Ci+f7Dln8LF7vccZo2pq//Ntxx7ls785LnQR+P1i6ZvTRxhbcO3P3x+IE0eqTr4cnSS1OdPeGjdGCB22NxElF6JPo36ba4lzuFNTjX33Bi3wIQJbKAQVmlHs5399v13PhTvcWPQeD36dK837IBkCz0x9bBD83AQBtmVCW/nF1S3zM3BJWwkImB4//KcLTJ3wbQZBhMHBkMhUW2DbWNGn2lfU7vu2ykCukcvGJVyjdP29OZIAgqA/B7c94s1jl+TpFyhMaiwyAzswEpyKhfwyk95KeHoHvUKTsZe6GXK4sBOCI1BuqrML47N6DQq5eSJFkPHczts+s2QBoSYJhREN5+XoBeJeAfk0W7r8B0lrhOdcxHDx7AQCqvQgwcO0GwNWOYegcDvMi4AjcfARcZnDlwCIbQslV8d0jRwSDti0YFCYUAR7Uqgspkyk2ADCdAr+3Yg2bJh5hVgoROZSmRd/4J3Vl1JZfus4NQKby8WAZa5ko+pDGwTjNJZTCvQP37GFxeiVakVzhNQicVggTSkCDgNmMVLu1UXr4RCTjBNmRawJMqJahTbcBSDxIgmwL8ihYhraKC4tlrURzB8MwFlJgepxhrCRGyhvNb7WaKKivohgnw0Pi3ADIxkNM0nbq818M+XbL9CPCvNBYQ6hPBhQQov4S6DIKzd+VCtcUo0lnhgDM69MJIz5sx4FfrNdiNcoEX6RVBPpHX8XPEMbOu41mT1k7tIVP+6TLOWmJB46tKIIALNaLVWvLtnh5BCbG9Jk5DADtgIQRSTwf/14MqL61Tl+RJJRzqE9TUEG+46TCs+eToMxQdSPlzvkPs7gxmw1lt9Se4SHuLfvJakpPWZAO4DKFRycg2jgxQ/t3eMETrYuUqbq6uLVRGbR3TdBLY5EVTUUPWRWNExQPMpo2XT++J2Fq5YNrnG5Hd+uz0L99+AuTr5z5bJU4ickb+m8Gpx0CgOQjxm0a4x/Q/VPuWUV5zpI9KZO2CivdLLww3okMVgYp9u3kyS/iLl3eViq8IKuwmMyCmBd3t7DCWdY/etZY0GUP4T1wZUhXje80cD4BizlRhWEZADRSjJ6QYTMTvhy9esusfSJLCWORBwV2fg026qxWMyX0F9a3cPgd0zS/eDCTWS+DyrJQXnz9jtfOvzVnT75Srub05DQJoFFKpWYqYLO7m3a+eRoab6PuDdvWH4JSPbZzlrboCrJTR38lTLglL2PeGaAHPYyMT36HlKnt9q31HHe0NyV3HVVx90gKV7ZV+LQ+EjqsvH23Be1EN4eEIssPGOiT3g19MJQBkDEiOC79+um9nRuiPs7LSdY5GD9JMxYKolkSac/G9oApbUxopc0ic1CY9J48eDHINGqfyfV6kKWkVv8wlWdsuWp4355TfaE6bGCA2+IOD7cWbwgLQ2xTFtVlnC9gukS7d0BbKKg+DGJLRkLHwyBxR8PPAQjxOqNuB0nKhg2P/Zsv1D++j1Fdn9cAhh4LWHZHtfY+JmGEPTLRdhYEEDkljycwGeu9K18sMtUWaYVVbTbq7tZVFR2dTcndJvabfueHPlOyR0VPujh44KziJUA322moKViUkz4/nyDkhJtfN0mfnYtbUGtogFKWFFFaeDRXYAlMrvSMGTvr4qqBI9bHuGhaUtBEMtCEigzE6344TjINleIskoduWOmsba7Ual/3Nm2i3YPb9nfr2GGwW0T4CLc2rXvJJHQZavDAN9rIZMoB9SKp9Mid4szDQmuKbpEjJ0GREHGcFGMPNJaiFN2nj18RIwCNZ+Le3cdPB7qWRhw7DzT7hcJKjN82VgInpebGBras3GPJXLbwDgMnivqgmPp0TxgFmnDJLzyX3ITFKxmCYi5/7zatNPM/k4w1uXsBdvTNxZnuwfn1RRc/yhLcEUZR7GSljc8uvbExFgD4hkLd8p8qt+AlQMy1rLp38vnT27tv5/oQPf74LEqmiZDsIKlwhV4Avm91ALpq8Oxznz3QVResEG8olJ4DAoJiV45OPJE+bsbphT36vx+IrG4rlGig+DYAjeCvrUhiRYtNzNer58wdY0evPDF65GenRwz76MLQuPevDhv64WxEtPOrP6TDs5PFuc7NP/HzofQVmUDf46xgTKP2ngzrTw1jbWjLUFdzkjv7+3aYzw2PAxm4VruqfV7i57724eEGK49BmR8FEQPEFj9eipLT0DMaARp76MTXDyxW0zGlQj1ZZFqxn2qVx0TA6qf2Hv5vUTNcQja5KiKbm1RzyYVF2VnJYZ/k7OqaUHM39UvaXH2rMZBZjBVXsvc/9z03JwjQeEbIzVhQevL7wA/S13kNTv/W69kT6/1fy/xp5FVudfaZcHqGxivszUaoEt0uLkX7zKFtsevu3T4012LSXhQHCpjKW+XiNyes87SMcYnHJ0qAje8jLky8UIaB2MwCTX7TTklguaE6JGAymYvKY4KgqBdmnFmfbzYb2Bpt2VFeDyVlYZPHLuuJMJrdOLNu/ryVZ2uZauDzz73XnQPb6CFvjQe6mz8AbEX+nXNpyHzh6PzAgALlmHrdj4IBSEsAjgFicTvI1+XFccs6iWw2YtCb/qDfMVpd+XakDYeOdQJCvTi5HEg4Jqutq8p5kJs2MiVzo/fLJZlL5htr8o4AnctsC5QDAJprizPunv1gEWOt0wtljaLoFBkDMfMpjU8ndfdR+4fEvlS8TeMV/h7HIw6tOEutvgmHKi0q4qfT5qTv+a7LzKtnlo0GDPctZ9UK71ypdg1Y0X/I8kBkvHwCE2kTPcJLsECi1YqKHO4oKb289M6d0+8UF1/8R+n9rAXlFXlzS8uyU1H9b/yo5f1A/UG82KwpEZkHzys4ZWMhf7+QF+GNBOhAD2V8k2U01XJb4LF2bXrOAy9Z6e3Zmtuyhd0vv7UNGADQBgWclXCe2olOYUGAsRIsBCxUV+PTnrSPwTtny1v6dZgiMlpIuz7AymUNR35Zc8CRWHZkdYoNmpEXYRapuvjCovMgXXb17+cZ2P39wVWFey+V5awt0Pj1ouoqcyohgFmglyOa+aSLewdZt9EH/ylTeU8CA/QGupAMb0ZkqbbyZmlj3gcIaCZRL7meuboQpG9cPYK/G5awb51MpurMGbk+LTr3Fnxc8GTSosMSelHwxOFSE3j9+v5TOTk/FgvtwgsMg3UtH+9g0b+F+Xi1TXxr3rHJuK0ZTHBfuI7pGNznw7yCX7WOPPeAtTZHhgzqplK6xs+a8NV0ipSHAcNFe+DY53u6RgwLc8Cqj6Vtw+Mvq7hlBgr/TtDHBE/3gI+rakqsKoXbBKNJvye34Nc6ZK4aZTQWQbNZEH8ck3CWGjf4GjHp7p8qvpE6bAsAWXab6CUtw4btXRg9qyI9anrJ//mHvySX8JcREXGb2vdMOPOj3MX/DSCm/LmX3qwRs4zl9pW1d5pgNL7fcQkHevsGRFEwg+q1RTQQLRaxgNmks0Ai6veOdz5ipYZ2iHVXKDTDIRCoAGO6iqnhPq4e1G/2GEjZxu2QCMaz7/DSM2ZLHecIJ/x927/L3XxYVZQMGM0A6qJ/jwEIISZ0obEFRZd2gD76ALEdB1IESVKR98vzkiXYjG1OUJ1vwDUghtCVpFsRsUQhCis/GXfPvn8RpPNtei3yDujy5rJ2/b/YXH3v2BijtkBkACp66o2ZSk3gEjBz6t86cKtZd81kKLM2tVo69XnXzcP3mW0xY5MZ2mK4bLXoSljaxCiVXt0Am4lOXH3O5e8uSPjjmrPCRUDYrntHz3ktOuplPYmTNEmSXByLIYEIrq6+u3lr8ixOT6T6Rr80BoDLpV5s3ku+V3rtJBzWc3Hx8OoQFMXtVMHc3fw56zNFIh7KTwVYMHhRSVZS+6Be3GYHAogzw8+n1qXAOhfUR9aBFWj3W7A67Z5xYFu8Ms4ObLsOLs4LCe59EYjriW6uvgU0bb2ZtPutSxL6WbN3b2BtYzZGyNStljPGiu9uH59+UFt8SGQIC+JLsSmdd8//u8hQdX1G6OBNFyJHHIi7sD3i5+DeH/kGPjN7BUG5jGjm5otHjrra4tOoD6g+BMXaMUhQ6AvDOT2MH5DMpS8XdoJjl5zvpfz+pUWFeam1UkFwUWeBdDQGcWBiqPhUq33jpUJQKqU7F465zFXlVg8evp1zmTu2XM7aV4oG9t+ae3AKMBhCZZSix8i4t0P2H12aV98nO0bjpAwOLLy0v83aPgeIzVY1urLdeYVnK7h+gd+WBvAQjhalbczieHGCYJsjPrlUo3uQ4u3ZaolcpqwG12ulmK+5jMZT/rVtba/3eIVuQan8toQMO1DGWHRJ2ntHN+YfSSiG4mzobgmiIj9F3/HZNadJuVtUcJ9P8wM7vXYYDNrvCZicuZu9cT8CNEmRdWhbzM5nx/6g17gGjqNkyl4kQQbwvijG+sBirMwsup226XzGvy9KTAo/WVarsZKmTVk4b3wYK5AVaptQq9V012KpywHkhTdsIsBYgiQYwcnGmsz6Gt5l03OaH3ihCmBpZgMrswCArFAqXlheWbjD1zt4PAFQ2zogMorzgNRbqKZCMI5sCGicm8OSk3dioa9X247nr+w9JuiEDMirBSmbA6eVNpc3wjD8mIHxUAPm5go4m5pw4tqMg+O/bvhx7NB3JoMxEReu/rjrt4AMk/Bg8+GPzlOLZ8nVASsgmqdZ2njUVJP/+bWdXU4jkyWKUqrvK9pD5tqinabaoiKPgIGbGvvczv7TtEc/jTMbytJ/3hw5T9ANawVl2wIYjd/BsXd1oLitSXRgKgXDRfTYkxATicaCAXK9iAtNAZXDoLyiYYND9XNiUAXFiDHIMjUjfjcS6h8BqSK0xNyxSFkckR4M8s6ktuTgyFhhyx9D/WBCvTTkGbACsUlDW5DQ+VVAc0pD9cPGn4Se/ejndjYHY15q/G6gh8OOOLC4lPFKj5CvSLm7rOuk3JiQ+J1+cLluE68+z31bUJq99rjCNaj/E8bl2eKbyeskfFlNrTwr5KYRrcE6KJkRdwXsTzMhVjNq8ov5YAvThPQRZl/YXVQngNxRqkPqMjvov6OyjbmVpEJNNJKnqdCUFYr9miXaaFIvkvqTCHhdVTZTe/+Xj10DBq22e0DIOj4z9uSkmpLjp/xCp6VGvawrZK2GbJKURxKUcoD2/q9v02adXKFpPelJYKavKdh78+zia+I+NAdOUxZ5qTjEDCS0wmnEAYuuPgtUDnbtwGIOdv3QiOXKOvCsY4iTGQ3xwIyGSeiBkhsk0Y0JSDss0n8pBR8OtDfl/2IgBmYl/K7NdmYTSKW2Ad3cH3fcYij5ES2gcg9dpnLvGHnj4OgRZv29gyxrVVnqys8UnPpHXHnu1pzgvku/wfEG0/03B+athuKrx17/EqFmnl24HbYSYENZCWUQu5AY6pCUWK0oo8FtmBywC8wmaDJJMA76zOTgmQl5JpXHLFHe1n9oR25jjPaIjoW4OmiIac0SUob9LUBDqZLOTR3+CW3WZtvzHaF2bTkgqePgzV+a9cXGqsKfUvUPr9xq2en1Ge0GrNxHyjThjy0wGav+9qWV71aXnX+IgOMReh43txgNnUmJS6MUYKfPu84iKxZmPKlJZJCtQEaoHaOEs9oqUacVYT3aQR6rRB1W5LnFwXNLE0zDIgxsE5tS3wcI9xiJ+PBvYjOUnnFI+eMUXs7vpfEIGtWq3aCkNZTMNbi5W7kxrOm/vYEaA8DeMJdcT3orO+PvGYKjWAfpLtZR/DZu6b+9sWt1myb32nP/JM67yaLbtjd+HSHpuJ3z+mVW7P+ar7rhDsQV1hx/FXwsnH+CFefhvytjHstpLIhCvBnOV8kDLvtbPnxx0I8mtG1WEmg4ZIlxYNNwgNP4928RMnTXMkrp3fWPABrLmHV3r65ZmHtm0VnBwtQJIklkCWYU/2GK84+8/K8dj/NHXtAgtegOMNTeP/kga3ev+UZt/j7sd/6Y12KsvJ59/PVZAGTnhLCXHhKbvKgbOfe+8wPiP/lBOJDhsCnPv3xz7d2aqzvCPi7L/uYN2qIrfNKGWcaiqyxOX5WRFDGnNO+H2wKL6WFxiTm/Un9qDryR4DAJiVGlIEr5RFAqVfvYDYPcAga+IFf6dsLrneLNEp00rS+tfXDxp9yTb++trcyuhCy4OsSfxDsvR8wtY51/H+3PLzqpRoLINOL6sFkfjLXOkndk8kFw/bNH63g/v9DEHmqvyK5yF78QSqb2xXFKw++JZix1tLWukjZVFZtq7+RUFx/PLMxcmuPAIYm6IADIHrBOQns6DqqRoCqG+JJYxIzmQCGvLjpkAon7OiENe3QLDmpOWxvxE9n5r4a/Wu4E2VMuOqWeE5h97E4GxcBkmH1Mj3QANCvii7JIOEib7QB0Hn+Oo7l/wxbV2+yC6Jh9kBb+ZAwFGoN4oy2YdLwNc4Lsrw001FFJIKCT3KcG6XfofnQ0mOtkMSfQGgXcE/+HFk6A/TWA9jj/cwoKEEYCgFL5MSe4/rrH/wswAMw4UZ8/y7u7AAAAAElFTkSuQmCC);
+}
+.BroadcastContainerSectionVideoContainer {
+  max-height: calc(100vh - 150px);
+  position: relative;
+}
+.StandalonePlayer .BroadcastContainerSectionVideoContainer {
+  max-height: calc(100vh - 150px);
+}
+.TheaterMode .BroadcastContainerSectionVideoContainer {
+  margin-top: auto;
+  margin-bottom: auto;
+  max-height: 100%;
+}
+.BroadcastStreamDetails {
+  padding: 10px;
+}
+.WatchWithFriends {
+  margin: 0px 16px 0px 4px;
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.WatchWithFriends svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  vertical-align: top;
+  display: inline-block;
+}
+.BroadcastStreamDetails .BroadcastAppName {
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.BroadcastStreamDetails .BroadcastTitle {
+  color: #778494;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 10px;
+}
+.BroadcastStreamDetails .BroadcastLanguage {
+  color: #9582e7;
+  font-size: 18px;
+}
+.StandalonePlayer,
+.StandalonePlayer .BroadcastContainerSection,
+.StandalonePlayer .BroadcastContainer {
+  background: transparent;
+}
+.StandalonePlayer.TheaterMode,
+.TheaterMode .BroadcastContainerSection,
+.TheaterMode .BroadcastContainer {
+  height: 100%;
+}
+.StandalonePlayer .BroadcastStreamDetails {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 12px 5px;
+}
+.STV_Logo {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-left: 16px;
+}
+.STV_Logo .SVGIcon_SteamTV {
+  width: 152px;
+  height: 38px;
+  margin-right: 3px;
+}
+.STV_Logo_STEAM,
+.STV_Logo_TV {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 0;
+  color: #7d6ebc;
+  user-select: none;
+}
+.STV_Logo_TV {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin-top: 1px;
+}
+.STV_Logo_STEAM {
+  font-weight: bold;
+  margin-right: 1px;
+  background: linear-gradient(to right, #5b6adb 0%, #7d6ebc 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.STV_Logo .SVGIcon_Throbber #mainOutline path {
+  stroke-width: 0px;
+}
+.STV_Logo .SVGIcon_Throbber #mainOutline path,
+.STV_Logo .SVGIcon_Throbber #partCircle path {
+  display: none;
+}
+.STV_Logo .SVGIcon_Throbber #mainOutline .steamTV {
+  display: block;
+}
+.STV_Logo .SVGIcon_Throbber #topCircle circle {
+  stroke: #5069e5;
+}
+.STV_Logo .SVGIcon_Throbber #bottomCircle path {
+  fill: #4367f0;
+  stroke-width: 0px;
+}
+.BroadcastOffline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+}
+.LinkOverlayContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+  -webkit-app-region: no-drag;
+  display: flex;
+  flex-direction: column;
+}
+.LinkOverlayValidRegion {
+  width: 100%;
+  height: 85%;
+  -webkit-app-region: no-drag;
+  position: relative;
+}
+.LinkOverlayInvalidRegion {
+  width: 100%;
+  height: 15%;
+  background-size: 16px;
+  border-top: 1px solid rgba(101, 164, 212, 0.25);
+  border-bottom: 1px solid rgba(101, 164, 212, 0.25);
+  background-color: #0003;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+}
+.LinkOverlayInvalidRegion > div {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #80c1f3;
+  text-align: center;
+  width: fit-content;
+  vertical-align: middle;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px 4px #000, 1px 1px 3px 3px #000;
+  font-weight: 100;
+  align-self: center;
+}
+.LinkRegion {
+  left: 15%;
+  top: 20%;
+  width: 20%;
+  height: 10%;
+  opacity: 0.1;
+  background-color: #ff0;
+  display: table;
+  position: absolute;
+}
+.LinkRegion:hover {
+  opacity: 0.5;
+}
+.LinkRegionText {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.AddLinkRegion,
+.SaveLinkRegion {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 8px;
+  background: #000a;
+  border: 1px solid rgba(59, 127, 238, 0.541);
+  color: #3b7fee;
+  z-index: 51;
+  user-select: none;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.AddLinkRegion:hover,
+.SaveLinkRegion:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.SaveLinkRegion {
+  top: 45px;
+}
+@media screen and (max-width: 420px) and (min-height: 420px) {
+  .BroadcastContainer {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+  }
+  .StandalonePlayer .BroadcastContainerSectionVideoContainer {
+    flex: 1;
+  }
+  .StandalonePlayer .BroadcastContainerSection {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .BroadcastContainerSection {
+    flex: 0 0 auto;
+    align-self: stretch;
+  }
+  .BroadcastTab_HeaderRow {
+    width: 100%;
+  }
+  .BroadcastDetailsSection {
+    flex-basis: auto;
+    max-height: 32px;
+    display: none;
+  }
+  .BroadcastChatDivider.horizontal {
+    height: 6px;
+    width: 100%;
+    display: none;
+  }
+  .BroadcastChatDiv {
+    height: 100%;
+  }
+  .StandalonePlayer .LoginDiv,
+  .BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur {
+    display: none;
+  }
+  .WatchWithFriends {
+    display: none;
+  }
+  .BroadcastChat {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .StandalonePlayerHeader {
+    position: absolute;
+    z-index: 12;
+    right: 0;
+    left: 0;
+    background: none;
+    border: none;
+    display: none;
+  }
+  .StandalonePlayer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .StandalonePlayer .BroadcastContainer {
+    height: 100%;
+    flex: 1;
+    flex-direction: column;
+  }
+  .StandalonePlayer .FullpageBroadcastBackdrop {
+    position: absolute;
+  }
+  .StandalonePlayer .videoSrc {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
+    font-size: 12px;
+  }
+  .dash_video_stats {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .STV_BroadcastController {
+    margin: 0;
+  }
+  .STV_BroadcastSettings {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: #0008;
+    border-radius: 8px;
+    padding-right: 16px;
+    filter: brightness(1.3);
+  }
+  .STV_BroadcastSettingsPanel {
+    margin-top: 28px !important;
+  }
+}
+@media screen and (max-width: 830px) and (max-height: 420px) {
+  .BroadcastContainer {
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .StandalonePlayerHeader {
+    position: absolute;
+    z-index: 12;
+    right: 0;
+    left: 0;
+    background: none;
+    border: none;
+    display: none;
+  }
+  .STV_BroadcastSettings {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: #0008;
+    border-radius: 8px;
+    padding-right: 16px;
+    filter: brightness(1.3);
+  }
+  .WatchWithFriends {
+    display: none;
+  }
+  .STV_BroadcastSettingsPanel {
+    margin-top: 28px !important;
+  }
+  .StandalonePlayer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .StandalonePlayer .BroadcastContainerSectionVideoContainer {
+    flex: 1;
+    max-height: calc(100% - 32px);
+  }
+  .StandalonePlayer .FullpageBroadcastBackdrop {
+    position: absolute;
+  }
+  .StandalonePlayer .BroadcastContainerSection {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .StandalonePlayer .BroadcastChatDivider.horizontal,
+  .StandalonePlayer .BroadcastChatDiv {
+    display: none !important;
+  }
+  .BroadcastContainerSection {
+    flex: 1 1 auto;
+    align-self: stretch;
+  }
+  .BroadcastDetailsSection {
+    flex-basis: auto;
+    max-height: 32px;
+  }
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .STV_BroadcastController {
+  margin: 0;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .LeftSpacer {
+  display: none;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlsButtons {
+  width: fit-content;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode)
+  .videoControlButton.videoControlGoLive
+  .SVGIcon_Button {
+  margin-left: 0;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode)
+  .STV_BroadcastSettings
+  .videoControlButton.videoControlFitWidth {
+  width: fit-content;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoTimelineMain {
+  margin-top: 0;
+}
+@media screen and (max-width: 1735px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.videoControlJump,
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.VideoSettings {
+    display: none;
+  }
+}
+@media screen and (max-width: 1434px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .BroadcastVolumeSlider {
+    display: none;
+  }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .BroadcastVolumeControl.ShowVolumeSlider,
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .BroadcastVolumeControl_FixedLayout {
+    width: initial;
+  }
+}
+@media screen and (max-width: 1275px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.videoControlGoLive:not(.isLiveEdge) {
+    margin-left: -10px;
+  }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.buttonPlayPause {
+    width: 24px;
+    height: 24px;
+  }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.buttonPlayPause
+    .SVGIcon_Pause {
+    margin-left: 3px;
+    margin-top: 3px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.videoControlGoLive {
+    display: none;
+  }
+}
+.broadcastplayer_BroadcastPlayerLite_SAxf3 {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.broadcastplayer_BroadcastPlayerLiteVideo_yCd0z {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #18191d;
+  background-color: #000;
+}
+.broadcastplayer_BroadcastContext_3TnYL {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  overflow: hidden;
+  z-index: 5;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(0%);
+  opacity: 1;
+}
+.HidePlayerControls .broadcastplayer_BroadcastContext_3TnYL {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
+  z-index: 2;
+  height: 100%;
+  max-width: unset;
+}
 .conferencebroadcast_BroadcastChatCtn_28b1v {
   width: 100%;
   height: 100%;

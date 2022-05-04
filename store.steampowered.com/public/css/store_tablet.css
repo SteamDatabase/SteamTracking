@@ -232,7 +232,7 @@ html.tablet .tab_content_items {
 	overflow: scroll;
 	scroll-snap-type: x mandatory;
 	scroll-padding: var(--gpSpace-Gutter);
-	padding: 8px var(--gpSpace-Gutter) var(--gpVerticalResponsivePadding-Medium) var(--gpSpace-Gutter);
+	padding: 8px var(--gpSpace-Gutter) calc(var(--gpVerticalResponsivePadding-Medium) + 8px) var(--gpSpace-Gutter);
 	margin: 0px calc(0px - var(--gpSpace-Gutter));
 	width: 100%;
 

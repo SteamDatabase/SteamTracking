@@ -2056,11 +2056,10 @@ function ReparentAppLandingPageForSmallScreens()
 	var defaultReportFlex = $J('#reportBtn').css('flex-grow');
 	var defaultLanguageTableDisplay = $J('#languageTable').css('display');
 
-	var msgWatch = bUseTabletScreenMode ? 'Responsive_SmallScreenModeToggled' : 'Responsive_MobileScreenModeToggled';
+	var msgWatch = bUseTabletScreenMode ? 'Responsive_TabletScreenModeToggled' : 'Responsive_MobileScreenModeToggled';
 	$J(window).on( msgWatch, function() {
 
-		var bUseNewUX = ( bUseTabletScreenMode && window.UseSmallScreenMode && window.UseSmallScreenMode() ) || 
-			( window.UseMobileScreenMode && window.UseMobileScreenMode() );
+		var bUseNewUX = ( bUseTabletScreenMode || ( window.UseMobileScreenMode && window.UseMobileScreenMode() ) );
 
 		// if one of the wishlist buttons are visible make the action buttons flex grow so the two rows of buttons match width.
 		if ( bUseNewUX && ( $J('#add_to_wishlist_area').is(':visible') 

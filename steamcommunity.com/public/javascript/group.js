@@ -690,6 +690,17 @@ function ConfirmDeleteAnnouncement( deleteURL )
 	});
 }
 
+function UpdateAnnouncementTextContentCheckResult( steamID, gidAnnouncement, ban )
+{
+	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the automated text content check result for this announcement?  This cannot be undone.' : 'Are you sure you want to mark this announcement as containing harmful content? This cannot be undone.' );
+	dialog.done( function() {
+		$J.post( 'https://steamcommunity.com/moderation/ajaxupdateclanannouncementtextcontentcheckresult/', { sessionid: g_sessionID, steamid: steamID, gid: gidAnnouncement, ban: ban ? 1 : 0 } )
+			.done( function( data ) {
+				top.location.reload();
+			} );
+	});
+}
+
 function SetGroupState( groupid, clan_type )
 {
     ShowPromptDialog( "Change Group State", "Please enter a reason:"

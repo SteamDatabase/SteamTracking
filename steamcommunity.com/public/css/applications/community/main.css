@@ -1443,6 +1443,10 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   flex-direction: row;
   column-gap: var(--field-row-children-spacing);
   justify-content: flex-end;
+  align-items: flex-start;
+}
+.gamepaddialog_Field_eKmEX.gamepaddialog_VerticalAlignCenter_16vVn
+  .gamepaddialog_FieldLabelRow_2VcTl {
   align-items: center;
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_InlineWrapShiftsChildrenBelow_3LCXh

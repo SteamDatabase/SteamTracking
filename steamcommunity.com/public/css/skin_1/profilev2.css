@@ -3359,6 +3359,101 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 
 @media screen and (max-width: 910px)
 {
+
+	html.responsive .profile_rightcol {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .profile_leftcol {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .profile_content {
+        width: auto;
+        font-size: inherit;
+    }
+
+	html.responsive .profile_count_link {
+		font-size: inherit;
+	}
+
+    html.responsive .profile_count_link_preview_ctn .profile_count_link {
+        background: transparent;
+        margin: 0;
+		width: auto;
+		float: none;
+		padding: 0;
+		margin-bottom: 8px;
+    }
+
+	html.responsive .profile_count_link_preview > div {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	html.responsive .profile_badges_badge,
+	html.responsive .profile_badges_badge img {
+		width: 36px;
+		height: 36px;
+	}
+
+	html.responsive .profile_badges_badge {
+		margin-right: 6px;
+	}
+
+
+}
+
+	html.responsive.tablet .profile_rightcol {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive.tablet .profile_leftcol {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive.tablet .profile_content {
+        width: auto;
+        font-size: inherit;
+    }
+
+	html.responsive.tablet .profile_count_link {
+		font-size: inherit;
+	}
+
+    html.responsive.tablet .profile_count_link_preview_ctn .profile_count_link {
+        background: transparent;
+        margin: 0;
+		width: auto;
+		float: none;
+		padding: 0;
+		margin-bottom: 8px;
+    }
+
+	html.responsive.tablet .profile_count_link_preview > div {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	html.responsive.tablet .profile_badges_badge,
+	html.responsive.tablet .profile_badges_badge img {
+		width: 36px;
+		height: 36px;
+	}
+
+	html.responsive.tablet .profile_badges_badge {
+		margin-right: 6px;
+	}
+
+
+@media screen and (max-width: 910px)
+{
 	html.responsive div.profile_page {
 		min-width: 0;
 	}
@@ -3373,15 +3468,6 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 		padding-right: 8px;
 	}
 
-	html.responsive .profile_content {
-		width: auto;
-		font-size: inherit;
-	}
-
-	html.responsive .profile_count_link {
-		font-size: inherit;
-	}
-
 	html.responsive .profile_content.has_profile_background {
 		margin-left: auto;
 		margin-right: auto;
@@ -3392,9 +3478,11 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 		min-width: 0;
 	}
 
-	html.responsive .profile_leftcol, html.responsive .profile_rightcol {
-		float: none;
-		width: auto;
+	html.responsive .profile_leftcol {
+		padding: 0 1%;
+	}
+
+	html.responsive .profile_rightcol {
 		padding: 0 1%;
 	}
 
@@ -3483,12 +3571,6 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 		height: 44px;
 	}
 
-	html.responsive .profile_count_link_preview > div {
-		float: none;
-		display: inline-block;
-		vertical-align: middle;
-	}
-
 	html.responsive .profile_count_link,
 	html.responsive .profile_count_link_preview_ctn {
 		background: rgba( 0, 0, 0, 0.5 );
@@ -3508,21 +3590,6 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 		overflow: hidden;
 	}
 
-	html.responsive .profile_count_link_preview_ctn .profile_count_link {
-		background: transparent;
-		margin: 0;
-	}
-
-	html.responsive .profile_badges_badge {
-		margin-right: 6px;
-	}
-
-	html.responsive .profile_badges_badge,
-	html.responsive .profile_badges_badge img {
-		width: 36px;
-		height: 36px;
-	}
-
 	html.responsive .profile_badges {
 		margin-bottom: 0;
 	}
@@ -3534,13 +3601,6 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 	html.responsive .profile_group > *:not(.profile_group_avatar),
 	html.responsive .profile_topfriends .friendBlock > div:not(.playerAvatar) {
 		display: none;
-	}
-
-	html.responsive .profile_count_link_preview_ctn .profile_count_link {
-		width: auto;
-		float: none;
-		padding: 0;
-		margin-bottom: 8px;
 	}
 
 	html.responsive .profile_group.profile_primary_group,

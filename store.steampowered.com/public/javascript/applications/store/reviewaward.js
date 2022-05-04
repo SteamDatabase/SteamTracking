@@ -3,112 +3,52 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [61],
   {
-    "0OaU": function (e, t, a) {
-      "use strict";
-      a.d(t, "a", function () {
-        return l;
-      });
-      var r = a("q1tI"),
-        n = a.n(r),
-        o = a("6Y59"),
-        s = a("2i24"),
-        i = a.n(s);
-      class l extends n.a.PureComponent {
-        constructor(e) {
-          super(e);
-        }
-        AddSizeClass(e) {
-          "small" == this.props.size
-            ? e.push(i.a.throbber_small)
-            : "medium" == this.props.size
-            ? e.push(i.a.throbber_medium)
-            : "xlarge" == this.props.size
-            ? e.push(i.a.throbber_xlarge)
-            : "xxlarge" == this.props.size
-            ? e.push(i.a.throbber_xxlarge)
-            : e.push(i.a.throbber_large);
-        }
-        render() {
-          let e = [i.a.LoadingWrapper, "SteamLogoThrobber"];
-          this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(i.a.noString),
-            this.props.className && e.push(this.props.className),
-            this.props.static && e.push(i.a.Static);
-          let t = n.a.createElement(
-            "div",
-            { className: e.join(" ") },
-            n.a.createElement(
-              "div",
-              { className: i.a.Throbber },
-              n.a.createElement(o.qb, { className: i.a.base }),
-              n.a.createElement(o.qb, { className: i.a.blur })
-            )
-          );
-          return n.a.createElement(
-            "div",
-            {
-              className:
-                "center" == this.props.position
-                  ? i.a.throbber_center_wrapper
-                  : "",
-            },
-            t,
-            Boolean(this.props.string) &&
-              n.a.createElement(
-                "div",
-                { className: i.a.ThrobberText },
-                this.props.string
-              )
-          );
-        }
-      }
-    },
-    ARGL: function (e, t, a) {
+    "07/r": function (e, t, a) {
       e.exports = {
         "duration-app-launch": "800ms",
-        GrantAwardModal: "awardmodal_GrantAwardModal_2ilpH",
-        Header: "awardmodal_Header_2_vbZ",
-        Title: "awardmodal_Title_2yJ4j",
-        Description: "awardmodal_Description_16dRE",
-        ButtonContainer: "awardmodal_ButtonContainer_JYQgs",
-        Button: "awardmodal_Button_3M92h",
-        Selected: "awardmodal_Selected_Efo_8",
-        Disabled: "awardmodal_Disabled_3k_Tn",
-        LabelCtn: "awardmodal_LabelCtn_3jka4",
-        IconCtn: "awardmodal_IconCtn_1fdGE",
-        Label: "awardmodal_Label_2iEkq",
-        Points: "awardmodal_Points_3k_jx",
-        IconCheckMark: "awardmodal_IconCheckMark_38WUB",
-        Footer: "awardmodal_Footer_164mm",
-        Left: "awardmodal_Left_1v0jL",
-        BalanceIcon: "awardmodal_BalanceIcon_3VvvB",
-        BalanceDetails: "awardmodal_BalanceDetails_209Gy",
-        BalanceLabel: "awardmodal_BalanceLabel_2u9RZ",
-        BalanceAmount: "awardmodal_BalanceAmount_1O3FS",
-        Right: "awardmodal_Right_1hgRC",
-        Actions: "awardmodal_Actions_1-AT2",
-        Action: "awardmodal_Action_1Beae",
-        FooterLink: "awardmodal_FooterLink_KId8d",
-        Divider: "awardmodal_Divider_105py",
-        ConfirmContainer: "awardmodal_ConfirmContainer_3rAoe",
-        ConfirmAwardImage: "awardmodal_ConfirmAwardImage_1ARgx",
-        ConfirmTextCtn: "awardmodal_ConfirmTextCtn_j0Jt4",
-        ConfirmText: "awardmodal_ConfirmText_1uA9Q",
-        AwardName: "awardmodal_AwardName_25N0x",
-        TimePeriod: "awardmodal_TimePeriod_6mEUO",
-        Visible: "awardmodal_Visible_2QQTW",
-        LoadingContainer: "awardmodal_LoadingContainer_1hKG3",
-        SuccessContainer: "awardmodal_SuccessContainer_Uz_0u",
-        SuccessText: "awardmodal_SuccessText_1kQzN",
-        InitialLoading: "awardmodal_InitialLoading_1ZKr7",
-        ErrorContainer: "awardmodal_ErrorContainer_1SebP",
-        ErrorText: "awardmodal_ErrorText_ok8mo",
-        PointsAmount: "awardmodal_PointsAmount_1WCEA",
-        PointsAmountIcon: "awardmodal_PointsAmountIcon_3-jpV",
-        NotEnoughPoints: "awardmodal_NotEnoughPoints_2VkAe",
+        GrantAwardModal: "awardmodal_GrantAwardModal_2vlF5",
+        Header: "awardmodal_Header_2p7RU",
+        Title: "awardmodal_Title_2Rty4",
+        Description: "awardmodal_Description_j46gb",
+        ButtonContainer: "awardmodal_ButtonContainer_1SCKZ",
+        Button: "awardmodal_Button_zGUr9",
+        Selected: "awardmodal_Selected_29Zn-",
+        Disabled: "awardmodal_Disabled_18eTZ",
+        LabelCtn: "awardmodal_LabelCtn_in9vJ",
+        IconCtn: "awardmodal_IconCtn_3N4SI",
+        Label: "awardmodal_Label_V7W5c",
+        Points: "awardmodal_Points_Mh1VB",
+        IconCheckMark: "awardmodal_IconCheckMark_2cjo-",
+        Footer: "awardmodal_Footer_3uhvi",
+        Left: "awardmodal_Left_po3ze",
+        BalanceIcon: "awardmodal_BalanceIcon_R3Rrv",
+        BalanceDetails: "awardmodal_BalanceDetails_2R8Ec",
+        BalanceLabel: "awardmodal_BalanceLabel_26lUC",
+        BalanceAmount: "awardmodal_BalanceAmount_1A7rm",
+        Right: "awardmodal_Right_9EVpk",
+        Actions: "awardmodal_Actions_3grEe",
+        Action: "awardmodal_Action_m5O_I",
+        FooterLink: "awardmodal_FooterLink_LnM57",
+        Divider: "awardmodal_Divider_3-_vd",
+        ConfirmContainer: "awardmodal_ConfirmContainer_2SlCz",
+        ConfirmAwardImage: "awardmodal_ConfirmAwardImage_1jCgm",
+        ConfirmTextCtn: "awardmodal_ConfirmTextCtn_2vpMp",
+        ConfirmText: "awardmodal_ConfirmText_1VsBl",
+        AwardName: "awardmodal_AwardName_18XKP",
+        TimePeriod: "awardmodal_TimePeriod_2dsFe",
+        Visible: "awardmodal_Visible_99awB",
+        LoadingContainer: "awardmodal_LoadingContainer_1Ojo0",
+        SuccessContainer: "awardmodal_SuccessContainer_mT3Zs",
+        SuccessText: "awardmodal_SuccessText_1cegP",
+        InitialLoading: "awardmodal_InitialLoading_2tQ62",
+        ErrorContainer: "awardmodal_ErrorContainer_3mAxw",
+        ErrorText: "awardmodal_ErrorText_2tq6F",
+        PointsAmount: "awardmodal_PointsAmount_-p4kk",
+        PointsAmountIcon: "awardmodal_PointsAmountIcon_18Asb",
+        NotEnoughPoints: "awardmodal_NotEnoughPoints_140Wj",
       };
     },
-    tPo2: function (e, t, a) {
+    cprX: function (e, t, a) {
       "use strict";
       a.r(t),
         a.d(t, "CheckmarkCircle", function () {
@@ -118,21 +58,21 @@
           return k;
         });
       var r = a("mrSG"),
-        n = (a("E4Op"), a("vDqi")),
+        n = (a("XThB"), a("vDqi")),
         o = a.n(n),
         s = a("TyAF"),
         i = a("q1tI"),
-        l = (a("mgoM"), a("bxBv")),
-        c = a("av+R"),
-        d = a("qDk6"),
-        m = a("Jz9t"),
-        u = a("WBba"),
-        b = a("OU48"),
+        l = (a("msu0"), a("9XWO")),
+        c = a("fsrB"),
+        d = a("Lsvi"),
+        m = a("jWvk"),
+        u = a("rmVU"),
+        b = a("1udA"),
         h = a("2lpH"),
-        _ = a.n(h),
-        p = a("2vnA"),
-        g = a("lkRc");
-      a("65aj");
+        p = a.n(h),
+        _ = a("2vnA"),
+        g = a("/Q1a");
+      a("Zdsb");
       class E {
         constructor(e) {
           (this.m_lPointsAvailable = null),
@@ -187,7 +127,7 @@
             e.SetBodyFields({ steamid: g.k.steamid });
             let t = yield b.o.GetSummary(this.m_transport, e);
             1 == t.GetEResult()
-              ? (this.m_lPointsAvailable = _.a.fromString(
+              ? (this.m_lPointsAvailable = p.a.fromString(
                   t.Body().summary().points()
                 ))
               : console.error(
@@ -235,30 +175,30 @@
           });
         }
       }
-      Object(r.b)([p.C.ref], E.prototype, "m_lPointsAvailable", void 0),
+      Object(r.b)([_.C.ref], E.prototype, "m_lPointsAvailable", void 0),
         Object(r.b)(
-          [p.C.deep],
+          [_.C.deep],
           E.prototype,
           "m_mapReactionConfiguration",
           void 0
         ),
-        Object(r.b)([p.C.deep], E.prototype, "m_mapExistingReactions", void 0);
-      var w = a("Mgs7"),
-        f = a("Jqb/"),
-        y = (a("idvb"), a("6Y59")),
-        v = a("0OaU"),
-        O = a("exH9"),
-        A = a("TLQK"),
-        C = a("opsS"),
-        S = a("oet2"),
-        R = a("ARGL");
+        Object(r.b)([_.C.deep], E.prototype, "m_mapExistingReactions", void 0);
+      var w = a("7ast"),
+        f = a("jrcU"),
+        v = (a("Jsk2"), a("e356")),
+        y = a("kWcV"),
+        C = a("GbHM"),
+        O = a("GXif"),
+        A = a("hCpY"),
+        S = a("gMmH"),
+        R = a("07/r");
       function N(e) {
-        return Object(A.f)(`#RewardsReaction_${e}`);
+        return Object(O.f)(`#RewardsReaction_${e}`);
       }
       var L,
         T,
         G,
-        I = a("qbgq");
+        I = a("Rbfr");
       !(function (e) {
         (e[(e.SELECTING = 0)] = "SELECTING"),
           (e[(e.CONFIRM = 1)] = "CONFIRM"),
@@ -313,8 +253,8 @@
           });
         }
       }
-      Object(r.b)([C.b], M.prototype, "handleMouseOver", null),
-        Object(r.b)([C.b], M.prototype, "handleMouseOut", null);
+      Object(r.b)([A.b], M.prototype, "handleMouseOver", null),
+        Object(r.b)([A.b], M.prototype, "handleMouseOut", null);
       let B = (L = class extends i.Component {
         constructor(e) {
           super(e),
@@ -386,14 +326,14 @@
                 active: !0,
                 onDismiss: () => this.setState({ bShowModal: !1 }),
               },
-              i.createElement(x, null),
               i.createElement(F, null),
+              i.createElement(D, null),
               i.createElement(
                 "div",
                 { className: R.InitialLoading },
                 i.createElement(
                   "div",
-                  { className: Object(O.a)(R.LoadingContainer, R.Visible) },
+                  { className: Object(C.a)(R.LoadingContainer, R.Visible) },
                   i.createElement(H, null)
                 )
               )
@@ -492,53 +432,53 @@
                 r
               );
             })(u, t, a),
-            _ = 0 === o ? null : u.get(o),
-            p = _ ? _.points_cost : 0,
-            E = _ ? _.points_transferred : 0;
-          let y,
-            v = "";
+            p = 0 === o ? null : u.get(o),
+            _ = p ? p.points_cost : 0,
+            E = p ? p.points_transferred : 0;
+          let v,
+            y = "";
           switch (t) {
             case 1:
-              v = Object(A.f)("#GrantAwardDescription_Review");
+              y = Object(O.f)("#GrantAwardDescription_Review");
               break;
             case 2:
-              v = Object(A.f)("#GrantAwardDescription_UGC");
+              y = Object(O.f)("#GrantAwardDescription_UGC");
               break;
             case 3:
-              v = Object(A.f)("#GrantAwardDescription_Profile");
+              y = Object(O.f)("#GrantAwardDescription_Profile");
               break;
             case 4:
-              v = Object(A.f)("#GrantAwardDescription_ForumTopic");
+              y = Object(O.f)("#GrantAwardDescription_ForumTopic");
               break;
             case 5:
-              v = Object(A.f)("#GrantAwardDescription_Comment");
+              y = Object(O.f)("#GrantAwardDescription_Comment");
           }
           switch (s) {
             case G.SELECTING:
               {
                 const e = 0 === o || d.get(o),
-                  t = !b || b.greaterThanOrEqual(p),
+                  t = !b || b.greaterThanOrEqual(_),
                   a = i.createElement(
                     w.F,
                     {
                       onClick: () => this.setState({ ePhase: G.CONFIRM }),
                       disabled: e,
                       focusable: !e,
-                      title: Object(A.f)(
+                      title: Object(O.f)(
                         e
                           ? "#GrantAward_PromptTooltip"
                           : "#GrantAward_SubmitTooltip"
                       ),
                     },
-                    Object(A.f)(
+                    Object(O.f)(
                       e ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                     )
                   );
-                y = i.createElement(
+                v = i.createElement(
                   i.Fragment,
                   null,
-                  i.createElement(x, { description: v }),
-                  i.createElement(F, null),
+                  i.createElement(F, { description: y }),
+                  i.createElement(D, null),
                   0 === h.length &&
                     i.createElement(
                       "div",
@@ -546,7 +486,7 @@
                       i.createElement(
                         "div",
                         {
-                          className: Object(O.a)(R.LoadingContainer, R.Visible),
+                          className: Object(C.a)(R.LoadingContainer, R.Visible),
                         },
                         i.createElement(H, null)
                       )
@@ -575,9 +515,9 @@
                       })
                     )
                   ),
-                  i.createElement(F, null),
+                  i.createElement(D, null),
                   i.createElement(
-                    D,
+                    x,
                     { store: r },
                     e || t
                       ? a
@@ -585,9 +525,9 @@
                           i.createElement(
                             "div",
                             { key: "msg", className: R.NotEnoughPoints },
-                            Object(A.f)(
+                            Object(O.f)(
                               "#GrantAward_CantAfford",
-                              b.negate().add(p).toNumber().toLocaleString()
+                              b.negate().add(_).toNumber().toLocaleString()
                             )
                           ),
                           i.createElement(
@@ -599,7 +539,7 @@
                             i.createElement(
                               w.f,
                               { key: "button" },
-                              Object(A.f)("#GrantAward_HowToGetPoints")
+                              Object(O.f)("#GrantAward_HowToGetPoints")
                             )
                           ),
                         ]
@@ -610,18 +550,18 @@
             case G.CONFIRM:
             case G.SUBMITTING:
             case G.DONE:
-              y = i.createElement(
+              v = i.createElement(
                 i.Fragment,
                 null,
-                i.createElement(x, { description: v }),
-                i.createElement(F, null),
+                i.createElement(F, { description: y }),
+                i.createElement(D, null),
                 i.createElement(
                   "div",
                   { style: { position: "relative" } },
                   i.createElement(
                     "div",
                     {
-                      className: Object(O.a)(
+                      className: Object(C.a)(
                         R.ConfirmContainer,
                         s === G.CONFIRM && R.Visible
                       ),
@@ -636,9 +576,9 @@
                       i.createElement(
                         "div",
                         { className: R.ConfirmText },
-                        Object(A.m)(
+                        Object(O.m)(
                           "#GrantAward_Confirm",
-                          i.createElement($, null, p.toLocaleString()),
+                          i.createElement(V, null, _.toLocaleString()),
                           i.createElement(
                             "span",
                             { className: R.AwardName },
@@ -649,13 +589,13 @@
                       i.createElement(
                         "div",
                         { className: R.ConfirmText },
-                        Object(A.m)(
+                        Object(O.m)(
                           "#GrantAward_Confirm_Details",
-                          i.createElement($, null, E.toLocaleString()),
+                          i.createElement(V, null, E.toLocaleString()),
                           i.createElement(
                             "span",
                             { className: R.TimePeriod },
-                            Object(A.f)("#GrantAward_Confirm_DetailsTimePeriod")
+                            Object(O.f)("#GrantAward_Confirm_DetailsTimePeriod")
                           )
                         )
                       )
@@ -664,7 +604,7 @@
                   i.createElement(
                     "div",
                     {
-                      className: Object(O.a)(
+                      className: Object(C.a)(
                         R.LoadingContainer,
                         s === G.SUBMITTING && R.Visible
                       ),
@@ -674,7 +614,7 @@
                   i.createElement(
                     "div",
                     {
-                      className: Object(O.a)(
+                      className: Object(C.a)(
                         R.SuccessContainer,
                         s === G.DONE && R.Visible
                       ),
@@ -686,13 +626,13 @@
                     i.createElement(
                       "div",
                       { className: R.SuccessText },
-                      Object(A.f)("#GrantAward_Success")
+                      Object(O.f)("#GrantAward_Success")
                     )
                   )
                 ),
-                i.createElement(F, null),
+                i.createElement(D, null),
                 i.createElement(
-                  D,
+                  x,
                   { store: r },
                   i.createElement(
                     w.f,
@@ -700,16 +640,16 @@
                       onClick: () => this.setState({ ePhase: G.SELECTING }),
                       disabled: s !== G.CONFIRM,
                     },
-                    Object(A.f)("#GrantAward_Back")
+                    Object(O.f)("#GrantAward_Back")
                   ),
                   i.createElement(
                     w.F,
                     {
                       onClick: this.GrantAward,
-                      title: Object(A.f)("#GrantAward_SubmitTooltip"),
+                      title: Object(O.f)("#GrantAward_SubmitTooltip"),
                       disabled: s !== G.CONFIRM,
                     },
-                    Object(A.f)("#GrantAwardNowButton")
+                    Object(O.f)("#GrantAwardNowButton")
                   )
                 )
               );
@@ -718,34 +658,34 @@
               let e = "";
               switch (this.state.eResult) {
                 case 10:
-                  e = Object(A.f)("#GrantAwardError_Busy");
+                  e = Object(O.f)("#GrantAwardError_Busy");
                   break;
                 case 32:
-                  e = Object(A.f)("#GrantAwardError_PersistFailed");
+                  e = Object(O.f)("#GrantAwardError_PersistFailed");
                   break;
                 case 8:
-                  e = Object(A.f)("#GrantAwardError_InvalidParam");
+                  e = Object(O.f)("#GrantAwardError_InvalidParam");
                   break;
                 case 42:
-                  e = Object(A.f)("#GrantAwardError_NoMatch");
+                  e = Object(O.f)("#GrantAwardError_NoMatch");
                   break;
                 case 107:
-                  e = Object(A.f)("#GrantAwardError_InsufficientFunds");
+                  e = Object(O.f)("#GrantAwardError_InsufficientFunds");
                   break;
                 case 15:
-                  e = Object(A.f)("#GrantAwardError_AccessDenied");
+                  e = Object(O.f)("#GrantAwardError_AccessDenied");
                   break;
                 case 21:
-                  e = Object(A.f)("#GrantAwardError_NotLoggedOn");
+                  e = Object(O.f)("#GrantAwardError_NotLoggedOn");
                   break;
                 default:
-                  e = Object(A.f)("#GrantAwardError_Fail");
+                  e = Object(O.f)("#GrantAwardError_Fail");
               }
-              y = i.createElement(
+              v = i.createElement(
                 i.Fragment,
                 null,
-                i.createElement(x, { description: v }),
-                i.createElement(F, null),
+                i.createElement(F, { description: y }),
+                i.createElement(D, null),
                 i.createElement(
                   "div",
                   { style: { position: "relative" } },
@@ -755,14 +695,14 @@
                     i.createElement("div", { className: R.ErrorText }, e)
                   )
                 ),
-                i.createElement(F, null),
+                i.createElement(D, null),
                 i.createElement(
-                  D,
+                  x,
                   { store: r },
                   i.createElement(
                     w.f,
                     { onClick: () => this.setState({ ePhase: G.SELECTING }) },
-                    Object(A.f)("#GrantAward_Back")
+                    Object(O.f)("#GrantAward_Back")
                   )
                 )
               );
@@ -775,7 +715,7 @@
               f.d,
               { navID: "GrantAward", closeModal: n },
               l && i.createElement(S.a, { eType: S.b.Default }),
-              y
+              v
             )
           );
         }
@@ -796,20 +736,20 @@
             }));
         }
       };
-      Object(r.b)([C.b], P.prototype, "GrantAward", null),
+      Object(r.b)([A.b], P.prototype, "GrantAward", null),
         (P = Object(r.b)([s.a], P));
-      const x = ({ description: e }) =>
+      const F = ({ description: e }) =>
           i.createElement(
             "div",
             { className: R.Header },
             i.createElement(
               "div",
               { className: R.Title },
-              Object(A.f)("#GrantAwardTitle")
+              Object(O.f)("#GrantAwardTitle")
             ),
             i.createElement("div", { className: R.Description }, e)
           ),
-        D = Object(s.a)(({ store: e, children: t }) => {
+        x = Object(s.a)(({ store: e, children: t }) => {
           const a = e.GetUserPointBalance(),
             r = a && a.toNumber().toLocaleString();
           return i.createElement(
@@ -818,14 +758,14 @@
             i.createElement(
               "div",
               { className: R.Left },
-              i.createElement(y.O, { className: R.BalanceIcon }),
+              i.createElement(v.O, { className: R.BalanceIcon }),
               i.createElement(
                 "div",
                 { className: R.BalanceDetails },
                 i.createElement(
                   "div",
                   { className: R.BalanceLabel },
-                  Object(A.f)("#YourBalance")
+                  Object(O.f)("#YourBalance")
                 ),
                 i.createElement("div", { className: R.BalanceAmount }, r)
               )
@@ -846,12 +786,12 @@
                   className: R.FooterLink,
                   href: `${g.d.STORE_BASE_URL}points/howitworks`,
                 },
-                Object(A.f)("#GrantAward_PointsLink")
+                Object(O.f)("#GrantAward_PointsLink")
               )
             )
           );
         }),
-        F = () => i.createElement("div", { className: R.Divider });
+        D = () => i.createElement("div", { className: R.Divider });
       class U extends i.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
@@ -885,7 +825,7 @@
                 type: "button",
                 onMouseEnter: this.handleMouseOver,
                 onMouseLeave: this.handleMouseOut,
-                className: Object(O.a)(
+                className: Object(C.a)(
                   R.Button,
                   a && R.Selected,
                   n && R.Disabled
@@ -907,26 +847,86 @@
               "div",
               { className: R.LabelCtn },
               i.createElement("div", { className: R.Label }, N(t)),
-              i.createElement($, { className: R.Points }, o.toLocaleString())
+              i.createElement(V, { className: R.Points }, o.toLocaleString())
             ),
             n && i.createElement(j, { className: R.IconCheckMark })
           );
         }
       }
-      Object(r.b)([C.b], U.prototype, "handleMouseOver", null),
-        Object(r.b)([C.b], U.prototype, "handleMouseOut", null);
+      Object(r.b)([A.b], U.prototype, "handleMouseOver", null),
+        Object(r.b)([A.b], U.prototype, "handleMouseOut", null);
       const H = () =>
-          i.createElement(v.a, { size: "large", className: R.Loading }),
-        $ = (e) => {
+          i.createElement(y.a, { size: "large", className: R.Loading }),
+        V = (e) => {
           const { children: t, className: a } = e,
             n = Object(r.c)(e, ["children", "className"]);
           return i.createElement(
             "span",
-            Object.assign({}, n, { className: Object(O.a)(a, R.PointsAmount) }),
-            i.createElement(y.O, { className: R.PointsAmountIcon }),
+            Object.assign({}, n, { className: Object(C.a)(a, R.PointsAmount) }),
+            i.createElement(v.O, { className: R.PointsAmountIcon }),
             t
           );
         };
+    },
+    kWcV: function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return l;
+      });
+      var r = a("q1tI"),
+        n = a.n(r),
+        o = a("e356"),
+        s = a("8aua"),
+        i = a.n(s);
+      class l extends n.a.PureComponent {
+        constructor(e) {
+          super(e);
+        }
+        AddSizeClass(e) {
+          "small" == this.props.size
+            ? e.push(i.a.throbber_small)
+            : "medium" == this.props.size
+            ? e.push(i.a.throbber_medium)
+            : "xlarge" == this.props.size
+            ? e.push(i.a.throbber_xlarge)
+            : "xxlarge" == this.props.size
+            ? e.push(i.a.throbber_xxlarge)
+            : e.push(i.a.throbber_large);
+        }
+        render() {
+          let e = [i.a.LoadingWrapper, "SteamLogoThrobber"];
+          this.AddSizeClass(e),
+            void 0 === this.props.string && e.push(i.a.noString),
+            this.props.className && e.push(this.props.className),
+            this.props.static && e.push(i.a.Static);
+          let t = n.a.createElement(
+            "div",
+            { className: e.join(" ") },
+            n.a.createElement(
+              "div",
+              { className: i.a.Throbber },
+              n.a.createElement(o.qb, { className: i.a.base }),
+              n.a.createElement(o.qb, { className: i.a.blur })
+            )
+          );
+          return n.a.createElement(
+            "div",
+            {
+              className:
+                "center" == this.props.position
+                  ? i.a.throbber_center_wrapper
+                  : "",
+            },
+            t,
+            Boolean(this.props.string) &&
+              n.a.createElement(
+                "div",
+                { className: i.a.ThrobberText },
+                this.props.string
+              )
+          );
+        }
+      }
     },
   },
 ]);

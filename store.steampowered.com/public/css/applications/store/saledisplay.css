@@ -2,8 +2,7 @@
   --basicui-header-height: 0px;
 }
 .categoriesapp_CategorySectionsCtn_YuXds {
-  margin: 0px 24px 0px 24px;
-  padding-bottom: 24px;
+  padding: 0px var(--gpSpace-Gutter) var(--gpSpace-Gutter) var(--gpSpace-Gutter);
 }
 .categoriesapp_CategorySectionsCtn_YuXds .categoriesapp_CategorySection_2MUQ8 {
   margin-bottom: 12px;
@@ -33,7 +32,7 @@
   .categoriesapp_CategorySection_2MUQ8
   .categoriesapp_CategoriesCtn_3yuPy::after {
   content: " ";
-  min-width: 24px;
+  min-width: var(--gpSpace-Gutter);
 }
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8
@@ -42,11 +41,10 @@
   flex-direction: row;
   column-gap: 12px;
   flex-wrap: nowrap;
-  padding: 8px 24px 12px 24px;
-  margin-left: -24px;
-  margin-right: -24px;
-  scroll-padding-left: 24px;
-  scroll-padding-right: 24px;
+  padding: 8px var(--gpSpace-Gutter) 12px var(--gpSpace-Gutter);
+  margin-left: calc(0px - var(--gpSpace-Gutter));
+  margin-right: calc(0px - var(--gpSpace-Gutter));
+  scroll-padding: 0px var(--gpSpace-Gutter);
 }
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8
@@ -54,12 +52,30 @@
   .categoriesapp_Category_1uwcZ {
   display: block;
   position: relative;
-  width: calc((100vw - 24px - 24px - 36px) / 4);
-  height: 272px;
+  width: var(--gpWidth-4colcap);
+  height: var(--gpWidth-3colcap);
   overflow: hidden;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
   flex-shrink: 0;
   scroll-snap-align: start;
+}
+@media screen and (min-width: 1280px) {
+  .categoriesapp_CategorySectionsCtn_YuXds
+    .categoriesapp_CategorySection_2MUQ8
+    .categoriesapp_CategoriesCtn_3yuPy
+    .categoriesapp_Category_1uwcZ {
+    width: var(--gpWidth-5colcap);
+    height: var(--gpWidth-4colcap);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .categoriesapp_CategorySectionsCtn_YuXds
+    .categoriesapp_CategorySection_2MUQ8
+    .categoriesapp_CategoriesCtn_3yuPy
+    .categoriesapp_Category_1uwcZ {
+    width: var(--gpWidth-6colcap);
+    height: var(--gpWidth-5colcap);
+  }
 }
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8
@@ -68,8 +84,18 @@
   .categoriesapp_GridOuter_3Q4XM
   .categoriesapp_Grid_3anY0 {
   position: relative;
-  width: 240px;
-  height: 233px;
+  width: 100%;
+  height: auto;
+}
+.categoriesapp_CategorySectionsCtn_YuXds
+  .categoriesapp_CategorySection_2MUQ8
+  .categoriesapp_CategoriesCtn_3yuPy
+  .categoriesapp_Category_1uwcZ
+  .categoriesapp_GridOuter_3Q4XM
+  .categoriesapp_Grid_3anY0
+  img {
+  width: 100%;
+  height: auto;
 }
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8
@@ -89,22 +115,9 @@
   .categoriesapp_CategoryName_3VNsE
   span {
   position: absolute;
-  bottom: 28px;
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
+  bottom: 10%;
+  font: var(--gpText-BodyLarge);
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
   text-align: center;
   width: 100%;
   padding: 0px 10%;
@@ -114,53 +127,9 @@
 .categoriesapp_CategorySectionsCtn_YuXds
   .categoriesapp_CategorySection_2MUQ8
   .categoriesapp_CategoriesCtn_3yuPy
-  div:first-child
-  div
-  a.categoriesapp_Category_1uwcZ {
-  width: calc((100vw - 24px - 24px - 24px) / 3);
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  div:first-child
-  div
-  a.categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM {
-  top: -60px;
-  left: -30px;
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  div:first-child
-  div
-  a.categoriesapp_Category_1uwcZ
-  .categoriesapp_GridOuter_3Q4XM
-  .categoriesapp_Grid_3anY0 {
-  transform: scaleX(2.2) scaleY(1.4) rotateZ(-45deg) translate(5px, 46px);
-}
-.categoriesapp_CategorySectionsCtn_YuXds
-  .categoriesapp_CategorySection_2MUQ8
-  .categoriesapp_CategoriesCtn_3yuPy
-  div:first-child
-  div
-  a.categoriesapp_Category_1uwcZ
+  .categoriesapp_TopLevelCategory_2ZYjR
   .categoriesapp_CategoryName_3VNsE
   span {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 22px;
-  line-height: 28px;
+  font: var(--gpText-HeadingSmall);
   text-align: center;
-  font-weight: 700;
 }

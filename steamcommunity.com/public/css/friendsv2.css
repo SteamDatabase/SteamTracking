@@ -139,6 +139,57 @@ body.v6 {
 	background-position: 0 0;
 }
 
+@media screen and (max-width: 910px)
+{
+
+	html.responsive .profile_friends.title_bar,
+	html.responsive .profile_groups.title_bar {
+		background-color: transparent;
+		flex-wrap: wrap;
+	}
+
+	html.responsive .profile_friends .friends_search_text_box, html.responsive .profile_groups .groups_search_text_box {
+	    width: 100%;
+    }
+
+	html.responsive .searchBarContainer input {
+		width: 100%;
+		max-width: none;
+	}
+
+	html.responsive .manage_link, html.responsive #add_friends_button {
+		text-align: center;
+		margin: 0;
+		flex-grow: 1;
+		min-height: 30px;
+	}
+
+
+}
+
+	html.responsive.tablet .profile_friends.title_bar,
+	html.responsive.tablet .profile_groups.title_bar {
+		background-color: transparent;
+		flex-wrap: wrap;
+	}
+
+	html.responsive.tablet .profile_friends .friends_search_text_box, html.responsive .profile_groups .groups_search_text_box {
+	    width: 100%;
+    }
+
+	html.responsive.tablet .searchBarContainer input {
+		width: 100%;
+		max-width: none;
+	}
+
+	html.responsive.tablet .manage_link, html.responsive #add_friends_button {
+		text-align: center;
+		margin: 0;
+		flex-grow: 1;
+		min-height: 30px;
+	}
+
+
 @media screen and (max-width: 910px) {
     html.responsive .friends_container {
         flex-direction: column;
@@ -164,7 +215,6 @@ body.v6 {
     }
 
     html.responsive .profile_friends .friends_search_text_box, html.responsive .profile_groups .groups_search_text_box {
-	    width: 100%;
 	    margin: 5px 0 10px;
     }
 
@@ -199,13 +249,6 @@ body.v6 {
 		margin-top: 5px;
 	}
 
-	html.responsive .manage_link, html.responsive #add_friends_button {
-		text-align: center;
-		margin: 0;
-		flex-grow: 1;
-		min-height: 30px;
-	}
-
 	html.responsive .manage_link img {
 		vertical-align: middle;
 	}
@@ -217,12 +260,6 @@ body.v6 {
 	html.responsive .profile_friends.title, html.responsive .profile_groups.title {
 		display: none;
 	}
-
-	html.responsive .profile_friends.title_bar, html.responsive  .profile_groups.title_bar {
-		background-color: transparent;
-		flex-wrap: wrap;
-	}
-
 
 	html.responsive .manage_friends_panel.manage {
 		margin-top: 5px;
@@ -265,11 +302,6 @@ body.v6 {
 	html.responsive .manage_friends_panel span.row {
 		display: block;
 		margin-left: 0;
-	}
-
-	html.responsive .searchBarContainer input {
-		width: 100%;
-		max-width: none;
 	}
 
 	html.responsive .addfriend_column1 {

@@ -86,7 +86,7 @@ ${CHAT_BASE_URL}comment/recommendation/formattinghelp
 ${CHAT_BASE_URL}miniprofile/${accountid}/json
 ${CHAT_BASE_URL}miniprofile/${m_accountid}/json/?origin=${}
 ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
-${CHAT_BASE_URL}public/images/broadcast/csgo_antwerp_2022_chat_logo.png
+${CHAT_BASE_URL}public/images/broadcast/csgo_antwerp_pgl_2022_chat_logo.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CHAT_BASE_URL}public/javascript/webui/noisegate-audio-worklet.js?v=4
@@ -713,6 +713,7 @@ ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes
+${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminadddailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminremovedailydeal
@@ -1192,6 +1193,7 @@ ${g_szBaseUrl}/admin/news/postimages/${nId}
 ${g_szBaseUrl}/admin/store/flushstorehome
 ${g_szBaseUrl}/admin/store/pagecapsulepreview/?
 ${g_szBaseUrl}/public/images/marketing_tb_delete.gif
+${g_szBaseUrl}/store/fetchassociationdefaults
 ${g_szStoreGfxUrl}apps/${appid}/${}
 ${g_szStoreGfxUrl}apps/${legacy_appid}/${filename}
 ${getEventURL}&action=eventFeed&month=${newMonth}&year=${newYear}
@@ -1520,7 +1522,6 @@ https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/t
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/turret_obscuring.png
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/${hat_image}
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/${shirt_image}
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/${}/${hash}
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars//${}/${avatar}.jpg
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/309cb650beb92e00ae352710387832aea78433ef.jpg
@@ -1993,6 +1994,7 @@ https://steamcommunity.com/mobileconf/details/${nConfirmationId}?${httpParams}
 https://steamcommunity.com/mobileconf/multiajaxop
 https://steamcommunity.com/moderation/ajaxgetresetcontentmodal
 https://steamcommunity.com/moderation/ajaxresetcontent
+https://steamcommunity.com/moderation/ajaxupdateclanannouncementtextcontentcheckresult/
 https://steamcommunity.com/moderation/ajaxupdateprofileshowcasecontentcheckresult/
 https://steamcommunity.com/moderation/ajaxupdateprofiletextcontentcheckresult/
 https://steamcommunity.com/my/ajaxgetappagegatesbypassed/

@@ -3,44 +3,44 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [62],
   {
-    "21NE": function (e, t, n) {
+    "21NE": function (e, t, a) {
       "use strict";
-      n.r(t),
-        n.d(t, "default", function () {
+      a.r(t),
+        a.d(t, "default", function () {
           return v;
         });
-      var a = n("q1tI"),
-        r = n.n(a),
-        c = (n("mgoM"), n("ykc/")),
-        o = n("3+zv"),
-        i = n("kLLr"),
-        s = n("hwrv"),
-        u = n("6oCP"),
-        l = n("hKFG"),
-        m = n("6AJf"),
-        g = n("xnZ7"),
-        E = n.n(g),
-        d = n("0OaU"),
-        f = n("TLQK"),
-        _ = n("lkRc"),
-        p = n("rkHy");
+      var n = a("q1tI"),
+        r = a.n(n),
+        o = (a("msu0"), a("lo3/")),
+        c = a("XrGS"),
+        i = a("oleE"),
+        s = a("Sn0s"),
+        u = a("KVor"),
+        l = a("C1a2"),
+        m = a("uZKR"),
+        g = a("KSg0"),
+        E = a.n(g),
+        d = a("kWcV"),
+        f = a("GXif"),
+        _ = a("/Q1a"),
+        p = a("rkHy");
       function v(e) {
         return r.a.createElement(
           p.a,
           null,
-          r.a.createElement(b, Object.assign({}, e))
+          r.a.createElement(I, Object.assign({}, e))
         );
       }
-      function b(e) {
-        const { promotionName: t, language: n } = e,
-          [a, g] = r.a.useState(
+      function I(e) {
+        const { promotionName: t, language: a } = e,
+          [n, g] = r.a.useState(
             u.b.GetClanEventFromAnnouncementGID(_.e.ANNOUNCEMENT_GID)
           ),
           p = Object(s.a)();
         if (
           (r.a.useEffect(() => {
             if (
-              (null == a ? void 0 : a.AnnouncementGID) != _.e.ANNOUNCEMENT_GID
+              (null == n ? void 0 : n.AnnouncementGID) != _.e.ANNOUNCEMENT_GID
             ) {
               const e = new i.a(_.c.CLANSTEAMID);
               u.b
@@ -52,8 +52,8 @@
                 .then(g);
             }
             Object(l.a)(null);
-          }, [a]),
-          !a)
+          }, [n]),
+          !n)
         )
           return r.a.createElement(
             "div",
@@ -63,35 +63,95 @@
               string: Object(f.f)("#Loading"),
             })
           );
-        const v = a.visibility_state !== o.j.k_EEventStateVisible;
+        const v = n.visibility_state !== c.j.k_EEventStateVisible;
         return r.a.createElement(
-          c.a,
+          o.a,
           { navID: "StoreSalePageRoot", NavigationManager: p },
           r.a.createElement(m.b, {
             promotionName: t,
-            language: n,
-            eventModel: a,
+            language: a,
+            eventModel: n,
             bIsPreview: v,
           })
         );
       }
     },
-    OVk1: function (e, t, n) {
+    C1a2: function (e, t, a) {
       "use strict";
-      n.r(t);
-      var a = n("q1tI"),
-        r = n.n(a),
-        c = n("av+R"),
-        o = n("ykc/"),
-        i = n("qDk6"),
-        s = n("Jz9t"),
-        u = n("j+5p"),
-        l = (n("kKgT"), n("hwrv")),
-        m = n("MnIK"),
-        g = n("exH9"),
-        E = n("lkRc"),
-        d = n("jIbu");
-      n("3+zv");
+      a.d(t, "c", function () {
+        return m;
+      }),
+        a.d(t, "a", function () {
+          return g;
+        }),
+        a.d(t, "b", function () {
+          return E;
+        });
+      var n = a("mrSG"),
+        r = a("/cMS"),
+        o = a("q1tI"),
+        c = a("rmVU"),
+        i = a("Ys0h"),
+        s = a("2VXD"),
+        u = a("f5iL"),
+        l = a("/Q1a");
+      function m() {
+        const e = Object(s.a)("usePartnerStoreBrowseAPI"),
+          [t, a] = Object(o.useState)(!1);
+        return (
+          Object(o.useEffect)(() => {
+            (function (e = !1) {
+              return Object(n.a)(this, void 0, void 0, function* () {
+                if (e && i.a.BIsInitialized()) return;
+                const t = Object(l.h)(
+                  "partnerbrowse_webapi_token",
+                  "application_config"
+                );
+                Object(u.a)(Boolean(t), "require partnerbrowse_webapi_token");
+                const a = new c.a(l.d.WEBAPI_BASE_URL, t);
+                return (
+                  ("dev" != l.d.WEB_UNIVERSE && "beta" != l.d.WEB_UNIVERSE) ||
+                    console.log(
+                      "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                      t
+                    ),
+                  g(t),
+                  i.a.Initialize(a, l.k.is_partner_member)
+                );
+              });
+            })().then(() => {
+              var t;
+              (null === (t = null == e ? void 0 : e.token) || void 0 === t
+                ? void 0
+                : t.reason) || a(!0);
+            });
+          }, []),
+          t
+        );
+      }
+      function g(e) {
+        r.a.BIsInitialized() || r.a.Initialize(new c.a(l.d.WEBAPI_BASE_URL, e));
+      }
+      function E(e) {
+        return r.a.BIsInitialized() || g(e || null), !0;
+      }
+    },
+    OVk1: function (e, t, a) {
+      "use strict";
+      a.r(t);
+      var n = a("q1tI"),
+        r = a.n(n),
+        o = a("fsrB"),
+        c = a("lo3/"),
+        i = a("Lsvi"),
+        s = a("jWvk"),
+        u = a("O8Yk"),
+        l = (a("ROh0"), a("Sn0s")),
+        m = a("/HXi"),
+        g = a("GbHM"),
+        E = a("/Q1a"),
+        d = a("jIbu");
+      a("XrGS");
       class f {
         constructor() {
           this.m_rgSections = Object(E.h)("categories", "application_config");
@@ -104,7 +164,7 @@
         }
       }
       function _(e) {
-        const { section: t, autoFocus: n } = e;
+        const { section: t, autoFocus: a } = e;
         return r.a.createElement(
           m.a,
           { placeholderHeight: "150px" },
@@ -123,11 +183,11 @@
                 scrollDirection: "x",
                 navEntryPreferPosition: u.d.MAINTAIN_X,
               },
-              t.categories.map((t, n) =>
+              t.categories.map((t, a) =>
                 r.a.createElement(p, {
                   key: "category" + t.name,
                   category: t,
-                  autoFocus: e.autoFocus && 0 === n,
+                  autoFocus: e.autoFocus && 0 === a,
                 })
               )
             )
@@ -140,7 +200,7 @@
           i.a,
           { focusableIfNoChildren: !0, autoFocus: e.autoFocus },
           r.a.createElement(
-            c.c,
+            o.c,
             {
               href: E.d.STORE_BASE_URL + t.url,
               className: Object(g.a)({
@@ -172,21 +232,21 @@
       t.default = function () {
         const { sections: e } = (function () {
             const e = f.Get(),
-              [t, n] = Object(a.useState)(e.GetSections());
+              [t, a] = Object(n.useState)(e.GetSections());
             return { sections: t };
           })(),
           t = Object(l.a)(),
-          n = r.a.useRef();
+          a = r.a.useRef();
         return (
           r.a.useEffect(() => {
             var e;
-            return null === (e = n.current) || void 0 === e
+            return null === (e = a.current) || void 0 === e
               ? void 0
               : e.Activate(!0);
           }, []),
           r.a.createElement(
-            o.a,
-            { navID: "CategoriesApp", NavigationManager: t, navTreeRef: n },
+            c.a,
+            { navID: "CategoriesApp", NavigationManager: t, navTreeRef: a },
             r.a.createElement(
               "div",
               { className: d.CategorySectionsCtn },
@@ -202,67 +262,7 @@
         );
       };
     },
-    hKFG: function (e, t, n) {
-      "use strict";
-      n.d(t, "c", function () {
-        return m;
-      }),
-        n.d(t, "a", function () {
-          return g;
-        }),
-        n.d(t, "b", function () {
-          return E;
-        });
-      var a = n("mrSG"),
-        r = n("iO5U"),
-        c = n("q1tI"),
-        o = n("WBba"),
-        i = n("C4Nl"),
-        s = n("X2UP"),
-        u = n("r64O"),
-        l = n("lkRc");
-      function m() {
-        const e = Object(s.a)("usePartnerStoreBrowseAPI"),
-          [t, n] = Object(c.useState)(!1);
-        return (
-          Object(c.useEffect)(() => {
-            (function (e = !1) {
-              return Object(a.a)(this, void 0, void 0, function* () {
-                if (e && i.a.BIsInitialized()) return;
-                const t = Object(l.h)(
-                  "partnerbrowse_webapi_token",
-                  "application_config"
-                );
-                Object(u.a)(Boolean(t), "require partnerbrowse_webapi_token");
-                const n = new o.a(l.d.WEBAPI_BASE_URL, t);
-                return (
-                  ("dev" != l.d.WEB_UNIVERSE && "beta" != l.d.WEB_UNIVERSE) ||
-                    console.log(
-                      "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                      t
-                    ),
-                  g(t),
-                  i.a.Initialize(n, l.k.is_partner_member)
-                );
-              });
-            })().then(() => {
-              var t;
-              (null === (t = null == e ? void 0 : e.token) || void 0 === t
-                ? void 0
-                : t.reason) || n(!0);
-            });
-          }, []),
-          t
-        );
-      }
-      function g(e) {
-        r.a.BIsInitialized() || r.a.Initialize(new o.a(l.d.WEBAPI_BASE_URL, e));
-      }
-      function E(e) {
-        return r.a.BIsInitialized() || g(e || null), !0;
-      }
-    },
-    jIbu: function (e, t, n) {
+    jIbu: function (e, t, a) {
       e.exports = {
         "duration-app-launch": "800ms",
         CategorySectionsCtn: "categoriesapp_CategorySectionsCtn_YuXds",
@@ -273,69 +273,70 @@
         GridOuter: "categoriesapp_GridOuter_3Q4XM",
         Grid: "categoriesapp_Grid_3anY0",
         CategoryName: "categoriesapp_CategoryName_3VNsE",
+        TopLevelCategory: "categoriesapp_TopLevelCategory_2ZYjR",
       };
     },
-    rkHy: function (e, t, n) {
+    "lo3/": function (e, t, a) {
       "use strict";
-      n.d(t, "a", function () {
-        return g;
-      });
-      var a = n("wd/R"),
-        r = n("q1tI"),
-        c = n("WBba"),
-        o = n("qD+2"),
-        i = n("9w6b"),
-        s = n("6oCP"),
-        u = n("hKFG"),
-        l = n("TLQK"),
-        m = n("lkRc");
-      function g(e) {
-        const [t, n] = r.useState(i.a.IsInitialized());
-        return (
-          r.useEffect(() => {
-            o.a.Init(new c.a(m.d.WEBAPI_BASE_URL)),
-              s.b.Init(),
-              i.a.InitGlobal().then(() => n(!0)),
-              Object(u.a)(null);
-          }, []),
-          r.useEffect(() => {
-            const e = Object(l.c)();
-            e && a.locale(e);
-          }, []),
-          t ? e.children : null
-        );
-      }
-    },
-    "ykc/": function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
+      a.d(t, "a", function () {
         return l;
       });
-      var a = n("mrSG"),
-        r = n("q1tI"),
-        c = n.n(r),
-        o = n("av+R"),
-        i = n("yLGM"),
-        s = n("opsS"),
-        u = n("lkRc");
+      var n = a("mrSG"),
+        r = a("q1tI"),
+        o = a.n(r),
+        c = a("fsrB"),
+        i = a("ez+p"),
+        s = a("hCpY"),
+        u = a("/Q1a");
       function l(e) {
-        const { children: t, navTreeRef: n } = e,
-          r = Object(a.c)(e, ["children", "navTreeRef"]),
-          l = c.a.useRef(),
-          m = Object(s.g)(l, n);
+        const { children: t, navTreeRef: a } = e,
+          r = Object(n.c)(e, ["children", "navTreeRef"]),
+          l = o.a.useRef(),
+          m = Object(s.g)(l, a);
         if (u.d.IN_GAMEPADUI) {
           const e = window.__nav_tree_root;
-          return c.a.createElement(
-            o.b,
+          return o.a.createElement(
+            c.b,
             Object.assign({}, r, {
               navTreeRef: m,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            c.a.createElement(i.a, null, t)
+            o.a.createElement(i.a, null, t)
           );
         }
-        return c.a.createElement(c.a.Fragment, null, t);
+        return o.a.createElement(o.a.Fragment, null, t);
+      }
+    },
+    rkHy: function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return g;
+      });
+      var n = a("wd/R"),
+        r = a("q1tI"),
+        o = a("rmVU"),
+        c = a("FKEV"),
+        i = a("AM5O"),
+        s = a("KVor"),
+        u = a("C1a2"),
+        l = a("GXif"),
+        m = a("/Q1a");
+      function g(e) {
+        const [t, a] = r.useState(i.a.IsInitialized());
+        return (
+          r.useEffect(() => {
+            c.a.Init(new o.a(m.d.WEBAPI_BASE_URL)),
+              s.b.Init(),
+              i.a.InitGlobal().then(() => a(!0)),
+              Object(u.a)(null);
+          }, []),
+          r.useEffect(() => {
+            const e = Object(l.c)();
+            e && n.locale(e);
+          }, []),
+          t ? e.children : null
+        );
       }
     },
   },
