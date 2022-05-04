@@ -831,6 +831,7 @@ ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
+${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubs
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubsections
