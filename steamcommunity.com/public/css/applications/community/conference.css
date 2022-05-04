@@ -1391,7 +1391,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
   flex: 1;
   display: flex;
   user-select: none;
-  min-height: 195px;
 }
 .TheaterMode .BroadcastSection {
   max-height: 100%;
@@ -1407,6 +1406,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
   background-color: rgba(0, 0, 0, 0.15);
   position: relative;
   flex: 1;
+  align-items: center;
   overflow: hidden;
   padding: 0px 8px;
 }
@@ -1466,6 +1466,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
   left: 0;
   top: 0;
   bottom: 0;
+}
+.BroadcastDetailsSection .BroadcastDetails .ImpressionTrackedElement {
+  max-width: 940px;
 }
 .videoContainer .videoBackground {
   opacity: 0.4;

@@ -165,8 +165,8 @@
       r("kdZy"), r("wogL");
       var M = r("1BdX"),
         O = r("boaH"),
-        R = r("nWbB"),
-        T = (r("Bniq"), r("5L1o")),
+        T = r("nWbB"),
+        R = (r("Bniq"), r("5L1o")),
         j = r("02Wr"),
         z = r("MnIK"),
         F = r("6Y59"),
@@ -302,19 +302,19 @@
           return Object(a.a)(this, void 0, void 0, function* () {
             U.IsBroadcastAllowed() &&
               (Object(V.a)(null),
-              yield R.a
+              yield T.a
                 .Get()
                 .LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
               this.m_cancelSignal.token.reason ||
                 this.setState({
                   bLoadingPreference: !1,
-                  bExpanded: !R.a
+                  bExpanded: !T.a
                     .Get()
                     .BIsEmbeddedBroadcastHiddenByDefaultUserSettings(),
                   innerStyle: Object.assign(
                     Object.assign({}, this.state.innerStyle),
                     {
-                      maxHeight: R.a
+                      maxHeight: T.a
                         .Get()
                         .BIsEmbeddedBroadcastHiddenByDefaultUserSettings()
                         ? "0vh"
@@ -325,10 +325,10 @@
               yield this.props.bIsPreview &&
               this.props.accountIDs &&
               !this.props.event.BUsesContentHubForItemSource()
-                ? R.a.Get().HintLoadEmbeddablePreviewStreams(this.props)
-                : R.a.Get().HintLoadEmbeddableStreams(this.props),
+                ? T.a.Get().HintLoadEmbeddablePreviewStreams(this.props)
+                : T.a.Get().HintLoadEmbeddableStreams(this.props),
               this.props.nAppIDVOD &&
-                (R.a
+                (T.a
                   .Get()
                   .SetupEmbeddableVOD(this.props, !this.props.bSkipPreRoll),
                 this.props.bSkipPreRoll && this.PlayTopNonVOD()),
@@ -346,10 +346,10 @@
           this.m_cancelSignal.cancel("BroadcastEmbeddable component unmounted");
         }
         ToggleBroadcastExpandShrink() {
-          let e = R.a.Get().GetPlayReadyStream(this.props);
+          let e = T.a.Get().GetPlayReadyStream(this.props);
           const t = this.state.bExpanded,
             r = O.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
-          Object(R.e)(r, t ? 2 : 3, e.snr),
+          Object(T.e)(r, t ? 2 : 3, e.snr),
             t && Object(A.a)() && Object(A.a)().AddEvent(1005),
             window.setTimeout(
               () =>
@@ -363,37 +363,37 @@
             ),
             t ||
               this.setState({ bExpanded: !this.state.bExpanded }, () =>
-                R.a.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded)
+                T.a.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded)
               );
         }
         OnShrinkTransitionEnd() {
           "0vh" === this.state.innerStyle.maxHeight &&
             this.setState({ bExpanded: !1 }, () =>
-              R.a.Get().SetEmbeddedStreamCollapsed(!0)
+              T.a.Get().SetEmbeddedStreamCollapsed(!0)
             );
         }
         onStreamSelect(e) {
           return Object(a.a)(this, void 0, void 0, function* () {
             this.setState({ bStartMuted: !1 }),
-              R.a.Get().GetPlayReadyStream(this.props).accountid !=
+              T.a.Get().GetPlayReadyStream(this.props).accountid !=
                 e.accountid &&
-                (yield R.a.Get().AttemptToPlayStream(this.props, e));
+                (yield T.a.Get().AttemptToPlayStream(this.props, e));
           });
         }
         PlayTopNonVOD() {
           return Object(a.a)(this, void 0, void 0, function* () {
             this.setState({ bStartMuted: !1 });
-            const e = R.a
+            const e = T.a
               .Get()
               .GetStreams(this.props)
               .filter(
                 (e) =>
                   !this.props.fnFilterStreams || this.props.fnFilterStreams(e)
               );
-            Object(R.f)(e);
+            Object(T.f)(e);
             for (const t of e)
               if (!t.nAppIDVOD)
-                return void (yield R.a
+                return void (yield T.a
                   .Get()
                   .AttemptToPlayStream(this.props, t));
           });
@@ -405,7 +405,7 @@
             bRightPanelArtworkOrEmpty: !0,
           };
           if (this.props.bWidePlayer) return r;
-          const a = R.a.Get().GetConcurrentStreams(this.props) > 1;
+          const a = T.a.Get().GetConcurrentStreams(this.props) > 1;
           let i = O.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
             s = c.a.createElement(
               "div",
@@ -461,10 +461,10 @@
         render() {
           if (!U.IsBroadcastAllowed() || this.state.bLoadingPreference)
             return null;
-          let e = R.a.Get().GetPlayReadyStream(this.props);
+          let e = T.a.Get().GetPlayReadyStream(this.props);
           if (e) {
             this.MarkBroadcastSeen();
-            let t = "show" === R.a.Get().GetChatVisibility();
+            let t = "show" === T.a.Get().GetChatVisibility();
             const {
               event: r,
               language: a,
@@ -487,7 +487,7 @@
               }));
             let s = this.ConstructSidePanels(e, t),
               n = e.store_title ? e.store_title : e.title,
-              o = R.a.Get().GetConcurrentStreams(this.props) > 1;
+              o = T.a.Get().GetConcurrentStreams(this.props) > 1;
             const l = () => {
               var t, r;
               e.nAppIDVOD && this.PlayTopNonVOD(),
@@ -523,7 +523,7 @@
                         "bordered_title_trgt"
                       ),
                     },
-                    c.a.createElement(T.h, null),
+                    c.a.createElement(R.h, null),
                     n,
                     c.a.createElement(
                       "div",
@@ -620,7 +620,7 @@
         CloseBroadcastPopup() {
           const e = O.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
             .m_nAppID;
-          Object(R.e)(e, 7, this.props.stream.snr),
+          Object(T.e)(e, 7, this.props.stream.snr),
             Object(A.a)() && Object(A.a)().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
         }
@@ -730,22 +730,22 @@
           e.preventDefault();
           const t = O.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
             .m_nAppID;
-          Object(R.e)(
+          Object(T.e)(
             t,
-            "show" === R.a.Get().GetChatVisibility() ? 5 : 4,
+            "show" === T.a.Get().GetChatVisibility() ? 5 : 4,
             this.props.stream.snr
           ),
-            R.a.Get().ToggleChatVisibility();
+            T.a.Get().ToggleChatVisibility();
         }
         onWatchBroadcastPage() {
           const e = O.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
             .m_nAppID;
-          Object(R.e)(e, 9, this.props.stream.snr);
+          Object(T.e)(e, 9, this.props.stream.snr);
         }
         render() {
           const e = this.ConstructBroadcastLink(),
-            t = "remove" != R.a.Get().GetChatVisibility(),
-            r = "hide" === R.a.Get().GetChatVisibility();
+            t = "remove" != T.a.Get().GetChatVisibility(),
+            r = "hide" === T.a.Get().GetChatVisibility();
           let a = Number.parseInt(
             "" +
               O.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
@@ -886,11 +886,11 @@
           } = e,
           n = Object(l.useRef)(),
           o = Object(l.useMemo)(() => {
-            const e = R.a
+            const e = T.a
               .Get()
               .GetStreams(s)
               .filter((e) => !a || a(e));
-            return Object(R.f)(e), e;
+            return Object(T.f)(e), e;
           }, [s, a]);
         return (
           Object(l.useEffect)(() => {
@@ -952,7 +952,7 @@
             null !== (t = i.nAppIDVOD) && void 0 !== t ? t : n,
             { include_assets: !0 }
           );
-        if (!Object(R.d)(i)) return null;
+        if (!Object(T.d)(i)) return null;
         const d = s && (null == l ? void 0 : l.GetAssets().GetHeaderURL()),
           m = Number.parseInt("" + i.viewer_count),
           u = !Number.isNaN(m),
@@ -963,7 +963,7 @@
             className: Object(S.a)({
               [x.a.stream_icon_and_viewer_container]: !0,
               [x.a.stream_featured]:
-                i.current_selection_priority == R.b.k_eFeatured,
+                i.current_selection_priority == T.b.k_eFeatured,
               [x.a.display_capsule_art]: Boolean(d),
             }),
           },
@@ -1039,7 +1039,7 @@
                 "div",
                 { className: x.a.ChatContainer },
                 c.a.createElement(d.a, {
-                  emoticonStore: R.g,
+                  emoticonStore: T.g,
                   watchLocation: 6,
                   steamID: t.steamid,
                   broadcastID: i.m_ulBroadcastID,
@@ -1130,8 +1130,8 @@
       var w = r("6Y59"),
         M = r("exH9"),
         O = r("TLQK"),
-        R = r("opsS"),
-        T = r("lkRc"),
+        T = r("opsS"),
+        R = r("lkRc"),
         j = r("3sYe"),
         z = r.n(j),
         F = r("A5MU");
@@ -1164,7 +1164,7 @@
                       z.a.MessageName,
                       z.a.MessagePresenter
                     ),
-                    href: T.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    href: R.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
@@ -1185,7 +1185,7 @@
                   "a",
                   {
                     className: Object(M.a)(z.a.MessageName, e),
-                    href: T.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    href: R.c.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     "data-miniprofile": "s" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
@@ -1319,7 +1319,7 @@
               this.m_chat.GetUserSteamID()
             );
           if (
-            ((T.h && T.h.is_support) || a || i
+            ((R.h && R.h.is_support) || a || i
               ? r.push(
                   n.createElement(
                     b.d,
@@ -1439,7 +1439,7 @@
                     Object(O.f)("#BroadcastChat_MuteLocal")
                   )
                 ),
-            ((T.h && T.h.is_support) ||
+            ((R.h && R.h.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
               t.steamid)
           ) {
@@ -1628,9 +1628,9 @@
       function D(e) {
         const { oChat: t, emoticonStore: r, bPartnerMemberOnlyChat: a } = e;
         return !a ||
-          ((null === T.h || void 0 === T.h ? void 0 : T.h.logged_in) &&
-            (null === T.h || void 0 === T.h ? void 0 : T.h.is_partner_member))
-          ? (null === T.h || void 0 === T.h ? void 0 : T.h.logged_in)
+          ((null === R.h || void 0 === R.h ? void 0 : R.h.logged_in) &&
+            (null === R.h || void 0 === R.h ? void 0 : R.h.is_partner_member))
+          ? (null === R.h || void 0 === R.h ? void 0 : R.h.logged_in)
             ? n.createElement(x, { oChat: t, emoticonStore: r })
             : null
           : n.createElement(L, null);
@@ -1737,10 +1737,10 @@
           : null;
       }
       Object(a.b)([i.C], N.prototype, "m_chat", void 0),
-        Object(a.b)([R.b], N.prototype, "StartChat", null),
-        Object(a.b)([R.b], N.prototype, "HandleScroll", null),
-        Object(a.b)([R.b], N.prototype, "OnContextMenu", null),
-        Object(a.b)([R.b], N.prototype, "RenderUserChatLine", null),
+        Object(a.b)([T.b], N.prototype, "StartChat", null),
+        Object(a.b)([T.b], N.prototype, "HandleScroll", null),
+        Object(a.b)([T.b], N.prototype, "OnContextMenu", null),
+        Object(a.b)([T.b], N.prototype, "RenderUserChatLine", null),
         (N = Object(a.b)([s.a], N));
       class U extends n.Component {
         render() {
@@ -1775,7 +1775,7 @@
             { className: z.a.LogInPrompt },
             Object(O.f)("#Broadcast_PartnerChat_Login")
           ),
-          !T.h.logged_in &&
+          !R.h.logged_in &&
             n.createElement(
               _.f,
               { onClick: B.a, className: Object(M.a)(z.a.SignInButton) },
@@ -2353,8 +2353,8 @@
       var w = r("oFam"),
         M = r("kLLr"),
         O = r("lkRc"),
-        R = (r("mgoM"), r("75qM"), r("65aj")),
-        T = r("uobO");
+        T = (r("mgoM"), r("75qM"), r("65aj")),
+        R = r("uobO");
       r("AiWL");
       class j {
         constructor() {
@@ -2367,7 +2367,7 @@
             (this.m_regexBannedWords = null),
             (this.m_regexCleanWords = null),
             (this.m_bShownFilterTip = !1),
-            (this.m_TextFilterPreferences = new R.TextFilterPreferences());
+            (this.m_TextFilterPreferences = new T.TextFilterPreferences());
           {
             let e = new w.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
@@ -2637,7 +2637,7 @@
               this.m_regexBannedWords = new RegExp(e, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter bannedwords regex"),
-                Object(T.a)().ReportError(
+                Object(R.a)().ReportError(
                   new Error(
                     `Couldn't compile textfilter bannedwords regex: ${e}`
                   )
@@ -2648,7 +2648,7 @@
               this.m_regexCleanWords = new RegExp(t, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter cleanwords regex"),
-                Object(T.a)().ReportError(
+                Object(R.a)().ReportError(
                   new Error(
                     `Couldn't compile textfilter cleanwords regex: ${e}`
                   )
@@ -3351,17 +3351,17 @@
           return "CSteamTV_GetBroadcastChannelStatus_Response";
         }
       }
-      class R extends _ {
+      class T extends _ {
         constructor(e = null) {
           super(),
-            R.prototype.broadcast_channel_id || b.a(R.M()),
+            T.prototype.broadcast_channel_id || b.a(T.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
+            T.sm_m ||
+              (T.sm_m = {
+                proto: T,
                 fields: {
                   broadcast_channel_id: {
                     n: 1,
@@ -3424,57 +3424,6 @@
                   is_partnered: { n: 19, br: b.d.readBool, bw: b.h.writeBool },
                 },
               }),
-            R.sm_m
-          );
-        }
-        static MBF() {
-          return R.sm_mbf || (R.sm_mbf = b.e(R.M())), R.sm_mbf;
-        }
-        toObject(e = !1) {
-          return R.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return b.g(R.M(), e, t);
-        }
-        static fromObject(e) {
-          return b.c(R.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new h.BinaryReader(e),
-            r = new R();
-          return R.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return b.b(R.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new h.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          b.f(R.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new h.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "GetBroadcastChannelEntry";
-        }
-      }
-      class T extends _ {
-        constructor(e = null) {
-          super(),
-            T.prototype.results || b.a(T.M()),
-            _.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            T.sm_m ||
-              (T.sm_m = {
-                proto: T,
-                fields: { results: { n: 1, c: R, r: !0, q: !0 } },
-              }),
             T.sm_m
           );
         }
@@ -3510,6 +3459,57 @@
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "GetBroadcastChannelEntry";
+        }
+      }
+      class R extends _ {
+        constructor(e = null) {
+          super(),
+            R.prototype.results || b.a(R.M()),
+            _.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
+                fields: { results: { n: 1, c: T, r: !0, q: !0 } },
+              }),
+            R.sm_m
+          );
+        }
+        static MBF() {
+          return R.sm_mbf || (R.sm_mbf = b.e(R.M())), R.sm_mbf;
+        }
+        toObject(e = !1) {
+          return R.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return b.g(R.M(), e, t);
+        }
+        static fromObject(e) {
+          return b.c(R.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new h.BinaryReader(e),
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return b.b(R.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new h.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          b.f(R.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new h.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CSteamTV_GetFollowedChannels_Response";
         }
       }
@@ -3524,7 +3524,7 @@
             j.sm_m ||
               (j.sm_m = {
                 proto: j,
-                fields: { results: { n: 1, c: R, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: T, r: !0, q: !0 } },
               }),
             j.sm_m
           );
@@ -3778,7 +3778,7 @@
                     br: b.d.readUint64String,
                     bw: b.h.writeUint64String,
                   },
-                  channels: { n: 5, c: R, r: !0, q: !0 },
+                  channels: { n: 5, c: T, r: !0, q: !0 },
                   release_date: {
                     n: 6,
                     br: b.d.readString,
@@ -3888,7 +3888,7 @@
             N.sm_m ||
               (N.sm_m = {
                 proto: N,
-                fields: { results: { n: 1, c: R, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: T, r: !0, q: !0 } },
               }),
             N.sm_m
           );
@@ -4687,7 +4687,7 @@
             Y.sm_m ||
               (Y.sm_m = {
                 proto: Y,
-                fields: { results: { n: 1, c: R, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: T, r: !0, q: !0 } },
               }),
             Y.sm_m
           );
@@ -4834,7 +4834,7 @@
             ee.sm_m ||
               (ee.sm_m = {
                 proto: ee,
-                fields: { results: { n: 1, c: R, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: T, r: !0, q: !0 } },
               }),
             ee.sm_m
           );
@@ -4885,7 +4885,7 @@
             te.sm_m ||
               (te.sm_m = {
                 proto: te,
-                fields: { broadcasts: { n: 1, c: R, r: !0, q: !0 } },
+                fields: { broadcasts: { n: 1, c: T, r: !0, q: !0 } },
               }),
             te.sm_m
           );
@@ -4937,7 +4937,7 @@
               (re.sm_m = {
                 proto: re,
                 fields: {
-                  broadcasts: { n: 1, c: R, r: !0, q: !0 },
+                  broadcasts: { n: 1, c: T, r: !0, q: !0 },
                   appid: { n: 2, br: b.d.readUint32, bw: b.h.writeUint32 },
                   title: { n: 3, br: b.d.readString, bw: b.h.writeString },
                 },
@@ -4994,7 +4994,7 @@
                 fields: {
                   appid: { n: 1, br: b.d.readUint32, bw: b.h.writeUint32 },
                   game_name: { n: 2, br: b.d.readString, bw: b.h.writeString },
-                  broadcast: { n: 3, c: R },
+                  broadcast: { n: 3, c: T },
                 },
               }),
             ae.sm_m
@@ -5101,7 +5101,7 @@
               (se.sm_m = {
                 proto: se,
                 fields: {
-                  broadcasts: { n: 1, c: R, r: !0, q: !0 },
+                  broadcasts: { n: 1, c: T, r: !0, q: !0 },
                   title: { n: 2, br: b.d.readString, bw: b.h.writeString },
                 },
               }),
@@ -5155,7 +5155,7 @@
               (ne.sm_m = {
                 proto: ne,
                 fields: {
-                  broadcasts: { n: 1, c: R, r: !0, q: !0 },
+                  broadcasts: { n: 1, c: T, r: !0, q: !0 },
                   title: { n: 2, br: b.d.readString, bw: b.h.writeString },
                 },
               }),
@@ -5209,7 +5209,7 @@
               (oe.sm_m = {
                 proto: oe,
                 fields: {
-                  broadcast: { n: 1, c: R },
+                  broadcast: { n: 1, c: T },
                   title: { n: 2, br: b.d.readString, bw: b.h.writeString },
                   chat_group_id: {
                     n: 3,
@@ -5268,7 +5268,7 @@
               (le.sm_m = {
                 proto: le,
                 fields: {
-                  broadcast: { n: 1, c: R },
+                  broadcast: { n: 1, c: T },
                   title: { n: 2, br: b.d.readString, bw: b.h.writeString },
                 },
               }),
@@ -5734,7 +5734,7 @@
             );
           }),
           (e.GetFollowedChannels = function (e, t) {
-            return e.SendMsg("SteamTV.GetFollowedChannels#1", t, T, {
+            return e.SendMsg("SteamTV.GetFollowedChannels#1", t, R, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
@@ -6667,10 +6667,10 @@
       "use strict";
       r.r(t),
         r.d(t, "BroadcastDetails", function () {
-          return re;
+          return ae;
         }),
         r.d(t, "LinkOverlay", function () {
-          return ie;
+          return se;
         });
       var a = r("mrSG"),
         i = r("vDqi"),
@@ -6800,8 +6800,8 @@
         w = r("XOvi"),
         M = r("6Y59"),
         O = r("+d9t"),
-        R = r("X3Ds"),
-        T = r("TLQK"),
+        T = r("X3Ds"),
+        R = r("TLQK"),
         j = r("YyVH"),
         z = r("lkRc"),
         F = (r("iL1l"), r("Wjsq")),
@@ -6813,7 +6813,7 @@
         return l.createElement(
           "div",
           { className: "STV_ReplayBanner" },
-          Object(T.f)("#DASHPlayerControls_IsReplay")
+          Object(R.f)("#DASHPlayerControls_IsReplay")
         );
       }
       const D = Object(o.a)((e) => {
@@ -6859,7 +6859,7 @@
             l.createElement(
               "span",
               null,
-              Object(T.f)("#DASHPlayerControls_ClickToPlay")
+              Object(R.f)("#DASHPlayerControls_ClickToPlay")
             )
           );
         }
@@ -6886,7 +6886,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BufferingResolution"),
+              Object(R.f)("#DASHPlayerStats_BufferingResolution"),
               " ",
               l.createElement(
                 "span",
@@ -6897,7 +6897,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_PlaybackResolution"),
+              Object(R.f)("#DASHPlayerStats_PlaybackResolution"),
               " ",
               l.createElement(
                 "span",
@@ -6908,7 +6908,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_HtmlResolution"),
+              Object(R.f)("#DASHPlayerStats_HtmlResolution"),
               " ",
               l.createElement(
                 "span",
@@ -6919,7 +6919,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_ContentServer"),
+              Object(R.f)("#DASHPlayerStats_ContentServer"),
               " ",
               l.createElement(
                 "span",
@@ -6930,7 +6930,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_StallEvents"),
+              Object(R.f)("#DASHPlayerStats_StallEvents"),
               " ",
               l.createElement(
                 "span",
@@ -6941,7 +6941,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_FailedDownloads"),
+              Object(R.f)("#DASHPlayerStats_FailedDownloads"),
               " ",
               l.createElement(
                 "span",
@@ -6952,7 +6952,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_TimeToFirstFrame"),
+              Object(R.f)("#DASHPlayerStats_TimeToFirstFrame"),
               " ",
               l.createElement(
                 "span",
@@ -6963,7 +6963,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_PlaybackRate"),
+              Object(R.f)("#DASHPlayerStats_PlaybackRate"),
               " ",
               l.createElement(
                 "span",
@@ -6990,7 +6990,7 @@
               : t.GetNumBufferedAudioRanges();
           if (i > 0)
             for (let s = 0; s < i; ++s) {
-              let i = Object(T.f)(
+              let i = Object(R.f)(
                   e
                     ? "#DASHPlayerStats_VideoBufferRange"
                     : "#DASHPlayerStats_AudioBufferRange",
@@ -7010,7 +7010,7 @@
               );
             }
           else {
-            let t = Object(T.f)(
+            let t = Object(R.f)(
               e
                 ? "#DASHPlayerStats_VideoNoRangeInformation"
                 : "#DASHPlayerStats_AudioNoRangeInformation"
@@ -7027,7 +7027,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BytesReceived"),
+              Object(R.f)("#DASHPlayerStats_BytesReceived"),
               " ",
               l.createElement(
                 "span",
@@ -7039,7 +7039,7 @@
               l.createElement(
                 "div",
                 null,
-                Object(T.f)("#DASHPlayerStats_DroppedFrames"),
+                Object(R.f)("#DASHPlayerStats_DroppedFrames"),
                 " ",
                 l.createElement(
                   "span",
@@ -7050,7 +7050,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_VideoBuffered"),
+              Object(R.f)("#DASHPlayerStats_VideoBuffered"),
               " ",
               l.createElement(
                 "span",
@@ -7062,7 +7062,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_AudioBuffered"),
+              Object(R.f)("#DASHPlayerStats_AudioBuffered"),
               " ",
               l.createElement(
                 "span",
@@ -7076,7 +7076,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BandwidthRequired"),
+              Object(R.f)("#DASHPlayerStats_BandwidthRequired"),
               " ",
               l.createElement(
                 "span",
@@ -7087,7 +7087,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BandwidthVideo"),
+              Object(R.f)("#DASHPlayerStats_BandwidthVideo"),
               " ",
               l.createElement(
                 "span",
@@ -7098,7 +7098,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BandwidthNums"),
+              Object(R.f)("#DASHPlayerStats_BandwidthNums"),
               " ",
               l.createElement(
                 "span",
@@ -7109,7 +7109,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_DownloadNums"),
+              Object(R.f)("#DASHPlayerStats_DownloadNums"),
               " ",
               l.createElement(
                 "span",
@@ -7120,7 +7120,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_ActiveDownloads"),
+              Object(R.f)("#DASHPlayerStats_ActiveDownloads"),
               " ",
               l.createElement(
                 "span",
@@ -7131,7 +7131,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_VideoDownloadProgress"),
+              Object(R.f)("#DASHPlayerStats_VideoDownloadProgress"),
               " ",
               l.createElement(
                 "span",
@@ -7142,7 +7142,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_DroppingFrames"),
+              Object(R.f)("#DASHPlayerStats_DroppingFrames"),
               " ",
               l.createElement(
                 "span",
@@ -7153,7 +7153,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_CurrentFPS"),
+              Object(R.f)("#DASHPlayerStats_CurrentFPS"),
               " ",
               l.createElement(
                 "span",
@@ -7166,8 +7166,9 @@
       };
       U = Object(a.b)([o.a], U);
       r("YF6T");
-      const L = 15;
-      let V = class extends l.Component {
+      var L = r("gLUU");
+      const V = 15;
+      let A = class extends l.Component {
         constructor(e) {
           super(e),
             (this.m_schHideControls = new _.b()),
@@ -7377,7 +7378,7 @@
                     this.ToggleStatsView(e);
                   },
                 },
-                Object(T.f)("#Broadcast_VideoContext_ToggleStats")
+                Object(R.f)("#Broadcast_VideoContext_ToggleStats")
               )
             ),
             r &&
@@ -7392,7 +7393,7 @@
                       this.ShowStorePage(e);
                     },
                   },
-                  Object(T.f)("#Broadcast_VideoContext_OpenStore")
+                  Object(R.f)("#Broadcast_VideoContext_OpenStore")
                 )
               ),
             e
@@ -7406,13 +7407,13 @@
         }
         OnToggleFullscreen() {
           this.m_elBroadcastPlayer &&
-            (Object(R.b)(this.m_elBroadcastPlayer)
-              ? Object(R.g)(this.m_elBroadcastPlayer)
-              : Object(R.u)(this.m_elBroadcastPlayer, this.m_elVideo));
+            (Object(T.b)(this.m_elBroadcastPlayer)
+              ? Object(T.g)(this.m_elBroadcastPlayer)
+              : Object(T.u)(this.m_elBroadcastPlayer, this.m_elVideo));
         }
         OnFullscreenChange(e) {
           if (!this.m_elBroadcastPlayer) return;
-          let t = Object(R.b)(this.m_elBroadcastPlayer);
+          let t = Object(T.b)(this.m_elBroadcastPlayer);
           this.setState({ bFullscreen: t });
         }
         BHideVideoControls() {
@@ -7450,14 +7451,14 @@
                 l.createElement("div", {
                   key: "ChatPosToggle ChatTheaterToggle",
                   onClick: this.props.onTheaterMode,
-                  title: Object(T.f)("#Broadcast_View_Theater"),
+                  title: Object(R.f)("#Broadcast_View_Theater"),
                   className: "BroadcastTheaterToggle",
                 })
               ),
             d.push(
               l.createElement("div", {
                 key: "FullscreenToggle",
-                title: Object(T.f)("#Broadcast_View_Fullscreen"),
+                title: Object(R.f)("#Broadcast_View_Fullscreen"),
                 onClick: this.OnToggleFullscreen,
                 className: "BroadcastFullscreenToggle",
               })
@@ -7499,7 +7500,7 @@
               controls: !1,
             }),
             this.props.linkRegions
-              ? l.createElement(ie, {
+              ? l.createElement(se, {
                   linkRegions: this.props.linkRegions,
                   editMode: this.props.editMode,
                   onSaveLinkRegions: this.props.onSaveLinkRegions,
@@ -7516,14 +7517,14 @@
                 src: this.state.strInitialCapsuleImageUrl,
               }),
             m &&
-              l.createElement(A, {
+              l.createElement(G, {
                 video: e,
                 actions: d,
                 onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
                 onShowStats: this.ToggleStatsView,
                 bIncludeClipEditor: this.props.bIncludeClipEditor,
               }),
-            u && l.createElement(G, { onClick: this.props.onRequestClose }),
+            u && l.createElement(H, { onClick: this.props.onRequestClose }),
             r &&
               l.createElement(k, {
                 stats: e.GetDASHPlayerStats(),
@@ -7534,24 +7535,24 @@
           );
         }
       };
-      Object(a.b)([b.b], V.prototype, "BindBroadcastPlayerRef", null),
-        Object(a.b)([b.b], V.prototype, "BindVideoRef", null),
-        Object(a.b)([b.b], V.prototype, "OnMouseDown", null),
-        Object(a.b)([b.b], V.prototype, "OnMouseUp", null),
-        Object(a.b)([b.b], V.prototype, "OnMouseMove", null),
-        Object(a.b)([b.b], V.prototype, "OnMouseLeave", null),
-        Object(a.b)([b.b], V.prototype, "HideControls", null),
-        Object(a.b)([b.b], V.prototype, "UmountControls", null),
-        Object(a.b)([b.b], V.prototype, "ShowStatsView", null),
-        Object(a.b)([b.b], V.prototype, "OnContextMenu", null),
-        Object(a.b)([b.b], V.prototype, "ToggleStatsView", null),
-        Object(a.b)([b.b], V.prototype, "ShowStorePage", null),
-        Object(a.b)([b.b], V.prototype, "CloseStats", null),
-        Object(a.b)([b.b], V.prototype, "OnToggleFullscreen", null),
-        Object(a.b)([b.b], V.prototype, "OnFullscreenChange", null),
-        (V = Object(a.b)([o.a], V));
-      t.default = V;
-      let A = class extends l.Component {
+      Object(a.b)([b.b], A.prototype, "BindBroadcastPlayerRef", null),
+        Object(a.b)([b.b], A.prototype, "BindVideoRef", null),
+        Object(a.b)([b.b], A.prototype, "OnMouseDown", null),
+        Object(a.b)([b.b], A.prototype, "OnMouseUp", null),
+        Object(a.b)([b.b], A.prototype, "OnMouseMove", null),
+        Object(a.b)([b.b], A.prototype, "OnMouseLeave", null),
+        Object(a.b)([b.b], A.prototype, "HideControls", null),
+        Object(a.b)([b.b], A.prototype, "UmountControls", null),
+        Object(a.b)([b.b], A.prototype, "ShowStatsView", null),
+        Object(a.b)([b.b], A.prototype, "OnContextMenu", null),
+        Object(a.b)([b.b], A.prototype, "ToggleStatsView", null),
+        Object(a.b)([b.b], A.prototype, "ShowStorePage", null),
+        Object(a.b)([b.b], A.prototype, "CloseStats", null),
+        Object(a.b)([b.b], A.prototype, "OnToggleFullscreen", null),
+        Object(a.b)([b.b], A.prototype, "OnFullscreenChange", null),
+        (A = Object(a.b)([o.a], A));
+      t.default = A;
+      let G = class extends l.Component {
         render() {
           const { video: e } = this.props;
           if (!e) return null;
@@ -7559,7 +7560,7 @@
           return l.createElement(
             "div",
             { className: "videoControls" },
-            l.createElement(re, {
+            l.createElement(ae, {
               steamID: this.props.video.GetBroadcastSteamID(),
               bHideThumbnail: !0,
               bVerticalBroadcastChat: !0,
@@ -7568,7 +7569,7 @@
             l.createElement(
               "div",
               { className: "videoControlsBottom" + (t ? "" : " noSegments") },
-              l.createElement(te, {
+              l.createElement(re, {
                 video: e,
                 bIncludeClipEditor: this.props.bIncludeClipEditor,
               }),
@@ -7578,9 +7579,9 @@
                 l.createElement("div", {
                   className: "videoControlsButtons LeftSpacer",
                 }),
-                l.createElement(H, { video: e }),
                 l.createElement(q, { video: e }),
-                l.createElement(X, {
+                l.createElement($, { video: e }),
+                l.createElement(Y, {
                   video: e,
                   actions: this.props.actions,
                   onShowStats: this.props.onShowStats,
@@ -7590,8 +7591,8 @@
           );
         }
       };
-      A = Object(a.b)([o.a], A);
-      class G extends l.PureComponent {
+      G = Object(a.b)([o.a], G);
+      class H extends l.PureComponent {
         render() {
           return this.props.onClick
             ? l.createElement(
@@ -7605,12 +7606,12 @@
             : null;
         }
       }
-      class H extends l.Component {
+      class q extends l.Component {
         OnJumpBackward() {
           this.props.video.JumpTime(-15);
         }
         OnJumpForward() {
-          this.props.video.JumpTime(L);
+          this.props.video.JumpTime(V);
         }
         render() {
           let e = this.props.video,
@@ -7618,7 +7619,7 @@
           return l.createElement(
             "div",
             { className: "videoControlsButtons PlayControls" },
-            l.createElement(K, { video: e }),
+            l.createElement(J, { video: e }),
             t &&
               l.createElement(
                 "div",
@@ -7632,9 +7633,9 @@
                   bShowJumpAheadBox: !0,
                   bFlipHorizontal: !0,
                 }),
-                l.createElement("div", { className: "jumpAheadValue" }, L)
+                l.createElement("div", { className: "jumpAheadValue" }, V)
               ),
-            l.createElement($, { video: e }),
+            l.createElement(K, { video: e }),
             t &&
               l.createElement(
                 "div",
@@ -7648,15 +7649,15 @@
                   bShowJumpAheadBox: !0,
                   bFlipHorizontal: !1,
                 }),
-                l.createElement("div", { className: "jumpAheadValue" }, L)
+                l.createElement("div", { className: "jumpAheadValue" }, V)
               ),
-            t && l.createElement(J, { video: e })
+            t && l.createElement(X, { video: e })
           );
         }
       }
-      Object(a.b)([b.b], H.prototype, "OnJumpBackward", null),
-        Object(a.b)([b.b], H.prototype, "OnJumpForward", null);
-      const q = Object(o.a)((e) => {
+      Object(a.b)([b.b], q.prototype, "OnJumpBackward", null),
+        Object(a.b)([b.b], q.prototype, "OnJumpForward", null);
+      const $ = Object(o.a)((e) => {
         if (e.video.IsBroadcastClip() || e.video.IsBroadcastVOD()) return null;
         let t = e.video.IsOnLiveEdge();
         return l.createElement(
@@ -7682,14 +7683,14 @@
             l.createElement(
               "div",
               { className: "jumpGoLive" },
-              Object(T.f)(
+              Object(R.f)(
                 t ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive"
               )
             )
           )
         );
       });
-      let $ = class extends l.Component {
+      let K = class extends l.Component {
         OnTogglePlayPause() {
           this.props.video.TogglePlayPause();
         }
@@ -7705,9 +7706,9 @@
           );
         }
       };
-      Object(a.b)([b.b], $.prototype, "OnTogglePlayPause", null),
-        ($ = Object(a.b)([o.a], $));
-      let K = class extends l.Component {
+      Object(a.b)([b.b], K.prototype, "OnTogglePlayPause", null),
+        (K = Object(a.b)([o.a], K));
+      let J = class extends l.Component {
         get has_previous_marker() {
           return void 0 !== this.GetPreviousMarkerTime();
         }
@@ -7737,10 +7738,10 @@
           );
         }
       };
-      Object(a.b)([n.n], K.prototype, "has_previous_marker", null),
-        Object(a.b)([b.b], K.prototype, "OnJumpToPreviousMarkerClicked", null),
-        (K = Object(a.b)([o.a], K));
-      let J = class extends l.Component {
+      Object(a.b)([n.n], J.prototype, "has_previous_marker", null),
+        Object(a.b)([b.b], J.prototype, "OnJumpToPreviousMarkerClicked", null),
+        (J = Object(a.b)([o.a], J));
+      let X = class extends l.Component {
         get has_next_marker() {
           return void 0 !== this.GetNextMarkerTime();
         }
@@ -7770,10 +7771,10 @@
           );
         }
       };
-      Object(a.b)([n.n], J.prototype, "has_next_marker", null),
-        Object(a.b)([b.b], J.prototype, "OnJumpToNextMarkerClicked", null),
-        (J = Object(a.b)([o.a], J));
-      class X extends l.Component {
+      Object(a.b)([n.n], X.prototype, "has_next_marker", null),
+        Object(a.b)([b.b], X.prototype, "OnJumpToNextMarkerClicked", null),
+        (X = Object(a.b)([o.a], X));
+      class Y extends l.Component {
         constructor(e) {
           super(e),
             (this.m_elSubtitlesButton = l.createRef()),
@@ -7814,9 +7815,9 @@
             this.OnMouseUp,
             !0
           ),
-            Object(R.e)(this.m_elSettingsPanel, e.target) ||
+            Object(T.e)(this.m_elSettingsPanel, e.target) ||
               this.setState({ bSettingsOpen: !1 }),
-            Object(R.e)(this.m_elSubtitlesPanel.current, e.target) ||
+            Object(T.e)(this.m_elSubtitlesPanel.current, e.target) ||
               this.setState({ bSubtitlesOpen: !1 });
         }
         bindSettingsButton(e) {
@@ -7865,7 +7866,7 @@
                 l.createElement(
                   g.d,
                   { key: "statsToggle", onSelected: this.OnShowStats },
-                  Object(T.f)("#Broadcast_VideoContext_ToggleStats"),
+                  Object(R.f)("#Broadcast_VideoContext_ToggleStats"),
                   "\t"
                 )
               ),
@@ -7888,7 +7889,7 @@
                     className: "NoSubtitles",
                     bChecked: !1,
                   },
-                  Object(T.f)("#Broadcast_None")
+                  Object(R.f)("#Broadcast_None")
                 )
               );
             for (let e = 0; e < this.props.video.ListSubtitles().length; e++) {
@@ -7939,7 +7940,7 @@
               },
               l.createElement(M.bb, null)
             ),
-            l.createElement(Y, { video: r }),
+            l.createElement(Q, { video: r }),
             a &&
               a.map((e) =>
                 l.createElement(
@@ -7991,13 +7992,13 @@
           );
         }
       }
-      Object(a.b)([b.b], X.prototype, "OnVideoControlClick", null),
-        Object(a.b)([b.b], X.prototype, "OnSubtitlesClick", null),
-        Object(a.b)([b.b], X.prototype, "OnMouseUp", null),
-        Object(a.b)([b.b], X.prototype, "bindSettingsButton", null),
-        Object(a.b)([b.b], X.prototype, "BindSettingsPanel", null),
-        Object(a.b)([b.b], X.prototype, "OnShowStats", null);
-      let Y = class extends l.Component {
+      Object(a.b)([b.b], Y.prototype, "OnVideoControlClick", null),
+        Object(a.b)([b.b], Y.prototype, "OnSubtitlesClick", null),
+        Object(a.b)([b.b], Y.prototype, "OnMouseUp", null),
+        Object(a.b)([b.b], Y.prototype, "bindSettingsButton", null),
+        Object(a.b)([b.b], Y.prototype, "BindSettingsPanel", null),
+        Object(a.b)([b.b], Y.prototype, "OnShowStats", null);
+      let Q = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.k_nHideSliderTimeout = 1500),
@@ -8064,19 +8065,19 @@
                   { className: a, onClick: this.ToggleMute },
                   l.createElement(M.wb, null)
                 ),
-                l.createElement(Q, { video: e, onDrag: this.OnChildDrag })
+                l.createElement(Z, { video: e, onDrag: this.OnChildDrag })
               )
             )
           );
         }
       };
-      Object(a.b)([n.C], Y.prototype, "m_bShowSlider", void 0),
-        Object(a.b)([b.b], Y.prototype, "ToggleMute", null),
-        Object(a.b)([b.b], Y.prototype, "OnMouseEnter", null),
-        Object(a.b)([b.b], Y.prototype, "OnMouseLeave", null),
-        Object(a.b)([b.b], Y.prototype, "OnChildDrag", null),
-        (Y = Object(a.b)([o.a], Y));
-      let Q = class extends l.Component {
+      Object(a.b)([n.C], Q.prototype, "m_bShowSlider", void 0),
+        Object(a.b)([b.b], Q.prototype, "ToggleMute", null),
+        Object(a.b)([b.b], Q.prototype, "OnMouseEnter", null),
+        Object(a.b)([b.b], Q.prototype, "OnMouseLeave", null),
+        Object(a.b)([b.b], Q.prototype, "OnChildDrag", null),
+        (Q = Object(a.b)([o.a], Q));
+      let Z = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.m_elSlider = null),
@@ -8151,12 +8152,12 @@
           );
         }
       };
-      Object(a.b)([b.b], Q.prototype, "OnMouseDown", null),
-        Object(a.b)([b.b], Q.prototype, "OnMouseMove", null),
-        Object(a.b)([b.b], Q.prototype, "OnMouseUp", null),
-        Object(a.b)([n.k], Q.prototype, "SetVolumeWithCoord", null),
-        (Q = Object(a.b)([o.a], Q));
-      const Z = (e) =>
+      Object(a.b)([b.b], Z.prototype, "OnMouseDown", null),
+        Object(a.b)([b.b], Z.prototype, "OnMouseMove", null),
+        Object(a.b)([b.b], Z.prototype, "OnMouseUp", null),
+        Object(a.b)([n.k], Z.prototype, "SetVolumeWithCoord", null),
+        (Z = Object(a.b)([o.a], Z));
+      const ee = (e) =>
         l.createElement(
           "div",
           {
@@ -8173,7 +8174,7 @@
             l.createElement(M.ab, null)
           )
         );
-      function ee(e) {
+      function te(e) {
         let t = e.startPos,
           r = e.endPos,
           a = "",
@@ -8206,7 +8207,7 @@
           )
         );
       }
-      let te = class extends l.Component {
+      let re = class extends l.Component {
         constructor(e) {
           super(e),
             (this.m_elSlider = l.createRef()),
@@ -8350,7 +8351,7 @@
             a < 0 ||
               a > 100 ||
               B.push(
-                l.createElement(Z, {
+                l.createElement(ee, {
                   key: r,
                   pos: a,
                   label: t.strTemplateName,
@@ -8366,7 +8367,7 @@
             let i = e.GetPercentOffsetFromTime(t.nTimeEnd, u.c.Timeline);
             i < 0 ||
               S.push(
-                l.createElement(ee, {
+                l.createElement(te, {
                   key: r,
                   startPos: a,
                   endPos: i,
@@ -8383,18 +8384,18 @@
             f = e.GetPercentOffsetFromTime(e.m_editorEndTime, u.c.Timeline),
             v = this.props.bIncludeClipEditor
               ? [
-                  l.createElement(Z, {
+                  l.createElement(ee, {
                     key: "start",
                     pos: y,
-                    label: Object(T.f)("#DASHPlayerControls_Start"),
+                    label: Object(R.f)("#DASHPlayerControls_Start"),
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                     onMouseDown: (e) => this.OnMouseDown(e, "start"),
                   }),
-                  l.createElement(Z, {
+                  l.createElement(ee, {
                     key: "end",
                     pos: f,
-                    label: Object(T.f)("#DASHPlayerControls_End"),
+                    label: Object(R.f)("#DASHPlayerControls_End"),
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                     onMouseDown: (e) => this.OnMouseDown(e, "end"),
@@ -8496,18 +8497,18 @@
           );
         }
       };
-      Object(a.b)([b.b], te.prototype, "OnMouseDown", null),
-        Object(a.b)([b.b], te.prototype, "OnMouseMove", null),
-        Object(a.b)([b.b], te.prototype, "OnMouseUp", null),
-        Object(a.b)([b.b], te.prototype, "OnKeyDown", null),
-        Object(a.b)([b.b], te.prototype, "OnMouseHoverMove", null),
-        Object(a.b)([b.b], te.prototype, "OnMouseHoverLeave", null),
-        Object(a.b)([b.b], te.prototype, "AdjustHoverForClientX", null),
-        Object(a.b)([b.b], te.prototype, "OnSegmentClick", null),
-        Object(a.b)([b.b], te.prototype, "OnMarkerMouseEnter", null),
-        Object(a.b)([b.b], te.prototype, "OnMarkerMouseLeave", null),
-        (te = Object(a.b)([o.a], te));
-      let re = class extends l.Component {
+      Object(a.b)([b.b], re.prototype, "OnMouseDown", null),
+        Object(a.b)([b.b], re.prototype, "OnMouseMove", null),
+        Object(a.b)([b.b], re.prototype, "OnMouseUp", null),
+        Object(a.b)([b.b], re.prototype, "OnKeyDown", null),
+        Object(a.b)([b.b], re.prototype, "OnMouseHoverMove", null),
+        Object(a.b)([b.b], re.prototype, "OnMouseHoverLeave", null),
+        Object(a.b)([b.b], re.prototype, "AdjustHoverForClientX", null),
+        Object(a.b)([b.b], re.prototype, "OnSegmentClick", null),
+        Object(a.b)([b.b], re.prototype, "OnMarkerMouseEnter", null),
+        Object(a.b)([b.b], re.prototype, "OnMarkerMouseLeave", null),
+        (re = Object(a.b)([o.a], re));
+      let ae = class extends l.Component {
         constructor() {
           super(...arguments), (this.state = { info: null });
         }
@@ -8526,7 +8527,7 @@
         RenderStreamSwitcher() {
           const e = this.props.steamID;
           return F.a.stream[e]
-            ? l.createElement(ae, {
+            ? l.createElement(ie, {
                 value: e,
                 options: F.a.stream,
                 onChange: this.props.onLocalStreamChange,
@@ -8538,12 +8539,17 @@
           if (!e) return null;
           let t = "";
           e.m_nViewerCount &&
-            (t = e.m_nViewerCount.toLocaleString(T.e.GetPreferredLocales()));
+            (t = e.m_nViewerCount.toLocaleString(R.e.GetPreferredLocales()));
           let r = F.a.bValid && F.a.stream && F.a.stream[e.m_steamIDBroadcast],
             a =
               !this.props.bHideThumbnail &&
               this.props.bVerticalBroadcastChat &&
               (parseInt(e.m_strAppId) > 0 || r);
+          const i =
+            !this.props.bHideThumbnail &&
+            this.props.bVerticalBroadcastChat &&
+            r &&
+            F.a.gidEvent;
           return l.createElement(
             "div",
             { className: "BroadcastDetails" },
@@ -8585,7 +8591,7 @@
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
                       l.createElement(M.vb, null),
-                      Object(T.l)("#Broadcast_ViewerCount", t)
+                      Object(R.l)("#Broadcast_ViewerCount", t)
                     )
                 ),
               r &&
@@ -8604,6 +8610,7 @@
                   )
                 )
             ),
+            i && l.createElement(L.a, { gidEvent: F.a.gidEvent }),
             a &&
               l.createElement(C.j, {
                 id:
@@ -8615,15 +8622,15 @@
           );
         }
       };
-      re = Object(a.b)([o.a], re);
-      class ae extends l.Component {
+      ae = Object(a.b)([o.a], ae);
+      class ie extends l.Component {
         showContextMenu(e) {
           const { options: t, value: r, onChange: a } = this.props,
             i = Object.keys(t).map((e) =>
               l.createElement(
                 g.b,
                 { key: e, onSelected: () => a(e), bChecked: e === r },
-                Object(T.f)(t[e])
+                Object(R.f)(t[e])
               )
             );
           Object(d.a)(l.createElement(g.c, null, i), e);
@@ -8634,7 +8641,7 @@
           return l.createElement(
             "div",
             { className: "BroadcastLanguage", onClick: this.showContextMenu },
-            l.createElement("span", null, " - ", Object(T.f)(r)),
+            l.createElement("span", null, " - ", Object(R.f)(r)),
             l.createElement(
               "div",
               { className: "ContextMenuButton" },
@@ -8643,8 +8650,8 @@
           );
         }
       }
-      Object(a.b)([b.b], ae.prototype, "showContextMenu", null);
-      let ie = class extends l.Component {
+      Object(a.b)([b.b], ie.prototype, "showContextMenu", null);
+      let se = class extends l.Component {
         constructor(e) {
           super(e), (this.state = { sizableRegion: [] });
         }
@@ -8776,7 +8783,7 @@
                 l.createElement(
                   "div",
                   { className: "AddLinkRegion", onClick: this.AddLinkRegion },
-                  Object(T.f)("#SteamTV_AddLinkRegion")
+                  Object(R.f)("#SteamTV_AddLinkRegion")
                 )
             ),
             l.createElement(
@@ -8785,18 +8792,18 @@
               l.createElement(
                 "div",
                 null,
-                Object(T.f)("#SteamTV_LinkRegionReserved")
+                Object(R.f)("#SteamTV_LinkRegionReserved")
               )
             )
           );
         }
       };
-      Object(a.b)([b.b], ie.prototype, "AddLinkRegion", null),
-        Object(a.b)([b.b], ie.prototype, "LoadLinkRegion", null),
-        Object(a.b)([b.b], ie.prototype, "OnSaveRegions", null),
-        Object(a.b)([b.b], ie.prototype, "DeleteRegion", null),
-        Object(a.b)([b.b], ie.prototype, "UpdatePanel", null),
-        (ie = Object(a.b)([o.a], ie));
+      Object(a.b)([b.b], se.prototype, "AddLinkRegion", null),
+        Object(a.b)([b.b], se.prototype, "LoadLinkRegion", null),
+        Object(a.b)([b.b], se.prototype, "OnSaveRegions", null),
+        Object(a.b)([b.b], se.prototype, "DeleteRegion", null),
+        Object(a.b)([b.b], se.prototype, "UpdatePanel", null),
+        (se = Object(a.b)([o.a], se));
     },
   },
 ]);

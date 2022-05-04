@@ -22002,6 +22002,13 @@
             });
           });
         }
+        DebugPrintData() {
+          const e = new Array();
+          return (
+            this.m_mapTokens.forEach((t, a) => e.push(`${a}=${t.join(",")}`)),
+            e.join("\n")
+          );
+        }
       }
       class d {
         DetectAndFormatCSV(e) {
