@@ -2574,27 +2574,31 @@
               let e = Object(m.a)("PartnerEventStore");
               this.ValidateStoreDefault(e) &&
                 e.forEach((e) => {
-                  let t = new c.a(e.clan_steamid);
-                  const a = this.InsertEventModelFromClanEventData(t, e);
-                  e.announcement_body &&
-                    this.m_mapExistingEvents.set(
-                      d.B + e.announcement_body.gid,
-                      a
-                    );
+                  if (e) {
+                    let t = new c.a(e.clan_steamid);
+                    const a = this.InsertEventModelFromClanEventData(t, e);
+                    e.announcement_body &&
+                      this.m_mapExistingEvents.set(
+                        d.B + e.announcement_body.gid,
+                        a
+                      );
+                  }
                 });
               let t = Object(b.h)("partnereventstore", "application_config");
               this.ValidateStoreDefault(t) &&
                 t.forEach((e) => {
-                  let t = new c.a(e.clan_steamid);
-                  const a = this.InsertEventModelFromClanEventData(t, e);
-                  e.announcement_body &&
-                    !this.m_mapExistingEvents.has(
-                      d.B + e.announcement_body.gid
-                    ) &&
-                    this.m_mapExistingEvents.set(
-                      d.B + e.announcement_body.gid,
-                      a
-                    );
+                  if (e) {
+                    let t = new c.a(e.clan_steamid);
+                    const a = this.InsertEventModelFromClanEventData(t, e);
+                    e.announcement_body &&
+                      !this.m_mapExistingEvents.has(
+                        d.B + e.announcement_body.gid
+                      ) &&
+                      this.m_mapExistingEvents.set(
+                        d.B + e.announcement_body.gid,
+                        a
+                      );
+                  }
                 });
               let a = Object(b.h)(
                 "partnereventadjacents",
@@ -2607,10 +2611,11 @@
                       a.length
                   ),
                 a.forEach((e) => {
-                  this.m_mapAdjacentAnnouncementGIDs.set(
-                    e.announcementGID,
-                    e.adjacents
-                  );
+                  e &&
+                    this.m_mapAdjacentAnnouncementGIDs.set(
+                      e.announcementGID,
+                      e.adjacents
+                    );
                 })),
                 "dev" == b.d.WEB_UNIVERSE &&
                   console.log(
