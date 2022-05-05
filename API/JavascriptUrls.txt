@@ -307,6 +307,7 @@ ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
 ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
 ${HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=919
+${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=920
 ${HELP_BASE_URL}wizard/HelpWithSteamMobileChat
 ${IMG_URL}${_ ? "favorite_star.png" : "favorite_star_empty.png"}
 ${IMG_URL}${titleButtonImage}
@@ -682,6 +683,7 @@ ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/broadcast
 ${PARTNER_BASE_URL}doc/store/pricing
+${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/promo
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
@@ -1955,7 +1957,7 @@ https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
 https://steamcommunity.com/groups/steamworks/discussions/24/
-https://steamcommunity.com/groups/steamworks/discussions/28/
+https://steamcommunity.com/groups/steamworks/discussions/29/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
 https://steamcommunity.com/invites/ajaxcreate
 https://steamcommunity.com/invites/ajaxrevoke

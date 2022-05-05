@@ -24750,6 +24750,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 .pricingdashboard_ButtonGroup_WBwvg button.DialogButton {
   margin-left: 4px;
 }
+.pricingdashboard_Instructions_1mz7G {
+  padding: 8px 0;
+}
 .gridcomponents_UnknownValue_3ovtf {
   color: #ac5228;
 }
@@ -25095,6 +25098,10 @@ div.pricinggrid_HoverToolTip_1OS2v {
 .pricinggrid_ProposalState_2YxpI.pricinggrid_PartnerWillPublish_2Wb1y span {
   color: #808793;
 }
+.pricinggrid_ProposalState_2YxpI.pricinggrid_ApprovedCanPublish_2ejxC
+  .pricinggrid_ProposalStateKey_2KHIg {
+  border: 1px solid #a4d007;
+}
 .guidelinespicker_PriceGuidelinesPicker_4Xo2k {
   background-color: #515661;
   height: 26px;
@@ -25211,6 +25218,9 @@ div.pricinggrid_HoverToolTip_1OS2v {
 }
 .pricinggridcell_PriceCell_1sKIc.pricinggridcell_ProposedPrice_rVkmD {
   border: 1px solid #1b97ff;
+}
+.pricinggridcell_PriceCell_1sKIc.pricinggridcell_ApprovedCanPublish_1JBd8 {
+  border: 1px solid #a4d007;
 }
 .pricinggridcell_PriceCell_1sKIc.pricinggridcell_ChangedLocally_5mvGW {
   border: 1px dashed #5d7f9d;
@@ -25381,10 +25391,30 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   border-radius: 4px;
   background: #3f454f;
 }
+.saveprices_OldPriceCtn_2UeXR {
+  display: inline-flex;
+  background: #363b44;
+  border-radius: 2px;
+  padding: 1px 2px;
+  margin-bottom: 1px;
+  margin-right: 3px;
+}
+.saveprices_NewPriceCtn_1m40G {
+  display: inline-flex;
+  background: #363b44;
+  border-radius: 2px;
+  padding: 1px 2px;
+  margin-bottom: 1px;
+  margin-left: 3px;
+}
 .saveprices_PriceOverrideSummary_30js1 {
   display: flex;
+  align-items: center;
   font-size: 12px;
   width: 100%;
+}
+.saveprices_PriceOverrideSummary_30js1:nth-child(even) {
+  background: #444a55;
 }
 .saveprices_PriceOverrideSummary_30js1 .saveprices_PackageName_IcOXT,
 .saveprices_PriceOverrideSummary_30js1 .saveprices_OldPrice_1lyzs,
@@ -25430,6 +25460,12 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   padding: 0 4px;
   width: 32px;
   text-align: left;
+}
+.saveprices_SaveDialogBody_2bTmc .saveprices_SaveDialogBodyText_3Ohx3 {
+  margin-bottom: 0;
+}
+.saveprices_AutoPublishCheckBox_2tKL7 {
+  padding-top: 16px;
 }
 div.saveprices_HoverToolTip_1yXHp {
   z-index: 2000;
