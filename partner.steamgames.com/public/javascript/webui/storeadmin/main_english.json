@@ -315,7 +315,7 @@
     "Promotion_AssetRequest_LinkDesc_Label": "Your asset files location",
     "Promotion_AssetRequest_LinkDesc_Placeholder": "insert url to file sharing service",
     "Promotion_AssetRequest_Spotlight_Header": "Spotlight Capsule",
-    "Promotion_AssetRequest_Spotlight_Usage": "Usage: Spotlight banners appear near the top of the Steam Home page for specific promotions such as Midweek Madness or Weekend Deals.",
+    "Promotion_AssetRequest_Spotlight_Usage": "Usage: Spotlight banners appear near the top of the Steam Home page for specific promotions such as Midweek Madness or Weekend Deal.",
     "Promotion_AssetRequest_Spotlight_Design": "Design: Spotlight banners will automatically have a section rendered over the bottom with the text describing the type of promotion (eg. 'Weekend Deal') and the end dates of the promo. The amount of the bottom of the image that may be covered can vary depending on the volume of text and/or language. Please refrain from putting key elements in the bottom ¼ of the image. Otherwise, this banner should mostly just focus on your game art and logo.",
     "Promotion_AssetRequest_Spotlight_Size": "Size: 306px x 350px",
     "Promotion_AssetRequest_Spotlight_Example": "Weekend Deal",
