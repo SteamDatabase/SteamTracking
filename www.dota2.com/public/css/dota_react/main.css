@@ -18309,6 +18309,251 @@ a {
     display: none;
   }
 }
+.dpcroot_DPCHeaderSpring2022Major_2dShq {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 10px #00000050;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq .dpcroot_TextContainer_1g0r7 {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventPresented_3KS9N {
+  font-size: 14px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  position: absolute;
+  top: 200px;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventTitle_2Z6x- {
+  font-size: 38px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  position: absolute;
+  top: 140px;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventSegment_3yJmW {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  position: absolute;
+  top: 270px;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventSubTitle_dVt3A {
+  font-size: 14px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  position: absolute;
+  top: 300px;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventLoc_3wLoT {
+  font-size: 13px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  color: #00000080;
+  letter-spacing: 1px;
+  text-align: center;
+  position: absolute;
+  top: 70px;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventPhaseTitle_2z9IC {
+  font-size: 14px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  color: #000;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 300px;
+  left: 90px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventPhaseTime_1R-X5 {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  color: #000;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 300px;
+  left: 90px;
+  position: absolute;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2022Major_2dShq
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventPhaseTime_1R-X5 {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventPhaseGroup_3DBuu {
+  top: 140px;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2022Major_2dShq
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventPhaseGroup_3DBuu {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventPhaseGroupTime_2SdlE {
+  top: 160px;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventPhasePlayoffs_2uzws {
+  top: 220px;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2022Major_2dShq
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventPhasePlayoffs_2uzws {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventPhasePlayoffsTime_3W3Sn {
+  top: 240px;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventResultsTitle_1ReEx {
+  font-size: 15px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  color: #000;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 250px;
+  top: 200px;
+  right: 155px;
+  position: absolute;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2022Major_2dShq
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventResultsTitle_1ReEx {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventResultsButton_3yzbY {
+  font-size: 15px;
+  font-weight: 700px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 10px 35px;
+  width: 170px;
+  height: 40px;
+  top: 270px;
+  right: 195px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventResultsButton_3yzbY:hover {
+  background-color: #ffffff1a;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2022Major_2dShq
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventResultsButton_3yzbY {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_PrizePoolTitle_JYJRh {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Radiance", sans-serif;
+  color: #000;
+  letter-spacing: 1px;
+  text-align: left;
+  width: 300px;
+  top: 100px;
+  right: 90px;
+  position: absolute;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2022Major_2dShq
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_PrizePoolTitle_JYJRh {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2022Major_2dShq
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_PrizePoolValue_2SztN {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Radiance", serif;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  width: 300px;
+  top: 130px;
+  right: 90px;
+  position: absolute;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2022Major_2dShq
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_PrizePoolValue_2SztN {
+    display: none;
+  }
+}
 .dpcroot_DPCHeaderGenericLeague_3VSU1 {
   width: 100%;
   max-width: 1920px;

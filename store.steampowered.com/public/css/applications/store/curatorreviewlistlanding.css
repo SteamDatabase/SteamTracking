@@ -1,3 +1,29 @@
+.twitchembed_VideoReviewCtn_nNaTz {
+  max-width: 940px;
+  padding-bottom: 20px;
+}
+.twitchembed_VideoReviewCtn_nNaTz .twitchembed_YouTubePreviewImage__mxmF {
+  height: 100%;
+}
+.twitchembed_VideoReviewCtn_nNaTz
+  .twitchembed_YouTubePreviewImage__mxmF
+  .YoutubePreviewPlay {
+  width: 15%;
+}
+.twitchembed_TwitchPlayer_Ny5PH {
+  width: 100%;
+  position: relative;
+}
+.twitchembed_TwitchPlayer_Ny5PH iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -248,55 +274,4 @@
   padding-top: 0px;
   margin-top: -2px;
   margin-bottom: -4px;
-}
-.deckmenu_PillTabMenuCtn_VkRuR {
-  display: flex;
-  justify-content: center;
-  padding: 12px 0px;
-  margin-bottom: 8px;
-}
-.deckmenu_PillTabMenuItem_2YcDp {
-  padding: 8px 16px;
-  font: var(--gpText-BodySmall);
-  color: var(--gpStoreLightestGrey);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  border-radius: 80px;
-  margin: 0px 2px;
-  transition: all 0.2s ease;
-}
-.deckmenu_PillTabMenuItem_2YcDp:hover,
-.deckmenu_PillTabMenuItem_2YcDp:active,
-.deckmenu_PillTabMenuItem_2YcDp.deckmenu_Active_1uLVq {
-  background-color: var(--gpBackground-LightMedium);
-  color: #fff;
-}
-.deckmenu_PillTabMenuItem_2YcDp:focus,
-.deckmenu_PillTabMenuItem_2YcDp.gpfocus {
-  background-color: #fff;
-  color: var(--gpSystemDarkestGrey);
-  box-shadow: var(--gpShadow-Medium);
-  outline: none;
-}
-.deckmenu_CartPillTabMenuItem_2tbNf {
-  padding-right: 6px;
-}
-.deckmenu_CartPillTabMenuItem_2tbNf b {
-  background-color: var(--gpColor-Green);
-  border-radius: 16px;
-  padding: 4px 12px;
-  color: #fff;
-}
-.twitchembed_VideoReviewCtn_nNaTz {
-  max-width: 940px;
-  padding-bottom: 20px;
-}
-.twitchembed_VideoReviewCtn_nNaTz .twitchembed_YouTubePreviewImage__mxmF {
-  height: 100%;
-}
-.twitchembed_VideoReviewCtn_nNaTz
-  .twitchembed_YouTubePreviewImage__mxmF
-  .YoutubePreviewPlay {
-  width: 15%;
 }
