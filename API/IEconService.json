@@ -276,44 +276,6 @@
             ]
         },
         {
-            "name": "DeclineTradeOffer",
-            "version": 1,
-            "httpmethod": "POST",
-            "description": "Decline a trade offer someone sent to us",
-            "parameters": [
-                {
-                    "name": "key",
-                    "type": "string",
-                    "optional": false,
-                    "description": "Access key"
-                },
-                {
-                    "name": "tradeofferid",
-                    "type": "uint64",
-                    "optional": false
-                }
-            ]
-        },
-        {
-            "name": "CancelTradeOffer",
-            "version": 1,
-            "httpmethod": "POST",
-            "description": "Cancel a trade offer we sent",
-            "parameters": [
-                {
-                    "name": "key",
-                    "type": "string",
-                    "optional": false,
-                    "description": "Access key"
-                },
-                {
-                    "name": "tradeofferid",
-                    "type": "uint64",
-                    "optional": false
-                }
-            ]
-        },
-        {
             "name": "GetTradeHoldDurations",
             "version": 1,
             "httpmethod": "GET",
