@@ -771,6 +771,7 @@ ${ROOT_URL}/puzzleleaderboarddata
 ${ROOT_URL}/submitfeedback
 ${ROOT_URL}/updatesdata
 ${STATS_BASE_URL}sales/details/?gid=${GID}&clanid=${}
+${STATS_BASE_URL}sales/details/?gid=${}&clanid=${}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxrecentsaleevents" : "saleaction/ajaxrecenttaggedsaleevents"}

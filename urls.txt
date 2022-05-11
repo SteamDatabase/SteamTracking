@@ -161,6 +161,7 @@ https://store.steampowered.com/public/css/applications/store/eventadmin.css?__TI
 https://store.steampowered.com/public/css/applications/store/events.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/interactiverecommender.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/labssandbox.css?__TIME__&_cdn=cloudflare
+https://store.steampowered.com/public/css/applications/store/login.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/loyaltystore.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/main.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/pointsbundles.css?__TIME__&_cdn=cloudflare
@@ -461,6 +462,7 @@ https://store.steampowered.com/public/javascript/applications/store/eventadmin.j
 https://store.steampowered.com/public/javascript/applications/store/events.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/interactiverecommender.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/labssandbox.js?__TIME__&l=english&_cdn=cloudflare
+https://store.steampowered.com/public/javascript/applications/store/login.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/loyalty_english-json.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/main.js?__TIME__&l=english&_cdn=cloudflare

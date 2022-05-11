@@ -78,7 +78,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			{
 				$this->Log( '{lightred}Missing ' . $ApiKeyPath );
 
-				Exit;
+				exit( 1 );
 			}
 
 			if( $this->UseCache && file_exists( $ETagsPath ) )
@@ -437,6 +437,24 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
 
+				if( $OriginalFile === 'store.steampowered.com/public/javascript/applications/store/manifest.js' )
+				{
+					$Data = file_get_contents( $OriginalFile );
+					preg_match_all( '/\d+: "(chunk~.+)",$/m', $Data, $ManifestMatches );
+					$ManifestMatches = array_unique( $ManifestMatches[ 1 ] );
+
+					foreach( $ManifestMatches as $Match )
+					{
+						$NewFilePath = 'store.steampowered.com/public/javascript/applications/store/' . $Match . '.js';
+
+						$this->URLsToFetch[ ] =
+						[
+							'URL'  => 'https://' . $NewFilePath . '?__TIME__&l=english&_cdn=cloudflare',
+							'File' => $NewFilePath,
+						];
+					}
+				}
+
 				return true;
 			}
 
@@ -640,7 +658,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			{
 				$this->Log( '{lightred}Missing ' . $UrlsPath );
 
-				Exit;
+				exit( 1 );
 			}
 
 			$Data = file_get_contents( $UrlsPath );
