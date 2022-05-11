@@ -143,6 +143,14 @@ enum EStreamBitrate {
 	k_EStreamBitrateUnlimited = 0;
 }
 
+enum EStreamColorspace {
+	k_EStreamColorspace_Unknown = 0;
+	k_EStreamColorspace_BT601 = 1;
+	k_EStreamColorspace_BT601_Full = 2;
+	k_EStreamColorspace_BT709 = 3;
+	k_EStreamColorspace_BT709_Full = 4;
+}
+
 enum EStreamP2PScope {
 	k_EStreamP2PScopeAutomatic = 0;
 	k_EStreamP2PScopeDisabled = 1;
@@ -357,6 +365,7 @@ message CStreamingClientCaps {
 	optional bool disable_nvidia_hardware_encoding = 10;
 	optional int32 form_factor = 11;
 	optional bool has_on_screen_keyboard = 12;
+	repeated .EStreamColorspace supported_colorspaces = 13;
 }
 
 message CStreamingClientConfig {

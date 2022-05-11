@@ -112,11 +112,9 @@ ${COMMUNITY_BASE_URL}?subsection=workshop
 ${COMMUNITY_BASE_URL}actions/AddFriendAjax
 ${COMMUNITY_BASE_URL}actions/FileUploader/
 ${COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${LANGUAGE}
-${COMMUNITY_BASE_URL}actions/ajaxcreateupdatediscountevent
 ${COMMUNITY_BASE_URL}actions/ajaxgetwatchvodtoken
 ${COMMUNITY_BASE_URL}actions/ajaxlistfriends
 ${COMMUNITY_BASE_URL}actions/ajaxresolveusers
-${COMMUNITY_BASE_URL}actions/ajaxsetappagegatebypass/
 ${COMMUNITY_BASE_URL}actions/selectPreviousAvatar
 ${COMMUNITY_BASE_URL}app/${appid}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}app/${unAppID}
@@ -137,7 +135,6 @@ ${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? "?ajax=1" : ""}
 ${COMMUNITY_BASE_URL}discussions
 ${COMMUNITY_BASE_URL}economy/image/${}/512x512
 ${COMMUNITY_BASE_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
-${COMMUNITY_BASE_URL}eventemail/ajaxgetpartneremailstats
 ${COMMUNITY_BASE_URL}eventemail/ajaxsetuppartneremail
 ${COMMUNITY_BASE_URL}eventemail/ajaxtestfireeventnotification
 ${COMMUNITY_BASE_URL}eventemail/ajaxtestfirepartnereventemail
@@ -150,12 +147,9 @@ ${COMMUNITY_BASE_URL}games/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}gid/${broadcast_item_drops_details_clan_accountid}/partnerevents/view/${broadcast_item_drops_details_event_gid}
 ${COMMUNITY_BASE_URL}gid/${}
 ${COMMUNITY_BASE_URL}gid/${}/ajaxcreateupdatedeletepartnerevents/
-${COMMUNITY_BASE_URL}gid/${}/ajaxgeteventhistory
-${COMMUNITY_BASE_URL}gid/${}/ajaxgeteventpublishaudit
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetlastupdatetimeforpartnerevent
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetpartnereventpermissions/
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetvanityandclanid/
-${COMMUNITY_BASE_URL}gid/${}/ajaxrollbackevent
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetlocalization/${}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/rate/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/share/${AnnouncementGID}?site=${}
@@ -196,14 +190,9 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}my
-${COMMUNITY_BASE_URL}my/ajaxgetappagegatesbypassed/
-${COMMUNITY_BASE_URL}my/ajaxgetcommunitypreference/
-${COMMUNITY_BASE_URL}my/friends/add
 ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${appid}/announcements/ajaxgetmyvote/${AnnouncementGID}
-${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappbranches
-${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappvisibilityrounds
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxisvisibleinsc
 ${COMMUNITY_BASE_URL}ogg/${}/partnerevents/create/
@@ -226,16 +215,6 @@ ${COMMUNITY_BASE_URL}profiles/${}/stats/appid/${}/achievements
 ${COMMUNITY_BASE_URL}profiles/${}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${}?previewprofile=1&appid=${}&itemtype=${}
 ${COMMUNITY_BASE_URL}public/images/events/media_play_icon.png
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}${}${}
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxanswerquestion/${}
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxaskquestion/${}
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxcreateqanda
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxdeleteqanda/${}
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxgetqandasforgroup
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxmoderatequestion/${}
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxrenameqanda/${}
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/ajaxvoteforquestion/${}
-${COMMUNITY_BASE_URL}questions/${VANITY_ID}/view/${gidSession}
 ${COMMUNITY_BASE_URL}questions/${VANITY_ID}/view/${globalQandASessionID}
 ${COMMUNITY_BASE_URL}sale/ajaxdiscounteventdetails
 ${COMMUNITY_BASE_URL}sale/ajaxdiscountevents
@@ -374,10 +353,7 @@ ${IMG_URL}error_artwork.png
 ${IMG_URL}events/defaults/default_img_cover.jpg
 ${IMG_URL}events/defaults/default_img_header.jpg
 ${IMG_URL}events/defaults/default_img_spotlight.jpg
-${IMG_URL}events/event_header_template.zip?t=14
-${IMG_URL}events/thumb_library_home.jpg
 ${IMG_URL}events/types/type_${_ ? "11" : "9"}.png
-${IMG_URL}events/types/type_${icon ? _ : _}.png?v=4
 ${IMG_URL}favorite_star.png
 ${IMG_URL}footer_logo.png
 ${IMG_URL}forward_arrow.png
@@ -647,7 +623,6 @@ ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/header.jpg
 ${MEDIA_CDN_URL}steam/apps/${}/${}
 ${MEDIA_CDN_URL}steam/apps/${}/header.jpg
 ${MEDIA_CDN_URL}store/promo/autumn2020/event_nomination_banner_2020.png?v=2
-${MEDIA_CDN_URL}store/promo/autumn2021/trophy.png?v=2
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
@@ -667,7 +642,6 @@ ${PARTNER_BASE_URL}admin/store/pageclusteredit/takeunder/${}
 ${PARTNER_BASE_URL}admin/store/spotlight/${id}
 ${PARTNER_BASE_URL}admin/store/spotlight/${}
 ${PARTNER_BASE_URL}admin/store/suggestpackage
-${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/suggestapps
@@ -682,12 +656,9 @@ ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
-${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
-${PARTNER_BASE_URL}doc/store/broadcast
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
-${PARTNER_BASE_URL}doc/store/promo
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
@@ -698,7 +669,6 @@ ${PARTNER_BASE_URL}optin/admin/edit/${}
 ${PARTNER_BASE_URL}optin/ajaxadminupdate
 ${PARTNER_BASE_URL}optin/ajaxbatchgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxcreatedemopackage
-${PARTNER_BASE_URL}optin/ajaxgetactiveoptins
 ${PARTNER_BASE_URL}optin/ajaxgetinvitedpartners
 ${PARTNER_BASE_URL}optin/ajaxgetoptinappwithdemoid
 ${PARTNER_BASE_URL}optin/ajaxgetoptinpublicdefinition
@@ -815,7 +785,6 @@ ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}api/appdetails
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,release_date,content_descriptors
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,screenshots,movies,release_date,content_descriptors&client=${IN_CLIENT}&origin=${}
-${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${id}
@@ -855,7 +824,6 @@ ${STORE_BASE_URL}curator/${}/admin/ajaxgetrecbyapps
 ${STORE_BASE_URL}curator/${}/admin/manage_rss/
 ${STORE_BASE_URL}curator/${}/ajaxgetcreatorhomeinfo
 ${STORE_BASE_URL}curator/${}/sale/${sale_vanity_id}
-${STORE_BASE_URL}curator/${}/sale/${}
 ${STORE_BASE_URL}curator/0/ajaxsearchcurators
 ${STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}
 ${STORE_BASE_URL}curators/ajaxfindcuratorlists
@@ -885,7 +853,6 @@ ${STORE_BASE_URL}events_admin/ajaxgetlatestpartnerevents
 ${STORE_BASE_URL}events_admin/ajaxgetmoderationspecificpartnerevents
 ${STORE_BASE_URL}events_admin/ajaxgetrssadmininfo
 ${STORE_BASE_URL}events_admin/ajaxgetscapprovalpriviledge
-${STORE_BASE_URL}events_admin/ajaxgetsolrdata
 ${STORE_BASE_URL}events_admin/ajaxupdateeventtype
 ${STORE_BASE_URL}events_admin/ajaxupdatepartneremailtarget
 ${STORE_BASE_URL}events_admin/ajaxupdatetags
@@ -916,7 +883,6 @@ ${STORE_BASE_URL}labs/trendingreviews/
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}mobile/?show=steamapp
-${STORE_BASE_URL}mobile?show=steamapp
 ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
@@ -947,8 +913,6 @@ ${STORE_BASE_URL}reservation/cancelreservation
 ${STORE_BASE_URL}sale/${sale_vanity_id}
 ${STORE_BASE_URL}sale/${strVanity}
 ${STORE_BASE_URL}sale/${vanity}
-${STORE_BASE_URL}sale/${}
-${STORE_BASE_URL}saleaction/ajaxforceupdatefeaturedapptags
 ${STORE_BASE_URL}saleaction/ajaxgetallitemsforsale
 ${STORE_BASE_URL}saleaction/ajaxgetdeckappcompatibilityreport
 ${STORE_BASE_URL}saleaction/ajaxgetdemoevents
@@ -1531,14 +1495,6 @@ https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/t
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/${hat_image}
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/${shirt_image}
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars//${}/${avatar}.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/309cb650beb92e00ae352710387832aea78433ef.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/502e9a6d3bb266b4274a946192bb960f15e1d136.png
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/7375e5c0f2adb7241870acfa931e167ff13c669f.gif
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/8298b4d6ebf6f6dd2355054431d339ec9dcafdef.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/cc803d270bf7f47ee508bbadf14577bbfe5f6500.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/ecd819245dd4aca57aed76f714a28b2356ad90f2.jpg
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_attack_both_granted.png
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_boost_default.png
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_setback_attack.png
@@ -1765,19 +1721,12 @@ https://partner.steamgames.com/dashboard/?requestedPrimaryPublisher=${}
 https://partner.steamgames.com/doc/${slug}?language=${value}&beta=${beta}
 https://partner.steamgames.com/doc/${url_slug}?beta=1&language=${}
 https://partner.steamgames.com/doc/${url_slug}?language=${}
-https://partner.steamgames.com/doc/marketing/event_tools
-https://partner.steamgames.com/doc/marketing/event_tools/event_examples
-https://partner.steamgames.com/doc/marketing/event_tools/halloween
 https://partner.steamgames.com/doc/marketing/event_tools/import
 https://partner.steamgames.com/doc/marketing/event_tools/stats
-https://partner.steamgames.com/doc/marketing/event_tools/visibility
-https://partner.steamgames.com/doc/marketing/steamnextfest/2021oct
 https://partner.steamgames.com/doc/resources/Sales_Feature_Beta
 https://partner.steamgames.com/doc/sitelicense/licensees/gettingstarted/licensemodelpc
 https://partner.steamgames.com/doc/sitelicense/licensees/signup
-https://partner.steamgames.com/doc/store/assets/eventassets
 https://partner.steamgames.com/doc/store/assets/promos
-https://partner.steamgames.com/doc/store/creator_homepage
 https://partner.steamgames.com/doc/store/localization#supported_languages
 https://partner.steamgames.com/doc/store/news/rss
 https://partner.steamgames.com/docadmin/${method}/${}
@@ -1859,21 +1808,10 @@ https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a24229e
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a87d1ba5946edaba49f377f698d4a39af9f327f3.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/${}/${}.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/27000850/dc17534edaabe8d351fdfb1c6186c4eb3e637c8d.png
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/31013613/a98ecca7730e4857cb5f83e50f3304ce13bf56bf.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/31721797/2ef00d65527edf9aecdaddee086b0f5ee0cc2fe6.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/31721797/77cbe3f768e16b149c78f127b09c047826646ba5.png
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/3703047/72feb03fa4eced13596f0ff7b9ec434865cb73e4.png
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/5193306/62436147b454715822a198a2767e5c7a8560617e.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/7614223/fe3aa1776d96e4aa215edbdacc363a9ed005213e.png
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/${appid}/${}
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/646570/85b510e2e164070a59947395ff91d250c010a5c9.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/SalePageTemplates.zip
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_1.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_2.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_3.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_4.jpg
 https://steamcommunity-a.akamaihd.net/economy/boosterpack/${}?l=${LANGUAGE}
 https://steamcommunity-a.akamaihd.net/economy/image/IzMF03bk9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdA3g5gMEPvUZZEaiHLrVJRsl8vGuCUY7Cjc9ehDNVzDMAfnStiiQrcex4NM6b9Az2pKmoHWDyenHNIiDeGQNqGeZZN23bqzWk7bmXFGmYROl-QFpXL6ZQoGVKOMCOP0A00YUCqTe52U5tGVAqfddCdR2Ew3kSNrh4n3gRJpsAzCamJJSLhlsxPhNuU7rvXr7DbIPzkionWRNgTKRPYtqcvDuspsDnLPqHrcIm1Wk
 https://steamcommunity.com
@@ -2313,7 +2251,6 @@ https://store.steampowered.com/video/watch/${nAppID}
 https://store.steampowered.com/widget/${nAppId}/
 https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
-https://support.google.com/youtube/answer/72431
 https://support.steampowered.com/kb_article.php?ref=${strRef}
 https://support.steampowered.com/kb_article.php?ref=1055-ISJM-8568
 https://support.steampowered.com/kb_article.php?ref=1266-OAFV-8478

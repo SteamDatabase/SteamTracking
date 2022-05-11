@@ -1172,7 +1172,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 }
 .gamepaddialog_GamepadDialogContent_16sYN {
   background: none;
-  padding: 24px 24px;
+  padding: calc(12px + 1.4vw) 2.8vw;
 }
 .gamepaddialog_GamepadDialogContent_16sYN
   .DialogControlsSection:not(:first-child),
@@ -1219,7 +1219,6 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 .gamepaddialog_GamepadDialogContent_16sYN .DialogBody,
 .gamepaddialog_GamepadDialogContent_InnerWidth_2ywyS.DialogContent_InnerWidth {
   overflow: initial;
-  min-width: 50vw;
 }
 .gamepaddialog_GamepadDialogContent_16sYN
   .DialogBody
@@ -1239,11 +1238,18 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   color: #0e141b;
 }
 .gamepaddialog_GamepadDialogContent_16sYN .DialogBodyText {
-  max-width: 75ch;
-  font-style: normal;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
   color: #dcdedf;
   margin-bottom: 10px;
 }
@@ -1412,11 +1418,11 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   background: #23262e;
 }
 .gamepaddialog_GamepadDialogContent_16sYN .gamepaddialog_Field_eKmEX {
-  --field-negative-horizontal-margin: 24px;
+  --field-negative-horizontal-margin: 2.8vw;
 }
 .gamepaddialog_GamepadDialogContent_16sYN .gamepaddialog_Field_eKmEX::after {
-  left: 24px;
-  right: 24px;
+  left: 2.8vw;
+  right: 2.8vw;
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocus,
 .gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocuswithin {
@@ -1594,7 +1600,9 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   margin: auto;
   background-color: #0e141b;
   border: 2px solid #23262e;
-  padding: 24px;
+  padding: calc(12px + 1.4vw) 2.8vw;
+  width: 660px;
+  box-sizing: border-box;
   animation-name: gamepaddialog_slideInAnimation_2JseU;
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
@@ -2553,8 +2561,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-padding-top: calc(var(--basicui-header-height) + 20px);
-  scroll-padding-bottom: 20px;
+  scroll-padding: 56px 0px;
   flex-direction: column;
   padding-top: calc(24px + var(--basicui-header-height));
 }
@@ -2576,9 +2583,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadpagedsettings_PagedSettingsDialog_Title_3aOHb {
   color: #67707b;
   text-transform: uppercase;
-  padding-top: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-top: calc(12px + 1.4vw);
+  padding-left: calc(12px + 1.4vw);
+  padding-right: calc(12px + 1.4vw);
   font-weight: 500;
   letter-spacing: 0.2px;
   overflow: hidden;
@@ -2589,11 +2596,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   line-height: 16px;
   white-space: nowrap;
   overflow-y: auto;
-  padding-top: 16px;
+  padding: 16px 0px;
   flex-shrink: 1;
   flex-grow: 1;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 16px;
+  scroll-padding: 36px 0px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -2608,7 +2615,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  padding: 10px 24px;
+  padding: 10px calc(12px + 1.4vw);
   color: #b8bcbf;
   cursor: pointer;
   display: flex;
@@ -2663,7 +2670,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadpagedsettings_Separator_3sUwu {
   height: 1px;
   background: #3d4450;
-  margin: 8px 24px;
+  margin: 8px calc(12px + 1.4vw);
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_ZjHHX {
   background: #0e141b;
@@ -3070,9 +3077,13 @@ button.DialogButton::-moz-focus-inner {
   top: 4px;
   z-index: 1;
 }
+.DeckVerifiedModalDialogClient .ModalPosition_Content {
+  width: 640px;
+  font-weight: 400;
+}
 .DeckVerifiedModalDialogClient .DialogContent,
 .DeckVerifiedModalDialog .DialogContent {
-  padding: 16px 24px;
+  padding: calc(1.4vw + 12px) 2.8vw;
   background: #0e141b !important;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   border: 2px solid #23262e;

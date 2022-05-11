@@ -603,7 +603,7 @@ GiftActivationPage
 
 AppNewsPage
 {
-	url			"%store%/news/apps/%p1%?updates=true"
+	url			"%store%/news/app/%p1%?updates=true"
 	method		"internal"
 	filter		"news"
 }

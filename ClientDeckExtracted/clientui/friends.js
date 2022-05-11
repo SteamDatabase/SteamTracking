@@ -119,7 +119,7 @@
       /*!****************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/clientenums.ts ***!
   \****************************************************************************************/
-      /*! exports provided: BIsEFriendRelationshipFriend, BIsEFriendRelationshipBlocked, k_unSteamUserDesktopInstance, k_unSteamUserConsoleInstance, k_unSteamUserWebInstance, k_nGameIDWinUI, k_nGameIDServiceAppFirst, k_nGameIDSteamBackpack, k_nGameIDSteamEconomy, k_nGameIDServiceAppLast, k_nGameIDControllerConfigs, k_nGameIDSteamVR, k_nGameIDSteamVRMain, k_nGameIDSteamVRMonitorMain, k_nGameIDSteamVRMonitor, k_nGameIDControllerConfigs_Desktop, k_nGameIDControllerConfigs_BigPicture, k_nGameIDControllerConfigs_GuideChord, k_GIDNil, k_RTime32Nil, k_RTime32Infinite, ELanguagePchWebLanguageCode, MapKoreanaToKorean, ELanguagePchLanguage, PchLanguageToELanguage, EClanEventTypeArray, BIsChinaLauncher, BIsReducedUILauncher, EConnectivityTestResult, ENetFakeLocalSystemState, ESuspendResumeProgressState, EFloatingGamepadTextInputMode, EAppUpdateContentType, EOverlayToStoreFlag, EActivateGameOverlayToWebPageMode */
+      /*! exports provided: BIsEFriendRelationshipFriend, BIsEFriendRelationshipBlocked, k_unSteamUserDesktopInstance, k_unSteamUserConsoleInstance, k_unSteamUserWebInstance, k_nGameIDWinUI, k_nGameIDServiceAppFirst, k_nGameIDSteamBackpack, k_nGameIDSteamEconomy, k_nGameIDSteamWebHelper, k_nGameIDServiceAppLast, k_nGameIDControllerConfigs, k_nGameIDSteamVR, k_nGameIDSteamVRMain, k_nGameIDSteamVRMonitorMain, k_nGameIDSteamVRMonitor, k_nGameIDControllerConfigs_Desktop, k_nGameIDControllerConfigs_BigPicture, k_nGameIDControllerConfigs_GuideChord, k_GIDNil, k_RTime32Nil, k_RTime32Infinite, ELanguagePchWebLanguageCode, MapKoreanaToKorean, ELanguagePchLanguage, PchLanguageToELanguage, EClanEventTypeArray, BIsChinaLauncher, BIsReducedUILauncher, EConnectivityTestResult, ENetFakeLocalSystemState, ESuspendResumeProgressState, EFloatingGamepadTextInputMode, EAppUpdateContentType, EOverlayToStoreFlag, EActivateGameOverlayToWebPageMode */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -184,6 +184,13 @@
           "k_nGameIDSteamEconomy",
           function () {
             return k_nGameIDSteamEconomy;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "k_nGameIDSteamWebHelper",
+          function () {
+            return k_nGameIDSteamWebHelper;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -388,6 +395,7 @@
         const k_nGameIDServiceAppFirst = 750;
         const k_nGameIDSteamBackpack = 753;
         const k_nGameIDSteamEconomy = 754;
+        const k_nGameIDSteamWebHelper = 769;
         const k_nGameIDServiceAppLast = 799;
         const k_nGameIDControllerConfigs = 241100;
         const k_nGameIDSteamVR = 250820;
@@ -1940,6 +1948,16 @@
 
         /* harmony reexport (safe) */ __webpack_require__.d(
           __webpack_exports__,
+          "k_nGameIDSteamWebHelper",
+          function () {
+            return _clientenums__WEBPACK_IMPORTED_MODULE_0__[
+              "k_nGameIDSteamWebHelper"
+            ];
+          }
+        );
+
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
           "k_nGameIDServiceAppLast",
           function () {
             return _clientenums__WEBPACK_IMPORTED_MODULE_0__[
@@ -2924,6 +2942,7 @@
               "k_nGameIDServiceAppFirst",
               "k_nGameIDSteamBackpack",
               "k_nGameIDSteamEconomy",
+              "k_nGameIDSteamWebHelper",
               "k_nGameIDServiceAppLast",
               "k_nGameIDControllerConfigs",
               "k_nGameIDSteamVR",
@@ -5667,7 +5686,7 @@
       /*!***************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/steammessages/enums_pb.ts ***!
   \***************************************************************************************************/
-      /*! exports provided: EPublishedFileQueryTypeToString, EPublishedFileInappropriateProviderToString, EPublishedFileInappropriateResultToString, EPersonaStateFlagToString, EContentCheckProviderToString, EBanContentCheckResultToString, EProfileCustomizationTypeToString, EPublishedFileStorageSystemToString, ECloudStoragePersistStateToString, ESDCardFormatStageToString, EBluetoothDeviceTypeToString, ESystemServiceStateToString, EGraphicsPerfOverlayLevelToString, EGPUPerformanceLevelToString, EScalingFilterToString, ECPUGovernorToString, EUpdaterTypeToString, EUpdaterStateToString, EStorageBlockContentTypeToString, EStorageBlockFileSystemTypeToString, ESteamDeckCompatibilityCategoryToString, ESteamDeckCompatibilityResultDisplayTypeToString, EACStateToString, EBatteryStateToString, EOSBranchToString, ECommunityItemClassToString, ESteamDeckCompatibilityFeedbackToString, EProvideDeckFeedbackPreferenceToString */
+      /*! exports provided: EPublishedFileQueryTypeToString, EPublishedFileInappropriateProviderToString, EPublishedFileInappropriateResultToString, EPersonaStateFlagToString, EContentCheckProviderToString, EProfileCustomizationTypeToString, EPublishedFileStorageSystemToString, ECloudStoragePersistStateToString, ESDCardFormatStageToString, EBluetoothDeviceTypeToString, ESystemServiceStateToString, EGraphicsPerfOverlayLevelToString, EGPUPerformanceLevelToString, EScalingFilterToString, ECPUGovernorToString, EUpdaterTypeToString, EUpdaterStateToString, EStorageBlockContentTypeToString, EStorageBlockFileSystemTypeToString, ESteamDeckCompatibilityCategoryToString, ESteamDeckCompatibilityResultDisplayTypeToString, EACStateToString, EBatteryStateToString, EOSBranchToString, ECommunityItemClassToString, ESteamDeckCompatibilityFeedbackToString, EProvideDeckFeedbackPreferenceToString */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -5704,13 +5723,6 @@
           "EContentCheckProviderToString",
           function () {
             return EContentCheckProviderToString;
-          }
-        );
-        /* harmony export (binding) */ __webpack_require__.d(
-          __webpack_exports__,
-          "EBanContentCheckResultToString",
-          function () {
-            return EBanContentCheckResultToString;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -6022,31 +6034,6 @@
           }
           return (
             "unknown EContentCheckProvider ( " + eContentCheckProvider + " )"
-          );
-        }
-        function EBanContentCheckResultToString(eBanContentCheckResult) {
-          if (true) {
-            switch (eBanContentCheckResult) {
-              case 0:
-                return "k_EBanContentCheckResult_NotScanned";
-              case 1:
-                return "k_EBanContentCheckResult_Reset";
-              case 2:
-                return "k_EBanContentCheckResult_NeedsChecking";
-              case 5:
-                return "k_EBanContentCheckResult_VeryUnlikely";
-              case 30:
-                return "k_EBanContentCheckResult_Unlikely";
-              case 50:
-                return "k_EBanContentCheckResult_Possible";
-              case 75:
-                return "k_EBanContentCheckResult_Likely";
-              case 100:
-                return "k_EBanContentCheckResult_VeryLikely";
-            }
-          }
-          return (
-            "unknown EBanContentCheckResult ( " + eBanContentCheckResult + " )"
           );
         }
         function EProfileCustomizationTypeToString(eProfileCustomizationType) {
@@ -7623,39 +7610,6 @@
                         "WriterProto"
                       ].writeUint32,
                   },
-                  compat_mapping_enabled: {
-                    n: 50,
-                    br:
-                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
-                        "ReaderProto"
-                      ].readBool,
-                    bw:
-                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
-                        "WriterProto"
-                      ].writeBool,
-                  },
-                  compat_mapping_priority: {
-                    n: 51,
-                    br:
-                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
-                        "ReaderProto"
-                      ].readUint32,
-                    bw:
-                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
-                        "WriterProto"
-                      ].writeUint32,
-                  },
-                  compat_mapping_tool_name: {
-                    n: 52,
-                    br:
-                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
-                        "ReaderProto"
-                      ].readString,
-                    bw:
-                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
-                        "WriterProto"
-                      ].writeString,
-                  },
                   review_score_with_bombs: {
                     n: 53,
                     br:
@@ -7887,6 +7841,17 @@
                       shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
                         "WriterProto"
                       ].writeRepeatedUint32,
+                  },
+                  complete_update: {
+                    n: 3,
+                    br:
+                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
+                        "ReaderProto"
+                      ].readBool,
+                    bw:
+                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
+                        "WriterProto"
+                      ].writeBool,
                   },
                 },
               };
@@ -9368,6 +9333,8 @@
               case 127:
                 return "k_EControllerSettingDeadzoneAdvancedSettings";
               case 128:
+                return "k_EControllerSettingRotationOld";
+              case 129:
                 return "k_EControllerSettingCount";
             }
           }
@@ -10694,6 +10661,17 @@
                     c: StoreItem_BasicInfo_CreatorHomeLink,
                     r: true,
                     q: true,
+                  },
+                  capsule_headline: {
+                    n: 5,
+                    br:
+                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
+                        "ReaderProto"
+                      ].readString,
+                    bw:
+                      shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__[
+                        "WriterProto"
+                      ].writeString,
                   },
                 },
               };
@@ -26667,7 +26645,7 @@
             )("#Time_Today");
           }
           // Then the midnight before yesterday.
-          dtCompare.setDate(dtCompare.getDate() - 1);
+          dtCompare.setDate(dtNow.getDate() - 1);
           if (dt >= dtCompare) {
             if (options.bGranularYesterday) {
               return Object(
@@ -26683,8 +26661,10 @@
               _localization__WEBPACK_IMPORTED_MODULE_0__["Localize"]
             )("#Time_Yesterday");
           }
-          dtCompare.setDate(dtCompare.getDate() - 7);
-          if (options.bGranularWeek && dt >= dtCompare) {
+          // Set to midnight after the same day of week on the previous week (so if today is Tuesday, set to midnight of previous Wednesday)
+          dtCompare.setDate(dtNow.getDate() - 6);
+          const dtStartOfCurrentWeek = new Date(dtCompare);
+          if (options.bGranularWeek && dt >= dtStartOfCurrentWeek) {
             return LocalizeCalendarWeekdayAndDayMonth(
               dt,
               false,
@@ -26706,23 +26686,18 @@
               })
             );
           }
-          // back up to midnight after matching day of previous week (so if today is Tuesday, set to midnight of previous Wednesday)
-          dtCompare.setDate(dtCompare.getDate() - 5);
-          if (dt >= dtCompare)
+          if (dt >= dtStartOfCurrentWeek)
             return Object(
               _localization__WEBPACK_IMPORTED_MODULE_0__["Localize"]
             )("#TimeSince_ThisWeek");
-          // if less than 3 weeks or happened in this month, return X weeks ago
-          const dtStartOfWeek = new Date(dtCompare);
-          dtCompare.setDate(dtCompare.getDate() - 21);
+          // if older than 7 days but still this month, return X weeks ago
           if (
-            dt >= dtCompare ||
-            (dt.getMonth() == dtNow.getMonth() &&
-              dt.getFullYear() == dtNow.getFullYear())
+            dt.getMonth() == dtNow.getMonth() &&
+            dt.getFullYear() == dtNow.getFullYear()
           ) {
             const nWeeks =
               Math.floor(
-                (dtStartOfWeek.valueOf() - dt.valueOf()) /
+                (dtStartOfCurrentWeek.valueOf() - dt.valueOf()) /
                   (_time__WEBPACK_IMPORTED_MODULE_1__["Seconds"].PerWeek * 1000)
               ) + 1;
             return nWeeks == 1
@@ -26966,7 +26941,7 @@ function TestLocalizeCalendarTime()
       /*!***************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/utils/reactutils/index.ts ***!
   \***************************************************************************************************/
-      /*! exports provided: measure, rgb, rgba, useTimeout, useUnmemoizedTimeout, useInterval, useTimer, usePromise, useForceUpdate, useIsUnmounted, useComputedZoom, useThrottle, useEventListener, useGlobalEventListener, useCallbackList, useSubscribableValue, useSubscribableValueCallback, useActualValueOrOverrideValueDuringInteraction, usePreviousValue, useEffectWithDependencyDebugging, useMemoWithDependencyDebugging, useValueWasTrueRecently, setRef, useMultipleRefs, MergeRefs, useRefCallbackWithCleanup, useRefAndShareWith, useResizeObserver, useIntersectionObserver, useForceUpdateOnResizeObserved, useVisibleOnScreen, bind */
+      /*! exports provided: measure, rgb, rgba, useTimeout, useUnmemoizedTimeout, useInterval, useTimer, usePromise, useForceUpdate, useIsUnmounted, useComputedZoom, useThrottle, useEventListener, useGlobalEventListener, useCallbackList, useSubscribableValue, useSubscribableValueCallback, useDisjointedValue, usePreviousValue, useEffectWithDependencyDebugging, useMemoWithDependencyDebugging, useValueWasTrueRecently, setRef, useMultipleRefs, MergeRefs, useRefCallbackWithCleanup, useRefAndShareWith, useResizeObserver, useIntersectionObserver, useForceUpdateOnResizeObserved, useVisibleOnScreen, bind */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -27119,10 +27094,10 @@ function TestLocalizeCalendarTime()
 
         /* harmony reexport (safe) */ __webpack_require__.d(
           __webpack_exports__,
-          "useActualValueOrOverrideValueDuringInteraction",
+          "useDisjointedValue",
           function () {
             return _reactutils__WEBPACK_IMPORTED_MODULE_0__[
-              "useActualValueOrOverrideValueDuringInteraction"
+              "useDisjointedValue"
             ];
           }
         );
@@ -27274,7 +27249,7 @@ function TestLocalizeCalendarTime()
       /*!********************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/utils/reactutils/reactutils.ts ***!
   \********************************************************************************************************/
-      /*! exports provided: measure, rgb, rgba, useTimeout, useUnmemoizedTimeout, useInterval, useTimer, usePromise, useForceUpdate, useIsUnmounted, useComputedZoom, useThrottle, useEventListener, useGlobalEventListener, useCallbackList, useSubscribableValue, useSubscribableValueCallback, useActualValueOrOverrideValueDuringInteraction, usePreviousValue, useEffectWithDependencyDebugging, useMemoWithDependencyDebugging, useValueWasTrueRecently */
+      /*! exports provided: measure, rgb, rgba, useTimeout, useUnmemoizedTimeout, useInterval, useTimer, usePromise, useForceUpdate, useIsUnmounted, useComputedZoom, useThrottle, useEventListener, useGlobalEventListener, useCallbackList, useSubscribableValue, useSubscribableValueCallback, useDisjointedValue, usePreviousValue, useEffectWithDependencyDebugging, useMemoWithDependencyDebugging, useValueWasTrueRecently */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -27399,9 +27374,9 @@ function TestLocalizeCalendarTime()
         );
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
-          "useActualValueOrOverrideValueDuringInteraction",
+          "useDisjointedValue",
           function () {
-            return useActualValueOrOverrideValueDuringInteraction;
+            return useDisjointedValue;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -27578,7 +27553,7 @@ function TestLocalizeCalendarTime()
          * Changing the `fnOnComplete` callback value doesn't reset the timer; when
          * the timer is complete it'll call the latest callback provided.
          */
-        function useTimer(nCountdownMs, fnOnComplete) {
+        function useTimer(nCountdownMs, fnOnComplete, bStartOnMount = true) {
           const refOnCompleteHandle = react__WEBPACK_IMPORTED_MODULE_0__[
             "useRef"
           ](fnOnComplete);
@@ -27610,10 +27585,15 @@ function TestLocalizeCalendarTime()
               fnOnTimeout,
               nCountdownMs
             );
-          }, [fnStopTimer, nCountdownMs, fnOnComplete]);
-          react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](fnRestartTimer, [
+          }, [fnStopTimer, nCountdownMs, fnOnComplete, fnOnTimeout]);
+          const fnOnMount = react__WEBPACK_IMPORTED_MODULE_0__[
+            "useCallback"
+          ](() => {
+            if (bStartOnMount) fnRestartTimer();
+          }, [bStartOnMount, fnRestartTimer]);
+          react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](fnOnMount, [
             nCountdownMs,
-            fnRestartTimer,
+            fnOnMount,
           ]); // Start/restart timer on mount and when desired duration changes.
           react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => fnStopTimer, [
             fnStopTimer,
@@ -27857,82 +27837,60 @@ function TestLocalizeCalendarTime()
           }, [subscribableValue, fnCallback]);
         }
         /**
-         * Hook to have the value a control shows be the latest value the user set via the control (`userInteractionValue`) while
+         * Hook to have the value a control shows be the latest value the user set via the control while
          * they're interacting with it and for a short amount of time thereafter.
          *
-         * This switches over to the `userInteractionValue` when either `bUserIsInteracting` becomes true (e.g. they're dragging a slider),
-         * or when `userInteractionValue` is updated (e.g. they tap a location on the slider).
+         * After the specified timeout, the value returned from this function will revert from the interaction
+         * value back to the actual value.
          *
          * @param actualValue Latest actual value being given to this control.
-         * @param userInteractionValue Latest value set by the user via this control.
-         * @param bUserIsInteracting Latest value the user has selected using this control.
-         * @param nTimeoutMs How long after the user stops interacting with the control before reverting the shown value back to `externalValue`.
+         * @param fnCommitValue Callback to commit a change to the actual value on user interaction.
+         * @param nTimeoutMs How long after the user stops interacting with the control before reverting the shown value back to `actualValue`.
+         * @returns The interaction value and a function to set the value when interacting.
          */
-        function useActualValueOrOverrideValueDuringInteraction(
+        function useDisjointedValue(
           actualValue,
-          userInteractionValue,
-          bUserIsInteracting,
-          nTimeoutMs
+          fnCommitValue,
+          nTimeoutMs = 1000
         ) {
-          const refTimeoutHandle = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](
-            0
+          const refCommitValue = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](
+            fnCommitValue
           );
           const [
-            bShowUserInteractionValue,
-            setShowUserInteractionValue,
-          ] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](
-            bUserIsInteracting
+            displayValue,
+            setDisplayValue,
+          ] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](actualValue);
+          const [
+            bIsUserInteracting,
+            setIsUserInteracting,
+          ] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](false);
+          const fnOnTimerExpired = react__WEBPACK_IMPORTED_MODULE_0__[
+            "useCallback"
+          ](() => {
+            setDisplayValue(actualValue);
+            setIsUserInteracting(false);
+          }, [actualValue, setDisplayValue]);
+          const { fnStopTimer, fnRestartTimer } = useTimer(
+            nTimeoutMs,
+            fnOnTimerExpired,
+            false
           );
-          const fnUserInteractionStarted = react__WEBPACK_IMPORTED_MODULE_0__[
+          // While the user is interacting with the control, use that value for display
+          const fnSetInteractionValue = react__WEBPACK_IMPORTED_MODULE_0__[
             "useCallback"
-          ](() => {
-            window.clearTimeout(refTimeoutHandle.current);
-            setShowUserInteractionValue(true);
-          }, []);
-          const fnUserInteractionEnded = react__WEBPACK_IMPORTED_MODULE_0__[
-            "useCallback"
-          ](() => {
-            window.clearTimeout(refTimeoutHandle.current);
-            refTimeoutHandle.current = window.setTimeout(
-              () => setShowUserInteractionValue(false),
-              nTimeoutMs
-            );
-          }, [nTimeoutMs]);
-          // Switch to user value when they start interacting with the control (e.g. dragging slider), and
-          // back to the actual value some time after they stop interacting.
-          react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-            if (bUserIsInteracting) {
-              fnUserInteractionStarted();
-            } else {
-              fnUserInteractionEnded();
-            }
-          }, [
-            bUserIsInteracting,
-            fnUserInteractionStarted,
-            fnUserInteractionEnded,
-          ]);
-          // Switch to user value when the user value changes immediately (e.g. tap), and back to the
-          // actual value some time after unless they're also interacting with it still. That'll be handled
-          // by the above Effect instead.
-          react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-            fnUserInteractionStarted();
-            if (!bUserIsInteracting) {
-              fnUserInteractionEnded();
-            }
-          }, [
-            userInteractionValue /* keep this */,
-            fnUserInteractionStarted,
-            fnUserInteractionEnded,
-            bUserIsInteracting,
-          ]);
-          // On unmount, clean up any upcoming timeout.
-          react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-            return () => window.clearTimeout(refTimeoutHandle.current);
-          }, []);
-          return (bShowUserInteractionValue || bUserIsInteracting) &&
-            userInteractionValue !== undefined
-            ? userInteractionValue
-            : actualValue;
+          ](
+            (newValue) => {
+              fnRestartTimer();
+              setDisplayValue(newValue);
+              setIsUserInteracting(true);
+              refCommitValue.current && refCommitValue.current(newValue);
+            },
+            [setDisplayValue, fnRestartTimer]
+          );
+          return [
+            bIsUserInteracting ? displayValue : actualValue,
+            fnSetInteractionValue,
+          ];
         }
         /** @returns the value passed in on the previous iteration, or null on the first call. */
         function usePreviousValue(value) {

@@ -1172,7 +1172,7 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 }
 .gamepaddialog_GamepadDialogContent_1F7iK {
   background: none;
-  padding: 24px 24px;
+  padding: calc(12px + 1.4vw) 2.8vw;
 }
 .gamepaddialog_GamepadDialogContent_1F7iK
   .DialogControlsSection:not(:first-child),
@@ -1219,7 +1219,6 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .gamepaddialog_GamepadDialogContent_1F7iK .DialogBody,
 .gamepaddialog_GamepadDialogContent_InnerWidth_26fa1.DialogContent_InnerWidth {
   overflow: initial;
-  min-width: 50vw;
 }
 .gamepaddialog_GamepadDialogContent_1F7iK
   .DialogBody
@@ -1239,11 +1238,18 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   color: #0e141b;
 }
 .gamepaddialog_GamepadDialogContent_1F7iK .DialogBodyText {
-  max-width: 75ch;
-  font-style: normal;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
   color: #dcdedf;
   margin-bottom: 10px;
 }
@@ -1412,11 +1418,11 @@ button.gamepaddialog_Button_1Dbwg.DialogButton:enabled:active:hover:before {
   background: #23262e;
 }
 .gamepaddialog_GamepadDialogContent_1F7iK .gamepaddialog_Field_1rahM {
-  --field-negative-horizontal-margin: 24px;
+  --field-negative-horizontal-margin: 2.8vw;
 }
 .gamepaddialog_GamepadDialogContent_1F7iK .gamepaddialog_Field_1rahM::after {
-  left: 24px;
-  right: 24px;
+  left: 2.8vw;
+  right: 2.8vw;
 }
 .gamepaddialog_Field_1rahM.gamepaddialog_HighlightOnFocus_1gbuO.gpfocus,
 .gamepaddialog_Field_1rahM.gamepaddialog_HighlightOnFocus_1gbuO.gpfocuswithin {
@@ -1594,7 +1600,9 @@ button.gamepaddialog_Button_1Dbwg.DialogButton:enabled:active:hover:before {
   margin: auto;
   background-color: #0e141b;
   border: 2px solid #23262e;
-  padding: 24px;
+  padding: calc(12px + 1.4vw) 2.8vw;
+  width: 660px;
+  box-sizing: border-box;
   animation-name: gamepaddialog_slideInAnimation_37qiZ;
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
@@ -2553,8 +2561,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-padding-top: calc(var(--basicui-header-height) + 20px);
-  scroll-padding-bottom: 20px;
+  scroll-padding: 56px 0px;
   flex-direction: column;
   padding-top: calc(24px + var(--basicui-header-height));
 }
@@ -2576,9 +2583,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
 .gamepadpagedsettings_PagedSettingsDialog_Title_1yIzX {
   color: #67707b;
   text-transform: uppercase;
-  padding-top: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-top: calc(12px + 1.4vw);
+  padding-left: calc(12px + 1.4vw);
+  padding-right: calc(12px + 1.4vw);
   font-weight: 500;
   letter-spacing: 0.2px;
   overflow: hidden;
@@ -2589,11 +2596,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   line-height: 16px;
   white-space: nowrap;
   overflow-y: auto;
-  padding-top: 16px;
+  padding: 16px 0px;
   flex-shrink: 1;
   flex-grow: 1;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 16px;
+  scroll-padding: 36px 0px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_NVFou {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -2608,7 +2615,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  padding: 10px 24px;
+  padding: 10px calc(12px + 1.4vw);
   color: #b8bcbf;
   cursor: pointer;
   display: flex;
@@ -2663,7 +2670,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
 .gamepadpagedsettings_Separator_1B5j4 {
   height: 1px;
   background: #3d4450;
-  margin: 8px 24px;
+  margin: 8px calc(12px + 1.4vw);
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_pOJXw {
   background: #0e141b;
@@ -15177,9 +15184,18 @@ body.v6.partner_events {
   height: 68%;
   opacity: 0.2;
   position: absolute;
+  filter: blur(32px) saturate(0.9);
 }
 .LowPerfMode .partnereventdisplay_EventBackgroundBlur_3pgo7 {
   display: none;
+}
+html.tablet .partnereventdisplay_EventBackgroundBlur_3pgo7 {
+  filter: unset;
+}
+@media screen and (max-width: 910px) {
+  .partnereventdisplay_EventBackgroundBlur_3pgo7 {
+    filter: unset;
+  }
 }
 .partnereventdisplay_DetailArtworkAgeAppropriate_1lrp0 {
   position: relative;
@@ -15342,7 +15358,14 @@ body.v6.partner_events {
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+html.tablet .partnereventdisplay_LibraryEventTitleContainer_3wviV {
   backdrop-filter: blur(32px);
+}
+@media screen and (max-width: 910px) {
+  .partnereventdisplay_LibraryEventTitleContainer_3wviV {
+    backdrop-filter: blur(32px);
+  }
 }
 .partnereventdisplay_EventCoverImageBlr_DdfeF {
   justify-content: center;
@@ -15607,7 +15630,14 @@ html.tablet .partnereventdisplay_EventDetailTitle_34BsR {
   z-index: 2;
   overflow: hidden;
   min-height: 300px;
+}
+html.tablet .partnereventdisplay_LibraryEventBodyContainer_131Kd {
   backdrop-filter: blur(32px);
+}
+@media screen and (max-width: 910px) {
+  .partnereventdisplay_LibraryEventBodyContainer_131Kd {
+    backdrop-filter: blur(32px);
+  }
 }
 .partnereventdisplay_LibraryEventBodyContainer_131Kd
   .partnereventdisplay_EventBackgroundBlur_3pgo7 {
@@ -23880,6 +23910,29 @@ a.storywidget_BadgeFooter_3anc5:hover {
     transform: rotateY(0);
     opacity: 1;
   }
+}
+.salequiz_description_IuXCT {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 3em;
+  color: #fff;
+}
+.salequiz_description2_xAHA6 {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0px;
+  color: #fff;
+}
+.salequiz_questionCtn_irpAc {
+  background-color: hotpink;
+}
+.salequiz_answerCtn_3P_c9 {
+  background-color: hotpink;
+}
+.salequiz_videoEl_3TurU {
+  background-color: hotpink;
 }
 :root {
   --basicui-header-height: 0px;
@@ -52874,9 +52927,13 @@ button.DialogButton::-moz-focus-inner {
   top: 4px;
   z-index: 1;
 }
+.DeckVerifiedModalDialogClient .ModalPosition_Content {
+  width: 640px;
+  font-weight: 400;
+}
 .DeckVerifiedModalDialogClient .DialogContent,
 .DeckVerifiedModalDialog .DialogContent {
-  padding: 16px 24px;
+  padding: calc(1.4vw + 12px) 2.8vw;
   background: #0e141b !important;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   border: 2px solid #23262e;

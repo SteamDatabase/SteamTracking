@@ -703,9 +703,14 @@ button.DialogButton::-moz-focus-inner {
   z-index: 1;
 }
 
+.DeckVerifiedModalDialogClient .ModalPosition_Content {
+  width: 640px;
+  font-weight: 400;
+}
+
 .DeckVerifiedModalDialogClient .DialogContent,
 .DeckVerifiedModalDialog .DialogContent {
-  padding: 16px 24px;
+  padding: calc(1.4vw + 12px) 2.8vw;
   background: #0e141b !important;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   border: 2px solid #23262e;

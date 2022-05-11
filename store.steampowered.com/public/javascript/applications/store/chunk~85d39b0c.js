@@ -31697,34 +31697,39 @@
           return n;
         }
         BuildFeaturedCarouselContent(e, t, a, n) {
-          var r;
+          var r, s;
           return Object(i.a)(this, void 0, void 0, function* () {
             let i = Object(c.b)(
-              this.m_mapMainCarousel.get(e).mapAppLists.get("featured").apps,
+              null ===
+                (r = this.m_mapMainCarousel
+                  .get(e)
+                  .mapAppLists.get("featured")) || void 0 === r
+                ? void 0
+                : r.apps,
               a,
               t,
               12,
               4
             );
             this.m_mapMainCarousel.get(e).rgMainCapsule = E.ZipperMerge([i], t);
-            let s = [
+            let o = [
               "featured_recommended",
               "top_sellers",
               "specials",
               "concurrent",
             ];
-            s = s.filter((t) =>
+            o = o.filter((t) =>
               this.m_mapMainCarousel.get(e).mapAppLists.has(t)
             );
-            const o = s.map((t) =>
+            const l = o.map((t) =>
               this.m_mapMainCarousel.get(e).mapAppLists.get(t)
             );
-            for (const e of o)
+            for (const e of l)
               e &&
                 ((e.apps =
-                  null === (r = e.apps) || void 0 === r
+                  null === (s = e.apps) || void 0 === s
                     ? void 0
-                    : r.filter(
+                    : s.filter(
                         (e) => "bundle" !== e.item_type && "sub" !== e.item_type
                       )),
                 (e.apps = Object(c.b)(e.apps || [], a, t, 12, 4)));
@@ -31735,7 +31740,7 @@
                 .get(e)
                 .rgMainCapsule.concat(
                   E.ZipperMerge(
-                    o.map((e) => e.apps),
+                    l.map((e) => e.apps),
                     t
                   )
                 )),

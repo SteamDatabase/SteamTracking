@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [4],
+  [15],
   {
     "6Bc7": function (e, t, a) {
       e.exports = {
@@ -15,9 +15,9 @@
       "use strict";
       a.r(t);
       var r = a("mrSG"),
-        n = a("q1tI"),
-        o = a("urRO"),
-        c = a.n(o),
+        o = a("q1tI"),
+        n = a("urRO"),
+        c = a.n(n),
         i = (a("YQfW"), a("X3Ds")),
         s = a("TLQK"),
         d = a("yJIw"),
@@ -27,16 +27,16 @@
           const a = new Image(),
             r = Object(i.w)(a, "load");
           (a.src = URL.createObjectURL(t)), yield r;
-          const n = document.createElement("canvas");
-          (n.width = a.width), (n.height = a.height);
-          const o = n.getContext("2d");
-          o.rect(0, 0, n.width, n.height),
-            (o.fillStyle = "black"),
-            o.fill(),
-            o.drawImage(a, 0, 0),
+          const o = document.createElement("canvas");
+          (o.width = a.width), (o.height = a.height);
+          const n = o.getContext("2d");
+          n.rect(0, 0, o.width, o.height),
+            (n.fillStyle = "black"),
+            n.fill(),
+            n.drawImage(a, 0, 0),
             URL.revokeObjectURL(a.src);
           const c = Object(i.w)(e, "load");
-          (e.src = URL.createObjectURL(yield m(n))), yield c;
+          (e.src = URL.createObjectURL(yield v(o))), yield c;
         });
       }
       function g(e, t) {
@@ -44,50 +44,50 @@
           const a = e.getData();
           let r = 5;
           for (;;) {
-            const e = yield m(
-              f(t, { left: a.x, top: a.y, size: a.width, maxSize: 184 * r })
+            const e = yield v(
+              m(t, { left: a.x, top: a.y, size: a.width, maxSize: 184 * r })
             );
             if (1 === r || e.size < 1048576) return e;
             r--;
           }
         });
       }
-      function f(e, t) {
+      function m(e, t) {
         const a = Math.min(Math.max(184, t.size), t.maxSize),
           r = document.createElement("canvas");
         (r.width = a), (r.height = a);
-        const n = r.getContext("2d");
+        const o = r.getContext("2d");
         return (
-          (n.imageSmoothingEnabled = !0),
-          (n.imageSmoothingQuality = "high"),
-          n.rect(0, 0, a, a),
-          (n.fillStyle = "black"),
-          n.fill(),
-          n.drawImage(e, t.left, t.top, t.size, t.size, 0, 0, a, a),
+          (o.imageSmoothingEnabled = !0),
+          (o.imageSmoothingQuality = "high"),
+          o.rect(0, 0, a, a),
+          (o.fillStyle = "black"),
+          o.fill(),
+          o.drawImage(e, t.left, t.top, t.size, t.size, 0, 0, a, a),
           r
         );
       }
-      function m(e, t, a) {
+      function v(e, t, a) {
         return Object(r.a)(this, void 0, void 0, function* () {
           return new Promise((r) => e.toBlob(r, t, a));
         });
       }
-      t.default = n.forwardRef(function (e, t) {
+      t.default = o.forwardRef(function (e, t) {
         const {
           isLoading: a,
           imageRef: r,
-          loaderRef: o,
+          loaderRef: n,
           getBlob: i,
         } = (function (e) {
-          const [t, a] = n.useState(!0),
-            r = n.useRef(),
-            o = n.useRef(),
-            i = n.useRef(null);
+          const [t, a] = o.useState(!0),
+            r = o.useRef(),
+            n = o.useRef(),
+            i = o.useRef(null);
           return (
-            n.useEffect(() => {
+            o.useEffect(() => {
               a(!0),
-                o.current &&
-                  o.current.scrollIntoView({
+                n.current &&
+                  n.current.scrollIntoView({
                     behavior: "smooth",
                     block: "center",
                   }),
@@ -124,24 +124,24 @@
             {
               isLoading: t,
               imageRef: r,
-              loaderRef: o,
+              loaderRef: n,
               getBlob: () => g(i.current, r.current),
             }
           );
         })(e.imageData);
         return (
-          n.useImperativeHandle(t, () => ({ getBlob: i })),
-          n.createElement(
+          o.useImperativeHandle(t, () => ({ getBlob: i })),
+          o.createElement(
             "div",
             { className: l.AvatarCrop },
-            n.createElement(
+            o.createElement(
               "div",
               { className: l.AvatarCropBound },
-              n.createElement("img", { ref: r, className: l.AvatarCropImg }),
-              n.createElement(
+              o.createElement("img", { ref: r, className: l.AvatarCropImg }),
+              o.createElement(
                 "div",
                 {
-                  ref: o,
+                  ref: n,
                   className: l.AvatarLoading,
                   style: { display: a ? "" : "none" },
                 },
@@ -152,6 +152,5 @@
         );
       });
     },
-    YQfW: function (e, t, a) {},
   },
 ]);

@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7227451";
+var CLSTAMP = "7243901";
 !(function (e) {
   function t(t) {
     for (
@@ -5997,6 +5997,7 @@ var CLSTAMP = "7227451";
                   br: i.d.readUint32,
                   bw: i.h.writeRepeatedUint32,
                 },
+                complete_update: { n: 3, br: i.d.readBool, bw: i.h.writeBool },
               },
             }),
           u.sm_m
