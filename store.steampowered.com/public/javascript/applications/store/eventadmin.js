@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [21],
+  [22],
   {
     "/EF7": function (e, t, n) {
       "use strict";
@@ -5393,7 +5393,7 @@
                     { className: T.Error },
                     this.state.strErrorMessage
                   ),
-                u.a.createElement(b.I, {
+                u.a.createElement(b.K, {
                   onChange: this.OnToggleChannelAutomation,
                   label: Object(j.f)("#RSSManager_Status_Automation_Desc"),
                   checked: this.props.admin.BIsAutomationEnabled(),

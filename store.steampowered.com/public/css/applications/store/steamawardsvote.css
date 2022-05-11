@@ -1025,9 +1025,18 @@ body.v6.partner_events {
   height: 68%;
   opacity: 0.2;
   position: absolute;
+  filter: blur(32px) saturate(0.9);
 }
 .LowPerfMode .partnereventdisplay_EventBackgroundBlur_eti5E {
   display: none;
+}
+html.tablet .partnereventdisplay_EventBackgroundBlur_eti5E {
+  filter: unset;
+}
+@media screen and (max-width: 910px) {
+  .partnereventdisplay_EventBackgroundBlur_eti5E {
+    filter: unset;
+  }
 }
 .partnereventdisplay_DetailArtworkAgeAppropriate_1Oz9X {
   position: relative;
@@ -1190,7 +1199,14 @@ body.v6.partner_events {
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+html.tablet .partnereventdisplay_LibraryEventTitleContainer_2gdgU {
   backdrop-filter: blur(32px);
+}
+@media screen and (max-width: 910px) {
+  .partnereventdisplay_LibraryEventTitleContainer_2gdgU {
+    backdrop-filter: blur(32px);
+  }
 }
 .partnereventdisplay_EventCoverImageBlr_d3mE9 {
   justify-content: center;
@@ -1455,7 +1471,14 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   z-index: 2;
   overflow: hidden;
   min-height: 300px;
+}
+html.tablet .partnereventdisplay_LibraryEventBodyContainer_2ZgLv {
   backdrop-filter: blur(32px);
+}
+@media screen and (max-width: 910px) {
+  .partnereventdisplay_LibraryEventBodyContainer_2ZgLv {
+    backdrop-filter: blur(32px);
+  }
 }
 .partnereventdisplay_LibraryEventBodyContainer_2ZgLv
   .partnereventdisplay_EventBackgroundBlur_eti5E {

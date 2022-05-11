@@ -1,40 +1,40 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [59],
+  [32],
   {
     "+58p": function (e, t, r) {
       var n = {
-        "./shared_arabic.json": ["A8mv", 123],
-        "./shared_brazilian.json": ["f7Ht", 124],
-        "./shared_bulgarian.json": ["VJ/X", 125],
-        "./shared_czech.json": ["WyQd", 126],
-        "./shared_danish.json": ["WlkD", 127],
-        "./shared_dutch.json": ["SHbT", 128],
-        "./shared_english.json": ["7foF", 129],
-        "./shared_finnish.json": ["+HzT", 130],
-        "./shared_french.json": ["wr2i", 131],
-        "./shared_german.json": ["CzjK", 132],
-        "./shared_greek.json": ["T1Vt", 133],
-        "./shared_hungarian.json": ["6rq4", 134],
-        "./shared_italian.json": ["yba0", 135],
-        "./shared_japanese.json": ["MIMz", 136],
-        "./shared_koreana.json": ["wrJg", 137],
-        "./shared_latam.json": ["Q3r2", 138],
-        "./shared_norwegian.json": ["Lp4u", 139],
-        "./shared_polish.json": ["wbdj", 140],
-        "./shared_portuguese.json": ["GKZf", 141],
-        "./shared_romanian.json": ["wYo1", 142],
-        "./shared_russian.json": ["Efj/", 143],
-        "./shared_sc_schinese.json": ["7Bs/", 144],
-        "./shared_schinese.json": ["x+JX", 145],
-        "./shared_spanish.json": ["/xtB", 146],
-        "./shared_swedish.json": ["tdT9", 147],
-        "./shared_tchinese.json": ["JQjP", 148],
-        "./shared_thai.json": ["8I3t", 149],
-        "./shared_turkish.json": ["W4c2", 150],
-        "./shared_ukrainian.json": ["0xx/", 151],
-        "./shared_vietnamese.json": ["CxfU", 152],
+        "./shared_arabic.json": ["A8mv", 96],
+        "./shared_brazilian.json": ["f7Ht", 97],
+        "./shared_bulgarian.json": ["VJ/X", 98],
+        "./shared_czech.json": ["WyQd", 99],
+        "./shared_danish.json": ["WlkD", 100],
+        "./shared_dutch.json": ["SHbT", 101],
+        "./shared_english.json": ["7foF", 102],
+        "./shared_finnish.json": ["+HzT", 103],
+        "./shared_french.json": ["wr2i", 104],
+        "./shared_german.json": ["CzjK", 105],
+        "./shared_greek.json": ["T1Vt", 106],
+        "./shared_hungarian.json": ["6rq4", 107],
+        "./shared_italian.json": ["yba0", 108],
+        "./shared_japanese.json": ["MIMz", 109],
+        "./shared_koreana.json": ["wrJg", 110],
+        "./shared_latam.json": ["Q3r2", 111],
+        "./shared_norwegian.json": ["Lp4u", 112],
+        "./shared_polish.json": ["wbdj", 113],
+        "./shared_portuguese.json": ["GKZf", 114],
+        "./shared_romanian.json": ["wYo1", 115],
+        "./shared_russian.json": ["Efj/", 116],
+        "./shared_sc_schinese.json": ["7Bs/", 117],
+        "./shared_schinese.json": ["x+JX", 118],
+        "./shared_spanish.json": ["/xtB", 119],
+        "./shared_swedish.json": ["tdT9", 120],
+        "./shared_tchinese.json": ["JQjP", 121],
+        "./shared_thai.json": ["8I3t", 122],
+        "./shared_turkish.json": ["W4c2", 123],
+        "./shared_ukrainian.json": ["0xx/", 124],
+        "./shared_vietnamese.json": ["CxfU", 125],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -1015,6 +1015,7 @@
                                   Object.assign(
                                     {
                                       Home: () => "/",
+                                      Login: () => "/login",
                                       AppStorePage: () =>
                                         "/app/:appid(\\d+)/:gamename?",
                                       PackageStorePage: () =>
@@ -1947,35 +1948,35 @@
     },
     AvbV: function (e, t, r) {
       var n = {
-        "./main_brazilian.json": ["TFAN", 60],
-        "./main_bulgarian.json": ["c2SO", 61],
-        "./main_czech.json": ["peP3", 62],
-        "./main_danish.json": ["0bnV", 63],
-        "./main_dutch.json": ["wcLc", 64],
-        "./main_english.json": ["/rNK", 65],
-        "./main_finnish.json": ["iywU", 66],
-        "./main_french.json": ["Xnpc", 67],
-        "./main_german.json": ["pmKi", 68],
-        "./main_greek.json": ["mTRv", 69],
-        "./main_hungarian.json": ["WkHb", 70],
-        "./main_italian.json": ["Jz5U", 71],
-        "./main_japanese.json": ["3Dk9", 72],
-        "./main_koreana.json": ["neQD", 73],
-        "./main_latam.json": ["6oHD", 74],
-        "./main_norwegian.json": ["2OvS", 75],
-        "./main_polish.json": ["3pwE", 76],
-        "./main_portuguese.json": ["hY40", 77],
-        "./main_romanian.json": ["Q95+", 78],
-        "./main_russian.json": ["bsPT", 79],
-        "./main_sc_schinese.json": ["GOaQ", 80],
-        "./main_schinese.json": ["B/Zz", 81],
-        "./main_spanish.json": ["U6iL", 82],
-        "./main_swedish.json": ["4uPU", 83],
-        "./main_tchinese.json": ["rgC9", 84],
-        "./main_thai.json": ["87dp", 85],
-        "./main_turkish.json": ["yMpO", 86],
-        "./main_ukrainian.json": ["zTWm", 87],
-        "./main_vietnamese.json": ["wqiy", 88],
+        "./main_brazilian.json": ["TFAN", 33],
+        "./main_bulgarian.json": ["c2SO", 34],
+        "./main_czech.json": ["peP3", 35],
+        "./main_danish.json": ["0bnV", 36],
+        "./main_dutch.json": ["wcLc", 37],
+        "./main_english.json": ["/rNK", 38],
+        "./main_finnish.json": ["iywU", 39],
+        "./main_french.json": ["Xnpc", 40],
+        "./main_german.json": ["pmKi", 41],
+        "./main_greek.json": ["mTRv", 42],
+        "./main_hungarian.json": ["WkHb", 43],
+        "./main_italian.json": ["Jz5U", 44],
+        "./main_japanese.json": ["3Dk9", 45],
+        "./main_koreana.json": ["neQD", 46],
+        "./main_latam.json": ["6oHD", 47],
+        "./main_norwegian.json": ["2OvS", 48],
+        "./main_polish.json": ["3pwE", 49],
+        "./main_portuguese.json": ["hY40", 50],
+        "./main_romanian.json": ["Q95+", 51],
+        "./main_russian.json": ["bsPT", 52],
+        "./main_sc_schinese.json": ["GOaQ", 53],
+        "./main_schinese.json": ["B/Zz", 54],
+        "./main_spanish.json": ["U6iL", 55],
+        "./main_swedish.json": ["4uPU", 56],
+        "./main_tchinese.json": ["rgC9", 57],
+        "./main_thai.json": ["87dp", 58],
+        "./main_turkish.json": ["yMpO", 59],
+        "./main_ukrainian.json": ["zTWm", 60],
+        "./main_vietnamese.json": ["wqiy", 61],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -8385,21 +8386,22 @@
             n ||
             (Promise.all([
               r.e(1),
-              r.e(11),
-              r.e(14),
+              r.e(12),
+              r.e(15),
               r.e(0),
               r.e(2),
               r.e(3),
               r.e(4),
               r.e(5),
               r.e(6),
-              r.e(8),
               r.e(7),
-              r.e(12),
-              r.e(10),
               r.e(9),
+              r.e(8),
               r.e(13),
-              r.e(22),
+              r.e(11),
+              r.e(10),
+              r.e(14),
+              r.e(23),
             ])
               .then(r.bind(null, "Wym2"))
               .then((r) => {
@@ -8412,14 +8414,20 @@
       const Y = Z("Events"),
         K = Z("DemoAndQuickPitch"),
         X = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(26), r.e(0), r.e(2), r.e(4), r.e(23)]).then(
-            r.bind(null, "3WEt")
-          )
+          Promise.all([
+            r.e(1),
+            r.e(27),
+            r.e(0),
+            r.e(2),
+            r.e(3),
+            r.e(5),
+            r.e(24),
+          ]).then(r.bind(null, "3WEt"))
         ),
         J = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(16),
+            r.e(17),
             r.e(0),
             r.e(2),
             r.e(3),
@@ -8427,195 +8435,208 @@
             r.e(5),
             r.e(6),
             r.e(7),
-            r.e(9),
-            r.e(15),
-            r.e(58),
+            r.e(8),
+            r.e(10),
+            r.e(16),
+            r.e(31),
           ]).then(r.bind(null, "CGeh"))
         ),
         Q = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(16), r.e(0), r.e(15), r.e(92)]).then(
+          Promise.all([r.e(1), r.e(17), r.e(0), r.e(16), r.e(65)]).then(
             r.bind(null, "cprX")
           )
         ),
         ee = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(11),
-            r.e(14),
+            r.e(12),
+            r.e(15),
             r.e(0),
             r.e(2),
             r.e(3),
             r.e(4),
             r.e(5),
             r.e(6),
-            r.e(8),
             r.e(7),
-            r.e(12),
-            r.e(10),
             r.e(9),
+            r.e(8),
             r.e(13),
-            r.e(18),
+            r.e(11),
+            r.e(10),
+            r.e(14),
+            r.e(19),
           ]).then(r.bind(null, "3fR/"))
         ),
         te = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(25),
+            r.e(26),
             r.e(0),
             r.e(2),
             r.e(3),
-            r.e(8),
-            r.e(24),
+            r.e(4),
+            r.e(9),
+            r.e(25),
           ]).then(r.bind(null, "JO2d"))
         ),
         re = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(11),
-            r.e(0),
-            r.e(2),
-            r.e(3),
-            r.e(4),
-            r.e(5),
-            r.e(8),
-            r.e(7),
             r.e(12),
-          ]).then(r.bind(null, "+zS6"))
-        ),
-        ne = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(0), r.e(17)]).then(r.bind(null, "byIC"))
-        ),
-        ie = o.a.lazy(() =>
-          Promise.all([r.e(5), r.e(6), r.e(153)]).then(r.bind(null, "AFtM"))
-        ),
-        ae = o.a.lazy(() =>
-          Promise.all([
-            r.e(1),
-            r.e(11),
-            r.e(14),
             r.e(0),
             r.e(2),
             r.e(3),
             r.e(4),
             r.e(5),
             r.e(6),
-            r.e(8),
-            r.e(7),
-            r.e(12),
-            r.e(10),
             r.e(9),
+            r.e(8),
             r.e(13),
-            r.e(19),
+          ]).then(r.bind(null, "+zS6"))
+        ),
+        ne = o.a.lazy(() =>
+          Promise.all([r.e(1), r.e(0), r.e(18)]).then(r.bind(null, "byIC"))
+        ),
+        ie = o.a.lazy(() =>
+          Promise.all([r.e(6), r.e(7), r.e(126)]).then(r.bind(null, "AFtM"))
+        ),
+        ae = o.a.lazy(() =>
+          Promise.all([
+            r.e(1),
+            r.e(12),
+            r.e(15),
+            r.e(0),
+            r.e(2),
+            r.e(3),
+            r.e(4),
+            r.e(5),
+            r.e(6),
+            r.e(7),
+            r.e(9),
+            r.e(8),
+            r.e(13),
+            r.e(11),
+            r.e(10),
+            r.e(14),
+            r.e(20),
           ]).then(r.bind(null, "+KBl"))
         ),
         se = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(0), r.e(10), r.e(20)]).then(
+          Promise.all([r.e(1), r.e(0), r.e(11), r.e(21)]).then(
             r.bind(null, "TFpc")
           )
         ),
         oe = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(11),
-            r.e(14),
+            r.e(12),
+            r.e(15),
             r.e(0),
             r.e(2),
             r.e(3),
             r.e(4),
             r.e(5),
             r.e(6),
-            r.e(8),
             r.e(7),
-            r.e(12),
-            r.e(10),
             r.e(9),
+            r.e(8),
             r.e(13),
-            r.e(22),
+            r.e(11),
+            r.e(10),
+            r.e(14),
+            r.e(23),
           ]).then(r.bind(null, "4yG/"))
         ),
         le = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(11),
-            r.e(14),
-            r.e(27),
+            r.e(12),
+            r.e(15),
+            r.e(28),
             r.e(0),
             r.e(2),
             r.e(3),
             r.e(4),
             r.e(5),
             r.e(6),
-            r.e(8),
             r.e(7),
-            r.e(12),
-            r.e(10),
             r.e(9),
+            r.e(8),
             r.e(13),
-            r.e(21),
+            r.e(11),
+            r.e(10),
+            r.e(14),
+            r.e(22),
           ]).then(r.bind(null, "3rT3"))
         ),
         ce = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(11),
-            r.e(14),
-            r.e(27),
+            r.e(12),
+            r.e(15),
+            r.e(28),
             r.e(0),
             r.e(2),
             r.e(3),
             r.e(4),
             r.e(5),
             r.e(6),
-            r.e(8),
             r.e(7),
-            r.e(12),
-            r.e(10),
             r.e(9),
+            r.e(8),
             r.e(13),
-            r.e(21),
+            r.e(11),
+            r.e(10),
+            r.e(14),
+            r.e(22),
           ]).then(r.bind(null, "/EF7"))
         ),
         de = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(11),
-            r.e(14),
+            r.e(12),
+            r.e(15),
             r.e(0),
             r.e(2),
             r.e(3),
             r.e(4),
             r.e(5),
             r.e(6),
-            r.e(8),
             r.e(7),
-            r.e(12),
-            r.e(10),
             r.e(9),
+            r.e(8),
             r.e(13),
-            r.e(93),
+            r.e(11),
+            r.e(10),
+            r.e(14),
+            r.e(66),
           ]).then(r.bind(null, "21NE"))
         ),
         ue = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(11),
-            r.e(14),
+            r.e(12),
+            r.e(15),
             r.e(0),
             r.e(2),
             r.e(3),
             r.e(4),
             r.e(5),
             r.e(6),
-            r.e(8),
             r.e(7),
-            r.e(12),
-            r.e(10),
             r.e(9),
+            r.e(8),
             r.e(13),
-            r.e(93),
+            r.e(11),
+            r.e(10),
+            r.e(14),
+            r.e(66),
           ]).then(r.bind(null, "OVk1"))
+        ),
+        me = o.a.lazy(() =>
+          Promise.all([r.e(2), r.e(30)]).then(r.bind(null, "oTPU"))
         );
-      class me extends o.a.Component {
+      class he extends o.a.Component {
         componentDidMount() {
           const e = Object(u.c)();
           e &&
@@ -8650,6 +8671,16 @@
                           })
                         ),
                     }),
+                    o.a.createElement(
+                      _.b,
+                      { exact: !0, path: m.b.Login() },
+                      o.a.createElement(v, {
+                        config: {
+                          login: (e) =>
+                            o.a.createElement(me, Object.assign({}, e)),
+                        },
+                      })
+                    ),
                     o.a.createElement(_.b, {
                       exact: !0,
                       path: m.b.AppStorePage(),
@@ -8950,30 +8981,30 @@
                     o.a.createElement(_.b, null, !1)
                   )
                 ),
-                o.a.createElement(he, null)
+                o.a.createElement(pe, null)
               )
             )
           );
         }
       }
-      const he = (e) => {
+      const pe = (e) => {
         const t = o.a.createElement(S.a, { ModalManager: Object(B.a)(window) });
         return a.a.createPortal(t, document.body);
       };
-      var pe = r("rmVU"),
-        fe = r("kslQ"),
-        _e = r("rSrx");
+      var fe = r("rmVU"),
+        _e = r("kslQ"),
+        ge = r("rSrx");
       r("KSg0"), r("Jsk2"), r("M1X1");
-      _e.v(function () {
+      ge.v(function () {
         return Object(n.a)(this, void 0, void 0, function* () {
           Object(d.i)("application_config").userConfig ||
             (yield Object(d.j)(c.a, d.d.STORE_BASE_URL + "actions/", {
               userConfig: !0,
             })),
-            Object(fe.a)().Init(
+            Object(_e.a)().Init(
               "Store",
               CLSTAMP,
-              new pe.a(d.d.WEBAPI_BASE_URL).GetServiceTransport()
+              new fe.a(d.d.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return Object(n.a)(this, void 0, void 0, function* () {
@@ -8995,7 +9026,7 @@
             })(d.d.LANGUAGE),
             document.getElementById("application_root")
               ? a.a.render(
-                  o.a.createElement(me),
+                  o.a.createElement(he),
                   document.getElementById("application_root")
                 )
               : console.error('No "application_root" was found to target');
@@ -11852,35 +11883,35 @@
     suz2: function (e, t, r) {},
     uhdG: function (e, t, r) {
       var n = {
-        "./sales_brazilian.json": ["+cMs", 94],
-        "./sales_bulgarian.json": ["ObVs", 95],
-        "./sales_czech.json": ["CoMO", 96],
-        "./sales_danish.json": ["G2Cs", 97],
-        "./sales_dutch.json": ["qEt3", 98],
-        "./sales_english.json": ["EnkW", 99],
-        "./sales_finnish.json": ["aW7y", 100],
-        "./sales_french.json": ["zxZG", 101],
-        "./sales_german.json": ["2ydi", 102],
-        "./sales_greek.json": ["Xebg", 103],
-        "./sales_hungarian.json": ["AGuh", 104],
-        "./sales_italian.json": ["/ptQ", 105],
-        "./sales_japanese.json": ["gLno", 106],
-        "./sales_koreana.json": ["FMlb", 107],
-        "./sales_latam.json": ["qta4", 108],
-        "./sales_norwegian.json": ["7zdQ", 109],
-        "./sales_polish.json": ["ViiN", 110],
-        "./sales_portuguese.json": ["wIrF", 111],
-        "./sales_romanian.json": ["rBcb", 112],
-        "./sales_russian.json": ["3DF0", 113],
-        "./sales_sc_schinese.json": ["K/cD", 114],
-        "./sales_schinese.json": ["hUJS", 115],
-        "./sales_spanish.json": ["6i74", 116],
-        "./sales_swedish.json": ["4vnE", 117],
-        "./sales_tchinese.json": ["9uzb", 118],
-        "./sales_thai.json": ["NP1P", 119],
-        "./sales_turkish.json": ["jIRL", 120],
-        "./sales_ukrainian.json": ["TgQj", 121],
-        "./sales_vietnamese.json": ["EKJ7", 122],
+        "./sales_brazilian.json": ["+cMs", 67],
+        "./sales_bulgarian.json": ["ObVs", 68],
+        "./sales_czech.json": ["CoMO", 69],
+        "./sales_danish.json": ["G2Cs", 70],
+        "./sales_dutch.json": ["qEt3", 71],
+        "./sales_english.json": ["EnkW", 72],
+        "./sales_finnish.json": ["aW7y", 73],
+        "./sales_french.json": ["zxZG", 74],
+        "./sales_german.json": ["2ydi", 75],
+        "./sales_greek.json": ["Xebg", 76],
+        "./sales_hungarian.json": ["AGuh", 77],
+        "./sales_italian.json": ["/ptQ", 78],
+        "./sales_japanese.json": ["gLno", 79],
+        "./sales_koreana.json": ["FMlb", 80],
+        "./sales_latam.json": ["qta4", 81],
+        "./sales_norwegian.json": ["7zdQ", 82],
+        "./sales_polish.json": ["ViiN", 83],
+        "./sales_portuguese.json": ["wIrF", 84],
+        "./sales_romanian.json": ["rBcb", 85],
+        "./sales_russian.json": ["3DF0", 86],
+        "./sales_sc_schinese.json": ["K/cD", 87],
+        "./sales_schinese.json": ["hUJS", 88],
+        "./sales_spanish.json": ["6i74", 89],
+        "./sales_swedish.json": ["4vnE", 90],
+        "./sales_tchinese.json": ["9uzb", 91],
+        "./sales_thai.json": ["NP1P", 92],
+        "./sales_turkish.json": ["jIRL", 93],
+        "./sales_ukrainian.json": ["TgQj", 94],
+        "./sales_vietnamese.json": ["EKJ7", 95],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -14927,5 +14958,5 @@
       })(I || (I = {}));
     },
   },
-  [["gfbn", 89, 28]],
+  [["gfbn", 62, 29]],
 ]);
