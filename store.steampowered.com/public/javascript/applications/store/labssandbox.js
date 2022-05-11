@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [22],
+  [24],
   {
     "1wed": function (e, t, a) {
       e.exports = {
@@ -19,7 +19,7 @@
         return i;
       });
       var s = a("/Q1a"),
-        r = (a("Zdsb"), a("2vnA"));
+        r = (a("msu0"), a("2vnA"));
       class i {
         constructor(e) {
           (this.m_nLastUpdated = 0),
@@ -112,7 +112,7 @@
       });
       var s = a("mrSG"),
         r = a("2vnA"),
-        i = (a("aoTL"), a("Zdsb")),
+        i = (a("aoTL"), a("msu0")),
         n = a("9XWO"),
         o = a("d4Nf"),
         l = a("6iBs"),
@@ -198,7 +198,7 @@
               console.log("Loading batch of App Info from Steam: ", t),
                 yield this.m_CMInterface.WaitUntilLoggedOn();
               let e = n.b.Init(p.b);
-              e.Body().set_language(Object(i.l)(m.d.LANGUAGE));
+              e.Body().set_language(Object(i.g)(m.d.LANGUAGE));
               const a = 50;
               for (; t.length > 0; ) {
                 const s = Math.min(a, t.length),

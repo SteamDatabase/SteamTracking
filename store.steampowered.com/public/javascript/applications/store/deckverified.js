@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [18],
+  [20],
   {
     TFpc: function (e, t, i) {
       "use strict";
@@ -28,7 +28,7 @@
         n = i("i8i4"),
         a = i("kDGI"),
         l = i("SS8s"),
-        r = i("jrcU"),
+        r = i("thkD"),
         p = i("e356"),
         d = i("hCpY");
       class c extends s.Component {

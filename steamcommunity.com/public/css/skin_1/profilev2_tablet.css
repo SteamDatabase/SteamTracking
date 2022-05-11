@@ -695,3 +695,53 @@ html.tablet .user_action_history_icon.subscribed {
 html.tablet .user_action_history_icon.favorited {
 	margin-top: 4px;
 }
+
+
+
+/* FATAL ERROR */
+html.tablet .profile_subpage_general .maincontent {
+	margin: 0px auto;
+	border: none;
+	background: none;
+	box-shadow: unset;
+	max-width: 1120px;
+}
+
+html.tablet .profile_fatalerror {
+	padding: unset;
+}
+
+html.tablet .profile_fatalerror h1 {
+	margin: unset;
+	color: white;
+}
+
+html.tablet .profile_fatalerror h3 {
+	margin-left: unset;
+	color: var(--gpStoreLightestGrey);
+}
+
+html.tablet .profile_fatalerror_message {
+	background: none;
+	border: 1px solid var(--gpBackground-LightMedium);
+	padding: 20px;
+	border-radius: 0px;
+}
+
+html.tablet .profile_fatalerror_links {
+	display: flex;
+	column-gap: 6px;
+}
+
+html.tablet .profile_fatalerror_links a {
+	padding: 10px 16px;
+	background-color: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.tablet .profile_fatalerror_links a.gpfocus {
+	background-color: white;
+	color: black;
+	border-radius: 0px;
+	box-shadow: var(--gpShadow-Medium);
+}

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [90],
+  [92],
   {
     "07/r": function (e, t, a) {
       e.exports = {
@@ -184,7 +184,7 @@
         ),
         Object(r.b)([_.C.deep], E.prototype, "m_mapExistingReactions", void 0);
       var w = a("7ast"),
-        f = a("jrcU"),
+        f = a("thkD"),
         v = (a("Jsk2"), a("e356")),
         y = a("kWcV"),
         C = a("GbHM"),
@@ -326,8 +326,8 @@
                 active: !0,
                 onDismiss: () => this.setState({ bShowModal: !1 }),
               },
-              i.createElement(F, null),
               i.createElement(D, null),
+              i.createElement(x, null),
               i.createElement(
                 "div",
                 { className: R.InitialLoading },
@@ -477,8 +477,8 @@
                 v = i.createElement(
                   i.Fragment,
                   null,
-                  i.createElement(F, { description: y }),
-                  i.createElement(D, null),
+                  i.createElement(D, { description: y }),
+                  i.createElement(x, null),
                   0 === h.length &&
                     i.createElement(
                       "div",
@@ -515,9 +515,9 @@
                       })
                     )
                   ),
-                  i.createElement(D, null),
+                  i.createElement(x, null),
                   i.createElement(
-                    x,
+                    F,
                     { store: r },
                     e || t
                       ? a
@@ -553,8 +553,8 @@
               v = i.createElement(
                 i.Fragment,
                 null,
-                i.createElement(F, { description: y }),
-                i.createElement(D, null),
+                i.createElement(D, { description: y }),
+                i.createElement(x, null),
                 i.createElement(
                   "div",
                   { style: { position: "relative" } },
@@ -630,9 +630,9 @@
                     )
                   )
                 ),
-                i.createElement(D, null),
+                i.createElement(x, null),
                 i.createElement(
-                  x,
+                  F,
                   { store: r },
                   i.createElement(
                     w.f,
@@ -684,8 +684,8 @@
               v = i.createElement(
                 i.Fragment,
                 null,
-                i.createElement(F, { description: y }),
-                i.createElement(D, null),
+                i.createElement(D, { description: y }),
+                i.createElement(x, null),
                 i.createElement(
                   "div",
                   { style: { position: "relative" } },
@@ -695,9 +695,9 @@
                     i.createElement("div", { className: R.ErrorText }, e)
                   )
                 ),
-                i.createElement(D, null),
+                i.createElement(x, null),
                 i.createElement(
-                  x,
+                  F,
                   { store: r },
                   i.createElement(
                     w.f,
@@ -738,7 +738,7 @@
       };
       Object(r.b)([A.b], P.prototype, "GrantAward", null),
         (P = Object(r.b)([s.a], P));
-      const F = ({ description: e }) =>
+      const D = ({ description: e }) =>
           i.createElement(
             "div",
             { className: R.Header },
@@ -749,7 +749,7 @@
             ),
             i.createElement("div", { className: R.Description }, e)
           ),
-        x = Object(s.a)(({ store: e, children: t }) => {
+        F = Object(s.a)(({ store: e, children: t }) => {
           const a = e.GetUserPointBalance(),
             r = a && a.toNumber().toLocaleString();
           return i.createElement(
@@ -791,7 +791,7 @@
             )
           );
         }),
-        D = () => i.createElement("div", { className: R.Divider });
+        x = () => i.createElement("div", { className: R.Divider });
       class U extends i.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });

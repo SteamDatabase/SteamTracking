@@ -1,3 +1,56 @@
+.focusring_FocusRingRoot_3m2Fo {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+.focusring_FocusRing_1sTuv {
+  position: absolute;
+  pointer-events: none;
+  outline-offset: 2px;
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  animation: focusring_flash_15zi- 0.5s ease,
+    focusring_growOutline_3vSPb 0.4s ease, focusring_fadeOutline_xL-jG 0.4s ease,
+    focusring_blinker_3mURo 1.2s ease-in-out 0.4s 20;
+}
+.focusring_FocusRing_1sTuv.focusring_DebugFocusRing_1cTVW {
+  outline-color: #ff0;
+}
+.focusring_FocusRingOnHiddenItem_8uyqy.focusring_DebugFocusRing_1cTVW {
+  outline-offset: 2px;
+  outline-color: red;
+  background-color: red;
+}
+@keyframes focusring_flash_15zi- {
+  0% {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes focusring_growOutline_3vSPb {
+  0% {
+    outline: 12px solid;
+  }
+  100% {
+    outline: 2px solid;
+  }
+}
+@keyframes focusring_fadeOutline_xL-jG {
+  0% {
+    outline-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    outline-color: rgba(255, 255, 255, 0.6);
+  }
+}
+@keyframes focusring_blinker_3mURo {
+  50% {
+    opacity: 0.4;
+  }
+}
 .throbber_LoadingWrapper_2wAKy {
   display: flex;
   flex-direction: column;
@@ -435,6 +488,109 @@
 .shared_svg_library_SteamDeckCompatUnknown_xBqU_ {
   color: #dcdedf;
 }
+.toggle_Toggle_3Sl0Q {
+  width: 40px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+.toggle_Toggle_3Sl0Q.toggle_Disabled_M8qsA {
+  cursor: default;
+  opacity: 0.6;
+}
+.toggle_Toggle_3Sl0Q .toggle_ToggleRail_2Fw7g {
+  height: 10.6666666667px;
+  width: 36px;
+  border-radius: 5.3333333333px;
+  box-shadow: inset 1px 1px 1px #0007;
+  position: absolute;
+  left: 2.6666666667px;
+  top: 2.6666666667px;
+  background-color: #26292e;
+}
+.toggle_Toggle_3Sl0Q .toggle_ToggleRail_2Fw7g.toggle_Highlight_2OUxg {
+  background-color: #2d5a81;
+  transition: width 0.2s ease-in-out;
+}
+.toggle_Toggle_3Sl0Q
+  .toggle_ToggleRail_2Fw7g.toggle_Highlight_2OUxg.toggle_On_317le {
+  width: 36px;
+}
+.toggle_Toggle_3Sl0Q
+  .toggle_ToggleRail_2Fw7g.toggle_Highlight_2OUxg.toggle_Off_3blKB {
+  width: 0;
+}
+.toggle_Toggle_3Sl0Q .toggle_ToggleSwitch_3IWp5 {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px #000a;
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.toggle_Toggle_3Sl0Q .toggle_ToggleSwitch_3IWp5.toggle_On_317le {
+  background-color: #16a1e1;
+  background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
+  transform: translateX(25.3333333333px);
+}
+.toggle_Toggle_3Sl0Q .toggle_ToggleSwitch_3IWp5.toggle_Off_3blKB {
+  background-color: #4b525d;
+}
+.toggle_ToggleRow_1MBq0 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgba(59, 63, 72, 0.5);
+}
+.toggle_ToggleRow_1MBq0 .toggle_Label_1Dhs8 {
+  color: #dfe3e6;
+  font-size: 14px;
+  font-weight: 300;
+}
+.toggle_ToggleRow_1MBq0 .toggle_Label_1Dhs8.toggle_Disabled_M8qsA {
+  opacity: 0.3;
+}
+.radio_Group_1ml4S {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #202226;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  border-radius: 2px;
+  color: #dfe3e6;
+  box-shadow: inset 0 1px 1px 0px #000a;
+}
+.radio_Button_Hijmc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6px;
+  margin-right: 6px;
+  transition: background-color 0.18s ease-in-out;
+  background-color: #202226;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.radio_Button_Hijmc.radio_Active_3-_jM,
+.radio_Button_Hijmc.radio_Active_3-_jM:hover {
+  background-color: #1f8dff;
+  cursor: default;
+}
+.radio_Button_Hijmc:hover {
+  background-color: #33363e;
+}
 .contextmenu_ContextMenuMouseOverlay_3Knd7 {
   position: fixed;
   top: 0;
@@ -617,109 +773,6 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   box-shadow: 0 10px 32px 0px #000000ab;
   opacity: 1;
   word-wrap: break-word;
-}
-.toggle_Toggle_3Sl0Q {
-  width: 40px;
-  height: 16px;
-  position: relative;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-}
-.toggle_Toggle_3Sl0Q.toggle_Disabled_M8qsA {
-  cursor: default;
-  opacity: 0.6;
-}
-.toggle_Toggle_3Sl0Q .toggle_ToggleRail_2Fw7g {
-  height: 10.6666666667px;
-  width: 36px;
-  border-radius: 5.3333333333px;
-  box-shadow: inset 1px 1px 1px #0007;
-  position: absolute;
-  left: 2.6666666667px;
-  top: 2.6666666667px;
-  background-color: #26292e;
-}
-.toggle_Toggle_3Sl0Q .toggle_ToggleRail_2Fw7g.toggle_Highlight_2OUxg {
-  background-color: #2d5a81;
-  transition: width 0.2s ease-in-out;
-}
-.toggle_Toggle_3Sl0Q
-  .toggle_ToggleRail_2Fw7g.toggle_Highlight_2OUxg.toggle_On_317le {
-  width: 36px;
-}
-.toggle_Toggle_3Sl0Q
-  .toggle_ToggleRail_2Fw7g.toggle_Highlight_2OUxg.toggle_Off_3blKB {
-  width: 0;
-}
-.toggle_Toggle_3Sl0Q .toggle_ToggleSwitch_3IWp5 {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 3px #000a;
-  position: absolute;
-  left: 0;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-.toggle_Toggle_3Sl0Q .toggle_ToggleSwitch_3IWp5.toggle_On_317le {
-  background-color: #16a1e1;
-  background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
-  transform: translateX(25.3333333333px);
-}
-.toggle_Toggle_3Sl0Q .toggle_ToggleSwitch_3IWp5.toggle_Off_3blKB {
-  background-color: #4b525d;
-}
-.toggle_ToggleRow_1MBq0 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  border-radius: 3px;
-  background-color: rgba(59, 63, 72, 0.5);
-}
-.toggle_ToggleRow_1MBq0 .toggle_Label_1Dhs8 {
-  color: #dfe3e6;
-  font-size: 14px;
-  font-weight: 300;
-}
-.toggle_ToggleRow_1MBq0 .toggle_Label_1Dhs8.toggle_Disabled_M8qsA {
-  opacity: 0.3;
-}
-.radio_Group_1ml4S {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: stretch;
-  background-color: #202226;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 6px;
-  border-radius: 2px;
-  color: #dfe3e6;
-  box-shadow: inset 0 1px 1px 0px #000a;
-}
-.radio_Button_Hijmc {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 6px;
-  margin-right: 6px;
-  transition: background-color 0.18s ease-in-out;
-  background-color: #202226;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 14px;
-}
-.radio_Button_Hijmc.radio_Active_3-_jM,
-.radio_Button_Hijmc.radio_Active_3-_jM:hover {
-  background-color: #1f8dff;
-  cursor: default;
-}
-.radio_Button_Hijmc:hover {
-  background-color: #33363e;
 }
 .dropdown_DialogDropDownMenu_Item_2oAiZ {
   padding: 10px 15px;
@@ -1167,13 +1220,6 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 .gamepaddialog_GamepadDialogContent_InnerWidth_2ywyS.DialogContent_InnerWidth {
   overflow: initial;
   min-width: 50vw;
-}
-.gamepaddialog_ModalPosition_3A5uj
-  > .gamepaddialog_GamepadDialogContent_16sYN
-  .DialogBody,
-.gamepaddialog_ModalPosition_3A5uj
-  > .gamepaddialog_GamepadDialogContent_InnerWidth_2ywyS.DialogContent_InnerWidth {
-  min-height: 0;
 }
 .gamepaddialog_GamepadDialogContent_16sYN
   .DialogBody
@@ -2331,59 +2377,6 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   width: 16px;
   margin-top: -12px;
 }
-.focusring_FocusRingRoot_3m2Fo {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-}
-.focusring_FocusRing_1sTuv {
-  position: absolute;
-  pointer-events: none;
-  outline-offset: 2px;
-  outline: 2px solid rgba(255, 255, 255, 0.6);
-  animation: focusring_flash_15zi- 0.5s ease,
-    focusring_growOutline_3vSPb 0.4s ease, focusring_fadeOutline_xL-jG 0.4s ease,
-    focusring_blinker_3mURo 1.2s ease-in-out 0.4s 20;
-}
-.focusring_FocusRing_1sTuv.focusring_DebugFocusRing_1cTVW {
-  outline-color: #ff0;
-}
-.focusring_FocusRingOnHiddenItem_8uyqy.focusring_DebugFocusRing_1cTVW {
-  outline-offset: 2px;
-  outline-color: red;
-  background-color: red;
-}
-@keyframes focusring_flash_15zi- {
-  0% {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0);
-  }
-}
-@keyframes focusring_growOutline_3vSPb {
-  0% {
-    outline: 12px solid;
-  }
-  100% {
-    outline: 2px solid;
-  }
-}
-@keyframes focusring_fadeOutline_xL-jG {
-  0% {
-    outline-color: rgba(255, 255, 255, 0);
-  }
-  100% {
-    outline-color: rgba(255, 255, 255, 0.6);
-  }
-}
-@keyframes focusring_blinker_3mURo {
-  50% {
-    opacity: 0.4;
-  }
-}
 .scrollpanel_ScrollPanel_1Ecbh {
   position: relative;
 }
@@ -2729,15 +2722,15 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   transition-duration: 80ms;
   transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
 }
-body.modals_BodyNoScroll_32ZiC {
+body.modals_BodyNoScroll_1Xs5d {
   overflow-y: hidden;
   height: 100vh;
 }
-body.modals_BodyNoScrollDialog_105OB {
+body.modals_BodyNoScrollDialog_3jhMI {
   overflow-y: hidden;
   height: 100vh;
 }
-.modals_OverlayModal_1yDps {
+.modals_OverlayModal_24YFX {
   position: fixed;
   top: 0;
   right: 0;
@@ -2746,14 +2739,14 @@ body.modals_BodyNoScrollDialog_105OB {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1500;
 }
-.modals_GamepadOnlyModalWrapper_1lmXy {
+.modals_GamepadOnlyModalWrapper_1GlTs {
   display: flex;
   flex-direction: column;
   min-height: 0;
   max-height: 100vh;
   overflow-y: scroll;
 }
-.modals_GamepadOnlyModalWrapper_1lmXy .modals_GamepadOnlyPanelWrapper_3CnZr {
+.modals_GamepadOnlyModalWrapper_1GlTs .modals_GamepadOnlyPanelWrapper_1aY-r {
   display: flex;
   flex-direction: column;
   min-height: 0;

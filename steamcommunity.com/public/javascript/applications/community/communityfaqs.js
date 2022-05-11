@@ -6,7 +6,7 @@
     "+w6J": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return L;
+        return q;
       });
       var o = a("mrSG"),
         i = a("fcuX"),
@@ -27,7 +27,7 @@
         w = a("fpVW"),
         v = a("gyoR"),
         S = a("YLyR"),
-        _ = a("Jqb/"),
+        _ = a("7Q8g"),
         k = a("ka0M"),
         x = a("0rc7"),
         I = a("0OaU"),
@@ -41,13 +41,13 @@
         P = a("opsS"),
         j = a("as1E"),
         F = a("JiI5");
-      const q = -1;
-      let L = class extends h.Component {
+      const L = -1;
+      let q = class extends h.Component {
         constructor() {
           super(...arguments),
             (this.state = {
-              nImportCapsuleVisibiltyIndex: q,
-              nShowVisibilityIndexOnly: q,
+              nImportCapsuleVisibiltyIndex: L,
+              nShowVisibilityIndexOnly: L,
             });
         }
         RemoveCapsule(e) {
@@ -68,7 +68,7 @@
             id: e,
             type: t,
             visibility_index:
-              this.state.nImportCapsuleVisibiltyIndex == q
+              this.state.nImportCapsuleVisibiltyIndex == L
                 ? void 0
                 : this.state.nImportCapsuleVisibiltyIndex,
           };
@@ -246,7 +246,7 @@
             h.createElement(r.a, {
               onDiscountEventSelected: (e, t) => {
                 const a =
-                    this.state.nImportCapsuleVisibiltyIndex == q
+                    this.state.nImportCapsuleVisibiltyIndex == L
                       ? void 0
                       : this.state.nImportCapsuleVisibiltyIndex,
                   o = this.props.capsuleContainer;
@@ -277,7 +277,7 @@
         renderItemView() {
           const { editModel: e, capsuleContainer: t } = this.props,
             a = [
-              { label: Object(M.f)("#Sale_VisibilityIndex_Default"), data: q },
+              { label: Object(M.f)("#Sale_VisibilityIndex_Default"), data: L },
             ],
             o = e.GetNumberOfDays(),
             n = "ShowCapsuleItems_" + this.props.uniqueKey,
@@ -308,16 +308,16 @@
               h.createElement(
                 "div",
                 {
-                  key: "CountFilter_sale" + this.props.uniqueKey + "_" + q,
+                  key: "CountFilter_sale" + this.props.uniqueKey + "_" + L,
                   className: Object(O.a)(w.FlexRowContainer, w.RadioOption),
                 },
                 h.createElement("input", {
                   type: "radio",
                   name: e,
                   id: t,
-                  value: q,
-                  checked: q == this.state.nShowVisibilityIndexOnly,
-                  onChange: () => this.OnVisibilityIndexFilterChange(q),
+                  value: L,
+                  checked: L == this.state.nShowVisibilityIndexOnly,
+                  onChange: () => this.OnVisibilityIndexFilterChange(L),
                 }),
                 h.createElement(
                   "label",
@@ -478,9 +478,9 @@
                   )
                 ),
                 h.createElement(x.a, {
-                  bDisabled: this.state.nShowVisibilityIndexOnly != q,
+                  bDisabled: this.state.nShowVisibilityIndexOnly != L,
                   items:
-                    this.state.nShowVisibilityIndexOnly === q
+                    this.state.nShowVisibilityIndexOnly === L
                       ? t.capsules
                       : t.capsules.filter(
                           (e) =>
@@ -524,7 +524,7 @@
             y.a,
             null,
             o &&
-              h.createElement(g.M, {
+              h.createElement(g.L, {
                 onChange: this.OnUseTagFilterChange,
                 label: Object(M.f)("#Sale_TaggedItemFilter"),
                 description: t.sale_tag_filter
@@ -537,18 +537,18 @@
           );
         }
       };
-      Object(o.b)([P.b], L.prototype, "RemoveCapsule", null),
-        Object(o.b)([P.b], L.prototype, "AddCapsule", null),
-        Object(o.b)([P.b], L.prototype, "ImportSaleItems", null),
-        Object(o.b)([P.b], L.prototype, "OnChangeVisibilityDate", null),
-        Object(o.b)([P.b], L.prototype, "OnVisibilityIndexFilterChange", null),
-        Object(o.b)([P.b], L.prototype, "OnRemoveAllPrompt", null),
-        Object(o.b)([P.b], L.prototype, "OnRemoveAllConfirmed", null),
-        Object(o.b)([P.b], L.prototype, "OnEditRaw", null),
-        Object(o.b)([P.b], L.prototype, "OnUseTagFilterChangeConfirmed", null),
-        Object(o.b)([P.b], L.prototype, "OnUseTagFilterChange", null),
-        Object(o.b)([P.b], L.prototype, "OnSelectDiscountEvent", null),
-        (L = Object(o.b)([c.a], L));
+      Object(o.b)([P.b], q.prototype, "RemoveCapsule", null),
+        Object(o.b)([P.b], q.prototype, "AddCapsule", null),
+        Object(o.b)([P.b], q.prototype, "ImportSaleItems", null),
+        Object(o.b)([P.b], q.prototype, "OnChangeVisibilityDate", null),
+        Object(o.b)([P.b], q.prototype, "OnVisibilityIndexFilterChange", null),
+        Object(o.b)([P.b], q.prototype, "OnRemoveAllPrompt", null),
+        Object(o.b)([P.b], q.prototype, "OnRemoveAllConfirmed", null),
+        Object(o.b)([P.b], q.prototype, "OnEditRaw", null),
+        Object(o.b)([P.b], q.prototype, "OnUseTagFilterChangeConfirmed", null),
+        Object(o.b)([P.b], q.prototype, "OnUseTagFilterChange", null),
+        Object(o.b)([P.b], q.prototype, "OnSelectDiscountEvent", null),
+        (q = Object(o.b)([c.a], q));
       let z = class extends h.Component {
         constructor() {
           super(...arguments),
@@ -763,38 +763,42 @@
     "226m": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return l;
-      });
+        return p;
+      }),
+        a.d(t, "b", function () {
+          return c;
+        });
       var o = a("mrSG"),
         i = a("vDqi"),
         n = a.n(i),
-        s = (a("AiWL"), a("OS6B")),
-        r = a("lkRc");
-      class l {
+        s = a("q1tI"),
+        r = (a("mgoM"), a("AiWL"), a("OS6B")),
+        l = a("lkRc");
+      class p {
         constructor() {
           this.m_mapOptInData = new Map();
         }
         static Get() {
           return (
-            this.s_Singleton || (this.s_Singleton = new l()), this.s_Singleton
+            this.s_Singleton || (this.s_Singleton = new p()), this.s_Singleton
           );
         }
         ForceLoadOptInPage(e) {
           return Object(o.a)(this, void 0, void 0, function* () {
             let t = {
-              sessionid: r.c.SESSIONID,
+              sessionid: l.c.SESSIONID,
               origin: self.origin,
-              cc: r.c.COUNTRY || "US",
-              l: r.c.LANGUAGE,
+              cc: l.c.COUNTRY || "US",
+              l: l.c.LANGUAGE,
               saleid: e,
             };
-            const a = r.c.COMMUNITY_BASE_URL + "sale/ajaxoptinsummary";
+            const a = l.c.COMMUNITY_BASE_URL + "sale/ajaxoptinsummary";
             let o = null;
             try {
               o = (yield n.a.get(a, { params: t })).data;
             } catch (e) {
               console.error(
-                "Failed getting opt in summary: " + Object(s.a)(e).strErrorMsg
+                "Failed getting opt in summary: " + Object(r.a)(e).strErrorMsg
               );
             }
             return this.AddOptInPageToCache(e, o), o;
@@ -813,6 +817,73 @@
         GetOptInPageData(e) {
           return this.m_mapOptInData.get(e);
         }
+      }
+      class d {
+        constructor() {}
+        BHasOptIns() {
+          return null != this.m_rgOptIns;
+        }
+        GetOptIns() {
+          return this.m_rgOptIns;
+        }
+        LoadOptIns() {
+          return Object(o.a)(this, void 0, void 0, function* () {
+            return (
+              this.m_rgOptIns ||
+                this.m_promise ||
+                (this.m_promise = this.InternalLoadOptIns()),
+              this.m_promise
+            );
+          });
+        }
+        InternalLoadOptIns() {
+          var e;
+          return Object(o.a)(this, void 0, void 0, function* () {
+            const t = l.c.PARTNER_BASE_URL + "optin/ajaxgetactiveoptins",
+              a = {};
+            let o = null;
+            try {
+              const i = yield n.a.get(t, { params: a, withCredentials: !0 });
+              if (
+                1 ===
+                (null === (e = null == i ? void 0 : i.data) || void 0 === e
+                  ? void 0
+                  : e.success)
+              )
+                return void (this.m_rgOptIns = i.data.optins);
+              o = Object(r.a)(i);
+            } catch (e) {
+              o = Object(r.a)(e);
+            }
+            console.error(
+              "COptInListStore.InternalLoadOptIns failed: " +
+                (null == o ? void 0 : o.strErrorMsg),
+              o
+            );
+          });
+        }
+        static Get() {
+          return (
+            d.s_singleton ||
+              ((d.s_singleton = new d()),
+              "dev" === l.c.WEB_UNIVERSE &&
+                (window.g_OptInListStore = d.s_singleton)),
+            d.s_singleton
+          );
+        }
+      }
+      function c() {
+        const e = d.Get(),
+          [t, a] = Object(s.useState)(!0);
+        return (
+          Object(s.useEffect)(() => {
+            a(!0),
+              e.LoadOptIns().then(() => {
+                a(!1);
+              });
+          }, [e]),
+          { bLoading: t, rgOptIns: e.GetOptIns() }
+        );
       }
     },
     "3USw": function (e, t, a) {
@@ -861,7 +932,7 @@
         m = a("fpVW"),
         f = a("6AJf"),
         g = a("NF5x"),
-        y = a("Jqb/"),
+        y = a("7Q8g"),
         b = a("ka0M"),
         w = a("0rc7"),
         v = a("0OaU"),
@@ -1025,7 +1096,7 @@
           return l.createElement(
             "div",
             null,
-            l.createElement(L, {
+            l.createElement(q, {
               section: this.props.saleSection,
               editModel: this.props.editModel,
             }),
@@ -1137,7 +1208,7 @@
           );
         }
       };
-      function q(e, t, a, o) {
+      function L(e, t, a, o) {
         Object(p.a)(
           l.createElement(u.a, {
             onChange: (e) => {
@@ -1154,7 +1225,7 @@
         Object(o.b)([C.b], F.prototype, "OnClearCustomTitle", null),
         Object(o.b)([C.b], F.prototype, "OnShowTabItems", null),
         (F = Object(o.b)([r.a], F));
-      let L = class extends l.Component {
+      let q = class extends l.Component {
         render() {
           const { section: e, editModel: t } = this.props,
             a = Object(g.a)(!1, e),
@@ -1182,7 +1253,7 @@
               l.createElement(
                 h.f,
                 {
-                  onClick: (a) => q(a, e, t, "tab_inactive_label_color"),
+                  onClick: (a) => L(a, e, t, "tab_inactive_label_color"),
                   className: m.EventEditorTextTitle,
                   style: a,
                 },
@@ -1192,7 +1263,7 @@
                 h.f,
                 {
                   onClick: (a) =>
-                    q(a, e, t, "tab_inactive_background_gradient_top"),
+                    L(a, e, t, "tab_inactive_background_gradient_top"),
                   className: m.EventEditorTextTitle,
                   style: a,
                 },
@@ -1202,7 +1273,7 @@
                 h.f,
                 {
                   onClick: (a) =>
-                    q(a, e, t, "tab_inactive_background_gradient_bottom"),
+                    L(a, e, t, "tab_inactive_background_gradient_bottom"),
                   className: m.EventEditorTextTitle,
                   style: a,
                 },
@@ -1229,7 +1300,7 @@
               l.createElement(
                 h.f,
                 {
-                  onClick: (a) => q(a, e, t, "tab_active_label_color"),
+                  onClick: (a) => L(a, e, t, "tab_active_label_color"),
                   className: m.EventEditorTextTitle,
                   style: o,
                 },
@@ -1239,7 +1310,7 @@
                 h.f,
                 {
                   onClick: (a) =>
-                    q(a, e, t, "tab_active_background_gradient_top"),
+                    L(a, e, t, "tab_active_background_gradient_top"),
                   className: m.EventEditorTextTitle,
                   style: o,
                 },
@@ -1249,7 +1320,7 @@
                 h.f,
                 {
                   onClick: (a) =>
-                    q(a, e, t, "tab_active_background_gradient_bottom"),
+                    L(a, e, t, "tab_active_background_gradient_bottom"),
                   className: m.EventEditorTextTitle,
                   style: o,
                 },
@@ -1259,7 +1330,7 @@
           );
         }
       };
-      L = Object(o.b)([r.a], L);
+      q = Object(o.b)([r.a], q);
       const z = Object(r.a)((e) => {
         const { tab: t, editModel: a } = e,
           [n] = l.useState(new c.b(a.GetClanSteamID())),
@@ -1369,7 +1440,7 @@
         b = a("dpTt"),
         w = a("vBFs"),
         v = a("gyoR"),
-        S = a("Jqb/"),
+        S = a("7Q8g"),
         _ = a("ka0M"),
         k = a("0rc7"),
         x = a("0OaU"),
@@ -1704,7 +1775,7 @@
               )
           );
         }),
-        q = Object(s.a)((e) => {
+        L = Object(s.a)((e) => {
           const {
             language: t,
             facet: a,
@@ -1754,7 +1825,7 @@
             })
           );
         }),
-        L = Object(s.a)((e) => {
+        q = Object(s.a)((e) => {
           const {
               language: t,
               section: a,
@@ -1802,7 +1873,7 @@
                     s();
                   },
                   render: (e) =>
-                    r.createElement(q, {
+                    r.createElement(L, {
                       language: t,
                       facet: e,
                       editModel: i,
@@ -1914,7 +1985,7 @@
             r.createElement(
               C.b,
               { clanSteamID: s.GetClanSteamID(), requireAdmin: !0 },
-              r.createElement(f.M, {
+              r.createElement(f.L, {
                 label: Object(A.f)("#FacetedBrowseEditor_FacetsCheckbox"),
                 description: Object(A.f)(
                   "#FacetedBrowseEditor_FacetsCheckboxHelp"
@@ -2462,7 +2533,7 @@
                   ),
                   w
                     ? r.createElement(x.a, null)
-                    : r.createElement(L, {
+                    : r.createElement(q, {
                         language: s.GetCurEditLanguage(),
                         section: t,
                         facetArray: a.facets,
@@ -2955,7 +3026,7 @@
         c = a("Mgs7"),
         h = a("fpVW"),
         u = a.n(h),
-        m = a("Jqb/"),
+        m = a("7Q8g"),
         f = a("ka0M"),
         g = a("xnZ7"),
         y = a.n(g),
@@ -5685,6 +5756,19 @@
         AppTableRow: "partnereventsaletagitems_AppTableRow_X8HXp",
         AppID: "partnereventsaletagitems_AppID_n753z",
         AppName: "partnereventsaletagitems_AppName_1AjeX",
+        OptInSelectorCtn: "partnereventsaletagitems_OptInSelectorCtn_14bNP",
+        OptInSelectionRow: "partnereventsaletagitems_OptInSelectionRow_2ty1_",
+        OptInName: "partnereventsaletagitems_OptInName_3rvlP",
+        OptInList: "partnereventsaletagitems_OptInList_2EmV2",
+        OptInCtn: "partnereventsaletagitems_OptInCtn_2Xiw4",
+        OptInLeft: "partnereventsaletagitems_OptInLeft_z2cVd",
+        OptInTitle: "partnereventsaletagitems_OptInTitle_3xscv",
+        OptInID: "partnereventsaletagitems_OptInID_bZJbz",
+        OptInRight: "partnereventsaletagitems_OptInRight_1hHhi",
+        OptInCountCtn: "partnereventsaletagitems_OptInCountCtn_3KP4H",
+        OptInCount: "partnereventsaletagitems_OptInCount_22D9a",
+        OptInCountLabel: "partnereventsaletagitems_OptInCountLabel_1O5FY",
+        OptInCtnSelected: "partnereventsaletagitems_OptInCtnSelected_2awCc",
       };
     },
     JZ7q: function (e, t, a) {
@@ -13105,15 +13189,15 @@
         29,
       ];
       var A = a("Mgs7"),
-        E = a("Jqb/"),
+        E = a("7Q8g"),
         O = a("ka0M"),
         D = a("6Y59"),
         M = a("0OaU"),
         P = a("5E+2"),
         j = a("TLQK"),
         F = a("bS9Q"),
-        q = a("Lcls"),
-        L = a.n(q),
+        L = a("Lcls"),
+        q = a.n(L),
         z = a("2vnA"),
         R = (a("i8CI"), a("6+2x")),
         N = a.n(R),
@@ -13725,10 +13809,10 @@
             }, []),
             r.a.createElement(
               "div",
-              { className: L.a.FAQDashboardPage },
+              { className: q.a.FAQDashboardPage },
               r.a.createElement(
                 "div",
-                { className: L.a.FAQDashboard },
+                { className: q.a.FAQDashboard },
                 r.a.createElement(ye, null),
                 r.a.createElement(we, {
                   eCurrentSortColumn: o,
@@ -13737,7 +13821,7 @@
                 0 == t.length &&
                   r.a.createElement(
                     "div",
-                    { className: L.a.ErrorMsg },
+                    { className: q.a.ErrorMsg },
                     Object(j.f)("#FAQDashboard_Empty")
                   ),
                 n.map((e) =>
@@ -13768,15 +13852,15 @@
             );
           return r.a.createElement(
             "div",
-            { className: L.a.DashboardHeader },
+            { className: q.a.DashboardHeader },
             r.a.createElement(
               "div",
-              { className: L.a.DashboardHeaderTitle },
+              { className: q.a.DashboardHeaderTitle },
               Object(j.f)("#FAQDashboard_Header")
             ),
             r.a.createElement(
               "div",
-              { className: L.a.DashboardHeaderButtonCtn },
+              { className: q.a.DashboardHeaderButtonCtn },
               r.a.createElement(
                 A.f,
                 { onClick: a },
@@ -13800,7 +13884,7 @@
               },
               bOKDisabled: 0 == t.length,
               closeModal: e.closeModal,
-              className: L.a.CreateFAQDialog,
+              className: q.a.CreateFAQDialog,
             },
             r.a.createElement(
               A.z,
@@ -13816,7 +13900,7 @@
                 Object(j.f)("#FAQDashboard_CreateFAQInstructions"),
                 r.a.createElement("input", {
                   type: "text",
-                  className: L.a.NameInput,
+                  className: q.a.NameInput,
                   value: t,
                   placeholder: Object(j.f)("#FAQDashboard_NamePlaceHolder"),
                   onFocus: (e) => e.target.select(),
@@ -13830,7 +13914,7 @@
         we = (e) =>
           r.a.createElement(
             "div",
-            { className: L.a.DashboardListHeaderRow },
+            { className: q.a.DashboardListHeaderRow },
             r.a.createElement(
               ve,
               Object.assign(
@@ -13922,10 +14006,10 @@
               SetSortColumn: n,
             } = e,
             s = Object(b.a)(
-              L.a.EntryColumn,
-              L.a.ClickableHeader,
-              a ? L.a.NameCol : L.a.DataCol,
-              i == o && L.a.Selected
+              q.a.EntryColumn,
+              q.a.ClickableHeader,
+              a ? q.a.NameCol : q.a.DataCol,
+              i == o && q.a.Selected
             );
           return r.a.createElement(
             P.a,
@@ -13938,7 +14022,7 @@
             Object(j.f)(t),
             r.a.createElement(
               "div",
-              { className: L.a.DownArrow },
+              { className: q.a.DownArrow },
               r.a.createElement(D.s, null)
             )
           );
@@ -13947,7 +14031,7 @@
           const { nCount: t, nTotal: a, nGoal: o } = e;
           return r.a.createElement(
             "div",
-            { className: t == o ? L.a.GoodCount : L.a.BadCount },
+            { className: t == o ? q.a.GoodCount : q.a.BadCount },
             t + " / " + a
           );
         },
@@ -13955,7 +14039,7 @@
           const { bIsVisible: t } = e;
           return r.a.createElement(
             "div",
-            { className: t ? L.a.Visible : L.a.Hidden },
+            { className: t ? q.a.Visible : q.a.Hidden },
             Object(j.f)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible")
           );
         },
@@ -13968,46 +14052,46 @@
             {
               route: o.k_eCommunityEdit,
               faqid: t,
-              className: L.a.DashboardEntry,
+              className: q.a.DashboardEntry,
             },
             r.a.createElement(
               "div",
-              { className: Object(b.a)(L.a.EntryColumn, L.a.NameCol) },
-              r.a.createElement("div", { className: L.a.EntryInternalName }, a)
+              { className: Object(b.a)(q.a.EntryColumn, q.a.NameCol) },
+              r.a.createElement("div", { className: q.a.EntryInternalName }, a)
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(L.a.EntryColumn, L.a.DataCol) },
+              { className: Object(b.a)(q.a.EntryColumn, q.a.DataCol) },
               r.a.createElement(fe, { rtTimestamp: i })
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(L.a.EntryColumn, L.a.DataCol) },
+              { className: Object(b.a)(q.a.EntryColumn, q.a.DataCol) },
               r.a.createElement(Se, { nCount: n, nTotal: u, nGoal: u })
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(L.a.EntryColumn, L.a.DataCol) },
+              { className: Object(b.a)(q.a.EntryColumn, q.a.DataCol) },
               r.a.createElement(Se, { nCount: s, nTotal: u, nGoal: 0 })
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(L.a.EntryColumn, L.a.DataCol) },
+              { className: Object(b.a)(q.a.EntryColumn, q.a.DataCol) },
               r.a.createElement(Se, { nCount: l, nTotal: h, nGoal: h })
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(L.a.EntryColumn, L.a.DataCol) },
+              { className: Object(b.a)(q.a.EntryColumn, q.a.DataCol) },
               r.a.createElement(Se, { nCount: p, nTotal: h, nGoal: 0 })
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(L.a.EntryColumn, L.a.DataCol) },
+              { className: Object(b.a)(q.a.EntryColumn, q.a.DataCol) },
               r.a.createElement(_e, { bIsVisible: d })
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(L.a.EntryColumn, L.a.DataCol) },
+              { className: Object(b.a)(q.a.EntryColumn, q.a.DataCol) },
               r.a.createElement(_e, { bIsVisible: c })
             )
           );
@@ -14303,7 +14387,7 @@
             )
           );
         },
-        qe = (e) =>
+        Le = (e) =>
           r.a.createElement(
             P.a,
             { toolTipContent: Object(j.f)("#FAQEditor_ChangeVisible_ttip") },
@@ -14313,7 +14397,7 @@
                 className: W.EditPreviewButton,
                 onClick: (t) => {
                   Object(O.d)(
-                    r.a.createElement(Le, { draft: e.draft }),
+                    r.a.createElement(qe, { draft: e.draft }),
                     Object(Y.o)(t)
                   );
                 },
@@ -14321,7 +14405,7 @@
               Object(j.f)("#FAQEditor_EditVisible")
             )
           ),
-        Le = (e) => {
+        qe = (e) => {
           const { draft: t } = e,
             a = () => e.closeModal && e.closeModal(),
             [o, n] = r.a.useState(!1),
@@ -14508,7 +14592,7 @@
                     r.a.createElement(
                       "div",
                       { className: ze.StatusBtnCtn },
-                      r.a.createElement(qe, { draft: s })
+                      r.a.createElement(Le, { draft: s })
                     )
                   ),
                   r.a.createElement(
@@ -15649,10 +15733,10 @@
           return F;
         }),
         a.d(t, "w", function () {
-          return q;
+          return L;
         }),
         a.d(t, "q", function () {
-          return L;
+          return q;
         }),
         a.d(t, "o", function () {
           return z;
@@ -15759,7 +15843,7 @@
                   M(n, N(n.capsule), o.AppType) && (t = !0);
                 }
                 t &&
-                  (q(e.GetEventModel().jsondata.auto_item_tags, n), (_ = !0));
+                  (L(e.GetEventModel().jsondata.auto_item_tags, n), (_ = !0));
               }
             }),
             _
@@ -15948,16 +16032,16 @@
                   (e.capsules = j(t, e.sale_tag_filter, e.capsules));
         });
       }
-      function q(e, t) {
+      function L(e, t) {
         const a = new Array();
         if (e) for (const o of e) I(t.tags, o.filter) && a.push(o.tag_name);
         return M(t, a, o.Auto);
       }
-      function L(e) {
+      function q(e) {
         return e.GetEventModel().jsondata.tagged_item_filter || { clauses: [] };
       }
       function z(e) {
-        const t = L(e);
+        const t = q(e);
         return C(e.GetEventModel().GetTaggedItems(), t);
       }
       function R() {
@@ -16033,7 +16117,7 @@
         return i;
       }
       function W(e) {
-        const t = L(e);
+        const t = q(e);
         if (P(t)) return !1;
         const a = e.GetEventModel().jsondata.tagged_items.length;
         return (
@@ -16694,7 +16778,7 @@
         c = a("9w6b"),
         h = a("fpVW"),
         u = a.n(h),
-        m = a("Jqb/"),
+        m = a("7Q8g"),
         f = a("ka0M"),
         g = a("0OaU"),
         y = (a("AiWL"), a("exH9")),
@@ -16909,7 +16993,7 @@
           if (a.length > 0)
             for (let o of a)
               e.push(
-                r.createElement(q, {
+                r.createElement(L, {
                   key: o.imageid,
                   clanImage: o,
                   searchStringHilight: t,
@@ -17103,7 +17187,7 @@
             ),
             r.createElement("div", { className: k.a.ImagesContainer }, e),
             this.state.uploadToken > 0 &&
-              r.createElement(L, {
+              r.createElement(q, {
                 key: "clanimageuploaderview" + this.state.uploadToken,
                 uploader: this.m_clanImageUploader,
                 onDismiss: this.onUploaderDismiss,
@@ -17350,7 +17434,7 @@
         Object(o.b)([S.b], F.prototype, "OnNoOp", null),
         Object(o.b)([S.b], F.prototype, "OnClanImageDialog", null),
         (F = O = Object(o.b)([s.a], F));
-      class q extends r.Component {
+      class L extends r.Component {
         constructor() {
           super(...arguments),
             (this.m_linkPopupRef = r.createRef()),
@@ -17544,16 +17628,16 @@
           );
         }
       }
-      Object(o.b)([S.b], q.prototype, "onHandleFullSize", null),
-        Object(o.b)([S.b], q.prototype, "onHandleThumbnail", null),
-        Object(o.b)([S.b], q.prototype, "onHandleLocalizedImageGroup", null),
-        Object(o.b)([S.b], q.prototype, "OnDragStartSource", null),
-        Object(o.b)([S.b], q.prototype, "OnDragEndSource", null),
-        Object(o.b)([S.b], q.prototype, "OnDeleteClick", null),
-        Object(o.b)([S.b], q.prototype, "onDelete", null),
-        Object(o.b)([S.b], q.prototype, "OnCloseDialog", null),
-        Object(o.b)([S.b], q.prototype, "OnImageClick", null);
-      let L = class extends r.Component {
+      Object(o.b)([S.b], L.prototype, "onHandleFullSize", null),
+        Object(o.b)([S.b], L.prototype, "onHandleThumbnail", null),
+        Object(o.b)([S.b], L.prototype, "onHandleLocalizedImageGroup", null),
+        Object(o.b)([S.b], L.prototype, "OnDragStartSource", null),
+        Object(o.b)([S.b], L.prototype, "OnDragEndSource", null),
+        Object(o.b)([S.b], L.prototype, "OnDeleteClick", null),
+        Object(o.b)([S.b], L.prototype, "onDelete", null),
+        Object(o.b)([S.b], L.prototype, "OnCloseDialog", null),
+        Object(o.b)([S.b], L.prototype, "OnImageClick", null);
+      let q = class extends r.Component {
         onRetry() {
           this.props.uploader.RetryAllFailedUploads();
         }
@@ -17627,9 +17711,9 @@
           );
         }
       };
-      Object(o.b)([S.b], L.prototype, "onRetry", null),
-        Object(o.b)([S.b], L.prototype, "onCancelUploads", null),
-        (L = Object(o.b)([s.a], L));
+      Object(o.b)([S.b], q.prototype, "onRetry", null),
+        Object(o.b)([S.b], q.prototype, "onCancelUploads", null),
+        (q = Object(o.b)([s.a], q));
     },
     OJ5K: function (e, t, a) {
       e.exports = { InfoRow: "faqviewadmin_InfoRow_3AG-7" };
@@ -18382,10 +18466,10 @@
       };
       Object(o.b)([E.b], P.prototype, "OnActivate", null),
         (P = Object(o.b)([s.a], P));
-      var j = a("Jqb/"),
+      var j = a("7Q8g"),
         F = a("ka0M"),
-        q = a("6Y59"),
-        L = a("X3Ds"),
+        L = a("6Y59"),
+        q = a("X3Ds"),
         z = a("6h0J"),
         R = a.n(z),
         N = a("75vw"),
@@ -18691,8 +18775,8 @@
                     onClick: e.fnToggleMinimize,
                   },
                   e.bIsMinimized
-                    ? r.createElement(q.M, null)
-                    : r.createElement(q.P, null)
+                    ? r.createElement(L.M, null)
+                    : r.createElement(L.P, null)
                 )
             ),
             !e.bIsMinimized &&
@@ -18735,7 +18819,7 @@
                           r.createElement(Y, {
                             fnRemoveAllArtwork: e.fnRemoveAllArtwork,
                           }),
-                          Object(L.o)(t)
+                          Object(q.o)(t)
                         );
                       },
                     },
@@ -18855,7 +18939,7 @@
                       r.createElement(
                         "div",
                         { className: W.a.SpotlightOptions },
-                        r.createElement(y.M, {
+                        r.createElement(y.L, {
                           onChange: this.OnSpotlightChange,
                           label: Object(A.f)(
                             "#EventEditor_Options_Spotlight_Label"
@@ -18871,7 +18955,7 @@
                       r.createElement(
                         "div",
                         { className: W.a.SpotlightOptions },
-                        r.createElement(y.M, {
+                        r.createElement(y.L, {
                           onChange: this.OnSpotlightTextChange,
                           label: Object(A.f)(
                             "#EventEditor_Options_SpotlightText_Label"
@@ -19326,7 +19410,7 @@
               },
               onCancel: this.OnCloseDeleteDialog,
             }),
-            Object(L.o)(e)
+            Object(q.o)(e)
           );
         }
         ConstructLanguages() {
@@ -19392,7 +19476,7 @@
                           "#selectimage_viewimage_ttip"
                         ),
                       },
-                      q.V()
+                      L.V()
                     ),
                   this.props.fnOnArtworkLangChange &&
                     r.createElement("img", {
@@ -19816,7 +19900,7 @@
         l = a("qP7j"),
         p = a("fpVW"),
         d = a("gyoR"),
-        c = a("Jqb/"),
+        c = a("7Q8g"),
         h = a("0OaU"),
         u = a("exH9"),
         m = a("TLQK"),
@@ -22459,7 +22543,7 @@
         f = a("Mgs7"),
         g = a("IjL/"),
         y = a("YLyR"),
-        b = a("Jqb/"),
+        b = a("7Q8g"),
         w = a("0OaU"),
         v = a("DisI"),
         S = a("TLQK");
@@ -23125,7 +23209,7 @@
           return Pt;
         }),
         a.d(t, "e", function () {
-          return Lt;
+          return qt;
         });
       var o = a("mrSG"),
         i = a("vDqi"),
@@ -23141,7 +23225,7 @@
         m = (a("Nsq5"), a("U+Q5")),
         f = a("Mgs7"),
         g = a("qP7j"),
-        y = a("Jqb/"),
+        y = a("7Q8g"),
         b = a("TLQK"),
         w = a("opsS"),
         v = a("6yBx"),
@@ -23239,8 +23323,8 @@
         P = a("0rc7"),
         j = a("0OaU"),
         F = a("5E+2"),
-        q = a("UvY0"),
-        L = (a("AiWL"), a("Kw0F")),
+        L = a("UvY0"),
+        q = (a("AiWL"), a("Kw0F")),
         z = a("exH9"),
         R = a("X3Ds"),
         N = a("N0Ye"),
@@ -23262,7 +23346,7 @@
           };
         return i
           ? c.createElement(
-              q.b,
+              L.b,
               { clanSteamID: t.GetClanSteamID() },
               c.createElement(f.g, {
                 onChange: d,
@@ -23587,7 +23671,7 @@
           onMove: (e, o) => {
             Object(x.G)(() => {
               (a.events = i),
-                Object(L.d)(a.events, e, o),
+                Object(q.d)(a.events, e, o),
                 t.SetDirty(s.d.jsondata_sales);
             });
           },
@@ -23669,7 +23753,7 @@
             varName: "event_schedule_show_recent_first",
           }),
           c.createElement(
-            q.b,
+            L.b,
             { clanSteamID: o.GetClanSteamID() },
             c.createElement(f.A, {
               type: "text",
@@ -23739,7 +23823,7 @@
           return t.event_schedule_categories
             ? t.event_schedule_categories.findIndex(
                 (t) =>
-                  t.type == e.type && Object(L.a)(t.tags || [], e.tags || [])
+                  t.type == e.type && Object(q.a)(t.tags || [], e.tags || [])
               )
             : -1;
         }
@@ -24202,7 +24286,7 @@
               )
           ) &&
             c.createElement(
-              q.b,
+              L.b,
               { clanSteamID: o.GetClanSteamID(), requireAdmin: !0 },
               c.createElement(
                 "div",
@@ -24646,7 +24730,7 @@
                   rgRealmList: t.GetIncludedRealmList(),
                 }),
                 c.createElement(
-                  q.b,
+                  L.b,
                   { clanSteamID: t.GetClanSteamID(), requireAdmin: !0 },
                   c.createElement(
                     f.f,
@@ -24727,8 +24811,8 @@
         Pe = a("zoRj"),
         je = a("gyoR"),
         Fe = a("MnIK"),
-        qe = a("6Y59"),
-        Le = a("YyVH");
+        Le = a("6Y59"),
+        qe = a("YyVH");
       class ze {
         constructor() {
           "dev" === G.c.WEB_UNIVERSE && (window.g_ContentHubNamesStore = this);
@@ -24778,7 +24862,7 @@
             De.a,
             null,
             c.createElement(
-              q.b,
+              L.b,
               { clanSteamID: e.editModel.GetClanSteamID() },
               c.createElement(f.I, {
                 showValue: !0,
@@ -24944,7 +25028,7 @@
         }),
         He = Object(d.a)((e) => {
           const { section: t } = e;
-          return c.createElement(Lt, Object.assign({ saleSection: t }, e));
+          return c.createElement(qt, Object.assign({ saleSection: t }, e));
         });
       var Ve = a("nxSy");
       let Ue = class extends c.Component {
@@ -25028,7 +25112,7 @@
                 data: this.ConvertRowConfigToString([5]),
               })
             : "items" === e.section_type &&
-              Object(q.a)(t.GetClanSteamID(), !1) &&
+              Object(L.a)(t.GetClanSteamID(), !1) &&
               a.push(
                 {
                   label:
@@ -25146,7 +25230,7 @@
                   }),
                 o.use_random_order &&
                   c.createElement(
-                    q.b,
+                    L.b,
                     { clanSteamID: n.GetClanSteamID() },
                     c.createElement(f.A, {
                       mustBeNumeric: !0,
@@ -25408,7 +25492,7 @@
                   c.createElement(
                     "div",
                     { className: O.InputBorder },
-                    c.createElement(f.M, {
+                    c.createElement(f.L, {
                       onChange: this.OnShowOnlySaleWhiteListedBroadcasts,
                       label: Object(b.f)(
                         "#Sale_BroadcastOnlyWhiteListedInSale"
@@ -25954,7 +26038,7 @@
                             c.createElement(_, {
                               loc_images: a.localized_itemdef_capsule,
                               fnSetImage: (e, t) => {
-                                (a.localized_itemdef_capsule = Object(L.e)(
+                                (a.localized_itemdef_capsule = Object(q.e)(
                                   a.localized_itemdef_capsule || [],
                                   30,
                                   null
@@ -26129,7 +26213,7 @@
                       h.a.createElement(_, {
                         loc_images: a.localized_link_capsule,
                         fnSetImage: (e, t) => {
-                          (a.localized_link_capsule = Object(L.e)(
+                          (a.localized_link_capsule = Object(q.e)(
                             a.localized_link_capsule || [],
                             30,
                             null
@@ -26333,9 +26417,9 @@
         const { saleSection: t, editModel: a } = e;
         if (!t.label_link) return null;
         return c.createElement(
-          q.b,
+          L.b,
           { clanSteamID: a.GetClanSteamID() },
-          c.createElement(f.M, {
+          c.createElement(f.L, {
             onChange: (e) => {
               (t.label_link_style = e ? "browseall" : void 0),
                 a.SetDirty(s.d.jsondata_sales);
@@ -26445,10 +26529,10 @@
         }
         MoveSection(e) {
           const t = e ? 1 : -1;
-          Object(L.d)(
+          Object(q.d)(
             this.props.editModel.GetEventModel().jsondata.sale_sections,
             this.props.index,
-            Object(Le.a)(
+            Object(qe.a)(
               this.props.index + t,
               0,
               this.props.editModel.GetEventModel().jsondata.sale_sections
@@ -26524,7 +26608,7 @@
                 tooltip: Object(b.f)("#Sale_Links_ttip"),
               },
             ];
-          Object(q.a)(e.GetClanSteamID()) &&
+          Object(L.a)(e.GetClanSteamID()) &&
             (o.push({
               label: "(VO) " + Object(b.f)("#Sale_CuratorRecommendation"),
               data: "curator_recommendation",
@@ -26638,7 +26722,7 @@
                       disabled: 0 == this.props.index,
                       onClick: () => this.MoveSection(!1),
                     },
-                    c.createElement(qe.c, { angle: 0 })
+                    c.createElement(Le.c, { angle: 0 })
                   ),
                   c.createElement(
                     f.f,
@@ -26649,7 +26733,7 @@
                       disabled: this.props.index + 1 == e.GetSaleSectionCount(),
                       onClick: () => this.MoveSection(!0),
                     },
-                    c.createElement(qe.c, { angle: 180 })
+                    c.createElement(Le.c, { angle: 180 })
                   ),
                   c.createElement(te.a, {
                     bIsMinimized: u,
@@ -26661,7 +26745,7 @@
                       "data-tooltip-text": Object(b.f)("#Button_Remove"),
                       onClick: () => this.RemoveSection(this.props.index),
                     },
-                    c.createElement(qe.Ab, null)
+                    c.createElement(Le.Ab, null)
                   )
                 )
               )
@@ -26755,7 +26839,7 @@
                                 }),
                                 p &&
                                   c.createElement(
-                                    q.b,
+                                    L.b,
                                     {
                                       clanSteamID: e.GetClanSteamID(),
                                       className: ve.CustomImageTitle,
@@ -26787,7 +26871,7 @@
                                   ),
                                 d &&
                                   c.createElement(
-                                    q.b,
+                                    L.b,
                                     { clanSteamID: e.GetClanSteamID() },
                                     c.createElement(f.A, {
                                       label: Object(b.f)("#Sale_LinkURL"),
@@ -26821,7 +26905,7 @@
                             this.ToggleMinimized("tabsettings", !0),
                         }),
                         c.createElement(
-                          q.b,
+                          L.b,
                           {
                             clanSteamID: e.GetClanSteamID(),
                             requireAdmin: !0,
@@ -26847,7 +26931,7 @@
                             className: ve.EditorCtn,
                             id: "salesection_item_" + this.props.index,
                           },
-                          c.createElement(qt, Object.assign({}, this.props))
+                          c.createElement(Lt, Object.assign({}, this.props))
                         )
                     )
                 )
@@ -26937,7 +27021,7 @@
         return c.createElement(
           c.Fragment,
           null,
-          c.createElement(f.M, {
+          c.createElement(f.L, {
             onChange: (e) => {
               (t.smart_section = e),
                 (t.smart_section_type = e ? "wishlist" : void 0),
@@ -26947,7 +27031,7 @@
             description: Object(b.f)("#Sale_SmartSectionDescription"),
             checked: i,
           }),
-          Boolean(i) && c.createElement(Lt, { saleSection: t, editModel: a }),
+          Boolean(i) && c.createElement(qt, { saleSection: t, editModel: a }),
           Boolean(!i) &&
             c.createElement(
               c.Fragment,
@@ -26971,7 +27055,7 @@
         return c.createElement(
           c.Fragment,
           null,
-          c.createElement(f.M, {
+          c.createElement(f.L, {
             onChange: (e) => {
               Object(x.G)(() => {
                 t.smart_section = e;
@@ -27191,7 +27275,7 @@
                     className: k.ItemBrowseInactiveTabAdd,
                     onClick: () => this.OnAddTab(e),
                   },
-                  c.createElement(qe.v, null)
+                  c.createElement(Le.v, null)
                 ),
                 this.RenderTabName(e)
               )
@@ -27627,7 +27711,7 @@
               })
           );
         }),
-        qt = Object(d.a)((e) => {
+        Lt = Object(d.a)((e) => {
           switch (e.saleSection.section_type) {
             case "items":
               return c.createElement(
@@ -27724,7 +27808,7 @@
               return null;
           }
         });
-      let Lt = class extends c.Component {
+      let qt = class extends c.Component {
         constructor() {
           super(...arguments),
             (this.m_bMounted = !1),
@@ -27856,7 +27940,7 @@
               data: "discounted",
             },
           ];
-          Object(q.a)(t.GetClanSteamID()) &&
+          Object(L.a)(t.GetClanSteamID()) &&
             (o.push({
               label: "(VO) " + Object(b.f)("#Sale_Tag"),
               tooltip: Object(b.f)("#Sale_Tag_ttip"),
@@ -28200,14 +28284,14 @@
           );
         }
       };
-      Object(o.b)([w.b], Lt.prototype, "OnSmartSectionTypeChange", null),
-        Object(o.b)([w.b], Lt.prototype, "OnSmartSectionMaxAppChange", null),
-        Object(o.b)([w.b], Lt.prototype, "SetSmartSectionCategory", null),
-        Object(o.b)([w.b], Lt.prototype, "SetSmartSectionTag", null),
-        Object(o.b)([w.b], Lt.prototype, "UpdateTagSuggestions", null),
-        Object(o.b)([w.b], Lt.prototype, "SetMasterAppID", null),
-        Object(o.b)([w.b], Lt.prototype, "OnChooseMasterSubscriptionID", null),
-        (Lt = Object(o.b)([d.a], Lt));
+      Object(o.b)([w.b], qt.prototype, "OnSmartSectionTypeChange", null),
+        Object(o.b)([w.b], qt.prototype, "OnSmartSectionMaxAppChange", null),
+        Object(o.b)([w.b], qt.prototype, "SetSmartSectionCategory", null),
+        Object(o.b)([w.b], qt.prototype, "SetSmartSectionTag", null),
+        Object(o.b)([w.b], qt.prototype, "UpdateTagSuggestions", null),
+        Object(o.b)([w.b], qt.prototype, "SetMasterAppID", null),
+        Object(o.b)([w.b], qt.prototype, "OnChooseMasterSubscriptionID", null),
+        (qt = Object(o.b)([d.a], qt));
     },
     knQc: function (e, t, a) {
       "use strict";
@@ -28436,7 +28520,7 @@
           return re;
         }),
         a.d(t, "a", function () {
-          return be;
+          return ve;
         });
       var o = a("mrSG"),
         i = a("vDqi"),
@@ -28466,13 +28550,13 @@
         A = a("fpVW"),
         E = a("gyoR"),
         O = a("MnIK"),
-        D = a("Jqb/"),
+        D = a("7Q8g"),
         M = a("ka0M"),
         P = a("xnZ7"),
         j = a.n(P),
         F = a("0OaU"),
-        q = a("+d9t"),
-        L = a("DisI"),
+        L = a("+d9t"),
+        q = a("DisI"),
         z = a("UvY0"),
         R = a("qiKp"),
         N = a("exH9"),
@@ -28530,7 +28614,7 @@
                 "div",
                 { className: K.FilterDisplayNoFilter },
                 Object(B.f)("#Sale_TagFilter_NoFilter"),
-                m.createElement(L.b, {
+                m.createElement(q.b, {
                   tooltip: Object(B.f)("#Sale_TagFilter_NoFilter_ttip"),
                 })
               )
@@ -28702,7 +28786,7 @@
         OnEditFilter() {
           const { capsuleContainer: e } = this.props;
           Object(M.d)(
-            m.createElement(be, {
+            m.createElement(ve, {
               editModel: this.props.editModel,
               filter: e.sale_tag_filter || { clauses: [] },
               title: Object(B.f)("#Sale_TagFilter_EditFilter"),
@@ -28721,7 +28805,7 @@
               "div",
               { className: K.FilterTitle },
               Object(B.f)("#Sale_TagFilter_CurrentFilter"),
-              m.createElement(L.b, {
+              m.createElement(q.b, {
                 tooltip: Object(B.f)("#Sale_TagFilter_EditFilter_ttip"),
               })
             ),
@@ -28742,10 +28826,7 @@
         const { editModel: t } = e,
           [a, o] = m.useState(!1),
           i = Object(u.d)(() => t.GetEventModel().GetTaggedItems()),
-          l = Object(u.d)(
-            () => t.GetEventModel().jsondata.prune_list_optin_name
-          ),
-          [p, d] = Object(m.useState)(!0);
+          [s, l] = Object(m.useState)(!0);
         return (
           Object(m.useEffect)(() => {
             var e;
@@ -28768,12 +28849,12 @@
                     var e;
                     (null === (e = null == t ? void 0 : t.token) || void 0 === e
                       ? void 0
-                      : e.reason) || d(!1);
+                      : e.reason) || l(!1);
                   });
             } else
               (null === (e = null == t ? void 0 : t.token) || void 0 === e
                 ? void 0
-                : e.reason) || d(!1);
+                : e.reason) || l(!1);
             return () => t.cancel("TagItemEditor: unmounting");
           }, []),
           m.createElement(
@@ -28788,7 +28869,7 @@
                 m.createElement(X.c, { editModel: t })
               )
             ),
-            !we(t, v.n.k_EContentHub) &&
+            !Se(t, v.n.k_EContentHub) &&
               m.createElement(
                 m.Fragment,
                 null,
@@ -28813,16 +28894,16 @@
                       m.createElement(ne, {
                         onAddItem: (e, a) => Object(r.b)(t, a, e),
                       }),
-                      p
+                      s
                         ? m.createElement(F.a, {
                             size: "medium",
                             string: Object(B.f)("#Loading"),
                             position: "center",
                           })
-                        : m.createElement(le, { editModel: t })
+                        : m.createElement(de, { editModel: t })
                     )
               ),
-            !we(t, v.n.k_ETaggedItems) &&
+            !Se(t, v.n.k_ETaggedItems) &&
               m.createElement(
                 z.b,
                 { clanSteamID: t.GetClanSteamID() },
@@ -28834,39 +28915,209 @@
                     {
                       onClick: (e) =>
                         Object(M.d)(
-                          m.createElement(ke, { editModel: t }),
+                          m.createElement(Ie, { editModel: t }),
                           Object(G.o)(e)
                         ),
                     },
                     Object(B.f)("#Sale_EditAutoTags"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)("#Sale_EditAutoTags_ttip"),
                     })
                   )
                 )
               ),
-            we(t, v.n.k_EContentHub) &&
+            Se(t, v.n.k_EContentHub) &&
               m.createElement(
                 z.b,
                 { clanSteamID: t.GetClanSteamID(), requireAdmin: !0 },
-                m.createElement(
-                  "div",
-                  { className: K.ButtonRow },
-                  m.createElement(C.A, {
-                    label: "Opt-In For Prune List",
-                    value: l,
-                    onChange: (e) => {
-                      (t.GetEventModel().jsondata.prune_list_optin_name =
-                        e.target.value),
-                        t.SetDirty(s.d.jsondata_sales);
-                    },
-                  })
-                )
+                m.createElement(le, { editModel: t })
               )
           )
         );
       }
       function le(e) {
+        var t;
+        const { editModel: a } = e,
+          o =
+            null === (t = null == a ? void 0 : a.GetEventModel()) ||
+            void 0 === t
+              ? void 0
+              : t.jsondata,
+          i = Object(u.d)(() => o.prune_list_optin_name);
+        return m.createElement(
+          "div",
+          { className: K.OptInSelectorCtn },
+          m.createElement(C.D, null, "Opt-In For Prune List"),
+          m.createElement(
+            "div",
+            { className: K.OptInSelectionRow },
+            m.createElement(
+              "div",
+              { className: K.OptInName },
+              o.prune_list_optin_name
+            ),
+            m.createElement(
+              C.f,
+              {
+                onClick: (e) =>
+                  Object(M.d)(
+                    m.createElement(pe, {
+                      selectedOptIn: i,
+                      onOK: (e) => {
+                        (o.prune_list_optin_name = e),
+                          a.SetDirty(s.d.jsondata_sales);
+                      },
+                    }),
+                    Object(G.o)(e)
+                  ),
+              },
+              "Select Opt-In...",
+              m.createElement(q.b, {
+                tooltip:
+                  "NOTE: You must be logged in to the partner site before you can select an opt-in.",
+              })
+            )
+          )
+        );
+      }
+      function pe(e) {
+        const { selectedOptIn: t, closeModal: a, onOK: o } = e,
+          { bLoading: i, rgOptIns: n } = Object(p.b)(),
+          [s, r] = Object(m.useState)(t);
+        return m.createElement(
+          D.f,
+          { onCancel: a, closeModal: a },
+          m.createElement(C.z, null, "Select Opt-In"),
+          m.createElement(
+            C.d,
+            null,
+            i
+              ? m.createElement(F.a, { size: "medium", position: "center" })
+              : m.createElement(
+                  "div",
+                  { className: K.OptInList },
+                  null == n
+                    ? void 0
+                    : n.map((e, t) =>
+                        m.createElement(
+                          "div",
+                          {
+                            className: Object(N.a)({
+                              [K.OptInCtn]: !0,
+                              [K.OptInCtnSelected]: s === e.pageid,
+                            }),
+                            key: e.pageid + "_" + t,
+                            onClick: () => r(e.pageid),
+                          },
+                          m.createElement(
+                            "div",
+                            { className: K.OptInLeft },
+                            m.createElement(
+                              "div",
+                              { className: K.OptInTitle },
+                              e.title[U.c.LANGUAGE]
+                            ),
+                            m.createElement(
+                              "div",
+                              { className: K.OptInID },
+                              e.pageid
+                            )
+                          ),
+                          m.createElement(
+                            "div",
+                            { className: K.OptInRight },
+                            m.createElement(
+                              "div",
+                              { className: K.OptInCountCtn },
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCount },
+                                e.count_eligible
+                              ),
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCountLabel },
+                                "Eligible"
+                              )
+                            ),
+                            m.createElement(
+                              "div",
+                              { className: K.OptInCountCtn },
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCount },
+                                e.count_opted_in
+                              ),
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCountLabel },
+                                "Opted In"
+                              )
+                            ),
+                            m.createElement(
+                              "div",
+                              { className: K.OptInCountCtn },
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCount },
+                                e.count_opted_out
+                              ),
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCountLabel },
+                                "Opted Out"
+                              )
+                            ),
+                            m.createElement(
+                              "div",
+                              { className: K.OptInCountCtn },
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCount },
+                                e.count_invited
+                              ),
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCountLabel },
+                                "Invited"
+                              )
+                            ),
+                            m.createElement(
+                              "div",
+                              { className: K.OptInCountCtn },
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCount },
+                                e.count_pruned
+                              ),
+                              m.createElement(
+                                "div",
+                                { className: K.OptInCountLabel },
+                                "Pruned"
+                              )
+                            )
+                          )
+                        )
+                      )
+                )
+          ),
+          m.createElement(
+            C.r,
+            null,
+            m.createElement(
+              C.G,
+              {
+                onClick: () => {
+                  o && o(s), a();
+                },
+              },
+              Object(B.f)("#Button_OK")
+            ),
+            m.createElement(C.f, { onClick: a }, Object(B.f)("#Button_Cancel"))
+          )
+        );
+      }
+      function de(e) {
         const { editModel: t } = e,
           [a, o] = m.useState(""),
           [i, n] = m.useState(!1),
@@ -28896,7 +29147,7 @@
             return (
               n ? d++ : c++,
               n || i
-                ? m.createElement(de, {
+                ? m.createElement(he, {
                     key: e.capsule.type + e.capsule.id,
                     item: e,
                     strSearchFilter: a,
@@ -28927,11 +29178,11 @@
                 Boolean(c > 0)
                   ? Object(B.f)("#Sale_TaggedItemsCountFiltered", d, c)
                   : Object(B.f)("#Sale_TaggedItemsCount", d),
-                m.createElement(L.b, {
+                m.createElement(q.b, {
                   tooltip: Object(B.f)("#Sale_TaggedItemsCount_ttip"),
                 })
               ),
-              m.createElement(L.a, {
+              m.createElement(q.a, {
                 bIsMinimized: b,
                 fnToggleMinimize: () => Object(l.d)("TaggedItemList", !1),
               })
@@ -28948,7 +29199,7 @@
                     onClick: () => {
                       const e = { clauses: new Array() };
                       Object(M.d)(
-                        m.createElement(be, {
+                        m.createElement(ve, {
                           editModel: t,
                           filter: e,
                           title: Object(B.f)("#Sale_TagFilter_Explore"),
@@ -28958,7 +29209,7 @@
                     },
                   },
                   Object(B.f)("#Sale_Explore"),
-                  m.createElement(L.b, {
+                  m.createElement(q.b, {
                     tooltip: Object(B.f)("#Sale_ExploreTaggedItems_ttip"),
                   })
                 ),
@@ -28967,7 +29218,7 @@
                   {
                     onClick: (e) =>
                       Object(M.d)(
-                        m.createElement(ve, {
+                        m.createElement(_e, {
                           editModel: t,
                           bRemoveMissingEntries: !0,
                         }),
@@ -28975,7 +29226,7 @@
                       ),
                   },
                   Object(B.f)("#Sale_EditRaw"),
-                  m.createElement(L.b, {
+                  m.createElement(q.b, {
                     tooltip: Object(B.f)("#Sale_EditRawTaggedItems_ttip"),
                   })
                 ),
@@ -28984,12 +29235,12 @@
                   {
                     onClick: (e) =>
                       Object(M.d)(
-                        m.createElement(Se, { editModel: t }),
+                        m.createElement(ke, { editModel: t }),
                         Object(G.o)(e)
                       ),
                   },
                   Object(B.f)("#Sale_SyncTaggedItems"),
-                  m.createElement(L.b, {
+                  m.createElement(q.b, {
                     tooltip: Object(B.f)("#Sale_SyncTaggedItems_ttip"),
                   })
                 )
@@ -29005,7 +29256,7 @@
                     {
                       onClick: (e) =>
                         Object(M.d)(
-                          m.createElement(be, {
+                          m.createElement(ve, {
                             editModel: t,
                             filter: Object(r.q)(t),
                             title: Object(B.f)("#Sale_TagFilter_EditFilter"),
@@ -29020,17 +29271,17 @@
                         ),
                     },
                     Object(B.f)("#Sale_EditTaggedItemFilter"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)("#Sale_EditTaggedItemFilter_ttip"),
                     })
                   ),
-                  m.createElement(pe, { editModel: t }),
+                  m.createElement(ce, { editModel: t }),
                   m.createElement(
                     C.f,
                     {
                       onClick: (e) =>
                         Object(M.d)(
-                          m.createElement(ve, {
+                          m.createElement(_e, {
                             editModel: t,
                             collection: r.j.Custom,
                             bRemoveMissingEntries: !1,
@@ -29039,7 +29290,7 @@
                         ),
                     },
                     Object(B.f)("#Sale_EditRawCustom"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)(
                         "#Sale_EditRawCustomTaggedItems_ttip"
                       ),
@@ -29050,12 +29301,12 @@
                     {
                       onClick: (e) =>
                         Object(M.d)(
-                          m.createElement(ge, { editModel: t }),
+                          m.createElement(be, { editModel: t }),
                           Object(G.o)(e)
                         ),
                     },
                     Object(B.f)("#Sale_BatchEditTaggedItems"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)("#Sale_BatchEditTaggedItems_ttip"),
                     })
                   ),
@@ -29064,12 +29315,12 @@
                     {
                       onClick: (e) =>
                         Object(M.d)(
-                          m.createElement(ke, { editModel: t }),
+                          m.createElement(Ie, { editModel: t }),
                           Object(G.o)(e)
                         ),
                     },
                     Object(B.f)("#Sale_EditAutoTags"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)("#Sale_EditAutoTags_ttip"),
                     })
                   ),
@@ -29082,7 +29333,7 @@
                         },
                       },
                       Object(B.f)("#Sale_DeleteFilteredItems"),
-                      m.createElement(L.b, {
+                      m.createElement(q.b, {
                         tooltip: Object(B.f)("#Sale_DeleteFilteredItems_ttip"),
                       })
                     )
@@ -29118,7 +29369,7 @@
               {
                 onClick: (e) =>
                   Object(M.d)(
-                    m.createElement(Ie, { editModel: t }),
+                    m.createElement(Te, { editModel: t }),
                     Object(G.o)(e)
                   ),
               },
@@ -29127,7 +29378,7 @@
           )
         );
       }
-      function pe(e) {
+      function ce(e) {
         const { editModel: t } = e,
           a = Object(u.d)(() => t.GetEventModel().GetTaggedItems());
         return m.createElement(
@@ -29178,7 +29429,7 @@
             },
           },
           Object(B.f)("#Sale_DiscountEvent_Add"),
-          m.createElement(L.b, {
+          m.createElement(q.b, {
             tooltip: Object(B.f)("#Sale_DiscountEvent_ttip"),
           })
         );
@@ -29186,14 +29437,14 @@
       Object(o.b)([W.b], se.prototype, "OnApplyFilter", null),
         Object(o.b)([W.b], se.prototype, "OnEditFilter", null),
         (se = Object(o.b)([h.a], se));
-      const de = Object(h.a)((e) =>
+      const he = Object(h.a)((e) =>
           m.createElement(
             O.a,
             { className: K.TagItemCtn },
-            m.createElement(ce, Object.assign({}, e))
+            m.createElement(ue, Object.assign({}, e))
           )
         ),
-        ce = Object(h.a)((e) => {
+        ue = Object(h.a)((e) => {
           var t;
           const {
               item: a,
@@ -29207,7 +29458,7 @@
             [p, d] = m.useState(!1),
             c = () => {
               Object(M.d)(
-                m.createElement(fe, {
+                m.createElement(ye, {
                   editModel: r,
                   item: a,
                   onTagsModified: l,
@@ -29236,7 +29487,7 @@
             m.Fragment,
             null,
             m.createElement(
-              q.c,
+              L.c,
               {
                 className: K.TagItemImageCtn,
                 bDisableContextMenu: !0,
@@ -29272,7 +29523,7 @@
                     "div",
                     { className: $.SaleCapsuleConflict },
                     Object(B.f)("#Sale_NotFoundCapsule"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)(
                         "#Sale_NotFoundCapsule_Tooltip",
                         g,
@@ -29304,7 +29555,7 @@
                 m.createElement(
                   "div",
                   { onClick: c },
-                  m.createElement(ue, {
+                  m.createElement(fe, {
                     item: a,
                     lowerTagHighlight: w,
                     filter: s,
@@ -29314,7 +29565,7 @@
             o && m.createElement(ee, { onClick: o })
           );
         });
-      function he(e, t, a) {
+      function me(e, t, a) {
         var o;
         const i = e.toLocaleLowerCase();
         if (t && i === t) return K.TagHighlight;
@@ -29328,7 +29579,7 @@
               return "Must have" === e.type ? K.TagMustHave : K.TagMustNotHave;
         return null;
       }
-      const ue = Object(h.a)((e) => {
+      const fe = Object(h.a)((e) => {
           const { item: t } = e,
             a = Array.from(t.tags),
             o = (function (e, t) {
@@ -29365,15 +29616,15 @@
                 "div",
                 { className: K.TagListCtn },
                 a.map((t) =>
-                  m.createElement(me, {
+                  m.createElement(ge, {
                     key: t,
                     tag: t,
-                    className: he(t, e.lowerTagHighlight, e.filter),
+                    className: me(t, e.lowerTagHighlight, e.filter),
                   })
                 ),
                 o &&
                   o.map((e) =>
-                    m.createElement(me, {
+                    m.createElement(ge, {
                       key: e,
                       tag: e,
                       className: K.TagMissingMustHave,
@@ -29386,7 +29637,7 @@
                 Object(B.f)("#Sale_TagFilter_AddTags")
               );
         }),
-        me = (e) => {
+        ge = (e) => {
           const t = Object(r.k)(e.tag);
           return m.createElement(
             "div",
@@ -29400,7 +29651,7 @@
             e.tag
           );
         };
-      let fe = class extends m.Component {
+      let ye = class extends m.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -29584,7 +29835,7 @@
                       "div",
                       { className: K.TagColumnTitle },
                       Object(B.f)("#Sale_EditTags_Applied", a.length),
-                      m.createElement(L.b, {
+                      m.createElement(q.b, {
                         tooltip: Object(B.f)("#Sale_EditTags_Applied_ttip"),
                       })
                     ),
@@ -29601,7 +29852,7 @@
                           "div",
                           { className: K.TagColumnTitle },
                           Object(B.f)("#Sale_EditTags_Store", p.length),
-                          m.createElement(L.b, {
+                          m.createElement(q.b, {
                             tooltip: Object(B.f)("#Sale_EditTags_Store_ttip"),
                           })
                         ),
@@ -29618,7 +29869,7 @@
                         "div",
                         { className: K.TagColumnTitle },
                         Object(B.f)("#Sale_EditTags_RecentTags"),
-                        m.createElement(L.b, {
+                        m.createElement(q.b, {
                           tooltip: Object(B.f)(
                             "#Sale_EditTags_RecentTags_ttip"
                           ),
@@ -29634,7 +29885,7 @@
                       "div",
                       { className: K.TagColumnTitle },
                       Object(B.f)("#Sale_EditTags_Sections", c.length),
-                      m.createElement(L.b, {
+                      m.createElement(q.b, {
                         tooltip: Object(B.f)("#Sale_EditTags_Sections_ttip"),
                       })
                     ),
@@ -29648,7 +29899,7 @@
                     "div",
                     { className: K.TagColumnTitle },
                     Object(B.f)("#Sale_EditTags_NewTagName"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)("#Sale_EditTags_NewTagName_ttip"),
                     })
                   ),
@@ -29679,11 +29930,11 @@
           );
         }
       };
-      Object(o.b)([W.b], fe.prototype, "RemoveTag", null),
-        Object(o.b)([W.b], fe.prototype, "AddTag", null),
-        Object(o.b)([W.b], fe.prototype, "OnOK", null),
-        (fe = Object(o.b)([h.a], fe));
-      let ge = class extends m.Component {
+      Object(o.b)([W.b], ye.prototype, "RemoveTag", null),
+        Object(o.b)([W.b], ye.prototype, "AddTag", null),
+        Object(o.b)([W.b], ye.prototype, "OnOK", null),
+        (ye = Object(o.b)([h.a], ye));
+      let be = class extends m.Component {
         constructor() {
           super(...arguments),
             (this.m_timerForChange = new R.b()),
@@ -29718,7 +29969,7 @@
         OnPopulateFromFilter() {
           new Array();
           Object(M.d)(
-            m.createElement(be, {
+            m.createElement(ve, {
               editModel: this.props.editModel,
               filter: this.state.filter,
               onApplyFilter: this.OnApplyFilter,
@@ -29869,7 +30120,7 @@
                       "div",
                       { className: K.TagColumnTitle },
                       Object(B.f)("#Sale_EditTags_BatchItemText", t.length),
-                      m.createElement(L.b, {
+                      m.createElement(q.b, {
                         tooltip: Object(B.f)(
                           "#Sale_EditTags_BatchItemText_ttip"
                         ),
@@ -29888,7 +30139,7 @@
                         onClick: this.OnPopulateFromFilter,
                       },
                       Object(B.f)("#Sale_EditTags_BatchFilter"),
-                      m.createElement(L.b, {
+                      m.createElement(q.b, {
                         tooltip: Object(B.f)("#Sale_EditTags_BatchFilter_ttip"),
                       })
                     )
@@ -29900,7 +30151,7 @@
                       "div",
                       { className: K.TagColumnTitle },
                       Object(B.f)("#Sale_EditTags_BatchItems", t.length),
-                      m.createElement(L.b, {
+                      m.createElement(q.b, {
                         tooltip: Object(B.f)("#Sale_EditTags_BatchItems_ttip"),
                       })
                     ),
@@ -29923,7 +30174,7 @@
                       "div",
                       { className: K.TagColumnTitle },
                       Object(B.f)("#Sale_EditTags_Applied", a.size),
-                      m.createElement(L.b, {
+                      m.createElement(q.b, {
                         tooltip: Object(B.f)("#Sale_EditTags_Applied_ttip"),
                       })
                     ),
@@ -29939,7 +30190,7 @@
                         "div",
                         { className: K.TagColumnTitle },
                         Object(B.f)("#Sale_EditTags_RecentTags"),
-                        m.createElement(L.b, {
+                        m.createElement(q.b, {
                           tooltip: Object(B.f)(
                             "#Sale_EditTags_RecentTags_ttip"
                           ),
@@ -29956,7 +30207,7 @@
                     "div",
                     { className: K.TagColumnTitle },
                     Object(B.f)("#Sale_EditTags_NewTagName"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)("#Sale_EditTags_NewTagName_ttip"),
                     })
                   ),
@@ -29976,7 +30227,7 @@
                     "div",
                     { className: K.TagColumnTitle },
                     Object(B.f)("#Sale_EditTags_RemoveTagName"),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)("#Sale_EditTags_RemoveTagName_ttip"),
                     })
                   ),
@@ -30007,7 +30258,7 @@
           );
         }
       };
-      function ye(e) {
+      function we(e) {
         const {
             onClauseChanged: t,
             value: a,
@@ -30075,20 +30326,20 @@
           menuPlacement: "bottom",
         });
       }
-      Object(o.b)([W.b], ge.prototype, "OnApplyFilter", null),
-        Object(o.b)([W.b], ge.prototype, "OnPopulateFromFilter", null),
-        Object(o.b)([W.b], ge.prototype, "RemoveTag", null),
-        Object(o.b)([W.b], ge.prototype, "AddTag", null),
-        Object(o.b)([W.b], ge.prototype, "OnOK", null),
-        Object(o.b)([W.b], ge.prototype, "OnUpdateItemListFromText", null),
-        Object(o.b)([W.b], ge.prototype, "OnTextChanged", null),
-        (ge = Object(o.b)([h.a], ge));
-      class be extends m.Component {
+      Object(o.b)([W.b], be.prototype, "OnApplyFilter", null),
+        Object(o.b)([W.b], be.prototype, "OnPopulateFromFilter", null),
+        Object(o.b)([W.b], be.prototype, "RemoveTag", null),
+        Object(o.b)([W.b], be.prototype, "AddTag", null),
+        Object(o.b)([W.b], be.prototype, "OnOK", null),
+        Object(o.b)([W.b], be.prototype, "OnUpdateItemListFromText", null),
+        Object(o.b)([W.b], be.prototype, "OnTextChanged", null),
+        (be = Object(o.b)([h.a], be));
+      class ve extends m.Component {
         constructor() {
           super(...arguments), (this.state = this.GenerateInitialState());
         }
         componentDidMount() {
-          we(this.props.editModel, v.n.k_ETaggedItems) ||
+          Se(this.props.editModel, v.n.k_ETaggedItems) ||
             this.LoadDropdownOptions().then((e) => {
               this.setState({
                 tagDropdownOptions: e,
@@ -30146,7 +30397,7 @@
           return Object.assign(
             {
               tagDropdownOptions: this.GenerateTagDropDownOptions(),
-              bDropdownOptionsLoaded: we(
+              bDropdownOptionsLoaded: Se(
                 this.props.editModel,
                 v.n.k_ETaggedItems
               ),
@@ -30249,7 +30500,7 @@
             ],
             o = this.GetFilteredItems();
           let i;
-          we(this.props.editModel, v.n.k_ETaggedItems) ||
+          Se(this.props.editModel, v.n.k_ETaggedItems) ||
             (i = this.state.tagDropdownOptions);
           const n = e.or_tags.map((e, a) =>
               m.createElement(
@@ -30264,7 +30515,7 @@
                 m.createElement(
                   "div",
                   { className: K.TagDropDown },
-                  m.createElement(ye, {
+                  m.createElement(we, {
                     taggedItems: o,
                     value: e,
                     onClauseChanged: (e) => this.OnChangeClauseTag(t, a, e),
@@ -30318,7 +30569,7 @@
                 { onClick: () => this.OnAddClauseTagSlot(t) },
                 "+",
                 Object(B.f)("#Sale_TagFilter_Or"),
-                m.createElement(L.b, {
+                m.createElement(q.b, {
                   tooltip: Object(B.f)("#Sale_TagFilter_Or_ttip"),
                 })
               )
@@ -30334,7 +30585,7 @@
               "div",
               { className: K.SectionTitle },
               Object(B.f)("#Sale_TagFilter_Filter"),
-              m.createElement(L.b, {
+              m.createElement(q.b, {
                 tooltip: Object(B.f)("#Sale_TagFilter_Filter_ttip"),
               })
             ),
@@ -30348,7 +30599,7 @@
                   { onClick: this.OnAddClause },
                   "+",
                   Object(B.f)("#Sale_TagFilter_And"),
-                  m.createElement(L.b, {
+                  m.createElement(q.b, {
                     tooltip: Object(B.f)("#Sale_TagFilter_And_ttip"),
                   })
                 )
@@ -30509,7 +30760,7 @@
                   m.Fragment,
                   null,
                   Object(B.f)("#Sale_TagFilter_MatchingItems", l.length),
-                  m.createElement(L.b, {
+                  m.createElement(q.b, {
                     tooltip: Object(B.f)("#Sale_TagFilter_MatchingItems_ttip"),
                   })
                 ),
@@ -30520,7 +30771,7 @@
                   m.Fragment,
                   null,
                   Object(B.f)("#Sale_TagFilter_FilteredItems", d.length),
-                  m.createElement(L.b, {
+                  m.createElement(q.b, {
                     tooltip: Object(B.f)("#Sale_TagFilter_FilteredItems_ttip"),
                   })
                 ),
@@ -30531,7 +30782,7 @@
                   m.Fragment,
                   null,
                   Object(B.f)("#Sale_TagFilter_UnusedItems", h.length),
-                  m.createElement(L.b, {
+                  m.createElement(q.b, {
                     tooltip: Object(B.f)("#Sale_TagFilter_UnusedItems_ttip"),
                   })
                 ),
@@ -30539,7 +30790,7 @@
               },
             ],
             w = y.map(({ item: t }) =>
-              m.createElement(de, {
+              m.createElement(he, {
                 key: t.capsule.type + t.capsule.id,
                 editModel: e,
                 item: t,
@@ -30593,7 +30844,7 @@
                         ? "#Sale_TagFilter_HideTagBreakdown"
                         : "#Sale_TagFilter_ShowTagBreakdown"
                     ),
-                    m.createElement(L.b, {
+                    m.createElement(q.b, {
                       tooltip: Object(B.f)("#Sale_TagFilter_TagBreakdown_ttip"),
                     })
                   )
@@ -30629,23 +30880,23 @@
           );
         }
       }
-      function we(e, t) {
+      function Se(e, t) {
         const a = e.GetEventModel().jsondata.item_source_type;
         return (t === v.n.k_ETaggedItems && null == a) || a === t;
       }
-      Object(o.b)([W.b], be.prototype, "OnChangeClauseType", null),
-        Object(o.b)([W.b], be.prototype, "OnChangeClauseTag", null),
-        Object(o.b)([W.b], be.prototype, "OnAddClause", null),
-        Object(o.b)([W.b], be.prototype, "OnRemoveClause", null),
-        Object(o.b)([W.b], be.prototype, "OnAddClauseTagSlot", null),
-        Object(o.b)([W.b], be.prototype, "OnRemoveClauseTagSlot", null),
-        Object(o.b)([W.b], be.prototype, "OnHighlightTag", null),
-        Object(o.b)([W.b], be.prototype, "OnToggleTagBreakdown", null),
-        Object(o.b)([W.b], be.prototype, "OnSetViewMode", null),
-        Object(o.b)([W.b], be.prototype, "OnTagsModified", null),
-        Object(o.b)([W.b], be.prototype, "UpdateSearchText", null),
-        Object(o.b)([W.b], be.prototype, "OnOK", null);
-      let ve = class extends m.Component {
+      Object(o.b)([W.b], ve.prototype, "OnChangeClauseType", null),
+        Object(o.b)([W.b], ve.prototype, "OnChangeClauseTag", null),
+        Object(o.b)([W.b], ve.prototype, "OnAddClause", null),
+        Object(o.b)([W.b], ve.prototype, "OnRemoveClause", null),
+        Object(o.b)([W.b], ve.prototype, "OnAddClauseTagSlot", null),
+        Object(o.b)([W.b], ve.prototype, "OnRemoveClauseTagSlot", null),
+        Object(o.b)([W.b], ve.prototype, "OnHighlightTag", null),
+        Object(o.b)([W.b], ve.prototype, "OnToggleTagBreakdown", null),
+        Object(o.b)([W.b], ve.prototype, "OnSetViewMode", null),
+        Object(o.b)([W.b], ve.prototype, "OnTagsModified", null),
+        Object(o.b)([W.b], ve.prototype, "UpdateSearchText", null),
+        Object(o.b)([W.b], ve.prototype, "OnOK", null);
+      let _e = class extends m.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -30842,11 +31093,11 @@
           );
         }
       };
-      Object(o.b)([W.b], ve.prototype, "OnCompleteEdit", null),
-        Object(o.b)([W.b], ve.prototype, "DoImport", null),
-        Object(o.b)([W.b], ve.prototype, "OnTextChange", null),
-        (ve = Object(o.b)([h.a], ve));
-      let Se = class extends m.Component {
+      Object(o.b)([W.b], _e.prototype, "OnCompleteEdit", null),
+        Object(o.b)([W.b], _e.prototype, "DoImport", null),
+        Object(o.b)([W.b], _e.prototype, "OnTextChange", null),
+        (_e = Object(o.b)([h.a], _e));
+      let ke = class extends m.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -31084,7 +31335,7 @@
           );
         }
       };
-      function _e(e) {
+      function xe(e) {
         const t = new Set();
         for (const a of e) {
           const e = a.tag_name.trim().toLocaleLowerCase();
@@ -31095,25 +31346,25 @@
         }
         return !0;
       }
-      Object(o.b)([W.b], Se.prototype, "ImportOptInPage", null),
-        Object(o.b)([W.b], Se.prototype, "OnPerformSync", null),
-        (Se = Object(o.b)([h.a], Se));
-      const ke = (e) => {
+      Object(o.b)([W.b], ke.prototype, "ImportOptInPage", null),
+        Object(o.b)([W.b], ke.prototype, "OnPerformSync", null),
+        (ke = Object(o.b)([h.a], ke));
+      const Ie = (e) => {
           const { closeModal: t, editModel: a } = e,
             o = a.GetEventModel().jsondata,
             [i, n] = m.useState(!0),
             [l, p] = m.useState(!1),
             [d, h] = m.useState([...(o.auto_item_tags || [])]),
             u = () => {
-              n(_e(d)), p(!0);
+              n(xe(d)), p(!0);
             },
             f = d.map((e, t) =>
-              m.createElement(xe, {
+              m.createElement(Ce, {
                 key: "AutoTag" + t,
                 editModel: a,
                 fnOnEdited: u,
                 fnOnDeleted: () => {
-                  return (e = t), h(d.filter((t, a) => a != e)), void n(_e(d));
+                  return (e = t), h(d.filter((t, a) => a != e)), void n(xe(d));
                   var e;
                 },
                 autoTag: e,
@@ -31175,7 +31426,7 @@
             )
           );
         },
-        xe = (e) => {
+        Ce = (e) => {
           const [t, a] = m.useState(e.autoTag.tag_name),
             [o, i] = m.useState(e.autoTag.filter),
             n = (t) => {
@@ -31209,7 +31460,7 @@
                 {
                   onClick: () => {
                     Object(M.d)(
-                      m.createElement(be, {
+                      m.createElement(ve, {
                         editModel: e.editModel,
                         filter: o,
                         title: Object(B.f)("#Sale_TagFilter_EditFilter"),
@@ -31224,7 +31475,7 @@
             )
           );
         },
-        Ie = (e) => {
+        Te = (e) => {
           const { editModel: t, closeModal: a } = e,
             [i, s] = Object(m.useState)(!0),
             [r, l] = Object(m.useState)();
@@ -31315,7 +31566,7 @@
                               "div",
                               { className: K.AppTable },
                               r.rgAppIDsAdded.map((e) =>
-                                m.createElement(Ce, {
+                                m.createElement(Ae, {
                                   key: "add" + e,
                                   appid: e,
                                 })
@@ -31330,7 +31581,7 @@
                               "div",
                               { className: K.AppTable },
                               r.rgAppIDsRemoved.map((e) =>
-                                m.createElement(Ce, {
+                                m.createElement(Ae, {
                                   key: "remove" + e,
                                   appid: e,
                                 })
@@ -31352,7 +31603,7 @@
             )
           );
         };
-      function Ce(e) {
+      function Ae(e) {
         const { appid: t } = e,
           [a] = Object(k.b)(t, {});
         return m.createElement(
@@ -32953,7 +33204,7 @@
         d = a("U+Q5"),
         c = a("Mgs7"),
         h = a("fpVW"),
-        u = a("Jqb/"),
+        u = a("7Q8g"),
         m = a("ka0M"),
         f = a("0OaU"),
         g = a("exH9"),

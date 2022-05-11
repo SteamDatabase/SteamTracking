@@ -2508,6 +2508,22 @@ a.guide_row {
 	margin: 40px 0 0 0;
 }
 
+.reset_complete_emailprefsdiffer {
+	color: white;
+	background-color: #b17d25;
+	padding: 15px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.reset_complete_emailprefsdiffer a {
+	text-decoration: underline;
+}
+
+.reset_complete_emailprefsdiffer a:hover {
+	color: black;
+}
+
 .reset_twofactor_area
 {
 	margin-top: 20px;

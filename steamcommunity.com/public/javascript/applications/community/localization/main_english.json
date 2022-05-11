@@ -398,6 +398,8 @@
     "EventEditor_Options_ShowInSteamGlobal_Desc": "For events shown in Steam China, this can be used to disable the event from showing up to global users",
     "EventEditor_Clone_MultiLanguages": "The event to be cloned has content in the following languages. Check the boxes whose languages you want to keep in the cloned event.",
     "EventEditor_Clone_Alert": "In most cases it's not a good idea to clone existing languages.",
+    "EventEditor_Clone_SelectAll": "Select All",
+    "EventEditor_Clone_DeSelectAll": "De-Select All",
     "EventEditor_InvalidCapsuleItem": "ERROR: Invalid item",
     "EventEditor_Tile_Title": "Background Tiling",
     "EventEditor_Tile_NoRepeat": "Background no-repeat tiling (default)",

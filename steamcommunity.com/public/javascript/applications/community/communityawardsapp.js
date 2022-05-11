@@ -2267,7 +2267,7 @@
         ),
         Object(i.b)([B.C.deep], _.prototype, "m_mapExistingReactions", void 0);
       var f = r("Mgs7"),
-        p = r("Jqb/"),
+        p = r("7Q8g"),
         R = (r("idvb"), r("6Y59")),
         M = r("0OaU"),
         C = r("exH9"),
@@ -2736,14 +2736,14 @@
           Object.assign({ className: Object(C.a)(t, Z.UnstyledButton) }, r)
         );
       };
-      var $, K, Q;
+      var $, Q, K;
       !(function (e) {
         (e[(e.SELECTING = 0)] = "SELECTING"),
           (e[(e.CONFIRM = 1)] = "CONFIRM"),
           (e[(e.SUBMITTING = 2)] = "SUBMITTING"),
           (e[(e.DONE = 3)] = "DONE"),
           (e[(e.ERROR = 4)] = "ERROR");
-      })(Q || (Q = {}));
+      })(K || (K = {}));
       const Y = (e) =>
         o.createElement(
           "svg",
@@ -2892,7 +2892,7 @@
       });
       (J.defaultProps = { targetType: 1 }), (J = $ = Object(i.b)([s.a], J));
       t.a = J;
-      let X = (K = class extends o.Component {
+      let X = (Q = class extends o.Component {
         constructor(e) {
           super(e);
         }
@@ -2909,7 +2909,7 @@
               initialSelectedReaction: a,
               onDismiss: n,
             } = this.props,
-            s = K.s_LoyaltyAwardModalStore;
+            s = Q.s_LoyaltyAwardModalStore;
           if (null === s)
             return console.log("Store not initialized yet."), null;
           s.GetAwardConfigurations();
@@ -2921,19 +2921,19 @@
             ugcType: i,
             onDismiss: n,
             onSuccess: n,
-            store: K.s_LoyaltyAwardModalStore,
+            store: Q.s_LoyaltyAwardModalStore,
             initialSelectedReaction: a,
           });
         }
       });
-      (X.s_LoyaltyAwardModalStore = null), (X = K = Object(i.b)([s.a], X));
+      (X.s_LoyaltyAwardModalStore = null), (X = Q = Object(i.b)([s.a], X));
       let ee = class extends o.Component {
         constructor(e) {
           super(e),
             e.store.SetTarget(e.targetid, e.targetType),
             (this.state = {
               selectedReaction: e.initialSelectedReaction || 0,
-              ePhase: Q.SELECTING,
+              ePhase: K.SELECTING,
             });
         }
         render() {
@@ -2992,14 +2992,14 @@
               R = Object(v.f)("#GrantAwardDescription_Comment");
           }
           switch (s) {
-            case Q.SELECTING:
+            case K.SELECTING:
               {
                 const e = 0 === n || c.get(n),
                   t = !b || b.greaterThanOrEqual(w),
                   r = o.createElement(
                     f.G,
                     {
-                      onClick: () => this.setState({ ePhase: Q.CONFIRM }),
+                      onClick: () => this.setState({ ePhase: K.CONFIRM }),
                       disabled: e,
                       focusable: !e,
                       title: Object(v.f)(
@@ -3085,9 +3085,9 @@
                 );
               }
               break;
-            case Q.CONFIRM:
-            case Q.SUBMITTING:
-            case Q.DONE:
+            case K.CONFIRM:
+            case K.SUBMITTING:
+            case K.DONE:
               _ = o.createElement(
                 o.Fragment,
                 null,
@@ -3101,7 +3101,7 @@
                     {
                       className: Object(C.a)(
                         D.ConfirmContainer,
-                        s === Q.CONFIRM && D.Visible
+                        s === K.CONFIRM && D.Visible
                       ),
                     },
                     o.createElement(V, {
@@ -3144,7 +3144,7 @@
                     {
                       className: Object(C.a)(
                         D.LoadingContainer,
-                        s === Q.SUBMITTING && D.Visible
+                        s === K.SUBMITTING && D.Visible
                       ),
                     },
                     o.createElement(ne, null)
@@ -3154,7 +3154,7 @@
                     {
                       className: Object(C.a)(
                         D.SuccessContainer,
-                        s === Q.DONE && D.Visible
+                        s === K.DONE && D.Visible
                       ),
                     },
                     o.createElement(V, {
@@ -3175,8 +3175,8 @@
                   o.createElement(
                     f.f,
                     {
-                      onClick: () => this.setState({ ePhase: Q.SELECTING }),
-                      disabled: s !== Q.CONFIRM,
+                      onClick: () => this.setState({ ePhase: K.SELECTING }),
+                      disabled: s !== K.CONFIRM,
                     },
                     Object(v.f)("#GrantAward_Back")
                   ),
@@ -3185,14 +3185,14 @@
                     {
                       onClick: this.GrantAward,
                       title: Object(v.f)("#GrantAward_SubmitTooltip"),
-                      disabled: s !== Q.CONFIRM,
+                      disabled: s !== K.CONFIRM,
                     },
                     Object(v.f)("#GrantAwardNowButton")
                   )
                 )
               );
               break;
-            case Q.ERROR: {
+            case K.ERROR: {
               let e = "";
               switch (this.state.eResult) {
                 case 10:
@@ -3239,7 +3239,7 @@
                   { store: i },
                   o.createElement(
                     f.f,
-                    { onClick: () => this.setState({ ePhase: Q.SELECTING }) },
+                    { onClick: () => this.setState({ ePhase: K.SELECTING }) },
                     Object(v.f)("#GrantAward_Back")
                   )
                 )
@@ -3262,15 +3262,15 @@
             { selectedReaction: i } = this.state;
           null !== i &&
             0 != i &&
-            (this.setState({ ePhase: Q.SUBMITTING }),
+            (this.setState({ ePhase: K.SUBMITTING }),
             t.AddReaction(i).then(({ eResult: t, strMessage: a }) => {
               1 == t
-                ? this.setState({ ePhase: Q.DONE, celebrate: !0 }, () =>
+                ? this.setState({ ePhase: K.DONE, celebrate: !0 }, () =>
                     setTimeout(() => {
                       r && r(e, i);
                     }, 2e3)
                   )
-                : this.setState({ ePhase: Q.ERROR, eResult: t });
+                : this.setState({ ePhase: K.ERROR, eResult: t });
             }));
         }
       };

@@ -684,6 +684,7 @@ ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/broadcast
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
+${PARTNER_BASE_URL}doc/store/pricing/csv
 ${PARTNER_BASE_URL}doc/store/promo
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
@@ -695,6 +696,7 @@ ${PARTNER_BASE_URL}optin/admin/edit/${}
 ${PARTNER_BASE_URL}optin/ajaxadminupdate
 ${PARTNER_BASE_URL}optin/ajaxbatchgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxcreatedemopackage
+${PARTNER_BASE_URL}optin/ajaxgetactiveoptins
 ${PARTNER_BASE_URL}optin/ajaxgetinvitedpartners
 ${PARTNER_BASE_URL}optin/ajaxgetoptinappwithdemoid
 ${PARTNER_BASE_URL}optin/ajaxgetoptinpublicdefinition

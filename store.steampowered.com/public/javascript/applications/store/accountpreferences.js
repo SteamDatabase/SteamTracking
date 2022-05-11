@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [15],
+  [17],
   {
     byIC: function (e, t, r) {
       "use strict";
@@ -791,7 +791,7 @@
                 { className: T.SectionDescription },
                 Object(k.f)("#CookiePref_Content_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.I, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
@@ -821,7 +821,7 @@
                 { className: T.SectionDescription },
                 Object(k.f)("#CookiePref_ValveAnalytics_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.I, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
@@ -853,7 +853,7 @@
                 { className: T.SectionDescription },
                 Object(k.f)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.I, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
@@ -891,19 +891,19 @@
                 { className: T.SectionDescription },
                 Object(k.f)("#CookiePref_ThirdParty_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.I, {
                 onChange: r,
                 label: Object(k.f)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: Object(k.f)("#CookiePref_YouTube_Desc"),
               }),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.I, {
                 onChange: a,
                 label: Object(k.f)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: Object(k.f)("#CookiePref_Vimeo_Desc"),
               }),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.I, {
                 onChange: n,
                 label: Object(k.f)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
@@ -933,7 +933,7 @@
                 { className: T.SectionDescription },
                 Object(k.f)("#PrivacySettings_Marketing_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.I, {
                 onChange: r,
                 label: Object(k.f)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),

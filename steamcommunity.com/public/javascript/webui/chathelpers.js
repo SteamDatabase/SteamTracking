@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7233560";
+var CLSTAMP = "7245722";
 !(function (e) {
   function t(t) {
     for (
@@ -119,64 +119,64 @@ var CLSTAMP = "7233560";
               ".js?contenthash=" +
               {
                 10: "cd110369657f6c0ac944",
-                11: "eadce05034831d80d3ba",
-                12: "b8ec89efc032f373e56e",
+                11: "36f34ff579633c12c7af",
+                12: "9c78cf4fe3521ed438ce",
                 13: "62f88682f5cfb627331c",
                 14: "f787a24b7ddb942bfbb2",
-                15: "ea45d011bc1131570945",
+                15: "8e749c72d29de92e5696",
                 16: "97ca51f19d82b7604a7a",
-                17: "f4b5ea06c25e4ba111dc",
-                18: "bac4a1700eee59e4f55d",
+                17: "59ebbe7827a81bf5ef76",
+                18: "7a2cc67a0fd9f404cd97",
                 19: "a3ad64a0b0dd920170fa",
-                20: "7c77001a26767a85065b",
+                20: "efc3a05136c28b3a5324",
                 21: "7e074dc012d98a5021da",
                 22: "f1ea1abf548a3686bc02",
-                23: "181c49b454a9f367878c",
-                24: "d3c5e22fc764de559d6f",
+                23: "f7fd6bd44cdea63b37f2",
+                24: "2af6d5d239bb49f4b0e5",
                 25: "b370b6efaea69aaae94a",
                 26: "0b4b919fae08d1ee2d32",
-                27: "3741a9a890f4f78d3974",
+                27: "37db127d849eda9d8609",
                 28: "000f7c7c284d44b04e9a",
-                29: "c109cb1ea5c0071de736",
-                30: "62c3f10d409c653ba23d",
+                29: "d6e048b87b15f1824539",
+                30: "1813037496e4e5e8be2f",
                 31: "ae10fffee43d1bfd6407",
-                32: "70183a41ac1d1fee9afc",
+                32: "7e9f66d3ca870aa00932",
                 33: "31b96c2b334de43264af",
-                34: "3137c022b9bdbf458083",
-                35: "0edce7c2775385a887cd",
-                36: "f0938d0772409a4e6d9c",
-                37: "e41a91d926d7d1e558c9",
-                38: "c197d0164a34d8c164a0",
-                39: "d4fc7e347e606cb04f24",
+                34: "0066a2a44588e2b4f10e",
+                35: "a1982ccfaf0283fadbfc",
+                36: "95199124e393af0180f3",
+                37: "bfd2b1a4e3c90e2ce433",
+                38: "780e6b5d19fa7af28282",
+                39: "04c974512409df026159",
                 40: "1cae2b880a684fc1b071",
-                41: "55de591c3efdd068ce93",
+                41: "de1991477dd1435dd65e",
                 42: "5c4164324a50a0b4ddc8",
                 43: "a0224a498d23e90c53b3",
-                44: "b4807fb20c455dc0fb53",
+                44: "0a0d05fa79fb5261f1bc",
                 45: "98b40197b8771b8083dc",
-                46: "1b4de8bc733b244b9d9f",
+                46: "e483bb4f6f3bfa58bd7a",
                 47: "1d7ec1bfb5e2a26fbdf3",
-                48: "d538268edeca13f99f3f",
+                48: "5e1e52d1804ee307d36c",
                 49: "6fe3faeb7ebb69195fe6",
                 50: "5b4af3aafe98a8275f44",
                 51: "c0a46cdbd2bd48d46a4c",
                 52: "107cafd96203ee8b9114",
-                53: "8566ee966087c1dc6229",
+                53: "82a8fe127f738e29ac52",
                 54: "e20a88701e14398d8284",
                 55: "2818469ca470f3398f86",
                 56: "76ff73ad50b98443e8e6",
                 57: "726b4d5ae61dec2b3120",
-                58: "f9978dc98aae3596778d",
+                58: "a80cde0fab959c826d3e",
                 59: "ad4cb33849a50203d0be",
                 60: "7c282db5c753737bb2a8",
                 61: "7ac614ba799f658bbea4",
-                62: "24c5eec45b826f678aaa",
+                62: "3a6cfd3dbb67832810b8",
                 63: "2bf59067cdaaeb80e494",
                 64: "62833637e15385ca6b6e",
                 65: "2a60cfb28aa2dac18dfd",
                 66: "99b05ff65c230c60252f",
                 67: "d1a7656603d66b86c564",
-                68: "5d5eb243d40086c1f8db",
+                68: "8681766114265bb2e819",
                 69: "3bbf782feeb6679131d8",
               }[e]
             );
@@ -1897,29 +1897,24 @@ var CLSTAMP = "7233560";
                 d(e, { bForce24HourClock: a.bForce24HourClock })
               )
           : Object(i.f)("#Time_Today");
-      if ((u.setDate(u.getDate() - 1), n >= u))
+      if ((u.setDate(r.getDate() - 1), n >= u))
         return a.bGranularYesterday
           ? Object(i.f)(
               "#Time_Yesterday_At",
               d(e, { bForce24HourClock: a.bForce24HourClock })
             )
           : Object(i.f)("#Time_Yesterday");
-      if ((u.setDate(u.getDate() - 7), a.bGranularWeek && n >= u))
-        return S(n, !1, !a.bAbbreviateDayOfWeek);
+      u.setDate(r.getDate() - 6);
+      const l = new Date(u);
+      if (a.bGranularWeek && n >= l) return S(n, !1, !a.bAbbreviateDayOfWeek);
       if (a.bGranularPast)
         return Object(i.f)(
           "#Time_Past_At",
           c(e, n.getFullYear() == r.getFullYear(), !a.bAbbreviateDayOfWeek),
           d(e, { bForce24HourClock: a.bForce24HourClock })
         );
-      if ((u.setDate(u.getDate() - 5), n >= u))
-        return Object(i.f)("#TimeSince_ThisWeek");
-      const l = new Date(u);
-      if (
-        (u.setDate(u.getDate() - 21),
-        n >= u ||
-          (n.getMonth() == r.getMonth() && n.getFullYear() == r.getFullYear()))
-      ) {
+      if (n >= l) return Object(i.f)("#TimeSince_ThisWeek");
+      if (n.getMonth() == r.getMonth() && n.getFullYear() == r.getFullYear()) {
         const e =
           Math.floor((l.valueOf() - n.valueOf()) / (1e3 * o.e.PerWeek)) + 1;
         return 1 == e

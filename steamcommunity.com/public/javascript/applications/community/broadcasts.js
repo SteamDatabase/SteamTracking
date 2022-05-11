@@ -288,7 +288,7 @@
         R = r("fpVW"),
         j = r.n(R),
         T = r("5L1o"),
-        E = r("Jqb/"),
+        E = r("7Q8g"),
         F = r("ka0M"),
         z = r("exH9"),
         I = r("X3Ds"),
@@ -748,7 +748,7 @@
               {
                 "data-tooltip-text": Object(P.f)("#Broadcast_User_FAQ_ttip"),
                 onClick: (e) =>
-                  Object(Y.e)(
+                  Object(Y.d)(
                     e,
                     "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
                   ),
@@ -826,7 +826,7 @@
             ),
             i.a.createElement(
               w.f,
-              { onClick: (e) => Object(Y.e)(e, r) },
+              { onClick: (e) => Object(Y.d)(e, r) },
               "Go to Support Page"
             )
           );
@@ -908,7 +908,7 @@
                         Object(P.f)("#Button_Dismiss")
                       )
                     : i.a.createElement(
-                        w.N,
+                        w.M,
                         null,
                         i.a.createElement(
                           w.f,
@@ -1002,7 +1002,7 @@
                         Object(P.f)("#Button_Dismiss")
                       )
                     : i.a.createElement(
-                        w.N,
+                        w.M,
                         null,
                         i.a.createElement(
                           w.f,

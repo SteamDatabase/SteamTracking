@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7233560";
+var CLSTAMP = "7245722";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -31509,6 +31509,11 @@ var CLSTAMP = "7233560";
                   publishers: { n: 2, c: B, r: !0, q: !0 },
                   developers: { n: 3, c: B, r: !0, q: !0 },
                   franchises: { n: 4, c: B, r: !0, q: !0 },
+                  capsule_headline: {
+                    n: 5,
+                    br: n.d.readString,
+                    bw: n.h.writeString,
+                  },
                 },
               }),
             m.sm_m

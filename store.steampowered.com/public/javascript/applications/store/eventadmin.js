@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [19],
+  [21],
   {
     "/EF7": function (e, t, n) {
       "use strict";
@@ -108,7 +108,7 @@
         E = n("7ast"),
         S = n("+aRA"),
         f = n("/dWE"),
-        C = n("jrcU"),
+        C = n("thkD"),
         O = n("jIgc"),
         w = n("e356"),
         y = n("kWcV"),
@@ -4920,7 +4920,7 @@
         g = n("+VGL"),
         E = n.n(g),
         S = n("YqLl"),
-        f = n("jrcU"),
+        f = n("thkD"),
         C = n("jIgc"),
         O = n("kWcV"),
         w = n("tQrp"),
@@ -5393,7 +5393,7 @@
                     { className: T.Error },
                     this.state.strErrorMessage
                   ),
-                u.a.createElement(b.J, {
+                u.a.createElement(b.I, {
                   onChange: this.OnToggleChannelAutomation,
                   label: Object(j.f)("#RSSManager_Status_Automation_Desc"),
                   checked: this.props.admin.BIsAutomationEnabled(),
