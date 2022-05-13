@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Настройки по умолчанию",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Настройки %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Настройки: стандартные и для конкретной игры",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck позволяет выбирать индивидуальные настройки производительности (среди которых — частота обновления, предельная частота кадров, TDP и т. д.) как для системы в целом, так и для каждой игры.\n\n«Настройки по умолчанию» будут использоваться, если специальные настройки для игры не выбраны.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck позволяет выбирать индивидуальные настройки производительности (среди которых — частота обновления, предельная частота кадров, TDP и т. д.) как для системы в целом, так и для каждой игры.\n\nЕсли специальные настройки для игры не выбраны или не включены, будут использоваться «Настройки по умолчанию».",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Ясно",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Выбран собственный профиль производительности %1$s",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Использовать профиль игры",

@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "การตั้งค่าเริ่มต้น",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "การตั้งค่า %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "การตั้งค่าเริ่มต้นและการตั้งค่าเฉพาะเกม",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck อนุญาตให้คุณปรับแต่งการตั้งค่าประสิทธิภาพแต่ละรายการ (เช่น อัตราการรีเฟรช ขีดจำกัดอัตราเฟรม TDP เป็นต้น) ได้ทั้งในระบบโดยรวมและแบบรายเกม\n\nส่วน \"การตั้งค่าเริ่มต้น\" จะใช้ในกรณีที่เกมไม่ได้บันทึกการตั้งค่าประสิทธิภาพเฉพาะเกมไว้",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck อนุญาตให้คุณปรับการตั้งค่าประสิทธิภาพแต่ละรายการ (เช่น อัตราการรีเฟรช ขีดจำกัดอัตราเฟรม TDP เป็นต้น) ได้ทั้งในระบบโดยรวมและแบบรายเกม\n\nหากเกมไม่มีโปรไฟล์ประสิทธิภาพเฉพาะเกม หรือไม่ได้เปิดโปรไฟล์นั้นไว้ ก็จะใช้ \"การตั้งค่าเริ่มต้น\"",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "เข้าใจแล้ว",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "การใช้โปรไฟล์ประสิทธิภาพ %1$s แบบกำหนดเอง",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "ใช้โปรไฟล์แบบรายเกม",

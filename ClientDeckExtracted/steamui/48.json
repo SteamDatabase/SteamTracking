@@ -2147,7 +2147,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Paramètres par défaut",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Paramètres de « %1$s »",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Paramètres par défaut et spécifiques à chaque jeu",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck vous permet d'ajuster chaque paramètre relatif aux performances (fréquence de rafraichissement, fréquence d'images maximale, limitation de l'enveloppe thermique, etc.) à la fois pour le système et pour chaque jeu individuellement.\n\nSi aucun profil n'a été enregistré pour un jeu, les paramètres par défaut seront utilisés.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck vous permet d'ajuster chaque paramètre relatif aux performances (fréquence de rafraichissement, fréquence d'images maximale, limitation de l'enveloppe thermique, etc.) à la fois pour le système et pour chaque jeu individuellement.\n\nSi un jeu ne présente aucun profil de performance spécifique, ou bien que celui-ci n'a pas été activé, les paramètres par défaut seront utilisés.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "J'ai compris",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Un profil de performance personnalisé pour « %1$s » est utilisé.",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Utiliser le profil propre au jeu",

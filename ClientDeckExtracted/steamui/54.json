@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "기본 설정",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "%1$s 설정",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "기본 및 게임별 설정",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck에서는 시스템 전체뿐만 아니라 각 게임에 대한 개별 성능 설정(화면 주사율, 프레임 속도 제한, 열 설계 전력 등)을 조정하실 수 있습니다.\n\n'기본 설정'은 게임에 게임별 성능이 따로 저장되어 있지 않은 경우 사용되는 설정입니다.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck에서는 시스템 전체뿐만 아니라 각 게임에 대한 개별 성능 설정(화면 주사율, 프레임 속도 제한, 열 설계 전력 등)을 조정하실 수 있습니다.\n\n게임에 게임별 성능 설정이 없거나 해당 설정을 사용함으로 설정하지 않은 경우, '기본 설정'이 사용됩니다.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "확인",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "맞춤 %1$s 성능 프로필 사용",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "게임별 프로필 사용",

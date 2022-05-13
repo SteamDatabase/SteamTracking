@@ -2146,9 +2146,9 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Domyślne ustawienia",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Ustawienia profilu %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Ustawienia domyślne i dla poszczególnych gier",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck pozwala na dostosowanie indywidualnych ustawień wydajności (takich jak częstotliwość odświeżania, limit liczby klatek na sekundę, limit wykorzystywanej energii itp.) dla systemu w całości, a także dla poszczególnych gier.\n\nOpcja „Domyślne ustawienia” będzie używana w przypadku, gdy gra nie posiada zapisanych określonych dla siebie ustawień wydajności.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck pozwala na dostosowanie indywidualnych ustawień wydajności (takich jak częstotliwość odświeżania, limit liczby klatek na sekundę, limit wykorzystywanej energii itp.) dla systemu w całości, a także dla poszczególnych gier.\n\nJeśli gra nie posiada określonego dla siebie profilu wydajności lub nie została na niego przełączona, używana będzie opcja „Domyślne ustawienia”.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Rozumiem",
-    "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Korzystanie z niestandardowego profilu wydajności (%1$s).",
+    "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Korzystanie z niestandardowego profilu wydajności (%1$s)",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Korzystaj z profilu dla danej gry",
     "QuickAccess_Tab_Perf_DefaultSettings": "Korzystanie z domyślnego profilu",
     "QuickAccess_Tab_Perf_PerformanceSettings": "Ustawienia wydajności",
@@ -6103,5 +6103,7 @@
     "SteamUI_ValveSurvey_Summary_DVD": "DVD",
     "SteamUI_ValveSurvey_Summary_CDROM": "CD-ROM",
     "SteamUI_ValveSurvey_Summary_UnknownMedia": "Nieokreślony",
+    "SteamUI_ValveSurvey_Summary_HDAvail": "Łączna dostępna pojemność dysków: %$s1 MB",
+    "SteamUI_ValveSurvey_Summary_FreeHDBlock": "Największy wolny sektor dysku twardego:  %1$s MB",
     "SteamUI_ValveSurvey_Summary_InstallDate": "Data instalacji systemu operacyjnego: %1$s "
 }

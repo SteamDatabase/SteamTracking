@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Standaardinstellingen",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Instellingen voor %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Standaard en spelspecifieke instellingen",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Je kunt de prestatie-instellingen voor Steam Deck naar wens aanpassen (denk aan vernieuwingsfrequentie, beeldfrequentie, TDP etc.). Je kunt deze instellingen voor het gehele systeem opgeven, maar ook per spel.\n\nAls er voor een spel geen specifieke prestatie-instellingen zijn ingesteld, worden de standaardinstellingen gebruikt.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Je kunt de prestatie-instellingen voor Steam Deck naar wens aanpassen (denk aan vernieuwingsfrequentie, beeldfrequentie, TDP etc.). Je kunt deze instellingen voor het gehele systeem opgeven, maar ook per spel.\n\nAls er voor een titel geen spelspecifiek prestatieprofiel is ingesteld, of als dit niet is geselecteerd, worden de standaardinstellingen gebruikt.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Begrepen",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Aangepast prestatieprofiel voor %1$s actief",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Spelspecifiek profiel gebruiken",

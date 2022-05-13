@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Standardindstillinger",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Indstillinger for %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Standard- og spilspecifikke indstillinger",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck gør det muligt at justere individuelle ydelsesindstillinger (som opdateringsfrekvens, begrænsning for billedhastighed, grænse for TDP osv.) for hele systemet samt pr. spil.\n\nStandardindstillingerne bruges, hvis der ikke er gemt specifikke indstillinger for et spil.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck gør det muligt at justere individuelle ydelsesindstillinger (som opdateringsfrekvens, begrænsning for billedhastighed, grænse for TDP osv.) for hele systemet samt pr. spil.\n\nHvis et spil ikke har en spilspecifik ydeevneprofil, eller den ikke er slået til, bruges standardindstillingerne.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Forstået",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Bruger tilpasset ydeevneprofil for %1$s",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Brug spilspecifik profil",

@@ -1258,6 +1258,7 @@
     "Sale_ReserveEditor": "예약 구매 위젯 편집기",
     "Sale_ReserveEditor_Add": "예약 구매 옵션 추가",
     "Sale_ReserveEditor_EditTitle": "설명 편집",
+    "Sale_ReserveEditor_EditPostTitle": "제목 설명 편집",
     "Sale_ReserveEditor_EditEnterText": "여기에 설명 입력",
     "Sale_ReserveEditor_EditDesc": "하드웨어 아이템 부분에 표시될 짧은 설명을 편집합니다.",
     "Sale_ReserveEditor_ReservePack": "예약 구매 패키지",

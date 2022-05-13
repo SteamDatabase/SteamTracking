@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Thiết lập mặc định",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Thiết lập: %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Thiết lập mặc định và cho trò chơi cụ thể",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck cho phép bạn chỉnh từng thiết lập hiệu suất (như tần số quét, giới hạn tốc độ khung hình, TDP, v.v.) cho toàn bộ hệ thống, cũng như từng trò chơi.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck cho phép bạn điều chỉnh từng thiết lập hiệu suất (như tần số quét, giới hạn tốc độ khung hình, TDP, v.v.) cho toàn bộ hệ thống, cũng như từng trò chơi.\n\nNếu một sản phẩm không có thiết lập hiệu suất dành riêng hoặc nó không được bật, 'Thiết lập mặc định' sẽ được sử dụng.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Đã rõ",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Dùng thiết lập hiệu suất tùy chỉnh: %1$s",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Dùng thiết lập theo từng trò chơi",

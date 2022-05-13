@@ -1816,7 +1816,7 @@
   --basicui-header-height: 0px;
 }
 .networkinfodialog_InfoDialogBody_qI9gE {
-  width: 660px;
+  width: 100%;
 }
 .networkinfodialog_Header_15P3O.DialogHeader {
   margin: auto 0;
@@ -2086,7 +2086,7 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   flex-flow: column;
   flex-grow: 1;
   background: transparent;
-  height: 454px;
+  height: calc(100vh - 80px);
 }
 .basicappdetailssectionstyler_AppDetailsContainer_2-ns_ .BoxSizerValidRegion {
   height: 85%;

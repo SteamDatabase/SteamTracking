@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Výchozí profil",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Profil hry %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Nastavení výkonu a související profily",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Zařízení Steam Deck Vám dává možnost měnit nastavení výkonu (např. obnovovací frekvenci, omezení tepelného výkonu apod.) jak pro celý systém, tak zvlášť pro jednotlivé hry.\n\nPokud daná hra nemá uložený vlastní profil výkonu, je použit „Výchozí profil“.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Zařízení Steam Deck Vám dává možnost upravovat nastavení výkonu (např. obnovovací frekvenci, omezení tepelného výkonu apod.) jak pro celý systém, tak zvlášť pro jednotlivé hry.\n\nPokud daná hra nemá vlastní profil výkonu nebo nejsou profily výkonu her povoleny, je použit „Výchozí profil“.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Chápu",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Je používán vlastní profil výkonu hry %1$s",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Povolit profily výkonu her",

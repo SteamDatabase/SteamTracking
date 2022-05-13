@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Configuración predeterminada",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Ajustes de %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Configuración predeterminada y específica del juego",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck te permite modificar configuraciones de rendimiento individual (como la frecuencia de actualización, frecuencia de fotogramas, TDP, etc.) para el sistema como un todo, al igual que de juego a juego.\n\nLa \"configuración predeterminada\" se usará si un juego no tiene una configuración de rendimiento guardada de juego a juego.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck te permite modificar configuraciones de rendimiento individual (como la frecuencia de actualización, el umbral de la frecuencia de fotogramas, TDP, etc.) para el sistema como un todo, al igual que de juego a juego.\n\nLa \"configuración predeterminada\" se usará si un juego no tiene un perfil de rendimiento específico, o si este no está activado.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Entendido",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Utilizando perfil de rendimiento personalizado %1$s",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Usar perfil por juego",

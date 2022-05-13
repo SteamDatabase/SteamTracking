@@ -1258,6 +1258,7 @@
     "Sale_ReserveEditor": "Editor widgetu pro rezervaci",
     "Sale_ReserveEditor_Add": "Přidat možnost rezervace",
     "Sale_ReserveEditor_EditTitle": "Upravit popis",
+    "Sale_ReserveEditor_EditPostTitle": "Upravit název",
     "Sale_ReserveEditor_EditEnterText": "Sem zadejte popis",
     "Sale_ReserveEditor_EditDesc": "Umožňuje upravit krátký popis, který doprovází položky.",
     "Sale_ReserveEditor_ReservePack": "Rezervační balík",

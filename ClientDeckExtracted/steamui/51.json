@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Alapértelmezett beállítások",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "%1$s beállításai",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Alapértelmezett és játékspecifikus beállítások",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "A Steam Deck lehetővé teszi, hogy az egyes teljesítménybeállításokon igazíts (mint a frissítési ütem, képfrissítési korlát, TDP stb.) akár rendszerszinten, akár játékonként.\n\nHa a játéknak nincs mentve játékspecifikus teljesítménybeállítása, az „Alapértelmezett beállítások” lesznek használva.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "A Steam Deck lehetővé teszi, hogy az egyes teljesítménybeállításokon állíts (mint a frissítési ütem, képfrissítési korlát, TDP stb.) akár rendszerszinten, akár játékonként.\n\nHa egy játéknak nincs játékspecifikus teljesítményprofilja, vagy az nincs bekapcsolva, az „Alapértelmezett beállítások” lesznek használva.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Értem",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "Egyedi teljesítményprofil használata ehhez: %1$s",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Játékonkénti profil használata",

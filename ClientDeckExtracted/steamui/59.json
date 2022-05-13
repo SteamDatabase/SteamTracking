@@ -2146,7 +2146,7 @@
     "QuickAccess_Tab_Perf_DefaultProfile": "Setări implicite",
     "QuickAccess_Tab_Perf_GameSpecificProfile": "Setări: %1$s",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Title": "Setări implicite și specifice jocului",
-    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck îți permite să modifici setările individuale de performanță (cum ar fi rata de reîmprospătare, limita frecvenței de cadre, TDP etc.) atât pentru întregul sistem, cât și pentru fiecare joc în parte.\n\nOpțiunea „Setări implicite” va fi utilizată dacă un joc nu are un profil propriu de performanță salvat.",
+    "QuickAccess_Tab_Perf_GameProfileExplainer_Description": "Steam Deck îți permite să modifici setările individuale de performanță (cum ar fi rata de reîmprospătare, limita frecvenței de cadre, TDP etc.) atât pentru întregul sistem, cât și pentru fiecare joc în parte.\n\nDacă un joc nu are un profil de performanță personalizat sau dacă acesta nu este activat, vor fi utilizate „setările implicite”.",
     "QuickAccess_Tab_Perf_GameProfileExplainer_Dismiss": "Am înțeles",
     "QuickAccess_Tab_Perf_GameProfileInfoBasic": "%1$s utilizează un profil de performanță personalizat",
     "QuickAccess_Tab_Perf_ToggleGameSettings": "Utilizează profilul specific jocului",

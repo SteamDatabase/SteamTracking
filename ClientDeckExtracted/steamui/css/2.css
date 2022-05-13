@@ -1098,6 +1098,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-padding: 80px 0px;
   flex-direction: column;
 }
 .gamepaddialog_ModalPosition_30VHl.gamepaddialog_WithStandardPadding_1s9-e {
@@ -19015,6 +19016,9 @@ div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   font-size: 12px;
   line-height: 16px;
   color: #b8bcbf;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .perf_PerfProfileInfo_1UqP6
   .perf_SubHeading_2C4wP
@@ -77335,6 +77339,7 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-padding: 80px 0px;
   flex-direction: column;
 }
 .controllerconfiguratormapping_ModalPosition_1B8RZ.controllerconfiguratormapping_WithStandardPadding_2gc-y {
