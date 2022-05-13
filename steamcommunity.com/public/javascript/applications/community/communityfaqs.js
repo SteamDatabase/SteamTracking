@@ -9188,7 +9188,7 @@
               Object(z.f)("#FAQDashboard_TimeNever")
             );
           const o = Date.now() / 1e3 - t,
-            i = o < 86400 ? Object(z.p)(o, !1, !0) : Object(z.n)(t);
+            i = o < 86400 ? Object(z.q)(o, !1, !0) : Object(z.o)(t);
           return r.a.createElement(
             de.g,
             { className: a && me.a.Warning, rtFullDate: t, stylesmodule: ce.a },
@@ -10710,7 +10710,7 @@
                 r.a.createElement(
                   "div",
                   { className: ct.InfoRow },
-                  Object(z.m)(
+                  Object(z.n)(
                     "#FAQViewer_Admin_LastUpdate",
                     (null == a ? void 0 : a.author_account_id)
                       ? r.a.createElement(ht, {
@@ -10752,7 +10752,7 @@
           return r.a.createElement(
             "div",
             { className: ct.InfoRow },
-            Object(z.m)(
+            Object(z.n)(
               "#FAQViewer_DraftNewer",
               r.a.createElement(ht, {
                 accountID: Number.parseInt(i.author_account_id),

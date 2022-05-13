@@ -616,7 +616,7 @@
                 a.createElement(
                   "li",
                   null,
-                  Object(v.m)(
+                  Object(v.n)(
                     "#Conference_NeedHelp_BroadcastChatA1",
                     a.createElement(
                       "a",

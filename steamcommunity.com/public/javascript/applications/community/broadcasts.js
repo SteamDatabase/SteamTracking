@@ -614,7 +614,7 @@
                   r.a.createElement(
                     "div",
                     { className: ee.ViewerCount },
-                    Object(U.l)("#Broadcast_ViewerCount", n.toLocaleString())
+                    Object(U.m)("#Broadcast_ViewerCount", n.toLocaleString())
                   )
                 ),
                 r.a.createElement(ne, { broadcasterSteamID: t })

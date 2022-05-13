@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7246431";
+var CLSTAMP = "7252491";
 !(function (e) {
   function t(t) {
     for (
@@ -154,7 +154,7 @@ var CLSTAMP = "7246431";
                 43: "28988818fdc3ea65e0d2",
                 44: "2a2417ce2ed2151687cf",
                 45: "d7fd4681c6e76a165f8d",
-                46: "a004d90c21c5cc7bf2df",
+                46: "4e20a6f87fff9e45e179",
                 47: "d2dd89c4042185bdb159",
                 48: "2df27f0000cc1a6ab57b",
                 49: "0b475862efe16b8d4fce",
@@ -2613,23 +2613,26 @@ var CLSTAMP = "7246431";
       n.d(t, "f", function () {
         return d;
       }),
-      n.d(t, "m", function () {
+      n.d(t, "n", function () {
         return f;
       }),
       n.d(t, "l", function () {
         return _;
       }),
+      n.d(t, "m", function () {
+        return h;
+      }),
       n.d(t, "a", function () {
-        return m;
+        return p;
       }),
       n.d(t, "d", function () {
-        return b;
-      }),
-      n.d(t, "c", function () {
         return g;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "c", function () {
         return E;
+      }),
+      n.d(t, "e", function () {
+        return k;
       });
     var r = n("cDcd"),
       i = n("0N1H"),
@@ -2650,13 +2653,13 @@ var CLSTAMP = "7246431";
       n.d(t, "k", function () {
         return u.e;
       }),
-      n.d(t, "n", function () {
+      n.d(t, "o", function () {
         return u.g;
       }),
-      n.d(t, "o", function () {
+      n.d(t, "p", function () {
         return u.h;
       }),
-      n.d(t, "p", function () {
+      n.d(t, "q", function () {
         return u.i;
       }),
       n.d(t, "i", function () {
@@ -2765,11 +2768,11 @@ var CLSTAMP = "7246431";
       }
     }
     function d(e, ...t) {
-      let n = E.LocalizeString(e);
-      return void 0 === n ? e : h(n, ...t);
+      let n = k.LocalizeString(e);
+      return void 0 === n ? e : m(n, ...t);
     }
     function f(e, ...t) {
-      let n = E.LocalizeString(e);
+      let n = k.LocalizeString(e);
       if (void 0 === n) return e;
       let i,
         o = [],
@@ -2782,10 +2785,28 @@ var CLSTAMP = "7246431";
       }
       return o.push(n.substr(a)), r.createElement(r.Fragment, null, ...o);
     }
-    function _(e, t, ...n) {
+    function _(e, ...t) {
+      let n = k.LocalizeString(e);
+      if (void 0 === n) return e;
+      let i,
+        o = [],
+        s = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
+        a = 0;
+      for (; (i = s.exec(n)); ) {
+        (a += i[0].length), o.push(i[1]);
+        let e = parseInt(i[2]),
+          n = i[3] || "",
+          s = (e >= 1 && e <= t.length ? t[e - 1] : null)
+            ? r.cloneElement(t[e - 1], {}, [n])
+            : n;
+        o.push(s);
+      }
+      return o.push(n.substr(a)), r.createElement(r.Fragment, null, ...o);
+    }
+    function h(e, t, ...n) {
       return 1 === t || "1" === t ? d(e, t, ...n) : d(e + "_Plural", t, ...n);
     }
-    function h(e, ...t) {
+    function m(e, ...t) {
       return 0 == t.length
         ? e
         : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -2796,7 +2817,7 @@ var CLSTAMP = "7246431";
             return e;
           }));
     }
-    class m {
+    class p {
       static Set(e, t, n) {
         if (e.length <= t) {
           if (t >= 30) return e;
@@ -2809,12 +2830,12 @@ var CLSTAMP = "7246431";
       }
       static GetWithFallback(e, t) {
         if (e) {
-          return m.Get(e, t) || m.Get(e, l.GetELanguageFallback(t));
+          return p.Get(e, t) || p.Get(e, l.GetELanguageFallback(t));
         }
         return null;
       }
     }
-    const p = {
+    const b = {
         english: "en",
         german: "de",
         french: "fr",
@@ -2847,7 +2868,7 @@ var CLSTAMP = "7246431";
         sc_schinese: "zh-cn",
         koreana: "ko",
       },
-      b = {
+      g = {
         "en-US": 0,
         "de-DE": 1,
         "fr-FR": 2,
@@ -2878,11 +2899,11 @@ var CLSTAMP = "7246431";
         "es-419": 27,
         "vi-VN": 28,
       };
-    function g() {
-      return p[s.d.LANGUAGE] || null;
+    function E() {
+      return b[s.d.LANGUAGE] || null;
     }
-    const E = new l();
-    window.LocalizationManager = E;
+    const k = new l();
+    window.LocalizationManager = k;
   },
   "qM/t": function (e, t, n) {
     "use strict";
@@ -3070,7 +3091,7 @@ var CLSTAMP = "7246431";
                 i.createElement(
                   "div",
                   { className: "inviteLabel" },
-                  Object(c.m)(
+                  Object(c.n)(
                     "#InviteLanding_SentToSteam_Desc",
                     i.createElement(
                       "a",
@@ -3129,7 +3150,7 @@ var CLSTAMP = "7246431";
                 i.createElement(
                   "div",
                   { className: "inviteLabel" },
-                  Object(c.m)(
+                  Object(c.n)(
                     "#InviteLanding_SentToSteam_Desc",
                     i.createElement(
                       "a",
@@ -3212,7 +3233,7 @@ var CLSTAMP = "7246431";
           i.createElement(
             "div",
             { className: "inviteLabel" },
-            Object(c.m)(
+            Object(c.n)(
               "#bbcode_invite_description",
               i.createElement("span", {
                 dangerouslySetInnerHTML: {

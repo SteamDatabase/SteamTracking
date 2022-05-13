@@ -284,7 +284,7 @@
                   : d.createElement(
                       "div",
                       { className: K.TileTextStartsIn },
-                      Object(f.m)(
+                      Object(f.n)(
                         "#EventEditor_Status_WillBeVisible_At",
                         d.createElement(z.a, {
                           dateAndTime: t.GetVisibilityStartTimeAndDateUnixSeconds(),
@@ -414,7 +414,7 @@
                       d.createElement(
                         "div",
                         { className: K.TileStats },
-                        Object(f.m)(
+                        Object(f.n)(
                           "#EventDashBoard_Summary_Tile_Impressions",
                           d.createElement(
                             "span",
@@ -423,7 +423,7 @@
                           )
                         ),
                         d.createElement("br", null),
-                        Object(f.m)(
+                        Object(f.n)(
                           "#EventDashBoard_Summary_Tile_Read",
                           d.createElement(
                             "span",

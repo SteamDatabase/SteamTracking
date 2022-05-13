@@ -23934,6 +23934,207 @@ a.storywidget_BadgeFooter_3anc5:hover {
 .salequiz_videoEl_3TurU {
   background-color: hotpink;
 }
+.salequiz_CorrectCtn_1d8cn {
+  background-color: hotpink;
+}
+.salequiz_WrongCtn_1BqTJ {
+  background-color: hotpink;
+}
+.salequiz_RevealFooterImage_2pDrv {
+  background-color: hotpink;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.discoveryqueuewizard_DiscoveryQueueCarousel_1cPi4 {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0px 20px;
+}
+.discoveryqueuewizard_AppVideoCtn_3CAcI {
+  width: 531px;
+  height: 100%;
+  position: relative;
+}
+.discoveryqueuewizard_AppVideoCtn_3CAcI .discoveryqueuewizard_AppVideo_25tpx {
+  width: 531px;
+  height: 100%;
+}
+.discoveryqueuewizard_AppMainCap_3AV2T {
+  width: 531px;
+  height: 100%;
+  transition: opacity 0.8s ease-out 0.8s;
+  opacity: 1;
+}
+.discoveryqueuewizard_AppDetailsCtn_2D_iU {
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+}
+.discoveryqueuewizard_AppDetailsCtn_2D_iU
+  .discoveryqueuewizard_AppReviews_2zb0j {
+  font-size: 14px;
+}
+.discoveryqueuewizard_AppDetailsCtn_2D_iU
+  .discoveryqueuewizard_AppReviews_2zb0j
+  .ReviewScore {
+  font-size: 14px;
+}
+.discoveryqueuewizard_AppDetailsCtn_2D_iU
+  .discoveryqueuewizard_WishlistButton_jwJAT {
+  margin-top: auto;
+}
+.discoveryqueuewizard_DiscoveryQueueApp_DQ_3G {
+  background-color: #3a4352;
+  display: flex;
+}
+.discoveryqueuewizard_AppDetailsHeader_3oC84 {
+  color: #fff;
+  display: flex;
+}
+.discoveryqueuewizard_AppDetailsHeader_3oC84
+  .discoveryqueuewizard_RightColumn_5c7a8 {
+  font-size: 14px;
+}
+.discoveryqueuewizard_AppName_26klp {
+  font-size: 16px;
+  color: #fff;
+}
+.discoveryqueuewizard_AppDesc_3geUe {
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.discoveryqueuewizard_AppLibraryHero_2Yleg {
+  width: 40px;
+  height: 60px;
+  margin-right: 10px;
+}
+.discoveryqueuewizard_YGlyph_1Pjmy {
+  vertical-align: text-top;
+}
+.discoveryqueuewizard_RelevantCtn_mXVeC {
+  margin-top: 10px;
+}
+.discoveryqueuewizard_RelevantCtn_mXVeC
+  .discoveryqueuewizard_RelevantItem_2kPxO {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+}
+.discoveryqueuewizard_RelevantCtn_mXVeC
+  .discoveryqueuewizard_RelevantItem_2kPxO
+  svg {
+  width: 12px;
+  fill: var(--gpStoreLighterGrey);
+  vertical-align: text-top;
+  margin-right: 5px;
+}
+.discoveryqueuewizard_AppTagsCtn_2wkaQ {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 10px;
+}
+.discoveryqueuewizard_AppTagsCtn_2wkaQ .discoveryqueuewizard_TagEntry_3Nh9p {
+  background: rgba(14, 20, 27, 0.3);
+  border-radius: 2px;
+  font-size: 12px;
+  margin-right: 5px;
+  padding: 2px 4px;
+  color: var(--gpStoreLighterGrey);
+}
+.discoveryqueuewizard_SummaryCtn_2odeg {
+  flex-direction: column;
+  color: var(--gpStoreLighterGrey);
+  justify-content: center;
+  align-items: center;
+}
+.discoveryqueuewizard_SummaryTitle_3Sd-b {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+.discoveryqueuewizard_GridItem_1jPQ6:nth-child(2) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.discoveryqueuewizard_GridItem_1jPQ6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+}
+.discoveryqueuewizard_SummaryGrid_1L3Y6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.discoveryqueuewizard_GridTitle_IA2mr {
+  font-weight: 700;
+  font-size: 12px;
+}
+.discoveryqueuewizard_GridNumber_2gESn {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 800;
+}
+.discoveryqueuewizard_GridSubTitle_3Um9m {
+  font-size: 14px;
+}
+.discoveryqueuewizard_GridLink_1L-Mo {
+  font-size: 14px;
+  color: #1a9fff;
+}
+.discoveryqueuewizard_YourStats_15KFY {
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 10px 0;
+}
+.discoveryqueuewizard_TopBarCtn_UvyAn {
+  display: flex;
+  margin-top: 45px;
+  margin-bottom: 60px;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.discoveryqueuewizard_LearnMoreLink_Wfkes {
+  display: inline-block;
+  color: #1a9fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.discoveryqueuewizard_ControlsCtn_2Miij {
+  display: flex;
+}
+.discoveryqueuewizard_ControlBtn_-RPHf {
+  min-width: 10px;
+  margin-right: 5px;
+  color: #dcdedf;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 2px;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: none;
+  position: relative;
+  background: #23262e;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 8px 16px;
+}
+.discoveryqueuewizard_ControlBtn_-RPHf svg {
+  width: 16px;
+}
 :root {
   --basicui-header-height: 0px;
 }

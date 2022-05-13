@@ -466,7 +466,7 @@
             { className: j.LatestUpdateButton, onClick: e.onClick },
             Object(S.f)(
               "#EventBrowse_LatestUpdateTime_Button",
-              Object(S.o)(e.nUpdateTime)
+              Object(S.p)(e.nUpdateTime)
             )
           )
         );
@@ -483,7 +483,7 @@
           s.a.createElement(
             "h2",
             null,
-            Object(S.f)("#EventBrowse_LastUpdateDate", Object(S.o)(t))
+            Object(S.f)("#EventBrowse_LastUpdateDate", Object(S.p)(t))
           ),
           s.a.createElement(
             "div",

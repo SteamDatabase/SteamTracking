@@ -766,6 +766,7 @@ ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/languagepreferences/
+${STORE_BASE_URL}account/notinterested
 ${STORE_BASE_URL}account/optoutappcommunication/
 ${STORE_BASE_URL}account/preferences
 ${STORE_BASE_URL}account/preferences#CommunityContentPreferences
@@ -857,6 +858,7 @@ ${STORE_BASE_URL}events_admin/ajaxupdateeventtype
 ${STORE_BASE_URL}events_admin/ajaxupdatepartneremailtarget
 ${STORE_BASE_URL}events_admin/ajaxupdatetags
 ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
+${STORE_BASE_URL}explore
 ${STORE_BASE_URL}explore/followgame
 ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
@@ -949,6 +951,7 @@ ${STORE_BASE_URL}updated/ajaxgetmyappsraw
 ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
+${STORE_BASE_URL}wishlist
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
