@@ -527,7 +527,7 @@
             });
         }
         DoCloneAction(e, t) {
-          let a = i.c.CreateClone();
+          const a = i.c.CreateClone();
           t &&
             t.length > 0 &&
             (e.ClearLanguagesTokens(t),
@@ -542,12 +542,12 @@
           i.c
             .LoadEditorModel(t.clanSteamID, t.GID)
             .then(() => {
-              Object(D.c)(
+              Object(D.d)(
                 d.createElement(N.a, {
                   editModel: i.c.GetEditModel(),
                   OnPublishSuccess: this.OnPublishSuccess,
                 }),
-                window
+                Object(q.o)(e)
               );
             })
             .catch((e) => {
@@ -575,7 +575,7 @@
         }
         OnDeleteClickAndVerify(e) {
           e.stopPropagation(),
-            Object(D.c)(
+            Object(D.d)(
               d.createElement(V.a, {
                 eventModel: this.props.eventModel,
                 partnerEventStore: i.c,

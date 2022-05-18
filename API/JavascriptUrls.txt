@@ -656,6 +656,7 @@ ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
+${PARTNER_BASE_URL}doc/store/discounting/csv
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
@@ -689,6 +690,7 @@ ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes
+${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminadddailydeal
@@ -1750,6 +1752,7 @@ https://partner.steamgames.com/giveaways/create/
 https://partner.steamgames.com/giveaways/edit/${giveaway_admin_id}
 https://partner.steamgames.com/giveaways/remove/${giveawayid}
 https://partner.steamgames.com/images/upload/
+https://partner.steamgames.com/login/logout/
 https://partner.steamgames.com/newpartner/
 https://partner.steamgames.com/newpartner/ajaxabandon/
 https://partner.steamgames.com/newpartner/ajaxfinish/

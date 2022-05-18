@@ -8965,7 +8965,7 @@
                   "#FAQCrowdin_SavedAtTimeByAuthor",
                   Object(z.k)(r.timestamp) +
                     " @ " +
-                    Object(X.g)(r.timestamp, { bForce24HourClock: !1 }),
+                    Object(X.h)(r.timestamp, { bForce24HourClock: !1 }),
                   null !== (t = null == d ? void 0 : d.persona_name) &&
                     void 0 !== t
                     ? t
@@ -10722,7 +10722,7 @@
                       null,
                       Object(z.k)(t.timestamp) +
                         "@" +
-                        Object(X.g)(t.timestamp, { bForce24HourClock: !1 })
+                        Object(X.h)(t.timestamp, { bForce24HourClock: !1 })
                     )
                   )
                 ),
@@ -10762,7 +10762,7 @@
                 null,
                 Object(z.k)(i.timestamp) +
                   "@" +
-                  Object(X.g)(i.timestamp, { bForce24HourClock: !1 })
+                  Object(X.h)(i.timestamp, { bForce24HourClock: !1 })
               )
             )
           );

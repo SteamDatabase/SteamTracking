@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [60],
+  [32],
   {
     "++az": function (e, t, a) {
       e.exports =
@@ -302,7 +302,7 @@
             return !1;
           let a = Object.assign({}, e, {
             universe: C.d.EUNIVERSE,
-            accountid: C.k.accountid,
+            accountid: C.l.accountid,
           });
           void 0 !== t && (a.sequenceid = t);
           try {
@@ -443,8 +443,8 @@
         }
         BClientAccountMatches() {
           return (
-            !C.k.logged_in ||
-            C.k.accountid == this.m_connection.ClientInfo.unAccountID
+            !C.l.logged_in ||
+            C.l.accountid == this.m_connection.ClientInfo.unAccountID
           );
         }
         GenericEResultCall(e) {
@@ -1320,7 +1320,7 @@
         }
         ShowGenericError() {
           this.ShowError(
-            Object(f.m)(
+            Object(f.n)(
               "#Redeem_Error_Generic",
               s.a.createElement(
                 "a",
@@ -1906,7 +1906,7 @@
             ? s.a.createElement(
                 "div",
                 { className: u.EquippedDesc },
-                Object(f.m)(
+                Object(f.n)(
                   "#Redeem_Equipped_Background",
                   s.a.createElement(
                     "span",
@@ -2156,7 +2156,7 @@
             ? s.a.createElement(
                 "div",
                 { className: u.EquippedDesc },
-                Object(f.m)(
+                Object(f.n)(
                   "#Redeem_Equipped_MiniProfile",
                   s.a.createElement(
                     "span",
@@ -2273,7 +2273,7 @@
             ? s.a.createElement(
                 "div",
                 { className: u.EquippedDesc },
-                Object(f.m)(
+                Object(f.n)(
                   "#Redeem_Equipped_AvatarFrame",
                   s.a.createElement(
                     "span",
@@ -2382,7 +2382,7 @@
             ? s.a.createElement(
                 "div",
                 { className: u.EquippedDesc },
-                Object(f.m)(
+                Object(f.n)(
                   "#Redeem_Equipped_AnimatedAvatar",
                   s.a.createElement(
                     "span",
@@ -2807,7 +2807,7 @@
         }
         GetProfileSteamID() {
           return g.b.Get().BIsLoggedIn()
-            ? C.k.steamid
+            ? C.l.steamid
             : 2 == C.d.EUNIVERSE
             ? "148618792083695825"
             : "76561197960266962";
@@ -2994,7 +2994,7 @@
         }
         GetProfileSteamID() {
           return g.b.Get().BIsLoggedIn()
-            ? C.k.steamid
+            ? C.l.steamid
             : 2 == C.d.EUNIVERSE
             ? "148618792083695825"
             : "76561197960266962";
@@ -3575,7 +3575,7 @@
               l = s.a.createElement(
                 "div",
                 { className: Object(R.a)(u.Bold, u.Opacity) },
-                Object(f.m)("#Redeem_CantRedeemItemForApp", e)
+                Object(f.n)("#Redeem_CantRedeemItemForApp", e)
               );
             } else if ("cantafford" == a) {
               let e = Re(t) - g.b.Get().GetPointsAvailable().getLowBits();
@@ -4293,35 +4293,35 @@
     },
     Aqke: function (e, t, a) {
       var n = {
-        "./loyalty_brazilian.json": ["jJTi", 31],
-        "./loyalty_bulgarian.json": ["YXmX", 32],
-        "./loyalty_czech.json": ["Yw6T", 33],
-        "./loyalty_danish.json": ["LeJ7", 34],
-        "./loyalty_dutch.json": ["3s9e", 35],
-        "./loyalty_english.json": ["nz6u", 36],
-        "./loyalty_finnish.json": ["cCRj", 37],
-        "./loyalty_french.json": ["WjZg", 38],
-        "./loyalty_german.json": ["2HFY", 39],
-        "./loyalty_greek.json": ["puzw", 40],
-        "./loyalty_hungarian.json": ["h+vV", 41],
-        "./loyalty_italian.json": ["1xjJ", 42],
-        "./loyalty_japanese.json": ["KhFN", 43],
-        "./loyalty_koreana.json": ["0T2E", 44],
-        "./loyalty_latam.json": ["SFVQ", 45],
-        "./loyalty_norwegian.json": ["6qpk", 46],
-        "./loyalty_polish.json": ["c9AW", 47],
-        "./loyalty_portuguese.json": ["H3eu", 48],
-        "./loyalty_romanian.json": ["gt0D", 49],
-        "./loyalty_russian.json": ["4nQk", 50],
-        "./loyalty_sc_schinese.json": ["0Z0/", 51],
-        "./loyalty_schinese.json": ["svug", 52],
-        "./loyalty_spanish.json": ["x/nm", 53],
-        "./loyalty_swedish.json": ["d/hP", 54],
-        "./loyalty_tchinese.json": ["EWje", 55],
-        "./loyalty_thai.json": ["SnkP", 56],
-        "./loyalty_turkish.json": ["cD82", 57],
-        "./loyalty_ukrainian.json": ["jV8j", 58],
-        "./loyalty_vietnamese.json": ["TxFk", 59],
+        "./loyalty_brazilian.json": ["jJTi", 128],
+        "./loyalty_bulgarian.json": ["YXmX", 129],
+        "./loyalty_czech.json": ["Yw6T", 130],
+        "./loyalty_danish.json": ["LeJ7", 131],
+        "./loyalty_dutch.json": ["3s9e", 132],
+        "./loyalty_english.json": ["nz6u", 133],
+        "./loyalty_finnish.json": ["cCRj", 134],
+        "./loyalty_french.json": ["WjZg", 135],
+        "./loyalty_german.json": ["2HFY", 136],
+        "./loyalty_greek.json": ["puzw", 137],
+        "./loyalty_hungarian.json": ["h+vV", 138],
+        "./loyalty_italian.json": ["1xjJ", 139],
+        "./loyalty_japanese.json": ["KhFN", 140],
+        "./loyalty_koreana.json": ["0T2E", 141],
+        "./loyalty_latam.json": ["SFVQ", 142],
+        "./loyalty_norwegian.json": ["6qpk", 143],
+        "./loyalty_polish.json": ["c9AW", 144],
+        "./loyalty_portuguese.json": ["H3eu", 145],
+        "./loyalty_romanian.json": ["gt0D", 146],
+        "./loyalty_russian.json": ["4nQk", 147],
+        "./loyalty_sc_schinese.json": ["0Z0/", 148],
+        "./loyalty_schinese.json": ["svug", 149],
+        "./loyalty_spanish.json": ["x/nm", 150],
+        "./loyalty_swedish.json": ["d/hP", 151],
+        "./loyalty_tchinese.json": ["EWje", 152],
+        "./loyalty_thai.json": ["SnkP", 153],
+        "./loyalty_turkish.json": ["cD82", 154],
+        "./loyalty_ukrainian.json": ["jV8j", 155],
+        "./loyalty_vietnamese.json": ["TxFk", 156],
       };
       function r(e) {
         if (!a.o(n, e))
@@ -4749,7 +4749,7 @@
               P.c,
               {
                 key: "HiddenCallout",
-                title: Object(g.l)(
+                title: Object(g.m)(
                   "#HiddenItems_Explanation",
                   t,
                   t.toLocaleString()
@@ -5641,7 +5641,7 @@
                   l.d.COMMUNITY_BASE_URL +
                   "profiles/" +
                   (_.b.Get().BIsLoggedIn()
-                    ? l.k.steamid
+                    ? l.l.steamid
                     : 2 == l.d.EUNIVERSE
                     ? "148618792083695825"
                     : "76561197960266962") +
@@ -5827,8 +5827,8 @@
           );
         }),
         tt = (e) => e.toString().padStart(2, "0"),
-        at = i.a.lazy(() => a.e(93).then(a.bind(null, "yDev"))),
-        nt = i.a.lazy(() => a.e(92).then(a.bind(null, "f4w8")));
+        at = i.a.lazy(() => a.e(65).then(a.bind(null, "yDev"))),
+        nt = i.a.lazy(() => a.e(64).then(a.bind(null, "f4w8")));
       let rt = class extends i.a.Component {
         render() {
           return i.a.createElement(
@@ -6363,7 +6363,7 @@
               description: r,
               pointValue: o,
             } = e,
-            s = Object(g.p)(n - Date.now() / 1e3, !0);
+            s = Object(g.q)(n - Date.now() / 1e3, !0);
           return i.a.createElement(
             f.a,
             {
@@ -6488,7 +6488,7 @@
             )
           ),
         ra = (e) => {
-          let t = Object(g.m)(
+          let t = Object(g.n)(
             "#HowItWorks_Conversion",
             i.a.createElement("span", null, e.numPoints.toLocaleString()),
             i.a.createElement(
@@ -6525,7 +6525,7 @@
           );
         },
         ia = (e) => {
-          let t = Object(g.m)(
+          let t = Object(g.n)(
             "#ShopName",
             i.a.createElement("span", null, Object(g.f)("#ShopNamePre")),
             Object(g.f)("#ShopNamePost")
@@ -7287,7 +7287,7 @@
                     i.a.createElement(
                       f.a,
                       { marginY: "xsmall", className: ua.SectionContent },
-                      Object(g.m)(
+                      Object(g.n)(
                         "#LunarSale2022_Rules_4_Desc_China",
                         i.a.createElement(
                           _a.b,
@@ -7466,7 +7466,7 @@
                     i.a.createElement(
                       f.a,
                       { marginY: "xsmall", className: ua.SectionContent },
-                      Object(g.m)(
+                      Object(g.n)(
                         "#LunarSale2022_Rules_4_Desc",
                         i.a.createElement(
                           _a.b,
@@ -7515,10 +7515,17 @@
               }, [e]),
               r.useEffect(() => {
                 if (t.current && i.current != n) {
-                  const e = window.setTimeout(() => {
-                    t.current.RestoreState(n, 1), (i.current = n);
-                  }, 10);
-                  return () => window.clearTimeout(e);
+                  const e = t.current.NavTree().DeferredFocus;
+                  e.SuppressFocus();
+                  const a = window.setTimeout(() => {
+                    t.current.RestoreState(n, 1)
+                      ? e.Reset()
+                      : e.ExecuteQueuedFocus(),
+                      (i.current = n);
+                  }, 2);
+                  return () => {
+                    window.clearTimeout(a), e.ExecuteQueuedFocus();
+                  };
                 }
               }, [n, e]),
               t
@@ -9214,7 +9221,7 @@
           return Object(n.a)(this, void 0, void 0, function* () {
             if (!_.b.Get().BIsLoggedIn()) return [];
             const e = Xa.b.Init(ln);
-            e.SetBodyFields({ steamid: l.k.steamid });
+            e.SetBodyFields({ steamid: l.l.steamid });
             let t = yield gn.GetBidsForUser(this.m_transport, e);
             return 1 == t.GetEResult()
               ? t.Body().toObject().bids
@@ -12645,7 +12652,7 @@
           let t = o.a.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? Object(s.f)("#PersonaStateLastSeen_JustNow")
-            : Object(s.f)("#PersonaStateLastSeen", Object(s.p)(t));
+            : Object(s.f)("#PersonaStateLastSeen", Object(s.q)(t));
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
@@ -13582,7 +13589,7 @@
             (this.m_config = t),
             this.BIsLoggedIn())
           ) {
-            const e = new y.a(m.k.steamid);
+            const e = new y.a(m.l.steamid);
             (this.m_persona = new I.a(e)), this.RetrievePersonaState();
           }
           t.eligible_apps
@@ -13646,7 +13653,7 @@
           return Object(n.a)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn()) return;
             const e = _.b.Init(f.g);
-            e.SetBodyFields({ steamid: m.k.steamid });
+            e.SetBodyFields({ steamid: m.l.steamid });
             let t = yield f.o.GetSummary(this.m_transport, e);
             1 == t.GetEResult()
               ? (this.m_lPointsAvailable = i.a.fromString(
@@ -13709,7 +13716,7 @@
           return this.m_bIsSaleActive;
         }
         BIsLoggedIn() {
-          return m.k.logged_in;
+          return m.l.logged_in;
         }
         GetPointsAvailable() {
           return this.m_lPointsAvailable;
@@ -14560,7 +14567,7 @@
         LoadCouponPromosForUser() {
           return Object(n.a)(this, void 0, void 0, function* () {
             const e = _.b.Init(b.c);
-            e.Body().set_country_code(m.k.country_code);
+            e.Body().set_country_code(m.l.country_code);
             const t = yield b.d.GetAvailableValveDiscountPromotions(
               this.m_transport,
               e
@@ -14701,7 +14708,7 @@
           return Object(n.a)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn()) return;
             const e = _.b.Init(h.d);
-            e.SetBodyFields({ steamid: m.k.steamid });
+            e.SetBodyFields({ steamid: m.l.steamid });
             const t = yield h.n.GetProfileItemsEquipped(this.m_transport, e);
             1 == t.GetEResult()
               ? (this.m_equippedItems = t.Body().toObject())
@@ -14714,7 +14721,7 @@
           return Object(n.a)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn()) return;
             const e = _.b.Init(h.e);
-            e.SetBodyFields({ steamid: m.k.steamid });
+            e.SetBodyFields({ steamid: m.l.steamid });
             const t = yield h.n.GetPurchasedAndUpgradedProfileCustomizations(
               this.m_transport,
               e
@@ -14733,7 +14740,7 @@
           return Object(n.a)(this, void 0, void 0, function* () {
             let e = {
               access_token: this.m_config.webapi_token,
-              steamids: m.k.steamid,
+              steamids: m.l.steamid,
             };
             return c.a
               .get(

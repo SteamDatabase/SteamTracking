@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [24],
+  [25],
   {
     "3WEt": function (e, t, a) {
       "use strict";
@@ -589,9 +589,9 @@
             i <= 86400
               ? (c = Object(_.f)("#PlaytimeList_LastPlayedMax"))
               : o > 31449600
-              ? ((r = Object(_.n)(i)),
+              ? ((r = Object(_.o)(i)),
                 (c = Object(_.f)("#PlaytimeList_LastPlayed", r)))
-              : ((r = Object(_.p)(o)),
+              : ((r = Object(_.q)(o)),
                 (c = Object(_.f)("#PlaytimeList_LastPlayed", r))),
             l.a.createElement(
               "div",
@@ -988,7 +988,7 @@
           const o = n.n,
             r =
               n.r > 0
-                ? Object(_.f)("#Recommendation_ReleasedOn", Object(_.n)(n.r))
+                ? Object(_.f)("#Recommendation_ReleasedOn", Object(_.o)(n.r))
                 : "";
           let c = [];
           if (n.t) {
@@ -1414,7 +1414,7 @@
           Object(O.a)();
         }
         render() {
-          return n.k.logged_in
+          return n.l.logged_in
             ? l.a.createElement(
                 "div",
                 {
@@ -1441,7 +1441,7 @@
                   l.a.createElement(
                     "div",
                     { className: h.BottomSection },
-                    l.a.createElement(N, { accountID: n.k.accountid }),
+                    l.a.createElement(N, { accountID: n.l.accountid }),
                     l.a.createElement("div", { className: h.VerticalBar }),
                     l.a.createElement(U, { width: this.state.width })
                   )

@@ -1,40 +1,40 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [61],
+  [33],
   {
     "+58p": function (e, t, r) {
       var n = {
-        "./shared_arabic.json": ["A8mv", 125],
-        "./shared_brazilian.json": ["f7Ht", 126],
-        "./shared_bulgarian.json": ["VJ/X", 127],
-        "./shared_czech.json": ["WyQd", 128],
-        "./shared_danish.json": ["WlkD", 129],
-        "./shared_dutch.json": ["SHbT", 130],
-        "./shared_english.json": ["7foF", 131],
-        "./shared_finnish.json": ["+HzT", 132],
-        "./shared_french.json": ["wr2i", 133],
-        "./shared_german.json": ["CzjK", 134],
-        "./shared_greek.json": ["T1Vt", 135],
-        "./shared_hungarian.json": ["6rq4", 136],
-        "./shared_italian.json": ["yba0", 137],
-        "./shared_japanese.json": ["MIMz", 138],
-        "./shared_koreana.json": ["wrJg", 139],
-        "./shared_latam.json": ["Q3r2", 140],
-        "./shared_norwegian.json": ["Lp4u", 141],
-        "./shared_polish.json": ["wbdj", 142],
-        "./shared_portuguese.json": ["GKZf", 143],
-        "./shared_romanian.json": ["wYo1", 144],
-        "./shared_russian.json": ["Efj/", 145],
-        "./shared_sc_schinese.json": ["7Bs/", 146],
-        "./shared_schinese.json": ["x+JX", 147],
-        "./shared_spanish.json": ["/xtB", 148],
-        "./shared_swedish.json": ["tdT9", 149],
-        "./shared_tchinese.json": ["JQjP", 150],
-        "./shared_thai.json": ["8I3t", 151],
-        "./shared_turkish.json": ["W4c2", 152],
-        "./shared_ukrainian.json": ["0xx/", 153],
-        "./shared_vietnamese.json": ["CxfU", 154],
+        "./shared_arabic.json": ["A8mv", 97],
+        "./shared_brazilian.json": ["f7Ht", 98],
+        "./shared_bulgarian.json": ["VJ/X", 99],
+        "./shared_czech.json": ["WyQd", 100],
+        "./shared_danish.json": ["WlkD", 101],
+        "./shared_dutch.json": ["SHbT", 102],
+        "./shared_english.json": ["7foF", 103],
+        "./shared_finnish.json": ["+HzT", 104],
+        "./shared_french.json": ["wr2i", 105],
+        "./shared_german.json": ["CzjK", 106],
+        "./shared_greek.json": ["T1Vt", 107],
+        "./shared_hungarian.json": ["6rq4", 108],
+        "./shared_italian.json": ["yba0", 109],
+        "./shared_japanese.json": ["MIMz", 110],
+        "./shared_koreana.json": ["wrJg", 111],
+        "./shared_latam.json": ["Q3r2", 112],
+        "./shared_norwegian.json": ["Lp4u", 113],
+        "./shared_polish.json": ["wbdj", 114],
+        "./shared_portuguese.json": ["GKZf", 115],
+        "./shared_romanian.json": ["wYo1", 116],
+        "./shared_russian.json": ["Efj/", 117],
+        "./shared_sc_schinese.json": ["7Bs/", 118],
+        "./shared_schinese.json": ["x+JX", 119],
+        "./shared_spanish.json": ["/xtB", 120],
+        "./shared_swedish.json": ["tdT9", 121],
+        "./shared_tchinese.json": ["JQjP", 122],
+        "./shared_thai.json": ["8I3t", 123],
+        "./shared_turkish.json": ["W4c2", 124],
+        "./shared_ukrainian.json": ["0xx/", 125],
+        "./shared_vietnamese.json": ["CxfU", 126],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -196,7 +196,7 @@
       r.d(t, "d", function () {
         return s;
       }),
-        r.d(t, "k", function () {
+        r.d(t, "l", function () {
           return o;
         }),
         r.d(t, "b", function () {
@@ -211,20 +211,23 @@
         r.d(t, "a", function () {
           return h;
         }),
-        r.d(t, "i", function () {
+        r.d(t, "j", function () {
           return p;
         }),
-        r.d(t, "j", function () {
+        r.d(t, "k", function () {
           return f;
         }),
         r.d(t, "h", function () {
-          return _;
+          return g;
         }),
-        r.d(t, "f", function () {
+        r.d(t, "i", function () {
           return b;
         }),
+        r.d(t, "f", function () {
+          return y;
+        }),
         r.d(t, "g", function () {
-          return w;
+          return S;
         });
       var n = r("mrSG"),
         i = r("7VqR"),
@@ -338,18 +341,18 @@
       }
       function p(e = "webui_config") {
         const t = {},
-          r = _("config", e);
+          r = g("config", e);
         r && (delete r.SESSIONID, Object.assign(s, r), (t.config = !0));
-        const n = _("userinfo", e);
+        const n = g("userinfo", e);
         n &&
           (Object.assign(o, n),
           (t.userConfig = !0),
           o.is_support && h() && (o.is_support = !1));
-        const i = _("broadcast", e);
+        const i = g("broadcast", e);
         i && (Object.assign(l, i), (t.broadcastConfig = !0));
-        const a = _("community", e);
+        const a = g("community", e);
         a && (Object.assign(c, a), (t.communityConfig = !0));
-        const u = _("event", e);
+        const u = g("event", e);
         return u && (Object.assign(d, u), (t.eventConfig = !0)), t;
       }
       function f(e, t, r) {
@@ -366,47 +369,60 @@
           }
         });
       }
-      function _(e, t = "webui_config") {
-        let r;
-        if (((r = "string" == typeof t ? document.getElementById(t) : t), r))
+      function _(e, t = "webui_config", r) {
+        let n;
+        if (
+          ((n =
+            "string" == typeof t
+              ? !Object({ NODE_ENV: "production", STEAM_BUILD: "buildbot" })
+                  .MOBILE_BUILD && document.getElementById(t)
+              : t),
+          n)
+        )
           try {
-            if (r.hasAttribute("data-" + e)) {
-              return JSON.parse(r.getAttribute("data-" + e));
+            if (n.hasAttribute("data-" + e)) {
+              return JSON.parse(n.getAttribute("data-" + e));
             }
             return null;
           } catch (e) {
             console.error("Failed to parse config", e);
           }
-        else console.error("Missing config element #", t);
+        else r && console.error("Missing config element #", t);
       }
-      function g(e, t) {
+      function g(e, t = "webui_config") {
+        return _(e, t, !0);
+      }
+      function b(e, t = "webui_config") {
+        return _(e, t, !1);
+      }
+      function w(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function b() {
+      function y() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return g(e, s.STORE_BASE_URL)
+        return w(e, s.STORE_BASE_URL)
           ? s.STORE_BASE_URL
-          : g(e, s.COMMUNITY_BASE_URL)
+          : w(e, s.COMMUNITY_BASE_URL)
           ? s.COMMUNITY_BASE_URL
-          : g(e, s.CHAT_BASE_URL)
+          : w(e, s.CHAT_BASE_URL)
           ? s.CHAT_BASE_URL
-          : g(e, s.PARTNER_BASE_URL)
+          : w(e, s.PARTNER_BASE_URL)
           ? s.PARTNER_BASE_URL
-          : g(e, s.HELP_BASE_URL)
+          : w(e, s.HELP_BASE_URL)
           ? s.HELP_BASE_URL
-          : g(e, s.STEAMTV_BASE_URL)
+          : w(e, s.STEAMTV_BASE_URL)
           ? s.STEAMTV_BASE_URL
-          : g(e, s.STATS_BASE_URL)
+          : w(e, s.STATS_BASE_URL)
           ? s.STATS_BASE_URL
-          : g(e, s.INTERNAL_STATS_BASE_URL)
+          : w(e, s.INTERNAL_STATS_BASE_URL)
           ? s.INTERNAL_STATS_BASE_URL
-          : g(e, "https://steamloopback.host")
+          : w(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function w() {
+      function S() {
         const e = window.location.href;
         return e.startsWith(s.STORE_BASE_URL)
           ? "store"
@@ -1948,35 +1964,35 @@
     },
     AvbV: function (e, t, r) {
       var n = {
-        "./main_brazilian.json": ["TFAN", 62],
-        "./main_bulgarian.json": ["c2SO", 63],
-        "./main_czech.json": ["peP3", 64],
-        "./main_danish.json": ["0bnV", 65],
-        "./main_dutch.json": ["wcLc", 66],
-        "./main_english.json": ["/rNK", 67],
-        "./main_finnish.json": ["iywU", 68],
-        "./main_french.json": ["Xnpc", 69],
-        "./main_german.json": ["pmKi", 70],
-        "./main_greek.json": ["mTRv", 71],
-        "./main_hungarian.json": ["WkHb", 72],
-        "./main_italian.json": ["Jz5U", 73],
-        "./main_japanese.json": ["3Dk9", 74],
-        "./main_koreana.json": ["neQD", 75],
-        "./main_latam.json": ["6oHD", 76],
-        "./main_norwegian.json": ["2OvS", 77],
-        "./main_polish.json": ["3pwE", 78],
-        "./main_portuguese.json": ["hY40", 79],
-        "./main_romanian.json": ["Q95+", 80],
-        "./main_russian.json": ["bsPT", 81],
-        "./main_sc_schinese.json": ["GOaQ", 82],
-        "./main_schinese.json": ["B/Zz", 83],
-        "./main_spanish.json": ["U6iL", 84],
-        "./main_swedish.json": ["4uPU", 85],
-        "./main_tchinese.json": ["rgC9", 86],
-        "./main_thai.json": ["87dp", 87],
-        "./main_turkish.json": ["yMpO", 88],
-        "./main_ukrainian.json": ["zTWm", 89],
-        "./main_vietnamese.json": ["wqiy", 90],
+        "./main_brazilian.json": ["TFAN", 34],
+        "./main_bulgarian.json": ["c2SO", 35],
+        "./main_czech.json": ["peP3", 36],
+        "./main_danish.json": ["0bnV", 37],
+        "./main_dutch.json": ["wcLc", 38],
+        "./main_english.json": ["/rNK", 39],
+        "./main_finnish.json": ["iywU", 40],
+        "./main_french.json": ["Xnpc", 41],
+        "./main_german.json": ["pmKi", 42],
+        "./main_greek.json": ["mTRv", 43],
+        "./main_hungarian.json": ["WkHb", 44],
+        "./main_italian.json": ["Jz5U", 45],
+        "./main_japanese.json": ["3Dk9", 46],
+        "./main_koreana.json": ["neQD", 47],
+        "./main_latam.json": ["6oHD", 48],
+        "./main_norwegian.json": ["2OvS", 49],
+        "./main_polish.json": ["3pwE", 50],
+        "./main_portuguese.json": ["hY40", 51],
+        "./main_romanian.json": ["Q95+", 52],
+        "./main_russian.json": ["bsPT", 53],
+        "./main_sc_schinese.json": ["GOaQ", 54],
+        "./main_schinese.json": ["B/Zz", 55],
+        "./main_spanish.json": ["U6iL", 56],
+        "./main_swedish.json": ["4uPU", 57],
+        "./main_tchinese.json": ["rgC9", 58],
+        "./main_thai.json": ["87dp", 59],
+        "./main_turkish.json": ["yMpO", 60],
+        "./main_ukrainian.json": ["zTWm", 61],
+        "./main_vietnamese.json": ["wqiy", 62],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -2157,23 +2173,26 @@
         r.d(t, "f", function () {
           return u;
         }),
-        r.d(t, "m", function () {
+        r.d(t, "n", function () {
           return m;
         }),
         r.d(t, "l", function () {
           return h;
         }),
+        r.d(t, "m", function () {
+          return p;
+        }),
         r.d(t, "a", function () {
-          return f;
+          return _;
         }),
         r.d(t, "d", function () {
-          return g;
-        }),
-        r.d(t, "c", function () {
           return b;
         }),
-        r.d(t, "e", function () {
+        r.d(t, "c", function () {
           return w;
+        }),
+        r.d(t, "e", function () {
+          return y;
         });
       var n = r("q1tI"),
         i = r("msu0"),
@@ -2183,19 +2202,16 @@
         l = (r("f5iL"), r("suz2"), r("3u1o")),
         c = r("gwss");
       r.d(t, "g", function () {
-        return c.a;
+        return c.b;
       }),
         r.d(t, "h", function () {
-          return c.b;
+          return c.c;
         }),
         r.d(t, "j", function () {
-          return c.d;
-        }),
-        r.d(t, "k", function () {
           return c.e;
         }),
-        r.d(t, "n", function () {
-          return c.g;
+        r.d(t, "k", function () {
+          return c.f;
         }),
         r.d(t, "o", function () {
           return c.h;
@@ -2203,8 +2219,11 @@
         r.d(t, "p", function () {
           return c.i;
         }),
+        r.d(t, "q", function () {
+          return c.j;
+        }),
         r.d(t, "i", function () {
-          return c.c;
+          return c.d;
         });
       class d {
         constructor() {
@@ -2306,11 +2325,11 @@
         }
       }
       function u(e, ...t) {
-        let r = w.LocalizeString(e);
-        return void 0 === r ? e : p(r, ...t);
+        let r = y.LocalizeString(e);
+        return void 0 === r ? e : f(r, ...t);
       }
       function m(e, ...t) {
-        let r = w.LocalizeString(e);
+        let r = y.LocalizeString(e);
         if (void 0 === r) return e;
         let i,
           a = [],
@@ -2323,10 +2342,28 @@
         }
         return a.push(r.substr(o)), n.createElement(n.Fragment, null, ...a);
       }
-      function h(e, t, ...r) {
+      function h(e, ...t) {
+        let r = y.LocalizeString(e);
+        if (void 0 === r) return e;
+        let i,
+          a = [],
+          s = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
+          o = 0;
+        for (; (i = s.exec(r)); ) {
+          (o += i[0].length), a.push(i[1]);
+          let e = parseInt(i[2]),
+            r = i[3] || "",
+            s = (e >= 1 && e <= t.length ? t[e - 1] : null)
+              ? n.cloneElement(t[e - 1], {}, [r])
+              : r;
+          a.push(s);
+        }
+        return a.push(r.substr(o)), n.createElement(n.Fragment, null, ...a);
+      }
+      function p(e, t, ...r) {
         return 1 === t || "1" === t ? u(e, t, ...r) : u(e + "_Plural", t, ...r);
       }
-      function p(e, ...t) {
+      function f(e, ...t) {
         return 0 == t.length
           ? e
           : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
@@ -2337,7 +2374,7 @@
               return e;
             }));
       }
-      class f {
+      class _ {
         static Set(e, t, r) {
           if (e.length <= t) {
             if (t >= 30) return e;
@@ -2350,12 +2387,12 @@
         }
         static GetWithFallback(e, t) {
           if (e) {
-            return f.Get(e, t) || f.Get(e, d.GetELanguageFallback(t));
+            return _.Get(e, t) || _.Get(e, d.GetELanguageFallback(t));
           }
           return null;
         }
       }
-      const _ = {
+      const g = {
           english: "en",
           german: "de",
           french: "fr",
@@ -2388,7 +2425,7 @@
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        g = {
+        b = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -2419,11 +2456,11 @@
           "es-419": 27,
           "vi-VN": 28,
         };
-      function b() {
-        return _[s.d.LANGUAGE] || null;
+      function w() {
+        return g[s.d.LANGUAGE] || null;
       }
-      const w = new d();
-      window.LocalizationManager = w;
+      const y = new d();
+      window.LocalizationManager = y;
     },
     GbHM: function (e, t, r) {
       "use strict";
@@ -8386,8 +8423,8 @@
             n ||
             (Promise.all([
               r.e(1),
-              r.e(12),
-              r.e(15),
+              r.e(13),
+              r.e(16),
               r.e(0),
               r.e(2),
               r.e(3),
@@ -8396,12 +8433,13 @@
               r.e(6),
               r.e(7),
               r.e(9),
-              r.e(8),
-              r.e(13),
-              r.e(11),
               r.e(10),
+              r.e(8),
               r.e(14),
-              r.e(23),
+              r.e(12),
+              r.e(11),
+              r.e(15),
+              r.e(24),
             ])
               .then(r.bind(null, "Wym2"))
               .then((r) => {
@@ -8412,77 +8450,92 @@
         };
       }
       const Y = Z("Events"),
-        K = Z("DemoAndQuickPitch"),
-        X = o.a.lazy(() =>
+        K = Z("DemoAndQuickPitch");
+      var X = r("1ZD8");
+      r("99tq");
+      function J(e) {
+        const t = s.useRef(
+          new X.QueryClient({
+            defaultOptions: { queries: { staleTime: 1 / 0 } },
+          })
+        );
+        let r = e.children;
+        return (
+          e.debug,
+          s.createElement(X.QueryClientProvider, { client: t.current }, r)
+        );
+      }
+      const Q = o.a.lazy(() =>
+          Promise.all([
+            r.e(1),
+            r.e(28),
+            r.e(0),
+            r.e(2),
+            r.e(3),
+            r.e(5),
+            r.e(25),
+          ]).then(r.bind(null, "3WEt"))
+        ),
+        ee = o.a.lazy(() =>
+          Promise.all([
+            r.e(1),
+            r.e(18),
+            r.e(0),
+            r.e(2),
+            r.e(3),
+            r.e(4),
+            r.e(5),
+            r.e(6),
+            r.e(7),
+            r.e(8),
+            r.e(11),
+            r.e(17),
+            r.e(32),
+          ]).then(r.bind(null, "CGeh"))
+        ),
+        te = o.a.lazy(() =>
+          Promise.all([r.e(1), r.e(18), r.e(0), r.e(17), r.e(66)]).then(
+            r.bind(null, "cprX")
+          )
+        ),
+        re = o.a.lazy(() =>
+          Promise.all([
+            r.e(1),
+            r.e(13),
+            r.e(16),
+            r.e(0),
+            r.e(2),
+            r.e(3),
+            r.e(4),
+            r.e(5),
+            r.e(6),
+            r.e(7),
+            r.e(9),
+            r.e(10),
+            r.e(8),
+            r.e(14),
+            r.e(12),
+            r.e(11),
+            r.e(15),
+            r.e(20),
+          ]).then(r.bind(null, "3fR/"))
+        ),
+        ne = o.a.lazy(() =>
           Promise.all([
             r.e(1),
             r.e(27),
             r.e(0),
             r.e(2),
             r.e(3),
-            r.e(5),
-            r.e(24),
-          ]).then(r.bind(null, "3WEt"))
-        ),
-        J = o.a.lazy(() =>
-          Promise.all([
-            r.e(1),
-            r.e(17),
-            r.e(0),
-            r.e(2),
-            r.e(3),
             r.e(4),
-            r.e(5),
-            r.e(6),
-            r.e(7),
-            r.e(8),
-            r.e(10),
-            r.e(16),
-            r.e(60),
-          ]).then(r.bind(null, "CGeh"))
-        ),
-        Q = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(17), r.e(0), r.e(16), r.e(94)]).then(
-            r.bind(null, "cprX")
-          )
-        ),
-        ee = o.a.lazy(() =>
-          Promise.all([
-            r.e(1),
-            r.e(12),
-            r.e(15),
-            r.e(0),
-            r.e(2),
-            r.e(3),
-            r.e(4),
-            r.e(5),
-            r.e(6),
-            r.e(7),
             r.e(9),
-            r.e(8),
-            r.e(13),
-            r.e(11),
-            r.e(10),
-            r.e(14),
-            r.e(19),
-          ]).then(r.bind(null, "3fR/"))
-        ),
-        te = o.a.lazy(() =>
-          Promise.all([
-            r.e(1),
             r.e(26),
-            r.e(0),
-            r.e(2),
-            r.e(3),
-            r.e(4),
-            r.e(9),
-            r.e(25),
           ]).then(r.bind(null, "JO2d"))
         ),
-        re = o.a.lazy(() =>
+        ie = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(12),
+            r.e(13),
             r.e(0),
             r.e(2),
             r.e(3),
@@ -8490,47 +8543,22 @@
             r.e(5),
             r.e(6),
             r.e(9),
+            r.e(10),
             r.e(8),
-            r.e(13),
+            r.e(14),
           ]).then(r.bind(null, "+zS6"))
         ),
-        ne = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(0), r.e(18)]).then(r.bind(null, "byIC"))
-        ),
-        ie = o.a.lazy(() =>
-          Promise.all([r.e(6), r.e(7), r.e(155)]).then(r.bind(null, "AFtM"))
-        ),
         ae = o.a.lazy(() =>
-          Promise.all([
-            r.e(1),
-            r.e(12),
-            r.e(15),
-            r.e(0),
-            r.e(2),
-            r.e(3),
-            r.e(4),
-            r.e(5),
-            r.e(6),
-            r.e(7),
-            r.e(9),
-            r.e(8),
-            r.e(13),
-            r.e(11),
-            r.e(10),
-            r.e(14),
-            r.e(20),
-          ]).then(r.bind(null, "+KBl"))
+          Promise.all([r.e(1), r.e(0), r.e(19)]).then(r.bind(null, "byIC"))
         ),
         se = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(0), r.e(11), r.e(21)]).then(
-            r.bind(null, "TFpc")
-          )
+          Promise.all([r.e(6), r.e(7), r.e(127)]).then(r.bind(null, "AFtM"))
         ),
         oe = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(12),
-            r.e(15),
+            r.e(13),
+            r.e(16),
             r.e(0),
             r.e(2),
             r.e(3),
@@ -8539,42 +8567,25 @@
             r.e(6),
             r.e(7),
             r.e(9),
-            r.e(8),
-            r.e(13),
-            r.e(11),
             r.e(10),
+            r.e(8),
             r.e(14),
-            r.e(23),
-          ]).then(r.bind(null, "4yG/"))
+            r.e(12),
+            r.e(11),
+            r.e(15),
+            r.e(21),
+          ]).then(r.bind(null, "+KBl"))
         ),
         le = o.a.lazy(() =>
-          Promise.all([
-            r.e(1),
-            r.e(12),
-            r.e(15),
-            r.e(28),
-            r.e(0),
-            r.e(2),
-            r.e(3),
-            r.e(4),
-            r.e(5),
-            r.e(6),
-            r.e(7),
-            r.e(9),
-            r.e(8),
-            r.e(13),
-            r.e(11),
-            r.e(10),
-            r.e(14),
-            r.e(22),
-          ]).then(r.bind(null, "3rT3"))
+          Promise.all([r.e(1), r.e(0), r.e(10), r.e(12), r.e(22)]).then(
+            r.bind(null, "TFpc")
+          )
         ),
         ce = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(12),
-            r.e(15),
-            r.e(28),
+            r.e(13),
+            r.e(16),
             r.e(0),
             r.e(2),
             r.e(3),
@@ -8583,19 +8594,21 @@
             r.e(6),
             r.e(7),
             r.e(9),
-            r.e(8),
-            r.e(13),
-            r.e(11),
             r.e(10),
+            r.e(8),
             r.e(14),
-            r.e(22),
-          ]).then(r.bind(null, "/EF7"))
+            r.e(12),
+            r.e(11),
+            r.e(15),
+            r.e(24),
+          ]).then(r.bind(null, "4yG/"))
         ),
         de = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(12),
-            r.e(15),
+            r.e(13),
+            r.e(16),
+            r.e(29),
             r.e(0),
             r.e(2),
             r.e(3),
@@ -8604,19 +8617,21 @@
             r.e(6),
             r.e(7),
             r.e(9),
-            r.e(8),
-            r.e(13),
-            r.e(11),
             r.e(10),
+            r.e(8),
             r.e(14),
-            r.e(95),
-          ]).then(r.bind(null, "21NE"))
+            r.e(12),
+            r.e(11),
+            r.e(15),
+            r.e(23),
+          ]).then(r.bind(null, "3rT3"))
         ),
         ue = o.a.lazy(() =>
           Promise.all([
             r.e(1),
-            r.e(12),
-            r.e(15),
+            r.e(13),
+            r.e(16),
+            r.e(29),
             r.e(0),
             r.e(2),
             r.e(3),
@@ -8625,18 +8640,63 @@
             r.e(6),
             r.e(7),
             r.e(9),
-            r.e(8),
-            r.e(13),
-            r.e(11),
             r.e(10),
+            r.e(8),
             r.e(14),
-            r.e(95),
-          ]).then(r.bind(null, "OVk1"))
+            r.e(12),
+            r.e(11),
+            r.e(15),
+            r.e(23),
+          ]).then(r.bind(null, "/EF7"))
         ),
         me = o.a.lazy(() =>
-          Promise.all([r.e(2), r.e(30)]).then(r.bind(null, "oTPU"))
+          Promise.all([
+            r.e(1),
+            r.e(13),
+            r.e(16),
+            r.e(0),
+            r.e(2),
+            r.e(3),
+            r.e(4),
+            r.e(5),
+            r.e(6),
+            r.e(7),
+            r.e(9),
+            r.e(10),
+            r.e(8),
+            r.e(14),
+            r.e(12),
+            r.e(11),
+            r.e(15),
+            r.e(67),
+          ]).then(r.bind(null, "21NE"))
+        ),
+        he = o.a.lazy(() =>
+          Promise.all([
+            r.e(1),
+            r.e(13),
+            r.e(16),
+            r.e(0),
+            r.e(2),
+            r.e(3),
+            r.e(4),
+            r.e(5),
+            r.e(6),
+            r.e(7),
+            r.e(9),
+            r.e(10),
+            r.e(8),
+            r.e(14),
+            r.e(12),
+            r.e(11),
+            r.e(15),
+            r.e(67),
+          ]).then(r.bind(null, "OVk1"))
+        ),
+        pe = o.a.lazy(() =>
+          Promise.all([r.e(2), r.e(31)]).then(r.bind(null, "oTPU"))
         );
-      class he extends o.a.Component {
+      class fe extends o.a.Component {
         componentDidMount() {
           const e = Object(u.c)();
           e &&
@@ -8651,8 +8711,8 @@
               "div",
               { className: p.a.App },
               o.a.createElement(
-                y.a.Provider,
-                { value: { bCanUseLink: !0 } },
+                _e,
+                null,
                 o.a.createElement(
                   o.a.Suspense,
                   { fallback: o.a.createElement("div", null) },
@@ -8677,7 +8737,7 @@
                       o.a.createElement(v, {
                         config: {
                           login: (e) =>
-                            o.a.createElement(me, Object.assign({}, e)),
+                            o.a.createElement(pe, Object.assign({}, e)),
                         },
                       })
                     ),
@@ -8698,17 +8758,17 @@
                                 appid: Number.parseInt(t),
                               }),
                             "review-award": () =>
-                              o.a.createElement(Q, {
+                              o.a.createElement(te, {
                                 key: `appawardmodal${t}`,
                               }),
                             "steamawardsvote-embed": () =>
-                              o.a.createElement(re, {
+                              o.a.createElement(ie, {
                                 key: `steamawardsvote_${t}`,
                                 appID: Number.parseInt(t),
                               }),
                             "broadcast-embed": () =>
                               o.a.createElement(
-                                ee,
+                                re,
                                 Object.assign(
                                   { key: `appbroadcastcast_${t}` },
                                   e,
@@ -8721,7 +8781,7 @@
                                 appID: Number.parseInt(t),
                               }),
                             "deck-verified-results": () =>
-                              o.a.createElement(se, {
+                              o.a.createElement(le, {
                                 appID: Number.parseInt(t),
                                 results: Object(d.h)(
                                   "deckcompatibility",
@@ -8750,14 +8810,14 @@
                         return o.a.createElement(v, {
                           config: {
                             "sale-display": () =>
-                              o.a.createElement(de, {
+                              o.a.createElement(me, {
                                 key: `sale_${t}`,
                                 promotionName: `sale_${t}`,
                                 language: Object(g.l)(d.d.LANGUAGE),
                               }),
                             "broadcast-embed": () =>
                               o.a.createElement(
-                                ee,
+                                re,
                                 Object.assign(
                                   { key: `broadcastsale_${t}` },
                                   e,
@@ -8770,7 +8830,7 @@
                     }),
                     o.a.createElement(_.b, {
                       path: m.b.CuratorAdminPage(),
-                      component: le,
+                      component: de,
                     }),
                     o.a.createElement(_.b, {
                       exact: !0,
@@ -8779,7 +8839,7 @@
                         o.a.createElement(v, {
                           config: {
                             "sale-display": () =>
-                              o.a.createElement(de, {
+                              o.a.createElement(me, {
                                 key:
                                   "salecreator_" +
                                   e.match.params.creatorPageName +
@@ -8799,7 +8859,7 @@
                         o.a.createElement(v, {
                           config: {
                             "sale-display": () =>
-                              o.a.createElement(de, {
+                              o.a.createElement(me, {
                                 key:
                                   "subscription_plan_" +
                                   e.match.params.salePageName,
@@ -8816,7 +8876,7 @@
                         o.a.createElement(v, {
                           config: {
                             "sale-display": () =>
-                              o.a.createElement(de, {
+                              o.a.createElement(me, {
                                 key: "sale_remoteplaylanding",
                                 promotionName: "remoteplaylanding",
                                 language: Object(g.l)(d.d.LANGUAGE),
@@ -8830,7 +8890,7 @@
                         o.a.createElement(v, {
                           config: {
                             "sale-display": () =>
-                              o.a.createElement(de, {
+                              o.a.createElement(me, {
                                 key: "sale_together",
                                 promotionName: "sale_together",
                                 language: Object(g.l)(d.d.LANGUAGE),
@@ -8844,7 +8904,7 @@
                         o.a.createElement(v, {
                           config: {
                             "sale-display": () =>
-                              o.a.createElement(de, {
+                              o.a.createElement(me, {
                                 key: "sale_vrhardware",
                                 promotionName: "vrhardware",
                                 language: Object(g.l)(d.d.LANGUAGE),
@@ -8858,7 +8918,7 @@
                         o.a.createElement(v, {
                           config: {
                             "sale-display": () =>
-                              o.a.createElement(de, {
+                              o.a.createElement(me, {
                                 key: "sale_steamdeck",
                                 promotionName: "steamdeck",
                                 language: Object(g.l)(d.d.LANGUAGE),
@@ -8874,7 +8934,7 @@
                           config: {
                             "broadcast-embed": () =>
                               o.a.createElement(
-                                ee,
+                                re,
                                 Object.assign(
                                   {
                                     key:
@@ -8897,7 +8957,7 @@
                         o.a.createElement(v, {
                           config: {
                             "list-display": () =>
-                              o.a.createElement(ae, {
+                              o.a.createElement(oe, {
                                 key: "curator_list",
                                 listid: e.match.params.listid,
                               }),
@@ -8908,7 +8968,7 @@
                       exact: !0,
                       path: m.b.PackageStorePage(),
                       render: (e) =>
-                        o.a.createElement(ee, {
+                        o.a.createElement(re, {
                           key: "packagebroadcast_" + e.match.params.subid,
                           subid: Number.parseInt(e.match.params.subid),
                         }),
@@ -8917,32 +8977,32 @@
                       exact: !0,
                       path: m.b.BundleStorePage(),
                       render: (e) =>
-                        o.a.createElement(ee, {
+                        o.a.createElement(re, {
                           key: "bundlebroadcast_" + e.match.params.bundleid,
                           bundleid: Number.parseInt(e.match.params.bundleid),
                         }),
                     }),
                     o.a.createElement(_.b, {
                       path: m.b.NewsHub(),
-                      render: (e) => o.a.createElement(oe, null),
+                      render: (e) => o.a.createElement(ce, null),
                     }),
                     o.a.createElement(_.b, {
                       path: m.b.EventAdmin(),
-                      render: (e) => o.a.createElement(ce, null),
+                      render: (e) => o.a.createElement(ue, null),
                     }),
                     o.a.createElement(_.b, {
                       exact: !0,
                       path: m.b.InteractiveRecommender(),
-                      render: (e) => o.a.createElement(X, null),
+                      render: (e) => o.a.createElement(Q, null),
                     }),
                     o.a.createElement(_.b, {
                       path: m.b.LabsSandbox(),
-                      render: (e) => o.a.createElement(te, null),
+                      render: (e) => o.a.createElement(ne, null),
                     }),
                     !1,
                     o.a.createElement(_.b, {
                       path: m.b.Loyalty(),
-                      render: () => o.a.createElement(J, null),
+                      render: () => o.a.createElement(ee, null),
                     }),
                     o.a.createElement(_.b, {
                       path: m.b.ContentHubHome(),
@@ -8955,7 +9015,7 @@
                         return o.a.createElement(v, {
                           config: {
                             "sale-display": () =>
-                              o.a.createElement(de, {
+                              o.a.createElement(me, {
                                 key: "contenthub_" + t,
                                 promotionName: "contenthub_" + t,
                                 language: Object(g.l)(d.d.LANGUAGE),
@@ -8966,45 +9026,52 @@
                     }),
                     o.a.createElement(_.b, {
                       path: m.b.Categories(),
-                      render: (e) => o.a.createElement(ue, null),
+                      render: (e) => o.a.createElement(he, null),
                     }),
                     o.a.createElement(_.b, {
                       path: m.b.AccountPreferences(),
                       render: (e) =>
-                        o.a.createElement(ne, Object.assign({}, e)),
+                        o.a.createElement(ae, Object.assign({}, e)),
                     }),
                     o.a.createElement(_.b, {
                       exact: !0,
                       path: m.b.SummerSale2021Story(),
-                      render: (e) => o.a.createElement(ie, null),
+                      render: (e) => o.a.createElement(se, null),
                     }),
                     o.a.createElement(_.b, null, !1)
                   )
-                ),
-                o.a.createElement(pe, null)
+                )
               )
             )
           );
         }
       }
-      const pe = (e) => {
+      function _e(e) {
+        const { children: t } = e;
+        return o.a.createElement(
+          y.a.Provider,
+          { value: { bCanUseLink: !0 } },
+          o.a.createElement(J, null, t, o.a.createElement(ge, null))
+        );
+      }
+      const ge = (e) => {
         const t = o.a.createElement(S.a, { ModalManager: Object(B.a)(window) });
         return a.a.createPortal(t, document.body);
       };
-      var fe = r("rmVU"),
-        _e = r("kslQ"),
-        ge = r("rSrx");
+      var be = r("rmVU"),
+        we = r("kslQ"),
+        ye = r("rSrx");
       r("KSg0"), r("Jsk2"), r("M1X1");
-      ge.v(function () {
+      ye.v(function () {
         return Object(n.a)(this, void 0, void 0, function* () {
-          Object(d.i)("application_config").userConfig ||
-            (yield Object(d.j)(c.a, d.d.STORE_BASE_URL + "actions/", {
+          Object(d.j)("application_config").userConfig ||
+            (yield Object(d.k)(c.a, d.d.STORE_BASE_URL + "actions/", {
               userConfig: !0,
             })),
-            Object(_e.a)().Init(
+            Object(we.a)().Init(
               "Store",
               CLSTAMP,
-              new fe.a(d.d.WEBAPI_BASE_URL).GetServiceTransport()
+              new be.a(d.d.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return Object(n.a)(this, void 0, void 0, function* () {
@@ -9026,7 +9093,7 @@
             })(d.d.LANGUAGE),
             document.getElementById("application_root")
               ? a.a.render(
-                  o.a.createElement(he),
+                  o.a.createElement(fe),
                   document.getElementById("application_root")
                 )
               : console.error('No "application_root" was found to target');
@@ -9035,32 +9102,35 @@
     },
     gwss: function (e, t, r) {
       "use strict";
-      r.d(t, "i", function () {
+      r.d(t, "j", function () {
         return o;
       }),
-        r.d(t, "e", function () {
+        r.d(t, "f", function () {
           return l;
         }),
-        r.d(t, "g", function () {
+        r.d(t, "h", function () {
           return c;
         }),
-        r.d(t, "f", function () {
+        r.d(t, "g", function () {
           return u;
         }),
-        r.d(t, "h", function () {
+        r.d(t, "i", function () {
           return p;
         }),
-        r.d(t, "a", function () {
+        r.d(t, "b", function () {
           return f;
         }),
-        r.d(t, "c", function () {
+        r.d(t, "d", function () {
           return S;
         }),
-        r.d(t, "b", function () {
+        r.d(t, "c", function () {
           return B;
         }),
-        r.d(t, "d", function () {
+        r.d(t, "e", function () {
           return C;
+        }),
+        r.d(t, "a", function () {
+          return M;
         });
       var n,
         i = r("GXif"),
@@ -9539,7 +9609,7 @@
         }
         SendBookMarkedTimeToServer(e, t, r, i, a) {
           return Object(n.a)(this, void 0, void 0, function* () {
-            if (!d.k.logged_in) return;
+            if (!d.l.logged_in) return;
             if (
               !this.m_transport &&
               (yield this.m_LoadingOAuth, !this.m_transport)
@@ -9573,7 +9643,7 @@
           );
         }
         Init() {
-          d.k.logged_in && this.LoadWatchVideoOAuthToken();
+          d.l.logged_in && this.LoadWatchVideoOAuthToken();
         }
         LoadWatchVideoOAuthToken() {
           return Object(n.a)(this, void 0, void 0, function* () {
@@ -9616,7 +9686,7 @@
         }
         SetBookmark(e, t, r, i) {
           return Object(n.a)(this, void 0, void 0, function* () {
-            d.k.logged_in &&
+            d.l.logged_in &&
               u
                 .Get()
                 .SendBookMarkedTimeToServer(
@@ -9629,7 +9699,7 @@
           });
         }
         GetBeginPlaytime() {
-          return d.k.logged_in
+          return d.l.logged_in
             ? u.Get().GetBookmarkPlayTimeInSeconds(this.m_appid)
             : 0;
         }
@@ -11883,35 +11953,35 @@
     suz2: function (e, t, r) {},
     uhdG: function (e, t, r) {
       var n = {
-        "./sales_brazilian.json": ["+cMs", 96],
-        "./sales_bulgarian.json": ["ObVs", 97],
-        "./sales_czech.json": ["CoMO", 98],
-        "./sales_danish.json": ["G2Cs", 99],
-        "./sales_dutch.json": ["qEt3", 100],
-        "./sales_english.json": ["EnkW", 101],
-        "./sales_finnish.json": ["aW7y", 102],
-        "./sales_french.json": ["zxZG", 103],
-        "./sales_german.json": ["2ydi", 104],
-        "./sales_greek.json": ["Xebg", 105],
-        "./sales_hungarian.json": ["AGuh", 106],
-        "./sales_italian.json": ["/ptQ", 107],
-        "./sales_japanese.json": ["gLno", 108],
-        "./sales_koreana.json": ["FMlb", 109],
-        "./sales_latam.json": ["qta4", 110],
-        "./sales_norwegian.json": ["7zdQ", 111],
-        "./sales_polish.json": ["ViiN", 112],
-        "./sales_portuguese.json": ["wIrF", 113],
-        "./sales_romanian.json": ["rBcb", 114],
-        "./sales_russian.json": ["3DF0", 115],
-        "./sales_sc_schinese.json": ["K/cD", 116],
-        "./sales_schinese.json": ["hUJS", 117],
-        "./sales_spanish.json": ["6i74", 118],
-        "./sales_swedish.json": ["4vnE", 119],
-        "./sales_tchinese.json": ["9uzb", 120],
-        "./sales_thai.json": ["NP1P", 121],
-        "./sales_turkish.json": ["jIRL", 122],
-        "./sales_ukrainian.json": ["TgQj", 123],
-        "./sales_vietnamese.json": ["EKJ7", 124],
+        "./sales_brazilian.json": ["+cMs", 68],
+        "./sales_bulgarian.json": ["ObVs", 69],
+        "./sales_czech.json": ["CoMO", 70],
+        "./sales_danish.json": ["G2Cs", 71],
+        "./sales_dutch.json": ["qEt3", 72],
+        "./sales_english.json": ["EnkW", 73],
+        "./sales_finnish.json": ["aW7y", 74],
+        "./sales_french.json": ["zxZG", 75],
+        "./sales_german.json": ["2ydi", 76],
+        "./sales_greek.json": ["Xebg", 77],
+        "./sales_hungarian.json": ["AGuh", 78],
+        "./sales_italian.json": ["/ptQ", 79],
+        "./sales_japanese.json": ["gLno", 80],
+        "./sales_koreana.json": ["FMlb", 81],
+        "./sales_latam.json": ["qta4", 82],
+        "./sales_norwegian.json": ["7zdQ", 83],
+        "./sales_polish.json": ["ViiN", 84],
+        "./sales_portuguese.json": ["wIrF", 85],
+        "./sales_romanian.json": ["rBcb", 86],
+        "./sales_russian.json": ["3DF0", 87],
+        "./sales_sc_schinese.json": ["K/cD", 88],
+        "./sales_schinese.json": ["hUJS", 89],
+        "./sales_spanish.json": ["6i74", 90],
+        "./sales_swedish.json": ["4vnE", 91],
+        "./sales_tchinese.json": ["9uzb", 92],
+        "./sales_thai.json": ["NP1P", 93],
+        "./sales_turkish.json": ["jIRL", 94],
+        "./sales_ukrainian.json": ["TgQj", 95],
+        "./sales_vietnamese.json": ["EKJ7", 96],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -14958,5 +15028,5 @@
       })(I || (I = {}));
     },
   },
-  [["gfbn", 91, 29]],
+  [["gfbn", 63, 30]],
 ]);

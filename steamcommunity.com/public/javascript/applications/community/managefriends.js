@@ -108,7 +108,7 @@
           return Object(a.a)(this, void 0, void 0, function* () {
             const e = new FormData();
             e.append("sessionid", _.c.SESSIONID),
-              e.append("steamid_user", _.h.steamid),
+              e.append("steamid_user", _.i.steamid),
               e.append("duration", (2592e3).toString());
             const t = yield c.a.post(
               _.c.COMMUNITY_BASE_URL + "invites/ajaxcreate",
@@ -161,7 +161,7 @@
           );
         }
         render() {
-          const e = _.h.short_url + "/" + this.state.invite_token;
+          const e = _.i.short_url + "/" + this.state.invite_token;
           return i.a.createElement(
             "div",
             null,
@@ -181,14 +181,14 @@
               i.a.createElement(
                 "div",
                 { className: m.a.CopyContainer },
-                i.a.createElement("h1", { className: m.a.Text }, _.h.accountid),
+                i.a.createElement("h1", { className: m.a.Text }, _.i.accountid),
                 i.a.createElement(
                   l.G,
                   {
                     autoFocus: !0,
                     className: m.a.Button,
                     onClick: () =>
-                      this.OnCopy("friend_code", String(_.h.accountid)),
+                      this.OnCopy("friend_code", String(_.i.accountid)),
                   },
                   this.state.friend_code_copied
                     ? Object(d.f)("#ManageFriends_Copied")
@@ -337,9 +337,9 @@
                 ? this.setState({
                     searchResult: n,
                     disable_send_invite:
-                      _.h.is_limited ||
+                      _.i.is_limited ||
                       (this.props.bDisableForFriends && n.is_friend) ||
-                      (this.props.bDisableForSelf && n.steamid === _.h.steamid),
+                      (this.props.bDisableForSelf && n.steamid === _.i.steamid),
                   })
                 : this.setState({ searchResult: null });
             } else this.setState({ searchResult: null });

@@ -270,6 +270,20 @@
   margin-left: 6px;
   color: rgba(255, 255, 255, 0.7);
 }
+.breadcrumbs_BreadContainer_1QPim {
+  color: #56707f;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  padding-top: 10px;
+}
+.breadcrumbs_BreadContainer_1QPim a {
+  color: #8f98a0;
+}
+.breadcrumbs_BreadContainer_1QPim a:hover {
+  color: #fff;
+  text-decoration: none;
+}
 .curatorminiheader_BreadContainer_GkVFI {
   padding-top: 0px;
   margin-top: -2px;

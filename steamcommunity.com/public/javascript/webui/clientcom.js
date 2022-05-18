@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7252491";
+var CLSTAMP = "7259641";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -69,7 +69,7 @@ var CLSTAMP = "7252491";
     function o(e, t, n) {
       return null == e || isNaN(e) ? e : Math.max(t, Math.min(n, e));
     }
-    function s(e, t, n, r, o) {
+    function i(e, t, n, r, o) {
       return r + ((o - r) * (e - t)) / (n - t);
     }
     n.d(t, "b", function () {
@@ -79,7 +79,7 @@ var CLSTAMP = "7252491";
         return o;
       }),
       n.d(t, "c", function () {
-        return s;
+        return i;
       });
   },
   "0N1H": function (e, t, n) {
@@ -97,10 +97,10 @@ var CLSTAMP = "7252491";
         return o;
       }),
       n.d(t, "q", function () {
-        return s;
+        return i;
       }),
       n.d(t, "r", function () {
-        return i;
+        return s;
       }),
       n.d(t, "p", function () {
         return a;
@@ -127,10 +127,10 @@ var CLSTAMP = "7252491";
         return p;
       }),
       n.d(t, "i", function () {
-        return m;
+        return E;
       }),
       n.d(t, "h", function () {
-        return E;
+        return m;
       }),
       n.d(t, "d", function () {
         return f;
@@ -144,8 +144,8 @@ var CLSTAMP = "7252491";
       n.d(t, "f", function () {
         return g;
       });
-    const s = 1,
-      i = 4,
+    const i = 1,
+      s = 4,
       a = 7,
       c = 750,
       u = 799,
@@ -154,8 +154,8 @@ var CLSTAMP = "7252491";
       d = 358510,
       S = 366490,
       p = "18446744073709551615",
-      m = 0,
-      E = 2147483647;
+      E = 0,
+      m = 2147483647;
     function f(e, t = "en") {
       switch (e) {
         case 0:
@@ -356,7 +356,7 @@ var CLSTAMP = "7252491";
           return t;
       }
     }
-    var C, R, T, k, b, N, O;
+    var C, R, k, T, b, N, O;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -400,7 +400,7 @@ var CLSTAMP = "7252491";
             "k_ESuspendResumeProgressState_WaitingForApp"),
           (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
             "k_ESuspendResumeProgressState_Working");
-      })(T || (T = {})),
+      })(k || (k = {})),
       (function (e) {
         (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
           "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -410,7 +410,7 @@ var CLSTAMP = "7252491";
             "k_EFloatingGamepadTextInputModeModeEmail"),
           (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
             "k_EFloatingGamepadTextInputModeModeNumeric");
-      })(k || (k = {})),
+      })(T || (T = {})),
       (function (e) {
         (e[(e.k_EAppUpdateContentType_Content = 0)] =
           "k_EAppUpdateContentType_Content"),
@@ -438,10 +438,10 @@ var CLSTAMP = "7252491";
   "1n9R": function (e, t, n) {
     "use strict";
     n.d(t, "d", function () {
-      return s;
+      return i;
     }),
-      n.d(t, "j", function () {
-        return i;
+      n.d(t, "k", function () {
+        return s;
       }),
       n.d(t, "b", function () {
         return a;
@@ -455,23 +455,26 @@ var CLSTAMP = "7252491";
       n.d(t, "a", function () {
         return d;
       }),
-      n.d(t, "i", function () {
+      n.d(t, "j", function () {
         return S;
       }),
       n.d(t, "h", function () {
-        return p;
-      }),
-      n.d(t, "e", function () {
         return E;
       }),
+      n.d(t, "i", function () {
+        return m;
+      }),
+      n.d(t, "e", function () {
+        return h;
+      }),
       n.d(t, "f", function () {
-        return f;
+        return A;
       });
     n("mrSG");
     var r = n("/7KC"),
       o = n("YlSc");
     n("0N1H");
-    const s = {
+    const i = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -527,7 +530,7 @@ var CLSTAMP = "7252491";
         IN_LOGIN: !1,
         IN_STANDALONE_KEYBOARD: !1,
       },
-      i = {
+      s = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -579,74 +582,90 @@ var CLSTAMP = "7252491";
     }
     function S(e = "webui_config") {
       const t = {},
-        n = p("config", e);
-      n && (delete n.SESSIONID, Object.assign(s, n), (t.config = !0));
-      const r = p("userinfo", e);
+        n = E("config", e);
+      n && (delete n.SESSIONID, Object.assign(i, n), (t.config = !0));
+      const r = E("userinfo", e);
       r &&
-        (Object.assign(i, r),
+        (Object.assign(s, r),
         (t.userConfig = !0),
-        i.is_support && d() && (i.is_support = !1));
-      const o = p("broadcast", e);
+        s.is_support && d() && (s.is_support = !1));
+      const o = E("broadcast", e);
       o && (Object.assign(a, o), (t.broadcastConfig = !0));
-      const _ = p("community", e);
+      const _ = E("community", e);
       _ && (Object.assign(c, _), (t.communityConfig = !0));
-      const l = p("event", e);
+      const l = E("event", e);
       return l && (Object.assign(u, l), (t.eventConfig = !0)), t;
     }
-    function p(e, t = "webui_config") {
-      let n;
-      if (((n = "string" == typeof t ? document.getElementById(t) : t), n))
+    function p(e, t = "webui_config", n) {
+      let r;
+      if (
+        ((r =
+          "string" == typeof t
+            ? !Object({
+                NODE_ENV: "production",
+                STEAM_BUILD: "buildbot",
+                VALVE_BUILD: "false",
+              }).MOBILE_BUILD && document.getElementById(t)
+            : t),
+        r)
+      )
         try {
-          if (n.hasAttribute("data-" + e)) {
-            return JSON.parse(n.getAttribute("data-" + e));
+          if (r.hasAttribute("data-" + e)) {
+            return JSON.parse(r.getAttribute("data-" + e));
           }
           return null;
         } catch (e) {
           console.error("Failed to parse config", e);
         }
-      else console.error("Missing config element #", t);
+      else n && console.error("Missing config element #", t);
     }
-    function m(e, t) {
+    function E(e, t = "webui_config") {
+      return p(e, t, !0);
+    }
+    function m(e, t = "webui_config") {
+      return p(e, t, !1);
+    }
+    function f(e, t) {
       return 0 != t.length && e.startsWith(t);
     }
-    function E() {
+    function h() {
       if (!window || !window.location || !window.location.href)
         return console.warn("Unable to determine base url!"), "unknown";
       const e = window.location.href;
-      return m(e, s.STORE_BASE_URL)
-        ? s.STORE_BASE_URL
-        : m(e, s.COMMUNITY_BASE_URL)
-        ? s.COMMUNITY_BASE_URL
-        : m(e, s.CHAT_BASE_URL)
-        ? s.CHAT_BASE_URL
-        : m(e, s.PARTNER_BASE_URL)
-        ? s.PARTNER_BASE_URL
-        : m(e, s.HELP_BASE_URL)
-        ? s.HELP_BASE_URL
-        : m(e, s.STEAMTV_BASE_URL)
-        ? s.STEAMTV_BASE_URL
-        : m(e, s.STATS_BASE_URL)
-        ? s.STATS_BASE_URL
-        : m(e, s.INTERNAL_STATS_BASE_URL)
-        ? s.INTERNAL_STATS_BASE_URL
-        : m(e, "https://steamloopback.host")
+      return f(e, i.STORE_BASE_URL)
+        ? i.STORE_BASE_URL
+        : f(e, i.COMMUNITY_BASE_URL)
+        ? i.COMMUNITY_BASE_URL
+        : f(e, i.CHAT_BASE_URL)
+        ? i.CHAT_BASE_URL
+        : f(e, i.PARTNER_BASE_URL)
+        ? i.PARTNER_BASE_URL
+        : f(e, i.HELP_BASE_URL)
+        ? i.HELP_BASE_URL
+        : f(e, i.STEAMTV_BASE_URL)
+        ? i.STEAMTV_BASE_URL
+        : f(e, i.STATS_BASE_URL)
+        ? i.STATS_BASE_URL
+        : f(e, i.INTERNAL_STATS_BASE_URL)
+        ? i.INTERNAL_STATS_BASE_URL
+        : f(e, "https://steamloopback.host")
         ? "https://steamloopback.host"
         : "";
     }
-    function f() {
+    function A() {
       const e = window.location.href;
-      return e.startsWith(s.STORE_BASE_URL)
+      return e.startsWith(i.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(s.COMMUNITY_BASE_URL)
+        : e.startsWith(i.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(s.PARTNER_BASE_URL)
+        : e.startsWith(i.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(s.HELP_BASE_URL)
+        : e.startsWith(i.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(s.STEAMTV_BASE_URL)
+        : e.startsWith(i.STEAMTV_BASE_URL)
         ? "steamtv"
-        : e.startsWith(s.STATS_BASE_URL) ||
-          e.startsWith(s.INTERNAL_STATS_BASE_URL)
+        : e.startsWith(i.STATS_BASE_URL) ||
+          e.startsWith(i.INTERNAL_STATS_BASE_URL)
         ? "stats"
         : "";
     }
@@ -654,7 +673,7 @@ var CLSTAMP = "7252491";
   Ezvv: function (e, t, n) {
     "use strict";
     n.d(t, "a", function () {
-      return s;
+      return i;
     }),
       n.d(t, "b", function () {
         return a;
@@ -662,9 +681,9 @@ var CLSTAMP = "7252491";
     n("0N1H");
     var r = n("1n9R");
     let o = { success: !0, result: 1 };
-    class s {
+    class i {
       constructor() {
-        (this.m_connection = new i()),
+        (this.m_connection = new s()),
           (this.m_bAllowAccountMismatch = !1),
           (this.m_mapCacheSubscribedApp = new Map());
       }
@@ -733,8 +752,8 @@ var CLSTAMP = "7252491";
       }
       BClientAccountMatches() {
         return (
-          !r.j.logged_in ||
-          r.j.accountid == this.m_connection.ClientInfo.unAccountID
+          !r.k.logged_in ||
+          r.k.accountid == this.m_connection.ClientInfo.unAccountID
         );
       }
       GenericEResultCall(e) {
@@ -752,7 +771,7 @@ var CLSTAMP = "7252491";
           .catch(() => this.FailureResult());
       }
     }
-    class i {
+    class s {
       constructor() {
         (this.m_mapWaitingCallbacks = new Map()),
           (this.m_iCallSeq = 1),
@@ -795,7 +814,7 @@ var CLSTAMP = "7252491";
           return !1;
         let n = Object.assign({}, e, {
           universe: r.d.EUNIVERSE,
-          accountid: r.j.accountid,
+          accountid: r.k.accountid,
         });
         void 0 !== t && (n.sequenceid = t);
         try {
@@ -863,18 +882,18 @@ var CLSTAMP = "7252491";
         );
       }
     }
-    let a = new s();
+    let a = new i();
     window.ClientConnectionAPI = a;
   },
   YlSc: function (e, t, n) {
     "use strict";
     function r(e) {
-      if (!s() || !window.document.cookie) return null;
+      if (!i() || !window.document.cookie) return null;
       let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
       return t && t[2] ? decodeURIComponent(t[2]) : null;
     }
     function o(e, t, n, r) {
-      if (!s()) return;
+      if (!i()) return;
       r || (r = "/");
       let o = "";
       if (void 0 !== n && n) {
@@ -885,7 +904,7 @@ var CLSTAMP = "7252491";
       document.cookie =
         encodeURIComponent(e) + "=" + encodeURIComponent(t) + o + ";path=" + r;
     }
-    function s() {
+    function i() {
       return !!window.document;
     }
     n.d(t, "b", function () {
@@ -895,7 +914,7 @@ var CLSTAMP = "7252491";
         return o;
       }),
       n.d(t, "a", function () {
-        return s;
+        return i;
       });
   },
   mrSG: function (e, t, n) {
@@ -907,7 +926,7 @@ var CLSTAMP = "7252491";
         return o;
       }),
       n.d(t, "a", function () {
-        return s;
+        return i;
       });
     function r(e, t) {
       var n = {};
@@ -926,35 +945,35 @@ var CLSTAMP = "7252491";
     }
     function o(e, t, n, r) {
       var o,
-        s = arguments.length,
-        i =
-          s < 3
+        i = arguments.length,
+        s =
+          i < 3
             ? t
             : null === r
             ? (r = Object.getOwnPropertyDescriptor(t, n))
             : r;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-        i = Reflect.decorate(e, t, n, r);
+        s = Reflect.decorate(e, t, n, r);
       else
         for (var a = e.length - 1; a >= 0; a--)
           (o = e[a]) &&
-            (i = (s < 3 ? o(i) : s > 3 ? o(t, n, i) : o(t, n)) || i);
-      return s > 3 && i && Object.defineProperty(t, n, i), i;
+            (s = (i < 3 ? o(s) : i > 3 ? o(t, n, s) : o(t, n)) || s);
+      return i > 3 && s && Object.defineProperty(t, n, s), s;
     }
-    function s(e, t, n, r) {
-      return new (n || (n = Promise))(function (o, s) {
-        function i(e) {
+    function i(e, t, n, r) {
+      return new (n || (n = Promise))(function (o, i) {
+        function s(e) {
           try {
             c(r.next(e));
           } catch (e) {
-            s(e);
+            i(e);
           }
         }
         function a(e) {
           try {
             c(r.throw(e));
           } catch (e) {
-            s(e);
+            i(e);
           }
         }
         function c(e) {
@@ -966,7 +985,7 @@ var CLSTAMP = "7252491";
                 ? t
                 : new n(function (e) {
                     e(t);
-                  })).then(i, a);
+                  })).then(s, a);
         }
         c((r = r.apply(e, t || [])).next());
       });
@@ -979,10 +998,10 @@ var CLSTAMP = "7252491";
       return r.d;
     }),
       n.d(t, "d", function () {
-        return r.j;
+        return r.k;
       }),
       n.d(t, "c", function () {
-        return r.i;
+        return r.j;
       }),
       n.d(t, "b", function () {
         return r.e;

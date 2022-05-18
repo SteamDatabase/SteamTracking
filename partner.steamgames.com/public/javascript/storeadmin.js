@@ -888,3 +888,11 @@ function ReadAssociationValuesInternal( json, sFormName, sInputPrefix )
 	} );
 }
 
+function Logout()
+{
+	var $Form = $J('<form/>', {'action': 'https://partner.steamgames.com/login/logout/', 'method': 'POST' } );
+	$Form.append( $J('<input/>', {'type': 'hidden', 'name': 'sessionid', 'value': g_sessionID } ) );
+	$Form.appendTo( 'body' );
+	$Form.submit();
+}
+

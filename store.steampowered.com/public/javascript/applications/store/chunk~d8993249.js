@@ -6,10 +6,10 @@
     DSrS: function (e, t, a) {
       "use strict";
       a.d(t, "b", function () {
-        return m;
+        return l;
       }),
         a.d(t, "c", function () {
-          return l;
+          return m;
         }),
         a.d(t, "a", function () {
           return c;
@@ -19,28 +19,28 @@
         r = a("cHF8"),
         o = a("vYsE"),
         i = a("GXif");
-      var m, l;
+      var l, m;
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),
           (e[(e.AccountName = 1)] = "AccountName"),
           (e[(e.EmailCode = 2)] = "EmailCode"),
           (e[(e.TwoFactorCode = 3)] = "TwoFactorCode"),
           (e[(e.Complete = 4)] = "Complete");
-      })(m || (m = {})),
+      })(l || (l = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"), (e[(e.InvalidCode = 1)] = "InvalidCode");
-        })(l || (l = {}));
+        })(m || (m = {}));
       class c {
         constructor(e, t) {
           (this.m_strBaseURL = ""),
             (this.m_strOAuthClientID = ""),
             (this.m_fnLoginComplete = null),
             (this.m_bRequestInFlight = !1),
-            (this.m_eCurrentStep = m.AccountName),
+            (this.m_eCurrentStep = l.AccountName),
             (this.m_strErrorMessage = ""),
             (this.m_strEmailDomain = ""),
             (this.m_strCaptchaURL = ""),
-            (this.m_eSteamGuardCodeError = l.None),
+            (this.m_eSteamGuardCodeError = m.None),
             (this.m_strBaseURL = e),
             (this.m_strOAuthClientID = t),
             (this.m_userFields = {
@@ -142,7 +142,7 @@
               ))
             );
           if (e.login_complete) {
-            if (((this.m_eCurrentStep = m.Complete), this.m_fnLoginComplete)) {
+            if (((this.m_eCurrentStep = l.Complete), this.m_fnLoginComplete)) {
               let t = {
                 steamID: e.oauth ? e.oauth.steamid : "",
                 strAccountName: e.oauth ? e.oauth.account_name : "",
@@ -152,32 +152,32 @@
             }
           } else
             (this.m_strErrorMessage = e.message || ""),
-              (this.m_eSteamGuardCodeError = l.None),
+              (this.m_eSteamGuardCodeError = m.None),
               e.requires_twofactor
                 ? (this.UpdateCaptchaURL("-1"),
-                  this.m_eCurrentStep != m.TwoFactorCode ||
+                  this.m_eCurrentStep != l.TwoFactorCode ||
                     this.m_strErrorMessage ||
                     ((this.m_strErrorMessage = Object(i.f)(
                       "#MobileLogin_IncorrectSteamGuard"
                     )),
-                    (this.m_eSteamGuardCodeError = l.InvalidCode),
+                    (this.m_eSteamGuardCodeError = m.InvalidCode),
                     (this.m_userFields.strTwoFactorCode = "")),
-                  (this.m_eCurrentStep = m.TwoFactorCode))
+                  (this.m_eCurrentStep = l.TwoFactorCode))
                 : e.captcha_needed && e.captcha_gid
-                ? ((this.m_eCurrentStep = m.AccountName),
+                ? ((this.m_eCurrentStep = l.AccountName),
                   this.UpdateCaptchaURL(e.captcha_gid))
                 : e.emailauth_needed
                 ? (e.emaildomain && (this.m_strEmailDomain = e.emaildomain),
                   e.emailsteamid &&
                     (this.m_userFields.emailSteamID = e.emailsteamid),
-                  this.m_eCurrentStep != m.EmailCode ||
+                  this.m_eCurrentStep != l.EmailCode ||
                     this.m_strErrorMessage ||
                     ((this.m_strErrorMessage = Object(i.f)(
                       "#MobileLogin_IncorrectSteamGuard"
                     )),
-                    (this.m_eSteamGuardCodeError = l.InvalidCode),
+                    (this.m_eSteamGuardCodeError = m.InvalidCode),
                     (this.m_userFields.strEmailAuthCode = "")),
-                  (this.m_eCurrentStep = m.EmailCode))
+                  (this.m_eCurrentStep = l.EmailCode))
                 : e.agreement_session_url
                 ? (this.Shutdown(),
                   console.log(window.location.href),
@@ -218,8 +218,8 @@
         r = a.n(s),
         o = a("7ast"),
         i = a("e356"),
-        m = a("TyAF"),
-        l = a("hCpY"),
+        l = a("TyAF"),
+        m = a("hCpY"),
         c = a("GbHM"),
         h = a("tVW8"),
         g = a.n(h),
@@ -243,12 +243,12 @@
           let e = this.props,
             { baseURL: t, onLoginComplete: a, className: s } = e,
             o = Object(n.c)(e, ["baseURL", "onLoginComplete", "className"]),
-            m = Object(c.a)(g.a.LoginDialog, s),
-            l = this.m_manager.GetCurrentStep(),
+            l = Object(c.a)(g.a.LoginDialog, s),
+            m = this.m_manager.GetCurrentStep(),
             h = this.m_manager.GetErrorMessage();
           return r.a.createElement(
             "div",
-            Object.assign({ className: m }, o),
+            Object.assign({ className: l }, o),
             r.a.createElement(
               "div",
               { className: g.a.LoginPanelBackground },
@@ -258,19 +258,19 @@
               "div",
               { className: g.a.LoginPanelContent },
               h && r.a.createElement(b, { text: h }),
-              l == d.b.AccountName &&
+              m == d.b.AccountName &&
                 r.a.createElement(S, { manager: this.m_manager }),
-              l == d.b.TwoFactorCode &&
+              m == d.b.TwoFactorCode &&
                 r.a.createElement(L, {
                   manager: this.m_manager,
                   authtype: d.b.TwoFactorCode,
                 }),
-              l == d.b.EmailCode &&
+              m == d.b.EmailCode &&
                 r.a.createElement(L, {
                   manager: this.m_manager,
                   authtype: d.b.EmailCode,
                 }),
-              l == d.b.Complete &&
+              m == d.b.Complete &&
                 r.a.createElement(
                   "div",
                   { className: g.a.LoginComplete },
@@ -287,7 +287,7 @@
           e.text
         );
       }
-      _ = Object(n.b)([m.a], _);
+      _ = Object(n.b)([l.a], _);
       let S = class extends r.a.Component {
         constructor(e) {
           super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
@@ -407,11 +407,11 @@
           );
         }
       };
-      Object(n.b)([l.b], S.prototype, "OnSubmit", null),
-        Object(n.b)([l.b], S.prototype, "OnChangeName", null),
-        Object(n.b)([l.b], S.prototype, "OnChangePassword", null),
-        Object(n.b)([l.b], S.prototype, "OnChangeRememberPass", null),
-        (S = Object(n.b)([m.a], S));
+      Object(n.b)([m.b], S.prototype, "OnSubmit", null),
+        Object(n.b)([m.b], S.prototype, "OnChangeName", null),
+        Object(n.b)([m.b], S.prototype, "OnChangePassword", null),
+        Object(n.b)([m.b], S.prototype, "OnChangeRememberPass", null),
+        (S = Object(n.b)([l.a], S));
       let E = class extends r.a.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
@@ -468,9 +468,9 @@
           );
         }
       };
-      Object(n.b)([l.b], E.prototype, "OnCaptchaText", null),
-        Object(n.b)([l.b], E.prototype, "RefreshCaptcha", null),
-        (E = Object(n.b)([m.a], E));
+      Object(n.b)([m.b], E.prototype, "OnCaptchaText", null),
+        Object(n.b)([m.b], E.prototype, "RefreshCaptcha", null),
+        (E = Object(n.b)([l.a], E));
       let L = class extends r.a.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.manager.DoLogin();
@@ -486,7 +486,7 @@
             a = "",
             n = null,
             s = "",
-            m = t.GetSteamGuardCodeError() == d.c.InvalidCode;
+            l = t.GetSteamGuardCodeError() == d.c.InvalidCode;
           switch (this.props.authtype) {
             case d.b.TwoFactorCode:
               (a = t.GetTwoFactorCode()),
@@ -496,7 +496,7 @@
               break;
             case d.b.EmailCode:
               (a = t.GetEmailAuthCode()),
-                (n = Object(p.m)(
+                (n = Object(p.n)(
                   "#Login_SentSteamguard",
                   r.a.createElement(
                     "span",
@@ -547,7 +547,7 @@
               {
                 className: Object(c.a)(
                   g.a.NeedHelpLink,
-                  m ? g.a.NeedHelpHighlight : null
+                  l ? g.a.NeedHelpHighlight : null
                 ),
                 href: "http://help.steampowered.com/",
               },
@@ -556,9 +556,9 @@
           );
         }
       };
-      Object(n.b)([l.b], L.prototype, "OnSubmit", null),
-        Object(n.b)([l.b], L.prototype, "OnChangeAuthCode", null),
-        (L = Object(n.b)([m.a], L));
+      Object(n.b)([m.b], L.prototype, "OnSubmit", null),
+        Object(n.b)([m.b], L.prototype, "OnChangeAuthCode", null),
+        (L = Object(n.b)([l.a], L));
     },
     tVW8: function (e, t, a) {
       e.exports = {

@@ -662,7 +662,7 @@
             "div",
             { className: ee.BroadcastUserActionsCtn },
             Boolean(
-              _.h.steamid != e.broadcasterSteamID.ConvertTo64BitString()
+              _.i.steamid != e.broadcasterSteamID.ConvertTo64BitString()
             ) &&
               r.a.createElement(
                 g.f,
@@ -671,7 +671,7 @@
                     "#Broadcast_User_Report_ttip"
                   ),
                   onClick: (e) => {
-                    _.h.logged_in
+                    _.i.logged_in
                       ? Object(T.d)(
                           r.a.createElement(re, { broadcasterSteamID: t }),
                           Object(k.o)(e)
@@ -733,7 +733,7 @@
       var oe = a("Pa9b"),
         le = a("0OaU");
       const ce = (e) => {
-          if (!_.h.is_support) return null;
+          if (!_.i.is_support) return null;
           const t = (t, a) => {
               Object(T.d)(
                 r.a.createElement(se, {
@@ -1074,7 +1074,7 @@
               null,
               r.a.createElement(te, { broadcasterSteamID: t }),
               r.a.createElement(ue, { steamid: t }),
-              Boolean(_.h.is_support) &&
+              Boolean(_.i.is_support) &&
                 r.a.createElement(
                   "div",
                   null,
@@ -1151,7 +1151,7 @@
               ),
               [a.m_strTitle]
             ),
-            _.h.accountid != e.steamid.GetAccountID())
+            _.i.accountid != e.steamid.GetAccountID())
           )
             return null;
           return r.a.createElement(

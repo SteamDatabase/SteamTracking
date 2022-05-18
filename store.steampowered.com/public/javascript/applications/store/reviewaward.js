@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [94],
+  [66],
   {
     "07/r": function (e, t, a) {
       e.exports = {
@@ -83,7 +83,7 @@
             (this.m_transport = e);
         }
         BIsLoggedIn() {
-          return g.k.logged_in;
+          return g.l.logged_in;
         }
         SetTarget(e, t) {
           (this.m_targetID = e),
@@ -124,7 +124,7 @@
             if (!this.BIsLoggedIn()) return Promise.resolve(null);
             this.m_bPointsBalanceLoadedOrInFlight = !0;
             const e = l.b.Init(b.g);
-            e.SetBodyFields({ steamid: g.k.steamid });
+            e.SetBodyFields({ steamid: g.l.steamid });
             let t = yield b.o.GetSummary(this.m_transport, e);
             1 == t.GetEResult()
               ? (this.m_lPointsAvailable = p.a.fromString(
@@ -576,7 +576,7 @@
                       i.createElement(
                         "div",
                         { className: R.ConfirmText },
-                        Object(O.m)(
+                        Object(O.n)(
                           "#GrantAward_Confirm",
                           i.createElement(V, null, _.toLocaleString()),
                           i.createElement(
@@ -589,7 +589,7 @@
                       i.createElement(
                         "div",
                         { className: R.ConfirmText },
-                        Object(O.m)(
+                        Object(O.n)(
                           "#GrantAward_Confirm_Details",
                           i.createElement(V, null, E.toLocaleString()),
                           i.createElement(

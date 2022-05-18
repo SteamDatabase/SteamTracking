@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [13],
+  [14],
   {
     "+VGL": function (e, t, a) {
       e.exports = {
@@ -152,8 +152,8 @@
         A = a.n(S),
         D = a("tXj3");
       function j(e) {
-        return v.k.logged_in
-          ? !v.k.is_limited ||
+        return v.l.logged_in
+          ? !v.l.is_limited ||
               (Object(f.d)(
                 l.createElement(I.a, {
                   strTokenOverride: e
@@ -247,8 +247,8 @@
                 nomineeAppID: null,
               });
             const t = v.d.STORE_BASE_URL + "steamawards/ajaxgetusernominations",
-              a = { sessionid: v.d.SESSIONID, authwgtoken: v.k.authwgtoken };
-            if (v.k.logged_in)
+              a = { sessionid: v.d.SESSIONID, authwgtoken: v.l.authwgtoken };
+            if (v.l.logged_in)
               try {
                 const n = yield r.a.get(t, {
                   params: a,
@@ -334,7 +334,7 @@
             const n = v.d.STORE_BASE_URL + "steamawards/ajaxnominategame",
               i = new URLSearchParams();
             i.append("sessionid", v.d.SESSIONID),
-              i.append("authwgtoken", v.k.authwgtoken),
+              i.append("authwgtoken", v.l.authwgtoken),
               i.append("categoryid", e.toString()),
               i.append("nominatedid", t.toString()),
               i.append("rescind", a ? "0" : "1"),
@@ -555,7 +555,7 @@
             strTitle: Object(h.f)(
               `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Title`
             ),
-            strDescription: Object(h.m)(
+            strDescription: Object(h.n)(
               `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Explanation`,
               a,
               e
@@ -591,8 +591,8 @@
           var e;
           return Object(n.a)(this, void 0, void 0, function* () {
             const t = v.d.STORE_BASE_URL + "steamawards/ajaxgetuservotes",
-              a = { sessionid: v.d.SESSIONID, authwgtoken: v.k.authwgtoken };
-            if (v.k.logged_in)
+              a = { sessionid: v.d.SESSIONID, authwgtoken: v.l.authwgtoken };
+            if (v.l.logged_in)
               try {
                 const n = yield r.a.get(t, {
                   params: a,
@@ -672,7 +672,7 @@
             const a = v.d.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
               n = new URLSearchParams();
             n.append("sessionid", v.d.SESSIONID),
-              n.append("authwgtoken", v.k.authwgtoken),
+              n.append("authwgtoken", v.l.authwgtoken),
               n.append("categoryid", e.toString()),
               n.append("appid", t.toString());
             try {
@@ -2566,66 +2566,57 @@
         }
         Init() {
           if (!this.m_bLoadedFromConfig) {
-            if (
-              !Object({ NODE_ENV: "production", STEAM_BUILD: "buildbot" })
-                .MOBILE_BUILD &&
-              document.getElementById("application_config")
-            ) {
-              let e = Object(m.a)("PartnerEventStore");
-              this.ValidateStoreDefault(e) &&
-                e.forEach((e) => {
-                  if (e) {
-                    let t = new c.a(e.clan_steamid);
-                    const a = this.InsertEventModelFromClanEventData(t, e);
-                    e.announcement_body &&
-                      this.m_mapExistingEvents.set(
-                        d.B + e.announcement_body.gid,
-                        a
-                      );
-                  }
-                });
-              let t = Object(b.h)("partnereventstore", "application_config");
-              this.ValidateStoreDefault(t) &&
-                t.forEach((e) => {
-                  if (e) {
-                    let t = new c.a(e.clan_steamid);
-                    const a = this.InsertEventModelFromClanEventData(t, e);
-                    e.announcement_body &&
-                      !this.m_mapExistingEvents.has(
-                        d.B + e.announcement_body.gid
-                      ) &&
-                      this.m_mapExistingEvents.set(
-                        d.B + e.announcement_body.gid,
-                        a
-                      );
-                  }
-                });
-              let a = Object(b.h)(
-                "partnereventadjacents",
-                "application_config"
-              );
-              this.ValidateAdjacentEvent(a) &&
-                (("dev" != b.d.WEB_UNIVERSE && "beta" != b.d.WEB_UNIVERSE) ||
-                  console.log(
-                    "DEV_DEBUG: CPartnerEventStore loading adjacents gids payload: " +
-                      a.length
-                  ),
-                a.forEach((e) => {
-                  e &&
-                    this.m_mapAdjacentAnnouncementGIDs.set(
-                      e.announcementGID,
-                      e.adjacents
+            let e = Object(m.a)("PartnerEventStore");
+            this.ValidateStoreDefault(e) &&
+              e.forEach((e) => {
+                if (e) {
+                  let t = new c.a(e.clan_steamid);
+                  const a = this.InsertEventModelFromClanEventData(t, e);
+                  e.announcement_body &&
+                    this.m_mapExistingEvents.set(
+                      d.B + e.announcement_body.gid,
+                      a
                     );
-                })),
-                "dev" == b.d.WEB_UNIVERSE &&
-                  console.log(
-                    "PartnerEventStore Loaded events: " +
-                      this.m_mapExistingEvents.size +
-                      " with adjacent info: " +
-                      this.m_mapExistingEvents.size
+                }
+              });
+            let t = Object(b.i)("partnereventstore", "application_config");
+            this.ValidateStoreDefault(t) &&
+              t.forEach((e) => {
+                if (e) {
+                  let t = new c.a(e.clan_steamid);
+                  const a = this.InsertEventModelFromClanEventData(t, e);
+                  e.announcement_body &&
+                    !this.m_mapExistingEvents.has(
+                      d.B + e.announcement_body.gid
+                    ) &&
+                    this.m_mapExistingEvents.set(
+                      d.B + e.announcement_body.gid,
+                      a
+                    );
+                }
+              });
+            let a = Object(b.i)("partnereventadjacents", "application_config");
+            this.ValidateAdjacentEvent(a) &&
+              (("dev" != b.d.WEB_UNIVERSE && "beta" != b.d.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: CPartnerEventStore loading adjacents gids payload: " +
+                    a.length
+                ),
+              a.forEach((e) => {
+                e &&
+                  this.m_mapAdjacentAnnouncementGIDs.set(
+                    e.announcementGID,
+                    e.adjacents
                   );
-            }
-            this.m_bLoadedFromConfig = !0;
+              })),
+              "dev" == b.d.WEB_UNIVERSE &&
+                console.log(
+                  "PartnerEventStore Loaded events: " +
+                    this.m_mapExistingEvents.size +
+                    " with adjacent info: " +
+                    this.m_mapExistingEvents.size
+                ),
+              (this.m_bLoadedFromConfig = !0);
           }
         }
         ValidateStoreDefault(e) {
@@ -4727,7 +4718,7 @@
         "GetEventStartTime",
         null
       );
-      a("8Gd7"), a("f8cn");
+      a("8Gd7"), a("f8cn"), a("WOjH"), a("aLon");
       const E = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
       function C(e) {
         return (
@@ -5995,7 +5986,7 @@
     aLon: function (e, t, a) {},
     f8cn: function (e, t, a) {
       "use strict";
-      a("aLon");
+      a("aLon"), a("XrGS");
     },
     iCjI: function (e, t, a) {
       "use strict";
@@ -6019,7 +6010,7 @@
           n.createElement(
             "div",
             null,
-            Object(r.m)(
+            Object(r.n)(
               e.strTokenOverride || "#User_LimitedAccount",
               n.createElement(
                 "a",
@@ -6587,16 +6578,13 @@
         }
         LazyInit() {
           this.m_bLoadedFromConfig ||
-            (!Object({ NODE_ENV: "production", STEAM_BUILD: "buildbot" })
-              .MOBILE_BUILD &&
-              document.getElementById("application_config") &&
-              Object(o.G)(() => {
-                let e = Object(c.h)("groupvanityinfo", "application_config");
-                this.ValidateClanConfig(e) &&
-                  e.forEach((e) => {
-                    this.InternalSetupValue(e);
-                  });
-              }),
+            (Object(o.G)(() => {
+              let e = Object(c.i)("groupvanityinfo", "application_config");
+              this.ValidateClanConfig(e) &&
+                e.forEach((e) => {
+                  this.InternalSetupValue(e);
+                });
+            }),
             (this.m_bLoadedFromConfig = !0));
         }
         ValidateClanConfig(e) {

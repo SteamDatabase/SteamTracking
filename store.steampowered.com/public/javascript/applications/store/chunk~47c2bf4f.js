@@ -402,14 +402,15 @@
     "X/lQ": function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return u;
+        return l;
       });
       var s = r("2vnA"),
         i = (r("msu0"), r("Zdsb"), r("Qhkv"), r("yfxr"), r("hAgw")),
         n = r("f5iL"),
         a = r("GXif"),
-        o = r("/Q1a");
-      class u {
+        o = r("gwss"),
+        u = r("/Q1a");
+      class l {
         constructor(e, t) {
           var r, s;
           (this.m_bVisible = !1),
@@ -442,7 +443,7 @@
         MergeData(e, t) {
           t.include_assets &&
             !this.m_Assets &&
-            ((this.m_Assets = new c(e.assets(), e.id())),
+            ((this.m_Assets = new d(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
             t.include_release &&
               !this.m_ReleaseInfo &&
@@ -460,11 +461,11 @@
               (this.m_DataRequested.include_all_purchase_options = !0)),
             t.include_screenshots &&
               !this.m_Screenshots &&
-              ((this.m_Screenshots = new h(e.screenshots())),
+              ((this.m_Screenshots = new m(e.screenshots())),
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new d(e.trailers())),
+              ((this.m_Trailers = new _(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count > this.m_rgStoreTags.length &&
               this.m_DataRequested.include_tag_count < t.include_tag_count &&
@@ -507,13 +508,13 @@
           );
         }
         BContainDataRequest(e) {
-          return u.BDataRequestContainsOtherDataRequest(
+          return l.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
             e
           );
         }
         BCheckDataRequestIncluded(e) {
-          ("dev" != o.d.WEB_UNIVERSE && "beta" != o.d.WEB_UNIVERSE) ||
+          ("dev" != u.d.WEB_UNIVERSE && "beta" != u.d.WEB_UNIVERSE) ||
             Object(n.a)(
               this.BContainDataRequest(e),
               `Requested data without for ${Object(i.c)(this.m_eItemType)} @ ${
@@ -539,16 +540,16 @@
           return this.m_strName;
         }
         GetStorePageURL() {
-          return o.d.STORE_BASE_URL + this.m_strStoreURLPath;
+          return u.d.STORE_BASE_URL + this.m_strStoreURLPath;
         }
         GetCommunityPageURL() {
           return this.GetAppID()
-            ? o.d.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
+            ? u.d.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
             : null;
         }
         GetCommunityDiscussionForumsURL() {
           return this.GetAppID()
-            ? o.d.COMMUNITY_BASE_URL +
+            ? u.d.COMMUNITY_BASE_URL +
                 "app/" +
                 this.GetAppID() +
                 "/discussions/"
@@ -563,6 +564,9 @@
         }
         GetAppType() {
           return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return 6 == this.GetAppType() || 13 == this.GetAppType();
         }
         GetIncludedAppTypes() {
           return this.m_rgIncludedAppTypes;
@@ -725,7 +729,7 @@
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
             this.m_BasicInfo
-              ? l([
+              ? c([
                   ...this.m_BasicInfo.developers,
                   ...this.m_BasicInfo.publishers,
                   ...this.m_BasicInfo.franchises,
@@ -736,19 +740,28 @@
         GetAllPublisherCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? l(this.m_BasicInfo.publishers) : []
+            this.m_BasicInfo ? c(this.m_BasicInfo.publishers) : []
           );
         }
         GetAllDeveloperCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? l(this.m_BasicInfo.developers) : []
+            this.m_BasicInfo ? c(this.m_BasicInfo.developers) : []
           );
         }
         GetAllFranchiseCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? l(this.m_BasicInfo.franchises) : []
+            this.m_BasicInfo ? c(this.m_BasicInfo.franchises) : []
+          );
+        }
+        GetCapsuleHeadline() {
+          var e;
+          return (
+            this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
+            null === (e = this.m_BasicInfo) || void 0 === e
+              ? void 0
+              : e.capsule_headline
           );
         }
         GetTags() {
@@ -779,24 +792,42 @@
           );
         }
         GetReleaseDateRTime() {
-          var e, t;
-          this.BCheckDataRequestIncluded({ include_release: !0 });
-          let r =
+          var e, t, r;
+          if (
+            (this.BCheckDataRequestIncluded({ include_release: !0 }),
             null === (e = this.m_ReleaseInfo) || void 0 === e
               ? void 0
-              : e.steam_release_date;
+              : e.is_coming_soon)
+          )
+            return 0;
+          let s =
+            null === (t = this.m_ReleaseInfo) || void 0 === t
+              ? void 0
+              : t.steam_release_date;
           return (
-            r ||
-              (r =
-                null === (t = this.m_ReleaseInfo) || void 0 === t
+            s ||
+              (s =
+                null === (r = this.m_ReleaseInfo) || void 0 === r
                   ? void 0
-                  : t.original_release_date),
-            r
+                  : r.original_release_date),
+            s
           );
         }
         GetFormattedSteamReleaseDate() {
-          const e = this.GetReleaseDateRTime();
-          return e ? Object(a.n)(e) : "";
+          var e;
+          this.BCheckDataRequestIncluded({ include_release: !0 });
+          const t = this.GetReleaseDateRTime();
+          return (
+            null === (e = this.m_ReleaseInfo) || void 0 === e
+              ? void 0
+              : e.is_abridged_release_date
+          )
+            ? t
+              ? Object(o.a)(new Date(1e3 * t))
+              : ""
+            : t
+            ? Object(a.o)(t)
+            : "";
         }
         BIsComingSoon() {
           var e;
@@ -928,22 +959,13 @@
             e
           );
         }
-        BIsApplicationOrTool() {
-          return 6 == this.GetAppType() || 13 == this.GetAppType();
-        }
-        GetCapsuleHeadline() {
-          var e;
-          return null === (e = this.m_BasicInfo) || void 0 === e
-            ? void 0
-            : e.capsule_headline;
-        }
       }
-      function l(e) {
+      function c(e) {
         if (!(null == e ? void 0 : e.length)) return [];
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
       }
-      class c {
+      class d {
         constructor(e, t) {
           const r = e.asset_url_format();
           r &&
@@ -1001,7 +1023,7 @@
               ))),
             e.community_icon() &&
               (this.m_strCommunityIcon = `${
-                o.d.MEDIA_CDN_COMMUNITY_URL
+                u.d.MEDIA_CDN_COMMUNITY_URL
               }images/apps/${t}/${e.community_icon()}.jpg`);
         }
         GetMainCapsuleURL() {
@@ -1038,26 +1060,26 @@
           return this.m_strLibraryHeroURL_2x;
         }
         ConstructAssetURL(e, t) {
-          return o.d.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
+          return u.d.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
         }
         GetCommunityIconURL() {
           return this.m_strCommunityIcon;
         }
       }
-      class d {
+      class _ {
         constructor(e) {
           (this.m_mapTrailer = new Map()),
             (this.m_higherTrailers = new Array()),
             (this.m_otherTrailers = new Array()),
             e.highlights() &&
               e.highlights().forEach((e) => {
-                let t = new _(e);
+                let t = new h(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_higherTrailers.push(t);
               }),
             e.other_trailers() &&
               e.other_trailers().forEach((e) => {
-                let t = new _(e);
+                let t = new h(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_otherTrailers.push(t);
               });
@@ -1077,7 +1099,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class _ {
+      class h {
         constructor(e) {
           (this.m_strTrailerName = e.trailer_name()),
             (this.m_nBaseID = e.trailer_base_id());
@@ -1142,10 +1164,10 @@
           );
         }
         ConstructAssetURL(e, t) {
-          return o.d.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
+          return u.d.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
         }
       }
-      class h {
+      class m {
         constructor(e) {
           (this.m_rgAllScreenshots = new Array()),
             (this.m_rgOnlyAllAgesScreenshots = new Array());
@@ -1159,12 +1181,12 @@
               e = s[t].ordinal() < i[r].ordinal();
             }
             if (e) {
-              const e = o.d.MEDIA_CDN_URL + s[t].filename();
+              const e = u.d.MEDIA_CDN_URL + s[t].filename();
               this.m_rgAllScreenshots.push(e),
                 this.m_rgOnlyAllAgesScreenshots.push(e),
                 (t += 1);
             } else {
-              const e = o.d.MEDIA_CDN_URL + i[r].filename();
+              const e = u.d.MEDIA_CDN_URL + i[r].filename();
               this.m_rgAllScreenshots.push(e), (r += 1);
             }
           }
@@ -1585,7 +1607,7 @@
                       "CStoreItemCache::InternalHandleLoadStoreItems failed with eResult: " +
                         e.GetEResult() +
                         " message: " +
-                        e.Hdr().error_message,
+                        e.Hdr().error_message(),
                       Object(i.I)(t)
                     ),
                     1 == e.Hdr().transport_error() &&

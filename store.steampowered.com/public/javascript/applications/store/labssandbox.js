@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [25],
+  [26],
   {
     "1wed": function (e, t, a) {
       e.exports = {
@@ -427,7 +427,7 @@
           this.rgModelNames = [];
         }
         Init() {
-          i.a.Init(new n.a(o.d.WEBAPI_BASE_URL, o.k.webapi_token));
+          i.a.Init(new n.a(o.d.WEBAPI_BASE_URL, o.l.webapi_token));
           const e = `${o.d.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
           d.a.get(e).then((e) => {
             if (e.data) {
@@ -1813,7 +1813,7 @@
           const i = N.b.Init(q);
           Object(V.a)(i),
             r && Object(V.b)(i, r),
-            i.Body().set_steamid(t || o.k.steamid),
+            i.Body().set_steamid(t || o.l.steamid),
             s && i.Body().set_clusters_to_return(s),
             i.Body().set_sort(a),
             Q.IdentifyClustersFromPlaytime(e.GetServiceTransport(), i).then(
@@ -1899,14 +1899,14 @@
       };
       function ne(e) {
         const { SimilarityStore: t } = e,
-          [a, s] = b.useState(o.k.steamid),
+          [a, s] = b.useState(o.l.steamid),
           [r, i] = b.useState("10"),
           [n, l] = b.useState(1),
           p = b.useCallback((e) => s(e.currentTarget.value), [s]),
           c = b.useCallback((e) => i(e.currentTarget.value), [i]),
           d = b.useCallback((e) => l(e.data), [l]);
         let m = !1;
-        const h = b.useRef(o.k.steamid),
+        const h = b.useRef(o.l.steamid),
           u = a && new j.a(a);
         let _;
         u &&
@@ -2016,7 +2016,7 @@
                     null,
                     b.createElement("b", null, "Last Played:"),
                     " ",
-                    Object(Z.n)(t.rtLastPlayed),
+                    Object(Z.o)(t.rtLastPlayed),
                     " "
                   ),
                   b.createElement(

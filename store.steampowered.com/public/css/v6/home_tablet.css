@@ -301,6 +301,7 @@
 
 	html.tablet .store_main_capsule.no_screenshots .app_name {
 		width: unset;
+		margin-top: unset;
 	}
 
 	html.tablet .store_main_capsule.no_screenshots .app_name > div {

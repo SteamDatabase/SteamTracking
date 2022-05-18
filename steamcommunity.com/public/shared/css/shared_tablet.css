@@ -613,7 +613,7 @@ html.tablet .shadow_bottom {
 /* MODAL */
 html.tablet .newmodal {
 	box-shadow: var(--gpShadow-XLarge);
-	max-width: 720px;
+	max-width: 660px;
 	background: var(--gpSystemDarkestGrey);
 	border: 2px solid var(--gpSystemDarkerGrey);
 }

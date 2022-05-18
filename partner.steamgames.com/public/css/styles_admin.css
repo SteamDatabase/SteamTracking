@@ -2992,6 +2992,32 @@ html, body { height:100%; }
 	min-width: 200px;
 }
 
+.pending_pricing_admin_table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.pending_pricing_admin_table th {
+    width: 70px;
+    max-width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+}
+.pending_pricing_admin_table th.pricing_matrix_note {
+    width: 120px;
+    max-width: 120px;
+    text-align: left;
+}
+
+.pending_pricing_admin_table th.pricing_matrix_note .custom_prices {
+    color: #bf935c;
+}
+
+.pending_pricing_admin_table th.expander {
+    width: unset;
+}
 
 
 

@@ -1230,7 +1230,7 @@
         }
         ReloadEquippedItems() {
           let e = H.b.Init(q.c);
-          e.Body().set_steamid(v.h.steamid),
+          e.Body().set_steamid(v.i.steamid),
             e.Body().set_language(v.c.LANGUAGE),
             (this.m_promiseEquipped = q.o.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
@@ -1332,7 +1332,7 @@
                 e
               ));
             let t = H.b.Init(q.c);
-            t.Body().set_steamid(v.h.steamid),
+            t.Body().set_steamid(v.i.steamid),
               t.Body().set_language(v.c.LANGUAGE),
               (this.m_promiseEquipped = q.o.GetProfileItemsEquipped(
                 this.m_SteamInterface.GetServiceTransport(),
@@ -2016,7 +2016,7 @@
           return Object(n.a)(this, void 0, void 0, function* () {
             const e = H.b.Init(ce.c);
             e.SetBodyFields({
-              steamid: v.h.steamid,
+              steamid: v.i.steamid,
               filter_user_uploaded_only: !0,
             });
             let t = yield ce.h.GetAvatarHistory(
@@ -2293,7 +2293,7 @@
           } = e;
           (this.m_Location = new Q(t, r, a, i, o, n)),
             (this.m_GroupList = new le(e.PrimaryGroup));
-          const s = new F.a(v.h.steamid);
+          const s = new F.a(v.i.steamid);
           (this.m_MiniProfileData = new N(s.GetAccountID())),
             (this.m_persona = new f.b(s)),
             Object(c.l)(() => {
@@ -2341,7 +2341,7 @@
         GetConstructedURL() {
           return this.m_strCustomURL
             ? `${v.c.COMMUNITY_BASE_URL}id/${this.m_strCustomURL}/`
-            : `${v.c.COMMUNITY_BASE_URL}profiles/${v.h.steamid}/`;
+            : `${v.c.COMMUNITY_BASE_URL}profiles/${v.i.steamid}/`;
         }
         GetAvatarHash() {
           return this.m_strAvatarHash;
@@ -2392,7 +2392,7 @@
             let t = new FormData();
             t.append("avatar", e),
               t.append("type", "player_avatar_image"),
-              t.append("sId", v.h.steamid),
+              t.append("sId", v.i.steamid),
               t.append("sessionid", v.c.SESSIONID),
               t.append("doSub", "1"),
               t.append("json", "1");

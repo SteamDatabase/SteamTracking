@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [22],
+  [23],
   {
     "/EF7": function (e, t, n) {
       "use strict";
@@ -1235,7 +1235,7 @@
         }
         SetActionChangeEvent(e) {
           return (
-            (this.m_moderator = o.k.accountid),
+            (this.m_moderator = o.l.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
             (this.m_action = le.k_ChangeEventType),
             (this.m_newEventType = e),
@@ -1244,7 +1244,7 @@
         }
         SetReviewAction(e) {
           return (
-            (this.m_moderator = o.k.accountid),
+            (this.m_moderator = o.l.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
             (this.m_action = e ? le.k_ModReviewed : le.k_ModUnreviewed),
             this
@@ -1252,7 +1252,7 @@
         }
         SetAdultOnlyContentAction(e) {
           return (
-            (this.m_moderator = o.k.accountid),
+            (this.m_moderator = o.l.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
             (this.m_action = e
               ? le.k_ModFlagAdultOnlyContent
@@ -1262,7 +1262,7 @@
         }
         SetReReviewAction(e) {
           return (
-            (this.m_moderator = o.k.accountid),
+            (this.m_moderator = o.l.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
             (this.m_action = e ? le.k_ModReReviewed : le.k_ModUnreviewed),
             this
@@ -1273,7 +1273,7 @@
         }
         SetUpdateSeasonalTags(e) {
           return (
-            (this.m_moderator = o.k.accountid),
+            (this.m_moderator = o.l.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
             (this.m_action = le.k_UpdateSeasonTags),
             (this.m_newTagAdded = e),
@@ -1405,7 +1405,7 @@
         return _.createElement(
           "div",
           null,
-          Object(T.m)(
+          Object(T.n)(
             n,
             _.createElement(
               "a",
@@ -1426,7 +1426,7 @@
           n =
             Object(T.k)(t.m_rtWhen) +
             " @ " +
-            Object(he.f)(t.m_rtWhen, { bForce24HourClock: !1 }),
+            Object(he.g)(t.m_rtWhen, { bForce24HourClock: !1 }),
           a = _.createElement(ve, {
             locToken: "#EventModTile_Moderator",
             accountID: t.m_moderator,
@@ -1436,7 +1436,7 @@
             return _.createElement(
               "div",
               { className: be.ModeratorAuditActionCtn },
-              Object(T.m)(
+              Object(T.n)(
                 "#EventModTile_Action_Reviewed",
                 _.createElement("span", null, n),
                 a
@@ -1446,7 +1446,7 @@
             return _.createElement(
               "div",
               { className: be.ModeratorAuditActionCtn },
-              Object(T.m)(
+              Object(T.n)(
                 "#EventModTile_Action_UnReviewed",
                 _.createElement("span", null, n),
                 a
@@ -1456,7 +1456,7 @@
             return _.createElement(
               "div",
               { className: be.ModeratorAuditActionCtn },
-              Object(T.m)(
+              Object(T.n)(
                 "#EventModTile_Action_NewEventType",
                 _.createElement("span", null, n),
                 a,
@@ -1467,7 +1467,7 @@
             return _.createElement(
               "div",
               { className: be.ModeratorAuditActionCtn },
-              Object(T.m)(
+              Object(T.n)(
                 "#EventModTile_Action_SeasonTagUpdate",
                 _.createElement("span", null, n),
                 a,
@@ -1478,7 +1478,7 @@
             return _.createElement(
               "div",
               { className: be.ModeratorAuditActionCtn },
-              Object(T.m)(
+              Object(T.n)(
                 "#EventModTile_Action_ReReviewed",
                 _.createElement("span", null, n),
                 a
@@ -1488,7 +1488,7 @@
             return _.createElement(
               "div",
               { className: be.ModeratorAuditActionCtn },
-              Object(T.m)(
+              Object(T.n)(
                 "#EventModTile_Action_RemoveFromSC",
                 _.createElement("span", null, n),
                 a
@@ -1498,7 +1498,7 @@
             return _.createElement(
               "div",
               { className: be.ModeratorAuditActionCtn },
-              Object(T.m)(
+              Object(T.n)(
                 "#EventModTile_Action_FlagAdultContent",
                 _.createElement("span", null, n),
                 a
@@ -1508,7 +1508,7 @@
             return _.createElement(
               "div",
               { className: be.ModeratorAuditActionCtn },
-              Object(T.m)(
+              Object(T.n)(
                 "#EventModTile_Action_RemoveAdultContent",
                 _.createElement("span", null, n),
                 a
@@ -2300,7 +2300,7 @@
                           "#EventModTile_LastModified",
                           Object(T.k)(c) +
                             "@" +
-                            Object(he.f)(c, { bForce24HourClock: !1 })
+                            Object(he.g)(c, { bForce24HourClock: !1 })
                         )
                       ),
                     i &&
@@ -3497,7 +3497,7 @@
           if (t) return t.clan_event_gid;
         }
         BIsLoggedIn() {
-          return o.k.logged_in;
+          return o.l.logged_in;
         }
         CreateOrUpdateRSSNewFeed(e, t = 0) {
           return Object(a.a)(this, void 0, void 0, function* () {
@@ -3666,7 +3666,7 @@
           return e && "string" == typeof e.webapi_token;
         }
         BIsLoggedIn() {
-          return o.k.logged_in;
+          return o.l.logged_in;
         }
         BHavePendingInfoRequests() {
           return (
@@ -4710,7 +4710,7 @@
                       t
                     ),
                   u(t),
-                  o.a.Initialize(n, d.k.is_partner_member)
+                  o.a.Initialize(n, d.l.is_partner_member)
                 );
               });
             })().then(() => {
@@ -4988,7 +4988,7 @@
               u.a.createElement(
                 "p",
                 null,
-                Object(j.m)(
+                Object(j.n)(
                   "#CuratorAdmin_RSSFeed_doc_link",
                   u.a.createElement(
                     "a",
@@ -5393,7 +5393,7 @@
                     { className: T.Error },
                     this.state.strErrorMessage
                   ),
-                u.a.createElement(b.K, {
+                u.a.createElement(b.J, {
                   onChange: this.OnToggleChannelAutomation,
                   label: Object(j.f)("#RSSManager_Status_Automation_Desc"),
                   checked: this.props.admin.BIsAutomationEnabled(),
@@ -5407,7 +5407,7 @@
                     " ",
                     Object(j.k)(this.props.admin.GetRSSLastRtimeChecked(), !1),
                     "  @ ",
-                    Object(G.f)(this.props.admin.GetRSSLastRtimeChecked(), {
+                    Object(G.g)(this.props.admin.GetRSSLastRtimeChecked(), {
                       bForce24HourClock: !1,
                     }),
                     " ",
@@ -5594,9 +5594,9 @@
               n.GetVisibilityStartTimeAndDateUnixSeconds() ||
               n.GetPostTimeAndDateUnixSeconds();
             m =
-              Object(j.n)(e) +
+              Object(j.o)(e) +
               " @ " +
-              Object(G.f)(e, { bForce24HourClock: !1 });
+              Object(G.g)(e, { bForce24HourClock: !1 });
           }
           return u.a.createElement(
             "div",

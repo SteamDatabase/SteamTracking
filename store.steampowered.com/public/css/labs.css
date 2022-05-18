@@ -16,7 +16,7 @@ body.v6 .page_content_1024 {
 body.v6.labs {
     background: #181d3a;
     color: #adb4c4;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif; 
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 body .responsive_page_content {
     /* background: #292a2e; */
@@ -25,11 +25,11 @@ body .responsive_page_content {
 }
 
 a, a:visited {
-color: #07d1da;	
+color: #07d1da;
 }
 
 a:hover {
-color: #fff;		
+color: #fff;
 }
 
 .labs-content {
@@ -113,6 +113,10 @@ color: #fff;
 	float: left;
 	width: 50px;
 	margin-right: 5px;
+}
+
+.active-experiments-icon img {
+	width: 50px;
 }
 
 .active-experiments-description {
@@ -340,7 +344,7 @@ span.experiment-name {
 }
 
 #videosList {
-	max-width: 600px; 
+	max-width: 600px;
 	overflow: hidden;
 }
 

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [30],
+  [31],
   {
     H38U: function (e, t, r) {
       var n = r("f4xo"),
@@ -2136,7 +2136,7 @@
         Object(a.b)([I.b], U.prototype, "SendSteamGuardCode", null),
         Object(a.b)([I.b], U.prototype, "UseCodeOverride", null),
         Object(a.b)([I.b], U.prototype, "GoBack", null);
-      const x = [3, 2, 1, 0, 4, 5].reduce((e, t, r) => ((e[t] = r), e), {});
+      const x = [4, 3, 2, 1, 0, 5].reduce((e, t, r) => ((e[t] = r), e), {});
       function D(e) {
         return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(e) && e.length <= 5;
       }
@@ -2725,7 +2725,15 @@
         return i.a.createElement("div", { className: q.a.FormError }, t);
       }
       function Be() {
-        return i.a.createElement(se.a, null);
+        return i.a.createElement(
+          Ie,
+          { compact: !0 },
+          i.a.createElement(
+            ze,
+            { alignItems: "center" },
+            i.a.createElement(se.a, null)
+          )
+        );
       }
       function ye(e) {
         const { reset: t } = e;
@@ -2845,7 +2853,7 @@
             i.a.createElement(
               "div",
               { className: q.a.EnterCodeFromEmail },
-              Object(ae.m)(
+              Object(ae.n)(
                 "#Login_EnterEmailCode",
                 i.a.createElement(
                   "span",
@@ -2871,7 +2879,7 @@
           i.a.createElement(
             "div",
             { className: q.a.Label },
-            Object(ae.m)(
+            Object(ae.n)(
               "#Login_ActiveAccountName",
               i.a.createElement("span", { className: q.a.AccountName }, t)
             )
@@ -3182,7 +3190,7 @@
         return i.a.createElement(
           ze,
           { alignItems: "center", justifyContent: "center" },
-          i.a.createElement(Be, null)
+          i.a.createElement(se.a, null)
         );
       }
       var xe = r("rmVU");

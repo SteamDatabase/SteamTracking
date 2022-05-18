@@ -197,7 +197,7 @@
             let e = window.localStorage.getItem(l) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
-                id: "" + d.k.accountid,
+                id: "" + d.l.accountid,
                 cc: "" + d.d.COUNTRY,
                 origin: self.origin,
               },
@@ -318,7 +318,7 @@
               (t ? "ajaxfollow/" : "ajaxignore/");
             const r = e.GetAccountID(),
               o = new FormData();
-            o.append("authwgtoken", d.k.authwgtoken),
+            o.append("authwgtoken", d.l.authwgtoken),
               o.append("clanid", "" + r),
               o.append("sessionid", d.d.SESSIONID),
               o.append(t ? "follow" : "ignore", s ? "1" : "0");
@@ -406,7 +406,7 @@
                 ? n.append("bundleid", a.toString())
                 : n.append("subid", "" + t),
               o && n.append("snr", o);
-            let p = d.k.authwgtoken;
+            let p = d.l.authwgtoken;
             p
               ? n.append("authwgtoken", p)
               : n.append("sessionid", d.d.SESSIONID),
@@ -428,7 +428,7 @@
             try {
               const t = new FormData();
               t.append("sessionid", d.d.SESSIONID),
-                t.append("authwgtoken", d.k.authwgtoken),
+                t.append("authwgtoken", d.l.authwgtoken),
                 t.append("appid", "" + e),
                 t.append("cc", d.d.COUNTRY);
               let s =
@@ -867,7 +867,7 @@
               : l.d.COMMUNITY_BASE_URL;
         }
         render() {
-          return l.k && l.k.logged_in
+          return l.l && l.l.logged_in
             ? (this.OnLoginComplete(), null)
             : i.a.createElement(
                 "div",
