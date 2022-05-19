@@ -381,7 +381,8 @@
             );
           let a = {};
           this.m_nominationEventDetails.strBackgroundCSS.length &&
-            (a.backgroundColor = this.m_nominationEventDetails.strBackgroundCSS),
+            (a.backgroundColor =
+              this.m_nominationEventDetails.strBackgroundCSS),
             this.m_nominationEventDetails.strBackgroundImage.length &&
               (a.backgroundImage = `url( ${this.m_nominationEventDetails.strBackgroundImage} )`);
           const n = this.props.event.GetSteamAwardCategory(),
@@ -2133,15 +2134,14 @@
             Object(o.G)(() => {
               for (let e = 0; e < 30; ++e)
                 r[e] &&
-                  (this.m_curLocImageGroup.localized_images[
-                    e
-                  ] = I.GenerateArtworkURLFromHashAndExtensions(
-                    a,
-                    n,
-                    f.full,
-                    e,
-                    this.m_curLocImageGroupType
-                  ));
+                  (this.m_curLocImageGroup.localized_images[e] =
+                    I.GenerateArtworkURLFromHashAndExtensions(
+                      a,
+                      n,
+                      f.full,
+                      e,
+                      this.m_curLocImageGroupType
+                    ));
             });
           });
         }
@@ -2162,15 +2162,14 @@
           if (a.image_hash == e) {
             let e = d.a.InitFromClanID(a.clanAccountID),
               n = I.GetHashAndExt(a);
-            this.m_curLocImageGroup.localized_images[
-              t
-            ] = I.GenerateArtworkURLFromHashAndExtensions(
-              e,
-              n,
-              f.full,
-              t,
-              this.m_curLocImageGroupType
-            );
+            this.m_curLocImageGroup.localized_images[t] =
+              I.GenerateArtworkURLFromHashAndExtensions(
+                e,
+                n,
+                f.full,
+                t,
+                this.m_curLocImageGroupType
+              );
           }
         }
         GetAllLocalizedGroupImages() {
@@ -5102,7 +5101,8 @@
             (t.creator_steamid = this.creator_steamid),
             (t.last_update_steamid = this.last_update_steamid),
             (t.rtime32_last_modified = this.rtime32_last_modified),
-            (t.rtime32_last_solr_search_col_updated = this.rtime32_last_solr_search_col_updated),
+            (t.rtime32_last_solr_search_col_updated =
+              this.rtime32_last_solr_search_col_updated),
             (t.rtime32_moderator_reviewed = this.rtime32_moderator_reviewed),
             (t.type = this.type),
             (t.appid = this.appid),

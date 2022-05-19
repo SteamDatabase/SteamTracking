@@ -388,7 +388,8 @@
               (this.m_Preferences.utm_enabled = !0),
             (0 != this.m_Preferences.preference_state &&
               1 != this.m_Preferences.preference_state) ||
-              ((this.m_Preferences.valve_analytics.product_impressions_tracking = !0),
+              ((this.m_Preferences.valve_analytics.product_impressions_tracking =
+                !0),
               (this.m_Preferences.content_customization.recentapps = !0),
               (this.m_Preferences.third_party_analytics.google_analytics = !0),
               (this.m_Preferences.third_party_content.sketchfab = !0),
@@ -422,7 +423,8 @@
                 (this.m_Preferences.third_party_content.twitter = t),
                 (this.m_Preferences.third_party_content.vimeo = t),
                 (this.m_Preferences.third_party_content.youtube = t),
-                (this.m_Preferences.valve_analytics.product_impressions_tracking = t);
+                (this.m_Preferences.valve_analytics.product_impressions_tracking =
+                  t);
             }
             this.PostCookieSettings();
           }
@@ -431,8 +433,8 @@
           return this.m_Preferences.content_customization.recentapps;
         }
         ToggleRecentApps() {
-          (this.m_Preferences.content_customization.recentapps = !this
-            .m_Preferences.content_customization.recentapps),
+          (this.m_Preferences.content_customization.recentapps =
+            !this.m_Preferences.content_customization.recentapps),
             this.ProcessToggle();
         }
         GetImpressions() {
@@ -440,8 +442,8 @@
             .product_impressions_tracking;
         }
         ToggleImpressions() {
-          (this.m_Preferences.valve_analytics.product_impressions_tracking = !this
-            .m_Preferences.valve_analytics.product_impressions_tracking),
+          (this.m_Preferences.valve_analytics.product_impressions_tracking =
+            !this.m_Preferences.valve_analytics.product_impressions_tracking),
             this.ProcessToggle();
         }
         GetGoogleAnalytics() {
@@ -449,8 +451,8 @@
         }
         ToggleGoogleAnalytics() {
           return Object(n.a)(this, void 0, void 0, function* () {
-            (this.m_Preferences.third_party_analytics.google_analytics = !this
-              .m_Preferences.third_party_analytics.google_analytics),
+            (this.m_Preferences.third_party_analytics.google_analytics =
+              !this.m_Preferences.third_party_analytics.google_analytics),
               this.ProcessToggle();
           });
         }
@@ -458,24 +460,24 @@
           return this.m_Preferences.third_party_content.sketchfab;
         }
         ToggleSketchfab() {
-          (this.m_Preferences.third_party_content.sketchfab = !this
-            .m_Preferences.third_party_content.sketchfab),
+          (this.m_Preferences.third_party_content.sketchfab =
+            !this.m_Preferences.third_party_content.sketchfab),
             this.ProcessToggle();
         }
         GetVimeo() {
           return this.m_Preferences.third_party_content.vimeo;
         }
         ToggleVimeo() {
-          (this.m_Preferences.third_party_content.vimeo = !this.m_Preferences
-            .third_party_content.vimeo),
+          (this.m_Preferences.third_party_content.vimeo =
+            !this.m_Preferences.third_party_content.vimeo),
             this.ProcessToggle();
         }
         GetYouTube() {
           return this.m_Preferences.third_party_content.youtube;
         }
         ToggleYouTube() {
-          (this.m_Preferences.third_party_content.youtube = !this.m_Preferences
-            .third_party_content.youtube),
+          (this.m_Preferences.third_party_content.youtube =
+            !this.m_Preferences.third_party_content.youtube),
             this.ProcessToggle();
         }
         GetUTMEnabled() {

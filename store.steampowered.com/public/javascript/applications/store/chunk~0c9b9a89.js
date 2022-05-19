@@ -157,10 +157,8 @@
           i.value = function (...t) {
             let i = this[n + "_DebounceProperties"];
             void 0 === i &&
-              (i = this[n + "_DebounceProperties"] = {
-                hTimer: void 0,
-                nPending: 0,
-              }),
+              (i = this[n + "_DebounceProperties"] =
+                { hTimer: void 0, nPending: 0 }),
               void 0 === i.hTimer
                 ? (o.apply(this, t),
                   (i.hTimer = window.setInterval(() => {
@@ -410,9 +408,10 @@
           n && s.b(this.m_rgGamepadNavigationTrees, n),
             e ||
               (this.m_rgGamepadNavigationTrees.length &&
-                (e = this.m_rgGamepadNavigationTrees[
-                  this.m_rgGamepadNavigationTrees.length - 1
-                ]));
+                (e =
+                  this.m_rgGamepadNavigationTrees[
+                    this.m_rgGamepadNavigationTrees.length - 1
+                  ]));
           const i = this.m_LastActiveFocusNavTree == e;
           e && s.b(this.m_rgGamepadNavigationTrees, e),
             (this.m_LastActiveNavTree = e),
@@ -3246,9 +3245,11 @@
             "indentLevel",
             "onContextMenu",
           ]),
-          { actionDescriptions: g, gamepadEvents: b, props: _ } = Object(ot.a)(
-            p
-          );
+          {
+            actionDescriptions: g,
+            gamepadEvents: b,
+            props: _,
+          } = Object(ot.a)(p);
         return o.createElement(
           Ze,
           Object.assign(
@@ -4787,7 +4788,12 @@
             s && s.setAttribute("style", "display: none;"),
             r && r.setAttribute("style", "display: none;");
           let u = this.props.direction,
-            { nLeft: d, nTop: m, nOverflow: p, nLateralOverflow: g } = h(
+            {
+              nLeft: d,
+              nTop: m,
+              nOverflow: p,
+              nLateralOverflow: g,
+            } = h(
               u,
               this.props.nBodyAlignment,
               this.props.nBodyDistance,
@@ -4813,7 +4819,12 @@
                     return "overlay-center";
                 }
               })(this.props.direction),
-              { nLeft: i, nTop: o, nOverflow: s, nLateralOverflow: r } = h(
+              {
+                nLeft: i,
+                nTop: o,
+                nOverflow: s,
+                nLateralOverflow: r,
+              } = h(
                 t,
                 this.props.nBodyAlignment,
                 this.props.nBodyDistance,
@@ -5940,17 +5951,13 @@
         }
         FindFocusableDescendant(e, t) {
           const n = Object(d.a)(e),
-            {
-              focusableIfNoChildren: i,
-              childFocusDisabled: o,
-            } = this.m_Properties;
+            { focusableIfNoChildren: i, childFocusDisabled: o } =
+              this.m_Properties;
           if (o) return null;
           if (this.m_rgChildren.length) {
             this.EnsureChildrenSorted();
-            const {
-              navEntryPreferPosition: o,
-              resetNavOnEntry: r,
-            } = this.m_Properties;
+            const { navEntryPreferPosition: o, resetNavOnEntry: r } =
+              this.m_Properties;
             let a,
               l = this.GetActiveChildIndex();
             if ((r && void 0 !== e && (l = -1), !this.IsValidChildIndex(l))) {
@@ -6486,8 +6493,7 @@
                 n
               ),
               o.createElement("path", {
-                d:
-                  "M9.82497 18.385L24.595 3.61499L24.595 33.155L9.82497 18.385Z",
+                d: "M9.82497 18.385L24.595 3.61499L24.595 33.155L9.82497 18.385Z",
                 fill: "currentColor",
               })
             );
@@ -6540,8 +6546,7 @@
           o.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d:
-              "M12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57C28 10 26.5 9 23.94 7.94C20.9843 6.77796 17.7541 6.50244 14.6444 7.14712C11.5346 7.7918 8.68012 9.32875 6.43 11.57L0 18L6.43 24.43C8.10419 26.1042 10.2596 27.5 12.73 28.34ZM18 25C21.866 25 25 21.866 25 18C25 14.134 21.866 11 18 11C14.134 11 11 14.134 11 18C11 21.866 14.134 25 18 25Z",
+            d: "M12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57C28 10 26.5 9 23.94 7.94C20.9843 6.77796 17.7541 6.50244 14.6444 7.14712C11.5346 7.7918 8.68012 9.32875 6.43 11.57L0 18L6.43 24.43C8.10419 26.1042 10.2596 27.5 12.73 28.34ZM18 25C21.866 25 25 21.866 25 18C25 14.134 21.866 11 18 11C14.134 11 11 14.134 11 18C11 21.866 14.134 25 18 25Z",
             fill: "currentColor",
           })
         );
@@ -6558,13 +6563,11 @@
             e
           ),
           o.createElement("path", {
-            d:
-              "M29.57 11.57L24.82 16.32C24.9485 16.8705 25.0089 17.4347 25 18C25 19.8565 24.2625 21.637 22.9497 22.9497C21.637 24.2625 19.8565 25 18 25C17.423 24.9983 16.8486 24.9244 16.29 24.78L12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57Z",
+            d: "M29.57 11.57L24.82 16.32C24.9485 16.8705 25.0089 17.4347 25 18C25 19.8565 24.2625 21.637 22.9497 22.9497C21.637 24.2625 19.8565 25 18 25C17.423 24.9983 16.8486 24.9244 16.29 24.78L12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57Z",
             fill: "currentColor",
           }),
           o.createElement("path", {
-            d:
-              "M28.94 2.94L23.94 7.94C20.9843 6.77797 17.7541 6.50244 14.6444 7.14712C11.5346 7.79181 8.68012 9.32876 6.43 11.57L0 18L6.43 24.43C6.6 24.6 6.79 24.75 6.97 24.91L3.44 28.44L5.56 30.56L31.06 5.06L28.94 2.94ZM11 18C11.0002 16.8706 11.2736 15.7581 11.7969 14.7573C12.3203 13.7565 13.078 12.8971 14.0054 12.2527C14.9328 11.6082 16.0024 11.1977 17.1229 11.0561C18.2434 10.9146 19.3815 11.0463 20.44 11.44L11.44 20.44C11.1493 19.6593 11.0003 18.833 11 18Z",
+            d: "M28.94 2.94L23.94 7.94C20.9843 6.77797 17.7541 6.50244 14.6444 7.14712C11.5346 7.79181 8.68012 9.32876 6.43 11.57L0 18L6.43 24.43C6.6 24.6 6.79 24.75 6.97 24.91L3.44 28.44L5.56 30.56L31.06 5.06L28.94 2.94ZM11 18C11.0002 16.8706 11.2736 15.7581 11.7969 14.7573C12.3203 13.7565 13.078 12.8971 14.0054 12.2527C14.9328 11.6082 16.0024 11.1977 17.1229 11.0561C18.2434 10.9146 19.3815 11.0463 20.44 11.44L11.44 20.44C11.1493 19.6593 11.0003 18.833 11 18Z",
             fill: "currentColor",
           })
         );
@@ -6580,8 +6583,7 @@
             xmlns: "http://www.w3.org/2000/svg",
           },
           o.createElement("path", {
-            d:
-              "M5 0H3C1.34315 0 0 1.34315 0 3V16C0 17.6569 1.34315 19 3 19H5V0Z",
+            d: "M5 0H3C1.34315 0 0 1.34315 0 3V16C0 17.6569 1.34315 19 3 19H5V0Z",
             fill: "white",
           })
         );
@@ -6597,8 +6599,7 @@
             xmlns: "http://www.w3.org/2000/svg",
           },
           o.createElement("path", {
-            d:
-              "M0 0H2C3.65685 0 5 1.34315 5 3V16C5 17.6569 3.65685 19 2 19H0V0Z",
+            d: "M0 0H2C3.65685 0 5 1.34315 5 3V16C5 17.6569 3.65685 19 2 19H0V0Z",
             fill: "white",
           })
         );
@@ -7612,8 +7613,10 @@
             e.dimensions = { left: t.right, top: t.top, width: 350, height: 1 };
           }
           return (
-            (e.availscreenwidth = this.m_menuProps.element.ownerDocument.defaultView.screen.availWidth),
-            (e.availscreenheight = this.m_menuProps.element.ownerDocument.defaultView.screen.availHeight),
+            (e.availscreenwidth =
+              this.m_menuProps.element.ownerDocument.defaultView.screen.availWidth),
+            (e.availscreenheight =
+              this.m_menuProps.element.ownerDocument.defaultView.screen.availHeight),
             e
           );
         }
@@ -7864,9 +7867,10 @@
           super(),
             (this.m_rgControllers = new Map()),
             "undefined" != typeof SteamClient &&
-              ((this.m_hUnregisterControllerInput = SteamClient.Input.RegisterForControllerInputMessages(
-                this.HandleControllerInputMessages
-              )),
+              ((this.m_hUnregisterControllerInput =
+                SteamClient.Input.RegisterForControllerInputMessages(
+                  this.HandleControllerInputMessages
+                )),
               SteamClient.System.UI.RegisterForSystemKeyEvents(
                 this.HandleSystemKeyEvents
               )),
@@ -8970,11 +8974,10 @@
             () => S.RegisterNavigationItem(S.Root, E.current),
             [S, E]
           ),
-          s.a.useLayoutEffect(() => n.RegisterGamepadNavigationTree(S, h), [
-            n,
-            h,
-            S,
-          ]),
+          s.a.useLayoutEffect(
+            () => n.RegisterGamepadNavigationTree(S, h),
+            [n, h, S]
+          ),
           s.a.useLayoutEffect(
             () => (Object(a.d)(d, S), () => Object(a.d)(d, null)),
             [d, S]
@@ -9275,9 +9278,10 @@
         LoadSettings() {
           return Object(i.a)(this, void 0, void 0, function* () {
             (this.m_bLoading = !0),
-              (this.m_bIncludeBacktraceInLog = !!(yield this.m_Storage.GetObject(
-                u.k_IncludeBacktraceInLog_StorageKey
-              )));
+              (this.m_bIncludeBacktraceInLog =
+                !!(yield this.m_Storage.GetObject(
+                  u.k_IncludeBacktraceInLog_StorageKey
+                )));
             const e = yield this.m_Storage.GetObject(
               u.k_EnabledLogNames_StorageKey
             );
@@ -9466,9 +9470,8 @@
         }
         InternalShow(e) {
           this.m_container ||
-            ((this.m_container = this.m_parent.ownerDocument.createElement(
-              "div"
-            )),
+            ((this.m_container =
+              this.m_parent.ownerDocument.createElement("div")),
             this.m_parent.appendChild(this.m_container)),
             i.render(e, this.m_container);
         }
@@ -10069,13 +10072,15 @@
               e.bIgnoreSavedDimensions ||
               e.strRestoreDetails
                 ? e.strRestoreDetails &&
-                  ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
+                  ((this.m_strInitialSavedDimensionsKey =
+                    this.GetSavedDimensionsKey()),
                   f.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
-                : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
+                : ((this.m_strInitialSavedDimensionsKey =
+                    this.GetSavedDimensionsKey()),
                   (e.strRestoreDetails = f.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),

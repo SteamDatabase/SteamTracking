@@ -274,8 +274,8 @@
                     e.data.bAllowAppImpressions &&
                       (this.m_bAllowAppImpressions =
                         e.data.bAllowAppImpressions),
-                    (this.m_bShowFilteredUserReviewScores = !!e.data
-                      .bShowFilteredUserReviewScores),
+                    (this.m_bShowFilteredUserReviewScores =
+                      !!e.data.bShowFilteredUserReviewScores),
                     void 0 !== e.data.rgPrimaryLanguage &&
                       (this.m_primaryLanguage = e.data.rgPrimaryLanguage),
                     e.data.rgSecondaryLanguages &&

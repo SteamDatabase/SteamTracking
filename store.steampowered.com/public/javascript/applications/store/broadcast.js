@@ -3790,8 +3790,10 @@
             (this.m_TextFilterPreferences = new Ge.m());
           {
             let e = new Ue.a();
-            (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
-              (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends());
+            (this.m_TextFilterPreferences.eTextFilterSetting =
+              e.text_filter_setting()),
+              (this.m_TextFilterPreferences.bIgnoreFriends =
+                e.text_filter_ignore_friends());
           }
           this.m_TextFilterWords = new Ue.m();
         }
@@ -3926,11 +3928,13 @@
           let t = !1;
           e.text_filter_setting() !==
             this.m_TextFilterPreferences.eTextFilterSetting &&
-            ((this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
+            ((this.m_TextFilterPreferences.eTextFilterSetting =
+              e.text_filter_setting()),
             (t = !0)),
             e.text_filter_ignore_friends() !==
               this.m_TextFilterPreferences.bIgnoreFriends &&
-              ((this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
+              ((this.m_TextFilterPreferences.bIgnoreFriends =
+                e.text_filter_ignore_friends()),
               (t = !0)),
             t && this.SaveTextFilterPreferences();
         }
@@ -6049,8 +6053,9 @@
             });
         }
         CloseBroadcastPopup() {
-          const e = Wt.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const e = Wt.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(Pt.e)(e, 7, this.props.stream.snr),
             Object(Jt.a)() && Object(Jt.a)().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
@@ -6101,8 +6106,8 @@
                       steamIDBroadcast: this.props.stream.steamid,
                       watchLocation: 6,
                       bStartMuted: this.props.bStartMuted,
-                      fnRenderBroadcastContext: this.props
-                        .fnRenderBroadcastContext,
+                      fnRenderBroadcastContext:
+                        this.props.fnRenderBroadcastContext,
                       fnOnVideoEnd: this.props.fnOnVideoEnd,
                       nAppIDVOD: this.props.stream.nAppIDVOD,
                     })
@@ -6119,8 +6124,9 @@
       let Qt = class extends c.a.Component {
         ConstructBroadcastLink() {
           let e = this.props.stream;
-          const t = Wt.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const t = Wt.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           let r = Xt.list.find(
             (r) =>
               r.appid == t &&
@@ -6159,8 +6165,9 @@
         }
         OnToggleChat(e) {
           e.preventDefault();
-          const t = Wt.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const t = Wt.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(Pt.e)(
             t,
             "show" === Pt.a.Get().GetChatVisibility() ? 5 : 4,
@@ -6169,8 +6176,9 @@
             Pt.a.Get().ToggleChatVisibility();
         }
         onWatchBroadcastPage() {
-          const e = Wt.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const e = Wt.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(Pt.e)(e, 9, this.props.stream.snr);
         }
         render() {

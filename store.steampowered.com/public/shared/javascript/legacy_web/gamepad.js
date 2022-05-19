@@ -214,9 +214,10 @@
         LoadSettings() {
           return Object(o.a)(this, void 0, void 0, function* () {
             (this.m_bLoading = !0),
-              (this.m_bIncludeBacktraceInLog = !!(yield this.m_Storage.GetObject(
-                A.k_IncludeBacktraceInLog_StorageKey
-              )));
+              (this.m_bIncludeBacktraceInLog =
+                !!(yield this.m_Storage.GetObject(
+                  A.k_IncludeBacktraceInLog_StorageKey
+                )));
             const t = yield this.m_Storage.GetObject(
               A.k_EnabledLogNames_StorageKey
             );
@@ -995,9 +996,10 @@
           n && I.a(this.m_rgGamepadNavigationTrees, n),
             t ||
               (this.m_rgGamepadNavigationTrees.length &&
-                (t = this.m_rgGamepadNavigationTrees[
-                  this.m_rgGamepadNavigationTrees.length - 1
-                ]));
+                (t =
+                  this.m_rgGamepadNavigationTrees[
+                    this.m_rgGamepadNavigationTrees.length - 1
+                  ]));
           const o = this.m_LastActiveFocusNavTree == t;
           t && I.a(this.m_rgGamepadNavigationTrees, t),
             (this.m_LastActiveNavTree = t),
@@ -2153,17 +2155,13 @@
         }
         FindFocusableDescendant(t, e) {
           const n = j(t),
-            {
-              focusableIfNoChildren: i,
-              childFocusDisabled: o,
-            } = this.m_Properties;
+            { focusableIfNoChildren: i, childFocusDisabled: o } =
+              this.m_Properties;
           if (o) return null;
           if (this.m_rgChildren.length) {
             this.EnsureChildrenSorted();
-            const {
-              navEntryPreferPosition: o,
-              resetNavOnEntry: s,
-            } = this.m_Properties;
+            const { navEntryPreferPosition: o, resetNavOnEntry: s } =
+              this.m_Properties;
             let r,
               a = this.GetActiveChildIndex();
             if ((s && void 0 !== t && (a = -1), !this.IsValidChildIndex(a))) {

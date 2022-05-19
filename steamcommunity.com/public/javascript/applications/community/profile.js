@@ -1894,11 +1894,8 @@
         constructor(e) {
           (this.m_bLoaded = !1),
             e &&
-              (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup = new me(
-                new F.a(e.steamid),
-                e.name,
-                e.avatarHash
-              ));
+              (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup =
+                new me(new F.a(e.steamid), e.name, e.avatarHash));
         }
         get PrimaryGroup() {
           return this.m_PrimaryGroup;
@@ -2801,7 +2798,8 @@
         }
         componentDidMount() {
           return Object(n.a)(this, void 0, void 0, function* () {
-            (this.m_rgFrames = yield this.props.ProfileItems.GetOwnedAvatarFrames()),
+            (this.m_rgFrames =
+              yield this.props.ProfileItems.GetOwnedAvatarFrames()),
               this.setState({ bReady: !0 });
           });
         }
@@ -4944,9 +4942,8 @@
             a.createElement(sr, {
               OnChange: this.OnSettingChanged,
               eCurrentPermission: t,
-              eMinPrivacy: this.props.PrivacyStore.GetPrivacySetting(
-                "PrivacyProfile"
-              ),
+              eMinPrivacy:
+                this.props.PrivacyStore.GetPrivacySetting("PrivacyProfile"),
             }),
             e,
             { bOverlapHorizontal: !0 }
@@ -5103,13 +5100,11 @@
             fill: "#272B30",
           }),
           a.createElement("path", {
-            d:
-              "M57.0246 64.052C63.4696 64.052 68.6942 58.8273 68.6942 52.3823C68.6942 45.9373 63.4696 40.7126 57.0246 40.7126C50.5796 40.7126 45.3549 45.9373 45.3549 52.3823C45.3549 58.8273 50.5796 64.052 57.0246 64.052Z",
+            d: "M57.0246 64.052C63.4696 64.052 68.6942 58.8273 68.6942 52.3823C68.6942 45.9373 63.4696 40.7126 57.0246 40.7126C50.5796 40.7126 45.3549 45.9373 45.3549 52.3823C45.3549 58.8273 50.5796 64.052 57.0246 64.052Z",
             fill: "#444A51",
           }),
           a.createElement("path", {
-            d:
-              "M77.4319 72.8873C76.6734 68.1167 70.0792 66.5175 65.3744 65.0024C63.1235 66.918 60.2118 68.0792 57.0246 68.0792C53.8374 68.0792 50.9262 66.918 48.6753 65.0024C43.97 66.5175 37.3763 68.1167 36.6172 72.8873C35.2667 81.3728 47.8848 86.2873 57.0246 86.2873C66.1648 86.2873 78.7825 81.3728 77.4319 72.8873Z",
+            d: "M77.4319 72.8873C76.6734 68.1167 70.0792 66.5175 65.3744 65.0024C63.1235 66.918 60.2118 68.0792 57.0246 68.0792C53.8374 68.0792 50.9262 66.918 48.6753 65.0024C43.97 66.5175 37.3763 68.1167 36.6172 72.8873C35.2667 81.3728 47.8848 86.2873 57.0246 86.2873C66.1648 86.2873 78.7825 81.3728 77.4319 72.8873Z",
             fill: "#444A51",
           }),
           a.createElement("rect", {
@@ -5209,8 +5204,7 @@
             fill: "#373C42",
           }),
           a.createElement("path", {
-            d:
-              "M26 120.755C26 119.098 27.3431 117.755 29 117.755H283C284.657 117.755 286 119.098 286 120.755V131.755H26V120.755Z",
+            d: "M26 120.755C26 119.098 27.3431 117.755 29 117.755H283C284.657 117.755 286 119.098 286 120.755V131.755H26V120.755Z",
             fill: "#444A51",
           }),
           a.createElement("rect", {
@@ -5286,8 +5280,7 @@
             fill: "#373C42",
           }),
           a.createElement("path", {
-            d:
-              "M26 217.54C26 215.883 27.3431 214.54 29 214.54H283C284.657 214.54 286 215.883 286 217.54V228.54H26V217.54Z",
+            d: "M26 217.54C26 215.883 27.3431 214.54 29 214.54H283C284.657 214.54 286 215.883 286 217.54V228.54H26V217.54Z",
             fill: "#444A51",
           }),
           a.createElement("rect", {

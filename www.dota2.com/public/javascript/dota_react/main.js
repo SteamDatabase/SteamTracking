@@ -2013,7 +2013,8 @@ var CLSTAMP = "7239402";
               !!this.m_activeDropRegion != !!d &&
                 (this.ShowDragGhost(),
                 this.m_dropGhost ||
-                  (this.m_dropGhost = this.m_activeDraggable.renderDropGhost())),
+                  (this.m_dropGhost =
+                    this.m_activeDraggable.renderDropGhost())),
                 this.m_activeDropRegion &&
                   this.m_activeDropRegion != d &&
                   this.m_activeDropRegion.OnDragLeave(this.m_activeDraggable),
@@ -5020,103 +5021,13 @@ var CLSTAMP = "7239402";
           e.squareTo(t), this.reduce(t);
         });
       var N = [
-          2,
-          3,
-          5,
-          7,
-          11,
-          13,
-          17,
-          19,
-          23,
-          29,
-          31,
-          37,
-          41,
-          43,
-          47,
-          53,
-          59,
-          61,
-          67,
-          71,
-          73,
-          79,
-          83,
-          89,
-          97,
-          101,
-          103,
-          107,
-          109,
-          113,
-          127,
-          131,
-          137,
-          139,
-          149,
-          151,
-          157,
-          163,
-          167,
-          173,
-          179,
-          181,
-          191,
-          193,
-          197,
-          199,
-          211,
-          223,
-          227,
-          229,
-          233,
-          239,
-          241,
-          251,
-          257,
-          263,
-          269,
-          271,
-          277,
-          281,
-          283,
-          293,
-          307,
-          311,
-          313,
-          317,
-          331,
-          337,
-          347,
-          349,
-          353,
-          359,
-          367,
-          373,
-          379,
-          383,
-          389,
-          397,
-          401,
-          409,
-          419,
-          421,
-          431,
-          433,
-          439,
-          443,
-          449,
-          457,
-          461,
-          463,
-          467,
-          479,
-          487,
-          491,
-          499,
-          503,
-          509,
+          2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
+          67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137,
+          139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211,
+          223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283,
+          293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379,
+          383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461,
+          463, 467, 479, 487, 491, 499, 503, 509,
         ],
         A = (1 << 26) / N[N.length - 1];
       (r.prototype.chunkSize = function (e) {
@@ -9908,9 +9819,10 @@ var CLSTAMP = "7239402";
               a && u.a(this.m_rgGamepadNavigationTrees, a),
                 e ||
                   (this.m_rgGamepadNavigationTrees.length &&
-                    (e = this.m_rgGamepadNavigationTrees[
-                      this.m_rgGamepadNavigationTrees.length - 1
-                    ]));
+                    (e =
+                      this.m_rgGamepadNavigationTrees[
+                        this.m_rgGamepadNavigationTrees.length - 1
+                      ]));
               var n = this.m_LastActiveFocusNavTree == e;
               e && u.a(this.m_rgGamepadNavigationTrees, e),
                 (this.m_LastActiveNavTree = e),
@@ -12106,15 +12018,14 @@ var CLSTAMP = "7239402";
                         Object(i.G)(function () {
                           for (var t = 0; t < 30; ++t)
                             l[t] &&
-                              (u.m_curLocImageGroup.localized_images[
-                                t
-                              ] = e.GenerateArtworkURLFromHashAndExtensions(
-                                r,
-                                o,
-                                d.full,
-                                t,
-                                u.m_curLocImageGroupType
-                              ));
+                              (u.m_curLocImageGroup.localized_images[t] =
+                                e.GenerateArtworkURLFromHashAndExtensions(
+                                  r,
+                                  o,
+                                  d.full,
+                                  t,
+                                  u.m_curLocImageGroupType
+                                ));
                         }),
                         [2]
                       );
@@ -12139,15 +12050,14 @@ var CLSTAMP = "7239402";
               if (n.image_hash == t) {
                 var r = p.a.InitFromClanID(n.clanAccountID),
                   o = e.GetHashAndExt(n);
-                this.m_curLocImageGroup.localized_images[
-                  a
-                ] = e.GenerateArtworkURLFromHashAndExtensions(
-                  r,
-                  o,
-                  d.full,
-                  a,
-                  this.m_curLocImageGroupType
-                );
+                this.m_curLocImageGroup.localized_images[a] =
+                  e.GenerateArtworkURLFromHashAndExtensions(
+                    r,
+                    o,
+                    d.full,
+                    a,
+                    this.m_curLocImageGroupType
+                  );
               }
             }),
             (e.prototype.GetAllLocalizedGroupImages = function () {
@@ -14723,15 +14633,13 @@ var CLSTAMP = "7239402";
           o.a.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d:
-              "M105.388 67.2088C106.441 62.9818 107 58.5568 107 54C107 24.1766 83.0472 0 53.5 0C23.9528 0 0 24.1766 0 54C0 58.4814 0.540852 62.8354 1.56027 66.9989C13.4899 68.4437 22.7369 78.6942 22.7369 91.1247C22.7369 93.3544 22.4394 95.514 21.8822 97.5653C30.7397 104.125 41.6716 108 53.5 108C65.8328 108 77.191 103.788 86.2395 96.7115C85.8214 94.9177 85.6002 93.0473 85.6002 91.1247C85.6002 79.1811 94.1371 69.25 105.388 67.2088ZM36.8306 24.3121C36.8303 31.0623 42.1083 33.7623 51.0135 33.7623C59.9188 33.7623 73.7722 38.4875 73.7722 52.6626C73.7722 52.6626 66.186 55.3627 66.5155 62.1129C66.6689 65.2564 68.8968 67.6678 71.2671 70.2335C73.9868 73.1775 76.8941 76.3245 77.0705 81.0132C90.9236 71.9007 90.9236 52.6626 90.9236 52.6626C91.9128 24.3121 64.867 14.5245 54.3119 14.5244C43.7568 14.5243 36.8309 17.5618 36.8306 24.3121ZM70.1693 80.3367C70.1696 73.5864 64.8916 70.8865 55.9864 70.8865C47.0812 70.8865 33.2278 66.1613 33.2278 51.9862C33.2278 51.9862 40.814 49.2861 40.4844 42.5358C40.331 39.3924 38.1032 36.9809 35.7329 34.4152C33.0131 31.4713 30.1058 28.3243 29.9294 23.6356C16.0763 32.7481 16.0763 51.9862 16.0763 51.9862C15.0871 80.3367 42.133 90.1243 52.688 90.1244C63.2431 90.1245 70.169 87.087 70.1693 80.3367ZM62.4167 52.5726C62.4167 57.5431 58.4245 61.5726 53.5 61.5726C48.5755 61.5726 44.5833 57.5431 44.5833 52.5726C44.5833 47.602 48.5755 43.5726 53.5 43.5726C58.4245 43.5726 62.4167 47.602 62.4167 52.5726Z",
+            d: "M105.388 67.2088C106.441 62.9818 107 58.5568 107 54C107 24.1766 83.0472 0 53.5 0C23.9528 0 0 24.1766 0 54C0 58.4814 0.540852 62.8354 1.56027 66.9989C13.4899 68.4437 22.7369 78.6942 22.7369 91.1247C22.7369 93.3544 22.4394 95.514 21.8822 97.5653C30.7397 104.125 41.6716 108 53.5 108C65.8328 108 77.191 103.788 86.2395 96.7115C85.8214 94.9177 85.6002 93.0473 85.6002 91.1247C85.6002 79.1811 94.1371 69.25 105.388 67.2088ZM36.8306 24.3121C36.8303 31.0623 42.1083 33.7623 51.0135 33.7623C59.9188 33.7623 73.7722 38.4875 73.7722 52.6626C73.7722 52.6626 66.186 55.3627 66.5155 62.1129C66.6689 65.2564 68.8968 67.6678 71.2671 70.2335C73.9868 73.1775 76.8941 76.3245 77.0705 81.0132C90.9236 71.9007 90.9236 52.6626 90.9236 52.6626C91.9128 24.3121 64.867 14.5245 54.3119 14.5244C43.7568 14.5243 36.8309 17.5618 36.8306 24.3121ZM70.1693 80.3367C70.1696 73.5864 64.8916 70.8865 55.9864 70.8865C47.0812 70.8865 33.2278 66.1613 33.2278 51.9862C33.2278 51.9862 40.814 49.2861 40.4844 42.5358C40.331 39.3924 38.1032 36.9809 35.7329 34.4152C33.0131 31.4713 30.1058 28.3243 29.9294 23.6356C16.0763 32.7481 16.0763 51.9862 16.0763 51.9862C15.0871 80.3367 42.133 90.1243 52.688 90.1244C63.2431 90.1245 70.169 87.087 70.1693 80.3367ZM62.4167 52.5726C62.4167 57.5431 58.4245 61.5726 53.5 61.5726C48.5755 61.5726 44.5833 57.5431 44.5833 52.5726C44.5833 47.602 48.5755 43.5726 53.5 43.5726C58.4245 43.5726 62.4167 47.602 62.4167 52.5726Z",
             fill: e.color ? e.color : "url(#Gradient1)",
           }),
           o.a.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d:
-              "M105.388 67.2088C106.441 62.9818 107 58.5568 107 54C107 24.1766 83.0472 0 53.5 0C23.9528 0 0 24.1766 0 54C0 58.4814 0.540852 62.8354 1.56027 66.9989C13.4899 68.4437 22.7369 78.6942 22.7369 91.1247C22.7369 93.3544 22.4394 95.514 21.8822 97.5653C30.7397 104.125 41.6716 108 53.5 108C65.8328 108 77.191 103.788 86.2395 96.7115C85.8214 94.9177 85.6002 93.0473 85.6002 91.1247C85.6002 79.1811 94.1371 69.25 105.388 67.2088ZM36.8306 24.3121C36.8303 31.0623 42.1083 33.7623 51.0135 33.7623C59.9188 33.7623 73.7722 38.4875 73.7722 52.6626C73.7722 52.6626 66.186 55.3627 66.5155 62.1129C66.6689 65.2564 68.8968 67.6678 71.2671 70.2335C73.9868 73.1775 76.8941 76.3245 77.0705 81.0132C90.9236 71.9007 90.9236 52.6626 90.9236 52.6626C91.9128 24.3121 64.867 14.5245 54.3119 14.5244C43.7568 14.5243 36.8309 17.5618 36.8306 24.3121ZM70.1693 80.3367C70.1696 73.5864 64.8916 70.8865 55.9864 70.8865C47.0812 70.8865 33.2278 66.1613 33.2278 51.9862C33.2278 51.9862 40.814 49.2861 40.4844 42.5358C40.331 39.3924 38.1032 36.9809 35.7329 34.4152C33.0131 31.4713 30.1058 28.3243 29.9294 23.6356C16.0763 32.7481 16.0763 51.9862 16.0763 51.9862C15.0871 80.3367 42.133 90.1243 52.688 90.1244C63.2431 90.1245 70.169 87.087 70.1693 80.3367ZM62.4167 52.5726C62.4167 57.5431 58.4245 61.5726 53.5 61.5726C48.5755 61.5726 44.5833 57.5431 44.5833 52.5726C44.5833 47.602 48.5755 43.5726 53.5 43.5726C58.4245 43.5726 62.4167 47.602 62.4167 52.5726Z",
+            d: "M105.388 67.2088C106.441 62.9818 107 58.5568 107 54C107 24.1766 83.0472 0 53.5 0C23.9528 0 0 24.1766 0 54C0 58.4814 0.540852 62.8354 1.56027 66.9989C13.4899 68.4437 22.7369 78.6942 22.7369 91.1247C22.7369 93.3544 22.4394 95.514 21.8822 97.5653C30.7397 104.125 41.6716 108 53.5 108C65.8328 108 77.191 103.788 86.2395 96.7115C85.8214 94.9177 85.6002 93.0473 85.6002 91.1247C85.6002 79.1811 94.1371 69.25 105.388 67.2088ZM36.8306 24.3121C36.8303 31.0623 42.1083 33.7623 51.0135 33.7623C59.9188 33.7623 73.7722 38.4875 73.7722 52.6626C73.7722 52.6626 66.186 55.3627 66.5155 62.1129C66.6689 65.2564 68.8968 67.6678 71.2671 70.2335C73.9868 73.1775 76.8941 76.3245 77.0705 81.0132C90.9236 71.9007 90.9236 52.6626 90.9236 52.6626C91.9128 24.3121 64.867 14.5245 54.3119 14.5244C43.7568 14.5243 36.8309 17.5618 36.8306 24.3121ZM70.1693 80.3367C70.1696 73.5864 64.8916 70.8865 55.9864 70.8865C47.0812 70.8865 33.2278 66.1613 33.2278 51.9862C33.2278 51.9862 40.814 49.2861 40.4844 42.5358C40.331 39.3924 38.1032 36.9809 35.7329 34.4152C33.0131 31.4713 30.1058 28.3243 29.9294 23.6356C16.0763 32.7481 16.0763 51.9862 16.0763 51.9862C15.0871 80.3367 42.133 90.1243 52.688 90.1244C63.2431 90.1245 70.169 87.087 70.1693 80.3367ZM62.4167 52.5726C62.4167 57.5431 58.4245 61.5726 53.5 61.5726C48.5755 61.5726 44.5833 57.5431 44.5833 52.5726C44.5833 47.602 48.5755 43.5726 53.5 43.5726C58.4245 43.5726 62.4167 47.602 62.4167 52.5726Z",
             fill: e.color ? e.color : "url(#Gradient1)",
           })
         );
@@ -14751,8 +14659,7 @@ var CLSTAMP = "7239402";
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d:
-              "M21.5317 8.08518C21.9792 7.48382 21.9792 6.65974 21.5317 6.05839C16.4487 -0.772392 6.112 -0.772392 1.02897 6.05839C0.581487 6.65974 0.581488 7.48382 1.02898 8.08518C6.112 14.916 16.4487 14.916 21.5317 8.08518ZM13.514 7.07148C13.514 8.30518 12.5138 9.30529 11.2801 9.30529C10.0464 9.30529 9.04633 8.30518 9.04633 7.07148C9.04633 5.83778 10.0464 4.83767 11.2801 4.83767C12.5138 4.83767 13.514 5.83778 13.514 7.07148ZM15.701 7.07148C15.701 9.51305 13.7217 11.4923 11.2801 11.4923C8.83857 11.4923 6.85929 9.51305 6.85929 7.07148C6.85929 4.62991 8.83857 2.65063 11.2801 2.65063C13.7217 2.65063 15.701 4.62991 15.701 7.07148Z",
+            d: "M21.5317 8.08518C21.9792 7.48382 21.9792 6.65974 21.5317 6.05839C16.4487 -0.772392 6.112 -0.772392 1.02897 6.05839C0.581487 6.65974 0.581488 7.48382 1.02898 8.08518C6.112 14.916 16.4487 14.916 21.5317 8.08518ZM13.514 7.07148C13.514 8.30518 12.5138 9.30529 11.2801 9.30529C10.0464 9.30529 9.04633 8.30518 9.04633 7.07148C9.04633 5.83778 10.0464 4.83767 11.2801 4.83767C12.5138 4.83767 13.514 5.83778 13.514 7.07148ZM15.701 7.07148C15.701 9.51305 13.7217 11.4923 11.2801 11.4923C8.83857 11.4923 6.85929 9.51305 6.85929 7.07148C6.85929 4.62991 8.83857 2.65063 11.2801 2.65063C13.7217 2.65063 15.701 4.62991 15.701 7.07148Z",
           })
         );
       }
@@ -14771,18 +14678,15 @@ var CLSTAMP = "7239402";
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d:
-              "M21.5317 10.0852C21.9792 9.48383 21.9792 8.65975 21.5317 8.05839C16.4487 1.22761 6.112 1.22761 1.02897 8.05839C0.581487 8.65975 0.581488 9.48383 1.02898 10.0852C6.112 16.916 16.4487 16.916 21.5317 10.0852ZM13.5143 9.07149C13.5143 10.3052 12.5142 11.3053 11.2805 11.3053C10.0468 11.3053 9.04672 10.3052 9.04672 9.07149C9.04672 7.83779 10.0468 6.83768 11.2805 6.83768C12.5142 6.83768 13.5143 7.83779 13.5143 9.07149ZM15.7014 9.07149C15.7014 11.5131 13.7221 13.4923 11.2805 13.4923C8.83896 13.4923 6.85968 11.5131 6.85968 9.07149C6.85968 6.62992 8.83896 4.65064 11.2805 4.65064C13.7221 4.65064 15.7014 6.62992 15.7014 9.07149Z",
+            d: "M21.5317 10.0852C21.9792 9.48383 21.9792 8.65975 21.5317 8.05839C16.4487 1.22761 6.112 1.22761 1.02897 8.05839C0.581487 8.65975 0.581488 9.48383 1.02898 10.0852C6.112 16.916 16.4487 16.916 21.5317 10.0852ZM13.5143 9.07149C13.5143 10.3052 12.5142 11.3053 11.2805 11.3053C10.0468 11.3053 9.04672 10.3052 9.04672 9.07149C9.04672 7.83779 10.0468 6.83768 11.2805 6.83768C12.5142 6.83768 13.5143 7.83779 13.5143 9.07149ZM15.7014 9.07149C15.7014 11.5131 13.7221 13.4923 11.2805 13.4923C8.83896 13.4923 6.85968 11.5131 6.85968 9.07149C6.85968 6.62992 8.83896 4.65064 11.2805 4.65064C13.7221 4.65064 15.7014 6.62992 15.7014 9.07149Z",
           }),
           o.a.createElement("path", {
             fill: "currentColor",
-            d:
-              "M1.87436 3.07896C1.55407 2.75867 1.55408 2.23939 1.87436 1.9191C2.19464 1.59882 2.71393 1.59882 3.03421 1.9191L17.3391 16.224C17.6593 16.5442 17.6593 17.0635 17.3391 17.3838C17.0188 17.7041 16.4995 17.7041 16.1792 17.3838L1.87436 3.07896Z",
+            d: "M1.87436 3.07896C1.55407 2.75867 1.55408 2.23939 1.87436 1.9191C2.19464 1.59882 2.71393 1.59882 3.03421 1.9191L17.3391 16.224C17.6593 16.5442 17.6593 17.0635 17.3391 17.3838C17.0188 17.7041 16.4995 17.7041 16.1792 17.3838L1.87436 3.07896Z",
           }),
           o.a.createElement("path", {
             fill: "currentColor",
-            d:
-              "M3.03421 1.9191C2.71393 1.59882 2.71386 1.07978 3.03415 0.7595C3.35443 0.439216 3.87372 0.439216 4.194 0.7595L18.4989 15.0644C18.8191 15.3846 18.8191 15.9039 18.4989 16.2242C18.1786 16.5445 17.6593 16.5442 17.3391 16.224L3.03421 1.9191Z",
+            d: "M3.03421 1.9191C2.71393 1.59882 2.71386 1.07978 3.03415 0.7595C3.35443 0.439216 3.87372 0.439216 4.194 0.7595L18.4989 15.0644C18.8191 15.3846 18.8191 15.9039 18.4989 16.2242C18.1786 16.5445 17.6593 16.5442 17.3391 16.224L3.03421 1.9191Z",
           })
         );
       }
@@ -14841,8 +14745,7 @@ var CLSTAMP = "7239402";
           ),
           o.a.createElement("path", {
             fill: "currentColor",
-            d:
-              "M8.24899 0C12.8031 0 16.498 3.69531 16.498 8.25C16.498 9.88281 16.0361 11.3867 15.2198 12.6543L21.4603 18.8633C22.1799 19.583 22.1799 20.7539 21.4603 21.4629C21.1058 21.8174 20.644 22 20.1606 22C19.7095 22 19.2262 21.8174 18.861 21.4629L12.6528 15.2217C11.3853 16.0381 9.88161 16.5 8.24899 16.5C3.69486 16.5 0 12.8047 0 8.25C0 3.69531 3.69486 0 8.24899 0ZM8.24899 13.75C11.2779 13.75 13.7483 11.2793 13.7483 8.25C13.7483 5.2207 11.2779 2.75 8.24899 2.75C5.22007 2.75 2.74966 5.2207 2.74966 8.25C2.74966 11.2793 5.22007 13.75 8.24899 13.75Z",
+            d: "M8.24899 0C12.8031 0 16.498 3.69531 16.498 8.25C16.498 9.88281 16.0361 11.3867 15.2198 12.6543L21.4603 18.8633C22.1799 19.583 22.1799 20.7539 21.4603 21.4629C21.1058 21.8174 20.644 22 20.1606 22C19.7095 22 19.2262 21.8174 18.861 21.4629L12.6528 15.2217C11.3853 16.0381 9.88161 16.5 8.24899 16.5C3.69486 16.5 0 12.8047 0 8.25C0 3.69531 3.69486 0 8.24899 0ZM8.24899 13.75C11.2779 13.75 13.7483 11.2793 13.7483 8.25C13.7483 5.2207 11.2779 2.75 8.24899 2.75C5.22007 2.75 2.74966 5.2207 2.74966 8.25C2.74966 11.2793 5.22007 13.75 8.24899 13.75Z",
           })
         );
       }
@@ -14922,8 +14825,7 @@ var CLSTAMP = "7239402";
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d:
-              "M25 12.5C25 19.4036 19.4036 25 12.5 25C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5ZM11 20V11.25H14V20H11ZM10 6.25C10 7.63071 11.1193 8.75 12.5 8.75C13.8807 8.75 15 7.63071 15 6.25C15 4.86929 13.8807 3.75 12.5 3.75C11.1193 3.75 10 4.86929 10 6.25Z",
+            d: "M25 12.5C25 19.4036 19.4036 25 12.5 25C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5ZM11 20V11.25H14V20H11ZM10 6.25C10 7.63071 11.1193 8.75 12.5 8.75C13.8807 8.75 15 7.63071 15 6.25C15 4.86929 13.8807 3.75 12.5 3.75C11.1193 3.75 10 4.86929 10 6.25Z",
           })
         );
       }
@@ -14962,15 +14864,13 @@ var CLSTAMP = "7239402";
           ),
           o.a.createElement("path", {
             fill: "currentColor",
-            d:
-              "M25.8051 26.8108C25.9997 27.7537 24.8802 28.4 24.161 27.7601L16.5223 20.9632C16.013 20.5099 16.0966 19.691 16.6871 19.3501L22.2588 16.1332C22.8493 15.7923 23.6003 16.1294 23.7382 16.7971L25.8051 26.8108Z",
+            d: "M25.8051 26.8108C25.9997 27.7537 24.8802 28.4 24.161 27.7601L16.5223 20.9632C16.013 20.5099 16.0966 19.691 16.6871 19.3501L22.2588 16.1332C22.8493 15.7923 23.6003 16.1294 23.7382 16.7971L25.8051 26.8108Z",
           }),
           o.a.createElement("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d:
-              "M11.5501 0.98291C5.55788 0.98291 0.700195 5.84059 0.700195 11.8328C0.700195 17.8251 5.55788 22.6828 11.5501 22.6828H22.4001C28.3923 22.6828 33.25 17.8251 33.25 11.8328C33.25 5.84059 28.3923 0.98291 22.4001 0.98291H11.5501ZM10.6671 14.1361C11.9391 14.1361 12.9702 13.105 12.9702 11.8331C12.9702 10.5611 11.9391 9.53004 10.6671 9.53004C9.39519 9.53004 8.36408 10.5611 8.36408 11.8331C8.36408 13.105 9.39519 14.1361 10.6671 14.1361ZM19.2778 11.8329C19.2778 13.1048 18.2466 14.136 16.9747 14.136C15.7028 14.136 14.6717 13.1048 14.6717 11.8329C14.6717 10.561 15.7028 9.52986 16.9747 9.52986C18.2466 9.52986 19.2778 10.561 19.2778 11.8329ZM23.2829 14.136C24.5548 14.136 25.5859 13.1048 25.5859 11.8329C25.5859 10.561 24.5548 9.52986 23.2829 9.52986C22.0109 9.52986 20.9798 10.561 20.9798 11.8329C20.9798 13.1048 22.0109 14.136 23.2829 14.136Z",
+            d: "M11.5501 0.98291C5.55788 0.98291 0.700195 5.84059 0.700195 11.8328C0.700195 17.8251 5.55788 22.6828 11.5501 22.6828H22.4001C28.3923 22.6828 33.25 17.8251 33.25 11.8328C33.25 5.84059 28.3923 0.98291 22.4001 0.98291H11.5501ZM10.6671 14.1361C11.9391 14.1361 12.9702 13.105 12.9702 11.8331C12.9702 10.5611 11.9391 9.53004 10.6671 9.53004C9.39519 9.53004 8.36408 10.5611 8.36408 11.8331C8.36408 13.105 9.39519 14.1361 10.6671 14.1361ZM19.2778 11.8329C19.2778 13.1048 18.2466 14.136 16.9747 14.136C15.7028 14.136 14.6717 13.1048 14.6717 11.8329C14.6717 10.561 15.7028 9.52986 16.9747 9.52986C18.2466 9.52986 19.2778 10.561 19.2778 11.8329ZM23.2829 14.136C24.5548 14.136 25.5859 13.1048 25.5859 11.8329C25.5859 10.561 24.5548 9.52986 23.2829 9.52986C22.0109 9.52986 20.9798 10.561 20.9798 11.8329C20.9798 13.1048 22.0109 14.136 23.2829 14.136Z",
           })
         );
       }
@@ -17347,10 +17247,8 @@ var CLSTAMP = "7239402";
               n[o] = arguments[o];
             var i = this[a + "_DebounceProperties"];
             void 0 === i &&
-              (i = this[a + "_DebounceProperties"] = {
-                hTimer: void 0,
-                nPending: 0,
-              }),
+              (i = this[a + "_DebounceProperties"] =
+                { hTimer: void 0, nPending: 0 }),
               void 0 === i.hTimer
                 ? (r.apply(this, n),
                   (i.hTimer = window.setInterval(function () {
@@ -18190,9 +18088,8 @@ var CLSTAMP = "7239402";
             }),
             (e.prototype.InternalShow = function (e) {
               this.m_container ||
-                ((this.m_container = this.m_parent.ownerDocument.createElement(
-                  "div"
-                )),
+                ((this.m_container =
+                  this.m_parent.ownerDocument.createElement("div")),
                 this.m_parent.appendChild(this.m_container)),
                 n.render(e, this.m_container);
             }),
@@ -19201,8 +19098,10 @@ var CLSTAMP = "7239402";
                 };
               }
               return (
-                (e.availscreenwidth = this.m_menuProps.element.ownerDocument.defaultView.screen.availWidth),
-                (e.availscreenheight = this.m_menuProps.element.ownerDocument.defaultView.screen.availHeight),
+                (e.availscreenwidth =
+                  this.m_menuProps.element.ownerDocument.defaultView.screen.availWidth),
+                (e.availscreenheight =
+                  this.m_menuProps.element.ownerDocument.defaultView.screen.availHeight),
                 e
               );
             }),
@@ -26127,9 +26026,8 @@ var CLSTAMP = "7239402";
                         this.LazyInit(),
                         this.m_mapClanToCreatorHome.has(e.GetAccountID())
                           ? [3, 2]
-                          : (((a = new we(
-                              e
-                            )).m_promise = this.InternalCreatorHome(a, t)),
+                          : (((a = new we(e)).m_promise =
+                              this.InternalCreatorHome(a, t)),
                             [4, a.m_promise])
                       );
                     case 1:
@@ -31275,8 +31173,10 @@ var CLSTAMP = "7239402";
                 (a.creator_steamid = this.creator_steamid),
                 (a.last_update_steamid = this.last_update_steamid),
                 (a.rtime32_last_modified = this.rtime32_last_modified),
-                (a.rtime32_last_solr_search_col_updated = this.rtime32_last_solr_search_col_updated),
-                (a.rtime32_moderator_reviewed = this.rtime32_moderator_reviewed),
+                (a.rtime32_last_solr_search_col_updated =
+                  this.rtime32_last_solr_search_col_updated),
+                (a.rtime32_moderator_reviewed =
+                  this.rtime32_moderator_reviewed),
                 (a.type = this.type),
                 (a.appid = this.appid),
                 (a.name = new Map()),
@@ -31701,9 +31601,10 @@ var CLSTAMP = "7239402";
             (e.prototype.GetPostTimeAndDateUnixSeconds = function () {
               return this.postTime;
             }),
-            (e.prototype.GetVisibilityStartTimeAndDateUnixSeconds = function () {
-              return this.visibilityStartTime;
-            }),
+            (e.prototype.GetVisibilityStartTimeAndDateUnixSeconds =
+              function () {
+                return this.visibilityStartTime;
+              }),
             (e.prototype.BIsEventActionEnabled = function () {
               return (
                 !!this.jsondata.action_end_time &&
@@ -31852,14 +31753,15 @@ var CLSTAMP = "7239402";
                 })
               );
             }),
-            (e.prototype.BSaleShowCuratorRecommendationAtBottomOfPage = function () {
-              return !(
-                this.jsondata.sale_sections &&
-                this.jsondata.sale_sections.some(function (e) {
-                  return "curator_recommendation" == e.section_type;
-                })
-              );
-            }),
+            (e.prototype.BSaleShowCuratorRecommendationAtBottomOfPage =
+              function () {
+                return !(
+                  this.jsondata.sale_sections &&
+                  this.jsondata.sale_sections.some(function (e) {
+                    return "curator_recommendation" == e.section_type;
+                  })
+                );
+              }),
             (e.prototype.GetBroadcastChatVisibility = function () {
               return this.jsondata.broadcastChatSetting || "hide";
             }),
@@ -33266,113 +33168,103 @@ var CLSTAMP = "7239402";
                 this.m_mapAnnouncementBodyToEvent.delete(t);
             }
           }),
-          (e.prototype.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID = function (
-            e,
-            t,
-            a,
-            n,
-            o,
-            i
-          ) {
-            return (
-              void 0 === i && (i = !1),
-              Object(r.b)(this, void 0, void 0, function () {
-                var c, s, l, u, d, p, m, _, b;
+          (e.prototype.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID =
+            function (e, t, a, n, o, i) {
+              return (
+                void 0 === i && (i = !1),
+                Object(r.b)(this, void 0, void 0, function () {
+                  var c, s, l, u, d, p, m, _, b;
+                  return Object(r.e)(this, function (r) {
+                    switch (r.label) {
+                      case 0:
+                        return (
+                          (c = ca(i ? 0 : Object(de.d)(ge.c.LANGUAGE))),
+                          (s = {
+                            appid: t,
+                            clan_accountid: e ? e.GetAccountID() : void 0,
+                            announcement_gid: n,
+                            event_gid: a,
+                            lang_list: c,
+                            last_modified_time: o || 0,
+                            origin: self.origin,
+                            for_edit: i,
+                          }),
+                          (l = null),
+                          (u = null),
+                          i
+                            ? ("community" === (d = Object(ge.e)())
+                                ? ((u = ge.c.COMMUNITY_BASE_URL),
+                                  (u += e
+                                    ? "gid/" + e.ConvertTo64BitString()
+                                    : "ogg/" + t),
+                                  (u += "/"))
+                                : (u =
+                                    "partnerweb" === d
+                                      ? ge.c.PARTNER_BASE_URL + "sales/"
+                                      : ge.c.STORE_BASE_URL + "events/"),
+                              (u += "ajaxgetpartnereventforedit"),
+                              (l = { params: s, withCredentials: !0 }))
+                            : ((u =
+                                ge.c.STORE_BASE_URL +
+                                "events/ajaxgetpartnerevent"),
+                              (l = { params: s, withCredentials: !1 })),
+                          [4, _e.a.get(u, l)]
+                        );
+                      case 1:
+                        return (
+                          (p = r.sent()),
+                          (m = p.data.event),
+                          (_ = this.GetEventLookupKey(m)),
+                          (!this.m_mapExistingEvents.has(_) ||
+                            this.m_mapExistingEvents.get(_)
+                              .rtime32_last_modified <
+                              m.rtime32_last_modified ||
+                            this.m_mapExistingEvents.get(_)
+                              .rtime32_moderator_reviewed <
+                              m.rtime_mod_reviewed) &&
+                            (Object(fe.a)(
+                              m.clan_steamid,
+                              "ClanSteamID is missing from data we received"
+                            ),
+                            (b = new Ie.a(m.clan_steamid)),
+                            this.InsertEventModelFromClanEventData(b, m)),
+                          [2, this.m_mapExistingEvents.get(_)]
+                        );
+                    }
+                  });
+                })
+              );
+            }),
+          (e.prototype.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached =
+            function (e, t, a, n, o) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                var i;
                 return Object(r.e)(this, function (r) {
-                  switch (r.label) {
-                    case 0:
-                      return (
-                        (c = ca(i ? 0 : Object(de.d)(ge.c.LANGUAGE))),
-                        (s = {
-                          appid: t,
-                          clan_accountid: e ? e.GetAccountID() : void 0,
-                          announcement_gid: n,
-                          event_gid: a,
-                          lang_list: c,
-                          last_modified_time: o || 0,
-                          origin: self.origin,
-                          for_edit: i,
-                        }),
-                        (l = null),
-                        (u = null),
-                        i
-                          ? ("community" === (d = Object(ge.e)())
-                              ? ((u = ge.c.COMMUNITY_BASE_URL),
-                                (u += e
-                                  ? "gid/" + e.ConvertTo64BitString()
-                                  : "ogg/" + t),
-                                (u += "/"))
-                              : (u =
-                                  "partnerweb" === d
-                                    ? ge.c.PARTNER_BASE_URL + "sales/"
-                                    : ge.c.STORE_BASE_URL + "events/"),
-                            (u += "ajaxgetpartnereventforedit"),
-                            (l = { params: s, withCredentials: !0 }))
-                          : ((u =
-                              ge.c.STORE_BASE_URL +
-                              "events/ajaxgetpartnerevent"),
-                            (l = { params: s, withCredentials: !1 })),
-                        [4, _e.a.get(u, l)]
-                      );
-                    case 1:
-                      return (
-                        (p = r.sent()),
-                        (m = p.data.event),
-                        (_ = this.GetEventLookupKey(m)),
-                        (!this.m_mapExistingEvents.has(_) ||
-                          this.m_mapExistingEvents.get(_)
-                            .rtime32_last_modified < m.rtime32_last_modified ||
-                          this.m_mapExistingEvents.get(_)
-                            .rtime32_moderator_reviewed <
-                            m.rtime_mod_reviewed) &&
-                          (Object(fe.a)(
-                            m.clan_steamid,
-                            "ClanSteamID is missing from data we received"
-                          ),
-                          (b = new Ie.a(m.clan_steamid)),
-                          this.InsertEventModelFromClanEventData(b, m)),
-                        [2, this.m_mapExistingEvents.get(_)]
-                      );
+                  if (a && this.m_mapExistingEvents.has(a))
+                    return [2, this.m_mapExistingEvents.get(a)];
+                  if (n) {
+                    if (this.m_mapExistingEvents.has(aa + n))
+                      return [2, this.m_mapExistingEvents.get(aa + n)];
+                    if (
+                      this.m_mapAnnouncementBodyToEvent.has(n) &&
+                      ((i = this.m_mapAnnouncementBodyToEvent.get(n)),
+                      this.m_mapExistingEvents.has(i))
+                    )
+                      return [2, this.m_mapExistingEvents.get(i)];
                   }
+                  return [
+                    2,
+                    this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
+                      e,
+                      t,
+                      a,
+                      n,
+                      o
+                    ),
+                  ];
                 });
-              })
-            );
-          }),
-          (e.prototype.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached = function (
-            e,
-            t,
-            a,
-            n,
-            o
-          ) {
-            return Object(r.b)(this, void 0, void 0, function () {
-              var i;
-              return Object(r.e)(this, function (r) {
-                if (a && this.m_mapExistingEvents.has(a))
-                  return [2, this.m_mapExistingEvents.get(a)];
-                if (n) {
-                  if (this.m_mapExistingEvents.has(aa + n))
-                    return [2, this.m_mapExistingEvents.get(aa + n)];
-                  if (
-                    this.m_mapAnnouncementBodyToEvent.has(n) &&
-                    ((i = this.m_mapAnnouncementBodyToEvent.get(n)),
-                    this.m_mapExistingEvents.has(i))
-                  )
-                    return [2, this.m_mapExistingEvents.get(i)];
-                }
-                return [
-                  2,
-                  this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
-                    e,
-                    t,
-                    a,
-                    n,
-                    o
-                  ),
-                ];
               });
-            });
-          }),
+            }),
           (e.prototype.LoadPartnerEventFromAnnoucementGID = function (e, t, a) {
             return Object(r.b)(this, void 0, void 0, function () {
               return Object(r.e)(this, function (n) {
@@ -33389,26 +33281,23 @@ var CLSTAMP = "7239402";
               });
             });
           }),
-          (e.prototype.LoadPartnerEventFromAnnoucementGIDAndClanSteamID = function (
-            e,
-            t,
-            a
-          ) {
-            return Object(r.b)(this, void 0, void 0, function () {
-              return Object(r.e)(this, function (n) {
-                return [
-                  2,
-                  this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
-                    e,
-                    void 0,
-                    void 0,
-                    t,
-                    a
-                  ),
-                ];
+          (e.prototype.LoadPartnerEventFromAnnoucementGIDAndClanSteamID =
+            function (e, t, a) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                return Object(r.e)(this, function (n) {
+                  return [
+                    2,
+                    this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
+                      e,
+                      void 0,
+                      void 0,
+                      t,
+                      a
+                    ),
+                  ];
+                });
               });
-            });
-          }),
+            }),
           (e.prototype.LoadPartnerEventFromClanEventGID = function (e, t, a) {
             return Object(r.b)(this, void 0, void 0, function () {
               return Object(r.e)(this, function (n) {
@@ -33425,26 +33314,23 @@ var CLSTAMP = "7239402";
               });
             });
           }),
-          (e.prototype.LoadPartnerEventFromClanEventGIDAndClanSteamID = function (
-            e,
-            t,
-            a
-          ) {
-            return Object(r.b)(this, void 0, void 0, function () {
-              return Object(r.e)(this, function (n) {
-                return [
-                  2,
-                  this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
-                    e,
-                    void 0,
-                    t,
-                    void 0,
-                    a
-                  ),
-                ];
+          (e.prototype.LoadPartnerEventFromClanEventGIDAndClanSteamID =
+            function (e, t, a) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                return Object(r.e)(this, function (n) {
+                  return [
+                    2,
+                    this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
+                      e,
+                      void 0,
+                      t,
+                      void 0,
+                      a
+                    ),
+                  ];
+                });
               });
-            });
-          }),
+            }),
           (e.prototype.LoadPartnerEventGeneric = function (e, t, a, n, o) {
             return Object(r.b)(this, void 0, void 0, function () {
               return Object(r.e)(this, function (r) {
@@ -33572,119 +33458,116 @@ var CLSTAMP = "7239402";
               });
             });
           }),
-          (e.prototype.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs = function (
-            e,
-            t,
-            a
-          ) {
-            return Object(r.b)(this, void 0, void 0, function () {
-              var n,
-                o,
-                i,
-                c,
-                s,
-                l,
-                u,
-                d,
-                p,
-                m,
-                _,
-                b = this;
-              return Object(r.e)(this, function (r) {
-                switch (r.label) {
-                  case 0:
-                    if (
-                      ((n = new Array()),
-                      (o =
-                        ge.c.STORE_BASE_URL +
-                        "events/ajaxgetbatchedpartnerevent/"),
-                      (i = ca(Object(de.d)(ge.c.LANGUAGE))),
-                      (c = void 0),
-                      (s = void 0),
-                      e &&
-                        ((l = new Array()),
-                        e.forEach(function (e) {
-                          b.m_mapExistingEvents.has(e)
-                            ? n.push(b.m_mapExistingEvents.get(e))
-                            : l.push(e);
-                        }),
-                        l.sort(),
-                        (c = l.join(","))),
-                      t &&
-                        ((u = new Array()),
-                        t.forEach(function (e) {
-                          if (
-                            b.m_mapAnnouncementBodyToEvent.has(e) &&
-                            b.m_mapExistingEvents.has(
-                              b.m_mapAnnouncementBodyToEvent.get(e)
-                            )
-                          ) {
-                            var t = b.m_mapAnnouncementBodyToEvent.get(e);
-                            n.push(b.m_mapExistingEvents.get(t));
-                          } else u.push(e);
-                        }),
-                        u.sort(),
-                        (s = u.join(","))),
-                      !c && !s)
-                    )
-                      return [2, n];
-                    (d = {
-                      event_gids: c,
-                      announcement_gids: s,
-                      lang_list: i,
-                      origin: self.origin,
-                    }),
-                      (r.label = 1);
-                  case 1:
-                    return (
-                      r.trys.push([1, 3, , 4]),
-                      [
-                        4,
-                        _e.a.get(o, {
-                          params: d,
-                          cancelToken: a ? a.token : void 0,
-                        }),
-                      ]
-                    );
-                  case 2:
-                    return (
-                      (p = r.sent()) &&
-                        p.data &&
-                        p.data.events &&
-                        Object(be.G)(function () {
-                          for (
-                            var e = 0, t = p.data.events;
-                            e < t.length;
-                            e++
-                          ) {
-                            var a = t[e],
-                              r = b.GetEventLookupKey(a);
-                            if (!b.m_mapExistingEvents.has(r)) {
-                              var o = new Ie.a(a.clan_steamid);
-                              b.InsertEventModelFromClanEventData(o, a);
+          (e.prototype.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs =
+            function (e, t, a) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                var n,
+                  o,
+                  i,
+                  c,
+                  s,
+                  l,
+                  u,
+                  d,
+                  p,
+                  m,
+                  _,
+                  b = this;
+                return Object(r.e)(this, function (r) {
+                  switch (r.label) {
+                    case 0:
+                      if (
+                        ((n = new Array()),
+                        (o =
+                          ge.c.STORE_BASE_URL +
+                          "events/ajaxgetbatchedpartnerevent/"),
+                        (i = ca(Object(de.d)(ge.c.LANGUAGE))),
+                        (c = void 0),
+                        (s = void 0),
+                        e &&
+                          ((l = new Array()),
+                          e.forEach(function (e) {
+                            b.m_mapExistingEvents.has(e)
+                              ? n.push(b.m_mapExistingEvents.get(e))
+                              : l.push(e);
+                          }),
+                          l.sort(),
+                          (c = l.join(","))),
+                        t &&
+                          ((u = new Array()),
+                          t.forEach(function (e) {
+                            if (
+                              b.m_mapAnnouncementBodyToEvent.has(e) &&
+                              b.m_mapExistingEvents.has(
+                                b.m_mapAnnouncementBodyToEvent.get(e)
+                              )
+                            ) {
+                              var t = b.m_mapAnnouncementBodyToEvent.get(e);
+                              n.push(b.m_mapExistingEvents.get(t));
+                            } else u.push(e);
+                          }),
+                          u.sort(),
+                          (s = u.join(","))),
+                        !c && !s)
+                      )
+                        return [2, n];
+                      (d = {
+                        event_gids: c,
+                        announcement_gids: s,
+                        lang_list: i,
+                        origin: self.origin,
+                      }),
+                        (r.label = 1);
+                    case 1:
+                      return (
+                        r.trys.push([1, 3, , 4]),
+                        [
+                          4,
+                          _e.a.get(o, {
+                            params: d,
+                            cancelToken: a ? a.token : void 0,
+                          }),
+                        ]
+                      );
+                    case 2:
+                      return (
+                        (p = r.sent()) &&
+                          p.data &&
+                          p.data.events &&
+                          Object(be.G)(function () {
+                            for (
+                              var e = 0, t = p.data.events;
+                              e < t.length;
+                              e++
+                            ) {
+                              var a = t[e],
+                                r = b.GetEventLookupKey(a);
+                              if (!b.m_mapExistingEvents.has(r)) {
+                                var o = new Ie.a(a.clan_steamid);
+                                b.InsertEventModelFromClanEventData(o, a);
+                              }
+                              n.push(b.m_mapExistingEvents.get(r));
                             }
-                            n.push(b.m_mapExistingEvents.get(r));
-                          }
-                        }),
-                      [3, 4]
-                    );
-                  case 3:
-                    return (
-                      (m = r.sent()),
-                      (_ = Object(Tt.a)(m)),
-                      console.error(
-                        "LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs hit error " +
-                          _.strErrorMsg,
-                        _
-                      ),
-                      [3, 4]
-                    );
-                  case 4:
-                    return [2, n];
-                }
+                          }),
+                        [3, 4]
+                      );
+                    case 3:
+                      return (
+                        (m = r.sent()),
+                        (_ = Object(Tt.a)(m)),
+                        console.error(
+                          "LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs hit error " +
+                            _.strErrorMsg,
+                          _
+                        ),
+                        [3, 4]
+                      );
+                    case 4:
+                      return [2, n];
+                  }
+                });
               });
-            });
-          }),
+            }),
           Object(r.c)([be.C], e.prototype, "m_mapExistingEvents", void 0),
           Object(r.c)(
             [be.C],
@@ -38381,8 +38264,9 @@ var CLSTAMP = "7239402";
             for (
               var m = 0,
                 _ = 0,
-                b = Sa.a.Get().GetLeagueNodeGroup(p.nLeagueID, p.nNodeGroupID)
-                  .node_groups;
+                b = Sa.a
+                  .Get()
+                  .GetLeagueNodeGroup(p.nLeagueID, p.nNodeGroupID).node_groups;
               _ < b.length;
               _++
             ) {
@@ -38796,8 +38680,9 @@ var CLSTAMP = "7239402";
             for (
               var l = 0,
                 u = 0,
-                d = Sa.a.Get().GetLeagueNodeGroup(s.nLeagueID, s.nNodeGroupID)
-                  .node_groups;
+                d = Sa.a
+                  .Get()
+                  .GetLeagueNodeGroup(s.nLeagueID, s.nNodeGroupID).node_groups;
               u < d.length;
               u++
             ) {
@@ -40354,8 +40239,7 @@ var CLSTAMP = "7239402";
                       c.a.createElement(
                         "a",
                         {
-                          href:
-                            "https://www.dota2.com/newsentry/2870472829293831072",
+                          href: "https://www.dota2.com/newsentry/2870472829293831072",
                           className: sr.a.LearnMoreButton,
                         },
                         Object(M.k)("#battlepass_learn_more")
@@ -43822,9 +43706,9 @@ var CLSTAMP = "7239402";
           if (
             ((null == f ? void 0 : f.event_type) == Ia.g.INTERNATIONAL &&
             (null == f ? void 0 : f.is_event_upcoming)
-              ? (v = valveisgoodatcaching(Object(Ca.j)(g)))
+              ? (v = u.b.dpc_ti_standings(Object(Ca.j)(g)))
               : Sa.a.Get().GetSpoilerBlockState(g) == Ia.l.UNBLOCKED
-              ? (v = valveisgoodatcaching(
+              ? (v = u.b.dpc_watch(
                   g == Ia.e.INVALID ? Object(Ca.b)() : Object(Ca.j)(g)
                 ))
               : (null == f ? void 0 : f.is_event_completed) &&
@@ -47834,8 +47718,7 @@ var CLSTAMP = "7239402";
                   c.a.createElement(
                     "a",
                     {
-                      href:
-                        "https://www.dota2.com/international2019/battlepass",
+                      href: "https://www.dota2.com/international2019/battlepass",
                       target: "_blank",
                     },
                     c.a.createElement("div", {
@@ -48072,8 +47955,7 @@ var CLSTAMP = "7239402";
                   c.a.createElement(
                     "a",
                     {
-                      href:
-                        "https://www.dota2.com.cn/theshanghaimajor/english/overview",
+                      href: "https://www.dota2.com.cn/theshanghaimajor/english/overview",
                       target: "_blank",
                     },
                     c.a.createElement("div", {
@@ -48160,8 +48042,7 @@ var CLSTAMP = "7239402";
                   c.a.createElement(
                     "a",
                     {
-                      href:
-                        "http://www.dota2.com/international2015/compendium/",
+                      href: "http://www.dota2.com/international2015/compendium/",
                       target: "_blank",
                     },
                     c.a.createElement("div", {
@@ -48392,8 +48273,7 @@ var CLSTAMP = "7239402";
                   c.a.createElement(
                     "a",
                     {
-                      href:
-                        "http://www.dota2.com/international2013/home/overview/",
+                      href: "http://www.dota2.com/international2013/home/overview/",
                       target: "_blank",
                     },
                     c.a.createElement("div", {
@@ -48725,8 +48605,7 @@ var CLSTAMP = "7239402";
                           c.a.createElement(
                             "a",
                             {
-                              href:
-                                "https://steamcommunity.com/dota2shortfilm/",
+                              href: "https://steamcommunity.com/dota2shortfilm/",
                             },
                             c.a.createElement(
                               "div",
@@ -52257,9 +52136,8 @@ var CLSTAMP = "7239402";
                         : (console.log(
                             "Saving news event state failed. Will try again soon!"
                           ),
-                          (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(
-                            e
-                          )),
+                          (this.m_rgPendingUpload =
+                            this.m_rgPendingUpload.concat(e)),
                           this.m_schUpload.Schedule(
                             6e4,
                             this.UploadPendingData
@@ -53411,7 +53289,8 @@ var CLSTAMP = "7239402";
             (e.k_eTwitter = "twitter"),
             (e.k_eReddit = "reddit");
         })(ts || (ts = {}));
-      var os = /(?:steampowered\.com|valve\.org\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community)\/(\w+)(\/|$)/i;
+      var os =
+        /(?:steampowered\.com|valve\.org\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community)\/(\w+)(\/|$)/i;
       function is(e, t) {
         var a,
           n,
@@ -57049,8 +56928,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               r.createElement("path", {
                 className: i.a.roundOuter,
@@ -57078,8 +56956,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundOuterOutline,
@@ -57088,8 +56965,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber01,
@@ -57098,8 +56974,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber02,
@@ -57108,8 +56983,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber03,
@@ -57118,8 +56992,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber04,
@@ -57128,8 +57001,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber05,
@@ -57138,8 +57010,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber06,
@@ -57148,8 +57019,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber07,
@@ -57158,8 +57028,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber08,
@@ -57168,8 +57037,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber09,
@@ -57178,8 +57046,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber10,
@@ -57188,8 +57055,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber11,
@@ -57198,8 +57064,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber12,
@@ -57208,8 +57073,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber13,
@@ -57218,8 +57082,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber14,
@@ -57228,8 +57091,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               r.createElement("path", {
                 className: i.a.roundThrobber15,
@@ -57238,8 +57100,7 @@ var CLSTAMP = "7239402";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               })
             ),
             r.createElement(
@@ -57247,8 +57108,7 @@ var CLSTAMP = "7239402";
               { className: i.a.bottomCircle },
               r.createElement("path", {
                 fill: "#ffffff",
-                d:
-                  "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
               })
             ),
             r.createElement(
@@ -57283,8 +57143,7 @@ var CLSTAMP = "7239402";
               r.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
-                d:
-                  "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24ZM18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
+                d: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24ZM18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
                 fill: "currentColor",
               })
             )
@@ -57302,8 +57161,7 @@ var CLSTAMP = "7239402";
                 viewBox: "0 0 256 256",
               },
               r.createElement("path", {
-                d:
-                  "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z",
+                d: "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z",
               })
             );
       }
@@ -57421,18 +57279,15 @@ var CLSTAMP = "7239402";
           },
           r.createElement("path", {
             fill: "#ffffff",
-            d:
-              "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
+            d: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
           }),
           r.createElement("path", {
             fill: "#ffffff",
-            d:
-              "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
+            d: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
           }),
           r.createElement("path", {
             fill: "#ffffff",
-            d:
-              "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
+            d: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
           })
         );
       }
@@ -57461,28 +57316,23 @@ var CLSTAMP = "7239402";
           r.createElement("path", {
             className: "frame",
             fill: "#3C414B",
-            d:
-              "M40.334,15.72h47.237c3.957,0,7.164-3.259,7.164-7.28c0-1.113,0.889-2.017,1.984-2.017h9.746 c7.417,0,13.432,6.108,13.432,13.646v206.156c0,7.538-6.015,13.647-13.431,13.647H21.459c-7.417,0-13.429-6.109-13.429-13.647 V20.071c0-7.536,6.013-13.646,13.429-13.646h9.728c1.096,0,1.983,0.903,1.983,2.017C33.17,12.461,36.377,15.72,40.334,15.72 M107.057,0.001H20.87c-9.922,0-17.965,8.174-17.965,18.256v217.505c0,10.082,8.043,18.256,17.965,18.256h86.188 c9.923,0,17.966-8.174,17.966-18.256V18.257C125.022,8.175,116.979,0.001,107.057,0.001",
+            d: "M40.334,15.72h47.237c3.957,0,7.164-3.259,7.164-7.28c0-1.113,0.889-2.017,1.984-2.017h9.746 c7.417,0,13.432,6.108,13.432,13.646v206.156c0,7.538-6.015,13.647-13.431,13.647H21.459c-7.417,0-13.429-6.109-13.429-13.647 V20.071c0-7.536,6.013-13.646,13.429-13.646h9.728c1.096,0,1.983,0.903,1.983,2.017C33.17,12.461,36.377,15.72,40.334,15.72 M107.057,0.001H20.87c-9.922,0-17.965,8.174-17.965,18.256v217.505c0,10.082,8.043,18.256,17.965,18.256h86.188 c9.923,0,17.966-8.174,17.966-18.256V18.257C125.022,8.175,116.979,0.001,107.057,0.001",
           }),
           r.createElement("path", {
             fill: "#3C414B",
-            d:
-              "M0.826,33.349C0.369,33.349,0,33.725,0,34.189v7.616c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 v-7.617C1.653,33.725,1.283,33.349,0.826,33.349",
+            d: "M0.826,33.349C0.369,33.349,0,33.725,0,34.189v7.616c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 v-7.617C1.653,33.725,1.283,33.349,0.826,33.349",
           }),
           r.createElement("path", {
             fill: "#3C414B",
-            d:
-              "M0.826,51.56C0.369,51.56,0,51.936,0,52.4v16.8c0,0.465,0.37,0.841,0.826,0.841s0.827-0.376,0.827-0.841 V52.4C1.653,51.936,1.283,51.56,0.826,51.56",
+            d: "M0.826,51.56C0.369,51.56,0,51.936,0,52.4v16.8c0,0.465,0.37,0.841,0.826,0.841s0.827-0.376,0.827-0.841 V52.4C1.653,51.936,1.283,51.56,0.826,51.56",
           }),
           r.createElement("path", {
             fill: "#3C414B",
-            d:
-              "M0.826,75.304C0.369,75.304,0,75.68,0,76.144v15.904c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 V76.144C1.653,75.68,1.283,75.304,0.826,75.304",
+            d: "M0.826,75.304C0.369,75.304,0,75.68,0,76.144v15.904c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 V76.144C1.653,75.68,1.283,75.304,0.826,75.304",
           }),
           r.createElement("path", {
             fill: "#3C414B",
-            d:
-              "M127.617,58.056c-0.457,0-0.827,0.376-0.827,0.84v27.328c0,0.464,0.37,0.84,0.827,0.84 c0.456,0,0.826-0.376,0.826-0.84V58.896C128.443,58.432,128.073,58.056,127.617,58.056",
+            d: "M127.617,58.056c-0.457,0-0.827,0.376-0.827,0.84v27.328c0,0.464,0.37,0.84,0.827,0.84 c0.456,0,0.826-0.376,0.826-0.84V58.896C128.443,58.432,128.073,58.056,127.617,58.056",
           })
         );
       }
@@ -59424,8 +59274,8 @@ var CLSTAMP = "7239402";
                   onEscKeypress: this.Cancel,
                   className: this.props.modalClassName,
                   bDestructiveWarning: this.props.bDestructiveWarning,
-                  bDisableBackgroundDismiss: this.props
-                    .bDisableBackgroundDismiss,
+                  bDisableBackgroundDismiss:
+                    this.props.bDisableBackgroundDismiss,
                   bHideCloseIcon: this.props.bHideCloseIcon,
                 },
                 i.createElement(

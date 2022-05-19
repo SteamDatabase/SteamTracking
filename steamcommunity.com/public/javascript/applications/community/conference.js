@@ -621,8 +621,7 @@
                     a.createElement(
                       "a",
                       {
-                        href:
-                          "https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A",
+                        href: "https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A",
                       },
                       Object(v.f)("#Conferenec_NeedHelp_LimitedAccounts")
                     )
@@ -659,8 +658,7 @@
               a.createElement(
                 "a",
                 {
-                  href:
-                    "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
+                  href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
                 },
                 Object(v.f)("#Conference_NeedHelp_CreateTicket")
               )

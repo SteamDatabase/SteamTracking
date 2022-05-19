@@ -3822,8 +3822,7 @@
                   null,
                   i.a.createElement(s.b, {
                     exact: !0,
-                    path:
-                      "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
+                    path: "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
                     component: o.b,
                   }),
                   i.a.createElement(s.b, null, !1)

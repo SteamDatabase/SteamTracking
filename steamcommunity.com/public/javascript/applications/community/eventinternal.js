@@ -446,8 +446,7 @@
                     u.a.createElement(
                       "a",
                       {
-                        href:
-                          "https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta",
+                        href: "https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta",
                         target: "_blank",
                       },
                       "Read more about the state here."
@@ -546,7 +545,8 @@
           return Object(r.a)(this, void 0, void 0, function* () {
             return (
               this.m_stateLoadPromise ||
-                (this.m_stateLoadPromise = this.InternalLoadSalePageMigrationInfo()),
+                (this.m_stateLoadPromise =
+                  this.InternalLoadSalePageMigrationInfo()),
               this.m_stateLoadPromise
             );
           });
@@ -731,9 +731,10 @@
                     : n.success) &&
                 e.data.accountids
               )
-                return void (this.m_rgClanAccountIDs = this.m_rgClanAccountIDs.concat(
-                  e.data.accountids.map(Number)
-                ));
+                return void (this.m_rgClanAccountIDs =
+                  this.m_rgClanAccountIDs.concat(
+                    e.data.accountids.map(Number)
+                  ));
               l = Object(f.a)(null == e ? void 0 : e.data);
             } catch (e) {
               l = Object(f.a)(e);

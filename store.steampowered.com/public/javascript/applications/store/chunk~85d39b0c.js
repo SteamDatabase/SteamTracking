@@ -366,7 +366,8 @@
               this.OnMouseMove(e, t);
             }),
             this.setState({ EdgeDown: t }),
-            (this.m_rectLinkRegion = this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
             (this.m_nLocalOffsetXPct =
               ((e.clientX - this.m_rectLinkRegion.left) /
                 (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
@@ -3711,7 +3712,8 @@
             this.IsBroadcastClip())
           )
             (this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-              (this.m_nVideoStartPos = this.m_player.GetAvailableVideoStartTime()),
+              (this.m_nVideoStartPos =
+                this.m_player.GetAvailableVideoStartTime()),
               (this.m_nVideoEndPos = this.m_player.GetBufferedLiveEdgeTime()),
               (this.m_nTimelineDuration =
                 this.m_nVideoEndPos - this.m_nVideoStartPos),
@@ -3720,7 +3722,8 @@
           else {
             if (
               ((this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-              (this.m_nVideoStartPos = this.m_player.GetAvailableVideoStartTime()),
+              (this.m_nVideoStartPos =
+                this.m_player.GetAvailableVideoStartTime()),
               (this.m_nVideoEndPos = Math.max(
                 this.m_player.GetBufferedLiveEdgeTime(),
                 this.m_nPlaybackTime
@@ -6533,8 +6536,7 @@
               o.a.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
-                d:
-                  "M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z",
+                d: "M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z",
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
@@ -6542,13 +6544,11 @@
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
-                d:
-                  "M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z",
+                d: "M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z",
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
-                d:
-                  "M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z",
+                d: "M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z",
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
@@ -6556,8 +6556,7 @@
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
-                d:
-                  "M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3981 31 25 31H24.0625V29Z",
+                d: "M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3981 31 25 31H24.0625V29Z",
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
@@ -6575,8 +6574,7 @@
                   "g",
                   null,
                   o.a.createElement("path", {
-                    d:
-                      "M58 30.2v-.1L23.4 58.5l-.2-.3-.1.1C9.9 55.4 0 43.6 0 29.5 0 13.2 13.2 0 29.5 0S59 13.2 59 29.4l-1 .8zm0-1.5c-5-2.2-16.1-4-26 4.6-9.8 8.4-10.3 18.8-9.2 23.9C10.3 54.2 1 42.9 1 29.5 1 13.8 13.8 1 29.5 1 45 1 57.6 13.3 58 28.7zm-.8.8L23.7 56.9c-1-4.8-.5-14.8 8.9-22.9 9.4-8 19.7-6.6 24.6-4.5z",
+                    d: "M58 30.2v-.1L23.4 58.5l-.2-.3-.1.1C9.9 55.4 0 43.6 0 29.5 0 13.2 13.2 0 29.5 0S59 13.2 59 29.4l-1 .8zm0-1.5c-5-2.2-16.1-4-26 4.6-9.8 8.4-10.3 18.8-9.2 23.9C10.3 54.2 1 42.9 1 29.5 1 13.8 13.8 1 29.5 1 45 1 57.6 13.3 58 28.7zm-.8.8L23.7 56.9c-1-4.8-.5-14.8 8.9-22.9 9.4-8 19.7-6.6 24.6-4.5z",
                     fillRule: "evenodd",
                     clipRule: "evenodd",
                     fill: "#fff",
@@ -6602,8 +6600,7 @@
               o.a.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
-                d:
-                  "M33 18C33 26.2843 26.2843 33 18 33C15.031 33 12.2636 32.1374 9.93446 30.6492L4.35707 32.4107C3.95174 32.5387 3.58168 32.1347 3.74474 31.7421L5.81718 26.7529C4.04426 24.2896 3 21.2667 3 18C3 9.71573 9.71573 3 18 3C26.2843 3 33 9.71573 33 18ZM18 9.66667C16.3518 9.66667 14.7407 10.1554 13.3703 11.0711C11.9998 11.9868 10.9317 13.2883 10.301 14.811C9.67028 16.3337 9.50525 18.0092 9.82679 19.6258C10.1483 21.2423 10.942 22.7271 12.1074 23.8926C13.2729 25.058 14.7577 25.8517 16.3743 26.1732C17.9908 26.4948 19.6663 26.3297 21.189 25.699C22.7118 25.0683 24.0132 24.0002 24.9289 22.6298C25.8446 21.2593 26.3333 19.6482 26.3333 18C26.3333 16.9057 26.1178 15.822 25.699 14.811C25.2802 13.7999 24.6664 12.8813 23.8926 12.1074C23.1187 11.3336 22.2001 10.7198 21.189 10.301C20.178 9.88222 19.0944 9.66667 18 9.66667ZM13 16.3333C13 16.0037 13.0978 15.6815 13.2809 15.4074C13.464 15.1333 13.7243 14.9197 14.0289 14.7935C14.3334 14.6674 14.6685 14.6344 14.9918 14.6987C15.3151 14.763 15.6121 14.9217 15.8452 15.1548C16.0783 15.3879 16.237 15.6849 16.3013 16.0082C16.3656 16.3315 16.3326 16.6666 16.2065 16.9711C16.0803 17.2757 15.8667 17.536 15.5926 17.7191C15.3185 17.9023 14.9963 18 14.6667 18C14.2246 18 13.8007 17.8244 13.4882 17.5118C13.1756 17.1993 13 16.7754 13 16.3333ZM21.3333 18C21.0037 18 20.6815 17.9023 20.4074 17.7191C20.1333 17.536 19.9197 17.2757 19.7935 16.9711C19.6674 16.6666 19.6344 16.3315 19.6987 16.0082C19.763 15.6849 19.9217 15.3879 20.1548 15.1548C20.3879 14.9217 20.6849 14.763 21.0082 14.6987C21.3315 14.6344 21.6666 14.6674 21.9711 14.7935C22.2757 14.9197 22.536 15.1333 22.7191 15.4074C22.9023 15.6815 23 16.0037 23 16.3333C23 16.7754 22.8244 17.1993 22.5119 17.5118C22.1993 17.8244 21.7754 18 21.3333 18ZM19.9642 22.1864C20.4851 21.6655 20.7778 20.9589 20.7778 20.2222H15.2222C15.2222 20.9589 15.5149 21.6655 16.0358 22.1864C16.5568 22.7073 17.2633 23 18 23C18.7367 23 19.4433 22.7073 19.9642 22.1864Z",
+                d: "M33 18C33 26.2843 26.2843 33 18 33C15.031 33 12.2636 32.1374 9.93446 30.6492L4.35707 32.4107C3.95174 32.5387 3.58168 32.1347 3.74474 31.7421L5.81718 26.7529C4.04426 24.2896 3 21.2667 3 18C3 9.71573 9.71573 3 18 3C26.2843 3 33 9.71573 33 18ZM18 9.66667C16.3518 9.66667 14.7407 10.1554 13.3703 11.0711C11.9998 11.9868 10.9317 13.2883 10.301 14.811C9.67028 16.3337 9.50525 18.0092 9.82679 19.6258C10.1483 21.2423 10.942 22.7271 12.1074 23.8926C13.2729 25.058 14.7577 25.8517 16.3743 26.1732C17.9908 26.4948 19.6663 26.3297 21.189 25.699C22.7118 25.0683 24.0132 24.0002 24.9289 22.6298C25.8446 21.2593 26.3333 19.6482 26.3333 18C26.3333 16.9057 26.1178 15.822 25.699 14.811C25.2802 13.7999 24.6664 12.8813 23.8926 12.1074C23.1187 11.3336 22.2001 10.7198 21.189 10.301C20.178 9.88222 19.0944 9.66667 18 9.66667ZM13 16.3333C13 16.0037 13.0978 15.6815 13.2809 15.4074C13.464 15.1333 13.7243 14.9197 14.0289 14.7935C14.3334 14.6674 14.6685 14.6344 14.9918 14.6987C15.3151 14.763 15.6121 14.9217 15.8452 15.1548C16.0783 15.3879 16.237 15.6849 16.3013 16.0082C16.3656 16.3315 16.3326 16.6666 16.2065 16.9711C16.0803 17.2757 15.8667 17.536 15.5926 17.7191C15.3185 17.9023 14.9963 18 14.6667 18C14.2246 18 13.8007 17.8244 13.4882 17.5118C13.1756 17.1993 13 16.7754 13 16.3333ZM21.3333 18C21.0037 18 20.6815 17.9023 20.4074 17.7191C20.1333 17.536 19.9197 17.2757 19.7935 16.9711C19.6674 16.6666 19.6344 16.3315 19.6987 16.0082C19.763 15.6849 19.9217 15.3879 20.1548 15.1548C20.3879 14.9217 20.6849 14.763 21.0082 14.6987C21.3315 14.6344 21.6666 14.6674 21.9711 14.7935C22.2757 14.9197 22.536 15.1333 22.7191 15.4074C22.9023 15.6815 23 16.0037 23 16.3333C23 16.7754 22.8244 17.1993 22.5119 17.5118C22.1993 17.8244 21.7754 18 21.3333 18ZM19.9642 22.1864C20.4851 21.6655 20.7778 20.9589 20.7778 20.2222H15.2222C15.2222 20.9589 15.5149 21.6655 16.0358 22.1864C16.5568 22.7073 17.2633 23 18 23C18.7367 23 19.4433 22.7073 19.9642 22.1864Z",
                 fill: "currentColor",
               })
             )
@@ -6611,8 +6608,7 @@
               "svg",
               Object.assign({ viewBox: "0 -8 60 60", width: "32" }, e),
               o.a.createElement("path", {
-                d:
-                  "M.5 5.5C.5 2.5 3 0 6 0h48c3 0 5.5 2.5 5.5 5.5V35c0 3-2.5 5.5-5.5 5.5h-1.5c-.8 0-1.5.7-1.5 1.5v8.1c0 1.3-1.6 2-2.6 1.1L37.8 40.5H6C3 40.5.5 38 .5 35V5.5zM6 1C3.5 1 1.5 3 1.5 5.5V35c0 2.5 2 4.5 4.5 4.5h32.2l.1.1 10.8 10.8c.3.3.9.1.9-.4v-8c0-1.4 1.1-2.5 2.5-2.5H54c2.5 0 4.5-2 4.5-4.5V5.5C58.5 3 56.5 1 54 1H6zm24 31c6.6 0 12-5.4 12-12S36.6 8 30 8s-12 5.4-12 12 5.4 12 12 12zm0 1c7.2 0 13-5.8 13-13S37.2 7 30 7s-13 5.8-13 13 5.8 13 13 13zm-3.5-15c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5-1.5.7-1.5 1.5.7 1.5 1.5 1.5zm8.5-1.5c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5.7-1.5 1.5-1.5 1.5.7 1.5 1.5zM24.5 22c0 2.5 2 4.5 4.5 4.5h2c2.5 0 4.5-2 4.5-4.5h-1c0 1.9-1.6 3.5-3.5 3.5h-2c-1.9 0-3.5-1.6-3.5-3.5h-1z",
+                d: "M.5 5.5C.5 2.5 3 0 6 0h48c3 0 5.5 2.5 5.5 5.5V35c0 3-2.5 5.5-5.5 5.5h-1.5c-.8 0-1.5.7-1.5 1.5v8.1c0 1.3-1.6 2-2.6 1.1L37.8 40.5H6C3 40.5.5 38 .5 35V5.5zM6 1C3.5 1 1.5 3 1.5 5.5V35c0 2.5 2 4.5 4.5 4.5h32.2l.1.1 10.8 10.8c.3.3.9.1.9-.4v-8c0-1.4 1.1-2.5 2.5-2.5H54c2.5 0 4.5-2 4.5-4.5V5.5C58.5 3 56.5 1 54 1H6zm24 31c6.6 0 12-5.4 12-12S36.6 8 30 8s-12 5.4-12 12 5.4 12 12 12zm0 1c7.2 0 13-5.8 13-13S37.2 7 30 7s-13 5.8-13 13 5.8 13 13 13zm-3.5-15c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5-1.5.7-1.5 1.5.7 1.5 1.5 1.5zm8.5-1.5c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5.7-1.5 1.5-1.5 1.5.7 1.5 1.5zM24.5 22c0 2.5 2 4.5 4.5 4.5h2c2.5 0 4.5-2 4.5-4.5h-1c0 1.9-1.6 3.5-3.5 3.5h-2c-1.9 0-3.5-1.6-3.5-3.5h-1z",
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 fill: "#fff",
@@ -6632,28 +6628,23 @@
                 e
               ),
               o.a.createElement("path", {
-                d:
-                  "M14.5 7L17.2 15.37C17.5375 16.5175 18.4825 17.395 19.63 17.8L28 20.5L19.63 23.2C18.4825 23.5375 17.605 24.4825 17.2 25.63L14.5 34L11.8 25.63C11.4625 24.4825 10.5175 23.605 9.37 23.2L1 20.5L9.37 17.8C10.5175 17.4625 11.395 16.5175 11.8 15.37L14.5 7Z",
+                d: "M14.5 7L17.2 15.37C17.5375 16.5175 18.4825 17.395 19.63 17.8L28 20.5L19.63 23.2C18.4825 23.5375 17.605 24.4825 17.2 25.63L14.5 34L11.8 25.63C11.4625 24.4825 10.5175 23.605 9.37 23.2L1 20.5L9.37 17.8C10.5175 17.4625 11.395 16.5175 11.8 15.37L14.5 7Z",
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
-                d:
-                  "M24.9231 2L26.3077 6.33599C26.4923 6.94209 26.9538 7.40833 27.5538 7.59482L31.8462 8.99353L27.5538 10.3922C26.9538 10.5787 26.4923 11.045 26.3077 11.6511L24.9231 15.9871L23.5385 11.6511C23.3538 11.045 22.8923 10.5787 22.2923 10.3922L18 8.99353L22.2923 7.59482C22.8923 7.40833 23.3538 6.94209 23.5385 6.33599L24.9231 2Z",
+                d: "M24.9231 2L26.3077 6.33599C26.4923 6.94209 26.9538 7.40833 27.5538 7.59482L31.8462 8.99353L27.5538 10.3922C26.9538 10.5787 26.4923 11.045 26.3077 11.6511L24.9231 15.9871L23.5385 11.6511C23.3538 11.045 22.8923 10.5787 22.2923 10.3922L18 8.99353L22.2923 7.59482C22.8923 7.40833 23.3538 6.94209 23.5385 6.33599L24.9231 2Z",
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
-                d:
-                  "M7.46154 3L8.15385 5.1913C8.24615 5.47105 8.47692 5.70416 8.75384 5.79741L10.9231 6.49676L8.75384 7.19611C8.47692 7.28936 8.24615 7.52248 8.15385 7.80222L7.46154 9.99352L6.76923 7.80222C6.67692 7.52248 6.44615 7.28936 6.16923 7.19611L4 6.49676L6.16923 5.79741C6.44615 5.70416 6.67692 5.47105 6.76923 5.1913L7.46154 3Z",
+                d: "M7.46154 3L8.15385 5.1913C8.24615 5.47105 8.47692 5.70416 8.75384 5.79741L10.9231 6.49676L8.75384 7.19611C8.47692 7.28936 8.24615 7.52248 8.15385 7.80222L7.46154 9.99352L6.76923 7.80222C6.67692 7.52248 6.44615 7.28936 6.16923 7.19611L4 6.49676L6.16923 5.79741C6.44615 5.70416 6.67692 5.47105 6.76923 5.1913L7.46154 3Z",
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
-                d:
-                  "M31.4615 12L32.1538 14.1913C32.2462 14.471 32.4769 14.7042 32.7538 14.7974L34.9231 15.4968L32.7538 16.1961C32.4769 16.2894 32.2462 16.5225 32.1538 16.8022L31.4615 18.9935L30.7692 16.8022C30.6769 16.5225 30.4462 16.2894 30.1692 16.1961L28 15.4968L30.1692 14.7974C30.4462 14.7042 30.6769 14.471 30.7692 14.1913L31.4615 12Z",
+                d: "M31.4615 12L32.1538 14.1913C32.2462 14.471 32.4769 14.7042 32.7538 14.7974L34.9231 15.4968L32.7538 16.1961C32.4769 16.2894 32.2462 16.5225 32.1538 16.8022L31.4615 18.9935L30.7692 16.8022C30.6769 16.5225 30.4462 16.2894 30.1692 16.1961L28 15.4968L30.1692 14.7974C30.4462 14.7042 30.6769 14.471 30.7692 14.1913L31.4615 12Z",
                 fill: "currentColor",
               }),
               o.a.createElement("path", {
-                d:
-                  "M26.4615 25L27.1538 27.1913C27.2462 27.471 27.4769 27.7042 27.7538 27.7974L29.9231 28.4968L27.7538 29.1961C27.4769 29.2894 27.2462 29.5225 27.1538 29.8022L26.4615 31.9935L25.7692 29.8022C25.6769 29.5225 25.4462 29.2894 25.1692 29.1961L23 28.4968L25.1692 27.7974C25.4462 27.7042 25.6769 27.471 25.7692 27.1913L26.4615 25Z",
+                d: "M26.4615 25L27.1538 27.1913C27.2462 27.471 27.4769 27.7042 27.7538 27.7974L29.9231 28.4968L27.7538 29.1961C27.4769 29.2894 27.2462 29.5225 27.1538 29.8022L26.4615 31.9935L25.7692 29.8022C25.6769 29.5225 25.4462 29.2894 25.1692 29.1961L23 28.4968L25.1692 27.7974C25.4462 27.7042 25.6769 27.471 25.7692 27.1913L26.4615 25Z",
                 fill: "currentColor",
               })
             )
@@ -6661,8 +6652,7 @@
               "svg",
               Object.assign({ viewBox: "0 0 60 38", width: "32" }, e),
               o.a.createElement("path", {
-                d:
-                  "M16 8.9l1.9 5.1c.2.5.6 1 1.2 1.2l5.1 1.9-5.1 1.9c-.5.2-1 .6-1.2 1.2L16 25.1 14.1 20c-.2-.5-.6-1-1.2-1.2l-5-1.8 5.1-1.9c.5-.2 1-.6 1.2-1.2l1.8-5zm-.9-.4c.3-.9 1.6-.9 1.9 0l1.9 5.1c.1.3.3.5.6.6l5.1 1.9c.9.3.9 1.6 0 1.9l-5.1 1.9c-.3.1-.5.3-.6.6L17 25.6c-.3.9-1.6.9-1.9 0l-1.9-5.1c-.1-.3-.3-.5-.6-.6L7.5 18c-.9-.3-.9-1.6 0-1.9l5.1-1.9c.3-.1.5-.3.6-.6l1.9-5.1zm17.8 15.4l-1.9-5-1.9 5.1c-.2.5-.6 1-1.2 1.2l-5 1.8 5.1 1.9c.5.2 1 .6 1.2 1.2l1.9 5.1 1.9-5.1c.2-.5.6-1 1.2-1.2l5.1-1.9-5.1-1.9c-.7-.2-1.1-.6-1.3-1.2zm-1-5.4c-.3-.9-1.6-.9-1.9 0l-1.9 5.1c-.1.3-.3.5-.6.6l-5.1 1.9c-.9.3-.9 1.6 0 1.9l5.1 1.9c.3.1.5.3.6.6l1.9 5.1c.3.9 1.6.9 1.9 0l1.9-5.1c.1-.3.3-.5.6-.6l5.1-1.9c.9-.3.9-1.6 0-1.9l-5.1-1.9c-.3-.1-.5-.3-.6-.6l-1.9-5.1zM43 4.9l1.9 5.1c.2.5.6 1 1.2 1.2l5.1 1.9-5.1 1.9c-.5.2-1 .6-1.2 1.2L43 21.1 41.1 16c-.2-.5-.6-1-1.2-1.2l-5-1.8 5.1-1.9c.5-.2 1-.6 1.2-1.2l1.8-5zm-.9-.4c.3-.9 1.6-.9 1.9 0l1.9 5.1c.1.3.3.5.6.6l5.1 1.9c.9.3.9 1.6 0 1.9l-5.1 1.9c-.3.1-.5.3-.6.6L44 21.6c-.3.9-1.6.9-1.9 0l-1.9-5.1c-.1-.3-.3-.5-.6-.6L34.5 14c-.9-.3-.9-1.6 0-1.9l5.1-1.9c.3-.1.5-.3.6-.6l1.9-5.1z",
+                d: "M16 8.9l1.9 5.1c.2.5.6 1 1.2 1.2l5.1 1.9-5.1 1.9c-.5.2-1 .6-1.2 1.2L16 25.1 14.1 20c-.2-.5-.6-1-1.2-1.2l-5-1.8 5.1-1.9c.5-.2 1-.6 1.2-1.2l1.8-5zm-.9-.4c.3-.9 1.6-.9 1.9 0l1.9 5.1c.1.3.3.5.6.6l5.1 1.9c.9.3.9 1.6 0 1.9l-5.1 1.9c-.3.1-.5.3-.6.6L17 25.6c-.3.9-1.6.9-1.9 0l-1.9-5.1c-.1-.3-.3-.5-.6-.6L7.5 18c-.9-.3-.9-1.6 0-1.9l5.1-1.9c.3-.1.5-.3.6-.6l1.9-5.1zm17.8 15.4l-1.9-5-1.9 5.1c-.2.5-.6 1-1.2 1.2l-5 1.8 5.1 1.9c.5.2 1 .6 1.2 1.2l1.9 5.1 1.9-5.1c.2-.5.6-1 1.2-1.2l5.1-1.9-5.1-1.9c-.7-.2-1.1-.6-1.3-1.2zm-1-5.4c-.3-.9-1.6-.9-1.9 0l-1.9 5.1c-.1.3-.3.5-.6.6l-5.1 1.9c-.9.3-.9 1.6 0 1.9l5.1 1.9c.3.1.5.3.6.6l1.9 5.1c.3.9 1.6.9 1.9 0l1.9-5.1c.1-.3.3-.5.6-.6l5.1-1.9c.9-.3.9-1.6 0-1.9l-5.1-1.9c-.3-.1-.5-.3-.6-.6l-1.9-5.1zM43 4.9l1.9 5.1c.2.5.6 1 1.2 1.2l5.1 1.9-5.1 1.9c-.5.2-1 .6-1.2 1.2L43 21.1 41.1 16c-.2-.5-.6-1-1.2-1.2l-5-1.8 5.1-1.9c.5-.2 1-.6 1.2-1.2l1.8-5zm-.9-.4c.3-.9 1.6-.9 1.9 0l1.9 5.1c.1.3.3.5.6.6l5.1 1.9c.9.3.9 1.6 0 1.9l-5.1 1.9c-.3.1-.5.3-.6.6L44 21.6c-.3.9-1.6.9-1.9 0l-1.9-5.1c-.1-.3-.3-.5-.6-.6L34.5 14c-.9-.3-.9-1.6 0-1.9l5.1-1.9c.3-.1.5-.3.6-.6l1.9-5.1z",
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 fill: "#fff",
@@ -6687,8 +6677,7 @@
             a
           ),
           o.a.createElement("path", {
-            d:
-              "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
+            d: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
           })
         );
       }
@@ -7087,9 +7076,10 @@
           let i = r;
           (r = n.getTime() / 1e3),
             t.push(w(a, Object(g.f)("#Time_Yesterday"), r, i));
-          const s = this.m_rgSortedCalendarEvents[
-              this.m_rgSortedCalendarEvents.length - 1
-            ],
+          const s =
+              this.m_rgSortedCalendarEvents[
+                this.m_rgSortedCalendarEvents.length - 1
+              ],
             o = s ? s.start_time : a;
           let l = o > r;
           for (let e = 0; e < 5 && !l; e++)
@@ -10399,7 +10389,9 @@
             let i = e.length;
             (e += n.substr(a)),
               (this.descTextAreaRef.current.value = e),
-              (this.descTextAreaRef.current.selectionStart = this.descTextAreaRef.current.selectionEnd = i),
+              (this.descTextAreaRef.current.selectionStart =
+                this.descTextAreaRef.current.selectionEnd =
+                  i),
               this.props.fnSetText(e),
               this.FocusTextInput();
           }
@@ -10424,7 +10416,8 @@
         OnEmoticonSuggestionSelected(e, t) {
           if (!t)
             return (
-              (this.m_iMentionSearchCancelledOffset = this.m_iMentionSearchStartOffset),
+              (this.m_iMentionSearchCancelledOffset =
+                this.m_iMentionSearchStartOffset),
               void this.ClearMentionSearchState()
             );
           this.ReplaceSuggestedText(":", ":" + t + ":"),
@@ -10433,7 +10426,8 @@
         OnBBCodeSuggestionSelected(e, t) {
           if (!t)
             return (
-              (this.m_iMentionSearchCancelledOffset = this.m_iMentionSearchStartOffset),
+              (this.m_iMentionSearchCancelledOffset =
+                this.m_iMentionSearchStartOffset),
               void this.ClearMentionSearchState()
             );
           this.ReplaceSuggestedText("[", t), this.ClearMentionSearchState();
@@ -12400,8 +12394,7 @@
                             "a",
                             {
                               target: c.d.IN_CLIENT ? void 0 : "_blank",
-                              href:
-                                "https://partner.steamgames.com/doc/marketing/event_tools/import",
+                              href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
                             },
                             Object(N.f)(
                               "#EventEditor_ImportFromHTML_ConvertLearn"
@@ -12827,17 +12820,15 @@
                 case "library":
                   return (
                     this.m_libraryLoadPromise ||
-                      (this.m_libraryLoadPromise = this.InternalLoadAppCompatability(
-                        e
-                      )),
+                      (this.m_libraryLoadPromise =
+                        this.InternalLoadAppCompatability(e)),
                     this.m_libraryLoadPromise
                   );
                 case "wishlist":
                   return (
                     this.m_wishlistLoadPromise ||
-                      (this.m_wishlistLoadPromise = this.InternalLoadAppCompatability(
-                        e
-                      )),
+                      (this.m_wishlistLoadPromise =
+                        this.InternalLoadAppCompatability(e)),
                     this.m_wishlistLoadPromise
                   );
               }
@@ -13133,8 +13124,8 @@
               this.m_mapEventTypeGroupsAllowed.keys()
             ),
             rgGameSources: Array.from(this.m_mapGameSources.keys()),
-            bCuratorUnhideOnFollowDismissed: this
-              .m_bCuratorUnhideOnFollowDialogDismissed,
+            bCuratorUnhideOnFollowDismissed:
+              this.m_bCuratorUnhideOnFollowDialogDismissed,
           };
           e.setItem(this.GetPreferencesStorageKey(), JSON.stringify(t));
         }
@@ -13327,13 +13318,15 @@
             (e) => {
               if (C)
                 if (_) {
-                  const t = (Object(l.a)()
-                      ? C.GetTrailer480p().strWebMURL
-                      : C.GetTrailerMax().strWebMURL
+                  const t = (
+                      Object(l.a)()
+                        ? C.GetTrailer480p().strWebMURL
+                        : C.GetTrailerMax().strWebMURL
                     ).replace("http://", "https://"),
-                    a = (Object(l.a)()
-                      ? C.GetTrailer480p().strMP4URL
-                      : C.GetTrailerMax().strMP4URL
+                    a = (
+                      Object(l.a)()
+                        ? C.GetTrailer480p().strMP4URL
+                        : C.GetTrailerMax().strMP4URL
                     ).replace("http://", "https://");
                   Object(m.b)(
                     s.createElement(
@@ -14133,10 +14126,8 @@
           }
         }
         getVideoPreviewControl() {
-          const {
-            video_preview_type: e,
-            video_preview_id: t,
-          } = this.props.eventModel;
+          const { video_preview_type: e, video_preview_id: t } =
+            this.props.eventModel;
           if (!t) return null;
           if (12 === this.props.eventModel.type) return null;
           if ("youtube" === e) {
@@ -14522,8 +14513,7 @@
             ? a.push({
                 id: _.a.k_eWishlist,
                 name: "#EventCalendar_GameSource_onWishlist",
-                ttip:
-                  "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
+                ttip: "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
                 styles: q.a.WishlistSource,
               })
             : t & _.a.k_eRecommended &&
@@ -14531,8 +14521,7 @@
             ? a.push({
                 id: _.a.k_eRecommended,
                 name: "#EventCalendar_GameSource_recommended_Verbose",
-                ttip:
-                  "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
+                ttip: "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
                 styles: q.a.RecommendedSource,
               })
             : t & _.a.k_eFeatured &&
@@ -14548,8 +14537,7 @@
               a.push({
                 id: _.a.k_eFollowing,
                 name: "#EventCalendar_GameSource_followed",
-                ttip:
-                  "#EventCalendar_GameSource_EventExplanation_ttip_following",
+                ttip: "#EventCalendar_GameSource_EventExplanation_ttip_following",
                 styles: q.a.FollowingSource,
               });
           const r = a.map((t, n) => {
@@ -15399,11 +15387,12 @@
                 this.state.modalEvent.GID == a
               )
                 return;
-              const n = yield w.b.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                e,
-                a,
-                0
-              );
+              const n =
+                yield w.b.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                  e,
+                  a,
+                  0
+                );
               this.setState({ modalEvent: n });
             } else this.state.modalEvent && this.setState({ modalEvent: null });
           });
@@ -15702,7 +15691,8 @@
                   ? c.createElement(Ne.a, {
                       appid: this.state.modalEvent.appid,
                       trackingLocation: 8,
-                      announcementGID: this.state.modalEvent.GetAnnouncementGID(),
+                      announcementGID:
+                        this.state.modalEvent.GetAnnouncementGID(),
                       partnerEventStore: w.b,
                       eventModel: this.state.modalEvent,
                       showAppHeader: !0,
@@ -17829,10 +17819,8 @@
               strResultsClass: n,
             } = this.props,
             { strSearchString: r } = this.state,
-            {
-              rgAppSuggestions: i,
-              rgCuratorSuggestions: o,
-            } = this.GetLimitedSuggestions(),
+            { rgAppSuggestions: i, rgCuratorSuggestions: o } =
+              this.GetLimitedSuggestions(),
             l = (null == r ? void 0 : r.length) > 0,
             c = (null == i ? void 0 : i.length) > 0,
             d = (null == o ? void 0 : o.length) > 0,
@@ -18107,8 +18095,7 @@
               s.createElement(
                 "a",
                 {
-                  href:
-                    "https://about.steamchina.com/parentguardianship_agreement.html",
+                  href: "https://about.steamchina.com/parentguardianship_agreement.html",
                   target: "_blank",
                   rel: "noreferrer",
                 },
@@ -19386,7 +19373,8 @@
           return (
             d.s_newsCuratorStore ||
               ((d.s_newsCuratorStore = new d()),
-              (d.s_newsCuratorStore.m_LoadingPromise = d.s_newsCuratorStore.Init()),
+              (d.s_newsCuratorStore.m_LoadingPromise =
+                d.s_newsCuratorStore.Init()),
               (window.g_NewsCuratorStore = d.s_newsCuratorStore)),
             d.s_newsCuratorStore
           );
@@ -25264,8 +25252,8 @@
                 emoticonStore: this.props.emoticonStore,
                 partnerEventStore: this.props.partnerEventStore,
                 disableReadTracking: t,
-                fnFilterImageURLsForKnownFailures: this.props
-                  .fnFilterImageURLsForKnownFailures,
+                fnFilterImageURLsForKnownFailures:
+                  this.props.fnFilterImageURLsForKnownFailures,
                 fnImageFailureCallback: this.props.fnImageFailureCallback,
                 bDisableBroadcastPlayer: !a,
                 className: this.props.eventClassName,
@@ -26951,7 +26939,8 @@
             (e.k_eTwitter = "twitter"),
             (e.k_eReddit = "reddit");
         })(r || (r = {}));
-      const u = /(?:steampowered\.com|valve\.org\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community)\/(\w+)(\/|$)/i;
+      const u =
+        /(?:steampowered\.com|valve\.org\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community)\/(\w+)(\/|$)/i;
       function m(e, t) {
         const a = "store" === Object(c.g)(),
           r = (function (e) {
@@ -30037,11 +30026,8 @@
                       )),
                 (e.apps = Object(c.b)(e.apps || [], a, t, 12, 4)));
             if (
-              ((this.m_mapMainCarousel.get(
-                e
-              ).rgMainCapsule = this.m_mapMainCarousel
-                .get(e)
-                .rgMainCapsule.concat(
+              ((this.m_mapMainCarousel.get(e).rgMainCapsule =
+                this.m_mapMainCarousel.get(e).rgMainCapsule.concat(
                   E.ZipperMerge(
                     l.map((e) => e.apps),
                     t
@@ -30672,8 +30658,8 @@
             {
               href: this.m_sharedFileInfo.url,
               className: G.a.DynamicLinkBox,
-              "data-modal-content-sizetofit": !!this.m_sharedFileInfo
-                .bSizeToFit,
+              "data-modal-content-sizetofit":
+                !!this.m_sharedFileInfo.bSizeToFit,
               "data-appid": this.m_sharedFileInfo.appid,
               "data-publishedfileid": this.props.sharedFileID,
             },
@@ -30829,8 +30815,8 @@
               !Boolean(q.a.Get().GetVODForAppID(e.appid))
             );
           return (
-            Object(s.useEffect)(() => () =>
-              t.current && t.current("VODPlayer: unmounting")
+            Object(s.useEffect)(
+              () => () => t.current && t.current("VODPlayer: unmounting")
             ),
             Object(s.useEffect)(() => {
               let i = a;
@@ -31381,16 +31367,21 @@
       var be = a("GinO"),
         ge = a("GfUI"),
         ve = a("4EJs");
-      const Se = /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
-        fe = /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
-        Ee = /(?:steamcommunity\.com|valve\.org\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
-        Ce = /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
+      const Se =
+          /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
+        fe =
+          /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
+        Ee =
+          /(?:steamcommunity\.com|valve\.org\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
+        Ce =
+          /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
         ye = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
         Oe = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
         we = /twitter\.com\/(\w+)(\/?)$/i,
         Ie = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
         Be = /twitch\.tv\/(\w+)(\/?)$/i,
-        De = /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i;
+        De =
+          /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i;
       function Te(e, t) {
         return Object(d.b)(
           e,
@@ -32631,9 +32622,10 @@
                   : p.createElement(Ae, {
                       rgEventGIDs: s,
                       bShowDemoButton: e.show_as_demos,
-                      rgFutureCalendarItems: this.cachedUpcomingCalenderEvents.rgCalendarItems
-                        .slice()
-                        .reverse(),
+                      rgFutureCalendarItems:
+                        this.cachedUpcomingCalenderEvents.rgCalendarItems
+                          .slice()
+                          .reverse(),
                     })
               )
             )
@@ -33846,13 +33838,12 @@
               if (e.includes("_")) {
                 const t = e.split("_");
                 (this.m_facets[a].facetValues[Number(t[0])].bEnabled = !0),
-                  (this.m_facets[a].facetValues[
-                    Number(t[0])
-                  ].nPriceStopIndex = Number(t[1]));
+                  (this.m_facets[a].facetValues[Number(t[0])].nPriceStopIndex =
+                    Number(t[1]));
               } else
-                this.m_facets[a].facetValues[Number(e)].bEnabled = !this
-                  .m_facets[a].facetValues[Number(e)].facetValue
-                  .bEnabledByDefault;
+                this.m_facets[a].facetValues[Number(e)].bEnabled =
+                  !this.m_facets[a].facetValues[Number(e)].facetValue
+                    .bEnabledByDefault;
             });
           }),
             this.UpdateFilter();
@@ -34092,9 +34083,8 @@
           this.m_bServerSideFiltering
             ? this.m_prunedFacets.forEach((e) => {
                 e.facetValues.forEach((e) => {
-                  e.nMatchingFilteredCapsules = this.GetMatchCountForFacetValue(
-                    e
-                  );
+                  e.nMatchingFilteredCapsules =
+                    this.GetMatchCountForFacetValue(e);
                 });
               })
             : this.m_prunedFacets.forEach((e) => {
@@ -34136,9 +34126,9 @@
                   switch (e.facetValue.rgStoreTagFilter.value) {
                     case "linux":
                       return null ===
-                        (n = this.m_mapMultiFacetCounts.get(
-                          "platform_linux"
-                        )) || void 0 === n
+                        (n =
+                          this.m_mapMultiFacetCounts.get("platform_linux")) ||
+                        void 0 === n
                         ? void 0
                         : n.get("true");
                     case "mac":
@@ -34479,8 +34469,10 @@
             e
               ? this.m_bServerSideFiltering
                 ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
-                  (this.m_nFilteredCapsuleCount -= this.m_setCapsulesRemovedByOptInFilters.size),
-                  (this.m_nFilteredCapsuleCount -= this.m_setCapsulesRemovedByUserPreferenceFilters.size))
+                  (this.m_nFilteredCapsuleCount -=
+                    this.m_setCapsulesRemovedByOptInFilters.size),
+                  (this.m_nFilteredCapsuleCount -=
+                    this.m_setCapsulesRemovedByUserPreferenceFilters.size))
                 : (this.m_nFilteredCapsuleCount = this.m_filteredCapsules.size)
               : (this.m_nFilteredCapsuleCount = t),
             this.SortFacets();
@@ -36324,8 +36316,18 @@
                     }),
                 })),
           I = _,
-          B = Object(Se.e)(O, w, [3], ["grid"], I, !0, !1, !1, (e) => 0, {})
-            .content;
+          B = Object(Se.e)(
+            O,
+            w,
+            [3],
+            ["grid"],
+            I,
+            !0,
+            !1,
+            !1,
+            (e) => 0,
+            {}
+          ).content;
         return c.a.createElement(
           Ee.b,
           { feature: "live-broadcast" },
@@ -36648,17 +36650,11 @@
               optin_tagid: u,
               optin_prune_tagid: m,
             } = e,
-            { bLoading: p, sections: _, mapSectionLists: h } = (function (
-              e,
-              t,
-              a,
-              n,
-              r,
-              i,
-              s,
-              o,
-              c
-            ) {
+            {
+              bLoading: p,
+              sections: _,
+              mapSectionLists: h,
+            } = (function (e, t, a, n, r, i, s, o, c) {
               var d, u;
               const m = S.b.Get(),
                 [p, _] = Object(l.useState)(!m.BHasSections(e, t, a, n));
@@ -36957,15 +36953,11 @@
               optin_tagid: m,
               optin_prune_tagid: p,
             } = e,
-            { bLoading: _, spotlights: h, dailyDeals: b } = (function (
-              e,
-              t,
-              a,
-              n,
-              r,
-              i,
-              s
-            ) {
+            {
+              bLoading: _,
+              spotlights: h,
+              dailyDeals: b,
+            } = (function (e, t, a, n, r, i, s) {
               const o = S.b.Get(),
                 [c, d] = Object(l.useState)(
                   !o.BHasSpotlights(e, t, a) && !o.BHasDailyDeals(e, t, a)
@@ -38174,8 +38166,9 @@
                         bShowCapsuleArt: !0,
                         fnFilterStreams: (e) => {
                           var t, a;
-                          const i = Wt.a.GetOrCreateBroadcastInfo(e.steamid)
-                            .m_nAppID;
+                          const i = Wt.a.GetOrCreateBroadcastInfo(
+                            e.steamid
+                          ).m_nAppID;
                           return (
                             ((null === (t = null == n ? void 0 : n.jsondata) ||
                             void 0 === t
@@ -38864,8 +38857,9 @@
           this.container.current &&
             this.container.current.firstElementChild &&
             this.setState({
-              actualRowHeight: this.container.current.firstElementChild.getBoundingClientRect()
-                .height,
+              actualRowHeight:
+                this.container.current.firstElementChild.getBoundingClientRect()
+                  .height,
             });
         }
         componentWillUnmount() {
@@ -44210,10 +44204,9 @@
                     }
                     if ("top_n" === n) {
                       return {
-                        capsules: Br(
-                          t,
-                          yield ae.Get().GetTopN(i, p)
-                        ).map((e) => ({ id: e, type: "game" })),
+                        capsules: Br(t, yield ae.Get().GetTopN(i, p)).map(
+                          (e) => ({ id: e, type: "game" })
+                        ),
                         bMoreRemaining: !1,
                       };
                     }
@@ -44250,7 +44243,8 @@
                               null == t ? void 0 : t.GetStoreFilter(),
                             facetFilter: s,
                             contentHub: a.GetContentHub(),
-                            bContentHubDiscountedOnly: a.BContentHubDiscountedOnly(),
+                            bContentHubDiscountedOnly:
+                              a.BContentHubDiscountedOnly(),
                             bPrioritizeDiscounts: o,
                             nSectionUniqueID:
                               "items" === r.section_type ? r.unique_id : void 0,
@@ -44580,12 +44574,13 @@
                 ("recent_events" !== a.smart_section_type &&
                   "recent_tagged_events" !== a.smart_section_type)
               )
-                e = yield se.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
-                  null,
-                  a.events
-                    .filter((e) => Boolean(e))
-                    .map((e) => e.announcement_gid)
-                );
+                e =
+                  yield se.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                    null,
+                    a.events
+                      .filter((e) => Boolean(e))
+                      .map((e) => e.announcement_gid)
+                  );
               else {
                 const t =
                   "recent_events" === a.smart_section_type
@@ -44597,10 +44592,11 @@
                           null == l ? void 0 : l.GetActiveTabUniqueID()
                         )
                     : yield de.Get().GetRecentTaggedEventsForSalesPage(i, a);
-                e = yield se.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
-                  t.map((e) => e.gid),
-                  void 0
-                );
+                e =
+                  yield se.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                    t.map((e) => e.gid),
+                    void 0
+                  );
               }
               let t = e.map((e) => e.GID);
               (t = this.GetCachedRandomizedOrder("events2", t, kt.f)),

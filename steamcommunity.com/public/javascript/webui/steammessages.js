@@ -9036,8 +9036,7 @@ var CLSTAMP = "7259641";
             request: l,
           }),
             (e.NotifyWebRTCUpdateRemoteDescriptionHandler = {
-              name:
-                "WebRTCClientNotifications.NotifyWebRTCUpdateRemoteDescription#1",
+              name: "WebRTCClientNotifications.NotifyWebRTCUpdateRemoteDescription#1",
               request: u,
             });
         })(b || (b = {}));

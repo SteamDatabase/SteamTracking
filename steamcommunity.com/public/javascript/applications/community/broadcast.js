@@ -565,8 +565,9 @@
             });
         }
         CloseBroadcastPopup() {
-          const e = N.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const e = N.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(B.e)(e, 7, this.props.stream.snr),
             Object(H.a)() && Object(H.a)().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
@@ -617,8 +618,8 @@
                       steamIDBroadcast: this.props.stream.steamid,
                       watchLocation: 6,
                       bStartMuted: this.props.bStartMuted,
-                      fnRenderBroadcastContext: this.props
-                        .fnRenderBroadcastContext,
+                      fnRenderBroadcastContext:
+                        this.props.fnRenderBroadcastContext,
                       fnOnVideoEnd: this.props.fnOnVideoEnd,
                       nAppIDVOD: this.props.stream.nAppIDVOD,
                     })
@@ -635,8 +636,9 @@
       let Q = class extends l.a.Component {
         ConstructBroadcastLink() {
           let e = this.props.stream;
-          const t = N.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const t = N.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           let a = z.list.find(
             (a) =>
               a.appid == t &&
@@ -675,8 +677,9 @@
         }
         OnToggleChat(e) {
           e.preventDefault();
-          const t = N.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const t = N.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(B.e)(
             t,
             "show" === B.a.Get().GetChatVisibility() ? 5 : 4,
@@ -685,8 +688,9 @@
             B.a.Get().ToggleChatVisibility();
         }
         onWatchBroadcastPage() {
-          const e = N.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const e = N.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(B.e)(e, 9, this.props.stream.snr);
         }
         render() {

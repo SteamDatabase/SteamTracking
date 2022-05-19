@@ -309,8 +309,7 @@
                       r.createElement(
                         "a",
                         {
-                          href:
-                            "https://partner.steamgames.com/doc/marketing/event_tools/stats",
+                          href: "https://partner.steamgames.com/doc/marketing/event_tools/stats",
                           target: "_blank",
                         },
                         Object(J.f)("#EventDashBoard_SummaryStats_Link")
@@ -1342,7 +1341,8 @@
             return this.m_objApprovalPriviledge
               ? this.m_objApprovalPriviledge
               : (this.m_LoadingPriviledgePromise ||
-                  (this.m_LoadingPriviledgePromise = this.InternalLoadAppApprovalPriviledge()),
+                  (this.m_LoadingPriviledgePromise =
+                    this.InternalLoadAppApprovalPriviledge()),
                 this.m_LoadingPriviledgePromise);
           });
         }

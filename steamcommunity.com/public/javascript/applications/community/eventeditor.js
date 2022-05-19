@@ -287,7 +287,8 @@
                       Object(f.n)(
                         "#EventEditor_Status_WillBeVisible_At",
                         d.createElement(z.a, {
-                          dateAndTime: t.GetVisibilityStartTimeAndDateUnixSeconds(),
+                          dateAndTime:
+                            t.GetVisibilityStartTimeAndDateUnixSeconds(),
                           bSingleLine: !0,
                         })
                       )
@@ -1100,8 +1101,8 @@
               a.push(
                 d.createElement(X, {
                   key: e,
-                  appid_or_vanity_str: this.props.match.params
-                    .appid_or_vanity_str,
+                  appid_or_vanity_str:
+                    this.props.match.params.appid_or_vanity_str,
                   gid: e,
                   eventModel: t,
                   bShowEventMetaDataSizes: this.state.bShowEventMetaDataSizes,
@@ -1210,8 +1211,8 @@
               "div",
               { className: Object(y.a)("maincontent", w.a.EventDashboardCtn) },
               d.createElement(ve, {
-                appid_or_vanity_str: this.props.match.params
-                  .appid_or_vanity_str,
+                appid_or_vanity_str:
+                  this.props.match.params.appid_or_vanity_str,
               }),
               d.createElement(
                 W.b,

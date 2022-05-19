@@ -499,292 +499,24 @@
       n = new WebAssembly.Instance(
         new WebAssembly.Module(
           new Uint8Array([
-            0,
-            97,
-            115,
-            109,
-            1,
-            0,
-            0,
-            0,
-            1,
-            13,
-            2,
-            96,
-            0,
-            1,
-            127,
-            96,
-            4,
-            127,
-            127,
-            127,
-            127,
-            1,
-            127,
-            3,
-            7,
-            6,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            6,
-            6,
-            1,
-            127,
-            1,
-            65,
-            0,
-            11,
-            7,
-            50,
-            6,
-            3,
-            109,
-            117,
-            108,
-            0,
-            1,
-            5,
-            100,
-            105,
-            118,
-            95,
-            115,
-            0,
-            2,
-            5,
-            100,
-            105,
-            118,
-            95,
-            117,
-            0,
-            3,
-            5,
-            114,
-            101,
-            109,
-            95,
-            115,
-            0,
-            4,
-            5,
-            114,
-            101,
-            109,
-            95,
-            117,
-            0,
-            5,
-            8,
-            103,
-            101,
-            116,
-            95,
-            104,
-            105,
-            103,
-            104,
-            0,
-            0,
-            10,
-            191,
-            1,
-            6,
-            4,
-            0,
-            35,
-            0,
-            11,
-            36,
-            1,
-            1,
-            126,
-            32,
-            0,
-            173,
-            32,
-            1,
-            173,
-            66,
-            32,
-            134,
-            132,
-            32,
-            2,
-            173,
-            32,
-            3,
-            173,
-            66,
-            32,
-            134,
-            132,
-            126,
-            34,
-            4,
-            66,
-            32,
-            135,
-            167,
-            36,
-            0,
-            32,
-            4,
-            167,
-            11,
-            36,
-            1,
-            1,
-            126,
-            32,
-            0,
-            173,
-            32,
-            1,
-            173,
-            66,
-            32,
-            134,
-            132,
-            32,
-            2,
-            173,
-            32,
-            3,
-            173,
-            66,
-            32,
-            134,
-            132,
-            127,
-            34,
-            4,
-            66,
-            32,
-            135,
-            167,
-            36,
-            0,
-            32,
-            4,
-            167,
-            11,
-            36,
-            1,
-            1,
-            126,
-            32,
-            0,
-            173,
-            32,
-            1,
-            173,
-            66,
-            32,
-            134,
-            132,
-            32,
-            2,
-            173,
-            32,
-            3,
-            173,
-            66,
-            32,
-            134,
-            132,
-            128,
-            34,
-            4,
-            66,
-            32,
-            135,
-            167,
-            36,
-            0,
-            32,
-            4,
-            167,
-            11,
-            36,
-            1,
-            1,
-            126,
-            32,
-            0,
-            173,
-            32,
-            1,
-            173,
-            66,
-            32,
-            134,
-            132,
-            32,
-            2,
-            173,
-            32,
-            3,
-            173,
-            66,
-            32,
-            134,
-            132,
-            129,
-            34,
-            4,
-            66,
-            32,
-            135,
-            167,
-            36,
-            0,
-            32,
-            4,
-            167,
-            11,
-            36,
-            1,
-            1,
-            126,
-            32,
-            0,
-            173,
-            32,
-            1,
-            173,
-            66,
-            32,
-            134,
-            132,
-            32,
-            2,
-            173,
-            32,
-            3,
-            173,
-            66,
-            32,
-            134,
-            132,
-            130,
-            34,
-            4,
-            66,
-            32,
-            135,
-            167,
-            36,
-            0,
-            32,
-            4,
-            167,
-            11,
+            0, 97, 115, 109, 1, 0, 0, 0, 1, 13, 2, 96, 0, 1, 127, 96, 4, 127,
+            127, 127, 127, 1, 127, 3, 7, 6, 0, 1, 1, 1, 1, 1, 6, 6, 1, 127, 1,
+            65, 0, 11, 7, 50, 6, 3, 109, 117, 108, 0, 1, 5, 100, 105, 118, 95,
+            115, 0, 2, 5, 100, 105, 118, 95, 117, 0, 3, 5, 114, 101, 109, 95,
+            115, 0, 4, 5, 114, 101, 109, 95, 117, 0, 5, 8, 103, 101, 116, 95,
+            104, 105, 103, 104, 0, 0, 10, 191, 1, 6, 4, 0, 35, 0, 11, 36, 1, 1,
+            126, 32, 0, 173, 32, 1, 173, 66, 32, 134, 132, 32, 2, 173, 32, 3,
+            173, 66, 32, 134, 132, 126, 34, 4, 66, 32, 135, 167, 36, 0, 32, 4,
+            167, 11, 36, 1, 1, 126, 32, 0, 173, 32, 1, 173, 66, 32, 134, 132,
+            32, 2, 173, 32, 3, 173, 66, 32, 134, 132, 127, 34, 4, 66, 32, 135,
+            167, 36, 0, 32, 4, 167, 11, 36, 1, 1, 126, 32, 0, 173, 32, 1, 173,
+            66, 32, 134, 132, 32, 2, 173, 32, 3, 173, 66, 32, 134, 132, 128, 34,
+            4, 66, 32, 135, 167, 36, 0, 32, 4, 167, 11, 36, 1, 1, 126, 32, 0,
+            173, 32, 1, 173, 66, 32, 134, 132, 32, 2, 173, 32, 3, 173, 66, 32,
+            134, 132, 129, 34, 4, 66, 32, 135, 167, 36, 0, 32, 4, 167, 11, 36,
+            1, 1, 126, 32, 0, 173, 32, 1, 173, 66, 32, 134, 132, 32, 2, 173, 32,
+            3, 173, 66, 32, 134, 132, 130, 34, 4, 66, 32, 135, 167, 36, 0, 32,
+            4, 167, 11,
           ])
         ),
         {}
@@ -4687,11 +4419,12 @@ and limitations under the License.
           spy: ot,
           extras: {
             getDebugName: function (e, t) {
-              return (void 0 !== t
-                ? Tn(e, t)
-                : On(e) || hn(e) || yn(e)
-                ? Cn(e)
-                : Tn(e)
+              return (
+                void 0 !== t
+                  ? Tn(e, t)
+                  : On(e) || hn(e) || yn(e)
+                  ? Cn(e)
+                  : Tn(e)
               ).name;
             },
           },
@@ -6003,10 +5736,14 @@ and limitations under the License.
               return n && e(t.prototype, n), r && e(t, r), t;
             };
           })(),
-          a = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,
-          o = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,
-          i = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,
-          s = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,
+          a =
+            /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,
+          o =
+            /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,
+          i =
+            /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,
+          s =
+            /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,
           l = (function () {
             function e() {
               !(function (e, t) {
@@ -7567,8 +7304,7 @@ and limitations under the License.
 object-assign
 (c) Sindre Sorhus
 @license MIT
-*/ var r =
-        Object.getOwnPropertySymbols,
+*/ var r = Object.getOwnPropertySymbols,
       a = Object.prototype.hasOwnProperty,
       o = Object.prototype.propertyIsEnumerable;
     function i(e) {
@@ -7712,7 +7448,8 @@ object-assign
         ">": "&gt;",
         '"': "&quot;",
       }),
-      (t.URL_RE = /\b((?:([\w-]+):(\/{1,3})|www[.])(?:(?:(?:[^\s&()]|&amp;|&quot;)*(?:[^!"#$%&'()*+,.:;<=>?@\[\]^`{|}~\s]))|(?:\((?:[^\s&()]|&amp;|&quot;)*\)))+)/g),
+      (t.URL_RE =
+        /\b((?:([\w-]+):(\/{1,3})|www[.])(?:(?:(?:[^\s&()]|&amp;|&quot;)*(?:[^!"#$%&'()*+,.:;<=>?@\[\]^`{|}~\s]))|(?:\((?:[^\s&()]|&amp;|&quot;)*\)))+)/g),
       (t.COSMETIC_DICT = {
         "--": "&ndash;",
         "---": "&mdash;",
@@ -12277,8 +12014,7 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "a",
                 {
-                  href:
-                    "https://store.steampowered.com/app/1046930/Dota_Underlords/",
+                  href: "https://store.steampowered.com/app/1046930/Dota_Underlords/",
                   className: mn(pn.a.DownloadButton, pn.a.SteamButton),
                 },
                 f.a.createElement("img", { src: mt.IMG_URL + "steam.png" })
@@ -12304,8 +12040,7 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "a",
                 {
-                  href:
-                    "https://play.google.com/store/apps/details?id=com.valvesoftware.underlords",
+                  href: "https://play.google.com/store/apps/details?id=com.valvesoftware.underlords",
                   className: mn(pn.a.DownloadButton, pn.a.GooglePlayButton),
                 },
                 f.a.createElement("img", {
@@ -12863,8 +12598,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   { className: Lt.a.VideoAspectRatio },
                   f.a.createElement("iframe", {
                     className: Lt.a.video,
-                    src:
-                      "https://www.youtube.com/embed/74Gh0lU89Ic?controls=0&autoplay=1&mute=1&hd=1&loop=1&playlist=m9MqIzmWG24",
+                    src: "https://www.youtube.com/embed/74Gh0lU89Ic?controls=0&autoplay=1&mute=1&hd=1&loop=1&playlist=m9MqIzmWG24",
                     frameBorder: 0,
                     allowFullScreen: !0,
                   })
@@ -13294,8 +13028,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement(
                     "a",
                     {
-                      href:
-                        "https://steamcommunity.com/games/underlords/announcements/create/",
+                      href: "https://steamcommunity.com/games/underlords/announcements/create/",
                     },
                     "Post New Announcement"
                   ),
@@ -17249,9 +16982,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   this.m_arrStatColumnVisible.splice(n, 1)),
                 this.m_nSortColumnEndRound != e ||
                   t ||
-                  (this.m_nSortColumnEndRound = this.m_arrStatColumnEnds[
-                    n + 1
-                  ]);
+                  (this.m_nSortColumnEndRound =
+                    this.m_arrStatColumnEnds[n + 1]);
             }
           }),
           (e.prototype.setGameMode = function (e) {
@@ -17262,16 +16994,7 @@ PERFORMANCE OF THIS SOFTWARE.
               ? ((this.m_arrStatColumnEnds = [1, 3, 5, 8, 255]),
                 (this.m_arrStatColumnVisible = [!0, !0, !0, !0, !0]))
               : ((this.m_arrStatColumnEnds = [
-                  2,
-                  5,
-                  9,
-                  14,
-                  19,
-                  24,
-                  29,
-                  34,
-                  39,
-                  255,
+                  2, 5, 9, 14, 19, 24, 29, 34, 39, 255,
                 ]),
                 (this.m_arrStatColumnVisible = [
                   !0,
@@ -21284,11 +21007,12 @@ PERFORMANCE OF THIS SOFTWARE.
             p = "(?:" + u.pattern + ")";
           t.push(u),
             u.repeat && (p += "(?:" + f + p + ")*"),
-            (i += p = u.optional
-              ? u.partial
-                ? f + "(" + p + ")?"
-                : "(?:" + f + "(" + p + "))?"
-              : f + "(" + p + ")");
+            (i += p =
+              u.optional
+                ? u.partial
+                  ? f + "(" + p + ")?"
+                  : "(?:" + f + "(" + p + "))?"
+                : f + "(" + p + ")");
         }
       }
       var m = l(n.delimiter || "/"),
@@ -21918,7 +21642,39 @@ PERFORMANCE OF THIS SOFTWARE.
   x9Za: function (e, t, n) {
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 }),
-      (t.canUseDOM = t.slidesOnLeft = t.slidesOnRight = t.siblingDirection = t.getTotalSlides = t.getPostClones = t.getPreClones = t.getTrackLeft = t.getTrackAnimateCSS = t.getTrackCSS = t.checkSpecKeys = t.getSlideCount = t.checkNavigable = t.getNavigableIndexes = t.swipeEnd = t.swipeMove = t.swipeStart = t.keyHandler = t.changeSlide = t.slideHandler = t.initializedState = t.extractObject = t.canGoNext = t.getSwipeDirection = t.getHeight = t.getWidth = t.lazySlidesOnRight = t.lazySlidesOnLeft = t.lazyEndIndex = t.lazyStartIndex = t.getRequiredLazySlides = t.getOnDemandLazySlides = void 0);
+      (t.canUseDOM =
+        t.slidesOnLeft =
+        t.slidesOnRight =
+        t.siblingDirection =
+        t.getTotalSlides =
+        t.getPostClones =
+        t.getPreClones =
+        t.getTrackLeft =
+        t.getTrackAnimateCSS =
+        t.getTrackCSS =
+        t.checkSpecKeys =
+        t.getSlideCount =
+        t.checkNavigable =
+        t.getNavigableIndexes =
+        t.swipeEnd =
+        t.swipeMove =
+        t.swipeStart =
+        t.keyHandler =
+        t.changeSlide =
+        t.slideHandler =
+        t.initializedState =
+        t.extractObject =
+        t.canGoNext =
+        t.getSwipeDirection =
+        t.getHeight =
+        t.getWidth =
+        t.lazySlidesOnRight =
+        t.lazySlidesOnLeft =
+        t.lazyEndIndex =
+        t.lazyStartIndex =
+        t.getRequiredLazySlides =
+        t.getOnDemandLazySlides =
+          void 0);
     var r = o(n("q1tI")),
       a = o(n("i8i4"));
     function o(e) {
@@ -22871,7 +22627,8 @@ PERFORMANCE OF THIS SOFTWARE.
         void 0 === window.document ||
         void 0 === window.document.createElement
       ),
-      f = /^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,
+      f =
+        /^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,
       p = Object.prototype.hasOwnProperty,
       m = {},
       h = {};
@@ -23849,9 +23606,10 @@ PERFORMANCE OF THIS SOFTWARE.
       ut = new Map(),
       ct = new Map(),
       dt = [],
-      ft = "mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset submit".split(
-        " "
-      );
+      ft =
+        "mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset submit".split(
+          " "
+        );
     function pt(e, t, n, r, a) {
       return {
         blockedOn: e,
@@ -24808,9 +24566,10 @@ PERFORMANCE OF THIS SOFTWARE.
       ),
       Mt(Rt, 2);
     for (
-      var br = "change selectionchange textInput compositionstart compositionend compositionupdate".split(
-          " "
-        ),
+      var br =
+          "change selectionchange textInput compositionstart compositionend compositionupdate".split(
+            " "
+          ),
         _r = 0;
       _r < br.length;
       _r++
@@ -24845,9 +24604,10 @@ PERFORMANCE OF THIS SOFTWARE.
         "onCompositionUpdate",
         "compositionupdate focusout keydown keypress keyup mousedown".split(" ")
       );
-    var wr = "abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange seeked seeking stalled suspend timeupdate volumechange waiting".split(
-        " "
-      ),
+    var wr =
+        "abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange seeked seeking stalled suspend timeupdate volumechange waiting".split(
+          " "
+        ),
       Er = new Set(
         "cancel close invalid load scroll toggle".split(" ").concat(wr)
       );
@@ -25727,14 +25487,15 @@ PERFORMANCE OF THIS SOFTWARE.
           var p = i.eventTime;
           if ((r & l) === l) {
             null !== d &&
-              (d = d.next = {
-                eventTime: p,
-                lane: 0,
-                tag: i.tag,
-                payload: i.payload,
-                callback: i.callback,
-                next: null,
-              });
+              (d = d.next =
+                {
+                  eventTime: p,
+                  lane: 0,
+                  tag: i.tag,
+                  payload: i.payload,
+                  callback: i.callback,
+                  next: null,
+                });
             e: {
               var m = e,
                 h = i;
@@ -26204,14 +25965,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 o.type === k
                   ? (((r = Fl(o.props.children, e.mode, l, o.key)).return = e),
                     (e = r))
-                  : (((l = zl(
-                      o.type,
-                      o.key,
-                      o.props,
-                      null,
-                      e.mode,
-                      l
-                    )).ref = bo(e, r, o)),
+                  : (((l = zl(o.type, o.key, o.props, null, e.mode, l)).ref =
+                      bo(e, r, o)),
                     (l.return = e),
                     (e = l));
               }
@@ -26528,13 +26283,14 @@ PERFORMANCE OF THIS SOFTWARE.
           var c = u.lane;
           if (($o & c) === c)
             null !== l &&
-              (l = l.next = {
-                lane: 0,
-                action: u.action,
-                eagerReducer: u.eagerReducer,
-                eagerState: u.eagerState,
-                next: null,
-              }),
+              (l = l.next =
+                {
+                  lane: 0,
+                  action: u.action,
+                  eagerReducer: u.eagerReducer,
+                  eagerState: u.eagerState,
+                  next: null,
+                }),
               (r = u.eagerReducer === e ? u.eagerState : e(r, u.action));
           else {
             var d = {
@@ -26660,7 +26416,8 @@ PERFORMANCE OF THIS SOFTWARE.
             dispatch: null,
             lastRenderedReducer: oi,
             lastRenderedState: d,
-          }).dispatch = c = Oi.bind(null, Xo, e)),
+          }).dispatch = c =
+            Oi.bind(null, Xo, e)),
           (u.queue = e),
           (u.baseQueue = null),
           (d = li(a, t, n)),
@@ -26676,12 +26433,14 @@ PERFORMANCE OF THIS SOFTWARE.
       return (
         "function" == typeof e && (e = e()),
         (t.memoizedState = t.baseState = e),
-        (e = (e = t.queue = {
-          pending: null,
-          dispatch: null,
-          lastRenderedReducer: oi,
-          lastRenderedState: e,
-        }).dispatch = Oi.bind(null, Xo, e)),
+        (e = (e = t.queue =
+          {
+            pending: null,
+            dispatch: null,
+            lastRenderedReducer: oi,
+            lastRenderedState: e,
+          }).dispatch =
+          Oi.bind(null, Xo, e)),
         [t.memoizedState, e]
       );
     }
@@ -26861,12 +26620,14 @@ PERFORMANCE OF THIS SOFTWARE.
           return (
             (t = void 0 !== n ? n(t) : t),
             (r.memoizedState = r.baseState = t),
-            (e = (e = r.queue = {
-              pending: null,
-              dispatch: null,
-              lastRenderedReducer: e,
-              lastRenderedState: t,
-            }).dispatch = Oi.bind(null, Xo, e)),
+            (e = (e = r.queue =
+              {
+                pending: null,
+                dispatch: null,
+                lastRenderedReducer: e,
+                lastRenderedState: t,
+              }).dispatch =
+              Oi.bind(null, Xo, e)),
             [r.memoizedState, e]
           );
         },
@@ -27715,9 +27476,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   (n = t.memoizedProps),
                   (r[Kr] = t),
                   r.nodeValue !== n && (t.flags |= 4))
-                : (((r = (9 === n.nodeType
-                    ? n
-                    : n.ownerDocument
+                : (((r = (
+                    9 === n.nodeType ? n : n.ownerDocument
                   ).createTextNode(r))[Kr] = t),
                   (t.stateNode = r));
           }
@@ -29499,11 +29259,21 @@ PERFORMANCE OF THIS SOFTWARE.
     function jl(e, t, n, r) {
       (this.tag = e),
         (this.key = n),
-        (this.sibling = this.child = this.return = this.stateNode = this.type = this.elementType = null),
+        (this.sibling =
+          this.child =
+          this.return =
+          this.stateNode =
+          this.type =
+          this.elementType =
+            null),
         (this.index = 0),
         (this.ref = null),
         (this.pendingProps = t),
-        (this.dependencies = this.memoizedState = this.updateQueue = this.memoizedProps = null),
+        (this.dependencies =
+          this.memoizedState =
+          this.updateQueue =
+          this.memoizedProps =
+            null),
         (this.mode = r),
         (this.flags = 0),
         (this.lastEffect = this.firstEffect = this.nextEffect = null),
@@ -29619,12 +29389,8 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     function Vl(e, t, n) {
       return (
-        ((t = Dl(
-          4,
-          null !== e.children ? e.children : [],
-          e.key,
-          t
-        )).lanes = n),
+        ((t = Dl(4, null !== e.children ? e.children : [], e.key, t)).lanes =
+          n),
         (t.stateNode = {
           containerInfo: e.containerInfo,
           pendingChildren: null,
@@ -29636,7 +29402,11 @@ PERFORMANCE OF THIS SOFTWARE.
     function Wl(e, t, n) {
       (this.tag = t),
         (this.containerInfo = e),
-        (this.finishedWork = this.pingCache = this.current = this.pendingChildren = null),
+        (this.finishedWork =
+          this.pingCache =
+          this.current =
+          this.pendingChildren =
+            null),
         (this.timeoutHandle = -1),
         (this.pendingContext = this.context = null),
         (this.hydrate = n),
@@ -29644,7 +29414,14 @@ PERFORMANCE OF THIS SOFTWARE.
         (this.callbackPriority = 0),
         (this.eventTimes = Ft(0)),
         (this.expirationTimes = Ft(-1)),
-        (this.entangledLanes = this.finishedLanes = this.mutableReadLanes = this.expiredLanes = this.pingedLanes = this.suspendedLanes = this.pendingLanes = 0),
+        (this.entangledLanes =
+          this.finishedLanes =
+          this.mutableReadLanes =
+          this.expiredLanes =
+          this.pingedLanes =
+          this.suspendedLanes =
+          this.pendingLanes =
+            0),
         (this.entanglements = Ft(0)),
         (this.mutableSourceEagerHydrationData = null);
     }
@@ -29766,23 +29543,24 @@ PERFORMANCE OF THIS SOFTWARE.
         Kl(t, i, e, a);
       } else {
         if (
-          ((o = n._reactRootContainer = (function (e, t) {
-            if (
-              (t ||
-                (t = !(
-                  !(t = e
-                    ? 9 === e.nodeType
-                      ? e.documentElement
-                      : e.firstChild
-                    : null) ||
-                  1 !== t.nodeType ||
-                  !t.hasAttribute("data-reactroot")
-                )),
-              !t)
-            )
-              for (var n; (n = e.lastChild); ) e.removeChild(n);
-            return new Yl(e, 0, t ? { hydrate: !0 } : void 0);
-          })(n, r)),
+          ((o = n._reactRootContainer =
+            (function (e, t) {
+              if (
+                (t ||
+                  (t = !(
+                    !(t = e
+                      ? 9 === e.nodeType
+                        ? e.documentElement
+                        : e.firstChild
+                      : null) ||
+                    1 !== t.nodeType ||
+                    !t.hasAttribute("data-reactroot")
+                  )),
+                !t)
+              )
+                for (var n; (n = e.lastChild); ) e.removeChild(n);
+              return new Yl(e, 0, t ? { hydrate: !0 } : void 0);
+            })(n, r)),
           (i = o._internalRoot),
           "function" == typeof a)
         ) {
@@ -29906,14 +29684,15 @@ PERFORMANCE OF THIS SOFTWARE.
               (e = t.pendingProps),
               (a = (o = a._init)(a._payload)),
               (t.type = a),
-              (o = t.tag = (function (e) {
-                if ("function" == typeof e) return Ul(e) ? 1 : 0;
-                if (null != e) {
-                  if ((e = e.$$typeof) === x) return 11;
-                  if (e === A) return 14;
-                }
-                return 2;
-              })(a)),
+              (o = t.tag =
+                (function (e) {
+                  if ("function" == typeof e) return Ul(e) ? 1 : 0;
+                  if (null != e) {
+                    if ((e = e.$$typeof) === x) return 11;
+                    if (e === A) return 14;
+                  }
+                  return 2;
+                })(a)),
               (e = qa(a, e)),
               o)
             ) {
