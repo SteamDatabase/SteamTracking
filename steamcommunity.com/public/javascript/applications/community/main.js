@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7263978";
+var CLSTAMP = "7265159";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [114],
   {
@@ -17289,23 +17289,26 @@ var CLSTAMP = "7263978";
           m = () => {
             c && c.Close(), h();
           },
-          p = i.cloneElement(e, { closeModal: m });
-        if (b((a = a || Object(l.h)(t)), t) && r && n) {
+          g = i.cloneElement(e, { closeModal: m });
+        if (
+          (p.c.IN_GAMEPADUI && (t = window.parent),
+          b((a = a || Object(l.h)(t)), t) && r && n)
+        ) {
           if (r.bHideMainWindowForPopouts) {
             const e = i.createElement(
               l.i,
               {
                 className: "Hidden",
-                onEscKeypress: !p.props.bDisableBackgroundDismiss && m,
+                onEscKeypress: !g.props.bDisableBackgroundDismiss && m,
               },
               i.createElement("div", null)
             );
             u = a.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, r), { fnOnClose: h }),
-            d = new v(t, n, e, p, o, s);
+            d = new v(t, n, e, g, o, s);
           d.Show(), (c = d);
-        } else c = a.ShowModal(p);
+        } else c = a.ShowModal(g);
         return c;
       }
       function b(e, t) {

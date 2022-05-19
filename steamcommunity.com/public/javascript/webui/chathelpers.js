@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7259641";
+var CLSTAMP = "7265205";
 !(function (e) {
   function t(t) {
     for (
@@ -124,7 +124,7 @@ var CLSTAMP = "7259641";
                 13: "5807f149c7a216b166da",
                 14: "a3a91b94bb9f4b931f76",
                 15: "0d3c1d70aa3617271461",
-                16: "86aee1040d92397b3dce",
+                16: "3f1a97ca606aa2f8e5cc",
                 17: "19336168a5159d54fc5c",
                 18: "8473783de5b4b4c12da2",
                 19: "eafcd93c5a6851ff5134",
@@ -154,7 +154,7 @@ var CLSTAMP = "7259641";
                 43: "20c97a041b5c5fd51a0e",
                 44: "b79dbb3035eea84c82e2",
                 45: "ab51d1be860a94f5ffa3",
-                46: "fbb694d9c7af34927b19",
+                46: "f9c9fa96369b98c9108a",
                 47: "cf0feba56d6ede7acd57",
                 48: "1bd3f3d98e70acd36ca5",
                 49: "aadb89a4b2f78825d3fb",
@@ -621,7 +621,7 @@ var CLSTAMP = "7259641";
           return t;
       }
     }
-    var S, C, v, T, y, I, R;
+    var S, C, T, v, y, I, R;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -665,7 +665,7 @@ var CLSTAMP = "7259641";
             "k_ESuspendResumeProgressState_WaitingForApp"),
           (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
             "k_ESuspendResumeProgressState_Working");
-      })(v || (v = {})),
+      })(T || (T = {})),
       (function (e) {
         (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
           "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -675,7 +675,7 @@ var CLSTAMP = "7259641";
             "k_EFloatingGamepadTextInputModeModeEmail"),
           (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
             "k_EFloatingGamepadTextInputModeModeNumeric");
-      })(T || (T = {})),
+      })(v || (v = {})),
       (function (e) {
         (e[(e.k_EAppUpdateContentType_Content = 0)] =
           "k_EAppUpdateContentType_Content"),
@@ -940,17 +940,20 @@ var CLSTAMP = "7259641";
     n.d(t, "a", function () {
       return i;
     }),
-      n.d(t, "d", function () {
+      n.d(t, "e", function () {
         return o;
       }),
-      n.d(t, "c", function () {
+      n.d(t, "d", function () {
         return s;
       }),
       n.d(t, "b", function () {
         return a;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "f", function () {
         return c;
+      }),
+      n.d(t, "c", function () {
+        return u;
       });
     var r = n("cDcd");
     n("E7zH");
@@ -999,6 +1002,44 @@ var CLSTAMP = "7259641";
         }, [e]),
         t
       );
+    }
+    function u(e, t, n = 1e3) {
+      const i = r.useRef(t),
+        [o, s] = r.useState(e),
+        [a, c] = r.useState(!1),
+        u = r.useCallback(() => {
+          s(e), c(!1);
+        }, [e, s]),
+        { fnStopTimer: l, fnRestartTimer: d } = (function (e, t, n = !0) {
+          const i = r.useRef(t);
+          i.current = t;
+          const [o, s] = r.useState(!1),
+            a = r.useRef(0),
+            c = r.useCallback(() => {
+              s(!0), i.current && i.current();
+            }, []),
+            u = r.useCallback(() => {
+              window.clearTimeout(a.current);
+            }, []),
+            l = r.useCallback(() => {
+              s(!1), u(), (a.current = window.setTimeout(c, e));
+            }, [u, e, t, c]),
+            d = r.useCallback(() => {
+              n && l();
+            }, [n, l]);
+          return (
+            r.useEffect(d, [e, d]),
+            r.useEffect(() => u, [u]),
+            { bTimerCompleted: o, fnStopTimer: u, fnRestartTimer: l }
+          );
+        })(n, u, !1),
+        f = r.useCallback(
+          (e) => {
+            d(), s(e), c(!0), i.current && i.current(e);
+          },
+          [s, d]
+        );
+      return [a ? o : e, f];
     }
   },
   "79S0": function (e, t, n) {
@@ -1057,34 +1098,37 @@ var CLSTAMP = "7259641";
     n.d(t, "c", function () {
       return r.a;
     }),
-      n.d(t, "h", function () {
-        return r.d;
+      n.d(t, "i", function () {
+        return r.e;
       }),
-      n.d(t, "f", function () {
-        return r.c;
+      n.d(t, "g", function () {
+        return r.d;
       }),
       n.d(t, "e", function () {
         return r.b;
       }),
-      n.d(t, "l", function () {
-        return r.e;
+      n.d(t, "m", function () {
+        return r.f;
+      }),
+      n.d(t, "f", function () {
+        return r.c;
       }),
       n.d(t, "d", function () {
         return o;
       }),
-      n.d(t, "g", function () {
+      n.d(t, "h", function () {
         return s;
       }),
       n.d(t, "a", function () {
         return a;
       }),
-      n.d(t, "j", function () {
+      n.d(t, "k", function () {
         return c;
       }),
-      n.d(t, "i", function () {
+      n.d(t, "j", function () {
         return u;
       }),
-      n.d(t, "k", function () {
+      n.d(t, "l", function () {
         return f;
       }),
       n.d(t, "b", function () {
@@ -1741,7 +1785,7 @@ var CLSTAMP = "7259641";
         return C;
       }),
       n.d(t, "e", function () {
-        return T;
+        return v;
       }),
       n.d(t, "a", function () {
         return y;
@@ -1917,7 +1961,7 @@ var CLSTAMP = "7259641";
         if (!a.bGranularFutureTime)
           return (
             s.b(n.getTime() - r.getTime()),
-            n.getFullYear() == r.getFullYear() ? v(n) : y(n)
+            n.getFullYear() == r.getFullYear() ? T(n) : y(n)
           );
         s.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
         let e = new Date();
@@ -1968,7 +2012,7 @@ var CLSTAMP = "7259641";
           ? Object(i.f)("#TimeSince_1Week")
           : Object(i.f)("#TimeSince_XWeeks", e);
       }
-      return n.getFullYear() == r.getFullYear() ? v(n) : y(n);
+      return n.getFullYear() == r.getFullYear() ? T(n) : y(n);
     }
     const p = new Map(),
       b = new Map(),
@@ -2001,7 +2045,7 @@ var CLSTAMP = "7259641";
         t)
       );
     }
-    function v(e) {
+    function T(e) {
       let t = b.get(e.getMonth());
       return (
         t ||
@@ -2012,7 +2056,7 @@ var CLSTAMP = "7259641";
         t)
       );
     }
-    function T(e) {
+    function v(e) {
       let t = g.get(e.getFullYear());
       return (
         t ||
@@ -3300,7 +3344,7 @@ var CLSTAMP = "7259641";
     }
     window.AssertMsg = u.a;
     let C = new a.a();
-    function v(e) {
+    function T(e) {
       let t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -3336,7 +3380,7 @@ var CLSTAMP = "7259641";
                   r = n.getAttribute("data-component");
                 switch (r) {
                   case "ChatInvite":
-                    v(n);
+                    T(n);
                     break;
                   default:
                     Object(u.a)(!1, `unknown component: "${r}"`);
