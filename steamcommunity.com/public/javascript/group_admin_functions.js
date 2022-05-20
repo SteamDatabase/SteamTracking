@@ -45,16 +45,8 @@ function setupEditors()
 				}
 				g_rgCurrentDisabled[i.id] = false;
 				addEvent(i, 'focus', checkAllowInput, false);
-				// if there's an individual save button, attach save handler and hide button
-				if(i.id.indexOf('weblink_') != -1)
-				{
-					thisWLink = i.id.substr(8,1);
-					saveButton = document.getElementById('save_weblink_'+thisWLink);
-				}
-				else
-				{
-					saveButton = document.getElementById('save_'+i.id);
-				}
+				saveButton = document.getElementById('save_'+i.id);
+
 				if(saveButton)
 				{
 					addEvent(saveButton, 'click', saveField, false);
@@ -458,19 +450,6 @@ function validateFields()
 	{
 		alert( "There is a maximum length of 3000 characters for summaries. Please shorten it and try again." );
 		bOk = false;
-	}
-	for( x=1; x <= 3; x++ )
-	{
-		if ( document.getElementById( 'weblink_' + x + '_title' ).value.length > 128 )
-		{
-			alert( "Website link titles can only be 128 characters in length" );
-			bOk = false;
-		}
-		if ( document.getElementById( 'weblink_' + x + '_url' ).value.length > 128 )
-		{
-			alert( "Website URLs can only be 128 characters in length" );
-			bOk = false;
-		}
 	}
 	if ( bOk )
 	{
