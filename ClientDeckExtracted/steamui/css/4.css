@@ -1,3 +1,321 @@
+:root {
+  --basicui-header-height: 0px;
+}
+.insetshadow_FriendsListInsetShadowCtn_17ewz {
+  position: relative;
+  height: 0;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.insetshadow_FriendListInsetShadowTop_2-sgw {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-shrink: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.insetshadow_FriendListInsetShadowTop_2-sgw.GamepadMode,
+.GamepadMode .insetshadow_FriendListInsetShadowTop_2-sgw {
+  height: 8px;
+  background: linear-gradient(
+    to bottom,
+    #0e141b 0%,
+    rgba(14, 20, 27, 0.5) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.GamepadMode
+  .multiChatDialog.gpfocuswithin
+  .insetshadow_FriendListInsetShadowTop_2-sgw {
+  background: linear-gradient(
+    to bottom,
+    #23262e 0%,
+    rgba(35, 38, 46, 0.5) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.insetshadow_FriendListInsetShadowBottom_2hL6s {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 16px;
+  position: absolute;
+  flex-shrink: 0;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+.broadcastchat_BroadcastChat_37jsi {
+  max-width: 194px;
+  min-width: 0;
+}
+.broadcastchat_ChatEntry_3o0ss {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  padding: 6px;
+  padding-bottom: 8px;
+  background-color: #22252b;
+  transition: all 0.21s ease-in-out;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.broadcastchat_ChatPanel_3RXwS {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #1b1c20;
+  position: relative;
+}
+.broadcastchat_ChatMessages_VeT2J {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  flex-basis: 1px;
+  position: relative;
+  padding: 8px;
+}
+.broadcastchat_EmoticonContainer_ikBOk {
+  width: 15%;
+  height: 10%;
+}
+.broadcastchat_ChatSend_2J8Sc {
+  width: 15%;
+  height: 10%;
+}
+.broadcastchat_ChatBox_CVXBI {
+  width: 70%;
+  height: 10%;
+}
+.broadcastchat_ChatControls_3JcMC {
+  display: flex;
+}
+.broadcastchat_MessageChat_3WCO8 {
+  padding: 4px;
+  color: #c1c6cf;
+  word-break: break-word;
+}
+.broadcastchat_MessageChat_3WCO8:hover {
+  background: #24262e;
+}
+.broadcastchat_MessageName_2moOK {
+  color: #6dcff6;
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #6dcff63d;
+}
+.broadcastchat_MessageName_2moOK:hover,
+.broadcastchat_MessageName_2moOK:active {
+  color: #9edff8;
+  text-decoration-color: #6dcff6b4;
+}
+.broadcastchat_MessageContents_3YqUZ {
+  font-size: 14px;
+}
+.broadcastchat_MessageContents_3YqUZ a {
+  color: #fff;
+}
+.broadcastchat_MessageContents_3YqUZ img.emoticon.large {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  pointer-events: all;
+  margin-top: -3px;
+  margin-bottom: -3px;
+  margin-right: -3px;
+}
+.broadcastchat_EmoticonsOnly_2hwH8 {
+  line-height: 32px;
+}
+.broadcastchat_MessageNotification_3b8gU {
+  color: gray;
+  padding: 6px;
+}
+.broadcastchat_MessageError_2KF5w {
+  color: #812819;
+  padding: 6px;
+  border: 1px dashed rgba(255, 58, 58, 0.15);
+  box-shadow: 2px 3px 14px 1px #00000066 inset;
+  margin: 8px;
+}
+.broadcastchat_minHeightZero_-dYCi {
+  min-height: 0;
+  flex: 1;
+}
+.broadcastchat_ChatLoginButton_1hkDB {
+  background: linear-gradient(to right, #3366ff, #7d6ebc);
+  display: inline-block;
+  padding: 0;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  height: 42px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 340px;
+}
+.broadcastchat_RateLimitProgressBarContainer_3mU3j {
+  width: 100%;
+  height: 8px;
+}
+.broadcastchat_RateLimitProgressBar_2kmUt {
+  background-color: #7d6ebc;
+  height: 100%;
+  width: 0%;
+}
+.broadcastchat_TimedProgressBarContainer_3_j4r {
+  width: 44px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: #2c3036;
+  z-index: 2;
+}
+.broadcastchat_wrapper_1UnXS {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background: #2c3036;
+}
+.broadcastchat_wrapper_1UnXS .SVGIcon_Submit {
+  z-index: 500;
+}
+.broadcastchat_pie_2Om87 {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: #2c3036;
+  border: 2px solid #0cf;
+  box-sizing: border-box;
+}
+.broadcastchat_spinner_16u04 {
+  border-radius: 45px 0 0 45px;
+  z-index: 200;
+  border-right: none;
+  animation: broadcastchat_rota_1fHgB 0s linear infinite;
+  transform-origin: 100% 50%;
+}
+.broadcastchat_filler_1fMzV {
+  border-radius: 0 45px 45px 0;
+  z-index: 100;
+  border-left: none;
+  animation: broadcastchat_fill_3shEQ 0s steps(1, end) infinite;
+  transform-origin: 50% 50%;
+  left: 50%;
+  opacity: 0;
+}
+.broadcastchat_mask_1lxwg {
+  width: calc(50% + 1px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  position: absolute;
+  z-index: 300;
+  opacity: 1;
+  background: inherit;
+  animation: broadcastchat_mask_1lxwg 0s steps(1, end) infinite;
+  transform-origin: 50% 50%;
+}
+.broadcastchat_SelectedUserNameCtn_1RZru {
+  padding: 4px 8px;
+  background: #2c2f35;
+}
+.broadcastchat_SelectedUserNameCtn_1RZru .broadcastchat_SelectedUserName_3OG_P {
+  color: #9edff8;
+  font-size: 14px;
+}
+@keyframes broadcastchat_rota_1fHgB {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes broadcastchat_fill_3shEQ {
+  0% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes broadcastchat_mask_1lxwg {
+  0% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.broadcastchat_FlairContainer_14B5k {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+.broadcastchat_FlairContainer_14B5k img.emoticon.large {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 4px;
+  pointer-events: all;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+@media screen and (max-aspect-ratio: 10/9), screen and (max-width: 910px) {
+  .broadcastchat_ChatEntry_3o0ss {
+    padding: 6px 0px;
+  }
+}
+.broadcastchat_RoleFlairContainer_G3lqG {
+  padding-right: 4px;
+}
+.broadcastchat_RoleFlairContainer_G3lqG svg {
+  width: 16px;
+  height: 16px;
+}
+.broadcastchat_Description_2fiV5 {
+  padding: 0 12px 0 0;
+  font-size: 12px;
+  grid-area: desc;
+  color: #b9b9b9;
+}
+.broadcastchat_LogInPrompt_AJDVh {
+  padding: 8px;
+}
+.broadcastchat_SignInButton_26lxf {
+  height: auto;
+  padding: 0 16px;
+  margin: auto;
+}
 .BroadcastView {
   width: 100%;
   height: 100%;
@@ -1796,323 +2114,48 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   height: 100%;
   max-width: unset;
 }
-:root {
-  --basicui-header-height: 0px;
+.salebanner_Link_26cHo {
+  display: block;
+  margin-bottom: 16px;
 }
-.insetshadow_FriendsListInsetShadowCtn_17ewz {
-  position: relative;
-  height: 0;
-  width: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.insetshadow_FriendListInsetShadowTop_2-sgw {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.2) 25%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  height: 26px;
-  position: absolute;
+.salebanner_Banner_2df4N {
+  object-fit: contain;
+  display: block;
+  width: 100%;
   top: 0;
-  left: 0;
-  right: 0;
-  flex-shrink: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-.insetshadow_FriendListInsetShadowTop_2-sgw.GamepadMode,
-.GamepadMode .insetshadow_FriendListInsetShadowTop_2-sgw {
-  height: 8px;
-  background: linear-gradient(
-    to bottom,
-    #0e141b 0%,
-    rgba(14, 20, 27, 0.5) 25%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-.GamepadMode
-  .multiChatDialog.gpfocuswithin
-  .insetshadow_FriendListInsetShadowTop_2-sgw {
-  background: linear-gradient(
-    to bottom,
-    #23262e 0%,
-    rgba(35, 38, 46, 0.5) 25%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-.insetshadow_FriendListInsetShadowBottom_2hL6s {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.2) 25%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  height: 16px;
-  position: absolute;
-  flex-shrink: 0;
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-}
-.broadcastchat_BroadcastChat_37jsi {
-  max-width: 194px;
-  min-width: 0;
-}
-.broadcastchat_ChatEntry_3o0ss {
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: row;
-  padding: 6px;
-  padding-bottom: 8px;
-  background-color: #22252b;
-  transition: all 0.21s ease-in-out;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.broadcastchat_ChatPanel_3RXwS {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-color: #1b1c20;
-  position: relative;
-}
-.broadcastchat_ChatMessages_VeT2J {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  overflow-y: scroll;
-  flex-basis: 1px;
-  position: relative;
-  padding: 8px;
-}
-.broadcastchat_EmoticonContainer_ikBOk {
-  width: 15%;
-  height: 10%;
-}
-.broadcastchat_ChatSend_2J8Sc {
-  width: 15%;
-  height: 10%;
-}
-.broadcastchat_ChatBox_CVXBI {
-  width: 70%;
-  height: 10%;
-}
-.broadcastchat_ChatControls_3JcMC {
-  display: flex;
-}
-.broadcastchat_MessageChat_3WCO8 {
-  padding: 4px;
-  color: #c1c6cf;
-  word-break: break-word;
-}
-.broadcastchat_MessageChat_3WCO8:hover {
-  background: #24262e;
-}
-.broadcastchat_MessageName_2moOK {
-  color: #6dcff6;
-  font-size: 14px;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: #6dcff63d;
-}
-.broadcastchat_MessageName_2moOK:hover,
-.broadcastchat_MessageName_2moOK:active {
-  color: #9edff8;
-  text-decoration-color: #6dcff6b4;
-}
-.broadcastchat_MessageContents_3YqUZ {
-  font-size: 14px;
-}
-.broadcastchat_MessageContents_3YqUZ a {
-  color: #fff;
-}
-.broadcastchat_MessageContents_3YqUZ img.emoticon.large {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  pointer-events: all;
-  margin-top: -3px;
-  margin-bottom: -3px;
-  margin-right: -3px;
-}
-.broadcastchat_EmoticonsOnly_2hwH8 {
-  line-height: 32px;
-}
-.broadcastchat_MessageNotification_3b8gU {
-  color: gray;
-  padding: 6px;
-}
-.broadcastchat_MessageError_2KF5w {
-  color: #812819;
-  padding: 6px;
-  border: 1px dashed rgba(255, 58, 58, 0.15);
-  box-shadow: 2px 3px 14px 1px #00000066 inset;
-  margin: 8px;
-}
-.broadcastchat_minHeightZero_-dYCi {
-  min-height: 0;
-  flex: 1;
-}
-.broadcastchat_ChatLoginButton_1hkDB {
-  background: linear-gradient(to right, #3366ff, #7d6ebc);
-  display: inline-block;
-  padding: 0;
-  border-radius: 2px;
-  font-size: 14px;
-  color: #fff;
-  width: 100%;
-  left: 4px;
-  right: 4px;
-  bottom: 4px;
-  height: 42px;
-  text-align: center;
-  line-height: 40px;
-  text-decoration: none;
+  max-width: 100%;
   cursor: pointer;
-  min-width: 340px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  transform: scale(1);
+  filter: saturate(0.85);
+  transition: transform 0.21s ease-in-out, filter 0.21s ease-in-out;
 }
-.broadcastchat_RateLimitProgressBarContainer_3mU3j {
-  width: 100%;
-  height: 8px;
+.salebanner_Banner_2df4N:hover {
+  filter: saturate(1);
+  transform: scale(1.03);
 }
-.broadcastchat_RateLimitProgressBar_2kmUt {
-  background-color: #7d6ebc;
-  height: 100%;
-  width: 0%;
+.salebanner_Big_1m7WT {
+  width: 1053px;
 }
-.broadcastchat_TimedProgressBarContainer_3_j4r {
-  width: 44px;
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  bottom: 3px;
-  background: #2c3036;
-  z-index: 2;
+.salebanner_Mobile_2w3oX {
+  display: none;
 }
-.broadcastchat_wrapper_1UnXS {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 6px;
-  top: 6px;
-  background: #2c3036;
-}
-.broadcastchat_wrapper_1UnXS .SVGIcon_Submit {
-  z-index: 500;
-}
-.broadcastchat_pie_2Om87 {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  background: #2c3036;
-  border: 2px solid #0cf;
-  box-sizing: border-box;
-}
-.broadcastchat_spinner_16u04 {
-  border-radius: 45px 0 0 45px;
-  z-index: 200;
-  border-right: none;
-  animation: broadcastchat_rota_1fHgB 0s linear infinite;
-  transform-origin: 100% 50%;
-}
-.broadcastchat_filler_1fMzV {
-  border-radius: 0 45px 45px 0;
-  z-index: 100;
-  border-left: none;
-  animation: broadcastchat_fill_3shEQ 0s steps(1, end) infinite;
-  transform-origin: 50% 50%;
-  left: 50%;
-  opacity: 0;
-}
-.broadcastchat_mask_1lxwg {
-  width: calc(50% + 1px);
-  height: calc(100% + 2px);
-  top: -1px;
-  left: -1px;
-  position: absolute;
-  z-index: 300;
-  opacity: 1;
-  background: inherit;
-  animation: broadcastchat_mask_1lxwg 0s steps(1, end) infinite;
-  transform-origin: 50% 50%;
-}
-.broadcastchat_SelectedUserNameCtn_1RZru {
-  padding: 4px 8px;
-  background: #2c2f35;
-}
-.broadcastchat_SelectedUserNameCtn_1RZru .broadcastchat_SelectedUserName_3OG_P {
-  color: #9edff8;
-  font-size: 14px;
-}
-@keyframes broadcastchat_rota_1fHgB {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+@media screen and (max-width: 940px) {
+  .salebanner_Link_26cHo {
+    margin-bottom: 10px;
   }
 }
-@keyframes broadcastchat_fill_3shEQ {
-  0% {
-    opacity: 0;
+@media screen and (max-width: 600px) {
+  .salebanner_Big_1m7WT {
+    display: none;
   }
-  50%,
-  100% {
-    opacity: 1;
+  .salebanner_Mobile_2w3oX {
+    display: block;
+    margin-bottom: 10px;
   }
-}
-@keyframes broadcastchat_mask_1lxwg {
-  0% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
-  }
-}
-.broadcastchat_FlairContainer_14B5k {
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-}
-.broadcastchat_FlairContainer_14B5k img.emoticon.large {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  margin-right: 4px;
-  pointer-events: all;
-  margin-top: -3px;
-  margin-bottom: -3px;
-}
-@media screen and (max-aspect-ratio: 10/9), screen and (max-width: 910px) {
-  .broadcastchat_ChatEntry_3o0ss {
-    padding: 6px 0px;
-  }
-}
-.broadcastchat_RoleFlairContainer_G3lqG {
-  padding-right: 4px;
-}
-.broadcastchat_RoleFlairContainer_G3lqG svg {
-  width: 16px;
-  height: 16px;
-}
-.broadcastchat_Description_2fiV5 {
-  padding: 0 12px 0 0;
-  font-size: 12px;
-  grid-area: desc;
-  color: #b9b9b9;
-}
-.broadcastchat_LogInPrompt_AJDVh {
-  padding: 8px;
-}
-.broadcastchat_SignInButton_26lxf {
-  height: auto;
-  padding: 0 16px;
-  margin: auto;
 }
 .broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y {
   display: flex;

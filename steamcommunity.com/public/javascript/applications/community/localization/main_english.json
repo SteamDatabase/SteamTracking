@@ -1553,6 +1553,8 @@
     "Sale_Section_Quiz_CorrectAnswer": "Correct Answer?",
     "Sale_Section_Quiz_DefaultWrongAnswerVideo": "Set Default Wrong Answer Video",
     "Sale_Section_Quiz_DefaultWrongAnswerVideo_ttip": "Will play this video if a user selects the wrong answer. This can be overriden per wrong answer if there is a custom wrong answer response that needs to be supplied.",
+    "Sale_Section_Quiz_AfterLastAnswerDesc": "Optionally add BBCode below that will only appear after the user has correctly answered all of the questions. This section will also appear immediately after the last question.",
+    "Sale_Section_Quiz_AfterLastAnswerButton": "Edit Post Success Message",
     "EventEditor_Video": "Video",
     "EventEditor_VideoTimedText": "Timed Text (%1$s)",
     "EventEditor_VideoTimedText_ttip": "Allows entering one or more timed text in the .vtt format.",

@@ -5946,7 +5946,11 @@
         const A = 1902490,
           e = 2 * iA.g.PerWeek,
           t = J.c.GetMediaCDNUrl() + "store/steamdeck/desk_job_banner.png",
-          { bVisible: a, onViewed: i, onDismissed: r } = (function (A) {
+          {
+            bVisible: a,
+            onViewed: i,
+            onDismissed: r,
+          } = (function (A) {
             const { storageKey: e, appid: t, displayCutoffSec: a } = A,
               i = n.useRef(new Ft.a()),
               o = Object(W.c)(t),
@@ -10248,10 +10252,11 @@
             this.OnUpdated();
         }
         CancelPairing() {
-          (this.m_promiseLastOperation = SteamClient.System.Bluetooth.CancelPairing(
-            this.nAdapterId,
-            this.id
-          )),
+          (this.m_promiseLastOperation =
+            SteamClient.System.Bluetooth.CancelPairing(
+              this.nAdapterId,
+              this.id
+            )),
             this.m_promiseLastOperation.then(this.OnPromiseResolved),
             this.OnUpdated();
         }
@@ -10272,10 +10277,8 @@
             this.OnUpdated();
         }
         Disconnect() {
-          (this.m_promiseLastOperation = SteamClient.System.Bluetooth.Disconnect(
-            this.nAdapterId,
-            this.id
-          )),
+          (this.m_promiseLastOperation =
+            SteamClient.System.Bluetooth.Disconnect(this.nAdapterId, this.id)),
             this.m_promiseLastOperation.then(this.OnPromiseResolved),
             this.OnUpdated();
         }
@@ -14324,10 +14327,9 @@
                 strOKText: Object(C.g)("#Login_Continue"),
                 onOK: () =>
                   Object(i.a)(this, void 0, void 0, function* () {
-                    const {
-                      bSuccess: e,
-                      bRestartRequired: n,
-                    } = yield Yo.b.Get().SetProxyInfo(t);
+                    const { bSuccess: e, bRestartRequired: n } = yield Yo.b
+                      .Get()
+                      .SetProxyInfo(t);
                     n &&
                       jo({
                         strDescription: Object(C.g)(
@@ -14995,28 +14997,17 @@
               data: 2,
             },
           ],
-          u = [
-            -1,
-            3e3,
-            5e3,
-            1e4,
-            15e3,
-            2e4,
-            25e3,
-            3e4,
-            4e4,
-            5e4,
-            75e3,
-            0,
-          ].map((A) => ({
-            label:
-              -1 == A
-                ? Object(C.g)("#Settings_RemotePlay_Bandwidth_Auto")
-                : 0 == A
-                ? Object(C.g)("#Settings_RemotePlay_Bandwidth_Unlimited")
-                : Object(Ke.a)(A, { bUseBinary1K: !1, bValueIsRate: !0 }),
-            data: A,
-          })),
+          u = [-1, 3e3, 5e3, 1e4, 15e3, 2e4, 25e3, 3e4, 4e4, 5e4, 75e3, 0].map(
+            (A) => ({
+              label:
+                -1 == A
+                  ? Object(C.g)("#Settings_RemotePlay_Bandwidth_Auto")
+                  : 0 == A
+                  ? Object(C.g)("#Settings_RemotePlay_Bandwidth_Unlimited")
+                  : Object(Ke.a)(A, { bUseBinary1K: !1, bValueIsRate: !0 }),
+              data: A,
+            })
+          ),
           d = [0, 3e3, 4975, 5e3, 5975, 6e3, 9e3, 12e3].map((A) => ({
             label: Object(C.g)("#Settings_RemotePlay_Framerate_" + A),
             data: A,
@@ -17103,9 +17094,8 @@
             super(A),
               (this.modeHistory = []),
               (this.m_navRef = n.createRef()),
-              (this.m_suppressHeaderInteractionInput = $A.a.m_bSuppressInteraction.CreateInput(
-                "LoginPanelLoginForm"
-              )),
+              (this.m_suppressHeaderInteractionInput =
+                $A.a.m_bSuppressInteraction.CreateInput("LoginPanelLoginForm")),
               (this.m_strLastAccountName = Mo.a.accountName),
               (this.m_nStepCount = 0),
               (this.m_eNavigationDirection = Fl.None),
@@ -20497,18 +20487,14 @@
           var e;
           const t = nA.a.GetScreenshotDetails(A.screenshotHandle);
           if (!t) return null;
-          const a = new Date(
-              1e3 * t.nCreated
-            ).toLocaleString(C.f.GetPreferredLocales(), {
-              month: "short",
-              day: "numeric",
-            }),
-            i = new Date(
-              1e3 * t.nCreated
-            ).toLocaleString(C.f.GetPreferredLocales(), {
-              hour: "numeric",
-              minute: "numeric",
-            }),
+          const a = new Date(1e3 * t.nCreated).toLocaleString(
+              C.f.GetPreferredLocales(),
+              { month: "short", day: "numeric" }
+            ),
+            i = new Date(1e3 * t.nCreated).toLocaleString(
+              C.f.GetPreferredLocales(),
+              { hour: "numeric", minute: "numeric" }
+            ),
             o = nA.a.PrivacyToVisibility(t.ePrivacy),
             r = t.strCaption,
             c = t.bSpoilers;
@@ -22432,9 +22418,11 @@
       function CE(A) {
         const { closeModal: e, controllerIdx: t, bHWGyroCalibration: a } = A,
           [i, o] = n.useState({ nCountdown: 5, nCalibrating: -1 }),
-          { bTimerCompleted: g, fnStopTimer: c, fnRestartTimer: l } = Object(
-            s.y
-          )(1e3);
+          {
+            bTimerCompleted: g,
+            fnStopTimer: c,
+            fnRestartTimer: l,
+          } = Object(s.y)(1e3);
         n.useEffect(() => {
           g &&
             (i.nCountdown > 0
@@ -24661,7 +24649,11 @@
       }
       function Bm(A) {
         const { appid: e } = A,
-          { data: t, loading: i, error: o } = (function (A) {
+          {
+            data: t,
+            loading: i,
+            error: o,
+          } = (function (A) {
             const e = Object(mg.e)(A),
               t = Object(mg.d)(A);
             return Object(n.useMemo)(() => {
@@ -24700,7 +24692,11 @@
       }
       function Em(A) {
         const { appid: e, accountid: t, avatarURL: i } = A,
-          { data: o, loading: r, error: g } = (function (A, e) {
+          {
+            data: o,
+            loading: r,
+            error: g,
+          } = (function (A, e) {
             const t = Object(mg.b)(A, e),
               a = Object(mg.d)(A);
             return Object(n.useMemo)(() => {

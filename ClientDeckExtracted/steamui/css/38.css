@@ -1,25 +1,30 @@
-.newlogindialog_SideBySide_1Wl13 {
+.newlogindialog_Login_ZOBYq {
+  position: relative;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_SideBySide_1Wl13 {
   display: flex;
   flex-direction: row;
 }
-.newlogindialog_QRSection_2ZDyS {
+.newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS {
   flex: 0;
   display: grid;
   gap: 4px;
   margin-left: 24px;
 }
-.newlogindialog_QRSection_2ZDyS .newlogindialog_QR_1d6FZ {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_QR_1d6FZ {
   background-color: #32353c;
   padding: 16px;
   border-radius: 2px;
 }
-.newlogindialog_TextField_2KXGK {
+.newlogindialog_Login_ZOBYq .newlogindialog_TextField_2KXGK {
   display: grid;
   grid-template-areas: "label hint" "input input";
   grid-template-columns: 1fr min-content;
   gap: 2px;
 }
-.newlogindialog_TextInput_2eKVn {
+.newlogindialog_Login_ZOBYq .newlogindialog_TextInput_2eKVn {
   border-radius: 2px;
   color: #fff;
   padding: 10px;
@@ -29,42 +34,46 @@
   grid-area: input;
   border: 1px solid #32353c;
 }
-.newlogindialog_TextInput_2eKVn:hover {
+.newlogindialog_Login_ZOBYq .newlogindialog_TextInput_2eKVn:hover {
   background-color: #393c44;
 }
-.newlogindialog_TextInput_2eKVn.newlogindialog_Danger_1-HwJ {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_TextInput_2eKVn.newlogindialog_Danger_1-HwJ {
   border-color: #c15755;
 }
-.newlogindialog_LoginForm_3Tsg9 {
+.newlogindialog_Login_ZOBYq .newlogindialog_LoginForm_3Tsg9 {
   flex: 1;
   display: grid;
   gap: 12px;
   grid-template-columns: 1fr;
 }
-.newlogindialog_FieldLabel_3d8dp {
+.newlogindialog_Login_ZOBYq .newlogindialog_FieldLabel_3d8dp {
   font-size: 12px;
   color: #afafaf;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   user-select: none;
 }
-.newlogindialog_FieldLabel_3d8dp.newlogindialog_Highlight_XyqzE {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_FieldLabel_3d8dp.newlogindialog_Highlight_XyqzE {
   color: #1999ff;
   font-weight: 500;
 }
-.newlogindialog_CheckboxField_2QWD5 {
+.newlogindialog_Login_ZOBYq .newlogindialog_CheckboxField_2QWD5 {
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
 }
-.newlogindialog_CheckboxField_2QWD5 .newlogindialog_CheckboxFieldLabel_2yrCY {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_CheckboxField_2QWD5
+  .newlogindialog_CheckboxFieldLabel_2yrCY {
   color: #afafaf;
   font-size: 12px;
   user-select: none;
   padding-left: 6px;
 }
-.newlogindialog_Checkbox_3tTFg {
+.newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg {
   width: 14px;
   height: 14px;
   padding: 3px;
@@ -72,25 +81,29 @@
   background-color: #32353c;
   cursor: pointer;
 }
-.newlogindialog_Checkbox_3tTFg .newlogindialog_Check_6EoZE {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_Checkbox_3tTFg
+  .newlogindialog_Check_6EoZE {
   width: 100%;
   height: 100%;
   background-color: #1999ff;
   border-radius: 2px;
 }
-.newlogindialog_Checkbox_3tTFg:hover {
+.newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg:hover {
   background-color: #393c44;
 }
-.newlogindialog_CheckboxField_2QWD5:hover .newlogindialog_Checkbox_3tTFg {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_CheckboxField_2QWD5:hover
+  .newlogindialog_Checkbox_3tTFg {
   background-color: #393c44;
 }
-.newlogindialog_SignInButtonContainer_14fsn {
+.newlogindialog_Login_ZOBYq .newlogindialog_SignInButtonContainer_14fsn {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 12px;
 }
-.newlogindialog_SubmitButton_2QgFE {
+.newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE {
   background: linear-gradient(90deg, #06bfff 0%, #2d73ff 100%);
   border-radius: 2px;
   border: none;
@@ -105,118 +118,134 @@
   cursor: pointer;
   width: 270px;
 }
-.newlogindialog_SubmitButton_2QgFE:hover {
+.newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:hover {
   background: linear-gradient(90deg, #06bfff 30%, #2d73ff 100%);
 }
-.newlogindialog_SubmitButton_2QgFE:active {
+.newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:active {
   background: linear-gradient(90deg, #06bfff 50%, #2d73ff 100%);
 }
-.newlogindialog_SubmitButton_2QgFE:disabled {
+.newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:disabled {
   opacity: 0.5;
 }
-.newlogindialog_Text_3omtv {
+.newlogindialog_Login_ZOBYq .newlogindialog_Text_3omtv {
   color: #afafaf;
   font-size: 12px;
   display: inline-block;
 }
-.newlogindialog_Text_3omtv.newlogindialog_Center_1blSs {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_Text_3omtv.newlogindialog_Center_1blSs {
   text-align: center;
 }
-.newlogindialog_TextLink_1cnUQ {
+.newlogindialog_Login_ZOBYq .newlogindialog_TextLink_1cnUQ {
   color: #afafaf;
   font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
 }
-.newlogindialog_TextLink_1cnUQ:hover {
+.newlogindialog_Login_ZOBYq .newlogindialog_TextLink_1cnUQ:hover {
   color: #c9c9c9;
 }
-.newlogindialog_FormError_1Mcy9 {
+.newlogindialog_Login_ZOBYq .newlogindialog_FormError_1Mcy9 {
   color: #c15755;
   font-size: 12px;
 }
-.newlogindialog_TextAlignCenter_2meUB {
+.newlogindialog_Login_ZOBYq .newlogindialog_TextAlignCenter_2meUB {
   text-align: center;
 }
-.newlogindialog_FlexCol_1mhmm {
+.newlogindialog_Login_ZOBYq .newlogindialog_FlexCol_1mhmm {
   display: flex;
   flex-direction: column;
 }
-.newlogindialog_AlignItemsCenter_30P8x {
+.newlogindialog_Login_ZOBYq .newlogindialog_AlignItemsCenter_30P8x {
   align-items: center;
 }
-.newlogindialog_JustifyContentCenter_LWEzR {
+.newlogindialog_Login_ZOBYq .newlogindialog_JustifyContentCenter_LWEzR {
   justify-content: center;
 }
-.newlogindialog_ProtectingAccount_1aop9 {
+.newlogindialog_Login_ZOBYq .newlogindialog_ProtectingAccount_1aop9 {
   text-align: center;
 }
-.newlogindialog_ProtectingAccount_1aop9 .newlogindialog_Label_2SE9Z {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_ProtectingAccount_1aop9
+  .newlogindialog_Label_2SE9Z {
   font-size: 18px;
   color: #afafaf;
 }
-.newlogindialog_ProtectingAccount_1aop9 .newlogindialog_AccountName_3Vjp0 {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_ProtectingAccount_1aop9
+  .newlogindialog_AccountName_3Vjp0 {
   font-size: 18px;
   color: #fff;
 }
-.newlogindialog_ProtectingAccount_1aop9 .newlogindialog_Description_QApnT {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_ProtectingAccount_1aop9
+  .newlogindialog_Description_QApnT {
   font-size: 14px;
   color: #afafaf;
   opacity: 0.5;
   font-weight: 500;
   padding-top: 6px;
 }
-.newlogindialog_AwaitingMobileConfText_7LmnT {
+.newlogindialog_Login_ZOBYq .newlogindialog_AwaitingMobileConfText_7LmnT {
   color: #fff;
   font-size: 22px;
   font-weight: 500;
   text-align: center;
 }
-.newlogindialog_AwaitingMobileConfIcon_2hLC_ {
+.newlogindialog_Login_ZOBYq .newlogindialog_AwaitingMobileConfIcon_2hLC_ {
   width: 55px;
 }
-.newlogindialog_EnterCodeInsteadLink_37AOB {
+.newlogindialog_Login_ZOBYq .newlogindialog_EnterCodeInsteadLink_37AOB {
   font-size: 12px;
   color: #1999ff;
   text-align: center;
   cursor: pointer;
 }
-.newlogindialog_EnterCodeFromMobileContainer_T68fB,
-.newlogindialog_EnterCodeFromEmailContainer_2pVTW {
+.newlogindialog_Login_ZOBYq .newlogindialog_EnterCodeFromMobileContainer_T68fB,
+.newlogindialog_Login_ZOBYq .newlogindialog_EnterCodeFromEmailContainer_2pVTW {
   padding: 0 12px;
   gap: 24px;
 }
-.newlogindialog_EnterCodeFromMobileContainer_T68fB
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromMobileContainer_T68fB
   .newlogindialog_EnterCodeFromMobile_1Rruw,
-.newlogindialog_EnterCodeFromMobileContainer_T68fB
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromMobileContainer_T68fB
   .newlogindialog_EnterCodeFromEmail_1-D_t,
-.newlogindialog_EnterCodeFromEmailContainer_2pVTW
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromEmailContainer_2pVTW
   .newlogindialog_EnterCodeFromMobile_1Rruw,
-.newlogindialog_EnterCodeFromEmailContainer_2pVTW
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromEmailContainer_2pVTW
   .newlogindialog_EnterCodeFromEmail_1-D_t {
   color: #fff;
   text-align: center;
   font-size: 16px;
 }
-.newlogindialog_EnterCodeFromMobileContainer_T68fB
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromMobileContainer_T68fB
   .newlogindialog_EnterCodeFromMobile_1Rruw
   .newlogindialog_EnterCodeEmailAddress_2zLvb,
-.newlogindialog_EnterCodeFromMobileContainer_T68fB
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromMobileContainer_T68fB
   .newlogindialog_EnterCodeFromEmail_1-D_t
   .newlogindialog_EnterCodeEmailAddress_2zLvb,
-.newlogindialog_EnterCodeFromEmailContainer_2pVTW
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromEmailContainer_2pVTW
   .newlogindialog_EnterCodeFromMobile_1Rruw
   .newlogindialog_EnterCodeEmailAddress_2zLvb,
-.newlogindialog_EnterCodeFromEmailContainer_2pVTW
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromEmailContainer_2pVTW
   .newlogindialog_EnterCodeFromEmail_1-D_t
   .newlogindialog_EnterCodeEmailAddress_2zLvb {
   color: #1999ff;
 }
-.newlogindialog_CodeInputFieldContainer_3Ua6v {
+.newlogindialog_Login_ZOBYq .newlogindialog_CodeInputFieldContainer_3Ua6v {
   position: relative;
   background-color: #32353c;
 }
-.newlogindialog_CodeInputFieldContainer_3Ua6v
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_CodeInputFieldContainer_3Ua6v
   .newlogindialog_CodeInputField_IuMwV {
   letter-spacing: 36px;
   font-size: 28px;
@@ -228,7 +257,8 @@
   font-weight: 500;
   font-family: inherit;
 }
-.newlogindialog_CodeInputFieldContainer_3Ua6v
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_CodeInputFieldContainer_3Ua6v
   .newlogindialog_SegmentContainer_17vl6 {
   position: absolute;
   display: flex;
@@ -237,7 +267,8 @@
   bottom: 8px;
   left: 16px;
 }
-.newlogindialog_CodeInputFieldContainer_3Ua6v
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_CodeInputFieldContainer_3Ua6v
   .newlogindialog_SegmentContainer_17vl6
   .newlogindialog_Segment_2HqKU {
   width: 40px;
@@ -245,7 +276,7 @@
   background-color: #afafaf;
   opacity: 0.25;
 }
-.newlogindialog_SegmentedCharacterInput_1kJ6q {
+.newlogindialog_Login_ZOBYq .newlogindialog_SegmentedCharacterInput_1kJ6q {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -256,10 +287,13 @@
   cursor: text;
   border: 1px solid transparent;
 }
-.newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_Danger_1-HwJ {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_Danger_1-HwJ {
   border-color: #c15755;
 }
-.newlogindialog_SegmentedCharacterInput_1kJ6q input {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_SegmentedCharacterInput_1kJ6q
+  input {
   background: none;
   outline: none;
   border: none;
@@ -272,61 +306,74 @@
   font-weight: 500;
   text-align: center;
 }
-.newlogindialog_StandardLayout_286eh {
+.newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh {
   width: 700px;
 }
-.newlogindialog_StandardLayout_286eh .newlogindialog_PrimaryHeader_39uMK {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh
+  .newlogindialog_PrimaryHeader_39uMK {
   color: #fff;
   font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 0.055em;
 }
-.newlogindialog_StandardLayout_286eh .newlogindialog_FormContainer_3jLIH {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh
+  .newlogindialog_FormContainer_3jLIH {
   background-color: #181a21;
   border-radius: 4px;
   padding: 24px;
   flex: 1;
   max-width: 680px;
 }
-.newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc {
   background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
   padding: 24px;
 }
-.newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
   .newlogindialog_FormContainer_3jLIH {
   background: transparent;
 }
-.newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB {
   background: linear-gradient(321.58deg, #212629 47.91%, #333841 91.08%);
   width: 500px;
 }
-.newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB
   .newlogindialog_FormContainer_3jLIH {
   background: #21232880;
 }
-.newlogindialog_HeaderLogo_1rtyT {
+.newlogindialog_Login_ZOBYq .newlogindialog_HeaderLogo_1rtyT {
   height: 46px;
   width: 153px;
 }
-.newlogindialog_EmbeddedRoot_2Vbrf {
+.newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf {
   background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
   padding: 24px;
   width: 700px;
 }
-.newlogindialog_EmbeddedRoot_2Vbrf .newlogindialog_EmbeddedRootFooter_1HRJ1 {
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EmbeddedRoot_2Vbrf
+  .newlogindialog_EmbeddedRootFooter_1HRJ1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   color: #afafaf;
   font-size: 12px;
 }
-.newlogindialog_EmbeddedRoot_2Vbrf
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EmbeddedRoot_2Vbrf
   .newlogindialog_EmbeddedRootFooter_1HRJ1
   .newlogindialog_AccountCreationPrompt_1h5_x {
   margin-right: 8px;
 }
-.newlogindialog_EmbeddedRoot_2Vbrf input,
-.newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc input {
+.newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf input,
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
+  input {
   box-shadow: none;
 }
 .qrcode_QRBits_3FhhK {

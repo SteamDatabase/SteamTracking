@@ -1495,10 +1495,8 @@
         }
         GetCurrentSelectedIndex() {
           if (this.m_nDelayedIndex > -1) return this.m_nDelayedIndex;
-          const {
-            nAppId: e,
-            strCollectionId: t,
-          } = v.a.currentGameListSelection;
+          const { nAppId: e, strCollectionId: t } =
+            v.a.currentGameListSelection;
           return this.GetIndexForApp({ appid: e, strCollectionId: t });
         }
         GetIndexForApp(e) {
@@ -3530,9 +3528,11 @@
           const e = this.CalculateChildSizes(window),
             t = e.bShortLayout,
             a = parseInt(qt.a.CarouselExtraHeight, 10),
-            { apps: n, bLoading: i, bFresh: o } = zt.a.GetSuggestionsToShow(
-              Vt.a.GetToggle(13)
-            ),
+            {
+              apps: n,
+              bLoading: i,
+              bFresh: o,
+            } = zt.a.GetSuggestionsToShow(Vt.a.GetToggle(13)),
             s = 0 === n.length;
           if (i) return r.createElement(lt.a, { key: "loading_play_next" });
           if (
@@ -4222,8 +4222,8 @@
                       ),
                     s &&
                       r.createElement(Gt.a, {
-                        onItemsDisplayedCountChanged: this
-                          .OnGridItemsDisplayedChanged,
+                        onItemsDisplayedCountChanged:
+                          this.OnGridItemsDisplayedChanged,
                         maxRows: this.props.reorderMode
                           ? 0
                           : this.props.showcase.bExpanded
@@ -5125,8 +5125,7 @@
               r.createElement(
                 "a",
                 {
-                  href:
-                    "steam://url/EventAnnouncementPage/593110/2173495126269399731",
+                  href: "steam://url/EventAnnouncementPage/593110/2173495126269399731",
                 },
                 Object(L.g)("#WhatsNew_ReadMore")
               )

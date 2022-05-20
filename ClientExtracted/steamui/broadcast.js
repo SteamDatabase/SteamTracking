@@ -3268,8 +3268,10 @@
             (this.m_TextFilterPreferences = new ze.K());
           {
             let e = new Oe.b();
-            (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
-              (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends());
+            (this.m_TextFilterPreferences.eTextFilterSetting =
+              e.text_filter_setting()),
+              (this.m_TextFilterPreferences.bIgnoreFriends =
+                e.text_filter_ignore_friends());
           }
           this.m_TextFilterWords = new Oe.q();
         }
@@ -3404,11 +3406,13 @@
           let t = !1;
           e.text_filter_setting() !==
             this.m_TextFilterPreferences.eTextFilterSetting &&
-            ((this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
+            ((this.m_TextFilterPreferences.eTextFilterSetting =
+              e.text_filter_setting()),
             (t = !0)),
             e.text_filter_ignore_friends() !==
               this.m_TextFilterPreferences.bIgnoreFriends &&
-              ((this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
+              ((this.m_TextFilterPreferences.bIgnoreFriends =
+                e.text_filter_ignore_friends()),
               (t = !0)),
             t && this.SaveTextFilterPreferences();
         }
@@ -5532,8 +5536,9 @@
             });
         }
         CloseBroadcastPopup() {
-          const e = St.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const e = St.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(ft.e)(e, 7, this.props.stream.snr),
             Object(xt.a)() && Object(xt.a)().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
@@ -5584,8 +5589,8 @@
                       steamIDBroadcast: this.props.stream.steamid,
                       watchLocation: 6,
                       bStartMuted: this.props.bStartMuted,
-                      fnRenderBroadcastContext: this.props
-                        .fnRenderBroadcastContext,
+                      fnRenderBroadcastContext:
+                        this.props.fnRenderBroadcastContext,
                       fnOnVideoEnd: this.props.fnOnVideoEnd,
                       nAppIDVOD: this.props.stream.nAppIDVOD,
                     })
@@ -5602,8 +5607,9 @@
       let At = class extends c.a.Component {
         ConstructBroadcastLink() {
           let e = this.props.stream;
-          const t = St.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const t = St.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           let r = Pt.list.find(
             (r) =>
               r.appid == t &&
@@ -5642,8 +5648,9 @@
         }
         OnToggleChat(e) {
           e.preventDefault();
-          const t = St.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const t = St.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(ft.e)(
             t,
             "show" === ft.a.Get().GetChatVisibility() ? 5 : 4,
@@ -5652,8 +5659,9 @@
             ft.a.Get().ToggleChatVisibility();
         }
         onWatchBroadcastPage() {
-          const e = St.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-            .m_nAppID;
+          const e = St.a.GetOrCreateBroadcastInfo(
+            this.props.stream.steamid
+          ).m_nAppID;
           Object(ft.e)(e, 9, this.props.stream.snr);
         }
         render() {
@@ -5987,9 +5995,10 @@
           super(e),
             (this.m_playerRef = i.createRef()),
             (this.m_hRegisterForGameActionStart = null),
-            (this.m_hRegisterForGameActionStart = SteamClient.Apps.RegisterForGameActionStart(
-              this.onGameActionStart
-            )),
+            (this.m_hRegisterForGameActionStart =
+              SteamClient.Apps.RegisterForGameActionStart(
+                this.onGameActionStart
+              )),
             SteamClient.Apps.GetGameActionForApp(
               this.props.overview.GetGameID(),
               this.onGameActionStart

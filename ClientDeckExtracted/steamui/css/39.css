@@ -7340,6 +7340,9 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   opacity: 0;
   transform: scale(0.95);
 }
+.topleveltransitionswitch_TopLevelTransition_2vPeX.topleveltransitionswitch_Enter_d8bGj.topleveltransitionswitch_NoTransitionZoom_3Dzx1 {
+  transform: scale(1);
+}
 .topleveltransitionswitch_TopLevelTransition_2vPeX.topleveltransitionswitch_EnterActive_Cpk9b {
   opacity: 1;
   transform: scale(1);

@@ -23752,33 +23752,93 @@ a.storywidget_BadgeFooter_3anc5:hover {
   padding-left: 5em;
   padding-right: 5em;
   padding-bottom: 2em;
-  padding-top: 3em;
+  padding-top: 0em;
   color: #fff;
 }
 .salequiz_description2_xAHA6 {
   padding-left: 5em;
   padding-right: 5em;
-  padding-bottom: 2em;
-  padding-top: 0px;
-  color: #fff;
+  padding-bottom: 3em;
+  padding-top: 3m;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .salequiz_questionCtn_irpAc {
-  background-color: hotpink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5em 3.5em 5em 3.5em;
+  color: #fff;
+  gap: 1.5em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.salequiz_questionCtn_irpAc .DialogButton {
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  margin-bottom: 1em;
+}
+.salequiz_questionCtn_irpAc .DialogButton.Disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.2);
+}
+.salequiz_questionCtn_irpAc .DialogButton:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.salequiz_questionCtn_irpAc .DialogButton:enabled:active {
+  background: rgba(255, 255, 255, 0.35);
+}
+.salequiz_questionCtn_irpAc .DialogButton:enabled:active:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.salequiz_questionCtn_irpAc .DialogButton:enabled:active.gpfocus {
+  background: rgba(255, 255, 255, 0.35);
+}
+.salequiz_questionCtn_irpAc .DialogRoundCheckboxField_Control {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.salequiz_questionCtn_irpAc
+  .DialogRoundCheckboxField_Container:hover
+  .DialogRoundCheckboxField_OuterCircle {
+  background: rgba(255, 255, 255, 0.35);
+}
+.salequiz_questionCtn_irpAc
+  .DialogRoundCheckboxField_Control.Active
+  .DialogRoundCheckboxField_InnerCircle {
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff61 80%);
 }
 .salequiz_answerCtn_3P_c9 {
-  background-color: hotpink;
-}
-.salequiz_videoEl_3TurU {
-  background-color: hotpink;
+  padding-bottom: 1em;
 }
 .salequiz_CorrectCtn_1d8cn {
-  background-color: hotpink;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+  padding-top: 1.5em;
 }
 .salequiz_WrongCtn_1BqTJ {
-  background-color: hotpink;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+  padding-top: 1.5em;
 }
 .salequiz_RevealFooterImage_2pDrv {
-  background-color: hotpink;
+  position: absolute;
+  bottom: 0px;
+}
+.salequiz_answerBox_xehhu {
+  padding-top: 1em;
+}
+@media screen and (max-width: 940px) {
+  .salequiz_description_IuXCT {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
 }
 :root {
   --basicui-header-height: 0px;

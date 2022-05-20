@@ -6497,16 +6497,16 @@
       });
       var a = r("q1tI"),
         i = r.n(a),
-        s = r("rB+X"),
-        n = r("GXif"),
-        o = r("msu0"),
-        l = r("/Q1a"),
-        c = r("DgOg"),
-        d = r("GbHM"),
-        m = r("tQrp");
+        s = r("msu0"),
+        n = r("rB+X"),
+        o = r("GbHM"),
+        l = r("GXif"),
+        c = r("pSt8"),
+        d = r("/Q1a"),
+        m = r("DgOg");
       function u(e) {
         const { gidEvent: t } = e,
-          r = Object(s.b)(t),
+          r = Object(n.b)(t),
           [u, h] = Object(a.useMemo)(() => {
             var e, t, a, i;
             if (
@@ -6525,34 +6525,34 @@
                 ? void 0
                 : i.length) > 0
             ) {
-              const e = Object(o.g)(l.d.LANGUAGE),
-                t = n.a.GetWithFallback(
+              const e = Object(s.g)(d.d.LANGUAGE),
+                t = l.a.GetWithFallback(
                   r.jsondata.localized_sale_product_banner,
                   e
                 ),
-                a = n.a.GetWithFallback(
+                a = l.a.GetWithFallback(
                   r.jsondata.localized_sale_product_mobile_banner,
                   e
                 ),
                 i = r.clanSteamID.GetAccountID();
               return [
-                l.d.MEDIA_CDN_COMMUNITY_URL + `images/clans/${i}/${t}`,
-                l.d.MEDIA_CDN_COMMUNITY_URL + `images/clans/${i}/${a}`,
+                d.d.MEDIA_CDN_COMMUNITY_URL + `images/clans/${i}/${t}`,
+                d.d.MEDIA_CDN_COMMUNITY_URL + `images/clans/${i}/${a}`,
               ];
             }
             return [null, null];
           }, [r]);
         return u && h
           ? i.a.createElement(
-              m.b,
-              { href: r.GetSaleURL(), className: c.Link },
+              "a",
+              { href: Object(c.h)(r.GetSaleURL()), className: m.Link },
               i.a.createElement("img", {
                 src: u,
-                className: Object(d.a)(c.Banner, c.Big),
+                className: Object(o.a)(m.Banner, m.Big),
               }),
               i.a.createElement("img", {
                 src: h,
-                className: Object(d.a)(c.Banner, c.Mobile),
+                className: Object(o.a)(m.Banner, m.Mobile),
               })
             )
           : null;

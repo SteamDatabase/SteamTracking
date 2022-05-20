@@ -842,7 +842,7 @@
                           { className: Object($.a)(C.a.ReadMoreCnt) },
                           r.createElement(te.a, { gidEvent: t.GID }),
                           r.createElement(
-                            k.b,
+                            "a",
                             {
                               className: Object($.a)(X.a.Button),
                               href: Object(oe.h)(t.GetSaleURL()),
@@ -1886,16 +1886,16 @@
       });
       var n = a("q1tI"),
         r = a.n(n),
-        s = a("rB+X"),
-        l = a("GXif"),
-        i = a("msu0"),
-        o = a("/Q1a"),
-        c = a("DgOg"),
-        m = a("GbHM"),
-        d = a("tQrp");
+        s = a("msu0"),
+        l = a("rB+X"),
+        i = a("GbHM"),
+        o = a("GXif"),
+        c = a("pSt8"),
+        m = a("/Q1a"),
+        d = a("DgOg");
       function _(e) {
         const { gidEvent: t } = e,
-          a = Object(s.b)(t),
+          a = Object(l.b)(t),
           [_, u] = Object(n.useMemo)(() => {
             var e, t, n, r;
             if (
@@ -1914,34 +1914,34 @@
                 ? void 0
                 : r.length) > 0
             ) {
-              const e = Object(i.g)(o.d.LANGUAGE),
-                t = l.a.GetWithFallback(
+              const e = Object(s.g)(m.d.LANGUAGE),
+                t = o.a.GetWithFallback(
                   a.jsondata.localized_sale_product_banner,
                   e
                 ),
-                n = l.a.GetWithFallback(
+                n = o.a.GetWithFallback(
                   a.jsondata.localized_sale_product_mobile_banner,
                   e
                 ),
                 r = a.clanSteamID.GetAccountID();
               return [
-                o.d.MEDIA_CDN_COMMUNITY_URL + `images/clans/${r}/${t}`,
-                o.d.MEDIA_CDN_COMMUNITY_URL + `images/clans/${r}/${n}`,
+                m.d.MEDIA_CDN_COMMUNITY_URL + `images/clans/${r}/${t}`,
+                m.d.MEDIA_CDN_COMMUNITY_URL + `images/clans/${r}/${n}`,
               ];
             }
             return [null, null];
           }, [a]);
         return _ && u
           ? r.a.createElement(
-              d.b,
-              { href: a.GetSaleURL(), className: c.Link },
+              "a",
+              { href: Object(c.h)(a.GetSaleURL()), className: d.Link },
               r.a.createElement("img", {
                 src: _,
-                className: Object(m.a)(c.Banner, c.Big),
+                className: Object(i.a)(d.Banner, d.Big),
               }),
               r.a.createElement("img", {
                 src: u,
-                className: Object(m.a)(c.Banner, c.Mobile),
+                className: Object(i.a)(d.Banner, d.Mobile),
               })
             )
           : null;

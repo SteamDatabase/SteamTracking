@@ -604,11 +604,11 @@
             );
           });
         }
-        GetLatestPartnerEvents(e, t = 0, n = 10, a, i, s, l, d, m, u, p, _) {
+        GetLatestPartnerEvents(e, t = 0, n = 10, a, i, s, l, d, m, u, p, _, h) {
           return Object(r.a)(this, void 0, void 0, function* () {
             const r =
                 o.d.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
-              h = {
+              b = {
                 page: t,
                 count: n,
                 date: l,
@@ -619,14 +619,15 @@
                 orderByVisibility: m || void 0,
                 creator_home_clan_id: void 0 === u ? void 0 : u.join(","),
                 showUnpublished: void 0 === _ ? void 0 : _,
+                sale_only: void 0 === h ? void 0 : h,
                 term: void 0 === p ? void 0 : p,
               },
-              b = yield c.a.get(r, {
-                params: h,
+              v = yield c.a.get(r, {
+                params: b,
                 withCredentials: !0,
                 cancelToken: e ? e.token : void 0,
               });
-            return b.data ? b.data.docs : [];
+            return v.data ? v.data.docs : [];
           });
         }
       }

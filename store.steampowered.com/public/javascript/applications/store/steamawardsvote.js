@@ -3390,7 +3390,8 @@
           t,
           a,
           i,
-          r
+          r,
+          o
         ) {
           return Object(n.a)(this, void 0, void 0, function* () {
             if (a && this.m_mapExistingEvents.has(a))
@@ -3409,7 +3410,8 @@
               t,
               a,
               i,
-              r
+              r,
+              o
             );
           });
         }
@@ -3424,14 +3426,15 @@
             );
           });
         }
-        LoadPartnerEventFromAnnoucementGIDAndClanSteamID(e, t, a) {
+        LoadPartnerEventFromAnnoucementGIDAndClanSteamID(e, t, a, i) {
           return Object(n.a)(this, void 0, void 0, function* () {
             return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
               e,
               void 0,
               void 0,
               t,
-              a
+              a,
+              i
             );
           });
         }
@@ -3446,14 +3449,15 @@
             );
           });
         }
-        LoadPartnerEventFromClanEventGIDAndClanSteamID(e, t, a) {
+        LoadPartnerEventFromClanEventGIDAndClanSteamID(e, t, a, i) {
           return Object(n.a)(this, void 0, void 0, function* () {
             return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
               e,
               void 0,
               t,
               void 0,
-              a
+              a,
+              i
             );
           });
         }
