@@ -15,6 +15,7 @@ enum ERemoteClientBroadcastMsg {
 	k_ERemoteClientBroadcastMsgClientIDDeconflict = 11;
 	k_ERemoteDeviceStreamTransportSignal = 12;
 	k_ERemoteDeviceStreamingProgress = 13;
+	k_ERemoteDeviceAuthorizationConfirmed = 14;
 }
 
 enum ERemoteClientService {
@@ -147,6 +148,7 @@ message CMsgRemoteDeviceAuthorizationRequest {
 	required bytes device_token = 1;
 	optional string device_name = 2;
 	required bytes encrypted_request = 3;
+	optional bytes auth_key = 4;
 }
 
 message CMsgRemoteDeviceAuthorizationCancelRequest {
@@ -155,6 +157,12 @@ message CMsgRemoteDeviceAuthorizationCancelRequest {
 message CMsgRemoteDeviceAuthorizationResponse {
 	required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];
 	optional fixed64 steamid = 2;
+	optional bytes auth_key = 3;
+	optional bytes device_token = 4;
+}
+
+message CMsgRemoteDeviceAuthorizationConfirmed {
+	required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];
 }
 
 message CMsgRemoteDeviceStreamingRequest {
