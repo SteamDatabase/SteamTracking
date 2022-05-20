@@ -9874,7 +9874,7 @@
         const d = o.GetAppType();
         return t.software || 6 != d
           ? (4 != d && 11 != d) ||
-            (t.dlc && t.dlc_for_you && c.BIsGameOwned(o.GetParentAppID()))
+            (t.dlc && (!t.dlc_for_you || c.BIsGameOwned(o.GetParentAppID())))
             ? t.games_already_in_library && c.BIsGameOwned(e)
               ? s.e.k_RejectInLibrary
               : t.games_not_in_library && !c.BIsGameOwned(e)
@@ -29985,6 +29985,7 @@
               for (const t of this.m_mapSections.get(h).mapAppLists.get(e).apps)
                 b.push(E.SaleCapsuleFromContentHubCapsule(t));
             yield Object(_.g)(b, c.e),
+              this.ReplaceSingleAppPackagesWithApps(i, h),
               yield this.ApplyUserAndHomeViewFilters(i, h, n),
               yield this.UpdateRecommendationReasons(i);
           });
@@ -30000,6 +30001,46 @@
             yield this.BuildFeaturedCarouselContent(e, n, r, a),
               yield this.BuildAllOtherCarouselContent(t, n, r);
           });
+        }
+        ReplaceSingleAppPackagesWithApps(e, t) {
+          this.m_mapMainCarousel.get(e).mapAppLists.forEach((t, a) => {
+            this.m_mapMainCarousel
+              .get(e)
+              .mapAppLists.set(
+                a,
+                this.ReplaceSingleAppPackagesWithAppsForList(t)
+              );
+          }),
+            this.m_mapSections.get(t).mapAppLists.forEach((e, a) => {
+              this.m_mapSections
+                .get(t)
+                .mapAppLists.set(
+                  a,
+                  this.ReplaceSingleAppPackagesWithAppsForList(e)
+                );
+            });
+        }
+        ReplaceSingleAppPackagesWithAppsForList(e) {
+          const t = e.apps.map((e) => {
+            var t;
+            if ("sub" === e.item_type) {
+              const a = u.a.Get().GetPackage(e.id);
+              if (
+                1 ===
+                (null === (t = null == a ? void 0 : a.GetIncludedAppIDs()) ||
+                void 0 === t
+                  ? void 0
+                  : t.length)
+              ) {
+                return Object.assign(Object.assign({}, e), {
+                  item_type: "app",
+                  id: a.GetIncludedAppIDs()[0],
+                });
+              }
+            }
+            return e;
+          });
+          return Object.assign(Object.assign({}, e), { apps: t });
         }
         UpdateRecommendationReasons(e, t, a) {
           return Object(i.a)(this, void 0, void 0, function* () {
