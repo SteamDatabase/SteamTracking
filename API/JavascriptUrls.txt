@@ -190,6 +190,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}my
+${COMMUNITY_BASE_URL}my/badges
 ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${appid}/announcements/ajaxgetmyvote/${AnnouncementGID}
@@ -246,6 +247,7 @@ ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/stickerjson/${}?l=${}&origin=${}
+${COMMUNITY_CDN_URL}public/images/badges/generic/RacingSale2022_80.png
 ${COMMUNITY_CDN_URL}public/images/broadcast/apphub_default_thumbnail.jpg
 ${COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png
 ${COMMUNITY_CDN_URL}public/images/sharedfiles/guides/
@@ -917,6 +919,7 @@ ${STORE_BASE_URL}reservation/cancelreservation
 ${STORE_BASE_URL}sale/${sale_vanity_id}
 ${STORE_BASE_URL}sale/${strVanity}
 ${STORE_BASE_URL}sale/${vanity}
+${STORE_BASE_URL}saleaction/ajaxclosealldoor
 ${STORE_BASE_URL}saleaction/ajaxgetallitemsforsale
 ${STORE_BASE_URL}saleaction/ajaxgetdeckappcompatibilityreport
 ${STORE_BASE_URL}saleaction/ajaxgetdemoevents

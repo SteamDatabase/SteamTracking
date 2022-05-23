@@ -23759,7 +23759,7 @@ a.storywidget_BadgeFooter_3anc5:hover {
   padding-left: 5em;
   padding-right: 5em;
   padding-bottom: 3em;
-  padding-top: 3m;
+  padding-top: 3em;
   max-width: 670px;
   margin-left: auto;
   margin-right: auto;
@@ -24191,6 +24191,15 @@ a.storywidget_BadgeFooter_3anc5:hover {
 }
 .discoveryqueuewizard_ControlBtn_-RPHf.gpfocus svg {
   fill: #0e141b;
+}
+.saleminigames_Ctn_12bwH {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.saleminigames_ImgFullBagde_1s5Pu {
+  width: 80px;
+  height: 80px;
 }
 :root {
   --basicui-header-height: 0px;
