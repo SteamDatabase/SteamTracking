@@ -2724,6 +2724,7 @@
     "ControllerConfigurator_ConfigInfo_Title": "Developer Info",
     "ControllerConfigurator_ConfigInfo_ActionBlockSource": "Action Block Source",
     "ControllerConfigurator_ConfigInfo_ActionBlockSource_None": "None",
+    "ControllerConfigurator_ConfigInfo_ErrorMsgs": "Config Load Error Messages",
     "ControllerConfigurator_Source_None_Title": "None",
     "ControllerConfigurator_Source_LeftTrackpad_Title": "Left Trackpad",
     "ControllerConfigurator_Source_RightTrackpad_Title": "Right Trackpad",
