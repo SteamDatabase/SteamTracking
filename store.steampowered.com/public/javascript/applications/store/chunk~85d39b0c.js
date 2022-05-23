@@ -7785,91 +7785,101 @@
     "7myZ": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return c;
+        return d;
       });
       var n = a("q1tI"),
-        r = a("msu0"),
-        i = a("Zdsb"),
-        s = a("GXif"),
-        o = a("pSt8"),
-        l = a("/Q1a");
-      const c = (e) => {
-        const { video: t, bAutoPlay: a, bControls: c, bLoop: d } = e;
-        if (!t.rgVideoSources || !t.rgVideoSources.length) return null;
-        const u = (function (e) {
-            return !(
-              !Object(o.a)(e.sPoster) ||
-              (e.rgVideoSources &&
-                e.rgVideoSources.some((e) => !Object(o.a)(e.sURL))) ||
-              (e.rgVideoTracks &&
-                e.rgVideoTracks.some((e) => !Object(o.a)(e.sURL)))
+        r = a.n(n),
+        i = a("msu0"),
+        s = a("Zdsb"),
+        o = a("GXif"),
+        l = a("pSt8"),
+        c = a("/Q1a");
+      const d = (e) => {
+        const { video: t, bAutoPlay: a, bControls: d, bLoop: u } = e,
+          m = Object(n.useMemo)(() => {
+            var e;
+            return Boolean(
+              null === (e = t.rgVideoTracks) || void 0 === e
+                ? void 0
+                : e.some((e) => "subtitles" == e.sKind || "captions" == e.sKind)
             );
-          })(t)
-            ? void 0
-            : "anonymous",
-          m = (e) => {
+          }, [t.rgVideoTracks]);
+        if (!t.rgVideoSources || !t.rgVideoSources.length) return null;
+        const p = (e) => {
             const t = new URL(e);
             return (
               (t.search =
-                (t.search ? t.search + "&" : "?") + "origin=" + Object(l.f)()),
+                (t.search ? t.search + "&" : "?") + "origin=" + Object(c.f)()),
               t.toString()
             );
           },
-          p = t.rgVideoSources
+          _ = t.rgVideoSources
             .filter((e) => Boolean(e.sURL))
             .map((e) =>
-              n.createElement("source", {
+              r.a.createElement("source", {
                 key: e.sURL,
-                src: m(e.sURL),
+                src: p(e.sURL),
                 type: e.sFormat,
               })
             ),
-          _ = t.rgVideoTracks
+          h = t.rgVideoTracks
             ? t.rgVideoTracks.map((e) => {
                 let a = e.eLanguage;
-                if (l.d.EREALM === i.h.k_ESteamRealmChina)
-                  if (s.b.IsELanguageValidInRealm(a, i.h.k_ESteamRealmChina))
-                    a = s.b.GetELanguageFallback(a);
+                if (c.d.EREALM === s.h.k_ESteamRealmChina)
+                  if (o.b.IsELanguageValidInRealm(a, s.h.k_ESteamRealmChina))
+                    a = o.b.GetELanguageFallback(a);
                   else {
                     if (6 !== a) return null;
                     if (
                       t.rgVideoTracks.find(
-                        (e) => s.b.GetELanguageFallback(e.eLanguage) === a
+                        (e) => o.b.GetELanguageFallback(e.eLanguage) === a
                       )
                     )
                       return null;
                   }
                 else if (
-                  !s.b.IsELanguageValidInRealm(a, i.h.k_ESteamRealmGlobal)
+                  !o.b.IsELanguageValidInRealm(a, s.h.k_ESteamRealmGlobal)
                 )
                   return null;
-                return n.createElement("track", {
+                return r.a.createElement("track", {
                   key: e.sURL + a,
-                  src: m(e.sURL),
+                  src: p(e.sURL),
                   kind: e.sKind,
                   default: e.bDefault,
-                  srcLang: Object(r.e)(a),
-                  label: Object(s.f)("#language_selection_" + Object(r.d)(a)),
+                  srcLang: Object(i.e)(a),
+                  label: Object(o.f)("#language_selection_" + Object(i.d)(a)),
                 });
               })
-            : null,
-          h = a,
-          b = t.sPoster ? m(t.sPoster) : "";
-        return n.createElement(
+            : null;
+        let b;
+        (!(function (e) {
+          return !(
+            !Object(l.a)(e.sPoster) ||
+            (e.rgVideoSources &&
+              e.rgVideoSources.some((e) => !Object(l.a)(e.sURL))) ||
+            (e.rgVideoTracks &&
+              e.rgVideoTracks.some((e) => !Object(l.a)(e.sURL)))
+          );
+        })(t) ||
+          (m && "public" == c.d.WEB_UNIVERSE)) &&
+          (b = "anonymous");
+        const g = a,
+          v = t.sPoster ? p(t.sPoster) : "";
+        return r.a.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
             autoPlay: a,
-            muted: h,
+            muted: g,
             playsInline: !0,
-            controls: c,
-            poster: b,
-            loop: d,
-            crossOrigin: u,
+            controls: d,
+            poster: v,
+            loop: u,
+            crossOrigin: b,
           },
-          p,
-          _
+          _,
+          h
         );
       };
     },

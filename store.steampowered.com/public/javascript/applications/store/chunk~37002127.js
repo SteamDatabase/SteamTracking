@@ -1092,6 +1092,7 @@
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
+            "cdn.akamai.steamstatic.com",
           ].indexOf(r) >= 0
         );
       }
