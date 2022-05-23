@@ -6,11 +6,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 {
 	require '/var/www/steamdb.info/Library/MagicLoad.php';
 	require '/var/www/steamdb.info/Library/Bugsnag/Autoload.php';
-
-	if( class_exists( Container::class, false ) )
-	{
-		Container::Bugsnag()->setAppType( 'steamtrack' );
-	}
 }
 
 	new SteamTracker( count( $argv ) === 2 ? $argv[ 1 ] : '' );
