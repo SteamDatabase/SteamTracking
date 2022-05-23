@@ -7785,101 +7785,147 @@
     "7myZ": function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return d;
+        return p;
       });
-      var n = a("q1tI"),
-        r = a.n(n),
-        i = a("msu0"),
-        s = a("Zdsb"),
-        o = a("GXif"),
-        l = a("pSt8"),
-        c = a("/Q1a");
-      const d = (e) => {
-        const { video: t, bAutoPlay: a, bControls: d, bLoop: u } = e,
-          m = Object(n.useMemo)(() => {
+      var n = a("mrSG"),
+        r = a("q1tI"),
+        i = a.n(r),
+        s = a("msu0"),
+        o = a("Zdsb"),
+        l = a("GXif"),
+        c = a("pSt8"),
+        d = a("/Q1a"),
+        u = a("hCpY");
+      class m {
+        constructor() {
+          (this.m_bUserHasVolumePreference = !1),
+            (this.m_flVolumePreference = 0);
+        }
+        BUserHasVolumePreference() {
+          return this.m_bUserHasVolumePreference;
+        }
+        SetVolumePreference(e) {
+          (this.m_flVolumePreference = e),
+            (this.m_bUserHasVolumePreference = !0);
+        }
+        GetVolumePreference() {
+          return this.m_flVolumePreference;
+        }
+        BVolumePreferenceMuted() {
+          return this.m_flVolumePreference < 0.001;
+        }
+        static Get() {
+          return m.s_Singleton || (m.s_Singleton = new m()), m.s_Singleton;
+        }
+      }
+      Object(n.b)([u.b], m.prototype, "BUserHasVolumePreference", null),
+        Object(n.b)([u.b], m.prototype, "SetVolumePreference", null);
+      const p = (e) => {
+        const { video: t, bAutoPlay: a, bControls: n, bLoop: u, bMuted: p } = e,
+          _ = Object(r.useMemo)(() => {
             var e;
             return Boolean(
               null === (e = t.rgVideoTracks) || void 0 === e
                 ? void 0
                 : e.some((e) => "subtitles" == e.sKind || "captions" == e.sKind)
             );
-          }, [t.rgVideoTracks]);
+          }, [t.rgVideoTracks]),
+          [h, b] = i.a.useState(!1);
         if (!t.rgVideoSources || !t.rgVideoSources.length) return null;
-        const p = (e) => {
+        const g = (e) => {
             const t = new URL(e);
             return (
               (t.search =
-                (t.search ? t.search + "&" : "?") + "origin=" + Object(c.f)()),
+                (t.search ? t.search + "&" : "?") + "origin=" + Object(d.f)()),
               t.toString()
             );
           },
-          _ = t.rgVideoSources
+          v = t.rgVideoSources
             .filter((e) => Boolean(e.sURL))
             .map((e) =>
-              r.a.createElement("source", {
+              i.a.createElement("source", {
                 key: e.sURL,
-                src: p(e.sURL),
+                src: g(e.sURL),
                 type: e.sFormat,
               })
             ),
-          h = t.rgVideoTracks
+          S = t.rgVideoTracks
             ? t.rgVideoTracks.map((e) => {
                 let a = e.eLanguage;
-                if (c.d.EREALM === s.h.k_ESteamRealmChina)
-                  if (o.b.IsELanguageValidInRealm(a, s.h.k_ESteamRealmChina))
-                    a = o.b.GetELanguageFallback(a);
+                if (d.d.EREALM === o.h.k_ESteamRealmChina)
+                  if (l.b.IsELanguageValidInRealm(a, o.h.k_ESteamRealmChina))
+                    a = l.b.GetELanguageFallback(a);
                   else {
                     if (6 !== a) return null;
                     if (
                       t.rgVideoTracks.find(
-                        (e) => o.b.GetELanguageFallback(e.eLanguage) === a
+                        (e) => l.b.GetELanguageFallback(e.eLanguage) === a
                       )
                     )
                       return null;
                   }
                 else if (
-                  !o.b.IsELanguageValidInRealm(a, s.h.k_ESteamRealmGlobal)
+                  !l.b.IsELanguageValidInRealm(a, o.h.k_ESteamRealmGlobal)
                 )
                   return null;
-                return r.a.createElement("track", {
+                return i.a.createElement("track", {
                   key: e.sURL + a,
-                  src: p(e.sURL),
+                  src: g(e.sURL),
                   kind: e.sKind,
                   default: e.bDefault,
-                  srcLang: Object(i.e)(a),
-                  label: Object(o.f)("#language_selection_" + Object(i.d)(a)),
+                  srcLang: Object(s.e)(a),
+                  label: Object(l.f)("#language_selection_" + Object(s.d)(a)),
                 });
               })
             : null;
-        let b;
+        let f;
         (!(function (e) {
           return !(
-            !Object(l.a)(e.sPoster) ||
+            !Object(c.a)(e.sPoster) ||
             (e.rgVideoSources &&
-              e.rgVideoSources.some((e) => !Object(l.a)(e.sURL))) ||
+              e.rgVideoSources.some((e) => !Object(c.a)(e.sURL))) ||
             (e.rgVideoTracks &&
-              e.rgVideoTracks.some((e) => !Object(l.a)(e.sURL)))
+              e.rgVideoTracks.some((e) => !Object(c.a)(e.sURL)))
           );
         })(t) ||
-          (m && "public" == c.d.WEB_UNIVERSE)) &&
-          (b = "anonymous");
-        const g = a,
-          v = t.sPoster ? p(t.sPoster) : "";
-        return r.a.createElement(
+          (_ && "public" == d.d.WEB_UNIVERSE)) &&
+          (f = "anonymous");
+        const E = p || (a && m.Get().BVolumePreferenceMuted()),
+          C = t.sPoster ? g(t.sPoster) : "";
+        return i.a.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
             autoPlay: a,
-            muted: g,
+            muted: E,
             playsInline: !0,
-            controls: d,
-            poster: v,
+            controls: n,
+            poster: C,
             loop: u,
-            crossOrigin: b,
+            crossOrigin: f,
+            onVolumeChange: (e) => {
+              const t = e.target,
+                a = t.muted ? 0 : t.volume;
+              h && m.Get().SetVolumePreference(a);
+            },
+            onPlay: (e) => {
+              const t = e.target,
+                n = 0 == t.currentTime,
+                r = m.Get().BUserHasVolumePreference();
+              if ((b(!0), n))
+                if (r || a)
+                  r &&
+                    ((t.volume = m.Get().GetVolumePreference()),
+                    (t.muted = m.Get().BVolumePreferenceMuted()));
+                else {
+                  const e = t.muted ? 0 : t.volume;
+                  m.Get().SetVolumePreference(e);
+                }
+            },
           },
-          _,
-          h
+          v,
+          S
         );
       };
     },
