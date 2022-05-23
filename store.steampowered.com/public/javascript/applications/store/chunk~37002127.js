@@ -1045,38 +1045,40 @@
         return s.test(e) ? e : "https://" + e;
       }
       function c(e) {
-        return (
-          "http:" !== e.substr(0, 5) ||
-            1 != i.d.EUNIVERSE ||
-            ("http:" ==
-              (e = (e = (e = (e = (e = (e = (e = (e = e.replace(
-                /http:\/\/media.steampowered.com\//g,
-                i.d.MEDIA_CDN_URL
-              )).replace(
-                /http:\/\/cdn.akamai.steamstatic.com\//g,
-                i.d.MEDIA_CDN_URL
-              )).replace(
-                /http:\/\/cdn.edgecast.steamstatic.com\//g,
-                i.d.MEDIA_CDN_URL
-              )).replace(
-                /http:\/\/cdn.dota2.com\//g,
-                i.d.MEDIA_CDN_URL
-              )).replace(
-                /http:\/\/storefront.steampowered.com\/v\/gfx\//g,
-                i.d.MEDIA_CDN_URL + "steam/"
-              )).replace(
-                /http:\/\/cdn.steamcommunity.com\//g,
-                i.d.COMMUNITY_CDN_URL
-              )).replace(
-                /http:\/\/community.akamai.steamstatic.com\//g,
-                i.d.COMMUNITY_CDN_URL
-              )).replace(
-                /http:\/\/community.edgecast.steamstatic.com\//g,
-                i.d.COMMUNITY_CDN_URL
-              )).substr(0, 5) &&
-              (e = "https:" + e.substr(5))),
-          e
-        );
+        return 1 != i.d.EUNIVERSE
+          ? e
+          : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
+            (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = e.replace(
+              /https:\/\/media.steampowered.com\//g,
+              i.d.MEDIA_CDN_URL
+            )).replace(
+              /https:\/\/cdn.akamai.steamstatic.com\//g,
+              i.d.MEDIA_CDN_URL
+            )).replace(
+              /https:\/\/cdn.cloudflare.steamstatic.com\//g,
+              i.d.MEDIA_CDN_URL
+            )).replace(
+              /https:\/\/cdn.edgecast.steamstatic.com\//g,
+              i.d.MEDIA_CDN_URL
+            )).replace(
+              /https:\/\/cdn.dota2.com\//g,
+              i.d.MEDIA_CDN_URL
+            )).replace(
+              /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
+              i.d.MEDIA_CDN_URL + "steam/"
+            )).replace(
+              /https:\/\/cdn.steamcommunity.com\//g,
+              i.d.COMMUNITY_CDN_URL
+            )).replace(
+              /https:\/\/community.akamai.steamstatic.com\//g,
+              i.d.COMMUNITY_CDN_URL
+            )).replace(
+              /https:\/\/community.cloudflare.steamstatic.com\//g,
+              i.d.COMMUNITY_CDN_URL
+            )).replace(
+              /https:\/\/community.edgecast.steamstatic.com\//g,
+              i.d.COMMUNITY_CDN_URL
+            )));
       }
       function u(e) {
         if (!e) return !0;
