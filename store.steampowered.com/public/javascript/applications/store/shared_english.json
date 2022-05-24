@@ -1469,6 +1469,7 @@
     "SalePage_Correct": "Correct",
     "SalePage_Wrong": "Wrong!",
     "SalePage_TryAgain": "Try Again",
+    "SalePage_Quiz_LoginPrompt": "Sign in to participate",
     "Sale_Reservation_NotAllowedAccount": "Your account is either too new or not in good standing. Your account is not permitted to make reservation.",
     "Sale_Reservation_NotAvailableCountry": "This item is not available for reservation in your country",
     "Sale_Reservation_CanceledPendingRefund": "Reservation cancellation is in progress. Please be patient.",
