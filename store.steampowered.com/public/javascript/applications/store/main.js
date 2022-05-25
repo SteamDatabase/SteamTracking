@@ -1,40 +1,40 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [62],
+  [33],
   {
     "+58p": function (e, t, r) {
       var n = {
-        "./shared_arabic.json": ["A8mv", 126],
-        "./shared_brazilian.json": ["f7Ht", 127],
-        "./shared_bulgarian.json": ["VJ/X", 128],
-        "./shared_czech.json": ["WyQd", 129],
-        "./shared_danish.json": ["WlkD", 130],
-        "./shared_dutch.json": ["SHbT", 131],
-        "./shared_english.json": ["7foF", 132],
-        "./shared_finnish.json": ["+HzT", 133],
-        "./shared_french.json": ["wr2i", 134],
-        "./shared_german.json": ["CzjK", 135],
-        "./shared_greek.json": ["T1Vt", 136],
-        "./shared_hungarian.json": ["6rq4", 137],
-        "./shared_italian.json": ["yba0", 138],
-        "./shared_japanese.json": ["MIMz", 139],
-        "./shared_koreana.json": ["wrJg", 140],
-        "./shared_latam.json": ["Q3r2", 141],
-        "./shared_norwegian.json": ["Lp4u", 142],
-        "./shared_polish.json": ["wbdj", 143],
-        "./shared_portuguese.json": ["GKZf", 144],
-        "./shared_romanian.json": ["wYo1", 145],
-        "./shared_russian.json": ["Efj/", 146],
-        "./shared_sc_schinese.json": ["7Bs/", 147],
-        "./shared_schinese.json": ["x+JX", 148],
-        "./shared_spanish.json": ["/xtB", 149],
-        "./shared_swedish.json": ["tdT9", 150],
-        "./shared_tchinese.json": ["JQjP", 151],
-        "./shared_thai.json": ["8I3t", 152],
-        "./shared_turkish.json": ["W4c2", 153],
-        "./shared_ukrainian.json": ["0xx/", 154],
-        "./shared_vietnamese.json": ["CxfU", 155],
+        "./shared_arabic.json": ["A8mv", 97],
+        "./shared_brazilian.json": ["f7Ht", 98],
+        "./shared_bulgarian.json": ["VJ/X", 99],
+        "./shared_czech.json": ["WyQd", 100],
+        "./shared_danish.json": ["WlkD", 101],
+        "./shared_dutch.json": ["SHbT", 102],
+        "./shared_english.json": ["7foF", 103],
+        "./shared_finnish.json": ["+HzT", 104],
+        "./shared_french.json": ["wr2i", 105],
+        "./shared_german.json": ["CzjK", 106],
+        "./shared_greek.json": ["T1Vt", 107],
+        "./shared_hungarian.json": ["6rq4", 108],
+        "./shared_italian.json": ["yba0", 109],
+        "./shared_japanese.json": ["MIMz", 110],
+        "./shared_koreana.json": ["wrJg", 111],
+        "./shared_latam.json": ["Q3r2", 112],
+        "./shared_norwegian.json": ["Lp4u", 113],
+        "./shared_polish.json": ["wbdj", 114],
+        "./shared_portuguese.json": ["GKZf", 115],
+        "./shared_romanian.json": ["wYo1", 116],
+        "./shared_russian.json": ["Efj/", 117],
+        "./shared_sc_schinese.json": ["7Bs/", 118],
+        "./shared_schinese.json": ["x+JX", 119],
+        "./shared_spanish.json": ["/xtB", 120],
+        "./shared_swedish.json": ["tdT9", 121],
+        "./shared_tchinese.json": ["JQjP", 122],
+        "./shared_thai.json": ["8I3t", 123],
+        "./shared_turkish.json": ["W4c2", 124],
+        "./shared_ukrainian.json": ["0xx/", 125],
+        "./shared_vietnamese.json": ["CxfU", 126],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -1964,35 +1964,35 @@
     },
     AvbV: function (e, t, r) {
       var n = {
-        "./main_brazilian.json": ["TFAN", 63],
-        "./main_bulgarian.json": ["c2SO", 64],
-        "./main_czech.json": ["peP3", 65],
-        "./main_danish.json": ["0bnV", 66],
-        "./main_dutch.json": ["wcLc", 67],
-        "./main_english.json": ["/rNK", 68],
-        "./main_finnish.json": ["iywU", 69],
-        "./main_french.json": ["Xnpc", 70],
-        "./main_german.json": ["pmKi", 71],
-        "./main_greek.json": ["mTRv", 72],
-        "./main_hungarian.json": ["WkHb", 73],
-        "./main_italian.json": ["Jz5U", 74],
-        "./main_japanese.json": ["3Dk9", 75],
-        "./main_koreana.json": ["neQD", 76],
-        "./main_latam.json": ["6oHD", 77],
-        "./main_norwegian.json": ["2OvS", 78],
-        "./main_polish.json": ["3pwE", 79],
-        "./main_portuguese.json": ["hY40", 80],
-        "./main_romanian.json": ["Q95+", 81],
-        "./main_russian.json": ["bsPT", 82],
-        "./main_sc_schinese.json": ["GOaQ", 83],
-        "./main_schinese.json": ["B/Zz", 84],
-        "./main_spanish.json": ["U6iL", 85],
-        "./main_swedish.json": ["4uPU", 86],
-        "./main_tchinese.json": ["rgC9", 87],
-        "./main_thai.json": ["87dp", 88],
-        "./main_turkish.json": ["yMpO", 89],
-        "./main_ukrainian.json": ["zTWm", 90],
-        "./main_vietnamese.json": ["wqiy", 91],
+        "./main_brazilian.json": ["TFAN", 34],
+        "./main_bulgarian.json": ["c2SO", 35],
+        "./main_czech.json": ["peP3", 36],
+        "./main_danish.json": ["0bnV", 37],
+        "./main_dutch.json": ["wcLc", 38],
+        "./main_english.json": ["/rNK", 39],
+        "./main_finnish.json": ["iywU", 40],
+        "./main_french.json": ["Xnpc", 41],
+        "./main_german.json": ["pmKi", 42],
+        "./main_greek.json": ["mTRv", 43],
+        "./main_hungarian.json": ["WkHb", 44],
+        "./main_italian.json": ["Jz5U", 45],
+        "./main_japanese.json": ["3Dk9", 46],
+        "./main_koreana.json": ["neQD", 47],
+        "./main_latam.json": ["6oHD", 48],
+        "./main_norwegian.json": ["2OvS", 49],
+        "./main_polish.json": ["3pwE", 50],
+        "./main_portuguese.json": ["hY40", 51],
+        "./main_romanian.json": ["Q95+", 52],
+        "./main_russian.json": ["bsPT", 53],
+        "./main_sc_schinese.json": ["GOaQ", 54],
+        "./main_schinese.json": ["B/Zz", 55],
+        "./main_spanish.json": ["U6iL", 56],
+        "./main_swedish.json": ["4uPU", 57],
+        "./main_tchinese.json": ["rgC9", 58],
+        "./main_thai.json": ["87dp", 59],
+        "./main_turkish.json": ["yMpO", 60],
+        "./main_ukrainian.json": ["zTWm", 61],
+        "./main_vietnamese.json": ["wqiy", 62],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -8388,11 +8388,11 @@
             r.e(8),
             r.e(11),
             r.e(17),
-            r.e(61),
+            r.e(32),
           ]).then(r.bind(null, "CGeh"))
         ),
         re = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(18), r.e(0), r.e(17), r.e(95)]).then(
+          Promise.all([r.e(1), r.e(18), r.e(0), r.e(17), r.e(66)]).then(
             r.bind(null, "cprX")
           )
         ),
@@ -8450,7 +8450,7 @@
           Promise.all([r.e(1), r.e(0), r.e(19)]).then(r.bind(null, "byIC"))
         ),
         oe = o.a.lazy(() =>
-          Promise.all([r.e(6), r.e(7), r.e(156)]).then(r.bind(null, "AFtM"))
+          Promise.all([r.e(6), r.e(7), r.e(127)]).then(r.bind(null, "AFtM"))
         ),
         le = o.a.lazy(() =>
           Promise.all([
@@ -8566,7 +8566,7 @@
             r.e(12),
             r.e(11),
             r.e(15),
-            r.e(96),
+            r.e(67),
           ]).then(r.bind(null, "21NE"))
         ),
         pe = o.a.lazy(() =>
@@ -8588,7 +8588,7 @@
             r.e(12),
             r.e(11),
             r.e(15),
-            r.e(96),
+            r.e(67),
           ]).then(r.bind(null, "OVk1"))
         ),
         fe = o.a.lazy(() =>
@@ -10146,9 +10146,9 @@
           case 5:
             return "es";
           case 6:
-            return "zn-cn";
+            return "zh-cn";
           case 7:
-            return "zn-tw";
+            return "zh-tw";
           case 8:
             return "ru";
           case 9:
@@ -11821,35 +11821,35 @@
     suz2: function (e, t, r) {},
     uhdG: function (e, t, r) {
       var n = {
-        "./sales_brazilian.json": ["+cMs", 97],
-        "./sales_bulgarian.json": ["ObVs", 98],
-        "./sales_czech.json": ["CoMO", 99],
-        "./sales_danish.json": ["G2Cs", 100],
-        "./sales_dutch.json": ["qEt3", 101],
-        "./sales_english.json": ["EnkW", 102],
-        "./sales_finnish.json": ["aW7y", 103],
-        "./sales_french.json": ["zxZG", 104],
-        "./sales_german.json": ["2ydi", 105],
-        "./sales_greek.json": ["Xebg", 106],
-        "./sales_hungarian.json": ["AGuh", 107],
-        "./sales_italian.json": ["/ptQ", 108],
-        "./sales_japanese.json": ["gLno", 109],
-        "./sales_koreana.json": ["FMlb", 110],
-        "./sales_latam.json": ["qta4", 111],
-        "./sales_norwegian.json": ["7zdQ", 112],
-        "./sales_polish.json": ["ViiN", 113],
-        "./sales_portuguese.json": ["wIrF", 114],
-        "./sales_romanian.json": ["rBcb", 115],
-        "./sales_russian.json": ["3DF0", 116],
-        "./sales_sc_schinese.json": ["K/cD", 117],
-        "./sales_schinese.json": ["hUJS", 118],
-        "./sales_spanish.json": ["6i74", 119],
-        "./sales_swedish.json": ["4vnE", 120],
-        "./sales_tchinese.json": ["9uzb", 121],
-        "./sales_thai.json": ["NP1P", 122],
-        "./sales_turkish.json": ["jIRL", 123],
-        "./sales_ukrainian.json": ["TgQj", 124],
-        "./sales_vietnamese.json": ["EKJ7", 125],
+        "./sales_brazilian.json": ["+cMs", 68],
+        "./sales_bulgarian.json": ["ObVs", 69],
+        "./sales_czech.json": ["CoMO", 70],
+        "./sales_danish.json": ["G2Cs", 71],
+        "./sales_dutch.json": ["qEt3", 72],
+        "./sales_english.json": ["EnkW", 73],
+        "./sales_finnish.json": ["aW7y", 74],
+        "./sales_french.json": ["zxZG", 75],
+        "./sales_german.json": ["2ydi", 76],
+        "./sales_greek.json": ["Xebg", 77],
+        "./sales_hungarian.json": ["AGuh", 78],
+        "./sales_italian.json": ["/ptQ", 79],
+        "./sales_japanese.json": ["gLno", 80],
+        "./sales_koreana.json": ["FMlb", 81],
+        "./sales_latam.json": ["qta4", 82],
+        "./sales_norwegian.json": ["7zdQ", 83],
+        "./sales_polish.json": ["ViiN", 84],
+        "./sales_portuguese.json": ["wIrF", 85],
+        "./sales_romanian.json": ["rBcb", 86],
+        "./sales_russian.json": ["3DF0", 87],
+        "./sales_sc_schinese.json": ["K/cD", 88],
+        "./sales_schinese.json": ["hUJS", 89],
+        "./sales_spanish.json": ["6i74", 90],
+        "./sales_swedish.json": ["4vnE", 91],
+        "./sales_tchinese.json": ["9uzb", 92],
+        "./sales_thai.json": ["NP1P", 93],
+        "./sales_turkish.json": ["jIRL", 94],
+        "./sales_ukrainian.json": ["TgQj", 95],
+        "./sales_vietnamese.json": ["EKJ7", 96],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -14962,5 +14962,5 @@
       })(G || (G = {}));
     },
   },
-  [["gfbn", 92, 30]],
+  [["gfbn", 63, 30]],
 ]);

@@ -1216,10 +1216,10 @@
         EventDetailsSubTitle: "partnereventdisplay_EventDetailsSubTitle_6k4NE",
         LibraryEventBodyContainer:
           "partnereventdisplay_LibraryEventBodyContainer_2ZgLv",
-        "lang_zn-cn": "partnereventdisplay_lang_zn-cn_m-xSe",
+        "lang_zh-cn": "partnereventdisplay_lang_zh-cn_299Pk",
         lang_ko: "partnereventdisplay_lang_ko_3h28O",
         lang_ja: "partnereventdisplay_lang_ja_2WrMm",
-        "lang_zn-tw": "partnereventdisplay_lang_zn-tw_haxVm",
+        "lang_zh-tw": "partnereventdisplay_lang_zh-tw_3BdFR",
         AppSocialLinksCtn: "partnereventdisplay_AppSocialLinksCtn_VDEod",
         AppSocialLinks: "partnereventdisplay_AppSocialLinks_1VT5_",
         AppSocialLink: "partnereventdisplay_AppSocialLink_Lda0T",
