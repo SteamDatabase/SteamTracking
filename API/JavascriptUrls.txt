@@ -592,9 +592,8 @@ ${IMG_URL}valve_logo.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
-${LOGIN_BASE_URL}jwt/ajaxstatus
+${LOGIN_BASE_URL}jwt/ajaxrefresh
 ${LOGIN_BASE_URL}jwt/finalizelogin
-${LOGIN_BASE_URL}jwt/refresh?redir=${}
 ${MEDIA_CDN_COMMUNITY_URL}/images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/${}
@@ -816,6 +815,7 @@ ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubs
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubsections
+${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
 ${STORE_BASE_URL}curator/${clanAccountID}/sale/${strVanity}
@@ -888,6 +888,7 @@ ${STORE_BASE_URL}labs/contenthub?optout=1
 ${STORE_BASE_URL}labs/trendingreviews/
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
+${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile/?show=steamapp
 ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
@@ -1180,6 +1181,7 @@ ${getEventURL}&action=eventFeed&month=${newMonth}&year=${newYear}
 ${icon_drag_url}
 ${imgURL}${value}
 ${imgUrl}
+${internal_wiki_url}${}
 ${linkURL}${id}${ownerAppend}/?${linkAppend}
 ${linkURL}${nextid}${prevAppend}/?${linkAppend}
 ${linkURL}${previd}${nextAppend}/?${linkAppend}
@@ -1563,6 +1565,7 @@ https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta
 https://confluence.valve.org/display/STEAM/Opt-In+Tech+Custom+Event+type
 https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event
 https://confluence.valve.org/display/SteamBiz/New+Sales+Page+Feature+-+How+to+invite+partners
+https://confluence.valve.org/display/etc...
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.valvesoftware.com/
 https://en.wikipedia.org/wiki/Main_Page

@@ -143,16 +143,13 @@ html.tablet .purchase_options_content_tablet {
 
 	/* Re-defining here prevents the entire page from padding as we scroll */
 	scroll-snap-type: inline;
-	scroll-padding-bottom: 80px;
-	scroll-padding-top: 160px;
+	scroll-padding: 160px 0px;
 
 	width: var(--gpPurchaseOptionsWidth);
 
 }
 
 html.tablet .page_content_ctn {
-	/* width: calc(100vw - var(--gpPurchaseOptionsWidth) - ( 3 * var(--gpSpace-Gutter) )); */
-
 	width: calc( 100% - var(--gpPurchaseOptionsWidth) );
 }
 

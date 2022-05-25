@@ -193,7 +193,7 @@
         M = a("hKFG"),
         H = a("S6U1"),
         F = (a("3u1e"), a("mgoM"));
-      const z = {
+      const K = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
           { appid: 386360, url: "https://steam.tv/smite" },
@@ -220,7 +220,7 @@
           },
         ],
       };
-      let K = (V = class extends l.a.Component {
+      let q = (V = class extends l.a.Component {
         constructor() {
           super(...arguments),
             (this.m_cancelSignal = n.a.CancelToken.source()),
@@ -519,7 +519,7 @@
                         onTransitionEnd: this.OnShrinkTransitionEnd,
                       },
                       n.leftPanel,
-                      l.a.createElement(q, {
+                      l.a.createElement(z, {
                         stream: e,
                         bStartMuted: this.state.bStartMuted,
                         fnRenderBroadcastContext: s,
@@ -549,13 +549,13 @@
           });
         }
       });
-      Object(r.b)([k.b], K.prototype, "ToggleBroadcastExpandShrink", null),
-        Object(r.b)([k.b], K.prototype, "OnShrinkTransitionEnd", null),
-        Object(r.b)([k.b], K.prototype, "onStreamSelect", null),
-        Object(r.b)([k.b], K.prototype, "PlayTopNonVOD", null),
-        (K = V = Object(r.b)([o.a], K));
-      t.default = K;
-      class q extends l.a.Component {
+      Object(r.b)([k.b], q.prototype, "ToggleBroadcastExpandShrink", null),
+        Object(r.b)([k.b], q.prototype, "OnShrinkTransitionEnd", null),
+        Object(r.b)([k.b], q.prototype, "onStreamSelect", null),
+        Object(r.b)([k.b], q.prototype, "PlayTopNonVOD", null),
+        (q = V = Object(r.b)([o.a], q));
+      t.default = q;
+      class z extends l.a.Component {
         constructor(e) {
           super(e),
             (this.m_iVideoContainerRef = l.a.createRef()),
@@ -630,16 +630,16 @@
           );
         }
       }
-      Object(r.b)([k.b], q.prototype, "CloseBroadcastPopup", null),
-        Object(r.b)([k.b], q.prototype, "OnEnter", null),
-        Object(r.b)([k.b], q.prototype, "OnLeave", null);
+      Object(r.b)([k.b], z.prototype, "CloseBroadcastPopup", null),
+        Object(r.b)([k.b], z.prototype, "OnEnter", null),
+        Object(r.b)([k.b], z.prototype, "OnLeave", null);
       let Q = class extends l.a.Component {
         ConstructBroadcastLink() {
           let e = this.props.stream;
           const t = N.a.GetOrCreateBroadcastInfo(
             this.props.stream.steamid
           ).m_nAppID;
-          let a = z.list.find(
+          let a = K.list.find(
             (a) =>
               a.appid == t &&
               (!a.broadcasterAccountID || a.broadcasterAccountID == e.accountid)
@@ -708,7 +708,7 @@
             l.a.createElement(
               "div",
               { className: Object(E.a)(R.a.viewer_count, "viewer_count") },
-              l.a.createElement(A.vb, null),
+              l.a.createElement(A.wb, null),
               r.toLocaleString(D.e.GetPreferredLocales())
             ),
             l.a.createElement(
@@ -812,7 +812,7 @@
               ),
               onClick: e.OnPreventPopup,
             },
-            l.a.createElement(A.zb, null)
+            l.a.createElement(A.Ab, null)
           )
         );
       });
@@ -944,7 +944,7 @@
               ? l.a.createElement(
                   l.a.Fragment,
                   null,
-                  l.a.createElement(A.vb, null),
+                  l.a.createElement(A.wb, null),
                   " ",
                   m.toLocaleString(D.e.GetPreferredLocales())
                 )

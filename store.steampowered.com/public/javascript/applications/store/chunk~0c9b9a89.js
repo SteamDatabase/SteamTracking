@@ -1414,7 +1414,7 @@
                     className: "DialogInput_ClearAction",
                     onClick: this.OnClearClick,
                   },
-                  o.createElement(l.Eb, null)
+                  o.createElement(l.Fb, null)
                 ),
               C
             ),
@@ -11340,7 +11340,7 @@
                 i.createElement(
                   "div",
                   { className: "closeButton", onClick: e.onEscKeypress },
-                  i.createElement(c.Eb, null)
+                  i.createElement(c.Fb, null)
                 )
               ),
             i.createElement(l.a, null, e.children)

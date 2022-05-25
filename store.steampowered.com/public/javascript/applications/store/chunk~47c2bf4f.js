@@ -256,9 +256,9 @@
             include_trailers: g,
             include_ratings: f,
             include_tag_count: b,
-            include_reviews: I,
-            include_basic_info: R,
-            include_supported_languages: B,
+            include_reviews: v,
+            include_basic_info: I,
+            include_supported_languages: R,
           } = r;
         if (
           (Object(n.useEffect)(() => {
@@ -271,9 +271,9 @@
               include_trailers: g,
               include_ratings: f,
               include_tag_count: b,
-              include_reviews: I,
-              include_basic_info: R,
-              include_supported_languages: B,
+              include_reviews: v,
+              include_basic_info: I,
+              include_supported_languages: R,
             };
             if (
               !e ||
@@ -292,15 +292,15 @@
                 }),
               () => n.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, l, d, _, h, m, p, g, f, b, I, R, B]),
+          }, [e, t, s, l, d, _, h, m, p, g, f, b, v, I, R]),
           !e)
         )
           return [null, 2];
         if (!1 === l) return [void 0, 2];
         if (o.a.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.a.Get().BHasStoreItem(e, t, r)) return [void 0, 1];
-        const v = o.a.Get().GetStoreItem(e, t);
-        return (null == v ? void 0 : v.BIsVisible()) ? [v, 3] : [null, 2];
+        const B = o.a.Get().GetStoreItem(e, t);
+        return (null == B ? void 0 : B.BIsVisible()) ? [B, 3] : [null, 2];
       }
       function l(e, t, r) {
         return u(e, 0, t, r);
@@ -346,7 +346,7 @@
             include_tag_count: g,
             include_reviews: f,
             include_basic_info: b,
-            include_supported_languages: I,
+            include_supported_languages: v,
           } = r;
         if (
           (Object(n.useEffect)(() => {
@@ -362,7 +362,7 @@
                 include_tag_count: g,
                 include_reviews: f,
                 include_basic_info: b,
-                include_supported_languages: I,
+                include_supported_languages: v,
               },
               s = e.filter((e) => !o.a.Get().BHasStoreItem(e, t));
             if (0 == s.length) return;
@@ -374,7 +374,7 @@
               }),
               () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, u, l, c, d, _, h, m, p, g, f, b, I]),
+          }, [e, t, s, u, l, c, d, _, h, m, p, g, f, b, v]),
           !e)
         )
           return 2;
@@ -412,11 +412,13 @@
         u = r("/Q1a");
       class l {
         constructor(e, t) {
-          var r, s;
+          var r, s, i;
           (this.m_bVisible = !1),
             (this.m_rgStoreTags = []),
             (this.m_rgStoreTagIDs = []),
             (this.m_DataRequested = { include_tag_count: 0 }),
+            (this.k_regexSalePage =
+              /^https?:\/\/[^\/]*(?:valvesoftware|steampowered).com\/(?:(curator|dev|developer|pub|publisher|franchise)\/[0-9a-zA-Z\-_]+\/)?sale\//),
             (this.m_eItemType = e.item_type()),
             (this.m_unID = e.id()),
             (this.m_bVisible = e.visible()),
@@ -438,6 +440,11 @@
               null === (s = e.best_purchase_option()) || void 0 === s
                 ? void 0
                 : s.toObject()),
+            (this.m_strStoreURLPathOverride = e.store_url_path_override()),
+            (this.m_freeWeekend =
+              null === (i = e.free_weekend()) || void 0 === i
+                ? void 0
+                : i.toObject()),
             this.MergeData(e, t);
         }
         MergeData(e, t) {
@@ -542,6 +549,17 @@
         GetStorePageURL() {
           return u.d.STORE_BASE_URL + this.m_strStoreURLPath;
         }
+        GetStorePageURLWithOverride() {
+          var e;
+          return (null === (e = this.m_strStoreURLPathOverride) || void 0 === e
+            ? void 0
+            : e.length) > 0
+            ? this.GetStorePageURLOverride()
+            : this.GetStorePageURL();
+        }
+        GetStorePageURLOverride() {
+          return this.m_strStoreURLPathOverride;
+        }
         GetCommunityPageURL() {
           return this.GetAppID()
             ? u.d.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
@@ -568,6 +586,24 @@
         BIsApplicationOrTool() {
           return 6 == this.GetAppType() || 13 == this.GetAppType();
         }
+        BIsSalePage() {
+          return (
+            0 === this.GetStoreItemType() &&
+            this.k_regexSalePage.test(this.GetStorePageURLWithOverride())
+          );
+        }
+        GetSalePageVanityURL() {
+          let e = this.GetStorePageURLWithOverride();
+          return (
+            0 === this.GetStoreItemType() &&
+              ((e = this.GetStorePageURLWithOverride().replace(
+                this.k_regexSalePage,
+                ""
+              )),
+              e.endsWith("/") && (e = e.replace("/", ""))),
+            e
+          );
+        }
         GetIncludedAppTypes() {
           return this.m_rgIncludedAppTypes;
         }
@@ -581,6 +617,26 @@
         }
         BIsFree() {
           return this.m_bIsFree;
+        }
+        BIsFreeWeekend() {
+          const e = Date.now() / 1e3;
+          return (
+            Boolean(this.m_freeWeekend) &&
+            this.m_freeWeekend.start_time <= e &&
+            e <= this.m_freeWeekend.end_time
+          );
+        }
+        GetFreeWeekendEnd() {
+          var e;
+          return null === (e = this.m_freeWeekend) || void 0 === e
+            ? void 0
+            : e.end_time;
+        }
+        GetFreeWeekendPlayTextOverride() {
+          var e;
+          return null === (e = this.m_freeWeekend) || void 0 === e
+            ? void 0
+            : e.text;
         }
         BIsEarlyAccess() {
           return this.m_bIsEarlyAccess;

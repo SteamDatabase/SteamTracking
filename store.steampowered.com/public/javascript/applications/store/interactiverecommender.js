@@ -1097,7 +1097,7 @@
                         className: Object(p.a)(h.UnMute, P && h.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
-                      l.a.createElement(m.Ab, { muted: f.shouldMute() })
+                      l.a.createElement(m.Bb, { muted: f.shouldMute() })
                     ),
                   this.state.wishlisted &&
                     l.a.createElement(

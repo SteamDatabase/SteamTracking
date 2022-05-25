@@ -141,7 +141,7 @@
             n.createElement(
               "div",
               { className: "YoutubePreviewPlay" },
-              n.createElement(B.yb, null)
+              n.createElement(B.zb, null)
             )
           );
         let p = Object(h.f)().replace("https://", "");
@@ -191,8 +191,8 @@
         H = a("yENa"),
         V = a("GXif"),
         W = a("pSt8"),
-        $ = a("pcg8"),
-        z = a.n($),
+        z = a("pcg8"),
+        $ = a.n(z),
         Q = (a("wijF"), a("QY55")),
         q = a("C4Er");
       function J(e) {
@@ -270,7 +270,7 @@
                   { className: "page_content" },
                   l.a.createElement(
                     "div",
-                    { className: z.a.CuratorListCtn },
+                    { className: $.a.CuratorListCtn },
                     l.a.createElement(ee, { listDetails: r }),
                     Object(C.a)(r)
                       ? l.a.createElement(Z, { listDetails: r })
@@ -280,7 +280,7 @@
                         }),
                     l.a.createElement(
                       "div",
-                      { className: z.a.CuratorMoreCtn },
+                      { className: $.a.CuratorMoreCtn },
                       l.a.createElement(
                         "h2",
                         null,
@@ -392,7 +392,7 @@
           l.a.createElement(
             u.a,
             {
-              className: Object(G.a)(z.a.CuratorList, d && z.a.CuratorListGrid),
+              className: Object(G.a)($.a.CuratorList, d && $.a.CuratorListGrid),
               "flow-children": "grid",
             },
             i.map((e, a) =>
@@ -443,20 +443,20 @@
             );
         return l.a.createElement(
           "div",
-          { className: z.a.TopReviewInfo },
+          { className: $.a.TopReviewInfo },
           Boolean(b) &&
             l.a.createElement(
               c.c,
               { href: a.GetSaleURL() },
-              l.a.createElement("img", { className: z.a.SaleBanner, src: b })
+              l.a.createElement("img", { className: $.a.SaleBanner, src: b })
             ),
-          r && d && l.a.createElement("div", { className: z.a.Title }, d),
-          r && p && l.a.createElement("div", { className: z.a.Blurb }, p),
+          r && d && l.a.createElement("div", { className: $.a.Title }, d),
+          r && p && l.a.createElement("div", { className: $.a.Blurb }, p),
           Boolean(n > 0) && l.a.createElement("div", { style: { height: n } }),
           o &&
             l.a.createElement(
               "div",
-              { className: z.a.VideoReviewCtn },
+              { className: $.a.VideoReviewCtn },
               l.a.createElement(H.b, {
                 video: o.strVideoID,
                 startSeconds: o.nStartSeconds,
@@ -466,17 +466,17 @@
                 controls: !0,
                 preloadYoutubeScripts: !0,
                 playsInline: !0,
-                imageClassnames: z.a.YouTubePreviewImage,
+                imageClassnames: $.a.YouTubePreviewImage,
               })
             ),
           Boolean(s) &&
             l.a.createElement(
               "div",
-              { className: z.a.VideoReviewCtn },
+              { className: $.a.VideoReviewCtn },
               l.a.createElement(Y, {
                 videoid: s,
                 posterURL: "",
-                imageClassnames: z.a.YouTubePreviewImage,
+                imageClassnames: $.a.YouTubePreviewImage,
               })
             ),
           _ && l.a.createElement(ne, { url: _ })
@@ -525,10 +525,10 @@
           B = `curator_clanid=${s.clanAccountID}&curator_listid=${o.listid}`;
         return l.a.createElement(
           u.a,
-          { className: z.a.CuratorReview, autoFocus: i },
+          { className: $.a.CuratorReview, autoFocus: i },
           l.a.createElement(
             "div",
-            { className: z.a.CapsuleCtn },
+            { className: $.a.CapsuleCtn },
             Boolean(j || R)
               ? l.a.createElement(ae, {
                   strVideoID: (null == j ? void 0 : j.strVideoID) || R,
@@ -549,22 +549,22 @@
           ),
           l.a.createElement(
             "div",
-            { className: z.a.ReviewTextSection },
-            l.a.createElement("div", { className: z.a.GameTitle }, d.GetName()),
+            { className: $.a.ReviewTextSection },
+            l.a.createElement("div", { className: $.a.GameTitle }, d.GetName()),
             l.a.createElement(
               "div",
-              { className: z.a.RecommendationTypeAndDate },
+              { className: $.a.RecommendationTypeAndDate },
               l.a.createElement(re, { type: E }),
               l.a.createElement(
                 "div",
-                { className: z.a.ReviewDate },
+                { className: $.a.ReviewDate },
                 w ? d.GetFormattedSteamReleaseDate() : Object(V.o)(f)
               )
             ),
             Boolean(I) &&
               l.a.createElement(
                 "div",
-                { className: z.a.ReviewBlurb },
+                { className: $.a.ReviewBlurb },
                 Object(V.f)("#SteamCurator_ReviewTextQuoted", I)
               ),
             Boolean(b) && l.a.createElement(ne, { url: b })
@@ -584,15 +584,15 @@
           [s] = Object(S.a)(r.id, Object(N.d)(r.type), { include_assets: !0 });
         return l.a.createElement(
           "div",
-          { className: z.a.YouTubeCapsule },
+          { className: $.a.YouTubeCapsule },
           l.a.createElement(
             "div",
-            { className: z.a.YouTubeCtn },
+            { className: $.a.YouTubeCtn },
             c
               ? l.a.createElement(Y, {
                   videoid: t,
                   posterURL: null == s ? void 0 : s.GetAssets().GetHeaderURL(),
-                  imageClassnames: z.a.YouTubePreviewImage,
+                  imageClassnames: $.a.YouTubePreviewImage,
                   autoplay: !0,
                 })
               : l.a.createElement(H.b, {
@@ -604,16 +604,16 @@
                   controls: !0,
                   preloadYoutubeScripts: !0,
                   playsInline: !0,
-                  imageClassnames: z.a.YouTubePreviewImage,
+                  imageClassnames: $.a.YouTubePreviewImage,
                   altImg: n,
                 })
           ),
           l.a.createElement(
             "div",
-            { className: z.a.YouTubeCapsuleBottomBar },
+            { className: $.a.YouTubeCapsuleBottomBar },
             l.a.createElement(
               "div",
-              { className: z.a.GameImageCtn },
+              { className: $.a.GameImageCtn },
               l.a.createElement(
                 k.d,
                 {
@@ -627,13 +627,13 @@
                   },
                 },
                 l.a.createElement("img", {
-                  className: z.a.GameImage,
+                  className: $.a.GameImage,
                   src:
                     null == s ? void 0 : s.GetAssets().GetLibraryCapsuleURL(),
                 })
               )
             ),
-            l.a.createElement(P.c, { info: r, strClassName: z.a.FullWidth })
+            l.a.createElement(P.c, { info: r, strClassName: $.a.FullWidth })
           )
         );
       }
@@ -642,19 +642,19 @@
           case 0:
             return l.a.createElement(
               "div",
-              { className: z.a.Recommended },
+              { className: $.a.Recommended },
               Object(V.f)("#SteamCurator_Recommended")
             );
           case 1:
             return l.a.createElement(
               "div",
-              { className: z.a.NotRecommended },
+              { className: $.a.NotRecommended },
               Object(V.f)("#SteamCurator_NotRecommended")
             );
           case 2:
             return l.a.createElement(
               "div",
-              { className: z.a.Informational },
+              { className: $.a.Informational },
               Object(V.f)("#SteamCurator_Informational")
             );
           default:
@@ -673,11 +673,11 @@
           r = Object(m.a)(e.url);
         return l.a.createElement(
           "div",
-          { className: z.a.FullReviewLink },
+          { className: $.a.FullReviewLink },
           l.a.createElement(
             c.c,
             {
-              className: z.a.FullReviewAnchor,
+              className: $.a.FullReviewAnchor,
               href: t,
               rel: "noopener nofollow",
               preferredFocus: !1,
@@ -691,7 +691,7 @@
           ),
           l.a.createElement(
             "div",
-            { className: z.a.FullReviewDomain },
+            { className: $.a.FullReviewDomain },
             Object(V.f)("#SteamCurator_ReviewLinkHostnameBracketed", a)
           )
         );

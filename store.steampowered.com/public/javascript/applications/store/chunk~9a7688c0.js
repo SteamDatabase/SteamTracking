@@ -1215,8 +1215,8 @@
             e.a.createElement(
               "div",
               { className: h.a.Throbber },
-              e.a.createElement(s.qb, { className: h.a.base }),
-              e.a.createElement(s.qb, { className: h.a.blur })
+              e.a.createElement(s.rb, { className: h.a.base }),
+              e.a.createElement(s.rb, { className: h.a.blur })
             )
           );
           return e.a.createElement(

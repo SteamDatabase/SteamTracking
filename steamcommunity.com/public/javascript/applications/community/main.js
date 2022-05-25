@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7274481";
+var CLSTAMP = "7274819";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [114],
   {
@@ -794,19 +794,19 @@ var CLSTAMP = "7274481";
         n.d(t, "V", function () {
           return b;
         }),
-        n.d(t, "zb", function () {
+        n.d(t, "Ab", function () {
           return v;
         }),
-        n.d(t, "Ab", function () {
+        n.d(t, "Bb", function () {
           return w;
         }),
         n.d(t, "R", function () {
           return C;
         }),
-        n.d(t, "wb", function () {
+        n.d(t, "xb", function () {
           return S;
         }),
-        n.d(t, "ub", function () {
+        n.d(t, "vb", function () {
           return y;
         }),
         n.d(t, "U", function () {
@@ -827,7 +827,7 @@ var CLSTAMP = "7274481";
         n.d(t, "J", function () {
           return R;
         }),
-        n.d(t, "nb", function () {
+        n.d(t, "ob", function () {
           return T;
         }),
         n.d(t, "e", function () {
@@ -842,170 +842,173 @@ var CLSTAMP = "7274481";
         n.d(t, "r", function () {
           return k;
         }),
-        n.d(t, "M", function () {
+        n.d(t, "nb", function () {
           return N;
         }),
-        n.d(t, "P", function () {
+        n.d(t, "M", function () {
           return F;
         }),
-        n.d(t, "Y", function () {
+        n.d(t, "P", function () {
           return A;
         }),
-        n.d(t, "X", function () {
+        n.d(t, "Y", function () {
           return j;
         }),
-        n.d(t, "pb", function () {
+        n.d(t, "X", function () {
           return P;
         }),
-        n.d(t, "C", function () {
+        n.d(t, "qb", function () {
           return G;
         }),
-        n.d(t, "N", function () {
+        n.d(t, "C", function () {
           return W;
         }),
-        n.d(t, "kb", function () {
+        n.d(t, "N", function () {
           return U;
         }),
-        n.d(t, "vb", function () {
+        n.d(t, "kb", function () {
           return H;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "wb", function () {
           return V;
         }),
-        n.d(t, "D", function () {
+        n.d(t, "l", function () {
           return z;
         }),
-        n.d(t, "eb", function () {
+        n.d(t, "D", function () {
           return K;
         }),
-        n.d(t, "Z", function () {
+        n.d(t, "eb", function () {
           return q;
         }),
-        n.d(t, "ab", function () {
+        n.d(t, "Z", function () {
           return Y;
         }),
-        n.d(t, "db", function () {
+        n.d(t, "ab", function () {
           return X;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "db", function () {
           return $;
         }),
-        n.d(t, "Q", function () {
+        n.d(t, "f", function () {
           return Z;
         }),
-        n.d(t, "tb", function () {
+        n.d(t, "Q", function () {
           return Q;
         }),
-        n.d(t, "I", function () {
+        n.d(t, "ub", function () {
           return J;
         }),
-        n.d(t, "x", function () {
+        n.d(t, "I", function () {
           return ee;
         }),
-        n.d(t, "rb", function () {
+        n.d(t, "x", function () {
           return te;
         }),
-        n.d(t, "qb", function () {
+        n.d(t, "sb", function () {
           return ne;
         }),
-        n.d(t, "j", function () {
+        n.d(t, "rb", function () {
           return re;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "j", function () {
           return ie;
         }),
-        n.d(t, "fb", function () {
+        n.d(t, "n", function () {
           return oe;
         }),
-        n.d(t, "t", function () {
+        n.d(t, "fb", function () {
           return se;
         }),
-        n.d(t, "A", function () {
+        n.d(t, "t", function () {
           return ae;
         }),
-        n.d(t, "v", function () {
+        n.d(t, "A", function () {
           return le;
         }),
-        n.d(t, "F", function () {
+        n.d(t, "v", function () {
           return ce;
         }),
-        n.d(t, "B", function () {
+        n.d(t, "F", function () {
           return ue;
         }),
-        n.d(t, "u", function () {
+        n.d(t, "B", function () {
           return de;
         }),
-        n.d(t, "S", function () {
+        n.d(t, "u", function () {
           return he;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "S", function () {
           return me;
         }),
-        n.d(t, "xb", function () {
+        n.d(t, "b", function () {
           return pe;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "yb", function () {
           return ge;
         }),
-        n.d(t, "O", function () {
+        n.d(t, "a", function () {
           return fe;
         }),
-        n.d(t, "G", function () {
+        n.d(t, "O", function () {
           return _e;
         }),
-        n.d(t, "z", function () {
+        n.d(t, "G", function () {
           return be;
         }),
-        n.d(t, "E", function () {
+        n.d(t, "z", function () {
           return ve;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "E", function () {
           return we;
         }),
-        n.d(t, "ob", function () {
+        n.d(t, "o", function () {
           return Ce;
         }),
-        n.d(t, "sb", function () {
+        n.d(t, "pb", function () {
           return Se;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "tb", function () {
           return ye;
         }),
-        n.d(t, "K", function () {
+        n.d(t, "d", function () {
           return Ee;
         }),
-        n.d(t, "W", function () {
+        n.d(t, "K", function () {
           return Oe;
         }),
-        n.d(t, "yb", function () {
+        n.d(t, "W", function () {
           return De;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "zb", function () {
           return Me;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "i", function () {
           return Be;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "h", function () {
           return Re;
         }),
-        n.d(t, "cb", function () {
+        n.d(t, "g", function () {
           return Te;
         }),
-        n.d(t, "lb", function () {
+        n.d(t, "cb", function () {
           return Ie;
         }),
-        n.d(t, "jb", function () {
+        n.d(t, "lb", function () {
           return xe;
         }),
-        n.d(t, "gb", function () {
+        n.d(t, "jb", function () {
           return Le;
         }),
-        n.d(t, "ib", function () {
+        n.d(t, "gb", function () {
           return ke;
         }),
-        n.d(t, "hb", function () {
+        n.d(t, "ib", function () {
           return Ne;
+        }),
+        n.d(t, "hb", function () {
+          return Fe;
         });
       var r = n("mrSG"),
         i = n("q1tI"),
@@ -1964,7 +1967,29 @@ var CLSTAMP = "7274481";
             })
         );
       }
-      function N() {
+      function N(e) {
+        const { angle: t } = e,
+          n = Object(r.c)(e, ["angle"]);
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              style: { transform: `rotate(${e.angle}deg)` },
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 32 32",
+              fill: "none",
+            },
+            n
+          ),
+          i.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
+          })
+        );
+      }
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -2000,7 +2025,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function F() {
+      function A() {
         return i.createElement(
           "svg",
           {
@@ -2026,7 +2051,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function A() {
+      function j() {
         return i.createElement(
           "svg",
           {
@@ -2059,7 +2084,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function j() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -2086,7 +2111,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function P() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -2163,7 +2188,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function G(e) {
+      function W(e) {
         return i.createElement(
           "svg",
           {
@@ -2184,7 +2209,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function W(e) {
+      function U(e) {
         return i.createElement(
           "svg",
           {
@@ -2222,7 +2247,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function U(e) {
+      function H(e) {
         const t = Object(a.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -2253,7 +2278,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function H() {
+      function V() {
         return i.createElement(
           "svg",
           {
@@ -2279,7 +2304,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function V() {
+      function z() {
         return i.createElement(
           "svg",
           {
@@ -2300,7 +2325,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function z() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -2321,7 +2346,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function K() {
+      function q() {
         return i.createElement(
           "svg",
           {
@@ -2341,7 +2366,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function q() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -2378,7 +2403,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function Y() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -2406,7 +2431,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function X() {
+      function $() {
         return i.createElement(
           "svg",
           {
@@ -2472,7 +2497,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function $() {
+      function Z() {
         return i.createElement(
           "svg",
           {
@@ -2492,7 +2517,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Z(e) {
+      function Q(e) {
         const { className: t } = e;
         return i.createElement(
           "svg",
@@ -2512,7 +2537,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Q() {
+      function J() {
         return i.createElement(
           "svg",
           {
@@ -2534,7 +2559,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function J() {
+      function ee() {
         return i.createElement(
           "svg",
           {
@@ -2579,7 +2604,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function ee() {
+      function te() {
         return i.createElement(
           "svg",
           {
@@ -2612,7 +2637,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function te() {
+      function ne() {
         return i.createElement(
           "svg",
           {
@@ -2631,7 +2656,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function ne() {
+      function re() {
         return i.createElement(
           "svg",
           {
@@ -2650,7 +2675,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function re() {
+      function ie() {
         return i.createElement(
           "svg",
           {
@@ -2671,7 +2696,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function ie() {
+      function oe() {
         return i.createElement(
           "svg",
           {
@@ -2702,7 +2727,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function oe(e) {
+      function se(e) {
         const t = Object(a.a)(
           "SVGIcon_Button",
           e.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled"
@@ -2728,7 +2753,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function se() {
+      function ae() {
         return i.createElement(
           "svg",
           {
@@ -2778,7 +2803,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function ae() {
+      function le() {
         return i.createElement(
           "svg",
           {
@@ -2797,7 +2822,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function le() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -2835,7 +2860,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function ce() {
+      function ue() {
         return i.createElement(
           "svg",
           {
@@ -2871,7 +2896,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function ue() {
+      function de() {
         return i.createElement(
           "svg",
           {
@@ -2890,7 +2915,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function de(e) {
+      function he(e) {
         return i.createElement(
           "svg",
           {
@@ -2920,7 +2945,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function he() {
+      function me() {
         return i.createElement(
           "svg",
           {
@@ -2945,7 +2970,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function me() {
+      function pe() {
         return i.createElement(
           "svg",
           {
@@ -2967,7 +2992,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function pe() {
+      function ge() {
         return i.createElement(
           "svg",
           {
@@ -3007,7 +3032,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function ge() {
+      function fe() {
         return i.createElement(
           "svg",
           {
@@ -3035,7 +3060,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function fe() {
+      function _e() {
         return i.createElement(
           "svg",
           {
@@ -3051,7 +3076,7 @@ var CLSTAMP = "7274481";
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function _e() {
+      function be() {
         return i.createElement(
           "svg",
           {
@@ -3070,7 +3095,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function be() {
+      function ve() {
         return i.createElement(
           "svg",
           {
@@ -3089,7 +3114,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function ve() {
+      function we() {
         return i.createElement(
           "svg",
           {
@@ -3109,7 +3134,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function we(e, t) {
+      function Ce(e, t) {
         return u.c.IN_GAMEPADUI
           ? i.createElement(
               "svg",
@@ -3146,7 +3171,7 @@ var CLSTAMP = "7274481";
               })
             );
       }
-      function Ce(e) {
+      function Se(e) {
         return i.createElement(
           "svg",
           {
@@ -3165,7 +3190,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Se(e) {
+      function ye(e) {
         return i.createElement(
           "svg",
           {
@@ -3201,7 +3226,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function ye(e) {
+      function Ee(e) {
         const { className: t, color: n } = e;
         return i.createElement(
           "svg",
@@ -3227,7 +3252,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Ee(e) {
+      function Oe(e) {
         const { className: t } = e;
         Object(r.c)(e, ["className"]);
         return i.createElement(
@@ -3405,7 +3430,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function Oe() {
+      function De() {
         return i.createElement(
           "svg",
           {
@@ -3436,7 +3461,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function De(e) {
+      function Me(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -3452,7 +3477,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Me() {
+      function Be() {
         return i.createElement(
           "svg",
           {
@@ -3470,7 +3495,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Be() {
+      function Re() {
         return i.createElement(
           "svg",
           {
@@ -3492,7 +3517,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function Re() {
+      function Te() {
         return i.createElement(
           "svg",
           {
@@ -3530,7 +3555,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function Te(e) {
+      function Ie(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -3548,7 +3573,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Ie() {
+      function xe() {
         return i.createElement(
           "svg",
           {
@@ -3582,7 +3607,7 @@ var CLSTAMP = "7274481";
           )
         );
       }
-      function xe(e) {
+      function Le(e) {
         const { className: t } = e,
           n = Object(r.c)(e, ["className"]);
         return i.createElement(
@@ -3610,7 +3635,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Le(e) {
+      function ke(e) {
         const { className: t } = e,
           n = Object(r.c)(e, ["className"]);
         return i.createElement(
@@ -3638,7 +3663,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function ke(e) {
+      function Ne(e) {
         const { className: t } = e,
           n = Object(r.c)(e, ["className"]);
         return i.createElement(
@@ -3666,7 +3691,7 @@ var CLSTAMP = "7274481";
           })
         );
       }
-      function Ne(e) {
+      function Fe(e) {
         const { className: t } = e,
           n = Object(r.c)(e, ["className"]);
         return i.createElement(
@@ -4012,7 +4037,7 @@ var CLSTAMP = "7274481";
                 r.createElement(
                   "div",
                   { className: "closeButton", onClick: e.onEscKeypress },
-                  r.createElement(g.Ab, null)
+                  r.createElement(g.Bb, null)
                 )
               ),
             r.createElement(p.a, null, e.children)
@@ -7855,7 +7880,7 @@ var CLSTAMP = "7274481";
                     className: "DialogInput_ClearAction",
                     onClick: this.OnClearClick,
                   },
-                  i.createElement(l.Ab, null)
+                  i.createElement(l.Bb, null)
                 ),
               w
             ),
@@ -17171,7 +17196,7 @@ var CLSTAMP = "7274481";
                         e && e.close();
                       },
                     },
-                    i.createElement(c.Ab, null)
+                    i.createElement(c.Bb, null)
                   ),
                   !this.props.hideMinMax &&
                     i.createElement(
@@ -19188,22 +19213,22 @@ var CLSTAMP = "7274481";
         return a;
       }),
         n.d(t, "d", function () {
-          return M;
-        }),
-        n.d(t, "c", function () {
           return B;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "c", function () {
           return R;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "g", function () {
           return T;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "a", function () {
           return I;
         }),
+        n.d(t, "b", function () {
+          return x;
+        }),
         n.d(t, "e", function () {
-          return k;
+          return N;
         });
       var r = n("hRO2"),
         i = n("OS8t");
@@ -19372,6 +19397,12 @@ var CLSTAMP = "7274481";
                   screenshots: { n: 50, c: C },
                   trailers: { n: 51, c: y },
                   supported_languages: { n: 52, c: D, r: !0, q: !0 },
+                  store_url_path_override: {
+                    n: 53,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  free_weekend: { n: 54, c: M },
                 },
               }),
             a.sm_m
@@ -20244,6 +20275,11 @@ var CLSTAMP = "7274481";
                     br: i.d.readBool,
                     bw: i.h.writeBool,
                   },
+                  should_suppress_discount_pct: {
+                    n: 41,
+                    br: i.d.readBool,
+                    bw: i.h.writeBool,
+                  },
                 },
               }),
             v.sm_m
@@ -20706,7 +20742,7 @@ var CLSTAMP = "7274481";
       class M extends o {
         constructor(e = null) {
           super(),
-            M.prototype.include_assets || i.a(M.M()),
+            M.prototype.start_time || i.a(M.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -20714,6 +20750,61 @@ var CLSTAMP = "7274481";
             M.sm_m ||
               (M.sm_m = {
                 proto: M,
+                fields: {
+                  start_time: { n: 1, br: i.d.readUint32, bw: i.h.writeUint32 },
+                  end_time: { n: 2, br: i.d.readUint32, bw: i.h.writeUint32 },
+                  text: { n: 3, br: i.d.readString, bw: i.h.writeString },
+                },
+              }),
+            M.sm_m
+          );
+        }
+        static MBF() {
+          return M.sm_mbf || (M.sm_mbf = i.e(M.M())), M.sm_mbf;
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.g(M.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.c(M.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            n = new M();
+          return M.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.b(M.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.f(M.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_FreeWeekend";
+        }
+      }
+      class B extends o {
+        constructor(e = null) {
+          super(),
+            B.prototype.include_assets || i.a(B.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
                 fields: {
                   include_assets: { n: 1, br: i.d.readBool, bw: i.h.writeBool },
                   include_release: {
@@ -20768,66 +20859,6 @@ var CLSTAMP = "7274481";
                   },
                 },
               }),
-            M.sm_m
-          );
-        }
-        static MBF() {
-          return M.sm_mbf || (M.sm_mbf = i.e(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.g(M.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.c(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            n = new M();
-          return M.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.b(M.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new r.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.f(M.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreBrowseItemDataRequest";
-        }
-      }
-      class B extends o {
-        constructor(e = null) {
-          super(),
-            B.prototype.language || i.a(B.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            B.sm_m ||
-              (B.sm_m = {
-                proto: B,
-                fields: {
-                  language: { n: 1, br: i.d.readString, bw: i.h.writeString },
-                  elanguage: { n: 2, br: i.d.readInt32, bw: i.h.writeInt32 },
-                  country_code: {
-                    n: 3,
-                    br: i.d.readString,
-                    bw: i.h.writeString,
-                  },
-                  steam_realm: { n: 4, br: i.d.readInt32, bw: i.h.writeInt32 },
-                },
-              }),
             B.sm_m
           );
         }
@@ -20863,13 +20894,13 @@ var CLSTAMP = "7274481";
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreBrowseContext";
+          return "StoreBrowseItemDataRequest";
         }
       }
       class R extends o {
         constructor(e = null) {
           super(),
-            R.prototype.appid || i.a(R.M()),
+            R.prototype.language || i.a(R.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -20878,9 +20909,14 @@ var CLSTAMP = "7274481";
               (R.sm_m = {
                 proto: R,
                 fields: {
-                  appid: { n: 1, br: i.d.readUint32, bw: i.h.writeUint32 },
-                  packageid: { n: 2, br: i.d.readUint32, bw: i.h.writeUint32 },
-                  bundleid: { n: 3, br: i.d.readUint32, bw: i.h.writeUint32 },
+                  language: { n: 1, br: i.d.readString, bw: i.h.writeString },
+                  elanguage: { n: 2, br: i.d.readInt32, bw: i.h.writeInt32 },
+                  country_code: {
+                    n: 3,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  steam_realm: { n: 4, br: i.d.readInt32, bw: i.h.writeInt32 },
                 },
               }),
             R.sm_m
@@ -20918,14 +20954,14 @@ var CLSTAMP = "7274481";
           return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItemID";
+          return "StoreBrowseContext";
         }
       }
       class T extends o {
         constructor(e = null) {
           super(),
-            T.prototype.ids || i.a(T.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            T.prototype.appid || i.a(T.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -20933,9 +20969,9 @@ var CLSTAMP = "7274481";
               (T.sm_m = {
                 proto: T,
                 fields: {
-                  ids: { n: 1, c: R, r: !0, q: !0 },
-                  context: { n: 2, c: B },
-                  data_request: { n: 3, c: M },
+                  appid: { n: 1, br: i.d.readUint32, bw: i.h.writeUint32 },
+                  packageid: { n: 2, br: i.d.readUint32, bw: i.h.writeUint32 },
+                  bundleid: { n: 3, br: i.d.readUint32, bw: i.h.writeUint32 },
                 },
               }),
             T.sm_m
@@ -20973,13 +21009,13 @@ var CLSTAMP = "7274481";
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetItems_Request";
+          return "StoreItemID";
         }
       }
       class I extends o {
         constructor(e = null) {
           super(),
-            I.prototype.store_items || i.a(I.M()),
+            I.prototype.ids || i.a(I.M()),
             o.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -20987,7 +21023,11 @@ var CLSTAMP = "7274481";
             I.sm_m ||
               (I.sm_m = {
                 proto: I,
-                fields: { store_items: { n: 1, c: a, r: !0, q: !0 } },
+                fields: {
+                  ids: { n: 1, c: T, r: !0, q: !0 },
+                  context: { n: 2, c: R },
+                  data_request: { n: 3, c: B },
+                },
               }),
             I.sm_m
           );
@@ -21024,13 +21064,13 @@ var CLSTAMP = "7274481";
           return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetItems_Response";
+          return "CStoreBrowse_GetItems_Request";
         }
       }
       class x extends o {
         constructor(e = null) {
           super(),
-            x.prototype.categories || i.a(x.M()),
+            x.prototype.store_items || i.a(x.M()),
             o.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -21038,7 +21078,7 @@ var CLSTAMP = "7274481";
             x.sm_m ||
               (x.sm_m = {
                 proto: x,
-                fields: { categories: { n: 1, c: L, r: !0, q: !0 } },
+                fields: { store_items: { n: 1, c: a, r: !0, q: !0 } },
               }),
             x.sm_m
           );
@@ -21075,36 +21115,21 @@ var CLSTAMP = "7274481";
           return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetStoreCategories_Response";
+          return "CStoreBrowse_GetItems_Response";
         }
       }
       class L extends o {
         constructor(e = null) {
           super(),
-            L.prototype.categoryid || i.a(L.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            L.prototype.categories || i.a(L.M()),
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             L.sm_m ||
               (L.sm_m = {
                 proto: L,
-                fields: {
-                  categoryid: { n: 1, br: i.d.readUint32, bw: i.h.writeUint32 },
-                  type: { n: 2, br: i.d.readEnum, bw: i.h.writeEnum },
-                  internal_name: {
-                    n: 3,
-                    br: i.d.readString,
-                    bw: i.h.writeString,
-                  },
-                  display_name: {
-                    n: 4,
-                    br: i.d.readString,
-                    bw: i.h.writeString,
-                  },
-                  image_url: { n: 5, br: i.d.readString, bw: i.h.writeString },
-                  show_in_search: { n: 6, br: i.d.readBool, bw: i.h.writeBool },
-                },
+                fields: { categories: { n: 1, c: k, r: !0, q: !0 } },
               }),
             L.sm_m
           );
@@ -21141,26 +21166,92 @@ var CLSTAMP = "7274481";
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreBrowse_GetStoreCategories_Response";
+        }
+      }
+      class k extends o {
+        constructor(e = null) {
+          super(),
+            k.prototype.categoryid || i.a(k.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
+                fields: {
+                  categoryid: { n: 1, br: i.d.readUint32, bw: i.h.writeUint32 },
+                  type: { n: 2, br: i.d.readEnum, bw: i.h.writeEnum },
+                  internal_name: {
+                    n: 3,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  display_name: {
+                    n: 4,
+                    br: i.d.readString,
+                    bw: i.h.writeString,
+                  },
+                  image_url: { n: 5, br: i.d.readString, bw: i.h.writeString },
+                  show_in_search: { n: 6, br: i.d.readBool, bw: i.h.writeBool },
+                },
+              }),
+            k.sm_m
+          );
+        }
+        static MBF() {
+          return k.sm_mbf || (k.sm_mbf = i.e(k.M())), k.sm_mbf;
+        }
+        toObject(e = !1) {
+          return k.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.g(k.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.c(k.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            n = new k();
+          return k.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.b(k.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.f(k.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreBrowse_GetStoreCategories_Response_Category";
         }
       }
-      var k;
+      var N;
       !(function (e) {
         (e.GetItems = function (e, t) {
-          return e.SendMsg("StoreBrowse.GetItems#1", t, I, {
+          return e.SendMsg("StoreBrowse.GetItems#1", t, x, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
           (e.GetStoreCategories = function (e, t) {
-            return e.SendMsg("StoreBrowse.GetStoreCategories#1", t, x, {
+            return e.SendMsg("StoreBrowse.GetStoreCategories#1", t, L, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(k || (k = {}));
+      })(N || (N = {}));
     },
     sUmc: function (e, t, n) {
       "use strict";

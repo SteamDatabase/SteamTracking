@@ -2484,7 +2484,7 @@
           s.a.createElement(
             "div",
             { className: H.LatestUpdateIcon },
-            s.a.createElement(k.wb, null)
+            s.a.createElement(k.xb, null)
           ),
           s.a.createElement(
             D.e,

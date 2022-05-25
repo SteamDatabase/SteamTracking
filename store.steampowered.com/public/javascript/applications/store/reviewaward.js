@@ -904,8 +904,8 @@
             n.a.createElement(
               "div",
               { className: i.a.Throbber },
-              n.a.createElement(o.qb, { className: i.a.base }),
-              n.a.createElement(o.qb, { className: i.a.blur })
+              n.a.createElement(o.rb, { className: i.a.base }),
+              n.a.createElement(o.rb, { className: i.a.blur })
             )
           );
           return n.a.createElement(

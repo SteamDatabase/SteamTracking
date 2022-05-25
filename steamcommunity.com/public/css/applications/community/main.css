@@ -1423,7 +1423,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   bottom: -0.75px;
   left: 0;
   right: 0;
-  padding-bottom: 1.5px;
   height: 1.5px;
   background: #23262e;
 }
@@ -1619,6 +1618,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   background-color: #0e141b;
   border: 2px solid #23262e;
   padding: calc(12px + 1.4vw) 2.8vw;
+  min-height: initial;
   width: 660px;
   box-sizing: border-box;
   animation-name: gamepaddialog_slideInAnimation_2JseU;

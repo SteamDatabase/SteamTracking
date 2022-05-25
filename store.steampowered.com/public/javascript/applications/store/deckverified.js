@@ -24,14 +24,14 @@
           return g;
         });
       var o = i("mrSG"),
-        s = i("q1tI"),
-        n = i("i8i4"),
+        n = i("q1tI"),
+        s = i("i8i4"),
         a = i("kDGI"),
         l = i("SS8s"),
         r = i("thkD"),
         p = i("e356"),
         d = i("hCpY");
-      class c extends s.Component {
+      class c extends n.Component {
         constructor(e) {
           super(e), (this.state = { maximized: this.BIsMaximized() });
         }
@@ -65,20 +65,20 @@
           let i = "TitleBar title-area";
           return (
             this.props.className && (i = i + " " + this.props.className),
-            s.createElement(
+            n.createElement(
               "div",
               { className: i, style: this.props.style },
-              s.createElement("div", { className: "title-area-highlight" }),
-              s.createElement(
+              n.createElement("div", { className: "title-area-highlight" }),
+              n.createElement(
                 "div",
                 { className: "title-area-children" },
                 this.props.children
               ),
               !this.props.hideActions &&
-                s.createElement(
+                n.createElement(
                   "div",
                   { className: "title-bar-actions" },
-                  s.createElement(
+                  n.createElement(
                     "div",
                     {
                       className: "title-area-icon closeButton",
@@ -86,10 +86,10 @@
                         e && e.close();
                       },
                     },
-                    s.createElement(p.Eb, null)
+                    n.createElement(p.Fb, null)
                   ),
                   !this.props.hideMinMax &&
-                    s.createElement(
+                    n.createElement(
                       "div",
                       {
                         className: t,
@@ -97,11 +97,11 @@
                           e.SteamClient.Window.ToggleMaximize();
                         },
                       },
-                      this.state.maximized && s.createElement(p.bb, null),
-                      !this.state.maximized && s.createElement(p.Q, null)
+                      this.state.maximized && n.createElement(p.bb, null),
+                      !this.state.maximized && n.createElement(p.Q, null)
                     ),
                   !this.props.hideMinMax &&
-                    s.createElement(
+                    n.createElement(
                       "div",
                       {
                         className: "title-area-icon minimizeButton",
@@ -109,7 +109,7 @@
                           e.SteamClient.Window.Minimize();
                         },
                       },
-                      s.createElement(p.T, null)
+                      n.createElement(p.T, null)
                     )
                 )
             )
@@ -122,8 +122,8 @@
         m = i("/Q1a");
       function v(e, t, i) {
         return Object(o.a)(this, void 0, void 0, function* () {
-          const s = !0 === (null == i ? void 0 : i.bNeverPopOut),
-            a = !s && w(null, t),
+          const n = !0 === (null == i ? void 0 : i.bNeverPopOut),
+            a = !n && w(null, t),
             l =
               (null == i ? void 0 : i.bForcePopOut) &&
               (null == i ? void 0 : i.popupWidth) &&
@@ -137,15 +137,15 @@
                   (o.style.position = "absolute"),
                     (o.style.visibility = "hidden"),
                     t.document.body.appendChild(o),
-                    n.render(e, o),
+                    s.render(e, o),
                     yield i;
-                  let s = document;
-                  m.d.IN_LIBRARY && s.fonts && (yield s.fonts.ready);
+                  let n = document;
+                  m.d.IN_LIBRARY && n.fonts && (yield n.fonts.ready);
                   const a = o.getBoundingClientRect(),
                     l = Math.ceil(a.height),
                     r = Math.ceil(a.width);
                   return (
-                    n.unmountComponentAtNode(o),
+                    s.unmountComponentAtNode(o),
                     t.document.body.removeChild(o),
                     { height: l, width: r }
                   );
@@ -155,7 +155,7 @@
               r &&
               r.height / t.innerHeight < 0.9 &&
               r.width / t.innerWidth < 0.8;
-          if (s || (!(null == i ? void 0 : i.bForcePopOut) && p))
+          if (n || (!(null == i ? void 0 : i.bForcePopOut) && p))
             return g(e, t);
           const d = {
               strTitle:
@@ -193,7 +193,7 @@
           );
         });
       }
-      function g(e, t, i, o, n, a, l) {
+      function g(e, t, i, o, s, a, l) {
         let p, d;
         const c = e.props.closeModal,
           h = () => {
@@ -204,23 +204,26 @@
           u = () => {
             p && p.Close(), h();
           },
-          m = s.cloneElement(e, { closeModal: u });
-        if (w((l = l || Object(r.h)(t)), t) && o && i) {
+          v = n.cloneElement(e, { closeModal: u });
+        if (
+          (m.d.IN_GAMEPADUI && (t = window.parent),
+          w((l = l || Object(r.h)(t)), t) && o && i)
+        ) {
           if (o.bHideMainWindowForPopouts) {
-            const e = s.createElement(
+            const e = n.createElement(
               r.i,
               {
                 className: "Hidden",
-                onEscKeypress: !m.props.bDisableBackgroundDismiss && u,
+                onEscKeypress: !v.props.bDisableBackgroundDismiss && u,
               },
-              s.createElement("div", null)
+              n.createElement("div", null)
             );
             d = l.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, o), { fnOnClose: h }),
-            c = new f(t, i, e, m, n, a);
+            c = new f(t, i, e, v, s, a);
           c.Show(), (p = c);
-        } else p = l.ShowModal(m);
+        } else p = l.ShowModal(v);
         return p;
       }
       function w(e, t) {
@@ -229,29 +232,29 @@
         );
       }
       class f extends a.a {
-        constructor(e, t, i, o, s, n) {
+        constructor(e, t, i, o, n, s) {
           super(t, {
             title: i.strTitle,
             html_class: "client_chat_frame fullheight ModalDialogPopup",
             body_class: "fullheight ModalDialogBody",
             owner_window: void 0,
             replace_existing_popup: !0,
-            target_browser: s,
+            target_browser: n,
             availscreenwidth: e.screen.availWidth,
             availscreenheight: e.screen.availHeight,
           }),
             (this.m_windowOpener = e),
             (this.m_modalProps = i),
             (this.m_modalElement = o),
-            (this.m_options = n);
+            (this.m_options = s);
         }
         Update(e) {
           Object(h.a)(!1, "NYI");
         }
         UpdateParamsBeforeShow(e) {
           var t, i, o;
-          let s,
-            n,
+          let n,
+            s,
             a,
             l = this.m_modalProps.popupWidth || 500,
             r = this.m_modalProps.popupHeight || 400;
@@ -272,14 +275,14 @@
             a = this.m_windowOpener.SteamClient.Window.GetBrowserID();
           else {
             let e = this.m_windowOpener.screen;
-            (s = (e.availWidth - l) / 2), (n = (e.availHeight - r) / 2);
+            (n = (e.availWidth - l) / 2), (s = (e.availHeight - r) / 2);
             let t = e;
             void 0 !== t.availLeft &&
               void 0 !== t.availTop &&
-              ((s += t.availLeft), (n += t.availTop));
+              ((n += t.availLeft), (s += t.availTop));
           }
           return Object.assign(Object.assign({}, e), {
-            dimensions: { width: l, height: r, left: s, top: n },
+            dimensions: { width: l, height: r, left: n, top: s },
             window_opener_id: a,
           });
         }
@@ -299,17 +302,17 @@
                 "number" == typeof this.m_options.nDragAreaHeight
                   ? { height: this.m_options.nDragAreaHeight }
                   : void 0;
-            n.render(
-              s.createElement(
+            s.render(
+              n.createElement(
                 "div",
                 { className: "PopupFullWindow", onContextMenu: l.h },
-                s.createElement(c, {
+                n.createElement(c, {
                   hideMinMax: !0,
                   popup: e,
                   hideActions: i,
                   style: o,
                 }),
-                s.createElement(r.c, { ModalManager: Object(r.h)(e) }),
+                n.createElement(r.c, { ModalManager: Object(r.h)(e) }),
                 this.m_modalElement
               ),
               t
@@ -324,11 +327,11 @@
         return r;
       });
       var o = i("q1tI"),
-        s = i.n(o),
-        n = i("e356"),
+        n = i.n(o),
+        s = i("e356"),
         a = i("8aua"),
         l = i.n(a);
-      class r extends s.a.PureComponent {
+      class r extends n.a.PureComponent {
         constructor(e) {
           super(e);
         }
@@ -349,17 +352,17 @@
             void 0 === this.props.string && e.push(l.a.noString),
             this.props.className && e.push(this.props.className),
             this.props.static && e.push(l.a.Static);
-          let t = s.a.createElement(
+          let t = n.a.createElement(
             "div",
             { className: e.join(" ") },
-            s.a.createElement(
+            n.a.createElement(
               "div",
               { className: l.a.Throbber },
-              s.a.createElement(n.qb, { className: l.a.base }),
-              s.a.createElement(n.qb, { className: l.a.blur })
+              n.a.createElement(s.rb, { className: l.a.base }),
+              n.a.createElement(s.rb, { className: l.a.blur })
             )
           );
-          return s.a.createElement(
+          return n.a.createElement(
             "div",
             {
               className:
@@ -369,7 +372,7 @@
             },
             t,
             Boolean(this.props.string) &&
-              s.a.createElement(
+              n.a.createElement(
                 "div",
                 { className: l.a.ThrobberText },
                 this.props.string

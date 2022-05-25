@@ -50,7 +50,7 @@
               ? o.createElement(
                   E.a,
                   null,
-                  o.createElement(b.b, {
+                  o.createElement(b.c, {
                     eventModel: e,
                     bIsPreview: !0,
                     language: t,
@@ -459,7 +459,7 @@
           s.a.createElement(
             "div",
             { className: j.LatestUpdateIcon },
-            s.a.createElement(U.sb, null)
+            s.a.createElement(U.tb, null)
           ),
           s.a.createElement(
             g.e,

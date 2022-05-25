@@ -610,7 +610,7 @@
                         e && e.close();
                       },
                     },
-                    r.createElement(p.Eb, null)
+                    r.createElement(p.Fb, null)
                   ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -728,23 +728,26 @@
           u = () => {
             p && p.Close(), c();
           },
-          h = r.cloneElement(e, { closeModal: u });
-        if (b((a = a || Object(d.h)(t)), t) && n && s) {
+          g = r.cloneElement(e, { closeModal: u });
+        if (
+          (h.d.IN_GAMEPADUI && (t = window.parent),
+          b((a = a || Object(d.h)(t)), t) && n && s)
+        ) {
           if (n.bHideMainWindowForPopouts) {
             const e = r.createElement(
               d.i,
               {
                 className: "Hidden",
-                onEscKeypress: !h.props.bDisableBackgroundDismiss && u,
+                onEscKeypress: !g.props.bDisableBackgroundDismiss && u,
               },
               r.createElement("div", null)
             );
             l = a.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, n), { fnOnClose: c }),
-            m = new I(t, s, e, h, i, o);
+            m = new I(t, s, e, g, i, o);
           m.Show(), (p = m);
-        } else p = a.ShowModal(h);
+        } else p = a.ShowModal(g);
         return p;
       }
       function b(e, t) {

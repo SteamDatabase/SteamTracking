@@ -83,7 +83,7 @@
               ? i.createElement(
                   _.a,
                   null,
-                  i.createElement(h.b, {
+                  i.createElement(h.c, {
                     eventModel: e,
                     bIsPreview: !0,
                     language: t,

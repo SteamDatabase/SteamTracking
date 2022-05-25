@@ -67,7 +67,7 @@
         return r.a.createElement(
           o.a,
           { navID: "StoreSalePageRoot", NavigationManager: p },
-          r.a.createElement(m.b, {
+          r.a.createElement(m.c, {
             promotionName: t,
             language: a,
             eventModel: n,

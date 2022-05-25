@@ -84,7 +84,7 @@ function ChartPlot( chartDiv, chartLegend, chartKey, series ) {
 	}
 
 	function legendFormatter(label, series) {
-		return '<div style="color:' + series.color + '">' + series.data[ series.data.length - 1 ][1] + '%</div>';
+		return '<div style="color:' + series.color + '">' + series.data[ series.data.length - 1 ][1].toFixed( 2 ) + '%</div>';
 	};
 
 	jQuery.plot(div, series, {
