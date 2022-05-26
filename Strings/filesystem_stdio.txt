@@ -269,11 +269,10 @@ s_pSymbolTable
 0
 @
 @
-=
 K
-Ic
 =
 @
 =
 @
 =*.*
+Ic

@@ -110,7 +110,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-(
+0
 )
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
 7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
@@ -2285,7 +2285,6 @@ P
 
 =
 @
-2
 @
 @
 0

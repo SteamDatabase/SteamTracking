@@ -420,8 +420,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-May 20 2022
-19:20:39
+May 26 2022
+11:35:11
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1797,7 +1797,6 @@ _8t?4
 ([~~
 g&O5Vq
 NNo6
-gN@<$
 @kp!s
 Kf]cT#
 "d,7
@@ -1857,8 +1856,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220521022042Z0/
--4I7
+220526183513Z0/
+:B0h
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1866,36 +1865,33 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		RrjKtOEGIKkplUOxnR1Gj7ZRZfM=
+		z+KQm2uk5BcDX9lF3sbEIMjv80g=
 		</data>
 		<data>
-		xhyoQ8vMM7R3ju00jucv0EwPvgQ=
+		+SZ352iaFDHsHJ8KQX3Epc9EHiE=
 		</data>
 	</array>
 </dict>
 </plist>
-a?DW
--z-H{
-20220521022044Z0
+ZQo>
+[YM=
+3crO
+20220526183525Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220510164504Z
-220621164503Z0B1
-Timestamp Signer NWK21
+220510165502Z
+220621165501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-#0_6
-URw%
-cPKvE
-Z0!w
-UZzn$Fc
+zR20_
+]du4
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-^*EM
-tDP=K,2
+4Ly(w
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1934,13 +1930,15 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-|r0	
-220521022044Z0#
-aIv*
-)V3*
-U'A	
-azIJ
-QQmU
+220526183525Z0#
+N|x}
+YW&%
+=CYHq
+8LVSb8o
+sU:w
+/J(?~
+NRV	
+iYfn
 __TEXT
 __text
 __TEXT
@@ -2664,8 +2662,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-May 20 2022
-19:20:39
+May 26 2022
+11:35:11
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4012,6 +4010,7 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+)( d"
 q	2o
 zD"G
 @Ye'
@@ -4025,6 +4024,7 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+?8Rr
 6s,P
 2$-;
 N7Evs
@@ -4033,7 +4033,7 @@ C=r|
 !qL4
 0pQKP
 QQ^Z
-=j79^a
+1=j79^a
 e00;
 G+I&$
 R'1p
@@ -4092,9 +4092,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220521022042Z0/
-GdG	
-h/au
+220526183513Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4102,33 +4100,36 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		ZybwaC9hdRIdjbnVG/mr/DW11Ok=
+		6pCa4w0O1e3TEE8OkaOMyIbR4eI=
 		</data>
 		<data>
-		LZS+r/0Fgz3AM1qzXAe5RppdJrQ=
+		Y+0D+uAItLMc3O1jYDqn/N27YoI=
 		</data>
 	</array>
 </dict>
 </plist>
-JgVQ
-yZo<fqS
-h+/?
-20220521022044Z0
+F-d=mni
+6D/z
+20220526183525Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220510165502Z
-220621165501Z0B1
-Timestamp Signer NWK11
+220510164504Z
+220621164503Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-zR20_
-]du4
+#0_6
+URw%
+cPKvE
+Z0!w
+UZzn$Fc
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-4Ly(w
+^*EM
+tDP=K,2
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4167,11 +4168,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220521022044Z0#
-X]NI
-oQKk(
-vca}
-D	hqCAM/%aKpK
+|r0	
+220526183525Z0#
+aIv*
+c^W%
+AN/z
 __TEXT
 __text
 __TEXT
@@ -4392,8 +4393,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-May 20 2022
-19:20:39
+May 26 2022
+11:35:11
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5750,14 +5751,14 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+qsI]7
 ad`m
 SR=>w
 N]\"~
 : r4
 ld/`{
 a3z`!
-\s!rGX
-Ea+N
+aD	%
 2]Ct9
 3RZ/
 /4b&H
@@ -5821,9 +5822,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220521022042Z0/
- <,F
-f=X>0
+220526183513Z0/
+tIKx0[
+|5JW
+Ezj^N(l
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5831,37 +5833,31 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		OVy1Zfjrbm7BsUmt02WXDe34DpA=
+		fDVKV+e5L0D+MLYGsNcDkKbmfMQ=
 		</data>
 		<data>
-		7uYy1W+5sLkPzwh2Vi6t/3WoHdU=
+		fMwjQeafTl4Oc2TPVvGrb9jntmU=
 		</data>
 	</array>
 </dict>
 </plist>
-Rc^*
-g9>p
-gVQ5
-20220521022044Z0
+-baRm.
+20220526183525Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220510164504Z
-220621164503Z0B1
-Timestamp Signer NWK21
+220510165502Z
+220621165501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-#0_6
-URw%
-cPKvE
-Z0!w
-UZzn$Fc
+zR20_
+]du4
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-^*EM
-tDP=K,2
+4Ly(w
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5900,9 +5896,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-|r0	
-220521022044Z0#
-aIv*
-.&K:<
-;c$q5
-RU DI{e
+220526183525Z0#
+:8g:``n
+aLq/MC
+qYFc

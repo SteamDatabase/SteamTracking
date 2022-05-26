@@ -86,7 +86,6 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
->(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -3925,14 +3924,13 @@ M9e
 ?
 @
 @
-c
-1
 
 
 
 
 d
 A+M
+
 j
 j
 j
@@ -3976,6 +3974,7 @@ d
 &
 &
 d
+a
 0
 A+4$A+u
 ~m=
