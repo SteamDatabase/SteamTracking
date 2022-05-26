@@ -9,6 +9,11 @@
         Overlay: "qrlogin_Overlay_2VJKT",
         Box: "qrlogin_Box_2Lr2C",
         Column: "qrlogin_Column_2UEUT",
+        Loading: "qrlogin_Loading_3wHZW",
+        LoadAmin: "qrlogin_LoadAmin_1xU0q",
+        Small: "qrlogin_Small_2qsUN",
+        Medium: "qrlogin_Medium_1nypP",
+        Large: "qrlogin_Large_elAzl",
       };
     },
     OPJs: function (e, t, n) {
@@ -86,26 +91,26 @@
         o = n("q1tI"),
         r = n.n(o),
         i = n("tmER"),
-        c = n.n(i),
-        l = n("GbHM"),
-        s = n("OPJs"),
-        m = n.n(s);
+        l = n.n(i),
+        s = n("GbHM"),
+        c = n("OPJs"),
+        m = n.n(c);
       function u(e) {
-        let { quality: t, children: n, className: i, activeBitStyle: s } = e;
-        void 0 === t && (t = a.M), (s = s || {});
+        let { quality: t, children: n, className: i, activeBitStyle: c } = e;
+        void 0 === t && (t = a.M), (c = c || {});
         const u = (function (e, t = {}) {
           const { typeNumber: n, errorCorrectLevel: a } = t,
             [r, i] = Object(o.useState)();
           return (
             Object(o.useEffect)(() => {
-              i(c()(e, { typeNumber: n, errorCorrectLevel: a }).modules);
+              i(l()(e, { typeNumber: n, errorCorrectLevel: a }).modules);
             }, [e, n, a]),
             r
           );
         })(n, { typeNumber: 6, errorCorrectLevel: t });
         if (!u) return null;
-        const d = Object(l.a)(m.a.Bit),
-          g = Object(l.a)(m.a.Bit, m.a.Active),
+        const d = Object(s.a)(m.a.Bit),
+          g = Object(s.a)(m.a.Bit, m.a.Active),
           C = [];
         for (let e = 0; e < u.length; e++)
           for (let t = 0; t < u.length; t++) {
@@ -115,14 +120,14 @@
               r.a.createElement("div", {
                 key: `${e}_${t}`,
                 className: a,
-                style: n ? s : {},
+                style: n ? c : {},
               })
             );
           }
         return r.a.createElement(
           "div",
           {
-            className: Object(l.a)(m.a.QRBits, i),
+            className: Object(s.a)(m.a.QRBits, i),
             style: { gridTemplateColumns: `repeat( ${u.length}, 1fr )` },
           },
           C
@@ -145,9 +150,9 @@
         o = n("q1tI"),
         r = n.n(o),
         i = n("/Q1a"),
-        c = n("9XWO"),
-        l = n("GbHM"),
-        s = n("2vnA"),
+        l = n("9XWO"),
+        s = n("GbHM"),
+        c = n("2vnA"),
         m = n("MI3I"),
         u = (n("msu0"), n("aoTL")),
         d = n("hCpY"),
@@ -186,7 +191,7 @@
             try {
               const o = yield (function (e, t) {
                 return Object(a.a)(this, void 0, void 0, function* () {
-                  const n = c.b.Init(C.d);
+                  const n = l.b.Init(C.d);
                   n.Body().set_account_name(t);
                   try {
                     const t = yield C.a.GetPasswordRSAPublicKey(e, n);
@@ -225,29 +230,29 @@
                   2
                 );
               const r = Object(g.c)(t, o),
-                i = c.b.Init(C.b);
+                i = l.b.Init(C.b);
               i.Body().set_account_name(e),
                 i.Body().set_encrypted_password(r),
                 i.Body().set_encryption_timestamp(o.timestamp),
                 i.Body().set_remember_login(!!n),
                 i.Body().set_platform_type(this.m_ePlatformType);
-              const l = yield C.a.BeginAuthSessionViaCredentials(
+              const s = yield C.a.BeginAuthSessionViaCredentials(
                   this.m_transport,
                   i
                 ),
-                s = l.GetEResult();
-              if (1 !== s)
-                switch (s) {
+                c = s.GetEResult();
+              if (1 !== c)
+                switch (c) {
                   case 5:
-                    return (this.m_eStatus = 2), s;
+                    return (this.m_eStatus = 2), c;
                   default:
                     return (
                       console.error(
-                        `Failed to start auth session. Result: ${s}`
+                        `Failed to start auth session. Result: ${c}`
                       ),
                       (this.m_strErrorMessage = "Uh Oh"),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      s
+                      c
                     );
                 }
               this.m_strAccountName = e;
@@ -256,27 +261,27 @@
                 request_id: u,
                 interval: d,
                 allowed_confirmations: _,
-                steamid: b,
-              } = l.Body().toObject();
+                steamid: h,
+              } = s.Body().toObject();
               (this.m_msPollInterval = 1e3 * d),
                 (this.m_strClientID = m),
                 (this.m_rgRequestID = u),
-                (this.m_steamid = b);
-              const h = (function (e) {
+                (this.m_steamid = h);
+              const p = (function (e) {
                   let t = e[0] || 0;
                   e.length > 1 && (t = e.sort((e, t) => E[e] - E[t])[0]);
                   return t;
                 })(_.map(({ confirmation_type: e }) => e)),
-                p = _.find(({ confirmation_type: e }) => e === h);
+                b = _.find(({ confirmation_type: e }) => e === p);
               switch (
-                (p &&
-                  p.associated_message &&
+                (b &&
+                  b.associated_message &&
                   (this.m_strConfirmationAssociatedMessage =
-                    p.associated_message),
-                h)
+                    b.associated_message),
+                p)
               ) {
                 case 1:
-                  return (this.m_eStatus = 9), this.StartPolling(), s;
+                  return (this.m_eStatus = 9), this.StartPolling(), c;
                 case 2:
                   this.m_eStatus = 3;
                   break;
@@ -289,7 +294,7 @@
                 case 4:
                   (this.m_eStatus = 6), this.StartPolling(!1);
               }
-              return s;
+              return c;
             } catch (e) {
               return (
                 console.error(`Failed to start auth session. ${e}`),
@@ -316,7 +321,7 @@
           return Object(a.a)(this, void 0, void 0, function* () {
             try {
               const t = 3 === this.m_eStatus || 7 === this.m_eStatus,
-                n = c.b.Init(C.f);
+                n = l.b.Init(C.f);
               n.Body().set_client_id(this.m_strClientID),
                 n.Body().set_steamid(this.m_steamid),
                 n.Body().set_code(e),
@@ -403,19 +408,19 @@
           }
         }
       }
-      Object(a.b)([s.C], _.prototype, "m_eStatus", void 0),
+      Object(a.b)([c.C], _.prototype, "m_eStatus", void 0),
         Object(a.b)([d.b], _.prototype, "Start", null),
         Object(a.b)([d.b], _.prototype, "SendSteamGuardCode", null),
         Object(a.b)([d.b], _.prototype, "UseCodeOverride", null),
         Object(a.b)([d.b], _.prototype, "GoBack", null);
       const E = [4, 3, 2, 1, 0, 5].reduce((e, t, n) => ((e[t] = n), e), {});
-      function b(e) {
+      function h(e) {
         return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(e) && e.length <= 5;
       }
-      var h = n("SEa3"),
-        p = n("WTXQ"),
-        f = n.n(p),
-        S = (n("tmER"), n("k/Wh")),
+      var p = n("SEa3"),
+        b = n("WTXQ"),
+        f = n.n(b),
+        S = n("k/Wh"),
         v = n("Kd3+"),
         L = n.n(v);
       function w(e) {
@@ -423,20 +428,20 @@
             transport: t,
             onComplete: n,
             onStatusChange: a,
-            platform: c,
+            platform: l,
           } = e,
           {
-            eStatus: s,
+            eStatus: c,
             strChallengeURL: m,
             strError: u,
             reset: d,
-          } = Object(h.a)({ transport: t, onComplete: n, ePlatformType: c });
-        Object(o.useEffect)(() => a && a(s), [a, s]);
-        const g = 2 === s ? m : i.c.STORE_BASE_URL,
-          C = 0 === s || 1 === s,
-          _ = 4 === s,
-          E = 3 === s,
-          b = C || _ || E;
+          } = Object(p.a)({ transport: t, onComplete: n, ePlatformType: l });
+        Object(o.useEffect)(() => a && a(c), [a, c]);
+        const g = 2 === c ? m : i.c.STORE_BASE_URL,
+          C = 0 === c || 1 === c,
+          _ = 4 === c,
+          E = 3 === c,
+          h = C || _ || E;
         return r.a.createElement(
           "div",
           { className: L.a.Column },
@@ -447,20 +452,20 @@
               S.b,
               {
                 quality: y(g),
-                className: Object(l.a)(L.a.LoginQR, b && L.a.Blur),
+                className: Object(s.a)(L.a.LoginQR, h && L.a.Blur),
               },
               g
             ),
-            b &&
+            h &&
               r.a.createElement(
                 "div",
                 { className: L.a.Overlay },
                 r.a.createElement(
                   "div",
                   { className: L.a.Box },
-                  C && r.a.createElement(O, null),
-                  _ && r.a.createElement(N, null, u),
-                  E && r.a.createElement(A, null)
+                  C && r.a.createElement(O, { size: "small" }),
+                  _ && r.a.createElement(A, { reset: d }),
+                  E && r.a.createElement(k, null)
                 )
               )
           )
@@ -469,45 +474,97 @@
       function y(e) {
         return e.length <= 90 ? S.a.Q : void 0;
       }
-      function O() {
-        return r.a.createElement("div", null, "Loading...");
+      function O(e) {
+        const { size: t } = e;
+        return r.a.createElement("div", {
+          className: Object(s.a)(
+            L.a.Loading,
+            "small" == t && L.a.Small,
+            ("medium" == t || !t) && L.a.Medium,
+            "large" == t && L.a.Large
+          ),
+        });
       }
-      function N(e) {
+      function A(e) {
         return r.a.createElement(
-          "div",
-          { className: L.a.ErrorMessage },
-          e.children
+          "svg",
+          {
+            onClick: e.reset,
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            style: { width: "40px", height: "40px", cursor: "pointer" },
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          r.a.createElement("path", {
+            fill: "none",
+            stroke: "#fff",
+            strokeWidth: "30",
+            strokeLinecap: "round",
+            strokeMiterlimit: "10",
+            d: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
+          }),
+          r.a.createElement("polygon", {
+            points: "147.639,108.361 245.755,10.166 245.834,108.361",
+            fill: "#fff",
+          })
         );
       }
-      function A() {
-        return r.a.createElement("div", { className: L.a.Success }, "Success!");
+      function k() {
+        return r.a.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            style: { width: "45px", height: "45px" },
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          r.a.createElement("polyline", {
+            fill: "none",
+            stroke: "#fff",
+            strokeWidth: "24",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            points: "49.5,147.75 95,210.75 206.5,45.25 ",
+          })
+        );
       }
-      var M = n("GXif"),
-        j = n("kWcV");
+      var N = n("GXif"),
+        M = n("kWcV");
       n("vDqi");
-      const k = Object(o.createContext)(!1),
-        H = () => Object(o.useContext)(k);
-      function B(e) {
+      const j = Object(o.createContext)(!1),
+        x = () => Object(o.useContext)(j);
+      function H(e) {
         const { embedded: t } = e,
           n = Object(a.c)(e, ["embedded"]);
         return r.a.createElement(
-          k.Provider,
+          j.Provider,
           { value: t },
           r.a.createElement(
             "div",
             { className: f.a.Login },
-            r.a.createElement(F, Object.assign({}, n))
+            r.a.createElement(B, Object.assign({}, n))
           )
         );
       }
-      function F(e) {
+      function B(e) {
         const {
             transport: t,
             onSuccess: n,
             platform: a,
-            disableQR: c,
-            autoFocus: l,
-            renderSuccess: s = () => r.a.createElement(se, null),
+            disableQR: l,
+            autoFocus: s,
+            renderSuccess: c = () => r.a.createElement(ce, null),
           } = e,
           m = ({ bSuccess: e, strRefreshToken: t, strAccessToken: a }) => {
             e && n({ strRefreshToken: t, strAccessToken: a });
@@ -517,9 +574,9 @@
           strError: g,
           strConfirmationAssociatedMessage: C,
           strAccountName: E,
-          start: b,
-          reset: h,
-          addCode: p,
+          start: h,
+          reset: p,
+          addCode: b,
           goBack: S,
           useCodeOverride: v,
         } = (function (e) {
@@ -539,21 +596,21 @@
           }));
         })({ transport: t, onComplete: m, ePlatformType: a });
         const [L, y] = Object(o.useState)(0),
-          O = H(),
-          N = ({ strAccountName: e, strPassword: t }) => b(e, t);
+          O = x(),
+          A = ({ strAccountName: e, strPassword: t }) => h(e, t);
         if (!!(0 === d || 1 === d || 2 === d)) {
           const e = r.a.createElement(
             "div",
             { className: f.a.SideBySide },
-            r.a.createElement(I, { onSubmit: N, status: d, autoFocus: l }),
-            !c &&
+            r.a.createElement(F, { onSubmit: A, status: d, autoFocus: s }),
+            !l &&
               r.a.createElement(
                 "div",
                 { className: f.a.QRSection },
                 r.a.createElement(
-                  x,
+                  R,
                   { highlight: !0 },
-                  Object(M.g)("#Login_SignIn_OrWithQRCode")
+                  Object(N.g)("#Login_SignIn_OrWithQRCode")
                 ),
                 r.a.createElement(
                   "div",
@@ -568,7 +625,7 @@
                 r.a.createElement(
                   ee,
                   { href: `${i.c.STORE_BASE_URL}mobile`, align: "center" },
-                  Object(M.g)("#Login_GetMobileApp_Link")
+                  Object(N.g)("#Login_GetMobileApp_Link")
                 )
               )
           );
@@ -576,7 +633,7 @@
             ? r.a.createElement(
                 ne,
                 { gap: 18, className: f.a.EmbeddedRoot },
-                r.a.createElement(le, { className: f.a.HeaderLogo }),
+                r.a.createElement(se, { className: f.a.HeaderLogo }),
                 e,
                 r.a.createElement(
                   "div",
@@ -590,7 +647,7 @@
                         document.location.href
                       )}`,
                     },
-                    Object(M.g)("#Login_Help_SignIn")
+                    Object(N.g)("#Login_Help_SignIn")
                   ),
                   r.a.createElement(
                     "div",
@@ -598,23 +655,23 @@
                     r.a.createElement(
                       "span",
                       { className: f.a.AccountCreationPrompt },
-                      Object(M.g)("#Login_NoSteamAccount")
+                      Object(N.g)("#Login_NoSteamAccount")
                     ),
                     r.a.createElement(
                       ee,
                       { inline: !0, href: `${i.c.STORE_BASE_URL}join/` },
-                      Object(M.g)("#Login_CreateAccount")
+                      Object(N.g)("#Login_CreateAccount")
                     )
                   )
                 ),
                 !1
               )
             : r.a.createElement(
-                ce,
+                le,
                 {
                   title: O
-                    ? r.a.createElement(le, { className: f.a.HeaderLogo })
-                    : Object(M.g)("#Login_SignIn"),
+                    ? r.a.createElement(se, { className: f.a.HeaderLogo })
+                    : Object(N.g)("#Login_SignIn"),
                 },
                 e,
                 !1
@@ -623,15 +680,15 @@
         switch (d) {
           case 1:
           case 9:
-            return r.a.createElement(U, null);
+            return r.a.createElement(G, null);
           case 5:
           case 8:
           case 3:
           case 7:
             const e = 5 === d || 8 === d;
-            return r.a.createElement($, {
+            return r.a.createElement(Q, {
               type: e ? "mobile" : "email",
-              onSubmitCode: p,
+              onSubmitCode: b,
               status: d,
               associatedLabel: C,
               accountName: E,
@@ -646,64 +703,64 @@
               onUseCodeOverride: v,
             });
           case 12:
-            return r.a.createElement(Q, { reset: h });
+            return r.a.createElement(q, { reset: p });
           case 11:
-            return r.a.createElement(D, { reset: h });
+            return r.a.createElement(D, { reset: p });
           case 10:
-            return r.a.createElement(ce, { compact: !0 }, s());
+            return r.a.createElement(le, { compact: !0 }, c());
           default:
             return (
               console.error(`Unknown Phase: ${d}`),
-              r.a.createElement(D, { reset: h })
+              r.a.createElement(D, { reset: p })
             );
         }
       }
-      function I(e) {
+      function F(e) {
         const { onSubmit: t, status: n, autoFocus: a } = e,
-          [c, l] = Object(o.useState)(""),
-          [s, m] = Object(o.useState)(""),
+          [l, s] = Object(o.useState)(""),
+          [c, m] = Object(o.useState)(""),
           [u, d] = Object(o.useState)(!1),
           [g, C] = Object(o.useState)(!1),
-          _ = H(),
+          _ = x(),
           E = 2 === n && !g,
-          b = E
-            ? r.a.createElement(G, null, Object(M.g)("#Login_CheckCredentials"))
-            : r.a.createElement(G, null, " ");
+          h = E
+            ? r.a.createElement(U, null, Object(N.g)("#Login_CheckCredentials"))
+            : r.a.createElement(U, null, " ");
         return r.a.createElement(
           te,
           {
             onSubmit: () => {
               g &&
-                t({ strAccountName: c, strPassword: s, bRememberMe: u }).then(
+                t({ strAccountName: l, strPassword: c, bRememberMe: u }).then(
                   () => C(!1)
                 );
             },
             className: f.a.LoginForm,
           },
-          r.a.createElement(R, {
+          r.a.createElement(I, {
             tone: E ? "danger" : void 0,
             label: r.a.createElement(
-              x,
+              R,
               { highlight: !0 },
-              Object(M.g)("#Login_SignIn_WithAccountName")
+              Object(N.g)("#Login_SignIn_WithAccountName")
             ),
-            value: c,
+            value: l,
             onChange: (e) => {
-              C(!0), l(e);
+              C(!0), s(e);
             },
             autoFocus: a,
           }),
-          r.a.createElement(R, {
+          r.a.createElement(I, {
             tone: E ? "danger" : void 0,
-            label: r.a.createElement(x, null, Object(M.g)("#Login_Password")),
-            value: s,
+            label: r.a.createElement(R, null, Object(N.g)("#Login_Password")),
+            value: c,
             onChange: (e) => {
               C(!0), m(e);
             },
             type: "password",
           }),
           r.a.createElement(Z, null),
-          b,
+          h,
           !_ &&
             r.a.createElement(
               ee,
@@ -715,27 +772,27 @@
                 )}`,
                 align: "center",
               },
-              Object(M.g)("#Login_Help_SignIn")
+              Object(N.g)("#Login_Help_SignIn")
             )
         );
       }
-      function R(e) {
+      function I(e) {
         const { label: t, error: n, tone: o } = e,
           i = Object(a.c)(e, ["label", "error", "tone"]),
-          c = null != o ? o : n ? "danger" : void 0;
+          l = null != o ? o : n ? "danger" : void 0;
         return r.a.createElement(
           "div",
           { className: f.a.TextField },
-          "string" == typeof t ? r.a.createElement(x, null, t) : t,
+          "string" == typeof t ? r.a.createElement(R, null, t) : t,
           r.a.createElement(T, { type: "error" }, n),
-          r.a.createElement(V, Object.assign({ tone: c }, i))
+          r.a.createElement(V, Object.assign({ tone: l }, i))
         );
       }
-      function x(e) {
+      function R(e) {
         const { children: t, highlight: n } = e;
         return r.a.createElement(
           "div",
-          { className: Object(l.a)(f.a.FieldLabel, n && f.a.Highlight) },
+          { className: Object(s.a)(f.a.FieldLabel, n && f.a.Highlight) },
           t
         );
       }
@@ -746,14 +803,14 @@
           type: a = "text",
           tone: o,
           className: i,
-          autoFocus: c,
+          autoFocus: l,
         } = e;
         return r.a.createElement("input", {
           value: t,
           type: a,
-          autoFocus: c,
+          autoFocus: l,
           onChange: (e) => n(e.target.value),
-          className: Object(l.a)(
+          className: Object(s.a)(
             f.a.TextInput,
             "danger" === o && f.a.Danger,
             i
@@ -764,7 +821,7 @@
         const { children: t, type: n } = e;
         return r.a.createElement(
           "div",
-          { className: Object(l.a)(f.a.FieldHint, "error" === n && f.a.Error) },
+          { className: Object(s.a)(f.a.FieldHint, "error" === n && f.a.Error) },
           t
         );
       }
@@ -783,18 +840,18 @@
           n
         );
       }
-      function G(e) {
+      function U(e) {
         const t = e.children || " ";
         return r.a.createElement("div", { className: f.a.FormError }, t);
       }
-      function U() {
+      function G() {
         return r.a.createElement(
-          ce,
+          le,
           { compact: !0 },
           r.a.createElement(
             ne,
             { alignItems: "center" },
-            r.a.createElement(j.a, null)
+            r.a.createElement(M.a, null)
           )
         );
       }
@@ -807,7 +864,7 @@
           r.a.createElement("button", { onClick: t }, "Reset")
         );
       }
-      function Q(e) {
+      function q(e) {
         const { reset: t } = e;
         return r.a.createElement(
           r.a.Fragment,
@@ -816,35 +873,35 @@
           r.a.createElement("button", { onClick: t }, "Reset")
         );
       }
-      function $(e) {
+      function Q(e) {
         const {
             type: t,
             onSubmitCode: n,
             status: a,
-            accountName: c,
-            associatedLabel: l,
-            onBack: s,
+            accountName: l,
+            associatedLabel: s,
+            onBack: c,
           } = e,
           [m, u] = Object(o.useState)([]),
           [d, g] = Object(o.useState)(!1),
           C = m.join(""),
           _ = (function (e) {
-            return b(e) && 5 === e.length;
+            return h(e) && 5 === e.length;
           })(C),
           E = !d && (8 === a || 7 === a),
-          h = r.a.createElement(
+          p = r.a.createElement(
             ee,
             {
               href: `${i.c.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`,
               align: "center",
             },
-            Object(M.g)("#Login_Help_AccessMobileApp")
+            Object(N.g)("#Login_Help_AccessMobileApp")
           );
         return r.a.createElement(
-          ce,
+          le,
           {
-            title: Object(M.g)("#Login_Title_SteamGuard"),
-            bottom: h,
+            title: Object(N.g)("#Login_Title_SteamGuard"),
+            bottom: p,
             compact: !0,
           },
           r.a.createElement(
@@ -853,7 +910,7 @@
             r.a.createElement(
               ne,
               { alignItems: "center", gap: 20 },
-              r.a.createElement(J, { type: t, accountName: c }),
+              r.a.createElement(J, { type: t, accountName: l }),
               r.a.createElement(
                 ne,
                 { gap: 12, alignItems: "center" },
@@ -861,9 +918,9 @@
                   ne,
                   { alignItems: "center", gap: 2 },
                   r.a.createElement(
-                    G,
+                    U,
                     null,
-                    E && Object(M.g)("#Login_IncorrectSteamGuard")
+                    E && Object(N.g)("#Login_IncorrectSteamGuard")
                   ),
                   r.a.createElement(oe, {
                     value: m,
@@ -876,17 +933,17 @@
                 r.a.createElement(
                   P,
                   { disabled: !_ },
-                  Object(M.g)("#Button_Go")
+                  Object(N.g)("#Button_Go")
                 )
               ),
               "mobile" === t
-                ? r.a.createElement(q, null)
-                : r.a.createElement(W, { emailAddress: l })
+                ? r.a.createElement($, null)
+                : r.a.createElement(W, { emailAddress: s })
             )
           )
         );
       }
-      function q() {
+      function $() {
         return r.a.createElement(
           ae,
           {
@@ -897,9 +954,9 @@
           r.a.createElement(
             "div",
             { className: f.a.EnterCodeFromMobile },
-            Object(M.g)("#Login_EnterMobileCode")
+            Object(N.g)("#Login_EnterMobileCode")
           ),
-          r.a.createElement(X, { className: f.a.AwaitingMobileConfIcon })
+          r.a.createElement(z, { className: f.a.AwaitingMobileConfIcon })
         );
       }
       function W(e) {
@@ -916,7 +973,7 @@
             r.a.createElement(
               "div",
               { className: f.a.EnterCodeFromEmail },
-              Object(M.p)(
+              Object(N.p)(
                 "#Login_EnterEmailCode",
                 r.a.createElement(
                   "span",
@@ -926,23 +983,23 @@
               )
             )
           ),
-          r.a.createElement(z, { className: f.a.AwaitingMobileConfIcon })
+          r.a.createElement(X, { className: f.a.AwaitingMobileConfIcon })
         );
       }
       function J(e) {
         const { accountName: t, type: n } = e,
           a =
             "mobile" === n
-              ? Object(M.g)("#Login_MobileProtectingAccount")
-              : Object(M.g)("#Login_EmailProtectingAccount"),
-          o = H();
+              ? Object(N.g)("#Login_MobileProtectingAccount")
+              : Object(N.g)("#Login_EmailProtectingAccount"),
+          o = x();
         return r.a.createElement(
           "div",
           { className: f.a.ProtectingAccount },
           r.a.createElement(
             "div",
             { className: f.a.Label },
-            Object(M.p)(
+            Object(N.p)(
               "#Login_ActiveAccountName",
               r.a.createElement("span", { className: f.a.AccountName }, t)
             )
@@ -957,12 +1014,12 @@
           r.a.createElement(
             "div",
             { className: f.a.AwaitingMobileConfText },
-            Object(M.g)("#Login_AwaitingMobileConfirmation")
+            Object(N.g)("#Login_AwaitingMobileConfirmation")
           ),
-          r.a.createElement(X, { className: f.a.AwaitingMobileConfIcon })
+          r.a.createElement(z, { className: f.a.AwaitingMobileConfIcon })
         );
       }
-      function X(e) {
+      function z(e) {
         return r.a.createElement(
           "svg",
           { viewBox: "0 0 55 49", fill: "none", className: e.className },
@@ -972,7 +1029,7 @@
           })
         );
       }
-      function z(e) {
+      function X(e) {
         return r.a.createElement(
           "svg",
           { viewBox: "0 0 58 56", fill: "none", className: e.className },
@@ -984,27 +1041,27 @@
       }
       function Y(e) {
         const { type: t, accountName: n, onUseCodeOverride: a } = e,
-          o = H(),
+          o = x(),
           i = r.a.createElement(
             ee,
             { align: "center", onClick: () => alert("TODO") },
-            Object(M.g)("#Login_Help_AccessMobileApp")
+            Object(N.g)("#Login_Help_AccessMobileApp")
           ),
-          c = o
+          l = o
             ? r.a.createElement(
                 ee,
                 { align: "center", onClick: a },
-                Object(M.g)("#Login_EnterCodeInstead")
+                Object(N.g)("#Login_EnterCodeInstead")
               )
             : r.a.createElement(
                 "div",
                 { onClick: a, className: f.a.EnterCodeInsteadLink },
-                Object(M.g)("#Login_EnterCodeInstead")
+                Object(N.g)("#Login_EnterCodeInstead")
               );
         return r.a.createElement(
-          ce,
+          le,
           {
-            title: Object(M.g)("#Login_Title_SteamGuard"),
+            title: Object(N.g)("#Login_Title_SteamGuard"),
             bottom: i,
             compact: !0,
           },
@@ -1013,13 +1070,13 @@
             { gap: 20 },
             r.a.createElement(J, { type: t, accountName: n }),
             r.a.createElement(K, null),
-            c
+            l
           )
         );
       }
       function ee(e) {
         const { children: t, align: n, inline: a } = e,
-          o = Object(l.a)(f.a.TextLink, "center" === n && f.a.TextAlignCenter);
+          o = Object(s.a)(f.a.TextLink, "center" === n && f.a.TextAlignCenter);
         if ("href" in e)
           return r.a.createElement("a", { className: o, href: e.href }, t);
         {
@@ -1043,14 +1100,14 @@
             className: o,
             children: i,
           } = e,
-          c = Object(l.a)(
+          l = Object(s.a)(
             f.a.FlexCol,
             "center" === t && f.a.AlignItemsCenter,
             "center" === n && f.a.JustifyContentCenter,
             o
           ),
-          s = a ? { gap: "number" == typeof a ? `${a}px` : a } : void 0;
-        return r.a.createElement("div", { className: c, style: s }, i);
+          c = a ? { gap: "number" == typeof a ? `${a}px` : a } : void 0;
+        return r.a.createElement("div", { className: l, style: c }, i);
       }
       function ae(e) {
         const {
@@ -1073,24 +1130,24 @@
           length: 5,
           value: t,
           onChange: (e) => {
-            b((e = e.map((e) => e.toUpperCase())).join("").trim()) && n(e);
+            h((e = e.map((e) => e.toUpperCase())).join("").trim()) && n(e);
           },
           tone: a,
           autoFocus: !0,
         });
       }
       function re(e) {
-        const { length: t, value: n, onChange: a, tone: i, autoFocus: c } = e,
-          s = Object(o.useRef)([]),
-          m = () => a(s.current.map((e) => e.value)),
+        const { length: t, value: n, onChange: a, tone: i, autoFocus: l } = e,
+          c = Object(o.useRef)([]),
+          m = () => a(c.current.map((e) => e.value)),
           u = (e) => {
             const t = e.target.nextElementSibling;
             e.target.value && t && t.focus(), m();
           },
           d = (e) => {
             var t;
-            -1 === s.current.findIndex((e) => !!e.value)
-              ? null === (t = s.current[0]) || void 0 === t || t.select()
+            -1 === c.current.findIndex((e) => !!e.value)
+              ? null === (t = c.current[0]) || void 0 === t || t.select()
               : e.target.select();
           },
           g = (e) => {
@@ -1129,7 +1186,7 @@
               type: "text",
               maxLength: 1,
               key: e,
-              ref: (t) => (s.current[e] = t),
+              ref: (t) => (c.current[e] = t),
               onChange: u,
               onFocus: d,
               onClick: (e) => e.stopPropagation(),
@@ -1137,19 +1194,19 @@
               onPaste: C,
               value: n[e] ? n[e][0] : "",
               autoComplete: "none",
-              autoFocus: 0 === e && c,
+              autoFocus: 0 === e && l,
             })
           );
         return r.a.createElement(
           "div",
           {
-            className: Object(l.a)(
+            className: Object(s.a)(
               f.a.SegmentedCharacterInput,
               "danger" === i && f.a.Danger
             ),
             onClick: () => {
-              const e = s.current.find((e) => !e.value);
-              e ? e.focus() : s.current[s.current.length - 1].focus();
+              const e = c.current.find((e) => !e.value);
+              e ? e.focus() : c.current[c.current.length - 1].focus();
             },
           },
           _
@@ -1171,14 +1228,14 @@
           ).filter(Boolean)
         );
       }
-      function ce(e) {
+      function le(e) {
         const { title: t, children: n, bottom: a, compact: o } = e,
-          i = H();
+          i = x();
         return r.a.createElement(
           ne,
           {
             gap: 18,
-            className: Object(l.a)(
+            className: Object(s.a)(
               f.a.StandardLayout,
               i && f.a.Embedded,
               o && f.a.Compact
@@ -1191,7 +1248,7 @@
           a
         );
       }
-      function le(e) {
+      function se(e) {
         return r.a.createElement(
           "svg",
           {
@@ -1238,11 +1295,11 @@
           })
         );
       }
-      function se() {
+      function ce() {
         return r.a.createElement(
           ne,
           { alignItems: "center", justifyContent: "center" },
-          r.a.createElement(j.a, null)
+          r.a.createElement(M.a, null)
         );
       }
       n("9l+M");
@@ -1254,7 +1311,7 @@
       function de(e) {
         const [t, n] = Object(o.useState)(!0);
         return t
-          ? r.a.createElement(B, {
+          ? r.a.createElement(H, {
               transport: new me.a(i.c.WEBAPI_BASE_URL).GetServiceTransport(),
               onSuccess: ue,
               platform: 1,

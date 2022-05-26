@@ -439,9 +439,9 @@
             case 5 /* k_Lang_Spanish */:
               return "es";
             case 6 /* k_Lang_Simplified_Chinese */:
-              return "zn-cn";
+              return "zh-cn";
             case 7 /* k_Lang_Traditional_Chinese */:
-              return "zn-tw";
+              return "zh-tw";
             case 8 /* k_Lang_Russian */:
               return "ru";
             case 9 /* k_Lang_Thai */:
@@ -8391,6 +8391,8 @@
               case 20:
                 return "k_EControllerSourceMode_Disabled";
               case 21:
+                return "k_EControllerSourceMode_Reference";
+              case 22:
                 return "k_EControllerSourceMode_Count";
             }
           }
@@ -9320,6 +9322,10 @@
               case 128:
                 return "k_EControllerSettingRotationOld";
               case 129:
+                return "k_EControllerSettingReferencedMode";
+              case 130:
+                return "k_EControllerSettingVirtualMenuCenterBound";
+              case 131:
                 return "k_EControllerSettingCount";
             }
           }
@@ -13617,7 +13623,7 @@
       /*!***************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/ui/shared_svg_library.tsx ***!
   \***************************************************************************************************/
-      /*! exports provided: Hyperlink, InviteFriend, Settings, ChatNotification, ChatSettings, CopyToClipboard, DownArrowContextMenu, ExpanderArrow, MagnifyingGlass, Clock, Microphone, MicrophoneGamepadUI, Emoticon, Submit, TextChat, LanguageOptions, ResizeIcon, Popout, X, X_Line, Plus, VoiceRoom, ExitIcon, TextRoom, Headphones, HeadphonesGamepadUI, IncomingVoiceCall, OutgoingVoiceCall, VoiceCallOnHold, Group, RecentChats, ScratchPad, Pin, PlusCircle, AddFriend, FriendRequest, Invite, Paperclip, MultiPlayer, Volume, ChatListView, NewChatGroup, NewChatGroupGamepadUI, Crown, VideoPlay, Play, PlayCircle, Pause, SortBy, RecentClock, Notification, Check, Calendar, Chart, DialogCheck, Caution, Upgrade, Lock, ThrobberInner, Video, Image, Bell, Toast, Arrow, ArrowGamepadUI, CutArrow, DoubleArrow, TextButtonDoubleArrow, Maximize, Minimize, Restore, Undo, SingleWindowToggle, Reload, Trade, Trash, TrashCan, Scroll, FlatArrow, FriendIcon, FavoriteFriends, User, DoNotDisturb, MediaControls, SteamTV, SteamLogo, Viewers, ChatBubble, Globe, SmallX, STVTimelineGrabber, STVTimelineMarker, HideShowChat, ShowBothChats, BigPicture, MobilePhone, VR, LargeMobilePhone, Envelope, Rules, Schedule, Info, Facebook, Twitter, Instagram, Discord, YouTube, TwitchTV, CSGO, ClosedCaption, Hidden, Star, CornerRibbon, Download, Installed, Library, Achievement, PlayTime, Filter, Home, ProgressCircle, ReadyToPlay, Edit, Information, Flag, Sliders, DynamicCollection, SmallMediumLarge, SketchArrowTopLeft, Reviews, Patch, AppleLogo, LinuxLogo, LinuxLogo2, WindowsLogo, AdvancedSearch, SteamLogo_Piston, MenuMoreDots, MenuMoreDotsVertical, Invalid, NavArrow, Bookmark, Collapse, Expand, ExternalLink, Help, Person, Flair, CommentThread, DeleteUserNews, ThumbsUpUserNews, ThumbsUp, ReviewHelp, WriteReview, Update, Burger, PartyPopper, Snowball, EmoticonBow, ChatSticker, Coupon, ChatEmoticon, ChatEffect, Effect, Backgrounds, Avatar, Profile, Badge, TimeWarning, RewardsIcon, TopOfQueue, AwardIcon, LoyaltyCoinIcon, RSS, Wishlist, BroadcastModerator, BroadcastContributor, BroadcastBroadcaster, BroadcastAdminOfficer, Share, StoryWidgetBookmarkPage, SteamDeckCompatLogo, SteamDeckCompatVerified, SteamDeckCompatPlayable, SteamDeckCompatUnsupported, SteamDeckCompatUnknown, LeaveVoiceChat */
+      /*! exports provided: Hyperlink, InviteFriend, Settings, ChatNotification, ChatSettings, CopyToClipboard, DownArrowContextMenu, ExpanderArrow, MagnifyingGlass, Clock, Microphone, MicrophoneGamepadUI, Emoticon, Submit, TextChat, LanguageOptions, ResizeIcon, Popout, X, X_Line, Plus, VoiceRoom, ExitIcon, TextRoom, Headphones, HeadphonesGamepadUI, IncomingVoiceCall, OutgoingVoiceCall, VoiceCallOnHold, Group, RecentChats, ScratchPad, Pin, PlusCircle, AddFriend, FriendRequest, Invite, Paperclip, MultiPlayer, Volume, ChatListView, NewChatGroup, NewChatGroupGamepadUI, Crown, VideoPlay, Play, PlayCircle, Pause, SortBy, RecentClock, Notification, Check, Calendar, Chart, DialogCheck, Caution, Upgrade, Lock, ThrobberInner, Video, Image, Bell, Toast, Arrow, ArrowGamepadUI, CutArrow, DoubleArrow, ThickChevron, TextButtonDoubleArrow, Maximize, Minimize, Restore, Undo, SingleWindowToggle, Reload, Trade, Trash, TrashCan, Scroll, FlatArrow, FriendIcon, FavoriteFriends, User, DoNotDisturb, MediaControls, SteamTV, SteamLogo, Viewers, ChatBubble, Globe, SmallX, STVTimelineGrabber, STVTimelineMarker, HideShowChat, ShowBothChats, BigPicture, MobilePhone, VR, LargeMobilePhone, Envelope, Rules, Schedule, Info, Facebook, Twitter, Instagram, Discord, YouTube, TwitchTV, CSGO, ClosedCaption, Hidden, Star, CornerRibbon, Download, Installed, Library, Achievement, PlayTime, Filter, Home, ProgressCircle, ReadyToPlay, Edit, Information, Flag, Sliders, DynamicCollection, SmallMediumLarge, SketchArrowTopLeft, Reviews, Patch, AppleLogo, LinuxLogo, LinuxLogo2, WindowsLogo, AdvancedSearch, SteamLogo_Piston, MenuMoreDots, MenuMoreDotsVertical, Invalid, NavArrow, Bookmark, Collapse, Expand, ExternalLink, Help, Person, Flair, CommentThread, DeleteUserNews, ThumbsUpUserNews, ThumbsUp, ReviewHelp, WriteReview, Update, Burger, PartyPopper, Snowball, EmoticonBow, ChatSticker, Coupon, ChatEmoticon, ChatEffect, Effect, Backgrounds, Avatar, Profile, Badge, TimeWarning, RewardsIcon, TopOfQueue, AwardIcon, LoyaltyCoinIcon, RSS, Wishlist, BroadcastModerator, BroadcastContributor, BroadcastBroadcaster, BroadcastAdminOfficer, Share, StoryWidgetBookmarkPage, SteamDeckCompatLogo, SteamDeckCompatVerified, SteamDeckCompatPlayable, SteamDeckCompatUnsupported, SteamDeckCompatUnknown, LeaveVoiceChat */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -14088,6 +14094,13 @@
           "DoubleArrow",
           function () {
             return DoubleArrow;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ThickChevron",
+          function () {
+            return ThickChevron;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -18070,6 +18083,31 @@
                 strokeMiterlimit: "10",
                 points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
               })
+          );
+        }
+        function ThickChevron(props) {
+          const { angle } = props,
+            svgProps = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__rest"])(
+              props,
+              ["angle"]
+            );
+          return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](
+            "svg",
+            Object.assign(
+              {
+                style: { transform: `rotate(${props.angle}deg)` },
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 32 32",
+                fill: "none",
+              },
+              svgProps
+            ),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
+            })
           );
         }
         function TextButtonDoubleArrow() {

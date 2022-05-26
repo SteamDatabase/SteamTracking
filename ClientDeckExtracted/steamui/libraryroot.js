@@ -186,7 +186,7 @@
               r.createElement(
                 "div",
                 { onClick: this.props.onClick },
-                r.createElement(k.Ob, null)
+                r.createElement(k.Pb, null)
               ),
             r.createElement("div", { className: G.a.FiltertagSpacer })
           );
@@ -276,7 +276,7 @@
               "div",
               { className: G.a.SearchInput },
               t &&
-                r.createElement(R.R, {
+                r.createElement(R.Q, {
                   ref: this.m_searchInputRef,
                   placeholder: Object(B.g)("#FilterEdit_SearchPrompt"),
                   value: e,
@@ -298,7 +298,7 @@
                       className: G.a.SearchFilterInputClear,
                       onClick: v.a.ExitSearch,
                     },
-                    r.createElement(k.Ob, null)
+                    r.createElement(k.Pb, null)
                   )
                 )
             ),
@@ -629,7 +629,7 @@
                     i.a.createElement(
                       "div",
                       { onClick: () => t(n, e.internalRemovedList) },
-                      i.a.createElement(k.Ob, null)
+                      i.a.createElement(k.Pb, null)
                     ),
                   i.a.createElement("div", { className: G.a.FiltertagSpacer })
                 )
@@ -935,7 +935,7 @@
           return i.a.createElement(
             i.a.Fragment,
             null,
-            i.a.createElement(R.R, {
+            i.a.createElement(R.Q, {
               className: ae.a.CollectionName,
               value: this.m_strCollectionName,
               onKeyDown: this.OnKeyPressed,
@@ -2458,7 +2458,7 @@
                       Object(B.g)("#MajorUpdate_Context_WhyAmISeeingThis_Text")
                     ),
                     r.createElement(
-                      R.cb,
+                      R.bb,
                       {
                         className: pt.a.UpdateButton,
                         onClick: this.HideExplanationDialog,
@@ -2791,7 +2791,7 @@
                   onSubmit: this.onSubmit,
                 },
                 r.createElement(
-                  R.V,
+                  R.U,
                   {
                     className: Object(N.a)(
                       bt.a.WhatsNewHeaderText,
@@ -2801,7 +2801,7 @@
                   Object(B.g)("#WhatsNewFeatureExplainer")
                 ),
                 r.createElement(
-                  R.V,
+                  R.U,
                   {
                     className: Object(N.a)(
                       bt.a.WhatsNewHeaderText,
@@ -2811,11 +2811,11 @@
                   Object(B.g)("#WhatsNewFeatureExplainer2")
                 ),
                 r.createElement(
-                  R.V,
+                  R.U,
                   null,
                   Object(B.g)("#WhatsNewVisibilitySettings")
                 ),
-                r.createElement(R.jb, {
+                r.createElement(R.ib, {
                   useToggleRail: !0,
                   onChange: (e) => {
                     this.OnShowOnlyProductUpdatesToggle(e);
@@ -2840,7 +2840,7 @@
                   )
                 ),
                 r.createElement(
-                  R.V,
+                  R.U,
                   null,
                   Object(B.g)("#WhatsNewPrioritySettings")
                 ),
@@ -2887,7 +2887,7 @@
                                   it.a.ResetUserAppPriorityForApp(e.appid);
                                 },
                               },
-                              r.createElement(k.Ob, null)
+                              r.createElement(k.Pb, null)
                             )
                           )
                         )
@@ -2947,7 +2947,7 @@
                                   it.a.ResetUserAppPriorityForApp(e.appid);
                                 },
                               },
-                              r.createElement(k.Ob, null)
+                              r.createElement(k.Pb, null)
                             )
                           )
                         )
@@ -3204,7 +3204,7 @@
                   "div",
                   { className: Ot.a.ButtonContainer },
                   r.createElement(
-                    R.cb,
+                    R.bb,
                     {
                       className: Ot.a.TopButton,
                       onClick: () => Re.c.NavigateToSteamURL("StoreFreeToPlay"),
@@ -3212,7 +3212,7 @@
                     Object(B.g)("#Library_Recent_NoRecentGames_FreeToPlay")
                   ),
                   r.createElement(
-                    R.cb,
+                    R.bb,
                     {
                       className: Ot.a.TopButton,
                       onClick: () => Re.c.NavigateToSteamURL("StoreSpecials"),
@@ -3220,7 +3220,7 @@
                     Object(B.g)("#Library_Recent_NoRecentGames_GamesOnSale")
                   ),
                   r.createElement(
-                    R.cb,
+                    R.bb,
                     {
                       className: Ot.a.TopButton,
                       onClick: () => Re.c.NavigateToSteamURL("StoreExploreNew"),
@@ -4012,7 +4012,7 @@
                       e.preventDefault(), e.stopPropagation();
                     },
                   },
-                  r.createElement(k.Db, null)
+                  r.createElement(k.Eb, null)
                 )
             )
           );
@@ -4601,7 +4601,7 @@
               "div",
               { className: $t.a.DoneReorderingRow },
               r.createElement(
-                R.cb,
+                R.bb,
                 {
                   className: Object(N.a)($t.a.DoneReordering),
                   onClick: this.OnDoneReordering,
@@ -6360,7 +6360,7 @@
             r.createElement("div", { className: Wa.BetaText }, "BETA")
           ),
           r.createElement(
-            R.gb,
+            R.fb,
             null,
             r.createElement(
               "div",

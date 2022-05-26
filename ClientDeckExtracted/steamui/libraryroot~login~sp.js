@@ -628,6 +628,17 @@
                     bw: n.h.writeString,
                   },
                   version: { n: 8, br: n.d.readInt32, bw: n.h.writeInt32 },
+                  login_history: { n: 9, br: n.d.readEnum, bw: n.h.writeEnum },
+                  requestor_location_mismatch: {
+                    n: 10,
+                    br: n.d.readBool,
+                    bw: n.h.writeBool,
+                  },
+                  high_usage_login: {
+                    n: 11,
+                    br: n.d.readBool,
+                    bw: n.h.writeBool,
+                  },
                 },
               }),
             p.sm_m
@@ -916,10 +927,64 @@
           return "CAuthentication_AccessToken_GenerateForApp_Response";
         }
       }
+      class w extends s {
+        constructor(t = null) {
+          super(),
+            w.prototype.nonce || n.a(w.M()),
+            s.initialize(this, t, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
+                fields: {
+                  nonce: { n: 1, br: n.d.readString, bw: n.h.writeString },
+                  expiry: { n: 2, br: n.d.readUint32, bw: n.h.writeUint32 },
+                },
+              }),
+            w.sm_m
+          );
+        }
+        static MBF() {
+          return w.sm_mbf || (w.sm_mbf = n.e(w.M())), w.sm_mbf;
+        }
+        toObject(t = !1) {
+          return w.toObject(t, this);
+        }
+        static toObject(t, e) {
+          return n.g(w.M(), t, e);
+        }
+        static fromObject(t) {
+          return n.c(w.M(), t);
+        }
+        static deserializeBinary(t) {
+          let e = new i.BinaryReader(t),
+            r = new w();
+          return w.deserializeBinaryFromReader(r, e);
+        }
+        static deserializeBinaryFromReader(t, e) {
+          return n.b(w.MBF(), t, e);
+        }
+        serializeBinary() {
+          var t = new i.BinaryWriter();
+          return w.serializeBinaryToWriter(this, t), t.getResultBuffer();
+        }
+        static serializeBinaryToWriter(t, e) {
+          n.f(w.M(), t, e);
+        }
+        serializeBase64String() {
+          var t = new i.BinaryWriter();
+          return w.serializeBinaryToWriter(this, t), t.getResultBase64String();
+        }
+        getClassName() {
+          return "CCloudGaming_CreateNonce_Response";
+        }
+      }
       class S extends s {
         constructor(t = null) {
           super(),
-            S.prototype.nonce || n.a(S.M()),
+            S.prototype.appid || n.a(S.M()),
             s.initialize(this, t, 0, -1, void 0, null);
         }
         static M() {
@@ -928,8 +993,12 @@
               (S.sm_m = {
                 proto: S,
                 fields: {
-                  nonce: { n: 1, br: n.d.readString, bw: n.h.writeString },
-                  expiry: { n: 2, br: n.d.readUint32, bw: n.h.writeUint32 },
+                  appid: { n: 1, br: n.d.readUint32, bw: n.h.writeUint32 },
+                  minutes_remaining: {
+                    n: 2,
+                    br: n.d.readUint32,
+                    bw: n.h.writeUint32,
+                  },
                 },
               }),
             S.sm_m
@@ -967,28 +1036,21 @@
           return S.serializeBinaryToWriter(this, t), t.getResultBase64String();
         }
         getClassName() {
-          return "CCloudGaming_CreateNonce_Response";
+          return "CCloudGaming_TimeRemaining";
         }
       }
       class v extends s {
         constructor(t = null) {
           super(),
-            v.prototype.appid || n.a(v.M()),
-            s.initialize(this, t, 0, -1, void 0, null);
+            v.prototype.entries || n.a(v.M()),
+            s.initialize(this, t, 0, -1, [2], null);
         }
         static M() {
           return (
             v.sm_m ||
               (v.sm_m = {
                 proto: v,
-                fields: {
-                  appid: { n: 1, br: n.d.readUint32, bw: n.h.writeUint32 },
-                  minutes_remaining: {
-                    n: 2,
-                    br: n.d.readUint32,
-                    bw: n.h.writeUint32,
-                  },
-                },
+                fields: { entries: { n: 2, c: S, r: !0, q: !0 } },
               }),
             v.sm_m
           );
@@ -1025,57 +1087,6 @@
           return v.serializeBinaryToWriter(this, t), t.getResultBase64String();
         }
         getClassName() {
-          return "CCloudGaming_TimeRemaining";
-        }
-      }
-      class w extends s {
-        constructor(t = null) {
-          super(),
-            w.prototype.entries || n.a(w.M()),
-            s.initialize(this, t, 0, -1, [2], null);
-        }
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: { entries: { n: 2, c: v, r: !0, q: !0 } },
-              }),
-            w.sm_m
-          );
-        }
-        static MBF() {
-          return w.sm_mbf || (w.sm_mbf = n.e(w.M())), w.sm_mbf;
-        }
-        toObject(t = !1) {
-          return w.toObject(t, this);
-        }
-        static toObject(t, e) {
-          return n.g(w.M(), t, e);
-        }
-        static fromObject(t) {
-          return n.c(w.M(), t);
-        }
-        static deserializeBinary(t) {
-          let e = new i.BinaryReader(t),
-            r = new w();
-          return w.deserializeBinaryFromReader(r, e);
-        }
-        static deserializeBinaryFromReader(t, e) {
-          return n.b(w.MBF(), t, e);
-        }
-        serializeBinary() {
-          var t = new i.BinaryWriter();
-          return w.serializeBinaryToWriter(this, t), t.getResultBuffer();
-        }
-        static serializeBinaryToWriter(t, e) {
-          n.f(w.M(), t, e);
-        }
-        serializeBase64String() {
-          var t = new i.BinaryWriter();
-          return w.serializeBinaryToWriter(this, t), t.getResultBase64String();
-        }
-        getClassName() {
           return "CCloudGaming_GetTimeRemaining_Response";
         }
       }
@@ -1110,8 +1121,7 @@
           }),
           (t.GetAuthSessionInfo = function (t, e) {
             return t.SendMsg("Authentication.GetAuthSessionInfo#1", e, p, {
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
+              ePrivilege: 1,
             });
           }),
           (t.UpdateAuthSessionWithMobileConfirmation = function (t, e) {
@@ -1119,7 +1129,7 @@
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
               e,
               y,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { ePrivilege: 1 }
             );
           }),
           (t.UpdateAuthSessionWithSteamGuardCode = function (t, e) {
@@ -1149,13 +1159,13 @@
       })(T || (T = {})),
         (function (t) {
           (t.CreateNonce = function (t, e) {
-            return t.SendMsg("CloudGaming.CreateNonce#1", e, S, {
+            return t.SendMsg("CloudGaming.CreateNonce#1", e, w, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
             (t.GetTimeRemaining = function (t, e) {
-              return t.SendMsg("CloudGaming.GetTimeRemaining#1", e, w, {
+              return t.SendMsg("CloudGaming.GetTimeRemaining#1", e, v, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
@@ -1543,11 +1553,11 @@
         for (var e = 0; 0 != t; ) (t &= t - 1), ++e;
         return e;
       }
-      function S() {}
-      function v(t) {
+      function w() {}
+      function S(t) {
         return t;
       }
-      function w(t) {
+      function v(t) {
         (this.r2 = s()),
           (this.q3 = s()),
           n.ONE.dlShiftTo(2 * t.t, this.r2),
@@ -1770,12 +1780,12 @@
               )
                 a[a.t++] = 0;
               for (; --B >= 0; ) {
-                var S =
+                var w =
                   r[--g] == m
                     ? this.DM
                     : Math.floor(r[g] * p + (r[g - 1] + y) * b);
-                if ((r[g] += a.am(0, S, r, B, 0, l)) < S)
-                  for (a.dlShiftTo(B, _), r.subTo(_, r); r[g] < --S; )
+                if ((r[g] += a.am(0, w, r, B, 0, l)) < w)
+                  for (a.dlShiftTo(B, _), r.subTo(_, r); r[g] < --w; )
                     r.subTo(_, r);
               }
               null != e && (r.drShiftTo(l, e), u != h && n.ZERO.subTo(e, e)),
@@ -1888,24 +1898,24 @@
         }),
         (n.ZERO = l(0)),
         (n.ONE = l(1)),
-        (S.prototype.convert = v),
-        (S.prototype.revert = v),
-        (S.prototype.mulTo = function (t, e, r) {
+        (w.prototype.convert = S),
+        (w.prototype.revert = S),
+        (w.prototype.mulTo = function (t, e, r) {
           t.multiplyTo(e, r);
         }),
-        (S.prototype.sqrTo = function (t, e) {
+        (w.prototype.sqrTo = function (t, e) {
           t.squareTo(e);
         }),
-        (w.prototype.convert = function (t) {
+        (v.prototype.convert = function (t) {
           if (t.s < 0 || t.t > 2 * this.m.t) return t.mod(this.m);
           if (t.compareTo(this.m) < 0) return t;
           var e = s();
           return t.copyTo(e), this.reduce(e), e;
         }),
-        (w.prototype.revert = function (t) {
+        (v.prototype.revert = function (t) {
           return t;
         }),
-        (w.prototype.reduce = function (t) {
+        (v.prototype.reduce = function (t) {
           for (
             t.drShiftTo(this.m.t - 1, this.r2),
               t.t > this.m.t + 1 && ((t.t = this.m.t + 1), t.clamp()),
@@ -1918,10 +1928,10 @@
           for (t.subTo(this.r2, t); t.compareTo(this.m) >= 0; )
             t.subTo(this.m, t);
         }),
-        (w.prototype.mulTo = function (t, e, r) {
+        (v.prototype.mulTo = function (t, e, r) {
           t.multiplyTo(e, r), this.reduce(r);
         }),
-        (w.prototype.sqrTo = function (t, e) {
+        (v.prototype.sqrTo = function (t, e) {
           t.squareTo(e), this.reduce(e);
         });
       var T = [
@@ -2236,7 +2246,7 @@
             o = l(1);
           if (n <= 0) return o;
           (r = n < 18 ? 1 : n < 48 ? 3 : n < 144 ? 4 : n < 768 ? 5 : 6),
-            (i = n < 8 ? new m(e) : e.isEven() ? new w(e) : new f(e));
+            (i = n < 8 ? new m(e) : e.isEven() ? new v(e) : new f(e));
           var a = new Array(),
             u = 3,
             h = r - 1,
@@ -2320,7 +2330,7 @@
             : u;
         }),
         (n.prototype.pow = function (t) {
-          return this.exp(t, new S());
+          return this.exp(t, new w());
         }),
         (n.prototype.gcd = function (t) {
           var e = this.s < 0 ? this.negate() : this.clone(),
@@ -2363,7 +2373,7 @@
           (this.modulus = new R(t, 16)),
             (this.encryptionExponent = new R(e, 16));
         },
-        A = {
+        O = {
           base64:
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
           encode: function (t) {
@@ -2413,7 +2423,7 @@
             return s;
           },
         },
-        O = {
+        A = {
           hex: "0123456789abcdef",
           encode: function (t) {
             if (!t) return !1;
@@ -2450,7 +2460,7 @@
               !!(t = this.pkcs1pad2(t, (e.modulus.bitLength() + 7) >> 3)) &&
               !!(t = t.modPowInt(e.encryptionExponent, e.modulus)) &&
               (1 == (1 & (t = t.toString(16)).length) && (t = "0" + t),
-              A.encode(O.decode(t)))
+              O.encode(A.decode(t)))
             );
           },
           pkcs1pad2: function (t, e) {
