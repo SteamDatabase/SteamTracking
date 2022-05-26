@@ -1233,8 +1233,14 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .gamepaddialog_GamepadDialogContent_1F7iK ._DialogInputContainer {
   border-radius: 0;
 }
-.gamepaddialog_GamepadDialogContent_1F7iK ._DialogInputContainer.gpfocus {
+.gamepaddialog_GamepadDialogContent_1F7iK ._DialogInputContainer.gpfocus,
+.gamepaddialog_GamepadDialogContent_1F7iK ._DialogInputContainer.Active {
   background-color: #fff;
+  color: #0e141b;
+}
+.gamepaddialog_GamepadDialogContent_1F7iK
+  ._DialogInputContainer.Active
+  .DialogListBuilderInput_Input {
   color: #0e141b;
 }
 .gamepaddialog_GamepadDialogContent_1F7iK .DialogBodyText {
@@ -40831,6 +40837,19 @@ svg.remoteplay_IconMobile_1nGYa {
   height: 26px;
   width: 26px;
 }
+.remoteplay_InviteFriendGuestButtons_1_LSP {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.remoteplay_InviteFriendGuestButtons_1_LSP
+  > button.remoteplay_InlineInviteButton_jDhih.DialogButton {
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -67861,6 +67880,40 @@ a.general_btn:hover {
   background: #3d4450;
   transition: none;
 }
+.FriendPicker .FriendPickerFriendList.GamepadMode > .Panel,
+.GamepadMode .FriendPicker .FriendPickerFriendList > .Panel {
+  height: 140px;
+  scroll-padding: 60px 0;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+}
+.FriendPicker .FriendPickerFriendList.GamepadMode > .Panel.AtTop,
+.GamepadMode .FriendPicker .FriendPickerFriendList > .Panel.AtTop {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 80%,
+    transparent 100%
+  );
+}
+.FriendPicker .FriendPickerFriendList.GamepadMode > .Panel.AtBottom,
+.GamepadMode .FriendPicker .FriendPickerFriendList > .Panel.AtBottom {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 100%
+  );
+}
+.FriendPicker .FriendPickerFriendList.GamepadMode > .Panel.AtTop.AtBottom,
+.GamepadMode .FriendPicker .FriendPickerFriendList > .Panel.AtTop.AtBottom {
+  -webkit-mask-image: none;
+}
 .IsDropInvite .DropTarget {
   padding-top: 32px;
 }
@@ -68277,11 +68330,40 @@ a.general_btn:hover {
   width: 184px;
   height: 69px;
 }
-.contextMenuUnselectable:hover,
+.contextMenuUnselectable,
+.contextMenuUnselectable.disabled,
 .contextMenuGameTitle,
 .contextMenuBroadcast,
 .contextMenuGameOptions {
   background-color: #00000066;
+}
+.contextMenuUnselectable.GamepadMode,
+.GamepadMode .contextMenuUnselectable,
+.contextMenuUnselectable.disabled.GamepadMode,
+.GamepadMode .contextMenuUnselectable.disabled,
+.contextMenuGameTitle.GamepadMode,
+.GamepadMode .contextMenuGameTitle,
+.contextMenuBroadcast.GamepadMode,
+.GamepadMode .contextMenuBroadcast,
+.contextMenuGameOptions.GamepadMode,
+.GamepadMode .contextMenuGameOptions {
+  background: #1a1c22;
+  color: #8b929a;
+  border: solid 5px #23262e;
+  border-top: none;
+  border-bottom: none;
+}
+.contextMenuUnselectable:hover {
+  background: rgba(0, 0, 0, 0);
+  color: #9ca4a7;
+}
+.contextMenuUnselectable:hover.GamepadMode,
+.GamepadMode .contextMenuUnselectable:hover {
+  background: #1a1c22;
+  color: #8b929a;
+  border: solid 5px #23262e;
+  border-top: none;
+  border-bottom: none;
 }
 .contextMenuBroadcastTitle {
   color: #c9bdf7;
@@ -68322,9 +68404,9 @@ a.general_btn:hover {
 .contextMenuGameName {
   color: #cbdde4;
 }
-.contextMenuItem.contextMenuUnselectable:hover {
-  background: rgba(0, 0, 0, 0);
-  color: #9ca4a7;
+.contextMenuGameName.GamepadMode,
+.GamepadMode .contextMenuGameName {
+  color: #8b929a;
 }
 .GameHeader,
 .GameIcon {

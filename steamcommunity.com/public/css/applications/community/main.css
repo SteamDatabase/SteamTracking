@@ -1233,8 +1233,14 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 .gamepaddialog_GamepadDialogContent_16sYN ._DialogInputContainer {
   border-radius: 0;
 }
-.gamepaddialog_GamepadDialogContent_16sYN ._DialogInputContainer.gpfocus {
+.gamepaddialog_GamepadDialogContent_16sYN ._DialogInputContainer.gpfocus,
+.gamepaddialog_GamepadDialogContent_16sYN ._DialogInputContainer.Active {
   background-color: #fff;
+  color: #0e141b;
+}
+.gamepaddialog_GamepadDialogContent_16sYN
+  ._DialogInputContainer.Active
+  .DialogListBuilderInput_Input {
   color: #0e141b;
 }
 .gamepaddialog_GamepadDialogContent_16sYN .DialogBodyText {
