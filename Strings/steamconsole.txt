@@ -726,7 +726,19 @@ stale_driver_desc
 compat_tool_hash
 Failed to load file to buffer %s
 Failed to parse KV %s
+GetShaderBucketForGraphicsAPI success: appID: GPUDesc: %s DriverDesc: %s
+ERROR! Failed to get bucket from vulkandriverquery : %s
+%s/precomp
+Getting manifest for existing precompiled depot for %s / %s
+GetBucketManifest[existing precompiled depot] ERROR %s (this is normal if it's the first time built)
+GetBucketManifest[existing precompiled depot] SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
+DownloadDepot[existing precompiled depot] ERROR %s!
+DownloadDepot[existing precompiled depot] success: %s
+PrepopulatePrecompiledCache ERROR %s
 Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...
+%s_
+%s%d:VP%d_%sprecomp_%s
+W
 WritePrecompiledCache returned result '%s'. foz file missing from depot or no full pipelines in it.
 WritePrecompiledCache success for GPU(s): '%s' Driver(s): '%s' CacheType: %d
 ,
@@ -738,9 +750,6 @@ GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
 StartDepotBuild success. manifest: %llu size: %llu
 Shader upload complete ( AppID: %u, BucketID: %llu Manifest: %llu ) Dest: %s / %s Src: %s / %s
 Mark updated with no data ( AppID: %u, BucketID: %llu Manifest: %llu ) Src: %s / %s
-%s_
-%s%d:VP%d_%sprecomp_%s
-W
 ERROR. Shader processing failed!
 ERROR! Shader conversion failed!
 ERROR! Failed to write swarm_tc_download.vdf
