@@ -3580,7 +3580,7 @@ body.v6.refund_policy .page_content_ctn {
 
 a.pulldown_desktop {
 	display: inline;
-	color: #d9d9d9;
+	color: #e5e5e5;
 }
 
 a.pulldown_mobile {
@@ -4556,7 +4556,7 @@ div.store_header_btn {
 
 
 .store_nav .tab > span {
-	color: #d9d9d9;
+	color: #e5e5e5;
 	font-size: 13px;
 	line-height: 34px;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
@@ -4932,16 +4932,6 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader.players {
 .popup_menu_twocol_new {
 	display: flex;
 	flex-direction: row;
-}
-
-
-#noteworthy_tab.tab.flyout_tab a.pulldown_desktop,
-#genre_tab.tab.flyout_tab a.pulldown_desktop {
-    padding: 10px 0px 10px 22px;
-    margin-left: -10px;
-    background: url('/public/images/v6/storemenu/new_white.svg?v=2' ) bottom left no-repeat;
-	background-position-y: 7px;
-	background-size: 26px 26px;
 }
 
 .popup_menu_twocol > .popup_menu:not(:first-child),

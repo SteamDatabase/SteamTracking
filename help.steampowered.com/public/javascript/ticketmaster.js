@@ -235,8 +235,8 @@ function SubmitReplyForm( form )
 		var $Dialog = ShowConfirmDialog( 'Ticketmaster', $DialogContents.show(), 'Submit', 'Cancel' )
 		$Dialog.done( function()
 		{
-			var strSerialized = $DialogContents.first().serialize();
-			SubmitReplyForm_Internal( form, strSerialized );
+			var fd = new FormData( $DialogContents.first() );
+			SubmitReplyForm_Internal( form, fd );
 		});
 
 		return;
@@ -245,7 +245,7 @@ function SubmitReplyForm( form )
 	SubmitReplyForm_Internal( form, '' );
 }
 
-function SubmitReplyForm_Internal( form, strExraParams )
+function SubmitReplyForm_Internal( form, extraFormData )
 {
 	var $Form = $J( form );
 	var strReply = ConvertEditableContentToBBCode( $Form.find( 'div[name=reply_body]' )[0] );
@@ -260,14 +260,28 @@ function SubmitReplyForm_Internal( form, strExraParams )
 
 		$Form.find( 'button' ).addClass( 'btn_disabled' ).prop( 'disabled', true );
 
-		var strData = $Form.serialize() + "&" + $J.param( { reply_body: strReply } );
-	if ( strExraParams )
-		strData = strData + "&" + strExraParams;
+		//var strData = $Form.serialize() + "&" + $J.param( { reply_body: strReply } );
+	var fd = new FormData( $Form[0] );
+	fd.append( 'reply_body', strReply );
+	if ( extraFormData )
+	{
+        for (var pair of extraFormData.entries()) {
+            fd.append(pair[0], pair[1]);
+        }
+    }
+
+    // do we have files to upload?
+    var $FileList = $Form.find('ul.attached_file_list').children();
+    $FileList.each( function() {
+        fd.append( 'attachments[]', $J(this).data('file') );
+    });
 
 	$J.ajax({
 		type: $Form.attr( 'method' ),
 		url: $Form.attr( 'action' ),
-		data: strData
+		data: fd,
+        processData: false,
+        contentType: false
 	})
 	.fail( function( xhr )
 	{

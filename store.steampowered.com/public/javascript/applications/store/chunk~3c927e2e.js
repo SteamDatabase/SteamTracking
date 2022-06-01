@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [12],
+  [13],
   {
     "4uAn": function (e, t, a) {
       "use strict";
@@ -2160,19 +2160,19 @@
         const { displaytype: t } = e;
         switch (t) {
           case 4:
-            return n.a.createElement(N.mb, {
+            return n.a.createElement(N.nb, {
               className: h.a.CompatibilityDetailsResultIcon,
             });
           case 3:
-            return n.a.createElement(N.jb, {
+            return n.a.createElement(N.kb, {
               className: h.a.CompatibilityDetailsResultIcon,
             });
           case 2:
-            return n.a.createElement(N.lb, {
+            return n.a.createElement(N.mb, {
               className: h.a.CompatibilityDetailsResultIcon,
             });
           case 0:
-            return n.a.createElement(N.kb, {
+            return n.a.createElement(N.lb, {
               className: h.a.CompatibilityDetailsResultIcon,
             });
           case 1:
@@ -2189,13 +2189,13 @@
         const { category: t } = e;
         switch (t) {
           case 3:
-            return n.a.createElement(N.mb, { className: h.a.CategoryIcon });
+            return n.a.createElement(N.nb, { className: h.a.CategoryIcon });
           case 2:
-            return n.a.createElement(N.jb, { className: h.a.CategoryIcon });
-          case 1:
-            return n.a.createElement(N.lb, { className: h.a.CategoryIcon });
-          case 0:
             return n.a.createElement(N.kb, { className: h.a.CategoryIcon });
+          case 1:
+            return n.a.createElement(N.mb, { className: h.a.CategoryIcon });
+          case 0:
+            return n.a.createElement(N.lb, { className: h.a.CategoryIcon });
         }
       }
       function F(e) {

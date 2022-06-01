@@ -223,8 +223,8 @@
                   E.f,
                   { className: I.a.ResizeButton, onClick: () => r(!a) },
                   a
-                    ? h.a.createElement(w.Q, null)
-                    : h.a.createElement(w.T, null)
+                    ? h.a.createElement(w.R, null)
+                    : h.a.createElement(w.U, null)
                 )
               ),
               a &&
@@ -1575,6 +1575,7 @@
         ye = n("tQrp"),
         Re = n("pSt8"),
         je = n("E9gz");
+      n("M1X1");
       const Ae = n("f0Wu"),
         Me = {
           bExhaustedEventList: !1,

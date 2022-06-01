@@ -974,6 +974,28 @@
               : e.GetAllAgesAndMatureScreenshots()) || []
           );
         }
+        BHasTrailers() {
+          var e;
+          return (
+            this.BCheckDataRequestIncluded({ include_trailers: !0 }),
+            null === (e = this.m_Trailers) || void 0 === e
+              ? void 0
+              : e.BHasTrailers()
+          );
+        }
+        BHasHighlightTrailers() {
+          var e, t;
+          return (
+            this.BCheckDataRequestIncluded({ include_trailers: !0 }),
+            (null ===
+              (t =
+                null === (e = this.m_Trailers) || void 0 === e
+                  ? void 0
+                  : e.GetHighlightTrailers()) || void 0 === t
+              ? void 0
+              : t.length) > 0
+          );
+        }
         GetAllTrailers() {
           return (
             this.BCheckDataRequestIncluded({ include_trailers: !0 }),

@@ -610,7 +610,7 @@
                         e && e.close();
                       },
                     },
-                    r.createElement(p.Fb, null)
+                    r.createElement(p.Gb, null)
                   ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -621,8 +621,8 @@
                           e.SteamClient.Window.ToggleMaximize();
                         },
                       },
-                      this.state.maximized && r.createElement(p.bb, null),
-                      !this.state.maximized && r.createElement(p.Q, null)
+                      this.state.maximized && r.createElement(p.cb, null),
+                      !this.state.maximized && r.createElement(p.R, null)
                     ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -633,7 +633,7 @@
                           e.SteamClient.Window.Minimize();
                         },
                       },
-                      r.createElement(p.T, null)
+                      r.createElement(p.U, null)
                     )
                 )
             )

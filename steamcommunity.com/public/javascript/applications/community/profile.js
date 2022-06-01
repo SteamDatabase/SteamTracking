@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [117],
+  [118],
   {
     "042x": function (e, t, r) {
       e.exports = {
@@ -3282,7 +3282,7 @@
           );
         },
         Ye = a.lazy(() =>
-          Promise.all([r.e(23), r.e(15)]).then(r.bind(null, "AxZo"))
+          Promise.all([r.e(24), r.e(16)]).then(r.bind(null, "AxZo"))
         ),
         Ke = !0;
       let Ze = class extends a.Component {

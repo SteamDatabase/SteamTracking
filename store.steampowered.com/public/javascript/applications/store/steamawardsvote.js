@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [14],
+  [15],
   {
     "+VGL": function (e, t, a) {
       e.exports = {
@@ -4881,24 +4881,6 @@
       }
       const x = "bordered";
       var U, z, M, P;
-      function N(e) {
-        return b.d.IN_GAMEPADUI ? 1 : e.carousel_rows || 1;
-      }
-      function H(e) {
-        return e.cap_item_count || 0;
-      }
-      function V(e) {
-        return e.cap_section_content
-          ? e.cap_section_row_count && e.cap_section_row_count > 0
-            ? e.cap_section_row_count
-            : 4
-          : 0;
-      }
-      function W(e) {
-        return Boolean(null == e ? void 0 : e.store_filter)
-          ? JSON.stringify(e.store_filter)
-          : void 0;
-      }
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
           (e[(e.k_EStoreFilterClauseTypeAnd = 1)] =
@@ -4935,6 +4917,24 @@
               "k_ESortFacetsByMatchCount"),
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
         })(P || (P = {}));
+      function N(e) {
+        return b.d.IN_GAMEPADUI ? 1 : e.carousel_rows || 1;
+      }
+      function H(e) {
+        return e.cap_item_count || 0;
+      }
+      function V(e) {
+        return e.cap_section_content
+          ? e.cap_section_row_count && e.cap_section_row_count > 0
+            ? e.cap_section_row_count
+            : 4
+          : 0;
+      }
+      function W(e) {
+        return Boolean(null == e ? void 0 : e.store_filter)
+          ? JSON.stringify(e.store_filter)
+          : void 0;
+      }
       const q = {
         capsules: [],
         events: [],

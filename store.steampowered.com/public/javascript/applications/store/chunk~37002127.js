@@ -12,10 +12,10 @@
           return w;
         }),
         t.d(r, "d", function () {
-          return h;
+          return R;
         }),
         t.d(r, "a", function () {
-          return R;
+          return h;
         });
       var i = t("hRO2"),
         n = t("3dpo");
@@ -606,40 +606,6 @@
           return "CUserAccount_RedeemFriendInviteToken_Response";
         }
       }
-      class g extends a {
-        constructor(e = null) {
-          super(), a.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return g.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
-        }
-        static fromObject(e) {
-          return new g();
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new g();
-          return g.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserAccount_RevokeFriendInviteToken_Response";
-        }
-      }
       class _ extends a {
         constructor(e = null) {
           super(), a.initialize(this, e, 0, -1, void 0, null);
@@ -669,6 +635,40 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserAccount_RevokeFriendInviteToken_Response";
+        }
+      }
+      class g extends a {
+        constructor(e = null) {
+          super(), a.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return g.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return e ? { $jspbMessageInstance: r } : {};
+        }
+        static fromObject(e) {
+          return new g();
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new g();
+          return g.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserAccount_RegisterCompatTool_Response";
@@ -982,7 +982,7 @@
           return "CEmbeddedClient_AuthorizeDevice_Response";
         }
       }
-      var h, R, v;
+      var R, h, v;
       !(function (e) {
         (e.GetAvailableValveDiscountPromotions = function (e, r) {
           return e.SendMsg(
@@ -1028,16 +1028,16 @@
             });
           }),
           (e.RevokeFriendInviteToken = function (e, r) {
-            return e.SendMsg("UserAccount.RevokeFriendInviteToken#1", r, g, {
+            return e.SendMsg("UserAccount.RevokeFriendInviteToken#1", r, _, {
               ePrivilege: 1,
             });
           }),
           (e.RegisterCompatTool = function (e, r) {
-            return e.SendMsg("UserAccount.RegisterCompatTool#1", r, _, {
+            return e.SendMsg("UserAccount.RegisterCompatTool#1", r, g, {
               ePrivilege: 1,
             });
           });
-      })(h || (h = {})),
+      })(R || (R = {})),
         (function (e) {
           e.GetLinkedAccountInfo = function (e, r) {
             return e.SendMsg("AccountLinking.GetLinkedAccountInfo#1", r, f, {
@@ -1046,7 +1046,7 @@
               eWebAPIKeyRequirement: 1,
             });
           };
-        })(R || (R = {})),
+        })(h || (h = {})),
         (function (e) {
           e.AuthorizeCurrentDevice = function (e, r) {
             return e.SendMsg("EmbeddedClient.AuthorizeCurrentDevice#1", r, M, {
@@ -1106,10 +1106,11 @@
         return 1 != i.d.EUNIVERSE
           ? e
           : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
-            (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = e.replace(
-              /https:\/\/media.steampowered.com\//g,
-              i.d.MEDIA_CDN_URL
-            )).replace(
+            (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
+              e.replace(
+                /https:\/\/media.steampowered.com\//g,
+                i.d.MEDIA_CDN_URL
+              )).replace(
               /https:\/\/cdn.akamai.steamstatic.com\//g,
               i.d.MEDIA_CDN_URL
             )).replace(
@@ -1136,7 +1137,10 @@
             )).replace(
               /https:\/\/community.edgecast.steamstatic.com\//g,
               i.d.COMMUNITY_CDN_URL
-            )));
+            )).replace(/^{IMG_URL}/g, i.d.IMG_URL)).replace(
+              /^{MEDIA_CDN_URL}/g,
+              i.d.MEDIA_CDN_URL
+            )).replace(/^{COMMUNITY_CDN_URL}/g, i.d.COMMUNITY_CDN_URL)));
       }
       function u(e) {
         if (!e) return !0;

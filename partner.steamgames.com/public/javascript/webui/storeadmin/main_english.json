@@ -295,7 +295,7 @@
     "DailyDeals_Visibility": "Visibility",
     "DailyDeals_Visibility_Desc": "Daily Deals use your game's 'header capsule' image and will appear on the homepage of Steam",
     "DailyDeals_DiscountEvent": "Discount Event Info",
-    "DailyDeals_DiscountEvent_Incomplete": "Warning: Daily Deal Discount event is not setup correctly. The discount event is missing an explicit app id list. Without the app id list this code cannot surface discount event details.",
+    "DailyDeals_DiscountEvent_Incomplete": "Note: The discount event is missing an explicit app id list so this code cannot surface the included apps.",
     "DailyDeals_NoDiscountEvent": "No Associated Discount Event",
     "DailyDeals_StartsAt": "Starts at %1$s",
     "DailyDeals_EndsAt": "Ends at %1$s",

@@ -188,6 +188,11 @@ HelpWizard = {
 			href = href.substr( base.length );
 		}
 
+		if ( href.match( 'ViewAttachment' ) )
+        {
+            return null;
+        }
+
 		var matches = href.match( /^\/*(?:#!?|wizard)\/*/ );
 		if ( matches )
 		{

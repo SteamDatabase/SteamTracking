@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7279520";
+var CLSTAMP = "7290569";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [114],
+  [115],
   {
     "+8BF": function (e, t, n) {
       "use strict";
@@ -4566,35 +4566,35 @@ var CLSTAMP = "7279520";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 25],
-        "./main_bulgarian.json": ["c2SO", 26],
-        "./main_czech.json": ["peP3", 27],
-        "./main_danish.json": ["0bnV", 28],
-        "./main_dutch.json": ["wcLc", 29],
-        "./main_english.json": ["/rNK", 30],
-        "./main_finnish.json": ["iywU", 31],
-        "./main_french.json": ["Xnpc", 32],
-        "./main_german.json": ["pmKi", 33],
-        "./main_greek.json": ["mTRv", 34],
-        "./main_hungarian.json": ["WkHb", 35],
-        "./main_italian.json": ["Jz5U", 36],
-        "./main_japanese.json": ["3Dk9", 37],
-        "./main_koreana.json": ["neQD", 38],
-        "./main_latam.json": ["6oHD", 39],
-        "./main_norwegian.json": ["2OvS", 40],
-        "./main_polish.json": ["3pwE", 41],
-        "./main_portuguese.json": ["hY40", 42],
-        "./main_romanian.json": ["Q95+", 43],
-        "./main_russian.json": ["bsPT", 44],
-        "./main_sc_schinese.json": ["GOaQ", 45],
-        "./main_schinese.json": ["B/Zz", 46],
-        "./main_spanish.json": ["U6iL", 47],
-        "./main_swedish.json": ["4uPU", 48],
-        "./main_tchinese.json": ["rgC9", 49],
-        "./main_thai.json": ["87dp", 50],
-        "./main_turkish.json": ["yMpO", 51],
-        "./main_ukrainian.json": ["zTWm", 52],
-        "./main_vietnamese.json": ["wqiy", 53],
+        "./main_brazilian.json": ["TFAN", 26],
+        "./main_bulgarian.json": ["c2SO", 27],
+        "./main_czech.json": ["peP3", 28],
+        "./main_danish.json": ["0bnV", 29],
+        "./main_dutch.json": ["wcLc", 30],
+        "./main_english.json": ["/rNK", 31],
+        "./main_finnish.json": ["iywU", 32],
+        "./main_french.json": ["Xnpc", 33],
+        "./main_german.json": ["pmKi", 34],
+        "./main_greek.json": ["mTRv", 35],
+        "./main_hungarian.json": ["WkHb", 36],
+        "./main_italian.json": ["Jz5U", 37],
+        "./main_japanese.json": ["3Dk9", 38],
+        "./main_koreana.json": ["neQD", 39],
+        "./main_latam.json": ["6oHD", 40],
+        "./main_norwegian.json": ["2OvS", 41],
+        "./main_polish.json": ["3pwE", 42],
+        "./main_portuguese.json": ["hY40", 43],
+        "./main_romanian.json": ["Q95+", 44],
+        "./main_russian.json": ["bsPT", 45],
+        "./main_sc_schinese.json": ["GOaQ", 46],
+        "./main_schinese.json": ["B/Zz", 47],
+        "./main_spanish.json": ["U6iL", 48],
+        "./main_swedish.json": ["4uPU", 49],
+        "./main_tchinese.json": ["rgC9", 50],
+        "./main_thai.json": ["87dp", 51],
+        "./main_turkish.json": ["yMpO", 52],
+        "./main_ukrainian.json": ["zTWm", 53],
+        "./main_vietnamese.json": ["wqiy", 54],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -12059,35 +12059,35 @@ var CLSTAMP = "7279520";
     },
     RMhI: function (e, t, n) {
       var r = {
-        "./sales_brazilian.json": ["8W/b", 54],
-        "./sales_bulgarian.json": ["CF5q", 55],
-        "./sales_czech.json": ["O2WS", 56],
-        "./sales_danish.json": ["XnEN", 57],
-        "./sales_dutch.json": ["amMP", 58],
-        "./sales_english.json": ["3u+3", 59],
-        "./sales_finnish.json": ["4mLc", 60],
-        "./sales_french.json": ["fJyv", 61],
-        "./sales_german.json": ["LcuH", 62],
-        "./sales_greek.json": ["7l8b", 63],
-        "./sales_hungarian.json": ["L9+e", 64],
-        "./sales_italian.json": ["EnBf", 65],
-        "./sales_japanese.json": ["O9QH", 66],
-        "./sales_koreana.json": ["hPCV", 67],
-        "./sales_latam.json": ["mkfq", 68],
-        "./sales_norwegian.json": ["Xzk6", 69],
-        "./sales_polish.json": ["Mfbu", 70],
-        "./sales_portuguese.json": ["EQQ2", 71],
-        "./sales_romanian.json": ["oXR9", 72],
-        "./sales_russian.json": ["kQHt", 73],
-        "./sales_sc_schinese.json": ["VTAw", 74],
-        "./sales_schinese.json": ["AVwL", 75],
-        "./sales_spanish.json": ["lRrx", 76],
-        "./sales_swedish.json": ["7tPl", 77],
-        "./sales_tchinese.json": ["mQlZ", 78],
-        "./sales_thai.json": ["yDdk", 79],
-        "./sales_turkish.json": ["mjwq", 80],
-        "./sales_ukrainian.json": ["gWvs", 81],
-        "./sales_vietnamese.json": ["VsX2", 82],
+        "./sales_brazilian.json": ["8W/b", 55],
+        "./sales_bulgarian.json": ["CF5q", 56],
+        "./sales_czech.json": ["O2WS", 57],
+        "./sales_danish.json": ["XnEN", 58],
+        "./sales_dutch.json": ["amMP", 59],
+        "./sales_english.json": ["3u+3", 60],
+        "./sales_finnish.json": ["4mLc", 61],
+        "./sales_french.json": ["fJyv", 62],
+        "./sales_german.json": ["LcuH", 63],
+        "./sales_greek.json": ["7l8b", 64],
+        "./sales_hungarian.json": ["L9+e", 65],
+        "./sales_italian.json": ["EnBf", 66],
+        "./sales_japanese.json": ["O9QH", 67],
+        "./sales_koreana.json": ["hPCV", 68],
+        "./sales_latam.json": ["mkfq", 69],
+        "./sales_norwegian.json": ["Xzk6", 70],
+        "./sales_polish.json": ["Mfbu", 71],
+        "./sales_portuguese.json": ["EQQ2", 72],
+        "./sales_romanian.json": ["oXR9", 73],
+        "./sales_russian.json": ["kQHt", 74],
+        "./sales_sc_schinese.json": ["VTAw", 75],
+        "./sales_schinese.json": ["AVwL", 76],
+        "./sales_spanish.json": ["lRrx", 77],
+        "./sales_swedish.json": ["7tPl", 78],
+        "./sales_tchinese.json": ["mQlZ", 79],
+        "./sales_thai.json": ["yDdk", 80],
+        "./sales_turkish.json": ["mjwq", 81],
+        "./sales_ukrainian.json": ["gWvs", 82],
+        "./sales_vietnamese.json": ["VsX2", 83],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -17845,9 +17845,9 @@ var CLSTAMP = "7279520";
           case 5:
             return "es";
           case 6:
-            return "zn-cn";
+            return "zh-cn";
           case 7:
-            return "zn-tw";
+            return "zh-tw";
           case 8:
             return "ru";
           case 9:
@@ -18157,106 +18157,115 @@ var CLSTAMP = "7279520";
         p = n.n(m);
       const g = i.a.lazy(() =>
           Promise.all([
+            n.e(3),
+            n.e(5),
+            n.e(15),
+            n.e(0),
+            n.e(1),
             n.e(2),
             n.e(4),
             n.e(14),
-            n.e(0),
-            n.e(1),
-            n.e(3),
             n.e(13),
-            n.e(12),
-            n.e(117),
+            n.e(118),
           ]).then(n.bind(null, "GEPe"))
         ),
         f = i.a.lazy(() =>
           Promise.all([
+            n.e(3),
+            n.e(5),
+            n.e(7),
+            n.e(0),
+            n.e(1),
             n.e(2),
             n.e(4),
             n.e(6),
-            n.e(0),
-            n.e(1),
-            n.e(3),
-            n.e(5),
-            n.e(8),
-            n.e(22),
+            n.e(9),
+            n.e(23),
           ]).then(n.bind(null, "IY+y"))
         ),
         _ = i.a.lazy(() =>
           Promise.all([
+            n.e(3),
+            n.e(5),
+            n.e(7),
+            n.e(0),
+            n.e(1),
             n.e(2),
             n.e(4),
             n.e(6),
-            n.e(0),
-            n.e(1),
-            n.e(3),
-            n.e(5),
-            n.e(8),
-            n.e(20),
+            n.e(9),
+            n.e(21),
           ]).then(n.bind(null, "FwLc"))
         ),
         b = i.a.lazy(() =>
           Promise.all([
+            n.e(3),
+            n.e(5),
+            n.e(7),
+            n.e(0),
+            n.e(1),
             n.e(2),
             n.e(4),
             n.e(6),
-            n.e(0),
-            n.e(1),
-            n.e(3),
-            n.e(5),
-            n.e(8),
-            n.e(21),
+            n.e(9),
+            n.e(22),
           ]).then(n.bind(null, "75vZ"))
         ),
         v = i.a.lazy(() =>
-          Promise.all([n.e(14), n.e(13), n.e(17)]).then(n.bind(null, "/u7D"))
+          Promise.all([n.e(15), n.e(1), n.e(14), n.e(18)]).then(
+            n.bind(null, "/u7D")
+          )
         ),
         w = i.a.lazy(() =>
           Promise.all([
-            n.e(2),
-            n.e(4),
+            n.e(3),
+            n.e(5),
             n.e(0),
             n.e(1),
-            n.e(3),
-            n.e(7),
-            n.e(12),
-            n.e(16),
+            n.e(2),
+            n.e(4),
+            n.e(8),
+            n.e(13),
+            n.e(17),
           ]).then(n.bind(null, "8zUZ"))
         ),
-        C = i.a.lazy(() => n.e(115).then(n.bind(null, "rt5e"))),
+        C = i.a.lazy(() => n.e(116).then(n.bind(null, "rt5e"))),
         S = i.a.lazy(() =>
           Promise.all([
+            n.e(3),
+            n.e(5),
+            n.e(7),
+            n.e(0),
+            n.e(1),
             n.e(2),
             n.e(4),
             n.e(6),
-            n.e(0),
-            n.e(1),
-            n.e(3),
-            n.e(5),
-            n.e(11),
-            n.e(18),
+            n.e(12),
+            n.e(19),
           ]).then(n.bind(null, "JZ7q"))
         ),
         y = i.a.lazy(() =>
           Promise.all([
-            n.e(2),
-            n.e(4),
+            n.e(3),
+            n.e(5),
             n.e(0),
             n.e(1),
-            n.e(3),
-            n.e(7),
+            n.e(2),
+            n.e(4),
+            n.e(8),
+            n.e(12),
             n.e(11),
             n.e(10),
-            n.e(9),
-            n.e(19),
+            n.e(20),
           ]).then(n.bind(null, "erIC"))
         ),
         E = i.a.lazy(() =>
-          Promise.all([n.e(2), n.e(0), n.e(1), n.e(10), n.e(118)]).then(
+          Promise.all([n.e(3), n.e(0), n.e(2), n.e(11), n.e(119)]).then(
             n.bind(null, "KVeB")
           )
         ),
         O = i.a.lazy(() =>
-          Promise.all([n.e(0), n.e(113)]).then(n.bind(null, "KvFF"))
+          Promise.all([n.e(0), n.e(114)]).then(n.bind(null, "KvFF"))
         ),
         D = () => (h.b.IS_OGG ? "games" : "groups"),
         M = () => "/:anything*/diagdata",
@@ -18964,36 +18973,36 @@ var CLSTAMP = "7279520";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 83],
-        "./shared_brazilian.json": ["Pg9r", 84],
-        "./shared_bulgarian.json": ["ENge", 85],
-        "./shared_czech.json": ["Ts6V", 86],
-        "./shared_danish.json": ["9oiU", 87],
-        "./shared_dutch.json": ["nxN4", 88],
-        "./shared_english.json": ["TYjx", 89],
-        "./shared_finnish.json": ["NuB8", 90],
-        "./shared_french.json": ["bOPj", 91],
-        "./shared_german.json": ["svuF", 92],
-        "./shared_greek.json": ["eJKB", 93],
-        "./shared_hungarian.json": ["T7i2", 94],
-        "./shared_italian.json": ["w96W", 95],
-        "./shared_japanese.json": ["XQ4S", 96],
-        "./shared_koreana.json": ["4hyI", 97],
-        "./shared_latam.json": ["3qrw", 98],
-        "./shared_norwegian.json": ["XA4Q", 99],
-        "./shared_polish.json": ["TpXn", 100],
-        "./shared_portuguese.json": ["Q8UV", 101],
-        "./shared_romanian.json": ["Eme1", 102],
-        "./shared_russian.json": ["BUiO", 103],
-        "./shared_sc_schinese.json": ["O0N/", 104],
-        "./shared_schinese.json": ["3UpY", 105],
-        "./shared_spanish.json": ["4Fxc", 106],
-        "./shared_swedish.json": ["0JhB", 107],
-        "./shared_tchinese.json": ["OYRc", 108],
-        "./shared_thai.json": ["lhAZ", 109],
-        "./shared_turkish.json": ["RSoU", 110],
-        "./shared_ukrainian.json": ["lNXI", 111],
-        "./shared_vietnamese.json": ["RSmC", 112],
+        "./shared_arabic.json": ["d1TB", 84],
+        "./shared_brazilian.json": ["Pg9r", 85],
+        "./shared_bulgarian.json": ["ENge", 86],
+        "./shared_czech.json": ["Ts6V", 87],
+        "./shared_danish.json": ["9oiU", 88],
+        "./shared_dutch.json": ["nxN4", 89],
+        "./shared_english.json": ["TYjx", 90],
+        "./shared_finnish.json": ["NuB8", 91],
+        "./shared_french.json": ["bOPj", 92],
+        "./shared_german.json": ["svuF", 93],
+        "./shared_greek.json": ["eJKB", 94],
+        "./shared_hungarian.json": ["T7i2", 95],
+        "./shared_italian.json": ["w96W", 96],
+        "./shared_japanese.json": ["XQ4S", 97],
+        "./shared_koreana.json": ["4hyI", 98],
+        "./shared_latam.json": ["3qrw", 99],
+        "./shared_norwegian.json": ["XA4Q", 100],
+        "./shared_polish.json": ["TpXn", 101],
+        "./shared_portuguese.json": ["Q8UV", 102],
+        "./shared_romanian.json": ["Eme1", 103],
+        "./shared_russian.json": ["BUiO", 104],
+        "./shared_sc_schinese.json": ["O0N/", 105],
+        "./shared_schinese.json": ["3UpY", 106],
+        "./shared_spanish.json": ["4Fxc", 107],
+        "./shared_swedish.json": ["0JhB", 108],
+        "./shared_tchinese.json": ["OYRc", 109],
+        "./shared_thai.json": ["lhAZ", 110],
+        "./shared_turkish.json": ["RSoU", 111],
+        "./shared_ukrainian.json": ["lNXI", 112],
+        "./shared_vietnamese.json": ["RSmC", 113],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -22863,5 +22872,5 @@ var CLSTAMP = "7279520";
       };
     },
   },
-  [["gfbn", 116, 24]],
+  [["gfbn", 117, 25]],
 ]);

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [20],
+  [21],
   {
     "0XOM": function (e, t, a) {
       e.exports = {
@@ -1022,7 +1022,7 @@
             (this.m_clanSteamID = new v.a(M.b.CLANSTEAMID)),
             (this.k_nMaxPerDirection = 10),
             (this.m_IntervalTimer = void 0),
-            M.b.CLANACCOUNTID == b.E && (this.k_nMaxPerDirection = 2);
+            M.b.CLANACCOUNTID == b.F && (this.k_nMaxPerDirection = 2);
         }
         EnsureEventsAreLoaded() {
           i.c

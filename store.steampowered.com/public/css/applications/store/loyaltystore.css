@@ -1,3 +1,19 @@
+.unstyledbutton_UnstyledButton_1cWox {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.unstyledbutton_UnstyledButton_1cWox a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  margin: 0px !important;
+  padding: 0px;
+}
 body.v6.rewards {
   background-color: #161a1f;
   height: 100%;

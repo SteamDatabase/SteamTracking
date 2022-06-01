@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7280160";
+var CLSTAMP = "7290569";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -171,9 +171,9 @@ var CLSTAMP = "7280160";
         case 5:
           return "es";
         case 6:
-          return "zn-cn";
+          return "zh-cn";
         case 7:
-          return "zn-tw";
+          return "zh-tw";
         case 8:
           return "ru";
         case 9:

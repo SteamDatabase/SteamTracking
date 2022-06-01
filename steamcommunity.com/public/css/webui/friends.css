@@ -8162,6 +8162,7 @@ b {
 }
 .partnereventshared_DropDownScroll_22e7r {
   max-height: 400px;
+  min-width: 100px;
   overflow: hidden scroll;
 }
 .partnereventshared_CloseButton_1sshi {
@@ -8931,7 +8932,8 @@ iframe.eventbbcodeparser_MedalTVWidget_20ZvO {
   height: 360px;
   width: 100%;
 }
-.eventbbcodeparser_AppSummaryWidgetCtn_3hGyh {
+.eventbbcodeparser_AppSummaryWidgetCtn_3hGyh,
+.eventbbcodeparser_LoyaltyRewardCtn_3JaLd {
   flex-grow: 2;
   flex-basis: 0;
 }
@@ -15616,7 +15618,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_34BsR {
   color: #fff;
   text-decoration: none;
 }
-.partnereventdisplay_EventDetailsPageContainer_3EdRL.partnereventdisplay_lang_zn-cn_1jFhl
+.partnereventdisplay_EventDetailsPageContainer_3EdRL.partnereventdisplay_lang_zh-cn_2TW0A
   .partnereventdisplay_EventDetailsBody_1awbQ
   b,
 .partnereventdisplay_EventDetailsPageContainer_3EdRL.partnereventdisplay_lang_ko_30gNG
@@ -15625,7 +15627,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_34BsR {
 .partnereventdisplay_EventDetailsPageContainer_3EdRL.partnereventdisplay_lang_ja_1kHGK
   .partnereventdisplay_EventDetailsBody_1awbQ
   b,
-.partnereventdisplay_EventDetailsPageContainer_3EdRL.partnereventdisplay_lang_zn-tw_nHEw1
+.partnereventdisplay_EventDetailsPageContainer_3EdRL.partnereventdisplay_lang_zh-tw_3njw-
   .partnereventdisplay_EventDetailsBody_1awbQ
   b {
   color: #c7e5ff;
@@ -23938,6 +23940,9 @@ a.storywidget_BadgeFooter_3anc5:hover {
   .discoveryqueuewizard_TextLink_tqEFN:hover {
   color: #fff;
 }
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1VpgW ::-webkit-scrollbar {
+  display: none;
+}
 .BasicUI .discoveryqueuewizard_DiscoveryQueueCarouselCtn_1VpgW {
   height: calc(100vh - 40px);
 }
@@ -24156,6 +24161,10 @@ a.storywidget_BadgeFooter_3anc5:hover {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(64px);
+}
+.discoveryqueuewizard_DiscoveryQueuePlaceholder_huD3A {
+  width: 100%;
+  height: 100%;
 }
 .discoveryqueuewizard_IgnoredCtn_1vCUx {
   position: absolute;
@@ -24394,7 +24403,7 @@ a.storywidget_BadgeFooter_3anc5:hover {
   z-index: 10;
   transform: translateY(-50%) scale(0.92);
   border-radius: 50%;
-  display: flex;
+  display: none;
   background-color: rgba(103, 112, 123, 0.6);
   backdrop-filter: blur(24px);
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3),
@@ -24420,6 +24429,9 @@ a.storywidget_BadgeFooter_3anc5:hover {
 .discoveryqueuewizard_QueueNavArrow_LPrrL:hover svg {
   transition-duration: 0.06s;
   color: #0e141b;
+}
+.discoveryqueuewizard_QueueNavArrow_LPrrL.discoveryqueuewizard_Enable_te6M8 {
+  display: flex;
 }
 .discoveryqueuewizard_QueueNavArrow_LPrrL:active {
   opacity: 0.9;
@@ -24451,6 +24463,120 @@ a.storywidget_BadgeFooter_3anc5:hover {
 .saleminigames_ImgFullBagde_1s5Pu {
   width: 80px;
   height: 80px;
+}
+.salebadgeprogressdisplay_OuterCtn_3ONPs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+}
+.salebadgeprogressdisplay_ImgSpread_2XiIH {
+  width: 140px;
+  margin-left: -15px;
+  position: relative;
+  margin-right: 50px;
+}
+.salebadgeprogressdisplay_ImgSpread_2XiIH img:first-child {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-25deg);
+}
+.salebadgeprogressdisplay_ImgSpread_2XiIH img:last-child {
+  position: absolute;
+  opacity: 0.5;
+  filter: saturate(0.4);
+  left: 34px;
+  z-index: 1;
+}
+.salebadgeprogressdisplay_Title_SHhyZ {
+  font-size: 21px;
+  font-weight: 600;
+  color: #fff;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_1agIh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_1agIh
+  .salebadgeprogressdisplay_BadgeTierCtn_3o0eo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 125px;
+  min-width: 125px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_1agIh
+  .salebadgeprogressdisplay_BadgeTierCtn_3o0eo
+  .salebadgeprogressdisplay_BadgeDesc_3YdYE {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_1agIh
+  .salebadgeprogressdisplay_BadgeTierCtn_3o0eo
+  .salebadgeprogressdisplay_BadgeLevel_2wPIS {
+  font-size: 11px;
+  color: #c3c4d9;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_1agIh
+  .salebadgeprogressdisplay_BadgeTierCtn_3o0eo:last-child
+  img {
+  opacity: 0.5;
+  filter: saturate(0);
+  border: 1px dashed;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_1agIh img {
+  width: 100px;
+  height: 100px;
+  margin-top: 6px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_1agIh svg {
+  height: 60px;
+}
+.salebadgeprogressdisplay_FinalBadge_16vu0 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16px;
+}
+.salebadgeprogressdisplay_FinalBadge_16vu0 img {
+  width: 120px;
+  height: 120px;
+}
+.salebadgeprogressdisplay_FinalBadge_16vu0
+  .salebadgeprogressdisplay_BadgeLevel_2wPIS {
+  margin-top: 4px;
+}
+.salequestdisplay_description__zBEx {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0em;
+  color: #fff;
+}
+.salequestdisplay_description2_v1Zxa {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.salequestdisplay_questCtn_2UpmC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5em 3.5em 5em 3.5em;
+  color: #fff;
+  gap: 1.5em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
 }
 :root {
   --basicui-header-height: 0px;
@@ -25848,6 +25974,9 @@ a.storywidget_BadgeFooter_3anc5:hover {
 .giveawaynextdraw_WinnerInfo_3GUAk .giveawaynextdraw_WinnerText_12XUV {
   display: inline;
   margin-left: 8px;
+}
+.loyaltyrewarditemembed_Ctn_1D2NC {
+  width: 100px;
 }
 .presenterpopup_SpeakerOuter_3JuSh {
   display: block;

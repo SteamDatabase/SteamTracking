@@ -1662,8 +1662,14 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 .gamepaddialog_GamepadDialogContent_Gn6rC ._DialogInputContainer {
   border-radius: 0;
 }
-.gamepaddialog_GamepadDialogContent_Gn6rC ._DialogInputContainer.gpfocus {
+.gamepaddialog_GamepadDialogContent_Gn6rC ._DialogInputContainer.gpfocus,
+.gamepaddialog_GamepadDialogContent_Gn6rC ._DialogInputContainer.Active {
   background-color: #fff;
+  color: #0e141b;
+}
+.gamepaddialog_GamepadDialogContent_Gn6rC
+  ._DialogInputContainer.Active
+  .DialogListBuilderInput_Input {
   color: #0e141b;
 }
 .gamepaddialog_GamepadDialogContent_Gn6rC .DialogBodyText {
@@ -4574,6 +4580,7 @@ b {
 }
 .partnereventshared_DropDownScroll_1U_du {
   max-height: 400px;
+  min-width: 100px;
   overflow: hidden scroll;
 }
 .partnereventshared_CloseButton_3NcQW {
@@ -6072,7 +6079,8 @@ iframe.eventbbcodeparser_MedalTVWidget_3pE8b {
   height: 360px;
   width: 100%;
 }
-.eventbbcodeparser_AppSummaryWidgetCtn_1q-L5 {
+.eventbbcodeparser_AppSummaryWidgetCtn_1q-L5,
+.eventbbcodeparser_LoyaltyRewardCtn_1-myD {
   flex-grow: 2;
   flex-basis: 0;
 }
@@ -12586,7 +12594,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   color: #fff;
   text-decoration: none;
 }
-.partnereventdisplay_EventDetailsPageContainer_20XlT.partnereventdisplay_lang_zn-cn_7y9lO
+.partnereventdisplay_EventDetailsPageContainer_20XlT.partnereventdisplay_lang_zh-cn_3TJns
   .partnereventdisplay_EventDetailsBody_1jV9Y
   b,
 .partnereventdisplay_EventDetailsPageContainer_20XlT.partnereventdisplay_lang_ko_1xwhG
@@ -12595,7 +12603,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
 .partnereventdisplay_EventDetailsPageContainer_20XlT.partnereventdisplay_lang_ja_3pLM1
   .partnereventdisplay_EventDetailsBody_1jV9Y
   b,
-.partnereventdisplay_EventDetailsPageContainer_20XlT.partnereventdisplay_lang_zn-tw_3k2p6
+.partnereventdisplay_EventDetailsPageContainer_20XlT.partnereventdisplay_lang_zh-tw_2maQz
   .partnereventdisplay_EventDetailsBody_1jV9Y
   b {
   color: #c7e5ff;
@@ -20908,6 +20916,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .discoveryqueuewizard_TextLink_14AFZ:hover {
   color: #fff;
 }
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_17QGf ::-webkit-scrollbar {
+  display: none;
+}
 .BasicUI .discoveryqueuewizard_DiscoveryQueueCarouselCtn_17QGf {
   height: calc(100vh - 40px);
 }
@@ -21126,6 +21137,10 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(64px);
+}
+.discoveryqueuewizard_DiscoveryQueuePlaceholder_1u27K {
+  width: 100%;
+  height: 100%;
 }
 .discoveryqueuewizard_IgnoredCtn_EfzwZ {
   position: absolute;
@@ -21364,7 +21379,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   z-index: 10;
   transform: translateY(-50%) scale(0.92);
   border-radius: 50%;
-  display: flex;
+  display: none;
   background-color: rgba(103, 112, 123, 0.6);
   backdrop-filter: blur(24px);
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3),
@@ -21390,6 +21405,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .discoveryqueuewizard_QueueNavArrow_14jPd:hover svg {
   transition-duration: 0.06s;
   color: #0e141b;
+}
+.discoveryqueuewizard_QueueNavArrow_14jPd.discoveryqueuewizard_Enable_2h8mD {
+  display: flex;
 }
 .discoveryqueuewizard_QueueNavArrow_14jPd:active {
   opacity: 0.9;
@@ -21421,6 +21439,120 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .saleminigames_ImgFullBagde_1cZOq {
   width: 80px;
   height: 80px;
+}
+.salebadgeprogressdisplay_OuterCtn_2DBYM {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+}
+.salebadgeprogressdisplay_ImgSpread_1LZYR {
+  width: 140px;
+  margin-left: -15px;
+  position: relative;
+  margin-right: 50px;
+}
+.salebadgeprogressdisplay_ImgSpread_1LZYR img:first-child {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-25deg);
+}
+.salebadgeprogressdisplay_ImgSpread_1LZYR img:last-child {
+  position: absolute;
+  opacity: 0.5;
+  filter: saturate(0.4);
+  left: 34px;
+  z-index: 1;
+}
+.salebadgeprogressdisplay_Title_2HdEI {
+  font-size: 21px;
+  font-weight: 600;
+  color: #fff;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_3cLdm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_3cLdm
+  .salebadgeprogressdisplay_BadgeTierCtn_1GEr3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 125px;
+  min-width: 125px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_3cLdm
+  .salebadgeprogressdisplay_BadgeTierCtn_1GEr3
+  .salebadgeprogressdisplay_BadgeDesc_30X6j {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_3cLdm
+  .salebadgeprogressdisplay_BadgeTierCtn_1GEr3
+  .salebadgeprogressdisplay_BadgeLevel_2AZcl {
+  font-size: 11px;
+  color: #c3c4d9;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_3cLdm
+  .salebadgeprogressdisplay_BadgeTierCtn_1GEr3:last-child
+  img {
+  opacity: 0.5;
+  filter: saturate(0);
+  border: 1px dashed;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_3cLdm img {
+  width: 100px;
+  height: 100px;
+  margin-top: 6px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_3cLdm svg {
+  height: 60px;
+}
+.salebadgeprogressdisplay_FinalBadge_3YHV9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16px;
+}
+.salebadgeprogressdisplay_FinalBadge_3YHV9 img {
+  width: 120px;
+  height: 120px;
+}
+.salebadgeprogressdisplay_FinalBadge_3YHV9
+  .salebadgeprogressdisplay_BadgeLevel_2AZcl {
+  margin-top: 4px;
+}
+.salequestdisplay_description_FbyVd {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0em;
+  color: #fff;
+}
+.salequestdisplay_description2_3KRFA {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.salequestdisplay_questCtn_12PtS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5em 3.5em 5em 3.5em;
+  color: #fff;
+  gap: 1.5em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
 }
 :root {
   --basicui-header-height: 0px;
@@ -22818,6 +22950,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .giveawaynextdraw_WinnerInfo_2b8Ul .giveawaynextdraw_WinnerText_16Gnq {
   display: inline;
   margin-left: 8px;
+}
+.loyaltyrewarditemembed_Ctn_2iceS {
+  width: 100px;
 }
 .presenterpopup_SpeakerOuter_YHI1b {
   display: block;
@@ -25037,7 +25172,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 }
 .adminshared_PageTitle_1hHXX {
   font-size: 32px;
-  color: #fff;
+  color: #67c1f5;
   font-weight: 200;
   margin-bottom: 8px;
 }
@@ -28277,10 +28412,88 @@ ul li {
   position: relative;
   z-index: 1;
 }
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view {
+  border: none;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-day-bg {
+  background: #2c2e35;
+  border-left: 1px solid #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-day-bg.rbc-off-range-bg {
+  background: #23242a;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-day-bg.rbc-today {
+  background: #575b66;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-month-row,
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-day-bg {
+  border-top: 1px solid #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-header {
+  background: #535764;
+  color: #fff;
+  border-bottom-color: #1b1e22;
+  border-left-color: #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-event {
+  z-index: 1;
+  position: relative;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-event:hover {
+  z-index: 2;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar {
+  position: sticky;
+  top: 0px;
+  z-index: 30;
+  background: #000;
+  padding: 16px;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-toolbar-label {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 200;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group {
+  position: relative;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button {
+  border-color: #1b1e22;
+  background-color: #535764;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-toolbar
+  .rbc-btn-group
+  button.rbc-active {
+  background-color: #0eb0ff;
+  border-color: #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:active,
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:focus {
+  background-color: #0eb0ff;
+  border-color: #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:hover {
+  background-color: #5f6472;
+  border-color: #1b1e22;
+}
 .planningdashboard_CreateNewCtn_OryGT {
   display: flex;
   flex-direction: column;
-  background: #000;
+  align-items: end;
   padding: 18px 18px 18px 18px;
   width: 100%;
   box-sizing: border-box;
@@ -28296,68 +28509,9 @@ ul li {
   display: flex;
   padding: 16px;
   background: #1b1e22;
-  position: sticky;
-  top: 72px;
-  z-index: 6;
 }
 .planningdashboard_filtersCtn_Epsp1 .DialogCheckbox_Container {
   margin-right: 30px;
-}
-.rbc-calendar .rbc-month-view {
-  border: none;
-}
-.rbc-calendar .rbc-month-view .rbc-day-bg {
-  background: #2c2e35;
-  border-left: 1px solid #1b1e22;
-}
-.rbc-calendar .rbc-month-view .rbc-day-bg.rbc-off-range-bg {
-  background: #23242a;
-}
-.rbc-calendar .rbc-month-view .rbc-day-bg.rbc-today {
-  background: #575b66;
-}
-.rbc-calendar .rbc-month-view .rbc-month-row,
-.rbc-calendar .rbc-month-view .rbc-day-bg {
-  border-top: 1px solid #1b1e22;
-}
-.rbc-calendar .rbc-month-view .rbc-header {
-  background: #535764;
-  color: #fff;
-  border-bottom-color: #1b1e22;
-  border-left-color: #1b1e22;
-}
-.rbc-calendar .rbc-month-view .rbc-event {
-  z-index: 1;
-  position: relative;
-}
-.rbc-calendar .rbc-month-view .rbc-event:hover {
-  z-index: 2;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-.rbc-toolbar .rbc-toolbar-label {
-  font-size: 22px;
-  color: #fff;
-  font-weight: 200;
-}
-.rbc-toolbar .rbc-btn-group {
-  position: relative;
-}
-.rbc-toolbar .rbc-btn-group button {
-  border-color: #1b1e22;
-  background-color: #535764;
-}
-.rbc-toolbar .rbc-btn-group button.rbc-active {
-  background-color: #0eb0ff;
-  border-color: #1b1e22;
-}
-.rbc-toolbar .rbc-btn-group button:active,
-.rbc-toolbar .rbc-btn-group button:focus {
-  background-color: #0eb0ff;
-  border-color: #1b1e22;
-}
-.rbc-toolbar .rbc-btn-group button:hover {
-  background-color: #5f6472;
-  border-color: #1b1e22;
 }
 .planningdashboard_FilterRow_2qhMY
   .planningdashboard_VisibilityFilterCtn_hPops {
@@ -28387,6 +28541,12 @@ ul li {
 }
 .promotionplaneditor_EditCtn_1Q3pp {
   margin-top: 24px;
+}
+.promotionplaneditor_EditCtn_1Q3pp
+  button.DialogButton.promotionplaneditor_StatusBtn_3btXS {
+  width: fit-content;
+  padding: 0px 20px;
+  float: right;
 }
 .promotionplaneditor_InputContainer_Jbwjf {
   display: flex;
@@ -28424,16 +28584,26 @@ ul li {
 }
 .promotionplaneditor_ReviewedCtn_11pA1 {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   background: #232730;
   padding: 4px 10px;
 }
 .promotionplaneditor_ReviewedCtn_11pA1 svg {
   width: 20px;
   height: 20px;
-  color: #47bfff;
+  color: #8bc53f;
   margin-right: 8px;
+}
+.promotionplaneditor_ReviewedCtn_11pA1
+  .promotionplaneditor_ReviewedSummary_1_eM8 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 21px;
+  color: #8bc53f;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid gray;
 }
 .promotionplaneditor_LinksCtn_2SJfi {
   margin-top: 20px;
@@ -28453,8 +28623,35 @@ ul li {
   .DialogLabel {
   color: #dedfe3;
 }
-.promotionplaneditor_PreviewLinkCtn_RacQW {
+.promotionplaneditor_PreviewLinksCtn_298xI
+  .promotionplaneditor_FeatureSelectCtn_FRWr1 {
+  width: 100%;
+  min-height: 30px;
   position: relative;
+}
+.promotionplaneditor_PreviewLinksCtn_298xI
+  .promotionplaneditor_FeatureSelectCtn_FRWr1
+  .promotionplaneditor_FeatureSelectBtn_KdmlA {
+  position: absolute;
+  right: 0px;
+}
+.promotionplaneditor_PreviewLinksCtn_298xI
+  .promotionplaneditor_PreviewLinkCtn_RacQW {
+  position: relative;
+  background: #3d4450;
+  margin-bottom: 2px;
+  padding: 5px 6px;
+  border-radius: 3px;
+}
+.promotionplaneditor_PreviewLinksCtn_298xI
+  .promotionplaneditor_PreviewLinkCtn_RacQW:hover {
+  background: #464d58;
+}
+.promotionplaneditor_PreviewLinksCtn_298xI
+  .promotionplaneditor_PreviewLinkCtn_RacQW
+  a {
+  text-decoration: none;
+  color: #fff;
 }
 .promotionplaneditor_CreationDialogCtn_2LmdQ {
   max-width: 600px;

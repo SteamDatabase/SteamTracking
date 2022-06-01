@@ -1431,17 +1431,17 @@
           return "CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response";
         }
       }
-      class R extends f {
+      class L extends f {
         constructor(e = null) {
           super(),
-            R.prototype.client_id || h.a(R.M()),
+            L.prototype.client_id || h.a(L.M()),
             f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
+            L.sm_m ||
+              (L.sm_m = {
+                proto: L,
                 fields: {
                   client_id: {
                     n: 1,
@@ -1457,56 +1457,20 @@
                   code_type: { n: 4, br: h.d.readEnum, bw: h.h.writeEnum },
                 },
               }),
-            R.sm_m
+            L.sm_m
           );
         }
         static MBF() {
-          return R.sm_mbf || (R.sm_mbf = h.e(R.M())), R.sm_mbf;
-        }
-        toObject(e = !1) {
-          return R.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return h.g(R.M(), e, t);
-        }
-        static fromObject(e) {
-          return h.c(R.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new g.BinaryReader(e),
-            r = new R();
-          return R.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return h.b(R.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new g.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          h.f(R.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new g.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request";
-        }
-      }
-      class L extends f {
-        constructor(e = null) {
-          super(), f.initialize(this, e, 0, -1, void 0, null);
+          return L.sm_mbf || (L.sm_mbf = h.e(L.M())), L.sm_mbf;
         }
         toObject(e = !1) {
           return L.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return h.g(L.M(), e, t);
         }
         static fromObject(e) {
-          return new L();
+          return h.c(L.M(), e);
         }
         static deserializeBinary(e) {
           let t = new g.BinaryReader(e),
@@ -1514,16 +1478,52 @@
           return L.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return h.b(L.MBF(), e, t);
         }
         serializeBinary() {
           var e = new g.BinaryWriter();
           return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          h.f(L.M(), e, t);
+        }
         serializeBase64String() {
           var e = new g.BinaryWriter();
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request";
+        }
+      }
+      class R extends f {
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return R.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new R();
+        }
+        static deserializeBinary(e) {
+          let t = new g.BinaryReader(e),
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new g.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new g.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response";
@@ -1788,14 +1788,14 @@
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
               t,
               O,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { ePrivilege: 1 }
             );
           }),
           (e.UpdateAuthSessionWithSteamGuardCode = function (e, t) {
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
               t,
-              L,
+              R,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
@@ -2129,7 +2129,7 @@
           return Object(a.a)(this, void 0, void 0, function* () {
             try {
               const t = 3 === this.m_eStatus || 7 === this.m_eStatus,
-                r = s.b.Init(R);
+                r = s.b.Init(L);
               r.Body().set_client_id(this.m_strClientID),
                 r.Body().set_steamid(this.m_steamid),
                 r.Body().set_code(e),
@@ -2952,7 +2952,7 @@
             { className: Z.a.EnterCodeFromMobile },
             Object(se.f)("#Login_EnterMobileCode")
           ),
-          i.a.createElement(Le, { className: Z.a.AwaitingMobileConfIcon })
+          i.a.createElement(Re, { className: Z.a.AwaitingMobileConfIcon })
         );
       }
       function Me(e) {
@@ -3003,7 +3003,7 @@
           !a && i.a.createElement("div", { className: Z.a.Description }, n)
         );
       }
-      function Re() {
+      function Le() {
         return i.a.createElement(
           Fe,
           { alignItems: "center" },
@@ -3012,10 +3012,10 @@
             { className: Z.a.AwaitingMobileConfText },
             Object(se.f)("#Login_AwaitingMobileConfirmation")
           ),
-          i.a.createElement(Le, { className: Z.a.AwaitingMobileConfIcon })
+          i.a.createElement(Re, { className: Z.a.AwaitingMobileConfIcon })
         );
       }
-      function Le(e) {
+      function Re(e) {
         return i.a.createElement(
           "svg",
           { viewBox: "0 0 55 49", fill: "none", className: e.className },
@@ -3065,7 +3065,7 @@
             Fe,
             { gap: 20 },
             i.a.createElement(Oe, { type: t, accountName: r }),
-            i.a.createElement(Re, null),
+            i.a.createElement(Le, null),
             o
           )
         );

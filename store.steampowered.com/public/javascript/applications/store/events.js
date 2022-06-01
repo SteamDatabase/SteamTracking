@@ -684,22 +684,23 @@
       const ce = r.lazy(() =>
           Promise.all([
             a.e(1),
-            a.e(13),
-            a.e(16),
+            a.e(14),
+            a.e(17),
             a.e(0),
             a.e(2),
             a.e(3),
             a.e(4),
-            a.e(5),
             a.e(6),
+            a.e(5),
             a.e(7),
             a.e(9),
             a.e(10),
-            a.e(8),
-            a.e(14),
-            a.e(12),
             a.e(11),
+            a.e(8),
             a.e(15),
+            a.e(13),
+            a.e(12),
+            a.e(16),
             a.e(20),
           ]).then(a.bind(null, "3fR/"))
         ),
@@ -2484,7 +2485,7 @@
           s.a.createElement(
             "div",
             { className: H.LatestUpdateIcon },
-            s.a.createElement(k.xb, null)
+            s.a.createElement(k.yb, null)
           ),
           s.a.createElement(
             D.e,

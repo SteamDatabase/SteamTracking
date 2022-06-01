@@ -522,6 +522,7 @@ b {
 }
 .partnereventshared_DropDownScroll_31SMP {
   max-height: 400px;
+  min-width: 100px;
   overflow: hidden scroll;
 }
 .partnereventshared_CloseButton_1y6UV {

@@ -252,7 +252,7 @@
             r.a.createElement(
               "div",
               { className: g.a.LoginPanelBackground },
-              r.a.createElement(i.nb, null)
+              r.a.createElement(i.ob, null)
             ),
             r.a.createElement(
               "div",
@@ -491,7 +491,7 @@
             case d.b.TwoFactorCode:
               (a = t.GetTwoFactorCode()),
                 (n = Object(p.f)("#Login_Enter2FA")),
-                (e = r.a.createElement(i.M, null)),
+                (e = r.a.createElement(i.N, null)),
                 (s = Object(p.f)("#Login_Enter2FAHelp"));
               break;
             case d.b.EmailCode:
@@ -506,7 +506,7 @@
                   )
                 )),
                 (s = Object(p.f)("#Login_EnterSteamguard")),
-                (e = r.a.createElement(i.C, null));
+                (e = r.a.createElement(i.D, null));
           }
           return r.a.createElement(
             "div",

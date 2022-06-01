@@ -2998,12 +2998,16 @@ html, body { height:100%; }
 }
 
 .pending_pricing_admin_table th {
-    width: 70px;
-    max-width: 70px;
+    width: 46px;
+    max-width: 46px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: right;
+}
+.pending_pricing_admin_table th.wide {
+    width: 70px;
+    max-width: 70px;
 }
 .pending_pricing_admin_table th.pricing_matrix_note {
     width: 120px;
