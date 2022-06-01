@@ -18554,6 +18554,194 @@ a {
     display: none;
   }
 }
+.dpcroot_DPCHeaderSummer2022League_BVcaX {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  max-height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 10px #370058, 1px 2px 5px #1c002e50;
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX .dpcroot_TextContainer_1g0r7 {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventTitle_2Z6x- {
+  font-size: 38px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  position: absolute;
+  top: 140px;
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventSegment_3yJmW {
+  font-size: 20px;
+  font-weight: 550;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  position: absolute;
+  top: 215px;
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventSubTitle_dVt3A {
+  font-size: 14px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
+  font-weight: 600;
+  position: absolute;
+  top: 250px;
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventStartTitle_QiDaW,
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventEndTitle_2w0W3 {
+  font-size: 14px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 600;
+  width: 400px;
+  left: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventStartTime_1ClVy,
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventEndTime_3B2Aj {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 400px;
+  left: 20px;
+  position: absolute;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2022League_BVcaX
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventStartTime_1ClVy,
+  .dpcroot_DPCHeaderSummer2022League_BVcaX
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventEndTime_3B2Aj {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventStartTitle_QiDaW {
+  top: 140px;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2022League_BVcaX
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventStartTitle_QiDaW {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventStartTime_1ClVy {
+  top: 160px;
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventEndTitle_2w0W3 {
+  top: 220px;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2022League_BVcaX
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventEndTitle_2w0W3 {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventEndTime_3B2Aj {
+  top: 240px;
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventResultsTitle_1ReEx {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 250px;
+  top: 145px;
+  right: 155px;
+  position: absolute;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2022League_BVcaX
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventResultsTitle_1ReEx {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventResultsButton_3yzbY {
+  font-size: 15px;
+  font-weight: 700px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 10px 35px;
+  width: 170px;
+  height: 40px;
+  top: 225px;
+  right: 195px;
+  position: absolute;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2022League_BVcaX
+    .dpcroot_TextContainer_1g0r7
+    .dpcroot_EventResultsButton_3yzbY {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2022League_BVcaX
+  .dpcroot_TextContainer_1g0r7
+  .dpcroot_EventResultsButton_3yzbY:hover {
+  background-color: #ffffff1a;
+}
 .dpcroot_DPCHeaderGenericLeague_3VSU1 {
   width: 100%;
   max-width: 1920px;
