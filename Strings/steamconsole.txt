@@ -681,6 +681,7 @@ swarm_tc_upload
 <src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <work_dir> <appid> <bucketid>
 swarm_shader_download
 <work_dir>
+swarm_shader_prepopulate
 swarm_shader_compile
 <work_dir> <threadCount>
 swarm_shader_upload
@@ -735,10 +736,10 @@ GetBucketManifest[existing precompiled depot] SUCCESS: baseline manifest: %llu s
 DownloadDepot[existing precompiled depot] ERROR %s!
 DownloadDepot[existing precompiled depot] success: %s
 PrepopulatePrecompiledCache ERROR %s
-Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...
 %s_
 %s%d:VP%d_%sprecomp_%s
 W
+Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...
 WritePrecompiledCache returned result '%s'. foz file missing from depot or no full pipelines in it.
 WritePrecompiledCache success for GPU(s): '%s' Driver(s): '%s' CacheType: %d
 ,
@@ -1307,8 +1308,9 @@ j
 @
 @
 0
-0
 Ic
+r
+0
 
 =
 @
