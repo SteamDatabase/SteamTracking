@@ -235,8 +235,8 @@ function SubmitReplyForm( form )
 		var $Dialog = ShowConfirmDialog( 'Ticketmaster', $DialogContents.show(), 'Submit', 'Cancel' )
 		$Dialog.done( function()
 		{
-			var fd = new FormData( $DialogContents.first() );
-			SubmitReplyForm_Internal( form, fd );
+			var strSerialized = $DialogContents.first().serialize();
+			SubmitReplyForm_Internal( form, strSerialized );
 		});
 
 		return;
@@ -265,10 +265,13 @@ function SubmitReplyForm_Internal( form, extraFormData )
 	fd.append( 'reply_body', strReply );
 	if ( extraFormData )
 	{
-        for (var pair of extraFormData.entries()) {
-            fd.append(pair[0], pair[1]);
-        }
-    }
+		var vars = extraFormData.split('&');
+		for (var i = 0; i < vars.length; i++) 
+		{
+			var pair = vars[i].split( '=' );
+			fd.append( decodeURIComponent( pair[0] ), decodeURIComponent( pair[1] ) );
+		}
+	}
 
     // do we have files to upload?
     var $FileList = $Form.find('ul.attached_file_list').children();
