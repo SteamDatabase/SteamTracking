@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7289877";
+var CLSTAMP = "7290076";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -34318,12 +34318,12 @@ var CLSTAMP = "7289877";
                 strLabel: "#dpc_event_chinafinals22",
                 strLabelSub: "#dpc_event_chinafinals22_dates",
               },
-              { value: Ia.e.INTERNATIONAL_2022, strLabel: "#dpc_event_ti11" },
               {
                 value: Ia.e.SUMMER_2022_LEAGUE,
                 strLabel: "#dpc_event_summer22",
                 strLabelSub: "#dpc_event_summer22_dates",
               },
+              { value: Ia.e.INTERNATIONAL_2022, strLabel: "#dpc_event_ti11" },
             ];
           return c.a.createElement(
             "div",
