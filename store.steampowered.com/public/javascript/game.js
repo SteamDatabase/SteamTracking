@@ -1938,7 +1938,7 @@ function ShareDialogCopyToClipboard()
 	}
 
 	// report the result
-	$J('#shareDialogResult').text( $res ? 'Store link copied to the clipboard' : 'Failed copying store link to the clipboard');
+	$J('#shareDialogResult').text( $res ? 'Link copied' : 'Failed copying store link to the clipboard');
 
 	// clear the selection
 	document.getSelection().removeAllRanges();
