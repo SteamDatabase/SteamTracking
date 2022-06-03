@@ -5736,7 +5736,7 @@
       /*!***************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/steammessages/enums_pb.ts ***!
   \***************************************************************************************************/
-      /*! exports provided: EPublishedFileQueryTypeToString, EPublishedFileInappropriateProviderToString, EPublishedFileInappropriateResultToString, EPersonaStateFlagToString, EContentCheckProviderToString, EProfileCustomizationTypeToString, EPublishedFileStorageSystemToString, ECloudStoragePersistStateToString, ESDCardFormatStageToString, EBluetoothDeviceTypeToString, ESystemServiceStateToString, EGraphicsPerfOverlayLevelToString, EGPUPerformanceLevelToString, EScalingFilterToString, ECPUGovernorToString, EUpdaterTypeToString, EUpdaterStateToString, EStorageBlockContentTypeToString, EStorageBlockFileSystemTypeToString, ESteamDeckCompatibilityCategoryToString, ESteamDeckCompatibilityResultDisplayTypeToString, EACStateToString, EBatteryStateToString, EOSBranchToString, ECommunityItemClassToString, ESteamDeckCompatibilityFeedbackToString, EProvideDeckFeedbackPreferenceToString, ETouchGestureToString */
+      /*! exports provided: EPublishedFileQueryTypeToString, EPublishedFileInappropriateProviderToString, EPublishedFileInappropriateResultToString, EPersonaStateFlagToString, EContentCheckProviderToString, EProfileCustomizationTypeToString, EPublishedFileStorageSystemToString, ECloudStoragePersistStateToString, ESDCardFormatStageToString, ESystemFanControlModeToString, EBluetoothDeviceTypeToString, ESystemServiceStateToString, EGraphicsPerfOverlayLevelToString, EGPUPerformanceLevelToString, EScalingFilterToString, ECPUGovernorToString, EUpdaterTypeToString, EUpdaterStateToString, EStorageBlockContentTypeToString, EStorageBlockFileSystemTypeToString, ESteamDeckCompatibilityCategoryToString, ESteamDeckCompatibilityResultDisplayTypeToString, EACStateToString, EBatteryStateToString, EOSBranchToString, ECommunityItemClassToString, ESteamDeckCompatibilityFeedbackToString, EProvideDeckFeedbackPreferenceToString, ETouchGestureToString */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -5801,6 +5801,13 @@
           "ESDCardFormatStageToString",
           function () {
             return ESDCardFormatStageToString;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "ESystemFanControlModeToString",
+          function () {
+            return ESystemFanControlModeToString;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -6212,6 +6219,21 @@
           }
           return "unknown ESDCardFormatStage ( " + eSDCardFormatStage + " )";
         }
+        function ESystemFanControlModeToString(eSystemFanControlMode) {
+          if (true) {
+            switch (eSystemFanControlMode) {
+              case 0:
+                return "k_SystemFanControlMode_Invalid";
+              case 1:
+                return "k_SystemFanControlMode_Disabled";
+              case 2:
+                return "k_SystemFanControlMode_Default";
+            }
+          }
+          return (
+            "unknown ESystemFanControlMode ( " + eSystemFanControlMode + " )"
+          );
+        }
         function EBluetoothDeviceTypeToString(eBluetoothDeviceType) {
           if (true) {
             switch (eBluetoothDeviceType) {
@@ -6313,6 +6335,8 @@
                 return "k_EScalingFilter_Integer";
               case 4:
                 return "k_EScalingFilter_Linear";
+              case 5:
+                return "k_EScalingFilter_NIS";
             }
           }
           return "unknown EScalingFilter ( " + eScalingFilter + " )";

@@ -632,7 +632,7 @@
           return O
             ? r.a.createElement(
                 ne,
-                { gap: 18, className: f.a.EmbeddedRoot },
+                { gap: 36, className: f.a.EmbeddedRoot },
                 r.a.createElement(se, { className: f.a.HeaderLogo }),
                 e,
                 r.a.createElement(
@@ -917,11 +917,12 @@
                 r.a.createElement(
                   ne,
                   { alignItems: "center", gap: 2 },
-                  r.a.createElement(
-                    U,
-                    null,
-                    E && Object(N.g)("#Login_IncorrectSteamGuard")
-                  ),
+                  E &&
+                    r.a.createElement(
+                      U,
+                      null,
+                      Object(N.g)("#Login_IncorrectSteamGuard")
+                    ),
                   r.a.createElement(oe, {
                     value: m,
                     onChange: (e) => {
@@ -1010,7 +1011,7 @@
       function K() {
         return r.a.createElement(
           ne,
-          { alignItems: "center" },
+          { gap: 10, alignItems: "center" },
           r.a.createElement(
             "div",
             { className: f.a.AwaitingMobileConfText },
@@ -1049,9 +1050,13 @@
           ),
           l = o
             ? r.a.createElement(
-                ee,
-                { align: "center", onClick: a },
-                Object(N.g)("#Login_EnterCodeInstead")
+                "div",
+                { style: { paddingBottom: "20px" } },
+                r.a.createElement(
+                  ee,
+                  { align: "center", onClick: a },
+                  Object(N.g)("#Login_EnterCodeInstead")
+                )
               )
             : r.a.createElement(
                 "div",
@@ -1067,10 +1072,10 @@
           },
           r.a.createElement(
             ne,
-            { gap: 20 },
-            r.a.createElement(J, { type: t, accountName: n }),
+            { gap: 16 },
             r.a.createElement(K, null),
-            l
+            l,
+            r.a.createElement(J, { type: t, accountName: n })
           )
         );
       }
@@ -1234,7 +1239,7 @@
         return r.a.createElement(
           ne,
           {
-            gap: 18,
+            gap: 32,
             className: Object(s.a)(
               f.a.StandardLayout,
               i && f.a.Embedded,
