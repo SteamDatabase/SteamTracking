@@ -137,7 +137,7 @@
           if (!e)
             return (
               console.log("Login timeout"),
-              void (this.m_strErrorMessage = Object(i.f)(
+              void (this.m_strErrorMessage = Object(i.g)(
                 "#ConnectionTrouble_FailedToConnect"
               ))
             );
@@ -157,7 +157,7 @@
                 ? (this.UpdateCaptchaURL("-1"),
                   this.m_eCurrentStep != l.TwoFactorCode ||
                     this.m_strErrorMessage ||
-                    ((this.m_strErrorMessage = Object(i.f)(
+                    ((this.m_strErrorMessage = Object(i.g)(
                       "#MobileLogin_IncorrectSteamGuard"
                     )),
                     (this.m_eSteamGuardCodeError = m.InvalidCode),
@@ -172,7 +172,7 @@
                     (this.m_userFields.emailSteamID = e.emailsteamid),
                   this.m_eCurrentStep != l.EmailCode ||
                     this.m_strErrorMessage ||
-                    ((this.m_strErrorMessage = Object(i.f)(
+                    ((this.m_strErrorMessage = Object(i.g)(
                       "#MobileLogin_IncorrectSteamGuard"
                     )),
                     (this.m_eSteamGuardCodeError = m.InvalidCode),
@@ -340,14 +340,14 @@
               r.a.createElement(
                 "div",
                 { className: g.a.SigninTitle },
-                Object(p.f)("#Login_SignIn")
+                Object(p.g)("#Login_SignIn")
               ),
               r.a.createElement(
                 "form",
                 { className: g.a.AccountPasswordForm, onSubmit: this.OnSubmit },
                 r.a.createElement(o.z, {
                   className: Object(c.a)(g.a.AccountNameLabel, e),
-                  label: Object(p.f)("#Login_AccountName"),
+                  label: Object(p.g)("#Login_AccountName"),
                   type: "text",
                   value: a.GetUserName(),
                   focusOnMount: !0,
@@ -357,7 +357,7 @@
                 r.a.createElement(o.z, {
                   bIsPassword: !0,
                   className: Object(c.a)(g.a.PasswordDots, t),
-                  label: Object(p.f)("#Login_Password"),
+                  label: Object(p.g)("#Login_Password"),
                   type: "password",
                   autoComplete: "off",
                   maxLength: 64,
@@ -367,7 +367,7 @@
                 }),
                 r.a.createElement(o.g, {
                   className: g.a.RememberMeCheck,
-                  label: Object(p.f)("#Login_RememberMe"),
+                  label: Object(p.g)("#Login_RememberMe"),
                   disabled: !1,
                   onChange: () => this.OnChangeRememberPass,
                   checked: a.GetRememberPassword(),
@@ -376,13 +376,13 @@
                 r.a.createElement(
                   o.F,
                   { disabled: this.props.manager.IsRequestInFlight() },
-                  Object(p.f)("#Login_SignIn").toLocaleUpperCase()
+                  Object(p.g)("#Login_SignIn").toLocaleUpperCase()
                 )
               ),
               r.a.createElement(
                 "a",
                 { className: g.a.NeedHelpLink, href: C.d.HELP_BASE_URL },
-                Object(p.f)("#Login_ForgotPassword")
+                Object(p.g)("#Login_ForgotPassword")
               ),
               r.a.createElement("div", { className: g.a.LoginCreateSeperator }),
               r.a.createElement(
@@ -391,7 +391,7 @@
                 r.a.createElement(
                   "div",
                   { className: g.a.SteamUpsell },
-                  Object(p.f)("#Login_NoSteamAccount")
+                  Object(p.g)("#Login_NoSteamAccount")
                 ),
                 r.a.createElement(
                   "div",
@@ -399,7 +399,7 @@
                   r.a.createElement(
                     "a",
                     { href: `${C.d.STORE_BASE_URL}join/` },
-                    Object(p.f)("#Login_CreateAccount")
+                    Object(p.g)("#Login_CreateAccount")
                   )
                 )
               )
@@ -450,7 +450,7 @@
               r.a.createElement(
                 "div",
                 { className: g.a.ErrorMessage },
-                Object(p.f)("#Login_CaptchaVerification")
+                Object(p.g)("#Login_CaptchaVerification")
               )
             ),
             r.a.createElement(
@@ -462,7 +462,7 @@
                   className: g.a.RefreshCaptchaText,
                   onClick: this.RefreshCaptcha,
                 },
-                Object(p.f)("#Login_RefreshCaptcha")
+                Object(p.g)("#Login_RefreshCaptcha")
               )
             )
           );
@@ -490,13 +490,13 @@
           switch (this.props.authtype) {
             case d.b.TwoFactorCode:
               (a = t.GetTwoFactorCode()),
-                (n = Object(p.f)("#Login_Enter2FA")),
+                (n = Object(p.g)("#Login_Enter2FA")),
                 (e = r.a.createElement(i.N, null)),
-                (s = Object(p.f)("#Login_Enter2FAHelp"));
+                (s = Object(p.g)("#Login_Enter2FAHelp"));
               break;
             case d.b.EmailCode:
               (a = t.GetEmailAuthCode()),
-                (n = Object(p.n)(
+                (n = Object(p.o)(
                   "#Login_SentSteamguard",
                   r.a.createElement(
                     "span",
@@ -505,13 +505,13 @@
                     t.GetEmailDomain()
                   )
                 )),
-                (s = Object(p.f)("#Login_EnterSteamguard")),
+                (s = Object(p.g)("#Login_EnterSteamguard")),
                 (e = r.a.createElement(i.D, null));
           }
           return r.a.createElement(
             "div",
             { className: g.a.AuthenticationPanel },
-            r.a.createElement(o.C, null, Object(p.f)("#Login_SigningIn")),
+            r.a.createElement(o.C, null, Object(p.g)("#Login_SigningIn")),
             r.a.createElement(
               "div",
               { className: g.a.SigningInAccountName },
@@ -538,7 +538,7 @@
                 r.a.createElement(
                   o.F,
                   { disabled: this.props.manager.IsRequestInFlight() },
-                  Object(p.f)("#Login_SteamguardSubmit").toLocaleUpperCase()
+                  Object(p.g)("#Login_SteamguardSubmit").toLocaleUpperCase()
                 )
               )
             ),

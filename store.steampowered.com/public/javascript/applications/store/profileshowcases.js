@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [93],
+  [122],
   {
     "6xb8": function (e, a) {
       e.exports =
@@ -138,8 +138,8 @@
             c.a.createElement(
               d.b,
               {
-                title: Object(g.f)("#ProfileShowcases_Upgrades_Title"),
-                subtitle: Object(g.f)("#ProfileShowcases_Upgrades_Subtitle"),
+                title: Object(g.g)("#ProfileShowcases_Upgrades_Title"),
+                subtitle: Object(g.g)("#ProfileShowcases_Upgrades_Subtitle"),
               },
               l
             )
@@ -184,8 +184,8 @@
             c.a.createElement(
               d.b,
               {
-                title: Object(g.f)("#ProfileShowcases_Slots_Title"),
-                subtitle: Object(g.f)("#ProfileShowcases_Slots_Subtitle"),
+                title: Object(g.g)("#ProfileShowcases_Slots_Title"),
+                subtitle: Object(g.g)("#ProfileShowcases_Slots_Subtitle"),
               },
               r
             )
@@ -213,7 +213,7 @@
                 "div",
                 null,
                 c.a.createElement(r.f, {
-                  title: Object(g.f)("#ShopPageTitle_ProfileShowcases"),
+                  title: Object(g.g)("#ShopPageTitle_ProfileShowcases"),
                 })
               ),
               c.a.createElement(D, null),

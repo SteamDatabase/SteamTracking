@@ -18,13 +18,81 @@
         l = r("2vnA"),
         _ = (r("msu0"), r("TqgT"), r("/Q1a")),
         m = r("hRO2"),
-        f = r("3dpo");
-      const u = m.Message;
-      class d extends u {
+        u = r("3dpo");
+      const g = m.Message;
+      class f extends g {
         constructor(e = null) {
           super(),
-            d.prototype.version || f.a(d.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            f.prototype.version || u.a(f.M()),
+            g.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            f.sm_m ||
+              (f.sm_m = {
+                proto: f,
+                fields: {
+                  version: { n: 1, br: u.d.readEnum, bw: u.h.writeEnum },
+                  preference_state: {
+                    n: 2,
+                    br: u.d.readEnum,
+                    bw: u.h.writeEnum,
+                  },
+                  content_customization: { n: 3, c: d },
+                  valve_analytics: { n: 4, c: y },
+                  third_party_analytics: { n: 5, c: b },
+                  third_party_content: { n: 6, c: h },
+                  utm_enabled: {
+                    n: 7,
+                    d: !0,
+                    br: u.d.readBool,
+                    bw: u.h.writeBool,
+                  },
+                },
+              }),
+            f.sm_m
+          );
+        }
+        static MBF() {
+          return f.sm_mbf || (f.sm_mbf = u.e(f.M())), f.sm_mbf;
+        }
+        toObject(e = !1) {
+          return f.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return u.g(f.M(), e, t);
+        }
+        static fromObject(e) {
+          return u.c(f.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new f();
+          return f.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return u.b(f.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          u.f(f.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences";
+        }
+      }
+      class d extends g {
+        constructor(e = null) {
+          super(),
+            d.prototype.recentapps || u.a(d.M()),
+            g.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -32,38 +100,23 @@
               (d.sm_m = {
                 proto: d,
                 fields: {
-                  version: { n: 1, br: f.d.readEnum, bw: f.h.writeEnum },
-                  preference_state: {
-                    n: 2,
-                    br: f.d.readEnum,
-                    bw: f.h.writeEnum,
-                  },
-                  content_customization: { n: 3, c: y },
-                  valve_analytics: { n: 4, c: b },
-                  third_party_analytics: { n: 5, c: h },
-                  third_party_content: { n: 6, c: g },
-                  utm_enabled: {
-                    n: 7,
-                    d: !0,
-                    br: f.d.readBool,
-                    bw: f.h.writeBool,
-                  },
+                  recentapps: { n: 1, br: u.d.readBool, bw: u.h.writeBool },
                 },
               }),
             d.sm_m
           );
         }
         static MBF() {
-          return d.sm_mbf || (d.sm_mbf = f.e(d.M())), d.sm_mbf;
+          return d.sm_mbf || (d.sm_mbf = u.e(d.M())), d.sm_mbf;
         }
         toObject(e = !1) {
           return d.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.g(d.M(), e, t);
+          return u.g(d.M(), e, t);
         }
         static fromObject(e) {
-          return f.c(d.M(), e);
+          return u.c(d.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
@@ -71,28 +124,28 @@
           return d.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.b(d.MBF(), e, t);
+          return u.b(d.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
           return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          f.f(d.M(), e, t);
+          u.f(d.M(), e, t);
         }
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountPrivacyCookiePreferences";
+          return "CAccountPrivacyCookiePreferences_ContentCustomization";
         }
       }
-      class y extends u {
+      class y extends g {
         constructor(e = null) {
           super(),
-            y.prototype.recentapps || f.a(y.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            y.prototype.product_impressions_tracking || u.a(y.M()),
+            g.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -100,23 +153,27 @@
               (y.sm_m = {
                 proto: y,
                 fields: {
-                  recentapps: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
+                  product_impressions_tracking: {
+                    n: 1,
+                    br: u.d.readBool,
+                    bw: u.h.writeBool,
+                  },
                 },
               }),
             y.sm_m
           );
         }
         static MBF() {
-          return y.sm_mbf || (y.sm_mbf = f.e(y.M())), y.sm_mbf;
+          return y.sm_mbf || (y.sm_mbf = u.e(y.M())), y.sm_mbf;
         }
         toObject(e = !1) {
           return y.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.g(y.M(), e, t);
+          return u.g(y.M(), e, t);
         }
         static fromObject(e) {
-          return f.c(y.M(), e);
+          return u.c(y.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
@@ -124,28 +181,28 @@
           return y.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.b(y.MBF(), e, t);
+          return u.b(y.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
           return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          f.f(y.M(), e, t);
+          u.f(y.M(), e, t);
         }
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountPrivacyCookiePreferences_ContentCustomization";
+          return "CAccountPrivacyCookiePreferences_ValveAnalytics";
         }
       }
-      class b extends u {
+      class b extends g {
         constructor(e = null) {
           super(),
-            b.prototype.product_impressions_tracking || f.a(b.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            b.prototype.google_analytics || u.a(b.M()),
+            g.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -153,10 +210,10 @@
               (b.sm_m = {
                 proto: b,
                 fields: {
-                  product_impressions_tracking: {
+                  google_analytics: {
                     n: 1,
-                    br: f.d.readBool,
-                    bw: f.h.writeBool,
+                    br: u.d.readBool,
+                    bw: u.h.writeBool,
                   },
                 },
               }),
@@ -164,16 +221,16 @@
           );
         }
         static MBF() {
-          return b.sm_mbf || (b.sm_mbf = f.e(b.M())), b.sm_mbf;
+          return b.sm_mbf || (b.sm_mbf = u.e(b.M())), b.sm_mbf;
         }
         toObject(e = !1) {
           return b.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.g(b.M(), e, t);
+          return u.g(b.M(), e, t);
         }
         static fromObject(e) {
-          return f.c(b.M(), e);
+          return u.c(b.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
@@ -181,28 +238,28 @@
           return b.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.b(b.MBF(), e, t);
+          return u.b(b.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          f.f(b.M(), e, t);
+          u.f(b.M(), e, t);
         }
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountPrivacyCookiePreferences_ValveAnalytics";
+          return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
         }
       }
-      class h extends u {
+      class h extends g {
         constructor(e = null) {
           super(),
-            h.prototype.google_analytics || f.a(h.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            h.prototype.youtube || u.a(h.M()),
+            g.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -210,27 +267,26 @@
               (h.sm_m = {
                 proto: h,
                 fields: {
-                  google_analytics: {
-                    n: 1,
-                    br: f.d.readBool,
-                    bw: f.h.writeBool,
-                  },
+                  youtube: { n: 1, br: u.d.readBool, bw: u.h.writeBool },
+                  vimeo: { n: 2, br: u.d.readBool, bw: u.h.writeBool },
+                  sketchfab: { n: 3, br: u.d.readBool, bw: u.h.writeBool },
+                  twitter: { n: 4, br: u.d.readBool, bw: u.h.writeBool },
                 },
               }),
             h.sm_m
           );
         }
         static MBF() {
-          return h.sm_mbf || (h.sm_mbf = f.e(h.M())), h.sm_mbf;
+          return h.sm_mbf || (h.sm_mbf = u.e(h.M())), h.sm_mbf;
         }
         toObject(e = !1) {
           return h.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.g(h.M(), e, t);
+          return u.g(h.M(), e, t);
         }
         static fromObject(e) {
-          return f.c(h.M(), e);
+          return u.c(h.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
@@ -238,103 +294,47 @@
           return h.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.b(h.MBF(), e, t);
+          return u.b(h.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
           return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          f.f(h.M(), e, t);
+          u.f(h.M(), e, t);
         }
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
-        }
-      }
-      class g extends u {
-        constructor(e = null) {
-          super(),
-            g.prototype.youtube || f.a(g.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            g.sm_m ||
-              (g.sm_m = {
-                proto: g,
-                fields: {
-                  youtube: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
-                  vimeo: { n: 2, br: f.d.readBool, bw: f.h.writeBool },
-                  sketchfab: { n: 3, br: f.d.readBool, bw: f.h.writeBool },
-                  twitter: { n: 4, br: f.d.readBool, bw: f.h.writeBool },
-                },
-              }),
-            g.sm_m
-          );
-        }
-        static MBF() {
-          return g.sm_mbf || (g.sm_mbf = f.e(g.M())), g.sm_mbf;
-        }
-        toObject(e = !1) {
-          return g.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return f.g(g.M(), e, t);
-        }
-        static fromObject(e) {
-          return f.c(g.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new g();
-          return g.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return f.b(g.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          f.f(g.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
         }
       }
-      class p extends u {
+      class p extends g {
         constructor(e = null) {
           super(),
-            p.prototype.preferences || f.a(p.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            p.prototype.preferences || u.a(p.M()),
+            g.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             p.sm_m ||
-              (p.sm_m = { proto: p, fields: { preferences: { n: 1, c: d } } }),
+              (p.sm_m = { proto: p, fields: { preferences: { n: 1, c: f } } }),
             p.sm_m
           );
         }
         static MBF() {
-          return p.sm_mbf || (p.sm_mbf = f.e(p.M())), p.sm_mbf;
+          return p.sm_mbf || (p.sm_mbf = u.e(p.M())), p.sm_mbf;
         }
         toObject(e = !1) {
           return p.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.g(p.M(), e, t);
+          return u.g(p.M(), e, t);
         }
         static fromObject(e) {
-          return f.c(p.M(), e);
+          return u.c(p.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
@@ -342,14 +342,14 @@
           return p.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.b(p.MBF(), e, t);
+          return u.b(p.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
           return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          f.f(p.M(), e, t);
+          u.f(p.M(), e, t);
         }
         serializeBase64String() {
           var e = new m.BinaryWriter();
@@ -507,8 +507,8 @@
                     : e.success)
               )
                 window.ShowAlertDialog(
-                  Object(k.f)("#CookiePref_Error"),
-                  Object(k.f)("#CookiePref_ErrorNotSaved")
+                  Object(k.g)("#CookiePref_Error"),
+                  Object(k.g)("#CookiePref_ErrorNotSaved")
                 );
               else if (
                 1 ==
@@ -523,8 +523,8 @@
             } catch (e) {
               0,
                 window.ShowAlertDialog(
-                  Object(k.f)("#CookiePref_Error"),
-                  Object(k.f)("#CookiePref_ErrorNotSaved")
+                  Object(k.g)("#CookiePref_Error"),
+                  Object(k.g)("#CookiePref_ErrorNotSaved")
                 );
             }
           });
@@ -574,7 +574,7 @@
               i.a.createElement(
                 "div",
                 null,
-                Object(k.f)("#CookiePref_OptionalCookies_Title")
+                Object(k.g)("#CookiePref_OptionalCookies_Title")
               )
             ),
             i.a.createElement(
@@ -592,7 +592,7 @@
                     ),
                     onClick: a,
                   },
-                  Object(k.f)("#CookiePref_RejectAll")
+                  Object(k.g)("#CookiePref_RejectAll")
                 ),
                 i.a.createElement(
                   S.e,
@@ -603,7 +603,7 @@
                     ),
                     onClick: r,
                   },
-                  Object(k.f)("#CookiePref_AcceptAll")
+                  Object(k.g)("#CookiePref_AcceptAll")
                 )
               ),
               i.a.createElement(M, { settings: e }),
@@ -622,7 +622,7 @@
               i.a.createElement(
                 "div",
                 null,
-                Object(k.f)("#CookiePref_TechnicallyNeccesary_Title")
+                Object(k.g)("#CookiePref_TechnicallyNeccesary_Title")
               )
             ),
             i.a.createElement(
@@ -631,7 +631,7 @@
               i.a.createElement(
                 "p",
                 null,
-                Object(k.f)("#CookiePref_TechnicallyNeccesary_Desc")
+                Object(k.g)("#CookiePref_TechnicallyNeccesary_Desc")
               ),
               i.a.createElement(
                 "div",
@@ -642,12 +642,12 @@
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryTitle },
-                    Object(k.f)("#CookiePref_SessionID_Title")
+                    Object(k.g)("#CookiePref_SessionID_Title")
                   ),
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryDesc },
-                    Object(k.f)("#CookiePref_SessionID_Desc")
+                    Object(k.g)("#CookiePref_SessionID_Desc")
                   )
                 ),
                 i.a.createElement(
@@ -656,12 +656,12 @@
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryTitle },
-                    Object(k.f)("#CookiePref_ShoppingCart_Title")
+                    Object(k.g)("#CookiePref_ShoppingCart_Title")
                   ),
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryDesc },
-                    Object(k.f)("#CookiePref_ShoppingCart_Desc")
+                    Object(k.g)("#CookiePref_ShoppingCart_Desc")
                   )
                 ),
                 i.a.createElement(
@@ -670,12 +670,12 @@
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryTitle },
-                    Object(k.f)("#CookiePref_SteamCountry_Title")
+                    Object(k.g)("#CookiePref_SteamCountry_Title")
                   ),
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryDesc },
-                    Object(k.f)("#CookiePref_SteamCountry_Desc")
+                    Object(k.g)("#CookiePref_SteamCountry_Desc")
                   )
                 ),
                 i.a.createElement(
@@ -684,12 +684,12 @@
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryTitle },
-                    Object(k.f)("#CookiePref_Timezone_Title")
+                    Object(k.g)("#CookiePref_Timezone_Title")
                   ),
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryDesc },
-                    Object(k.f)("#CookiePref_Timezone_Desc")
+                    Object(k.g)("#CookiePref_Timezone_Desc")
                   )
                 ),
                 i.a.createElement(
@@ -698,12 +698,12 @@
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryTitle },
-                    Object(k.f)("#CookiePref_BirthTime_Title")
+                    Object(k.g)("#CookiePref_BirthTime_Title")
                   ),
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryDesc },
-                    Object(k.f)("#CookiePref_BirthTime_Desc")
+                    Object(k.g)("#CookiePref_BirthTime_Desc")
                   )
                 ),
                 i.a.createElement(
@@ -712,12 +712,12 @@
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryTitle },
-                    Object(k.f)("#CookiePref_Login_Title")
+                    Object(k.g)("#CookiePref_Login_Title")
                   ),
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryDesc },
-                    Object(k.f)("#CookiePref_Login_Desc")
+                    Object(k.g)("#CookiePref_Login_Desc")
                   )
                 ),
                 i.a.createElement(
@@ -726,12 +726,12 @@
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryTitle },
-                    Object(k.f)("#CookiePref_Language_Title")
+                    Object(k.g)("#CookiePref_Language_Title")
                   ),
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryDesc },
-                    Object(k.f)("#CookiePref_Language_Desc")
+                    Object(k.g)("#CookiePref_Language_Desc")
                   )
                 ),
                 i.a.createElement(
@@ -740,12 +740,12 @@
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryTitle },
-                    Object(k.f)("#CookiePref_CookieSettings_Title")
+                    Object(k.g)("#CookiePref_CookieSettings_Title")
                   ),
                   i.a.createElement(
                     "span",
                     { className: T.NecessaryDesc },
-                    Object(k.f)("#CookiePref_CookieSettings_Desc")
+                    Object(k.g)("#CookiePref_CookieSettings_Desc")
                   )
                 )
               )
@@ -761,7 +761,7 @@
               i.a.createElement(
                 "div",
                 null,
-                Object(k.f)("#PrivacySettings_Marketing_Header")
+                Object(k.g)("#PrivacySettings_Marketing_Header")
               )
             ),
             i.a.createElement(
@@ -786,18 +786,18 @@
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#CookiePref_Content_Title")
+                Object(k.g)("#CookiePref_Content_Title")
               ),
               i.a.createElement(
                 "p",
                 { className: T.SectionDescription },
-                Object(k.f)("#CookiePref_Content_Desc")
+                Object(k.g)("#CookiePref_Content_Desc")
               ),
               i.a.createElement(v.J, {
                 onChange: r,
-                label: Object(k.f)("#CookiePref_Content_ToggleTitle"),
+                label: Object(k.g)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
-                description: Object(k.f)("#CookiePref_Content_ToggleDesc"),
+                description: Object(k.g)("#CookiePref_Content_ToggleDesc"),
               })
             )
           );
@@ -816,18 +816,18 @@
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#CookiePref_ValveAnalytics_Title")
+                Object(k.g)("#CookiePref_ValveAnalytics_Title")
               ),
               i.a.createElement(
                 "p",
                 { className: T.SectionDescription },
-                Object(k.f)("#CookiePref_ValveAnalytics_Desc")
+                Object(k.g)("#CookiePref_ValveAnalytics_Desc")
               ),
               i.a.createElement(v.J, {
                 onChange: r,
-                label: Object(k.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
+                label: Object(k.g)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
-                description: Object(k.f)(
+                description: Object(k.g)(
                   "#CookiePref_ValveAnalytics_ToggleDesc"
                 ),
               })
@@ -848,18 +848,18 @@
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#CookiePref_GoogleAnalytics_Title")
+                Object(k.g)("#CookiePref_GoogleAnalytics_Title")
               ),
               i.a.createElement(
                 "p",
                 { className: T.SectionDescription },
-                Object(k.f)("#CookiePref_GoogleAnalytics_Desc")
+                Object(k.g)("#CookiePref_GoogleAnalytics_Desc")
               ),
               i.a.createElement(v.J, {
                 onChange: r,
-                label: Object(k.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
+                label: Object(k.g)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
-                description: Object(k.f)(
+                description: Object(k.g)(
                   "#CookiePref_GoogleAnalytics_ToggleDesc"
                 ),
               })
@@ -886,30 +886,30 @@
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#CookiePref_ThirdParty_Title")
+                Object(k.g)("#CookiePref_ThirdParty_Title")
               ),
               i.a.createElement(
                 "p",
                 { className: T.SectionDescription },
-                Object(k.f)("#CookiePref_ThirdParty_Desc")
+                Object(k.g)("#CookiePref_ThirdParty_Desc")
               ),
               i.a.createElement(v.J, {
                 onChange: r,
-                label: Object(k.f)("#CookiePref_YouTube_Title"),
+                label: Object(k.g)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
-                description: Object(k.f)("#CookiePref_YouTube_Desc"),
+                description: Object(k.g)("#CookiePref_YouTube_Desc"),
               }),
               i.a.createElement(v.J, {
                 onChange: a,
-                label: Object(k.f)("#CookiePref_Vimeo_Title"),
+                label: Object(k.g)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
-                description: Object(k.f)("#CookiePref_Vimeo_Desc"),
+                description: Object(k.g)("#CookiePref_Vimeo_Desc"),
               }),
               i.a.createElement(v.J, {
                 onChange: n,
-                label: Object(k.f)("#CookiePref_Sketchfab_Title"),
+                label: Object(k.g)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
-                description: Object(k.f)("#CookiePref_Sketchfab_Desc"),
+                description: Object(k.g)("#CookiePref_Sketchfab_Desc"),
               })
             )
           );
@@ -928,18 +928,18 @@
               i.a.createElement(
                 "h2",
                 null,
-                Object(k.f)("#PrivacySettings_Marketing_Title")
+                Object(k.g)("#PrivacySettings_Marketing_Title")
               ),
               i.a.createElement(
                 "p",
                 { className: T.SectionDescription },
-                Object(k.f)("#PrivacySettings_Marketing_Desc")
+                Object(k.g)("#PrivacySettings_Marketing_Desc")
               ),
               i.a.createElement(v.J, {
                 onChange: r,
-                label: Object(k.f)("#PrivacySettings_UTM_ToggleLabel"),
+                label: Object(k.g)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
-                description: Object(k.f)("#PrivacySettings_UTM_ToggleDesc"),
+                description: Object(k.g)("#PrivacySettings_UTM_ToggleDesc"),
               })
             )
           );

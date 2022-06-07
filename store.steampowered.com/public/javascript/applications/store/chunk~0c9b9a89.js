@@ -850,13 +850,13 @@
               disabled: e.bOKDisabled,
               autoFocus: "primary" == e.focusButton,
             },
-            e.strOKText || Object(u.f)("#Button_Confirm"),
+            e.strOKText || Object(u.g)("#Button_Confirm"),
             " "
           ),
           o.createElement(
             P,
             { onClick: e.onCancel, autoFocus: "secondary" == e.focusButton },
-            e.strCancelText || Object(u.f)("#Button_Cancel")
+            e.strCancelText || Object(u.g)("#Button_Cancel")
           )
         );
       }
@@ -867,19 +867,19 @@
           o.createElement(
             B,
             { onClick: e.onOK, disabled: e.bOKDisabled },
-            e.strOKText || Object(u.f)("#Button_Confirm"),
+            e.strOKText || Object(u.g)("#Button_Confirm"),
             " "
           ),
           o.createElement(
             B,
             { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
-            e.strUpdateText || Object(u.f)("#Button_Update"),
+            e.strUpdateText || Object(u.g)("#Button_Update"),
             " "
           ),
           o.createElement(
             P,
             { onClick: e.onCancel },
-            e.strCancelText || Object(u.f)("#Button_Cancel")
+            e.strCancelText || Object(u.g)("#Button_Cancel")
           )
         );
       }
@@ -1155,7 +1155,7 @@
                             "DialogToggleField_Option Off" +
                             (this.checked ? "" : " Active"),
                         },
-                        Object(u.f)("#Dialog_Off")
+                        Object(u.g)("#Dialog_Off")
                       ),
                       o.createElement(
                         "div",
@@ -1164,7 +1164,7 @@
                             "DialogToggleField_Option On" +
                             (this.checked ? " Active" : ""),
                         },
-                        Object(u.f)("#Dialog_On")
+                        Object(u.g)("#Dialog_On")
                       )
                     )
                   )
@@ -1399,7 +1399,7 @@
                       className: "DialogInput_CopyAction Primary",
                       onClick: this.OnCopyClick,
                     },
-                    Object(u.f)("#Button_CopyLink")
+                    Object(u.g)("#Button_CopyLink")
                   ),
                   o.createElement(
                     "div",
@@ -1452,7 +1452,7 @@
                         "div",
                         null,
                         " ",
-                        Object(u.f)("#Input_Error_NumberTooSmall"),
+                        Object(u.g)("#Input_Error_NumberTooSmall"),
                         " "
                       )
                     : null,
@@ -1461,7 +1461,7 @@
                         "div",
                         null,
                         " ",
-                        Object(u.f)("#Input_Error_NumberTooLarge"),
+                        Object(u.g)("#Input_Error_NumberTooLarge"),
                         " "
                       )
                     : null,
@@ -1470,7 +1470,7 @@
                         "div",
                         null,
                         " ",
-                        Object(u.f)("#Input_Error_MustBeURL"),
+                        Object(u.g)("#Input_Error_MustBeURL"),
                         " "
                       )
                     : null,
@@ -1479,7 +1479,7 @@
                         "div",
                         null,
                         " ",
-                        Object(u.f)("#Input_Error_MustBeEmail"),
+                        Object(u.g)("#Input_Error_MustBeEmail"),
                         " "
                       )
                     : null,
@@ -1488,7 +1488,7 @@
                         "div",
                         null,
                         " ",
-                        Object(u.f)("#Input_Error_MustBeNumber"),
+                        Object(u.g)("#Input_Error_MustBeNumber"),
                         " "
                       )
                     : null
@@ -3348,7 +3348,7 @@
           {
             className: n,
             onOptionsButton: c,
-            onOptionsActionDescription: Object(u.f)(
+            onOptionsActionDescription: Object(u.g)(
               r ? "#Login_HidePassword" : "#Login_ShowPassword"
             ),
           },
@@ -3770,7 +3770,7 @@
                   disabled: !this.CanResetToDefault,
                   onSelected: this.ResetToDefault,
                 },
-                Object(u.f)("#ResetToDefault")
+                Object(u.g)("#ResetToDefault")
               )
             );
             Object(ie.a)(t, e);
@@ -3785,7 +3785,7 @@
             a = null != s,
             l = {};
           this.CanResetToDefault &&
-            (l[ke.a.SECONDARY] = Object(u.f)("#ResetToDefault"));
+            (l[ke.a.SECONDARY] = Object(u.g)("#ResetToDefault"));
           let d = mt.a.SliderHandle,
             h = mt.a.SliderHandleContainer;
           return (
@@ -3812,7 +3812,7 @@
                 onTouchStart: (e) => this.OnTouchStart(e.nativeEvent),
                 onOKActionDescription: this.props.disabled
                   ? null
-                  : Object(u.f)("#Slider_AdjustSlider"),
+                  : Object(u.g)("#Slider_AdjustSlider"),
                 focusable: i,
                 childFocusDisabled: this.props.disabled || !i,
                 onContextMenu: this.OnContextMenu,
@@ -3823,7 +3823,7 @@
                   ? this.ResetToDefault
                   : void 0,
                 onSecondaryActionDescription: this.CanResetToDefault
-                  ? Object(u.f)("#ResetToDefault")
+                  ? Object(u.g)("#ResetToDefault")
                   : void 0,
                 actionDescriptionMap: l,
               },
@@ -3849,7 +3849,7 @@
                   onOKButton: this.BlurInnerSlider,
                   onOKActionDescription: null,
                   onCancelButton: this.BlurInnerSlider,
-                  onCancelActionDescription: Object(u.f)(
+                  onCancelActionDescription: Object(u.g)(
                     "#ActionButtonLabelDone"
                   ),
                 },
@@ -4148,7 +4148,7 @@
             onContextMenu: F,
             indentLevel: b,
             onOptionsActionDescription: _
-              ? Object(u.f)("#Slider_EditValue")
+              ? Object(u.g)("#Slider_EditValue")
               : void 0,
             onOptionsButton: _ ? T : void 0,
             highlightOnFocus: f,
@@ -4271,7 +4271,7 @@
             className: mt.a.EditableValue,
             style: { width: B },
             onEnterKeyPress: () => S(!1),
-            strEnterKeyLabel: Object(u.f)("#ActionButtonLabelDone"),
+            strEnterKeyLabel: Object(u.g)("#ActionButtonLabelDone"),
             onClick: s,
             onFocus: () => (D.current = !1),
             onBlur: () => S(!0),
@@ -4279,9 +4279,9 @@
             placeholder: n,
             onChange: (e) => C(e.target.value.trim()),
             onCancelButton: () => S(!0),
-            onCancelActionDescription: Object(u.f)("#ActionButtonLabelDone"),
+            onCancelActionDescription: Object(u.g)("#ActionButtonLabelDone"),
             onOKButton: E,
-            onOKActionDescription: Object(u.f)("#Slider_EditValue"),
+            onOKActionDescription: Object(u.g)("#Slider_EditValue"),
             onOptionsActionDescription: void 0,
             onOptionsButton: E,
           }),
@@ -7063,7 +7063,7 @@
                   s.createElement(
                     y,
                     { className: p.Cancel, onSelected: e },
-                    Object(O.f)(g)
+                    Object(O.g)(g)
                   )
                 ),
               this.context.BIsSubMenuVisible() &&
@@ -7710,7 +7710,7 @@
                     onSelected: () =>
                       n.SteamClient._internal.AddWordToDictionary(e),
                   },
-                  Object(O.f)(
+                  Object(O.g)(
                     "#ContextMenu_AddToDictionary",
                     e.length < i ? e : e.substring(0, i) + "..."
                   )
@@ -7729,7 +7729,7 @@
                     n.document.execCommand("cut");
                   },
                 },
-                Object(O.f)("#ContextMenu_Cut")
+                Object(O.g)("#ContextMenu_Cut")
               )
             ),
           (n.document.queryCommandEnabled("copy") || o) &&
@@ -7743,7 +7743,7 @@
                   },
                   className: w.a.NoSeparation,
                 },
-                Object(O.f)("#ContextMenu_Copy")
+                Object(O.g)("#ContextMenu_Copy")
               )
             ),
           S.d.IN_CLIENT &&
@@ -7760,7 +7760,7 @@
                   },
                   className: w.a.NoSeparation,
                 },
-                Object(O.f)("#ContextMenu_Paste")
+                Object(O.g)("#ContextMenu_Paste")
               )
             ),
           t.length)
@@ -11080,7 +11080,7 @@
                 a.j(t);
               },
             },
-            Object(l.f)("#ContextMenu_CopyLinkURL")
+            Object(l.g)("#ContextMenu_CopyLinkURL")
           ),
           s.createElement(
             u.d,
@@ -11089,7 +11089,7 @@
                 g(e, t, { unPID: n });
               },
             },
-            Object(l.f)("#ContextMenu_OpenLinkInNewWindow")
+            Object(l.g)("#ContextMenu_OpenLinkInNewWindow")
           )
         );
       }
@@ -11604,7 +11604,7 @@
               "bAlertDialog",
               "children",
             ]),
-            h = s || Object(R.f)("#Button_Close");
+            h = s || Object(R.g)("#Button_Close");
           let m = i.createElement(o.D, {
             bOKDisabled: this.props.bOKDisabled,
             strOKText: s,
@@ -11656,8 +11656,8 @@
         render() {
           const e = Object.assign(
             {
-              strTitle: Object(R.f)("#Error_FailureNotice"),
-              strDescription: Object(R.f)("#Error_GenericFailureDescription"),
+              strTitle: Object(R.g)("#Error_FailureNotice"),
+              strDescription: Object(R.g)("#Error_GenericFailureDescription"),
               bAlertDialog: !0,
               bDestructiveWarning: !0,
               onOK: () => {},
@@ -12110,7 +12110,7 @@
             o.createElement(
               "div",
               { className: d.a.TextToolTip },
-              Object(l.f)(e)
+              Object(l.g)(e)
             ),
             t,
             n,

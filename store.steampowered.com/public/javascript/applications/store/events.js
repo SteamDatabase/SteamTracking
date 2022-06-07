@@ -40,10 +40,10 @@
         E = (a("KjDl"), a("wijF")),
         b = a("cXRO"),
         h = a("+aRA"),
-        S = a("mR6x"),
-        g = a("09aD"),
-        f = a("j4v3"),
-        w = a("gU2e"),
+        g = a("mR6x"),
+        S = a("09aD"),
+        w = a("j4v3"),
+        f = a("gU2e"),
         I = a("mrSG"),
         y = a("QY55"),
         O = a("/dWE"),
@@ -298,13 +298,13 @@
                   r.createElement(
                     "h1",
                     null,
-                    Object(J.f)("#EventDashBoard_SummaryStats_Title")
+                    Object(J.g)("#EventDashBoard_SummaryStats_Title")
                   ),
                   Boolean(n) &&
                     r.createElement(
                       "p",
                       null,
-                      Object(J.f)("#EventDashBoard_SummaryStats_Desc"),
+                      Object(J.g)("#EventDashBoard_SummaryStats_Desc"),
                       " ",
                       r.createElement(
                         "a",
@@ -312,7 +312,7 @@
                           href: "https://partner.steamgames.com/doc/marketing/event_tools/stats",
                           target: "_blank",
                         },
-                        Object(J.f)("#EventDashBoard_SummaryStats_Link")
+                        Object(J.g)("#EventDashBoard_SummaryStats_Link")
                       )
                     )
                 ),
@@ -330,14 +330,14 @@
                     r.createElement(
                       "span",
                       { className: Z.StatDescription },
-                      Object(J.f)(
+                      Object(J.g)(
                         "#EventDashBoard_SummaryStats_TotalImpressions"
                       )
                     ),
                     r.createElement(
                       "span",
                       { className: Z.StatFigure },
-                      e.total_showm.toLocaleString(J.e.GetPreferredLocales())
+                      e.total_showm.toLocaleString(J.f.GetPreferredLocales())
                     )
                   ),
                   r.createElement(
@@ -346,12 +346,12 @@
                     r.createElement(
                       "span",
                       { className: Z.StatDescription },
-                      Object(J.f)("#EventDashBoard_SummaryStats_TotalViews")
+                      Object(J.g)("#EventDashBoard_SummaryStats_TotalViews")
                     ),
                     r.createElement(
                       "span",
                       { className: Z.StatFigure },
-                      e.total_read.toLocaleString(J.e.GetPreferredLocales())
+                      e.total_read.toLocaleString(J.f.GetPreferredLocales())
                     )
                   )
                 ),
@@ -362,7 +362,7 @@
                     r.createElement(
                       "div",
                       { className: Z.ModerationWarning },
-                      Object(J.f)("#EventDashBoard_ModerationQueueWarning")
+                      Object(J.g)("#EventDashBoard_ModerationQueueWarning")
                     ),
                     r.createElement(
                       "a",
@@ -371,7 +371,7 @@
                           H.d.PARTNER_BASE_URL +
                           "doc/marketing/event_tools/moderation",
                       },
-                      Object(J.f)("#EventDashBoard_Location_ModerationTitle")
+                      Object(J.g)("#EventDashBoard_Location_ModerationTitle")
                     )
                   ),
                 r.createElement(
@@ -397,13 +397,13 @@
                         r.createElement(
                           "span",
                           null,
-                          Object(J.f)("#EventDashBoard_Location_LibraryHome")
+                          Object(J.g)("#EventDashBoard_Location_LibraryHome")
                         ),
                         r.createElement(
                           "span",
                           { className: Z.ModerationNote },
                           "( ",
-                          Object(J.f)(
+                          Object(J.g)(
                             "#EventDashBoard_Location_WaitingModeraion"
                           ),
                           " )"
@@ -415,7 +415,7 @@
                         r.createElement(
                           "span",
                           null,
-                          Object(J.f)(
+                          Object(J.g)(
                             "#EventDashBoard_Summary_LibraryHome_Shown"
                           )
                         ),
@@ -423,7 +423,7 @@
                           "span",
                           null,
                           e.library_overview_shown.toLocaleString(
-                            J.e.GetPreferredLocales()
+                            J.f.GetPreferredLocales()
                           )
                         )
                       ),
@@ -433,7 +433,7 @@
                         r.createElement(
                           "span",
                           null,
-                          Object(J.f)(
+                          Object(J.g)(
                             "#EventDashBoard_Summary_LibraryHome_Read"
                           )
                         ),
@@ -441,7 +441,7 @@
                           "span",
                           null,
                           e.library_overview_read.toLocaleString(
-                            J.e.GetPreferredLocales()
+                            J.f.GetPreferredLocales()
                           )
                         )
                       ),
@@ -452,13 +452,13 @@
                         r.createElement(
                           "span",
                           null,
-                          Object(J.f)("#EventDashBoard_Location_LibraryDetail")
+                          Object(J.g)("#EventDashBoard_Location_LibraryDetail")
                         ),
                         r.createElement(
                           "span",
                           { className: Z.ModerationNote },
                           "( ",
-                          Object(J.f)(
+                          Object(J.g)(
                             "#EventDashBoard_Location_WaitingModeraion"
                           ),
                           " )"
@@ -470,7 +470,7 @@
                         r.createElement(
                           "span",
                           null,
-                          Object(J.f)(
+                          Object(J.g)(
                             "#EventDashBoard_Summary_AppDetailSpotlight_Shown"
                           )
                         ),
@@ -478,7 +478,7 @@
                           "span",
                           null,
                           e.app_details_spotlight_shown.toLocaleString(
-                            J.e.GetPreferredLocales()
+                            J.f.GetPreferredLocales()
                           )
                         )
                       ),
@@ -488,7 +488,7 @@
                         r.createElement(
                           "span",
                           null,
-                          Object(J.f)(
+                          Object(J.g)(
                             "#EventDashBoard_Summary_AppDetailSpotlight_Read"
                           )
                         ),
@@ -496,7 +496,7 @@
                           "span",
                           null,
                           e.app_details_spotlight_read.toLocaleString(
-                            J.e.GetPreferredLocales()
+                            J.f.GetPreferredLocales()
                           )
                         )
                       ),
@@ -506,7 +506,7 @@
                         r.createElement(
                           "span",
                           null,
-                          Object(J.f)(
+                          Object(J.g)(
                             "#EventDashBoard_Summary_AppDetailActivity_Shown"
                           )
                         ),
@@ -514,7 +514,7 @@
                           "span",
                           null,
                           e.app_details_activity_shown.toLocaleString(
-                            J.e.GetPreferredLocales()
+                            J.f.GetPreferredLocales()
                           )
                         )
                       ),
@@ -524,7 +524,7 @@
                         r.createElement(
                           "span",
                           null,
-                          Object(J.f)(
+                          Object(J.g)(
                             "#EventDashBoard_Summary_AppDetailActivity_Read"
                           )
                         ),
@@ -532,7 +532,7 @@
                           "span",
                           null,
                           e.app_details_activity_read.toLocaleString(
-                            J.e.GetPreferredLocales()
+                            J.f.GetPreferredLocales()
                           )
                         )
                       )
@@ -546,7 +546,7 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)("#EventDashBoard_Location_StoreDetail")
+                        Object(J.g)("#EventDashBoard_Location_StoreDetail")
                       )
                     ),
                     r.createElement(
@@ -555,7 +555,7 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)(
+                        Object(J.g)(
                           "#EventDashBoard_Summary_StoreAppPage_Shown"
                         )
                       ),
@@ -563,7 +563,7 @@
                         "span",
                         null,
                         e.store_app_page_shown.toLocaleString(
-                          J.e.GetPreferredLocales()
+                          J.f.GetPreferredLocales()
                         )
                       )
                     ),
@@ -573,13 +573,13 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)("#EventDashBoard_Summary_StoreAppPage_Read")
+                        Object(J.g)("#EventDashBoard_Summary_StoreAppPage_Read")
                       ),
                       r.createElement(
                         "span",
                         null,
                         e.store_app_page_read.toLocaleString(
-                          J.e.GetPreferredLocales()
+                          J.f.GetPreferredLocales()
                         )
                       )
                     ),
@@ -590,7 +590,7 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)("#EventDashBoard_Location_CommunityDetail")
+                        Object(J.g)("#EventDashBoard_Location_CommunityDetail")
                       )
                     ),
                     r.createElement(
@@ -599,13 +599,13 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)("#EventDashBoard_Summary_Community_Shown")
+                        Object(J.g)("#EventDashBoard_Summary_Community_Shown")
                       ),
                       r.createElement(
                         "span",
                         null,
                         e.community_hub_shown.toLocaleString(
-                          J.e.GetPreferredLocales()
+                          J.f.GetPreferredLocales()
                         )
                       )
                     ),
@@ -615,13 +615,13 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)("#EventDashBoard_Summary_Community_Read")
+                        Object(J.g)("#EventDashBoard_Summary_Community_Read")
                       ),
                       r.createElement(
                         "span",
                         null,
                         e.community_hub_read.toLocaleString(
-                          J.e.GetPreferredLocales()
+                          J.f.GetPreferredLocales()
                         )
                       )
                     ),
@@ -632,7 +632,7 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)("#EventDashBoard_Location_NewsHubDetail")
+                        Object(J.g)("#EventDashBoard_Location_NewsHubDetail")
                       )
                     ),
                     r.createElement(
@@ -641,13 +641,13 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)("#EventDashBoard_Summary_NewsHub_Shown")
+                        Object(J.g)("#EventDashBoard_Summary_NewsHub_Shown")
                       ),
                       r.createElement(
                         "span",
                         null,
                         e.news_hub_shown.toLocaleString(
-                          J.e.GetPreferredLocales()
+                          J.f.GetPreferredLocales()
                         )
                       )
                     ),
@@ -657,13 +657,13 @@
                       r.createElement(
                         "span",
                         null,
-                        Object(J.f)("#EventDashBoard_Summary_NewsHub_Read")
+                        Object(J.g)("#EventDashBoard_Summary_NewsHub_Read")
                       ),
                       r.createElement(
                         "span",
                         null,
                         e.news_hub_read.toLocaleString(
-                          J.e.GetPreferredLocales()
+                          J.f.GetPreferredLocales()
                         )
                       )
                     )
@@ -725,21 +725,21 @@
               include_basic_info: !0,
               include_release: !0,
             }),
-            [b, S] = Object(E.b)(u);
+            [b, g] = Object(E.b)(u);
           if (
             (r.useEffect(() => window.scrollTo(0, 0), [_, u]),
-            !t.bLoaded || !S || (_ && !v))
+            !t.bLoaded || !g || (_ && !v))
           )
             return r.createElement(
               "div",
               { className: se.a.FlexCenter, style: { height: "400px" } },
               r.createElement(B.a, {
                 size: "medium",
-                string: Object(J.f)("#Loading"),
+                string: Object(J.g)("#Loading"),
               })
             );
-          let g = t.GetDescriptionWithFallback(a);
-          const w = Object(f.d)(t, f.a.k_eStoreNewsHub, "allowRelative");
+          let S = t.GetDescriptionWithFallback(a);
+          const f = Object(w.d)(t, w.a.k_eStoreNewsHub, "allowRelative");
           return r.createElement(de, {
             event: t,
             lang: a,
@@ -753,19 +753,19 @@
                 r.createElement(y.a, {
                   crumbs: [
                     {
-                      name: Object(J.f)("#BreadCrumbs_AllEvents"),
-                      url: Object(f.d)(
+                      name: Object(J.g)("#BreadCrumbs_AllEvents"),
+                      url: Object(w.d)(
                         t,
-                        f.a.k_eStoreUsersNewsHub,
+                        w.a.k_eStoreUsersNewsHub,
                         "allowRelative"
                       ),
                     },
                     {
-                      name: Object(J.f)(
+                      name: Object(J.g)(
                         "#BreadCrumbs_GameEvents",
-                        (null == v ? void 0 : v.GetName()) || S.group_name
+                        (null == v ? void 0 : v.GetName()) || g.group_name
                       ),
-                      url: w,
+                      url: f,
                     },
                   ],
                 }),
@@ -829,7 +829,7 @@
                         ),
                       },
                       r.createElement(D.a, {
-                        text: g || "",
+                        text: S || "",
                         partnerEventStore: n,
                         showErrorInfo: c,
                         event: t,
@@ -848,7 +848,7 @@
                               className: Object($.a)(X.a.Button),
                               href: Object(oe.h)(t.GetSaleURL()),
                             },
-                            Object(J.f)("#Event_Button_VisitSalePage")
+                            Object(J.g)("#Event_Button_VisitSalePage")
                           )
                         )
                     )
@@ -868,7 +868,7 @@
                           className: Object($.a)(X.a.Button),
                           href: t.jsondata.read_more_link,
                         },
-                        Object(J.f)("#EventEmail_Button_ClickForMoreDetails")
+                        Object(J.g)("#EventEmail_Button_ClickForMoreDetails")
                       )
                     ),
                   r.createElement("span", { className: X.a.Clear }),
@@ -912,7 +912,7 @@
                       r.createElement(
                         "span",
                         { className: C.a.Title },
-                        Object(J.f)("#CreatorHome_ThisGame")
+                        Object(J.g)("#CreatorHome_ThisGame")
                       ),
                       r.createElement(
                         "div",
@@ -1076,7 +1076,7 @@
                     r.createElement(
                       "div",
                       { className: C.a.RightSideTitles },
-                      Object(J.f)("#EventDisplay_RightColumnTitle_EventType")
+                      Object(J.g)("#EventDisplay_RightColumnTitle_EventType")
                     ),
                     r.createElement(
                       "div",
@@ -1085,7 +1085,7 @@
                       " "
                     )
                   ),
-                  r.createElement(Se, { event: t, bIsOGG: p.is_ogg })
+                  r.createElement(ge, { event: t, bIsOGG: p.is_ogg })
                 )
               )
           : (Object(le.a)(
@@ -1111,8 +1111,8 @@
             "div",
             { className: C.a.RightSideTitles },
             v.y.some((e) => t === e)
-              ? Object(J.f)("#EventDisplay_RightColumnTitle_Blog")
-              : Object(J.f)("#EventDisplay_RightColumnTitle_Game")
+              ? Object(J.g)("#EventDisplay_RightColumnTitle_Blog")
+              : Object(J.g)("#EventDisplay_RightColumnTitle_Game")
           ),
           r.createElement(ae.b, {
             imageType: "header",
@@ -1213,7 +1213,7 @@
       };
       Object(I.b)([ie.b], he.prototype, "OnLanguageChange", null),
         (he = Object(I.b)([_.a], he));
-      let Se = class extends r.Component {
+      let ge = class extends r.Component {
         constructor() {
           super(...arguments), (this.m_cancelSignal = d.a.CancelToken.source());
         }
@@ -1257,12 +1257,12 @@
                 r.createElement(
                   "span",
                   null,
-                  Object(J.f)("#EventEditor_Comments")
+                  Object(J.g)("#EventEditor_Comments")
                 ),
                 r.createElement(
                   "span",
                   null,
-                  e.nCommentCount.toLocaleString(J.e.GetPreferredLocales())
+                  e.nCommentCount.toLocaleString(J.f.GetPreferredLocales())
                 )
               ),
               r.createElement(
@@ -1271,13 +1271,13 @@
                 r.createElement(
                   "span",
                   null,
-                  Object(J.f)("#EventEditor_UpVotes")
+                  Object(J.g)("#EventEditor_UpVotes")
                 ),
                 r.createElement(
                   "span",
                   null,
                   e.nVotesUp
-                    ? e.nVotesUp.toLocaleString(J.e.GetPreferredLocales())
+                    ? e.nVotesUp.toLocaleString(J.f.GetPreferredLocales())
                     : 0
                 )
               ),
@@ -1287,13 +1287,13 @@
                 r.createElement(
                   "span",
                   null,
-                  Object(J.f)("#EventEditor_DownVotes")
+                  Object(J.g)("#EventEditor_DownVotes")
                 ),
                 r.createElement(
                   "span",
                   null,
                   e.nVotesDown
-                    ? e.nVotesDown.toLocaleString(J.e.GetPreferredLocales())
+                    ? e.nVotesDown.toLocaleString(J.f.GetPreferredLocales())
                     : 0
                 )
               )
@@ -1302,7 +1302,7 @@
               r.createElement(
                 "div",
                 { className: C.a.EditorStatsCtn },
-                Object(J.f)("#EventDashBoard_SummaryStats_Admin_Title"),
+                Object(J.g)("#EventDashBoard_SummaryStats_Admin_Title"),
                 r.createElement(ee, {
                   summary: a.m_stats,
                   bIsAllowedInLibrary: t,
@@ -1312,10 +1312,10 @@
           );
         }
       };
-      Se = Object(I.b)([_.a], Se);
-      var ge = a("A8Lc"),
-        fe = a.n(ge);
-      class we {
+      ge = Object(I.b)([_.a], ge);
+      var Se = a("A8Lc"),
+        we = a.n(Se);
+      class fe {
         constructor() {
           (this.m_objApprovalPriviledge = null),
             (this.m_LoadingPriviledgePromise = null);
@@ -1378,13 +1378,13 @@
           });
         }
         static Get() {
-          return we.s_Singleton || (we.s_Singleton = new we()), we.s_Singleton;
+          return fe.s_Singleton || (fe.s_Singleton = new fe()), fe.s_Singleton;
         }
         ValidateStoreDefault(e) {
           return e && "object" == typeof e && "boolean" == typeof e.bHasAccess;
         }
       }
-      Object(I.b)([F.C], we.prototype, "m_objApprovalPriviledge", void 0);
+      Object(I.b)([F.C], fe.prototype, "m_objApprovalPriviledge", void 0);
       var Ie = a("thkD"),
         ye = a("jIgc"),
         Oe = a("rSrx");
@@ -1398,7 +1398,7 @@
               Object(I.a)(void 0, void 0, void 0, function* () {
                 const t = i.a.InitFromClanID(s),
                   n = yield R.a.Get().LoadSingleAppEventPermissions(t),
-                  r = yield we.Get().HintLoadAppApprovalPriviledge();
+                  r = yield fe.Get().HintLoadAppApprovalPriviledge();
                 e.token.reason ||
                   a(H.l.is_support || n.can_edit || r.bHasAccess);
               }),
@@ -1408,7 +1408,7 @@
           const l = i.a.InitFromClanID(s);
           return H.l.is_support ||
             R.a.Get().GetPartnerEventPermissions(l).can_edit
-            ? r.createElement(S.a, {
+            ? r.createElement(g.a, {
                 eventModel: n,
                 partnerEventStore: e.partnerEventStore,
                 addtionalAdminButtons: t
@@ -1420,14 +1420,14 @@
                     ]
                   : void 0,
               })
-            : we.Get().BHasSteamChinaAppApprovalPriviledge()
+            : fe.Get().BHasSteamChinaAppApprovalPriviledge()
             ? r.createElement(
                 "div",
                 { className: G.DisplayAdminPanel },
                 r.createElement(
                   "span",
                   { className: G.DisplayAdminPanel_Title },
-                  Object(J.f)("#EventDisplay_Admin_Title")
+                  Object(J.g)("#EventDisplay_Admin_Title")
                 ),
                 r.createElement(De, { key: "removesteamchina", eventModel: n })
               )
@@ -1449,10 +1449,10 @@
                   r.createElement(
                     Ie.e,
                     {
-                      strTitle: Object(J.f)(
+                      strTitle: Object(J.g)(
                         "#EventAdmin_Moderation_HideEventInSC"
                       ),
-                      strDescription: Object(J.f)(
+                      strDescription: Object(J.g)(
                         "#EventAdmin_Moderation_HideEventInSC_Desc"
                       ),
                       bDestructiveWarning: !0,
@@ -1516,12 +1516,12 @@
                                   ? r.createElement(
                                       Ie.e,
                                       { bAlertDialog: !0 },
-                                      Object(J.f)("#EventDisplay_Share_Success")
+                                      Object(J.g)("#EventDisplay_Share_Success")
                                     )
                                   : r.createElement(
                                       Ie.g,
                                       null,
-                                      Object(J.f)(
+                                      Object(J.g)(
                                         "#EventDisplay_Share_Failure"
                                       ) +
                                         " " +
@@ -1542,7 +1542,7 @@
                 );
               },
             },
-            Object(J.f)("#EventAdmin_Moderation_HideEventInSC")
+            Object(J.g)("#EventAdmin_Moderation_HideEventInSC")
           );
         };
       var Ae = a("Ys0h");
@@ -1586,7 +1586,7 @@
                 }
                 const n = e && e.GetNameWithFallback(Object(u.g)(H.d.LANGUAGE));
                 if (e && a && n) {
-                  const e = Object(J.f)(
+                  const e = Object(J.g)(
                     "#EventCalendar_TabTitle_GroupNameAndEventDetail",
                     a,
                     n
@@ -1646,23 +1646,23 @@
               body: _
                 ? s.a.createElement(
                     "div",
-                    { className: fe.a.ErrorMsg },
-                    Object(J.n)(
+                    { className: we.a.ErrorMsg },
+                    Object(J.o)(
                       "#Events_FailedToFind",
                       s.a.createElement(
                         "a",
                         { href: H.d.STORE_BASE_URL + "news/" },
-                        Object(J.f)("#EventDisplay_NewsHubSubtitle")
+                        Object(J.g)("#EventDisplay_NewsHubSubtitle")
                       )
                     )
                   )
                 : s.a.createElement(B.a, {
-                    string: Object(J.f)("#Loading"),
+                    string: Object(J.g)("#Loading"),
                     size: "medium",
                     position: "center",
                   }),
               postbody: Boolean(_ && l)
-                ? s.a.createElement(w.a, {
+                ? s.a.createElement(f.a, {
                     clanAccountID: l.GetAccountID(),
                     partnerEventStore: Ge,
                   })
@@ -1674,7 +1674,7 @@
           ? s.a.createElement(
               h.a,
               null,
-              s.a.createElement(g.a, {
+              s.a.createElement(S.a, {
                 appid: o.appid,
                 trackingLocation: 7,
                 announcementGID: o.GetAnnouncementGID(),
@@ -1683,7 +1683,7 @@
                 showAppHeader: !0,
                 closeModal: () =>
                   e.history.push(
-                    Object(f.d)(o, f.a.k_eStoreNewsHub, "allowRelative")
+                    Object(w.d)(o, w.a.k_eStoreNewsHub, "allowRelative")
                   ),
               })
             )
@@ -1697,11 +1697,11 @@
                 adminPanel:
                   H.d.EREALM === p.h.k_ESteamRealmChina
                     ? s.a.createElement(je, { eventModel: o })
-                    : s.a.createElement(S.a, {
+                    : s.a.createElement(g.a, {
                         eventModel: o,
                         partnerEventStore: Ge,
                       }),
-                otherEventRow: s.a.createElement(w.a, {
+                otherEventRow: s.a.createElement(f.a, {
                   clanAccountID: o.clanSteamID.GetAccountID(),
                   gidAnnouncement: o.AnnouncementGID,
                   partnerEventStore: Ge,
@@ -2114,10 +2114,10 @@
         E = a("rSrx"),
         b = a("GXif"),
         h = a("/Q1a"),
-        S = a("fmsa"),
-        g = a("jIgc"),
-        f = a("Rpai"),
-        w = a("KQHr"),
+        g = a("fmsa"),
+        S = a("jIgc"),
+        w = a("Rpai"),
+        f = a("KQHr"),
         I = a("4EJs");
       const y = Object(m.a)((e) => {
         const t = Object(r.useRef)(null),
@@ -2153,52 +2153,52 @@
               null,
               s.a.createElement(
                 "div",
-                { className: f.TileContainer },
+                { className: w.TileContainer },
                 s.a.createElement(
                   "div",
-                  { className: f.TileTitleContainer },
+                  { className: w.TileTitleContainer },
                   s.a.createElement(
                     "div",
-                    { className: f.TileTitleInnerContainer },
+                    { className: w.TileTitleInnerContainer },
                     s.a.createElement(
                       "div",
-                      { className: f.TileTitle },
-                      Object(b.f)(
+                      { className: w.TileTitle },
+                      Object(b.g)(
                         "#Sale_DownloadDemo",
                         null == o ? void 0 : o.GetName()
                       )
                     ),
                     s.a.createElement(I.i, { item: n })
                   ),
-                  s.a.createElement(w.a, {
+                  s.a.createElement(f.a, {
                     info: n,
-                    className: f.TileActionButton,
+                    className: w.TileActionButton,
                   })
                 ),
                 s.a.createElement(
                   "div",
-                  { className: f.TileActionContainer },
+                  { className: w.TileActionContainer },
                   A &&
                     s.a.createElement(
                       "div",
-                      { className: f.TileActionInnerContainer },
+                      { className: w.TileActionInnerContainer },
                       G
                         ? s.a.createElement(
                             "h1",
                             null,
-                            Object(b.f)("#EventBrowse_RecentUpdates")
+                            Object(b.g)("#EventBrowse_RecentUpdates")
                           )
                         : s.a.createElement(
                             "h1",
                             null,
-                            Object(b.f)("#EventCalendar_TuneIn")
+                            Object(b.g)("#EventCalendar_TuneIn")
                           ),
                       s.a.createElement(
                         "div",
                         {
-                          className: f.TileActionInner,
+                          className: w.TileActionInner,
                           onClick: (e) => {
-                            Object(g.d)(
+                            Object(S.d)(
                               s.a.createElement(v.a, {
                                 initialEvent: O,
                                 bShowOnlyInitialEvent: !1,
@@ -2212,13 +2212,13 @@
                         },
                         s.a.createElement(
                           "div",
-                          { className: f.TileActionInnerTitle },
+                          { className: w.TileActionInnerTitle },
                           A
                         ),
                         s.a.createElement(
                           "div",
-                          { className: f.TileActionInnerText },
-                          s.a.createElement(S.a, {
+                          { className: w.TileActionInnerText },
+                          s.a.createElement(g.a, {
                             dateAndTime: O.GetStartTimeAndDateUnixSeconds(),
                             bSingleLine: !0,
                           })
@@ -2401,7 +2401,7 @@
                 s.a.createElement(
                   "h2",
                   null,
-                  Object(b.f)("#EventBrowse_RecentEvents")
+                  Object(b.g)("#EventBrowse_RecentEvents")
                 ),
                 !h.d.IN_GAMEPADUI &&
                   s.a.createElement(
@@ -2414,7 +2414,7 @@
                             className: H.SectionButton,
                             onClick: () => this.ShowModal(t[0]),
                           },
-                          Object(b.f)("#EventBrowse_MoreEventsBtn")
+                          Object(b.g)("#EventBrowse_MoreEventsBtn")
                         )
                       : s.a.createElement(
                           R.c,
@@ -2423,7 +2423,7 @@
                             route: R.a.k_eViewWebSiteHub,
                             className: H.SectionButton,
                           },
-                          Object(b.f)("#EventBrowse_MoreEventsBtn")
+                          Object(b.g)("#EventBrowse_MoreEventsBtn")
                         )
                   ),
                 s.a.createElement(
@@ -2490,9 +2490,9 @@
           s.a.createElement(
             D.e,
             { className: H.LatestUpdateButton, onClick: e.onClick },
-            Object(b.f)(
+            Object(b.g)(
               "#EventBrowse_LatestUpdateTime_Button",
-              Object(b.p)(e.nUpdateTime)
+              Object(b.q)(e.nUpdateTime)
             )
           )
         );
@@ -2509,7 +2509,7 @@
           s.a.createElement(
             "h2",
             null,
-            Object(b.f)("#EventBrowse_LastUpdateDate", Object(b.p)(t))
+            Object(b.g)("#EventBrowse_LastUpdateDate", Object(b.q)(t))
           ),
           s.a.createElement(
             "div",
@@ -2517,7 +2517,7 @@
             s.a.createElement(
               "div",
               { className: H.SectionButton, onClick: l },
-              Object(b.f)("#EventBrowse_ViewLatestUpdate")
+              Object(b.g)("#EventBrowse_ViewLatestUpdate")
             )
           ),
           Boolean(r) &&

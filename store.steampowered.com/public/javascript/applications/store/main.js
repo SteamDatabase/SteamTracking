@@ -1,40 +1,40 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [33],
+  [62],
   {
     "+58p": function (e, t, r) {
       var n = {
-        "./shared_arabic.json": ["A8mv", 125],
-        "./shared_brazilian.json": ["f7Ht", 126],
-        "./shared_bulgarian.json": ["VJ/X", 127],
-        "./shared_czech.json": ["WyQd", 128],
-        "./shared_danish.json": ["WlkD", 129],
-        "./shared_dutch.json": ["SHbT", 130],
-        "./shared_english.json": ["7foF", 131],
-        "./shared_finnish.json": ["+HzT", 132],
-        "./shared_french.json": ["wr2i", 133],
-        "./shared_german.json": ["CzjK", 134],
-        "./shared_greek.json": ["T1Vt", 135],
-        "./shared_hungarian.json": ["6rq4", 136],
-        "./shared_italian.json": ["yba0", 137],
-        "./shared_japanese.json": ["MIMz", 138],
-        "./shared_koreana.json": ["wrJg", 139],
-        "./shared_latam.json": ["Q3r2", 140],
-        "./shared_norwegian.json": ["Lp4u", 141],
-        "./shared_polish.json": ["wbdj", 142],
-        "./shared_portuguese.json": ["GKZf", 143],
-        "./shared_romanian.json": ["wYo1", 144],
-        "./shared_russian.json": ["Efj/", 145],
-        "./shared_sc_schinese.json": ["7Bs/", 146],
-        "./shared_schinese.json": ["x+JX", 147],
-        "./shared_spanish.json": ["/xtB", 148],
-        "./shared_swedish.json": ["tdT9", 149],
-        "./shared_tchinese.json": ["JQjP", 150],
-        "./shared_thai.json": ["8I3t", 151],
-        "./shared_turkish.json": ["W4c2", 152],
-        "./shared_ukrainian.json": ["0xx/", 153],
-        "./shared_vietnamese.json": ["CxfU", 154],
+        "./shared_arabic.json": ["A8mv", 154],
+        "./shared_brazilian.json": ["f7Ht", 155],
+        "./shared_bulgarian.json": ["VJ/X", 156],
+        "./shared_czech.json": ["WyQd", 157],
+        "./shared_danish.json": ["WlkD", 158],
+        "./shared_dutch.json": ["SHbT", 159],
+        "./shared_english.json": ["7foF", 160],
+        "./shared_finnish.json": ["+HzT", 161],
+        "./shared_french.json": ["wr2i", 162],
+        "./shared_german.json": ["CzjK", 163],
+        "./shared_greek.json": ["T1Vt", 164],
+        "./shared_hungarian.json": ["6rq4", 165],
+        "./shared_italian.json": ["yba0", 166],
+        "./shared_japanese.json": ["MIMz", 167],
+        "./shared_koreana.json": ["wrJg", 168],
+        "./shared_latam.json": ["Q3r2", 169],
+        "./shared_norwegian.json": ["Lp4u", 170],
+        "./shared_polish.json": ["wbdj", 171],
+        "./shared_portuguese.json": ["GKZf", 172],
+        "./shared_romanian.json": ["wYo1", 173],
+        "./shared_russian.json": ["Efj/", 174],
+        "./shared_sc_schinese.json": ["7Bs/", 175],
+        "./shared_schinese.json": ["x+JX", 176],
+        "./shared_spanish.json": ["/xtB", 177],
+        "./shared_swedish.json": ["tdT9", 178],
+        "./shared_tchinese.json": ["JQjP", 179],
+        "./shared_thai.json": ["8I3t", 180],
+        "./shared_turkish.json": ["W4c2", 181],
+        "./shared_ukrainian.json": ["0xx/", 182],
+        "./shared_vietnamese.json": ["CxfU", 183],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -1526,34 +1526,34 @@
     },
     "5YvR": function (e, t, r) {
       var n = {
-        "./marketing_brazilian.json": ["8xPd", 64],
-        "./marketing_bulgarian.json": ["l4JQ", 65],
-        "./marketing_czech.json": ["v392", 66],
-        "./marketing_danish.json": ["nZPB", 67],
-        "./marketing_dutch.json": ["KEZw", 68],
-        "./marketing_english.json": ["lr6y", 69],
-        "./marketing_finnish.json": ["Z8YI", 70],
-        "./marketing_french.json": ["wNWg", 71],
-        "./marketing_german.json": ["5zDj", 72],
-        "./marketing_greek.json": ["/TBC", 73],
-        "./marketing_hungarian.json": ["YGNc", 74],
-        "./marketing_italian.json": ["xrKz", 75],
-        "./marketing_japanese.json": ["dWul", 76],
-        "./marketing_koreana.json": ["nWht", 77],
-        "./marketing_latam.json": ["nGdQ", 78],
-        "./marketing_norwegian.json": ["ZM5d", 79],
-        "./marketing_polish.json": ["M2pn", 80],
-        "./marketing_portuguese.json": ["TvUQ", 81],
-        "./marketing_romanian.json": ["FhW0", 82],
-        "./marketing_russian.json": ["VgI9", 83],
-        "./marketing_schinese.json": ["0Cvn", 84],
-        "./marketing_spanish.json": ["PTjI", 85],
-        "./marketing_swedish.json": ["oaHe", 86],
-        "./marketing_tchinese.json": ["UXMr", 87],
-        "./marketing_thai.json": ["X8wz", 88],
-        "./marketing_turkish.json": ["x+BD", 89],
-        "./marketing_ukrainian.json": ["EfsZ", 90],
-        "./marketing_vietnamese.json": ["nbZq", 91],
+        "./marketing_brazilian.json": ["8xPd", 93],
+        "./marketing_bulgarian.json": ["l4JQ", 94],
+        "./marketing_czech.json": ["v392", 95],
+        "./marketing_danish.json": ["nZPB", 96],
+        "./marketing_dutch.json": ["KEZw", 97],
+        "./marketing_english.json": ["lr6y", 98],
+        "./marketing_finnish.json": ["Z8YI", 99],
+        "./marketing_french.json": ["wNWg", 100],
+        "./marketing_german.json": ["5zDj", 101],
+        "./marketing_greek.json": ["/TBC", 102],
+        "./marketing_hungarian.json": ["YGNc", 103],
+        "./marketing_italian.json": ["xrKz", 104],
+        "./marketing_japanese.json": ["dWul", 105],
+        "./marketing_koreana.json": ["nWht", 106],
+        "./marketing_latam.json": ["nGdQ", 107],
+        "./marketing_norwegian.json": ["ZM5d", 108],
+        "./marketing_polish.json": ["M2pn", 109],
+        "./marketing_portuguese.json": ["TvUQ", 110],
+        "./marketing_romanian.json": ["FhW0", 111],
+        "./marketing_russian.json": ["VgI9", 112],
+        "./marketing_schinese.json": ["0Cvn", 113],
+        "./marketing_spanish.json": ["PTjI", 114],
+        "./marketing_swedish.json": ["oaHe", 115],
+        "./marketing_tchinese.json": ["UXMr", 116],
+        "./marketing_thai.json": ["X8wz", 117],
+        "./marketing_turkish.json": ["x+BD", 118],
+        "./marketing_ukrainian.json": ["EfsZ", 119],
+        "./marketing_vietnamese.json": ["nbZq", 120],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -2013,35 +2013,35 @@
     },
     AvbV: function (e, t, r) {
       var n = {
-        "./main_brazilian.json": ["TFAN", 34],
-        "./main_bulgarian.json": ["c2SO", 35],
-        "./main_czech.json": ["peP3", 36],
-        "./main_danish.json": ["0bnV", 37],
-        "./main_dutch.json": ["wcLc", 38],
-        "./main_english.json": ["/rNK", 39],
-        "./main_finnish.json": ["iywU", 40],
-        "./main_french.json": ["Xnpc", 41],
-        "./main_german.json": ["pmKi", 42],
-        "./main_greek.json": ["mTRv", 43],
-        "./main_hungarian.json": ["WkHb", 44],
-        "./main_italian.json": ["Jz5U", 45],
-        "./main_japanese.json": ["3Dk9", 46],
-        "./main_koreana.json": ["neQD", 47],
-        "./main_latam.json": ["6oHD", 48],
-        "./main_norwegian.json": ["2OvS", 49],
-        "./main_polish.json": ["3pwE", 50],
-        "./main_portuguese.json": ["hY40", 51],
-        "./main_romanian.json": ["Q95+", 52],
-        "./main_russian.json": ["bsPT", 53],
-        "./main_sc_schinese.json": ["GOaQ", 54],
-        "./main_schinese.json": ["B/Zz", 55],
-        "./main_spanish.json": ["U6iL", 56],
-        "./main_swedish.json": ["4uPU", 57],
-        "./main_tchinese.json": ["rgC9", 58],
-        "./main_thai.json": ["87dp", 59],
-        "./main_turkish.json": ["yMpO", 60],
-        "./main_ukrainian.json": ["zTWm", 61],
-        "./main_vietnamese.json": ["wqiy", 62],
+        "./main_brazilian.json": ["TFAN", 63],
+        "./main_bulgarian.json": ["c2SO", 64],
+        "./main_czech.json": ["peP3", 65],
+        "./main_danish.json": ["0bnV", 66],
+        "./main_dutch.json": ["wcLc", 67],
+        "./main_english.json": ["/rNK", 68],
+        "./main_finnish.json": ["iywU", 69],
+        "./main_french.json": ["Xnpc", 70],
+        "./main_german.json": ["pmKi", 71],
+        "./main_greek.json": ["mTRv", 72],
+        "./main_hungarian.json": ["WkHb", 73],
+        "./main_italian.json": ["Jz5U", 74],
+        "./main_japanese.json": ["3Dk9", 75],
+        "./main_koreana.json": ["neQD", 76],
+        "./main_latam.json": ["6oHD", 77],
+        "./main_norwegian.json": ["2OvS", 78],
+        "./main_polish.json": ["3pwE", 79],
+        "./main_portuguese.json": ["hY40", 80],
+        "./main_romanian.json": ["Q95+", 81],
+        "./main_russian.json": ["bsPT", 82],
+        "./main_sc_schinese.json": ["GOaQ", 83],
+        "./main_schinese.json": ["B/Zz", 84],
+        "./main_spanish.json": ["U6iL", 85],
+        "./main_swedish.json": ["4uPU", 86],
+        "./main_tchinese.json": ["rgC9", 87],
+        "./main_thai.json": ["87dp", 88],
+        "./main_turkish.json": ["yMpO", 89],
+        "./main_ukrainian.json": ["zTWm", 90],
+        "./main_vietnamese.json": ["wqiy", 91],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -2219,29 +2219,32 @@
       r.d(t, "b", function () {
         return d;
       }),
-        r.d(t, "f", function () {
+        r.d(t, "g", function () {
           return u;
         }),
-        r.d(t, "n", function () {
+        r.d(t, "o", function () {
           return m;
         }),
-        r.d(t, "l", function () {
+        r.d(t, "m", function () {
           return h;
         }),
-        r.d(t, "m", function () {
+        r.d(t, "n", function () {
           return p;
         }),
         r.d(t, "a", function () {
           return _;
         }),
-        r.d(t, "d", function () {
+        r.d(t, "e", function () {
           return b;
         }),
         r.d(t, "c", function () {
           return w;
         }),
-        r.d(t, "e", function () {
+        r.d(t, "d", function () {
           return y;
+        }),
+        r.d(t, "f", function () {
+          return S;
         });
       var n = r("q1tI"),
         i = r("msu0"),
@@ -2250,28 +2253,28 @@
         o = r("ApMK"),
         l = (r("f5iL"), r("suz2"), r("3u1o")),
         c = r("gwss");
-      r.d(t, "g", function () {
+      r.d(t, "h", function () {
         return c.b;
       }),
-        r.d(t, "h", function () {
+        r.d(t, "i", function () {
           return c.c;
         }),
-        r.d(t, "j", function () {
+        r.d(t, "k", function () {
           return c.e;
         }),
-        r.d(t, "k", function () {
+        r.d(t, "l", function () {
           return c.f;
         }),
-        r.d(t, "o", function () {
+        r.d(t, "p", function () {
           return c.h;
         }),
-        r.d(t, "p", function () {
+        r.d(t, "q", function () {
           return c.i;
         }),
-        r.d(t, "q", function () {
+        r.d(t, "r", function () {
           return c.j;
         }),
-        r.d(t, "i", function () {
+        r.d(t, "j", function () {
           return c.d;
         });
       class d {
@@ -2374,11 +2377,11 @@
         }
       }
       function u(e, ...t) {
-        let r = y.LocalizeString(e);
+        let r = S.LocalizeString(e);
         return void 0 === r ? e : f(r, ...t);
       }
       function m(e, ...t) {
-        let r = y.LocalizeString(e);
+        let r = S.LocalizeString(e);
         if (void 0 === r) return e;
         let i,
           a = [],
@@ -2392,7 +2395,7 @@
         return a.push(r.substr(o)), n.createElement(n.Fragment, null, ...a);
       }
       function h(e, ...t) {
-        let r = y.LocalizeString(e);
+        let r = S.LocalizeString(e);
         if (void 0 === r) return e;
         let i,
           a = [],
@@ -2508,8 +2511,29 @@
       function w() {
         return g[s.d.LANGUAGE] || null;
       }
-      const y = new d();
-      window.LocalizationManager = y;
+      function y(e) {
+        let t,
+          r = new Promise((e) => (t = e)),
+          n = Array(e.length),
+          i = e.length;
+        return (
+          e.map((e, r) => {
+            Promise.resolve(e)
+              .then((e) => {
+                (n[r] = e), i--, 0 == i && t(n);
+              })
+              .catch((e) => {
+                console.error("Failed to load localiation file: " + e),
+                  (n[r] = {}),
+                  i--,
+                  0 == i && t(n);
+              });
+          }),
+          r
+        );
+      }
+      const S = new d();
+      window.LocalizationManager = S;
     },
     GbHM: function (e, t, r) {
       "use strict";
@@ -3288,17 +3312,17 @@
             if (
               t.rgRepresentations.length > 0 &&
               t.rgRepresentations[0].strClosedCaptionFile &&
-              d.d[t.strLanguage]
+              d.e[t.strLanguage]
             ) {
               const n = document.createElement("track");
               (n.kind = "subtitles"),
-                (n.label = Object(d.f)(
-                  "#Language_" + Object(o.d)(d.d[t.strLanguage])
+                (n.label = Object(d.g)(
+                  "#Language_" + Object(o.d)(d.e[t.strLanguage])
                 )),
                 (n.srclang = t.strLanguage),
                 (n.src = t.rgRepresentations[0].strClosedCaptionFile),
                 0 != r &&
-                  d.d[t.strLanguage] == r &&
+                  d.e[t.strLanguage] == r &&
                   ((n.default = !0),
                   (this.m_timedTextRepSelected = t.rgRepresentations[0]),
                   (e = !1)),
@@ -3317,7 +3341,7 @@
           let t = null;
           for (let r = 0; r < this.m_elVideo.textTracks.length; r++) {
             const n = this.m_elVideo.textTracks[r];
-            if (d.d[n.language] == e) {
+            if (d.e[n.language] == e) {
               let e = this.GetTimeTextAdaptions(0).filter(
                 (e) => e.strLanguage == n.language
               );
@@ -8476,11 +8500,11 @@
             r.e(10),
             r.e(8),
             r.e(12),
-            r.e(32),
+            r.e(61),
           ]).then(r.bind(null, "CGeh"))
         ),
         re = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(18), r.e(0), r.e(10), r.e(94)]).then(
+          Promise.all([r.e(1), r.e(18), r.e(0), r.e(10), r.e(123)]).then(
             r.bind(null, "cprX")
           )
         ),
@@ -8539,7 +8563,7 @@
           Promise.all([r.e(1), r.e(0), r.e(19)]).then(r.bind(null, "byIC"))
         ),
         oe = o.a.lazy(() =>
-          Promise.all([r.e(6), r.e(7), r.e(155)]).then(r.bind(null, "AFtM"))
+          Promise.all([r.e(6), r.e(7), r.e(184)]).then(r.bind(null, "AFtM"))
         ),
         le = o.a.lazy(() =>
           Promise.all([
@@ -8660,7 +8684,7 @@
             r.e(13),
             r.e(12),
             r.e(16),
-            r.e(95),
+            r.e(124),
           ]).then(r.bind(null, "21NE"))
         ),
         pe = o.a.lazy(() =>
@@ -8683,7 +8707,7 @@
             r.e(13),
             r.e(12),
             r.e(16),
-            r.e(95),
+            r.e(124),
           ]).then(r.bind(null, "OVk1"))
         ),
         fe = o.a.lazy(() =>
@@ -8694,7 +8718,7 @@
           const e = Object(u.c)();
           e &&
             (document.documentElement.setAttribute("lang", e),
-            u.e.SetPreferredLocales([e]));
+            u.f.SetPreferredLocales([e]));
         }
         render() {
           return o.a.createElement(
@@ -9070,7 +9094,7 @@
               return Object(n.a)(this, void 0, void 0, function* () {
                 const t = u.b.GetLanguageFallback(e),
                   n = e === t,
-                  [i, a, s, o, l, c, d, m] = yield Promise.all([
+                  [i, a, s, o, l, c, d, m] = yield Object(u.d)([
                     r("+58p")(`./shared_${e}.json`),
                     r("uhdG")(`./sales_${e}.json`),
                     r("AvbV")(`./main_${e}.json`),
@@ -9080,7 +9104,7 @@
                     n ? {} : r("AvbV")(`./main_${t}.json`),
                     n ? {} : r("5YvR")(`./marketing_${t}.json`),
                   ]);
-                u.e.AddTokens(
+                u.f.AddTokens(
                   Object.assign(
                     Object.assign(Object.assign(Object.assign({}, a), i), s),
                     o
@@ -9157,51 +9181,51 @@
             : s.eSuffix == n.Remaining && (o = "#TimeRemaining_"),
           e >= 2 * a.e.PerYear)
         )
-          return Object(i.f)(o + "XYears", Math.floor(e / a.e.PerYear));
+          return Object(i.g)(o + "XYears", Math.floor(e / a.e.PerYear));
         if (e >= a.e.PerYear)
           return (e -= a.e.PerYear) >= 2 * a.e.PerMonth && !s.bForceSingleUnits
-            ? Object(i.f)(o + "1YearXMonths", Math.floor(e / a.e.PerMonth))
-            : Object(i.f)(o + "1Year");
+            ? Object(i.g)(o + "1YearXMonths", Math.floor(e / a.e.PerMonth))
+            : Object(i.g)(o + "1Year");
         if (e >= 2 * a.e.PerMonth)
-          return Object(i.f)(o + "XMonths", Math.floor(e / a.e.PerMonth));
+          return Object(i.g)(o + "XMonths", Math.floor(e / a.e.PerMonth));
         if (e >= 2 * a.e.PerWeek)
-          return Object(i.f)(o + "XWeeks", Math.floor(e / a.e.PerWeek));
+          return Object(i.g)(o + "XWeeks", Math.floor(e / a.e.PerWeek));
         if (e >= a.e.PerWeek)
-          return Object(i.f)(o + "1Week", Math.floor(e / a.e.PerWeek));
+          return Object(i.g)(o + "1Week", Math.floor(e / a.e.PerWeek));
         if (e >= 2 * a.e.PerDay)
-          return Object(i.f)(o + "XDays", Math.floor(e / a.e.PerDay));
+          return Object(i.g)(o + "XDays", Math.floor(e / a.e.PerDay));
         if (e >= a.e.PerDay)
           return (e -= a.e.PerDay) >= 2 * a.e.PerHour && !s.bForceSingleUnits
-            ? Object(i.f)(o + "1DayXHours", Math.floor(e / a.e.PerHour))
-            : Object(i.f)(o + "1Day");
+            ? Object(i.g)(o + "1DayXHours", Math.floor(e / a.e.PerHour))
+            : Object(i.g)(o + "1Day");
         if (e >= 2 * a.e.PerHour)
-          return Object(i.f)(o + "XHours", Math.floor(e / a.e.PerHour));
+          return Object(i.g)(o + "XHours", Math.floor(e / a.e.PerHour));
         if (e >= a.e.PerHour)
           return (e -= a.e.PerHour) >= 2 * a.e.PerMinute && !s.bForceSingleUnits
-            ? Object(i.f)(o + "1HourXMinutes", Math.floor(e / a.e.PerMinute))
-            : Object(i.f)(o + "1Hour");
+            ? Object(i.g)(o + "1HourXMinutes", Math.floor(e / a.e.PerMinute))
+            : Object(i.g)(o + "1Hour");
         if (e >= 2 * a.e.PerMinute) {
           const t = Math.floor(e / a.e.PerMinute),
             r = e % a.e.PerMinute;
           return s.bHighGranularity && 0 != r
             ? 1 == r
-              ? Object(i.f)(o + "XMinutes1Second", t)
-              : Object(i.f)(o + "XMinutesXSeconds", t, r)
-            : Object(i.f)(o + "XMinutes", t);
+              ? Object(i.g)(o + "XMinutes1Second", t)
+              : Object(i.g)(o + "XMinutesXSeconds", t, r)
+            : Object(i.g)(o + "XMinutes", t);
         }
         if (e >= a.e.PerMinute) {
           const t = e % a.e.PerMinute;
           return s.bHighGranularity && 0 != t
             ? 1 == t
-              ? Object(i.f)(o + "1Minute1Second")
-              : Object(i.f)(o + "1MinuteXSeconds", t)
-            : Object(i.f)(o + "1Minute");
+              ? Object(i.g)(o + "1Minute1Second")
+              : Object(i.g)(o + "1MinuteXSeconds", t)
+            : Object(i.g)(o + "1Minute");
         }
         return s.bHighGranularity
           ? 1 == e
-            ? Object(i.f)(o + "1Second")
-            : Object(i.f)(o + "XSeconds", e)
-          : Object(i.f)(o + "LessThanAMinute");
+            ? Object(i.g)(o + "1Second")
+            : Object(i.g)(o + "XSeconds", e)
+          : Object(i.g)(o + "LessThanAMinute");
       }
       function l(e, t, r) {
         const n = {
@@ -9211,7 +9235,7 @@
           year: t ? void 0 : "numeric",
         };
         return new Date(1e3 * e).toLocaleDateString(
-          i.e.GetPreferredLocales(),
+          i.f.GetPreferredLocales(),
           n
         );
       }
@@ -9221,7 +9245,7 @@
         let n = m.get(r);
         if (n) return n;
         return (
-          (n = t.toLocaleDateString(i.e.GetPreferredLocales(), {
+          (n = t.toLocaleDateString(i.f.GetPreferredLocales(), {
             year: "numeric",
             month: "short",
             day: "numeric",
@@ -9238,7 +9262,7 @@
       const d = new Map();
       function u(e, t) {
         const r = new Date(1e3 * e),
-          n = i.e.GetPreferredLocales(),
+          n = i.f.GetPreferredLocales(),
           a =
             t.bForce24HourClock ||
             (function (e) {
@@ -9272,17 +9296,17 @@
         if ((l.setHours(0, 0, 0, 0), r))
           if (o >= l) {
             if ((l.setDate(l.getDate() + 1), o < l))
-              return Object(i.f)("#Time_Today");
+              return Object(i.g)("#Time_Today");
             if ((l.setDate(l.getDate() + 1), o < l))
-              return Object(i.f)("#Time_Tomorrow");
+              return Object(i.g)("#Time_Tomorrow");
           } else if ((l.setDate(l.getDate() - 1), o >= l))
-            return Object(i.f)("#Time_Yesterday");
+            return Object(i.g)("#Time_Yesterday");
         const d = { month: t ? "long" : "short", day: "numeric" },
           u = o.setHours(0, 0, 0, 0) + d.month;
         let m = h.get(u);
         return (
           m ||
-          ((m = o.toLocaleDateString(i.e.GetPreferredLocales(), d)),
+          ((m = o.toLocaleDateString(i.f.GetPreferredLocales(), d)),
           h.set(u, m),
           m)
         );
@@ -9315,10 +9339,10 @@
             e.setHours(0, 0, 0, 0),
             e.setDate(e.getDate() + 1),
             r < e
-              ? Object(i.f)("#Time_Today")
+              ? Object(i.g)("#Time_Today")
               : (e.setDate(e.getDate() + 1),
                 r < e
-                  ? Object(i.f)("#Time_Tomorrow")
+                  ? Object(i.g)("#Time_Tomorrow")
                   : (e.setDate(e.getDate() + 5),
                     r < e ? B(r) : S(r, !0, o.bAbbreviateDayOfWeek)))
           );
@@ -9329,28 +9353,28 @@
           return o.bGranularToday
             ? o.bGranularTodayTimeOnly
               ? u(e, { bForce24HourClock: o.bForce24HourClock })
-              : Object(i.f)(
+              : Object(i.g)(
                   "#Time_Today_At",
                   u(e, { bForce24HourClock: o.bForce24HourClock })
                 )
-            : Object(i.f)("#Time_Today");
+            : Object(i.g)("#Time_Today");
         if ((c.setDate(n.getDate() - 1), r >= c))
           return o.bGranularYesterday
-            ? Object(i.f)(
+            ? Object(i.g)(
                 "#Time_Yesterday_At",
                 u(e, { bForce24HourClock: o.bForce24HourClock })
               )
-            : Object(i.f)("#Time_Yesterday");
+            : Object(i.g)("#Time_Yesterday");
         c.setDate(n.getDate() - 6);
         const d = new Date(c);
         if (o.bGranularWeek && r >= d) return S(r, !1, !o.bAbbreviateDayOfWeek);
         if (o.bGranularPast)
-          return Object(i.f)(
+          return Object(i.g)(
             "#Time_Past_At",
             l(e, r.getFullYear() == n.getFullYear(), !o.bAbbreviateDayOfWeek),
             u(e, { bForce24HourClock: o.bForce24HourClock })
           );
-        if (r >= d) return Object(i.f)("#TimeSince_ThisWeek");
+        if (r >= d) return Object(i.g)("#TimeSince_ThisWeek");
         if (
           r.getMonth() == n.getMonth() &&
           r.getFullYear() == n.getFullYear()
@@ -9358,8 +9382,8 @@
           const e =
             Math.floor((d.valueOf() - r.valueOf()) / (1e3 * a.e.PerWeek)) + 1;
           return 1 == e
-            ? Object(i.f)("#TimeSince_1Week")
-            : Object(i.f)("#TimeSince_XWeeks", e);
+            ? Object(i.g)("#TimeSince_1Week")
+            : Object(i.g)("#TimeSince_XWeeks", e);
         }
         return r.getFullYear() == n.getFullYear() ? v(r) : M(r);
       }
@@ -9378,7 +9402,7 @@
         let s = y.get(a);
         return (
           s ||
-          ((s = e.toLocaleDateString(i.e.GetPreferredLocales(), n)),
+          ((s = e.toLocaleDateString(i.f.GetPreferredLocales(), n)),
           y.set(a, s),
           s)
         );
@@ -9387,7 +9411,7 @@
         let t = _.get(e.getDay());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(i.f.GetPreferredLocales(), {
             weekday: "long",
           })),
           _.set(e.getDay(), t),
@@ -9398,7 +9422,7 @@
         let t = g.get(e.getMonth());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(i.f.GetPreferredLocales(), {
             month: "long",
           })),
           g.set(e.getMonth(), t),
@@ -9409,7 +9433,7 @@
         let t = b.get(e.getFullYear());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(i.f.GetPreferredLocales(), {
             year: "numeric",
           })),
           b.set(e.getFullYear(), t),
@@ -9421,7 +9445,7 @@
         let r = w.get(t);
         return (
           r ||
-          ((r = e.toLocaleDateString(i.e.GetPreferredLocales(), {
+          ((r = e.toLocaleDateString(i.f.GetPreferredLocales(), {
             month: "long",
             year: "numeric",
           })),
@@ -10766,9 +10790,9 @@
               d +
               (i.bValueIsInBytes ? "bytes" : "bits") +
               (i.bValueIsRate ? "_PerSecond" : "");
-            return Object(u.f)(
+            return Object(u.g)(
               m,
-              c.toLocaleString(u.e.GetPreferredLocales(), {
+              c.toLocaleString(u.f.GetPreferredLocales(), {
                 minimumFractionDigits: i.nMinimumDigitsAfterDecimal,
                 maximumFractionDigits: i.nDigitsAfterDecimal,
               })
@@ -10813,7 +10837,7 @@
             ? Object(l.d)(this.m_videoBufferedRanges.start(e)) +
                 " - " +
                 Object(l.d)(this.m_videoBufferedRanges.end(e))
-            : Object(u.f)("#DASHPlayerStats_VideoNoRangeInformation");
+            : Object(u.g)("#DASHPlayerStats_VideoNoRangeInformation");
         }
         GetBufferedAudioSegmentForDisplay(e) {
           return this.m_audioBufferedRanges &&
@@ -10821,7 +10845,7 @@
             ? Object(l.d)(this.m_audioBufferedRanges.start(e)) +
                 " - " +
                 Object(l.d)(this.m_audioBufferedRanges.end(e))
-            : Object(u.f)("#DASHPlayerStats_AudioNoRangeInformation");
+            : Object(u.g)("#DASHPlayerStats_AudioNoRangeInformation");
         }
         GetBandwidthStatsToDisplay() {
           if (this.m_rgSnapShots.length < 2)
@@ -10922,7 +10946,7 @@
         GetCurrentFPSForDisplay() {
           return this.m_fpsMonitor.BHasCurrentFPS()
             ? this.m_fpsMonitor.GetCurrentFPS().toFixed(1)
-            : Object(u.f)("#DASHPlayerStats_Tracking");
+            : Object(u.g)("#DASHPlayerStats_Tracking");
         }
         GetPlaybackRateForDisplay() {
           return this.m_nPlaybackRate.toFixed(1) + "x";
@@ -11924,35 +11948,35 @@
     suz2: function (e, t, r) {},
     uhdG: function (e, t, r) {
       var n = {
-        "./sales_brazilian.json": ["+cMs", 96],
-        "./sales_bulgarian.json": ["ObVs", 97],
-        "./sales_czech.json": ["CoMO", 98],
-        "./sales_danish.json": ["G2Cs", 99],
-        "./sales_dutch.json": ["qEt3", 100],
-        "./sales_english.json": ["EnkW", 101],
-        "./sales_finnish.json": ["aW7y", 102],
-        "./sales_french.json": ["zxZG", 103],
-        "./sales_german.json": ["2ydi", 104],
-        "./sales_greek.json": ["Xebg", 105],
-        "./sales_hungarian.json": ["AGuh", 106],
-        "./sales_italian.json": ["/ptQ", 107],
-        "./sales_japanese.json": ["gLno", 108],
-        "./sales_koreana.json": ["FMlb", 109],
-        "./sales_latam.json": ["qta4", 110],
-        "./sales_norwegian.json": ["7zdQ", 111],
-        "./sales_polish.json": ["ViiN", 112],
-        "./sales_portuguese.json": ["wIrF", 113],
-        "./sales_romanian.json": ["rBcb", 114],
-        "./sales_russian.json": ["3DF0", 115],
-        "./sales_sc_schinese.json": ["K/cD", 116],
-        "./sales_schinese.json": ["hUJS", 117],
-        "./sales_spanish.json": ["6i74", 118],
-        "./sales_swedish.json": ["4vnE", 119],
-        "./sales_tchinese.json": ["9uzb", 120],
-        "./sales_thai.json": ["NP1P", 121],
-        "./sales_turkish.json": ["jIRL", 122],
-        "./sales_ukrainian.json": ["TgQj", 123],
-        "./sales_vietnamese.json": ["EKJ7", 124],
+        "./sales_brazilian.json": ["+cMs", 125],
+        "./sales_bulgarian.json": ["ObVs", 126],
+        "./sales_czech.json": ["CoMO", 127],
+        "./sales_danish.json": ["G2Cs", 128],
+        "./sales_dutch.json": ["qEt3", 129],
+        "./sales_english.json": ["EnkW", 130],
+        "./sales_finnish.json": ["aW7y", 131],
+        "./sales_french.json": ["zxZG", 132],
+        "./sales_german.json": ["2ydi", 133],
+        "./sales_greek.json": ["Xebg", 134],
+        "./sales_hungarian.json": ["AGuh", 135],
+        "./sales_italian.json": ["/ptQ", 136],
+        "./sales_japanese.json": ["gLno", 137],
+        "./sales_koreana.json": ["FMlb", 138],
+        "./sales_latam.json": ["qta4", 139],
+        "./sales_norwegian.json": ["7zdQ", 140],
+        "./sales_polish.json": ["ViiN", 141],
+        "./sales_portuguese.json": ["wIrF", 142],
+        "./sales_romanian.json": ["rBcb", 143],
+        "./sales_russian.json": ["3DF0", 144],
+        "./sales_sc_schinese.json": ["K/cD", 145],
+        "./sales_schinese.json": ["hUJS", 146],
+        "./sales_spanish.json": ["6i74", 147],
+        "./sales_swedish.json": ["4vnE", 148],
+        "./sales_tchinese.json": ["9uzb", 149],
+        "./sales_thai.json": ["NP1P", 150],
+        "./sales_turkish.json": ["jIRL", 151],
+        "./sales_ukrainian.json": ["TgQj", 152],
+        "./sales_vietnamese.json": ["EKJ7", 153],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -15065,5 +15089,5 @@
       })(G || (G = {}));
     },
   },
-  [["gfbn", 63, 30]],
+  [["gfbn", 92, 30]],
 ]);

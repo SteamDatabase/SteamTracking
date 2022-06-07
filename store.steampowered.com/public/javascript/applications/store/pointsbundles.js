@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [92],
+  [121],
   {
     "3xXb": function (e, n, t) {
       e.exports = {
@@ -93,7 +93,7 @@
         }),
         I = Object(c.a)(({ bundle: e, offer: n }) => {
           const t = Object(_.b)(e),
-            l = Object(b.f)("#RewardBundle_OfferDescription", n.discount);
+            l = Object(b.g)("#RewardBundle_OfferDescription", n.discount);
           return a.a.createElement(
             s.a,
             { paddingBottom: "xlarge" },
@@ -108,14 +108,14 @@
             a.a.createElement(
               "span",
               { className: O.AlreadyOwnedText },
-              Object(b.f)("#Redeem_BundleItemOwned")
+              Object(b.g)("#Redeem_BundleItemOwned")
             )
           ),
         B = Object(c.a)((e) => {
           const { offer: n } = e;
           return a.a.createElement(
             m.b,
-            { title: Object(b.f)("#RewardBundle_BundleContentsSection_Title") },
+            { title: Object(b.g)("#RewardBundle_BundleContentsSection_Title") },
             a.a.createElement(p.a, {
               getItems: (e, t) => ({
                 rewards: n.items.slice(e, t),

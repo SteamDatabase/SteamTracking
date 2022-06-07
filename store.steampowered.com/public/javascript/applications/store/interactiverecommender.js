@@ -278,7 +278,7 @@
           return this.m_ResultDataCache.isExpired();
         }
         getRecommendations() {
-          const e = f.getResults(
+          const e = O.getResults(
             T.INCLUDE_PLAYED,
             T.ALGORITHM,
             T.REINFERENCE,
@@ -299,7 +299,7 @@
           );
         }
         getAppInfo() {
-          const e = f.getResults(
+          const e = O.getResults(
             T.INCLUDE_PLAYED,
             T.ALGORITHM,
             T.REINFERENCE,
@@ -446,7 +446,7 @@
         }
         onAddToWishlist(e, t) {
           return Object(s.a)(this, void 0, void 0, function* () {
-            f.getAppInfo()[e].w = !0;
+            O.getAppInfo()[e].w = !0;
             let a = { sessionid: T.SESSION_ID, appid: e };
             const i = yield v.a.post(
               `${T.BASE_URL}recommender/${T.STEAM_ID}/wishlist?snr=${T.LINK_PARAM}`,
@@ -536,15 +536,15 @@
         Object(s.b)([u.b], R.prototype, "onUnMuteClicked", null),
         Object(s.b)([u.b], R.prototype, "shouldMute", null),
         Object(s.b)([u.b], R.prototype, "shouldUseMicrotrailers", null);
-      const f = new R();
-      window.g_InteractiveRecommender = f;
-      var O = a("tXj3");
+      const O = new R();
+      window.g_InteractiveRecommender = O;
+      var A = a("tXj3");
       !(function () {
         let e = Object(n.h)("ir_config", "application_config");
-        e && (Object.assign(T, e), f.Init());
+        e && (Object.assign(T, e), O.Init());
       })();
-      const A = ({ accountID: e }) => {
-          const t = f.getInputApps(),
+      const f = ({ accountID: e }) => {
+          const t = O.getInputApps(),
             a = Object.keys(t).length;
           let i = 0;
           return (
@@ -569,12 +569,12 @@
                 l.a.createElement(
                   "div",
                   { className: h.GameCount },
-                  Object(_.f)("#PlaytimeList_RecentGames", a)
+                  Object(_.g)("#PlaytimeList_RecentGames", a)
                 ),
                 l.a.createElement(
                   "div",
                   { className: h.TotalTime },
-                  Object(_.f)("#PlaytimeList_HoursTotal", i)
+                  Object(_.g)("#PlaytimeList_HoursTotal", i)
                 )
               )
             )
@@ -587,12 +587,12 @@
             c = "";
           return (
             i <= 86400
-              ? (c = Object(_.f)("#PlaytimeList_LastPlayedMax"))
+              ? (c = Object(_.g)("#PlaytimeList_LastPlayedMax"))
               : o > 31449600
-              ? ((r = Object(_.o)(i)),
-                (c = Object(_.f)("#PlaytimeList_LastPlayed", r)))
-              : ((r = Object(_.q)(o)),
-                (c = Object(_.f)("#PlaytimeList_LastPlayed", r))),
+              ? ((r = Object(_.p)(i)),
+                (c = Object(_.g)("#PlaytimeList_LastPlayed", r)))
+              : ((r = Object(_.r)(o)),
+                (c = Object(_.g)("#PlaytimeList_LastPlayed", r))),
             l.a.createElement(
               "div",
               { className: Object(p.a)(h.PlayedGame, s && h.Ignored) },
@@ -607,7 +607,7 @@
                 l.a.createElement(
                   "div",
                   { className: h.HoursPlayed },
-                  Object(_.f)("#PlaytimeList_Hours", a)
+                  Object(_.g)("#PlaytimeList_Hours", a)
                 ),
                 l.a.createElement("div", { className: h.Title }, t),
                 l.a.createElement("div", { className: h.LastPlayed }, c),
@@ -615,9 +615,9 @@
                   "div",
                   {
                     className: h.IgnoreToggle,
-                    onClick: () => f.onToggleIgnore(e),
+                    onClick: () => O.onToggleIgnore(e),
                   },
-                  Object(_.f)(
+                  Object(_.g)(
                     s ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore"
                   )
                 )
@@ -630,7 +630,7 @@
           super(e), (this.state = {});
         }
         render() {
-          const e = f.getInputApps();
+          const e = O.getInputApps();
           let t = [];
           if (!e)
             return l.a.createElement(
@@ -639,11 +639,11 @@
               l.a.createElement(
                 "div",
                 { className: h.Header },
-                Object(_.f)("#PlaytimeList_Header")
+                Object(_.g)("#PlaytimeList_Header")
               ),
               l.a.createElement("div", { className: h.Loading })
             );
-          f.getAppInfo();
+          O.getAppInfo();
           const a = e.slice().sort((e, t) => t.l - e.l);
           return (
             Object.keys(a).map((e) => {
@@ -665,9 +665,9 @@
               l.a.createElement(
                 "div",
                 { className: h.Header },
-                Object(_.f)("#PlaytimeList_Header")
+                Object(_.g)("#PlaytimeList_Header")
               ),
-              l.a.createElement(A, { accountID: this.props.accountID }),
+              l.a.createElement(f, { accountID: this.props.accountID }),
               l.a.createElement("div", { className: h.List }, t)
             )
           );
@@ -730,7 +730,7 @@
             (this.state = { value: "", suggestions: [] });
         }
         componentDidMount() {
-          const e = f.getTags();
+          const e = O.getTags();
           if (e)
             for (const t of e)
               this.rgTags.push({ id: parseInt(t.tagid), name: t.name });
@@ -783,14 +783,14 @@
         }
         render() {
           const e = {
-            placeholder: Object(_.f)("#TagSelect"),
+            placeholder: Object(_.g)("#TagSelect"),
             value: this.state.value,
             onChange: this.onChange,
             onKeyDown: this.onKeyDown,
           };
           let t = [];
           for (const e of this.selectedtags) {
-            let a = f.m_TagNameMap.get(e);
+            let a = O.m_TagNameMap.get(e);
             t.push(
               l.a.createElement(
                 "div",
@@ -838,20 +838,20 @@
         Object(s.b)([u.b], D.prototype, "onRemoveSelectedTag", null),
         (D = Object(s.b)([o.a], D));
       const j = Object(o.a)(() => {
-        const e = f.getTags();
+        const e = O.getTags();
         let t = [];
         if (e)
           for (const a of e) t.push({ id: parseInt(a.tagid), name: a.name });
         const a = [
-          Object(_.f)("#FilterAge_120"),
-          Object(_.f)("#FilterAge_60"),
-          Object(_.f)("#FilterAge_36"),
-          Object(_.f)("#FilterAge_24"),
-          Object(_.f)("#FilterAge_12"),
-          Object(_.f)("#FilterAge_6"),
+          Object(_.g)("#FilterAge_120"),
+          Object(_.g)("#FilterAge_60"),
+          Object(_.g)("#FilterAge_36"),
+          Object(_.g)("#FilterAge_24"),
+          Object(_.g)("#FilterAge_12"),
+          Object(_.g)("#FilterAge_6"),
         ];
-        let i = f.m_rgSavedExcludeTags,
-          s = f.m_rgSavedFilterTags;
+        let i = O.m_rgSavedExcludeTags,
+          s = O.m_rgSavedFilterTags;
         return l.a.createElement(
           "div",
           { className: h.RecommendationOptions },
@@ -859,22 +859,22 @@
             "div",
             { className: Object(p.a)(h.Row, h.FirstRow) },
             l.a.createElement(C, {
-              minLabel: Object(_.f)("#Popularity_Popular"),
-              titleLabel: Object(_.f)("#Popularity_Title"),
-              maxLabel: Object(_.f)("#Popularity_Niche"),
+              minLabel: Object(_.g)("#Popularity_Popular"),
+              titleLabel: Object(_.g)("#Popularity_Title"),
+              maxLabel: Object(_.g)("#Popularity_Niche"),
               minValue: 0,
               maxValue: 1,
-              value: f.m_fQueuedPopularityValue,
-              onChange: f.onPopularityChanged,
+              value: O.m_fQueuedPopularityValue,
+              onChange: O.onPopularityChanged,
             }),
             l.a.createElement(C, {
-              minLabel: Object(_.f)("#Recency_Older"),
-              titleLabel: Object(_.f)("#Recency_Title"),
-              maxLabel: Object(_.f)("#Recency_Newer"),
+              minLabel: Object(_.g)("#Recency_Older"),
+              titleLabel: Object(_.g)("#Recency_Title"),
+              maxLabel: Object(_.g)("#Recency_Newer"),
               minValue: 0,
               maxValue: 1,
-              value: f.m_fQueuedRecencyValue,
-              onChange: f.onRecencyChanged,
+              value: O.m_fQueuedRecencyValue,
+              onChange: O.onRecencyChanged,
               sliderLabels: a,
             })
           ),
@@ -882,35 +882,35 @@
             "div",
             { className: Object(p.a)(h.Row, h.SecondRow) },
             l.a.createElement(D, {
-              title: Object(_.f)("#TagFilterMultiple_Title"),
+              title: Object(_.g)("#TagFilterMultiple_Title"),
               tagoptions: t,
               selectedtags: s,
               key: "Filter" + s.toString(),
-              onAddTag: f.onTagFilterAdd,
-              onRemoveTag: f.onTagFilterRemove,
+              onAddTag: O.onTagFilterAdd,
+              onRemoveTag: O.onTagFilterRemove,
             }),
             l.a.createElement(D, {
-              title: Object(_.f)("#TagExcludeMultiple_Title"),
+              title: Object(_.g)("#TagExcludeMultiple_Title"),
               tagoptions: t,
               selectedtags: i,
               key: "Exclude" + i.toString(),
-              onAddTag: f.onTagExcludeAdd,
-              onRemoveTag: f.onTagExcludeRemove,
+              onAddTag: O.onTagExcludeAdd,
+              onRemoveTag: O.onTagExcludeRemove,
             }),
             l.a.createElement(L, {
               className: h.WishlistCheckbox,
-              titleLabel: Object(_.f)("#ExcludeWishlisted"),
-              checked: f.m_bExcludeWishlisted,
-              onChange: f.onExcludeWishlistedToggled,
+              titleLabel: Object(_.g)("#ExcludeWishlisted"),
+              checked: O.m_bExcludeWishlisted,
+              onChange: O.onExcludeWishlistedToggled,
             }),
             l.a.createElement(
               "button",
               {
                 className: h.SaveUserSettingsButton,
-                onClick: f.onSaveUserSettings,
-                title: Object(_.f)("#SaveUserSettingsTooltip"),
+                onClick: O.onSaveUserSettings,
+                title: Object(_.g)("#SaveUserSettingsTooltip"),
               },
-              Object(_.f)("#SaveUserSettings")
+              Object(_.g)("#SaveUserSettings")
             )
           )
         );
@@ -921,7 +921,7 @@
             (this.m_videoRef = l.a.createRef()),
             (this.state = {
               hovered: !1,
-              wishlisted: f.getAppInfo()[e.appID].w,
+              wishlisted: O.getAppInfo()[e.appID].w,
             });
         }
         componentDidMount() {
@@ -953,12 +953,12 @@
               this.m_videoRef.current.pause());
         }
         onMuteToggle(e) {
-          f.shouldMute()
-            ? (f.onUnMuteClicked(),
+          O.shouldMute()
+            ? (O.onUnMuteClicked(),
               this.m_videoRef &&
                 this.m_videoRef.current &&
                 (this.m_videoRef.current.muted = !1))
-            : (f.onMuteClicked(),
+            : (O.onMuteClicked(),
               this.m_videoRef &&
                 this.m_videoRef.current &&
                 (this.m_videoRef.current.muted = !0)),
@@ -966,16 +966,16 @@
             e.stopPropagation();
         }
         onAddToWishlist(e) {
-          f.onAddToWishlist(this.props.appID, this.props.rank),
+          O.onAddToWishlist(this.props.appID, this.props.rank),
             this.setState({ wishlisted: !0 }),
             e.preventDefault(),
             e.stopPropagation();
         }
         onGoToWishlist(e) {
-          f.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
+          O.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
         }
         onAddToCart(e) {
-          f.onAddToCart(this.props.appID, this.props.rank),
+          O.onAddToCart(this.props.appID, this.props.rank),
             e.preventDefault(),
             e.stopPropagation();
         }
@@ -983,12 +983,12 @@
           const { appID: e, score: t, rank: a, width: i } = this.props,
             s =
               "https://steamcdn-a.akamaihd.net/steam/apps/" + e + "/header.jpg",
-            n = f.getAppInfo()[e];
+            n = O.getAppInfo()[e];
           if (!n) return l.a.createElement("div", null);
           const o = n.n,
             r =
               n.r > 0
-                ? Object(_.f)("#Recommendation_ReleasedOn", Object(_.o)(n.r))
+                ? Object(_.g)("#Recommendation_ReleasedOn", Object(_.p)(n.r))
                 : "";
           let c = [];
           if (n.t) {
@@ -999,7 +999,7 @@
                   l.a.createElement(
                     "div",
                     { key: `${e}_${a}`, className: h.Tag },
-                    f.getTagName(a)
+                    O.getTagName(a)
                   )
                 ),
                 t++,
@@ -1017,8 +1017,8 @@
           Math.max(1, t);
           let y = !1,
             R = !1,
-            O = !0,
-            A = "",
+            A = !0,
+            f = "",
             I = "",
             N = "",
             C = "";
@@ -1026,24 +1026,24 @@
             D = !1,
             j = !0;
           if (v) {
-            const e = f.getDetails(this.props.appID);
+            const e = O.getDetails(this.props.appID);
             e &&
               ((y = !0),
               (R = e.discount_pct > 0),
-              (O = "0" == e.discount_price),
+              (A = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
                 .canPlayType('video/webm; codecs="vp8, vorbis"')
-                ? f.shouldUseMicrotrailers() && e.microtrailer_webm
+                ? O.shouldUseMicrotrailers() && e.microtrailer_webm
                   ? ((L = e.microtrailer_webm), (D = !0), (j = !1))
                   : (L = e.video_webm)
-                : f.shouldUseMicrotrailers() && e.microtrailer_mp4
+                : O.shouldUseMicrotrailers() && e.microtrailer_mp4
                 ? ((L = e.microtrailer_mp4), (D = !0), (j = !1))
                 : (L = e.video_mp4),
-              (A = `-${e.discount_pct}%`),
+              (f = `-${e.discount_pct}%`),
               (I = e.base_price),
-              (N = O ? Object(_.f)("#FreeToPlay") : e.discount_price),
+              (N = A ? Object(_.g)("#FreeToPlay") : e.discount_price),
               (C = e.description));
           }
           const P = L && L.length > 0;
@@ -1054,7 +1054,7 @@
               "a",
               {
                 href: `${T.BASE_URL}app/${e}?snr=${T.LINK_PARAM}`,
-                onClick: () => f.onAppClicked(e, a),
+                onClick: () => O.onAppClicked(e, a),
                 className: Object(p.a)(
                   h.RecommendationEntry,
                   "ds_flagged",
@@ -1086,7 +1086,7 @@
                     ),
                     playsInline: !0,
                     autoPlay: !0,
-                    muted: j && f.shouldMute(),
+                    muted: j && O.shouldMute(),
                     src: L,
                     loop: D,
                   }),
@@ -1097,7 +1097,7 @@
                         className: Object(p.a)(h.UnMute, P && h.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
-                      l.a.createElement(m.Cb, { muted: f.shouldMute() })
+                      l.a.createElement(m.Cb, { muted: O.shouldMute() })
                     ),
                   this.state.wishlisted &&
                     l.a.createElement(
@@ -1109,7 +1109,7 @@
                           h.WishlistFlag
                         ),
                       },
-                      Object(_.f)("#Recommendation_OnWishlist") + "  "
+                      Object(_.g)("#Recommendation_OnWishlist") + "  "
                     )
                 ),
                 l.a.createElement(
@@ -1181,7 +1181,7 @@
                               l.a.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                A
+                                f
                               ),
                               l.a.createElement(
                                 "div",
@@ -1210,7 +1210,7 @@
                               },
                               N
                             ),
-                          !O &&
+                          !A &&
                             l.a.createElement(
                               "div",
                               {
@@ -1226,14 +1226,14 @@
                                 l.a.createElement(
                                   "span",
                                   null,
-                                  Object(_.f)("#btn_add_to_cart")
+                                  Object(_.g)("#btn_add_to_cart")
                                 )
                               )
                             )
                         )
                       ),
                       !this.state.wishlisted &&
-                        !O &&
+                        !A &&
                         l.a.createElement(
                           "div",
                           {
@@ -1247,12 +1247,12 @@
                             l.a.createElement(
                               "span",
                               null,
-                              Object(_.f)("#wishlist_add_to_wishlist")
+                              Object(_.g)("#wishlist_add_to_wishlist")
                             )
                           )
                         ),
                       this.state.wishlisted &&
-                        !O &&
+                        !A &&
                         l.a.createElement(
                           "div",
                           {
@@ -1262,7 +1262,7 @@
                               h.Wishlisted,
                               h.WishlistSection
                             ),
-                            "data-tooltip-text": Object(_.f)(
+                            "data-tooltip-text": Object(_.g)(
                               "#OnWishlistTooltip"
                             ),
                             onClick: (e) => this.onGoToWishlist(e),
@@ -1273,7 +1273,7 @@
                             l.a.createElement("img", {
                               src: `${T.IMG_URL_BASE}/v6/ico/ico_selected.png`,
                             }),
-                            "  " + Object(_.f)("#OnWishlist")
+                            "  " + Object(_.g)("#OnWishlist")
                           )
                         )
                     )
@@ -1295,12 +1295,12 @@
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
         render() {
-          const e = f.m_fRecencyValue * (T.NUM_RECENCY_STEPS - 1 - 0.001),
+          const e = O.m_fRecencyValue * (T.NUM_RECENCY_STEPS - 1 - 0.001),
             t = Math.floor(e),
             a = t + 1,
             i = 1 - (e - t),
             s = 1 - i,
-            n = f.m_fPopularityValue * (T.NUM_POPULARITY_STEPS - 1 - 0.001),
+            n = O.m_fPopularityValue * (T.NUM_POPULARITY_STEPS - 1 - 0.001),
             o = Math.floor(n),
             r = o + 1,
             c = 1 - (n - o),
@@ -1312,8 +1312,8 @@
             m.push({ index: r * T.NUM_RECENCY_STEPS + a, weight: d * s });
           let u = new Map(),
             g = 0;
-          const E = f.getRecommendations(),
-            b = f.getAppInfo();
+          const E = O.getRecommendations(),
+            b = O.getAppInfo();
           let v = [];
           if (E) {
             for (const e of m) {
@@ -1326,7 +1326,7 @@
                     b[i].o ||
                     b[i].i ||
                     b[i].ti ||
-                    (b[i].w && f.m_bExcludeWishlisted)
+                    (b[i].w && O.m_bExcludeWishlisted)
                   )
                     continue;
                   const s =
@@ -1338,10 +1338,10 @@
             let e = [];
             u.forEach((t, a) => e.push({ appid: a, score: t })),
               (e = e.filter(
-                (e) => b[e.appid].t && f.doTagsPassFilter(b[e.appid].t)
+                (e) => b[e.appid].t && O.doTagsPassFilter(b[e.appid].t)
               )),
               (e = e.filter(
-                (e) => b[e.appid].t && !f.doTagsFailExclusion(b[e.appid].t)
+                (e) => b[e.appid].t && !O.doTagsFailExclusion(b[e.appid].t)
               )),
               (e = e.filter((e) => e.score > 0));
             let t = e.sort((e, t) => t.score - e.score);
@@ -1367,7 +1367,7 @@
                     key: "no_recommedations_due_to_filter",
                     className: h.NoRecommendationsMessage,
                   },
-                  Object(_.f)("#NoRecommendationsDueToFilter")
+                  Object(_.g)("#NoRecommendationsDueToFilter")
                 )
               );
           } else
@@ -1383,7 +1383,7 @@
             l.a.createElement(
               "div",
               { className: h.Header },
-              Object(_.f)("#Recommendations_Header")
+              Object(_.g)("#Recommendations_Header")
             ),
             l.a.createElement(j, null),
             l.a.createElement(
@@ -1391,7 +1391,7 @@
               {
                 className: Object(p.a)(
                   h.List,
-                  f.areResultsExpired() && h.Updating
+                  O.areResultsExpired() && h.Updating
                 ),
               },
               v
@@ -1411,7 +1411,7 @@
           window.addEventListener("resize", this.updateDimensions);
         }
         ShowLoginDialog() {
-          Object(O.a)();
+          Object(A.a)();
         }
         render() {
           return n.l.logged_in
@@ -1419,7 +1419,7 @@
                 "div",
                 {
                   className: h.App,
-                  style: { height: 3840 + 26 * f.getTagHeight() },
+                  style: { height: 3840 + 26 * O.getTagHeight() },
                 },
                 l.a.createElement(
                   "div",
@@ -1430,12 +1430,12 @@
                     l.a.createElement(
                       "div",
                       { className: h.Header },
-                      Object(_.f)("#HeaderTitle")
+                      Object(_.g)("#HeaderTitle")
                     ),
                     l.a.createElement(
                       "div",
                       { className: h.Body },
-                      Object(_.f)("#HeaderBody1")
+                      Object(_.g)("#HeaderBody1")
                     )
                   ),
                   l.a.createElement(
@@ -1456,7 +1456,7 @@
                   l.a.createElement(
                     "div",
                     { className: h.Text },
-                    Object(_.f)("#LoginText")
+                    Object(_.g)("#LoginText")
                   ),
                   l.a.createElement(
                     "div",
@@ -1467,7 +1467,7 @@
                       ),
                       onClick: this.ShowLoginDialog,
                     },
-                    l.a.createElement("span", null, Object(_.f)("#LoginButton"))
+                    l.a.createElement("span", null, Object(_.g)("#LoginButton"))
                   )
                 )
               );

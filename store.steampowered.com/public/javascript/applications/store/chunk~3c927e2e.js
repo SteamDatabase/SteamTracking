@@ -1774,7 +1774,7 @@
         let v = null != o ? o : {},
           b = null;
         r.steam_deck_blog_url &&
-          ((v.onOptionsActionDescription = Object(f.f)(
+          ((v.onOptionsActionDescription = Object(f.g)(
             "#SteamDeckVerified_ViewDeveloperPost"
           )),
           (v.onOptionsButton = g),
@@ -1806,7 +1806,7 @@
                   n.a.createElement(
                     "div",
                     { className: h.a.DialogTitle },
-                    Object(f.f)(
+                    Object(f.g)(
                       "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI"
                     )
                   ),
@@ -1853,7 +1853,7 @@
                         n.a.createElement(
                           "span",
                           null,
-                          Object(f.f)(e.loc_token)
+                          Object(f.g)(e.loc_token)
                         )
                       )
                     ),
@@ -1873,7 +1873,7 @@
                             n.a.createElement(
                               "span",
                               null,
-                              Object(f.f)(e.loc_token)
+                              Object(f.g)(e.loc_token)
                             )
                           )
                         )
@@ -1901,7 +1901,7 @@
                   n.a.createElement(
                     "div",
                     { className: h.a.DialogTitle },
-                    Object(f.f)(
+                    Object(f.g)(
                       "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI"
                     )
                   ),
@@ -1935,7 +1935,7 @@
             n.a.createElement(
               "span",
               { className: h.a.LearnMorePC },
-              Object(f.f)(
+              Object(f.g)(
                 "#SteamDeckVerified_Store_CompatSectionHeader_Desktop"
               )
             )
@@ -1945,10 +1945,10 @@
       function B(e) {
         const { appID: t, results: a, appName: r } = e,
           l = d.d.IN_GAMEPADUI
-            ? Object(f.f)(
+            ? Object(f.g)(
                 "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI"
               )
-            : Object(f.f)(
+            : Object(f.g)(
                 "#SteamDeckVerified_Store_CompatSectionHeader_Desktop"
               ),
           o = d.d.IN_GAMEPADUI,
@@ -1969,7 +1969,7 @@
                 ),
                 n.a.createElement(S, {
                   results: a,
-                  learnMore: Object(f.f)(
+                  learnMore: Object(f.g)(
                     "#SteamDeckVerified_Store_CompatSection_LearnMore"
                   ),
                   appName: r,
@@ -2013,7 +2013,7 @@
                 ? h.a.DeveloperComments_LinkIcon
                 : h.a.DeveloperComments_LinkNoIcon,
             },
-            Object(f.f)(
+            Object(f.g)(
               "#SteamDeckVerified_Store_CompatSection_DeveloperComments"
             )
           )
@@ -2055,7 +2055,7 @@
                 : n.a.createElement(M.a, {
                     size: "medium",
                     position: "center",
-                    string: Object(f.f)("#Loading"),
+                    string: Object(f.g)("#Loading"),
                   })
             )
           )
@@ -2081,7 +2081,7 @@
         let d = {
           onOKButton: null,
           onOKActionDescription: null,
-          onCancelActionDescription: Object(f.f)("#Button_Close"),
+          onCancelActionDescription: Object(f.g)("#Button_Close"),
           onCancelButton: () => C(!1),
         };
         return n.a.createElement(
@@ -2133,7 +2133,7 @@
             ? n.a.createElement(
                 "div",
                 { className: h.a.CompatibilityDetailRatingSummary },
-                Object(f.f)(
+                Object(f.g)(
                   "#SteamDeckVerified_DescriptionHeader_DeveloperBlog"
                 ),
                 n.a.createElement(
@@ -2145,13 +2145,13 @@
             : n.a.createElement(
                 "div",
                 { className: h.a.CompatibilityDetailRatingSummary },
-                Object(f.f)(
+                Object(f.g)(
                   "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop"
                 ),
                 n.a.createElement(
                   "a",
                   { href: t, className: h.a.DeveloperBlockLinkDesktop },
-                  Object(f.f)("#SteamDeckVerified_ViewDeveloperPost")
+                  Object(f.g)("#SteamDeckVerified_ViewDeveloperPost")
                 )
               )
           : null;
@@ -2205,11 +2205,11 @@
             "div",
             { className: h.a.CompatibilityDetailRatingSummary },
             a
-              ? Object(f.n)(
+              ? Object(f.o)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
                   n.a.createElement("b", null, Object(V.c)(a))
                 )
-              : Object(f.f)("#SteamDeckVerified_DescriptionHeader_Unknown")
+              : Object(f.g)("#SteamDeckVerified_DescriptionHeader_Unknown")
           );
         let l = "",
           o = null;
@@ -2229,21 +2229,21 @@
         const c = n.a.createElement(
             "span",
             { className: o },
-            Object(f.f)(U(t))
+            Object(f.g)(U(t))
           ),
           i = n.a.createElement(
             "span",
             { className: h.a.CompatibilityDetailRatingSummary },
-            Object(f.f)(r || l)
+            Object(f.g)(r || l)
           ),
           s = a
-            ? Object(f.n)(
+            ? Object(f.o)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
                 n.a.createElement("b", null, Object(V.c)(a)),
                 c,
                 i
               )
-            : Object(f.n)("#SteamDeckVerified_DescriptionHeader", c, i);
+            : Object(f.o)("#SteamDeckVerified_DescriptionHeader", c, i);
         return n.a.createElement(
           "div",
           { className: h.a.CompatibilityDetailRatingSummary },
@@ -2255,7 +2255,7 @@
         return n.a.createElement(
           "span",
           { className: h.a.CompatibilityDetailRatingDescription },
-          Object(f.f)(U(t))
+          Object(f.g)(U(t))
         );
       }
       function U(e) {

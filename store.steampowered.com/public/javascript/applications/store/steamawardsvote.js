@@ -165,11 +165,11 @@
               !1)
           : (Object(f.d)(
               l.createElement(b.e, {
-                strTitle: Object(h.f)("#EventDisplay_Share_NotLoggedIn"),
-                strDescription: Object(h.f)(
+                strTitle: Object(h.g)("#EventDisplay_Share_NotLoggedIn"),
+                strDescription: Object(h.g)(
                   "#EventDisplay_Share_NotLoggedIn_Description"
                 ),
-                strOKButtonText: Object(h.f)("#MobileLogin_SignIn"),
+                strOKButtonText: Object(h.g)("#MobileLogin_SignIn"),
                 onOK: D.a,
               }),
               window
@@ -376,7 +376,7 @@
               "div",
               { className: C.a.ExpiredEventHeader },
               " ",
-              Object(h.f)("#SteamAwards_ExpiredEvent"),
+              Object(h.g)("#SteamAwards_ExpiredEvent"),
               " "
             );
           let a = {};
@@ -420,15 +420,15 @@
                   "div",
                   { className: C.a.SteamAwardMainTitle },
                   " ",
-                  Object(h.f)("#SteamAwards_EventMainTitle"),
+                  Object(h.g)("#SteamAwards_EventMainTitle"),
                   " "
                 ),
                 l.createElement(
                   "div",
                   { className: C.a.SteamAwardSubTitle },
                   o
-                    ? Object(h.f)("#SteamAwards_EventCallToAction")
-                    : Object(h.f)("#SteamAwards_EventVotingDateTeaser", d),
+                    ? Object(h.g)("#SteamAwards_EventCallToAction")
+                    : Object(h.g)("#SteamAwards_EventVotingDateTeaser", d),
                   o &&
                     l.createElement(
                       "a",
@@ -437,7 +437,7 @@
                         className: C.a.SteamAwardLearnMore,
                       },
                       "(",
-                      Object(h.f)("#EventDisplay_CallToAction_LearnMore"),
+                      Object(h.g)("#EventDisplay_CallToAction_LearnMore"),
                       ")"
                     )
                 ),
@@ -446,7 +446,7 @@
                   { className: C.a.SteamAwardHeaderText },
                   o
                     ? i
-                      ? Object(h.f)(
+                      ? Object(h.g)(
                           "#SteamAwards_EventNominateGamePrompt_Long",
                           this.props.event.GetGameTitle(this.props.lang)
                         )
@@ -457,12 +457,12 @@
                             href:
                               v.d.STORE_BASE_URL + "steamawards/nominations/",
                           },
-                          Object(h.f)(
+                          Object(h.g)(
                             "#SteamAwards_EventNominateGamePrompt_NoCategory",
                             this.props.event.GetGameTitle(this.props.lang)
                           )
                         )
-                    : Object(h.f)("#SteamAwards_Event_NominationsClosed")
+                    : Object(h.g)("#SteamAwards_Event_NominationsClosed")
                 )
               )
             ),
@@ -509,7 +509,7 @@
                           href: v.d.STORE_BASE_URL + "steamawards/nominations/",
                         },
                         " ",
-                        Object(h.f)(
+                        Object(h.g)(
                           "#SteamAwards_EventNominationAlternativeLinkText"
                         ),
                         " "
@@ -549,14 +549,14 @@
               : l.createElement(y.a, {
                   size: "small",
                   position: "center",
-                  string: Object(h.f)("#Loading"),
+                  string: Object(h.g)("#Loading"),
                 });
           return l.createElement(b.e, {
             bDestructiveWarning: !0,
-            strTitle: Object(h.f)(
+            strTitle: Object(h.g)(
               `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Title`
             ),
-            strDescription: Object(h.n)(
+            strDescription: Object(h.o)(
               `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Explanation`,
               a,
               e
@@ -726,7 +726,7 @@
                         l.createElement(
                           "span",
                           { className: C.a.SteamAwardVoteButtonText },
-                          Object(h.f)("#SteamAward_VoteButton_VotedText")
+                          Object(h.g)("#SteamAward_VoteButton_VotedText")
                         )
                       )
                     : l.createElement(
@@ -738,7 +738,7 @@
                         l.createElement(
                           "span",
                           { className: C.a.SteamAwardVoteButtonText },
-                          Object(h.f)("#SteamAward_VoteButton_PromptText")
+                          Object(h.g)("#SteamAward_VoteButton_PromptText")
                         )
                       )
                 )
@@ -853,7 +853,7 @@
                     "div",
                     { className: C.a.SteamAwardMainTitle },
                     " ",
-                    Object(h.f)("#SteamAwards_EventMainTitleCombined"),
+                    Object(h.g)("#SteamAwards_EventMainTitleCombined"),
                     " "
                   ),
                   l.createElement(
@@ -863,7 +863,7 @@
                       ? l.createElement(
                           l.Fragment,
                           null,
-                          Object(h.f)(
+                          Object(h.g)(
                             "#SteamAwards_EventVoteForGamePrompt",
                             null === (e = d.a.Get().GetApp(this.props.appID)) ||
                               void 0 === e
@@ -879,7 +879,7 @@
                                 C.a.BottomRight
                               ),
                             },
-                            Object(h.f)("#EventDisplay_CallToAction_LearnMore")
+                            Object(h.g)("#EventDisplay_CallToAction_LearnMore")
                           )
                         )
                       : l.createElement(
@@ -888,7 +888,7 @@
                             href: v.d.STORE_BASE_URL + "steamawards/",
                             className: C.a.LinkText,
                           },
-                          Object(h.f)("#SteamAwards_Event_VotesClosed")
+                          Object(h.g)("#SteamAwards_Event_VotesClosed")
                         )
                   ),
                   l.createElement(
@@ -1694,8 +1694,8 @@
       }
       function r(e) {
         let t = "#PartnerEvent_" + e,
-          a = Object(n.f)(t);
-        return a != t ? a : Object(n.f)("#PartnerEvent_Other");
+          a = Object(n.g)(t);
+        return a != t ? a : Object(n.g)("#PartnerEvent_Other");
       }
     },
     JUQq: function (e, t, a) {
@@ -2260,7 +2260,7 @@
           return (
             o
               ? c
-                ? (u = Object(_.f)(
+                ? (u = Object(_.g)(
                     "#ImageUpload_InvalidFormat",
                     I.GetExtensionStringForFileType(a)
                   ))
@@ -2268,11 +2268,11 @@
                 ? s
                   ? !d &&
                     m &&
-                    ((u = Object(_.f)("#ImageUpload_InvalidDimensions", n, i)),
+                    ((u = Object(_.g)("#ImageUpload_InvalidDimensions", n, i)),
                     (p = !0))
-                  : (u = Object(_.f)("#ImageUpload_TooSmall", n, i))
-                : (u = Object(_.f)("#ImageUpload_InvalidResolution", n, i))
-              : (u = Object(_.f)("#ImageUpload_InvalidFormatSelected")),
+                  : (u = Object(_.g)("#ImageUpload_TooSmall", n, i))
+                : (u = Object(_.g)("#ImageUpload_InvalidResolution", n, i))
+              : (u = Object(_.g)("#ImageUpload_InvalidFormatSelected")),
             { error: u, needsCrop: p }
           );
         }
@@ -2420,7 +2420,7 @@
         }
         CancelAllUploads() {
           for (let e of this.m_allCancelTokens)
-            e.cancel(Object(_.f)("#ImageUpload_CancelRequest"));
+            e.cancel(Object(_.g)("#ImageUpload_CancelRequest"));
           this.m_allCancelTokens = new Array();
         }
         RetryAllFailedUploads() {
@@ -5654,7 +5654,7 @@
           var t;
           return (
             h.a.GetWithFallback(this.jsondata.localized_broadcast_title, e) ||
-            Object(h.f)(
+            Object(h.g)(
               null !== (t = this.jsondata.default_broadcast_title) &&
                 void 0 !== t
                 ? t
@@ -5818,15 +5818,15 @@
         }
         GetCategoryAsString() {
           return this.BHasTag("steam_award_nomination_request")
-            ? Object(h.f)("#PartnerEvent_SteamAwardNominations")
+            ? Object(h.g)("#PartnerEvent_SteamAwardNominations")
             : this.BHasTag("steam_award_vote_request")
-            ? Object(h.f)("#PartnerEvent_SteamAwardVoteRequest")
+            ? Object(h.g)("#PartnerEvent_SteamAwardVoteRequest")
             : this.BHasTag("steam_game_festival_artist_statement")
-            ? Object(h.f)("#PartnerEvent_SteamGameFestival_ArtistState")
+            ? Object(h.g)("#PartnerEvent_SteamGameFestival_ArtistState")
             : this.BHasTag("steam_game_festival_office_hour")
-            ? Object(h.f)("#PartnerEvent_SteamGameFestival_OfficeHour")
+            ? Object(h.g)("#PartnerEvent_SteamGameFestival_OfficeHour")
             : this.BHasTag("steam_game_festival_broadcast")
-            ? Object(h.f)("#PartnerEvent_SteamGameFestival_Broadcast")
+            ? Object(h.g)("#PartnerEvent_SteamGameFestival_Broadcast")
             : this.GetEventTypeAsString();
         }
         GetAllTags() {
@@ -6006,7 +6006,7 @@
         return n.createElement(
           i.e,
           {
-            strTitle: Object(r.f)("#Informational_Message"),
+            strTitle: Object(r.g)("#Informational_Message"),
             onCancel: e.closeModal,
             onOK: e.closeModal,
             bAlertDialog: !0,
@@ -6014,12 +6014,12 @@
           n.createElement(
             "div",
             null,
-            Object(r.n)(
+            Object(r.o)(
               e.strTokenOverride || "#User_LimitedAccount",
               n.createElement(
                 "a",
                 { href: t, target: o.d.IN_CLIENT ? void 0 : "_blank" },
-                Object(r.f)("#User_LimitedAccount_UrlInfo")
+                Object(r.g)("#User_LimitedAccount_UrlInfo")
               )
             )
           )

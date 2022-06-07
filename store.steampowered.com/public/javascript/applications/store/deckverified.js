@@ -160,7 +160,7 @@
           const d = {
               strTitle:
                 (null == i ? void 0 : i.strTitle) ||
-                Object(u.f)("#Dialog_DefaultWindowTitle"),
+                Object(u.g)("#Dialog_DefaultWindowTitle"),
               fnOnClose: null == i ? void 0 : i.fnOnClose,
               popupWidth:
                 (null == i ? void 0 : i.popupWidth) ||

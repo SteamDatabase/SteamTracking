@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [94],
+  [123],
   {
     "07/r": function (e, t, a) {
       e.exports = {
@@ -206,8 +206,8 @@
           void 0
         ),
         Object(n.b)([p.C.deep], C.prototype, "m_mapExistingReactions", void 0);
-      var f = a("7ast"),
-        E = a("thkD"),
+      var E = a("7ast"),
+        f = a("thkD"),
         _ = (a("Jsk2"), a("e356")),
         v = a("kWcV"),
         y = a("GbHM"),
@@ -216,7 +216,7 @@
         A = a("gMmH"),
         R = a("07/r");
       function M(e) {
-        return Object(L.f)(`#RewardsReaction_${e}`);
+        return Object(L.g)(`#RewardsReaction_${e}`);
       }
       var S,
         j,
@@ -342,7 +342,7 @@
           if (!t) return null;
           if (e)
             return c.createElement(
-              E.b,
+              f.b,
               {
                 className: R.GrantAwardModal,
                 active: !0,
@@ -461,19 +461,19 @@
             v = "";
           switch (t) {
             case 1:
-              v = Object(L.f)("#GrantAwardDescription_Review");
+              v = Object(L.g)("#GrantAwardDescription_Review");
               break;
             case 2:
-              v = Object(L.f)("#GrantAwardDescription_UGC");
+              v = Object(L.g)("#GrantAwardDescription_UGC");
               break;
             case 3:
-              v = Object(L.f)("#GrantAwardDescription_Profile");
+              v = Object(L.g)("#GrantAwardDescription_Profile");
               break;
             case 4:
-              v = Object(L.f)("#GrantAwardDescription_ForumTopic");
+              v = Object(L.g)("#GrantAwardDescription_ForumTopic");
               break;
             case 5:
-              v = Object(L.f)("#GrantAwardDescription_Comment");
+              v = Object(L.g)("#GrantAwardDescription_Comment");
           }
           switch (o) {
             case N.SELECTING:
@@ -481,18 +481,18 @@
                 const e = 0 === s || d.get(s),
                   t = !h || h.greaterThanOrEqual(p),
                   a = c.createElement(
-                    f.F,
+                    E.F,
                     {
                       onClick: () => this.setState({ ePhase: N.CONFIRM }),
                       disabled: e,
                       focusable: !e,
-                      title: Object(L.f)(
+                      title: Object(L.g)(
                         e
                           ? "#GrantAward_PromptTooltip"
                           : "#GrantAward_SubmitTooltip"
                       ),
                     },
-                    Object(L.f)(
+                    Object(L.g)(
                       e ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                     )
                   );
@@ -547,7 +547,7 @@
                           c.createElement(
                             "div",
                             { key: "msg", className: R.NotEnoughPoints },
-                            Object(L.f)(
+                            Object(L.g)(
                               "#GrantAward_CantAfford",
                               h.negate().add(p).toNumber().toLocaleString()
                             )
@@ -559,9 +559,9 @@
                               href: `${w.d.STORE_BASE_URL}points/howitworks`,
                             },
                             c.createElement(
-                              f.f,
+                              E.f,
                               { key: "button" },
-                              Object(L.f)("#GrantAward_HowToGetPoints")
+                              Object(L.g)("#GrantAward_HowToGetPoints")
                             )
                           ),
                         ]
@@ -598,7 +598,7 @@
                       c.createElement(
                         "div",
                         { className: R.ConfirmText },
-                        Object(L.n)(
+                        Object(L.o)(
                           "#GrantAward_Confirm",
                           c.createElement($, null, p.toLocaleString()),
                           c.createElement(
@@ -611,13 +611,13 @@
                       c.createElement(
                         "div",
                         { className: R.ConfirmText },
-                        Object(L.n)(
+                        Object(L.o)(
                           "#GrantAward_Confirm_Details",
                           c.createElement($, null, C.toLocaleString()),
                           c.createElement(
                             "span",
                             { className: R.TimePeriod },
-                            Object(L.f)("#GrantAward_Confirm_DetailsTimePeriod")
+                            Object(L.g)("#GrantAward_Confirm_DetailsTimePeriod")
                           )
                         )
                       )
@@ -648,7 +648,7 @@
                     c.createElement(
                       "div",
                       { className: R.SuccessText },
-                      Object(L.f)("#GrantAward_Success")
+                      Object(L.g)("#GrantAward_Success")
                     )
                   )
                 ),
@@ -657,21 +657,21 @@
                   D,
                   { store: n },
                   c.createElement(
-                    f.f,
+                    E.f,
                     {
                       onClick: () => this.setState({ ePhase: N.SELECTING }),
                       disabled: o !== N.CONFIRM,
                     },
-                    Object(L.f)("#GrantAward_Back")
+                    Object(L.g)("#GrantAward_Back")
                   ),
                   c.createElement(
-                    f.F,
+                    E.F,
                     {
                       onClick: this.GrantAward,
-                      title: Object(L.f)("#GrantAward_SubmitTooltip"),
+                      title: Object(L.g)("#GrantAward_SubmitTooltip"),
                       disabled: o !== N.CONFIRM,
                     },
-                    Object(L.f)("#GrantAwardNowButton")
+                    Object(L.g)("#GrantAwardNowButton")
                   )
                 )
               );
@@ -680,28 +680,28 @@
               let e = "";
               switch (this.state.eResult) {
                 case 10:
-                  e = Object(L.f)("#GrantAwardError_Busy");
+                  e = Object(L.g)("#GrantAwardError_Busy");
                   break;
                 case 32:
-                  e = Object(L.f)("#GrantAwardError_PersistFailed");
+                  e = Object(L.g)("#GrantAwardError_PersistFailed");
                   break;
                 case 8:
-                  e = Object(L.f)("#GrantAwardError_InvalidParam");
+                  e = Object(L.g)("#GrantAwardError_InvalidParam");
                   break;
                 case 42:
-                  e = Object(L.f)("#GrantAwardError_NoMatch");
+                  e = Object(L.g)("#GrantAwardError_NoMatch");
                   break;
                 case 107:
-                  e = Object(L.f)("#GrantAwardError_InsufficientFunds");
+                  e = Object(L.g)("#GrantAwardError_InsufficientFunds");
                   break;
                 case 15:
-                  e = Object(L.f)("#GrantAwardError_AccessDenied");
+                  e = Object(L.g)("#GrantAwardError_AccessDenied");
                   break;
                 case 21:
-                  e = Object(L.f)("#GrantAwardError_NotLoggedOn");
+                  e = Object(L.g)("#GrantAwardError_NotLoggedOn");
                   break;
                 default:
-                  e = Object(L.f)("#GrantAwardError_Fail");
+                  e = Object(L.g)("#GrantAwardError_Fail");
               }
               _ = c.createElement(
                 c.Fragment,
@@ -722,19 +722,19 @@
                   D,
                   { store: n },
                   c.createElement(
-                    f.f,
+                    E.f,
                     { onClick: () => this.setState({ ePhase: N.SELECTING }) },
-                    Object(L.f)("#GrantAward_Back")
+                    Object(L.g)("#GrantAward_Back")
                   )
                 )
               );
             }
           }
           return c.createElement(
-            E.b,
+            f.b,
             { className: R.GrantAwardModal, active: e, onDismiss: r },
             c.createElement(
-              E.d,
+              f.d,
               { navID: "GrantAward", closeModal: r },
               l && c.createElement(A.a, { eType: A.b.Default }),
               _
@@ -767,7 +767,7 @@
             c.createElement(
               "div",
               { className: R.Title },
-              Object(L.f)("#GrantAwardTitle")
+              Object(L.g)("#GrantAwardTitle")
             ),
             c.createElement("div", { className: R.Description }, e)
           ),
@@ -787,7 +787,7 @@
                 c.createElement(
                   "div",
                   { className: R.BalanceLabel },
-                  Object(L.f)("#YourBalance")
+                  Object(L.g)("#YourBalance")
                 ),
                 c.createElement("div", { className: R.BalanceAmount }, n)
               )
@@ -808,7 +808,7 @@
                   className: R.FooterLink,
                   href: `${w.d.STORE_BASE_URL}points/howitworks`,
                 },
-                Object(L.f)("#GrantAward_PointsLink")
+                Object(L.g)("#GrantAward_PointsLink")
               )
             )
           );
@@ -1081,7 +1081,7 @@
             s,
             c.map((e, t) =>
               e.flRandom > 0.5
-                ? r.a.createElement(f, { key: t, style: e })
+                ? r.a.createElement(E, { key: t, style: e })
                 : r.a.createElement(C, { key: t, style: e })
             )
           );
@@ -1091,8 +1091,8 @@
             style: Object.assign(Object.assign({}, h), e),
           }),
         p = ({ style: e }) => {
-          const [t] = Object(n.useState)(Math.floor(Math.random() * E.length)),
-            a = E[t];
+          const [t] = Object(n.useState)(Math.floor(Math.random() * f.length)),
+            a = f[t];
           return r.a.createElement(a, {
             style: Object.assign(Object.assign(Object.assign({}, u), e), {
               backgroundColor: void 0,
@@ -1124,7 +1124,7 @@
               fill: e.fill,
             })
           ),
-        f = ({ style: e }) =>
+        E = ({ style: e }) =>
           r.a.createElement(
             s.animated.svg,
             {
@@ -1140,7 +1140,7 @@
               fill: e.fill,
             })
           ),
-        E = [
+        f = [
           ({ style: e }) =>
             r.a.createElement(
               s.animated.svg,

@@ -4246,13 +4246,13 @@
                   return (
                     (e =
                       17 == a.result
-                        ? Object(ve.f)("#BroadcastChat_YouMuted")
+                        ? Object(ve.g)("#BroadcastChat_YouMuted")
                         : 84 == a.result
-                        ? Object(ve.f)(
+                        ? Object(ve.g)(
                             "#BroadcastChat_Cooldown",
                             a.cooldown_time_seconds
                           )
-                        : Object(ve.f)("#BroadcastChat_FailedToSendMsg", t)),
+                        : Object(ve.g)("#BroadcastChat_FailedToSendMsg", t)),
                     void this.m_rgChatMessages.push({
                       type: h.a.Error,
                       msg: e,
@@ -4275,7 +4275,7 @@
               } catch (e) {
                 this.m_rgChatMessages.push({
                   type: h.a.Error,
-                  msg: Object(ve.f)("#BroadcastChat_FailedToSendMsg", t),
+                  msg: Object(ve.g)("#BroadcastChat_FailedToSendMsg", t),
                   client_ts: Number(new Date()),
                   instance_id: this.m_unInstanceID,
                   in_game: !1,
@@ -4316,7 +4316,7 @@
                     this.m_bHasAddedWelcomeChat ||
                       (this.m_rgChatMessages.push({
                         type: h.a.Notification,
-                        msg: Object(ve.f)("#BroadcastChat_DefaultMessage"),
+                        msg: Object(ve.g)("#BroadcastChat_DefaultMessage"),
                         client_ts: Number(new Date()),
                         instance_id: this.m_unInstanceID,
                         in_game: !1,
@@ -4358,7 +4358,7 @@
                 (this.m_rgChatMessages = []),
                 this.m_rgChatMessages.push({
                   type: h.a.Notification,
-                  msg: Object(ve.f)("#BroadcastChat_DefaultMessage"),
+                  msg: Object(ve.g)("#BroadcastChat_DefaultMessage"),
                   client_ts: Number(new Date()),
                   instance_id: this.m_unInstanceID,
                   in_game: !1,
@@ -4426,8 +4426,8 @@
                 for (const e of r.muted) {
                   const t =
                     e.muted == this.m_strUserSteamID
-                      ? Object(ve.f)("#BroadcastChat_YouMuted", e.persona_name)
-                      : Object(ve.f)(
+                      ? Object(ve.g)("#BroadcastChat_YouMuted", e.persona_name)
+                      : Object(ve.g)(
                           "#BroadcastChat_UserMuted",
                           e.persona_name
                         );
@@ -4493,7 +4493,7 @@
                 if (null == this.m_tsFirstRequest)
                   return void this.m_rgChatMessages.push({
                     type: h.a.Error,
-                    msg: Object(ve.f)("#BroadcastChat_UnableToJoinChat"),
+                    msg: Object(ve.g)("#BroadcastChat_UnableToJoinChat"),
                     client_ts: Number(new Date()),
                     instance_id: this.m_unInstanceID,
                     in_game: !1,
@@ -4536,7 +4536,7 @@
                   a
                 ),
                   this.m_mapBroadcastModeratorUsers.set(e, t);
-                const i = Object(ve.f)(
+                const i = Object(ve.g)(
                   t
                     ? "#BroadcastChat_AddedModerator"
                     : "#BroadcastChat_RemovedModerator",
@@ -4544,7 +4544,7 @@
                 );
                 this.m_rgChatMessages.push({ type: h.a.Notification, msg: i });
               } catch (e) {
-                const a = Object(ve.f)(
+                const a = Object(ve.g)(
                   t
                     ? "#BroadcastChat_AddModeratorFailed"
                     : "#BroadcastChat_RemoveModeratorFailed",
@@ -4628,7 +4628,7 @@
                 r &&
                   (this.m_rgChatMessages.push({
                     type: h.a.Error,
-                    msg: Object(ve.f)("#BroadcastChat_UserMuteFailed", t),
+                    msg: Object(ve.g)("#BroadcastChat_UserMuteFailed", t),
                     client_ts: Number(new Date()),
                     instance_id: this.m_unInstanceID,
                     in_game: !1,
@@ -4641,7 +4641,7 @@
             r ||
               this.m_rgChatMessages.push({
                 type: h.a.Notification,
-                msg: Object(ve.f)("#BroadcastChat_UserMutedLocal", t),
+                msg: Object(ve.g)("#BroadcastChat_UserMutedLocal", t),
                 client_ts: Number(new Date()),
                 instance_id: this.m_unInstanceID,
                 in_game: !1,
@@ -4681,7 +4681,7 @@
                 }
                 this.m_rgChatMessages.push({
                   type: h.a.Notification,
-                  msg: Object(ve.f)("#BroadcastChat_UserUnmutedLocal", t),
+                  msg: Object(ve.g)("#BroadcastChat_UserUnmutedLocal", t),
                   client_ts: Number(new Date()),
                   instance_id: this.m_unInstanceID,
                   in_game: !1,
@@ -4691,7 +4691,7 @@
               } catch (e) {
                 this.m_rgChatMessages.push({
                   type: h.a.Error,
-                  msg: Object(ve.f)("#BroadcastChat_UserUnmuteFailed", t),
+                  msg: Object(ve.g)("#BroadcastChat_UserUnmuteFailed", t),
                   client_ts: Number(new Date()),
                   instance_id: this.m_unInstanceID,
                   in_game: !1,
@@ -4702,7 +4702,7 @@
             else
               this.m_rgChatMessages.push({
                 type: h.a.Notification,
-                msg: Object(ve.f)("#BroadcastChat_UserUnmutedLocal", t),
+                msg: Object(ve.g)("#BroadcastChat_UserUnmutedLocal", t),
                 client_ts: Number(new Date()),
                 instance_id: this.m_unInstanceID,
                 in_game: !1,
@@ -4742,7 +4742,7 @@
               } catch (e) {
                 this.m_rgChatMessages.push({
                   type: h.a.Error,
-                  msg: Object(ve.f)("#BroadcastChat_RemoveMessagesFailed", t),
+                  msg: Object(ve.g)("#BroadcastChat_RemoveMessagesFailed", t),
                   client_ts: Number(new Date()),
                   instance_id: this.m_unInstanceID,
                   in_game: !1,
@@ -4907,7 +4907,7 @@
                 "span",
                 {
                   className: mt.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(ve.f)(
+                  "data-tooltip-text": Object(ve.g)(
                     "#BroadcastChat_Role_Presenter_ttip"
                   ),
                 },
@@ -4918,7 +4918,7 @@
                 "span",
                 {
                   className: mt.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(ve.f)(
+                  "data-tooltip-text": Object(ve.g)(
                     "#BroadcastChat_Role_Moderatorr_ttip"
                   ),
                 },
@@ -4929,7 +4929,7 @@
                 "span",
                 {
                   className: mt.a.RoleFlairContainer,
-                  "data-tooltip-text": Object(ve.f)(
+                  "data-tooltip-text": Object(ve.g)(
                     "#BroadcastChat_Role_Broadcaster_ttip"
                   ),
                 },
@@ -5035,7 +5035,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_RemoveMessages")
+                    Object(ve.g)("#BroadcastChat_RemoveMessages")
                   ),
                   l.createElement(
                     Ye.d,
@@ -5050,7 +5050,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_half_Mute")
+                    Object(ve.g)("#BroadcastChat_half_Mute")
                   ),
                   l.createElement(
                     Ye.d,
@@ -5065,7 +5065,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_day_Mute")
+                    Object(ve.g)("#BroadcastChat_day_Mute")
                   ),
                   l.createElement(
                     Ye.d,
@@ -5080,7 +5080,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_week_Mute")
+                    Object(ve.g)("#BroadcastChat_week_Mute")
                   ),
                   l.createElement(
                     Ye.d,
@@ -5095,7 +5095,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_perm_Mute")
+                    Object(ve.g)("#BroadcastChat_perm_Mute")
                   ),
                   l.createElement(
                     Ye.d,
@@ -5111,7 +5111,7 @@
                           !0
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_Unmute")
+                    Object(ve.g)("#BroadcastChat_Unmute")
                   )
                 )
               : this.m_chat.IsUserMutedLocally(t.steamid)
@@ -5126,7 +5126,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_UnmuteLocal")
+                    Object(ve.g)("#BroadcastChat_UnmuteLocal")
                   )
                 )
               : r.push(
@@ -5140,7 +5140,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_MuteLocal")
+                    Object(ve.g)("#BroadcastChat_MuteLocal")
                   )
                 ),
             ((Me.l && Me.l.is_support) ||
@@ -5160,7 +5160,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_Remove_Moderator")
+                    Object(ve.g)("#BroadcastChat_Remove_Moderator")
                   )
                 )
               : r.push(
@@ -5175,7 +5175,7 @@
                           t.persona_name
                         ),
                     },
-                    Object(ve.f)("#BroadcastChat_Add_Moderator")
+                    Object(ve.g)("#BroadcastChat_Add_Moderator")
                   )
                 );
           }
@@ -5187,7 +5187,7 @@
                   l.createElement(
                     "div",
                     { className: mt.a.SelectedUserNameCtn },
-                    Object(ve.f)("#BroadcastChat_User"),
+                    Object(ve.g)("#BroadcastChat_User"),
                     l.createElement("br", null),
                     l.createElement(
                       "span",
@@ -5252,7 +5252,7 @@
                 {
                   className: `${mt.a.MessageNotification} ${mt.a.MessageContents}`,
                 },
-                ` (${Object(ve.f)("#BroadcastChat_Broadcaster")})`
+                ` (${Object(ve.g)("#BroadcastChat_Broadcaster")})`
               ),
             e.type === h.a.Chat &&
               this.m_chat.m_mapChannelModeratorUsers.get(e.steamid) &&
@@ -5261,7 +5261,7 @@
                 {
                   className: `${mt.a.MessageNotification} ${mt.a.MessageContents}`,
                 },
-                ` (${Object(ve.f)("#BroadcastChat_Moderator")})`
+                ` (${Object(ve.g)("#BroadcastChat_Moderator")})`
               ),
             l.createElement(
               "span",
@@ -5372,7 +5372,7 @@
               { className: `${Ke.a.chatEntryControls}` },
               l.createElement("textarea", {
                 className: Ke.a.chatTextarea,
-                placeholder: Object(ve.f)("#BroadcastChat_EnterResponse"),
+                placeholder: Object(ve.g)("#BroadcastChat_EnterResponse"),
                 onKeyPress: n,
                 onChange: (e) => i(e.target.value),
                 value: a,
@@ -5389,7 +5389,7 @@
                   className: `${Ke.a.chatSubmitButton} ${
                     a ? "" : Ke.a.disabled
                   }`,
-                  title: Object(ve.f)("#ChatEntryButton_Submit"),
+                  title: Object(ve.g)("#ChatEntryButton_Submit"),
                   disabled: t.m_bRateLimited || 0 == a.trim().length,
                   onClick: () => {
                     t.SendMessage(a), i("");
@@ -5439,7 +5439,7 @@
               emoticonStore: a,
               emoticonHoverStore: Je.a,
               strFlairGroupID: r.m_strFlairGroupID,
-              title: Object(ve.f)("#ChatEntryButton_Flair"),
+              title: Object(ve.g)("#ChatEntryButton_Flair"),
               buttonIcon: l.createElement(ot.l, null),
             })
           : null;
@@ -5481,13 +5481,13 @@
           l.createElement(
             "div",
             { className: mt.a.LogInPrompt },
-            Object(ve.f)("#Broadcast_PartnerChat_Login")
+            Object(ve.g)("#Broadcast_PartnerChat_Login")
           ),
           !Me.l.logged_in &&
             l.createElement(
               Qe.f,
               { onClick: tt.a, className: Object(lt.a)(mt.a.SignInButton) },
-              Object(ve.f)("#Login_SignIn")
+              Object(ve.g)("#Login_SignIn")
             )
         );
       }
@@ -5649,7 +5649,7 @@
           c.a.createElement(
             "div",
             null,
-            Object(ve.f)(
+            Object(ve.g)(
               o.GetName().length > 0
                 ? t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 ==
                   0
@@ -5668,7 +5668,7 @@
               c.a.createElement(
                 "a",
                 { href: m, target: Me.d.IN_CLIENT ? "" : "_blank" },
-                Object(ve.f)("#SalePage_WatchForDrop_LearnMore")
+                Object(ve.g)("#SalePage_WatchForDrop_LearnMore")
               )
           )
         );
@@ -5966,7 +5966,7 @@
                       !this.state.bExpanded &&
                         c.a.createElement("div", {
                           className: Lt.a.broadcast_settings_icon,
-                          "data-tooltip-text": Object(ve.f)(
+                          "data-tooltip-text": Object(ve.g)(
                             "#StoreBroadcast_Change_store_Broadcast_settings"
                           ),
                           onClick: () =>
@@ -5978,7 +5978,7 @@
                         className: this.state.bExpanded
                           ? Lt.a.bordered_corner_expanded
                           : Lt.a.bordered_corner_shrinked,
-                        "data-tooltip-text": Object(ve.f)(
+                        "data-tooltip-text": Object(ve.g)(
                           "#StoreBroadcast_Hide_Tooltip"
                         ),
                         onClick: this.ToggleBroadcastExpandShrink,
@@ -6143,7 +6143,7 @@
               c.a.createElement(
                 "a",
                 { href: e },
-                Object(ve.f)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
+                Object(ve.g)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
               )
             );
           }
@@ -6155,7 +6155,7 @@
               {
                 href: t,
                 className: Lt.a.external_link,
-                "data-tooltip-text": Object(ve.f)(
+                "data-tooltip-text": Object(ve.g)(
                   "#BroadcastWatch_View_Broadcast_Page"
                 ),
               },
@@ -6197,7 +6197,7 @@
               "div",
               { className: Object(lt.a)(Lt.a.viewer_count, "viewer_count") },
               c.a.createElement(ot.Bb, null),
-              a.toLocaleString(ve.e.GetPreferredLocales())
+              a.toLocaleString(ve.f.GetPreferredLocales())
             ),
             c.a.createElement(
               "div",
@@ -6213,7 +6213,7 @@
                       className: Lt.a.ChatToggle,
                       onClick: this.OnToggleChat,
                     },
-                    Object(ve.f)("#sale_three_section_show_streams")
+                    Object(ve.g)("#sale_three_section_show_streams")
                   )
                 ),
               t &&
@@ -6228,7 +6228,7 @@
                       className: Lt.a.ChatToggle,
                       onClick: this.OnToggleChat,
                     },
-                    Object(ve.f)(
+                    Object(ve.g)(
                       r
                         ? "#sale_three_section_show_chat"
                         : "#sale_three_section_hide_chat"
@@ -6244,7 +6244,7 @@
                     "account/preferences/#store_broadcast_settings",
                   target: Me.d.IN_CLIENT ? void 0 : "_blank",
                   className: Lt.a.settings_link,
-                  "data-tooltip-text": Object(ve.f)(
+                  "data-tooltip-text": Object(ve.g)(
                     "#StoreBroadcast_Change_store_Broadcast_settings"
                   ),
                 },
@@ -6284,18 +6284,18 @@
             ? c.a.createElement(
                 Rt.a,
                 { type: "app", id: r, className: Lt.a.PopOutVideoTitleText },
-                Object(ve.f)("#StoreBroadcast_Detault_popout_Title")
+                Object(ve.g)("#StoreBroadcast_Detault_popout_Title")
               )
             : c.a.createElement(
                 "div",
                 { className: Lt.a.PopOutVideoTitleText },
-                Object(ve.f)("#StoreBroadcast_Detault_popout_Title")
+                Object(ve.g)("#StoreBroadcast_Detault_popout_Title")
               ),
           c.a.createElement(
             "button",
             {
               className: Lt.a.PopOutVideoCloseButton,
-              "data-tooltip-text": Object(ve.f)(
+              "data-tooltip-text": Object(ve.g)(
                 "#StoreBroadcast_close_broadcast_popup"
               ),
               onClick: e.OnPreventPopup,
@@ -6436,7 +6436,7 @@
                   null,
                   c.a.createElement(ot.Bb, null),
                   " ",
-                  m.toLocaleString(ve.e.GetPreferredLocales())
+                  m.toLocaleString(ve.f.GetPreferredLocales())
                 )
               : h
           )
@@ -6901,7 +6901,7 @@
         return l.createElement(
           "div",
           { className: "STV_ReplayBanner" },
-          Object(T.f)("#DASHPlayerControls_IsReplay")
+          Object(T.g)("#DASHPlayerControls_IsReplay")
         );
       }
       const N = Object(o.a)((e) => {
@@ -6947,7 +6947,7 @@
             l.createElement(
               "span",
               null,
-              Object(T.f)("#DASHPlayerControls_ClickToPlay")
+              Object(T.g)("#DASHPlayerControls_ClickToPlay")
             )
           );
         }
@@ -6974,7 +6974,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BufferingResolution"),
+              Object(T.g)("#DASHPlayerStats_BufferingResolution"),
               " ",
               l.createElement(
                 "span",
@@ -6985,7 +6985,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_PlaybackResolution"),
+              Object(T.g)("#DASHPlayerStats_PlaybackResolution"),
               " ",
               l.createElement(
                 "span",
@@ -6996,7 +6996,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_HtmlResolution"),
+              Object(T.g)("#DASHPlayerStats_HtmlResolution"),
               " ",
               l.createElement(
                 "span",
@@ -7007,7 +7007,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_ContentServer"),
+              Object(T.g)("#DASHPlayerStats_ContentServer"),
               " ",
               l.createElement(
                 "span",
@@ -7018,7 +7018,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_StallEvents"),
+              Object(T.g)("#DASHPlayerStats_StallEvents"),
               " ",
               l.createElement(
                 "span",
@@ -7029,7 +7029,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_FailedDownloads"),
+              Object(T.g)("#DASHPlayerStats_FailedDownloads"),
               " ",
               l.createElement(
                 "span",
@@ -7040,7 +7040,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_TimeToFirstFrame"),
+              Object(T.g)("#DASHPlayerStats_TimeToFirstFrame"),
               " ",
               l.createElement(
                 "span",
@@ -7051,7 +7051,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_PlaybackRate"),
+              Object(T.g)("#DASHPlayerStats_PlaybackRate"),
               " ",
               l.createElement(
                 "span",
@@ -7078,7 +7078,7 @@
               : t.GetNumBufferedAudioRanges();
           if (i > 0)
             for (let s = 0; s < i; ++s) {
-              let i = Object(T.f)(
+              let i = Object(T.g)(
                   e
                     ? "#DASHPlayerStats_VideoBufferRange"
                     : "#DASHPlayerStats_AudioBufferRange",
@@ -7098,7 +7098,7 @@
               );
             }
           else {
-            let t = Object(T.f)(
+            let t = Object(T.g)(
               e
                 ? "#DASHPlayerStats_VideoNoRangeInformation"
                 : "#DASHPlayerStats_AudioNoRangeInformation"
@@ -7115,7 +7115,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BytesReceived"),
+              Object(T.g)("#DASHPlayerStats_BytesReceived"),
               " ",
               l.createElement(
                 "span",
@@ -7127,7 +7127,7 @@
               l.createElement(
                 "div",
                 null,
-                Object(T.f)("#DASHPlayerStats_DroppedFrames"),
+                Object(T.g)("#DASHPlayerStats_DroppedFrames"),
                 " ",
                 l.createElement(
                   "span",
@@ -7138,7 +7138,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_VideoBuffered"),
+              Object(T.g)("#DASHPlayerStats_VideoBuffered"),
               " ",
               l.createElement(
                 "span",
@@ -7150,7 +7150,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_AudioBuffered"),
+              Object(T.g)("#DASHPlayerStats_AudioBuffered"),
               " ",
               l.createElement(
                 "span",
@@ -7164,7 +7164,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BandwidthRequired"),
+              Object(T.g)("#DASHPlayerStats_BandwidthRequired"),
               " ",
               l.createElement(
                 "span",
@@ -7175,7 +7175,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BandwidthVideo"),
+              Object(T.g)("#DASHPlayerStats_BandwidthVideo"),
               " ",
               l.createElement(
                 "span",
@@ -7186,7 +7186,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_BandwidthNums"),
+              Object(T.g)("#DASHPlayerStats_BandwidthNums"),
               " ",
               l.createElement(
                 "span",
@@ -7197,7 +7197,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_DownloadNums"),
+              Object(T.g)("#DASHPlayerStats_DownloadNums"),
               " ",
               l.createElement(
                 "span",
@@ -7208,7 +7208,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_ActiveDownloads"),
+              Object(T.g)("#DASHPlayerStats_ActiveDownloads"),
               " ",
               l.createElement(
                 "span",
@@ -7219,7 +7219,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_VideoDownloadProgress"),
+              Object(T.g)("#DASHPlayerStats_VideoDownloadProgress"),
               " ",
               l.createElement(
                 "span",
@@ -7230,7 +7230,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_DroppingFrames"),
+              Object(T.g)("#DASHPlayerStats_DroppingFrames"),
               " ",
               l.createElement(
                 "span",
@@ -7241,7 +7241,7 @@
             l.createElement(
               "div",
               null,
-              Object(T.f)("#DASHPlayerStats_CurrentFPS"),
+              Object(T.g)("#DASHPlayerStats_CurrentFPS"),
               " ",
               l.createElement(
                 "span",
@@ -7466,7 +7466,7 @@
                     this.ToggleStatsView(e);
                   },
                 },
-                Object(T.f)("#Broadcast_VideoContext_ToggleStats")
+                Object(T.g)("#Broadcast_VideoContext_ToggleStats")
               )
             ),
             r &&
@@ -7481,7 +7481,7 @@
                       this.ShowStorePage(e);
                     },
                   },
-                  Object(T.f)("#Broadcast_VideoContext_OpenStore")
+                  Object(T.g)("#Broadcast_VideoContext_OpenStore")
                 )
               ),
             e
@@ -7539,14 +7539,14 @@
                 l.createElement("div", {
                   key: "ChatPosToggle ChatTheaterToggle",
                   onClick: this.props.onTheaterMode,
-                  title: Object(T.f)("#Broadcast_View_Theater"),
+                  title: Object(T.g)("#Broadcast_View_Theater"),
                   className: "BroadcastTheaterToggle",
                 })
               ),
             d.push(
               l.createElement("div", {
                 key: "FullscreenToggle",
-                title: Object(T.f)("#Broadcast_View_Fullscreen"),
+                title: Object(T.g)("#Broadcast_View_Fullscreen"),
                 onClick: this.OnToggleFullscreen,
                 className: "BroadcastFullscreenToggle",
               })
@@ -7771,7 +7771,7 @@
             l.createElement(
               "div",
               { className: "jumpGoLive" },
-              Object(T.f)(
+              Object(T.g)(
                 t ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive"
               )
             )
@@ -7954,7 +7954,7 @@
                 l.createElement(
                   g.d,
                   { key: "statsToggle", onSelected: this.OnShowStats },
-                  Object(T.f)("#Broadcast_VideoContext_ToggleStats"),
+                  Object(T.g)("#Broadcast_VideoContext_ToggleStats"),
                   "\t"
                 )
               ),
@@ -7977,7 +7977,7 @@
                     className: "NoSubtitles",
                     bChecked: !1,
                   },
-                  Object(T.f)("#Broadcast_None")
+                  Object(T.g)("#Broadcast_None")
                 )
               );
             for (let e = 0; e < this.props.video.ListSubtitles().length; e++) {
@@ -8475,7 +8475,7 @@
                   l.createElement(ee, {
                     key: "start",
                     pos: y,
-                    label: Object(T.f)("#DASHPlayerControls_Start"),
+                    label: Object(T.g)("#DASHPlayerControls_Start"),
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                     onMouseDown: (e) => this.OnMouseDown(e, "start"),
@@ -8483,7 +8483,7 @@
                   l.createElement(ee, {
                     key: "end",
                     pos: f,
-                    label: Object(T.f)("#DASHPlayerControls_End"),
+                    label: Object(T.g)("#DASHPlayerControls_End"),
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                     onMouseDown: (e) => this.OnMouseDown(e, "end"),
@@ -8627,7 +8627,7 @@
           if (!e) return null;
           let t = "";
           e.m_nViewerCount &&
-            (t = e.m_nViewerCount.toLocaleString(T.e.GetPreferredLocales()));
+            (t = e.m_nViewerCount.toLocaleString(T.f.GetPreferredLocales()));
           let r = F.a.bValid && F.a.stream && F.a.stream[e.m_steamIDBroadcast],
             a =
               !this.props.bHideThumbnail &&
@@ -8679,7 +8679,7 @@
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
                       l.createElement(M.Bb, null),
-                      Object(T.m)("#Broadcast_ViewerCount", t)
+                      Object(T.n)("#Broadcast_ViewerCount", t)
                     )
                 ),
               r &&
@@ -8718,7 +8718,7 @@
               l.createElement(
                 g.b,
                 { key: e, onSelected: () => a(e), bChecked: e === r },
-                Object(T.f)(t[e])
+                Object(T.g)(t[e])
               )
             );
           Object(d.a)(l.createElement(g.c, null, i), e);
@@ -8729,7 +8729,7 @@
           return l.createElement(
             "div",
             { className: "BroadcastLanguage", onClick: this.showContextMenu },
-            l.createElement("span", null, " - ", Object(T.f)(r)),
+            l.createElement("span", null, " - ", Object(T.g)(r)),
             l.createElement(
               "div",
               { className: "ContextMenuButton" },
@@ -8871,7 +8871,7 @@
                 l.createElement(
                   "div",
                   { className: "AddLinkRegion", onClick: this.AddLinkRegion },
-                  Object(T.f)("#SteamTV_AddLinkRegion")
+                  Object(T.g)("#SteamTV_AddLinkRegion")
                 )
             ),
             l.createElement(
@@ -8880,7 +8880,7 @@
               l.createElement(
                 "div",
                 null,
-                Object(T.f)("#SteamTV_LinkRegionReserved")
+                Object(T.g)("#SteamTV_LinkRegionReserved")
               )
             )
           );

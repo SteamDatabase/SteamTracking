@@ -684,7 +684,7 @@
           const l = {
               strTitle:
                 (null == s ? void 0 : s.strTitle) ||
-                Object(u.f)("#Dialog_DefaultWindowTitle"),
+                Object(u.g)("#Dialog_DefaultWindowTitle"),
               fnOnClose: null == s ? void 0 : s.fnOnClose,
               popupWidth:
                 (null == s ? void 0 : s.popupWidth) ||
@@ -902,14 +902,14 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: Object(d.f)("#Login_SignIn") }
+          { strTitle: Object(d.g)("#Login_SignIn") }
         );
       }
       function h(e) {
         Object(a.d)(
           i.a.createElement(c, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: Object(d.f)("#Login_SignIn") }
+          { strTitle: Object(d.g)("#Login_SignIn") }
         );
       }
     },

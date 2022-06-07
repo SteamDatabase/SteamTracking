@@ -23,11 +23,11 @@
         _ = a("lfGQ"),
         b = a("mrSG"),
         v = a("2VXD"),
-        f = a("vDqi"),
-        E = a.n(f),
+        g = a("vDqi"),
+        E = a.n(g),
         h = (a("sTxY"), a("/Q1a")),
-        w = a("TqgT");
-      function g(e, t) {
+        f = a("TqgT");
+      function w(e, t) {
         const [a, r] = Object(n.useState)(
             (null == e ? void 0 : e.BUsesContentHubForItemSource())
               ? new Set()
@@ -65,9 +65,9 @@
                         : a.success)
                     )
                       return e.data.appids.forEach((e) => o.add(e)), o;
-                    l = Object(w.a)(e);
+                    l = Object(f.a)(e);
                   } catch (e) {
-                    l = Object(w.a)(e);
+                    l = Object(f.a)(e);
                   }
                   return (
                     console.error(
@@ -236,7 +236,7 @@
                 l.a.createElement(
                   c.c,
                   { className: "pageheader curator_name", href: a },
-                  Object(V.f)("#SteamCurator_List_Header_List", t.group_name)
+                  Object(V.g)("#SteamCurator_List_Header_List", t.group_name)
                 )
               )
             )
@@ -284,12 +284,12 @@
                       l.a.createElement(
                         "h2",
                         null,
-                        Object(V.f)("#SteamCurator_ExploreMoreTitle")
+                        Object(V.g)("#SteamCurator_ExploreMoreTitle")
                       ),
                       l.a.createElement(
                         c.c,
                         { href: a.vanity_url },
-                        Object(V.n)("#SteamCurator_MoreReviews", a.group_name)
+                        Object(V.o)("#SteamCurator_MoreReviews", a.group_name)
                       )
                     )
                   )
@@ -307,7 +307,7 @@
             () => (t.apps || []).map((e) => e.recommended_app.appid),
             [t]
           ),
-          s = g(i, c);
+          s = w(i, c);
         return (
           Object(n.useEffect)(() => {
             var e, a;
@@ -381,7 +381,7 @@
           null == i)
         )
           return l.a.createElement(x.a, {
-            string: Object(V.f)("#Loading"),
+            string: Object(V.g)("#Loading"),
             position: "center",
             size: "medium",
           });
@@ -411,13 +411,13 @@
               l.a.createElement(
                 "span",
                 null,
-                Object(V.m)("#SteamCurator_Hidden", r - i.length),
+                Object(V.n)("#SteamCurator_Hidden", r - i.length),
                 " "
               ),
               l.a.createElement(
                 c.c,
                 { href: h.d.STORE_BASE_URL + "account/preferences/" },
-                Object(V.f)("#SteamCurator_Setting")
+                Object(V.g)("#SteamCurator_Setting")
               )
             )
         );
@@ -509,11 +509,11 @@
             appid: _,
             link_url: b,
             blurb: v,
-            time_recommended: f,
+            time_recommended: g,
             recommendation_state: E,
           } = r.recommended_app,
-          w = s.is_creator_home && !s.is_ogg,
-          g =
+          f = s.is_creator_home && !s.is_ogg,
+          w =
             null === (a = o.list_jsondata.app_data) || void 0 === a
               ? void 0
               : a[_],
@@ -521,7 +521,7 @@
           R = b && L(b),
           I = v != C.c && v,
           T = O.a.Get().BHasDemoAppID(_),
-          y = null == g ? void 0 : g.img_url,
+          y = null == w ? void 0 : w.img_url,
           B = `curator_clanid=${s.clanAccountID}&curator_listid=${o.listid}`;
         return l.a.createElement(
           u.a,
@@ -558,14 +558,14 @@
               l.a.createElement(
                 "div",
                 { className: z.a.ReviewDate },
-                w ? d.GetFormattedSteamReleaseDate() : Object(V.o)(f)
+                f ? d.GetFormattedSteamReleaseDate() : Object(V.p)(g)
               )
             ),
             Boolean(I) &&
               l.a.createElement(
                 "div",
                 { className: z.a.ReviewBlurb },
-                Object(V.f)("#SteamCurator_ReviewTextQuoted", I)
+                Object(V.g)("#SteamCurator_ReviewTextQuoted", I)
               ),
             Boolean(b) && l.a.createElement(ne, { url: b })
           )
@@ -643,19 +643,19 @@
             return l.a.createElement(
               "div",
               { className: z.a.Recommended },
-              Object(V.f)("#SteamCurator_Recommended")
+              Object(V.g)("#SteamCurator_Recommended")
             );
           case 1:
             return l.a.createElement(
               "div",
               { className: z.a.NotRecommended },
-              Object(V.f)("#SteamCurator_NotRecommended")
+              Object(V.g)("#SteamCurator_NotRecommended")
             );
           case 2:
             return l.a.createElement(
               "div",
               { className: z.a.Informational },
-              Object(V.f)("#SteamCurator_Informational")
+              Object(V.g)("#SteamCurator_Informational")
             );
           default:
             return null;
@@ -683,7 +683,7 @@
               preferredFocus: !1,
               autoFocus: !1,
             },
-            Object(V.f)(
+            Object(V.g)(
               r
                 ? "#SteamCurator_WatchFullReview"
                 : "#SteamCurator_ReadFullReview"
@@ -692,7 +692,7 @@
           l.a.createElement(
             "div",
             { className: z.a.FullReviewDomain },
-            Object(V.f)("#SteamCurator_ReviewLinkHostnameBracketed", a)
+            Object(V.g)("#SteamCurator_ReviewLinkHostnameBracketed", a)
           )
         );
       }
