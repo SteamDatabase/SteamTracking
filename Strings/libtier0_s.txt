@@ -420,8 +420,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Jun  3 2022
-19:26:22
+Jun  6 2022
+20:18:09
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1781,7 +1781,6 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-ufrG
  <Da
 .e<w
 cdE-T/9
@@ -1798,6 +1797,7 @@ _8t?4
 ([~~
 g&O5Vq
 NNo6
+gN@3
 @kp!s
 Kf]cT#
 "d,7
@@ -1857,8 +1857,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220604022625Z0/
-$sL-
+220607031811Z0/
+_IRr
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1866,35 +1866,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		1QZA7G3DhAbEtI+vNaxA2xeLAjA=
+		pklguNYM2iCDd4bXI4Npi6YASa4=
 		</data>
 		<data>
-		PON079BxgyRzTC300yQJNo/5PCw=
+		DZfgAHtpJfbPnMZfSVJylUY5sRU=
 		</data>
 	</array>
 </dict>
 </plist>
-b1kt&
-]Qo9
-bq3=
-x7jv!N
-,<tv
-20220604022632Z0
+lw?c
+f"V/
+|,/H
+9ucj
+YomA
+KjBh
+20220607031824Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220510165502Z
-220621165501Z0B1
-Timestamp Signer NWK11
+220510164504Z
+220621164503Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-zR20_
-]du4
+#0_6
+URw%
+cPKvE
+Z0!w
+UZzn$Fc
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-4Ly(w
+^*EM
+tDP=K,2
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1933,9 +1938,15 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220604022632Z0#
-:4-7nM[u%
-`CiZ
+|r0	
+220607031824Z0#
+0;{x
+"/i0+
+aIv*
+]R\#
+i~f6
+L=JE0Z
+HvZf
 __TEXT
 __text
 __TEXT
@@ -1971,6 +1982,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+Dfe|9
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -2659,8 +2671,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Jun  3 2022
-19:26:22
+Jun  6 2022
+20:18:09
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4011,6 +4023,7 @@ q	2o
 zD"G
 @Ye'
 37ak[
+["5U3~$
 '-zu
 P#"`Z
 *M)f:
@@ -4020,7 +4033,6 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Udye4
 6s,P
 2$-;
 N7Evs
@@ -4029,7 +4041,7 @@ C=r|
 !qL4
 0pQKP
 QQ^Z
-QZEC
+Yo$7
 =j79^a
 e00;
 G+I&$
@@ -4089,8 +4101,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220604022625Z0/
-}vZ&
+220607031811Z0/
+Q\QM5
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4098,38 +4110,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		7iKUCFPLQSUdhBCe4ztQFdwpJ/w=
+		2cGvZMGXcL14Br+fjLDGwgmnJN8=
 		</data>
 		<data>
-		XO6QfXZaJh3/8Ma50GWhKNmGEUI=
+		lbVo8nwbmUu+uCtDZrcVQ/Q6wxw=
 		</data>
 	</array>
 </dict>
 </plist>
-PYD>>
-	y	z
-:;qt
-r98H&
-20220604022632Z0
+h1bMIa
+d_jr
+	2bo
++G6pM
+5F-|x
+20220607031824Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220510164504Z
-220621164503Z0B1
-Timestamp Signer NWK21
+220510165502Z
+220621165501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-#0_6
-URw%
-cPKvE
-Z0!w
-UZzn$Fc
+zR20_
+]du4
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-^*EM
-tDP=K,2
+4Ly(w
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4168,14 +4177,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-|r0	
-220604022632Z0#
-aIv*
-&0N"Lj
-R~cX0H4
-!ukIqS
-tZIkjZo
-Bz%A
+220607031824Z0#
+#'[K
+!i0+
+x}0(
+EVSoFu
+\'G-
 __TEXT
 __text
 __TEXT
@@ -4396,8 +4403,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Jun  3 2022
-19:26:22
+Jun  6 2022
+20:18:09
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5745,6 +5752,7 @@ vGUW
 Ux$/
 \+{V2
 !;Cb
+w /p
 lbTc>o
 R0KR
 I/h 
@@ -5760,6 +5768,7 @@ N]\"~
 : r4
 ld/`{
 a3z`!
+\sdA
 2]Ct9
 3RZ/
 /4b&H
@@ -5823,10 +5832,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220604022625Z0/
-eTw(
-WF0-
-]yN?/Qgc
+220607031811Z0/
+dRE/0-
+?M7cv0
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5834,19 +5842,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		MFqBHCQZ7E2kG5zO+u4BhVwOV0Y=
+		wjLgxetdWs9/KsOqGYr2n2RSRS8=
 		</data>
 		<data>
-		g902E9bVkYSK4l15Tj8vUWdj4Iw=
+		Mu7X9X3jLU+0UQF//9GxitqnJvc=
 		</data>
 	</array>
 </dict>
 </plist>
-'`Cb
-[@$Z
-t.L~I
-@}(a
-20220604022632Z0
+VCHJ
+uO&y 
+V)1q
+20220607031824Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5905,8 +5912,7 @@ uu!1
 Apple Certification Authority1
 Apple Inc.1
 |r0	
-220604022632Z0#
+220607031824Z0#
 aIv*
-w3D6
-`G A
-X} O
+_r>'3
+	U#<J
