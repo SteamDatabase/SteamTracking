@@ -1090,7 +1090,7 @@
                         wrap: (e) =>
                           a.createElement(
                             m.a,
-                            { toolTipContent: t.statusToolTip },
+                            { toolTipContent: t.statusToolTip || t.tooltip },
                             e
                           ),
                       },

@@ -1,40 +1,40 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [62],
+  [33],
   {
     "+58p": function (e, t, r) {
       var n = {
-        "./shared_arabic.json": ["A8mv", 154],
-        "./shared_brazilian.json": ["f7Ht", 155],
-        "./shared_bulgarian.json": ["VJ/X", 156],
-        "./shared_czech.json": ["WyQd", 157],
-        "./shared_danish.json": ["WlkD", 158],
-        "./shared_dutch.json": ["SHbT", 159],
-        "./shared_english.json": ["7foF", 160],
-        "./shared_finnish.json": ["+HzT", 161],
-        "./shared_french.json": ["wr2i", 162],
-        "./shared_german.json": ["CzjK", 163],
-        "./shared_greek.json": ["T1Vt", 164],
-        "./shared_hungarian.json": ["6rq4", 165],
-        "./shared_italian.json": ["yba0", 166],
-        "./shared_japanese.json": ["MIMz", 167],
-        "./shared_koreana.json": ["wrJg", 168],
-        "./shared_latam.json": ["Q3r2", 169],
-        "./shared_norwegian.json": ["Lp4u", 170],
-        "./shared_polish.json": ["wbdj", 171],
-        "./shared_portuguese.json": ["GKZf", 172],
-        "./shared_romanian.json": ["wYo1", 173],
-        "./shared_russian.json": ["Efj/", 174],
-        "./shared_sc_schinese.json": ["7Bs/", 175],
-        "./shared_schinese.json": ["x+JX", 176],
-        "./shared_spanish.json": ["/xtB", 177],
-        "./shared_swedish.json": ["tdT9", 178],
-        "./shared_tchinese.json": ["JQjP", 179],
-        "./shared_thai.json": ["8I3t", 180],
-        "./shared_turkish.json": ["W4c2", 181],
-        "./shared_ukrainian.json": ["0xx/", 182],
-        "./shared_vietnamese.json": ["CxfU", 183],
+        "./shared_arabic.json": ["A8mv", 126],
+        "./shared_brazilian.json": ["f7Ht", 127],
+        "./shared_bulgarian.json": ["VJ/X", 128],
+        "./shared_czech.json": ["WyQd", 129],
+        "./shared_danish.json": ["WlkD", 130],
+        "./shared_dutch.json": ["SHbT", 131],
+        "./shared_english.json": ["7foF", 132],
+        "./shared_finnish.json": ["+HzT", 133],
+        "./shared_french.json": ["wr2i", 134],
+        "./shared_german.json": ["CzjK", 135],
+        "./shared_greek.json": ["T1Vt", 136],
+        "./shared_hungarian.json": ["6rq4", 137],
+        "./shared_italian.json": ["yba0", 138],
+        "./shared_japanese.json": ["MIMz", 139],
+        "./shared_koreana.json": ["wrJg", 140],
+        "./shared_latam.json": ["Q3r2", 141],
+        "./shared_norwegian.json": ["Lp4u", 142],
+        "./shared_polish.json": ["wbdj", 143],
+        "./shared_portuguese.json": ["GKZf", 144],
+        "./shared_romanian.json": ["wYo1", 145],
+        "./shared_russian.json": ["Efj/", 146],
+        "./shared_sc_schinese.json": ["7Bs/", 147],
+        "./shared_schinese.json": ["x+JX", 148],
+        "./shared_spanish.json": ["/xtB", 149],
+        "./shared_swedish.json": ["tdT9", 150],
+        "./shared_tchinese.json": ["JQjP", 151],
+        "./shared_thai.json": ["8I3t", 152],
+        "./shared_turkish.json": ["W4c2", 153],
+        "./shared_ukrainian.json": ["0xx/", 154],
+        "./shared_vietnamese.json": ["CxfU", 155],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -1070,6 +1070,8 @@
                                         `/:prefix(news|newshub|events)/collection/${e}/${t}`,
                                       NewsHubSale: (e, t) =>
                                         `/:prefix(news|newshub|events)/sale/${e}/${t}`,
+                                      NewsHubContentHub: (e, t, r) =>
+                                        `/:prefix(news|newshub|events)/${e}/${t}/${r}`,
                                       EventViewByApp: (e, t, r) =>
                                         `/:prefix(news|newshub|events)/app/${e}/:viewtype(view|inline)/${t}/${r}`,
                                       EventViewByGroup: (e, t, r) =>
@@ -1526,34 +1528,35 @@
     },
     "5YvR": function (e, t, r) {
       var n = {
-        "./marketing_brazilian.json": ["8xPd", 93],
-        "./marketing_bulgarian.json": ["l4JQ", 94],
-        "./marketing_czech.json": ["v392", 95],
-        "./marketing_danish.json": ["nZPB", 96],
-        "./marketing_dutch.json": ["KEZw", 97],
-        "./marketing_english.json": ["lr6y", 98],
-        "./marketing_finnish.json": ["Z8YI", 99],
-        "./marketing_french.json": ["wNWg", 100],
-        "./marketing_german.json": ["5zDj", 101],
-        "./marketing_greek.json": ["/TBC", 102],
-        "./marketing_hungarian.json": ["YGNc", 103],
-        "./marketing_italian.json": ["xrKz", 104],
-        "./marketing_japanese.json": ["dWul", 105],
-        "./marketing_koreana.json": ["nWht", 106],
-        "./marketing_latam.json": ["nGdQ", 107],
-        "./marketing_norwegian.json": ["ZM5d", 108],
-        "./marketing_polish.json": ["M2pn", 109],
-        "./marketing_portuguese.json": ["TvUQ", 110],
-        "./marketing_romanian.json": ["FhW0", 111],
-        "./marketing_russian.json": ["VgI9", 112],
-        "./marketing_schinese.json": ["0Cvn", 113],
-        "./marketing_spanish.json": ["PTjI", 114],
-        "./marketing_swedish.json": ["oaHe", 115],
-        "./marketing_tchinese.json": ["UXMr", 116],
-        "./marketing_thai.json": ["X8wz", 117],
-        "./marketing_turkish.json": ["x+BD", 118],
-        "./marketing_ukrainian.json": ["EfsZ", 119],
-        "./marketing_vietnamese.json": ["nbZq", 120],
+        "./marketing_brazilian.json": ["8xPd", 64],
+        "./marketing_bulgarian.json": ["l4JQ", 65],
+        "./marketing_czech.json": ["v392", 66],
+        "./marketing_danish.json": ["nZPB", 67],
+        "./marketing_dutch.json": ["KEZw", 68],
+        "./marketing_english.json": ["lr6y", 69],
+        "./marketing_finnish.json": ["Z8YI", 70],
+        "./marketing_french.json": ["wNWg", 71],
+        "./marketing_german.json": ["5zDj", 72],
+        "./marketing_greek.json": ["/TBC", 73],
+        "./marketing_hungarian.json": ["YGNc", 74],
+        "./marketing_italian.json": ["xrKz", 75],
+        "./marketing_japanese.json": ["dWul", 76],
+        "./marketing_koreana.json": ["nWht", 77],
+        "./marketing_latam.json": ["nGdQ", 78],
+        "./marketing_norwegian.json": ["ZM5d", 79],
+        "./marketing_polish.json": ["M2pn", 80],
+        "./marketing_portuguese.json": ["TvUQ", 81],
+        "./marketing_romanian.json": ["FhW0", 82],
+        "./marketing_russian.json": ["VgI9", 83],
+        "./marketing_sc_schinese.json": ["Z1QK", 84],
+        "./marketing_schinese.json": ["0Cvn", 85],
+        "./marketing_spanish.json": ["PTjI", 86],
+        "./marketing_swedish.json": ["oaHe", 87],
+        "./marketing_tchinese.json": ["UXMr", 88],
+        "./marketing_thai.json": ["X8wz", 89],
+        "./marketing_turkish.json": ["x+BD", 90],
+        "./marketing_ukrainian.json": ["EfsZ", 91],
+        "./marketing_vietnamese.json": ["nbZq", 92],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -2013,35 +2016,35 @@
     },
     AvbV: function (e, t, r) {
       var n = {
-        "./main_brazilian.json": ["TFAN", 63],
-        "./main_bulgarian.json": ["c2SO", 64],
-        "./main_czech.json": ["peP3", 65],
-        "./main_danish.json": ["0bnV", 66],
-        "./main_dutch.json": ["wcLc", 67],
-        "./main_english.json": ["/rNK", 68],
-        "./main_finnish.json": ["iywU", 69],
-        "./main_french.json": ["Xnpc", 70],
-        "./main_german.json": ["pmKi", 71],
-        "./main_greek.json": ["mTRv", 72],
-        "./main_hungarian.json": ["WkHb", 73],
-        "./main_italian.json": ["Jz5U", 74],
-        "./main_japanese.json": ["3Dk9", 75],
-        "./main_koreana.json": ["neQD", 76],
-        "./main_latam.json": ["6oHD", 77],
-        "./main_norwegian.json": ["2OvS", 78],
-        "./main_polish.json": ["3pwE", 79],
-        "./main_portuguese.json": ["hY40", 80],
-        "./main_romanian.json": ["Q95+", 81],
-        "./main_russian.json": ["bsPT", 82],
-        "./main_sc_schinese.json": ["GOaQ", 83],
-        "./main_schinese.json": ["B/Zz", 84],
-        "./main_spanish.json": ["U6iL", 85],
-        "./main_swedish.json": ["4uPU", 86],
-        "./main_tchinese.json": ["rgC9", 87],
-        "./main_thai.json": ["87dp", 88],
-        "./main_turkish.json": ["yMpO", 89],
-        "./main_ukrainian.json": ["zTWm", 90],
-        "./main_vietnamese.json": ["wqiy", 91],
+        "./main_brazilian.json": ["TFAN", 34],
+        "./main_bulgarian.json": ["c2SO", 35],
+        "./main_czech.json": ["peP3", 36],
+        "./main_danish.json": ["0bnV", 37],
+        "./main_dutch.json": ["wcLc", 38],
+        "./main_english.json": ["/rNK", 39],
+        "./main_finnish.json": ["iywU", 40],
+        "./main_french.json": ["Xnpc", 41],
+        "./main_german.json": ["pmKi", 42],
+        "./main_greek.json": ["mTRv", 43],
+        "./main_hungarian.json": ["WkHb", 44],
+        "./main_italian.json": ["Jz5U", 45],
+        "./main_japanese.json": ["3Dk9", 46],
+        "./main_koreana.json": ["neQD", 47],
+        "./main_latam.json": ["6oHD", 48],
+        "./main_norwegian.json": ["2OvS", 49],
+        "./main_polish.json": ["3pwE", 50],
+        "./main_portuguese.json": ["hY40", 51],
+        "./main_romanian.json": ["Q95+", 52],
+        "./main_russian.json": ["bsPT", 53],
+        "./main_sc_schinese.json": ["GOaQ", 54],
+        "./main_schinese.json": ["B/Zz", 55],
+        "./main_spanish.json": ["U6iL", 56],
+        "./main_swedish.json": ["4uPU", 57],
+        "./main_tchinese.json": ["rgC9", 58],
+        "./main_thai.json": ["87dp", 59],
+        "./main_turkish.json": ["yMpO", 60],
+        "./main_ukrainian.json": ["zTWm", 61],
+        "./main_vietnamese.json": ["wqiy", 62],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -4817,10 +4820,10 @@
           return X;
         }),
         r.d(t, "zb", function () {
-          return J;
+          return Q;
         }),
         r.d(t, "N", function () {
-          return Q;
+          return J;
         }),
         r.d(t, "D", function () {
           return ee;
@@ -6419,7 +6422,7 @@
           })
         );
       }
-      function J() {
+      function Q() {
         return i.createElement(
           "svg",
           {
@@ -6441,7 +6444,7 @@
           })
         );
       }
-      function Q() {
+      function J() {
         return i.createElement(
           "svg",
           {
@@ -8464,15 +8467,15 @@
         K = Z("DemoAndQuickPitch");
       var X = r("1ZD8");
       r("99tq");
-      function J(e) {
-        const t = s.useRef(Q);
+      function Q(e) {
+        const t = s.useRef(J);
         let r = e.children;
         return (
           e.debug,
           s.createElement(X.QueryClientProvider, { client: t.current }, r)
         );
       }
-      const Q = new X.QueryClient({
+      const J = new X.QueryClient({
           defaultOptions: { queries: { staleTime: 1 / 0 } },
         }),
         ee = o.a.lazy(() =>
@@ -8500,11 +8503,11 @@
             r.e(10),
             r.e(8),
             r.e(12),
-            r.e(61),
+            r.e(32),
           ]).then(r.bind(null, "CGeh"))
         ),
         re = o.a.lazy(() =>
-          Promise.all([r.e(1), r.e(18), r.e(0), r.e(10), r.e(123)]).then(
+          Promise.all([r.e(1), r.e(18), r.e(0), r.e(10), r.e(95)]).then(
             r.bind(null, "cprX")
           )
         ),
@@ -8563,7 +8566,7 @@
           Promise.all([r.e(1), r.e(0), r.e(19)]).then(r.bind(null, "byIC"))
         ),
         oe = o.a.lazy(() =>
-          Promise.all([r.e(6), r.e(7), r.e(184)]).then(r.bind(null, "AFtM"))
+          Promise.all([r.e(6), r.e(7), r.e(156)]).then(r.bind(null, "AFtM"))
         ),
         le = o.a.lazy(() =>
           Promise.all([
@@ -8684,7 +8687,7 @@
             r.e(13),
             r.e(12),
             r.e(16),
-            r.e(124),
+            r.e(96),
           ]).then(r.bind(null, "21NE"))
         ),
         pe = o.a.lazy(() =>
@@ -8707,7 +8710,7 @@
             r.e(13),
             r.e(12),
             r.e(16),
-            r.e(124),
+            r.e(96),
           ]).then(r.bind(null, "OVk1"))
         ),
         fe = o.a.lazy(() =>
@@ -9068,7 +9071,7 @@
         return o.a.createElement(
           y.a.Provider,
           { value: { bCanUseLink: !0 } },
-          o.a.createElement(J, null, t, o.a.createElement(be, null))
+          o.a.createElement(Q, null, t, o.a.createElement(be, null))
         );
       }
       const be = (e) => {
@@ -10690,7 +10693,7 @@
     pJv3: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return _;
+        return g;
       });
       var n = r("mrSG"),
         i = r("2vnA"),
@@ -10700,17 +10703,18 @@
         l = (r("1+R+"), r("VnJP")),
         c = r("/Q1a"),
         d = (r("xYro"), r("3u1o")),
-        u = r("GXif");
+        u = r("GXif"),
+        m = r("r0f0");
       r("PENG");
-      const m = 1e6;
-      class h {
+      const h = 1e6;
+      class p {
         constructor() {
           this.playback_speed = 1;
         }
       }
-      class p extends h {}
-      class f extends h {}
-      class _ {
+      class f extends p {}
+      class _ extends p {}
+      class g {
         constructor() {
           (this.m_steamIDBroadcast = ""),
             (this.m_steamIDViewer = ""),
@@ -10722,8 +10726,8 @@
             (this.m_strStatsLink = ""),
             (this.m_strStalledLink = ""),
             (this.m_strEventLogLink = ""),
-            (this.m_allTimeSnapshot = new g(0)),
-            (this.m_rgSnapShots = new Array(new g(0))),
+            (this.m_allTimeSnapshot = new b(0)),
+            (this.m_rgSnapShots = new Array(new b(0))),
             (this.m_videoResolution = 0),
             (this.m_audioRate = 0),
             (this.m_audioChannel = 0),
@@ -10746,58 +10750,10 @@
             (this.m_nSegmentDurationMS = 0),
             (this.m_nPlaybackRate = 0),
             (this.m_nTimeToFirstFrameMS = -1),
-            (this.m_fpsMonitor = new w());
+            (this.m_fpsMonitor = new y());
         }
         GetBytesReceivedToDisplay() {
-          return (function (e, t, r, n) {
-            let i = t;
-            i =
-              "number" == typeof i
-                ? {
-                    nDigitsAfterDecimal: t,
-                    bUseBinary1K: r || void 0 === r,
-                    bValueIsInBytes: !n,
-                    bValueIsRate: n,
-                    nMinimumDigitsAfterDecimal: 0,
-                  }
-                : Object.assign(
-                    {
-                      nDigitsAfterDecimal: 2,
-                      bUseBinary1K: !0,
-                      bValueIsInBytes: !0,
-                      bValueIsRate: !1,
-                      nMinimumDigitsAfterDecimal: 0,
-                    },
-                    i
-                  );
-            const a = i.bUseBinary1K ? 1024 : 1e3,
-              s = a * a,
-              o = s * a,
-              l = o * a;
-            let c,
-              d = "";
-            e > l
-              ? ((c = e / l), (d = "Tera"))
-              : e > o
-              ? ((c = e / o), (d = "Giga"))
-              : e > s
-              ? ((c = e / s), (d = "Mega"))
-              : e > a
-              ? ((c = e / a), (d = "Kilo"))
-              : (c = e);
-            const m =
-              "#" +
-              d +
-              (i.bValueIsInBytes ? "bytes" : "bits") +
-              (i.bValueIsRate ? "_PerSecond" : "");
-            return Object(u.g)(
-              m,
-              c.toLocaleString(u.f.GetPreferredLocales(), {
-                minimumFractionDigits: i.nMinimumDigitsAfterDecimal,
-                maximumFractionDigits: i.nDigitsAfterDecimal,
-              })
-            );
-          })(this.m_allTimeSnapshot.m_nBytesReceived, 1);
+          return Object(m.b)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
         }
         GetBufferingResolutionToDisplay() {
           return this.m_strBufferingVideoResolution;
@@ -10850,11 +10806,11 @@
         GetBandwidthStatsToDisplay() {
           if (this.m_rgSnapShots.length < 2)
             return (
-              (this.m_allTimeSnapshot.m_nBandwidthMin / m).toFixed(3) +
+              (this.m_allTimeSnapshot.m_nBandwidthMin / h).toFixed(3) +
               " / " +
-              (this.m_allTimeSnapshot.m_nBandwidthMax / m).toFixed(3) +
+              (this.m_allTimeSnapshot.m_nBandwidthMax / h).toFixed(3) +
               " / " +
-              (this.m_allTimeSnapshot.GetAverageBandwidth() / m).toFixed(3)
+              (this.m_allTimeSnapshot.GetAverageBandwidth() / h).toFixed(3)
             );
           {
             let e = this.m_rgSnapShots[this.m_rgSnapShots.length - 2],
@@ -10863,12 +10819,12 @@
               (
                 (0 == t.m_nBandwidthMin
                   ? e.m_nBandwidthMin
-                  : Math.min(e.m_nBandwidthMin, t.m_nBandwidthMin)) / m
+                  : Math.min(e.m_nBandwidthMin, t.m_nBandwidthMin)) / h
               ).toFixed(3) +
               " / " +
-              (Math.max(e.m_nBandwidthMax, t.m_nBandwidthMax) / m).toFixed(3) +
+              (Math.max(e.m_nBandwidthMax, t.m_nBandwidthMax) / h).toFixed(3) +
               " / " +
-              (e.GetAverageBandwidthFromTwo(t) / m).toFixed(3)
+              (e.GetAverageBandwidthFromTwo(t) / h).toFixed(3)
             );
           }
         }
@@ -10913,10 +10869,10 @@
           return this.m_allTimeSnapshot.m_nFramesDecoded > 0;
         }
         GetBandwidthRequiredToDisplay() {
-          return (this.m_nBandwidthRequired / m).toFixed(3);
+          return (this.m_nBandwidthRequired / h).toFixed(3);
         }
         GetBandwithVideoToDisplay() {
-          return (this.m_nCurBandwidthVideo / m).toFixed(3);
+          return (this.m_nCurBandwidthVideo / h).toFixed(3);
         }
         GetContentServerToDisplay() {
           return this.m_host;
@@ -11061,7 +11017,7 @@
             (this.m_rgSnapShots[
               this.m_rgSnapShots.length - 1
             ].m_nStallEvents += 1);
-          let n = new f();
+          let n = new _();
           this.GatherCommonStats(
             n,
             t,
@@ -11166,7 +11122,7 @@
           )
             return void this.CreateNewEmptySnapshot(t.videoHeight);
           this.LogFrameInfo(r), this.LogBufferDuration(e, t);
-          let n = new p(),
+          let n = new f(),
             i = this.m_rgSnapShots[this.m_rgSnapShots.length - 1];
           (n.frames_decoded = i.m_nFramesDecoded),
             (n.frames_dropped = i.m_nFramesDropped),
@@ -11208,7 +11164,7 @@
         }
         CreateNewEmptySnapshot(e) {
           this.m_rgSnapShots.length >= 5 && this.m_rgSnapShots.shift(),
-            this.m_rgSnapShots.push(new g(e));
+            this.m_rgSnapShots.push(new b(e));
         }
         GatherCommonStats(e, t, r, n) {
           (e.steamid = this.m_steamIDViewer),
@@ -11227,38 +11183,38 @@
             (e.broadcast_origin = this.m_strBroadcastOrigin);
         }
       }
-      Object(n.b)([i.C], _.prototype, "m_allTimeSnapshot", void 0),
+      Object(n.b)([i.C], g.prototype, "m_allTimeSnapshot", void 0),
         Object(n.b)(
           [i.C],
-          _.prototype,
+          g.prototype,
           "m_strBufferingVideoResolution",
           void 0
         ),
-        Object(n.b)([i.C], _.prototype, "m_strPlaybackVideoResolution", void 0),
-        Object(n.b)([i.C], _.prototype, "m_strHtmlVideoDisplay", void 0),
-        Object(n.b)([i.C], _.prototype, "m_nBandwidthRequired", void 0),
-        Object(n.b)([i.C], _.prototype, "m_nCurBandwidthVideo", void 0),
-        Object(n.b)([i.C], _.prototype, "m_nAudioBufferedMS", void 0),
-        Object(n.b)([i.C], _.prototype, "m_nVideoBufferedMS", void 0),
-        Object(n.b)([i.C], _.prototype, "m_nActiveDownloads", void 0),
-        Object(n.b)([i.C], _.prototype, "m_nVideoDownloadProgress", void 0),
-        Object(n.b)([i.C], _.prototype, "m_videoBufferedRanges", void 0),
-        Object(n.b)([i.C], _.prototype, "m_audioBufferedRanges", void 0),
-        Object(n.b)([i.C], _.prototype, "m_nPlaybackRate", void 0),
-        Object(n.b)([i.k], _.prototype, "SetVideoPlaybackResolution", null),
-        Object(n.b)([i.k], _.prototype, "SetRepresentation", null),
-        Object(n.b)([i.k], _.prototype, "SetCurrentVideoBandwidth", null),
+        Object(n.b)([i.C], g.prototype, "m_strPlaybackVideoResolution", void 0),
+        Object(n.b)([i.C], g.prototype, "m_strHtmlVideoDisplay", void 0),
+        Object(n.b)([i.C], g.prototype, "m_nBandwidthRequired", void 0),
+        Object(n.b)([i.C], g.prototype, "m_nCurBandwidthVideo", void 0),
+        Object(n.b)([i.C], g.prototype, "m_nAudioBufferedMS", void 0),
+        Object(n.b)([i.C], g.prototype, "m_nVideoBufferedMS", void 0),
+        Object(n.b)([i.C], g.prototype, "m_nActiveDownloads", void 0),
+        Object(n.b)([i.C], g.prototype, "m_nVideoDownloadProgress", void 0),
+        Object(n.b)([i.C], g.prototype, "m_videoBufferedRanges", void 0),
+        Object(n.b)([i.C], g.prototype, "m_audioBufferedRanges", void 0),
+        Object(n.b)([i.C], g.prototype, "m_nPlaybackRate", void 0),
+        Object(n.b)([i.k], g.prototype, "SetVideoPlaybackResolution", null),
+        Object(n.b)([i.k], g.prototype, "SetRepresentation", null),
+        Object(n.b)([i.k], g.prototype, "SetCurrentVideoBandwidth", null),
         Object(n.b)(
           [i.k],
-          _.prototype,
+          g.prototype,
           "CaptureFrequentlyUpdatingInformation",
           null
         ),
-        Object(n.b)([i.k], _.prototype, "LogDownload", null),
-        Object(n.b)([i.k], _.prototype, "LogSegmentDownloadFailure", null),
-        Object(n.b)([i.k], _.prototype, "LogFrameInfo", null),
-        Object(n.b)([i.k], _.prototype, "LogBufferDuration", null);
-      class g {
+        Object(n.b)([i.k], g.prototype, "LogDownload", null),
+        Object(n.b)([i.k], g.prototype, "LogSegmentDownloadFailure", null),
+        Object(n.b)([i.k], g.prototype, "LogFrameInfo", null),
+        Object(n.b)([i.k], g.prototype, "LogBufferDuration", null);
+      class b {
         constructor(e) {
           (this.m_timeMS = Date.now()),
             (this.m_nBytesReceived = 0),
@@ -11319,22 +11275,22 @@
             (this.m_nEntries += 1);
         }
       }
-      Object(n.b)([i.C], g.prototype, "m_nBytesReceived", void 0),
-        Object(n.b)([i.C], g.prototype, "m_nFailedSegments", void 0),
-        Object(n.b)([i.C], g.prototype, "m_nStallEvents", void 0),
-        Object(n.b)([i.C], g.prototype, "m_nSegmentDownloadTimeMaxMS", void 0),
-        Object(n.b)([i.C], g.prototype, "m_nSegmentDownloadTimeMinMS", void 0),
-        Object(n.b)([i.C], g.prototype, "m_nBandwidthMin", void 0),
-        Object(n.b)([i.C], g.prototype, "m_nBandwidthMax", void 0),
-        Object(n.b)([i.C], g.prototype, "m_nFramesDecoded", void 0),
-        Object(n.b)([i.C], g.prototype, "m_nFramesDropped", void 0),
-        Object(n.b)([i.k], g.prototype, "SegmentReceived", null);
-      class b {
+      Object(n.b)([i.C], b.prototype, "m_nBytesReceived", void 0),
+        Object(n.b)([i.C], b.prototype, "m_nFailedSegments", void 0),
+        Object(n.b)([i.C], b.prototype, "m_nStallEvents", void 0),
+        Object(n.b)([i.C], b.prototype, "m_nSegmentDownloadTimeMaxMS", void 0),
+        Object(n.b)([i.C], b.prototype, "m_nSegmentDownloadTimeMinMS", void 0),
+        Object(n.b)([i.C], b.prototype, "m_nBandwidthMin", void 0),
+        Object(n.b)([i.C], b.prototype, "m_nBandwidthMax", void 0),
+        Object(n.b)([i.C], b.prototype, "m_nFramesDecoded", void 0),
+        Object(n.b)([i.C], b.prototype, "m_nFramesDropped", void 0),
+        Object(n.b)([i.k], b.prototype, "SegmentReceived", null);
+      class w {
         reset(e, t) {
           (this.bDropReading = e), (this.nTotalDecodedFrames = t);
         }
       }
-      class w {
+      class y {
         constructor() {
           (this.k_nTestFrequencyMS = 1e3),
             (this.k_nSlidingWindow = 6),
@@ -11409,14 +11365,76 @@
           (r =
             this.m_rgResultsWindow.length >= this.k_nSlidingWindow
               ? this.m_rgResultsWindow.shift()
-              : new b()),
+              : new w()),
             r.reset(e, t),
             this.m_rgResultsWindow.push(r);
         }
       }
-      Object(n.b)([i.C], w.prototype, "m_bDroppingFrameDetected", void 0),
-        Object(n.b)([i.C], w.prototype, "m_nCurrentFPS", void 0),
-        Object(n.b)([i.k.bound], w.prototype, "TakeReading", null);
+      Object(n.b)([i.C], y.prototype, "m_bDroppingFrameDetected", void 0),
+        Object(n.b)([i.C], y.prototype, "m_nCurrentFPS", void 0),
+        Object(n.b)([i.k.bound], y.prototype, "TakeReading", null);
+    },
+    r0f0: function (e, t, r) {
+      "use strict";
+      r.d(t, "b", function () {
+        return i;
+      }),
+        r.d(t, "a", function () {
+          return a;
+        });
+      var n = r("GXif");
+      function i(e, t, r, i) {
+        let a = t;
+        a =
+          "number" == typeof a
+            ? {
+                nDigitsAfterDecimal: t,
+                bUseBinary1K: r || void 0 === r,
+                bValueIsInBytes: !i,
+                bValueIsRate: i,
+                nMinimumDigitsAfterDecimal: 0,
+              }
+            : Object.assign(
+                {
+                  nDigitsAfterDecimal: 2,
+                  bUseBinary1K: !0,
+                  bValueIsInBytes: !0,
+                  bValueIsRate: !1,
+                  nMinimumDigitsAfterDecimal: 0,
+                },
+                a
+              );
+        const s = a.bUseBinary1K ? 1024 : 1e3,
+          o = s * s,
+          l = o * s,
+          c = l * s;
+        let d,
+          u = "";
+        e > c
+          ? ((d = e / c), (u = "Tera"))
+          : e > l
+          ? ((d = e / l), (u = "Giga"))
+          : e > o
+          ? ((d = e / o), (u = "Mega"))
+          : e > s
+          ? ((d = e / s), (u = "Kilo"))
+          : (d = e);
+        const m =
+          "#" +
+          u +
+          (a.bValueIsInBytes ? "bytes" : "bits") +
+          (a.bValueIsRate ? "_PerSecond" : "");
+        return Object(n.g)(
+          m,
+          d.toLocaleString(n.f.GetPreferredLocales(), {
+            minimumFractionDigits: a.nMinimumDigitsAfterDecimal,
+            maximumFractionDigits: a.nDigitsAfterDecimal,
+          })
+        );
+      }
+      function a(e) {
+        return e.toLocaleString(n.f.GetPreferredLocales());
+      }
     },
     rMum: function (e, t, r) {
       "use strict";
@@ -11948,35 +11966,35 @@
     suz2: function (e, t, r) {},
     uhdG: function (e, t, r) {
       var n = {
-        "./sales_brazilian.json": ["+cMs", 125],
-        "./sales_bulgarian.json": ["ObVs", 126],
-        "./sales_czech.json": ["CoMO", 127],
-        "./sales_danish.json": ["G2Cs", 128],
-        "./sales_dutch.json": ["qEt3", 129],
-        "./sales_english.json": ["EnkW", 130],
-        "./sales_finnish.json": ["aW7y", 131],
-        "./sales_french.json": ["zxZG", 132],
-        "./sales_german.json": ["2ydi", 133],
-        "./sales_greek.json": ["Xebg", 134],
-        "./sales_hungarian.json": ["AGuh", 135],
-        "./sales_italian.json": ["/ptQ", 136],
-        "./sales_japanese.json": ["gLno", 137],
-        "./sales_koreana.json": ["FMlb", 138],
-        "./sales_latam.json": ["qta4", 139],
-        "./sales_norwegian.json": ["7zdQ", 140],
-        "./sales_polish.json": ["ViiN", 141],
-        "./sales_portuguese.json": ["wIrF", 142],
-        "./sales_romanian.json": ["rBcb", 143],
-        "./sales_russian.json": ["3DF0", 144],
-        "./sales_sc_schinese.json": ["K/cD", 145],
-        "./sales_schinese.json": ["hUJS", 146],
-        "./sales_spanish.json": ["6i74", 147],
-        "./sales_swedish.json": ["4vnE", 148],
-        "./sales_tchinese.json": ["9uzb", 149],
-        "./sales_thai.json": ["NP1P", 150],
-        "./sales_turkish.json": ["jIRL", 151],
-        "./sales_ukrainian.json": ["TgQj", 152],
-        "./sales_vietnamese.json": ["EKJ7", 153],
+        "./sales_brazilian.json": ["+cMs", 97],
+        "./sales_bulgarian.json": ["ObVs", 98],
+        "./sales_czech.json": ["CoMO", 99],
+        "./sales_danish.json": ["G2Cs", 100],
+        "./sales_dutch.json": ["qEt3", 101],
+        "./sales_english.json": ["EnkW", 102],
+        "./sales_finnish.json": ["aW7y", 103],
+        "./sales_french.json": ["zxZG", 104],
+        "./sales_german.json": ["2ydi", 105],
+        "./sales_greek.json": ["Xebg", 106],
+        "./sales_hungarian.json": ["AGuh", 107],
+        "./sales_italian.json": ["/ptQ", 108],
+        "./sales_japanese.json": ["gLno", 109],
+        "./sales_koreana.json": ["FMlb", 110],
+        "./sales_latam.json": ["qta4", 111],
+        "./sales_norwegian.json": ["7zdQ", 112],
+        "./sales_polish.json": ["ViiN", 113],
+        "./sales_portuguese.json": ["wIrF", 114],
+        "./sales_romanian.json": ["rBcb", 115],
+        "./sales_russian.json": ["3DF0", 116],
+        "./sales_sc_schinese.json": ["K/cD", 117],
+        "./sales_schinese.json": ["hUJS", 118],
+        "./sales_spanish.json": ["6i74", 119],
+        "./sales_swedish.json": ["4vnE", 120],
+        "./sales_tchinese.json": ["9uzb", 121],
+        "./sales_thai.json": ["NP1P", 122],
+        "./sales_turkish.json": ["jIRL", 123],
+        "./sales_ukrainian.json": ["TgQj", 124],
+        "./sales_vietnamese.json": ["EKJ7", 125],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -15089,5 +15107,5 @@
       })(G || (G = {}));
     },
   },
-  [["gfbn", 92, 30]],
+  [["gfbn", 63, 30]],
 ]);

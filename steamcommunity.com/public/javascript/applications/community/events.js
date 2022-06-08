@@ -50,7 +50,7 @@
               ? o.createElement(
                   E.a,
                   null,
-                  o.createElement(b.c, {
+                  o.createElement(b.e, {
                     eventModel: e,
                     bIsPreview: !0,
                     language: t,

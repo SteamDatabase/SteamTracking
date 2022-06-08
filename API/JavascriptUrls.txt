@@ -893,6 +893,7 @@ ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile/?show=steamapp
 ${STORE_BASE_URL}news/
+${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}

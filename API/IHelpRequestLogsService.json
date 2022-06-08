@@ -1,0 +1,51 @@
+{
+    "name": "IHelpRequestLogsService",
+    "methods": [
+        {
+            "name": "UploadUserApplicationLog",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "User uploading application logs",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "log_type",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "version_string",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "log_contents",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "request_id",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetApplicationLogDemand",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Returns whether the server would like the user to upload logs",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

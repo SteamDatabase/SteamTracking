@@ -379,7 +379,6 @@ body.v6 .supernav_content, body.v6 #global_header, body.v6 #global_header .conte
 body.v6.sale_page_n_section #global_header
 {
 	position: relative;
-	z-index: 2;
 }
 
 body.v6 #store_header {
@@ -4816,12 +4815,10 @@ body.v6 .spacer {
 }
 
 body.v6 .store_nav #genre_flyout .popup_menu_subheader {
-
-	font-weight: 600;
 	padding: 5px 5px 10px 2px;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
-	font-weight: 800;
+    font-weight: 800;
 	font-size: 11px;
 }
 body.v6 .store_nav .popup_menu_subheader {
@@ -4835,7 +4832,6 @@ body.v6 .store_nav .popup_menu_subheader {
 	font-variant: small-caps;
 	text-transform: uppercase;
 	letter-spacing: 0.07em;
-	font-weight: 800;
 	font-size: 11px;
 	color: #2EBFFF;
 	text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
@@ -4877,7 +4873,6 @@ body.v6 .store_nav .popup_menu_subheader .popup_menu_item {
 	text-transform: none;
 	font-size: 13px;
 	letter-spacing: 0.0em;
-	font-weight: 800;
 	width: 100%;
 }
 

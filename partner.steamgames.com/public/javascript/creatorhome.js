@@ -392,9 +392,6 @@ class CreatorHome {
 									.text('Unlink') );
 
 							}
-							else
-							{
-															}
 						}
 					}
 				}

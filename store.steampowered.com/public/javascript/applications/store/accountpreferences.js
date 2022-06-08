@@ -793,7 +793,7 @@
                 { className: T.SectionDescription },
                 Object(k.g)("#CookiePref_Content_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.K, {
                 onChange: r,
                 label: Object(k.g)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
@@ -823,7 +823,7 @@
                 { className: T.SectionDescription },
                 Object(k.g)("#CookiePref_ValveAnalytics_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.K, {
                 onChange: r,
                 label: Object(k.g)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
@@ -855,7 +855,7 @@
                 { className: T.SectionDescription },
                 Object(k.g)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.K, {
                 onChange: r,
                 label: Object(k.g)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
@@ -893,19 +893,19 @@
                 { className: T.SectionDescription },
                 Object(k.g)("#CookiePref_ThirdParty_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.K, {
                 onChange: r,
                 label: Object(k.g)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: Object(k.g)("#CookiePref_YouTube_Desc"),
               }),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.K, {
                 onChange: a,
                 label: Object(k.g)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: Object(k.g)("#CookiePref_Vimeo_Desc"),
               }),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.K, {
                 onChange: n,
                 label: Object(k.g)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
@@ -935,7 +935,7 @@
                 { className: T.SectionDescription },
                 Object(k.g)("#PrivacySettings_Marketing_Desc")
               ),
-              i.a.createElement(v.J, {
+              i.a.createElement(v.K, {
                 onChange: r,
                 label: Object(k.g)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),

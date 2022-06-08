@@ -5394,7 +5394,7 @@
                     { className: T.Error },
                     this.state.strErrorMessage
                   ),
-                u.a.createElement(h.J, {
+                u.a.createElement(h.K, {
                   onChange: this.OnToggleChannelAutomation,
                   label: Object(j.g)("#RSSManager_Status_Automation_Desc"),
                   checked: this.props.admin.BIsAutomationEnabled(),

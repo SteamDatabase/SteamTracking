@@ -834,6 +834,28 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 	padding-bottom: 0;
 }
 
+.login_bottom_row {
+	display: flex;
+	flex-direction: row;
+	margin-top: 48px;
+	align-items: center;
+
+	max-width: 700px;
+
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.login_bottom_row_item {
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
 @media screen and ( max-width: 640px )
 {
 	html.responsive .loginbox {

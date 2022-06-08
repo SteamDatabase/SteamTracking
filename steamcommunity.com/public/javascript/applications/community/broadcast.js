@@ -7,7 +7,7 @@
       "use strict";
       a.r(t),
         a.d(t, "BroadcastEmbeddablePopoutHeader", function () {
-          return Y;
+          return X;
         });
       var r = a("mrSG"),
         s = a("vDqi"),
@@ -122,17 +122,17 @@
         w = a("d+Me"),
         D = a("TLQK"),
         k = a("opsS"),
-        L = (a("pKbv"), a("kLLr")),
-        T = (a("3+zv"), a("uIWk")),
-        x = a("rKv1"),
-        R = a.n(x);
+        T = (a("pKbv"), a("kLLr")),
+        x = (a("3+zv"), a("uIWk")),
+        L = a("rKv1"),
+        R = a.n(L);
       const W = Object(o.a)((e) => {
         const { event: t } = e,
           a = t.clanSteamID.GetAccountID(),
           s = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
           o = Object(c.useRef)(null),
           [i, d] = Object(c.useState)(
-            t ? T.a.GetCreatorHome(t.clanSteamID) : null
+            t ? x.a.GetCreatorHome(t.clanSteamID) : null
           );
         if (
           (Object(c.useEffect)(() => {
@@ -140,8 +140,8 @@
             o.current = e.cancel;
             return (
               Object(r.a)(void 0, void 0, void 0, function* () {
-                const t = L.a.InitFromClanID(a),
-                  r = yield T.a.LoadCreatorHome(t, e);
+                const t = T.a.InitFromClanID(a),
+                  r = yield x.a.LoadCreatorHome(t, e);
                 e.token.reason || d(r);
               }),
               () => {
@@ -192,8 +192,9 @@
         U = a("C4Nl"),
         M = a("hKFG"),
         H = a("S6U1"),
-        F = (a("3u1e"), a("mgoM"));
-      const K = {
+        F = (a("3u1e"), a("mgoM")),
+        K = a("o+8i");
+      const q = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
           { appid: 386360, url: "https://steam.tv/smite" },
@@ -220,7 +221,7 @@
           },
         ],
       };
-      let q = (V = class extends l.a.Component {
+      let z = (V = class extends l.a.Component {
         constructor() {
           super(...arguments),
             (this.m_cancelSignal = n.a.CancelToken.source()),
@@ -357,9 +358,9 @@
             n = l.a.createElement(
               "div",
               { className: R.a.rightPanel },
-              l.a.createElement(J, { key: "right" + s, ImgUrl: e.right_panel })
+              l.a.createElement(Y, { key: "right" + s, ImgUrl: e.right_panel })
             ),
-            o = l.a.createElement(J, { key: "left" + s, ImgUrl: e.left_panel });
+            o = l.a.createElement(Y, { key: "left" + s, ImgUrl: e.left_panel });
           if (s < 11) {
             const t = I.b.GetAppIDListForBroadcasterSteamID(e.steamid);
             t && 1 === t.length && (s = t[0]);
@@ -380,7 +381,7 @@
               })),
               (a.bRightPanelArtworkOrEmpty = !1)),
             r && !t
-              ? ((a.leftPanel = l.a.createElement(Z, {
+              ? ((a.leftPanel = l.a.createElement($, {
                   broadcastEmbedContext: this.props,
                   key: "selector" + s,
                   curStream: e,
@@ -391,7 +392,7 @@
                 (a.rightPanel = n))
               : t
               ? ((a.leftPanel = l.a.createElement("div", null)),
-                (a.rightPanel = l.a.createElement(te, {
+                (a.rightPanel = l.a.createElement(ae, {
                   stream: e,
                   orientation: "rightside",
                 })),
@@ -519,7 +520,7 @@
                         onTransitionEnd: this.OnShrinkTransitionEnd,
                       },
                       n.leftPanel,
-                      l.a.createElement(z, {
+                      l.a.createElement(Q, {
                         stream: e,
                         bStartMuted: this.state.bStartMuted,
                         fnRenderBroadcastContext: s,
@@ -528,7 +529,7 @@
                       }),
                       n.rightPanel,
                       this.state.bExpanded &&
-                        l.a.createElement(Q, { stream: e, bMultistream: i })
+                        l.a.createElement(J, { stream: e, bMultistream: i })
                     )
                 ),
                 Boolean(
@@ -538,7 +539,7 @@
                   l.a.createElement(
                     "div",
                     { className: `${a ? R.a.Event : ""}` },
-                    l.a.createElement(Q, { stream: e, bMultistream: i })
+                    l.a.createElement(J, { stream: e, bMultistream: i })
                   ),
                 l.a.createElement("div", { className: R.a.clear_div })
               )
@@ -549,13 +550,13 @@
           });
         }
       });
-      Object(r.b)([k.b], q.prototype, "ToggleBroadcastExpandShrink", null),
-        Object(r.b)([k.b], q.prototype, "OnShrinkTransitionEnd", null),
-        Object(r.b)([k.b], q.prototype, "onStreamSelect", null),
-        Object(r.b)([k.b], q.prototype, "PlayTopNonVOD", null),
-        (q = V = Object(r.b)([o.a], q));
-      t.default = q;
-      class z extends l.a.Component {
+      Object(r.b)([k.b], z.prototype, "ToggleBroadcastExpandShrink", null),
+        Object(r.b)([k.b], z.prototype, "OnShrinkTransitionEnd", null),
+        Object(r.b)([k.b], z.prototype, "onStreamSelect", null),
+        Object(r.b)([k.b], z.prototype, "PlayTopNonVOD", null),
+        (z = V = Object(r.b)([o.a], z));
+      t.default = z;
+      class Q extends l.a.Component {
         constructor(e) {
           super(e),
             (this.m_iVideoContainerRef = l.a.createRef()),
@@ -607,7 +608,7 @@
                       : R.a.video_container,
                   },
                   this.state.bPopout &&
-                    l.a.createElement(Y, {
+                    l.a.createElement(X, {
                       steamIDBroadcast: this.props.stream.steamid,
                       OnPreventPopup: this.CloseBroadcastPopup,
                     }),
@@ -630,16 +631,16 @@
           );
         }
       }
-      Object(r.b)([k.b], z.prototype, "CloseBroadcastPopup", null),
-        Object(r.b)([k.b], z.prototype, "OnEnter", null),
-        Object(r.b)([k.b], z.prototype, "OnLeave", null);
-      let Q = class extends l.a.Component {
+      Object(r.b)([k.b], Q.prototype, "CloseBroadcastPopup", null),
+        Object(r.b)([k.b], Q.prototype, "OnEnter", null),
+        Object(r.b)([k.b], Q.prototype, "OnLeave", null);
+      let J = class extends l.a.Component {
         ConstructBroadcastLink() {
           let e = this.props.stream;
           const t = N.a.GetOrCreateBroadcastInfo(
             this.props.stream.steamid
           ).m_nAppID;
-          let a = K.list.find(
+          let a = q.list.find(
             (a) =>
               a.appid == t &&
               (!a.broadcasterAccountID || a.broadcasterAccountID == e.accountid)
@@ -709,7 +710,7 @@
               "div",
               { className: Object(E.a)(R.a.viewer_count, "viewer_count") },
               l.a.createElement(A.wb, null),
-              r.toLocaleString(D.e.GetPreferredLocales())
+              Object(K.a)(r)
             ),
             l.a.createElement(
               "div",
@@ -767,10 +768,10 @@
           );
         }
       };
-      Object(r.b)([k.b], Q.prototype, "OnToggleChat", null),
-        Object(r.b)([k.b], Q.prototype, "onWatchBroadcastPage", null),
-        (Q = Object(r.b)([o.a], Q));
-      class J extends l.a.Component {
+      Object(r.b)([k.b], J.prototype, "OnToggleChat", null),
+        Object(r.b)([k.b], J.prototype, "onWatchBroadcastPage", null),
+        (J = Object(r.b)([o.a], J));
+      class Y extends l.a.Component {
         render() {
           let e = this.props.ImgUrl;
           return l.a.createElement(
@@ -785,7 +786,7 @@
           );
         }
       }
-      const Y = Object(o.a)((e) => {
+      const X = Object(o.a)((e) => {
         const { steamIDBroadcast: t } = e,
           a = N.a.GetOrCreateBroadcastInfo(t).m_nAppID,
           [r] = Object(b.b)(a, {});
@@ -816,7 +817,7 @@
           )
         );
       });
-      function X(e, t) {
+      function Z(e, t) {
         var a;
         const r = N.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
           s = U.a.Get().GetApp(r);
@@ -827,7 +828,7 @@
           ? parseInt(R.a.strStreamIconCapsuleArtHeight)
           : parseInt(R.a.strStreamIconScreenshotArtHeight);
       }
-      function Z(e) {
+      function $(e) {
         const {
             curStream: t,
             onStreamSelect: a,
@@ -857,7 +858,7 @@
                     let e = 0;
                     for (const a of i) {
                       if (t.accountid == a.accountid) break;
-                      e += X(s, a);
+                      e += Z(s, a);
                     }
                     o.current.scrollTop = e;
                   }
@@ -877,7 +878,7 @@
             },
             i.map((e) => {
               var r;
-              return l.a.createElement($, {
+              return l.a.createElement(ee, {
                 key: null !== (r = e.accountid) && void 0 !== r ? r : e.steamid,
                 stream: e,
                 bSelected: t.accountid == e.accountid,
@@ -888,7 +889,7 @@
           )
         );
       }
-      function $(e) {
+      function ee(e) {
         var t;
         const {
             onStreamSelect: a,
@@ -928,7 +929,7 @@
                 onClick: () => a && a(s),
                 rootMargin: "100px 0px 100px 0px",
               },
-              l.a.createElement(ee, {
+              l.a.createElement(te, {
                 strThumbnail: s.thumbnail_http_address,
                 bSelected: r,
                 strCapsuleArtURL: d,
@@ -946,13 +947,13 @@
                   null,
                   l.a.createElement(A.wb, null),
                   " ",
-                  m.toLocaleString(D.e.GetPreferredLocales())
+                  Object(K.a)(m)
                 )
               : _
           )
         );
       }
-      function ee(e) {
+      function te(e) {
         const { strCapsuleArtURL: t, strThumbnail: a, bSelected: r } = e,
           s = r ? R.a.stream_icon_selected : R.a.stream_icon;
         if (t) {
@@ -972,7 +973,7 @@
         }
         return l.a.createElement("img", { className: s, src: a });
       }
-      function te(e) {
+      function ae(e) {
         const { stream: t, orientation: a } = e,
           r = "below" == a,
           s = Object(i.d)(() => N.a.GetBroadcast(t.steamid));

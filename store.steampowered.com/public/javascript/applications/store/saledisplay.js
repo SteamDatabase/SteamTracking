@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [124],
+  [96],
   {
     "21NE": function (e, t, a) {
       "use strict";
@@ -67,7 +67,7 @@
         return r.a.createElement(
           o.a,
           { navID: "StoreSalePageRoot", NavigationManager: p },
-          r.a.createElement(m.c, {
+          r.a.createElement(m.e, {
             promotionName: t,
             language: a,
             eventModel: n,

@@ -457,6 +457,10 @@ html.responsive body {
 	height: 330px;
 }
 
+/* reduce the event share dialog body's bottom margin */
+.EventDisplay_Share_Dialog .DialogBodyText {
+	margin-bottom: 10px;
+}
 
 @media screen and (max-width: 910px)
 {

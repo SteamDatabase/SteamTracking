@@ -21,6 +21,31 @@
             ]
         },
         {
+            "name": "DeleteLeaderboardScore",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "leaderboardid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "numeric ID of the target leaderboard. Can be retrieved from GetLeaderboardsForGame"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "steamID to set the score for"
+                }
+            ]
+        },
+        {
             "name": "FindOrCreateLeaderboard",
             "version": 1,
             "httpmethod": "POST",

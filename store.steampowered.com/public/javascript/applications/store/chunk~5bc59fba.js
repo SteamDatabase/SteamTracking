@@ -661,6 +661,11 @@
                     br: n.d.readUint32,
                     bw: n.h.writeUint32,
                   },
+                  user_badge_level: {
+                    n: 15,
+                    br: n.d.readUint32,
+                    bw: n.h.writeUint32,
+                  },
                 },
               }),
             w.sm_m

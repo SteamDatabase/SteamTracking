@@ -2125,6 +2125,9 @@
         GetAccountName() {
           return this.m_strAccountName;
         }
+        GetSteamID() {
+          return this.m_steamid;
+        }
         SendSteamGuardCode(e) {
           return Object(a.a)(this, void 0, void 0, function* () {
             try {
@@ -2575,6 +2578,7 @@
           const [t, r] = Object(n.useState)(new U(e));
           return Object(I.d)(() => ({
             strAccountName: t.GetAccountName(),
+            steamid: t.GetSteamID(),
             strError: t.GetErrorMessage(),
             strConfirmationAssociatedMessage:
               t.GetConfirmationAssociatedMessage(),
@@ -2624,7 +2628,7 @@
           return w
             ? i.a.createElement(
                 Fe,
-                { gap: 18, className: Z.a.EmbeddedRoot },
+                { gap: 36, className: Z.a.EmbeddedRoot },
                 i.a.createElement(xe, { className: Z.a.HeaderLogo }),
                 e,
                 i.a.createElement(
@@ -2913,11 +2917,12 @@
                 i.a.createElement(
                   Fe,
                   { alignItems: "center", gap: 2 },
-                  i.a.createElement(
-                    Be,
-                    null,
-                    f && Object(se.g)("#Login_IncorrectSteamGuard")
-                  ),
+                  f &&
+                    i.a.createElement(
+                      Be,
+                      null,
+                      Object(se.g)("#Login_IncorrectSteamGuard")
+                    ),
                   i.a.createElement(Ne, {
                     value: c,
                     onChange: (e) => {
@@ -3006,7 +3011,7 @@
       function Le() {
         return i.a.createElement(
           Fe,
-          { alignItems: "center" },
+          { gap: 10, alignItems: "center" },
           i.a.createElement(
             "div",
             { className: Z.a.AwaitingMobileConfText },
@@ -3045,9 +3050,13 @@
           ),
           o = a
             ? i.a.createElement(
-                Te,
-                { align: "center", onClick: n },
-                Object(se.g)("#Login_EnterCodeInstead")
+                "div",
+                { style: { paddingBottom: "20px" } },
+                i.a.createElement(
+                  Te,
+                  { align: "center", onClick: n },
+                  Object(se.g)("#Login_EnterCodeInstead")
+                )
               )
             : i.a.createElement(
                 "div",
@@ -3063,10 +3072,10 @@
           },
           i.a.createElement(
             Fe,
-            { gap: 20 },
-            i.a.createElement(Oe, { type: t, accountName: r }),
+            { gap: 16 },
             i.a.createElement(Le, null),
-            o
+            o,
+            i.a.createElement(Oe, { type: t, accountName: r })
           )
         );
       }
@@ -3230,7 +3239,7 @@
         return i.a.createElement(
           Fe,
           {
-            gap: 18,
+            gap: 32,
             className: Object(o.a)(
               Z.a.StandardLayout,
               s && Z.a.Embedded,

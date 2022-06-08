@@ -1031,13 +1031,9 @@ body.v6.partner_events {
 .LowPerfMode .partnereventdisplay_EventBackgroundBlur_eti5E {
   display: none;
 }
-html.tablet .partnereventdisplay_EventBackgroundBlur_eti5E {
+.partnereventdisplay_EventBackgroundBlur_eti5E.GamepadMode,
+.GamepadMode .partnereventdisplay_EventBackgroundBlur_eti5E {
   filter: unset;
-}
-@media screen and (max-width: 910px) {
-  .partnereventdisplay_EventBackgroundBlur_eti5E {
-    filter: unset;
-  }
 }
 .partnereventdisplay_DetailArtworkAgeAppropriate_1Oz9X {
   position: relative;
@@ -1473,13 +1469,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   overflow: hidden;
   min-height: 300px;
 }
-html.tablet .partnereventdisplay_LibraryEventBodyContainer_2ZgLv {
+.partnereventdisplay_LibraryEventBodyContainer_2ZgLv.GamepadMode,
+.GamepadMode .partnereventdisplay_LibraryEventBodyContainer_2ZgLv {
   backdrop-filter: blur(32px);
-}
-@media screen and (max-width: 910px) {
-  .partnereventdisplay_LibraryEventBodyContainer_2ZgLv {
-    backdrop-filter: blur(32px);
-  }
 }
 .partnereventdisplay_LibraryEventBodyContainer_2ZgLv
   .partnereventdisplay_EventBackgroundBlur_eti5E {

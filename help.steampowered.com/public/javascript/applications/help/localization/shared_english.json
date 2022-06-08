@@ -52,6 +52,7 @@
     "Dialog_DontShowMeAgain": "Don't show this message again",
     "Dialog_AreYouSure": "Are you sure?",
     "ToolTip_CopyLinkToClipboard": "Copy link to clipboard",
+    "EventDisplay_Share_CopiedToClipboard": "Link copied",
     "Input_Error_NumberTooSmall": "Number too small.",
     "Input_Error_NumberTooLarge": "Number too large.",
     "Input_Error_MustBeURL": "Field is not a valid URL.",
