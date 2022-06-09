@@ -2293,12 +2293,15 @@ https://www.dota2.com/flockheartsgamble
 https://www.dota2.com/grimstroke
 https://www.dota2.com/international/battlepass
 https://www.dota2.com/international2019/battlepass
+https://www.dota2.com/labyrinth
+https://www.dota2.com/marci
 https://www.dota2.com/mars
 https://www.dota2.com/mistwoods
 https://www.dota2.com/nemestice
 https://www.dota2.com/newsentry/2870472829293831072
 https://www.dota2.com/outlanders
 https://www.dota2.com/planetfall
+https://www.dota2.com/primalbeast
 https://www.dota2.com/risinggale
 https://www.dota2.com/theonetrueking
 https://www.example.com
