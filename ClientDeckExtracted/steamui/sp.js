@@ -6046,6 +6046,30 @@
                       ),
                     });
                     break;
+                  case 15:
+                    r = a.createElement(be.g, {
+                      strTitle: Object(_.g)("#Settings_DeckRewards_Title"),
+                      strDescription: Object(_.g)(
+                        "#Settings_DeckRewards_ClaimError_AccessDenied"
+                      ),
+                    });
+                    break;
+                  case 24:
+                    r = a.createElement(be.g, {
+                      strTitle: Object(_.g)("#Settings_DeckRewards_Title"),
+                      strDescription: Object(_.g)(
+                        "#Settings_DeckRewards_ClaimError_InsufficientPrivilege"
+                      ),
+                    });
+                    break;
+                  case 28:
+                    r = a.createElement(be.g, {
+                      strTitle: Object(_.g)("#Settings_DeckRewards_Title"),
+                      strDescription: Object(_.g)(
+                        "#Settings_DeckRewards_ClaimError_AlreadyRedeemed"
+                      ),
+                    });
+                    break;
                   default:
                     r = a.createElement(be.g, {
                       strTitle: Object(_.g)("#Settings_DeckRewards_Title"),
@@ -9513,7 +9537,7 @@
           i = o ? Po(o) : "";
         if (!e) return null;
         const c = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          s = parseInt(1654293219),
+          s = parseInt(1654719903),
           m = s && Wo(s, t, i),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           g = Object(go.a)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -10624,7 +10648,7 @@
                 nItemMarginX: j,
                 autoFocus: i,
                 scrollToAlignment: "center",
-                scrollDuration: 60,
+                scrollDuration: 120,
                 overscan: c,
               })
             )
@@ -14510,9 +14534,9 @@
             Object({
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Jun 3 2022 : 14:53:39",
-              BUILD_TIME_UTC: "Jun 3 2022 : 21:53:39",
-              BUILD_RTIME_UTC: 1654293219,
+              BUILD_TIME_LOCAL: "Jun 8 2022 : 13:25:03",
+              BUILD_TIME_UTC: "Jun 8 2022 : 20:25:03",
+              BUILD_RTIME_UTC: 1654719903,
             }).MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {

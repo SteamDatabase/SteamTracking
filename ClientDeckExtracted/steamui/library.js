@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7296970";
+var CLSTAMP = "7307865";
 !(function (e) {
   function t(t) {
     for (
@@ -361,9 +361,9 @@ var CLSTAMP = "7296970";
             ? !Object({
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 3 2022 : 14:53:39",
-                BUILD_TIME_UTC: "Jun 3 2022 : 21:53:39",
-                BUILD_RTIME_UTC: 1654293219,
+                BUILD_TIME_LOCAL: "Jun 8 2022 : 13:25:03",
+                BUILD_TIME_UTC: "Jun 8 2022 : 20:25:03",
+                BUILD_RTIME_UTC: 1654719903,
               }).MOBILE_BUILD && document.getElementById(t)
             : t),
         n)
@@ -10974,8 +10974,9 @@ var CLSTAMP = "7296970";
       }, [e, t]);
     }
     function w(e, t, r = 1e3) {
-      const i = n.useRef(t),
-        [a, s] = n.useState(e),
+      const i = n.useRef(t);
+      i.current = t;
+      const [a, s] = n.useState(e),
         [o, l] = n.useState(!1),
         u = n.useCallback(() => {
           s(e), l(!1);
