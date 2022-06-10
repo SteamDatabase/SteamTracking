@@ -91,6 +91,7 @@ ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CHAT_BASE_URL}public/javascript/webui/noisegate-audio-worklet.js?v=4
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
+${COMMUNITY_BASE_URL}${_ ? "minigame/ajaxgetgameitemdefsforeditor" : "minigame/ajaxgetgameitemdefs"}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
 ${COMMUNITY_BASE_URL}${}/
@@ -615,6 +616,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_movie_mp4}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_movie_webm}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${}
+${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${_ ? _ : _}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${hero_carousel_image}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}

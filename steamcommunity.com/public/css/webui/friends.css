@@ -24755,6 +24755,10 @@ a.storywidget_BadgeFooter_3anc5:hover {
   margin-left: auto;
   margin-right: auto;
 }
+.salerewardshelfdisplay_RewardContainer_1YtYz {
+  display: flex;
+  flex-direction: row;
+}
 :root {
   --basicui-header-height: 0px;
 }
