@@ -1303,6 +1303,7 @@ function UpdateRelatedMovieSelects()
 		var select = $J( selects[i] );
 		var origItemID = select.data( 'origitemid' );
 		var origItemName = select.data( 'origitemname' );
+		var trailerID = select.data( 'trailerid' );
 
 		var selected = select.val();
 		select.empty();
@@ -1321,6 +1322,9 @@ function UpdateRelatedMovieSelects()
 
 		$J.each( g_rgRelatedMovies, function( key, value )
 		{
+			if ( key == trailerID )
+				return;
+
 			var newOption = $J( '<option value="' + key +'">' + value + '</option>' );
 			if ( key == selected )
 				newOption.prop('selected', true);
