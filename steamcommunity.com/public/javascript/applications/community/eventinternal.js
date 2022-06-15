@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [22],
+  [21],
   {
     "+chf": function (e, t, a) {
       e.exports = { SearchResults: "search_curator_SearchResults_1roMu" };
@@ -218,7 +218,7 @@
               ")",
               u.a.createElement("span", null, " "),
               u.a.createElement(
-                h.f,
+                h.e,
                 { onClick: () => r(!o) },
                 o ? u.a.createElement(_.M, null) : u.a.createElement(_.P, null)
               )
@@ -226,7 +226,7 @@
             u.a.createElement("hr", null),
             Boolean(o)
               ? u.a.createElement(
-                  h.f,
+                  h.e,
                   { onClick: () => r(!1) },
                   Object(S.f)("#Sale_ShowContents")
                 )
@@ -297,7 +297,7 @@
               ),
               Boolean(!t.gid_clan_event || (t.hidden && !t.published)) &&
                 u.a.createElement(
-                  h.f,
+                  h.e,
                   {
                     onClick: (e) =>
                       Object(v.d)(

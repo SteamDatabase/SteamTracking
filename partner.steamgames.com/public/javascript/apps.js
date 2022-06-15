@@ -3438,7 +3438,7 @@ function ShowBanAppDialog( appid, callbackFunc )
 	ban_label.htmlFor = "retireapp_mark_banned";
 	ban_label.textContent = 'Mark as banned internally - ignored in game count, hidden for non-owners in community profile.';
 
-	text_area.before( $J( "<div/>", { html: "This will ban the appID from Steam. This includes the following actions:<br><br><ul><li>Hide the store page<li>Hide all store packages that the appID is in<li>Diable key requests<li>Disable in-game transactions<li>Set free on-demand packages to not available<li>Remove the appID from the trading card coupon program<li>Mark any trading cards or Inventory Service items as unmarketable<\/ul><br>Please leave a note below on why this app is being banned, which will be saved in the internal notes field.", style: "font-size: 16px; padding-bottom: 10px" } ),
+	text_area.before( $J( "<div/>", { html: "This will ban the appID from Steam. This includes the following actions:<br><br><ul><li>Hide the store page<li>Hide all store packages that the appID is in<li>Disable key requests<li>Disable in-game transactions<li>Set free on-demand packages to not available<li>Remove the appID from the trading card coupon program<li>Mark any trading cards or Inventory Service items as unmarketable<\/ul><br>Please leave a note below on why this app is being banned, which will be saved in the internal notes field.", style: "font-size: 16px; padding-bottom: 10px" } ),
 		ban_checkbox,
 		ban_label);
 	text_area.css({ height: '200px' });
@@ -3495,7 +3495,17 @@ function CreatePHPDateFromObject( d )
 	return dateData;
 }
 
+function VerifyReleasePrepurchase( appid, data )
+{
+	VerifyReleaseCommon( appid, data, ReleaseGamePrepurchase );
+}
+
 function VerifyReleaseGame( appid, data )
+{
+	VerifyReleaseCommon( appid, data, ReleaseGame );
+}
+
+function VerifyReleaseCommon( appid, data, fnRelease )
 {
 	var strAcceptString = "Release my app";
 	var dialog = ShowPromptDialog( "Confirm App Release", "If you are ready to release your app and make it available to customers immediately, please type the phrase \"%1$s\" into the box below.".replace('%1$s', strAcceptString), "Release Now", null );
@@ -3516,7 +3526,7 @@ function VerifyReleaseGame( appid, data )
 
 	dialog.done( function( )
 	{
-		ReleaseGame(appid, data);
+		fnRelease( appid, data );
 	} );
 
 	dialog.fail( function() {
@@ -3524,14 +3534,23 @@ function VerifyReleaseGame( appid, data )
 		$J("#publish_button").show();
 		$J('#publish_status').hide();
 	})
-
 }
 
-function ReleaseGame(appid, data)
+function ReleaseGamePrepurchase( appid, data )
+{
+	ReleaseGameCommon( 'https://partner.steamgames.com/apps/releaseappprepurchase/' + appid, data );
+}
+
+function ReleaseGame( appid, data )
+{
+	ReleaseGameCommon( 'https://partner.steamgames.com/apps/releaseapp/' + appid, data );
+}
+
+function ReleaseGameCommon( url, data )
 {
 	jQuery.ajax({
 		dataType: "json",
-		url: 'https://partner.steamgames.com/apps/releaseapp/' + appid,
+		url: url,
 		type: 'POST',
 		data: data,
 		success: function(data)
@@ -3557,7 +3576,6 @@ function ReleaseGame(appid, data)
 			$J('#publish_status_log').show();
 			$J('#publish_status').hide();
 			$J('#publish_button').show();
-
 		}
 	});
 }

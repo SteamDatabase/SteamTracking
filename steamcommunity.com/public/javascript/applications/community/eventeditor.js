@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [21],
+  [20],
   {
     "0XOM": function (e, t, a) {
       e.exports = {
@@ -83,7 +83,7 @@
               ? i.createElement(
                   _.a,
                   null,
-                  i.createElement(h.e, {
+                  i.createElement(h.b, {
                     eventModel: e,
                     bIsPreview: !0,
                     language: t,
@@ -764,7 +764,7 @@
             "div",
             { className: K.CloneLangListCtn },
             t.map((e) =>
-              d.createElement(U.g, {
+              d.createElement(U.f, {
                 key: e,
                 className: K.CloneCheckBox,
                 onChange: (t) => {
@@ -777,12 +777,12 @@
             )
           ),
           d.createElement(
-            U.f,
+            U.e,
             { onClick: () => o(new Set()) },
             Object(f.f)("#EventEditor_Clone_SelectAll")
           ),
           d.createElement(
-            U.f,
+            U.e,
             { onClick: () => o(new Set(t)) },
             Object(f.f)("#EventEditor_Clone_DeSelectAll")
           )
@@ -948,7 +948,7 @@
             d.createElement(
               "div",
               { className: "_DialogInputContainer _DialogLayout" },
-              d.createElement(U.g, {
+              d.createElement(U.f, {
                 label: Object(f.f)("#EventDashboard_Stats_Oldest"),
                 onChange: i,
                 checked: n,
@@ -977,7 +977,7 @@
             d.createElement(
               "div",
               { className: "_DialogInputContainer _DialogLayout" },
-              d.createElement(U.g, {
+              d.createElement(U.f, {
                 label: Object(f.f)("#EventDashboard_Stats_Newest"),
                 onChange: o,
                 checked: l,
@@ -1022,7 +1022,7 @@
             (this.m_clanSteamID = new v.a(M.b.CLANSTEAMID)),
             (this.k_nMaxPerDirection = 10),
             (this.m_IntervalTimer = void 0),
-            M.b.CLANACCOUNTID == b.F && (this.k_nMaxPerDirection = 2);
+            M.b.CLANACCOUNTID == b.H && (this.k_nMaxPerDirection = 2);
         }
         EnsureEventsAreLoaded() {
           i.c
@@ -1227,7 +1227,7 @@
                       S.a.FlexRowContainer
                     ),
                   },
-                  d.createElement(U.g, {
+                  d.createElement(U.f, {
                     label: "Show Event Metadata Size",
                     tooltip:
                       "Surfaces the size of the biggest sections in the event's metadata",
@@ -1235,7 +1235,7 @@
                     checked: this.state.bShowEventMetaDataSizes,
                   }),
                   d.createElement(
-                    U.f,
+                    U.e,
                     {
                       onClick: (e) => {
                         Object(D.d)(d.createElement(ie, null), Object(q.o)(e));
@@ -1410,7 +1410,7 @@
                   Object(f.f)("#EventDisplay_CreateNewEvent")
                 ),
                 d.createElement(
-                  U.f,
+                  U.e,
                   {
                     onClick: (e) =>
                       Object(D.d)(

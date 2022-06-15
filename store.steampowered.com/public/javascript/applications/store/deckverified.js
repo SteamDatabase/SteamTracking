@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [22],
+  [27],
   {
     TFpc: function (e, t, i) {
       "use strict";
@@ -184,13 +184,7 @@
       }
       function b(e, t, i) {
         return Object(o.a)(this, void 0, void 0, function* () {
-          return v(
-            e,
-            t,
-            Object.assign(Object.assign({}, i), {
-              bHideMainWindowForPopouts: !0,
-            })
-          );
+          return v(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, i));
         });
       }
       function g(e, t, i, o, n, a, l) {

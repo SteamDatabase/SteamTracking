@@ -365,7 +365,7 @@
                   value: a.GetPassword(),
                   onChange: this.OnChangePassword,
                 }),
-                r.a.createElement(o.g, {
+                r.a.createElement(o.f, {
                   className: g.a.RememberMeCheck,
                   label: Object(p.g)("#Login_RememberMe"),
                   disabled: !1,
@@ -517,7 +517,7 @@
               { className: g.a.SigningInAccountName },
               t.GetUserName()
             ),
-            r.a.createElement(o.e, null, n),
+            r.a.createElement(o.d, null, n),
             r.a.createElement(
               "div",
               { className: g.a.AuthenticatorInputcontainer },

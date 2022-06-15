@@ -547,7 +547,7 @@ function BLanguageInFileName( key, filename )
 
 	// Make somewhat restrictive to try and skip false positives, like partial language matches in other words
 	var iLangInName = filename.toLowerCase().indexOf( key.toLowerCase() );
-	if ( iLangInName < 1 )
+	if ( iLangInName == -1 )
 		return false;
 
 	// check char after is whitespace or uppercase
@@ -557,6 +557,11 @@ function BLanguageInFileName( key, filename )
 		if ( charAfter != charAfter.toUpperCase() && jQuery.inArray( charAfter, g_rgWhiteSpace ) == -1 )
 			return false;
 	}
+
+	// For languages at the start of the file name, if we passed the "next character is punctuation or upper case"
+	// check, we're done. This handles cases where the file is just "german.jpg"
+	if ( iLangInName == 0 )
+		return true;
 
 	// check first char before is uppercase. ex: MyImageGerman.png
 	if ( filename.charAt( iLangInName ) == filename.charAt( iLangInName ).toUpperCase() )

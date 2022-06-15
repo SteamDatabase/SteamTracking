@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [19],
+  [18],
   {
     "45aE": function (e, t, a) {
       e.exports = {
@@ -8851,7 +8851,7 @@
                 Object(z.f)("#FAQCrowdin_DraftTimestampHeader")
               )
             ),
-            n.createElement(T.g, {
+            n.createElement(T.f, {
               className: Q.CheckAll,
               label: Object(z.f)("#FAQCrowdin_SelectAllCheckboxes"),
               onChange: (e) => {
@@ -8901,7 +8901,7 @@
               ),
               n.createElement("div", { className: Q.Timestamp }, c)
             );
-          return n.createElement(T.g, {
+          return n.createElement(T.f, {
             className: Q.LanguageCheckbox,
             label: u,
             checked: i,
@@ -8944,10 +8944,10 @@
             Object(z.f)("#FAQDashboard_CrowdinToolTitle")
           ),
           n.createElement(
-            T.d,
+            T.c,
             null,
             n.createElement(
-              T.e,
+              T.d,
               null,
               Object(z.f)(
                 "#FAQDashboard_CrowdinToolInstructionsWithCount",
@@ -8960,10 +8960,10 @@
               )
             ),
             n.createElement(
-              T.e,
+              T.d,
               null,
               n.createElement(
-                T.f,
+                T.e,
                 {
                   onClick: () =>
                     Object(i.a)(this, void 0, void 0, function* () {
@@ -9211,7 +9211,7 @@
               "div",
               { className: W.a.DashboardHeaderButtonCtn },
               r.a.createElement(
-                T.f,
+                T.e,
                 { onClick: a },
                 Object(z.f)("#FAQDashboard_CrowdinToolButton")
               ),
@@ -9241,10 +9241,10 @@
               Object(z.f)("#FAQDashboard_CreateFAQButton")
             ),
             r.a.createElement(
-              T.d,
+              T.c,
               null,
               r.a.createElement(
-                T.e,
+                T.d,
                 null,
                 Object(z.f)("#FAQDashboard_CreateFAQInstructions"),
                 r.a.createElement("input", {
@@ -9528,16 +9528,16 @@
                 P.i,
                 { onEscKeypress: a },
                 r.a.createElement(
-                  T.h,
+                  T.g,
                   null,
                   r.a.createElement(
                     T.z,
                     null,
                     Object(z.f)("#FAQEditor_DeleteAction")
                   ),
-                  r.a.createElement(T.d, null, r.a.createElement(T.e, null, d)),
+                  r.a.createElement(T.c, null, r.a.createElement(T.d, null, d)),
                   r.a.createElement(
-                    T.r,
+                    T.q,
                     null,
                     r.a.createElement(T.E, {
                       onCancel: a,
@@ -9693,16 +9693,16 @@
               P.i,
               { onEscKeypress: o },
               r.a.createElement(
-                T.h,
+                T.g,
                 { className: Q.LanguageListDialog },
                 r.a.createElement(
                   T.z,
                   null,
                   Object(z.f)("#FAQPublish_Publish")
                 ),
-                r.a.createElement(T.d, null, r.a.createElement(T.e, null, y)),
+                r.a.createElement(T.c, null, r.a.createElement(T.d, null, y)),
                 r.a.createElement(
-                  T.r,
+                  T.q,
                   null,
                   r.a.createElement(T.E, {
                     onCancel: o,
@@ -9771,12 +9771,12 @@
               null,
               Object(z.f)("#FAQEditor_ChangeVisible_Desc")
             ),
-            r.a.createElement(T.g, {
+            r.a.createElement(T.f, {
               label: Object(z.f)("#FAQEditor_VisibleInGlobal"),
               checked: u,
               onChange: (e) => m(e),
             }),
-            r.a.createElement(T.g, {
+            r.a.createElement(T.f, {
               label: Object(z.f)("#FAQEditor_VisibleInChina"),
               checked: f,
               tooltip: Object(z.f)("#FAQEditor_VisibleInChina_ttip"),
@@ -9813,16 +9813,16 @@
                 P.i,
                 { onEscKeypress: a },
                 r.a.createElement(
-                  T.h,
+                  T.g,
                   null,
                   r.a.createElement(
                     T.z,
                     null,
                     Object(z.f)("#FAQEditor_ChangeVisible")
                   ),
-                  r.a.createElement(T.d, null, r.a.createElement(T.e, null, y)),
+                  r.a.createElement(T.c, null, r.a.createElement(T.d, null, y)),
                   r.a.createElement(
-                    T.r,
+                    T.q,
                     null,
                     r.a.createElement(T.E, {
                       onCancel: a,
@@ -10151,7 +10151,7 @@
                     )
               ),
               r.a.createElement(
-                T.d,
+                T.c,
                 null,
                 o
                   ? r.a.createElement(M.a, {
@@ -10179,7 +10179,7 @@
                     )
               ),
               r.a.createElement(
-                T.r,
+                T.q,
                 null,
                 !o &&
                   r.a.createElement(
@@ -10255,10 +10255,7 @@
                   fnLangHasData: t.BHasSomeTextForLanguage,
                   fnIsLangSupported: (e) => !0,
                   fnLastUpdateRTime: t.GetLastTimeLanguageUpdated,
-                  realms: [
-                    He.ESteamRealm.k_ESteamRealmGlobal,
-                    He.ESteamRealm.k_ESteamRealmChina,
-                  ],
+                  realms: [He.g.k_ESteamRealmGlobal, He.g.k_ESteamRealmChina],
                 }),
                 !a &&
                   r.a.createElement(
@@ -10289,7 +10286,7 @@
               Object(z.f)("#FAQEditor_ChangeInternalName")
             ),
             r.a.createElement(
-              T.d,
+              T.c,
               null,
               r.a.createElement(
                 "div",
@@ -10325,7 +10322,7 @@
                 )
             ),
             r.a.createElement(
-              T.r,
+              T.q,
               null,
               r.a.createElement(T.E, {
                 bOKDisabled: 0 == o.trim().length || n,
@@ -10355,9 +10352,9 @@
             n = s && i.per_language_info.find((e) => e.language == a),
             l =
               s &&
-              ((f.c.EREALM == He.ESteamRealm.k_ESteamRealmGlobal &&
+              ((f.c.EREALM == He.g.k_ESteamRealmGlobal &&
                 i.visible_in_global_realm) ||
-                (f.c.EREALM == He.ESteamRealm.k_ESteamRealmChina &&
+                (f.c.EREALM == He.g.k_ESteamRealmChina &&
                   i.visible_in_china_realm)) &&
               !!(null == n ? void 0 : n.last_publish_timestamp);
           return r.a.createElement(
@@ -10720,7 +10717,7 @@
                 )
               )
             ),
-            !Object(He.BIsChinaRealm)(f.c.EREALM) &&
+            !Object(He.b)(f.c.EREALM) &&
               r.a.createElement(
                 "div",
                 { className: Object(b.a)(ut.Section, ut.CommunityHelp) },

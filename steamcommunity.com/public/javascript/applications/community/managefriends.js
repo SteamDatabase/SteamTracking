@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [116],
+  [115],
   {
     "8H1D": function (e, t, n) {
       "use strict";
@@ -243,7 +243,7 @@
                 )
               ),
               i.a.createElement(
-                l.f,
+                l.e,
                 {
                   className: m.a.GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,

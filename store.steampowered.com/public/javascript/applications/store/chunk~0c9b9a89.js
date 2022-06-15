@@ -498,28 +498,28 @@
         n.d(t, "J", function () {
           return S;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "p", function () {
           return E;
         }),
         n.d(t, "C", function () {
           return w;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "d", function () {
           return I;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "c", function () {
           return R;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "g", function () {
           return N;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "h", function () {
           return F;
         }),
         n.d(t, "F", function () {
           return B;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "e", function () {
           return P;
         }),
         n.d(t, "I", function () {
@@ -534,7 +534,7 @@
         n.d(t, "b", function () {
           return G;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "f", function () {
           return W;
         }),
         n.d(t, "G", function () {
@@ -558,37 +558,37 @@
         n.d(t, "A", function () {
           return pe;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "m", function () {
           return fe;
         }),
-        n.d(t, "m", function () {
+        n.d(t, "l", function () {
           return De;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "n", function () {
           return Se;
         }),
-        n.d(t, "k", function () {
+        n.d(t, "j", function () {
           return qe;
         }),
         n.d(t, "a", function () {
           return Qe;
         }),
-        n.d(t, "p", function () {
+        n.d(t, "o", function () {
           return et;
         }),
-        n.d(t, "j", function () {
+        n.d(t, "i", function () {
           return it;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "k", function () {
           return m;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "s", function () {
           return lt;
         }),
         n.d(t, "t", function () {
           return ut;
         }),
-        n.d(t, "s", function () {
+        n.d(t, "r", function () {
           return dt;
         }),
         n.d(t, "v", function () {
@@ -600,7 +600,7 @@
         n.d(t, "x", function () {
           return Nt;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "q", function () {
           return Lt;
         }),
         n.d(t, "u", function () {
@@ -1256,6 +1256,10 @@
         get value() {
           return this.m_elInput && this.m_elInput.value;
         }
+        Focus() {
+          var e;
+          null === (e = this.m_elInput) || void 0 === e || e.focus();
+        }
         static validateUrl(e) {
           return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
             e
@@ -1519,7 +1523,7 @@
         render() {
           const e = this.props,
             { label: t, description: n, children: s, className: l } = e,
-            c = Object(i.c)(e, [
+            u = Object(i.c)(e, [
               "label",
               "description",
               "children",
@@ -1538,9 +1542,11 @@
               o.createElement(
                 "div",
                 {
-                  className:
-                    "_DialogInputContainer" +
-                    (this.m_bFocused ? " Active" : ""),
+                  className: Object(c.a)(
+                    "_DialogInputContainer",
+                    "DialogTextInputBase",
+                    this.m_bFocused && "Active"
+                  ),
                   onClick: this.OnBackgroundClick,
                 },
                 o.createElement(
@@ -1558,7 +1564,7 @@
                   ),
                   o.createElement(
                     r.f,
-                    Object.assign({ type: "text" }, c, {
+                    Object.assign({ type: "text" }, u, {
                       className:
                         "DialogListBuilderInput_Input DialogInputPlaceholder",
                       ref: this.OnInputRef,
@@ -11485,7 +11491,7 @@
           i.createElement(
             m,
             { onEscKeypress: t, className: s },
-            i.createElement(o.h, { className: n }, a)
+            i.createElement(o.g, { className: n }, a)
           )
         );
       function b(e) {
@@ -11562,7 +11568,7 @@
               bHideCloseIcon: this.props.bHideCloseIcon,
             },
             i.createElement(
-              o.i,
+              o.h,
               {
                 classNameContent: Object(y.a)(
                   "GenericConfirmDialog",
@@ -11643,10 +11649,10 @@
                   " "
                 ),
                 i.createElement(
-                  o.d,
+                  o.c,
                   null,
-                  i.createElement(o.e, null, n, u),
-                  i.createElement(o.q, null, m)
+                  i.createElement(o.d, null, n, u),
+                  i.createElement(o.p, null, m)
                 )
               )
             )

@@ -594,7 +594,6 @@ ${IMG_URL}valve_logo.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
-${LOGIN_BASE_URL}jwt/ajaxrefresh
 ${LOGIN_BASE_URL}jwt/finalizelogin
 ${MEDIA_CDN_COMMUNITY_URL}/images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}
@@ -759,9 +758,7 @@ ${STORE_BASE_URL}${m_strStoreURLPath}
 ${STORE_BASE_URL}${newshubUrl}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
-${STORE_BASE_URL}${}/${id}${_ ? _ : ""}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
-${STORE_BASE_URL}${}/${}${_ ? _ : ""}
 ${STORE_BASE_URL}${}/${}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
@@ -868,6 +865,7 @@ ${STORE_BASE_URL}events_admin/ajaxupdatepartneremailtarget
 ${STORE_BASE_URL}events_admin/ajaxupdatetags
 ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore
+${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
 ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
@@ -1719,6 +1717,7 @@ https://partner.steamgames.com/apps/landing/${appID}
 https://partner.steamgames.com/apps/landing/${appid}
 https://partner.steamgames.com/apps/musicalbumimages/${itemID}
 https://partner.steamgames.com/apps/releaseapp/${appid}
+https://partner.steamgames.com/apps/releaseappprepurchase/${appid}
 https://partner.steamgames.com/apps/removeworkshopcreatorapp/${g_ConsumerAppID}
 https://partner.steamgames.com/apps/retireapp/${nAppID}
 https://partner.steamgames.com/appsharing/ajaxcreateinvite/${nPublisherID}

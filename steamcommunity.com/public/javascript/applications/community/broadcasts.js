@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [17],
+  [16],
   {
     "8zUZ": function (e, t, a) {
       "use strict";
@@ -230,8 +230,8 @@
         O = a.n(f),
         B = (a("kdZy"), a("MUT6"), a("nWbB")),
         C = a("TQGK"),
-        h = a("6oCP"),
-        g = a("Mgs7"),
+        g = a("6oCP"),
+        h = a("Mgs7"),
         I = a("IjL/"),
         j = a("SdTr"),
         y = a("GiuM"),
@@ -266,7 +266,7 @@
                   "div",
                   { className: L.Controls },
                   r.a.createElement(
-                    g.f,
+                    h.e,
                     {
                       onClick: () =>
                         Object(c.a)(void 0, void 0, void 0, function* () {
@@ -462,7 +462,7 @@
                 r.a.createElement(
                   "div",
                   { className: L.AppSummaryWidgetCtn },
-                  r.a.createElement(N.j, { id: t.app_id, type: "game" })
+                  r.a.createElement(N.e, { id: t.app_id, type: "game" })
                 )
             ),
             r.a.createElement(
@@ -482,7 +482,7 @@
               r.a.createElement("div", null, "DASH MPEG Url: ", c.m_data.url),
               r.a.createElement("div", null, "HLS Url: ", c.m_data.hls_url)
             ),
-            r.a.createElement(g.f, { onClick: () => o(!a) }, "Toggle Raw Data"),
+            r.a.createElement(h.e, { onClick: () => o(!a) }, "Toggle Raw Data"),
             Boolean(a) &&
               r.a.createElement(
                 r.a.Fragment,
@@ -502,11 +502,11 @@
         };
       var F = a("m0l2"),
         x = a("jUCX"),
-        H = a("Gpul"),
-        K = a("Qcoi"),
-        q = a("h5cq");
+        q = a("Gpul"),
+        H = a("Qcoi"),
+        K = a("h5cq");
       function Y(e) {
-        const t = K.a.GetProfileByAccountID(e.GetAccountID());
+        const t = H.a.GetProfileByAccountID(e.GetAccountID());
         if (t) {
           let a = new x.b(e);
           return (
@@ -521,30 +521,30 @@
       const z = (e) => {
         e.steamid.GetAccountID();
         const [t, a] = Object(n.useState)(Y(e.steamid)),
-          [o, l] = Object(n.useState)(K.a.GetProfileURLBySteamID(e.steamid)),
-          [s, i] = Object(n.useState)(K.a.GetPersonaNameBySteamID(e.steamid));
+          [o, l] = Object(n.useState)(H.a.GetProfileURLBySteamID(e.steamid)),
+          [s, i] = Object(n.useState)(H.a.GetPersonaNameBySteamID(e.steamid));
         return (
           Object(n.useEffect)(() => {
             if (!t) {
               (() =>
                 Object(c.a)(void 0, void 0, void 0, function* () {
-                  yield K.a.LoadProfiles([e.steamid.ConvertTo64BitString()]),
+                  yield H.a.LoadProfiles([e.steamid.ConvertTo64BitString()]),
                     a(Y(e.steamid)),
-                    l(K.a.GetProfileURLBySteamID(e.steamid)),
-                    i(K.a.GetPersonaNameBySteamID(e.steamid));
+                    l(H.a.GetProfileURLBySteamID(e.steamid)),
+                    i(H.a.GetPersonaNameBySteamID(e.steamid));
                 }))();
             }
           }, [e.steamid, t]),
           r.a.createElement(
             "div",
-            { className: q.AvatarCtn },
+            { className: K.AvatarCtn },
             r.a.createElement(
               "a",
               {
                 href: o,
                 "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
               },
-              r.a.createElement(H.b, {
+              r.a.createElement(q.b, {
                 persona: t,
                 size: e.size,
                 statusPosition: "bottom",
@@ -552,7 +552,7 @@
             ),
             r.a.createElement(
               "div",
-              { className: q.NameAndProps },
+              { className: K.NameAndProps },
               Boolean(e.bShowName) &&
                 r.a.createElement(
                   "a",
@@ -665,7 +665,7 @@
               _.i.steamid != e.broadcasterSteamID.ConvertTo64BitString()
             ) &&
               r.a.createElement(
-                g.f,
+                h.e,
                 {
                   "data-tooltip-text": Object(U.f)(
                     "#Broadcast_User_Report_ttip"
@@ -694,7 +694,7 @@
                 r.a.createElement(Z.B, null)
               ),
             r.a.createElement(
-              g.f,
+              h.e,
               {
                 "data-tooltip-text": Object(U.f)("#Broadcast_User_FAQ_ttip"),
                 onClick: (e) =>
@@ -753,17 +753,17 @@
             },
             r.a.createElement("div", null, "(VO) Support Tools"),
             r.a.createElement(
-              g.f,
+              h.e,
               { onClick: (e) => t(e, "frontpage") },
               "Remove from Front Page"
             ),
             r.a.createElement(
-              g.f,
+              h.e,
               { onClick: (e) => t(e, "ban") },
               "Ban from Broadcasting"
             ),
             r.a.createElement(
-              g.f,
+              h.e,
               {
                 onClick: (t) => {
                   Object(T.d)(
@@ -775,7 +775,7 @@
               "Make Unbannable"
             ),
             r.a.createElement(
-              g.f,
+              h.e,
               { onClick: (e) => Object(J.d)(e, a) },
               "Go to Support Page"
             )
@@ -802,18 +802,18 @@
               A.i,
               { onEscKeypress: E },
               r.a.createElement(
-                g.h,
+                h.g,
                 null,
                 r.a.createElement(
-                  g.z,
+                  h.z,
                   null,
                   "Remove Broadcast From Front Page"
                 ),
                 r.a.createElement(
-                  g.d,
+                  h.c,
                   null,
                   r.a.createElement(
-                    g.e,
+                    h.d,
                     null,
                     r.a.createElement(
                       "p",
@@ -825,7 +825,7 @@
                     r.a.createElement(
                       "div",
                       null,
-                      r.a.createElement(g.n, {
+                      r.a.createElement(h.m, {
                         rgOptions: [
                           { label: "1 Day", data: 1 },
                           { label: "1 Week", data: 7 },
@@ -849,24 +849,24 @@
                   )
                 ),
                 r.a.createElement(
-                  g.r,
+                  h.q,
                   null,
                   m
                     ? r.a.createElement(
-                        g.G,
+                        h.G,
                         { onClick: E },
                         Object(U.f)("#Button_Dismiss")
                       )
                     : r.a.createElement(
-                        g.O,
+                        h.O,
                         null,
                         r.a.createElement(
-                          g.f,
+                          h.e,
                           { onClick: E },
                           Object(U.f)("#Button_Cancel")
                         ),
                         r.a.createElement(
-                          g.G,
+                          h.G,
                           {
                             onClick: () =>
                               Object(c.a)(void 0, void 0, void 0, function* () {
@@ -911,14 +911,14 @@
               A.i,
               { onEscKeypress: u },
               r.a.createElement(
-                g.h,
+                h.g,
                 null,
-                r.a.createElement(g.z, null, "Make Broadcast Unbannable"),
+                r.a.createElement(h.z, null, "Make Broadcast Unbannable"),
                 r.a.createElement(
-                  g.d,
+                  h.c,
                   null,
                   r.a.createElement(
-                    g.e,
+                    h.d,
                     null,
                     r.a.createElement(
                       "p",
@@ -941,24 +941,24 @@
                   )
                 ),
                 r.a.createElement(
-                  g.r,
+                  h.q,
                   null,
                   o
                     ? r.a.createElement(
-                        g.G,
+                        h.G,
                         { onClick: u },
                         Object(U.f)("#Button_Dismiss")
                       )
                     : r.a.createElement(
-                        g.O,
+                        h.O,
                         null,
                         r.a.createElement(
-                          g.f,
+                          h.e,
                           { onClick: u },
                           Object(U.f)("#Button_Cancel")
                         ),
                         r.a.createElement(
-                          g.G,
+                          h.G,
                           {
                             onClick: () =>
                               Object(c.a)(void 0, void 0, void 0, function* () {
@@ -1113,7 +1113,7 @@
                   r.a.createElement(
                     "div",
                     { className: F.GameInfo },
-                    r.a.createElement(N.j, {
+                    r.a.createElement(N.e, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
                     })
@@ -1126,7 +1126,7 @@
                   r.a.createElement(j.a, {
                     clanAccountID: o.clanAccountID,
                     trackingLocation: 6,
-                    partnerEventStore: h.b,
+                    partnerEventStore: g.b,
                     bViewAllShowInfiniteScroll: !0,
                   })
                 )
@@ -1168,21 +1168,21 @@
               r.a.createElement(
                 "div",
                 { className: F.Options },
-                r.a.createElement(g.A, {
+                r.a.createElement(h.A, {
                   type: "text",
                   label: Object(U.f)("#Broadcast_title_title"),
                   onChange: (e) => l(e.currentTarget.value || ""),
                   placeholder: Object(U.f)("#Broadcast_title_placeholder"),
                   value: o,
                 }),
-                r.a.createElement(g.A, {
+                r.a.createElement(h.A, {
                   type: "text",
                   label: Object(U.f)("#Broadcast_Control_matchid"),
                   onChange: (e) => d(e.currentTarget.value || ""),
                   value: s,
                 }),
                 r.a.createElement(
-                  g.f,
+                  h.e,
                   {
                     onClick: () =>
                       Object(c.a)(void 0, void 0, void 0, function* () {
@@ -1210,7 +1210,7 @@
                 "div",
                 { className: F.StopCtn },
                 r.a.createElement(
-                  g.f,
+                  h.e,
                   {
                     onClick: (e) => {
                       Object(T.d)(

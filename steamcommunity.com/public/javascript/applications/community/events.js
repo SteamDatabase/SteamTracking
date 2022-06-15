@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [23],
+  [22],
   {
     CY4d: function (e, t, n) {
       "use strict";
@@ -50,7 +50,7 @@
               ? o.createElement(
                   E.a,
                   null,
-                  o.createElement(b.e, {
+                  o.createElement(b.b, {
                     eventModel: e,
                     bIsPreview: !0,
                     language: t,

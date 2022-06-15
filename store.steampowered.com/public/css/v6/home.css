@@ -4068,6 +4068,16 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	justify-content: center;
 }
 
+/* Remove margin when mobile takeunders are presented */
+@media (max-width: 500px) {
+
+    html.responsive .home_page_content.takeunder {
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+
+}
+
 .home_page_content.takeunder a {
     box-shadow: 0 0 10px rgba(0,0,0,1);
 }

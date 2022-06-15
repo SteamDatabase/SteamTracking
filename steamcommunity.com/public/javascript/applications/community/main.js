@@ -1,12 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7314802";
+var CLSTAMP = "7322853";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [115],
+  [114],
   {
-    "+8BF": function (e, t, n) {
-      "use strict";
-    },
     "+B6I": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -236,9 +233,6 @@ var CLSTAMP = "7314802";
         GenericGamepadHighlight:
           "gamepadui_svg_library_GenericGamepadHighlight_3-ZZD",
       };
-    },
-    "0u18": function (e, t, n) {
-      "use strict";
     },
     "1XgL": function (e, t, n) {
       "use strict";
@@ -678,7 +672,7 @@ var CLSTAMP = "7314802";
         Object(r.b)([c.b], p.prototype, "ShowToolTip", null),
         Object(r.b)([c.b], p.prototype, "HideToolTip", null);
     },
-    "5h11": function (e, t) {},
+    "5h11": function (e, t, n) {},
     "6+2x": function (e, t, n) {
       e.exports = {
         HoverPosition: "hoverposition_HoverPosition_3vg1v",
@@ -690,71 +684,47 @@ var CLSTAMP = "7314802";
     },
     "65aj": function (e, t, n) {
       "use strict";
-      var r = n("mgoM");
-      n.d(t, "ELanguagePchLanguage", function () {
-        return r.a;
+      n.d(t, "f", function () {
+        return r.b;
       }),
-        n.d(t, "ELanguagePchWebLanguageCode", function () {
-          return r.b;
-        }),
-        n.d(t, "MapKoreanaToKorean", function () {
+        n.d(t, "j", function () {
           return r.c;
         }),
-        n.d(t, "PchLanguageToELanguage", function () {
-          return r.d;
-        });
-      n("+8BF"), n("6SrW");
-      var i = n("ROjt");
-      n.d(t, "BIsChinaRealm", function () {
-        return i.a;
-      }),
-        n.d(t, "ESteamRealm", function () {
-          return i.b;
-        });
-      n("xCK5"), n("W+lf");
-      var o = n("7DPx");
-      n.d(t, "EBrowserType", function () {
-        return o.a;
-      }),
-        n.d(t, "ESystemUISystemKey", function () {
-          return o.b;
-        });
-      var s = n("HB2I");
-      n.d(t, "TextFilterPreferences", function () {
-        return s.a;
-      });
-      n("nEON"), n("PmRV"), n("DMEc"), n("0u18"), n("lIrC"), n("XOiH");
-      var a = n("hYhl");
-      n.d(t, "EWirelessEndpointStrength", function () {
-        return a.a;
-      });
-      n("TrCb");
-      var l = n("USt6");
-      n.o(l, "AppTypeForEStoreAppType") &&
-        n.d(t, "AppTypeForEStoreAppType", function () {
-          return l.AppTypeForEStoreAppType;
+        n.d(t, "e", function () {
+          return r.a;
         }),
-        n.o(l, "BIsSaleItemType") &&
-          n.d(t, "BIsSaleItemType", function () {
-            return l.BIsSaleItemType;
-          });
-      n("FS3O"), n("X0PP");
-      var c = n("WWeX");
-      n.d(t, "AppTypeForEStoreAppType", function () {
-        return c.a;
-      }),
-        n.d(t, "BIsSaleItemType", function () {
-          return c.b;
+        n.d(t, "k", function () {
+          return r.d;
+        }),
+        n.d(t, "g", function () {
+          return s.b;
+        }),
+        n.d(t, "b", function () {
+          return s.a;
+        }),
+        n.d(t, "d", function () {
+          return l;
+        }),
+        n.d(t, "h", function () {
+          return c;
+        }),
+        n.d(t, "l", function () {
+          return d;
+        }),
+        n.d(t, "i", function () {
+          return v;
+        }),
+        n.d(t, "a", function () {
+          return S;
+        }),
+        n.d(t, "c", function () {
+          return y;
         });
-      n("gMiy");
-    },
-    "6NF1": function (e, t) {},
-    "6SrW": function (e, t, n) {
-      "use strict";
-      var r, i;
+      var r = n("mgoM");
+      var i, o;
       !(function (e) {
         (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-      })(r || (r = {})),
+      })(i || (i = {})),
         (function (e) {
           (e[(e.Input = 0)] = "Input"),
             (e[(e.AllOutput = 1)] = "AllOutput"),
@@ -763,8 +733,263 @@ var CLSTAMP = "7314802";
             (e[(e.Sub = 4)] = "Sub"),
             (e[(e.BackLeft = 5)] = "BackLeft"),
             (e[(e.BackRight = 6)] = "BackRight");
-        })(i || (i = {}));
+        })(o || (o = {}));
+      var s = n("ROjt");
+      var a;
+      !(function (e) {
+        (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
+          "k_BluetoothDeviceType_Invalid"),
+          (e[(e.k_BluetoothDeviceType_Unknown = 1)] =
+            "k_BluetoothDeviceType_Unknown"),
+          (e[(e.k_BluetoothDeviceType_Phone = 2)] =
+            "k_BluetoothDeviceType_Phone"),
+          (e[(e.k_BluetoothDeviceType_Computer = 3)] =
+            "k_BluetoothDeviceType_Computer"),
+          (e[(e.k_BluetoothDeviceType_Headset = 4)] =
+            "k_BluetoothDeviceType_Headset"),
+          (e[(e.k_BluetoothDeviceType_Headphones = 5)] =
+            "k_BluetoothDeviceType_Headphones"),
+          (e[(e.k_BluetoothDeviceType_Speakers = 6)] =
+            "k_BluetoothDeviceType_Speakers"),
+          (e[(e.k_BluetoothDeviceType_OtherAudio = 7)] =
+            "k_BluetoothDeviceType_OtherAudio"),
+          (e[(e.k_BluetoothDeviceType_Mouse = 8)] =
+            "k_BluetoothDeviceType_Mouse"),
+          (e[(e.k_BluetoothDeviceType_Joystick = 9)] =
+            "k_BluetoothDeviceType_Joystick"),
+          (e[(e.k_BluetoothDeviceType_Gamepad = 10)] =
+            "k_BluetoothDeviceType_Gamepad"),
+          (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
+            "k_BluetoothDeviceType_Keyboard");
+      })(a || (a = {}));
+      var l, c, u;
+      !(function (e) {
+        (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
+          (e[(e.EBrowserType_OpenVROverlay = 1)] =
+            "EBrowserType_OpenVROverlay"),
+          (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+            "EBrowserType_OpenVROverlay_Dashboard"),
+          (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+          (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
+            "EBrowserType_DirectHWND_Borderless"),
+          (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
+            "EBrowserType_DirectHWND_Hidden"),
+          (e[(e.EBrowserType_ChildHWNDNative = 6)] =
+            "EBrowserType_ChildHWNDNative"),
+          (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
+            "EBrowserType_Transparent_Toplevel"),
+          (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
+            "EBrowserType_OffScreen_SharedTexture"),
+          (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
+            "EBrowserType_OffScreen_GameOverlay"),
+          (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+            "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+          (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
+            "EBrowserType_Offscreen_FriendsUI"),
+          (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+      })(l || (l = {})),
+        (function (e) {
+          (e[(e.SystemKey0 = 0)] = "SystemKey0"),
+            (e[(e.SystemKey1 = 1)] = "SystemKey1");
+        })(c || (c = {})),
+        (function (e) {
+          (e[(e.Hidden = 0)] = "Hidden"),
+            (e[(e.Notification = 1)] = "Notification"),
+            (e[(e.Overlay = 2)] = "Overlay"),
+            (e[(e.Opaque = 3)] = "Opaque"),
+            (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
+        })(u || (u = {}));
+      class d {}
+      var h;
+      !(function (e) {
+        (e[(e.k_EPending = 0)] = "k_EPending"),
+          (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
+          (e[(e.k_ERejected = 2)] = "k_ERejected");
+      })(h || (h = {}));
+      var m = n("hRO2");
+      n("OS8t");
+      m.Message;
+      var p, g, f;
+      !(function (e) {
+        (e[(e.k_EControllerBindingType_None = 0)] =
+          "k_EControllerBindingType_None"),
+          (e[(e.k_EControllerBindingType_Key = 1)] =
+            "k_EControllerBindingType_Key"),
+          (e[(e.k_EControllerBindingType_MouseButton = 2)] =
+            "k_EControllerBindingType_MouseButton"),
+          (e[(e.k_EControllerBindingType_Gamepad = 3)] =
+            "k_EControllerBindingType_Gamepad"),
+          (e[(e.k_EControllerBindingType_Mousewheel = 4)] =
+            "k_EControllerBindingType_Mousewheel"),
+          (e[(e.k_EControllerBindingType_Modeshift = 5)] =
+            "k_EControllerBindingType_Modeshift"),
+          (e[(e.k_EControllerBindingType_GameAction = 6)] =
+            "k_EControllerBindingType_GameAction"),
+          (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
+            "k_EControllerBindingType_ControllerAction");
+      })(p || (p = {}));
+      !(function (e) {
+        (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
+          (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
+          (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
+            "k_ERemoteClientLaunchRequiresUI"),
+          (e[(e.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
+            "k_ERemoteClientLaunchRequiresLaunchOption"),
+          (e[(e.k_ERemoteClientLaunchRequiresEULA = 5)] =
+            "k_ERemoteClientLaunchRequiresEULA"),
+          (e[(e.k_ERemoteClientLaunchTimeout = 6)] =
+            "k_ERemoteClientLaunchTimeout"),
+          (e[(e.k_ERemoteClientLaunchStreamTimeout = 7)] =
+            "k_ERemoteClientLaunchStreamTimeout"),
+          (e[(e.k_ERemoteClientLaunchStreamClientFail = 8)] =
+            "k_ERemoteClientLaunchStreamClientFail"),
+          (e[(e.k_ERemoteClientLaunchOtherGameRunning = 9)] =
+            "k_ERemoteClientLaunchOtherGameRunning"),
+          (e[(e.k_ERemoteClientLaunchDownloadStarted = 10)] =
+            "k_ERemoteClientLaunchDownloadStarted"),
+          (e[(e.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
+            "k_ERemoteClientLaunchDownloadNoSpace"),
+          (e[(e.k_ERemoteClientLaunchDownloadFiltered = 12)] =
+            "k_ERemoteClientLaunchDownloadFiltered"),
+          (e[(e.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
+            "k_ERemoteClientLaunchDownloadRequiresUI"),
+          (e[(e.k_ERemoteClientLaunchAccessDenied = 14)] =
+            "k_ERemoteClientLaunchAccessDenied"),
+          (e[(e.k_ERemoteClientLaunchNetworkError = 15)] =
+            "k_ERemoteClientLaunchNetworkError"),
+          (e[(e.k_ERemoteClientLaunchProgress = 16)] =
+            "k_ERemoteClientLaunchProgress"),
+          (e[(e.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
+            "k_ERemoteClientLaunchParentalUnlockFailed"),
+          (e[(e.k_ERemoteClientLaunchScreenLocked = 18)] =
+            "k_ERemoteClientLaunchScreenLocked"),
+          (e[(e.k_ERemoteClientLaunchUnsupported = 19)] =
+            "k_ERemoteClientLaunchUnsupported"),
+          (e[(e.k_ERemoteClientLaunchDisabledLocal = 20)] =
+            "k_ERemoteClientLaunchDisabledLocal"),
+          (e[(e.k_ERemoteClientLaunchDisabledRemote = 21)] =
+            "k_ERemoteClientLaunchDisabledRemote"),
+          (e[(e.k_ERemoteClientLaunchBroadcasting = 22)] =
+            "k_ERemoteClientLaunchBroadcasting"),
+          (e[(e.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
+          (e[(e.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
+            "k_ERemoteClientLaunchDriversNotInstalled"),
+          (e[(e.k_ERemoteClientLaunchTransportUnavailable = 25)] =
+            "k_ERemoteClientLaunchTransportUnavailable"),
+          (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
+            "k_ERemoteClientLaunchCanceled"),
+          (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
+            "k_ERemoteClientLaunchInvisible"),
+          (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+            "k_ERemoteClientLaunchRestrictedCountry");
+      })(g || (g = {}));
+      !(function (e) {
+        (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
+          "k_EClientUINotificationGroupChatMessage"),
+          (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
+            "k_EClientUINotificationFriendChatMessage"),
+          (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
+            "k_EClientUINotificationFriendPersonaState");
+      })(f || (f = {}));
+      var _, b, v, w, C;
+      !(function (e) {
+        (e[(e.Unknown = 0)] = "Unknown"),
+          (e[(e.Wired = 1)] = "Wired"),
+          (e[(e.Wireless = 2)] = "Wireless"),
+          (e[(e.Virtual = 3)] = "Virtual");
+      })(_ || (_ = {})),
+        (function (e) {
+          (e[(e.NotPresent = 0)] = "NotPresent"),
+            (e[(e.Failed = 1)] = "Failed"),
+            (e[(e.Disconnected = 2)] = "Disconnected"),
+            (e[(e.Disconnecting = 3)] = "Disconnecting"),
+            (e[(e.Connecting = 4)] = "Connecting"),
+            (e[(e.Connected = 5)] = "Connected"),
+            (e[(e.Retrying = 6)] = "Retrying");
+        })(b || (b = {})),
+        (function (e) {
+          (e[(e.None = 0)] = "None"),
+            (e[(e.Weak = 1)] = "Weak"),
+            (e[(e.Ok = 2)] = "Ok"),
+            (e[(e.Good = 3)] = "Good"),
+            (e[(e.Excellent = 4)] = "Excellent");
+        })(v || (v = {})),
+        (function (e) {
+          (e[(e.None = 0)] = "None"),
+            (e[(e.StaticWep = 1)] = "StaticWep"),
+            (e[(e.DynamicWep = 2)] = "DynamicWep"),
+            (e[(e.Wpa = 4)] = "Wpa"),
+            (e[(e.WpaEnterprise = 8)] = "WpaEnterprise"),
+            (e[(e.Wpa2 = 16)] = "Wpa2"),
+            (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
+            (e[(e.Unsupported = 32768)] = "Unsupported");
+        })(w || (w = {})),
+        (function (e) {
+          (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
+            (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
+            (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
+            (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
+              "k_EHTTPProxyMode_Automatic");
+        })(C || (C = {}));
+      n("FVDh"), n("sRB7");
+      function S(e) {
+        switch (e) {
+          case 0:
+            return "game";
+          case 6:
+            return "software";
+          case 1:
+            return "demo";
+          case 4:
+            return "dlc";
+          case 7:
+          case 3:
+            return "video";
+          case 11:
+            return "music";
+          case 12:
+            return "beta";
+          case 2:
+            return "mod";
+        }
+        return "invalid";
+      }
+      function y(e) {
+        return (
+          "game" === e ||
+          "dlc" === e ||
+          "software" === e ||
+          "music" === e ||
+          "application" === e ||
+          "demo" === e ||
+          "hardware" === e ||
+          "mod" === e ||
+          "video" == e ||
+          "beta" === e ||
+          "advertising" === e
+        );
+      }
+      var E, O;
+      !(function (e) {
+        (e[(e.k_EComputerActiveStateInvalid = 0)] =
+          "k_EComputerActiveStateInvalid"),
+          (e[(e.k_EComputerActiveStateActive = 1)] =
+            "k_EComputerActiveStateActive"),
+          (e[(e.k_EComputerActiveStateIdle = 2)] =
+            "k_EComputerActiveStateIdle");
+      })(E || (E = {})),
+        (function (e) {
+          (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
+            "k_EClientUsedInputTypeKeyboard"),
+            (e[(e.k_EClientUsedInputTypeMouse = 1)] =
+              "k_EClientUsedInputTypeMouse"),
+            (e[(e.k_EClientUsedInputTypeController = 2)] =
+              "k_EClientUsedInputTypeController"),
+            (e[(e.k_EClientUsedInputTypeMax = 3)] =
+              "k_EClientUsedInputTypeMax");
+        })(O || (O = {}));
     },
+    "6NF1": function (e, t, n) {},
     "6TF7": function (e, t, n) {
       e.exports = { Error: "app_Error_2yM3d" };
     },
@@ -3782,52 +4007,6 @@ var CLSTAMP = "7314802";
         }
       }
     },
-    "7DPx": function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return r;
-      }),
-        n.d(t, "b", function () {
-          return i;
-        });
-      var r, i, o;
-      !(function (e) {
-        (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
-          (e[(e.EBrowserType_OpenVROverlay = 1)] =
-            "EBrowserType_OpenVROverlay"),
-          (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
-            "EBrowserType_OpenVROverlay_Dashboard"),
-          (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-          (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
-            "EBrowserType_DirectHWND_Borderless"),
-          (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
-            "EBrowserType_DirectHWND_Hidden"),
-          (e[(e.EBrowserType_ChildHWNDNative = 6)] =
-            "EBrowserType_ChildHWNDNative"),
-          (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
-            "EBrowserType_Transparent_Toplevel"),
-          (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
-            "EBrowserType_OffScreen_SharedTexture"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
-            "EBrowserType_OffScreen_GameOverlay"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-            "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-          (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
-            "EBrowserType_Offscreen_FriendsUI"),
-          (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-      })(r || (r = {})),
-        (function (e) {
-          (e[(e.SystemKey0 = 0)] = "SystemKey0"),
-            (e[(e.SystemKey1 = 1)] = "SystemKey1");
-        })(i || (i = {})),
-        (function (e) {
-          (e[(e.Hidden = 0)] = "Hidden"),
-            (e[(e.Notification = 1)] = "Notification"),
-            (e[(e.Overlay = 2)] = "Overlay"),
-            (e[(e.Opaque = 3)] = "Opaque"),
-            (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-        })(o || (o = {}));
-    },
     "7Q8g": function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
@@ -4061,7 +4240,7 @@ var CLSTAMP = "7314802";
           r.createElement(
             v,
             { onEscKeypress: t, className: o },
-            r.createElement(i.h, { className: n }, s)
+            r.createElement(i.g, { className: n }, s)
           )
         );
       function S(e) {
@@ -4219,7 +4398,7 @@ var CLSTAMP = "7314802";
               bHideCloseIcon: this.props.bHideCloseIcon,
             },
             r.createElement(
-              i.i,
+              i.h,
               {
                 classNameContent: Object(O.a)(
                   "GenericConfirmDialog",
@@ -4300,10 +4479,10 @@ var CLSTAMP = "7314802";
                   " "
                 ),
                 r.createElement(
-                  i.d,
+                  i.c,
                   null,
-                  r.createElement(i.e, null, n, u),
-                  r.createElement(i.r, null, m)
+                  r.createElement(i.d, null, n, u),
+                  r.createElement(i.q, null, m)
                 )
               )
             )
@@ -4566,35 +4745,35 @@ var CLSTAMP = "7314802";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 26],
-        "./main_bulgarian.json": ["c2SO", 27],
-        "./main_czech.json": ["peP3", 28],
-        "./main_danish.json": ["0bnV", 29],
-        "./main_dutch.json": ["wcLc", 30],
-        "./main_english.json": ["/rNK", 31],
-        "./main_finnish.json": ["iywU", 32],
-        "./main_french.json": ["Xnpc", 33],
-        "./main_german.json": ["pmKi", 34],
-        "./main_greek.json": ["mTRv", 35],
-        "./main_hungarian.json": ["WkHb", 36],
-        "./main_italian.json": ["Jz5U", 37],
-        "./main_japanese.json": ["3Dk9", 38],
-        "./main_koreana.json": ["neQD", 39],
-        "./main_latam.json": ["6oHD", 40],
-        "./main_norwegian.json": ["2OvS", 41],
-        "./main_polish.json": ["3pwE", 42],
-        "./main_portuguese.json": ["hY40", 43],
-        "./main_romanian.json": ["Q95+", 44],
-        "./main_russian.json": ["bsPT", 45],
-        "./main_sc_schinese.json": ["GOaQ", 46],
-        "./main_schinese.json": ["B/Zz", 47],
-        "./main_spanish.json": ["U6iL", 48],
-        "./main_swedish.json": ["4uPU", 49],
-        "./main_tchinese.json": ["rgC9", 50],
-        "./main_thai.json": ["87dp", 51],
-        "./main_turkish.json": ["yMpO", 52],
-        "./main_ukrainian.json": ["zTWm", 53],
-        "./main_vietnamese.json": ["wqiy", 54],
+        "./main_brazilian.json": ["TFAN", 25],
+        "./main_bulgarian.json": ["c2SO", 26],
+        "./main_czech.json": ["peP3", 27],
+        "./main_danish.json": ["0bnV", 28],
+        "./main_dutch.json": ["wcLc", 29],
+        "./main_english.json": ["/rNK", 30],
+        "./main_finnish.json": ["iywU", 31],
+        "./main_french.json": ["Xnpc", 32],
+        "./main_german.json": ["pmKi", 33],
+        "./main_greek.json": ["mTRv", 34],
+        "./main_hungarian.json": ["WkHb", 35],
+        "./main_italian.json": ["Jz5U", 36],
+        "./main_japanese.json": ["3Dk9", 37],
+        "./main_koreana.json": ["neQD", 38],
+        "./main_latam.json": ["6oHD", 39],
+        "./main_norwegian.json": ["2OvS", 40],
+        "./main_polish.json": ["3pwE", 41],
+        "./main_portuguese.json": ["hY40", 42],
+        "./main_romanian.json": ["Q95+", 43],
+        "./main_russian.json": ["bsPT", 44],
+        "./main_sc_schinese.json": ["GOaQ", 45],
+        "./main_schinese.json": ["B/Zz", 46],
+        "./main_spanish.json": ["U6iL", 47],
+        "./main_swedish.json": ["4uPU", 48],
+        "./main_tchinese.json": ["rgC9", 49],
+        "./main_thai.json": ["87dp", 50],
+        "./main_turkish.json": ["yMpO", 51],
+        "./main_ukrainian.json": ["zTWm", 52],
+        "./main_vietnamese.json": ["wqiy", 53],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -5381,65 +5560,6 @@ var CLSTAMP = "7314802";
         return r;
       });
     },
-    DMEc: function (e, t, n) {
-      "use strict";
-      var r;
-      !(function (e) {
-        (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
-          (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
-          (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
-            "k_ERemoteClientLaunchRequiresUI"),
-          (e[(e.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
-            "k_ERemoteClientLaunchRequiresLaunchOption"),
-          (e[(e.k_ERemoteClientLaunchRequiresEULA = 5)] =
-            "k_ERemoteClientLaunchRequiresEULA"),
-          (e[(e.k_ERemoteClientLaunchTimeout = 6)] =
-            "k_ERemoteClientLaunchTimeout"),
-          (e[(e.k_ERemoteClientLaunchStreamTimeout = 7)] =
-            "k_ERemoteClientLaunchStreamTimeout"),
-          (e[(e.k_ERemoteClientLaunchStreamClientFail = 8)] =
-            "k_ERemoteClientLaunchStreamClientFail"),
-          (e[(e.k_ERemoteClientLaunchOtherGameRunning = 9)] =
-            "k_ERemoteClientLaunchOtherGameRunning"),
-          (e[(e.k_ERemoteClientLaunchDownloadStarted = 10)] =
-            "k_ERemoteClientLaunchDownloadStarted"),
-          (e[(e.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
-            "k_ERemoteClientLaunchDownloadNoSpace"),
-          (e[(e.k_ERemoteClientLaunchDownloadFiltered = 12)] =
-            "k_ERemoteClientLaunchDownloadFiltered"),
-          (e[(e.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
-            "k_ERemoteClientLaunchDownloadRequiresUI"),
-          (e[(e.k_ERemoteClientLaunchAccessDenied = 14)] =
-            "k_ERemoteClientLaunchAccessDenied"),
-          (e[(e.k_ERemoteClientLaunchNetworkError = 15)] =
-            "k_ERemoteClientLaunchNetworkError"),
-          (e[(e.k_ERemoteClientLaunchProgress = 16)] =
-            "k_ERemoteClientLaunchProgress"),
-          (e[(e.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
-            "k_ERemoteClientLaunchParentalUnlockFailed"),
-          (e[(e.k_ERemoteClientLaunchScreenLocked = 18)] =
-            "k_ERemoteClientLaunchScreenLocked"),
-          (e[(e.k_ERemoteClientLaunchUnsupported = 19)] =
-            "k_ERemoteClientLaunchUnsupported"),
-          (e[(e.k_ERemoteClientLaunchDisabledLocal = 20)] =
-            "k_ERemoteClientLaunchDisabledLocal"),
-          (e[(e.k_ERemoteClientLaunchDisabledRemote = 21)] =
-            "k_ERemoteClientLaunchDisabledRemote"),
-          (e[(e.k_ERemoteClientLaunchBroadcasting = 22)] =
-            "k_ERemoteClientLaunchBroadcasting"),
-          (e[(e.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
-          (e[(e.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
-            "k_ERemoteClientLaunchDriversNotInstalled"),
-          (e[(e.k_ERemoteClientLaunchTransportUnavailable = 25)] =
-            "k_ERemoteClientLaunchTransportUnavailable"),
-          (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
-            "k_ERemoteClientLaunchCanceled"),
-          (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
-            "k_ERemoteClientLaunchInvisible"),
-          (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
-            "k_ERemoteClientLaunchRestrictedCountry");
-      })(r || (r = {}));
-    },
     DWPT: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -5694,27 +5814,11 @@ var CLSTAMP = "7314802";
     E4Op: function (e, t, n) {
       "use strict";
     },
-    FS3O: function (e, t, n) {
-      "use strict";
-    },
     FVDh: function (e, t, n) {
       "use strict";
       var r = n("hRO2");
       n("OS8t"), n("li7h");
       r.Message;
-    },
-    HB2I: function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return r;
-      });
-      class r {}
-      var i;
-      !(function (e) {
-        (e[(e.k_EPending = 0)] = "k_EPending"),
-          (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
-          (e[(e.k_ERejected = 2)] = "k_ERejected");
-      })(i || (i = {}));
     },
     HZAb: function (e, t, n) {
       e.exports = {
@@ -6034,9 +6138,8 @@ var CLSTAMP = "7314802";
           var r;
           this.browser_info &&
             ((r = this.browser_info).m_eBrowserType ==
-              u.EBrowserType.EBrowserType_OpenVROverlay ||
-              r.m_eBrowserType ==
-                u.EBrowserType.EBrowserType_OpenVROverlay_Dashboard) &&
+              u.d.EBrowserType_OpenVROverlay ||
+              r.m_eBrowserType == u.d.EBrowserType_OpenVROverlay_Dashboard) &&
             (t.ownerDocument.body.className += " VR"),
             this.Render(e, t),
             this.OnLoad(),
@@ -6949,31 +7052,31 @@ var CLSTAMP = "7314802";
         n.d(t, "M", function () {
           return y;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "q", function () {
           return E;
         }),
         n.d(t, "D", function () {
           return O;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "d", function () {
           return D;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "c", function () {
           return M;
         }),
         n.d(t, "O", function () {
           return B;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "g", function () {
           return T;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "h", function () {
           return L;
         }),
         n.d(t, "G", function () {
           return N;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "e", function () {
           return F;
         }),
         n.d(t, "L", function () {
@@ -6988,7 +7091,7 @@ var CLSTAMP = "7314802";
         n.d(t, "b", function () {
           return G;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "f", function () {
           return U;
         }),
         n.d(t, "J", function () {
@@ -7018,40 +7121,40 @@ var CLSTAMP = "7314802";
         n.d(t, "B", function () {
           return ve;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "m", function () {
           return ye;
         }),
-        n.d(t, "m", function () {
+        n.d(t, "l", function () {
           return Me;
         }),
-        n.d(t, "p", function () {
+        n.d(t, "o", function () {
           return Be;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "n", function () {
           return Ie;
         }),
-        n.d(t, "k", function () {
+        n.d(t, "j", function () {
           return et;
         }),
         n.d(t, "a", function () {
           return nt;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "p", function () {
           return ot;
         }),
-        n.d(t, "j", function () {
+        n.d(t, "i", function () {
           return lt;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "k", function () {
           return m;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "t", function () {
           return mt;
         }),
         n.d(t, "u", function () {
           return gt;
         }),
-        n.d(t, "t", function () {
+        n.d(t, "s", function () {
           return ft;
         }),
         n.d(t, "w", function () {
@@ -7063,7 +7166,7 @@ var CLSTAMP = "7314802";
         n.d(t, "y", function () {
           return Nt;
         }),
-        n.d(t, "s", function () {
+        n.d(t, "r", function () {
           return Ft;
         }),
         n.d(t, "v", function () {
@@ -7719,6 +7822,10 @@ var CLSTAMP = "7314802";
         get value() {
           return this.m_elInput && this.m_elInput.value;
         }
+        Focus() {
+          var e;
+          null === (e = this.m_elInput) || void 0 === e || e.focus();
+        }
         static validateUrl(e) {
           return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
             e
@@ -7982,7 +8089,7 @@ var CLSTAMP = "7314802";
         render() {
           const e = this.props,
             { label: t, description: n, children: o, className: l } = e,
-            c = Object(r.c)(e, [
+            u = Object(r.c)(e, [
               "label",
               "description",
               "children",
@@ -8001,9 +8108,11 @@ var CLSTAMP = "7314802";
               i.createElement(
                 "div",
                 {
-                  className:
-                    "_DialogInputContainer" +
-                    (this.m_bFocused ? " Active" : ""),
+                  className: Object(c.a)(
+                    "_DialogInputContainer",
+                    "DialogTextInputBase",
+                    this.m_bFocused && "Active"
+                  ),
                   onClick: this.OnBackgroundClick,
                 },
                 i.createElement(
@@ -8021,7 +8130,7 @@ var CLSTAMP = "7314802";
                   ),
                   i.createElement(
                     s.f,
-                    Object.assign({ type: "text" }, c, {
+                    Object.assign({ type: "text" }, u, {
                       className:
                         "DialogListBuilderInput_Input DialogInputPlaceholder",
                       ref: this.OnInputRef,
@@ -11575,10 +11684,6 @@ var CLSTAMP = "7314802";
         DialogDropDownMenu: "dropdown_DialogDropDownMenu_30wJO",
       };
     },
-    PmRV: function (e, t, n) {
-      "use strict";
-      n("mgoM");
-    },
     "RD/U": function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
@@ -12059,35 +12164,35 @@ var CLSTAMP = "7314802";
     },
     RMhI: function (e, t, n) {
       var r = {
-        "./sales_brazilian.json": ["8W/b", 55],
-        "./sales_bulgarian.json": ["CF5q", 56],
-        "./sales_czech.json": ["O2WS", 57],
-        "./sales_danish.json": ["XnEN", 58],
-        "./sales_dutch.json": ["amMP", 59],
-        "./sales_english.json": ["3u+3", 60],
-        "./sales_finnish.json": ["4mLc", 61],
-        "./sales_french.json": ["fJyv", 62],
-        "./sales_german.json": ["LcuH", 63],
-        "./sales_greek.json": ["7l8b", 64],
-        "./sales_hungarian.json": ["L9+e", 65],
-        "./sales_italian.json": ["EnBf", 66],
-        "./sales_japanese.json": ["O9QH", 67],
-        "./sales_koreana.json": ["hPCV", 68],
-        "./sales_latam.json": ["mkfq", 69],
-        "./sales_norwegian.json": ["Xzk6", 70],
-        "./sales_polish.json": ["Mfbu", 71],
-        "./sales_portuguese.json": ["EQQ2", 72],
-        "./sales_romanian.json": ["oXR9", 73],
-        "./sales_russian.json": ["kQHt", 74],
-        "./sales_sc_schinese.json": ["VTAw", 75],
-        "./sales_schinese.json": ["AVwL", 76],
-        "./sales_spanish.json": ["lRrx", 77],
-        "./sales_swedish.json": ["7tPl", 78],
-        "./sales_tchinese.json": ["mQlZ", 79],
-        "./sales_thai.json": ["yDdk", 80],
-        "./sales_turkish.json": ["mjwq", 81],
-        "./sales_ukrainian.json": ["gWvs", 82],
-        "./sales_vietnamese.json": ["VsX2", 83],
+        "./sales_brazilian.json": ["8W/b", 54],
+        "./sales_bulgarian.json": ["CF5q", 55],
+        "./sales_czech.json": ["O2WS", 56],
+        "./sales_danish.json": ["XnEN", 57],
+        "./sales_dutch.json": ["amMP", 58],
+        "./sales_english.json": ["3u+3", 59],
+        "./sales_finnish.json": ["4mLc", 60],
+        "./sales_french.json": ["fJyv", 61],
+        "./sales_german.json": ["LcuH", 62],
+        "./sales_greek.json": ["7l8b", 63],
+        "./sales_hungarian.json": ["L9+e", 64],
+        "./sales_italian.json": ["EnBf", 65],
+        "./sales_japanese.json": ["O9QH", 66],
+        "./sales_koreana.json": ["hPCV", 67],
+        "./sales_latam.json": ["mkfq", 68],
+        "./sales_norwegian.json": ["Xzk6", 69],
+        "./sales_polish.json": ["Mfbu", 70],
+        "./sales_portuguese.json": ["EQQ2", 71],
+        "./sales_romanian.json": ["oXR9", 72],
+        "./sales_russian.json": ["kQHt", 73],
+        "./sales_sc_schinese.json": ["VTAw", 74],
+        "./sales_schinese.json": ["AVwL", 75],
+        "./sales_spanish.json": ["lRrx", 76],
+        "./sales_swedish.json": ["7tPl", 77],
+        "./sales_tchinese.json": ["mQlZ", 78],
+        "./sales_thai.json": ["yDdk", 79],
+        "./sales_turkish.json": ["mjwq", 80],
+        "./sales_ukrainian.json": ["gWvs", 81],
+        "./sales_vietnamese.json": ["VsX2", 82],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -12461,10 +12566,7 @@ var CLSTAMP = "7314802";
         }
         static IsELanguageValidInRealm(e, t) {
           return (
-            t ===
-            (29 === e
-              ? o.ESteamRealm.k_ESteamRealmChina
-              : o.ESteamRealm.k_ESteamRealmGlobal)
+            t === (29 === e ? o.g.k_ESteamRealmChina : o.g.k_ESteamRealmGlobal)
           );
         }
         static GetLanguageListForRealms(e) {
@@ -12684,34 +12786,6 @@ var CLSTAMP = "7314802";
       const w = new u();
       window.LocalizationManager = w;
     },
-    TrCb: function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return r;
-      });
-      class r {
-        constructor() {
-          (this.comments = 0),
-            (this.inventory_items = 0),
-            (this.invites = 0),
-            (this.gifts = 0),
-            (this.offline_messages = 0),
-            (this.trade_offers = 0),
-            (this.async_game_updates = 0),
-            (this.moderator_messages = 0),
-            (this.help_request_replies = 0);
-        }
-      }
-      var i;
-      !(function (e) {
-        (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
-          "k_EClientUINotificationGroupChatMessage"),
-          (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
-            "k_EClientUINotificationFriendChatMessage"),
-          (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
-            "k_EClientUINotificationFriendPersonaState");
-      })(i || (i = {}));
-    },
     TtDX: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -12753,11 +12827,6 @@ var CLSTAMP = "7314802";
         return l.Show(), l;
       }
     },
-    USt6: function (e, t) {},
-    "W+lf": function (e, t, n) {
-      "use strict";
-      n("7DPx");
-    },
     WBba: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -12797,6 +12866,9 @@ var CLSTAMP = "7314802";
         }
         GetServiceTransport() {
           return this.m_ServiceTransport;
+        }
+        GetWebAPIAccessToken() {
+          return this.m_webApiAccessToken;
         }
         GetAnonymousServiceTransport() {
           return this.m_AnonymousServiceTransport;
@@ -12913,53 +12985,6 @@ var CLSTAMP = "7314802";
         Object(r.b)([a.a], h.prototype, "SendNotification", null),
         Object(r.b)([a.a], h.prototype, "Send", null);
     },
-    WWeX: function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return r;
-      }),
-        n.d(t, "b", function () {
-          return i;
-        });
-      n("FVDh"), n("sRB7");
-      function r(e) {
-        switch (e) {
-          case 0:
-            return "game";
-          case 6:
-            return "software";
-          case 1:
-            return "demo";
-          case 4:
-            return "dlc";
-          case 7:
-          case 3:
-            return "video";
-          case 11:
-            return "music";
-          case 12:
-            return "beta";
-          case 2:
-            return "mod";
-        }
-        return "invalid";
-      }
-      function i(e) {
-        return (
-          "game" === e ||
-          "dlc" === e ||
-          "software" === e ||
-          "music" === e ||
-          "application" === e ||
-          "demo" === e ||
-          "hardware" === e ||
-          "mod" === e ||
-          "video" == e ||
-          "beta" === e ||
-          "advertising" === e
-        );
-      }
-    },
     WplJ: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -12997,9 +13022,6 @@ var CLSTAMP = "7314802";
               : null;
           })
         );
-    },
-    X0PP: function (e, t, n) {
-      "use strict";
     },
     X3Ds: function (e, t, n) {
       "use strict";
@@ -13310,9 +13332,6 @@ var CLSTAMP = "7314802";
         }
         return i.prepend(...a), a;
       }
-    },
-    XOiH: function (e, t, n) {
-      "use strict";
     },
     XxJJ: function (e, t, n) {
       "use strict";
@@ -14697,28 +14716,6 @@ var CLSTAMP = "7314802";
         Label: "logsettings_Label_3ces1",
       };
     },
-    gMiy: function (e, t, n) {
-      "use strict";
-      var r, i;
-      !(function (e) {
-        (e[(e.k_EComputerActiveStateInvalid = 0)] =
-          "k_EComputerActiveStateInvalid"),
-          (e[(e.k_EComputerActiveStateActive = 1)] =
-            "k_EComputerActiveStateActive"),
-          (e[(e.k_EComputerActiveStateIdle = 2)] =
-            "k_EComputerActiveStateIdle");
-      })(r || (r = {})),
-        (function (e) {
-          (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
-            "k_EClientUsedInputTypeKeyboard"),
-            (e[(e.k_EClientUsedInputTypeMouse = 1)] =
-              "k_EClientUsedInputTypeMouse"),
-            (e[(e.k_EClientUsedInputTypeController = 2)] =
-              "k_EClientUsedInputTypeController"),
-            (e[(e.k_EClientUsedInputTypeMax = 3)] =
-              "k_EClientUsedInputTypeMax");
-        })(i || (i = {}));
-    },
     gQFo: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -14918,53 +14915,6 @@ var CLSTAMP = "7314802";
         }
       }
     },
-    hYhl: function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return o;
-      });
-      n("mgoM");
-      var r, i, o, s, a;
-      !(function (e) {
-        (e[(e.Unknown = 0)] = "Unknown"),
-          (e[(e.Wired = 1)] = "Wired"),
-          (e[(e.Wireless = 2)] = "Wireless"),
-          (e[(e.Virtual = 3)] = "Virtual");
-      })(r || (r = {})),
-        (function (e) {
-          (e[(e.NotPresent = 0)] = "NotPresent"),
-            (e[(e.Failed = 1)] = "Failed"),
-            (e[(e.Disconnected = 2)] = "Disconnected"),
-            (e[(e.Disconnecting = 3)] = "Disconnecting"),
-            (e[(e.Connecting = 4)] = "Connecting"),
-            (e[(e.Connected = 5)] = "Connected"),
-            (e[(e.Retrying = 6)] = "Retrying");
-        })(i || (i = {})),
-        (function (e) {
-          (e[(e.None = 0)] = "None"),
-            (e[(e.Weak = 1)] = "Weak"),
-            (e[(e.Ok = 2)] = "Ok"),
-            (e[(e.Good = 3)] = "Good"),
-            (e[(e.Excellent = 4)] = "Excellent");
-        })(o || (o = {})),
-        (function (e) {
-          (e[(e.None = 0)] = "None"),
-            (e[(e.StaticWep = 1)] = "StaticWep"),
-            (e[(e.DynamicWep = 2)] = "DynamicWep"),
-            (e[(e.Wpa = 4)] = "Wpa"),
-            (e[(e.WpaEnterprise = 8)] = "WpaEnterprise"),
-            (e[(e.Wpa2 = 16)] = "Wpa2"),
-            (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
-            (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(s || (s = {})),
-        (function (e) {
-          (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
-            (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
-            (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
-            (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
-              "k_EHTTPProxyMode_Automatic");
-        })(a || (a = {}));
-    },
     hwrv: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -15066,8 +15016,8 @@ var CLSTAMP = "7314802";
           RearRightLower: i.a.REAR_RIGHT_LOWER,
         },
         u = {
-          [l.ESystemUISystemKey.SystemKey0]: i.a.STEAM_GUIDE,
-          [l.ESystemUISystemKey.SystemKey1]: i.a.STEAM_QUICK_MENU,
+          [l.h.SystemKey0]: i.a.STEAM_GUIDE,
+          [l.h.SystemKey1]: i.a.STEAM_QUICK_MENU,
         };
       class d extends i.c {
         constructor() {
@@ -17302,13 +17252,7 @@ var CLSTAMP = "7314802";
       }
       function f(e, t, n) {
         return Object(r.a)(this, void 0, void 0, function* () {
-          return g(
-            e,
-            t,
-            Object.assign(Object.assign({}, n), {
-              bHideMainWindowForPopouts: !0,
-            })
-          );
+          return g(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, n));
         });
       }
       function _(e, t, n, r, o, s, a) {
@@ -17438,10 +17382,6 @@ var CLSTAMP = "7314802";
           }
         }
       }
-    },
-    lIrC: function (e, t, n) {
-      "use strict";
-      n("TrCb");
     },
     li7h: function (e, t, n) {
       "use strict";
@@ -18110,38 +18050,13 @@ var CLSTAMP = "7314802";
               "k_EActivateGameOverlayToWebPageMode_Modal");
         })(f || (f = {}));
     },
-    nEON: function (e, t, n) {
-      "use strict";
-      var r = n("hRO2");
-      n("OS8t");
-      r.Message;
-      var i;
-      !(function (e) {
-        (e[(e.k_EControllerBindingType_None = 0)] =
-          "k_EControllerBindingType_None"),
-          (e[(e.k_EControllerBindingType_Key = 1)] =
-            "k_EControllerBindingType_Key"),
-          (e[(e.k_EControllerBindingType_MouseButton = 2)] =
-            "k_EControllerBindingType_MouseButton"),
-          (e[(e.k_EControllerBindingType_Gamepad = 3)] =
-            "k_EControllerBindingType_Gamepad"),
-          (e[(e.k_EControllerBindingType_Mousewheel = 4)] =
-            "k_EControllerBindingType_Mousewheel"),
-          (e[(e.k_EControllerBindingType_Modeshift = 5)] =
-            "k_EControllerBindingType_Modeshift"),
-          (e[(e.k_EControllerBindingType_GameAction = 6)] =
-            "k_EControllerBindingType_GameAction"),
-          (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
-            "k_EControllerBindingType_ControllerAction");
-      })(i || (i = {}));
-    },
     nmPn: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return Z;
+        return ee;
       }),
         n.d(t, "b", function () {
-          return J;
+          return ne;
         });
       var r = n("q1tI"),
         i = n.n(r),
@@ -18154,50 +18069,34 @@ var CLSTAMP = "7314802";
         d = n("WplJ"),
         h = n("lkRc"),
         m = n("6TF7"),
-        p = n.n(m);
-      const g = i.a.lazy(() =>
+        p = n.n(m),
+        g = n("1ZD8");
+      n("99tq");
+      function f(e) {
+        const t = r.useRef(_);
+        let n = e.children;
+        return (
+          e.debug,
+          r.createElement(g.QueryClientProvider, { client: t.current }, n)
+        );
+      }
+      const _ = new g.QueryClient({
+          defaultOptions: { queries: { staleTime: 1 / 0 } },
+        }),
+        b = i.a.lazy(() =>
           Promise.all([
             n.e(3),
             n.e(5),
-            n.e(15),
+            n.e(14),
             n.e(0),
             n.e(1),
             n.e(2),
             n.e(4),
-            n.e(14),
             n.e(13),
-            n.e(118),
+            n.e(117),
           ]).then(n.bind(null, "GEPe"))
         ),
-        f = i.a.lazy(() =>
-          Promise.all([
-            n.e(3),
-            n.e(5),
-            n.e(7),
-            n.e(0),
-            n.e(1),
-            n.e(2),
-            n.e(4),
-            n.e(6),
-            n.e(9),
-            n.e(23),
-          ]).then(n.bind(null, "IY+y"))
-        ),
-        _ = i.a.lazy(() =>
-          Promise.all([
-            n.e(3),
-            n.e(5),
-            n.e(7),
-            n.e(0),
-            n.e(1),
-            n.e(2),
-            n.e(4),
-            n.e(6),
-            n.e(9),
-            n.e(21),
-          ]).then(n.bind(null, "FwLc"))
-        ),
-        b = i.a.lazy(() =>
+        v = i.a.lazy(() =>
           Promise.all([
             n.e(3),
             n.e(5),
@@ -18209,14 +18108,42 @@ var CLSTAMP = "7314802";
             n.e(6),
             n.e(9),
             n.e(22),
+          ]).then(n.bind(null, "IY+y"))
+        ),
+        w = i.a.lazy(() =>
+          Promise.all([
+            n.e(3),
+            n.e(5),
+            n.e(7),
+            n.e(0),
+            n.e(1),
+            n.e(2),
+            n.e(4),
+            n.e(6),
+            n.e(9),
+            n.e(20),
+          ]).then(n.bind(null, "FwLc"))
+        ),
+        C = i.a.lazy(() =>
+          Promise.all([
+            n.e(3),
+            n.e(5),
+            n.e(7),
+            n.e(0),
+            n.e(1),
+            n.e(2),
+            n.e(4),
+            n.e(6),
+            n.e(9),
+            n.e(21),
           ]).then(n.bind(null, "75vZ"))
         ),
-        v = i.a.lazy(() =>
-          Promise.all([n.e(15), n.e(1), n.e(14), n.e(18)]).then(
+        S = i.a.lazy(() =>
+          Promise.all([n.e(14), n.e(1), n.e(13), n.e(17)]).then(
             n.bind(null, "/u7D")
           )
         ),
-        w = i.a.lazy(() =>
+        y = i.a.lazy(() =>
           Promise.all([
             n.e(3),
             n.e(5),
@@ -18225,12 +18152,11 @@ var CLSTAMP = "7314802";
             n.e(2),
             n.e(4),
             n.e(8),
-            n.e(13),
-            n.e(17),
+            n.e(16),
           ]).then(n.bind(null, "8zUZ"))
         ),
-        C = i.a.lazy(() => n.e(116).then(n.bind(null, "rt5e"))),
-        S = i.a.lazy(() =>
+        E = i.a.lazy(() => n.e(115).then(n.bind(null, "rt5e"))),
+        O = i.a.lazy(() =>
           Promise.all([
             n.e(3),
             n.e(5),
@@ -18241,10 +18167,10 @@ var CLSTAMP = "7314802";
             n.e(4),
             n.e(6),
             n.e(12),
-            n.e(19),
+            n.e(18),
           ]).then(n.bind(null, "JZ7q"))
         ),
-        y = i.a.lazy(() =>
+        D = i.a.lazy(() =>
           Promise.all([
             n.e(3),
             n.e(5),
@@ -18256,177 +18182,182 @@ var CLSTAMP = "7314802";
             n.e(12),
             n.e(11),
             n.e(10),
-            n.e(20),
+            n.e(19),
           ]).then(n.bind(null, "erIC"))
         ),
-        E = i.a.lazy(() =>
-          Promise.all([n.e(3), n.e(0), n.e(2), n.e(11), n.e(119)]).then(
+        M = i.a.lazy(() =>
+          Promise.all([n.e(3), n.e(0), n.e(2), n.e(11), n.e(118)]).then(
             n.bind(null, "KVeB")
           )
         ),
-        O = i.a.lazy(() =>
-          Promise.all([n.e(0), n.e(114)]).then(n.bind(null, "KvFF"))
+        B = i.a.lazy(() =>
+          Promise.all([n.e(0), n.e(113)]).then(n.bind(null, "KvFF"))
         ),
-        D = () => (h.b.IS_OGG ? "games" : "groups"),
-        M = () => "/:anything*/diagdata",
-        B = () => "/login/home",
-        R = () => "/(migrateevents|migrate)",
-        T = (e) => `/${D()}/${e}/partnerevents`,
-        I = (e) => `/${D()}/${e}/(events|announcements)`,
-        x = (e) => `/app/${e}(/workshop/)?`,
-        L = (e) => `/groups/${e}/`,
-        k = (e) => `/id/${e}`,
-        N = (e) => `/profiles/${e}`,
-        F = () => "/:anything/filedetails",
-        A = () => "/id/:vanity_url/recommended/:appid/",
-        j = () => "/profiles/:steamid/recommended/:appid/",
-        P = () => "/profiles/:steamid/recommended",
-        G = () => "/id/:vanity_url/recommended",
-        W = () => "/id/:vanity_url/friends/add",
-        U = () => "/profiles/:id/friends/add",
-        H = () => "/broadcast",
-        V = () => "/workshop/discussions",
-        z = () => "/sharedfiles/filedetails/discussions",
-        K = () => "/discussions/forum",
-        q = () => "/faqs/",
-        Y = () => "/questions/",
-        X = () => "/(conference|steamworksvirtualconference)/",
-        $ = () => "/";
-      class Z extends i.a.Component {
+        R = () => (h.b.IS_OGG ? "games" : "groups"),
+        T = () => "/:anything*/diagdata",
+        I = () => "/login/home",
+        x = () => "/(migrateevents|migrate)",
+        L = (e) => `/${R()}/${e}/partnerevents`,
+        k = (e) => `/${R()}/${e}/(events|announcements)`,
+        N = (e) => `/app/${e}(/workshop/)?`,
+        F = (e) => `/groups/${e}/`,
+        A = (e) => `/id/${e}`,
+        j = (e) => `/profiles/${e}`,
+        P = () => "/:anything/filedetails",
+        G = () => "/id/:vanity_url/recommended/:appid/",
+        W = () => "/profiles/:steamid/recommended/:appid/",
+        U = () => "/profiles/:steamid/recommended",
+        H = () => "/id/:vanity_url/recommended",
+        V = () => "/id/:vanity_url/friends/add",
+        z = () => "/profiles/:id/friends/add",
+        K = () => "/broadcast",
+        q = () => "/workshop/discussions",
+        Y = () => "/sharedfiles/filedetails/discussions",
+        X = () => "/discussions/forum",
+        $ = () => "/faqs/",
+        Z = () => "/questions/",
+        Q = () => "/(conference|steamworksvirtualconference)/",
+        J = () => "/";
+      class ee extends i.a.Component {
         render() {
           return i.a.createElement(
             a.a,
-            { basename: ee() },
+            { basename: re() },
             i.a.createElement(
-              i.a.Suspense,
-              { fallback: i.a.createElement("div", null) },
+              f,
+              null,
               i.a.createElement(
-                l.e,
-                null,
-                i.a.createElement(l.c, {
-                  exact: !0,
-                  path: M(),
-                  render: (e) =>
-                    i.a.createElement(
-                      c.a,
-                      Object.assign({}, e, {
-                        key: e.match.params.gid,
-                        strConfigID: "application_config",
-                      })
-                    ),
-                }),
+                i.a.Suspense,
+                { fallback: i.a.createElement("div", null) },
                 i.a.createElement(
-                  l.c,
-                  { path: B() },
-                  i.a.createElement(d.a, {
-                    config: {
-                      login: (e) => i.a.createElement(O, Object.assign({}, e)),
-                    },
-                  })
-                ),
-                i.a.createElement(l.c, {
-                  path: T(":appid_or_vanity_str"),
-                  component: _,
-                }),
-                i.a.createElement(l.c, { path: R(), component: b }),
-                i.a.createElement(l.c, {
-                  path: I(":appid_or_vanity_str"),
-                  component: f,
-                }),
-                i.a.createElement(l.c, { path: H(), component: w }),
-                i.a.createElement(l.c, {
-                  path: x(":appid"),
-                  render: (e) =>
+                  l.e,
+                  null,
+                  i.a.createElement(l.c, {
+                    exact: !0,
+                    path: T(),
+                    render: (e) =>
+                      i.a.createElement(
+                        c.a,
+                        Object.assign({}, e, {
+                          key: e.match.params.gid,
+                          strConfigID: "application_config",
+                        })
+                      ),
+                  }),
+                  i.a.createElement(
+                    l.c,
+                    { path: I() },
                     i.a.createElement(d.a, {
                       config: {
-                        "apphub-events": () => i.a.createElement(f, null),
-                        "apphub-ugcrewards": () =>
-                          i.a.createElement(v, Object.assign({}, e)),
-                        "community-awards": () =>
-                          i.a.createElement(v, Object.assign({}, e)),
+                        login: (e) =>
+                          i.a.createElement(B, Object.assign({}, e)),
                       },
-                    }),
-                }),
-                i.a.createElement(l.c, {
-                  path: L(":groupid_or_vanity_str"),
-                  render: (e) =>
-                    i.a.createElement(d.a, {
-                      config: {
-                        "apphub-events": () => i.a.createElement(f, null),
-                        "community-awards": () =>
-                          i.a.createElement(v, Object.assign({}, e)),
-                      },
-                    }),
-                }),
-                i.a.createElement(l.c, {
-                  path: A(),
-                  render: (e) => i.a.createElement(v, Object.assign({}, e)),
-                }),
-                i.a.createElement(l.c, {
-                  path: j(),
-                  render: (e) => i.a.createElement(v, Object.assign({}, e)),
-                }),
-                i.a.createElement(l.c, {
-                  path: G(),
-                  render: (e) => i.a.createElement(v, Object.assign({}, e)),
-                }),
-                i.a.createElement(l.c, {
-                  path: P(),
-                  render: (e) => i.a.createElement(v, Object.assign({}, e)),
-                }),
-                i.a.createElement(l.c, {
-                  path: [K(), V(), z()],
-                  render: (e) =>
-                    i.a.createElement(d.a, {
-                      config: {
-                        "community-awards": () =>
-                          i.a.createElement(v, Object.assign({}, e)),
-                      },
-                    }),
-                }),
-                i.a.createElement(
-                  l.c,
-                  { path: [W(), U()] },
-                  i.a.createElement(C, null)
-                ),
-                i.a.createElement(l.c, {
-                  path: k(":vanity_url"),
-                  render: (e) => i.a.createElement(g, Object.assign({}, e)),
-                }),
-                i.a.createElement(l.c, {
-                  path: N(":steamid"),
-                  render: (e) => i.a.createElement(g, Object.assign({}, e)),
-                }),
-                i.a.createElement(l.c, {
-                  path: F(),
-                  render: (e) => i.a.createElement(v, Object.assign({}, e)),
-                }),
-                i.a.createElement(l.c, { path: q(), component: S }),
-                i.a.createElement(l.c, { path: Y(), component: E }),
-                i.a.createElement(l.c, { path: X(), component: y }),
-                i.a.createElement(l.c, {
-                  path: $(),
-                  render: (e) =>
-                    i.a.createElement(d.a, {
-                      config: {
-                        "apphub-events": () => i.a.createElement(f, null),
-                        "apphub-ugcrewards": () =>
-                          i.a.createElement(v, Object.assign({}, e)),
-                      },
-                    }),
-                }),
-                i.a.createElement(l.c, { component: J })
-              )
-            ),
-            i.a.createElement(Q, null)
+                    })
+                  ),
+                  i.a.createElement(l.c, {
+                    path: L(":appid_or_vanity_str"),
+                    component: w,
+                  }),
+                  i.a.createElement(l.c, { path: x(), component: C }),
+                  i.a.createElement(l.c, {
+                    path: k(":appid_or_vanity_str"),
+                    component: v,
+                  }),
+                  i.a.createElement(l.c, { path: K(), component: y }),
+                  i.a.createElement(l.c, {
+                    path: N(":appid"),
+                    render: (e) =>
+                      i.a.createElement(d.a, {
+                        config: {
+                          "apphub-events": () => i.a.createElement(v, null),
+                          "apphub-ugcrewards": () =>
+                            i.a.createElement(S, Object.assign({}, e)),
+                          "community-awards": () =>
+                            i.a.createElement(S, Object.assign({}, e)),
+                        },
+                      }),
+                  }),
+                  i.a.createElement(l.c, {
+                    path: F(":groupid_or_vanity_str"),
+                    render: (e) =>
+                      i.a.createElement(d.a, {
+                        config: {
+                          "apphub-events": () => i.a.createElement(v, null),
+                          "community-awards": () =>
+                            i.a.createElement(S, Object.assign({}, e)),
+                        },
+                      }),
+                  }),
+                  i.a.createElement(l.c, {
+                    path: G(),
+                    render: (e) => i.a.createElement(S, Object.assign({}, e)),
+                  }),
+                  i.a.createElement(l.c, {
+                    path: W(),
+                    render: (e) => i.a.createElement(S, Object.assign({}, e)),
+                  }),
+                  i.a.createElement(l.c, {
+                    path: H(),
+                    render: (e) => i.a.createElement(S, Object.assign({}, e)),
+                  }),
+                  i.a.createElement(l.c, {
+                    path: U(),
+                    render: (e) => i.a.createElement(S, Object.assign({}, e)),
+                  }),
+                  i.a.createElement(l.c, {
+                    path: [X(), q(), Y()],
+                    render: (e) =>
+                      i.a.createElement(d.a, {
+                        config: {
+                          "community-awards": () =>
+                            i.a.createElement(S, Object.assign({}, e)),
+                        },
+                      }),
+                  }),
+                  i.a.createElement(
+                    l.c,
+                    { path: [V(), z()] },
+                    i.a.createElement(E, null)
+                  ),
+                  i.a.createElement(l.c, {
+                    path: A(":vanity_url"),
+                    render: (e) => i.a.createElement(b, Object.assign({}, e)),
+                  }),
+                  i.a.createElement(l.c, {
+                    path: j(":steamid"),
+                    render: (e) => i.a.createElement(b, Object.assign({}, e)),
+                  }),
+                  i.a.createElement(l.c, {
+                    path: P(),
+                    render: (e) => i.a.createElement(S, Object.assign({}, e)),
+                  }),
+                  i.a.createElement(l.c, { path: $(), component: O }),
+                  i.a.createElement(l.c, { path: Z(), component: M }),
+                  i.a.createElement(l.c, { path: Q(), component: D }),
+                  i.a.createElement(l.c, {
+                    path: J(),
+                    render: (e) =>
+                      i.a.createElement(d.a, {
+                        config: {
+                          "apphub-events": () => i.a.createElement(v, null),
+                          "apphub-ugcrewards": () =>
+                            i.a.createElement(S, Object.assign({}, e)),
+                        },
+                      }),
+                  }),
+                  i.a.createElement(l.c, { component: ne })
+                )
+              ),
+              i.a.createElement(te, null)
+            )
           );
         }
       }
-      const Q = (e) => {
+      const te = (e) => {
         const t = i.a.createElement(u.c, { ModalManager: Object(u.h)(window) });
         return s.a.createPortal(t, document.body);
       };
-      function J(e) {
+      function ne(e) {
         return "dev" == h.c.WEB_UNIVERSE
           ? i.a.createElement(
               "div",
@@ -18435,7 +18366,7 @@ var CLSTAMP = "7314802";
             )
           : i.a.createElement(l.b, { push: !0, to: "/" });
       }
-      function ee() {
+      function re() {
         let e = document.createElement("a");
         e.href = h.c.COMMUNITY_BASE_URL;
         let t = e.pathname;
@@ -18973,36 +18904,36 @@ var CLSTAMP = "7314802";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 84],
-        "./shared_brazilian.json": ["Pg9r", 85],
-        "./shared_bulgarian.json": ["ENge", 86],
-        "./shared_czech.json": ["Ts6V", 87],
-        "./shared_danish.json": ["9oiU", 88],
-        "./shared_dutch.json": ["nxN4", 89],
-        "./shared_english.json": ["TYjx", 90],
-        "./shared_finnish.json": ["NuB8", 91],
-        "./shared_french.json": ["bOPj", 92],
-        "./shared_german.json": ["svuF", 93],
-        "./shared_greek.json": ["eJKB", 94],
-        "./shared_hungarian.json": ["T7i2", 95],
-        "./shared_italian.json": ["w96W", 96],
-        "./shared_japanese.json": ["XQ4S", 97],
-        "./shared_koreana.json": ["4hyI", 98],
-        "./shared_latam.json": ["3qrw", 99],
-        "./shared_norwegian.json": ["XA4Q", 100],
-        "./shared_polish.json": ["TpXn", 101],
-        "./shared_portuguese.json": ["Q8UV", 102],
-        "./shared_romanian.json": ["Eme1", 103],
-        "./shared_russian.json": ["BUiO", 104],
-        "./shared_sc_schinese.json": ["O0N/", 105],
-        "./shared_schinese.json": ["3UpY", 106],
-        "./shared_spanish.json": ["4Fxc", 107],
-        "./shared_swedish.json": ["0JhB", 108],
-        "./shared_tchinese.json": ["OYRc", 109],
-        "./shared_thai.json": ["lhAZ", 110],
-        "./shared_turkish.json": ["RSoU", 111],
-        "./shared_ukrainian.json": ["lNXI", 112],
-        "./shared_vietnamese.json": ["RSmC", 113],
+        "./shared_arabic.json": ["d1TB", 83],
+        "./shared_brazilian.json": ["Pg9r", 84],
+        "./shared_bulgarian.json": ["ENge", 85],
+        "./shared_czech.json": ["Ts6V", 86],
+        "./shared_danish.json": ["9oiU", 87],
+        "./shared_dutch.json": ["nxN4", 88],
+        "./shared_english.json": ["TYjx", 89],
+        "./shared_finnish.json": ["NuB8", 90],
+        "./shared_french.json": ["bOPj", 91],
+        "./shared_german.json": ["svuF", 92],
+        "./shared_greek.json": ["eJKB", 93],
+        "./shared_hungarian.json": ["T7i2", 94],
+        "./shared_italian.json": ["w96W", 95],
+        "./shared_japanese.json": ["XQ4S", 96],
+        "./shared_koreana.json": ["4hyI", 97],
+        "./shared_latam.json": ["3qrw", 98],
+        "./shared_norwegian.json": ["XA4Q", 99],
+        "./shared_polish.json": ["TpXn", 100],
+        "./shared_portuguese.json": ["Q8UV", 101],
+        "./shared_romanian.json": ["Eme1", 102],
+        "./shared_russian.json": ["BUiO", 103],
+        "./shared_sc_schinese.json": ["O0N/", 104],
+        "./shared_schinese.json": ["3UpY", 105],
+        "./shared_spanish.json": ["4Fxc", 106],
+        "./shared_swedish.json": ["0JhB", 107],
+        "./shared_tchinese.json": ["OYRc", 108],
+        "./shared_thai.json": ["lhAZ", 109],
+        "./shared_turkish.json": ["RSoU", 110],
+        "./shared_ukrainian.json": ["lNXI", 111],
+        "./shared_vietnamese.json": ["RSmC", 112],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -21764,36 +21695,6 @@ var CLSTAMP = "7314802";
       var u = i;
       u.ExportedTypes.EQuickAccessTab;
     },
-    xCK5: function (e, t, n) {
-      "use strict";
-      var r;
-      !(function (e) {
-        (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
-          "k_BluetoothDeviceType_Invalid"),
-          (e[(e.k_BluetoothDeviceType_Unknown = 1)] =
-            "k_BluetoothDeviceType_Unknown"),
-          (e[(e.k_BluetoothDeviceType_Phone = 2)] =
-            "k_BluetoothDeviceType_Phone"),
-          (e[(e.k_BluetoothDeviceType_Computer = 3)] =
-            "k_BluetoothDeviceType_Computer"),
-          (e[(e.k_BluetoothDeviceType_Headset = 4)] =
-            "k_BluetoothDeviceType_Headset"),
-          (e[(e.k_BluetoothDeviceType_Headphones = 5)] =
-            "k_BluetoothDeviceType_Headphones"),
-          (e[(e.k_BluetoothDeviceType_Speakers = 6)] =
-            "k_BluetoothDeviceType_Speakers"),
-          (e[(e.k_BluetoothDeviceType_OtherAudio = 7)] =
-            "k_BluetoothDeviceType_OtherAudio"),
-          (e[(e.k_BluetoothDeviceType_Mouse = 8)] =
-            "k_BluetoothDeviceType_Mouse"),
-          (e[(e.k_BluetoothDeviceType_Joystick = 9)] =
-            "k_BluetoothDeviceType_Joystick"),
-          (e[(e.k_BluetoothDeviceType_Gamepad = 10)] =
-            "k_BluetoothDeviceType_Gamepad"),
-          (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
-            "k_BluetoothDeviceType_Keyboard");
-      })(r || (r = {}));
-    },
     xnZ7: function (e, t, n) {
       e.exports = {
         v6: "shared_common_v6_2Lxgd",
@@ -22872,5 +22773,5 @@ var CLSTAMP = "7314802";
       };
     },
   },
-  [["gfbn", 117, 25]],
+  [["gfbn", 116, 24]],
 ]);

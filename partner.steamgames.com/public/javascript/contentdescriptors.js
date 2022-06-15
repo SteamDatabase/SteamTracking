@@ -142,6 +142,7 @@ function HandleRelatedTags( descid, bAnimate )
 function HandleMatureContentChange( bMature, bAnimate )
 {
 	var rgElements = [ '#customer_notes', '#content_descriptors', '#dev_notes' ];
+
 	if ( bMature )
 	{
 		rgElements.each( function( id ) {

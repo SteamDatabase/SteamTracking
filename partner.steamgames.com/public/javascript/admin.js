@@ -364,6 +364,7 @@ function MapTypeToText( type )
 		case 8192: return "Music";
 		case 1024: return "Franchise";
 		case 16384: return "Series";
+		case 65536: return "Beta";
 		default: return 'UNKNOWN: ' + type;
 	}
 }
@@ -593,7 +594,8 @@ function DisplayAllApps( response, resultsElement )
 			case 16:	color = '#6ba1bd'; break;		// Media
 			case 64:	color = '#6ba1bd'; break;
 			case 256:	color = '#6666FF'; break;
-			default:							color = '#ff0000';	break;			// If we don't recognize the type, let put a nice color :)
+			case 65536: color = '#89c53f'; break;		// beta
+			default:							color = '#ff0000';	break;		// If we don't recognize the type, let put a nice color :)
 		}
 
 		// First the application

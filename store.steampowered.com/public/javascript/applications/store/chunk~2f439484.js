@@ -13,8 +13,8 @@
         });
       var n = s("mrSG"),
         r = s("vDqi"),
-        i = s.n(r),
-        o = s("2vnA"),
+        o = s.n(r),
+        i = s("2vnA"),
         a = (s("msu0"), s("Zdsb"), s("oleE"), s("sTxY"), s("TqgT")),
         d = s("/Q1a"),
         p = s("q1tI");
@@ -203,10 +203,10 @@
               },
               s = d.d.STORE_BASE_URL + "dynamicstore/userdata/";
             try {
-              let e = yield i.a.get(s, { params: t, withCredentials: !0 });
+              let e = yield o.a.get(s, { params: t, withCredentials: !0 });
               e &&
                 200 == e.status &&
-                Object(o.G)(() => {
+                Object(i.G)(() => {
                   if (((this.m_bIsLoaded = !0), e.data.rgCurators)) {
                     this.m_setCuratorsFollowed = new Set();
                     for (const t in e.data.rgCurators)
@@ -317,12 +317,12 @@
               "curators/" +
               (t ? "ajaxfollow/" : "ajaxignore/");
             const r = e.GetAccountID(),
-              o = new FormData();
-            o.append("authwgtoken", d.l.authwgtoken),
-              o.append("clanid", "" + r),
-              o.append("sessionid", d.d.SESSIONID),
-              o.append(t ? "follow" : "ignore", s ? "1" : "0");
-            let a = yield i.a.post(n, o, { withCredentials: !0 });
+              i = new FormData();
+            i.append("authwgtoken", d.l.authwgtoken),
+              i.append("clanid", "" + r),
+              i.append("sessionid", d.d.SESSIONID),
+              i.append(t ? "follow" : "ignore", s ? "1" : "0");
+            let a = yield o.a.post(n, i, { withCredentials: !0 });
             if (a && 200 == a.status) {
               this.InvalidateCache();
               const e = t
@@ -344,11 +344,11 @@
               r.append("ignore_reason", "" + s);
             try {
               this.m_bAjaxInFlight = !0;
-              let a = yield i.a.post(n, r, { withCredentials: !0 });
+              let a = yield o.a.post(n, r, { withCredentials: !0 });
               return (
                 a &&
                   200 == a.status &&
-                  Object(o.G)(() => {
+                  Object(i.G)(() => {
                     this.InvalidateCache(),
                       t
                         ? this.m_mapIgnoredApps.set(e, s)
@@ -370,12 +370,12 @@
               d.d.STORE_BASE_URL +
               "api/" +
               (t ? "addtowishlist" : "removefromwishlist");
-            const o = new FormData();
-            o.append("appid", "" + e),
-              o.append("sessionid", d.d.SESSIONID),
-              s && o.append("snr", s),
+            const i = new FormData();
+            i.append("appid", "" + e),
+              i.append("sessionid", d.d.SESSIONID),
+              s && i.append("snr", s),
               (this.m_bAjaxInFlight = !0);
-            let a = yield i.a.post(n, o, {
+            let a = yield o.a.post(n, i, {
               withCredentials: !0,
               cancelToken: r ? r.token : void 0,
             });
@@ -398,21 +398,21 @@
             return a.data;
           });
         }
-        AddToCart(e, t, s, r, o, a) {
+        AddToCart(e, t, s, r, i, a) {
           return Object(n.a)(this, void 0, void 0, function* () {
             const n = new FormData();
             n.append("action", "add_to_cart"),
               a
                 ? n.append("bundleid", a.toString())
                 : n.append("subid", "" + t),
-              o && n.append("snr", o);
+              i && n.append("snr", i);
             let p = d.l.authwgtoken;
             p
               ? n.append("authwgtoken", p)
               : n.append("sessionid", d.d.SESSIONID),
               n.append("quantity", "1");
             try {
-              yield i.a.post(s, n, { withCredentials: !0 });
+              yield o.a.post(s, n, { withCredentials: !0 });
               let t = d.d.IN_CLIENT ? "steam://url/StoreCart" : r;
               e.preventDefault(),
                 this.InvalidateCache(),
@@ -433,7 +433,7 @@
                 t.append("cc", d.d.COUNTRY);
               let s =
                   d.d.STORE_BASE_URL + "actions/addappformastersubscription",
-                n = yield i.a.post(s, t, { withCredentials: !0 });
+                n = yield o.a.post(s, t, { withCredentials: !0 });
               if (
                 (this.InvalidateCache(),
                 !n.data.success || 1 !== n.data.success)
@@ -457,7 +457,7 @@
               n.append("appid", "" + e),
                 n.append("sessionid", d.d.SESSIONID),
                 t || n.append("unfollow", "1");
-              const r = yield i.a.post(s, n, { withCredentials: !0 });
+              const r = yield o.a.post(s, n, { withCredentials: !0 });
               if (!r.data) return 2;
               this.InvalidateCache(),
                 t
@@ -496,42 +496,42 @@
           );
         }
       }
-      Object(n.b)([o.C], c.prototype, "m_setWishList", void 0),
-        Object(n.b)([o.C], c.prototype, "m_setOwnedPackages", void 0),
-        Object(n.b)([o.C], c.prototype, "m_setOwnedApps", void 0),
-        Object(n.b)([o.C], c.prototype, "m_setFollowedApps", void 0),
-        Object(n.b)([o.C], c.prototype, "m_setExcludedTagsIds", void 0),
+      Object(n.b)([i.C], c.prototype, "m_setWishList", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setOwnedPackages", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setOwnedApps", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setFollowedApps", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setExcludedTagsIds", void 0),
         Object(n.b)(
-          [o.C],
+          [i.C],
           c.prototype,
           "m_setExcludedContentDescriptors",
           void 0
         ),
-        Object(n.b)([o.C], c.prototype, "m_setRecommendedApps", void 0),
-        Object(n.b)([o.C], c.prototype, "m_mapIgnoredApps", void 0),
-        Object(n.b)([o.C], c.prototype, "m_mapIgnoredPackages", void 0),
-        Object(n.b)([o.C], c.prototype, "m_setCuratorsFollowed", void 0),
-        Object(n.b)([o.C], c.prototype, "m_setCuratorsIgnored", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setRecommendedApps", void 0),
+        Object(n.b)([i.C], c.prototype, "m_mapIgnoredApps", void 0),
+        Object(n.b)([i.C], c.prototype, "m_mapIgnoredPackages", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setCuratorsFollowed", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setCuratorsIgnored", void 0),
         Object(n.b)(
-          [o.C],
+          [i.C],
           c.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0
         ),
-        Object(n.b)([o.C], c.prototype, "m_primaryLanguage", void 0),
-        Object(n.b)([o.C], c.prototype, "m_secondaryLanguages", void 0),
-        Object(n.b)([o.C], c.prototype, "m_setRecommendedTags", void 0),
+        Object(n.b)([i.C], c.prototype, "m_primaryLanguage", void 0),
+        Object(n.b)([i.C], c.prototype, "m_secondaryLanguages", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setRecommendedTags", void 0),
         Object(n.b)(
-          [o.C],
+          [i.C],
           c.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0
         ),
-        Object(n.b)([o.C], c.prototype, "m_setPackagesInCart", void 0),
-        Object(n.b)([o.C], c.prototype, "m_setAppsInCart", void 0),
-        Object(n.b)([o.C], c.prototype, "m_nCartLineItemCount", void 0),
-        Object(n.b)([o.C], c.prototype, "m_bAjaxInFlight", void 0),
-        Object(n.b)([o.k], c.prototype, "UpdateAppIgnore", null);
+        Object(n.b)([i.C], c.prototype, "m_setPackagesInCart", void 0),
+        Object(n.b)([i.C], c.prototype, "m_setAppsInCart", void 0),
+        Object(n.b)([i.C], c.prototype, "m_nCartLineItemCount", void 0),
+        Object(n.b)([i.C], c.prototype, "m_bAjaxInFlight", void 0),
+        Object(n.b)([i.k], c.prototype, "UpdateAppIgnore", null);
     },
     jIgc: function (e, t, s) {
       "use strict";
@@ -549,8 +549,8 @@
         });
       var n = s("mrSG"),
         r = s("q1tI"),
-        i = s("i8i4"),
-        o = s("kDGI"),
+        o = s("i8i4"),
+        i = s("kDGI"),
         a = s("SS8s"),
         d = s("thkD"),
         p = s("e356"),
@@ -647,13 +647,13 @@
       function g(e, t, s) {
         return Object(n.a)(this, void 0, void 0, function* () {
           const r = !0 === (null == s ? void 0 : s.bNeverPopOut),
-            o = !r && b(null, t),
+            i = !r && b(null, t),
             a =
               (null == s ? void 0 : s.bForcePopOut) &&
               (null == s ? void 0 : s.popupWidth) &&
               (null == s ? void 0 : s.popupHeight),
             d =
-              o &&
+              i &&
               !a &&
               (yield (function (e, t, s) {
                 return Object(n.a)(this, void 0, void 0, function* () {
@@ -661,15 +661,15 @@
                   (n.style.position = "absolute"),
                     (n.style.visibility = "hidden"),
                     t.document.body.appendChild(n),
-                    i.render(e, n),
+                    o.render(e, n),
                     yield s;
                   let r = document;
                   h.d.IN_LIBRARY && r.fonts && (yield r.fonts.ready);
-                  const o = n.getBoundingClientRect(),
-                    a = Math.ceil(o.height),
-                    d = Math.ceil(o.width);
+                  const i = n.getBoundingClientRect(),
+                    a = Math.ceil(i.height),
+                    d = Math.ceil(i.width);
                   return (
-                    i.unmountComponentAtNode(n),
+                    o.unmountComponentAtNode(n),
                     t.document.body.removeChild(n),
                     { height: a, width: d }
                   );
@@ -708,16 +708,10 @@
       }
       function w(e, t, s) {
         return Object(n.a)(this, void 0, void 0, function* () {
-          return g(
-            e,
-            t,
-            Object.assign(Object.assign({}, s), {
-              bHideMainWindowForPopouts: !0,
-            })
-          );
+          return g(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, s));
         });
       }
-      function _(e, t, s, n, i, o, a) {
+      function _(e, t, s, n, o, i, a) {
         let p, l;
         const m = e.props.closeModal,
           c = () => {
@@ -745,7 +739,7 @@
             l = a.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, n), { fnOnClose: c }),
-            m = new I(t, s, e, g, i, o);
+            m = new I(t, s, e, g, o, i);
           m.Show(), (p = m);
         } else p = a.ShowModal(g);
         return p;
@@ -755,8 +749,8 @@
           (e = e || Object(d.h)(t || window)), h.d.USE_POPUPS && e.BUsePopups()
         );
       }
-      class I extends o.a {
-        constructor(e, t, s, n, r, i) {
+      class I extends i.a {
+        constructor(e, t, s, n, r, o) {
           super(t, {
             title: s.strTitle,
             html_class: "client_chat_frame fullheight ModalDialogPopup",
@@ -770,7 +764,7 @@
             (this.m_windowOpener = e),
             (this.m_modalProps = s),
             (this.m_modalElement = n),
-            (this.m_options = i);
+            (this.m_options = o);
         }
         Update(e) {
           Object(c.a)(!1, "NYI");
@@ -778,8 +772,8 @@
         UpdateParamsBeforeShow(e) {
           var t, s, n;
           let r,
-            i,
             o,
+            i,
             a = this.m_modalProps.popupWidth || 500,
             d = this.m_modalProps.popupHeight || 400;
           if (
@@ -796,18 +790,18 @@
               ? void 0
               : n.GetBrowserID)
           )
-            o = this.m_windowOpener.SteamClient.Window.GetBrowserID();
+            i = this.m_windowOpener.SteamClient.Window.GetBrowserID();
           else {
             let e = this.m_windowOpener.screen;
-            (r = (e.availWidth - a) / 2), (i = (e.availHeight - d) / 2);
+            (r = (e.availWidth - a) / 2), (o = (e.availHeight - d) / 2);
             let t = e;
             void 0 !== t.availLeft &&
               void 0 !== t.availTop &&
-              ((r += t.availLeft), (i += t.availTop));
+              ((r += t.availLeft), (o += t.availTop));
           }
           return Object.assign(Object.assign({}, e), {
-            dimensions: { width: a, height: d, left: r, top: i },
-            window_opener_id: o,
+            dimensions: { width: a, height: d, left: r, top: o },
+            window_opener_id: i,
           });
         }
         OnLoad() {}
@@ -826,7 +820,7 @@
                 "number" == typeof this.m_options.nDragAreaHeight
                   ? { height: this.m_options.nDragAreaHeight }
                   : void 0;
-            i.render(
+            o.render(
               r.createElement(
                 "div",
                 { className: "PopupFullWindow", onContextMenu: a.h },
@@ -855,13 +849,13 @@
         });
       var n = s("mrSG"),
         r = s("q1tI"),
-        i = s.n(r),
-        o = (s("DSrS"), s("pVzq")),
+        o = s.n(r),
+        i = (s("DSrS"), s("pVzq")),
         a = s("jIgc"),
         d = s("GXif"),
         p = s("hCpY"),
         l = s("/Q1a");
-      class m extends i.a.Component {
+      class m extends o.a.Component {
         OnLoginComplete(e) {
           window.location.href =
             this.props.redirectURL &&
@@ -872,10 +866,10 @@
         render() {
           return l.l && l.l.logged_in
             ? (this.OnLoginComplete(), null)
-            : i.a.createElement(
+            : o.a.createElement(
                 "div",
                 null,
-                i.a.createElement(o.a, {
+                o.a.createElement(i.a, {
                   baseURL: Object(l.f)(),
                   onLoginComplete: this.OnLoginComplete,
                 })
@@ -883,21 +877,21 @@
         }
       }
       Object(n.b)([p.b], m.prototype, "OnLoginComplete", null);
-      class c extends i.a.Component {
+      class c extends o.a.Component {
         render() {
-          return i.a.createElement(
+          return o.a.createElement(
             a.a,
             {
               onEscKeypress: this.props.closeModal,
               bDisableBackgroundDismiss: !0,
             },
-            i.a.createElement(m, { redirectURL: this.props.redirectURL })
+            o.a.createElement(m, { redirectURL: this.props.redirectURL })
           );
         }
       }
       function u() {
         Object(a.d)(
-          i.a.createElement(c, {
+          o.a.createElement(c, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -907,7 +901,7 @@
       }
       function h(e) {
         Object(a.d)(
-          i.a.createElement(c, { ownerWin: window, redirectURL: e }),
+          o.a.createElement(c, { ownerWin: window, redirectURL: e }),
           window,
           { strTitle: Object(d.g)("#Login_SignIn") }
         );

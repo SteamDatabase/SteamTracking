@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7314802";
+var CLSTAMP = "7322853";
 !(function (e) {
   function t(t) {
     for (
@@ -28,7 +28,7 @@ var CLSTAMP = "7314802";
     return e;
   }
   var r = {},
-    i = { 6: 0 },
+    i = { 4: 0 },
     o = [];
   function s(t) {
     if (r[t]) return r[t].exports;
@@ -55,129 +55,129 @@ var CLSTAMP = "7314802";
               s.p +
               "javascript/webui/" +
               ({
-                10: "friendsui_arabic-json",
-                11: "friendsui_brazilian-json",
-                12: "friendsui_bulgarian-json",
-                13: "friendsui_czech-json",
-                14: "friendsui_danish-json",
-                15: "friendsui_dutch-json",
-                16: "friendsui_english-json",
-                17: "friendsui_finnish-json",
-                18: "friendsui_french-json",
-                19: "friendsui_german-json",
-                20: "friendsui_greek-json",
-                21: "friendsui_hungarian-json",
-                22: "friendsui_italian-json",
-                23: "friendsui_japanese-json",
-                24: "friendsui_koreana-json",
-                25: "friendsui_latam-json",
-                26: "friendsui_norwegian-json",
-                27: "friendsui_polish-json",
-                28: "friendsui_portuguese-json",
-                29: "friendsui_romanian-json",
-                30: "friendsui_russian-json",
-                31: "friendsui_sc_schinese-json",
-                32: "friendsui_schinese-json",
-                33: "friendsui_spanish-json",
-                34: "friendsui_swedish-json",
-                35: "friendsui_tchinese-json",
-                36: "friendsui_thai-json",
-                37: "friendsui_turkish-json",
-                38: "friendsui_ukrainian-json",
-                39: "friendsui_vietnamese-json",
-                40: "shared_arabic-json",
-                41: "shared_brazilian-json",
-                42: "shared_bulgarian-json",
-                43: "shared_czech-json",
-                44: "shared_danish-json",
-                45: "shared_dutch-json",
-                46: "shared_english-json",
-                47: "shared_finnish-json",
-                48: "shared_french-json",
-                49: "shared_german-json",
-                50: "shared_greek-json",
-                51: "shared_hungarian-json",
-                52: "shared_italian-json",
-                53: "shared_japanese-json",
-                54: "shared_koreana-json",
-                55: "shared_latam-json",
-                56: "shared_norwegian-json",
-                57: "shared_polish-json",
-                58: "shared_portuguese-json",
-                59: "shared_romanian-json",
-                60: "shared_russian-json",
-                61: "shared_sc_schinese-json",
-                62: "shared_schinese-json",
-                63: "shared_spanish-json",
-                64: "shared_swedish-json",
-                65: "shared_tchinese-json",
-                66: "shared_thai-json",
-                67: "shared_turkish-json",
-                68: "shared_ukrainian-json",
-                69: "shared_vietnamese-json",
+                8: "friendsui_arabic-json",
+                9: "friendsui_brazilian-json",
+                10: "friendsui_bulgarian-json",
+                11: "friendsui_czech-json",
+                12: "friendsui_danish-json",
+                13: "friendsui_dutch-json",
+                14: "friendsui_english-json",
+                15: "friendsui_finnish-json",
+                16: "friendsui_french-json",
+                17: "friendsui_german-json",
+                18: "friendsui_greek-json",
+                19: "friendsui_hungarian-json",
+                20: "friendsui_italian-json",
+                21: "friendsui_japanese-json",
+                22: "friendsui_koreana-json",
+                23: "friendsui_latam-json",
+                24: "friendsui_norwegian-json",
+                25: "friendsui_polish-json",
+                26: "friendsui_portuguese-json",
+                27: "friendsui_romanian-json",
+                28: "friendsui_russian-json",
+                29: "friendsui_sc_schinese-json",
+                30: "friendsui_schinese-json",
+                31: "friendsui_spanish-json",
+                32: "friendsui_swedish-json",
+                33: "friendsui_tchinese-json",
+                34: "friendsui_thai-json",
+                35: "friendsui_turkish-json",
+                36: "friendsui_ukrainian-json",
+                37: "friendsui_vietnamese-json",
+                38: "shared_arabic-json",
+                39: "shared_brazilian-json",
+                40: "shared_bulgarian-json",
+                41: "shared_czech-json",
+                42: "shared_danish-json",
+                43: "shared_dutch-json",
+                44: "shared_english-json",
+                45: "shared_finnish-json",
+                46: "shared_french-json",
+                47: "shared_german-json",
+                48: "shared_greek-json",
+                49: "shared_hungarian-json",
+                50: "shared_italian-json",
+                51: "shared_japanese-json",
+                52: "shared_koreana-json",
+                53: "shared_latam-json",
+                54: "shared_norwegian-json",
+                55: "shared_polish-json",
+                56: "shared_portuguese-json",
+                57: "shared_romanian-json",
+                58: "shared_russian-json",
+                59: "shared_sc_schinese-json",
+                60: "shared_schinese-json",
+                61: "shared_spanish-json",
+                62: "shared_swedish-json",
+                63: "shared_tchinese-json",
+                64: "shared_thai-json",
+                65: "shared_turkish-json",
+                66: "shared_ukrainian-json",
+                67: "shared_vietnamese-json",
               }[e] || e) +
               ".js?contenthash=" +
               {
-                10: "cd110369657f6c0ac944",
-                11: "93883d74451b85066027",
-                12: "784312377378fd93c2a9",
-                13: "028d090a14cd5d4c4e06",
-                14: "370e8c582c7bb19f4bcf",
-                15: "1869ba85ce3872adc71a",
-                16: "8720130eb0caa5e76c0c",
-                17: "6d0c04cbf7eac1f3a5a9",
-                18: "f340538d76cd3570091f",
-                19: "670899768f4f80a30213",
-                20: "754680bdcc54a20b982c",
-                21: "03aaba010cc7dc351dd3",
-                22: "18e73630866ca4eddc6c",
-                23: "6694fa359ba817aa53ac",
-                24: "118c464bec5f19b03e37",
-                25: "e2fd891abf4aa4f4b0cd",
-                26: "5934a00599a75dbf763e",
-                27: "9bd422fda4b764f42afa",
-                28: "9ad8aa32fe0e230ae61f",
-                29: "77d8dd4acc00cc07ac7d",
-                30: "03d749f520ac644e7c04",
-                31: "ae10fffee43d1bfd6407",
-                32: "a22611475b691186d77a",
-                33: "dbb21c9b3e4a0756a2c3",
-                34: "1af255defe317fea22d5",
-                35: "0bf1ca122ca7aab8e900",
-                36: "524028205f25148444a4",
-                37: "2f65264882ac2342ca39",
-                38: "517926f4628f3f337c69",
-                39: "81b472c6e9901a233ca2",
-                40: "1cae2b880a684fc1b071",
-                41: "48e7e27a52167f712b56",
-                42: "c37dae763373d4d09c44",
-                43: "9dfc60065e157d256743",
-                44: "eedcc1d96fda07def2ce",
-                45: "b062b67aa419f92da021",
-                46: "1bd2bff27b36a307e764",
-                47: "c6077c835d2067345612",
-                48: "dddd9b4aee06e652613d",
-                49: "14d3497b8fa3994b9f8c",
-                50: "3382f44212b0247f7160",
-                51: "5c4993708ccd7f6693e1",
-                52: "a1860805874cdfa01fd3",
-                53: "7ca2f60dd872cc2d9ff7",
-                54: "92e49eec30e939657988",
-                55: "6cf68516b5be9f63015c",
-                56: "a89e94101e0c20d005d0",
-                57: "f008d6a82945a6749a02",
-                58: "39f7185879b5c8246f96",
-                59: "a39250ebdf26f94feede",
-                60: "12322e4260c06958759f",
-                61: "2d520aed999ff80c3400",
-                62: "06a600d34039708163a2",
-                63: "4cef450dc01a084086dc",
-                64: "d444c4dbf699f90ff239",
-                65: "3a757e28f57e9fb0750d",
-                66: "7bd36df86436f17099a4",
-                67: "8dff7e81bb9cfb06bff9",
-                68: "2f9bc8927d484c7298b1",
-                69: "c4ee96d73f5787266c12",
+                8: "7f48182463765343374f",
+                9: "0c56960e0ae63b14be95",
+                10: "cfe1517f78a25579b8aa",
+                11: "0dd2112ea1028866372c",
+                12: "a5090d3fd3ef9f45671a",
+                13: "1080824877e355c09249",
+                14: "9e0c6e9165c568bcf19f",
+                15: "736c8e547374be567d5e",
+                16: "854646e51773b7eaa34e",
+                17: "8c76dfc1d2b58ed14bf9",
+                18: "20242ef0956612166d3c",
+                19: "753a67079830eff42b31",
+                20: "7e97057fc5ed05ef6ced",
+                21: "c0cd8062fa0894c04b34",
+                22: "c954e80e0c74becb5db0",
+                23: "28cb6fd0979d5e3994f1",
+                24: "c6836e24e4f5af434b07",
+                25: "10d27ba1a50b137facdd",
+                26: "114a09baf5ebc8ef0ccf",
+                27: "8c3247e842b8f2a0f0ec",
+                28: "d5c01c003e6afa1ef527",
+                29: "f4b7d71b7d80031ffc11",
+                30: "1aa5cc408049bf6d3314",
+                31: "4c44bd421f8d0c296f3a",
+                32: "ad9dce3ca2f810e18ece",
+                33: "76bc4d3b486a79e48c60",
+                34: "9ac2910b4db4493a29ed",
+                35: "431f7cbef59ead06f9c8",
+                36: "9777a68ecddfc269d5bb",
+                37: "04ba25c68c3b0df5a784",
+                38: "22a5a4c7e4378bd531f5",
+                39: "5efbd3454418ae33fbf0",
+                40: "9b9fbd536aea76284321",
+                41: "df9399044ad20ff2933e",
+                42: "9122541cc7bd547d4ee2",
+                43: "aec6ab552ed4e26d6e49",
+                44: "88ff02fda9f2f1fa1c00",
+                45: "15fb920eaace401b7af4",
+                46: "f76e935155f599c4be96",
+                47: "045df1606c575836c358",
+                48: "6916e01de14e599d5171",
+                49: "8ea8af391ae187ae5f6d",
+                50: "e88a16d4efa4257b10f5",
+                51: "1f6e2627276678090e30",
+                52: "b24208bf68b80238a144",
+                53: "27c4a64a2b2febfbfca7",
+                54: "c161b3c7c1d777be0b89",
+                55: "e5b22a4a3da0e02d9250",
+                56: "8807c75c0b68767e6041",
+                57: "50db0b2587f9ebd26d4b",
+                58: "d2042b3301532957177e",
+                59: "eae17d6c18038567cb04",
+                60: "2741b07b5583df42dcf0",
+                61: "6726e968f904b154bd58",
+                62: "0d4958c7337e2ba74370",
+                63: "38da1a34744a77489106",
+                64: "d3be1565c4f2270d062f",
+                65: "a06fd84705a3c0af9e20",
+                66: "209e8a45e04bea68b7cb",
+                67: "0ea3d18a86d92e684265",
               }[e]
             );
           })(e));
@@ -259,7 +259,7 @@ var CLSTAMP = "7314802";
   (a.push = t), (a = a.slice());
   for (var u = 0; u < a.length; u++) t(a[u]);
   var l = c;
-  o.push(["qM/t", 1, 2, 0]), n();
+  o.push(["qM/t", 2, 0, 1]), n();
 })({
   "+gJN": function (e, t, n) {
     "use strict";
@@ -398,10 +398,10 @@ var CLSTAMP = "7314802";
         return p;
       }),
       n.d(t, "d", function () {
-        return g;
+        return b;
       }),
       n.d(t, "e", function () {
-        return b;
+        return g;
       }),
       n.d(t, "c", function () {
         return E;
@@ -421,7 +421,7 @@ var CLSTAMP = "7314802";
       h = "18446744073709551615",
       m = 0,
       p = 2147483647;
-    function g(e, t = "en") {
+    function b(e, t = "en") {
       switch (e) {
         case 0:
           return "en";
@@ -487,7 +487,7 @@ var CLSTAMP = "7314802";
           return t;
       }
     }
-    const b = (e) => ("koreana" === e ? "korean" : e);
+    const g = (e) => ("koreana" === e ? "korean" : e);
     function E(e, t = "") {
       switch (e) {
         case 0:
@@ -621,7 +621,7 @@ var CLSTAMP = "7314802";
           return t;
       }
     }
-    var S, C, T, v, y, I, R;
+    var C, S, v, T, y, I, R;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -637,7 +637,7 @@ var CLSTAMP = "7314802";
           "k_EConnectivityTestResult_WifiDisabled"),
         (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
           "k_EConnectivityTestResult_NoLAN");
-    })(S || (S = {})),
+    })(C || (C = {})),
       (function (e) {
         (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
           "k_ENetFakeLocalSystemState_Normal"),
@@ -651,7 +651,7 @@ var CLSTAMP = "7314802";
             "k_ENetFakeLocalSystemState_NoInternet"),
           (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
             "k_ENetFakeLocalSystemState_NoSteam");
-      })(C || (C = {})),
+      })(S || (S = {})),
       (function (e) {
         (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
           "k_ESuspendResumeProgressState_Invalid"),
@@ -665,7 +665,7 @@ var CLSTAMP = "7314802";
             "k_ESuspendResumeProgressState_WaitingForApp"),
           (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
             "k_ESuspendResumeProgressState_Working");
-      })(T || (T = {})),
+      })(v || (v = {})),
       (function (e) {
         (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
           "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -675,7 +675,7 @@ var CLSTAMP = "7314802";
             "k_EFloatingGamepadTextInputModeModeEmail"),
           (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
             "k_EFloatingGamepadTextInputModeModeNumeric");
-      })(v || (v = {})),
+      })(T || (T = {})),
       (function (e) {
         (e[(e.k_EAppUpdateContentType_Content = 0)] =
           "k_EAppUpdateContentType_Content"),
@@ -730,7 +730,7 @@ var CLSTAMP = "7314802";
         return p;
       }),
       n.d(t, "e", function () {
-        return b;
+        return g;
       }),
       n.d(t, "f", function () {
         return E;
@@ -890,30 +890,30 @@ var CLSTAMP = "7314802";
     function p(e, t = "webui_config") {
       return h(e, t, !1);
     }
-    function g(e, t) {
+    function b(e, t) {
       return 0 != t.length && e.startsWith(t);
     }
-    function b() {
+    function g() {
       if (!window || !window.location || !window.location.href)
         return console.warn("Unable to determine base url!"), "unknown";
       const e = window.location.href;
-      return g(e, o.STORE_BASE_URL)
+      return b(e, o.STORE_BASE_URL)
         ? o.STORE_BASE_URL
-        : g(e, o.COMMUNITY_BASE_URL)
+        : b(e, o.COMMUNITY_BASE_URL)
         ? o.COMMUNITY_BASE_URL
-        : g(e, o.CHAT_BASE_URL)
+        : b(e, o.CHAT_BASE_URL)
         ? o.CHAT_BASE_URL
-        : g(e, o.PARTNER_BASE_URL)
+        : b(e, o.PARTNER_BASE_URL)
         ? o.PARTNER_BASE_URL
-        : g(e, o.HELP_BASE_URL)
+        : b(e, o.HELP_BASE_URL)
         ? o.HELP_BASE_URL
-        : g(e, o.STEAMTV_BASE_URL)
+        : b(e, o.STEAMTV_BASE_URL)
         ? o.STEAMTV_BASE_URL
-        : g(e, o.STATS_BASE_URL)
+        : b(e, o.STATS_BASE_URL)
         ? o.STATS_BASE_URL
-        : g(e, o.INTERNAL_STATS_BASE_URL)
+        : b(e, o.INTERNAL_STATS_BASE_URL)
         ? o.INTERNAL_STATS_BASE_URL
-        : g(e, "https://steamloopback.host")
+        : b(e, "https://steamloopback.host")
         ? "https://steamloopback.host"
         : "";
     }
@@ -1045,36 +1045,36 @@ var CLSTAMP = "7314802";
   },
   "79S0": function (e, t, n) {
     var r = {
-      "./friendsui_arabic.json": ["C1RR", 10],
-      "./friendsui_brazilian.json": ["s2l5", 11],
-      "./friendsui_bulgarian.json": ["sXfD", 12],
-      "./friendsui_czech.json": ["TcQ7", 13],
-      "./friendsui_danish.json": ["lvoG", 14],
-      "./friendsui_dutch.json": ["6ght", 15],
-      "./friendsui_english.json": ["n/Sq", 16],
-      "./friendsui_finnish.json": ["A6os", 17],
-      "./friendsui_french.json": ["qtmt", 18],
-      "./friendsui_german.json": ["a23T", 19],
-      "./friendsui_greek.json": ["N3te", 20],
-      "./friendsui_hungarian.json": ["kOaF", 21],
-      "./friendsui_italian.json": ["5jaL", 22],
-      "./friendsui_japanese.json": ["MoM5", 23],
-      "./friendsui_koreana.json": ["omEY", 24],
-      "./friendsui_latam.json": ["uDNJ", 25],
-      "./friendsui_norwegian.json": ["oQbv", 26],
-      "./friendsui_polish.json": ["EhcC", 27],
-      "./friendsui_portuguese.json": ["bXmq", 28],
-      "./friendsui_romanian.json": ["EFxq", 29],
-      "./friendsui_russian.json": ["7jnr", 30],
-      "./friendsui_sc_schinese.json": ["tKeK", 31],
-      "./friendsui_schinese.json": ["gEsF", 32],
-      "./friendsui_spanish.json": ["yMyD", 33],
-      "./friendsui_swedish.json": ["w8HU", 34],
-      "./friendsui_tchinese.json": ["tgEv", 35],
-      "./friendsui_thai.json": ["5Ip8", 36],
-      "./friendsui_turkish.json": ["1E74", 37],
-      "./friendsui_ukrainian.json": ["JXOb", 38],
-      "./friendsui_vietnamese.json": ["bFjG", 39],
+      "./friendsui_arabic.json": ["C1RR", 8],
+      "./friendsui_brazilian.json": ["s2l5", 9],
+      "./friendsui_bulgarian.json": ["sXfD", 10],
+      "./friendsui_czech.json": ["TcQ7", 11],
+      "./friendsui_danish.json": ["lvoG", 12],
+      "./friendsui_dutch.json": ["6ght", 13],
+      "./friendsui_english.json": ["n/Sq", 14],
+      "./friendsui_finnish.json": ["A6os", 15],
+      "./friendsui_french.json": ["qtmt", 16],
+      "./friendsui_german.json": ["a23T", 17],
+      "./friendsui_greek.json": ["N3te", 18],
+      "./friendsui_hungarian.json": ["kOaF", 19],
+      "./friendsui_italian.json": ["5jaL", 20],
+      "./friendsui_japanese.json": ["MoM5", 21],
+      "./friendsui_koreana.json": ["omEY", 22],
+      "./friendsui_latam.json": ["uDNJ", 23],
+      "./friendsui_norwegian.json": ["oQbv", 24],
+      "./friendsui_polish.json": ["EhcC", 25],
+      "./friendsui_portuguese.json": ["bXmq", 26],
+      "./friendsui_romanian.json": ["EFxq", 27],
+      "./friendsui_russian.json": ["7jnr", 28],
+      "./friendsui_sc_schinese.json": ["tKeK", 29],
+      "./friendsui_schinese.json": ["gEsF", 30],
+      "./friendsui_spanish.json": ["yMyD", 31],
+      "./friendsui_swedish.json": ["w8HU", 32],
+      "./friendsui_tchinese.json": ["tgEv", 33],
+      "./friendsui_thai.json": ["5Ip8", 34],
+      "./friendsui_turkish.json": ["1E74", 35],
+      "./friendsui_ukrainian.json": ["JXOb", 36],
+      "./friendsui_vietnamese.json": ["bFjG", 37],
     };
     function i(e) {
       if (!n.o(r, e))
@@ -1099,7 +1099,7 @@ var CLSTAMP = "7314802";
     n.d(t, "c", function () {
       return r.a;
     }),
-      n.d(t, "i", function () {
+      n.d(t, "j", function () {
         return r.e;
       }),
       n.d(t, "g", function () {
@@ -1108,7 +1108,7 @@ var CLSTAMP = "7314802";
       n.d(t, "e", function () {
         return r.b;
       }),
-      n.d(t, "m", function () {
+      n.d(t, "n", function () {
         return r.f;
       }),
       n.d(t, "f", function () {
@@ -1123,17 +1123,20 @@ var CLSTAMP = "7314802";
       n.d(t, "a", function () {
         return a;
       }),
-      n.d(t, "k", function () {
+      n.d(t, "l", function () {
         return c;
       }),
-      n.d(t, "j", function () {
+      n.d(t, "k", function () {
         return u;
       }),
-      n.d(t, "l", function () {
+      n.d(t, "m", function () {
         return f;
       }),
+      n.d(t, "i", function () {
+        return _;
+      }),
       n.d(t, "b", function () {
-        return _.a;
+        return h.a;
       });
     var r = n("61mD"),
       i = n("cDcd");
@@ -1195,40 +1198,51 @@ var CLSTAMP = "7314802";
         )
       );
     }
-    var _ = n("y3Ls");
+    function _() {
+      const [e, t] = i.useState(0),
+        n = i.useCallback(
+          (n) => {
+            const r = n.target.clientHeight;
+            r > e && t(r);
+          },
+          [e]
+        );
+      return { strMinHeightStyle: e + "px", refForResizeObserver: f(n) };
+    }
+    var h = n("y3Ls");
   },
   "9Lmx": function (e, t, n) {
     var r = {
-      "./shared_arabic.json": ["nqme", 40],
-      "./shared_brazilian.json": ["f72x", 41],
-      "./shared_bulgarian.json": ["+RpC", 42],
-      "./shared_czech.json": ["R6Nw", 43],
-      "./shared_danish.json": ["GK4l", 44],
-      "./shared_dutch.json": ["7VLV", 45],
-      "./shared_english.json": ["qlTB", 46],
-      "./shared_finnish.json": ["t0Wk", 47],
-      "./shared_french.json": ["KB2W", 48],
-      "./shared_german.json": ["SP05", 49],
-      "./shared_greek.json": ["m6XH", 50],
-      "./shared_hungarian.json": ["cNDp", 51],
-      "./shared_italian.json": ["82/m", 52],
-      "./shared_japanese.json": ["i10C", 53],
-      "./shared_koreana.json": ["+pE0", 54],
-      "./shared_latam.json": ["/6Od", 55],
-      "./shared_norwegian.json": ["wpCC", 56],
-      "./shared_polish.json": ["dmUA", 57],
-      "./shared_portuguese.json": ["AM9g", 58],
-      "./shared_romanian.json": ["rCBS", 59],
-      "./shared_russian.json": ["ur1L", 60],
-      "./shared_sc_schinese.json": ["TcHa", 61],
-      "./shared_schinese.json": ["25it", 62],
-      "./shared_spanish.json": ["2NJD", 63],
-      "./shared_swedish.json": ["YZF4", 64],
-      "./shared_tchinese.json": ["TBOT", 65],
-      "./shared_thai.json": ["4+X1", 66],
-      "./shared_turkish.json": ["w87n", 67],
-      "./shared_ukrainian.json": ["6eLe", 68],
-      "./shared_vietnamese.json": ["AKAV", 69],
+      "./shared_arabic.json": ["nqme", 38],
+      "./shared_brazilian.json": ["f72x", 39],
+      "./shared_bulgarian.json": ["+RpC", 40],
+      "./shared_czech.json": ["R6Nw", 41],
+      "./shared_danish.json": ["GK4l", 42],
+      "./shared_dutch.json": ["7VLV", 43],
+      "./shared_english.json": ["qlTB", 44],
+      "./shared_finnish.json": ["t0Wk", 45],
+      "./shared_french.json": ["KB2W", 46],
+      "./shared_german.json": ["SP05", 47],
+      "./shared_greek.json": ["m6XH", 48],
+      "./shared_hungarian.json": ["cNDp", 49],
+      "./shared_italian.json": ["82/m", 50],
+      "./shared_japanese.json": ["i10C", 51],
+      "./shared_koreana.json": ["+pE0", 52],
+      "./shared_latam.json": ["/6Od", 53],
+      "./shared_norwegian.json": ["wpCC", 54],
+      "./shared_polish.json": ["dmUA", 55],
+      "./shared_portuguese.json": ["AM9g", 56],
+      "./shared_romanian.json": ["rCBS", 57],
+      "./shared_russian.json": ["ur1L", 58],
+      "./shared_sc_schinese.json": ["TcHa", 59],
+      "./shared_schinese.json": ["25it", 60],
+      "./shared_spanish.json": ["2NJD", 61],
+      "./shared_swedish.json": ["YZF4", 62],
+      "./shared_tchinese.json": ["TBOT", 63],
+      "./shared_thai.json": ["4+X1", 64],
+      "./shared_turkish.json": ["w87n", 65],
+      "./shared_ukrainian.json": ["6eLe", 66],
+      "./shared_vietnamese.json": ["AKAV", 67],
     };
     function i(e) {
       if (!n.o(r, e))
@@ -1393,7 +1407,7 @@ var CLSTAMP = "7314802";
         this.m_vecCallbacks.push(e);
         return {
           Unregister: () => {
-            i.d(this.m_vecCallbacks, e);
+            i.c(this.m_vecCallbacks, e);
           },
         };
       }
@@ -1761,35 +1775,26 @@ var CLSTAMP = "7314802";
   },
   Kcgk: function (e, t, n) {
     "use strict";
-    n.d(t, "j", function () {
+    n.d(t, "g", function () {
       return a;
     }),
-      n.d(t, "f", function () {
+      n.d(t, "e", function () {
         return c;
       }),
-      n.d(t, "h", function () {
+      n.d(t, "f", function () {
         return u;
       }),
-      n.d(t, "g", function () {
-        return d;
-      }),
-      n.d(t, "i", function () {
-        return h;
-      }),
       n.d(t, "b", function () {
-        return m;
+        return _;
       }),
       n.d(t, "d", function () {
-        return S;
+        return g;
       }),
       n.d(t, "c", function () {
-        return C;
-      }),
-      n.d(t, "e", function () {
-        return v;
+        return E;
       }),
       n.d(t, "a", function () {
-        return y;
+        return C;
       });
     var r,
       i = n("oh5H"),
@@ -1813,42 +1818,42 @@ var CLSTAMP = "7314802";
         (s.eSuffix == r.Ago
           ? (a = "#TimeSince_")
           : s.eSuffix == r.Remaining && (a = "#TimeRemaining_"),
-        e >= 2 * o.e.PerYear)
+        e >= 2 * o.d.PerYear)
       )
-        return Object(i.f)(a + "XYears", Math.floor(e / o.e.PerYear));
-      if (e >= o.e.PerYear)
-        return (e -= o.e.PerYear) >= 2 * o.e.PerMonth && !s.bForceSingleUnits
-          ? Object(i.f)(a + "1YearXMonths", Math.floor(e / o.e.PerMonth))
+        return Object(i.f)(a + "XYears", Math.floor(e / o.d.PerYear));
+      if (e >= o.d.PerYear)
+        return (e -= o.d.PerYear) >= 2 * o.d.PerMonth && !s.bForceSingleUnits
+          ? Object(i.f)(a + "1YearXMonths", Math.floor(e / o.d.PerMonth))
           : Object(i.f)(a + "1Year");
-      if (e >= 2 * o.e.PerMonth)
-        return Object(i.f)(a + "XMonths", Math.floor(e / o.e.PerMonth));
-      if (e >= 2 * o.e.PerWeek)
-        return Object(i.f)(a + "XWeeks", Math.floor(e / o.e.PerWeek));
-      if (e >= o.e.PerWeek)
-        return Object(i.f)(a + "1Week", Math.floor(e / o.e.PerWeek));
-      if (e >= 2 * o.e.PerDay)
-        return Object(i.f)(a + "XDays", Math.floor(e / o.e.PerDay));
-      if (e >= o.e.PerDay)
-        return (e -= o.e.PerDay) >= 2 * o.e.PerHour && !s.bForceSingleUnits
-          ? Object(i.f)(a + "1DayXHours", Math.floor(e / o.e.PerHour))
+      if (e >= 2 * o.d.PerMonth)
+        return Object(i.f)(a + "XMonths", Math.floor(e / o.d.PerMonth));
+      if (e >= 2 * o.d.PerWeek)
+        return Object(i.f)(a + "XWeeks", Math.floor(e / o.d.PerWeek));
+      if (e >= o.d.PerWeek)
+        return Object(i.f)(a + "1Week", Math.floor(e / o.d.PerWeek));
+      if (e >= 2 * o.d.PerDay)
+        return Object(i.f)(a + "XDays", Math.floor(e / o.d.PerDay));
+      if (e >= o.d.PerDay)
+        return (e -= o.d.PerDay) >= 2 * o.d.PerHour && !s.bForceSingleUnits
+          ? Object(i.f)(a + "1DayXHours", Math.floor(e / o.d.PerHour))
           : Object(i.f)(a + "1Day");
-      if (e >= 2 * o.e.PerHour)
-        return Object(i.f)(a + "XHours", Math.floor(e / o.e.PerHour));
-      if (e >= o.e.PerHour)
-        return (e -= o.e.PerHour) >= 2 * o.e.PerMinute && !s.bForceSingleUnits
-          ? Object(i.f)(a + "1HourXMinutes", Math.floor(e / o.e.PerMinute))
+      if (e >= 2 * o.d.PerHour)
+        return Object(i.f)(a + "XHours", Math.floor(e / o.d.PerHour));
+      if (e >= o.d.PerHour)
+        return (e -= o.d.PerHour) >= 2 * o.d.PerMinute && !s.bForceSingleUnits
+          ? Object(i.f)(a + "1HourXMinutes", Math.floor(e / o.d.PerMinute))
           : Object(i.f)(a + "1Hour");
-      if (e >= 2 * o.e.PerMinute) {
-        const t = Math.floor(e / o.e.PerMinute),
-          n = e % o.e.PerMinute;
+      if (e >= 2 * o.d.PerMinute) {
+        const t = Math.floor(e / o.d.PerMinute),
+          n = e % o.d.PerMinute;
         return s.bHighGranularity && 0 != n
           ? 1 == n
             ? Object(i.f)(a + "XMinutes1Second", t)
             : Object(i.f)(a + "XMinutesXSeconds", t, n)
           : Object(i.f)(a + "XMinutes", t);
       }
-      if (e >= o.e.PerMinute) {
-        const t = e % o.e.PerMinute;
+      if (e >= o.d.PerMinute) {
+        const t = e % o.d.PerMinute;
         return s.bHighGranularity && 0 != t
           ? 1 == t
             ? Object(i.f)(a + "1Minute1Second")
@@ -1916,33 +1921,9 @@ var CLSTAMP = "7314802";
           : { hour: "numeric", minute: "2-digit" }
       );
     }
-    const f = new Map(),
-      _ = new Map();
-    function h(e, t, n = !0, r = !0) {
-      const o = new Date(),
-        a = new Date(1e3 * e);
-      if (a.getFullYear() != o.getFullYear()) return u(e);
-      r && s.b(new Date().setHours(24, 0, 0, 0) - o.getTime());
-      const c = new Date();
-      if ((c.setHours(0, 0, 0, 0), n))
-        if (a >= c) {
-          if ((c.setDate(c.getDate() + 1), a < c))
-            return Object(i.f)("#Time_Today");
-          if ((c.setDate(c.getDate() + 1), a < c))
-            return Object(i.f)("#Time_Tomorrow");
-        } else if ((c.setDate(c.getDate() - 1), a >= c))
-          return Object(i.f)("#Time_Yesterday");
-      const l = { month: t ? "long" : "short", day: "numeric" },
-        d = a.setHours(0, 0, 0, 0) + l.month;
-      let f = _.get(d);
-      return (
-        f ||
-        ((f = a.toLocaleDateString(i.e.GetPreferredLocales(), l)),
-        _.set(d, f),
-        f)
-      );
-    }
-    function m(e, t) {
+    const f = new Map();
+    new Map();
+    function _(e, t) {
       const n = new Date(1e3 * e),
         r = new Date(),
         a = Object.assign(
@@ -1961,10 +1942,10 @@ var CLSTAMP = "7314802";
       if (n > r) {
         if (!a.bGranularFutureTime)
           return (
-            s.b(n.getTime() - r.getTime()),
-            n.getFullYear() == r.getFullYear() ? T(n) : y(n)
+            s.a(n.getTime() - r.getTime()),
+            n.getFullYear() == r.getFullYear() ? k(n) : C(n)
           );
-        s.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+        s.a(new Date().setHours(24, 0, 0, 0) - r.getTime());
         let e = new Date();
         return (
           e.setHours(0, 0, 0, 0),
@@ -1975,10 +1956,10 @@ var CLSTAMP = "7314802";
               n < e
                 ? Object(i.f)("#Time_Tomorrow")
                 : (e.setDate(e.getDate() + 5),
-                  n < e ? C(n) : S(n, !0, a.bAbbreviateDayOfWeek)))
+                  n < e ? E(n) : g(n, !0, a.bAbbreviateDayOfWeek)))
         );
       }
-      s.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+      s.a(new Date().setHours(24, 0, 0, 0) - r.getTime());
       let u = new Date();
       if ((u.setHours(0, 0, 0, 0), n >= u))
         return a.bGranularToday
@@ -1998,7 +1979,7 @@ var CLSTAMP = "7314802";
           : Object(i.f)("#Time_Yesterday");
       u.setDate(r.getDate() - 6);
       const l = new Date(u);
-      if (a.bGranularWeek && n >= l) return S(n, !1, !a.bAbbreviateDayOfWeek);
+      if (a.bGranularWeek && n >= l) return g(n, !1, !a.bAbbreviateDayOfWeek);
       if (a.bGranularPast)
         return Object(i.f)(
           "#Time_Past_At",
@@ -2008,76 +1989,64 @@ var CLSTAMP = "7314802";
       if (n >= l) return Object(i.f)("#TimeSince_ThisWeek");
       if (n.getMonth() == r.getMonth() && n.getFullYear() == r.getFullYear()) {
         const e =
-          Math.floor((l.valueOf() - n.valueOf()) / (1e3 * o.e.PerWeek)) + 1;
+          Math.floor((l.valueOf() - n.valueOf()) / (1e3 * o.d.PerWeek)) + 1;
         return 1 == e
           ? Object(i.f)("#TimeSince_1Week")
           : Object(i.f)("#TimeSince_XWeeks", e);
       }
-      return n.getFullYear() == r.getFullYear() ? T(n) : y(n);
+      return n.getFullYear() == r.getFullYear() ? k(n) : C(n);
     }
-    const p = new Map(),
-      g = new Map(),
-      b = new Map(),
-      E = new Map(),
-      k = new Map();
-    function S(e, t = !1, n = !0) {
+    const h = new Map(),
+      m = new Map(),
+      p = (new Map(), new Map()),
+      b = new Map();
+    function g(e, t = !1, n = !0) {
       const r = {
           weekday: n ? "long" : "short",
           day: "numeric",
           month: t ? "long" : "short",
         },
         o = e.setHours(0, 0, 0, 0) + r.weekday + r.month;
-      let s = k.get(o);
+      let s = b.get(o);
       return (
         s ||
         ((s = e.toLocaleDateString(i.e.GetPreferredLocales(), r)),
-        k.set(o, s),
+        b.set(o, s),
         s)
       );
     }
-    function C(e) {
-      let t = p.get(e.getDay());
+    function E(e) {
+      let t = h.get(e.getDay());
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           weekday: "long",
         })),
-        p.set(e.getDay(), t),
+        h.set(e.getDay(), t),
         t)
       );
     }
-    function T(e) {
-      let t = g.get(e.getMonth());
+    function k(e) {
+      let t = m.get(e.getMonth());
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           month: "long",
         })),
-        g.set(e.getMonth(), t),
+        m.set(e.getMonth(), t),
         t)
       );
     }
-    function v(e) {
-      let t = b.get(e.getFullYear());
-      return (
-        t ||
-        ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
-          year: "numeric",
-        })),
-        b.set(e.getFullYear(), t),
-        t)
-      );
-    }
-    function y(e) {
+    function C(e) {
       const t = e.getMonth() + 12 * e.getFullYear();
-      let n = E.get(t);
+      let n = p.get(t);
       return (
         n ||
         ((n = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           month: "long",
           year: "numeric",
         })),
-        E.set(t, n),
+        p.set(t, n),
         n)
       );
     }
@@ -2148,14 +2117,10 @@ var CLSTAMP = "7314802";
       return u.a;
     });
     var l = n("S4yt");
-    n.o(l, "AppTypeForEStoreAppType") &&
-      n.d(t, "AppTypeForEStoreAppType", function () {
-        return l.AppTypeForEStoreAppType;
+    n.o(l, "BIsSaleItemType") &&
+      n.d(t, "BIsSaleItemType", function () {
+        return l.BIsSaleItemType;
       }),
-      n.o(l, "BIsSaleItemType") &&
-        n.d(t, "BIsSaleItemType", function () {
-          return l.BIsSaleItemType;
-        }),
       n.o(l, "DefaultFriendsSettings") &&
         n.d(t, "DefaultFriendsSettings", function () {
           return l.DefaultFriendsSettings;
@@ -2174,12 +2139,9 @@ var CLSTAMP = "7314802";
       return d.a;
     });
     var f = n("YtLl");
-    n.d(t, "AppTypeForEStoreAppType", function () {
+    n.d(t, "BIsSaleItemType", function () {
       return f.a;
-    }),
-      n.d(t, "BIsSaleItemType", function () {
-        return f.b;
-      });
+    });
     var _ = n("/6ik");
     n.d(t, "EClientUsedInputType", function () {
       return _.a;
@@ -2250,35 +2212,32 @@ var CLSTAMP = "7314802";
   },
   UqDm: function (e, t, n) {
     "use strict";
-    n.d(t, "h", function () {
+    n.d(t, "g", function () {
       return r;
     }),
-      n.d(t, "f", function () {
+      n.d(t, "e", function () {
         return i;
       }),
-      n.d(t, "a", function () {
+      n.d(t, "c", function () {
         return o;
       }),
       n.d(t, "d", function () {
         return s;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "b", function () {
         return a;
       }),
-      n.d(t, "c", function () {
+      n.d(t, "a", function () {
         return c;
       }),
-      n.d(t, "b", function () {
+      n.d(t, "h", function () {
         return u;
       }),
       n.d(t, "i", function () {
         return l;
       }),
-      n.d(t, "j", function () {
+      n.d(t, "f", function () {
         return d;
-      }),
-      n.d(t, "g", function () {
-        return f;
       });
     n("XaMz");
     function r(e) {
@@ -2298,26 +2257,19 @@ var CLSTAMP = "7314802";
         (n >= e.length && (e[n] = void 0), e.splice(n, 0, e.splice(t, 1)[0]));
     }
     function o(e, t) {
-      if (!e && !t) return !0;
-      if (!e || !t) return !1;
-      if (e.length != t.length) return !1;
-      for (let n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
-      return !0;
+      return s(e, (e) => t == e);
     }
     function s(e, t) {
-      return a(e, (e) => t == e);
-    }
-    function a(e, t) {
       let n = e.findIndex(t);
       return n >= 0 && (e.splice(n, 1), !0);
     }
-    function c(e, t) {
+    function a(e, t) {
       return e.reduce((e, n, r, i) => e + (t(n, r, i) ? 1 : 0), 0);
     }
-    function u(e, t) {
+    function c(e, t) {
       return e.filter((e) => t !== e);
     }
-    function l(e, t, n) {
+    function u(e, t, n) {
       let r = 0,
         i = e.length - 1;
       for (; r <= i; ) {
@@ -2333,11 +2285,11 @@ var CLSTAMP = "7314802";
       }
       return i;
     }
-    function d(e, t, n) {
-      let r = l(e, t, n);
+    function l(e, t, n) {
+      let r = u(e, t, n);
       e.splice(r + 1, 0, t);
     }
-    function f(e, t, n) {
+    function d(e, t, n) {
       return (
         e ||
           console.error(
@@ -2400,34 +2352,9 @@ var CLSTAMP = "7314802";
     "use strict";
     n.d(t, "a", function () {
       return r;
-    }),
-      n.d(t, "b", function () {
-        return i;
-      });
+    });
     n("wd0Q"), n("fzER");
     function r(e) {
-      switch (e) {
-        case 0:
-          return "game";
-        case 6:
-          return "software";
-        case 1:
-          return "demo";
-        case 4:
-          return "dlc";
-        case 7:
-        case 3:
-          return "video";
-        case 11:
-          return "music";
-        case 12:
-          return "beta";
-        case 2:
-          return "mod";
-      }
-      return "invalid";
-    }
-    function i(e) {
       return (
         "game" === e ||
         "dlc" === e ||
@@ -2705,26 +2632,23 @@ var CLSTAMP = "7314802";
       n.d(t, "f", function () {
         return d;
       }),
-      n.d(t, "n", function () {
+      n.d(t, "l", function () {
         return f;
       }),
-      n.d(t, "l", function () {
+      n.d(t, "k", function () {
         return _;
       }),
-      n.d(t, "m", function () {
-        return h;
-      }),
       n.d(t, "a", function () {
-        return p;
+        return m;
       }),
       n.d(t, "d", function () {
         return b;
       }),
       n.d(t, "c", function () {
-        return E;
+        return g;
       }),
       n.d(t, "e", function () {
-        return k;
+        return E;
       });
     var r = n("cDcd"),
       i = n("0N1H"),
@@ -2742,17 +2666,11 @@ var CLSTAMP = "7314802";
       n.d(t, "j", function () {
         return u.e;
       }),
-      n.d(t, "k", function () {
+      n.d(t, "m", function () {
         return u.f;
       }),
-      n.d(t, "o", function () {
-        return u.h;
-      }),
-      n.d(t, "p", function () {
-        return u.i;
-      }),
-      n.d(t, "q", function () {
-        return u.j;
+      n.d(t, "n", function () {
+        return u.g;
       }),
       n.d(t, "i", function () {
         return u.d;
@@ -2860,11 +2778,11 @@ var CLSTAMP = "7314802";
       }
     }
     function d(e, ...t) {
-      let n = k.LocalizeString(e);
-      return void 0 === n ? e : m(n, ...t);
+      let n = E.LocalizeString(e);
+      return void 0 === n ? e : h(n, ...t);
     }
     function f(e, ...t) {
-      let n = k.LocalizeString(e);
+      let n = E.LocalizeString(e);
       if (void 0 === n) return e;
       let i,
         o = [],
@@ -2877,28 +2795,10 @@ var CLSTAMP = "7314802";
       }
       return o.push(n.substr(a)), r.createElement(r.Fragment, null, ...o);
     }
-    function _(e, ...t) {
-      let n = k.LocalizeString(e);
-      if (void 0 === n) return e;
-      let i,
-        o = [],
-        s = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
-        a = 0;
-      for (; (i = s.exec(n)); ) {
-        (a += i[0].length), o.push(i[1]);
-        let e = parseInt(i[2]),
-          n = i[3] || "",
-          s = (e >= 1 && e <= t.length ? t[e - 1] : null)
-            ? r.cloneElement(t[e - 1], {}, [n])
-            : n;
-        o.push(s);
-      }
-      return o.push(n.substr(a)), r.createElement(r.Fragment, null, ...o);
-    }
-    function h(e, t, ...n) {
+    function _(e, t, ...n) {
       return 1 === t || "1" === t ? d(e, t, ...n) : d(e + "_Plural", t, ...n);
     }
-    function m(e, ...t) {
+    function h(e, ...t) {
       return 0 == t.length
         ? e
         : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -2909,11 +2809,11 @@ var CLSTAMP = "7314802";
             return e;
           }));
     }
-    class p {
+    class m {
       static Set(e, t, n) {
         if (e.length <= t) {
           if (t >= 30) return e;
-          e = Object(a.g)(e, t + 1, null);
+          e = Object(a.f)(e, t + 1, null);
         }
         return (e[t] = n), e;
       }
@@ -2922,12 +2822,12 @@ var CLSTAMP = "7314802";
       }
       static GetWithFallback(e, t) {
         if (e) {
-          return p.Get(e, t) || p.Get(e, l.GetELanguageFallback(t));
+          return m.Get(e, t) || m.Get(e, l.GetELanguageFallback(t));
         }
         return null;
       }
     }
-    const g = {
+    const p = {
         english: "en",
         german: "de",
         french: "fr",
@@ -2991,11 +2891,11 @@ var CLSTAMP = "7314802";
         "es-419": 27,
         "vi-VN": 28,
       };
-    function E() {
-      return g[s.d.LANGUAGE] || null;
+    function g() {
+      return p[s.d.LANGUAGE] || null;
     }
-    const k = new l();
-    window.LocalizationManager = k;
+    const E = new l();
+    window.LocalizationManager = E;
   },
   "qM/t": function (e, t, n) {
     "use strict";
@@ -3016,7 +2916,7 @@ var CLSTAMP = "7314802";
     n("RBVV");
     class p extends f.b {
       BIsExpired() {
-        return g.sm_rtTimeCur >= this.m_rtTimeExpires;
+        return b.sm_rtTimeCur >= this.m_rtTimeExpires;
       }
       InitFromPHPInviteLinkInfo(e) {
         this.m_ulChatID = e.chat_id;
@@ -3033,7 +2933,7 @@ var CLSTAMP = "7314802";
       }
     }
     Object(r.b)([l.k], p.prototype, "InitFromPHPInviteLinkInfo", null);
-    class g {
+    class b {
       constructor(e) {
         (this.m_bConnectingToClient = !1),
           (this.m_invite = new p(e.strInviteCode)),
@@ -3115,9 +3015,9 @@ var CLSTAMP = "7314802";
             }));
       }
     }
-    Object(r.b)([l.C], g.prototype, "m_bConnectingToClient", void 0),
-      Object(r.b)([l.C], g.prototype, "m_connectResult", void 0);
-    let b = class extends i.Component {
+    Object(r.b)([l.C], b.prototype, "m_bConnectingToClient", void 0),
+      Object(r.b)([l.C], b.prototype, "m_connectResult", void 0);
+    let g = class extends i.Component {
       render() {
         return i.createElement(
           "div",
@@ -3128,7 +3028,7 @@ var CLSTAMP = "7314802";
         );
       }
     };
-    b = Object(r.b)([d.a], b);
+    g = Object(r.b)([d.a], g);
     let E = class extends i.Component {
       constructor() {
         super(...arguments), (this.m_bTriedToLaunchSteam = !1);
@@ -3183,7 +3083,7 @@ var CLSTAMP = "7314802";
                 i.createElement(
                   "div",
                   { className: "inviteLabel" },
-                  Object(c.n)(
+                  Object(c.l)(
                     "#InviteLanding_SentToSteam_Desc",
                     i.createElement(
                       "a",
@@ -3200,7 +3100,7 @@ var CLSTAMP = "7314802";
               )
             : e.account_mismatch
             ? i.createElement(
-                S,
+                C,
                 { render: this.props.controller.GetPreRenderedHTML() },
                 i.createElement(
                   "div",
@@ -3242,7 +3142,7 @@ var CLSTAMP = "7314802";
                 i.createElement(
                   "div",
                   { className: "inviteLabel" },
-                  Object(c.n)(
+                  Object(c.l)(
                     "#InviteLanding_SentToSteam_Desc",
                     i.createElement(
                       "a",
@@ -3258,7 +3158,7 @@ var CLSTAMP = "7314802";
                 )
               )
             : i.createElement(
-                S,
+                C,
                 { render: this.props.controller.GetPreRenderedHTML() },
                 i.createElement(
                   "div",
@@ -3311,7 +3211,7 @@ var CLSTAMP = "7314802";
         );
       }
     }
-    function S(e) {
+    function C(e) {
       return i.createElement(
         "div",
         { className: "ChatMessageInvite" },
@@ -3325,7 +3225,7 @@ var CLSTAMP = "7314802";
           i.createElement(
             "div",
             { className: "inviteLabel" },
-            Object(c.n)(
+            Object(c.l)(
               "#bbcode_invite_description",
               i.createElement("span", {
                 dangerouslySetInnerHTML: {
@@ -3344,17 +3244,17 @@ var CLSTAMP = "7314802";
       );
     }
     window.AssertMsg = u.a;
-    let C = new a.a();
-    function T(e) {
+    let S = new a.a();
+    function v(e) {
       let t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
       } catch (e) {}
-      g.sm_rtTimeCur = t.rtTimeCur;
-      let n = new g(t);
-      o.render(i.createElement(b, { controller: n }), e);
+      b.sm_rtTimeCur = t.rtTimeCur;
+      let n = new b(t);
+      o.render(i.createElement(g, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = C),
+    (window.ClientConnectionAPI = S),
       document.addEventListener("DOMContentLoaded", function () {
         return Object(r.a)(this, void 0, void 0, function* () {
           Object(s.c)(),
@@ -3381,7 +3281,7 @@ var CLSTAMP = "7314802";
                   r = n.getAttribute("data-component");
                 switch (r) {
                   case "ChatInvite":
-                    T(n);
+                    v(n);
                     break;
                   default:
                     Object(u.a)(!1, `unknown component: "${r}"`);
@@ -3723,7 +3623,7 @@ var CLSTAMP = "7314802";
   },
   ujHl: function (e, t, n) {
     "use strict";
-    n.d(t, "e", function () {
+    n.d(t, "d", function () {
       return r;
     }),
       n.d(t, "a", function () {
@@ -3735,11 +3635,8 @@ var CLSTAMP = "7314802";
       n.d(t, "c", function () {
         return s;
       }),
-      n.d(t, "d", function () {
+      n.d(t, "e", function () {
         return a;
-      }),
-      n.d(t, "f", function () {
-        return c;
       });
     const r = {
       PerYear: 31536e3,
@@ -3760,20 +3657,9 @@ var CLSTAMP = "7314802";
       return e.getFullYear() == t.getFullYear();
     }
     function s(e) {
-      return new Date(
-        e.getFullYear(),
-        e.getMonth(),
-        e.getDate(),
-        e.getHours(),
-        0,
-        0,
-        0
-      );
-    }
-    function a(e) {
       return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
     }
-    function c(e) {
+    function a(e) {
       return new Promise((t) => setTimeout(t, e));
     }
   },

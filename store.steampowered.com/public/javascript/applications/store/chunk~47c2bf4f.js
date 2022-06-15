@@ -1658,7 +1658,14 @@
                         const t = e.id(),
                           s = e.item_type();
                         if (1 != e.success() || this.BIsStoreItemMissing(t, s))
-                          switch (s) {
+                          switch (
+                            ("dev" == _.d.WEB_UNIVERSE &&
+                              console.warn(
+                                `Failed to load ${t} type ${s} with error ${e.success()}`,
+                                e
+                              ),
+                            s)
+                          ) {
                             case 0:
                               this.m_setUnavailableApps.add(t),
                                 this.m_mapApps.delete(t);
