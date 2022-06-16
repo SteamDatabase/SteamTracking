@@ -1770,7 +1770,7 @@
 	"Library_Details_GameDesignKeyboardMouseWarning_Desc"		"Ґеймплей у цій грі залежить від клавіатури та миші."
 	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Title"		"НЕОБХІДНА КЛАВІАТУРА ТА МИШКА"
 	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc"		"Творці цієї гри, зробили інтерфейс який відповідає клавіатури та/або миші."
-	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc_Detail"		"Творці цієї гри, зробили інтерфейс який відповідає клавіатури та/або миші. Для прикладу, гра може містити налаштування які не призначені для ґеймпада чи або мені яким не можна буде користуватись на ґеймпаді."
+	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc_Detail"		"Інтерфейс цієї гри розроблений так, що вам необхідна клавіатура та/або миша, щоб зіграти в деякі її частини. Наприклад, у ній може бути проміжний запускач або внутрішньоігрове меню, навігація якими не можлива без контролера."
 	"Library_Details_OverlayDisabledWarning_Title"		"ОВЕРЛЕЙ STEAM ВИМКНЕНО"
 	"Library_Details_OverlayDisabledWarning_Desc"		"Оверлей Steam вимкнено. Внутрішньоігрова конфігурація та деякі функції контролера Steam недоступні."
 	"Library_Details_OverlayDisabledWarning_Desc_Detail"		"Оверлей Steam потрібний для внутрішньоігрової конфігурації вашого контролера Steam. Будь ласка, увімкніть його глобально або тільки для цієї гри, щоб користуватись функціональністю контролера повною мірою."
@@ -7597,8 +7597,6 @@
 	"SteamUI_ProcessShader_Description"	"Кешування шейдерів займе багато часу — бажаєте пропустити?"
 	"Steam_WaitingForShaderCache"	"Поточний перебіг кешування шейдерів — {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Гру буде запущено зі Steam Play, використовуючи інструмент сумісності платформ."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Режим коліщатка"
 	"Library_Details_FieldLabel_Invert"			"Інвертування"
 	"ControllerBinding_SoftPress_Invert"	"Інвертування порогу"

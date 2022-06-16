@@ -1,0 +1,28 @@
+"controller_mappings"
+{
+	"version"		"3"
+	"title"		"Disabled"
+	"description"		"This configuration disables desktop bindings."
+	"creator"		"76561197969363440"
+	"controller_type"		"controller_xboxone"
+	"group"
+	{
+		"id"		"0"
+		"mode"		"switches"
+		"inputs"
+		{
+		}
+	}
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"0"		"switch active"
+		}
+	}
+	"settings"
+	{
+	}
+}

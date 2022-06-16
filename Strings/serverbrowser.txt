@@ -34,19 +34,20 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
+18
 __thread_vars
 __DATA
 0
 __thread_data
 __DATA
-@H'
+@I'
 @
-@H'
+@I'
 __thread_bss
 __DATA
 __bss
 __DATA
-".
+2.
 __common
 __DATA
 H
@@ -64,7 +65,6 @@ P
 8
 @loader_path/libvstdlib_s.dylib
 @
-@loader_path/libSDL2-2.0.0.dylib
 h
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 X
@@ -376,6 +376,10 @@ $
 $
 (
 ,
+@
+0
+8
+,
 $
 (
 ,
@@ -494,6 +498,7 @@ $
 8
 @
 4
+H
 (
 (
 
@@ -526,7 +531,7 @@ X
 (
 (
 0
-0
+H
 0
 0
 (
@@ -598,7 +603,7 @@ X
 8
 (
 8
-H
+P
 0
 (
 (
@@ -773,6 +778,7 @@ H
 41CMsgBrowserViewPostMessageToParentRequest
 18CMsgBlockedRequest
 24CMsgSetProtocolBlockList
+29CMsgSetForceDeviceScaleFactor
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 25CPanelAnimationDictionary
@@ -3858,6 +3864,7 @@ j
 j
 j
 j
+2%
 0
 0
 AT=
@@ -3927,7 +3934,6 @@ M9e
 
 
 
-
 d
 A+M
 
@@ -3974,7 +3980,6 @@ d
 &
 &
 d
-a
 0
 A+4$A+u
 ~m=

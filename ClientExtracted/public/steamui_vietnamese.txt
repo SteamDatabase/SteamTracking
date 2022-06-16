@@ -728,8 +728,12 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Kích hoạt lưu thông tin tài khoản"
 
 "SteamUI_OfflineMode_Title" "Steam - Chế độ ngắt mạng"
-"SteamUI_OfflineMode_GoOfflineDesc" "Chế độ ngắt mạng được dùng khi bạn chuẩn bị rút phích cắm của máy tính xách tay ra,\nhay bạn đang cho rằng có thể sẽ bị mất kết nối tới Internet.\n\nNhiều tính năng như bạn bè và duyệt máy chủ sẽ không \nsử dụng được khi ngắt mạng. Chỉ có những trò chơi đã được cập nhật đầy đủ\nmới có thể hoạt động."
-"SteamUI_OfflineMode_GoOnlineDesc" "Bạn có muốn kết nối mạng lại không?\n\nSteam sẽ phải khởi động lại sau thao tác này.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "Chế độ ngắt mạng được dùng khi bạn chuẩn bị rút ổ cắm laptop,\nhay cho rằng có thể sẽ bị mất kết nối tới Internet.\n\nNhiều tính năng như chia sẻ với bạn bè và gia đình sẽ không\nkích hoạt khi ngắt mạng. Chỉ có trò chơi đã cập nhật đầy đủ\nmới có thể hoạt động."
+"SteamUI_OfflineMode_GoOnlineDesc" "Bạn có muốn kết nối mạng lại không?"
+"SteamUI_OfflineMode_MustCloseGames" "Tắt tất cả trò chơi đang chạy trước khi vào chế độ ngắt mạng"
+"SteamUI_OfflineMode_EnterOfflineMode" "Vào chế độ ngắt mạng"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Thoát chế độ ngắt mạng"
+
 "SteamUI_GameProperties_Status"	"Trạng thái"
 "SteamUI_GameProperties_UpdateNews"	"Tin cập nhật"
 "SteamUI_GamePropertiesContent_OfflineMode" "Chế độ ngắt mạng:"
@@ -902,7 +906,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_ValveSurvey_Summary_VideoDeviceID"					"DeviceID: 0x%s1"
 "SteamUI_ValveSurvey_Summary_VideoRevision"					"Revision: 0x%s1"
 "SteamUI_ValveSurvey_Summary_NumberOfMonitors"				"Số màn hình: %s1"
-"SteamUI_ValveSurvey_Summary_NumberOfDisplayAdapters"		"Số lượng card màn hình thực: %s1"
+"SteamUI_ValveSurvey_Summary_NumberOfDisplayAdapters"		"Số lượng card màn hình logical: %s1"
 "SteamUI_ValveSurvey_Summary_SLIEnabled"					"Phát hiện SLI (%s1 GPU)"
 "SteamUI_ValveSurvey_Summary_CrossfireEnabled"				"Phát hiện Crossfire (%s1 GPU)"
 "SteamUI_ValveSurvey_Summary_PrimaryMonitorResolution"		"Độ phân giải màn hình chính: %s1"
@@ -3575,7 +3579,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Sử dụng ngôn ngữ lồng tiếng <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Dùng ngôn ngữ lồng tiếng trong tiếng Anh với phụ đề tiếng <current language> \n(Cần tải 1GB)"
 
-"Steam_CannotInstallInOfflineMode"		"Không thể cài đặt trò chơi khi Steam đang trong chế độ ngắt mạng.\nHãy thoát và khởi động lại Steam, và chọn \"Nối mạng\".\n"
+"Steam_CannotInstallInOfflineMode"		"Không thể cài đặt trò chơi khi Steam đang trong chế độ ngắt mạng.\nChọn 'Nối mạng' trong menu Steam để thoát chế độ ngắt mạng.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - Tải về bị vô hiệu hóa"
 "Steam_CannotInstallDownloadsDisabled"	"Không thể cài trò chơi khi chức năng tải xuống bị tắt.\n"
@@ -4523,11 +4527,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Settings_ShaderCache_Enable"		"Bật lưu trước Shader (%shaderdiskusagemb% MB đã lưu)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Cho phép xử lý ngầm shader cho Vulkan"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Xử lý %shaderapp%... (%shaderpercent%%)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Trò chơi này sẽ chạy với Steam Play, sử dụng công cụ tương thích hệ máy.\n\nVui lòng xem mục hỏi đáp của chúng tôi để biết thông tin cách có được trải nghiệm tốt nhất trên hệ máy mình sở hữu."
-"SteamPlay_FAQ"                             "Hỏi đáp về Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Thiết lập Steam Play"

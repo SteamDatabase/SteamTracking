@@ -117,6 +117,7 @@ message CMsgClientGamesPlayed {
 		optional string compat_tool_cmd = 28;
 		optional uint32 compat_tool_build_id = 29;
 		optional string beta_name = 30;
+		optional uint32 dlc_context = 31;
 	}
 
 	repeated .CMsgClientGamesPlayed.GamePlayed games_played = 1;

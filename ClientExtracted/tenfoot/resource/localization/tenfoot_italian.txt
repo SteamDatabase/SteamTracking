@@ -7598,8 +7598,6 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"SteamUI_ProcessShader_Description"	"L'elaborazione della cache degli shader sta impiegando un po' di tempo, vuoi saltare questa fase?"
 	"Steam_WaitingForShaderCache"	"Elaborazione shader, progresso: {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Questo gioco sarà avviato con Steam Play, usando uno strumento di compatibilità tra le piattaforme."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Modalità rotellina"
 	"Library_Details_FieldLabel_Invert"			"Inverti"
 	"ControllerBinding_SoftPress_Invert"	"Soglia invertita"

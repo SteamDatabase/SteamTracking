@@ -792,7 +792,7 @@
 "Steam_SettingsBrowserDeleteAllDataMsg"	"¿Quieres borrar el historial y todos los archivos y cookies en caché del navegador relacionados con Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Invita a jugar, con un enlace, a quien quieras de tu lista de amigos."
+"RemotePlayTogether_Notification_AvailableToInvite" "Invita a jugar con un enlace a un amigo de tu lista."
 
 } 
 }  

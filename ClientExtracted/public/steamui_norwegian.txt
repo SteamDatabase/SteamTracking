@@ -736,8 +736,12 @@ nødvendig for å kontakte deg via e-post."
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Aktiver lagring av kontoopplysninger"
 
 "SteamUI_OfflineMode_Title" "Steam – Frakoblet modus"
-"SteamUI_OfflineMode_GoOfflineDesc" "Frakoblet modus brukes når du skal koble fra den bærbare datamaskinen,\neller når du regner med at du ikke skal være koblet til Internett.\n\nMange funksjoner, slik som venner og tjenerleseren, vil ikke\nvære tilgjengelige i frakoblet modus. Kun spill som er fullstendig\noppdaterte vil være tilgjengelige."
-"SteamUI_OfflineMode_GoOnlineDesc" "Vil du koble til igjen?\n\nDette krever at Steam startes på nytt.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "Frakoblet modus brukes når du skal koble fra den bærbare datamaskinen,\neller når du regner med at du ikke skal være koblet til Internett.\n\nMange funksjoner, slik som venner og familiedeling, kommer ikke\ntil å være tilgjengelige i frakoblet modus. Kun spill som er fullstendig\noppdaterte, kommer til å være tilgjengelige."
+"SteamUI_OfflineMode_GoOnlineDesc" "Vil du koble til igjen?"
+"SteamUI_OfflineMode_MustCloseGames" "Alle spill som kjøres, må lukkes før man går inn i frakoblet modus"
+"SteamUI_OfflineMode_EnterOfflineMode" "Bruk frakoblet modus"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Forlat frakoblet modus"
+
 "SteamUI_GameProperties_Status"	"Status"
 "SteamUI_GameProperties_UpdateNews"	"Oppdateringsnyheter"
 "SteamUI_GamePropertiesContent_OfflineMode" "Frakoblet modus:"
@@ -3578,7 +3582,7 @@ Skaff deg en ny venn på Steam ved å sende en gave til noen du kjenner."
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Spill med stemmene på <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Ha stemmene originalt på Engelsk med valgfri <current language> undertekster \n(Krever en nedlastning på 1GB)"
 
-"Steam_CannotInstallInOfflineMode"		"Spill kan ikke installeres når Steam er i frakoblet modus.\nAvslutt og start Steam på nytt, og velg «Koble til».\n"
+"Steam_CannotInstallInOfflineMode"		"Spill kan ikke installeres når Steam er i frakoblet modus.\nVelg «Koble til» i Steam-menyen for å forlate frakoblet modus.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam – Nedlastinger slått av"
 "Steam_CannotInstallDownloadsDisabled"	"Spill kan ikke bli installert når nedlastinger er deaktivert.\n"
@@ -4526,11 +4530,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_Settings_ShaderCache_Enable"		"Slå på forhåndsbufring av shadere (%shaderdiskusagemb% MB forhåndsbufret)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Tillat bakgrunnsbehandling av Vulkan-shadere"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Behandler %shaderapp% … (%shaderpercent% %)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Dette spillet startes med Steam Play, som bruker et verktøy for plattformkompatibilitet.\n\nGå gjennom ofte stilte spørsmål for informasjon om hvordan du får den beste opplevelsen på ditt system."
-"SteamPlay_FAQ"                             "Ofte stilte spørsmål om Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Steam Play-innstillinger"

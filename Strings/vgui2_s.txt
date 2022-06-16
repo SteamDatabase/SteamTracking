@@ -1859,7 +1859,6 @@ Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
-flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
@@ -2285,6 +2284,7 @@ P
 
 =
 @
+2
 @
 @
 0

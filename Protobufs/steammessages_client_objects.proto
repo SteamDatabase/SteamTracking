@@ -39,6 +39,10 @@ enum ESteamDeckKeyboardLayout {
 	k_ESteamDeckKeyboardLayout_Ukrainian = 24;
 	k_ESteamDeckKeyboardLayout_Vietnamese = 25;
 	k_ESteamDeckKeyboardLayout_QWERTY_International = 26;
+	k_ESteamDeckKeyboardLayout_Dvorak = 27;
+	k_ESteamDeckKeyboardLayout_Colemak = 28;
+	k_ESteamDeckKeyboardLayout_Bulgarian_Phonetic_Traditional = 29;
+	k_ESteamDeckKeyboardLayout_Bulgarian_Phonetic = 30;
 }
 
 message SteamMessagesClientIClientForcedEnumDependencies {
@@ -203,12 +207,13 @@ message CMsgBluetoothDevicesData {
 		optional int32 strength_raw = 8;
 	}
 
+	message Manager {
+		optional bool is_bluetooth_enabled = 1;
+	}
+
 	repeated .CMsgBluetoothDevicesData.Adapter adapters = 1;
 	repeated .CMsgBluetoothDevicesData.Device devices = 2;
-}
-
-message CMsgBluetoothSettings {
-	optional bool is_enabled = 1;
+	optional .CMsgBluetoothDevicesData.Manager manager = 3;
 }
 
 message CMsgSystemPerfDiagnosticEntry {
@@ -230,41 +235,99 @@ message CMsgSystemPerfDiagnosticInfo {
 	repeated .CMsgSystemPerfNetworkInterface interfaces = 2;
 }
 
-message CMsgSystemPerfSettings {
-	optional int32 cpu_governor_manual_min_mhz = 20;
-	optional int32 cpu_governor_manual_max_mhz = 21;
-	optional int32 fsr_sharpness_min = 22;
-	optional int32 fsr_sharpness_max = 23;
+message CMsgSystemPerfLimits {
+	optional int32 cpu_governor_manual_min_mhz = 1;
+	optional int32 cpu_governor_manual_max_mhz = 2;
+	optional int32 fsr_sharpness_min = 3;
+	optional int32 fsr_sharpness_max = 4;
+	optional int32 gpu_performance_manual_min_mhz = 5;
+	optional int32 gpu_performance_manual_max_mhz = 6;
+	optional bool perf_overlay_is_standalone = 7;
+	optional bool is_dynamic_vrs_available = 8;
+	optional bool is_manual_display_refresh_rate_available = 9;
+	repeated .EGPUPerformanceLevel gpu_performance_levels_available = 10;
+	optional int32 display_refresh_manual_hz_min = 11;
+	optional int32 display_refresh_manual_hz_max = 12;
+	repeated int32 fps_limit_options = 13;
+	optional int32 tdp_limit_min = 14;
+	optional int32 tdp_limit_max = 15;
+	optional bool is_nis_supported = 16;
+	optional int32 nis_sharpness_min = 17;
+	optional int32 nis_sharpness_max = 18;
+}
+
+message CMsgSystemPerfSettingsGlobal {
 	optional float diagnostic_update_rate = 1;
 	optional .ESystemServiceState system_trace_service_state = 2 [default = k_ESystemServiceState_Unavailable];
 	optional .ESystemServiceState graphics_profiling_service_state = 3 [default = k_ESystemServiceState_Unavailable];
 	optional .ESystemServiceState perf_overlay_service_state = 4 [default = k_ESystemServiceState_Unavailable];
 	optional .EGraphicsPerfOverlayLevel perf_overlay_level = 5 [default = k_EGraphicsPerfOverlayLevel_Hidden];
-	repeated .EGPUPerformanceLevel gpu_performance_levels_available = 6;
-	optional .EGPUPerformanceLevel gpu_performance_level = 7 [default = k_EGPUPerformanceLevel_Invalid];
-	optional int32 gpu_performance_manual_mhz = 8;
-	optional int32 gpu_performance_manual_min_mhz = 9;
-	optional int32 gpu_performance_manual_max_mhz = 10;
-	optional bool perf_overlay_is_standalone = 11;
-	optional int32 fps_limit = 12;
-	optional bool is_variable_resolution_enabled = 13;
-	optional bool is_dynamic_refresh_rate_enabled = 14;
-	optional int32 tdp_limit = 15;
-	optional .ECPUGovernor cpu_governor = 16 [default = k_ECPUGovernor_Invalid];
-	optional int32 cpu_governor_manual_mhz = 17;
-	optional int32 scaling_filter = 18;
-	optional int32 fsr_sharpness = 19;
-	optional bool is_fps_limit_enabled = 24;
-	optional bool is_tdp_limit_enabled = 25;
-	optional bool is_show_perf_overlay_over_steam_enabled = 26;
-	optional bool is_low_latency_mode_enabled = 27;
-	optional bool is_fps_limit_dynamic = 28;
-	optional bool is_dynamic_vrs_available = 29;
-	optional bool is_manual_display_refresh_rate_available = 30;
-	optional int32 display_refresh_manual_hz = 31;
-	optional int32 display_refresh_manual_hz_min = 32;
-	optional int32 display_refresh_manual_hz_max = 33;
-	repeated int32 fps_limit_options = 34;
+	optional bool is_show_perf_overlay_over_steam_enabled = 6;
+	optional bool is_advanced_settings_enabled = 7;
+}
+
+message CMsgSystemPerfSettingsPerApp {
+	optional int32 gpu_performance_manual_mhz = 1;
+	optional int32 fps_limit = 2;
+	optional bool is_variable_resolution_enabled = 3;
+	optional bool is_dynamic_refresh_rate_enabled = 4;
+	optional int32 tdp_limit = 5;
+	optional .ECPUGovernor cpu_governor = 6 [default = k_ECPUGovernor_Invalid];
+	optional int32 cpu_governor_manual_mhz = 7;
+	optional int32 scaling_filter = 8;
+	optional int32 fsr_sharpness = 9;
+	optional bool is_fps_limit_enabled = 10;
+	optional bool is_tdp_limit_enabled = 11;
+	optional bool is_low_latency_mode_enabled = 12;
+	optional int32 display_refresh_manual_hz = 13;
+	optional bool is_game_perf_profile_enabled = 14;
+	optional .EGPUPerformanceLevel gpu_performance_level = 15 [default = k_EGPUPerformanceLevel_Invalid];
+	optional int32 nis_sharpness = 16;
+}
+
+message CMsgSystemPerfSettings {
+	optional .CMsgSystemPerfSettingsGlobal global = 1;
+	optional .CMsgSystemPerfSettingsPerApp per_app = 2;
+}
+
+message CMsgSystemPerfSettingsV1 {
+	optional float diagnostic_update_rate = 1;
+	optional .ESystemServiceState system_trace_service_state = 2 [default = k_ESystemServiceState_Unavailable];
+	optional .ESystemServiceState graphics_profiling_service_state = 3 [default = k_ESystemServiceState_Unavailable];
+	optional .ESystemServiceState perf_overlay_service_state = 4 [default = k_ESystemServiceState_Unavailable];
+	optional .EGraphicsPerfOverlayLevel perf_overlay_level = 5 [default = k_EGraphicsPerfOverlayLevel_Hidden];
+	optional .EGPUPerformanceLevel gpu_performance_level = 6 [default = k_EGPUPerformanceLevel_Invalid];
+	optional int32 gpu_performance_manual_mhz = 7;
+	optional int32 fps_limit = 8;
+	optional bool is_variable_resolution_enabled = 9;
+	optional bool is_dynamic_refresh_rate_enabled = 10;
+	optional int32 tdp_limit = 11;
+	optional .ECPUGovernor cpu_governor = 12 [default = k_ECPUGovernor_Invalid];
+	optional int32 cpu_governor_manual_mhz = 13;
+	optional int32 scaling_filter = 14;
+	optional int32 fsr_sharpness = 15;
+	optional bool is_fps_limit_enabled = 16;
+	optional bool is_tdp_limit_enabled = 17;
+	optional bool is_show_perf_overlay_over_steam_enabled = 18;
+	optional bool is_low_latency_mode_enabled = 19;
+	optional int32 display_refresh_manual_hz = 20;
+	optional bool is_game_perf_profile_enabled = 21;
+}
+
+message CMsgSystemPerfState {
+	optional .CMsgSystemPerfLimits limits = 1;
+	optional .CMsgSystemPerfSettings settings = 2;
+	optional uint64 current_game_id = 3;
+	optional uint64 active_profile_game_id = 4;
+}
+
+message CMsgSystemPerfUpdateSettings {
+	optional uint64 gameid = 1;
+
+	oneof update {
+		bool reset_to_default = 2;
+		.CMsgSystemPerfSettings settings_delta = 3;
+	}
 }
 
 message CMsgSystemManagerSettings {
@@ -288,6 +351,8 @@ message CMsgSystemManagerSettings {
 	optional bool display_nightmode_reset = 18;
 	optional bool display_diagnostics_enabled = 19;
 	optional bool is_wifi_powersave_enabled = 20;
+	optional bool is_fan_control_available = 21;
+	optional .ESystemFanControlMode fan_control_mode = 22 [default = k_SystemFanControlMode_Invalid];
 }
 
 message CMsgSelectOSBranchParams {
@@ -333,4 +398,30 @@ message CMsgCellList {
 	}
 
 	repeated .CMsgCellList.Cell cells = 1;
+}
+
+message CMsgShortcutInfo {
+	optional uint32 appid = 1;
+	optional string exe = 2;
+	optional string start_dir = 3;
+	optional string icon = 4;
+	optional string path = 5;
+	optional string args = 6;
+	optional string app_name = 7;
+	optional uint32 override_appid = 8;
+	optional string flatpak_appid = 9;
+	repeated string tags = 10;
+	optional bool is_remote = 11;
+	optional bool is_hidden = 12;
+	optional bool is_temporary = 13;
+	optional bool is_openvr = 14;
+	optional bool allow_desktop_config = 15;
+	optional bool allow_overlay = 16;
+	optional uint32 rt_last_played_time = 17;
+	optional bool is_devkit_shortcut = 18;
+	optional string devkit_gameid = 19;
+}
+
+message CMsgShortcutAppIds {
+	repeated uint32 appids = 1;
 }

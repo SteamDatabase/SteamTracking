@@ -7598,8 +7598,6 @@
 	"SteamUI_ProcessShader_Description"	"Η επεξεργασία κρυφής μνήμης σκίασης παίρνει αρκετή ώρα, θέλετε να την παραλείψετε;"
 	"Steam_WaitingForShaderCache"	"Επεξεργάζονται οι σκιάσεις, αυτή τη στιγμή στο {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Το παιχνίδι θα εκκινήσει με Steam Play, χρησιμοποιώντας ένα εργαλείο συμβατότητας πλατφόρμας."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Λειτουργία τροχού κύλισης"
 	"Library_Details_FieldLabel_Invert"			"Αντιστροφή"
 	"ControllerBinding_SoftPress_Invert"	"Όριο αντιστροφής"

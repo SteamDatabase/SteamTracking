@@ -10,6 +10,8 @@ __stub_helper
 __TEXT
 __cstring
 __TEXT
+p2
+p2
 __const
 __TEXT
 __gcc_except_tab__TEXT
@@ -79,7 +81,7 @@ __LINKEDIT
 @loader_path/panorama.dylib
 "
 >
-('>
+8'>
 P
 
 *
@@ -106,7 +108,6 @@ P
 @
 @loader_path/libpangoft2-1.0.dylib
 @
-@loader_path/libSDL2-2.0.0.dylib
 8
 @executable_path/libv8.dylib
 8
@@ -151,20 +152,17 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+(W
 )
 HB
-3
-3
-3
-4
-4
-4
-1
 1
 1
 1
 1
 0
+1
+1
+1
 
 
 
@@ -173,10 +171,8 @@ HB
 @
 
 %
-g0
 @
 @
-%
 @
 8
 HC
@@ -233,6 +229,10 @@ $
 (
 $
 (
+,
+@
+0
+8
 ,
 $
 (
@@ -352,6 +352,7 @@ $
 8
 @
 4
+H
 (
 (
 
@@ -384,7 +385,7 @@ X
 (
 (
 0
-0
+H
 0
 0
 (
@@ -456,7 +457,7 @@ X
 8
 (
 8
-H
+P
 0
 (
 (
@@ -631,6 +632,7 @@ H
 41CMsgBrowserViewPostMessageToParentRequest
 18CMsgBlockedRequest
 24CMsgSetProtocolBlockList
+29CMsgSetForceDeviceScaleFactor
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
@@ -2766,6 +2768,71 @@ IsValid()
 src.IsValid() && IsValid()
 v.IsValid()
 a.IsValid() && b.IsValid()
+Qanba Obsidian Arcade Joystick
+Xbox 360 Controller
+Xbox 360 Wireless Controller
+PDP Xbox 360 Afterglow
+PDP Xbox 360 Rock Candy
+PDP INJUSTICE FightStick
+PDP INJUSTICE FightPad
+PDP EA Soccer Controller
+PDP Battlefield 4 Controller
+PDP MK X Fight Stick
+PDP Xbox 360 Marvel Controller
+PDP Xbox 360 Controller
+SteelSeries Stratus Duo
+Amazon Luna Controller
+Xbox One Controller
+Xbox One S Controller
+Xbox Adaptive Controller
+Xbox Series X Controller
+PDP Xbox One Afterglow
+PDP Xbox One Face-Off Controller
+PDP MK X Fight Pad
+PDP Xbox One Rock Candy
+PDP Fallout 4 Vault Boy Controller
+PDP Xbox One @Play Controller
+PDP Mirror's Edge Controller
+PDP Metallic Controller
+PDP NFL Face-Off Controller
+PDP Xbox One Camo
+PDP Xbox One Controller
+PDP Deliverer of Truth
+PDP Battlefield 1 Controller
+PDP Titanfall 2 Controller
+PDP Mass Effect: Andromeda Controller
+PDP Halo Wars 2 Face-Off Controller
+PDP Victrix Pro Fight Stick
+PDP Mortal Kombat Controller
+PDP Xbox One Midnight Blue
+PDP Xbox One Verdant Green
+PDP Xbox One Crimson Red
+PDP Xbox One Arctic White
+PDP Xbox One Phantom Black
+PDP Xbox One Ghost White
+PDP Xbox One Revenant Blue
+PDP Xbox One Raven Black
+PDP Xbox One Ember Orange
+PDP Xbox One GAMEware Controller
+PDP Xbox One Royal Purple
+PDP Kingdom Hearts Controller
+PDP Xbox One Phantasm Red
+PDP Xbox One Specter Violet
+PDP Xbox One Blu-merang
+PDP Xbox One Cranblast
+PDP Xbox One Aqualime
+PDP Xbox One Red Camo
+PDP Xbox One RC Gamepad
+PDP Xbox Series X Afterglow
+Victrix Gambit Tournament Controller
+PDP Xbox Series X Midnight Blue
+PowerA Xbox Series X Controller
+PowerA Fusion Pro 2 Controller
+PowerA Spectra Infinity Controller
+PowerA Xbox One Controller
+Xbox One Elite Controller
+Xbox One Elite 2 Controller
+HORI Fighting Commander
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
 libjpeg asking to skip more bytes than exist, and we can't further fill buffer - was a crash before 12/29/21
 row_stride_out >= row_stride
@@ -3053,70 +3120,6 @@ XInput Controller
 m_XDevices
 m_XDevices[i].sMappingString
 m_RemoteGamepadInput
-Xbox 360 Controller
-Xbox 360 Wireless Controller
-PDP Xbox 360 Afterglow
-PDP Xbox 360 Rock Candy
-PDP INJUSTICE FightStick
-PDP INJUSTICE FightPad
-PDP EA Soccer Controller
-PDP Battlefield 4 Controller
-PDP MK X Fight Stick
-PDP Xbox 360 Marvel Controller
-PDP Xbox 360 Controller
-SteelSeries Stratus Duo
-Amazon Luna Controller
-Xbox One Controller
-Xbox One S Controller
-Xbox Adaptive Controller
-Xbox Series X Controller
-PDP Xbox One Afterglow
-PDP Xbox One Face-Off Controller
-PDP MK X Fight Pad
-PDP Xbox One Rock Candy
-PDP Fallout 4 Vault Boy Controller
-PDP Xbox One @Play Controller
-PDP Mirror's Edge Controller
-PDP Metallic Controller
-PDP NFL Face-Off Controller
-PDP Xbox One Camo
-PDP Xbox One Controller
-PDP Deliverer of Truth
-PDP Battlefield 1 Controller
-PDP Titanfall 2 Controller
-PDP Mass Effect: Andromeda Controller
-PDP Halo Wars 2 Face-Off Controller
-PDP Victrix Pro Fight Stick
-PDP Mortal Kombat Controller
-PDP Xbox One Midnight Blue
-PDP Xbox One Verdant Green
-PDP Xbox One Crimson Red
-PDP Xbox One Arctic White
-PDP Xbox One Phantom Black
-PDP Xbox One Ghost White
-PDP Xbox One Revenant Blue
-PDP Xbox One Raven Black
-PDP Xbox One Ember Orange
-PDP Xbox One GAMEware Controller
-PDP Xbox One Royal Purple
-PDP Kingdom Hearts Controller
-PDP Xbox One Phantasm Red
-PDP Xbox One Specter Violet
-PDP Xbox One Blu-merang
-PDP Xbox One Cranblast
-PDP Xbox One Aqualime
-PDP Xbox One Red Camo
-PDP Xbox One RC Gamepad
-PDP Xbox Series X Afterglow
-Victrix Gambit Tournament Controller
-PDP Xbox Series X Midnight Blue
-PowerA Xbox Series X Controller
-PowerA Fusion Pro 2 Controller
-PowerA Spectra Infinity Controller
-PowerA Xbox One Controller
-Xbox One Elite Controller
-Xbox One Elite 2 Controller
-HORI Fighting Commander
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
@@ -5360,8 +5363,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jun  6 2022
-20:20:45
+Jun  8 2022
+14:24:13
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -7435,7 +7438,6 @@ Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
-flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
@@ -7773,6 +7775,7 @@ m_vecIPFilterRanges
 m_vecIPFilterRangesV6
 @cMinimumJobTimeoutsToCheckPerFrame
 100
+@bEnableNetworkJobsOwnStartList
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 zh_CN
@@ -8046,6 +8049,8 @@ Comma separated list of Operation names that predate preaggregated job metrics.
 @nCallerDeadlineHopLatencyMS
 10
 When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
+@bLogMessageToProtobufClass
+We we first discover the protobuf class used for a particular EMsg, log it
 @nSpewThrottlePeriodMs
 @nSpewThrottleTriggerThreshold
 @nSpewThrottleResumeThreshold
@@ -8240,18 +8245,14 @@ SSE is required.
 src.IsValid()
 
 HB
-3
-3
-3
-4
-4
-4
-1
 1
 1
 1
 1
 0
+1
+1
+1
 
 
 
@@ -8260,45 +8261,34 @@ HB
 @
 
 %
-g0
 @
 @
-%
 0
-0
-0
-0
-0
-A;
 /
 /
-O/
-9.
-!/
-8&
-9%
-,&
-&
-#
-c-
+'
+'
+9
+/
+q#
 .
+.
+.
+-
+@9
 %
-"
-,
-<:
-;,
+-
+k,
+-
+:
+#,
 )
-[5
-,
 j
+6,
+6
 2
 2
-5
 ?
-/
-/
-/
-(
 )
 >
 ;
@@ -8308,13 +8298,6 @@ F
 +
 !
 &
-P+
--
--
-+
-+
-+
-+
 +
 +
 +
@@ -8322,18 +8305,36 @@ P+
 +
 j
 Ic
-M*
-G*
-3*
-,
-Q*
+z'
+,*
+@
+@
+@
+@
+**
 @
 @
 @
 @
 @
 @
-36
+@
+@
+96
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 @
 @
 @
@@ -8343,28 +8344,6 @@ Q*
 @
 @
 *
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
--
-@
-@
-*
-@
-@
-@
-@
 @
 @
 @
@@ -8382,249 +8361,173 @@ Q*
 d
 Uk/
 K
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
 @
 @
 @
 @
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-0
-@
-@
-*
-l)
-$7
-)
-)
-3
-3
-2
-2
-@
-@
-/)
-@
-@
-@
-@
-@
-@
-0
-)
-@
-@
-)
-)
-)
-0
-0
-=
-@
-@
-(
-(
-(
-%
-H=
-M4
-]$
 '
 '
-'
-'
-$
-$
-$
-$
-$
-$
-$
-:'
-0
 @
-2
-=
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+0
+5*
+@
+@
+f)
+]&
+2)
++
+l%
+)
 &
-%
+&
+e,
+'
+)
 @
 @
+@
+@
+@
+@
+@
+@
+0
+@
+@
+0
+0
+)
+=
+*
+@
+@
+H(
+H=
+B'
+5
+-
+)
+'
+e#
+'
+N1
+m'
+z4
+0
+0
+@
+=
+W%
+@
+@
+#%
 $
 @
 @
 ?
 ^
-#
+U#
 #
 #
 @
+#
 P
 0
 (
 (
 P
 j
+X#
 A
 A
 A
 A
 (
-{&
-@%
+u"
+s"
 #
+@
+E9u
+E9u
+@
+A
+A
+A
+A
+A
+A
+A
+A
+)"
+i
+o
+Q#
+K#
+H
 .
-2&
+$
+
 @
+D-
+1"
+-
+-
+-
 "
-E9u
-"
-E9u
-&
-@
-A
-A
-A
-A
-A
-A
-a"
-^"
-A
-A
-&/
-"/
-^"
-$
-$
-q$
-S.
-n$
--#
-~"
-$
-@
-I+
--
--
--
-,
+*
 }
 "
-l(
-=(
 @
-I%
 %
 Hi
 (
-"
+%
+%
 @
 @
 0
 0
 
+;&
 
 
 
 
 0
 
-!
 0
 %
 %
-d
+%
+%
 IcE
 @
 @
 !
+}"
 @
 @
 @
@@ -8771,6 +8674,7 @@ IcE
 @
 @
 @
+#
 @
 @
 @
@@ -8913,14 +8817,14 @@ IcE
 @
 @
 @
-t
-^
+c"
 @
 j
 @
 @
 j
 @
+$
 @
 @
 j
@@ -9012,8 +8916,8 @@ IcE
 V
 =
 =
-r
-X
+e
+
 @
 
 
@@ -9080,6 +8984,8 @@ I;E
 I;E
 B
 ?
+\
+[
 `
 `
 !
@@ -9133,15 +9039,18 @@ H=
 E
 0
 0
+0
+@
 
 @
 @
 
 
 @
-?
-?
-?
+
+
+
 @
 @
 0
+Lc5SI

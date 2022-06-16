@@ -157,7 +157,7 @@
 "Steam_ValidLoginRequiredTitle"	"Steam-Login erforderlich"
 
 // need to remove the VAC line from this when we have our authentication system going via the Steam servers (when it should change to a login failure)
-"Steam_ValidLoginRequired"	"Es konnte keine Verbindung zu Steam-VAC-Servern hergestellt werden.  Klicken Sie zum Beheben von Netzwerkproblemen auf den unten stehenden Link."
+"Steam_ValidLoginRequired"	"Es konnte keine Verbindung zu Steam-VAC-Servern hergestellt werden. Klicken Sie zum Beheben von Netzwerkproblemen auf den unten stehenden Link."
 "VAC_ConnectionIssuesSupport_Title"	"Sichere Verbindung fehlgeschlagen"
 "VAC_ConnectionIssuesSupportSite"	"Klicken Sie hier, um den Steam-Support zu besuchen"
 "VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"

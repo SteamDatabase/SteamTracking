@@ -732,8 +732,12 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Hesap bilgilerini kaydetmeyi etkinleştir"
 
 "SteamUI_OfflineMode_Title" "Steam - Çevrimdışı Mod"
-"SteamUI_OfflineMode_GoOfflineDesc" "Çevrimdışı modunu bağlantısız dizüstü bilgisayarınızda\nya da internet bağlantınızın olmadığı durumlarda kullanabilirsiniz.\n\nÇevrimdışıyken Arkadaşlar, Sunucu Tarayıcısı gibi birçok özelliği kullanamazsınız.\nSadece daha önceden tamamen güncellenen oyunlarınız\nkullanım için hazır olur."
-"SteamUI_OfflineMode_GoOnlineDesc" "Çevrimiçi olmak istiyor musunuz?\n\nBunun için Steam'i yeniden başlatmanız gerekir.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "Çevrimdışı modunu bağlantısız dizüstü bilgisayarınızda\nya da internet bağlantınızın olmadığı durumlarda kullanabilirsiniz.\n\nÇevrimdışıyken arkadaşlar, Aile Paylaşımı gibi birçok özelliği kullanamazsınız.\nSadece daha önceden tamamen güncellenen oyunlarınızı\noynanabilirsiniz."
+"SteamUI_OfflineMode_GoOnlineDesc" "Tekrar çevrimiçi olmak istiyor musunuz?"
+"SteamUI_OfflineMode_MustCloseGames" "Çevrimdışı moda girmeden önce çalışan tüm oyunlar kapatılmalıdır."
+"SteamUI_OfflineMode_EnterOfflineMode" "Çevrimdışı Moda Gir"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Çevrimdışı Moddan Çık"
+
 "SteamUI_GameProperties_Status"	"Durum"
 "SteamUI_GameProperties_UpdateNews"	"Haberler"
 "SteamUI_GamePropertiesContent_OfflineMode" "Çevrimdışı Mod:"
@@ -3577,7 +3581,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Seslendirme dilini <current language> olarak ayarla"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Seslendirme dilini orijinal İngilizce <current language> altyazılarla oynat\n(1GB indirme gerekir)"
 
-"Steam_CannotInstallInOfflineMode"		"Steam, Çevrimdışı Moddayken oyunları yükleyemez.\nSteam'i kapatıp yeniden başlatın ve 'Çevrimiçi ol'u seçin.\n"
+"Steam_CannotInstallInOfflineMode"		"Steam, çevrimdışı moddayken oyunları yükleyemez.\nÇevrimdışı moddan çıkmak için Steam menüsünden \"Çevrimiçi Ol\"u seçin.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - İndirmeler Devre Dışı"
 "Steam_CannotInstallDownloadsDisabled"	"İndirmeler devre dışı bırakıldığında oyun yüklenemez.\n"
@@ -4525,11 +4529,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_Settings_ShaderCache_Enable"		"Gölgelendirici Önbelleklemeyi Etkinleştir (%shaderdiskusagemb% MB önceden önbelleğe alındı)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Vulkan gölgelendiricilerinin arka planda işlenmesine izin ver"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"%shaderapp% işleniyor... (%%shaderpercent%)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Bu oyun platform uyumluluk aracı kullanılarak Steam Play ile başlatılacaktır.\n\nSisteminizde en iyi tecrübeyi nasıl edineceğinize dair bilgilendirme için lütfen SSS'yi ziyaret edin."
-"SteamPlay_FAQ"                             "Steam Play SSS"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Steam Play Ayarları"

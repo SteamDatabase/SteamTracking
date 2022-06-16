@@ -24,6 +24,10 @@ message CMsgClientSecret {
 	optional bytes hmac = 5;
 }
 
+message CMsgClientHello {
+	optional uint32 protocol_version = 1;
+}
+
 message CMsgClientLogon {
 	optional uint32 protocol_version = 1;
 	optional uint32 deprecated_obfustucated_private_ip = 2;
@@ -79,6 +83,7 @@ message CMsgClientLogon {
 	optional .CMsgClientSecret embedded_client_secret = 105;
 	optional bool disable_partner_autogrants = 106;
 	optional bool is_steam_deck = 107;
+	optional string access_token = 108;
 }
 
 message CMsgClientLogonResponse {

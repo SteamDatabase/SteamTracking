@@ -72,7 +72,6 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-PX
 public
 local
 anonymous
@@ -112,18 +111,11 @@ N10CSteamUser26CCallback_OnPostLogonStateE
 N10CSteamUser33CCallback_OnSteamGuardFileCreatedE
 9CCallbackI10CSteamUser23SteamGuardFileCreated_tLb0EE
 10CUtlString
-N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedClientE
-9CCallbackI25CControllerConfigUploader30RemoteStorageAppSyncedClient_tLb0EE
-N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedServerE
-9CCallbackI25CControllerConfigUploader30RemoteStorageAppSyncedServer_tLb0EE
-20CMultipleCallResultsI25CControllerConfigUploader24SteamUGCQueryCompleted_tE
-10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
-20CMultipleCallResultsI25CControllerConfigUploader32RemoteStoragePublishFileResult_tE
-20CMultipleCallResultsI25CControllerConfigUploader40RemoteStorageUpdatePublishedFileResult_tE
 9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
 13CCallbackImplILi40EE
 25SteamClientConVarAccessor
 23IConCommandBaseAccessor
+10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
 N23CWorkshopItemDownloader30CCallback_OnDownloadItemResultE
@@ -135,8 +127,9 @@ _convar_
 NSt3__117bad_function_callE
 11CPathString
 17CFileWriterThread
-N17CFileWriterThread16FileWriterItem_tE
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
+N17CFileWriterThread14CFileWriteItemE
+N17CFileWriterThread19CFileWriterWorkItemE
 t
 r
 u
@@ -300,6 +293,7 @@ staging
 committing
 verifying install
 verifying update
+finalizing
 running
 unknown
 Update state (0x%X) : Timed out waiting for update to start, bailing.
@@ -409,39 +403,6 @@ This computer has not been authenticated for your account using Steam Guard.Plea
 Retrying. . .
 FAILED (No cached credentials and @NoPromptForPassword is set)
 FAILED (Timed out)
-upload_controller_config
-upload_controller_config <appid> <filename> : upload controller config to cloud
-Usage: <appid> <filename>
-Cloud save write error
-CControllerConfigUploader::OnRemoteStorageAppSyncedClient
-CControllerConfigUploader::OnRemoteStorageAppSyncedServer
-Failed to publish file (1a)
-version_%d
-Failed to publish file (1b)
-Failed to publish file (1c)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
-IsValidIndex( elem )
-_IsValidIndex( elem, unNodeSize, pMemBase )
-_IsValidIndex( y, unNodeSize, pMemBase )
-m_mapAPICalls
-m_Elements
-Failed to publish file (3a)
-User needs to accept workshop legal agreement (3a)
-Successfully uploaded, file id: %llu
-Failed to publish file (2a)
-User needs to accept workshop legal agreement (2a)
-%s/controller_configs/workshop/%u/%llu.vdf
-Must be logged in to continue.
-File %s doesn't exist.
-Error loading file %s.
-localization
-Not valid controller config file or localization file: %s.
-/controller_config/%u/
-%s.vdf
-~
-%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
-IsText()
 @DepotBuilderConfigRoot
 ./depotscripts
 @DepotBuilderContentRoot
@@ -661,6 +622,12 @@ ceg_wrap
 ceg_wrap <appid> <orig filename> <stripped filename> <strips filename> : upload executable to back end for CEG wrapping
 Install script signing completed; output is in %s
 Install script signing failed with EResult %d (%s)
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+IsValidIndex( elem )
+_IsValidIndex( elem, unNodeSize, pMemBase )
+_IsValidIndex( y, unNodeSize, pMemBase )
+m_mapAPICalls
+m_Elements
 DRM wrap completed; output is in %s
 DRM wrap failed with EResult %d (%s)
 CEG wrap completed successfully
@@ -837,7 +804,6 @@ Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
-flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
@@ -862,21 +828,23 @@ Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 %s%c%s
 ..
 cbActual < (uint32)nBufSizeWithTerminator
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 CFileWriterThread
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
-%s.async%u.tmp
-Invalid FileWriterItem_t
-m_buffer
-CUtlBuffer
-m_Memory
 m_queueItemsPending
 m_vecRegisteredWriters
 static_cast<Node_t*>(pNode)->elem
+m_Memory
 m_queueItemsPending.Count() == 0
 m_vecRegisteredWriters.Count() == 0
 CFileWriterThread already exited
+%s.async%u.tmp
+Invalid FileWriterItem_t
+m_buffer
+m_strFileName
+CUtlBuffer
 m_unInCounter == m_unOutCounter
 pFile
 cubData < FIO_MAX_IO_BYTES
@@ -888,6 +856,7 @@ CPathString
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
+%s%s
 0123456789abcdef
 %%%d
 ]:%u
@@ -983,9 +952,6 @@ CUtlString::SetValue
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
-CUtlString::ReplaceInternal
-pstrNew + nNewLength == pstrDestination + 1
-cActualReplacements == cReplacements
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
 nMinCapacity > Capacity()
@@ -1141,6 +1107,7 @@ No verified phone number
 Insufficient battery charge
 Charger required
 Cached credential is invalid
+Phone number is Voice Over IP
 Invalid
 Public
 Beta
@@ -1300,8 +1267,6 @@ E
 0
 @
 =
-?
-0
 0
 0
 j
@@ -1317,6 +1282,7 @@ r
 =*.*
 @
 @
+D
 0
 @
 @
@@ -1329,6 +1295,5 @@ r
 0
 0
 0
-^
 0
 0

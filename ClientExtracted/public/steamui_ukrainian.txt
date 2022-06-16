@@ -730,8 +730,12 @@
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Увімкнути збереження реєстраційних даних акаунта"
 
 "SteamUI_OfflineMode_Title" "Steam — Автономний режим"
-"SteamUI_OfflineMode_GoOfflineDesc" "В автономний режим слід переходити, коли ви від’єднуватимете від мережі свій\nноутбук або очікуєте відключення від Інтернету.\n\nБагато функцій будуть недоступні,\nнаприклад, списки друзів і браузер серверів. Запускати можна\nлише ігри, для яких встановлені всі оновлення."
-"SteamUI_OfflineMode_GoOnlineDesc" "Ви справді бажаєте увійти до мережі?\n\nДля цього слід буде перезапустити Steam.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "В автономний режим слід переходити, коли ви від’єднуватимете від мережі свій\nноутбук або очікуєте відключення від Інтернету.\n\nБагато функцій будуть недоступні,\nяк-от список друзів і сімейна бібліотека. Запускати можна\nлише ігри, для яких були інстальовані найостанніші оновлення."
+"SteamUI_OfflineMode_GoOnlineDesc" "Бажаєте ввійти до мережі?"
+"SteamUI_OfflineMode_MustCloseGames" "Перш ніж перейти до автономного режиму, потрібно закрити всі запущені ігри"
+"SteamUI_OfflineMode_EnterOfflineMode" "До автономного режиму"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Вийти з автономного режиму"
+
 "SteamUI_GameProperties_Status"	"Стан"
 "SteamUI_GameProperties_UpdateNews"	"Хроніка оновлень"
 "SteamUI_GamePropertiesContent_OfflineMode" "Автономний режим:"
@@ -3572,7 +3576,7 @@
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Відтворювати розмову на <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Озвучення мовою оригіналу (англійською) зі субтитрами на мові <current language>\n(Необхідне завантаження 1 ГБ даних)"
 
-"Steam_CannotInstallInOfflineMode"		"Ігри не можна інсталювати, якщо Steam знаходиться в автономному режимі.\nЗакрийте та перезапустіть клієнт Steam, і оберіть «Увійти до мережі».\n"
+"Steam_CannotInstallInOfflineMode"		"Ігри не можна інсталювати, якщо Steam знаходиться в автономному режимі.\nЩоб вийти з автономного режиму, виберіть пункт «Увійти до мережі» в меню Steam.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam — завантаження вимкнені"
 "Steam_CannotInstallDownloadsDisabled"	"Ігри не можна інсталювати, якщо вимкнено завантаження.\n"
@@ -3955,7 +3959,7 @@
 
 "SteamUI_ValveSurvey_Summary_Software"	"Встановлене програмне забезпечення:"
 "steam_systeminfo_info"			"Steam виявив таке апаратне та програмне забезпечення вашої системи:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Будь ласка, приділіть трохи часу, щоби взяти участь у короткому опитуванні. Щомісяця Steam збирає дані про комп’ютери та програмне забезпечення наших користувачів. Дані опитування є неймовірно корисними для нас, оскільки вони дозволяють нам упевнитися в тому, що ми рухаємося в правильному напрямку, створюючи нові продукти.\nЗібрані дані є анонімними й не будуть пов’язані з вашим акаунтом."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Будь ласка, приділіть трохи часу, щоби взяти участь у короткому опитуванні. Щомісяця Steam збирає дані про комп’ютери та програмне забезпечення наших користувачів. Дані опитування є неймовірно корисними для нас, оскільки вони дозволяють упевнитися в тому, що ми приймаємо правильні рішення стосовно видів технологій, у які нам слід інвестувати, та продуктів, які нам варто створювати.\nЗібрані дані є анонімними й не будуть пов’язані з вашим акаунтом."
 
 "steam_statuslabel"	"Стан"
 
@@ -4519,11 +4523,6 @@
 "Steam_Settings_ShaderCache_Enable"		"Увімкнути передкешування шейдерів (%shaderdiskusagemb% МБ кешовано)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Дозволити обробку шейдерів Vulkan у фоні"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Йде обробка %shaderapp%… (%shaderpercent%%)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Гру буде запущено зі Steam Play, використовуючи інструмент сумісності платформ.\n\nБудь ласка, прогляньте ЧаПи, щоби дізнатися про способи найкращого налаштування й використання своєї системи."
-"SteamPlay_FAQ"                             "ЧаПи щодо Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Налаштування Steam Play"

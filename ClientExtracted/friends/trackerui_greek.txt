@@ -792,7 +792,7 @@
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Διαγραφή όλων των αποθηκευμένων αρχείων, των cookie και του ιστορικού του περιηγητή Steam;"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Προσκαλέστε οποιονδήποτε να παίξει με έναν σύνδεσμο από τη λίστα φίλων σας."
+"RemotePlayTogether_Notification_AvailableToInvite" "Προσκαλέστε σε παιχνίδι με σύνδεσμο Λίστας Φίλων."
 
 } 
 }  

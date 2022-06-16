@@ -200,7 +200,7 @@
 "Overlay_Last_Session" "Последна сесия"
 "Overlay_Chars_Left" "%screenshot_caption_charsleft% оставащи символа"
 "Overlay_Add_Caption" "Добавяне на заглавие"
-"Overlay_Publish_Offline" "Снимките не могат да бъдат публикувани, докато сте в режим извън линия"
+"Overlay_Publish_Offline" "Снимките не могат да бъдат публикувани, докато сте в режим „Извън линия“"
 "Overlay_Screenshots_Press_Hotkey" "Натиснете %screenshot_hotkey%, докато сте в игра, за да направите снимки."
 "Overlay_Screenshots_Press_HotkeyApp" "Натиснете %screenshot_hotkey%, докато сте в приложение, за да направите снимки."
 "Overlay_Publish_Error_Title" "Грешка"

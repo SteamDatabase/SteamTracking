@@ -18,6 +18,17 @@ extend .google.protobuf.FieldOptions {
 	optional bool allow_field_named_steam_id = 50024 [default = false];
 }
 
+enum EBanContentCheckResult {
+	k_EBanContentCheckResult_NotScanned = 0;
+	k_EBanContentCheckResult_Reset = 1;
+	k_EBanContentCheckResult_NeedsChecking = 2;
+	k_EBanContentCheckResult_VeryUnlikely = 5;
+	k_EBanContentCheckResult_Unlikely = 30;
+	k_EBanContentCheckResult_Possible = 50;
+	k_EBanContentCheckResult_Likely = 75;
+	k_EBanContentCheckResult_VeryLikely = 100;
+}
+
 enum EProtoClanEventType {
 	k_EClanOtherEvent = 1;
 	k_EClanGameEvent = 2;
@@ -219,6 +230,7 @@ message CCommunity_ClanAnnouncementInfo {
 	optional fixed64 event_gid = 13;
 	optional int32 voteupcount = 14;
 	optional int32 votedowncount = 15;
+	optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];
 }
 
 message CClanEventData {

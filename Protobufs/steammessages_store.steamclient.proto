@@ -134,6 +134,23 @@ message CStore_GetDiscoveryQueue_Response {
 	optional string debug_solr_query = 7;
 }
 
+message CStore_GetDiscoveryQueueSettings_Request {
+	optional .EStoreDiscoveryQueueType queue_type = 1 [default = k_EStoreDiscoveryQueueTypeNew];
+}
+
+message CStore_GetDiscoveryQueueSettings_Response {
+	optional string country_code = 1;
+	optional .CStoreDiscoveryQueueSettings settings = 2;
+}
+
+message CStore_SkipDiscoveryQueueItem_Request {
+	optional .EStoreDiscoveryQueueType queue_type = 1 [default = k_EStoreDiscoveryQueueTypeNew];
+	optional uint32 appid = 2;
+}
+
+message CStore_SkipDiscoveryQueueItem_Response {
+}
+
 message CStore_GetStorePreferences_Request {
 }
 
@@ -233,6 +250,14 @@ service Store {
 
 	rpc GetDiscoveryQueue (.CStore_GetDiscoveryQueue_Request) returns (.CStore_GetDiscoveryQueue_Response) {
 		option (method_description) = "Get a list of games for the user to explore on the store.";
+	}
+
+	rpc GetDiscoveryQueueSettings (.CStore_GetDiscoveryQueueSettings_Request) returns (.CStore_GetDiscoveryQueueSettings_Response) {
+		option (method_description) = "Get the settings that were used to generate a user's discovery queue.";
+	}
+
+	rpc SkipDiscoveryQueueItem (.CStore_SkipDiscoveryQueueItem_Request) returns (.CStore_SkipDiscoveryQueueItem_Response) {
+		option (method_description) = "Skip an item in the user's queue.";
 	}
 
 	rpc GetStorePreferences (.CStore_GetStorePreferences_Request) returns (.CStore_GetStorePreferences_Response) {

@@ -104,6 +104,7 @@ enum EStreamControlMessage {
 	k_EStreamControlSetQualityOverride = 134;
 	k_EStreamControlSetBitrateOverride = 135;
 	k_EStreamControlShowOnScreenKeyboard = 136;
+	k_EStreamControlControllerConfigMsg = 137;
 }
 
 enum EStreamVersion {
@@ -289,6 +290,14 @@ enum ELogFileType {
 	k_ELogFileSystemBoot = 0;
 	k_ELogFileSystemReset = 1;
 	k_ELogFileSystemDebug = 2;
+}
+
+enum EStreamControllerConfigMsg {
+	k_EStreamControllerConfigMsg_RequestConfigsForApp = 0;
+	k_EStreamControllerConfigMsg_ConfigResponse = 1;
+	k_EStreamControllerConfigMsg_PersonalizationResponse = 2;
+	k_EStreamControllerConfigMsg_ActiveConfigChange = 3;
+	k_EStreamControllerConfigMsg_RequestActiveConfig = 4;
 }
 
 message CDiscoveryPingRequest {
@@ -696,6 +705,7 @@ message CSetSpectatorModeMsg {
 
 message CRemoteHIDMsg {
 	optional bytes data = 1;
+	optional bool active_input = 2;
 }
 
 message CTouchConfigActiveMsg {
@@ -868,4 +878,40 @@ message CTransportSignalMsg {
 
 	optional .CTransportSignalMsg.WebRTCMessage webrtc = 1;
 	repeated bytes sdr = 2;
+}
+
+message CControllerConfigMsg {
+	message ControllerConfigResponse {
+		optional uint32 appid = 1;
+		optional string configURL = 2;
+		optional uint32 controllerType = 3;
+		optional string controllerData = 4;
+		optional uint32 selectionOrder = 5;
+		optional bool actionBlock = 6;
+	}
+
+	message ControllerPersonalizationResponse {
+		optional string personalizationData = 1;
+	}
+
+	message ControllerActiveConfigChangeResponse {
+		optional string configURL = 2;
+		optional uint32 controllerType = 3;
+		optional string controllerData = 4;
+		optional uint32 selectionOrder = 5;
+	}
+
+	message ControllerActiveConfigMsg {
+		optional uint32 appid = 1;
+		optional string configURL = 2;
+		optional uint32 controllerType = 3;
+		optional string controllerData = 4;
+	}
+
+	required .EStreamControllerConfigMsg type = 1 [default = k_EStreamControllerConfigMsg_RequestConfigsForApp];
+	optional string controllerPath = 2;
+	optional uint32 appid = 3;
+	optional .CControllerConfigMsg.ControllerPersonalizationResponse personalizationResponse = 4;
+	repeated .CControllerConfigMsg.ControllerConfigResponse configResponse = 6;
+	optional .CControllerConfigMsg.ControllerActiveConfigMsg activeConfigChangeMsg = 7;
 }

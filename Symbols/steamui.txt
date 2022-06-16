@@ -1137,7 +1137,9 @@
  V_SetURLParam
  V_SplitNumbers
  V_SplitNumbersUint
+ V_SplitStringInternal
  V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
+ V_StrRight
  V_StrSkipArticles
  V_StrSubst
  V_StrSubstInPlace

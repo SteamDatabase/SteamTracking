@@ -685,7 +685,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_RecoverAuthenticator_BadPassword"			"パスワードが間違っています。確認してもう一度お試しください。"
 "Steam_RecoverAuthenticator_BadCode"				"入力されたコードまたはパスワードが正しくありません。確認して、もう一度お試しください。"
-"Steam_RecoverAuthenticator_BadCodes"				"コードもしくはパスワードが間違っています。確認してもう一度お試しください。"
+"Steam_RecoverAuthenticator_BadCodes"				"コードまたはパスワードが間違っています。確認してもう一度お試しください。"
 "Steam_RecoverAuthenticator_Done"					"Steamガード認証用機器はあなたのアカウントから削除されました。\n\n再びアカウントへログインできるようになります。"
 
 
@@ -732,8 +732,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"アカウント資格情報の保存を有効にする"
 
 "SteamUI_OfflineMode_Title" "Steam - ダウンロード不可"
-"SteamUI_OfflineMode_GoOfflineDesc" "オフラインモードは、ラップトップのプラグを抜いて電源を切ったり、\nインターネットに接続できない場合に使用されます。\n\nフレンドやサーバーブラウザーなどの多くの機能は、\nオフライン中は使用できません。最新のゲームだけを\nプレイできます。"
-"SteamUI_OfflineMode_GoOnlineDesc" "オンラインに戻りますか?\n\nこのためには、Steam を再起動する必要があります。"
+"SteamUI_OfflineMode_GoOfflineDesc" "オフラインモードは、インターネットの接続を切る場合や、\nインターネットに接続できない場合に使用されます。\n\nフレンドおよびファミリーシェアリングなどの多くの機能は、\nオフライン中は使用できません。プレイできるのは\n最新状態のゲームのみです。"
+"SteamUI_OfflineMode_GoOnlineDesc" "オンラインに戻しますか？"
+"SteamUI_OfflineMode_MustCloseGames" "オフラインモードに入る前に、起動中のゲームをすべて終了する必要があります。"
+"SteamUI_OfflineMode_EnterOfflineMode" "オフラインモードに変更"
+"SteamUI_OfflineMode_LeaveOfflineMode" "オフラインモードを終了"
+
 "SteamUI_GameProperties_Status"	"状態"
 "SteamUI_GameProperties_UpdateNews"	"更新情報"
 "SteamUI_GamePropertiesContent_OfflineMode" "オフラインモード："
@@ -2116,7 +2120,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_BackupGameFiles$appType=music"			"サウンドトラックファイルのバックアップ..."
 "Steam_BackupGameFiles$appType=tool"			"ツールファイルのバックアップ..."
 
-"Steam_Install_WillDownloadAllFiles$appType=application"	"このアプリケーション向けの全てのファイルは今後 Steam を通してダウンロードされます。"
+"Steam_Install_WillDownloadAllFiles$appType=application"	"このアプリケーション向けのすべてのファイルは今後Steamを通してダウンロードされます。"
 "Steam_Install_WillDownloadAllFiles$appType=game"	"このゲームのすべてのファイルをSteamでダウンロードします。"
 "Steam_Install_WillDownloadAllFiles$appType=demo"	"このデモのすべてのファイルを Steam でダウンロードします。"
 "Steam_Install_WillDownloadAllFiles$appType=media"	"このメディアのすべてのファイルをSteamでダウンロードします。"
@@ -3575,7 +3579,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"音声言語を<current language>に設定する"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"オリジナルの英語音声プラス<current language>字幕\n（ダウンロードには1GB必要）"
 
-"Steam_CannotInstallInOfflineMode"		"Steamのステータスがオフラインの場合、ゲームをインストールできません。\nSteamを終了して再起動し、[オンラインにする...]を選択してください。\n"
+"Steam_CannotInstallInOfflineMode"		"Steamのステータスがオフラインの場合、ゲームをインストールできません。\nオフラインモードを終了するには、Steamメニューから「オンラインにする」を選択してください。\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - ダウンロード不可"
 "Steam_CannotInstallDownloadsDisabled"	"ダウンロード不可のときはゲームのインストールはできません。\n"
@@ -4523,11 +4527,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Settings_ShaderCache_Enable"		"シェーダープリキャッシュを有効化 (%shaderdiskusagemb% MB プリキャッシュ容量)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"バックグラウンドでのVulkanシェーダー処理を許可する"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"%shaderapp%の処理中...（%shaderpercent%%）"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "プラットフォーム互換ツールを使用して、このゲームをSteam Playで起動します。\n\nあなたのシステムで最高の体験を得る方法をFAQでご確認ください。"
-"SteamPlay_FAQ"                             "Steam Play FAQ"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Steam Play設定"

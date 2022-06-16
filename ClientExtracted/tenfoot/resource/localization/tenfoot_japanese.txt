@@ -704,8 +704,8 @@
 	"SettingsControllerCfg_BigPictureNote"	"Big Picture 設定は、Big Picture モードや、Webブラウジング、オンスクリーンキーボードで使われる様々な操作に適用されます。"
 	"SettingsControllerCfg_ChordNote"		"Steam ボタンコード設定は、 Steamボタンを押している間適用されます。これにより、全体的な操作がいつでもどんなゲームやアプリケーションにおいても、アクセス可能になります。"
 
-	"SettingsAbout_SteamClient"			"Steam クライアント"
-	"SettingsAbout_Built"				"Steam クライアントビルド"
+	"SettingsAbout_SteamClient"			"Steamクライアント"
+	"SettingsAbout_Built"				"Steamクライアントビルド"
 	"SettingsAbout_BuildDateTime"		"{s:build_date}、{s:build_time}"
 	"SettingsAbout_SteamPackage"		"Steam バージョン"
 	"SettingsAbout_SteamPackageVersion"	"{s:package_version}"
@@ -6890,7 +6890,7 @@ XInput ボタンは XInput ゲームパッド対応のゲームでしか使う�
 
 	"ControllerBinding_Official" "公式開発者の設定"
 	"ControllerBinding_OfficialDescription" "このゲームの開発者が作成した設定です。"
-	"ControllerBinding_HeaderLoad" "コントローラ設定 - インポート"
+	"ControllerBinding_HeaderLoad" "コントローラ設定－インポート"
 	"ControllerBinding_HeaderSave" "コントローラ設定 - エクスポート"
 	"ControllerBinding_Explanation_template" "一般的な設定です。自分だけの設定を作る良い出発点になります。"
 	"ControllerBinding_Explanation_personal" "このゲーム用にあなたがエクスポートした設定です。"
@@ -7600,8 +7600,6 @@ XInput ボタンは XInput ゲームパッド対応のゲームでしか使う�
 	"SteamUI_ProcessShader_Description"	"シェーダーキャッシュの処理に時間がかかっています。スキップしますか？"
 	"Steam_WaitingForShaderCache"	"シェーダー処理中：現在{i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "プラットフォーム互換ツールを使用して、このゲームをSteam Playで起動します。"
 	"Library_Details_FieldLabel_2DScrollSwipe"			"スクロールホイールモード"
 	"Library_Details_FieldLabel_Invert"			"逆に設定"
 	"ControllerBinding_SoftPress_Invert"	"しきい値を逆に設定"

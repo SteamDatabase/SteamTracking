@@ -154,7 +154,7 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_CreatingAccount"	"Création de votre compte..."
 
 "SteamUI_InstallServiceTitle" "Erreur du service Steam"
-"SteamUI_InstallServiceText" "Une maintenance est requise sur cet ordinateur pour le service Steam.\nCe service offre une aide à l'installation ou à la mise à jour de jeux sur Steam, il permet la mise en place de l'outil antitriche pour certains titres et prend en charge d'autres tâches au niveau du système.\nLa réinstallation du service Steam requiert des droits d'administrateur."
+"SteamUI_InstallServiceText" "Une maintenance est requise sur cet ordinateur pour le service Steam.\nCe service permet à Steam d'installer ou de mettre à jour des jeux, active l'outil antitriche pour certains titres et prend en charge d'autres tâches au niveau du système.\nLa réinstallation du service Steam requiert les droits d'administration."
 "SteamUI_InstallServiceOk" "Installer le service"
 "SteamUI_InstallServiceCancel" "Annuler"
 
@@ -730,8 +730,12 @@ Cela devrait prendre moins d'une minute."
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Activer l'enregistrement des informations du compte"
 
 "SteamUI_OfflineMode_Title" "Steam : mode hors ligne"
-"SteamUI_OfflineMode_GoOfflineDesc" "Le mode hors ligne est utilisé lorsque vous êtes sur le point de débrancher votre ordinateur portable\nou que vous prévoyez d'utiliser Steam sans Internet.\n\nPlusieurs fonctionnalités, telles que les contacts et le navigateur de serveurs,\nne sont pas disponibles en mode hors ligne.\nSeuls les jeux entièrement à jour pourront être lancés."
-"SteamUI_OfflineMode_GoOnlineDesc" "Souhaitez-vous revenir en mode en ligne ?\n\nCette opération nécessite le redémarrage de Steam.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "Le mode hors ligne est utilisé lorsque vous êtes sur le point de débrancher votre ordinateur portable\nou que vous prévoyez d'utiliser Steam sans Internet.\n\nPlusieurs fonctionnalités, telles que le partage avec la famille et les contacts,\nne sont pas disponibles en mode hors ligne.\nSeuls les jeux entièrement à jour pourront être lancés."
+"SteamUI_OfflineMode_GoOnlineDesc" "Souhaitez-vous revenir en ligne ?"
+"SteamUI_OfflineMode_MustCloseGames" "Avant d'accéder au mode hors ligne, tous les jeux en cours d'exécution doivent être fermés."
+"SteamUI_OfflineMode_EnterOfflineMode" "Passer en mode hors ligne"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Quitter le mode hors ligne"
+
 "SteamUI_GameProperties_Status"	"État"
 "SteamUI_GameProperties_UpdateNews"	"Actualités"
 "SteamUI_GamePropertiesContent_OfflineMode" "Mode hors ligne :"
@@ -3577,7 +3581,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Jouer les dialogues en <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Jouer les dialogues en anglais avec sous-titres en <current language>\n(en option, nécessite un téléchargement d'1 Go)"
 
-"Steam_CannotInstallInOfflineMode"		"Vous ne pouvez pas installer de jeux lorsque Steam est en mode hors ligne.\nQuittez et redémarrez Steam, puis sélectionnez « Passer en mode en ligne ».\n"
+"Steam_CannotInstallInOfflineMode"		"Aucun jeu ne peut être installé en mode hors ligne.\nPour quitter le mode hors ligne, veuillez sélectionner « Passer en mode en ligne » dans le menu Steam.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - Téléchargements désactivés"
 "Steam_CannotInstallDownloadsDisabled"	"Les jeux ne peuvent pas être installés lorsque les téléchargements sont désactivés.\n"
@@ -4524,11 +4528,6 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_Settings_ShaderCache_Enable"		"Activer la mise en mémoire cache des shaders (%shaderdiskusagemb% Mo préchargés)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Autoriser le traitement des shaders Vulkan en arrière-plan"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Traitement : %shaderapp%... (%shaderpercent% %)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Ce jeu va être lancé avec Steam Play, en utilisant un outil de compatibilité de plateforme.\n\nVeuillez consulter la FAQ pour savoir comment obtenir la meilleure expérience sur votre système."
-"SteamPlay_FAQ"                             "FAQ sur Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Paramètres Steam Play"

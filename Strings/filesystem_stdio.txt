@@ -266,10 +266,12 @@ s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
 =
+y
 0
 @
 @
-K
+X
+V
 =
 @
 =

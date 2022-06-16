@@ -731,8 +731,12 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"เปิดการใช้งานการบันทึกข้อมูลรับรองบัญชี"
 
 "SteamUI_OfflineMode_Title" "Steam - โหมดออฟไลน์"
-"SteamUI_OfflineMode_GoOfflineDesc" "โหมดออฟไลน์จะถูกใช้งานเมื่อคุณถอดสายไฟแล็ปท็อปของคุณ \nหรือเมื่อไม่ต้องการจะเชื่อมต่อกับอินเตอร์เน็ต \n\nคุณสมบัติต่าง ๆ เช่น ระบบเพื่อน และเซิร์ฟเวอร์เบราว์เซอร์ \nจะใช้งานไม่ได้ระหว่างออฟไลน์ เฉพาะเกมที่ติดตั้งอย่างสมบูรณ์เท่านั้น \nจึงจะสามารถเล่นได้"
-"SteamUI_OfflineMode_GoOnlineDesc" "คุณต้องการกลับมาออนไลน์หรือไม่? \n\nจำเป็นต้องรีสตาร์ท Steam เพื่อออนไลน์ \n"
+"SteamUI_OfflineMode_GoOfflineDesc" "โหมดออฟไลน์จะถูกใช้งานเมื่อคุณถอดสายเชื่อมต่ออินเตอร์เน็ตออกจากแล็ปท็อปของคุณ \nหรือเมื่อไม่ต้องการจะเชื่อมต่อกับอินเตอร์เน็ต \n\nคุณสมบัติต่าง ๆ เช่น การแบ่งปันกับเพื่อนและครอบครัว \nจะใช้งานไม่ได้ระหว่างออฟไลน์ เฉพาะเกมที่ติดตั้งอย่างสมบูรณ์เท่านั้น \nจึงจะสามารถเล่นได้"
+"SteamUI_OfflineMode_GoOnlineDesc" "คุณต้องการกลับมาออนไลน์หรือไม่?"
+"SteamUI_OfflineMode_MustCloseGames" "จะต้องปิดเกมที่เปิดใช้งานอยู่ทั้งหมดก่อนที่จะเข้าสู่โหมดออฟไลน์"
+"SteamUI_OfflineMode_EnterOfflineMode" "เข้าสู่โหมดออฟไลน์"
+"SteamUI_OfflineMode_LeaveOfflineMode" "ออกจากโหมดออฟไลน์"
+
 "SteamUI_GameProperties_Status"	"สถานะ"
 "SteamUI_GameProperties_UpdateNews"	"ข่าวสารการอัปเดต"
 "SteamUI_GamePropertiesContent_OfflineMode" "โหมดออฟไลน์:"
@@ -3574,7 +3578,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"เล่นเสียงพูดเป็น <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"เล่นเสียงพูดในภาษาอังกฤษต้นฉบับที่มีตัวเลือกซับไตเติ้ล <current language>\n(ต้องดาวน์โหลด 1GB)"
 
-"Steam_CannotInstallInOfflineMode"		"เกมไม่สามารถติดตั้งได้เมื่อ Steam อยู่ในโหมดออฟไลน์ \nออกและรีสตาร์ท Steam แล้วเลือก 'ปรับเป็นออนไลน์' \n"
+"Steam_CannotInstallInOfflineMode"		"ไม่สามารถติดตั้งเกมได้หาก Steam อยู่ในโหมดออฟไลน์ \nหากต้องการออกจากโหมดออฟไลน์ กรุณาเลือก \"ปรับเป็นออนไลน์\" ในเมนู Steam\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - การดาวน์โหลดถูกปิดการใช้งาน"
 "Steam_CannotInstallDownloadsDisabled"	"ไม่สามารถติดตั้งเกมได้เมื่อการดาวน์โหลดถูกปิดการใช้งานอยู่\n"
@@ -4521,11 +4525,6 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_Settings_ShaderCache_Enable"		"เปิดการใช้งานการแคชเชดเดอร์ล่วงหน้า (แคชล่วงหน้า %shaderdiskusagemb% MB)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"อนุญาตการประมวลผลพื้นหลังของเชดเดอร์ Vulkan"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"กำลังประมวลผล %shaderapp%... (%shaderpercent%%)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "เกมนี้จะเริ่มเปิดด้วย Steam Play โดยใช้เครื่องมือความเข้ากันได้สำหรับแพลตฟอร์ม \n\nกรุณาตรวจดูคำถามที่พบบ่อยสำหรับข้อมูลเกี่ยวกับวิธีการรับประสบการณ์ที่ดีที่สุดบนระบบของคุณ"
-"SteamPlay_FAQ"                             "คำถามที่พบบ่อยของ Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "การตั้งค่า Steam Play"

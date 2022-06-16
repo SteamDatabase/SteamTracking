@@ -4,8 +4,6 @@ __TEXT
 
 __text
 __TEXT
-0
-0
 __stubs
 __TEXT
 __stub_helper
@@ -62,7 +60,7 @@ __bss
 __DATA
 __common
 __DATA
-+A
+,A
 H
 __LINKEDIT
 B
@@ -111,45 +109,37 @@ h
 @%@
 )
 0_@
-](
-1
+:(
+"(
+(
+(
 0
 (
-P1
+(
+(
 9
-t6
 0
 @
 @
-l@
-N2
-;
-1
-I2
-'
+?
+?
+]2
+X2
 @
 @
 @
 @
 $
-3*
 Hi
 Hi
 Hi
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-[&
+(
+&
+2
+H'
 '
-'
-k0
+
+%
 15CBaseFileSystem
 11IFileSystem
 15IBaseFileSystem
@@ -1408,8 +1398,9 @@ N11SteamStdLib12ICommandLineE
 6ConVar
 11CPathString
 17CFileWriterThread
-N17CFileWriterThread16FileWriterItem_tE
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
+N17CFileWriterThread14CFileWriteItemE
+N17CFileWriterThread19CFileWriterWorkItemE
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 t
 r
@@ -1500,7 +1491,6 @@ N16CCookieContainer11CCookieInfoE
 17CHTTPRequestParam
 10CUtlVectorI17CHTTPRequestParam10CUtlMemoryIS0_EE
 10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE
-<html><body>Fake captive portal</body></html>
 33CHTTPDefaultRedirectEnableHandler
 20IHTTPRedirectHandler
 18CHTTPClientRequest
@@ -2200,7 +2190,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Jun  6 2022 20:19:53
+Startup - updater built Jun  8 2022 14:23:02
 Shutdown
 no hosts found
 Failed to load cached hosts file (%s), using defaults
@@ -2240,8 +2230,9 @@ Steam requires that '%s' be on a case-insensitive filesystem.
 Opted in to client beta '%s' via beta file
 You are in the '%s' client beta.
 publicbeta
-Defaulting to Steam Deck stable branch
 steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d
+Defaulting to Steam Deck stable branch
+steamdeck_stable
 nMegaBytes
 #SteamBootstrapper_InsufficientDiskSpace
 %s needs at least %uMB of free disk space to update.
@@ -2485,8 +2476,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jun  6 2022
-20:19:53
+Jun  8 2022
+14:23:03
 crashhandler003
 steam
 Steam Executable Crash
@@ -2583,7 +2574,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-20:19:51
+14:23:01
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10102,7 +10093,6 @@ Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
-flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
@@ -10135,16 +10125,17 @@ CFileWriterThread
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
-%s.async%u.tmp
-Invalid FileWriterItem_t
-m_buffer
-CUtlBuffer
 m_queueItemsPending
 m_vecRegisteredWriters
 static_cast<Node_t*>(pNode)->elem
 m_queueItemsPending.Count() == 0
 m_vecRegisteredWriters.Count() == 0
 CFileWriterThread already exited
+%s.async%u.tmp
+Invalid FileWriterItem_t
+m_buffer
+m_strFileName
+CUtlBuffer
 m_unInCounter == m_unOutCounter
 pFile
 cubData < FIO_MAX_IO_BYTES
@@ -10342,7 +10333,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-20:17:41
+14:20:53
 Jan
 Feb
 Mar
@@ -10762,6 +10753,7 @@ No verified phone number
 Insufficient battery charge
 Charger required
 Cached credential is invalid
+Phone number is Voice Over IP
 linux32
 Invalid
 Public
@@ -11005,7 +10997,6 @@ https://%s%s%s
 http://%s%s%s
 bytes=
 bytes
-m_strFileName
 m_strContentType
 ;
 @bHttpClientRecordHostnameDimension
@@ -11452,6 +11443,7 @@ shared resource
 generic context
 @cMinimumJobTimeoutsToCheckPerFrame
 100
+@bEnableNetworkJobsOwnStartList
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
 m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
@@ -11560,7 +11552,6 @@ null operation
 EMsg %d registered multiple times.
 EMsg_IsValid( oldMsgInfo.eMsg )
 *oldMsgInfo.pchMsgName
-!pMessageInfo->BHasDynamicMessageName()
 More than one message with ID 0x%x
 More than one message named '%s'
 ( id & k_nMessageTypeID_Mask ) == k_nMessageTypeID_EMsg
@@ -11573,6 +11564,7 @@ k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientServerTimestampRequest
 k_EMsgClientLANP2PRequestChunk
 k_EMsgClientLANP2PRequestChunkResponse
+k_EMsgClientHello
 k_EMsgClientLogon
 k_EMsgClientLogOn_Deprecated
 k_EMsgClientLogOnWithCredentials_Deprecated
@@ -11618,7 +11610,6 @@ k_EMsgClientLoggedOff
 k_EMsgGSApprove
 k_EMsgGSDeny
 k_EMsgGSKick
-k_EMsgClientCreateAcctResponse
 k_EMsgClientVACBanStatus
 k_EMsgClientAccountInfo
 k_EMsgClientAddFriendResponse
@@ -11683,6 +11674,7 @@ k_EMsgServiceMethod
 k_EMsgServiceMethodResponse
 k_EMsgHubConnect
 k_EMsgServiceMethodCallFromClient
+k_EMsgServiceMethodCallFromClientNonAuthed
 k_EMsgServiceMethodSendToClient
 k_EMsgClientReportOverlayDetourFailure
 k_EMsgClientSystemIM
@@ -12051,6 +12043,8 @@ CStructNetPacket->GetRealm() not valid.
 CStructNetPacket->SetRealm() not valid.
 @nCallerDeadlineHopLatencyMS
 When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
+@bLogMessageToProtobufClass
+We we first discover the protobuf class used for a particular EMsg, log it
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
 Unparseable protobuf message arrived, emsg=%u, size=%u
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
@@ -12702,78 +12696,66 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-X$7
-`$7
+x$7
+O7
 
+O7
 0
 ]E:
-](
-1
+:(
+"(
+(
+(
 0
 (
-P1
+(
+(
 9
-t6
 0
 @
 @
-l@
-N2
-;
-1
-I2
-'
+?
+?
+]2
+X2
 @
 @
 @
 @
 $
-3*
 Hi
 Hi
 Hi
-6
-6
-6
-6
-6
-6
-6
-6
-6
-6
-[&
-'
-'
-k0
-'
-'
+(
+&
+2
+H'
 '
 
 %
-:
+'
+5
+&
+&
+0
+8
 0
 &
-5
-5
-5
-5
-5
-5
-5
+&
+'
+(
 
 0
 5
-c/
-T/
-%
+5
+5
 &
+5
 &
-&
-&
-37
+k/
 
 0
+/
 Ic
 0
 0
@@ -12785,11 +12767,10 @@ AT=
 D
 @
 @
+T4
+0
 4
 4
-4
-4
-B.
 @
 Hc
 Hc
@@ -12822,36 +12803,56 @@ IcE
 @
 @
 .
-[7
+j=
+3
+3
 V
 -
--
 =
-P,
-J,
-,
+2
+Y,
 =
-h+
-G+
 1
-+
-+
-+
-Q*
-4
-f)
+1
+1
+1
+1
+0
+0
+0
+0
+*
+7
 @
-c
-)
 3
 3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+S(
+.
+.
+.
+.
 (
-j&
+w-
+'
+'
+z&
+I,
 @
 M9e
 @
 @
-}%
+{%
 ?
 ?
 ?
@@ -12875,31 +12876,30 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
 %
-.
 `
 `
 @
-*
-$
+,
+,
 j
 j
 Pj
 ARj
 j
-
-
-
-J-
+X-
 0
 0
 IcU
 E;e
-#
 M)u
 =
 =
 @
 =
+
+
+*(
+(
 =
 %
 =
@@ -13196,12 +13196,15 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 @
 
-
+Q.
 @
 @
 @
 0
+
 H=
+&
+&
 Ic]
 j
 j
@@ -13209,18 +13212,20 @@ j
 j
 j
 j
+*
 
-,!
-0$
-&$
+9!
+$
+$
 $
 $
 $
 t$I;M
-V%
+d%
 e
 W
 ,7~5d
+#})
 H
 0
 
@@ -13234,8 +13239,8 @@ H
 
 
 Hc
-$
-m$
+L)5;^$
+L950Z$
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13368,6 +13373,8 @@ H=
 @
 @
 =
+
+
 @
 |r=
 %
@@ -13464,13 +13471,13 @@ to=
 @
 H=
 =
-U
 
 =
 @
 =
 @
 =*.*
+
 
 @
 @
@@ -13496,8 +13503,11 @@ U
 0
 0
 0
+/
 0
 H=
+
+
 0
 &
 E
@@ -13518,14 +13528,12 @@ E
 @
 @
 @
-\
 @
 0
 0
 Hc
-E
--
 0
+
 0
 @
 @
@@ -13535,23 +13543,26 @@ E
 P
 P
 @
-
-@
-@
 @
 
+@
+@
+@
+
 
 @
-?
-?
-?
+
+
+
 @
 @
 0
+@
+
 =a
+
 0
 Hi
-v
 $
 $
 $

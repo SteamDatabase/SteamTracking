@@ -725,8 +725,12 @@
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Activar el almacenamiento de las credenciales de la cuenta"
 
 "SteamUI_OfflineMode_Title" "Steam - Modo desconectado"
-"SteamUI_OfflineMode_GoOfflineDesc" "El modo desconectado se utiliza cuando vas a desenchufar el portátil o no\nesperas tener conexión a Internet.\nMuchas funciones, como Amigos y el explorador de servidores, no estarán\ndisponibles en dicho modo. Solo estarán disponibles los juegos que estén\ntotalmente actualizados."
-"SteamUI_OfflineMode_GoOnlineDesc" "¿Deseas volver a conectarte?\n\nSerá necesario reiniciar Steam.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "El modo desconectado se utiliza cuando vas a desenchufar el portátil \no no esperas tener conexión a Internet.\n\nMuchas funciones, como el préstamo familiar, no estarán disponibles\nen dicho modo. Solo estarán disponibles los juegos que estén\ntotalmente actualizados."
+"SteamUI_OfflineMode_GoOnlineDesc" "¿Quieres volver al modo conectado?"
+"SteamUI_OfflineMode_MustCloseGames" "Todos los juegos en ejecución deben cerrarse antes de entrar en el modo desconectado"
+"SteamUI_OfflineMode_EnterOfflineMode" "Entrar en modo desconectado"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Salir del modo desconectado"
+
 "SteamUI_GameProperties_Status"	"Estado"
 "SteamUI_GameProperties_UpdateNews"	"Noticias de actualizaciones"
 "SteamUI_GamePropertiesContent_OfflineMode" "Modo desconectado:"
@@ -3542,7 +3546,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_RecoverLocked_NoEmailDetails" "Si no ves un mensaje reciente del Soporte de Steam en tu bandeja de entrada, prueba a mirar la carpeta de correo no deseado."
 "Steam_RecoverLocked_NoEmailDetails2" "Vuelve al paso anterior para introducir tu código si lo has encontrado o haz clic en «Siguiente» para recibir la asistencia que necesitas para acceder a tu cuenta de Steam desde este ordenador."
 "Steam_RecoverLocked_StartRecovery" "Lamentamos que estés teniendo problemas. ¡Déjanos ayudarte!"
-"Steam_RecoverLocked_StartRecovery2" "Sabemos que tu cuenta de Steam es muy valiosa para ti y estamos comprometidos a ayudarte a que no caiga en malas manos."
+"Steam_RecoverLocked_StartRecovery2" "Sabemos que tu cuenta de Steam es muy valiosa para ti y estamos comprometidos a ayudarte a que no caiga en las manos equivocadas."
 "Steam_RecoverLocked_StartRecovery3" "Contacta con el Soporte de Steam para que un miembro de nuestro equipo te ayude. Las peticiones legítimas de ayuda para acceder a la cuenta son nuestra prioridad número uno."
 "Steam_RecoverLocked_RecoverySupportLink" "Contactar con el Soporte de Steam"
 "Steam_RecoverLocked_RecoverySupportLink_URL" "https://help.steampowered.com/es/"
@@ -3571,7 +3575,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Reproducir audio en <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Reproducir audio en el inglés original con subtítulos optativos en <current language>\n(Requiere una descarga de 1 GB)"
 
-"Steam_CannotInstallInOfflineMode"		"No es posible instalar productos cuando Steam está en modo desconectado.\nSal, reinicia Steam y selecciona 'Pasar a modo conectado'."
+"Steam_CannotInstallInOfflineMode"		"Cuando Steam está en modo desconectado no se puede instalar juegos.\nPara salir del modo desconectado, elige «Modo conectado» en el menú de Steam.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - Descargas desactivadas"
 "Steam_CannotInstallDownloadsDisabled"	"No es posible instalar productos cuando las descargas están desactivadas.\n"
@@ -4518,11 +4522,6 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Settings_ShaderCache_Enable"		"Activar precarga en caché de sombreadores (%shaderdiskusagemb% MB precargados)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Permitir el procesamiento en segundo plano de los sombreadores Vulkan"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Procesando %shaderapp%... (%shaderpercent% %)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Este juego se iniciará con Steam Play mediante una herramienta de compatibilidad con otras plataformas.\n\nConsulta las preguntas frecuentes para informarte sobre cómo obtener la mejor experiencia en tu sistema."
-"SteamPlay_FAQ"                             "Preguntas frecuentes sobre Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Ajustes de Steam Play"

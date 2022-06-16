@@ -512,7 +512,7 @@
 "Friends_Voice_ChangingDevice_Title"	"Steam - Cambiando dispositivo de grabación"
 "Friends_Voice_ChangingDevice_Info"		"Se ha abierto el panel de control de audio de Windows. Pulsa \"Aceptar\" cuando hayas terminado de cambiar la configuración."
 "Friends_Voice_ChangingDevice_Button"	"Aceptar. He terminado de cambiar la configuración."
-"Friends_Voice_NoDeviceDetected"		"[ No se ha detectado ningún dispositivo de grabación ]"
+"Friends_Voice_NoDeviceDetected"		"[ No se detectó ningún dispositivo de grabación ]"
 "Friends_Voice_PushToTalkKey"			"Tecla \"pulsar para hablar\""
 "Friends_Voice_WhenActive"	"Cuando el chat de voz esté activo:"
 "Friends_Voice_AutoTransmit"	"Transmitir mi voz automáticamente cada vez que hable"

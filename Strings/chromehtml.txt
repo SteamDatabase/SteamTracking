@@ -149,6 +149,10 @@ $
 $
 (
 ,
+@
+0
+8
+,
 $
 (
 ,
@@ -267,6 +271,7 @@ $
 8
 @
 4
+H
 (
 (
 
@@ -299,7 +304,7 @@ X
 (
 (
 0
-0
+H
 0
 0
 (
@@ -371,7 +376,7 @@ X
 8
 (
 8
-H
+P
 0
 (
 (
@@ -546,6 +551,7 @@ H
 41CMsgBrowserViewPostMessageToParentRequest
 18CMsgBlockedRequest
 24CMsgSetProtocolBlockList
+29CMsgSetForceDeviceScaleFactor
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 15CHTMLController
 21IHTMLChromeController
@@ -623,13 +629,13 @@ NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 16CHTMLProtoBufMsgI14CMsgUnlockH264E
 16CHTMLProtoBufMsgI30CMsgSetNetFakeLocalSystemStateE
 16CHTMLProtoBufMsgI22CMsgAuthedSteamDomainsE
+16CHTMLProtoBufMsgI29CMsgSetForceDeviceScaleFactorE
 16CHTMLProtoBufMsgI23CMsgSteamAuthCookiesSetE
 7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 N@
 $@
->@
-../Frameworks/Steam Helper.app/Contents/MacOS/Steam Helper
+>@../Frameworks/Steam Helper.app/Contents/MacOS/Steam Helper
 19HTMLCommandBuffer_t
 23COSXChromeIPCWakeThread
 N6google8protobuf14FatalExceptionE
@@ -1106,9 +1112,6 @@ clientui
 --disable-accelerated-video-decode
 --enable-gpu-debugging
 --disablehighdpi --force-device-scale-factor=1 --device-scale-factor=1
-1.5
--gamepaduiscale
---force-device-scale-factor=%s --device-scale-factor=%s
 --no-sandbox
 -force-sandbox
 --disable-winh264
@@ -2053,7 +2056,6 @@ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
-flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
@@ -2313,22 +2315,23 @@ sc_schinese
 
 @
 @
-
+
+
+
+
+
+
 
 
 
 @
-y
-`
-=
-{
-6
-3
-!
+E
+H
+#
 
 
 
-8
+
 0
 0
 Hi

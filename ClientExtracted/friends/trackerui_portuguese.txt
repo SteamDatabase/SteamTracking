@@ -792,7 +792,7 @@
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Eliminar todos os cookies, ficheiros em cache e histórico do browser do Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Usa um link da tua lista de amigos para convidares quem quiseres para jogar."
+"RemotePlayTogether_Notification_AvailableToInvite" "Com um link, convida quem quiseres para jogar."
 
 } 
 }  

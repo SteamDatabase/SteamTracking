@@ -2087,23 +2087,6 @@
 	}
 	"group"
 	{
-		"id"		"8"
-		"mode"		"absolute_mouse"
-		"inputs"
-		{
-		}
-		"settings"
-		{
-			"virtual_mode"		"1"
-			"sensitivity"		"250"
-		}
-		"gameactions"
-		{
-			"WebBrowser"		"zoom"
-		}
-	}
-	"group"
-	{
 		"id"		"9"
 		"mode"		"absolute_mouse"
 		"inputs"
@@ -2267,7 +2250,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserMoreMenu, Open Menu"
+							"binding"		"mouse_button RIGHT"
 						}
 						"settings"
 						{
@@ -2292,7 +2275,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserSelect, Select"
+							"binding"		"mouse_button LEFT"
 						}
 						"settings"
 						{
@@ -2711,6 +2694,8 @@
 		"settings"
 		{
 			"requires_click"		"0"
+			"layout"		"3"
+			"deadzone"		"17000"
 		}
 	}
 	"group"
@@ -2719,6 +2704,19 @@
 		"mode"		"absolute_mouse"
 		"inputs"
 		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -3832,13 +3830,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"mode_shift right_trackpad 8"
-						}
-					}
-					"Full_Press"
-					{
-						"bindings"
-						{
 							"binding"		"mode_shift right_joystick 59"
 						}
 						"settings"
@@ -4166,8 +4157,7 @@
 		"group_source_bindings"
 		{
 			"16"		"switch active"
-			"7"		"right_trackpad active"
-			"8"		"right_trackpad active modeshift"
+			"30"		"right_trackpad active"
 			"58"		"right_joystick active"
 			"59"		"right_joystick active modeshift"
 			"0"		"button_diamond active"
@@ -4201,7 +4191,6 @@
 			"20"		"switch active"
 			"28"		"right_trackpad active"
 			"61"		"right_joystick inactive"
-			"30"		"button_diamond inactive"
 			"31"		"button_diamond active"
 			"21"		"left_trigger active"
 			"22"		"right_trigger active"

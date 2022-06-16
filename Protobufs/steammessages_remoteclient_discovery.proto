@@ -117,6 +117,7 @@ message CMsgRemoteClientBroadcastStatus {
 	optional bool remoteplay_active = 22;
 	optional uint32 supported_services = 23;
 	optional bool steam_deck = 24;
+	optional uint64 steam_version = 25;
 }
 
 message CMsgRemoteClientBroadcastDiscovery {
@@ -215,11 +216,13 @@ message CMsgRemoteDeviceStreamingResponse {
 message CMsgRemoteDeviceProofRequest {
 	required bytes challenge = 1;
 	optional uint32 request_id = 2;
+	optional bool update_secret = 3;
 }
 
 message CMsgRemoteDeviceProofResponse {
 	required bytes response = 1;
 	optional uint32 request_id = 2;
+	optional bool updated_secret = 3;
 }
 
 message CMsgRemoteDeviceStreamTransportSignal {

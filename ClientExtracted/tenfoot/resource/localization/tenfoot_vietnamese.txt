@@ -1564,7 +1564,7 @@
 	"Trailer_Slideshow_Error"					"Không thể tải trailer vào lúc này"
 
 	"Library_ContentTitle"	"Thư viện"
-	"Library_RecentlyPlayed"	"ĐƯỢC CHƠI GẦN ĐÂY"
+	"Library_RecentlyPlayed"	"CHƠI GẦN ĐÂY"
 	"Library_ViewAll"		"XEM TOÀN BỘ"
 	"Library_Games"			"TRÒ CHƠI"
 	"Library_Screenshots"	"ẢNH CHỤP"
@@ -7597,8 +7597,6 @@
 	"SteamUI_ProcessShader_Description"	"Quá trình xử lý bộ nhớ đệm shader đang mất nhiều thời gian, bạn có muốn bỏ qua?"
 	"Steam_WaitingForShaderCache"	"Đang xử lí shader, hiện tại {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Trò chơi này sẽ chạy với Steam Play, sử dụng công cụ tương thích hệ máy."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Chế độ nút cuộn"
 	"Library_Details_FieldLabel_Invert"			"Đảo ngược"
 	"ControllerBinding_SoftPress_Invert"	"Mức độ đảo ngược"

@@ -21,6 +21,10 @@ enum EClientNotificationType {
 	k_EClientNotificationType_CloudSyncConflict = 16;
 	k_EClientNotificationType_IncomingVoiceChat = 17;
 	k_EClientNotificationType_ClaimSteamDeckRewards = 18;
+	k_EClientNotificationType_GiftReceived = 19;
+	k_EClientNotificationType_ItemAnnouncement = 20;
+	k_EClientNotificationType_HardwareSurvey = 21;
+	k_EClientNotificationType_LowDiskSpace = 22;
 }
 
 enum ESystemUpdateNotificationType {
@@ -126,4 +130,24 @@ message CClientNotificationIncomingVoiceChat {
 }
 
 message CClientNotificationClaimSteamDeckRewards {
+}
+
+message CClientNotificationGiftReceived {
+	optional string sender_name = 1;
+}
+
+message CClientNotificationItemAnnouncement {
+	optional uint32 new_item_count = 1;
+}
+
+message CClientNotificationInboxStats {
+	optional uint32 friend_invite_count = 1;
+	optional uint32 new_comment_count = 2;
+}
+
+message CClientNotificationHardwareSurveyPending {
+}
+
+message CClientNotificationLowDiskSpace {
+	optional uint32 folder_index = 1;
 }

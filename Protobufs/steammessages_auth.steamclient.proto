@@ -19,6 +19,12 @@ enum EAuthSessionGuardType {
 	k_EAuthSessionGuardType_EmailConfirmation = 5;
 }
 
+enum EAuthSessionSecurityHistory {
+	k_EAuthSessionSecurityHistory_Invalid = 0;
+	k_EAuthSessionSecurityHistory_UsedPreviously = 1;
+	k_EAuthSessionSecurityHistory_NoPriorHistory = 2;
+}
+
 message CAuthentication_GetPasswordRSAPublicKey_Request {
 	optional string account_name = 1 [(description) = "user-provided account name to get an RSA key for"];
 }
@@ -88,7 +94,11 @@ message CAuthentication_GetAuthSessionInfo_Response {
 	optional string state = 4 [(description) = "state of requestor"];
 	optional string country = 5 [(description) = "country of requestor"];
 	optional .EAuthTokenPlatformType platform_type = 6 [default = k_EAuthTokenPlatformType_Unknown, (description) = "platform type of requestor"];
-	optional string device_friendly_name = 7;
+	optional string device_friendly_name = 7 [(description) = "name of requestor device"];
+	optional int32 version = 8 [(description) = "version field"];
+	optional .EAuthSessionSecurityHistory login_history = 9 [default = k_EAuthSessionSecurityHistory_Invalid, (description) = "whether the ip has previuously been used on the account successfully"];
+	optional bool requestor_location_mismatch = 10 [(description) = "whether the requestor location matches this requests location"];
+	optional bool high_usage_login = 11 [(description) = "whether this login has seen high usage recently"];
 }
 
 message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request {
@@ -112,11 +122,31 @@ message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request {
 message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response {
 }
 
+message CAuthentication_AccessToken_GenerateForApp_Request {
+	optional string refresh_token = 1;
+	optional fixed64 steamid = 2;
+}
+
+message CAuthentication_AccessToken_GenerateForApp_Response {
+	optional string access_token = 1;
+}
+
 message CAuthentication_GetAuthSessionsForAccount_Request {
 }
 
 message CAuthentication_GetAuthSessionsForAccount_Response {
 	repeated uint64 client_ids = 1 [(description) = "unique identifier of requestor, also used for routing"];
+}
+
+message CAuthentication_MigrateMobileSession_Request {
+	optional fixed64 steamid = 1 [(description) = "Steam ID of the user to migrate"];
+	optional string token = 2 [(description) = "WG Token to migrate"];
+	optional string signature = 3 [(description) = "Signature over the wg token using the user's 2FA token"];
+}
+
+message CAuthentication_MigrateMobileSession_Response {
+	optional string refresh_token = 1;
+	optional string access_token = 2;
 }
 
 message CCloudGaming_CreateNonce_Request {
@@ -163,7 +193,7 @@ service Authentication {
 	}
 
 	rpc GetAuthSessionInfo (.CAuthentication_GetAuthSessionInfo_Request) returns (.CAuthentication_GetAuthSessionInfo_Response) {
-		option (method_description) = "get metadata of specific auth session";
+		option (method_description) = "get metadata of specific auth session, this will also implicitly bind the calling account";
 	}
 
 	rpc UpdateAuthSessionWithMobileConfirmation (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request) returns (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response) {
@@ -174,8 +204,16 @@ service Authentication {
 		option (method_description) = "approve an authentication session via steam guard code";
 	}
 
+	rpc GenerateAccessTokenForApp (.CAuthentication_AccessToken_GenerateForApp_Request) returns (.CAuthentication_AccessToken_GenerateForApp_Response) {
+		option (method_description) = "Given a refresh token for a client app audience (e.g. desktop client / mobile client), generate an access token";
+	}
+
 	rpc GetAuthSessionsForAccount (.CAuthentication_GetAuthSessionsForAccount_Request) returns (.CAuthentication_GetAuthSessionsForAccount_Response) {
 		option (method_description) = "Gets all active auth sessions for an account for reference by the mobile app";
+	}
+
+	rpc MigrateMobileSession (.CAuthentication_MigrateMobileSession_Request) returns (.CAuthentication_MigrateMobileSession_Response) {
+		option (method_description) = "Migrates a WG token to an access and refresh token using a signature generated with the user's 2FA secret";
 	}
 }
 

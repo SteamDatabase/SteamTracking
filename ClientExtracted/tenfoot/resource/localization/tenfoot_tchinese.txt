@@ -80,7 +80,7 @@
 	"UI_HidePassword"			"隱藏密碼"
 
 	"UI_Agreements"					"協議"
-	"UI_ViewAgreements"				"檢視 Steam 訂戶協議和隱私權條款"
+	"UI_ViewAgreements"				"檢視 Steam 訂戶協議和隱私權政策"
 	"UI_I_Agree"					"我同意"
 
 	"Month_January"					"1月"
@@ -464,7 +464,7 @@
 	"CreateAccount_EmailTaken_CreateAccountAnyway" "建立新的帳戶"
 
 	"CreateAccount_Agreements_Title" "幾項重要細節。"
-	"CreateAccount_Agreements_Description" "在建立 Steam 帳戶之時，您同意遵守 Steam 訂戶協議和隱私權條款。"
+	"CreateAccount_Agreements_Description" "在建立 Steam 帳戶之時，您同意遵守 Steam 訂戶協議和隱私權政策。"
 	"CreateAccount_Agreements_IAgree" "我同意"
 	"CreateAccount_Agreements_Agreements" "協議"
 	"CreateAccount_Agreements_ViewSSA" "檢視 Steam 訂戶協議"
@@ -473,7 +473,7 @@
 	"CreateAccount_SSA_Title"		"Steam 訂戶協議"
 	"CreateAccount_SSA_ViewPPA"		"檢視隱私權條款"
 
-	"CreateAccount_PPA_Title"		"Steam 隱私權條款"
+	"CreateAccount_PPA_Title"		"Steam 隱私權政策"
 	"CreateAccount_PPA_ViewSSA"		"檢視 Steam 訂戶協議"
 
 	"CreateAccount_Creating_Title" "就快完成了…"
@@ -4161,7 +4161,7 @@
 	"SteamUI_StreamClient_Failed_Connect"	"無法連線至遠端電腦。"
 	"SteamUI_StreamClient_Failed_Proto"	"本地電腦所安裝的 Steam 版本與遠端的不同。"
 	"SteamUI_StreamClient_Failed_Auth"	"認證失敗"
-	"SteamUI_StreamClient_Failed_DirectX"	"請安裝 Microsoft 網站上提供的 DirectX 運行環境。"
+	"SteamUI_StreamClient_Failed_DirectX"	"請安裝 Microsoft 網站上提供的 DirectX 執行階段。"
 	"SteamUI_StreamLaunch_Failed_Title" "串流啟動失敗"
 	"SteamUI_StreamLaunch_RequiresUI"	"開啟此遊戲需要使用者操作。\n\n請手動啟動遠端電腦，然後從這裡加入串流。"
 	"SteamUI_StreamLaunch_AccessDenied"	"認證有問題"
@@ -4700,7 +4700,7 @@
 	"Country_VI"		"美屬維京群島"
 	"Country_VN"		"越南"
 	"Country_VU"		"萬那杜"
-	"Country_WF"		"瓦利斯和富圖納"
+	"Country_WF"		"瓦利斯群島和富圖納群島"
 	"Country_WS"		"薩摩亞"
 	"Country_YE"		"葉門"
 	"Country_YT"		"馬約特"
@@ -4938,7 +4938,7 @@
 	"TimeZoneRegion_WestPacific"		"關島標準時間"
 	"TimeZoneCities_WestPacific"		"關島"
 	"TimeZoneRegion_CentralPacific"		"中太平洋標準時間"
-	"TimeZoneCities_CentralPacific"		"所羅門群島，新喀裡多尼亞"
+	"TimeZoneCities_CentralPacific"		"索羅門群島，新喀里多尼亞"
 	"TimeZoneRegion_Fiji"				"斐濟時間"
 	"TimeZoneCities_Fiji"				"斐濟群島"
 	"TimeZoneRegion_NewZealand"			"紐西蘭標準時間"
@@ -7613,8 +7613,6 @@
 	"SteamUI_ProcessShader_Description"	"著色器快取處理需要花一些時間， 是否要略過？"
 	"Steam_WaitingForShaderCache"	"著色器處理中，目前進度為 {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "此遊戲將透過 Steam Play 以平台相容工具啟動。"
 	"Library_Details_FieldLabel_2DScrollSwipe"			"滾輪模式"
 	"Library_Details_FieldLabel_Invert"			"反轉"
 	"ControllerBinding_SoftPress_Invert"	"臨界值反轉"

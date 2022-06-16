@@ -7598,8 +7598,6 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"SteamUI_ProcessShader_Description"	"Gölgelendirici önbellek işlemesi biraz uzun sürüyor, atlamak ister misiniz?"
 	"Steam_WaitingForShaderCache"	"Gölgelendiriciler işleniyor... %{i:progress}"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Bu oyun platform uyumluluk aracı kullanılarak Steam Play ile başlatılacaktır."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Fare Tekerleği Modu"
 	"Library_Details_FieldLabel_Invert"			"Ters Çevir"
 	"ControllerBinding_SoftPress_Invert"	"Eşik Ters Çevirme"

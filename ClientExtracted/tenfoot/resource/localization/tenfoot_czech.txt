@@ -7597,8 +7597,6 @@
 	"SteamUI_ProcessShader_Description"	"Zpracování cache shaderů chvíli trvá. Chcete ho přeskočit?"
 	"Steam_WaitingForShaderCache"	"Probíhá zpracování shaderů – {i:progress} % hotovo"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Tato hra bude spuštěna za pomoci funkce Steam Play a nástroje pro kompatibilitu mezi platformami."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Mód scrollovacího kolečka"
 	"Library_Details_FieldLabel_Invert"			"Invertování"
 	"ControllerBinding_SoftPress_Invert"	"Invertování prahu"

@@ -4,6 +4,7 @@ __TEXT
 __text
 __TEXT
 P
+pX"
 P
 __stubs
 __TEXT
@@ -12,8 +13,6 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
-@z#
-@z#
 __cstring
 __TEXT
 __objc_methname
@@ -70,9 +69,8 @@ __LINKEDIT
 8
 @loader_path/steamservice.dylib
 "
-P:-
+H:-
 P
-U-
 
 *
 `
@@ -98,22 +96,29 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-H5-
+@5-
 +gl,
 Hc5Me,
 0
-0
+
+
+'
+
+P,
+
+
 Hi
-#"
 H=
 "
 "
 "
 "
-g(
+"
+"
 Hc
 Hc
 Hc
+F!
 0
 0
 AT=
@@ -8051,7 +8056,6 @@ Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
-flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
@@ -8246,8 +8250,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Jun  6 2022
-20:17:41
+Jun  8 2022
+14:20:53
 Jan
 Feb
 Mar
@@ -8554,8 +8558,10 @@ wait details: [%s] - %s
 CJob::Heartbeat
 @cMinimumJobTimeoutsToCheckPerFrame
 100
+@bEnableNetworkJobsOwnStartList
 CJobMgr::BFrameFuncRun
 CJobMgr::BFrameFuncRunUntilCompleted
+CJobMgr::BFrameFuncRunNewJobsFromNetMessages
 CJobMgr::BFrameFuncDispatchCompletedWorkItems
 CJobMgr::m_WorkThreadPool
 CJobMgr::BFrameFuncRunSleepingJobs
@@ -8563,6 +8569,7 @@ CJobMgr::BFrameFuncRunSleepingJobs
 m_stackDoNotYieldGuards.Count() == 0
 CJobMgr -- Process Wait Detail Updates
 CJobMgr::BResumeYieldingJobs
+CJobMgr::BRunNewJobsFromNetMessages
 CJobMgr -- Dispatch completed work items
 m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
@@ -8647,6 +8654,8 @@ Comma separated list of Operation names that predate preaggregated job metrics.
 @nCallerDeadlineHopLatencyMS
 10
 When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
+@bLogMessageToProtobufClass
+We we first discover the protobuf class used for a particular EMsg, log it
 @nSpewThrottlePeriodMs
 1000
 @nSpewThrottleTriggerThreshold
@@ -8811,18 +8820,25 @@ m_cCurrentDepth > 0
 +gl,
 Hc5Me,
 0
-0
+
+
+'
+
+P,
+
+
 Hi
-#"
 H=
 "
 "
 "
 "
-g(
+"
+"
 Hc
 Hc
 Hc
+F!
 0
 0
 AT=
@@ -8833,13 +8849,13 @@ AT=
 D
 @
 @
-g%
-C%
-.%
-%
-%
-%
+g(
+!
+b%
+U%
+M%
 @
+%
 Hc
 Hc
 @
@@ -8870,15 +8886,18 @@ IcE
 IcE
 @
 @
+]
+\$
+!$
 V
 =
-=
-"
-@
-c
+##
 #
-H!
-!
+=
+m"
+P"
+M"
+@
 @
 M9e
 @
@@ -8905,13 +8924,9 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 
-
-
-
 Pj
 ARj
 j
-M
 0
 0
 =
@@ -9219,7 +9234,6 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
-(
 H=
 Ic]
 j
@@ -9245,6 +9259,7 @@ H
 
 
 *
+H
 Hc
 L95
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -9270,9 +9285,10 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
-m
+d
 $
 $
+N
 
 
 SHA1 multi-block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -9289,24 +9305,23 @@ Ic
 =*.*
 @
 @
+W
 @
 @
 @
 @
 @
 @
+0
+0
+0
+0
 0
 0
 0
 0
 0
 
-0
-
-
-0
-0
-0
 0
 0
 0
@@ -9325,9 +9340,12 @@ E
 Hc
 Hc
 Hc
+I
 0
 0
 0
+0
+@
 
 @
 @
@@ -9335,10 +9353,11 @@ Hc
 
 
 @
-?
-?
-?
+
+
+
 @
 @
 0
+
 Hi

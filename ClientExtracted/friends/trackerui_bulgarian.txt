@@ -114,7 +114,7 @@
 "Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Тази версия на Steam е прекалено стара да се свърже към „Приятели“. Рестартирайте Steam, за да получите най-скорошното обновление."
 "Friends_NotConnectedToFriendsNetwork_ServersBusy"		"Понастоящем Steam сървърите са свалени за рутина профилактика. Приятелите Ви ще се свържат автоматично, веднага щом са на разположение."
 "Friends_NotConnectedToFriendsNetwork_NoConnection"		"Не може да се установи мрежова връзка към Steam сървърите. Steam автоматично ще прави повторни опити за свързване, докато услугата стане достъпна."
-"Friends_NotAvailableInOfflineMode"			"Приятелите не са достъпни в режим извън линия."
+"Friends_NotAvailableInOfflineMode"			"Приятелите не са достъпни в режим „Извън линия“."
 
 
 "Friends_UserRequestingFriendship_Title"		"Приятели — %friend%"

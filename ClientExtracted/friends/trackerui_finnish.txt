@@ -526,7 +526,7 @@
 "Friends_SteamInputControllerPlayerNumberTitle"	"Ohjain on vaihtanut paikkaa"
 "Friends_SteamInputControllerPlayerNumberChanged"	"on nyt pelaaja %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Käytetään määrityksiä tililtä"
-"Friends_SteamInputControllerConfigNotification_Info" "ASETUS LADATTU:"
+"Friends_SteamInputControllerConfigNotification_Info" "MÄÄRITYS LADATTU:"
 "Friends_SteamInputControllerConfigNotification_Info2" "%config_name%"
 "Friends_SteamInputControllerConfigNotification_Info3" "Muokkaa sitä Steam-yhteisönäkymästä"
 "Library_ControllerSaveDefaultTitle" "Viralliset asetukset"

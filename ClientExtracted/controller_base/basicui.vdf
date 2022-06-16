@@ -2063,7 +2063,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserCloseTab, Close current tab"
+							"binding"		"mouse_button LEFT"
 						}
 						"settings"
 						{
@@ -2075,12 +2075,7 @@
 		}
 		"settings"
 		{
-			"virtual_mode"		"1"
 			"sensitivity"		"200"
-		}
-		"gameactions"
-		{
-			"WebBrowser"		"Cursor"
 		}
 	}
 	"group"
@@ -2092,12 +2087,7 @@
 		}
 		"settings"
 		{
-			"virtual_mode"		"1"
 			"sensitivity"		"250"
-		}
-		"gameactions"
-		{
-			"WebBrowser"		"zoom"
 		}
 	}
 	"group"
@@ -2265,7 +2255,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserMoreMenu, Open Menu"
+							"binding"		"mouse_button RIGHT"
 						}
 						"settings"
 						{
@@ -2290,7 +2280,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserSelect, Select"
+							"binding"		"mouse_button LEFT"
 						}
 						"settings"
 						{
@@ -3684,13 +3674,6 @@
 					{
 						"bindings"
 						{
-							"binding"		"mode_shift right_trackpad 8"
-						}
-					}
-					"Full_Press"
-					{
-						"bindings"
-						{
 							"binding"		"mode_shift right_joystick 59"
 						}
 						"settings"
@@ -3944,7 +3927,6 @@
 		{
 			"16"		"switch active"
 			"7"		"right_trackpad active"
-			"8"		"right_trackpad active modeshift"
 			"58"		"right_joystick active"
 			"59"		"right_joystick active modeshift"
 			"0"		"button_diamond active"

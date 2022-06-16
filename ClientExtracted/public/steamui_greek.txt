@@ -726,8 +726,12 @@
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Ενεργοποίηση αποθήκευσης διαπιστευτηρίων λογαριασμού"
 
 "SteamUI_OfflineMode_Title" "Steam – Λειτουργία εκτός σύνδεσης"
-"SteamUI_OfflineMode_GoOfflineDesc" "Η λειτουργία εκτός σύνδεσης χρησιμοποιείται όταν πρόκειται να αποσυνδέσετε το φορητό σας\nή γενικά περιμένετε να μην είστε είστε συνδεδεμένος στο διαδίκτυο.\n\nΠολλές λειτουργίες, όπως οι φίλοι και ο περιηγητής διακομιστών, δε θα\nείναι διαθέσιμες στη λειτουργία εκτός σύνδεσης. Μόνο παιχνίδια που είναι πλήρως ενημερωμένα\nθα είναι διαθέσιμα."
-"SteamUI_OfflineMode_GoOnlineDesc" "Θέλετε να συνδεθείτε ξανά;\n\nΑυτή η διαδικασία απαιτεί από το Steam να επανεκκινήσει.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "Η λειτουργία εκτός σύνδεσης χρησιμοποιείται όταν πρόκειται να αποσυνδέσετε τον φορητό σας υπολογιστή από την τροφοδοσία\nή γενικά αναμένετε πως δεν θα έχετε σύνδεση στο διαδίκτυο.\n\nΠολλά χαρακτηριστικά, όπως οι Φίλοι και η Κοινή Χρήση, δεν θα\nείναι διαθέσιμα στη λειτουργία εκτός σύνδεσης. Μόνο παιχνίδια που είναι πλήρως ενημερωμένα\nθα είναι διαθέσιμα."
+"SteamUI_OfflineMode_GoOnlineDesc" "Θέλετε να συνδεθείτε ξανά στο διαδίκτυο;"
+"SteamUI_OfflineMode_MustCloseGames" "Όλα τα παιχνίδια που εκτελούνται πρέπει να τερματιστούν πριν μπείτε στη λειτουργία εκτός σύνδεσης"
+"SteamUI_OfflineMode_EnterOfflineMode" "Είσοδος σε λειτουργία εκτός σύνδεσης"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Αποχώρηση από λειτουργία εκτός σύνδεσης"
+
 "SteamUI_GameProperties_Status"	"Κατάσταση"
 "SteamUI_GameProperties_UpdateNews"	"Νέα ενημερώσεων"
 "SteamUI_GamePropertiesContent_OfflineMode" "Λειτουργία εκτός σύνδεσης:"
@@ -830,7 +834,7 @@
 "SteamUI_Preload_GameNotReady_Title" "Δεν είναι ακόμη διαθέσιμο"
 "SteamUI_Preload_GameNotReady" "Αυτό το παιχνίδι δεν έχει κυκλοφορήσει ακόμη. Θα ξεκλειδωθεί\nκαι θα είναι διαθέσιμο για εκκίνηση την επίσημη μέρα κυκλοφορίας του."
 
-"SteamUI_ValveSurvey_Title"									"Έρευνα υλικού της Valve"
+"SteamUI_ValveSurvey_Title"									"Έρευνα υλισμικού της Valve"
 "SteamUI_ValveSurvey_YesParticipate"						"Ναι, θα ήθελα να συμμετάσχω στην έρευνα."
 "SteamUI_ValveSurvey_NoParticipate"							"Όχι, ευχαριστώ."
 
@@ -3570,7 +3574,7 @@
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Γλώσσα ομιλίας στα <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Γλώσσα ομιλίας στα Αγγλικά με προαιρετικούς υπότιτλους στα <current language>\n(Απαιτείται λήψη 1GB)"
 
-"Steam_CannotInstallInOfflineMode"		"Τα παιχνίδια δεν μπορούν να εγκατασταθούν όσο το Steam είναι σε Λειτουργία εκτός σύνδεσης.\nΚλείστε και επανεκκινήστε το Steam και επιλέξτε «Συνδεθείτε».\n"
+"Steam_CannotInstallInOfflineMode"		"Τα παιχνίδια δεν μπορούν να εγκατασταθούν όσο το Steam βρίσκεται σε λειτουργία εκτός σύνδεσης.\nΓια να αποχωρήσετε από τη λειτουργία εκτός σύνδεσης, επιλέξτε το «Συνδεθείτε» στο μενού Steam.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - Λήψεις απενεργοποιημένες"
 "Steam_CannotInstallDownloadsDisabled"	"Δεν μπορείτε να εγκαταστήσετε παιχνίδια όταν οι λήψεις είναι ανενεργές.\n"
@@ -4517,11 +4521,6 @@
 "Steam_Settings_ShaderCache_Enable"		"Ενεργοποίηση Pre-Cache σκίασης (%shaderdiskusagemb% MB αποθηκευμένα)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Να επιτρέπεται επεξεργασία φωτισμών Vulkan στο παρασκήνιο"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Επεξεργασία %shaderapp%... (%shaderpercent%%)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Το παιχνίδι θα εκκινήσει με Steam Play, χρησιμοποιώντας ένα εργαλείο συμβατότητας πλατφόρμας.\n\nΔιαβάστε τις Συχνές ερωτήσεις για πληροφορίες για το πώς να αξιοποιήσετε καλύτερα το σύστημά σας."
-"SteamPlay_FAQ"                             "Συχνές ερωτήσεις Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Ρυθμίσεις Steam Play"

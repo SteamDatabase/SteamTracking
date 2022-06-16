@@ -7597,8 +7597,6 @@
 	"SteamUI_ProcessShader_Description"	"A shader-gyorsítótár feldolgozás eltart egy darabig, szeretnéd kihagyni?"
 	"Steam_WaitingForShaderCache"	"Shaderek feldolgozás alatt, jelenleg {i:progress}%."
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Ez a játék a Steam Playjel fog indulni, egy platformkompatibilitási eszközt használva."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Görgetőkerék mód"
 	"Library_Details_FieldLabel_Invert"			"Invertálás"
 	"ControllerBinding_SoftPress_Invert"	"Küszöbinvertálás"

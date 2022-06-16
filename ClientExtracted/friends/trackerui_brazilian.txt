@@ -142,7 +142,7 @@
 "Friends_FriendInvitedToGame_Title"	"Convite — %friend%"
 "Friends_FriendInvitedToGame_Info"	"Um convite para entrar na sua partida foi enviado para %friend%."
 
-"Friends_NotifyFriendOnline_Title"	"%friend% - Notificação quando amigo ficar on-line"
+"Friends_NotifyFriendOnline_Title"	"%friend% — Notificação quando amigo ficar on-line"
 "Friends_NotifyFriendOnline_Info"		"Seu amigo %friend% está on-line."
 
 "Friends_RefreshLogin_Title"			"Steam — Atualizar sessão"
@@ -305,7 +305,7 @@
 "Friends_MsgNotification_Sender"		"%name% diz,"
 "Friends_MsgNotification_Body"		"%message%"
 
-"Friends_AddUser"				"Adicionar como amigo..."
+"Friends_AddUser"				"Enviar pedido de amizade..."
 "Friends_HideUser"				"Ignorar usuário..."
 
 "Friends_Voice_Call"				"Iniciar conversa por voz"
@@ -477,7 +477,7 @@
 
 "Friends_ChatPasswordWarning_Title"		"Alerta: segurança da conta em risco"
 "Friends_ChatPasswordWarning_Info"			"Atenção: você está prestes a compartilhar sua senha."
-"Friends_ChatPasswordWarning_Info2"		"O Suporte Steam jamais necessitará da sua senha por qualquer razão. Ao compartilhar a sua senha, você poderá perder a sua conta Steam e todos os seus jogos!\n\nTem certeza de que deseja compartilhar essa informação?"
+"Friends_ChatPasswordWarning_Info2"		"O Suporte Steam jamais precisará da sua senha, não importa o motivo. Ao compartilhar a sua senha, você poderá perder a sua conta Steam e todos os seus jogos!\n\nTem certeza de que deseja compartilhar essa informação?"
 "Friends_ChatPasswordWarning_Continue"		"Sim, enviar minha mensagem"
 "Friends_ChatPasswordWarning_DontSend"		"Não enviar minha mensagem"
 
@@ -504,7 +504,7 @@
 "Friends_ChatIntro_Request"	"Deseja aceitar esse pedido de conversa?"		
 "Friends_ChatIntro_DontShowCheckBox" "Sempre aceitar pedidos de conversa desse usuário."
 
-"Friends_ChatIntro_WarningInfo" "O Suporte Steam jamais necessitará de sua senha por qualquer razão. Ignore qualquer pedido de senha que receber."
+"Friends_ChatIntro_WarningInfo" "O Suporte Steam jamais precisará da sua senha, não importa o motivo. Ignore qualquer pedido de senha que receber."
 
 "Friends_Voice_MicrophoneDeviceLabel"	"Dispositivo de gravação (entrada de áudio)"
 "Friends_Voice_ChangeDevice"			"Alterar dispositivo..."
@@ -674,8 +674,8 @@
 
 "Friends_FriendInvitedToBroadcast_Title" "CONVIDAR — %friend%"
 "Friends_FriendInvitedToBroadcast_Info" "Um convite para assistir à sua transmissão foi enviado para %friend%."
-"Friends_BroadcastInvite" "%friend% convidou você para assistir ao seu jogo"
-"Friends_BroadcastInviteNotification" "convidou você para assistir à sua transmissão"
+"Friends_BroadcastInvite" "%friend% convidou você para assistir à transmissão"
+"Friends_BroadcastInviteNotification" "convidou você para assistir à transmissão"
 "Friends_Chat_InviteToBroadcast" "Convidar para assistir"
 "Friends_BroadcastApproveNotification" "deseja assistir à sua transmissão"
 "Friends_BroadcastCantStart_Streaming" "não é possível assistir à sua transmissão enquanto usa a transmissão doméstica"
@@ -792,7 +792,7 @@
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Excluir todos os cookies, histórico e cache do navegador do Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Convide quem você quiser para jogar com um link da lista de amigos."
+"RemotePlayTogether_Notification_AvailableToInvite" "Convide quem você quiser para jogar, com um link!"
 
 } 
 }  

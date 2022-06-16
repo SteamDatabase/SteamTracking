@@ -2388,6 +2388,7 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_status_decrypting"			"Decrypting: "
 "Steam_status_validating"			"Validating: "
 "Steam_status_verifying"			"Verifying: "
+"Steam_status_finalizing"			"Finalizing"
 
 "steam_status_launching"				"Launching"
 "steam_status_launching_progress"		"Launching: "

@@ -156,6 +156,9 @@ message CMsgBrowserResized {
 	optional int32 y = 3;
 	optional uint32 width = 4;
 	optional uint32 height = 5;
+	optional double dpi_horizontal = 6;
+	optional double dpi_vertical = 7;
+	optional string display_name = 8;
 }
 
 message CMsgPostURL {
@@ -928,6 +931,7 @@ message CMsgTouchGesture {
 	optional double width = 6;
 	optional double height = 7;
 	optional uint32 tap_count = 8;
+	optional double pinch_scale = 9;
 }
 
 message CMsgSetTouchGesturesToCancel {
@@ -990,4 +994,8 @@ message CMsgBlockedRequest {
 message CMsgSetProtocolBlockList {
 	optional uint32 browser_handle = 1;
 	optional string list = 2;
+}
+
+message CMsgSetForceDeviceScaleFactor {
+	optional double scale_factor = 1;
 }

@@ -377,7 +377,7 @@
 	"Login_UpdatingUserConfiguration" "Обновяване на потребителската конфигурация"
 	"Login_Connecting"				"Свързване със Steam акаунта {s:AccountName}"
 	"Login_Offline_Title"			"Режим „Извън линия“"
-	"Login_Offline"					"Избрали сте да ползвате Steam в режим извън линия.\n\nМного функции, като приятелите и търсачката за сървъри, няма да бъдат налични, докато сте извън линия."
+	"Login_Offline"					"Избрали сте да ползвате Steam в режим „Извън линия“.\n\nМного функции, като приятелите и търсачката за сървъри, няма да бъдат налични, докато сте извън линия."
 	"Login_GoOnline"				"МИНАВАНЕ НА ЛИНИЯ"
 	"Login_StayOffline"				"ОСТАВАНЕ ИЗВЪН ЛИНИЯ"
 	"Login_ConnectionIssues"		"Неуспешно свързване със Steam услугата. Проверете връзката си или опитайте отново по-късно."
@@ -7338,9 +7338,9 @@
 	"group_item_unread"		"{d:unread_chats}"
 
 	"groups_no_groups_message"	"Не сте член на никоя Steam група. Потърсете някакви в Steam общността"
-	"groups_no_groups_message_offline"	"Групите са недостъпни в режим извън линия."
+	"groups_no_groups_message_offline"	"Групите са недостъпни в режим „Извън линия“."
 	"friends_no_friends_message" "Не сте добавили никакви приятели в Steam. Потърсете някакви в Steam общността"
-	"friends_no_friends_message_offline" "Приятелите са недостъпни в режим извън линия."
+	"friends_no_friends_message_offline" "Приятелите са недостъпни в режим „Извън линия“."
 	"friends_filter_friends"			 "Филтриране на приятелите"
 
 	"friend_item_friendname"	"{s:friend_name}"
@@ -7601,8 +7601,6 @@
 	"SteamUI_ProcessShader_Description"	"Обработката на кеша за шейдърите отнема известно време. Бихте ли искали да прескочите?"
 	"Steam_WaitingForShaderCache"	"Шейдърите се обработват, понастоящем {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Тази игра ще се пусне със Steam Play, използвайки инструмент за платформена съвместимост."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Режим на скролиране"
 	"Library_Details_FieldLabel_Invert"			"Обърнато"
 	"ControllerBinding_SoftPress_Invert"	"Праг на обръщане"

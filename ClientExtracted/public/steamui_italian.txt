@@ -730,8 +730,12 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Attiva la memorizzazione delle credenziali dell'account"
 
 "SteamUI_OfflineMode_Title" "Steam - Modalità offline"
-"SteamUI_OfflineMode_GoOfflineDesc" "La modalità offline viene utilizzata quando si sta per scollegare il computer portatile \no quando non ci si può collegare a Internet.\n\nMolte funzioni, ad esempio Amici e il Browser del server, non \nsaranno disponibili offline. Saranno disponibili solo i giochi \ncompletamente aggiornati."
-"SteamUI_OfflineMode_GoOnlineDesc" "Tornare alla modalità online?\n\nSarà necessario riavviare Steam.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "La modalità offline viene utilizzata quando si sta per scollegare il computer portatile\no quando non ci si può collegare a Internet.\n\nMolte funzioni, ad esempio Amici e la Condivisione familiare, non\nsaranno disponibili offline. Saranno disponibili solo i giochi \ncompletamente aggiornati."
+"SteamUI_OfflineMode_GoOnlineDesc" "Vuoi tornare online?"
+"SteamUI_OfflineMode_MustCloseGames" "Tutti i giochi in esecuzione devono essere chiusi prima di entrare in modalità offline"
+"SteamUI_OfflineMode_EnterOfflineMode" "Vai in modalità offline"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Esci dalla modalità offline"
+
 "SteamUI_GameProperties_Status"	"Stato"
 "SteamUI_GameProperties_UpdateNews"	"Notizie sugli aggiornamenti"
 "SteamUI_GamePropertiesContent_OfflineMode" "Modalità offline:"
@@ -1181,7 +1185,7 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Attivazione eseguita!"
-"Steam_SubscriptionSuccess_CDKey" "Il codice è stato attivato con successo. Il prodotto o i prodotti sottoelencati sono stati associati permanentemente al tuo account di Steam. Devi accedere a questo account per poter utilizzare i prodotti che hai appena attivato su Steam.\n\nAssicurati di stampare una ricevuta di questa transazione per ricordare il tuo account in futuro."
+"Steam_SubscriptionSuccess_CDKey" "Il codice è stato attivato con successo. Il prodotto o i prodotti sottoelencati sono stati associati permanentemente al tuo account di Steam. Devi accedere a questo account per poter utilizzare i prodotti che hai appena attivato su Steam.\n\nStampa la ricevuta di questa transazione per un riferimento futuro."
 
 "Steam_SubscriptionSuccess_ComingSoonOnly" "Il codice di attivazione del prodotto è stato attivato. Questo contenuto sarà disponibile non appena il gioco verrà rilasciato su Steam. Questo contenuto ora è associato permanentemente al tuo account di Steam. Devi effettuare l'accesso a questo account per accedere agli articoli che hai appena attivato su Steam."
 
@@ -2515,7 +2519,7 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_Country_BV"		"Isola Bouvet"
 "Steam_Country_BR"		"Brasile"
 "Steam_Country_IO"		"Territori Britannici dell'Oceano Indiano"
-"Steam_Country_BN"		"Brunei"
+"Steam_Country_BN"		"Brunei Darussalam"
 "Steam_Country_BG"		"Bulgaria"
 "Steam_Country_BF"		"Burkina Faso"
 "Steam_Country_BI"		"Burundi"
@@ -3575,7 +3579,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Scegli <current language> come lingua dell'audio"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Scegli l'inglese come lingua dell'audio, con sottotitoli opzionali in <current language>\n(Richiede un download di 1 GB)"
 
-"Steam_CannotInstallInOfflineMode"		"Non è possibile installare i giochi se Steam è in modalità offline.\nEsci e riavvia Steam, quindi scegli \"Modalità online\".\n"
+"Steam_CannotInstallInOfflineMode"		"Non è possibile installare i giochi se Steam è in modalità offline.\nPer uscire dalla modalità online, seleziona \"Modalità online\" dal menu di Steam.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - Download disabilitati"
 "Steam_CannotInstallDownloadsDisabled"	"I giochi non possono essere installati quando i download sono disabilitati.\n"
@@ -4523,11 +4527,6 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 	"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Consenti l'elaborazione nel background degli shader Vulkan"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Elaborazione in corso di %shaderapp%... (%shaderpercent%%)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Questo gioco si avvierà con Steam Play utilizzando uno strumento per la compatibilità tra piattaforme.\n\nConsulta le domande frequenti per ulteriori informazioni su come ottenere l'esperienza migliore sul tuo sistema."
-"SteamPlay_FAQ"                             "Domande frequenti su Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Impostazioni di Steam Play"

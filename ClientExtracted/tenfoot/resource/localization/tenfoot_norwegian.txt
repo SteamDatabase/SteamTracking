@@ -7597,8 +7597,6 @@
 	"SteamUI_ProcessShader_Description"	"Shader-bufring tar litt tid, vil du hoppe over?"
 	"Steam_WaitingForShaderCache"	"Behandler shadere: {i:progress} %"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Dette spillet startes med Steam Play, som bruker et verktøy for plattformkompatibilitet."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Rullehjulmodus"
 	"Library_Details_FieldLabel_Invert"			"Inverter"
 	"ControllerBinding_SoftPress_Invert"	"Inverter terskel"

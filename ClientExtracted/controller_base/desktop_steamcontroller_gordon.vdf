@@ -1,0 +1,123 @@
+"controller_mappings"
+{
+	"version"		"2"
+	"title"		"Desktop Configuration"
+	"description"		"Default Desktop Configuration"
+	"creator"		"76561197969363440"
+	"group"
+	{
+		"id"		"0"
+		"mode"		"four_buttons"
+		"bindings"
+		{
+			"button_a"		"key_press ENTER"
+			"button_B"		"key_press SPACE"
+			"button_X"		"key_press PAGE_UP"
+			"button_y"		"key_press PAGE_DOWN"
+		}
+	}
+	"group"
+	{
+		"id"		"1"
+		"mode"		"dpad"
+		"bindings"
+		{
+			"dpad_north"		"key_press UP_ARROW"
+			"dpad_south"		"key_press DOWN_ARROW"
+			"dpad_east"		"key_press RIGHT_ARROW"
+			"dpad_west"		"key_press LEFT_ARROW"
+			"click"		"controller_action SHOW_KEYBOARD"
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"2"
+		"mode"		"dpad"
+		"bindings"
+		{
+			"dpad_north"		"key_press UP_ARROW"
+			"dpad_south"		"key_press DOWN_ARROW"
+			"dpad_east"		"key_press RIGHT_ARROW"
+			"dpad_west"		"key_press LEFT_ARROW"
+		}
+		"settings"
+		{
+			"deadzone"		"2000"
+		}
+	}
+	"group"
+	{
+		"id"		"3"
+		"mode"		"absolute_mouse"
+		"bindings"
+		{
+			"click"		"key_press LEFT_SHIFT"
+		}
+	}
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"mouse_button RIGHT"
+		}
+	}
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"mouse_button LEFT"
+		}
+	}
+	"group"
+	{
+		"id"		"6"
+		"mode"		"scrollwheel"
+		"bindings"
+		{
+			"scroll_clockwise"		"mouse_wheel SCROLL_DOWN"
+			"scroll_counterclockwise"		"mouse_wheel SCROLL_UP"
+			"click"		"mouse_button MIDDLE"
+		}
+		"settings"
+		{
+			"scroll_angle"		"160"
+		}
+	}
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"0"		"button_diamond active"
+			"1"		"joystick active"
+			"6"		"left_trackpad active"
+			"3"		"right_trackpad active"
+			"4"		"left_trigger active"
+			"5"		"right_trigger active"
+		}
+		"switch_bindings"
+		{
+			"bindings"
+			{
+				"left_bumper"		"key_press LEFT_CONTROL"
+				"right_bumper"		"key_press LEFT_ALT"
+				"button_escape"		"key_press ESCAPE"
+				"button_menu"		"key_press TAB"
+				"button_back_left"		"mouse_button BACK"
+				"button_back_right"		"mouse_button FORWARD"
+			}
+		}
+		"settings"
+		{
+		}
+	}
+}

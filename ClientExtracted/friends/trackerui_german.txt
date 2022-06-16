@@ -96,7 +96,7 @@
 "Friends_SearchingForFriend"				"Suche nach: %search% …"
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% wurde unter dem Namen '%friend%' zur Freundesliste hinzugefügt."
 "Friends_FriendHasBeenAddedToYourList"		"%friend% wurde Ihrer Freundesliste hinzugefügt."
-"Friends_UnableToFindFriendByThatName"		"%search% nicht gefunden.  Klicken Sie auf 'Zurück', wenn Sie eine neue Suche ausführen möchten."
+"Friends_UnableToFindFriendByThatName"		"%search% nicht gefunden. Klicken Sie auf 'Zurück', wenn Sie eine neue Suche ausführen möchten."
 "Friends_CannotAddSelfToList"				"Sie können sich nicht selbst zu Ihrer Freundesliste hinzufügen."
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% ist unter dem Namen '%friend%' bereits in der Freundesliste."
 
@@ -166,7 +166,7 @@
 "Friends_InvitationPending"			"%search% wurde eingeladen, sich bei Steam zu registrieren. Sobald eine Antwort eingetroffen ist, wird der Nutzer zu Ihrer Freundesliste hinzugefügt."
 "Friends_InvitationSent"				"Sie haben %search% eine E-Mail-Einladung gesendet. Sobald eine Antwort eingetroffen ist, wird der Nutzer zu Ihrer Freundesliste hinzugefügt."
 "Friends_DefaultInviteError"			"Beim Senden einer Einladung an %search% ist ein Fehler aufgetreten." 
-"Friends_TooManyPendingInvitations"   "Sie haben in letzter Zeit zu viele Einladungen verschickt.  Versuchen Sie, %search% morgen oder übermorgen einzuladen."
+"Friends_TooManyPendingInvitations"   "Sie haben in letzter Zeit zu viele Einladungen verschickt. Versuchen Sie, %search% morgen oder übermorgen einzuladen."
 "Friends_InvitationBlocking"		"Sie blockieren jegliche Kommunikation mit diesem Nutzer. Die Kommunikation ist erst möglich, wenn Sie die Blockierung aufgehoben haben. Besuchen Sie hierfür das Steam-Communityprofil des Nutzers."
 
 "Friends_DontGiveOutPassword"			"Halten Sie Ihr Passwort geheim.\n"

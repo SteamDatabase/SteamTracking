@@ -549,7 +549,7 @@
 "controller_mobile_touch"							"Steam Link Touch-kontroll"
 
 "Friends_ScreenshotNotification_Info" "Skärmbild sparad"
-"Friends_ScreenshotNotification_Info_Multiple" "%screenshots% skärmdumpar sparade"
+"Friends_ScreenshotNotification_Info_Multiple" "%screenshots% skärmbilder sparade"
 "Friends_ScreenshotErrorNotification_Info" "Det inträffade ett fel vid skärmdumpssparning"
 
 "Limited_OpenChat"	"Öppna chatt"

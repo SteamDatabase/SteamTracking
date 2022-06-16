@@ -4,8 +4,8 @@ __TEXT
 .
 __text
 __TEXT
-x
-x
+p
+p
 __stubs
 __TEXT
 __stub_helper
@@ -46,30 +46,31 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
+nB
+nB
 __objc_imageinfo__DATA
 __objc_const
 __DATA
-mB
-mB
 __objc_selrefs
 __DATA
-@nB
-@nB
+0oB
+0oB
 __objc_classrefs__DATA
 __objc_superrefs__DATA
-hqB
-hqB
+XrB
+XrB
 __objc_ivar
 __DATA
-pqB
-pqB
+`rB
+`rB
 __objc_data
 __DATA
-xqB
+hrB
 P
-xqB
+hrB
 __data
 __DATA
+PH
 __thread_vars
 __DATA
 0
@@ -80,7 +81,6 @@ __thread_bss
 __DATA
 __bss
 __DATA
-y^
 __common
 __DATA
 H
@@ -99,7 +99,6 @@ l
 8
 @loader_path/libvstdlib_s.dylib
 @
-@loader_path/libSDL2-2.0.0.dylib
 8
 @loader_path/vgui2_s.dylib
 8
@@ -138,7 +137,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-(G
+:C
+@G
 )
 C
 23IClientParentalSettings
@@ -7113,6 +7113,10 @@ $
 $
 (
 ,
+@
+0
+8
+,
 $
 (
 ,
@@ -7231,6 +7235,7 @@ $
 8
 @
 4
+H
 (
 (
 
@@ -7263,7 +7268,7 @@ X
 (
 (
 0
-0
+H
 0
 0
 (
@@ -7335,7 +7340,7 @@ X
 8
 (
 8
-H
+P
 0
 (
 (
@@ -7510,6 +7515,7 @@ H
 41CMsgBrowserViewPostMessageToParentRequest
 18CMsgBlockedRequest
 24CMsgSetProtocolBlockList
+29CMsgSetForceDeviceScaleFactor
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
@@ -9842,8 +9848,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jun  6 2022
-20:20:09
+Jun  8 2022
+14:23:14
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13192,7 +13198,6 @@ Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
-flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
@@ -13548,6 +13553,7 @@ No verified phone number
 Insufficient battery charge
 Charger required
 Cached credential is invalid
+Phone number is Voice Over IP
 Invalid
 Public
 Beta
@@ -13819,25 +13825,22 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-(&
-b-
-&
-&
-&
-&
-&
+'B
+$B
+B
+B
+B
+k-
 Ic
+&
 p
 0
 0
 p
 0
-&
-&
-&
-E!
-!
-H%
+}A
+Z%
+A%
 j
 j
 j
@@ -13847,15 +13850,14 @@ j
 j
 j
 j
-n%
-i%
 0
-0
-+
-+
 %
-,
-&A
+%
+C%
+$
+$
+/%
+2%
 p
 0
 j
@@ -13865,17 +13867,14 @@ j
 j
 j
 %
+%
 j
 j
-[%
-j
-j
-j
-j
-j
-j
-j
-j
+#
+#
+#
+G$
+#
 j
 j
 j
@@ -13916,55 +13915,51 @@ j
 j
 j
 j
+j
+j
+j
+j
+j
+j
+j
+j
+@
+@
+@
 $
-Q$
 j
 j
 j
 j
-$
-$
+W$
+.
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 .
 .
-.
-.
-.
-.
-.
-.
-J"
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-$
-l#
-l#
 0
-s"
-m"
-}?
+I"
 A9]
-$
 #
 d
 #
-j
 #
 j
 j
@@ -13977,13 +13972,9 @@ j
 j
 j
 j
-"
+j
 #
 *
-*
-.
-.
-K!
 
 
 
@@ -13992,6 +13983,7 @@ K!
 @
 
 0
+.
 p
 0
 p
@@ -14013,19 +14005,19 @@ p
 p
 p
 p
-S"
-2&
-E"
-1"
+U"
+U"
+R"
+M0
+\!
 @
 =
 "
-"
 
 0
+W"
 0
 \
-0=
 j
 j
 j
@@ -14054,37 +14046,20 @@ j
 j
 j
 j
+0"
 j
-=
-=
-=
-=
-=
+"
+P.
 "
 "
 "
 "
-+!
-E(
-!
-!
-!
-!
+<!
+=
 Hi
 !
 !
 !
-:=
-(
-j
-j
-j
-j
-j
-x
-4!
-b
-u0
 j
 j
 j
@@ -14092,19 +14067,25 @@ j
 j
 j
 j
-!
-j
-j
-!
 j
 j
 j
 j
-!
-!
+j
+j
+j
+j
+j
+j
+j
 0
+>
 p
 0
+*
+&
+1
+1
 #
 "
 #
@@ -14143,10 +14124,11 @@ AT=
 D
 @
 @
-G
-D
-^#
-1
+`
+N
+K
+8
+#
 @
 Hc
 Hc
@@ -14182,7 +14164,8 @@ V
 =
 =
 @
-S+
+Z+
+)
 @
 M9e
 @
@@ -14378,11 +14361,13 @@ P
 |
 @
 @
-+!
-W
-w(
+"
+!
+
+~(
+Q(
 d
-n
+j
 
 
 
@@ -14390,7 +14375,11 @@ n
 
 
 A+M
-
+t7f9Ge'
+t7f9*]'
+'
+'
+'
 j
 j
 j
@@ -14399,19 +14388,20 @@ j
 j
 =
 0
-p
+0
+)
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
 
 K
 
@@ -14433,6 +14423,7 @@ j
 j
 j
 
+X
 d
 &
 &
@@ -14472,6 +14463,7 @@ j
 j
 j
 j
+v#
 j
 j
 j
@@ -14490,8 +14482,9 @@ j
 j
 j
 j
+|"
 E
->
+}
 j
 j
 j
@@ -14505,7 +14498,8 @@ j
 j
 j
 j
-T!
+_!
+!
 !
 !
 j
@@ -14568,6 +14562,7 @@ j
 j
 j
 j
+M
 @
 @
 &
@@ -14660,8 +14655,9 @@ Hc
 0
 0
 E
-P
+0
+d
 0
 0
-0
+L
 p

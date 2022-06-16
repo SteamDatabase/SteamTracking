@@ -732,8 +732,12 @@ Dit duurt niet langer dan een minuut."
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Accountgegevens opslaan inschakelen"
 
 "SteamUI_OfflineMode_Title" "Steam – Offlinemodus"
-"SteamUI_OfflineMode_GoOfflineDesc" "De offlinemodus wordt gebruikt wanneer je de stekker van je laptop\neruit wilt trekken of wanneer je geen verbinding met internet kunt maken.\n\nVeel functies, zoals vrienden en de serverbrowser, zijn offline niet beschikbaar.\nAlleen spellen die helemaal bijgewerkt zijn, zullen beschikbaar zijn."
-"SteamUI_OfflineMode_GoOnlineDesc" "Wil je weer online?\n\nSteam moet dan opnieuw worden gestart.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "De offlinemodus wordt gebruikt wanneer je de\ninternetverbinding van je laptop verbreekt of\nwanneer je geen verbinding met internet kunt maken.\n\nVeel functies, zoals vrienden en de gezinsbibliotheek,\nzijn offline niet beschikbaar. Alleen spellen die helemaal\nbijgewerkt zijn, zullen beschikbaar zijn."
+"SteamUI_OfflineMode_GoOnlineDesc" "Wil je weer online gaan?"
+"SteamUI_OfflineMode_MustCloseGames" "Alle geopende spellen moeten worden afgesloten voor het starten van de offlinemodus"
+"SteamUI_OfflineMode_EnterOfflineMode" "Offlinemodus starten"
+"SteamUI_OfflineMode_LeaveOfflineMode" "Offlinemodus afsluiten"
+
 "SteamUI_GameProperties_Status"	"Status"
 "SteamUI_GameProperties_UpdateNews"	"Updatenieuws"
 "SteamUI_GamePropertiesContent_OfflineMode" "Offline:"
@@ -836,7 +840,7 @@ Dit duurt niet langer dan een minuut."
 "SteamUI_Preload_GameNotReady_Title" "Nog niet beschikbaar"
 "SteamUI_Preload_GameNotReady" "Dit spel is nog niet uitgebracht. Het spel wordt vrijgegeven en is speelbaar\nop de dag dat het officieel wordt uitgebracht."
 
-"SteamUI_ValveSurvey_Title"									"Vragenlijst van Valve over hardware"
+"SteamUI_ValveSurvey_Title"									"Hardware-enquête van Valve"
 "SteamUI_ValveSurvey_YesParticipate"						"Ja, ik doe mee met de enquête."
 "SteamUI_ValveSurvey_NoParticipate"							"Nee, liever niet."
 
@@ -856,7 +860,7 @@ Dit duurt niet langer dan een minuut."
 "SteamUI_ValveSurvey_Summary_Audio"							"Geluidskaart:"
 "SteamUI_ValveSurvey_Summary_Storage"						"Opslagruimte:"
 
-"SteamUI_ValveSurvey_ResultsLabel"							"Dit is het einde van de enquête. Nogmaals bedankt voor je medewerking.\n\nAls je de gegevens van jouw computer wilt zien in vergelijking met die van andere abonnees van Steam, kun je de verzamelde resultaten van de enquête bekijken door op de onderstaande koppeling te klikken.\n\n(Klik anders op Voltooien om dit venster te sluiten.)"
+"SteamUI_ValveSurvey_ResultsLabel"							"Dit is het einde van de enquête. Nogmaals bedankt voor je medewerking.\n\nAls je jouw computer wilt vergelijken met die van andere Steam-gebruikers, kun je de samengevoegde resultaten van de enquête bekijken door op de onderstaande link te klikken.\n\n(Klik anders op Voltooien om dit venster te sluiten.)"
 "SteamUI_ValveSurvey_ResultsButton"							"Naar pagina met enquêteresultaten."
 
 "SteamUI_ValveSurvey_Summary_HardwareModel"					"Model: %s1"
@@ -3579,7 +3583,7 @@ Maak een nieuwe Steam-vriend door een geschenk naar een bekende te e-mailen."
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Audio gesproken in het <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Audio gesproken in het Engels met optionele ondertitels in het <current language> \n(Hiervoor is een download van 1 GB vereist.)"
 
-"Steam_CannotInstallInOfflineMode"		"Je kunt geen spellen installeren wanneer Steam zich in de offlinemodus bevindt.\nSluit Steam af, start Steam opnieuw en selecteer 'Online gaan'.\n"
+"Steam_CannotInstallInOfflineMode"		"Je kunt geen spellen installeren wanneer Steam zich in de offlinemodus bevindt.\nSelecteer 'Online gaan' in het Steam-menu om de offlinemodus af te sluiten.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - Downloads uitgeschakeld"
 "Steam_CannotInstallDownloadsDisabled"	"Games kunnen niet worden geïnstalleerd als downloaden is uitgeschakeld.\n"
@@ -3963,7 +3967,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 
 "SteamUI_ValveSurvey_Summary_Software"	"Geïnstalleerde software:"
 "steam_systeminfo_info"			"Steam heeft de volgende hardware en software in jouw systeem aangetroffen:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Neem even de tijd om de volgende vragenlijst in te vullen. Elke maand verzamelt Valve gegevens over welke hardware en software door onze klanten worden gebruikt.\nDe gegevens van de vragenlijst zijn zeer nuttig voor ons, zodat wij zeker weten dat we goede beslissingen maken bij het investeren in verschillende technologieën en bij het aanbieden van producten.\nDe gegevens die wij verzamelen zijn anoniem en zullen niet worden gekoppeld aan je account."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Neem even de tijd om de volgende korte enquête in te vullen. Elke maand verzamelt Steam gegevens over welke hardware en software door onze klanten worden gebruikt. Dankzij deze gegevens kunnen we betere beslissingen nemen bij het investeren in verschillende technologieën en bij het aanbieden van producten.\nDe verzamelde gegevens zijn anoniem en worden niet gekoppeld aan je account."
 
 "steam_statuslabel"	"Status"
 
@@ -4230,7 +4234,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_DeviceAuth_RequestDialog_Send" "Verzoek verzenden"
 "Steam_DeviceAuth_RequestDialog_SendOK" "We hebben ontdekt dat de eigenaar dit apparaat reeds heeft gemachtigd om spellen te delen. Je bent er helemaal klaar voor!"
 "Steam_DeviceAuth_RequestDialog_SendError" "Verzenden van machtigingsverzoek mislukt (%reason%)"
-"Steam_DeviceAuth_RequestDialog_SendPending" "Je e-mailverzoek is verzonden. We hopen dat je wens snel uitkomt!"
+"Steam_DeviceAuth_RequestDialog_SendPending" "Je e-mailverzoek is verzonden. Hopelijk krijg je snel goed nieuws!"
 "Steam_DeviceAuth_RequestDialog_No_SteamGuard" "Steam Guard moet ingeschakeld zijn om Gezinsbibliotheek te kunnen gebruiken"
 "Steam_DeviceAuth_RequestDialog_OwnerLoginRequired" "Om het delen van spellen toe te staan, moet de eigenaar inloggen op dit apparaat en Gezinsbibliotheek hier inschakelen."
 
@@ -4527,11 +4531,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_Settings_ShaderCache_Enable"		"Shader pre-caching inschakelen (%shaderdiskusagemb% MB pre-cached)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Verwerken van Vulkan-shaders op de achtergrond toestaan"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"%shaderapp% verwerken ... (%shaderpercent%%)"
-
-
-"SteamPlay_Warning_Title"                   "Steam Play"
-"SteamPlay_Warning_Text"                    "Dit spel zal starten met Steam Play met een platformcompatibiliteitstool.\n\nBekijk de veelgestelde vragen voor informatie om de beste ervaring op je systeem te krijgen."
-"SteamPlay_FAQ"                             "Veelgestelde vragen over Steam Play"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Steam Play-instellingen"

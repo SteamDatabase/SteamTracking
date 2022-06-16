@@ -45,6 +45,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_activator.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_configuration_editor.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_firmware_update.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_mapping.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_mode.cpp
@@ -63,7 +64,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/gameserver.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/gameserver.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/htmlsurface.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/installscript.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/installscript_posix.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/interfacemap_client.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/internalcallbacks.cpp
@@ -93,7 +93,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/../contentupdatecontext.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercachemanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercontentupdatejob.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercontentupdatejob.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/sitelicenseclient.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/steamclient.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/steamengine.cpp
@@ -102,6 +101,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/subscribedfilelistcache.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemlogcollector.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemperfmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/ugcmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/unified_messages_client.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/user.cpp
@@ -114,7 +114,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/userstats.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/vr/vrmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/workshopcontentupdatejob.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/workshopcontentupdatejob.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/RateLimiter.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/appownershipticket.cpp
@@ -174,6 +173,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jwt.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keypair.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keyvaluesignature.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp

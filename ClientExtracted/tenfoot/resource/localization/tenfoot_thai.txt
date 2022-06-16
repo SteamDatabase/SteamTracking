@@ -7599,8 +7599,6 @@
 	"SteamUI_ProcessShader_Description"	"การประมวลผลแคชเชดเดอร์กำลังใช้เวลานาน คุณต้องการข้ามขั้นตอนนี้หรือไม่?"
 	"Steam_WaitingForShaderCache"	"กำลังประมวลผลเชดเดอร์ ปัจจุบันอยู่ที่ {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "เกมนี้จะเริ่มเปิดด้วย Steam Play โดยใช้เครื่องมือความเข้ากันได้สำหรับแพลตฟอร์ม"
 	"Library_Details_FieldLabel_2DScrollSwipe"			"โหมดลูกกลิ้ง"
 	"Library_Details_FieldLabel_Invert"			"สลับ"
 	"ControllerBinding_SoftPress_Invert"	"สลับจุดกำหนด"

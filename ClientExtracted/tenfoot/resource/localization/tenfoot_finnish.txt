@@ -2809,7 +2809,7 @@ Peli tarvitsee vähintään {s:requiredwidth}m x {s:requireddepth}m kokoisen pel
 	"Library_AutoUpdate_CodeLabel"	"Automaattiset päivitykset"
 	"Library_AutoUpdate_Enabled"	"Pidä tämä {s:apptype} aina ajan tasalla"
 	"Library_AutoUpdate_Disabled"	"Jätä tämä {s:apptype} päivittämättä automaattisesti"
-	"Library_AutoUpdate_HighPriority"	"Korkea prioriteetti – päivitä tämä {s:apptype} aina automaattisesti mahdollisimman pian"
+	"Library_AutoUpdate_HighPriority"	"Etusijalla – päivitä {s:apptype} aina automaattisesti mahdollisimman pian"
 	"Library_BackgroundUpdates_Label" "Kun {s:gamename} on käynnissä"
 
 	"Library_Details_EditSteamPlayOptions" "Määritä Steam Play -asetukset..."
@@ -7600,8 +7600,6 @@ Peli tarvitsee vähintään {s:requiredwidth}m x {s:requireddepth}m kokoisen pel
 	"SteamUI_ProcessShader_Description"	"Varjostimen välimuistin käsittely kestää kauan, haluatko ohittaa käsittelyn?"
 	"Steam_WaitingForShaderCache"	"Varjostimia käsitellään, {i:progress} % valmis."
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Peli käynnistyy Steam Playssä ja käyttää alustan yhteensopivuustyökalua."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Vieritysrullatila"
 	"Library_Details_FieldLabel_Invert"			"Muuta käänteiseksi"
 	"ControllerBinding_SoftPress_Invert"	"Käänteinen kynnys"

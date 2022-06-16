@@ -1286,3 +1286,9 @@ StoreGreatOnDeck
 	method		"internal"
 	filter		"store"
 }
+HardwareSurvey
+{
+	url			"%store%/hwsurvey"
+	method		"internal"
+	filter		"store"
+}

@@ -732,8 +732,12 @@
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"계정 증명 저장 활성화"
 
 "SteamUI_OfflineMode_Title" "Steam - 오프라인 모드"
-"SteamUI_OfflineMode_GoOfflineDesc" "오프라인 모드는 랩톱을 종료하거나\n인터넷 연결이 끊기게 될 경우 사용합니다.\n\n오프라인에서는 친구 및 서버 브라우저와 같은 다양한 \n기능을 이용할 수 없습니다. 완전히 최신 버전으로 업데이트한 게임만\n이용할 수 있습니다."
-"SteamUI_OfflineMode_GoOnlineDesc" "온라인으로 전환하시겠습니까?\n\nSteam을 다시 시작해야 합니다.\n"
+"SteamUI_OfflineMode_GoOfflineDesc" "오프라인 모드는 컴퓨터에서 인터넷 연결을 해제하거나\n인터넷 연결이 끊겼을 경우 사용됩니다.\n\n오프라인에서는 친구 및 가족 공유와 같은\n다양한 기능을 이용할 수 없습니다. 완전히 최신 버전으로 업데이트한 게임만\n이용할 수 있습니다."
+"SteamUI_OfflineMode_GoOnlineDesc" "온라인으로 전환할까요?"
+"SteamUI_OfflineMode_MustCloseGames" "오프라인 모드로 전환하기 전에 실행 중인 모든 게임을 반드시 종료해야 합니다."
+"SteamUI_OfflineMode_EnterOfflineMode" "오프라인 모드로 전환"
+"SteamUI_OfflineMode_LeaveOfflineMode" "오프라인 모드 종료"
+
 "SteamUI_GameProperties_Status"	"상태"
 "SteamUI_GameProperties_UpdateNews"	"업데이트 뉴스"
 "SteamUI_GamePropertiesContent_OfflineMode" "오프라인 모드:"
@@ -2209,8 +2213,8 @@
 "Steam_FreeWeekend_BeginsIn"		"다음 기간이 지나면 %game% 무료 이용 주간이 시작됩니다."
 "Steam_FreeWeekend_Info"			"시계가 0을 가리키면 %time% 무료 플레이 기간이 시작됩니다."
 "Steam_FreeWeekend_URL"			"%game% 무료 이용 주간 관련 정보 보기"
-"Steam_FreeWeekend_48H"			"48 시간"
-"Steam_FreeWeekend_72H"			"72 시간"
+"Steam_FreeWeekend_48H"			"48시간"
+"Steam_FreeWeekend_72H"			"72시간"
 "Steam_FreeWeekend_1W"			"1 week"
 
 "Steam_NoLongerOwnsGame_Title"	"Steam - %game%"
@@ -2527,7 +2531,7 @@
 "Steam_Country_CA"		"캐나다"
 "Steam_Country_CV"		"카보베르데"
 "Steam_Country_KY"		"케이맨 제도"
-"Steam_Country_CF"		"중앙 아프리카 공화국"
+"Steam_Country_CF"		"중앙아프리카공화국"
 "Steam_Country_TD"		"차드"
 "Steam_Country_CL"		"칠레"
 "Steam_Country_CN"		"중국"
@@ -2601,7 +2605,7 @@
 "Steam_Country_KR"		"대한민국"
 "Steam_Country_KW"		"쿠웨이트"
 "Steam_Country_KG"		"키르기스스탄"
-"Steam_Country_LA"		"라오스 인민민주 공화국"
+"Steam_Country_LA"		"라오스인민민주공화국"
 "Steam_Country_LV"		"라트비아"
 "Steam_Country_LB"		"레바논"
 "Steam_Country_LS"		"레소토"
@@ -2624,7 +2628,7 @@
 "Steam_Country_YT"		"마요트"
 "Steam_Country_MX"		"멕시코"
 "Steam_Country_FM"		"미크로네시아 연방"
-"Steam_Country_MD"		"몰도바 공화국"
+"Steam_Country_MD"		"몰도바공화국"
 "Steam_Country_MC"		"모나코"
 "Steam_Country_MN"		"몽골"
 "Steam_Country_MS"		"몬세라트"
@@ -3577,7 +3581,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"음성 오디오를 <현재 언어>로 재생"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"음성을 영어와 < 현재 언어 > (설정) 자막과 함께 재생\n(1GB 크기의 파일을 다운로드해야 합니다.)"
 
-"Steam_CannotInstallInOfflineMode"		"Steam이 오프라인 모드에 있는 경우 게임을 설치할 수 없습니다.\nSteam을 끝내고 다시 시작한 후 '온라인으로 전환'을 선택하세요."
+"Steam_CannotInstallInOfflineMode"		"Steam이 오프라인 모드일 경우 게임을 설치할 수 없습니다.\n오프라인 모드를 종료하려면 Steam 메뉴에서 '온라인으로 전환'을 선택하세요.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam - 다운로드 사용 안 함"
 "Steam_CannotInstallDownloadsDisabled"	"다운로드할 수 없을 때에는 게임을 설치할 수 없습니다.\n"
@@ -4262,7 +4266,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_DeviceAuth_Authorized_Notification" "이제 %owner% 님의 게임을 이 컴퓨터에서 플레이할 수 있습니다."
 "Steam_DeviceAuth_Deauthorized_Notification" "%owner% 님이 이 컴퓨터를 인증 해제 했으므로, 일부 게임은 사용 불가능할 수 있습니다."
-"Steam_DeviceAuth_StopPlaying_Notification" "잠시만요, %owner% 님이 이 공유된 게임을 다시 돌려받으셔야 합니다! %minutes% 분간 더 플레이하실 수 있습니다..."
+"Steam_DeviceAuth_StopPlaying_Notification" "잠시만요, %owner% 님이 이 공유된 게임을 다시 돌려받으셔야 합니다! %minutes%분간 더 플레이하실 수 있습니다..."
 
 "Steam_DeviceAuth_Shared_Library_Now_Available" "야호, %owner% 님의 공유된 게임을 이제 플레이할 수 있습니다..."
 
@@ -4524,11 +4528,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_ShaderCache_Enable"		"셰이더 사전 캐싱 활성화 (%shaderdiskusagemb% MB 사전 캐싱)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"백그라운드에서 Vulkan 셰이더 처리 허용"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"%shaderapp% 처리 중... (%shaderpercent%%)"
-
-
-"SteamPlay_Warning_Title"                   "Steam 플레이"
-"SteamPlay_Warning_Text"                    "이 게임은 플랫폼 호환 도구를 사용하여 Steam 플레이로 실행됩니다.\n\n사용 중인 시스템에서 최상의 환경을 구축하는 방법에 대한 자세한 내용은 자주 묻는 질문에서 확인하세요."
-"SteamPlay_FAQ"                             "Steam 플레이 FAQ"
 
 "Steam_Settings_Compat"				        "Steam 플레이"
 "Steam_Settings_Compat_Title"			    "Steam 플레이 설정"

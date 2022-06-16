@@ -729,7 +729,7 @@ Cu joystickul drept mouse te poți juca ca și cum ai folosi un gamepad, în tim
 	"SettingsAbout_VideoRAMLabel"		"Memorie video"
 	"SettingsAbout_VideoRAM"			"{s:vram_gb} GB"
 	"SettingsAbout_ClientUpdateButton"	"Vezi noutățile"
-	"SettingsAbout_BetaOption"	"Folosește versiunea beta a aplicației"
+	"SettingsAbout_BetaOption"	"Folosește versiunea beta a clientului"
 	"SettingsAbout_BetaParticipation"	"Participare la versiunea beta"
 	"SettingsAbout_BetaChange_Title"	"Participare la versiunea beta"
 	"SettingsAbout_BetaChange_Description"	"Pentru a-ți schimba statutul beta trebuie să repornești Steamul.\n\nRepornești acum?"
@@ -7600,8 +7600,6 @@ Dacă ai reconfigurat tastele în joc, s-ar putea să necesite să resetezi acel
 	"SteamUI_ProcessShader_Description"	"Procesarea memoriei cache a shaderelor mai durează. Dorești să sari peste această etapă?"
 	"Steam_WaitingForShaderCache"	"Se procesează shaderele. Progresul actual: {i:progress}%"
 
-	"SteamPlay_Warning_Title"                   "Steam Play"
-	"SteamPlay_Warning_Text"                    "Acest joc va fi lansat cu Steam Play, utilizând un instrument de compatibilitate pentru platformă."
 	"Library_Details_FieldLabel_2DScrollSwipe"			"Modul „rotiță de derulare”"
 	"Library_Details_FieldLabel_Invert"			"Inversează"
 	"ControllerBinding_SoftPress_Invert"	"Prag inversat"

@@ -64,17 +64,6 @@ enum EContentCheckProvider {
 	k_EContentCheckProvider_Local = 3;
 }
 
-enum EBanContentCheckResult {
-	k_EBanContentCheckResult_NotScanned = 0;
-	k_EBanContentCheckResult_Reset = 1;
-	k_EBanContentCheckResult_NeedsChecking = 2;
-	k_EBanContentCheckResult_VeryUnlikely = 5;
-	k_EBanContentCheckResult_Unlikely = 30;
-	k_EBanContentCheckResult_Possible = 50;
-	k_EBanContentCheckResult_Likely = 75;
-	k_EBanContentCheckResult_VeryLikely = 100;
-}
-
 enum EProfileCustomizationType {
 	k_EProfileCustomizationTypeInvalid = 0;
 	k_EProfileCustomizationTypeRareAchievementShowcase = 1;
@@ -124,6 +113,12 @@ enum ESDCardFormatStage {
 	k_ESDCardFormatStage_Finalizing = 5;
 }
 
+enum ESystemFanControlMode {
+	k_SystemFanControlMode_Invalid = 0;
+	k_SystemFanControlMode_Disabled = 1;
+	k_SystemFanControlMode_Default = 2;
+}
+
 enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Invalid = 0;
 	k_BluetoothDeviceType_Unknown = 1;
@@ -168,6 +163,7 @@ enum EScalingFilter {
 	k_EScalingFilter_Nearest = 2;
 	k_EScalingFilter_Integer = 3;
 	k_EScalingFilter_Linear = 4;
+	k_EScalingFilter_NIS = 5;
 }
 
 enum ECPUGovernor {
@@ -282,4 +278,21 @@ enum EProvideDeckFeedbackPreference {
 	k_EProvideDeckFeedbackPreference_Unset = 0;
 	k_EProvideDeckFeedbackPreference_Yes = 1;
 	k_EProvideDeckFeedbackPreference_No = 2;
+}
+
+enum ETouchGesture {
+	k_ETouchGestureNone = 0;
+	k_ETouchGestureTouch = 1;
+	k_ETouchGestureTap = 2;
+	k_ETouchGestureDoubleTap = 3;
+	k_ETouchGestureShortPress = 4;
+	k_ETouchGestureLongPress = 5;
+	k_ETouchGestureLongTap = 6;
+	k_ETouchGestureTwoFingerTap = 7;
+	k_ETouchGestureTapCancelled = 8;
+	k_ETouchGesturePinchBegin = 9;
+	k_ETouchGesturePinchUpdate = 10;
+	k_ETouchGesturePinchEnd = 11;
+	k_ETouchGestureFlingStart = 12;
+	k_ETouchGestureFlingCancelled = 13;
 }
