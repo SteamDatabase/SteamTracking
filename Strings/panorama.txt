@@ -10,8 +10,8 @@ __stub_helper
 __TEXT
 __cstring
 __TEXT
-p2
-p2
+2
+2
 __const
 __TEXT
 __gcc_except_tab__TEXT
@@ -155,11 +155,13 @@ h
 (W
 )
 HB
-1
-1
-1
+&=
+4
 1
 0
+1
+1
+1
 1
 1
 1
@@ -170,7 +172,9 @@ HB
 
 @
 
+d>
 %
+:
 @
 @
 @
@@ -2561,24 +2565,24 @@ Logger
 12CDynamicFuncIPFi10SDL_GLattrPiEE
 12CDynamicFuncIPFi10SDL_GLattriEE
 @
-@
-D
+H
+L
 (
-`
+h
 0
 @
-@H
-\
+@P
 d
-L
-X
-P
-h
-e
 l
+T
+`
+X
 p
+m
 t
 x
+|
+8
 
 
 <
@@ -2671,17 +2675,16 @@ $
 4
 8
 (
-1
-K
-R
-(
+2
+M
 T
-Z
-[
-g
+(
+V
+\
+]
+i
 @
-n
-
+p
 H
 0
 `
@@ -2769,6 +2772,7 @@ src.IsValid() && IsValid()
 v.IsValid()
 a.IsValid() && b.IsValid()
 Qanba Obsidian Arcade Joystick
+Qanba Dragon Arcade Joystick
 Xbox 360 Controller
 Xbox 360 Wireless Controller
 PDP Xbox 360 Afterglow
@@ -5363,8 +5367,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jun  8 2022
-14:24:13
+Jun 17 2022
+11:47:47
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8245,14 +8249,16 @@ SSE is required.
 src.IsValid()
 
 HB
-1
-1
-1
+&=
+4
 1
 0
 1
 1
 1
+1
+1
+1
 
 
 
@@ -8260,32 +8266,35 @@ HB
 
 @
 
+d>
 %
-@
-@
-0
-/
-/
-'
-'
-9
-/
-q#
-.
-.
-.
--
-@9
-%
--
-k,
--
 :
-#,
+@
+@
+'0
+U'
+0
+0
+'
+'
+;
+9
+k%
+8
+%
+N"
+-
+-
+-
+-
+-
+-
+7
+$,
 )
+,
+,
 j
-6,
-6
 2
 2
 ?
@@ -8298,29 +8307,20 @@ F
 +
 !
 &
-+
-+
-+
-+
-+
+M+
+'
 j
++
+{*
 Ic
-z'
-,*
-@
-@
-@
-@
-**
+\*
+y4
 @
 @
 @
 @
 @
 @
-@
-@
-96
 @
 @
 @
@@ -8344,8 +8344,19 @@ z'
 @
 @
 *
+`3
 @
 @
+@
+@
+@
+@
+*
+*
+@
+@
+*
+*
 @
 @
 @
@@ -8360,7 +8371,9 @@ z'
 @
 d
 Uk/
+o*
 K
+6
 @
 @
 @
@@ -8392,20 +8405,13 @@ K
 @
 @
 0
-5*
 @
 @
-f)
-]&
-2)
-+
-l%
-)
+W)
+0&
 &
 &
-e,
-'
-)
+2
 @
 @
 @
@@ -8421,86 +8427,95 @@ e,
 0
 )
 =
-*
 @
 @
-H(
+(
+y4
 H=
-B'
-5
--
+2
+)
+)
 )
 '
-e#
-'
-N1
-m'
-z4
-0
-0
+B#
+n3
 @
 =
-W%
 @
 @
-#%
-$
+1
+m$
+%
+0
 @
 @
 ?
+/
+Z/
 ^
-U#
+.
+.
+#
+#
 #
 #
 @
-#
 P
 0
 (
 (
 P
 j
-X#
+j0
 A
 A
 A
 A
 (
-u"
+p"
+@
+E9u
+"
+"
+"
+"
+"
+E9u
+@
+A
+A
+A
+A
 s"
-#
-@
-E9u
-E9u
-@
 A
 A
+}#
 A
 A
-A
-A
-A
-A
-)"
-i
-o
-Q#
-K#
-H
-.
+;"
+_!
+~%
+W"
+-/
+)/
+"
 $
+"
+Z.
+m
+v$
 
 @
-D-
-1"
--
--
--
-"
+O+
+#
+*(
+?"
 *
+'
 }
 "
 @
+(
 %
 Hi
 (
@@ -8511,7 +8526,6 @@ Hi
 0
 0
 
-;&
 
 
 
@@ -8519,15 +8533,12 @@ Hi
 0
 
 0
-%
-%
 %
 %
 IcE
 @
 @
-!
-}"
+~"
 @
 @
 @
@@ -8562,6 +8573,9 @@ IcE
 @
 @
 @
+@
+@
+a#
 @
 @
 @
@@ -8815,9 +8829,7 @@ IcE
 @
 @
 @
-@
-@
-c"
+x
 @
 j
 @
@@ -8916,16 +8928,13 @@ IcE
 V
 =
 =
-e
-
 @
 
 
 
 
-
-
-
+w
+H
 @
 M9e
 @
@@ -8984,8 +8993,6 @@ I;E
 I;E
 B
 ?
-\
-[
 `
 `
 !
@@ -9015,6 +9022,11 @@ P
 H=
 =
 
+
+
+
+
+
 =
 @
 =*.*
@@ -9039,13 +9051,9 @@ H=
 E
 0
 0
-0
-@
-
 @
 @
-
-
+@
 @
 
 
@@ -9053,4 +9061,4 @@ E
 @
 @
 0
-Lc5SI
+0
