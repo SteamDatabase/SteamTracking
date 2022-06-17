@@ -587,6 +587,7 @@
     "GameActionPlural_CreateDesktopShortcut": "Add Desktop Shortcuts",
     "GameActionPlural_CreateLauncherShortcut": "Add Launcher Shortcuts",
     "GameActionPlural_BackUpFiles": "Back Up Game Files...",
+    "GameAction_ClearSelectedControllerConfig": "Clear Selected Controller Layout",
     "PrePurchase_Preload_Title": "%1$s is now ready to preload",
     "PrePurchase_Preload_Desc": "Download the game files now so that you can start playing as soon as it's unlocked!",
     "PrePurchase_PreloadComplete_Title": "%1$s has been preloaded",
