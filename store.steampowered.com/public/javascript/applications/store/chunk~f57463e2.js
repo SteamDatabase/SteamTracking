@@ -4567,6 +4567,7 @@
     JdTR: function (e, t, a) {
       e.exports = {
         RewardContainer: "salerewardshelfdisplay_RewardContainer_10sVo",
+        RewardShelfCtn: "salerewardshelfdisplay_RewardShelfCtn_2u8Xp",
       };
     },
     "K/M2": function (e, t, a) {
@@ -28780,9 +28781,31 @@
       function ro(e) {
         const { appid: t, community_item_type: a } = e,
           n = ao(t, a);
+        if (
+          (null == n ? void 0 : n.item_movie_mp4) &&
+          (null == n ? void 0 : n.item_movie_webm)
+        ) {
+          const e = `${D.d.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+              null == n ? void 0 : n.item_image_large
+            }`,
+            a = `${D.d.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+              null == n ? void 0 : n.item_movie_webm
+            }`,
+            r = `${D.d.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+              null == n ? void 0 : n.item_movie_mp4
+            }`;
+          return l.a.createElement(
+            "video",
+            { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
+            l.a.createElement("source", { src: a, type: "video/webm" }),
+            Boolean(!D.d.IN_CLIENT) &&
+              l.a.createElement("source", { src: r, type: "video/mp4" })
+          );
+        }
         if (n) {
           const a = `${D.d.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-            null == n ? void 0 : n.item_image_large
+            (null == n ? void 0 : n.item_image_small) ||
+            (null == n ? void 0 : n.item_image_large)
           }`;
           return l.a.createElement("img", {
             className: e.className,
@@ -28794,7 +28817,33 @@
       }
       function io(e) {
         const { bIsPreview: t, event: a, section: n, language: i } = e,
-          [o] = Object(r.d)(() => [n.rewards.reward_items]);
+          [o] = Object(r.d)(() => [n.rewards.reward_items]),
+          c = Object(s.useMemo)(() => {
+            const e = new Array();
+            let t = new Array();
+            for (let a = 0; a < o.length; ++a) {
+              a > 0 && a % 5 == 0 && (e.push(t), (t = new Array()));
+              const r = o[a];
+              t.push(
+                D.l.logged_in
+                  ? l.a.createElement(so, {
+                      key: "reward" + a,
+                      section: n,
+                      rewardDef: r,
+                      language: i,
+                    })
+                  : l.a.createElement(
+                      "div",
+                      {
+                        key: "hiddenreward" + a,
+                        className: "reward_hidden_entry",
+                      },
+                      l.a.createElement(oo, { section: n })
+                    )
+              );
+            }
+            return t.length > 0 && e.push(t), e;
+          }, [i, o, n]);
         return l.a.createElement(
           te.b,
           { feature: "rewardshelf" },
@@ -28814,19 +28863,12 @@
             l.a.createElement(
               "div",
               { className: no.RewardContainer },
-              o.map((e, t) =>
-                D.l.logged_in
-                  ? l.a.createElement(so, {
-                      key: "reward" + t,
-                      section: n,
-                      rewardDef: e,
-                      language: i,
-                    })
-                  : l.a.createElement(
-                      "div",
-                      { key: "hiddenreward" + t },
-                      l.a.createElement(oo, { section: n })
-                    )
+              c.map((e, t) =>
+                l.a.createElement(
+                  "div",
+                  { className: no.RewardShelfCtn, key: "shelf_" + t },
+                  e
+                )
               )
             )
           )
@@ -28849,7 +28891,11 @@
           { communityItem: r, bLoaded: i } = eo(a.appid, a.community_item_type);
         return l.a.createElement(
           "div",
-          null,
+          {
+            className: Boolean(!r)
+              ? "reward_visible_entry"
+              : "reward_hidden_entry",
+          },
           Boolean(!r)
             ? l.a.createElement(oo, { section: t })
             : l.a.createElement(lo, { section: t, rewardDef: a, language: n })
@@ -28861,9 +28907,11 @@
           [o] = Object(r.d)(() => {
             var e;
             return [
-              null === (e = t.rewards) || void 0 === e
-                ? void 0
-                : e.show_reward_item_name,
+              Boolean(
+                null === (e = t.rewards) || void 0 === e
+                  ? void 0
+                  : e.show_reward_item_name
+              ),
             ];
           });
         let s;
@@ -28876,6 +28924,7 @@
             s = `${D.d.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
             break;
           case 3:
+          case 8:
             s = `${D.d.COMMUNITY_BASE_URL}my/edit/background`;
             break;
           case 13:
