@@ -542,7 +542,7 @@ function TagBoxTopDecoration()
 
 function SaleTagTexture( suffix )
 {
-	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/lunar2022/' + suffix + '_page.jpg"); background-repeat: repeat;';
+	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/' + suffix + '_page.jpg"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )
@@ -651,7 +651,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	else if(strTagMethod === "default") { title='<b>POPULAR GAMES </b><br/>SIMILAR TO';}
 	else { noTags = true;}
 
-	var rgTextures = [ 'green', 'orange', 'olive', 'red', 'blue' ];
+	var rgTextures = [ 'a', 'b', 'c', 'd', 'e' ];
 	var randomKey = Math.floor( Math.random() * rgTextures.length );
 	var texture = rgTextures[ randomKey ];
 
@@ -884,7 +884,7 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 	var field = bAlternate ? '$CapAlt' : '$Cap';
 	if ( FranchiseData && !FranchiseData[field] )
 	{
-		var $Cap = $J( '<div/>', {'class': 'franchise_capsule'} );
+		var $Cap = $J( '<div/>', {'class': 'franchise_capsule', 'data-panel': '{"clickOnActivate":"firstChild"}'} );
 
 		var url = GStoreItemData.AddNavEventParamsToURL( FranchiseData.strSalePageURL, 'sale_franchises', 0 /* depth */ );
 

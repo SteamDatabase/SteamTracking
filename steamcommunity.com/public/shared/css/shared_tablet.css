@@ -163,12 +163,6 @@ html.tablet .perf_timing_area {
 }
 
 
-/* Background */
-html.tablet body.v6:not( .sale_page_background ) {
-	background: var(--gpGradient-StoreBackground);
-	background-attachment: fixed;
-}
-
 html.tablet body.login {
 	background: var(--gpGradient-StoreBackground) !important;
 	background-attachment: fixed;

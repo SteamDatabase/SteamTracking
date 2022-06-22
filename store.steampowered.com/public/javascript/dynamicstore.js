@@ -1525,7 +1525,7 @@ GStoreItemData = {
 				if ( !GStoreItemData.rgPackageData[packageid] )
 					GStoreItemData.rgPackageData[packageid] = rgPackages[packageid];
 				else
-					GStoreItemData.MergeStoreItemData( GStoreItemData.rgPackageData[packageid], rgPackageData[packageid] );
+					GStoreItemData.MergeStoreItemData( GStoreItemData.rgPackageData[packageid], rgPackages[packageid] );
 			}
 		}
 

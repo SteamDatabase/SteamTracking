@@ -376,6 +376,19 @@ body.SteamDeckTheme {
     --btn-outline: rgb(29 10 25 / 0%);
 }
 
+body.Steam3000Theme {
+--gradient-right: rgba(0, 0, 0, 0);
+--gradient-left: rgba(0, 0, 0, 0);
+--gradient-background: rgba(0, 0, 0, 0);
+--gradient-background-right: rgba(0, 0, 0, 0);
+--gradient-background-left: rgba(0, 0, 0, 0);
+--color-showcase-header: rgb(231 196 52);
+--gradient-showcase-header-left: rgb(239 0 255);
+--btn-background: rgba(0, 0, 0, 0);
+--btn-background-hover: rgb(46, 46, 46);
+--btn-outline: rgba(0, 0, 0, 0);
+}
+
 /* Custom overrides for Steam Deck theme */
 body.SteamDeckTheme .profile_customization_header,
 body.SteamDeckTheme .profile_header_badge,
@@ -403,6 +416,55 @@ body.SteamDeckTheme .favorite_badge_description {
     text-shadow: 0 0 6px #e5abc89c;
 }
 
+/* Custom overrides for Steam 3000 theme */
+body.Steam3000Theme .profile_rightcol {
+	border: 2px dotted #e6c333;
+	box-shadow: 4px 4px #20d038;
+	background: black;
+}
+
+body.Steam3000Theme .profile_leftcol {
+	max-width: 650px;
+}
+
+body.Steam3000Theme .profile_header_bg_texture,
+body.Steam3000Theme .profile_content.has_profile_background {
+    background:rgba( 0, 0 , 0, 0 );
+}
+
+body.Steam3000Theme .profile_customization {
+	border: 2px dotted #e6c333;
+	box-shadow: 4px 4px #20d038;
+	background: black;
+	border-radius: 0px;
+}
+
+body.Steam3000Theme .profile_header {
+	max-width: 950px;
+}
+
+body.Steam3000Theme .profile_header_content {
+    border: 2px dotted #e6c333;
+    box-shadow: 4px 4px #20d038;
+    background: black;
+}
+
+body.Steam3000Theme html.responsive.tablet .profile_rightcol {
+	background: black;
+}
+
+body.Steam3000Theme .profile_count_link.ellipsis {
+    border: 1px dotted #20d038;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+body.Steam3000Theme .btn_profile_action {
+	border-radius: 0px;
+	border: 1px dotted #e6c333;
+}
+/* End Steam 3000 custom overrides */
 
 div.profile_page {
 	position: relative;
@@ -551,6 +613,7 @@ body.profile_page.flat_page #footer_spacer {
 .profile_header_summary {
 	overflow: hidden;
 	padding-right: 18px;
+	padding-left: 18px;
 }
 
 .playerAvatar.profile_header_size {
@@ -640,7 +703,7 @@ body.profile_page.flat_page #footer_spacer {
 
 	html.responsive .profile_header .profile_header_centered_persona {
 		position: static;
-		padding-bottom: 8px;
+		padding-bottom: 18px;
 	}
 
 	html.responsive .profile_header .profile_header_summary .persona_name_spacer,
@@ -729,6 +792,8 @@ body.profile_page.flat_page #footer_spacer {
 	left: 186px;
 	right: 268px;
 	white-space: nowrap;
+	padding-left: 18px;
+	padding-bottom: 18px;
 }
 
 .profile_header_valve_employee {

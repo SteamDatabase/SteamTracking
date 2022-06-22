@@ -102,7 +102,7 @@ html.tablet .recommendation_carousel_item .carousel_cap {
 html.tablet .carousel_container .carousel_items > *,
 html.tablet .carousel_container.spotlight .carousel_items > * > div,
 html.tablet #live_streams_carousel .carousel_items .store_capsule,
-html.tablet .carousel_container.paging_capsules .carousel_items > * > *:not(:last-child),
+html.tablet .carousel_container.paging_capsules:not(.hero_ctn) .carousel_items > * > *:not(:last-child),
 html.tablet .contenthub_specials_grid_cell,
 html.tablet body.v6.newonsteam .newonsteam_headercaps a:first-child,
 html.tablet .store_capsule:not(:last-child) {

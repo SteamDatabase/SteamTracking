@@ -312,12 +312,18 @@ textarea.gray {
 }
 
 
+.formrowCtn_flexRowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
 
 .formrow_small {
 	/*padding-bottom: 5px;*/
 	margin-bottom: 8px;
 	margin-top: 8px;
 	position: relative;
+    width: fit-content;
 }
 
 .formrow_small .formlabel {

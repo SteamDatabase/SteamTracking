@@ -3,6 +3,47 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [30],
   {
+    "2KLf": function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return l;
+      });
+      var i = a("mrSG"),
+        s = a("FmLm"),
+        n = a("/Q1a"),
+        o = a("EuLa"),
+        r = a("6MVd");
+      class c {
+        constructor() {
+          (this.m_mapAppToSNRs = new Map()), (this.m_rgImpressionsToAdd = []);
+        }
+        AddImpression(e, t) {
+          let a = !1;
+          s.a.Get().BAppImpressionsAllowed()
+            ? (this.m_mapAppToSNRs.has(e)
+                ? -1 == this.m_mapAppToSNRs.get(e).indexOf(t) &&
+                  (this.m_mapAppToSNRs.get(e).push(t), (a = !0))
+                : (this.m_mapAppToSNRs.set(e, [t]), (a = !0)),
+              a &&
+                (this.m_rgImpressionsToAdd.push(`${e}@${t}`),
+                this.UpdateCookie()))
+            : "dev" === n.d.WEB_UNIVERSE &&
+              console.log("Cookie Prefs: Not allowing App Impressions");
+        }
+        UpdateCookie() {
+          const e = [
+            Object(o.b)("app_impressions") || "",
+            ...this.m_rgImpressionsToAdd,
+          ].join("|");
+          this.m_rgImpressionsToAdd = [];
+          encodeURIComponent(e).length <= 3200 &&
+            Object(o.c)("app_impressions", e);
+        }
+      }
+      Object(i.b)([Object(r.a)(1e3)], c.prototype, "UpdateCookie", null);
+      const l = new c();
+      window.g_ImpressionTracker = l;
+    },
     "3WEt": function (e, t, a) {
       "use strict";
       a.r(t);
@@ -538,12 +579,12 @@
         Object(s.b)([u.b], R.prototype, "shouldUseMicrotrailers", null);
       const O = new R();
       window.g_InteractiveRecommender = O;
-      var A = a("tXj3");
+      var f = a("tXj3");
       !(function () {
         let e = Object(n.h)("ir_config", "application_config");
         e && (Object.assign(T, e), O.Init());
       })();
-      const f = ({ accountID: e }) => {
+      const A = ({ accountID: e }) => {
           const t = O.getInputApps(),
             a = Object.keys(t).length;
           let i = 0;
@@ -589,9 +630,9 @@
             i <= 86400
               ? (c = Object(_.g)("#PlaytimeList_LastPlayedMax"))
               : o > 31449600
-              ? ((r = Object(_.p)(i)),
+              ? ((r = Object(_.q)(i)),
                 (c = Object(_.g)("#PlaytimeList_LastPlayed", r)))
-              : ((r = Object(_.r)(o)),
+              : ((r = Object(_.s)(o)),
                 (c = Object(_.g)("#PlaytimeList_LastPlayed", r))),
             l.a.createElement(
               "div",
@@ -667,7 +708,7 @@
                 { className: h.Header },
                 Object(_.g)("#PlaytimeList_Header")
               ),
-              l.a.createElement(f, { accountID: this.props.accountID }),
+              l.a.createElement(A, { accountID: this.props.accountID }),
               l.a.createElement("div", { className: h.List }, t)
             )
           );
@@ -988,7 +1029,7 @@
           const o = n.n,
             r =
               n.r > 0
-                ? Object(_.g)("#Recommendation_ReleasedOn", Object(_.p)(n.r))
+                ? Object(_.g)("#Recommendation_ReleasedOn", Object(_.q)(n.r))
                 : "";
           let c = [];
           if (n.t) {
@@ -1017,8 +1058,8 @@
           Math.max(1, t);
           let y = !1,
             R = !1,
-            A = !0,
-            f = "",
+            f = !0,
+            A = "",
             I = "",
             N = "",
             C = "";
@@ -1030,7 +1071,7 @@
             e &&
               ((y = !0),
               (R = e.discount_pct > 0),
-              (A = "0" == e.discount_price),
+              (f = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
@@ -1041,9 +1082,9 @@
                 : O.shouldUseMicrotrailers() && e.microtrailer_mp4
                 ? ((L = e.microtrailer_mp4), (D = !0), (j = !1))
                 : (L = e.video_mp4),
-              (f = `-${e.discount_pct}%`),
+              (A = `-${e.discount_pct}%`),
               (I = e.base_price),
-              (N = A ? Object(_.g)("#FreeToPlay") : e.discount_price),
+              (N = f ? Object(_.g)("#FreeToPlay") : e.discount_price),
               (C = e.description));
           }
           const P = L && L.length > 0;
@@ -1181,7 +1222,7 @@
                               l.a.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                f
+                                A
                               ),
                               l.a.createElement(
                                 "div",
@@ -1210,7 +1251,7 @@
                               },
                               N
                             ),
-                          !A &&
+                          !f &&
                             l.a.createElement(
                               "div",
                               {
@@ -1233,7 +1274,7 @@
                         )
                       ),
                       !this.state.wishlisted &&
-                        !A &&
+                        !f &&
                         l.a.createElement(
                           "div",
                           {
@@ -1252,7 +1293,7 @@
                           )
                         ),
                       this.state.wishlisted &&
-                        !A &&
+                        !f &&
                         l.a.createElement(
                           "div",
                           {
@@ -1411,7 +1452,7 @@
           window.addEventListener("resize", this.updateDimensions);
         }
         ShowLoginDialog() {
-          Object(A.a)();
+          Object(f.a)();
         }
         render() {
           return n.l.logged_in
@@ -1571,60 +1612,27 @@
     i5oW: function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return u;
+        return l;
       });
       var i = a("mrSG"),
         s = a("q1tI"),
         n = a.n(s),
-        o = a("FmLm"),
-        r = a("/Q1a"),
-        c = a("EuLa"),
-        l = a("6MVd");
-      class d {
-        constructor() {
-          (this.m_mapAppToSNRs = new Map()), (this.m_rgImpressionsToAdd = []);
-        }
-        AddImpression(e, t) {
-          let a = !1;
-          o.a.Get().BAppImpressionsAllowed()
-            ? (this.m_mapAppToSNRs.has(e)
-                ? -1 == this.m_mapAppToSNRs.get(e).indexOf(t) &&
-                  (this.m_mapAppToSNRs.get(e).push(t), (a = !0))
-                : (this.m_mapAppToSNRs.set(e, [t]), (a = !0)),
-              a &&
-                (this.m_rgImpressionsToAdd.push(`${e}@${t}`),
-                this.UpdateCookie()))
-            : "dev" === r.d.WEB_UNIVERSE &&
-              console.log("Cookie Prefs: Not allowing App Impressions");
-        }
-        UpdateCookie() {
-          const e = [
-            Object(c.b)("app_impressions") || "",
-            ...this.m_rgImpressionsToAdd,
-          ].join("|");
-          this.m_rgImpressionsToAdd = [];
-          encodeURIComponent(e).length <= 3200 &&
-            Object(c.c)("app_impressions", e);
-        }
-      }
-      Object(i.b)([Object(l.a)(1e3)], d.prototype, "UpdateCookie", null);
-      const m = new d();
-      window.g_ImpressionTracker = m;
-      var p = a("uuth"),
-        _ = a("hCpY");
-      class u extends n.a.Component {
+        o = a("2KLf"),
+        r = a("uuth"),
+        c = a("hCpY");
+      class l extends n.a.Component {
         OnEnter() {
-          m.AddImpression(this.props.appID, this.props.snr);
+          o.a.AddImpression(this.props.appID, this.props.snr);
         }
         render() {
           return n.a.createElement(
-            p.a,
+            r.a,
             { onEnter: this.OnEnter },
             this.props.children
           );
         }
       }
-      Object(i.b)([_.b], u.prototype, "OnEnter", null);
+      Object(i.b)([c.b], l.prototype, "OnEnter", null);
     },
   },
 ]);

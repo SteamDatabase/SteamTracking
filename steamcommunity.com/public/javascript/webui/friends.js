@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7326401";
+var CLSTAMP = "7337903";
 !(function (e) {
   function t(t) {
     for (
@@ -112,7 +112,7 @@ var CLSTAMP = "7326401";
                   }[e] || e) +
                   ".css?contenthash=" +
                   {
-                    3: "2a133ea5722455e9f583",
+                    3: "74b10cb15019002492f4",
                     8: "31d6cfe0d16ae931b73c",
                     9: "31d6cfe0d16ae931b73c",
                     10: "31d6cfe0d16ae931b73c",
@@ -290,7 +290,7 @@ var CLSTAMP = "7326401";
               }[e] || e) +
               ".js?contenthash=" +
               {
-                3: "629a59dc7d9110687fdb",
+                3: "46a15fe1ba7a5b1ea760",
                 8: "7f48182463765343374f",
                 9: "0c56960e0ae63b14be95",
                 10: "cfe1517f78a25579b8aa",
@@ -322,35 +322,35 @@ var CLSTAMP = "7326401";
                 36: "9777a68ecddfc269d5bb",
                 37: "04ba25c68c3b0df5a784",
                 38: "22a5a4c7e4378bd531f5",
-                39: "5efbd3454418ae33fbf0",
-                40: "9b9fbd536aea76284321",
-                41: "df9399044ad20ff2933e",
-                42: "9122541cc7bd547d4ee2",
-                43: "aec6ab552ed4e26d6e49",
-                44: "88ff02fda9f2f1fa1c00",
-                45: "15fb920eaace401b7af4",
-                46: "f76e935155f599c4be96",
-                47: "045df1606c575836c358",
-                48: "6916e01de14e599d5171",
-                49: "8ea8af391ae187ae5f6d",
-                50: "e88a16d4efa4257b10f5",
-                51: "1f6e2627276678090e30",
-                52: "b24208bf68b80238a144",
-                53: "27c4a64a2b2febfbfca7",
-                54: "c161b3c7c1d777be0b89",
-                55: "e5b22a4a3da0e02d9250",
-                56: "8807c75c0b68767e6041",
-                57: "50db0b2587f9ebd26d4b",
-                58: "d2042b3301532957177e",
+                39: "785801b80acfb50fb97e",
+                40: "9758f510c0e61e3a4375",
+                41: "52b86f5ec4dd6cd8b534",
+                42: "57525cc338f4b451c04e",
+                43: "fef110573bde645b79c4",
+                44: "448b58474f66e4c5dd15",
+                45: "dd22fdb33aa53833bc8d",
+                46: "3111b113b41f826e8277",
+                47: "322d4d18c01ba7dbd738",
+                48: "ffdabb0de3c026258bf8",
+                49: "12b3b28ec7b811c6be06",
+                50: "9c643754c62da4cc4902",
+                51: "40d8c7cad1ef91a54aa7",
+                52: "b60aabc980a1f926b802",
+                53: "7353372041e64fdd0b8d",
+                54: "92be79245fb3840c6067",
+                55: "56b168669b30d9db1775",
+                56: "d23a4ff135cebb101626",
+                57: "d56f633ecfd45ba7d750",
+                58: "e52c78871f93154e339c",
                 59: "eae17d6c18038567cb04",
-                60: "2741b07b5583df42dcf0",
-                61: "6726e968f904b154bd58",
-                62: "0d4958c7337e2ba74370",
-                63: "38da1a34744a77489106",
-                64: "d3be1565c4f2270d062f",
-                65: "a06fd84705a3c0af9e20",
-                66: "209e8a45e04bea68b7cb",
-                67: "0ea3d18a86d92e684265",
+                60: "a7506e0095060fb1f95e",
+                61: "f4c8f3cfbbe95aa68958",
+                62: "4096fe0c0e6f9550a697",
+                63: "3f9e6364a1d30ac89600",
+                64: "20cbcae533f9a6b20cb7",
+                65: "cef34e87f2756994d6e2",
+                66: "a6910f814f7cc9e3d1c0",
+                67: "00fc56b56361d85e3909",
                 68: "af1febcb4be4094316a9",
               }[e]
             );
@@ -580,8 +580,8 @@ var CLSTAMP = "7326401";
       E = n("LAqV"),
       w = n("2vnA"),
       D = (n("NMF7"), n("E7zH")),
-      k = n("WpBz"),
-      R = n("oh5H"),
+      R = n("WpBz"),
+      k = n("oh5H"),
       A = n("7ERL"),
       T = n("XaMz"),
       M = (n("CKJp"), n("vDqi")),
@@ -925,8 +925,8 @@ var CLSTAMP = "7326401";
         return this.is_blocked
           ? (i.a.IN_MOBILE
               ? E.f.ShowAlert(
-                  Object(R.f)("#Friend_Chat_OpenError_Blocked"),
-                  Object(R.f)("#Friend_Chat_OpenError_BlockedBody")
+                  Object(k.f)("#Friend_Chat_OpenError_Blocked"),
+                  Object(k.f)("#Friend_Chat_OpenError_BlockedBody")
                 )
               : E.f.OpenURLInBrowser(this.GetCommunityProfileURL(), e),
             null)
@@ -978,12 +978,12 @@ var CLSTAMP = "7326401";
               ? E.f.AppInfoStore.GetAppInfo(this.persona.m_broadcastAppId)
               : null;
           return t && t.is_valid
-            ? Object(R.f)(
+            ? Object(k.f)(
                 "#PersonaStateWatchingBroadcast_PlayerGame",
                 e.display_name,
                 t.name
               )
-            : Object(R.f)(
+            : Object(k.f)(
                 "#PersonaStateWatchingBroadcast_Player",
                 e.display_name
               );
@@ -1940,7 +1940,7 @@ var CLSTAMP = "7326401";
               t &&
               E.f.NotificationManager.DisplayNotificationFromFriend(e, {
                 title: e.display_name,
-                body: Object(R.f)("#Friend_StateChange_InGame", t),
+                body: Object(k.f)("#Friend_StateChange_InGame", t),
                 rawbody: t,
                 tag: "state_" + e.accountid,
                 state: "ingame",
@@ -1954,7 +1954,7 @@ var CLSTAMP = "7326401";
           e.BShowOnlineNotification() &&
           E.f.NotificationManager.DisplayNotificationFromFriend(e, {
             title: e.display_name,
-            body: Object(R.f)("#Friend_StateChange_Online"),
+            body: Object(k.f)("#Friend_StateChange_Online"),
             tag: "state_" + e.accountid,
             state: "online",
             steamid: e.persona.m_steamid.ConvertTo64BitString(),
@@ -2122,13 +2122,13 @@ var CLSTAMP = "7326401";
       Object(a.b)([w.k], P.prototype, "SetPersonasOffline", null),
       Object(a.b)([w.k], P.prototype, "SetFriendsList", null),
       Object(a.b)(
-        [A.b, Object(k.a)(100)],
+        [A.b, Object(R.a)(100)],
         P.prototype,
         "PlayJoinGameSound",
         null
       ),
       Object(a.b)(
-        [A.b, Object(k.a)(100)],
+        [A.b, Object(R.a)(100)],
         P.prototype,
         "PlayFriendOnlineSound",
         null
@@ -2412,11 +2412,11 @@ var CLSTAMP = "7326401";
       )
         return null;
       const c = o.map((e) =>
-        a.createElement(k, {
+        a.createElement(R, {
           key: e.key,
           modal: e,
           active: e == s,
-          Component: null != n ? n : R,
+          Component: null != n ? n : k,
         })
       );
       return a.createElement(
@@ -2430,7 +2430,7 @@ var CLSTAMP = "7326401";
         c
       );
     }
-    function k(e) {
+    function R(e) {
       const { modal: t, active: n, Component: i } = e,
         o = Object(w.g)();
       return (
@@ -2453,7 +2453,7 @@ var CLSTAMP = "7326401";
         )
       );
     }
-    function R(e) {
+    function k(e) {
       const { className: t, active: n, children: i } = e,
         o = a.useRef();
       return (
@@ -3051,7 +3051,7 @@ var CLSTAMP = "7326401";
             i.createElement(
               r.J,
               null,
-              Object(d.l)(
+              Object(d.m)(
                 "#NotificationSettings_SubTitle",
                 i.createElement("span", { className: "whiteText" }, t.name)
               )
@@ -3103,7 +3103,7 @@ var CLSTAMP = "7326401";
               r.s,
               null,
               !o.a.IN_GAMEPADUI &&
-                Object(d.l)(
+                Object(d.m)(
                   "#NotificationSetting_Footer_Desc",
                   i.createElement(
                     "span",
@@ -4486,12 +4486,12 @@ var CLSTAMP = "7326401";
       E = n("/IDK"),
       w = n("20CD"),
       D = n("XaMz"),
-      k = n("E7zH"),
-      R = n("1n9R");
+      R = n("E7zH"),
+      k = n("1n9R");
     let A = class extends i.Component {
       constructor(e) {
         super(e),
-          (this.m_schHoverDelay = new k.b()),
+          (this.m_schHoverDelay = new R.b()),
           (this.state = { bCollapsed: !1, bMouseHover: !1 });
       }
       OnRoomsContextMenu(e) {
@@ -5104,7 +5104,7 @@ var CLSTAMP = "7326401";
                 onEndRename: this.props.onEndRename,
               }),
             !this.props.bRenameActive &&
-              !R.d.IN_GAMEPADUI &&
+              !k.d.IN_GAMEPADUI &&
               i.createElement(
                 i.Fragment,
                 null,
@@ -5131,7 +5131,7 @@ var CLSTAMP = "7326401";
             { className: h },
             Object(S.f)("#Chat_VoiceEmptyChannel")
           ),
-          !R.d.IN_GAMEPADUI &&
+          !k.d.IN_GAMEPADUI &&
             i.createElement(I.a, {
               name: b,
               chat: this.props.chat,
@@ -6400,7 +6400,7 @@ var CLSTAMP = "7326401";
         IS_VALVE_GROUP: !1,
         IS_ALLOWED_SC: !1,
       },
-      l = { ANNOUNCEMENT_GID: "" };
+      l = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
     let d;
     function m() {
       let e = (function () {
@@ -8894,7 +8894,7 @@ var CLSTAMP = "7326401";
         return b;
       }),
       n.d(t, "a", function () {
-        return k;
+        return R;
       });
     var a = n("mrSG"),
       i = n("UqDm"),
@@ -9221,7 +9221,7 @@ var CLSTAMP = "7326401";
     }
     Object(a.b)([d.k], D.prototype, "SetUserGroupCollapsed", null),
       Object(a.b)([d.k], D.prototype, "ToggleUserGroupCollapsed", null);
-    class k {
+    class R {
       constructor(e) {
         (this.m_FriendGroupDisplayPrefs = new D()),
           (this.m_mapGroups = d.C.map()),
@@ -9589,17 +9589,17 @@ var CLSTAMP = "7326401";
           );
       }
     }
-    Object(a.b)([d.n], k.prototype, "friend_groups", null),
-      Object(a.b)([d.n], k.prototype, "user_groups", null),
-      Object(a.b)([d.n], k.prototype, "game_groups", null),
-      Object(a.b)([d.n], k.prototype, "singleton_game_group", null),
-      Object(a.b)([d.n], k.prototype, "default_groups", null),
-      Object(a.b)([d.k], k.prototype, "OnFullFriendsListUpdateComplete", null),
-      Object(a.b)([d.k], k.prototype, "OnPersonaStateCacheReset", null),
-      Object(a.b)([d.k], k.prototype, "HandleGroupRemoval", null),
-      Object(a.b)([d.n], k.prototype, "categorized_friend_set", null),
-      Object(a.b)([d.k], k.prototype, "RecvCategoriesList", null),
-      Object(a.b)([d.k], k.prototype, "TransferFriendFromToGroup", null);
+    Object(a.b)([d.n], R.prototype, "friend_groups", null),
+      Object(a.b)([d.n], R.prototype, "user_groups", null),
+      Object(a.b)([d.n], R.prototype, "game_groups", null),
+      Object(a.b)([d.n], R.prototype, "singleton_game_group", null),
+      Object(a.b)([d.n], R.prototype, "default_groups", null),
+      Object(a.b)([d.k], R.prototype, "OnFullFriendsListUpdateComplete", null),
+      Object(a.b)([d.k], R.prototype, "OnPersonaStateCacheReset", null),
+      Object(a.b)([d.k], R.prototype, "HandleGroupRemoval", null),
+      Object(a.b)([d.n], R.prototype, "categorized_friend_set", null),
+      Object(a.b)([d.k], R.prototype, "RecvCategoriesList", null),
+      Object(a.b)([d.k], R.prototype, "TransferFriendFromToGroup", null);
   },
   "5Nu3": function (e, t, n) {
     "use strict";
@@ -9801,8 +9801,8 @@ var CLSTAMP = "7326401";
     }
     var w = n("UqDm"),
       D = n("XaMz"),
-      k = n("oh5H");
-    function R(e, t) {
+      R = n("oh5H");
+    function k(e, t) {
       if (!e || !t) return [];
       let n = [],
         a = e.values(),
@@ -9973,7 +9973,7 @@ var CLSTAMP = "7326401";
                     (n.AddLocalMsg(
                       a.GetAccountID(),
                       t.timestamp(),
-                      Object(k.f)(
+                      Object(R.f)(
                         "#Chat_TextFilter_Active",
                         this.GetTextFilterSettingsURL()
                       )
@@ -10076,13 +10076,13 @@ var CLSTAMP = "7326401";
                     t &&
                       (3 == a
                         ? r.f.ShowAlert(
-                            Object(k.f)("#Alert_YouWereKickedTitle"),
-                            Object(k.f)("#Alert_YouWereKickedDescription", t)
+                            Object(R.f)("#Alert_YouWereKickedTitle"),
+                            Object(R.f)("#Alert_YouWereKickedDescription", t)
                           )
                         : 10 == a &&
                           r.f.ShowAlert(
-                            Object(k.f)("#Alert_YouWereBannedTitle"),
-                            Object(k.f)("#Alert_YouWereBannedDescription", t)
+                            Object(R.f)("#Alert_YouWereBannedTitle"),
+                            Object(R.f)("#Alert_YouWereBannedDescription", t)
                           ));
                   break;
                 }
@@ -10393,19 +10393,19 @@ var CLSTAMP = "7326401";
         let e = this.m_TextFilterStore.TextFilterPreferences;
         switch (e.eTextFilterSetting) {
           case 0:
-            return Object(k.f)("#TextFilterStatus_SteamLabOptedOut");
+            return Object(R.f)("#TextFilterStatus_SteamLabOptedOut");
           case 1:
             return e.bIgnoreFriends
-              ? Object(k.f)("#TextFilterStatus_Enabled_IgnoreFriends")
-              : Object(k.f)("#TextFilterStatus_Enabled");
+              ? Object(R.f)("#TextFilterStatus_Enabled_IgnoreFriends")
+              : Object(R.f)("#TextFilterStatus_Enabled");
           case 2:
             return e.bIgnoreFriends
-              ? Object(k.f)(
+              ? Object(R.f)(
                   "#TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"
                 )
-              : Object(k.f)("#TextFilterStatus_EnabledAllowProfanity");
+              : Object(R.f)("#TextFilterStatus_EnabledAllowProfanity");
           case 3:
-            return Object(k.f)("#TextFilterStatus_Disabled");
+            return Object(R.f)("#TextFilterStatus_Disabled");
           default:
             return "";
         }
@@ -10487,7 +10487,7 @@ var CLSTAMP = "7326401";
         return this.m_mapChatGroups.get(e);
       }
       get currentChatRoomGroups() {
-        return R(this.m_mapChatGroups, (e) => e.BIsCurrentUserAMember());
+        return k(this.m_mapChatGroups, (e) => e.BIsCurrentUserAMember());
       }
       FindChatRoomGroupsMatchingSearch(e) {
         return this.currentChatRoomGroups.filter(
@@ -10495,7 +10495,7 @@ var CLSTAMP = "7326401";
         );
       }
       get ClanChatRooms() {
-        return R(this.m_mapChatGroups, (e) => e.BIsClanChatRoom());
+        return k(this.m_mapChatGroups, (e) => e.BIsClanChatRoom());
       }
       GetRefCountActiveChatRoomGroup(e) {
         let t = this.m_mapActiveChatGroupsToRefCount.get(e);
@@ -11952,7 +11952,7 @@ var CLSTAMP = "7326401";
       D = function (e, t) {
         (this.modulus = new w(e, 16)), (this.encryptionExponent = new w(t, 16));
       },
-      k = {
+      R = {
         base64:
           "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
         encode: function (e) {
@@ -12001,7 +12001,7 @@ var CLSTAMP = "7326401";
           return o;
         },
       },
-      R = {
+      k = {
         hex: "0123456789abcdef",
         encode: function (e) {
           if (!e) return !1;
@@ -12038,7 +12038,7 @@ var CLSTAMP = "7326401";
             !!(e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)) &&
             !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
             (1 == (1 & (e = e.toString(16)).length) && (e = "0" + e),
-            k.encode(R.decode(e)))
+            R.encode(k.decode(e)))
           );
         },
         pkcs1pad2: function (e, t) {
@@ -16303,47 +16303,52 @@ var CLSTAMP = "7326401";
       return s.test(e) ? e : "https://" + e;
     }
     function l(e) {
-      return 1 != a.d.EUNIVERSE
-        ? e
-        : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
-          (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
-            (e = e.replace(
-              /https:\/\/media.steampowered.com\//g,
+      return e
+        ? 1 != a.d.EUNIVERSE
+          ? e
+          : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
+            (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
+              (e = (e = e.replace(
+                /https:\/\/media.steampowered.com\//g,
+                a.d.MEDIA_CDN_URL
+              )).replace(
+                /https:\/\/cdn.akamai.steamstatic.com\//g,
+                a.d.MEDIA_CDN_URL
+              )).replace(
+                /https:\/\/cdn.cloudflare.steamstatic.com\//g,
+                a.d.MEDIA_CDN_URL
+              )).replace(
+              /https:\/\/cdn.edgecast.steamstatic.com\//g,
               a.d.MEDIA_CDN_URL
             )).replace(
-              /https:\/\/cdn.akamai.steamstatic.com\//g,
+              /https:\/\/cdn.dota2.com\//g,
               a.d.MEDIA_CDN_URL
             )).replace(
-            /https:\/\/cdn.cloudflare.steamstatic.com\//g,
-            a.d.MEDIA_CDN_URL
-          )).replace(
-            /https:\/\/cdn.edgecast.steamstatic.com\//g,
-            a.d.MEDIA_CDN_URL
-          )).replace(/https:\/\/cdn.dota2.com\//g, a.d.MEDIA_CDN_URL)).replace(
-            /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
-            a.d.MEDIA_CDN_URL + "steam/"
-          )).replace(
-            /https:\/\/cdn.steamcommunity.com\//g,
-            a.d.COMMUNITY_CDN_URL
-          )).replace(
-            /https:\/\/community.akamai.steamstatic.com\//g,
-            a.d.COMMUNITY_CDN_URL
-          )).replace(
-            /https:\/\/community.cloudflare.steamstatic.com\//g,
-            a.d.COMMUNITY_CDN_URL
-          )).replace(
-            /https:\/\/community.edgecast.steamstatic.com\//g,
-            a.d.COMMUNITY_CDN_URL
-          )).replace(/^{IMG_URL}/g, a.d.IMG_URL)).replace(
-            /^{MEDIA_CDN_URL}/g,
-            a.d.MEDIA_CDN_URL
-          )).replace(
-            /^{MEDIA_CDN_COMMUNITY_URL}/g,
-            a.d.MEDIA_CDN_COMMUNITY_URL
-          )).replace(/^{COMMUNITY_CDN_URL}/g, a.d.COMMUNITY_CDN_URL)).replace(
-            /^{STEAM_CLAN_IMAGE}/g,
-            a.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
-          )));
+              /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
+              a.d.MEDIA_CDN_URL + "steam/"
+            )).replace(
+              /https:\/\/cdn.steamcommunity.com\//g,
+              a.d.COMMUNITY_CDN_URL
+            )).replace(
+              /https:\/\/community.akamai.steamstatic.com\//g,
+              a.d.COMMUNITY_CDN_URL
+            )).replace(
+              /https:\/\/community.cloudflare.steamstatic.com\//g,
+              a.d.COMMUNITY_CDN_URL
+            )).replace(
+              /https:\/\/community.edgecast.steamstatic.com\//g,
+              a.d.COMMUNITY_CDN_URL
+            )).replace(/{IMG_URL}/g, a.d.IMG_URL)).replace(
+              /{MEDIA_CDN_URL}/g,
+              a.d.MEDIA_CDN_URL
+            )).replace(
+              /{MEDIA_CDN_COMMUNITY_URL}/g,
+              a.d.MEDIA_CDN_COMMUNITY_URL
+            )).replace(/{COMMUNITY_CDN_URL}/g, a.d.COMMUNITY_CDN_URL)).replace(
+              /{STEAM_CLAN_IMAGE}/g,
+              a.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
+            )))
+        : e;
     }
     function d(e) {
       if (!e) return !0;
@@ -17099,8 +17104,8 @@ var CLSTAMP = "7326401";
       E = n("/7KC"),
       w = n("y3Ls"),
       D = n("ujHl"),
-      k = n("Dhs8"),
-      R = n("RymX"),
+      R = n("Dhs8"),
+      k = n("RymX"),
       A = n("6e0u");
     n("MOek");
     var T;
@@ -17138,7 +17143,7 @@ var CLSTAMP = "7326401";
           (this.m_videoRepSelected = null),
           (this.m_nAudioRepresentationIndex = 0),
           (this.m_timedTextRepSelected = null),
-          (this.m_stats = new k.a()),
+          (this.m_stats = new R.a()),
           (this.m_bClosing = !1),
           (this.m_hlsTimeOffset = 0),
           (this.m_bUserPlayChoice = !0),
@@ -17163,7 +17168,7 @@ var CLSTAMP = "7326401";
             (this.m_strCDNAuthURLParameters = t);
           let a = yield this.DownloadMPD();
           if (a)
-            if (((this.m_mpd = new R.b()), this.m_mpd.BParse(a.data))) {
+            if (((this.m_mpd = new k.b()), this.m_mpd.BParse(a.data))) {
               if (
                 (this.IsLiveContent() &&
                   (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
@@ -17186,7 +17191,7 @@ var CLSTAMP = "7326401";
                 );
               this.BCreateLoaders()
                 ? (this.m_stats.SetSegmentDurationMS(
-                    Object(R.e)(this.GetCurrentVideoAdaptation())
+                    Object(k.e)(this.GetCurrentVideoAdaptation())
                   ),
                   this.m_stats.SetAnalyticLinks(
                     this.m_mpd.GetStatsLink(),
@@ -17393,11 +17398,11 @@ var CLSTAMP = "7326401";
           if (
             (!this.m_strVideoAdaptationID &&
               e.bContainsVideo &&
-              Object(R.a)(e) &&
+              Object(k.a)(e) &&
               ((t = e), (this.m_strVideoAdaptationID = e.strID)),
             !this.m_strAudioAdaptationID &&
               e.bContainsAudio &&
-              Object(R.a)(e) &&
+              Object(k.a)(e) &&
               ((t = e), (this.m_strAudioAdaptationID = e.strID)),
             !this.m_strGameAdaptationID &&
               e.bContainsGame &&
@@ -17764,7 +17769,7 @@ var CLSTAMP = "7326401";
         this.m_bIsBuffering && e.GetNumConsecutiveDownloadGones() <= 3
           ? this.Seek(
               this.GetCurrentPlayTime() +
-                Object(R.e)(this.GetCurrentVideoAdaptation()) / 1e3
+                Object(k.e)(this.GetCurrentVideoAdaptation()) / 1e3
             )
           : (Object(h.c)(
               "OnSegmentDownloadGone: too many consecutive 'gone', erroring the download: " +
@@ -17801,7 +17806,7 @@ var CLSTAMP = "7326401";
       BeginPlayback() {
         let e = 0;
         if (this.IsLiveContent()) {
-          let t = Object(R.e)(this.GetCurrentVideoAdaptation()),
+          let t = Object(k.e)(this.GetCurrentVideoAdaptation()),
             n = 1e3 * this.m_mpd.GetMinBufferTime(),
             a = Math.max(t, n);
           this.SetTrackBufferMS(a),
@@ -17825,7 +17830,7 @@ var CLSTAMP = "7326401";
           for (let t of this.m_rgLoaders)
             if (t.ContainsVideo()) {
               t.ChangeRepresentation(e);
-              let n = Object(R.e)(t.GetAdaptation());
+              let n = Object(k.e)(t.GetAdaptation());
               this.m_schFirstFrameThrottler.Schedule(
                 n / 2,
                 this.VerifyFirstSegementDownloadProgress
@@ -18164,7 +18169,7 @@ var CLSTAMP = "7326401";
           (this.m_bFirstPlay = !0),
           (this.m_bStatsViewVisible = !1),
           (this.m_schCaptureDisplayStatsTrigger = new O.b()),
-          (this.m_stats = new k.a()),
+          (this.m_stats = new R.a()),
           (this.m_elVideo = e);
       }
       PlayMPD(e) {
@@ -19586,8 +19591,8 @@ var CLSTAMP = "7326401";
       E = n("oh5H"),
       w = n("7ERL"),
       D = n("J0bI"),
-      k = n("uWOQ"),
-      R = n("s+DT"),
+      R = n("uWOQ"),
+      k = n("s+DT"),
       A = n("XaMz"),
       T = n("PJQb"),
       M = n.n(T),
@@ -20676,14 +20681,14 @@ var CLSTAMP = "7326401";
           }),
           p = Object(E.f)("#ChatRoomRole_Description_NoEdit");
         if (a) {
-          let t = R.a.InitFromClanID(e.GetClanID()),
+          let t = k.a.InitFromClanID(e.GetClanID()),
             n = `${
               r.a.COMMUNITY_BASE_URL
             }gid/${t.ConvertTo64BitString()}/membersManage`;
-          p = Object(E.l)(
+          p = Object(E.m)(
             "#ChatRoomRole_Description_Clan",
             f.createElement(
-              k.b,
+              R.b,
               { href: n },
               Object(E.f)("#ChatRoomRole_Description_ClanLink")
             )
@@ -22713,10 +22718,10 @@ var CLSTAMP = "7326401";
         return D;
       }),
       n.d(t, "b", function () {
-        return k;
+        return R;
       }),
       n.d(t, "h", function () {
-        return R;
+        return k;
       }),
       n.d(t, "e", function () {
         return A;
@@ -22855,7 +22860,7 @@ var CLSTAMP = "7326401";
               o.createElement(
                 o.Fragment,
                 null,
-                o.createElement(R, null),
+                o.createElement(k, null),
                 o.createElement(
                   D,
                   { className: p.Cancel, onSelected: e },
@@ -23008,7 +23013,7 @@ var CLSTAMP = "7326401";
       Object(a.b)([S.b], D.prototype, "OnOKButton", null),
       Object(a.b)([S.b], D.prototype, "OnMouseEnter", null),
       Object(a.b)([S.b], D.prototype, "Focus", null);
-    class k extends o.PureComponent {
+    class R extends o.PureComponent {
       render() {
         const e = this.props,
           { bChecked: t, children: n, className: i } = e,
@@ -23023,7 +23028,7 @@ var CLSTAMP = "7326401";
         );
       }
     }
-    function R(e) {
+    function k(e) {
       var t;
       const n = o.useContext(E),
         a =
@@ -23267,21 +23272,21 @@ var CLSTAMP = "7326401";
           E = y > 0,
           w = m - (r.bOverlapVertical ? v : I) - O,
           D = w > 0,
-          k = (r.bPreferPopTop || !D) && E && !r.bDisablePopTop;
+          R = (r.bPreferPopTop || !D) && E && !r.bDisablePopTop;
         if (!E && !D) {
           const e =
             void 0 !== r.bShiftToFitWindow
               ? r.bShiftToFitWindow
               : r.bFitToWindow && !r.bOverlapHorizontal;
-          (k = y > w && !r.bDisablePopTop),
-            e && (k ? (s.menuTop = 4) : (s.menuBottom = 4)),
+          (R = y > w && !r.bDisablePopTop),
+            e && (R ? (s.menuTop = 4) : (s.menuBottom = 4)),
             r.bFitToWindow &&
-              (e ? (O = Math.min(O, m - 8)) : (O += k ? y : w),
+              (e ? (O = Math.min(O, m - 8)) : (O += R ? y : w),
               (s.menuHeight = O - 8));
         }
         void 0 === s.menuBottom &&
           void 0 === s.menuTop &&
-          (k
+          (R
             ? (s.menuBottom = m - (r.bOverlapVertical ? I : v))
             : (s.menuTop = r.bOverlapVertical ? v : I)),
           o
@@ -23584,7 +23589,7 @@ var CLSTAMP = "7326401";
         return D;
       }),
       n.d(t, "e", function () {
-        return R;
+        return k;
       }),
       n.d(t, "f", function () {
         return A;
@@ -23955,9 +23960,9 @@ var CLSTAMP = "7326401";
           "scrollIntoViewType",
           "resetNavOnEntry",
         ]),
-        { gamepadEvents: w, actionDescriptions: D, props: k } = y(E);
+        { gamepadEvents: w, actionDescriptions: D, props: R } = y(E);
       return {
-        elemProps: k,
+        elemProps: R,
         navOptions: {
           autoFocus: t,
           preferredFocus: n,
@@ -24025,7 +24030,7 @@ var CLSTAMP = "7326401";
       };
     }
     const D = w("div");
-    function k(e, t, n, a) {
+    function R(e, t, n, a) {
       const { elemProps: r, navOptions: l, gamepadEvents: d } = E(n);
       void 0 !== l.focusable || r.disabled || (l.focusable = !0);
       const { ref: m, node: u } = O(Object.assign({}, l)),
@@ -24070,10 +24075,10 @@ var CLSTAMP = "7326401";
         )
       );
     }
-    function R(e) {
+    function k(e) {
       const t = w(e);
       return o.a.forwardRef(function (n, a) {
-        return k(e, t, n, a);
+        return R(e, t, n, a);
       });
     }
     function A(e) {
@@ -24086,7 +24091,7 @@ var CLSTAMP = "7326401";
           d = Object(a.c)(s, ["refKeyboardHandle"]),
           m = b(r, l),
           h = Object(c.h)(i, m);
-        return k(e, t, d, h);
+        return R(e, t, d, h);
       });
     }
   },
@@ -26182,8 +26187,8 @@ var CLSTAMP = "7326401";
       (E = Object(a.b)([r.a], E));
     var w = n("8o0Y"),
       D = n("EGkk"),
-      k = n("geE1"),
-      R = n("rsEv"),
+      R = n("geE1"),
+      k = n("rsEv"),
       A = (n("tZiA"), n("tkkQ")),
       T = n("uWOQ"),
       M = (n("V7Fl"), n("0N1H"), n("+mma")),
@@ -26768,7 +26773,7 @@ var CLSTAMP = "7326401";
             Object(h.f)("#Friend_Menu_AddToFriendsList"),
             Object(h.f)("#Friend_Menu_AddToFriendsList"),
             Object(h.f)("#Button_OK"),
-            Object(h.l)("#Friend_InviteError_LimitedUserLink", t)
+            Object(h.m)("#Friend_InviteError_LimitedUserLink", t)
           );
         } else
           Object(M.c)(
@@ -26967,7 +26972,7 @@ var CLSTAMP = "7326401";
           _ = i.f.FriendStore.self == d,
           g = "favorites" == a.chatContext,
           b = a.group;
-        !b && a.chat instanceof R.a && (b = a.chat.GetGroup());
+        !b && a.chat instanceof k.a && (b = a.chat.GetGroup());
         let f = !1,
           C = d.is_friend,
           S = 2 == d.efriendrelationship,
@@ -26976,9 +26981,9 @@ var CLSTAMP = "7326401";
           E = i.f.FriendStore.self.persona.m_unGamePlayedAppID;
         d.persona.m_unGamePlayedAppID;
         a.chat &&
-          (a.chat instanceof k.a
+          (a.chat instanceof R.a
             ? ((e = a.chat), e.BVoiceActive() && (f = !0))
-            : a.chat instanceof R.a &&
+            : a.chat instanceof k.a &&
               ((t = a.chat), t.BVoiceActive() && (f = !0))),
           C ||
             S ||
@@ -27036,7 +27041,7 @@ var CLSTAMP = "7326401";
         let w = i.f.ChatStore.BIsEligibleForVoiceChat(d, e),
           T = i.f.ChatStore.GetActiveVoiceChat();
         if (
-          (T && T instanceof k.a && T.accountid_partner == d.accountid
+          (T && T instanceof R.a && T.accountid_partner == d.accountid
             ? r.push(
                 c.createElement(
                   D.d,
@@ -27050,7 +27055,7 @@ var CLSTAMP = "7326401";
                 )
               )
             : w &&
-              (T instanceof R.a
+              (T instanceof k.a
                 ? T.GetMember(d.accountid) ||
                   r.push(
                     c.createElement(
@@ -29190,7 +29195,7 @@ var CLSTAMP = "7326401";
       E = (n("vhEY"), n("7ERL")),
       w = n("adxy"),
       D = n("e2SU");
-    class k extends g.Component {
+    class R extends g.Component {
       constructor(e) {
         super(e),
           (this.state = {
@@ -29325,12 +29330,12 @@ var CLSTAMP = "7326401";
         );
       }
     }
-    Object(a.b)([E.b], k.prototype, "OnRef", null),
-      Object(a.b)([E.b], k.prototype, "CheckScrollPosition", null),
-      Object(a.b)([E.b], k.prototype, "OnSlideLeftClick", null),
-      Object(a.b)([E.b], k.prototype, "OnSlideRightClick", null),
-      Object(a.b)([E.b], k.prototype, "OnWheel", null);
-    var R = n("Hi0u"),
+    Object(a.b)([E.b], R.prototype, "OnRef", null),
+      Object(a.b)([E.b], R.prototype, "CheckScrollPosition", null),
+      Object(a.b)([E.b], R.prototype, "OnSlideLeftClick", null),
+      Object(a.b)([E.b], R.prototype, "OnSlideRightClick", null),
+      Object(a.b)([E.b], R.prototype, "OnWheel", null);
+    var k = n("Hi0u"),
       A = n("0wLp"),
       T = n("UqDm"),
       M = (n("E7zH"), n("QHER")),
@@ -29634,7 +29639,7 @@ var CLSTAMP = "7326401";
                   (i.a.IN_GAMEPADUI ? " gamepadui" : ""),
               },
               g.createElement(
-                k,
+                R,
                 { className: "chatTabList", ref: this.OnScrollRef },
                 g.createElement(
                   b.a,
@@ -30167,7 +30172,7 @@ var CLSTAMP = "7326401";
     function W(e) {
       l.i.UIDisplayPrefs.bDontShowVoiceAlert ||
         (e &&
-          Object(R.c)(
+          Object(k.c)(
             g.createElement(z, null),
             e,
             "ActiveVoiceAlert",
@@ -30207,7 +30212,7 @@ var CLSTAMP = "7326401";
       }
       render() {
         return g.createElement(
-          R.a,
+          k.a,
           { onEscKeypress: this.DismissDialog },
           g.createElement(
             O.j,
@@ -30545,8 +30550,8 @@ var CLSTAMP = "7326401";
       E = n("faye"),
       w = n("NMF7"),
       D = n("8o0Y"),
-      k = (n("KtKE"), n("Rcv0")),
-      R = n("VoDG"),
+      R = (n("KtKE"), n("Rcv0")),
+      k = n("VoDG"),
       A = n("Jdiq"),
       T = n("UDpV"),
       M = n.n(T),
@@ -31220,7 +31225,7 @@ var CLSTAMP = "7326401";
               )));
           }
         return p.createElement(
-          R.a,
+          k.a,
           Object.assign(
             {
               className: "chatEntry" + (i ? " compactView" : "") + s,
@@ -31237,7 +31242,7 @@ var CLSTAMP = "7326401";
               onBlur: this.OnBlur,
             },
             a,
-            p.createElement(k.g, {
+            p.createElement(R.g, {
               className: M.a.chatTextarea,
               value: this.state.messageInput,
               onKeyboardFullyVisible: this.OnKeyboardFullyVisible,
@@ -31254,7 +31259,7 @@ var CLSTAMP = "7326401";
               spellCheck: !m.f.SettingsStore.FriendsSettings.bDisableSpellcheck,
             }),
             p.createElement(
-              k.d,
+              R.d,
               {
                 className:
                   M.a.chatSubmitButton +
@@ -31296,7 +31301,7 @@ var CLSTAMP = "7326401";
                   bShowChatAddons: !0,
                 }),
                 p.createElement(
-                  k.d,
+                  R.d,
                   {
                     className:
                       `${M.a.chatSubmitButton} ${M.a.EmbedButton}` +
@@ -31434,7 +31439,7 @@ var CLSTAMP = "7326401";
               "div",
               { className: "buttonsContainer" },
               p.createElement(
-                k.d,
+                R.d,
                 {
                   disabled: i,
                   className: t.join(" "),
@@ -31893,8 +31898,8 @@ var CLSTAMP = "7326401";
       E = n("tkkQ"),
       w = n("7sd/"),
       D = n("+M9t"),
-      k = n("bbBM"),
-      R = n("UMCL"),
+      R = n("bbBM"),
+      k = n("UMCL"),
       A = n("N/w2");
     var T = n("QHER"),
       M = n("v5rQ"),
@@ -32027,13 +32032,13 @@ var CLSTAMP = "7326401";
         const a = p.f.FriendStore.self;
         if (0 === t.length)
           return 1 === n
-            ? Object(C.l)("#MessageReaction_DescriptionCountOnly", e)
-            : Object(C.l)("#MessageReaction_DescriptionCountOnly_Plural", n, e);
+            ? Object(C.m)("#MessageReaction_DescriptionCountOnly", e)
+            : Object(C.m)("#MessageReaction_DescriptionCountOnly_Plural", n, e);
         const i = t.filter((e) => e !== a.accountid),
           r = i.length != t.length;
         return t.length < n
           ? t.length >= 2
-            ? Object(C.l)(
+            ? Object(C.m)(
                 "#MessageReaction_DescriptionMany" + (r ? "You" : ""),
                 i
                   .slice(0, r ? 1 : 2)
@@ -32042,16 +32047,16 @@ var CLSTAMP = "7326401";
                 e
               )
             : r
-            ? Object(C.l)(
+            ? Object(C.m)(
                 "#MessageReaction_DescriptionYouAndCount" +
                   (n - 1 == 1 ? "" : "_Plural"),
                 n - 1,
                 e
               )
             : 1 === n
-            ? Object(C.l)("#MessageReaction_DescriptionCountOnly", e)
-            : Object(C.l)("#MessageReaction_DescriptionCountOnly_Plural", n, e)
-          : Object(C.l)(
+            ? Object(C.m)("#MessageReaction_DescriptionCountOnly", e)
+            : Object(C.m)("#MessageReaction_DescriptionCountOnly_Plural", n, e)
+          : Object(C.m)(
               `#MessageReaction_Description${n}${r ? "You" : ""}`,
               ...i.map((e) => o.a.createElement(ee, { accountid: e })),
               e
@@ -32177,7 +32182,7 @@ var CLSTAMP = "7326401";
     }
     let ae = Object(c.a)((e) =>
         o.a.createElement(
-          k.e,
+          R.e,
           { friend: e.player, context: e.context },
           o.a.createElement("span", null, e.player.display_name)
         )
@@ -32204,10 +32209,10 @@ var CLSTAMP = "7326401";
             c = "";
           if (n.length > 1) {
             let e = o.a.createElement(o.a.Fragment, null, ...n);
-            c = Object(C.l)("#ChatRoom_ServerMessage_Invited_Multiple", e, s);
-          } else c = Object(C.l)("#ChatRoom_ServerMessage_Invited", n[0], s);
+            c = Object(C.m)("#ChatRoom_ServerMessage_Invited_Multiple", e, s);
+          } else c = Object(C.m)("#ChatRoom_ServerMessage_Invited", n[0], s);
           return o.a.createElement(
-            R.b,
+            k.b,
             { style: "server" },
             o.a.createElement(
               "div",
@@ -32240,15 +32245,15 @@ var CLSTAMP = "7326401";
           let e = n.pop();
           2 == n.length && n.pop();
           let t = o.a.createElement(o.a.Fragment, null, ...n);
-          r = Object(C.l)(this.props.tokenPrefix + "_Multiple", t, e);
-        } else r = Object(C.l)(this.props.tokenPrefix, n[0]);
+          r = Object(C.m)(this.props.tokenPrefix + "_Multiple", t, e);
+        } else r = Object(C.m)(this.props.tokenPrefix, n[0]);
         return o.a.createElement(re, null, i ? r : " ");
       }
     };
     oe = Object(a.b)([c.a], oe);
     const re = ({ children: e }) =>
       o.a.createElement(
-        R.b,
+        k.b,
         { style: "server" },
         o.a.createElement(
           "div",
@@ -32313,7 +32318,7 @@ var CLSTAMP = "7326401";
                 ? () => {
                     c.document.execCommand("copy");
                   }
-                : () => Object(R.a)(_.current)),
+                : () => Object(k.a)(_.current)),
               s.push(
                 o.a.createElement(
                   x.d,
@@ -32356,7 +32361,7 @@ var CLSTAMP = "7326401";
             const p = Object(P.a)(h, n, a);
             return p;
           };
-        let k = (e) => D(e, { bOverlapHorizontal: !0, bOverlapVertical: !1 });
+        let R = (e) => D(e, { bOverlapHorizontal: !0, bOverlapVertical: !1 });
         const A = a.chat;
         let M = t.strMessage;
         const L = e.hideTimeStamp || a.IsChatRoom(),
@@ -32441,7 +32446,7 @@ var CLSTAMP = "7326401";
         let Z,
           Q = {
             onMenuButton: (e) => {
-              k(e);
+              R(e);
             },
             onMenuActionDescription: Object(C.f)("#Chat_MessageContextMenu"),
           };
@@ -32483,12 +32488,12 @@ var CLSTAMP = "7326401";
               ),
             j,
             o.a.createElement(
-              R.b,
+              k.b,
               null,
               o.a.createElement("div", { className: K, ref: _ }, q)
             ),
             o.a.createElement(z, { msg: t, chat: A }),
-            o.a.createElement(le, { msg: t, chat: A, onShowContextMenu: k })
+            o.a.createElement(le, { msg: t, chat: A, onShowContextMenu: R })
           )
         );
       }),
@@ -32643,7 +32648,7 @@ var CLSTAMP = "7326401";
               t.persona.is_online,
             l = p.f.GetServerRTime32() - this.props.msg.rtTimestamp < 60;
           return o.a.createElement(
-            R.b,
+            k.b,
             {
               style: "speaker allow-embedded-newlines",
               text: [
@@ -32666,7 +32671,7 @@ var CLSTAMP = "7326401";
                 he,
                 { friend: t, className: "speaker" },
                 o.a.createElement(
-                  k.e,
+                  R.e,
                   { friend: t, context: this.props.friendRenderContext },
                   o.a.createElement(
                     "div",
@@ -32768,10 +32773,10 @@ var CLSTAMP = "7326401";
               "div",
               { className: i },
               o.a.createElement(
-                k.e,
+                R.e,
                 { friend: n, context: { chat: t, chatContext: "message" } },
                 o.a.createElement(
-                  R.b,
+                  k.b,
                   {
                     style: "speaker allow-embedded-newlines",
                     text: [
@@ -32799,7 +32804,7 @@ var CLSTAMP = "7326401";
                 )
               ),
               o.a.createElement(
-                R.b,
+                k.b,
                 { style: "force-display append-innertext", text: "/me" },
                 o.a.createElement(
                   "div",
@@ -32945,7 +32950,7 @@ var CLSTAMP = "7326401";
                     t instanceof D.b
                       ? a.push(o.a.createElement(ae, { context: e, player: t }))
                       : a.push(t);
-                  return Object(C.l)(t, ...a);
+                  return Object(C.m)(t, ...a);
                 })(t, n.strToken, ...n.parts)
               : Object(C.f)(n.strToken);
           return o.a.createElement(re, null, a);
@@ -32979,7 +32984,7 @@ var CLSTAMP = "7326401";
     let fe = class extends o.a.Component {
       render() {
         return o.a.createElement(
-          R.b,
+          k.b,
           { style: "invite", text: this.props.msg.strMessage },
           o.a.createElement(
             "div",
@@ -33134,7 +33139,7 @@ var CLSTAMP = "7326401";
         this.setState({ bHoveringDelete: e });
       }
       CopyMessage() {
-        Object(R.a)(this.m_element.current);
+        Object(k.a)(this.m_element.current);
       }
       SelectMessage(e) {
         e.getSelection().selectAllChildren(this.m_element.current);
@@ -33277,7 +33282,7 @@ var CLSTAMP = "7326401";
           0 == l.length
             ? null
             : i.createElement(
-                R.b,
+                k.b,
                 null,
                 i.createElement(
                   "div",
@@ -33372,7 +33377,7 @@ var CLSTAMP = "7326401";
           e = t.toLocaleDateString(C.e.GetPreferredLocales(), n);
         }
         return i.createElement(
-          R.b,
+          k.b,
           { style: "timestamp", text: e },
           i.createElement(
             "div",
@@ -33390,16 +33395,16 @@ var CLSTAMP = "7326401";
             if (!e.length) return e.push([t]), e;
             const n = e[e.length - 1],
               a = n[0],
-              i = ke(a),
-              o = ke(t);
+              i = Re(a),
+              o = Re(t);
             return i && o ? (n.push(t), e) : (e.push([t]), e);
           }, []);
         return i.createElement(
           i.Fragment,
           null,
           a.map((e) =>
-            ke(e[0])
-              ? i.createElement(Re, {
+            Re(e[0])
+              ? i.createElement(ke, {
                   key: e[0].UniqueKey(),
                   messages: e,
                   friendRenderContext: n,
@@ -33428,8 +33433,8 @@ var CLSTAMP = "7326401";
           )
         );
       },
-      ke = (e) => 2 === e.eServerMsgType || 3 === e.eServerMsgType,
-      Re = (e) => {
+      Re = (e) => 2 === e.eServerMsgType || 3 === e.eServerMsgType,
+      ke = (e) => {
         const { messages: t, friendRenderContext: n } = e,
           { rgLeavers: a, rgJoiners: o } = t.reduce(
             (e, t) => (
@@ -33445,55 +33450,55 @@ var CLSTAMP = "7326401";
           (r =
             0 === a.length
               ? o.length > 2
-                ? Object(C.l)(
+                ? Object(C.m)(
                     "#ChatRoom_ServerMessage_Joined_Number",
                     i.createElement(Te, { accountids: o })
                   )
                 : 2 === o.length
-                ? Object(C.l)(
+                ? Object(C.m)(
                     "#ChatRoom_ServerMessage_Joined_Multiple",
                     i.createElement(Ae, { context: n, accountid: o[0] }),
                     i.createElement(Ae, { context: n, accountid: o[1] })
                   )
-                : Object(C.l)(
+                : Object(C.m)(
                     "#ChatRoom_ServerMessage_Joined",
                     i.createElement(Ae, { context: n, accountid: o[0] })
                   )
               : 0 === o.length
               ? a.length > 2
-                ? Object(C.l)(
+                ? Object(C.m)(
                     "#ChatRoom_ServerMessage_Parted_Number",
                     i.createElement(Te, { accountids: a })
                   )
                 : 2 === a.length
-                ? Object(C.l)(
+                ? Object(C.m)(
                     "#ChatRoom_ServerMessage_Parted_Multiple",
                     i.createElement(Ae, { context: n, accountid: a[0] }),
                     i.createElement(Ae, { context: n, accountid: a[1] })
                   )
-                : Object(C.l)(
+                : Object(C.m)(
                     "#ChatRoom_ServerMessage_Parted",
                     i.createElement(Ae, { context: n, accountid: a[0] })
                   )
               : 1 === a.length && 1 === o.length
-              ? Object(C.l)(
+              ? Object(C.m)(
                   "#ChatRoom_ServerMessage_SingleJoined_SingleParted",
                   i.createElement(Ae, { context: n, accountid: o[0] }),
                   i.createElement(Ae, { context: n, accountid: a[0] })
                 )
               : 1 === a.length
-              ? Object(C.l)(
+              ? Object(C.m)(
                   "#ChatRoom_ServerMessage_MultipleJoined_SingleParted",
                   i.createElement(Te, { accountids: o }),
                   i.createElement(Ae, { context: n, accountid: a[0] })
                 )
               : 1 === o.length
-              ? Object(C.l)(
+              ? Object(C.m)(
                   "#ChatRoom_ServerMessage_SingleJoined_MultipleParted",
                   i.createElement(Ae, { context: n, accountid: o[0] }),
                   i.createElement(Te, { accountids: a })
                 )
-              : Object(C.l)(
+              : Object(C.m)(
                   "#ChatRoom_ServerMessage_MultipleJoined_MultipleParted",
                   i.createElement(Te, { accountids: o }),
                   i.createElement(Te, { accountids: a })
@@ -33505,7 +33510,7 @@ var CLSTAMP = "7326401";
         const { context: t, accountid: n } = e,
           a = p.f.FriendStore.GetPlayer(n);
         return i.createElement(
-          k.e,
+          R.e,
           { friend: a, context: t },
           i.createElement("span", null, a.display_name)
         );
@@ -33975,7 +33980,7 @@ var CLSTAMP = "7326401";
         let a = Object(C.f)("#Chat_ScrollToBottom");
         return (
           e.chat.unread_message_count > 0 &&
-            ((a = Object(C.k)(
+            ((a = Object(C.l)(
               "#Chat_UnreadMessages",
               e.chat.unread_message_count
             )),
@@ -34422,10 +34427,10 @@ var CLSTAMP = "7326401";
         bottom: Math.max(0, t.bottom - n.bottom),
       };
     }
-    function k(e) {
+    function R(e) {
       return e > -1 && e < 1;
     }
-    function R(e, t, n, a, i) {
+    function k(e, t, n, a, i) {
       C(
         "----------------------------------------------------------------------------------"
       ),
@@ -34489,13 +34494,13 @@ var CLSTAMP = "7326401";
       }
       let l = !1;
       for (let e of o) {
-        if (k(e.left) && k(e.top)) continue;
+        if (R(e.left) && R(e.top)) continue;
         let t = M(e.element),
           a = t.scrollTop + e.top,
           i = t.scrollLeft + e.left;
         (i = b.a(i, 0, t.MaxScrollLeft())),
           (a = b.a(a, 0, t.MaxScrollTop())),
-          (k(t.scrollLeft - i) && k(t.scrollTop - a)) ||
+          (R(t.scrollLeft - i) && R(t.scrollTop - a)) ||
             (t.scrollTo({ left: i, top: a, behavior: n }),
             l || (C("Scrolling:"), (l = !0)),
             C(`- ${e.top},${e.left} => ${a}, ${i}, behavior: ${n}`, e.element));
@@ -35209,7 +35214,7 @@ var CLSTAMP = "7326401";
             )
               return (
                 L(`Element too far away, scrolling ${e} on ${n} axis `),
-                R(a.Element, a.Element, "smooth", n, e),
+                k(a.Element, a.Element, "smooth", n, e),
                 !0
               );
           }
@@ -35453,11 +35458,11 @@ var CLSTAMP = "7326401";
               n && (v = performance.now()),
                 e.Tree.Controller.BIsRestoringHistory() && (i = "auto"),
                 d
-                  ? R(r, l, i)
+                  ? k(r, l, i)
                   : l.scrollIntoView({ behavior: i, block: "nearest" });
             } else
               d
-                ? R(r, l, "auto")
+                ? k(r, l, "auto")
                 : l.scrollIntoView({
                     behavior: "auto",
                     block: "nearest",
@@ -35870,17 +35875,17 @@ var CLSTAMP = "7326401";
           { rgParticleStyles: r, rgStreamerStyles: s } = y(t, e);
         switch (e) {
           case v.Gold:
-            a = r.map((e, t) => o.a.createElement(R, { key: t, style: e }));
+            a = r.map((e, t) => o.a.createElement(k, { key: t, style: e }));
             break;
           case v.LNY2020:
             a = r.map((e, t) =>
               t % 2
-                ? o.a.createElement(k, { key: t, style: e })
+                ? o.a.createElement(R, { key: t, style: e })
                 : o.a.createElement(A, { key: t, style: e })
             );
             break;
           case v.Default:
-            a = r.map((e, t) => o.a.createElement(k, { key: t, style: e }));
+            a = r.map((e, t) => o.a.createElement(R, { key: t, style: e }));
         }
         return o.a.createElement(
           "div",
@@ -35903,11 +35908,11 @@ var CLSTAMP = "7326401";
           )
         );
       },
-      k = ({ style: e }) =>
+      R = ({ style: e }) =>
         o.a.createElement(S.animated.div, {
           style: Object.assign(Object.assign({}, w), e),
         }),
-      R = ({ style: e }) => {
+      k = ({ style: e }) => {
         const [t] = Object(i.useState)(Math.floor(Math.random() * G.length)),
           n = G[t];
         return o.a.createElement(n, {
@@ -38628,8 +38633,8 @@ var CLSTAMP = "7326401";
       }
     }
     Object(a.b)([o.C], D.prototype, "m_PrivacySettings", void 0);
-    var k = n("VZeO"),
-      R = (n("7sd/"), n("FW03"), n("OTLo")),
+    var R = n("VZeO"),
+      k = (n("7sd/"), n("FW03"), n("OTLo")),
       A = n("XaMz"),
       T = (n("vjvY"), n("V7Fl")),
       M = n("hkwR"),
@@ -38659,7 +38664,7 @@ var CLSTAMP = "7326401";
     class V {
       constructor(e, t = {}) {
         (this.m_BrowserContextDefaultTarget = G.a),
-          (this.m_AppInfoStore = R.a),
+          (this.m_AppInfoStore = k.a),
           (this.m_EconomyStore = new b()),
           (this.m_UserStore = new D()),
           (this.m_ParentalStore = new I()),
@@ -38677,7 +38682,7 @@ var CLSTAMP = "7326401";
           (this.m_FriendStore = t.FriendStore || new f.a()),
           (this.m_ChatStore = t.ChatStore || new u.b(this.m_FriendStore)),
           (this.m_UIStore = t.UIStore || new E.b(this.m_ChatStore)),
-          (this.m_VoiceChatStore = new k.a(this.m_SettingsStore)),
+          (this.m_VoiceChatStore = new R.a(this.m_SettingsStore)),
           (this.m_exportsCurrentUserStatus = {
             GetPersonaState: () =>
               this.FriendStore.self
@@ -43299,7 +43304,7 @@ var CLSTAMP = "7326401";
             ? Object(s.a)(new Date(1e3 * t))
             : ""
           : t
-          ? Object(r.m)(t)
+          ? Object(r.n)(t)
           : "";
       }
       BIsComingSoon() {
@@ -44383,10 +44388,10 @@ var CLSTAMP = "7326401";
         return w;
       }),
       n.d(t, "k", function () {
-        return k;
+        return R;
       }),
       n.d(t, "h", function () {
-        return R;
+        return k;
       }),
       n.d(t, "r", function () {
         return T;
@@ -44504,7 +44509,7 @@ var CLSTAMP = "7326401";
         )
       );
     }
-    class k extends i.Component {
+    class R extends i.Component {
       OnSubmit(e) {
         e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
       }
@@ -44515,16 +44520,16 @@ var CLSTAMP = "7326401";
         );
       }
     }
-    function R(e) {
+    function k(e) {
       const { classNameContent: t, bCenterVertically: n } = e,
         o = Object(a.c)(e, ["classNameContent", "bCenterVertically"]);
       return i.createElement(
         w,
         { className: t, bCenterVertically: n },
-        i.createElement(k, Object.assign({}, o))
+        i.createElement(R, Object.assign({}, o))
       );
     }
-    Object(a.b)([d.a], k.prototype, "OnSubmit", null);
+    Object(a.b)([d.a], R.prototype, "OnSubmit", null);
     const A = i.forwardRef(function (e, t) {
         const n = Object(m.b)(),
           { svgicon: r } = e,
@@ -46202,7 +46207,7 @@ var CLSTAMP = "7326401";
         (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
         (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
     })(w || (w = {}));
-    var D, k, R, A;
+    var D, R, k, A;
     !(function (e) {
       (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
         (e[(e.k_EStoreFilterClauseTypeAnd = 1)] =
@@ -46227,12 +46232,12 @@ var CLSTAMP = "7326401";
           (e[(e.k_EUserPreference = 3)] = "k_EUserPreference"),
           (e[(e.k_EPrice = 4)] = "k_EPrice"),
           (e[(e.k_EAppType = 5)] = "k_EAppType");
-      })(k || (k = {})),
+      })(R || (R = {})),
       (function (e) {
         (e[(e.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
           (e[(e.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
           (e[(e.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
-      })(R || (R = {})),
+      })(k || (k = {})),
       (function (e) {
         (e[(e.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
           (e[(e.k_ESortFacetsByMatchCount = 1)] = "k_ESortFacetsByMatchCount"),
@@ -46967,6 +46972,12 @@ var CLSTAMP = "7326401";
       }
       GetSaleSections() {
         return this.jsondata.sale_sections;
+      }
+      GetSaleSectionByID(e) {
+        var t;
+        return null === (t = this.jsondata.sale_sections) || void 0 === t
+          ? void 0
+          : t.find((t) => t.unique_id == e);
       }
       GetSaleSectionCount() {
         return this.jsondata.sale_sections.length;
@@ -49359,20 +49370,20 @@ var CLSTAMP = "7326401";
           : (o && (w += "\t"),
             a.includes("msg") && d && (O = !0),
             a.includes("block") && !f && (O = !0));
-        let k = t.getAttribute("data-copytext");
-        0 == k.length
-          ? (k = t.innerText)
+        let R = t.getAttribute("data-copytext");
+        0 == R.length
+          ? (R = t.innerText)
           : v && t.innerText.length > 0
-          ? (k = `${t.innerText}${
+          ? (R = `${t.innerText}${
               c.includes("-with-newline") ? "\n" : " "
-            }${k}`)
+            }${R}`)
           : I &&
             t.innerText.length > 0 &&
-            (k += `${c.includes("-with-newline") ? "\n" : " "}${t.innerText}`),
-          0 != k.length &&
+            (R += `${c.includes("-with-newline") ? "\n" : " "}${t.innerText}`),
+          0 != R.length &&
             (O && (n += "\n"),
             _ || (n += w),
-            (n += b ? k : k.replace(/\n/g, D + w)),
+            (n += b ? R : R.replace(/\n/g, D + w)),
             g || (n += D),
             y && (n += "\n")),
           (a = c);
@@ -49588,7 +49599,7 @@ var CLSTAMP = "7326401";
         return D;
       }),
       n.d(t, "c", function () {
-        return R;
+        return k;
       });
     var a = n("mrSG"),
       i = n("UqDm"),
@@ -51592,8 +51603,8 @@ var CLSTAMP = "7326401";
     }
     Object(a.b)([m.C], D.prototype, "loadingState", void 0),
       Object(a.b)([m.C], D.prototype, "rgBans", void 0);
-    const k = { bMemberListCollapsed: void 0, bChannelListCollapsed: void 0 };
-    class R {
+    const R = { bMemberListCollapsed: void 0, bChannelListCollapsed: void 0 };
+    class k {
       constructor() {
         this.m_mapDisplayPrefs = m.C.map();
       }
@@ -51608,7 +51619,7 @@ var CLSTAMP = "7326401";
             });
       }
       GetChatRoomDisplayPref(e, t) {
-        return (this.m_mapDisplayPrefs.get(e) || k)[t];
+        return (this.m_mapDisplayPrefs.get(e) || R)[t];
       }
       ToggleChatRoomDisplayPref(e, t) {
         let n = this.GetChatRoomDisplayPref(e, t);
@@ -51618,7 +51629,7 @@ var CLSTAMP = "7326401";
         let a = this.m_mapDisplayPrefs.get(e);
         (a && a[t] === n) ||
           (a ||
-            (this.m_mapDisplayPrefs.set(e, Object.assign({}, k)),
+            (this.m_mapDisplayPrefs.set(e, Object.assign({}, R)),
             (a = this.m_mapDisplayPrefs.get(e))),
           (a[t] = n),
           this.WritePrefs());
@@ -51643,7 +51654,7 @@ var CLSTAMP = "7326401";
             );
       }
     }
-    Object(a.b)([m.k], R.prototype, "SetChatRoomDisplayPref", null);
+    Object(a.b)([m.k], k.prototype, "SetChatRoomDisplayPref", null);
     class A {
       constructor() {
         (this.m_mapAccountToExtra = m.C.map()),
@@ -52112,23 +52123,23 @@ var CLSTAMP = "7326401";
       Object(a.b)([h.C], D.prototype, "m_bPlayPTTSounds", void 0),
       Object(a.b)([h.C], D.prototype, "m_bSettingsLoaded", void 0),
       Object(a.b)([h.C], D.prototype, "m_bHasResetOpenMicHotkey", void 0);
-    class k {
+    class R {
       constructor() {
         (this.muted = !1), (this.gain = 1);
       }
     }
-    Object(a.b)([h.C], k.prototype, "muted", void 0),
-      Object(a.b)([h.C], k.prototype, "gain", void 0);
-    class R {
+    Object(a.b)([h.C], R.prototype, "muted", void 0),
+      Object(a.b)([h.C], R.prototype, "gain", void 0);
+    class k {
       constructor() {
         (this.mic_muted_locally = !1),
           (this.output_muted_locally = !1),
           (this.has_no_mic_for_session = !1);
       }
     }
-    Object(a.b)([h.C], R.prototype, "mic_muted_locally", void 0),
-      Object(a.b)([h.C], R.prototype, "output_muted_locally", void 0),
-      Object(a.b)([h.C], R.prototype, "has_no_mic_for_session", void 0);
+    Object(a.b)([h.C], k.prototype, "mic_muted_locally", void 0),
+      Object(a.b)([h.C], k.prototype, "output_muted_locally", void 0),
+      Object(a.b)([h.C], k.prototype, "has_no_mic_for_session", void 0);
     class A {
       constructor() {
         (this.partner_accountid = 0),
@@ -52927,21 +52938,21 @@ var CLSTAMP = "7326401";
       GetUserMutedRemotely(e) {
         let t = this.m_mapUserVoiceStatus.get(e);
         return (
-          null == t && ((t = new R()), this.m_mapUserVoiceStatus.set(e, t)),
+          null == t && ((t = new k()), this.m_mapUserVoiceStatus.set(e, t)),
           t.mic_muted_locally
         );
       }
       GetOutputMutedRemotely(e) {
         let t = this.m_mapUserVoiceStatus.get(e);
         return (
-          null == t && ((t = new R()), this.m_mapUserVoiceStatus.set(e, t)),
+          null == t && ((t = new k()), this.m_mapUserVoiceStatus.set(e, t)),
           t.output_muted_locally
         );
       }
       GetUserHasNoMicForSession(e) {
         let t = this.m_mapUserVoiceStatus.get(e);
         return (
-          null == t && ((t = new R()), this.m_mapUserVoiceStatus.set(e, t)),
+          null == t && ((t = new k()), this.m_mapUserVoiceStatus.set(e, t)),
           t.has_no_mic_for_session
         );
       }
@@ -53082,7 +53093,7 @@ var CLSTAMP = "7326401";
       }
       SetPerUserMuting(e, t) {
         let n = this.m_mapPerUserOutputGain.get(e);
-        null == n && (n = new k()),
+        null == n && (n = new R()),
           (n.muted = t || this.m_bOutputMuted),
           this.m_mapPerUserOutputGain.set(e, n),
           this.UpdateStreamsForPerUseGainChange(e);
@@ -53090,7 +53101,7 @@ var CLSTAMP = "7326401";
       SetPerUserGainLevel(e, t) {
         let n = Math.max(0, Math.min(4, t)),
           a = this.m_mapPerUserOutputGain.get(e);
-        null == a && (a = new k()),
+        null == a && (a = new R()),
           (a.gain = n),
           a.gain < 0.001 ? (a.muted = !0) : (a.muted = !1),
           this.m_mapPerUserOutputGain.set(e, a),
@@ -53098,7 +53109,7 @@ var CLSTAMP = "7326401";
       }
       UpdateStreamsForPerUseGainChange(e) {
         let t = this.m_mapPerUserOutputGain.get(e);
-        null == t && (t = new k());
+        null == t && (t = new R());
         for (let n = 0; n < this.m_rgAudioStreams.length; ++n) {
           let a = this.m_rgAudioStreams[n];
           if (a.accountid == e && null != a.output_gain_node) {
@@ -54184,7 +54195,7 @@ var CLSTAMP = "7326401";
         if (this.m_VoiceCallState.m_voiceChatID != e.voice_chatid()) return;
         let t = new b.a(e.user_steamid()),
           n = this.m_mapUserVoiceStatus.get(t.GetAccountID());
-        null == n && (n = new R()),
+        null == n && (n = new k()),
           (n.mic_muted_locally = e.user_muted_mic_locally()),
           (n.output_muted_locally = e.user_muted_output_locally()),
           (n.has_no_mic_for_session = e.user_has_no_mic_for_session());
@@ -55701,6 +55712,13 @@ var CLSTAMP = "7326401";
         return r;
       });
   },
+  YT6E: function (e, t, n) {
+    e.exports = {
+      ScrollFade: "scrollfade_ScrollFade_19Qmq",
+      ScrolledToTop: "scrollfade_ScrolledToTop_2iwtO",
+      ScrolledToBottom: "scrollfade_ScrolledToBottom_3TiaO",
+    };
+  },
   YZlK: function (e, t, n) {
     "use strict";
     n.d(t, "b", function () {
@@ -55743,8 +55761,8 @@ var CLSTAMP = "7326401";
       E = n("8o0Y"),
       w = n("VoDG"),
       D = (n("fwE1"), n("Hi0u")),
-      k = n("eZht");
-    const R = ["148618792083695825", "76561197960266962"];
+      R = n("eZht");
+    const k = ["148618792083695825", "76561197960266962"];
     let A = class extends p.Component {
       InviteFriend(e) {
         Object(C.b)(
@@ -55869,7 +55887,7 @@ var CLSTAMP = "7326401";
     let T = class extends p.Component {
       fnShowTextChannelsDialog(e) {
         Object(D.d)(
-          p.createElement(k.c, { groupView: this.props.groupView }),
+          p.createElement(R.c, { groupView: this.props.groupView }),
           Object(s.r)(e)
         );
       }
@@ -55995,7 +56013,7 @@ var CLSTAMP = "7326401";
           i = a.GetGroup(),
           o = this.GetBroadcastID(this.props.groupView),
           r = a.isBroadcastShown;
-        if (R.indexOf(o) >= 0)
+        if (k.indexOf(o) >= 0)
           return p.createElement(G, {
             groupView: a,
             onClick: this.OnToggleBroadcast,
@@ -56091,7 +56109,7 @@ var CLSTAMP = "7326401";
           "div",
           { className: "statMemberStat statMembersTotal" },
           p.createElement("div", { className: "statCircle" }),
-          Object(g.k)("#Chat_Members", t.GetMemberCountTotal())
+          Object(g.l)("#Chat_Members", t.GetMemberCountTotal())
         );
       }),
       B = Object(u.a)((e) => {
@@ -56103,7 +56121,7 @@ var CLSTAMP = "7326401";
               "div",
               {
                 className: "statMemberStat statMembersInGame",
-                title: Object(g.k)("#Chat_Members_InGame_Tooltip", n),
+                title: Object(g.l)("#Chat_Members_InGame_Tooltip", n),
               },
               p.createElement("div", { className: "statCircle" }),
               n
@@ -56118,7 +56136,7 @@ var CLSTAMP = "7326401";
               "div",
               {
                 className: "statMemberStat statMembersOnline",
-                title: Object(g.k)("#Chat_Members_Online_Tooltip", n),
+                title: Object(g.l)("#Chat_Members_Online_Tooltip", n),
               },
               p.createElement("div", { className: "statCircle" }),
               n
@@ -57271,8 +57289,8 @@ var CLSTAMP = "7326401";
             renderRichPresence: E,
             bHidePersona: w,
             bDNDSet: D,
-            bHasPartyBeacon: k,
-            bHasGamePrivacy: R,
+            bHasPartyBeacon: R,
+            bHasGamePrivacy: k,
             bNoMask: A,
           } = e,
           T = Object(a.c)(e, [
@@ -57306,7 +57324,7 @@ var CLSTAMP = "7326401";
             C && p.a.compactView,
             A && p.a.NoMask,
           ];
-        k || o.has_public_party_beacon
+        R || o.has_public_party_beacon
           ? (G = i.createElement(_, { persona: o }))
           : Object(s.a)(u)
           ? ((G = Object(r.f)("#PersonaStateBlocked")), F.push(p.a.blocked))
@@ -57411,7 +57429,7 @@ var CLSTAMP = "7326401";
                       "no-drag"
                     ),
                   },
-                  R &&
+                  k &&
                     i.createElement(
                       "div",
                       {
@@ -57782,7 +57800,7 @@ var CLSTAMP = "7326401";
       E = n.n(y),
       w = n("GxRc"),
       D = n("1n9R");
-    let k = class extends o.a.Component {
+    let R = class extends o.a.Component {
       constructor(e) {
         super(e),
           (this.m_manager = new f(this.props.baseURL)),
@@ -57810,7 +57828,7 @@ var CLSTAMP = "7326401";
           o.a.createElement(
             "div",
             { className: E.a.LoginPanelContent },
-            l && o.a.createElement(R, { text: l }),
+            l && o.a.createElement(k, { text: l }),
             c == g.AccountName &&
               o.a.createElement(A, { manager: this.m_manager }),
             c == g.TwoFactorCode &&
@@ -57833,10 +57851,10 @@ var CLSTAMP = "7326401";
         );
       }
     };
-    function R(e) {
+    function k(e) {
       return o.a.createElement("div", { className: E.a.ErrorMessage }, e.text);
     }
-    k = Object(a.b)([v.a], k);
+    R = Object(a.b)([v.a], R);
     let A = class extends o.a.Component {
       constructor(e) {
         super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
@@ -58045,7 +58063,7 @@ var CLSTAMP = "7326401";
             break;
           case g.EmailCode:
             (n = t.GetEmailAuthCode()),
-              (a = Object(_.l)(
+              (a = Object(_.m)(
                 "#Login_SentSteamguard",
                 o.a.createElement(
                   "span",
@@ -58123,7 +58141,7 @@ var CLSTAMP = "7326401";
           : o.a.createElement(
               "div",
               null,
-              o.a.createElement(k, {
+              o.a.createElement(R, {
                 baseURL: Object(D.e)(),
                 onLoginComplete: this.OnLoginComplete,
               })
@@ -58554,8 +58572,8 @@ var CLSTAMP = "7326401";
       E = n("VoDG"),
       w = (n("fwE1"), n("9PRf")),
       D = n("uw3m"),
-      k = n("/IDK"),
-      R = n("oh5H"),
+      R = n("/IDK"),
+      k = n("oh5H"),
       A = n("7ERL");
     let T = class extends I.Component {
       constructor(e) {
@@ -58681,7 +58699,7 @@ var CLSTAMP = "7326401";
           I.createElement(
             "div",
             { className: "quickAccessFriendsMessage" },
-            Object(R.f)("#FriendsList_Favorites_Hint")
+            Object(k.f)("#FriendsList_Favorites_Hint")
           ),
           !this.state.bHintDismissed &&
             I.createElement(
@@ -58690,7 +58708,7 @@ var CLSTAMP = "7326401";
                 className: "quickAccessFriendsMessageDismiss",
                 onClick: this.DismissFavoritesHint,
               },
-              Object(R.f)("#Generic_Got_It")
+              Object(k.f)("#Generic_Got_It")
             ),
           I.createElement("div", { className: "dropTargetBox" })
         );
@@ -58739,7 +58757,7 @@ var CLSTAMP = "7326401";
         ) {
           let t = e.currentTarget.getBoundingClientRect();
           const a = 100;
-          Object(k.o)(t, e.clientX, e.clientY) > a &&
+          Object(R.o)(t, e.clientX, e.clientY) > a &&
             (this.props.FavoritesStore.RemoveFromFavorites(n),
             d.i.DragDropManager.EndDrag());
         }
@@ -58786,7 +58804,7 @@ var CLSTAMP = "7326401";
         for (let a of this.m_rgFavoriteElementRefs) {
           let i = a && a.GetBoundingClientRect();
           if (i) {
-            let o = Object(k.o)(i, e.clientX, e.clientY);
+            let o = Object(R.o)(i, e.clientX, e.clientY);
             (void 0 === n || o < n) && ((n = o), (t = a));
           }
         }
@@ -58897,8 +58915,8 @@ var CLSTAMP = "7326401";
             style: e,
             className: "favoriteElement",
             onActivate: this.onFavoriteElementClick,
-            onOKActionDescription: Object(R.f)("#Friend_Menu_SendMessage"),
-            onMenuActionDescription: Object(R.f)("#Friend_Menu_Open"),
+            onOKActionDescription: Object(k.f)("#Friend_Menu_SendMessage"),
+            onMenuActionDescription: Object(k.f)("#Friend_Menu_Open"),
             onContextMenu: this.OnFavoriteElementContextMenu,
             onMenuButton: this.OnFavoriteElementContextMenu,
           },
@@ -59008,7 +59026,7 @@ var CLSTAMP = "7326401";
                         "span",
                         {
                           className: "playerNicknameBracket",
-                          title: Object(R.f)("#isNickname"),
+                          title: Object(k.f)("#isNickname"),
                         },
                         "*"
                       )
@@ -59485,7 +59503,7 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.l)(
+                Object(k.m)(
                   "#changeLog_UpdateItem77",
                   I.createElement(
                     "a",
@@ -59515,7 +59533,7 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem76")
+                Object(k.f)("#changeLog_UpdateItem76")
               )
             ),
           },
@@ -59527,7 +59545,7 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem75")
+                Object(k.f)("#changeLog_UpdateItem75")
               )
             ),
           },
@@ -59539,17 +59557,17 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem72")
+                Object(k.f)("#changeLog_UpdateItem72")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem73")
+                Object(k.f)("#changeLog_UpdateItem73")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem74")
+                Object(k.f)("#changeLog_UpdateItem74")
               )
             ),
           },
@@ -59561,9 +59579,9 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.l)(
+                Object(k.m)(
                   "#changeLog_UpdateItem71",
-                  I.createElement("b", null, Object(R.f)("#changeLog_Note"))
+                  I.createElement("b", null, Object(k.f)("#changeLog_Note"))
                 )
               )
             ),
@@ -59576,17 +59594,17 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem68")
+                Object(k.f)("#changeLog_UpdateItem68")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem69")
+                Object(k.f)("#changeLog_UpdateItem69")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem70")
+                Object(k.f)("#changeLog_UpdateItem70")
               )
             ),
           },
@@ -59598,87 +59616,87 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem47")
+                Object(k.f)("#changeLog_UpdateItem47")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem58")
+                Object(k.f)("#changeLog_UpdateItem58")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem59")
+                Object(k.f)("#changeLog_UpdateItem59")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem60")
+                Object(k.f)("#changeLog_UpdateItem60")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem48")
+                Object(k.f)("#changeLog_UpdateItem48")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem49")
+                Object(k.f)("#changeLog_UpdateItem49")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem63")
+                Object(k.f)("#changeLog_UpdateItem63")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem50")
+                Object(k.f)("#changeLog_UpdateItem50")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem51")
+                Object(k.f)("#changeLog_UpdateItem51")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem53")
+                Object(k.f)("#changeLog_UpdateItem53")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem52")
+                Object(k.f)("#changeLog_UpdateItem52")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem61")
+                Object(k.f)("#changeLog_UpdateItem61")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem62")
+                Object(k.f)("#changeLog_UpdateItem62")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem64")
+                Object(k.f)("#changeLog_UpdateItem64")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem65")
+                Object(k.f)("#changeLog_UpdateItem65")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem66")
+                Object(k.f)("#changeLog_UpdateItem66")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem67")
+                Object(k.f)("#changeLog_UpdateItem67")
               )
             ),
           },
@@ -59690,12 +59708,12 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem54")
+                Object(k.f)("#changeLog_UpdateItem54")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem55")
+                Object(k.f)("#changeLog_UpdateItem55")
               )
             ),
           },
@@ -59707,12 +59725,12 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem56")
+                Object(k.f)("#changeLog_UpdateItem56")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem57")
+                Object(k.f)("#changeLog_UpdateItem57")
               )
             ),
           },
@@ -59724,145 +59742,145 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItemSubHeader" },
-                Object(R.f)("#changeLog_UpdateItem_Permissions")
+                Object(k.f)("#changeLog_UpdateItem_Permissions")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem39")
+                Object(k.f)("#changeLog_UpdateItem39")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem40")
+                Object(k.f)("#changeLog_UpdateItem40")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem41")
+                Object(k.f)("#changeLog_UpdateItem41")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItemSubHeader" },
-                Object(R.f)("#changeLog_UpdateSubHeader_General")
+                Object(k.f)("#changeLog_UpdateSubHeader_General")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem45")
+                Object(k.f)("#changeLog_UpdateItem45")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem30"),
+                Object(k.f)("#changeLog_UpdateItem30"),
                 I.createElement(
                   "div",
                   { style: { marginTop: "4px" } },
                   I.createElement(
                     "span",
                     { style: { fontWeight: "bold", fontStyle: "italic" } },
-                    Object(R.f)("#changeLog_Note")
+                    Object(k.f)("#changeLog_Note")
                   ),
                   I.createElement(
                     "span",
                     { style: { fontStyle: "italic" } },
-                    Object(R.f)("#changeLog_UpdateItem30_Note")
+                    Object(k.f)("#changeLog_UpdateItem30_Note")
                   )
                 )
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem29")
+                Object(k.f)("#changeLog_UpdateItem29")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem25")
+                Object(k.f)("#changeLog_UpdateItem25")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem26")
+                Object(k.f)("#changeLog_UpdateItem26")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem38")
+                Object(k.f)("#changeLog_UpdateItem38")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem31")
+                Object(k.f)("#changeLog_UpdateItem31")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem42")
+                Object(k.f)("#changeLog_UpdateItem42")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem28")
+                Object(k.f)("#changeLog_UpdateItem28")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem27")
+                Object(k.f)("#changeLog_UpdateItem27")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem33")
+                Object(k.f)("#changeLog_UpdateItem33")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem32")
+                Object(k.f)("#changeLog_UpdateItem32")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem34"),
+                Object(k.f)("#changeLog_UpdateItem34"),
                 I.createElement(
                   "div",
                   { style: { marginTop: "4px" } },
                   I.createElement(
                     "span",
                     { style: { fontWeight: "bold", fontStyle: "italic" } },
-                    Object(R.f)("#changeLog_Note")
+                    Object(k.f)("#changeLog_Note")
                   ),
                   I.createElement(
                     "span",
                     { style: { fontStyle: "italic" } },
-                    Object(R.f)("#changeLog_UpdateItem34_Note")
+                    Object(k.f)("#changeLog_UpdateItem34_Note")
                   )
                 )
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem35")
+                Object(k.f)("#changeLog_UpdateItem35")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem36")
+                Object(k.f)("#changeLog_UpdateItem36")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem37")
+                Object(k.f)("#changeLog_UpdateItem37")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem43")
+                Object(k.f)("#changeLog_UpdateItem43")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem44")
+                Object(k.f)("#changeLog_UpdateItem44")
               )
             ),
           },
@@ -59874,27 +59892,27 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem20")
+                Object(k.f)("#changeLog_UpdateItem20")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem21")
+                Object(k.f)("#changeLog_UpdateItem21")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem22")
+                Object(k.f)("#changeLog_UpdateItem22")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem23")
+                Object(k.f)("#changeLog_UpdateItem23")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem24")
+                Object(k.f)("#changeLog_UpdateItem24")
               )
             ),
           },
@@ -59906,42 +59924,42 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem17")
+                Object(k.f)("#changeLog_UpdateItem17")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem18")
+                Object(k.f)("#changeLog_UpdateItem18")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem15")
+                Object(k.f)("#changeLog_UpdateItem15")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem16")
+                Object(k.f)("#changeLog_UpdateItem16")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem12")
+                Object(k.f)("#changeLog_UpdateItem12")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem13")
+                Object(k.f)("#changeLog_UpdateItem13")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem14")
+                Object(k.f)("#changeLog_UpdateItem14")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem19")
+                Object(k.f)("#changeLog_UpdateItem19")
               )
             ),
           },
@@ -59953,27 +59971,27 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItemSubHeader" },
-                Object(R.f)("#changeLog_UpdateSubHeader_General")
+                Object(k.f)("#changeLog_UpdateSubHeader_General")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem11")
+                Object(k.f)("#changeLog_UpdateItem11")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItemSubHeader" },
-                Object(R.f)("#changeLog_UpdateSubHeader_Linux")
+                Object(k.f)("#changeLog_UpdateSubHeader_Linux")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem10")
+                Object(k.f)("#changeLog_UpdateItem10")
               ),
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem09")
+                Object(k.f)("#changeLog_UpdateItem09")
               )
             ),
           },
@@ -59985,7 +60003,7 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogExtra" },
-                Object(R.f)("#changeLog_UpdateExtraInfo01")
+                Object(k.f)("#changeLog_UpdateExtraInfo01")
               ),
               I.createElement(
                 "div",
@@ -59993,37 +60011,37 @@ var CLSTAMP = "7326401";
                 I.createElement(
                   "div",
                   { className: "changeLogItem" },
-                  Object(R.f)("#changeLog_UpdateItem02")
+                  Object(k.f)("#changeLog_UpdateItem02")
                 ),
                 I.createElement(
                   "div",
                   { className: "changeLogItem" },
-                  Object(R.f)("#changeLog_UpdateItem03")
+                  Object(k.f)("#changeLog_UpdateItem03")
                 ),
                 I.createElement(
                   "div",
                   { className: "changeLogItem" },
-                  Object(R.f)("#changeLog_UpdateItem04")
+                  Object(k.f)("#changeLog_UpdateItem04")
                 ),
                 I.createElement(
                   "div",
                   { className: "changeLogItem" },
-                  Object(R.f)("#changeLog_UpdateItem05")
+                  Object(k.f)("#changeLog_UpdateItem05")
                 ),
                 I.createElement(
                   "div",
                   { className: "changeLogItem" },
-                  Object(R.f)("#changeLog_UpdateItem06")
+                  Object(k.f)("#changeLog_UpdateItem06")
                 ),
                 I.createElement(
                   "div",
                   { className: "changeLogItem" },
-                  Object(R.f)("#changeLog_UpdateItem07")
+                  Object(k.f)("#changeLog_UpdateItem07")
                 ),
                 I.createElement(
                   "div",
                   { className: "changeLogItem" },
-                  Object(R.f)("#changeLog_UpdateItem08")
+                  Object(k.f)("#changeLog_UpdateItem08")
                 )
               )
             ),
@@ -60036,7 +60054,7 @@ var CLSTAMP = "7326401";
               I.createElement(
                 "div",
                 { className: "changeLogItem" },
-                Object(R.f)("#changeLog_UpdateItem01")
+                Object(k.f)("#changeLog_UpdateItem01")
               )
             ),
           },
@@ -60046,7 +60064,7 @@ var CLSTAMP = "7326401";
         let t, n;
         t = "string" == typeof e ? new Date(e) : m.f.RTime32ToDate(e);
         return (
-          (n = t.toLocaleDateString(R.e.GetPreferredLocales(), {
+          (n = t.toLocaleDateString(k.e.GetPreferredLocales(), {
             weekday: "long",
             year: "numeric",
             month: "long",
@@ -60070,7 +60088,7 @@ var CLSTAMP = "7326401";
                 I.createElement(
                   "div",
                   { className: "changeLogTitle" },
-                  Object(R.f)("#changeLog_GenericUpdateTitle")
+                  Object(k.f)("#changeLog_GenericUpdateTitle")
                 ),
                 I.createElement(
                   "div",
@@ -60095,11 +60113,11 @@ var CLSTAMP = "7326401";
           I.createElement(
             Y.i,
             { className: "changeLogPage" },
-            I.createElement(Y.E, null, Object(R.f)("#changeLog_Title")),
+            I.createElement(Y.E, null, Object(k.f)("#changeLog_Title")),
             I.createElement(
               Y.c,
               null,
-              I.createElement(Y.d, null, Object(R.f)("#changeLog_SubTitle")),
+              I.createElement(Y.d, null, Object(k.f)("#changeLog_SubTitle")),
               I.createElement(
                 Y.F,
                 { className: "changeLogDetails" },
@@ -60112,7 +60130,7 @@ var CLSTAMP = "7326401";
               I.createElement(
                 Y.P,
                 { onClick: this.props.closeModal },
-                Object(R.f)("#Button_Close")
+                Object(k.f)("#Button_Close")
               )
             )
           )
@@ -60134,7 +60152,7 @@ var CLSTAMP = "7326401";
       Ee = n("Oefq"),
       we = n("Epfw"),
       De = n("Kcgk");
-    let ke = class extends O.a.Component {
+    let Re = class extends O.a.Component {
       render() {
         const e = m.f.ChatStore.GetRecentChats(),
           t = {
@@ -60221,8 +60239,8 @@ var CLSTAMP = "7326401";
         );
       }
     };
-    ke = Object(a.b)([v.a], ke);
-    var Re,
+    Re = Object(a.b)([v.a], Re);
+    var ke,
       Ae = n("7sd/");
     let Te = class extends O.a.Component {
       constructor(e) {
@@ -60242,12 +60260,12 @@ var CLSTAMP = "7326401";
               O.a.createElement(
                 "a",
                 {
-                  title: Object(R.f)("#VoiceChatConnectingHelp"),
+                  title: Object(k.f)("#VoiceChatConnectingHelp"),
                   className: "connectionStatus",
                   target: "_blank",
                   href: "https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114",
                 },
-                Object(R.f)("#VoiceChatConnecting")
+                Object(k.f)("#VoiceChatConnecting")
               )
             ),
           t &&
@@ -60261,7 +60279,7 @@ var CLSTAMP = "7326401";
                   target: "_blank",
                   href: "https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114",
                 },
-                Object(R.f)("#VoiceChatReconnecting")
+                Object(k.f)("#VoiceChatReconnecting")
               )
             )
         );
@@ -60292,7 +60310,7 @@ var CLSTAMP = "7326401";
                     O.a.createElement(
                       "div",
                       { className: "activeVoiceHeader" },
-                      Object(R.f)("#ActiveVoiceChat")
+                      Object(k.f)("#ActiveVoiceChat")
                     ),
                     O.a.createElement("div", { className: "activeVoiceName" })
                   ),
@@ -60361,7 +60379,7 @@ var CLSTAMP = "7326401";
                   O.a.createElement(
                     "div",
                     { className: "activeVoiceHeader" },
-                    Object(R.f)("#ActiveVoiceChat")
+                    Object(k.f)("#ActiveVoiceChat")
                   ),
                   O.a.createElement(
                     "div",
@@ -60393,7 +60411,7 @@ var CLSTAMP = "7326401";
               O.a.createElement(
                 "div",
                 { className: "activeVoicePushToTalk" + i },
-                Object(R.f)(
+                Object(k.f)(
                   t ? "#ActiveVoicePushToMute" : "#ActiveVoicePushToTalk",
                   a
                 )
@@ -60420,13 +60438,13 @@ var CLSTAMP = "7326401";
           i = "";
         return (
           (i = n
-            ? Object(R.f)("#VoiceChat_UnmuteMic")
-            : Object(R.f)("#VoiceChat_MuteMic")),
+            ? Object(k.f)("#VoiceChat_UnmuteMic")
+            : Object(k.f)("#VoiceChat_MuteMic")),
           e &&
             ((a += " NoMicrophone"),
             (i = t
-              ? Object(R.f)("#VoiceChat_ChromeSampleRateTooHighMicExplainer")
-              : Object(R.f)("#VoiceChat_DeniedMicrophoneAccess"))),
+              ? Object(k.f)("#VoiceChat_ChromeSampleRateTooHighMicExplainer")
+              : Object(k.f)("#VoiceChat_DeniedMicrophoneAccess"))),
           n && (a += " disabled"),
           O.a.createElement(
             Se.d,
@@ -60458,8 +60476,8 @@ var CLSTAMP = "7326401";
         let n = "";
         return (
           (n = e
-            ? Object(R.f)("#VoiceChat_UnmuteSpeaker")
-            : Object(R.f)("#VoiceChat_MuteSpeaker")),
+            ? Object(k.f)("#VoiceChat_UnmuteSpeaker")
+            : Object(k.f)("#VoiceChat_MuteSpeaker")),
           O.a.createElement(
             Se.d,
             {
@@ -60486,8 +60504,8 @@ var CLSTAMP = "7326401";
           {
             className: "VoiceControlPanelButton chatEndVoiceChat",
             onClick: this.EndVoiceChat,
-            title: Object(R.f)("#VoiceChat_Leave"),
-            onOKActionDescription: Object(R.f)("#VoiceChat_Leave"),
+            title: Object(k.f)("#VoiceChat_Leave"),
+            onOKActionDescription: Object(k.f)("#VoiceChat_Leave"),
           },
           i.a.IN_GAMEPADUI
             ? O.a.createElement(H.C, null)
@@ -60606,7 +60624,7 @@ var CLSTAMP = "7326401";
                       E.a,
                       {
                         onActivate: _,
-                        onOKActionDescription: Object(R.f)(
+                        onOKActionDescription: Object(k.f)(
                           "#Menu_FriendInvites"
                         ),
                         focusable: !0,
@@ -60623,7 +60641,7 @@ var CLSTAMP = "7326401";
                     E.a,
                     {
                       onActivate: _,
-                      onOKActionDescription: Object(R.f)(
+                      onOKActionDescription: Object(k.f)(
                         "#FriendInviteLink_AddFriend"
                       ),
                       focusable: !0,
@@ -60640,10 +60658,10 @@ var CLSTAMP = "7326401";
                     E.a,
                     {
                       onActivate: (e) => {
-                        let t = k.r(e);
+                        let t = R.r(e);
                         Object(K.c)(Object(d.f)(t), t);
                       },
-                      onOKActionDescription: Object(R.f)(
+                      onOKActionDescription: Object(k.f)(
                         "#Chat_CreateGroupChat"
                       ),
                       focusable: !0,
@@ -60872,7 +60890,7 @@ var CLSTAMP = "7326401";
         const l = [
           {
             eTab: Ee.c.Favorites,
-            strTabContentTitle: Object(R.f)("#FriendGroup_Favorites"),
+            strTabContentTitle: Object(k.f)("#FriendGroup_Favorites"),
             tabElement: O.a.createElement(H.E, null),
             tabContentElement: O.a.createElement(T, {
               FavoritesStore: this.props.friends.FavoritesStore,
@@ -60880,7 +60898,7 @@ var CLSTAMP = "7326401";
           },
           {
             eTab: Ee.c.FriendsList,
-            strTabContentTitle: Object(R.f)("#Label_Friends"),
+            strTabContentTitle: Object(k.f)("#Label_Friends"),
             tabElement: O.a.createElement(H.G, {
               bShowArm: this.state.bViewingIncomingInvites,
             }),
@@ -60898,7 +60916,7 @@ var CLSTAMP = "7326401";
           },
           {
             eTab: Ee.c.GroupChats,
-            strTabContentTitle: Object(R.f)("#Label_Groups"),
+            strTabContentTitle: Object(k.f)("#Label_Groups"),
             tabElement: O.a.createElement(H.J, null),
             tabContentElement: O.a.createElement(Je, {
               friends: this.props.friends,
@@ -60907,9 +60925,9 @@ var CLSTAMP = "7326401";
           },
           {
             eTab: Ee.c.RecentMessages,
-            strTabContentTitle: Object(R.f)("#FriendGroup_Recent"),
+            strTabContentTitle: Object(k.f)("#FriendGroup_Recent"),
             tabElement: O.a.createElement(Ve, null),
-            tabContentElement: O.a.createElement(ke, null),
+            tabContentElement: O.a.createElement(Re, null),
           },
         ];
         return O.a.createElement(
@@ -60997,7 +61015,7 @@ var CLSTAMP = "7326401";
               "div",
               null,
               O.a.createElement(W.n, null),
-              Object(R.f)("#Friends_Reconnecting_Msg")
+              Object(k.f)("#Friends_Reconnecting_Msg")
             )
           )
         );
@@ -61067,12 +61085,12 @@ var CLSTAMP = "7326401";
       OnDoFriendsListUpdate(e) {
         let t = e.currentTarget.ownerDocument.defaultView,
           n = d.i.GetSecondsOutOfDate(),
-          a = Object(R.n)(n, !0);
+          a = Object(k.o)(n, !0);
         Object(u.d)(
           t,
-          Object(R.f)("#Friends_ConfirmUpdate_Title"),
-          Object(R.f)("#Friends_ConfirmUpdate_Body", a),
-          Object(R.f)("#Friends_ConfirmUpdate_Ok")
+          Object(k.f)("#Friends_ConfirmUpdate_Title"),
+          Object(k.f)("#Friends_ConfirmUpdate_Body", a),
+          Object(k.f)("#Friends_ConfirmUpdate_Ok")
         )
           .then(() => {
             d.i.PerformFriendsUIUpdate();
@@ -61261,8 +61279,8 @@ var CLSTAMP = "7326401";
                       className: b,
                       onClick: this.OnDoFriendsListUpdate,
                       title: g
-                        ? Object(R.f)("#Tooltip_FriendsListUpdate_VeryOld")
-                        : Object(R.f)("#Tooltip_FriendsListUpdate"),
+                        ? Object(k.f)("#Tooltip_FriendsListUpdate_VeryOld")
+                        : Object(k.f)("#Tooltip_FriendsListUpdate"),
                     },
                     O.a.createElement(H.ob, null)
                   ),
@@ -61271,7 +61289,7 @@ var CLSTAMP = "7326401";
                   {
                     className: "friendListButton friendSettingsButton no-drag",
                     onClick: this.OnSettingsClick,
-                    title: Object(R.f)("#Tooltip_Settings"),
+                    title: Object(k.f)("#Tooltip_Settings"),
                   },
                   O.a.createElement(H.ub, null)
                 )
@@ -61313,7 +61331,7 @@ var CLSTAMP = "7326401";
                         ref: this.BindTabLabel,
                         onClick: c ? void 0 : this.OnTabSearchClick,
                       },
-                      Object(R.f)("#tab_friends")
+                      Object(k.f)("#tab_friends")
                     ),
                     O.a.createElement(
                       "div",
@@ -61357,7 +61375,7 @@ var CLSTAMP = "7326401";
                                       autoFocus: !0,
                                       type: "text",
                                       name: "friendSearch",
-                                      placeholder: Object(R.f)(
+                                      placeholder: Object(k.f)(
                                         "#SearchFriends"
                                       ),
                                       value: this.state.searchString,
@@ -61384,7 +61402,7 @@ var CLSTAMP = "7326401";
                           {
                             className: "searchIconButton",
                             onClick: this.OnTabSearchClick,
-                            title: Object(R.f)("#Tooltip_SearchFriends"),
+                            title: Object(k.f)("#Tooltip_SearchFriends"),
                           },
                           O.a.createElement(H.W, null)
                         )
@@ -61395,7 +61413,7 @@ var CLSTAMP = "7326401";
                           {
                             className: s,
                             onClick: this.ToggleViewingIncomingInvites,
-                            title: Object(R.k)("#Tooltip_FriendRequest", r),
+                            title: Object(k.l)("#Tooltip_FriendRequest", r),
                           },
                           O.a.createElement(H.H, null),
                           r > 0 &&
@@ -61413,7 +61431,7 @@ var CLSTAMP = "7326401";
                           {
                             className:
                               "friendListButton addFriendButton no-drag",
-                            title: Object(R.f)("#Tooltip_AddFriend"),
+                            title: Object(k.f)("#Tooltip_AddFriend"),
                           },
                           O.a.createElement(H.a, null)
                         )
@@ -61466,13 +61484,13 @@ var CLSTAMP = "7326401";
           ? O.a.createElement(
               "div",
               { className: "betaFeedbackLabel" },
-              Object(R.l)(
+              Object(k.m)(
                 "#GiveFeedbackToSteam_Desc",
                 O.a.createElement(
                   j.b,
                   { href: e, className: "betaFeedbackAnchor" },
                   " ",
-                  Object(R.f)("#GiveFeedbackToSteam_URL"),
+                  Object(k.f)("#GiveFeedbackToSteam_URL"),
                   " "
                 )
               )
@@ -61498,7 +61516,7 @@ var CLSTAMP = "7326401";
             t,
             "ChangeLog",
             {
-              strTitle: Object(R.f)("#changeLog_Title"),
+              strTitle: Object(k.f)("#changeLog_Title"),
               popupWidth: 640,
               popupHeight: 680,
             },
@@ -61522,8 +61540,8 @@ var CLSTAMP = "7326401";
                   className: "changeLog" + (e ? " showViolator" : ""),
                   onClick: this.OpenChangeLog,
                   title: e
-                    ? Object(R.f)("#changeLog_Value_Button", t)
-                    : Object(R.f)("#changeLog_Button"),
+                    ? Object(k.f)("#changeLog_Value_Button", t)
+                    : Object(k.f)("#changeLog_Button"),
                 },
                 O.a.createElement(H.tb, null),
                 e &&
@@ -61585,7 +61603,7 @@ var CLSTAMP = "7326401";
         })(),
         [a, i] = Object(d.j)("bRemotePlayLinkHintDismissed");
       if (!n) return null;
-      const o = Object(R.f)("#RemotePlay_LinkCopyTitle");
+      const o = Object(k.f)("#RemotePlay_LinkCopyTitle");
       return O.a.createElement(
         "div",
         { className: be.RemotePlayInviteLinkSection },
@@ -61606,7 +61624,7 @@ var CLSTAMP = "7326401";
           O.a.createElement(
             "div",
             {
-              title: Object(R.f)("#Tooltip_RemotePlay_CreateInvite"),
+              title: Object(k.f)("#Tooltip_RemotePlay_CreateInvite"),
               className: be.LinkRowIconContainer,
             },
             O.a.createElement(fe.a, { className: be.LinkRowIcon })
@@ -61619,19 +61637,19 @@ var CLSTAMP = "7326401";
             O.a.createElement(
               "div",
               { className: be.ExplanationText },
-              Object(R.l)(
+              Object(k.m)(
                 "#RemotePlay_LinkCopyExplanation",
                 O.a.createElement(
                   "span",
                   { className: be.Strong },
-                  Object(R.f)("#RemotePlay_LinkCopyExplanation_Anyone")
+                  Object(k.f)("#RemotePlay_LinkCopyExplanation_Anyone")
                 )
               )
             ),
             O.a.createElement(
               "div",
               { className: be.GotItButton, onClick: () => i(!0) },
-              Object(R.f)("#Generic_Got_It")
+              Object(k.f)("#Generic_Got_It")
             ),
             O.a.createElement(
               "svg",
@@ -61680,7 +61698,7 @@ var CLSTAMP = "7326401";
         m.f.FriendStore.GetUserDoNotDisturb() && (t += " userDoNotDisturb");
         let n = null;
         m.f.FriendStore.BIsInvisibleMode() &&
-          (n = () => Object(R.f)("#PersonaStateInvisible"));
+          (n = () => Object(k.f)("#PersonaStateInvisible"));
         let a = !1;
         if (this.props.popup) {
           a = Object(d.f)(this.props.popup) != m.a;
@@ -61826,8 +61844,8 @@ var CLSTAMP = "7326401";
           e ||
             Object(u.c)(
               n,
-              Object(R.f)("#Friend_AcceptClanInvite"),
-              Object(R.f)("#Friend_AcceptClanInvite_Error")
+              Object(k.f)("#Friend_AcceptClanInvite"),
+              Object(k.f)("#Friend_AcceptClanInvite_Error")
             );
         });
       }
@@ -61837,8 +61855,8 @@ var CLSTAMP = "7326401";
           e ||
             Object(u.c)(
               n,
-              Object(R.f)("#Friend_DeclineClanInvite"),
-              Object(R.f)("#Friend_DeclineClanInvite_Error")
+              Object(k.f)("#Friend_DeclineClanInvite"),
+              Object(k.f)("#Friend_DeclineClanInvite_Error")
             );
         });
       }
@@ -61900,7 +61918,7 @@ var CLSTAMP = "7326401";
                                 "div",
                                 {
                                   className: "displayRow statMembersOnline",
-                                  title: Object(R.k)(
+                                  title: Object(k.l)(
                                     "#Chat_Members_Online_Tooltip",
                                     e.users_online
                                   ),
@@ -61915,7 +61933,7 @@ var CLSTAMP = "7326401";
                                 "div",
                                 {
                                   className: "displayRow statMembersInGame",
-                                  title: Object(R.k)(
+                                  title: Object(k.l)(
                                     "#Chat_Members_InGame_Tooltip",
                                     e.users_ingame
                                   ),
@@ -61935,7 +61953,7 @@ var CLSTAMP = "7326401";
                           "div",
                           {
                             className: "displayColumn",
-                            title: Object(R.f)(
+                            title: Object(k.f)(
                               "#FriendGroup_Tip_Accept_Invite"
                             ),
                           },
@@ -61946,14 +61964,14 @@ var CLSTAMP = "7326401";
                                 this.OnAcceptClanInvite(e, t);
                               },
                             },
-                            Object(R.f)("#Button_Accept")
+                            Object(k.f)("#Button_Accept")
                           )
                         ),
                         O.a.createElement(
                           "div",
                           {
                             className: "displayColumn",
-                            title: Object(R.f)(
+                            title: Object(k.f)(
                               "#FriendGroup_Tip_Decline_Invite"
                             ),
                           },
@@ -61964,7 +61982,7 @@ var CLSTAMP = "7326401";
                                 this.OnDeclineClanInvite(e, t);
                               },
                             },
-                            Object(R.f)("#Button_Decline")
+                            Object(k.f)("#Button_Decline")
                           )
                         )
                       )
@@ -61985,7 +62003,7 @@ var CLSTAMP = "7326401";
                     O.a.createElement(
                       "div",
                       { className: "clanInviteTitle" },
-                      Object(R.f)("#Friend_PendingClanInvites")
+                      Object(k.f)("#Friend_PendingClanInvites")
                     ),
                     a
                   )
@@ -62114,7 +62132,7 @@ var CLSTAMP = "7326401";
                 onClick: this.props.onClose,
                 className: "BackToFriendsListButton",
               },
-              Object(R.f)("#FriendGroup_CloseGamepadUI")
+              Object(k.f)("#FriendGroup_CloseGamepadUI")
             ),
             O.a.createElement(
               "div",
@@ -62155,7 +62173,7 @@ var CLSTAMP = "7326401";
         );
       }
     }
-    let Xe = (Re = class extends O.a.Component {
+    let Xe = (ke = class extends O.a.Component {
       constructor(e) {
         super(e),
           (this.m_bMouseOver = !1),
@@ -62335,7 +62353,7 @@ var CLSTAMP = "7326401";
             this.UnregisterChatRoomListDragEvents
           ),
           this.state.nChatRoomListContainerHeight <
-          Re.s_pxGroupChatsAutoCollapseThreshold
+          ke.s_pxGroupChatsAutoCollapseThreshold
             ? (d.i.SetUIDisplayPref(
                 "nChatRoomListHeightPx",
                 this.state.nChatRoomListPreCollapseHeight
@@ -62398,8 +62416,8 @@ var CLSTAMP = "7326401";
                   className: "ToggleGroupChatList",
                   onClick: this.ToggleChatsList,
                   title: this.state.bChatRoomListCollapsed
-                    ? Object(R.f)("#Tooltip_ChatsExpand")
-                    : Object(R.f)("#Tooltip_ChatsCollapse"),
+                    ? Object(k.f)("#Tooltip_ChatsExpand")
+                    : Object(k.f)("#Tooltip_ChatsCollapse"),
                 },
                 O.a.createElement(H.v, { angle: -90 })
               ),
@@ -62413,7 +62431,7 @@ var CLSTAMP = "7326401";
                 O.a.createElement(
                   "div",
                   { className: "groupChatSectionTitle" },
-                  Object(R.f)("#tab_chats")
+                  Object(k.f)("#tab_chats")
                 )
               ),
               O.a.createElement(
@@ -62421,7 +62439,7 @@ var CLSTAMP = "7326401";
                 {
                   className: "createChatRoomButton",
                   onClick: this.OnCreateChatRoom,
-                  title: Object(R.f)("#Tooltip_CreateGroupChat"),
+                  title: Object(k.f)("#Tooltip_CreateGroupChat"),
                 },
                 O.a.createElement(H.eb, null)
               ),
@@ -62466,7 +62484,7 @@ var CLSTAMP = "7326401";
         null
       ),
       Object(a.b)([A.b], Xe.prototype, "OnCreateChatRoom", null),
-      (Xe = Re = Object(a.b)([v.a], Xe));
+      (Xe = ke = Object(a.b)([v.a], Xe));
     class $e extends O.a.Component {
       GetDragDropProps(e = !0) {
         let t = { rgAcceptedTypes: [] };
@@ -62661,8 +62679,8 @@ var CLSTAMP = "7326401";
           1 != n &&
             Object(u.c)(
               e,
-              Object(R.f)("#Friend_Menu_IgnoreIncomingInvite"),
-              Object(R.f)("#Friend_IgnoreIncomingInvite_Error", t.display_name)
+              Object(k.f)("#Friend_Menu_IgnoreIncomingInvite"),
+              Object(k.f)("#Friend_IgnoreIncomingInvite_Error", t.display_name)
             );
         });
       }
@@ -62671,8 +62689,8 @@ var CLSTAMP = "7326401";
           5 != n &&
             Object(u.c)(
               e,
-              Object(R.f)("#Friend_Menu_BlockIncomingInvite"),
-              Object(R.f)("#Friend_BlockIncomingInvite_Error", t.display_name)
+              Object(k.f)("#Friend_Menu_BlockIncomingInvite"),
+              Object(k.f)("#Friend_BlockIncomingInvite_Error", t.display_name)
             );
         });
       }
@@ -62700,9 +62718,9 @@ var CLSTAMP = "7326401";
         let t = e.currentTarget.ownerDocument.defaultView;
         Object(u.d)(
           t,
-          Object(R.f)("#FriendGroup_ConfirmAllIgnore_Title"),
-          Object(R.f)("#FriendGroup_ConfirmAllIgnore_Body"),
-          Object(R.f)("#FriendGroup_ConfirmAllIgnore_OK")
+          Object(k.f)("#FriendGroup_ConfirmAllIgnore_Title"),
+          Object(k.f)("#FriendGroup_ConfirmAllIgnore_Body"),
+          Object(k.f)("#FriendGroup_ConfirmAllIgnore_OK")
         )
           .then(() => {
             let e = this.props.group.member_list;
@@ -62812,24 +62830,24 @@ var CLSTAMP = "7326401";
                     (m += "dim"),
                 i.a.IN_GAMEPADUI &&
                   ((h.onOKButton = (e) => {
-                    let n = k.r(e);
+                    let n = R.r(e);
                     this.AcceptInvite(n, t);
                   }),
-                  (h.onOKActionDescription = Object(R.f)(
+                  (h.onOKActionDescription = Object(k.f)(
                     "#FriendGroup_Tip_Accept"
                   )),
                   (h.onSecondaryButton = (e) => {
-                    let n = k.r(e);
+                    let n = R.r(e);
                     this.BlockInvite(n, t);
                   }),
-                  (h.onSecondaryActionDescription = Object(R.f)(
+                  (h.onSecondaryActionDescription = Object(k.f)(
                     "#Button_Block"
                   )),
                   (h.onOptionsButton = (e) => {
-                    let n = k.r(e);
+                    let n = R.r(e);
                     this.DeclineInvite(n, t);
                   }),
-                  (h.onOptionsActionDescription = Object(R.f)(
+                  (h.onOptionsActionDescription = Object(k.f)(
                     "#FriendGroup_Tip_Decline"
                   )));
             }
@@ -62876,7 +62894,7 @@ var CLSTAMP = "7326401";
                           className:
                             "friendInviteButton acceptFriendInvite " + n,
                           onClick: () => this.OnAcceptInvite(t),
-                          title: Object(R.f)("#FriendGroup_Tip_Accept"),
+                          title: Object(k.f)("#FriendGroup_Tip_Accept"),
                         },
                         O.a.createElement(H.n, null)
                       ),
@@ -62886,7 +62904,7 @@ var CLSTAMP = "7326401";
                           className:
                             "friendInviteButton declineFriendInvite " + s,
                           onClick: () => this.OnDeclineInvite(t),
-                          title: Object(R.f)("#FriendGroup_Tip_Decline"),
+                          title: Object(k.f)("#FriendGroup_Tip_Decline"),
                         },
                         O.a.createElement(H.Vb, null)
                       )
@@ -62905,12 +62923,12 @@ var CLSTAMP = "7326401";
                         O.a.createElement(
                           "div",
                           { className: "blockCommunicationLabel" },
-                          Object(R.f)("#FriendGroup_IncomingInvites_Block")
+                          Object(k.f)("#FriendGroup_IncomingInvites_Block")
                         ),
                         O.a.createElement(
                           "div",
                           { className: "blockCommunicationLabel subtitle" },
-                          Object(R.f)("#FriendGroup_IncomingInvites_Block_desc")
+                          Object(k.f)("#FriendGroup_IncomingInvites_Block_desc")
                         )
                       )
                     )
@@ -62942,7 +62960,7 @@ var CLSTAMP = "7326401";
             O.a.createElement(
               "div",
               null,
-              Object(R.f)(
+              Object(k.f)(
                 "#FriendGroup_Search_NoResults",
                 this.props.searchString
               )
@@ -62950,12 +62968,12 @@ var CLSTAMP = "7326401";
             O.a.createElement(
               "div",
               { className: "searchSteamSuggestion" },
-              Object(R.f)("#FriendGroup_Search_CantFind")
+              Object(k.f)("#FriendGroup_Search_CantFind")
             ),
             O.a.createElement(
               j.b,
               { href: i.a.COMMUNITY_BASE_URL + "search/users" },
-              Object(R.f)("#FriendGroup_Search_Link")
+              Object(k.f)("#FriendGroup_Search_Link")
             )
           );
         if (0 == o.length && !this.IsCollapsed()) return null;
@@ -62965,13 +62983,13 @@ var CLSTAMP = "7326401";
         let C = !this.IsInviteGroup() && !this.IsOutGoingInviteGroup(),
           S = {
             onActivate: this.ToggleCollapsed,
-            onOKActionDescription: Object(R.f)(
+            onOKActionDescription: Object(k.f)(
               a ? "#FriendGroup_Expand" : "#FriendGroup_Collapse"
             ),
             onContextMenu: this.OnContextMenu,
             onMenuButton: C && this.OnContextMenu,
             onMenuActionDescription: C
-              ? Object(R.f)("#FriendGroup_Options")
+              ? Object(k.f)("#FriendGroup_Options")
               : void 0,
           };
         return O.a.createElement(
@@ -63030,9 +63048,9 @@ var CLSTAMP = "7326401";
                   focusable: !0,
                   onActivate: this.ToggleOfflineSortMethod,
                   title: d
-                    ? Object(R.f)("#FriendGroup_Tip_SortByRecent")
-                    : Object(R.f)("#FriendGroup_Tip_SortByAlphabet"),
-                  onOKActionDescription: Object(R.f)("#FriendGroup_ChangeSort"),
+                    ? Object(k.f)("#FriendGroup_Tip_SortByRecent")
+                    : Object(k.f)("#FriendGroup_Tip_SortByAlphabet"),
+                  onOKActionDescription: Object(k.f)("#FriendGroup_ChangeSort"),
                 },
                 O.a.createElement(H.wb, null)
               )
@@ -63063,14 +63081,14 @@ var CLSTAMP = "7326401";
                             className: "confirmInviteButton confirmInvites",
                             onClick: this.OnConfirmChanges,
                           },
-                          Object(R.f)("#FriendGroup_ConfirmInvites")
+                          Object(k.f)("#FriendGroup_ConfirmInvites")
                         )
                       : O.a.createElement(
                           "div",
                           {
                             className: "confirmInviteButton confirmInvites dim",
                           },
-                          Object(R.f)("#FriendGroup_ConfirmInvites")
+                          Object(k.f)("#FriendGroup_ConfirmInvites")
                         ),
                     O.a.createElement(
                       "div",
@@ -63078,7 +63096,7 @@ var CLSTAMP = "7326401";
                         className: "confirmInviteButton ignoreAllRequests",
                         onClick: this.OnIgnoreAllInvites,
                       },
-                      Object(R.f)("#FriendGroup_AllIgnore")
+                      Object(k.f)("#FriendGroup_AllIgnore")
                     )
                   ),
                   O.a.createElement(
@@ -63086,8 +63104,8 @@ var CLSTAMP = "7326401";
                     {
                       className: "cancelAddFriends",
                       onActivate: this.OnCloseInvites,
-                      onOKActionDescription: Object(R.f)("#FriendGroup_Close"),
-                      title: Object(R.f)("#FriendGroup_Close"),
+                      onOKActionDescription: Object(k.f)("#FriendGroup_Close"),
+                      title: Object(k.f)("#FriendGroup_Close"),
                     },
                     O.a.createElement(H.c, { angle: -90 })
                   )
@@ -63281,7 +63299,7 @@ var CLSTAMP = "7326401";
                         O.a.createElement(
                           "div",
                           { className: "SteamPlayerGroupFooterLabel" },
-                          Object(R.f)(l, o)
+                          Object(k.f)(l, o)
                         )
                       )
                     ));
@@ -63320,11 +63338,11 @@ var CLSTAMP = "7326401";
         this.props.bSingletonGroup &&
           ((n += " OtherGamesGroup"),
           (i = this.props.bOtherGroups
-            ? Object(R.f)("#FriendGroup_InGame_Others")
-            : Object(R.f)("#FriendGroup_InGame")));
+            ? Object(k.f)("#FriendGroup_InGame_Others")
+            : Object(k.f)("#FriendGroup_InGame")));
         let o = {
           onActivate: this.ToggleCollapsed,
-          onOKActionDescription: Object(R.f)(
+          onOKActionDescription: Object(k.f)(
             e ? "#FriendGroup_Expand" : "#FriendGroup_Collapse"
           ),
         };
@@ -63336,7 +63354,7 @@ var CLSTAMP = "7326401";
                   let e = "steam://open/games/details/" + this.props.group.id;
                   m.f.OpenURLInBrowser(e, m.a);
                 }),
-                (o.onOptionsActionDescription = Object(R.f)(
+                (o.onOptionsActionDescription = Object(k.f)(
                   "#Friend_Menu_ViewGameInLibrary"
                 )))
               : ((o.onOptionsButton = () => {
@@ -63346,7 +63364,7 @@ var CLSTAMP = "7326401";
                   );
                   m.f.OpenURLInBrowser(e, m.a);
                 }),
-                (o.onOptionsActionDescription = Object(R.f)(
+                (o.onOptionsActionDescription = Object(k.f)(
                   "#Friend_Menu_ViewGameStorePage"
                 )))),
           O.a.createElement(
@@ -63575,7 +63593,7 @@ var CLSTAMP = "7326401";
             bHidePersona: I,
             bHideSnooze: y,
             bHideStatus: w,
-            bHideStatusInfo: k,
+            bHideStatusInfo: R,
             bInGameIcon: A,
             statusPosition: T,
             lastChat: M,
@@ -63632,11 +63650,11 @@ var CLSTAMP = "7326401";
             n = m.f.VoiceStore.IsAttemptingReconnect(),
             a =
               "https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114",
-            i = Object(R.f)("#VoiceChatConnectingHelp"),
+            i = Object(k.f)("#VoiceChatConnectingHelp"),
             o = null;
           t
-            ? (o = Object(R.f)("#VoiceChatConnecting"))
-            : n && (o = Object(R.f)("#VoiceChatReconnecting")),
+            ? (o = Object(k.f)("#VoiceChatConnecting"))
+            : n && (o = Object(k.f)("#VoiceChatReconnecting")),
             o &&
               (j = B
                 ? () =>
@@ -63662,8 +63680,8 @@ var CLSTAMP = "7326401";
             !i.a.IN_GAMEPADUI ||
             ((x.onContextMenu = this.OnShowContextMenu),
             (x.onMenuButton = this.OnShowContextMenu),
-            (x.onOKActionDescription = Object(R.f)("#Friend_Menu_SendMessage")),
-            (x.onMenuActionDescription = Object(R.f)("#Friend_Menu_Open"))),
+            (x.onOKActionDescription = Object(k.f)("#Friend_Menu_SendMessage")),
+            (x.onMenuActionDescription = Object(k.f)("#Friend_Menu_Open"))),
           l ||
             d ||
             ((x.onDragStart = this.OnDragStart),
@@ -63752,9 +63770,9 @@ var CLSTAMP = "7326401";
                 );
             void 0 === a
               ? (m.f.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
-                (n = Object(R.f)("#FriendGroup_NoMutualFriends")),
+                (n = Object(k.f)("#FriendGroup_NoMutualFriends")),
                 (F = "noMutualFriends"))
-              : ((n = Object(R.k)("#FriendGroup_YesMutualFriends", a.size)),
+              : ((n = Object(k.l)("#FriendGroup_YesMutualFriends", a.size)),
                 (e = a.size)),
               (j = () =>
                 O.a.createElement(
@@ -63799,7 +63817,7 @@ var CLSTAMP = "7326401";
             p && O.a.createElement(ct, { friend: t }),
             g,
             G,
-            !k &&
+            !R &&
               O.a.createElement(pe.a, {
                 className: Object(_e.a)("labelHolder", F),
                 persona: t.persona,
@@ -63861,13 +63879,13 @@ var CLSTAMP = "7326401";
           d && (n += " output_muted_remotely"),
           s && (n += " no_mic_for_session"),
           s
-            ? (a = Object(R.f)("#Tooltip_MicStatus_NoMic"))
+            ? (a = Object(k.f)("#Tooltip_MicStatus_NoMic"))
             : l
-            ? (a = Object(R.f)("#Tooltip_RemoteMicStatus_Muted"))
-            : o && (a = Object(R.f)("#Tooltip_YourMicStatus_Muted")),
+            ? (a = Object(k.f)("#Tooltip_RemoteMicStatus_Muted"))
+            : o && (a = Object(k.f)("#Tooltip_YourMicStatus_Muted")),
           d
-            ? (i = Object(R.f)("#Tooltip_RemoteOutputStatus_Muted"))
-            : r && (i = Object(R.f)("#Tooltip_YourOutputStatus_Muted")),
+            ? (i = Object(k.f)("#Tooltip_RemoteOutputStatus_Muted"))
+            : r && (i = Object(k.f)("#Tooltip_YourOutputStatus_Muted")),
           O.a.createElement(
             "div",
             { className: n },
@@ -63946,9 +63964,9 @@ var CLSTAMP = "7326401";
                   className: "unreadMessageViolator",
                   onClick: this.props.onClick,
                 },
-                1 == t && Object(R.f)("#FriendGroup_UnreadMessagesViolator"),
+                1 == t && Object(k.f)("#FriendGroup_UnreadMessagesViolator"),
                 t > 1 &&
-                  Object(R.f)("#FriendGroup_UnreadMessagesViolatorPlural", t)
+                  Object(k.f)("#FriendGroup_UnreadMessagesViolatorPlural", t)
               )
             )),
           O.a.createElement(P.a, null, e)
@@ -64009,7 +64027,7 @@ var CLSTAMP = "7326401";
               { className: "ExpandPlusMinus" },
               O.a.createElement(H.lb, null)
             ),
-            Object(R.f)("#FriendGroup_UnreadMessages"),
+            Object(k.f)("#FriendGroup_UnreadMessages"),
             O.a.createElement(
               "span",
               { className: "groupCount" },
@@ -64085,7 +64103,7 @@ var CLSTAMP = "7326401";
                           onClick: () => {
                             this.ClearRecentChat(e);
                           },
-                          title: Object(R.f)("#FriendGroup_Tip_Decline"),
+                          title: Object(k.f)("#FriendGroup_Tip_Decline"),
                         },
                         O.a.createElement(H.Vb, null)
                       )
@@ -64111,7 +64129,7 @@ var CLSTAMP = "7326401";
                 { className: "ExpandPlusMinus" },
                 O.a.createElement(H.lb, null)
               ),
-              Object(R.f)("#FriendGroup_RecentChats"),
+              Object(k.f)("#FriendGroup_RecentChats"),
               O.a.createElement(
                 "span",
                 { className: "groupCount" },
@@ -65187,8 +65205,8 @@ var CLSTAMP = "7326401";
       E = (n("KtKE"), n("Rcv0")),
       w = n("uw3m"),
       D = n("UMCL"),
-      k = n("ljid"),
-      R = n("vJVb"),
+      R = n("ljid"),
+      k = n("vJVb"),
       A = n("Hi0u"),
       T = n("e2SU"),
       M = n("XaMz"),
@@ -66065,7 +66083,7 @@ var CLSTAMP = "7326401";
                   isActive: t == e,
                 })),
             h.createElement(
-              R.a,
+              k.a,
               { key: t.GetUniqueID() },
               h.createElement(
                 h.Suspense,
@@ -66161,7 +66179,7 @@ var CLSTAMP = "7326401";
                   isActive: t == e,
                 })),
             h.createElement(
-              R.a,
+              k.a,
               { key: t.GetUniqueID() },
               h.createElement(
                 h.Suspense,
@@ -66669,7 +66687,7 @@ var CLSTAMP = "7326401";
               ? (b = h.createElement(
                   "span",
                   { className: "dropGroupInviteDialog_Desc" },
-                  Object(F.l)(
+                  Object(F.m)(
                     "#Chat_InviteFriend_Unavailable_Short",
                     h.createElement(
                       "span",
@@ -66682,7 +66700,7 @@ var CLSTAMP = "7326401";
                 (b = h.createElement(
                   "span",
                   { className: "dropGroupInviteDialog_Desc" },
-                  Object(F.l)(
+                  Object(F.m)(
                     "#Chat_InviteFriend_Unavailable_Short_InvitedTo",
                     h.createElement(
                       "span",
@@ -66695,21 +66713,21 @@ var CLSTAMP = "7326401";
             A.a,
             { onEscKeypress: this.Cancel },
             h.createElement(
-              k.j,
+              R.j,
               {
                 classNameContent: "GenericConfirmDialog",
                 onSubmit: this.OnInviteClicked,
                 bCenterVertically: !0,
               },
               h.createElement(
-                k.E,
+                R.E,
                 null,
                 n
                   ? Object(F.f)("#Chat_Actions_InviteFriend_VoiceChat")
                   : Object(F.f)("#Chat_Actions_DropGroupInvite_Title")
               ),
               h.createElement(
-                k.c,
+                R.c,
                 null,
                 h.createElement(
                   "div",
@@ -66722,7 +66740,7 @@ var CLSTAMP = "7326401";
                     h.createElement(
                       "span",
                       { className: "dropGroupInviteDialog_Desc" },
-                      Object(F.l)(
+                      Object(F.m)(
                         _,
                         h.createElement(
                           "span",
@@ -66782,13 +66800,13 @@ var CLSTAMP = "7326401";
                 )
               ),
               h.createElement(
-                k.s,
+                R.s,
                 null,
                 h.createElement(
-                  k.ab,
+                  R.ab,
                   null,
                   h.createElement(
-                    k.P,
+                    R.P,
                     { disabled: u || p, onClick: this.OnInviteClicked },
                     g
                       ? Object(F.f)("#Chat_SendLink")
@@ -66796,7 +66814,7 @@ var CLSTAMP = "7326401";
                     " "
                   ),
                   h.createElement(
-                    k.e,
+                    R.e,
                     { onClick: this.Cancel },
                     Object(F.f)("#Button_Cancel")
                   )
@@ -67135,10 +67153,10 @@ var CLSTAMP = "7326401";
         return D;
       }),
       n.d(t, "Qb", function () {
-        return k;
+        return R;
       }),
       n.d(t, "C", function () {
-        return R;
+        return k;
       }),
       n.d(t, "Gb", function () {
         return A;
@@ -67297,10 +67315,10 @@ var CLSTAMP = "7326401";
         return De;
       }),
       n.d(t, "vb", function () {
-        return ke;
+        return Re;
       }),
       n.d(t, "f", function () {
-        return Re;
+        return ke;
       }),
       n.d(t, "db", function () {
         return Ae;
@@ -68022,7 +68040,7 @@ var CLSTAMP = "7326401";
         })
       );
     }
-    function k(e) {
+    function R(e) {
       return d.d.IN_GAMEPADUI
         ? i.createElement(
             "svg",
@@ -68127,7 +68145,7 @@ var CLSTAMP = "7326401";
               )
           );
     }
-    function R() {
+    function k() {
       return i.createElement(
         "svg",
         {
@@ -70536,7 +70554,7 @@ var CLSTAMP = "7326401";
         )
       );
     }
-    function ke() {
+    function Re() {
       return i.createElement(
         "svg",
         {
@@ -70602,7 +70620,7 @@ var CLSTAMP = "7326401";
         })
       );
     }
-    function Re() {
+    function ke() {
       return i.createElement(
         "svg",
         {
@@ -71718,7 +71736,7 @@ var CLSTAMP = "7326401";
             in_game_section_additional: y,
             bottom_section_additional: D,
           } = e,
-          k = Object(a.c)(e, [
+          R = Object(a.c)(e, [
             "className",
             "persona",
             "data_loader",
@@ -71733,9 +71751,9 @@ var CLSTAMP = "7326401";
             "in_game_section_additional",
             "bottom_section_additional",
           ]);
-        let R = o.community_data;
-        r && (R = Object.assign(Object.assign({}, R), r));
-        const A = Object.keys((R && R.profile_background) || {}).length > 0;
+        let k = o.community_data;
+        r && (k = Object.assign(Object.assign({}, k), r));
+        const A = Object.keys((k && k.profile_background) || {}).length > 0;
         let T = void 0,
           M = b.a.miniProfileContent;
         n.is_ingame
@@ -71825,12 +71843,12 @@ var CLSTAMP = "7326401";
                   key: n.GetAccountID(),
                   className: Object(_.a)(this.props.className, b.a.miniProfile),
                 },
-                k
+                R
               ),
               i.createElement(
                 "div",
                 { className: M },
-                i.createElement(E, { community_data: R, persona: n }),
+                i.createElement(E, { community_data: k, persona: n }),
                 i.createElement(
                   "div",
                   { className: b.a.miniProfileHeader },
@@ -71846,7 +71864,7 @@ var CLSTAMP = "7326401";
                     },
                     i.createElement(w, {
                       persona: this.props.persona,
-                      community_data: R,
+                      community_data: k,
                     }),
                     j &&
                       i.createElement(h.a, {
@@ -71914,8 +71932,8 @@ var CLSTAMP = "7326401";
                       A && b.a.miniProfileBackdropBlur
                     ),
                   },
-                  i.createElement(S, { community_data: R }),
-                  i.createElement(v, { community_data: R })
+                  i.createElement(S, { community_data: k }),
+                  i.createElement(v, { community_data: k })
                 ),
                 D,
                 i.createElement(
@@ -72068,8 +72086,8 @@ var CLSTAMP = "7326401";
       E = (n("yeWu"), n("1n9R")),
       w = n("OTLo"),
       D = n("uWOQ"),
-      k = n("ZiY0"),
-      R = (n("fwE1"), n("8o0Y")),
+      R = n("ZiY0"),
+      k = (n("fwE1"), n("8o0Y")),
       A = n("EGkk"),
       T = n("7ERL"),
       M = n("+RPw"),
@@ -72384,7 +72402,7 @@ var CLSTAMP = "7326401";
                           l.e,
                           {
                             className: C.InlineInviteButton,
-                            onClick: () => ke(e.browserContext),
+                            onClick: () => Re(e.browserContext),
                           },
                           Object(u.f)("#RemotePlay_InviteGuest")
                         )
@@ -72418,7 +72436,7 @@ var CLSTAMP = "7326401";
             Object(u.f)("#RemotePlayTogether_QuickAccessTitle")
           ),
           o.a.createElement(
-            k.a,
+            R.a,
             { className: C.QuickAccessScrollPanel },
             o.a.createElement(Q, { browserContext: e.browserContext })
           )
@@ -72503,7 +72521,7 @@ var CLSTAMP = "7326401";
                 })
               : null
           ),
-          e && o.a.createElement(Re, null),
+          e && o.a.createElement(ke, null),
           e && o.a.createElement(Ae, null)
         );
       }),
@@ -73255,7 +73273,7 @@ var CLSTAMP = "7326401";
           },
         });
       });
-    function ke(e) {
+    function Re(e) {
       return Object(a.a)(this, void 0, void 0, function* () {
         try {
           return c.f.RemotePlayStore.CreateGuestInviteAndSession(
@@ -73272,7 +73290,7 @@ var CLSTAMP = "7326401";
         }
       });
     }
-    function Re(e) {
+    function ke(e) {
       const t = Object(i.useContext)(Je);
       return o.a.createElement(Ze, {
         quickaccess: !1,
@@ -73290,7 +73308,7 @@ var CLSTAMP = "7326401";
         title: Object(u.f)("#RemotePlay_InviteGuest_Verbose"),
         description: Object(u.f)("#RemotePlay_LinkCopy_ShortDescription"),
         className: C.AddGuestBox,
-        onClick: (e) => ke(Object(I.e)(null, e)),
+        onClick: (e) => Re(Object(I.e)(null, e)),
       });
     }
     function Te() {
@@ -73688,7 +73706,7 @@ var CLSTAMP = "7326401";
             playerControls: b,
           } = e,
           S = (e) => {
-            s && Object(R.a)(s, e);
+            s && Object(k.a)(s, e);
           };
         return o.a.createElement(
           f,
@@ -73785,7 +73803,7 @@ var CLSTAMP = "7326401";
             onClick: m,
             interactable: null != m,
             onContextMenu: (e) => {
-              o.a.Children.count(u) > 0 && Object(R.a)(u, e);
+              o.a.Children.count(u) > 0 && Object(k.a)(u, e);
             },
           },
           o.a.createElement("div", { className: C.Media }, r),
@@ -74715,8 +74733,8 @@ var CLSTAMP = "7326401";
     var E = n("oh5H"),
       w = (n("KtKE"), n("QfKn"), n("QHER")),
       D = n("VoDG"),
-      k = n("Rcv0"),
-      R = n("332Q");
+      R = n("Rcv0"),
+      k = n("332Q");
     const A = (e) =>
       c.a.IN_CLIENT
         ? p.createElement(y, Object.assign({}, e))
@@ -74940,7 +74958,7 @@ var CLSTAMP = "7326401";
             "flow-children": "column",
           },
           p.createElement(
-            R.a,
+            k.a,
             null,
             p.createElement(
               "div",
@@ -74958,7 +74976,7 @@ var CLSTAMP = "7326401";
                     className: "inputContainer no-drag",
                     "flow-children": "row",
                   },
-                  p.createElement(k.f, {
+                  p.createElement(R.f, {
                     className: "friendSearchInput",
                     type: "text",
                     name: "memberlistSearch",
@@ -76019,13 +76037,13 @@ var CLSTAMP = "7326401";
           m.f.SettingsStore.FriendsSettings.bCompactFriendsList &&
             (O += " compactView"),
           h && (O += " broadcastVisible");
-        let k = null;
+        let R = null;
         this.props.bHideMemberList ||
-          (k = p.createElement(T, {
+          (R = p.createElement(T, {
             groupView: this.props.groupView,
             inactive: S,
           }));
-        const R =
+        const k =
           this.props.bHideMessageInput ||
           (t.isBroadcastShown && ((!o && t.m_bShowGlobalChat) || f))
             ? null
@@ -76075,9 +76093,9 @@ var CLSTAMP = "7326401";
                   )
                 ),
                 p.createElement("div", { className: "dropTargetBox" }),
-                k
+                R
               ),
-              R
+              k
             )
           );
         if (e.watching_broadcast_steamid && t.isBroadcastShown) {
@@ -76173,7 +76191,7 @@ var CLSTAMP = "7326401";
                               ),
                             A
                           ),
-                          !s && t.isBroadcastShown && R
+                          !s && t.isBroadcastShown && k
                         )
                     )
                   )
@@ -76297,7 +76315,7 @@ var CLSTAMP = "7326401";
           m.f.SettingsStore.FriendsSettings.bCompactFriendsList &&
             (O += " compactView"),
           h && (O += " broadcastVisible");
-        const k =
+        const R =
           this.props.bHideMessageInput ||
           (t.isBroadcastShown && ((!o && t.m_bShowGlobalChat) || f))
             ? null
@@ -76307,7 +76325,7 @@ var CLSTAMP = "7326401";
                 isActive: this.props.isActive,
                 disabled: !1,
               });
-        let R,
+        let k,
           A = p.createElement(
             D.a,
             {
@@ -76349,7 +76367,7 @@ var CLSTAMP = "7326401";
                 ),
                 p.createElement(_e, { groupView: t })
               ),
-              k
+              R
             )
           );
         if (e.watching_broadcast_steamid && t.isBroadcastShown) {
@@ -76361,7 +76379,7 @@ var CLSTAMP = "7326401";
             hidden: !t.m_bShowGlobalChat,
             className: this.state.bDraggingChatGrabber ? "avoidEvents" : void 0,
           });
-          R = p.createElement(p.Fragment, null, n);
+          k = p.createElement(p.Fragment, null, n);
         }
         let T = "chatStack " + (b ? "displayRow" : "displayColumn");
         l && (T += " GlobalChatVisible"), s && (T += " GroupChatVisible");
@@ -76454,9 +76472,9 @@ var CLSTAMP = "7326401";
                                   Object(E.f)("#Broadcast_Chat_PublicChatTab")
                                 )
                               ),
-                            R
+                            k
                           ),
-                          !s && t.isBroadcastShown && k
+                          !s && t.isBroadcastShown && R
                         )
                     )
                   )
@@ -76536,7 +76554,7 @@ var CLSTAMP = "7326401";
             r.e,
             Object.assign({}, n, { onOK: b }),
             p.createElement(
-              R.a,
+              k.a,
               null,
               p.createElement(
                 D.a,
@@ -76661,7 +76679,7 @@ var CLSTAMP = "7326401";
             onOK: f,
           }),
           p.createElement(
-            R.a,
+            k.a,
             null,
             p.createElement(
               i.E,
@@ -78023,11 +78041,11 @@ var CLSTAMP = "7326401";
     }
     Object(i.b)([s.n.struct], D.prototype, "viewFilteredEvents", null),
       Object(i.b)([s.n.struct], D.prototype, "filteredAndCheckedEvents", null);
-    const k = s.C.box(null),
-      R = new Map();
+    const R = s.C.box(null),
+      k = new Map();
     function A() {
       return (
-        null == k.get() &&
+        null == R.get() &&
           (function (e) {
             let t = "";
             e.appids &&
@@ -78051,15 +78069,15 @@ var CLSTAMP = "7326401";
                   e.category_or_language +
                   "_" +
                   e.tag_name),
-              k.get() !== t && (k.set(t), R.has(t) || R.set(t, new w(e)));
+              R.get() !== t && (R.set(t), k.has(t) || k.set(t, new w(e)));
           })({}),
-        R.get(k.get())
+        k.get(R.get())
       );
     }
     function T() {
-      return null !== k;
+      return null !== R;
     }
-    window.g_EventCalendarMap = R;
+    window.g_EventCalendarMap = k;
   },
   faye: function (e, t) {
     e.exports = ReactDOM;
@@ -79690,10 +79708,10 @@ var CLSTAMP = "7326401";
     }
     function D(e, t, n, a, i) {
       if (t.GetDefaultChatID() == n) return null;
-      if (k.BIsMenuEmpty(t, n, !!i)) return null;
+      if (R.BIsMenuEmpty(t, n, !!i)) return null;
       let o = Object(r.r)(a);
       return Object(_.a)(
-        p.createElement(k, {
+        p.createElement(R, {
           browserContext: e,
           group: t,
           roomID: n,
@@ -79706,7 +79724,7 @@ var CLSTAMP = "7326401";
     Object(a.b)([C.b], w.prototype, "OpenChatWindow", null),
       Object(a.b)([C.b], w.prototype, "ShowClanProfile", null),
       Object(a.b)([C.b], w.prototype, "LeaveChatRoomGroup", null);
-    class k extends p.PureComponent {
+    class R extends p.PureComponent {
       ShowInviteDialog() {
         let e = this.props.group.GetChatRoom(this.props.roomID);
         Object(v.b)(
@@ -79723,7 +79741,7 @@ var CLSTAMP = "7326401";
           (a = this.props.group),
           (i = this.props.roomID),
           Object(m.c)(
-            p.createElement(R, { group: a, roomID: i }),
+            p.createElement(k, { group: a, roomID: i }),
             n,
             "SaveVoiceRoomDialog",
             {
@@ -79824,11 +79842,11 @@ var CLSTAMP = "7326401";
         );
       }
     }
-    Object(a.b)([C.b], k.prototype, "ShowInviteDialog", null),
-      Object(a.b)([C.b], k.prototype, "SaveVoiceRoom", null),
-      Object(a.b)([C.b], k.prototype, "RemoveRoom", null),
-      Object(a.b)([C.b], k.prototype, "ChangeRoomName", null);
-    let R = class extends p.Component {
+    Object(a.b)([C.b], R.prototype, "ShowInviteDialog", null),
+      Object(a.b)([C.b], R.prototype, "SaveVoiceRoom", null),
+      Object(a.b)([C.b], R.prototype, "RemoveRoom", null),
+      Object(a.b)([C.b], R.prototype, "ChangeRoomName", null);
+    let k = class extends p.Component {
       constructor(e) {
         super(e), (this.state = { strName: "", strError: void 0 });
       }
@@ -79888,9 +79906,9 @@ var CLSTAMP = "7326401";
         );
       }
     };
-    Object(a.b)([C.b], R.prototype, "HandleTextEntry", null),
-      Object(a.b)([C.b], R.prototype, "HandleSubmit", null),
-      (R = Object(a.b)([u.a], R));
+    Object(a.b)([C.b], k.prototype, "HandleTextEntry", null),
+      Object(a.b)([C.b], k.prototype, "HandleSubmit", null),
+      (k = Object(a.b)([u.a], k));
   },
   h4qU: function (e, t, n) {
     e.exports = {
@@ -80344,22 +80362,22 @@ var CLSTAMP = "7326401";
     var E = n("yeWu"),
       w = n("OJz+"),
       D = n("RBVV"),
-      k = (n("0N1H"), n("4HGb")),
-      R = n("2vnA");
+      R = (n("0N1H"), n("4HGb")),
+      k = n("2vnA");
     class A {
       constructor(e) {
         (this.m_UsabilityHandler = Object(w.c)(
           D.bb.NotifyRequestClientUsabilityMetricsHandler,
           (e) =>
             Object(a.a)(this, void 0, void 0, function* () {
-              let t = k.b.Init(D.U);
+              let t = R.b.Init(D.U);
               return (
                 t.Body().set_metrics_run_id(e.Body().metrics_run_id()),
                 t.Body().set_metrics_version(3),
                 t.Body().set_client_build(o.a.BUILD_TIMESTAMP),
                 t.Body().set_in_web(!o.a.IN_CLIENT),
                 u.f.ready_to_render ||
-                  (yield Object(R.M)(() => u.f.ready_to_render)),
+                  (yield Object(k.M)(() => u.f.ready_to_render)),
                 yield u.f.SettingsStore.FillInChatUsabilityMetrics(t.Body()),
                 yield u.f.FriendStore.FillInChatUsabilityMetrics(t.Body()),
                 yield u.f.ChatStore.FillInChatUsabilityMetrics(t.Body()),
@@ -80537,8 +80555,8 @@ var CLSTAMP = "7326401";
             "div",
             { className: "broadcastInviteSelf" },
             this.props.appid
-              ? Object(V.l)("#ChatRoom_BroadcastInvite_YouInvited", e, t)
-              : Object(V.l)("#ChatRoom_BroadcastInvite_YouInvited_NoAppID", e)
+              ? Object(V.m)("#ChatRoom_BroadcastInvite_YouInvited", e, t)
+              : Object(V.m)("#ChatRoom_BroadcastInvite_YouInvited_NoAppID", e)
           );
         }
         {
@@ -80552,13 +80570,13 @@ var CLSTAMP = "7326401";
               "div",
               { className: "broadcastInviteDismissed" },
               this.props.appid
-                ? Object(V.l)("#ChatRoom_BroadcastInvite_Expired", n, t)
-                : Object(V.l)("#ChatRoom_BroadcastInvite_Expired_NoAppID", n)
+                ? Object(V.m)("#ChatRoom_BroadcastInvite_Expired", n, t)
+                : Object(V.m)("#ChatRoom_BroadcastInvite_Expired_NoAppID", n)
             );
           let i =
               o.a.COMMUNITY_CDN_URL +
               "public/images/broadcast/apphub_default_thumbnail.jpg",
-            r = Object(V.l)("#ChatRoom_BroadcastInvite_Invite", n);
+            r = Object(V.m)("#ChatRoom_BroadcastInvite_Invite", n);
           return P.createElement(
             W.a,
             {
@@ -80689,7 +80707,7 @@ var CLSTAMP = "7326401";
             P.createElement(
               "div",
               { className: "broadcastViewRequestDismissed" },
-              Object(V.l)(e, n, t)
+              Object(V.m)(e, n, t)
             )
           );
         }
@@ -80697,7 +80715,7 @@ var CLSTAMP = "7326401";
             o.a.COMMUNITY_CDN_URL +
             "public/images/broadcast/apphub_default_thumbnail.jpg",
           c = (this.state.bThumbnailLoaded, this.state.nThumbnailUpdateCounter),
-          l = Object(V.l)("#ChatRoom_BroadcastViewRequest_Invite", n);
+          l = Object(V.m)("#ChatRoom_BroadcastViewRequest_Invite", n);
         return P.createElement(
           "div",
           {
@@ -80792,7 +80810,7 @@ var CLSTAMP = "7326401";
             o.a.COMMUNITY_CDN_URL +
             "public/images/broadcast/apphub_default_thumbnail.jpg",
           a = (this.state.bThumbnailLoaded, this.state.nThumbnailUpdateCounter),
-          i = Object(V.l)("#ChatRoom_BroadcastInvite_WatchGame", t);
+          i = Object(V.m)("#ChatRoom_BroadcastInvite_WatchGame", t);
         return P.createElement(
           "div",
           {
@@ -80917,7 +80935,7 @@ var CLSTAMP = "7326401";
             P.createElement(
               "div",
               { onClick: this.OnShowGameContextMenu },
-              Object(V.l)(
+              Object(V.m)(
                 n,
                 t,
                 P.createElement("img", {
@@ -80945,7 +80963,7 @@ var CLSTAMP = "7326401";
             P.createElement(
               "div",
               { onClick: this.OnShowGameContextMenu },
-              Object(V.l)(
+              Object(V.m)(
                 n,
                 t,
                 P.createElement("img", {
@@ -80967,7 +80985,7 @@ var CLSTAMP = "7326401";
             P.createElement(
               "div",
               { onClick: this.OnShowGameContextMenu },
-              Object(V.l)(
+              Object(V.m)(
                 t,
                 P.createElement("img", {
                   src: e.icon_url,
@@ -80990,7 +81008,7 @@ var CLSTAMP = "7326401";
             P.createElement(
               "div",
               { onClick: this.OnShowGameContextMenu },
-              Object(V.l)(
+              Object(V.m)(
                 n,
                 t,
                 P.createElement("img", {
@@ -81036,7 +81054,7 @@ var CLSTAMP = "7326401";
         let o = this.props.gameInvite.remoteplayString
             ? "#ChatRoom_GameInviteRemotePlay_Invite"
             : "#ChatRoom_GameInvite_Invite",
-          r = Object(V.l)(o, this.props.inviter.display_name),
+          r = Object(V.m)(o, this.props.inviter.display_name),
           s =
             this.props.gameInvite.remoteplayString &&
             this.BCanAcceptVoiceChat() &&
@@ -81410,7 +81428,7 @@ var CLSTAMP = "7326401";
         r
           ? (c = i
               ? o
-                ? Object(V.l)(
+                ? Object(V.m)(
                     "#bbcode_invite_you_shared_voice_link",
                     P.createElement(
                       "span",
@@ -81419,7 +81437,7 @@ var CLSTAMP = "7326401";
                       " "
                     )
                   )
-                : Object(V.l)(
+                : Object(V.m)(
                     "#bbcode_invite_you_invited_friend_voice",
                     P.createElement(
                       "span",
@@ -81435,8 +81453,8 @@ var CLSTAMP = "7326401";
                     )
                   )
               : o
-              ? Object(V.l)("#bbcode_invite_you_shared_invite_link")
-              : Object(V.l)(
+              ? Object(V.m)("#bbcode_invite_you_shared_invite_link")
+              : Object(V.m)(
                   "#bbcode_invite_you_invited_friend",
                   P.createElement(
                     "span",
@@ -81448,7 +81466,7 @@ var CLSTAMP = "7326401";
           : n &&
             (c = i
               ? o
-                ? Object(V.l)(
+                ? Object(V.m)(
                     "#bbcode_invite_voice_url_description",
                     P.createElement(
                       "span",
@@ -81463,7 +81481,7 @@ var CLSTAMP = "7326401";
                       " "
                     )
                   )
-                : Object(V.l)(
+                : Object(V.m)(
                     "#bbcode_invite_voice_description",
                     P.createElement(
                       "span",
@@ -81479,7 +81497,7 @@ var CLSTAMP = "7326401";
                     )
                   )
               : o
-              ? Object(V.l)(
+              ? Object(V.m)(
                   "#bbcode_invite_url_description",
                   P.createElement(
                     "span",
@@ -81488,7 +81506,7 @@ var CLSTAMP = "7326401";
                     " "
                   )
                 )
-              : Object(V.l)(
+              : Object(V.m)(
                   "#bbcode_invite_description",
                   P.createElement(
                     "span",
@@ -81646,12 +81664,12 @@ var CLSTAMP = "7326401";
         (e[(e.Loading = 1)] = "Loading"),
         (e[(e.Loaded = 2)] = "Loaded");
     })(_e || (_e = {}));
-    let ke = _e.NotLoaded,
-      Re = [];
+    let Re = _e.NotLoaded,
+      ke = [];
     function Ae() {
-      ke = _e.Loaded;
-      for (let e of Re) e();
-      Re = [];
+      Re = _e.Loaded;
+      for (let e of ke) e();
+      ke = [];
     }
     class Te extends P.Component {
       constructor(e) {
@@ -81665,7 +81683,7 @@ var CLSTAMP = "7326401";
       }
       componentWillUnmount() {
         var e;
-        this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), l.c(Re, e);
+        this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), l.c(ke, e);
       }
       shouldComponentUpdate(e, t) {
         if (!this.m_player) return !1;
@@ -81704,15 +81722,15 @@ var CLSTAMP = "7326401";
           this.DestroyPlayer(),
           this.m_playerContainer &&
             (function (e) {
-              if (ke == _e.Loaded) return void e();
-              if (ke == _e.NotLoaded) {
+              if (Re == _e.Loaded) return void e();
+              if (Re == _e.NotLoaded) {
                 let e = document.createElement("script");
                 e.src = "https://www.youtube.com/iframe_api";
                 let t = document.getElementsByTagName("script")[0];
                 t.parentNode.insertBefore(e, t),
                   (window.onYouTubeIframeAPIReady = Ae);
               }
-              Re.findIndex((t) => e == t) < 0 && Re.push(e);
+              ke.findIndex((t) => e == t) < 0 && ke.push(e);
             })(this.OnYoutubeScriptsReady));
       }
       OnYoutubeScriptsReady() {
@@ -81997,7 +82015,7 @@ var CLSTAMP = "7326401";
         video: pt,
         og: bt,
         tweet: ft,
-        inviteurl: kt,
+        inviteurl: Rt,
         publishedfile: Lt,
         tradeofferlink: Ft,
         econitem: Nt,
@@ -82619,7 +82637,7 @@ var CLSTAMP = "7326401";
                 "span",
                 { style: { fontWeight: "bold" } },
                 " ",
-                Object(V.l)(
+                Object(V.m)(
                   "#bbcode_image_link_giphy",
                   P.createElement(
                     "span",
@@ -82746,7 +82764,7 @@ var CLSTAMP = "7326401";
           P.createElement(
             "div",
             { className: "giphyTag" },
-            Object(V.l)(
+            Object(V.m)(
               "#bbcode_image_link_giphy",
               P.createElement(
                 "span",
@@ -82849,7 +82867,7 @@ var CLSTAMP = "7326401";
             ? P.createElement(
                 "div",
                 { className: "ChatMessageErrorSendingAlert VideoFailed" },
-                Object(V.l)("#Chat_VideoLoadError", n)
+                Object(V.m)("#Chat_VideoLoadError", n)
               )
             : P.createElement(
                 H.b,
@@ -83563,7 +83581,7 @@ var CLSTAMP = "7326401";
         return P.createElement(me, null, this.props.children);
       }
     }
-    class kt extends ge.b {
+    class Rt extends ge.b {
       constructor(e) {
         super(e), (this.state = { invite: void 0 });
       }
@@ -83580,7 +83598,7 @@ var CLSTAMP = "7326401";
         return P.createElement(ie, { invite: this.state.invite, inviter: e });
       }
     }
-    class Rt extends ge.b {
+    class kt extends ge.b {
       constructor(e) {
         super(e),
           (this.state = { invite: void 0, inviter: void 0, invitee: void 0 });
@@ -83783,7 +83801,7 @@ var CLSTAMP = "7326401";
         let e = u.f.CMInterface;
         if (e) {
           let t = this.GetArgument("fileid"),
-            n = k.b.Init(Ie.a, 8509);
+            n = R.b.Init(Ie.a, 8509);
           n.Body().add_published_file_ids().set_published_file_id(t),
             e.SendMsgAndAwaitResponse(n, Ie.b).then((e) => {
               if (
@@ -83804,7 +83822,7 @@ var CLSTAMP = "7326401";
       VoteItem(e, t) {
         let n = u.f.CMInterface;
         if (n) {
-          let a = k.b.Init(Ie.c, 8507);
+          let a = R.b.Init(Ie.c, 8507);
           a.Body().set_published_file_id(t),
             a.Body().set_vote_up(e),
             n.SendMsgAndAwaitResponse(a, Ie.d).then((t) => {
@@ -83983,7 +84001,7 @@ var CLSTAMP = "7326401";
                     P.createElement(
                       "div",
                       { className: "inviteLabel TradeOfferInvite_Title" },
-                      Object(V.l)(
+                      Object(V.m)(
                         "#TradeOfferLink_SharedTradeLink",
                         n.display_name
                       )
@@ -83997,7 +84015,7 @@ var CLSTAMP = "7326401";
                       type: "button",
                       onClick: this.OnCreateOfferClick,
                     },
-                    Object(V.l)("#TradeOfferLink_SendUserOffer")
+                    Object(V.m)("#TradeOfferLink_SendUserOffer")
                   )
                 ),
                 P.createElement("div", { style: { clear: "left" } })
@@ -84064,7 +84082,7 @@ var CLSTAMP = "7326401";
                 P.createElement(
                   "div",
                   { className: "inviteLabel TradeOfferInvite_Title" },
-                  Object(V.l)(
+                  Object(V.m)(
                     a
                       ? "#TradeOffer_YouSentFriend"
                       : "#TradeOffer_FriendSentYou",
@@ -84093,7 +84111,7 @@ var CLSTAMP = "7326401";
                 type: "button",
                 onClick: a ? this.ViewMyOffersClick : this.ViewOfferClick,
               },
-              Object(V.l)("#TradeOffer_ViewTradeOffer")
+              Object(V.m)("#TradeOffer_ViewTradeOffer")
             )
           ),
           P.createElement("div", { style: { clear: "left" } })
@@ -84140,7 +84158,7 @@ var CLSTAMP = "7326401";
           let t = parseInt(this.GetArgument("appid")),
             n = this.GetArgument("classid"),
             a = this.GetArgument("instanceid"),
-            i = k.b.Init(Oe.a);
+            i = R.b.Init(Oe.a);
           i.Body().set_language(o.a.LANGUAGE), i.Body().set_appid(t);
           let r = i.Body().add_classes();
           r.set_classid(n),
@@ -84622,7 +84640,7 @@ var CLSTAMP = "7326401";
             P.createElement(
               "span",
               null,
-              Object(V.l)("#bbcode_steam_store_embed_Failed", a, o, i)
+              Object(V.m)("#bbcode_steam_store_embed_Failed", a, o, i)
             )
           );
         }
@@ -85012,7 +85030,7 @@ var CLSTAMP = "7326401";
             { className: xe.a.RoomEffectIcon },
             n.renderEffectIcon()
           ),
-          Object(V.l)(a, e.display_name),
+          Object(V.m)(a, e.display_name),
           P.createElement(
             "div",
             { style: { marginLeft: "auto", marginRight: "16px" } },
@@ -85563,7 +85581,7 @@ var CLSTAMP = "7326401";
                 "UIDisplayPrefs",
                 dn
               ).then((e) => {
-                Object(R.G)(() => {
+                Object(k.G)(() => {
                   this.m_UIDisplayPrefs = e;
                 });
               }),
@@ -85610,7 +85628,7 @@ var CLSTAMP = "7326401";
                       break;
                     }
                   return t
-                    ? Object(R.M)(
+                    ? Object(k.M)(
                         () => void 0 !== this.m_strLoaderWindowRestoreDetails
                       )
                     : Promise.resolve();
@@ -85776,17 +85794,17 @@ var CLSTAMP = "7326401";
           Object(Zt.c)(i, e, t, n);
       }
     }
-    Object(a.b)([R.C], mn.prototype, "m_UIDisplayPrefs", void 0),
-      Object(a.b)([R.C], mn.prototype, "m_bUpdatedBuildAvailable", void 0),
-      Object(a.b)([R.C], mn.prototype, "m_nSecondsOutOfDate", void 0),
+    Object(a.b)([k.C], mn.prototype, "m_UIDisplayPrefs", void 0),
+      Object(a.b)([k.C], mn.prototype, "m_bUpdatedBuildAvailable", void 0),
+      Object(a.b)([k.C], mn.prototype, "m_nSecondsOutOfDate", void 0),
       Object(a.b)(
-        [R.C],
+        [k.C],
         mn.prototype,
         "m_strLoaderWindowRestoreDetails",
         void 0
       ),
       Object(a.b)(
-        [R.C],
+        [k.C],
         mn.prototype,
         "m_bShowFriendsListOnLoadFromLoader",
         void 0
@@ -85799,8 +85817,8 @@ var CLSTAMP = "7326401";
       Object(a.b)([c.b], mn.prototype, "HandlePersonaStateMessage", null),
       Object(a.b)([c.b], mn.prototype, "HandleWebLoaderPostMessage", null),
       Object(a.b)([u.g], mn.prototype, "SetUserPersonaStateWhenReady", null),
-      Object(a.b)([R.n], mn.prototype, "UIDisplayPrefs", null),
-      Object(a.b)([R.k], mn.prototype, "SetUIDisplayPref", null),
+      Object(a.b)([k.n], mn.prototype, "UIDisplayPrefs", null),
+      Object(a.b)([k.k], mn.prototype, "SetUIDisplayPref", null),
       Object(a.b)([u.g], mn.prototype, "ShowPopupFriendsList", null),
       Object(a.b)([u.g], mn.prototype, "ShowChatUnreadMessages", null);
     class hn extends u.d {
@@ -85819,7 +85837,7 @@ var CLSTAMP = "7326401";
           )),
           (this.m_FriendChatBBCodeParser = new ge.d(
             Object.assign(et(), {
-              invite: Rt,
+              invite: kt,
               gameinvite: At,
               lobbyinvite: Tt,
               tradeoffer: Bt,
@@ -87126,8 +87144,8 @@ var CLSTAMP = "7326401";
     window.g_BroadcastChatStore = w;
     n("S9sc"), n("NMF7"), n("fS2Z");
     var D = n("Ia+j"),
-      k = n("FEDH");
-    class R {
+      R = n("FEDH");
+    class k {
       constructor() {
         (this.m_mapBroadcasterSteamIDToEvents = new Map()),
           (this.m_mapBroadcasterSteamIDData = new Map());
@@ -87144,13 +87162,13 @@ var CLSTAMP = "7326401";
           if (null === a) break;
           const i = a[1],
             o = a[2],
-            r = R.GetBBCodeParam(i, "steamid"),
+            r = k.GetBBCodeParam(i, "steamid"),
             s = {
               steamID: r ? new b.a(r) : void 0,
-              name: R.GetBBCodeParam(i, "name"),
-              title: R.GetBBCodeParam(i, "title"),
-              company: R.GetBBCodeParam(i, "company"),
-              photo: R.GetBBCodeParam(i, "photo"),
+              name: k.GetBBCodeParam(i, "name"),
+              title: k.GetBBCodeParam(i, "title"),
+              company: k.GetBBCodeParam(i, "company"),
+              photo: k.GetBBCodeParam(i, "photo"),
               bio: o,
             };
           n.push(s);
@@ -87159,7 +87177,7 @@ var CLSTAMP = "7326401";
       }
       static ParseEventModelPresenters(e, t) {
         const n = e.GetDescriptionWithFallback(t);
-        return R.ParseCalendarEventPresentersFromText(n);
+        return k.ParseCalendarEventPresentersFromText(n);
       }
       static ParseEventAppReferencesFromText(e) {
         const t = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
@@ -87175,7 +87193,7 @@ var CLSTAMP = "7326401";
       static ParseEventModelAppReferences(e, t) {
         var n;
         const a = e.GetDescriptionWithFallback(t),
-          i = R.ParseEventAppReferencesFromText(a);
+          i = k.ParseEventAppReferencesFromText(a);
         if (
           null === (n = e.jsondata) || void 0 === n
             ? void 0
@@ -87189,9 +87207,9 @@ var CLSTAMP = "7326401";
           const t = D.a.GetTimeNowWithOverride(),
             n = e.GetCalendarItemsInTimeRange(t - 3600, t);
           for (const e of n.rgCalendarItems)
-            k.a.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+            R.a.QueueLoadPartnerEvent(e.clanid, e.unique_id);
           const a = n.rgCalendarItems.map((e) =>
-              k.a.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+              R.a.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                 b.a.InitFromClanID(e.clanid),
                 e.unique_id,
                 0
@@ -87217,7 +87235,7 @@ var CLSTAMP = "7326401";
         let n = new Map();
         for (const a of e) {
           if (!a) continue;
-          const e = R.ParseEventModelPresenters(a, t);
+          const e = k.ParseEventModelPresenters(a, t);
           for (const t of e)
             t.steamID && n.set(t.steamID.ConvertTo64BitString(), t);
         }
@@ -87236,7 +87254,7 @@ var CLSTAMP = "7326401";
       static BuildAppIDRefsForEventList(e, t) {
         const n = new Set();
         for (const a of e) {
-          R.ParseEventModelAppReferences(a, t).forEach((e) => n.add(e));
+          k.ParseEventModelAppReferences(a, t).forEach((e) => n.add(e));
         }
         return Array.from(n);
       }
@@ -87244,8 +87262,8 @@ var CLSTAMP = "7326401";
         e.forEach((e, n) => {
           if (this.IsBroadcasterAlreadyBound(n, e)) return;
           const a = {
-            m_mapPresenters: R.BuildSteamIDToPresenterMapFromEventList(e, t),
-            m_rgAppIDs: R.BuildAppIDRefsForEventList(e, t),
+            m_mapPresenters: k.BuildSteamIDToPresenterMapFromEventList(e, t),
+            m_rgAppIDs: k.BuildAppIDRefsForEventList(e, t),
           };
           this.m_mapBroadcasterSteamIDData.set(n, a),
             this.m_mapBroadcasterSteamIDToEvents.set(
@@ -87276,8 +87294,8 @@ var CLSTAMP = "7326401";
           : t.m_rgAppIDs;
       }
     }
-    Object(a.b)([i.C], R.prototype, "m_mapBroadcasterSteamIDData", void 0);
-    const A = new R();
+    Object(a.b)([i.C], k.prototype, "m_mapBroadcasterSteamIDData", void 0);
+    const A = new k();
     n("1KZt");
     var T = n("Jdiq"),
       M = n("UDpV"),
@@ -88879,7 +88897,7 @@ var CLSTAMP = "7326401";
   ieu3: function (e, t, n) {
     "use strict";
     n.d(t, "a", function () {
-      return R;
+      return k;
     }),
       n.d(t, "b", function () {
         return A;
@@ -88912,8 +88930,8 @@ var CLSTAMP = "7326401";
       E = n("VoDG"),
       w = (n("fwE1"), n("7sd/")),
       D = n("Z578"),
-      k = n("QHER");
-    let R = class extends m.Component {
+      R = n("QHER");
+    let k = class extends m.Component {
       constructor(e) {
         super(e), (this.state = { ulSelectedGroupID: "" });
       }
@@ -88954,7 +88972,7 @@ var CLSTAMP = "7326401";
               m.createElement("br", null),
               !t &&
                 !v.a.IN_GAMEPADUI &&
-                Object(g.l)(
+                Object(g.m)(
                   "#Chat_ChatRoomList_Empty_How",
                   m.createElement(
                     S.b,
@@ -88996,9 +89014,9 @@ var CLSTAMP = "7326401";
         );
       }
     };
-    Object(a.b)([b.b], R.prototype, "BindDiv", null),
-      Object(a.b)([b.b], R.prototype, "OnGroupSelected", null),
-      (R = Object(a.b)([d.a], R));
+    Object(a.b)([b.b], k.prototype, "BindDiv", null),
+      Object(a.b)([b.b], k.prototype, "OnGroupSelected", null),
+      (k = Object(a.b)([d.a], k));
     let A = class extends m.Component {
       constructor(e) {
         super(e),
@@ -89124,7 +89142,7 @@ var CLSTAMP = "7326401";
                 )
               : void 0,
           o = this.props.group.hasVoiceRoom;
-        const c = Object(k.a)(
+        const c = Object(R.a)(
           this.props.className,
           "ChatRoomListGroupItem",
           !o && "NoChannels",
@@ -89376,6 +89394,7 @@ var CLSTAMP = "7326401";
       BlockQuote: "eventbbcodeparser_BlockQuote_EIjUK",
       SocialLink: "eventbbcodeparser_SocialLink_3rUr0",
       SocialIcon: "eventbbcodeparser_SocialIcon_3hwaa",
+      LocalizeBlock: "eventbbcodeparser_LocalizeBlock_2OAJt",
     };
   },
   jc9z: function (e, t, n) {
@@ -89716,7 +89735,7 @@ var CLSTAMP = "7326401";
       return w;
     }),
       n.d(t, "a", function () {
-        return R;
+        return k;
       });
     var a = n("mrSG"),
       i = (n("5Nu3"), n("rsEv")),
@@ -89966,7 +89985,7 @@ var CLSTAMP = "7326401";
         )
       );
     }
-    function k(e) {
+    function R(e) {
       let { vecPendingChats: t } = e;
       if (0 == t.length) return null;
       let n = !1;
@@ -89995,7 +90014,7 @@ var CLSTAMP = "7326401";
         )
       );
     }
-    let R = class extends s.Component {
+    let k = class extends s.Component {
       constructor(e) {
         super(e);
       }
@@ -90038,7 +90057,7 @@ var CLSTAMP = "7326401";
           });
         if (!this.props.chats.VoiceChat.IsAnyVoiceActive() || !e)
           return 0 != a.length
-            ? s.createElement(k, { vecPendingChats: a })
+            ? s.createElement(R, { vecPendingChats: a })
             : s.createElement(
                 "div",
                 { className: u.a.Title },
@@ -90076,7 +90095,7 @@ var CLSTAMP = "7326401";
         return s.createElement(
           s.Fragment,
           null,
-          s.createElement(k, { vecPendingChats: a }),
+          s.createElement(R, { vecPendingChats: a }),
           s.createElement(
             "div",
             { className: u.a.Title },
@@ -90228,9 +90247,9 @@ var CLSTAMP = "7326401";
         );
       }
     };
-    Object(a.b)([S.b], R.prototype, "OnInputGainChanged", null),
-      Object(a.b)([S.b], R.prototype, "OnOutputGainChanged", null),
-      (R = Object(a.b)([r.a], R));
+    Object(a.b)([S.b], k.prototype, "OnInputGainChanged", null),
+      Object(a.b)([S.b], k.prototype, "OnOutputGainChanged", null),
+      (k = Object(a.b)([r.a], k));
   },
   ldtI: function (e, t, n) {
     "use strict";
@@ -90356,7 +90375,7 @@ var CLSTAMP = "7326401";
         return D;
       }),
       n.d(t, "Q", function () {
-        return k;
+        return R;
       }),
       n.d(t, "I", function () {
         return N;
@@ -90603,7 +90622,7 @@ var CLSTAMP = "7326401";
         let D = {};
         void 0 !== this.state.m_CopiedYPos &&
           (D.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-        let k = o.createElement(
+        let R = o.createElement(
           o.Fragment,
           null,
           o.createElement(
@@ -90676,7 +90695,7 @@ var CLSTAMP = "7326401";
                   ),
                   " "
                 ),
-                k,
+                R,
                 this.state.m_bNumberBelowMinRange
                   ? o.createElement(
                       "div",
@@ -90724,7 +90743,7 @@ var CLSTAMP = "7326401";
                   : null
               )
             )
-          : k;
+          : R;
       }
     }
     Object(i.b)([c.b], f.prototype, "OnInputRef", null),
@@ -91001,7 +91020,7 @@ var CLSTAMP = "7326401";
           )
         );
       },
-      k = (e) => {
+      R = (e) => {
         const { value: t } = e,
           { value: n, setValue: a } = r.a.useContext(w),
           i = t === n;
@@ -91014,7 +91033,7 @@ var CLSTAMP = "7326401";
           e.children
         );
       };
-    var R = n("8o0Y"),
+    var k = n("8o0Y"),
       A = n("EGkk"),
       T = n("MDtT"),
       M = n.n(T),
@@ -91212,7 +91231,7 @@ var CLSTAMP = "7326401";
             null === (e = this.props.contextMenuPositionOptions) || void 0 === e
               ? void 0
               : e.onCancel;
-        (this.m_iMenuInstance = Object(R.a)(
+        (this.m_iMenuInstance = Object(k.a)(
           o.createElement(Q, {
             rgOptions: this.props.rgOptions,
             onValueSelected: this.OnValueSelected,
@@ -92279,8 +92298,8 @@ var CLSTAMP = "7326401";
         E = "below" == O && !!s,
         w = null != d ? d : "shift-children-below",
         D = !!(I.onClick || I.onActivate || I.focusable),
-        k = null != r || null != n || (y && null != s),
-        R = null != m ? m : "min",
+        R = null != r || null != n || (y && null != s),
+        k = null != m ? m : "min",
         A = null != u ? u : "standard",
         T = null != p ? p : "standard",
         M = null != b ? b : "standard",
@@ -92315,7 +92334,7 @@ var CLSTAMP = "7326401";
               f,
               Ee.a.Field,
               _ && Ee.a.Disabled,
-              k && Ee.a.WithFirstRow,
+              R && Ee.a.WithFirstRow,
               y && Ee.a.WithChildrenInline,
               E && Ee.a.WithChildrenBelow,
               "center" == F && Ee.a.VerticalAlignCenter,
@@ -92323,8 +92342,8 @@ var CLSTAMP = "7326401";
               !!a && Ee.a.WithDescription,
               "standard" == M && Ee.a.WithBottomSeparatorStandard,
               "thick" == M && Ee.a.WithBottomSeparatorThick,
-              "fixed" == R && Ee.a.ChildrenWidthFixed,
-              "max" == R && Ee.a.ChildrenWidthGrow,
+              "fixed" == k && Ee.a.ChildrenWidthFixed,
+              "max" == k && Ee.a.ChildrenWidthGrow,
               "standard" == A && Ee.a.ExtraPaddingOnChildrenBelow,
               "standard" == T && Ee.a.StandardPadding,
               "compact" == T && Ee.a.CompactPadding,
@@ -92334,7 +92353,7 @@ var CLSTAMP = "7326401";
             style: { "--indent-level": L },
           }
         ),
-        k &&
+        R &&
           o.createElement(
             "div",
             { className: Ee.a.FieldLabelRow },
@@ -92387,7 +92406,7 @@ var CLSTAMP = "7326401";
           o.createElement(a.d, Object.assign({}, h, { ref: p }))
         );
       }),
-      ke = o.forwardRef(function (e, t) {
+      Re = o.forwardRef(function (e, t) {
         const {
             label: n,
             description: a,
@@ -92430,7 +92449,7 @@ var CLSTAMP = "7326401";
           o.createElement(f, Object.assign({}, m, { ref: u }))
         );
       });
-    function Re(e) {
+    function ke(e) {
       var t, n;
       const a = null !== (t = e.alignItems) && void 0 !== t ? t : "left",
         i = null !== (n = e.spacing) && void 0 !== n ? n : "standard";
@@ -92462,7 +92481,7 @@ var CLSTAMP = "7326401";
       return o.createElement(
         we,
         Object.assign({ childrenLayout: "below" }, r),
-        o.createElement(Re, Object.assign({}, s))
+        o.createElement(ke, Object.assign({}, s))
       );
     }
     o.forwardRef(function (e, t) {
@@ -92629,7 +92648,7 @@ var CLSTAMP = "7326401";
         r = Object(i.c)(e, ["className"]),
         s = null !== (n = e.value) && void 0 !== n ? n : "";
       return o.createElement(
-        ke,
+        Re,
         Object.assign(
           {
             autoComplete: "off",
@@ -93022,7 +93041,7 @@ var CLSTAMP = "7326401";
               Object(l.f)("#ResetToDefault")
             )
           );
-          Object(R.a)(t, e);
+          Object(k.a)(t, e);
         }
       }
       render() {
@@ -93312,20 +93331,20 @@ var CLSTAMP = "7326401";
               return m;
           }
         })(e),
-        [k, R] = o.useState(!1),
-        A = () => R(!0),
+        [R, k] = o.useState(!1),
+        A = () => k(!0),
         T = (t) => {
           D(t) &&
             (e.onChange && e.onChange(t),
             e.onChangeComplete && e.onChangeComplete(t)),
-            R(!1);
+            k(!1);
         };
       o.useLayoutEffect(() => {
         var e, t;
-        !k &&
+        !R &&
           (null === (e = E.current) || void 0 === e ? void 0 : e.BHasFocus()) &&
           (null === (t = y.current) || void 0 === t || t.TakeFocus());
-      }, [E, y, k]);
+      }, [E, y, R]);
       let M = t;
       f
         ? (M = o.createElement(
@@ -93334,7 +93353,7 @@ var CLSTAMP = "7326401";
             o.createElement("div", { className: Ve.a.LabelText }, e.label),
             o.createElement(tt, {
               navRef: E,
-              editing: k,
+              editing: R,
               renderedValue: w,
               valueSuffix: e.valueSuffix,
               onClick: A,
@@ -93395,7 +93414,7 @@ var CLSTAMP = "7326401";
         },
         o.createElement(
           $e,
-          Object.assign({ ref: B, notchCount: g, focusable: !k, navRef: y }, I)
+          Object.assign({ ref: B, notchCount: g, focusable: !R, navRef: y }, I)
         )
       );
     }
@@ -93471,8 +93490,8 @@ var CLSTAMP = "7326401";
         t && !w.current && E(), (w.current = t);
       }, [p, t, E]);
       const D = f || (C && !I && S.length > 0 && "-" != S),
-        k = Object(g.a)(Ve.a.DescriptionValue, D && Ve.a.RedBorder),
-        [R, A] = o.useState(0),
+        R = Object(g.a)(Ve.a.DescriptionValue, D && Ve.a.RedBorder),
+        [k, A] = o.useState(0),
         [T, M] = o.useState(0),
         G = o.useCallback(
           (e) => {
@@ -93490,10 +93509,10 @@ var CLSTAMP = "7326401";
             t.Node().ForceMeasureFocusRing());
       }, [T]);
       const F = C ? S : n,
-        B = C ? Math.max(R, T) : R;
+        B = C ? Math.max(k, T) : k;
       return o.createElement(
         "div",
-        { className: k },
+        { className: R },
         o.createElement(
           "div",
           { className: Ve.a.FakeEditableValue, ref: L },
@@ -94022,7 +94041,7 @@ var CLSTAMP = "7326401";
         let t = r.a.CMInterface.GetServerRTime32() - this.last_seen_online;
         return t < 60
           ? Object(s.f)("#PersonaStateLastSeen_JustNow")
-          : Object(s.f)("#PersonaStateLastSeen", Object(s.n)(t));
+          : Object(s.f)("#PersonaStateLastSeen", Object(s.o)(t));
       }
       GetLocalizedOnlineStatus() {
         switch (this.m_ePersonaState) {
@@ -94131,20 +94150,20 @@ var CLSTAMP = "7326401";
   m94p: function (e, t, n) {
     "use strict";
     n.d(t, "a", function () {
-      return c;
+      return l;
     });
     var a = n("mrSG"),
       i = n("cDcd"),
       o = n.n(i),
       r = (n("fwE1"), n("bwxv"), n("7ERL")),
-      s = (n("B/Rm"), n("VoDG"));
-    n("ZiY0");
-    const c = o.a.forwardRef(function (e, t) {
+      s = (n("B/Rm"), n("VoDG")),
+      c = n("ZiY0");
+    const l = o.a.forwardRef(function (e, t) {
       const {
           onExplicitFocusLevelChanged: n,
           onOKButton: i,
           onCancelButton: c,
-          navRef: d,
+          navRef: l,
           focusable: m,
         } = e,
         h = Object(a.c)(e, [
@@ -94155,13 +94174,13 @@ var CLSTAMP = "7326401";
           "focusable",
         ]),
         u = o.a.useRef(),
-        { fnOnOKButton: p, fnOnCancelButton: _ } = l({
+        { fnOnOKButton: p, fnOnCancelButton: _ } = d({
           navRefPanel: u,
           onOKButton: i,
           onCancelButton: c,
           onExplicitFocusLevelChanged: n,
         }),
-        g = Object(r.h)(d, u);
+        g = Object(r.h)(l, u);
       return o.a.createElement(
         s.a,
         Object.assign({}, h, {
@@ -94173,7 +94192,37 @@ var CLSTAMP = "7326401";
         })
       );
     });
-    function l(e) {
+    o.a.forwardRef(function (e, t) {
+      const { onOKButton: n, onCancelButton: i, navRef: s, focusable: l } = e,
+        m = Object(a.c)(e, [
+          "onOKButton",
+          "onCancelButton",
+          "navRef",
+          "focusable",
+        ]),
+        h = o.a.useRef(),
+        u = o.a.useRef(),
+        p = o.a.useCallback((e, t) => e.FocusVisibleChild(), []),
+        { fnOnOKButton: _, fnOnCancelButton: g } = d({
+          navRefPanel: h,
+          onOKButton: n,
+          onCancelButton: i,
+          fnFocusChildren: p,
+        }),
+        b = Object(r.h)(u, t),
+        f = Object(r.h)(s, h);
+      return o.a.createElement(
+        c.b,
+        Object.assign({}, m, {
+          onOKButton: (e) => _(e),
+          onCancelButton: g,
+          navRef: f,
+          ref: b,
+          focusable: !1 !== l,
+        })
+      );
+    });
+    function d(e) {
       let {
         navRefPanel: t,
         onOKButton: n,
@@ -94181,7 +94230,7 @@ var CLSTAMP = "7326401";
         onExplicitFocusLevelChanged: i,
         fnFocusChildren: r,
       } = e;
-      r = null != r ? r : d;
+      r = null != r ? r : m;
       return {
         fnOnOKButton: o.a.useCallback(
           (e) => {
@@ -94205,7 +94254,7 @@ var CLSTAMP = "7326401";
         ),
       };
     }
-    function d(e, t) {
+    function m(e, t) {
       return e.ChildTakeFocus(t);
     }
   },
@@ -94759,7 +94808,7 @@ var CLSTAMP = "7326401";
         return D;
       }),
       n.d(t, "f", function () {
-        return k;
+        return R;
       });
     var a = n("mrSG"),
       i = n("cDcd"),
@@ -95436,7 +95485,7 @@ var CLSTAMP = "7326401";
         })
       );
     }
-    function k(e) {
+    function R(e) {
       return i.createElement(
         "svg",
         {
@@ -95462,23 +95511,26 @@ var CLSTAMP = "7326401";
       n.d(t, "f", function () {
         return m;
       }),
-      n.d(t, "l", function () {
+      n.d(t, "m", function () {
         return h;
       }),
       n.d(t, "k", function () {
         return u;
       }),
-      n.d(t, "a", function () {
+      n.d(t, "l", function () {
         return _;
       }),
-      n.d(t, "d", function () {
+      n.d(t, "a", function () {
         return b;
       }),
+      n.d(t, "d", function () {
+        return C;
+      }),
       n.d(t, "c", function () {
-        return f;
+        return S;
       }),
       n.d(t, "e", function () {
-        return C;
+        return v;
       });
     var a = n("cDcd"),
       i = n("0N1H"),
@@ -95496,10 +95548,10 @@ var CLSTAMP = "7326401";
       n.d(t, "j", function () {
         return l.e;
       }),
-      n.d(t, "m", function () {
+      n.d(t, "n", function () {
         return l.f;
       }),
-      n.d(t, "n", function () {
+      n.d(t, "o", function () {
         return l.g;
       }),
       n.d(t, "i", function () {
@@ -95608,11 +95660,11 @@ var CLSTAMP = "7326401";
       }
     }
     function m(e, ...t) {
-      let n = C.LocalizeString(e);
-      return void 0 === n ? e : p(n, ...t);
+      let n = v.LocalizeString(e);
+      return void 0 === n ? e : g(n, ...t);
     }
     function h(e, ...t) {
-      let n = C.LocalizeString(e);
+      let n = v.LocalizeString(e);
       if (void 0 === n) return e;
       let i,
         o = [],
@@ -95625,10 +95677,30 @@ var CLSTAMP = "7326401";
       }
       return o.push(n.substr(s)), a.createElement(a.Fragment, null, ...o);
     }
-    function u(e, t, ...n) {
-      return 1 === t || "1" === t ? m(e, t, ...n) : m(e + "_Plural", t, ...n);
+    function u(e, ...t) {
+      let n = v.LocalizeString(e);
+      return void 0 === n ? e : p(n, ...t);
     }
     function p(e, ...t) {
+      let n,
+        i = [],
+        o = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
+        r = 0;
+      for (; (n = o.exec(e)); ) {
+        (r += n[0].length), i.push(n[1]);
+        let e = parseInt(n[2]),
+          o = n[3] || "",
+          s = (e >= 1 && e <= t.length ? t[e - 1] : null)
+            ? a.cloneElement(t[e - 1], {}, [o])
+            : o;
+        i.push(s);
+      }
+      return i.push(e.substr(r)), a.createElement(a.Fragment, null, ...i);
+    }
+    function _(e, t, ...n) {
+      return 1 === t || "1" === t ? m(e, t, ...n) : m(e + "_Plural", t, ...n);
+    }
+    function g(e, ...t) {
       return 0 == t.length
         ? e
         : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -95639,7 +95711,7 @@ var CLSTAMP = "7326401";
             return e;
           }));
     }
-    class _ {
+    class b {
       static Set(e, t, n) {
         if (e.length <= t) {
           if (t >= 30) return e;
@@ -95652,12 +95724,12 @@ var CLSTAMP = "7326401";
       }
       static GetWithFallback(e, t) {
         if (e) {
-          return _.Get(e, t) || _.Get(e, d.GetELanguageFallback(t));
+          return b.Get(e, t) || b.Get(e, d.GetELanguageFallback(t));
         }
         return null;
       }
     }
-    const g = {
+    const f = {
         english: "en",
         german: "de",
         french: "fr",
@@ -95690,7 +95762,7 @@ var CLSTAMP = "7326401";
         sc_schinese: "zh-cn",
         koreana: "ko",
       },
-      b = {
+      C = {
         "en-US": 0,
         "de-DE": 1,
         "fr-FR": 2,
@@ -95721,11 +95793,11 @@ var CLSTAMP = "7326401";
         "es-419": 27,
         "vi-VN": 28,
       };
-    function f() {
-      return g[r.d.LANGUAGE] || null;
+    function S() {
+      return f[r.d.LANGUAGE] || null;
     }
-    const C = new d();
-    window.LocalizationManager = C;
+    const v = new d();
+    window.LocalizationManager = v;
   },
   osPi: function (e, t, n) {
     e.exports = {
@@ -96587,7 +96659,7 @@ var CLSTAMP = "7326401";
                   r.createElement(
                     "div",
                     { className: "mutualFriendLabel plusOthersLabel" },
-                    Object(d.k)(
+                    Object(d.l)(
                       "#FriendGroup_MutualFriends_Others",
                       i.length - t
                     )
@@ -98337,7 +98409,7 @@ var CLSTAMP = "7326401";
         )
       );
     }
-    function k(e) {
+    function R(e) {
       const { title: t, onFilterChange: n, filter: i, onSubmit: o } = e,
         r = Object(a.c)(e, ["title", "onFilterChange", "filter", "onSubmit"]);
       return s.a.createElement(
@@ -98355,7 +98427,7 @@ var CLSTAMP = "7326401";
         s.a.createElement(T, { value: i, onChange: n, onSubmit: o })
       );
     }
-    function R(e) {
+    function k(e) {
       const { onFilterChange: t, filter: n, sections: i, title: o } = e;
       return s.a.createElement(
         s.a.Fragment,
@@ -98851,7 +98923,7 @@ var CLSTAMP = "7326401";
                       )
                 ),
             }),
-          s.a.createElement(R, {
+          s.a.createElement(k, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: i,
             sections: o,
@@ -98873,7 +98945,7 @@ var CLSTAMP = "7326401";
           { filter: i } = this.state,
           o = !i && a ? e.GetFlairListByGroupID(a) : e.emoticon_list,
           r = d.a.FilterEmoticons(o, i).slice(0, 1e3);
-        return s.a.createElement(k, {
+        return s.a.createElement(R, {
           title: Object(_.f)("#AddonPicker_Emoticons"),
           items: r,
           onItemSelect: n,
@@ -98909,7 +98981,7 @@ var CLSTAMP = "7326401";
         s.a.createElement(
           M,
           null,
-          Object(_.l)(
+          Object(_.m)(
             "#AddonPicker_AcquireAtPointsShopOrMarket",
             s.a.createElement(
               F.c,
@@ -98933,7 +99005,7 @@ var CLSTAMP = "7326401";
         const { store: e, onItemSelect: t } = this.props,
           { filter: n } = this.state,
           a = d.a.FilterStickers(e.GetStickerList(), n);
-        return s.a.createElement(k, {
+        return s.a.createElement(R, {
           title: Object(_.f)("#EmoticonPicker_StickerHeading"),
           items: a,
           onItemSelect: t,
@@ -98963,7 +99035,7 @@ var CLSTAMP = "7326401";
                   s.a.createElement(
                     M,
                     null,
-                    Object(_.l)(
+                    Object(_.m)(
                       "#AddonPicker_AcquireAtPointsShop",
                       s.a.createElement(
                         F.c,
@@ -98984,7 +99056,7 @@ var CLSTAMP = "7326401";
         const { store: e, effectSettings: t, onItemSelect: n } = this.props,
           { filter: a } = this.state,
           i = e.GetEffectList().filter(({ name: e }) => e.indexOf(a) > -1);
-        return s.a.createElement(k, {
+        return s.a.createElement(R, {
           title: Object(_.f)("#EmoticonPicker_EffectHeading"),
           items: i,
           onItemSelect: n,
@@ -99015,7 +99087,7 @@ var CLSTAMP = "7326401";
                   s.a.createElement(
                     M,
                     null,
-                    Object(_.l)(
+                    Object(_.m)(
                       "#AddonPicker_AcquireAtPointsShop",
                       s.a.createElement(
                         F.c,
@@ -99065,7 +99137,7 @@ var CLSTAMP = "7326401";
                       )
                 ),
             }),
-          s.a.createElement(R, {
+          s.a.createElement(k, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: i,
             sections: [
@@ -99104,7 +99176,7 @@ var CLSTAMP = "7326401";
             flairGroupID: a,
           } = this.props,
           { filter: i } = this.state;
-        return s.a.createElement(R, {
+        return s.a.createElement(k, {
           onFilterChange: (e) => this.setState({ filter: e }),
           filter: i,
           sections: [
@@ -101380,9 +101452,9 @@ var CLSTAMP = "7326401";
         case s.a.RightBumper:
           return r.createElement(D, { bIsKnockout: n, className: t });
         case s.a.LeftTrigger:
-          return r.createElement(k, { bIsKnockout: n, className: t });
-        case s.a.RightTrigger:
           return r.createElement(R, { bIsKnockout: n, className: t });
+        case s.a.RightTrigger:
+          return r.createElement(k, { bIsKnockout: n, className: t });
         case s.a.LeftStick:
           return r.createElement(G, { bIsKnockout: n, className: t });
         case s.a.RightStick:
@@ -102103,7 +102175,7 @@ var CLSTAMP = "7326401";
             })
           );
     }
-    function k(e) {
+    function R(e) {
       var { bIsKnockout: t } = e,
         n = Object(o.c)(e, ["bIsKnockout"]);
       return t
@@ -102151,7 +102223,7 @@ var CLSTAMP = "7326401";
             })
           );
     }
-    function R(e) {
+    function k(e) {
       var { bIsKnockout: t } = e,
         n = Object(o.c)(e, ["bIsKnockout"]);
       return t
@@ -103090,7 +103162,7 @@ var CLSTAMP = "7326401";
   y4mg: function (e, t, n) {
     "use strict";
     n.d(t, "a", function () {
-      return C;
+      return v;
     });
     var a = n("cDcd"),
       i = n.n(a),
@@ -103107,30 +103179,32 @@ var CLSTAMP = "7326401";
       _ = n("332Q"),
       g = n("1n9R"),
       b = n("7ERL"),
-      f = n("Hlxn");
-    const C = (e) => {
+      f = n("Hlxn"),
+      C = n("YT6E"),
+      S = n.n(C);
+    const v = (e) => {
         const {
             label: t,
             eSort: n,
             onChange: h,
             rgPickedFriends: C,
             excludeFriend: v,
-            autoFocus: I,
-            bDropInvite: O,
-            renderChosenFriend: y,
+            autoFocus: O,
+            bDropInvite: y,
+            renderChosenFriend: E,
           } = e,
-          [E, w] = Object(a.useState)(""),
-          [D, k] = Object(a.useState)(null),
-          R = (t) => {
-            e.onFriendPicked && e.onFriendPicked(t), h && h(C.concat(t)), w("");
-          },
+          [w, D] = Object(a.useState)(""),
+          [R, k] = Object(a.useState)(null),
           A = (t) => {
+            e.onFriendPicked && e.onFriendPicked(t), h && h(C.concat(t)), D("");
+          },
+          T = (t) => {
             if ((e.onFriendUnpicked && e.onFriendUnpicked(t), h)) {
               const e = C.findIndex((e) => e.accountid === t.accountid);
               -1 !== e && h(C.slice(0, e).concat(C.slice(e + 1)));
             }
           },
-          T = Object(a.useMemo)(() => {
+          M = Object(a.useMemo)(() => {
             const e = c.f.FriendStore.all_friends.filter(
                 (e) =>
                   (!v || !v(e)) && !C.some((t) => t.accountid === e.accountid)
@@ -103151,58 +103225,58 @@ var CLSTAMP = "7326401";
             }
             return e;
           }, [v, n, C]),
-          M = Object(a.useMemo)(() => {
-            const e = E && E.trim().toLocaleLowerCase(),
+          G = Object(a.useMemo)(() => {
+            const e = w && w.trim().toLocaleLowerCase(),
               t = [];
-            for (let n = 0; n < T.length && t.length < 500; n++) {
-              const a = T[n];
+            for (let n = 0; n < M.length && t.length < 500; n++) {
+              const a = M[n];
               (e && !a.BMatchesSearchString(e, !1)) || t.push(a);
             }
             return t;
-          }, [E, T]);
+          }, [w, M]);
         i.a.useEffect(() => {
-          k(M.length > 0 && E.length > 0 ? M[0] : null);
-        }, [M]);
-        const G = Object(a.useCallback)((e) => {
+          k(G.length > 0 && w.length > 0 ? G[0] : null);
+        }, [G]);
+        const L = Object(a.useCallback)((e) => {
             e &&
               !g.d.IN_GAMEPADUI &&
               e.scrollIntoView({ behavior: "auto", block: "nearest" });
           }, []),
-          L = () => {
+          F = () => {
             const e = C[C.length - 1];
-            e && A(e);
+            e && T(e);
           },
-          F = C.length > 0,
-          [B, j] = i.a.useState(!1),
-          N = Object(u.a)(
+          B = C.length > 0,
+          [j, N] = i.a.useState(!1),
+          P = Object(u.a)(
             "FriendPicker",
-            F && "FriendPicker_FriendsChosen",
-            B && "FriendPicker_Focus"
+            B && "FriendPicker_FriendsChosen",
+            j && "FriendPicker_Focus"
           ),
-          P = y || S,
-          x = C.map((e) =>
-            i.a.createElement(P, {
+          x = E || I,
+          V = C.map((e) =>
+            i.a.createElement(x, {
               friend: e,
               key: e.accountid,
-              onClick: () => A(e),
+              onClick: () => T(e),
             })
           ),
-          V = i.a.useRef(),
-          U = M.map((e, t) => {
-            const n = !g.d.IN_GAMEPADUI && e == D,
+          U = i.a.useRef(),
+          H = G.map((e, t) => {
+            const n = !g.d.IN_GAMEPADUI && e == R,
               a = Object(u.a)("FriendPicker_SuggestedFriend", n && "Focus");
             return i.a.createElement(
               o.a,
               {
                 className: a,
-                onActivate: () => R(e),
+                onActivate: () => A(e),
                 onMouseUp: () => {
                   var t;
-                  k(e), null === (t = V.current) || void 0 === t || t.Focus();
+                  k(e), null === (t = U.current) || void 0 === t || t.Focus();
                 },
                 key: e.accountid,
                 "data-index": t,
-                ref: n ? G : void 0,
+                ref: n ? L : void 0,
               },
               i.a.createElement(l.c, {
                 noActions: !0,
@@ -103211,77 +103285,94 @@ var CLSTAMP = "7326401";
               })
             );
           }),
-          H = i.a.useRef(),
-          [W, z] = i.a.useState(!0),
-          [q, K] = i.a.useState(!1),
-          Z = () => {
-            const e = H.current,
-              t = null == e || e.scrollTop <= 1;
-            t != W && z(t);
-            const n =
-              null == e || e.scrollHeight - e.scrollTop <= e.clientHeight + 1;
-            n != q && K(n);
-          };
+          W = i.a.useRef();
         i.a.useLayoutEffect(() => {
           var e;
-          null === (e = H.current) ||
+          null === (e = W.current) ||
             void 0 === e ||
             e.scrollTo({ top: 0, behavior: "auto" });
-        }, [M]),
-          i.a.useLayoutEffect(Z);
-        const { strMinHeightStyle: Q, refForResizeObserver: Y } = Object(b.i)();
+        }, [G]);
+        const z = (function () {
+            const e = a.useRef(),
+              [t, n] = a.useState(!0),
+              [i, o] = a.useState(!1),
+              r = () => {
+                const a = e.current,
+                  r = null == a || a.scrollTop <= 1;
+                r != t && n(r);
+                const s =
+                  null == a ||
+                  a.scrollHeight - a.scrollTop <= a.clientHeight + 1;
+                s != i && o(s);
+              },
+              s = Object(u.a)(
+                S.a.ScrollFade,
+                t && S.a.ScrolledToTop,
+                i && S.a.ScrolledToBottom
+              );
+            return (
+              a.useLayoutEffect(r),
+              {
+                refForScrollable: e,
+                strClassNamesForScrollable: s,
+                fnOnScroll: r,
+              }
+            );
+          })(),
+          { strMinHeightStyle: q, refForResizeObserver: K } = Object(b.i)(),
+          Z = Object(b.h)(W, z.refForScrollable);
         return i.a.createElement(
           o.a,
-          { className: N, onSecondaryButton: L },
+          { className: P, onSecondaryButton: F },
           i.a.createElement(
             d.K,
             {
-              onChange: ({ currentTarget: { value: e } }) => w(e),
+              onChange: ({ currentTarget: { value: e } }) => D(e),
               onKeyDown: (e) => {
                 if (13 === e.keyCode)
                   ((!g.d.IN_GAMEPADUI && e.currentTarget.value.trim().length) ||
-                    null != D) &&
-                    (e.preventDefault(), D && R(D));
+                    null != R) &&
+                    (e.preventDefault(), R && A(R));
                 else if (
                   8 === e.keyCode &&
                   0 === e.currentTarget.selectionEnd &&
                   C.length > 0
                 )
-                  e.preventDefault(), L();
+                  e.preventDefault(), F();
                 else if (
                   !g.d.IN_GAMEPADUI &&
                   (38 == e.keyCode ||
                     40 == e.keyCode ||
                     34 == e.keyCode ||
                     33 == e.keyCode) &&
-                  M.length > 0
+                  G.length > 0
                 ) {
                   e.preventDefault();
-                  const t = M.findIndex((e) => e == D);
+                  const t = G.findIndex((e) => e == R);
                   let n;
                   38 == e.keyCode
                     ? (n = t - 1)
                     : 33 == e.keyCode
                     ? (n = Math.max(0, t - 5))
                     : 34 == e.keyCode
-                    ? (n = Math.min(M.length - 1, t + 5))
+                    ? (n = Math.min(G.length - 1, t + 5))
                     : 40 == e.keyCode && (n = t + 1),
-                    n < 0 ? (n = 0) : n > M.length - 1 && (n = M.length - 1),
-                    k(M[n]);
+                    n < 0 ? (n = 0) : n > G.length - 1 && (n = G.length - 1),
+                    k(G[n]);
                 }
               },
-              onFocus: () => j(!0),
-              onBlur: () => j(!1),
+              onFocus: () => N(!0),
+              onBlur: () => N(!1),
               label: t,
-              value: E,
-              placeholder: F ? "" : Object(m.f)("#FriendPicker_StartTyping"),
-              autoFocus: I,
-              focusOnMount: !g.d.IN_GAMEPADUI && I,
-              ref: V,
+              value: w,
+              placeholder: B ? "" : Object(m.f)("#FriendPicker_StartTyping"),
+              autoFocus: O,
+              focusOnMount: !g.d.IN_GAMEPADUI && O,
+              ref: U,
             },
-            x
+            V
           ),
-          O &&
+          y &&
             i.a.createElement(
               "div",
               { className: "DialogLabel" },
@@ -103291,8 +103382,8 @@ var CLSTAMP = "7326401";
             r.a,
             {
               className: "FriendPickerFriendList",
-              style: { minHeight: g.d.IN_GAMEPADUI ? void 0 : Q },
-              ref: Y,
+              style: { minHeight: g.d.IN_GAMEPADUI ? void 0 : q },
+              ref: K,
             },
             i.a.createElement("div", {
               className: "insetShadow verticalInsetShadow",
@@ -103300,22 +103391,21 @@ var CLSTAMP = "7326401";
             i.a.createElement(
               p.a,
               {
-                ref: H,
+                ref: Z,
                 onGamepadDirection: (e) => e.detail.is_repeat,
-                onScroll: Z,
+                onScroll: z.fnOnScroll,
                 className: Object(u.a)(
                   "FriendPickerScrollPanel",
-                  W && "AtTop",
-                  q && "AtBottom"
+                  z.strClassNamesForScrollable
                 ),
                 scrollIntoViewType: f.e.NoTransform,
               },
-              i.a.createElement(_.a, null, U)
+              i.a.createElement(_.a, null, H)
             )
           )
         );
       },
-      S = (e) =>
+      I = (e) =>
         i.a.createElement(
           l.e,
           { friend: e.friend, context: null },
@@ -103552,7 +103642,7 @@ var CLSTAMP = "7326401";
   yoQ3: function (e, t, n) {
     "use strict";
     n.d(t, "i", function () {
-      return Re;
+      return ke;
     }),
       n.d(t, "d", function () {
         return Ae;
@@ -103696,8 +103786,8 @@ var CLSTAMP = "7326401";
       E = (n("EPix"), n("332Q"), n("VoDG")),
       w = n("EGkk"),
       D = n("vJVb"),
-      k = n("+RPw"),
-      R = n("GxRc"),
+      R = n("+RPw"),
+      k = n("GxRc"),
       A = n("0wLp");
     class T extends m.PureComponent {
       constructor(e) {
@@ -104523,7 +104613,7 @@ var CLSTAMP = "7326401";
             )
           );
         return h.a.createElement(
-          k.d,
+          R.d,
           {
             strTitle: Object(u.f)("#Friend_Invites_MutualFriends"),
             onOK: a,
@@ -104707,7 +104797,7 @@ var CLSTAMP = "7326401";
                             Object(le.c)(
                               a,
                               Object(u.f)("#Error_Generic"),
-                              Object(u.k)("#Friend_Invites_FailedToDecline", o)
+                              Object(u.l)("#Friend_Invites_FailedToDecline", o)
                             );
                       });
                     })(t, i.member_list, e),
@@ -104893,7 +104983,7 @@ var CLSTAMP = "7326401";
               }),
             [n, s, o, i]
           );
-        let l = h.a.createElement(R.a, null),
+        let l = h.a.createElement(k.a, null),
           d = !1;
         return (
           r ||
@@ -104910,7 +105000,7 @@ var CLSTAMP = "7326401";
                   Object(u.f)("#Friend_Invites_NotFound")
                 ))),
           h.a.createElement(
-            k.d,
+            R.d,
             {
               strTitle: Object(u.f)("#Friend_Invites_SearchTitle", n),
               onOK: c,
@@ -104959,8 +105049,8 @@ var CLSTAMP = "7326401";
         );
       });
     var De = n("ZsEe"),
-      ke = n.n(De);
-    function Re(e, t, n, a) {
+      Re = n.n(De);
+    function ke(e, t, n, a) {
       C.render(
         m.createElement(xe, {
           friends: t,
@@ -104979,7 +105069,7 @@ var CLSTAMP = "7326401";
         m.createElement(Ve, {
           key: "throbber",
           fadeOut: i,
-          className: ke.a.throbberContainerSteamDeckFriendsQuickAccess,
+          className: Re.a.throbberContainerSteamDeckFriendsQuickAccess,
         }),
         i
           ? m.createElement(d.h, {
@@ -105001,7 +105091,7 @@ var CLSTAMP = "7326401";
         m.createElement(Ve, {
           key: "throbber",
           fadeOut: a,
-          className: ke.a.throbberContainerSteamDeckFriendsQuickAccess,
+          className: Re.a.throbberContainerSteamDeckFriendsQuickAccess,
         }),
         a ? m.createElement(we, { friends: t, browserContext: e }) : null
       );
@@ -105014,7 +105104,7 @@ var CLSTAMP = "7326401";
         m.createElement(Ve, {
           key: "throbber",
           fadeOut: i,
-          className: ke.a.throbberContainerSteamDeckFriends,
+          className: Re.a.throbberContainerSteamDeckFriends,
         }),
         i
           ? m.createElement(d.h, {
@@ -105036,7 +105126,7 @@ var CLSTAMP = "7326401";
         m.createElement(Ve, {
           key: "throbber",
           fadeOut: i,
-          className: ke.a.throbberContainerSteamDeckFriendsQuickAccess,
+          className: Re.a.throbberContainerSteamDeckFriendsQuickAccess,
         }),
         i ? m.createElement("div", null, "(out of date client)") : null
       );
@@ -105049,7 +105139,7 @@ var CLSTAMP = "7326401";
         m.createElement(Ve, {
           key: "throbber",
           fadeOut: i,
-          className: ke.a.throbberContainerSteamDeckFriends,
+          className: Re.a.throbberContainerSteamDeckFriends,
         }),
         i
           ? m.createElement(d.g, {
@@ -105130,10 +105220,10 @@ var CLSTAMP = "7326401";
       }
       render() {
         if (this.state.bFadeOutComplete) return null;
-        let e = ke.a.throbberContainer;
+        let e = Re.a.throbberContainer;
         return (
           this.props.fadeOut &&
-            (e += " " + ke.a["throbberContainer-exit-active"]),
+            (e += " " + Re.a["throbberContainer-exit-active"]),
           m.createElement(
             "div",
             {
@@ -105147,11 +105237,11 @@ var CLSTAMP = "7326401";
               m.createElement(
                 "div",
                 { className: "WaitingForInterFaceReadyThrobber" },
-                m.createElement(R.a, {
+                m.createElement(k.a, {
                   className: "Throbber_Blur",
                   size: "xlarge",
                 }),
-                m.createElement(R.a, { size: "xlarge" })
+                m.createElement(k.a, { size: "xlarge" })
               )
             )
           )
@@ -105492,8 +105582,8 @@ var CLSTAMP = "7326401";
                   m.createElement(
                     D.a,
                     null,
-                    m.createElement(k.c, {
-                      ModalManager: Object(k.g)(b || window),
+                    m.createElement(R.c, {
+                      ModalManager: Object(R.g)(b || window),
                     }),
                     e &&
                       m.createElement(
@@ -105562,16 +105652,16 @@ var CLSTAMP = "7326401";
           t = i.a.EREALM === I.ESteamRealm.k_ESteamRealmChina;
         return m.createElement(
           "div",
-          { className: ke.a.SteamPageHeader },
+          { className: Re.a.SteamPageHeader },
           m.createElement(
             "a",
             { href: "" + i.a.STORE_BASE_URL },
             m.createElement("div", {
               className: Object(G.a)(
-                ke.a.SteamPageHeaderShortLogo,
+                Re.a.SteamPageHeaderShortLogo,
                 i.a.EREALM == I.ESteamRealm.k_ESteamRealmChina
-                  ? ke.a.LogoChina
-                  : ke.a.LogoGlobal
+                  ? Re.a.LogoChina
+                  : Re.a.LogoGlobal
               ),
             })
           ),
@@ -105598,7 +105688,7 @@ var CLSTAMP = "7326401";
     function Ye(e) {
       return m.createElement(
         "a",
-        { className: ke.a.SteamPageHeaderTopLink, href: e.href },
+        { className: Re.a.SteamPageHeaderTopLink, href: e.href },
         e.text
       );
     }
@@ -105689,7 +105779,7 @@ var CLSTAMP = "7326401";
             "div",
             { className: n, onContextMenu: w.j },
             m.createElement($e, { popup: this.props.popup.window }),
-            m.createElement(k.c, { ModalManager: Object(k.g)(e) }),
+            m.createElement(R.c, { ModalManager: Object(R.g)(e) }),
             m.createElement(l.f, {
               tabs: t,
               popup: e,
@@ -105904,7 +105994,7 @@ var CLSTAMP = "7326401";
                             className:
                               "connectionThrobber" + (c ? " showThrobber" : ""),
                           },
-                          c && m.createElement(R.a, { size: "small" }),
+                          c && m.createElement(k.a, { size: "small" }),
                           " "
                         ),
                         m.createElement(
@@ -105920,7 +106010,7 @@ var CLSTAMP = "7326401";
                         m.createElement(
                           "div",
                           { className: "ReconnectWaitMessage" },
-                          Object(u.k)(
+                          Object(u.l)(
                             "#ConnectionTrouble_ReconnectingInSeconds",
                             Math.ceil(e.GetMSUntilNextReconnectAttempt() / 1e3)
                           )
@@ -106856,7 +106946,7 @@ var CLSTAMP = "7326401";
       return v;
     }),
       n.d(t, "b", function () {
-        return R;
+        return k;
       });
     var a = n("mrSG"),
       i = n("OJz+"),
@@ -107451,7 +107541,7 @@ var CLSTAMP = "7326401";
           t = [];
         const n = {};
         for (const a of this.m_CMList.rgCMList) {
-          const i = k(a),
+          const i = R(a),
             o = !i || a.rtLastCheck < e;
           o && t.length < 20 && t.push(a),
             (o && !r.d.IN_MOBILE) || (i && i < 1e4 && (n[a.strHost] = a));
@@ -107468,7 +107558,7 @@ var CLSTAMP = "7326401";
               ) {
                 const n = Object.keys(t)
                   .map((e) => t[e])
-                  .sort((e, t) => k(e) - k(t));
+                  .sort((e, t) => R(e) - R(t));
                 if (
                   (n.length,
                   n.length && n[0].strHost,
@@ -107583,10 +107673,10 @@ var CLSTAMP = "7326401";
         return n.length, n.map((e, t) => ({ strHost: e, nPriority: t }));
       });
     }
-    function k(e) {
+    function R(e) {
       return (e.msPing || 0) + (e.nCMLoad || 0);
     }
-    class R extends S {
+    class k extends S {
       constructor(e) {
         super(),
           (this.m_Session = {
@@ -107839,7 +107929,7 @@ var CLSTAMP = "7326401";
         }
       }
     }
-    Object(a.b)([h.k], R.prototype, "DecodeAndDispatchMultiMsg", null);
+    Object(a.b)([h.k], k.prototype, "DecodeAndDispatchMultiMsg", null);
   },
   z9WT: function (e, t, n) {
     "use strict";
@@ -108283,8 +108373,8 @@ var CLSTAMP = "7326401";
       Object(a.b)([u.C], D.prototype, "m_youtubeInfo", void 0),
       Object(a.b)([O.b], D.prototype, "OnClick", null),
       (D = f = Object(a.b)([p.a], D));
-    var k = n("wd/R"),
-      R = n("8o0Y"),
+    var R = n("wd/R"),
+      k = n("8o0Y"),
       A = n("f3Ec"),
       T = n("NrYn"),
       M = n("qL+7"),
@@ -108597,7 +108687,7 @@ var CLSTAMP = "7326401";
               i.createElement(
                 "div",
                 { className: a.RightSideTitles },
-                Object(v.l)(
+                Object(v.m)(
                   "#EventDisplay_EventUpcoming_WithDateAndTime",
                   c,
                   i.createElement(
@@ -108629,7 +108719,7 @@ var CLSTAMP = "7326401";
           const e = i.createElement(
             "div",
             { className: a.ShortDateAndTime },
-            Object(v.n)(h, !0)
+            Object(v.o)(h, !0)
           );
           m =
             t < r
@@ -108642,7 +108732,7 @@ var CLSTAMP = "7326401";
               : i.createElement(
                   "div",
                   { className: a.RightSideTitles },
-                  Object(v.l)(
+                  Object(v.m)(
                     d
                       ? "#EventDisplay_TimeLeft"
                       : "#EventDisplay_RunsForDuration",
@@ -108763,7 +108853,7 @@ var CLSTAMP = "7326401";
                 N.contextMenu
               ),
             };
-          (this.m_iMenuInstance = Object(R.a)(
+          (this.m_iMenuInstance = Object(k.a)(
             e,
             this.m_elDropDownRef.current,
             t
@@ -108852,7 +108942,7 @@ var CLSTAMP = "7326401";
       );
     }
     function ce(e) {
-      return k.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
+      return R.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
     }
     Object(a.b)([O.b], re.prototype, "ToggleMenu", null),
       Object(a.b)([O.b], re.prototype, "ShowMenu", null),
@@ -109018,7 +109108,7 @@ var CLSTAMP = "7326401";
               i.createElement(
                 "div",
                 { className: ae.FullStartTime },
-                Object(v.l)(
+                Object(v.m)(
                   "#EventDisplay_EventUpcoming_WithDateAndTime",
                   Object(v.j)(
                     l,

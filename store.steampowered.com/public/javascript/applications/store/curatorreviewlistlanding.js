@@ -289,7 +289,7 @@
                       l.a.createElement(
                         c.c,
                         { href: a.vanity_url },
-                        Object(V.o)("#SteamCurator_MoreReviews", a.group_name)
+                        Object(V.p)("#SteamCurator_MoreReviews", a.group_name)
                       )
                     )
                   )
@@ -411,7 +411,7 @@
               l.a.createElement(
                 "span",
                 null,
-                Object(V.n)("#SteamCurator_Hidden", r - i.length),
+                Object(V.o)("#SteamCurator_Hidden", r - i.length),
                 " "
               ),
               l.a.createElement(
@@ -558,7 +558,7 @@
               l.a.createElement(
                 "div",
                 { className: z.a.ReviewDate },
-                f ? d.GetFormattedSteamReleaseDate() : Object(V.p)(g)
+                f ? d.GetFormattedSteamReleaseDate() : Object(V.q)(g)
               )
             ),
             Boolean(I) &&

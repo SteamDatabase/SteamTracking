@@ -496,7 +496,7 @@
               break;
             case d.b.EmailCode:
               (a = t.GetEmailAuthCode()),
-                (n = Object(p.o)(
+                (n = Object(p.p)(
                   "#Login_SentSteamguard",
                   r.a.createElement(
                     "span",

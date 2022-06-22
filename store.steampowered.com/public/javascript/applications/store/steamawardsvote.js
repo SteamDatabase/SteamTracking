@@ -450,7 +450,7 @@
             strTitle: Object(g.g)(
               `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Title`
             ),
-            strDescription: Object(g.o)(
+            strDescription: Object(g.p)(
               `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Explanation`,
               a,
               e

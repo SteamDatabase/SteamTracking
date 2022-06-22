@@ -888,7 +888,7 @@
           let t = r.a.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? Object(o.g)("#PersonaStateLastSeen_JustNow")
-            : Object(o.g)("#PersonaStateLastSeen", Object(o.r)(t));
+            : Object(o.g)("#PersonaStateLastSeen", Object(o.s)(t));
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {

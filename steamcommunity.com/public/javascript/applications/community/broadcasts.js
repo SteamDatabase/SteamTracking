@@ -212,7 +212,7 @@
           );
         }
         Init() {
-          let e = Object(_.f)("broadcastsinfo", "application_config");
+          let e = Object(_.g)("broadcastsinfo", "application_config");
           this.ValidateStoreDefault(e) &&
             ((this.m_steamid = new m.a(e.steamid)),
             (this.m_bShowOnlyChat = Boolean(e.show_only_chat)),
@@ -226,8 +226,8 @@
       var v = a("TyAF"),
         E = a("eN6m"),
         S = a("trWU"),
-        f = a("rKv1"),
-        O = a.n(f),
+        O = a("rKv1"),
+        f = a.n(O),
         B = (a("kdZy"), a("MUT6"), a("nWbB")),
         C = a("TQGK"),
         g = a("6oCP"),
@@ -614,7 +614,7 @@
                   r.a.createElement(
                     "div",
                     { className: ee.ViewerCount },
-                    Object(U.m)("#Broadcast_ViewerCount", n.toLocaleString())
+                    Object(U.n)("#Broadcast_ViewerCount", n.toLocaleString())
                   )
                 ),
                 r.a.createElement(ne, { broadcasterSteamID: t })
@@ -662,7 +662,7 @@
             "div",
             { className: ee.BroadcastUserActionsCtn },
             Boolean(
-              _.i.steamid != e.broadcasterSteamID.ConvertTo64BitString()
+              _.j.steamid != e.broadcasterSteamID.ConvertTo64BitString()
             ) &&
               r.a.createElement(
                 h.e,
@@ -671,7 +671,7 @@
                     "#Broadcast_User_Report_ttip"
                   ),
                   onClick: (e) => {
-                    _.i.logged_in
+                    _.j.logged_in
                       ? Object(T.d)(
                           r.a.createElement(re, { broadcasterSteamID: t }),
                           Object(k.o)(e)
@@ -733,7 +733,7 @@
       var oe = a("Pa9b"),
         le = a("0OaU");
       const ce = (e) => {
-          if (!_.i.is_support) return null;
+          if (!_.j.is_support) return null;
           const t = (t, a) => {
               Object(T.d)(
                 r.a.createElement(se, {
@@ -996,26 +996,26 @@
               { className: Object(w.a)(F.BroadcastPage) },
               r.a.createElement(
                 "div",
-                { className: Object(w.a)(O.a.BroadcastAndChat) },
+                { className: Object(w.a)(f.a.BroadcastAndChat) },
                 Boolean(!p.Get().BShowOnlyChat()) &&
                   r.a.createElement(
                     I.a,
                     null,
                     r.a.createElement(
                       "div",
-                      { className: Object(w.a)(O.a.wrapper) },
+                      { className: Object(w.a)(f.a.wrapper) },
                       r.a.createElement(
                         "div",
                         {
                           className: Object(w.a)({
-                            [O.a.video_placeholder]: !0,
+                            [f.a.video_placeholder]: !0,
                             video_placeholder_trgt: !0,
-                            [O.a.NoChat]: p.Get().BShowOnlyVideo(),
+                            [f.a.NoChat]: p.Get().BShowOnlyVideo(),
                           }),
                         },
                         r.a.createElement(
                           "div",
-                          { className: O.a.BroadcastPlayerContainer },
+                          { className: f.a.BroadcastPlayerContainer },
                           r.a.createElement(
                             I.a,
                             null,
@@ -1032,10 +1032,10 @@
                 Boolean(!p.Get().BShowOnlyVideo()) &&
                   r.a.createElement(
                     "div",
-                    { className: O.a.detail_chat_ctn },
+                    { className: f.a.detail_chat_ctn },
                     r.a.createElement(
                       "div",
-                      { className: O.a.ChatContainer },
+                      { className: f.a.ChatContainer },
                       r.a.createElement(
                         I.a,
                         null,
@@ -1074,7 +1074,7 @@
               null,
               r.a.createElement(te, { broadcasterSteamID: t }),
               r.a.createElement(ue, { steamid: t }),
-              Boolean(_.i.is_support) &&
+              Boolean(_.j.is_support) &&
                 r.a.createElement(
                   "div",
                   null,
@@ -1151,7 +1151,7 @@
               ),
               [a.m_strTitle]
             ),
-            _.i.accountid != e.steamid.GetAccountID())
+            _.j.accountid != e.steamid.GetAccountID())
           )
             return null;
           return r.a.createElement(

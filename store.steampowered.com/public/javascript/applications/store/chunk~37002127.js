@@ -1228,50 +1228,55 @@
         return s.test(e) ? e : "https://" + e;
       }
       function c(e) {
-        return 1 != i.d.EUNIVERSE
-          ? e
-          : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
-            (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
-              (e = (e = e.replace(
-                /https:\/\/media.steampowered.com\//g,
+        return e
+          ? 1 != i.d.EUNIVERSE
+            ? e
+            : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
+              (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
+                (e = (e = e.replace(
+                  /https:\/\/media.steampowered.com\//g,
+                  i.d.MEDIA_CDN_URL
+                )).replace(
+                  /https:\/\/cdn.akamai.steamstatic.com\//g,
+                  i.d.MEDIA_CDN_URL
+                )).replace(
+                  /https:\/\/cdn.cloudflare.steamstatic.com\//g,
+                  i.d.MEDIA_CDN_URL
+                )).replace(
+                /https:\/\/cdn.edgecast.steamstatic.com\//g,
                 i.d.MEDIA_CDN_URL
               )).replace(
-                /https:\/\/cdn.akamai.steamstatic.com\//g,
+                /https:\/\/cdn.dota2.com\//g,
                 i.d.MEDIA_CDN_URL
               )).replace(
-                /https:\/\/cdn.cloudflare.steamstatic.com\//g,
+                /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
+                i.d.MEDIA_CDN_URL + "steam/"
+              )).replace(
+                /https:\/\/cdn.steamcommunity.com\//g,
+                i.d.COMMUNITY_CDN_URL
+              )).replace(
+                /https:\/\/community.akamai.steamstatic.com\//g,
+                i.d.COMMUNITY_CDN_URL
+              )).replace(
+                /https:\/\/community.cloudflare.steamstatic.com\//g,
+                i.d.COMMUNITY_CDN_URL
+              )).replace(
+                /https:\/\/community.edgecast.steamstatic.com\//g,
+                i.d.COMMUNITY_CDN_URL
+              )).replace(/{IMG_URL}/g, i.d.IMG_URL)).replace(
+                /{MEDIA_CDN_URL}/g,
                 i.d.MEDIA_CDN_URL
               )).replace(
-              /https:\/\/cdn.edgecast.steamstatic.com\//g,
-              i.d.MEDIA_CDN_URL
-            )).replace(
-              /https:\/\/cdn.dota2.com\//g,
-              i.d.MEDIA_CDN_URL
-            )).replace(
-              /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
-              i.d.MEDIA_CDN_URL + "steam/"
-            )).replace(
-              /https:\/\/cdn.steamcommunity.com\//g,
-              i.d.COMMUNITY_CDN_URL
-            )).replace(
-              /https:\/\/community.akamai.steamstatic.com\//g,
-              i.d.COMMUNITY_CDN_URL
-            )).replace(
-              /https:\/\/community.cloudflare.steamstatic.com\//g,
-              i.d.COMMUNITY_CDN_URL
-            )).replace(
-              /https:\/\/community.edgecast.steamstatic.com\//g,
-              i.d.COMMUNITY_CDN_URL
-            )).replace(/^{IMG_URL}/g, i.d.IMG_URL)).replace(
-              /^{MEDIA_CDN_URL}/g,
-              i.d.MEDIA_CDN_URL
-            )).replace(
-              /^{MEDIA_CDN_COMMUNITY_URL}/g,
-              i.d.MEDIA_CDN_COMMUNITY_URL
-            )).replace(/^{COMMUNITY_CDN_URL}/g, i.d.COMMUNITY_CDN_URL)).replace(
-              /^{STEAM_CLAN_IMAGE}/g,
-              i.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
-            )));
+                /{MEDIA_CDN_COMMUNITY_URL}/g,
+                i.d.MEDIA_CDN_COMMUNITY_URL
+              )).replace(
+                /{COMMUNITY_CDN_URL}/g,
+                i.d.COMMUNITY_CDN_URL
+              )).replace(
+                /{STEAM_CLAN_IMAGE}/g,
+                i.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
+              )))
+          : e;
       }
       function u(e) {
         if (!e) return !0;

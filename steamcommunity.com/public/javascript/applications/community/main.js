@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7326401";
+var CLSTAMP = "7337903";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [114],
   {
@@ -12497,7 +12497,7 @@ var CLSTAMP = "7326401";
         n.d(t, "f", function () {
           return d;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "o", function () {
           return h;
         }),
         n.d(t, "l", function () {
@@ -12506,17 +12506,20 @@ var CLSTAMP = "7326401";
         n.d(t, "m", function () {
           return p;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "n", function () {
           return f;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "a", function () {
           return b;
         }),
+        n.d(t, "d", function () {
+          return w;
+        }),
         n.d(t, "c", function () {
-          return v;
+          return C;
         }),
         n.d(t, "e", function () {
-          return w;
+          return S;
         });
       var r = n("q1tI"),
         i = n("mgoM"),
@@ -12537,13 +12540,13 @@ var CLSTAMP = "7326401";
         n.d(t, "k", function () {
           return c.g;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "p", function () {
           return c.i;
         }),
-        n.d(t, "p", function () {
+        n.d(t, "q", function () {
           return c.j;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "r", function () {
           return c.k;
         }),
         n.d(t, "i", function () {
@@ -12649,11 +12652,11 @@ var CLSTAMP = "7326401";
         }
       }
       function d(e, ...t) {
-        let n = w.LocalizeString(e);
-        return void 0 === n ? e : g(n, ...t);
+        let n = S.LocalizeString(e);
+        return void 0 === n ? e : _(n, ...t);
       }
       function h(e, ...t) {
-        let n = w.LocalizeString(e);
+        let n = S.LocalizeString(e);
         if (void 0 === n) return e;
         let i,
           o = [],
@@ -12667,27 +12670,36 @@ var CLSTAMP = "7326401";
         return o.push(n.substr(a)), r.createElement(r.Fragment, null, ...o);
       }
       function m(e, ...t) {
-        let n = w.LocalizeString(e);
-        if (void 0 === n) return e;
-        let i,
-          o = [],
-          s = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
-          a = 0;
-        for (; (i = s.exec(n)); ) {
-          (a += i[0].length), o.push(i[1]);
-          let e = parseInt(i[2]),
-            n = i[3] || "",
-            s = (e >= 1 && e <= t.length ? t[e - 1] : null)
-              ? r.cloneElement(t[e - 1], {}, [n])
-              : n;
-          o.push(s);
-        }
-        return o.push(n.substr(a)), r.createElement(r.Fragment, null, ...o);
+        let n = S.LocalizeString(e);
+        return void 0 === n ? e : g(n, ...t);
       }
       function p(e, t, ...n) {
-        return 1 === t || "1" === t ? d(e, t, ...n) : d(e + "_Plural", t, ...n);
+        let r;
+        return (
+          (r = d(1 === t || "1" === t ? e : e + "_Plural", t)),
+          void 0 === r ? e : g(r, ...n)
+        );
       }
       function g(e, ...t) {
+        let n,
+          i = [],
+          o = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
+          s = 0;
+        for (; (n = o.exec(e)); ) {
+          (s += n[0].length), i.push(n[1]);
+          let e = parseInt(n[2]),
+            o = n[3] || "",
+            a = (e >= 1 && e <= t.length ? t[e - 1] : null)
+              ? r.cloneElement(t[e - 1], {}, [o])
+              : o;
+          i.push(a);
+        }
+        return i.push(e.substr(s)), r.createElement(r.Fragment, null, ...i);
+      }
+      function f(e, t, ...n) {
+        return 1 === t || "1" === t ? d(e, t, ...n) : d(e + "_Plural", t, ...n);
+      }
+      function _(e, ...t) {
         return 0 == t.length
           ? e
           : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -12698,7 +12710,7 @@ var CLSTAMP = "7326401";
               return e;
             }));
       }
-      class f {
+      class b {
         static Set(e, t, n) {
           if (e.length <= t) {
             if (t >= 30) return e;
@@ -12711,12 +12723,12 @@ var CLSTAMP = "7326401";
         }
         static GetWithFallback(e, t) {
           if (e) {
-            return f.Get(e, t) || f.Get(e, u.GetELanguageFallback(t));
+            return b.Get(e, t) || b.Get(e, u.GetELanguageFallback(t));
           }
           return null;
         }
       }
-      const _ = {
+      const v = {
           english: "en",
           german: "de",
           french: "fr",
@@ -12749,7 +12761,7 @@ var CLSTAMP = "7326401";
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        b = {
+        w = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -12780,11 +12792,11 @@ var CLSTAMP = "7326401";
           "es-419": 27,
           "vi-VN": 28,
         };
-      function v() {
-        return _[s.c.LANGUAGE] || null;
+      function C() {
+        return v[s.c.LANGUAGE] || null;
       }
-      const w = new u();
-      window.LocalizationManager = w;
+      const S = new u();
+      window.LocalizationManager = S;
     },
     TtDX: function (e, t, n) {
       "use strict";
@@ -14753,8 +14765,8 @@ var CLSTAMP = "7326401";
       Object(p.v)(() =>
         Object(r.a)(void 0, void 0, void 0, function* () {
           document.getElementById("application_config")
-            ? Object(u.h)("application_config")
-            : Object(u.h)(),
+            ? Object(u.i)("application_config")
+            : Object(u.i)(),
             Object(m.a)().Init(
               "Community",
               CLSTAMP,
@@ -16589,20 +16601,20 @@ var CLSTAMP = "7326401";
     "k2/q": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return l;
+        return c;
       });
       var r = n("mrSG"),
         i = n("q1tI"),
         o = n.n(i),
         s = (n("BaVA"), n("NxAk"), n("opsS")),
-        a = (n("rHSA"), n("qDk6"));
-      n("Jz9t");
-      const l = o.a.forwardRef(function (e, t) {
+        a = (n("rHSA"), n("qDk6")),
+        l = n("Jz9t");
+      const c = o.a.forwardRef(function (e, t) {
         const {
             onExplicitFocusLevelChanged: n,
             onOKButton: i,
             onCancelButton: l,
-            navRef: u,
+            navRef: c,
             focusable: d,
           } = e,
           h = Object(r.c)(e, [
@@ -16613,13 +16625,13 @@ var CLSTAMP = "7326401";
             "focusable",
           ]),
           m = o.a.useRef(),
-          { fnOnOKButton: p, fnOnCancelButton: g } = c({
+          { fnOnOKButton: p, fnOnCancelButton: g } = u({
             navRefPanel: m,
             onOKButton: i,
             onCancelButton: l,
             onExplicitFocusLevelChanged: n,
           }),
-          f = Object(s.g)(u, m);
+          f = Object(s.g)(c, m);
         return o.a.createElement(
           a.a,
           Object.assign({}, h, {
@@ -16631,7 +16643,37 @@ var CLSTAMP = "7326401";
           })
         );
       });
-      function c(e) {
+      o.a.forwardRef(function (e, t) {
+        const { onOKButton: n, onCancelButton: i, navRef: a, focusable: c } = e,
+          d = Object(r.c)(e, [
+            "onOKButton",
+            "onCancelButton",
+            "navRef",
+            "focusable",
+          ]),
+          h = o.a.useRef(),
+          m = o.a.useRef(),
+          p = o.a.useCallback((e, t) => e.FocusVisibleChild(), []),
+          { fnOnOKButton: g, fnOnCancelButton: f } = u({
+            navRefPanel: h,
+            onOKButton: n,
+            onCancelButton: i,
+            fnFocusChildren: p,
+          }),
+          _ = Object(s.g)(m, t),
+          b = Object(s.g)(a, h);
+        return o.a.createElement(
+          l.b,
+          Object.assign({}, d, {
+            onOKButton: (e) => g(e),
+            onCancelButton: f,
+            navRef: b,
+            ref: _,
+            focusable: !1 !== c,
+          })
+        );
+      });
+      function u(e) {
         let {
           navRefPanel: t,
           onOKButton: n,
@@ -16639,7 +16681,7 @@ var CLSTAMP = "7326401";
           onExplicitFocusLevelChanged: i,
           fnFocusChildren: s,
         } = e;
-        s = null != s ? s : u;
+        s = null != s ? s : d;
         return {
           fnOnOKButton: o.a.useCallback(
             (e) => {
@@ -16663,7 +16705,7 @@ var CLSTAMP = "7326401";
           ),
         };
       }
-      function u(e, t) {
+      function d(e, t) {
         return e.ChildTakeFocus(t);
       }
     },
@@ -17385,37 +17427,46 @@ var CLSTAMP = "7326401";
     },
     li7h: function (e, t, n) {
       "use strict";
+      n.d(t, "a", function () {
+        return i;
+      });
       var r = n("hRO2");
       n("OS8t");
       r.Message;
+      function i(e) {
+        return "unknown ECommunityItemClass ( " + e + " )";
+      }
     },
     lkRc: function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
         return o;
       }),
-        n.d(t, "i", function () {
+        n.d(t, "j", function () {
           return s;
         }),
         n.d(t, "b", function () {
           return l;
         }),
+        n.d(t, "d", function () {
+          return c;
+        }),
         n.d(t, "a", function () {
           return h;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "i", function () {
           return m;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "g", function () {
           return g;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "h", function () {
           return f;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "e", function () {
           return b;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "f", function () {
           return v;
         });
       n("mrSG");
@@ -17511,7 +17562,7 @@ var CLSTAMP = "7326401";
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        c = { ANNOUNCEMENT_GID: "" };
+        c = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
       let u;
       function d() {
         let e = (function () {

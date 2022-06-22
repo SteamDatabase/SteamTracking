@@ -515,7 +515,7 @@
         }
         ReloadEquippedItems() {
           let e = b.b.Init(y.d);
-          e.Body().set_steamid(E.i.steamid),
+          e.Body().set_steamid(E.j.steamid),
             e.Body().set_language(E.c.LANGUAGE),
             (this.m_promiseEquipped = y.p.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
@@ -617,7 +617,7 @@
                 e
               ));
             let t = b.b.Init(y.d);
-            t.Body().set_steamid(E.i.steamid),
+            t.Body().set_steamid(E.j.steamid),
               t.Body().set_language(E.c.LANGUAGE),
               (this.m_promiseEquipped = y.p.GetProfileItemsEquipped(
                 this.m_SteamInterface.GetServiceTransport(),
@@ -1298,7 +1298,7 @@
           return Object(n.a)(this, void 0, void 0, function* () {
             const e = b.b.Init(q.c);
             e.SetBodyFields({
-              steamid: E.i.steamid,
+              steamid: E.j.steamid,
               filter_user_uploaded_only: !0,
             });
             let t = yield q.h.GetAvatarHistory(
@@ -1576,7 +1576,7 @@
           } = e;
           (this.m_Location = new L(t, r, i, a, o, n)),
             (this.m_GroupList = new x(e.PrimaryGroup));
-          const s = new f.a(E.i.steamid);
+          const s = new f.a(E.j.steamid);
           (this.m_MiniProfileData = new u.a(s.GetAccountID())),
             (this.m_persona = new v.b(s)),
             Object(c.l)(() => {
@@ -1624,7 +1624,7 @@
         GetConstructedURL() {
           return this.m_strCustomURL
             ? `${E.c.COMMUNITY_BASE_URL}id/${this.m_strCustomURL}/`
-            : `${E.c.COMMUNITY_BASE_URL}profiles/${E.i.steamid}/`;
+            : `${E.c.COMMUNITY_BASE_URL}profiles/${E.j.steamid}/`;
         }
         GetAvatarHash() {
           return this.m_strAvatarHash;
@@ -1675,7 +1675,7 @@
             let t = new FormData();
             t.append("avatar", e),
               t.append("type", "player_avatar_image"),
-              t.append("sId", E.i.steamid),
+              t.append("sId", E.j.steamid),
               t.append("sessionid", E.c.SESSIONID),
               t.append("doSub", "1"),
               t.append("json", "1");
@@ -2563,7 +2563,7 @@
                 { className: Pe.ErrorMessage },
                 e,
                 " ",
-                Object(P.q)(o, { eSuffix: Ee.a.None, bForceSingleUnits: !0 }),
+                Object(P.r)(o, { eSuffix: Ee.a.None, bForceSingleUnits: !0 }),
                 " "
               ),
               i.createElement("div", { dangerouslySetInnerHTML: { __html: r } })
@@ -4011,7 +4011,7 @@
                   PrivacyKey: "PrivacyInventory",
                   LimitPrivacyKey: "PrivacyProfile",
                 },
-                Object(P.n)(
+                Object(P.o)(
                   "#ProfilePrivacy_Inventory_Desc",
                   i.createElement(
                     "a",
@@ -4053,7 +4053,7 @@
                     strLabel: Object(P.f)("#ProfilePrivacy_UGC"),
                     strReadOnlySetting: Object(P.f)("#Privacy_PerItem"),
                   },
-                  Object(P.n)(
+                  Object(P.o)(
                     "#ProfilePrivacy_UGC_Desc",
                     i.createElement(
                       "a",
@@ -5637,11 +5637,11 @@
           Ar ||
             (Ar = (function () {
               return Object(n.a)(this, void 0, void 0, function* () {
-                let e = Object(E.f)("config", "profile_config");
+                let e = Object(E.g)("config", "profile_config");
                 e && Object.assign(s, e),
                   (Sr = new V(
-                    Object(E.f)("profile-edit", "profile_edit_config"),
-                    Object(E.f)("profile-badges", "profile_edit_config")
+                    Object(E.g)("profile-edit", "profile_edit_config"),
+                    Object(E.g)("profile-badges", "profile_edit_config")
                   )),
                   Object(J.b)(E.c.EREALM) ||
                     Sr.Profile.GroupList.GetUserGroups(),

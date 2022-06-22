@@ -9009,6 +9009,9 @@ iframe.eventbbcodeparser_MedalTVWidget_20ZvO {
   display: inline-block;
   margin-right: 8px;
 }
+.eventbbcodeparser_LocalizeBlock_2OAJt {
+  white-space: pre-wrap;
+}
 .eventreminder_FlexColumnContainer_t3OPK {
   display: flex;
   flex-direction: column;
@@ -26992,6 +26995,35 @@ svg.reorderablelist_ReorderArrow_3Npdp {
   color: #8b929a;
   line-height: 10px;
   position: absolute;
+}
+.scrollfade_ScrollFade_19Qmq {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+  scroll-padding: 20px 0px;
+}
+.scrollfade_ScrollFade_19Qmq.scrollfade_ScrolledToTop_2iwtO {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+}
+.scrollfade_ScrollFade_19Qmq.scrollfade_ScrolledToBottom_3TiaO {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20px,
+    black 100%
+  );
+}
+.scrollfade_ScrollFade_19Qmq.scrollfade_ScrolledToTop_2iwtO.scrollfade_ScrolledToBottom_3TiaO {
+  -webkit-mask-image: none;
 }
 .messages_PreMessage_1jeo-,
 .messages_CodeMessage_1Fe4I,
@@ -51933,36 +51965,6 @@ a.general_btn:hover {
 .FriendPicker .FriendPickerFriendList.GamepadMode > .Panel,
 .GamepadMode .FriendPicker .FriendPickerFriendList > .Panel {
   max-height: 140px;
-  scroll-padding: 20px 0;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
-}
-.FriendPicker .FriendPickerFriendList.GamepadMode > .Panel.AtTop,
-.GamepadMode .FriendPicker .FriendPickerFriendList > .Panel.AtTop {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    black 0%,
-    black 90%,
-    transparent 100%
-  );
-}
-.FriendPicker .FriendPickerFriendList.GamepadMode > .Panel.AtBottom,
-.GamepadMode .FriendPicker .FriendPickerFriendList > .Panel.AtBottom {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 10%,
-    black 100%
-  );
-}
-.FriendPicker .FriendPickerFriendList.GamepadMode > .Panel.AtTop.AtBottom,
-.GamepadMode .FriendPicker .FriendPickerFriendList > .Panel.AtTop.AtBottom {
-  -webkit-mask-image: none;
 }
 .IsDropInvite .DropTarget {
   padding-top: 32px;

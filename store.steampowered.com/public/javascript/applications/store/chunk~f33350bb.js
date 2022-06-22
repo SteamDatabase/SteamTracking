@@ -1325,7 +1325,7 @@
           a.a.createElement(
             x,
             null,
-            Object(E.o)(
+            Object(E.p)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               a.a.createElement(
                 D.b,
@@ -1379,7 +1379,7 @@
                     a.a.createElement(
                       x,
                       null,
-                      Object(E.o)(
+                      Object(E.p)(
                         "#AddonPicker_AcquireAtPointsShop",
                         a.a.createElement(
                           D.b,
@@ -1433,7 +1433,7 @@
                     a.a.createElement(
                       x,
                       null,
-                      Object(E.o)(
+                      Object(E.p)(
                         "#AddonPicker_AcquireAtPointsShop",
                         a.a.createElement(
                           D.b,

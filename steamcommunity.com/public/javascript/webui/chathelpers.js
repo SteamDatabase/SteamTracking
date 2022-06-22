@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7326401";
+var CLSTAMP = "7337903";
 !(function (e) {
   function t(t) {
     for (
@@ -149,35 +149,35 @@ var CLSTAMP = "7326401";
                 36: "9777a68ecddfc269d5bb",
                 37: "04ba25c68c3b0df5a784",
                 38: "22a5a4c7e4378bd531f5",
-                39: "5efbd3454418ae33fbf0",
-                40: "9b9fbd536aea76284321",
-                41: "df9399044ad20ff2933e",
-                42: "9122541cc7bd547d4ee2",
-                43: "aec6ab552ed4e26d6e49",
-                44: "88ff02fda9f2f1fa1c00",
-                45: "15fb920eaace401b7af4",
-                46: "f76e935155f599c4be96",
-                47: "045df1606c575836c358",
-                48: "6916e01de14e599d5171",
-                49: "8ea8af391ae187ae5f6d",
-                50: "e88a16d4efa4257b10f5",
-                51: "1f6e2627276678090e30",
-                52: "b24208bf68b80238a144",
-                53: "27c4a64a2b2febfbfca7",
-                54: "c161b3c7c1d777be0b89",
-                55: "e5b22a4a3da0e02d9250",
-                56: "8807c75c0b68767e6041",
-                57: "50db0b2587f9ebd26d4b",
-                58: "d2042b3301532957177e",
+                39: "785801b80acfb50fb97e",
+                40: "9758f510c0e61e3a4375",
+                41: "52b86f5ec4dd6cd8b534",
+                42: "57525cc338f4b451c04e",
+                43: "fef110573bde645b79c4",
+                44: "448b58474f66e4c5dd15",
+                45: "dd22fdb33aa53833bc8d",
+                46: "3111b113b41f826e8277",
+                47: "322d4d18c01ba7dbd738",
+                48: "ffdabb0de3c026258bf8",
+                49: "12b3b28ec7b811c6be06",
+                50: "9c643754c62da4cc4902",
+                51: "40d8c7cad1ef91a54aa7",
+                52: "b60aabc980a1f926b802",
+                53: "7353372041e64fdd0b8d",
+                54: "92be79245fb3840c6067",
+                55: "56b168669b30d9db1775",
+                56: "d23a4ff135cebb101626",
+                57: "d56f633ecfd45ba7d750",
+                58: "e52c78871f93154e339c",
                 59: "eae17d6c18038567cb04",
-                60: "2741b07b5583df42dcf0",
-                61: "6726e968f904b154bd58",
-                62: "0d4958c7337e2ba74370",
-                63: "38da1a34744a77489106",
-                64: "d3be1565c4f2270d062f",
-                65: "a06fd84705a3c0af9e20",
-                66: "209e8a45e04bea68b7cb",
-                67: "0ea3d18a86d92e684265",
+                60: "a7506e0095060fb1f95e",
+                61: "f4c8f3cfbbe95aa68958",
+                62: "4096fe0c0e6f9550a697",
+                63: "3f9e6364a1d30ac89600",
+                64: "20cbcae533f9a6b20cb7",
+                65: "cef34e87f2756994d6e2",
+                66: "a6910f814f7cc9e3d1c0",
+                67: "00fc56b56361d85e3909",
               }[e]
             );
           })(e));
@@ -828,7 +828,7 @@ var CLSTAMP = "7326401";
         IS_VALVE_GROUP: !1,
         IS_ALLOWED_SC: !1,
       },
-      u = { ANNOUNCEMENT_GID: "" };
+      u = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
     let l;
     function d() {
       let e = (function () {
@@ -2632,23 +2632,26 @@ var CLSTAMP = "7326401";
       n.d(t, "f", function () {
         return d;
       }),
-      n.d(t, "l", function () {
+      n.d(t, "m", function () {
         return f;
       }),
       n.d(t, "k", function () {
         return _;
       }),
-      n.d(t, "a", function () {
+      n.d(t, "l", function () {
         return m;
       }),
-      n.d(t, "d", function () {
+      n.d(t, "a", function () {
         return b;
       }),
+      n.d(t, "d", function () {
+        return E;
+      }),
       n.d(t, "c", function () {
-        return g;
+        return k;
       }),
       n.d(t, "e", function () {
-        return E;
+        return C;
       });
     var r = n("cDcd"),
       i = n("0N1H"),
@@ -2666,10 +2669,10 @@ var CLSTAMP = "7326401";
       n.d(t, "j", function () {
         return u.e;
       }),
-      n.d(t, "m", function () {
+      n.d(t, "n", function () {
         return u.f;
       }),
-      n.d(t, "n", function () {
+      n.d(t, "o", function () {
         return u.g;
       }),
       n.d(t, "i", function () {
@@ -2778,11 +2781,11 @@ var CLSTAMP = "7326401";
       }
     }
     function d(e, ...t) {
-      let n = E.LocalizeString(e);
-      return void 0 === n ? e : h(n, ...t);
+      let n = C.LocalizeString(e);
+      return void 0 === n ? e : p(n, ...t);
     }
     function f(e, ...t) {
-      let n = E.LocalizeString(e);
+      let n = C.LocalizeString(e);
       if (void 0 === n) return e;
       let i,
         o = [],
@@ -2795,10 +2798,30 @@ var CLSTAMP = "7326401";
       }
       return o.push(n.substr(a)), r.createElement(r.Fragment, null, ...o);
     }
-    function _(e, t, ...n) {
-      return 1 === t || "1" === t ? d(e, t, ...n) : d(e + "_Plural", t, ...n);
+    function _(e, ...t) {
+      let n = C.LocalizeString(e);
+      return void 0 === n ? e : h(n, ...t);
     }
     function h(e, ...t) {
+      let n,
+        i = [],
+        o = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
+        s = 0;
+      for (; (n = o.exec(e)); ) {
+        (s += n[0].length), i.push(n[1]);
+        let e = parseInt(n[2]),
+          o = n[3] || "",
+          a = (e >= 1 && e <= t.length ? t[e - 1] : null)
+            ? r.cloneElement(t[e - 1], {}, [o])
+            : o;
+        i.push(a);
+      }
+      return i.push(e.substr(s)), r.createElement(r.Fragment, null, ...i);
+    }
+    function m(e, t, ...n) {
+      return 1 === t || "1" === t ? d(e, t, ...n) : d(e + "_Plural", t, ...n);
+    }
+    function p(e, ...t) {
       return 0 == t.length
         ? e
         : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -2809,7 +2832,7 @@ var CLSTAMP = "7326401";
             return e;
           }));
     }
-    class m {
+    class b {
       static Set(e, t, n) {
         if (e.length <= t) {
           if (t >= 30) return e;
@@ -2822,12 +2845,12 @@ var CLSTAMP = "7326401";
       }
       static GetWithFallback(e, t) {
         if (e) {
-          return m.Get(e, t) || m.Get(e, l.GetELanguageFallback(t));
+          return b.Get(e, t) || b.Get(e, l.GetELanguageFallback(t));
         }
         return null;
       }
     }
-    const p = {
+    const g = {
         english: "en",
         german: "de",
         french: "fr",
@@ -2860,7 +2883,7 @@ var CLSTAMP = "7326401";
         sc_schinese: "zh-cn",
         koreana: "ko",
       },
-      b = {
+      E = {
         "en-US": 0,
         "de-DE": 1,
         "fr-FR": 2,
@@ -2891,11 +2914,11 @@ var CLSTAMP = "7326401";
         "es-419": 27,
         "vi-VN": 28,
       };
-    function g() {
-      return p[s.d.LANGUAGE] || null;
+    function k() {
+      return g[s.d.LANGUAGE] || null;
     }
-    const E = new l();
-    window.LocalizationManager = E;
+    const C = new l();
+    window.LocalizationManager = C;
   },
   "qM/t": function (e, t, n) {
     "use strict";
@@ -3083,7 +3106,7 @@ var CLSTAMP = "7326401";
                 i.createElement(
                   "div",
                   { className: "inviteLabel" },
-                  Object(c.l)(
+                  Object(c.m)(
                     "#InviteLanding_SentToSteam_Desc",
                     i.createElement(
                       "a",
@@ -3142,7 +3165,7 @@ var CLSTAMP = "7326401";
                 i.createElement(
                   "div",
                   { className: "inviteLabel" },
-                  Object(c.l)(
+                  Object(c.m)(
                     "#InviteLanding_SentToSteam_Desc",
                     i.createElement(
                       "a",
@@ -3225,7 +3248,7 @@ var CLSTAMP = "7326401";
           i.createElement(
             "div",
             { className: "inviteLabel" },
-            Object(c.l)(
+            Object(c.m)(
               "#bbcode_invite_description",
               i.createElement("span", {
                 dangerouslySetInnerHTML: {

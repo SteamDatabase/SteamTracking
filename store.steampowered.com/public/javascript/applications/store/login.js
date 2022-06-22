@@ -1431,17 +1431,17 @@
           return "CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response";
         }
       }
-      class O extends _ {
+      class A extends _ {
         constructor(e = null) {
           super(),
-            O.prototype.client_id || h.a(O.M()),
+            A.prototype.client_id || h.a(A.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   client_id: {
                     n: 1,
@@ -1455,97 +1455,6 @@
                   },
                   code: { n: 3, br: h.d.readString, bw: h.h.writeString },
                   code_type: { n: 4, br: h.d.readEnum, bw: h.h.writeEnum },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = h.e(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return h.g(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return h.c(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new g.BinaryReader(e),
-            r = new O();
-          return O.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return h.b(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new g.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          h.f(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new g.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request";
-        }
-      }
-      class R extends _ {
-        constructor(e = null) {
-          super(), _.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return R.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new R();
-        }
-        static deserializeBinary(e) {
-          let t = new g.BinaryReader(e),
-            r = new R();
-          return R.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new g.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new g.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response";
-        }
-      }
-      class A extends _ {
-        constructor(e = null) {
-          super(),
-            A.prototype.access_token || h.a(A.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
-                fields: {
-                  access_token: {
-                    n: 1,
-                    br: h.d.readString,
-                    bw: h.h.writeString,
-                  },
                 },
               }),
             A.sm_m
@@ -1581,6 +1490,97 @@
         serializeBase64String() {
           var e = new g.BinaryWriter();
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request";
+        }
+      }
+      class O extends _ {
+        constructor(e = null) {
+          super(), _.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new O();
+        }
+        static deserializeBinary(e) {
+          let t = new g.BinaryReader(e),
+            r = new O();
+          return O.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new g.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new g.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response";
+        }
+      }
+      class R extends _ {
+        constructor(e = null) {
+          super(),
+            R.prototype.access_token || h.a(R.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
+                fields: {
+                  access_token: {
+                    n: 1,
+                    br: h.d.readString,
+                    bw: h.h.writeString,
+                  },
+                },
+              }),
+            R.sm_m
+          );
+        }
+        static MBF() {
+          return R.sm_mbf || (R.sm_mbf = h.e(R.M())), R.sm_mbf;
+        }
+        toObject(e = !1) {
+          return R.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return h.g(R.M(), e, t);
+        }
+        static fromObject(e) {
+          return h.c(R.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new g.BinaryReader(e),
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return h.b(R.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new g.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          h.f(R.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new g.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_AccessToken_GenerateForApp_Response";
@@ -1795,7 +1795,7 @@
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
               t,
-              R,
+              O,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
@@ -1803,7 +1803,7 @@
             return e.SendMsg(
               "Authentication.GenerateAccessTokenForApp#1",
               t,
-              A,
+              R,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
@@ -2043,7 +2043,8 @@
                 o.Body().set_encrypted_password(i),
                 o.Body().set_encryption_timestamp(n.timestamp),
                 o.Body().set_remember_login(!!r),
-                o.Body().set_platform_type(this.m_ePlatformType);
+                o.Body().set_platform_type(this.m_ePlatformType),
+                o.Body().set_device_friendly_name(window.navigator.userAgent);
               const c = yield F.BeginAuthSessionViaCredentials(
                 this.m_transport,
                 o
@@ -2134,7 +2135,7 @@
           return Object(a.a)(this, void 0, void 0, function* () {
             try {
               const t = 3 === this.m_eStatus || 7 === this.m_eStatus,
-                r = s.b.Init(O);
+                r = s.b.Init(A);
               r.Body().set_client_id(this.m_strClientID),
                 r.Body().set_steamid(this.m_steamid),
                 r.Body().set_code(e),
@@ -2253,7 +2254,8 @@
             this.m_eStatus = 1;
             try {
               const e = s.b.Init(p);
-              e.Body().set_platform_type(this.m_ePlatformType);
+              e.Body().set_platform_type(this.m_ePlatformType),
+                e.Body().set_device_friendly_name(window.navigator.userAgent);
               const t = yield F.BeginAuthSessionViaQR(this.m_transport, e),
                 r = t.GetEResult();
               if (1 !== r)
@@ -2919,7 +2921,7 @@
             { className: Z.a.EnterCodeFromMobile },
             Object(se.g)("#Login_EnterMobileCode")
           ),
-          i.a.createElement(Re, { className: Z.a.AwaitingMobileConfIcon })
+          i.a.createElement(Oe, { className: Z.a.AwaitingMobileConfIcon })
         );
       }
       function Me(e) {
@@ -2936,7 +2938,7 @@
             i.a.createElement(
               "div",
               { className: Z.a.EnterCodeFromEmail },
-              Object(se.o)(
+              Object(se.p)(
                 "#Login_EnterEmailCode",
                 i.a.createElement(
                   "span",
@@ -2946,7 +2948,7 @@
               )
             )
           ),
-          i.a.createElement(Ae, { className: Z.a.AwaitingMobileConfIcon })
+          i.a.createElement(Re, { className: Z.a.AwaitingMobileConfIcon })
         );
       }
       function Le(e) {
@@ -2962,7 +2964,7 @@
           i.a.createElement(
             "div",
             { className: Z.a.Label },
-            Object(se.o)(
+            Object(se.p)(
               "#Login_ActiveAccountName",
               i.a.createElement("span", { className: Z.a.AccountName }, t)
             )
@@ -2970,7 +2972,7 @@
           !a && i.a.createElement("div", { className: Z.a.Description }, n)
         );
       }
-      function Oe() {
+      function Ae() {
         return i.a.createElement(
           Fe,
           { gap: 10, alignItems: "center" },
@@ -2979,10 +2981,10 @@
             { className: Z.a.AwaitingMobileConfText },
             Object(se.g)("#Login_AwaitingMobileConfirmation")
           ),
-          i.a.createElement(Re, { className: Z.a.AwaitingMobileConfIcon })
+          i.a.createElement(Oe, { className: Z.a.AwaitingMobileConfIcon })
         );
       }
-      function Re(e) {
+      function Oe(e) {
         return i.a.createElement(
           "svg",
           { viewBox: "0 0 55 49", fill: "none", className: e.className },
@@ -2992,7 +2994,7 @@
           })
         );
       }
-      function Ae(e) {
+      function Re(e) {
         return i.a.createElement(
           "svg",
           { viewBox: "0 0 58 56", fill: "none", className: e.className },
@@ -3038,7 +3040,7 @@
           i.a.createElement(
             Fe,
             { gap: 16 },
-            i.a.createElement(Oe, null),
+            i.a.createElement(Ae, null),
             o,
             i.a.createElement(Le, { type: t, accountName: r })
           )

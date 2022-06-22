@@ -2205,7 +2205,7 @@
             "div",
             { className: h.a.CompatibilityDetailRatingSummary },
             a
-              ? Object(f.o)(
+              ? Object(f.p)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
                   n.a.createElement("b", null, Object(V.c)(a))
                 )
@@ -2237,13 +2237,13 @@
             Object(f.g)(r || l)
           ),
           s = a
-            ? Object(f.o)(
+            ? Object(f.p)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
                 n.a.createElement("b", null, Object(V.c)(a)),
                 c,
                 i
               )
-            : Object(f.o)("#SteamDeckVerified_DescriptionHeader", c, i);
+            : Object(f.p)("#SteamDeckVerified_DescriptionHeader", c, i);
         return n.a.createElement(
           "div",
           { className: h.a.CompatibilityDetailRatingSummary },

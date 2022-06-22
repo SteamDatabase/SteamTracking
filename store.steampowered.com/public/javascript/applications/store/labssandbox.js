@@ -2116,7 +2116,7 @@
                     null,
                     _.createElement("b", null, "Last Played:"),
                     " ",
-                    Object(Z.p)(t.rtLastPlayed),
+                    Object(Z.q)(t.rtLastPlayed),
                     " "
                   ),
                   _.createElement(

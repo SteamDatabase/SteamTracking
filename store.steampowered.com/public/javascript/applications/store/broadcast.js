@@ -8618,7 +8618,7 @@
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
                       l.createElement(O.Bb, null),
-                      Object(j.n)("#Broadcast_ViewerCount", t)
+                      Object(j.o)("#Broadcast_ViewerCount", t)
                     )
                 ),
               r &&

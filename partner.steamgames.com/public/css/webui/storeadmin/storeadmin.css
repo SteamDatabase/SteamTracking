@@ -6146,6 +6146,9 @@ iframe.eventbbcodeparser_MedalTVWidget_3pE8b {
   display: inline-block;
   margin-right: 8px;
 }
+.eventbbcodeparser_LocalizeBlock_1Bebk {
+  white-space: pre-wrap;
+}
 .eventreminder_FlexColumnContainer_1y5Hb {
   display: flex;
   flex-direction: column;
@@ -9344,6 +9347,35 @@ div.creatorhomeembed_SocialContainer_25404 {
   margin-top: 6px;
   min-height: 38px;
 }
+.salepreviewwidgets_StoreSalePriceWidgetContainer_1M5Z_.salepreviewwidgets_SingleLineMode_3a3Zp
+  .salepreviewwidgets_StoreSaleDiscountedPriceCtn_1ifrw {
+  flex-direction: row;
+  align-items: center;
+}
+.salepreviewwidgets_StoreSalePriceWidgetContainer_1M5Z_.salepreviewwidgets_SingleLineMode_3a3Zp
+  .salepreviewwidgets_StoreSaleDiscountedPriceCtn_1ifrw
+  .salepreviewwidgets_StoreSalePriceBox_37Uyz {
+  margin-left: 5px;
+}
+.salepreviewwidgets_StoreSalePriceWidgetContainer_1M5Z_.salepreviewwidgets_SingleLineMode_3a3Zp
+  .salepreviewwidgets_StoreSaleDiscountBox_39MVk {
+  padding: 0 3px;
+  line-height: normal;
+  background: var(--gpColor-Green);
+  color: #fff;
+  border-radius: 1px;
+}
+.salepreviewwidgets_StoreSalePriceWidgetContainer_1M5Z_.salepreviewwidgets_SingleLineMode_3a3Zp
+  .salepreviewwidgets_StoreOriginalPrice_1eYuV {
+  line-height: normal;
+  font-size: 14px;
+}
+.salepreviewwidgets_StoreSalePriceWidgetContainer_1M5Z_.salepreviewwidgets_SingleLineMode_3a3Zp
+  .salepreviewwidgets_StoreSalePriceBox_37Uyz {
+  padding: 0;
+  line-height: normal;
+  color: #fff;
+}
 .BasicUI .salepreviewwidgets_StoreSalePriceWidgetContainer_1M5Z_ {
   min-height: unset;
   margin: unset;
@@ -9417,13 +9449,6 @@ div.creatorhomeembed_SocialContainer_25404 {
   padding-right: 5px;
   padding-left: 5px;
 }
-.salepreviewwidgets_StoreSaleDiscountedPriceCtn_1ifrw.salepreviewwidgets_SingleLineMode_3a3Zp {
-  flex-direction: row;
-}
-.salepreviewwidgets_StoreSaleDiscountedPriceCtn_1ifrw.salepreviewwidgets_SingleLineMode_3a3Zp
-  .salepreviewwidgets_StoreSalePriceBox_37Uyz {
-  margin-left: 5px;
-}
 .BasicUI .salepreviewwidgets_StoreSaleDiscountedPriceCtn_1ifrw {
   padding: unset;
   flex-direction: row;
@@ -9464,6 +9489,20 @@ div.creatorhomeembed_SocialContainer_25404 {
   background-color: var(--gpColor-Green);
   padding: 0px 4px;
   border-radius: 1px;
+}
+.salepreviewwidgets_SingleLineOriginalPrice_3sjaQ {
+  color: #b2b5bb;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 15px;
+}
+.salepreviewwidgets_SingleLineOriginalPrice_3sjaQ::before {
+  content: "";
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  top: 50%;
+  border-bottom: 1px solid #b2b5bb;
 }
 .salepreviewwidgets_StoreOriginalPrice_1eYuV {
   color: #b2b5bb;
@@ -11302,6 +11341,9 @@ html.touch
   color: #fff;
   opacity: 0.6;
   padding: 8px 0px 0px 0px;
+}
+.salepreviewwidgets_LocalizationSpan_3C02K {
+  white-space: pre-wrap;
 }
 .gameactions_GotSteamDialog_2WQOE .gameactions_DownloadSteamUrl_3xLwV {
   color: #fff;
@@ -21503,6 +21545,20 @@ html.responsive.touch
 .BasicUI .saleitembrowser_SuggestContainer_M0w-C {
   display: none;
 }
+.saleminigames_Ctn_2ioY9 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+}
+.saleminigames_DetailText_2YbOR {
+  font-weight: 600;
+  padding-bottom: 1em;
+}
+.saleminigames_ImgFullBagde_1cZOq {
+  width: 80px;
+  height: 80px;
+}
 .salequiz_description_2KaV6 {
   padding-left: 5em;
   padding-right: 5em;
@@ -22724,47 +22780,6 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .salebadgeprogressdisplay_BadgeLevel_2AZcl {
   margin-top: 4px;
 }
-.saleminigames_Ctn_2ioY9 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1em;
-}
-.saleminigames_ImgFullBagde_1cZOq {
-  width: 80px;
-  height: 80px;
-}
-.salequestdisplay_description_FbyVd {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 2em;
-  padding-top: 0em;
-  color: #fff;
-}
-.salequestdisplay_description2_3KRFA {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 3em;
-  padding-top: 3em;
-  max-width: 670px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.salequestdisplay_questCtn_12PtS {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3.5em 3.5em 5em 3.5em;
-  color: #fff;
-  gap: 1.5em;
-  max-width: 670px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.salerewardshelfdisplay_RewardContainer_31FTL {
-  display: flex;
-  flex-direction: row;
-}
 :root {
   --basicui-header-height: 0px;
 }
@@ -22886,43 +22901,47 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   overflow: hidden;
   position: relative;
   z-index: 1;
-  padding: calc(12px + 0.6vw);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  cursor: default;
+}
+.discoveryqueuewizard_AppDetailsCtn_1PpPM
+  .discoveryqueuewizard_AppDetailsCtnTop_2Av8o {
+  padding: calc(8px + 0.6vw);
+  padding-bottom: 8px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   row-gap: 8px;
-  cursor: default;
+  overflow: scroll;
+  -webkit-mask-image: linear-gradient(black 94%, transparent);
 }
 .BasicUI .discoveryqueuewizard_AppDetailsCtn_1PpPM {
   padding: 12px;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppDetailsHeader_2Lk4O {
+.discoveryqueuewizard_AppDetailsHeader_2Lk4O {
   color: #fff;
   display: flex;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppDetailsHeader_2Lk4O
+.discoveryqueuewizard_AppDetailsHeader_2Lk4O
   .discoveryqueuewizard_AppLibraryHero_2shw1 {
-  width: 44px;
-  height: 66px;
+  width: calc(20px + 3vw);
+  height: calc(30px + 4.5vw);
   margin-right: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
 }
-@media screen and (max-width: 850px) {
-  .discoveryqueuewizard_AppDetailsCtn_1PpPM
-    .discoveryqueuewizard_AppDetailsHeader_2Lk4O
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppDetailsHeader_2Lk4O
     .discoveryqueuewizard_AppLibraryHero_2shw1 {
     display: none;
   }
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppDetailsHeader_2Lk4O
+.discoveryqueuewizard_AppDetailsHeader_2Lk4O
   .discoveryqueuewizard_RightColumn_2ZQMR {
   font-size: 14px;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppDetailsHeader_2Lk4O
+.discoveryqueuewizard_AppDetailsHeader_2Lk4O
   .discoveryqueuewizard_RightColumn_2ZQMR
   .discoveryqueuewizard_AppName_2m2WO {
   font-size: 18px;
@@ -22935,8 +22954,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppTagsCtn_1eT39 {
+.discoveryqueuewizard_AppTagsCtn_1eT39 {
   display: flex;
   white-space: nowrap;
   -webkit-mask-image: linear-gradient(
@@ -22945,15 +22963,13 @@ a.storywidget_BadgeFooter_24Cq8:hover {
     transparent calc(100% - 8px)
   );
   margin-right: -16px;
+  overflow: hidden;
+  min-height: 21px;
 }
-.BasicUI
-  .discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppTagsCtn_1eT39 {
+.BasicUI .discoveryqueuewizard_AppTagsCtn_1eT39 {
   margin-right: -12px;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppTagsCtn_1eT39
-  .discoveryqueuewizard_TagEntry_1wvOa {
+.discoveryqueuewizard_AppTagsCtn_1eT39 .discoveryqueuewizard_TagEntry_1wvOa {
   background: rgba(14, 20, 27, 0.3);
   border-radius: 2px;
   font-size: 12px;
@@ -22961,22 +22977,16 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   padding: 2px 6px;
   color: var(--gpStoreLighterGrey);
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppReviews_3Y-85
-  .ReviewScore {
+.discoveryqueuewizard_AppReviews_3Y-85 .ReviewScore {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   padding: unset;
 }
-.BasicUI
-  .discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppReviews_3Y-85
-  .ReviewScore {
+.BasicUI .discoveryqueuewizard_AppReviews_3Y-85 .ReviewScore {
   font-size: 14px;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_RelevantCtn_e6bCR {
+.discoveryqueuewizard_RelevantCtn_e6bCR {
   padding: 8px 0px;
   border-top: 1px solid #acb2c924;
   overflow: hidden;
@@ -22986,37 +22996,35 @@ a.storywidget_BadgeFooter_24Cq8:hover {
     transparent calc(100% - 0px)
   );
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_RelevantCtn_e6bCR
-  .discoveryqueuewizard_RelevantItem_3_jGk {
+.discoveryqueuewizard_RelevantItem_3_jGk {
   font-size: 12px;
   color: var(--gpStoreLighterGrey);
+  margin-bottom: 2px;
+  display: flex;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_RelevantCtn_e6bCR
-  .discoveryqueuewizard_RelevantItem_3_jGk
-  svg {
+.discoveryqueuewizard_RelevantCheck_RuoEP {
+  align-self: flex-start;
+}
+.discoveryqueuewizard_RelevantCheck_RuoEP svg {
   width: 12px;
   fill: var(--gpStoreLighterGrey);
   vertical-align: text-top;
   margin-right: 5px;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_IgnoreLink_2fThe {
+.discoveryqueuewizard_IgnoreLink_2fThe {
   font-size: 12px;
-  margin-top: -8px;
+  margin-bottom: -8px;
 }
-.BasicUI
-  .discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_IgnoreLink_2fThe {
+.BasicUI .discoveryqueuewizard_IgnoreLink_2fThe {
   display: none;
 }
-.discoveryqueuewizard_AppDetailsCtn_1PpPM
-  .discoveryqueuewizard_AppActionButtonsCtn_3EeQV {
+.discoveryqueuewizard_AppActionButtonsCtn_3EeQV {
   margin-top: auto;
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+  padding: calc(8px + 0.6vw);
+  padding-top: 0px;
 }
 .discoveryqueuewizard_MainCapBlur_34geg {
   position: absolute;
@@ -23128,6 +23136,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   justify-content: center;
   align-items: center;
   row-gap: 12px;
+  user-select: none;
 }
 .discoveryqueuewizard_SummaryCtn_2284V
   .discoveryqueuewizard_SummaryTitle_3ie5C {
@@ -23190,6 +23199,13 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .discoveryqueuewizard_GridLink_2S-C8 {
   font-size: 14px;
   color: #1a9fff;
+  cursor: pointer;
+}
+.discoveryqueuewizard_SummaryCtn_2284V
+  .discoveryqueuewizard_SummaryGrid_2AtLb
+  .discoveryqueuewizard_GridItem_B3aMR
+  .discoveryqueuewizard_GridLink_2S-C8:hover {
+  color: #fff;
 }
 .discoveryqueuewizard_SummaryCtn_2284V
   .discoveryqueuewizard_SummaryActionButtonsCtn_jAc9l {
@@ -23347,9 +23363,21 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .discoveryqueuewizard_ReleventSimilarAppsCtn_1U2BE {
   display: flex;
+  margin: 4px 0px;
+  column-gap: 4px;
+}
+.discoveryqueuewizard_WhyRelevant_29gh6 {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.discoveryqueuewizard_SimilarAppCtn_Tsx_w {
+  display: flex;
 }
 .discoveryqueuewizard_SimilarAppImg_2oDnq {
-  width: 150px;
+  width: 80px;
+  box-shadow: var(--gpShadow-Small);
 }
 .discoveryqueuewizard_SimilarAppText_3q4A- {
   font-size: 12px;
@@ -23364,6 +23392,22 @@ a.storywidget_BadgeFooter_24Cq8:hover {
     transparent calc(100% - 8px)
   );
   margin-right: -16px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 1920px) {
+  .discoveryqueuewizard_FriendAvatarsCtn_3u3Ff {
+    display: none;
+  }
+}
+.discoveryqueuewizard_RelevantTextBold_1aHTx {
+  font-weight: bold;
+}
+.discoveryqueuewizard_AppDescription_ugMfI {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  padding: 8px 0;
+  border-top: 1px solid #acb2c924;
+  line-height: 18px;
 }
 .friendsnooze_SnoozeContainer_sR1O9 {
   position: relative;
@@ -24443,6 +24487,36 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .friendPlayerLevel.lvl_plus_90 {
   background-position: 0 -288px;
+}
+.salequestdisplay_description_FbyVd {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0em;
+  color: #fff;
+}
+.salequestdisplay_description2_3KRFA {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.salequestdisplay_questCtn_12PtS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 3.5em 1em 3.5em;
+  color: #fff;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.salerewardshelfdisplay_RewardContainer_31FTL {
+  display: flex;
+  flex-direction: row;
 }
 .saleeventbbcodeparser_ErrorDiv_1RPzC {
   background-color: hotpink;

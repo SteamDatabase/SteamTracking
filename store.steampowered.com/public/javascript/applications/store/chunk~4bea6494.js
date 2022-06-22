@@ -3821,6 +3821,7 @@
         "contenthub_popular",
         "contenthub_toprated",
         "contenthub_upcoming",
+        "contenthub_all",
       ];
       function F(e) {
         return L.indexOf(e) >= 0;
@@ -3910,6 +3911,11 @@
           label: "#Sale_BrowserSortOption_ContentHub_Upcoming",
           flavor: "contenthub_upcoming",
           tooltip: "#Sale_BrowserSortOption_ContentHub_Upcoming_ttip",
+        },
+        {
+          label: "#Sale_BrowserSortOption_ContentHub_All",
+          flavor: "contenthub_all",
+          tooltip: "#Sale_BrowserSortOption_ContentHub_All_ttip",
         },
       ];
       function k(e) {
@@ -4767,6 +4773,12 @@
         GetSaleSections() {
           return this.jsondata.sale_sections;
         }
+        GetSaleSectionByID(e) {
+          var t;
+          return null === (t = this.jsondata.sale_sections) || void 0 === t
+            ? void 0
+            : t.find((t) => t.unique_id == e);
+        }
         GetSaleSectionCount() {
           return this.jsondata.sale_sections.length;
         }
@@ -5058,7 +5070,7 @@
           a.createElement(
             "div",
             null,
-            Object(r.o)(
+            Object(r.p)(
               e.strTokenOverride || "#User_LimitedAccount",
               a.createElement(
                 "a",

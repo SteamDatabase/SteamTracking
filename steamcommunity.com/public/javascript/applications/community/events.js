@@ -146,7 +146,7 @@
         LoadAppAndFirstEvent() {
           var e;
           return Object(w.a)(this, void 0, void 0, function* () {
-            const t = Object(_.f)(
+            const t = Object(_.g)(
               "eventinfinitescrolllanding",
               "application_config"
             );
@@ -466,7 +466,7 @@
             { className: j.LatestUpdateButton, onClick: e.onClick },
             Object(S.f)(
               "#EventBrowse_LatestUpdateTime_Button",
-              Object(S.p)(e.nUpdateTime)
+              Object(S.q)(e.nUpdateTime)
             )
           )
         );
@@ -483,7 +483,7 @@
           s.a.createElement(
             "h2",
             null,
-            Object(S.f)("#EventBrowse_LastUpdateDate", Object(S.p)(t))
+            Object(S.f)("#EventBrowse_LastUpdateDate", Object(S.q)(t))
           ),
           s.a.createElement(
             "div",
