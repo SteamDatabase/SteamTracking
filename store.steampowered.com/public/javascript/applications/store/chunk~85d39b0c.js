@@ -3473,12 +3473,23 @@
                             })
                       )
                     : n.a.createElement(
-                        "a",
-                        {
-                          className: Object(O.a)(M.a.Action, "CartBtn"),
-                          onClick: V,
-                        },
-                        Object(T.g)("#Summer2022_opt_in_button")
+                        "div",
+                        { className: M.a.StoreActionWidgetContainer },
+                        n.a.createElement(
+                          "div",
+                          {
+                            className: M.a.StoreSalePriceActionWidgetContainer,
+                          },
+                          n.a.createElement(v.a, { info: p }),
+                          n.a.createElement(
+                            "a",
+                            {
+                              className: Object(O.a)(M.a.Action, "CartBtn"),
+                              onClick: V,
+                            },
+                            Object(T.g)("#Summer2022_opt_in_button")
+                          )
+                        )
                       ),
                   n.a.createElement(
                     "div",

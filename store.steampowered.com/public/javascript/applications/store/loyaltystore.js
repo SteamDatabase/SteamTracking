@@ -8073,7 +8073,6 @@
                   iconComponent: Ue.f,
                   children: Object(f.g)("#ShopPageTitle_ArtistProfiles"),
                   to: s.b.LoyaltyArtistProfiles(),
-                  iconCallout: Ue.w,
                 },
               })),
             t ||
@@ -13697,7 +13696,7 @@
           return this.m_config;
         }
         GetCurrentSeasonalAppID() {
-          return 1846860;
+          return 2055870;
         }
         GetLoyaltyRewardsSummary() {
           return Object(n.a)(this, void 0, void 0, function* () {

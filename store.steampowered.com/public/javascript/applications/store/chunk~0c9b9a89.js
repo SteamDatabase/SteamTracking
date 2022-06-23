@@ -767,11 +767,14 @@
           return o.createElement(
             r.d,
             Object.assign(
-              { ref: t, onOKActionDescription: a.disabled ? null : void 0 },
+              {
+                ref: t,
+                onOKActionDescription: a.disabled ? null : void 0,
+                noFocusRing: !0,
+              },
               a,
               {
                 className: l,
-                noFocusRing: !0,
                 disabled: !1,
                 onClick: a.disabled ? null : a.onClick,
                 onPointerDown: a.disabled ? null : a.onPointerDown,

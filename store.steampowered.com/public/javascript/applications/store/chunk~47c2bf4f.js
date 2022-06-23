@@ -848,6 +848,9 @@
             e
           );
         }
+        ReplaceBestPurchaseOption(e) {
+          this.m_BestPurchaseOption = e;
+        }
       }
       function c(e) {
         if (!(null == e ? void 0 : e.length)) return [];

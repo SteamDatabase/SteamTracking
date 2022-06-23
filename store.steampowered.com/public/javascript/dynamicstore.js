@@ -2358,8 +2358,12 @@ GDynamicStorePage = {
 		return true;
 	},
 
-	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams )
+	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams, bFilterDLC )
 	{
+		// by default we want to filter DLC
+		if ( bFilterDLC === undefined )
+			bFilterDLC = true;
+
 		// Get a list of appids to filter
 		var rgItems = [];
 		var oShownItems = { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] };
@@ -2372,7 +2376,7 @@ GDynamicStorePage = {
 			if ( !item )
 				continue;
 
-			if ( GDynamicStorePage.BItemValid( item, oShownItems, { filter_dlc: true } ) )
+			if ( GDynamicStorePage.BItemValid( item, oShownItems, { filter_dlc: bFilterDLC } ) )
 				rgItems.push( item );
 			else
 				$capsule.remove();

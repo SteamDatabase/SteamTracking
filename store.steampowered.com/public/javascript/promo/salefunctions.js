@@ -211,8 +211,8 @@ function HomeSaleFilterHeroes( $Parent )
 
 
 	
-
-	GDynamicStorePage.FilterCapsules( 3, 3, $J( rgHeroes ), $Row, Settings );
+	/* skip filtering out DLC for heroes, otherwise F2P DLCs would get filtered out */
+	GDynamicStorePage.FilterCapsules( 3, 3, $J( rgHeroes ), $Row, Settings, false );
 
 	$Row.children('.hero_capsule:not(.hidden)').children('.hero_capsule_img').each( function () {
 		$J(this).attr('src', $J(this).data('src') );
