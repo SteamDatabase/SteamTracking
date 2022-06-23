@@ -464,6 +464,45 @@ body.Steam3000Theme .btn_profile_action {
 	border-radius: 0px;
 	border: 1px dotted #e6c333;
 }
+
+body.Steam3000Theme .recent_games {
+    border: 2px dotted #e6c333;
+    box-shadow: 4px 4px #20d038;
+    background: black;
+    border-radius: 0px;
+}
+
+body.Steam3000Theme .recentgame_quicklinks {
+	margin-top: 8px;
+    margin-bottom: 8px;
+    background: black;
+    border: 2px dotted #e7c434;
+    padding: 4px;
+}
+
+body.Steam3000Theme .profile_recentgame_header.profile_leftcol_header {
+    border: 2px dotted #e6c333;
+    box-shadow: 4px 4px #20d038;
+    background: black;
+    border-radius: 0px;
+}
+
+body.Steam3000Theme .profile_recentgame_header.profile_leftcol_header .recentgame_quicklinks {
+    border: none;
+}
+
+body.Steam3000Theme .profile_recentgame_header.profile_leftcol_header h2 {
+	margin-top: auto;
+}
+
+body.Steam3000Theme .profile_comment_area {
+    border: 2px dotted #fb5034;
+    box-shadow: 4px 4px #debf3a;
+    background: #000000;
+    border-radius: 0px;
+	margin-top: 35px;
+}
+
 /* End Steam 3000 custom overrides */
 
 div.profile_page {

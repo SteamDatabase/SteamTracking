@@ -1526,7 +1526,9 @@ GHomepage = {
 		}
 
 		// sometimes this carousel gets scrolled during recreation, slam to 0 just in case
-		$J('#spotlight_carousel > .carousel_items')[0].scrollLeft = 0;
+		if ( $J('#spotlight_carousel > .carousel_items').length > 0 )
+			$J('#spotlight_carousel > .carousel_items')[0].scrollLeft = 0;
+
 		$Spotlights.css( 'visibility', '' );
 	},
 

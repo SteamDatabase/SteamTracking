@@ -1443,6 +1443,24 @@
                 this.m_mapBundles.delete(e.bundleid()));
           });
         }
+        SortStoreItems(e) {
+          let t = e.slice();
+          return (
+            t.sort((e, t) => {
+              var r, i, s, n, a, o;
+              let l = null !== (r = e.appid()) && void 0 !== r ? r : 0,
+                u = null !== (i = t.appid()) && void 0 !== i ? i : 0;
+              if (l != u) return l - u;
+              let c = null !== (s = e.packageid()) && void 0 !== s ? s : 0,
+                d = null !== (n = t.packageid()) && void 0 !== n ? n : 0;
+              if (c != d) return c - d;
+              let _ = null !== (a = e.bundleid()) && void 0 !== a ? a : 0,
+                m = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
+              return _ != m ? _ - m : 0;
+            }),
+            t
+          );
+        }
         InternalHandleLoadStoreItems(e, t, r) {
           return Object(i.a)(this, void 0, void 0, function* () {
             let i = 1;
@@ -1451,7 +1469,8 @@
                 (this.m_SteamInterface = new a.a(
                   _.d.COMMUNITY_WEBAPI_BASE_URL
                 )),
-              (e = this.m_SteamInterface));
+              (e = this.m_SteamInterface)),
+              (t = this.SortStoreItems(t));
             const o = new Array();
             try {
               const a = [];

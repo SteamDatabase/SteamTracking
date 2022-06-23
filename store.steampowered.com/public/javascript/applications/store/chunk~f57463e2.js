@@ -14931,17 +14931,36 @@
       function Ne(e) {
         const { nDoorIndex: t, children: a } = e,
           n = Object(G.f)(t),
-          { fnOpenDoor: r } = Object(G.h)();
+          { fnOpenDoor: r } = Object(G.h)(),
+          [i, s] = o.useState(!1),
+          [l, c] = o.useState(!1);
         return o.createElement(
           ye.e,
           {
             disabled: n,
             onClick: (e) => {
-              g.l.logged_in ? r(t, !0, null, !1) : Object(Oe.a)();
+              i ||
+                (g.l.logged_in
+                  ? (s(!0),
+                    r(t, !0, null, !1)
+                      .then((e) => {
+                        e || c(!0), s(!1);
+                      })
+                      .catch(() => {
+                        c(!0), s(!1);
+                      }))
+                  : Object(Oe.a)());
             },
           },
-          Boolean(n) && o.createElement(ae.q, null),
-          a
+          Boolean(l)
+            ? o.createElement("div", null, Object(F.g)("#GrantAwardError_Busy"))
+            : o.createElement(
+                o.Fragment,
+                null,
+                Boolean(i) && o.createElement(x.a, { size: "small" }),
+                Boolean(n) && o.createElement(ae.q, null),
+                a
+              )
         );
       }
       const Be = Object(we.j)(Ie.a);
@@ -24394,24 +24413,26 @@
           i = Object(Lt.f)(a),
           { fnOpenDoor: o } = Object(Lt.h)(),
           [c, d] = Object(s.useState)(!i),
-          [u, m] = Object(s.useState)(null);
+          [u, m] = Object(s.useState)(null),
+          [p, _] = Object(s.useState)(!1);
         Object(s.useEffect)(() => {
           const e = C.a.CancelToken.source();
           return (
             o(a, !0, n, r).then((t) => {
-              e.token.reason || (m(t), d(!1));
+              e.token.reason || (m(t), _(null == t), d(!1));
             }),
             () => e.cancel("unmounting SummerSale2022FoundItem")
           );
         }, [r, n, o, a]);
-        const p = Math.floor(5 * Math.random()) + 1;
+        const h = Math.floor(5 * Math.random()) + 1;
         return l.a.createElement(
           ft.e,
           {
-            strTitle: Object(oe.g)(`#Sale_Minigame_FoundIt_${p}`),
+            strTitle: Object(oe.g)(`#Sale_Minigame_FoundIt_${h}`),
             bDisableBackgroundDismiss: !0,
             closeModal: t,
             strOKButtonText: Object(oe.g)("#Sale_Minigame_ContineQuest"),
+            bOKDisabled: c,
             strCancelButtonText: Object(oe.g)("#Sale_Minigame_ContineShopping"),
             modalClassName: "SummerSale2022",
             onOK: () => {
@@ -24424,66 +24445,84 @@
             l.a.createElement(
               "div",
               null,
-              Boolean(c)
+              Boolean(p)
                 ? l.a.createElement(
-                    "div",
+                    l.a.Fragment,
                     null,
-                    l.a.createElement(ae.a, {
-                      size: "small",
-                      position: "center",
-                    }),
-                    l.a.createElement(
-                      "span",
-                      null,
-                      Object(oe.g)("#Sale_Minigame_LoadingReward")
-                    )
+                    Object(oe.g)("#GrantAwardError_Busy")
                   )
                 : l.a.createElement(
-                    "div",
+                    l.a.Fragment,
                     null,
-                    l.a.createElement(
-                      "div",
-                      { className: br.DetailText },
-                      Object(oe.g)("#Sale_Minigame_FoundIt_Earn")
-                    ),
-                    Boolean(null == u ? void 0 : u.sale_pg_context_token) &&
-                      l.a.createElement(
-                        "div",
-                        { className: br.RewardText },
-                        Object(oe.g)(u.sale_pg_context_token)
-                      ),
-                    Boolean(
-                      (null == u ? void 0 : u.sale_pg_background_mp4) &&
-                        (null == u ? void 0 : u.sale_pg_background_webm)
-                    ) &&
-                      l.a.createElement(xa.a, {
-                        bAutoPlay: !0,
-                        bMuted: !0,
-                        bLoop: !0,
-                        bControls: !1,
-                        video: {
-                          sPoster: Object(za.i)(u.sale_pg_background_override),
-                          rgVideoSources: [
-                            {
-                              sURL: Object(za.i)(u.sale_pg_background_webm),
-                              sFormat: "video/webm",
-                            },
-                            {
-                              sURL: Object(za.i)(u.sale_pg_background_mp4),
-                              sFormat: "video/mp4",
-                            },
-                          ],
-                        },
-                      }),
-                    l.a.createElement(
-                      "div",
-                      { className: br.PostText },
-                      Object(oe.g)(
-                        a < 10
-                          ? "#Summer2022_hunt_quest_return_clue"
-                          : "#Summer2022_hunt_quest_return_gift"
-                      )
-                    )
+                    Boolean(c)
+                      ? l.a.createElement(
+                          "div",
+                          null,
+                          l.a.createElement(ae.a, {
+                            size: "small",
+                            position: "center",
+                          }),
+                          l.a.createElement(
+                            "span",
+                            null,
+                            Object(oe.g)("#Sale_Minigame_LoadingReward")
+                          )
+                        )
+                      : l.a.createElement(
+                          "div",
+                          null,
+                          l.a.createElement(
+                            "div",
+                            { className: br.DetailText },
+                            Object(oe.g)("#Sale_Minigame_FoundIt_Earn")
+                          ),
+                          Boolean(
+                            null == u ? void 0 : u.sale_pg_context_token
+                          ) &&
+                            l.a.createElement(
+                              "div",
+                              { className: br.RewardText },
+                              Object(oe.g)(u.sale_pg_context_token)
+                            ),
+                          Boolean(
+                            (null == u ? void 0 : u.sale_pg_background_mp4) &&
+                              (null == u ? void 0 : u.sale_pg_background_webm)
+                          ) &&
+                            l.a.createElement(xa.a, {
+                              bAutoPlay: !0,
+                              bMuted: !0,
+                              bLoop: !0,
+                              bControls: !1,
+                              video: {
+                                sPoster: Object(za.i)(
+                                  u.sale_pg_background_override
+                                ),
+                                rgVideoSources: [
+                                  {
+                                    sURL: Object(za.i)(
+                                      u.sale_pg_background_webm
+                                    ),
+                                    sFormat: "video/webm",
+                                  },
+                                  {
+                                    sURL: Object(za.i)(
+                                      u.sale_pg_background_mp4
+                                    ),
+                                    sFormat: "video/mp4",
+                                  },
+                                ],
+                              },
+                            }),
+                          l.a.createElement(
+                            "div",
+                            { className: br.PostText },
+                            Object(oe.g)(
+                              a < 10
+                                ? "#Summer2022_hunt_quest_return_clue"
+                                : "#Summer2022_hunt_quest_return_gift"
+                            )
+                          )
+                        )
                   )
             )
           )
@@ -31615,7 +31654,9 @@
               c = Object(l.a)(e);
             }
             return (
-              console.error("OpenDoor hit error: " + c.strErrorMsg, c), null
+              this.m_mapDoorOpenPromise.delete(e),
+              console.error("OpenDoor hit error: " + c.strErrorMsg, c),
+              null
             );
           });
         }
