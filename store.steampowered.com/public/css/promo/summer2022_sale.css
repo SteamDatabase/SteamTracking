@@ -1010,6 +1010,21 @@ body.forgeyourfate {
     background: #000000;
 }
 
+p.home_subtitle_ctn {
+	font-size: 20px;
+	background: #e2cb30;
+	color: #2d3194;
+	font-weight: 600;
+	padding: 5px 10px;
+	box-shadow: 4px 4px #eb4036;
+}
+
+p.home_subtitle_ctn a {
+	font-size: 20px;
+	color: #2d3194;
+	font-weight: 600;
+}
+
 @media screen and (min-width: 2300px )
 {
     body.v6.sale_summer2022 {
@@ -1381,6 +1396,7 @@ body.forgeyourfate {
     .home_category_subtitle {
         font-size: 24px;
     }
+
     html.responsive #live_streams_carousel {
         display: none;
     }
@@ -1733,7 +1749,7 @@ body.forgeyourfate {
 }
 
 .home_discovery_queue_ctn .cards {
-    margin-bottom: -52px;
+    margin-bottom: -95px;
     margin-left: -40px;
     transform: rotate( -10deg );
 }
