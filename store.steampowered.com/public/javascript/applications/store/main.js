@@ -269,6 +269,7 @@
           IN_CHROMEOS: !1,
           LOCAL_HOSTNAME: "",
           WEBAPI_BASE_URL: "",
+          COMMUNITY_WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           BUILD_TIMESTAMP: 0,
           PAGE_TIMESTAMP: 0,

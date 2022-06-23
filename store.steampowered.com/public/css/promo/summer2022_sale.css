@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_summer2022 {
-                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/bg_2.png?v=3') repeat-y center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/ss_2022_bg_tile.jpg?v=3') repeat center, #2d3194;
+                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/bg_2.png?v=4') repeat-y center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/ss_2022_bg_tile.jpg?v=3') repeat center, #2d3194;
             }
 
 body.v6.sale_summer2022 .responsive_page_template_content {

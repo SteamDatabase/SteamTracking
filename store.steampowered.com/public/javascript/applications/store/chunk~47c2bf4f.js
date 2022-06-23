@@ -1448,7 +1448,9 @@
             let i = 1;
             e ||
               (this.m_SteamInterface ||
-                (this.m_SteamInterface = new a.a(_.d.WEBAPI_BASE_URL)),
+                (this.m_SteamInterface = new a.a(
+                  _.d.COMMUNITY_WEBAPI_BASE_URL
+                )),
               (e = this.m_SteamInterface));
             const o = new Array();
             try {

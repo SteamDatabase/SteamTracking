@@ -15190,31 +15190,31 @@
     upZW: function (e, t, a) {
       "use strict";
       a.d(t, "d", function () {
-        return d;
+        return m;
       }),
         a.d(t, "f", function () {
-          return m;
-        }),
-        a.d(t, "c", function () {
           return u;
         }),
-        a.d(t, "g", function () {
+        a.d(t, "c", function () {
           return p;
         }),
-        a.d(t, "h", function () {
+        a.d(t, "g", function () {
           return _;
         }),
-        a.d(t, "i", function () {
+        a.d(t, "h", function () {
           return h;
         }),
-        a.d(t, "e", function () {
+        a.d(t, "i", function () {
           return b;
         }),
-        a.d(t, "a", function () {
+        a.d(t, "e", function () {
           return g;
         }),
-        a.d(t, "b", function () {
+        a.d(t, "a", function () {
           return f;
+        }),
+        a.d(t, "b", function () {
+          return v;
         });
       var r = a("mrSG"),
         i = a("GpIp"),
@@ -15222,11 +15222,12 @@
         s = a("Zdsb"),
         o = (a("XrGS"), a("yfxr"), a("FmLm")),
         l = (a("X/lQ"), a("Ys0h")),
-        c = a("/cMS");
-      function d(e) {
+        c = a("/cMS"),
+        d = a("/Q1a");
+      function m(e) {
         return l.a.Get().BIsStoreItemMissing(e.id, Object(n.d)(e.type));
       }
-      function m(e, t, a) {
+      function u(e, t, a) {
         const r = new Array();
         return (
           null == e || e.forEach((e) => r.push({ id: e, type: "game" })),
@@ -15235,7 +15236,7 @@
           r
         );
       }
-      function u(e) {
+      function p(e) {
         var t;
         const a = l.a.Get().GetStoreItem(e.id, Object(n.d)(e.type));
         return (
@@ -15245,7 +15246,7 @@
             : t.discount_pct) > 0
         );
       }
-      function p(e, t, a) {
+      function _(e, t, a) {
         return Object(r.a)(this, void 0, void 0, function* () {
           if (!e || 0 == e.length) return [];
           const r = e.filter((e) => Object(s.c)(e.type)).map((e) => e.id),
@@ -15288,7 +15289,7 @@
           });
         });
       }
-      function _(e) {
+      function h(e) {
         return Object(r.a)(this, void 0, void 0, function* () {
           const t = new Set();
           e
@@ -15300,8 +15301,8 @@
             yield c.a.Get().QueueMultipleTagLoads(Array.from(t));
         });
       }
-      const h = { include_tag_count: 20, include_basic_info: !0 };
-      function b(e) {
+      const b = { include_tag_count: 20, include_basic_info: !0 };
+      function g(e) {
         const t = o.a.Get();
         return (
           !e ||
@@ -15313,34 +15314,50 @@
           e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e))
         );
       }
-      function g(e, t, a, s) {
+      function f(e, t, a, s) {
         return Object(r.a)(this, void 0, void 0, function* () {
-          const r = [];
-          yield p(e, i.e, t);
+          let r = 0,
+            o = 0;
+          const c = [];
+          yield _(e, i.e, t);
           for (const i of e) {
             const e = l.a.Get().GetStoreItem(i.id, Object(n.d)(i.type));
-            if (!e) continue;
-            const o = e
+            if (!e) {
+              r++;
+              continue;
+            }
+            const d = e
               .GetIncludedAppIDs()
               .map((e) => l.a.Get().GetApp(e))
               .filter(Boolean);
-            if ((o.push(e), t)) {
+            if ((d.push(e), t)) {
               const e = new Set(
-                  o.map((e) => e.GetParentAppID()).filter(Boolean)
+                  d.map((e) => e.GetParentAppID()).filter(Boolean)
                 ),
                 t = Array.from(e)
                   .map((e) => l.a.Get().GetApp(e))
                   .filter(Boolean);
-              t && o.push(...t);
+              t && d.push(...t);
             }
-            o.some(s || b) ? a && a.push(i) : r.push(i);
+            d.some(s || g) ? (o++, a && a.push(i)) : c.push(i);
           }
-          return r;
+          return (
+            "dev" === d.d.WEB_UNIVERSE &&
+              0 === c.length &&
+              console.log(
+                "ApplyStorePreferenceFilters: " +
+                  r +
+                  " failed to load, " +
+                  o +
+                  " hidden by user filter."
+              ),
+            c
+          );
         });
       }
-      function f(e, t, a, i, s, c, d) {
+      function v(e, t, a, i, s, c, d) {
         return Object(r.a)(this, void 0, void 0, function* () {
-          let r = yield g(
+          let r = yield f(
             e,
             t,
             d,
@@ -15351,7 +15368,7 @@
                     .Get()
                     .BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
                   o.a.Get().BExcludeTagIDs(e.GetTagIDs())
-              : b
+              : g
           );
           const m = [];
           for (const e of r) {
