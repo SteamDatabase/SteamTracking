@@ -55520,6 +55520,139 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     transform: translateY(0px) scale(1);
   }
 }
+:root {
+  --basicui-header-height: 0px;
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-green_TAKgT {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes euladialog_focusAnimation_1zESp {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes euladialog_hoverAnimation_21kJB {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-green_TAKgT {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .euladialog_EulaIntro_3q_Ir {
   text-align: center;
 }
@@ -55530,16 +55663,37 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   display: flex;
   flex-direction: column;
   min-height: 0;
+  height: 0;
   flex: 1;
 }
 .euladialog_EULAThrobber_1gwU6 {
   flex: 1;
 }
 .euladialog_EULAScrolling__7lXD {
-  overflow-wrap: anywhere;
+  margin: 0 -2.8vw;
+  padding: 0 2.8vw;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
-.euladialog_EULAScrolling__7lXD.gpfocuswithin:not(.gpfocus) {
-  background-color: #3d4450;
+.euladialog_EULAContent_1dbgU {
+  padding: 10px;
+  background: #23262e;
+  overflow-wrap: anywhere;
+  border-radius: 2px;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+}
+.euladialog_EULAContent_1dbgU.gpfocuswithin {
+  animation-name: euladialog_ItemFocusAnim-darkerGrey_JYELp;
+  z-index: 1;
+  animation-name: euladialog_ItemFocusAnim-darkGrey_1ifEm;
 }
 .euladialog_EULAError_1BwVZ {
   flex: 1;
@@ -55548,6 +55702,38 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.euladialog_LanguageFieldContainer_2xwMG {
+  margin-bottom: 10px;
+}
+.scrollfade_ScrollFade_1ZCj8 {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+  scroll-padding: 20px 0px;
+}
+.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToTop_2-bw5 {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+}
+.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToBottom_E4xhS {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20px,
+    black 100%
+  );
+}
+.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToTop_2-bw5.scrollfade_ScrolledToBottom_E4xhS {
+  -webkit-mask-image: none;
 }
 .borrowgamedialog_BorrowGameDialog_3p6Ys {
   width: 600px;
