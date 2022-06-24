@@ -52848,7 +52848,7 @@
                             type: "video/webm",
                             src:
                               g.a.VIDEO_URL +
-                              "international2020/shortfilm/clapper_03_new.webm",
+                              "shortfilmcontest2022/clapper_2022.webm",
                           })
                         ),
                         s.a.createElement(
@@ -52932,7 +52932,7 @@
                       s.a.createElement(
                         "div",
                         { className: yo.a.Introduction },
-                        Object(E.k)("#filmcontest_introduction")
+                        Object(E.k)("#filmcontest22_intro")
                       ),
                       s.a.createElement(
                         "div",
@@ -52997,7 +52997,7 @@
                       s.a.createElement(
                         "div",
                         { className: yo.a.PrizeDesc },
-                        Object(E.k)("#filmcontest_prize_desc")
+                        Object(E.k)("#filmcontest22_prize_desc")
                       )
                     )
                   ),
@@ -53016,7 +53016,7 @@
                         className: yo.a.PreviousWinnerVideo,
                         width: "30%",
                         height: "300px",
-                        src: "https://www.youtube.com/embed/xtHskqp8QMc",
+                        src: "https://www.youtube.com/embed/FUYAopUzThc",
                         title: "YouTube video player",
                         frameBorder: "0",
                         allow:
@@ -53027,7 +53027,7 @@
                         className: yo.a.PreviousWinnerVideo,
                         width: "30%",
                         height: "300px",
-                        src: "https://www.youtube.com/embed/4a04C51ZKi4",
+                        src: "https://www.youtube.com/embed/X66DnoOo1S8",
                         title: "YouTube video player",
                         frameBorder: "0",
                         allow:
@@ -53038,7 +53038,7 @@
                         className: yo.a.PreviousWinnerVideo,
                         width: "30%",
                         height: "300px",
-                        src: "https://www.youtube.com/embed/qKWcG86wgUc",
+                        src: "https://www.youtube.com/embed/tIprXeR23U8",
                         title: "YouTube video player",
                         frameBorder: "0",
                         allow:
@@ -53089,17 +53089,17 @@
                           s.a.createElement(
                             "li",
                             null,
-                            Object(E.k)("#filmcontest_guidelines_5")
+                            Object(E.k)("#filmcontest22_guidelines_5")
                           ),
                           s.a.createElement(
                             "li",
                             null,
-                            Object(E.k)("#filmcontest_guidelines_6")
+                            Object(E.k)("#filmcontest22_guidelines_6")
                           ),
                           s.a.createElement(
                             "li",
                             null,
-                            Object(E.k)("#filmcontest_guidelines_12")
+                            Object(E.k)("#filmcontest22_guidelines_12")
                           ),
                           s.a.createElement(
                             "li",
@@ -53136,7 +53136,7 @@
                     s.a.createElement(
                       "div",
                       { className: yo.a.EndRowText },
-                      Object(E.k)("#filmcontest_introduction"),
+                      Object(E.k)("#filmcontest22_intro"),
                       0 == g.a.ACCOUNT_ID &&
                         s.a.createElement(
                           "a",
@@ -53188,8 +53188,7 @@
                     s.a.createElement("img", {
                       className: yo.a.EndRowImage,
                       src:
-                        g.a.IMG_URL +
-                        "/international2020/shortfilm/clap_board_new.png",
+                        g.a.IMG_URL + "shortfilmcontest2022/clapper_2022.png",
                     })
                   ),
                   s.a.createElement(N.a, null),
