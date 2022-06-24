@@ -5302,7 +5302,7 @@ div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
   flex-direction: column;
 }
 .cloudconflict_CloudConflictModalContent_3Ps1l
-  .cloudconflict_FooterButtons_2Z1a3 {
+  button.cloudconflict_FooterButtons_2Z1a3 {
   margin-top: 8px;
   display: flex;
   flex-direction: row;
