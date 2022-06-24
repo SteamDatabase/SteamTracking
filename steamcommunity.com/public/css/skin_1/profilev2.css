@@ -418,13 +418,10 @@ body.SteamDeckTheme .favorite_badge_description {
 
 /* Custom overrides for Steam 3000 theme */
 body.Steam3000Theme .profile_rightcol {
-	border: 2px dotted #e6c333;
+	outline: 2px dotted #e6c333;
 	box-shadow: 4px 4px #20d038;
 	background: black;
-}
-
-body.Steam3000Theme .profile_leftcol {
-	max-width: 650px;
+	border-radius: 0px;
 }
 
 body.Steam3000Theme .profile_header_bg_texture,
@@ -433,7 +430,7 @@ body.Steam3000Theme .profile_content.has_profile_background {
 }
 
 body.Steam3000Theme .profile_customization {
-	border: 2px dotted #e6c333;
+	outline: 2px dotted #e6c333;
 	box-shadow: 4px 4px #20d038;
 	background: black;
 	border-radius: 0px;
@@ -444,7 +441,7 @@ body.Steam3000Theme .profile_header {
 }
 
 body.Steam3000Theme .profile_header_content {
-    border: 2px dotted #e6c333;
+    outline: 2px dotted #e6c333;
     box-shadow: 4px 4px #20d038;
     background: black;
 }
