@@ -463,7 +463,7 @@ body.Steam3000Theme .btn_profile_action {
 }
 
 body.Steam3000Theme .recent_games {
-    border: 2px dotted #e6c333;
+    outline: 2px dotted #e6c333;
     box-shadow: 4px 4px #20d038;
     background: black;
     border-radius: 0px;
@@ -478,7 +478,7 @@ body.Steam3000Theme .recentgame_quicklinks {
 }
 
 body.Steam3000Theme .profile_recentgame_header.profile_leftcol_header {
-    border: 2px dotted #e6c333;
+    outline: 2px dotted #e6c333;
     box-shadow: 4px 4px #20d038;
     background: black;
     border-radius: 0px;
@@ -493,7 +493,7 @@ body.Steam3000Theme .profile_recentgame_header.profile_leftcol_header h2 {
 }
 
 body.Steam3000Theme .profile_comment_area {
-    border: 2px dotted #fb5034;
+    outline: 2px dotted #fb5034;
     box-shadow: 4px 4px #debf3a;
     background: #000000;
     border-radius: 0px;
