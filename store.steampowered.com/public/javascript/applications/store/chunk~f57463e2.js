@@ -19170,6 +19170,7 @@
         dt = a("71ll"),
         ut = a("bH8Z");
       function mt(e) {
+        if (!e.recommendation) return { strReason: "" };
         if (e.recommendation.reason === v.e.k_EStatusString)
           return { strReason: Object(oe.g)(e.recommendation.statusString) };
         if (e.recommendation.reason === v.e.k_ECurator) {
@@ -19245,36 +19246,43 @@
         return { strReason: "" };
       }
       const pt = (e) => {
-          var t;
-          const { capsule: a, bAutoFocus: n } = e,
-            [r, i] = Object(s.useState)(!0),
-            { bIsScreenWide: o } = _e();
+          var t, a, n;
+          const { capsule: r, bAutoFocus: i } = e,
+            [o, c] = Object(s.useState)(!0),
+            { bIsScreenWide: d } = _e();
+          let u =
+              null === (t = r.recommendation) || void 0 === t
+                ? void 0
+                : t.reason,
+            m =
+              null === (a = r.recommendation) || void 0 === a
+                ? void 0
+                : a.curator,
+            p =
+              null === (n = r.recommendation) || void 0 === n
+                ? void 0
+                : n.creator;
           return (
             Object(s.useEffect)(() => {
               let e;
               if (
-                (a.recommendation.reason === v.e.k_ECurator
-                  ? (e = a.recommendation.curator)
-                  : a.recommendation.reason === v.e.k_ECreator &&
-                    (e = a.recommendation.creator.creator),
+                (r.recommendation && r.recommendation.reason === v.e.k_ECurator
+                  ? (e = r.recommendation.curator)
+                  : r.recommendation &&
+                    r.recommendation.reason === v.e.k_ECreator &&
+                    (e = r.recommendation.creator.creator),
                 e)
               ) {
                 const t = N.a.InitFromClanID(e);
-                st.a.LoadClanInfoForClanSteamID(t).then(() => i(!1));
-              } else i(!1);
-            }, [
-              a.recommendation.reason,
-              a.recommendation.curator,
-              null === (t = a.recommendation.creator) || void 0 === t
-                ? void 0
-                : t.creator,
-            ]),
+                st.a.LoadClanInfoForClanSteamID(t).then(() => c(!1));
+              } else c(!1);
+            }, [r.recommendation, u, m, p]),
             l.a.createElement(lt.f, {
-              id: a.id,
-              type: "app" === a.item_type ? "game" : a.item_type,
-              displayStyle: o ? "animated" : "bordered",
-              strReason: r ? "" : mt(a).strReason,
-              bAutoFocus: n,
+              id: r.id,
+              type: "app" === r.item_type ? "game" : r.item_type,
+              displayStyle: d ? "animated" : "bordered",
+              strReason: o ? "" : mt(r).strReason,
+              bAutoFocus: i,
             })
           );
         },
