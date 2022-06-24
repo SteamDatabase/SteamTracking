@@ -273,6 +273,7 @@
           TOKEN_URL: "",
           BUILD_TIMESTAMP: 0,
           PAGE_TIMESTAMP: 0,
+          FROM_WEB: !1,
           get SESSIONID() {
             return (function () {
               if (!Object(a.a)()) return u || (u = m()), u;

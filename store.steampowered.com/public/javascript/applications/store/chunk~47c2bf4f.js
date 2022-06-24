@@ -1530,8 +1530,7 @@
                         e.Hdr().error_message(),
                       Object(s.I)(t)
                     ),
-                    (1 != e.Hdr().transport_error() &&
-                      (_.d.IN_CLIENT || _.d.IN_GAMEPADUI)) ||
+                    (1 == e.Hdr().transport_error() || _.d.FROM_WEB) &&
                       this.MarkStoreItemIDUnavailable(o[n]),
                     1 == i && (i = e.GetEResult()));
               });
