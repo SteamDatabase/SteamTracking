@@ -10020,26 +10020,37 @@
                         const t = i.single_item_style
                           ? i.single_item_style
                           : o.x;
-                        return n.createElement(
-                          "div",
-                          {
-                            key: u,
-                            className: Object(h.a)({
-                              [y.a.AppSummaryWidgetCtn]: "bordered" == t,
-                              [_.b + r]: 0 === r,
-                            }),
-                          },
-                          n.createElement(I.f, {
-                            id: e.id,
-                            type: e.type,
-                            displayStyle: t,
-                            bShowPurchaseOptionsButton: i.show_purchase_options,
-                            bUseSubscriptionLayout: d,
-                            bShowDemoButton: i.show_as_demos,
-                            bHidePrice: i.hide_prices,
-                            bShowDeckCompatibilityDialog:
-                              i.show_deck_compability_details,
-                          })
+                        let a;
+                        return (
+                          "overrideNavigation" in e &&
+                            (a = (t) => (
+                              e.overrideNavigation(),
+                              t && (t.preventDefault(), t.stopPropagation()),
+                              !1
+                            )),
+                          n.createElement(
+                            "div",
+                            {
+                              key: u,
+                              className: Object(h.a)({
+                                [y.a.AppSummaryWidgetCtn]: "bordered" == t,
+                                [_.b + r]: 0 === r,
+                              }),
+                            },
+                            n.createElement(I.f, {
+                              id: e.id,
+                              type: e.type,
+                              displayStyle: t,
+                              bShowPurchaseOptionsButton:
+                                i.show_purchase_options,
+                              bUseSubscriptionLayout: d,
+                              bShowDemoButton: i.show_as_demos,
+                              bHidePrice: i.hide_prices,
+                              bShowDeckCompatibilityDialog:
+                                i.show_deck_compability_details,
+                              fnOnClickOverride: a,
+                            })
+                          )
                         );
                       }
                     })(e, t),
@@ -24950,8 +24961,7 @@
                         "overrideNavigation" in t &&
                         (a = (e) => (
                           t.overrideNavigation(),
-                          e.preventDefault(),
-                          e.stopPropagation(),
+                          e && (e.preventDefault(), e.stopPropagation()),
                           !1
                         )),
                       l.a.createElement(

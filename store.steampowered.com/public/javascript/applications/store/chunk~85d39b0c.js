@@ -3342,7 +3342,7 @@
                       M.a.SaleItemDefaultCapsuleDisplay
                     ),
                   },
-                  Object(S.a)(c, x),
+                  Object(S.a)(c, x, void 0, V),
                   { preferredFocus: $ }
                 ),
                 n.a.createElement(
@@ -16307,7 +16307,7 @@
         n = a("f5iL"),
         s = a("GXif"),
         o = a("/Q1a");
-      function l(e, t, a) {
+      function l(e, t, a, l) {
         if (!o.d.IN_GAMEPADUI) return;
         if (!Object(i.c)(e.GetStoreItemType()))
           return void Object(n.a)(
@@ -16315,10 +16315,10 @@
             "StoreItemWidgetSalePageAction: unexpected type: " +
               e.GetStoreItemType()
           );
-        const l = Object(r.b)(`${e.GetStorePageURL()}${a ? `?${a}` : ""}`, t);
+        const c = Object(r.b)(`${e.GetStorePageURL()}${a ? `?${a}` : ""}`, t);
         return {
           onOKButton: () => {
-            window.location.href = l;
+            l ? l(void 0) : (window.location.href = c);
           },
           onOKActionDescription: Object(s.g)("#Sale_Gamepad_Action_Select"),
         };
