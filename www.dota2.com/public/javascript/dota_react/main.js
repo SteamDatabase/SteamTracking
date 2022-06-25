@@ -52842,7 +52842,7 @@
                             playsInline: !0,
                             poster:
                               g.a.IMG_URL +
-                              "international2020/shortfilm/clap_board_new.png",
+                              "shortfilmcontest2022/clapper_fallback_2022.png",
                           },
                           s.a.createElement("source", {
                             type: "video/webm",

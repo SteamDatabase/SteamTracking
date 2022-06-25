@@ -463,7 +463,6 @@ ${IMG_URL}international2020/river_vials/river_vial_6.jpg
 ${IMG_URL}international2020/river_vials/river_vial_7.jpg
 ${IMG_URL}international2020/river_vials/river_vial_icon_${}.png
 ${IMG_URL}international2020/seasonal_effects/seasonal_effect_icon_${}.png
-${IMG_URL}international2020/shortfilm/clap_board_new.png
 ${IMG_URL}international2020/shortfilm/header.jpg
 ${IMG_URL}international2020/sprays/spray_${}.png
 ${IMG_URL}international2020/sprays/spray_1.png
@@ -583,6 +582,7 @@ ${IMG_URL}recruit_and_upgrade.png
 ${IMG_URL}right_arrow.png
 ${IMG_URL}search.png
 ${IMG_URL}shortfilmcontest2022/clapper_2022.png
+${IMG_URL}shortfilmcontest2022/clapper_fallback_2022.png
 ${IMG_URL}social/${}_large.png
 ${IMG_URL}steam.png
 ${IMG_URL}synergyicons/${strAllianceName}.png

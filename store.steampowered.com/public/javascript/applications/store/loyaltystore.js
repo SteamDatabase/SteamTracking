@@ -14997,7 +14997,7 @@
                 "#RewardCluster_All_Title",
                 Object(s.g)("#RewardItemType_Bundle_plural")
               ),
-              Object(s.g)("#ShopPageTitle_ItemBundles_Subtitle2"),
+              "",
               { rewardtype: [5, 6] }
             ),
             C = e(
