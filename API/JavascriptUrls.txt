@@ -782,6 +782,7 @@ ${STORE_BASE_URL}account/preferences/
 ${STORE_BASE_URL}account/preferences/#store_broadcast_settings
 ${STORE_BASE_URL}actions/
 ${STORE_BASE_URL}actions/addappformastersubscription
+${STORE_BASE_URL}actions/ajaxgetbadgeinfo
 ${STORE_BASE_URL}actions/ajaxgetdiscounts
 ${STORE_BASE_URL}actions/ajaxgetstorecategories
 ${STORE_BASE_URL}actions/ajaxgetstoretags

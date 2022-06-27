@@ -4817,7 +4817,7 @@
             if (!e || !Number.isInteger(e)) return { badgeid: e, level: 0 };
             let n = null;
             try {
-              const o = i.d.COMMUNITY_BASE_URL + "actions/ajaxgetbadgeinfo",
+              const o = i.d.STORE_BASE_URL + "actions/ajaxgetbadgeinfo",
                 l = {
                   sessionid: i.d.SESSIONID,
                   authwgtoken: i.l.authwgtoken,
