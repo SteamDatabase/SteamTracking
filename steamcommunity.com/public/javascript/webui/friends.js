@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7343090";
+var CLSTAMP = "7352677";
 !(function (e) {
   function t(t) {
     for (
@@ -327,7 +327,7 @@ var CLSTAMP = "7343090";
                 41: "52b86f5ec4dd6cd8b534",
                 42: "57525cc338f4b451c04e",
                 43: "fef110573bde645b79c4",
-                44: "448b58474f66e4c5dd15",
+                44: "0a7816fdb9f10f5aed7e",
                 45: "dd22fdb33aa53833bc8d",
                 46: "3111b113b41f826e8277",
                 47: "322d4d18c01ba7dbd738",
@@ -57831,7 +57831,10 @@ var CLSTAMP = "7343090";
             { className: E.a.LoginPanelContent },
             l && o.a.createElement(k, { text: l }),
             c == g.AccountName &&
-              o.a.createElement(A, { manager: this.m_manager }),
+              o.a.createElement(A, {
+                manager: this.m_manager,
+                autoFocus: this.props.autoFocus,
+              }),
             c == g.TwoFactorCode &&
               o.a.createElement(M, {
                 manager: this.m_manager,
@@ -57914,6 +57917,7 @@ var CLSTAMP = "7343090";
               "form",
               { className: E.a.AccountPasswordForm, onSubmit: this.OnSubmit },
               o.a.createElement(C.G, {
+                autoFocus: this.props.autoFocus,
                 className: Object(O.a)(E.a.AccountNameLabel, e),
                 label: Object(_.f)("#Login_AccountName"),
                 type: "text",
