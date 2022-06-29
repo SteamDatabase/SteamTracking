@@ -14,8 +14,8 @@
         a.d(t, "a", function () {
           return c;
         });
-      var n = a("mrSG"),
-        s = a("2vnA"),
+      var s = a("mrSG"),
+        n = a("2vnA"),
         r = a("cHF8"),
         o = a("vYsE"),
         i = a("GXif");
@@ -118,9 +118,9 @@
           return this.m_strCaptchaURL;
         }
         DoLogin() {
-          return Object(n.a)(this, void 0, void 0, function* () {
+          return Object(s.a)(this, void 0, void 0, function* () {
             if (this.m_bRequestInFlight) return;
-            Object(s.G)(() => {
+            Object(n.G)(() => {
               (this.m_bRequestInFlight = !0), (this.m_strErrorMessage = "");
             });
             let e = yield Object(r.a)(
@@ -128,7 +128,7 @@
               this.m_strOAuthClientID,
               this.m_userFields
             );
-            Object(s.G)(() => {
+            Object(n.G)(() => {
               (this.m_bRequestInFlight = !1), this.UpdateLoginResult(e);
             });
           });
@@ -186,7 +186,7 @@
                 : console.log("Unhandled login error");
         }
         RefreshCaptcha() {
-          return Object(n.a)(this, void 0, void 0, function* () {
+          return Object(s.a)(this, void 0, void 0, function* () {
             let e = yield Object(r.d)(this.m_strBaseURL);
             e ? this.UpdateCaptchaURL(e) : console.log("Failed to get captcha");
           });
@@ -198,24 +198,24 @@
               "-1" != e ? Object(r.b)(this.m_strBaseURL, e) : "");
         }
       }
-      Object(n.b)([s.C], c.prototype, "m_bRequestInFlight", void 0),
-        Object(n.b)([s.C], c.prototype, "m_userFields", void 0),
-        Object(n.b)([s.C], c.prototype, "m_eCurrentStep", void 0),
-        Object(n.b)([s.C], c.prototype, "m_strErrorMessage", void 0),
-        Object(n.b)([s.C], c.prototype, "m_strEmailDomain", void 0),
-        Object(n.b)([s.C], c.prototype, "m_strCaptchaURL", void 0),
-        Object(n.b)([s.C], c.prototype, "m_eSteamGuardCodeError", void 0),
-        Object(n.b)([o.a], c.prototype, "DoLogin", null),
-        Object(n.b)([s.k.bound], c.prototype, "UpdateCaptchaURL", null);
+      Object(s.b)([n.C], c.prototype, "m_bRequestInFlight", void 0),
+        Object(s.b)([n.C], c.prototype, "m_userFields", void 0),
+        Object(s.b)([n.C], c.prototype, "m_eCurrentStep", void 0),
+        Object(s.b)([n.C], c.prototype, "m_strErrorMessage", void 0),
+        Object(s.b)([n.C], c.prototype, "m_strEmailDomain", void 0),
+        Object(s.b)([n.C], c.prototype, "m_strCaptchaURL", void 0),
+        Object(s.b)([n.C], c.prototype, "m_eSteamGuardCodeError", void 0),
+        Object(s.b)([o.a], c.prototype, "DoLogin", null),
+        Object(s.b)([n.k.bound], c.prototype, "UpdateCaptchaURL", null);
     },
     pVzq: function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
         return _;
       });
-      var n = a("mrSG"),
-        s = a("q1tI"),
-        r = a.n(s),
+      var s = a("mrSG"),
+        n = a("q1tI"),
+        r = a.n(n),
         o = a("7ast"),
         i = a("e356"),
         l = a("TyAF"),
@@ -223,14 +223,14 @@
         c = a("GbHM"),
         h = a("tVW8"),
         g = a.n(h),
-        d = a("DSrS"),
-        u = a("kWcV"),
+        u = a("DSrS"),
+        d = a("kWcV"),
         p = a("GXif"),
         C = a("/Q1a");
       let _ = class extends r.a.Component {
         constructor(e) {
           super(e),
-            (this.m_manager = new d.a(this.props.baseURL)),
+            (this.m_manager = new u.a(this.props.baseURL)),
             this.props.onLoginComplete &&
               this.m_manager.SetLoginCompleteCallback(
                 this.props.onLoginComplete
@@ -241,9 +241,9 @@
         }
         render() {
           let e = this.props,
-            { baseURL: t, onLoginComplete: a, className: s } = e,
-            o = Object(n.c)(e, ["baseURL", "onLoginComplete", "className"]),
-            l = Object(c.a)(g.a.LoginDialog, s),
+            { baseURL: t, onLoginComplete: a, className: n } = e,
+            o = Object(s.c)(e, ["baseURL", "onLoginComplete", "className"]),
+            l = Object(c.a)(g.a.LoginDialog, n),
             m = this.m_manager.GetCurrentStep(),
             h = this.m_manager.GetErrorMessage();
           return r.a.createElement(
@@ -258,23 +258,26 @@
               "div",
               { className: g.a.LoginPanelContent },
               h && r.a.createElement(b, { text: h }),
-              m == d.b.AccountName &&
-                r.a.createElement(S, { manager: this.m_manager }),
-              m == d.b.TwoFactorCode &&
+              m == u.b.AccountName &&
+                r.a.createElement(S, {
+                  manager: this.m_manager,
+                  autoFocus: this.props.autoFocus,
+                }),
+              m == u.b.TwoFactorCode &&
                 r.a.createElement(L, {
                   manager: this.m_manager,
-                  authtype: d.b.TwoFactorCode,
+                  authtype: u.b.TwoFactorCode,
                 }),
-              m == d.b.EmailCode &&
+              m == u.b.EmailCode &&
                 r.a.createElement(L, {
                   manager: this.m_manager,
-                  authtype: d.b.EmailCode,
+                  authtype: u.b.EmailCode,
                 }),
-              m == d.b.Complete &&
+              m == u.b.Complete &&
                 r.a.createElement(
                   "div",
                   { className: g.a.LoginComplete },
-                  r.a.createElement(u.a, null)
+                  r.a.createElement(d.a, null)
                 )
             )
           );
@@ -287,7 +290,7 @@
           e.text
         );
       }
-      _ = Object(n.b)([l.a], _);
+      _ = Object(s.b)([l.a], _);
       let S = class extends r.a.Component {
         constructor(e) {
           super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
@@ -346,6 +349,7 @@
                 "form",
                 { className: g.a.AccountPasswordForm, onSubmit: this.OnSubmit },
                 r.a.createElement(o.z, {
+                  autoFocus: this.props.autoFocus,
                   className: Object(c.a)(g.a.AccountNameLabel, e),
                   label: Object(p.g)("#Login_AccountName"),
                   type: "text",
@@ -407,11 +411,11 @@
           );
         }
       };
-      Object(n.b)([m.b], S.prototype, "OnSubmit", null),
-        Object(n.b)([m.b], S.prototype, "OnChangeName", null),
-        Object(n.b)([m.b], S.prototype, "OnChangePassword", null),
-        Object(n.b)([m.b], S.prototype, "OnChangeRememberPass", null),
-        (S = Object(n.b)([l.a], S));
+      Object(s.b)([m.b], S.prototype, "OnSubmit", null),
+        Object(s.b)([m.b], S.prototype, "OnChangeName", null),
+        Object(s.b)([m.b], S.prototype, "OnChangePassword", null),
+        Object(s.b)([m.b], S.prototype, "OnChangeRememberPass", null),
+        (S = Object(s.b)([l.a], S));
       let E = class extends r.a.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
@@ -468,15 +472,15 @@
           );
         }
       };
-      Object(n.b)([m.b], E.prototype, "OnCaptchaText", null),
-        Object(n.b)([m.b], E.prototype, "RefreshCaptcha", null),
-        (E = Object(n.b)([l.a], E));
+      Object(s.b)([m.b], E.prototype, "OnCaptchaText", null),
+        Object(s.b)([m.b], E.prototype, "RefreshCaptcha", null),
+        (E = Object(s.b)([l.a], E));
       let L = class extends r.a.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.manager.DoLogin();
         }
         OnChangeAuthCode(e) {
-          this.props.authtype == d.b.TwoFactorCode
+          this.props.authtype == u.b.TwoFactorCode
             ? this.props.manager.SetTwoFactorCode(e.target.value)
             : this.props.manager.SetEmailAuthCode(e.target.value);
         }
@@ -484,19 +488,19 @@
           let e,
             t = this.props.manager,
             a = "",
-            n = null,
-            s = "",
-            l = t.GetSteamGuardCodeError() == d.c.InvalidCode;
+            s = null,
+            n = "",
+            l = t.GetSteamGuardCodeError() == u.c.InvalidCode;
           switch (this.props.authtype) {
-            case d.b.TwoFactorCode:
+            case u.b.TwoFactorCode:
               (a = t.GetTwoFactorCode()),
-                (n = Object(p.g)("#Login_Enter2FA")),
+                (s = Object(p.g)("#Login_Enter2FA")),
                 (e = r.a.createElement(i.N, null)),
-                (s = Object(p.g)("#Login_Enter2FAHelp"));
+                (n = Object(p.g)("#Login_Enter2FAHelp"));
               break;
-            case d.b.EmailCode:
+            case u.b.EmailCode:
               (a = t.GetEmailAuthCode()),
-                (n = Object(p.p)(
+                (s = Object(p.p)(
                   "#Login_SentSteamguard",
                   r.a.createElement(
                     "span",
@@ -505,7 +509,7 @@
                     t.GetEmailDomain()
                   )
                 )),
-                (s = Object(p.g)("#Login_EnterSteamguard")),
+                (n = Object(p.g)("#Login_EnterSteamguard")),
                 (e = r.a.createElement(i.D, null));
           }
           return r.a.createElement(
@@ -517,7 +521,7 @@
               { className: g.a.SigningInAccountName },
               t.GetUserName()
             ),
-            r.a.createElement(o.d, null, n),
+            r.a.createElement(o.d, null, s),
             r.a.createElement(
               "div",
               { className: g.a.AuthenticatorInputcontainer },
@@ -551,14 +555,14 @@
                 ),
                 href: "http://help.steampowered.com/",
               },
-              s
+              n
             )
           );
         }
       };
-      Object(n.b)([m.b], L.prototype, "OnSubmit", null),
-        Object(n.b)([m.b], L.prototype, "OnChangeAuthCode", null),
-        (L = Object(n.b)([l.a], L));
+      Object(s.b)([m.b], L.prototype, "OnSubmit", null),
+        Object(s.b)([m.b], L.prototype, "OnChangeAuthCode", null),
+        (L = Object(s.b)([l.a], L));
     },
     tVW8: function (e, t, a) {
       e.exports = {
