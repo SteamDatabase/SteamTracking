@@ -25247,14 +25247,14 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .newlogindialog_ProtectingAccount_1eawW
   .newlogindialog_Label_2TD8Z {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #afafaf;
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_ProtectingAccount_1eawW
   .newlogindialog_AccountName_wtvh_ {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #fff;
 }
 .newlogindialog_Login_1sORI
@@ -25267,11 +25267,12 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   padding-top: 6px;
 }
 .newlogindialog_Login_1sORI .newlogindialog_AwaitingMobileConfText_2uk5- {
-  color: #dfe3e6;
-  font-size: 16px;
+  color: #fff;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 26px;
   text-align: center;
+  max-width: 450px;
 }
 .newlogindialog_Login_1sORI .newlogindialog_AwaitingMobileConfIcon_2-LaW {
   width: 55px;
@@ -25398,6 +25399,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 0.055em;
+  font-weight: 200;
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_StandardLayout_23HHn
@@ -25459,6 +25461,20 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .newlogindialog_StandardLayout_23HHn.newlogindialog_Embedded_uif43
   input {
   box-shadow: none;
+}
+.newlogindialog_FailureTitle_1eeXc {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  font-weight: 200;
+  text-align: center;
+}
+.newlogindialog_FailureDescription_9bAS3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 .qrcode_QRBits_22VuG {
   display: grid;
