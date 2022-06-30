@@ -553,7 +553,7 @@
                       this.m_ProfileModifiers.m_CommittedEquippedItem.appid
                     ),
                   t.Body().set_activate(!1);
-                let r = yield C.d.ActivateProfileModifierItem(
+                let r = yield C.e.ActivateProfileModifierItem(
                   this.m_SteamInterface.GetServiceTransport(),
                   t
                 );
@@ -571,7 +571,7 @@
                     .Body()
                     .set_appid(this.m_ProfileModifiers.m_EquippedItem.appid),
                   t.Body().set_activate(!0);
-                let r = yield C.d.ActivateProfileModifierItem(
+                let r = yield C.e.ActivateProfileModifierItem(
                   this.m_SteamInterface.GetServiceTransport(),
                   t
                 );
