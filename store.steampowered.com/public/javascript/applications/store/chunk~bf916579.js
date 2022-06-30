@@ -3073,11 +3073,11 @@
         }
         LoadStoreRelevanceData(e) {
           return Object(a.a)(this, void 0, void 0, function* () {
-            let t = { sessionid: f.d.SESSIONID, appid: e },
+            let t = { appid: e },
               r = { arrSimilarPlayedApps: [], bRecommendedByIR: !1 };
             const a = (yield g.a.get(
               `${f.d.STORE_BASE_URL}explore/ajaxgetstorerelevancedata`,
-              { params: t }
+              { params: t, withCredentials: !0, timeout: 1e4 }
             )).data;
             return (
               a &&
