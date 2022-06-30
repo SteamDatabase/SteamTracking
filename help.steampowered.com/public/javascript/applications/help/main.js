@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7353129";
+var CLSTAMP = "7354766";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [60],
   {
@@ -39959,6 +39959,13 @@ var CLSTAMP = "7353129";
             return f.a.createElement(
               sm,
               { gap: 36, className: yu.a.EmbeddedRoot },
+              f.a.createElement(
+                "div",
+                {
+                  style: { fontSize: "14px", color: "#d8d632", width: "380px" },
+                },
+                "QR code functionality is currently limited to play testers with the updated app. Inquire in the mobile slack channel."
+              ),
               f.a.createElement(mm, { className: yu.a.HeaderLogo }),
               f.a.createElement(Fu, null),
               o,
@@ -39996,6 +40003,11 @@ var CLSTAMP = "7353129";
           e = f.a.createElement(
             "div",
             { style: { display: "flex", flexDirection: "column", gap: "8px" } },
+            f.a.createElement(
+              "div",
+              { style: { fontSize: "14px", color: "#d8d632", width: "380px" } },
+              "QR code functionality is currently limited to play testers with the updated app. Inquire in the mobile slack channel."
+            ),
             f.a.createElement(
               "div",
               { className: yu.a.PrimaryHeader },
@@ -40047,7 +40059,7 @@ var CLSTAMP = "7353129";
           : window.location.href + "?oldauth=1";
         return f.a.createElement(
           "div",
-          null,
+          { style: { fontSize: "12px" } },
           "Having trouble with new login? ",
           f.a.createElement(
             "a",

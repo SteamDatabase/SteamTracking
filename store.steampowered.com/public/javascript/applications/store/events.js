@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [29],
+  [33],
   {
     "2+/j": function (e, t, a) {
       e.exports = {
@@ -662,22 +662,23 @@
           Promise.all([
             a.e(1),
             a.e(13),
-            a.e(16),
+            a.e(18),
             a.e(0),
             a.e(2),
             a.e(3),
-            a.e(4),
-            a.e(6),
             a.e(5),
+            a.e(6),
+            a.e(4),
             a.e(7),
-            a.e(9),
             a.e(10),
+            a.e(9),
             a.e(8),
-            a.e(12),
             a.e(11),
-            a.e(15),
-            a.e(19),
-            a.e(25),
+            a.e(12),
+            a.e(14),
+            a.e(16),
+            a.e(21),
+            a.e(28),
           ]).then(a.bind(null, "3fR/"))
         ),
         de = Object(_.a)((e) => {

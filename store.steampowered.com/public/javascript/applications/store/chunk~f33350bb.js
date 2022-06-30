@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [19],
+  [21],
   {
     "/HXi": function (e, t, n) {
       "use strict";
@@ -85,7 +85,7 @@
     "/IT7": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return E;
+        return g;
       });
       var o,
         r = n("mrSG"),
@@ -110,7 +110,7 @@
           (e.bottom = "bottom"),
           (e.bottomright = "bottomright");
       })(o || (o = {}));
-      let E = class extends i.Component {
+      let g = class extends i.Component {
         constructor(e) {
           super(e),
             (this.m_fnMouseUp = null),
@@ -553,16 +553,16 @@
           );
         }
       };
-      Object(r.b)([s.b], E.prototype, "LinkRegionBoxRef", null),
-        Object(r.b)([s.b], E.prototype, "OnMouseDown", null),
-        Object(r.b)([s.b], E.prototype, "OnMouseMove", null),
-        Object(r.b)([s.b], E.prototype, "OnMouseUp", null),
-        Object(r.b)([s.b], E.prototype, "HandleDelete", null),
-        Object(r.b)([s.b], E.prototype, "OnSetLinkURLChange", null),
-        Object(r.b)([s.b], E.prototype, "OnSetLinkDescriptionChange", null),
-        Object(r.b)([s.b], E.prototype, "OnSaveLink", null),
-        Object(r.b)([s.b], E.prototype, "OnEditLink", null),
-        (E = Object(r.b)([a.a], E));
+      Object(r.b)([s.b], g.prototype, "LinkRegionBoxRef", null),
+        Object(r.b)([s.b], g.prototype, "OnMouseDown", null),
+        Object(r.b)([s.b], g.prototype, "OnMouseMove", null),
+        Object(r.b)([s.b], g.prototype, "OnMouseUp", null),
+        Object(r.b)([s.b], g.prototype, "HandleDelete", null),
+        Object(r.b)([s.b], g.prototype, "OnSetLinkURLChange", null),
+        Object(r.b)([s.b], g.prototype, "OnSetLinkDescriptionChange", null),
+        Object(r.b)([s.b], g.prototype, "OnSaveLink", null),
+        Object(r.b)([s.b], g.prototype, "OnEditLink", null),
+        (g = Object(r.b)([a.a], g));
     },
     "55de": function (e, t, n) {
       "use strict";
@@ -626,8 +626,8 @@
       p.defaultProps = { text: "" };
       var h = n("SS8s"),
         u = n("GbHM"),
-        E = n("GXif"),
-        g = n("hCpY");
+        g = n("GXif"),
+        E = n("hCpY");
       function _(e, t) {
         return e + "economy/sticker/" + t;
       }
@@ -854,8 +854,8 @@
           );
         }
       }
-      Object(o.b)([g.b], M.prototype, "OnMouseEnter", null),
-        Object(o.b)([g.b], M.prototype, "OnMouseLeave", null);
+      Object(o.b)([E.b], M.prototype, "OnMouseEnter", null),
+        Object(o.b)([E.b], M.prototype, "OnMouseLeave", null);
       const N = Object(i.a)((e) => {
           const { target: t, store: n, emoticon: o } = e,
             r = n.Get(o);
@@ -938,7 +938,7 @@
                 a.a.createElement(
                   "span",
                   {
-                    title: Object(E.g)("#AddonPicker_RecentlyUsed"),
+                    title: Object(g.g)("#AddonPicker_RecentlyUsed"),
                     className: Object(u.a)(
                       y.a.PickerTab,
                       y.a.Clock,
@@ -967,7 +967,7 @@
                     a.a.createElement(
                       "span",
                       {
-                        title: Object(E.g)("#AddonPicker_Emoticons"),
+                        title: Object(g.g)("#AddonPicker_Emoticons"),
                         className: Object(u.a)(
                           y.a.PickerTab,
                           e && y.a.ActiveTab
@@ -988,7 +988,7 @@
                     a.a.createElement(
                       "span",
                       {
-                        title: Object(E.g)("#AddonPicker_Stickers"),
+                        title: Object(g.g)("#AddonPicker_Stickers"),
                         className: Object(u.a)(
                           y.a.PickerTab,
                           e && y.a.ActiveTab
@@ -1007,7 +1007,7 @@
                     a.a.createElement(
                       "span",
                       {
-                        title: Object(E.g)("#AddonPicker_RoomEffects"),
+                        title: Object(g.g)("#AddonPicker_RoomEffects"),
                         className: Object(u.a)(
                           y.a.PickerTab,
                           e && y.a.ActiveTab
@@ -1057,7 +1057,7 @@
                   a.a.createElement(
                     "span",
                     {
-                      title: Object(E.g)("#AddonPicker_RecentlyUsed"),
+                      title: Object(g.g)("#AddonPicker_RecentlyUsed"),
                       className: Object(u.a)(
                         y.a.PickerTab,
                         y.a.Clock,
@@ -1086,7 +1086,7 @@
                       a.a.createElement(
                         "span",
                         {
-                          title: Object(E.g)("#AddonPicker_Emoticons"),
+                          title: Object(g.g)("#AddonPicker_Emoticons"),
                           className: Object(u.a)(
                             y.a.PickerTab,
                             e && y.a.ActiveTab
@@ -1107,7 +1107,7 @@
                       a.a.createElement(
                         "span",
                         {
-                          title: Object(E.g)("#AddonPicker_Stickers"),
+                          title: Object(g.g)("#AddonPicker_Stickers"),
                           className: Object(u.a)(
                             y.a.PickerTab,
                             e && y.a.ActiveTab
@@ -1153,7 +1153,7 @@
                     a.a.createElement(
                       "span",
                       {
-                        title: Object(E.g)("#AddonPicker_Emoticons"),
+                        title: Object(g.g)("#AddonPicker_Emoticons"),
                         className: y.a.PickerTab,
                       },
                       a.a.createElement(ae, null)
@@ -1196,7 +1196,7 @@
                     a.a.createElement(
                       "span",
                       {
-                        title: Object(E.g)("#AddonPicker_Emoticons"),
+                        title: Object(g.g)("#AddonPicker_Emoticons"),
                         className: y.a.PickerTab,
                       },
                       a.a.createElement(ae, null)
@@ -1230,7 +1230,7 @@
           return (
             H(e) &&
               i.push({
-                title: Object(E.g)("#AddonPicker_RecentEmoticons"),
+                title: Object(g.g)("#AddonPicker_RecentEmoticons"),
                 items: m.a.FilterEmoticons(H(e), r),
                 onItemSelect: n,
                 renderItem: (e) =>
@@ -1241,16 +1241,16 @@
                     x,
                     null,
                     r
-                      ? Object(E.g)("#AddonPicker_NoResults")
-                      : Object(E.g)(
+                      ? Object(g.g)("#AddonPicker_NoResults")
+                      : Object(g.g)(
                           "#AddonPicker_NoRecent",
-                          Object(E.g)("#AddonPicker_Emoticons")
+                          Object(g.g)("#AddonPicker_Emoticons")
                         )
                   ),
               }),
             G(e).length &&
               i.push({
-                title: Object(E.g)("#AddonPicker_RecentStickers"),
+                title: Object(g.g)("#AddonPicker_RecentStickers"),
                 items: m.a.FilterStickers(G(e), r),
                 onItemSelect: o,
                 renderItem: (e) => a.a.createElement(ee, { sticker: e }),
@@ -1260,10 +1260,10 @@
                     x,
                     null,
                     r
-                      ? Object(E.g)("#AddonPicker_NoResults")
-                      : Object(E.g)(
+                      ? Object(g.g)("#AddonPicker_NoResults")
+                      : Object(g.g)(
                           "#AddonPicker_NoRecent",
-                          Object(E.g)("#AddonPicker_Stickers")
+                          Object(g.g)("#AddonPicker_Stickers")
                         )
                   ),
               }),
@@ -1290,7 +1290,7 @@
             i = !r && o ? e.GetFlairListByGroupID(o) : e.emoticon_list,
             s = m.a.FilterEmoticons(i, r).slice(0, 1e3);
           return a.a.createElement(R, {
-            title: Object(E.g)("#AddonPicker_Emoticons"),
+            title: Object(g.g)("#AddonPicker_Emoticons"),
             items: s,
             onItemSelect: n,
             renderItem: (e) =>
@@ -1304,7 +1304,7 @@
                 ? a.a.createElement(
                     x,
                     null,
-                    Object(E.g)("#AddonPicker_NoResults")
+                    Object(g.g)("#AddonPicker_NoResults")
                   )
                 : a.a.createElement($, null),
           });
@@ -1317,25 +1317,25 @@
           a.a.createElement(
             x,
             null,
-            Object(E.g)(
+            Object(g.g)(
               "#AddonPicker_NoneOwned",
-              Object(E.g)("#AddonPicker_Emoticons")
+              Object(g.g)("#AddonPicker_Emoticons")
             )
           ),
           a.a.createElement(
             x,
             null,
-            Object(E.p)(
+            Object(g.p)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               a.a.createElement(
                 D.b,
                 { href: `${f.d.STORE_BASE_URL}points/shop/c/emoticons` },
-                Object(E.g)("#AddonPicker_AcquireAtPointsShop_Link")
+                Object(g.g)("#AddonPicker_AcquireAtPointsShop_Link")
               ),
               a.a.createElement(
                 D.b,
                 { href: `${f.d.COMMUNITY_BASE_URL}market` },
-                Object(E.g)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
+                Object(g.g)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
               )
             )
           )
@@ -1350,7 +1350,7 @@
             { filter: n } = this.state,
             o = m.a.FilterStickers(e.GetStickerList(), n);
           return a.a.createElement(R, {
-            title: Object(E.g)("#EmoticonPicker_StickerHeading"),
+            title: Object(g.g)("#EmoticonPicker_StickerHeading"),
             items: o,
             onItemSelect: t,
             renderItem: (e) => a.a.createElement(ee, { sticker: e }),
@@ -1363,7 +1363,7 @@
                 ? a.a.createElement(
                     x,
                     null,
-                    Object(E.g)("#AddonPicker_NoResults")
+                    Object(g.g)("#AddonPicker_NoResults")
                   )
                 : a.a.createElement(
                     a.a.Fragment,
@@ -1371,22 +1371,22 @@
                     a.a.createElement(
                       x,
                       null,
-                      Object(E.g)(
+                      Object(g.g)(
                         "#AddonPicker_NoneOwned",
-                        Object(E.g)("#AddonPicker_Stickers")
+                        Object(g.g)("#AddonPicker_Stickers")
                       )
                     ),
                     a.a.createElement(
                       x,
                       null,
-                      Object(E.p)(
+                      Object(g.p)(
                         "#AddonPicker_AcquireAtPointsShop",
                         a.a.createElement(
                           D.b,
                           {
                             href: `${f.d.STORE_BASE_URL}points/shop/c/stickers`,
                           },
-                          Object(E.g)("#AddonPicker_AcquireAtPointsShop_Link")
+                          Object(g.g)("#AddonPicker_AcquireAtPointsShop_Link")
                         )
                       )
                     )
@@ -1403,7 +1403,7 @@
             { filter: o } = this.state,
             r = e.GetEffectList().filter(({ name: e }) => e.indexOf(o) > -1);
           return a.a.createElement(R, {
-            title: Object(E.g)("#EmoticonPicker_EffectHeading"),
+            title: Object(g.g)("#EmoticonPicker_EffectHeading"),
             items: r,
             onItemSelect: n,
             renderItem: (e) =>
@@ -1417,7 +1417,7 @@
                 ? a.a.createElement(
                     x,
                     null,
-                    Object(E.g)("#AddonPicker_NoResults")
+                    Object(g.g)("#AddonPicker_NoResults")
                   )
                 : a.a.createElement(
                     a.a.Fragment,
@@ -1425,22 +1425,22 @@
                     a.a.createElement(
                       x,
                       null,
-                      Object(E.g)(
+                      Object(g.g)(
                         "#AddonPicker_NoneOwned",
-                        Object(E.g)("#AddonPicker_RoomEffects")
+                        Object(g.g)("#AddonPicker_RoomEffects")
                       )
                     ),
                     a.a.createElement(
                       x,
                       null,
-                      Object(E.p)(
+                      Object(g.p)(
                         "#AddonPicker_AcquireAtPointsShop",
                         a.a.createElement(
                           D.b,
                           {
                             href: `${f.d.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
-                          Object(E.g)("#AddonPicker_AcquireAtPointsShop_Link")
+                          Object(g.g)("#AddonPicker_AcquireAtPointsShop_Link")
                         )
                       )
                     )
@@ -1464,7 +1464,7 @@
           return (
             H(e).length &&
               i.push({
-                title: Object(E.g)("#AddonPicker_RecentEmoticons"),
+                title: Object(g.g)("#AddonPicker_RecentEmoticons"),
                 items: m.a.FilterEmoticons(H(e), r),
                 onItemSelect: n,
                 renderItem: (e) =>
@@ -1475,10 +1475,10 @@
                     x,
                     null,
                     r
-                      ? Object(E.g)("#AddonPicker_NoResults")
-                      : Object(E.g)(
+                      ? Object(g.g)("#AddonPicker_NoResults")
+                      : Object(g.g)(
                           "#AddonPicker_NoRecent",
-                          Object(E.g)("#AddonPicker_Emoticons")
+                          Object(g.g)("#AddonPicker_Emoticons")
                         )
                   ),
               }),
@@ -1488,7 +1488,7 @@
               sections: [
                 ...i,
                 {
-                  title: Object(E.g)("#AddonPicker_AllEmoticons"),
+                  title: Object(g.g)("#AddonPicker_AllEmoticons"),
                   items: m.a.FilterStickers(e.emoticon_list, r).slice(0, 1e3),
                   onItemSelect: n,
                   renderItem: (e) =>
@@ -1502,7 +1502,7 @@
                       ? a.a.createElement(
                           x,
                           null,
-                          Object(E.g)("#AddonPicker_NoResults")
+                          Object(g.g)("#AddonPicker_NoResults")
                         )
                       : a.a.createElement($, null),
                 },
@@ -1529,7 +1529,7 @@
             filter: r,
             sections: [
               {
-                title: Object(E.g)("#ChatEntryButton_Flair"),
+                title: Object(g.g)("#ChatEntryButton_Flair"),
                 items: m.a.FilterStickers(e.GetFlairListByGroupID(o), r),
                 onItemSelect: n,
                 renderItem: (e) =>
@@ -1540,7 +1540,7 @@
                     ? a.a.createElement(
                         x,
                         null,
-                        Object(E.g)("#AddonPicker_NoResults")
+                        Object(g.g)("#AddonPicker_NoResults")
                       )
                     : a.a.createElement($, null),
               },
@@ -1869,25 +1869,7 @@
           })
         );
       }
-      Object(o.b)([g.b], ie.prototype, "SetVisible", null);
-    },
-    AYtk: function (e, t, n) {
-      "use strict";
-      n.d(t, "b", function () {
-        return i;
-      }),
-        n.d(t, "a", function () {
-          return s;
-        });
-      var o = n("q1tI"),
-        r = n("e356");
-      n("R5YR"), n("/Q1a");
-      function i() {
-        return o.createElement(r.V, null);
-      }
-      function s() {
-        return o.createElement(r.C, null);
-      }
+      Object(o.b)([E.b], ie.prototype, "SetVisible", null);
     },
     C1a2: function (e, t, n) {
       "use strict";
@@ -2017,7 +1999,7 @@
     GfUI: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return g;
+        return E;
       }),
         n.d(t, "b", function () {
           return _;
@@ -2037,8 +2019,8 @@
         p = n("/Q1a"),
         h = n("d1EJ"),
         u = n("PsAM"),
-        E = n.n(u);
-      const g = Object(r.a)((e) => {
+        g = n.n(u);
+      const E = Object(r.a)((e) => {
         const t = e.photo
             ? Object(a.d)(e.photo, Object(c.g)(p.d.LANGUAGE))
             : null,
@@ -2047,14 +2029,14 @@
           r = Boolean(e.company);
         return s.a.createElement(
           "div",
-          { className: E.a.SpeakerPopup, onMouseLeave: e.fnClose },
+          { className: g.a.SpeakerPopup, onMouseLeave: e.fnClose },
           s.a.createElement(
             "div",
-            { className: E.a.SpeakerInfoOuter },
+            { className: g.a.SpeakerInfoOuter },
             e.photo && s.a.createElement("img", { src: n }),
             s.a.createElement(
               "div",
-              { className: E.a.SpeakerInfoInner },
+              { className: g.a.SpeakerInfoInner },
               s.a.createElement("div", null, e.name),
               (o || r) &&
                 s.a.createElement(
@@ -2063,7 +2045,7 @@
                   o &&
                     s.a.createElement(
                       "span",
-                      { className: E.a.SpeakerTitle },
+                      { className: g.a.SpeakerTitle },
                       e.title
                     ),
                   o && r && s.a.createElement("span", null, ", "),
@@ -2074,7 +2056,7 @@
           e.bio &&
             s.a.createElement(
               "div",
-              { className: E.a.SpeakerBio },
+              { className: g.a.SpeakerBio },
               e.bio,
               e.bioString && s.a.createElement(h.a, { text: e.bioString })
             )
@@ -2118,7 +2100,7 @@
               m.a,
               Object.assign({}, n),
               s.a.createElement(
-                g,
+                E,
                 Object.assign({}, this.props, { fnClose: this.OnLeave })
               )
             ),
@@ -2132,7 +2114,7 @@
           return s.a.createElement(
             "div",
             {
-              className: E.a.SpeakerHover,
+              className: g.a.SpeakerHover,
               ref: this.m_refAnchor,
               onMouseEnter: this.OnHover,
               onFocus: this.OnHover,
@@ -2163,20 +2145,20 @@
             o = Boolean(this.props.company);
           return s.a.createElement(
             "div",
-            { className: E.a.SpeakerOuter },
+            { className: g.a.SpeakerOuter },
             s.a.createElement(
               _,
               Object.assign({}, this.props),
               s.a.createElement(
                 "div",
-                { className: E.a.Speaker },
+                { className: g.a.Speaker },
                 s.a.createElement(
                   "div",
-                  { className: E.a.SpeakerInfoOuter },
+                  { className: g.a.SpeakerInfoOuter },
                   !!t && s.a.createElement("img", { src: t }),
                   s.a.createElement(
                     "div",
-                    { className: E.a.SpeakerInfoInner },
+                    { className: g.a.SpeakerInfoInner },
                     s.a.createElement("div", null, this.props.name),
                     (n || o) &&
                       s.a.createElement(
@@ -2185,7 +2167,7 @@
                         n &&
                           s.a.createElement(
                             "span",
-                            { className: E.a.SpeakerTitle },
+                            { className: g.a.SpeakerTitle },
                             this.props.title
                           ),
                         n && o && s.a.createElement("span", null, ", "),
@@ -2459,8 +2441,8 @@
         p = (n("e356"), n("GXif")),
         h = (n("QwK/"), n("Wjgn"), n("GbHM")),
         u = n("USh/"),
-        E = n.n(u),
-        g = (n("SS8s"), n("3y2B"), n("AYtk"));
+        g = n.n(u),
+        E = (n("SS8s"), n("3y2B"), n("AYtk"));
       const _ = 1576780700;
       let f = class extends i.a.Component {
         OnEmoticonClick(e) {
@@ -2556,7 +2538,7 @@
                     "data-tooltip-text": n,
                   })
                 )
-              : (r.push(E.a.chatSubmitButton, E.a.EmoticonPickerButton),
+              : (r.push(g.a.chatSubmitButton, g.a.EmoticonPickerButton),
                 i.a.createElement(
                   c.d,
                   {
@@ -2572,7 +2554,7 @@
                     disabled: e,
                     "data-tooltip-text": n,
                   },
-                  this.props.buttonIcon || i.a.createElement(g.a, null),
+                  this.props.buttonIcon || i.a.createElement(E.a, null),
                   s && i.a.createElement(d.e, null)
                 ))
           );

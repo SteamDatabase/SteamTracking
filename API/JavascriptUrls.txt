@@ -631,6 +631,7 @@ ${MEDIA_CDN_URL}steam/apps/${}/header.jpg
 ${MEDIA_CDN_URL}store/promo/autumn2020/event_nomination_banner_2020.png?v=2
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
+${MEDIA_CDN_URL}store/promo/summer2022/card_stack.png?v-1
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
@@ -893,6 +894,7 @@ ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/contenthub?optout=1
 ${STORE_BASE_URL}labs/trendingreviews/
+${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}mobile
@@ -929,6 +931,7 @@ ${STORE_BASE_URL}sale/${sale_vanity_id}
 ${STORE_BASE_URL}sale/${strVanity}
 ${STORE_BASE_URL}sale/${vanity}
 ${STORE_BASE_URL}sale/clorthax_quest
+${STORE_BASE_URL}sale/summersaletradingcards
 ${STORE_BASE_URL}saleaction/ajaxclosealldoor
 ${STORE_BASE_URL}saleaction/ajaxgetallitemsforsale
 ${STORE_BASE_URL}saleaction/ajaxgetdeckappcompatibilityreport

@@ -2402,6 +2402,11 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	display: none;
 }
 
+.discoveryqueue_appwidget {
+    float: right;
+    margin-bottom: 4px;
+}
+
 /* DLC list page */
 
 .dlc_header .breadcrumbs .blockbg {

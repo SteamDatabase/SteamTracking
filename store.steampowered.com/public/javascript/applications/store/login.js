@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [35],
+  [39],
   {
     H38U: function (e, t, r) {
       var n = r("f4xo"),
@@ -1433,17 +1433,17 @@
           return "CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response";
         }
       }
-      class A extends _ {
+      class R extends _ {
         constructor(e = null) {
           super(),
-            A.prototype.client_id || h.a(A.M()),
+            R.prototype.client_id || h.a(R.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
                 fields: {
                   client_id: {
                     n: 1,
@@ -1457,97 +1457,6 @@
                   },
                   code: { n: 3, br: h.d.readString, bw: h.h.writeString },
                   code_type: { n: 4, br: h.d.readEnum, bw: h.h.writeEnum },
-                },
-              }),
-            A.sm_m
-          );
-        }
-        static MBF() {
-          return A.sm_mbf || (A.sm_mbf = h.e(A.M())), A.sm_mbf;
-        }
-        toObject(e = !1) {
-          return A.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return h.g(A.M(), e, t);
-        }
-        static fromObject(e) {
-          return h.c(A.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new g.BinaryReader(e),
-            r = new A();
-          return A.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return h.b(A.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new g.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          h.f(A.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new g.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request";
-        }
-      }
-      class O extends _ {
-        constructor(e = null) {
-          super(), _.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new O();
-        }
-        static deserializeBinary(e) {
-          let t = new g.BinaryReader(e),
-            r = new O();
-          return O.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new g.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new g.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response";
-        }
-      }
-      class R extends _ {
-        constructor(e = null) {
-          super(),
-            R.prototype.access_token || h.a(R.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
-                fields: {
-                  access_token: {
-                    n: 1,
-                    br: h.d.readString,
-                    bw: h.h.writeString,
-                  },
                 },
               }),
             R.sm_m
@@ -1583,6 +1492,97 @@
         serializeBase64String() {
           var e = new g.BinaryWriter();
           return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request";
+        }
+      }
+      class A extends _ {
+        constructor(e = null) {
+          super(), _.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return A.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new A();
+        }
+        static deserializeBinary(e) {
+          let t = new g.BinaryReader(e),
+            r = new A();
+          return A.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new g.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new g.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response";
+        }
+      }
+      class O extends _ {
+        constructor(e = null) {
+          super(),
+            O.prototype.access_token || h.a(O.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
+                fields: {
+                  access_token: {
+                    n: 1,
+                    br: h.d.readString,
+                    bw: h.h.writeString,
+                  },
+                },
+              }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = h.e(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return h.g(O.M(), e, t);
+        }
+        static fromObject(e) {
+          return h.c(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new g.BinaryReader(e),
+            r = new O();
+          return O.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return h.b(O.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new g.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          h.f(O.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new g.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_AccessToken_GenerateForApp_Response";
@@ -1797,7 +1797,7 @@
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
               t,
-              O,
+              A,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
@@ -1805,7 +1805,7 @@
             return e.SendMsg(
               "Authentication.GenerateAccessTokenForApp#1",
               t,
-              R,
+              O,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
@@ -1926,7 +1926,7 @@
           return this.m_eFailureState;
         }
       }
-      function I(e) {
+      function x(e) {
         const t = new FormData();
         t.append("nonce", e),
           t.append("sessionid", d.d.SESSIONID),
@@ -1992,7 +1992,7 @@
       Object(a.b)([l.C], P.prototype, "m_strChallengeURL", void 0),
         Object(a.b)([l.C], P.prototype, "m_eFailureState", void 0),
         Object(a.b)([m.a], P.prototype, "PollForUpdate", null);
-      var x = r("aoTL"),
+      var I = r("aoTL"),
         W = r("hCpY"),
         D = r("cHF8");
       class H extends P {
@@ -2164,7 +2164,7 @@
           return Object(a.a)(this, void 0, void 0, function* () {
             try {
               const t = 3 === this.m_eStatus || 7 === this.m_eStatus,
-                r = s.b.Init(A);
+                r = s.b.Init(R);
               r.Body().set_client_id(this.m_strClientID),
                 r.Body().set_steamid(this.m_steamid),
                 r.Body().set_code(e),
@@ -2406,7 +2406,7 @@
                 ),
                 [t]
               ),
-              Object(x.d)(() => ({
+              Object(I.d)(() => ({
                 strChallengeURL: t.GetChallengeURL(),
                 eFailureStatue: t.GetFailureState(),
                 eStatus: t.GetStatus(),
@@ -2527,7 +2527,7 @@
           Object.assign({}, e, {
             onSuccess: (t) => {
               const { strRefreshToken: r } = t;
-              I(r).then(
+              x(r).then(
                 (t) => e.onComplete(t),
                 () => e.onComplete(!1)
               );
@@ -2573,7 +2573,7 @@
           useCodeOverride: C,
         } = (function (e) {
           const [t, r] = Object(n.useState)(new H(e));
-          return Object(x.d)(() => ({
+          return Object(I.d)(() => ({
             strAccountName: t.GetAccountName(),
             steamid: t.GetSteamID(),
             eFailureState: t.GetFailureState(),
@@ -2626,6 +2626,13 @@
             return i.a.createElement(
               Pe,
               { gap: 36, className: Q.a.EmbeddedRoot },
+              i.a.createElement(
+                "div",
+                {
+                  style: { fontSize: "14px", color: "#d8d632", width: "380px" },
+                },
+                "QR code functionality is currently limited to play testers with the updated app. Inquire in the mobile slack channel."
+              ),
               i.a.createElement(Ge, { className: Q.a.HeaderLogo }),
               i.a.createElement(he, null),
               e,
@@ -2663,6 +2670,11 @@
           const r = i.a.createElement(
             "div",
             { style: { display: "flex", flexDirection: "column", gap: "8px" } },
+            i.a.createElement(
+              "div",
+              { style: { fontSize: "14px", color: "#d8d632", width: "380px" } },
+              "QR code functionality is currently limited to play testers with the updated app. Inquire in the mobile slack channel."
+            ),
             i.a.createElement(
               "div",
               { className: Q.a.PrimaryHeader },
@@ -2716,7 +2728,7 @@
           : window.location.href + "?oldauth=1";
         return i.a.createElement(
           "div",
-          null,
+          { style: { fontSize: "12px" } },
           "Having trouble with new login? ",
           i.a.createElement(
             "a",
@@ -2955,7 +2967,7 @@
             i.a.createElement(
               Pe,
               { alignItems: "center", gap: 20 },
-              i.a.createElement(Re, { type: t, accountName: s }),
+              i.a.createElement(Oe, { type: t, accountName: s }),
               i.a.createElement(
                 Pe,
                 { gap: 12, alignItems: "center" },
@@ -2968,7 +2980,7 @@
                       null,
                       Object(oe.g)("#Login_IncorrectSteamGuard")
                     ),
-                  i.a.createElement(xe, {
+                  i.a.createElement(Ie, {
                     value: c,
                     onChange: (e) => {
                       m || g(!0), u(e);
@@ -2986,15 +2998,15 @@
                 )
               ),
               "mobile" === t
-                ? i.a.createElement(Ae, null)
-                : i.a.createElement(Oe, { emailAddress: o })
+                ? i.a.createElement(Re, null)
+                : i.a.createElement(Ae, { emailAddress: o })
             )
           )
         );
       }
-      function Ae() {
+      function Re() {
         return i.a.createElement(
-          Ie,
+          xe,
           {
             justifyContent: "space-evenly",
             alignItems: "center",
@@ -3008,9 +3020,9 @@
           i.a.createElement(Te, { className: Q.a.AwaitingMobileConfIcon })
         );
       }
-      function Oe(e) {
+      function Ae(e) {
         return i.a.createElement(
-          Ie,
+          xe,
           {
             justifyContent: "space-evenly",
             alignItems: "center",
@@ -3035,7 +3047,7 @@
           i.a.createElement(je, { className: Q.a.AwaitingMobileConfIcon })
         );
       }
-      function Re(e) {
+      function Oe(e) {
         const { accountName: t, type: r } = e,
           n =
             "mobile" === r
@@ -3124,7 +3136,7 @@
           i.a.createElement(
             Pe,
             { gap: 40 },
-            i.a.createElement(Re, { type: t, accountName: r }),
+            i.a.createElement(Oe, { type: t, accountName: r }),
             i.a.createElement(Fe, null),
             o
           )
@@ -3165,7 +3177,7 @@
           c = n ? { gap: "number" == typeof n ? `${n}px` : n } : void 0;
         return i.a.createElement("div", { className: l, style: c }, s);
       }
-      function Ie(e) {
+      function xe(e) {
         const {
             children: t,
             justifyContent: r,
@@ -3180,7 +3192,7 @@
           };
         return i.a.createElement("div", { style: s, className: a }, t);
       }
-      function xe(e) {
+      function Ie(e) {
         const { value: t, onChange: r, onPaste: n, tone: a } = e;
         return i.a.createElement(We, {
           length: 5,

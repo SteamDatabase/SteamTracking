@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [36],
+  [69],
   {
     "++az": function (e, t, a) {
       e.exports =
@@ -4483,55 +4483,37 @@
         a.p +
         "images/applications/store/fancyPants_apng.png?v=valveisgoodatcaching";
     },
-    AYtk: function (e, t, a) {
-      "use strict";
-      a.d(t, "b", function () {
-        return i;
-      }),
-        a.d(t, "a", function () {
-          return o;
-        });
-      var n = a("q1tI"),
-        r = a("e356");
-      a("R5YR"), a("/Q1a");
-      function i() {
-        return n.createElement(r.V, null);
-      }
-      function o() {
-        return n.createElement(r.C, null);
-      }
-    },
     Aqke: function (e, t, a) {
       var n = {
-        "./loyalty_brazilian.json": ["jJTi", 161],
-        "./loyalty_bulgarian.json": ["YXmX", 162],
-        "./loyalty_czech.json": ["Yw6T", 163],
-        "./loyalty_danish.json": ["LeJ7", 164],
-        "./loyalty_dutch.json": ["3s9e", 165],
-        "./loyalty_english.json": ["nz6u", 166],
-        "./loyalty_finnish.json": ["cCRj", 167],
-        "./loyalty_french.json": ["WjZg", 168],
-        "./loyalty_german.json": ["2HFY", 169],
-        "./loyalty_greek.json": ["puzw", 170],
-        "./loyalty_hungarian.json": ["h+vV", 171],
-        "./loyalty_italian.json": ["1xjJ", 172],
-        "./loyalty_japanese.json": ["KhFN", 173],
-        "./loyalty_koreana.json": ["0T2E", 174],
-        "./loyalty_latam.json": ["SFVQ", 175],
-        "./loyalty_norwegian.json": ["6qpk", 176],
-        "./loyalty_polish.json": ["c9AW", 177],
-        "./loyalty_portuguese.json": ["H3eu", 178],
-        "./loyalty_romanian.json": ["gt0D", 179],
-        "./loyalty_russian.json": ["4nQk", 180],
-        "./loyalty_sc_schinese.json": ["0Z0/", 181],
-        "./loyalty_schinese.json": ["svug", 182],
-        "./loyalty_spanish.json": ["x/nm", 183],
-        "./loyalty_swedish.json": ["d/hP", 184],
-        "./loyalty_tchinese.json": ["EWje", 185],
-        "./loyalty_thai.json": ["SnkP", 186],
-        "./loyalty_turkish.json": ["cD82", 187],
-        "./loyalty_ukrainian.json": ["jV8j", 188],
-        "./loyalty_vietnamese.json": ["TxFk", 189],
+        "./loyalty_brazilian.json": ["jJTi", 40],
+        "./loyalty_bulgarian.json": ["YXmX", 41],
+        "./loyalty_czech.json": ["Yw6T", 42],
+        "./loyalty_danish.json": ["LeJ7", 43],
+        "./loyalty_dutch.json": ["3s9e", 44],
+        "./loyalty_english.json": ["nz6u", 45],
+        "./loyalty_finnish.json": ["cCRj", 46],
+        "./loyalty_french.json": ["WjZg", 47],
+        "./loyalty_german.json": ["2HFY", 48],
+        "./loyalty_greek.json": ["puzw", 49],
+        "./loyalty_hungarian.json": ["h+vV", 50],
+        "./loyalty_italian.json": ["1xjJ", 51],
+        "./loyalty_japanese.json": ["KhFN", 52],
+        "./loyalty_koreana.json": ["0T2E", 53],
+        "./loyalty_latam.json": ["SFVQ", 54],
+        "./loyalty_norwegian.json": ["6qpk", 55],
+        "./loyalty_polish.json": ["c9AW", 56],
+        "./loyalty_portuguese.json": ["H3eu", 57],
+        "./loyalty_romanian.json": ["gt0D", 58],
+        "./loyalty_russian.json": ["4nQk", 59],
+        "./loyalty_sc_schinese.json": ["0Z0/", 60],
+        "./loyalty_schinese.json": ["svug", 61],
+        "./loyalty_spanish.json": ["x/nm", 62],
+        "./loyalty_swedish.json": ["d/hP", 63],
+        "./loyalty_tchinese.json": ["EWje", 64],
+        "./loyalty_thai.json": ["SnkP", 65],
+        "./loyalty_turkish.json": ["cD82", 66],
+        "./loyalty_ukrainian.json": ["jV8j", 67],
+        "./loyalty_vietnamese.json": ["TxFk", 68],
       };
       function r(e) {
         if (!a.o(n, e))
@@ -5911,8 +5893,8 @@
           );
         }),
         Xe = (e) => e.toString().padStart(2, "0"),
-        Je = i.a.lazy(() => a.e(98).then(a.bind(null, "yDev"))),
-        $e = i.a.lazy(() => a.e(97).then(a.bind(null, "f4w8")));
+        Je = i.a.lazy(() => a.e(131).then(a.bind(null, "yDev"))),
+        $e = i.a.lazy(() => a.e(130).then(a.bind(null, "f4w8")));
       let Ke = class extends i.a.Component {
         render() {
           return i.a.createElement(
@@ -13604,7 +13586,7 @@
                     [])
             )),
             (this.m_batchedCommunityInventoryLoader = new V(
-              (e) => f.c.GetCommunityInventory(this.m_transport, e),
+              (e) => f.d.GetCommunityInventory(this.m_transport, e),
               (e) => {
                 const t = _.b.Init(f.b);
                 return t.Body().set_filter_appids(e), t;
@@ -14432,7 +14414,7 @@
             a.Body().set_communityitemid(this.GetOwnedCommunityItemID(e)),
               a.Body().set_appid(e.appid),
               a.Body().set_activate(!0);
-            const n = yield f.c.ActivateProfileModifierItem(
+            const n = yield f.d.ActivateProfileModifierItem(
               this.m_transport,
               a
             );
