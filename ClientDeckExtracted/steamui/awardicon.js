@@ -31,7 +31,7 @@
         u = o("GbHM");
       class d extends a.a.PureComponent {
         render() {
-          const n = Object(p.o)(
+          const n = Object(p.p)(
             "#RewardsReaction_Tooltip",
             this.props.reaction.count || 0,
             Object(c.a)(this.props.reaction.reaction_type)

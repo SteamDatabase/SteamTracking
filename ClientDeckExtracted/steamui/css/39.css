@@ -7081,6 +7081,269 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   );
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkerGrey-nocolor_hIQRp {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkerGrey_2FgPG {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkGrey_3JSgm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-grey_1QB3w {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnimBorder-darkGrey_17zTL {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-green_ZSRT7 {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_focusAnimation_341ql {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_hoverAnimation_3-jH6 {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_VirtualMenuContainer_3J5J3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6 {
+  position: absolute;
+  width: 100px;
+  height: 125px;
+  background-color: #202020;
+  border-radius: 8px;
+  transform-origin: top left;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_NoDescription_3qM0b {
+  height: 100px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd {
+  height: calc(30px + 30px);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd.gamepaduiappoverlayvirtualmenucontainer_NoDescription_3qM0b {
+  height: 30px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW {
+  width: 150px;
+  height: 175px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #22222277;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_NoDescription_3qM0b {
+  height: 150px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuHoverKeyDescription_1DhbM {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: calc(50% - 50px);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+  margin-top: 26px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+  height: 30px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 3px solid #202020;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TouchKey_2e5vF {
+  background-color: #404040;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TouchKeyDisabled_2mVK7 {
+  background-color: #40404090;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
+  background-color: #256180;
+  border-color: #ffffff88;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  font-size: 16px;
+  text-align: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_HasImage_3m8Gj
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 8px;
+  text-align: left;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border: none;
+  background: none;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56 {
+  border: none;
+  border-radius: 50%;
+  background-color: #20202088;
+  width: 66px;
+  height: 66px;
+  top: calc(50% - 33px);
+  left: calc(50% - 33px);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56.gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
+  border-color: #fff;
+  border-width: 2px;
+  border-style: solid;
+  width: 66px;
+  height: 66px;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  background-color: #222;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  font-size: 12px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_HasImage_3m8Gj
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  font-size: 8px;
+  left: 20%;
+  top: 5%;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
+  transform: scale(0.75);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9 {
+  width: 100px;
+  height: 100px;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  opacity: 0.35;
+  position: absolute;
+}
+.gamepaduiappoverlayvirtualmenucontainer_CircleSegments_oHW-j {
+  position: absolute;
+}
+.gamepaduiappoverlayvirtualmenucontainer_CircleSegments_oHW-j
+  .gamepaduiappoverlayvirtualmenucontainer_CircleSegment_1OuT2 {
+  position: absolute;
+  opacity: 0.5;
+}
+.gamepaduiappoverlayvirtualmenucontainer_CircleSegments_oHW-j
+  .gamepaduiappoverlayvirtualmenucontainer_CircleSegment_1OuT2.gamepaduiappoverlayvirtualmenucontainer_Selected_1RB3u {
+  opacity: 1;
+}
 .mainpanelapprunning_MainPanelAppRunning_3x-nj {
   height: 100%;
 }

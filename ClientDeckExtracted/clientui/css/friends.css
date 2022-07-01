@@ -884,7 +884,7 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .ModalPosition_TopBar {
-  height: 1px;
+  min-height: 1px;
   background: linear-gradient(to right, #00ccff, #3366ff);
 }
 
@@ -1113,7 +1113,8 @@ button.DialogButton::-moz-focus-inner {
   transition: all 0.2s ease-in-out;
 }
 
-.DialogTextInputBase:focus {
+.DialogTextInputBase:focus,
+.DialogTextInputBase:focus-within {
   background: rgba(67, 73, 83, 0.6);
   box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;

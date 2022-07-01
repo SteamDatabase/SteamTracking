@@ -170,14 +170,14 @@
   .newlogindialog_ProtectingAccount_1aop9
   .newlogindialog_Label_2SE9Z {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #afafaf;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_ProtectingAccount_1aop9
   .newlogindialog_AccountName_3Vjp0 {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #fff;
 }
 .newlogindialog_Login_ZOBYq
@@ -190,11 +190,12 @@
   padding-top: 6px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_AwaitingMobileConfText_7LmnT {
-  color: #dfe3e6;
-  font-size: 16px;
+  color: #fff;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 26px;
   text-align: center;
+  max-width: 450px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_AwaitingMobileConfIcon_2hLC_ {
   width: 55px;
@@ -321,6 +322,7 @@
   font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 0.055em;
+  font-weight: 200;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh
@@ -382,6 +384,20 @@
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
   input {
   box-shadow: none;
+}
+.newlogindialog_FailureTitle_A3Y-u {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  font-weight: 200;
+  text-align: center;
+}
+.newlogindialog_FailureDescription_3gFes {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 .qrcode_QRBits_3FhhK {
   display: grid;

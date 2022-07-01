@@ -5736,7 +5736,7 @@
       /*!***************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/steammessages/enums_pb.ts ***!
   \***************************************************************************************************/
-      /*! exports provided: EPublishedFileQueryTypeToString, EPublishedFileInappropriateProviderToString, EPublishedFileInappropriateResultToString, EPersonaStateFlagToString, EContentCheckProviderToString, EProfileCustomizationTypeToString, EPublishedFileStorageSystemToString, ECloudStoragePersistStateToString, ESDCardFormatStageToString, ESystemFanControlModeToString, EBluetoothDeviceTypeToString, ESystemServiceStateToString, EGraphicsPerfOverlayLevelToString, EGPUPerformanceLevelToString, EScalingFilterToString, ECPUGovernorToString, EUpdaterTypeToString, EUpdaterStateToString, EStorageBlockContentTypeToString, EStorageBlockFileSystemTypeToString, ESteamDeckCompatibilityCategoryToString, ESteamDeckCompatibilityResultDisplayTypeToString, EACStateToString, EBatteryStateToString, EOSBranchToString, ECommunityItemClassToString, ESteamDeckCompatibilityFeedbackToString, EProvideDeckFeedbackPreferenceToString, ETouchGestureToString */
+      /*! exports provided: EPublishedFileQueryTypeToString, EPublishedFileInappropriateProviderToString, EPublishedFileInappropriateResultToString, EPersonaStateFlagToString, EContentCheckProviderToString, EProfileCustomizationTypeToString, EPublishedFileStorageSystemToString, ECloudStoragePersistStateToString, ESDCardFormatStageToString, ESystemFanControlModeToString, EColorProfileToString, EBluetoothDeviceTypeToString, ESystemServiceStateToString, EGraphicsPerfOverlayLevelToString, EGPUPerformanceLevelToString, EScalingFilterToString, ECPUGovernorToString, EUpdaterTypeToString, EUpdaterStateToString, EStorageBlockContentTypeToString, EStorageBlockFileSystemTypeToString, ESteamDeckCompatibilityCategoryToString, ESteamDeckCompatibilityResultDisplayTypeToString, EACStateToString, EBatteryStateToString, EOSBranchToString, ECommunityItemClassToString, ESteamDeckCompatibilityFeedbackToString, EProvideDeckFeedbackPreferenceToString, ETouchGestureToString */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -5808,6 +5808,13 @@
           "ESystemFanControlModeToString",
           function () {
             return ESystemFanControlModeToString;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "EColorProfileToString",
+          function () {
+            return EColorProfileToString;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -6233,6 +6240,21 @@
           return (
             "unknown ESystemFanControlMode ( " + eSystemFanControlMode + " )"
           );
+        }
+        function EColorProfileToString(eColorProfile) {
+          if (true) {
+            switch (eColorProfile) {
+              case 0:
+                return "k_EColorProfile_Invalid";
+              case 1:
+                return "k_EColorProfile_Native";
+              case 2:
+                return "k_EColorProfile_Standard";
+              case 3:
+                return "k_EColorProfile_Vivid";
+            }
+          }
+          return "unknown EColorProfile ( " + eColorProfile + " )";
         }
         function EBluetoothDeviceTypeToString(eBluetoothDeviceType) {
           if (true) {
@@ -8726,6 +8748,8 @@
               case 48:
                 return "k_EControllerAction_Chord_Hint_Dismiss";
               case 49:
+                return "k_EControllerAction_Notify_XInput_Slot_Change";
+              case 50:
                 return "k_EControllerAction_Count";
             }
           }
@@ -24995,7 +25019,7 @@
       /*!***********************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/utils/localization.ts ***!
   \***********************************************************************************************/
-      /*! exports provided: LocalizeCalendarTime, LocalizeCalendarTimeLessGranular, LocalizeCalendarWeekday, LocalizeCalendarYear, LocalizeDateHumanReadable, LocalizeRtime32ToShortDate, LocalizeRtime32ToShorterDate, LocalizeTimeSince, LocalizeCalendarWeekdayAndDayMonth, CLocalizationManager, BLocStringExists, Localize, LocalizeReact, LocalizeReactPlural, LocalizeInlineReact, LocalizePlural, LocalizeFromFallback, CLocLanguageArray, NativeLanguageNames, LocaleToELanguage, GetConfiguredLocale, LocalizationManager */
+      /*! exports provided: LocalizeCalendarTime, LocalizeCalendarTimeLessGranular, LocalizeCalendarWeekday, LocalizeCalendarYear, LocalizeDateHumanReadable, LocalizeRtime32ToShortDate, LocalizeRtime32ToShorterDate, LocalizeTimeSince, LocalizeCalendarWeekdayAndDayMonth, CLocalizationManager, BLocStringExists, Localize, LocalizeReact, LocalizeReactPlural, LocalizeInlineReact, LocalizeInlineReactPlural, LocalizePlural, LocalizeFromFallback, CLocLanguageArray, NativeLanguageNames, LocaleToELanguage, GetConfiguredLocale, LoadLocalizationFiles, LocalizationManager */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -25043,6 +25067,13 @@
         );
         /* harmony export (binding) */ __webpack_require__.d(
           __webpack_exports__,
+          "LocalizeInlineReactPlural",
+          function () {
+            return LocalizeInlineReactPlural;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
           "LocalizePlural",
           function () {
             return LocalizePlural;
@@ -25081,6 +25112,13 @@
           "GetConfiguredLocale",
           function () {
             return GetConfiguredLocale;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "LoadLocalizationFiles",
+          function () {
+            return LoadLocalizationFiles;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -25477,11 +25515,30 @@
         function LocalizeInlineReact(strToken, ...args) {
           let strValue = LocalizationManager.LocalizeString(strToken);
           if (strValue === undefined) return strToken;
+          return LocalizeInlineReactHelper(strValue, ...args);
+        }
+        /**
+         * Same as LocalizeInlineReact, but accepts a number to determine whether to return the plural version of the token while supporting inline react
+         */
+        function LocalizeInlineReactPlural(strToken, number, ...args) {
+          let strValue = undefined;
+          if (number === 1 || number === "1") {
+            strValue = Localize(strToken, number);
+          } else {
+            strValue = Localize(strToken + "_Plural", number);
+          }
+          if (strValue === undefined) return strToken;
+          return LocalizeInlineReactHelper(strValue, ...args);
+        }
+        /**
+         * Worker for LocalizeInlineReact so we can support Localize and LocalizePlural use cases
+         */
+        function LocalizeInlineReactHelper(strLocalizedToken, ...args) {
           let output = [];
           let regex = /(.*?)<(\d+)>(.*)<\/(\2)>/g;
           let cCharactersConsumed = 0;
           let match;
-          while ((match = regex.exec(strValue))) {
+          while ((match = regex.exec(strLocalizedToken))) {
             cCharactersConsumed += match[0].length;
             output.push(match[1]);
             let index = parseInt(match[2]);
@@ -25497,7 +25554,7 @@
               : strInner;
             output.push(rct);
           }
-          output.push(strValue.substr(cCharactersConsumed));
+          output.push(strLocalizedToken.substr(cCharactersConsumed));
           return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](
             react__WEBPACK_IMPORTED_MODULE_0__["Fragment"],
             null,
@@ -25711,6 +25768,32 @@
             ] || null
           );
         }
+        /**
+         * Loads localization json files. Like Promise.all(), but doesn't explode when one of the maps failed to load
+         */
+        function LoadLocalizationFiles(rgValues) {
+          // ideally we would just use Promise.allSettled() here, but it is pretty new and we are worried about browser support. So, rolling our own instead
+          let fnResolve;
+          let ret = new Promise((resolve) => (fnResolve = resolve));
+          let rgResults = Array(rgValues.length);
+          let nPendingCallbacks = rgValues.length;
+          rgValues.map((value, i) => {
+            Promise.resolve(value)
+              .then((result) => {
+                rgResults[i] = result;
+                nPendingCallbacks--;
+                if (nPendingCallbacks == 0) fnResolve(rgResults);
+              })
+              .catch((error) => {
+                console.error("Failed to load localiation file: " + error);
+                // fill in with empty struct as caller is going to just pass this to the load call
+                rgResults[i] = {};
+                nPendingCallbacks--;
+                if (nPendingCallbacks == 0) fnResolve(rgResults);
+              });
+          });
+          return ret;
+        }
         const LocalizationManager = new CLocalizationManager();
         window.LocalizationManager = LocalizationManager;
 
@@ -25721,7 +25804,7 @@
       /*!********************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/utils/localization/datetime.ts ***!
   \********************************************************************************************************/
-      /*! exports provided: ETimeSinceSuffix, LocalizeTimeSince, LocalizeDateHumanReadable, LocalizeRtime32ToShortDate, BDoesLocaleUse24Hourclock, LocalizeRTimeToHourAndMinutes, LocalizeRtime32ToShorterDate, LocalizeCalendarTime, LocalizeCalendarTimeLessGranular, LocalizeCalendarWeekdayAndDayMonth, LocalizeCalendarWeekday, LocalizeCalendarYear, LocalizeCalendarMonthAndYear */
+      /*! exports provided: ETimeSinceSuffix, LocalizeTimeSince, LocalizeDateHumanReadable, LocalizeRtime32ToShortDate, LocalizeRtime32ToMonthYear, BDoesLocaleUse24Hourclock, LocalizeRTimeToHourAndMinutes, LocalizeRtime32ToShorterDate, LocalizeCalendarTime, LocalizeCalendarTimeLessGranular, LocalizeCalendarWeekdayAndDayMonth, LocalizeCalendarWeekday, LocalizeCalendarYear, LocalizeCalendarMonthAndYear */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -25751,6 +25834,13 @@
           "LocalizeRtime32ToShortDate",
           function () {
             return LocalizeRtime32ToShortDate;
+          }
+        );
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "LocalizeRtime32ToMonthYear",
+          function () {
+            return LocalizeRtime32ToMonthYear;
           }
         );
         /* harmony export (binding) */ __webpack_require__.d(
@@ -26102,6 +26192,30 @@
           );
           g_mapCachedLocalizedShortDate.set(nKey, strDate);
           return strDate;
+        }
+        const g_mapCachedRtime32LocalizedMonthYear = new Map();
+        /**
+         * Purpose: Localize the date and estract a month with year string, e.g. October, 2020 in English
+         *  Input is unix time in seconds (or rtime32)
+         */
+        function LocalizeRtime32ToMonthYear(rtime) {
+          let date = new Date(rtime * 1000);
+          // Canonicalize the date and check the cache.
+          const nKey = date.setHours(0, 0, 0, 0);
+          let strMonthYear = g_mapCachedRtime32LocalizedMonthYear.get(nKey);
+          if (strMonthYear) return strMonthYear;
+          const dateOptions = {
+            month: "long",
+            year: "numeric",
+          };
+          strMonthYear = date.toLocaleDateString(
+            _localization__WEBPACK_IMPORTED_MODULE_0__[
+              "LocalizationManager"
+            ].GetPreferredLocales(),
+            dateOptions
+          );
+          g_mapCachedRtime32LocalizedMonthYear.set(nKey, strMonthYear);
+          return strMonthYear;
         }
         const g_mapCachedLocaleUses24HourClock = new Map();
         /** @returns true if the specified local defaults to using 24-hour time (13:00 vs. 1:00pm) */
@@ -26619,7 +26733,7 @@ function TestLocalizeCalendarTime()
       /*!***************************************************************************************************!*\
   !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/utils/reactutils/index.ts ***!
   \***************************************************************************************************/
-      /*! exports provided: measure, rgb, rgba, useTimeout, useUnmemoizedTimeout, useInterval, useTimer, usePromise, useForceUpdate, useIsUnmounted, useComputedZoom, useThrottle, useEventListener, useGlobalEventListener, useCallbackList, useSubscribableValue, useSubscribableValueCallback, useDisjointedValue, usePreviousValue, useEffectWithDependencyDebugging, useMemoWithDependencyDebugging, useValueWasTrueRecently, setRef, useMultipleRefs, MergeRefs, useRefCallbackWithCleanup, useRefAndShareWith, useResizeObserver, useIntersectionObserver, useForceUpdateOnResizeObserved, useVisibleOnScreen, bind */
+      /*! exports provided: measure, rgb, rgba, useTimeout, useUnmemoizedTimeout, useInterval, useTimer, usePromise, useForceUpdate, useIsUnmounted, useComputedZoom, useThrottle, useEventListener, useGlobalEventListener, useCallbackList, useSubscribableValue, useSubscribableValueCallback, useDisjointedValue, usePreviousValue, useEffectWithDependencyDebugging, useMemoWithDependencyDebugging, useValueWasTrueRecently, setRef, useMultipleRefs, MergeRefs, useRefCallbackWithCleanup, useRefAndShareWith, useResizeObserver, useIntersectionObserver, useForceUpdateOnResizeObserved, useVisibleOnScreen, usePreventVerticalShrinking, bind */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -26913,7 +27027,21 @@ function TestLocalizeCalendarTime()
           }
         );
 
-        /* harmony import */ var shared_utils_bind__WEBPACK_IMPORTED_MODULE_4__ =
+        /* harmony import */ var _usepreventverticalshrinking__WEBPACK_IMPORTED_MODULE_4__ =
+          __webpack_require__(
+            /*! ./usepreventverticalshrinking */ "../../../web_src/shared/js/utils/reactutils/usepreventverticalshrinking.ts"
+          );
+        /* harmony reexport (safe) */ __webpack_require__.d(
+          __webpack_exports__,
+          "usePreventVerticalShrinking",
+          function () {
+            return _usepreventverticalshrinking__WEBPACK_IMPORTED_MODULE_4__[
+              "usePreventVerticalShrinking"
+            ];
+          }
+        );
+
+        /* harmony import */ var shared_utils_bind__WEBPACK_IMPORTED_MODULE_5__ =
           __webpack_require__(
             /*! shared/utils/bind */ "../../../web_src/shared/js/utils/bind.ts"
           );
@@ -26921,7 +27049,7 @@ function TestLocalizeCalendarTime()
           __webpack_exports__,
           "bind",
           function () {
-            return shared_utils_bind__WEBPACK_IMPORTED_MODULE_4__["bind"];
+            return shared_utils_bind__WEBPACK_IMPORTED_MODULE_5__["bind"];
           }
         );
 
@@ -27528,6 +27656,7 @@ function TestLocalizeCalendarTime()
         ) {
           const refCommitValue =
             react__WEBPACK_IMPORTED_MODULE_0__["useRef"](fnCommitValue);
+          refCommitValue.current = fnCommitValue;
           const [displayValue, setDisplayValue] =
             react__WEBPACK_IMPORTED_MODULE_0__["useState"](actualValue);
           const [bIsUserInteracting, setIsUserInteracting] =
@@ -27781,6 +27910,60 @@ function TestLocalizeCalendarTime()
           const localRef = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
           const targetRef = useMultipleRefs(forwardedRef, localRef);
           return { refWithValue: localRef, refForElement: targetRef };
+        }
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/utils/reactutils/usepreventverticalshrinking.ts":
+      /*!*************************************************************************************************************************!*\
+  !*** c:/buildslave/steam_main_webpack_clientui/build/web_src/shared/js/utils/reactutils/usepreventverticalshrinking.ts ***!
+  \*************************************************************************************************************************/
+      /*! exports provided: usePreventVerticalShrinking */
+      /***/ function (module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(
+          __webpack_exports__,
+          "usePreventVerticalShrinking",
+          function () {
+            return usePreventVerticalShrinking;
+          }
+        );
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(/*! react */ "./node_modules/react/index.js");
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default =
+          /*#__PURE__*/ __webpack_require__.n(
+            react__WEBPACK_IMPORTED_MODULE_0__
+          );
+        /* harmony import */ var _useresizeobserver__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            /*! ./useresizeobserver */ "../../../web_src/shared/js/utils/reactutils/useresizeobserver.ts"
+          );
+
+        /**
+         * Hook to allow an element to vertically grow but not shrink.
+         * Returns a string to pass as a minHeight style (e.g. "34px") and a ref you should pass onto
+         * the element we'll want to prevent shrinking.
+         */
+        function usePreventVerticalShrinking() {
+          const [flMinHeight, setMinHeight] =
+            react__WEBPACK_IMPORTED_MODULE_0__["useState"](0);
+          const fnOnResize = react__WEBPACK_IMPORTED_MODULE_0__["useCallback"](
+            (entry) => {
+              const elem = entry.target;
+              const flHeight = elem.clientHeight;
+              if (flHeight > flMinHeight) {
+                setMinHeight(flHeight);
+              }
+            },
+            [flMinHeight]
+          );
+          const strMinHeightStyle = flMinHeight + "px";
+          const refForResizeObserver = Object(
+            _useresizeobserver__WEBPACK_IMPORTED_MODULE_1__["useResizeObserver"]
+          )(fnOnResize);
+          return { strMinHeightStyle, refForResizeObserver };
         }
 
         /***/
@@ -28296,9 +28479,11 @@ function TestLocalizeCalendarTime()
           LOCAL_HOSTNAME: "",
           // web-only parameters:
           WEBAPI_BASE_URL: "",
+          COMMUNITY_WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           BUILD_TIMESTAMP: 0,
           PAGE_TIMESTAMP: 0,
+          FROM_WEB: false,
           // this used to be part of config, but reading the cookie is best.  Defined as a getter for backwards compatibility.
           get SESSIONID() {
             return GetSessionID();
@@ -28363,6 +28548,7 @@ function TestLocalizeCalendarTime()
          */
         const EventConfig = {
           ANNOUNCEMENT_GID: "",
+          TAKEOVER_ANNOUNCEMENT_GID: "",
         };
         const CONFIG_ELEMENT_ID = "webui_config";
         let g_fallbackSessionID;
